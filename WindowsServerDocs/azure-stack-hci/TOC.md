@@ -1,7 +1,0 @@
-# [Azure Stack HCI](index.md)
-## [Hyper-V](../virtualization/hyper-v/index.md)
-## [Локальные дисковые пространства](../storage/storage-spaces/storage-spaces-direct-overview.md)
-## [Отказоустойчивая кластеризация](../failover-clustering/failover-clustering-overview.md)
-## [Программно-конфигурируемая сеть](https://docs.microsoft.com/windows-server/networking/sdn/)
-## [Windows Admin Center](../manage/windows-admin-center/overview.md)
-## [Подключение к Azure](../azure-hybrid-services/index.md)
