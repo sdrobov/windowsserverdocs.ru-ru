@@ -1,0 +1,38 @@
+---
+ms.assetid: 503733f8-be0c-429c-81f0-cd4205e8b118
+title: "Контрольный список - доверия Создание правил утверждений для поставщика утверждений"
+description: 
+author: billmath
+manager: femila
+ms.date: 05/31/2017
+ms.topic: article
+ms.prod: windows-server-threshold
+ms.technology: identity-adfs
+ms.author: billmath
+ms.openlocfilehash: 6b0ece3274b0e0a2a0d5e18e3c0ebf10ded67ebe
+ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/03/2017
+---
+# <a name="checklist-creating-claim-rules-for-a-claims-provider-trust"></a>Контрольный список: Создание правил утверждений для поставщика утверждений доверия
+
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Этот контрольный список содержит задачи планирования, проектирования и развертывания правил для утверждений, связанные с отношением доверия поставщика утверждений в \(AD FS\) служб федерации Active Directory.  
+  
+> [!NOTE]  
+> Задачи в контрольном списке в порядке. Перехода по ссылке процедуры, вернитесь к данном разделу, после выполнения действия, описанные в этой процедуре, чтобы продолжить выполнение оставшихся задач контрольного списка.  
+  
+![Создание правил утверждений](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**контрольный список: Создание правила утверждения набора для отношения доверия с поставщиком утверждений**  
+  
+||Задача|Справочник по|  
+|-|--------|-------------|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|Просмотрите основные понятия об утверждениях, правилах утверждений, наборы правил для утверждений и утверждений шаблонов правил и как они связаны с федеративных отношений доверия.|![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[The Role of Claims](../../ad-fs/technical-reference/The-Role-of-Claims.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[роль правил утверждений](../../ad-fs/technical-reference/The-Role-of-Claim-Rules.md)|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|Просмотрите основные понятия о потоки утверждения через все этапы конвейера выдачи утверждений и порядок обработки правил подсистемой выдачи утверждений.|![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[роль канала утверждений](../../ad-fs/technical-reference/The-Role-of-the-Claims-Pipeline.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[роль механизма утверждений](../../ad-fs/technical-reference/The-Role-of-the-Claims-Engine.md)|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|Чтобы эффективно спланировать и внедрить утверждения выходные данные, которые будут выдаваться через данное отношение доверия поставщика утверждений, определите, требуются ли одно или несколько правил утверждений и утверждений, правила, которые следует использовать с этим отношением доверия поставщика утверждений.|![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[определить тип из утверждений шаблон правила для использования](../../ad-fs/technical-reference/Determine-the-Type-of-Claim-Rule-Template-to-Use.md)|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|Просмотрите основные понятия о при создать одно утверждение правило над другими и об использовании языка правил утверждений для обеспечения более сложной логикой, чем стандартных правил для обеспечения нужного результата в выводе идеальным наборы утверждений.|![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[использование пропуск или правила для утверждений фильтра](../../ad-fs/technical-reference/When-to-Use-a-Pass-Through-or-Filter-Claim-Rule.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[когда следует использовать правила преобразования утверждений](../../ad-fs/technical-reference/When-to-Use-a-Transform-Claim-Rule.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[When to Use a Send LDAP Attributes as Claims Rule](../../ad-fs/technical-reference/When-to-Use-a-Send-LDAP-Attributes-as-Claims-Rule.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[When to Use a Send Group Membership как правило для утверждений](../../ad-fs/technical-reference/When-to-Use-a-Send-Group-Membership-as-a-Claim-Rule.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[использование настраиваемого правила для утверждений](../../ad-fs/technical-reference/When-to-Use-a-Custom-Claim-Rule.md)<br /><br />![Создание правил утверждений](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[роль языка правил утверждений](../../ad-fs/technical-reference/The-Role-of-the-Claim-Rule-Language.md)|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|Необходимо создать описания утверждения, если он еще не существует, будет удовлетворения потребностей вашей организации. AD FS поставляется со стандартным набором описаний утверждений, которые предоставляются в управления AD FS оснастка.|![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Добавление описания утверждения](../../ad-fs/operations/Add-a-Claim-Description.md)|  
+|![Создание правил утверждений](media/icon_checkboxo.gif)|В зависимости от потребностей вашей организации создайте один или несколько правил для утверждений для набора правил преобразования принятия, связанный с этим отношением доверия поставщика утверждений, чтобы утверждения будут выданы соответствующим образом.|![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Создание правила для пропуска или фильтрации входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Создание правила для отправки атрибутов LDAP как утверждений](../../ad-fs/operations/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Создание правила для отправки членства в группе как утверждения](../../ad-fs/operations/Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[создать правила для преобразования входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[создать правила для отправки утверждений метод проверки подлинности](../../ad-fs/operations/Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[создать правила для отправки AD FS 1.x, совместимые утверждений](../../ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md)<br /><br />![Создание правил утверждений](media/15dd35b6-6cc6-421f-93f8-7109920e7144.gif)[Создание правила для отправки утверждений с помощью настраиваемого правила](../../ad-fs/operations/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)|  
+  
+
