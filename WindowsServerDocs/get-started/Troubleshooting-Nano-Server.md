@@ -13,15 +13,15 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 0f5d3e352cd022853a1602c67c3aaf2530cfc696
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082570"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59813645"
 ---
 # <a name="troubleshooting-nano-server"></a>Устранение неполадок сервера Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -53,7 +53,7 @@ ms.locfileid: "2082570"
   
 `New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\EnablingEMS.vhdx   -EnableEMS   -EMSPort 3   -EMSBaudRate 9600`  
   
-Этот пример включает EMS через последовательный порт 3 со скоростью 9600бит/с. Если не указать эти параметры, по умолчанию используется порт 1 и скорость 115200бит/с. Чтобы использовать этот командлет для носителя VHDX, не забудьте включить функцию Hyper-V и соответствующие модули Windows PowerShell.
+Этот пример включает EMS через последовательный порт 3 со скоростью 9600 бит/с. Если не указать эти параметры, по умолчанию используется порт 1 и скорость 115 200 бит/с. Чтобы использовать этот командлет для носителя VHDX, не забудьте включить функцию Hyper-V и соответствующие модули Windows PowerShell.
 
 ## <a name="kernel-debugging"></a>Отладка ядра  
 Можно настроить образ Nano Server для поддержки разных методов отладки ядра. Чтобы использовать отладку ядра с образом VHDX, не забудьте включить функцию Hyper-V и соответствующие модули Windows PowerShell. Дополнительные сведения об удаленной отладке ядра см. в статьях [Ручная настройка отладки в режиме ядра через сетевой кабель](https://msdn.microsoft.com/library/windows/hardware/hh439346%28v=vs.85%29.aspx) и [Удаленная отладка с помощью WinDbg](https://msdn.microsoft.com/library/windows/hardware/hh451173%28v=vs.85%29.aspx).  
@@ -63,14 +63,14 @@ ms.locfileid: "2082570"
   
 `New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingSerial   -DebugMethod Serial   -DebugCOMPort 1   -DebugBaudRate 9600`  
   
-В этом примере включается отладка через последовательный порт2 со скоростью 9600бит/с. Если не указать эти параметры, по умолчанию используется порт 2 и скорость 115200бит/с. Если вы планируете использовать как EMS, так и отладку ядра, следует настроить для них два разных последовательных порта.  
+В этом примере включается отладка через последовательный порт 2 со скоростью 9600 бит/с. Если не указать эти параметры, по умолчанию используется порт 2 и скорость 115 200 бит/с. Если вы планируете использовать как EMS, так и отладку ядра, следует настроить для них два разных последовательных порта.  
   
 ### <a name="debugging-over-a-tcpip-network"></a>Отладка по сети TCP/IP  
 Используйте этот пример командлета, чтобы включить отладку образа по сети TCP/IP:  
   
 `New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingNetwork   -DebugMethod Net   -DebugRemoteIP 192.168.1.100   -DebugPort 64000`  
   
-Этот командлет включает отладку ядра таким образом, чтобы подключаться мог только компьютер с IP-адресом 192.168.1.100, при этом обмен данными осуществляется через порт 64000. Параметры -DebugRemoteIP и -DebugPort являются обязательными при номере порта больше 49152. В файле, хранящемся вместе с сформированным виртуальным жестким диском, этот командлет создает ключ шифрования, который требуется для обмена данными через порт. Кроме того, с помощью параметра -DebugKey можно указать собственный ключ, как показано в следующем примере:  
+Этот командлет включает отладку ядра таким образом, чтобы подключаться мог только компьютер с IP-адресом 192.168.1.100, при этом обмен данными осуществляется через порт 64 000. Параметры -DebugRemoteIP и -DebugPort являются обязательными при номере порта больше 49 152. В файле, хранящемся вместе с сформированным виртуальным жестким диском, этот командлет создает ключ шифрования, который требуется для обмена данными через порт. Кроме того, с помощью параметра -DebugKey можно указать собственный ключ, как показано в следующем примере:  
   
 `New-NanoServerImage   -MediaPath \\Path\To\Media\en_us   -BasePath .\Base   -TargetPath .\KernelDebuggingNetwork   -DebugMethod Net   -DebugRemoteIP 192.168.1.100   -DebugPort 64000   -DebugKey 1.2.3.4`  
   

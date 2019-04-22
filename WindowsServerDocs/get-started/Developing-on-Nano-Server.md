@@ -13,29 +13,29 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: bc1930b681621d4d34c85414dbc2f97df257af20
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082560"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59817165"
 ---
 # <a name="developing-for-nano-server"></a>Разработка на базе сервера Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
 
 В этих разделах поясняются важные отличия PowerShell на сервере Nano Server, а также даются рекомендации по разработке собственных командлетов PowerShell для использования на сервере Nano.
 
-- [PowerShell на сервере NanoServer](PowerShell-on-Nano-Server.md)
-- [Разработка командлетов PowerShell для сервера NanoServer](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
+- [PowerShell на сервере Nano Server](PowerShell-on-Nano-Server.md)
+- [Разработка командлетов PowerShell для Nano Server](Developing-PowerShell-Cmdlets-for-Nano-Server.md)
 
 ## <a name="using-windows-powershell-remoting"></a>Использование удаленного взаимодействия Windows PowerShell  
 Для управления сервером Nano Server с помощью удаленного взаимодействия Windows PowerShell вам следует добавить IP-адрес сервера Nano Server в список доверенных узлов на компьютере управления, добавить учетную запись, которую вы используете, в группу администраторов сервера Nano Server и включить CredSSP, если вы планируете использовать эту функцию.  
 
  >[!NOTE]  
-    > Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу доменных служб Active Directory (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, так как вы можете подключиться к серверу, используя его полное доменное имя, например: PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+    > Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу AD DS (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, можно подключиться к Nano Server, используя его полное доменное имя Например: PS C:\> ENTER-PSSession - ComputerName nanoserver.contoso.com-Credential (Get-Credential)
   
   
 Чтобы добавить сервер Nano Server в список доверенных узлов, выполните следующую команду в командной строке Windows PowerShell с повышенными привилегиями:  
@@ -55,7 +55,7 @@ Enter-PSSession -ComputerName $ip -Credential $user
 Теперь вы можете выполнять команды Windows PowerShell на сервере Nano Server в обычном режиме.  
   
 > [!NOTE]  
-> В этом выпуске сервера Nano Server доступны не все команды Windows PowerShell. Чтобы просмотреть доступные команды, запустите `Get-Command -CommandType Cmdlet`  
+> В этом выпуске сервера Nano Server доступны не все команды Windows PowerShell. Чтобы узнать, какие доступны, выполните `Get-Command -CommandType Cmdlet`  
   
 Остановка удаленного сеанса с помощью команды `Exit-PSSession`  
   

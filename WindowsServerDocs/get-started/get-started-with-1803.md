@@ -10,25 +10,25 @@ ms.date: 05/02/2018
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9cf87597-b15d-4f43-8aa1-91e60367f011
-ms.openlocfilehash: c5cd8fbcf8424fa158ad31ca64e3eabe426240a6
-ms.sourcegitcommit: 8e2903c9b58646840eedd63b47a9bba6c6a06bf7
-ms.translationtype: HT
+ms.openlocfilehash: c0a4917d0fdb3e911204601d6137d8c8a296e57a
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "1859881"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812285"
 ---
 # <a name="introducing-windows-server-version-1803"></a>Знакомство с Windows Server версии 1803
 
->Область применения: Windows Server (Semi-Annual Channel)
+>Область применения. Windows Server (Semi-Annual Channel)
 
-**Windows Server версии 1803 является текущим выпуском в новом канале Semi-Annual Channel.**
+**Windows Server версии 1803 — это текущий выпуск в новый полугодовой канал**
 
 
 ## <a name="what-the-semi-annual-channel-is--and-isnt"></a>Описание канала Semi-Annual Channel
 Windows Server версии 1803 — это *не* "обновление" или "пакет обновления" для Windows Server 2016. Это текущий серверный выпуск, которые выходят два раза в год в канале выпусков, предназначенном для клиентов, которые переходят на "облачный жизненный цикл", например клиентов, которые используют ускоренные циклы разработки. Этот канал идеально подходит для современных приложений и инновационных сценариев, таких как контейнеры и микро-службы. Для каждого выпуска в этом канале будет предоставляться поддержка в течение 18 месяцев, начиная с даты начального выпуска. Дополнительные сведения о канале Semi-Annual Channel, а также **советы по выбору канала** см. в разделе [Обзор канала Semi-Annual Channel](semi-annual-channel-overview.md).
 
 
-**Windows Server 2016 — это текущий продукт в канале Long-Term Servicing Channel (LTSC).**. LTSC лучше всего подходит вам, если вам требуется долгосрочная стабильность и предсказуемость серверной операционной системы для поддержки традиционных рабочих нагрузок и приложений. Чтобы остаться в канале LTSC, необходимо установить (или продолжить использовать) ОС Windows Server 2016, которую можно установить в режиме основных серверных компонентов или в режиме сервера с возможностями рабочего стола. Подробные сведения см. в разделе [Начало работы с Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics).
+**Windows Server 2016 — это текущий продукт канал долгосрочного обслуживания (LTSC).** LTSC лучше всего подходит вам, если вам требуется долгосрочная стабильность и предсказуемость серверной операционной системы для поддержки традиционных рабочих нагрузок и приложений. Чтобы остаться в канале LTSC, необходимо установить (или продолжить использовать) ОС Windows Server 2016, которую можно установить в режиме основных серверных компонентов или в режиме сервера с возможностями рабочего стола. Подробные сведения см. в разделе [Начало работы с Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics).
 
 
 ## <a name="whats-different-about-windows-server-version-1803"></a>Какими особенностями обладает Windows Server версии 1803?
@@ -57,11 +57,11 @@ Windows Server версии 1803 выполняется в режиме осно
 
 Для этого выпуска следует применять чистую установку.
 
-- Центр поддержки корпоративных лицензий (VLSC): корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), для получения этого выпуска следует перейти на веб-сайт [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажать кнопку **Вход**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск. 
+- Volume Licensing Service Center (VLSC): Клиенты с многопользовательской лицензией с [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) можно получить этот выпуск, выбрав [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажав кнопку **Sign In**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск. 
 
 - ОС Windows Server версии 1803 также доступна на платформе [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
 
-- Подписки на Visual Studio: подписчики Visual Studio могут получить ОС Windows Server версии 1803, скачав ее [на странице загрузки для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347). Если вы еще не являетесь подписчиком, перейдите на страницу [Подписки на Visual Studio](https://www.visualstudio.com/subscriptions/), зарегистрируйтесь, а затем перейдите на [страницу скачивания для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347), как указано выше. Выпуски, полученные с помощью подписок на Visual Studio, используются только для разработки и тестирования.
+- Подписки Visual Studio: Подписчики Visual Studio можно получить Windows Server версии 1803, загрузив его из [страницу загрузки на подписчик Visual Studio](https://my.visualstudio.com/downloads?pid=2347). Если вы еще не являетесь подписчиком, перейдите на страницу [Подписки на Visual Studio](https://www.visualstudio.com/subscriptions/), зарегистрируйтесь, а затем перейдите на [страницу скачивания для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347), как указано выше. Выпуски, полученные с помощью подписок на Visual Studio, используются только для разработки и тестирования.
 
 
 

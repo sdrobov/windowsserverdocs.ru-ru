@@ -1,6 +1,6 @@
 ---
-title: "Шаг 8: Запуск Windows Server Essentials анализатор соответствия рекомендациям"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Шаг 8. Запуск анализатора соответствия рекомендациям для Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,32 +13,33 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 08a94de51d7bb8207ad670fe867b2774e01780de
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59818395"
 ---
-# <a name="step-8-run-the-windows-server-essentials-best-practices-analyzer"></a>Шаг 8: Запуск Windows Server Essentials анализатор соответствия рекомендациям
+# <a name="step-8-run-the-windows-server-essentials-best-practices-analyzer"></a>Шаг 8. Запуск анализатора соответствия рекомендациям для Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-После завершения миграции параметров и данных на Windows Server Essentials, необходимо запустить Windows Server Essentials рекомендациям Analyzer (BPA) на конечном сервере. Анализатор BPA проверяет сервер, под управлением Windows Server Essentials и выводит отчет с описанием проблем и рекомендациями по их устранению. Данные рекомендации разработаны организацией поддержки продукта для Windows Server Essentials.  
+После завершения миграции параметров и данных на Windows Server Essentials, необходимо запустить Windows Server Essentials рекомендации анализатор соответствия рекомендациям (BPA) на целевом сервере. Анализатор BPA проверяет сервер, который работает под управлением Windows Server Essentials и выводит отчет с описанием проблем и рекомендациями по их устранению. Данные рекомендации разработаны организацией поддержки продукта для Windows Server Essentials.  
   
 ### <a name="to-run-the--windows-server-essentials-bpa-on-the-destination-server"></a>Для запуска анализатора соответствия Рекомендациям Windows Server Essentials на конечном сервере  
   
-1.  Войдите на конечный сервер от имени администратора и затем откройте диспетчер серверов.  
+1.  Войдите на целевой сервер как администратор, а затем откройте диспетчер серверов.  
   
-2.  В диспетчере серверов щелкните **Windows Server Essentials Experience** вкладку.  
+2.  В диспетчере серверов перейдите на вкладку **Windows Server Essentials Experience** .  
   
-3.  В области сведений выберите **анализатор соответствия рекомендациям**.  
+3.  На панели сведений выберите **Анализатор соответствия рекомендациям**.  
   
-4.  Нажмите кнопку **задачи**, а затем нажмите кнопку **начать проверку BPA**.  
+4.  Щелкните **Задачи**, а затем **Начать проверку BPA**.  
   
-5.  Просмотрите все сообщения Анализатора и следуйте инструкциям по устранению проблем, при необходимости.  
+5.  Просмотрите все сообщения анализатора и, при необходимости, следуйте инструкциям для устранения неполадок.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
- Вы запустили Windows Server Essentials Best Practices Analyzer. Процесс миграции на Windows Server Essentials завершен.  
+## <a name="next-steps"></a>Следующие шаги  
+ Вы запустили Windows Server Essentials Best Practices Analyzer. Переход на Windows Server Essentials уже выполнено.  
   
 
-Для просмотра всех шагов см [переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+Чтобы просмотреть все действия, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

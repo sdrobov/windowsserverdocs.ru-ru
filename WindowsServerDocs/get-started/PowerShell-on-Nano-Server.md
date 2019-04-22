@@ -1,5 +1,5 @@
 ---
-title: PowerShell на сервере NanoServer
+title: PowerShell на сервере Nano Server
 description: Различия в сокращенном наборе возможностей PowerShell на сервере Nano Server
 ms.prod: windows-server-threshold
 ms.service: na
@@ -12,25 +12,25 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a19082121e2d859bc4694fd3f7332e9d0d0b3b9
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082553"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812265"
 ---
-# <a name="powershell-on-nano-server"></a>PowerShell на сервере NanoServer
+# <a name="powershell-on-nano-server"></a>PowerShell на сервере Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
   
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
   
 ## <a name="powershell-editions"></a>Выпуски PowerShell   
   
-Начиная с версии5.1, среда PowerShell доступна в разных выпусках, обладающих различными наборами функций и совместимостью с платформами.  
+Начиная с версии 5.1, среда PowerShell доступна в разных выпусках, обладающих различными наборами функций и совместимостью с платформами.  
   
-- **Выпуск Desktop:** создан на базе платформы .NET Framework и обеспечивает совместимость со сценариями и модулями, предназначенными для версий PowerShell в полноценных выпусках Windows, таких как Server Core и Windows Desktop.  
-- **Выпуск Core:** создан на базе платформы .NET Framework и обеспечивает совместимость со сценариями и модулями, предназначенными для версий PowerShell в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
+- **Desktop Edition:** На платформе .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в полноценных выпусках Windows, такие как ядро сервера и Windows Desktop.  
+- **Выпуск Core:** Опирается на .NET Core и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
   
 Запущенный выпуск PowerShell указан в свойстве PSEdition объекта $PSVersionTable.  
 ```powershell  
@@ -48,7 +48,7 @@ PSRemotingProtocolVersion      2.3
 SerializationVersion           1.1.0.1  
 ```  
   
-Авторы модулей могут объявить их как совместимые с одним или более выпусками PowerShell с помощью ключа манифеста модуля CompatiblePSEditions. Этот ключ поддерживается только в PowerShell5.1 или более поздней версии.  
+Авторы модулей могут объявить их как совместимые с одним или более выпусками PowerShell с помощью ключа манифеста модуля CompatiblePSEditions. Этот ключ поддерживается только в PowerShell 5.1 или более поздней версии.  
 ```powershell  
 New-ModuleManifest -Path .\TestModuleWithEdition.psd1 -CompatiblePSEditions Desktop,Core -PowerShellVersion 5.1  
 $moduleInfo = Test-ModuleManifest -Path \TestModuleWithEdition.psd1  
@@ -99,7 +99,7 @@ At line:1 char:1
 ```  
   
 ## <a name="differences-in-powershell-on-nano-server"></a>Отличия в PowerShell для Nano Server  
-По умолчанию сервер Nano Server включает PowerShell Core во все установки Nano Server. PowerShell Core— это сокращенный выпуск PowerShell, который основан на .NET Core и выполняется в сокращенных выпусках Windows, таких как Nano Server и Windows IoT Core. PowerShell Core работает точно так же, как другие выпуски PowerShell, такие как Windows PowerShell в Windows Server2016. Однако сокращенный размер Nano Server означает, что в PowerShell Core на базе Nano Server доступны не все возможности Windows Server2016.  
+По умолчанию сервер Nano Server включает PowerShell Core во все установки Nano Server. PowerShell Core — это сокращенный выпуск PowerShell, который основан на .NET Core и выполняется в сокращенных выпусках Windows, таких как Nano Server и Windows IoT Core. PowerShell Core работает точно так же, как другие выпуски PowerShell, такие как Windows PowerShell в Windows Server 2016. Однако сокращенный размер Nano Server означает, что в PowerShell Core на базе Nano Server доступны не все возможности Windows Server 2016.  
   
   
 **Функции Windows PowerShell, недоступные в Nano Server**  
@@ -123,7 +123,7 @@ At line:1 char:1
 * Инфраструктура, модули и командлеты рабочего процесса PowerShell   
 * Out-Printer   
 * Update-List   
-* Командлеты WMI версии 1: Get-WmiObject, Invoke-WmiMethod, Register-WmiEvent, Remove-WmiObject, Set-WmiInstance (используйте вместо них модуль CimCmdlets).   
+* Командлеты WMI версии 1: Get-WmiObject, Invoke-WmiMethod, Register-WmiEvent, Remove-WmiObject, Set-WmiInstance (используйте модуль CimCmdlets.)   
   
 ## <a name="using-windows-powershell-desired-state-configuration-with-nano-server"></a>Использование настройки требуемого состояния Windows PowerShell с помощью сервера Nano Server  
   

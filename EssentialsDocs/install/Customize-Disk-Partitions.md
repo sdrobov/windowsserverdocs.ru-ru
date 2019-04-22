@@ -1,6 +1,6 @@
 ---
-title: "Настройка разделов диска"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Настройка разделов диска
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,18 +13,19 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 32c05393d66b32e62c9562e3adbd4cc0f52b6d81
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59814975"
 ---
 # <a name="customize-disk-partitions"></a>Настройка разделов диска
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Чтобы настроить конфигурацию разделов, можно предварительно создать образ с помощью файла unattend.xml. Настоятельно рекомендуется, чтобы убедиться, что может быть легко резервных копий и восстановление сервера, что выделенный раздел данных используется во всех конфигурациях.  
+Чтобы настроить конфигурацию разделов, можно предварительно создать образ с помощью файла unattend.xml. Настоятельно рекомендуется использовать во всех конфигурациях выделенный раздел данных, чтобы упростить архивацию и восстановление сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   

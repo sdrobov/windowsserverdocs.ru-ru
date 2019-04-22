@@ -13,17 +13,18 @@ ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 62fd572fc2bc609f2d4fd10f4cecc38fd8c3b6a4
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: daf8d507258328d2199779b48a7a5c98567c919f
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59812065"
 ---
 # <a name="hyper-v-network-virtualization"></a>Виртуализация сети Hyper-V
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-Представленный в Windows Server 2012, виртуализация сети Hyper-V (HNV) обеспечивает виртуализацию сетей клиентов на основе общей физической сетевой инфраструктуры. С минимальными изменениями необходимые физической сетевой инфраструктуре, HNV позволяет поставщикам услуг гибкость, развертывать и перемещать рабочие нагрузки клиентов в любом месте в облаках три: облако поставщика службы, частное облако или общедоступное облако Microsoft Azure.  
+Представленный в Windows Server 2012, виртуализация сети Hyper-V (HNV) обеспечивает виртуализацию сетей клиентов на основе общей физической сетевой инфраструктуры. С минимальными изменениями, необходимых на физической сетевой инфраструктуре, HNV дают поставщикам услуг необходимую гибкость для развертывания и перехода клиентских рабочих нагрузок в любом месте в трех облаках: облако поставщика службы, частное облако или общедоступное облако Microsoft Azure.  
   
 Дополнительные сведения см. в следующих разделах:  
   
@@ -33,4 +34,4 @@ ms.lasthandoff: 03/28/2018
   
 |||  
 |-|-|  
-|![Облака](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знаете ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](http://aka.ms/f9bh7g).<br /><br />Создание гибридного решения виртуализации в Microsoft Azure:<br />- [Подключение к локальной сети к Azure через виртуальную частную сеть сайта к сайту и расширить схему Active Directory на в IaaS виртуальной Машине контроллера домена в Azure](http://aka.ms/d1dinb)|  
+|![Облако](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](https://aka.ms/f9bh7g).<br /><br />Создание гибридного решения виртуализации в Microsoft Azure:<br />- [Подключение локальной сети к Azure VPN типа "сеть — сеть" и расширить схему Active Directory на виртуальной Машине IaaS контроллера домена в Azure](https://aka.ms/d1dinb)|  
