@@ -1,5 +1,5 @@
 >[!IMPORTANT]
->Любое сочетание верхний или нижний регистр для «true» в следующие теги приводит к частичный конфигурации профиля VPN:
+>Другие комбинацию верхнего или нижнего регистра для «ИСТИНА», в следующие теги приводит к частичной конфигурации профиля VPN:
 >
->\ < AlwaysOn\ >**значение true,** \ < / AlwaysOn ><br>
->\ < RememberCredentials\ >**значение true,** \ < / RememberCredentials >
+>\<AlwaysOn\>**true**\</AlwaysOn><br>
+>\<RememberCredentials\>**true**\</RememberCredentials >

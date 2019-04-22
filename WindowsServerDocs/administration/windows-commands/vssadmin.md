@@ -1,6 +1,6 @@
 ---
-title: Vssadmin
-description: Обзор команды vssadmin.
+title: vssadmin
+description: Обзор vssadmin команд.
 ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
@@ -9,27 +9,27 @@ ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: 06492b04cf21a99ba5b18f8a1cce82cd8ce4a993
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082572"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59821205"
 ---
-# <a name="vssadmin"></a>Vssadmin
+# <a name="vssadmin"></a>vssadmin
 
->Применимо к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Относится к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-Отображает теневых копий томов и все записи установленных теневого копирования и поставщиков. Выберите имя команды в представлении в следующей таблице его синтаксисе команды.
+Отображает теневых копий томов и все записи установленных теневых копий и поставщики. Выберите имя команды в следующие таблицы его синтаксис команды.
 
-|Команда|Описание|
+|Command|Описание|
 |---|---|
-|[Vssadmin Добавление shadowstorage](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788051(v%3dws.11))|Добавление корпоративных хранилищ теневых копий.|
-|[Vssadmin создания тени](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788055(v%3dws.11))|Создает новый теневого копирования тома.|
-|[Vssadmin удалить тени](vssadmin-delete-shadows.md)|Удаляет теневые копии.|
-|[Удалить shadowstorage vssadmin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc785461(v%3dws.11))|Удаляет связи хранилища теневой копии тома.|
-|[Поставщики списка vssadmin](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788108(v%3dws.11))|Списки, зарегистрированных поставщиков теневых копий томов.|
-|[Vssadmin списка тени](vssadmin-list-shadows.md)|Список существующих теневые копии.|
-|[Vssadmin списка shadowstorage](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788045(v%3dws.11))|Перечисляет все связи хранилища теневой копии в системе.|
+|[Vssadmin добавить местонахождения](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788051(v%3dws.11))|Добавляет том хранилищ теневых копий.|
+|[Vssadmin Создание тени](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788055(v%3dws.11))|Создает новый теневого копирования томов.|
+|[Vssadmin delete shadows](vssadmin-delete-shadows.md)|Удаляет теневое копирование томов.|
+|[Vssadmin delete местонахождения](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc785461(v%3dws.11))|Удаление связи хранилища теневой копии тома.|
+|[Vssadmin списка поставщиков](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788108(v%3dws.11))|Отображение списка зарегистрированных поставщиков теневых копий томов.|
+|[Vssadmin list shadows](vssadmin-list-shadows.md)|Отображает список существующих теневое копирование томов.|
+|[Vssadmin list местонахождения](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788045(v%3dws.11))|Перечислены все связи хранилища теневого копирования в системе.|
 |[Vssadmin список томов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788064(v%3dws.11))|Список доступных для теневого копирования томов.|
-|[Записи списка vssadmin](vssadmin-list-writers.md)|Список всех подписанных записи теневых копий в системе.|
-|[Shadowstorage vssadmin изменения размеров](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788050(v%3dws.11))|Изменяет максимальный размер для хранилищ теневых копий.|
+|[Модули записи vssadmin list](vssadmin-list-writers.md)|Перечисляет все записи тома теневых копий в системе.|
+|[Местонахождения vssadmin изменения размера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc788050(v%3dws.11))|Изменяет максимальный размер для хранилищ теневых копий.|

@@ -10,24 +10,24 @@ author: cosmosdarwin
 ms.date: 01/23/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: 51f58ec23c55a6cb1664d800d6f4a75dae545899
-ms.sourcegitcommit: dfd25348ea3587e09ea8c2224237a3e8078422ae
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "4678653"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59824975"
 ---
-# Расширение томов в локальных дисковых пространствах
-> Область применения: Windows Server 2016, Windows Server 2019 г.
+# <a name="extending-volumes-in-storage-spaces-direct"></a>Расширение томов в локальных дисковых пространствах
+> Относится к: Windows Server 2019, Windows Server 2016
 
 Эта статья содержит инструкции по изменению размеров томов в [локальных дисковых пространствах](storage-spaces-direct-overview.md).
 
-## Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
-### Емкость в пуле носителей
+### <a name="capacity-in-the-storage-pool"></a>Емкость в пуле носителей
 
 Прежде чем изменять размер тома, убедитесь, что у вас достаточно емкости в пуле носителей. Например, если размер тома с трехсторонним зеркальным отображением, который составляет 1 ТБ, меняется на 2 ТБ, занимаемое этим томом место увеличится с 3 до 6 ТБ. Для изменения размера необходимо по крайней мере 3 ТБ доступного места в пуле носителей (6 – 3 = 3).
 
-### Знакомство с томами в дисковых пространствах
+### <a name="familiarity-with-volumes-in-storage-spaces"></a>Знакомство с томами в дисковых пространствах
 
 В локальных дисковых пространствах каждый том состоит из нескольких объектов в стеке: общего тома кластера (CSV), т. е. тома; раздела; диска, т. е. виртуального диска; одного или нескольких уровней хранилища (если применимо). Чтобы изменить размер тома, необходимо изменить размер нескольких из этих объектов.
 
@@ -35,7 +35,7 @@ ms.locfileid: "4678653"
 
 Чтобы ознакомиться с ними, выполните командлет **Get-** с соответствующим существительным в PowerShell.
 
-Например:
+Пример:
 
 ```PowerShell
 Get-VirtualDisk
@@ -49,7 +49,7 @@ Get-VirtualDisk
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-## Шаг 1. Изменение размера виртуального диска
+## <a name="step-1--resize-the-virtual-disk"></a>Шаг 1. Изменение размера виртуального диска
 
 В зависимости от способа создания, у виртуального диска могут быть уровни хранилища.
 
@@ -61,7 +61,7 @@ Get-VirtualDisk <FriendlyName> | Get-StorageTier
 
 Если командлет ничего не возвращает, у виртуального диска нет уровней хранилища.
 
-### Нет уровней хранилища
+### <a name="no-storage-tiers"></a>Нет уровней хранилища
 
 Если у виртуального диска нет уровней хранилища, вы можете изменить его размер непосредственно с помощью командлета **Resize-VirtualDisk**.
 
@@ -75,7 +75,7 @@ Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 
 ![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
 
-### С уровнями хранилища
+### <a name="with-storage-tiers"></a>С уровнями хранилища
 
 Если у виртуального диска есть уровни хранилища, вы можете изменить размер каждого уровня по отдельности с помощью командлета **Resize-StorageTier**.
 
@@ -98,7 +98,7 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 ![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
-## Шаг 2. Изменение размера раздела
+## <a name="step-2--resize-the-partition"></a>Шаг 2. Изменение размера раздела
 
 Измените размер раздела с помощью командлета **Resize-Partition**. Ожидается, что виртуальный диск содержит два раздела. Один из них зарезервирован и не должен меняться. Вам нужно изменить размер раздела **PartitionNumber = 2** и **Type = Basic**.
 
@@ -124,8 +124,8 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 > [!TIP]
 > Чтобы убедиться, что размер тома изменился, выполните командлет **Get-Volume**.
 
-## См. также
+## <a name="see-also"></a>См. также
 
-- [Локальные дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
-- [Планирование томов в локальных дисковых пространствах](plan-volumes.md)
-- [Создание томов в локальных дисковых пространствах](create-volumes.md)
+- [Дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
+- [Планирование томов в дисковых пространств](plan-volumes.md)
+- [Создание томов в дисковых пространств](create-volumes.md)

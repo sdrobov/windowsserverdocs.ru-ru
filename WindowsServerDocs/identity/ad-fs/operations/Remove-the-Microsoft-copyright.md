@@ -1,7 +1,7 @@
 ---
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
-title: "Удалить об авторских правах Майкрософт"
-description: 
+title: Удалить об авторских правах Майкрософт
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,53 +9,60 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: c2e6f9445e53a5b5867a763d58ad4a6ca3600cbe
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.openlocfilehash: aa27a014b0803712a20fdd23f075486dc35f33c2
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59820985"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Удалить об авторских правах Майкрософт 
 
->Область применения: Windows Server 2016, Windows Server 2012 R2
+>Область применения. Windows Server 2016, Windows Server 2012 R2
  
-По умолчанию страницы AD FS содержат об авторских правах Майкрософт. Для удаления этих сведений с настроенных страниц, можно использовать следующую процедуру. 
+По умолчанию на страницах службы федерации Active Directory содержат об авторских правах Майкрософт. Для удаления этих сведений с настроенных страниц можно воспользоваться следующей процедурой. 
 
-![Удалите защищенные авторским правом](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png) 
+![удалить авторские права](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1.png) 
   
-## <a name="to-remove-the-microsoft-copyright"></a>Чтобы удалить об авторских правах Майкрософт  
+## <a name="to-remove-the-microsoft-copyright"></a>Удаление сведений об авторских правах Майкрософт  
   
-1.  Создайте пользовательскую тему на основании по умолчанию.  
+1. Создайте пользовательскую тему на основе стандартной.
+
+   ```powershell
+   New-AdfsWebTheme –Name custom –SourceName default
+   ```
+
+2. Экспортируйте тему в указанную папку вывода.  
+
+   ```powershell
+   Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
+   ```
+
+3. Найдите `Style.css` файл, расположенный в папке выходных данных. С помощью предыдущего примера, путь будет иметь `C:\CustomWebTheme\Css\Style.css.`
   
-
-    `New-AdfsWebTheme –Name custom –SourceName default ` 
- 
+4. Откройте `Style.css` файла с редактором, например в блокноте.  
   
-2.  Экспортируйте тему в указанную папку вывода.  
+5. Найдите часть `#copyright` и измените ее следующим образом:  
 
-    `Export-AdfsWebTheme -Name custom -DirectoryPath C:\customWebTheme ` 
+   ```css
+   #copyright {color:#696969; display:none;}
+   ```
 
-  
-3.  Найдите файл Style.css, расположенный в папке вывода. В предыдущем примере, путь будет иметь C:\\CustomWebTheme\\Css\\Style.css.  
-  
-4.  Откройте файл Style.css редакторе, например в блокноте.  
-  
-5.  Найдите `#copyright` фрагмент и затем измените ее следующим:  
-  `#copyright {color:#696969; display:none;} ` 
- 
-6.  Создайте пользовательскую тему на основе нового файла Style.css.  
-  
-    `Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}  `
+6. Создайте пользовательскую тему, основанный на новом `Style.css` файл.  
 
-7.  Активируйте новую тему.  
-  
+   ```powershell
+   Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}
+   ```
 
-    `Set-AdfsWebConfig -ActiveThemeName custom ` 
+7. Активируйте новую тему.  
 
+   ```powershell
+   Set-AdfsWebConfig -ActiveThemeName custom
+   ```
 
-Теперь вы больше не увидите об авторских правах в нижней части страницы входа.
+Сейчас вы больше не увидите авторских прав в нижней части страницы входа.
 
-![Удалите защищенные авторским правом](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png) 
+![удалить авторские права](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom1a.png) 
 
-## <a name="additional-references"></a>Дополнительные ссылки 
-[Настройка входа в AD FS пользователя](AD-FS-user-sign-in-customization.md) 
+## <a name="additional-references"></a>Дополнительная справка 
+[Настройка входа AD FS пользователя](AD-FS-user-sign-in-customization.md) 

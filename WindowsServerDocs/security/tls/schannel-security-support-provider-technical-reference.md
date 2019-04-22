@@ -1,6 +1,6 @@
 ---
-title: "Технические поставщика поддержки безопасности Schannel"
-description: "Безопасность Windows Server"
+title: Технический справочник по поставщику поддержки безопасности Schannel
+description: Безопасность Windows Server
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,28 +12,27 @@ ms.assetid: 5bf9c4a5-cdc1-49eb-bf9a-8bf987410b63
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
-ms.date: 10/12/2016
-ms.openlocfilehash: 4ee48ad350663bdedb8ee960fec65ac5198d17b8
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
+ms.date: 08/08/2018
+ms.openlocfilehash: 9e38a3960bb3e00dd5ce55690fecab22e680c678
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59826285"
 ---
-# <a name="schannel-security-support-provider-technical-reference"></a>Технические поставщика поддержки безопасности Schannel
+# <a name="schannel-security-support-provider-technical-reference"></a>Технический справочник по поставщику поддержки безопасности Schannel
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows 10
 
-В этом справочнике для ИТ-специалистов содержит сведения о протоколов Secure Sockets Layer (SSL), протокол безопасности транспортного уровня (TLS) и протокол безопасности уровня транспорта датаграмм (DTLS), реализованное с поставщика поддержки безопасности Schannel (SSP).
+Ссылка для ИТ-специалистов содержит сведения о протокол безопасности транспортного уровня (TLS), протокол Secure Sockets Layer (SSL) и протокола безопасности уровня транспорта датаграмм (DTLS), реализованное поддержки безопасности Schannel Provider (SSP).
 
-Эти протоколы предоставляют средства для защиты данных, которые передаются между приложениями по ненадежной сети с помощью проверки подлинности на основе сертификата и симметричных ключей шифрования.
+Эти протоколы позволяют защитить данные, которые передаются между приложениями по ненадежной сети, используя проверку подлинности на основе сертификата и симметричных ключей шифрования.
 
-## <a name="w2k3tr_schan_intro"></a>В этом документе
-В этом справочнике объясняется, что такое TLS, SSL и DTLS; как TLS и SSL используется интерфейс поставщика поддержки безопасности (SSPI) и Schannel SSP для безопасной передачи данных через ненадежную сеть; и какие средства и параметры доступны для настройки TLS и SSL.
+- [Протокол TLS](transport-layer-security-protocol.md)
+- [Протокол безопасности транспортного уровня датаграмм](datagram-transport-layer-security-protocol.md)
 
-
-    -   [Протокол TLS](transport-layer-security-protocol.md)
-
-## <a name="see-also"></a>См. также:
-[Проверка подлинности Windows](https://technet.microsoft.com/library/cc755284.aspx)
+## <a name="see-also"></a>См. также
+[Проверка подлинности Windows](../windows-authentication/windows-authentication-overview.md)
+[проверки подлинности Kerberos](../kerberos/kerberos-authentication-overview.md)
 
 
