@@ -1,5 +1,5 @@
 ---
-title: "Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS"
+title: Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
@@ -8,27 +8,28 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 4/5/2017
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 2a07f31e3040f63edfb8c73d454b6301aad46583
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 87fdcf06c601d3362488eaf6a83e4f88ad191305
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828235"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
 В этой статье описывается второй шаг процесса развертывания рабочих папок с помощью службы федерации Active Directory (AD FS) и прокси-службы веб-приложения. Другие шаги этого процесса можно найти в следующих статьях:  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения: общие сведения](deploy-work-folders-adfs-overview.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Общие сведения о](deploy-work-folders-adfs-overview.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 1. Настройка AD FS](deploy-work-folders-adfs-step1.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1 — Настройка AD FS](deploy-work-folders-adfs-step1.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 3. Настройка рабочих папок](deploy-work-folders-adfs-step3.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 4. Настройка прокси-службы веб-приложения](deploy-work-folders-adfs-step4.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 4 — Настройка прокси веб-приложения](deploy-work-folders-adfs-step4.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 5. Настройка клиентов](deploy-work-folders-adfs-step5.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
 >   Инструкции в этом разделе предназначены для среды Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/17/2017
   
 6.  В окне **Новая запись ресурса** добавьте имя псевдонима **enterpriseregistration** и введите FQDN для сервера AD FS. Этот псевдоним используется для присоединения устройств и должен иметь имя **enterpriseregistration**.
   
-7.  Нажмите кнопку **OK**.  
+7.  Нажмите кнопку **ОК**.  
   
 Чтобы выполнить те же действия через Windows PowerShell, используйте следующую команду. Команду необходимо выполнить на контроллере домена.  
   
@@ -100,7 +101,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  На странице **Настройка URL-адреса** нажмите кнопку **Далее**.  
   
-8. На странице **Настройка идентификаторов** добавьте следующий идентификатор: **https://windows-server-work-folders/V1**. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
+8. На **настроить идентификаторы** странице, добавьте следующий идентификатор: **https://windows-server-work-folders/V1**. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
   
 9. На странице "Выбор политики контроля доступа" выберите **Разрешить всем** и нажмите кнопку **Далее**.  
   
@@ -120,13 +121,13 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 17. В таблице сопоставлений введите следующие значения:  
   
-    -   Имя участника-пользователя: имя участника пользователя  
+    -   — Имя участника-пользователя: имя участника-пользователя  
   
-    -   Отображаемое имя: имя  
+    -   Отображаемое имя: Имя  
   
-    -   Фамилия: фамилия  
+    -   Фамилия: Фамилия  
   
-    -   Заданное имя: заданное имя  
+    -   Данное имя: Заданное имя  
   
 18. Нажмите кнопку **Готово**. На вкладке "Правила преобразования выдачи" будет указано правило WorkFolders. Нажмите кнопку **ОК**.  
   
@@ -146,11 +147,11 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
 Для настройки этих параметров используйте следующие команды:  
   
 ```powershell  
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true   
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false   
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -EnableJWT $true   
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -Encryptclaims $false   
 Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -AutoupdateEnabled $true   
-Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
-Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://Windows-Server-Work-Folders/V1" -AllowAllRegisteredClients  
+Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders/V1" -IssueOAuthRefreshTokensTo AllDevices
+Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile  
 ```  
   
 ## <a name="enable-workplace-join"></a>Включение Workplace Join  
@@ -177,7 +178,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 Для экспорта сертификата выполните следующие действия:  
   
-1.  Щелкните **Пуск**, а затем щелкните **Выполнить**.  
+1.  Нажмите кнопку **Пуск** и выберите команду **Выполнить**.  
   
 2.  Введите **MMC**.  
   
@@ -189,7 +190,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 6.  Выберите **Локальный компьютер: (компьютер, на котором запущена эта консоль)** и нажмите кнопку **Готово**.  
   
-7.  Нажмите кнопку **OK**.  
+7.  Нажмите кнопку **ОК**.  
   
 8.  Разверните папку **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
@@ -208,7 +209,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
 ## <a name="manage-the-private-key-setting"></a>Управление настройкой закрытого ключа  
 Вам необходимо предоставить учетной записи службы AD FS разрешение на доступ к закрытому ключу нового сертификата. Вам снова потребуется предоставить это разрешение при замене сертификата обмена данными после истечения срока его действия. Чтобы предоставить разрешение, сделайте следующее:  
   
-1.  Щелкните **Пуск**, а затем щелкните **Выполнить**.  
+1.  Нажмите кнопку **Пуск** и выберите команду **Выполнить**.  
   
 2.  Введите **MMC**.  
   
@@ -220,7 +221,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 6.  Выберите **Локальный компьютер: (компьютер, на котором запущена эта консоль)** и нажмите кнопку **Готово**.  
   
-7.  Нажмите кнопку **OK**.  
+7.  Нажмите кнопку **ОК**.  
   
 8.  Разверните папку **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
@@ -230,18 +231,18 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 11. В окне **Типы объектов** выберите **Учетные записи служб** и нажмите кнопку **ОК**.  
   
-12. Введите имя учетной записи, под которой выполняется AD FS. В тестовом примере используется имя ADFSService. Нажмите кнопку **OK**.  
+12. Введите имя учетной записи, под которой выполняется AD FS. В тестовом примере используется имя ADFSService. Нажмите кнопку **ОК**.  
   
 13. В окне **Разрешения** предоставьте учетной записи хотя бы разрешения на чтение и нажмите кнопку **ОК**.  
   
-Если у вас нет возможности управления закрытыми ключами, возможно, потребуется выполнить следующую команду: `certutil -repairstore my *`  
+Если у вас нет параметра для управления закрытыми ключами, может потребоваться выполнить следующую команду: `certutil -repairstore my *`  
   
 ## <a name="verify-that-ad-fs-is-operational"></a>Проверка работоспособности AD FS  
-Чтобы убедиться в работоспособности AD FS, откройте окно браузера и перейдите на страницу https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml 
+Чтобы Проверка работоспособности AD FS, откройте окно браузера и перейдите к https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml 
   
 В окне браузера отобразятся метаданные сервера федерации без форматирования. Если вы видите данные без ошибок или предупреждений SSL, ваш сервер федерации работает.  
   
-Следующий шаг: [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 3. Настройка рабочих папок](deploy-work-folders-adfs-step3.md)  
+Далее: [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
   
 ## <a name="see-also"></a>См. также  
 [Обзор рабочих папок](Work-Folders-Overview.md)  

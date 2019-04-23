@@ -1,6 +1,6 @@
 ---
-title: "Добавление конечных объектов папок"
-description: "В этом разделе рассматривается, как добавлять конечные объекты папок (UNC-пути)"
+title: Добавление конечных объектов папок
+description: В этом разделе рассматривается, как добавлять конечные объекты папок (UNC-пути)
 ms.prod: windows-server-threshold
 ms.author: jgerend
 ms.manager: brianlic
@@ -8,15 +8,16 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: 71305089553d622f54cb4e5608034edfaf7abc5f
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 8cc61189076669d5c24244294b2f0eee2b783517
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59831005"
 ---
 # <a name="add-folder-targets"></a>Добавление конечных объектов папок
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Конечный объект папки — это путь в формате UNC к общей папке или к другому пространству имен, которое связано с папкой в пространстве имен. Добавление нескольких конечных объектов папки повышает доступность папки в пространстве имен.
 
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/17/2017
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
--   [Репликация конечных объектов папок с помощью репликации DFS](replicate-folder-targets-using-dfs-replication.md)
+-   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Репликация конечных объектов папки с помощью репликации DFS](replicate-folder-targets-using-dfs-replication.md)

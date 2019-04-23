@@ -1,6 +1,6 @@
 ---
-title: "Управление интеграцией с почтовой службой в Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Управление интеграцией с почтовой службой в Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,22 +13,23 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 9333e539ec3f03bb1ef8ac3bac73ae3f9963349b
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828735"
 ---
 # <a name="manage-email-service-integration-in-windows-server-essentials"></a>Управление интеграцией с почтовой службой в Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Используйте следующую статью, для настройки решения электронной почты вашей организации.  
+Следующая статья содержит сведения о методах настройки решения по работе с электронной почтой в вашей организации.  
   
--   [Интеграция локального сервера Exchange с Windows Server Essentials](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md)  
+-   [Интеграция с Windows Server Essentials с локальным сервером Exchange](Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md)  
   
-     Содержит сведения и основные инструкции по настройке и интеграции локального сервера, на котором работает Exchange Server с сервером, на котором работает Windows Server Essentials.  
+     Содержит сведения и основные инструкции по настройке и интеграции локального сервера, работающего под управлением Exchange Server, с сервером под управлением Windows Server Essentials.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Управление Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)  
   

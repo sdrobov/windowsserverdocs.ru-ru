@@ -1,6 +1,6 @@
 ---
-title: "Начало работы с ADK Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Начало работы с ADK Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,25 +13,26 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 096baf30657a8a6ef0216beea4c0a3206a0d71e8
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59828765"
 ---
 # <a name="getting-started-with-the-windows-server-essentials-adk"></a>Начало работы с ADK Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Комплект средств для развертывания (ADK) для программного обеспечения сервера Windows Server Essentials и оценки основан на ADK для операционной системы Windows Server® 2012, поэтому документация по, ADK применима и здесь, если не указано иное. Представленные здесь сведения предназначены для партнеров, которые предустанавливают операционную систему для своих клиентов.  
+Assessment and Deployment Kit (ADK) для серверного по Windows Server Essentials основан на ADK для операционной системы Windows Server® 2012, поэтому документация по, ADK применима и здесь, если не указано иное. Представленные здесь сведения предназначены для партнеров, которые предустанавливают операционную систему для своих заказчиков.  
   
 > [!NOTE]
->  Можно загрузить оценки и комплект средств для развертывания (ADK) для Windows Server Essentials из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=34866).  
+>  Можно загрузить Assessment and Deployment Kit (ADK) для Windows Server Essentials из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=34866).  
   
 ## <a name="in-this-section"></a>В этом разделе  
- Этот раздел включает следующие разделы:  
+ Этот раздел содержит следующие темы:  
   
 
--   [Важная информация для использования ADK Windows Server Essentials](Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
+-   [Важная информация по использованию ADK Windows Server Essentials](Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
   
 -   [Требования к оборудованию для целевого компьютера](Hardware-Requirements-for-the-Target-Computer.md)  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/12/2017
   
 -   [Настройка хранилища сервера](Configure-Server-Storage.md)
 
--   [Важная информация для использования ADK Windows Server Essentials](../install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
+-   [Важная информация по использованию ADK Windows Server Essentials](../install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
   
 -   [Требования к оборудованию для целевого компьютера](../install/Hardware-Requirements-for-the-Target-Computer.md)  
   

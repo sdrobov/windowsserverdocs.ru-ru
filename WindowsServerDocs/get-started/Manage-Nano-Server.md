@@ -13,20 +13,20 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8973302fc8a0c6bdb5b19f9296e711dcc6465589
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082595"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59826805"
 ---
 # <a name="manage-nano-server"></a>Управление сервером Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает.   
 
-Управление сервером Nano Server осуществляется удаленно. Эта ОС не поддерживает возможность локального входа и службы удаленных терминалов. Однако вам доступен обширный спектр возможностей для удаленного управления Nano Server, включая Windows PowerShell, инструментарий управления Windows (WMI) и удаленное управление Windows и службы аварийного управления (EMS).  
+Управление Nano Server осуществляется удаленно. Эта ОС не поддерживает возможность локального входа и службы удаленных терминалов. Однако вам доступен обширный спектр возможностей для удаленного управления Nano Server, включая Windows PowerShell, инструментарий управления Windows (WMI) и удаленное управление Windows и службы аварийного управления (EMS).  
 
 Чтобы использовать любое средство удаленного управления, возможно, потребуется знать IP-адрес сервера Nano Server. Ниже перечислено несколько способов для определения IP-адреса:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "2082595"
 Для управления сервером Nano Server с помощью удаленного взаимодействия Windows PowerShell вам следует добавить IP-адрес сервера Nano Server в список доверенных узлов на компьютере управления, добавить учетную запись, которую вы используете, в группу администраторов сервера Nano Server и включить CredSSP, если вы планируете использовать эту функцию.  
 
  >[!NOTE]  
-    > Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу доменных служб Active Directory (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, так как вы можете подключиться к серверу, используя его полное доменное имя, например: PS C:\> Enter-PSSession -ComputerName nanoserver.contoso.com -Credential (Get-Credential)
+    > Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу AD DS (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, можно подключиться к Nano Server, используя его полное доменное имя Например: PS C:\> ENTER-PSSession - ComputerName nanoserver.contoso.com-Credential (Get-Credential)
   
   
 Чтобы добавить сервер Nano Server в список доверенных узлов, выполните следующую команду в командной строке Windows PowerShell с повышенными привилегиями:  
@@ -60,7 +60,7 @@ Enter-PSSession -ComputerName $ip -Credential $user
 Теперь вы можете выполнять команды Windows PowerShell на сервере Nano Server в обычном режиме.  
   
 > [!NOTE]  
-> В этом выпуске сервера Nano Server доступны не все команды Windows PowerShell. Чтобы просмотреть доступные команды, запустите `Get-Command -CommandType Cmdlet`  
+> В этом выпуске сервера Nano Server доступны не все команды Windows PowerShell. Чтобы узнать, какие доступны, выполните `Get-Command -CommandType Cmdlet`  
   
 Остановка удаленного сеанса с помощью команды `Exit-PSSession`  
   
@@ -91,13 +91,13 @@ Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name 
   
 **winrm quickconfig**  
   
-**winrm set winrm/config/client @{TrustedHosts="<IP-адрес сервера Nano Server"}**  
+**WinRM установить клиент winrm/config / @{TrustedHosts = "< IP-адрес сервера Nano Server»}**  
   
 **chcp 65001**  
   
-Теперь вы можете удаленно выполнять команды на Nano Server. Пример.  
+Теперь вы можете удаленно выполнять команды на Nano Server. Пример:  
   
-**winrs -r:\<IP-адрес сервера Nano Server> -u:Administrator -p:\<пароль администратора Nano Server> ipconfig**  
+**Winrs-r:\<IP-адрес сервера Nano Server > - u: администратор-p:\<пароль администратора Nano Server > ipconfig**  
   
 Дополнительные сведения о службе удаленного управления см. в статье [Обзор удаленного управления Windows (WinRM)](https://technet.microsoft.com/library/dn265971.aspx).  
    
@@ -122,7 +122,7 @@ Stop-NetEventSession [-Name]
   
 Зачастую служебные пакеты или исправления загружаются в качестве элементов базы знаний, содержащих CAB-файл. Выполните следующие действия, чтобы извлечь CAB-файл, который затем можно установить с помощью параметра -ServicingPackagePath:  
   
-1.  Скачайте служебный пакет (из соответствующей статье базы знаний или [каталога Центра обновления Майкрософт](https://catalog.update.microsoft.com/v7/site/home.aspx). Сохраните его в локальном каталоге или сетевой папке, например C:\ServicingPackages  
+1.  Скачайте служебный пакет (из соответствующей статье базы знаний или [каталога Центра обновления Майкрософт](https://catalog.update.microsoft.com/v7/site/home.aspx). Сохраните его в локальный каталог или сетевой общий ресурс, например: C:\ServicingPackages  
 2.  Создайте папку, в которой будет сохранен извлеченный служебный пакет.  Например, c:\KB3157663_expanded  
 3.  Откройте консоль Windows PowerShell и используйте команду `Expand`, указав путь к MSU-файлу служебного пакета, включая параметр `-f:*` и путь, куда требуется извлечь служебный пакет.  Например:  `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
   
@@ -141,9 +141,9 @@ Volume Serial Number is B05B-CC3D
 04/17/2016  12:36 AM           185,818 WSUSSCAN.cab  
                4 File(s)     94,073,136 bytes  
                2 Dir(s)  328,559,427,584 bytes free  
-4.  Запустите `New-NanoServerImage` с параметром -ServicingPackagePath, указывающим на CAB-файл в этом каталоге, например: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
+4.  Запустите `New-NanoServerImage` с параметром - ServicingPackagePath, указывает на CAB-файл в этот каталог, например: `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath C:\KB3157663_expanded\Windows10.0-KB3157663-x64.cab`  
 
-## <a name="managing-updates-in-nano-server"></a>Управление обновлениями на сервере NanoServer
+## <a name="managing-updates-in-nano-server"></a>Управление обновлениями на сервере Nano Server
 
 Сейчас вы можете использовать поставщик Центра обновления Windows для инструментария управления Windows (WMI), чтобы найти список применимых обновлений и затем установить их частично или полностью. При использовании служб Windows Server Update Services (WSUS) можно также настроить сервер Nano Server для подключения к серверу WSUS в целях получения обновлений.  
 
@@ -224,7 +224,7 @@ Get-WindowsPackage--Online
 
 
 ## <a name="performance-and-event-monitoring-on-nano-server"></a>Мониторинг производительности и событий на сервере Nano Server
-[comment]: # (из Venkat Yalla.)
+[comment]: # (из Yalla Венкат.)
 Сервер Nano Server полностью поддерживает платформу [трассировки событий Windows](https://aka.ms/u2pa0i) (ETW), однако некоторые привычные средства для управления трассировкой и счетчиками производительности сейчас на нем недоступны. Тем не менее, сервер Nano Server имеет средства и командлеты для реализации наиболее распространенных сценариев анализа производительности.
 
 Высокоуровневый рабочий процесс остается таким же, как и в любой установке Windows Server. Облегченная трассировка выполняется на целевом компьютере (Nano Server), а итоговые файлы трассировки и журналов проходят последующую обработку в автономном режиме на отдельном компьютере с применением таких средств, как [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx), [анализатор сообщений](https://www.microsoft.com/download/details.aspx?id=44226) или иных.
@@ -240,7 +240,7 @@ Get-WindowsPackage--Online
 wpr.exe -providers
 ```
 
-Вы можете отфильтровать выходные данные по типу событий, которые представляют определенный интерес. Например:
+Вы можете отфильтровать выходные данные по типу событий, которые представляют определенный интерес. Пример:
 ```
 PS C:\> wpr.exe -providers | select-string "Storage"
 
@@ -268,7 +268,7 @@ PS C:\> wpr.exe -providers | select-string "Kernel-Memory"
 PS C:\> Add-EtwTraceProvider -Guid "{d1d93ef7-e1f2-4f45-9943-03d245fe6c00}" -SessionName "ExampleTrace"
 ```
 
-Удалите трассировку— при этом сеанс трассировки останавливается, а события записываются в соответствующий файл журнала.
+Удалите трассировку — при этом сеанс трассировки останавливается, а события записываются в соответствующий файл журнала.
 ```
 PS C:\> Remove-EtwTraceSession -Name "ExampleTrace"
 
@@ -284,7 +284,7 @@ Mode                LastWriteTime         Length Name
 > В этом примере показано добавление одного поставщика трассировки в сеанс, однако командлет ```Add-EtwTraceProvider``` можно использовать для сеанса несколько раз с разными GUID поставщика, чтобы включить трассировку из нескольких источников. Альтернативой является использование описанных ниже профилей ```wpr.exe```.
 
 ### <a name="record-traces-from-multiple-etw-providers"></a>Запись трассировки из нескольких поставщиков трассировки событий Windows
-Параметр ```-profiles``` [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
+Параметр ```-profiles```[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
 ```
 PS C:\Users\Administrator\Documents> wpr.exe -profiles 
 
@@ -349,9 +349,9 @@ PS C:\> Remove-AutologgerConfig -Name BootPnpLog
 Для сбора данных трассировок загрузки и установки на нескольких системах или на бездисковой системе рекомендуется использовать [коллекцию событий установки и загрузки](../administration/get-started-with-setup-and-boot-event-collection.md).
 
 ### <a name="capture-performance-counter-data"></a>Сбор данных счетчиков производительности
-Обычно для отслеживания данных счетчиков производительности применяется графический интерфейс пользователя Perfmon.exe. На сервере Nano Server используйте эквивалентную программу для командной строки ```Typeperf.exe```. Например:
+Обычно для отслеживания данных счетчиков производительности применяется графический интерфейс пользователя Perfmon.exe. На сервере Nano Server используйте эквивалентную программу для командной строки ```Typeperf.exe```. Пример:
 
-Запрос доступных счетчиков— можно отфильтровать выходные данные, чтобы легче находить нужные.
+Запрос доступных счетчиков — можно отфильтровать выходные данные, чтобы легче находить нужные.
 ```
 PS C:\> typeperf.exe -q | Select-String "UDPv6"
 
@@ -397,7 +397,7 @@ TimeCreated           Message
 Nano Server также поддерживает командлет ```wevtutil.exe```, позволяющий получать сведения о журналах событий и издателях. Дополнительные сведения см. в [документации по wevtutil.exe](https://aka.ms/qvod7p). 
 
 ### <a name="graphical-interface-tools"></a>Средства графического интерфейса
-[Средства управления веб-серверами](https://blogs.technet.microsoft.com/servermanagement/2016/08/17/deploy-setup-server-management-tools/) можно использовать для удаленного управления целевыми объектами Nano Server и отображения журнала событий Nano Server с помощью веб-браузера. Наконец, просмотр событий в оснастке MMC (eventvwr.msc) также можно использовать для просмотра журналов— просто откройте его на компьютере с рабочим столом и сориентируйте на удаленный Nano Server.
+[Средства управления веб-серверами](https://blogs.technet.microsoft.com/servermanagement/2016/08/17/deploy-setup-server-management-tools/) можно использовать для удаленного управления целевыми объектами Nano Server и отображения журнала событий Nano Server с помощью веб-браузера. Наконец, просмотр событий в оснастке MMC (eventvwr.msc) также можно использовать для просмотра журналов — просто откройте его на компьютере с рабочим столом и сориентируйте на удаленный Nano Server.
 
 
 
