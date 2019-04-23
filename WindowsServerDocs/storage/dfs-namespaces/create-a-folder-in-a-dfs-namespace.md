@@ -1,6 +1,6 @@
 ---
-title: "Создание папки в пространстве имен DFS"
-description: "В этой статье рассматривается, как папку в пространстве имен DFS."
+title: Создание папки в пространстве имен DFS
+description: В этой статье рассматривается, как папку в пространстве имен DFS.
 ms.date: 6/5/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,15 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1ca9fa0b87c6e995f3f0c38abec80fef9068df90
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 47bb13aa404cdf4fef86b7250425a92cc208ba9d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59856855"
 ---
 # <a name="create-a-folder-in-a-dfs-namespace"></a>Создание папки в пространстве имен DFS
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Папки можно использовать для создания дополнительных уровней иерархии в пространстве имен. Можно также создавать папки с конечными объектами папок, чтобы добавлять в пространство имен общие папки. Папки DFS с конечными объектами папок не могут содержать другие папки DFS, поэтому, если вы хотите добавить в пространство имен уровень иерархии, не добавляйте в папку конечные объекты папки.
 
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/17/2017
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 
 

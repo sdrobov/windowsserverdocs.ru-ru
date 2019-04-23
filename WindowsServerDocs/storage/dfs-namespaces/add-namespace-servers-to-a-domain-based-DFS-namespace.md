@@ -1,6 +1,6 @@
 ---
-title: "Добавление серверов пространства имен в доменное пространство имен DFS"
-description: "В этой статье рассматривается, как указать дополнительные сервера пространства имен для размещения пространства имен с помощью оснастки \"Управление DFS\"."
+title: Добавление серверов пространства имен в доменное пространство имен DFS
+description: В этой статье рассматривается, как указать дополнительные сервера пространства имен для размещения пространства имен с помощью оснастки "Управление DFS".
 ms.date: 6/5/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,15 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 70ab3cac71f5766bc572015c6b23c0937e5252f0
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: bb3b98e1ea687b68bbb87d0da413f9624d336370
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59853335"
 ---
 # <a name="add-namespace-servers-to-a-domain-based-dfs-namespace"></a>Добавление серверов пространств имен в доменное пространство имен DFS
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Доступность доменного пространства имен можно повысить, указав дополнительные сервера пространства имен для размещения пространства имен.
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/17/2017
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Обзор требований к серверу пространств имен DFS](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
+-   [Ознакомьтесь с требованиями сервера пространств имен DFS](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
 -   [Создание пространства имен DFS](create-a-dfs-namespace.md)
--   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 

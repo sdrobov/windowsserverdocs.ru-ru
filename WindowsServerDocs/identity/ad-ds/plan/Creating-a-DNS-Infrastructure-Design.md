@@ -1,48 +1,42 @@
 ---
 ms.assetid: cd70b0aa-0a67-4966-a041-4dd3f302c98b
-title: "Создание проекта инфраструктуры DNS"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
-ms.date: 05/31/2017
+title: Создание проекта инфраструктуры DNS
+description: ''
+ms.author: joflore
+author: MicrosoftGuyJFlo
+manager: mtillman
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 6e5093b05fd81a693cec87ddb00d39e70483df23
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: 080c36f8410be4d6b1933c74730e2b55ce8d0a0b
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59856135"
 ---
 # <a name="creating-a-dns-infrastructure-design"></a>Создание проекта инфраструктуры DNS
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-После создания ваши проекты леса и домена Active Directory, необходимо проектирования инфраструктуры доменных имен (DNS) для поддержки логической структуры Active Directory. DNS-сервера позволяет использовать понятные имена, которые легко запомнить, для подключения к компьютерам и другим ресурсам в IP-сетях. Доменных служб Active Directory (AD DS) в Windows Server 2008 требует DNS.  
+После создания проектов леса и домена Active Directory, необходимо разработать инфраструктуру доменных имен (DNS) для поддержки логической структуры Active Directory. DNS позволяет использовать понятные имена, которые легко запомнить, для подключения к компьютерам и другим ресурсам в IP-сетях. Используют DNS для доменных служб Active Directory (AD DS) в Windows Server 2008.  
   
-Процесс проектирования DNS для поддержки Доменных службах Active Directory зависит от ли у организации уже есть существующая служба DNS-сервера или вы развертываете новые службы DNS-сервера:  
+Процесс разработки DNS, чтобы обеспечить поддержку AD DS зависит от того, имеет ли ваша организация уже существующей службы DNS-сервер, или вы развертываете новую службу DNS-сервер:  
   
--   Если у вас уже есть имеющуюся инфраструктуру DNS, необходимо интегрировать имен Active Directory в этой среде. Дополнительные сведения см. в разделе [интеграция Доменных службах Active Directory в имеющуюся инфраструктуру DNS](../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md).  
+- При наличии уже существующей инфраструктурой DNS, необходимо интегрировать имен Active Directory в этом окружении. Дополнительные сведения см. в разделе [интеграция AD DS в существующую инфраструктуру DNS](../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md).  
+- Если у вас нет инфраструктуры DNS на месте, необходимо разработать и развернуть новую инфраструктуру DNS, чтобы обеспечить поддержку AD DS. Дополнительные сведения см. в разделе [развертывание доменных имен (DNS)](https://go.microsoft.com/fwlink/?LinkId=93656).  
   
--   Если инфраструктуры DNS нет на месте, необходимо проектировать и развертывание новой инфраструктуры DNS для поддержки Доменных службах Active Directory. Дополнительные сведения см. в разделе Развертывание доменных имен (DNS) ([https://go.microsoft.com/fwlink/?LinkId=93656](https://go.microsoft.com/fwlink/?LinkId=93656)).  
-  
-Если ваша организация имеет имеющуюся инфраструктуру DNS, необходимо убедиться, что вы понимаете, как инфраструктуры DNS будет взаимодействовать с пространством имен Active Directory. Лист для документирования вашей существующего проекта инфраструктуры DNS можно скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip из задания вспомогательные средства для Windows Server 2003 Deployment Kit ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) и откройте «DNS инвентаризацию (DSSLOGI_8.doc).  
+Если ваша организация имеет существующую инфраструктуру DNS, необходимо убедиться в том, что вы понимаете, как инфраструктура DNS будут взаимодействовать с пространством имен Active Directory. Лист, чтобы помочь в документировании вашей существующей инфраструктуры DNS, загрузите Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip из [задания вспомогательные средства для Windows Server 2003 Deployment Kit](https://go.microsoft.com/fwlink/?LinkID=102558) и Откройте «Инвентаризация DNS» (DSSLOGI_8.doc).  
   
 > [!NOTE]  
-> Помимо IP версии 4 (IPv4) адреса, адреса Windows Server 2008 также поддерживает IP версии 6 (IPv6). Лист для описания IPv6-адресов при документальной фиксации метод разрешения имен рекурсивный структуры текущего DNS-сервера, в разделе [приложение а. Инвентаризация DNS](../../ad-ds/plan/Appendix-A--DNS-Inventory.md).  
+> В дополнение к IP версии 4 (IPv4) адреса, адреса серверов Windows также поддерживает IP версии 6 (IPv6). Лист для помощи в листинге IPv6-адресов при документировании метода разрешения имен рекурсивного структуры вашего текущего DNS, см. в разделе [приложении a. Инвентаризация DNS](../../ad-ds/plan/Appendix-A--DNS-Inventory.md).
   
-Перед созданием инфраструктуры DNS для поддержки Доменных службах Active Directory, могут быть полезны для чтения о иерархии DNS, процесс разрешения имени DNS-сервера и как DNS поддерживает AD DS. Дополнительные сведения о процессе разрешения иерархии и имя DNS-сервера см. в техническом справочнике по DNS ([https://go.microsoft.com/fwlink/?LinkID=48145](https://go.microsoft.com/fwlink/?LinkID=48145)). Дополнительные сведения о поддержке DNS-сервера AD DS см. поддержка DNS Технический справочник по Active Directory ([https://go.microsoft.com/fwlink/?LinkID=48147](https://go.microsoft.com/fwlink/?LinkID=48147)).  
+До начала разработки инфраструктуры DNS, чтобы обеспечить поддержку AD DS, может быть полезно прочитать о иерархии DNS, процесс разрешения имен DNS и как DNS поддерживает AD DS. Дополнительные сведения о процессе DNS иерархии и имя разрешения, см. в разделе Технический справочник по DNS ([https://go.microsoft.com/fwlink/?LinkID=48145](https://go.microsoft.com/fwlink/?LinkID=48145)). Дополнительные сведения о том, как DNS поддерживает AD DS, см. в разделе поддержки DNS для Технический справочник по Active Directory ([https://go.microsoft.com/fwlink/?LinkID=48147](https://go.microsoft.com/fwlink/?LinkID=48147)).  
   
 ## <a name="in-this-section"></a>В этом разделе  
-  
--   [Общие сведения о понятиях DNS](../../ad-ds/plan/Reviewing-DNS-Concepts.md)  
-  
--   [DNS-сервера и Доменных службах Active Directory](../../ad-ds/plan/DNS-and-AD-DS.md)  
-  
--   [Назначение DNS для роли владельца доменных служб Active Directory](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)  
-  
--   [Интеграция Доменных службах Active Directory в имеющуюся инфраструктуру DNS](../../ad-ds/plan/../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)  
-  
 
-
+- [Изучите основные понятия DNS](../../ad-ds/plan/Reviewing-DNS-Concepts.md)  
+- [DNS и AD DS](../../ad-ds/plan/DNS-and-AD-DS.md)  
+- [Назначение DNS для AD DS владельца роли](../../ad-ds/deploy/Assigning-the-DNS-for-AD-DS-Owner-Role.md)  
+- [Интеграция AD DS в существующую инфраструктуру DNS](../../ad-ds/plan/../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md)  

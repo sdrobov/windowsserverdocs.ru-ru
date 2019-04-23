@@ -1,7 +1,7 @@
 ---
-title: Настройте брандмауэр центра обработки данных списки управления доступом (ACL)
-description: Этот раздел является частью программного обеспечения определены сетевые руководство о том, как управление рабочими нагрузками клиента и виртуальные сети в Windows Server 2016.
-manager: brianlic
+title: Настройка списка управления доступом для брандмауэра центра обработки данных
+description: Можно применить определенные списки управления доступом к сетевым интерфейсам.  Если списки также устанавливаются на виртуальной подсети, к которой подключен сетевой интерфейс, как применяются списки управления доступом, но сетевой интерфейс списки управления доступом имеет приоритет над виртуальной подсети списки управления доступом.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,72 +12,77 @@ ms.topic: article
 ms.assetid: 25f18927-a63e-44f3-b02a-81ed51933187
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: d5f7c4baad24a720e073857cb6c835167e5b419b
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.date: 08/23/2018
+ms.openlocfilehash: 77a7706e39da265eedd65342a0ccf2174ab050ea
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59853405"
 ---
-# <a name="configure-datacenter-firewall-access-control-lists-acls"></a>Настройте брандмауэр центра обработки данных списки управления доступом (ACL)
+# <a name="configure-datacenter-firewall-access-control-lists-acls"></a>Настройка брандмауэра центра обработки данных, списки управления доступом (ACL)
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-Сетевые интерфейсы можно применить определенные списки управления доступом.  Если списки управления доступом также задаются в виртуальной подсети, к которой подключен сетевой интерфейс, как применяются списки управления доступом, но сетевой интерфейс ACL приоритет над виртуальной подсети списки управления доступом.
+После создания списка ACL и назначен виртуальной подсети, может потребоваться переопределить это значение по умолчанию список управления Доступом в виртуальной подсети с определенного ACL для отдельного сетевого интерфейса.  В этом случае применяемыми определенные списки управления доступом к сетевых интерфейсов, подключенных к виртуальным ЛС, а не виртуальной сети. Если у вас есть списков управления доступом виртуальной подсети, подключенной к сетевому интерфейсу, оба списки управления доступом применяются и устанавливает приоритеты для сетевого интерфейса ACL выше ACL виртуальной подсети.
 
-Этот раздел содержит следующие разделы.
+>[!IMPORTANT]
+>Если вы не создан список управления Доступом и назначен виртуальной сети, см. в разделе [используйте списки управления доступом (ACL) для управления центра обработки данных сети трафик проходит](Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md) для создания списка ACL и назначить его виртуальной подсети.  
 
-- [Пример: Добавление списка ACL для сетевого интерфейса](#bkmk_addacl)
-- [Пример: Удаление ACL из сетевого интерфейса с помощью Windows Powershell и API-Интерфейс REST сетевого контроллера](#bkmk_removeacl)
+В этом разделе мы покажем, как добавить список управления Доступом к сетевому интерфейсу. Мы также покажем, как удалить ACL из сетевого интерфейса с помощью Windows PowerShell и REST API сетевого контроллера.
 
-##<a name="bkmk_addacl"></a>Пример: Добавление списка ACL для сетевого интерфейса
+- [Пример: Добавление списка ACL к сетевому интерфейсу](#example-add-an-acl-to-a-network-interface)
+- [Пример: Удалить ACL из сетевого интерфейса с помощью Windows Powershell и REST API сетевого контроллера](#example-remove-an-acl-from-a-network-interface-by-using-windows-powershell-and-the-network-controller-rest-api)
 
-В разделе [используйте списки управления доступом (ACL) для управления центра обработки данных сетевого трафика потока](Use-Access-Control-Lists--ACLs--to-Manage-Datacenter-Network-Traffic-Flow.md) вы узнали, как создать список управления Доступом и назначить виртуальной подсети.  Однако в некоторых случаях может потребоваться переопределить что по умолчанию ACL в подсети virtaul с определенного ACL для отдельных сетевых интерфейса.  Вам также потребуется для применения ACL сетевых интерфейсов, подключенных к виртуальным ЛС вместо виртуальных сетей.
 
-В этом примере демонстрируется добавление списка ACL для виртуальной сети. 
+## <a name="example-add-an-acl-to-a-network-interface"></a>Пример. Добавление списка ACL к сетевому интерфейсу
+В этом примере мы демонстрируется добавление списка ACL к виртуальной сети. 
 
->[!NOTE]
->Можно также добавить ACL в то же время, необходимо создать сетевой интерфейс.
+>[!TIP]
+>Это также можно добавить список управления Доступом, в то же время, создайте сетевой интерфейс.
 
-###<a name="step-1-get-or-create-the-network-interface-to-which-you-will-add-the-acl"></a>Шаг 1: Получите или создайте сетевого интерфейса, для которого необходимо добавить ACL
-
-    $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
-
-###<a name="step-2-get-or-create-the-acl-you-will-add-to-the-network-interface"></a>Шаг 2: Получение или создать список управления Доступом, который будет добавлен к сетевому интерфейсу
-Следующий пример команды можно использовать для получения или создания ACL. 
-
-    $acl = get-networkcontrolleraccesscontrollist -ConnectionUri $uri -resourceid "AllowAllACL"
-
-###<a name="step-3-assign-the-acl-to-the-accesscontrollist-property-of-the-network-interface"></a>Шаг 3: Назначьте ACL свойству AccessControlList сетевого интерфейса
-Следующий пример команды можно использовать, чтобы присвоить свойство AccessControlList ACL.
-
+1. Получите или создайте сетевой интерфейс, к которому добавляется ACL.
+ 
+   ```PowerShell
+   $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+   ```
+ 
+2. Получите или создайте ACL, вы добавите к сетевому интерфейсу.
+ 
+   ```PowerShell
+   $acl = get-networkcontrolleraccesscontrollist -ConnectionUri $uri -resourceid "AllowAllACL"
+   ```
+ 
+3. Назначение списка управления Доступом к свойству AccessControlList сетевого интерфейса
+ 
+   ```PowerShell
     $nic.properties.ipconfigurations[0].properties.AccessControlList = $acl
-
-###<a name="step-4-add-the-network-interface-in-network-controller"></a>Шаг 4: Добавление сетевого интерфейса в сетевого контроллера
-Следующий пример команды можно использовать для добавления в сетевой контроллер сетевого интерфейса.
-
-    new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
-
-
-##<a name="bkmk_removeacl"></a>Пример: Удаление ACL из сетевого интерфейса с помощью Windows Powershell и API-Интерфейс REST сетевого контроллера
-Этот пример можно использовать, если вы хотите удалить ACL. При удалении ACL набор правил по умолчанию применяются к сетевому интерфейсу.
-
-Набор правил по умолчанию разрешает весь исходящий трафик, но блокирует весь входящий трафик.
+   ```
+ 
+4. Добавьте сетевой интерфейс в сетевой контроллер
+ 
+   ```
+   new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
+   ```
+ 
+## <a name="example-remove-an-acl-from-a-network-interface-by-using-windows-powershell-and-the-network-controller-rest-api"></a>Пример. Удалить ACL из сетевого интерфейса с помощью Windows Powershell и REST API сетевого контроллера
+В этом примере мы покажем, как удалить список управления Доступом. Удаление ACL применяется набор правил по умолчанию сетевому интерфейсу. Набор правил по умолчанию разрешает весь исходящий трафик, но блокирует весь входящий трафик.
 
 >[!NOTE]
->Если вы хотите разрешить входящий трафик, необходимо выполнить предыдущем примере для добавления ACL, который позволяет весь входящий и исходящий все трафик.
+>Если вы хотите разрешить весь входящий трафик, необходимо выполнить предыдущий [пример](#example-add-an-acl-to-a-network-interface) добавляемый ACL, который разрешает весь входящий трафик и весь исходящий трафик.
 
-###<a name="step-1-get-the-network-interface-from-which-you-will-remove-the-acl"></a>Шаг 1: Получение сетевого интерфейса, с которого будут удалены ACL
-Следующий пример команды можно использовать для получения сетевого интерфейса.
 
-    $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
-
-###<a name="step-2-assign-null-to-the-accesscontrollist-property-of-the-ipconfiguration"></a>Шаг 2: Присвоение $NULL к свойству AccessControlList ipConfiguration
-Следующий пример команды можно использовать, чтобы присвоить свойство AccessControlList $NULL.
-
-    $nic.properties.ipconfigurations[0].properties.AccessControlList = $null
-
-###<a name="step-3-add-the-network-interface-object-in-network-controller"></a>Шаг 3: Добавление объект сетевого интерфейса в сетевого контроллера
-Следующий пример команды можно использовать для добавления в сетевой контроллер объект сетевого интерфейса
-
-    new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
-
+1. Получение списка ACL для сетевого интерфейса, из которого будут удалены.<br>
+   ```PowerShell
+   $nic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+   ```
+ 
+2. Назначьте $NULL свойству AccessControlList IP-конфигурации.<br>
+   ```PowerShell
+   $nic.properties.ipconfigurations[0].properties.AccessControlList = $null
+   ```
+ 
+3. Добавьте объект сетевого интерфейса на сетевом контроллере.<br>
+   ```PowerShell
+   new-networkcontrollernetworkinterface -ConnectionUri $uri -Properties $nic.properties -ResourceId $nic.resourceid
+   ```
