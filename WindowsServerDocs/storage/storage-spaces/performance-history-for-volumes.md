@@ -1,34 +1,34 @@
 ---
-title: Журнал производительности для томов
+title: Журнал производительности для тома
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/09/2018
-Keywords: Storage Spaces Direct
+Keywords: Локальные дисковые пространства
 ms.localizationpriority: medium
 ms.openlocfilehash: fea1d3d67ab96d95b1699e8ac0129dba698477fe
-ms.sourcegitcommit: 1533d994a6ddea54ac189ceb316b7d3c074307db
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "1589710"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59882955"
 ---
-# <a name="performance-history-for-volumes"></a>Журнал производительности для томов
+# <a name="performance-history-for-volumes"></a>Журнал производительности для тома
 
-> Применимо к: Просмотр внутренних Windows Server
+> Область применения. Сборка из программы предварительной оценки Windows Server
 
-Этот подраздел истории [производительности для хранения пробелы прямое](performance-history.md) подробно журнал производительности, собранные для тома. Журнал производительности — доступны для каждого кластера общих тома (CSV) в кластере. Тем не менее, он недоступен для операционной системы загрузки тома, ни другие хранилища не CSV.
+Этот подраздел из [журнал производительности дисковых](performance-history.md) подробно описывается журнал производительности, собранных для томов. Журнал производительности доступен для каждого общего тома кластера (CSV) в кластере. Тем не менее, он доступен не для операционной системы загрузки тома или любым другим хранилищем, не являющееся CSV.
 
    > [!NOTE]
-   > Может занять несколько минут для семейства сайтов для начала для созданного или переименованной тома.
+   > Он может занять несколько минут для коллекции для начала для вновь созданных или переименован томов.
 
-## <a name="series-names-and-units"></a>Имена и единиц измерения
+## <a name="series-names-and-units"></a>Имена рядов и единицы
 
-Эти серии сбора для каждого подходящими тома:
+Этих рядов собираются для каждого тома, соответствующие:
 
-| Серия                    | Unit             |
+| серии                    | Единица измерения             |
 |---------------------------|------------------|
 | `volume.iops.read`        | в секунду       |
 | `volume.iops.write`       | в секунду       |
@@ -39,57 +39,57 @@ ms.locfileid: "1589710"
 | `volume.latency.read`     | секунды          |
 | `volume.latency.write`    | секунды          |
 | `volume.latency.average`  | секунды          |
-| `volume.size.total`       |  байт            |
-| `volume.size.available`   |  байт            |
+| `volume.size.total`       | байт            |
+| `volume.size.available`   | байт            |
 
-## <a name="how-to-interpret"></a>Интерпретация
+## <a name="how-to-interpret"></a>Способ интерпретации
 
-| Серия                    | Интерпретация                                                              |
+| серии                    | Способ интерпретации                                                              |
 |---------------------------|-------------------------------------------------------------------------------|
-| `volume.iops.read`        | Число операций чтения в секунду завершено с этого тома.                |
-| `volume.iops.write`       | Число операций записи в секунду завершено с этого тома.               |
-| `volume.iops.total`       | Общее число операций чтения и записи в секунду завершено с этого тома. |
-| `volume.throughput.read`  | Количество данных, ознакомьтесь с этой тома в секунду.                            |
-| `volume.throughput.write` | Количество данных, записанных на том в секунду.                           |
-| `volume.throughput.total` | Общее количество данных, чтение и запись для этого тома в секунду.        |
+| `volume.iops.read`        | Количество операций чтения в секунду, выполненных этого тома.                |
+| `volume.iops.write`       | Количество операций записи в секунду, выполненных этого тома.               |
+| `volume.iops.total`       | Общее число операций чтения или записи в секунду, выполненных этого тома. |
+| `volume.throughput.read`  | Количество данных, считанных из этого тома в секунду.                            |
+| `volume.throughput.write` | Количество данных, записанных на этот том в секунду.                           |
+| `volume.throughput.total` | Общее количество данных считывается или записывается на этот том в секунду.        |
 | `volume.latency.read`     | Средняя задержка операций чтения с этого тома.                          |
-| `volume.latency.write`    | Средняя задержка операций записи на том.                           |
-| `volume.latency.average`  | Средняя задержка все операции или из этого тома.                     |
-| `volume.size.total`       | Общая емкость тома.                                     |
-| `volume.size.available`   | Доступные емкость тома.                                 |
+| `volume.latency.write`    | Средняя задержка операций записи на этот том.                           |
+| `volume.latency.average`  | Среднее по всем операциям, или из этого тома.                     |
+| `volume.size.total`       | Общая емкость хранения тома.                                     |
+| `volume.size.available`   | Доступное хранилище объем тома.                                 |
 
-## <a name="where-they-come-from"></a>Откуда берется из
+## <a name="where-they-come-from"></a>Откуда они берутся
 
-`iops.*`, `throughput.*`, И `latency.*` серии полученных от `Cluster CSVFS` набора счетчиков производительности. Каждый сервер в кластере имеет экземпляр для каждого тома, CSV, независимо от владельца. Запись журнала производительности для многопользовательской `MyVolume` — это статистической обработки `MyVolume` экземпляры на каждом сервере в кластере.
+`iops.*`, `throughput.*`, И `latency.*` ряда собираются из `Cluster CSVFS` набор счетчиков производительности. Каждый сервер в кластере имеется экземпляр для каждого тома CSV, независимо от владельца. Журнал производительности записываются для тома `MyVolume` — это совокупность `MyVolume` экземпляры на каждом сервере в кластере.
 
-| Серия                    | Счетчик исходных данных         |
+| серии                    | Счетчик источника         |
 |---------------------------|------------------------|
 | `volume.iops.read`        | `Reads/sec`            |
 | `volume.iops.write`       | `Writes/sec`           |
-| `volume.iops.total`       | *Сумма из перечисленных выше*     |
+| `volume.iops.total`       | *суммы выше*     |
 | `volume.throughput.read`  | `Read bytes/sec`       |
 | `volume.throughput.write` | `Write bytes/sec`      |
-| `volume.throughput.total` | *Сумма из перечисленных выше*     |
+| `volume.throughput.total` | *суммы выше*     |
 | `volume.latency.read`     | `Avg. sec/Read`        |
 | `volume.latency.write`    | `Avg. sec/Write`       |
-| `volume.latency.average`  | *Среднее число из перечисленных выше* |
+| `volume.latency.average`  | *Среднее для указанных выше* |
 
    > [!NOTE]
-   > Счетчики заданная в период времени, не выбрано. Например, если том простоя в течение 9 секунд но завершается 30 операций ввода-вывода в десятой секунды его `volume.iops.total` будет записана в виде 3 операций ввода-вывода в секунду в среднем этот период 10 секунд. Это гарантирует журнал производительности захватывает все действия и надежна для помех.
+   > Счетчики измеряемый в течение всего интервала, не попали в выборку. Например, если том простоя в течение 9 секунд но завершается 30 IOs в десятой секунды, его `volume.iops.total` будут записываться как 3 операций ввода-вывода в секунду в среднем за этот 10-секундный интервал. Это гарантирует, что его журнал производительности записывает все действия и надежна для шума.
 
    > [!TIP]
-   > Это же счетчики используется инфраструктурой тестирования производительности популярные [Флота виртуальной Машины](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) .
+   > Это те же счетчики, используемые популярного [Fleet виртуальной Машины](https://github.com/Microsoft/diskspd/blob/master/Frameworks/VMFleet/watch-cluster.ps1) framework теста производительности.
 
-`size.*` Серии полученных от `MSFT_Volume` класс в одном экземпляре на том WMI.
+`size.*` Ряда собираются из `MSFT_Volume` класса в WMI, один экземпляр каждого тома.
 
-| Серия                    | Свойство Source |
+| серии                    | Свойство Source |
 |---------------------------|-----------------|
 | `volume.size.total`       | `Size`          |
 | `volume.size.available`   | `SizeRemaining` |
 
-## <a name="usage-in-powershell"></a>Об использовании в PowerShell
+## <a name="usage-in-powershell"></a>Использование в PowerShell
 
-Командлет [Get-громкость](https://docs.microsoft.com/powershell/module/storage/get-volume) :
+Используйте [Get-Volume](https://docs.microsoft.com/powershell/module/storage/get-volume) командлета:
 
 ```PowerShell
 Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
@@ -97,4 +97,4 @@ Get-Volume -FriendlyName <FriendlyName> | Get-ClusterPerf
 
 ## <a name="see-also"></a>См. также
 
-- [Журнал производительности для прямого пробелы хранилища](performance-history.md)
+- [Журнал производительности для дисковых пространств](performance-history.md)

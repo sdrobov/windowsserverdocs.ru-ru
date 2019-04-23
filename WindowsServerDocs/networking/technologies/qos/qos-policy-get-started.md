@@ -1,6 +1,6 @@
 ---
-title: Приступая к работе с политики QoS
-description: В этом разделе содержит ссылки на разделы с общими сведениями для политики качества обслуживания (QoS), который позволяет определять их приоритеты трафика пропускная способность сети определенных приложений и служб в Windows Server 2016 с помощью групповой политики.
+title: Приступая к работе с политику качества обслуживания
+description: В этом разделе ссылки на обзорные статьи для политики качества обслуживания (QoS), который позволяет использовать групповую политику для определения приоритетов пропускной способности сети трафик определенных приложений и служб в Windows Server 2016.
 ms.prod: windows-server-threshold
 ms.technology: networking
 ms.topic: article
@@ -8,21 +8,22 @@ ms.assetid: a37398a4-fe46-464f-8a33-829ef3c6db55
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6db2947253635673721438fde84d9d97f8ff9e24
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 28419bcf29276c0f919231a602faa0711478e224
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59889415"
 ---
-# <a name="getting-started-with-qos-policy"></a>Приступая к работе с политики QoS
+# <a name="getting-started-with-qos-policy"></a>Приступая к работе с политику качества обслуживания
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-Начало работы с качеством обслуживания \(QoS\) политики можно использовать следующие разделы.
+Можно использовать следующие разделы приступить к работе с качеством обслуживания \(QoS\) политики.
 
-- [Как работает политика QoS](qos-policy-works.md)
+- [Как работает политика качества обслуживания](qos-policy-works.md)
 - [Архитектура политики QoS](qos-policy-architecture.md)
-- [Сценарии политик QoS](qos-policy-scenarios.md)
+- [Сценарии политик качества обслуживания](qos-policy-scenarios.md)
 
 
-Первый раздел в данном руководстве, см. [политики качества обслуживания (QoS)](qos-policy-top.md).
+Первый раздел в данном руководстве, см. в разделе [политики качества обслуживания (QoS)](qos-policy-top.md).

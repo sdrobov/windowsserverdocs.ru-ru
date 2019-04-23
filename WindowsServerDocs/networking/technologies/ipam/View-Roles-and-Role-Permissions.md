@@ -1,6 +1,6 @@
 ---
 title: Просмотр ролей и разрешений ролей
-description: Этот раздел входит руководство по управлению управления IP-адресами (IPAM) в Windows Server 2016.
+description: Этот раздел является частью в руководстве по управления IP Address Management (IPAM) в Windows Server 2016.
 manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -13,35 +13,36 @@ ms.topic: article
 ms.assetid: da8dce90-b54c-4ded-a48a-0cda5ccf1d8a
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 01bfbc2f917567d4c07ac2839f00cf44cb53b8b7
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 4061aa5218d8595ab518496b071b85feb2eaea32
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59885205"
 ---
 # <a name="view-roles-and-role-permissions"></a>Просмотр ролей и разрешений ролей
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-В этом разделе можно использовать для просмотра ролей пользователя для управления доступом в консоли IPAM-клиента.  
+В этом разделе можно использовать для просмотра роли контроля доступа пользователей в консоли ipam-клиента.  
   
-Членство в группе **Администраторы**, или в эквивалентной минимальным требованием для выполнения этой процедуры.  
+Для выполнения этой процедуры необходимо быть членом группы **Администраторы** или пользователем с аналогичными правами.  
   
-### <a name="to-view-access-control-roles"></a>Для просмотра ролей управления доступом  
+### <a name="to-view-access-control-roles"></a>Чтобы просмотреть роли контроля доступа  
   
-1.  В диспетчере серверов щелкните **IPAM**. Откроется консоль IPAM-клиента.  
+1.  В диспетчере серверов щелкните **IPAM**. Откроется консоль ipam-клиента.  
   
 2.  В области навигации щелкните **КОНТРОЛЯ доступа**.  
   
-3.  В нижней области навигации щелкните **ролей**. Роли, перечислены на панели отображения.  
+3.  В нижней области навигации щелкните **ролей**. На панели «дисплей» перечислены роли.  
   
-    ![На панели отображения перечисленных ролей](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_01.jpg)  
+    ![В панели «дисплей» перечислены роли](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_01.jpg)  
   
-4.  Выберите роль, которую требуется просмотреть разрешения. В нижней области сведений отображаются операций, которые разрешены для роли.  
+4.  Выберите роль, разрешения которого требуется просмотреть. В нижней области сведений отображаются операции, которые разрешены для роли.  
   
     ![Просмотр разрешений для роли](../../media/View-Roles-and-Role-Permissions/ipam_ViewRoles_02.jpg)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Управление доступом на основе ролей](Role-based-Access-Control.md)  
 [Управление IPAM](Manage-IPAM.md)  
   

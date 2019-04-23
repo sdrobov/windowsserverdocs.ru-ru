@@ -1,34 +1,35 @@
 ---
-title: "Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 1. Настройка AD FS"
+title: Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 1. Настройка AD FS
 ms.prod: windows-server-threshold
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: 4a8a044ad6a8ec5275f5be4b949a2ab58d16da61
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: a26b784c18049ee473a191abc7bfa0a5d253d15e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883035"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 1. Настройка AD FS
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1, настройки AD FS
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
 В этой статье описывается первый шаг процесса развертывания рабочих папок с помощью службы федерации Active Directory (AD FS) и прокси-службы веб-приложения. Другие шаги этого процесса можно найти в следующих статьях:  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения: общие сведения](deploy-work-folders-adfs-overview.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Общие сведения о](deploy-work-folders-adfs-overview.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS](deploy-work-folders-adfs-step2.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS](deploy-work-folders-adfs-step2.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 3. Настройка рабочих папок](deploy-work-folders-adfs-step3.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 4. Настройка прокси-службы веб-приложения](deploy-work-folders-adfs-step4.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 4 — Настройка прокси веб-приложения](deploy-work-folders-adfs-step4.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 5. Настройка клиентов](deploy-work-folders-adfs-step5.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
 >   Инструкции в этом разделе предназначены для среды Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/17/2017
   
 В зависимости от политик вашей компании получение учетной записи и сертификата может занять некоторое время, поэтому следует приступить к их запросу перед началом создания тестовой среды.  
   
-Существует множество коммерческих центров сертификации, в которых можно приобрести сертификат. Список центров сертификации, которым доверяет корпорация Майкрософт, можно найти в [статье базы знаний 931125](http://support.microsoft.com/kb/931125). Вы также можете получить сертификат в корпоративном центре сертификации вашей компании.  
+Существует множество коммерческих центров сертификации, в которых можно приобрести сертификат. Список центров сертификации, которым доверяет корпорация Майкрософт, можно найти в [статье базы знаний 931125](https://support.microsoft.com/kb/931125). Вы также можете получить сертификат в корпоративном центре сертификации вашей компании.  
   
 В тестовой среде вы будете использовать самозаверяющий сертификат, созданный одним из предоставленных сценариев.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/17/2017
 3.  Сделайте политику выполнения неограниченной:  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1 C:\temp\scripts> Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
+    Set-ExecutionPolicy –ExecutionPolicy Unrestricted   
     ```  
   
 4.  Измените на каталог, в который скопирован сценарий.  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/17/2017
 5.  Выполните сценарий makecert:  
   
     ```powershell  
-    PS C:\temp\scripts> .\makecert.ps1  
+    .\makecert.ps1  
     ```  
   
 6.  При появлении запроса на изменение сертификата субъекта введите новое значение для субъекта. В этом примере используется значение **blueadfs.contoso.com**.  
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/17/2017
 SAN enterpriseregistration требуется для Workplace Join.  
   
 ### <a name="set-the-server-ip-address"></a>Установка IP-адреса сервера  
-Измените IP-адрес сервера на статический IP-адрес. В тестовом примере используется IP-адрес класса A, а именно 192.168.0.160 / маска подсети: 255.255.0.0 / Шлюз по умолчанию: 192.168.0.1 / Основной DNS-сервер: 192.168.0.150 (IP-адрес контроллера домена).  
+Измените IP-адрес сервера на статический IP-адрес. Пример тестирования, используйте IP-адрес класса A, который является 192.168.0.160 / маска подсети: 255.255.0.0 / шлюз по умолчанию: 192.168.0.1 / предпочитаемый DNS: 192.168.0.150 (IP-адрес контроллера домена\).  
   
 ## <a name="install-the-ad-fs-role-service"></a>Установка службы роли AD FS  
 Для установки AD FS выполните следующие действия:  
@@ -120,10 +121,10 @@ SAN enterpriseregistration требуется для Workplace Join.
   
 ```powershell  
 Add-WindowsFeature RSAT-AD-Tools  
-Add-WindowsFeature AD FS-Federation –IncludeManagementTools  
+Add-WindowsFeature ADFS-Federation –IncludeManagementTools  
 ```  
   
-## <a name="configure-ad-fs"></a>Настройка AD FS  
+## <a name="configure-ad-fs"></a>Настройка службы федерации Active Directory  
 Далее настройте AD FS с помощью диспетчера сервера или Windows PowerShell.  
   
 ### <a name="configure-ad-fs-by-using-server-manager"></a>Настройка AD FS с помощью диспетчера сервера  
@@ -176,12 +177,12 @@ New-ADServiceAccount "ADFSService"-Server 2016-DC.contoso.com -Path "CN=Managed 
 Настройка фермы AD FS:  
   
 ```powershell  
-$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1    
+$cert = Get-ChildItem CERT:\LocalMachine\My |where {$_.Subject -match blueadfs.contoso.com} | sort $_.NotAfter -Descending | select -first 1    
 $thumbprint = $cert.Thumbprint  
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop  
 ```  
   
-Следующий шаг: [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS](deploy-work-folders-adfs-step2.md)  
+Далее: [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS](deploy-work-folders-adfs-step2.md)  
   
 ## <a name="see-also"></a>См. также  
 [Обзор рабочих папок](Work-Folders-Overview.md)  

@@ -1,6 +1,6 @@
 ---
-title: "Миграция данных сервера в Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Миграция данных сервера в Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,19 +13,20 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: fdf8e7c696187422ef19a26cf9577aef893824fe
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59883305"
 ---
 # <a name="migrate-server-data-to-windows-server-essentials"></a>Миграция данных сервера в Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Следующие руководства содержат сведения о миграции на Windows Server Essentials из существующих установок Windows Small Business Server или Windows Server Essentials и включают сведения о подготовке и планировании конкретных сценариев миграции Windows Server Essentials.  
+Следующие руководства содержат информацию о миграции на Windows Server Essentials из существующих установок Windows Small Business Server или Windows Server Essentials, а также о планировании конкретных сценариев миграции Windows Server Essentials и подготовке к ним.  
   
 ## <a name="migrate-to-windows-server-essentials"></a>Миграция на Windows Server Essentials  
- Во избежание проблем с миграцией существующего сервера на Windows Server Essentials, прочитайте руководство по миграции, перед началом миграции.  
+ Чтобы избежать проблем при переносе существующего сервера в Windows Server Essentials, прочитайте руководство по миграции, перед началом миграции.  
   
 
 -   [Миграция на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/12/2017
 
   
 ## <a name="migrate-to-windows-server-essentials"></a>Миграция на Windows Server Essentials  
- Во избежание проблем с миграцией существующего сервера на Windows Server Essentials, прочитайте руководство по миграции, которая применяется к документом перед началом миграции.  
+ Чтобы избежать проблем при переносе существующего сервера в Windows Server Essentials, прочитайте руководство по миграции, который применяется к бизнес-сценария, прежде чем приступить к переносу.  
   
 
 -   [Переход на Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/12/2017
   
 -   [Миграция на новое оборудование](Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
   
--   [Правила, используемые с использованием средства Windows Server Essentials лучший анализатор соответствия рекомендациям (BPA)](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+-   [Правила, используемые с помощью средства Windows Server Essentials рекомендации анализатор соответствия рекомендациям (BPA)](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
 -   [Переход на Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
@@ -71,18 +72,18 @@ ms.lasthandoff: 12/12/2017
   
 -   [Миграция на новое оборудование](../migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
   
--   [Правила, используемые с использованием средства Windows Server Essentials лучший анализатор соответствия рекомендациям (BPA)](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
+-   [Правила, используемые с помощью средства Windows Server Essentials рекомендации анализатор соответствия рекомендациям (BPA)](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
   
-## <a name="end-to-end-solution-guides"></a>Руководства по решениям в сквозном режиме  
+## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям  
   
--    Узнайте, как централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, см. [обеспечить защиту данных на предприятиях малого и среднего бизнеса](https://technet.microsoft.com/library/dn582043.aspx).  
+-    Чтобы узнать, как для централизации хранения данных, ограничить разрешения для доступа к данным и резервную копию данных, так и локально и в облаке, см. в разделе [обеспечить безопасность данных в малых и средних предприятий](https://technet.microsoft.com/library/dn582043.aspx).  
   
--    Чтобы узнать, как безопасный доступ к бизнес-данным с любого устройства, подключенного к Интернету из любого места, в разделе [безопасный удаленный доступ на предприятиях малого и среднего бизнеса](https://technet.microsoft.com/library/dn629457.aspx).  
+-    Чтобы узнать, как безопасный доступ к бизнес-данным с любого устройства, подключенного к Интернету из любого места, см. в разделе [безопасный удаленный доступ в малых и средних предприятий](https://technet.microsoft.com/library/dn629457.aspx).  
   
--    Чтобы узнать, как безопасно совместно с партнерами и поставщиками, см. [Улучшение взаимодействия на предприятиях малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).  
+-    Чтобы узнать, как безопасно сотрудничать с партнерами и поставщиками, см. в разделе [Улучшение взаимодействия в малых и средних предприятий](https://technet.microsoft.com/library/dn747893.aspx).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   

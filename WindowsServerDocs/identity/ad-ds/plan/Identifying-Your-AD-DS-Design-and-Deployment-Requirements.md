@@ -1,31 +1,32 @@
 ---
 ms.assetid: f0398494-773d-4070-aa4e-25b4815b001e
-title: "Определение разработки AD DS и требования к развертыванию"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: Определение требований к разработке и развертыванию доменных служб Active Directory
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: c0da90e3a4b9f50d01c4d158c93a466467e5af49
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.openlocfilehash: 160ebf65348aaff0095f359766c65aebd6fdd3c3
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59889545"
 ---
-# <a name="identifying-your-ad-ds-design-and-deployment-requirements"></a>Определение разработки AD DS и требования к развертыванию
+# <a name="identifying-your-ad-ds-design-and-deployment-requirements"></a>Определение требований к разработке и развертыванию доменных служб Active Directory
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Высокоуровневые оценки текущей среды выполнения и правильное определение задачи развертывания доменных служб Active Directory (AD DS) — залог успеха стратегии развертывания AD DS.  
+Выполнения укрупненной оценки текущей среды и правильное Определение задач развертывания доменных служб Active Directory (AD DS) — залог успеха стратегии развертывания AD DS.  
   
-Стратегии развертывания AD DS зависит от существующей конфигурации сети. Например если ваша организация в настоящее время работает под управлением Windows Server 2003, можно обновить операционную систему до Windows Server 2008. Процесс развертывания может привести к реструктуризации существующих доменов в лесу Active Directory или между лесами Active Directory. Может потребоваться реструктуризации существующих доменов после развертывания Windows Server 2008, AD DS или организационным изменениям или корпоративных приобретений.  
+Стратегии развертывания AD DS зависит от существующей конфигурации сети. Например если ваша организация в настоящее время ОС Windows Server 2003, можно обновить операционную систему до Windows Server 2008. Процесс развертывания может включать реструктуризацию существующих доменов в лесу Active Directory или между лесами Active Directory. Возможно, реструктуризации существующих доменов, после развертывания Windows Server 2008 AD DS или после организационных изменений либо корпоративных приобретений.  
   
 -   [AD DS проектные требования](../../ad-ds/plan/AD-DS-Design-Requirements.md)  
   
--   [Требования развертывания служб AD DS](../../ad-ds/plan/AD-DS-Deployment-Requirements.md)  
+-   [Требования к развертыванию AD DS](../../ad-ds/plan/AD-DS-Deployment-Requirements.md)  
   
 
 

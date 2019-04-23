@@ -1,6 +1,6 @@
 ---
-title: "Дополнительные настройки"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Дополнительные настройки
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,19 +13,20 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 347da7117835dde94c72168f77ff15a9cf5275c4
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59887705"
 ---
 # <a name="additional-customizations"></a>Дополнительные настройки
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Вы можете внести следующие дополнительные настройки для создания и настройки образа Windows Server Essentials:  
+Можно выполнить следующие дополнительные настройки для создания и настройки образа Windows Server Essentials:  
   
 
--   [Добавление фирменной символики на панели мониторинга, удаленного веб-доступа и панель запуска](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
+-   [Добавление фирменной символики на панель мониторинга, удаленного веб-доступа и панель запуска](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   
 -   [Добавить вкладку в параметры](Add-a-Tab-to-Settings.md)  
   
@@ -41,23 +42,23 @@ ms.lasthandoff: 07/03/2017
   
 -   [Управление именами доменов и поставщиками доменных имен](Manage-Domain-Names-and-Domain-Name-Providers.md)  
   
--   [Настройка зарегистрироваться на Microsoft Online Backup Service задач](Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
+-   [Настройка регистрации в службе Microsoft Online Backup Service задачи](Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
   
 -   [Настройка дисковых пространств](Customize-Storage-Spaces.md)  
   
--   [Создание носителя для восстановления клиента нескольких языков](Build-Multi-Language-Client-Restore-Media.md)  
+-   [Создание носителя для восстановления клиента Многоязычная версия](Build-Multi-Language-Client-Restore-Media.md)  
   
 -   [Автоматизация установки надстройки во время установки](Automate-Installation-of-Add-Ins-During-Setup.md)  
   
--   [Добавление информации зарегистрированного партнера соглашение об партнеров веб-службы Майкрософт](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
+-   [Добавьте сведения о Partner of Record соглашения партнера веб-службы Майкрософт](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
   
--   [Замена Office 365 интеграции модуля попробуйте купить Endpoint URL-адресов для поддержки соглашения торгового посредника интерактивных служб Майкрософт](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
+-   [Замените Office 365 модуля покупки ознакомления конечной точки URL-адрес интеграции для поддержки соглашения торгового посредника для веб-службы Майкрософт](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
   
 -   [Создание DVD-диска восстановления сервера для удаленно администрируемых серверов](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
   
--   [Создание DVD-диска восстановления сервера для многоязычной поддержки](Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
+-   [Создание DVD-диска восстановления сервера для поддержки нескольких языков](Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
 
--   [Добавление фирменной символики на панели мониторинга, удаленного веб-доступа и панель запуска](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
+-   [Добавление фирменной символики на панель мониторинга, удаленного веб-доступа и панель запуска](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   
 -   [Добавить вкладку в параметры](../install/Add-a-Tab-to-Settings.md)  
   
@@ -73,19 +74,19 @@ ms.lasthandoff: 07/03/2017
   
 -   [Управление именами доменов и поставщиками доменных имен](../install/Manage-Domain-Names-and-Domain-Name-Providers.md)  
   
--   [Настройка зарегистрироваться на Microsoft Online Backup Service задач](../install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
+-   [Настройка регистрации в службе Microsoft Online Backup Service задачи](../install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
   
 -   [Настройка дисковых пространств](../install/Customize-Storage-Spaces.md)  
   
--   [Создание носителя для восстановления клиента нескольких языков](../install/Build-Multi-Language-Client-Restore-Media.md)  
+-   [Создание носителя для восстановления клиента Многоязычная версия](../install/Build-Multi-Language-Client-Restore-Media.md)  
   
 -   [Автоматизация установки надстройки во время установки](../install/Automate-Installation-of-Add-Ins-During-Setup.md)  
   
--   [Добавление информации зарегистрированного партнера соглашение об партнеров веб-службы Майкрософт](../install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
+-   [Добавьте сведения о Partner of Record соглашения партнера веб-службы Майкрософт](../install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
   
--   [Замена Office 365 интеграции модуля попробуйте купить Endpoint URL-адресов для поддержки соглашения торгового посредника интерактивных служб Майкрософт](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
+-   [Замените Office 365 модуля покупки ознакомления конечной точки URL-адрес интеграции для поддержки соглашения торгового посредника для веб-службы Майкрософт](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
   
 -   [Создание DVD-диска восстановления сервера для удаленно администрируемых серверов](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
   
--   [Создание DVD-диска восстановления сервера для многоязычной поддержки](../install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
+-   [Создание DVD-диска восстановления сервера для поддержки нескольких языков](../install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
 

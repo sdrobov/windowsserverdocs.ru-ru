@@ -1,6 +1,6 @@
 ---
-title: "Управление отчетами хранилища"
-description: "В этой статье описываются процессы создания, планирования и отслеживания отчетов хранилища"
+title: Управление отчетами хранилища
+description: В этой статье описываются процессы создания, планирования и отслеживания отчетов хранилища
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: c0d750fd139865daa92319c1d1926dc5d36669b2
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59885775"
 ---
 # <a name="storage-reports-management"></a>Управление отчетами хранилища
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 На узле **Управление отчетами хранилища** оснастки консоли управления Microsoft<sup>®</sup> (MMC) диспетчера ресурсов файлового сервера можно выполнять следующие задачи:
 
@@ -31,16 +32,16 @@ ms.lasthandoff: 10/17/2017
 -   Создавать отчеты "Файлы по группам файлов" для определения того, как ресурсы хранилища разбиваются по различным группам файлов. 
 -   Создавать отчеты "Файлы по владельцам" для анализа того, как отдельные пользователи используют общие ресурсы хранилища.
 
-Этот раздел включает следующие статьи:
+Этот раздел содержит следующие темы:
 
--   [Планирование набора отчетов](schedule-set-of-reports.md)
--   [Создание отчетов по требованию](generate-reports-on-demand.md)
+-   [Расписание набора отчетов](schedule-set-of-reports.md)
+-   [Создание отчетов по запросу](generate-reports-on-demand.md)
 
 > [!Note]
 > Чтобы настроить уведомления по электронной почте и определенные возможности создания отчетов, необходимо сначала настроить общие параметры диспетчера ресурсов файлового сервера.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
--   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
+-   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
 
 
