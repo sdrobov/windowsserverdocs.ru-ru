@@ -11,20 +11,20 @@ ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.localizationpriority: high
 ms.openlocfilehash: 4127eab613abb429a200f513a11b944e05da0f76
-ms.sourcegitcommit: 9ed4c9fe04ebf3ef488170503c9a354c992b6fde
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "4339372"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59851345"
 ---
-# Обновление Windows Server 2008 и Windows Server 2008 R2
+# <a name="upgrade-windows-server-2008-and-windows-server-2008-r2"></a>Обновление Windows Server 2008 и Windows Server 2008 R2
 
-Расширенная поддержка для Windows Server 2008 и Windows Server 2008 R2 закончится 14 января 2020 г. Существует два пути модернизации: обновление в локальной среде или перенос путем повторного размещения в Azure. **При повторном размещении в Azure можно перенести имеющиеся образы Server бесплатно.**
+Расширенная поддержка для Windows Server 2008 и Windows Server 2008 R2 закончится 14 января 2020 г. Существует два пути модернизации: Локальное обновление или миграция путем повторного размещения в Azure. **Если повторное размещение в Azure, вы можете перенести существующие образы Server бесплатно.**
 
 ![Блок-схема с описанием путей обновления Windows Server 2008](media/WS08_upgrade_paths.png)
 
 
-## Локальное обновление
+## <a name="on-premises-upgrade"></a>Локальное обновление
 Если требуется оставить серверы в локальной среде и если вы используете Windows Server 2008 или Windows Server 2008 R2, необходимо будет выполнить [обновление до Windows Server 2012/2012 R2](installation-and-upgrade.md#upgrading-to-windows-server-2012-r2), прежде чем вы сможете выполнить [обновление до Windows Server 2016](installation-and-upgrade.md#upgrading-to-windows-server-2016). В ходе обновления у вас останется возможность выполнить перенос в Azure путем повторного размещения.
 
 Дополнительные сведения о вариантах локального обновления см. в разделе [Обновление с Windows Server 2008 R2 или Windows Server 2008](installation-and-upgrade.md#upgrading-from-windows-server-2008-r2-or-windows-server-2008).
@@ -32,7 +32,7 @@ ms.locfileid: "4339372"
 Если вы используете Windows Server 2003, необходимо выполнить [обновление до Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff972408(v%3dws.10)). Дополнительные сведения о вариантах локального обновления см. в разделе [Пути обновления для Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979563(v=ws.10)).
 
 
-## Перенос в Azure
+## <a name="migrate-to-azure"></a>Перенос в Azure
 Можно выполнить перенос локальных серверов Windows Server 2008 и Windows Server 2008 R2 в Azure и продолжить использовать их на виртуальных машинах. В Azure вы сохраните соответствие нормативным требованиям, повысите уровень защиты и сможете использовать в своей работе преимущества облачных технологий. Преимущества переноса в Azure.
 
 - Обновления системы безопасности в Azure.
@@ -49,12 +49,12 @@ ms.locfileid: "4339372"
 Чтобы понять, как анализировать имеющиеся ИТ-ресурсы, оценить то, что у вас уже есть, выделить преимущества переноса конкретных служб и приложений в облако по сравнению с сохранением рабочих нагрузок в локальной среде, а также понять, какую выгоду вы получите от обновления до последней версии Windows Server, см. раздел [Руководство по переносу для Windows Server](https://go.microsoft.com/fwlink/?linkid=872689).
 
 
-## Обновление SQL Server 2008 или 2008 R2 параллельно с серверами Windows Server
+## <a name="upgrade-sql-server-20082008-r2-in-parallel-with-your-windows-servers"></a>Обновление SQL Server 2008 или 2008 R2 параллельно с серверами Windows Server
 
 ![Логотип SQL Server](media/sqlr2.jpg)
 
 Если вы используете SQL Server 2008 или 2008 R2, вы можете выполнить обновление до SQL Server [2016](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016) или [2017](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017).
 
 
-## Дополнительные ресурсы
-[Платформа Microsoft Azure](https://docs.microsoft.com/azure/#pivot=products)
+## <a name="additional-resources"></a>Дополнительные ресурсы
+[Microsoft Azure](https://docs.microsoft.com/azure/#pivot=products)

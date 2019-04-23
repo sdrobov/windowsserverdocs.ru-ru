@@ -1,7 +1,7 @@
 ---
 title: Использование виртуальных сетевых устройств в виртуальной сети
-description: Этот раздел является частью программного обеспечения определены сетевые руководство о том, как управление рабочими нагрузками клиента и виртуальные сети в Windows Server 2016.
-manager: brianlic
+description: В этом разделе вы узнаете, как развертывание виртуальных сетевых модулей в виртуальных сетях клиента. Виртуальные сетевые модули можно добавить к сетям, которые выполняют определяемых пользователем маршрутах и зеркального отображения функций портов.
+manager: dougkim
 ms.custom: na
 ms.reviewer: na
 ms.suite: na
@@ -12,77 +12,60 @@ ms.technology: networking-sdn
 ms.assetid: 3c361575-1050-46f4-ac94-fa42102f83c1
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: db46189931263d230f013431f319eb2497589dee
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.date: 08/30/2018
+ms.openlocfilehash: e715a782651a5b9867f3b45251fd6ea6e4a9e4f7
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847375"
 ---
 # <a name="use-network-virtual-appliances-on-a-virtual-network"></a>Использование виртуальных сетевых устройств в виртуальной сети
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-В этом разделе можно использовать, чтобы узнать, как развертывание виртуальных сетевых устройств в клиенте виртуальных сетей.
+В этом разделе вы узнаете, как развертывание виртуальных сетевых модулей в виртуальных сетях клиента. Виртуальные сетевые модули можно добавить к сетям, которые выполняют определяемых пользователем маршрутах и зеркального отображения функций портов.
 
-Виртуальных сетевых устройств можно добавить к сетям, которые выполняют определенные пользователем маршрутизации и функции зеркалирования портов.
+## <a name="types-of-network-virtual-appliances"></a>Типы сетевых виртуальных устройств
 
-Этот раздел содержит следующие разделы.
+Можно использовать один из двух типов виртуальных устройств:
 
-- [Типы виртуальных сетевых устройств](#bkmk_types)
-- [Развертывание виртуального устройства сети](#bkmk_deploy)
-- [Пример:: Маршрутизации пользователем.](#bkmk_routing)
-- [Пример: Зеркалирование портов](#bkmk_port)
+1. **Определяемая пользователем маршрутизация** -заменяет распределенных маршрутизаторы в виртуальной сети возможности маршрутизации виртуального устройства.  С помощью определяемых пользователем маршрутах, виртуальное устройство используется как маршрутизатор между виртуальными подсетями в виртуальной сети.
 
-## <a name="bkmk_types"></a>Типы виртуальных сетевых устройств
+2. **Зеркальное отображение портов** — весь сетевой трафик, который вводит или выходя из отслеживаемых портов копируется и отправляется виртуальный модуль для анализа. 
 
-Существует два типа виртуальных устройств, которые можно использовать в виртуальных сетях.
 
-1. **Задано пользователем маршрутизации**. Определенные пользователем маршрутизации заменяет распределенных маршрутизаторы в виртуальной сети маршрутизации возможности виртуального устройства.  С пользователем маршрутизации виртуальное устройство используется в качестве маршрутизатора между виртуальными подсетями виртуальной сети.
-2. **Зеркалирование портов**. Зеркалирования портов, весь сетевой трафик, вход и выход из отслеживаемых порт копируется и отправляется виртуальное устройство для анализа. 
-## <a name="bkmk_deploy"></a>Развертывание виртуального устройства сети
+## <a name="deploying-a-network-virtual-appliance"></a>Развертывание виртуального сетевого устройства
 
-Для развертывания виртуального устройства, необходимо сначала создать виртуальную машину (VM), содержащий устройства и затем подключить ВМ виртуальных подсетей.
+Чтобы развернуть виртуальный сетевой модуль, необходимо сначала создать виртуальную Машину, которая содержит устройства и подключитесь к соответствующей виртуальной сети подсети виртуальной Машины. Дополнительные сведения см. в разделе [Создание виртуальной Машины клиента и подключение к виртуальной сети клиента или виртуальной локальной сети](Create-a-Tenant-VM.md).
 
->[!NOTE]
->Дополнительные сведения см. в разделе [создания виртуальной Машины клиента и подключение к виртуальной сети клиента или виртуальной локальной сети](Create-a-Tenant-VM.md)
+Некоторые устройства требуется несколько виртуальных сетевых адаптеров. Как правило, один сетевой адаптер, предназначенный для управления устройством, хотя дополнительные адаптеры обработки трафика.  Если для вашего устройства требуется несколько сетевых адаптеров, необходимо создать каждого сетевого интерфейса на сетевом контроллере. Также необходимо назначить идентификатор интерфейса на каждом узле для каждого из дополнительных адаптеров, которые находятся в разных виртуальных подсетей.
 
-Некоторые устройства требуется несколько виртуальных сетевых адаптеров. Обычно один сетевой адаптер, предназначенный для управления устройством, хотя дополнительные адаптеры используются для обработки трафика. 
+После развертывания сетевого виртуального модуля, можно использовать устройства, для определенных маршрутизации, переносу зеркального отображения или оба. 
 
-Если для вашего устройства требуется несколько сетевых адаптеров, необходимо создать каждого сетевого интерфейса в сетевого контроллера. 
 
-Также необходимо назначить идентификатор интерфейса на каждом узле для каждого из дополнительных адаптеры, которые находятся на разных виртуальных подсетей.
+## <a name="example-user-defined-routing"></a>Пример. Определяемые пользователем маршруты
 
-После завершения развертывания сети виртуальное устройство устройства можно использовать для маршрутизации определенные пользователем, зеркалирование портов или оба.
+Для большинства сред достаточно только системных маршрутов, уже определен распределенного маршрутизатора виртуальной сети. Тем не менее может потребоваться создать таблицу маршрутизации и добавьте один или несколько маршрутов в определенных случаях, например:
 
-##<a name="bkmk_routing"></a>Пример:: Маршрутизации пользователем.
+- Принудительное туннелирование в Интернет с помощью вашей локальной сети.
+- Использование виртуальных устройств в вашей среде.
 
-Для большинства сред необходимо будет только маршруты системы, уже определены распределенного маршрутизатора виртуальной сети. Тем не менее может потребоваться создать таблицу маршрутизации и добавьте один или несколько маршрутов, в определенных случаях, например:
+В таких случаях необходимо создать таблицу маршрутизации и добавить определяемые пользователем маршруты в таблицу. Можно использовать несколько таблиц маршрутизации, а вы можете сопоставить той же таблицы маршрутизации для одной или несколькими подсетями. Можно связать только каждой подсети с одной таблицей маршрутизации. Все виртуальные машины в подсети используют таблицу маршрутизации, связана с подсетью.
 
-* Принудительное туннелирование к Интернету через локальную сеть.
-* Использование виртуальных устройств в вашей среде.
+Системные маршруты пока использует таблицу маршрутизации связывается с подсетью. После связь установлена, маршрутизация выполняется на основе на длинного префикса (LPM) среди определяемых пользователем маршрутов и системных маршрутов. Если имеется несколько маршрутов с одинаковыми совпадениями LPM, определяемый пользователем маршрут выбирается first - прежде чем системный маршрут.
+ 
+**Процедура.**
 
-В этих сценариях необходимо создать таблицу маршрутизации и добавлять пользовательские маршруты в таблицу. У вас есть несколько таблиц маршрута и той же таблицы маршрутизации могут быть связаны с одной или несколькими подсетями. 
+1. Создайте маршрут свойства таблицы, которое содержит все определяемые пользователем маршруты.<p>Системные маршруты по-прежнему применяются в соответствии с определенными выше правилами.
 
-Каждая подсеть может быть связан только с таблицей один маршрут. Все виртуальные машины в подсети, используйте таблицу маршрутизации, который связан с этой подсети.
-
-Подсети используют маршруты системы пока таблицу маршрутизации связан подсети. После существует связь, маршрутизации осуществляется на основе на максимальную длину префикса соответствия (LPM) между пользователем маршруты и маршруты системы. 
-
-Если существует несколько маршрутов с помощью того же соответствием LPM, определенному маршруту пользователя выбирается сначала - перед маршрута системы. 
-
-###<a name="step-1-create-the-route-table-properties"></a>Шаг 1: Создание маршрута свойства таблицы
-
-В этой таблице маршрута будет содержать все определенные пользователем маршрутов.  Маршруты системы по-прежнему применяются в соответствии с правилами, описанный выше.
-
-В следующем примере показан можно использовать для создания свойства таблицы маршрутизации.
-
+   ```PowerShell
     $routetableproperties = new-object Microsoft.Windows.NetworkController.RouteTableProperties
+   ```
 
-###<a name="step-2-add-a-route-to-the-route-table-properties"></a>Шаг 2: Добавление маршрута для свойства таблицы маршрутизации
+2. Добавьте маршрут свойства таблицы маршрутизации.<p>Ни одному маршруту, предназначенный для подсети 12.0.0.0/8 будет перенаправляться на виртуальное устройство в 192.168.1.10. Модуль должен иметь виртуального сетевого адаптера, подключенных к виртуальной сети с этого IP-адрес назначается сетевой интерфейс.
 
-Этот маршрут говорит, отправляемых любой трафик, который предназначен для подсети 12.0.0.0/8 виртуальное устройство в 192.168.1.10 маршрутизации.  Очень важно, что устройство имеет виртуального сетевого адаптера, подключенных к виртуальной сети, IP-адрес, назначенный сетевому интерфейсу.
-
-Добавление маршрута для свойства таблицы маршрута можно использовать команды в следующем примере.
-
+   ```PowerShell
     $route = new-object Microsoft.Windows.NetworkController.Route
     $route.ResourceID = "0_0_0_0_0"
     $route.properties = new-object Microsoft.Windows.NetworkController.RouteProperties
@@ -90,97 +73,101 @@ ms.lasthandoff: 03/28/2018
     $route.properties.nextHopType = "VirtualAppliance"
     $route.properties.nextHopIpAddress = "192.168.1.10"
     $routetableproperties.routes += $route
+   ```
+   >[!TIP]
+   >Если вы хотите добавить дополнительные маршруты, повторите этот шаг для каждого маршрута, который вы хотите определить.
 
-Повторите этот шаг для каждого маршрута, которые требуется определить, можно добавить дополнительные маршруты.
-s
-###<a name="step-3-add-the-route-table-to-network-controller"></a>Шаг 3: Добавление в таблицу маршрутизации для сетевого контроллера
-Чтобы добавить в таблицу маршрутизации для сетевого контроллера можно использовать команды в следующем примере.
+3. Добавьте таблицу маршрутизации для сетевого контроллера.
 
+   ```PowerShell
     $routetable = New-NetworkControllerRouteTable -ConnectionUri $uri -ResourceId "Route1" -Properties $routetableproperties
+   ```
 
-###<a name="step-4-apply-the-route-table-to-the-virtual-subnet"></a>Шаг 4: Применение в таблицу маршрутизации виртуальной подсети
- 
-При применении в таблицу маршрутизации виртуальной подсети, первый виртуальной подсети в сети Tenant1_Vnet1 использует таблицу маршрутизации. Можно назначить в таблицу маршрутизации столько подсетей в виртуальной сети как требуется.
+4. Применение таблицы маршрутизации к виртуальной подсети.<p>Применение таблицы маршрутов к виртуальной подсети, первой виртуальной подсети в сети Tenant1_Vnet1 использует таблицу маршрутов. Можно назначить таблице столько подсетей в виртуальной сети необходимо.
 
-В следующем примере показан можно использовать для применения к виртуальную подсеть в таблицу маршрутизации.
-
+   ```PowerShell
     $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
     $vnet.properties.subnets[0].properties.RouteTable = $routetable
     new-networkcontrollervirtualnetwork -connectionuri $uri -properties $vnet.properties -resourceId $vnet.resourceid
+   ```
 
-Как только в таблицу маршрутизации применить к виртуальной сети, перенаправляется трафик виртуального устройства. Необходимо настроить таблицу маршрутизации в виртуальное устройство для пересылки трафика, таким образом, подходящие для используемой среды.
+Сразу же применить таблицу маршрутизации в виртуальную сеть, трафик передается в виртуальное устройство. Необходимо настроить таблицы маршрутизации в виртуальный модуль для пересылки трафика, таким образом, подходящие для используемой среды.
 
-##<a name="bkmk_port"></a>Пример: Зеркалирование портов
+## <a name="example-port-mirroring"></a>Пример. Зеркальное отображение портов
 
-В этом примере позволяет настроить трафика MyVM_Ethernet1 таким образом, чтобы трафик зеркалируется Appliance_Ethernet1.
+В этом примере следует настроить трафик MyVM_Ethernet1 Appliance_Ethernet1 зеркальный сервер.  Мы предполагаем, что вы развернули две виртуальные машины, как устройства, а другой — как виртуальную Машину для мониторинга с зеркальным отображением. 
 
-В этом примере предполагается, что уже развернули две виртуальные машины, как устройства и виртуальной машины для отслеживания с зеркальным отображением.
+Модуль должен иметь второй сетевой интерфейс для управления. После включения зеркального отображения в качестве места назначения на Appliciance_Ethernet1, больше не получает трафик, предназначенный для IP-интерфейса настроена существует.
 
-Очень важно, что устройства имеет второй сетевой адаптер для управления, так как после зеркалирования включена в качестве назначения на Appliance_Ethernet1, он больше не будет получать трафика, предназначенного для IP-интерфейса, настроен.
 
-###<a name="step-1-get-the-virtual-network-on-which-your-vms-are-located"></a>Шаг 1: Получите виртуальной сети, на котором расположены ВМ
-Следующий пример команды можно использовать для получения виртуальной сети.
+**Процедура.**
 
-    $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
+1. Получите виртуальную сеть, на котором размещены виртуальные машины.
 
-###<a name="step-2-get-the-network-controller-network-interfaces-for-the-mirroring-source-and-destination"></a>Шаг 2: Получение сетевого контроллера сетевых интерфейсов для зеркального отображения источника и назначения
-Для получения сетевого контроллера сетевых интерфейсов для зеркального отображения источника и назначения можно использовать команды в следующем примере.
+   ```PowerShell
+   $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "Tenant1_VNet1"
+   ```
 
-    $dstNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "Appliance_Ethernet1"
-    $srcNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+2. Получение сетевых интерфейсов сетевого контроллера для зеркального отображения источника и назначения.
 
-###<a name="step-3-create-a-serviceinsertionproperties-object-to-contain-the-port-mirroring-rules-and-the-element-which-represents-the-destination-interface"></a>Шаг 3: Создание объект serviceinsertionproperties может содержать зеркалирование правила и элемент, который представляет интерфейс конечного порта
-В следующем примере показан можно использовать для создания объекта serviceinsertionproperties назначения.
+   ```PowerShell
+   $dstNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "Appliance_Ethernet1"
+   $srcNic = get-networkcontrollernetworkinterface -ConnectionUri $uri -ResourceId "MyVM_Ethernet1"
+   ```
 
-    $portmirror = [Microsoft.Windows.NetworkController.ServiceInsertionProperties]::new()
-    $portMirror.Priority = 1
+3. Создайте объект serviceinsertionproperties должен содержать зеркального отображения правил и элемент, который представляет интерфейс назначения портов.
 
-###<a name="step-4-create-a-serviceinsertionrules-object-to-contain-the-rules-that-must-be-matched-in-order-for-the-traffic-to-be-sent-to-the-appliance"></a>Шаг 4: Создание объект serviceinsertionrules может содержать правила, которые совпадающих для передачи трафика, отправляемого устройства
+   ```PowerShell
+   $portmirror = [Microsoft.Windows.NetworkController.ServiceInsertionProperties]::new()
+   $portMirror.Priority = 1
+   ```
 
-Правила, определенный ниже, соответствие весь трафик, входящий и исходящий, представляющий традиционных зеркала.  Эти правила можно настроить, если вы заинтересованы в зеркальном отображении конкретный порт или определенного источника и назначения.
+4. Создайте объект serviceinsertionrules должен содержать правила, которые должны совпадать для передачи трафика, отправляемого к устройству.<p>Определить правила ниже совпадение весь трафик, входящий и исходящий, представляющий традиционных зеркала.  Вы можете настроить эти правила, если вы заинтересованы в зеркальном отображении, конкретного порта или определенного источника и назначения.
 
-В следующем примере показан можно использовать для создания объекта serviceinsertionproperties.
+   ```PowerShell
+   $portmirror.ServiceInsertionRules = [Microsoft.Windows.NetworkController.ServiceInsertionRule[]]::new(1)
 
-    $portmirror.ServiceInsertionRules = [Microsoft.Windows.NetworkController.ServiceInsertionRule[]]::new(1)
+   $portmirror.ServiceInsertionRules[0] = [Microsoft.Windows.NetworkController.ServiceInsertionRule]::new()
+   $portmirror.ServiceInsertionRules[0].ResourceId = "Rule1"
+   $portmirror.ServiceInsertionRules[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionRuleProperties]::new()
 
-    $portmirror.ServiceInsertionRules[0] = [Microsoft.Windows.NetworkController.ServiceInsertionRule]::new()
-    $portmirror.ServiceInsertionRules[0].ResourceId = "Rule1"
-    $portmirror.ServiceInsertionRules[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionRuleProperties]::new()
+   $portmirror.ServiceInsertionRules[0].Properties.Description = "Port Mirror Rule"
+   $portmirror.ServiceInsertionRules[0].Properties.Protocol = "All"
+   $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeStart = "0"
+   $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeEnd = "65535"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeStart = "0"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeEnd = "65535"
+   $portmirror.ServiceInsertionRules[0].Properties.SourceSubnets = "*"
+   $portmirror.ServiceInsertionRules[0].Properties.DestinationSubnets = "*"
+   ```
 
-    $portmirror.ServiceInsertionRules[0].Properties.Description = "Port Mirror Rule"
-    $portmirror.ServiceInsertionRules[0].Properties.Protocol = "All"
-    $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeStart = "0"
-    $portmirror.ServiceInsertionRules[0].Properties.SourcePortRangeEnd = "65535"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeStart = "0"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationPortRangeEnd = "65535"
-    $portmirror.ServiceInsertionRules[0].Properties.SourceSubnets = "*"
-    $portmirror.ServiceInsertionRules[0].Properties.DestinationSubnets = "*"
+5. Создайте объект serviceinsertionelements должен содержать сетевой интерфейс зеркального устройства.
 
-###<a name="step-5-create-a-serviceinsertionelements-object-to-contain-the-network-interface-of-the-appliance-you-are-mirroring-to"></a>Шаг 5: Создание serviceinsertionelements объекта, который содержит сетевой интерфейс устройства, которую вы зеркального отображения
-В следующем примере показан можно использовать для создания объекта serviceinsertionelements сетевого интерфейса.
+   ```PowerShell
+   $portmirror.ServiceInsertionElements = [Microsoft.Windows.NetworkController.ServiceInsertionElement[]]::new(1)
 
-    $portmirror.ServiceInsertionElements = [Microsoft.Windows.NetworkController.ServiceInsertionElement[]]::new(1)
+   $portmirror.ServiceInsertionElements[0] = [Microsoft.Windows.NetworkController.ServiceInsertionElement]::new()
+   $portmirror.ServiceInsertionElements[0].ResourceId = "Element1"
+   $portmirror.ServiceInsertionElements[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionElementProperties]::new()
 
-    $portmirror.ServiceInsertionElements[0] = [Microsoft.Windows.NetworkController.ServiceInsertionElement]::new()
-    $portmirror.ServiceInsertionElements[0].ResourceId = "Element1"
-    $portmirror.ServiceInsertionElements[0].Properties = [Microsoft.Windows.NetworkController.ServiceInsertionElementProperties]::new()
+   $portmirror.ServiceInsertionElements[0].Properties.Description = "Port Mirror Element"
+   $portmirror.ServiceInsertionElements[0].Properties.NetworkInterface = $dstNic
+   $portmirror.ServiceInsertionElements[0].Properties.Order = 1
+   ```
 
-    $portmirror.ServiceInsertionElements[0].Properties.Description = "Port Mirror Element"
-    $portmirror.ServiceInsertionElements[0].Properties.NetworkInterface = $dstNic
-    $portmirror.ServiceInsertionElements[0].Properties.Order = 1
+6. Добавление в службу вставки объекта в сетевой контроллер.<p>При выполнении команды, весь трафик к устройству сетевой интерфейс, указанный в предыдущем шаге останавливается.
 
-###<a name="step-6-add-the-service-insertion-object-in-network-controller"></a>Шаг 6: Добавление вставки объект службы в сетевого контроллера
-При выполнении команды, приведет к остановке всего трафика к сетевому интерфейсу устройства, указанного на предыдущем шаге.
+   ```PowerShell
+   $portMirror = New-NetworkControllerServiceInsertion -ConnectionUri $uri -Properties $portmirror -ResourceId "MirrorAll"
+   ```
 
-Добавление объекта вставки службы в сетевого контроллера можно использовать команды в следующем примере.
+7. Обновление сетевого интерфейса источника для зеркального отображения.
 
-    $portMirror = New-NetworkControllerServiceInsertion -ConnectionUri $uri -Properties $portmirror -ResourceId "MirrorAll"
+   ```PowerShell
+   $srcNic.Properties.IpConfigurations[0].Properties.ServiceInsertion = $portMirror
+   $srcNic = New-NetworkControllerNetworkInterface -ConnectionUri $uri  -Properties $srcNic.Properties -ResourceId $srcNic.ResourceId
+   ```
 
-###<a name="step-7-update-the-network-interface-of-the-source-to-be-mirrored"></a>Шаг 7: Обновите сетевой интерфейс источника зеркальное отражение
-Чтобы обновить сетевой интерфейс, можно использовать команды в следующем примере.
-
-    $srcNic.Properties.IpConfigurations[0].Properties.ServiceInsertion = $portMirror
-    $srcNic = New-NetworkControllerNetworkInterface -ConnectionUri $uri  -Properties $srcNic.Properties -ResourceId $srcNic.ResourceId
-
-После завершения этих шагов зеркальное отображение трафик от интерфейса MyVM_Ethernet1 осуществляется с помощью интерфейса Appliance_Ethernet1.
+После выполнения этих действий, интерфейс Appliance_Ethernet1 отражает трафик от интерфейса MyVM_Ethernet1.
  
+---
