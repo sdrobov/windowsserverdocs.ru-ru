@@ -1,22 +1,23 @@
 ---
-title: "Потоки целостности ReFS"
-description: 
+title: Потоки целостности ReFS
+description: ''
 author: gawatu
 ms.author: jgerend
 manager: dmoss
-ms.date: 11/14/2016
+ms.date: 10/16/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
-ms.openlocfilehash: d9e14e74591b341048316e9c2e69a312062c3304
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 11f0a696fb843f5cd8b4a7ff3318c28d6c1adeb8
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59871345"
 ---
 # <a name="refs-integrity-streams"></a>Потоки целостности ReFS
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+>Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (полугодовой канал), Windows 10
 
 Потоки целостности — это дополнительная функция ReFS, которая проверяет и поддерживает целостность данных с помощью контрольных сумм. Хотя ReFS всегда применяет контрольные суммы для метаданных, по умолчанию ReFS не создает и не проверяет контрольные суммы для данных файлов. Потоки целостности — это необязательный компонент, который позволяет пользователям использовать контрольные суммы для данных файлов. Когда потоки целостности включены, ReFS может точно определить, являются ли данные допустимыми или они повреждены. Кроме того, ReFS и дисковые пространства могут совместно исправлять поврежденные метаданные и данные.
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 10/17/2017
 
 После включения потоков целостности ReFS создает и поддерживает контрольную сумму для указанных файлов в метаданных этих файлов. Эта контрольная сумма позволяет ReFS проверить целостность данных перед доступом к ним. Перед возвратом любых данных, для которых включены потоки целостности, ReFS сначала вычисляет их контрольную сумму:
 
-<img src=media/compute-checksum.gif alt="Compute checksum for file data"/>
+![Вычислить контрольную сумму для файла данных](media/compute-checksum.gif)
 
 Затем эта сумма сравнивается с контрольной суммой в метаданных файла. Если контрольные суммы совпадают, данные помечается как допустимые и возвращаются пользователю. Если суммы не совпадают, данные повреждены. Устойчивость тома определяет, как ReFS реагирует на повреждения.
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/17/2017
 
 ReFS записывает все повреждения в системный журнал событий, в котором также указывается, были ли повреждения исправлены. 
 
-<img src=media/corrective-write.gif alt="Corrective write restores data integrity."/>
+![Корректирующие записи восстанавливает целостность данных](media/corrective-write.gif)
 
 ## <a name="performance"></a>Производительность 
 
@@ -56,7 +57,7 @@ ReFS записывает все повреждения в системный ж
 
 По умолчанию сканер запускается каждые четыре недели, однако этот интервал можно настроить в планировщике заданий в разделе "Майкрософт > Windows> Проверка целостности данных". 
 
-## <a name="examples"></a>Примеры:
+## <a name="examples"></a>Примеры
 Для отслеживания и изменения параметров целостности данных файлов ReFS использует командлеты **Get-FileIntegrity** и **Set-FileIntegrity**.
 
 ### <a name="get-fileintegrity"></a>Get-FileIntegrity
@@ -94,6 +95,6 @@ PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 
 ## <a name="see-also"></a>См. также
 
--   [Обзор ReFS](refs-overview.md)
--   [Клонирование блоков ReFS](block-cloning.md)
--   [Обзор локальных дисковых пространств](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Общие сведения о reFS](refs-overview.md)
+-   [Клонирование блоков reFS](block-cloning.md)
+-   [Общие сведения о дисковых хранилища](../storage-spaces/storage-spaces-direct-overview.md)

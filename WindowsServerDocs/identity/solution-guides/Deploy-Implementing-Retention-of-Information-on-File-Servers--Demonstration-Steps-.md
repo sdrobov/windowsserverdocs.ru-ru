@@ -1,7 +1,7 @@
 ---
 ms.assetid: ee008835-7d3b-4977-adcb-7084c40e5918
 title: Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
-description: 
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,140 +10,141 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: e0f79dd72190888340144bc5c109ee31fa301937
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59870805"
 ---
 # <a name="deploy-implementing-retention-of-information-on-file-servers-demonstration-steps"></a>Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-You can set retention periods for folders and put files on legal hold by using File Classification Infrastructure and File Server Resource Manager.  
+Вы может задать периоды хранения для папок и поместить файлы на удержание по юридическим причинам, используя инфраструктуру классификации файлов и диспетчер ресурсов файлового сервера.  
   
 **В этом документе**  
   
 -   [Предварительные требования](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Prereqs)  
   
--   [Step 1: Create resource property definitions](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
+-   [Шаг 1. Создание определений свойств ресурсов](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [Step 2: Configure notifications](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step2)  
+-   [Шаг 2. Настройка уведомлений](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step2)  
   
--   [Step 3: Create a file management task](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
+-   [Шаг 3. Создать задачу управления файлами](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
--   [Step 4: Classify a file manually](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)  
+-   [Шаг 4. Классификация файла вручную](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
-> Этот раздел содержит пример командлеты Windows PowerShell, который можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [использование командлетов](https://go.microsoft.com/fwlink/p/?linkid=230693).  
+> В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
-The steps in this topic assume you have a SMTP server configured for file expiration notifications.  
+В этом разделе предполагается, что SMTP-сервер настроен для отправки уведомлений об окончания срока действия файла.  
   
-## <a name="BKMK_Step1"></a>Step 1: Create resource property definitions  
-In this step, we enable the Retention Period and Discoverability resource properties so that File Classification Infrastructure can use these resource properties to tag the files that are scanned in a network shared folder.  
+## <a name="BKMK_Step1"></a>Шаг 1. Создание определений свойств ресурсов  
+На этом шаге мы включим свойства ресурса "Период хранения" и "Обнаруживаемость", чтобы инфраструктура классификации файлов могла их использовать для маркировки файлов, которые проверяются в общей сетевой папке.  
   
-[Do this step using Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
-#### <a name="to-create-resource-property-definitions"></a>To create resource property definitions  
+#### <a name="to-create-resource-property-definitions"></a>Создание определений свойств ресурсов  
   
-1.  On the domain controller, sign in to the server as a member of the Domain Admins security group.  
+1.  На контроллере домена войдите на сервер как член группы безопасности "Администраторы домена".  
   
-2.  Open Active Directory Administrative Center. В диспетчере серверов щелкните **средства**, а затем нажмите кнопку **Центр администрирования Active Directory**.  
+2.  Откройте центр администрирования Active Directory. В диспетчере серверов откройте меню **Сервис** и щелкните **Центр администрирования Active Directory**.  
   
-3.  Expand **Dynamic Access Control**, and then click **Resource Properties**.  
+3.  Разверните узел **Динамический контроль доступа** и выберите **Свойства ресурса**.  
   
-4.  Right-click **Retention Period**, and then click **Enable**.  
+4.  Щелкните правой кнопкой мыши элемент **Период хранения** и выберите команду **Включить**.  
   
-5.  Right-click **Discoverability**, and then click **Enable**.  
+5.  Щелкните правой кнопкой **Обнаруживаемость**и выберите **Включить**.  
   
 ![руководства по решениям](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 Set-ADResourceProperty -Enabled:$true -Identity:'CN=RetentionPeriod_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 ```  
   
-## <a name="BKMK_Step2"></a>Step 2: Configure notifications  
-In this step, we use the File Server Resource Manager console to configure the SMTP server, the default administrator email address, and the default email address that the reports are sent from.  
+## <a name="BKMK_Step2"></a>Шаг 2. Настройка уведомлений  
+На этом шаге мы используем консоль диспетчера ресурсов файлового сервера, чтобы настроить SMTP-сервер, адрес электронной почты администратора по умолчанию и адрес электронной почты по умолчанию, с которого отправляются отчеты.  
   
-[Do this step using Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
-#### <a name="to-configure-notifications"></a>To configure notifications  
+#### <a name="to-configure-notifications"></a>Настройка уведомлений  
   
-1.  Sign in to the file server as a member of the Administrators security group.  
+1.  Войдите на файловый сервер от имени члена локальной группы безопасности "Администраторы".  
   
-2.  From the Windows PowerShell command prompt, type **Update-FsrmClassificationPropertyDefinition**, and then press ENTER. This will synchronize the property definitions that are created on the domain controller to the file server.  
+2.  В командной строке Windows PowerShell введите команду **Update-FsrmClassificationPropertyDefinition** и нажмите клавишу ВВОД. Эта команда синхронизирует определения свойств, созданные на контроллере домена, с файловым сервером.  
   
-3.  Откройте диспетчер ресурсов файлового сервера. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
+3.  Откройте диспетчер ресурсов файлового сервера. В диспетчере серверов откройте меню **Сервис** и щелкните **Диспетчер ресурсов файлового сервера**.  
   
-4.  Right-click **File Server Resource Manager (local)**, and then click **Configure Options**.  
+4.  Щелкните правой кнопкой элемент **Диспетчер ресурсов файлового сервера (локальный)** и выберите команду **Настроить параметры**.  
   
-5.  On the **Email Notifications** tab, configure the following:  
+5.  На вкладке **Уведомления по электронной почте** выполните следующие действия.  
   
-    -   In the **SMTP server name or IP address** box, type the name of the SMTP server on your network.  
+    -   В поле **Имя или IP-адрес SMTP-сервера** введите имя SMTP-сервера в вашей сети.  
   
-    -   In the **Default administrator recipients** box, type the email address of the administrator who should get the notification.  
+    -   В поле **Администраторы-получатели по умолчанию** введите адрес электронной почты администратора, который будет получать уведомления.  
   
-    -   In the **Default "From" e-mail address** box, type the email address that should be used to send the notifications.  
+    -   В **по умолчанию «От» адрес электронной почты** введите адрес электронной почты, который должен использоваться для отправки уведомлений.  
   
 6.  Нажмите кнопку **ОК**.  
   
 ![руководства по решениям](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEmailAddress" -AdminEmailAddress "AdministratorEmailAddress"  
 ```  
   
-## <a name="BKMK_Step3"></a>Step 3: Create a file management task  
-In this step, we use the File Server Resource Manager console to create a file management task that will run on the last day of the month and expire any files with the following criteria:  
+## <a name="BKMK_Step3"></a>Шаг 3. Создание задачи управления файлами  
+На этом шаге мы используем консоль диспетчера ресурсов файлового ресурса, чтобы создать задачу управления файлами, которая будет выполняться в последний день месяца и прекращать срок действия файлов, соответствующих следующим критериям:  
   
--   The file is not classified as being on legal hold.  
+-   файл не классифицирован как удерживающийся по юридическим причинам;  
   
--   The file is classified as having a long-term retention period.  
+-   файл классифицирован как файл с долгосрочным периодом хранения;  
   
--   The file has not been modified in the last 10 years.  
+-   файл изменялся в течение 10 лет.  
   
-[Do this step using Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
+[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
   
-#### <a name="to-create-a-file-management-task"></a>To create a file management task  
+#### <a name="to-create-a-file-management-task"></a>Создание задачи управления файлами  
   
-1.  Sign in to the file server as a member of the Administrators security group.  
+1.  Войдите на файловый сервер от имени члена локальной группы безопасности "Администраторы".  
   
-2.  Откройте диспетчер ресурсов файлового сервера. In Server Manager, click **Tools**, and then click **File Server Resource Manager**.  
+2.  Откройте диспетчер ресурсов файлового сервера. В диспетчере серверов откройте меню **Сервис** и щелкните **Диспетчер ресурсов файлового сервера**.  
   
-3.  Right-click **File Management Tasks**, and then click **Create File Management Task**.  
+3.  Щелкните **Задачи управления файлами**правой кнопкой мыши и выберите команду **Создать задачу управления файлами**.  
   
-4.  On the **General** tab, in the **Task name** box, type a name for the file management task, such as Retention Task.  
+4.  На вкладке **Общие** в поле **Имя задачи** введите имя задачи управления файлами, например "Задача хранения".  
   
-5.  On the **Scope** tab, click **Add**, and choose the folders that should be included in this rule, such as D:\Finance Documents.  
+5.  На вкладке **Область действия** нажмите кнопку **Добавить**и выберите папки, которые необходимо включить в это правило, например D:\Finance Documents.  
   
-6.  On the **Action** tab, in the **Type** box, click **File expiration**. In the **Expiration directory** box, type a path to a folder on the local file server where the expired files will be moved. This folder should have an access control list that grants only file server administrators access.  
+6.  На вкладке **Действие** в поле **Тип** введите **Истечение срока действия файла**. В поле **Каталог истечения срока** введите путь к папке на локальном файловом сервере, на который будут перемещены просроченные файлы. Для этой папки должен быть задан список управления доступом, который предоставляет доступ только администраторам файлового сервера.  
   
-7.  On the **Notification** tab, click **Add**.  
+7.  На вкладке **Уведомления** нажмите кнопку **Добавить**.  
   
-    -   Select the **Send e-mail to the following administrators** check box.  
+    -   Установите флажок **Отправить сообщение электронной почты следующим администраторам**.  
   
-    -   Select the **Send an email to users with affected files** check box, and then click **OK**.  
+    -   Установите флажок **Отправить письмо пользователям, чьи файлы затрагиваются** и нажмите кнопку **ОК**.  
   
-8.  On the **Condition** tab, click **Add**, and add the following properties:  
+8.  На вкладке **Условие** нажмите кнопку **Добавить**, а затем добавьте следующие свойства:  
   
-    -   In the **Property** list, click **Discoverability**. In the **Operator** list, click **Not equal**. In the **Value** list, click **Hold**.  
+    -   В списке **Свойство** выберите **Обнаруживаемость**. В списке **Оператор** щелкните **Не равно**. В списке **Значение** выберите **Удержание**.  
   
-    -   In the **Property** list, click **Retention Period**. In the **Operator** list, click **Equal**. In the **Value** list, click **Long-Term**.  
+    -   В списке **Свойство** выберите **Период хранения**. В списке **Оператор** щелкните **Равно**. В списке **Значение** выберите **Долгосрочное**.  
   
-9. On the **Condition** tab, select the **Days since file was last modified** check box, and then set the value to **3650**.  
+9. На вкладке **Условие** установите флажок **Число дней после последнего изменения файла** и задайте значение **3650**.  
   
-10. On the **Schedule** tab, click the **Monthly** option, and then select the **Last** check box.  
+10. На вкладке **Расписание** щелкните параметр **Ежемесячно** и установите флажок **Последний** .  
   
 11. Нажмите кнопку **ОК**.  
   
 ![руководства по решениям](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 $fmjexpiration = New-FSRMFmjAction -Type 'Expiration' -ExpirationFolder folder  
@@ -157,37 +158,37 @@ $schedule = New-FsrmScheduledTask -Time $date -Monthly @(-1)
 $fmj1=New-FSRMFileManagementJob -Name "Retention Task" -Namespace @('D:\Finance Documents') -Action $fmjexpiration -Schedule $schedule -Notification @($fmjNotification) -Condition @( $fmjCondition1, $fmjCondition2, $fmjCondition3)  
 ```  
   
-## <a name="BKMK_Step4"></a>Step 4: Classify a file manually  
-In this step, we manually classify a file to be on legal hold. The parent folder of this file will be classified with a long-term retention period.  
+## <a name="BKMK_Step4"></a>Шаг 4. Классификация файла вручную  
+На этом шаге мы вручную классифицируем файл как удерживаемый по юридическим причинам. Родительская папка этого файла будет классифицирована как папка с долгосрочным периодом хранения.  
   
-#### <a name="to-manually-classify-a-file"></a>To manually classify a file  
+#### <a name="to-manually-classify-a-file"></a>Классификация файла вручную  
   
-1.  Sign in to the file server as a member of the Administrators security group.  
+1.  Войдите на файловый сервер от имени члена локальной группы безопасности "Администраторы".  
   
-2.  Navigate to the folder that was configured in the scope of the file management task created in Step 3.  
+2.  Перейдите к папке, которая настроена в области действия задачи управления файлами, созданной на шаге 3.  
   
-3.  Right-click the folder, and then click **Properties**.  
+3.  Щелкните правой кнопкой мыши папку, затем щелкните **Свойства**.  
   
-4.  On the **Classification** tab, click **Retention Period**, click **Long-Term**, and then click **OK**.  
+4.  На вкладке **Классификация** щелкните **Период хранения**, выберите **Долгосрочное**и нажмите кнопку **ОК**.  
   
-5.  Right-click a file within that folder, and then click **Properties**.  
+5.  Щелкните правой кнопкой мыши файл в этой папке и выберите пункт **Свойства**.  
   
-6.  On the **Classification** tab, click **Discoverability**, click **Hold**, click **Apply**, and then click **OK**.  
+6.  На вкладке **Классификация** щелкните **Обнаруживаемость**, выберите **Удерживание**и нажмите кнопки **Применить**и **ОК**.  
   
-7.  On the file server, run the file management task by using the File Server Resource Manager console. After the file management task completes, check the folder and ensure the file was not moved to the expiration directory.  
+7.  На файловом сервере выполните задачу управления файлами, используя консоль диспетчера ресурсов файлового ресурса. После завершения задачи управления файлами проверьте папку и убедитесь, что файл не перемещен в каталог истечения срока.  
   
-8.  Right-click the same  file within that folder, and then click **Properties**.  
+8.  Щелкните правой кнопкой мыши тот же файл в этой папке и выберите пункт **Свойства**.  
   
-9. On the **Classification** tab, click **Discoverability**, click **Not Applicable**, click **Apply**, and then click **OK**.  
+9. На вкладке **Классификация** щелкните **Обнаруживаемость**, выберите **Неприменимо** и нажмите кнопки **Применить** и **ОК**.  
   
-10. On the file server, run the file management task again by using the File Server Resource Manager console. After the file management task completes, check the folder and ensure that file was moved to the expiration directory.  
+10. На файловом сервере еще раз выполните задачу управления файлами, используя консоль диспетчера ресурсов файлового ресурса. После завершения задачи управления файлами проверьте папку и убедитесь, что файл перемещен в каталог истечения срока.  
   
-## <a name="BKMK_Links"></a>См. также:  
+## <a name="BKMK_Links"></a>См. также  
   
 -   [Сценарий: Реализация хранения информации на файловых серверах](Scenario--Implement-Retention-of-Information-on-File-Servers.md)  
   
 -   [План хранения информация на файловых серверах](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)  
   
--   [Динамического контроля доступа: Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [Динамический контроль доступа. Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
   
 
