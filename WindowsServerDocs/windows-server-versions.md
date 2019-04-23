@@ -1,5 +1,5 @@
 ---
-title: Техническая информация по Windows Server для ИТ-администраторов— Windows Server
+title: Техническая информация по Windows Server для ИТ-администраторов — Windows Server
 description: Получите технические статьи по текущим и прежним выпускам Windows Server, а также ознакомительные версии для ИТ-специалистов.
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,15 +15,15 @@ ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 8d14ccf734d5242301030bbb6e3c2489e1a0266a
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082584"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59876355"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server: информация по текущим и прежним выпускам для ИТ-администраторов
 
-Windows Server — это платформа для создания инфраструктуры подключенных приложений, сетей и веб-служб: от рабочей группы до центра обработки данных.
+Windows Server является платформой для создания инфраструктуры подключенных приложений, сетей и веб-служб: от рабочей группы до центра обработки данных.
 
 Используйте ссылки ниже для просмотра технической информации для ИТ-специалистов по различным версиям Windows Server.
 
@@ -32,19 +32,19 @@ Windows Server — это платформа для создания инфра�
 
 > Информация ниже относится *только* к Windows **Server**.
 
-## <a name="windows-server-2016"></a>Windows Server 2016
+## <a name="windows-server-2016"></a>Windows Server 2016
 
-[Техническое содержимое для Windows Server 2016](windows-server-2016.md)
+[Технические материалы по Windows Server 2016](windows-server-2016.md)
 
 ## <a name="windows-server-2012-r2-and-windows-server-2012"></a>Windows Server 2012 R2 и Windows Server 2012
 
-[Техническая библиотека Windows Server 2012 R2 и Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
+[Windows Server 2012 R2 и технической библиотеке Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
 
-[Библиотека для разработчиков Windows Server 2012 R2 на сайте MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
+[Библиотека разработчика Windows Server 2012 R2 в MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
 
 ## <a name="windows-server-2008-r2-and-windows-server-2008"></a>Windows Server 2008 R2 и Windows Server 2008
 
-[Техническая библиотека Windows Server 2008 R2 и Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
+[Windows Server 2008 R2 и технической библиотеке Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
  
 [Библиотека для разработчиков Windows Server 2008 на сайте MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
 
@@ -57,12 +57,12 @@ Windows Server — это платформа для создания инфра�
 
 ## <a name="product-evaluations"></a>Ознакомительные версии продуктов
 
-[Скачать ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
+[Скачайте ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
-[Скачать пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
+[Скачайте пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 
 
-## <a name="related-links"></a>Дополнительные ссылки
+## <a name="related-links"></a>Связанные ссылки
 [Сведения о продукте Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) 
 
 <br>

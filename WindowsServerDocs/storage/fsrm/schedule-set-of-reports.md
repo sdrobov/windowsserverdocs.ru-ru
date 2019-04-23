@@ -1,6 +1,6 @@
 ---
-title: "Планирование набора отчетов"
-description: "В этой статье описывается процесс создания набора отчетов по расписанию"
+title: Планирование набора отчетов
+description: В этой статье описывается процесс создания набора отчетов по расписанию
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 15b69e723af3a30375beae73782ab122c68f8880
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59879725"
 ---
 # <a name="schedule-a-set-of-reports"></a>Планирование набора отчетов
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Для создания набора отчетов по расписанию необходимо запланировать *задачу отчета.* Задача отчета определяет, какие отчеты следует создавать и какие параметры использовать; по каким томам и папкам следует создавать отчет; периодичность создания отчетов, а также форматы файлов, в которых будут сохраняться отчеты.
 
@@ -76,9 +77,9 @@ ms.lasthandoff: 10/17/2017
 
 Кроме того, можно просмотреть текущее состояние отчета (выполняется ли его создание в данный момент), последнее время формирования отчета, результат этой операции, а также следующее запланированное время формирования отчета.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
--   [Управление отчетами хранилища](storage-reports-management.md)
--   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
+-   [Управление ресурсами хранилища](storage-reports-management.md)
+-   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
 
 

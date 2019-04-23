@@ -1,0 +1,54 @@
+---
+title: bootcfg debug
+description: Раздел Windows команды для **отладки bootcfg** — добавляет или изменяет параметры отладки для определенной записи операционной системы.
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 28afa5fb-a236-46e2-b1a4-a3c43a49c437
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/16/2017
+ms.openlocfilehash: 27768788e7f14445137331523c62151fcf3b6b2d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59879025"
+---
+# <a name="bootcfg-debug"></a>bootcfg debug
+
+>Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Добавляет или изменяет параметры отладки для определенной записи операционной системы.
+
+## <a name="syntax"></a>Синтаксис
+```
+bootcfg /debug {ON | OFF | edit}[/s <computer> [/u <Domain>\<User> /p <Password>]] [/port {COM1 | COM2 | COM3 | COM4}] [/baud {9600 | 19200 | 38400 | 57600 | 115200}] [/id <OSEntryLineNum>]
+```
+## <a name="parameters"></a>Параметры
+|Параметр|Описание|
+|-------|--------|
+|{ON &#124; OFF&#124; edit}|Указывает значения для отладки.<br /><br />**ON** — включает поддержку удаленной отладки путем добавления параметра/Debug в указанный <OSEntryLineNum>.<br /><br />**ОТКЛЮЧЕНИЕ** -отключение поддержки удаленной отладки путем удаления параметра/debug из указанного <OSEntryLineNum>.<br /><br />**изменить** -позволяет частоты изменения порта и путем изменения значения, связанные с параметром/Debug для указанного <OSEntryLineNum>.|
+|/s <computer>|Указывает имя или IP-адрес удаленного компьютера (не используйте символы обратной косой черты). По умолчанию используется локальный компьютер.|
+|/u <Domain>\\<User>|Выполняет команду с разрешениями учетной записи пользователя, указанного по <User> или <Domain> \\ <User>. По умолчанию используется разрешения текущего, вошедшего в систему пользователя на компьютере, используя следующую команду.|
+|/p <Password>|Указывает пароль для учетной записи пользователя, который указан в **/u** параметра.|
+|/port {COM1 &#124; COM2 &#124; COM3 &#124; COM4}|Указывает COM-порт, используемый для отладки. Не используйте **/port** параметра, если отладка отключена.|
+|/baud {9600&#124; 19200&#124; 38400&#124; 57600&#124; 115200}|Скорость передачи, можно использовать для отладки. Не используйте **/BAUD** параметра, если отладка отключена.|
+|/ID <OSEntryLineNum>|Указывает номер строки записи операционной системы в разделе [operating systems] файла Boot.ini, к которому добавляются параметры отладки. Первая строка после заголовка раздела [операционные системы]-1.|
+|/?|Отображение справки в командной строке.|
+##### <a name="remarks"></a>Примечания
+-   Если требуется отладка порта 1394, воспользуйтесь [bootcfg dbg1394](bootcfg-dbg1394.md).
+## <a name="BKMK_examples"></a>Примеры
+В следующих примерах показано, как можно использовать **неверный**команды:
+```
+bootcfg /debug on /port com1 /id 2 
+bootcfg /debug edit /port com2 /baud 19200 /id 2 
+bootcfg /s srvmain /u maindom\hiropln /p p@ssW23 /debug off /id 2
+```
+#### <a name="additional-references"></a>Дополнительные ссылки
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)

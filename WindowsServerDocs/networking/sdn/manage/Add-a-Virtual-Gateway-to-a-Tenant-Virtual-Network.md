@@ -1,7 +1,7 @@
 ---
 title: Добавление виртуального шлюза в виртуальную сеть клиента
-description: Этот раздел является частью программного обеспечения определены сетевые руководство о том, как управление рабочими нагрузками клиента и виртуальные сети в Windows Server 2016.
-manager: brianlic
+description: Сведения об использовании командлетов и скриптов Windows PowerShell для предоставления подключение сайт сайт для виртуальных сетей для вашего клиента.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,304 +12,284 @@ ms.topic: article
 ms.assetid: b9552054-4eb9-48db-a6ce-f36ae55addcd
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 351cafd1466c4b3c20e907ea221c9f58129b3443
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.date: 08/23/2018
+ms.openlocfilehash: 6d31cde5252cd7f7e8d286d6f8886f779d17735d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59875815"
 ---
-# <a name="add-a-virtual-gateway-to-a-tenant-virtual-network"></a>Добавление виртуального шлюза в виртуальную сеть клиента
+# <a name="add-a-virtual-gateway-to-a-tenant-virtual-network"></a>Добавление виртуального шлюза в виртуальную сеть клиента 
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016 
 
-Чтобы узнать, как Настройка клиента виртуального шлюзы, с помощью командлетов Windows PowerShell и сценарии, для предоставления виртуальных сетей вашим клиентам возможности подключения сайта для сайта со своими сайтами организации, а также к Интернету, можно использовать в этом разделе.   
+Сведения об использовании командлетов и скриптов Windows PowerShell для предоставления подключение сайт сайт для виртуальных сетей для вашего клиента. В этом разделе добавьте шлюзы виртуальной клиента к экземплярам шлюза RAS, которые являются членами пулов шлюзов с помощью сетевого контроллера. Шлюз RAS поддерживает до 100 клиентов, в зависимости от пропускной способности, необходимой для каждого клиента. Сетевой контроллер автоматически определяет наиболее шлюза RAS для использования при развертывании нового виртуального шлюза для клиентов.  
+
+Каждый виртуальный шлюз соответствует от определенного клиента и состоит из одного или нескольких сетевых подключений (сеть сеть VPN-туннели) и, возможно, подключения протокола пограничного шлюза (BGP). Когда вы предоставите подключение сайт сайт, ваши клиенты могут подключить их виртуальной сети клиента к внешней сети, например корпоративной сети клиента, сети поставщика услуг или Интернет.
   
-Шлюз RAS поддерживает до 100 клиентов, в зависимости от полосы пропускания для каждого клиента. Сетевой контроллер использовать для добавления виртуального шлюзы для экземпляры шлюза RAS-сервера, которые являются членами пулов шлюза клиента. Сетевой контроллер автоматически определяет наиболее шлюза RAS-сервера для использования при развертывании нового виртуального шлюза для клиентов.  
-  
-Каждый виртуальный шлюз соответствует определенного клиента и состоит из одного или нескольких сетевых подключений (сеть сеть VPN-туннели) и, при необходимости подключения протокол пограничного шлюза (BGP). Это позволяет клиентам, для подключения к внешней сети, например клиента корпоративной сети, сети поставщика услуг или Интернет их клиенте виртуальной сети.  
-  
-При развертывании виртуальных шлюз, у вас есть следующие параметры конфигурации:  
-  
-**Параметры подключения к сети**  
-- IPSec-сайтами виртуальной частной сети (VPN)   
-- Инкапсуляции маршрутов (GRE)   
-- Уровень 3 переадресации  
-  
-**Параметры конфигурации BGP**  
-- Конфигурация маршрутизатора BGP  
-- Конфигурация узла BGP  
-- Настройка политик маршрутизации BGP  
-  
-Пример сценариев Windows PowerShell и команды в этом разделе показано, как развертывание виртуальных шлюз на шлюза RAS-сервера с каждым из этих вариантов.  
-  
-Этот раздел содержит следующие разделы.  
-  
-- [Добавление виртуального шлюза для клиента](#bkmk_addgwy)  
-- [Добавить узел узел VPN-подключение для клиента (IPsec, GRE или уровня 3)](#bkmk_s2s1)  
-- [Настройка шлюза как маршрутизатор BGP](#bkmk_bgp1)  
-- [Настроить шлюз со всеми типами три подключения (уровня IPsec GRE, 3) и BGP](#bkmk_all3)  
-- [Изменение или удаление шлюз виртуальной сети](#bkmk_modify)  
+**Когда вы развертываете шлюз виртуальный клиента, у вас есть следующие параметры конфигурации:**  
+
+| Параметры подключения к сети | Параметры конфигурации BGP  |
+|---------|---------|
+|<ul><li>IPSec — сеть виртуальной частной сети (VPN)</li><li>Универсальной инкапсуляции при маршрутизации (GRE)</li><li>Layer 3 forwarding (Пересылка третьего уровня)</li></ul>     |<ul><li>Конфигурация маршрутизатора BGP</li><li>Конфигурация узла BGP</li><li>Конфигурация политики маршрутизации BGP</li></ul>         |
+---
+
+Образцы скриптов Windows PowerShell и команды в этом разделе показано, как развернуть шлюз виртуальной клиента для шлюза RAS с каждым из этих вариантов.  
   
    
 >[!IMPORTANT]  
->Прежде чем выполнять какие-либо примеры команд Windows PowerShell и сценарии, которые предоставляются в этом разделе, необходимо изменить значения всех переменных, чтобы значения подходят для развертывания.  
-  
-## <a name="bkmk_addgwy"></a>Добавление виртуального шлюза для клиента  
-  
-Шаг 1: Убедитесь, что объект пула шлюза существует в сетевого контроллера.  
-```  
-$uri = "https://ncrest.contoso.com"   
-  
-# Retrieve the Gateway Pool configuration  
-$gwPool = Get-NetworkControllerGatewayPool -ConnectionUri $uri  
-  
-# Display in JSON format  
-$gwPool | ConvertTo-Json -Depth 2   
-  
-  
-```  
-Шаг 2: Убедитесь, что подсеть должна использоваться для маршрутизации пакетов из виртуальной сети клиента существует контроллер сети; и восстановить виртуальную подсеть, которая будет использоваться для маршрутизации между шлюзом клиента и виртуальной сети.  
-  
-```  
-$uri = "https://ncrest.contoso.com"   
-  
-# Retrieve the Tenant Virtual Network configuration  
-$Vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri  -ResourceId "Contoso_Vnet1"   
-  
-# Display in JSON format  
-$Vnet | ConvertTo-Json -Depth 4   
-  
-# Retrieve the Tenant Virtual Subnet configuration  
-$RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier" -VirtualNetworkID $vnet.ResourceId   
-  
-# Display in JSON format  
-$RoutingSubnet | ConvertTo-Json -Depth 4   
-  
-```  
-Шаг 3: Создание виртуального шлюза объект JSON и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for Tenant Virtual Gateway  
-$VirtualGWProperties = New-Object Microsoft.Windows.NetworkController.VirtualGatewayProperties   
-  
-# Update Gateway Pool reference  
-$VirtualGWProperties.GatewayPools = @()   
-$VirtualGWProperties.GatewayPools += $gwPool   
-  
-# Specify the Virtual Subnet that is to be used for routing between the gateway and Virtual Network   
-$VirtualGWProperties.GatewaySubnets = @()   
-$VirtualGWProperties.GatewaySubnets += $RoutingSubnet   
-  
-# Update the rest of the Virtual Gateway object properties  
-$VirtualGWProperties.RoutingType = "Dynamic"   
-$VirtualGWProperties.NetworkConnections = @()   
-$VirtualGWProperties.BgpRouters = @()   
-  
-# Add the new Virtual Gateway for tenant   
-$virtualGW = New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_VirtualGW" -Properties $VirtualGWProperties -Force   
-  
-```  
-  
-## <a name="bkmk_s2s1"></a>Добавить узел узел VPN-подключение для клиента (IPsec, GRE или уровня 3)  
-  
-Можно создать узел узел VPN-подключения с помощью IPsec, GRE или уровня 3 (уровня 3), используя следующие примеры для каждого типа шлюза переадресации.  
-  
-### <a name="ipsec-vpn-site-to-site-network-connection"></a>Сетевое подключение для узла IPsec VPN  
-  
-Создайте объект JSON сетевого подключения и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for Tenant Network Connection  
-$nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
-  
-# Update the common object properties  
-$nwConnectionProperties.ConnectionType = "IPSec"   
-$nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
-$nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
-  
-# Update specific properties depending on the Connection Type  
-$nwConnectionProperties.IpSecConfiguration = New-Object Microsoft.Windows.NetworkController.IpSecConfiguration   
-$nwConnectionProperties.IpSecConfiguration.AuthenticationMethod = "PSK"   
-$nwConnectionProperties.IpSecConfiguration.SharedSecret = "P@ssw0rd"   
-  
-$nwConnectionProperties.IpSecConfiguration.QuickMode = New-Object Microsoft.Windows.NetworkController.QuickMode   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = "PFS2048"   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.AuthenticationTransformationConstant = "SHA256128"   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500   
-$nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000   
-  
-$nwConnectionProperties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode   
-$nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"   
-$nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"   
-$nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"   
-$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234   
-$nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000   
-  
-# L3 specific configuration (leave blank for IPSec)  
-$nwConnectionProperties.IPAddresses = @()   
-$nwConnectionProperties.PeerIPAddresses = @()   
-  
-# Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
-$nwConnectionProperties.Routes = @()   
-$ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
-$ipv4Route.DestinationPrefix = "14.1.10.1/32"   
-$ipv4Route.metric = 10   
-$nwConnectionProperties.Routes += $ipv4Route   
-  
-# Tunnel Destination (Remote Endpoint) Address  
-$nwConnectionProperties.DestinationIPAddress = "10.127.134.121"   
-  
-# Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_IPSecGW" -Properties $nwConnectionProperties -Force   
-  
-  
-```  
-### <a name="gre-vpn-site-to-site-network-connection"></a>Сетевое подключение GRE VPN сайта для сайта  
-  
-Создайте объект JSON сетевого подключения и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for the Tenant Network Connection  
-$nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
-  
-# Update the common object properties  
-$nwConnectionProperties.ConnectionType = "GRE"   
-$nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
-$nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
-  
-# Update specific properties depending on the Connection Type  
-$nwConnectionProperties.GreConfiguration = New-Object Microsoft.Windows.NetworkController.GreConfiguration   
-$nwConnectionProperties.GreConfiguration.GreKey = 1234   
-  
-# Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
-$nwConnectionProperties.Routes = @()   
-$ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
-$ipv4Route.DestinationPrefix = "14.2.20.1/32"   
-$ipv4Route.metric = 10   
-$nwConnectionProperties.Routes += $ipv4Route   
-  
-# Tunnel Destination (Remote Endpoint) Address  
-$nwConnectionProperties.DestinationIPAddress = "10.127.134.122"   
-  
-# L3 specific configuration (leave blank for GRE)  
-$nwConnectionProperties.L3Configuration = New-Object Microsoft.Windows.NetworkController.L3Configuration   
-$nwConnectionProperties.IPAddresses = @()   
-$nwConnectionProperties.PeerIPAddresses = @()   
-  
-# Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_GreGW" -Properties $nwConnectionProperties -Force   
-  
-```  
-### <a name="l3-forwarding-network-connection"></a>Уровня 3 Переадресации сетевого подключения  
-  
-Для настройки переадресации уровня 3 сетевое подключение, также необходимо настроить соответствующие логической сети.   
-  
-Шаг 1: Настройка логической сети для уровня 3 переадресации сетевого подключения.  
-  
-```  
-# Create a new object for the Logical Network to be used for L3 Forwarding  
-$lnProperties = New-Object Microsoft.Windows.NetworkController.LogicalNetworkProperties  
-  
-$lnProperties.NetworkVirtualizationEnabled = $false  
-$lnProperties.Subnets = @()  
-  
-# Create a new object for the Logical Subnet to be used for L3 Forwarding and update properties  
-$logicalsubnet = New-Object Microsoft.Windows.NetworkController.LogicalSubnet  
-$logicalsubnet.ResourceId = "Contoso_L3_Subnet"  
-$logicalsubnet.Properties = New-Object Microsoft.Windows.NetworkController.LogicalSubnetProperties  
-$logicalsubnet.Properties.VlanID = 1001  
-$logicalsubnet.Properties.AddressPrefix = "10.127.134.0/25"  
-$logicalsubnet.Properties.DefaultGateways = "10.127.134.1"  
-  
-$lnProperties.Subnets += $logicalsubnet  
-  
-# Add the new Logical Network to Network Controller  
-$vlanNetwork = New-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "Contoso_L3_Network" -Properties $lnProperties -Force  
-  
-```  
-Шаг 2: Создайте объект JSON сетевого подключения и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for the Tenant Network Connection  
-$nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
-  
-# Update the common object properties  
-$nwConnectionProperties.ConnectionType = "L3"   
-$nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
-$nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
-  
-# GRE specific configuration (leave blank for L3)  
-$nwConnectionProperties.GreConfiguration = New-Object Microsoft.Windows.NetworkController.GreConfiguration   
-  
-# Update specific properties depending on the Connection Type  
-$nwConnectionProperties.L3Configuration = New-Object Microsoft.Windows.NetworkController.L3Configuration   
-$nwConnectionProperties.L3Configuration.VlanSubnet = $vlanNetwork.properties.Subnets[0]   
-  
-$nwConnectionProperties.IPAddresses = @()   
-$localIPAddress = New-Object Microsoft.Windows.NetworkController.CidrIPAddress   
-$localIPAddress.IPAddress = "10.127.134.55"   
-$localIPAddress.PrefixLength = 25   
-$nwConnectionProperties.IPAddresses += $localIPAddress   
-  
-$nwConnectionProperties.PeerIPAddresses = @("10.127.134.65")   
-  
-# Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
-$nwConnectionProperties.Routes = @()   
-$ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
-$ipv4Route.DestinationPrefix = "14.2.20.1/32"   
-$ipv4Route.metric = 10   
-$nwConnectionProperties.Routes += $ipv4Route   
-  
-# Add the new Network Connection for the tenant  
-New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_L3GW" -Properties $nwConnectionProperties -Force   
-  
-```  
-  
-## <a name="bkmk_bgp1"></a>Настройка шлюза как маршрутизатор BGP  
-  
-Следующий пример сценариев можно использовать для настройки шлюза в качестве маршрутизатора протокол пограничного шлюза (BGP).  
-  
-### <a name="add-a-bgp-router-for-the-tenant"></a>Добавление маршрутизатора BGP для клиента  
-  
-Создайте объект JSON маршрутизатора BGP и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for the Tenant BGP Router  
-$bgpRouterproperties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties   
-  
-# Update the BGP Router properties  
-$bgpRouterproperties.ExtAsNumber = "0.64512"   
-$bgpRouterproperties.RouterId = "192.168.0.2"   
-$bgpRouterproperties.RouterIP = @("192.168.0.2")   
-  
-# Add the new BGP Router for the tenant  
-$bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_BgpRouter1" -Properties $bgpRouterProperties -Force   
-   
-  
-```  
-### <a name="add-a-bgp-peer-for-this-tenant-corresponding-to-the-site-to-site-vpn-network-connection-added-above"></a>Добавление узла BGP для этого клиента, соответствующий site to site VPN-подключение добавленные выше  
-  
-Создайте объект JSON однорангового узла BGP и добавить его в сетевой контроллер.  
-  
-```  
-# Create a new object for Tenant BGP Peer  
-$bgpPeerProperties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties   
-  
-# Update the BGP Peer properties  
-$bgpPeerProperties.PeerIpAddress = "14.1.10.1"   
-$bgpPeerProperties.AsNumber = 64521   
-$bgpPeerProperties.ExtAsNumber = "0.64521"   
-  
-# Add the new BGP Peer for tenant  
-New-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -BgpRouterName $bgpRouter.ResourceId -ResourceId "Contoso_IPSec_Peer" -Properties $bgpPeerProperties -Force   
-  
-```  
-## <a name="bkmk_all3"></a>Настроить шлюз со всеми типами три подключения (уровня IPsec GRE, 3) и BGP  
-При необходимости можно объединить все предыдущие шаги и настроить виртуальный шлюз со всеми параметрами три подключения.   
-  
-```  
+>Перед выполнением любого из примеров команд Windows PowerShell и сценарии, приведенные значения всех переменных необходимо изменить таким образом, чтобы значения подходят для развертывания.  
+  
+1.  Убедитесь, что объект пула шлюза существует на сетевом контроллере. 
+
+    ```PowerShell
+    $uri = "https://ncrest.contoso.com"   
+      
+    # Retrieve the Gateway Pool configuration  
+    $gwPool = Get-NetworkControllerGatewayPool -ConnectionUri $uri  
+      
+    # Display in JSON format  
+    $gwPool | ConvertTo-Json -Depth 2   
+     
+    ```  
+
+2.  Убедитесь, что подсеть, используемую для маршрутизации пакетов из виртуальной сети клиента существует на сетевом контроллере. Можно также получить виртуальную подсеть, используемая для маршрутизации между шлюзом клиента и виртуальной сети.  
+  
+    ```PowerShell 
+    $uri = "https://ncrest.contoso.com"   
+      
+    # Retrieve the Tenant Virtual Network configuration  
+    $Vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri  -ResourceId "Contoso_Vnet1"   
+      
+    # Display in JSON format  
+    $Vnet | ConvertTo-Json -Depth 4   
+      
+    # Retrieve the Tenant Virtual Subnet configuration  
+    $RoutingSubnet = Get-NetworkControllerVirtualSubnet -ConnectionUri $uri  -ResourceId "Contoso_WebTier" -VirtualNetworkID $vnet.ResourceId   
+      
+    # Display in JSON format  
+    $RoutingSubnet | ConvertTo-Json -Depth 4   
+      
+    ```  
+
+3.  Создание объекта шлюза виртуальной клиента и затем обновить ссылку на пул шлюза.  Можно также указать виртуальную подсеть, используемая для маршрутизации между шлюзом и виртуальной сети.  После указания виртуальную подсеть вы обновите остальную часть свойств объекта виртуального шлюза, а затем добавьте новый виртуальный шлюз для клиента.
+  
+    ```PowerShell  
+    # Create a new object for Tenant Virtual Gateway  
+    $VirtualGWProperties = New-Object Microsoft.Windows.NetworkController.VirtualGatewayProperties   
+      
+    # Update Gateway Pool reference  
+    $VirtualGWProperties.GatewayPools = @()   
+    $VirtualGWProperties.GatewayPools += $gwPool   
+      
+    # Specify the Virtual Subnet that is to be used for routing between the gateway and Virtual Network   
+    $VirtualGWProperties.GatewaySubnets = @()   
+    $VirtualGWProperties.GatewaySubnets += $RoutingSubnet   
+      
+    # Update the rest of the Virtual Gateway object properties  
+    $VirtualGWProperties.RoutingType = "Dynamic"   
+    $VirtualGWProperties.NetworkConnections = @()   
+    $VirtualGWProperties.BgpRouters = @()   
+      
+    # Add the new Virtual Gateway for tenant   
+    $virtualGW = New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_VirtualGW" -Properties $VirtualGWProperties -Force   
+      
+    ```  
+  
+4. Создание VPN-подключение сайт сайт с помощью IPsec, GRE, или слоя переадресации 3 (уровня 3).  
+
+   >[!TIP]
+   >При необходимости можно объединить все описанные выше действия и настроить виртуальный шлюз клиента со всеми параметрами подключения тремя.  Дополнительные сведения см. в разделе [настроить шлюз со всеми типами три подключения (IPsec, GRE, L3) и BGP](#configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp).
+  
+   **IPsec VPN-подключение сайт сайт**
+  
+   ```PowerShell  
+   # Create a new object for Tenant Network Connection  
+   $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
+  
+   # Update the common object properties  
+   $nwConnectionProperties.ConnectionType = "IPSec"   
+   $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
+   $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
+  
+   # Update specific properties depending on the Connection Type  
+   $nwConnectionProperties.IpSecConfiguration = New-Object Microsoft.Windows.NetworkController.IpSecConfiguration   
+   $nwConnectionProperties.IpSecConfiguration.AuthenticationMethod = "PSK"   
+   $nwConnectionProperties.IpSecConfiguration.SharedSecret = "P@ssw0rd"   
+  
+   $nwConnectionProperties.IpSecConfiguration.QuickMode = New-Object Microsoft.Windows.NetworkController.QuickMode   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.PerfectForwardSecrecy = "PFS2048"   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.AuthenticationTransformationConstant = "SHA256128"   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.CipherTransformationConstant = "DES3"   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeSeconds = 1233   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.IdleDisconnectSeconds = 500   
+   $nwConnectionProperties.IpSecConfiguration.QuickMode.SALifeTimeKiloBytes = 2000   
+  
+   $nwConnectionProperties.IpSecConfiguration.MainMode = New-Object Microsoft.Windows.NetworkController.MainMode   
+   $nwConnectionProperties.IpSecConfiguration.MainMode.DiffieHellmanGroup = "Group2"   
+   $nwConnectionProperties.IpSecConfiguration.MainMode.IntegrityAlgorithm = "SHA256"   
+   $nwConnectionProperties.IpSecConfiguration.MainMode.EncryptionAlgorithm = "AES256"   
+   $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeSeconds = 1234   
+   $nwConnectionProperties.IpSecConfiguration.MainMode.SALifeTimeKiloBytes = 2000   
+  
+   # L3 specific configuration (leave blank for IPSec)  
+   $nwConnectionProperties.IPAddresses = @()   
+   $nwConnectionProperties.PeerIPAddresses = @()   
+  
+   # Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
+   $nwConnectionProperties.Routes = @()   
+   $ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
+   $ipv4Route.DestinationPrefix = "14.1.10.1/32"   
+   $ipv4Route.metric = 10   
+   $nwConnectionProperties.Routes += $ipv4Route   
+  
+   # Tunnel Destination (Remote Endpoint) Address  
+   $nwConnectionProperties.DestinationIPAddress = "10.127.134.121"   
+  
+   # Add the new Network Connection for the tenant  
+   New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_IPSecGW" -Properties $nwConnectionProperties -Force   
+  
+   ```  
+
+   **GRE VPN-подключение сайт сайт**
+  
+   ```PowerShell  
+   # Create a new object for the Tenant Network Connection  
+   $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
+  
+   # Update the common object properties  
+   $nwConnectionProperties.ConnectionType = "GRE"   
+   $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
+   $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
+  
+   # Update specific properties depending on the Connection Type  
+   $nwConnectionProperties.GreConfiguration = New-Object Microsoft.Windows.NetworkController.GreConfiguration   
+   $nwConnectionProperties.GreConfiguration.GreKey = 1234   
+  
+   # Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
+   $nwConnectionProperties.Routes = @()   
+   $ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
+   $ipv4Route.DestinationPrefix = "14.2.20.1/32"   
+   $ipv4Route.metric = 10   
+   $nwConnectionProperties.Routes += $ipv4Route   
+  
+   # Tunnel Destination (Remote Endpoint) Address  
+   $nwConnectionProperties.DestinationIPAddress = "10.127.134.122"   
+  
+   # L3 specific configuration (leave blank for GRE)  
+   $nwConnectionProperties.L3Configuration = New-Object Microsoft.Windows.NetworkController.L3Configuration   
+   $nwConnectionProperties.IPAddresses = @()   
+   $nwConnectionProperties.PeerIPAddresses = @()   
+  
+   # Add the new Network Connection for the tenant  
+   New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_GreGW" -Properties $nwConnectionProperties -Force   
+  
+   ```  
+
+   **Переадресации L3 сетевого подключения**<p>
+   Для уровня 3 сетевого подключения для правильной работы переадресации, необходимо настроить соответствующей логической сетью.   
+  
+   1. Настройте логическую сеть для L3 сетевого подключения переадресации.  <br>
+  
+      ```PowerShell  
+      # Create a new object for the Logical Network to be used for L3 Forwarding  
+      $lnProperties = New-Object Microsoft.Windows.NetworkController.LogicalNetworkProperties  
+      
+      $lnProperties.NetworkVirtualizationEnabled = $false  
+      $lnProperties.Subnets = @()  
+      
+      # Create a new object for the Logical Subnet to be used for L3 Forwarding and update properties  
+      $logicalsubnet = New-Object Microsoft.Windows.NetworkController.LogicalSubnet  
+      $logicalsubnet.ResourceId = "Contoso_L3_Subnet"  
+      $logicalsubnet.Properties = New-Object Microsoft.Windows.NetworkController.LogicalSubnetProperties  
+      $logicalsubnet.Properties.VlanID = 1001  
+      $logicalsubnet.Properties.AddressPrefix = "10.127.134.0/25"  
+      $logicalsubnet.Properties.DefaultGateways = "10.127.134.1"  
+      
+      $lnProperties.Subnets += $logicalsubnet  
+      
+      # Add the new Logical Network to Network Controller  
+      $vlanNetwork = New-NetworkControllerLogicalNetwork -ConnectionUri $uri -ResourceId "Contoso_L3_Network" -Properties $lnProperties -Force  
+      
+      ```  
+
+   2. Создание сетевого подключения объекта JSON и добавьте его к сетевому контроллеру.  
+  
+      ```PowerShell 
+      # Create a new object for the Tenant Network Connection  
+      $nwConnectionProperties = New-Object Microsoft.Windows.NetworkController.NetworkConnectionProperties   
+      
+      # Update the common object properties  
+      $nwConnectionProperties.ConnectionType = "L3"   
+      $nwConnectionProperties.OutboundKiloBitsPerSecond = 10000   
+      $nwConnectionProperties.InboundKiloBitsPerSecond = 10000   
+      
+      # GRE specific configuration (leave blank for L3)  
+      $nwConnectionProperties.GreConfiguration = New-Object Microsoft.Windows.NetworkController.GreConfiguration   
+      
+      # Update specific properties depending on the Connection Type  
+      $nwConnectionProperties.L3Configuration = New-Object Microsoft.Windows.NetworkController.L3Configuration   
+      $nwConnectionProperties.L3Configuration.VlanSubnet = $vlanNetwork.properties.Subnets[0]   
+      
+      $nwConnectionProperties.IPAddresses = @()   
+      $localIPAddress = New-Object Microsoft.Windows.NetworkController.CidrIPAddress   
+      $localIPAddress.IPAddress = "10.127.134.55"   
+      $localIPAddress.PrefixLength = 25   
+      $nwConnectionProperties.IPAddresses += $localIPAddress   
+      
+      $nwConnectionProperties.PeerIPAddresses = @("10.127.134.65")   
+      
+      # Update the IPv4 Routes that are reachable over the site-to-site VPN Tunnel  
+      $nwConnectionProperties.Routes = @()   
+      $ipv4Route = New-Object Microsoft.Windows.NetworkController.RouteInfo   
+      $ipv4Route.DestinationPrefix = "14.2.20.1/32"   
+      $ipv4Route.metric = 10   
+      $nwConnectionProperties.Routes += $ipv4Route   
+      
+      # Add the new Network Connection for the tenant  
+      New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_L3GW" -Properties $nwConnectionProperties -Force   
+      
+      ```  
+  
+5. Настройка шлюза как маршрутизатор BGP и добавьте его к сетевому контроллеру. 
+  
+   1. Добавьте маршрутизатор BGP для клиента.  
+
+      ```PowerShell  
+      # Create a new object for the Tenant BGP Router  
+      $bgpRouterproperties = New-Object Microsoft.Windows.NetworkController.VGwBgpRouterProperties   
+      
+      # Update the BGP Router properties  
+      $bgpRouterproperties.ExtAsNumber = "0.64512"   
+      $bgpRouterproperties.RouterId = "192.168.0.2"   
+      $bgpRouterproperties.RouterIP = @("192.168.0.2")   
+      
+      # Add the new BGP Router for the tenant  
+      $bgpRouter = New-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -ResourceId "Contoso_BgpRouter1" -Properties $bgpRouterProperties -Force   
+      
+      ```  
+
+   2. Добавление узла BGP для этого клиента, относящиеся к соединению сеть-сеть VPN, добавленных выше.  
+  
+      ```PowerShell
+      # Create a new object for Tenant BGP Peer  
+      $bgpPeerProperties = New-Object Microsoft.Windows.NetworkController.VGwBgpPeerProperties   
+      
+      # Update the BGP Peer properties  
+      $bgpPeerProperties.PeerIpAddress = "14.1.10.1"   
+      $bgpPeerProperties.AsNumber = 64521   
+      $bgpPeerProperties.ExtAsNumber = "0.64521"   
+      
+      # Add the new BGP Peer for tenant  
+      New-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId $virtualGW.ResourceId -BgpRouterName $bgpRouter.ResourceId -ResourceId "Contoso_IPSec_Peer" -Properties $bgpPeerProperties -Force   
+      
+      ```  
+
+## <a name="optional-step-configure-a-gateway-with-all-three-connection-types-ipsec-gre-l3-and-bgp"></a>(Необязательно) Настройка шлюза со всеми типами три подключения (IPsec, GRE, L3) и BGP  
+При необходимости можно объединить все предыдущие шаги и настроить виртуальный шлюз клиента со всеми параметрами подключения тремя:   
+  
+```PowerShell  
 # Create a new Virtual Gateway Properties type object  
 $VirtualGWProperties = New-Object Microsoft.Windows.NetworkController.VirtualGatewayProperties  
   
@@ -475,48 +455,50 @@ $VirtualGWProperties.BgpRouters += $bgpRouter
 New-NetworkControllerVirtualGateway -ConnectionUri $uri  -ResourceId "Contoso_VirtualGW" -Properties $VirtualGWProperties -Force  
   
 ```  
-## <a name="bkmk_modify"></a>Изменение или удаление шлюз виртуальной сети  
+
+## <a name="modify-a-gateway-for-a-virtual-network"></a>Изменить шлюз для виртуальной сети  
+
   
-Следующий пример сценариев можно использовать для изменения или удаления существующего шлюза.  
-  
-### <a name="modify-the-configuration-of-an-existing-gateway"></a>Изменить конфигурацию существующего шлюза  
-Можно использовать следующие команды для изменения существующего шлюза.  
-  
-Шаг 1: Получение конфигурации для компонента и сохранить ее в переменной  
-  
-```  
+**Извлеките конфигурацию для компонента и сохранить его в переменной**
+
+```PowerShell  
 $nwConnection = Get-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW"  
 ```  
-Шаг 2: Перемещаться по структуре переменной требуемое свойство и значение значение обновлений  
+
+**Навигации по структуре переменной для охвата обязательное свойство и ему присвоено значение обновлений**
   
-```  
+```PowerShell  
 $nwConnection.properties.IpSecConfiguration.SharedSecret = "C0mplexP@ssW0rd"  
 ```  
-Шаг 3: Добавление измененные конфигурации для замены старой конфигурации сетевого контроллера  
-  
-```  
+
+**Добавьте измененную конфигурацию для замены предыдущих версиях конфигурации на сетевом контроллере**
+ 
+```PowerShell  
 New-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId $nwConnection.ResourceId -Properties $nwConnection.Properties -Force  
 ```  
-### <a name="remove-a-gateway"></a>Удаление шлюза  
-Чтобы удалить отдельные функциями или всего шлюза можно использовать следующие команды Windows PowerShell.  
-  
-#### <a name="remove-a-network-connection"></a>Удаление сетевого подключения  
-```  
+
+
+## <a name="remove-a-gateway-from-a-virtual-network"></a>Удаление шлюза из виртуальной сети 
+Чтобы удалить шлюз отдельных компонентов или всего шлюза можно использовать следующие команды Windows PowerShell.  
+
+**Удаление сетевого подключения**  
+```PowerShell  
 Remove-NetworkControllerVirtualGatewayNetworkConnection -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_IPSecGW" -Force  
 ```  
-#### <a name="remove-a-bgp-peer"></a>Удаление узла BGP  
-```  
+
+**Удаление узла BGP** 
+```PowerShell  
 Remove-NetworkControllerVirtualGatewayBgpPeer -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -BgpRouterName "Contoso_BgpRouter1" -ResourceId "Contoso_IPSec_Peer" -Force  
 ```  
-#### <a name="remove-a-bgp-router"></a>Удалить маршрутизатору BGP  
-```  
+
+**Удалить маршрутизатор BGP**
+```PowerShell  
 Remove-NetworkControllerVirtualGatewayBgpRouter -ConnectionUri $uri -VirtualGatewayId "Contoso_VirtualGW" -ResourceId "Contoso_BgpRouter1" -Force  
-```  
-#### <a name="remove-a-gateway"></a>Удаление шлюза  
-```  
+```
+
+**Удаление шлюза**  
+```PowerShell  
 Remove-NetworkControllerVirtualGateway -ConnectionUri $uri -ResourceId "Contoso_VirtualGW" -Force   
 ```  
-  
-  
 
-
+---

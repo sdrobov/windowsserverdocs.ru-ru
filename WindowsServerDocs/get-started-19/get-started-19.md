@@ -11,15 +11,15 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ms.openlocfilehash: 5604edf201213f8758b697dc683717f312941e0f
-ms.sourcegitcommit: b69683f1485e1a87d41557e1765660da5dcf04be
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "4408690"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59878335"
 ---
-# Начало работы с Windows Server 2019 г.
+# <a name="get-started-with-windows-server-2019"></a>Начало работы с Windows Server 2019 г.
 
->Область применения: Windows Server 2019 г.
+>Область применения. Windows Server 2019
 
 
 <hr />
@@ -36,7 +36,7 @@ ms.locfileid: "4408690"
                                         </div>
                                         <div class="cardText">
                                             <h3>Что нового?</h3>
-                                            <p>Узнайте, что нового в Windows Server 2019</p>
+                                            <p>Новые возможности в Windows Server 2019</p>
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,7 @@ ms.locfileid: "4408690"
                     </div>
                     <div class="cardText">
                         <h3>Каналы обслуживания</h3>
-                        <p>Лучшего планирования, развертывания и исправления расписания, общие сведения о выпусках разницу между наши Long Term Servicing Channel (LTSB) и канале Semi-Annual Channel (SAC).</p>
+                        <p>Лучшего планирования, развертывания и установки исправлений расписания с должного понимания обеспечиваемых освобождает разницу между наших Long Term Servicing Channel (LTSB) и полугодовой канал (SAC).</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ ms.locfileid: "4408690"
                     </div>
                     <div class="cardText">
                         <h3>Установка | Обновление | Перенос</h3>
-                        <p>Перейти на Windows Server 2019 несколькими способами. Ли вновь установка, обновление на месте или переноса приложений и ролей сервера, обнаружить здесь лучший подход.</p>
+                        <p>Можно переместить в Windows Server 2019 несколькими способами. Вновь при установке, обновление на месте или переносе приложений и ролей сервера, поиск наилучшего подхода здесь.</p>
                     </div>
                 </div>
             </div>
@@ -113,8 +113,8 @@ ms.locfileid: "4408690"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Требования к системе</h3>
-                        <p>Требования к аппаратному обеспечению для установки и запуска Windows Server 2019.</p>
+                        <h3>Системные требования</h3>
+                        <p>Минимальные требования к оборудованию для установки и запуска Windows Server 2019.</p>
                     </div>
                 </div>
             </div>
@@ -152,7 +152,7 @@ ms.locfileid: "4408690"
                     </div>
                     <div class="cardText">
                         <h3>Windows Server 2019 и Microsoft Server совместимости приложений</h3>
-                        <p>Необходимо получить SQL работы в Windows Server 2019 или поиск шаги для запуска Exchange? Этот раздел содержит ссылки на документацию для совместимых приложений корпорации Майкрософт.</p>                    </div>
+                        <p>Получить SQL, работа на Windows Server 2019 и соответствующие действия для запуска Exchange? Этот раздел содержит ссылки на документацию для совместимых приложений Майкрософт.</p>                    </div>
                 </div>
             </div>
         </div>
@@ -170,7 +170,7 @@ ms.locfileid: "4408690"
                     </div>
                     <div class="cardText">
                         <h3>Компоненты по требованию</h3>
-                        <p>Компоненты по требованию (Fod) — это пакеты компонентов Windows Server, которые могут быть добавлены в любое время. </p>
+                        <p>Компоненты по требованию (FODs), пакеты компонентов Windows Server, которые могут быть добавлены в любое время. </p>
                     </div>
                 </div>
             </div>
@@ -188,8 +188,8 @@ ms.locfileid: "4408690"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Стандартные | Сравнение выпусков центра обработки данных</h3>
-                        <p>Windows Server Standard и Datacenter выпуски имеют различные возможности. Узнайте, какие из них требуется.</p>
+                        <h3>Сравнение выпусков Standard и Datacenter</h3>
+                        <p>Windows Server Standard и Datacenter имеют разные возможности. Узнайте, какой из них требуется.</p>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 ---
-title: "Создание носителя для восстановления клиента нескольких языков"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Создание многоязычного носителя для восстановления клиентов
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,82 +13,83 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 1ad934d297c3092050bd6adbb6bb0f50d1ec6f36
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59879875"
 ---
-# <a name="build-multi-language-client-restore-media"></a>Создание носителя для восстановления клиента нескольких языков
+# <a name="build-multi-language-client-restore-media"></a>Создание многоязычного носителя для восстановления клиентов
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  Сначала необходимо создать многоязыковой образ Windows, как описано в [Пошаговое руководство: создание многоязыкового образа Windows](https://technet.microsoft.com/library/jj126995) перед добавлением Windows Server Essentials в install.wim языковой пакет.  
+>  Необходимо сначала создать многоязыковой образ Windows, как описано в разделе [Пошаговое руководство: Создание многоязыкового образа Windows](https://technet.microsoft.com/library/jj126995) перед добавлением в install.wim языковой пакет Windows Server Essentials.  
   
- При создании многоязычного установочного DVD-диска, языковые пакеты будут устанавливаться для сервера install.wim. Локализованные ресурсы для мастера восстановления устанавливаются в составе языковых пакетов.  
+ При создании многоязычного установочного DVD-диска для сервера языковые пакеты устанавливаются в файл install.wim. сервера. Локализованные ресурсы для мастера восстановления устанавливаются в составе языковых пакетов.  
   
-### <a name="to-build-a-multi-language-client-restore-media"></a>Создание носителя для восстановления клиента нескольких языков  
+### <a name="to-build-a-multi-language-client-restore-media"></a>Создание многоязычного носителя для восстановления клиента  
   
-1.  Подключите install.wim в c:\mount в папку c:\mount\Program Files\Windows Server\bin\ClientRestore вызываем качестве корневой для носителя для восстановления клиента: [RestoreMediaRoot] ниже:  
+1.  Вставьте install.wim в папку c:\mount, папка c:\mount\Program Files\Windows Server\bin\ClientRestore вызывается в качестве корневой для носителя восстановления клиента: [RestoreMediaRoot] ниже:  
   
     ```  
     dism /mount-wim /wimfile:install.wim /index:1 /mountdir:c:\mount  
     ```  
   
-2.  WIM-файл восстановления клиента в [RestoreMediaRoot]\Sources\Boot.wim (же шаги необходимо выполнить для boot_x86.wim слишком). В командной строке указано:  
+2.  Поместите WIM-файл восстановления клиента в папку [RestoreMediaRoot]\Sources\Boot.wim (те же шаги следует также выполнить для файла boot_x86.wim). Командная строка выглядит следующим образом:  
   
     ```  
     dism /mount-wim /wimfile:boot.wim /index:1 /mountdir:c:\mountRestore  
     ```  
   
-3.  Добавьте пакет WinPE-Setup.cab на носитель для восстановления, запустив:  
+3.  Добавьте пакет WinPE-Setup.cab на носитель восстановления, запустив следующую процедуру:  
   
     ```  
     dism /image:c:\mountRestore /add-package /packagepath:WinPE-Setup.cab  
     ```  
   
-4.  С помощью блокнота отредактируйте c:\mountRestore\windows\system32\winpeshl.ini, впишите следующее содержимое:  
+4.  С помощью блокнота отредактируйте c:\mountRestore\windows\system32\winpeshl.ini, впишите следующее:  
   
     ```  
     [LaunchApp]  
     AppPath = %SYSTEMDRIVE%\sources\SelectLanguage.exe  
     ```  
   
-5.  Добавьте языковые пакеты на носитель для восстановления. Добавление языковых пакетов, можно выполнить следующую команду:  
+5.  Добавьте языковые пакеты на носитель для восстановления. Чтобы добавить языковые пакеты, введите следующую команду:  
   
     ```  
     dism /image:c:\mountRestore /add-package /packagepath:[language pack path]  
     ```  
   
-     Следующие языковые пакеты необходимо добавить:  
+     Необходимо добавить следующие языковые пакеты:  
   
-    1.  WinPE языковой пакет (lp.cab)  
+    1.  Языковой пакет среды предустановки Windows (lp.cab)  
   
-    2.  Языковой пакет установки среды предустановки Windows (WinPE-Setup_ [lang] .cab, например, WinPE-Setup_en-us.cab)  
+    2.  Языковой пакет установки среды предустановки Windows (WinPE-Setup_[lang].cab, например, WinPE-Setup_en-us.cab)  
   
-    3.  Для азиатских шрифтов, включая zh-cn, zh-tw, zh-hk, ko-kr, ja-jp, необходимо установить дополнительный пакет шрифтов (winpe - fontsupport-[lang] .cab, например, winpe-fontsupport-zh-cn.cab)  
+    3.  Для Восточно-азиатских шрифтов, включая zh-cn, zh-tw, zh-hk, ko-kr, ja-jp, необходимо установить дополнительный пакет шрифтов (winpe-fontsupport-[lang].cab, например, winpe-fontsupport-zh-cn.cab)  
   
-6.  Создайте новый файл Lang.ini командой:  
+6.  Создайте новый файл Lang.ini следующей командой:  
   
     ```  
     dism /image:c:\mountRestore /Gen-LangINI /distribution:mount  
     ```  
   
-7.  Зафиксируйте и отключите образ, выполнив:  
+7.  Зафиксируйте и отсоедините образ следующей командой:  
   
     ```  
     dism /unmount-wim /mountdir:c:\mountRestore /commit  
     ```  
   
-8.  Повторите шаг 2 к шагу 7 для [RestoreMediaroot]\Sources\Boot_x86.wim.  
+8.  Повторите шаги 2 – 7 для [RestoreMediaroot]\Sources\Boot_x86.wim.  
   
-9. Зафиксируйте и отключите образ, выполнив:  
+9. Зафиксируйте и отсоедините образ следующей командой:  
   
     ```  
     dism /unmount-wim /mountdir:c:\mount /commit  
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
  [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   

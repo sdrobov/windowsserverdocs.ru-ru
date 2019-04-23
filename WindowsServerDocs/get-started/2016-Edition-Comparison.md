@@ -1,5 +1,5 @@
 ---
-title: Выпуски и продукты Windows Server2016
+title: Выпуски и продукты Windows Server 2016
 description: Описание отличий в выпусках Standard и Datacenter
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -15,23 +15,23 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c26d6d0c4c4465b5f9073dbcac951fc0adce1d5
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "1534015"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59882055"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Сравнение выпусков Windows Server 2016 Standard и Datacenter
 
-> Область применения: Windows Server2016
+> Область применения. Windows Server 2016
   
 ## <a name="locks-and-limits"></a>Блокировки и ограничения
-|Блокировки и ограничения|Windows Server2016 Standard|Windows Server2016 Datacenter|  
+|Блокировки и ограничения|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |Максимальное число пользователей|По числу клиентских лицензий|По числу клиентских лицензий|
-|Максимальное число подключений SMB|16777216|16777216|
+|Максимальное число подключений SMB|16 777 216|16 777 216|
 |Максимальное число подключений RRAS|Без ограничений|Без ограничений|
-|Максимальное число подключений IAS|2147483647|2147483647|
+|Максимальное число подключений IAS|2 147 483 647|2 147 483 647|
 |Максимальное число подключений RDS|65535|65535|
 |Максимальное число сокетов в 64-разрядной версии|64|64|
 |Максимальное число ядер|Без ограничений|Без ограничений|
@@ -43,14 +43,14 @@ ms.locfileid: "1534015"
 |DLNA-кодеки и потоковая передача мультимедиа в Интернете|Да, если продукт установлен как сервер с возможностями рабочего стола|Да, если продукт установлен как сервер с возможностями рабочего стола|
 
 ## <a name="server-roles"></a>Роли сервера
-|Доступны роли Windows Server|Службы ролей|Windows Server2016 Standard|Windows Server2016 Datacenter|  
+|Доступны роли Windows Server|Службы ролей|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|----------|---------------------------|  
 |Службы сертификатов Active Directory| |Да|Да|
 |Доменные службы Active Directory| |Да|Да|
 |Службы федерации Active Directory (AD FS)| |Да|Да|
 |Службы Active Directory облегченного доступа к каталогам [AD LDS]| |Да|Да|
 |Службы управления правами Active Directory (AD RMS)| |Да|Да|
-|Подтверждение работоспособности устройств| |Да|Да|
+|Аттестация работоспособности устройства| |Да|Да|
 |DHCP-сервер| |Да|Да|
 |DNS-сервер| |Да|Да|
 |Факс-сервер| |Да|Да|
@@ -80,9 +80,9 @@ ms.locfileid: "1534015"
 |Режим Windows Server Essentials| |Да|Да|
 |Службы Windows Server Update Services| |Да|Да|
 
-## <a name="features"></a>Возможности
+## <a name="features"></a>Компоненты
 
-|Компоненты Windows Server, доступные для установки с помощью диспетчера серверов (или PowerShell)|Windows Server2016 Standard|Windows Server2016 Datacenter|  
+|Компоненты Windows Server, доступные для установки с помощью диспетчера серверов (или PowerShell)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |.NET Framework 3.5|Да|Да|
 |.NET Framework 4.6|Да|Да|
@@ -91,7 +91,7 @@ ms.locfileid: "1534015"
 |Сетевая разблокировка BitLocker|Да, если продукт установлен как сервер с возможностями рабочего стола|Да, если продукт установлен как сервер с возможностями рабочего стола|
 |BranchCache|Да|Да|
 |Клиент для NFS|Да|Да|
-|Контейнеры|Да (контейнеры Windows— без ограничений; контейнеры Hyper-V— до двух)|Да (все типы контейнеров— без ограничений)|
+|Контейнеры|Да (контейнеры Windows — без ограничений; контейнеры Hyper-V — до двух)|Да (все типы контейнеров — без ограничений)|
 |Мост для центра обработки данных|Да|Да|
 |Direct Play|Да, если продукт установлен как сервер с возможностями рабочего стола|Да, если продукт установлен как сервер с возможностями рабочего стола|
 |Enhanced Storage|Да|Да|
@@ -146,7 +146,7 @@ ms.locfileid: "1534015"
 |поддержка WoW64.|Установлено|Установлено|
 |Средство просмотра XPS|Да, если продукт установлен как сервер с возможностями рабочего стола|Да, если продукт установлен как сервер с возможностями рабочего стола|
 
-|Общедоступные компоненты|Windows Server2016 Standard|Windows Server2016 Datacenter|  
+|Общедоступные компоненты|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
 |Анализатор соответствия рекомендациям|Да|Да|
 |Прямой доступ|Да|Да|
