@@ -1,7 +1,7 @@
 ---
 ms.assetid: ceb9ce18-5a94-4166-9edd-2685b81fc15f
-title: "Развертывание утверждений между лесами"
-description: 
+title: Развертывание утверждений между лесами
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,51 +10,52 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 7d78258d8f1db9889b6d2db8c497780940ed35a1
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59890655"
 ---
 # <a name="deploy-claims-across-forests"></a>Развертывание утверждений между лесами
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-In  Windows Server 2012 , a claim type is an assertion about the object with which it's associated. Claim types are defined per forest in Active Directory. There are many scenarios where a security principal may need to traverse a trust boundary to access resources in a trusted forest. Cross-forest claims transformation in  Windows Server 2012  enables you to transform egress and ingress claims that traverse forests so that the claims are recognized and accepted in the trusting and trusted forests. Some of the real-world scenarios for transformation of claims are:  
+В Windows Server 2012 тип утверждения является утверждением об объекте, с которым оно связано. Типы утверждений задаются в рамках леса Active Directory. Существует множество сценариев, в которых субъекту безопасности может потребоваться проход через границы отношений доверия для доступа к ресурсам в доверенном лесу. Преобразование утверждений между лесами в Windows Server 2012 позволяет преобразовывать входящие и выходящие утверждения, проходящие через леса, чтобы утверждения распознавались и принимались в доверяющими и доверенными лесами. Ниже приведены некоторые реальные сценарии для преобразования утверждений.  
   
--   Trusting forests can use claim transformation as a guard against elevation of privilege by filtering the incoming claims with specific values.  
+-   Доверяющие леса могут использовать преобразование утверждений в качестве защиты от несанкционированного повышения привилегий, фильтруя входящие утверждения с определенными значениями.  
   
-    Trusting forests can also issue claims for principals coming over a trust boundary if the trusted forest does not support or issue any claims.  
+    Доверяющие леса также могут выдавать утверждения для участников, поступающие через границы доверия, если доверенный лес не поддерживает или не выдает все утверждения.  
   
--   Trusted forests can use claim transformation to prevent certain claim types and claims with certain values from going out to the trusting forest.  
+-   Доверенные леса могут использовать преобразование утверждений для предотвращения выхода определенных утверждений и типов утверждений с определенными значениями из доверяющего леса.  
   
--   You can also use claim transformation to map different claim types between trusting and trusted forests. This can be used to generalize the claim-type, the claim value, or both. Without this, you need to standardize the data between the forests before you can use the claims. Generalizing claims between the trusting and trusted forests reduces the IT costs.  
+-   Вы также можете использовать преобразование утверждений для сопоставления различных типов утверждений между доверяющими и доверенными лесами. Это можно использовать для обобщения типа утверждения и значение утверждения. Без этого вам придется стандартизовать данные между лесами, прежде чем использовать утверждения. Обобщение утверждений между доверяющими и доверенными лесами снижает затраты на ИТ.  
   
-## <a name="claim-transformation-rules"></a>Claim transformation rules  
-The transformation rule language syntax divides a single rule into two main parts: a series of condition statements and the issue statement. Each condition statement has two subcomponents: the claim identifier and the condition. The issue statement contains keywords, delimiters, and an issue expression. The condition statement optionally begins with a claim identifier variable, which represents the matched input claim. The condition checks for the expression. If the input claim does not match the condition, then the transformation engine ignores the issue statement and evaluates the next input claim against the transformation rule. If all conditions match the input claim, it processes the issue statement.  
+## <a name="claim-transformation-rules"></a>Правила преобразования утверждений  
+В синтаксисе языка правил преобразования правило подразделяется на две основные части: ряд условных операторов и инструкцию выдачи. Каждый условный оператор имеет два подкомпонента: идентификатор утверждения и условие. Инструкция выдачи содержит ключевые слова, разделители и выражение выдачи. Условный оператор может начинаться с переменной идентификатора утверждения, которая представляет соответствующее входное утверждение. Условие проверяет выражение. Если входное утверждение не соответствует условию, обработчик преобразования игнорирует инструкцию выдачи и приступает к оценке следующего входного утверждения относительно правила преобразования. Если входное утверждение соответствует всем условиям, обрабатывается инструкция выдачи.  
   
-For detailed information on claim rules language, see [Claims Transformation Rules Language](Claims-Transformation-Rules-Language.md).  
+Подробные сведения о языке правил для утверждений см. в разделе [Claims Transformation Rules Language](Claims-Transformation-Rules-Language.md).  
   
-## <a name="linking-claim-transformation-policies-to-forests"></a>Linking claim transformation policies to forests  
-There are two components involved in setting up claim transformation policies: claim transformation policy objects and the transformation link. The policy objects live in the configuration naming context in a forest, and they contain mapping information for the claims. The link specifies which trusting and trusted forests the mapping applies to.  
+## <a name="linking-claim-transformation-policies-to-forests"></a>Связывание политик преобразования утверждений с лесами  
+В настройке политик преобразования утверждений участвуют два компонента: объекты политики преобразования утверждений и связь преобразования. Объекты политики существуют в контексте именования конфигурации в лесу, и они содержат сведения о сопоставлении для утверждений. Связь указывает, к каким доверяющим и доверенным лесам применяется сопоставление.  
   
-It is important to understand if the forest is the trusting or trusted forest because this is basis for linking transformation policy objects. For example, the trusted forest is the forest that contains user accounts that require access. The trusting forest is the forest that contains resources that you want to give users access to. Claims travel in the same direction as the security principal that requires access. For example, if there is a one-way trust from the contoso.com forest to the adatum.com forest, the claims will flow from adatum.com to contoso.com, which allows users from adatum.com to access resources in contoso.com.  
+Важно понять, является ли лес доверяющим или доверенным, так как это является основой для связывания объектов политики преобразования. Например, доверенный лес — это лес, содержащий учетные записи пользователей, которым требуется доступ. Доверяющий лес — это лес, содержащий ресурсы, к которым требуется предоставить доступ пользователям. Утверждения перемещаются по тому же направлению, что и субъект безопасности, которому требуется доступ. Например, если существует одностороннее доверие леса contoso.com лесу adatum.com, утверждения будет перемещаться из adatum.com в contoso.com, что дает возможность пользователям из adatum.com получать доступ к ресурсам в contoso.com.  
   
-By default, a trusted forest allows all outgoing claims to pass, and a trusting forest drops all incoming claims that it receives.  
+По умолчанию доверенный лес разрешает проход всех исходящих утверждений, а доверяющий лес удаляет все входящие утверждения, которые он получает.  
   
-## <a name="in-this-scenario"></a>В этом сценарии  
-The following guidance is available for this scenario:  
+## <a name="in-this-scenario"></a>Содержание сценария  
+Для этого сценария существует следующее руководство:  
   
--   [Развертывание утверждений между лесами & #40; обучающий & #41;](Deploy-Claims-Across-Forests--Demonstration-Steps-.md)  
+-   [Развертывание утверждений между лесами &#40;Демонстрация последовательности действий&#41;](Deploy-Claims-Across-Forests--Demonstration-Steps-.md)  
   
 -   [Язык правил преобразования утверждений](Claims-Transformation-Rules-Language.md)  
   
-## <a name="BKMK_NEW"></a>Roles and features included in this scenario  
-The following table lists the roles and features that are part of this scenario and describes how they support it.  
+## <a name="BKMK_NEW"></a>Роли и компоненты, используемые в данном сценарии  
+В следующей таблице перечислены роли и компоненты, являющиеся частью данного сценария, и описано, как они поддерживают его.  
   
-|Role/feature|How it supports this scenario|  
+|Роль/компонент|Способ поддержки сценария|  
 |-----------------|---------------------------------|  
-|Доменные службы Active Directory|In this scenario, you are required to set up two Active Directory forests with a two-way trust. You have claims in both forests. You also set central access policies on the trusting forest where the resources reside.|  
-|File and Storage Services role|In this scenario, the data classification is applied to the resources on the file servers. The central access policy is applied to the folder where you want to grant user access. After transformation, the claim grants user access to resources based on the central access policy that is applied to the folder on the file server.|  
+|Доменные службы Active Directory|В этом случае необходимо настроить два леса Active Directory с двусторонним отношением доверия. Утверждения имеются в обоих лесах. Кроме того, установлены централизованные политики доступа в доверяющем лесу, где находятся ресурсы.|  
+|Роль служб файлов и хранилищ|В этом сценарии классификация данных применяется к ресурсам на файловых серверах. Централизованная политика доступа применяется к папке, в которой вы хотите предоставить пользователю доступ. После преобразования утверждение предоставляет пользователю доступ к ресурсам на основе централизованной политики доступа, которая применяется к папке на файловом сервере.|  
   
 
 
