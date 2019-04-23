@@ -1,97 +1,121 @@
 ---
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
-title: "Обновление до AD FS в Windows Server 2016"
-description: 
+title: Обновление до AD FS в Windows Server 2016
+description: ''
 author: billmath
 manager: femila
-ms.date: 05/31/2017
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ce07398a2d624a1e9b004cd35eb9228d59dc2b5b
-ms.sourcegitcommit: 76e57a5453d6ee9a04dcff6a8cca087132cb1d5f
+ms.openlocfilehash: 39c735e9dde0fd60c7eb9ccfe0af890bdc5a5950
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838325"
 ---
-# <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью Внутренней базой данных Windows
+# <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью базы данных WID
 
->Область применения: Windows Server 2016
+>Область применения. Windows Server 2019, Windows Server 2016
 
 
-## <a name="moving-from-a-windows-server-2012-r2-ad-fs-farm-to-a-windows-server-2016-ad-fs-farm"></a>Перемещение из фермы Windows Server 2012 R2 AD FS в ферме Windows Server 2016 AD FS  
-Следующий документ будет описано, как обновить ферму AD FS Windows Server 2012 R2 AD FS в Windows Server 2016, при использовании Внутренней базой данных.  
+## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Обновление до Windows Server 2019 Windows Server 2012 R2 или 2016 AD FS фермы 
+Следующий документ показывает, как для обновления фермы AD FS для AD FS в Windows Server 2019 при использовании Внутренней базой данных Windows.  
 
-### <a name="upgrading-ad-fs-to-windows-server-2016-fbl"></a>Обновление до Windows Server 2016 FBL AD FS  
-Новые возможности AD FS в Windows Server 2016 функция уровня поведение фермы (FBL).   Эти функции всю ферму и определяет функции, которые можно использовать в ферме AD FS.   По умолчанию FBL в ферме Windows Server 2012 R2 AD FS является Windows Server 2012 R2 FBL.  
+### <a name="ad-fs-farm-behavior-levels-fbl"></a>AD FS фермы поведение уровни (FBL)  
+В AD FS для Windows Server 2016 появилась на уровне поведения фермы (FBL). Это параметр уровня фермы, который определяет, что можно использовать функции AD FS фермы. 
 
-Сервер Windows Server 2016 AD FS можно добавить в ферму Windows Server 2012 R2, и он будет работать на одном FBL как Windows Server 2012 R2.  При наличии Windows Server 2016 AD FS сервер, работающий таким образом, считается, что ферме «смешивать».  Тем не менее вы не сможете воспользоваться преимуществами новых возможностей Windows Server 2016 до возникновения FBL на Windows Server 2016.  С помощью смешанного фермы:  
-
--   Администраторы могут добавлять новые, Windows Server 2016 серверов федерации в существующей ферме Windows Server 2012 R2.  В результате ферма в «смешанный режим» и работает на уровне поведение Windows Server 2012 R2 фермы.  Чтобы обеспечить согласованное поведение в ферме, новые функции Windows Server 2016 не настроен или используемых в этом режиме.  
-
--   После того как все серверы федерации Windows Server 2012 R2 были удалены из фермы смешанном режиме и в случае ферме внутренней базы данных Windows, один из новых серверов федерации Windows Server 2016 выдвинут на роль основного узла, администратор может затем изменить FBL с Windows Server 2012 R2 на Windows Server 2016.  В результате все новые возможности AD FS Windows Server 2016 можно затем настроить и использовать.  
-
--   В результате функцию смешанного фермы AD FS Windows Server 2012 R2, организаций, которым для обновления до Windows Server 2016, не требуется развертывать ферму совершенно новые экспорта и импорта данных конфигурации.  Вместо этого можно добавить узлы Windows Server 2016 в существующую ферму подключенной сети и только взимается относительно небольшой простой, участвующие в повышение FBL.  
-
-Имейте в виду, что в режиме смешанных фермы фермы AD FS не может любой новые компоненты или функциональные возможности, появившиеся в AD FS в Windows Server 2016.  Это означает, что организаций, желающих попробовать новые функции не может это сделать, до возникновения FBL.  Поэтому если организации требуется для тестирования новых компонентов до rasing FBL, будет необходимо развернуть отдельный фермы для этого.  
-
-Оставшаяся часть является документ содержит шаги для добавления сервера федерации Windows Server 2016 в среде Windows Server 2012 R2 и затем вызова FBL на Windows Server 2016.  Эти действия были выполнены в тестовой среде, изложенным в Архитектурная схема ниже.  
+В следующей таблице перечислены значения FBL версией Windows Server:
+| Версия Windows Server  | FBL | Имя базы данных конфигурации AD FS |
+| ------------- | ------------- | ------------- |
+| 2012 R2  | 1  | AdfsConfiguration |
+| 2016  | 3  | AdfsConfigurationV3 |
+| 2019 г.  | 4  | AdfsConfigurationV4 |
 
 > [!NOTE]  
-> Перед перемещением на AD FS в Windows Server 2016 FBL, необходимо удалить все узлы Windows 2012 R2.  Нельзя просто обновление ОС Windows Server 2012 R2 до Windows Server 2016 и его становятся узел 2016.  Необходимо удалить его и замените его на новый узел 2016.
->
-> Обновление FBL при использовании SQL для хранения конфигурации Служб федерации Active Directory создайте новую базу данных управления «AdfsConfigurationV3».
+> Обновление FBL создает новую базу данных конфигурации AD FS.  См. в таблице выше имена базы данных конфигурации для каждой версии Windows Server AD FS и FBL значение
 
-##### <a name="to-upgrade-your-ad-fs-farm-to-windows-server-2016-farm-behavior-level"></a>Для обновления до Windows Server 2016 фермы поведение уровень фермы AD FS  
+### <a name="new-vs-upgraded-farms"></a>Цена новой подписки и обновлен ферм
+По умолчанию FBL в новой ферме AD FS совпадает со значением для версии Windows Server для первого узла фермы установлен.  
 
-1.  С помощью диспетчера сервера установить роль служб федерации Active Directory в Windows Server 2016  
+Сервер AD FS более поздней версии может быть присоединен к ферме AD FS 2012 R2 или 2016 и фермы будет работать с тем же FBL как существующие узлы. При наличии нескольких версий Windows Server, работающие в одной и той же ферме значение FBL самую раннюю версию по, считается, что ферма быть «mixed». Тем не менее вы не сможете воспользоваться преимуществами возможностей этих более поздних версий, пока не возникает FBL. С помощью смешанных фермы:  
 
-2.  С помощью мастера конфигурации AD FS, присоединение нового сервера Windows Server 2016 к существующей ферме AD FS.  
+-   Администраторы могут добавлять новые серверы федерации Windows Server 2019 существующие Windows Server 2012 R2 или 2016 фермы. В результате ферма находится в «смешанный режим» и работает на том же уровне поведения фермы, что и исходная ферма. Для обеспечения согласованного поведения в ферме, нельзя настроить или использовать функции более новые версии Windows Server AD FS.  
+
+- Перед FBL может возникнуть, администраторам необходимо удалить узлы из предыдущих версий Windows Server AD FS из фермы.  В случае ферме внутренней базы данных Windows Обратите внимание, что это один из новых tp серверов федерации Windows Server 2019 обновлен до роли основного узла в ферме.
+
+-   Если все серверы федерации в ферме одну и ту же версию Windows Server, могут вызываться FBL.  Таким образом все новые функции AD FS Windows Server 2019 можно затем настроить и использовать.
+
+Имейте в виду, что в режиме смешанной фермы фермы AD FS не может быть любой новые компоненты или функциональные возможности, представленные в AD FS в Windows Server 2019. Это означает, что организаций, которые хотят опробовать новые компоненты невозможно, пока не возникает FBL. Поэтому если организации требуется для тестирования новых функций до rasing FBL, необходимо будет развернуть отдельный ферму для этого.  
+
+В оставшейся части является документе описываются действия по добавлению сервера федерации Windows Server 2019 Windows Server 2016 или в среде 2012 R2 и затем увеличивать их FBL для Windows Server 2019. Эти действия были выполнены в тестовой среде, описанные на следующей схеме архитектуры.  
+
+> [!NOTE]  
+> Прежде чем можно переместить в AD FS в Windows Server 2019 FBL, необходимо удалить все из Windows Server 2016 и 2012 R2 узлов. Невозможно просто обновление Windows Server 2016 или 2012 R2 ОС до Windows Server 2019 и его становятся узлами 2019 г. Необходимо будет удалить его и замените его на новый узел 2019 г.
+
+
+
+##### <a name="to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level"></a>Для обновления фермы AD FS на уровне поведения фермы сервера Windows Server 2019 г.  
+
+1.  С помощью диспетчера сервера, установите роль служб федерации Active Directory на 2019 г. Windows Server 
+
+2.  С помощью мастера настройки AD FS, присоедините новый сервер Windows Server 2019 в существующую ферму AD FS.  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)  
 
-3.  На сервере федерации Windows Server 2016 откройте управления AD FS.    Обратите внимание, что ничего, отображается как этот сервер федерации не основного сервера.  
+3.  На сервере федерации Windows Server 2019 откройте оснастку управления AD FS. Обратите внимание на то, что возможности управления недоступны, так как этому серверу федерации не является основным сервером.  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
 
-4.  По завершении соединения, на сервере Windows Server 2016, откройте PowerShell и выполните следующий командлет: Set AdfsSyncProperties-PrimaryComputer роли  
+4.  На сервере Windows Server 2019 откройте командное окно PowerShell с повышенными правами и выполните следующий командлет: `Set-AdfsSyncProperties -Role PrimaryComputer`
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
 
-5.  На исходном сервере AD FS Windows Server 2012 R2, откройте PowerShell и выполните следующий командлет: Set AdfsSyncProperties-SecondaryComputer роли - PrimaryComputerName {полное доменное имя}  
+5.  На сервере AD FS, который ранее был настроен в качестве основного откройте командное окно PowerShell с повышенными правами и выполните следующий командлет: `Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN} `
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
 
-6.  На вашем прокси веб-приложения, откройте PowerShell и выполните командлет следующем: Install-WebApplicationProxy - CertificateThumbprint {SSLCert} - fsname fsname - TrustCred $trustcred  
+6.  На каждый прокси веб-приложения, повторно настройте WAP, выполнив следующую команду PowerShell в окне с повышенными привилегиями.  
+```powershell
+$trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+```
 
-7.  Теперь на сервере федерации Windows Server 2016 откройте управления AD FS.  Обратите внимание, что теперь все узлы отображаются, поскольку основная задача была передана на этом сервере.  
+7.  Теперь на сервере федерации Windows Server 2016 откройте оснастку управления AD FS. Обратите внимание, что теперь все возможности администрирования отображаются, поскольку основная роль была передана на этот сервер.  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
 
-8.  С помощью установочного носителя Windows Server 2016 откройте командную строку и перейдите в каталог support\adprep.  Выполните следующую команду: adprep/forestprep.  
+8.  Если при обновлении фермы AD FS 2012 R2 до 2016 или 2019 г., обновление фермы требуется схема AD быть минимум на уровне 85.  Чтобы обновить схему, установочный носитель с Windows Server 2016, откройте командную строку и перейдите в каталог support\adprep. Используйте следующую команду:  `adprep /forestprep`
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
 
-9. По завершении выполнения команды adprep/domainprep  
-
+    После выполнения `adprep/domainprep`
+    >[!NOTE]
+    >Перед запуском следующий шаг, убедитесь, что Windows Server является текущей, запустив из параметров обновления Windows. Продолжайте этот процесс, пока не перестанут требоваться обновления. 
+    > 
+    
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
 
-10. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующий командлет: вызова AdfsFarmBehaviorLevelRaise  
+9. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующий командлет:
+    >[!NOTE]
+    > Все серверы 2012 R2 необходимо удалить из фермы перед выполнением следующего шага.
+ 
+    `Invoke-AdfsFarmBehaviorLevelRaise`  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
 
-11. При появлении запроса введите Y. Повышение уровня начнется.  После выполнения этой процедуры были успешно поднять FBL.  
+10. Когда появится запрос, введите Y. После этого начнется повышение уровня. После завершения проверки вы сообщили успешно FBL.  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
 
-> [!NOTE]  
-> Если серверов AD FS используется SQL для конфигурации, новую базу данных manamgement создан с именем «AdfsConfiguraionV3». 
-
-12. Теперь Если вы откроете управления AD FS, вы увидите новых узлов, которые были добавлены для AD FS в Windows Server 2016  
+11. Теперь если перейти на управление AD FS, вы увидите что были добавлены новые возможности для более поздней версии AD FS 
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
 
-13. Аналогичным образом, можно использовать командлет PowerShell: Get-AdfsFarmInformation, показывающего текущее FBL.  
+13. Аналогичным образом, можно использовать командлет PowerShell: `Get-AdfsFarmInformation` показать текущее FBL.  
 
     ![обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
+    
+

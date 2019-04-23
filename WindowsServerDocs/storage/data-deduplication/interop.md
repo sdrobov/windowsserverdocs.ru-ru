@@ -1,6 +1,6 @@
 ---
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
-title: "Взаимодействие при дедупликации данных"
+title: Взаимодействие при дедупликации данных
 ms.technology: storage-deduplication
 ms.prod: windows-server-threshold
 ms.topic: article
@@ -9,14 +9,15 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
 ms.openlocfilehash: 2a28be1bdd22915182cbdbb2726ab9d37422e889
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59834435"
 ---
 # <a name="data-deduplication-interoperability"></a>Взаимодействие при дедупликации данных
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
 ## <a id="supported"></a>Поддерживается
 
@@ -35,15 +36,15 @@ ms.lasthandoff: 10/17/2017
 ### <a id="supported-branchcache"></a>BranchCache
 Доступ к данным по сети можно оптимизировать, включив компонент [BranchCache](../../networking/branchcache/branchcache.md) на серверах и клиентах. Когда система с включенным компонентом BranchCache взаимодействует по глобальной сети с удаленным файловым сервером, на котором работает дедупликация данных, все файлы, обработанные дедупликацией, уже проиндексированы и хэшированы, поэтому запросы данных из филиала обрабатываются быстро. Этот процесс схож с предварительным индексированием или предварительным хэшированием сервера с включенным BranchCache.
 
-### <a id="supported-dfsr"></a>Репликация DFS
+### <a id="supported-dfsr"></a>Служба репликации DFS
 Дедупликация данных работает с репликацией распределенной файловой системы (DFS). Оптимизация или отмена оптимизации файла не будет вызывать репликацию, так как файл не изменяется. Репликация DFS использует удаленное разностное сжатие (RDC), а не блоки в хранилище блоков для экономии по сети. Файлы в реплике также могут быть оптимизированы с помощью дедупликации, если реплика использует дедупликациюи данных.
 
-### <a id="supported-quotas"></a>квоты.
+### <a id="supported-quotas"></a>Квоты
 Дедупликация данных не поддерживает создание жесткой квоты в корневой папке тома, для которой также включена дедупликация. Когда задана жесткая квота для корня тома, не совпадают значения фактического свободного пространства тома и пространства, ограниченного квотой. Это может привести к сбоям заданий оптимизации дедупликации. При этом можно задать мягкую квоту для корневой папки тома, для которой также включена дедупликация. 
 
 При включении квоты для дедуплицированного тома используется не физический, а логический размер файла. Использование квоты (в том числе порогов квоты) не изменяется, когда файл обрабатывается при дедупликации. Все остальные функциональные возможности квот, в том числе мягкие квоты корня тома и квоты вложенных папок, при использовании дедупликации работают нормально.
 
-### <a id="supported-windows-server-backup"></a>Система архивации данных Windows Server
+### <a id="supported-windows-server-backup"></a>Архивации данных Windows Server
 В службе архивации Windows Server имеется возможность резервного копирования оптимизированного тома на условиях "как есть" (то есть без удаления дедуплицированных данных). На следующих этапах показано, как выполнить резервное копирование тома, а также восстановить том или выбранные файлы тома.
 1. Установите систему архивации данных Windows Server.  
     ```PowerShell
@@ -60,14 +61,14 @@ ms.lasthandoff: 10/17/2017
     wbadmin get versions
     ```
 
-    Этот идентификатор версии выходных данных будет строкой даты и времени, например: 08/18/2016-06:22.
+    Этот идентификатор версии выходных данных будет Строка даты и времени, например: 08/18/2016-06:22.
 
 4. Восстановите весь том.
     ```PowerShell
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:Volume  -items:E: -recoveryTarget:E:
     ```
 
-    **--ИЛИ--**  
+    **--OR--**  
 
     Восстановите определенную папку (в данном случае папку E:\Docs).
     ```PowerShell
@@ -78,10 +79,10 @@ ms.lasthandoff: 10/17/2017
 ### <a id="unsupported-refs"></a>ReFS
 Windows Server 2016 не поддерживает дедупликацию данных в томах, отформатированных в ReFS. [Проголосовать за этот элемент для Windows Server vNext на Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/7962813-support-deduplication-on-refs).
 
-### <a id="unsupported-windows-client"></a>Windows 10 (ОС на клиенте)
+### <a id="unsupported-windows-client"></a>Windows 10 (клиентская ОС)
 Дедупликация данных не поддерживается в Windows 10. Существует несколько популярных записей в блоге сообщества Windows, в которых описано, как удалить двоичные файлы из Windows Server 2016 и установить на Windows 10, но этот сценарий не был проверен как часть процесса разработки дедупликации данных. [Проголосовать за этот элемент для Windows 10 vNext на Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).
 
-### <a id="unsupported-windows-search"></a>Поиск Windows
+### <a id="unsupported-windows-search"></a>Windows Search
 Поиск Windows не поддерживает дедупликацию данных. Поскольку дедупликация данных использует точки повторного анализа, которые поиск Windows не может индексировать, он пропускает все дедуплицированные файлы, исключая их из индекса. В итоге результаты поиска для дедуплицированных томов могут быть неполными. [Проголосовать за этот элемент для Windows Server vNext на Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/17888647-make-windows-search-service-work-with-data-dedupli).
 
 ### <a id="unsupported-robocopy"></a>Robocopy

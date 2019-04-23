@@ -1,25 +1,26 @@
 ---
 ms.assetid: 38f6adb1-dfcf-456d-b631-2b1e96dc670b
-title: "Read-Only Обновление контроллера домена"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: Обновление контроллера домена только для чтения
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 5e4702e424118bf2acfd1bfe2da26a65a57f7719
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.openlocfilehash: 634bcf8566d403ea9defc76d22d1ca1af7defc31
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59835305"
 ---
-# <a name="read-only-domain-controller-updates"></a>Read-Only Обновление контроллера домена
+# <a name="read-only-domain-controller-updates"></a>Обновление контроллера домена только для чтения
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отсутствуют изменения программы Adprep /rodcprep в Windows Server 2012 R2 или Windows Server 2012.  
+Нет изменений для adprep/rodcprep в Windows Server 2012 R2 или Windows Server 2012.  
   
 
 

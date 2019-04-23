@@ -1,6 +1,6 @@
 ---
-title: "Важная информация для использования ADK Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Важная информация для использования ADK Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,30 +13,31 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 4dec1fdf01538ca119b991675f932d2d8ec1e097
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838645"
 ---
 # <a name="important-information-for-using-the-windows-server-essentials-adk"></a>Важная информация для использования ADK Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Для создания и настройки образа Windows Server Essentials, вы можете использовать множество инструментов [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248647), но есть несколько важных отличий между Windows 8 ADK и Windows Server Essentials ADK.  
+Для создания и настройки образа Windows Server Essentials, можно использовать разнообразные средства в [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248647), но есть некоторые важные различия между Windows 8 ADK и Windows Server Essentials ADK.  
   
  Следует учитывать следующие важные отличия.  
   
--   Изменились некоторые параметры в **%windir%\setup\script\SetupComplete.cmd**. Если вы хотите использовать эту команду, можно добавить дополнительные командлеты, но не удаляйте существующие строки.  
+-   В **%windir%\setup\script\SetupComplete.cmd** изменились некоторые параметры. Если необходимо использовать эту команду, можно добавить дополнительные командлеты, но не удаляйте существующие строки.  
   
 ## <a name="working-with-passwords"></a>Работа с паролями  
   
--   Задать пароль администратора Admin@123 и автоматический вход в Install.wim\unattend.xml. Поэтому не требуется вводить пароль несколько раз во время начальной настройки сервера. Если у вас есть настроенный файл unattend.xml в корне съемного носителя, эти настройки будут изменены и нужно будет задать пароль и входа в систему во время запуска...  
+-   Пароль администратора присваивается Admin@123 и в Install.wim\unattend.xml разрешен. Поэтому нет необходимости вводить пароль несколько раз при начальной настройке сервера. Если в корне съемного носителя находится файл unattend.xml с пользовательскими настройками, эти настройки будут изменены, и потребуется задать пароль и выполнять вход при запуске.  
   
--   Во время начальной настройки пользователю предлагается создать новую учетную запись и пароль. Эта учетная запись становится сетевой учетной записи администратора для операционной системы. Учетная запись и автоматический вход администратора после этого отключается. Этот процесс можно автоматизировать с помощью файла cfg.ini используется для проверки качества.  
+-   В ходе начальной настройки пользователю предлагается создать новую учетную запись и пароль. Эта учетная запись становится сетевой учетной записью администратора для операционной системы. Учетная запись администратора и автоматический доступ в систему после этого отключается. В процессе тестирования с целью проверки качества можно автоматизировать этот процесс с помощью файла cfg.ini.  
   
--   Обратитесь к [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) Дополнительные сведения о создании файла unattend.xml.  
+-   Сведения о создании файла unattend.xml см. в документации [Windows 8 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 
  [Начало работы с ADK Windows Server Essentials](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   

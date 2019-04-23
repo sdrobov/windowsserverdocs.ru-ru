@@ -1,6 +1,6 @@
 ---
-title: "Управление ресурсами удаленного хранилища"
-description: "В этой статье описывается, как управлять ресурсами хранилища на удаленном компьютере"
+title: Управление ресурсами удаленного хранилища
+description: В этой статье описывается, как управлять ресурсами хранилища на удаленном компьютере
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 583c36f399848cf67c6f3a850e62015b224768d9
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59836635"
 ---
 # <a name="managing-remote-storage-resources"></a>Управление ресурсами удаленного хранилища
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Существует два способа управления ресурсами на удаленном компьютере.
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/17/2017
 -   Подключиться к другому компьютеру в домене с помощью оснастки MMC диспетчера ресурсов файлового сервера и просмотреть использование пространства хранилища на томе или папке, которые расположены на удаленном компьютере.
 -   Создать квоту и шаблоны фильтра блокировки файлов на локальном сервере, а затем использовать средства командной строки для импорта этих шаблонов на файловый сервер, расположенный в филиале.
 
-Этот раздел включает следующие статьи:
+Этот раздел содержит следующие темы:
 
 -   [Подключение к удаленному компьютеру](connect-to-remote-computer.md)
--   [Инструменты командной строки](command-line-tools.md)
+-   [Программы командной строки](command-line-tools.md)

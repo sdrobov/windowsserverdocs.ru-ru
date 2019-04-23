@@ -9,30 +9,30 @@ ms.localizationpriority: medium
 ms.date: 09/18/2018
 ms.prod: windows-server-threshold
 ms.openlocfilehash: 7b1a0672ee374f3e2d1339c43576db0e5cabdc36
-ms.sourcegitcommit: be0144eb59daf3269bebea93cb1c467d67e2d2f1
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4080921"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59834765"
 ---
-# Подготовка среды разработки
+# <a name="prepare-your-development-environment"></a>Подготовка среды разработки
 
->Относится к: Windows Admin Center, ознакомительная версия Windows Admin Center
+>Область применения. Windows Admin Center, предварительная версия Windows Admin Center
 
-Давайте приступим к разработке расширений с помощью пакета SDK для Windows Admin Center!  В этом документе мы рассмотрим процесс получения среду вверх и разрабатывать и тестировать расширения для Windows Admin Center.
+Давайте приступим к разработке расширений с помощью пакета SDK для Windows Admin Center!  В этом документе мы обсудим процесс среды вверх и запустить для построения и тестирования расширения Windows Admin Center.
 
 > [!NOTE]
 > Не пользовались ранее пакетом SDK для Windows Admin Center?  Дополнительные сведения о [расширениях для Windows Admin Center](extensibility-overview.md)
 
 Чтобы подготовить среду разработки, выполните следующие действия:
 
-## Установка необходимых компонентов
+## <a name="install-prerequisites"></a>Установка необходимых компонентов
 
 Чтобы приступить к разработке с помощью пакета SDK, скачайте и установите следующие компоненты:
 
-* [Windows Admin Center](https://aka.ms/WACDownloadPage) (GA или предварительной версии)
+* [Windows Admin Center](https://aka.ms/WACDownloadPage) (версия общедоступной версии или предварительной версии)
 * Visual Studio или [Visual Studio Code](http://code.visualstudio.com)
-* [Диспетчер пакетов узла](https://npmjs.com/get-npm) (8.12.0 или более поздней версии)
+* [Диспетчер пакетов node](https://npmjs.com/get-npm) (8.12.0 или более поздней версии)
 * [NuGet](https://www.nuget.org/downloads) (для публикации расширений)
 
 > [!NOTE]
@@ -42,9 +42,9 @@ ms.locfileid: "4080921"
 >
 > ```msiexec /i WindowsAdminCenter<version>.msi DEV_MODE=1```
 
-## Установка глобального зависимостей
+## <a name="install-global-dependencies"></a>Установка глобального зависимостей
 
-Затем установите или обновите зависимости, необходимые для проектов, с помощью диспетчера пакетов узла. Эти зависимости установятся глобально и будут доступны для всех проектов.
+Затем установите или обновите зависимости, необходимые для ваших проектов с помощью диспетчера пакетов узла. Эти зависимости установятся глобально и будут доступны для всех проектов.
 
 ```
 npm install -g npm
@@ -58,18 +58,18 @@ npm install -g windows-admin-center-cli
 ```
 
 >[!NOTE]
->Можно установить более позднюю версию @angular/cli, однако имейте в виду, что если вы устанавливаете версию, больше, чем 1.6.5, вы получите предупреждение на этапе сборки воспринять что версия локального cli не соответствует установленной версии.
+>Можно установить более позднюю версию @angular/cli, однако учтите, что при установке версии, больше, чем 1.6.5, вы получите предупреждение на этапе сборки gulp, локального интерфейса командной строки версии не соответствует установленной версии.
 
-## Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-Теперь, когда подготовки среды, вы готовы приступить к созданию содержимого.
+Теперь, когда ваша среда подготовлена, вы готовы приступить к созданию содержимого.
 
 - Создание расширения [Средство](develop-tool.md)
 - Создание расширения [Решение](develop-solution.md)
 - Создание [подключаемого модуля шлюза](develop-gateway-plugin.md)
 - Ознакомьтесь с нашими [руководствами](guides.md)
 
-## Набор средств разработки SDK
+## <a name="sdk-design-toolkit"></a>Набор средств разработки пакета SDK
 
-Ознакомьтесь с нашей Windows Admin Center [набор средств разработки SDK](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! Этот набор средств предназначен для поможет вам быстро макет расширений в PowerPoint с помощью Windows Admin Center стили элементов управления и шаблоны страниц. См. в разделе, расширения как могут выглядеть в Windows Admin Center перед началом написания кода!
+Ознакомьтесь с нашей Windows Admin Center [набор средств разработки SDK](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! Этот набор средств призвана помочь быстро макетирования расширений в PowerPoint с помощью Windows Admin Center стили элементов управления и шаблоны страниц. См. в разделе, расширение может выглядеть в Windows Admin Center прежде чем приступить к кодированию!
 

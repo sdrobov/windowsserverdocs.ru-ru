@@ -1,22 +1,24 @@
 ---
 ms.assetid: fd427da3-3869-428f-bf2a-56c4b7d99b40
-title: "Клонирование блоков в ReFS"
-description: 
+title: Блокирование клонирования в ReFS
+description: ''
 author: gawatu
 ms.author: gawatu
 manager: gawatu
-ms.date: 12/6/2016
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-file-systems
-ms.openlocfilehash: 25cc523eaa2ed266e5b07c53ede4bc9e9be20e93
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 54165700209320eee50fc63d98d78cbf4a92d053
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59838115"
 ---
-# <a name="block-cloning-on-refs"></a>Клонирование блоков в ReFS
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+# <a name="block-cloning-on-refs"></a>Блокирование клонирования в ReFS
+
+>Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Клонирование блоков — это копирование диапазон байтов файла от имени приложения, при этом конечный файл может совпадать с исходным или нет. К сожалению, операции копирования являются дорогостоящими, поскольку они инициируют затратные операции чтения и записи физических данных. 
 
@@ -62,8 +64,8 @@ ms.lasthandoff: 10/17/2017
 
 ## <a name="see-also"></a>См. также
 
--   [Обзор ReFS](refs-overview.md)
--   [Потоки целостности ReFS](integrity-streams.md)
--   [Обзор локальных дисковых пространств](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Общие сведения о reFS](refs-overview.md)
+-   [Потоки целостности reFS](integrity-streams.md)
+-   [Общие сведения о дисковых хранилища](../storage-spaces/storage-spaces-direct-overview.md)
 -   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)
