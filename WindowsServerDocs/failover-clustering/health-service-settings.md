@@ -1,25 +1,26 @@
 ---
-title: "Параметры службы работоспособности"
+title: Параметры службы работоспособности
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid: 
+ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
 ms.openlocfilehash: 569cf7ba30fd3f993394efd3735a56d116c067e0
-ms.sourcegitcommit: 30fcae929ce7b611f5d3a5f8fee64b0299272110
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858335"
 ---
 # <a name="health-service-settings"></a>Параметры службы работоспособности
-> Применяется к Windows Server 2016
+> Область применения: Windows Server 2016
 
-Служба работоспособности — это новая функция в Windows Server 2016, которая улучшает качество повседневного наблюдения за и рабочей взаимодействие для кластеров под управлением дисковых пространств.
+Служба работоспособности — это новая функция в Windows Server 2016, которая улучшает ежедневного мониторинга и опыт эксплуатации кластеров дисковыми пространствами.
 
-Многие из параметров, которые управляют поведением службы работоспособности, представлены в виде параметров. Можно изменить эти настройки интенсивности сбоев или действия, включить определенными параметрами, включения и выключения и многое другое.
+Многие из параметров, которые управляют поведением службы работоспособности, предоставляются как параметры. Можно изменить эти настройки интенсивность ошибок или действия, включите определенными параметрами, включить или выключить и многое другое.
 
 Чтобы задать или изменить параметры, используйте следующий командлет PowerShell.
 
@@ -37,9 +38,9 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 ### <a name="common-settings"></a>Общие параметры
 
-Ниже перечислены некоторые часто измененные параметры вместе с их значения по умолчанию.
+Ниже перечислены некоторые часто редактируемых параметры вместе со значениями по умолчанию.
 
-#### <a name="volume-capacity-threshold"></a>Пороговое значение емкость тома
+#### <a name="volume-capacity-threshold"></a>Пороговое значение емкости тома
 
 ```
 "System.Storage.Volume.CapacityThreshold.Enabled"  = True
@@ -47,13 +48,13 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.Volume.CapacityThreshold.Critical" = 90
 ```
 
-#### <a name="pool-reserve-capacity-threshold"></a>Порог емкости пула резерв
+#### <a name="pool-reserve-capacity-threshold"></a>Пороговое значение резерва емкости для пула
 
 ```
 "System.Storage.StoragePool.CheckPoolReserveCapacity.Enabled" = True
 ```
 
-#### <a name="physical-disk-lifecycle"></a>Жизненного цикла физического диска
+#### <a name="physical-disk-lifecycle"></a>Жизненный цикл физического диска
 
 ```
 "System.Storage.PhysicalDisk.AutoPool.Enabled"                             = True
@@ -68,7 +69,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 См. в предыдущем разделе.
 
-#### <a name="firmware-rollout"></a>Выпуск встроенного по
+#### <a name="firmware-rollout"></a>Развертывание встроенного по
 
 ```
 "System.Storage.PhysicalDisk.AutoFirmwareUpdate.SingleDrive.Enabled"       = True
@@ -79,7 +80,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.FailureTolerance"  = 3
 ```
 
-#### <a name="platform--quiescence"></a>Платформы и Quiescence
+#### <a name="platform--quiescence"></a>Платформа / замороженной
 
 ```
 "Platform.Quiescence.MinDelaySeconds" = 120 (i.e. 2 minutes)
@@ -98,7 +99,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.LogLevel" = 4
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 - [Служба работоспособности в Windows Server 2016](health-service-overview.md)
-- [Локальные дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [Дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)

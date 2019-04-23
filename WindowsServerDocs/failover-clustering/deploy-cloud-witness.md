@@ -1,175 +1,176 @@
 ---
 ms.assetid: 0cd1ac70-532c-416d-9de6-6f920a300a45
-title: "Развертывание облака-свидетеля для отказоустойчивого кластера"
+title: Развертывание облака-свидетеля для отказоустойчивого кластера
 ms.prod: windows-server-threshold
 manager: eldenc
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
-ms.date: 10/2/2017
-description: How to use Microsoft Azure to host the witness for a Windows Server Failover Cluster in the cloud - aka how to deploy a Cloud Witness.
-ms.openlocfilehash: 564c6668fcc80a8bd1531c05c142996689de8154
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
+ms.date: 01/18/2019
+description: Как использовать Microsoft Azure для размещения следящего сервера для отказоустойчивого кластера Windows Server в облаке — так называемый Практическое развертывание облака-свидетеля.
+ms.openlocfilehash: f7e1c84e54f08044a772f06e591588c1add33026
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59857985"
 ---
 # <a name="deploy-a-cloud-witness-for-a-failover-cluster"></a>Развертывание облака-свидетеля для отказоустойчивого кластера
 
-> Применяется к: применяется к: Windows Server (канал точками годовой), Windows Server 2016
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-Cloud Witness is a new type of Failover Cluster quorum witness being introduced in Windows Server 2016. This topic provides an overview of the Cloud Witness feature, the scenarios that it supports, and instructions about how to configure a cloud witness for a Failover Cluster that is running Windows Server 2016.
+Облако-свидетель — это тип свидетеля кворума отказоустойчивого кластера, использующего Microsoft Azure для предоставления голос в кворуме кластера. Здесь представлен обзор компонентов облако-свидетель, поддерживаемых им сценариях и инструкции о настройке облака-свидетеля для отказоустойчивого кластера.
 
-## <a name="CloudWitnessOverview"></a>Cloud Witness overview
+## <a name="CloudWitnessOverview"></a>Обзор следящий сервер в облаке
 
-Figure 1 illustrates a multi-site stretched Failover Cluster quorum configuration with Windows Server 2016. In this example configuration (figure 1), there are 2 nodes in 2 datacenters (referred to as Sites). Note, it is possible for a cluster to span more than 2 datacenters. Also, each datacenter can have  more than 2 nodes. A typical cluster quorum configuration in this setup (automatic failover SLA) gives each node a vote. One extra vote is given to the quorum witness to allow cluster to keep running even if either one of the datacenter experiences a power outage. The math is simple - there are 5 total votes and you need 3 votes for the cluster to keep it running.  
+Рис. 1 показана конфигурация кворума многосайтового растянутой отказоустойчивого кластера с Windows Server 2016. В этом примере конфигурации (рис. 1) существует 2 узла в 2 центрах обработки данных (которые называют сайтов). Обратите внимание на то, возможно, для кластера охватывать более двух центров обработки данных. Кроме того центрами обработки данных может иметь более двух узлов. Конфигурации кворума кластера обычно в такой конфигурации (автоматическая отработка отказа соглашение об уровне ОБСЛУЖИВАНИЯ) дает каждому узлу голос. Один дополнительный голос назначается свидетель кворума позволяет кластеру сохранять работает даже в том случае, если один из одного центра обработки данных возникает из-за сбоя питания. Математические прост — есть 5 всего голосов и требуется 3 голосов для кластера для обеспечения его функционирования.  
 
-![Файловый ресурс-свидетель в отдельном третья сайта с 2 узлами в 2 других сайтов](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "файловый ресурс-свидетель")  
-**Figure 1: Using a File Share Witness as a quorum witness**  
+![Файловый ресурс-свидетель в отдельном третий узел с 2 узлами в 2 других сайтов](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_1.png "файлового ресурса-свидетеля")  
+**Рис. 1. С помощью файлового ресурса-свидетеля в качестве свидетеля кворума**  
 
-In case of power outage in one datacenter, to give equal opportunity for the cluster in other datacenter to keep it running, it is recommended to host the quorum witness in a location other than the two datacenters. This typically means requiring a third separate datacenter (site) to host a File Server that is backing the File Share which is used as the quorum witness (File Share Witness).  
+В случае отключения питания в одном центре обработки данных чтобы предоставить равные возможности для кластера в другом ЦОД, чтобы оставить ее для работы, рекомендуется для размещения следящего сервера кворума в расположение, отличное от двумя центрами обработки данных. Это обычно означает, что требуется третий разделения центра обработки данных (узла) для размещения файлового сервера, резервную файловый ресурс, который используется в качестве свидетеля кворума (файловый ресурс-свидетель).  
 
-Most organizations do not have a third separate datacenter that will host File Server backing the File Share Witness. This means organizations primarily host the File Server in one of the two datacenters, which by extension, makes that datacenter the primary datacenter. In a scenario where there is power outage in the primary datacenter, the cluster would go down as the other datacenter would only have 2 votes which is below the quorum majority of 3 votes needed. For the customers that have third separate datacenter to host the File Server, it is an overhead to maintain the highly available File Server backing the File Share Witness. Hosting virtual machines in the public cloud that have the File Server for File Share Witness running in Guest OS is a significant overhead in terms of both setup & maintenance.  
+Большинство организаций нет третий разделения центра обработки данных, в котором будет размещена резервного файловый ресурс-свидетель файлового сервера. Это означает, что организаций в первую очередь размещения файлового сервера в одном из двух центрах обработки данных, которые по расширению, делает этот центр обработки данных в основном центре обработки данных. В сценарии в случае отключения питания в основном центре обработки данных, кластер будет из строя как в другом ЦОД бы только 2 голосов, в которых ниже большинство кворума 3 голоса при необходимости. Для клиентов, имеющих третий отдельный центр обработки данных для размещения файлового сервера окажется для обеспечения высокой доступности файлового сервера, резервном файловый ресурс-свидетель. Размещение виртуальных машин в общедоступном облаке, имеющих файловый сервер для файлового ресурса-свидетеля в гостевой ОС — значительную нагрузку с точки зрения настройки и обслуживания.  
 
-Cloud Witness is a new type of Failover Cluster quorum witness that leverages Microsoft Azure as the arbitration point (figure 2). It uses Azure Blob Storage to read/write a blob file which is then used as an arbitration point in case of split-brain resolution.  
+Облако-свидетель — это новый тип свидетеля кворума отказоустойчивого кластера, который использует Microsoft Azure в качестве точки арбитража (рис. 2). Он использует хранилище BLOB-объектов для файла большого двоичного объекта, который затем используется в качестве точки арбитража случай дроблением разрешения чтения и записи.  
 
-There are significant benefits which this approach:
-1. Leverages Microsoft Azure (no need for third separate datacenter).  
-2. Uses standard available Azure Blob Storage (no extra maintenance overhead of virtual machines hosted in public cloud).  
-3. Same Azure Storage Account can be used for multiple clusters (one blob file per cluster; cluster unique id used as blob file name).  
-4. Very low on-going $cost to the Storage Account (very small data written per blob file, blob file updated only once when cluster nodes' state changes).  
-5. Built-in Cloud Witness resource type.  
+Существуют значительные преимущества, что этот подход:
+1. Использует Microsoft Azure (устраняет потребность в третьем отдельном центре обработки данных).  
+2. Использует стандартные доступные хранилища больших двоичных объектов (без дополнительных дополнительной нагрузки от виртуальных машин, размещенных в общедоступном облаке).  
+3. Учетную запись хранения Azure можно использовать для нескольких кластеров (файл одного большого двоичного объекта для каждого кластера; уникальный идентификатор кластера используется в качестве имени файла BLOB-объектов).  
+4. Очень низкий $cost выполняющуюся в учетную запись хранения (очень мало данные, записанные на файл большого двоичного объекта обновлен файл большого двоичного объекта только в том случае, когда при изменении состояния узлов кластера).  
+5. Встроенный тип ресурсов облака-свидетеля.  
 
-![Diagram illustrating a multi-site stretched cluster with Cloud Witness as a quorum witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)  
-**Figure 2: Multi-site stretched clusters with Cloud Witness as a quorum witness**  
+![Схема, иллюстрирующая растянутого кластера с несколькими сайтами с помощью облака-свидетеля в качестве свидетеля кворума](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_2.png)  
+**Рис. 2. Растянутых кластерах несколькими сайтами с помощью облака-свидетеля в качестве свидетеля кворума**  
 
-As shown in figure 2, there is no third separate site that is required. Cloud Witness, like any other quorum witness, gets a vote and can participate in quorum calculations.  
+Как показано на рис. 2, нет не третий отдельный сайт, который необходим. Облако-свидетель, как и любой другой свидетель кворума, получает голос и может участвовать в подсчет кворума.  
 
-## <a name="CloudWitnessSupportedScenarios"></a>Cloud Witness: Supported scenarios for single witness type
-If you have a Failover Cluster deployment, where all nodes can reach the internet (by extension of Azure), it is recommended that you configure a Cloud Witness as your quorum witness resource.  
+## <a name="CloudWitnessSupportedScenarios"></a>Облако-свидетель: Поддерживаемые сценарии для типа единого следящего сервера
+Если имеется развертывание отказоустойчивого кластера, где все узлы могут получить доступ к Интернету (с расширением Azure), рекомендуется настроить облако-свидетель как вашего ресурса-свидетеля кворума.  
 
-Some of the scenarios that are supported use of Cloud Witness as a quorum witness are as follows:  
-- Disaster recovery stretched multi-site clusters (see figure 2).  
-- Отказоустойчивые кластеры без общих хранилищ (SQL всегда на и т. д.).  
-- Failover Clusters running inside Guest OS hosted in Microsoft Azure Virtual Machine Role (or any other public cloud).  
-- Failover Clusters running inside Guest OS of Virtual Machines hosted in private clouds.
-- Storage clusters with or without shared storage, such as Scale-out File Server clusters.  
-- Small branch-office clusters (even 2-node clusters)  
+Некоторые сценарии, которые поддерживаются используют облако-свидетель как свидетель кворума, следующим образом:  
+- Аварийное восстановление растягивается кластерах с несколькими узлами (см. рис. 2).  
+- Отказоустойчивые кластеры без общего хранилища данных (SQL всегда в т. д.).  
+- Отказоустойчивые кластеры под управлением в гостевой ОС, размещенного в роли виртуальной машины Microsoft Azure (или любого другого общедоступного облака).  
+- Отказоустойчивые кластеры под управлением внутри гостевой ОС для виртуальных машин, размещенных в частных облаках.
+- Хранилище кластеров с или без общего хранилища данных, таких как кластеры масштабируемых файловых серверов.  
+- Кластеры малого офиса (кластеры даже 2 узла)  
 
-Starting with Windows Server 2012 R2, it is recommended to always configure a witness as the cluster automatically manages the witness vote and the nodes vote with Dynamic Quorum.  
+Начиная с Windows Server 2012 R2, рекомендуется всегда настройте следящий сервер, как кластер автоматически управляет голоса свидетеля и узлы голосования с кворумом.  
 
-## <a name="CloudWitnessSetUp"></a> Set up a Cloud Witness for a cluster
-To set up a Cloud Witness as a quorum witness for your cluster, complete the following steps:
-1. Create an Azure Storage Account to use as a Cloud Witness
-2. Configure the Cloud Witness as a quorum witness for your cluster.
+## <a name="CloudWitnessSetUp"></a> Настройка облака-свидетеля для кластера
+Чтобы настроить облака-свидетеля в качестве свидетеля кворума для кластера, выполните следующие действия:
+1. Создайте учетную запись хранилища Azure для использования в качестве облака-свидетеля
+2. Настройка облака-свидетеля в качестве свидетеля кворума для кластера.
 
-## <a name="create-an-azure-storage-account-to-use-as-a-cloud-witness"></a>Create an Azure Storage Account to use as a Cloud Witness
+## <a name="create-an-azure-storage-account-to-use-as-a-cloud-witness"></a>Создайте учетную запись хранилища Azure для использования в качестве облака-свидетеля
 
-This section describes how to create a storage account and view and copy endpoint URLs and access keys for that account.
+В этом разделе описывается создание конечной точки хранилища учетной записи и просмотр и копирование URL-адреса и ключи доступа для этой учетной записи.
 
-To configure Cloud Witness, you must have a valid Azure Storage Account which can be used to store the blob file (used for arbitration). Cloud Witness creates a well-known Container **msft-cloud-witness** under the Microsoft Storage Account. Cloud Witness writes a single blob file with corresponding cluster's unique ID used as the file name of the blob file under this **msft-cloud-witness** container. This means that you can use the same Microsoft Azure Storage Account to configure a Cloud Witness for multiple different clusters.
+Чтобы настроить облако-свидетель, необходимо иметь допустимый учетной записи хранения Azure, который может использоваться для хранения файла BLOB-объектов (используется для арбитража). Облако-свидетель создает контейнер хорошо известных **msft облако свидетель** под учетной записью хранения Microsoft. Уникальный идентификатор, используемый как имя файла, файла большого двоичного объекта в этом в облаке и следящий сервер записывает файл один большой двоичный объект с соответствующим кластера **msft облако свидетель** контейнера. Это означает, что же учетной записи хранения Microsoft Azure можно использовать для настройки облака-свидетеля для нескольких различных кластеров.
 
-When you use the same Azure Storage Account for configuring Cloud Witness for multiple different clusters, a single **msft-cloud-witness** container gets created automatically. This container will contain one-blob file per cluster.
+При использовании учетной записи хранения Azure для настройки облака-свидетеля для нескольких различных кластеров, один **msft облако свидетель** автоматически создается контейнер. Этот контейнер будет содержать blob один файл для каждого кластера.
 
-### <a name="to-create-an-azure-storage-account"></a>To create an Azure storage account
+### <a name="to-create-an-azure-storage-account"></a>Чтобы создать учетную запись хранилища Azure
 
-1. Sign in to the [Azure Portal](http://portal.azure.com).
-2. On the Hub menu, select New -> Data + Storage -> Storage account.
-3. In the Create a storage account page, do the following:
-    1. Enter a name for your storage account.
-    <br>Storage account names must be between 3 and 24 characters in length and may contain numbers and lowercase letters only. The storage account name must also be unique within Azure.
+1. Войдите в [портала Azure](http://portal.azure.com).
+2. В главном меню выберите Создать -> данные + хранилище "->" учетная запись хранения.
+3. В Создание страницы в учетную запись хранения сделайте следующее:
+    1. Введите имя для вашей учетной записи хранения.
+    <br>Имена учетных записей хранения должны находиться в диапазоне от 3 до 24 символов и может содержать только цифры и строчные буквы. Имя учетной записи хранения также должно быть уникальным в пределах Azure.
         
-    2. For **Account kind**, select **General purpose**.
-    <br>You can't use a Blob storage account for a Cloud Witness.
-    3. For **Performance**, select **Standard**.
-    <br>You can't use Azure Premium Storage for a Cloud Witness.
-    2. For **Replication**, select **Locally-redundant storage (LRS)** .
-    <br>Failover Clustering uses the blob file as the arbitration point, which requires some consistency guarantees when reading the data. Therefor you must select **Locally-redundant storage** for **Replication** type.
+    2. Для **тип учетной записи**выберите **общего назначения**.
+    <br>Нельзя использовать учетную запись хранения BLOB-объектов для облака-свидетеля.
+    3. Для **производительности**выберите **стандартный**.
+    <br>Нельзя использовать хранилище Azure класса Premium для облака-свидетеля.
+    2. Для **репликации**выберите **локально избыточное хранилище (LRS)** .
+    <br>Отказоустойчивая кластеризация использует файл большого двоичного объекта в качестве точки арбитража, требующий некоторые гарантии согласованности при чтении данных. Поэтому необходимо выбрать **локально избыточное хранилище** для **репликации** типа.
 
-### <a name="view-and-copy-storage-access-keys-for-your-azure-storage-account"></a>View and copy storage access keys for your Azure Storage Account
+### <a name="view-and-copy-storage-access-keys-for-your-azure-storage-account"></a>Просмотр и копирование ключей доступа к хранилищу для учетной записи хранения Azure
 
-When you create a Microsoft Azure Storage Account, it is associated with two Access Keys that are automatically generated - Primary Access key and Secondary Access key. For a first-time creation of Cloud Witness, use the **Primary Access Key**. There is no restriction regarding which key to use for Cloud Witness.  
+При создании учетной записи хранения Microsoft Azure, он связан с двумя ключами доступа, которые автоматически создаются — первичный ключ доступа и вторичный ключ доступа. Для создания первого облака-свидетеля, используйте **первичный ключ доступа**. Нет никаких ограничений относительно какой ключ следует использовать для облака-свидетеля.  
 
-#### <a name="to-view-and-copy-storage-access-keys"></a>To view and copy storage access keys
+#### <a name="to-view-and-copy-storage-access-keys"></a>Просмотр и копирование ключей доступа к хранилищу
 
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Access Keys** to view, copy, and regenerate your account access keys. The Access Keys blade also includes pre-configured connection strings using your primary and secondary keys that you can copy to use in your applications (see figure 4).
+На портале Azure перейдите к своей учетной записи хранения, щелкните **все параметры** и нажмите кнопку **ключи доступа** Просмотр, копирование и повторное создание ключей доступа к учетной записи. Колонка "ключи доступа" также включает в себя предварительно настроенные строки подключения с помощью первичного и вторичного ключей, которые можно скопировать для использования в приложениях (см. рис. 4).
 
-![Snapshot of the Manage Access Keys dialog in Microsoft Azure](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)  
-**Figure 4: Storage Access Keys**
+![Снимок диалогового окна Управление ключами доступа в Microsoft Azure](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_4.png)  
+**Рис. 4. Ключи доступа к хранилищу**
 
-### <a name="view-and-copy-endpoint-url-links"></a>View and copy endpoint URL Links  
-When you create a Storage Account, the following URLs are generated using the format: `https://<Storage Account Name>.<Storage Type>.<Endpoint>`  
+### <a name="view-and-copy-endpoint-url-links"></a>Просмотр и копирование URL-адрес ссылки конечной точки  
+При создании учетной записи хранения, следующие URL-адреса создаются с использованием формата: `https://<Storage Account Name>.<Storage Type>.<Endpoint>`  
 
-Cloud Witness always uses **Blob** as the storage type. Azure uses **.core.windows.net** as the Endpoint. When configuring Cloud Witness, it is possible that you configure it with a different endpoint as per your scenario (for example the Microsoft Azure datacenter in China has a different endpoint).  
+Облако-свидетель всегда использует **BLOB-объектов** как тип хранилища. Azure использует **. core.windows.net** как конечную точку. При настройке облака-свидетеля, можно настроить его с другой конечной точке в соответствии с вашей сценарием (например центра обработки данных Microsoft Azure в Китае имеет другой конечной точке).  
 
 > [!NOTE]  
-> The endpoint URL is generated automatically by Cloud Witness resource and there is no extra step of configuration necessary for the URL.  
+> URL-адрес конечной точки автоматически созданного ресурса-свидетеля в облаке и для URL-адрес необходим нет дополнительный шаг по конфигурации.  
 
-#### <a name="to-view-and-copy-endpoint-url-links"></a>To view and copy endpoint URL links
-In the Azure Portal, navigate to your storage account, click **All settings** and then click **Properties** to view and copy your endpoint URLs (see figure 5).  
+#### <a name="to-view-and-copy-endpoint-url-links"></a>Для просмотра и скопируйте URL-адрес ссылки конечной точки
+На портале Azure перейдите к своей учетной записи хранения, щелкните **все параметры** и нажмите кнопку **свойства** для просмотра и скопируйте URL-адреса конечной точки (см. рис. 5).  
 
-![Snapshot of the Cloud Witness endpoint links](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)  
-**Figure 5: Cloud Witness endpoint URL links**
+![Моментальный снимок ссылки конечной точки облака-свидетеля](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_5.png)  
+**Рис. 5. Облако ссылок URL-адрес конечной точки следящего сервера**
 
-For more information about creating and managing Azure Storage Accounts, see [About Azure Storage Accounts](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)
+Дополнительные сведения о создании и управлении учетными записями хранения Azure см. в разделе [об учетных записях хранения Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)
 
-## <a name="configure-cloud-witness-as-a-quorum-witness-for-your-cluster"></a>Configure Cloud Witness as a quorum witness for your cluster
-Cloud Witness configuration is well-integrated within the existing Quorum Configuration Wizard built into the Failover Cluster Manager.  
+## <a name="configure-cloud-witness-as-a-quorum-witness-for-your-cluster"></a>Настройка облака-свидетеля в качестве свидетеля кворума для кластера
+Настройка свидетеля Cloud хорошо интегрируется в существующие мастера настройки кворума, встроенные в Диспетчер отказоустойчивости кластеров.  
 
-### <a name="to-configure-cloud-witness-as-a-quorum-witness"></a>To configure Cloud Witness as a Quorum Witness
-1. Launch Failover Cluster Manager.
-2. Right-click the cluster -> **More Actions** -> **Configure Cluster Quorum Settings** (see figure 6). This launches the Configure Cluster Quorum wizard.  
-    ![Snapshot of the menu path to Configue Cluster Quorum Settings in the Failover Cluster Manager UI](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png) **Figure 6. Cluster Quorum Settings**
+### <a name="to-configure-cloud-witness-as-a-quorum-witness"></a>Настройка облака-свидетеля в качестве свидетеля кворума
+1. Запустите Диспетчер отказоустойчивости кластеров.
+2. Щелкните правой кнопкой мыши кластер "->" **дополнительные действия** -> **настроить параметры кворума кластера** (см. рис. 6). Запустится мастер настройки кворума кластера.  
+    ![Моментальный снимок меню пути к Настройка параметров кворума кластера в пользовательском Интерфейсе диспетчера отказоустойчивости кластеров](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_7.png) **рис. 6. Параметры кворума кластера**
 
-3. On the **Select Quorum Configurations** page, select **Select the quorum witness** (see figure 7).  
+3. На **Выбор различных конфигураций кворума** выберите **выбрать свидетель кворума** (см. рис. 7).  
 
-    ![Snapshot of the 'select the quotrum witness' radio button in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
-    **Figure 7. Select the Quorum Configuration**
+    ![Моментальный снимок «выбрать свидетель quotrum» переключатель в мастере кворума кластера](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_8.png)  
+    **Рис. 7. Выберите конфигурацию кворума**
 
-4. On the **Select Quorum Witness** page, select **Configure a cloud witness** (see figure 8).  
+4. На **Выбор свидетеля кворума** выберите **настроить облако-свидетель** (см. рис. 8).  
 
-    ![Snapshot of the appropriate radio button to select a cloud witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png)  
-    **Figure 8. Select the Quorum Witness**  
+    ![Моментальный снимок соответствующий переключатель, чтобы выбрать облако-свидетель](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_9.png)  
+    **Рис. 8. Выбрать свидетель кворума**  
 
-5. On the **Configure Cloud Witness** page, enter the following information:  
-    1. (Required parameter) Azure Storage Account Name.  
-    2. (Required parameter) Access Key corresponding to the Storage Account.  
-        1. When creating for the first time, use Primary Access Key (see figure 5)  
-        2. When rotating the Primary Access Key, use Secondary Access Key (see figure 5)  
-    3. (Optional parameter) If you intend to use a different Azure service endpoint (for example the Microsoft Azure service in China), then update the endpoint server name.  
+5. На **настроить облако-свидетель** введите следующие сведения:  
+    1. (Обязательный параметр) Имя учетной записи хранения Azure.  
+    2. (Обязательный параметр) Доступ к ключу, соответствующий учетной записи хранения.  
+        1. При создании в первый раз используйте первичный ключ доступа (см. рис. 5)  
+        2. При смене первичного ключа доступа, используйте ключ доступа получателя (см. рис. 5)  
+    3. (Необязательный параметр) Если вы планируете использовать конечную точку различные службы Azure (например, служба Microsoft Azure в Китае), необходимо обновите имя конечной точки сервера.  
 
-    ![Snapshot of the Cloud Witness configuration pane in the Cluster Quorum wizard](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
-    **Figure 9: Configure your Cloud Witness**
+    ![Моментальный снимок области конфигурации облака-свидетеля в мастере кворума кластера](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_10.png)  
+    **Рис. 9. Настройка вашего облака-свидетеля**
 
-6. Upon successful configuration of Cloud Witness, you can view the newly created witness resource in the Failover Cluster Manager snap-in (see figure 10).
+6. После успешной настройки облака-свидетеля, может просмотреть в диспетчере отказоустойчивости кластеров ресурса-свидетеля только что созданный оснастки (см. рис. 10).
 
-    ![Successful configuration of Cloud Witness](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png)  
-    **Figure 10: Successful configuration of Cloud Witness**
+    ![Успешная Конфигурация облака-свидетеля](media/Deploy-a-Cloud-Witness-for-a-Failover-Cluster/CloudWitness_11.png)  
+    **Рис. 10. Успешная Конфигурация облака-свидетеля**
 
-### <a name="configuring-cloud-witness-using-powershell"></a>Configuring Cloud Witness using PowerShell  
-The existing Set-ClusterQuorum PowerShell command has new additional parameters corresponding to Cloud Witness.  
+### <a name="configuring-cloud-witness-using-powershell"></a>Настройка облака-свидетеля с помощью PowerShell  
+Существующей команды PowerShell Set-ClusterQuorum имеет новые дополнительные параметры, соответствующие облако-свидетель.  
 
-You can configure Cloud Witness using the [`Set-ClusterQuorum`](https://technet.microsoft.com/library/ee461013.aspx) following PowerShell command:  
+Можно настроить с помощью облака-свидетеля [ `Set-ClusterQuorum` ](https://technet.microsoft.com/library/ee461013.aspx) следующую команду PowerShell:  
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey>
 ```
 
-In case you need to use a different endpoint (rare):  
+В случае вам потребуется использовать другой конечной точке (такие случаи редки).  
 
 ```PowerShell
 Set-ClusterQuorum -CloudWitness -AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> -Endpoint <servername>  
 ```
 
-### <a name="azure-storage-account-considerations-with-cloud-witness"></a>Azure Storage Account considerations with Cloud Witness  
-When configuring a Cloud Witness as a quorum witness for your Failover Cluster, consider the following:
-* Instead of storing the Access Key, your Failover Cluster will generate and securely store a Shared Access Security (SAS) token.  
-* The generated SAS token is valid as long as the Access Key remains valid. When rotating the Primary Access Key, it is important to first update the Cloud Witness (on all your clusters that are using that Storage Account) with the Secondary Access Key before regenerating the Primary Access Key.  
-* Cloud Witness uses HTTPS REST interface of the Azure Storage Account service. This means it requires the HTTPS port to be open on all cluster nodes.
+### <a name="azure-storage-account-considerations-with-cloud-witness"></a>Рекомендации по Azure учетной записи хранения с помощью облака-свидетеля  
+При настройке облака-свидетеля в качестве свидетеля кворума для отказоустойчивого кластера, учитывайте следующее:
+* Вместо сохранения ключ доступа, в отказоустойчивом кластере создаст и безопасно хранить маркер безопасности доступа (SAS).  
+* Созданный маркер SAS действителен до тех пор, пока ключ доступа остается допустимым. При смене первичного ключа доступа, важно сначала обновить облако-свидетель (на всех кластеров, использующих эту учетную запись хранения) с использованием вторичного ключа доступа, прежде чем повторно создать первичный ключ доступа.  
+* Облако-свидетель использует интерфейс HTTPS REST службы учетной записи хранения Azure. Это означает, что он требует HTTPS-порт, необходимо открыть на всех узлах кластера.
 
-### <a name="proxy-considerations-with-cloud-witness"></a>Proxy considerations with Cloud Witness  
-Cloud Witness uses HTTPS (default port 443) to establish communication with Azure blob service. Ensure that HTTPS port is accessible via network Proxy.
+### <a name="proxy-considerations-with-cloud-witness"></a>Рекомендации по прокси-сервера с помощью облака-свидетеля  
+Облако-свидетель использует протокол HTTPS (порт по умолчанию 443) для установления связи со службой BLOB-объектов Azure. Убедитесь, что HTTPS-порт доступен через сеть прокси-сервера.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 - [Новые возможности отказоустойчивой кластеризации в Windows Server](whats-new-in-failover-clustering.md)

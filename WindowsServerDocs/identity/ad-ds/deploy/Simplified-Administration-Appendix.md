@@ -1,40 +1,41 @@
 ---
 ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
-title: "Приложение по упрощенному администрированию"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: Приложение по упрощенному администрированию
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 5de7431d0f3fe9a078432b11a63ce996d3abe447
-ms.sourcegitcommit: db290fa07e9d50686667bfba3969e20377548504
+ms.openlocfilehash: 36cdacec27e64586c359146b858a9d68750e5026
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858265"
 ---
 # <a name="simplified-administration-appendix"></a>Приложение по упрощенному администрированию
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
--   [Диалоговое окно серверов (Active Directory) добавления диспетчера сервера](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)  
+-   [Диспетчер серверов: Добавление серверов диалоговое окно (Active Directory)](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_AddServers)  
   
--   [Состояние сервера удаленного диспетчера сервера](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)  
+-   [Состояние сервера удаленного диспетчера серверов](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_ServerMgrStatus)  
   
--   [Загрузка модуля PowerShell в Windows](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_PSLoadModule)  
+-   [Загрузка модуля PowerShell Windows](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_PSLoadModule)  
   
--   [Выдачи исправления, касающиеся относительных ИДЕНТИФИКАТОРОВ предыдущих операционных системах](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_Rid)  
+-   [RID выдачи исправлений для предыдущих операционных систем](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_Rid)  
   
--   [Изменяет Ntdsutil.exe установки с носителя](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)  
+-   [Ntdsutil.exe Install from Media Changes](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)  
   
-## <a name="BKMK_AddServers"></a>Диалоговое окно серверов (Active Directory) добавления диспетчера сервера  
+## <a name="BKMK_AddServers"></a>Диспетчер серверов: Добавление серверов диалоговое окно (Active Directory)  
 
-**Добавление серверов** диалоговое окно позволяет поиск серверы, Active Directory операционной системы, с помощью подстановочных знаков и расположение. Диалоговое окно также позволяет с помощью DNS-запросы по полное доменное имя или префикс имени. Поиск использовать собственные протоколы DNS и LDAP, развернутые с помощью .NET, не AD Windows PowerShell от Management Gateway AD через SOAP - это означает, что связь с диспетчером серверов контроллеры домена даже можно запустить в Windows Server 2003. Также можно импортировать файл, имена серверов для подготовки целей.  
+**Добавление серверов** диалоговое окно позволяет поиск по Active Directory для серверов, операционной системой, с использованием подстановочных знаков и по расположению. Диалоговое окно также позволяет использовать запросы DNS, полное доменное имя или имя префикса. Поиск использовать собственный DNS- и LDAP протоколы, реализовать с помощью .NET, не AD Windows PowerShell для работы шлюза управления AD по протоколу SOAP - это означает, что контроллеры домена, связаться с диспетчером серверов можно даже запускать Windows Server 2003. Также можно импортировать файл с имена серверов для целей подготовки.  
   
-Поиск в Active Directory использует следующие фильтры LDAP:  
+Поиск Active Directory использует следующие фильтры LDAP:  
   
 ```  
 (&(ObjectCategory=computer)  
@@ -56,15 +57,15 @@ ms.lasthandoff: 12/12/2017
   
 ```  
   
-## <a name="BKMK_ServerMgrStatus"></a>Состояние сервера удаленного диспетчера сервера  
-Диспетчер сервера проверяет специальных возможностей удаленного сервера, с помощью протокола маршрутизации. Все серверы, не отвечает на запросы ARP не указаны, даже если они находятся в пуле.  
+## <a name="BKMK_ServerMgrStatus"></a>Состояние сервера удаленного диспетчера серверов  
+Диспетчер сервера проверяет доступность удаленного сервера, с помощью протокола маршрутизации адрес. Все серверы, не отвечает на запросы ARP не указываются, даже если они находятся в пуле.  
   
-Если отвечает ARP, затем DCOM и WMI подключения к серверу для получения сведений о состоянии. Если недоступны WMI, RPC и DCOM, диспетчер сервера не можете полностью управлять сервера.  
+Если отвечает на запросы ARP, затем WMI и DCOM подключения к серверу для возвращения сведений о состоянии. Если недоступны RPC, DCOM и WMI, диспетчер сервера не может управлять не полностью сервера.  
   
-## <a name="BKMK_PSLoadModule"></a>Загрузка модуля PowerShell в Windows  
-Windows PowerShell 3.0 реализует загрузка динамического модуля. С помощью **Import-Module** командлета больше обычно не требуется; Вместо этого просто для вызова командлета, alias или function автоматически загружает модуль.  
+## <a name="BKMK_PSLoadModule"></a>Загрузка модуля PowerShell Windows  
+Windows PowerShell 3.0 реализует динамической загрузки модуля. С помощью **Import-Module** командлета больше обычно не требуется; вместо этого просто вызов командлета, псевдоним или функция автоматически загружает модуль.  
   
-Чтобы увидеть загруженных модулей, используйте **Get-Module** командлета.  
+Чтобы просмотреть загруженные модули, используйте **Get-Module** командлета.  
   
 ```  
 Get-Module  
@@ -80,7 +81,7 @@ Get-Module -ListAvailable
   
 ```  
   
-Основного варианта использования **import-module** команды, когда требуется доступ к «AD: «виртуальный диск Windows PowerShell и ничто уже загрузивший модуль. Например с помощью следующих команд:  
+Основного варианта использования **import-module** команды, которая когда вам нужен доступ к «AD:» Виртуальный диск Windows PowerShell и ничего более уже загружен модуль. Например с помощью следующих команд:  
   
 ```  
 import-module activedirectory  
@@ -89,18 +90,18 @@ dir
   
 ```  
   
-## <a name="BKMK_Rid"></a>Выдачи исправления, касающиеся относительных ИДЕНТИФИКАТОРОВ предыдущих операционных системах  
-В разделе [обновление доступно для обнаружения и предотвращения слишком много использования глобального пула RID контроллера домена под управлением Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).  
+## <a name="BKMK_Rid"></a>RID выдачи исправлений для предыдущих операционных систем  
+См. в разделе [доступно обновление для обнаружения и предотвратить чрезмерное потребление глобального пула RID на контроллере домена под управлением Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).  
   
-## <a name="BKMK_IFM"></a>Изменяет Ntdsutil.exe установки с носителя  
-Windows Server 2012 добавлены два дополнительных варианта действий в средство командной строки Ntdsutil.exe для **IFM (создать носитель IFM)** меню. Они позволяют создавать IFM хранилищ без первого выполнения автономной дефрагментации экспортированные NTDS. Файл базы данных DIT. Если места на диске не premium, это экономит время, создание IFM.  
+## <a name="BKMK_IFM"></a>Ntdsutil.exe Install from Media Changes  
+Windows Server 2012 добавляет два дополнительных параметра командной строки средства Ntdsutil.exe для **IFM (создать носитель IFM)** меню. Они позволяют создавать IFM хранилища, выполняя автономную дефрагментацию экспортированного NTDS. Файл базы данных DIT. Если места на диске не категории "премиум", это экономит время, создание IFM.  
   
-В следующей таблице описаны две новые пункты меню:  
+В следующей таблице описаны две новые элементы меню:  
   
 |||  
 |-|-|  
 |Пункт меню|Объяснение|  
-|Создайте полную NoDefrag %s|Создать носитель IFM без дефрагментации для полного контроллера домена AD или экземпляр Облегченного или в папку %s|  
+|Создание полной NoDefrag %s|Создать носитель IFM без дефрагментации для полного контроллера домена AD или AD/LDS экземпляра в папку %s|  
 |Создание полной Sysvol NoDefrag %s|Создать носитель IFM с SYSVOL и без дефрагментации для полного контроллера домена AD, в папку %s|  
   
 ![Упрощенное администрирование](media/Simplified-Administration-Appendix/ADDS_PSIFM.png)  
