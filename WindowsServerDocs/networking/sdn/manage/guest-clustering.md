@@ -1,7 +1,7 @@
 ---
-title: Гостевой кластер в виртуальной сети
-description: Этот раздел является частью программного обеспечения определены сетевые руководство о том, как управление рабочими нагрузками клиента и виртуальные сети в Windows Server 2016.
-manager: brianlic
+title: Кластеризация гостевых систем в виртуальной сети
+description: Виртуальные машины, подключенные к виртуальной сети могут использовать только IP-адреса, назначенные сетевого контроллера для связи по сети.  Технологии кластеризации, которым необходим плавающего IP-адреса, например Microsoft отказоустойчивой кластеризации, требуют некоторых дополнительных шагов для правильного функционирования.
+manager: dougkim
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -12,165 +12,176 @@ ms.topic: article
 ms.assetid: 8e9e5c81-aa61-479e-abaf-64c5e95f90dc
 ms.author: grcusanz
 author: shortpatti
-ms.openlocfilehash: 5cab7e7c0ca0af848b4b58362388701cc4357860
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.date: 08/26/2018
+ms.openlocfilehash: fcd37ebb3739f1d7118ce41dfc61764486c920d3
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59844965"
 ---
-# <a name="guest-clustering-in-a-virtual-network"></a>Гостевой кластер в виртуальной сети
+# <a name="guest-clustering-in-a-virtual-network"></a>Кластеризация гостевых систем в виртуальной сети
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-Только виртуальных машин, подключенных к виртуальной сети могут использовать IP-адреса, назначенные сетевого контроллера для связи по сети.  Это означает, что кластеризации технологии, которые требуют значений с плавающей IP-адрес, например отказоустойчивый кластер корпорации Майкрософт, для правильной работы требуется выполнить несколько дополнительных действий.
+Виртуальные машины, подключенные к виртуальной сети могут использовать только IP-адреса, назначенные сетевого контроллера для связи по сети.  Технологии кластеризации, которым необходим плавающего IP-адреса, например Microsoft отказоустойчивой кластеризации, требуют некоторых дополнительных шагов для правильного функционирования.
 
-Метод для выбора доступны с плавающей IP-адресов является использование \(SLB\) программного балансировщика нагрузки виртуальный IP-\(VIP\).  Балансировка нагрузки программного обеспечения должны быть настроены проверка индекса на порта, IP-адресов, чтобы SLB будет направлять трафик на компьютере, который в данный момент находится IP.
+Метод делающий доступными плавающий IP-адрес является использование программной подсистемы балансировки нагрузки \(SLB\) виртуальный IP-адрес \(виртуальный IP-адрес\).  Таким образом, чтобы программный балансировщик Нагрузки направляет трафик на компьютере, на котором в данный момент этот IP-адрес подсистемы балансировки нагрузки должны быть настроены пробу работоспособности на порте, на этот IP-адрес.
 
-## <a name="example-load-balancer-configuration"></a>Пример: Конфигурации подсистемы балансировки нагрузки
 
-В этом примере предполагается, что вы уже создали виртуальные машины, которые станут узлов кластера и назначенные виртуальной сети.  Инструкции см. в разделе [создания виртуальной Машины и подключение к виртуальной сети клиента или виртуальной локальной сети](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).  
+## <a name="example-load-balancer-configuration"></a>Пример. Конфигурация подсистемы балансировки нагрузки
 
-В этом примере будет создать виртуальный IP-адрес (192.168.2.100) для представления с плавающей IP-адрес кластера и настройте проверка индекса для наблюдения за TCP-порт 59999, чтобы определить, какой узел является активной.
+В этом примере предполагается, что вы уже создали виртуальных машин, которые станут узлами кластера и применения их к виртуальной сети.  Инструкции см. в разделе [Создание виртуальной Машины и подключение к виртуальной сети клиента или виртуальной локальной сети](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).  
 
-### <a name="step-1-select-the-vip"></a>Шаг 1: Выберите виртуальных IP-адресов
-Подготовка, назначив виртуальных IP-адресов IP-адрес.  Этот адрес может быть все неиспользуемые или зарезервированные адреса в той же подсети, что и узлы кластера.  VIP должен совпадать с плавающей адресом кластера.
+В этом примере будет создать виртуальный IP-адрес (192.168.2.100) для представления с плавающей запятой IP-адрес кластера и настроить пробу работоспособности для наблюдения за TCP-порта 59999, чтобы определить, какой узел является активным.
 
-    $VIP = "192.168.2.100"
-    $subnet = "Subnet2"
-    $VirtualNetwork = "MyNetwork"
-    $ResourceId = "MyNetwork_InternalVIP"
+1. Выберите виртуальный IP-адрес.<p>Подготовка, назначив Виртуальный IP-адрес, который может быть любой неиспользуемый или зарезервированный адрес, в той же подсети, где размещаются узлы кластера.  Виртуальный IP-адрес должен соответствовать с плавающей запятой адрес кластера.
 
-### <a name="step-2-create-the-load-balancer-properties-object"></a>Шаг 2: Создание объект свойств подсистемы балансировки нагрузки
+   ```PowerShell
+   $VIP = "192.168.2.100"
+   $subnet = "Subnet2"
+   $VirtualNetwork = "MyNetwork"
+   $ResourceId = "MyNetwork_InternalVIP"
+   ```
 
-Следующий пример команды можно использовать для создания объекта свойства подсистемы балансировки нагрузки.
+2. Создайте объект свойства подсистемы балансировки нагрузки.
 
-    $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
+   ```PowerShell
+   $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
+   ```
 
-### <a name="step-3-create-a-front-end-ip-address"></a>Шаг 3: Создание front\ конечный IP-адрес
+3. Создание внешнего\-конечный IP-адрес.
 
-Следующий пример команды можно использовать для создания front\ конечный IP-адрес.
+   ```PowerShell
+   $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
+   $FrontEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfigurationProperties
+   $FrontEnd.resourceId = "Frontend1"
+   $FrontEnd.resourceRef = "/loadBalancers/$ResourceId/frontendIPConfigurations/$($FrontEnd.resourceId)"
+   $FrontEnd.properties.subnet = new-object Microsoft.Windows.NetworkController.Subnet
+   $FrontEnd.properties.subnet.ResourceRef = "/VirtualNetworks/MyNetwork/Subnets/Subnet2"
+   $FrontEnd.properties.privateIPAddress = $VIP
+   $FrontEnd.properties.privateIPAllocationMethod = "Static"
+   ```
 
-    $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
-    $FrontEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfigurationProperties
-    $FrontEnd.resourceId = "Frontend1"
-    $FrontEnd.resourceRef = "/loadBalancers/$ResourceId/frontendIPConfigurations/$($FrontEnd.resourceId)"
-    $FrontEnd.properties.subnet = new-object Microsoft.Windows.NetworkController.Subnet
-    $FrontEnd.properties.subnet.ResourceRef = "/VirtualNetworks/MyNetwork/Subnets/Subnet2"
-    $FrontEnd.properties.privateIPAddress = $VIP
-    $FrontEnd.properties.privateIPAllocationMethod = "Static"
+4. Создание копирования\-завершить пул должен содержать узлы кластера.
 
-### <a name="step-4-create-a-back-end-pool-to-contain-the-cluster-nodes"></a>Шаг 4: Создание пула back\ окончания может содержать узлы кластера
+   ```PowerShell
+   $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
+   $BackEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
+   $BackEnd.resourceId = "Backend1"
+   $BackEnd.resourceRef = "/loadBalancers/$ResourceId/backendAddressPools/$($BackEnd.resourceId)"
+   $LoadBalancerProperties.backendAddressPools += $BackEnd
+   ```
 
-Следующий пример команды можно использовать для создания пула back\ end
+5. Добавление проверки для определения узла кластера, где плавающего адреса неактивная на текущий момент. 
 
-    $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
-    $BackEnd.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPoolProperties
-    $BackEnd.resourceId = "Backend1"
-    $BackEnd.resourceRef = "/loadBalancers/$ResourceId/backendAddressPools/$($BackEnd.resourceId)"
-    $LoadBalancerProperties.backendAddressPools += $BackEnd
+   >[!NOTE]
+   >Запрос проверки постоянный адрес виртуальной Машины на порте, см. ниже.  Порт должен отвечать только на активном узле. 
 
-### <a name="step-5-add-a-probe"></a>Шаг 5: Добавление зондирования
-Проба необходимые для определения какие плавающей адрес в данный момент на узле кластера.
+   ```PowerShell
+   $LoadBalancerProperties.probes += $lbprobe = new-object Microsoft.Windows.NetworkController.LoadBalancerProbe
+   $lbprobe.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
 
->[!NOTE]
->Запрос проверки постоянный адрес виртуальной Машины на порт, определенный ниже.  Порт должен отвечать только на активном узле. 
+   $lbprobe.ResourceId = "Probe1"
+   $lbprobe.resourceRef = "/loadBalancers/$ResourceId/Probes/$($lbprobe.resourceId)"
+   $lbprobe.properties.protocol = "TCP"
+   $lbprobe.properties.port = "59999"
+   $lbprobe.properties.IntervalInSeconds = 5
+   $lbprobe.properties.NumberOfProbes = 11
+   ```
 
-    $LoadBalancerProperties.probes += $lbprobe = new-object Microsoft.Windows.NetworkController.LoadBalancerProbe
-    $lbprobe.properties = new-object Microsoft.Windows.NetworkController.LoadBalancerProbeProperties
+6. Добавление правила балансировки нагрузки для TCP-порт 1433.<p>Протокол и порт, при необходимости можно изменить.  Также можно повторить этот шаг несколько раз для другие порты и protcols на этот виртуальный IP-адрес.  Очень важно, что EnableFloatingIP установлено значение $true, так как это означает, что подсистемы балансировки нагрузки для отправки пакета на узел с помощью исходного виртуального IP-адреса на месте.
 
-    $lbprobe.ResourceId = "Probe1"
-    $lbprobe.resourceRef = "/loadBalancers/$ResourceId/Probes/$($lbprobe.resourceId)"
-    $lbprobe.properties.protocol = "TCP"
-    $lbprobe.properties.port = "59999"
-    $lbprobe.properties.IntervalInSeconds = 5
-    $lbprobe.properties.NumberOfProbes = 11
+   ```PowerShell
+   $LoadBalancerProperties.loadbalancingRules += $lbrule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
+   $lbrule.properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+   $lbrule.ResourceId = "Rules1"
 
-### <a name="step-5-add-the-load-balancing-rules"></a>Шаг 5: Добавление правила балансировки нагрузки
-На этом этапе создается правило для порта TCP 1433 балансировки нагрузки.  Протокол и порт, при необходимости можно изменить.  Также можно повторить этот шаг несколько раз для дополнительные порты и протоколы, на этом виртуальных IP-адресов.  Очень важно, что EnableFloatingIP задано значение $true, поскольку это значение определяет подсистемы балансировки нагрузки для отправки пакета на узел с исходной виртуальных IP-адресов на месте.
+   $lbrule.properties.frontendipconfigurations += $FrontEnd
+   $lbrule.properties.backendaddresspool = $BackEnd 
+   $lbrule.properties.protocol = "TCP"
+   $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433 
+   $lbrule.properties.IdleTimeoutInMinutes = 4
+   $lbrule.properties.EnableFloatingIP = $true
+   $lbrule.properties.Probe = $lbprobe
+   ```
 
-    $LoadBalancerProperties.loadbalancingRules += $lbrule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
-    $lbrule.properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-    $lbrule.ResourceId = "Rules1"
+7. Создание подсистемы балансировки нагрузки на сетевом контроллере.
 
-    $lbrule.properties.frontendipconfigurations += $FrontEnd
-    $lbrule.properties.backendaddresspool = $BackEnd 
-    $lbrule.properties.protocol = "TCP"
-    $lbrule.properties.frontendPort = $lbrule.properties.backendPort = 1433 
-    $lbrule.properties.IdleTimeoutInMinutes = 4
-    $lbrule.properties.EnableFloatingIP = $true
-    $lbrule.properties.Probe = $lbprobe
+   ```PowerShell
+   $lb = New-NetworkControllerLoadBalancer -ConnectionUri $URI -ResourceId $ResourceId -Properties $LoadBalancerProperties -Force
+   ```
 
-### <a name="step-5-create-the-load-balancer-in-network-controller"></a>Шаг 5: Создание подсистемы балансировки нагрузки в сетевого контроллера
+8. Добавление узлов кластера во внутренний пул.<p>Можно добавить столько узлов для пула, сколько требуется для кластера.
 
-Следующий пример команды можно использовать для создания подсистемы балансировки нагрузки.
+   ```PowerShell
+   # Cluster Node 1
 
-    $lb = New-NetworkControllerLoadBalancer -ConnectionUri $URI -ResourceId $ResourceId -Properties $LoadBalancerProperties -Force
-
-### <a name="step-6-add-the-cluster-nodes-to-the-backend-pool"></a>Шаг 6: Добавление узлов кластера в пул серверная часть
-
-В этом примере показано добавление двух участников группы, но можно добавить в пул столько узлов, сколько требуется для кластера.
-
-    # Cluster Node 1
-
-    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode1_Network-Adapter"
-    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
-    $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode1_Network-Adapter"
+   $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
+   $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
 
     # Cluster Node 2
 
-    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode2_Network-Adapter"
-    $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
-    $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid "ClusterNode2_Network-Adapter"
+   $nic.properties.IpConfigurations[0].properties.LoadBalancerBackendAddressPools += $lb.properties.backendaddresspools[0]
+   $nic = new-networkcontrollernetworkinterface  -connectionuri $uri -resourceid $nic.resourceid -properties $nic.properties -force
+   ```
 
-Как только вы создали подсистемы балансировки нагрузки и добавлены в пул внутренних сетевых интерфейсов, вы будете готовы настроить кластер.  Если вы используете Microsoft отказоустойчивый кластер, можно продолжить в следующем примере. 
+   После создания подсистемы балансировки нагрузки и добавить сетевые интерфейсы во внутренний пул, все готово для настройки кластера.  
+
+9. (Необязательно) Если вы используете Microsoft отказоустойчивого кластера, по-прежнему в следующем примере. 
 
 ## <a name="example-2-configuring-a-microsoft-failover-cluster"></a>Пример 2: Настройка отказоустойчивого кластера Майкрософт
 
-Для настройки отказоустойчивого кластера можно использовать следующие действия.
+Чтобы настроить отказоустойчивый кластер, можно использовать следующие действия.
 
-### <a name="step-1-install-failover-clustering"></a>Шаг 1: Установка отказоустойчивой кластеризации
+1. Установите и настройте свойства для отказоустойчивого кластера.
 
-Установка и настройка свойств для отказоустойчивого кластера можно использовать команды в следующем примере.
+   ```PowerShell
+   add-windowsfeature failover-clustering -IncludeManagementTools
+   Import-module failoverclusters
 
-    add-windowsfeature failover-clustering -IncludeManagementTools
-    Import-module failoverclusters
+   $ClusterName = "MyCluster"
+   
+   $ClusterNetworkName = "Cluster Network 1"
+   $IPResourceName =  
+   $ILBIP = “192.168.2.100” 
 
-    $ClusterName = "MyCluster"
-   
-    $ClusterNetworkName = "Cluster Network 1"
-    $IPResourceName =  
-    $ILBIP = “192.168.2.100” 
+   $nodes = @("DB1", "DB2")
+   ```
 
-    $nodes = @("DB1", "DB2")
+2. Создайте кластер на одном узле.
 
-### <a name="step-2-create-the-cluster-on-one-node"></a>Шаг 2: Создание кластера на одном узле
+   ```PowerShell
+   New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
+   ```
 
-Следующий пример команды можно использовать для создания кластера на узле.
+3. Остановите ресурс кластера.
 
-    New-Cluster -Name $ClusterName -NoStorage -Node $nodes[0]
+   ```PowerShell
+   Stop-ClusterResource "Cluster Name" 
+   ```
 
-### <a name="step-3-stop-the-cluster-resource"></a>Шаг 3: Остановки ресурса кластера
+4. Установка кластера IP-адрес и порта пробы.<p>IP-адрес должен совпадать с адресом внешний IP-адрес, используемый в предыдущем примере, и порт пробы должен совпадать с портом пробы в предыдущем примере.
 
-Следующий пример команды можно использовать для остановки ресурса кластера.
+   ```PowerShell
+   Get-ClusterResource "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"="59999";"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"EnableDhcp"=0}
+   ```
 
-    Stop-ClusterResource "Cluster Name" 
+5. Запустите ресурсы кластера.
 
-### <a name="step-4-set-the-cluster-ip-and-probe-port"></a>Шаг 4: Установка кластера IP-адрес и Проверка порта
-IP-адрес должен соответствовать переднего плана IP-адрес, используемый в предыдущем примере и порт пробы должен совпадать с номером порта проверки в предыдущем примере.
+   ```PowerShell
+    Start-ClusterResource "Cluster IP Address"  -Wait 60 
+    Start-ClusterResource "Cluster Name"  -Wait 60 
+   ```
 
-    Get-ClusterResource "Cluster IP Address" | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"="59999";"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"EnableDhcp"=0}
+6. Добавьте оставшиеся узлы.
 
-### <a name="step-5-start-the-cluster-resources"></a>Шаг 5: Запустите ресурсов кластера
+   ```PowerShell
+   Add-ClusterNode $nodes[1]
+   ```
 
-Следующий пример команды можно использовать для запуска ресурсов кластера.
+_**Кластера активен.**_ Трафик, идущий в виртуальный IP-адрес для указанного порта направлена на активном узле.
 
-    Start-ClusterResource "Cluster IP Address"  -Wait 60 
-    Start-ClusterResource "Cluster Name"  -Wait 60 
-
-### <a name="step-6-add-the-remaining-nodes"></a>Шаг 6: Добавление остальные узлы
-
-Следующий пример команды можно использовать для добавления узлов кластера.
-
-    Add-ClusterNode $nodes[1]
-
-После завершения выполнения последнего шага кластера является активной. Трафика виртуальных IP-адресов на указанный порт будут направляться на активный узел.
+---

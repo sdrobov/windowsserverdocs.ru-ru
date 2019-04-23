@@ -1,6 +1,6 @@
 ---
-title: "Создание автоматически применяемой квоты"
-description: "В этой статье описывается процесс создания автоматически применяемой квоты на основе шаблона квоты"
+title: Создание автоматически применяемой квоты
+description: В этой статье описывается процесс создания автоматически применяемой квоты на основе шаблона квоты
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -9,14 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: e2837df448434252470d783a6c06f0690ba09021
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847925"
 ---
 # <a name="create-an-auto-apply-quota"></a>Создание автоматически применяемой квоты
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 С помощью автоматически применяемых квот можно назначать шаблон квоты родительскому тому или папке. Затем диспетчер ресурсов файлового сервера автоматически создает квоты на основе этого шаблона. Квоты создаются для каждой из существующих вложенных папок, а также для вложенных папок, которые будут созданы в будущем.
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/17/2017
 > [!Note]
 > Можно проверить все автоматически созданные квоты, выбрав узел **Квоты**, а затем выбрав пункт **Обновить**. В родительском томе или папке отобразятся отдельные квоты для каждой вложенной папки и профили автоматически применяемых квот.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 -   [Управление квотами](quota-management.md)
--   [Редактирование свойств автоматически применяемой квоты](edit-auto-apply-quota-properties.md)
+-   [Изменение автоматически назначаемой квоты](edit-auto-apply-quota-properties.md)

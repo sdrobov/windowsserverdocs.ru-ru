@@ -1,31 +1,32 @@
 ---
 ms.assetid: a589dda6-e05b-4b44-ae3e-b15dd3877617
-title: "Развертывание AD DS в новой организации"
-description: 
-author: billmath
-ms.author: billmath
-manager: femila
+title: Развертывание доменных служб Active Directory в новой организации
+description: ''
+author: MicrosoftGuyJFlo
+ms.author: joflore
+manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 03963e8cc0a9be916d695975f4b966a1aca07703
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.openlocfilehash: 9f502addbd214abad12bb9a2d6ab3bef8882209d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59842715"
 ---
-# <a name="deploying-ad-ds-in-a-new-organization"></a>Развертывание AD DS в новой организации
+# <a name="deploying-ad-ds-in-a-new-organization"></a>Развертывание доменных служб Active Directory в новой организации
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Thoroughly preparing your Active Directory Domain Services (AD DS) design is essential to a cost-effective deployment. If your network environment is currently operating without a directory service, complete a comprehensive design of your AD DS logical structure before you deploy AD DS. Затем можно развернуть нового корневого домена леса и развернуть остальную часть структуру домена в соответствии с проектом.  
+Тщательная подготовка доменных служб Active Directory (AD DS) разработки очень важно для экономически эффективного развертывания. Если сетевой среды, в настоящее время работает без службы каталогов, прежде чем развертывание служб AD DS выполните комплексный проектный логической структуры AD DS. Затем можно развернуть новый корневой домен леса и развернуть остальную часть структуры доменов в соответствии с вашей разработки.  
   
-The following illustration shows the steps for deploying  Windows Server 2008  AD DS in a network environment that is currently operating without a directory service.  
+Ниже показан инструкциям по развертыванию Windows Server 2008 AD DS в сетевой среде, которая в настоящее время работает без службы каталогов.  
   
-![deploying in a new org](media/Deploying-AD-DS-in-a-New-Organization/daa38971-86f2-4033-9442-0cdff9ecc48f.gif)  
+![развертывание в новой организации](media/Deploying-AD-DS-in-a-New-Organization/daa38971-86f2-4033-9442-0cdff9ecc48f.gif)  
   
-For a list of detailed tasks that you can use to plan and deploy AD DS in a new organization, see [Checklist: Deploying AD DS in a New Organization](https://technet.microsoft.com/library/cc725897.aspx).  
+Список подробных задач, которые можно использовать для планирования и развертывания AD DS в новой организации, см. в разделе [контрольный список: Развертывание AD DS в новой организации](https://technet.microsoft.com/library/cc725897.aspx).  
   
 
 

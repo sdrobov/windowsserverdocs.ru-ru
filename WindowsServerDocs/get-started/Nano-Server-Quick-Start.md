@@ -12,15 +12,15 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 488d0bed661cf2078d20e491a8c68b2a29a42b73
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082566"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59859525"
 ---
 # <a name="nano-server-quick-start"></a>Краткое руководство по серверу Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -35,17 +35,17 @@ ms.locfileid: "2082566"
   
 ## <a name="to-quickly-deploy-nano-server-in-a-virtual-machine"></a>Быстрое развертывание сервера Nano Server на виртуальной машине  
   
-1.  Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server2016 в папку на жестком диске.  
+1.  Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server 2016 в папку на жестком диске.  
   
-2.  Запустите Windows PowerShell с правами администратора, перейдите в папку, куда скопировали NanoServerImageGenerator, а затем импортируйте модуль с помощью `Import-Module .\NanoServerImageGenerator -Verbose`  
+2.  Запустите Windows PowerShell с правами администратора, перейдите в каталог в папку, где были помещены в папку NanoServerImageGenerator, а затем импортируйте модуль с `Import-Module .\NanoServerImageGenerator -Verbose`  
 >[!NOTE]  
 >Может потребоваться настроить политику выполнения Windows PowerShell. `Set-ExecutionPolicy RemoteSigned` должен подойти.  
   
 3.  Создайте виртуальный жесткий диск для выпуска Standard, который задает имя компьютера и включает **гостевые драйверы** Hyper-V, выполнив указанную ниже команду, при этом вам будет предложено ввести пароль администратора для нового виртуального жесткого диска:  
   
-    `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` где  
+    `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` Где  
   
-    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
+    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
   
     -   **-BasePath** (необязательно) задает папку, которая создается для копирования пакетов WIM-файла Nano Server.  
   
@@ -53,18 +53,18 @@ ms.locfileid: "2082566"
   
     -   **Computer_name** указывает имя компьютера, которое будет иметь создаваемая вами виртуальная машина Nano Server.  
   
-    **Пример.** `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1`  
+    **Пример:** `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -BasePath .\Base -TargetPath .\Nano1\Nano.vhd -ComputerName Nano1`  
   
-    Этот пример создает виртуальный жесткий диск из ISO-образа, подключенного как f:\\. При создании виртуального жесткого диска он будет использовать папку с именем Base в том же каталоге, где был запущен New-NanoServerImage. Виртуальный жесткий диск (с именем Nano.vhd) помещается в папку Nano1 внутри папки, из которой выполняется команда. Имя компьютера будет иметь значение Nano1. Полученный виртуальный жесткий диск будет содержать выпуск Standard системы Windows Server2016 и подойдет для развертывания виртуальных машин Hyper-V. Если требуется виртуальная машина поколения 1, создайте образ VHD, указав расширение **.vhd** в параметре -TargetPath. Для виртуальной машины поколения 2 создайте образ VHDX, указав расширение **.vhdx** в параметре -TargetPath. Можно также напрямую создать WIM-файл, указав расширение **.wim** в параметре -TargetPath.  
+    Этот пример создает виртуальный жесткий диск из ISO-образа, подключенного как f:\\. При создании виртуального жесткого диска он будет использовать папку с именем Base в том же каталоге, где был запущен New-NanoServerImage. Виртуальный жесткий диск (с именем Nano.vhd) помещается в папку Nano1 внутри папки, из которой выполняется команда. Имя компьютера будет иметь значение Nano1. Полученный виртуальный жесткий диск будет содержать выпуск Standard системы Windows Server 2016 и подойдет для развертывания виртуальных машин Hyper-V. Если требуется виртуальная машина поколения 1, создайте образ VHD, указав расширение **.vhd** в параметре -TargetPath. Для виртуальной машины поколения 2 создайте образ VHDX, указав расширение **.vhdx** в параметре -TargetPath. Можно также напрямую создать WIM-файл, указав расширение **.wim** в параметре -TargetPath.  
   
     > [!NOTE]  
-    > New-NanoServerImage поддерживается в Windows8.1, Windows10, Windows Server2012 R2 и Windows Server2016.  
+    > New-NanoServerImage поддерживается в Windows 8.1, Windows 10, Windows Server 2012 R2 и Windows Server 2016.  
   
-4.  В диспетчере Hyper-V создайте новую виртуальную машину и используйте VHD, созданный на шаге3.  
+4.  В диспетчере Hyper-V создайте новую виртуальную машину и используйте VHD, созданный на шаге 3.  
   
 5.  Загрузите виртуальную машину и подключитесь к ней в диспетчере Hyper-V.  
   
-6.  Войдите в агент восстановления (см. раздел "Агент восстановления Nano Server" этого руководства) с помощью имени администратора и пароля, указанных при выполнении сценария на шаге3.  
+6.  Войдите в агент восстановления (см. раздел "Агент восстановления Nano Server" этого руководства) с помощью имени администратора и пароля, указанных при выполнении сценария на шаге 3.  
  > [!NOTE]  
     > Агент восстановления поддерживает только базовые функции клавиатуры. Индикаторы клавиатуры, добавочные панели на 10 клавиш и переключение раскладки клавиатуры (например, клавиши CAPS LOCK и NUM LOCK) не поддерживается.
   
@@ -76,26 +76,26 @@ ms.locfileid: "2082566"
   
 ## <a name="to-quickly-deploy-nano-server-on-a-physical-computer"></a>Быстрое развертывание Nano Server на физическом компьютере  
   
-1.  Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server2016 в папку на жестком диске.  
+1.  Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server 2016 в папку на жестком диске.  
   
-2.  Запустите Windows PowerShell с правами администратора, перейдите в папку, куда скопировали NanoServerImageGenerator, а затем импортируйте модуль с помощью `Import-Module .\NanoServerImageGenerator -Verbose`  
+2.  Запустите Windows PowerShell с правами администратора, перейдите в каталог в папку, где были помещены в папку NanoServerImageGenerator, а затем импортируйте модуль с `Import-Module .\NanoServerImageGenerator -Verbose`  
   
 >[!NOTE]  
 >Может потребоваться настроить политику выполнения Windows PowerShell. `Set-ExecutionPolicy RemoteSigned` должен подойти.  
   
 3.  Создайте виртуальный жесткий диск, который задает имя компьютера и включает драйверы OEM и Hyper-V, выполнив указанную ниже команду, при этом вам будет предложено ввести пароль администратора для нового виртуального жесткого диска:  
   
-    `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` где  
+    `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` Где  
   
-    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
+    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
   
     -   **-BasePath** задает папку, которая создается для копирования пакетов WIM-файла Nano Server. (Этот параметр необязателен.)  
   
     -   **TargetPath** указывает путь, включая имя файла и расширение, для создания итогового VHD или VHDX.  
   
-    -   **Computer_name**— это имя компьютера для создаваемого Nano Server.  
+    -   **Computer_name** — это имя компьютера для создаваемого Nano Server.  
   
-    **Пример.**`New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath F:\ -BasePath .\Base -TargetPath .\Nano1\NanoServer.vhd -ComputerName Nano-srv1 -OEMDrivers -Compute -Clustering`  
+    **Пример:**`New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath F:\ -BasePath .\Base -TargetPath .\Nano1\NanoServer.vhd -ComputerName Nano-srv1 -OEMDrivers -Compute -Clustering`  
   
     Этот пример создает виртуальный жесткий диск из ISO-образа, подключенного как F:\\. При создании виртуального жесткого диска он будет использовать папку с именем Base в том же каталоге, где был запущен New-NanoServerImage. Виртуальный жесткий диск помещается в папку Nano1 внутри папки, из которой выполняется команда. Имя компьютера будет иметь значение Nano-srv1, для него будут установлены драйверы OEM к наиболее распространенному оборудованию, а также включена роль Hyper-V и функция кластеризации. Для Nano Server используется выпуск Standard.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "2082566"
   
 6.  Загрузите физический компьютер с виртуального жесткого диска Nano Server.  
   
-7.  Войдите в агент восстановления (см. раздел "Агент восстановления Nano Server" этого руководства) с помощью имени администратора и пароля, указанных при выполнении сценария на шаге3.
+7.  Войдите в агент восстановления (см. раздел "Агент восстановления Nano Server" этого руководства) с помощью имени администратора и пароля, указанных при выполнении сценария на шаге 3.
 > [!NOTE]  
     > Агент восстановления поддерживает только базовые функции клавиатуры. Индикаторы клавиатуры, добавочные панели на 10 клавиш и переключение раскладки клавиатуры (например, клавиши CAPS LOCK и NUM LOCK) не поддерживается. 
   

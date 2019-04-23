@@ -1,6 +1,6 @@
 ---
-title: "Создание файла PostIC.cmd для выполнения задач после начальной настройки"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,47 +13,48 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: f5042204cd189e3101f5e0126fd98e786a49032d
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59844125"
 ---
-# <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>Создание файла PostIC.cmd для выполнения задач после начальной настройки
+# <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Можно добавить после начальной настройки, напишите собственный код, а затем вызвать этот код из файла сценария с именем PostIC.cmd. При использовании файла PostIC.cmd, необходимо соблюдать следующие рекомендации:  
+Существует возможность добавления настройки после начальной конфигурации; для этого необходимо написать собственный код, и затем вызвать этот код из файла сценария под именем PostIC.cmd. При использовании файла PostIC.cmd необходимо соблюдать следующие правила:  
   
--   Код настройки должны запускаться в автоматическом режиме (не может отобразить пользовательский интерфейс).  
+-   Код настройки должен выполняться без вмешательства пользователя (он не может отображать пользовательский интерфейс).  
   
--   Код настройки не может инициировать перезагрузки сервера. В качестве последней задачи начальной настройки будет перезапустить сервер.  
+-   Код настройки не может инициировать перезагрузку сервера. Перезагрузка сервера будет произведена в качестве последней задачи начальной настройки.  
   
--   Код настройки необходимо выполнить в течение трех минут или меньше.  
+-   Выполнение кода настройки должно продолжаться не более трех минут.  
   
- Определите файл PostIC.cmd, чтобы возвращать значение 0, если код выполняется успешно. При возвращении другого значения операционной системы ищет файл с именем [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure), который содержит кода, который должен выполняться, если не удается выполнить код в файле PostIC.cmd. Файл PostIC.cmd и SetupFailure.cmd файл должен быть размещена C:\Windows\Setup\Scripts.  
+ Необходимо определить файл PostIC.cmd таким образом, чтобы в случае успешного выполнения кода возвращалось значение 0. При возвращении другого значения операционной системой выполняется поиск файла [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure), содержащего код, который должен выполняться в случае неудачного завершения кода в файле PostIC.cmd. Файлы PostIC.cmd и SetupFailure.cmd должны быть расположены в папке C:\Windows\Setup\Scripts.  
   
-#### <a name="to-define-post-initial-configuration-customizations"></a>Чтобы определить дополнительные параметры после начальной настройки  
+#### <a name="to-define-post-initial-configuration-customizations"></a>Определение настроек, выполняемых после начальной настройки  
   
-1.  Напишете код, который вызывается из сценария PostIC.cmd.  
+1.  Напишите код, вызываемый из скрипта PostIC.cmd.  
   
-2.  С помощью блокнота, создайте файл с именем PostIC.cmd и добавьте вызов код, который вы создали в шаге 1. Убедитесь, что ваш код возвращает значение успеха.  
+2.  С помощью Блокнота создайте файл с именем PostIC.cmd и добавьте в него вызов кода, написанного на шаге 1. Убедитесь, что код возвращает значение успешного выполнения.  
   
-3.  Сохраните PostIC.cmd в C:\Windows\Setup\Scripts.  
+3.  Сохраните файл PostIC.cmd в папке C:\Windows\Setup\Scripts.  
   
-4.  (Необязательно) Создайте файл SetupFailure.cmd, который возвращает PostIC.cmd, отличное от 0, которая выполняет код.  
+4.  (Необязательно) Создайте файл SetupFailure.cmd, содержащий код, который выполняется, если файл PostIC.cmd возвращает значение, отличное от 0.  
   
-###  <a name="BKMK_SetupFailure"></a>SetupFailure.cmd  
- Уведомления о проблем в ходе начальной настройки можно предоставить с помощью SetupFailure.cmd. Файл SetupFailure.cmd содержит код, который требуется выполнить при возникновении проблем. Файл SetupFailure.cmd помещается в C:\Windows\Setup\Scripts и выполняется при возникновении либо проблемы с задачей установки или при файла PostIC.cmd возвращает значение, отличное от 0.  
+###  <a name="BKMK_SetupFailure"></a> SetupFailure.cmd  
+ С помощью SetupFailure.cmd можно активировать отправку уведомлений о проблемах в начальной настройке. Файл SetupFailure.cmd содержит код, который следует запускать в случае возникновения проблемы. Файл SetupFailure.cmd расположен в папке C:\Windows\Setup\Scripts; он запускается при возникновении проблемы с задачей установки или при возвращении файлом PostIC.cmd значения, отличного от 0.  
   
-##### <a name="to-define-notifications"></a>Для определения уведомления  
+##### <a name="to-define-notifications"></a>Определение уведомлений  
   
-1.  Напишете код, который вызывается из сценария SetupFailure.cmd.  
+1.  Напишите код, вызываемый из скрипта SetupFailure.cmd.  
   
-2.  С помощью блокнота, создайте файл с именем SetupFailure.cmd и добавьте вызов код, который вы создали в шаге 1. Убедитесь, что ваш код возвращает значение успеха.  
+2.  С помощью Блокнота создайте файл с именем SetupFailure.cmd и добавьте в него вызов кода, написанного на шаге 1. Убедитесь, что код возвращает значение успешного выполнения.  
   
-3.  Сохраните SetupFailure.cmd в C:\Windows\Setup\Scripts.  
+3.  Сохраните файл SetupFailure.cmd в папке C:\Windows\Setup\Scripts.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Начало работы с ADK Windows Server Essentials](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   

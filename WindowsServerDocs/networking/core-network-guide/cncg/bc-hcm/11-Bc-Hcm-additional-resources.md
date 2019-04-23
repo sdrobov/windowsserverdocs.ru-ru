@@ -1,6 +1,6 @@
 ---
-title: Дополнительные ресурсы для BranchCache
-description: Это руководство содержит инструкции по развертыванию BranchCache в режиме размещенного кэша на компьютерах под управлением Windows Server 2016 и Windows 10
+title: Дополнительные ресурсы по BranchCache
+description: В этом руководстве приведены инструкции по развертыванию BranchCache в режиме размещенного кэша на компьютерах под управлением Windows Server 2016 и Windows 10
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-bc
@@ -8,15 +8,16 @@ ms.topic: article
 ms.assetid: c7326f5b-87fb-4e57-9b77-72a5d0ab0444
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: c7168ae0f8516b0344161750aa7c8f2f4f9898cd
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 610e1a256ef5eeafa4b7dd25e03fc760ab7d224e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59842265"
 ---
-# <a name="branchcache-additional-resources"></a>Дополнительные ресурсы для BranchCache
+# <a name="branchcache-additional-resources"></a>Дополнительные ресурсы по BranchCache
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Дополнительные сведения о технологиях, которые рассматриваются в данном руководстве см. следующие ресурсы:
 
@@ -26,6 +27,6 @@ ms.lasthandoff: 03/28/2018
 
 - [BranchCache Network Shell и команд Windows PowerShell](https://technet.microsoft.com/windows-server-docs/networking/branchcache/branchcache-network-shell-and-windows-powershell-commands)
 
-- [Общие сведения о политике групповой](https://technet.microsoft.com/library/hh831791.aspx) для Windows Server 2012 R2
+- [Обзор групповых политик](https://technet.microsoft.com/library/hh831791.aspx) для Windows Server 2012 R2
 
 - Windows Server 2008 R2 [руководство по развертыванию BranchCache](https://technet.microsoft.com/library/ee649232.aspx)
