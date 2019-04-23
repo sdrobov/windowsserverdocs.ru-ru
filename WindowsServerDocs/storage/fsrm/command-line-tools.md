@@ -1,6 +1,6 @@
 ---
-title: "Программы командной строки диспетчера ресурсов файлового сервера"
-description: "В этой статье приведено описание инструментов командной строки Windows Server 2016"
+title: Программы командной строки диспетчера ресурсов файлового сервера
+description: В этой статье приведено описание инструментов командной строки Windows Server 2016
 ms.date: 7/7/2017
 ms.prod: windows-server-threshold
 ms.technology: storage
@@ -8,15 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 7d36a30ca65ae88afdc11e516968c6f9900a5ae6
-ms.sourcegitcommit: 583355400f6b0d880dc0ac6bc06f0efb50d674f7
-ms.translationtype: HT
+ms.openlocfilehash: 9b31c133b0ee4382b5b9aeded9b3852c7230d2d8
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59858445"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>Программы командной строки диспетчера ресурсов файлового сервера
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Диспетчер ресурсов файлового сервера устанавливает командлеты PowerShell [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager), а также следующие программы командной строки:
 
@@ -26,13 +27,13 @@ ms.lasthandoff: 10/17/2017
 
 Эти средства можно использовать для управления ресурсами хранилища на локальном или удаленном компьютере. Дополнительные сведения об этих инструментах командной строки см. в следующих источниках.
 
--   **Dirquota**: <http://go.microsoft.com/fwlink/?LinkId=92741>
--   **Filescrn**: <http://go.microsoft.com/fwlink/?LinkId=92742>
--   **Storrept**: <http://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Dirquota**: <https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Filescrn**: <https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Storrept**: <https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]
-> Чтобы просмотреть синтаксис команды и параметры, доступные для команды, запустите команду с параметром <strong>/?</strong> .
+> Чтобы просмотреть синтаксис команды и параметры, доступные для команды, запустите команду с параметром <strong>/?</strong> PhysicalDisks.
 
 
 ## <a name="remote-management-using-the-command-line-tools"></a>Удаленное управление с помощью средства командной строки
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/17/2017
 -   На удаленном компьютере должно быть включено исключение **Управление удаленным диспетчером ресурсов файлового сервера**. Включите это исключение, используя брандмауэр Windows на панели управления.
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
--   [Управление ресурсами удаленного хранилища](managing-remote-storage-resources.md)
+-   [Управление ресурсами хранилища](managing-remote-storage-resources.md)

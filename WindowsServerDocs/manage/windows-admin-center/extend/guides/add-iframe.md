@@ -1,6 +1,6 @@
 ---
-title: Добавьте iFrame расширения средства
-description: Разработка расширения средства Windows Admin Center SDK (проект Honolulu) — добавить iFrame расширения средства
+title: Добавление iFrame в расширение средства
+description: Разработка модуля средства пакета SDK Windows Admin Center (Гонолулу проекта) - добавить iFrame в расширение средства
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,38 +8,38 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 7b4a7b688e4b2d9f52e44395c19211b91b964578
-ms.sourcegitcommit: be0144eb59daf3269bebea93cb1c467d67e2d2f1
+ms.openlocfilehash: 7cf1dcec1bc8e187b6db789c5402ca8119ca8b6c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "4080931"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59850765"
 ---
-# Добавьте iFrame расширения средства
+# <a name="add-an-iframe-to-a-tool-extension"></a>Добавление iFrame в расширение средства
 
->Относится к: Windows Admin Center, ознакомительная версия Windows Admin Center
+>Область применения. Windows Admin Center, предварительная версия Windows Admin Center
 
-В этой статье мы добавим iFrame расширение новый, пустой средства, которые мы создали с помощью Windows Admin Center CLI.
+В этой статье мы добавим iFrame расширение новую, пустую средство, которое мы создали с помощью интерфейса командной строки Windows Admin Center.
 
-## Подготовка среды ##
+## <a name="prepare-your-environment"></a>Подготовка среды ##
 
-Если вы еще не сделали этого, следуйте инструкциям в [разработке расширения средства](..\develop-tool.md) Подготовка среды и создать новый, пустой средство расширение.
+Если это еще не сделано, следуйте указаниям, приведенным в [разрабатывать расширения средство](..\develop-tool.md) для подготовки среды и создайте новый, пустой средства расширения.
 
-## Добавление модуля в проект ##
+## <a name="add-a-module-to-your-project"></a>Добавить модуль в проект ##
 
-Добавьте новый [пустой модуль](add-module.md) в свой проект, к которому мы добавим iFrame на следующем шаге.  
+Добавьте новый [пустого модуля](add-module.md) в проект, к которому мы добавим iFrame на следующем шаге.  
 
-## Добавьте iFrame модуля ##
+## <a name="add-an-iframe-to-your-module"></a>Добавить iFrame в модуле ##
 
-Теперь добавим iFrame, новый, пустой модуль, который мы только что создали.
+Теперь мы добавим iFrame на этот новый, пустой модуль, который мы только что создали.
 
-В \src\app\, перейдите в папку модуля, а затем откройте файл ```{!module-name}.component.html```, содержащийся в следующее соглашение об именовании:
+В \src\app\, перейдите в папку модуля, а затем откройте файл ```{!module-name}.component.html```, найдено и следующие соглашения об именовании:
 
 | Значение | Объяснение | Пример имени файла |
 | ----- | ----------- | ------- |
 | ```{!module-name}``` | Имя модуля (нижний регистр, пробелы заменены на тире) | ```manage-foo-works-portal.component.html``` |
     
-На HTML-файл добавьте следующее содержимое:
+Добавьте следующее содержимое HTML-файле:
 
 ``` html
 <div>
@@ -47,4 +47,7 @@ ms.locfileid: "4080931"
 </div>
 ```
 
-Все готово, вы добавили iFrame в расширении.  Затем вы можете [Создание и загрузка](..\develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center, чтобы увидеть результат.
+Таким образом, вы добавили iFrame для расширения.  Далее можно [построения и стороны нагрузки](..\develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center, чтобы просмотреть результаты.
+
+> [!Note]
+> Параметры политики безопасности (CSP) содержимого может помешать некоторые сайты подготовки к просмотру в iFrame в Windows Admin Center. Дополнительные сведения об этом [здесь](https://content-security-policy.com/). 

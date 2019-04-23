@@ -1,0 +1,50 @@
+---
+title: lodctr
+description: 'Раздел Windows команды для ***- '
+ms.custom: na
+ms.prod: windows-server-threshold
+ms.reviewer: na
+ms.suite: na
+ms.technology: manage-windows-commands
+ms.tgt_pltfrm: na
+ms.topic: article
+ms.assetid: 5a849abd-6b31-4833-bc8a-306c05eca29a
+author: coreyp-at-msft
+ms.author: coreyp
+manager: dongill
+ms.date: 10/16/2017
+ms.openlocfilehash: 3ea48067bd78d260824da7d091f94957b51b768d
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59852225"
+---
+# <a name="lodctr"></a>lodctr
+
+>Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Позволяет зарегистрировать или сохранить параметры имени и реестра счетчика производительности в файле и назначить доверенным службам.
+## <a name="syntax"></a>Синтаксис
+```
+lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
+```
+### <a name="parameters"></a>Параметры
+|Параметр|Описание|
+|-------|--------|
+|<filename>|Регистрирует параметры имени счетчика производительности и текст описания, содержащихся в файле инициализации имя файла.|
+|/ s:<filename>|Сохранение производительности, счетчик параметры реестра и текст описания файл <filename>.|
+|/r|Восстанавливает параметры реестра для счетчика и текст описания из текущих параметров реестра и файлов кэшированных производительности, относящихся к реестру.<br /><br />Этот параметр доступен только в операционной системе Windows Server 2003.|
+|/r:<filename>|Восстановление производительности, счетчик параметров реестра и текст описания из файла <filename>. **Предупреждение:** при использовании **lodctr / r** команда будет перезаписывать все параметры реестра счетчика производительности и текст, описания, заменяя их конфигурацию, определенную в указанный файл.|
+|/t:<servicename>|Указывает, что служба <servicename> является доверенным.|
+|/?|Отображение справки в командной строке.|
+## <a name="remarks"></a>Примечания
+Если сведения, которые вы предоставляете содержит пробелы, используйте кавычки вокруг текста (например, "<filename>«).
+## <a name="BKMK_Examples"></a>Примеры
+Чтобы сохранить текущие параметры реестра производительности и счетчиков текст описания файл **perf backup1.txt**:
+```
+lodctr /s:"perf backup1.txt"
+```
+## <a name="additional-references"></a>Дополнительные ссылки
+-   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+

@@ -1,6 +1,6 @@
 ---
-title: "Управление Microsoft Online Services в Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Управление веб-службами Microsoft в Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,16 +13,17 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 9feb65903be589e6f6a9cc6c3b8738d858a70f30
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59849515"
 ---
-# <a name="manage-microsoft-online-services-in-windows-server-essentials"></a>Управление Microsoft Online Services в Windows Server Essentials
+# <a name="manage-microsoft-online-services-in-windows-server-essentials"></a>Управление веб-службами Microsoft в Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Следующие разделы содержат сведения о методах, которые можно использовать для управления Интернет-службами для вашей организации:  
+Следующие разделы содержат сведения о методах, которые можно использовать для управления интернет-службами для вашей организации:  
   
 -   [Управление Office 365](Manage-Office-365-in-Windows-Server-Essentials.md)   
   
@@ -30,7 +31,7 @@ ms.lasthandoff: 07/03/2017
   
 -   [Управление SharePoint Online](Manage-SharePoint-Online-in-Windows-Server-Essentials.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Управление Windows Server Essentials](Manage-Windows-Server-Essentials.md)  
   

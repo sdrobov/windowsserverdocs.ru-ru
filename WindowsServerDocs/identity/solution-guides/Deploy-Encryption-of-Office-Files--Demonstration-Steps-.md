@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2c76e81a-c2eb-439f-a89f-7d3d70790244
-title: "Развертывание шифрования файлов Office (Поэтапная Демонстрация)"
-description: 
+title: Развертывание шифрования файлов Office (поэтапная демонстрация)
+description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -10,93 +10,94 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: 529000c60a80ee33fc2aa7d09370d8ac1e06311c
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59850235"
 ---
-# <a name="deploy-encryption-of-office-files-demonstration-steps"></a>Развертывание шифрования файлов Office (Поэтапная Демонстрация)
+# <a name="deploy-encryption-of-office-files-demonstration-steps"></a>Развертывание шифрования файлов Office (поэтапная демонстрация)
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Contoso's Finance Department has a number of file servers that store their documents. These documents can be general documentation or they can have a high-business impact (HBI). For example, any document that contains confidential information is deemed, by Contoso, to have a high-business impact. Contoso wants to ensure that all their documentation has a minimum amount of protection and that their HBI documentation is restricted to the appropriate people. To accomplish this, Contoso is exploring using the File Classification Infrastructure (FCI) and AD RMS that is available in  Windows Server 2012 . By using FCI, Contoso will classify all of the documents on their file server, based on the content, and then use AD RMS to apply the appropriate rights policy.  
+Финансовый отдел компании Contoso имеет ряд файловых серверов, которые хранят свои документы. Это может быть документация общего назначения или документация с высокой степенью важности для бизнеса (HBI). Например, любой документ, содержащий конфиденциальную информацию, считается компанией Contoso особо важным. Contoso необходимо убедиться, что все документы защищены хотя бы минимальными средствами, а особо важные документы доступны только соответствующим пользователям. Для этого Contoso рассматривает возможность использования инфраструктуры классификации файлов (FCI) и AD RMS, которая доступна в Windows Server 2012. Используя FCI, компания Contoso хочет классифицировать все документы на файловом сервере в зависимости от контента, а затем с помощью службы AD RMS применить соответствующую политику прав.  
   
-In this scenario, you'll perform the following steps:  
+В этом сценарии вы выполните следующие действия:  
   
 |Задача|Описание|  
 |--------|---------------|  
-|[Enable resource properties](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_1.1)|Enable the **Impact** and **Personally Identifiable Information** resource properties.|  
-|[Create classification rules](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_2)|Create the following classification rules: **HBI Classification Rule** and **PII Classification Rule**.|  
-|[Use file management tasks to automatically protect documents with AD RMS](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_3)|Create a file management task that automatically used AD RMS to protect documents with high personally identifiable information (PII). Only members of the FinanceAdmin group will have access to documents that contain high PII.|  
-|[View the results](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_4)|Examine the classification of documents and observe how they change as you change the content in the document. Also verify how the document gets protected by AD RMS.|  
-|[Verify AD RMS protection](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_5)|Verify that the document is protected with AD RMS.|  
+|[Включение свойств ресурсов](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_1.1)|Включите свойства ресурсов **Влияние** и **Личные сведения** .|  
+|[Создание правила классификации](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_2)|Создайте следующие правила классификации: **Правило классификации HBI** и **Правило классификации PII**.|  
+|[Использование задач управления файлами для автоматической защиты документов с AD RMS](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_3)|Создайте задачу управления файлами, которая автоматически применяет службу AD RMS для защиты документов с личными сведениями (PII). Только у членов группы FinanceAdmin будет доступ к документам с такими данными.|  
+|[Просмотр результатов](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_4)|Изучите классификацию документов и посмотрите, как она меняется при редактировании содержимого документа. Также проверьте, как документ защищает служба AD RMS.|  
+|[Проверка защиты службы AD RMS](Deploy-Encryption-of-Office-Files--Demonstration-Steps-.md#BKMK_5)|Убедитесь, что документ защищает служба AD RMS.|  
 |||  
   
-## <a name="BKMK_1.1"></a>Step 1: Enable resource properties  
+## <a name="BKMK_1.1"></a>Шаг 1. Включение свойств ресурсов  
   
-#### <a name="to-enable-resource-properties"></a>To enable resource properties  
+#### <a name="to-enable-resource-properties"></a>Включение свойств ресурсов  
   
-1.  In Hyper-V Manager, connect to server ID_AD_DC1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1.  В диспетчере Hyper-V подключитесь к серверу ID_AD_DC1. Войдите на сервер с помощью Contoso\Administrator с паролем **pass@word1**.  
   
-2.  Open Active Directory Administrative Center, and click **Tree View**.  
+2.  Откройте центр администрирования Active Directory и щелкните **Представление в виде дерева**.  
   
-3.  Expand **DYNAMIC ACCESS CONTROL**, and select **Resource Properties**.  
+3.  Разверните узел **Динамический контроль доступа**и выберите **Свойства ресурса**.  
   
-4.  Scroll down to the **Impact** property in the **Display name** column. Right-click **Impact**, and then click **Enable**.  
+4.  Прокрутите экран к свойству **Влияние** в столбце **Отображаемое имя**. Щелкните правой кнопкой **Влияние** и выберите **Включить**.  
   
-5.  Scroll down to the **Personally Identifiable Information** property in the **Display name** column. Right-click **Personally Identifiable Information**, and then click **Enable**.  
+5.  Прокрутите экран к свойству **Личные сведения** в столбце **Отображаемое имя**. Щелкните правой кнопкой мыши **Личные сведения** и выберите команду **Включить**.  
   
-6.  To publish the resource properties in the **Global Resource List**, in the left pane, click **Resource Property Lists**, and then double-click **Global Resource Property List**.  
+6.  Чтобы опубликовать свойства ресурсов в **глобальном списке ресурсов**, щелкните в левой области **Списки свойств ресурсов** и дважды щелкните **Глобальный список свойств ресурсов**.  
   
-7.  Click **Add**, and then scroll down to and click **Impact** to add it to the list. Do the same for **Personally Identifiable Information**. Click **OK** twice to finish.  
+7.  Нажмите кнопку **Добавить**, а затем прокрутите экран вниз и щелкните элемент **Влияние**, чтобы добавить его в список. То же самое сделайте для элемента **Личные сведения**. Для завершения два раза нажмите кнопку **ОК** .  
   
 ![руководства по решениям](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 Set-ADResourceProperty -Enabled:$true -Identity:"CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com"  
 Set-ADResourceProperty -Enabled:$true -Identity:"CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com" 
 ```  
   
-## <a name="BKMK_2"></a>Step 2: Create classification rules  
-This step explains how to create the **High Impact** classification rule. This rule will search the content of documents and if the string "Contoso Confidential" is found, it will classify this document as having high-business impact. This classification will override any previously assigned classification of low-business impact.  
+## <a name="BKMK_2"></a>Шаг 2. Создание правил классификации  
+На этом этапе описывается создание правила классификации **Высокая степень влияния** . Это правило выполняет поиск в содержимом документов, и если «Contoso Confidential» строка найдена, она будет классифицировать в этом документе как имеющий особо важным. Эта классификация переопределяет ранее назначенные классификации.  
   
-You will also create a **High PII** rule. This rule searches the content of documents, and if a Social Security number is found, it classifies the document as having high PII.  
+Кроме того, вы создадите правило **Личные сведения**. Это правило выполняет поиск в содержимом документов, и если найден номер социального страхования, документ классифицируется как содержащий личные сведения.  
   
-#### <a name="to-create-the-high-impact-classification-rule"></a>To create the high-impact classification rule  
+#### <a name="to-create-the-high-impact-classification-rule"></a>Создание правила классификации документов с высокой степенью влияния  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1.  В диспетчере Hyper-V подключитесь к серверу ID_AD_FILE1. Войдите на сервер с помощью Contoso\Administrator с паролем **pass@word1**.  
   
-2.  You need to refresh the Global Resource Properties from Active Directory. Open Windows PowerShell and type: `Update-FSRMClassificationPropertyDefinition`, and then press ENTER. Закройте Windows PowerShell.  
+2.  Вам необходимо обновить глобальные свойства ресурсов из Active Directory. Откройте Windows PowerShell, введите команду `Update-FSRMClassificationPropertyDefinition`, а затем нажмите клавишу ВВОД. Закройте Windows PowerShell.  
   
-3.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **запустить**, тип **диспетчера ресурсов файлового сервера**, а затем нажмите кнопку **диспетчера ресурсов файлового сервера**.  
+3.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **Пуск**, введите **диспетчер ресурсов файлового сервера**и щелкните **Диспетчер ресурсов файлового сервера**.  
   
-4.  In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
+4.  В левой области диспетчера ресурсов файлового сервера разверните узел **Управление классификацией**и выберите параметр **Правила классификации**.  
   
-5.  In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Нажмите кнопку **ОК**.  
+5.  На панели **Действия** щелкните **Настроить расписание классификации**. На вкладке **Автоматическая классификация** выберите элемент **Включить фиксированное расписание**, щелкните **День недели** и установите флажок **Разрешить постоянную классификацию для новых файлов**. Нажмите кнопку **ОК**.  
   
-6.  In the **Actions** pane, click **Create Classification Rule**. This opens the **Create Classification Rule** dialog box.  
+6.  На панели **Действия** щелкните **Создать правило классификации**. Откроется диалоговое окно **Создание правила классификации**.  
   
-7.  In the **Rule name** box, type **High Business Impact**.  
+7.  В поле **Имя правила** введите **Высокая степень влияния на бизнес**.  
   
-8.  In the **Description** box, type **Determines if the document has a high business impact based on the presence of the string "Contoso Confidential"**  
+8.  В **описание** введите **определяет, имеет ли документ особо важным для бизнеса влияние, в зависимости от наличия строки «Contoso Confidential»**  
   
-9. On the **Scope** tab, click **Set Folder Management Properties**, select **Folder Usage**, click **Add**, then click **Browse**, browse to D:\Finance Documents as the path, click **OK**, and then choose a property value named **Group Files** and click **Close**. Once management properties are set, on the **Rule Scope** tab select **Group Files**.  
+9. На вкладке **Область действия** щелкните **Задать свойства управления папками**, выберите **Использование папки**, нажмите кнопку **Добавить**и кнопку **Обзор**. Перейдите к папке D:\Finance Documents, нажмите кнопку **ОК**, а затем выберите значение свойства **Файлы группы** и нажмите кнопку **Закрыть**. После установки свойств управления на вкладке **Область действия правила** выберите **Файлы группы**.  
   
-10. Нажмите кнопку **классификации** вкладку.  Under **Choose a method to assign the property to files**, select **Content Classifier** from the drop-down list.  
+10. Перейдите на вкладку **Классификация**.  В разделе Выберите метод назначения свойства файламвыберите **Классификатор содержимого** из раскрывающегося списка.  
   
-11. Under **Choose a property to assign to files**, select **Impact** from the drop-down list.  
+11. В разделе **Выберите назначаемое свойство** выберите элемент **Влияние** из раскрывающегося списка.  
   
-12. Under **Specify a value**, select **High** from the drop-down list.  
+12. В разделе **Укажите значение**выберите элемент **Высокий** из раскрывающегося списка.  
   
-13. Click **Configure** under **Parameters**.  In the **Classification Parameters** dialog box, in the **Expression Type** list, select **String**. In the **Expression** box, type: **Contoso Confidential**, and then click **OK**.  
+13. Щелкните **Настроить** в разделе **Параметры**.  В диалоговом окне **Параметры классификации** в списке **Тип выражения** выберите **Строка**. В поле **Выражение** введите Contoso Confidential и нажмите кнопку **ОК**.  
   
-14. Click the **Evaluation Type** tab.  Click **Re-evaluate existing property values**, click **Overwrite**the existing value, and then click **OK** to finish.  
+14. Щелкните вкладку **Тип оценки** .  Щелкните Заново определить существующие значения свойств, нажмите кнопку **Перезаписать**и нажмите **ОК** для завершения.  
   
 ![руководства по решениям](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 Update-FSRMClassificationPropertyDefinition  
@@ -106,76 +107,76 @@ Set-FsrmClassification -Continuous -schedule $AutomaticClassificationScheduledTa
 New-FSRMClassificationRule -Name "High Business Impact" -Property "Impact_MS" -Description "Determines if the document has a high business impact based on the presence of the string 'Contoso Confidential'" -PropertyValue "3000" -Namespace @("D:\Finance Documents") -ClassificationMechanism "Content Classifier" -Parameters @("StringEx=Min=1;Expr=Contoso Confidential") -ReevaluateProperty Overwrite  
 ```  
   
-#### <a name="to-create-the-high-pii-classification-rule"></a>To create the high-PII classification rule  
+#### <a name="to-create-the-high-pii-classification-rule"></a>Создание правила классификации документов с личными сведениями  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1.  В диспетчере Hyper-V подключитесь к серверу ID_AD_FILE1. Войдите на сервер с помощью Contoso\Administrator с паролем **pass@word1**.  
   
-2.  On the desktop, open the folder named **Regular Expressions**, and then open the text document named **RegEx-SSN**. Highlight and copy the following regular expression string:  **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**. This string will be used later in this step so keep it on your clipboard.  
+2.  На рабочем столе откройте папку **Регулярные выражения**, а затем откройте текстовый документ **RegEx-SSN**. Выделите и скопируйте следующее выражение: **^ (?! 000) ([0-7] \d{2}| 7([0-7]\d|7[012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$**. Эта строка будет использоваться в дальнейшем, поэтому сохраните ее в буфере обмена.  
   
-3.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **запустить**, тип **диспетчера ресурсов файлового сервера**, а затем нажмите кнопку **диспетчера ресурсов файлового сервера**.  
+3.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **Пуск**, введите **диспетчер ресурсов файлового сервера**и щелкните **Диспетчер ресурсов файлового сервера**.  
   
-4.  In the left pane of File Server Resource Manager, expand **Classification Management**, and then select **Classification Rules**.  
+4.  В левой области диспетчера ресурсов файлового сервера разверните узел **Управление классификацией**и выберите параметр **Правила классификации**.  
   
-5.  In the **Actions** pane, click **Configure Classification Schedule**. On the **Automatic Classification** tab, select **Enable fixed schedule**, select a **Day of the week**, and then select the **Allow continuous classification for new files** check box. Нажмите кнопку ОК.  
+5.  На панели **Действия** щелкните **Настроить расписание классификации**. На вкладке **Автоматическая классификация** выберите элемент **Включить фиксированное расписание**, щелкните **День недели** и установите флажок **Разрешить постоянную классификацию для новых файлов**. Нажмите кнопку "ОК".  
   
-6.  In the **Rule name** box, type **High PII**. In the **Description** box, type **Determines if the document has a high PII based on the presence of a Social Security Number.**  
+6.  В поле **Имя правила** введите **Личные сведения**. В поле **Описание** введите **Определяет, содержит ли документ личные сведения, в зависимости от наличия номера социального страхования**.  
   
-7.  Click the **Scope** tab, select the **Group Files** check box.  
+7.  Перейдите на вкладку **Область действия** и установите флажок **Файлы группы** .  
   
-8.  Нажмите кнопку **классификации** вкладку.  Under **Choose a method to assign the property to files**, select **Content Classifier** from the drop-down list.  
+8.  Перейдите на вкладку **Классификация**.  В разделе Выберите метод назначения свойства файламвыберите **Классификатор содержимого** из раскрывающегося списка.  
   
-9. Under **Choose a property to assign to files**, select **Personally Identifiable Information** from the drop-down list.  
+9. В разделе **Выберите назначаемое свойство** выберите элемент **Личные сведения** из раскрывающегося списка.  
   
-10. Under **Specify a value**, select **High** from the drop-down list.  
+10. В разделе **Укажите значение**выберите элемент **Высокий** из раскрывающегося списка.  
   
-11. Click **Configure** under **Parameters**.   
-    In the **Classification Parameters**window, in the **Expression Type** list, select **Regular Expression**. In the **Expression** box, paste the text from your clipboard: **^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$**, and then click **OK**.  
+11. Щелкните **Настроить** в разделе **Параметры**.   
+    На панели **Параметры классификации**в списке **Тип выражения** выберите **Регулярное выражение**. В **выражение** окне вставьте текст из буфера обмена: **^ (?! 000) ([0-7] \d{2}| 7([0-7]\d|7[012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$**, а затем нажмите кнопку **ОК**.  
   
     > [!NOTE]  
-    > This expression will allow invalid Social Security numbers. This allows us to use fictitious Social Security numbers in the demonstration.  
+    > Это выражение допускает недопустимые номера социального страхования. Так мы сможем использовать вымышленные номера для демонстрации.  
   
-12. Click the **Evaluation Type** tab.  Select **Re-evaluate existing property values**, **Overwrite**the existing value, and then click **OK** to finish.  
+12. Щелкните вкладку **Тип оценки** .  Щелкните Заново определить существующие значения свойств, нажмите кнопку **Перезаписать**и нажмите **ОК** для завершения.  
   
 ![руководства по решениям](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 New-FSRMClassificationRule -Name "High PII" -Description "Determines if the document has a high PII based on the presence of a Social Security Number." -Property "PII_MS" -PropertyValue "5000" -Namespace @("D:\Finance Documents") -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=1;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
-You should now have two classification rules:  
+Теперь у нас два правила классификации:  
   
--   High Business Impact  
+-   "Высокая степень влияния на бизнес"  
   
--   High PII  
+-   Личные сведения  
   
-## <a name="BKMK_3"></a>Step 3: Use file management tasks to automatically protect documents with AD RMS  
-Now that you've created rules to automatically classify documents based on content, the next step is to create a file management task that uses AD RMS to automatically protect certain documents based on their classification. In this step, you will create a file management task that automatically protects any documents with a high PII. Only members of the FinanceAdmin group will have access to documents that contain high PII.  
+## <a name="BKMK_3"></a>Шаг 3. Использование задач управления файлами для автоматической защиты документов с AD RMS  
+Теперь, после создания правил для автоматической классификации документов на основе содержимого, следующий шаг — создать задачу управления файлами, которая использует AD RMS для автоматической защиты определенных документов в зависимости от их классификации. На этом шаге вы создадите задачу управления файлами, которая автоматически защищает все документы с личными сведениями. Только у членов группы FinanceAdmin будет доступ к документам с такими данными.  
   
-#### <a name="to-protect-documents-with-ad-rms"></a>To protect documents with AD RMS  
+#### <a name="to-protect-documents-with-ad-rms"></a>Защита документов с помощью службы AD RMS  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1.  В диспетчере Hyper-V подключитесь к серверу ID_AD_FILE1. Войдите на сервер с помощью Contoso\Administrator с паролем **pass@word1**.  
   
-2.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **запустить**, тип **диспетчера ресурсов файлового сервера**, а затем нажмите кнопку **диспетчера ресурсов файлового сервера**.  
+2.  Откройте диспетчер ресурсов файлового сервера. Чтобы открыть диспетчер ресурсов файлового сервера, нажмите кнопку **Пуск**, введите **диспетчер ресурсов файлового сервера**и щелкните **Диспетчер ресурсов файлового сервера**.  
   
-3.  In the left pane, select **File Management Tasks**. In the **Actions** pane, select **Create File Management Task**.  
+3.  В левой области выберите элемент **Задачи управления файлами**. В области **Действия** выберите **Создать задачу управления файлами**.  
   
-4.  In the **Task name:** field, type **High PII**. In the **Description** field, type **Automatic RMS protection for high PII documents**.  
+4.  В поле **Имя задачи:** введите **Личные сведения**. В поле **Описание** введите **Автоматическая защита RMS для документов с личными сведениями**.  
   
-5.  Click the **Scope** tab, select the **Group Files** check box.  
+5.  Перейдите на вкладку **Область действия** и установите флажок **Файлы группы** .  
   
-6.  Click the **Action** tab. Under **Type**, select **RMS Encryption**. Click **Browse** to select a template, and then select the **Contoso Finance Admin Only** template.  
+6.  Перейдите на вкладку **Действие** . В разделе Типвыберите **Шифрование RMS**. Нажмите кнопку **Обзор**, чтобы выбрать шаблон, а затем выберите шаблон **Contoso Finance Admin Only**.  
   
-7.  Click the **Condition** tab, and then click **Add**. Under **Property**, select **Personally Identifiable Information**. Under **Operator**, select **Equal**. Under **Value**, select **High**. Нажмите кнопку **ОК**.  
+7.  На вкладке **Условие** нажмите кнопку **Добавить**. В разделе **Свойство** выберите **Личные сведения**. В разделе **Оператор** выберите **Равно**. В разделе **Значение** выберите элемент **Высокий**. Нажмите кнопку **ОК**.  
   
-8.  Click the **Schedule** tab. In the **Schedule** section, click **Weekly**, and then select **Sunday**. Running the task once-a-week will ensure that you catch any documents that may have been missed due to a service outage or other disruptive event.  
+8.  Перейдите на вкладку **Расписание** . В разделе Расписание щелкните **Еженедельно**, а затем выберите **Воскресенье**. Выполнение задачи раз в неделю позволит обнаруживать все документы, которые могли быть пропущены из-за простоя службы или другого сбоя.  
   
-9. In the **Continuous operation** section, select **Run task continuously on new files**, and then click **OK**. You should now have a file management task named High PII.  
+9. В разделе **Непрерывное выполнение** выберите **Выполнять задачу непрерывно для новых файлов**, а затем нажмите кнопку **ОК**. Вы добавили задачу управления файлами "Личные сведения".  
   
 ![руководства по решениям](media/Deploy-Encryption-of-Office-Files--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
   
-Следующий командлет Windows PowerShell или командлеты выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет в отдельной строке, несмотря на то, что они могут отображаться по здесь несколько строк словам из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 $fmjRmsEncryption = New-FSRMFmjAction -Type 'Rms' -RmsTemplate 'Contoso Finance Admin Only'  
@@ -185,50 +186,50 @@ $schedule = New-FsrmScheduledTask -Time $date -Weekly @('Sunday')
 $fmj1=New-FSRMFileManagementJob -Name "High PII" -Description "Automatic RMS protection for high PII documents" -Namespace @('D:\Finance Documents') -Action $fmjRmsEncryption -Schedule $schedule -Continuous -Condition @($fmjCondition1)  
 ```  
   
-## <a name="BKMK_4"></a>Step 4: View the results  
-It's time to take a look at your new automatic classification and AD RMS protection rules in action. In this step you will examine the classification of documents and observe how they change as you change the content in the document.  
+## <a name="BKMK_4"></a>Шаг 4. Просмотр результатов  
+Настала пора взгляните на новую автоматическую классификацию и правила защиты AD RMS в действии. На этом шаге вы изучите классификацию документов и посмотрите, как она меняется при редактировании содержимого документа.  
   
-#### <a name="to-view-the-results"></a>To view the results  
+#### <a name="to-view-the-results"></a>Просмотр результатов  
   
-1.  In Hyper-V Manager, connect to server ID_AD_FILE1. Sign in to the server by using Contoso\Administrator with the password **pass@word1**.  
+1.  В диспетчере Hyper-V подключитесь к серверу ID_AD_FILE1. Войдите на сервер с помощью Contoso\Administrator с паролем **pass@word1**.  
   
-2.  In Windows Explorer, navigate to D:\Finance Documents.  
+2.  В проводнике Windows перейдите к папке D:\Finance Documents.  
   
-3.  Right-click the Finance Memo document and click **Properties**.Click the **Classification** tab, and notice that the Impact property currently has no value. Click **Cancel**.  
+3.  Щелкните правой кнопкой документ Finance Memo и выберите пункт **Свойства**. Откройте вкладку **Классификация** и обратите внимание на то, что у свойства "Влияние" нет значения. Нажмите кнопку **Отмена**.  
   
-4.  Right-click the **Request for Approval to Hire document**, and then select **Properties**.  
+4.  Щелкните правой кнопкой документ **Request for Approval to Hire**и выберите пункт **Свойства**.  
   
-5.  Click the **Classification** tab, and notice that **the Personally Identifiable Information property** currently has no value. Click **Cancel**.  
+5.  Откройте вкладку **Классификация** и обратите внимание на то, что у свойства **Личные сведения** нет значения. Нажмите кнопку **Отмена**.  
   
-6.  Switch to CLIENT1. Sign off any user who is signed in, and then sign in as Contoso\MReid with the password **pass@word1**.  
+6.  Переключитесь на сервер CLIENT1. Выйти из любой пользователь, который выполнил вход, а затем войдите как Contoso\MReid с паролем **pass@word1**.  
   
-7.  From the Desktop, open the **Finance Documents** shared folder.  
+7.  Откройте общую папку **Finance Documents** на рабочем столе.  
   
-8.  Open the **Finance Memo** document. Near the bottom of the document, you will see the word **Confidential**. Modify it to read: **Contoso Confidential**. Save the document and close it.  
+8.  Откройте документ **Finance Memo**. В нижней части документа вы увидите слово **Confidential**. Измените его на следующую строку: **Contoso Confidential**. Сохраните и закройте документ.  
   
-9. Open the **Request for Approval to Hire** document. In the **Social Security#:** section, type: 777-77-7777. Save the document and close it.  
+9. Откройте документ **Request for Approval to Hire**. В разделе **Social Security#:** введите: 777-77-7777. Сохраните и закройте документ.  
   
     > [!NOTE]  
-    > You may need to wait 30 seconds for the classification to occur.  
+    > Возможно, придется подождать 30 секунд до выполнения классификации.  
   
-10. Switch back to ID_AD_FILE1. In Windows Explorer, navigate to D:\Finance Documents.  
+10. Переключитесь на сервер ID_AD_FILE1. В проводнике Windows перейдите к папке D:\Finance Documents.  
   
-11. Right-click the Finance Memo document, and click **Properties**. Нажмите кнопку **классификации** вкладку. Notice that the **Impact** property is now set to **High**. Click **Cancel**.  
+11. Правой кнопкой мыши щелкните документ Finance Memo и выберите пункт **Свойства**. Перейдите на вкладку **Классификация**. Обратите внимание, что теперь для свойства Влияние задано значение **Высокий**. Нажмите кнопку **Отмена**.  
   
-12. Right-click the Request for Approval to Hire document and click **Properties**.  
+12. Щелкните правой кнопкой документ Request for Approval to Hire и выберите пункт **Свойства**.  
   
-13. . Нажмите кнопку **классификации** вкладку. Notice that the **Personally Identifiable Information** property is now set to **High**. Click **Cancel**.  
+13. . Перейдите на вкладку **Классификация**. Обратите внимание, что теперь для свойства Личные сведения задано значение **Высокий**. Нажмите кнопку **Отмена**.  
   
-## <a name="BKMK_5"></a>Step 5: Verify protection with AD RMS  
+## <a name="BKMK_5"></a>Шаг 5. Проверка защиты службы AD RMS  
   
-#### <a name="to-verify-that-the-document-is-protected"></a>To verify that the document is protected  
+#### <a name="to-verify-that-the-document-is-protected"></a>Проверка защиты документы  
   
-1.  Switch back to ID_AD_CLIENT1.  
+1.  Переключитесь на сервер ID_AD_CLIENT1.  
   
-2.  Open the **Request for approval to Hire** document.  
+2.  Откройте документ **Request for Approval to Hire**.  
   
-3.  Click **OK** to allow the document to connect to your AD RMS server.  
+3.  Нажмите кнопку **ОК** , чтобы разрешить документу подключиться к серверу AD RMS.  
   
-4.  You can now see that the document has been protected by AD RMS because it contains a Social Security number.  
+4.  Теперь можно увидеть, что документ защищен службой AD RMS, так как он содержит номер социального страхования.  
   
 

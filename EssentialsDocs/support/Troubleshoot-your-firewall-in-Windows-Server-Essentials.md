@@ -1,6 +1,6 @@
 ---
-title: "Устранение неполадок брандмауэра в Windows Server Essentials"
-description: "Описывается, как использовать Windows Server Essentials"
+title: Устранение неполадок брандмауэра в Windows Server Essentials
+description: Описывает способ использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -13,26 +13,27 @@ author: nnamuhcs
 ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 3c48d2abb7fd8431f40f76f8eece5c4142be4c75
-ms.sourcegitcommit: 70c1b6cedad55b9c7d2068c9aa4891c6c533ee4c
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59846555"
 ---
 # <a name="troubleshoot-your-firewall-in-windows-server-essentials"></a>Устранение неполадок брандмауэра в Windows Server Essentials
  
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
- При возникновении проблем с удаленным доступом, запустите мастер исправления повсеместного доступа.  
+ При возникновении проблем с удаленным доступом запустите мастер исправления повсеместного доступа.  
   
 ### <a name="to-run-the-repair-anywhere-access-wizard"></a>Запуск мастера исправления повсеместного доступа  
   
 1.  Откройте панель мониторинга.  
   
-2.  Нажмите кнопку **параметры**, нажмите кнопку **повсеместного доступа**, а затем щелкните **восстановления**.  
+2.  Нажмите кнопку **Параметры**, затем откройте вкладку **Повсеместный доступ** и щелкните **Исправить**.  
   
 3.  Следуйте инструкциям мастера исправления повсеместного доступа.  
   
- Если вы используете расширенную настройку сети или с помощью сторонний брандмауэр, может потребоваться открыть дополнительные порты брандмауэра. Порты в следующей таблице зарегистрированы с помощью Интернета назначен Numbers Authority (IANA).  
+ Если вы применяете расширенную настройку сети или используете брандмауэр другого разработчика, может потребоваться открыть дополнительные порты брандмауэра. Описанные в следующей таблице порты зарегистрированы в Internet Assigned Numbers Authority (IANA).  
   
 |Номер порта|Описание|  
 |-----------------|-----------------|  
@@ -42,7 +43,7 @@ ms.lasthandoff: 07/03/2017
 |65532|Платформа поставщика для связи с сервером замыканием на себя|  
 |6602|Платформа поставщика для обмена данными между сервером и клиентскими компьютерами|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Использование удаленного веб-доступа](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   

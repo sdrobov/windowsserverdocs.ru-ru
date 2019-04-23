@@ -1,5 +1,5 @@
 ---
-title: IIS на сервере NanoServer
+title: IIS на сервере Nano Server
 description: Сведения о настройке IIS на сервере Nano Server
 ms.prod: windows-server-threshold
 ms.service: na
@@ -13,15 +13,15 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 1461f3e3266d77d2510aba37208347253a8f78e7
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082590"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59851625"
 ---
-# <a name="iis-on-nano-server"></a>IIS на сервере NanoServer
+# <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
 
->Область применения: Windows Server2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -30,9 +30,9 @@ ms.locfileid: "2082590"
 
 В этом выпуске Nano Server доступны следующие функции служб IIS:  
 
-|Функция|По умолчанию включено|  
+|Компонент|По умолчанию включено|  
 |-----------|----------------------|  
-|**Общие компоненты HTTP**||  
+|**Общие функции HTTP**||  
 |Документ по умолчанию|x|  
 |Просмотр каталогов|x|  
 |Ошибки HTTP|x|  
@@ -46,7 +46,7 @@ ms.locfileid: "2082590"
 |**Производительность**||  
 |Сжатие статического содержимого|x|  
 |Сжатие динамического содержимого||  
-|**Безопасность**||  
+|**безопасность**||  
 |Фильтрация запросов|x|  
 |Обычная проверка подлинности||  
 |Проверка подлинности с сопоставлением сертификата клиента||  
@@ -65,9 +65,9 @@ ms.locfileid: "2082590"
 |**Средства управления**||  
 |Модуль IISAdministration для Windows PowerShell|x|  
 
-Серии статей на другие конфигурации служб IIS (например, с помощью ASP.NET, PHP и Java), а также другие связанные контент публикуется в [http://iis.net/learn](http://iis.net/learn).  
+Серия статей о других конфигурациях служб IIS (например, с помощью ASP.NET, PHP и Java), а также других связанных содержимого публикуется в [ http://iis.net/learn ](http://iis.net/learn).  
 
-## <a name="installing-iis-on-nano-server"></a>Установка служб IIS на сервере NanoServer  
+## <a name="installing-iis-on-nano-server"></a>Установка служб IIS на сервере Nano Server  
 Эту роль сервера можно установить либо в автономном режиме (при отключенном Nano Server), либо в сети (с использованием Nano Server). Рекомендуется установка в автономном режиме.  
 
 Для автономной установки добавьте пакет с параметром -Packages New-NanoServerImage, как в следующем примере:  
@@ -85,11 +85,11 @@ ms.locfileid: "2082590"
  
 
 > [!NOTE]  
-> Обратите внимание, что шаг4 добавляет языковой пакет, в этом примере— для языка EN-US.  
+> Обратите внимание, что шаг 4 добавляет языковой пакет, в этом примере — для языка EN-US.  
 
 На этом этапе можно запустить Nano Server со службами IIS.  
 
-### <a name="installing-iis-on-nano-server-online"></a>Установка служб IIS на сервере NanoServer в сети  
+### <a name="installing-iis-on-nano-server-online"></a>Установка служб IIS на сервере Nano Server в сети  
 Хотя для этой роли сервера рекомендуется автономная установка, в сценариях с контейнерами может потребоваться установить ее в сети (с Nano Server). Для этого выполните следующие действия:  
 
 1.  Скопируйте папку Packages с установочного носителя на запущенный сервер Nano Server (например, в C:\packages).  
@@ -122,19 +122,19 @@ ms.locfileid: "2082590"
 
 4.  Перейдите в каталог с недавно созданным XML-файлом и выполните команду  
 
-    **dism /online /apply-unattend:.\unattend.xml**  
+    **DISM / online /apply-unattend:.\unattend.xml**  
 
 
 5.  Убедитесь, что пакет IIS и связанный с ним языковой пакет установлены правильно, выполнив следующую команду:  
 
-    **dism /online /get-packages**  
+    **DISM / online/Get-Packages**  
 
-    Сообщение "Идентификатор пакета: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" должно появиться дважды: один раз для типа выпуска— языковой пакет и один раз для типа выпуска— пакет дополнительных компонентов.  
+    Вы должны увидеть «идентификатор пакета: Microsoft-NanoServer-IIS-Package ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000" появиться дважды: один раз для типа выпуска: Языковой пакет и один раз для типа выпуска: Пакет дополнительных компонентов.  
 
 6.  Запустите службу W3SVC либо с помощью команды **net start w3svc**, либо перезапустив Nano Server.  
 
 ## <a name="starting-iis"></a>Запуск служб IIS  
-После установки и запуска служб IIS все готово к обработке веб-запросов. Убедитесь, что службы IIS запущены, перейдя на веб-страницу служб IIS по умолчанию по адресу: http://\<IP-адрес Nano Server>. На физическом компьютере IP-адрес можно определить с помощью агента восстановления. На виртуальной машине IP-адрес можно получить, используя командную строку Windows PowerShell и выполнив следующую команду:  
+После установки и запуска служб IIS все готово к обработке веб-запросов. Убедитесь, что службы IIS запущены, перейдя на веб-страницу служб IIS по умолчанию по адресу http://\<IP-адрес Nano Server>. На физическом компьютере IP-адрес можно определить с помощью агента восстановления. На виртуальной машине IP-адрес можно получить, используя командную строку Windows PowerShell и выполнив следующую команду:  
 
 `Get-VM -name <VM name> | Select -ExpandProperty networkadapters | select IPAddresses`  
 
@@ -225,7 +225,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 3.  На сервере Nano Server импортируйте сертификат в хранилище "My" с помощью следующей команды:  
 
-    **certoc.exe -ImportPFX -p YOUR_PFX_PASSWD My c:\temp\test.pfx**  
+    **YOUR_PFX_PASSWD -p - ImportPFX certoc.exe Мои c:\temp\test.pfx**  
 
 4.  Извлеките отпечаток нового сертификата (в данном примере это 61E71251294B2A7BB8259C2AC5CF7BA622777E73) с помощью `Get-ChildItem Cert:\LocalMachine\my`.  
 
@@ -242,9 +242,9 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
     $sm.CommitChanges()  
     ```  
 
-    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    Можно также использовать указание имени сервера (SNI) с именем конкретного узла со следующим синтаксисом: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
 
-## <a name="appendix-1-list-of-iis-sub-features"></a>Приложение 1. Список вложенных функций служб IIS
+## <a name="appendix-1-list-of-iis-sub-features"></a>Приложение 1. Список вложенных функций IIS
 
 - IIS-WebServer
 - IIS-CommonHttpFeatures
@@ -293,7 +293,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 |`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DefaultDocumentModule" resourceType="EiSecther" requireAccess="Read" />`|  
 |`<defaultDocument>`|`<defaultDocument enabled="true"><br /><files><br /> <add value="Default.htm" /><br />        <add value="Default.asp" /><br />        <add value="index.htm" /><br />        <add value="index.html" /><br />        <add value="iisstart.htm" /><br />    </files><br /></defaultDocument>`|  
 
-Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте "DefaultDocumentModule" в атрибут modules>, отделив значение \<modules> запятой.  
+Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте "DefaultDocumentModule" в атрибут \<modules>, отделив значение запятой.  
 
 **Просмотр каталогов**  
 
@@ -419,7 +419,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 |`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>`|  
 |`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
 
-**Ограничения IP-адресов и имен домена**  
+**Ограничения IP-адресов и доменов**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
@@ -474,7 +474,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 |`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
 |`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
 
-**Серверные включаемые модули**  
+**Включения на стороне сервера**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  

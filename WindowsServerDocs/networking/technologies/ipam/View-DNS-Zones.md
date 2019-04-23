@@ -1,6 +1,6 @@
 ---
 title: Просмотр зон DNS
-description: Этот раздел входит руководство по управлению управления IP-адресами (IPAM) в Windows Server 2016.
+description: Этот раздел является частью в руководстве по управления IP Address Management (IPAM) в Windows Server 2016.
 manager: brianlic
 ms.custom: na
 ms.prod: windows-server-threshold
@@ -13,27 +13,28 @@ ms.topic: article
 ms.assetid: 2cfe4e40-ec6d-4541-baa9-d772409fe27c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4279a15f885758e59b6f5c30b2feddd50962f0d5
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
+ms.openlocfilehash: 18a593a82a9b9fd0d8f2e59d1bb9da971856ad17
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59841525"
 ---
 # <a name="view-dns-zones"></a>Просмотр зон DNS
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-В этом разделе можно использовать, чтобы просмотреть зоны DNS в консоли IPAM-клиента.  
+В этом разделе можно использовать, чтобы просмотреть зоны DNS в консоли ipam-клиента.  
   
-Членство в группе **Администраторы**, или в эквивалентной минимальным требованием для выполнения этой процедуры.  
+Для выполнения этой процедуры необходимо быть членом группы **Администраторы** или пользователем с аналогичными правами.  
   
-### <a name="to-view-dns-zones-in-the-ipam-client-console"></a>Чтобы просмотреть зоны DNS в консоли IPAM-клиента  
+### <a name="to-view-dns-zones-in-the-ipam-client-console"></a>Чтобы просмотреть зоны DNS в консоли ipam-клиента  
   
-1.  В диспетчере серверов щелкните **IPAM**. Откроется консоль IPAM-клиента.  
+1.  В диспетчере серверов щелкните **IPAM**. Откроется консоль ipam-клиента.  
   
-2.  В области навигации в **НАБЛЮДЕНИЕ и УПРАВЛЕНИЕ**, нажмите кнопку **зон DNS**.  На панели навигации разделяет на верхней панели навигации и нижней панели навигации.  
+2.  В области навигации в **НАБЛЮДЕНИЕ и УПРАВЛЕНИЕ**, нажмите кнопку **зон DNS**.  На панели навигации делит на верхней панели навигации и нижней панели навигации.  
   
-3.  В нижней области навигации можно создайте следующие варианты:  
+3.  В нижней области навигации внесите одно из следующих выбранных элементов.  
   
     -   Прямого просмотра  
   
@@ -43,8 +44,8 @@ ms.lasthandoff: 03/28/2018
   
     -   Сервер условной пересылки  
   
-## <a name="see-also"></a>См. также:  
-[Управление зоной DNS](DNS-Zone-Management.md)  
+## <a name="see-also"></a>См. также  
+[Управление зонами DNS](DNS-Zone-Management.md)  
 [Управление IPAM](Manage-IPAM.md)  
   
 

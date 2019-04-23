@@ -1,6 +1,6 @@
 ---
-title: Vssadmin удалить тени
-description: Описание команда vssadmin удалить тени.
+title: Vssadmin delete shadows
+description: Описание команды shadows vssadmin delete.
 ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
@@ -9,17 +9,17 @@ ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
 ms.openlocfilehash: 71119174c7fc5929eb4e1982183ba0aed7eb1735
-ms.sourcegitcommit: e0479b0114eac7f232e8b1e45eeede96ccd72b26
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "2082544"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59847095"
 ---
-# <a name="vssadmin-delete-shadows"></a>Vssadmin удалить тени
+# <a name="vssadmin-delete-shadows"></a>Vssadmin delete shadows
 
->Применимо к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Относится к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-Удаляет указанный том теневой копии.
+Удаляет указанного тома теневых копий.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,26 +31,26 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 
 |Параметр|Описание|
 |---|---|
-|аудио- и для = \ < Копируемый_том >|Указывает, какие тома теневой копии будут удалены.|
-|аудио- и старые|Удаляет только старые копии.|
-|/ all|Удаляет все теневые копии указанного тома.|
-|/ shadow = \ < Номер_теневой_копии >|Удаляет теневой копии, указанного идентификатором Номер_теневой_копии. Чтобы получить идентификатор теневой копии, используйте команду **теней vssadmin списка** . При вводе ID теневой копии, используйте следующий формат, где каждый *X* представляет шестнадцатеричных знаков:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/for=\<ForVolumeSpec>|Указывает, какие тома теневой копии будут удалены.|
+|/ старой|Удаляет только самая старая теневая копия.|
+|/ all|Удаляет все теневых копий указанного тома.|
+|/shadow=\<ShadowID>|Удаляет заданные Номер_теневой_копии теневую копию. Чтобы получить идентификатор теневой копии, используйте **vssadmin list shadows** команды. Когда пользователь вводит идентификатор теневой копии, используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
 |/ quiet|Указывает, что команда не будет отображать сообщения во время выполнения.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
-Теневые копии можно удалить только с типом-адреса.
+Теневые копии можно удалить только с типом доступно клиентам.
 
 ## <a name="examples"></a>Примеры
 
-Чтобы удалить старые теневую копию тома C, введите следующую команду:
+Чтобы удалить самая старая теневая копия тома C, введите следующую команду:
 
 ```PowerShell
 vssadmin delete shadows /for=c: /oldest
 ```
 
-## <a name="additional-references"></a>Дополнительные справочные материалы
+## <a name="additional-references"></a>Дополнительная справка
 
-* [Клавиша синтаксис командной строки](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
-* [Vssadmin](vssadmin.md)
-* [Vssadmin списка тени](vssadmin-list-shadows.md)
+* [Ключ синтаксиса командной строки](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
+* [vssadmin](vssadmin.md)
+* [Vssadmin list shadows](vssadmin-list-shadows.md)

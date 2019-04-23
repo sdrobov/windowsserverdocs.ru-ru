@@ -1,74 +1,191 @@
 ---
-title: "Основные решения поддержки для Windows Server"
-description: "Получите ссылки на решения для проблем с Windows Server"
+title: Основные решения поддержки для Windows Server
+description: Получите ссылки на решения для проблем с Windows Server
+layout: LandingPage
 ms.prod: windows-server-threshold
 ms.service: na
 manager: alant
 ms.technology: server-general
-ms.date: 09/06/2017
-ms.topic: article
+ms.date: 03/16/2018
+ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: 070331c8886011035e712f485af45d36b77613fa
-ms.sourcegitcommit: 58dde3f9ae761116b2c9f71c6917f96bff075af1
-ms.translationtype: HT
+ms.openlocfilehash: 1a4d28e168e7ce328ac125d12a07cb0c133e2d0e
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59852125"
 ---
-# <a name="top-support-solutions-for-windows-server-2016"></a>Основные решения поддержки для Windows Server 2016
+# <a name="top-support-solutions-for-windows-server"></a>Основные решения поддержки для Windows Server
+
+>[!TIP]
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 Корпорация Майкрософт регулярно выпускает обновления и решения для Windows Server. Необходимо вовремя обновлять серверы, чтобы они могли получать будущие обновления, в том числе обновления безопасности. Полный список выпущенных обновлений см. в разделе [Журнал обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history).
 
 Это лучшие решения службы поддержки Майкрософт для наиболее распространенных проблем при использовании Windows Server 2016. Ниже представлены ссылки на статьи базы знаний и библиотеки, а также на обновления.
 
-## <a name="solutions-for-installing-or-upgrading-windows-server"></a>Решения для установки или обновления Windows Server
+<HR />
 
-- [Устранение ошибок при обновлении до Windows 10: технические сведения для ИТ-специалистов](\windows\deployment\upgrade\resolve-windows-10-upgrade-errors)
-- [Обновление стека обслуживания для Windows 10 версии 1607 и Windows Server 2016: 8 августа 2017 г.](https://support.microsoft.com/en-US/help/4035631)
-- [Обновление совместимости для обновления до Windows 10 версии 1607 и Windows Server 2016: 3 августа 2017 г.](https://support.microsoft.com/en-US/help/4033524)
-- [На виртуальных машинах Azure на базе Windows обновление системы на месте не поддерживается](https://support.microsoft.com/en-US/help/4014997)
-- [Параметры обновления и преобразования для Windows Server 2016](..\get-started\supported-upgrade-paths.md)
-- [Матрица обновления и миграции ролей сервера для Windows Server2016](..\get-started\server-role-upgradeability-table.md)
-- [Обновление и установка Windows Server](..\get-started\installation-and-upgrade.md)
-- [Заметки о выпуске. Важные проблемы в Windows Server2016](..\get-started\windows-server-2016-ga-release-notes.md)
-- [Рекомендации по переходу на Windows Server 2016](..\get-started\recommendations-moving-to-server2016.md)
-
-## <a name="solutions-for-volume-activation"></a>Решения для активации корпоративных лицензий
-- [Активация Windows Server 2016](../get-started/server-2016-activation.md)
-- [Сравнение и выбор методов активации](https://technet.microsoft.com/library/jj134256(ws.11).aspx)
-- [Коды ошибок активации при активации корпоративных лицензий](https://technet.microsoft.com/library/dn502528.aspx)
-- [Устранение неполадок в службе управления ключами (KMS)](https://technet.microsoft.com/library/ee939272.aspx)
-- [Устранение проблем с активацией корпоративных лицензий](https://technet.microsoft.com/library/ff793439.aspx)
-- [Коды ошибок активации](https://technet.microsoft.com/library/ff793399.aspx)
-- [Установка Windows может завершиться ошибкой "Введенный ключ продукта не соответствует ни одному из образов Windows, доступных для установки. Введите другой ключ продукта"](https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess)
-
-## <a name="solutions-related-to-dcpromo-and-installing-domain-controllers"></a>Решения, связанные с DCPromo и установкой контроллера домена
-- [Требования к портам для Active Directory и доменных служб Active Directory](https://technet.microsoft.com/library/dd772723(v=ws.10).aspx)
-- [Порты брандмауэра Active Directory: простое описание](http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/)
-- [Поддержки Exchange Server для Windows Server 2016](https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx)
-- [Использование Ntdsutil.exe для переноса или изменения размера ролей FSMO в контроллере домена](http://support.microsoft.com/kb/255504)
-- [Устранение неполадок развертывания контроллера домена](../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md)
-- [Устранение неполадок мастера установки Active Directory](https://msdn.microsoft.com/library/bb727058.aspx)
-- [Известные проблемы при установке и удалении AD DS](https://technet.microsoft.com/library/cc754463(v=ws.10).aspx)
-
-## <a name="solutions-for-active-directory-federation-services-ad-fs"></a>Решения для служб федерации Active Directory (AD FS)
-- [Настройка автоматической регистрации присоединенных к домену устройств Windows с помощью Azure Active Directory](/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup)
-- [Настройка выдачи утверждений](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims)
-- [Настройка AD FS для аутентификации пользователей, хранящихся в каталогах LDAP](../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md)
-- [Поддержка привязки альтернативного имени узла для аутентификации сертификата в AD FS](../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md)
-- [Защита от атак на пароли](https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/)
-- [Обновление до служб федерации Active Directory в Windows Server 2016 с помощью базы данных WID](../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md)
-- [Вход в Windows 10: включение аутентификации с использованием AD FS](../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md)
-- [Управление SSL-сертификатами в AD FS и WAP в Windows Server 2016](../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md)
-- [Политики управления доступом в Windows Server 2016 AD FS](../identity/ad-fs/operations/access-control-policies-in-ad-fs.md)
-
-## <a name="solutions-related-to-active-directory-replication"></a>Решения, связанные с репликацией Active Directory
-
-- [Устранение неполадок репликации Active Directory](../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md)
-- [Скачайте средство определения состояния репликации Active Directory в Центре загрузки Майкрософт](http://www.microsoft.com/en-in/download/details.aspx?id=30005)
-- [E2E: устранение распространенных ошибок репликации Active Directory.](http://support.microsoft.com/kb/3108513)
-- [Устранение ошибки репликации AD 8606: задано недостаточно атрибутов для создания объекта](http://support.microsoft.com/kb/2028495)
-- [События с идентификаторами 2108 и 1084 происходят при входящей репликации Active Directory в Windows 2000 Server и Windows Server 2003](http://support.microsoft.com/kb/837932)
-- [Устранение ошибки репликации 8451: произошла ошибка базы данных при выполнении репликации](http://support.microsoft.com/kb/2645996)
-- [Устранение ошибки репликации 1127: зафиксирован многократный сбой операции при обращении к жесткому диску](http://support.microsoft.com/kb/2025726)
-- [Очистка метаданных сервера](https://technet.microsoft.com/en-us/library/cc816907.aspx)
+<ul class="cardsF panelContent">
+<li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-troubleshoot.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Установка и обновление Windows Server</h3>
+<hr> 
+                        <a href="\windows\deployment\upgrade\resolve-windows-10-upgrade-errors">Устранение ошибок обновления Windows 10: Технические сведения для ИТ-специалистов</a>
+<hr> 
+                        <p><a href="https://support.microsoft.com/en-US/help/4035631">Обновление стека обслуживания для Windows 10 версии 1607 и Windows Server 2016: 8 августа 2017 г.)</a></p>
+<hr> 
+                        <p><a href="https://support.microsoft.com/en-US/help/4033524">Обновление для обеспечения совместимости для обновления до Windows 10 версии 1607 и Windows Server 2016: 3 августа 2017 г.)</a></p>
+<hr>
+                        <p><a href="https://support.microsoft.com/en-US/help/4014997">Обновление системы на месте не поддерживается на виртуальных машинах Azure под управлением Windows)</a></p>
+<hr>
+                        <p><a href="..\get-started\supported-upgrade-paths.md">Параметры обновления и преобразования для Windows Server 2016)</a></p>
+<hr>
+                       <p><a href="..\get-started\server-role-upgradeability-table.md">Сервер роли матрица обновления и миграции для Windows Server 2016)</a></p>
+<hr>
+                       <p><a href="..\get-started\installation-and-upgrade.md">Windows Server установки и обновления)</a></p>
+<hr>
+                       <p><a href="..\get-started\windows-server-2016-ga-release-notes.md">Заметки о выпуске: Важные проблемы в Windows Server 2016)</a></p>
+<hr>
+                       <p><a href="..\get-started\recommendations-moving-to-server2016.md">Рекомендации по переходу на Windows Server 2016)</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+<li>
+ <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-troubleshoot.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Активация корпоративных лицензий</h3>
+<hr> 
+                        <a href="../get-started/server-2016-activation.md">Активация Windows Server 2016</a>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/jj134256(ws.11).aspx">Просмотр и методы Select активации</a></p>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/dn502528.aspx">Коды ошибок активации для активации корпоративных лицензий</a></p>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/ee939272.aspx">Способы устранения неполадок службы управления ключами (KMS)</a></p>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/ff793439.aspx">Устранение неполадок активации тома</a></p>
+<hr>                       
+                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">Коды ошибок активации</a></p>
+<hr>
+                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Установка Windows может завершиться с ошибкой «введенный ключ продукта не соответствует ни одному из образов Windows, доступных для установки. Введите другой ключ продукта»</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+<li>
+ <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-troubleshoot.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>DCPromo и установка контроллеров домена</h3>
+<hr> 
+                        <a href="https://technet.microsoft.com/library/dd772723(v=ws.10).aspx">Active Directory и требования к портов служб домена Active Directory</a>
+<hr>
+                        <p> <a href="http://blogs.msmvps.com/acefekay/2011/11/01/active-directory-firewall-ports-let-s-try-to-make-this-simple/">Порты брандмауэра для Active Directory – давайте попробуем сделать этот простой</a></p>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/ff728623(v=exchg.150).aspx">Поддержка Exchange Server для Windows Server 2016</a></p>
+<hr>
+                        <p><a href="https://support.microsoft.com/kb/255504">С помощью Ntdsutil.exe для переноса или изменения размера ролей FSMO контроллеру домена</a></p>
+<hr>
+                        <p><a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">Устранение неполадок развертывания контроллера домена</a></p>
+<hr>
+                        <p><a href="https://msdn.microsoft.com/library/bb727058.aspx">Устранение неполадок мастера установки Active Directory</a></p>
+<hr>
+                        <p><a href="https://technet.microsoft.com/library/cc754463(v=ws.10).aspx">Известные проблемы для установки и удаления AD DS</a></p>
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </li>
+<li>
+ <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-troubleshoot.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Службы федерации Active Directory (AD FS)</h3>
+<hr> 
+                        <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">Настройка автоматической регистрации присоединенных к домену устройств Windows с Azure Active Directory</a>
+<hr>
+                        <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Настройка выдачи утверждений</a></p>
+<hr>  
+                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Настройка AD FS для проверки подлинности пользователей, хранящихся в каталогах LDAP</a></p>
+<hr>
+                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">Поддержка привязки альтернативного имени узла для проверки подлинности сертификата AD FS</a></p>
+<hr>
+                        <p><a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">Защита от атак пароль</a>
+                        <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">обновление до AD FS в Windows Server 2016 с помощью Внутренней базой данных Windows</a></p>
+<hr>
+                        <p><a href="../identity/ad-fs/operations/configure-device-based-conditional-access-on-premises.md">Windows 10 вход — Включение проверки подлинности устройства с AD FS</a></p>
+<hr>
+                        <p><a href="../identity/ad-fs/operations/manage-ssl-certificates-ad-fs-wap-2016.md">Управление SSL-сертификатов в AD FS и WAP в Windows Server 2016</a></p>
+<hr>
+                        <p><a href="../identity/ad-fs/operations/access-control-policies-in-ad-fs.md">Политики управления доступом в Windows Server 2016 AD FS</a></p>
+                      </div>
+                 </div>
+            </div>
+        </div>
+    </li>
+<li>
+ <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
+                            <img src="../media/i-troubleshoot.svg" alt="" />
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <h3>Репликация Active Directory</h3>
+<hr> 
+                         <a href="../identity/ad-ds/manage/troubleshoot/troubleshooting-active-directory-replication-problems.md">Устранение проблем с репликацией Active Directory</a>
+<hr>
+                         <a href="https://www.microsoft.com/en-in/download/details.aspx?id=30005">e2e: Способы устранения распространенных ошибок репликации Active Directory</a>
+<hr>
+                         <a href="https://support.microsoft.com/kb/3108513">Загрузите средство состояния репликации Active Directory в центре загрузки Майкрософт</a>
+<hr>
+                         <a href="https://support.microsoft.com/kb/2028495">Устранение неполадок репликации AD ошибкой 8606: Задано недостаточно атрибутов для создания объекта</a></p>
+<hr>
+                         <a href="https://support.microsoft.com/kb/837932">События 2108 и 1084 происходить во время входящей репликации Active Directory в Windows 2000 Server и Windows Server 2003</a>
+<hr>
+                         <a href="https://support.microsoft.com/kb/2645996">Устранение неполадок ошибки репликации AD 8451: Операция репликации произошла ошибка базы данных</a>
+<hr>
+                         <a href="https://support.microsoft.com/kb/2025726">Устранение неполадок ошибки репликации AD 1127: Сбой операции при обращении к жесткого диска, даже после нескольких попыток</a>
+<hr>
+                         <a href="https://technet.microsoft.com/library/cc816907.aspx">Очистка метаданных сервера</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

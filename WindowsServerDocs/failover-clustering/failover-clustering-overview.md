@@ -11,15 +11,15 @@ ms.technology: storage-failover-clustering
 ms.date: 03/08/2019
 ms.localizationpriority: high
 ms.openlocfilehash: 445de065ff5b68b83481ee5bd83ebf18fdd180a7
-ms.sourcegitcommit: b0fece76b871da3fa9d6a996798a5008756f486b
-ms.translationtype: HT
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "9178605"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59848655"
 ---
-# Отказоустойчивая кластеризация в Windows Server
+# <a name="failover-clustering-in-windows-server"></a>Отказоустойчивая кластеризация в Windows Server
 
-> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 >[!TIP]
 > Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
@@ -47,7 +47,7 @@ ms.locfileid: "9178605"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                        <h2><a href="whats-new-in-failover-clustering.md">Что нового в отказоустойчивой кластеризации?</a></h2>
+                                        <h2><a href="whats-new-in-failover-clustering.md">Новые возможности отказоустойчивой кластеризации</a></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -71,19 +71,19 @@ ms.locfileid: "9178605"
                                         <div class="cardText">
                                         <h3>Общие сведения</h3>
 <HR />
-                                        <p><a href="sofs-overview.md">Масштабируемый файловый сервер для данных приложений</a></p>
+                                        <p><a href="sofs-overview.md">Масштабируемого файлового сервера для данных приложений</a></p>
 <HR />
-                                        <p><a href="../storage/storage-spaces/understand-quorum.md">Кворум кластеров и пулов</a></p>
+                                        <p><a href="../storage/storage-spaces/understand-quorum.md">Кворум кластера и пула</a></p>
 <HR />
-                                        <p><a href="fault-domains.md">Служба сведений о домене сбоя</a></p>
+                                        <p><a href="fault-domains.md">Информация о домене сбоя</a></p>
 <HR />
-                                        <p><a href="smb-multichannel.md">Упрощенные кластерные сети SMB Multichannel и Multi-NIC</a></p>
+                                        <p><a href="smb-multichannel.md">Упрощенное сетей кластера для SMB Multichannel и multi-NIC</a></p>
 <HR />
-                                        <p><a href="vm-load-balancing-overview.md">Балансировка нагрузки виртуальных машин</a></p>
+                                        <p><a href="vm-load-balancing-overview.md">Балансировка нагрузки для виртуальных Машин</a></p>
 <HR />
-                                        <p><a href="../storage/storage-spaces/cluster-sets.md">Наборы кластеров</a></p>
+                                        <p><a href="../storage/storage-spaces/cluster-sets.md">Наборы кластера</a></p>
 <HR />
-                                        <p><a href="cluster-affinity.md">Сходство кластеров</a></p>
+                                        <p><a href="cluster-affinity.md">Сходство кластера</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -103,11 +103,11 @@ ms.locfileid: "9178605"
                                         <div class="cardText">
                                         <h3>Планирование</h3>
 <HR />
-                                        <p><a href="clustering-requirements.md">Требования к оборудованию для отказоустойчивой кластеризации и варианты хранилища</a></p>
+                                        <p><a href="clustering-requirements.md">FailOver Clustering Hardware Requirements и варианты хранилища</a></p>
 <HR />
-                                        <p><a href="failover-cluster-csvs.md">Использование общих томов кластера (CSV)</a></p>               
+                                        <p><a href="failover-cluster-csvs.md">Использование общих томов (CSV) кластера</a></p>               
 <HR />
-                                        <p><a href="../storage/storage-spaces/storage-spaces-direct-in-vm.md">Использование кластеров гостевых виртуальных машин с локальными дисковыми пространствами</a></p>
+                                        <p><a href="../storage/storage-spaces/storage-spaces-direct-in-vm.md">С помощью кластеров гостевых виртуальных машин с дисковыми пространствами</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -126,23 +126,23 @@ ms.locfileid: "9178605"
                                         <div class="cardText">
                                         <h3>Развертывание</a></h3> 
 <HR />
-                                        <p><a href="prestage-cluster-adds.md">Подготовка кластерных объектов-компьютеров в доменных службах Active Directory</a></p>
+                                        <p><a href="prestage-cluster-adds.md">Предварительная подготовка кластеризованных объектов-компьютеров в доменных службах Active Directory</a></p>
 <HR />
                                         <p><a href="create-failover-cluster.md">Создание отказоустойчивого кластера</a></p> 
 <HR />
-                                        <p><a href="deploy-two-node-clustered-file-server.md">Развертывание файлового сервера с двумя узлами</a></p> 
+                                        <p><a href="deploy-two-node-clustered-file-server.md">Развертывание двухузлового файлового сервера</a></p> 
 <HR />
-                                        <p><a href="manage-cluster-quorum.md">Управление кворумом и следящими серверами</a></p> 
+                                        <p><a href="manage-cluster-quorum.md">Управление кворума и свидетеля</a></p> 
 <HR />
                                         <p><a href="deploy-cloud-witness.md">Развертывание облака-свидетеля</a></p>
 <HR />
                                         <p><a href="file-share-witness.md">Развертывание файлового ресурса-свидетеля</a></p>
 <HR />
-                                        <p><a href="cluster-operating-system-rolling-upgrade.md">Последовательное обновление ОС кластера</a></p> 
+                                        <p><a href="cluster-operating-system-rolling-upgrade.md">Последовательные обновления ОС кластера</a></p> 
 <HR />
-                                        <p><a href="upgrade-option-same-hardware.md">Обновление отказоустойчивого кластера на том же оборудовании</a></p>
+                                        <p><a href="upgrade-option-same-hardware.md">Обновление отказоустойчивого кластера на одном оборудовании</a></p>
 <HR />
-                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Развертывание отсоединенного от Active Directory кластера</a></p>
+                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Развертывание кластера отсоединенных Active Directory</a></p>
                                         </div>
                                     </div>
                                 </div>
@@ -168,7 +168,7 @@ ms.locfileid: "9178605"
 <HR />
                                         <p><a href="health-service-overview.md">Служба работоспособности</a></p>
 <HR />
-                                        <p><a href="cluster-domain-migration.md">Перенос кластера и домена</a></p>
+                                        <p><a href="cluster-domain-migration.md">Домен кластера миграции</a></p>
 <HR />
                                         <p><a href="troubleshooting-using-wer-reports.md">Устранение неполадок с помощью отчетов об ошибках Windows</a></p> 
                                         </div>
@@ -189,9 +189,9 @@ ms.locfileid: "9178605"
                                         <div class="cardText">
                                         <h3>Средства и параметры</a></h3>
 <HR />
-                                        <p><a href="https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps">Командлеты PowerShell для отказоустойчивой кластеризации</a></p> 
+                                        <p><a href="https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps">Командлеты отказоустойчивой кластеризации PowerShell</a></p> 
 <HR />
-                                        <p><a href="https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps">Командлеты PowerShell для обновления с поддержкой кластера</a></p> 
+                                        <p><a href="https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps">Учитывать командлеты PowerShell для обновления кластера</a></p> 
                                         </div>
                                     </div>
                                 </div>
@@ -210,9 +210,9 @@ ms.locfileid: "9178605"
                                         <div class="cardText">
                                         <h3>Ресурсы сообщества</a></h3>
 <HR />
-                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">Форум по кластеризации (высокой доступности)</a></p> 
+                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">Форум по высокой доступности (кластеризации)</a></p> 
 <HR />
-                                        <p><a href="http://blogs.msdn.com/b/clustering/">Блог группы отказоустойчивой кластеризации и балансировки сетевой нагрузки</a></p> 
+                                        <p><a href="http://blogs.msdn.com/b/clustering/">Отказоустойчивая кластеризация и сети блог группы балансировки нагрузки</a></p> 
                                         </div>
                                     </div>
                                 </div>
