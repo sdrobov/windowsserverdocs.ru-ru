@@ -1,34 +1,47 @@
 ---
 title: Настройка шифрования для виртуальной сети
-description: В этом разделе приведены сведения о виртуальной сети шифрования программного обеспечения определены сетевые подключения в Windows Server
+description: Шифрование виртуальной сети, обеспечивает шифрование трафика виртуальной сети между виртуальными машинами, которые взаимодействуют друг с другом в пределах подсетей с пометкой «Шифрование включено».
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
 ms.author: pashort
-author: grcusanz
-ms.openlocfilehash: 7d1de535e7758793e5ddaa7eeefada0aa55d3328
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
-ms.translationtype: MT
+author: shortpatti
+ms.date: 08/08/2018
+ms.openlocfilehash: 90fb33eb4c4b63fdd5c84bf3ffc2447fd52a809b
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59845495"
 ---
-# <a name="configure-encryption-for-a-virtual-subnet"></a>Настройка шифрования для виртуальных подсетей
+# <a name="configure-encryption-for-a-virtual-subnet"></a>Настройка шифрования для виртуальной подсети
 
->Область применения: Windows Server
+>Относится к: Windows Server
 
-В этом разделе содержатся следующие разделы, в которых описываются шаги, необходимые для включения шифрования в виртуальной сети.
+Позволяет виртуальной сети шифрования для шифрования трафика виртуальной сети между виртуальными машинами, которые взаимодействуют друг с другом в пределах подсетей с пометкой «Шифрование включено». Для шифрования пакетов с помощью этой возможности также используется протокол DTLS в виртуальной подсети. Протокол DTLS обеспечивает защиту от перехвата, несанкционированных изменений и подделки со стороны любых лиц, имеющих доступ к физической сети.
 
-- [Создание сертификата шифрования](#bkmk_Certificate)
-- [Создание учетных данных сертификатов](#bkmk_credential)
-- [Настройка виртуальной сети для шифрования](#bkmk_vnet)
+Требует шифрования виртуальной сети:
+- Сертификаты шифрования, который установлен на каждом узле Hyper-V, поддержкой SDN.
+- Объект учетных данных в сетевом контроллере, ссылающиеся на отпечаток этого сертификата.
+- Конфигурация на всех виртуальных сетей содержит подсети, когда требуется шифрование.
 
-## <a name="bkmk_Certificate"></a>Создание сертификата шифрования
-Сертификат шифрования, должен устанавливаться на каждом узле, когда шифрование будет использоваться.  Можно использовать тот же сертификат для всех клиентов или создать уникальный сертификат каждого клиента, при необходимости.
+После включения шифрования в подсети, весь сетевой трафик в одной из подсетей шифруется автоматически, в дополнение к какого-либо шифрования уровня приложения, который также может иметь место.  Трафик, который пересекает между подсетями, даже если зашифрованной, автоматически отправляется незашифрованным. Любой трафик, который пересекает границу виртуальной сети также получает отправляются в незашифрованном виде.
 
-Шаг 1: Создание сертификата
+>[!NOTE]
+>При взаимодействии с другой виртуальной Машине в той же подсети, ли его в настоящее время подключен или подключенных в дальнейшем, трафик данные шифруются автоматически.
 
+>[!TIP]
+>Если необходимо ограничить приложениям взаимодействовать только зашифрованные подсети, можно использовать списки управления доступом (ACL) только для того, чтобы разрешить обмен данными в пределах текущей подсети. Дополнительные сведения см. в разделе [используйте списки управления доступом (ACL) для управления центра обработки данных сети трафик проходит](https://docs.microsoft.com/windows-server/networking/sdn/manage/use-acls-for-traffic-flow).
+
+
+## <a name="step-1-create-the-encryption-certificate"></a>Шаг 1. Создать сертификат шифрования
+Каждом узле должен быть установлен сертификат шифрования. Можно использовать один сертификат для всех клиентов или создать уникальный элемент для каждого клиента. 
+
+1.  Создание сертификата  
+
+```
     $subjectName = "EncryptedVirtualNetworks"
     $cryptographicProviderName = "Microsoft Base Cryptographic Provider v1.0";
     [int] $privateKeyLength = 1024;
@@ -80,8 +93,9 @@ ms.lasthandoff: 03/28/2018
     $enrollment.InitializeFromRequest($cert)
     $certdata = $enrollment.CreateRequest(0)
     $enrollment.InstallResponse(2, $certdata, 0, "")
+```
 
-После выполнения перечисленных выше вы увидите нового сертификата в личном хранилище компьютера, где запускается скрипт:
+После выполнения сценария появится новый сертификат в хранилище My:
 
     PS D:\> dir cert:\\localmachine\my
 
@@ -93,14 +107,11 @@ ms.lasthandoff: 03/28/2018
     84857CBBE7A1C851A80AE22391EB2C39BF820CE7  CN=MyNetwork
     5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
 
-Шаг 2: Экспорт сертификата в файл, которые потребуются две копии сертификата: с закрытым ключом и без.
+2.  Экспортируйте сертификат в файл.<p>Вам потребуется две копии сертификата: с закрытым ключом и без.
 
-    $subjectName = "EncryptedVirtualNetworks"
-    $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"}
-    [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret"))
-    Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
+    $subjectName = "EncryptedVirtualNetworks" $cert = Get-ChildItem cert:\localmachine\my | ? {$_.Subject -eq "CN=$subjectName"} [System.io.file]::WriteAllBytes("c:\$subjectName.pfx", $cert.Export("PFX", "secret")) Export-Certificate -Type CERT -FilePath "c:\$subjectName.cer" -cert $cert
 
-После выполнения перечисленных выше теперь будет представлено два файла сертификата.  Они должны быть установлены на каждом из узлов hyper-v.
+3.  Установка сертификатов на каждом из узлов hyper-v 
 
     PS C:\> dir c:\$subjectname.*
 
@@ -108,27 +119,19 @@ ms.lasthandoff: 03/28/2018
         Directory: C:\
 
 
-    Mode                LastWriteTime         Length Name
+    Имя режима LastWriteTime длина
     ----                -------------         ------ ----
-    -a----        9/22/2017   4:54 PM            543 EncryptedVirtualNetworks.cer
-    -a----        9/22/2017   4:54 PM           1706 EncryptedVirtualNetworks.pfx
+    -a---9/22/2017 4:54 PM 543 EncryptedVirtualNetworks.cer ----EncryptedVirtualNetworks.pfx 1706 до 54 16:9 / 22/2017
 
-Шаг 3: Установка на узле Hyper-V
+4.  Установка на узле Hyper-V
 
     $server = "Server01"
 
-    $subjectname = "EncryptedVirtualNetworks"
-    copy c:\$SubjectName.* \\$server\c$
-    invoke-command -computername $server -ArgumentList $subjectname,"secret" {
-        param (
-            [string] $SubjectName,
-            [string] $Secret
-        )
-        $certFullPath = "c:\$SubjectName.cer"
+    $subjectname = «EncryptedVirtualNetworks» c: копирования\$SubjectName.* \\$server\c$ invoke-command - computername $server - ArgumentList $subjectname, «секрет» {param ([string] $SubjectName, [string] $Secret) $certFullPath = «c: \$SubjectName.cer»
 
         # create a representation of the certificate file
         $certificate = new-object System.Security.Cryptography.X509Certificates.X509Certificate2
-        $certificate.import($certFullPath){$_}
+        $certificate.import($certFullPath)
 
         # import into the store
         $store = new-object System.Security.Cryptography.X509Certificates.X509Store("Root", "LocalMachine")
@@ -146,39 +149,38 @@ ms.lasthandoff: 03/28/2018
         $store.add($certificate)
         $store.close()
 
-        # Important: Remove the certficate files when finished
+        # Important: Remove the certificate files when finished
         remove-item C:\$SubjectName.cer
         remove-item C:\$SubjectName.pfx
     }    
 
-Повторите для каждого сервера в вашей среде.  Теперь вы получите сертификат, установленный в корневого и хранилище my каждый узел Hyper-V
+5.  Повторите для каждого сервера в вашей среде.<p>После повторного для каждого сервера, вы получите сертификат, установленный в корне и личном хранилище каждого узла Hyper-V. 
 
-Можно проверить установку сертификата с содержимое Мои и корневое хранилища:
+6.  Проверьте установку сертификата.<p>Проверьте сертификаты, проверив содержимое моей и корневое хранилища:
 
-    PS C:\> enter-pssession Server1
+    PS C:\> Server1, введите pssession
 
-    [Server1]: PS C:\> get-childitem cert://localmachine/my,cert://localmachine/root | ? {$_.Subject -eq "CN=EncryptedVirtualNetworks"}
+    [Server1]: PS C:\> cert://localmachine/my get-childitem, cert://localmachine/root |? {$_. Тема - eq «CN = EncryptedVirtualNetworks»}
 
     PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\my
 
-    Thumbprint                                Subject
+    Отпечаток субъекта
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6 CN = EncryptedVirtualNetworks
 
 
     PSParentPath: Microsoft.PowerShell.Security\Certificate::localmachine\root
 
-    Thumbprint                                Subject
+    Отпечаток субъекта
     ----------                                -------
-    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6  CN=EncryptedVirtualNetworks
+    5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6 CN = EncryptedVirtualNetworks
 
-Запишите отпечаток как оно понадобится для создания объекта сертификат учетных данных в сетевым контроллером.
+7.  Запишите отпечаток.<p>Запишите отпечаток необходимо, так как он необходим для создания объекта учетных данных сертификата в сетевом контроллере.
 
-## <a name="bkmk_Certificate"></a>Создание учетных данных сертификатов
+## <a name="step-2-create-the-certificate-credential"></a>Шаг 2. Создать учетные данные сертификата
 
-После успешной установки сертификатов на каждом из узлов Hyper-V, подключенных к сетевого контроллера можно настроить сетевого контроллера, чтобы использовать его.
+После установки сертификата на каждом из узлов Hyper-V, подключенных к сетевым контроллером, теперь необходимо настроить сетевого контроллера для его использования.  Чтобы сделать это, необходимо создать объект учетных данных, содержащий отпечаток сертификата на компьютере с помощью модулей сетевого контроллера PowerShell установлен. 
 
-Вам нужно будет создать объект учетных данных, который содержит отпечаток сертификата.  Необходимо будет сделать это с компьютера, при наличии модулях powershell сетевой контроллер, установленных.
 
     # Replace with thumbprint from your certificate
     $thumbprint = "5EFF2CE51EACA82408572A56AE1A9BCC7E0843C6"  
@@ -193,29 +195,38 @@ ms.lasthandoff: 03/28/2018
     $credproperties.Value = $thumbprint
     New-networkcontrollercredential -connectionuri $uri -resourceid "EncryptedNetworkCertificate" -properties $credproperties -force
 
-Вы можете повторно использовать эти учетные данные для каждого зашифрованного виртуальных netwokr, или можно развертывать и использовать уникальный сертификат для каждого клиента.
+>[!TIP]
+>Вы можете повторно использовать эти учетные данные для каждого зашифрованного виртуальной сети, или можно развернуть и использовать уникальный сертификат для каждого клиента.
 
-## <a name="bkmk_Certificate"></a>Настройка виртуальной сети для шифрования
 
-Этот шаг предполагается, что вы уже создали имя виртуальной сети «Сетевое окружение», и содержит по крайней мере одной виртуальной подсети.  Сведения о создании виртуальных сетей см. в разделе [создание, удаление или обновление виртуальных сетей клиентов](../Manage/Create,-Delete,-or-Update-Tenant-Virtual-Networks.md).
+## <a name="step-3-configuring-a-virtual-network-for-encryption"></a>Шаг 3. Настройка виртуальной сети для шифрования
 
-Шаг 1: Получение объектов виртуальной сети и учетные данные из сетевого контроллера
+Этот шаг предполагается, что вы уже создали имени виртуальной сети «Сетевое окружение», и она содержит по крайней мере одной виртуальной подсети.  Сведения о создании виртуальных сетей, см. в разделе [Create, Delete или Update виртуальных сетей клиентов](../Manage/Create,-Delete,-or-Update-Tenant-Virtual-Networks.md).
 
-    $vnet = Get-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId "MyNetwork"
-    $certcred = Get-NetworkControllerCredential -ConnectionUri $uri -ResourceId "EncryptedNetworkCertificate"
+>[!NOTE]
+>При взаимодействии с другой виртуальной Машине в той же подсети, ли его в настоящее время подключен или подключенных в дальнейшем, трафик данные шифруются автоматически.
 
-Шаг 2: Добавьте ссылку на учетных данных сертификатов и включите шифрование в отдельных подсетях.
+1.  Извлеките объекты виртуальной сети и учетные данные из сетевого контроллера
+
+    $vnet = get-NetworkControllerVirtualNetwork - ConnectionUri $uri - ResourceId «MyNetwork» $certcred = Get-NetworkControllerCredential - ConnectionUri $uri - ResourceId «EncryptedNetworkCertificate»
+
+2.  Добавьте ссылку на учетные данные сертификата и включите шифрование для отдельных подсетей
 
     $vnet.properties.EncryptionCredential = $certcred
 
-    # Replace the Subnets index with the value corresponding to the subnet you want encrypted.  
-    # Repeat for each subnet where encryption is needed
-    $vnet.properties.Subnets[0].properties.EncryptionEnabled = $true
+    # <a name="replace-the-subnets-index-with-the-value-corresponding-to-the-subnet-you-want-encrypted"></a>Замените значение, соответствующее подсети, к которой требуется зашифрованный индекс подсети.  
+    # <a name="repeat-for-each-subnet-where-encryption-is-needed"></a>Повторите для каждой подсети, когда требуется шифрование
+    $vnet.properties.Subnets[0].properties. EncryptionEnabled = $true
 
-Шаг 3: Перевод обновленный объект виртуальной сети в сетевого контроллера
+3.  Поместить обновленный объект виртуальной сети в сетевой контроллер
 
     New-NetworkControllerVirtualNetwork -ConnectionUri $uri -ResourceId $vnet.ResourceId -Properties $vnet.Properties -force
 
-После завершения этого дополнительные действия выполнять не требуется.  Все виртуальные Машины, которая в данный момент подключен и все виртуальные Машины, подключенном к выше подсети позже, имеют его трафик, автоматически шифруются при взаимодействии с другой виртуальной Машины в одной подсети.
+
+_**Поздравляю!**_ После выполнения этих действий все готово. 
+
+
+## <a name="next-steps"></a>Следующие шаги
+
 
 
