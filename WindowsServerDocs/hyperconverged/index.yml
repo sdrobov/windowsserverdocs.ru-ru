@@ -1,0 +1,50 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Документация по гиперконвергентной инфраструктуре
+metadata:
+  document_id: null
+  title: Документация по гиперконвергентной инфраструктуре
+  description: Документация по гиперконвергентной инфраструктуре
+  text: 'Объедините программно-определяемые вычислительные ресурсы, хранилище и сети в один кластер, чтобы обеспечить высокопроизводительную, экономичную и легко масштабируемую виртуализацию.'
+  keywords: 'Windows Server, Windows Server 2016, hyper-v, sdn, локальные дисковые пространства, wssd'
+  ms.localizationpriority: high
+  author: coreyp-at-msft
+  ms.author: coreyp
+  ms.topic: article
+  ms.devlang: na
+sections:
+  - title: null
+  - items:
+      - type: markdown
+        text: 'Объедините программно-определяемые вычислительные ресурсы, хранилище и сети в один кластер, чтобы обеспечить высокопроизводительную, экономичную и легко масштабируемую виртуализацию.'
+  - items:
+      - type: list
+        style: cards
+        className: cardsI
+        columns: 2
+        items:
+          - href: ../virtualization/hyper-v/index.md
+            html: <p>Виртуализация серверного оборудования позволяет запускать виртуальные машины на серверах в гиперконвергентном кластере.</p>
+            image:
+              src: ../media/i-virtualize.svg
+            title: Hyper-V
+          - href: ../storage/storage-spaces/storage-spaces-direct-overview.md
+            html: '<p>Виртуализация оборудования хранилища позволяет создавать тома в виртуализированном пуле дисков, которые распределены между серверами в гиперконвергентном кластере.</p>'
+            image:
+              src: ../media/i-store.svg
+            title: Локальные дисковые пространства
+          - href: ../failover-clustering/failover-clustering-overview.md
+            html: '<p>Группирование нескольких серверов позволяет выполнять рабочие нагрузки, такие как виртуальные машины, на любом сервере в кластере, и обеспечить корректную балансировку нагрузки и отработку отказа между серверами.</p>'
+            image:
+              src: ../media/i-cluster.svg
+            title: Отказоустойчивая кластеризация
+          - href: 'https://docs.microsoft.com/windows-server/networking/sdn/'
+            html: <p>Виртуализация сетевого оборудования позволяет динамически создавать сети и политики и управлять ими. Это дает возможность абстрагировать рабочие нагрузки от базовой физической сети.</p>
+            image:
+              src: ../media/i-network.svg
+            title: Программно-конфигурируемая сеть
+          - href: 'https://www.microsoft.com/cloud-platform/software-defined-datacenter'
+            html: <p>Пары технологий виртуализации и кластеризации Windows Server на основе проверенных аппаратных решений от партнеров на ваш выбор помогут избавиться от догадок о настройке программно-определяемого центра обработки данных.</p>
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_data-collection.svg'
+            title: Программно-определяемый центр обработки данных на основе Windows Server (WSSD)
