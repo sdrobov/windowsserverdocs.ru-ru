@@ -1,6 +1,6 @@
 ---
-title: Безопасность для SDN
-description: Можно использовать темы в этом разделе, чтобы узнать о безопасности в \(SDN\) определенные сетевые программного обеспечения в Windows Server 2016 Datacenter.
+title: Безопасность в SDN
+description: Подразделы в этом разделе можно использовать дополнительные сведения о безопасности в программно-Конфигурируемую сеть \(SDN\) в Windows Server 2016 Datacenter.
 manager: brianlic
 ms.prod: windows-server-threshold
 ms.technology: networking-sdn
@@ -8,20 +8,21 @@ ms.topic: article
 ms.assetid: 763d11a8-4225-4d96-b56f-1ec62e256bfd
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f191741a8445a33dfc3634859ee4fbea82b5bc39
-ms.sourcegitcommit: 19d9da87d87c9eefbca7a3443d2b1df486b0b010
-ms.translationtype: MT
+ms.openlocfilehash: 6a38f55745e9f1b4f38b36ce613d7c3f23a32ee6
+ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59850295"
 ---
-# <a name="security-for-sdn"></a>Безопасность для SDN
+# <a name="security-for-sdn"></a>Безопасность в SDN
 
->Область применения: Windows Server (канал точками годовой), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
-Сведения о безопасности в \(SDN\) определенные сетевые программного обеспечения, можно использовать разделы в этом разделе.
+Подразделы в этом разделе можно использовать дополнительные сведения о безопасности в программно-Конфигурируемую сеть \(SDN\).
 
 >[!Note]
->Дополнительную документацию определенные сетевые программного обеспечения можно использовать в следующих разделах библиотеки.
+>Дополнительную документацию программно-Конфигурируемую сеть можно использовать в следующих разделах библиотеки.
 >
 > - [Технологии SDN](../technologies/Software-Defined-Networking-Technologies.md)  
 > - [Планирование SDN](../plan/Plan-Software-Defined-Networking.md) 
@@ -29,7 +30,7 @@ ms.lasthandoff: 03/28/2018
 > - [Управление SDN](../manage/manage-sdn.md)  
 > - [Устранение неполадок SDN](../troubleshoot/Troubleshoot-Software-Defined-Networking.md)
 
-Этот раздел содержит следующие разделы.
+Этот раздел содержит следующие подразделы.
 
-- [Сетевой контроллер безопасности](nc-security.md)
+- [Сетевая безопасность контроллера](nc-security.md)
 - [Управление сертификатами для программно-конфигурируемой сети](sdn-manage-certs.md)
