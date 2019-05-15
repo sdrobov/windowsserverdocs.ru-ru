@@ -11,7 +11,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adds
 ms.openlocfilehash: e3b44dbc1c869680db91f5e9732a50504d80e7b8
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59877505"
@@ -27,7 +27,7 @@ ms.locfileid: "59877505"
   
 1. Убедитесь, что целевой сервер отвечает [требованиям к системе](https://technet.microsoft.com/library/dn303418.aspx).  
 2. Проверьте [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
-3. Проверьте параметры безопасности. Дополнительные сведения см. в разделах [Нерекомендуемые компоненты и изменения в поведении, связанные с доменными службами Active Directory в Windows Server 2012 и [Secure default settings in Windows Server 2008 и Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
+3. Проверьте параметры безопасности. Дополнительные сведения см. в разделах [Нерекомендуемые компоненты и изменения в поведении, связанные с доменными службами Active Directory в Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) и [Secure default settings in Windows Server 2008 и Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
 4. Проверьте подключение к целевому серверу с компьютера, где планируется установка.  
 5. Проверьте доступность необходимых ролей хозяина операций.  
 

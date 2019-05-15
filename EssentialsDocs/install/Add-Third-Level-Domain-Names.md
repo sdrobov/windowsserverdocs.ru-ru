@@ -14,7 +14,7 @@ ms.author: coreyp
 manager: dongill
 ms.openlocfilehash: 64bf24e45155fdd981e2061b3de7ebce1c53b36c
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59833325"
@@ -534,7 +534,7 @@ ms.locfileid: "59833325"
   
 3.  Щелкните правой кнопкой мыши раздел **Providers**, выберите команду **Создать** и щелкните пункт **Раздел**.  
   
-4.  В качестве имени раздела введите идентификатор поставщика. Идентификатор — это GUID, определенный для поставщика на шаге 8 процедуры [Add an implementation of the IDomainSignupProvider interface to the assembly](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
+4.  В качестве имени раздела введите идентификатор поставщика. Идентификатор — это GUID, определенный для поставщика на шаге 8 процедуры [Добавление в сборку реализации интерфейса IDomainSignupProvider](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
   
 5.  Щелкните правой кнопкой мыши созданный раздел и выберите пункт **Строковый параметр**.  
   
