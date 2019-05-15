@@ -10,7 +10,7 @@ ms.author: pashort
 author: shortpatti
 ms.openlocfilehash: 665e411eda834a59c6dbe3581611b9b58bd006f2
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59833575"
@@ -69,7 +69,7 @@ ms.locfileid: "59833575"
   
 -   **Домены в список разрешенных**. Это список доменов должны быть исключены из RRL параметры.  
   
--   **Белый список подсетей**. Это список подсетей должны быть исключены из RRL параметры.  
+-   **Утверженный список подсетей**. Это список подсетей должны быть исключены из RRL параметры.  
   
 -   **Список разрешений сервера интерфейсы**. Это список интерфейсов сервера DNS должны быть исключены из RRL параметры.  
   

@@ -38,7 +38,7 @@ ms.locfileid: "59868015"
 
 > [!IMPORTANT]
 > Нельзя использовать Internet Explorer для управления Windows Admin Center — вместо этого необходимо использовать [поддерживаемом браузере](../understand/faq.md#which-web-browsers-are-supported-by-windows-admin-center
-).  При установке Windows Admin Center в Windows Server, корпорация Майкрософт рекомендует управление с удаленного подключения в Windows 10 и Edge.  Кроме того вы можете управлять локально на сервере Windows после установки поддерживаемого браузера.
+).  При установке Windows Admin Center в Windows Server, корпорация Майкрософт рекомендует управление с удаленного подключения в Windows 10 и Microsoft Edge.  Кроме того вы можете управлять локально на сервере Windows после установки поддерживаемого браузера.
 
 ## <a name="supported-operating-systems-management"></a>Поддерживаемые операционные системы: Management
 

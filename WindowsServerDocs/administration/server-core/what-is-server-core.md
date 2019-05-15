@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 ms.date: 02/20/2018
 ms.openlocfilehash: 08229e458d0aa0c8e8397f0f053f37a207a1aea5
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59885605"
@@ -71,7 +71,7 @@ ms.locfileid: "59885605"
 | Панель задач                            | недоступно   | доступен                      |
 | Уведомления на панели задач              | недоступно   | доступен                      |
 | Taskmgr                            | доступен       | доступен                      |
-| Internet Explorer или Edge          | недоступно   | доступен                      |
+| Internet Explorer или Microsoft Edge          | недоступно   | доступен                      |
 | Встроенная справочная система               | недоступно   | доступен                      |
 | Оболочка Windows 10                   | недоступно   | доступен                      |
 | Проигрыватель Windows Media               | недоступно   | доступен                      |
