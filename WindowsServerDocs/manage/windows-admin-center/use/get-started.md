@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 02/15/2019
-ms.openlocfilehash: 61fdd70e53a49b704e11f71f0e5eb3176c31c378
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f4fd9f69e75ed80bbdb345b4041c2337c65ec2e6
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876015"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63742670"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Начало работы с Windows Admin Center
 
@@ -64,7 +64,7 @@ ms.locfileid: "59876015"
 
     ![](../media/launch/addserver2.png)
 
-   **--ИЛИ--**  
+   **--ИЛИ--**
 
 **Массовый импорт нескольких серверов**
 
@@ -73,6 +73,18 @@ ms.locfileid: "59876015"
     ![](../media/launch/import-servers.png)
 
  2. Нажмите кнопку **Обзор** и выберите файл, содержит запятую или новой строки разделены, список полных доменных имен для серверов, которые требуется добавить.
+
+    **--ИЛИ--**
+
+**Добавьте серверы, поиск по Active Directory**
+
+ 1. На **добавить соединение с сервером** выберите **поиск в Active Directory** вкладки.
+
+    ![](../media/launch/search-ad.png)
+
+ 2. Введите условия поиска и нажмите кнопку **поиска**. Поддерживаются подстановочные знаки (*).
+
+ 3. После завершения поиска - выберите один или несколько результатов, при необходимости добавить теги и нажмите кнопку **добавить**.
 
 ## <a name="authenticate-with-the-managed-node"></a>Проверка подлинности с помощью управляемого узла ##
 
@@ -142,9 +154,6 @@ Windows Admin Center поддерживает несколько механиз�
 
 Предварительная версия Windows Admin Center включает модуль PowerShell для импорта или экспорта в список соединений.
 
->[!IMPORTANT]
->Импорт и экспорт подключений с помощью модуля PowerShell поддерживается только при развертывании Windows Admin Center в качестве службы шлюза на сервере Windows.
-
 ```powershell
 # Load the module
 Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
@@ -158,7 +167,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 
 ### <a name="csv-file-format-for-importing-connections"></a>CSV-файл для импорта подключений
 
-Формат CSV-файл начинается с три заголовка: ```"name","type","tags"```, а затем каждое подключение в новой строке.
+Формат CSV-файл начинается с четырьмя заголовки ```"name","type","tags","groupId"```, а затем каждое подключение в новой строке.
 
 **имя** -полное ДОМЕННОЕ имя подключения
 
@@ -173,15 +182,17 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 
 **теги** , отделенный вертикальной чертой.
 
+**groupId** используется для общих подключений. Используйте значение ```global``` в этом столбце, чтобы сделать общее соединение.
+
 ### <a name="example-csv-file-for-importing-connections"></a>Пример CSV-файла для импорта подключений
 
 ```
-"name","type","tags"
+"name","type","tags","groupId"
 "myServer.contoso.com","msft.sme.connection-type.server","hyperv"
 "myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
-"mycluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016"
+"teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
 "myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
-"myclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016"
+"teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
 "myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
 ```
 
@@ -270,7 +281,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
    RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
    ```
 
-3. Импортируйте полученный в результате. CSV-файла в Windows Admin Center и иерархию группирования RDCMan будут представлены по тегам в список соединений. Дополнительные сведения см. в разделе [использование PowerShell для импорта или экспорта подключений (с тегами)](#use-powershell-to-import-or-export-your-connections-(with-tags)).
+3. Импортируйте полученный в результате. CSV-файла в Windows Admin Center и иерархию группирования RDCMan будут представлены по тегам в список соединений. Дополнительные сведения см. в разделе [использование PowerShell для импорта или экспорта подключений (с тегами)](#use-powershell-to-import-or-export-your-connections-with-tags).
 
 ## <a name="view-powershell-scripts-used-in-windows-admin-center"></a>Просмотра скриптов PowerShell, используемых в Windows Admin Center
 
