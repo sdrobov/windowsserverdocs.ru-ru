@@ -15,7 +15,7 @@ manager: dongill
 ms.date: 10/16/2017
 ms.openlocfilehash: bbc878bd0ee25ad92c640710ab6b46bbc0eaf62a
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59827685"
@@ -52,7 +52,7 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |0x08|NcSupported|Это область поддерживает канонизации имя, что DNS и сферы, стандарты именования.|
 |0x80|RC4|Это область поддерживает шифрование RC4 для включения доверительные отношения между сферами, который позволяет использовать TLS.|
 
-Флаги сферы хранятся в разделе реестра **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** сферы-name *. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
+Флаги сферы хранятся в разделе реестра **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** сферы-name*. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
 
 Можно узнать, какие флаги сферы доступны и установить, просмотрев выходные данные ksetup или ksetup /dumpstate.
 
