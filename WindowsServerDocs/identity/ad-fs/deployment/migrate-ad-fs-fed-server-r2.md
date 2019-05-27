@@ -10,7 +10,7 @@ ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.openlocfilehash: 6bc680d9a0de8946d6f39a5529a297138ee5e262
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59876065"
@@ -78,7 +78,7 @@ Get-ADFSProperties | Out-File “.\properties.txt”`.
   
 4.  Запишите удостоверение учетной записи службы федерации AD FS и пароль этой учетной записи.  
   
-Чтобы найти значение удостоверения, просмотрите столбец **Вход от имени****службы Windows AD FS 2.0** в консоли **Службы** . Запишите это значение.  
+Чтобы найти значение удостоверения, просмотрите столбец **Вход от имени** **службы Windows AD FS 2.0** в консоли **Службы** . Запишите это значение.  
   
 > [!NOTE]
 >  Для автономной службы федерации используется встроенная учетная запись NETWORK SERVICE.  В этом случае пароль не нужен.  

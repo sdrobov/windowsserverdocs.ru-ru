@@ -15,7 +15,7 @@ ms.author: elizapo
 ms.date: 08/04/2016
 ms.openlocfilehash: 2bba32f27ae01052a693d78f152d4487a04bd9bd
 ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/17/2019
 ms.locfileid: "59880685"
@@ -39,7 +39,7 @@ ms.locfileid: "59880685"
   
 ### <a name="to-set-up-a-station-with-a-usb-hub"></a>Создание станции с USB-концентратором  
   
-1.  Прежде чем подключать новую станцию, *завершите**сеансы* всех пользователей, а затем выключите компьютер и другие устройства в системе MultiPoint Service.  
+1.  Прежде чем подключать новую станцию, *завершите* *сеансы* всех пользователей, а затем выключите компьютер и другие устройства в системе MultiPoint Service.  
   
 2.  Подключите кабель нового видеомонитора к разъему DVI или VGA на компьютере (см. рисунок ниже).  
   
