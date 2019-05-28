@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 498b399818fb8c9e463f9990fa13c87648c0a33d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2d15f680f28c54da75100a03f7b85e880442d9be
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822155"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191737"
 ---
-# <a name="ad-fs-design-guide-in-windows-server-2012-r2"></a>Руководство по разработке служб AD FS в Windows Server 2012 R2
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
+# <a name="ad-fs-design-guide-in-windows-server"></a>Руководство по разработке AD FS в Windows Server 
 
 Службы федерации Active Directory \(AD FS\) предоставляет упрощенной и безопасной федерации удостоверений и единого входа\-на \(SSO\) возможности для конечных пользователей, которым требуется доступ к приложениям в AD FS\-защиты предприятия, в партнерских организациях федерации или в облаке.  
   
@@ -31,14 +29,14 @@ ms.locfileid: "59822155"
   
 ## <a name="in-this-guide"></a>В данном руководстве  
   
--   [Определение целей развертывания AD FS](Identify-Your-AD-FS-Deployment-Goals.md)  
+-   [Определение целей по развертыванию служб федерации Active Directory](Identify-Your-AD-FS-Deployment-Goals.md)  
   
--   [Планирование топологии развертывания AD FS](Plan-Your-AD-FS-Deployment-Topology.md)  
+-   [Планирование топологии развертывания для служб федерации Active Directory](Plan-Your-AD-FS-Deployment-Topology.md)  
   
--   [Требования к AD FS](AD-FS-Requirements.md)  
+-   [Требования к службам федерации Active Directory](AD-FS-Requirements.md)  
   
   
 ## <a name="see-also"></a>См. также  
-[Разработке служб AD FS](../../ad-fs/AD-FS-Design.md)  
+[Разработка служб федерации Active Directory](../../ad-fs/AD-FS-Design.md)  
   
 

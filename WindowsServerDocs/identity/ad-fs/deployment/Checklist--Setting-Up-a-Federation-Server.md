@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 44448088184d86874e91855d8a51ef40d8cea049
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d46fc3246ed6ead54d58f44aaed0e8863ea189a6
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880505"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192343"
 ---
 # <a name="checklist-setting-up-a-federation-server"></a>Контрольный список: Настройка сервера федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Этот контрольный список содержит задачи развертывания, которые необходимы для подготовки сервера под управлением Windows Server® 2012 для роли сервера федерации в службах федерации Active Directory \(AD FS\).  
   

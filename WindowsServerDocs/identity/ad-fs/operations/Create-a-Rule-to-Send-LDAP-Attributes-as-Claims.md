@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e9762e4bc50a1c2b862999af5269a0da376ec9a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00ea4f9f868b9c82c2a0859be971db26394251a3
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887615"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189348"
 ---
 # <a name="create-a-rule-to-send-ldap-attributes-as-claims"></a>Создание правила для отправки атрибутов LDAP как утверждений
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 С помощью отправлять атрибуты LDAP как шаблон правила утверждения в службах федерации Active Directory \(AD FS\), можно создать правило, которое будет выбрать атрибуты из Lightweight Directory Access Protocol \(LDAP\)хранилища атрибутов, например Active Directory, для отправки как утверждений проверяющей стороне. Например, можно использовать этот шаблон правила для создания отправлять атрибуты LDAP как утверждений правил, который извлекает значения атрибутов для прошедших проверку пользователей из **displayName** и **telephoneNumber** Active Каталог, атрибуты и затем отправить эти значения как два разных исходящих утверждения.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "59887615"
 8.  В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка правил утверждений](Configure-Claim-Rules.md)  
+[Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
-[Контрольный список: Создание правил для утверждений для доверия проверяющей стороны](https://technet.microsoft.com/library/ee913578.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[Контрольный список: Создание правил для утверждений для поставщика утверждений доверия](https://technet.microsoft.com/library/ee913564.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с поставщиком утверждений](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [Когда следует использовать Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

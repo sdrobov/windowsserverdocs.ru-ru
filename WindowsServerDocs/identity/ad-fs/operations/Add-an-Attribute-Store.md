@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 11baba5bfdb699f120a506feb8361db21d26cff1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 103ee707c88f4e88b231a833f739cf75b6503e18
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837865"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190097"
 ---
 # <a name="add-an-attribute-store"></a>Добавление хранилища атрибутов
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Учетные записи пользователей и учетные записи компьютеров, которым требуется доступ к ресурсу, защищенному служб федерации Active Directory \(AD FS\) хранятся в хранилище атрибутов, таких как доменные службы Active Directory \(AD DS \). Подсистема выдачи утверждений использует хранилищ атрибутов для сбора данных, необходимые для выдачи утверждений. Затем данные из хранилища атрибутов проецируется как утверждений.  
   

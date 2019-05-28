@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e7fb8e71afed1c0eb6b55857835d95f2dd0ec9d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca0b25480eedfc6471837ab8ae83b0d1d522e61e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875725"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191664"
 ---
 # <a name="certificate-requirements-for-federation-server-proxies"></a>Требования к сертификатам для прокси-серверов федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Серверы, работающие в роль прокси сервера федерации в службах федерации Active Directory \(AD FS\) необходимые для использования протокола SSL \(SSL\) сертификатов проверки подлинности сервера. Прокси-серверы федерации используют SSL-сертификаты проверки подлинности сервера для защиты обмена трафиком между веб-сервером и веб-клиентами.  
   
@@ -36,4 +34,4 @@ ms.locfileid: "59875725"
 Если любой сертификат, использование имеет списки отзыва сертификатов \(списки отзыва сертификатов\), сервер с настроенным сертификатом должен иметь возможность связаться с сервером, распространяющим CRL. Тип CRL определяет используемые порты.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

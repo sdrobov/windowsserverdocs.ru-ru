@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: aca47658cc5a20f63dbd59a26ebe135dd04def92
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 15a6c095648795badfae6f68f1ba2f9270219db8
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59811935"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191461"
 ---
 # <a name="determine-your-federated-application-strategy-in-the-resource-partner"></a>Определение стратегии работы с федеративными приложениями у партнера по ресурсам
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Важной частью проектирования новой службы федерации Active Directory \(AD FS\) инфраструктуру в организации партнера по ресурсам Определение полного набора приложений и служб, которые будут использоваться для участия в федерации и партнеров, учетной записи будут получателями этих ресурсов. Перед созданием стратегии работы с федеративными приложениями и службами ответьте на следующие вопросы.  
   
@@ -34,14 +32,14 @@ ms.locfileid: "59811935"
   
 Ответы на эти вопросы помогут вам спланировать надежной архитектуры AD FS. Кроме того, это поможет в создании стратегии работы с федеративным приложением и службами, в основе которой лежат принципы экономичности и эффективного использования ресурсов. Дополнительные сведения о разработке оптимальной стратегии работы с федеративными приложениями и службами для вашей организации см. в следующих разделах этого руководства:  
   
--   [Предоставить пользователям доступ к Active Directory для приложений и служб](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Предоставление пользователям Active Directory вашей организации доступа к вашим приложениям и службам с поддержкой утверждений](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
--   [Предоставить пользователям доступ к Active Directory к приложениям и службам других организаций](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
+-   [Предоставление пользователям Active Directory вашей организации доступа к приложениям и службам других организаций](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
   
--   [Предоставление пользователям другой организации доступа к вашим приложениям с поддержкой утверждений и служб](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Предоставление пользователям другой организации доступа к вашим приложениям и службам с поддержкой утверждений](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
 Дополнительные сведения о создании утверждений\-приложение, работающее с ASP.NET или службы WCF, см. в разделе [Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

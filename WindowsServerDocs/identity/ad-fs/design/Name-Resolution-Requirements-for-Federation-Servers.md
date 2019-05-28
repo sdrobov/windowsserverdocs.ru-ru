@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 74701cbaa403611b081942f016b21db1c0b3ff70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2776cc29b8c9ede884a6b304cd541f700f516ca
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845465"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191257"
 ---
 # <a name="name-resolution-requirements-for-federation-servers"></a>Требования к разрешению имен для серверов федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 При попытке клиентских компьютеров в корпоративной сети доступом к приложению или веб-службы, который защищен службой служб федерации Active Directory \(AD FS\), они сначала должны пройти аутентификацию на сервер федерации. Чтобы позволить клиентам корпоративной сети к серверу федерации, используя встроенную проверку подлинности Windows является одним из способов для проверки подлинности.  
   
@@ -37,4 +35,4 @@ ms.locfileid: "59845465"
   
 
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
