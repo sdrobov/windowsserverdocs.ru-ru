@@ -9,16 +9,14 @@ ms.date: 10/04/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 73de8908677b3f74651b10c29ef2abe62e484694
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 88c4d976b9808d254dc1681ce9eee3ca556824ab
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868415"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189790"
 ---
 # <a name="configure-additional-authentication-methods-for-ad-fs"></a>Настройка дополнительных методов проверки подлинности для службы федерации Active Directory
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Для многофакторной проверки подлинности (MFA) необходимо выбрать по крайней мере один дополнительный метод проверки подлинности. По умолчанию в федерации служб Active Directory (AD FS) в Windows Server 2012 R2 для дополнительной проверки подлинности можно выбрать сертификат подлинности (другими словами, смарт карта).
 
@@ -39,7 +37,7 @@ ms.locfileid: "59868415"
 |Компания Gemalto|Службы идентификации и безопасности компании Gemalto|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
 |inWebo Technologies|Службы корпоративной проверки подлинности inWebo|[Корпоративная проверка подлинности inWebo](http://www.inwebo.com)|
 |Login People|API-соединитель Login People MFA для AD FS 2012 R2 (общедоступная бета-версия)|[https://www.loginpeople.com](https://www.loginpeople.com)|
-|Корпорация Майкрософт.|Многофакторная проверка подлинности Microsoft Azure|[Пошаговое руководство: Управление рисками для уязвимых приложений с помощью дополнительной многофакторной проверки подлинности](https://technet.microsoft.com/library/dn280946.aspx) (см. шаг 3).|
+|Корпорация Майкрософт.|Многофакторная проверка подлинности Microsoft Azure|[Пошаговое руководство. Управление рисками для уязвимых приложений с помощью дополнительной многофакторной проверки подлинности](https://technet.microsoft.com/library/dn280946.aspx) (см. шаг 3).|
 Mideye | Поставщик mideye проверки подлинности для служб федерации Active Directory | [Mideye двухфакторной проверки подлинности с помощью служб федерации Microsoft Active Directory](https://www.mideye.com/support/administrators/documentation/integration/microsoft-adfs/)|
 |Okta | Okta многофакторной проверки Подлинности для служб федерации Active Directory | [Okta многофакторной проверки Подлинности для Active Directory Federation Services (ADFS)](https://help.okta.com/en/prod/Content/Topics/integrations/adfs-okta-int.htm)|
 |Одно удостоверение| Starling 2FA AD FS|[Starling 2FA адаптера AD FS](https://www.oneidentity.com/products/starling-two-factor-authentication/)|

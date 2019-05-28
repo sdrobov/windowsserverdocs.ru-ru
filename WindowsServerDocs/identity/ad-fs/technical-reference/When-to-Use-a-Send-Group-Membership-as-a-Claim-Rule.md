@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: dffd886ffd0bedd429918f72408b2d13d9fa1bdf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ea537aa61cd7bfbe05ed1dd151eddd4a0bfc5ca7
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859175"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188299"
 ---
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>Когда следует использовать правило "Отправлять членство в группе как утверждение"
 Это правило можно использовать в службах федерации Active Directory \(AD FS\) при необходимости выдачи нового значения исходящего утверждения только для тех пользователей, являющиеся членами указанной группы безопасности Active Directory. При использовании этого правила одно утверждение выдается только для указанной группы, соответствующей логике правила, как описано в следующей таблице.  
   

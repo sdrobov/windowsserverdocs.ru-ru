@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5b4ba00aa9fed1022d9c0137d05ac6240b44b276
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93f61bc7fd147b2e0220178bcd163b6ca56279cf
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837915"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191567"
 ---
 # <a name="deploying-ad-fs-in-the-account-partner-organization"></a>Развертывание служб федерации Active Directory в партнерской организации по учетным записям
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Партнера по учетным записям в службах федерации Active Directory \(AD FS\) представляет организацию, в котором физически хранятся учетные записи пользователей в поддерживаемом хранилище атрибутов отношения доверия федерации. Дополнительные сведения о какой атрибут поддерживаемых хранилищ см. в разделе [The Role of Attribute Stores](../../ad-fs/technical-reference/The-Role-of-Attribute-Stores.md).  
   
@@ -30,11 +28,11 @@ ms.locfileid: "59837915"
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Сведения о роли сервера федерации в партнере по учетным записям](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
+-   [Сведения о роли сервера федерации в организации партнера по учетным записям](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md)  
   
--   [Review the Role of the Federation Server Proxy in the Account Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md)  
+-   [Сведения о роли прокси-сервера федерации в организации партнера по учетным записям](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md)  
   
 -   [Подготовка клиентских компьютеров в партнере по учетным записям](Prepare-Client-Computers-in-the-Account-Partner.md)  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

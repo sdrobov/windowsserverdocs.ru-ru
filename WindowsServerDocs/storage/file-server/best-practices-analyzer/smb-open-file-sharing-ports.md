@@ -7,12 +7,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: b6ad1f1f8573fc380e999e5ec2091cea8ebb8aa1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d761e4532a5be92d43e09904e9df8f2aa61b6bb8
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820365"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63738470"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: Файлам и принтерам, совместного использования портов должны быть открыты
 
@@ -69,7 +69,7 @@ ms.locfileid: "59820365"
 
 2.  В левой области щелкните **Дополнительные параметры**и в дереве консоли щелкните **правила для входящих подключений**.
 
-3.  В разделе **правила для входящих подключений**, найдите правила **к файлам и принтерам (NB-сеанса-In)** и **к файлам и принтерам (SMB — входящий)**.
+3.  В разделе **правила для входящих подключений**, найдите правила **к файлам и принтерам (NB-сеанса-In)** и **к файлам и принтерам (SMB — входящий)** .
 
 4.  Для каждого правила, щелкните правой кнопкой мыши правило и нажмите кнопку **включить правило**.
 

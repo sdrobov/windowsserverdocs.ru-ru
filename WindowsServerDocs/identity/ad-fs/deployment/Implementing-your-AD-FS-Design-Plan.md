@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 31c2e048c3c125d0ea60610b049501151d7aa823
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6150b52030734c57b345aea731302650bcbddbfd
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830785"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192127"
 ---
 # <a name="implementing-your-ad-fs-design-plan"></a>Реализация плана проектирования AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Следующие условия окружающей среды и требований являются важными факторами в реализации служб федерации Active Directory \(AD FS\) разработку плана:  
   
@@ -39,6 +37,6 @@ ms.locfileid: "59830785"
   
 Используйте следующие контрольные списки родительской в этом разделе руководства к освоения задачи развертывания для реализации вашей организации предпочтительной AD FS:  
   
--   [Контрольный список: Реализация единого входа в Интернете](Checklist--Implementing-a-Web-SSO-Design.md)  
+-   [Контрольный список. Реализация механизма единого входа через Интернет](Checklist--Implementing-a-Web-SSO-Design.md)  
   
--   [Контрольный список: Реализация федеративных Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md)  
+-   [Контрольный список. Реализация федеративного механизма единого входа через Интернет [ADFS2]](Checklist--Implementing-a-Federated-Web-SSO-Design.md)  

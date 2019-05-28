@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: bd15df5360a50e417881d83319344dbdf48f35fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2af1bfc295469d43e59593d69d4ba88f476e427
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829645"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034149"
 ---
 # <a name="ad-forest-recovery---windows-server-2003-recovery"></a>Восстановление леса AD - восстановления Windows Server 2003
 
@@ -22,9 +22,9 @@ ms.locfileid: "59829645"
 
 Этот раздел содержит процедуры восстановления леса для контроллеров домена (DC) под управлением Windows Server 2003. Общая процедура восстановления леса то же самое контроллеров домена Windows Server 2003, но конкретных процедур могут отличаться из-за различных средств. Например можно использовать Ntdsutil.exe резервного копирования и восстановления контроллеров домена под управлением контроллеров домена Windows Server 2003, в то время как система архивации данных Windows Server или Wbadmin.exe, используемых для контроллеров домена под управлением Windows Server 2008 или более поздней версии.  
   
-- [Резервное копирование данных состояния системы](#Backing-up-the-System-State-data)  
-- [Выполнение непринудительное восстановление](#Performing-a-nonauthoritative restore)  
-- [Установка и настройка службы DNS-сервера](#Install-and-configure-the-DNS-Server-service)  
+- [Резервное копирование данных состояния системы](#backing-up-the-system-state-data)  
+- [Выполнение непринудительное восстановление](#performing-a-nonauthoritative-restore)  
+- [Установка и настройка службы DNS-сервера](#install-and-configure-the-dns-server-service)
 
 ## <a name="backing-up-the-system-state-data"></a>Резервное копирование данных состояния системы
 Используйте следующую процедуру для резервного копирования данных состояния системы, а также любые другие данные, выбранный для текущей операции резервного копирования, контроллера домена под управлением Windows Server 2003. Windows Server 2003 включает в себя средство Ntbackup, которое можно использовать для резервного копирования данных состояния системы.  
@@ -57,7 +57,7 @@ ms.locfileid: "59829645"
 ### <a name="to-perform-a-nonauthoritative-restore"></a>Для выполнения непринудительное восстановление
   
 1. После запуска контроллера домена, нажмите клавишу F8, чтобы перезагрузить компьютер в режиме восстановления служб каталогов (DSRM).  
-2. Выберите **режима восстановления служб каталогов (только для контроллеров домена Windows)**.  
+2. Выберите **режима восстановления служб каталогов (только для контроллеров домена Windows)** .  
 3. Выберите операционную систему, необходимо запустить в режиме восстановления.  
 4. Войдите в систему с правами администратора (вы можете использовать учетную запись локального компьютера, не вариант входа домена доступен только).  
 5. В командной строке введите **ntbackup**, и нажмите клавишу ВВОД.  
@@ -119,12 +119,12 @@ ms.locfileid: "59829645"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Восстановление леса AD — предварительные требования](AD-Forest-Recovery-Prerequisties.md)  
+- [Восстановление леса AD — необходимые условия](AD-Forest-Recovery-Prerequisties.md)  
 - [Восстановление леса AD — составить план восстановления пользовательских леса](AD-Forest-Recovery-Devising-a-Plan.md)  
 - [Восстановление леса AD — определить проблему](AD-Forest-Recovery-Identify-the-Problem.md)
 - [Восстановление леса AD — определить способ восстановления](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [Восстановление леса AD - начального восстановления](AD-Forest-Recovery-Perform-initial-recovery.md)  
-- [Восстановление леса AD - процедуры](AD-Forest-Recovery-Procedures.md)  
+- [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)  
 - [Восстановление леса AD — часто задаваемые вопросы](AD-Forest-Recovery-FAQ.md)  
 - [Восстановление леса AD — восстановление одного домена в лесу Multidomain](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
 - [Восстановление леса AD - восстановление леса с контроллерами домена Windows Server 2003](AD-Forest-Recovery-Windows-Server-2003.md) 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b60127cf957a30d147c9992c74c01e37e5b8bf89
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 68af5f118b2cc9d7941abddccd2a1bc7fde4c6d0
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871925"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222937"
 ---
 # <a name="sc-delete"></a>SC delete
 
@@ -26,7 +26,7 @@ ms.locfileid: "59871925"
 
 Удаляет раздел службы из реестра. Если служба выполняется или другой процесс имеет открытый дескриптор к службе, служба помечена для удаления.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+В разделе [Примеры](#examples) показан принцип использования этой команды.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +46,7 @@ sc [<ServerName>] delete [<ServiceName>]
 
 Используйте **Установка и удаление программ** на **панели управления** удаления DHCP, DNS или любые другие службы, встроенных в операционную систему. Обратите внимание, что **Установка и удаление программ** не удаляется только подраздел реестра для службы, но будет также удалить службу и удалить все ярлыки к нему.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="examples"></a>Примеры
 
 Для удаления раздела реестра службы **NewServ** из реестра на локальном компьютере, введите:
 ```
@@ -55,4 +55,4 @@ sc delete newserv
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

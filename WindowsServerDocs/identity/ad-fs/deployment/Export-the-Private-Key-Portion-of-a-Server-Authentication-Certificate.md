@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c968f0702d56b56d0a80459e5cf0c9e658c56741
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3a39f9d51ed8243118522ae37bc7d205a7ea416
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857195"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192137"
 ---
 # <a name="export-the-private-key-portion-of-a-server-authentication-certificate"></a>Экспорт части сертификата аутентификации сервера с закрытым ключом
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Каждый сервер федерации в службах федерации Active Directory \(AD FS\) фермы необходимо иметь доступ к закрытому ключу сертификата проверки подлинности сервера. Если вы реализуете ферму серверов федерации или веб-серверов, необходимо иметь один сертификат аутентификации. Этот сертификат должен быть выдан центром сертификации предприятия \(ЦС\), она должна иметь экспортируемый закрытый ключ. Закрытый ключ сертификата аутентификации сервера должен быть экспортируемым, чтобы его можно было предоставить всем серверам на ферме.  
   
@@ -55,9 +53,9 @@ ms.locfileid: "59857195"
 9. Импортируйте экспортированный сертификат аутентификации сервера в хранилище сертификатов на новом сервере до установки службы федерации. Сведения об импорте сертификата см. в разделе Импорт сертификата сервера \( [http:\/\/go.microsoft.com\/fwlink\/? LinkId\=108283](https://go.microsoft.com/fwlink/?LinkId=108283)\).  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[Контрольный список: Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
+[Контрольный список. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
 [Требования к сертификатам для серверов федерации](https://technet.microsoft.com/library/dd807040.aspx)  
   

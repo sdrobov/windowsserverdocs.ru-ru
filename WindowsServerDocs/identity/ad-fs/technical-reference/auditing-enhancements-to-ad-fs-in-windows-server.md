@@ -9,16 +9,15 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3d622686a3cc34316f0cf5187839785195c2f104
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f6e4abb4255281be85b7fa928566f681bcf2de2
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880235"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188359"
 ---
 # <a name="auditing-enhancements-to-ad-fs-in-windows-server-2016"></a>Усовершенствования аудита в AD FS под управлением Windows Server 2016
 
->Область применения. Windows Server 2016
 
 В настоящее время в AD FS для Windows Server 2012 R2 существует являются многочисленные события аудита, созданные для одного запроса и соответствующие сведения о входа или выдачи маркера действия либо отсутствуют (в некоторых версиях AD FS) или распределяться на несколько событий аудита. По умолчанию AD FS события аудита будут отключены из-за своей природе verbose.  
     С появлением AD FS в Windows Server 2016 аудит стала более простой и менее многословный.  

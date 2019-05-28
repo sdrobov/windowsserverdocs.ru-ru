@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 27282c6b88b0457af3b4cf031fdadced7b40268c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ac666539170bb7aabf0b7f58a7ef003ebe87c2a8
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878135"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188391"
 ---
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="understanding-key-ad-fs-concepts"></a>Общие сведения о ключевых понятиях AD FS
 Рекомендуется, чтобы узнать о важных концепциях для служб федерации Active Directory и ознакомиться с набором функций.  
   
@@ -52,7 +50,7 @@ AD FS представляет это решение доступа удосто
   
 -   [Роль хранилищ атрибутов](The-Role-of-Attribute-Stores.md)  
   
--   [Роль базы данных конфигурации AD FS](The-Role-of-the-AD-FS-Configuration-Database.md)  
+-   [Роль базы данных конфигурации AD FS](The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 -   [Роль утверждений](The-Role-of-Claims.md)  
   
@@ -66,6 +64,6 @@ AD FS представляет это решение доступа удосто
   
 -   [Определения типа шаблона правил утверждений](Determine-the-Type-of-Claim-Rule-Template-to-Use.md)  
   
--   [Как URI используются в AD FS](How-URIs-Are-Used-in-AD-FS.md)  
+-   [Использование универсальных кодов ресурсов (URI) в AD FS](How-URIs-Are-Used-in-AD-FS.md)  
   
 

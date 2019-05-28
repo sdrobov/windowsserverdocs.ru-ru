@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 167e43d49c08d0e39549bf46888118f985e3876d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72fe425b040f83a217a144976265c7754830c91b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863775"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189501"
 ---
 # <a name="create-a-rule-to-permit-or-deny-users-based-on-an-incoming-claim"></a>Создание правила для разрешения или запрета пользователям на основании входящего утверждения 
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 В Windows Server 2016, можно использовать **политику контроля доступа** создать правило, которое будет разрешать или запрещать пользователям на основании входящего утверждения.  В Windows Server 2012 R2 с помощью **разрешать или запрещать пользователям на основании входящего утверждения** шаблон правила в службах федерации Active Directory \(AD FS\), можно создать правило авторизации, которая будет предоставлена или Запретите доступ конкретного пользователя к проверяющей стороне на основе типа и значения входящего утверждения. 
 
@@ -115,9 +114,9 @@ ms.locfileid: "59863775"
 8.  В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка правил утверждений](Configure-Claim-Rules.md)  
+[Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
-[Контрольный список: Создание правил для утверждений для доверия проверяющей стороны](https://technet.microsoft.com/library/ee913578.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  
   
 [Когда следует использовать Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

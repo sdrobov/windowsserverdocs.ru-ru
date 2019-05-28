@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 13ce514dc5f3f70217a26c898cde6fe24d4967c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2f597994aa74f453903e09f7d3eefd83f26faba
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847385"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192273"
 ---
 # <a name="configure-a-federation-server"></a>Настройка сервера федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 После установки служб федерации Active Directory \(AD FS\) службу роли на компьютере, можно приступать к настройке этого компьютера в качестве сервера федерации. Необходимо выполнить одно из следующих действий.  
   
@@ -118,7 +116,7 @@ ms.locfileid: "59847385"
         Install-AdfsFarm -CertificateThumbprint <certificate_thumbprint> -FederationServiceName <federation_service_name> -ServiceAccountCredential $fscred  
         ```  
   
-        Для получения значения для **< сертификат\_отпечаток >**, запустите `dir Cert:\LocalMachine\My`, а затем выберите отпечаток SSL-сертификата. Значение **< федерации\_службы\_имя >** имя службы федерации, например fs.contoso.com.  
+        Для получения значения для **< сертификат\_отпечаток >** , запустите `dir Cert:\LocalMachine\My`, а затем выберите отпечаток SSL-сертификата. Значение **< федерации\_службы\_имя >** имя службы федерации, например fs.contoso.com.  
   
         > [!NOTE]  
         > Если это не при первом выполнении этой команды, добавить `OverwriteConfiguration` параметра.  

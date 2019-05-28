@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 32b8e3cc133ce95872881115608bb8cfb17b2427
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7d046c720c5c6250b6efa03e068aa66e2a6bbe3d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816015"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192304"
 ---
 # <a name="configure-name-resolution-for-a-federation-server-proxy-in-a-dns-zone-that-serves-only-the-perimeter-network"></a>Настройка разрешения имен для прокси-сервера федерации в зоне DNS, которая обслуживает только сеть периметра
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Позволяя успешно работать разрешение имен для сервера федерации в службах федерации Active Directory \(AD FS\) сценарии, в которых один или несколько доменных имен \(DNS\) зоны обслуживания только периметра сеть, следующие задачи должны быть выполнены:  
   
@@ -58,7 +57,7 @@ ms.locfileid: "59816015"
   
 1.  Откройте оснастку DNS на DNS-сервера для сети периметра,\-в. Нажмите кнопку **запустить**, пункты **Администрирование**, а затем нажмите кнопку **DNS**.  
   
-2.  В дереве консоли щелкните правой кнопкой мыши\-щелкните зону прямого просмотра, а затем нажмите кнопку **новый узел \(A или AAAA\)**.  
+2.  В дереве консоли щелкните правой кнопкой мыши\-щелкните зону прямого просмотра, а затем нажмите кнопку **новый узел \(A или AAAA\)** .  
   
 3.  В **имя**, введите только имя компьютера сервера федерации. Например, полное доменное имя \(полное доменное имя\) fs.fabrikam.com, тип **fs**.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "59816015"
 5.  Нажмите кнопку **Добавить узел**.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
+[Контрольный список. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
 [Требования к разрешению имен для прокси-серверов федерации](https://technet.microsoft.com/library/dd807055.aspx)  
   

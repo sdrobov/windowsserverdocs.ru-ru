@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d2b60ce593c2ca7eb902595ee6a42850cb7605d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dbceb19d31738bdc5b628a9a2b069e5d3022d145
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870845"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190951"
 ---
 # <a name="review-the-role-of-the-federation-server-proxy-in-the-account-partner"></a>Сведения о роли прокси-сервера федерации в организации партнера по учетным записям
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Основная роль прокси-сервера федерации в сети периметра организации партнера в службах федерации Active Directory \(AD FS\) состоит в сборе учетных данных проверки подлинности на клиентском компьютере, который входит в систему в Интернете и передавать эти учетные данные на сервер федерации, который находится в корпоративной сети организации партнера по учетным записям. Учетная запись клиентского компьютера хранится в хранилище атрибутов партнера по учетным записям.  
   
@@ -35,4 +33,4 @@ ms.locfileid: "59870845"
   
 
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

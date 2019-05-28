@@ -8,16 +8,15 @@ ms.date: 09/19/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2b11454427a65e37604b430a63b5ed745f4a2bb1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 946e99448d13bf6782c10bce5a0b8566da4deb17
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864455"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190385"
 ---
 # <a name="ad-fs-paginated-sign-in"></a>AD FS, с разбиением на страницы входа в систему
 
->Область применения. Windows Server 2019
 
 Для AD FS 2019 г. Мы модернизировали пользовательский Интерфейс входа.  Теперь входа в AD FS будет иметь же вида Azure AD.  Это обеспечит пользователям более согласованным входа в систему, включение потока пользователя по центру и с разбиением на страницы. 
 
@@ -60,4 +59,4 @@ ms.locfileid: "59864455"
 
 • Для тех, кто не планируется обновление AD FS 2019 г., но все равно хотите обновленной: [С помощью Azure AD UX веб-темы в службах федерации Active Directory](azure-ux-web-theme-in-ad-fs.md)
 
-• Центральное расположение для настройки: [Настройка пользователя AD FS входа в систему](ad-fs-user-sign-in-customization.md)
+• Центральное расположение для настройки: [Настройка входа пользователя AD FS](ad-fs-user-sign-in-customization.md)

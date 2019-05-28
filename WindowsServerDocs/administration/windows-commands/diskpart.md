@@ -5,15 +5,14 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 54b34b6d8849caecae2123ddab91a658a4692ba3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3cc0667b54dba75d892795f6520664ce7a7a62a5
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849345"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192649"
 ---
 # <a name="diskpart-commands"></a>Команды DiskPart
-
 
 Область применения. Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 и Windows Server 2008 R2, Windows Server 2008
 
@@ -31,11 +30,8 @@ ms.locfileid: "59849345"
 
 `diskpart`
 
-
 > [!IMPORTANT]
-> Членство в локальной <STRONG>Администраторы</STRONG> группы, либо эквивалентной, является минимальным требованием для выполнения программы DiskPart. 
-<br>
-
+> Членство в локальной **Администраторы** группы, либо эквивалентной, является минимальным требованием для выполнения программы DiskPart. 
 
 Позволяет выполнять следующие команды Diskpart интерпретатор команд:
 
@@ -118,7 +114,6 @@ ms.locfileid: "59849345"
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Командлеты хранилища в Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/storage/)
-

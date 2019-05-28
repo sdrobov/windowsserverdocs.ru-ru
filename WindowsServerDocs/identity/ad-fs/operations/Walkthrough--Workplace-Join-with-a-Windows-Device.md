@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fd222eb47982591e051594e8a572443b65c0357f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8b3b2934e7aa177e873e19d77530b2d796ccd521
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864005"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188899"
 ---
 # <a name="walkthrough-workplace-join-with-a-windows-device"></a>Пошаговое руководство: присоединение к рабочему месту с устройства Windows
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 В этой статье демонстрируется использование функции присоединения к рабочему месту для подключения устройства Windows к рабочему месту и доступ к веб-приложению с использованием функции единого входа. Необходимо выполнить действия, описанные в [Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md) разделе до начала выполнения данного пошагового руководства.
 

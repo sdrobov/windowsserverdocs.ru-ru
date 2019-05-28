@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: fe113eb7fe5cb096ff1e94150b929682d137b24b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8e05043d029636ddeb3a24349897ac61a713b2a7
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871955"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034114"
 ---
 # <a name="perform-initial-recovery"></a>Восстановление на исходный  
 
@@ -22,9 +22,9 @@ ms.locfileid: "59871955"
 
 Этот раздел включает следующие действия:  
 
-- [Восстановление первого контроллера домена с возможностью записи в каждом домене](#Restore-the-first-writeable-domain-controller-in-each-domain)  
-- [Повторное подключение каждого контроллера домена с возможностью записи восстановленной к сети](#Reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
-- [Добавление глобального каталога на контроллер домена в корневом домене леса](#Add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
+- [Восстановление первого контроллера домена с возможностью записи в каждом домене](#restore-the-first-writeable-domain-controller-in-each-domain)  
+- [Повторное подключение каждого контроллера домена с возможностью записи восстановленной к сети](#reconnect-each-restored-writeable-domain-controller-to-a-common-network)  
+- [Добавление глобального каталога на контроллер домена в корневом домене леса](#add-the-global-catalog-to-a-domain-controller-in-the-forest-root-domain)  
 
 ## <a name="restore-the-first-writeable-domain-controller-in-each-domain"></a>Восстановление первого контроллера домена с возможностью записи в каждом домене  
 
@@ -151,12 +151,12 @@ ms.locfileid: "59871955"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Восстановление леса AD — предварительные требования](AD-Forest-Recovery-Prerequisties.md)  
+- [Восстановление леса AD — необходимые условия](AD-Forest-Recovery-Prerequisties.md)  
 - [Восстановление леса AD — составить план восстановления пользовательских леса](AD-Forest-Recovery-Devising-a-Plan.md)  
 - [Восстановление леса AD — определить проблему](AD-Forest-Recovery-Identify-the-Problem.md)
 - [Восстановление леса AD — определить способ восстановления](AD-Forest-Recovery-Determine-how-to-Recover.md)
 - [Восстановление леса AD - начального восстановления](AD-Forest-Recovery-Perform-initial-recovery.md)  
-- [Восстановление леса AD - процедуры](AD-Forest-Recovery-Procedures.md)  
+- [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)  
 - [Восстановление леса AD — часто задаваемые вопросы](AD-Forest-Recovery-FAQ.md)  
 - [Восстановление леса AD — восстановление одного домена в лесу Multidomain](AD-Forest-Recovery-Single-Domain-in-Multidomain-Recovery.md)  
 - [Восстановление леса AD - восстановление леса с контроллерами домена Windows Server 2003](AD-Forest-Recovery-Windows-Server-2003.md)  

@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 1b8344594c9fc477ed8424c716ec8d7f7fd91ef3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 29d50a4d1855e609b6ac9ee627256201074a5033
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852805"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190720"
 ---
 # <a name="web-sso-design"></a>Проект единого входа через Интернет
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В одном Web\-входа\-на \(SSO\) разработки в службах федерации Active Directory \(AD FS\), пользователи должны проходить проверку подлинности только один раз для доступа к нескольким AD FS\- защищенных приложений или служб. В этом проекте все пользователи являются внешними, и федеративное доверие отсутствует, так как нет партнерских организаций. Как правило этот проект разворачивается, когда вы хотите предоставить отдельных потребителей или клиенту доступ к одной или более AD FS — защищенных служб или приложений в Интернете, как показано на следующем рисунке.  
   
@@ -33,4 +31,4 @@ ms.locfileid: "59852805"
 Список подробных задач, которые можно использовать для планирования и развертывания проекта единого входа через Интернет, см. в разделе [контрольный список: Реализация единого входа в Интернете](../../ad-fs/deployment/Checklist--Implementing-a-Web-SSO-Design.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
