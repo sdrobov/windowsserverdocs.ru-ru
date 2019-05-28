@@ -9,16 +9,15 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d5c2d84c263517a4c81622ca02538796ccd9da71
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2d819ea036029fbe7cfde9ad5a445db6b2b42c96
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817505"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189699"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>Настройка служб AD FS для проверки подлинности сертификата пользователя
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 AD FS можно настроить для x509 описано в разделе с помощью одного из режимов проверки подлинности сертификата пользователя [в этой статье](ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md). Эта возможность может использоваться [с Azure Active Directory](https://blogs.msdn.microsoft.com/samueld/2016/07/19/adfs-certauth-aad-o365/) или сам по себе, чтобы предоставить клиентам и устройствам подготовлены с помощью сертификатов пользователей для доступа к AD FS ресурсы из интрасети или экстрасети.
 
@@ -43,7 +42,7 @@ AD FS можно настроить для x509 описано в разделе
 
 
 ## <a name="troubleshooting"></a>Устранение неполадок
-- Если запросы на проверку подлинности сертификата завершится ошибкой и HTTP 204 «Нет содержимого из https://certauth.fs.contoso.com"ответ, корневой и все промежуточные сертификаты ЦС установлены, соответственно, доверенным корневым ЦС и промежуточных ЦС хранилища на всех сертификатов серверы федерации.
+- Если запросы на проверку подлинности сертификата завершится ошибкой и HTTP 204 «содержимое из https:\//certauth.fs.contoso.com» ответ, корневой и все промежуточные сертификаты ЦС установлены, соответственно, доверенным корневым ЦС и Промежуточный сертификат ЦС хранит на всех серверах федерации.
 - Если по неизвестным причинам не выполняются запросы на проверку подлинности сертификата, Экспорт сертификата клиента в CER-файл и выполните команду 
 
 `certutil -f -urlfetch -verify certificatefilename.cer`

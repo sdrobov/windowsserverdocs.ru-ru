@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f6fb37c16c20915c0051e3a24cdb0c147ae92d9c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8c3db2873e1c7a0fa217ba37b9439cc38dfafc36
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835875"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191002"
 ---
 # <a name="provide-your-active-directory-users-access-to-your-claims-aware-applications-and-services"></a>Предоставление пользователям Active Directory вашей организации доступа к вашим приложениям и службам с поддержкой утверждений
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Если вы являетесь администратором в организации партнера в службах федерации Active Directory \(AD FS\) развертывания и вы ставите целью развертывания для предоставления единого\-входа\-на \( Единый вход\) доступ для сотрудников в корпоративной сети к размещенным ресурсам:  
   
@@ -58,4 +56,4 @@ ms.locfileid: "59835875"
 ![доступ к утверждений](media/31394ea8-fecb-4372-ac3f-cc3cf566ffc9.gif)  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

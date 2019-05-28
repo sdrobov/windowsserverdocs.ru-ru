@@ -5,20 +5,18 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 09/19/2018
+ms.date: 04/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6fb023529ac8857f7c2eb35586be497f0c809a51
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a831154a8b1e84f5ed879375980882e208c33d73
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874175"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190348"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>Средство ускоренного восстановления AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 ## <a name="overview"></a>Обзор
 Сегодня AD FS является режим высокой доступности, настроив ферму AD FS. Некоторые организации хотели бы способ с одним сервером развертывания AD FS, устраняя необходимость в нескольких серверов AD FS и сетевой нагрузки, балансировка инфраструктуры, но при этом иметь некоторые гарантию того, что служба может быть быстро восстановлена Если возникла проблема.
@@ -215,6 +213,16 @@ RngCryptoServiceProvider используется для создания слу
 > При выполнении восстановления, может создать файл PostRestore_Instructions обзором дополнительной проверки подлинности поставщиков хранилищ атрибутов, и отношения доверия поставщиков утверждений локального нужно установить вручную перед запуском службы AD FS.
 
 ## <a name="version-release-history"></a>Журнал выпуска версий
+
+### <a name="version-10810"></a>Версия: 1.0.81.0
+Выпуск: Апрель 2019 г.
+
+**Исправленные проблемы:**
+
+
+- Исправления ошибок для сертификатов резервного копирования и восстановления
+- Дополнительные сведения трассировки в файл журнала
+
 
 ### <a name="version-10750"></a>Версия: 1.0.75.0
 Выпуск: Август 2018 г.

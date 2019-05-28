@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ca9e53d7d98f3ae5e6b7b329e52d4979e8c10215
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1459cade5071374ca39d453b9915a68e4bcfe539
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831695"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192038"
 ---
 # <a name="planning-to-deploy-ad-fs"></a>Планирование развертывания AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 После сбора информации о вашей среде и выбора служб федерации Active Directory \(AD FS\) проектирования, следуя инструкциям в [руководство по проектированию AD FS в Windows Server 2012](https://technet.microsoft.com/library/dd807036.aspx), Приступите к планированию развертывания вашей службы федерации Active Directory структуре организации. Завершив разработку дизайна и информация в этой статье можно определить, какие задачи нужно выполнить для развертывания AD FS в вашей организации.  
@@ -28,11 +26,11 @@ ms.locfileid: "59831695"
   
 -   Стратегия специалистов по разработке по определению оптимальной физической топологии для размещения серверов федерации в корпоративной сети или сети периметра. Группа развертывания можно найти информацию по данному вопросу, обратившись к следующим статьям руководства по AD FS разработке:  
   
-    -   [Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)  
+    -   [Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
     -   [Планирование размещения серверов федерации](https://technet.microsoft.com/library/dd807069.aspx)  
   
-    -   [Планирование размещения прокси-сервера федерации](https://technet.microsoft.com/library/dd807130.aspx)  
+    -   [Планирование размещения прокси-серверов федерации](https://technet.microsoft.com/library/dd807130.aspx)  
   
     Специалисты по разработке могут передать решение вопроса о размещении сервера федерации или прокси-сервера федерации в компетенцию специалистов по развертыванию. Специалисты по развертыванию в этом случае будут нести ответственность за документирование и реализацию физической топологии серверов.  
   

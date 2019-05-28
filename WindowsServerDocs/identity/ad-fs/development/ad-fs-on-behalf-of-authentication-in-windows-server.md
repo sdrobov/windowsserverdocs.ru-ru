@@ -1,6 +1,6 @@
 ---
 ms.assetid: 5052f13c-ff35-471d-bff5-00b5dd24f8aa
-title: Создание многоуровневого приложения, с помощью On-Behalf-Of (OBO) с помощью OAuth с AD FS 2016
+title: Создание многоуровневого приложения, с помощью On-Behalf-Of (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,18 +9,17 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 33d0bfa4139f16c90f3d79f5b61188b4d311538b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f98141745cb5bc8355d1ad3c37e72b4710eb4fc9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858945"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190617"
 ---
-# <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016"></a>Создание многоуровневого приложения, с помощью On-Behalf-Of (OBO) с помощью OAuth с AD FS 2016
+# <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения, с помощью On-Behalf-Of (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
->Область применения. Windows Server 2016
 
-В этом пошаговом руководстве приведены инструкции по реализации on-behalf-of (OBO) проверки подлинности с помощью AD FS в Windows Server 2016 TP5. Дополнительные сведения о проверке подлинности от ИМЕНИ см. в статье [сценарии AD FS для разработчиков](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
+В этом пошаговом руководстве приведены инструкции по реализации on-behalf-of (OBO) проверки подлинности с помощью AD FS в Windows Server 2016 TP5 или более поздней версии. Дополнительные сведения о проверке подлинности от ИМЕНИ см. в статье [сценарии AD FS для разработчиков](../../ad-fs/overview/AD-FS-Scenarios-for-Developers.md)
 
 >ПРЕДУПРЕЖДЕНИЕ! Пример, в котором вы можете создавать здесь — только в образовательных целях. Эти инструкции предназначены для реализации самый простой и наиболее минимальным возможным предоставление необходимые элементы модели. Пример могут не включать все аспекты обработки ошибок и другие связанные функциональные возможности и фокусируется только на получение успешной проверки подлинности от ИМЕНИ.
 
@@ -71,7 +70,7 @@ WebAPIOBO | Серверной части веб-api, который испол�
 
 Как настроить контроллер домена и AD FS выходит за рамки этой статьи. Для развертывания, Дополнительные сведения см.
 
-- [Развертывание AD DS](../../ad-ds/deploy/AD-DS-Deployment.md)
+- [Развертывание доменных служб Active Directory](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [Развертывание AD FS](../AD-FS-Deployment.md)
 
 Образец, исходя из существующего образца OBO от Azure, созданные Витторио Берточчи и доступных [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Следуйте инструкциям, чтобы клонировать проект на компьютере разработки и создать копию примера приложения, чтобы приступить к работе с.
@@ -84,7 +83,7 @@ WebAPIOBO | Серверной части веб-api, который испол�
 
 ## <a name="modifying-the-sample"></a>Изменение примера
 
-Сразу же после открытия решения веб-API-OnBehalfOf-DotNet.sln, вы заметите, что у вас есть два проекта в решении-
+Сразу же после открытия решения веб-API-OnBehalfOf-DotNet.sln, вы заметите, что у вас есть два проекта в решении
 
 * **ToDoListClient**: Это будет использоваться в качестве клиента OpenID, который пользователь будет взаимодействует с
 * **ToDoListService**: Это будет быть веб-сервер приложения среднего уровня и службы, которая будет взаимодействовать с другой серверной части веб-API от ИМЕНИ пользователя, прошедшего аутентификацию
@@ -128,9 +127,6 @@ WebAPIOBO | Серверной части веб-api, который испол�
     @RuleName = "All claims"
     c:[]
     => issue(claim = c);
-
-    @RuleName = "Issue open id scope"
-    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "openid");
 
     @RuleName = "Issue user_impersonation scope"
     => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
@@ -281,7 +277,7 @@ WebAPIOBO | Серверной части веб-api, который испол�
 |IDA: аудитории| Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, https://localhost:44321/|
 |IDA: ClientID| Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, https://localhost:44321/ </br>**Очень важно, ida: аудитории и ida: ClientID совпадали друг с другом**|
 |IDA: ClientSecret| Это секрет, созданный AD FS при настройке клиента ToDoListService в AD FS|
-|IDA: ADFSMetadata| Это URL-адрес метаданных службы федерации Active Directory, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
+|IDA: AdfsMetadataEndpoint| Это URL-адрес метаданных службы федерации Active Directory, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
 |IDA: OBOWebAPIBase| Это базовый адрес, который будет использоваться для вызова серверной части API, например https://localhost:44300|
 |IDA: центр| Это URL-адрес для службы AD FS, пример https://fs.anandmsft.com/adfs/|
 
@@ -362,17 +358,19 @@ WebAPIOBO | Серверной части веб-api, который испол�
     // POST api/todolist
     public async Task Post(TodoItem todo)
     {
-        if (!ClaimsPrincipal.Current.FindFirst("https://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
+      if (!ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
         {
             throw new HttpResponseException(new HttpResponseMessage { StatusCode = HttpStatusCode.Unauthorized, ReasonPhrase = "The Scope claim does not contain 'user_impersonation' or scope claim not found" });
         }
 
-        //
-        // Call the WebAPIOBO On Behalf Of the user who called the To Do list web API.
-        //
-        string augmentedTitle = null;
-        string custommessage = await CallGraphAPIOnBehalfOfUser();
-        if (custommessage != null)
+      //
+      // Call the WebAPIOBO On Behalf Of the user who called the To Do list web API.
+      //
+
+      string augmentedTitle = null;
+      string custommessage = await CallGraphAPIOnBehalfOfUser();
+
+      if (custommessage != null)
         {
             augmentedTitle = String.Format("{0}, Message: {1}", todo.Title, custommessage);
         }
@@ -381,15 +379,15 @@ WebAPIOBO | Серверной части веб-api, который испол�
             augmentedTitle = todo.Title;
         }
 
-        if (null != todo && !string.IsNullOrWhiteSpace(todo.Title))
+      if (null != todo && !string.IsNullOrWhiteSpace(todo.Title))
         {
             db.TodoItems.Add(new TodoItem { Title = augmentedTitle, Owner = ClaimsPrincipal.Current.FindFirst(ClaimTypes.Name).Value });
             db.SaveChanges();
         }
-    }
+      }
 
-    public static async Task<string> CallGraphAPIOnBehalfOfUser()
-    {
+      public static async Task<string> CallGraphAPIOnBehalfOfUser()
+      {
         string accessToken = null;
         AuthenticationResult result = null;
         AuthenticationContext authContext = null;
@@ -398,11 +396,12 @@ WebAPIOBO | Серверной части веб-api, который испол�
 
         //
         // Use ADAL to get a token On Behalf Of the current user.  To do this we will need:
-        //      The Resource ID of the service we want to call.
-        //      The current user's access token, from the current request's authorization header.
-        //      The credentials of this application.
-        //      The username (UPN or email) of the user calling the API
+        // The Resource ID of the service we want to call.
+        // The current user's access token, from the current request's authorization header.
+        // The credentials of this application.
+        // The username (UPN or email) of the user calling the API
         //
+
         ClientCredential clientCred = new ClientCredential(clientId, clientSecret);
         var bootstrapContext = ClaimsPrincipal.Current.Identities.First().BootstrapContext as System.IdentityModel.Tokens.BootstrapContext;
         string userName = ClaimsPrincipal.Current.FindFirst(ClaimTypes.Upn) != null ? ClaimsPrincipal.Current.FindFirst(ClaimTypes.Upn).Value : ClaimsPrincipal.Current.FindFirst(ClaimTypes.Email).Value;
@@ -418,30 +417,31 @@ WebAPIOBO | Серверной части веб-api, который испол�
         int retryCount = 0;
 
         do
-        {
-            retry = false;
-            try
-            {
-                result = await authContext.AcquireTokenAsync(...);
-                accessToken = result.AccessToken;
-            }
-            catch (AdalException ex)
-            {
-                if (ex.ErrorCode == "temporarily_unavailable")
+          {
+              retry = false;
+              try
                 {
-                    // Transient error, OK to retry.
-                    retry = true;
-                    retryCount++;
-                    Thread.Sleep(1000);
+                    result = await authContext.AcquireTokenAsync(OBOWebAPIBase, clientCred, userAssertion);
+                    //result = await authContext.AcquireTokenAsync(...);
+                    accessToken = result.AccessToken;
                 }
-            }
-        } while ((retry == true) && (retryCount < 1));
+              catch (AdalException ex)
+                {
+                    if (ex.ErrorCode == "temporarily_unavailable")
+                    {
+                        // Transient error, OK to retry.
+                        retry = true;
+                        retryCount++;
+                        Thread.Sleep(1000);
+                    }
+                }
+          } while ((retry == true) && (retryCount < 1));
 
         if (accessToken == null)
-        {
-            // An unexpected error occurred.
-            return (null);
-        }
+          {
+              // An unexpected error occurred.
+              return (null);
+          }
 
         // Once the token has been returned by ADAL, add it to the http authorization header, before making the call to access the To Do list service.
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", result.AccessToken);
@@ -451,17 +451,17 @@ WebAPIOBO | Серверной части веб-api, который испол�
 
 
         if (response.IsSuccessStatusCode)
-        {
-            // Read the response and databind to the GridView to display To Do items.
-            string s = await response.Content.ReadAsStringAsync();
-            JavaScriptSerializer serializer = new JavaScriptSerializer();
-            custommessage = serializer.Deserialize<string>(s);
-            return custommessage;
-        }
+          {
+              // Read the response and databind to the GridView to display To Do items.
+              string s = await response.Content.ReadAsStringAsync();
+              JavaScriptSerializer serializer = new JavaScriptSerializer();
+              custommessage = serializer.Deserialize<string>(s);
+              return custommessage;
+          }
         else
-        {
-            custommessage = "Unsuccessful OBO operation : " + response.ReasonPhrase;
-        }
+          {
+              custommessage = "Unsuccessful OBO operation : " + response.ReasonPhrase;
+          }
         // An unexpected error occurred calling the Graph API.  Return a null profile.
         return (null);
     }

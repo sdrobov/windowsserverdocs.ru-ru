@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e372f066fc82b9857d438234b491732a177e24fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d49ae34d83d4a0b912bd92dbb9de16e18cc5b7ff
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860395"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191339"
 ---
 # <a name="federation-server-farm-using-wid-and-proxies"></a>Ферма серверов федерации с использованием WID и прокси-серверов
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Данная топология развертывания для служб федерации Active Directory \(AD FS\) идентичен фермы серверов федерации с внутренней базой данных Windows \(WID\) топологии, однако он добавляет компьютеры прокси-сервера для сети периметра для поддержки внешних пользователей. Эти прокси-серверы перенаправления запросов проверки подлинности клиента, поступающие от за пределами корпоративной сети к ферме серверов федерации. В предыдущих версиях служб AD FS они должны были вызваны прокси-серверов федерации.  
   
@@ -66,7 +64,7 @@ ms.locfileid: "59860395"
 Дополнительные сведения о том, как настроить сетевую среду для использования с серверами федерации и прокси веб-приложений см. в разделе «Требования к разрешению имен» статьи [требований AD FS](AD-FS-Requirements.md) и [плана веб-узла Инфраструктуры прокси-сервера приложения (WAP)](https://technet.microsoft.com/library/dn383648.aspx).  
   
 ## <a name="see-also"></a>См. также  
-[Планирование топологии развертывания AD FS](Plan-Your-AD-FS-Deployment-Topology.md)  
-[Руководство по разработке AD FS в Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
+[Планирование топологии развертывания для служб федерации Active Directory](Plan-Your-AD-FS-Deployment-Topology.md)  
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
   
 

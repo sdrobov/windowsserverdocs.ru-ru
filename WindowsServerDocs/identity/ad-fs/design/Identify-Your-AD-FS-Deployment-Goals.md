@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f618add4c4803142b3bd7278908834a412f30999
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2b881553431be873ed9883da67a7989527d7d288
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862575"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191274"
 ---
 # <a name="identify-your-ad-fs-deployment-goals"></a>Определение целей по развертыванию AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Правильное определение служб федерации Active Directory \(AD FS\) целей развертывания залог успеха вашего проекта по разработке AD FS. Назначьте приоритеты и при необходимости объединяя целей развертывания, можно разработать и развернуть AD FS с помощью итеративный подход. Можно воспользоваться существующими, задокументированы и заранее определенных целей развертывания AD FS, которые имеют отношение к разработке AD FS и разработать рабочее решение для вашей ситуации.  
   
@@ -93,6 +91,6 @@ ms.locfileid: "59862575"
 -   Выбор проверки подлинности пользователя при наличии нескольких поставщиков проверки подлинности.  
   
 ## <a name="see-also"></a>См. также  
-[Руководство по разработке AD FS в Windows Server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
   
 

@@ -9,16 +9,16 @@ ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0ee22afd6fdec96ab69d915e4730bb834d2ab8ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e9d6161666be89673cff6ef1a975d3205fa4b5c9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855525"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189088"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании
 
->Область применения. Windows Server 2012 R2
+
 
 Быстрое увеличение числа потребительских устройств и повсеместный доступ к информации меняют восприятие технологий в современном мире. Непрерывное использование информационных технологий на протяжении всего дня, простой и удобный доступ к информации стирают традиционные границы между работой и частной жизнью. Стирание границ сопровождаются том этот personal, выбранного в технологии и настроенный в соответствии с личности пользователей, действий и расписаний-должны расширять на рабочие места. Чтобы удовлетворить растущую потребность в подключении персональных потребительских устройств к корпоративным сетям, мы представляем следующие ценные предложения.
 

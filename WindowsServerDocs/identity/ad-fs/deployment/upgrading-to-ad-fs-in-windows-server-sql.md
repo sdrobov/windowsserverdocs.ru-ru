@@ -9,16 +9,15 @@ ms.prod: windows-server-threshold
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 59b761e69da5b1c1e27fea71b32447b19d2b83c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8ada2ae5c9fcdb77f35200581848041f222ed7f3
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812085"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191964"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Обновление до AD FS в Windows Server 2016 с SQL Server
 
->Область применения. Windows Server 2016
 
 
 ## <a name="moving-from-a-windows-server-2012-r2-ad-fs-farm-to-a-windows-server-2016-ad-fs-farm"></a>Перемещение из фермы Windows Server 2012 R2 AD FS в ферме Windows Server 2016 AD FS  
@@ -44,7 +43,7 @@ ms.locfileid: "59812085"
 
 На следующей схеме архитектуры показано установки, который был использован для проверки и запишите указанные ниже действия.
 
-![Architecture (Архитектура)](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png) 
+![Architecture (Архитектура)](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png)
 
 
 #### <a name="join-the-windows-2016-ad-fs-server-to-the-ad-fs-farm"></a>Присоединение к ферме AD FS сервера AD FS Windows 2016
@@ -58,18 +57,18 @@ ms.locfileid: "59812085"
 ![Присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  На **укажите SSL-сертификат** экрана, укажите сертификат и нажмите кнопку **Далее**.
 ![Присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
-6.  На **укажите учетную запись службы** экрана, укажите учетную запись службы и нажмите кнопку **Далее**. 
-7.  На **просмотреть параметры** экране Проверьте параметры и нажмите кнопку **Далее**. 
+6.  На **укажите учетную запись службы** экрана, укажите учетную запись службы и нажмите кнопку **Далее**.
+7.  На **просмотреть параметры** экране Проверьте параметры и нажмите кнопку **Далее**.
 8.  На **проверяет предварительные требования** экрана, убедитесь, что все предварительные проверки пройдены и нажмите кнопку **Настройка**.
 9.  На **результатов** экрана, убедитесь, что сервер успешно настроен и нажмите кнопку **закрыть**.
- 
-   
+
+
 #### <a name="remove-the-windows-server-2012-r2-ad-fs-server"></a>Удаление сервера Windows Server 2012 R2 AD FS
 
 >[!NOTE]
 >Необходимо установить основной сервер AD FS, с помощью набора AdfsSyncProperties-роли при использовании в качестве базы данных SQL.  Это потому, что все узлы считаются основного сервера в этой конфигурации.
 
-1.  На сервере Windows Server 2012 R2 AD FS используется диспетчер серверов **удалить роли и компоненты** под **управление**. 
+1.  На сервере Windows Server 2012 R2 AD FS используется диспетчер серверов **удалить роли и компоненты** под **управление**.
 ![Удаление сервера](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  На странице **Приступая к работе** нажмите кнопку **Далее**.
 3.  На **Выбор сервера** экрана, нажмите кнопку **Далее**.
@@ -78,12 +77,12 @@ ms.locfileid: "59812085"
 5.  На **функции** экрана, нажмите кнопку **Далее**.
 6.  На **Подтверждение** экрана, нажмите кнопку **удалить**.
 7.  По завершении перезапустите сервер.
-     
+
 #### <a name="raise-the-farm-behavior-level-fbl"></a>Повысить уровень поведение фермы (FBL)
 До этого шага необходимо убедиться, что forestprep и domainprep были запущены в среде Active Directory, и что Active Directory имеет схему Windows Server 2016.  В этом документе к работе с контроллером домена Windows 2016 и не требовал бы выполнения этих, так как они выполнялись при установке AD.
 
 >[!NOTE]
->Прежде чем начать процесс, описанный ниже, убедитесь, что Windows Server 2016 является текущей, запустив из параметров обновления Windows.  Продолжайте этот процесс, пока не перестанут требоваться обновления. 
+>Прежде чем начать процесс, описанный ниже, убедитесь, что Windows Server 2016 является текущей, запустив из параметров обновления Windows.  Продолжайте этот процесс, пока не перестанут требоваться обновления.
 
 1. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующую команду: **$cred = Get-Credential** и нажмите клавишу ВВОД.
 2. Введите учетные данные, имеющие права администратора на сервере SQL Server.
@@ -93,3 +92,24 @@ ms.locfileid: "59812085"
 3. Теперь если перейти на управление AD FS, вы увидите новые узлы, которые были добавлены для AD FS в Windows Server 2016  
 4. Аналогичным образом можно использовать командлет PowerShell:  Get-AdfsFarmInformation показать текущее FBL.  
 ![Обновление готово](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
+
+#### <a name="upgrade-the-configuration-version-of-existing-wap-servers"></a>Обновить версию конфигурации существующих серверов WAP
+1. На каждый прокси веб-приложения, повторно настройте WAP, выполнив следующую команду PowerShell в окне с повышенными привилегиями.  
+    ```powershell
+    $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+    Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
+    ```
+2. Удалить старые серверы из кластера и сохранить только WAP серверы под управлением последней версии сервера, которые были перенастроены выше, выполнив следующий командлет Powershell.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
+    ```
+3. Проверьте конфигурацию WAP, выполнив Get-WebApplicationProxyConfiguration commmandlet. ConnectedServersName будет отражать сервера выполнять с помощью предыдущей команды.
+    ```powershell
+    Get-WebApplicationProxyConfiguration
+    ```
+4. Чтобы обновить ConfigurationVersion WAP-серверы, запустите следующую команду Powershell.
+    ```powershell
+    Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
+    ```
+5. Убедитесь, что ConfigurationVersion был обновлен с помощью команды Powershell Get-WebApplicationProxyConfiguration.
+    

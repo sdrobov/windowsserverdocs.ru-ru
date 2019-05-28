@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b85f49ac0556bf9b3542a23514d7fcbf82d2d88e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f7454279f234f65136b9fe6649a6e96ea53e5d51
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865145"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191510"
 ---
 # <a name="federated-web-sso-design"></a>Проект единого входа федерации для интернет-решений
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Единый Federated Web\-входа\-на \(SSO\) разработки в службах федерации Active Directory \(AD FS\) включает безопасное взаимодействие, охватывающее несколько брандмауэров периметра сети и имя\-серверов разрешения — помимо всей инфраструктуры маршрутизации Интернета.  
   
@@ -37,15 +35,15 @@ ms.locfileid: "59865145"
   
 В данном примере Fabrikam является поставщиком удостоверений или учетных записей. Часть Fabrikam проекта федеративного единого входа в Интернете использует следующие цели развертывания AD FS:  
   
--   [Предоставить пользователям доступ к Active Directory к приложениям и службам других организаций](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
+-   [Предоставление пользователям Active Directory вашей организации доступа к приложениям и службам других организаций](Provide-Your-Active-Directory-Users-Access-to-the-Applications-and-Services-of-Other-Organizations.md)  
   
 Contoso — поставщик ресурсов. Часть Contoso проекта федеративного единого входа в Интернете позволяет достичь следующих целей развертывания AD FS:  
   
--   [Предоставление пользователям другой организации доступа к вашим приложениям с поддержкой утверждений и служб](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Предоставление пользователям другой организации доступа к вашим приложениям и службам с поддержкой утверждений](Provide-Users-in-Another-Organization-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
--   [Предоставить пользователям доступ к Active Directory для приложений и служб](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
+-   [Предоставление пользователям Active Directory вашей организации доступа к вашим приложениям и службам с поддержкой утверждений](Provide-Your-Active-Directory-Users-Access-to-Your-Claims-Aware-Applications-and-Services.md)  
   
 Список подробных задач, которые можно использовать для планирования и развертывания федеративного единого входа в Интернете, см. в разделе [контрольный список: Реализация единого входа в Интернете федеративной](../../ad-fs/deployment/Checklist--Implementing-a-Federated-Web-SSO-Design.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

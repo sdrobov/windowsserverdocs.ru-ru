@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e2ad7d1467abd6d69077b515b8c69a65f7e70f19
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2c399467a8bb70e723a86618aa37fc54425f4e7d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865595"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189048"
 ---
 # <a name="manage-risk-with-conditional-access-control"></a>Управление рисками с использованием условного управления доступом
 
->Область применения. Windows Server 2012 R2
+
 
 
 -   [Управление ключевые понятия: условный доступ в AD FS](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
@@ -106,7 +106,7 @@ ms.locfileid: "59865595"
 |Альтернативное имя субъекта|Одно из альтернативных имен сертификата.|
 |Серийный номер|Серийный номер сертификата.|
 |Алгоритм подписи|Алгоритм, используемый для создания подписи сертификата.|
-|Субъект|Субъект сертификата.|
+|Subject|Субъект сертификата.|
 |Идентификатор ключа субъекта|Идентификатор ключа субъекта сертификата.|
 |Имя субъекта|Различающееся имя субъекта сертификата.|
 |Имя шаблона V2|Имя шаблона сертификата версии 2, используемое при выдаче или обновлении сертификата. Это значение характерно для продуктов Майкрософт.|
@@ -175,7 +175,7 @@ ms.locfileid: "59865595"
     ```
 
 ## <a name="see-also"></a>См. также
-[Пошаговое руководство: Управление рисками с помощью Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+[Пошаговое руководство. Управление рисками с помощью Conditional Access Control](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 [Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 
 

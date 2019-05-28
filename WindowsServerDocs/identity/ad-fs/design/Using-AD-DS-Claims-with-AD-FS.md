@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 46692653ba10558a9236bd321127591bc7c8a275
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2af0950e52d800202235bf674545f6c47e9cd88
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838385"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190778"
 ---
 # <a name="using-ad-ds-claims-with-ad-fs"></a>Использование утверждений AD DS в AD FS
   
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
   
 Вы можете включить больше возможностей управления доступом для федеративных приложений с помощью доменных служб Active Directory \(AD DS\)\-выданы утверждения пользователей и устройств, а также службы федерации Active Directory \(AD FS \).  
   
@@ -80,4 +79,4 @@ ms.locfileid: "59838385"
 Дополнительные сведения о создании правила утверждения, необходимые для AD DS выданных утверждений для работы с AD FS см. в разделе [создайте правило для преобразования входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: bdfb086c8177e72c074ac5b5b1a38aac49c4082c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e28d050a9aa40c015af16a665e90535cb810b4ff
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886755"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192327"
 ---
 # <a name="configure-client-computers-to-trust-the-account-federation-server"></a>Настройка клиентских компьютеров доверия сервер федерации учетных записей
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Таким образом, чтобы клиентские компьютеры можно успешно получить доступ к федеративным приложениям с помощью служб федерации Active Directory \(AD FS\), сначала необходимо настроить параметры Internet Explorer на каждом клиентском компьютере, таким образом, которому доверяет браузер сервер федерации учетных записей. Это делается вручную или с помощью групповой политики, в зависимости от настроек администратора, выполнив одну из следующих процедур.  
   
@@ -42,7 +40,7 @@ ms.locfileid: "59886755"
 ## <a name="configuring-internet-explorer-settings-by-using-grouppolicy"></a>Настройка параметров Internet Explorer с помощью групповой политики  
 В большинстве случаев рекомендуется использовать групповую политику для принудительной отправки соответствующие параметры Internet Explorer на каждом клиентском компьютере.  
   
-Членство в группе **"Администраторы домена"** или **"Администраторы предприятия"**, или наличие эквивалентных прав в доменных службах Active Directory \(AD DS\) является минимальным требованием для выполнения этой процедуры.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальные и доменные группы по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
+Членство в группе **"Администраторы домена"** или **"Администраторы предприятия"** , или наличие эквивалентных прав в доменных службах Active Directory \(AD DS\) является минимальным требованием для выполнения этой процедуры.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальные и доменные группы по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.microsoft.com\/fwlink\/? LinkId\=83477\).   
   
 #### <a name="to-configure-client-computers-to-trust-the-account-federation-server-by-using-grouppolicy"></a>Для настройки клиентских компьютеров доверия сервер федерации учетных записей с помощью групповой политики  
   

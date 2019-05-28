@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3372e1f051ba7f900753a4961d948ddabdef6f4d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40f1f4952730fad0749a173fdc968714d043b1c1
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867625"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188508"
 ---
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="the-role-of-the-ad-fs-configuration-database"></a>Роль базы данных конфигурации AD FS
 База данных конфигурации AD FS хранит все данные конфигурации, которые представляет один экземпляр служб федерации Active Directory \(AD FS\) \(службу федерации\). База данных конфигурации AD FS определяет набор параметров, необходимых службе федерации для идентификации партнеров, сертификатов, хранилищ атрибутов, утверждений и разнообразных данных об этих связанных сущностях. Эти данные конфигурации можно хранить в базу данных Microsoft SQL Server® или внутреннюю базу Windows \(WID\) функция, которая входит в состав Windows Server® 2008, Windows Server 2008 R2 и Windows Server® 2012.  
   

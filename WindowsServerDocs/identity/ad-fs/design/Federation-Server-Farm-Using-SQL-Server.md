@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e26b7cac971f472bc8b5e48e3dc8cd2592dc22ce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 585d0195b096056ba769f4e9a08d5c4d2156b96a
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814785"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191448"
 ---
 # <a name="federation-server-farm-using-sql-server"></a>Ферма серверов федерации с использованием SQL Server
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Эта топология для служб федерации Active Directory \(AD FS\) отличается от фермы серверов федерации с использованием внутренней базы данных Windows \(WID\) топологии развертывания, в который он не реплицирует данные для Каждый сервер федерации в ферме. Вместо этого все серверы федерации в ферме можно чтения и записи данных в единую базу данных, которая хранится на сервере под управлением Microsoft SQL Server, который находится в корпоративной сети.  
   
@@ -162,7 +160,7 @@ ms.locfileid: "59814785"
 Более подробные инструкции по настройке AD FS для использования репликации слиянием SQL Server, см. в разделе [установки географической избыточности с помощью репликации SQL Server](https://technet.microsoft.com/library/dn632406.aspx).  
   
 ## <a name="see-also"></a>См. также  
-[Планирование топологии развертывания AD FS](Plan-Your-AD-FS-Deployment-Topology.md)  
-[Руководство по разработке AD FS в Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
+[Планирование топологии развертывания для служб федерации Active Directory](Plan-Your-AD-FS-Deployment-Topology.md)  
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012 R2](AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)  
   
 

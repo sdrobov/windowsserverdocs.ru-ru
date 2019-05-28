@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3300c16be6d516d7ec0bf4d0c3a025e59e6126b6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 06cc4bd37905f6bb7afbc513ffce216104654aba
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834525"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191481"
 ---
 # <a name="determine-your-ad-fs-deployment-topology"></a>Определение топологии развертывания AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Первым шагом в планировании развертывания служб федерации Active Directory \(AD FS\) является определение правильной топологии развертывания в соответствии с единого входа\-на \(SSO\) потребностям вашей организация. В подразделах этого раздела описаны разнообразные топологии развертывания, которые можно использовать с AD FS. Здесь же описаны преимущества и ограничения каждой топологии развертывания, что позволяет выбрать наиболее подходящую для конкретных условий ведения бизнеса.  
   
@@ -26,7 +24,7 @@ ms.locfileid: "59834525"
   
 |Рекомендованная задача|Описание|Ссылка|  
 |--------------------|---------------|-------------|  
-|Просмотрите, как хранятся и реплицируются на другие серверы федерации в ферме серверов федерации AD FS данных.|Установите назначение базовых данных, хранимых в базе данных конфигурации AD FS, и методы их репликации. В этом разделе представлены понятия, связанные с базой данных конфигурации и описывающие два типа баз данных: Внутренняя база данных Windows \(WID\) и Microsoft SQL Server.|[Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md)|  
+|Просмотрите, как хранятся и реплицируются на другие серверы федерации в ферме серверов федерации AD FS данных.|Установите назначение базовых данных, хранимых в базе данных конфигурации AD FS, и методы их репликации. В этом разделе представлены понятия, связанные с базой данных конфигурации и описывающие два типа баз данных: Внутренняя база данных Windows \(WID\) и Microsoft SQL Server.|[Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).|  
 |Выберите тип базы данных конфигурации AD FS, которая будет развернута в вашей организации.|Проанализируйте разные преимущества и ограничения, связанные с WID или SQL Server в качестве базы данных конфигурации AD FS, а также различные поддерживаемые ими сценарии применения.|[Некоторые аспекты топологии развертывания AD FS](AD-FS-Deployment-Topology-Considerations.md)|  
   
 > [!NOTE]  
@@ -38,12 +36,12 @@ ms.locfileid: "59834525"
   
 -   [Ферма серверов федерации с использованием WID](Federation-Server-Farm-Using-WID-2012.md)  
   
--   [Ферма серверов федерации с использованием WID и прокси-серверы](Federation-Server-Farm-Using-WID-and-Proxies-2012.md)  
+-   [Ферма серверов федерации с использованием WID и прокси-серверов](Federation-Server-Farm-Using-WID-and-Proxies-2012.md)  
   
--   [Ферма серверов федерации с помощью SQL Server](Federation-Server-Farm-Using-SQL-Server-2012.md)  
+-   [Ферма серверов федерации с использованием SQL Server](Federation-Server-Farm-Using-SQL-Server-2012.md)  
   
 После завершения выбора топологии развертывания AD FS, рекомендуется просмотреть раздел [Планирование емкости сервера AD FS](Planning-for-AD-FS-Server-Capacity.md) чтобы определить Рекомендованное количество серверов, которые необходимо развернуть для поддержки этой топологии.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

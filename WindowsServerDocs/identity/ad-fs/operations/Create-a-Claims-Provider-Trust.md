@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fbc8bb63435211a92cb7fc6aa05b1413aef939c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1c47986cda3f091033274aa2c59a656ec861a98f
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854235"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189712"
 ---
 # <a name="create-a-claims-provider-trust"></a>Создание отношений доверия с поставщиком утверждений
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Добавление нового отношения доверия с поставщиком утверждений с помощью оснастки управления AD FS\-в и вручную настроить параметры, выполните следующую процедуру на сервере федерации партнера ресурсов в организации партнера по ресурсам.  
   
@@ -82,9 +80,9 @@ ms.locfileid: "59854235"
 
     
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка партнерской организации по ресурсам](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)  
+[Контрольный список. Настройка партнерской организации по ресурсам](../../ad-fs/deployment/Checklist--Configuring-the-Resource-Partner-Organization.md)  
   
-[Контрольный список: Создание правил для утверждений для поставщика утверждений доверия](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md)  
+[Контрольный список. Создание правил утверждений для отношений доверия с поставщиком утверждений](../../ad-fs/deployment/Checklist--Creating-Claim-Rules-for-a-Claims-Provider-Trust.md)  
   
 ## <a name="see-also"></a>См. также  
 [Операции AD FS](../../ad-fs/AD-FS-2016-Operations.md) 

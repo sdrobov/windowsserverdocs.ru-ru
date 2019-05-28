@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 699622a8a075dd6c78ab1b536dce2abfee642e9e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b9702873d42e0a72e510ac022d8d7fb04b45dab9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855195"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189168"
 ---
 # <a name="customize-the-display-names-and-descriptions-for-authentication-methods"></a>Настроить отображаемые имена и описания методов проверки подлинности 
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Чтобы настроить отображаемые имена и описание методов проверки подлинности, можно использовать командлет `Set-AdfsAuthenticationProviderWebContent` PowerShell.  Чтобы использовать этот командлет, сначала необходимо получить имя метода проверки подлинности, который вы хотите настроить.  Это можно сделать с помощью `Get-AdfsGlobalAuthenticationPolicy`.  В следующем примере мы видим, что, в нашем входа\-на странице отображается следующая информация:  "Войдите с использованием сертификата X.509".  Мы хотим упростить текст для пользователей.  
   

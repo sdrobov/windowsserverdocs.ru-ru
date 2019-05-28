@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ed66800aa6bbfdf85816a992ee8eb39799efebb6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e78c52f1928a3401c0532ab7c25616b012a1d8b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865235"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192099"
 ---
 # <a name="install-the-federation-service-proxy-role-service"></a>Установка службы роли прокси-агента службы федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 После настройки компьютера с необходимые приложения и сертификаты, можно приступать к установке службы роли прокси-сервера службы федерации служб федерации Active Directory \(AD FS\). Можно использовать следующую процедуру для установки службы роли прокси-сервера службы федерации. При установке службы роли прокси-сервера службы федерации на компьютере, то такой компьютер становится прокси-сервера федерации.  
   
@@ -59,8 +57,8 @@ ms.locfileid: "59865235"
 
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[Контрольный список: Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
+[Контрольный список. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
 

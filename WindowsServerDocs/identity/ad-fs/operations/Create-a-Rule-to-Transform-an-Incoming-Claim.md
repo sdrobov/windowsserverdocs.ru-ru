@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e982b7608f7602268657ceae74f641bbaaaec939
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6bd107aca6c6f33cdf5f88e5b48a52fdea8d2086
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816685"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189342"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>Создание правила для преобразования входящего утверждения
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 С помощью **преобразование входящего утверждения** шаблон правила в службах федерации Active Directory \(AD FS\), можно выбрать входящее утверждение, изменить его тип утверждения и измените его значение. Например можно использовать этот шаблон правила для создания правила, которое отправляет заявку роли с одинаковым значением утверждения входящего утверждения группы. Это правило также можно использовать для отправки заявки о группе со значением утверждения покупателей при наличии входящее утверждение группы со значением "Администраторы", или можно отправить только имя участника-пользователя \(имени участника-пользователя\) утверждений, которые заканчиваются @fabrikam.  
   
@@ -136,11 +135,11 @@ ms.locfileid: "59816685"
 8.  В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка правил утверждений](Configure-Claim-Rules.md)  
+[Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
-[Контрольный список: Создание правил для утверждений для доверия проверяющей стороны](https://technet.microsoft.com/library/ee913578.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[Контрольный список: Создание правил для утверждений для поставщика утверждений доверия](https://technet.microsoft.com/library/ee913564.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с поставщиком утверждений](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [Когда следует использовать Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

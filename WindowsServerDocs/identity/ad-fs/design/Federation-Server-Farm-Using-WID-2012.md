@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: bb4e5f88f3d62511b185a2b4317416169717c860
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0f3d8c70a41d512e7cd33282524bc401ce84600
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851405"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191429"
 ---
 # <a name="federation-server-farm-using-wid"></a>Ферма серверов федерации с использованием WID
-
->Область применения. Windows Server 2012
 
 Топология по умолчанию для служб федерации Active Directory \(AD FS\) фермы серверов федерации, с использованием внутренней базы данных Windows \(WID\), состоит из пяти серверов федерации размещение вашей Службы федерации организации. В этой топологии AD FS использует WID в качестве хранилища для базы данных конфигурации AD FS для всех серверов федерации, присоединенных к ферме. Ферма выполняет репликацию и обслуживание данных службы федерации в базе данных конфигурации на всех своих серверах.  
   
@@ -75,4 +73,4 @@ ms.locfileid: "59851405"
 Дополнительные сведения о том, как настроить сетевую среду для использования с серверами федерации см. в разделе [требования к разрешению имен для серверов федерации](Name-Resolution-Requirements-for-Federation-Servers.md) в AD FS Design Guide.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

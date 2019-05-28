@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 049a1a1b0a419b0194edfe56b356a9f1e8b4b058
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c08b5bc9917c0eee01342ce71106aae1cc00967d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832325"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191953"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2
 
->Область применения. Windows Server 2012 R2
 
 В этой статье описаны шаги по настройке тестовой среды, которую можно использовать для выполнения инструкций следующих пошаговых руководств.
 
@@ -27,9 +26,9 @@ ms.locfileid: "59832325"
 -   [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
 
--   [Пошаговое руководство: Управление рисками с использованием условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+-   [Пошаговое руководство. Управление рисками с использованием условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
--   [Пошаговое руководство: Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 > [!NOTE]
 > Не рекомендуется устанавливать на одном компьютере и веб-сервер, и сервер федерации.
@@ -38,11 +37,11 @@ ms.locfileid: "59832325"
 
 1.  [Шаг 1. Настройка контроллера домена (DC1)](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
 
-2.  [Шаг 2. Настройка сервера федерации (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [Шаг 2. Настройка сервера федерации (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
-3.  [Шаг 3. Настройка веб-сервера (WebServ1) и пример приложения на основе утверждений](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Шаг 3. Настройка веб-сервера (WebServ1) и пример приложения на основе утверждений](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
-4.  [Шаг 4. Настройка клиентского компьютера (КЛИЕНТ1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
+4.  [Шаг 4. Настройка клиентского компьютера (КЛИЕНТ1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Шаг 1. настройка контроллера домена (DC1)
 Для целей данной тестовой среды, можно назвать корневой домен Active Directory **contoso.com** и укажите **pass@word1** как пароль администратора.
@@ -162,7 +161,7 @@ ms.locfileid: "59832325"
     Initialize-ADDeviceRegistration
     ```
 
-    В ответ на запрос ввода учетной записи службы введите **contoso\fsgmsa$**.
+    В ответ на запрос ввода учетной записи службы введите **contoso\fsgmsa$** .
 
     Теперь выполните командлет Windows PowerShell.
 
@@ -188,13 +187,13 @@ ms.locfileid: "59832325"
 
 1.  В DC1 из диспетчера серверов в меню **Сервис** щелкните **DNS**, чтобы открыть оснастку DNS.
 
-2.  В дереве консоли разверните DC1, затем — **Зоны прямого просмотра**, щелкните правой кнопкой мыши **contoso.com**, а затем щелкните **Новый узел (А или АААА)**.
+2.  В дереве консоли разверните DC1, затем — **Зоны прямого просмотра**, щелкните правой кнопкой мыши **contoso.com**, а затем щелкните **Новый узел (А или АААА)** .
 
 3.  В поле **Имя** введите требуемое имя фермы AD FS. Для данного пошагового руководства введите **adfs1**.
 
 4.  В поле **IP-адрес**введите IP-адрес сервера ADFS1. Нажмите кнопку **Добавить узел**.
 
-5.  Щелкните правой кнопкой **contoso.com**, а затем — **Новый псевдоним (CNAME)**.
+5.  Щелкните правой кнопкой **contoso.com**, а затем — **Новый псевдоним (CNAME)** .
 
 6.  В диалоговом окне **Новая запись ресурса** введите **enterpriseregistration** в поле **Имя псевдонима**.
 
@@ -238,7 +237,7 @@ ms.locfileid: "59832325"
 
 5.  На странице **Выбор целевого сервера** щелкните **Выбрать сервер из пула серверов**, убедитесь, что выбран целевой компьютер, а затем нажмите кнопку **Далее**.
 
-6.  На странице **Выбор ролей сервера** установите флажок в поле **Веб-сервер (IIS)**, щелкните **Добавить компоненты**и нажмите кнопку **Далее**.
+6.  На странице **Выбор ролей сервера** установите флажок в поле **Веб-сервер (IIS)** , щелкните **Добавить компоненты**и нажмите кнопку **Далее**.
 
 7.  На странице **Выбор компонентов** выберите **Windows Identity Foundation 3.5** и нажмите кнопку **Далее**.
 
@@ -291,7 +290,7 @@ ms.locfileid: "59832325"
 
 4.  **Настройка диспетчера IIS**
 
-    1.  Откройте **Диспетчер Internet Information Services (IIS)**.
+    1.  Откройте **Диспетчер Internet Information Services (IIS)** .
 
     2.  Перейдите в раздел **Пулы приложений**, щелкните правой кнопкой **DefaultAppPool** , чтобы выбрать **Дополнительные параметры**. Задайте для параметра **Загрузить профиль пользователя** значение **True** и нажмите кнопку **ОК**.
 
@@ -309,7 +308,7 @@ ms.locfileid: "59832325"
 
     1.  Запустите FedUtil.exe, расположенный в **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**.
 
-    2.  Значение расположения конфигурации приложений **C:\inetput\claimapp\web.config** и задайте URI приложения на URL-адрес для сайта,  **https://webserv1.contoso.com /claimapp/**. Нажмите кнопку **Далее**.
+    2.  Значение расположения конфигурации приложений **C:\inetput\claimapp\web.config** и задайте URI приложения на URL-адрес для сайта,  **https://webserv1.contoso.com /claimapp/** . Нажмите кнопку **Далее**.
 
     3.  Выберите **Use an existing STS** и перейдите по URL-АДРЕСУ метаданных сервера AD FS **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml**. Нажмите кнопку **Далее**.
 

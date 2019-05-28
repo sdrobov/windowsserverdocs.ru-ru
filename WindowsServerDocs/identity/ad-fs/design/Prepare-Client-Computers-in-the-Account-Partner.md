@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0c5bdcb0a80b15a1905109229ddd20ee642a8dd7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3a746ec003cf312ffe0b9804f84a55c98aa8089
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868525"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190987"
 ---
 # <a name="prepare-client-computers-in-the-account-partner"></a>Подготовка клиентских компьютеров для партнеров по учетным записям
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Самый простой способ для администратора в учетной записи организации партнера по записям подготовить клиентские компьютеры для доступа к службам федерации Active Directory \(AD FS\) федеративных приложений является использование групповой политики. Групповая политика обеспечивает удобный способ передачи конкретных сертификатов и параметров, необходимых для создания федерации на всех клиентских компьютерах, которые будут использоваться для доступа к федеративным приложениям.  
   
@@ -34,4 +32,4 @@ ms.locfileid: "59868525"
   
 
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

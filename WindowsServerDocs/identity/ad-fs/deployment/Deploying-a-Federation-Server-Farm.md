@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 05f1ea6830237813e6fd2bd6a172f467e8d81065
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c0f8dca425f644952c36a289ec72651f6383e846
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839085"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192194"
 ---
 # <a name="deploying-a-federation-server-farm"></a>Развертывание фермы серверов федерации
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Для развертывания фермы серверов федерации выполните задачи из этого контрольного списка в указанном порядке. В случае перехода по ссылке в раздел общих понятий вернитесь после его просмотра в данный контрольный список, чтобы продолжить выполнение оставшихся задач в контрольном списке.  
   

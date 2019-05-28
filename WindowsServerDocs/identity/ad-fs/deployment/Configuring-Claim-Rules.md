@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 6494f584edd5f84a5987707953f79edbce15cc02
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e11d507f726323e774bf54f09a390b0c4b68e0a0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814665"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192254"
 ---
 # <a name="configuring-claim-rules"></a>Настройка правил утверждений
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В утверждениях\-удостоверений на основе модели, функция служб федерации Active Directory \(AD FS\) как федерации служб является выпустить маркер, содержащий набор утверждений. Правила утверждений управляют решение в отношении утверждений, выдаваемых AD FS. Правила утверждений и все данные конфигурации сервера хранятся в базе данных конфигурации AD FS.  
   
@@ -26,19 +24,19 @@ AD FS делает выдачи решения, которые основаны 
   
 -   [Создайте правило, чтобы пропуск или Фильтрация входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
   
--   [Создайте правило, чтобы разрешить всем пользователям](../../ad-fs/operations/Create-a-Rule-to-Permit-All-Users.md)  
+-   [Создание правила для разрешения всем пользователям](../../ad-fs/operations/Create-a-Rule-to-Permit-All-Users.md)  
 
 -   [Создание правила для отправки AD FS 1.x утверждения, совместимые](../../ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md)
   
--   [Создайте правило, чтобы разрешать или запрещать пользователям на основании входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
+-   [Создание правила для разрешения или запрета пользователям на основе входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
   
 -   [Создание правила для отправки атрибутов LDAP как утверждений](../../ad-fs/operations/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
   
--   [Создайте правило, чтобы отправлять членство в группе как утверждение](../../ad-fs/operations/Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
+-   [Создание правила для отправки членства в группе в качестве утверждения](../../ad-fs/operations/Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
   
 -   [Создание правила для преобразования входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Transform-an-Incoming-Claim.md)  
   
--   [Создание правила для отправки утверждение для метода проверки подлинности](../../ad-fs/operations/Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)  
+-   [Создание правила для отправки утверждения методов аутентификации](../../ad-fs/operations/Create-a-Rule-to-Send-an-Authentication-Method-Claim.md)  
   
 -   [Создание правила для отправки утверждений с помощью настраиваемого правила](../../ad-fs/operations/Create-a-Rule-to-Send-Claims-Using-a-Custom-Rule.md)  
 

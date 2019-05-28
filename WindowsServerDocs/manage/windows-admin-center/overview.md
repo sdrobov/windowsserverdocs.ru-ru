@@ -5,20 +5,19 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
+ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: e23d02fd8da96392f44874ad6ea4d6c40e2be940
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 3208c20e8bf9f4cfab4340aa33b24175bbc72dda
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828205"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188327"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
 >Область применения. Windows Admin Center, предварительная версия Windows Admin Center
-
-Добро пожаловать в Windows Admin Center!
 
 **Windows Admin Center** (под кодовым названием **Гонолулу проекта**) является результатом эволюционного развития средств управления, входящие в комплект Windows Server; он является единой панели, объединяющий все аспекты управления локальным и удаленным сервером. Так как платформа развертывается локально, а в качестве интерфейса управления используется браузер, подключение к Интернету и Azure не требуются. Windows Admin Center предоставляет полный контроль над всеми аспектами вашего развертывания, включая частные сети, не подключенные к Интернету.
 
@@ -58,7 +57,6 @@ Windows Admin Center можно подготовить к работе и зап
             <ul>
             <li><a href="plan/installation-options.md">Какой тип установки подходит для вас?</a>
             <li><a href="plan/user-access-options.md">Параметры доступа пользователей</a>
-            <li><a href="plan/azure-integration-options.md">Существуют ли какие варианты интеграции Azure?</a>
             <br>
             </ul>
         </td>
@@ -78,8 +76,6 @@ Windows Admin Center можно подготовить к работе и зап
             <li><a href="configure/settings.md">Параметры Windows Admin Center</a>
             <li><a href="configure/user-access-control.md">Управление доступом пользователей и разрешения</a>
             <li><a href="configure/using-extensions.md">Расширения</a>
-            <li><a href="configure/azure-integration.md">Интеграция с Azure</a>
-            <li><a href="configure/manage-azure-vms.md">Управление виртуальными машинами Azure с помощью Windows Admin Center</a>
             </ul>
         </td>
     </tr>
@@ -92,13 +88,29 @@ Windows Admin Center можно подготовить к работе и зап
             <li><a href="use/manage-hyper-converged.md">Управление гиперконвергентная инфраструктура</a>
             <li><a href="use/manage-failover-clusters.md">Управления отказоустойчивыми кластерами</a>
             <li><a href="use/manage-virtual-machines.md">Управление виртуальными машинами</a>
-            <li><a href="use/azure-services.md">Использовать службы Azure</a>
-            <li><a href="use/troubleshooting.md">Общие действия по устранению неполадок</a>
             <li><a href="use/logging.md">Ведение журнала</a>
-            <li><a href="use/known-issues.md">Известные проблемы</a>
             </ul>
         </td>
         <td style="vertical-align: top;">
+            <h3>Подключение к Azure</h3>
+            <ul>
+            <li><a href="azure/index.md">Azure гибридных служб</a></li>
+            <li><a href="azure/azure-integration.md">Подключение Windows Admin Center в Azure</a></li>
+            <li><a href="azure/deploy-wac-in-azure.md">Развертывание Windows Admin Center в Azure</a></li>
+            <li><a href="azure/manage-azure-vms.md">Управление виртуальными машинами Azure с помощью Windows Admin Center</a></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+            <td style="vertical-align: top;">
+            <h3>Поддержка</h3>
+            <ul>
+            <li><a href="support/index.md">Политика поддержки</a>
+            <li><a href="support/troubleshooting.md">Общие действия по устранению неполадок</a>
+            <li><a href="support/known-issues.md">Известные проблемы</a>
+            </ul>
+        </td>
+            <td style="vertical-align: top;">
             <h3>Расширение</h3>
             <ul>
             <li><a href="extend/extensibility-overview.md">Общие сведения о модулях</a>
@@ -116,7 +128,9 @@ Windows Admin Center можно подготовить к работе и зап
 
 Узнайте о наших последних выпущенных функциях:
 
-- Версии [1902] (https://aka.ms/wac1902) добавлен в список общих соединений и улучшения управления программно-определяемой сети (SDN), включая новые средства SDN для управления списки управления доступом, подключений шлюза и логических сетей.
+- Версия [1904](https://aka.ms/wac1904) является самый последний выпуск общедоступной версии, представлены средство гибридные службы Azure, а также предоставляет функции, которые были ранее на этапе предварительной версии в общедоступную Версию канал.
+- Версия [1903](https://aka.ms/wac1903) переносит уведомления по электронной почте из Azure Monitor, возможность добавления подключений сервера или компьютера из Active Directory и новые средства для управления Active Directory, DHCP и DNS.
+- Версия [1902](https://aka.ms/wac1902) добавлен в список общих соединений и улучшения управления программно-определяемой сети (SDN), включая новые средства SDN для управления списки управления доступом, подключений шлюза и логических сетей.
 - В версию [1812](https://aka.ms/wac1812) добавлена темная тема (бета-версия), параметры настройки питания, сведения о BMC, а также поддержка PowerShell для управления [расширениями](./configure/using-extensions.md#manage-extensions-with-powershell) и [подключениями](./use/get-started.md#use-powershell-to-import-or-export-your-connections-with-tags).
 - Версия [1809.5](https://aka.ms/wac1809.5) представляет собой официальное накопительное обновление, в состав которого входят различные улучшения качества и компонентов, в том числе исправления ошибок в работе платформы, а также несколько новых функций в решении по управлению гиперконвергентной инфраструктурой.
 - Версия [1809](https://cloudblogs.microsoft.com/windowsserver/2018/09/20/windows-admin-center-1809-and-sdk-now-generally-available/) представляла собой официальный выпуск с функциями, которые ранее были доступны только в ознакомительной версии.
@@ -133,6 +147,6 @@ Windows Admin Center можно подготовить к работе и зап
 
 ## <a name="stay-updated"></a>Обновлять
 
-<a target="_blank" class="mscom-link twitter-follow-link" title="Следите за нашими новостями в Twitter" aria-label="Follow us on Twitter" data-info="Twitter" href="https://twitter.com/servermgmt"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR" alt="Follow us on Twitter" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR"></picture></a>
- | 
-<a target="_blank" class="mscom-link blogs-follow-link" title="Читайте наши блоги" aria-label="Visit our Blogs" data-info="Blogs" href="https://blogs.technet.microsoft.com/servermanagement/"><picture><source srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" media="(min-width:0)"><img srcset="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw" alt="Follow us on Blogs" src="//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw"></picture></a>
+![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Следите за нашими новостями в Twitter](https://twitter.com/servermgmt)
+
+![ ](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Читайте наши блоги](https://blogs.technet.microsoft.com/servermanagement/)

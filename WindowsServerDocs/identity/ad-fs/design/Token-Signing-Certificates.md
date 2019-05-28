@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a047b94906cf703bb934c93f517b8874af91e092
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9db69cfb2eb42af90b392433a6e05eaab9978160
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864065"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190808"
 ---
 # <a name="token-signing-certificates"></a>Сертификаты подписи токена
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Серверы федерации требуется маркер\-подписи сертификатов, чтобы защититься от изменения или подделки маркеров безопасности при попытке получить несанкционированный доступ к федеративным ресурсам. Закрытый\/с маркером используется открытый ключ, сопряжения,\-сертификаты для подписи обусловлено тем, наиболее важные механизм проверки любого федеративного партнерства этих ключей убедитесь, что допустимый партнерский был выдан маркер безопасности сервера федерации и что этот токен не был изменен во время передачи.  
   
@@ -75,4 +73,4 @@ ms.locfileid: "59864065"
 Дополнительные сведения об установке самозаверяющего\-подписанных сертификатов, см. в разделе [IIS 7.0: Создать самозаверяющий\-самозаверяющему сертификату сервера в IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=108271).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
