@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 52a08ae7eaee81c00985d5334f9abeaa84e30879
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 05fcaf402347d16bf8c28528d402664ae5f99165
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814165"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476047"
 ---
 # <a name="file-screening-management"></a>Управление фильтрами блокировки файлов
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 На узле **Управление фильтрами блокировки файлов** оснастки консоли управления Microsoft® (MMC) диспетчера ресурсов файлового сервера можно выполнять следующие задачи:
 
@@ -34,15 +34,15 @@ ms.locfileid: "59814165"
 
 -   [Определение групп файлов для блокировки](define-file-groups-for-screening.md)
 -   [Создать фильтр блокировки файлов](create-file-screen.md)
--   [Создание исключения фильтра блокировки файлов](create-file-screen-exception.md)
--   [Создать шаблон фильтра блокировки файлов](create-file-screen-template.md)
--   [Изменение свойств шаблона фильтра блокировки файлов](edit-file-screen-template-properties.md)
+-   [Создание исключения для фильтра блокировки файлов](create-file-screen-exception.md)
+-   [Создание шаблона для фильтра блокировки файлов](create-file-screen-template.md)
+-   [Редактирование свойств шаблона для фильтра блокировки файлов](edit-file-screen-template-properties.md)
 
 > [!Note]
 > Чтобы настроить уведомления по электронной почте и определенные возможности создания отчетов, необходимо сначала настроить общие параметры диспетчера ресурсов файлового сервера.
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 
 

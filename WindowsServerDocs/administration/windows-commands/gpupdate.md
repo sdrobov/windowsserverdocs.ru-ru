@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 61131d2bf253c66d93408bc66b78d1dca2502087
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d358c47bd278cf11c4bab6887302bf6d053529ec
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840595"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192665"
 ---
 # <a name="gpupdate"></a>gpupdate
 
 
 
-Обновление параметров групповой политики. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Обновление параметров групповой политики. Примеры использования этой команды см. в разделе [примеры](#examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -48,7 +48,7 @@ gpupdate [/target:{Computer | User}] [/force] [/wait:<VALUE>] [/logoff] [/boot] 
 
 -   **Gpupdate** команда доступна в Windows Server 2008 R2, Windows Server 2008, Windows 7 Максимальная, Windows 7 Профессиональная, Windows Vista Ultimate, Windows Vista Enterprise и Windows Vista Business.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="examples"></a>Примеры
 
 Принудительное обновление фона со всеми параметрами групповой политики, независимо от того, является ли они были изменены.
 ```
@@ -58,4 +58,4 @@ gpupdate /force
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Групповая политика](https://go.microsoft.com/fwlink/?LinkID=145531)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

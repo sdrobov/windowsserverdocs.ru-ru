@@ -11,19 +11,19 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: 48319e057da9c815a77349bba34996f89973d85a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e3c88ef5ee700bb3906746402bf6cc8916976800
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850505"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192766"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>Следует ли создавать виртуальные машины поколения 1 или 2 в Hyper-V?
 
 >Область применения. Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019 г., Microsoft Hyper-V Server 2019 г.
 
-> [!WARNING]
-> Если вы планируете когда-либо отправить Windows виртуальных машин (VM) из локальной в Microsoft Azure, **только виртуальные машины поколения 1** , находятся в формат файла VHD и фиксированный размер диска, поддерживаются. Дополнительные сведения о загрузке Windows VHD или VHDX, см. в разделе [Подготовка к отправке в Azure виртуального жесткого диска Windows или VHDX](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
+> [!NOTE]
+> Если планируется когда-либо отправить Windows виртуальные машины (VM) на платформу Microsoft Azure, поколение 1 и виртуальные машины поколения 2 в формате виртуального жесткого диска и имеют фиксированный размер диска, поддерживаются. См. в разделе [виртуальных машин поколения 2 в Azure](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2) Дополнительные сведения о возможностях поколения 2, поддерживаемых в Azure. Дополнительные сведения о загрузке Windows VHD или VHDX, см. в разделе [Подготовка к отправке в Azure виртуального жесткого диска Windows или VHDX](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image).
 
 Выбор для создания версии 1 или поколения 2 виртуальной машины зависит от гостевой операционной системы требуется установка и метод загрузки, которые вы хотите использовать для развертывания виртуальной машины. Мы рекомендуем создать виртуальной машины поколения 2, чтобы воспользоваться преимуществами функции, такие как безопасная загрузка, если одно из следующих утверждений верно:  
 

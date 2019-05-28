@@ -11,12 +11,12 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
 ms.date: 08/30/2017
-ms.openlocfilehash: 013328953321bc66b3fd30759e5be321eea32dde
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a398334700f7c292732207919b73a33145a6aae9
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824235"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222696"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины FreeBSD в Hyper-V
 
@@ -35,9 +35,9 @@ ms.locfileid: "59824235"
 |**Возможность**|**Версия операционной системы Windows Server**|**11.1/11.2**|**11.0**|**10.3**|**10.2**|**10.0 - 10.1**|**9.1 - 9.3, 8.4**|
 |-|-|-|-|-|-|-|-|
 |**Доступность**||Встроенные|Встроенные|Встроенные|Встроенные|Встроенные|[Порты](https://svnweb.freebsd.org/ports/branches/2015Q1/emulators/hyperv-is/) |
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004; |
 |Точное время Windows Server 2016|2016|&#10004;||||||
-|**[Сетевые подключения](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**||||||||
+|**[Сетевые подключения](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
 |Кадры крупного размера|2016, 2012 R2, 2012, 2008 R2|&#10004;Примечание 3|&#10004;Примечание 3|&#10004;Примечание 3|&#10004;Примечание 3|&#10004;Примечание 3|&#10004;Примечание 3|
 |Теги виртуальной локальной сети и коммутации|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Динамическая миграция|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
@@ -46,28 +46,28 @@ ms.locfileid: "59824235"
 |Сегментация TCP и разгрузка контрольной суммы|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Большой получать разгрузки (LRO)|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |SR-IOV;|2016|||||||
-|**[Хранилища](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**||Примечание 1|Примечание 1|Примечание 1|Примечание 1|Примечание 1, 2|Примечание 1, 2|
+|**[Хранилища](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Примечание 1|Примечание 1|Примечание 1|Примечание 1|Примечание 1, 2|Примечание 1, 2|
 |Изменения размера VHDX|2016, 2012 R2|&#10004;Примечание 7|&#10004;Примечание 7|||||
 |виртуальный адаптер Fibre Channel;|2016, 2012 R2|||||||
 |Резервное копирование виртуальной машины|2016, 2012 R2|&#10004;||||||
 |ОБРЕЗАТЬ поддержки|2016, 2012 R2|&#10004;||||||
 |WWN-ИМЕН SCSI|2016, 2012 R2|||||||
-|**[Память](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**||||||||
+|**[Память](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**||||||||
 |Поддержка PAE ядра|2016, 2012 R2, 2012, 2008 R2|||||||
 |Конфигурация MMIO разрыв|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Динамическая память — «горячей» заменой|2016, 2012 R2, 2012|||||||
 |Динамическая память — воздушного шага|2016, 2012 R2, 2012|||||||
 |Изменение размера памяти среды выполнения|2016|||||||
-|**[Видео](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**||||||||
+|**[Видео](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**||||||||
 |Конкретное устройство видео Hyper-V|2016, 2012 R2, 2012, 2008 R2|||||||
-|**[Прочие](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**||||||||
+|**[Прочие](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**||||||||
 |Пара "ключ/значение"|2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;Примечание 6|&#10004;Примечание 5, 6|&#10004;Примечание 6|
 |Немаскируемое прерывание|2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Копирование файлов с носителя на гостевой|2016, 2012 R2|||||||
 |Команда lsvmbus|2016, 2012 R2, 2012, 2008 R2|||||||
 |Сокеты Hyper-V|2016|||||||
 |Сквозной режим PCI/DDA|2016|&#10004;||||||
-|**[Виртуальные машины поколения 2](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**||||||||
+|**[Виртуальные машины поколения 2](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**||||||||
 |Загрузки, с помощью UEFI|2016, 2012 R2|&#10004;||||||
 |Безопасная загрузка|2016|||||||
 

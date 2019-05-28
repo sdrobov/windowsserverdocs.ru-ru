@@ -12,12 +12,12 @@ ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2716ffb7ce8f74d7c729565064de91e0598d0753
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cb62a460c09fdb2874bcc051176a05e88cee19e7
+ms.sourcegitcommit: 7cb939320fa2613b7582163a19727d7b77debe4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884685"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65621279"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>Создание загрузочного USB-устройства флэш-памяти
 
@@ -31,9 +31,9 @@ ms.locfileid: "59884685"
   
  Дополнительные сценарии, в которых вам может понадобиться создание или использование загрузочного USB-устройства флэш-памяти, см. в следующих темах:  
   
--   [Полное восстановление системы из существующей резервной копии компьютера клиента](../manage/restore-a-full-system-from-an-existing-client-computer-backup.md)  
+-   [Полное восстановление системы из существующей резервной копии клиентского компьютера](../manage/restore-a-full-system-from-an-existing-client-computer-backup.md)  
   
--   [Восстановление или исправление сервера под управлением Windows Server Essentials](../manage/restore-or-repair-your-server-running-windows-server-essentials.md)  
+-   [Восстановление сервера под управлением Windows Server Essentials](../manage/restore-or-repair-your-server-running-windows-server-essentials.md)  
 
   
 ### <a name="to-create-a-bootable-usb-flash-drive"></a>Создание загрузочного USB-устройства флэш-памяти  
@@ -50,9 +50,9 @@ ms.locfileid: "59884685"
   
 6.  Введите `clean`и нажмите клавишу ВВОД. Эта команда удаляет все данные с USB-устройства флэш-памяти.  
   
-7.  Чтобы создать новый основной раздел на USB-устройстве флэш-памяти, введите `create part pri`, и нажмите клавишу ВВОД.  
+7.  Чтобы создать новый основной раздел на USB-устройстве флэш-памяти, введите `create partition primary`, и нажмите клавишу ВВОД.  
   
-8.  Чтобы выбрать созданный раздел, введите `select part 1`и нажмите клавишу ВВОД.  
+8.  Чтобы выбрать созданный раздел, введите `select partition 1`и нажмите клавишу ВВОД.  
   
 9. Чтобы отформатировать раздел, введите `format fs=ntfs quick`и нажмите клавишу ВВОД.  
   

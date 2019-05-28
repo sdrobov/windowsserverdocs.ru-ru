@@ -8,16 +8,16 @@ ms.topic: article
 author: jasongerend
 ms.date: 5/14/2018
 description: Диспетчер ресурсов файлового сервера (FSRM) — это средство, которая позволяет классифицировать данные на файловом сервере Windows Server и управлять.
-ms.openlocfilehash: 107d08f247fc56720ccc3d11a3db88c77377257c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8488c7418ac03be53db7164678fad353bc7c637d
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476129"
 ---
 # <a name="file-server-resource-manager-fsrm-overview"></a>Обзор диспетчера ресурсов файлового сервера (FSRM)
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server (Semi-Annual Channel) 
 
 Диспетчер ресурсов файлового сервера (FSRM) — это служба роли в Windows Server, которая позволяет классифицировать данные, хранящиеся на файловых серверах, и управлять этими данными. Автоматически классифицировать файлы, выполняют задачи, основанные на этих классификаций, задать квоты для папок и создавать отчеты, мониторинг использования хранилища можно использовать диспетчер ресурсов файлового сервера.
 

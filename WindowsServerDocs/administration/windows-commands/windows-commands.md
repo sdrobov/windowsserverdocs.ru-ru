@@ -13,12 +13,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 05/22/2018
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 4cc9bc5c288eb063f333fa598dbb3511f7be5966
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5c8df2abd826df2745e10ed773ef50d6cf45c60b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820475"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192691"
 ---
 # <a name="windows-commands"></a>Команды Windows
 
@@ -28,34 +28,32 @@ ms.locfileid: "59820475"
 
 Чтобы найти сведения о конкретной команде, в следующем окне A-Z, выберите имя команды, затем нажмите кнопку имя команды.
 
-[ОБЪЕКТ](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e)  | 
- [F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[Я](#BKMK_i)  |
- [J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n)  | 
- [O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r)  | 
- [S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v)  | 
- [W](#BKMK_w) | 
-[X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+[ОБЪЕКТ](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e)  | 
+ [F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[Я](#i)  |
+ [J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n)  | 
+ [O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r)  | 
+ [S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v)  | 
+ [W](#w) | 
+[X](#x) | Y | Z
 
-## <a name="BKMK_PREREQ"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Информация, содержащаяся в этот PDF-ФАЙЛ, относится к:
 
 -   Windows Server 2019
@@ -68,7 +66,7 @@ ms.locfileid: "59820475"
 -   Windows 10
 -   Windows 8.1
 
-### <a name="BKMK_OVR"></a>Командная оболочка: Обзор
+### <a name="command-shell-overview"></a>Командная оболочка: Обзор
 Интерпретатор команд был первый оболочки, встроенные в Windows для автоматизации обычных задач, таких как управление учетными записями пользователей или еженощное резервное копирование с файлами пакетный (BAT). С помощью сервера сценариев Windows можно выполнить более сложные сценарии в командной оболочке. Дополнительные сведения см. в разделе [cscript](cscript.md) или [wscript](wscript.md). Можно более эффективно выполнять операции с помощью сценариев, чем с помощью пользовательского интерфейса. Сценарии принять все команды, доступные в командной строке.
 
 Windows состоит из двух командных оболочках. Командная оболочка и [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Каждой оболочки — это программа, которая обеспечивает прямую связь между пользователем и операционной системы или приложения, предоставляющий среду для автоматизации ИТ-операций.
@@ -89,59 +87,57 @@ PowerShell была разработана для расширения возм�
 > 
 > Для задания **reg_DWOrd** значение, используйте шестнадцатеричное значение управляющего символа для определенной функции (например, **0-9** — это вкладка и **0 08** является Backspace). Пользовательские настройки имеют приоритет над параметрами компьютера и параметры командной строки имеют приоритет над параметрами реестра.
 
-## <a name="BKMK_CmdRef"></a>Справочник по командной строке, A – Z
+## <a name="command-line-reference-a-z"></a>Справочник по командной строке, A – Z
 Чтобы найти сведения о конкретной команде Windows, в следующем окне A-Z, выберите имя команды, затем нажмите кнопку имя команды.
 
-[ОБЪЕКТ](#BKMK_a) |
-[B](#BKMK_b) | 
-[C](#BKMK_c) | 
-[D](#BKMK_d) | 
-[E](#BKMK_e)  | 
- [F](#BKMK_f) | 
-[G](#BKMK_g) | 
-[H](#BKMK_h) | 
-[Я](#BKMK_i)  |
- [J](#BKMK_j) | 
-[K](#BKMK_k) | 
-[L](#BKMK_l) | 
-[M](#BKMK_m) | 
-[N](#BKMK_n)  | 
- [O](#BKMK_o) | 
-[P](#BKMK_p) | 
-[Q](#BKMK_q) | 
-[R](#BKMK_r)  | 
- [S](#BKMK_s) | 
-[T](#BKMK_t) | 
-[U](#BKMK_u) | 
-[V](#BKMK_v)  | 
- [W](#BKMK_w) | 
-[X](#BKMK_x) | 
-[Y](#BKMK_y) | 
-[Z](#BKMK_z)
+[ОБЪЕКТ](#a) |
+[B](#b) | 
+[C](#c) | 
+[D](#d) | 
+[E](#e)  | 
+ [F](#f) | 
+[G](#g) | 
+[H](#h) | 
+[Я](#i)  |
+ [J](#j) | 
+[K](#k) | 
+[L](#l) | 
+[M](#m) | 
+[N](#n)  | 
+ [O](#o) | 
+[P](#p) | 
+[Q](#q) | 
+[R](#r)  | 
+ [S](#s) | 
+[T](#t) | 
+[U](#u) | 
+[V](#v)  | 
+ [W](#w) | 
+[X](#x) | Y | Z)
 
-### <a name="BKMK_a"></a>ОБЪЕКТ
--   [добавить](append.md)
--   [ARP](arp.md)
--   [ASSOC](assoc.md)
--   [в](at.md)
+### <a name="a"></a>Объект
+-   [append](append.md)
+-   [arp](arp.md)
+-   [assoc](assoc.md)
+-   [at](at.md)
 -   [atmadm](atmadm.md)
--   [Attrib](attrib.md)
+-   [attrib](attrib.md)
 -   [auditpol](auditpol.md)
--   [Autochk](autochk.md)
+-   [autochk](autochk.md)
 -   [autoconv](autoconv.md)
 -   [autofmt](autofmt.md)
 
-### <a name="BKMK_b"></a>B
--   [BCDboot](bcdboot.md)
+### <a name="b"></a>B
+-   [bcdboot](bcdboot.md)
 -   [bcdedit](bcdedit.md)
--   [Bdehdcfg](bdehdcfg.md)
+-   [bdehdcfg](bdehdcfg.md)
 -   [bitsadmin](bitsadmin.md)
   -   [bitsadmin addfile](bitsadmin-addfile.md)
   -   [bitsadmin addfileset](bitsadmin-addfileset.md)
   -   [bitsadmin addfilewithranges](bitsadmin-addfilewithranges.md)
-  -   [Отмена bitsadmin](bitsadmin-cancel.md)
-  -   [Полный bitsadmin](bitsadmin-complete.md)
-  -   [Создание bitsadmin](bitsadmin-create.md)
+  -   [bitsadmin cancel](bitsadmin-cancel.md)
+  -   [bitsadmin complete](bitsadmin-complete.md)
+  -   [bitsadmin create](bitsadmin-create.md)
   -   [bitsadmin getaclflags](bitsadmin-getaclflags.md)
   -   [bitsadmin getbytestotal](bitsadmin-getbytestotal.md)
   -   [bitsadmin getbytestransferred](bitsadmin-getbytestransferred.md)
@@ -169,17 +165,17 @@ PowerShell была разработана для расширения возм�
   -   [bitsadmin getreplyprogress](bitsadmin-getreplyprogress.md)
   -   [bitsadmin getstate](bitsadmin-getstate.md)
   -   [bitsadmin gettype](bitsadmin-gettype.md)
-  -   [bitsadmin справки](bitsadmin-help.md)
-  -   [сведения о bitsadmin](bitsadmin-info.md)
-  -   [Список bitsadmin](bitsadmin-list.md)
+  -   [bitsadmin help](bitsadmin-help.md)
+  -   [bitsadmin info](bitsadmin-info.md)
+  -   [bitsadmin list](bitsadmin-list.md)
   -   [bitsadmin listfiles](bitsadmin-listfiles.md)
-  -   [монитор bitsadmin](bitsadmin-monitor.md)
+  -   [bitsadmin monitor](bitsadmin-monitor.md)
   -   [bitsadmin nowrap](bitsadmin-nowrap.md)
   -   [bitsadmin rawreturn](bitsadmin-rawreturn.md)
   -   [bitsadmin removecredentials](bitsadmin-removecredentials.md)
   -   [bitsadmin replaceremoteprefix](bitsadmin-replaceremoteprefix.md)
-  -   [Сброс bitsadmin](bitsadmin-reset.md)
-  -   [Возобновление bitsadmin](bitsadmin-resume.md)
+  -   [bitsadmin reset](bitsadmin-reset.md)
+  -   [bitsadmin resume](bitsadmin-resume.md)
   -   [bitsadmin setaclflag](bitsadmin-setaclflag.md)
   -   [bitsadmin setcredentials](bitsadmin-setcredentials.md)
   -   [bitsadmin setdescription](bitsadmin-setdescription.md)
@@ -191,149 +187,149 @@ PowerShell была разработана для расширения возм�
   -   [bitsadmin setpriority](bitsadmin-setpriority.md)
   -   [bitsadmin setproxysettings](bitsadmin-setproxysettings.md)
   -   [bitsadmin setreplyfilename](bitsadmin-setreplyfilename.md)
-  -   [Приостановка bitsadmin](bitsadmin-suspend.md)
+  -   [bitsadmin suspend](bitsadmin-suspend.md)
   -   [bitsadmin takeownership](bitsadmin-takeownership.md)
   -   [bitsadmin передачи](bitsadmin-transfer.md)
   -   [bitsadmin util](bitsadmin-util.md)
-  -   [bitsadmin переноса по словам](bitsadmin-wrap.md)
+  -   [bitsadmin wrap](bitsadmin-wrap.md)
 -   [bootcfg](bootcfg.md)
   -   [bootcfg addsw](bootcfg-addsw.md)
-  -   [bootcfg копирования](bootcfg-copy.md)
+  -   [bootcfg copy](bootcfg-copy.md)
   -   [bootcfg dbg1394](bootcfg-dbg1394.md)
-  -   [bootcfg отладки](bootcfg-debug.md)  
-  -   [по умолчанию bootcfg](bootcfg-default.md)
+  -   [bootcfg debug](bootcfg-debug.md)  
+  -   [bootcfg default](bootcfg-default.md)
   -   [bootcfg delete](bootcfg-delete.md)
   -   [bootcfg ems](bootcfg-ems.md)
-  -   [bootcfg запроса](bootcfg-query.md)
-  -   [необработанные bootcfg](bootcfg-raw.md)
+  -   [bootcfg query](bootcfg-query.md)
+  -   [bootcfg raw](bootcfg-raw.md)
   -   [bootcfg rmsw](bootcfg-rmsw.md)
-  -   [время ожидания bootcfg](bootcfg-timeout.md)
+  -   [bootcfg timeout](bootcfg-timeout.md)
 -   [break](break_1.md)
 
-### <a name="BKMK_c"></a>C
--   [CACLS](cacls_1.md)
--   [Вызов](call.md)
+### <a name="c"></a>C
+-   [cacls](cacls_1.md)
+-   [call](call.md)
 -   [cd](cd.md)
 -   [certreq](certreq_1.md)
--   [Certutil](certutil.md)
--   [Изменение](change.md)
-  -   [изменить входа](change-logon.md)
-  -   [Изменение порта](change-port.md)
-  -   [изменить пользователя](change-user.md)
+-   [certutil](certutil.md)
+-   [change](change.md)
+  -   [change logon](change-logon.md)
+  -   [change port](change-port.md)
+  -   [change user](change-user.md)
 -   [chcp](chcp.md)
--   [ChDir](chdir_1.md)
+-   [chdir](chdir_1.md)
 -   [chglogon](chglogon.md)
 -   [chgport](chgport.md)
 -   [chgusr](chgusr.md)
--   [CHKDSK](chkdsk.md)
+-   [chkdsk](chkdsk.md)
 -   [chkntfs](chkntfs.md)
--   [Выбор](choice.md)
--   [Шифра](cipher.md)
--   [Клипов](clip.md)
--   [CLS](cls.md)
--   [cmd](Cmd.md)
--   [Программа cmdkey](cmdkey.md)
+-   [choice](choice.md)
+-   [cipher](cipher.md)
+-   [clip](clip.md)
+-   [cls](cls.md)
+-   [Cmd](Cmd.md)
+-   [cmdkey](cmdkey.md)
 -   [cmstp](cmstp.md)
--   [Цвет](color.md)
--   [Зап.](comp.md)
--   [Compact](compact.md)
--   [Преобразовать](convert.md)
--   [копирование](copy.md)
+-   [color](color.md)
+-   [comp](comp.md)
+-   [compact](compact.md)
+-   [convert](convert.md)
+-   [copy](copy.md)
 -   [cprofile](cprofile.md)
--   [Cscript](cscript.md)
+-   [cscript](cscript.md)
 
-### <a name="BKMK_d"></a>D
+### <a name="d"></a>D
 -   [date](date.md)
 -   [dcgpofix](dcgpofix.md)
--   [дефрагментации](defrag.md)
--   [DEL](del.md)
--   [DFSRMIG](dfsrmig.md)
+-   [defrag](defrag.md)
+-   [del](del.md)
+-   [dfsrmig](dfsrmig.md)
 -   [diantz](diantz.md)
 -   [dir](dir.md)
--   [экран будет](diskcomp.md)
+-   [diskcomp](diskcomp.md)
 -   [diskcopy](diskcopy.md)
--   [DiskPart](diskpart.md)
+-   [diskpart](diskpart.md)
 -   [diskperf](diskperf.md)
--   [Diskraid](diskraid.md)
--   [DiskShadow](diskshadow.md)
+-   [diskraid](diskraid.md)
+-   [diskshadow](diskshadow.md)
 -   [dispdiag](dispdiag.md)
 -   [dnscmd](Dnscmd.md)
--   [Doskey](doskey.md)
--   [Неправильный](driverquery.md)
+-   [doskey](doskey.md)
+-   [driverquery](driverquery.md)
 
-### <a name="BKMK_e"></a>E
+### <a name="e"></a>E
 -   [echo](echo.md)
--   [Изменить](edit.md)
+-   [edit](edit.md)
 -   [endlocal](endlocal.md)
--   [Стирание](erase.md)
+-   [erase](erase.md)
 -   [eventcreate](eventcreate.md)
 -   [eventquery](eventquery.md)
--   [Eventtriggers](eventtriggers.md)
+-   [eventtriggers](eventtriggers.md)
 -   [evntcmd](Evntcmd.md)
--   [Выход](exit_2.md)
--   [Разверните узел](expand.md)
--   [извлечь](extract.md)
+-   [exit](exit_2.md)
+-   [expand](expand.md)
+-   [extract](extract.md)
 
-### <a name="BKMK_f"></a>F
+### <a name="f"></a>F
 -   [fc](fc.md)
--   [найти](find.md)
+-   [find](find.md)
 -   [findstr](findstr.md)
--   [пальцем](finger.md)
+-   [finger](finger.md)
 -   [flattemp](flattemp.md)
 -   [fondue](fondue.md)
--   [для](for.md)
+-   [for](for.md)
 -   [forfiles](forfiles.md)
--   [Формат](format.md)
+-   [format](format.md)
 -   [freedisk](freedisk.md)
 -   [fsutil](fsutil.md)
   -   [fsutil 8dot3name](fsutil-8dot3name.md) 
-  -   [поведение fsutil](fsutil-behavior.md) 
-  -   [файл fsutil](fsutil-file.md)
+  -   [fsutil behavior](fsutil-behavior.md) 
+  -   [fsutil file](fsutil-file.md)
   -   [fsutil fsinfo](fsutil-fsinfo.md)
   -   [fsutil hardlink](fsutil-hardlink.md)
   -   [fsutil objectid](fsutil-objectid.md)
-  -   [Квота fsutil](fsutil-quota.md)
+  -   [fsutil quota](fsutil-quota.md)
   -   [fsutil repair](fsutil-repair.md)
   -   [fsutil reparsepoint](fsutil-reparsepoint.md)
-  -   [fsutil ресурсов](fsutil-resource.md)
-  -   [разреженных файлах fsutil](fsutil-sparse.md)
-  -   [Распределение по уровням fsutil](fsutil-tiering.md)
-  -   [транзакции fsutil](fsutil-transaction.md)
+  -   [fsutil resource](fsutil-resource.md)
+  -   [fsutil sparse](fsutil-sparse.md)
+  -   [fsutil tiering](fsutil-tiering.md)
+  -   [fsutil transaction](fsutil-transaction.md)
   -   [fsutil usn](fsutil-usn.md)
-  -   [тома fsutil](fsutil-volume.md)
+  -   [fsutil volume](fsutil-volume.md)
   -   [fsutil wim](fsutil-wim.md)
 -   [FTP](ftp.md)
 -   [ftype](ftype.md)
 -   [fveupdate](fveupdate.md)
 
-### <a name="BKMK_g"></a>G
--   [GETMAC](getmac.md)
--   [GetType](gettype.md)
--   [Оператор GoTo](goto.md)
+### <a name="g"></a>G
+-   [getmac](getmac.md)
+-   [gettype](gettype.md)
+-   [goto](goto.md)
 -   [gpfixup](gpfixup.md)
--   [Gpresult](gpresult.md)
+-   [gpresult](gpresult.md)
 -   [gpupdate](gpupdate.md)
 -   [graftabl](graftabl.md)
 
-### <a name="BKMK_h"></a>H
--   [Справка](help.md)
--   [Команда helpctr](helpctr.md)
--   [Имя узла](hostname.md)
+### <a name="h"></a>H
+-   [help](help.md)
+-   [helpctr](helpctr.md)
+-   [hostname](hostname.md)
 
-### <a name="BKMK_i"></a>Я
+### <a name="i"></a>I
 -   [icacls](icacls.md)
--   [If](if.md)
--   [может быть каталогом](inuse.md)
+-   [if](if.md)
+-   [inuse](inuse.md)
 -   [ipconfig](ipconfig.md)
 -   [ipxroute](ipxroute.md)
 -   [irftp](irftp.md)
 
-### <a name="BKMK_j"></a>J
--   [Jetpack](jetpack.md)
+### <a name="j"></a>J
+-   [jetpack](jetpack.md)
 
-### <a name="BKMK_k"></a>K
+### <a name="k"></a>K
 -   [klist](klist.md)
--   [Ksetup](ksetup.md)
+-   [ksetup](ksetup.md)
   -   [ksetup:setrealm](ksetup-setrealm.md)
   -   [ksetup:mapuser](ksetup-mapuser.md)
   -   [ksetup:addkdc](ksetup-addkdc.md)
@@ -356,27 +352,27 @@ PowerShell была разработана для расширения возм�
   -   [ksetup:getenctypeattr](ksetup-getenctypeattr.md)
   -   [ksetup:addenctypeattr](ksetup-addenctypeattr.md)
   -   [ksetup:delenctypeattr](ksetup-delenctypeattr.md) 
--   [KTMUTIL](ktmutil.md)
+-   [ktmutil](ktmutil.md)
 -   [ktpass](ktpass.md)
 
-### <a name="BKMK_l"></a>L
--   [Метка](label.md)
+### <a name="l"></a>L
+-   [label](label.md)
 -   [lodctr](lodctr.md)
--   [Logman](logman.md)
-  -   [Создание Logman](logman-create.md)
-  -   [Logman запроса](logman-query.md)
+-   [logman](logman.md)
+  -   [logman create](logman-create.md)
+  -   [logman query](logman-query.md)
   -   [Logman start & 124; остановить](logman-start-stop.md)
-  -   [Logman delete](logman-delete.md)
-  -   [Logman update](logman-update.md)
+  -   [logman delete](logman-delete.md)
+  -   [logman update](logman-update.md)
   -   [Logman import & 124; Экспорт](logman-import-export.md)
--   [Выход из системы](logoff.md)
+-   [logoff](logoff.md)
 -   [lpq](lpq.md)
--   [LPR](lpr.md)
+-   [lpr](lpr.md)
 
-### <a name="BKMK_m"></a>M
--   [MacFile](macfile.md)
+### <a name="m"></a>M
+-   [macfile](macfile.md)
 -   [makecab](makecab.md)
--   [Готов](manage-bde.md)
+-   [manage-bde](manage-bde.md)
   -   [готов: состояние](manage-bde-status.md)
   -   [готов: на](manage-bde-on.md)
   -   [готов: off](manage-bde-off.md)
@@ -396,105 +392,105 @@ PowerShell была разработана для расширения возм�
   -   [готов: обновление](manage-bde-upgrade.md)
   -   [готов: WipeFreeSpace](manage-bde-wipefreespace.md)
 -   [mapadmin](mapadmin.md)
--   [MD](Md.md)
+-   [Md](Md.md)
 -   [mkdir](mkdir.md)
 -   [mklink](mklink.md)
--   [MMC](mmc.md)
+-   [mmc](mmc.md)
 -   [mode](mode.md)
--   [Дополнительные](more.md)
--   [подключить](mount.md)
+-   [more](more.md)
+-   [mount](mount.md)
 -   [mountvol](mountvol.md)
--   [Перемещение](move.md)
--   [Mqbkup](mqbkup.md)
+-   [move](move.md)
+-   [mqbkup](mqbkup.md)
 -   [mqsvc](mqsvc.md)
 -   [mqtgsvc](mqtgsvc.md)
--   [технической поддержки от Майкрософт](msdt.md)
+-   [msdt](msdt.md)
 -   [msg](msg.md)
 -   [msiexec](msiexec.md)
 -   [msinfo32](msinfo32.md)
 -   [mstsc](mstsc.md)
 
-### <a name="BKMK_n"></a>N
+### <a name="n"></a>N
 -   [nbtstat](nbtstat.md)
 -   [netcfg](netcfg.md)
 -   [netsh](netsh.md)
 -   [netstat](netstat.md)
--   [NET печати](net-print.md)
--   [NFSAdmin](nfsadmin.md)
+-   [Net print](net-print.md)
+-   [nfsadmin](nfsadmin.md)
 -   [nfsshare](nfsshare.md)
 -   [nfsstat](nfsstat.md)
 -   [nlbmgr](nlbmgr.md)
--   [Nslookup](nslookup.md)
+-   [nslookup](nslookup.md)
   -   [выход команды nslookup](nslookup-exit-command.md)
   -   [Команда nslookup пальцем](nslookup-finger-command.md)
-  -   [Nslookup справки](nslookup-help.md)
+  -   [nslookup help](nslookup-help.md)
   -   [nslookup ls](nslookup-ls.md)
-  -   [Nslookup lserver](nslookup-lserver.md)
-  -   [корневой nslookup](nslookup-root.md)
+  -   [nslookup lserver](nslookup-lserver.md)
+  -   [nslookup root](nslookup-root.md)
   -   [nslookup server](nslookup-server.md)
-  -   [набор nslookup](nslookup-set.md)
-  -   [Nslookup, установить все](nslookup-set-all.md)
-  -   [Класс set nslookup](nslookup-set-class.md)
+  -   [nslookup set](nslookup-set.md)
+  -   [nslookup set all](nslookup-set-all.md)
+  -   [nslookup set class](nslookup-set-class.md)
   -   [nslookup set d2](nslookup-set-d2.md)
-  -   [значение параметра debug nslookup](nslookup-set-debug.md)
-  -   [Nslookup задайте домен](nslookup-set-domain.md)
-  -   [Nslookup задать номер порта](nslookup-set-port.md)
+  -   [nslookup set debug](nslookup-set-debug.md)
+  -   [nslookup set domain](nslookup-set-domain.md)
+  -   [nslookup set port](nslookup-set-port.md)
   -   [nslookup set querytype](nslookup-set-querytype.md)
-  -   [recurse набора nslookup](nslookup-set-recurse.md)
-  -   [Nslookup набор повтора](nslookup-set-retry.md)
-  -   [Nslookup задать корень](nslookup-set-root.md)
-  -   [Поиск набора nslookup](nslookup-set-search.md)
-  -   [nslookup set srchlist используется](nslookup-set-srchlist.md)
-  -   [задать время ожидания nslookup](nslookup-set-timeout.md)
-  -   [Тип набора nslookup](nslookup-set-type.md)
+  -   [nslookup set recurse](nslookup-set-recurse.md)
+  -   [nslookup set retry](nslookup-set-retry.md)
+  -   [nslookup set root](nslookup-set-root.md)
+  -   [nslookup set search](nslookup-set-search.md)
+  -   [nslookup set srchlist](nslookup-set-srchlist.md)
+  -   [nslookup set timeout](nslookup-set-timeout.md)
+  -   [nslookup set type](nslookup-set-type.md)
   -   [nslookup set vc](nslookup-set-vc.md)
-  -   [представление nslookup](nslookup-view.md)
--   [Программа Ntbackup](ntbackup.md)
+  -   [nslookup view](nslookup-view.md)
+-   [ntbackup](ntbackup.md)
 -   [ntcmdprompt](ntcmdprompt.md)
 -   [ntfrsutl](ntfrsutl.md)
 
-### <a name="BKMK_o"></a>O
--   [Openfiles](openfiles.md)
+### <a name="o"></a>O
+-   [openfiles](openfiles.md)
 
-### <a name="BKMK_p"></a>P
+### <a name="p"></a>P
 -   [pagefileconfig](pagefileconfig.md)
 -   [path](path.md)
--   [Pathping](pathping.md)
--   [Приостановка](pause.md)
+-   [pathping](pathping.md)
+-   [pause](pause.md)
 -   [pbadmin](pbadmin.md)
--   [PENTNT](pentnt.md)
--   [Системный монитор](perfmon.md)
--   [Проверка связи](ping.md)
+-   [pentnt](pentnt.md)
+-   [perfmon](perfmon.md)
+-   [ping](ping.md)
 -   [pnpunattend](pnpunattend.md)
--   [PnPUtil](pnputil.md)
+-   [pnputil](pnputil.md)
 -   [popd](popd.md)
 -   [PowerShell](PowerShell.md)
 -   [PowerShell_ise](PowerShell_ise.md)
--   [Печать](print.md)
+-   [print](print.md)
 -   [prncnfg](prncnfg.md)
 -   [prndrvr](prndrvr.md)
 -   [prnjobs](prnjobs.md)
 -   [prnmngr](prnmngr.md)
 -   [prnport](prnport.md)
 -   [prnqctl](prnqctl.md)
--   [Запрос](prompt.md)
--   [Pubprn](pubprn.md)
--   [PUSHD](pushd.md)
--   [PushPrinterConnections](pushprinterconnections.md)
+-   [prompt](prompt.md)
+-   [pubprn](pubprn.md)
+-   [pushd](pushd.md)
+-   [pushprinterconnections](pushprinterconnections.md)
 
-### <a name="BKMK_q"></a>ВОПРОС:
+### <a name="q"></a>Q
 -   [qappsrv](qappsrv.md)
 -   [qprocess](qprocess.md)
 -   [запрос](query.md)
 -   [quser](quser.md)
 -   [qwinsta](qwinsta.md)
 
-### <a name="BKMK_r"></a>R
+### <a name="r"></a>R
 -   [rcp](rcp.md)
--   [к удаленному рабочему столу](rd.md)
+-   [rd](rd.md)
 -   [rdpsign](rdpsign.md)
--   [Восстановление](recover.md)
--   [REG](reg.md)
+-   [recover](recover.md)
+-   [reg](reg.md)
   -   [Добавление REG](reg-add.md)
   -   [Сравнение REG](reg-compare.md)
   -   [Копировать REG](reg-copy.md)
@@ -506,28 +502,28 @@ PowerShell была разработана для расширения возм�
   -   [Восстановление REG](reg-restore.md)
   -   [REG сохранить](reg-save.md)
   -   [reg unload](reg-unload.md)
--   [REGINI](regini.md)
+-   [regini](regini.md)
 -   [regsvr32](regsvr32.md)
--   [повторной регистрации](relog.md)
--   [REM](rem.md)
+-   [relog](relog.md)
+-   [rem](rem.md)
 -   [ren](ren.md)
--   [Переименование](rename.md)
--   [Repair-bde](repair-bde.md)
--   [Замените](replace.md)
--   [сбросить настройки сеанса](reset-session.md)
+-   [rename](rename.md)
+-   [repair-bde](repair-bde.md)
+-   [replace](replace.md)
+-   [reset session](reset-session.md)
 -   [rexec](rexec.md)
--   [Risetup](risetup.md)
--   [RmDir](rmdir.md)
--   [Robocopy](robocopy.md)
+-   [risetup](risetup.md)
+-   [rmdir](rmdir.md)
+-   [robocopy](robocopy.md)
 -   [route_ws2008](route_ws2008.md)
 -   [rpcinfo](rpcinfo.md)
--   [RPCPing](rpcping.md)
+-   [rpcping](rpcping.md)
 -   [rsh](rsh.md)
 -   [rundll32](rundll32.md)
 -   [rwinsta](rwinsta.md)
 
-### <a name="BKMK_s"></a>S
--   [SchTasks](schtasks.md)
+### <a name="s"></a>S
+-   [schtasks](schtasks.md)
 -   [Scwcmd](Scwcmd.md)
   -   [Scwcmd: анализ](scwcmd-analyze.md)
   -   [Scwcmd: Настройка](scwcmd-configure.md)
@@ -535,7 +531,7 @@ PowerShell была разработана для расширения возм�
   -   [Scwcmd: отката](scwcmd-rollback.md) 
   -   [Scwcmd: преобразование](scwcmd-transform.md) 
   -   [Scwcmd: представление](scwcmd-view.md) 
--   [Secedit](secedit.md)
+-   [secedit](secedit.md)
   -   [Secedit: анализ](secedit-analyze.md)
   -   [Secedit: Настройка](secedit-configure.md)
   -   [Secedit:Export](secedit-export.md)
@@ -543,61 +539,61 @@ PowerShell была разработана для расширения возм�
   -   [Secedit:import](secedit-import.md)
   -   [Secedit: проверка](secedit-validate.md)
 -   [serverceipoptin](serverceipoptin.md)
--   [ServerManagerCmd](Servermanagercmd.md)
+-   [Servermanagercmd](Servermanagercmd.md)
 -   [serverweroptin](serverweroptin.md)
--   [Набор](set_1.md)
--   [SETLOCAL](setlocal.md)
--   [Setx](setx.md)
--   [Sfc](sfc.md)
--   [Тень](shadow.md)
--   [SHIFT](shift.md)
+-   [set](set_1.md)
+-   [setlocal](setlocal.md)
+-   [setx](setx.md)
+-   [sfc](sfc.md)
+-   [shadow](shadow.md)
+-   [shift](shift.md)
 -   [showmount](showmount.md)
--   [Завершение работы](shutdown.md)
--   [Сортировка](sort.md)
--   [Запуск](start.md)
--   [SUBST](subst.md)
+-   [shutdown](shutdown.md)
+-   [sort](sort.md)
+-   [start](start.md)
+-   [subst](subst.md)
 -   [sxstrace](sxstrace.md)
--   [команды sysocmgr](sysocmgr.md)
--   [SYSTEMINFO](systeminfo.md)
+-   [sysocmgr](sysocmgr.md)
+-   [systeminfo](systeminfo.md)
 
-### <a name="BKMK_t"></a>T
--   [TAKEOWN](takeown.md)
--   [Tapicfg](tapicfg.md)
--   [Taskkill](taskkill.md)
--   [Список задач](tasklist.md)
+### <a name="t"></a>T
+-   [takeown](takeown.md)
+-   [tapicfg](tapicfg.md)
+-   [taskkill](taskkill.md)
+-   [tasklist](tasklist.md)
 -   [tcmsetup](tcmsetup.md)
 -   [telnet](telnet.md)
--   [TFTP](tftp.md)
--   [время](time.md)
--   [время ожидания](timeout_1.md)
--   [Заголовок](title_1.md)
+-   [tftp](tftp.md)
+-   [time](time.md)
+-   [timeout](timeout_1.md)
+-   [title](title_1.md)
 -   [tlntadmn](tlntadmn.md)
 -   [tpmvscmgr](tpmvscmgr.md)
--   [Tracerpt](tracerpt_1.md)
--   [Tracert](tracert.md)
--   [Дерево](tree.md)
+-   [tracerpt](tracerpt_1.md)
+-   [tracert](tracert.md)
+-   [tree](tree.md)
 -   [tscon](tscon.md)
 -   [tsdiscon](tsdiscon.md)
--   [Tsecimp](tsecimp_1.md)
+-   [tsecimp](tsecimp_1.md)
 -   [tskill](tskill.md)
 -   [tsprof](tsprof.md)
--   [Тип](type.md)
--   [команды Typeperf](typeperf.md)
+-   [type](type.md)
+-   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="BKMK_u"></a>U
--   [Unlodctr](unlodctr_1.md)
+### <a name="u"></a>U
+-   [unlodctr](unlodctr_1.md)
 
-### <a name="BKMK_v"></a>V
+### <a name="v"></a>V
 -   [ver](ver.md)
--   [Средство проверки](verifier.md)
--   [Проверка](verify_1.md)
--   [VOL](vol.md)
+-   [verifier](verifier.md)
+-   [verify](verify_1.md)
+-   [vol](vol.md)
 -   [vssadmin](vssadmin.md)- 
 
-### <a name="BKMK_w"></a>W
--   [WAITFOR](waitfor.md)
--   [WBADMIN](wbadmin.md)
+### <a name="w"></a>W
+-   [waitfor](waitfor.md)
+-   [wbadmin](wbadmin.md)
   -   [Wbadmin enable backup](wbadmin-enable-backup.md)
   -   [Отключите WBADMIN резервное копирование](wbadmin-disable-backup.md)
   -   [начало архивации WBADMIN](wbadmin-start-backup.md)
@@ -613,18 +609,18 @@ PowerShell была разработана для расширения возм�
   -   [Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)
   -   [WBADMIN восстановления каталога](wbadmin-restore-catalog.md)
   -   [WBADMIN delete каталога](wbadmin-delete-catalog.md)
--   [WDSUtil](wdsutil.md)
+-   [wdsutil](wdsutil.md)
 -   [wecutil](wecutil.md)
 -   [wevtutil](wevtutil.md)
 -   [where](where_1.md)
 -   [whoami](whoami.md)
--   [Winnt](winnt.md)
--   [Winnt32](winnt32.md)
+-   [winnt](winnt.md)
+-   [winnt32](winnt32.md)
 -   [winpop](winpop.md)
--   [Winrs](winrs.md)
+-   [winrs](winrs.md)
 -   [WLBS](wlbs_1.md)
--   [WMIC](wmic.md)
--   [WScript](wscript.md)
+-   [wmic](wmic.md)
+-   [wscript](wscript.md)
 
-### <a name="BKMK_x"></a>X
+### <a name="x"></a>X
 -   [xcopy](xcopy.md)

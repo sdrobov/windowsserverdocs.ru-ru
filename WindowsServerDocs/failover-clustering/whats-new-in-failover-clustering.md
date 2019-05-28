@@ -8,22 +8,22 @@ manager: dongill
 author: JasonGerend
 ms.author: jgerend
 ms.date: 10/18/2018
-ms.openlocfilehash: b4fa59aa62acba5c89f20c191da2c3c1b776b1ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3c0792347aaa70fe80d346cc51cbc44b73c42f39
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884755"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476023"
 ---
 # <a name="whats-new-in-failover-clustering"></a>Что нового в отказоустойчивой кластеризации?
 
-> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019, Windows Server 2016
 
-В этом разделе приводятся сведения о новых и измененных функциях отработки отказа кластеризации для Windows Server 2019 г., Windows Server 2016 и выпусков Windows Server Semi-Annual Channel.
+В этом разделе приводятся сведения о новых и измененных функциях отказоустойчивого кластера для Windows Server 2019 г. и Windows Server 2016.
 
 ## <a name="whats-new-in-windows-server-2019"></a>Новые возможности в Windows Server 2019
 
-- **Наборы кластера**
+- **Наборы кластеров**
 
     Наборы кластера позволяют увеличить количество серверов в решении одного программно определяемого центра обработки данных (SDDC) превышает ограничение по текущего кластера. Это достигается путем группирования нескольких кластеров в набор кластера — это слабо связанная группа несколькими отказоустойчивыми кластерами: вычисления, хранение и гиперконвергентную.
     При использовании наборов кластера можно перемещать виртуальные машины в Интернете (Динамическая миграция) между кластерами в кластере необходимо установить.

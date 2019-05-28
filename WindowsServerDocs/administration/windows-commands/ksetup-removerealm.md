@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f62208d6576890529be80b1c6cb3cc073a2b4e6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 579b0772e4642389b90aa370dad80a3eebea9d34
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853365"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564720"
 ---
 # <a name="ksetupremoverealm"></a>ksetup:removerealm
 
@@ -46,7 +46,7 @@ ksetup /removerealm <RealmName>
 
 ## <a name="BKMK_Examples"></a>Примеры
 
-Опечатку ошибочно задаются имя сферы «. COM? на локальном компьютере для CORP. CONTOSO. CON
+Ошибочно присвоено имя области, сделав опечатку «.COM» на локальном компьютере CORP. CONTOSO. CON
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```
@@ -59,5 +59,5 @@ ksetup /removerealm CORP.CONTOSO.CON
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [ksetup:setrealm](ksetup-setrealm.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Ksetup:setrealm](ksetup-setrealm.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

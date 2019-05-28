@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: d67f4c252ad25a05f11b88771f12fd01d13137d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 040caf6395b7c70313de900d522241f97699a999
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880395"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192505"
 ---
 # <a name="add-a-federation-server-to-a-federation-server-farm"></a>Добавление сервера федерации в ферму серверов федерации
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 После установки службы роли службы федерации и настройки необходимых сертификатов на компьютере, можно приступать к настройке компьютера в качестве сервера федерации. Чтобы присоединить компьютер к созданной ферме серверов федерации, выполните указанные ниже действия.  
   
@@ -54,6 +53,6 @@ ms.locfileid: "59880395"
 6.  Просмотрите результаты на странице **Результаты конфигурации** . Завершив все действия по настройке конфигурации, щелкните **Закрыть**  , чтобы выйти из мастера.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
 

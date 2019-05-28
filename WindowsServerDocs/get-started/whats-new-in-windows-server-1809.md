@@ -4,21 +4,22 @@ description: Новые возможности в Windows Server версии 18
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
+ms.date: 05/21/2019
 ms.localizationpriority: high
-ms.openlocfilehash: 32868a4a5044360bf596e26d497138bccf6692bc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d268550112236daecbe3dc1a9d9da21bc8ec67fb
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834415"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976642"
 ---
 # <a name="whats-new-in-windows-server-version-1809"></a>Новые возможности Windows Server версии 1809
 
 >Область применения. Windows Server (Semi-Annual Channel)
 
-В этом разделе описаны некоторые новые функции в Windows Server версии 1809. Описание новых возможностей Windows Server 2019 см. в разделе [Новые возможности Windows Server 2019](../get-started-19/whats-new-19.md).
+Чтобы узнать о новых функциях в Windows, см. в разделе [новые возможности в Windows Server](whats-new-in-windows-server.md). В этом разделе описаны некоторые новые функции в Windows Server версии 1809.
 
 ## <a name="container-networking-with-kubernetes"></a>Работа с сетевыми подключениями контейнеров с помощью Kubernetes
 
@@ -41,7 +42,7 @@ ms.locfileid: "59834415"
 * Контейнеры Linux в Windows
 * [Дополнительные с низкой задержкой фона транспорта (LEDBAT)](https://blogs.technet.microsoft.com/networking/2018/07/25/ledbat/)
 * Повышение производительности сети для виртуальных рабочих нагрузок
-* [Компонент совместимости приложений ядра сервера по запросу (FOD) ](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19)
+* [Компонент совместимости приложений ядра сервера по запросу (FOD)](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19)
 * [Служба хранилища миграции (SMS)](../storage/whats-new-in-storage.md#storage-spaces-direct)
 * Реплика хранилища
 * Системная аналитика 

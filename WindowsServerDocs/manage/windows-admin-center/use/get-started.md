@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 02/15/2019
-ms.openlocfilehash: f4fd9f69e75ed80bbdb345b4041c2337c65ec2e6
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: ff1f949c764473a63eafa25346949d710699dbd1
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63742670"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222722"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Начало работы с Windows Admin Center
 
@@ -114,7 +114,7 @@ Windows Admin Center поддерживает несколько механиз�
 
 **Решение пароль локального администратора (LAP)**
 
-Если в среде используется [LAPS](https://technet.microsoft.com/mt227395.aspx), LAPS учетные данные можно использовать для проверки подлинности на управляемый узел. **Если вы используете этот сценарий,** [отзыв](http://aka.ms/WACFeedback).
+Если в среде используется [LAPS](https://technet.microsoft.com/mt227395.aspx)и у вас есть Windows Admin Center, установленных на ПК Windows 10, можно использовать LAPS учетные данные для проверки подлинности на управляемый узел. **Если вы используете этот сценарий,** [отзыв](http://aka.ms/WACFeedback).
 
 ## <a name="using-tags-to-organize-your-connections"></a>Использование тегов для организации подключений
 

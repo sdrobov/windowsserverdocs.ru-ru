@@ -1,25 +1,22 @@
 ---
 title: Установка основных серверных компонентов
 description: Как получить и установить установки основных серверных компонентов на Windows Server 2019, Windows Server 2016 или Windows Server (Semi-Annual Channel).
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
-ms.date: 1/04/2019
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d22818c-fbb7-487a-bb82-81ef0a3f7ede
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: d99cd0b028d08d5c3247541ce3a868676b60693d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6f685ce29088b56bb243d21315787ab90e6863a4
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869025"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976723"
 ---
 # <a name="install-server-core"></a>Установка основных серверных компонентов
 
@@ -35,7 +32,7 @@ ms.locfileid: "59869025"
 -   Windows Server Datacenter
 -   Windows Server Datacenter с возможностями рабочего стола
 
-При установке Windows Server (полугодовой канал), включая версии 1709, 1803 и 1809, имеются следующие варианты установки:
+При установке Windows Server (полугодовой канал), у вас есть следующие варианты установки:
 
 -   Windows Server Standard 
 -   Windows Server Datacenter
@@ -74,10 +71,10 @@ ms.locfileid: "59869025"
 - сервер обновления Windows Server;
 - Сервер управления правами Active Directory
 - Маршрутизация и удаленный доступ и следующие подроли:
-- посредник подключений служб удаленных рабочих столов;
-- Лицензирование
-- Виртуализация
-- Службы активации корпоративных лицензий
+   - посредник подключений служб удаленных рабочих столов;
+   - Лицензирование
+   - Виртуализация
+   - Службы активации корпоративных лицензий
 
 Роли, не включенные в основных серверных компонентов, см. в разделе [ролей, служб ролей и компонентов не в Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
 
@@ -88,13 +85,12 @@ ms.locfileid: "59869025"
 ## <a name="installing-on-windows-server-semi-annual-channel"></a>Установка в Windows Server (Semi-Annual Channel)
 
 Шаги установки для Windows Server (полугодовой канал), так же, как установка предыдущих версий Windows Server (из. ISO-образ), за исключением следующих случаев:
+
 - Не поддерживается переход с предыдущих версий Windows Server на Windows Server версии 1709. Всегда требуется новая установка.
    Это означает, что при запуске setup.exe на рабочем столе Windows компьютера, процесс установки не поддерживает параметр обновления (закрашен серым).
 - Отсутствует версия оценки для Windows Server (Semi-Annual Channel)
 - Версия для поставщиков оборудования или розничной продажи отсутствует. Windows Server (Semi-Annual Channel) можно лицензировать только через программы Software Assurance или лояльности.
 
-Инструкции по получению Windows Server версии 1709 см. в разделе [Знакомство с Windows Server версии 1709](get-started-with-1709.md).
+Дополнительные сведения о полугодовой канал, см. в разделе [сравнение каналы обслуживания](../get-started-19/servicing-channels-19.md).
 
-Чтобы получить Windows Server версии ниже 1803, см. в разделе [Знакомство с Windows Server, версия 1803](get-started-with-1803.md).
-
-Новые возможности в Windows Server версии 1809, см. в разделе [новые возможности в Windows Server версии 1809](whats-new-in-windows-server-1809.md)
+Новые возможности в Windows Server Semi-Annual Channel см. в разделе [новые возможности в Windows Server](whats-new-in-windows-server.md)

@@ -2,22 +2,22 @@
 title: Обзор пространств имен DFS
 ms.prod: windows-server-threshold
 ms.author: jgerend
-ms.manager: brianlic
+ms.manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
-ms.date: 10/15/2018
+ms.date: 05/09/2019
 description: В этом разделе описываются пространства имен DFS — служба роли в Windows Server, которая позволяет объединять общие папки, находящиеся на разных серверах, в одно или несколько логически структурированных пространств имен.
-ms.openlocfilehash: 0f80e5a25254513702c25ce895a28c4cb1e0f2b4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 33b5a36c9f13179286a95735621272f79983231c
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844255"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613187"
 ---
 # <a name="dfs-namespaces-overview"></a>Обзор пространств имен DFS
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server (Semi-Annual Channel)
 
 Пространства имен DFS — это служба роли в Windows Server, которая предоставляет возможность объединения общих папок, находящихся на разных серверах, в одно или несколько логически структурированных пространств имен. Это делает возможным предоставлять пользователям виртуальное представление общих папок, где один путь ведет к файлам, расположенным на нескольких серверах, как показано на следующем рисунке.
 
@@ -42,11 +42,12 @@ ms.locfileid: "59844255"
 
 На серверах под управлением следующих операционных систем может размещаться по несколько доменных пространств имен в дополнение к одному изолированному пространству имен: 
 
-- Windows Server (Semi-Annual Channel)
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2 Datacenter и Enterprise
+- Windows Server 2008 R2 Datacenter Edition и Enterprise Edition
+- Windows Server (Semi-Annual Channel)
 
 На серверах под управлением следующих операционных систем может размещаться одно изолированное пространство имен:
 
@@ -123,7 +124,7 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 |------------------|----------------|
 |**Оценка продукта**|[Новые возможности пространств имен DFS и репликации DFS в Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx)|
 |**Развертывание**|[Вопросы масштабируемости пространства имен DFS](http://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx)|
-|**Операции**|[Пространства имен DFS: Часто задаваемые вопросы](https://technet.microsoft.com/library/ee404780.aspx)|
+|**Операции**|[Пространства имен DFS: вопросы и ответы](https://technet.microsoft.com/library/ee404780.aspx)|
 |**Ресурсы сообщества**|[Файловые службы и форум TechNet хранилища](https://social.technet.microsoft.com/forums/winserverfiles/threads/)|
 |**Протоколы**|[Файловых служб протоколов в Windows Server](https://msdn.microsoft.com/en-us/library/cc239318.aspx) (устаревшая версия)|
 |**Связанные технологии**| [Отказоустойчивая кластеризация](../../failover-clustering/failover-clustering-overview.md)|

@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 425cfe794095f1515eb3fae2f1a5e5db90ba3d00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5767fa45f8b25680aa1b1d97ddab630923d10fae
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856185"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192486"
 ---
 # <a name="add-a-host-a-resource-record-to-corporate-dns-for-a-federation-server"></a>Добавление записи ресурса (A) узла в корпоративную систему DNS для сервера федерации
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 Для клиентов в корпоративной сети успешно доступ сервера федерации, встроенную проверку подлинности Windows, узел \(объект\) сначала необходимо создать запись ресурса в корпоративных доменных имен \(DNS\) , разрешает имя узла сервера федерации учетных записей \(например, fs.fabrikam.com\) на IP-адрес сервера федерации или кластера серверов федерации. Можно использовать следующую процедуру, чтобы добавить узел \(A\) записи ресурса для корпоративной DNS для сервера федерации.  
@@ -29,7 +28,7 @@ ms.locfileid: "59856185"
   
 1.  Откройте оснастку DNS на DNS-сервер в сети организации,\-в.  
   
-2.  В дереве консоли щелкните правой кнопкой мыши\-щелкните зону прямого просмотра, а затем нажмите кнопку **новый узел \(A или AAAA\)**.  
+2.  В дереве консоли щелкните правой кнопкой мыши\-щелкните зону прямого просмотра, а затем нажмите кнопку **новый узел \(A или AAAA\)** .  
   
 3.  В **имя**, введите только имя компьютера сервера федерации или кластера серверов федерации; например, полное доменное имя \(полное доменное имя\) fs.fabrikam.com, тип **fs**.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "59856185"
 5.  Нажмите кнопку **Добавить узел**.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
 [Требования к разрешению имен для серверов федерации](https://technet.microsoft.com/library/dd807055.aspx)  
   

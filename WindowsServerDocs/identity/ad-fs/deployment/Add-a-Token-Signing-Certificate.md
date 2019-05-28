@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8a94e0724d6fd2a04e2fbfc22b3054b49d87f440
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ac9f9b95ad6226a8e3b7012e317899f1d48c60c9
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826155"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192474"
 ---
 # <a name="add-a-token-signing-certificate"></a>Добавление сертификата подписи токенов
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Серверы федерации в службах федерации Active Directory \(AD FS\) требуют маркер\-подписи сертификатов, чтобы защититься от изменения или подделки маркеров безопасности с целью получения несанкционированного доступа для федеративных ресурсов. Каждый маркер\-сертификат для подписи содержит криптографические закрытые и открытые ключи, используемые для цифровой подписи \(с помощью закрытого ключа\) маркер безопасности. Позже, после получения эти ключи сервером федерации партнера, они проверяют подлинность \(с помощью открытого ключа\) из зашифрованного токена безопасности.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "59826155"
 4.  В **поиск файла сертификата** диалоговом окне перейдите к файлу сертификата, который требуется добавить, выберите файл сертификата и нажмите кнопку **откройте**.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
 [Требования к сертификатам для серверов федерации](https://technet.microsoft.com/library/dd807040.aspx)  
   

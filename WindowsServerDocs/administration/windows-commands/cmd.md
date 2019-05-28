@@ -13,16 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 966ac7f70984dff6d26265e07a26a6eebcde9fb6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7d9b99dbe7e26190e87c5dfc9de29980b9cb2f43
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874395"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192587"
 ---
 # <a name="cmd"></a>Cmd
-
-
 
 Запускает новый экземпляр интерпретатор команд Cmd.exe. При использовании без параметров, **cmd** сведения о версии и авторских правах операционной системы.
 
@@ -104,6 +102,7 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
 > [!CAUTION]
 > Неправильное изменение реестра может серьезно повредить систему. Перед внесением изменений следует сделать резервную копию всех ценных данных на компьютере.
+
 -   Включение и отключение расширения команд
 
     Расширения команд включены по умолчанию в Windows XP. Можно отключить для определенного процесса с помощью **/e: off**. Можно включить или отключить расширения для всех **cmd** параметры командной строки в сеансе компьютера или пользователя, задав следующие **REG_DWORD** значения:
@@ -114,34 +113,35 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
     Задайте **REG_DWORD** значение либо **0 × 1** (включено) или **0 × 0** (отключен) в реестре с помощью Regedit.exe. Пользовательские настройки имеют приоритет над параметрами компьютера и параметры командной строки имеют приоритет над параметрами реестра.
 
->     [!CAUTION]
->     Incorrectly editing the registry may severely damage your system. Before making changes to the registry, you should back up any valued data on the computer.
+> [!CAUTION]
+> Неправильное изменение реестра может серьезно повредить систему. Перед внесением изменений следует сделать резервную копию всех ценных данных на компьютере.
 
     When you enable command extensions, the following commands are affected:  
-    -   **assoc**
-    -   **call**
-    -   **chdir (cd)**
-    -   **color**
-    -   **del (erase)**
-    -   **endlocal**
-    -   **for**
-    -   **ftype**
-    -   **goto**
-    -   **if**
-    -   **mkdir (md)**
-    -   **popd**
-    -   **prompt**
-    -   **pushd**
-    -   **set**
-    -   **setlocal**
-    -   **shift**
-    -   **start** (also includes changes to external command processes)
+    -  **assoc**
+    -  **call**
+    -  **chdir (cd)**
+    -  **color**
+    -  **del (erase)**
+    -  **endlocal**
+    -  **for**
+    -  **ftype**
+    -  **goto**
+    -  **if**
+    -  **mkdir (md)**
+    -  **popd**
+    -  **prompt**
+    -  **pushd**
+    -  **set**
+    -  **setlocal**
+    -  **shift**
+    -  **start** (also includes changes to external command processes)
+
 -   Включение расширения переменной среды с задержкой
 
     Если вы включаете расширение переменной среды с задержкой, восклицательного знака можно использовать для замены текущего значения переменной среды во время выполнения.
 -   Включение завершения имен файлов и каталогов
 
-    Завершение имен файлов и каталогов не включена по умолчанию. Можно включить или отключить завершения имени файла для конкретного процесса **cmd** с **/f:**{**на**|**off**}. Можно включить или отключить завершение имен файлов и каталогов для всех процессов **cmd** команду на компьютере, или для сеанса входа в систему пользователя, задав следующие **REG_DWORD** значения:
+    Завершение имен файлов и каталогов не включена по умолчанию. Можно включить или отключить завершения имени файла для конкретного процесса **cmd** с **/f:** {**на**|**off**}. Можно включить или отключить завершение имен файлов и каталогов для всех процессов **cmd** команду на компьютере, или для сеанса входа в систему пользователя, задав следующие **REG_DWORD** значения:
 
     **HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\CompletionChar\REG_DWORD**
 
@@ -170,4 +170,4 @@ cmd [/c|/k] [/s] [/q] [/d] [/a|/u] [/t:{<B><F>|<F>}] [/e:{on|off}] [/f:{on|off}]
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

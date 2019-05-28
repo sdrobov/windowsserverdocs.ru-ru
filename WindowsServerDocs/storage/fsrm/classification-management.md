@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 13323cd380c9df5185a7989721ec2574ea880d4f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d7ea1f6f5d99ef1b55e919af3b8ebe391486ed50
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814795"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475900"
 ---
 # <a name="classification-management"></a>Управление классификациями
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Свойства классификации используются для категоризации файлов и выбора файлов для запланированных задач управления файлами.
 
@@ -25,7 +25,7 @@ ms.locfileid: "59814795"
 
 Этот раздел содержит следующие темы:
 
--   [Создайте свойство классификации](create-classification-property.md)
+-   [Создание свойства классификации](create-classification-property.md)
 -   [Создание правила автоматической классификации](create-automatic-classification-rule.md)
 
 
@@ -35,4 +35,4 @@ ms.locfileid: "59814795"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
+[Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)

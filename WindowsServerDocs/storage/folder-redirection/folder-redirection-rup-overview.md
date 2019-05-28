@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e3cf32cd718b906f16fc09901284d8520177df8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad44ba4bbe0b31f423a4ae4593e349571d838de2
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824285"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475922"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей
 
->Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2019 г., Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 В этом разделе рассматриваются перенаправлением папок, автономных файлов (кэширование на стороне клиента или CSC) и технологий перемещаемых профилей пользователей (также известных как RUP), включая новые возможности и где найти дополнительные сведения.
 
@@ -76,7 +76,7 @@ ms.locfileid: "59824285"
 При экономной синхронизации Windows отключает фоновую синхронизацию, когда пользователь, выбравший сеть с лимитным тарифным планом (например, мобильную сеть 4G), достиг или почти достиг предела пропускной способности, либо переместился в сеть стороннего поставщика.
 
 >[!NOTE]
->Лимитных сетевых подключениях обычно имеют приема-передачи сетевых задержек, которые выполняются медленнее, чем превышают 35 миллисекунд — значение задержки происходит переход в режим вне сети (медленного подключения) в Windows 8, Windows Server 2012 и Windows Server 2016. Поэтому данные подключения переводятся в автономный режим (режим медленного подключения) автоматически.
+>Лимитных сетевых подключениях, обычно имеют приема-передачи сетевых задержек, которые выполняются медленнее, чем превышают 35 миллисекунд — значение задержки происходит переход в режим вне сети (медленного подключения) в Windows 8, Windows Server 2019, Windows Server 2016 и Windows Server 2012. Поэтому данные подключения переводятся в автономный режим (режим медленного подключения) автоматически.
 
 ### <a name="what-value-does-cost-aware-synchronization-add"></a>Какое значение добавить экономную синхронизацию?
 
@@ -123,7 +123,7 @@ ms.locfileid: "59824285"
 Для назначения основных компьютеров среда должна соответствовать следующим требованиям.
 
 - Схема доменных служб Active Directory (AD DS) необходимо обновить для включения схемы Windows Server 2012 и условий (установка Windows Server 2012 или более поздней версии контроллер домена автоматически обновляет схему). Дополнительные сведения об обновлении схемы AD DS, см. в разделе [обновление контроллеров домена до Windows Server 2016](../../identity/ad-ds/deploy/upgrade-domain-controllers.md).
-- Клиентские компьютеры, необходимо запустить Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012 и быть присоединены к домену Active Directory, которыми вы управляете.
+- Клиентские компьютеры, необходимо запустить Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012 и быть присоединены к домену Active Directory, которыми вы управляете.
 
 ## <a name="more-information"></a>Дополнительные сведения
 

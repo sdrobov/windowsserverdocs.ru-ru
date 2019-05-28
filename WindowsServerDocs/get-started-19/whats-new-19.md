@@ -4,25 +4,30 @@ description: Обзор новых возможностей Windows Server 2019,
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: high
-ms.openlocfilehash: 4c454fc397b662e313d5cfb7ed02a83dc7059207
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.date: 05/21/2019
+ms.openlocfilehash: af887c0e1c66a017ee091fb2cab2dc61fa9ac1dc
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871845"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976546"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Новые возможности в Windows Server 2019
 
-В этом разделе описаны некоторые новые функции в Windows Server 2019. Windows Server 2019 лежит прочный фундамент для Windows Server 2016 и привносит множество инноваций на четыре основные темы: Гибридное облако, безопасность, платформы приложений и Гиперконвергентная инфраструктура (HCI). Описание новых возможностей Windows Server версии 1809 см. в разделе [Новые возможности Windows Server версии 1809](../get-started/whats-new-in-windows-server-1809.md).
+> Относится к: Windows Server 2019
+
+В этом разделе описаны некоторые новые функции в Windows Server 2019. Windows Server 2019 лежит прочный фундамент для Windows Server 2016 и привносит множество инноваций на четыре основные темы: Гибридное облако, безопасность, платформы приложений и Гиперконвергентная инфраструктура (HCI).
+
+Новые возможности в выпусках Windows Server Semi-Annual Channel см. в статье [новые возможности в Windows Server](../get-started/whats-new-in-windows-server.md). 
 
 ## <a name="general"></a>Общие
 
 ### <a name="desktop-experience"></a>Возможности рабочего стола
 
-Поскольку Windows Server 2019 — это выпуск в канале Long-Term Servicing Channel (LTSC), он включает <b>возможности рабочего стола</b>. (Оно не указано в Windows Server версии 1709, Windows Server, версии 1803 и Windows Server версии 1809, так как полугодовой канал \(SAC\) намеренно не включают возможности рабочего стола; они являются строго сервера Выпуски Core и Nano Server образ контейнера.) Как и в Windows Server 2016 во время установки операционной системы можно выбрать установки основных серверных компонентов или сервера с возможностями рабочего стола.
+Поскольку Windows Server 2019 — это выпуск в канале Long-Term Servicing Channel (LTSC), он включает <b>возможности рабочего стола</b>. (Полугодовой канал \(SAC\) намеренно не включают возможности рабочего стола; они предназначены только основных серверных компонентов и освобождает образ контейнера Nano Server.) Как и в Windows Server 2016 во время установки операционной системы можно выбрать установки основных серверных компонентов или сервера с возможностями рабочего стола.
 
 ### <a name="system-insights"></a>Системная аналитика
 
@@ -132,7 +137,7 @@ ms.locfileid: "59871845"
 
 Ниже приведен список новых возможностей отказоустойчивой кластеризации. Дополнительные сведения см. в разделе [Новые возможности отказоустойчивой кластеризации](../failover-clustering/whats-new-in-failover-clustering.md).
 
-- **Наборы кластера**
+- **Наборы кластеров**
 - **Azure с поддержкой кластеров**
 - **Миграция кластера между доменами**
 - **Следящий сервер USB**
@@ -148,7 +153,7 @@ ms.locfileid: "59871845"
 
 Теперь можно запускать контейнеры на основе Windows и Linux на одном и том же узле контейнера с помощью одинаковой управляющей программы Docker. Это позволяет работать в разнородной среде узлов контейнеров и предоставить разработчикам гибкость в создании приложений.
 
-### <a name="building-support-for-kubernetes"></a>Реализация поддержки Kubernetes
+### <a name="built-in-support-for-kubernetes"></a>Встроенная поддержка Kubernetes
 
 В Windows Server 2019 представлены улучшения обновлений, касающиеся вычислений, сети и хранилища, из выпусков Semi-annual Channel, необходимые для реализации поддержки платформы Kubernetes в Windows. Дополнительная информация будет доступна в следующих выпусках Kubernetes.
 

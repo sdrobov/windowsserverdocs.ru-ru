@@ -13,12 +13,12 @@ ms.assetid: 2448d381-55aa-4c14-997a-202c537c6727
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 31c1579dc840f6f4eb805ac4e10f51192a6b4c99
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d671d044896ae9e71edad8302f06f2a21fe50772
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816195"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034553"
 ---
 # <a name="deploy-network-controller-using-windows-powershell"></a>Развертывание сетевого контроллера с помощью Windows PowerShell
 
@@ -31,19 +31,19 @@ ms.locfileid: "59816195"
 
 Эта статья содержит следующие разделы.
 
-- [Установка роли сервера сетевого контроллера](#bkmk_role)
+- [Установка роли сервера сетевого контроллера](#install-the-network-controller-server-role)
 
-- [Настройка кластера сетевого контроллера](#bkmk_configure)
+- [Настройка кластера сетевого контроллера](#configure-the-network-controller-cluster)
 
-- [Настройка сетевого контроллера приложения](#bkmk_app)
+- [Настройка сетевого контроллера приложения](#configure-the-network-controller-application)
 
-- [Сетевой контроллер проверки развертывания](#bkmk_validation)
+- [Сетевой контроллер проверки развертывания](#network-controller-deployment-validation)
 
-- [Дополнительные команды Windows PowerShell для сетевого контроллера](#bkmk_ps)
+- [Дополнительные команды Windows PowerShell для сетевого контроллера](#additional-windows-powershell-commands-for-network-controller)
 
-- [Пример сценария конфигурации сетевого контроллера](#bkmk_script)
+- [Пример сценария конфигурации сетевого контроллера](#sample-network-controller-configuration-script)
 
-- [Действия после развертывания для развертываний, отличных от Kerberos](#bkmk_nonkerb)
+- [Действия после развертывания для развертываний, отличных от Kerberos](#post-deployment-steps-for-non-kerberos-deployments)
 
 ## <a name="install-the-network-controller-server-role"></a>Установка роли сервера сетевого контроллера
 

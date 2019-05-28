@@ -1,22 +1,22 @@
 ---
-title: AntiAffinity кластера
+title: Сходство кластера
 ms.prod: windows-server-threshold
 ms.manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
 ms.date: 03/07/2019
-description: В этой статье описаны уровни AntiAffinity отказоустойчивого кластера
-ms.openlocfilehash: 0e7511aa4305e09a1e895a4f8f4ec120079733b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+description: В этой статье описаны уровни сходства и antiAffinity кластера отработки отказа
+ms.openlocfilehash: a38d53f6aed1ca634d41822f4486779f6d279ec0
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476053"
 ---
 # <a name="cluster-affinity"></a>Сходство кластера
 
-> Область применения. Windows Server 2019, Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 Отказоустойчивый кластер может содержать множество ролей, которые можно перемещать между узлами и выполнения.  Бывают случаи, когда определенных ролей (т. е. виртуальные машины, группы ресурсов, и т.д.) не следует запускать на одном узле.  Это может быть вызвано потребление ресурсов, использование памяти и т. д.  Например существуют две виртуальные машины, которые являются загружать память и Процессор, и если две виртуальные машины запущены на одном узле, одно или несколько виртуальных машин может иметь влияние проблем с производительностью.  В этой статье объясняется кластера antiaffinity уровни и как их использовать.
 

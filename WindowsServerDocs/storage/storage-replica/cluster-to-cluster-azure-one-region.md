@@ -1,23 +1,26 @@
 ---
-title: Межкластерная репликация хранилища в пределах одного региона в Azure
+title: Межкластерная реплики хранилища в том же регионе, в Azure
 description: Межкластерная репликация хранилища в том же регионе, в Azure
 keywords: Реплика хранилища, диспетчер серверов, Windows Server, Azure, кластер, том же регионе
 author: arduppal
 ms.author: arduppal
-ms.date: 12/19/2017
+ms.date: 04/26/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 8dbfab96404f5c98b9861476c0bc654af1bda775
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4371192d44878d3c953374b8d307b4d5612869f5
+ms.sourcegitcommit: 7e54a1bcd31cd2c6b18fd1f21b03f5cfb6165bf3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829145"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65461978"
 ---
-# <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Межкластерная репликация хранилища в пределах одного региона в Azure
-Межкластерная реплики хранилища в одном регионе можно настроить в Azure. В приведенных ниже примерах мы используем кластер из двух узлов, но реплики хранилища в Межкластерной не ограничены двухузлового кластера. На приведенном ниже рисунке является пространства дисковыми двухузлового кластера, могут взаимодействовать друг с другом, находятся в том же домене, а также в одном регионе.
+# <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Межкластерная реплики хранилища в том же регионе, в Azure
+
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+
+Вы можете настроить репликацию кластера для кластера хранилища в одном регионе, в Azure. В приведенных ниже примерах мы используем кластер из двух узлов, но реплики хранилища в межкластерной не ограничены двухузлового кластера. На приведенном ниже рисунке является пространства дисковыми двухузлового кластера, могут взаимодействовать друг с другом, находятся в том же домене, а также в одном регионе.
 
 Смотреть видео ниже полные пошаговые процесса.
 
@@ -57,10 +60,10 @@ ms.locfileid: "59829145"
     
 9. Создание кластеров (**SRAZC1**, **SRAZC2**). Ниже приведен команды PowerShell для нашего примера
 ```PowerShell
-    New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
+    New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
 ```
 ```PowerShell
-    New-Cluster -Name SRAZC2 -Node az2az3,az2az4 – StaticAddress 10.3.0.101
+    New-Cluster -Name SRAZC2 -Node az2az3,az2az4 –StaticAddress 10.3.0.101
 ```
 10. Включить дисковые пространства
 ```PowerShell

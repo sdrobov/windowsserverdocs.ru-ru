@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: adc93906cb7ff958fc1db7b00abdc557623e764e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b006742c9256c357d9aff3fb1b765dbed087383a
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834205"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475885"
 ---
 # <a name="disable-offline-files-on-individual-redirected-folders"></a>Отключайте автономные файлы на отдельных перенаправленных папок
 
->Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2019 г., Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows (Semi-Annual Channel)
 
 В этом разделе описывается, как отключить кэширование автономных файлов для отдельных папок, которые будут перенаправлены к сетевым папкам с помощью перенаправления папок. Это предоставляет возможность указать папки, которые нужно исключить из кэширования локально, уменьшение кэша автономных файлов размера и времени необходимо для синхронизации автономных файлов.
 
@@ -29,7 +29,7 @@ ms.locfileid: "59834205"
 Чтобы отключить кэширование определенных перенаправленные папки автономных файлов, среды необходимо выполнить следующие условия.
 
 - Домен доменных служб Active Directory (AD DS), с клиентских компьютеров, присоединенных к домену. Отсутствуют требования функционального уровня леса или домена или требования к схеме.
-- Клиентские компьютеры под управлением Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012.
+- Клиентские компьютеры под управлением Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 или Windows (Semi-Annual Channel).
 - Компьютер с установлены Управление групповой политикой.
 
 ## <a name="disabling-offline-files-on-individual-redirected-folders"></a>Отключение автономных файлов на отдельных перенаправленных папок

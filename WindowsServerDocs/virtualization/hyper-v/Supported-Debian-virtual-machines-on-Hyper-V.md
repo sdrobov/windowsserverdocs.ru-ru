@@ -11,12 +11,12 @@ ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 6ec089f501a0999a4460501dbc4d03428d36af40
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 129783dc980be6e471ecadb2cdbffee900e3396e
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863835"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222829"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Debian на узле Hyper-V
 
@@ -35,9 +35,9 @@ ms.locfileid: "59863835"
 |**Возможность**|**Версия операционной системы Windows Server**|**9.0-9.6 (stretch)**|**8.0-8.11 (jessie)**|**7.0-7.11 (wheezy)**|
 |-|-|-|-|-|
 |**Доступность**||Встроенные|Встроенные|Встроенные (Примечание 6)|
-|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
+|**[Core](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Точное время Windows Server 2016|2019, 2016|&#10004;Примечание 8||
-|**[Сетевые подключения](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Networking)**|
+|**[Сетевые подключения](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|
 |Кадры крупного размера|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Теги виртуальной локальной сети и коммутации|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Динамическая миграция|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
@@ -45,28 +45,28 @@ ms.locfileid: "59863835"
 |vRSS|2019, 2016, 2012 R2|&#10004;Примечание 8|||
 |Сегментация TCP и разгрузка контрольной суммы|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;Примечание 8|||
 |SR-IOV;|2019, 2016|&#10004;Примечание 8||
-|**[Хранилища](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Storage)**|
+|**[Хранилища](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**|
 |Изменения размера VHDX|2019, 2016, 2012 R2|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|
 |виртуальный адаптер Fibre Channel;|2019, 2016, 2012 R2|||
 |Резервное копирование виртуальной машины|2019, 2016, 2012 R2|&#10004;Примечание 4,5|&#10004;Примечание 4,5|&#10004;Примечание 4|
 |ОБРЕЗАТЬ поддержки|2019, 2016, 2012 R2|&#10004;Примечание 8|||
 |WWN-ИМЕН SCSI|2019, 2016, 2012 R2|&#10004;Примечание 8||
-|**[Память](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Memory)**|
+|**[Память](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#memory)**|
 |Поддержка PAE ядра|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|
 |Конфигурация MMIO разрыв|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|
 |Динамическая память — «горячей» заменой|2019, 2016, 2012 R2, 2012|&#10004;Примечание 8|||
 |Динамическая память — воздушного шага|2019, 2016, 2012 R2, 2012|&#10004;Примечание 8|||
 |Изменение размера памяти среды выполнения|2019, 2016|&#10004;Примечание 8|||
-|**[Видео](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Video)**|
+|**[Видео](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#video)**|
 |Hyper v, появляющихся видеоустройства|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;||
-|**[Прочие](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_Misc)**|
+|**[Прочие](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#miscellaneous)**|
 |Пара "ключ значение"|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;Примечание 4|&#10004;Примечание 4||
 |Немаскируемое прерывание|2019, 2016, 2012 R2|&#10004;|&#10004;|
 |Копирование файлов с носителя на гостевой|2019, 2016, 2012 R2|&#10004;Примечание 4|&#10004;Примечание 4||
 |Команда lsvmbus|2019, 2016, 2012 R2, 2012, 2008 R2|||
 |Сокеты Hyper-V|2019, 2016|&#10004;Примечание 8|||
 |Сквозной режим PCI/DDA|2019, 2016|&#10004;Примечание 8|||
-|**[Виртуальные машины поколения 2](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#BKMK_gen2)**|
+|**[Виртуальные машины поколения 2](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)**|
 |Загрузки, с помощью UEFI|2019, 2016, 2012 R2|&#10004;Примечание 7|&#10004;Примечание 7||
 |Безопасная загрузка|2019, 2016|||
 

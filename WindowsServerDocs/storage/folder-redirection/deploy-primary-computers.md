@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b3c87597e07102d00fc068b7ecd5744e4ba366f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39b790f39a2bf9c6334eb2176aa2e5f2e0196c0c
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854015"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475968"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>Развертывание основных компьютеров для перенаправления папок и перемещаемых профилей пользователей
 
->Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2019 г., Windows Server 2016, Windows Server 2012, Windows Server 2012 R2
 
 В этом разделе описывается включение поддержки основного компьютера и назначение основных компьютеров для пользователей. Таким образом можно контролировать использование перенаправления папок и перемещаемых профилей пользователей.
 
@@ -31,7 +31,7 @@ ms.locfileid: "59854015"
 Поддержка основного компьютера необходимо соблюдать следующие требования:
 
 - Необходимо обновить схему доменных служб Active Directory (AD DS), чтобы включать дополнения схемы Windows Server 2012 (при установке контроллера домена Windows Server 2012 автоматически обновляет схему). Сведения об обновлении схемы AD DS, см. в разделе [интеграция Adprep.exe](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) и [Выполнение Adprep.exe](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>).
-- Компьютеры клиентов должны управляться Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012.
+- Компьютеры клиентов должны управляться Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012.
 
 >[!TIP]
 >Несмотря на то, что поддержки основного компьютера требует перенаправления папок и перемещаемые профили пользователей, при развертывании этих технологий в первый раз, рекомендуется настроить поддержку основного компьютера перед включением объекты групповой политики для настройки перенаправления папок и Перемещаемые профили пользователей. предотвратить копирование данных пользователя на неосновные компьютеры до включения поддержки основного компьютера. Сведения о конфигурации, см. в разделе [развертывание перенаправления папок](deploy-folder-redirection.md) и [развертывание перемещаемых профилей пользователей](deploy-roaming-user-profiles.md).

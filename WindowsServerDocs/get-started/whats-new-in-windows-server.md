@@ -2,36 +2,38 @@
 title: Новые возможности Windows Server
 description: Новые возможности вычислений, удостоверения, управления, автоматизации, сетей, безопасности, хранения.
 ms.prod: windows-server
-ms.date: 10/17/2017
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.topic: article
-author: greg-lindsay
-ms.author: greg-lindsay
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 98da95e8ee01e9f59b06a2b609727cb68ce9f386
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c39336dfa02e798a609fd5b16f5f844442f32c89
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861945"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976669"
 ---
-# <a name="whats-new-in-windows-server"></a>Новые возможности Windows Server
+# <a name="whats-new-in-windows-server"></a>Новые возможности в Windows Server
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-Для каждого из этих Windows Server 2016 можно найти новые функции и выпуски Windows Server (Semi-Annual Channel).  
-   
-<br>
-<br>
-<br>
-<br>
-[Новые возможности в Windows Server версии 1803](whats-new-in-windows-server-1803.md)
-<br>
-[Новые возможности в Windows Server версии 1709](whats-new-in-windows-server-1709.md)<BR>
-[Новые возможности в Windows Server 2016](whats-new-in-windows-server-2016.md)
+Вы найдете новые функции для каждого из этих выпусков Windows Server.  
 
+Освобождает канал долгосрочного обслуживания (LTSC):
 
+- [Новые возможности в Windows Server 2019 г.](../get-started-19/whats-new-19.md)
+- [Что нового в Windows Server 2016?](whats-new-in-windows-server-2016.md)
 
-## <a name="see-also"></a>См. также  
--   [Заметки о выпуске: Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
+Полугодовой канал выпусков:
 
+- [Новые возможности в Windows Server версии 1903](../get-started-19/whats-new-in-windows-server-1903.md)
+- [Что нового в Windows Server версии 1809?](whats-new-in-windows-server-1809.md)
+- [Что нового в Windows Server версии 1803?](whats-new-in-windows-server-1803.md)
+- [Что нового в Windows Server версии 1709?](whats-new-in-windows-server-1709.md)
+
+## <a name="see-also"></a>См. также
+
+- [Заметки о выпуске. Важные проблемы в Windows Server 2019](../get-started-19/rel-notes-19.md)
+- [Заметки о выпуске. Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)

@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 1ae755b9c41d66ce5f907f600be17547398acc1a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c42cffec0ddc1ae480ae67982147e9f186f0e50a
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839585"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222864"
 ---
 # <a name="convert-a-gpt-disk-into-an-mbr-disk"></a>Преобразовать в GPT-диск в MBR-диск
 
@@ -29,8 +29,6 @@ ms.locfileid: "59839585"
 > [!NOTE]
 > Для выполнения следующих шагов необходимо как минимум состоять в группе **Операторы архива** или **Администраторы**.
 
-<a id="BKMK_WINUI"></a>
-
 ## <a name="converting-using-the-windows-interface"></a>Преобразование с помощью интерфейса Windows
 
 1.  Создайте резервные копии всех томов на базовом диске GPT, который требуется преобразовать в диск MBR, или переместите их.
@@ -38,8 +36,6 @@ ms.locfileid: "59839585"
 2.  Если диск содержит разделы или тома, щелкните правой кнопкой мыши каждый из них и нажмите **Удалить том**.
 
 3.  Щелкните правой кнопкой мыши диск GPT, стиль раздела которого требуется изменить на MBR, и нажмите **Преобразовать в диск MBR**.
-
-<a id="BKMK_CMD"></a>
 
 ## <a name="converting-using-a-command-line"></a>Преобразование с помощью командной строки
 

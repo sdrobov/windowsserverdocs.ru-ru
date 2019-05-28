@@ -8,18 +8,18 @@ author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.date: 05/07/2018
-ms.openlocfilehash: c4f80b668b91e65b6c8bc528e14f52a1d117a3c9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a489d3f8958304d685116186f5db9e1c854114bf
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823095"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976543"
 ---
 # <a name="whats-new-in-windows-server-version-1803"></a>Новые возможности Windows Server версии 1803
 
 >Область применения. Windows Server (Semi-Annual Channel)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;В этом разделе рассказывается о новых и измененных возможностях в Windows Server версии 1803. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском. Также см. раздел [Обновление Semi-Annual Channel для Windows Server](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/).
+<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Чтобы узнать о новых функциях в Windows, см. в разделе [новые возможности в Windows Server](whats-new-in-windows-server.md). В этом разделе описываются новые и измененные в Windows Server версии 1803. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском. Также см. раздел [Обновление Semi-Annual Channel для Windows Server](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/).
 
 ## <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -110,5 +110,5 @@ Install-WindowsFeature -Name WDS
 
 ## <a name="see-also"></a>См. также
 
-[Сведения о выпуске Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
+[Информация о выпуске Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info)<br>
 [Новые возможности в Windows 10, версия 1803 IT Pro содержимого](https://docs.microsoft.com/windows/whats-new/whats-new-windows-10-version-1803)

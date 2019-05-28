@@ -8,27 +8,27 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 98fd5d50645ad454204dcf9dabf58e97c246ab1a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7bdf30a4f721568add4e7902245da2a803b72db1
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853995"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475868"
 ---
 # <a name="enable-optimized-moves-of-redirected-folders"></a>Включить оптимизированного перемещений перенаправленных папок
 
->Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
+>Относится к: Windows 10, Windows 8, Windows 8.1, Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (Semi-Annual Channel)
 
 В этом разделе описывается выполнение оптимизированного перемещение перенаправленных папок (перенаправление папок), в новый файловый ресурс. Если включить этот параметр политики, когда администратор перемещает файловый ресурс, размещение перенаправленных папок и обновляет целевой путь для перенаправленных папок в групповой политике, кэшированное содержимое просто переименовано в локальном кэше автономных файлов без задержки или потеря данных для пользователя.
 
 Ранее администраторы могут изменить целевой путь для перенаправленных папок в групповой политике и предназначены для клиентских компьютеров скопируйте файлы в затронутого пользователя следующего входа в систему причиной отложенных входа в. Кроме того Администраторы можно переместить общую папку и выполнения обновления целевой путь для перенаправленных папок в групповой политике. Тем не менее любые изменения, внесенные локально на клиентских компьютерах между началом перемещения и первую синхронизацию, после перемещения будут потеряны.
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Оптимизированный перемещения предъявляются следующие требования:
 
 - Перенаправление папок должны быть настроены. Дополнительные сведения см. в разделе [развертывание перенаправления папок с автономными файлами,](deploy-folder-redirection.md).
-- Компьютеры клиентов должны управляться Windows 10, Windows 8.1, Windows 8, Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012.
+- Компьютеры клиентов должны управляться Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 или Windows Server (Semi-Annual Channel).
 
 ## <a name="step-1-enable-optimized-move-in-group-policy"></a>Шаг 1. Включить оптимизированного перемещения в групповой политике
 

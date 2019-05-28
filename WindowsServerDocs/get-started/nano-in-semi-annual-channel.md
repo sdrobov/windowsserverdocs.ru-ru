@@ -4,29 +4,27 @@ description: В новой модели обслуживания Windows Server 
 ms.prod: Windows Server
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 05/02/2018
+ms.date: 05/21/2019
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
-ms.openlocfilehash: 7e68d292c32ce58c786a3242203330fcae985913
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c9fede02b90e285803a8bcdbc983f264d65a4589
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847775"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976507"
 ---
 # <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Изменения сервера Nano Server в Semi-Annual Channel для Windows Server
 
 >Область применения. Windows Server Semi-Annual Channel
 
+Если вы уже используете Nano Server [окно Server Semi-Annual Channel](..\get-started-19\servicing-channels-19.md) модели обслуживания будет знакомой, поскольку он был ранее обслуживаемых Current Branch for Business (CBB) модели. Windows Server Semi-Annual Channel — это просто новое имя для той же модели. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год.
 
-Как описано в [обзоре канала Semi-Annual Channel для Window Server](semi-annual-channel-overview.md), Windows Server версии 1803 — это последний выпуск в рамках модели обслуживания Semi-Annual Channel.
-
-Если вы уже используете сервер Nano Server, эта модель обслуживания вам будет знакома, так как его обслуживание уже проводилось в рамках модели Current Branch for Business (CBB). Новый канал Semi-Annual Channel для Windows Server — это просто новое имя той же модели. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год.
-
-Тем не менее, начиная с выпуска Windows Server версии 1803, сервер Nano Server будет доступен только в качестве **базового образа ОС контейнера**. Его необходимо запускать в качестве контейнера в узле контейнера, например как установку основных серверных компонентов Windows Server. Запуск контейнера на основе сервера Nano Server в этом выпуске отличается от его запуска в более ранних выпусках.
+Тем не менее, начиная с Windows Server версии 1803, Nano Server доступен только в качестве **базовый образ ОС контейнера**. Его необходимо запускать в качестве контейнера в узле контейнера, например как установку основных серверных компонентов Windows Server. Запуск контейнера на основе сервера Nano Server в этом выпуске отличается от его запуска в более ранних выпусках.
 
 - Сервер Nano Server был оптимизирован для приложений .NET Core.
 - Сервер Nano Server меньше версии сервера Windows Server 2016.
@@ -36,4 +34,6 @@ ms.locfileid: "59847775"
 - Контейнеры Nano теперь можно запускать в среде IoT Базовая.
 
 ## <a name="related-topics"></a>См. также
-После запуска программы предварительной оценки Windows дополнительные сведения можно найти в [документации по контейнерам Windows](http://aka.ms/windowscontainers).
+
+- [Документация по контейнерам Windows](http://aka.ms/windowscontainers)
+- [Общие сведения об окне Server Semi-Annual Channel](..\get-started-19\servicing-channels-19.md)

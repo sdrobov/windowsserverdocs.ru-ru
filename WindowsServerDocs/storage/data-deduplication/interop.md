@@ -8,18 +8,21 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
-ms.openlocfilehash: 2a28be1bdd22915182cbdbb2726ab9d37422e889
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9453811b0f76b249c245990293ba82cf5a6e0867
+ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834435"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65624629"
 ---
 # <a name="data-deduplication-interoperability"></a>Взаимодействие при дедупликации данных
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016
+> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2019 г.
 
 ## <a id="supported"></a>Поддерживается
+
+### <a id="supported-ReFS"></a>ReFS
+Дедупликация данных поддерживается начиная с Windows Server 2019. 
 
 ### <a id="supported-clusters"></a>Отказоустойчивая кластеризация
 
@@ -76,8 +79,6 @@ ms.locfileid: "59834435"
     ```
 
 ## <a id="unsupported"></a>Не поддерживается
-### <a id="unsupported-refs"></a>ReFS
-Windows Server 2016 не поддерживает дедупликацию данных в томах, отформатированных в ReFS. [Проголосовать за этот элемент для Windows Server vNext на Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/7962813-support-deduplication-on-refs).
 
 ### <a id="unsupported-windows-client"></a>Windows 10 (клиентская ОС)
 Дедупликация данных не поддерживается в Windows 10. Существует несколько популярных записей в блоге сообщества Windows, в которых описано, как удалить двоичные файлы из Windows Server 2016 и установить на Windows 10, но этот сценарий не был проверен как часть процесса разработки дедупликации данных. [Проголосовать за этот элемент для Windows 10 vNext на Windows Server Storage UserVoice](https://windowsserver.uservoice.com/forums/295056-storage/suggestions/9011008-add-deduplication-support-to-client-os).

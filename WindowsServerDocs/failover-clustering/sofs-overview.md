@@ -1,6 +1,6 @@
 ---
 title: Масштабируемый файловый сервер для обзора данных приложения
-description: Общие сведения о возможности масштабируемого файлового сервера для Windows Server 201 R2, Windows Server 2012 и Windows Server 2016.
+description: Общие сведения о возможности масштабируемого файлового сервера для Windows Server 201 R2 и Windows Server 2012.
 ms.prod: windows-server-threshold
 ms.topic: article
 author: JasonGerend
@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 04e25e9c69062611d9d14c220614f148ac5de770
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3e6d67eee496d19b216a4366af51ab5736229cf0
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884775"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476144"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>Масштабируемый файловый сервер для обзора данных приложения
 
->Относится к: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
+>Относится к: Windows Server 2012 R2, Windows Server 2012
 
 Масштабируемый файловый сервер — это компонент, предоставляющий масштабируемые файловые ресурсы, которые постоянно доступны для файлового хранилища серверных приложений. Масштабируемые файловые ресурсы обеспечивают возможность совместного использования папок различными узлами одного кластера. Этот сценарий фокусируется на планировании и развертывании масштабируемого файлового сервера.
 
@@ -46,14 +46,14 @@ ms.locfileid: "59884775"
 - [План для масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134258(v%3dws.11)>)
 
   - [Шаг 1. Планирование хранилища на масштабируемом файловом сервере](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134181%28v%3dws.11%29>)
-  - [Шаг 2. Планирование сети на масштабируемом файловом сервере](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
+  - [Шаг 2. Планирование сети на масштабируемом файловом сервере](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134253%28v%3dws.11%29>)
 
 - [Развертывание масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831359%28v%3dws.11%29>)
 
   - [Шаг 1. Установка необходимых компонентов для масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831478%28v%3dws.11%29>)
-  - [Шаг 2. Настройка масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
-  - [Шаг 3. Настройка Hyper-V для использования масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
-  - [Шаг 4. Настройка Microsoft SQL Server для использования масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
+  - [Шаг 2. Настройка масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831718%28v%3dws.11%29>)
+  - [Шаг 3. Настройка Hyper-V для использования масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831463%28v%3dws.11%29>)
+  - [Шаг 4. Настройка Microsoft SQL Server для использования масштабируемого файлового сервера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831815%28v%3dws.11%29>)
 
 ## <a name="when-to-use-scale-out-file-server"></a>Когда использовать масштабируемый файловый сервер
 

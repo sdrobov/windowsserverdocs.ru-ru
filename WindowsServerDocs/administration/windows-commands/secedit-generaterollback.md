@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7a55ddc3caea1002ab51ce4f992b36673ea312b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3229e6ccb07c925a900b298a8332c5e48cefefe7
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825645"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564668"
 ---
 # <a name="seceditgeneraterollback"></a>Secedit:generaterollback
 
@@ -44,11 +44,11 @@ Secedit /generaterollback /db <database file name> /cfg <configuration file name
 
 ## <a name="remarks"></a>Примечания
 
-Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Users \*UserAccount*\My Documents\Security\Logs\*DatabaseName*.log) используется.
+Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Users \*UserAccount *\My Documents\Security\Logs\*DatabaseName*.log) используется.
 
 Начиная с Windows Server 2008, `Secedit /refreshpolicy` был заменен `gpupdate`. Сведения о том, как обновить параметры безопасности, см. в разделе [Gpupdate](gpupdate.md).
 
-Успешное выполнение этой команды будет указано «задача была завершена успешно.? журналы и только несоответствия между шаблоном заявленным безопасности и конфигурации политики безопасности. В ней перечислены эти несоответствия в шаблоны безопасности создаются.
+Успешное выполнение этой команды будет указано «задание выполнено успешно». журналы и только несоответствия между шаблоном заявленным безопасности и конфигурации политики безопасности. В ней перечислены эти несоответствия в шаблоны безопасности создаются.
 
 Если указан существующий шаблон отката, эта команда перезапишет его. С помощью следующей команды можно создать новый шаблон отката. Дополнительные параметры, необходимо хотя бы одно условие.
 
@@ -62,4 +62,4 @@ Secedit /generaterollback /db C:\Security\FY11\SecDbContoso.sdb /cfg sectmplcont
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Secedit](secedit.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

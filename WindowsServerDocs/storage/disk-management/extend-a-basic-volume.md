@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 29b7b61f7edc20edda7bc18b82db17447badc0f2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c20e2da3e629743ab4d4d4cf1da16a6e69093ecf
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834255"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192581"
 ---
 # <a name="extend-a-basic-volume"></a>Расширение базового тома
 
@@ -25,30 +25,26 @@ ms.locfileid: "59834255"
 
 ## <a name="extending-a-basic-volume"></a>Расширение базового тома
 
--   [С помощью интерфейса Windows](#BKMK_WINUI)
--   [С помощью командной строки](#BKMK_CMD)
+-   [С помощью интерфейса Windows](#to-extend-a-basic-volume-using-the-windows-interface)
+-   [С помощью командной строки](#to-extend-a-basic-volume-using-a-command-line)
 
-<a href="" id="BKMK_WINUI"></a>
 #### <a name="to-extend-a-basic-volume-using-the-windows-interface"></a>Расширение базового тома с помощью интерфейса Windows
 
-1.  В диспетчере дисков щелкните правой кнопкой мыши том, который требуется расширить.
+1. В диспетчере дисков щелкните правой кнопкой мыши том, который требуется расширить.
 
-2.  Нажмите **Расширить том**.
+2. Нажмите **Расширить том**.
 
-3.  Следуйте инструкциям на экране.
+3. Следуйте инструкциям на экране.
 
-<a href="" id="BKMK_CMD"></a>
 #### <a name="to-extend-a-basic-volume-using-a-command-line"></a>Расширение базового тома с помощью командной строки
 
-1.  Откройте командную строку и введите: `diskpart`.
+1. Откройте командную строку и введите: `diskpart`.
 
-2.  В командной строке **DISKPART** введите `list volume`. Запомните базовый том, который требуется расширить.
+2. В командной строке **DISKPART** введите `list volume`. Запомните базовый том, который требуется расширить.
 
-3.  В командной строке **DISKPART** введите `select volume <volumenumber>`. Эта команда выбирает базовый том *volumenumber*, который требуется расширить за счет непрерывного пустого пространства на том же диске.
+3. В командной строке **DISKPART** введите `select volume <volumenumber>`. Эта команда выбирает базовый том *volumenumber*, который требуется расширить за счет непрерывного пустого пространства на том же диске.
 
-4.  В командной строке **DISKPART** введите `extend [size=<size>]`. Эта команда расширяет выбранный том на *size* в мегабайтах (МБ).
-
-<br />
+4. В командной строке **DISKPART** введите `extend [size=<size>]`. Эта команда расширяет выбранный том на *size* в мегабайтах (МБ).
 
 | Значение | Описание |
 | --- | --- |
@@ -64,5 +60,3 @@ ms.locfileid: "59834255"
 ## <a name="see-also"></a>См. также
 
 -   [Синтаксис командной строки](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

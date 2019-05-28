@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c0d750fd139865daa92319c1d1926dc5d36669b2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62215aa802e2509be5305aef53069ae9643562f1
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885775"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476102"
 ---
 # <a name="storage-reports-management"></a>Управление отчетами хранилища
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 На узле **Управление отчетами хранилища** оснастки консоли управления Microsoft<sup>®</sup> (MMC) диспетчера ресурсов файлового сервера можно выполнять следующие задачи:
 
@@ -34,7 +34,7 @@ ms.locfileid: "59885775"
 
 Этот раздел содержит следующие темы:
 
--   [Расписание набора отчетов](schedule-set-of-reports.md)
+-   [Планирование набора отчетов](schedule-set-of-reports.md)
 -   [Создание отчетов по запросу](generate-reports-on-demand.md)
 
 > [!Note]
@@ -42,6 +42,6 @@ ms.locfileid: "59885775"
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 
 

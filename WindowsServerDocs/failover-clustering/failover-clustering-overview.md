@@ -10,19 +10,19 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 03/08/2019
 ms.localizationpriority: high
-ms.openlocfilehash: 445de065ff5b68b83481ee5bd83ebf18fdd180a7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9e4184e52ef48e758ebc80e63d3d6f952a09cc2c
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848655"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222456"
 ---
 # <a name="failover-clustering-in-windows-server"></a>Отказоустойчивая кластеризация в Windows Server
 
-> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019, Windows Server 2016
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 <hr />
 
@@ -34,189 +34,30 @@ ms.locfileid: "59848655"
 * Высокодоступное или постоянно доступное хранилище файловых ресурсов общего доступа для приложений, таких как Microsoft SQL Server и виртуальные машины Hyper-V.
 * Высокодоступные кластерные роли, выполняемые на физических серверах или виртуальных машинах, установленных на серверах, на которых выполняется Hyper-V.
 
-<hr />
 
-<ul class="cardsF panelContent">
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-whats-new.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h2><a href="whats-new-in-failover-clustering.md">Новые возможности отказоустойчивой кластеризации</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                             </div>
-                          </a>
-                        </li>
-                     </ul>
-<HR />
+|  |  |
+|---------|---------|
+|![Что нового](../media/i-whats-new.svg)  | [**Новые возможности отказоустойчивой кластеризации**](whats-new-in-failover-clustering.md) |
 
-<ul class="cardsF panelContent">
 
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Общие сведения</h3>
-<HR />
-                                        <p><a href="sofs-overview.md">Масштабируемого файлового сервера для данных приложений</a></p>
-<HR />
-                                        <p><a href="../storage/storage-spaces/understand-quorum.md">Кворум кластера и пула</a></p>
-<HR />
-                                        <p><a href="fault-domains.md">Информация о домене сбоя</a></p>
-<HR />
-                                        <p><a href="smb-multichannel.md">Упрощенное сетей кластера для SMB Multichannel и multi-NIC</a></p>
-<HR />
-                                        <p><a href="vm-load-balancing-overview.md">Балансировка нагрузки для виртуальных Машин</a></p>
-<HR />
-                                        <p><a href="../storage/storage-spaces/cluster-sets.md">Наборы кластера</a></p>
-<HR />
-                                        <p><a href="cluster-affinity.md">Сходство кластера</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
+|  |  |  |
+|---------|---------|---------|
+|![Понять](../media/i-cluster.svg)**понять**  |  ![Планирование](../media/i-cluster.svg)**планирования**  |  ![Развертывание](../media/i-cluster.svg)**развертывания**       |
+| [Масштабируемый файловый сервер для данных приложений](sofs-overview.md)    |   [Планирование оборудования требования к отказоустойчивой кластеризации и варианты хранилища](clustering-requirements.md)      |  [Развертывание Предварительная подготовка кластеризованных объектов-компьютеров в доменных службах Active Directory](prestage-cluster-adds.md)  |
+|  [Кворум кластеров и пулов](../storage/storage-spaces/understand-quorum.md)   |   [Использование общих томов кластера (CSV)](failover-cluster-csvs.md)      | [Создание отказоустойчивого кластера](create-failover-cluster.md)        |
+|  [Служба сведений о домене сбоя](fault-domains.md)   |  [С помощью кластеров гостевых виртуальных машин с дисковыми пространствами](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Развертывание двухузлового файлового сервера](../storage/storage-spaces/storage-spaces-direct-in-vm.md)        |
+| [Упрощенные сети кластера SMB Multichannel и Multi-NIC](smb-multichannel.md)    |         |  [Управление кворума и свидетеля](manage-cluster-quorum.md)       |
+|   [Балансировка нагрузки для виртуальных машин](vm-load-balancing-overview.md)  |         |   [Развертывание облака-свидетеля](deploy-cloud-witness.md)      |
+|   [Наборы кластеров](../storage/storage-spaces/cluster-sets.md)  |         |     [Развертывание файлового ресурса-свидетеля](file-share-witness.md)    |
+|   [Сходство кластеров](cluster-affinity.md)  |         |    [Последовательное обновление ОС кластера]()     |
+|     |         |     [Обновление отказоустойчивого кластера на одном оборудовании](upgrade-option-same-hardware.md)    |
+|     |         |     [Развертывание кластера отсоединенных Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))    |
 
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Планирование</h3>
-<HR />
-                                        <p><a href="clustering-requirements.md">FailOver Clustering Hardware Requirements и варианты хранилища</a></p>
-<HR />
-                                        <p><a href="failover-cluster-csvs.md">Использование общих томов (CSV) кластера</a></p>               
-<HR />
-                                        <p><a href="../storage/storage-spaces/storage-spaces-direct-in-vm.md">С помощью кластеров гостевых виртуальных машин с дисковыми пространствами</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Развертывание</a></h3> 
-<HR />
-                                        <p><a href="prestage-cluster-adds.md">Предварительная подготовка кластеризованных объектов-компьютеров в доменных службах Active Directory</a></p>
-<HR />
-                                        <p><a href="create-failover-cluster.md">Создание отказоустойчивого кластера</a></p> 
-<HR />
-                                        <p><a href="deploy-two-node-clustered-file-server.md">Развертывание двухузлового файлового сервера</a></p> 
-<HR />
-                                        <p><a href="manage-cluster-quorum.md">Управление кворума и свидетеля</a></p> 
-<HR />
-                                        <p><a href="deploy-cloud-witness.md">Развертывание облака-свидетеля</a></p>
-<HR />
-                                        <p><a href="file-share-witness.md">Развертывание файлового ресурса-свидетеля</a></p>
-<HR />
-                                        <p><a href="cluster-operating-system-rolling-upgrade.md">Последовательные обновления ОС кластера</a></p> 
-<HR />
-                                        <p><a href="upgrade-option-same-hardware.md">Обновление отказоустойчивого кластера на одном оборудовании</a></p>
-<HR />
-                                        <p><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\)">Развертывание кластера отсоединенных Active Directory</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-                     </ul>
-<HR />
-<ul class="cardsF panelContent">
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Управление</h3>
-<HR />
-                                        <p><a href="cluster-aware-updating.md">Кластерное обновление</a></p> 
-<HR />
-                                        <p><a href="health-service-overview.md">Служба работоспособности</a></p>
-<HR />
-                                        <p><a href="cluster-domain-migration.md">Домен кластера миграции</a></p>
-<HR />
-                                        <p><a href="troubleshooting-using-wer-reports.md">Устранение неполадок с помощью отчетов об ошибках Windows</a></p> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Средства и параметры</a></h3>
-<HR />
-                                        <p><a href="https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps">Командлеты отказоустойчивой кластеризации PowerShell</a></p> 
-<HR />
-                                        <p><a href="https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps">Учитывать командлеты PowerShell для обновления кластера</a></p> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-<li>
-                         <div class="cardSize">
-                                <div class="cardPadding">
-                                    <div class="card">
-                                        <div class="cardImageOuter">
-                                            <div class="cardImage">
-                                                <img src="../media/i-cluster.svg" alt="" />
-                                            </div>
-                                        </div>
-                                        <div class="cardText">
-                                        <h3>Ресурсы сообщества</a></h3>
-<HR />
-                                        <p><a href="https://go.microsoft.com/fwlink/p/?LinkId=230641">Форум по высокой доступности (кластеризации)</a></p> 
-<HR />
-                                        <p><a href="http://blogs.msdn.com/b/clustering/">Отказоустойчивая кластеризация и сети блог группы балансировки нагрузки</a></p> 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                          </a>
-                        </li>
-</ul>
+
+|  |  |  |
+|---------|---------|---------|
+|![Управление](../media/i-cluster.svg)**управление**  |  ![Средства и параметры](../media/i-cluster.svg)**средства и параметры**  |  ![Ресурсы сообщества](../media/i-cluster.svg)**ресурсы сообщества**       |
+| [Кластерное обновление](cluster-aware-updating.md)    |   [Командлеты отказоустойчивой кластеризации PowerShell](https://docs.microsoft.com/powershell/module/failoverclusters/?view=win10-ps)      |  [Форум по высокой доступности (кластеризации)](https://go.microsoft.com/fwlink/p/?LinkId=230641)       |
+|  [Служба работоспособности](health-service-overview.md)   |   [Учитывать командлеты PowerShell для обновления кластера](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps)      | [Отказоустойчивая кластеризация и сети блог группы балансировки нагрузки](http://blogs.msdn.com/b/clustering/)        |
+|  [Перенос кластера между доменами](cluster-domain-migration.md)   |         |         |
+|  [Устранение неполадок с помощью отчетов об ошибках Windows](troubleshooting-using-wer-reports.md)   |         |         |

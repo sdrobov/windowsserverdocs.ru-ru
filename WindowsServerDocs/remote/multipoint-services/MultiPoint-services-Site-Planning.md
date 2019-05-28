@@ -13,12 +13,12 @@ ms.assetid: 063783cd-d748-489e-b175-46eadc993f7a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 60d2e1fedc018136f5668d55a8afb2e0574d94de
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: da27467efb842368167b7a315056506e99331e8d
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845075"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034598"
 ---
 # <a name="multipoint-services-site-planning"></a>Планирование сайта служб MultiPoint
 Следует учитывать расположение, где развертывается один или несколько компьютеров под управлением MultiPoint Services и его связанные станции.  
@@ -86,11 +86,11 @@ ms.locfileid: "59845075"
 ## <a name="using-additional-hubs"></a>С помощью дополнительных центров  
 Чтобы упростить процесс установки можно использовать дополнительные концентраторов. Существует три типа концентраторов, которые используются в системе MultiPoint Services:  
   
--   [Концентраторы станций](#Station-hubs)  
+-   [Концентраторы станций](#station-hubs)  
   
--   [Промежуточные центры](#Intermediate-hubs)  
+-   [Промежуточные центры](#intermediate-hubs)  
   
--   [Нисходящие концентраторы](#Downstream-hubs)  
+-   [Нисходящие концентраторы](#downstream-hubs)  
   
 ### <a name="station-hubs"></a>Концентраторы станций  
 Концентратор является внешний концентратор, связанный со станцией MultiPoint Services. Как минимум концентратору станции будет иметь клавиатуры в к нему. Он также может иметь дополнительные периферийных устройств. Концентратор станции может быть универсальный USB-концентратор, который соответствует USB 2.0 или более поздней версии спецификации. Концентраторы станций следует возможностью внешнего питания, если мощных устройствах будет подключаемого модуля к ним.  

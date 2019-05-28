@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 1d9e91ec8f4c998f34e324b5d551a387eba5a310
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5717fcc9e1732b6273620e633c140c6df58ec8b7
+ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823635"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65624656"
 ---
 # <a name="create-os-specialization-answer-file"></a>Создание специализированного файла ответов ОС
 
@@ -38,10 +38,8 @@ Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 - [Базовый Windows файл ответов](#basic-windows-answer-file)
 - [Файл с помощью присоединения к домену ответов Windows](#windows-answer-file-with-domain-join)
 - [Файл ответов Windows со статическими адресами IPv4](#windows-answer-file-with-static-ipv4-addresses)
-- [Файл ответов Windows с помощью пользовательского языкового стандарта](#windows-answer-file-with-custom-locale)
+- [Файл ответов Windows с помощью пользовательского языкового стандарта](#windows-answer-file-with-a-custom-locale)
 - [Базовый файл ответов для Linux](#basic-linux-answer-file)
-
-Вы также можете просмотреть [параметры функции](#function-parameters)далее в этом разделе.
 
 ## <a name="basic-windows-answer-file"></a>Базовый файл ответов Windows
 
@@ -51,7 +49,7 @@ Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 Используйте для имени пользователя «Администратор», если вы хотите настроить встроенной учетной записи администратора.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
+$adminCred = Get-Credential -Message "Local administrator account"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred
 ```
@@ -69,8 +67,8 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials
 Не забудьте изменить значение «-DomainName» параметра на полное доменное имя домена Active Directory.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
-$domainCred = Get-Credential -Prompt "Domain join credentials"
+$adminCred = Get-Credential -Message "Local administrator account"
+$domainCred = Get-Credential -Message "Domain join credentials"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -DomainName 'my.contoso.com' -DomainJoinCredentials $domainCred
 ```
@@ -97,7 +95,7 @@ Virtual Machine Manager предоставляет три компонента �
 Затем вы можете использовать `-StaticIPPool` параметр для включения статических элементов IP-адрес в файле ответов. Параметры `@IPAddr-1@`, `@NextHop-1-1@`, и `@DNSAddr-1-1@` в ответе файл затем заменяется реальные значения, заданные в Virtual Machine Manager во время развертывания.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
+$adminCred = Get-Credential -Message "Local administrator account"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -StaticIPPool IPv4Address
 ```
@@ -110,8 +108,8 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials
 Используйте для имени пользователя «Администратор», если вы хотите настроить встроенной учетной записи администратора.
 
 ```powershell
-$adminCred = Get-Credential -Prompt "Local administrator account"
-$domainCred = Get-Credential -Prompt "Domain join credentials"
+$adminCred = Get-Credential -Message "Local administrator account"
+$domainCred = Get-Credential -Message "Domain join credentials"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -Locale es-ES
 ```
@@ -132,5 +130,5 @@ New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -RootPassword $ro
 
 ## <a name="see-also"></a>См. также
 
-- [Развернуть экранированные виртуальные машины](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

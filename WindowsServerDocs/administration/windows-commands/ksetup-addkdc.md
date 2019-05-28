@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d3e0d38bdec11618561ee4acaa32ffdd06695fab
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 0466bee0b357e896bd971152a56da57612472672
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868535"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564725"
 ---
 # <a name="ksetupaddkdc"></a>ksetup:addkdc
 
@@ -53,7 +53,7 @@ ksetup /addkdc <RealmName> [<KDCName>]
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Запустите средство Ksetup из командной строки на одном компьютере, как показано выше команду, чтобы задать пароль учетной записи локального компьютера «p@sswrd1%?. Перезагрузите компьютер.
+Запустите средство Ksetup из командной строки на одном компьютере, как показано выше команду, чтобы задать пароль учетной записи локального компьютера «p@sswrd1%». Перезагрузите компьютер.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```
@@ -61,5 +61,5 @@ Ksetup /setcomputerpassword p@sswrd1%
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
