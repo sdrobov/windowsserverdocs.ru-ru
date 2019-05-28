@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 8013764b88a1061cfcaa3a507466c111bfd59aad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7e61c734780baa1482670af3f24697c10345b292
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864815"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190591"
 ---
 # <a name="when-to-create-a-federation-server"></a>Создание сервера федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 При создании федерации serverin служб федерации Active Directory \(AD FS\), вы предоставляете средства, по которому ваша организация может:  
   
@@ -38,9 +36,9 @@ ms.locfileid: "59864815"
 ## <a name="determine-which-ad-fs-design-to-deploy"></a>Определение разработки AD FS для развертывания  
 Вы можете создать серверы федерации в вашей организации, каждый раз, когда вы хотите развернуть любой из способов AD FS:  
   
--   [Web SSO Design](Web-SSO-Design.md)  
+-   [Проект единого входа через Интернет](Web-SSO-Design.md)  
   
--   [Федеративного единого входа в Интернете](Federated-Web-SSO-Design.md)  
+-   [Проект единого входа федерации для интернет-решений](Federated-Web-SSO-Design.md)  
   
 При необходимости организация, которая развертывает федеративного единого входа в Интернете можно настроить одного сервера федерации, так что он работает в обоих роли партнера по учетным, так и в роли партнера по ресурсам. В этом случае сервер федерации может выдать Security Assertion Markup Language \(SAML\) токены, на основании учетных записей пользователей в свой собственный организации или перенаправлять запросы маркеров в организацию зависимости от того, где находятся учетные записи пользователей .  
   
@@ -79,5 +77,5 @@ ms.locfileid: "59864815"
 Дополнительные сведения о том, как настроить все необходимые компоненты, необходимые для развертывания сервера федерации см. в разделе [контрольный список: Настройка сервера федерации](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

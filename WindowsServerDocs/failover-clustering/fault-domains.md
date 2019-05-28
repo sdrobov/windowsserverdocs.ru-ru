@@ -8,23 +8,41 @@ ms.technology: storage-failover-clustering
 ms.topic: article
 author: cosmosdarwin
 ms.date: 09/16/2016
-ms.openlocfilehash: f5c64bb8f8b7d4b8d13c76c4e94cfcf52ee32c30
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 18b7a932cc8a22c356fde89baa316c0532ebc374
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821475"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475995"
 ---
-# <a name="fault-domain-awareness-in-windows-server-2016"></a>Информация о домене сбоя в Windows Server 2016
+# <a name="fault-domain-awareness"></a>Служба сведений о домене сбоя
 
-> Относится к: Windows Server 2016
+> Относится к: Windows Server 2019 и Windows Server 2016
 
-Отказоустойчивая кластеризация позволяет нескольким серверам работать вместе с целью обеспечения высокого уровня доступности или, другими словами, отказоустойчивости узла. Но современные компании требуют все больше доступности своей инфраструктуры. Для обеспечения бесперебойной работы, свойственной облачной среде, необходимо настроить защиту даже от таких маловероятных событий, как поломки корпуса, простои стойки или стихийные бедствия. Вот почему отказоустойчивой кластеризации в Windows Server 2016 представляет корпуса, стойки или сайта отказоустойчивость.
+Отказоустойчивая кластеризация позволяет нескольким серверам работать вместе с целью обеспечения высокого уровня доступности или, другими словами, отказоустойчивости узла. Но современные компании требуют все больше доступности своей инфраструктуры. Для обеспечения бесперебойной работы, свойственной облачной среде, необходимо настроить защиту даже от таких маловероятных событий, как поломки корпуса, простои стойки или стихийные бедствия. Вот почему отказоустойчивой кластеризации в Windows Server 2016 появилась корпуса, стойки или сайта отказоустойчивость.
+
+## <a name="fault-domain-awareness"></a>Служба сведений о домене сбоя
 
 Домены сбоя и отказоустойчивость — тесно связанные понятия. Домен сбоя — это набор аппаратных компонентов, которые совместно используют единственную точку сбоя. Чтобы достичь отказоустойчивости конкретного уровня, необходимо использовать на нем несколько доменов сбоя. Например, чтобы обеспечить отказоустойчивость стоек, серверы и данные необходимо распределить среди нескольких стоек.
 
 Этот короткий видеоролик представляет обзор доменов сбоя в Windows Server 2016:  
 [![Щелкните этот образ, чтобы просмотреть общие сведения о доменах сбоя в Windows Server 2016](media/Fault-Domains-in-Windows-Server-2016/Part-1-Fault-Domains-Overview.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-1-Overview)
+
+### <a name="fault-domain-awareness-in-windows-server-2019"></a>Информация о домене сбоя в Windows Server 2019
+
+Информация о домене сбоя доступна в Windows Server 2019, но он отключен по умолчанию и необходимо включить с помощью реестра Windows.
+
+Чтобы информация о домене сбоя в Windows Server 2019, перейдите в реестр Windows и установка (Get-кластера). Раздел реестра AutoAssignNodeSite 1.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=1
+```
+
+Чтобы отключить информация о домене сбоя в Windows 2019, перейдите в реестр Windows и установка (Get-кластера). AutoAssignNodeSite ключу реестра значение 0.
+
+```Registry
+    (Get-Cluster).AutoAssignNodeSite=0
+```
 
 ## <a name="benefits"></a>Преимущества
 - **Дисковых пространств, включая дисковыми пространствами, домены сбоя используются для повышения уровня безопасности данных.**  
@@ -103,7 +121,7 @@ Remove-ClusterFaultDomain -Name "Rack A"
 ```
 
 ### <a name="defining-fault-domains-with-xml-markup"></a>Определение доменов сбоя с помощью XML-разметки
-Домены сбоя можно указать при помощи синтаксиса на основе XML. Мы рекомендуем с помощью любого текстового редактора создать XML-документ, который вы сможете сохранить и использовать потом. Например, можно использовать Visual Studio Code (загрузите его бесплатно *[отсюда](https://code.visualstudio.com/)*) или Блокнот.  
+Домены сбоя можно указать при помощи синтаксиса на основе XML. Мы рекомендуем с помощью любого текстового редактора создать XML-документ, который вы сможете сохранить и использовать потом. Например, можно использовать Visual Studio Code (загрузите его бесплатно *[отсюда](https://code.visualstudio.com/)* ) или Блокнот.  
 
 Этот короткий видеоролик демонстрирует использование XML-разметки для определения доменов сбоев.
 
@@ -176,5 +194,6 @@ Set-ClusterFaultDomainXML -XML $xml
 [![Щелкните, чтобы просмотреть краткое видео, в котором значение добавления дескрипторов расположения к доменам сбоя](media/Fault-Domains-in-Windows-Server-2016/part-4-location-description.jpg)](https://channel9.msdn.com/Blogs/windowsserver/Fault-Domain-Awareness-in-WS2016-Part-4-Location-Description)
 
 ## <a name="see-also"></a>См. также  
--   [Windows Server 2016](../get-started/windows-server-2016.md)  
--   [Дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md) 
+- [Начало работы с Windows Server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19)  
+- [Начало работы с Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/server-basics)  
+-   [Дисковые пространства Обзор](../storage/storage-spaces/storage-spaces-direct-overview.md) 

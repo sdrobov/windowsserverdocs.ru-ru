@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 83383d3e1c75c7a6e6c8b42c010a17ceebf51e88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec111954bbe39a3089072f41778990546b6287e5
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848115"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191290"
 ---
 # <a name="identifying-your-ad-fs-deployment-goals"></a>Определение целей по развертыванию AD FS
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Правильное определение служб федерации Active Directory \(AD FS\) целей развертывания залог успеха вашего проекта по разработке AD FS. В зависимости от размера вашей организации и требуемого уровня вовлеченности, который вы хотите предоставить для информационных технологий \(ИТ\) сотрудников в любых партнерских организаций, образуют проектную команду, которая может четко сформулировать реального\-неполадок развертывания world в концепции. Убедитесь, что все члены команды понимают направление, в котором должен двигаться проект ради достижения поставленных целей развертывания AD FS.  
   
@@ -32,5 +30,5 @@ ms.locfileid: "59848115"
 |Сопоставьте одну или несколько предварительно определенных целей развертывания AD FS для существующей схемой AD FS|-   [Сопоставление целей развертывания с разработкой AD FS](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)|  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 

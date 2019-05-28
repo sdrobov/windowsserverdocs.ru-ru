@@ -3,22 +3,20 @@ ms.assetid: 8e7015bc-c489-4ec7-8b6e-3ece90f72317
 title: Настройка политик аутентификации
 description: ''
 author: billmath
-ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7faffb7ccbb4b0ea3c65329d18f915d7dafcd46f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.author: billmath
+ms.openlocfilehash: 9345f995af2f256dddcbcbd7d05c4bf6170b563e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861795"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189857"
 ---
 # <a name="configure-authentication-policies"></a>Настройка политик аутентификации
-
->Область применения. Windows Server 2012 R2
 
 В AD FS в Windows Server 2012 R2 и управление доступом и механизм проверки подлинности расширены за счет нескольких факторов, которые включают данные пользователя, устройства, расположения и проверки подлинности. Эти улучшения позволят вам, в пользовательском интерфейсе или с помощью Windows PowerShell, чтобы снизить риск предоставления разрешения на доступ к AD FS\-защищенных приложений через с несколькими\-factor контроля доступа и с несколькими\-многофакторной идентификации, которые основаны на пользователя удостоверения или членство в группах, сетевого расположения, данные устройства, которые к рабочему месту\-присоединен, и состояние проверки подлинности, при нескольких\-идентификации \(MFA\) было выполнено.  
   

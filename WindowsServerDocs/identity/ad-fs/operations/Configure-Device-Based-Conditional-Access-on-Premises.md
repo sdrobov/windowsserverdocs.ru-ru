@@ -9,16 +9,15 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fa96fbeed1445b1add2e5de3aad45ad369a6cafa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0df290248f049b3f8a823e902cefa860fa074091
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847225"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189851"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Настройка локального условного доступа с помощью зарегистрированных устройств
 
->Область применения. Windows Server 2016, Windows Server 2012 R2  
 
 Следующий документ поможет вам Установка и Настройка локального условного доступа с зарегистрированных устройств.
 
@@ -155,7 +154,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 - Контейнер и объект службы регистрации устройств в разделе "Настройка" --> "Службы" --> "Конфигурация регистрации устройств"  
 
 ### <a name="enable-device-write-back-in-azure-ad-connect"></a>Включение обратной записи устройств в Azure AD Connect  
-Включите обратную запись устройств в Azure AD Connect, если она еще не включена. Для этого запустите мастер еще раз и выберите **"Настройка параметров синхронизации"**, затем установите флажок обратной записи устройств и выберите лес, в котором выполнялись приведенные выше командлеты  
+Включите обратную запись устройств в Azure AD Connect, если она еще не включена. Для этого запустите мастер еще раз и выберите **"Настройка параметров синхронизации"** , затем установите флажок обратной записи устройств и выберите лес, в котором выполнялись приведенные выше командлеты  
 
 ### <a name="configure-device-authentication-in-ad-fs"></a>Настройка проверки подлинности устройств в AD FS  
 Используйте окно командной строки PowerShell с повышенными привилегиями для настройки политики AD FS путем выполнения следующей команды  

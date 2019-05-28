@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d566113a7579805c8ae9b558a145878557de0958
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6b852a580bdc0ea02643d478dc51b5cbcd2eac4b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872335"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188310"
 ---
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-an-authorization-claim-rule"></a>Использование правила для утверждений авторизации
 Это правило можно использовать в службах федерации Active Directory \(AD FS\) при необходимости тип входящего утверждения и затем применить действие, которое определяет, будет ли пользователю разрешен или запрещен доступ на основе значения, которые задать в правиле. При использовании этого правила вы проходите или преобразуете утверждения, которые соответствуют следующей логике правила, на основе параметров, которые настраиваются в правиле.  
   

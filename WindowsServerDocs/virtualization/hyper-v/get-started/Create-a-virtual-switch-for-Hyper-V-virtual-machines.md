@@ -11,12 +11,12 @@ ms.assetid: fdc8063c-47ce-4448-b445-d7ff9894dc17
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: e7c43a1b9173d347a3b6d6e1f8bd9127c62bd081
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2668f9fa21c8efbad455d82c7e110ff89b729187
+ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880225"
+ms.lasthandoff: 05/25/2019
+ms.locfileid: "66222871"
 ---
 # <a name="create-a-virtual-switch-for-hyper-v-virtual-machines"></a>Создайте виртуальный коммутатор для виртуальных машин Hyper-V
 
@@ -24,9 +24,9 @@ ms.locfileid: "59880225"
   
 Виртуальный коммутатор позволяет виртуальным машинам, созданным на узлах Hyper-V для взаимодействия с другими компьютерами. Можно создать виртуальный коммутатор при установке роли Hyper-V в Windows Server. Чтобы создать дополнительные виртуальные коммутаторы, используйте диспетчер Hyper-V или Windows PowerShell. Дополнительные сведения о виртуальных коммутаторов, см. в разделе [виртуального коммутатора Hyper-V](../../hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md).  
   
-Виртуальной машины в сети может быть это сложная задача. И несколько новых компонентов виртуального коммутатора, которые можно использовать как [внедренных коммутаторов (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#bkmk_sswitchembedded). Но совсем не сложно сделать Базовая работа с сетью. В этом разделе, вполне достаточно, позволяют создавать сети виртуальных машин в Hyper-V. Дополнительные сведения о том, как можно настроить сетевую инфраструктуру, просмотрите [сети](../../../networking/Networking.md) документации.   
+Виртуальной машины в сети может быть это сложная задача. И несколько новых компонентов виртуального коммутатора, которые можно использовать как [внедренных коммутаторов (SET)](../../hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md#switch-embedded-teaming-set). Но совсем не сложно сделать Базовая работа с сетью. В этом разделе, вполне достаточно, позволяют создавать сети виртуальных машин в Hyper-V. Дополнительные сведения о том, как можно настроить сетевую инфраструктуру, просмотрите [сети](../../../networking/Networking.md) документации.   
   
-## <a name="BKMK_HyperVMan"></a>Создание виртуального коммутатора с помощью диспетчера Hyper-V  
+## <a name="create-a-virtual-switch-by-using-hyper-v-manager"></a>Создание виртуального коммутатора с помощью диспетчера Hyper-V  
   
 1.  Откройте диспетчер Hyper-V, выберите имя компьютера узла Hyper-V.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59880225"
   
     ![Снимок экрана, показывающий сообщение «Ожидающие изменения могут нарушить сетевое подключение»](../media/Hyper-V-NewVSwitch-DisruptNetwork.png)  
   
-## <a name="BKMK_WPS"></a>Создание виртуального коммутатора с помощью Windows PowerShell  
+## <a name="create-a-virtual-switch-by-using-windows-powershell"></a>Создание виртуального коммутатора с помощью Windows PowerShell  
   
 1.  На рабочем столе Windows нажмите кнопку "Пуск" и введите любую часть имени **Windows PowerShell**.  
   

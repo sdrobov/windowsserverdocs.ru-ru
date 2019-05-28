@@ -8,16 +8,15 @@ ms.date: 06/28/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b8ff87a1043b589e83faa875467ddced536291b5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 01ef992554a1e0961d8d795e9baa7730a1a1d682
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867515"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189888"
 ---
 # <a name="ad-fs-and-banned-ip-addresses"></a>AD FS и запрещенных IP-адресов
 
->Область применения. Windows Server 2016
 
 В июня 2018 г., AD FS на Windows Server 2016 появилась **заблокированных IP-адреса** в AD FS обновление июня 2018 г.  Это обновление позволяет настраивать набор IP-адресов глобально в AD FS, чтобы запросы, поступающие из этих IP-адресов, или у этих IP-адресов **x-forwarded-for** или **x-ms-forwarded--IP-адрес клиента** заголовки, будут блокироваться AD FS.
 

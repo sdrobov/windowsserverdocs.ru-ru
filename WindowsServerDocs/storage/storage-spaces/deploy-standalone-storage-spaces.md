@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage-spaces
 ms.date: 07/09/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 40265e767ac9aca05386c0893def259aca3a5633
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7090657a0936aed0f4b2e79007f69d7b082b0b8f
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868275"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63750648"
 ---
 # <a name="deploy-storage-spaces-on-a-stand-alone-server"></a>Развертывание дисковых пространств на автономном сервере
 
@@ -39,7 +39,7 @@ ms.locfileid: "59868275"
 >[!NOTE]
 >В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Для использования дисковых пространств на изолированном сервере 2012−based Windows Server, убедитесь, что физические диски, которые вы хотите использовать выполнить следующие условия.
 
