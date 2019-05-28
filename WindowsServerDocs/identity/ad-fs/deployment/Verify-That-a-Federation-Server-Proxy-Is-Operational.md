@@ -9,16 +9,15 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 4900d8621b94a514a07bba55b2f7f3df5dd36353
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 26b0ae4f331607d83c6b94a2655ddc9eded8a356
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814625"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191874"
 ---
 # <a name="verify-that-a-federation-server-proxy-is-operational"></a>Проверка работоспособности прокси-сервера федерации
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Можно использовать следующую процедуру, чтобы убедиться, что прокси-сервера федерации может взаимодействовать со службой федерации в службах федерации Active Directory \(AD FS\). Выполнять эту процедуру после запуска **мастера конфигурации прокси-сервера федерации AD FS** к настройке компьютера для работы в роли прокси-сервера федерации. Дополнительные сведения о запуске этого мастера см. в разделе [Настройка компьютера для роли прокси-сервера федерации](Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md).  
   
@@ -40,6 +39,6 @@ ms.locfileid: "59814625"
     Если прокси-сервер федерации настроен правильно, вы увидите новое событие в журнале приложений, средства просмотра событий, событие с ИД 198. Это событие говорит, что служба прокси-сервера федерации успешно запущена и работает.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
+[Контрольный список. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
 

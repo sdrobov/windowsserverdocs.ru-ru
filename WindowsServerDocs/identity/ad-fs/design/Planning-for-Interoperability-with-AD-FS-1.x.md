@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f287261ce6cb56e40385ef4de922045153819a23
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a1082b873f65a9f98b25425a392b2c62de8ca22
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877565"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191015"
 ---
 # <a name="planning-for-interoperability-with-ad-fs-1x"></a>Планирование взаимодействия со службами федерации Active Directory 1.x
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Службы федерации Active Directory \(AD FS\) серверами федерации под управлением Windows Server® 2012, совместимы с обоих AD FS 1.0 \(устанавливается вместе с Windows Server 2003 R2\) и службами федерации AD FS 1.1 \(устанавливается вместе с Windows Server 2008 или Windows Server 2008 R2\) службы федерации. Поддерживаются любые из указанных ниже сочетаний.  
   
@@ -49,4 +47,4 @@ AD FS 1. *x*\-утверждения, совместимые является у
 > AD FS 1. *x* служба федерации может интерпретировать только за входящими утверждениями, которые начинаются с Uniform Resource Identifier \(URI\) из http://schemas.xmlsoap.org/claims/.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

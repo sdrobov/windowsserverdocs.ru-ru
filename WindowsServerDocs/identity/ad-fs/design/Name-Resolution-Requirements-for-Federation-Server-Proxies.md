@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a94e4de181cd8794d479bbd6695a94658aba0f86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8aef8b3d8f1e6dde4f960a3bee5a93964d07c72b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855025"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191284"
 ---
 # <a name="name-resolution-requirements-for-federation-server-proxies"></a>Требования к разрешению имен для прокси-серверов федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 При попытке получить доступ к приложению, который защищен с помощью служб федерации Active Directory клиентских компьютеров в Интернете \(AD FS\), они сначала должны пройти аутентификацию на сервере федерации. В большинстве случаев сервер федерации обычно не доступны непосредственно из Интернета. Таким образом клиентскими компьютерами в Интернете должен быть перенаправлен на прокси-сервера федерации вместо этого. Успешного перенаправления можно сделать, добавив соответствующие доменных имен \(DNS\) записей в зоне DNS или зоны, взаимодействующие с Интернетом.  
   
@@ -69,4 +67,4 @@ ms.locfileid: "59855025"
 Дополнительные сведения о способах изменения сети периметра и зон DNS Интернета см. в разделе [настроить разрешение имен для прокси-сервера федерации в DNS зоны, обслуживает как сети периметра и Интернет-клиентов](../../ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

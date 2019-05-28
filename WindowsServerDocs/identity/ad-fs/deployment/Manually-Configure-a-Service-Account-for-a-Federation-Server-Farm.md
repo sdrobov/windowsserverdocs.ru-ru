@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 7d215c80c03236df9479aff8046981741dfc83e2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b027bff4645203c44e228f11c651b767fa4502e0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838155"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192056"
 ---
 # <a name="manually-configure-a-service-account-for-a-federation-server-farm"></a>Настройка учетной записи службы для фермы серверов федерации вручную
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Если вы собираетесь настроить среду фермы серверов федерации в службах федерации Active Directory \(AD FS\), необходимо создать и настроить специальную учетную запись службы в доменных службах Active Directory \(AD DS\) где будет располагаться ферма. Затем каждый сервер федерации в ферме настраивается для использования этой учетной записи. Если вы хотите разрешить клиентским компьютерам в корпоративной сети осуществлять проверку подлинности в любой из серверов федерации в ферме AD FS, используя встроенную проверку подлинности Windows, необходимо выполнить следующие задачи в вашей организации.  
 

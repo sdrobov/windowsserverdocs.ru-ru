@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 369c0e9e7ab1ef25baee1c35379cc66b886f20d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce301f6320ed3347b1ee802f57c2b2ebd4394970
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827105"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191637"
 ---
 # <a name="certificate-requirements-for-federation-servers"></a>Требования к сертификатам для серверов федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В любой службы федерации Active Directory \(AD FS\) разработки, необходимо использовать различные сертификаты для защиты обмена данными и обеспечения проверки подлинности пользователей между Интернет-клиентами и серверами федерации. Каждый сервер федерации должен иметь сертификат взаимодействия служб и маркер\-сертификата для подписи до ее включения в связь службы федерации Active Directory. В следующей таблице описаны типы сертификатов, которые связаны с сервером федерации.  
   
@@ -55,4 +53,4 @@ AD FS не требует издания сертификатов центром
 Если у какого-либо используемого сертификата есть списки отзыва сертификатов (CRL), сервер с настроенным сертификатом должен иметь возможность связаться с сервером, распространяющим CRL.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

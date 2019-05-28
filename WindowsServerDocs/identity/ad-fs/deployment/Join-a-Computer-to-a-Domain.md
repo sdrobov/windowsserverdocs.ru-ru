@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 811f5296143637974cf82e59d57665f8a96f1c8c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 02df9659ee3a1121c0cee3f7c5fa21b91c36b87c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884115"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192051"
 ---
 # <a name="join-a-computer-to-a-domain"></a>Присоединить компьютер к домену
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Для служб федерации Active Directory \(AD FS\) функционировать, каждый компьютер, выступающий в качестве сервера федерации должен быть присоединен к домену. прокси-серверы федерации могут быть присоединены к домену, но это не обязательное требование.  
   
@@ -41,8 +39,8 @@ ms.locfileid: "59884115"
 6.  Нажмите кнопку **ОК** и перезагрузите компьютер.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
-[Контрольный список: Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
+[Контрольный список. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)  
   
 

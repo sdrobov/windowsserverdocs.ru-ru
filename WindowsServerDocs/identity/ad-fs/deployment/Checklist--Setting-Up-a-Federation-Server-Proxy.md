@@ -8,16 +8,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 57951787b1ac7694cacca170b376087a60e34543
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c8cd5cbe2ce0c7985a56f8444edfa7c71ee17c2d
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844055"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192349"
 ---
 # <a name="checklist-setting-up-a-federation-server-proxy"></a>Контрольный список: Настройка прокси-сервера федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Этот контрольный список содержит задачи развертывания для подготовки сервера под управлением Windows Server® 2012 роль прокси-сервера федерации в службах федерации Active Directory \(AD FS\).  
   

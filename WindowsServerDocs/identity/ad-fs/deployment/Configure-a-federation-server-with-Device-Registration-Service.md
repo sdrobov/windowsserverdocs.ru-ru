@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 511a039afd47cf7570fffdcaf17842e0eccc5683
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f1367f03ea8a9ba96bfe4bae1c324deff92576f0
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843065"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192261"
 ---
 # <a name="configure-a-federation-server-with-device-registration-service"></a>настройка сервера федерации с помощью службы регистрации устройств
-
->Область применения. Windows Server 2012 R2
 
 Вы можете включить службу регистрации устройств \(DRS\) на сервере федерации после завершения процедуры, описанные в [Step 4: Настройка сервера федерации](https://technet.microsoft.com/library/dn303424.aspx). Служба регистрации устройств предоставляет механизм адаптации эффективная идентификации, постоянные единого входа\-на \(SSO\)и условный доступ для пользователей, которым требуется доступ к компании ресурсы. Дополнительные сведения о DRS см. в разделе [присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная проверка подлинности между компании приложениях](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)  
   

@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3e555d1003878e12320cb8557bd205ac24e1bbb3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6be56c25cc6f639f73842f57cdf48a6339dccf9c
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882445"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191850"
 ---
 # <a name="windows-server-2012-ad-fs-deployment-guide"></a>Руководство по развертыванию служб федерации Active Directory в Windows Server 2012
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Можно использовать службы федерации Active Directory® \(AD FS\) с операционной системой Windows Server® 2012 для построения решения по управлению федеративными удостоверениями, расширяющий распределенной идентификации, проверки подлинности, и службы проверки подлинности в Интернете\-приложений на основе через границы организации и платформы. При развертывании служб федерации Active Directory можно расширить существующие возможности управления удостоверениями вашей организации в Интернете.  
   
@@ -62,11 +61,11 @@ ms.locfileid: "59882445"
   
 -   [Планирование развертывания AD FS](Planning-to-Deploy-AD-FS.md)  
   
--   [Реализация AD FS разработать план](Implementing-Your-AD-FS-Design-Plan.md)  
+-   [Реализация плана проектирования AD FS](Implementing-Your-AD-FS-Design-Plan.md)  
   
--   [Контрольный список: Реализация единого входа в Интернете](Checklist--Implementing-a-Web-SSO-Design.md)  
+-   [Контрольный список. Реализация механизма единого входа через Интернет](Checklist--Implementing-a-Web-SSO-Design.md)  
   
--   [Контрольный список: Реализация федеративных Web SSO Design](Checklist--Implementing-a-Federated-Web-SSO-Design.md)  
+-   [Контрольный список. Реализация федеративного механизма единого входа через Интернет [ADFS2]](Checklist--Implementing-a-Federated-Web-SSO-Design.md)  
   
 -   [Настройка партнерских организациях по ресурсам](Configuring-Partner-Organizations.md)  
   
@@ -74,6 +73,6 @@ ms.locfileid: "59882445"
   
 -   [Развертывание серверов федерации](Deploying-Federation-Servers.md)  
   
--   [Развертывание прокси-сервера федерации](Deploying-Federation-Server-Proxies.md)  
+-   [Развертывание прокси-серверов федерации](Deploying-Federation-Server-Proxies.md)  
   
--   [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)  
+-   [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)  

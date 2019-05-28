@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 8935760cad272d5b82edb675cda85caf0456565f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c33475d7420383448439e2b769562e55127c7b0e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859445"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190628"
 ---
 # <a name="when-to-create-a-federation-server-proxy-farm"></a>Когда следует создавать ферму прокси-серверов федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Рассмотрите возможность установки дополнительных компонентов сервера федерации, при наличии больших служб федерации Active Directory \(AD FS\) развертывания и хотите, чтобы обеспечить устойчивость к сбоям, загружать\-балансировки и масштабируемость развертывание прокси-сервера. Процесс создания прокси-серверов федерации два или более в одной и той же сети периметра и настройке их для защиты той же службы федерации AD FS создает ферму прокси-сервера федерации.  
   
@@ -39,4 +37,4 @@ ms.locfileid: "59859445"
 Дополнительные сведения о добавлении новых прокси-серверов федерации, чтобы создать ферму прокси-сервера федерации см. в разделе [контрольный список: Настройка прокси-сервера федерации](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
