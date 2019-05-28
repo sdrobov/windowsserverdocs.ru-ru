@@ -8,12 +8,12 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3912bb6048a06a4656b5b27ccec8f8fb3f5b114b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: daed746fe798ae253956d0977827d0e205bb8b3e
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847415"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034574"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>Управление мост центра обработки данных
 
@@ -39,7 +39,7 @@ ms.locfileid: "59847415"
 2. Включите DCB в сетевых адаптерах. См. в разделе [включить и отобразить параметры DCB в сетевых адаптеров](#bkmk_enabledcb).
 
 >[!NOTE]
->Если вы хотите настроить мост центра обработки данных от коммутатора через DCBX, см. в разделе [DCBX параметры](#BKMK_DCBX_Settings)
+>Если вы хотите настроить мост центра обработки данных от коммутатора через DCBX, см. в разделе [DCBX параметры](#dcb-configuration-on-network-adapters).
 
 Бит готов DCBX описан в спецификации DCB. Если пойти бит на устройстве имеет значение true, устройство будет принимать конфигураций с удаленного устройства через DCBX. Если бит пойти на устройстве имеет значение false, устройство отклонит все попытки конфигурации из удаленных устройств и применить только локальной конфигурации.
 

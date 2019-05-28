@@ -9,14 +9,17 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 41f435c3d537cbfd204dfa869d750b22200deb33
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9999f786639ff4aa303ed34ade14849cda8feec
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891135"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475914"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Межрегиональная межкластерная репликация хранилища в Azure
+
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+
 Можно настроить кластер-кластер реплики хранилища для приложений между регионами в Azure. В приведенных ниже примерах мы используем кластер из двух узлов, но реплики хранилища в Межкластерной не ограничены двухузлового кластера. На приведенном ниже рисунке является пространства дисковыми двухузлового кластера, могут взаимодействовать друг с другом в одном домене и которые являются между регионами.
 
 Просмотрите следующий видеоролик, полные пошаговые процесса.
@@ -31,7 +34,7 @@ ms.locfileid: "59891135"
 
     Например **SR-AZ2AZ** в **Западная часть США 2** и **SR-AZCROSS** в **Центрально-Западная**, как показано выше.
 
-2. Создайте две [группы доступности](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), один в каждой группе ресурсов для каждого кластера
+2. Создайте две [группы доступности](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM), один в каждой группе ресурсов для каждого кластера.
     - Группы доступности (**az2azAS1**) в (**SR-AZ2AZ**)
     - Группы доступности (**azcross-AS**) в (**SR-AZCROSS**)
 
@@ -41,7 +44,7 @@ ms.locfileid: "59891135"
 
 4. Создайте две группы безопасности сети
    - Создание [группы безопасности сети](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) в первой группы ресурсов (**SR-AZ2AZ**).
-   - Создание [группы безопасности сети](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**azcross-NSG**) второй группы ресурсов (**SR-AZCROSS**). 
+   - Создание [группы безопасности сети](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**azcross-NSG**) второй группы ресурсов (**SR-AZCROSS**).
 
    Добавьте одно правило безопасности для входящего трафика для RDP:3389 в обе группы безопасности сети. Вы можете удалить это правило после завершения установки.
 
@@ -72,10 +75,10 @@ ms.locfileid: "59891135"
 
    Ниже приведен пример команды PowerShell
    ```powershell
-      New-Cluster -Name SRAZC1 -Node az2az1,az2az2 – StaticAddress 10.3.0.100
+      New-Cluster -Name SRAZC1 -Node az2az1,az2az2 –StaticAddress 10.3.0.100
    ```
    ```powershell
-      New-Cluster -Name SRAZCross -Node azcross1,azcross2 – StaticAddress 10.0.0.10
+      New-Cluster -Name SRAZCross -Node azcross1,azcross2 –StaticAddress 10.0.0.10
    ```
 
 7. Включите дисковые пространства.

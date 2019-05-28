@@ -8,18 +8,18 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 4d0ff53b9118db1dd6ba5af94b3e627bf1597e0c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b5658676d08318d88ddee44a0589db5873b4660b
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889025"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034297"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Подготовка к миграции сервера AD FS 2.0 Federation для AD FS на Windows Server 2012 R2
 
 В этом документе описан процесс переноса AD FS 2.0 или фермы серверов федерации Windows Server 2012 в ферму Windows Server 2012 R2 AD FS.  Действия можно использовать с фермами AD FS, использующих WID или SQL Server в качестве основной базы данных.  
   
--   [Схема процесса миграции](prepare-migrate-ad-fs-server-r2.md#migrate-process-outline)  
+-   [Схема процесса миграции](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
   
 -   [Новые возможности AD FS в Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
   
@@ -29,7 +29,8 @@ ms.locfileid: "59889025"
   
 -   [Другие задачи и вопросы миграции](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
   
-##  <a name="migration-process-outline"></a>Схема процесса миграции  
+##  <a name="migration-process-outline"></a>Схема процесса миграции
+
  Для выполнения переноса сервера федерации AD FS в Windows Server 2012 R2 необходимо выполнить следующие действия.  
   
 1.  Выполните экспорт, запись и архивацию следующих данных конфигурации в существующей ферме AD FS. Подробные инструкции по выполнению этих задач см. в статье о [переносе сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md).  

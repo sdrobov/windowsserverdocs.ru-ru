@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/06/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 556110fe7bed1aed002ef6d985324ff5171e770e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f85e321381adcf607c3504005a0a3448ab0f098a
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885375"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63738446"
 ---
 # <a name="ntfs-overview"></a>Обзор NTFS
 
@@ -25,7 +25,7 @@ NTFS — основная файловая система в последних 
 
 ## <a name="practical-applications"></a>Практическое применение
 
-### <a name="increased-reliability"></a>Повышенная надежность
+### <a name="increased-reliability"></a>повышенная надежность;
 
 Файловая система NTFS использует его журнала файлов и данных контрольных точек для восстановления целостности файловой системы, когда компьютер перезапускается после сбоя системы. После возникновения ошибки поврежденных секторов NTFS динамически указывает кластер, который содержит поврежденный сектор, выделяется новый кластер для хранения данных, помечает исходного кластера как поврежденные и больше не использует старый кластер. Например после сбоя сервера NTFS данные можно восстановить путем воспроизведения файлов журнала.
 
