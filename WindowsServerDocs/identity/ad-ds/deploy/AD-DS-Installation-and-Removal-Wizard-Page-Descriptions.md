@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 52e4b215c406eeae11dbab41e367f6ce4cd83507
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b4df753a1635a0935e70a76278b097d2f9f70142
+ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849255"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009100"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>Описание страниц мастера установки и удаления доменных служб Active Directory
 
@@ -61,7 +61,7 @@ ms.locfileid: "59849255"
   
 -   При создании нового леса требуется указать имя корневого домена леса. Имя корневого домена леса не может быть однокомпонентным (например, он должен быть «contoso.com» вместо «contoso»). Оно должно использовать разрешенные контексты именования домена DNS. Можно указать международное доменное имя (IDN). Дополнительные сведения о контекстах именования домена DNS, см. в разделе [909264 КБ](https://support.microsoft.com/kb/909264).  
   
--   Имена лесов Active Directory не должны совпадать с внешними именами DNS. Например, если URL-адрес DNS Интернета — http://contoso.com, необходимо выбрать другое имя для вашего внутреннего леса избежать проблем с совместимость с будущими версиями. Данное имя должно быть уникальным и достаточно редким для веб-трафика, например corp.contoso.com.  
+-   Имена лесов Active Directory не должны совпадать с внешними именами DNS. Например, если URL-адрес DNS Интернета — http: \/ /contoso.com, необходимо выбрать другое имя для вашего внутреннего леса избежать проблем с совместимость с будущими версиями. Данное имя должно быть уникальным и достаточно редким для веб-трафика, например corp.contoso.com.  
   
 -   Вы должны входить в группу администраторов сервера, на котором нужно создать новый лес.  
   

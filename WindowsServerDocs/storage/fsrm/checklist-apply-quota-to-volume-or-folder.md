@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 62910af666fb16db5c2e7a30b49eedfa8c12cacb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e937464ca3af1292de5fd63303ba4a430f831dcd
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59860855"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65475860"
 ---
 # <a name="checklist-apply-a-quota-to-a-volume-or-folder"></a>Контрольный список: Применение квоты для тома или папки
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server (Semi-Annual Channel)
 
 1. Настройте параметры электронной почты, если вы планируете отправлять по электронной почте уведомления о достижении пороговых значений или отчеты хранилища. [Настройка уведомлений по электронной почте](configure-email-notifications.md)
 
@@ -27,9 +27,9 @@ ms.locfileid: "59860855"
 <br />-Или- <br /> Создайте новый шаблон квоты, чтобы применить политику хранения в вашей организации. [Создание шаблона квоты](create-quota-template.md)
 
 4. Создайте квоту на основе шаблона для тома или папки.  
- [Создание квоты](create-quota.md) <br /> -Или- <br /> Создайте автоматически применяемую квоту, чтобы для вложенных папок в томе или папке квоты формировались автоматически. [Создание автоматически назначаемой квоты](create-auto-apply-quota.md)
+ [Создание квоты](create-quota.md) <br /> -Или- <br /> Создайте автоматически применяемую квоту, чтобы для вложенных папок в томе или папке квоты формировались автоматически. [Создание автоматически применяемой квоты](create-auto-apply-quota.md)
 
-6. Запланируйте задачу отчета, содержащую отчет об использовании квоты, для периодического отслеживания использования квоты. [Расписание набора отчетов](schedule-set-of-reports.md)
+6. Запланируйте задачу отчета, содержащую отчет об использовании квоты, для периодического отслеживания использования квоты. [Планирование набора отчетов](schedule-set-of-reports.md)
 
 > [!Note]
 > Если вы хотите блокировки файлов для тома или папки, см. в разделе [контрольный список: Применить фильтр блокировки файлов для тома или папки](checklist-apply-file-screen-to-volume-or-folder.md).

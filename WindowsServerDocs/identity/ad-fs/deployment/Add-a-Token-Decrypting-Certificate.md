@@ -9,16 +9,14 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 0eba51521e7ef88542bccf93d92d2e783d800b5e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cf89972120f3f0effa3eb1cf0fee6d29dbc8ed4e
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842215"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192482"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>Добавление сертификата расшифровки токенов
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Серверы федерации используют маркер\-сертификат расшифровки, когда Доверяющая сторона сервера федерации необходимо расшифровать маркеры, выданные с более старым сертификатом после настройки нового сертификата в качестве основного сертификата расшифровки. Службы федерации Active Directory \(AD FS\) использует протокол SSL \(SSL\) сертификат для Internet Information Services \(IIS\) как расшифровки по умолчанию сертификат.  
   
@@ -40,7 +38,7 @@ ms.locfileid: "59842215"
 4.  В **поиск файла сертификата** диалоговом окне перейдите к файлу сертификата, который требуется добавить, выберите файл сертификата и нажмите кнопку **откройте**.  
   
 ## <a name="additional-references"></a>Дополнительная справка  
-[Контрольный список: Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
+[Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
 [Требования к сертификатам для серверов федерации](https://technet.microsoft.com/library/dd807040.aspx)  
   

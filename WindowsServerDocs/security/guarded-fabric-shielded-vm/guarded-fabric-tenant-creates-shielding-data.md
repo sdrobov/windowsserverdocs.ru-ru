@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 1245b88a42b80218b5557dc89f2b97b5d0059d44
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 25ed17d964f12c2f497ccde443dad9f8bc253b20
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852545"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034672"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>Экранированные виртуальные машины для клиентов - создания данных экранирования для определения экранированной виртуальной Машины
 
@@ -35,7 +35,7 @@ ms.locfileid: "59852545"
 
 Затем вы можете создать файл данных экранирования:
 
-- [Создать файл данных экранирования и добавить guardians](#create-a-shielding-data-file-and-add-guardians)
+- [Создать файл данных экранирования и добавить guardians](#create-a-shielding-data-file-and-add-guardians-using-the-shielding-data-file-wizard)
 
 
 ## <a name="obtain-a-certificate-for-remote-desktop-connection"></a>Получение сертификата для удаленного рабочего стола
@@ -211,7 +211,7 @@ New-HgsGuardian -Name "Owner" -GenerateCertificates
 Вам потребуется сертификатов владельца и соответствующие им закрытые ключи для unshield виртуальной машины, поэтому эти сертификаты резервного копирования и защиты от кражи.
 Злоумышленник, имеющий доступ к сертификатам владельца их можно использовать для запуска экранированной виртуальной машины или изменения конфигурации безопасности.
 
-Если вам нужно импортировать сведения о защиты из защищенной структуры, где вы хотите запустить виртуальную машину (в основном центре обработки данных, резервного копирования центров обработки данных и др.), выполните следующую команду для каждого [файл метаданных, полученных из защищенной структуры. ](#Select-trusted-fabrics).
+Если вам нужно импортировать сведения о защиты из защищенной структуры, где вы хотите запустить виртуальную машину (в основном центре обработки данных, резервного копирования центров обработки данных и др.), выполните следующую команду для каждого [файл метаданных, полученных из защищенной структуры. ](#select-trusted-fabrics).
 
 ```powershell
 Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
@@ -220,7 +220,7 @@ Import-HgsGuardian -Name 'EAST-US Datacenter' -Path '.\EastUSGuardian.xml'
 > [!TIP]
 > Если вы использовали самозаверяющих сертификатов или сертификатов, зарегистрированных с HGS срок действия истек, может потребоваться использовать `-AllowUntrustedRoot` и/или `-AllowExpired` флагов с помощью импорта HgsGuardian команду, чтобы обойти проверку безопасности.
 
-Также необходимо будет [получить каталог подписи тома](#Get-the-volume-signature-catalog-file) для каждого диска шаблона, вы хотите использовать с этот файл данных экранирования и [ответов файл данных экранирования](#Create-an-answer-file) чтобы разрешить операционной системе завершить его Специализация задач автоматически.
+Также необходимо будет [получить каталог подписи тома](#get-the-volume-signature-catalog-file) для каждого диска шаблона, вы хотите использовать с этот файл данных экранирования и [ответов файл данных экранирования](#create-an-answer-file) чтобы разрешить операционной системе завершить его Специализация задач автоматически.
 Наконец определите, будут ли виртуальная машина могла быть полностью экранирована "или" только что включил виртуального доверенного платформенного модуля.
 Используйте `-Policy Shielded` для полностью экранированной виртуальной Машины или `-Policy EncryptionSupported` для виртуальной Машины, разрешающее подключения простые консольные и PowerShell Direct с поддержкой виртуального доверенного платформенного модуля.
 
@@ -242,5 +242,5 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 
 ## <a name="see-also"></a>См. также
 
-- [Развернуть экранированные виртуальные машины](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

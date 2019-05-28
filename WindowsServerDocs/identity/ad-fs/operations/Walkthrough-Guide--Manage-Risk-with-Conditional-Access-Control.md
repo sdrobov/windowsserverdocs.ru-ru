@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 11d2d567f9264dca53a3426263a172649d7d7c11
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f034c2eeafe9d52569e8181bbbb2e582b1059d51
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826655"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188859"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>Пошаговое руководство: Управление рисками с использованием условного управления доступом
 
->Область применения. Windows Server 2012 R2
+
 
 
 ## <a name="about-this-guide"></a>Информация о руководстве
@@ -28,11 +28,11 @@ ms.locfileid: "59826655"
 
 -   [Шаг 1. Настройка лабораторной среды](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Шаг 2. Проверка механизма управления доступом по умолчанию AD FS](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
+-   [Шаг 2. Проверка механизма управления доступом по умолчанию AD FS](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [Шаг 3. Настройка политики условного управления доступом на основе данных пользователя](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
+-   [Шаг 3. Настройка политики условного управления доступом на основе данных пользователя](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [Шаг 4. Проверка механизма условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
+-   [Шаг 4. Проверка механизма условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="BKMK_1"></a>Шаг 1. Настройка лабораторной среды
 Для выполнения этого пошагового руководства вам потребуется среда, состоящая из следующих компонентов:

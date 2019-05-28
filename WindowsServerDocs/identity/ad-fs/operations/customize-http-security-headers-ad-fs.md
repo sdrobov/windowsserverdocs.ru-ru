@@ -9,15 +9,14 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cd3ad4e6547194a971d8a51ecb95ee56f5e4e8c2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 54b0e055d6cfde5e5c69540ac804a38cbceb1e59
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822725"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188771"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>Настройка заголовков ответа HTTP безопасности с AD FS 2019 г. 
-Область применения. Windows Server 2019 
  
 Для защиты от распространенных уязвимостей безопасности и дают администраторам возможность воспользоваться преимуществами новейших успехах в механизмы защиты на основе браузера, AD FS 2019 добавлены функциональные возможности для настройки безопасности заголовки ответов HTTP Отправленные AD FS. Это выполняется посредством введения два новых командлета: `Get-AdfsResponseHeaders` и `Set-AdfsResponseHeaders`.  
  
@@ -235,4 +234,4 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 ## <a name="next"></a>Далее
 
 - [Используйте руководства troublehshooting Справка по AD FS](https://aka.ms/adfshelp/troubleshooting )
-- [Устранение неполадок AD FS](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
+- [Устранение неполадок в AD FS](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)

@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: febcd6ab0744a7fddd024e1f0afdb93711e8939a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6effaf7c2d197c08b4930e09c3ada96462b17d6f
+ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829545"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65476193"
 ---
 # <a name="quota-management"></a>Управление квотами
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 На узле **Управление квотами** оснастки консоли управления Microsoft<sup>®</sup> (MMC) диспетчера ресурсов файлового сервера можно выполнять следующие задачи:
 
@@ -34,16 +34,16 @@ ms.locfileid: "59829545"
 Этот раздел содержит следующие темы:
 
 -   [Создание квоты](create-quota.md)
--   [Создание автоматически назначаемой квоты](create-auto-apply-quota.md)
+-   [Создание автоматически применяемой квоты](create-auto-apply-quota.md)
 -   [Создание шаблона квоты](create-quota-template.md)
--   [Изменение свойств шаблона квоты](edit-quota-template-properties.md)
--   [Изменение автоматически назначаемой квоты](edit-auto-apply-quota-properties.md)
+-   [Редактирование свойств шаблона квоты](edit-quota-template-properties.md)
+-   [Редактирование свойств автоматически применяемой квоты](edit-auto-apply-quota-properties.md)
 
 > [!Note]
 > Чтобы настроить уведомления по электронной почте и возможности создания отчетов, необходимо сначала настроить общие параметры диспетчера ресурсов файлового сервера.
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 
 

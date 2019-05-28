@@ -13,23 +13,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8750094e7357a3aefa307d24abd1470fbf8d2a71
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 7cf99a9124f78189de223018608d9864e51d7897
+ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867175"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65564693"
 ---
 # <a name="manage-bde-wipefreespace"></a>готов: WipeFreeSpace
 
 
 
-Очищает свободного места на томе, удаляя все фрагменты данных, которые могли существовать в пространстве. Выполните следующую команду на томе, который был зашифрован при помощи «только занятое место? метод шифрования представляет тот же уровень защиты, что «полное шифрование томов? метод шифрования. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Очищает свободного места на томе, удаляя все фрагменты данных, которые могли существовать в пространстве. Выполните следующую команду на томе, который был зашифрован при помощи метода шифрования «Только используемого пространства» предоставляет тот же уровень защиты, что и метод шифрования «Full Volume Encryption». Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-manage-bde –WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -49,12 +49,12 @@ manage-bde –WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/
 ```
 manage-bde -w C:
 ```
-В следующем примере демонстрируется использование **-w** с **— Отмена** параметр, чтобы отменить очистку свободного места на диске C.
+В следующем примере демонстрируется использование **-w** с **-Отмена** параметр, чтобы отменить очистку свободного места на диске C.
 ```
 manage-bde -w -Cancel C:
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Готов](manage-bde.md)

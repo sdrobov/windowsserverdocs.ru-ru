@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 5c7cec9ad92605f3dc98f8ce8fb7853a7ae61299
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0206197b24f13d80019cbc864057e99e195ebc4b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863695"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191137"
 ---
 # <a name="planning-your-deployment"></a>Планирование развертывания
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 При планировании cross\-организации \(федерации\-основе\) совместную работу с помощью служб федерации Active Directory \(AD FS\), сначала определить, если вашей организации будет размещаться веб-ресурс, доступный другим организациям через Интернет или будет предоставляться доступ к веб-ресурса для сотрудников в вашей организации. Это решение влияет на способ развертывания AD FS, и является определяющим в планировании инфраструктуры AD FS.  
   
@@ -35,15 +33,15 @@ ms.locfileid: "59863695"
   
 -   [Рекомендации по безопасному планированию и развертыванию AD FS](Best-Practices-for-Secure-Planning-and-Deployment-of-AD-FS.md)  
   
--   [Планирование взаимодействия с AD FS 1.x](Planning-for-Interoperability-with-AD-FS-1.x.md)  
+-   [Планирование взаимодействия с AD FS 1.x](Planning-for-Interoperability-with-AD-FS-1.x.md)  
   
 -   [Когда следует использовать делегирование удостоверений](When-to-Use-Identity-Delegation.md)  
   
--   [Развертывание AD FS в организации партнера по учетным записям](Deploying-AD-FS-in-the-Account-Partner-Organization-2012.md)  
+-   [Развертывание служб федерации Active Directory в организации партнера по учетным записям](Deploying-AD-FS-in-the-Account-Partner-Organization-2012.md)  
   
--   [Развертывание AD FS в организации партнера по ресурсам](Deploying-AD-FS-in-the-Resource-Partner-Organization-2012.md)  
+-   [Развертывание служб федерации Active Directory в организации партнера по ресурсам](Deploying-AD-FS-in-the-Resource-Partner-Organization-2012.md)  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
 
 

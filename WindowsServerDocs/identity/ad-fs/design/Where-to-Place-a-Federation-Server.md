@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 376cec7f3a4fb1f988ac5d458b05220c7b9de970
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b883126f60950c0015b3a21e2ca5abc251b25b84
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857695"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190460"
 ---
 # <a name="where-to-place-a-federation-server"></a>Размещение сервера федерации
-
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Безопасности рекомендуется, место служб федерации Active Directory \(AD FS\)серверы федерации перед брандмауэром и подключайте их к корпоративной сети для предотвращения прямого доступа из Интернета. Это важно, так как серверы федерации имеют полную авторизацию для предоставления маркеров безопасности. Следовательно, они должны иметь ту же защиту, что и контроллер домена. Если сервер федерации нарушена, злоумышленник имеет возможность выдавать маркеры доступа для всех веб-приложений и серверов федерации, которые защищены с помощью служб федерации Active Directory \(AD FS\) в всех ресурсов партнерских организаций.  
   
@@ -40,4 +38,4 @@ ms.locfileid: "59857695"
 Дополнительные сведения о настройке публикации сервера в сети периметра см. в разделе [Where to Place a Federation Server Proxy](Where-to-Place-a-Federation-Server-Proxy.md). Сведения о настройке ISA Server для публикации сервера см. в разделе [Создание безопасного правила веб-публикации](https://go.microsoft.com/fwlink/?LinkId=75182).  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

@@ -9,22 +9,21 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 38c1962c2814a28adaf776d409bfd2b8129389ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 541ad987b81e7192c565c5be5ac93ef37db4d19b
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867115"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192542"
 ---
 # <a name="ad-fs-technical-reference"></a>Технический справочник по службам федерации Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 - [AD FS и сведения о свойстве KeySpec сертификата](../ad-fs/technical-reference/AD-FS-and-KeySpec-Property.md)
-- [Усовершенствования аудита в AD FS в Windows Server](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
--   [Основные сведения о концепциях ключей AD FS](../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
+- [Улучшения аудита для AD FS в Windows Server 2016](../ad-fs/technical-reference/auditing-enhancements-to-ad-fs-in-windows-server.md)
+-   [Общие сведения о ключевых понятиях AD FS](../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md)
 -   [Технический справочник по регистрации устройства](../ad-fs/technical-reference/Device-Registration-Technical-Reference.md)
--   [Защита от атак AD FS пароль](../ad-fs/technical-reference/ad-fs-password-protection.md)
+-   [Защита паролей от атак в AD FS](../ad-fs/technical-reference/ad-fs-password-protection.md)
 -   [Конфиденциальность пользователей и AD FS](../ad-fs/technical-reference/GDPR-and-AD-FS-Compliance.md)
 
 > [!TIP]

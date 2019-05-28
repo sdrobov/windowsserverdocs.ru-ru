@@ -1,27 +1,42 @@
 ---
 title: Расширение томов в локальных дисковых пространствах
-ms.assetid: fa48f8f7-44e7-4a0b-b32d-d127eff470f0
+description: Как изменить размер тома в дисковых пространств с помощью Windows Admin Center и PowerShell.
 ms.prod: windows-server-threshold
-ms.author: cosmosdarwin
-ms.manager: eldenc
-ms.technology: storage-spaces
-ms.topic: article
+ms.reviewer: cosmosdarwin
 author: cosmosdarwin
-ms.date: 01/23/2017
-ms.localizationpriority: medium
-ms.openlocfilehash: 51f58ec23c55a6cb1664d800d6f4a75dae545899
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.author: cosdar
+manager: eldenc
+ms.technology: storage-spaces
+ms.date: 05/07/2019
+ms.openlocfilehash: 3be6a4cda20f4d7d7d881ad8a272dc38fd787bba
+ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824975"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65613224"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>Расширение томов в локальных дисковых пространствах
 > Относится к: Windows Server 2019, Windows Server 2016
 
-Эта статья содержит инструкции по изменению размеров томов в [локальных дисковых пространствах](storage-spaces-direct-overview.md).
+Этот раздел содержит инструкции для изменения размера тома на [Storage Spaces Direct](storage-spaces-direct-overview.md) кластера с помощью Windows Admin Center.
 
-## <a name="prerequisites"></a>предварительные требования
+Посмотрите краткое видео о том, как изменить размер тома.
+
+> [!VIDEO https://www.youtube-nocookie.com/embed/hqyBzipBoTI]
+
+## <a name="extending-volumes-using-windows-admin-center"></a>Расширение тома с помощью Windows Admin Center
+
+1. Подключение к кластеру дисковые пространства в Windows Admin Center и выберите **тома** из **средства** области.
+2. На странице томов выберите **инвентаризации** , а затем выберите том, который требуется изменить.
+
+    На странице сведений тома указывается емкость хранилища для тома. На страницу сведений о томах также можно открыть непосредственно из панели мониторинга. На панели мониторинга в области оповещений выберите предупреждения, которая уведомляет вас, если том хватает емкости хранилища, а затем выберите **перейдите к тома**.
+
+4. В верхней части на страницу сведений о томах, выберите **изменение размера**.
+5. Введите новый больший размер, а затем выберите **изменение размера**.
+
+    На странице сведений томов указывается увеличить емкость хранилища для тома и очищается оповещения на панели мониторинга.
+
+## <a name="extending-volumes-using-powershell"></a>Расширение тома с помощью PowerShell
 
 ### <a name="capacity-in-the-storage-pool"></a>Емкость в пуле носителей
 
@@ -49,7 +64,7 @@ Get-VirtualDisk
 Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
 ```
 
-## <a name="step-1--resize-the-virtual-disk"></a>Шаг 1. Изменение размера виртуального диска
+### <a name="step-1--resize-the-virtual-disk"></a>Шаг 1. Изменение размера виртуального диска
 
 В зависимости от способа создания, у виртуального диска могут быть уровни хранилища.
 
@@ -61,7 +76,7 @@ Get-VirtualDisk <FriendlyName> | Get-StorageTier
 
 Если командлет ничего не возвращает, у виртуального диска нет уровней хранилища.
 
-### <a name="no-storage-tiers"></a>Нет уровней хранилища
+#### <a name="no-storage-tiers"></a>Нет уровней хранилища
 
 Если у виртуального диска нет уровней хранилища, вы можете изменить его размер непосредственно с помощью командлета **Resize-VirtualDisk**.
 
@@ -75,7 +90,7 @@ Get-VirtualDisk <FriendlyName> | Resize-VirtualDisk -Size <Size>
 
 ![Resize-VirtualDisk](media/resize-volumes/Resize-VirtualDisk.gif)
 
-### <a name="with-storage-tiers"></a>С уровнями хранилища
+#### <a name="with-storage-tiers"></a>С уровнями хранилища
 
 Если у виртуального диска есть уровни хранилища, вы можете изменить размер каждого уровня по отдельности с помощью командлета **Resize-StorageTier**.
 
@@ -98,7 +113,7 @@ Get-StorageTier <FriendlyName> | Resize-StorageTier -Size <Size>
 
 ![Resize-StorageTier](media/resize-volumes/Resize-StorageTier.gif)
 
-## <a name="step-2--resize-the-partition"></a>Шаг 2. Изменение размера раздела
+### <a name="step-2--resize-the-partition"></a>Шаг 2. Изменение размера раздела
 
 Измените размер раздела с помощью командлета **Resize-Partition**. Ожидается, что виртуальный диск содержит два раздела. Один из них зарезервирован и не должен меняться. Вам нужно изменить размер раздела **PartitionNumber = 2** и **Type = Basic**.
 
@@ -129,3 +144,4 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 - [Дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
 - [Планирование томов в дисковых пространств](plan-volumes.md)
 - [Создание томов в дисковых пространств](create-volumes.md)
+- [Удаление томов в дисковых пространств](delete-volumes.md)

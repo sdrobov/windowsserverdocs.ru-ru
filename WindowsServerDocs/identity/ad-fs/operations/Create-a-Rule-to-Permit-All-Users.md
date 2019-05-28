@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: de85af27e699242977054420178dd3c424b2ddb3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: abb00e14dd0b3ce7b06efba816fbd7452e7bf0f1
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822595"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189414"
 ---
 # <a name="create-a-rule-to-permit-all-users"></a>Создание правила для разрешения всем пользователям
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 В Windows Server 2016, можно использовать **политику контроля доступа** создать правило, которое предоставит всем пользователям доступ к проверяющей стороне.  В Windows Server 2012 R2 с помощью **разрешить всем пользователям** шаблон правила в службах федерации Active Directory \(AD FS\), можно создать правило авторизации, которое предоставит всем пользователям доступ к проверяющей стороны субъект. 
 
@@ -59,9 +57,9 @@ ms.locfileid: "59822595"
 7.  В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка правил утверждений](Configure-Claim-Rules.md)  
+[Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
-[Контрольный список: Создание правил для утверждений для доверия проверяющей стороны](https://technet.microsoft.com/library/ee913578.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  
   
 [Когда следует использовать Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

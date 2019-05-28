@@ -9,16 +9,14 @@ ms.date: 02/01/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 37b8c4b9b07e3111fce1bfc0a9aae10c8754bb3a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6612c05e664b50c5a50b10b712b91715cc85d230
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884635"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189881"
 ---
 # <a name="configure-ad-fs-extranet-lockout-protection"></a>Настройка защиты блокировки экстрасети AD FS
-
->Область применения. Windows Server 2012 R2
 
 В AD FS на Windows Server 2012 R2 была представлена функция безопасности называется экстрасети.  С помощью этой функции AD FS будет «stop» проверка подлинности «вредоносный» учетную запись из за пределами в течение заданного времени.  Это предотвращает возможность блокируется в Active Directory учетные записи пользователей.  В дополнение к защите пользователей от блокировки учетных записей AD, блокировка экстрасети AD FS также обеспечивает защиту от атак подбора пароля
 
@@ -95,7 +93,7 @@ Set-AdfsProperties -EnableExtranetLockout $true -ExtranetLockoutThreshold 15 -Ex
 
 ## <a name="additional-references"></a>Дополнительная справка  
 - [Рекомендации по обеспечению безопасности служб федерации Active Directory](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
-- [Делегирование доступа командлета Powershell AD FS для пользователей без прав администратора](delegate-ad-fs-pshell-access.md)
+- [Делегирование доступа к командлету Powershell AD FS пользователям без прав администратора](delegate-ad-fs-pshell-access.md)
 - [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 
 [Операции AD FS](../../ad-fs/AD-FS-2016-Operations.md)

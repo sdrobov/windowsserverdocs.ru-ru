@@ -5,34 +5,30 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.date: 01/05/2017
+ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2827f332-44d4-4785-8b13-98429087dcc7
-author: jaimeo
-ms.author: jaimeo
+author: jasongerend
+ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: b504c3396200502a09467ae97a36f9de613e4820
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8d36961558066197a54f42d27a3560d653bd81f2
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830335"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976633"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Новые возможности Windows Server 2016
 
->Область применения. Windows Server 2016
+>Относится к: Windows Server 2016
 
-<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">В этом разделе рассказывается о новых и измененных возможностях в Windows Server&reg; 2016. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском.  
-   
-<br>
-<br>
-<br>
-<br>
-<br>
-## <a name="computevirtualizationvirtualizationmd"></a>[Вычислений](../virtualization/virtualization.md)  
+<img src="media/whats-new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">Чтобы узнать о новых функциях в Windows, см. в разделе [новые возможности в Windows Server](whats-new-in-windows-server.md). В этом разделе рассказывается о новых и измененных возможностях в Windows Server&reg; 2016. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском.  
+
+## <a name="computevirtualizationvirtualizationmd"></a>[Вычислений](../virtualization/virtualization.md)
+
 Область виртуализации охватывает продукты для виртуализации и средства разработки, развертывания и поддержки Windows Server для ИТ-специалистов.  
 
 ### <a name="general"></a>Общие  
@@ -67,7 +63,7 @@ Windows Server 2016 предоставляет новые экранирова�
 
 Дополнительные сведения и инструкции по работе с экранированными виртуальными машинами см. в [руководстве по проверке защищенных структур для Windows Server 2016 (TPM) и экранированных виртуальных машин](https://aka.ms/shieldedvms).  
 
-## <a name="identity-and-accessidentityidentity-and-accessmd"></a>[Идентификация и доступ](../identity/Identity-and-Access.md)  
+## <a name="identity-and-accessidentityidentity-and-accessmd"></a>[Удостоверения и доступ](../identity/Identity-and-Access.md)  
 Новые компоненты удостоверения повышают уровень защиты сред Active Directory для организаций, а также помогают перейти к развертываниям только для облачной среды и гибридным развертываниям, в которых некоторые приложения и службы размещены в облаке, а другие — на локальном компьютере.  
 
 ### <a name="active-directory-certificate-services"></a>Службы сертификатов Active Directory  
@@ -208,5 +204,5 @@ Windows Server 2016 включает ряд новых возможностей
 
 
 ## <a name="see-also"></a>См. также  
--   [Заметки о выпуске: Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
+-   [Заметки о выпуске. Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
 

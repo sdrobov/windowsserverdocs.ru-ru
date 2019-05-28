@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 553ff059693c7b0c0e6f0364d82c1adbca661097
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3e3d1e5d86afbef2fdabd211047f513d31a40300
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887255"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66190321"
 ---
 # <a name="ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication"></a>Поддержка привязки альтернативного имени узла для проверки подлинности сертификата в AD FS
-
->Область применения. Windows Server 2016
 
 В многих сетях политиках локального брандмауэра не может разрешить трафик через нестандартные порты, такие как 49443. Это стало проблема при попытке выполнить аутентификацию на основе сертификата AD FS до AD FS в Windows Server 2016. Это обусловлено различных привязок для проверки подлинности устройств и проверка подлинности сертификата пользователя не может использоваться на одном узле. Порт по умолчанию 443 привязана получать сертификаты на устройстве и не могут быть изменены для поддержки нескольких привязки в тот же канал. Результаты были, что смарт-карты не будет работать и пользователи знают о того, что произошло, так как нет никаких признаков того, что в действительности произошло.  
   

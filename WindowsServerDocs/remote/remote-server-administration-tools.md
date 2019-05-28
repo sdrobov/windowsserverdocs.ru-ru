@@ -12,12 +12,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: cc4b0eb51b477ec175040b46c9563f81955c0be3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 748010e80cf2b54926ca226a7af8c49f1aa16800
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846215"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192641"
 ---
 # <a name="remote-server-administration-tools"></a>Средства удаленного администрирования сервера
 
@@ -103,7 +103,7 @@ RSAT позволяет ИТ-администраторам управлять �
 
 3.  Щелкните **Просмотр установленных обновлений**.
 
-4.  Щелкните правой кнопкой мыши **Обновление для Microsoft Windows (KB2693643)**, а затем выберите **Удалить**.
+4.  Щелкните правой кнопкой мыши **Обновление для Microsoft Windows (KB2693643)** , а затем выберите **Удалить**.
 
 5.  Когда система запросит подтверждение удаления, нажмите кнопку **Да**.
 S
@@ -196,5 +196,3 @@ S
 ## <a name="see-also"></a>См. также
 >- [Средства удаленного администрирования сервера для Windows 10](https://go.microsoft.com/fwlink/?LinkID=404281)
 >- [Средства удаленного администрирования сервера (RSAT) для Windows Vista, Windows 7, Windows 8, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 и Windows Server 2012 R2](https://go.microsoft.com/fwlink/p/?LinkID=221055)
-
-

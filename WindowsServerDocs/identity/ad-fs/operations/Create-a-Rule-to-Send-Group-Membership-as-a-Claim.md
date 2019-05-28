@@ -9,16 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 96ab653393fbc5f0a4306db53f84c2d9ba6c7f5f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c9c4cdb881d77fe902776551b4e99061e67660ea
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847455"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66189381"
 ---
 # <a name="create-a-rule-to-send-group-membership-as-a-claim"></a>Создание правила для отправки членства в группе как утверждения
-
->Область применения. Windows Server 2016, Windows Server 2012 R2
 
 Используя отправлять членство в группе в качестве шаблона правил утверждений служб федерации Active Directory \(AD FS\), можно создать правило, чтобы им можно выбрать группу безопасности Active Directory для отправки в качестве утверждения. Из этого правила, в зависимости от выбранной группы, будет использовано только одно утверждение. Например можно использовать этот шаблон правила, чтобы создать правило, которое будет отправлять утверждение группы со значением Admin, если пользователь является членом группы безопасности "Администраторы домена". Это правило следует использовать только для пользователей в локальном домене Active Directory.  
   
@@ -109,11 +107,11 @@ ms.locfileid: "59847455"
 
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка правил утверждений](Configure-Claim-Rules.md)  
+[Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
-[Контрольный список: Создание правил для утверждений для доверия проверяющей стороны](https://technet.microsoft.com/library/ee913578.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  
 
-[Контрольный список: Создание правил для утверждений для поставщика утверждений доверия](https://technet.microsoft.com/library/ee913564.aspx)  
+[Контрольный список. Создание правил утверждений для отношений доверия с поставщиком утверждений](https://technet.microsoft.com/library/ee913564.aspx)  
   
 [Когда следует использовать Authorization Claim Rule](../../ad-fs/technical-reference/When-to-Use-an-Authorization-Claim-Rule.md)  
 

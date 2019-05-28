@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e660c1dabcc5a683fa74068ea148fd4efbeee569
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3f2a6df6a9c9a5cbdfa9c64bc6521e92f4982a15
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890215"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191730"
 ---
-# <a name="ad-fs-design-guide-in-windows-server-2012"></a>Руководство по разработке служб AD FS в Windows Server 2012
+# <a name="ad-fs-design-guide-in-windows-server"></a>Руководство по разработке AD FS в Windows Server 
 
->Область применения. Windows Server 2012
+
   
 > [!NOTE]  
 > Сведения о развертывании AD FS в Windows Server 2012 R2, см. в разделе [Windows Server 2012 R2 AD FS Deployment Guide](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md).  
@@ -38,20 +38,20 @@ ms.locfileid: "59890215"
   
 ## <a name="in-this-guide"></a>В данном руководстве  
   
--   [Определение целей развертывания AD FS](Identifying-Your-AD-FS-Deployment-Goals.md)  
+-   [Определение целей по развертыванию служб федерации Active Directory](Identifying-Your-AD-FS-Deployment-Goals.md)  
   
--   [Сопоставление целей развертывания с разработкой AD FS](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)  
+-   [Сопоставление целей развертывания с разработкой служб федерации Active Directory](Mapping-Your-Deployment-Goals-to-an-AD-FS-Design.md)  
   
--   [Определение топологии развертывания AD FS](Determine-Your-AD-FS-Deployment-Topology.md)  
+-   [Определение топологии развертывания для служб федерации Active Directory](Determine-Your-AD-FS-Deployment-Topology.md)  
   
 -   [Планирование развертывания](Planning-Your-Deployment.md)  
   
 -   [Планирование размещения серверов федерации](Planning-Federation-Server-Placement.md)  
   
--   [Планирование размещения прокси-сервера федерации](Planning-Federation-Server-Proxy-Placement.md)  
+-   [Планирование размещения прокси-серверов федерации](Planning-Federation-Server-Proxy-Placement.md)  
   
--   [Планирование производительности сервера AD FS](Planning-for-AD-FS-Server-Capacity.md)  
+-   [Планирование мощности сервера AD FS](Planning-for-AD-FS-Server-Capacity.md)  
   
--   [Приложение а. Анализ требований AD FS](Appendix-A--Reviewing-AD-FS-Requirements.md)  
+-   [Приложение А. Обзор требований AD FS](Appendix-A--Reviewing-AD-FS-Requirements.md)  
   
 

@@ -9,15 +9,13 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: aa205c46bf67dc25a55232b799bdd39fee4ac3c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 09f26e256793d30936496f7a936550acb7b20025
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812215"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66188353"
 ---
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="when-to-use-a-pass-through-or-filter-claim-rule"></a>Когда следует использовать правило пропуска или фильтрации утверждений
 Это правило можно использовать в службах федерации Active Directory \(AD FS\) при необходимости использовать определенный тип входящего утверждения, а затем применить действие, которое будет определять, какой результат должен возникать на основе значений во входящем утверждении. При использовании этого правила вы пропускаете или фильтруете все утверждения, соответствующие логике правила в следующей таблице, на основе параметров, настроенных в правиле.  
   

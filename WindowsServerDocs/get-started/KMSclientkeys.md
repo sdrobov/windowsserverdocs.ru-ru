@@ -4,21 +4,21 @@ description: Ключи, необходимые для активации про
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
-author: jaimeo
+author: jasongerend
+ms.author: jgerend
 ms.localizationpriority: medium
-ms.date: 10/02/2018
-ms.tgt_pltfrm: na
+ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: 57ce4c4d7623c2a424efbdf0ff117ede8fad726b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e2aac6db7bb9e118d672190c95f0d73294474f75
+ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847035"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65976530"
 ---
 # <a name="kms-client-setup-keys"></a>Ключ установки клиента KMS
 
->Область применения. Windows Server 2019 г., Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+>Относится к: Windows Server 2019 г., Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
 Компьютеры, работающие под управлением лицензируемых версий Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, и Windows Server 2008 по умолчанию являются клиентами KMS, для которых не требуется дополнительная настройка.
 
@@ -29,9 +29,9 @@ ms.locfileid: "59847035"
 
 При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиент KMS необходимо установить соответствующий ключ установки (GVLK) из приведенных ниже таблиц. Чтобы установить ключ установки клиента, откройте командную строку администратора в клиенте, введите **slmgr/ipk \<ключ установки\>**  и нажмите клавишу **ввод**.
 
-| Действие                                                                                                                                                                                          | Ресурс                                                                                                         |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| При активации Windows вне сценария активации корпоративных лицензий (то есть при активации розничной версии Windows) **эти ключи работать не будут**.                                                     | Для розничных версий Windows используйте следующие ссылки:                                                                              |
+| Действие    | Ресурс   |
+|--------------------|------------------------|
+| При активации Windows вне сценария активации корпоративных лицензий (то есть при активации розничной версии Windows) **эти ключи работать не будут**. | Для розничных версий Windows используйте следующие ссылки: |
 | Устраните эту ошибку, возникающую при попытке активировать Windows 8.1, Windows Server 2012 R2 или более поздняя система: "Ошибка: 0xC004F050 Служба лицензирования программного обеспечения сообщила, что данный ключ продукта недопустим"… | [Установите это обновление](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) на узле KMS, если он работает под управлением Windows 8.1, Windows Server 2012 R2, Windows 8 или Windows Server 2012. |
 
 -   [Скачать Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
@@ -43,15 +43,14 @@ ms.locfileid: "59847035"
 
 >   Если вы используете Windows Server 2008 R2 или Windows 7, необходимо внимательно отслеживать обновления для поддержки использования этих систем в качестве узлов KMS для клиентов Windows 10.
 
-
 ## <a name="windows-server-semi-annual-channel-versions"></a>Версии Windows Server Semi-Annual Channel
 
-### <a name="windows-server-version-1809"></a>Windows Server версии 1809
-| Версия операционной системы       | Ключ установки клиента KMS          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D  | 
-| Windows Server Standard | N2KJX-J94YW-TQVFB-DG9YT-724CC  |
+### <a name="windows-server-version-1903-and-windows-server-version-1809"></a>Windows Server, версии 1903 и Windows Server версии 1809
 
+| Версия операционной системы  | Ключ установки клиента KMS          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6NMRW-2C8FM-D24W7-TQWMY-CWH2D |
+| Windows Server Standard   | N2KJX-J94YW-TQVFB-DG9YT-724CC |
 
 ### <a name="windows-server-version-1803"></a>Windows Server версии 1803
 

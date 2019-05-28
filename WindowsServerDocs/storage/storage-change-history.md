@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/08/2019
+ms.date: 03/25/2019
 description: Новые и обновленные разделы документации по локального хранилища для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: 3eb2f0e8dd05612d1c160ffe53791db3c1ef1828
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: fa3da6e14c36fecfa48c3688a36518babb257920
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851095"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192684"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
@@ -24,12 +24,21 @@ ms.locfileid: "59851095"
 
 > Если вы ищете истории обновления для Windows Server, см. в разделе [Журнал обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
+## <a name="may-2019"></a>Май 2019 г.
+
+|Новый или измененный раздел                                        |Описание|
+|---                                                         |---           |
+|[Удаление тома](storage-spaces/delete-volumes.md)| Оператор new        |
+|[Создание томов](storage-spaces/create-volumes.md)| Добавлены шаги и видео по созданию тома в Windows Admin Center.|
+|[Увеличение размеров томов](storage-spaces/resize-volumes.md)| Добавлены шаги и видео для изменения размера тома в Windows Admin Center.|
+
 ## <a name="march-2019"></a>Марта 2019 г.
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
-|[Обновить кластер дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Оператор new        |
-|[Служба репликации DFS](dfs-replication/dfsr-overview.md)        | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) библиотеки|
+|[Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md)| Оператор new|
+|[Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Оператор new        |
+|[Репликация DFS](dfs-replication/dfsr-overview.md)        | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) библиотеки|
 
 ## <a name="february-2019"></a>Февраль 2019 г.
 
@@ -41,33 +50,33 @@ ms.locfileid: "59851095"
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
-|[Понимание и отслеживать повторной синхронизации хранилища](storage-spaces/understand-storage-resync.md)|Новый раздел|
+|[Принцип работы и отслеживание повторной синхронизации хранилища](storage-spaces/understand-storage-resync.md)|Новый раздел|
 
 ## <a name="december-2018"></a>Декабря 2018 г.
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
 |[Использование службы хранилища миграции для переноса сервера](storage-migration-service/migrate-data.md)| Добавлены некоторые пояснения о том, как мы передачи файлов |
-|[Реплика хранилища в Межкластерной cross регион Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Добавлена проверка действия|
-|[Реплика хранилища кластера для кластера, в том же регионе, в Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Добавлена проверка действия|
+|[Межрегиональная межкластерная репликация хранилища в Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Добавлена проверка действия|
+|[Межкластерная репликация хранилища в пределах одного региона в Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Добавлена проверка действия|
 |[Ответы на вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)| Добавлена поддержка инструкции для дедупликации данных|
 
 ## <a name="november-2018"></a>ноябрь 2018 г.
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
-|[Вложенные устойчивости](storage-spaces/nested-resiliency.md)    | Новый раздел    |
+|[Вложенная устойчивость](storage-spaces/nested-resiliency.md)    | Новый раздел    |
 |[Известные проблемы службы миграции хранилища](storage-migration-service/known-issues.md)   | Новый раздел    |
-|[Репликация DFS. Часто задаваемые вопросы (FAQ)](dfs-replication/dfsr-faq.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) библиотеки|
-|[Миграция репликации SYSVOL с репликацией DFS](dfs-replication/migrate-sysvol-to-dfsr.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
-|[SMB: Файлам и принтерам, совместного использования портов должны быть открыты](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[Репликация DFS. Вопросы и ответы](dfs-replication/dfsr-faq.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) библиотеки|
+|[Перенос репликации SYSVOL в репликацию DFS](dfs-replication/migrate-sysvol-to-dfsr.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[SMB: необходимо открыть порты для совместного использования файлов и принтеров](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
 |[Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
 
 ## <a name="october-2018"></a>Октябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Новые возможности в хранилище](whats-new-in-storage.md)|Изменения, которые реализуют новые возможности в Windows Server 2019|
+|[Что нового в хранилище?](whats-new-in-storage.md)|Изменения, которые реализуют новые возможности в Windows Server 2019|
 |[Реплика хранилища известные проблемы](storage-replica/storage-replica-known-issues.md)|Добавлены сведения об обновлении.|
 
 ## <a name="september-2018"></a>Сентября 2018 г.
@@ -77,15 +86,15 @@ ms.locfileid: "59851095"
 |[Общие сведения о миграции службы хранилища](storage-migration-service/overview.md)| Новый раздел |
 |[Использование службы хранилища миграции для переноса сервера](storage-migration-service/migrate-data.md)| Новый раздел |
 |[Часто задаваемые вопросы (FAQ) службы миграции хранилища](storage-migration-service/faq.md)| Новый раздел |
-| [Сервер цели iSCSI](iscsi/iscsi-target-server.md) | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-| [целевые показатели масштабируемости сервера цели iSCSI](iscsi/iscsi-target-server-limits.md) |Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+| [Целевой сервер iSCSI](iscsi/iscsi-target-server.md) | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+| [Ограничения масштабируемости целевого сервера iSCSI](iscsi/iscsi-target-server-limits.md) |Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 
 ## <a name="june-2018"></a>Июня 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Репликация сервера на сервер хранилища](storage-replica/server-to-server-storage-replication.md)|Добавлены сведения об использовании виртуальных машин Azure, в том числе для ExpressRoute.|
-|[Наборы кластера](storage-spaces/cluster-sets.md)| Новый раздел|
+|[Наборы кластеров](storage-spaces/cluster-sets.md)| Новый раздел|
 
 ## <a name="may-2018"></a>Май 2018 г.
 
@@ -93,7 +102,7 @@ ms.locfileid: "59851095"
 |---|---|
 |[Общие сведения о NFS](nfs/nfs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Развертывание NFS](nfs/deploy-nfs.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Развертывание дисковых пространств на изолированном сервере](storage-spaces/deploy-standalone-storage-spaces.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Развертывание дисковых пространств на автономном сервере](storage-spaces/deploy-standalone-storage-spaces.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Обзор файловой системы NTFS](file-server/ntfs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Используйте Robocopy для предварительно заполнить файлов для репликации DFS](dfs-replication/preseed-dfsr-with-robocopy.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Vssadmin - средство командной строки для предыдущих версий](..\administration\windows-commands\vssadmin.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
@@ -110,7 +119,7 @@ ms.locfileid: "59851095"
 |[Обзор перенаправления папок, автономных файлов и перемещаемых профилей пользователей](folder-redirection/folder-redirection-rup-overview.md)|Перенести несколько разделов из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Общий доступ к файлам по протоколу SMB 3](file-server/file-server-smb-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Повысить производительность файлового сервера с помощью SMB Direct](file-server/smb-direct.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Усовершенствования системы безопасности SMB](file-server/smb-security.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Улучшения системы безопасности SMB](file-server/smb-security.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 
 ## <a name="march-2018"></a>Март 2018 г.
 
@@ -141,11 +150,11 @@ ms.locfileid: "59851095"
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Изменение буквы диска](disk-management/change-a-drive-letter.md)|Новый раздел.|
-|[Устранение неполадок управления дисками](disk-management/troubleshooting-disk-management.md)|Переписала [состояние диска не инициализирован или отсутствует диск полностью](disk-management/troubleshooting-disk-management.md#disk-not-initialized) раздел, чтобы добавить расширенные устранения неполадок, отвечая на пожелания пользователей.|
-|[Инициализация нового диска](disk-management/initialize-new-disks.md)|Переписан для было проще понять и решить вопросы клиентов.|
+|[Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)|Переписала [состояние диска не инициализирован или отсутствует диск полностью](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) раздел, чтобы добавить расширенные устранения неполадок, отвечая на пожелания пользователей.|
+|[Инициализация новых дисков](disk-management/initialize-new-disks.md)|Переписан для было проще понять и решить вопросы клиентов.|
 |[Планирование томов в дисковых пространств](storage-spaces/plan-volumes.md)|Добавлена таблица, содержащая типы устойчивости, доступные в кластерах с четырьмя узлами и большего размера.|
 |[Общие сведения о reFS](refs/refs-overview.md)|Уточнено, рекомендуемых рабочих нагрузок для ускорения зеркальной четности и исправлены поддерживаемых размеров файлов и томов ReFS и NTFS.|
-|[Ускорение зеркальной четности](refs/mirror-accelerated-parity.md)|Уточнены рекомендацию, чтобы поместить файлы интенсивными операциями записи в разных каталогах.|
+|[Четность с зеркальным ускорением](refs/mirror-accelerated-parity.md)|Уточнены рекомендацию, чтобы поместить файлы интенсивными операциями записи в разных каталогах.|
 |[Реплика хранилища известные проблемы](storage-replica/storage-replica-known-issues.md)|Добавлена новая информация.|
 
 ## <a name="november-2017"></a>Ноябрь 2017 г.
@@ -202,7 +211,7 @@ ms.locfileid: "59851095"
 |[Рабочие папки](work-folders/work-folders-overview.md)|Новый раздел.|
 |[Планирование развертывания рабочих папок](work-folders/plan-work-folders.md)|Новый раздел.|
 |[Развертывание рабочих папок](work-folders/deploy-work-folders.md)|Новый раздел.|
-|[Развертывание рабочих папок с AD FS и прокси веб-приложения (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|Новый раздел.|
+|[Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения (WAP)](work-folders/deploy-work-folders-adfs-overview.md)|Новый раздел.|
 |[Развертывание локальных дисковых](storage-spaces/deploy-storage-spaces-direct.md)|Удалена ссылка на устаревшее обновление программного обеспечения и исправлена опечатка в примере выходных данных.|
 |[Реплика хранилища известные проблемы](storage-replica/storage-replica-known-issues.md)|Добавлена новая информация.|
 
@@ -228,8 +237,8 @@ ms.locfileid: "59851095"
 |[Создание томов](storage-spaces/create-volumes.md)|Новый раздел.|
 |[Расширение томов в дисковых пространств](storage-spaces/resize-volumes.md)|Новый раздел.|
 |[Общие сведения о reFS](refs/refs-overview.md)|Новый раздел.|
-|[Основные сведения о Storage Spaces Direct](storage-spaces/understand-storage-spaces-direct.md)|Новый список ссылок.|
-|[Планирования дисковые пространства](storage-spaces/plan-storage-spaces-direct.md)|Новый список ссылок.|
+|[Основные сведения о Локальных дисковых пространствах](storage-spaces/understand-storage-spaces-direct.md)|Новый список ссылок.|
+|[Планирование Локальных дисковых пространств](storage-spaces/plan-storage-spaces-direct.md)|Новый список ссылок.|
 |[Развертывание локальных дисковых](storage-spaces/deploy-storage-spaces-direct.md)|Новый список ссылок.|
 |[Управление дисковыми пространствами](storage-spaces/manage-storage-spaces-direct.md)|Новый раздел.|
 |[Ответы на вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)|Обновлены требования к портам, добавлено описание расширения реплицированных томов.|

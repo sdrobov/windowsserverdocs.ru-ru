@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e429c87a2194ecfaf02c3d6c579eda75293250d4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a280d540d09c6fdcb7846d1cf545856869be1152
+ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827515"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66008964"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>Ошибка репликации 1753: в системе отображения конечных точек не осталось доступных конечных точек
 
@@ -194,7 +194,6 @@ Last success @ &lt;date&gt; &lt;time&gt;.
           <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
 c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
           <para>Убедитесь, что IP-адрес, возвращенный NSLOOKUP «владеет» имя узла или идентификатор безопасности исходного контроллера домена:</para>
-
           <code>C:&gt;NBTSTAT -A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
           <para>или</para>
           <para>Войдите на консоль исходного контроллера домена, выполнить команду «IPCONFIG» в командной строке команду CMD и убедитесь, что исходный контроллер домена, которому принадлежит IP-адрес, возвращаемый выше команды NSLOOKUP</para>
@@ -218,7 +217,7 @@ NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;s
                   <para>Приложения сервера RPC</para>
                 </TD>
                 <TD>
-                  <para>Порт</para>
+                  <para>Port</para>
                 </TD>
                 <TD>
                   <para>TCP</para>

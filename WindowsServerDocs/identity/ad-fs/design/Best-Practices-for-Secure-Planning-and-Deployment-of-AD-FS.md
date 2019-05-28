@@ -9,16 +9,15 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 67b122353ca9dff3a4df6cbfac56b16bed52b539
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: df1afc77afffd9b737965215a5c9d96f278c8129
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848085"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66191667"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>Рекомендации по безопасному планированию и развертыванию AD FS
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе представлены сведения рекомендации помогут вам в планировании и оценке безопасности при разработке развертывания служб федерации Active Directory (AD FS). В этом разделе является отправной точкой для анализа и оценки аспектов, влияющих на общую безопасность использования AD FS. Сведения в этом разделе дополняют и расширяют существующие рекомендации по планированию безопасности и другие передовые практики в области разработки.  
   
@@ -146,4 +145,4 @@ ms.locfileid: "59848085"
     Для повышения качества обслуживания и изоляции данных можно создать хранимые процедуры для всех команд поиска хранилищ атрибутов. Можно создать роль базы данных, которой будут предоставлены разрешения на выполнение хранимых процедур. Назначьте удостоверение службы службы Windows AD FS для этой роли базы данных. Службы AD FS Windows не может быть возможность запускать любые другие инструкции SQL, кроме соответствующих хранимых процедур, которые используются для поиска атрибутов. Блокирование доступа к базе данных SQL Server указанным способом снижает риск атаки в результате повышения уровня доступа.  
   
 ## <a name="see-also"></a>См. также
-[Руководство по разработке AD FS в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)
+[Руководство по разработке служб федерации Active Directory в Windows Server 2012](AD-FS-Design-Guide-in-Windows-Server-2012.md)

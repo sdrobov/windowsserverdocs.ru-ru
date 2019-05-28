@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: d018b417aeba21e2b1303fd9e72b58b4e2fc334f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e7655ca78868d40d354b5260fa99fcfa3a21d0de
+ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836055"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66192750"
 ---
 # <a name="change-a-dynamic-disk-back-to-a-basic-disk"></a>Преобразование динамического диска в базовый
 
@@ -26,22 +26,20 @@ ms.locfileid: "59836055"
 
 ## <a name="changing-a-dynamic-disk-back-to-a-basic-disk"></a>Преобразование динамического диска в базовый
 
--   [С помощью интерфейса Windows](#BKMK_WINUI)
--   [С помощью командной строки](#BKMK_CMD)
+-   [С помощью интерфейса Windows](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface)
+-   [С помощью командной строки](#to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line)
 
 > [!NOTE]
 > Для выполнения следующих шагов необходимо как минимум состоять в группе **Операторы архива** или **Администраторы**.
 
-<a href="" id="BKMK_WINUI"></a>
 #### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-the-windows-interface"></a>Преобразование динамического диска в базовый с помощью интерфейса Windows
+
 1.  Создайте резервные копии всех томов на диске, который требуется преобразовать из динамического в базовый.
 
 2.  В диспетчере дисков щелкните правой кнопкой мыши каждый том на динамическом диске, который требуется преобразовать в базовый, а затем нажмите **Удалить том** для каждого тома на этом диске.
 
 3.  После удаления всех томов на диске щелкните его правой кнопкой мыши, а затем нажмите **Преобразовать в базовый диск**.
 
-
-<a href="" id="BKMK_CMD"></a>
 #### <a name="to-change-a-dynamic-disk-back-to-a-basic-disk-using-a-command-line"></a>Преобразование динамического диска в базовый с помощью командной строки
 
 1.  Создайте резервные копии всех томов на диске, который требуется преобразовать из динамического в базовый.
