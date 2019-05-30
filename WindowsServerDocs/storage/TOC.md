@@ -136,13 +136,7 @@
 #### [Удаление серверов](storage-spaces/remove-servers.md)
 #### [Обновление встроенного ПО дисков](update-firmware.md)
 #### [Увеличение размеров томов](storage-spaces/resize-volumes.md)
-### Устранение неполадок
-#### [Сценарии устранения неполадок](storage-spaces/troubleshooting-storage-spaces.md)
-#### [Состояния работоспособности и операционные состояния](storage-spaces/storage-spaces-states.md)
-#### [Сбор данных](storage-spaces/data-collection.md)
-#### [Вопросы и ответы](storage-spaces/storage-spaces-direct-faq.md)
-### Обзор Программы предварительной оценки
-#### [Наборы кластеров](storage-spaces/cluster-sets.md)
+#### [Удаление томов](storage-spaces/delete-volumes.md)
 #### [Журнал производительности](storage-spaces/performance-history.md)
 ##### [Диски](storage-spaces/performance-history-for-drives.md)
 ##### [Сетевые адаптеры](storage-spaces/performance-history-for-network-adapters.md)
@@ -153,6 +147,12 @@
 ##### [Кластеры](storage-spaces/performance-history-for-clusters.md)
 ##### [Примеры сценариев](storage-spaces/performance-history-scripting.md)
 #### [Разграничение выделения томов](storage-spaces/delimit-volume-allocation.md)
+#### [Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md)
+### Устранение неполадок
+#### [Сценарии устранения неполадок](storage-spaces/troubleshooting-storage-spaces.md)
+#### [Состояния работоспособности и операционные состояния](storage-spaces/storage-spaces-states.md)
+#### [Сбор данных](storage-spaces/data-collection.md)
+#### [Вопросы и ответы](storage-spaces/storage-spaces-direct-faq.md)
 ## [Рабочие папки](work-folders/work-folders-overview.md)
 ### [Проектирование реализации рабочих папок](work-folders/plan-work-folders.md)
 ### [Развертывание рабочих папок](work-folders/deploy-work-folders.md)

@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cc24893b1a227501959002ea2d81c62813855d4a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 77a4702ddab987cb3adda7627badb790e3102952
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883635"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308549"
 ---
 # <a name="wsus-messages-and-troubleshooting-tips"></a>Сообщения служб WSUS и советы по диагностике
 
@@ -57,7 +57,7 @@ ms.locfileid: "59883635"
 
 > Ошибка при попытке подключения к серверу WSUS. Эта ошибка может возникнуть по ряду причин. Если проблема будет повторяться, обратитесь к администратору сети. Нажмите кнопку сброса узел сервера, чтобы снова подключиться к серверу.
 
-В дополнение к вышесказанному, пытается получить доступ к URL-адрес для веб-сайта администрирования WSUS (т. е. http://CM12CAS:8530) завершается с ошибкой:
+В дополнение к вышесказанному, пытается получить доступ к URL-адрес для веб-сайта администрирования WSUS (т. е. `http://CM12CAS:8530`) завершается с ошибкой:
 
 > Ошибка HTTP 503. Служба недоступна
 

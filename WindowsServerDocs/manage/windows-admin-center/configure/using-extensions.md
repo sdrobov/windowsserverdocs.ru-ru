@@ -7,12 +7,12 @@ author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 6091edd7aa7f790f6029ca6b6ae402bf1b7e61ca
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: c775dd5a3011115bbb031c0b9e4e24a8911d378e
+ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877025"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63748404"
 ---
 # <a name="install-and-manage-extensions"></a>Установка и Управление расширениями
 
@@ -85,9 +85,6 @@ $feedUrlBase = "https://aka.ms/sme-extension-feed"
 >Область применения. Windows Admin Center, предварительная версия Windows Admin Center
 
 Предварительная версия Windows Admin Center включает модуль PowerShell для управления расширениями шлюза.
-
->[!IMPORTANT]
->Управление расширениями шлюза с помощью модуля PowerShell поддерживается только при развертывании Windows Admin Center в качестве службы шлюза на сервере Windows.
 
 ```powershell
 # Add the module to the current session

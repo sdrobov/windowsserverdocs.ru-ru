@@ -8,12 +8,12 @@ ms.author: harowl
 ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 618d9a51c0411fb2cbf4c51661a92eed9c9636a1
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: db69ad3021850552e92c4aa653dfd9bd9110c06d
+ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188234"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260287"
 ---
 # <a name="hello-windows-admin-center"></a>Привет, Windows Admin Center!
 
@@ -28,14 +28,11 @@ Windows Admin Center представляет собой локально раз
 
 - [Windows Admin Center Preview 1906](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) - Includes the latest feature updates.
 -  -->
-[Windows Admin Center (версия 1904)](https://aka.ms/WACDownload) <!--Broadly validated & generally available.-->
+[Windows Admin Center (версия 1904.1)](https://aka.ms/WACDownload) <!--Broadly validated & generally available.-->
 
 [Новые возможности?](../overview.md#release-history)
 
 Можно обновить без предварительных версий Windows Admin Center с помощью центра обновления Майкрософт или путем его установки вручную. Каждой не предварительные версии Windows Admin Center поддерживается до 30 дней после выпуска следующей версии без предварительной версии. См. в разделе наших [политика поддержки](../support/index.md) Дополнительные сведения.
-
-> [!IMPORTANT]
-> Интегратор XClarity Lenovo пользователей, см. в этой [известная проблема](../support/known-issues.md) перед установкой Windows Admin Center версии 1904.
 
 ********************
 

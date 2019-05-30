@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/31/2018
-ms.openlocfilehash: 4b9deb4fc7fbfccf569250e965274009764054f7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a98e1a876c972b0f146ff37aff0a77399b684e99
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849335"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308562"
 ---
 # <a name="bitsadmin-examples"></a>Примеры bitsadmin
 
@@ -28,7 +28,7 @@ ms.locfileid: "59849335"
 
 **Передачу** коммутатор является ярлыком для выполнения перечисленных ниже задач. Этот параметр создает задание, добавляет файлы в задание, активирует задание в очереди передачи и завершает задание. BITSAdmin по-прежнему отображаются сведения о ходе выполнения в окне MS-DOS до завершения передачи или произошла ошибка.
 
-**bitsadmin /transfer myDownloadJob/Download /priority обычный https://downloadsrv/10mb.zip c:\\10mb.zip**
+**bitsadmin /transfer myDownloadJob/Download /priority обычный `https://downloadsrv/10mb.zip c:\\10mb.zip`**
 
 ## <a name="create-a-download-job"></a>Создание задания скачивания
 

@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 9032988c65581ea602451d224f40719b932ab7f5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 79f95c88c49d384f8a13b8808c63a0dc00de53cb
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821695"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266623"
 ---
 # <a name="ldap-considerations-in-adds-performance-tuning"></a>Рекомендации по LDAP в настройке производительности ADDS
 
@@ -49,7 +49,7 @@ ms.locfileid: "59821695"
 
     -   **NTDS\\задержка запроса** – это может быть как долго выполняет запрос к процессу. Active Directory время ожидания запросов через 120 секунд (по умолчанию), однако большинство должен выполняться быстрее, и очень долго выполняющиеся запросы должны получить скрыты в общего числа. Проверяйте наличие изменений в этот базовый план, а не абсолютные пороговые значения.
 
-        **Примечание**    высокие значения здесь также может быть индикаторы задержек в «прокси? запросы к другим доменам и проверки списка отзыва Сертификатов.
+        > [!Note]   Высокие значения здесь также можно указывать задержки запросов «прокси» на другие домены и проверки списка отзыва Сертификатов.
 
 
     -   **NTDS\\оценка задержка очереди** – это в идеале должно быть близко к 0, для обеспечения оптимальной производительности, это означает, что запросы тратят время не ожидают обработки.
@@ -64,7 +64,7 @@ ms.locfileid: "59821695"
 
 -   [Microsoft Server Performance Advisor](../../../server-performance-advisor/microsoft-server-performance-advisor.md) пакет Advisor Active Directory
 
--   Выполняет поиск с помощью любого фильтра, кроме "(objectClass =\*)? использующие индекс предков.
+-   Выполняет поиск с помощью любого фильтра, кроме "(objectClass =\*)», использующие индекс предков.
 
 ### <a name="other-index-considerations"></a>Дополнительные рекомендации индекса
 
@@ -101,7 +101,7 @@ ms.locfileid: "59821695"
 
 ## <a name="see-also"></a>См. также
 - [Настройка серверов Active Directory производительности](index.md)
-- [Вопросы оборудования](hardware-considerations.md)
-- [Правильное размещение контроллеров домена и рекомендации по сайта](site-definition-considerations.md)
-- [Устранение проблем с производительностью ADDS](troubleshoot.md) 
-- [Планирование емкости для доменных служб Active Directory](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Рекомендации по оборудованию](hardware-considerations.md)
+- [Правильное размещение контроллеров домена и рекомендации по сайту](site-definition-considerations.md)
+- [Устранение проблем с производительностью доменных служб Active Directory](troubleshoot.md) 
+- [Планирование ресурсов для доменных служб Active Directory](https://go.microsoft.com/fwlink/?LinkId=324566)

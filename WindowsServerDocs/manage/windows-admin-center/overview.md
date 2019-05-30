@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 04/12/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 3208c20e8bf9f4cfab4340aa33b24175bbc72dda
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ee3c4ba5d6c3dc911ab318ade9a46b279317496f
+ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188327"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66260259"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -128,6 +128,7 @@ Windows Admin Center можно подготовить к работе и зап
 
 Узнайте о наших последних выпущенных функциях:
 
+- Версия 1904.1 - обслуживания обновление для повышения стабильности шлюза подключаемых модулей.
 - Версия [1904](https://aka.ms/wac1904) является самый последний выпуск общедоступной версии, представлены средство гибридные службы Azure, а также предоставляет функции, которые были ранее на этапе предварительной версии в общедоступную Версию канал.
 - Версия [1903](https://aka.ms/wac1903) переносит уведомления по электронной почте из Azure Monitor, возможность добавления подключений сервера или компьютера из Active Directory и новые средства для управления Active Directory, DHCP и DNS.
 - Версия [1902](https://aka.ms/wac1902) добавлен в список общих соединений и улучшения управления программно-определяемой сети (SDN), включая новые средства SDN для управления списки управления доступом, подключений шлюза и логических сетей.

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d3eba4f62842fa7f862cd4eaea6830e6a08397a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 848c57736c3530e296cffb970237149b4634de67
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868135"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266514"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
@@ -40,13 +40,13 @@ bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
 |OldPrefix|Существующие префикс URL-адреса|
 |NewPrefix|Новый префикс URL-адреса|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="examples"></a>Примеры
 
-В следующем примере изменяется все файлы в задание с именем *myDownloadJob* которого удаленный URL-адрес начинается с *http://stageserver* для *http://prodserver*.
+В следующем примере изменяется все файлы в задание с именем *myDownloadJob* которого удаленный URL-адрес начинается с *http://stageserver* для *http://prodserver* .
 ```
 C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
 ```
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: grcusanz; AnPaul
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: dfb8d997c6e04381e5be0ba2c3a7ca27a851df50
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0e173039c45faa100a434b69a9faa736ff7c9b53
+ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891325"
+ms.lasthandoff: 05/03/2019
+ms.locfileid: "65034132"
 ---
 # <a name="performance-tuning-software-defined-networks"></a>Настройка производительности программно-конфигурируемых сетей
 
@@ -30,7 +30,7 @@ ms.locfileid: "59891325"
 
 ## <a name="hyper-v-host-networking"></a>Сеть узлов Hyper-V
 
-Рекомендации, содержащиеся в разделе [о производительности ввода-вывода в сети Hyper-V](#netio) руководства по [настройке производительности для серверов Hyper-V](../../role/remote-desktop/session-hosts.md), применимы при использовании SDN, но здесь мы добавили еще несколько рекомендаций для достижения наилучшей производительности при работе с SDN.
+Рекомендации, содержащиеся в разделе о производительности ввода-вывода сети Hyper-V руководства [по настройке производительности для серверов Hyper-V](../../role/remote-desktop/session-hosts.md), применимы при использовании SDN, но здесь мы добавили еще несколько рекомендаций для достижения наилучшей производительности при работе с SDN.
 
 ### <a name="physical-network-adapter-nic-teaming"></a>Объединение физических сетевых адаптеров (NIC)
 

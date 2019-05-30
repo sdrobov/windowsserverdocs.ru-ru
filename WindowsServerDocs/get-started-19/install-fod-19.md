@@ -9,17 +9,17 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.date: 05/24/2019
-ms.openlocfilehash: c9af38720df79918bed3404995e81a7f93a10744
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.date: 05/29/2019
+ms.openlocfilehash: e76b7862549814d5453717c40cec45e341141d7a
+ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222888"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66308595"
 ---
 # <a name="server-core-app-compatibility-feature-on-demand-fod"></a>Функция совместимости приложений основных серверных компонентов по требованию (FOD)
 
-> Относится к: Windows Server 2019, Windows Server Semi-Annual Channel
+> Область применения Windows Server 2019, Windows Server Semi-Annual Channel
 
 **Server Core компонент совместимости приложений по запросу** — это дополнительная функция пакет, который можно добавить в установках основных серверных компонентов Windows Server 2019 г., или Windows Server Semi-Annual Channel, в любое время.
 
@@ -156,7 +156,7 @@ FOD совместимости приложений может устанавл�
 1. Скачайте файлы образа Windows Server и сервера FOD ISO в локальную папку на компьютере Windows.
 
    - Если у вас есть корпоративная лицензия можно загрузить Windows Server и сервера FOD ISO файлы изображений из [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx).
-   - Файл образа Server FOD ISO доступен также на [Центр пробных испытаний Microsoft](https://www.microsoft.com/evalcenter/evaluate-windows-server) или на [портал Visual Studio](https://visualstudio.microsoft.com) для подписчиков.
+   - Файл образа Server FOD ISO доступна также для долгосрочного обслуживания канала выпусков на [Центр пробных испытаний Microsoft](https://www.microsoft.com/evalcenter/evaluate-windows-server) или на [портал Visual Studio](https://visualstudio.microsoft.com) для подписчиков.
 
 2. Откройте сеанс PowerShell с правами администратора и выполните следующие команды для подключения файлов изображений как диски.
 

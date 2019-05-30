@@ -1,0 +1,21 @@
+- name: Azure Stack HCI
+  items:
+    - name: Содержимое по Azure Stack HCI
+      expanded: true
+      items:
+        - name: Обзор Azure Stack HCI
+          href: index.md
+        - name: Hyper-V
+          href: ../virtualization/hyper-v/index.md
+        - name: Локальные дисковые пространства
+          href: ../storage/storage-spaces/storage-spaces-direct-overview.md
+        - name: Отказоустойчивая кластеризация
+          href: ../failover-clustering/failover-clustering-overview.md
+        - name: Программно-конфигурируемая сеть
+          href: 'https://docs.microsoft.com/windows-server/networking/sdn/'
+        - name: Программно-определяемый ЦОД Windows Server
+          href: 'https://docs.microsoft.com/windows-server/sddc/'
+        - name: Windows Admin Center
+          href: ../manage/windows-admin-center/overview.md
+        - name: Подключение к Azure
+          href: ../azure-hybrid-services/index.md

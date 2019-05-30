@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 460837c79c0e0d2c48331ddaaffcd118fd16ebc1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 55dd38c966fea8448231b06cde9c1dd63b024197
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870615"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266763"
 ---
 # <a name="authentication-policies-and-authentication-policy-silos"></a>Политики проверки подлинности и приемники команд политик проверки подлинности
 
@@ -230,7 +230,7 @@ ms.locfileid: "59870615"
 
 Эти события фиксируются в журналах приложений и служб, расположенных по адресу **Майкрософт\Windows\Проверка подлинности**.
 
-Для устранения неполадок с помощью этих событий см. разделы [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#BKMK_TroubleshootAuthnPolicies) и [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#BKMK_TrubleshootingEvents).
+Для устранения неполадок с помощью этих событий см. разделы [Troubleshoot Authentication Policies](how-to-configure-protected-accounts.md#troubleshoot-authentication-policies) и [Troubleshoot events related to Protected Users](how-to-configure-protected-accounts.md#troubleshoot-events-related-to-protected-users).
 
 |Идентификатор события и журнал|Описание|
 |----------|--------|
@@ -245,6 +245,6 @@ ms.locfileid: "59870615"
 
 [Защита учетных данных и управление ими](credentials-protection-and-management.md)
 
-[Защищенная группа безопасности пользователей](protected-users-security-group.md)
+[Группа безопасности "Защищенные пользователи"](protected-users-security-group.md)
 
 

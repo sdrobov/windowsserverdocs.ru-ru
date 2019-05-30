@@ -38,6 +38,7 @@
 ##### [Технический справочник по виртуализированным контроллерам домена (уровень 300)](ad-ds/deploy/virtual-dc/Virtualized-Domain-Controller-Technical-Reference--Level-300-.md)
 ###### [Архитектура виртуализованных контроллеров доменов](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)
 ###### [Развертывание и настройка виртуализированного контроллера домена](ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)
+###### [Выполнение Active Directory на виртуальных машинах Azure](ad-ds/deploy/virtual-dc/adds-on-azure-vm.md)
 ###### [Виртуализация контроллеров домена с помощью Hyper-V](ad-ds/get-started/virtual-dc/virtualized-domain-controllers-hyper-v.md)
 ###### [Диагностика виртуализированного контроллера домена](ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)
 ###### [Приложение технического справочника по виртуализированным контроллерам домена](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-appendix.md)
@@ -365,6 +366,9 @@
 
 
 ### [Разработка AD FS](ad-fs/AD-FS-Development.md)
+
+#### [Создание пользовательского метода проверки подлинности для AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
+#### [Создание подключаемых модулей с помощью модели оценки риска AD FS за 2019 г.](ad-fs/development/ad-fs-risk-assessment-model.md)
 #### [Пользовательские токены идентификаторов в AD FS](ad-fs/development/Custom-Id-Tokens-in-AD-FS.md)
 #### [Аутентификация от имени пользователя AD FS в Windows Server 2016](ad-fs/development/AD-FS-On-behalf-of-Authentication-in-Windows-Server.md)
 #### [Включение OpenId Connect с помощью AD FS 2016](ad-fs/development/Enabling-OpenId-Connect-with-AD-FS.md)

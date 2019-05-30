@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 69b402195f90977aa63299c1a2a550ba310a4513
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 081e5caeb7fb458b367f035b9995929de84a5528
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832345"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266571"
 ---
 # <a name="bitsadmin-addfilewithranges"></a>bitsadmin addfilewithranges
 
@@ -41,14 +41,14 @@ bitsadmin /AddFileWithRanges <Job> <RemoteURL> <LocalName> <RangeList>
 
 ## <a name="more-information"></a>Дополнительные сведения
 
--   Токен **eof** представляет собой значение допустимую длину в пары смещения и длины в  *\<RangeList >*. Он указывает службе для чтения в конец указанного файла.
+-   Токен **eof** представляет собой значение допустимую длину в пары смещения и длины в  *\<RangeList >* . Он указывает службе для чтения в конец указанного файла.
 -   Обратите внимание на то, что AddFileWithRanges завершится ошибкой с кодом ошибки 0x8020002c при нулевой длины диапазон указан вместе с другой диапазон с тем же смещением, таких как: C:\bits > bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:0, 100:5
 
     Сообщение об ошибке: Не удалось добавить файл задания — 0x8020002c. Список диапазонов байтов содержит некоторые перекрывающиеся диапазоны, которые не поддерживаются.
 
     Инструкции по решению: сначала не указывайте диапазон нулевой длины. Например: bitsadmin /addfilewithranges j2 http://bitsdc/dload/1k.zip c:\1k.zip 100:5, 100:0.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="examples"></a>Примеры
 
 Следующий пример указывает BITS для передачи 100 байт по смещению 0, 100 байт из смещения 2000, а оставшиеся байты от смещения 5000 в конец файла.
 ```
@@ -57,4 +57,4 @@ C:\>bitsadmin /addfilewithranges http://downloadsrv/10mb.zip c:\10mb.zip "0:100,
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

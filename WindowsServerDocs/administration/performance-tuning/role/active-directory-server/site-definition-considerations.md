@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 0e5c5f8b7cf5c028fbfa5d72c4bc1218565d4087
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e1652e45f51500ceeb0026b8892fbe9c54ff38f3
+ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814025"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66266639"
 ---
 # <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>Правильное размещение контроллеров домена и рекомендации по сайта
 
@@ -64,7 +64,7 @@ ms.locfileid: "59814025"
 
     -   Используйте DnsAvoidRegisterRecords во избежание плохо выполнение или высокой задержкой контроллеров домена, такие сайты вспомогательной, из рекламы универсальных указателей. Дополнительные сведения см. в разделе [как оптимизировать расположение контроллера домена или глобального каталога, находящегося за пределами сайта клиента](https://support.microsoft.com/kb/306602).
 
-        **Примечание**    имеется ограничение около 50, чтобы число контроллеров домена, клиент может использовать. Это должны быть наиболее оптимальной для сайта и самого высокого емкости контроллеров домена.
+        > [!Note]   Имеется ограничение около 50, чтобы число контроллеров домена, которое клиент может использовать. Это должны быть наиболее оптимальной для сайта и самого высокого емкости контроллеров домена.
 
          
 
@@ -78,7 +78,7 @@ ms.locfileid: "59814025"
 
 ## <a name="see-also"></a>См. также
 - [Настройка серверов Active Directory производительности](index.md)
-- [Вопросы оборудования](hardware-considerations.md)
-- [Рекомендации по LDAP](ldap-considerations.md)
-- [Устранение проблем с производительностью ADDS](troubleshoot.md) 
-- [Планирование емкости для доменных служб Active Directory](https://go.microsoft.com/fwlink/?LinkId=324566)
+- [Рекомендации по оборудованию](hardware-considerations.md)
+- [Рекомендации по протоколу LDAP](ldap-considerations.md)
+- [Устранение проблем с производительностью доменных служб Active Directory](troubleshoot.md) 
+- [Планирование ресурсов для доменных служб Active Directory](https://go.microsoft.com/fwlink/?LinkId=324566)
