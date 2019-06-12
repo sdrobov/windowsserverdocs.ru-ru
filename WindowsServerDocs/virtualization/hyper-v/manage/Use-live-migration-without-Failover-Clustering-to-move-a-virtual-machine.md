@@ -11,12 +11,12 @@ ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
 author: KBDAzure
 ms.author: kathydav
 ms.date: 01/17/2017
-ms.openlocfilehash: a33912e09d664296f6eda964c40177353718d49c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9be61fbc860e9d8c5cbc020d6dd4082722e32509
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851545"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812097"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>Использование динамической миграции без отказоустойчивой кластеризации для перемещения виртуальной машины
 
@@ -28,11 +28,13 @@ ms.locfileid: "59851545"
 
 - Учетная запись пользователя, который является членом локальной группы администраторов Hyper-V или в группу администраторов на исходном и конечном компьютерах. 
   
-- Роль Hyper-V в Windows Server 2016 или Windows Server 2012 R2 устанавливается на исходном и конечном серверах и настроить для динамической миграции. Можно выполнить динамическую миграцию между узлами под управлением Windows Server 2016 и Windows Server 2012 R2, если виртуальная машина по крайней мере версии 5. <br>Инструкции по обновлению версии, см. в разделе [обновление версии виртуальной машины в Hyper-V в Windows 10 или Windows Server 2016](..\deploy\Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). Инструкции по установке см. в разделе [Настройка узлов для динамической миграции](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md). 
-  
+- Роль Hyper-V в Windows Server 2016 или Windows Server 2012 R2 устанавливается на исходном и конечном серверах и настроить для динамической миграции. Можно выполнить динамическую миграцию между узлами под управлением Windows Server 2016 и Windows Server 2012 R2, если виртуальная машина по крайней мере версии 5.
+
+    Инструкции по обновлению версии, см. в разделе [обновление версии виртуальной машины в Hyper-V в Windows 10 или Windows Server 2016](../deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md). Инструкции по установке см. в разделе [Настройка узлов для динамической миграции](../deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md).
+
 - Средства управления Hyper-V, установленных на компьютере под управлением Windows Server 2016 или Windows 10, если средства устанавливаются на сервере источника или назначения и вы будете запускать их оттуда.  
    
-## <a name="BKMK_Step3"></a>Перемещение работающей виртуальной машины с помощью диспетчера Hyper-V  
+## <a name="use-hyper-v-manager-to-move-a-running-virtual-machine"></a>Перемещение работающей виртуальной машины с помощью диспетчера Hyper-V  
   
 1.  Откройте диспетчер Hyper-V. (В диспетчере сервера щелкните **средства** >>**диспетчера Hyper-V**.)  
   
@@ -76,8 +78,8 @@ PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\L
 3. Проверьте **выполнить перенос на компьютер с другой версией процессора**.
 4. Нажмите кнопку **ОК**.
  
- Чтобы использовать Windows PowerShell, используйте [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx) командлета:
+   Чтобы использовать Windows PowerShell, используйте [Set-VMProcessor](https://technet.microsoft.com/library/hh848533.aspx) командлета:
  
-  ```
-  PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
-  ```
+   ```
+   PS C:\> Set-VMProcessor TestVM -CompatibilityForMigrationEnabled $true
+   ```
