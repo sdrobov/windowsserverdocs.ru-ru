@@ -9,12 +9,12 @@ ms.date: 01/16/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 73ff3fc6df872edd29735ee96c0918144250d5f1
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: ee7bef2afe61500fe75b2d3c61b92b902f9757fa
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190038"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444260"
 ---
 # <a name="advanced-customization-of-ad-fs-sign-in-pages"></a>Расширенная настройка AD FS Sign-in Pages
 
@@ -104,33 +104,33 @@ if (loginMessage)
 ```  
   
 ### <a name="example-2-accept-sam-account-name-as-a-login-format-on-an-ad-fs-form-based-sign-in-page"></a>Пример 2: примите SAM\-имя учетной записи с форматом имени входа в AD FS форме\-на основе входа\-на странице  
-По умолчанию AD FS формы\-на основе входа\-странице поддерживает формат имени входа имен участника-пользователя \(имена участников-пользователей\) \(к примеру, **johndoe@contoso.com** \) или домена sam\-имен учетных записей \( **contoso\\johndoe** или **contoso.com\\johndoe**\). В случае, если все пользователи из одного домена и только они знают о sam\-имена учетных записей, может потребоваться поддерживать сценарии, где пользователи могут входить в с их помощью sam\-только имена учетной записи. Можно добавить следующий код к onload.js для поддержки этого сценария, просто замените домена «contoso.com» в примере ниже с доменом, который вы хотите использовать.  
+По умолчанию AD FS формы\-на основе входа\-странице поддерживает формат имени входа имен участника-пользователя \(имена участников-пользователей\) \(к примеру, <strong>johndoe@contoso.com</strong> \) или домена sam\-имен учетных записей \( **contoso\\johndoe** или **contoso.com\\johndoe**\). В случае, если все пользователи из одного домена и только они знают о sam\-имена учетных записей, может потребоваться поддерживать сценарии, где пользователи могут входить в с их помощью sam\-только имена учетной записи. Можно добавить следующий код к onload.js для поддержки этого сценария, просто замените домена «contoso.com» в примере ниже с доменом, который вы хотите использовать.  
   
 ```  
 if (typeof Login != 'undefined'){  
-    Login.submitLoginRequest = function () {   
-    var u = new InputUtil();  
-    var e = new LoginErrors();  
-    var userName = document.getElementById(Login.userNameInput);  
-    var password = document.getElementById(Login.passwordInput);  
-    if (userName.value && !userName.value.match('[@\\\\]'))   
-    {  
-        var userNameValue = 'contoso.com\\' + userName.value;  
-        document.forms['loginForm'].UserName.value = userNameValue;  
-    }  
+    Login.submitLoginRequest = function () {   
+    var u = new InputUtil();  
+    var e = new LoginErrors();  
+    var userName = document.getElementById(Login.userNameInput);  
+    var password = document.getElementById(Login.passwordInput);  
+    if (userName.value && !userName.value.match('[@\\\\]'))   
+    {  
+        var userNameValue = 'contoso.com\\' + userName.value;  
+        document.forms['loginForm'].UserName.value = userNameValue;  
+    }  
   
-    if (!userName.value) {  
-       u.setError(userName, e.userNameFormatError);  
-       return false;  
-    }  
+    if (!userName.value) {  
+       u.setError(userName, e.userNameFormatError);  
+       return false;  
+    }  
   
-    if (!password.value)   
-    {  
-        u.setError(password, e.passwordEmpty);  
-        return false;  
-    }  
-    document.forms['loginForm'].submit();  
-    return false;  
+    if (!password.value)   
+    {  
+        u.setError(password, e.passwordEmpty);  
+        return false;  
+    }  
+    document.forms['loginForm'].submit();  
+    return false;  
 };  
 }  
   

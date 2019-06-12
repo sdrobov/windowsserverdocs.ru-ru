@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/14/2018
-ms.openlocfilehash: 7777278f374984f242e44fd8a8fa94388df88a30
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 93d317534af46c87c4b2e874a5a5475687e2efa0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836475"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447067"
 ---
 # <a name="converged-nic-configuration-with-a-single-network-adapter"></a>Со схождением конфигурации сетевого Адаптера с одним сетевым адаптером
 
@@ -36,12 +36,14 @@ ms.locfileid: "59836475"
    ```PowerShell
    Get-NetAdapter
    ```
-   
-   _**Результаты:**_  
 
-   |Имя|InterfaceDescription|ifIndex|Состояние|macAddress|Скорость линии|
-   |-----|--------------------|-------|-----|----------|---------|
-   |M1|Mellanox ConnectX-3 Pro ...| 4| Вверх|7C-FE-90-93-8F-A1|40 Гбит/с|
+   _**Результаты:** _  
+
+
+   | Имя |    InterfaceDescription     | ifIndex | Состояние |    macAddress     | Скорость линии |
+   |------|-----------------------------|---------|--------|-------------------|-----------|
+   |  M1  | Mellanox ConnectX-3 Pro ... |    4    |   Вверх   | 7C-FE-90-93-8F-A1 |  40 Гбит/с  |
+
    ---
 
 2. Просмотр свойств дополнительный сетевой адаптер, включая IP-адрес.
@@ -50,7 +52,7 @@ ms.locfileid: "59836475"
    Get-NetAdapter M1 | fl *
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
    ```PowerShell   
     MacAddress   : 7C-FE-90-93-8F-A1
@@ -108,19 +110,21 @@ ms.locfileid: "59836475"
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
-   
-   _**Результаты:**_
 
-   |Параметр|Значение|
-   |---------|-----|
-   |имя_компьютера|192.168.1.5|
-   |RemoteAddress|192.168.1.5|
-   |InterfaceAlias|M1|
-   |SourceAddress|192.168.1.3|
-   |PingSucceeded|True|
-   |PingReplyDetails \(время приема-Передачи\)|0 мс|
+   _**Результаты:** _
+
+
+   |        Параметр         |    Значение    |
+   |--------------------------|-------------|
+   |       имя_компьютера       | 192.168.1.5 |
+   |      RemoteAddress       | 192.168.1.5 |
+   |      InterfaceAlias      |     M1      |
+   |      SourceAddress       | 192.168.1.3 |
+   |      PingSucceeded       |    True     |
+   | PingReplyDetails \(время приема-Передачи\) |    0 мс     |
+
    ---
-   
+
    В некоторых случаях может потребоваться отключить брандмауэр Windows в режиме повышенной безопасности, для успешного выполнения этого теста. Если вы отключите брандмауэр, имейте в виду безопасности и убедитесь, что конфигурацию соответствует требованиям безопасности вашей организации.
 
 2. Отключите все профили брандмауэра.
@@ -128,23 +132,25 @@ ms.locfileid: "59836475"
    ```PowerShell
    Set-NetFirewallProfile -All -Enabled False
    ```
-    
+
 3. После отключения в профилях брандмауэра, повторите проверку. 
 
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Параметр|Значение|
-   |---------|-----|
-   |имя_компьютера|192.168.1.5|
-   |RemoteAddress|192.168.1.5|
-   |InterfaceAlias|Test-40G-1|
-   |SourceAddress|192.168.1.3|
-   |PingSucceeded|False|
-   |PingReplyDetails \(время приема-Передачи\)|0 мс|
+
+   |        Параметр         |    Значение    |
+   |--------------------------|-------------|
+   |       имя_компьютера       | 192.168.1.5 |
+   |      RemoteAddress       | 192.168.1.5 |
+   |      InterfaceAlias      | Test-40G-1  |
+   |      SourceAddress       | 192.168.1.3 |
+   |      PingSucceeded       |    False    |
+   | PingReplyDetails \(время приема-Передачи\) |    0 мс     |
+
    ---
 
 
@@ -173,17 +179,19 @@ ms.locfileid: "59836475"
 
    >[!IMPORTANT]
    >Не выполнить эту команду при подключении к узлу удаленно через этот интерфейс, так как это приводит к утрате доступа к узлу.
-    
+
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "101"
    Get-NetAdapterAdvancedProperty -Name M1 | Where-Object {$_.RegistryKeyword -eq "VlanID"} 
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |DisplayName| DisplayValue| RegistryKeyword |RegistryValue|
-   |----|-----------|------------|---------------|-------------|
-   |M1|ИД виртуальной ЛС|101|VlanID|{101}|
+
+   | Имя | DisplayName | DisplayValue | RegistryKeyword | RegistryValue |
+   |------|-------------|--------------|-----------------|---------------|
+   |  M1  |   ИД виртуальной ЛС   |     101      |     VlanID      |     {101}     |
+
    ---
 
 2. Перезапустите сетевой адаптер для применения ИД виртуальной ЛС.
@@ -197,12 +205,14 @@ ms.locfileid: "59836475"
    ```PowerShell
    Get-NetAdapter -Name "M1"
    ```
-   
-   _**Результаты:**_
 
-   |Имя|InterfaceDescription|ifIndex| Состояние|macAddress|Скорость линии|
-   |----|--------------------|-------|------|----------| ---------|
-   |M1|Mellanox ConnectX-3 Pro Ethernet Ada...|4|Вверх|7C-FE-90-93-8F-A1|40 Гбит/с|
+   _**Результаты:** _
+
+
+   | Имя |          InterfaceDescription           | ifIndex | Состояние |    macAddress     | Скорость линии |
+   |------|-----------------------------------------|---------|--------|-------------------|-----------|
+   |  M1  | Mellanox ConnectX-3 Pro Ethernet Ada... |    4    |   Вверх   | 7C-FE-90-93-8F-A1 |  40 Гбит/с  |
+
    ---
 
    >[!IMPORTANT]
@@ -213,7 +223,7 @@ ms.locfileid: "59836475"
    ```PowerShell
    Test-NetConnection 192.168.1.5
    ```
-    
+
 ## <a name="step-4-configure-quality-of-service-qos"></a>Шаг 4. Настройка качества обслуживания \(QoS\)
 
 >[!NOTE]
@@ -232,25 +242,27 @@ ms.locfileid: "59836475"
 
    - **Необязательный** для сетевых конфигураций, использующих iWarp.
    - **Требуется** для сетевых конфигураций, использующих RoCE.
-   
+
    В примере команды ниже значение «3» является произвольным. Можно использовать любое значение от 1 до 7 до тех пор, пока последовательно использовать то же значение в конфигурации политик качества обслуживания.
 
    ```PowerShell
    New-NetQosPolicy "SMB" -NetDirectPortMatchCondition 445 -PriorityValue8021Action 3
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Параметр|Значение|
-   |---------|-----|
-   |Имя |SMB|
-   |Владелец|Групповая политика \(машины\)|
-   |NetworkProfile|Все|
-   |Precedence|127|
-   |JobObject|&nbsp;| 
-   |NetDirectPort|445 |
-   |PriorityValue|3 |
- ---
+
+   |   Параметр    |          Значение           |
+   |----------------|--------------------------|
+   |      Имя      |           SMB            |
+   |     Владелец      | Групповая политика \(машины\) |
+   | NetworkProfile |           Все            |
+   |   Precedence   |           127            |
+   |   JobObject    |          &nbsp;          |
+   | NetDirectPort  |           445            |
+   | PriorityValue  |            3             |
+
+   ---
 
 3. Для развертываний RoCE, включите **управление потоком приоритет** для трафика SMB, который не является обязательным для iWarp.
 
@@ -259,18 +271,20 @@ ms.locfileid: "59836475"
    Get-NetQosFlowControl
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Priority|Enabled|PolicySet|IfIndex|IfAlias|
-   |---------|-----|--------- |-------| -------|
-   |0 |False |Глобальная|&nbsp;|&nbsp;|
-   |1 |False |Глобальная|&nbsp;|&nbsp;|
-   |2 |False |Глобальная|&nbsp;|&nbsp;|
-   |3 |True  |Глобальная|&nbsp;|&nbsp;|
-   |4 |False |Глобальная|&nbsp;|&nbsp;|
-   |5 |False |Глобальная|&nbsp;|&nbsp;|
-   |6 |False |Глобальная|&nbsp;|&nbsp;|
-   |7 |False |Глобальная|&nbsp;|&nbsp;|
+
+   | Priority | Enabled | PolicySet | ifIndex | IfAlias |
+   |----------|---------|-----------|---------|---------|
+   |    0     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    1     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    2     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    3     |  True   |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    4     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    5     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    6     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    7     |  False  |  Глобальная   | &nbsp;  | &nbsp;  |
+
    ---
 
 4. Настроить службу качества обслуживания для локальной и конечных сетевых адаптеров.
@@ -283,38 +297,44 @@ ms.locfileid: "59836475"
    Get-NetAdapterQos -Name "M1"
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
    **Имя**: M1  
    **Включено**: True  
 
-   _**Возможности:**_   
+   _**Возможности:** _   
 
-   |Параметр|Оборудование|Текущий|
-   |---------|--------|-------|
-   |MacSecBypass|NotSupported|NotSupported|
-   |DcbxSupport|Нет|Нет|
-   |NumTCs(Max/ETS/PFC)|8/8/8|8/8/8|
-   ---
- 
-   _**OperationalTrafficClasses:**_ 
 
-   |TC|TSA|Пропускная способность|Приоритеты|
-   |----|-----|--------|-------|
-   |0| ETS|70%|0-2,4-7|
-   |1|ETS|30 %|3 |
+   |      Параметр      |   Оборудование   |   Текущий    |
+   |---------------------|--------------|--------------|
+   |    MacSecBypass     | NotSupported | NotSupported |
+   |     DcbxSupport     |     Нет     |     Нет     |
+   | NumTCs(Max/ETS/PFC) |    8/8/8     |    8/8/8     |
+
    ---
 
-   _**OperationalFlowControl:**_  
-   
+   _**OperationalTrafficClasses:** _ 
+
+
+   | TC | TSA | Пропускная способность | Приоритеты |
+   |----|-----|-----------|------------|
+   | 0  | ETS |    70%    |  0-2,4-7   |
+   | 1  | ETS |    30 %    |     3      |
+
+   ---
+
+   _**OperationalFlowControl:** _  
+
    Приоритет 3 включена  
 
-   _**OperationalClassifications:**_  
+   _**OperationalClassifications:** _  
 
-   |Используемый протокол|/ Тип порта|Priority|
-   |--------|---------|--------|
-   |Значение по умолчанию|&nbsp;|0|
-   |NetDirect| 445|3|
+
+   | Protocol  | / Тип порта | Priority |
+   |-----------|-----------|----------|
+   |  Значение по умолчанию  |  &nbsp;   |    0     |
+   | NetDirect |    445    |    3     |
+
    ---
 
 5. Зарезервировать процент пропускной способности для SMB Direct \(RDMA\).
@@ -325,11 +345,13 @@ ms.locfileid: "59836475"
    New-NetQosTrafficClass "SMB" -Priority 3 -BandwidthPercentage 30 -Algorithm ETS
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя|Алгоритм |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
-   |----|---------| ------------ |--------| ---------|------- |------- |
-   |SMB | ETS     | 30 |3 |Глобальная |&nbsp;|&nbsp;|
+
+   | Имя | Алгоритм | Bandwidth(%) | Priority | PolicySet | ifIndex | IfAlias |
+   |------|-----------|--------------|----------|-----------|---------|---------|
+   | SMB  |    ETS    |      30      |    3     |  Глобальная   | &nbsp;  | &nbsp;  |
+
    ---                                      
 
 6. Просмотрите параметры резервирования пропускной способности.  
@@ -338,12 +360,14 @@ ms.locfileid: "59836475"
    Get-NetQosTrafficClass
    ```
 
-   _**Результаты:**_
- 
-   |Имя|Алгоритм |Bandwidth(%)| Priority |PolicySet |IfIndex |IfAlias |
-   |----|---------| ------------ |--------| ---------|------- |------- |
-   |[Default]|ETS|70 |0-2,4-7| Глобальная|&nbsp;|&nbsp;| 
-   |SMB      |ETS|30 |3 |Глобальная|&nbsp;|&nbsp;| 
+   _**Результаты:** _
+
+
+   |   Имя    | Алгоритм | Bandwidth(%) | Priority | PolicySet | ifIndex | IfAlias |
+   |-----------|-----------|--------------|----------|-----------|---------|---------|
+   | [Default] |    ETS    |      70      | 0-2,4-7  |  Глобальная   | &nbsp;  | &nbsp;  |
+   |    SMB    |    ETS    |      30      |    3     |  Глобальная   | &nbsp;  | &nbsp;  |
+
    ---
 
 ## <a name="step-5-optional-resolve-the-mellanox-adapter-debugger-conflict"></a>Шаг 5. (Необязательно) Разрешить конфликт отладчик адаптера Mellanox 
@@ -367,11 +391,13 @@ ms.locfileid: "59836475"
    ```PowerShell
    Get-NetAdapterRdma
    ```
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |InterfaceDescription |Enabled|
-   |----|--------------------|-------|
-   |M1| Адаптер Mellanox ConnectX 3 Pro Ethernet |True|
+
+   | Имя |           InterfaceDescription           | Enabled |
+   |------|------------------------------------------|---------|
+   |  M1  | Адаптер Mellanox ConnectX 3 Pro Ethernet |  True   |
+
    ---
 
 2. Определить **ifIndex** значение целевой адаптера.<p>Это значение используется в последующих шагах, при запуске скрипта, который можно скачать.
@@ -380,11 +406,13 @@ ms.locfileid: "59836475"
    Get-NetIPConfiguration -InterfaceAlias "M*" | ft InterfaceAlias,InterfaceIndex,IPv4Address
    ```
 
-   _**Результаты:**_ 
+   _**Результаты:** _ 
 
-   |InterfaceAlias |InterfaceIndex |IPv4-адрес|
-   |-------------- |-------------- |-----------|
-   |M2 |14 |{192.168.1.5}|
+
+   | InterfaceAlias | InterfaceIndex |  IPv4-адрес  |
+   |----------------|----------------|---------------|
+   |       M2       |       14       | {192.168.1.5} |
+
    ---
 
 3. Скачайте [DiskSpd.exe программа](https://aka.ms/diskspd) и извлеките его содержимое в C:\TEST\.
@@ -392,10 +420,10 @@ ms.locfileid: "59836475"
 4. Скачайте [RDMA тестового сценария powershell](https://github.com/Microsoft/SDN/blob/master/Diagnostics/Test-Rdma.ps1) в тестовой папке на локальном диске, например, C:\TEST\.
 
 5. Запустите **Rdma.ps1 теста** сценарий PowerShell для передачи значения ifIndex в сценарий, а также IP-адрес удаленного адаптера в той же виртуальной сети.<p>В этом примере передает сценарий **ifIndex** значения 14 удаленной сети адаптера IP-адресом 192.168.1.5.
-   
+
    ```PowerShell
     C:\TEST\Test-RDMA.PS1 -IfIndex 14 -IsRoCE $true -RemoteIpAddress 192.168.1.5 -PathToDiskspd C:\TEST\Diskspd-v2.0.17\amd64fre\
-    
+
     VERBOSE: Diskspd.exe found at C:\TEST\Diskspd-v2.0.17\amd64fre\\diskspd.exe
     VERBOSE: The adapter M2 is a physical adapter
     VERBOSE: Underlying adapter is RoCE. Checking if QoS/DCB/PFC is configured on each physical adapter(s)
@@ -423,7 +451,7 @@ ms.locfileid: "59836475"
 В процессе подготовки для создания Hyper-V переключения, необходимо удалить параметры виртуальной локальной сети, установленный ранее.  
 
 1. Удалить параметр доступа VLAN из физический сетевой Адаптер для предотвращения автоматического присвоения тегов исходящий трафик с неправильный идентификатор виртуальной ЛС сетевого Адаптера<p>Удалять этот параметр также предотвращает его фильтрацию входящего трафика, не соответствующий идентификатор виртуальной ЛС доступа
-    
+
    ```PowerShell
    Set-NetAdapterAdvancedProperty -Name M1 -RegistryKeyword VlanID -RegistryValue "0"
    ```    
@@ -447,11 +475,13 @@ ms.locfileid: "59836475"
    ```PowerShell
    New-VMSwitch -Name VMSTEST -NetAdapterName "M1" -AllowManagementOS $true
    ```
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |SwitchType |NetAdapterInterfaceDescription|
-   |---- |---------- |------------------------------|
-   |VMSTEST |Внешняя |Адаптер Mellanox ConnectX 3 Pro Ethernet|
+
+   |  Имя   | SwitchType |      NetAdapterInterfaceDescription      |
+   |---------|------------|------------------------------------------|
+   | VMSTEST |  Внешняя  | Адаптер Mellanox ConnectX 3 Pro Ethernet |
+
    ---
 
 2. Просмотр свойств сетевого адаптера.
@@ -460,11 +490,13 @@ ms.locfileid: "59836475"
    Get-NetAdapter | ft -AutoSize
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |InterfaceDescription | ifIndex |Состояние |macAddress |Скорость линии|
-   |---- |-------------------- |-------| ------|----------|---------|
-   |vEthernet \(VMSTEST\) |Hyper-V виртуального сетевого адаптера #2|27 |Вверх |E4-1D-2D-07-40-71 |40 Гбит/с|
+
+   |         Имя          |        InterfaceDescription         | ifIndex | Состояние |    macAddress     | Скорость линии |
+   |-----------------------|-------------------------------------|---------|--------|-------------------|-----------|
+   | vEthernet \(VMSTEST\) | Hyper-V виртуального сетевого адаптера #2 |   27    |   Вверх   | E4-1D-2D-07-40-71 |  40 Гбит/с  |
+
    ---
 
 3. Управление виртуальной сетевой карты узла в одном из двух способов. 
@@ -476,12 +508,14 @@ ms.locfileid: "59836475"
    Get-VMNetworkAdapter –ManagementOS | ft -AutoSize
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |IsManagementOs |VMName |SwitchName |macAddress |Состояние |IPAddresses|
-   |----|-------------- |------ |----------|----------|------ |-----------|
-   |CORP-внешний коммутатор |True |CORP-внешний коммутатор| 001B785768AA |{ОК} |&nbsp;|
-   |VMSTEST |True |VMSTEST | E41D2D074071| {ОК} | &nbsp;| 
+
+   |         Имя         | IsManagementOs |        VMName        |  SwitchName  | macAddress | Состояние | IPAddresses |
+   |----------------------|----------------|----------------------|--------------|------------|--------|-------------|
+   | CORP-внешний коммутатор |      True      | CORP-внешний коммутатор | 001B785768AA |    {ОК}    | &nbsp; |             |
+   |       VMSTEST        |      True      |       VMSTEST        | E41D2D074071 |    {ОК}    | &nbsp; |             |
+
    ---
 
 4. Проверка соединения.
@@ -490,7 +524,7 @@ ms.locfileid: "59836475"
    Test-NetConnection 192.168.1.5
    ```
 
-   _**Результаты:**_ 
+   _**Результаты:** _ 
 
    ```
     ComputerName   : 192.168.1.5
@@ -502,27 +536,29 @@ ms.locfileid: "59836475"
    ```
 
 5. Назначение и просмотр параметров сетевого адаптера виртуальной локальной сети.
-    
+
    ```PowerShell
    Set-VMNetworkAdapterVlan -VMNetworkAdapterName "VMSTEST" -VlanId "101" -Access -ManagementOS
    Get-VMNetworkAdapterVlan -ManagementOS -VMNetworkAdapterName "VMSTEST"
    ```    
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |VMName |VMNetworkAdapterName |Режим |VlanList|
-   |------ |-------------------- |---- |--------|
-   |&nbsp;|VMSTEST |Доступ |101   |
+
+   | VMName | VMNetworkAdapterName |  Режим  | VlanList |
+   |--------|----------------------|--------|----------|
+   | &nbsp; |       VMSTEST        | Доступ |   101    |
+
    ---  
- 
+
 6. Проверка соединения.<p>Может занять несколько секунд для завершения, прежде чем успешно проверить связь с другой.  
 
    ```PowerShell    
    Test-NetConnection 192.168.1.5
    ```
 
-   _**Результаты:**_
-     
+   _**Результаты:** _
+
    ```
     ComputerName   : 192.168.1.5
     RemoteAddress  : 192.168.1.5
@@ -545,8 +581,8 @@ ms.locfileid: "59836475"
    Set-VMNetworkAdapter -ManagementOS -Name "VMSTEST" -IeeePriorityTag on
    Get-VMNetworkAdapter -ManagementOS -Name "VMSTEST" | fl Name,IeeePriorityTag
    ```  
-   
-   _**Результаты:**_
+
+   _**Результаты:** _
 
     Имя: VMSTEST IeeePriorityTag: Включено
 
@@ -557,16 +593,18 @@ ms.locfileid: "59836475"
    Get-NetAdapterRdma
    ```   
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |InterfaceDescription |Enabled |
-   |---- |-------------------- |-------|
-   |vEthernet \(VMSTEST\)| Hyper-V виртуального сетевого адаптера #2|False|
+
+   |         Имя          |        InterfaceDescription         | Enabled |
+   |-----------------------|-------------------------------------|---------|
+   | vEthernet \(VMSTEST\) | Hyper-V виртуального сетевого адаптера #2 |  False  |
+
    ---
 
    >[!NOTE]
    >Если параметр **включено** имеет значение **False**, это означает, что RDMA отключен.
-    
+
 
 3. Просмотрите сведения о сетевых адаптерах.
 
@@ -574,11 +612,13 @@ ms.locfileid: "59836475"
    Get-NetAdapter
    ```
 
-   _**Результаты:**_   
- 
-   |Имя |InterfaceDescription |ifIndex |Состояние |macAddress |Скорость линии|
-   |----|--------------------|-------|------|----------|---------|
-   |vEthernet (VMSTEST)|Hyper-V виртуального сетевого адаптера #2|27|Вверх|E4-1D-2D-07-40-71|40 Гбит/с|
+   _**Результаты:** _   
+
+
+   |        Имя         |        InterfaceDescription         | ifIndex | Состояние |    macAddress     | Скорость линии |
+   |---------------------|-------------------------------------|---------|--------|-------------------|-----------|
+   | vEthernet (VMSTEST) | Hyper-V виртуального сетевого адаптера #2 |   27    |   Вверх   | E4-1D-2D-07-40-71 |  40 Гбит/с  |
+
    ---
 
 
@@ -589,11 +629,13 @@ ms.locfileid: "59836475"
    Get-NetAdapterRdma -Name "vEthernet (VMSTEST)"
    ```
 
-   _**Результаты:**_
+   _**Результаты:** _
 
-   |Имя |InterfaceDescription |Enabled |
-   |---- |-------------------- |-------|
-   |vEthernet \(VMSTEST\)| Hyper-V виртуального сетевого адаптера #2|True|
+
+   |         Имя          |        InterfaceDescription         | Enabled |
+   |-----------------------|-------------------------------------|---------|
+   | vEthernet \(VMSTEST\) | Hyper-V виртуального сетевого адаптера #2 |  True   |
+
    ---
 
    >[!NOTE]

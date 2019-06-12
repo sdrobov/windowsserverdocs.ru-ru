@@ -12,12 +12,12 @@ author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 4c669db414c4f12b6145a26a75b83449f43e8918
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c3376d03a2e9f02b20aba608de0228efd7dfddea
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887685"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443627"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Разработка командлетов PowerShell для сервера Nano Server
 
@@ -127,9 +127,9 @@ PowerShell поддерживает несколько типов реализа
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
 * \<расположение установки продукта >   
     
- Проверьте эти расположения на соответствие следующим условиям:  
- * Командлеты CIM имеют расширения файла CDXML.  
- * Командлеты .NET имеют расширения файла DLL или сборки, установленные в глобальном кэше сборок, который указан в PSD1-файле в поле RootModule, ModuleToProcess или NestedModules.  
+  Проверьте эти расположения на соответствие следующим условиям:  
+  * Командлеты CIM имеют расширения файла CDXML.  
+  * Командлеты .NET имеют расширения файла DLL или сборки, установленные в глобальном кэше сборок, который указан в PSD1-файле в поле RootModule, ModuleToProcess или NestedModules.  
 * Командлеты сценария PowerShell имеют расширения файлов PSM1 или PS1.   
   
 ## <a name="porting-cim-cmdlets"></a>Перенос командлетов CIM  

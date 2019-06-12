@@ -12,12 +12,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 8973302fc8a0c6bdb5b19f9296e711dcc6465589
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cc535934705878c7f2b7fdc4e655ab5c853e4f96
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826805"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443529"
 ---
 # <a name="manage-nano-server"></a>Управление сервером Nano Server
 
@@ -39,8 +39,8 @@ ms.locfileid: "59826805"
 ## <a name="using-windows-powershell-remoting"></a>Использование удаленного взаимодействия Windows PowerShell  
 Для управления сервером Nano Server с помощью удаленного взаимодействия Windows PowerShell вам следует добавить IP-адрес сервера Nano Server в список доверенных узлов на компьютере управления, добавить учетную запись, которую вы используете, в группу администраторов сервера Nano Server и включить CredSSP, если вы планируете использовать эту функцию.  
 
- >[!NOTE]  
-    > Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу AD DS (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, можно подключиться к Nano Server, используя его полное доменное имя Например: PS C:\> ENTER-PSSession - ComputerName nanoserver.contoso.com-Credential (Get-Credential)
+> [!NOTE]
+> Если целевой сервер Nano Server и ваш компьютер управления находятся в одном лесу AD DS (или в лесах с отношением доверия), не следует добавлять сервер Nano Server в список доверенных узлов, можно подключиться к Nano Server, используя его полное доменное имя Например: PS C:\> ENTER-PSSession - ComputerName nanoserver.contoso.com-Credential (Get-Credential)
   
   
 Чтобы добавить сервер Nano Server в список доверенных узлов, выполните следующую команду в командной строке Windows PowerShell с повышенными привилегиями:  
@@ -51,7 +51,7 @@ ms.locfileid: "59826805"
   
   
 ```  
-$ip = "\<IP address of Nano Server>"  
+$ip = "<IP address of Nano Server>"  
 $user = "$ip\Administrator"  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
@@ -72,7 +72,7 @@ Enter-PSSession -ComputerName $ip -Credential $user
   
 ```  
 $ip = "<IP address of the Nano Server\>"  
-$ip\Administrator  
+$user = $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
   
@@ -89,15 +89,17 @@ Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name 
 ## <a name="windows-remote-management"></a>Удаленное управление Windows  
 Вы можете удаленно запускать программы на сервере Nano Server с помощью службы удаленного управления Windows (WinRM). Чтобы использовать службу WinRM, сначала настройте ее и задайте кодовую страницу, выполнив следующие команды в командной строке с повышенными привилегиями:  
   
-**winrm quickconfig**  
-  
-**WinRM установить клиент winrm/config / @{TrustedHosts = "< IP-адрес сервера Nano Server»}**  
-  
-**chcp 65001**  
+```
+winrm quickconfig
+winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server>"}
+chcp 65001
+```
   
 Теперь вы можете удаленно выполнять команды на Nano Server. Пример:  
-  
-**Winrs-r:\<IP-адрес сервера Nano Server > - u: администратор-p:\<пароль администратора Nano Server > ipconfig**  
+
+```
+winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
+```
   
 Дополнительные сведения о службе удаленного управления см. в статье [Обзор удаленного управления Windows (WinRM)](https://technet.microsoft.com/library/dn265971.aspx).  
    
@@ -115,7 +117,7 @@ Stop-NetEventSession [-Name]
 ```  
 Эти командлеты подробно описаны в статье [Командлеты для записи пакетов сетевых событий в Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
 
-##<a name="installing-servicing-packages"></a>Установка служебных пакетов  
+## <a name="installing-servicing-packages"></a>Установка служебных пакетов  
 Если требуется установить служебные пакеты, используйте параметр -ServicingPackagePath (можно передать массив путей в CAB-файлы):  
   
 `New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -ServicingPackagePath \\path\to\kb123456.cab`  
@@ -134,7 +136,7 @@ Volume Serial Number is B05B-CC3D
       Directory of C:\KB3157663_expanded  
    
       04/19/2016  01:17 PM    \<DIR>          .  
-      04/19/2016  01:17 PM    \<DIR>          ..  
+      04/19/2016  01:17 PM    \<DIR&gt;          .  
         04/17/2016  12:31 AM               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
 04/17/2016  12:30 AM        93,886,347 Windows10.0-KB3157663-x64.cab  
 04/17/2016  12:31 AM               454 Windows10.0-KB3157663-x64.xml  
@@ -378,7 +380,7 @@ The command completed successfully.
 
 Другие параметры командной строки позволяют, например, указать имена нужных счетчиков производительности в файле конфигурации, перенаправив выходные данные в файл журнала. Дополнительные сведения см. в [документации по typeperf.exe](https://technet.microsoft.com/library/bb490960.aspx).
 
-Кроме того, графический интерфейс Perfmon.exe можно использовать удаленно с целевыми объектами Nano Server. При добавлении счетчиков производительности в представление укажите целевой объект Nano Server в качестве имени компьютера вместо значения по умолчанию *<Local computer>*.
+Кроме того, графический интерфейс Perfmon.exe можно использовать удаленно с целевыми объектами Nano Server. При добавлении счетчиков производительности в представление укажите целевой объект Nano Server в качестве имени компьютера вместо значения по умолчанию *<Local computer>* .
 
 ### <a name="interact-with-the-windows-event-log"></a>Взаимодействие с журналом событий Windows
 

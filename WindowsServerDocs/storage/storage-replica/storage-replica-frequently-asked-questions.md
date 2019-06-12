@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 12bc8e11-d63c-4aef-8129-f92324b2bf1b
-ms.openlocfilehash: e832dce3eed7d0e5103254fb48683726b82af2e6
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: d03407292a797b1cd511937ba40fc0fa373f5dc0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475939"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447570"
 ---
 # <a name="frequently-asked-questions-about-storage-replica"></a>Часто задаваемые вопросы о реплике хранилища
 
@@ -227,7 +227,7 @@ Update-SmbMultichannelConnection
 Тем не менее для получения репликации Улучшенная производительность Windows Server 2019, все члены партнерства необходимо запустить Windows Server 2019 и необходимо удалить существующих связей и связанных групп репликации и воссоздавать их с помощью задания начальных значений данных (либо При создании партнерства в Windows Admin Center или с помощью командлета New-SRPartnership).
 
 ## <a name="FAQ17"></a> Каким образом можно сообщить проблемы с репликой хранилища или этим руководством?  
-Для получения технической поддержки по реплике хранилища можно разместить публикацию [на форумах Microsoft TechNet](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). Также любые вопросы и сообщения, srfeed@microsoft.com имеющие отношение к реплике хранилища или этой документации, можно отправить по электронной почте на адрес. https://windowsserver.uservoice.com Сайт является предпочтительным для запросов на изменение архитектуры, так как это позволяет вашим клиентам для обеспечения поддержки и обратной связи для ваших идей.
+Для получения технической поддержки по реплике хранилища можно разместить публикацию [на форумах Microsoft TechNet](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=WinServerPreview). Также любые вопросы и сообщения, srfeed@microsoft.com имеющие отношение к реплике хранилища или этой документации, можно отправить по электронной почте на адрес. <https://windowsserver.uservoice.com> Сайт является предпочтительным для запросов на изменение архитектуры, так как это позволяет вашим клиентам для обеспечения поддержки и обратной связи для ваших идей.
 
 
 

@@ -9,12 +9,12 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
 description: Как использовать реплику хранилища для репликации томов в одном кластере на другой кластер под управлением Windows Server.
-ms.openlocfilehash: 2e3245320b2ef7035ac600ff783684083f3f929a
-ms.sourcegitcommit: 0099873d69bd23495d275d7bcb464594de09ee3c
+ms.openlocfilehash: 9d4b7eb05576095abd5d8c905211b2a5e88555bd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65699897"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447634"
 ---
 # <a name="cluster-to-cluster-storage-replication"></a>Межкластерная репликация хранилища
 
@@ -57,7 +57,7 @@ ms.locfileid: "65699897"
 
 ## <a name="step-1-provision-operating-system-features-roles-storage-and-network"></a>Шаг 1. Подготовка операционной системы, функций, ролей, хранилища и сети
 
-1.  Установите Windows Server на всех узлах четырех серверов, указав тип установки Windows Server **(возможности рабочего стола)**. 
+1.  Установите Windows Server на всех узлах четырех серверов, указав тип установки Windows Server **(возможности рабочего стола)** . 
 
 2.  Добавьте сведения о сети и присоедините узлы к домену, а затем перезапустите их.  
 
@@ -139,8 +139,8 @@ ms.locfileid: "65699897"
 
 2. Убедитесь, что тома журналов SR всегда будут находиться на самых быстрых флэш-накопителях, а тома данных — на более медленных накопителях высокой емкости.
 
-10. Запустите Windows PowerShell и используйте командлет `Test-SRTopology`, чтобы определить, все ли требования для реплики хранилища выполнены. Этот командлет можно запустить в режиме быстрой проверки требований или в режиме длительной оценки производительности.  
-Например:  
+3. Запустите Windows PowerShell и используйте командлет `Test-SRTopology`, чтобы определить, все ли требования для реплики хранилища выполнены. Этот командлет можно запустить в режиме быстрой проверки требований или в режиме длительной оценки производительности.  
+   Например:  
 
    ```PowerShell
    MD c:\temp
@@ -148,13 +148,13 @@ ms.locfileid: "65699897"
    Test-SRTopology -SourceComputerName SR-SRV01 -SourceVolumeName f: -SourceLogVolumeName g: -DestinationComputerName SR-SRV03 -DestinationVolumeName f: -DestinationLogVolumeName g: -DurationInMinutes 30 -ResultPath c:\temp        
    ```
 
-      > [!IMPORTANT]
-      > Если вы используете тестовый сервер, на котором в период оценки не создается нагрузка ввода-вывода на выбранный том источника, попробуйте добавить рабочую нагрузку, иначе отчет будет бесполезным. Чтобы получить фактические результаты и рекомендованные размеры журнала, тестовая нагрузка должна соответствовать ожидаемой рабочей нагрузке. Как вариант, во время теста просто скопируйте некоторые файлы на исходный том или загрузите и запустите средство [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) для создания операций ввода-вывода на запись. Этот пример команды создает низкую рабочую нагрузку операций записи на диск D в течение пяти минут:  
-      > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
+     > [!IMPORTANT]
+     > Если вы используете тестовый сервер, на котором в период оценки не создается нагрузка ввода-вывода на выбранный том источника, попробуйте добавить рабочую нагрузку, иначе отчет будет бесполезным. Чтобы получить фактические результаты и рекомендованные размеры журнала, тестовая нагрузка должна соответствовать ожидаемой рабочей нагрузке. Как вариант, во время теста просто скопируйте некоторые файлы на исходный том или загрузите и запустите средство [DISKSPD](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) для создания операций ввода-вывода на запись. Этот пример команды создает низкую рабочую нагрузку операций записи на диск D в течение пяти минут:  
+     > `Diskspd.exe -c1g -d300 -W5 -C5 -b8k -t2 -o2 -r -w5 -h d:\test.dat`  
 
-11. Изучите отчет **TestSrTopologyReport.html**, чтобы убедиться в выполнении всех требований к реплике хранилища.  
+4. Изучите отчет **TestSrTopologyReport.html**, чтобы убедиться в выполнении всех требований к реплике хранилища.  
 
-    ![Экран с результатами отчета о топологии репликации](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
+   ![Экран с результатами отчета о топологии репликации](./media/Cluster-to-Cluster-Storage-Replication/SRTestSRTopologyReport.png)      
 
 ## <a name="step-2-configure-two-scale-out-file-server-failover-clusters"></a>Шаг 2. Настройка двух отказоустойчивых кластеров масштабируемого файлового сервера  
 Теперь создадим два обычных отказоустойчивых кластера. После настройки, проверки и тестирования они будут реплицированы с помощью реплики хранилища. Все описанные ниже шаги можно выполнять на узлах кластера непосредственно или с помощью компьютера удаленного управления, который содержит средства удаленного администрирования сервера Windows Server.  
@@ -212,89 +212,89 @@ ms.locfileid: "65699897"
 ## <a name="step-3-set-up-cluster-to-cluster-replication-using-windows-powershell"></a>Шаг 3. Настройка Межкластерной репликации, с помощью Windows PowerShell  
 Теперь перейдем к настройке межкластерной репликации с помощью PowerShell. Все описанные ниже шаги можно выполнять на узлах непосредственно или с помощью компьютера удаленного управления, содержащий средства удаленного администрирования сервера Windows Server  
 
-1.  Предоставьте первому кластеру полный доступ к другому кластеру, выполнив **Grant SRAccess** на любом узле в первом кластере или удаленно.  Windows Server средства удаленного администрирования сервера
+1. Предоставьте первому кластеру полный доступ к другому кластеру, выполнив **Grant SRAccess** на любом узле в первом кластере или удаленно.  Windows Server средства удаленного администрирования сервера
 
-    ```PowerShell
-    Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
-    ```  
+   ```PowerShell
+   Grant-SRAccess -ComputerName SR-SRV01 -Cluster SR-SRVCLUSB  
+   ```  
 
-2.  Предоставьте второму кластеру полный доступ к другому кластеру, выполнив **Grant SRAccess** на любом узле во втором кластере или удаленно.  
+2. Предоставьте второму кластеру полный доступ к другому кластеру, выполнив **Grant SRAccess** на любом узле во втором кластере или удаленно.  
 
-    ```PowerShell
-    Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
-    ```  
+   ```PowerShell
+   Grant-SRAccess -ComputerName SR-SRV03 -Cluster SR-SRVCLUSA  
+   ```  
 
-3.  Настройте межкластерную репликацию, указав исходный и целевой диски, исходный и целевой журналы, имена исходного и целевого кластеров, а также размер журнала. Эту команду можно выполнить локально на сервере или на компьютере удаленного управления.  
+3. Настройте межкластерную репликацию, указав исходный и целевой диски, исходный и целевой журналы, имена исходного и целевого кластеров, а также размер журнала. Эту команду можно выполнить локально на сервере или на компьютере удаленного управления.  
 
-    ```powershell  
-    New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
-    ```  
+   ```powershell  
+   New-SRPartnership -SourceComputerName SR-SRVCLUSA -SourceRGName rg01 -SourceVolumeName c:\ClusterStorage\Volume2 -SourceLogVolumeName f: -DestinationComputerName SR-SRVCLUSB -DestinationRGName rg02 -DestinationVolumeName c:\ClusterStorage\Volume2 -DestinationLogVolumeName f:  
+   ```  
 
-    > [!WARNING]  
-    > По умолчанию размер журнала составляет 8ГБ. В зависимости от результатов работы командлета **Test-SRTopology** иногда целесообразно использовать журнал большего или меньшего размера (параметр **-LogSizeInBytes**).  
+   > [!WARNING]  
+   > По умолчанию размер журнала составляет 8ГБ. В зависимости от результатов работы командлета **Test-SRTopology** иногда целесообразно использовать журнал большего или меньшего размера (параметр **-LogSizeInBytes**).  
 
-4.  Чтобы получить сведения о состоянии источника и назначения репликации, используйте командлеты **Get-SRGroup** и **Get-SRPartnership**, как описано ниже.  
+4. Чтобы получить сведения о состоянии источника и назначения репликации, используйте командлеты **Get-SRGroup** и **Get-SRPartnership**, как описано ниже.  
 
-    ```powershell
-    Get-SRGroup  
-    Get-SRPartnership  
-    (Get-SRGroup).replicas  
-    ```  
+   ```powershell
+   Get-SRGroup  
+   Get-SRPartnership  
+   (Get-SRGroup).replicas  
+   ```  
 
-5.  Выполнение репликации можно отслеживать так:  
+5. Выполнение репликации можно отслеживать так:  
 
-    1.  На исходном сервере введите следующую команду и изучите события 5015, 5002, 5004, 1237, 5001 и 2200.
+   1.  На исходном сервере введите следующую команду и изучите события 5015, 5002, 5004, 1237, 5001 и 2200.
         
-        ```PowerShell
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
-        ```
-    2.  На конечном сервере выполните следующую команду для просмотра событий реплики хранилища, которые показывают создание партнерства. Это событие сообщает количество скопированных байтов и время выполнения. Пример.  
-        
-        ```powershell
-        Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
-        ```
-        Ниже приведен пример выходных данных.
-        
-        ```
-        TimeCreated  : 4/8/2016 4:12:37 PM  
-        ProviderName : Microsoft-Windows-StorageReplica  
-        Id           : 1215  
-        Message      : Block copy completed for replica.  
-            ReplicationGroupName: rg02  
-            ReplicationGroupId:  
-            {616F1E00-5A68-4447-830F-B0B0EFBD359C}  
-            ReplicaName: f:\  
-            ReplicaId: {00000000-0000-0000-0000-000000000000}  
-            End LSN in bitmap:  
-            LogGeneration: {00000000-0000-0000-0000-000000000000}  
-            LogFileId: 0  
-            CLSFLsn: 0xFFFFFFFF  
-            Number of Bytes Recovered: 68583161856  
-            Elapsed Time (seconds): 117  
-        ```
-    3. Кроме того, группа конечных серверов для реплики постоянно сообщает количество оставшихся байтов для копирования, и эти сведения можно запрашивать через PowerShell. Пример:
-
        ```PowerShell
-       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
+       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica -max 20
        ```
+   2.  На конечном сервере выполните следующую команду для просмотра событий реплики хранилища, которые показывают создание партнерства. Это событие сообщает количество скопированных байтов и время выполнения. Пример.  
+        
+       ```powershell
+       Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | Where-Object {$_.ID -eq "1215"} | Format-List
+       ```
+       Ниже приведен пример выходных данных.
+        
+       ```
+       TimeCreated  : 4/8/2016 4:12:37 PM  
+       ProviderName : Microsoft-Windows-StorageReplica  
+       Id           : 1215  
+       Message      : Block copy completed for replica.  
+           ReplicationGroupName: rg02  
+           ReplicationGroupId:  
+           {616F1E00-5A68-4447-830F-B0B0EFBD359C}  
+           ReplicaName: f:\  
+           ReplicaId: {00000000-0000-0000-0000-000000000000}  
+           End LSN in bitmap:  
+           LogGeneration: {00000000-0000-0000-0000-000000000000}  
+           LogFileId: 0  
+           CLSFLsn: 0xFFFFFFFF  
+           Number of Bytes Recovered: 68583161856  
+           Elapsed Time (seconds): 117  
+       ```
+   3. Кроме того, группа конечных серверов для реплики постоянно сообщает количество оставшихся байтов для копирования, и эти сведения можно запрашивать через PowerShell. Пример:
 
-       Пример контроля выполнения (не завершается самостоятельно):  
+      ```PowerShell
+      (Get-SRGroup).Replicas | Select-Object numofbytesremaining
+      ```
 
-       ```PowerShell
-         while($true) {  
-         $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
-         [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
-         Start-Sleep -s 5  
-        }
-        ```
+      Пример контроля выполнения (не завершается самостоятельно):  
+
+      ```PowerShell
+        while($true) {  
+        $v = (Get-SRGroup -Name "Replication 2").replicas | Select-Object numofbytesremaining  
+        [System.Console]::Write("Number of bytes remaining: {0}`n", $v.numofbytesremaining)  
+        Start-Sleep -s 5  
+       }
+       ```
 
 6. На целевом сервере в целевом кластере выполните следующую команду и проверьте события 5009, 1237, 5001, 5015, 5005 и 2200 для отслеживания хода обработки события. В этой последовательности не должно быть предупреждений или ошибок. Будет много событий 1237, которые указывают ход выполнения.  
     
    ```PowerShell
    Get-WinEvent -ProviderName Microsoft-Windows-StorageReplica | FL  
    ```
-   > [!NOTE]  
-        > Во время репликации целевого диска кластера всегда отображается значение **Online (No Access)** (В сети (нет доступа)).  
+   > [!NOTE]
+   > Во время репликации целевого диска кластера всегда отображается значение **Online (No Access)** (В сети (нет доступа)).  
 
 ## <a name="step-4-manage-replication"></a>Шаг 4. Управление репликацией
 

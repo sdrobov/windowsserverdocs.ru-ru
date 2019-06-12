@@ -9,12 +9,12 @@ ms.date: 04/16/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 80f42695af917084ee63297df052adc069340bb3
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e43f505a02ec2241a84f74ff57e217c2fb95157b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190521"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445354"
 ---
 # <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Создавать подключаемые модули с моделью 2019 оценки риска AD FS
 
@@ -26,7 +26,7 @@ ms.locfileid: "66190521"
 
 Модель позволяет подключаемого кода на любом из трех этапов конвейера проверки подлинности AD FS, как показано ниже
 
-![модель](media\ad-fs-risk-assessment-model\risk1.png)
+![модель](media/ad-fs-risk-assessment-model/risk1.png)
 
 1.  **Запрос получен этап** — позволяет создавать подключаемые модули, чтобы разрешить или заблокировать запрос, если службы федерации Active Directory получает запрос на проверку подлинности т. е. Прежде чем пользователь вводит учетные данные. Можно использовать контекст запроса (например, IP-адрес клиента, метод Http, прокси-сервер DNS, т. д.) доступны на этом этапе, чтобы выполнить оценку рисков. Например, можно построения подключаемый модуль для чтения IP-адрес из контекста запроса и блокирует запрос на проверку подлинности, если IP-адрес находится в списке предварительно определенных опасных IP-адресов. 
 
@@ -51,57 +51,57 @@ ms.locfileid: "66190521"
 ### <a name="build-plug-in-dll"></a>Создать библиотеку dll подключаемого модуля
 Следующая процедура поможет выполнить построение образца библиотеки dll подключаемого модуля.
 
- 1. Загрузите образец подключаемого модуля, используйте Git Bash и введите следующую команду: 
+1. Загрузите образец подключаемого модуля, используйте Git Bash и введите следующую команду: 
 
    ```
    git clone https://github.com/Microsoft/adfs-sample-RiskAssessmentModel-RiskyIPBlock
    ```
 
- 2. Создание **.csv** файл в любом расположении на сервере AD FS (в моем случае я создал **authconfigdb.csv** файл **C:\extensions**) и добавьте IP-адреса, чтобы заблокировать в этот файл. 
+2. Создание **.csv** файл в любом расположении на сервере AD FS (в моем случае я создал **authconfigdb.csv** файл **C:\extensions**) и добавьте IP-адреса, чтобы заблокировать в этот файл. 
 
    Образец подключаемого модуля заблокирует любые запросы проверки подлинности, поступающих от **экстрасети IP-адреса** перечисленные в этом файле. 
 
    >{! Примечание] Если у вас есть фермы AD FS, можно создать файл на любой или все серверы AD FS. Любой из файлов можно использовать для импорта опасных IP-адресов в AD FS. Мы обсудим процесс импорта подробно [зарегистрировать библиотеку dll подключаемого модуля с AD FS](#register-the-plug-in-dll-with-ad-fs) разделе ниже. 
 
- 3. Откройте проект `ThreatDetectionModule.sln` с помощью Visual Studio
+3. Откройте проект `ThreatDetectionModule.sln` с помощью Visual Studio
 
- 4. Удалить `Microsoft.IdentityServer.dll` из обозревателя решений, как показано ниже:</br>
- ![Модель](media\ad-fs-risk-assessment-model\risk2.png)
+4. Удалить `Microsoft.IdentityServer.dll` из обозревателя решений, как показано ниже:</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk2.png)
 
- 5. Добавьте ссылку на `Microsoft.IdentityServer.dll` AD FS, как показано ниже
+5. Добавьте ссылку на `Microsoft.IdentityServer.dll` AD FS, как показано ниже
 
    1.   Щелкните правой кнопкой мыши **ссылки** в **обозревателя решений** и выберите **добавить ссылку...**</br> 
-   ![Модель](media\ad-fs-risk-assessment-model\risk3.png)
+   ![Модель](media/ad-fs-risk-assessment-model/risk3.png)
    
    2.   На **диспетчер ссылок** выберите окно **Обзор**. В **выберите файлы, которые нужно установить ссылки...** диалоговое окно, выберите `Microsoft.IdentityServer.dll` из папки установки AD FS (в моем случае **C:\Windows\ADFS**) и нажмите кнопку **добавить**.
    
    >[!NOTE]
-    >В моем случае я создаю подключаемый модуль на самом сервере AD FS. Если среды разработки на другом сервере, скопируйте `Microsoft.IdentityServer.dll` из папки установки AD FS на сервере AD FS в среде разработки.</br> 
+   >В моем случае я создаю подключаемый модуль на самом сервере AD FS. Если среды разработки на другом сервере, скопируйте `Microsoft.IdentityServer.dll` из папки установки AD FS на сервере AD FS в среде разработки.</br> 
    
-   ![модель](media\ad-fs-risk-assessment-model\risk4.png)
+   ![модель](media/ad-fs-risk-assessment-model/risk4.png)
    
    В.   Нажмите кнопку **ОК** на **диспетчер ссылок** окна, убедившись в том `Microsoft.IdentityServer.dll` флажок</br>
-   ![Модель](media\ad-fs-risk-assessment-model\risk5.png)
+   ![Модель](media/ad-fs-risk-assessment-model/risk5.png)
  
- 6. Все классы и ссылки стали на месте, к сборке.   Тем не менее, так как выходные данные этого проекта представляет собой библиотеку dll, он должен устанавливаться в **глобальный кэш сборок**, или в глобальном кэше СБОРОК, сервера AD FS и библиотеки dll должны быть подписаны сначала. Это можно сделать следующим образом:
+6. Все классы и ссылки стали на месте, к сборке.   Тем не менее, так как выходные данные этого проекта представляет собой библиотеку dll, он должен устанавливаться в **глобальный кэш сборок**, или в глобальном кэше СБОРОК, сервера AD FS и библиотеки dll должны быть подписаны сначала. Это можно сделать следующим образом:
 
    1.   **Щелкните правой кнопкой мыши** на имя проекта, ThreatDetectionModule. В меню **свойства**.</br>
-   ![Модель](media\ad-fs-risk-assessment-model\risk6.png)
+   ![Модель](media/ad-fs-risk-assessment-model/risk6.png)
    
    2.   Из **свойства** щелкните **подписывание**, слева и проверьте флажок помечен **подписать сборку**. Из **выберите файл ключа строгого имени**: выпадающем меню выберите **< создать... >**</br>
-   ![Модель](media\ad-fs-risk-assessment-model\risk7.png)
+   ![Модель](media/ad-fs-risk-assessment-model/risk7.png)
 
    В.   В **диалоговой Создание ключа строгого имени**, введите имя (можно выбрать любое имя) для ключа, снимите этот флажок, **защитить мой файл ключей паролем**. Затем нажмите кнопку **ОК**.
-   ![Модель](media\ad-fs-risk-assessment-model\risk8.png)</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk8.png)</br>
  
    Г.   Сохраните проект, как показано ниже</br>
-   ![Модель](media\ad-fs-risk-assessment-model\risk9.png)
+   ![Модель](media/ad-fs-risk-assessment-model/risk9.png)
 
- 7. Постройте проект, нажав кнопку **построения** и затем **Перестроить решение** как показано ниже</br>
- ![Модель](media\ad-fs-risk-assessment-model\risk10.png)
+7. Постройте проект, нажав кнопку **построения** и затем **Перестроить решение** как показано ниже</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk10.png)
  
- Проверьте **окно вывода**, в нижней части экрана, чтобы увидеть, если ошибок</br>
- ![Модель](media\ad-fs-risk-assessment-model\risk11.png)
+   Проверьте **окно вывода**, в нижней части экрана, чтобы увидеть, если ошибок</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk11.png)
 
 
 Теперь готов для использования подключаемого модуля (dll) и в **\bin\Debug** папке проекта (в данном случае это **C:\extensions\ThreatDetectionModule\bin\Debug\ThreatDetectionModule.dll**). 
@@ -112,35 +112,35 @@ ms.locfileid: "66190521"
 
 Нам нужно зарегистрировать библиотеку dll в AD FS с помощью `Register-AdfsThreatDetectionModule` команду PowerShell на сервере AD FS, тем не менее, прежде чем мы регистрируем, нам нужно получить токена открытого ключа. Был создан этот токен открытого ключа, когда мы создали ключ и подписываются с помощью этого ключа. Чтобы узнать о возможностях токена открытого ключа для библиотеки dll, можно использовать **SN.exe** следующим образом
 
- 1. Скопируйте DLL-файл из **\bin\Debug** папку в другое место (в моем случае, скопировать его **C:\extensions**)
+1. Скопируйте DLL-файл из **\bin\Debug** папку в другое место (в моем случае, скопировать его **C:\extensions**)
 
- 2. Запуск **Командная строка разработчика** для Visual Studio и перейдите к каталогу, содержащему **sn.exe** (в моем случае является каталог **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A средства \bin\NETFX 4.7.2**) ![модели](media\ad-fs-risk-assessment-model\risk12.png)
+2. Запуск **Командная строка разработчика** для Visual Studio и перейдите к каталогу, содержащему **sn.exe** (в моем случае является каталог **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A средства \bin\NETFX 4.7.2**) ![модели](media/ad-fs-risk-assessment-model/risk12.png)
 
- 3. Запустите **SN** с **-T** параметра и расположение файла (в моем случае `SN -T “C:\extensions\ThreatDetectionModule.dll”`) ![модели](media\ad-fs-risk-assessment-model\risk13.png)</br>
- Команда предоставит вам маркер открытого ключа (для меня, **токена открытого ключа — 714697626ef96b35**)
+3. Запустите **SN** с **-T** параметра и расположение файла (в моем случае `SN -T “C:\extensions\ThreatDetectionModule.dll”`) ![модели](media/ad-fs-risk-assessment-model/risk13.png)</br>
+   Команда предоставит вам маркер открытого ключа (для меня, **токена открытого ключа — 714697626ef96b35**)
 
- 4. Добавьте библиотеку dll для **глобальный кэш сборок** сервера AD FS наших лучше создать установщик, подходящий для проекта и добавьте его в глобальный кэш сборок с помощью установщика. Другим решением является использование **Gacutil.exe** (Дополнительные сведения о **Gacutil.exe** доступных [здесь](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) на компьютере разработки.  Поскольку у меня есть visual studio на одном сервере с AD FS, я буду использовать **Gacutil.exe** следующим образом
+4. Добавьте библиотеку dll для **глобальный кэш сборок** сервера AD FS наших лучше создать установщик, подходящий для проекта и добавьте его в глобальный кэш сборок с помощью установщика. Другим решением является использование **Gacutil.exe** (Дополнительные сведения о **Gacutil.exe** доступных [здесь](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) на компьютере разработки.  Поскольку у меня есть visual studio на одном сервере с AD FS, я буду использовать **Gacutil.exe** следующим образом
 
    1.   На Командная строка разработчика для Visual Studio и перейдите к каталогу, содержащему **Gacutil.exe** (в моем случае является каталог **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
 
-   2.   Запустите **Gacutil** команды (в моем случае `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`) ![модели](media\ad-fs-risk-assessment-model\risk14.png)
+   2.   Запустите **Gacutil** команды (в моем случае `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`) ![модели](media/ad-fs-risk-assessment-model/risk14.png)
  
- >[!NOTE]
- >Если ферма AD FS, указанных выше должен выполняться на каждом сервере AD FS в ферме. 
+   >[!NOTE]
+   >Если ферма AD FS, указанных выше должен выполняться на каждом сервере AD FS в ферме. 
 
- 5. Откройте **Windows PowerShell** и выполните следующую команду, чтобы зарегистрировать библиотеку dll
-    ```
-    Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>”
-    ```
-    В моем случае команда выглядит так: 
-    ```
-    Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv”
-    ```
+5. Откройте **Windows PowerShell** и выполните следующую команду, чтобы зарегистрировать библиотеку dll
+   ```
+   Register-AdfsThreatDetectionModule -Name "<Add a name>" -TypeName "<class name that implements interface>, <dll name>, Version=10.0.0.0, Culture=neutral, PublicKeyToken=< Add the Public Key Token from Step 2. above>" -ConfigurationFilePath "<path of the .csv file>”
+   ```
+   В моем случае команда выглядит так: 
+   ```
+   Register-AdfsThreatDetectionModule -Name "IPBlockPlugin" -TypeName "ThreatDetectionModule.UserRiskAnalyzer, ThreatDetectionModule, Version=10.0.0.0, Culture=neutral, PublicKeyToken=714697626ef96b35" -ConfigurationFilePath "C:\extensions\authconfigdb.csv”
+   ```
  
-    >[!NOTE]
-    >Необходимо зарегистрировать библиотеку dll только один раз, даже если ферма AD FS. 
+   >[!NOTE]
+   >Необходимо зарегистрировать библиотеку dll только один раз, даже если ферма AD FS. 
 
- 6. Перезапустите службу AD FS после регистрации библиотеки dll
+6. Перезапустите службу AD FS после регистрации библиотеки dll
 
 Таким образом, библиотека dll зарегистрирован с AD FS и готов к использованию!
 
@@ -155,38 +155,38 @@ ms.locfileid: "66190521"
 
 ### <a name="testing-the-plug-in"></a>Проверка подключаемого модуля
 
- 1. Откройте **authconfig.csv** файл, созданный ранее (в моем случае в расположении **C:\extensions**) и добавьте **экстрасети IP-адреса** нужно заблокировать. Каждый IP-адрес должен находиться в отдельной строке и не должно быть пробелов в конце</br>
- ![Модель](media\ad-fs-risk-assessment-model\risk18.png)
+1. Откройте **authconfig.csv** файл, созданный ранее (в моем случае в расположении **C:\extensions**) и добавьте **экстрасети IP-адреса** нужно заблокировать. Каждый IP-адрес должен находиться в отдельной строке и не должно быть пробелов в конце</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk18.png)
  
- 2. Сохраните и закройте файл
+2. Сохраните и закройте файл
 
- 3. Импортируйте обновленный файл в AD FS, выполнив следующую команду PowerShell 
+3. Импортируйте обновленный файл в AD FS, выполнив следующую команду PowerShell 
 
-  ```
-  Import-AdfsThreatDetectionModuleConfiguration -name "<name given while registering the dll>" -ConfigurationFilePath "<path of the .csv file>"
-  ```
+   ```
+   Import-AdfsThreatDetectionModuleConfiguration -name "<name given while registering the dll>" -ConfigurationFilePath "<path of the .csv file>"
+   ```
  
-  В моем случае команда выглядит так: 
-  ```
+   В моем случае команда выглядит так: 
+   ```
    Import-AdfsThreatDetectionModuleConfiguration -name "IPBlockPlugin" -ConfigurationFilePath "C:\extensions\authconfigdb.csv")
- ```
+   ```
  
- 4. Запрос на проверку подлинности от сервера с тем же IP-адресом, добавленного при изучении **authconfig.csv**.
+4. Запрос на проверку подлинности от сервера с тем же IP-адресом, добавленного при изучении **authconfig.csv**.
 
- Для этой демонстрации я буду использовать [средство рентгеновские помочь утверждений AD FS](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) инициации запроса. Если вы хотите использовать средство рентгеновский снимок, см. инструкции 
+   Для этой демонстрации я буду использовать [средство рентгеновские помочь утверждений AD FS](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) инициации запроса. Если вы хотите использовать средство рентгеновский снимок, см. инструкции 
 
- Экземпляр сервера федерации, нажмите **тестирование проверки подлинности** кнопки.</br> 
- ![Модель](media\ad-fs-risk-assessment-model\risk15.png) 
+   Экземпляр сервера федерации, нажмите **тестирование проверки подлинности** кнопки.</br> 
+   ![Модель](media/ad-fs-risk-assessment-model/risk15.png) 
 
- 5. Проверка подлинности блокируется, как показано ниже.</br>
- ![Модель](media\ad-fs-risk-assessment-model\risk16.png)
+5. Проверка подлинности блокируется, как показано ниже.</br>
+   ![Модель](media/ad-fs-risk-assessment-model/risk16.png)
  
 Теперь, когда мы знаем, как создать и зарегистрировать подключаемый модуль, давайте пошаговом руководстве код подключаемого модуля для понимания реализации с помощью новых интерфейсов и классов появилась в модели. 
 
 ## <a name="plug-in-code-walkthrough"></a>Подключаемый модуль код пошагового руководства
 
 Откройте проект `ThreatDetectionModule.sln` с помощью Visual Studio, а затем откройте главный файл **UserRiskAnalyzer.cs** из **обозревателя решений** в правой части экрана</br>
-![Модель](media\ad-fs-risk-assessment-model\risk17.png)
+![Модель](media/ad-fs-risk-assessment-model/risk17.png)
  
 Файл содержит основной класс UserRiskAnalyzer, который реализует абстрактный класс [ThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) и интерфейс [IRequestReceivedThreatDetectionModule](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) для чтения IP-адрес из запроса контекст, сравнить полученный IP-адрес с IP-адресов, загруженных из базы данных AD FS и блокирует запрос, если имеется совпадение IP-адрес. Давайте подробнее рассмотрим эти типы подробно
 

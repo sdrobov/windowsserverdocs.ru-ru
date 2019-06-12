@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f207993580e6fd06c9ff185e58e5b7e81af60252
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2b2275af0934413fa2de02de720d609feda7392c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847835"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444450"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-proxy"></a>Подготовка к миграции прокси-сервера федерации AD FS 2.0
 
@@ -23,7 +23,7 @@ ms.locfileid: "59847835"
   
 -   [Шаг 1. Экспорт параметров службы прокси-сервера](#step-1-export-proxy-service-settings)  
   
--   [Шаг 2. Резервное копирование пользовательских настроек веб-страницы](#step-2-back-up-webpage-customizations)  
+-   [Шаг 2. Резервное копирование пользовательских настроек веб-страницы](#step-2-back-up-webpage-customizations)  
   
 ##  <a name="step-1-export-proxy-service-settings"></a>Шаг 1. Экспорт параметров службы прокси-сервера  
  Чтобы экспортировать параметры службы прокси-сервера федерации, выполните следующие действия.  
@@ -35,13 +35,13 @@ ms.locfileid: "59847835"
 > [!NOTE]
 >  Этот шаг не является обязательным, потому что этот сертификат сохраняется во время обновления операционной системы.  
   
-2.  Экспортируйте свойства прокси-сервера федерации AD FS 2.0 в файл. Это можно сделать с помощью Windows PowerShell.  
+2. Экспортируйте свойства прокси-сервера федерации AD FS 2.0 в файл. Это можно сделать с помощью Windows PowerShell.  
   
 Откройте Windows PowerShell и выполните следующую команду, чтобы добавить командлеты AD FS в сеанс Windows PowerShell: `PSH:>add-pssnapin “Microsoft.adfs.powershell”`. Затем выполните следующую команду для экспорта свойств прокси-сервера федерации в файл: `PSH:> Get-ADFSProxyProperties | out-file “.\proxyproperties.txt”`.  
   
-3.  Убедитесь, что вам известны данные учетной записи администратора сервера федерации AD FS или учетной записи службы, от имени которой выполняется служба федерации AD FS.  Эти сведения необходимы для настройки доверия прокси-сервера.  
+3. Убедитесь, что вам известны данные учетной записи администратора сервера федерации AD FS или учетной записи службы, от имени которой выполняется служба федерации AD FS.  Эти сведения необходимы для настройки доверия прокси-сервера.  
   
- При выполнении этого шага осуществляется сбор следующих сведений, необходимых для настройки прокси-сервера федерации AD FS:  
+   При выполнении этого шага осуществляется сбор следующих сведений, необходимых для настройки прокси-сервера федерации AD FS:  
   
 -   имя службы федерации AD FS;  
   
@@ -57,4 +57,4 @@ ms.locfileid: "59847835"
  [Подготовка к миграции прокси-сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-proxy.md)   
  [Перенос сервера AD FS 2.0 Federation](migrate-the-ad-fs-fed-server.md)   
  [Перенос прокси-сервера AD FS 2.0 Federation](migrate-the-ad-fs-2-fed-server-proxy.md)   
- [Миграция 1.1 веб-агентов AD FS](migrate-the-ad-fs-web-agent.md)
+ [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

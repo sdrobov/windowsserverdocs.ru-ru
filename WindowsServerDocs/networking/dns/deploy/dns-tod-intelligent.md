@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 33fd9447a79346127714a5e5e73977611eba483c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c36475dacb8664352f4ab270878357118d281c60
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829475"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446422"
 ---
 # <a name="use-dns-policy-for-intelligent-dns-responses-based-on-the-time-of-day"></a>Получение интеллектуальных ответов DNS на основе времени дня с помощью политики DNS
 
@@ -107,7 +107,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScop
 #### <a name="bkmk_records"></a>Добавление записей в области зоны  
 Теперь необходимо добавить записи, представляющий узел веб-сервера в области две зоны.  
   
-Например, в **SeattleZoneScope**, запись **www.contosogiftservices.com** добавляется с IP-адресом 192.0.0.1, который находится в Сиэтле центре обработки данных. Аналогично, в **DublinZoneScope**, запись **www.contosogiftservices.com** добавляется с IP-адресом 141.1.0.3 в центре обработки данных Дублин  
+Например, в **SeattleZoneScope**, запись <strong>www.contosogiftservices.com</strong> добавляется с IP-адресом 192.0.0.1, который находится в Сиэтле центре обработки данных. Аналогично, в **DublinZoneScope**, запись <strong>www.contosogiftservices.com</strong> добавляется с IP-адресом 141.1.0.3 в центре обработки данных Дублин  
   
 Следующие команды Windows PowerShell можно использовать для добавления записей в области зоны.  
   

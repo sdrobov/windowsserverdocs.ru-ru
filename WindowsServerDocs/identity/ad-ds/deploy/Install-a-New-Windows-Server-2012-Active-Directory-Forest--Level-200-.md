@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 187db7e201e98ae97268b96c2e4faa202a9a5372
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40471354af5434e77a300303572ccce639ba2489
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874835"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443785"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>Установка нового леса Active Directory в Windows Server 2012 (уровень 200)
 
@@ -88,15 +88,15 @@ ms.locfileid: "59874835"
   
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_PSInstallADDSForest.png)  
   
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Программа Dcpromo.exe больше не предоставляет графический мастер и не используется для установки двоичных файлов роли или компонента. При попытке запустить Dcpromo.exe из проводника происходит ошибка:  
->   
-> «Мастер установки доменных служб Active Directory перемещен в диспетчер серверов. Дополнительные сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=220921.»  
->   
+> 
+> «Мастер установки доменных служб Active Directory перемещен в диспетчер серверов. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220921>.»  
+> 
 > При попытке выполнить команду Dcpromo.exe /unattend двоичные файлы по-прежнему устанавливаются, как в предыдущих операционных системах, но выводится предупреждение:  
->   
-> «Dcpromo автоматической операция заменена модулем ADDSDeployment для Windows PowerShell. Дополнительные сведения см. в разделе https://go.microsoft.com/fwlink/?LinkId=220924.»  
->   
+> 
+> «Dcpromo автоматической операция заменена модулем ADDSDeployment для Windows PowerShell. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220924>.»  
+> 
 > В Windows Server 2012 использовать программу dcpromo.exe не рекомендуется. Она не будет включена в будущие версии Windows и не будет улучшаться далее в текущей. Администраторам следует прекратить ее использование и перейти на поддерживаемые модули Windows PowerShell для создания контроллеров домена из командной строки.  
   
 #### <a name="prerequisite-checking"></a>Проверка предварительных требований  

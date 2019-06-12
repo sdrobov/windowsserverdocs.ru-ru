@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 5201441ba884fe4658b917919e60c7d20530341b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 441dad92611e1a4a1135bd15bbcdfd05f38c1be3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835585"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445826"
 ---
 # <a name="deploy-access-denied-assistance-demonstration-steps"></a>Развертывание помощи при отказе в доступе (поэтапная демонстрация)
 
@@ -26,9 +26,9 @@ ms.locfileid: "59835585"
   
 -   [Шаг 1. Настройка помощи при отказе в доступе](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_1)  
   
--   [Шаг 2. Настройка параметров уведомлений по электронной почте](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_2)  
+-   [Шаг 2. Настройка параметров уведомлений по электронной почте](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_2)  
   
--   [Шаг 3. Проверьте правильность настройки помощи при отказе в доступе](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)  
+-   [Шаг 3. Проверьте правильность настройки помощи при отказе в доступе](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)  
   
 > [!NOTE]  
 > В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -70,7 +70,7 @@ ms.locfileid: "59835585"
   
     3.  Оставьте для оставшихся параметров значения по умолчанию.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -118,7 +118,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 8.  Нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
   
@@ -142,7 +142,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 5.  Выберите вариант **Включен**, а затем нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования. 
   
@@ -181,7 +181,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
 7.  Нажмите кнопку **ОК**, а затем кнопку **Закрыть**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования. 
   
@@ -210,7 +210,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
   
 6.  Нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
   
@@ -226,7 +226,7 @@ set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com"
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Сценарий: Помощь при отказе в доступе](Scenario--Access-Denied-Assistance.md)  
+-   [Сценарий. Помощь при отказе в доступе](Scenario--Access-Denied-Assistance.md)  
   
 -   [Планирование отказом в доступе](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)  
   

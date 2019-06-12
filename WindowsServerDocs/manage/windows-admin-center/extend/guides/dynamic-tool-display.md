@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: f3f34b4c86854bfc55cf4b1b57a0fd3c2baf2ffc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3cce07ba5b3d2cc89f1363bbb2af5acd048c0466
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839255"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445942"
 ---
 # <a name="control-your-tools-visibility-in-a-solution"></a>Управлять видимостью этого средства в решении #
 
@@ -194,6 +194,7 @@ ms.locfileid: "59839255"
 }
 ```
 Свойство State имеет важное значение, которое будет управлять принятия решений, чтобы показать или скрыть свое расширение в списке средства.  Допустимыми значениями являются:
+
 | Значение | Описание |
 | ---- | ----------- |
 | Доступно. | Расширение должно отображаться в списке средств. |

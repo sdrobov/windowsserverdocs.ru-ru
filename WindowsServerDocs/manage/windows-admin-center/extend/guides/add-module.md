@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: e6978ce20a7c6da8addb217de8d30f733b40d261
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d8d901097eb280679a388ff66161e3514befcd13
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834405"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452652"
 ---
 # <a name="add-a-module-to-a-tool-extension"></a>Добавление модуля в расширение средства
 
@@ -23,7 +23,7 @@ ms.locfileid: "59834405"
 
 ## <a name="prepare-your-environment"></a>Подготовка среды
 
-Если это еще не сделано, следуйте указаниям, приведенным в разработке [средство](..\develop-tool.md) (или [решение](..\develop-solution.md)) расширение для подготовки среды и создать новый, пустой средство расширение.
+Если это еще не сделано, следуйте указаниям, приведенным в разработке [средство](../develop-tool.md) (или [решение](../develop-solution.md)) расширение для подготовки среды и создать новый, пустой средство расширение.
 
 ## <a name="use-the-angular-cli-to-create-a-module-and-component"></a>С помощью Angular CLI для создания модуля (и компонент)
 
@@ -181,4 +181,4 @@ public ngOnInit() {
 
 ## <a name="build-and-side-load-your-extension"></a>Сборки и на стороне загрузить расширение
 
-Теперь вы добавили модуля для расширения.  Далее можно [построения и стороны нагрузки](..\develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center, чтобы просмотреть результаты.
+Теперь вы добавили модуля для расширения.  Далее можно [построения и стороны нагрузки](../develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center, чтобы просмотреть результаты.

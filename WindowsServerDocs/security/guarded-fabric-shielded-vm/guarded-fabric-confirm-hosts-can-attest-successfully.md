@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 02/05/2019
-ms.openlocfilehash: 6b67208176b426f52d3c5106f8de09ad334d3b01
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 87878eba785c0e1cc50454a74b2af4a159e88e12
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829535"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443660"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>Подтвердите подтвердят защищенных узлов 
 
@@ -52,16 +52,16 @@ ms.locfileid: "59829535"
         Get-HgsTrace -RunDiagnostics -Detailed
 
     > [!IMPORTANT]
-    > Если вы используете Windows Server 2019 или Windows 10, версия 1809 и при использовании политики целостности кода, `Get-HgsTrace` может возвращать сбой **Active политики целостности кода** диагностики.
+    > Если вы используете Windows Server 2019 или Windows 10, версия 1809 и при использовании политики целостности кода, `Get-HgsTrace` возвращает ошибку для **Active политики целостности кода** диагностики.
     > Этот результат можно игнорировать при только сбои диагностики.
 
 ## <a name="next-step"></a>Дальнейшие действия
 
->[!div class="nextstepaction"]
-[Развернуть экранированные виртуальные машины](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+> [!div class="nextstepaction"]
+> [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
 ## <a name="see-also"></a>См. также
 
 - [Развертывание службы защиты узла (HGS)](guarded-fabric-deploying-hgs-overview.md)
-- [Развернуть экранированные виртуальные машины](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 

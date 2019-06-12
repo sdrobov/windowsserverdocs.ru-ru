@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 1bb3e6695a7ec8fc7d950873403df023b4def3d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dca60fc0e216b1b873bd4f94dd1b01174d80fc14
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881615"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446439"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>Использование политики DNS для балансировки нагрузки приложений
 
@@ -79,7 +79,7 @@ Contosogiftservices.com веб-сайт размещается в несколь
 
 Дополнительные сведения см. в разделе [DnsServerZoneScope добавить](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-####<a name="bkmk_records"></a>Добавление записей в области зоны
+#### <a name="bkmk_records"></a>Добавление записей в области зоны
 
 Теперь необходимо добавить записи, представляющий узел веб-сервера в области зоны.
 
@@ -100,7 +100,7 @@ Contosogiftservices.com веб-сайт размещается в несколь
 
 Дополнительные сведения см. в разделе [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-####<a name="bkmk_policies"></a>Создайте политики DNS
+#### <a name="bkmk_policies"></a>Создайте политики DNS
 
 После создания секций (области зоны) и добавления записей, необходимо создать политики DNS, которые распределяют входящие запросы в этих областях, таким образом, 50% запросов для contosogiftservices.com получение ответа с IP-адрес веб-приложений сервер в Сиэтле центра обработки данных, а остальные равномерно распределяются между Чикаго и Далласе центрах обработки данных.
 

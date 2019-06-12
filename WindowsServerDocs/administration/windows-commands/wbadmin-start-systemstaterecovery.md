@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c99a934987e320baaec0e56c69f36eda5a32819
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4282da2011c39daec0315a7f3836d5517f29debb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852685"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440202"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>Wbadmin start systemstaterecovery
 
@@ -74,17 +74,17 @@ wbadmin start systemstaterecovery
 
 ## <a name="BKMK_examples"></a>Примеры
 
--   Чтобы выполнить восстановление состояния системы из резервной копии с 03/31/2013, в 9:00, введите следующую команду:  
-    ```
-    wbadmin start systemstaterecovery -version:03/31/2013-09:00
-    ```  
--   Для выполнения восстановления состояния системы из резервной копии из 04/30/2013, в 9:00 который хранится в общем ресурсе \\ \\servername\share для server01, введите:  
-    ```
-    wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
-    ```
+- Чтобы выполнить восстановление состояния системы из резервной копии с 03/31/2013, в 9:00, введите следующую команду:  
+  ```
+  wbadmin start systemstaterecovery -version:03/31/2013-09:00
+  ```  
+- Для выполнения восстановления состояния системы из резервной копии из 04/30/2013, в 9:00 который хранится в общем ресурсе \\ \\servername\share для server01, введите:  
+  ```
+  wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
+  ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [WBADMIN](wbadmin.md)
 -   [Start-WBSystemStateRecovery](https://technet.microsoft.com/library/jj902449.aspx) командлета

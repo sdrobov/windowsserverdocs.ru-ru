@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: cdd0b32b50f676007a6cc922bc15b95bb61323be
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e94b07d7fa654732526d0b43daadc9ad0ad4f3a8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189675"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444930"
 ---
 # <a name="create-a-non-claims-aware-relying-party-trust"></a>Создание не поддерживающей утверждения проверяющей стороны отношения доверия
 
@@ -27,7 +27,7 @@ ms.locfileid: "66189675"
   
 Для выполнения этой процедуры минимальным требованием является членство в группе **Администраторы** или эквивалентные права на локальном компьютере.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальные и доменные группы по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477).   
   
-##<a name="to-create-a-non-claims-aware-relying-party-trust-manually"></a>Чтобы создать не основанного на утверждениях виду доверия с проверяющей стороной вручную 
+## <a name="to-create-a-non-claims-aware-relying-party-trust-manually"></a>Чтобы создать не основанного на утверждениях виду доверия с проверяющей стороной вручную 
 1. В диспетчере серверов щелкните **средства**, а затем выберите **управления AD FS**.  
   
 2.  В разделе **действия**, нажмите кнопку **добавить доверие проверяющей стороны**.  

@@ -8,12 +8,12 @@ ms.date: 01/12/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a4b7a568200bee7c2696c57f1dd964dd4e84ec21
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4b09094b6e305bc85b38e94d11fbc8845d555437
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820265"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443936"
 ---
 # <a name="ad-fs-troubleshooting---sql-connectivity"></a>AD FS Устранение неполадок — подключение к SQL
 Службы федерации Active Directory предоставляет возможность использовать удаленный SQL Server для данных фермы AD FS.  Вы увидите проблемы, если серверы AD FS в ферме не может обмениваться данными с внутренними серверами SQL.  Следующий документ предоставит некоторых основных шага по тестированию обмен данными с внутренними серверами.
@@ -44,7 +44,7 @@ ms.locfileid: "59820265"
 ## <a name="use-sql-server-management-studio-to-test-connectivity"></a>Использовать для проверки подключения к SQL Server Management Studio
 Вы также можете [загрузить](https://go.microsoft.com/fwlink/?linkid=864329) и установите SSMS, чтобы проверить подключение к базе данных.
 
-###<a name="to-test-connectivity-with-ssms"></a>Чтобы проверить возможность подключения с помощью SSMS
+### <a name="to-test-connectivity-with-ssms"></a>Чтобы проверить возможность подключения с помощью SSMS
 1. Скачайте и установите SQL Server Management Studio.
 ![Установить](media/ad-fs-tshoot-sql/sql5.png)
 1. Откройте среду SSMS, введите имя сервера.  Источник данных выше.
@@ -55,4 +55,4 @@ ms.locfileid: "59820265"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Устранение неполадок AD FS](ad-fs-tshoot-overview.md)
+- [Устранение неполадок в AD FS](ad-fs-tshoot-overview.md)

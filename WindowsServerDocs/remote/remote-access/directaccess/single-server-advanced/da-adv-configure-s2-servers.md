@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 35afec8e-39a4-463b-839a-3c300ab01174
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0d51ac71fa2fbe4d0bb7121a9ef511524c47f4f4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: adcd13bda942b756a122e9642da795dd9c847bad
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826615"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446958"
 ---
 # <a name="step-2-configure-advanced-directaccess-servers"></a>Шаг 2 Настройка серверов DirectAccess с расширенными параметрами
 
@@ -30,7 +30,7 @@ ms.locfileid: "59826615"
 |----|--------|  
 |2.1. Установка роли удаленного доступа|Установите роль удаленного доступа.|  
 |2.2. Настройка типа развертывания|Настройте тип развертывания как DirectAccess и VPN, только DirectAccess или только VPN.|  
-|[Планирование развертывания DirectAccess с расширенными параметрами](Plan-an-Advanced-DirectAccess-Deployment.md)|Настройте сервер удаленного доступа с использованием групп безопасности, содержащими клиенты DirectAccess.|  
+|[Планирование расширенного развертывания DirectAccess](Plan-an-Advanced-DirectAccess-Deployment.md)|Настройте сервер удаленного доступа с использованием групп безопасности, содержащими клиенты DirectAccess.|  
 |2.4. Настройка сервера удаленного доступа|Настройте параметры сервера удаленного доступа.|  
 |2.5. Настройка серверов инфраструктуры|Настройте серверы инфраструктуры, используемые в организации.|  
 |2.6. Настройка серверов приложений|Настройте серверы приложений так, чтобы они требовали применения проверки подлинности и шифрования.|  
@@ -57,7 +57,7 @@ ms.locfileid: "59826615"
   
 6.  На странице **Ход установки** убедитесь в успешном завершении установки, а затем нажмите кнопку **Закрыть**.  
   
-![Ход выполнения успешной установки](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)****Windows PowerShell эквивалентные команды****  
+![Ход выполнения успешной установки](../../../media/Step-2-Configuring-DirectAccess-Servers/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -244,11 +244,11 @@ Set-DAClientExperienceConfiguration -FriendlyName 'Contoso DirectAccess Connecti
   
 ## <a name="BKMK_Links"></a>Предыдущий шаг  
   
--   [Шаг 1. Настраивать сложную инфраструктуру DirectAccess](da-adv-configure-s1-infrastructure.md)  
+-   [Шаг 1. Настройка расширенной инфраструктуры DirectAccess](da-adv-configure-s1-infrastructure.md)  
   
 ## <a name="next-step"></a>Дальнейшие действия  
   
--   [Шаг 3. Проверка развертывания](Step-3-Verify-the-Deployment.md)  
+-   [Шаг 3. Проверка развертывания](Step-3-Verify-the-Deployment.md)  
   
 
 

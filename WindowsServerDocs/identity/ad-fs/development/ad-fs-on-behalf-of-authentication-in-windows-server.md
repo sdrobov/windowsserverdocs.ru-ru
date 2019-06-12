@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f98141745cb5bc8355d1ad3c37e72b4710eb4fc9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 047f297cfaabff3cbbd45057a4198e2fd2e747de
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190617"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445448"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения, с помощью On-Behalf-Of (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -229,22 +229,24 @@ WebAPIOBO | Серверной части веб-api, который испол�
 * Добавьте следующий код в контроллер
 
 
-        using System;
-        using System.Collections.Generic;
-        using System.Linq;
-        using System.Net;
-        using System.Net.Http;
-        using System.Web.Http;
-        namespace WebAPIOBO.Controllers
+~~~
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net;
+    using System.Net.Http;
+    using System.Web.Http;
+    namespace WebAPIOBO.Controllers
+    {
+        public class WebAPIOBOController : ApiController
         {
-            public class WebAPIOBOController : ApiController
+            public IHttpActionResult Get()
             {
-                public IHttpActionResult Get()
-                {
-                    return Ok("WebAPI via OBO");
-                }
+                return Ok("WebAPI via OBO");
             }
         }
+    }
+~~~
 
 Этот код просто будет возвращать строку, если любой пользователь помещает запрос Get для WebAPIOBO веб-API
 
@@ -272,15 +274,14 @@ WebAPIOBO | Серверной части веб-api, который испол�
 * Откройте файл Web.config
 * Измените следующие разделы
 
-| Ключ | Значение |
-|:-----|:-------|
-|IDA: аудитории| Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, https://localhost:44321/|
-|IDA: ClientID| Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, https://localhost:44321/ </br>**Очень важно, ida: аудитории и ida: ClientID совпадали друг с другом**|
-|IDA: ClientSecret| Это секрет, созданный AD FS при настройке клиента ToDoListService в AD FS|
-|IDA: AdfsMetadataEndpoint| Это URL-адрес метаданных службы федерации Active Directory, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml|
-|IDA: OBOWebAPIBase| Это базовый адрес, который будет использоваться для вызова серверной части API, например https://localhost:44300|
-|IDA: центр| Это URL-адрес для службы AD FS, пример https://fs.anandmsft.com/adfs/|
-
+| Ключ                      | Значение                                                                                                                                                                                                                   |
+|:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| IDA: аудитории             | Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, https://localhost:44321/                                                                                         |
+| IDA: ClientID             | Идентификатор ToDoListService, предоставленное AD FS при настройке ToDoListService веб-API, например, <https://localhost:44321/> </br>**Очень важно, ida: аудитории и ida: ClientID совпадали друг с другом** |
+| IDA: ClientSecret         | Это секрет, созданный AD FS при настройке клиента ToDoListService в AD FS                                                                                                                   |
+| IDA: AdfsMetadataEndpoint | Это URL-адрес метаданных службы федерации Active Directory, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
+| IDA: OBOWebAPIBase        | Это базовый адрес, который будет использоваться для вызова серверной части API, например https://localhost:44300                                                                                                                     |
+| IDA: центр            | Это URL-адрес для службы AD FS, пример https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 Все другие ida: XXXXXXX ключи в **appsettings** узел может быть закомментирован или удален
 

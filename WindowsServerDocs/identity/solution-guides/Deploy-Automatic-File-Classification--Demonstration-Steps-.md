@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 77fb8cc6e13cb82e4d07808c3ae77757a4b2de79
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 8d1ea7a428b2d03649a7a9347421d717be3f468a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826785"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445831"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Развертывание автоматической классификации данных (поэтапная демонстрация)
 
@@ -30,11 +30,11 @@ ms.locfileid: "59826785"
   
 -   [Шаг 1. Создание определений свойств ресурсов](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [Шаг 2. Создание правила классификации строкового содержимого](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
+-   [Шаг 2. Создание правила классификации строкового содержимого](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
   
--   [Шаг 3. Создание правила классификации содержимого регулярного выражения](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
+-   [Шаг 3. Создание правила классификации содержимого регулярного выражения](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
--   [Шаг 4. Убедитесь, что классификации файлов](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
+-   [Шаг 4. Убедитесь, что классификации файлов](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
 > В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -56,7 +56,7 @@ ms.locfileid: "59826785"
   
 5.  Щелкните правой кнопкой мыши **Личные сведения** и выберите команду **Включить**.  
   
-![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell эквивалентные команды****  
+![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -107,7 +107,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 13. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell эквивалентные команды****  
+![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -155,7 +155,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 12. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)****Windows PowerShell эквивалентные команды****  
+![руководства по решениям](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -186,7 +186,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Сценарий: Получите представление о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
+-   [Сценарий. Получение четкого представления о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
 -   [Планирование автоматической классификации файлов](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 

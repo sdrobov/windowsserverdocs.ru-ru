@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 59958481a7c832aca7bc25d7d4d3ebbf4e8ef80c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b582334d7b79b2badbb86818be1093b6a5f55080
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835045"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440812"
 ---
 # <a name="tskill"></a>tskill
 
@@ -36,6 +36,7 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 ```
 
 ## <a name="parameters"></a>Параметры
+
 |Параметр|Описание|
 |-------|--------|
 |\<ProcessID >|Указывает идентификатор процесса, который необходимо завершить.|
@@ -47,19 +48,19 @@ tskill {<ProcessID> | <ProcessName>} [/server:<ServerName>] [/id:<SessionID> | /
 |/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
--   Можно использовать **tskill** до конца только те процессы, которые принадлежат вам, если вы являетесь администратором. Администраторы имеют полный доступ ко всем **tskill** функции и могут завершать процессы, работающие в других пользовательских сеансов.
--   Если завершить все процессы, запущенные в сеансе, сеанс завершен.
--   Если вы используете *ProcessName* и **/Server: *** ServerName* параметров, необходимо также указать **/id: *** SessionID* или **/a** параметра.
+- Можно использовать **tskill** до конца только те процессы, которые принадлежат вам, если вы являетесь администратором. Администраторы имеют полный доступ ко всем **tskill** функции и могут завершать процессы, работающие в других пользовательских сеансов.
+- Если завершить все процессы, запущенные в сеансе, сеанс завершен.
+- Если вы используете *ProcessName* и **/Server:** <em>ServerName</em> параметров, также необходимо указать либо **/id:**  <em>SessionID</em> или **/a** параметра.
 
 ## <a name="BKMK_examples"></a>Примеры
--   Чтобы завершить процесс 6543 введите:
-    ```
-    tskill 6543
-    ```
--   Чтобы завершить процесс «обозреватель», запущенный в сеансе 5, введите следующую команду:
-    ```
-    tskill explorer /id:5
-    ```
-#### <a name="additional-references"></a>Дополнительная справка
-[Синтаксис командной строки Key](command-line-syntax-key.md)
-[служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)
+- Чтобы завершить процесс 6543 введите:
+  ```
+  tskill 6543
+  ```
+- Чтобы завершить процесс «обозреватель», запущенный в сеансе 5, введите следующую команду:
+  ```
+  tskill explorer /id:5
+  ```
+  #### <a name="additional-references"></a>Дополнительная справка
+  [Синтаксис командной строки Key](command-line-syntax-key.md)
+  [служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)

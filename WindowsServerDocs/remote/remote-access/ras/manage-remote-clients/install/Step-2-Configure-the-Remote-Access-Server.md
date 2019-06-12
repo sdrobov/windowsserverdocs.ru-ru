@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c0257b98-5633-4264-9df6-b6ffae80592c
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a99a2667733c1a23bcba1134d59223044dc000b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 85bc7385fc3413bedb539cdbe9982b33dc653d6f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845535"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446888"
 ---
 # <a name="step-2-configure-the-remote-access-server"></a>Шаг 2 Настройка сервера удаленного доступа
 
@@ -62,7 +62,7 @@ ms.locfileid: "59845535"
   
 8.  В диалоговом окне **Ход установки** убедитесь в успешном завершении установки, а затем нажмите кнопку **Закрыть**.  
   
-![Windows PowerShell](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../../media/Step-2-Configure-the-Remote-Access-Server/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -206,7 +206,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 3. Проверка развертывания](Step-3-Verify-the-Deployment_2.md)  
+-   [Шаг 3. Проверка развертывания](Step-3-Verify-the-Deployment_2.md)  
   
   
 

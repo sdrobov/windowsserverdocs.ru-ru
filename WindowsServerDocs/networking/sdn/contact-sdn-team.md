@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
 ms.author: pashort
 author: kallie-b
-ms.openlocfilehash: ff102fc02208bc12b99b50c3b16e3dc51f397d76
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd67fe27c048a15903d18dca43cf331a025933b3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884495"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446379"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>Как связаться с рабочей группой Datacenter and Cloud Networking
 
@@ -37,8 +37,8 @@ Go [здесь](https://github.com/Microsoft/SDN/issues) для отправки
 Наши [документации по сетям контейнера](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) можно найти на [документы Microsoft (docs.microsoft.com)](https://docs.microsoft.com/), который имеет **встроенные функции комментирования**. Чтобы оставить или ответить на комментарий документации Майкрософт лишь войти в прокрутите вниз до нижней части страницы документы Microsoft, который необходимо сослаться, внести и отправить свой комментарий существует.
 
 > [Документация Microsoft](https://docs.microsoft.com/) — новый сайт единой документации корпорации Майкрософт. Хотя большинство нашей команды [документации SDN](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) остается на сайте TechNet, наши [документации по сетям контейнера](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) — теперь на сайте документации Майкрософт.
-
->*Как правило при запуске в раздел на сайте документации Майкрософт, sparks вопрос или оставляет вам кому требуются дополнительные, просто оставьте комментарий на этой странице, чтобы поделиться своим мнением с командой Майкрософт, которые могут помочь.*
+> 
+> *Как правило при запуске в раздел на сайте документации Майкрософт, sparks вопрос или оставляет вам кому требуются дополнительные, просто оставьте комментарий на этой странице, чтобы поделиться своим мнением с командой Майкрософт, которые могут помочь.*
 
 ## <a name="container-specific-forums"></a>Форумы конкретного контейнера
 Вы можете использовать любой способ на этой странице для предоставления отзыва, связанные с контейнерами и сетевые подключения контейнеров. Тем не менее если вы ищете основной форумах корпорации Майкрософт для сообщества контейнеров в частности, ссылаются на следующее:

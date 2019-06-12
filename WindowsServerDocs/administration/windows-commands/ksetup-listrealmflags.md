@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1bc4be8be747c31d60d75c90ad3aa831dd8dff93
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7db6caf4e63ea59fa40892679d3de0cfaca661e9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838305"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438025"
 ---
 # <a name="ksetuplistrealmflags"></a>ksetup:listrealmflags
 
@@ -50,7 +50,7 @@ ksetup /listrealmflags
 |0x08|NcSupported|Это область поддерживает канонизации имя, что DNS и сферы, стандарты именования.|
 |0x80|RC4|Это область поддерживает шифрование RC4 для включения доверительные отношения между сферами, который позволяет использовать TLS.|
 
-Флаги сферы хранятся в реестре в **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** сферы-name *. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
+Флаги сферы хранятся в реестре в **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\\** <em>имени области</em>. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
 
 ## <a name="BKMK_Examples"></a>Примеры
 
@@ -68,8 +68,8 @@ ksetup /setrealmflags CORP.CONTOSO.COM 0xF
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [ksetup:setrealmflags](ksetup-setrealmflags.md)
--   [ksetup:addrealmflags](ksetup-addrealmflags.md)
--   [ksetup:delrealmflags](ksetup-delrealmflags.md)
+-   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
+-   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
+-   [Ksetup:delrealmflags](ksetup-delrealmflags.md)
 -   [Ksetup](ksetup.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

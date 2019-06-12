@@ -8,12 +8,12 @@ ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 2a24ce3213b1aa1c66a438d278f7499b6d53bf6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2617c897ed2ea173d29fc7c4a87e52557154d463
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834355"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446993"
 ---
 # <a name="qos-policy-scenarios"></a>Сценарии политик качества обслуживания
 
@@ -189,7 +189,7 @@ ms.locfileid: "59834355"
   
 - Библиотека (глубина = 1)
   
- **Video.internal.Training.hr.MyCompany.com** имеет наивысший приоритет, и **selfguide.training.mycompany.com** следующий наибольший приоритет. **Обучение** и **библиотеки** имеют одинаковый низкий приоритет.  
+  **Video.internal.Training.hr.MyCompany.com** имеет наивысший приоритет, и **selfguide.training.mycompany.com** следующий наибольший приоритет. **Обучение** и **библиотеки** имеют одинаковый низкий приоритет.  
   
 ####  <a name="bkmk_QoS_UrlPort"></a> 3. URL-адрес порта
 

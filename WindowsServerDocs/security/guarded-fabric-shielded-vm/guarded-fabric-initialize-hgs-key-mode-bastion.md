@@ -7,20 +7,20 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9abbf85ef28ff20506558fba7dd3f5e5ee603a70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e785ee17bf68c07d965816480baa0d59062fc434
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447420"
 ---
 # <a name="initialize-the-hgs-cluster-using-key-mode-in-an-existing-bastion-forest"></a>Инициализировать HGS кластера с помощью режима клавиши в существующем лесу бастиона
 
->Относится к: Windows Server 2019
-
->[!div class="step-by-step"]
-[«Установка HGS в новом лесу](guarded-fabric-install-hgs-in-a-bastion-forest.md)
-[создать ключ узла»](guarded-fabric-create-host-key.md)
+> Относится к: Windows Server 2019
+> 
+> [!div class="step-by-step"]
+> [«Установка HGS в новом лесу](guarded-fabric-install-hgs-in-a-bastion-forest.md)
+> [создать ключ узла»](guarded-fabric-create-host-key.md)
 
 Доменные службы Active Directory устанавливается на компьютере, но должны оставаться ненастроенный.
 

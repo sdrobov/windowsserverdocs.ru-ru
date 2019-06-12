@@ -7,12 +7,12 @@ ms.assetid: 07691d5b-046c-45ea-8570-a0a85c3f2d22
 manager: dongill
 author: huu
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: c102fa0503e6aac279235e1243b55e0e3cf81e1d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0fb257f693cc27c0bc6dd18fc89e8dc6328ee638
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812415"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447339"
 ---
 # <a name="troubleshooting-using-the-guarded-fabric-diagnostic-tool"></a>Устранение неполадок с помощью средства диагностики защищенной структуры
 
@@ -156,9 +156,9 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 1. Запрос, запустить администратор каждого узла `Get-HgsTrace` указание известная `-Path` и список планируется выполнять к получаемые трассировки диагностики.  Пример:
 
- ```PowerShell
- Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
- ```
+   ```PowerShell
+   Get-HgsTrace -Path C:\Traces -Diagnostic Networking,BestPractices
+   ```
 2. Запрос, что администратор каждого узла в результате получается папка трассировки и отправить его вам.  Этот процесс может быть получена по электронной почте, через общие папки или любой другой механизм, на основе эксплуатационных процедурах, установленных в организации и политик.
 
 3. Объедините все полученные трассировки в одну папку, без содержимого или папки.
@@ -181,9 +181,9 @@ Get-HgsTrace -Target $hgs01,$hgs02,$gh01,$gh02 -RunDiagnostics
 
 4. Выполнение диагностики, указав путь к папке собранный трассировки на `-Path` параметра и указание `-RunDiagnostics` коммутатора, а также их диагностики, для которых задаваемые администраторов для сбора данных трассировки.  Диагностика предположит, его невозможно получить доступ к узлам найдена в пути и поэтому будет пытаться использовать только предварительно собранных трассировки.  Если отсутствует или поврежден, все трассировки диагностики только затронутые тесты со сбоем и продолжают выполнение.  Пример:
 
- ```PowerShell
- Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
- ```
+   ```PowerShell
+   Get-HgsTrace -RunDiagnostics -Diagnostic Networking,BestPractices -Path ".\FabricTraces"
+   ```
 
 ### <a name="mixing-saved-traces-with-additional-targets"></a>Смешивание сохранены трассировок с помощью дополнительных целевых платформ
 

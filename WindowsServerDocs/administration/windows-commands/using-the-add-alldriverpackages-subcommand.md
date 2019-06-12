@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c7a9e95ebd36209d5729f81b7eae9e2660b3606
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3f934d8c65da939fb60c564b375699f411b7c9ac
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440836"
 ---
 # <a name="using-the-add-alldriverpackages-subcommand"></a>С помощью подкоманды add-AllDriverPackages
 
@@ -34,12 +34,12 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 
 ## <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|/ FolderPath:\<путь к папке >|Указывает полный путь к папке, содержащей INF-файлов для пакетов драйверов.|
-|[/ Server:\<имя сервера >]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
-|[/ Архитектура: {x86 | IA64 | x64}]|Задает архитектуру для добавления пакетов драйверов. Пакеты драйверов, для других архитектур, игнорируются.|
-|[/ DriverGroup:\<имя группы >]|Указывает имя группы драйверов, к которому следует добавить пакеты.|
+|          Параметр           |                                                              Описание                                                              |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+|  / FolderPath:\<путь к папке >  |                      Указывает полный путь к папке, содержащей INF-файлов для пакетов драйверов.                      |
+|   [/ Server:\<имя сервера >]   | Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер. |
+|     [/ Архитектура: {x86      |                                                                 IA64                                                                  |
+| [/ DriverGroup:\<имя группы >] |                             Указывает имя группы драйверов, к которому следует добавить пакеты.                             |
 
 ## <a name="BKMK_examples"></a>Примеры
 
@@ -53,6 +53,6 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers\Printers" /DriverGro
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Добавить WdsDriverPackage](https://technet.microsoft.com/library/dn283440.aspx)

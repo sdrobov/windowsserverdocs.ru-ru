@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 3e6d67eee496d19b216a4366af51ab5736229cf0
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: e38c53c3458c3f66f24ea2ddaa66febf508c4568
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476144"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442456"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>Масштабируемый файловый сервер для обзора данных приложения
 
@@ -177,25 +177,25 @@ ms.locfileid: "65476144"
 <td>Управление файлами</td>
 <td>Перенаправление папок</td>
 <td>Да</td>
-<td>Не рекомендуется*</td>
+<td>не рекомендуется<em></td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Автономные файлы (кэширование на стороне клиента)</td>
 <td>Да</td>
-<td>Не рекомендуется*</td>
+<td>Не рекомендуется</em></td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Проверка перемещаемых профилей пользователей</td>
 <td>Да</td>
-<td>Не рекомендуется*</td>
+<td>не рекомендуется<em></td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Домашние каталоги</td>
 <td>Да</td>
-<td>Не рекомендуется*</td>
+<td>Не рекомендуется</em></td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
@@ -256,13 +256,13 @@ ms.locfileid: "65476144"
 <tbody>
 <tr class="odd">
 <td><a href="failover-clustering.md">Отказоустойчивая кластеризация</a></td>
-<td>Отказоустойчивые кластеры в добавлены следующие возможности в Windows Server 2012 для поддержки масштабируемого файлового сервера: Имя распределенной сети, тип ресурса масштабируемого файлового сервера, кластера Общие тома (CSV) 2 и роль высокой доступности масштабируемого файлового сервера. Дополнительные сведения об этих функциях см. в разделе <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">новые возможности отказоустойчивой кластеризации в Windows Server 2012 [перенаправление]</a>.</td>
+<td>Отказоустойчивые кластеры в добавлены следующие возможности в Windows Server 2012 для поддержки масштабируемого файлового сервера: Имя распределенной сети, тип ресурса масштабируемого файлового сервера, кластера Общие тома (CSV) 2 и роль высокой доступности масштабируемого файлового сервера. Дополнительные сведения об этих функциях см. в разделе <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">что&#39;s новые возможности отказоустойчивой кластеризации в Windows Server 2012 [перенаправление]</a>.</td>
 </tr>
 <tr class="even">
 <td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Протокол SMB</a></td>
 <td>В Windows Server 2012 для поддержки масштабируемого файлового сервера SMB 3.0 добавлены следующие возможности: прозрачную отработку отказа SMB, SMB Multichannel и SMB Direct.<br />
 <br />
-Дополнительные сведения о новых и измененных возможностях для SMB в Windows Server 2012 R2, см. в разделе <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">новые возможности SMB в Windows Server</a>.</td>
+Дополнительные сведения о новых и измененных возможностях для SMB в Windows Server 2012 R2, см. в разделе <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">что&#39;s новые возможности SMB в Windows Server</a>.</td>
 </tr>
 </tbody>
 </table>

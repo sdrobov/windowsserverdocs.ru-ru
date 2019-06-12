@@ -12,12 +12,12 @@ ms.assetid: 0c82a6cb-d652-429c-9c3d-0f568c78d54b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimps
-ms.openlocfilehash: 50151a322f1ccde2be927de31b0e5c30732b278e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 04fb86d813049dc5f0aa6d4fba51e45dccbd1b80
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813955"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440180"
 ---
 # <a name="wecutil"></a>wecutil
 
@@ -46,7 +46,7 @@ wecutil  [{es | enum-subscription}]
 |{es \| enum-subscription}|Отображает имена всех подписок на удаленные события, которые существуют.|
 |{gs \| get-subscription} \<Subid > [/ f:\<Формат >] [/ uni:\<Юникода >]|Отображает сведения о конфигурации удаленного подписки. \<Subid > — это строка, однозначно определяющее подписку. \<Subid > совпадает со значением строки, который был указан в \<SubscriptionId > тег XML-файла конфигурации, который использовался для создания подписки.|
 |{gr \| get-subscriptionruntimestatus} \<Subid > [\<Eventsource >...]|Отображает состояние среды выполнения подписки. \<Subid > — это строка, однозначно определяющее подписку. \<Subid > совпадает со значением строки, который был указан в \<SubscriptionId > тег XML-файла конфигурации, который использовался для создания подписки. \<Eventsource > представляет собой строку, идентифицирующую компьютер, который служит источником событий. \<Eventsource > должно быть полное доменное имя, NetBIOS-имя или IP-адресом.|
-|{ss \| set-subscription} \<Subid > [/ e: [\<Subenabled >]] [/ esa:\<адрес >] [/ ese: [\<Srcenabled >]] [/aes] [/ res] [/ отмены:\<имя пользователя >] [/ до:\< Пароль >] [/ d:\<Desc >] [/ uri:\<Uri >] [/ cm:\<Configmode >] [/ ex:\<Expires >] [/ вопрос\<запроса >] [/ dia:\<диалект >] [/ tn:\< Транспорта >] [/ tp:\<Transportport >] [/ dm:\<Deliverymode >] [/ dmi:\<Deliverymax >] [/ dmlt:\<Deliverytime >] [/ Здравствуйте:\<пульса >] [/ cf:\< Содержимого >] [/ l:\<локали >] [/ познакомила: [\<Readexist >]] [/ lf:\<файла журнала >] [/ pn:\<Publishername >] [/ essp:\<Enableport >] [/ hn:\< Имя узла >] [/ ct:\<тип >]</br>или диспетчер конфигурации служб</br>{ss \| /c: Выбор подписки\<Configfile > [/ cun:\<Comusername >/cup:\<Compassword >]|Изменяет конфигурацию подписки. Вы можете указать идентификатор подписки и соответствующие параметры для изменения параметров подписки, или можно указать XML-файл конфигурации для изменения параметров подписки.|
+|{ss \| set-subscription} \<Subid > [/ e: [\<Subenabled >]] [/ esa:\<адрес >] [/ ese: [\<Srcenabled >]] [/aes] [/ res] [/ отмены:\<имя пользователя >] [/ до:\< Пароль >] [/ d:\<Desc >] [/ uri:\<Uri >] [/ cm:\<Configmode >] [/ ex:\<Expires >] [/ вопрос\<запроса >] [/ dia:\<диалект >] [/ tn:\< Транспорта >] [/ tp:\<Transportport >] [/ dm:\<Deliverymode >] [/ dmi:\<Deliverymax >] [/ dmlt:\<Deliverytime >] [/ Здравствуйте:\<пульса >] [/ cf:\< Содержимого >] [/ l:\<локали >] [/ познакомила: [\<Readexist >]] [/ lf:\<файла журнала >] [/ pn:\<Publishername >] [/ essp:\<Enableport >] [/ hn:\< Имя узла >] [/ ct:\<тип >]</br>или</br>{ss \| /c: Выбор подписки\<Configfile > [/ cun:\<Comusername >/cup:\<Compassword >]|Изменяет конфигурацию подписки. Вы можете указать идентификатор подписки и соответствующие параметры для изменения параметров подписки, или можно указать XML-файл конфигурации для изменения параметров подписки.|
 |{cs \| создания подписки} \<Configfile > [/ cun:\<имя пользователя >/cup:\<пароль >]|Создает подписку на удаленном. \<ConfigFile > указывает путь к XML-файле, который содержит настройки подписки. Путь может быть абсолютным или относительным для текущего каталога.|
 |{доменных служб Active Directory \| delete-subscription} \<Subid >|Удаляется подписка и Отмена подписки из всех источников событий, которые передают события в журнале событий для подписки. Уже получили и в журнал событий не удаляются. \<Subid > — это строка, однозначно определяющее подписку. \<Subid > совпадает со значением строки, который был указан в \<SubscriptionId > тег XML-файла конфигурации, который использовался для создания подписки.|
 |{rs \| повторных попыток subscription} \<Subid > [\<Eventsource >...]|Предпринимает попытку установить подключение и отправку запроса на удаленную подписку неактивная подписка. Пытается повторно активировать всех источников событий или указанных источников событий. Отключенные источники не производятся. \<Subid > — это строка, однозначно определяющее подписку. \<Subid > совпадает со значением строки, который был указан в \<SubscriptionId > тег XML-файла конфигурации, который использовался для создания подписки. \<Eventsource > представляет собой строку, идентифицирующую компьютер, который служит источником событий. \<Eventsource > должно быть полное доменное имя, NetBIOS-имя или IP-адресом.|
@@ -94,32 +94,32 @@ wecutil  [{es | enum-subscription}]
 > [!IMPORTANT]
 > Если появится сообщение «сервер RPC недоступен? При попытке запуска wecutil, необходимо запустить службу сбора событий Windows (wecsvc). Чтобы начать wecsvc, в командной строке с повышенными введите net запустите wecsvc.
 
--   В следующем примере показано содержимое файла конфигурации:  
-    ```
-    <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
-    <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
-    <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
-    <ConfigurationMode>Normal</ConfigurationMode>
-    <Description>Forward Sample Subscription</Description>
-    <SubscriptionId>SampleSubscription</SubscriptionId>
-    <Query><![CDATA[
-    <QueryList>
-    <Query Path="Application">
-    <Select>*</Select>
-    </Query>
-    </QueryList>
-    ]]></Query>
-    <EventSources>
-    <EventSource Enabled="true">
-    <Address>mySource.myDomain.com</Address>
-    <UserName>myUserName</UserName>
-    <Password>*</Password>
-    </EventSource>
-    </EventSources>
-    <CredentialsType>Default</CredentialsType>
-    <Locale Language="EN-US"></Locale>
-    </Subscription>
-    ```
+- В следующем примере показано содержимое файла конфигурации:  
+  ```
+  <Subscription xmlns="https://schemas.microsoft.com/2006/03/windows/events/subscription">
+  <Uri>https://schemas.microsoft.com/wbem/wsman/1/windows/EventLog</Uri>
+  <!-- Use Normal (default), Custom, MinLatency, MinBandwidth -->
+  <ConfigurationMode>Normal</ConfigurationMode>
+  <Description>Forward Sample Subscription</Description>
+  <SubscriptionId>SampleSubscription</SubscriptionId>
+  <Query><![CDATA[
+  <QueryList>
+  <Query Path="Application">
+  <Select>*</Select>
+  </Query>
+  </QueryList>
+  ]]></Query>
+  <EventSources>
+  <EventSource Enabled="true">
+  <Address>mySource.myDomain.com</Address>
+  <UserName>myUserName</UserName>
+  <Password>*</Password>
+  </EventSource>
+  </EventSources>
+  <CredentialsType>Default</CredentialsType>
+  <Locale Language="EN-US"></Locale>
+  </Subscription>
+  ```
 
 ## <a name="BKMK_examples"></a>Примеры
 
@@ -166,4 +166,4 @@ wecutil ds sub1
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

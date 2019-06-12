@@ -8,12 +8,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
-ms.openlocfilehash: 0421faaa910a1d679d809b88c0b4d2c94ba694b3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2e2e4975c4ab9ebb7ec68834f380255292426393
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852475"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447223"
 ---
 # <a name="running-data-deduplication"></a>Выполнение дедупликации данных
 
@@ -49,10 +49,10 @@ Start-DedupJob -Type Optimization -Volume <Your-Volume-Here> -Memory 100 -Cores 
 
 Одним из индикаторов сбоя при выполнении [задания оптимизации](understand.md#job-info-optimization) является снижение скорости оптимизации. Оно может означать, что задания оптимизации не могут своевременно обрабатывать все изменения или обновления. Вы можете проверить скорость оптимизации командлетом PowerShell [`Get-DedupStatus`](https://technet.microsoft.com/library/hh848437.aspx).
 
-> [!Important]  
+> [!Important]
 > `Get-DedupStatus` содержит два поля, имеющие отношение к скоростью оптимизации: `OptimizedFilesSavingsRate` и `SavingsRate`. Для отслеживания важны оба этих поля, но каждое из них имеет уникальное значение.
-- `OptimizedFilesSavingsRate` применяется только к файлам, которые являются «в политике» для оптимизации (`space used by optimized files after optimization / logical size of optimized files`).
-- `SavingsRate` применяется ко всему тому (`space used by optimized files after optimization / total logical size of the optimization`).
+> - `OptimizedFilesSavingsRate` применяется только к файлам, которые являются «в политике» для оптимизации (`space used by optimized files after optimization / logical size of optimized files`).
+> - `SavingsRate` применяется ко всему тому (`space used by optimized files after optimization / total logical size of the optimization`).
 
 ## <a id="disabling-dedup"></a>Отключение дедупликации данных
 Чтобы отключить дедупликацию данных, запустите [задание отмены оптимизации](understand.md#job-info-unoptimization). Чтобы отменить оптимизацию тома, выполните следующую команду:

@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 10/22/2018
-ms.openlocfilehash: a89337457cc71ffee78e3f73fecc2262f1fb38e9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c0741845bdbd8bfbea00df21d1fe810a27fc6a3b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855205"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443860"
 ---
 # <a name="configure-additional-hgs-nodes"></a>Настройка дополнительных узлов HGS
 
@@ -28,7 +28,7 @@ ms.locfileid: "59855205"
 |Новый лес HGS  | [С помощью PFX-файлы](#dedicated-hgs-forest-with-pfx-certificates) | [С использованием отпечатков сертификатов](#dedicated-hgs-forest-with-certificate-thumbprints) |
 |Существующий лес бастиона |  [С помощью PFX-файлы](#existing-bastion-forest-with-pfx-certificates) | [С использованием отпечатков сертификатов](#existing-bastion-forest-with-certificate-thumbprints) |
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Убедитесь, что каждый дополнительный узел: 
 - С той же конфигурацией оборудования и программного обеспечения, что и основной узел 
@@ -151,6 +151,6 @@ HGS всегда будет предоставлять портов HTTP и HTTP
 
 ## <a name="next-step"></a>Дальнейшие действия
 
->[!div class="nextstepaction"]
-[Проверка конфигурации HGS](guarded-fabric-verify-hgs-configuration.md)
+> [!div class="nextstepaction"]
+> [Проверка конфигурации HGS](guarded-fabric-verify-hgs-configuration.md)
 
