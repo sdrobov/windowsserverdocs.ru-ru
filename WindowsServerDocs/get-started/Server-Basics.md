@@ -10,23 +10,23 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 71b56a0bc4f53879ebaf3610f60dded39484375b
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: e7ff669b1a1ca3bed5d7c827c40bc46e81ea3f02
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222355"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810597"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Начало работы с Windows Server2016
 
 >Область применения. Windows Server 2016
 
->[!TIP]
+> [!TIP]
 > Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 ![Значок, указывающий поле с флажком](../media/landing-icons/getstarted.png) эта коллекция содержит подробные сведения, помогающие определить, если вы готовы перейти на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server2016, вы можете вернуться в главный центр [Windows Server2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
 
->[!Note]
+> [!Note]
 > Чтобы скачать Windows Server 2016, см. статью [Ознакомительные версии Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
 

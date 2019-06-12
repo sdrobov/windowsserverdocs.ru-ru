@@ -14,12 +14,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a8c6d5fa-399b-4823-8f10-affec1bbfe65
 ms.localizationpriority: medium
-ms.openlocfilehash: 601261780f64a779d0aa43ea8d14f58fdcb5f502
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 571af5a50618db285aecbf26573ba52a6aec1101
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453111"
 ---
 # <a name="remote-desktop-services---planning-poster"></a>Службы удаленных рабочих столов: плакат о планировании
 
@@ -27,7 +27,7 @@ ms.locfileid: "59874145"
 
 Группа служб удаленных рабочих столов создала платка, который помогает планировать, создавать и запускать среду служб удаленных рабочих столов.
 
-![Плакат служб удаленных рабочих столов](.\media\rds-poster-download.png)
+![Плакат служб удаленных рабочих столов](./media/rds-poster-download.png)
 
 Вы можете получить копию плаката, щелкнув изображение правой кнопкой мыши и сохранив его в локальной системе.
 

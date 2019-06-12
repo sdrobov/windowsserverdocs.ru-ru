@@ -7,12 +7,12 @@ ms.topic: article
 author: johnmarlin-msft
 ms.date: 03/07/2019
 description: В этой статье описаны уровни сходства и antiAffinity кластера отработки отказа
-ms.openlocfilehash: a38d53f6aed1ca634d41822f4486779f6d279ec0
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 67929e6d3399633ebfec0b908463131973aecaf7
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476053"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453036"
 ---
 # <a name="cluster-affinity"></a>Сходство кластера
 
@@ -69,7 +69,7 @@ ms.locfileid: "65476053"
 
 Если они заданы, группе сможет одновременно подключиться к сети.  Если они установлены на одном узле, это отображается в диспетчере отказоустойчивости кластеров.
 
-![Сходство кластера](media\Cluster-Affinity\Cluster-Affinity-1.png)
+![Сходство кластера](media/Cluster-Affinity/Cluster-Affinity-1.png)
 
 В PowerShell групп списка, в котором будет видеть это:
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09b2ffabcea414dd4717a2ffa1f6e860a17f3653
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2ac602506960b92333750e7a37692c44c92aae22
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871705"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440274"
 ---
 # <a name="wbadmin-start-backup"></a>начало архивации WBADMIN
 
@@ -87,27 +87,27 @@ Wbadmin start backup
 В следующих примерах показывается как **архивации wbadmin start** команда может использоваться в различных сценариях резервного копирования:
 
 Сценарий #1
--   Создайте резервную копию тома e:, d:\mountpoint, и \\ \\? \Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
--   Сохранить резервную копию для тома f:
-```
-wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-# Сценария 2
--   Выполните резервное копирование одноразовый *f:\folder1* и *h:\folder2* том *d:*.
--   Резервное копирование состояния системы
--   Создайте резервную копию таким образом, чтобы не влияет на запланированное разностной резервной копии.
-```
-wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
-```
-Сценарий #3
--   Выполните резервное копирование одноразовый *d:\folder1* , необходимо архивировать нерекурсивно.
--   Создать резервную копию папки к сетевому расположению  *\\ \\backupshare\backup1*
--   Ограничение доступа к резервной копии к членам **Администраторы** или **операторы архива** группы.
-```
-wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
-```
+- Создайте резервную копию тома e:, d:\mountpoint, и \\ \\? \Volume{cc566d14-4410-11d9-9d93-806e6f6e6963}
+- Сохранить резервную копию для тома f:
+  ```
+  wbadmin start backup -backupTarget:f: -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  # Сценария 2
+- Выполните резервное копирование одноразовый *f:\folder1* и *h:\folder2* том *d:* .
+- Резервное копирование состояния системы
+- Создайте резервную копию таким образом, чтобы не влияет на запланированное разностной резервной копии.
+  ```
+  wbadmin start backup –backupTarget:d: -include:g\folder1,h:\folder2 –systemstate -vsscopy
+  ```
+  Сценарий #3
+- Выполните резервное копирование одноразовый *d:\folder1* , необходимо архивировать нерекурсивно.
+- Создать резервную копию папки к сетевому расположению  *\\ \\backupshare\backup1*
+- Ограничение доступа к резервной копии к членам **Администраторы** или **операторы архива** группы.
+  ```
+  wbadmin start backup –backupTarget: \\backupshare\backup1 -noinheritacl -nonrecurseinclude:d:\folder1
+  ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [WBADMIN](wbadmin.md)

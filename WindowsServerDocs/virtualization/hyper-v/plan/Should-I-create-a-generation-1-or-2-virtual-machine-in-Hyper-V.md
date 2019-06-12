@@ -11,12 +11,12 @@ ms.assetid: 02e31413-6140-4723-a8d6-46c7f667792d
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: e3c88ef5ee700bb3906746402bf6cc8916976800
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 95ececde8a1b8c591ea2baf367a93f63ee55a6e3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192766"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811983"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>Следует ли создавать виртуальные машины поколения 1 или 2 в Hyper-V?
 
@@ -35,25 +35,25 @@ ms.locfileid: "66192766"
 
 Создание виртуальной машины после ее создания изменить нельзя. Таким образом мы рекомендуем, что вы изучите вопросы здесь, а также выбрать операционную систему, метод загрузки и функции, которые вы хотите использовать, прежде чем выбрать поколение.  
 
-## <a name="BKMK_OS"></a>Какие гостевые операционные системы поддерживаются?
+## <a name="which-guest-operating-systems-are-supported"></a>Какие гостевые операционные системы поддерживаются?
 
 Виртуальные машины поколения 1 поддерживают большинство гостевых операционных систем. Виртуальные машины поколения 2 поддерживают наиболее 64-разрядных версиях Windows, а также более текущие версии операционных систем Linux и FreeBSD. Поколение виртуальной машины, поддерживает гостевой операционной системы, который вы хотите установить, следуйте приведенным ниже.  
 
-- [Поддержка гостевых операционных систем Windows](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Windows)  
+- [Поддержка гостевых операционных систем Windows](#windows-guest-operating-system-support)  
 
-- [CentOS и Red Hat Enterprise Linux поддержка гостевых операционных систем](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_CentOS)  
+- [CentOS и Red Hat Enterprise Linux поддержка гостевых операционных систем](#centos-and-red-hat-enterprise-linux-guest-operating-system-support)  
 
-- [Поддержка Debian гостевых операционных систем](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Debian)  
+- [Поддержка Debian гостевых операционных систем](#debian-guest-operating-system-support)  
 
-- [Поддержка гостевых операционных систем FreeBSD](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_FreeBSD)  
+- [Поддержка гостевых операционных систем FreeBSD](#freebsd-guest-operating-system-support)  
 
-- [Поддержка гостевых операционных систем Oracle Linux](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Oracle)  
+- [Поддержка гостевых операционных систем Oracle Linux](#oracle-linux-guest-operating-system-support)  
 
-- [Поддержка гостевых операционных систем SUSE](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_SUSE)  
+- [Поддержка гостевых операционных систем SUSE](#suse-guest-operating-system-support)  
 
-- [Поддержка гостевых операционных систем Ubuntu](Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md#BKMK_Ubuntu)  
+- [Поддержка гостевых операционных систем Ubuntu](#ubuntu-guest-operating-system-support)  
 
-### <a name="BKMK_Windows"></a>Поддержка гостевых операционных систем Windows
+### <a name="windows-guest-operating-system-support"></a>Поддержка гостевых операционных систем Windows
 
 В следующей таблице показаны 64-разрядных версиях Windows можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.  
 
@@ -79,7 +79,7 @@ ms.locfileid: "66192766"
 |Windows 8|&#10004;| &#10006;|  
 |Windows 7|&#10004;| &#10006;|  
 
-### <a name="BKMK_CentOS"></a>CentOS и Red Hat Enterprise Linux поддержка гостевых операционных систем
+### <a name="centos-and-red-hat-enterprise-linux-guest-operating-system-support"></a>CentOS и Red Hat Enterprise Linux поддержка гостевых операционных систем
 
 В следующей таблице показано, какие версии Red Hat Enterprise Linux \(RHEL\) и CentOS можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.
 
@@ -91,7 +91,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [CentOS и Red Hat Enterprise Linux виртуальных машин в Hyper-V](../Supported-CentOS-and-Red-Hat-Enterprise-Linux-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Debian"></a>Поддержка Debian гостевых операционных систем  
+### <a name="debian-guest-operating-system-support"></a>Поддержка Debian гостевых операционных систем  
 
 В следующей таблице показаны, какие версии Debian можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.
 
@@ -102,7 +102,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [виртуальные машины Debian на узле Hyper-V](../Supported-Debian-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_FreeBSD"></a>Поддержка гостевых операционных систем FreeBSD
+### <a name="freebsd-guest-operating-system-support"></a>Поддержка гостевых операционных систем FreeBSD
 
 В следующей таблице показаны, какие версии FreeBSD можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.  
 
@@ -114,7 +114,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [виртуальные машины FreeBSD в Hyper-V](../Supported-FreeBSD-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Oracle"></a>Поддержка гостевых операционных систем Oracle Linux  
+### <a name="oracle-linux-guest-operating-system-support"></a>Поддержка гостевых операционных систем Oracle Linux  
 
 В следующей таблице показаны, какие версии серии совместимый ядро Red Hat может служить гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.  
 
@@ -133,7 +133,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [виртуальные машины Oracle Linux в Hyper-V](../Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_SUSE"></a>Поддержка гостевых операционных систем SUSE
+### <a name="suse-guest-operating-system-support"></a>Поддержка гостевых операционных систем SUSE
 
 В следующей таблице показаны, какие версии SUSE можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.
 
@@ -145,7 +145,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [виртуальные машины SUSE в Hyper-V](../Supported-SUSE-virtual-machines-on-Hyper-V.md).  
 
-### <a name="BKMK_Ubuntu"></a>Поддержка гостевых операционных систем Ubuntu
+### <a name="ubuntu-guest-operating-system-support"></a>Поддержка гостевых операционных систем Ubuntu
 
 В следующей таблице показаны, какие версии Ubuntu можно использовать в качестве гостевой операционной системы для поколения 1 и поколения 2 виртуальных машин.
 
@@ -156,7 +156,7 @@ ms.locfileid: "66192766"
 
 Дополнительные сведения см. в разделе [Ubuntu виртуальных машин в Hyper-V](../Supported-Ubuntu-virtual-machines-on-Hyper-V.md).  
 
-## <a name="BKMK_Boot"></a>Как загрузку виртуальной машины?
+## <a name="how-can-i-boot-the-virtual-machine"></a>Как загрузку виртуальной машины?
 
 В следующей таблице показаны методы поддерживаются поколения 2 виртуальных машинах поколения 1 и загрузки.  
 
@@ -168,7 +168,7 @@ ms.locfileid: "66192766"
 |Загрузка с виртуального жесткого диска контроллера IDE с номером (. Виртуальный жесткий ДИСК) или виртуальный DVD-диска (. ISO)|&#10004;| &#10006;|  
 |Загрузки с дискеты (. VFD)|&#10004;| &#10006;|  
 
-## <a name="BKMK_Advantages"></a>Каковы преимущества использования виртуальных машин поколения 2?
+## <a name="what-are-the-advantages-of-using-generation-2-virtual-machines"></a>Каковы преимущества использования виртуальных машин поколения 2?
 
 Ниже приведены некоторые из преимуществ, получаемых при использовании виртуальной машины поколения 2.  
 - **Безопасная загрузка** это функция, который проверяет, загрузчик подписан доверенным центром сертификации на базе UEFI избежание несанкционированного встроенного по, операционных систем или драйверов UEFI во время запуска системы. В виртуальных машинах поколения 2 безопасная загрузка включена по умолчанию. Если необходимо запустить гостевой операционной системе, которая не поддерживается в безопасной загрузки, можно отключить его после создания виртуальной машины.  Дополнительные сведения см. в статье [Безопасная загрузка](https://technet.microsoft.com/library/dn486875.aspx).  
@@ -177,9 +177,9 @@ ms.locfileid: "66192766"
 
 - **Большего размера загрузочного тома** максимальное загрузочный том для виртуальных машин поколения 2 — 64 ТБ. Это максимальный размер, поддерживаемый. VHDX. Для виртуальных машин поколения 1, максимальное загрузочного тома составляет 2 ТБ для. Vhdx-файлы и 2 040 ГБ для. ВИРТУАЛЬНЫЙ ЖЕСТКИЙ ДИСК. Дополнительные сведения см. в разделе [Hyper-V Virtual Hard Disk Format Overview](https://technet.microsoft.com/library/hh831446.aspx).  
 
- Также можно заметить небольшое увеличение времени загрузки и установки виртуальной машины с виртуальными машинами поколения 2.
+  Также можно заметить небольшое увеличение времени загрузки и установки виртуальной машины с виртуальными машинами поколения 2.
 
-## <a name="BKMK_DeviceCompare"></a> В чем разница в поддержке устройств?
+## <a name="whats-the-difference-in-device-support"></a>В чем разница в поддержке устройств?
 
 В следующей таблице сравниваются устройств, доступных между поколения 1 и виртуальные машины поколения 2.  
 
@@ -200,7 +200,7 @@ ms.locfileid: "66192766"
 |Программируемый интервальный таймер (PIT)|Больше не требуется|Н/Д|  
 |Устройство Super I/O|Больше не требуется|Н/Д|  
 
-## <a name="BKMK_More"></a> Сведения о виртуальных машинах поколения 2
+## <a name="more-about-generation-2-virtual-machines"></a>Сведения о виртуальных машинах поколения 2
 
 Ниже приведены некоторые дополнительные советы по использованию виртуальных машин поколения 2.
 
@@ -230,7 +230,7 @@ ms.locfileid: "66192766"
 Set-VMFirmware -VMName TestVM -IPProtocolPreference IPv6  
 ```  
 
-## <a name="BKMK_Debug"></a>Добавить Последовательный порт для отладки на уровне ядра
+## <a name="add-a-com-port-for-kernel-debugging"></a>Добавить Последовательный порт для отладки на уровне ядра
 
 COM-порты не доступны в виртуальных машинах поколения 2, пока не будут добавлены. Это можно сделать с помощью Windows PowerShell или инструментария управления Windows (WMI). Ниже показано, как это сделать с помощью Windows PowerShell.
 

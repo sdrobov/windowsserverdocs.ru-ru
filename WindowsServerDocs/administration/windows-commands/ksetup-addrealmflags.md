@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bbc878bd0ee25ad92c640710ab6b46bbc0eaf62a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f097fc8268976cf038523de0d5fa33c1dd3c6901
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827685"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438037"
 ---
 # <a name="ksetupaddrealmflags"></a>ksetup:addrealmflags
 
@@ -52,7 +52,7 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |0x08|NcSupported|Это область поддерживает канонизации имя, что DNS и сферы, стандарты именования.|
 |0x80|RC4|Это область поддерживает шифрование RC4 для включения доверительные отношения между сферами, который позволяет использовать TLS.|
 
-Флаги сферы хранятся в разделе реестра **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\*** сферы-name*. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
+Флаги сферы хранятся в разделе реестра **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa\Kerberos\Domains\\** <em>имени области</em>. Эта запись не существует в реестре по умолчанию. Можно использовать [Ksetup:addrealmflags](ksetup-addrealmflags.md) команду, чтобы добавить в реестр.
 
 Можно узнать, какие флаги сферы доступны и установить, просмотрев выходные данные ksetup или ksetup /dumpstate.
 
@@ -70,11 +70,11 @@ ksetup /setrealmflags CONTOSO ncsupported delegate
 ```
 ksetup /addrealmflags CONTOSO SendAddress
 ```
-Запустите **ksetup** команду, чтобы проверить, что флаг сферы, просматривая выходные данные и ищет **флаги сферы =**.
+Запустите **ksetup** команду, чтобы проверить, что флаг сферы, просматривая выходные данные и ищет **флаги сферы =** .
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [ksetup:listrealmflags](ksetup-listrealmflags.md)
--   [ksetup:setrealmflags](ksetup-setrealmflags.md)
--   [ksetup:delrealmflags](ksetup-delrealmflags.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
+-   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
+-   [Ksetup:delrealmflags](ksetup-delrealmflags.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

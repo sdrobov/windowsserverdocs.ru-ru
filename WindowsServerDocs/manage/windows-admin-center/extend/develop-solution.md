@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: ed5ecddbaef91f127846825e408a9a6ec65ff741
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 268a7d2833f73e9fab006501e9b3dc261d1b1d9e
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825475"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452576"
 ---
 # <a name="develop-a-solution-extension"></a>Разработка расширения решения
 
@@ -71,10 +71,10 @@ npm install
 
 Теперь, когда вы создали расширение с помощью интерфейса командной строки Windows Admin Center, все готово для настройки содержимого.  Примеры см. в этих руководствах того, что можно сделать:
 
-- Добавление [пустого модуля](guides\add-module.md)
-- Добавление [iFrame](guides\add-iframe.md)
-- Создание [пользовательского подключения поставщика](guides\create-connection-provider.md)
-- Изменить [корневой поведение навигации](guides\modify-root-navigation.md)
+- Добавление [пустого модуля](guides/add-module.md)
+- Добавление [iFrame](guides/add-iframe.md)
+- Создание [пользовательского подключения поставщика](guides/create-connection-provider.md)
+- Изменить [корневой поведение навигации](guides/modify-root-navigation.md)
  
 Даже Дополнительные примеры можно найти наших [сайт GitHub пакета SDK](https://aka.ms/wacsdk):
 -  [Средства разработчика](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) — это полнофункциональное расширение, которое может быть неопубликованных в Windows Admin Center и содержит широкий набор примеров образец функциональные возможности и средства, которые можно просматривать и использовать в свое собственное расширение.

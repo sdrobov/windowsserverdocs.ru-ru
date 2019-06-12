@@ -7,16 +7,16 @@ ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 ms.date: 03/27/2018
-ms.openlocfilehash: 60dacf63f1a355b961f84169060dbd7122a6fd32
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f56c036768de7c1afcf3327135a7ff7d7a690a8b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842735"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440144"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>Последовательное обновление ОС кластера
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 Последовательного обновления кластерной ОС позволяет администратору обновлять ОС узлов кластера, не останавливая рабочие нагрузки Scale-Out File Server или Hyper-V. Благодаря этой функции можно избежать штрафов за простои, которые полагаются согласно соглашениям об уровне обслуживания.
 
@@ -226,12 +226,12 @@ ms.locfileid: "59842735"
         ![Отображает выходные данные командлета Get-VMHostSupportedVersion снимке экрана](media/Cluster-Operating-System-Rolling-Upgrade/Clustering_GetVMHostSupportVersion.png)  
         **Рис. 21. Просмотр версии конфигурации виртуальной Машины Hyper-V, поддерживаемые основным приложением**  
 
-   3.  На каждом узле узла Hyper-V в кластере, можно обновить версии конфигурации виртуальной Машины Hyper-V с запланировать период обслуживания, краткое с пользователями, резервное копирование, если выключить виртуальные машины и запустить [ `Update-VMVersion` ](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) командлет (см. Рис. 22). Это обновление версии виртуальной машины и включение новых функций Hyper-V, устраняя необходимость в будущие обновления компонентов интеграции Hyper-V (IC). Этот командлет можно запускать из узла Hyper-V, на котором размещается на виртуальной Машине или `-ComputerName` параметра можно удаленно обновить версию виртуальной Машины. В этом примере здесь мы обновить версию конфигурации VM1 из 5.0 до 7.0, чтобы воспользоваться преимуществами множество новых функций Hyper-V, связанный с этой версии конфигурации виртуальной Машины, такие как рабочие контрольные точки (согласованные приложений резервные копии) и двоичные виртуальной Машины файл конфигурации.  
+   3. На каждом узле узла Hyper-V в кластере, можно обновить версии конфигурации виртуальной Машины Hyper-V с запланировать период обслуживания, краткое с пользователями, резервное копирование, если выключить виртуальные машины и запустить [ `Update-VMVersion` ](https://docs.microsoft.com/powershell/module/hyper-v/Update-VMVersion?view=win10-ps) командлет (см. Рис. 22). Это обновление версии виртуальной машины и включение новых функций Hyper-V, устраняя необходимость в будущие обновления компонентов интеграции Hyper-V (IC). Этот командлет можно запускать из узла Hyper-V, на котором размещается на виртуальной Машине или `-ComputerName` параметра можно удаленно обновить версию виртуальной Машины. В этом примере здесь мы обновить версию конфигурации VM1 из 5.0 до 7.0, чтобы воспользоваться преимуществами множество новых функций Hyper-V, связанный с этой версии конфигурации виртуальной Машины, такие как рабочие контрольные точки (согласованные приложений резервные копии) и двоичные виртуальной Машины файл конфигурации.  
 
-        ![Снимке экрана, показывающий командлет Update-VMVersion в действии](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
-        **Рис. 22. Обновление версии виртуальной Машины с помощью командлета PowerShell Update-VMVersion**  
+       ![Снимке экрана, показывающий командлет Update-VMVersion в действии](media/Cluster-Operating-System-Rolling-Upgrade/Cluster_RollingUpgrade_StopVM.png)  
+       **Рис. 22. Обновление версии виртуальной Машины с помощью командлета PowerShell Update-VMVersion**  
 
-4.  Пулы носителей можно обновить с помощью [Update-StoragePool](https://docs.microsoft.com/powershell/module/storage/Update-StoragePool?view=win10-ps) командлет PowerShell: Эта операция выполняется в сети.  
+6. Пулы носителей можно обновить с помощью [Update-StoragePool](https://docs.microsoft.com/powershell/module/storage/Update-StoragePool?view=win10-ps) командлет PowerShell: Эта операция выполняется в сети.  
 
 Несмотря на то, что мы ожидаем от сценарии частного облака, в частности Hyper-V и кластеров масштабируемого файлового сервера, которые могут обновляться без простоев, процесс последовательного обновления кластерной ОС можно использовать для любой роли кластера.  
 
@@ -278,6 +278,6 @@ ms.locfileid: "59842735"
     Да, можно автоматизировать процесс последовательного обновления кластерной ОС, с помощью VMM в System Center 2016.  
 
 ## <a name="see-also"></a>См. также  
--   [Заметки о выпуске: Важные проблемы в Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
--   [Новые возможности в Windows Server 2016](../get-started/What-s-New-in-windows-server-2016.md)  
+-   [Заметки о выпуске. Важные проблемы в Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
+-   [Что нового в Windows Server 2016?](../get-started/What-s-New-in-windows-server-2016.md)  
 -   [Новые возможности отказоустойчивой кластеризации в Windows Server](whats-new-in-failover-clustering.md)  

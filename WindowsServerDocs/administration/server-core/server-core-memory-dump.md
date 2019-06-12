@@ -7,12 +7,12 @@ ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 10/17/2017
-ms.openlocfilehash: bd22378ec7ce5a1ff4e39546246e6e85ca859c45
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 235df6f681de51a12f82b9fad019dd2db45fd486
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828845"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435548"
 ---
 # <a name="configure-memory-dump-files-for-server-core-installation"></a>Настройка файлов дампа памяти для установки основных серверных компонентов
 
@@ -39,7 +39,7 @@ wmic computersystem set AutomaticManagedPagefile=False
 3. Нажмите кнопку **изменить > New > строковое значение**.
 4. Укажите новое значение **DedicatedDumpFile**, и нажмите клавишу ВВОД.
 5. Щелкните правой кнопкой мыши **DedicatedDumpFile**, а затем нажмите кнопку **изменить**.
-6. В **значение** тип  **\<диска\>:\\\<Dedicateddumpfile.sys\>**, а затем нажмите кнопку **ОК**.
+6. В **значение** тип  **\<диска\>:\\\<Dedicateddumpfile.sys\>** , а затем нажмите кнопку **ОК**.
 
    >[!NOTE] 
    > Замените \<диск\> с на диск, который имеет достаточно дискового пространства для файла подкачки и замените \<Dedicateddumpfile.dmp\> с указанием полного пути в выделенный файл.
@@ -49,8 +49,8 @@ wmic computersystem set AutomaticManagedPagefile=False
 9. Щелкните правой кнопкой мыши **DumpFileSize**, а затем нажмите кнопку **изменить**.
 10. В **изменение параметра DWORD**в разделе **базы**, нажмите кнопку **десятичное**.
 11. В **значение**, введите соответствующее значение и нажмите кнопку **ОК**.
-   >[!NOTE]
-   > Размер файла дампа содержится в мегабайтах (МБ).
+    >[!NOTE]
+    > Размер файла дампа содержится в мегабайтах (МБ).
 12. Закройте редактор реестра.
 
 После определения секции расположение дампа памяти, настройте конечный путь для файла подкачки. Чтобы просмотреть текущий путь назначения для файла подкачки, выполните следующую команду:
@@ -146,7 +146,7 @@ wmic RECOVEROS set SendAdminAlert = true
    wmic.exe pagefile
    ```
 
-   или диспетчер конфигурации служб
+   или
 
    ```
    wmic.exe pagefile list /format:list

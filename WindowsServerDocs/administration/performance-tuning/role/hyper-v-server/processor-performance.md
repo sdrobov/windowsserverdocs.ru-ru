@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: Asmahi; SandySp; JoPoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a49fdaba89a01c8daf6483f72dbc88daa91452b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f16ee9cff9c244a8c579e008bced1e90b1a20673
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843245"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435590"
 ---
 # <a name="hyper-v-processor-performance"></a>Производительность процессора Hyper-V
 
@@ -69,9 +69,9 @@ Microsoft SQL Server является примером приложения, п�
 
 Дополнительные сведения о виртуальной архитектуре NUMA см. в разделе [Обзор виртуальной топологии архитектуры NUMA Hyper-V](https://technet.microsoft.com/library/dn282282.aspx).
 
-##<a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
--   [Терминологии Hyper-V](terminology.md)
+-   [Терминология Hyper-V](terminology.md)
 
 -   [Архитектура Hyper-V](architecture.md)
 
@@ -79,10 +79,10 @@ Microsoft SQL Server является примером приложения, п�
 
 -   [Производительность памяти Hyper-V](memory-performance.md)
 
--   [Хранилище Hyper-V производительность ввода-вывода](storage-io-performance.md)
+-   [Производительность ввода-вывода хранилища Hyper-V](storage-io-performance.md)
 
--   [Сети Hyper-V производительность ввода-вывода](network-io-performance.md)
+-   [Производительность ввода-вывода сети Hyper-V](network-io-performance.md)
 
--   [Обнаружение узких мест в виртуализованной среде](detecting-virtualized-environment-bottlenecks.md)
+-   [Обнаружение узких мест в виртуализированной среде](detecting-virtualized-environment-bottlenecks.md)
 
 -   [Виртуальные машины Linux](linux-virtual-machine-considerations.md)

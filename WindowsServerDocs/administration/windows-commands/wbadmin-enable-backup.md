@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6fd0bea5da83ca9351d5ea1028c94392bdb40422
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 08a9754b6bb11c50e21ba0d30543761be1866326
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845545"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440253"
 ---
 # <a name="wbadmin-enable-backup"></a>Wbadmin enable backup
 
@@ -76,7 +76,6 @@ wbadmin enable backup
 [-password:<Password>]
 [-quiet] 
 [-allowDeleteOldBackups]
-
 ```
 
 ## <a name="parameters"></a>Параметры
@@ -109,28 +108,28 @@ wbadmin enable backup
 В следующих примерах показывается как **команду wbadmin enable backup** команда может использоваться в различных сценариях резервного копирования:
 
 Сценарий #1
--   Запланировать резервное копирование жестких дисков e:, d:\mountpoint, и \\ \\? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
--   Сохраните файлы на диск DiskID
--   Выполните резервное копирование каждый день в 9:00 до 18:00
-```
-wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
-```
-# Сценария 2
--   Запланировать резервное копирование d:\documents папку к сетевому расположению \\ \\backupshare\backup1
--   Используйте сетевые учетные данные для администратора резервного копирования Aaren Ekelund (aekel), являющийся членом домена CONTOSOEAST для аутентификации доступа к общей сетевой папке. Пароль Aaren *$3 hM 9 ^ 5lp*.
--   Резервных копий ежедневно в 12:00 до 7:00.
-```
-wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
-```
-Сценарий #3
--   Запланировать резервное копирование d:\documents t: и папки тома для диска h:, но исключает папку d:\documents\~tmp
--   Выполните полное резервное копирование с помощью службы теневого копирования томов.
--   Резервных копий ежедневно в 1:00
-```
-wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
-```
+- Запланировать резервное копирование жестких дисков e:, d:\mountpoint, и \\ \\? \Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+- Сохраните файлы на диск DiskID
+- Выполните резервное копирование каждый день в 9:00 до 18:00
+  ```
+  wbadmin enable backup -addtarget:DiskID -schedule:09:00,18:00 -include:e:,d:\mountpoint,\\?\Volume{cc566d14-44a0-11d9-9d93-806e6f6e6963}\
+  ```
+  # Сценария 2
+- Запланировать резервное копирование d:\documents папку к сетевому расположению \\ \\backupshare\backup1
+- Используйте сетевые учетные данные для администратора резервного копирования Aaren Ekelund (aekel), являющийся членом домена CONTOSOEAST для аутентификации доступа к общей сетевой папке. Пароль Aaren *$3 hM 9 ^ 5lp*.
+- Резервных копий ежедневно в 12:00 до 7:00.
+  ```
+  wbadmin enable backup –addtarget:\\backupshare\backup1 –include: d:\documents –user:CONTOSOEAST\aekel –password:$3hM9^5lp –schedule:00:00,19:00
+  ```
+  Сценарий #3
+- Запланировать резервное копирование d:\documents t: и папки тома для диска h:, но исключает папку d:\documents\~tmp
+- Выполните полное резервное копирование с помощью службы теневого копирования томов.
+- Резервных копий ежедневно в 1:00
+  ```
+  wbadmin enable backup –addtarget:H: –include T:,D:\documents –exclude D:\documents\~tmp –vssfull –schedule:01:00
+  ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [WBADMIN](wbadmin.md)

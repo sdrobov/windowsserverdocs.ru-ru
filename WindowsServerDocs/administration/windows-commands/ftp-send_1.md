@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3dca11f0d534eb875a71fa2c39cdd4dc674ad788
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39423aff3c64f41c4fc0f8998484e6dcc38f822e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862125"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438442"
 ---
 # <a name="ftp-send1"></a>ftp: send_1
 
@@ -30,21 +30,23 @@ ms.locfileid: "59862125"
 send <LocalFile> [<remoteFile>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<LocalFile>|Указывает локальный файл для копирования.|  
-|<remoteFile>|Указывает имя, используемое на удаленном компьютере.|  
+
+|  Параметр   |                    Описание                    |
+|--------------|---------------------------------------------------|
+| <LocalFile>  |         Указывает локальный файл для копирования.         |
+| <remoteFile> | Указывает имя, используемое на удаленном компьютере. |
+
 ## <a name="remarks"></a>Примечания  
--   **Отправки** команда идентична **поместить** команды.  
--   Если *Удаленный_файл* не указан, будет использовано *Локальный_файл* имя.  
-## <a name="BKMK_Examples"></a>Примеры  
-скопировать локальный файл **test.txt** и назовите его **test1.txt** на удаленном компьютере.  
-```  
-send test.txt test1.txt  
-```  
-скопировать локальный файл **program.exe** к удаленному компьютеру.  
-```  
-send program.exe  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- **Отправки** команда идентична **поместить** команды.  
+- Если *Удаленный_файл* не указан, будет использовано *Локальный_файл* имя.  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  скопировать локальный файл **test.txt** и назовите его **test1.txt** на удаленном компьютере.  
+  ```  
+  send test.txt test1.txt  
+  ```  
+  скопировать локальный файл **program.exe** к удаленному компьютеру.  
+  ```  
+  send program.exe  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

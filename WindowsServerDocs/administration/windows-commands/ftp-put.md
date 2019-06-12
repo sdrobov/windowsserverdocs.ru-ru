@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3307ba71e7b3c8b4113f9ed29ab06660dafa5f6f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4d602c685b7eac5d18c88bc0f6709b189cc61a77
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868745"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438466"
 ---
 # <a name="ftp-put"></a>FTP: put
 
@@ -30,23 +30,25 @@ ms.locfileid: "59868745"
 put <LocalFile> [<remoteFile>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<LocalFile>|Указывает локальный файл для копирования.|  
-|[<remoteFile>]|Указывает имя, используемое на удаленном компьютере.|  
+
+|   Параметр    |                    Описание                    |
+|----------------|---------------------------------------------------|
+|  <LocalFile>   |         Указывает локальный файл для копирования.         |
+| [<remoteFile>] | Указывает имя, используемое на удаленном компьютере. |
+
 ## <a name="remarks"></a>Примечания  
--   **Поместить** команда идентична **отправки** команды.  
--   Если *Удаленный_файл* не указан, будет использовано *Локальный_файл* имя.  
-## <a name="BKMK_Examples"></a>Примеры  
-скопировать локальный файл **test.txt** и назовите его **test1.txt** на удаленном компьютере.  
-```  
-put test.txt test1.txt  
-```  
-скопировать локальный файл **program.exe** к удаленному компьютеру.  
-```  
-put program.exe  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [FTP: ascii](ftp-ascii.md)  
--   [FTP: двоичные](ftp-binary.md)  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- **Поместить** команда идентична **отправки** команды.  
+- Если *Удаленный_файл* не указан, будет использовано *Локальный_файл* имя.  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  скопировать локальный файл **test.txt** и назовите его **test1.txt** на удаленном компьютере.  
+  ```  
+  put test.txt test1.txt  
+  ```  
+  скопировать локальный файл **program.exe** к удаленному компьютеру.  
+  ```  
+  put program.exe  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [FTP: ascii](ftp-ascii.md)  
+- [FTP: двоичные](ftp-binary.md)  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

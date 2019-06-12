@@ -14,18 +14,18 @@ ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
 ms.localizationpriority: medium
-ms.openlocfilehash: cd00f92254f9e55f83442f5e68e344e0aa7579a2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d148c99911be0cebfc29429d93241f24c2b9606
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855505"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453015"
 ---
 # <a name="welcome-to-remote-desktop-services"></a>Введение в службы удаленных рабочих столов 
 
 Службы удаленных рабочих столов (RDS) — это платформа для создания решений виртуализации для любых потребностей клиента end, включая доставки отдельных виртуализированных приложений, предоставляя безопасный доступ по мобильных и удаленных рабочих столов и предоставление конечным пользователям возможность выполнения их приложений и рабочих столов из облака.
 
-![Обзор служб удаленных рабочих столов](.\media\rds-overview.png)
+![Обзор служб удаленных рабочих столов](./media/rds-overview.png)
 
 Служба удаленных рабочих СТОЛОВ предлагает гибкость развертывания, эффективность и расширяемость затрат — все доставленного разнообразные варианты развертывания, включая Windows Server 2016 для локальных развертываний, Microsoft Azure для развертываний в облаке и надежный массив партнера решения.
 

@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 095cd2ad799857b789943b4f477aa9e6a8c3ae50
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 506072251b77362f3dc35faa0c976f396f7f6034
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59815185"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435481"
 ---
 # <a name="manage-software-inventory-logging"></a>Управление журналом инвентаризации программного обеспечения
 
@@ -121,7 +121,7 @@ ms.locfileid: "59815185"
 ## <a name="configuring-software-inventory-logging"></a>Настройка инвентаризации программного обеспечения  
 Процесс настройки инвентаризации программного обеспечения для пересылки данных на сервер агрегирования с течением времени состоит из трех шагов.  
   
-1.  Используйте **Set-SilLogging – TargetUri** для указания веб-адрес своего сервера агрегирования (должен начинаться с « https://?).  
+1.  Используйте **Set-SilLogging – TargetUri** для указания веб-адрес своего сервера агрегирования (должен начинаться с « https://»).  
   
 2.  Воспользуйтесь **Set-SilLogging –CertificateThumbprint** , указав хэш отпечатка действительного сертификата SSL, который будет использоваться для проверки подлинности при передаче данных на сервер агрегирования (сервер агрегирования должен быть настроен для приема хэша).  
   
@@ -140,17 +140,17 @@ ms.locfileid: "59815185"
 ## <a name="BKMK_Step3"></a>Отображение данных ведения журнала инвентаризации программного обеспечения  
 Помимо командлетов PowerShell, описанных в предыдущем разделе, для сбора данных SIL может быть использовано шесть дополнительных командлетов.  
   
--   **[Get-SilComputer](https://technet.microsoft.com/library/dn283392.aspx)**: Отображается точка в значения времени для конкретного сервера и данные, относящиеся к операционной системе, а также полное доменное имя или имя узла физического узла, если он доступен.  
+-   **[Get-SilComputer](https://technet.microsoft.com/library/dn283392.aspx)** : Отображается точка в значения времени для конкретного сервера и данные, относящиеся к операционной системе, а также полное доменное имя или имя узла физического узла, если он доступен.  
   
--   **[Get-SilComputerIdentity (KB 3000850)](https://technet.microsoft.com/library/dn858074.aspx)**: Отображает идентификаторы, используемые SIL для отдельных серверов.  
+-   **[Get-SilComputerIdentity (KB 3000850)](https://technet.microsoft.com/library/dn858074.aspx)** : Отображает идентификаторы, используемые SIL для отдельных серверов.  
   
--   **[Get-SilData](https://technet.microsoft.com/library/dn283388.aspx)**: Отображает точку в сбор данных о времени всех данных инвентаризации программного обеспечения.  
+-   **[Get-SilData](https://technet.microsoft.com/library/dn283388.aspx)** : Отображает точку в сбор данных о времени всех данных инвентаризации программного обеспечения.  
   
--   **[Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)**: Отображается точка времени удостоверение всего программного обеспечения, установленных на компьютере.  
+-   **[Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx)** : Отображается точка времени удостоверение всего программного обеспечения, установленных на компьютере.  
   
--   **[Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx)**: Отображает общее число уникальных клиентских запросов устройств и клиентских запросов пользователей сервера за предыдущие два дня.  
+-   **[Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx)** : Отображает общее число уникальных клиентских запросов устройств и клиентских запросов пользователей сервера за предыдущие два дня.  
   
--   **[Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx)**: Отображает время список всех обновлений Windows, установленных на компьютере, в момент.  
+-   **[Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx)** : Отображает время список всех обновлений Windows, установленных на компьютере, в момент.  
   
 Как правило, администраторы будут использовать командлеты ведения журнала инвентаризации программного обеспечения для выполнения запросов к этой функции для сбора всех данных SIL на момент времени с помощью командлета [Get SilSoftware](https://technet.microsoft.com/library/dn283397.aspx).  
   
@@ -206,13 +206,13 @@ SystemManufacturer        : Microsoft Corporation
   
 #### <a name="to-delete-data-logged-by-software-inventory-logging"></a>Удаление данных, зарегистрированных функцией SIL  
   
-1.  В PowerShell остановите ведение журнала инвентаризации программного обеспечения, используя команду **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** .  
+1. В PowerShell остановите ведение журнала инвентаризации программного обеспечения, используя команду **[Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)** .  
   
-2.  Откройте проводник.  
+2. Откройте проводник.  
   
-3.  Перейдите к **\Windows\System32\Logfiles\SIL\**  
+3. Перейдите к **\Windows\System32\Logfiles\SIL\\**  
   
-4.  Удалите все файлы из этой папки.  
+4. Удалите все файлы из этой папки.  
   
 ## <a name="BKMK_Step5"></a>Резервное копирование и восстановление данных, зарегистрированных функцией ведения журнала инвентаризации программного обеспечения  
 Служба SIL временно сохраняет почасовые коллекции данных, если не удается переслать их по сети. Файлы журнала хранятся в каталоге \Windows\System32\LogFiles\SIL\. Резервные копии данных журнала инвентаризации программного обеспечения можно создавать регулярно, одновременно с запланированными резервными копиями сервера.  
@@ -237,9 +237,9 @@ SystemManufacturer        : Microsoft Corporation
   
 -   При использовании команды [Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TimeOfDay для задания времени запуска ведения журнала SIL необходимо указать дату и время. Будет установлена календарная дата и ведение журнала не начнется до достижения этой даты по локальному времени системы.  
   
--   При использовании [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx), или [Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx), «InstallDate? всегда будет отображаться 12:00:00 AM, бессмысленное значение.  
+-   При использовании [Get-SilSoftware](https://technet.microsoft.com/library/dn283397.aspx), или [Get-SilWindowsUpdate](https://technet.microsoft.com/library/dn283393.aspx), «InstallDate» всегда будет отображаться 12:00:00 AM, бессмысленное значение.  
   
--   При использовании [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), «SampleDate? всегда будет отображаться 11:59:00 PM, бессмысленное значение.  Дата — это релевантные данные для запросов этих командлетов.  
+-   При использовании [Get-SilUalAccess](https://technet.microsoft.com/library/dn283389.aspx), «SampleDate» всегда будет отображаться 11:59:00 PM, бессмысленное значение.  Дата — это релевантные данные для запросов этих командлетов.  
   
 ## <a name="BKMK_Step10"></a>Включение и настройка инвентаризации программного обеспечения в подключенном виртуальном жестком диске  
 Функция ведения журнала инвентаризации программного обеспечения также поддерживает настройку и включение на автономных виртуальных машинах. Примеры практического применения этой возможности включают как установку "золотого образа" для широкомасштабных развертываний в центрах обработки данных, так и настройку образов конечных пользователей, поступающих из локального в облачное развертывание.  
@@ -256,13 +256,13 @@ SystemManufacturer        : Microsoft Corporation
   
 Чтобы изменить эти значения на автономном виртуальном жестком диске (ОС виртуальной машины не выполняется), такой диск необходимо сначала подключить, а затем можно использовать следующие команды для внесения изменений.  
   
--   [REG нагрузки](https://technet.microsoft.com/library/cc742053.aspx)  
+-   [Reg load](https://technet.microsoft.com/library/cc742053.aspx)  
   
--   [reg delete](https://technet.microsoft.com/library/cc742145.aspx)  
+-   [Reg delete](https://technet.microsoft.com/library/cc742145.aspx)  
   
--   [Добавление REG](https://technet.microsoft.com/library/cc742162.aspx)  
+-   [Reg add](https://technet.microsoft.com/library/cc742162.aspx)  
   
--   [reg unload](https://technet.microsoft.com/library/cc742043.aspx)  
+-   [Reg unload](https://technet.microsoft.com/library/cc742043.aspx)  
   
 Функция ведения журнала инвентаризации программного обеспечения будет проверять эти значения при запуске операционной системы и выполнять соответствующие действия.  
   
@@ -297,7 +297,7 @@ SystemManufacturer        : Microsoft Corporation
   
 ## <a name="see-also"></a>См. также  
 [Начало работы с программным обеспечением ведения журнала инвентаризации](get-started-with-software-inventory-logging.md)  
-[Средства ведения журнала инвентаризации программного обеспечения](software-inventory-logging-aggregator.md)  
+[Агрегатор инвентаризации программного обеспечения](software-inventory-logging-aggregator.md)  
 [Командлеты инвентаризации программного обеспечения в Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)  
 [Import-BinaryMiLog](https://technet.microsoft.com/library/dn262592.aspx)  
 [Export-BinaryMiLog](https://technet.microsoft.com/library/dn262591.aspx)  

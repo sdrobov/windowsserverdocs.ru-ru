@@ -1,11 +1,11 @@
 ---
 redirect_url: /windows-server/windows-server
-ms.openlocfilehash: 6f6e0d21fdf43ce3cf9f713d5731cfea5bb069de
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a852dfdda87aa37b403176483ea85f9bdb059e68
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812275"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435999"
 ---
 # <a name="windows-server-2016"></a>Windows Server 2016
 
@@ -19,54 +19,40 @@ ms.locfileid: "59812275"
 <table border="0" width="100%" align='center'>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/get-started/what-s-new-in-windows-server-2016">
-        <img height=145 src="media/whats-new-highlight.png" alt="What's new icon" title="Новые возможности Windows Server 16"/></a>
-        <br/>Новые возможности
+      <a href="/windows-server/get-started/what-s-new-in-windows-server-2016"> &lt;img height = 145 src =&quot;мультимедиа или что новый highlight.png&quot; alt =&quot;что&#39;значок "Создать" s&quot; title =&quot;новые возможности Windows Server 16?&quot;/&gt;</a>
+        <br/>Что&#39;новые?
     </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/get-started/server-basics">
-        <img height=145 src="media/1-getstarted.png" alt="get started icon" title="Начало работы с Windows Server 16" /></a>
+      <a href="/windows-server/get-started/server-basics"> &lt;img height = 145 src =&quot;media/1-getstarted.png&quot; alt =&quot;работы значок get&quot; title =&quot;приступить к работе с Windows Server 16&quot; /&gt;</a>
       <br/>Начало работы </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/administration/index">
-        <img height=145 src="media/8-management.png" alt="administer icon" title="Администрирование Windows Server" /></a>
+      <a href="/windows-server/administration/index"> &lt;img height = 145 src =&quot;media/8-management.png&quot; alt =&quot;администрирования значок&quot; title =&quot;администрирования Windows Server&quot; /&gt;</a>
       <br/>Администрирование </td>
     <td align='center' style="width:25%; border:0;">
-      <a href="/windows-server/failover-clustering/failover-clustering-overview">
-        <img height=145 src="media/3-failover.png" alt="Failover clustering icon" title="Отказоустойчивая кластеризация Windows Server" /></a>
+      <a href="/windows-server/failover-clustering/failover-clustering-overview"> &lt;img height = 145 src =&quot;media/3-failover.png&quot; alt =&quot;значок кластеризации отработки отказа&quot; title =&quot;Windows Server отказоустойчивой кластеризации&quot; /&gt;</a>
       <br/>Отказоустойчивая кластеризация </td>
   </tr>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/identity/identity-and-access">
-        <img height=145 src="media/4-identity.png" alt="Identity and access icon" title="Удостоверения и доступ Windows Server" /></a>
+      <a href="/windows-server/identity/identity-and-access"> &lt;img height = 145 src =&quot;media/4-identity.png&quot; alt =&quot;удостоверениями и доступом значок&quot; title =&quot;Windows Server удостоверениями и доступом&quot; /&gt;</a>
       <br>Удостоверение и доступ </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/networking/networking">
-        <img height=145 src="media/6-networking.png" alt="Networking icon" title="Сетевое взаимодействие в Windows Server" />
-        </a>
+      <a href="/windows-server/networking/networking"> &lt;img height = 145 src =&quot;media/6-networking.png&quot; alt =&quot;значок сети&quot; title =&quot;сети Windows Server&quot; /&gt; </a>
       <br/>Сеть </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/remote/index">
-        <img height=145 src="media/remote.png" alt="remote icon" title="Удаленный доступ и управление серверами" />
-        </a>
+      <a href="/windows-server/remote/index"> &lt;img height = 145 src =&quot;media/remote.png&quot; alt =&quot;значок удаленного&quot; title =&quot;удаленного доступа и сервер управления&quot; /&gt; </a>
       <br/>Удаленный доступ </td>
     <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/security/security-and-assurance">
-        <img height=145 src="media/5-security.png" alt="Security icon" title="Безопасность и контроль в Windows Server" />
-      </a>
+      <a href="/windows-server/security/security-and-assurance"> &lt;img height = 145 src =&quot;media/5-security.png&quot; alt =&quot;значок безопасности&quot; title =&quot;безопасности Windows Server и Software Assurance&quot; /&gt; </a>
       <br/>Безопасность и контроль </td>
   </tr>
   <tr style="text-align:center;">
     <td align='center' style="width:25%; border:0;">&nbsp;</td>
     <td align='center' style="width:25%; border:0;"><br>
-      <a href="/windows-server/storage/storage">
-        <img height=145 src="media/7-storage.png" alt="Storage icon" title="Хранение данных в Windows Server" />
-      </a>
+      <a href="/windows-server/storage/storage"> &lt;img height = 145 src =&quot;media/7-storage.png&quot; alt =&quot;значок хранилища&quot; title =&quot;хранилища Windows Server&quot; /&gt; </a>
       <br/>Хранилище </td>
    <td align='center' style="width:25%; border:0;"><br/>
-      <a href="/windows-server/virtualization/virtualization">
-        <img height=145 src="media/virtualization.png" alt="virtualization icon" title="Виртуализация Windows Server" /></a>
+      <a href="/windows-server/virtualization/virtualization"> &lt;img height = 145 src =&quot;media/virtualization.png&quot; alt =&quot;значок виртуализации&quot; title =&quot;виртуализации Windows Server&quot; /&gt;</a>
       <br/>Виртуализация </td>
     <td align='center' style="width:25%; border:0;">&nbsp; </td>
   </tr>

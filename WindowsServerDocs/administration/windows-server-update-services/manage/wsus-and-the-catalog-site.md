@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7cced9a930b63baa79b4addb429c562c38d6da01
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 298df36b856cba97ec19126f77456785e5eb6f50
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810931"
 ---
 # <a name="wsus-and-the-catalog-site"></a>Службы WSUS и сайт каталога
 
@@ -64,7 +64,7 @@ ms.locfileid: "59843885"
 
     -   Выберите **проверки подлинности Windows** и нажмите кнопку **включить** в **действия** на правой панели.
 
-2.  Создайте целевую группу WSUS для компьютеров, которым требуется исправление и добавить их в группу. Дополнительные сведения о компьютеров и групп, см. в разделе [управление WSUS клиентских компьютеров и групп компьютеров WSUS](managing-wsus-client-computers-and-wsus-computer-groups.md) в это руководство и разделе [3.3. Настройка групп компьютеров WSUS](../deploy/2-configure-wsus.md#BKMK_ConfigcomputerGroups) шаг 3: Настройка служб WSUS, в руководстве по развертыванию WSUS.
+2.  Создайте целевую группу WSUS для компьютеров, которым требуется исправление и добавить их в группу. Дополнительные сведения о компьютеров и групп, см. в разделе [управление WSUS клиентских компьютеров и групп компьютеров WSUS](managing-wsus-client-computers-and-wsus-computer-groups.md) в это руководство и разделе [3.3. Настройка групп компьютеров WSUS](../deploy/2-configure-wsus.md#23-configure-wsus-computer-groups) шаг 3: Настройка служб WSUS, в руководстве по развертыванию WSUS.
 
 3.  Загрузите файлы исправлений.
 

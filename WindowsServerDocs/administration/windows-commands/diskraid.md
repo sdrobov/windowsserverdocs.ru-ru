@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a565a1d5fa1bc3ff57d1578fb54cfa4553e3bb26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ebd65fb56114bff9e6ae4b6a76376561c686dfa
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818875"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439564"
 ---
 # <a name="diskraid"></a>diskraid
 
@@ -47,10 +47,10 @@ RAID — это метод, используемый для стандартиз
 -   [delete](#BKMK_7)
 -   [Подробности](#BKMK_8)
 -   [Отменить связь](#BKMK_9)
--   [Выход](#BKMK_10)
+-   [exit](#BKMK_10)
 -   [Расширить](#BKMK_11)
 -   [flushcache](#BKMK_12)
--   [Справка](#BKMK_13)
+-   [help](#BKMK_13)
 -   [importtarget](#BKMK_14)
 -   [Инициатор](#BKMK_15)
 -   [invalidatecache](#BKMK_16)
@@ -62,12 +62,12 @@ RAID — это метод, используемый для стандартиз
 -   [name](#BKMK_23)
 -   [Автономный режим](#BKMK_24)
 -   [Онлайн](#BKMK_25)
--   [Восстановление](#BKMK_26)
+-   [recover](#BKMK_26)
 -   [reenumerate](#BKMK_27)
 -   [обновления](#BKMK_28)
--   [REM](#BKMK_29)
+-   [rem](#BKMK_29)
 -   [удалить](#BKMK_30)
--   [Замените](#BKMK_31)
+-   [replace](#BKMK_31)
 -   [Сброс](#BKMK_32)
 -   [Выберите](#BKMK_33)
 -   [setflag](#BKMK_34)
@@ -95,7 +95,7 @@ add tpgroup tportal=n [noerr]
 > [!CAUTION]
 > Все данные на логическом диске, добавляется в качестве команд, как будут удалены.
 
-**TPGROUP портала = *** n*
+**портала TPGROUP =** <em>n</em>
 
 Номер iSCSI целевого портала добавляемый группа выбранных iSCSI конечного портала.
 
@@ -171,7 +171,7 @@ automagic {set | clear | apply} all <flag=value> [<flag=value> [...]]
 
 #### <a name="parameters"></a>Параметры
 
-**Набор**
+**set**
 
 Задает указанные флаги, указанные значения.
 
@@ -640,7 +640,7 @@ lbpolicy set lun paths=<path>-{primary | <weight>}[,<path>-{primary | <weight>}[
 
 #### <a name="parameters"></a>Параметры
 
-**Тип**
+**type**
 
 Задает политики балансировки нагрузки. Если тип не указан, то **путь** параметр должен быть указан. Тип может принимать одно из следующих:
 
@@ -734,7 +734,7 @@ login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none
 
 #### <a name="parameters"></a>Параметры
 
-**Тип**
+**type**
 
 Указывает тип имени входа для выполнения: **вручную**, **постоянных**, или **загрузки**. Если не указано, будет выполняться вручную имени входа.
 
@@ -742,7 +742,7 @@ login target iadapter=<iadapter> [type={manual | persistent | boot}] [chap={none
 
 **постоянные** — автоматически использовать то же имя входа, при перезапуске компьютера.
 
-**загрузки** -(этот параметр предназначен для дальнейшей разработки и в настоящий момент не используется *.*)
+**загрузки** -(этот параметр предназначен для дальнейшей разработки и в настоящий момент не используется<em>.</em>)
 
 **CHAP**
 

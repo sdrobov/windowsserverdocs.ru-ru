@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52a846b1084380d0b40d58d81c11d20dacb407bf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ba58e223d0aa35b4157b813b10bf1d274313a1c1
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436968"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
@@ -30,12 +30,14 @@ ms.locfileid: "59869155"
 server <DNSDomain>
 ```
 ## <a name="parameters"></a>Параметры
-|Параметр|Описание|
-|-------|--------|
-|<DNSDomain>|Обязательный. Указывает новый домен DNS для сервера по умолчанию.|
-|{help &#124; ?}|Отображает краткое описание **nslookup** подкоманды.|
+
+|    Параметр    |                          Описание                           |
+|-----------------|----------------------------------------------------------------|
+|   <DNSDomain>   | Обязательный. Указывает новый домен DNS для сервера по умолчанию. |
+| {help &#124; ?} |     Отображает краткое описание **nslookup** подкоманды.      |
+
 ## <a name="remarks"></a>Примечания
--   **Server** команда текущий сервер использует для поиска информации о домене DNS. Это отличается от **lserver** команду, которая использует исходным сервером.
-## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[nslookup lserver](nslookup-lserver.md)
+- **Server** команда текущий сервер использует для поиска информации о домене DNS. Это отличается от **lserver** команду, которая использует исходным сервером.
+  ## <a name="additional-references"></a>Дополнительные ссылки
+  [Ключ синтаксиса команд](command-line-syntax-key.md)
+  [nslookup lserver](nslookup-lserver.md)

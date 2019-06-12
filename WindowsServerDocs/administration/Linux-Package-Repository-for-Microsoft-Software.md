@@ -11,12 +11,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: dbdbd0f436645f7e19c07e4f3278c5073636a547
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.openlocfilehash: 3b4feb6b8b3dad5c34de92f634eb30d0e952fe76
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831865"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435773"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Репозитория программного обеспечения Linux для продуктов Майкрософт
 
@@ -29,8 +29,8 @@ ms.locfileid: "59831865"
 
  - MSSQL-server - эти репозитории содержат пакеты для Microsoft SQL Server на базе Linux — см. также: [SQL Server в Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
->[!Note]
-Пакеты в репозиториях программного обеспечения Linux, распространяются условия лицензионного соглашения, расположенного в пакетах. Прочитайте условия лицензии перед использованием пакета. Установка и использование пакета означает согласие с настоящими условиями. Если вы не согласны с условиями лицензии, не используйте пакет.
+> [!Note]
+> Пакеты в репозиториях программного обеспечения Linux, распространяются условия лицензионного соглашения, расположенного в пакетах. Прочитайте условия лицензии перед использованием пакета. Установка и использование пакета означает согласие с настоящими условиями. Если вы не согласны с условиями лицензии, не используйте пакет.
 
 
 ## <a name="configuring-the-repositories"></a>Настройка репозиториев

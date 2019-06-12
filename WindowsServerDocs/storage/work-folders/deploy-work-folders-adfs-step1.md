@@ -8,12 +8,12 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 10/18/2018
 ms.assetid: 938cdda2-f17e-4964-9218-f5868fd96735
-ms.openlocfilehash: a26b784c18049ee473a191abc7bfa0a5d253d15e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4f4119e893b215bd9f6d713bc5a17218b751c3d3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883035"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812692"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1, настройки AD FS
 
@@ -32,7 +32,7 @@ ms.locfileid: "59883035"
 -   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   Инструкции в этом разделе предназначены для среды Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   Инструкции, описанные в этом разделе относятся к среде Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 Чтобы настроить AD FS для использования с рабочими папками, выполните следующие процедуры.  
   

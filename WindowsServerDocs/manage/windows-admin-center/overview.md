@@ -5,21 +5,21 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 04/12/2019
+ms.date: 06/07/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: ee3c4ba5d6c3dc911ab318ade9a46b279317496f
-ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.openlocfilehash: 2314e336cbf9ad44b07f3f94d7a866b48b5e9bff
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260259"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811806"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+> Относится к: Windows Admin Center, предварительная версия Windows Admin Center
 
-**Windows Admin Center** (под кодовым названием **Гонолулу проекта**) является результатом эволюционного развития средств управления, входящие в комплект Windows Server; он является единой панели, объединяющий все аспекты управления локальным и удаленным сервером. Так как платформа развертывается локально, а в качестве интерфейса управления используется браузер, подключение к Интернету и Azure не требуются. Windows Admin Center предоставляет полный контроль над всеми аспектами вашего развертывания, включая частные сети, не подключенные к Интернету.
+**Windows Admin Center** (которая прежде именовалась **Гонолулу проекта**) является результатом эволюционного развития средств управления, входящие в комплект Windows Server; это унифицированного, объединяющий все аспекты управления локальным и удаленным сервером. Так как платформа развертывается локально, а в качестве интерфейса управления используется браузер, подключение к Интернету и Azure не требуются. Windows Admin Center предоставляет полный контроль над всеми аспектами вашего развертывания, включая частные сети, не подключенные к Интернету.
 
 ## <a name="introduction"></a>Введение
 
@@ -75,6 +75,7 @@ Windows Admin Center можно подготовить к работе и зап
             <ul>
             <li><a href="configure/settings.md">Параметры Windows Admin Center</a>
             <li><a href="configure/user-access-control.md">Управление доступом пользователей и разрешения</a>
+            <li><a href="configure/shared-connections.md">Общие подключения</a>
             <li><a href="configure/using-extensions.md">Расширения</a>
             </ul>
         </td>

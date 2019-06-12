@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 092a97c1166f1090dd7c556f1ab86d42a1f46ee4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 31d8dbd3df4c44b6e0a3780b022dfbd9fffdffec
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889275"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452569"
 ---
 # <a name="develop-a-tool-extension"></a>Разработка расширения средства
 
@@ -63,8 +63,8 @@ npm install
 
 Теперь, когда вы создали расширение с помощью интерфейса командной строки Windows Admin Center, все готово для настройки содержимого.  Примеры см. в этих руководствах того, что можно сделать:
 
-- Добавление [пустого модуля](guides\add-module.md)
-- Добавление [iFrame](guides\add-iframe.md)
+- Добавление [пустого модуля](guides/add-module.md)
+- Добавление [iFrame](guides/add-iframe.md)
  
 Даже Дополнительные примеры можно найти наших [сайт GitHub пакета SDK](https://aka.ms/wacsdk):
 -  [Средства разработчика](https://github.com/Microsoft/windows-admin-center-sdk/tree/master/windows-admin-center-developer-tools) — это полнофункциональное расширение, которое может быть неопубликованных в Windows Admin Center и содержит широкий набор примеров образец функциональные возможности и средства, которые можно просматривать и использовать в свое собственное расширение.

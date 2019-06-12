@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 17fa97e28d099806c9280e42dd900e8d6c708641
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd381c04b02889a7f2e7b8992ff6050d1b0f078a
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850245"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453062"
 ---
 # <a name="dfs-replication-overview"></a>Общие сведения о репликации DFS
 
@@ -25,7 +25,7 @@ ms.locfileid: "59850245"
 
 Для использования репликации DFS, необходимо создать группы репликации и добавление реплицированных папок в группы. На следующем рисунке показаны группы репликации, реплицированных папок и элементов.
 
-![Группа репликации, содержащий соединение между двумя членами, каждая из которых имеет несколько реплицированных папок](media\dfsr-overview.gif)
+![Группа репликации, содержащий соединение между двумя членами, каждая из которых имеет несколько реплицированных папок](media/dfsr-overview.gif)
 
 На этом рисунке показано, что группу репликации — это набор серверов, известный как члены, который участвует в репликации один или несколько реплицируемых папок. Реплицируемой папки — это папка, которая остается синхронизированным на каждом члене. На рисунке имеется две реплицированной папки: Проекты и предложений. По мере изменения данных в каждой реплицированной папки изменения реплицируются по подключениям между членами группы репликации. Подключения между всеми членами формирования топологии репликации.
 Создание нескольких реплицируемых папок в одну группу репликации упрощает процесс развертывания реплицированных папок, так как топология, расписания и полосы пропускания для группы репликации применяются к каждой реплицированной папки. Для развертывания дополнительных реплицированных папок, можно использовать Dfsradmin.exe или следуйте инструкциям в мастере задать локальный путь и разрешения для новой реплицируемой папки.
@@ -105,8 +105,8 @@ Install-WindowsFeature "FS-DFS-Replication", "RSAT-DFS-Mgmt-Con"
 ## <a name="see-also"></a>См. также
 
 - [Обзор пространств имен DFS и репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v%3dws.11))
-- [Контрольный список: Репликация DFS развернута](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772201(v%3dws.11))
-- [Контрольный список: Управление репликацией DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755035(v%3dws.11))
+- [Контрольный список. Репликация DFS развернута](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772201(v%3dws.11))
+- [Контрольный список. Управление репликацией DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755035(v%3dws.11))
 - [Развертывание репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
 - [Управление репликацией DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
 - [Устранение неполадок репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732802(v%3dws.11))

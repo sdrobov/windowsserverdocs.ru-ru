@@ -8,12 +8,12 @@ ms.date: 05/21/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: fd99058036a5b8041e4c65ca120c6a7e68b2df8d
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: ce4cbdc291d98a180ee6f5b597d322620fa1b19f
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976646"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453169"
 ---
 # <a name="storage-migration-service-overview"></a>Общие сведения о миграции службы хранилища
 
@@ -32,7 +32,7 @@ ms.locfileid: "65976646"
 - При необходимости перехватить удостоверение исходных серверов (также известный как вырезание через), чтобы пользователи и приложения не нужно ничего менять, чтобы обращаться к существующим данным
 - Управление с помощью пользовательского интерфейса Windows Admin Center один или несколько миграций
 
-![Схема, показывающая перенос файлов миграции службы хранилища и конфигурации с исходных серверов на конечные серверы, виртуальные машины Azure или синхронизации файлов Azure.](media\overview\storage-migration-service-diagram.png)
+![Схема, показывающая перенос файлов миграции службы хранилища и конфигурации с исходных серверов на конечные серверы, виртуальные машины Azure или синхронизации файлов Azure.](media/overview/storage-migration-service-diagram.png)
 
 **Рис. 1. Источники миграции службы хранилища и назначения**
 

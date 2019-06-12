@@ -8,12 +8,12 @@ ms.assetid: 8cb9b59f-0255-4261-b49a-562c5ea50ee0
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: adb77d841ba4d69b0d36bc7f19d4707638530c97
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: adb1546bc21b3209a362fd61feab0d3ee6810a66
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823695"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812168"
 ---
 # <a name="netsh-command-syntax-contexts-and-formatting"></a>Синтаксис, контексты и форматирование команд Netsh
 
@@ -33,68 +33,68 @@ Netsh взаимодействует с другими компонентами 
 
 ### <a name="obtain-a-list-of-contexts"></a>Получить список контекстов
 
-Можно получить список контекстов netsh, открыв командную строку или Windows PowerShell на компьютере под управлением Windows Server 2016 или Windows 10. Введите команду **netsh** и нажмите клавишу ВВОД. Тип **/?**, и нажмите клавишу ВВОД.
+Можно получить список контекстов netsh, открыв командную строку или Windows PowerShell на компьютере под управлением Windows Server 2016 или Windows 10. Введите команду **netsh** и нажмите клавишу ВВОД. Тип **/?** , и нажмите клавишу ВВОД.
 
 Ниже приведен пример выходных данных для этих команд на компьютере под управлением Windows Server 2016 Datacenter.
 
-    PS C:\Windows\system32> netsh
-    netsh>/?
-    
-    The following commands are available:
-    
-    Commands in this context:
-    ..            - Goes up one context level.
-    ?             - Displays a list of commands.
-    abort         - Discards changes made while in offline mode.
-    add           - Adds a configuration entry to a list of entries.
-    advfirewall   - Changes to the `netsh advfirewall' context.
-    alias         - Adds an alias.
-    branchcache   - Changes to the `netsh branchcache' context.
-    bridge        - Changes to the `netsh bridge' context.
-    bye           - Exits the program.
-    commit        - Commits changes made while in offline mode.
-    delete        - Deletes a configuration entry from a list of entries.
-    dhcpclient    - Changes to the `netsh dhcpclient' context.
-    dnsclient     - Changes to the `netsh dnsclient' context.
-    dump          - Displays a configuration script.
-    exec          - Runs a script file.
-    exit          - Exits the program.
-    firewall      - Changes to the `netsh firewall' context.
-    help          - Displays a list of commands.
-    http          - Changes to the `netsh http' context.
-    interface     - Changes to the `netsh interface' context.
-    ipsec         - Changes to the `netsh ipsec' context.
-    ipsecdosprotection - Changes to the `netsh ipsecdosprotection' context.
-    lan           - Changes to the `netsh lan' context.
-    namespace     - Changes to the `netsh namespace' context.
-    netio         - Changes to the `netsh netio' context.
-    offline       - Sets the current mode to offline.
-    online        - Sets the current mode to online.
-    popd          - Pops a context from the stack.
-    pushd         - Pushes current context on stack.
-    quit          - Exits the program.
-    ras           - Changes to the `netsh ras' context.
-    rpc           - Changes to the `netsh rpc' context.
-    set           - Updates configuration settings.
-    show          - Displays information.
-    trace         - Changes to the `netsh trace' context.
-    unalias       - Deletes an alias.
-    wfp           - Changes to the `netsh wfp' context.
-    winhttp       - Changes to the `netsh winhttp' context.
-    winsock       - Changes to the `netsh winsock' context.
-    
-    The following sub-contexts are available:
-     advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec ipsecdosprotection lan namespace netio ras rpc trace wfp winhttp winsock
-    
-    To view help for a command, type the command, followed by a space, and then
-     type ?.
-
+>    ```
+>   PS C:\Windows\system32> netsh
+>   netsh>/?
+>    
+>    The following commands are available:
+>    
+>    Commands in this context:
+>    ..            - Goes up one context level.
+>    ?             - Displays a list of commands.
+>    abort         - Discards changes made while in offline mode.
+>    add           - Adds a configuration entry to a list of entries.
+>    advfirewall   - Changes to the `netsh advfirewall' context.
+>    alias         - Adds an alias.
+>    branchcache   - Changes to the `netsh branchcache' context.
+>    bridge        - Changes to the `netsh bridge' context.
+>    bye           - Exits the program.
+>    commit        - Commits changes made while in offline mode.
+>    delete        - Deletes a configuration entry from a list of entries.
+>    dhcpclient    - Changes to the `netsh dhcpclient' context.
+>    dnsclient     - Changes to the `netsh dnsclient' context.
+>    dump          - Displays a configuration script.
+>    exec          - Runs a script file.
+>    exit          - Exits the program.
+>    firewall      - Changes to the `netsh firewall' context.
+>    help          - Displays a list of commands.
+>    http          - Changes to the `netsh http' context.
+>    interface     - Changes to the `netsh interface' context.
+>    ipsec         - Changes to the `netsh ipsec' context.
+>    ipsecdosprotection - Changes to the `netsh ipsecdosprotection' context.
+>    lan           - Changes to the `netsh lan' context.
+>    namespace     - Changes to the `netsh namespace' context.
+>    netio         - Changes to the `netsh netio' context.
+>    offline       - Sets the current mode to offline.
+>    online        - Sets the current mode to online.
+>    popd          - Pops a context from the stack.
+>    pushd         - Pushes current context on stack.
+>    quit          - Exits the program.
+>    ras           - Changes to the `netsh ras' context.
+>    rpc           - Changes to the `netsh rpc' context.
+>    set           - Updates configuration settings.
+>    show          - Displays information.
+>    trace         - Changes to the `netsh trace' context.
+>    unalias       - Deletes an alias.
+>    wfp           - Changes to the `netsh wfp' context.
+>    winhttp       - Changes to the `netsh winhttp' context.
+>    winsock       - Changes to the `netsh winsock' context.
+>    
+>    The following sub-contexts are available:
+>     advfirewall branchcache bridge dhcpclient dnsclient firewall http interface ipsec ipsecdosprotection lan namespace netio ras rpc trace wfp winhttp winsock
+>    
+>    To view help for a command, type the command, followed by a space, and then type ?.
+>    ```
 
 ### <a name="subcontexts"></a>Дочерние контексты
 
 Контексты Netsh может содержать команды и новых контекстов, вызывается *подконтекстов*. Например в контексте маршрутизации, можно изменить для подконтекстов IP-адреса и IPv6.
 
-Чтобы отобразить список команд и подчиненных контекстов, которые можно использовать в контексте, в командной строке netsh введите имя контекста и введите либо **/?** или **помочь**. Например, чтобы отобразить список подчиненных контекстов и команд, которые можно использовать в контексте маршрутизации, в командной строке netsh \(т.е **netsh&gt;**\), введите одно из следующих:
+Чтобы отобразить список команд и подчиненных контекстов, которые можно использовать в контексте, в командной строке netsh введите имя контекста и введите либо **/?** или **помочь**. Например, чтобы отобразить список подчиненных контекстов и команд, которые можно использовать в контексте маршрутизации, в командной строке netsh \(т.е **netsh&gt;** \), введите одно из следующих:
 
 **Маршрутизация /?**
 
@@ -127,17 +127,17 @@ Netsh взаимодействует с другими компонентами 
 
 ### <a name="netsh"></a>netsh
 
-Netsh — это командной строки программа сценариев, которая позволяет локально или удаленно, отображать или изменять параметры сети текущего компьютера. При использовании без параметров, **netsh** открывает командную строку Netsh.exe \(т.е **netsh&gt;**\).
+Netsh — это командной строки программа сценариев, которая позволяет локально или удаленно, отображать или изменять параметры сети текущего компьютера. При использовании без параметров, **netsh** открывает командную строку Netsh.exe \(т.е **netsh&gt;** \).
 
 #### <a name="syntax"></a>Синтаксис
 
-**Netsh** \[ **-**&nbsp;*Файл_псевдоним* \] \[ **- c** &nbsp;  *Контекст* \] \[ **- r**&nbsp;*Удаленный_компьютер* \] \[ **- u** \[ *DomainName\\*  \] *UserName* \] \[ **-p** &nbsp; *Пароль*  |  \* \] \[{*NetshCommand* | **-f** &nbsp; *ScriptFile*}\]
+**Netsh** \[ **-** &nbsp;*Файл_псевдоним* \] \[ **- c** &nbsp;  *Контекст* \] \[ **- r**&nbsp;*Удаленный_компьютер* \] \[ **- u** \[ *DomainName\\*  \] *UserName* \] \[ **-p** &nbsp; *Пароль*  |  \* \] \[{*NetshCommand* |  **-f** &nbsp; *ScriptFile*}\]
 
 #### <a name="parameters"></a>Параметры
 
 **`-a`**
 
-Необязательный. Указывает, что вы вернетесь к **netsh** запроса после выполнения команды *Файл_псевдоним*.
+Необязательно. Указывает, что вы вернетесь к **netsh** запроса после выполнения команды *Файл_псевдоним*.
 
 **`AliasFile`**
 
@@ -153,14 +153,14 @@ Netsh — это командной строки программа сценар
 
 **`-r`**
 
-Необязательный. Задает команду для запуска на удаленном компьютере.
+Необязательно. Задает команду для запуска на удаленном компьютере.
 
->[!IMPORTANT]
->При использовании некоторых команд netsh удаленно на другом компьютере с **netsh – r** параметр, служба удаленного реестра должна быть запущена на удаленном компьютере. Если он не запущен, Windows отображает сообщение об ошибке «Не найден сетевой путь».
+> [!IMPORTANT]
+> При использовании некоторых команд netsh удаленно на другом компьютере с **netsh – r** параметр, служба удаленного реестра должна быть запущена на удаленном компьютере. Если он не запущен, Windows отображает сообщение об ошибке «Не найден сетевой путь».
 
 ***`RemoteComputer`***
 
-Необязательный. Указывает удаленного компьютера, который требуется настроить.
+Необязательно. Указывает удаленного компьютера, который требуется настроить.
 
 **`-u`**
 
@@ -172,15 +172,15 @@ Netsh — это командной строки программа сценар
 
 ***`UserName`***
 
-Необязательный. Указывает имя учетной записи пользователя.
+Необязательно. Указывает имя учетной записи пользователя.
 
 **`-p`**
 
-Необязательно. Указывает, что вы хотите указать пароль для учетной записи пользователя.
+Необязательный. Указывает, что вы хотите указать пароль для учетной записи пользователя.
 
 ***`Password`***
 
-Необязательный. Указывает пароль для учетной записи пользователя, заданной параметром **-u** *UserName*.
+Необязательно. Указывает пароль для учетной записи пользователя, заданной параметром **-u** *UserName*.
 
 ***`NetshCommand`***
 
@@ -192,14 +192,14 @@ Netsh — это командной строки программа сценар
 
 ***`ScriptFile`***
 
-Необязательно. Указывает сценарий, который вы хотите запустить.
+Необязательный. Указывает сценарий, который вы хотите запустить.
 
 **`/?`**
 
 Необязательно. Отображает справку в командной строке netsh.
 
->[!NOTE]
->Если указать **`-r`** после другой команды **netsh** запускает команду на удаленном компьютере и возвращается в командную строку Cmd.exe. Если указать **`-r`** без другой команды, **netsh** откроется в удаленном режиме. Процесс аналогичен использованию **набора машины** командной строки Netsh. При использовании **`-r`**, задать целевой компьютер для текущего экземпляра **netsh** только. После выхода и повторного ввода **netsh**, сбрасывается конечного компьютера, что и локальный компьютер. Можно запустить **netsh** команд на удаленном компьютере, указав компьютера имя хранимой в WINS, UNC-имя, имя должно быть разрешено DNS-сервера или IP-адресом в Интернете.
+> [!NOTE]
+> Если указать **`-r`** после другой команды **netsh** запускает команду на удаленном компьютере и возвращается в командную строку Cmd.exe. Если указать **`-r`** без другой команды, **netsh** откроется в удаленном режиме. Процесс аналогичен использованию **набора машины** командной строки Netsh. При использовании **`-r`** , задать целевой компьютер для текущего экземпляра **netsh** только. После выхода и повторного ввода **netsh**, сбрасывается конечного компьютера, что и локальный компьютер. Можно запустить **netsh** команд на удаленном компьютере, указав компьютера имя хранимой в WINS, UNC-имя, имя должно быть разрешено DNS-сервера или IP-адресом в Интернете.
 
 **Ввести значения параметров строки для команды netsh**
 

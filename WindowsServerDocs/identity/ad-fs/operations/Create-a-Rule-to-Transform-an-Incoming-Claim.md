@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6bd107aca6c6f33cdf5f88e5b48a52fdea8d2086
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: a29406880481f0e4e257105e94bc1a33ee661164
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189342"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444442"
 ---
 # <a name="create-a-rule-to-transform-an-incoming-claim"></a>Создание правила для преобразования входящего утверждения
 
@@ -130,9 +130,9 @@ ms.locfileid: "66189342"
 >   
 > Дополнительные сведения о сценариев динамического контроля доступа, см. в разделе [динамического содержимого стратегии управления доступа](../../solution-guides/dynamic-access-control--scenario-overview.md) или [использование утверждений AD DS с экземпляром AD FS](https://technet.microsoft.com/library/hh831504.aspx).  
   
-7.  Нажмите кнопку **Готово**.  
+7. Нажмите кнопку **Готово**.  
   
-8.  В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
+8. В **изменение правил для утверждений** диалоговом окне щелкните **ОК** сохранить правило.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
 [Настройка правил для утверждения](Configure-Claim-Rules.md)  

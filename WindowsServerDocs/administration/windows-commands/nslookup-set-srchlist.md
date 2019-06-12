@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c3bc06f82f557f136850872180a5c430f70da5fd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39b28e7d43df2427caae46d323cd30f03b6b484c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888485"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436572"
 ---
 # <a name="nslookup-set-srchlist"></a>nslookup set srchlist
 
@@ -31,18 +31,20 @@ ms.locfileid: "59888485"
 Set srchlist=<DomainName>[/...]
 ```
 ## <a name="parameters"></a>Параметры
-|Параметр|Описание|
-|-------|--------|
-|<DomainName>|Указывает новые имена для списка домена и поиск DNS по умолчанию. Имя домена по умолчанию основан на имени узла. Можно указать до шести имен, разделенных косой чертой (/).|
-|{help &#124; ?}|Отображает краткое описание **nslookup** подкоманды.|
+
+|    Параметр    |                                                                                        Описание                                                                                        |
+|-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  <DomainName>   | Указывает новые имена для списка домена и поиск DNS по умолчанию. Имя домена по умолчанию основан на имени узла. Можно указать до шести имен, разделенных косой чертой (/). |
+| {help &#124; ?} |                                                                   Отображает краткое описание **nslookup** подкоманды.                                                                   |
+
 ## <a name="remarks"></a>Примечания
--   **Set srchlist используется**переопределяет значение по умолчанию список DNS-домен и имя **домена набора** команды. Используйте **установить все** команду, чтобы отобразить в списке.
-## <a name="BKMK_examples"></a>Примеры
-В следующем примере задается DNS-домена mfg.widgets.com и список поиска из трех имен:
-```
-set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
-```
-## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[nslookup задайте домен](nslookup-set-domain.md)
-[nslookup задать все](nslookup-set-all.md)
+- **Set srchlist используется**переопределяет значение по умолчанию список DNS-домен и имя **домена набора** команды. Используйте **установить все** команду, чтобы отобразить в списке.
+  ## <a name="BKMK_examples"></a>Примеры
+  В следующем примере задается DNS-домена mfg.widgets.com и список поиска из трех имен:
+  ```
+  set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
+  ```
+  ## <a name="additional-references"></a>Дополнительные ссылки
+  [Ключ синтаксиса команд](command-line-syntax-key.md)
+  [nslookup задайте домен](nslookup-set-domain.md)
+  [nslookup задать все](nslookup-set-all.md)

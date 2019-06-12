@@ -8,16 +8,16 @@ author: johnmarlin-msft
 ms.date: 01/24/2019
 description: Ресурсы-свидетели файл можно будет использовать общую папку для голосования в кворуме кластера. В этом разделе описывает файл ресурсы-свидетели и новые функциональные возможности, в том числе с помощью USB-накопитель, подключенные к маршрутизатору как файловый ресурс-свидетель.
 ms.localizationpriority: medium
-ms.openlocfilehash: 1888142f96208800a0417c9caeea89e8a0472e88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 47371be946c08cac2f271138d701922fc340a89d
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831755"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453045"
 ---
 # <a name="deploy-a-file-share-witness"></a>Развертывание файлового ресурса-свидетеля
 
-> Область применения. Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Файловый ресурс-свидетель представляет собой общую папку SMB, который использует отказоустойчивый кластер в качестве голос в кворуме кластера. Здесь представлен обзор технологии и новые функциональные возможности Windows Server 2019, в том числе с помощью USB-накопитель, подключенные к маршрутизатору как файловый ресурс-свидетель.
 
@@ -61,26 +61,26 @@ ms.locfileid: "59831755"
 
 В [Microsoft Ignite 2018](https://azure.microsoft.com/ignite/), [DataOn хранения](http://www.dataonstorage.com/) имели прямой кластер хранилища пробелы на своей территории киоска.  Этот кластер был подключен к [NetGear](https://www.netgear.com) маршрутизатору Wi-Fi X4S Nighthawk, используя USB-порта в формате ресурса-свидетеля, аналогичную следующей.
 
-![NetGear следящего сервера](media\File-Share-Witness\FSW1.png)
+![NetGear следящего сервера](media/File-Share-Witness/FSW1.png)
 
 Ниже перечислены шаги по созданию файлового ресурса-свидетеля, с помощью USB-устройства для этого конкретного маршрутизатора.  Учтите, что зависит от действия на других маршрутизаторах и NAS-устройства и должно быть выполнено с помощью поставщика указано направлениях.
 
 
 1. Войдите на маршрутизатор с подключенным устройством USB.
 
-   ![Интерфейс NetGear](media\File-Share-Witness\FSW2.png)
+   ![Интерфейс NetGear](media/File-Share-Witness/FSW2.png)
 
 2. В списке вариантов выберите ReadySHARE, который является, где можно создать общие папки.
 
-   ![NetGear ReadySHARE](media\File-Share-Witness\FSW3.png)
+   ![NetGear ReadySHARE](media/File-Share-Witness/FSW3.png)
 
 3. Для файлового ресурса-свидетеля общую папку основные — все, что требуется.  Выбрав "Изменить" будет отображаться всплывающее диалоговое окно на USB-устройство, в котором можно создать общую папку.
 
-   ![Интерфейс NetGear общей папки](media\File-Share-Witness\FSW4.png)
+   ![Интерфейс NetGear общей папки](media/File-Share-Witness/FSW4.png)
 
 4. После выбора кнопки "Применить", создается общему ресурсу и можно увидеть в списке.
 
-   ![Общие папки NetGear](media\File-Share-Witness\FSW5.png)
+   ![Общие папки NetGear](media/File-Share-Witness/FSW5.png)
 
 5. После создания общей папки файлового ресурса-свидетеля для кластера создается с помощью PowerShell.
 

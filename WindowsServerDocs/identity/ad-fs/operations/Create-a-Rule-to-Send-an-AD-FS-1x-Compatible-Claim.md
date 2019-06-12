@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: c87b76224d1ac5dbe3befc837fad8879d0b9a1ef
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: bda071be6668710361205643125fc8ad44246012
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189398"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453022"
 ---
 # <a name="create-a-rule-to-send-an-ad-fs-1x-compatible-claim"></a>Создание правила для отправки AD FS 1.x утверждения, совместимые
 
@@ -42,9 +42,6 @@ ms.locfileid: "66189398"
   
 > [!NOTE]  
 > Для этого правила работают надлежащим образом, убедитесь, что настройки доверия с проверяющей стороной и отношения доверия поставщика утверждений, где создается это правило для использования **профиль служб AD FS 1.0 и 1.1**. 
-
-
-
 
 ## <a name="to-create-a-rule-to-issue-an-adfs1x-name-id-claim-using-the-pass-through-or-filter-an-incoming-claim-rule-template-on-a-relying-party-trust-in-windows-server-2016"></a>Чтобы создать правило для выдачи AD FS 1. *x* идентификатор имени утверждения с помощью пропуск или Фильтрация входящего утверждения шаблон правила на доверия с проверяющей стороной в Windows Server 2016 
 
@@ -125,11 +122,10 @@ ms.locfileid: "66189398"
     -   **Пропускать только значения утверждения, которые соответствуют значению суффикса электронной почты конкретного**  
   
     -   **Пропускать только значения утверждения, которые начинаются с указанным значением**  
-![Создание правила](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)   
+![Создание правила](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs3.PNG)
 
 10. Нажмите кнопку **Готово**, а затем нажмите кнопку **ОК** сохранить правило.  
 
-  
 
 ## <a name="to-create-a-rule-to-transform-an-incoming-claim-on-a-relying-party-trust-in-windows-server-2016"></a>Чтобы создать правило для преобразования входящего утверждения на доверия с проверяющей стороной в Windows Server 2016 
 
@@ -139,13 +135,13 @@ ms.locfileid: "66189398"
 ![Создание правила](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule9.PNG)  
   
 3.  Справа\-выберите выбранного отношения доверия и нажмите кнопку **изменить политику выдачи утверждений**.
-![Создание правила](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)   
+![Создание правила](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule10.PNG)
   
 4.  В **изменить политику выдачи утверждений** диалогового **правила преобразования выдачи** щелкните **добавить правило** для запуска мастера создания правила. 
-![Создание правила](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)    
+![Создание правила](media/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim/claimrule11.PNG)
 
 5.  На **Выбор шаблона правила** раздела **шаблон правила утверждения**выберите **преобразование входящего утверждения** в списке и нажмите кнопку **Далее**.  
-![Создание правила](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)      
+![Создание правила](media/Create-a-Rule-to-Transform-an-Incoming-Claim/transform3.PNG)
 
 6.  На **Настройка правила** введите имя правила утверждения.  
   
@@ -168,7 +164,7 @@ ms.locfileid: "66189398"
     -   **Замените значение входящего утверждения на значение другого исходящего утверждения**  
   
     -   **Замените входящие электронные\-суффикс утверждения с новой электронной почты\-суффикс электронной почты**  
-![Создание правила](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)    
+![Создание правила](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs4.PNG)
 
 11. Нажмите кнопку **Готово**, а затем нажмите кнопку **ОК** сохранить правило.  
 
@@ -273,7 +269,7 @@ ms.locfileid: "66189398"
     -   **Пропускать только значения утверждения, которые соответствуют значению суффикса электронной почты конкретного**  
   
     -   **Пропускать только значения утверждения, которые начинаются с указанным значением**  
-![Создание правила](media/\Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)   
+![Создание правила](media/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim/adfs1.PNG)
 
 10. Нажмите кнопку **Готово**, а затем нажмите кнопку **ОК** сохранить правило.  
 

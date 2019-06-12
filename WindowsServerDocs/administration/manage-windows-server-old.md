@@ -8,19 +8,19 @@ author: lizap
 ms.author: elizapo
 ms.date: 03/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 4faadb811927626c26a5b01e2ce0598d40792b68
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ae87b12997aa3cb3ae3fe290c9243995b30d6b0
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846765"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452826"
 ---
 # <a name="manage-windows-server"></a>Управление Windows Server
 
 >Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
  <ul class="cardse panelContent cols cols3">
     <li>
@@ -118,5 +118,5 @@ Windows PowerShell — это оболочка командной строки 
 Средства командной строки Windows используются для выполнения административных задач в Windows. Вы можете воспользоваться справочником по командам, чтобы ознакомиться со средствами командной строки, командной оболочкой и методами автоматизации задач командной строки с помощью пакетных файлов или средств написания сценариев.
 
 ## <a name="windows-server-insider-preview"></a>Сборка из программы предварительной оценки Windows Server
-### <a name="system-insightsmanagesystem-insightsoverviewmd"></a>[Система аналитики](..\manage\system-insights\overview.md)
+### <a name="system-insightsmanagesystem-insightsoverviewmd"></a>[Системная аналитика](../manage/system-insights/overview.md)
 Системная аналитика — это новая возможность, которая представляет средства прогнозной аналитики, и изначально входит в состав Windows Server. Эти возможности прогнозирования локально анализируют системные данные Windows Server, такие как счетчики производительности или события трассировки событий Windows, помогая ИТ-администраторам упреждающим образом выявлять и устранять проблемы в их развертываниях. 

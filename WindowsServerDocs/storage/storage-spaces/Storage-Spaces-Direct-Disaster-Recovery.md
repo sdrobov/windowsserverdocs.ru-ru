@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 03/29/2018
 description: В этой статье описаны сценарии, сегодня доступны для аварийного восстановления Microsoft HCI (дисковых)
 ms.localizationpriority: medium
-ms.openlocfilehash: 32bbf02ca78d5c6a2147162768c984d0e0b27e36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c844c56c3a1717658bcdb970e78d45b5cdda861c
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453123"
 ---
 # <a name="disaster-recovery-with-storage-spaces-direct"></a>Аварийное восстановление с дисковыми пространствами
 
@@ -41,7 +41,7 @@ ms.locfileid: "59879595"
 
 В этом случае существует два отдельных независимых кластеров. Для настройки реплики хранилища между HCI, необходимо выполнить действия, описанные в [-межкластерная репликация хранилища](../storage-replica/cluster-to-cluster-storage-replication.md).
 
-![Схема репликации службы хранилища](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure1.png)
+![Схема репликации службы хранилища](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure1.png)
 
 При развертывании реплики хранилища следует принимать во внимание следующие соображения. 
 
@@ -56,7 +56,7 @@ ms.locfileid: "59879595"
 
 [Реплика Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/manage/set-up-hyper-v-replica) гиперконвергентной инфраструктуры, посвященная репликации на уровне виртуальной машины для аварийного восстановления. Реплика Hyper-V, которые можно сделать — получить виртуальную машину и реплицировать ее в Azure (реплика) или вторичный сайт. Затем на дополнительном сайте реплики Hyper-V можно реплицировать виртуальную машину в третьем (реплику расширенной репликации).
 
-![Схема репликации Hyper-V](media\storage-spaces-direct-disaster-recovery\Disaster-Recovery-Figure2.png)
+![Схема репликации Hyper-V](media/storage-spaces-direct-disaster-recovery/Disaster-Recovery-Figure2.png)
 
 С помощью реплики Hyper-V репликация сконцентрирована Hyper-v. При первом включении виртуальной машины для репликации, имеется три варианта как пространственной начальной копии отправки на соответствующих кластеров с реплики.
 

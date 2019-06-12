@@ -12,12 +12,12 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 72fe309e0e7ce6d7227cce8b7f2c5dbf018eb4a1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1adf8ae2dd8763d0bc5a514609bb2470de6acde4
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813095"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436073"
 ---
 # <a name="troubleshoot-computer-monitoring-in-windows-server-essentials"></a>Устранение неполадок мониторинга компьютеров в Windows Server Essentials
 
@@ -36,13 +36,13 @@ ms.locfileid: "59813095"
   
  **Причина** Эта ошибка может возникнуть по одной из следующих причин, связанных с настройкой параметров оповещений:  
   
--   Неверное имя SMTP-сервера или номер порта.  
+- Неверное имя SMTP-сервера или номер порта.  
   
--   Неправильно указано, что SMTP-серверу требуется SSL-соединение.  
+- Неправильно указано, что SMTP-серверу требуется SSL-соединение.  
   
--   SMTP-сервер требует проверки подлинности, и были введены неправильные учетные данные.  
+- SMTP-сервер требует проверки подлинности, и были введены неправильные учетные данные.  
   
- **Пути решения** Исправьте возможные ошибки в параметрах уведомлений электронной почты.  
+  **Пути решения** Исправьте возможные ошибки в параметрах уведомлений электронной почты.  
   
 ##### <a name="to-identify-issues-in-your-email-notification-settings"></a>Определение проблем в параметрах уведомлений электронной почты  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59813095"
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  Для просмотра папки ProgramData необходимо включить отображение скрытых элементов. Если папка ProgramData, отображается Дон t на ленте s **представление** на вкладке **Показать/скрыть** группы выберите **скрытые элементы** текстовое поле.  
+    >  Для просмотра папки ProgramData необходимо включить отображение скрытых элементов. Если папка ProgramData, не отображается на ленте **представление** на вкладке **Показать/скрыть** группы выберите **скрытые элементы** текстовое поле.  
   
 ##### <a name="to-update-your-email-notification-setup-for-alerts"></a>Обновление настроек уведомлений электронной почты  
   

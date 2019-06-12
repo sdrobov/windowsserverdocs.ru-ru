@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: c9b2e9201d58472286b42a9c89a36423f40d143d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 348ebf5b99de7f582a3edf57b0a190f87f1c4a5b
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834515"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452600"
 ---
 # <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>Использование пользовательского подключаемого модуля шлюза в расширении средства
 
@@ -23,7 +23,7 @@ ms.locfileid: "59834515"
 
 ## <a name="prepare-your-environment"></a>Подготовка среды ##
 
-Если это еще не сделано, следуйте указаниям, приведенным в [разрабатывать расширения средство](..\develop-tool.md) для подготовки среды и создайте новый, пустой средства расширения.
+Если это еще не сделано, следуйте указаниям, приведенным в [разрабатывать расширения средство](../develop-tool.md) для подготовки среды и создайте новый, пустой средства расширения.
 
 ## <a name="add-a-module-to-your-project"></a>Добавить модуль в проект ##
 
@@ -62,6 +62,9 @@ export class PluginService {
 ```
 
 Изменить ссылки на ```Sample Uno``` и ```Sample%20Uno``` к имени функции соответствующим образом.
+
+[!WARNING]
+> Это рекомендуется, встроенные в ```this.appContextService.node``` используется вызов любого API, который определен в настраиваемый шлюз подключаемого модуля. Это гарантирует, что если необходимы учетные данные внутри подключаемого модуля шлюза, они будут обработаны правильно.
 
 ### <a name="modify-modulets"></a>Изменить module.ts
 
@@ -142,4 +145,4 @@ import { PluginService } from './plugin.service';
 
 ## <a name="build-and-side-load-your-extension"></a>Сборки и на стороне загрузить расширение
 
-Теперь вы готовы к [построения и стороны нагрузки](..\develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center.
+Теперь вы готовы к [построения и стороны нагрузки](../develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center.

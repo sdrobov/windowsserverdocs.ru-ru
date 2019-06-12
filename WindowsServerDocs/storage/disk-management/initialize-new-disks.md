@@ -1,23 +1,23 @@
 ---
 title: Инициализация новых дисков
 description: Как инициализировать новые диски с помощью управления дисками, Подготовка их к использованию. Также содержит ссылки на устранение неполадок.
-ms.date: 10/24/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e009780d83220b528ba7dac6e2561be36e662f71
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 7a275c372e1486b26821f797a7663eecbc3e8784
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192760"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812426"
 ---
 # <a name="initialize-new-disks"></a>Инициализация новых дисков
 
-> **Область применения:** Windows 10, Windows 8.1, Windows 7, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Область применения:** Windows 10, Windows 8.1, Windows 7, Windows Server (полугодовой канал), Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Если добавить новый диск к Компьютеру, и он не отображается в проводнике, может потребоваться [Добавление буквы диска](change-a-drive-letter.md), или инициализировать его перед его использованием. Можно инициализировать только на диск, который еще не форматируется. Инициализация диска будут удалены все, что на нем и подготавливает его для использования с Windows, после чего можно отформатировать его и затем сохранить файлы на нем.
 
@@ -35,12 +35,12 @@ ms.locfileid: "66192760"
 
      Обратите внимание, что некоторые USB-накопители не можете инициализировать они просто будут форматированы и [букву диска](change-a-drive-letter.md).
 
-    ![Управление дисками, в котором показана инициализация диска контекстном меню, отображаемом неформатированный диск к](media\uninitialized-disk.PNG)
+    ![Управление дисками, в котором показана инициализация диска контекстном меню, отображаемом неформатированный диск к](media/uninitialized-disk.PNG)
 2. В **инициализировать диск** диалоговое окно (показанное ниже), проверка, убедитесь, что выбран правильный диск, а затем нажмите кнопку **ОК** принимать стиль раздела по умолчанию. Если необходимо изменить раздел стиля (GPT и MBR) см. раздел [о стили разделов - GPT и MBR](#about-partition-styles---gpt-and-mbr).
 
      Состояние диска сменится на **инициализация** и затем **Online** состояния. Если инициализация завершается сбоем, для какой-либо причине, см. в разделе [состояние диска не инициализирован или отсутствует диск полностью](troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing).
 
-    ![Диалоговое окно инициализация диска с выбранного стиля разделов GPT](media\initialize-disk.PNG)
+    ![Диалоговое окно инициализация диска с выбранного стиля разделов GPT](media/initialize-disk.PNG)
 
 ## <a name="about-partition-styles---gpt-and-mbr"></a>О стили разделов - GPT и MBR
 

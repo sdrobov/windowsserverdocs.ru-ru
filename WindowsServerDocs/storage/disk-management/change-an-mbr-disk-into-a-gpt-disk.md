@@ -1,23 +1,23 @@
 ---
 title: Изменение стиля раздела диска с основной загрузочной записи (MBR) на таблицу разделов GUID (GPT)
 description: В этой статье описывается, как изменить стиль раздела диска с основной загрузочной записи (MBR) на таблицу разделов GUID (GPT)
-ms.date: 06/19/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f6aba72c329ba380f9617f484c4cf754fbcbb363
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 902a845bbe6a7e2a4d811aac0ea2990fb3557832
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192728"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812461"
 ---
 # <a name="convert-an-mbr-disk-into-a-gpt-disk"></a>Преобразовать в GPT-диск MBR-диска
 
-> **Область применения:** Windows 10, Windows 8.1, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Область применения:** Windows 10, Windows 8.1, Windows Server (полугодовой канал), Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 На дисках с основной загрузочной записью (MBR) используется стандартная таблица разделов BIOS. На дисках с таблицей разделов GUID (GPT) используется единый расширяемый микропрограммный интерфейс (UEFI). Одним из преимуществ дисков GPT является то, что на каждом из них может быть более четырех разделов. Кроме того, стиль раздела GPT необходимо использовать для дисков объемом более двух терабайт (ТБ).
 
@@ -59,7 +59,7 @@ ms.locfileid: "66192728"
 7.  В командной строке **DISKPART** введите `convert gpt`.
 
 | Значение  | Описание  |
-| ----- | ----|
+| ----- | ---- |
 | **Список дисков** | Отображает список дисков и сведения о них, такие как размер, объем свободного места, является ли диск базовым или динамическим, а также используемый стиль раздела — основная загрузочная запись (MBR) или таблица разделов GUID (GPT). Фокус находится на диске, отмеченном звездочкой (*). |
 | **Выберите диск** *номер диска* | Выбирает указанный диск, где *disknumber* — номер диска, и переводит на него фокус. |
 | **Очистить** | Удаляет все разделы и тома на диске с фокусом.  |
@@ -68,5 +68,3 @@ ms.locfileid: "66192728"
 ## <a name="see-also"></a>См. также
 
 -   [Синтаксис командной строки](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)
-
-

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: c925c7eb-6880-411f-8e59-bd0f57cc5fc3
 author: lizap
 manager: dongill
-ms.openlocfilehash: 894ea8b134ae5b871a2978e3f72e683c12346fe5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8571c2220f804a27e4e1a6b744e8e15e38bd53a3
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850205"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66453085"
 ---
 # <a name="supported-configurations-for-remote-desktop-services-in-windows-server-2016"></a>Поддерживаемые конфигурации для служб удаленных рабочих столов в Windows Server 2016
 
@@ -90,7 +90,7 @@ ms.locfileid: "59850205"
  - Приложение (приложение удаленного рабочего стола в Windows, iOS, Android и Mac)
  - Веб-служба SSO
  
-С помощью приложения удаленного рабочего стола, можно хранить учетные данные либо как часть сведений о соединении ([Mac](clients\remote-desktop-mac.md)) или как часть управляемых учетных записей ([iOS](clients\remote-desktop-ios.md#manage-your-user-accounts), [Android](clients\remote-desktop-android.md#manage-your-user-accounts), Windows) безопасно через механизмы, уникальные для каждой операционной системы.
+С помощью приложения удаленного рабочего стола, можно хранить учетные данные либо как часть сведений о соединении ([Mac](clients/remote-desktop-mac.md)) или как часть управляемых учетных записей ([iOS](clients/remote-desktop-ios.md#manage-your-user-accounts), [Android](clients/remote-desktop-android.md#manage-your-user-accounts), Windows) безопасно через механизмы, уникальные для каждой операционной системы.
 
 Чтобы подключиться к рабочими столами и RemoteApp с единым ВХОДОМ через клиент удаленного рабочего стола папки "Входящие" на Windows, необходимо подключиться к удаленным рабочим Столам веб-страницы через обозреватель Internet Explorer. На стороне сервера требуются следующие параметры конфигурации. Другие конфигурации не поддерживаются для единого входа через Интернет:
 

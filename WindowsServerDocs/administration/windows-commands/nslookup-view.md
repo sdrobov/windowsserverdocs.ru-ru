@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0712189f9043622ef6d252a88328f01042aad159
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 623064db7a3e89decbfc1fbc27fa0598e398ac34
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872235"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66436410"
 ---
 # <a name="nslookup-view"></a>nslookup view
 
@@ -30,10 +30,12 @@ ms.locfileid: "59872235"
 view <FileName>  
 ```  
 ## <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<FileName>|Указывает имя файла, содержащего выходных данных предыдущей **ls** подкоманд и команд.|  
-|{help &#124; ?}|Отображает краткое описание **nslookup** подкоманды.|  
+
+|    Параметр    |                                            Описание                                            |
+|-----------------|---------------------------------------------------------------------------------------------------|
+|   <FileName>    | Указывает имя файла, содержащего выходных данных предыдущей **ls** подкоманд и команд. |
+| {help &#124; ?} |                       Отображает краткое описание **nslookup** подкоманды.                       |
+
 ## <a name="additional-references"></a>Дополнительные ссылки  
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 [nslookup ls](nslookup-ls.md)  

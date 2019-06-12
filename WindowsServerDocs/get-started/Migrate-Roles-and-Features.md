@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 7469171005164d9ff823dad7de230d877c874dc9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 486c11ebd46c6fd23b3bd16cd90463f8d607287e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840885"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443544"
 ---
 # <a name="migrating-roles-and-features-in-windows-server"></a>Миграция ролей и функций в Windows Server
 
@@ -36,7 +36,7 @@ ms.locfileid: "59840885"
 
 >[!NOTE]
 >При миграции или обновлении до любой версии Windows Server следует просмотреть и понять [политику сроков поддержки](https://support.microsoft.com/lifecycle) и период времени для этой версии и плана, соответственно. Вы можете [найти информацию о сроках](https://support.microsoft.com/lifecycle) для определенного выпуска Windows Server, который вас интересуют.
- 
+ 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 
 ### <a name="migration-guides"></a>Руководства по миграции
@@ -45,8 +45,8 @@ ms.locfileid: "59840885"
 - [Службы удаленных рабочих столов](https://technet.microsoft.com/windows-server-docs/compute/remote-desktop-services/migrate-rds-role-services)
 - [Веб-сервер (IIS)](https://www.iis.net/downloads/microsoft/web-deploy)
 - [Windows Server Update Services](https://technet.microsoft.com/library/hh852339.aspx)
-- [MultiPoint Services](https://technet.microsoft.com/windows-server-docs/compute/remote-desktop-services/multipoint-services/multipoint-services-migrate)
- 
+- [Службы MultiPoint](https://technet.microsoft.com/windows-server-docs/compute/remote-desktop-services/multipoint-services/multipoint-services-migrate)
+ 
 ## <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 ### <a name="migration-guides"></a>Руководства по миграции
@@ -63,14 +63,14 @@ ms.locfileid: "59840885"
 - [Перенос Windows Server Update Services в Windows Server 2012 R2](https://technet.microsoft.com/library/hh852339.aspx)
 - [Перенос кластерных ролей на Windows Server 2012 R2](https://technet.microsoft.com/library/dn530779.aspx)
 - [Перенос DHCP-сервера в Windows Server 2012 R2](https://technet.microsoft.com/library/dn495425.aspx)
- 
+ 
 ## <a name="windows-server-2012"></a>Windows Server 2012
 
 ### <a name="migration-guides"></a>Руководства по миграции
 Следуйте инструкциям в этих руководствах для переноса ролей и компонентов с серверов под управлением Windows Server 2003, Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012 на Windows Server 2012. Средства миграции Windows Server в Windows Server 2012 поддерживают перенос между различными подсетями.
 
 - [Установка, использование и удаление средств миграции Windows Server](https://technet.microsoft.com/library/jj134202)
-- [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012](https://technet.microsoft.com/library/jj647765)
+- [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012](https://technet.microsoft.com/library/jj647765)
 - [Миграция центра регистрации работоспособности в Windows Server 2012](https://technet.microsoft.com/library/hh831513)
 - [Перенос Hyper-V в Windows Server 2012 с Windows Server 2008 R2](https://technet.microsoft.com/library/jj574113)
 - [Перенос конфигурации IP в Windows Server 2012](https://technet.microsoft.com/library/jj574133)
@@ -80,7 +80,7 @@ ms.locfileid: "59840885"
 - [Миграция Windows Server Update Services в Windows Server 2012](https://technet.microsoft.com/library/hh852339)
 - [Обновление контроллеров домена Active Directory в Windows Server 2012](https://technet.microsoft.com/library/hh994618.aspx)
 - [Перенос кластеризованных служб и приложений на Windows Server 2012](https://technet.microsoft.com/library/dn486790.aspx)
- 
+ 
 
 Для получения дополнительных ресурсов по миграции см. статью [Перенос ролей и компонентов на Windows Server 2012](https://technet.microsoft.com/library/jj134039).
 
@@ -104,5 +104,6 @@ ms.locfileid: "59840885"
 - [Руководство по миграции служб удаленных рабочих столов](https://technet.microsoft.com/library/ff849223)
 - [Руководство по миграции RRAS](https://technet.microsoft.com/library/ee822825)
 - [Windows Server миграции задач и сведения](https://technet.microsoft.com/library/ff400258)
-- [Windows Server Update Services 3.0 руководство по миграции с пакетом обновления 2](https://technet.microsoft.com/library/ee822826)  
+- [Windows Server Update Services 3.0 руководство по миграции с пакетом обновления 2](https://technet.microsoft.com/library/ee822826)
+ 
 Для получения дополнительных ресурсов по миграции см. статью [Перенос ролей и компонентов на Windows Server 2008 R2](https://technet.microsoft.com/library/dd365353).

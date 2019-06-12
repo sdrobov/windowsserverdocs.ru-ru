@@ -9,16 +9,16 @@ ms.topic: article
 author: vpetter
 ms.date: 03/27/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 55167d0f4c838af5f6f79432ede2dd45eac848a5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e301b8c46041f107739bbcdb09c2eb0c8252ebb
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853865"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452901"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows 
 
-> Относится к: Windows Server 2016, Windows Server
+> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server
 
 Windows Error Reporting (WER) — это инфраструктура гибкие обратной связи на основе событий, предназначен для опытных администраторов или 3 уровня поддержки сбора сведений о проблемах оборудования и программного обеспечения, которые Windows может обнаруживать, сообщающие сведения в корпорацию Майкрософт, и предоставить пользователям все доступные решения. Это [ссылку](https://docs.microsoft.com/powershell/module/windowserrorreporting/) приводится описание и синтаксис всех командлетов WindowsErrorReporting.
 
@@ -317,15 +317,15 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 
 Анализатор сообщений позволяет записывать, отображения и анализа протокола обмена сообщениями трафика. Это также позволяет трассировки и оценить системные события и другие сообщения из компонентов Windows. Вы можете скачать [Microsoft Message Analyzer отсюда](https://www.microsoft.com/download/details.aspx?id=44226). Когда вы загружаете журналы в анализатор сообщений, вы увидите следующие поставщики и сообщений из каналов ведения журнала.
 
-![Идет загрузка журналов в анализаторе сообщений](media\troubleshooting-using-WER-reports\loading-logs-into-message-analyzer.png)
+![Идет загрузка журналов в анализаторе сообщений](media/troubleshooting-using-WER-reports/loading-logs-into-message-analyzer.png)
 
 Кроме того, можно также сгруппировать поставщиками, чтобы получить следующее представление:
 
-![Журналы, сгруппированные по поставщикам](media\troubleshooting-using-WER-reports\logs-grouped-by-providers.png)
+![Журналы, сгруппированные по поставщикам](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
-Чтобы определить причину сбоя диска, перейдите к событиям в разделе **FailoverClustering и диагностики** и **FailoverClustering/DiagnosticVerbose**. Затем выполните следующий запрос: **EventLog.EventData["LogString]» содержит «Диском кластера 10»**.  Это позволит получить дает следующий результат:
+Чтобы определить причину сбоя диска, перейдите к событиям в разделе **FailoverClustering и диагностики** и **FailoverClustering/DiagnosticVerbose**. Затем выполните следующий запрос: **EventLog.EventData["LogString]» содержит «Диском кластера 10»** .  Это позволит получить дает следующий результат:
 
-![Выходные данные выполнения запроса журнала](media\troubleshooting-using-WER-reports\output-of-running-log-query.png)
+![Выходные данные выполнения запроса журнала](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
 
 ### <a name="physical-disk-timed-out"></a>Истекло время ожидания физического диска
@@ -423,7 +423,7 @@ DynamicSig[29].Value=10008
 
 Чтобы определить, почему произошло зависание, откройте файлы работе с сервером. Затем выполните следующий запрос: **EventLog.EventData["LogString]» содержит «Диском кластера 10»** это позволит получить дает следующий результат:
 
-![Выходных данных выполнения журнала запроса 2](media\troubleshooting-using-WER-reports\output-of-running-log-query-2.png)
+![Выходных данных выполнения журнала запроса 2](media/troubleshooting-using-WER-reports/output-of-running-log-query-2.png)
 
 Мы можете cross-examine с потоком из **memory.hdmp** файла:
 

@@ -14,12 +14,12 @@ author: lizap
 ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 8d14ccf734d5242301030bbb6e3c2489e1a0266a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f9a4e4e0dde0c2c6178629f0dee744448edc72dd
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876355"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812599"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server: информация по текущим и прежним выпускам для ИТ-администраторов
 
@@ -29,7 +29,7 @@ Windows Server является платформой для создания и�
 
 > [!IMPORTANT]
 > На вашем компьютере установлена операционная система Windows? Windows 10, Windows 8 или 8.1? Windows 7? У вас возникла проблема? Перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) — просто введите свою проблему в строке поиска. Вы найдете там информацию о Windows, Office, Skype и так далее. 
-
+> 
 > Информация ниже относится *только* к Windows **Server**.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
@@ -54,18 +54,14 @@ Windows Server является платформой для создания и�
 
 [Библиотека для разработчиков Windows Server 2003 на сайте MSDN](https://msdn.microsoft.com/library/dn792549.aspx)
 
-
 ## <a name="product-evaluations"></a>Ознакомительные версии продуктов
 
 [Скачайте ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
 [Скачайте пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 
-
 ## <a name="related-links"></a>Связанные ссылки
 [Сведения о продукте Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) 
-
-<br>
 
 > [!TIP]
 > У вас возникли проблемы? Прежде всего, перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) и введите свою проблему в строке поиска. Вы можете получить поддержку по Windows, Office, Skype и другим продуктам. 

@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 97d889b54c4b0de0230c50e1d7c8d21617ea881a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6e1db167b12d47afccb8842da617f1e9fe72acff
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835855"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66434961"
 ---
-#<a name="bitsadmin-getsecurityflags"></a>bitsadmin getsecurityflags
+# <a name="bitsadmin-getsecurityflags"></a>bitsadmin getsecurityflags
 
 >Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -46,6 +46,6 @@ C:\>bitsadmin /GetSecurityFlags myJob
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 
