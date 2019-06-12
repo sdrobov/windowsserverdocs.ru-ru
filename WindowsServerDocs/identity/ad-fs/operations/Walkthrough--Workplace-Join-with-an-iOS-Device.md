@@ -9,12 +9,12 @@ ms.date: 10/18/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 42b71667758f392d641c5262e34322f8b21cfad9
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 979802469737066612bc6242f942fd3acd077479
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188913"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444789"
 ---
 # <a name="walkthrough-workplace-join-with-an-ios-device"></a>Пошаговое руководство: присоединение к рабочему месту с устройства iOS
 
@@ -37,23 +37,23 @@ ms.locfileid: "66188913"
 
 #### <a name="to-join-an-ios-device-to-a-workplace"></a>Присоединение устройства iOS к рабочему месту
 
-1.  -   **Когда настроенное DRS является служба регистрации устройств Azure Active Directory, выполните следующие действия.** Откройте Apple Safari и перейдите к конечной точке беспроводного профиля службы регистрации устройств Azure Active Directory для устройств iOS <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > где <`yourdomainname`> — имя домена, которое вы настроили в Azure Active Directory. Например, если имя домена contoso.com, URL-адрес будет: `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
+1. -   **Когда настроенное DRS является служба регистрации устройств Azure Active Directory, выполните следующие действия.** Откройте Apple Safari и перейдите к конечной точке беспроводного профиля службы регистрации устройств Azure Active Directory для устройств iOS <`https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/<yourdomainname` > где <`yourdomainname`> — имя домена, которое вы настроили в Azure Active Directory. Например, если имя домена contoso.com, URL-адрес будет: `https://enterpriseregistration.windows.net/enrollmentserver/otaprofile/contoso.com`
 
-    -   **Когда настроенной DRS является локальная DRS, выполните следующие действия.** Откройте Apple Safari и перейдите к конечной точке беспроводного профиля службы регистрации устройств (DRS) для устройств iOS `https://adf1s.contoso.com/enrollmentserver/otaprofile`
+   -   **Когда настроенной DRS является локальная DRS, выполните следующие действия.** Откройте Apple Safari и перейдите к конечной точке беспроводного профиля службы регистрации устройств (DRS) для устройств iOS `https://adf1s.contoso.com/enrollmentserver/otaprofile`
 
-    Существует много способов взаимодействия с этим URL-адресом для ваших пользователей. Один из рекомендованных способов — опубликовать этот URL-адрес в настраиваемом сообщении об отказе в доступе к приложению в AD FS. Это рассматривается в следующем разделе: [Создание политики доступа к приложениям и пользовательского сообщения об отказе в доступе](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
+   Существует много способов взаимодействия с этим URL-адресом для ваших пользователей. Один из рекомендованных способов — опубликовать этот URL-адрес в настраиваемом сообщении об отказе в доступе к приложению в AD FS. Это рассматривается в следующем разделе: [Создание политики доступа к приложениям и пользовательского сообщения об отказе в доступе](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup#create-an-application-access-policy-and-custom-access-denied-message)
 
-2.  Войдите на веб-страницу с помощью доменной учетной записью компании: **roberth@contoso.com** и пароль: **P@ssword**.
+2. Войдите на веб-страницу с помощью доменной учетной записью компании: <strong>roberth@contoso.com</strong> и пароль: <strong>P@ssword</strong>.
 
-3.  Система предложит установить профиль. На экране **Установка профиля** щелкните **Установить**.
+3. Система предложит установить профиль. На экране **Установка профиля** щелкните **Установить**.
 
-4.  В ответ на запрос подтверждения установки профиля щелкните **Установить сейчас**.
+4. В ответ на запрос подтверждения установки профиля щелкните **Установить сейчас**.
 
-5.  Если устройство требует ввода PIN-кода для разблокировки, система предложит ввести PIN-код.
+5. Если устройство требует ввода PIN-кода для разблокировки, система предложит ввести PIN-код.
 
-6.  Установка профиля завершена, когда отобразится экран **Профиль установлен** . Нажмите кнопку **Готово**.
+6. Установка профиля завершена, когда отобразится экран **Профиль установлен** . Нажмите кнопку **Готово**.
 
-    Вернитесь в Safari. Отобразится сообщение о том, что Safari можно закрыть или выйти из приложения.
+   Вернитесь в Safari. Отобразится сообщение о том, что Safari можно закрыть или выйти из приложения.
 
 > [!TIP]
 > Для просмотра или удаления профиля присоединения к рабочему месту найдите раздел **Параметры**, щелкните **Общие**, а затем — **Профили** на устройстве iOS.

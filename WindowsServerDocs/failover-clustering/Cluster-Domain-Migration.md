@@ -8,16 +8,16 @@ author: johnmarlin-msft
 ms.date: 01/18/2019
 description: В этой статье описывается перемещение кластера Windows Server 2019 из одного домена в другой
 ms.localizationpriority: medium
-ms.openlocfilehash: bcfd458c94d33820f434cde3313dc069fc42ffd9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1054de942e807f00586903683faeaf695ec2f033
+ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875945"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66452928"
 ---
 # <a name="failover-cluster-domain-migration"></a>Миграция домена отказоустойчивого кластера
 
-> Область применения. Windows Server 2019, Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 Этот раздел содержит общие сведения о перемещении отработки отказа Windows Server кластеры из одного домена в другой.
 
@@ -46,7 +46,7 @@ ms.locfileid: "59875945"
 
 Первый вариант предполагает удаление кластера и перестроить его в новом домене.
 
-![Удалите и перестройте](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-1.gif)
+![Удалите и перестройте](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-1.gif)
 
 Как показано в анимации, этот параметр является необратимым действия выполняется:
 
@@ -56,7 +56,7 @@ ms.locfileid: "59875945"
 
 Второй вариант является менее необратимым, но требуется дополнительное оборудование, как кластер будет необходимо построить в новом домене.  После перевода кластера в новом домене, запустите мастер миграции кластера для переноса ресурсов. Обратите внимание, что это не переноса данных необходимо использовать другое средство для переноса данных, таких как [миграции службы хранилища](../storage/storage-migration-service/overview.md)(после добавления поддержки кластера).
 
-![Построение и миграция](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-2.gif)
+![Построение и миграция](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-2.gif)
 
 Как показано в анимации, этот параметр не является необратимым, но требуется другое оборудование или узел из существующего кластера, не был удален.
 
@@ -76,7 +76,7 @@ ms.locfileid: "59875945"
 
 Процесс для выполнения этой задачи является изменение кластер из одного домена в рабочую группу и обратно в новом домене.  Необходимость уничтожить кластер, перестроить кластер, установить приложения и т. д не требуется. Например оно выглядело следующим образом:
 
-![Перенос](media\Cross-Domain-Cluster-Migration\Cross-Cluster-Domain-Migration-3.gif)
+![Перенос](media/Cross-Domain-Cluster-Migration/Cross-Cluster-Domain-Migration-3.gif)
 
 ## <a name="migrating-a-cluster-to-a-new-domain"></a>Миграция кластера в новый домен
 

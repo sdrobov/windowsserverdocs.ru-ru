@@ -11,12 +11,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 11/19/2018
-ms.openlocfilehash: b58193ec570cf0d94b6c95018b8c00c813331986
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 662541658fe6e7b99e66fe31344450e0a1cbd201
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222644"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447837"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Ubuntu на базе Hyper-V
 
@@ -91,7 +91,6 @@ ms.locfileid: "66222644"
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    12.04 имеет отдельный виртуального ядра. Чтобы установить универсальный HWE ядра на 12.04, выполните следующие команды правами привилегированного пользователя (или sudo):
@@ -99,7 +98,6 @@ ms.locfileid: "66222644"
    ```bash
    # apt-get update
    # apt-get install linux-generic-lts-trusty
-
    ```
 
    В Ubuntu 12.04 следующие управляющие программы Hyper-V находятся в отдельно устанавливаемый пакет:
@@ -112,7 +110,6 @@ ms.locfileid: "66222644"
 
    ```bash
    # apt-get install hv-kvp-daemon-init linux-tools-lts-trusty linux-cloud-tools-generic-lts-trusty
-
    ```
 
    При обновлении ядра виртуальной машины необходимо перезагрузить его использования.
@@ -124,7 +121,6 @@ ms.locfileid: "66222644"
    ```bash
    # apt-get update
    # apt-get install linux-azure
-
    ```
 
    При обновлении ядра виртуальной машины необходимо перезагрузить его использования.
@@ -143,42 +139,37 @@ ms.locfileid: "66222644"
 
 11. В Windows Server 2012 R2 виртуальные машины поколения 2 имеют безопасная загрузка включена по умолчанию и некоторых Linux, виртуальные машины не будут загружаться, если отключен параметр безопасной загрузки. Вы можете отключить безопасную загрузку в **встроенного по** разделе параметров для виртуальной машины в **диспетчера Hyper-V** или отключить с помощью Windows Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
 12. Прежде чем скопировать виртуальный жесткий ДИСК существующей виртуальной машины поколения 2 VHD, для создания новых виртуальных машин поколения 2, выполните следующие действия.
 
-   1. Войдите на существующей виртуальной машины поколения 2.
+    1. Войдите на существующей виртуальной машины поколения 2.
 
-   2. Перейдите в каталог EFI boot:
+    2. Перейдите в каталог EFI boot:
 
-      ```bash
-      # cd /boot/efi/EFI
+       ```bash
+       # cd /boot/efi/EFI
+       ```
 
-      ```
+    3. Скопируйте каталог ubuntu в новый каталог с именем boot:
 
-   3. Скопируйте каталог ubuntu в новый каталог с именем boot:
+       ```bash
+       # sudo cp -r ubuntu/ boot
+       ```
 
-      ```bash
-      # sudo cp -r ubuntu/ boot
+    4. Перейдите в каталог только что созданный загрузочный каталог:
 
-      ```
+       ```bash
+       # cd boot
+       ```
 
-   4. Перейдите в каталог только что созданный загрузочный каталог:
+    5. Переименуйте файл shimx64.efi:
 
-      ```bash
-      # cd boot
-
-      ```
-
-   5. Переименуйте файл shimx64.efi:
-
-      ```bash
-      # sudo mv shimx64.efi bootx64.efi
-
-      ```
+       ```bash
+       # sudo mv shimx64.efi bootx64.efi
+       ```
 
 ## <a name="see-also"></a>См. также
 

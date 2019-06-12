@@ -11,12 +11,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
 ms.author: kathydav
 ms.date: 06/01/2017
-ms.openlocfilehash: c72fd2c3a72a304fe8372afb93468fc451b3f2bc
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: e353ea0b444c07557de99db4472f565decb37349
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2019
-ms.locfileid: "66222666"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447748"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Oracle Linux в Hyper-V
 
@@ -167,10 +167,9 @@ Oracle Linux с ядром Unbreakable Enterprise Kernel (UEK) — это 64-р�
 
 13. Виртуальные машины с платформ Windows Server 2012 R2Generation 2 имеют безопасная загрузка включена по умолчанию и некоторых виртуальных машин Linux не загрузится, если отключен параметр безопасной загрузки. Вы можете отключить безопасную загрузку в **встроенного по** разделе параметров для виртуальной машины в **диспетчера Hyper-V** или отключить с помощью Windows Powershell:
 
-   ```Powershell
-   Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
-
-   ```
+    ```Powershell
+    Set-VMFirmware -VMName "VMname" -EnableSecureBoot Off
+    ```
 
     Загрузки служб интеграции Linux могут применяться к существующим виртуальным машинам поколения 2, но не издавать возможности поколения 2.
 

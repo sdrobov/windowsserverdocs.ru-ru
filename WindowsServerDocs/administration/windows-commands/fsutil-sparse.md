@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 76a263c82ebc42de4cc6d136f9a814c3a678666b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b1bc4e45ed2a2b06c72318e0999988ed8f016c40
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878395"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438971"
 ---
 # <a name="fsutil-sparse"></a>разреженных файлах fsutil
 >Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -34,15 +34,15 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 
 ## <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------------|---------------|
-|queryflag|Запрашивает разреженные файлы.|
-|queryrange|Ищет в файле и поиск диапазоны, которые может содержать ненулевое значение данных.|
-|setflag|Отмечает указанный файл как разреженный.|
-|SetRange|Заполняет указанный диапазон файл нули.|
-|<FileName>|Указывает полный путь к файлу, включая имя файла и расширение, например C:\documents\filename.txt.|
-|<BeginningOffset>|Задает смещение в файле, чтобы пометить разреженной.|
-|<Length>|Указывает длину области в файле были помечены как разреженные (в байтах).|
+|     Параметр     |                                                    Описание                                                    |
+|-------------------|-------------------------------------------------------------------------------------------------------------------|
+|     queryflag     |                                                  Запрашивает разреженные файлы.                                                  |
+|    queryrange     |                        Ищет в файле и поиск диапазоны, которые может содержать ненулевое значение данных.                        |
+|      setflag      |                                        Отмечает указанный файл как разреженный.                                        |
+|     SetRange      |                                   Заполняет указанный диапазон файл нули.                                   |
+|    <FileName>     | Указывает полный путь к файлу, включая имя файла и расширение, например C:\documents\filename.txt. |
+| <BeginningOffset> |                              Задает смещение в файле, чтобы пометить разреженной.                              |
+|     <Length>      |                 Указывает длину области в файле были помечены как разреженные (в байтах).                 |
 
 ## <a name="remarks"></a>Примечания
 
@@ -62,7 +62,7 @@ fsutil sparse setflag c:\temp\sample.txt
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
-[Ключ синтаксиса командной строки](Command-Line-Syntax-Key.md)
+[Условные обозначения синтаксиса команд командной строки](Command-Line-Syntax-Key.md)
 
 [fsutil](Fsutil.md)
 

@@ -13,12 +13,12 @@ author: gitmichiko
 ms.author: michikos
 manager: dongill
 ms.date: 03/06/2017
-ms.openlocfilehash: ec41e85949cb61c8130d8765b4786eefe39ebd0b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 475b6a0b24b811008ee213c1604d98d9aa9eb092
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447033"
 ---
 # <a name="whats-new-in-credential-protection"></a>Новые возможности защиты учетных данных
 
@@ -49,7 +49,7 @@ ms.locfileid: "59855595"
 
 Начиная с Windows 10 версии 1507 и Windows Server 2016, если сможет зарегистрировать его привязанного открытого ключа с помощью Windows Server 2016 с контроллера домена (DC) устройств, присоединенных к домену, затем устройство может проверять подлинность с помощью открытого ключа, с помощью Kerberos PKINIT Проверка подлинности к контроллеру домена Windows Server 2016.
 
-Начиная с Windows Server 2016, KDC поддерживают проверку подлинности с помощью ключа доверия Kerberos.  
+Начиная с Windows Server 2016, KDC поддерживают проверку подлинности с помощью ключа доверия Kerberos.  
 
 [Дополнительные сведения о поддержки открытого ключа для присоединенных к домену устройства и ключа доверия Kerberos](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
 
@@ -63,7 +63,7 @@ ms.locfileid: "59855595"
 
 ### <a name="rolling-public-key-only-users-ntlm-secrets"></a>Последовательное открытого ключа только NTLM секретные данные пользователей
 
-Начиная с Windows Server 2016 режим работы домена (DFL), контроллеры домена могут поддерживать последовательное открытого ключа только NTLM секретные данные пользователей. Этот компонент недоступен в нижнем DFLs.
+Начиная с Windows Server 2016 режим работы домена (DFL), контроллеры домена могут поддерживать последовательное открытого ключа только NTLM секретные данные пользователей. Этот компонент недоступен в нижнем DFLs.
 
 > [!WARNING] 
 > Добавление контроллера домена к домену с помощью последовательных секреты NTLM включена перед тем, как контроллер домена был дополнен по крайней мере 8 ноября 2016 года обслуживание выполняется риск аварийное завершение работы контроллера домена. 
@@ -73,7 +73,7 @@ ms.locfileid: "59855595"
 1. Из центра администрирования Active Directory, щелкните правой кнопкой мыши домен в левой панели и выберите **свойства**.
 
     ![Свойства домена](../media/Credentials-Protection-And-Management/domain-properties.png)
-    
+
 2. Выберите **развертыванию истекающим сроком действия NTLM секретов во время входа, для пользователей, которым необходимо использовать Microsoft Passport или смарт-карты для интерактивного входа**.
 
     ![Срок действия которых истекает NTLM секреты Autoroll](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)

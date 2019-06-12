@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 5b9343dc2f6b4c74da5a9d89a2ea804b702248cc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: aadb3a77cda7f1403cd2f04ced12c17617f046df
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841175"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439573"
 ---
 # <a name="diskcopy"></a>diskcopy
 
@@ -84,9 +84,9 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 > [!NOTE]
 > Нельзя использовать **xcopy** для копирования загрузочного диска.
--   Основные сведения о **diskcopy** коды завершения
+> -   Основные сведения о **diskcopy** коды завершения
 
-    В следующей таблице описаны коды завершения.  
+    The following table explains each exit code.  
     |Код завершения|Описание|
     |---------|-----------|
     |0|Операция копирования завершена успешно|
@@ -94,7 +94,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
     |3|Неустранимая ошибка|
     |4|Произошла ошибка инициализации|
 
-    Для обработки кодов выхода, возвращаемых **экран будет**, можно использовать *ERRORLEVEL* переменной среды на **Если** командной строки в пакетном файле.
+    To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
 ## <a name="BKMK_examples"></a>Примеры
 
@@ -108,4 +108,4 @@ diskcopy b: a:
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

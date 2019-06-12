@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 806c0cdeedb44db44fc0ec5218124f516a6f70e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9f76163e6b064ac3225ab4d755afd548e1cb720b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852555"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446408"
 ---
 # <a name="use-dns-policy-for-application-load-balancing-with-geo-location-awareness"></a>Использование политики DNS для балансировки нагрузки приложений с помощью сведений о географическом расположении
 
@@ -45,7 +45,7 @@ Contoso подарок служб DNS требуется настроить пр
 >[!IMPORTANT]
 >В следующих разделах приведены примеры команд Windows PowerShell, которые содержат примеры значений для многих параметров. Убедитесь, что примеры значений в этих командах замените значения, которые подходят для развертывания, прежде чем вы выполните следующие команды.
 
-###<a name="bkmk_clientsubnets"></a>Создание подсетей клиента DNS
+### <a name="bkmk_clientsubnets"></a>Создание подсетей клиента DNS
 
 Во-первых, необходимо определить подсети и пространства IP-адресов области Северной Америки и Европы.
 
@@ -61,7 +61,7 @@ Contoso подарок служб DNS требуется настроить пр
     
 Дополнительные сведения см. в разделе [DnsServerClientSubnet добавить](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
-###<a name="bkmk_zscopes2"></a>Создание области зоны
+### <a name="bkmk_zscopes2"></a>Создание области зоны
 
 После подсетей клиента находятся в месте, необходимо секционировать contosogiftservices.com зоны в другую зону области, для каждого центра обработки данных.
 
@@ -85,7 +85,7 @@ Contoso подарок служб DNS требуется настроить пр
 
 Дополнительные сведения см. в разделе [DnsServerZoneScope добавить](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps)
 
-###<a name="bkmk_records2"></a>Добавление записей в области зоны
+### <a name="bkmk_records2"></a>Добавление записей в области зоны
 
 Теперь необходимо добавить записи, представляющий узел веб-сервера в области зоны.
 
@@ -98,7 +98,7 @@ Contoso подарок служб DNS требуется настроить пр
 
 Дополнительные сведения см. в разделе [Add-DnsServerResourceRecord](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-###<a name="bkmk_policies2"></a>Создайте политики DNS
+### <a name="bkmk_policies2"></a>Создайте политики DNS
 
 После создания секций (области зоны) и добавления записей, необходимо создать политики DNS, которые распределяют входящие запросы в этих областях.
 

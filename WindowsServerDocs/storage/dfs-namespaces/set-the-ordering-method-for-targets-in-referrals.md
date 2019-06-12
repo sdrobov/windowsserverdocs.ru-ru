@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 06e7aa1309b453da649537d5ae9b22acce830530
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 52568944a98bed7960b37335b2e3cbbde61479ca
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816865"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447201"
 ---
 # <a name="set-the-ordering-method-for-targets-in-referrals"></a>Задание метода сортировки конечных объектов в ссылках
 
@@ -36,9 +36,9 @@ ms.locfileid: "59816865"
 
 > [!NOTE]
 > Чтобы использовать для задания метода сортировки конечных объектов в ссылках корня пространства имен Windows PowerShell, используйте командлет [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) с одним из следующих параметров:
-   -   **EnableSiteCosting** для задания метода сортировки **Минимальные затраты**
-   -   **EnableInsiteReferrals** для задания метода **Исключить конечные объекты вне сайта клиента**
-   -   Если опустить параметр, задается метод сортировки **Случайный порядок**. 
+>    -   **EnableSiteCosting** для задания метода сортировки **Минимальные затраты**
+>    -   **EnableInsiteReferrals** для задания метода **Исключить конечные объекты вне сайта клиента**
+>    -   Если опустить параметр, задается метод сортировки **Случайный порядок**. 
 
 Модуль DFSN Windows PowerShell появилась в Windows Server 2012.
    
@@ -92,4 +92,4 @@ ms.locfileid: "59816865"
 ## <a name="see-also"></a>См. также 
 
 -   [Настройка пространств имен DFS](tuning-dfs-namespaces.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)

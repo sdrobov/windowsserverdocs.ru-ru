@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/11/2018
-ms.openlocfilehash: 2721bf13a7f6d3c90f9d055835fba51138ef75dd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65c5eb25f7a98e4db6a44e705a2968f185f3f962
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841565"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447379"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>Установка доверенных корневых сертификатов доверенного платформенного МОДУЛЯ
 
@@ -58,8 +58,8 @@ HGS будет выглядеть в окне «TrustedTPM_RootCA» и «Trusted
 
 ## <a name="next-step"></a>Дальнейшие действия
 
->[!div class="nextstepaction"]
-[Настройка фабрики DNS](guarded-fabric-configuring-fabric-dns-tpm.md)
+> [!div class="nextstepaction"]
+> [Настройка DNS структуры](guarded-fabric-configuring-fabric-dns-tpm.md)
 
 
 

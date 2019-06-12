@@ -12,20 +12,20 @@ ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7fed7e71f7ac163437fe5d32da7c867f93fbcf00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bc83686f76c49773203d63a88894841f65ffd1d9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869975"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433759"
 ---
-#<a name="whats-new-in-windows-server-2016-essentials"></a>Что нового в Windows Server 2016 Essentials
+# <a name="whats-new-in-windows-server-2016-essentials"></a>Что нового в Windows Server 2016 Essentials
 
 > Область применения. Windows Server2016 Essentials
 
 Ниже перечислены новые и улучшенные возможности в Windows Server 2016 Essentials.
 
-##<a name="integration-with-azure-site-recovery-servicesazure-site-recovery-services-integrationmd"></a>[Интеграция со службами Azure Site Recovery.](azure-site-recovery-services-integration.md)
+## <a name="integration-with-azure-site-recovery-servicesazure-site-recovery-services-integrationmd"></a>[Интеграция со службами Azure Site Recovery.](azure-site-recovery-services-integration.md)
 
 **Назначение** --при виртуальной машины, защищенные завершается сбоем или сервера узла, который выполняется на защищенной виртуальной машине на происходит сбой, отработки отказа с помощью служб Azure Site Recovery поддерживает непрерывность бизнес-процессов, пока виртуальная машина в локальной среде или сервер узла-исправленной и доступны. 
 
@@ -40,7 +40,7 @@ ms.locfileid: "59869975"
 
 
 
-##<a name="support-for-larger-deploymentssupport-for-larger-deploymentsmd"></a>[Поддержка для более крупных развертываний](support-for-larger-deployments.md) 
+## <a name="support-for-larger-deploymentssupport-for-larger-deploymentsmd"></a>[Поддержка для более крупных развертываний](support-for-larger-deployments.md) 
 
 Некоторые больших предприятий малого бизнеса требуется больше функциональных возможностей и емкости для эффективной реализации Windows Server Essentials. Windows Server 2016 Essentials предоставляет повышенную управляемость домены, пользователей и устройств, добавляя поддержку более крупных развертываний с помощью:                                                                                                                                                                                                 
 

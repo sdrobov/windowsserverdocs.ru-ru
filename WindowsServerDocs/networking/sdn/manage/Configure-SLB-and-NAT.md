@@ -13,12 +13,12 @@ ms.assetid: 73bff8ba-939d-40d8-b1e5-3ba3ed5439c3
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 55847bfbc0362887497514009f6efe1312d79906
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4d53c4bcbe1f37f532f2861d5669201959a9f091
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819355"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446672"
 ---
 # <a name="configure-the-software-load-balancer-for-load-balancing-and-network-address-translation-nat"></a>Настройка программного балансировщика нагрузки для балансировки нагрузки и преобразования сетевых адресов (NAT)
 
@@ -109,22 +109,22 @@ ms.locfileid: "59819355"
     $LoadBalancerProperties.Probes += $Probe
    ```
 
-5.  Определите правила для отправки трафик, поступающий на внешний IP-адрес в IP-адрес внутренней балансировки нагрузки.  В этом примере серверный пул принимает трафик TCP на порт 80.<p>Используйте следующий пример для определения правила балансировки нагрузки:
+5. Определите правила для отправки трафик, поступающий на внешний IP-адрес в IP-адрес внутренней балансировки нагрузки.  В этом примере серверный пул принимает трафик TCP на порт 80.<p>Используйте следующий пример для определения правила балансировки нагрузки:
 
    ```PowerShell
-    $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
-    $Rule.ResourceId = "webserver1"
+   $Rule = new-object Microsoft.Windows.NetworkController.LoadBalancingRule
+   $Rule.ResourceId = "webserver1"
 
-    $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
-    $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
-    $Rule.Properties.backendaddresspool = $BackEndAddressPool 
-    $Rule.Properties.protocol = "TCP"
-    $Rule.Properties.FrontEndPort = 80
-    $Rule.Properties.BackEndPort = 80
-    $Rule.Properties.IdleTimeoutInMinutes = 4
-    $Rule.Properties.Probe = $Probe
+   $Rule.Properties = new-object Microsoft.Windows.NetworkController.LoadBalancingRuleProperties
+   $Rule.Properties.FrontEndIPConfigurations += $FrontEndIPConfig
+   $Rule.Properties.backendaddresspool = $BackEndAddressPool 
+   $Rule.Properties.protocol = "TCP"
+   $Rule.Properties.FrontEndPort = 80
+   $Rule.Properties.BackEndPort = 80
+   $Rule.Properties.IdleTimeoutInMinutes = 4
+   $Rule.Properties.Probe = $Probe
 
-    $LoadBalancerProperties.loadbalancingRules += $Rule
+   $LoadBalancerProperties.loadbalancingRules += $Rule
    ```
 
 6. Добавьте конфигурацию подсистемы балансировки нагрузки для сетевого контроллера.<p>Чтобы добавить конфигурацию подсистемы балансировки нагрузки для сетевого контроллера, используйте следующий пример:
@@ -205,7 +205,7 @@ ms.locfileid: "59819355"
    ```PowerShell
    $lbresourceid = "LB2"
    $lb = get-networkcontrollerloadbalancer -connectionuri $uri -resourceID $LBResourceId -PassInnerException
-  ```
+   ```
 
 2. Получить сетевой интерфейс и добавить в пул backendaddress loadbalancerbackendaddresspools массив.
 
@@ -280,17 +280,17 @@ ms.locfileid: "59819355"
     PreviousIpConfiguration  :
    ```
  
-1. Назначение ресурса PublicIPAddress с сетевым интерфейсом.
+3. Назначение ресурса PublicIPAddress с сетевым интерфейсом.
 
    ```PowerShell
    $nic = get-networkcontrollernetworkinterface  -connectionuri $uri -resourceid 6daca142-7d94-0000-1111-c38c0141be06
    $nic.properties.IpConfigurations[0].Properties.PublicIPAddress = $publicIP
    New-NetworkControllerNetworkInterface -ConnectionUri $uri -ResourceId $nic.ResourceId -Properties $nic.properties -PassInnerException
    ```
-## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>Пример. Удалить адрес общедоступный IP-адрес, который используется для пересылки трафика и вернуть его в пул виртуальных IP-адресов
-В этом примере удаляется ресурс PublicIPAddress созданного в предыдущих примерах.  После удаления ресурса PublicIPAddress ссылка PublicIPAddress будет автоматически удалена из сетевого интерфейса, трафик будет остановлено пересылку и IP-адрес будет возвращаться в пул общедоступных виртуальных IP-адресов для повторного использования.  
+   ## <a name="example-remove-a-publicip-address-that-is-being-used-for-forwarding-traffic-and-return-it-to-the-vip-pool"></a>Пример. Удалить адрес общедоступный IP-адрес, который используется для пересылки трафика и вернуть его в пул виртуальных IP-адресов
+   В этом примере удаляется ресурс PublicIPAddress созданного в предыдущих примерах.  После удаления ресурса PublicIPAddress ссылка PublicIPAddress будет автоматически удалена из сетевого интерфейса, трафик будет остановлено пересылку и IP-адрес будет возвращаться в пул общедоступных виртуальных IP-адресов для повторного использования.  
 
-1. Удалить общедоступный IP-адрес
+4. Удалить общедоступный IP-адрес
 
    ```PowerShell
    Remove-NetworkControllerPublicIPAddress -ConnectionURI $uri -ResourceId "MyPIP"

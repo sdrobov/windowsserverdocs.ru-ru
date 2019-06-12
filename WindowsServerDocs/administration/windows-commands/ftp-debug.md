@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 58a0cedc48e8d4504af8aa873dbb745394ff3940
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3c6591819129fe1a3047982905a041eca974aa53
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859315"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438762"
 ---
 # <a name="ftpdebug"></a>FTP:Debug
 
@@ -32,12 +32,12 @@ debug
 ### <a name="parameters"></a>Параметры  
 none  
 ## <a name="remarks"></a>Примечания  
--   По умолчанию отладка отключена.  
--   Если отладка включена, отображается каждая команда отправляется на удаленный компьютер, перед которым ставится знак больше (>).  
-## <a name="BKMK_Examples"></a>Примеры  
-Переключить режим отладки, включения и отключения.  
-```  
-debug  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- По умолчанию отладка отключена.  
+- Если отладка включена, отображается каждая команда отправляется на удаленный компьютер, перед которым ставится знак больше (>).  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  Переключить режим отладки, включения и отключения.  
+  ```  
+  debug  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: ed6f695947fc17d2e96b5282b3a67a221bb0140d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9015bbc54a4c4bda0f691b79dbb7d3ba8ddbc4a1
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858035"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439892"
 ---
 >Относится к: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
@@ -55,8 +55,8 @@ ms.locfileid: "59858035"
 
 > [!IMPORTANT]
 > Ниже показано, как отсоединить базу данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows с помощью **sqlcmd** служебной программы. Дополнительные сведения о **sqlcmd** служебной программы, см. в разделе [служебная программа sqlcmd](https://go.microsoft.com/fwlink/?LinkId=81183).
-1. Откройте командную строку с повышенными правами
-2. Выполните следующую команду SQL для отсоединения базы данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows с помощью **sqlcmd** служебной программы:
+> 1. Откройте командную строку с повышенными правами
+> 2. Выполните следующую команду SQL для отсоединения базы данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows с помощью **sqlcmd** служебной программы:
 
 ```batchfile
         sqlcmd -S \\.\pipe\Microsoft##WID\tsql\query
@@ -70,7 +70,7 @@ ms.locfileid: "59858035"
 
 ### <a name="copy-the-susdb-files-to-the-sql-server"></a>Скопируйте файлы SUSDB SQL Server
 
-1. Копировать **файлы SUSDB.mdf** и **SUSDB\_log.ldf** из папки данных WID (**% SystemDrive %**\** Windows\WID\Data **) к данным экземпляра SQL Папка.
+1. Копировать **файлы SUSDB.mdf** и **SUSDB\_log.ldf** из папки данных WID ( **% SystemDrive %** \** Windows\WID\Data **) к данным экземпляра SQL Папка.
 
 > [!TIP]
 > Например, если папка экземпляра SQL **C:\Program Files\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL**, и к папке данных WID **C:\Windows\WID\Data,** скопируйте файлы SUSDB из **C:\Windows\WID\Data** для **C:\Program Files\Microsoft SQL Server \MSSQL12. MSSQLSERVER\MSSQL\Data**
@@ -111,7 +111,7 @@ ms.locfileid: "59858035"
 **NT AUTHORITY\NETWORK SERVICE** должна быть указана учетная запись. Если это не так, необходимо добавить его, добавив новое имя входа.
 
 > [!IMPORTANT]
-> Если экземпляр SQL установлен на компьютере, отличном от WSUS, учетная запись компьютера сервера WSUS должно быть указано в формате **[полное доменное имя]\\[WSUSComputerName] $**.  Если нет, указанные ниже действия позволяют добавить его, заменив **NT AUTHORITY\NETWORK SERVICE** с учетной записью компьютера сервера WSUS (**[полное доменное имя]\\[WSUSComputerName] $**) это было бы ***в дополнение к*** прав **NT AUTHORITY\NETWORK SERVICE**
+> Если экземпляр SQL установлен на компьютере, отличном от WSUS, учетная запись компьютера сервера WSUS должно быть указано в формате **[полное доменное имя]\\[WSUSComputerName] $** .  Если нет, указанные ниже действия позволяют добавить его, заменив **NT AUTHORITY\NETWORK SERVICE** с учетной записью компьютера сервера WSUS ( **[полное доменное имя]\\[WSUSComputerName] $** ) это было бы ***в дополнение к*** прав **NT AUTHORITY\NETWORK SERVICE**
 
 ##### <a name="adding-nt-authoritynetwork-service-and-granting-it-rights"></a>Добавление NT AUTHORITY\NETWORK SERVICE и предоставления ему права
 
@@ -150,7 +150,7 @@ ms.locfileid: "59858035"
     > ![Image11](images/image11.png)
 
 4. На **сопоставления** выберите **SUSDB** базы данных в группе **«Пользователи, сопоставленные с этим именем входа»**
-5. Проверьте **веб-службы** под **«членство в роли для базы данных: SUSDB"**:  ![image12](images/image12.png)
+5. Проверьте **веб-службы** под **«членство в роли для базы данных: SUSDB"** :  ![image12](images/image12.png)
 6. Нажмите кнопку **ОК** сохранить параметры.
     > [!NOTE]
     > Может потребоваться перезапустить службу SQL, чтобы изменения вступили в силу.
@@ -162,7 +162,7 @@ ms.locfileid: "59858035"
 
 1. В меню **Пуск** выберите пункт **Выполнить**, введите **regedit** и нажмите кнопку **ОК**.
 2. Найдите следующий раздел: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\UpdateServices\Server\Setup\SqlServerName**
-3. В **значение** текстовое поле, тип **[ServerName]\\[имя_экземпляра]**, а затем нажмите кнопку **ОК**. Если имя экземпляра является экземпляром по умолчанию, введите **[ServerName]**.
+3. В **значение** текстовое поле, тип **[ServerName]\\[имя_экземпляра]** , а затем нажмите кнопку **ОК**. Если имя экземпляра является экземпляром по умолчанию, введите **[ServerName]** .
 4. Найдите следующий раздел: **Services\Server\Setup\Installed роли HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Update Services\UpdateServices-WidDatabase** ![image13](images/image13.png)
 5. Переименование ключа для **UpdateServices-Database** ![image41](images/image14.png)
 
@@ -184,7 +184,7 @@ ms.locfileid: "59858035"
 ## <a name="uninstalling-the-wid-role-not-recommended"></a>При удалении роли внутренней базы данных Windows (не рекомендуется)
 
 > [!WARNING]
-> При удалении роли WID также удаляется папки базы данных (**%SystemDrive%\Program Files\Update Services\Database**), содержащий скрипты, необходимые для выполнения задач после установки WSUSUtil.exe. Если вы решили удалить роль WID, убедитесь, что резервное копирование **%SystemDrive%\Program Files\Update Services\Database** папку заранее.
+> При удалении роли WID также удаляется папки базы данных ( **%SystemDrive%\Program Files\Update Services\Database**), содержащий скрипты, необходимые для выполнения задач после установки WSUSUtil.exe. Если вы решили удалить роль WID, убедитесь, что резервное копирование **%SystemDrive%\Program Files\Update Services\Database** папку заранее.
 
 С помощью PowerShell.
 

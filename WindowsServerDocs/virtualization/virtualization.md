@@ -10,17 +10,17 @@ ms.topic: landing-page
 author: shortpatti
 ms.author: pashort
 ms.localizationpriority: high
-ms.openlocfilehash: 1ae36a2e1be1559094dd55dba41fa9a468118260
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 53c927f89fd3ccaa212c998f7102d0fdb9f41bde
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840065"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447943"
 ---
 # <a name="virtualization"></a>Виртуализация
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 <HR />
 
@@ -41,7 +41,7 @@ ms.locfileid: "59840065"
                     <div class="cardText">
                         <h3>Защищенная структура и экранированные виртуальные машины</h3>
 <HR />
-                        <p>Поставщики облачных услуг и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла \(HGS\) -как правило, кластер из трех узлов -, а также один или несколько защищенных узлов и набора экранированных виртуальных машин.</p>
+                        <p>Поставщики облачных услуг и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы Защитника узлов (HGS) — как правило, кластер из трех узлов - плюс один или несколько защищенных узлов и набора экранированных виртуальных машин.</p>
                      </div>
                   </div>
               </div>

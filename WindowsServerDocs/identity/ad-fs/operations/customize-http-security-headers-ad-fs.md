@@ -9,12 +9,12 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 54b0e055d6cfde5e5c69540ac804a38cbceb1e59
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 231c8783032f51f607565922d90ea7f7eb877cfd
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188771"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444696"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>Настройка заголовков ответа HTTP безопасности с AD FS 2019 г. 
  
@@ -39,7 +39,7 @@ ms.locfileid: "66188771"
 ## <a name="http-security-response-headers"></a>Заголовки безопасности 
 Заголовки ответа, включаются в исходящие HTTP-ответа, отправленные AD FS в веб-браузер. Заголовки можно перечислить при помощи `Get-AdfsResponseHeaders` командлет, как показано ниже.  
 
-![Заголовок ответа](media\customize-http-security-headers-ad-fs\header1.png)
+![Заголовок ответа](media/customize-http-security-headers-ad-fs/header1.png)
 
 `ResponseHeaders` Атрибут в приведенном выше снимке экрана определяет заголовки безопасности, которые будут включены службами AD FS в каждом ответе HTTP. Заголовки ответа будут отправляться только в том случае, если `ResponseHeadersEnabled` присваивается `True` (значение по умолчанию). Значение может быть присвоено `False` во избежание AD FS, включая все заголовки безопасности HTTP-ответов. Однако это не рекомендуется.  Для этого воспользуйтесь следующее:
 
@@ -218,7 +218,7 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 
 После установки новый заголовок отправляется в ответе службы федерации Active Directory (fiddler фрагмент кода ниже).  
  
-![Fiddler](media\customize-http-security-headers-ad-fs\header2.png)
+![Fiddler](media/customize-http-security-headers-ad-fs/header2.png)
 
 ## <a name="web-browswer-compatibility"></a>Веб-browswer совместимость
 Используйте следующую таблицу и ссылки для определения, какие веб-браузеры совместимы с каждым из заголовков ответа безопасности.

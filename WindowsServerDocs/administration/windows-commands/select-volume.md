@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b0ebf9896621268c384ea8129d32c985028054d9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 98f42324dbd4c6b3add3333cf4687d1613b1f700
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890735"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441422"
 ---
 # <a name="select-volume"></a>select volume
 
@@ -36,10 +36,10 @@ select volume={<n>|<d>}
   
 ## <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
-|-------|--------|  
-|<n>|Номер тома, получающего фокус. Можно просмотреть номера всех томов на диске, выделенного с помощью **список томов** в DiskPart.|  
-|<d>|Путь к диску букву или монтирования точки тома, получать фокус.|  
+| Параметр |                                                                               Описание                                                                                |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    <n>    | Номер тома, получающего фокус. Можно просмотреть номера всех томов на диске, выделенного с помощью **список томов** в DiskPart. |
+|    <d>    |                                                 Путь к диску букву или монтирования точки тома, получать фокус.                                                 |
   
 ## <a name="remarks"></a>Примечания  
   
@@ -77,7 +77,7 @@ select volume
 ```  
   
 #### <a name="additional-references"></a>Дополнительные ссылки  
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 
   

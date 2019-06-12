@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c10cf6c9355b5f7457a5f17babdfb44aaa679b2
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 0e001b590f524711185e3dd70db3bc52a9b8d9af
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976792"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447123"
 ---
 # <a name="compare-the-client-apps"></a>Сравнение клиентских приложений
 
@@ -35,12 +35,13 @@ ms.locfileid: "65976792"
 
 ### <a name="input-redirection"></a>Перенаправления ввода
 
-| Перенаправление | Удаленный рабочий стол<br> Подключение | Универсальный | Android | iOS | macOS | веб-клиента |
-|-------------|-------------------------------|-----------|---------|-----|-------|------------|
-| Клавиатура    | X                             | X         | X       | X   | X     | X          |
-| Мышь       | X                             | X         | X       | X*    | X     | X          |
-| Сенсорный ввод       | X                             | X         | X       | X   |       | X (Edge и Internet Explorer не поддерживается) |
-| Другое       | Перо                           |           |         |     |       |            |
+| Перенаправление | Удаленный рабочий стол<br> Подключение | Универсальный | Android | iOS | macOS |          веб-клиента           |
+|-------------|-------------------------------|-----------|---------|-----|-------|-------------------------------|
+|  Клавиатура   |               X               |     X     |    X    |  X  |   X   |               X               |
+|    Мышь    |               X               |     X     |    X    | X\* |   X   |               X               |
+|    Сенсорный ввод    |               X               |     X     |    X    |  X  |       | X (Edge и Internet Explorer не поддерживается) |
+|    Другое    |              Перо              |           |         |     |       |                               |
+
 * Просмотреть [список поддерживаемых устройств ввода, для клиента удаленного рабочего стола бета-версии iOS](remote-desktop-ios.md#supported-input-devices).
 
 ### <a name="port-redirection"></a>Перенаправление портов   

@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 98003745823cf780a38487dff997798ebef12fc9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 887fc8655a6ff3e862fa04b5b450456b04c55718
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870095"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447463"
 ---
 # <a name="initialize-the-hgs-cluster-using-ad-mode-in-an-existing-bastion-forest"></a>Инициализировать кластер HGS, режиме AD в существующем лесу бастиона
 
@@ -47,6 +47,6 @@ Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersG
 
 ## <a name="next-step"></a>Дальнейшие действия
 
->[!div class="nextstepaction"]
-[Настройка фабрики DNS](guarded-fabric-configuring-fabric-dns-ad.md)
+> [!div class="nextstepaction"]
+> [Настройка DNS структуры](guarded-fabric-configuring-fabric-dns-ad.md)
 

@@ -8,12 +8,12 @@ ms.date: 09/07/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 270fb6efd63e6355c410ee45d09e6fd16b14222b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2380060894ff2f365451bbabfd41b8aa7e6792a0
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867995"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445293"
 ---
 # <a name="compound-authentication-and-ad-ds-claims-in-ad-fs"></a>Комплексная аутентификация и утверждения AD DS в AD FS
 Windows Server 2012 расширяет возможности проверки подлинности Kerberos путем введения комплексной проверки подлинности.  Комплексной проверки подлинности позволяет включать два удостоверения запрос службы предоставления билетов Kerberos (TGS): 
@@ -87,21 +87,21 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 >В ферме, на основе SQL команда PowerShell может выполняться на любом сервере AD FS, которая является членом фермы.
 
 ### <a name="step-5--add-the-claim-description-to-ad-fs"></a>Шаг 5.  Добавление описания утверждения для AD FS
-1.  Добавьте следующее описание утверждений в ферму. Это описание утверждения не указан, по умолчанию в ADFS 2012 R2 и необходимо вручную добавить.
-2.  В управлении AD FS в разделе **службы**, щелкните правой кнопкой мыши **заявки с описанием** и выберите **добавить заявки с описанием**
-3.  Введите следующие сведения в описании утверждения
-    - Отображаемое имя: «Группа устройств Windows» 
-    - Описание утверждения: "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup" "
+1. Добавьте следующее описание утверждений в ферму. Это описание утверждения не указан, по умолчанию в ADFS 2012 R2 и необходимо вручную добавить.
+2. В управлении AD FS в разделе **службы**, щелкните правой кнопкой мыши **заявки с описанием** и выберите **добавить заявки с описанием**
+3. Введите следующие сведения в описании утверждения
+   - Отображаемое имя: «Группа устройств Windows» 
+   - Описание утверждения: "<https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup>" "
 4. Установите флажок в обоих полях.
 5. Нажмите кнопку **ОК**.
 
 ![Описание утверждения](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc6.png)
 
 6. С помощью PowerShell, можно использовать **AdfsClaimDescription добавить** командлета.
-``` powershell
-Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
--ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
-```
+   ``` powershell
+   Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsdevicegroup' `
+   -ShortName 'windowsdevicegroup' -IsAccepted $true -IsOffered $true -IsRequired $false -Notes 'The windows group SID of the device' 
+   ```
 
 
 >[!NOTE]
@@ -118,7 +118,7 @@ Add-AdfsClaimDescription -Name 'Windows device group' -ClaimType 'https://schema
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  Перезапустите службу ADFS.
+2. Перезапустите службу ADFS.
 
 >[!NOTE]
 >После «CompoundIdentitySupported» имеет значение true, Установка групповой управляемой учетной записи, на новый серверы (2012 R2/2016) происходит сбой со следующей ошибкой — **Install-ADServiceAccount: Не удается установить учетную запись службы. Сообщение об ошибке: «Предоставленный контекст не соответствует целевой объект».** .
@@ -137,15 +137,15 @@ Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySuppo
 ![Описание утверждения](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc7.png)
 
 ### <a name="step-8-on-the-relying-party-where-the-windowsdevicegroup-claims-are-expected-add-a-similar-pass-through-or-transform-claim-rule"></a>Шаг 8. На проверяющей стороне, где ожидаются утверждения «WindowsDeviceGroup» добавьте аналогичные правила утверждения «Сквозная» или «Преобразование».
-2.  В **управления AD FS**, нажмите кнопку **доверия проверяющей стороны** и в области справа щелчку к RP и выберите **изменение правил для утверждений**.
-3.  На **правила преобразования выдачи** щелкните **добавить правило**.
-4.  На **утверждения мастере добавления правила преобразования** выберите **пропуск или Фильтрация входящего утверждения** и нажмите кнопку **Далее**.
-5.  Добавить отображаемое имя и выберите **группу устройств Windows** из **тип входящего утверждения** раскрывающегося списка.
-6.  Нажмите кнопку **Готово**.  Нажмите кнопку **применить** и **ОК**.
-![Описание утверждения](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
+2. В **управления AD FS**, нажмите кнопку **доверия проверяющей стороны** и в области справа щелчку к RP и выберите **изменение правил для утверждений**.
+3. На **правила преобразования выдачи** щелкните **добавить правило**.
+4. На **утверждения мастере добавления правила преобразования** выберите **пропуск или Фильтрация входящего утверждения** и нажмите кнопку **Далее**.
+5. Добавить отображаемое имя и выберите **группу устройств Windows** из **тип входящего утверждения** раскрывающегося списка.
+6. Нажмите кнопку **Готово**.  Нажмите кнопку **применить** и **ОК**.
+   ![Описание утверждения](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc8.png)
 
 
-##<a name="steps-for-configuring-ad-fs-in-windows-server-2016"></a>Действия по настройке AD FS на Windows Server 2016
+## <a name="steps-for-configuring-ad-fs-in-windows-server-2016"></a>Действия по настройке AD FS на Windows Server 2016
 Ниже подробно описываются действия по настройке комплексной проверки подлинности в AD FS для Windows Server 2016.
 
 ### <a name="step-1--enable-kdc-support-for-claims-compound-authentication-and-kerberos-armoring-on-the-default-domain-controller-policy"></a>Шаг 1.  Включите поддержку KDC для утверждений, комплексной проверки подлинности и защиты Kerberos на политику контроллера домена по умолчанию
@@ -189,7 +189,7 @@ Set-AdfsGlobalAuthenticationPolicy -PrimaryIntranetAuthenticationProvider 'Windo
 ``` powershell
 Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySupported:$true 
 ```
-2.  Перезапустите службу ADFS.
+2. Перезапустите службу ADFS.
 
 >[!NOTE]
 >После «CompoundIdentitySupported» имеет значение true, Установка групповой управляемой учетной записи, на новый серверы (2012 R2/2016) происходит сбой со следующей ошибкой — **Install-ADServiceAccount: Не удается установить учетную запись службы. Сообщение об ошибке: «Предоставленный контекст не соответствует целевой объект».** .
@@ -208,11 +208,11 @@ Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySuppo
 
 
 ### <a name="step-6-on-the-relying-party-where-the-windowsdevicegroup-claims-are-expected-add-a-similar-pass-through-or-transform-claim-rule"></a>Шаг 6. На проверяющей стороне, где ожидаются утверждения «WindowsDeviceGroup» добавьте аналогичные правила утверждения «Сквозная» или «Преобразование».
-2.  В **управления AD FS**, нажмите кнопку **доверия проверяющей стороны** и в области справа щелчку к RP и выберите **изменение правил для утверждений**.
-3.  На **правила преобразования выдачи** щелкните **добавить правило**.
-4.  На **утверждения мастере добавления правила преобразования** выберите **пропуск или Фильтрация входящего утверждения** и нажмите кнопку **Далее**.
-5.  Добавить отображаемое имя и выберите **группу устройств Windows** из **тип входящего утверждения** раскрывающегося списка.
-6.  Нажмите кнопку **Готово**.  Нажмите кнопку **применить** и **ОК**.
+2. В **управления AD FS**, нажмите кнопку **доверия проверяющей стороны** и в области справа щелчку к RP и выберите **изменение правил для утверждений**.
+3. На **правила преобразования выдачи** щелкните **добавить правило**.
+4. На **утверждения мастере добавления правила преобразования** выберите **пропуск или Фильтрация входящего утверждения** и нажмите кнопку **Далее**.
+5. Добавить отображаемое имя и выберите **группу устройств Windows** из **тип входящего утверждения** раскрывающегося списка.
+6. Нажмите кнопку **Готово**.  Нажмите кнопку **применить** и **ОК**.
 
 ## <a name="validation"></a>Проверка
 Для проверки в выпуске «WindowsDeviceGroup» утверждений, Создание теста утверждений приложения .net 4.6. С пакетом SDK для WIF 4.0.

@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: ebc9c2a3cac85ab998075d784111808b3d590d46
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3f9083d749ba9251ba47ecb64b7cb3d7c6290f1d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854145"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443768"
 ---
 # <a name="configure-dns-forwarding-in-the-hgs-domain-and-a-one-way-trust-with-the-fabric-domain"></a>Настроить переадресацию DNS в домене HGS и одностороннее отношение доверия с доменом fabric
 
@@ -37,5 +37,5 @@ ms.locfileid: "59854145"
 
 ## <a name="next-step"></a>Дальнейшие действия 
 
->[!div class="nextstepaction"]
-[Настройка протокола HTTPS](guarded-fabric-configure-hgs-https.md)
+> [!div class="nextstepaction"]
+> [Настройка HTTPS](guarded-fabric-configure-hgs-https.md)

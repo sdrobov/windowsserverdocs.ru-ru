@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2e3a3cf3baf2a3469560b90bed30c6813284a8bc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65f7505dfcb3677fcaace9bd645cca7e7ba70b7d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866455"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438591"
 ---
 # <a name="ftp-prompt1"></a>ftp: prompt_1
 
@@ -32,12 +32,12 @@ prompt
 ### <a name="parameters"></a>Параметры  
 none  
 ## <a name="remarks"></a>Примечания  
--   По умолчанию **строке** включен.  
--   **FTP** запрашивает при передаче нескольких файлов, чтобы можно было выборочно получить или сохранить файлы.  **Mget** и **mput** передавать все файлы в том случае, если **строке** отключен.  
-## <a name="BKMK_Examples"></a>Примеры  
-Включить режим подсказки и отключить.  
-```  
-prompt  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- По умолчанию **строке** включен.  
+- **FTP** запрашивает при передаче нескольких файлов, чтобы можно было выборочно получить или сохранить файлы.  **Mget** и **mput** передавать все файлы в том случае, если **строке** отключен.  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  Включить режим подсказки и отключить.  
+  ```  
+  prompt  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

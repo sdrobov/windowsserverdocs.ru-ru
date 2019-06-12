@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 8684926beb0f0c911ac384970d15ba7d25f84079
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: ddf6a816e417c2eddff090df8dba841a894a3255
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475934"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447674"
 ---
 # <a name="enable-always-offline-mode-for-faster-access-to-files"></a>Включить постоянный автономный режим для ускорения доступа к файлам
 
@@ -44,7 +44,7 @@ ms.locfileid: "65475934"
 6. Выберите **Включено**.
 7. В **параметры** выберите **Показать**. **Показать содержимое окна** будет отображаться.
 8. В **имя значения** укажите файловый ресурс, для которого вы хотите включить постоянный автономный режим.
-9. Чтобы включить постоянный автономный режим на всех общих папок, введите **\***.
+9. Чтобы включить постоянный автономный режим на всех общих папок, введите **\\***.
 10. В **значение** введите **задержка = 1** присвоено пороговое значение задержки до одной миллисекунды, а затем выберите **ОК**.
 
 >[!NOTE]

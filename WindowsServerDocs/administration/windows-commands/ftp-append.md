@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 23fa04b86d9c26fb30b74eebe8caef8498b90a12
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9580d725120bb32a9b915d37cdbc173bfb17b859
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879035"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438840"
 ---
 # <a name="ftp-append"></a>FTP: Добавление
 
@@ -30,10 +30,12 @@ ms.locfileid: "59879035"
 append <LocalFile> [remoteFile]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<LocalFile>|Задает имя локального файла для добавления.|  
-|[Удаленный_файл]|Указывает файл на удаленном компьютере, к которому <LocalFile> добавляется.|  
+
+|  Параметр   |                               Описание                                |
+|--------------|--------------------------------------------------------------------------|
+| <LocalFile>  |                     Задает имя локального файла для добавления.                     |
+| [Удаленный_файл] | Указывает файл на удаленном компьютере, к которому <LocalFile> добавляется. |
+
 ## <a name="remarks"></a>Примечания  
 Если *Удаленный_файл* опущен, *Локальный_файл* имя используется вместо имени удаленного файла.  
 ## <a name="BKMK_Examples"></a>Примеры  
@@ -46,4 +48,4 @@ append file1.txt file2.txt
 append file1.txt  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

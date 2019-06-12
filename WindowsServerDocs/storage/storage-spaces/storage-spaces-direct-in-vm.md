@@ -9,12 +9,12 @@ author: eldenchristensen
 ms.date: 10/25/2017
 description: Как развернуть дисковых пространств в гостевой кластер виртуальных машин, — например, в Microsoft Azure.
 ms.localizationpriority: medium
-ms.openlocfilehash: a741475d09ab7f7ab29f158ef55378ca9a37beac
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b99e750b78654df48ad3b412269511d047e3057c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841025"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447813"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>С помощью дисковых пространств в кластеров гостевых виртуальных машин
 
@@ -81,4 +81,4 @@ ms.locfileid: "59841025"
 
 [Дополнительные шаблоны виртуальных Машин Azure Iaas для развертывания дисковых пространств, видео и пошаговые руководства](https://blogs.msdn.microsoft.com/clustering/2017/02/14/deploying-an-iaas-vm-guest-clusters-in-microsoft-azure/).
 
-[Дополнительные дисковые пространства Обзор] (https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+[Дополнительное хранилище локальных дисковых пространств Обзор](https://docs.microsoft.com/en-us/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

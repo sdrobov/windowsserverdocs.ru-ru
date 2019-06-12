@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c45e26f6578510837f190ae20e3140e619dc59cb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6abf8466f90ac29846f2e1ee7d305e7e4280231e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841765"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438635"
 ---
 # <a name="ftp-ls1"></a>ftp: ls_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
+> 
+> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Вывод сокращенного списка файлов и подкаталогов с удаленного компьютера.   
 ## <a name="syntax"></a>Синтаксис  
@@ -33,10 +33,12 @@ ms.locfileid: "59841765"
 ls [<remotedirectory>] [<LocalFile>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|[<remotedirectory>]|Указывает каталог, для которого требуется просмотреть список. Если каталог не указан, используется текущий рабочий каталог на удаленном компьютере.|  
-|[<LocalFile>]|Указывает локальный файл, в котором для сохранения списка. Если локальный файл не указан, результаты отображаются на экране.|  
+
+|      Параметр      |                                                                       Описание                                                                        |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [<remotedirectory>] | Указывает каталог, для которого требуется просмотреть список. Если каталог не указан, используется текущий рабочий каталог на удаленном компьютере. |
+|    [<LocalFile>]    |               Указывает локальный файл, в котором для сохранения списка. Если локальный файл не указан, результаты отображаются на экране.               |
+
 ## <a name="BKMK_Examples"></a>Примеры  
 Отображение сокращенного списка файлов и подкаталогов с удаленного компьютера.  
 ```  
@@ -47,4 +49,4 @@ ls
 ls dir1 dirlist.txt   
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

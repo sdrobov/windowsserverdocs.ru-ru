@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 93cee5b8e3611a264119947103d22d9aa3b9a56b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 66e36a349fc6bd38a77ccf4f00d380788ea4b422
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59834395"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445953"
 ---
 # <a name="develop-a-gateway-plugin"></a>Разработка подключаемого модуля шлюза
 
@@ -69,7 +69,7 @@ Windows Admin Center ищет все подключаемые модули в ``
 
 ### <a name="optional-attach-to-plugin-for-debugging"></a>Дополнительно Присоединение к подключаемый модуль для отладки
 
-В Visual Studio 2017 в меню "Отладка" выберите «Присоединение к процессу». В следующем окне в списке доступных процессов и выберите SMEDesktop.exe, а затем нажмите кнопку «Подключить». Один раз запускается отладчик, можно установить точку останова в коде функции и затем упражнения через выше формат URL-адреса. Для нашего примера проекта (имя компонента: «Пример Uno») является URL-адрес: "http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno"
+В Visual Studio 2017 в меню "Отладка" выберите «Присоединение к процессу». В следующем окне в списке доступных процессов и выберите SMEDesktop.exe, а затем нажмите кнопку «Подключить». Один раз запускается отладчик, можно установить точку останова в коде функции и затем упражнения через выше формат URL-адреса. Для нашего примера проекта (имя компонента: «Пример Uno») является URL-адрес: "<http://localhost:6516/api/nodes/fake-server.my.domain.com/features/Sample%20Uno>"
 
 ## <a name="create-a-tool-extension-with-the-windows-admin-center-cli"></a>Создание средства расширения с помощью интерфейса командной строки Windows Admin Center ##
 
@@ -104,8 +104,8 @@ npm install
 
 Теперь, когда вы создали расширение с помощью интерфейса командной строки Windows Admin Center, вы можете подключить средство расширения в подключаемый модуль пользовательского шлюза, выполнив следующие действия:
 
-- Добавление [пустого модуля](guides\add-module.md)
-- Используйте ваши [подключаемый модуль настраиваемый шлюз](guides\use-custom-gateway-plugin.md) средство расширения
+- Добавление [пустого модуля](guides/add-module.md)
+- Используйте ваши [подключаемый модуль настраиваемый шлюз](guides/use-custom-gateway-plugin.md) средство расширения
  
 ## <a name="build-and-side-load-your-extension"></a>Сборки и на стороне загрузить расширение
 

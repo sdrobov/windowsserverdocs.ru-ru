@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9390f8e5b0bded92a553b3057d122dace3fc665a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7b342f9d728e91085d5edf2f8e1ece00b48bec8d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851615"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438326"
 ---
 # <a name="ftp-mdelete1"></a>ftp: mdelete_1
 
@@ -30,13 +30,15 @@ ms.locfileid: "59851615"
 mdelete <remoteFile>[ ]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<remoteFile>|Указывает удаленный файл для удаления.|  
+
+|  Параметр   |             Описание              |
+|--------------|--------------------------------------|
+| <remoteFile> | Указывает удаленный файл для удаления. |
+
 ## <a name="BKMK_Examples"></a>Примеры  
 Удалить удаленные файлы **a.exe** и **b.exe**.  
 ```  
 mdelete a.exe b.exe  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

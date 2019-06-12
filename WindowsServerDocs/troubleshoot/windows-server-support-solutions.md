@@ -10,17 +10,17 @@ ms.date: 03/16/2018
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: elizapo
-ms.openlocfilehash: 1a4d28e168e7ce328ac125d12a07cb0c133e2d0e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fc87bf87a79f5f7e13069ad1a58be0dc940a558e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852125"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447782"
 ---
 # <a name="top-support-solutions-for-windows-server"></a>Основные решения поддержки для Windows Server
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 Корпорация Майкрософт регулярно выпускает обновления и решения для Windows Server. Необходимо вовремя обновлять серверы, чтобы они могли получать будущие обновления, в том числе обновления безопасности. Полный список выпущенных обновлений см. в разделе [Журнал обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history).
 
@@ -55,7 +55,7 @@ ms.locfileid: "59852125"
 <hr>
                        <p><a href="..\get-started\installation-and-upgrade.md">Windows Server установки и обновления)</a></p>
 <hr>
-                       <p><a href="..\get-started\windows-server-2016-ga-release-notes.md">Заметки о выпуске: Важные проблемы в Windows Server 2016)</a></p>
+                       <p><a href="..\get-started\windows-server-2016-ga-release-notes.md">Заметки о выпуске. Важные проблемы в Windows Server 2016)</a></p>
 <hr>
                        <p><a href="..\get-started\recommendations-moving-to-server2016.md">Рекомендации по переходу на Windows Server 2016)</a></p>
                     </div>
@@ -84,10 +84,9 @@ ms.locfileid: "59852125"
                         <p><a href="https://technet.microsoft.com/library/ee939272.aspx">Способы устранения неполадок службы управления ключами (KMS)</a></p>
 <hr>
                         <p><a href="https://technet.microsoft.com/library/ff793439.aspx">Устранение неполадок активации тома</a></p>
-<hr>                       
-                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">Коды ошибок активации</a></p>
+<hr><br/>                        <p><a href="https://technet.microsoft.com/library/ff793399.aspx">Коды ошибок активации</a></p>
 <hr>
-                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Установка Windows может завершиться с ошибкой «введенный ключ продукта не соответствует ни одному из образов Windows, доступных для установки. Введите другой ключ продукта»</a></p>
+                        <p><a href="https://support.microsoft.com/help/2796988/windows-8-or-windows-server-2012-installation-may-fail-with-error-mess">Установка Windows может завершиться с ошибкой &quot;введенный ключ продукта не соответствует ни одному из доступных для установки образов Windows. Введите другой ключ продукта&quot;</a></p>
                     </div>
                 </div>
             </div>
@@ -113,7 +112,7 @@ ms.locfileid: "59852125"
 <hr>
                         <p><a href="https://support.microsoft.com/kb/255504">С помощью Ntdsutil.exe для переноса или изменения размера ролей FSMO контроллеру домена</a></p>
 <hr>
-                        <p><a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">Устранение неполадок развертывания контроллера домена</a></p>
+                        <p><a href="../identity/ad-ds/deploy/troubleshooting-domain-controller-deployment.md">Устранение неполадок с развертыванием контроллера домена</a></p>
 <hr>
                         <p><a href="https://msdn.microsoft.com/library/bb727058.aspx">Устранение неполадок мастера установки Active Directory</a></p>
 <hr>
@@ -138,10 +137,9 @@ ms.locfileid: "59852125"
                         <a href="/azure/active-directory/active-directory-conditional-access-automatic-device-registration-setup">Настройка автоматической регистрации присоединенных к домену устройств Windows с Azure Active Directory</a>
 <hr>
                         <p><a href="/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup#step-2-setup-issuance-of-claims">Настройка выдачи утверждений</a></p>
-<hr>  
-                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Настройка AD FS для проверки подлинности пользователей, хранящихся в каталогах LDAP</a></p>
+<hr><br/>                        <p><a href="../identity/ad-fs/operations/configure-ad-fs-to-authenticate-users-stored-in-ldap-directories.md">Настройка AD FS для аутентификации пользователей, хранящихся в каталогах LDAP</a></p>
 <hr>
-                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">Поддержка привязки альтернативного имени узла для проверки подлинности сертификата AD FS</a></p>
+                        <p><a href="../identity/ad-fs/operations/ad-fs-support-for-alternate-hostname-binding-for-certificate-authentication.md">Поддержка привязки альтернативного имени узла для аутентификации сертификата в AD FS</a></p>
 <hr>
                         <p><a href="https://blogs.technet.microsoft.com/tspring/2017/01/20/federated-to-microsoft-cloud-and-account-lockouts/">Защита от атак пароль</a>
                         <a href="../identity/ad-fs/deployment/upgrading-to-ad-fs-in-windows-server-2016.md">обновление до AD FS в Windows Server 2016 с помощью Внутренней базой данных Windows</a></p>

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37568998d6d5870d2c97dbd487c5708b1e1e5a51
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a03bb9766ffe62a80e8661bf8ce2a8eea2ce536b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830245"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438564"
 ---
 # <a name="ftp-mkdir"></a>FTP: mkdir
 
@@ -30,13 +30,15 @@ ms.locfileid: "59830245"
 mkdir <directory>  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<directory>|Указывает имя каталога.|  
+
+|  Параметр  |                   Описание                   |
+|-------------|-------------------------------------------------|
+| <directory> | Указывает имя каталога. |
+
 ## <a name="BKMK_Examples"></a>Примеры  
 Создайте каталог с именем **dir1** на удаленном компьютере.  
 ```  
 mkdir dir1  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

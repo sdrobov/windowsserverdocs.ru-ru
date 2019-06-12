@@ -12,12 +12,12 @@ ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bdd523efa1b1819bde4edb40f29d664df2a07db2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8a2742c974535d9e92ac88c289ff02f6f1d0d10c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847405"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435867"
 ---
 # <a name="work-remotely-in-windows-server-essentials"></a>Удаленная работа в Windows Server Essentials
 
@@ -88,11 +88,11 @@ ms.locfileid: "59847405"
   
  Можно загрузить любое из нижеперечисленных приложений из Магазина Windows Phone:  
   
--   [Установка приложения My Server для Windows Phone](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
+- [Установка приложения My Server для Windows Phone](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
   
--   [Установка My Server 2012 R2 для Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
+- [Установка My Server 2012 R2 для Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
   
- Дополнительные сведения о приложении My Server для телефона см. в записи блога [телефонное приложение My Server для Windows Server Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). Сведения о приложении My Server 2012 R2 для телефона см. в записи блога [Приложения My Server 2012 R2 для Windows и Windows Phone](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
+  Дополнительные сведения о приложении My Server для телефона см. в записи блога [телефонное приложение My Server для Windows Server Essentials](http://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). Сведения о приложении My Server 2012 R2 для телефона см. в записи блога [Приложения My Server 2012 R2 для Windows и Windows Phone](http://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
   
 ##  <a name="BKMK_O365"></a> Использование Microsoft Office 365 с Windows Server Essentials  
 

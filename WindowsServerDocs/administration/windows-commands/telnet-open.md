@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a87c4bac000a63af806705e9371a79d7370a34c1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 186664a75978f589a9a26047c72b9db74dd2dc4d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838245"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441125"
 ---
 # <a name="telnet-open"></a>Telnet: открыть
 
@@ -30,14 +30,16 @@ ms.locfileid: "59838245"
 o[pen] <hostname> [<Port>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<hostname>|Указывает имя компьютера или IP-адрес.|  
-|[<Port>]|Задает TCP-порт, который прослушивает сервер telnet. По умолчанию используется TCP-порт 23.|  
+
+| Параметр  |                                        Описание                                         |
+|------------|--------------------------------------------------------------------------------------------|
+| <hostname> |                         Указывает имя компьютера или IP-адрес.                         |
+|  [<Port>]  | Задает TCP-порт, который прослушивает сервер telnet. По умолчанию используется TCP-порт 23. |
+
 ## <a name="BKMK_Examples"></a>Примеры  
 Подключиться к серверу telnet telnet.microsoft.com.  
 ```  
 o telnet.microsoft.com  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

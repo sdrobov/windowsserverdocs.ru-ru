@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2033cbc9b3d9127249656c3e0dcf95d872229797
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a1b5fca329864ebed9eab66671a17493f0fc3ca8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842545"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66440911"
 ---
 # <a name="tsdiscon"></a>tsdiscon
 
@@ -36,6 +36,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 ```
 
 ## <a name="parameters"></a>Параметры
+
 |Параметр|Описание|
 |-------|--------|
 |\<SessionId >|Указывает идентификатор сеанса для отключения.|
@@ -52,18 +53,18 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   Сеанс консоли не может быть отключен.
 
 ## <a name="BKMK_examples"></a>Примеры
--   Чтобы отключить текущий сеанс, введите:
-    ```
-    tsdiscon
-    ```
--   Чтобы отключить сеанс 10, введите:
-    ```
-    tsdiscon 10
-    ```
--   Чтобы отключить сеанс с именем TERM04, введите:
-    ```
-    tsdiscon TERM04
-    ```
-#### <a name="additional-references"></a>Дополнительная справка
-[Синтаксис командной строки Key](command-line-syntax-key.md)
-[служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)
+- Чтобы отключить текущий сеанс, введите:
+  ```
+  tsdiscon
+  ```
+- Чтобы отключить сеанс 10, введите:
+  ```
+  tsdiscon 10
+  ```
+- Чтобы отключить сеанс с именем TERM04, введите:
+  ```
+  tsdiscon TERM04
+  ```
+  #### <a name="additional-references"></a>Дополнительная справка
+  [Синтаксис командной строки Key](command-line-syntax-key.md)
+  [служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)

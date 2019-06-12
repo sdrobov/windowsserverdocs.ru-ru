@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/29/2019
-ms.openlocfilehash: e00322186ea34784048366bf17881af742cb4444
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9f07d2e6e93d4f8d198c2fc3b62c28c940bdefb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447508"
 ---
 # <a name="create-a-windows-shielded-vm-template-disk"></a>Создание диска шаблона экранированной виртуальной Машины Windows
 
@@ -27,7 +27,7 @@ ms.locfileid: "59853695"
 
 Сначала Подготовьте диска ОС, который выполнит в мастере создания экранированных диска шаблона. Этот диск будет использоваться в качестве диска ОС в виртуальные машины клиента. Средства можно использовать для создания этого диска, например Microsoft Desktop образа Service Manager ими (DISM), или вручную настроить виртуальную Машину с пустым vhdx-ФАЙЛ и установки операционной системы на этом диске. При настройке диск, он должен соответствовать следующим требованиям, которые относятся к версии 2 и/или экранированных виртуальных машин: 
 
-| Требование для vhdx-файлов | Причина |
+| Требование для vhdx-файлов | `Reason` |
 |-----------|----|
 |Должны представлять собой диск таблица разделов GUID (GPT) | Для виртуальных машин поколения 2 для поддержки UEFI|
 |Тип диска должен быть **основные** в отличие от **динамическое**. <br>Примечание. Это относится к типу логического диска, не «динамически расширяемый» VHDX компонента, поддерживаемого Hyper-V. | BitLocker не поддерживает динамические диски.|
@@ -163,8 +163,8 @@ Save-VolumeSignatureCatalog -TemplateDiskPath 'C:\temp\MyLinuxTemplate.vhdx' -Vo
 
 ## <a name="next-step"></a>Дальнейшие действия
 
->[!div class="nextstepaction"]
-[Создайте файл данных экранирования](guarded-fabric-tenant-creates-shielding-data.md)
+> [!div class="nextstepaction"]
+> [Создайте файл данных экранирования](guarded-fabric-tenant-creates-shielding-data.md)
 
 ## <a name="see-also"></a>См. также
 

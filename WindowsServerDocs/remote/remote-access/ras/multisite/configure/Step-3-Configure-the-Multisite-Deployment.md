@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: ea7ecd52-4c12-4a49-92fd-b8c08cec42a9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5c74a9277af3853d709a8ecd58c1e53e1bccc719
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 009ded50b156162ad1f3397fc0708ef8075c6a6f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812515"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446833"
 ---
 # <a name="step-3-configure-the-multisite-deployment"></a>Шаг 3 Настройка многосайтового развертывания
 
@@ -67,7 +67,7 @@ ms.locfileid: "59812515"
 11.  В диалоговом окне **Ход установки** убедитесь в успешном завершении установки, а затем нажмите кнопку **Закрыть**.  
   
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
 
   
 Шаги 1 – 3 должна выполняться вручную, а не выполняются с помощью этого командлета Windows PowerShell.  
@@ -183,7 +183,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 1.  На DNS-сервер: На **запустить** введите **dnsmgmt.msc**, и нажмите клавишу ВВОД.  
   
-2.  В левой части **диспетчера DNS** консоли, откройте зону прямого просмотра для внутренней сети. Щелкните правой кнопкой мыши соответствующую зону и выберите **новый узел (A или AAAA)**.  
+2.  В левой части **диспетчера DNS** консоли, откройте зону прямого просмотра для внутренней сети. Щелкните правой кнопкой мыши соответствующую зону и выберите **новый узел (A или AAAA)** .  
   
 3.  На **новый узел** отображаемое в диалоговом окне **имя (используется имя родительского домена Если оставить пустым)** введите имя, которое было использовано для сервера сетевых расположений для первого сервера удаленного доступа. В **IP-адрес** введите IPv4-адрес сервера удаленного доступа для интрасети и нажмите кнопку **добавить узел**. В диалоговом окне **DNS** щелкните **OK**.  
   
@@ -261,7 +261,7 @@ Install-WindowsFeature RemoteAccess -IncludeManagementTools
   
 10. На **Включение многосайтового развертывания** диалоговом окне щелкните **закрыть** и мастер включения многосайтового развертывания, щелкните **закрыть**.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -343,7 +343,7 @@ Add-DAClient -EntrypointName 'Edge1-US' -DownlevelSecurityGroupNameList @('corp.
   
 16. Повторите эту процедуру шаг 2 для каждой точки входа, который требуется добавить в многосайтовое развертывание.  
   
-![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../../media/Step-3-Configure-the-Multisite-Deployment/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -361,4 +361,4 @@ Add-DAClient -EntrypointName 'Edge2-Europe' -DownlevelGpoName @('corp.contoso.co
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 2. Настройка инфраструктуры Мультисайт](Step-2-Configure-the-Multisite-Infrastructure.md)
+-   [Шаг 2. Настройка инфраструктуры Мультисайт](Step-2-Configure-the-Multisite-Infrastructure.md)

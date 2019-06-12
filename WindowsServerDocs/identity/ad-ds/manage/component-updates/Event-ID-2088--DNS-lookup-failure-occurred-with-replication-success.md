@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: cc090fa749a601e53b4347cce43245f22badc8ae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e0c5e838290a8ebf33f0f7891dc10f8b00e5bcba
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840715"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442649"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>Событие с Идентификатором 2088 Произошла ошибка поиска в DNS с успехом репликации
 
@@ -58,7 +58,7 @@ ms.locfileid: "59840715"
 
 2) Убедитесь, что исходный контроллер домена работает Active Directory и доступен в сети, введя «net view \\ &lt;имя исходного контроллера домена&gt;"или «ping &lt;имя исходного контроллера домена&gt;«. 
 
-3) Убедитесь, что исходный контроллер домена использует допустимый DNS-сервер для службы DNS, и что запись CNAME и записи узла исходного контроллера домена, правильно зарегистрирован, с помощью DNS улучшенной версии DCDIAG. EXE, доступная в https://www.microsoft.com/dns 
+3) Убедитесь, что исходный контроллер домена использует допустимый DNS-сервер для службы DNS, и что запись CNAME и записи узла исходного контроллера домена, правильно зарегистрирован, с помощью DNS улучшенной версии DCDIAG. EXE, доступная в <https://www.microsoft.com/dns> 
 
 dcdiag /test:dns 
 
@@ -66,7 +66,7 @@ dcdiag /test:dns
 
 dcdiag /test:dns 
 
-5) Для дальнейшего анализа сбоев ошибка DNS см. в статье базы Знаний 824449: https://support.microsoft.com/?kbid=824449 
+5) Для дальнейшего анализа сбоев ошибка DNS см. в статье базы Знаний 824449: <https://support.microsoft.com/?kbid=824449> 
 
 Дополнительные данные: Значение ошибки: 11004 запрошенное имя допустимо, но данные запрошенного типа не найдены</code> </introduction>
   <section>
@@ -78,7 +78,7 @@ dcdiag /test:dns
   <section>
     <title>Разрешение</title>
     <content>
-      <para>Перейти к тестированию DNS, как описано в разделе "<link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">событие с Идентификатором 2087: Ошибка поиска в DNS причиной ошибки репликации</link>.»</para>
+      <para>Перейти к тестированию DNS, как описано в разделе &quot; <link xlink:href="85b1d179-f53e-4f95-b0b8-5b1c096a8076">2087 идентификатор события: Ошибка поиска в DNS причиной ошибки репликации</link>.&quot;</para>
     </content>
   </section>
   <relatedTopics />

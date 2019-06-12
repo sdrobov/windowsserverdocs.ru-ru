@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 245f8fb2e6419d22da3e2e76eebd9f801ab90664
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 45545b4e12d31c293ead5b18b83efd50d7bc37bb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821485"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66439649"
 ---
 # <a name="dfsutil"></a>Dfsutil
 
@@ -53,13 +53,13 @@ command </parameter> </param2>
 Если указать объект \(например сервер пространства имен\) в конце команды, большинство команд отобразится информация об объекте без дополнительных параметров или команды. Например при использовании dfsutil команды Root, после добавления корневого пространства имен в команду, чтобы просмотреть сведения о корневой.
 
 ## <a name="BKMK_Examples"></a>Примеры
-<Here is where you put a detailed description of your example.>
+&lt;Здесь будут размещаться подробное описание вашего примера.&gt;
 
 ```
 This /is /the /example /of /calling /command /with /parameters
 ```
 
-<Here is where you put a detailed description of another example.>
+&lt;Здесь будут размещаться подробное описание еще один пример.&gt;
 
 ```
 This /is /a:different /example
@@ -67,6 +67,6 @@ This /is /a:different /example
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 

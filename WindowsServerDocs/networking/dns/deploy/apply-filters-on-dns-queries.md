@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: b86beeac-b0bb-4373-b462-ad6fa6cbedfa
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4b00c773462569f005a73f535b1a872ae7b389db
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e9322da3142c584c7b9d0a28396a1d1fd62ce6ee
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859905"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446403"
 ---
 # <a name="use-dns-policy-for-applying-filters-on-dns-queries"></a>Использование политики DNS для применения фильтров к запросам DNS
 
@@ -45,7 +45,7 @@ ms.locfileid: "59859905"
 >[!NOTE]
 >Примеры команд в этом разделе с помощью команды Windows PowerShell **DnsServerQueryResolutionPolicy добавить**. Дополнительные сведения см. в разделе [DnsServerQueryResolutionPolicy добавить](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps). 
 
-##<a name="bkmk_block1"></a>Блок запросов из домена
+## <a name="bkmk_block1"></a>Блок запросов из домена
 
 В некоторых случаях может потребоваться заблокировать разрешения имен DNS для доменов, которые вы определили как вредоносный или для доменов, которые не соответствуют рекомендации по использованию вашей организации. Блокирующие запросы для доменов можно выполнить с помощью политики DNS.
 
@@ -60,7 +60,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN 
 >[!NOTE]
 >При настройке **действие** параметр со значением **пропустить**, DNS-сервер настроен для удаления запросов при отсутствии ответа вообще. Это приводит к DNS-клиент в вредоносного домена истечения времени ожидания.
 
-##<a name="bkmk_block2"></a>Блокировать запросы из подсети
+## <a name="bkmk_block2"></a>Блокировать запросы из подсети
 С этим примером вы можете заблокировать запросы из подсети, если он найден заражение некоторых вредоносных программ и повторите попытку вредоносные сайты, с помощью DNS-сервера. 
 
 "Добавить DnsServerClientSubnet-имя «MaliciousSubnet06»-IPv4Subnet 172.0.33.0/24 - PassThru
@@ -73,14 +73,14 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicy" -Action IGNORE -FQDN 
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyMalicious06" -Action IGNORE -ClientSubnet  "EQ,MaliciousSubnet06" –FQDN “EQ,*.contosomalicious.com” -PassThru
 `
 
-##<a name="bkmk_block3"></a>Блок тип запроса
+## <a name="bkmk_block3"></a>Блок тип запроса
 Может потребоваться заблокировать разрешение имен для определенных типов запросов на серверах. Например вы можете заблокировать «ANY» запрос, который может использоваться для создания усиления атаки злоумышленником.
 
 `
 Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyQType" -Action IGNORE -QType "EQ,ANY" -PassThru
 `
 
-##<a name="bkmk_allow1"></a>Разрешить запросы только из домена
+## <a name="bkmk_allow1"></a>Разрешить запросы только из домена
 Можно не использовать только политики DNS, чтобы запретить запросы, их можно использовать для автоматического утверждения запросов из отдельных доменов или подсети. При настройке списков разрешенных DNS-сервер обрабатывает только запросы из разрешенных доменов блокировать все остальные запросы из других доменов.
 
 Например, следующая команда позволяет только компьютерам и устройствам в contoso.com и дочерние домены для запроса DNS-сервера.
@@ -89,7 +89,7 @@ Add-DnsServerQueryResolutionPolicy -Name "BlockListPolicyQType" -Action IGNORE -
 Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicyDomain" -Action IGNORE -FQDN "NE,*.contoso.com" -PassThru 
 `
 
-##<a name="bkmk_allow2"></a>Разрешить запросы только из подсети
+## <a name="bkmk_allow2"></a>Разрешить запросы только из подсети
 Можно также создать списков разрешенных для IP-подсетей, чтобы все запросы, поступающий не из этих подсетей учитываются.
 
 `
@@ -99,7 +99,7 @@ Add-DnsServerClientSubnet -Name "AllowedSubnet06" -IPv4Subnet 172.0.33.0/24 -Pas
 Add-DnsServerQueryResolutionPolicy -Name "AllowListPolicySubnet” -Action IGNORE -ClientSubnet  "NE, AllowedSubnet06" -PassThru
 `
 
-##<a name="bkmk_allow3"></a>Разрешить только определенные QTypes
+## <a name="bkmk_allow3"></a>Разрешить только определенные QTypes
 Списков разрешенных можно применить к QTYPEs. 
 
 Например при наличии внешних клиентов, запрос интерфейса DNS-сервера 164.8.1.1 только определенные QTYPEs могут запрашиваться, несмотря на наличие других QTYPEs, как и SRV или TXT-записи, которые используются внутренние серверы для разрешения имен, или для наблюдения.

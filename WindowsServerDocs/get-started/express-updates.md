@@ -7,18 +7,18 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
-ms.openlocfilehash: c48979440ab7c5cfa86aa1287b354a1e43692f48
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1644a61c87953e465895e23c3c8454bae7f3a056
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867445"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66443383"
 ---
 # <a name="express-updates-for-windows-server-2016-re-enabled-for-november-2018-update"></a>Экспресс-обновлений для Windows Server 2016, снова включить для ноября 2018 года обновления
 
->По Frauenheim Джоэл
-
->Область применения. Windows Server 2016
+> По Frauenheim Джоэл
+> 
+> Область применения. Windows Server 2016
 
 Начиная с 13 ноября 2018 года обновление Вторник, Windows будет снова публиковать обновления Express для Windows Server 2016. Экспресс-обновлений для Windows Server 2016 остановлен в середине 2017 после существенной проблемой был найден, запрещена правильно установки обновлений. Хотя ошибка была исправлена в ноября 2017 г., группа обновления потребовалось высокий уровень безопасности для публикации пакетов Express для обеспечения большинство пользователей будет 14 ноября 2017 г. обновление ([4048953 КБ](https://support.microsoft.com/help/4048953/windows-10-update-kb4048953)) установлены на сервере среды и не влиять на проблему.
 

@@ -8,12 +8,12 @@ ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: web-app-proxy
-ms.openlocfilehash: c7dab1dbf97d2dcbda1fe0375e61300f2a1cc373
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca4d8661f8f0252334bdecbde85603d8af5e2d2a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862245"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446809"
 ---
 # <a name="publishing-applications-using-ad-fs-preauthentication"></a>Публикация приложений с использованием предварительной проверки подлинности AD FS
 
@@ -103,7 +103,7 @@ ms.locfileid: "59862245"
   
 2.  В окне **мастера публикации нового приложения** на **странице приветствия** нажмите кнопку **Далее**.  
   
-3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)**, а затем нажмите кнопку **Далее**.  
+3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)** , а затем нажмите кнопку **Далее**.  
   
 4.  На странице **Поддерживаемые клиенты** выберите **Веб и MSOFBA**, а затем нажмите кнопку **Далее**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "59862245"
   
 8.  На странице **Результаты** убедитесь в успешной публикации приложения, а затем нажмите кнопку **Закрыть**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -183,7 +183,7 @@ Add-WebApplicationProxyApplication
   
 2.  В окне **мастера публикации нового приложения** на **странице приветствия** нажмите кнопку **Далее**.  
   
-3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)**, а затем нажмите кнопку **Далее**.  
+3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)** , а затем нажмите кнопку **Далее**.  
   
 4.  На странице **Поддерживаемые клиенты** выберите **Веб и MSOFBA**, а затем нажмите кнопку **Далее**.  
   
@@ -210,7 +210,7 @@ Add-WebApplicationProxyApplication
   
 8.  На странице **Результаты** убедитесь в успешной публикации приложения, а затем нажмите кнопку **Закрыть**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -286,7 +286,7 @@ Add-WebApplicationProxyApplication
   
 2.  В окне **мастера публикации нового приложения** на **странице приветствия** нажмите кнопку **Далее**.  
   
-3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)**, а затем нажмите кнопку **Далее**.  
+3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)** , а затем нажмите кнопку **Далее**.  
   
 4.  На **поддерживаемые клиенты** выберите **HTTP Basic** и нажмите кнопку **Далее**.  
   
@@ -310,7 +310,7 @@ Add-WebApplicationProxyApplication
   
 8.  На странице **Результаты** убедитесь в успешной публикации приложения, а затем нажмите кнопку **Закрыть**.  
   
-![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![](../../media/Publishing-Applications-using-AD-FS-Preauthentication/PowerShellLogoSmall.gif)***<em>Эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -391,7 +391,7 @@ Add-WebApplicationProxyApplication
   
 2.  В окне **мастера публикации нового приложения** на **странице приветствия** нажмите кнопку **Далее**.  
   
-3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)**, а затем нажмите кнопку **Далее**.  
+3.  На **предварительной проверки подлинности** щелкните **служб федерации Active Directory (AD FS)** , а затем нажмите кнопку **Далее**.  
   
 4.  На **поддерживаемые клиенты** выберите **OAuth2** и нажмите кнопку **Далее**.  
   
@@ -441,7 +441,7 @@ Add-WebApplicationProxyApplication
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Устранение неполадок прокси веб-приложения](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [Диагностика прокси-службы веб-приложения](https://technet.microsoft.com/library/dn770156.aspx)  
   
 -   [Публикация приложений через прокси веб-приложения](https://technet.microsoft.com/library/dn383659.aspx)  
   

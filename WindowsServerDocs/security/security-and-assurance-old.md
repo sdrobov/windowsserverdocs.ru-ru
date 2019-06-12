@@ -11,19 +11,19 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
-ms.openlocfilehash: b32b4879ad454d1154c3d65dbf690cdaae73d76c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fed0587b74873005f14a216bac22f952bcc65a4f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827225"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447295"
 ---
 # <a name="security-and-assurance-in-windows-server"></a>Безопасность и контроль в Windows Server 
 
 >Область применения. Windows Server (полугодовой канал), Windows Server 2016
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 <img src="../media/landing-icons/security.png" style='float:left; padding:.5em;' alt="Icon representing a lock"> Положитесь на новые уровни защиты, встроенные в операционную систему для дополнительной защиты от брешей в системе безопасности. Обеспечьте блокировку вредоносных атак и повысьте безопасность виртуальных машин, приложений и данных.
 
@@ -71,7 +71,7 @@ ms.locfileid: "59827225"
 В этом техническом документе содержатся общие сведения о том, каким образом экранированные виртуальные машины повышают общий уровень безопасности для предотвращения мошенничества.                                         
 
 ## <a name="privileged-access-management"></a>Privileged Access Management (Защита Windows и Microsoft Azure Active Directory с помощью управления привилегированным доступом)
-### <a name="securing-privileged-accesshttpstechnetmicrosoftcomwindows-server-docssecuritysecuring-privileged-accesssecuring-privileged-access"></a>[Защита привилегированного доступа](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
+### <a name="securing-privileged-accesshttpstechnetmicrosoftcomwindows-server-docssecuritysecuring-privileged-accesssecuring-privileged-access"></a>[Обеспечение безопасности привилегированного доступа](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access)
 Схема по обеспечению безопасности привилегированного доступа. В этой схеме учтен совокупный опыт группы по безопасности серверов, ИТ-отдела корпорации Майкрософт, группы Azure и службы консультаций Майкрософт                           
 
 ### <a name="just-in-time-administration-with-microsoft-identity-managerhttpstechnetmicrosoftcomlibrarymt150258aspx"></a>[JIT-Администрирование с помощью Microsoft Identity Manager](https://technet.microsoft.com/library/mt150258.aspx)
@@ -90,7 +90,7 @@ ms.locfileid: "59827225"
 ### <a name="protect-derived-domain-credentials-with-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectioncredential-guardcredential-guard"></a>[Защита извлеченных учетных данных домена с помощью Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard)
 Для защиты секретов Credential Guard использует безопасность на основе виртуализации, чтобы только привилегированное системное ПО могло получать доступ к этим данным. Несанкционированный доступ к секретам может привести к атакам, направленным на кражу учетных данных, например Pass-the-Hash или Pass-The-Ticket. Credential Guard предотвращает такие атаки, защищая хэши паролей NTLM и билеты Kerberos Ticket Granting.
 
-### <a name="protect-remote-desktop-credentials-with-remote-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectionremote-credential-guard"></a>[Защита учетных данных удаленного рабочего стола с помощью удаленного Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
+### <a name="protect-remote-desktop-credentials-with-remote-credential-guardhttpsdocsmicrosoftcomwindowssecurityidentity-protectionremote-credential-guard"></a>[Защита учетных данных удаленного рабочего стола с помощью Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard)
 Remote Credential Guard позволяет защитить учетные данные через подключение к удаленному рабочему столу путем перенаправления запросов Kerberos обратно к устройству, запрашивающему соединение. Remote Credential Guard также предоставляет единый вход пользователей в систему для сеансов доступа к удаленному рабочему столу.                                                                                                        |
 ### <a name="credential-guard-demo-videohttpswwwyoutubecomwatchveupkogsl7yk"></a>[Демонстрационное видео по Credential Guard](https://www.youtube.com/watch?v=eUpKOGSl7yk)
 В этом 5-минутном видео демонстрируется Credential Guard и удаленный Credential Guard.         
@@ -111,7 +111,7 @@ Device Guard — это сочетание WDAC и службы целостно
 ### <a name="windows-defenderhttpstechnetmicrosoftcomwindows-server-docssecuritywindows-defenderwindows-defender-overview-windows-server"></a>[Защитник Windows](https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server)
 Защитник Windows обеспечивает возможности активного обнаружения для блокировки известных вредоносных программ. Защитник Windows включен по умолчанию и оптимизирован для поддержки различных ролей сервера в Windows Server.
 
-##<a name="detecting-and-responding-to-threats"></a>Обнаружение угроз и реагирование на них
+## <a name="detecting-and-responding-to-threats"></a>Обнаружение угроз и реагирование на них
 ### <a name="security-threat-analysis-using-microsoft-operations-management-suitehttpschannel9msdncomeventsignite2015brk3464"></a>[Анализ угроз безопасности, с помощью Microsoft Operations Management Suite](https://channel9.msdn.com/events/ignite/2015/brk3464)
 В этой презентации Ignite обсуждается вопрос использования оперативной аналитики для анализа угроз безопасности.
 

@@ -8,12 +8,12 @@ author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 05/09/2017
-ms.openlocfilehash: 4376dbb2c172a82c4ab64dc63acefbc37457110f
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: bf346844337740f7585070ff78de4e7f61f25624
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476034"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447259"
 ---
 # <a name="data-deduplication-overview"></a>Обзор дедупликации данных
 
@@ -69,7 +69,7 @@ ms.locfileid: "65476034"
                     <li><b>Удаленный доступ</b>: Пользователям корпоративных приложений с устройств, таких как домашние компьютеры, киоски, оборудовании и операционных системах, отличных от Windows.</li>
                     <li><b>Доступ к филиалам</b>: Развертывания VDI могут обеспечить лучшую производительность приложений для ветви Офисные сотрудники, которым требуется доступ к централизованным хранилищам данных. Ресурсоемкие приложения иногда не имеют протоколов клиентов и серверов, оптимизированных для подключений по медленной линии.</li>
                 </ul>
-Развертывания VDI прекрасно подходят для дедупликации данных, так как виртуальные жесткие диски, определяющие удаленные рабочие столы для пользователей, по сути идентичны. Кроме того, дедупликация данных может помочь в случае падения производительности хранилища на пиковых нагрузках (так называемый *VDI boot storm*), когда множество пользователей одновременно входит на настольные системы в начале дня.
+Развертывания VDI прекрасно подходят для дедупликации данных, так как виртуальные жесткие диски, определяющие удаленные рабочие столы для пользователей, по сути идентичны. Кроме того, дедупликация данных может помочь в случае падения производительности хранилища на пиковых нагрузках (так называемый <em>VDI boot storm</em>), когда множество пользователей одновременно входит на настольные системы в начале дня.
             </td>
         </tr>
         <tr>
@@ -83,7 +83,7 @@ ms.locfileid: "65476034"
             <td style="text-align:center;min-width:150px;vertical-align:center;"><img src="media/overview-other.png" alt="Illustration of other workloads" /></td>
             <td style="vertical-align:top">
                 <b>Другие рабочие нагрузки</b><br />
-                [К другим рабочим нагрузкам также можно применять дедупликацию данных](install-enable.md#enable-dedup-candidate-workloads).
+                <a href="install-enable.md#enable-dedup-candidate-workloads" data-raw-source="[Other workloads may also be excellent candidates for Data Deduplication](install-enable.md#enable-dedup-candidate-workloads)">К другим рабочим нагрузкам также можно применять дедупликацию данных</a>.
             </td>
         </tr>
     </tbody>

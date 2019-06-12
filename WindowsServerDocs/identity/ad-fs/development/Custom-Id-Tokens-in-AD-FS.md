@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: c4f9a2880aa91b7a600cdb40238bead7d565e6bc
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 04573aa13689a0e6744b01a0fbf8b11b622b2706
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976906"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445469"
 ---
 # <a name="customize-claims-to-be-emitted-in-idtoken-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Настройка утверждений для выпущенного в "id_token", при использовании OAuth или OpenID Connect с AD FS 2016 или более поздней версии
 
@@ -57,29 +57,29 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 2. В мастере группы приложений для имени введите **ADFSSSO** и между клиентом и сервером приложений установите **собственное приложение, веб-приложении** шаблона. Нажмите кнопку **Далее**.
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
 3. Копировать **идентификатор клиента** значение.  Он будет использоваться позже как значение для ida: ClientId, в файле web.config приложения.
 
 4. Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44320/** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
 5. На **настроить веб-API** экрана, введите следующую команду для **идентификатор** -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  Это значение будет использоваться позднее для **ida: ResourceID** в файле web.config приложения.
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
 6. На **Выбор политики управления доступом** выберите **разрешение для каждого** и нажмите кнопку **Далее**.
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
 
 7. На **Настройка разрешений приложения** экрана, убедитесь, что **openid** и **allatclaims** установлены и нажмите кнопку **Далее**.
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
 
 8. На **Сводка** щелкните **Далее**.  
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
 
 9. На **завершить** щелкните **закрыть**.
 
@@ -89,20 +89,20 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 11. На **ADFSSSO - веб-API свойства** выберите **правила преобразования выдачи** вкладку и нажмите кнопку **добавить правило...**
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
 
 12. На **утверждения мастере добавления правила преобразования** выберите **Отправка утверждений с помощью настраиваемого правила** из раскрывающегося списка и нажмите кнопку **Далее**
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
 
 13. На **утверждения мастере добавления правила преобразования** введите **ForCustomIDToken** в **имя правила утверждения** и следующие утверждения правила в **настраиваемого правила**. Нажмите кнопку **Готово**
 
-  ```  
-  x:[]
-  => issue(claim=x);  
-  ```
+    ```  
+    x:[]
+    => issue(claim=x);  
+    ```
 
-  ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
 
 ```
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f629d0879958496d1dfbedd516de1783bb0fd357
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec47dea822c338dfe1b809c662d1e31e9a5a9703
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837015"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441328"
 ---
 # <a name="set-verbose"></a>Задать подробный журнал
 
@@ -34,9 +34,9 @@ set verbose {on | off}
 
 ## <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|{on | OFF}|Включает режим подробного протоколирования или выключает.|
+| Параметр | Описание |
+|-----------|-------------|
+|    {on    |    OFF}     |
 
 ## <a name="remarks"></a>Примечания
 
@@ -44,4 +44,4 @@ set verbose {on | off}
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -8,12 +8,12 @@ ms.date: 11/09/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: d66cfde20060229844c34abeea85dd83b802ddad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: f52d3d237573e4ed0028e228ff80273862a0aaf2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822825"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444643"
 ---
 # <a name="device-authentication-controls-in-ad-fs"></a>Элементы управления проверки подлинности устройств в AD FS
 Следующий документ показано, как включить элементы управления проверки подлинности устройства в Windows Server 2016 и 2012 R2.
@@ -43,7 +43,7 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 Он имеет следующие значения:
  - SignedToken: Только PRT
  - PKeyAuth: PRT + PKeyAuth
- - ClientTLS: PRT + clientTLS 
+ - ClientTLS: PRT + clientTLS
  - Все: Все вышеперечисленное
 
 Как вы видите, PRT является частью всех способов проверки подлинности устройства, делая его в силу метод по умолчанию, которая всегда включена, когда `DeviceAuthenticationEnabled` присваивается `$true`.
@@ -53,6 +53,14 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ```
+
+>[!NOTE]
+> В ADFS 2019 `DeviceAuthenticationMethod` может использоваться с `Set-AdfsRelyingPartyTrust` команды.
+
+``` powershell
+PS:\>Set-AdfsRelyingPartyTrust -DeviceAuthenticationMethod ClientTLS
+```
+
 >[!NOTE]
 > Включение проверки подлинности устройства (параметр `DeviceAuthenticationEnabled` для `$true`) означает, что `DeviceAuthenticationMethod` неявно устанавливается значение `SignedToken`, которое соответствует **PRT**.
 
@@ -60,8 +68,8 @@ PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationEnabled $true
 ``` powershell
 PS:\>Set-AdfsGlobalAuthenticationPolicy –DeviceAuthenticationMethod All
 ```
->[!NOTE]
->Метод проверки подлинности устройства по умолчанию — `SignedToken`.  Другие значения: **PKeyAuth, *** ClientTLS,** и **все**.
+> [!NOTE]
+> Метод проверки подлинности устройства по умолчанию — `SignedToken`.  Другие значения: **PKeyAuth,** <strong>ClientTLS,</strong> и **все**.
 
 Они означают `DeviceAuthenticationMethod` значения были немного изменены с момента выпуска AD FS 2016.  См. в таблице ниже значение каждого значения в зависимости от уровня обновления:
 

@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a3e51effa6321c3575e385f1c56bba57318eca5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6944eac179c605db6c7b6f3e08f87c2329fb777f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822835"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66435373"
 ---
 # <a name="get-started-with-software-inventory-logging"></a>Начало работы с программным обеспечением ведения журнала инвентаризации
 
@@ -45,8 +45,8 @@ ms.locfileid: "59822835"
 -   Агрегация сведений об инвентаризации программного обеспечения и сервера для обширного ряда сценариев управления активами программного обеспечения путем включения функции инвентаризации программного обеспечения для каждого сервера и выбора целевого URI веб-сервера, а также отпечатка сертификата для проверки подлинности.
 
 ## <a name="see-also"></a>См. также
-[Средства ведения журнала инвентаризации программного обеспечения](https://technet.microsoft.com/library/mt572043.aspx)<br>
-[Управление программным обеспечением ведения журнала инвентаризации](manage-software-inventory-logging.md)<br>
+[Агрегатор инвентаризации программного обеспечения](https://technet.microsoft.com/library/mt572043.aspx)<br>
+[Управление журналом инвентаризации программного обеспечения](manage-software-inventory-logging.md)<br>
 [Командлеты инвентаризации программного обеспечения в Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Microsoft Assessment and Planning Toolkit](https://www.microsoft.com/download/en/details.aspx?id=7826)
 [средство управления многопользовательской активацией](http://blogs.technet.com/b/volume-licensing/)

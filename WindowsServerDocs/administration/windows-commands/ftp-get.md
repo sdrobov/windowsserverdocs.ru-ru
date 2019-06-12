@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 798317f3921cd0e5ff12b69b972e2ea423fa6b3f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 28961ccf0ae04b52586728f9c68a9b2ca3e69b1d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816735"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438775"
 ---
 # <a name="ftp-get"></a>FTP: получение
 
@@ -30,10 +30,12 @@ ms.locfileid: "59816735"
 get <remoteFile> [<LocalFile>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<remoteFile>|Задает удаленный файл для копирования.|  
-|[<LocalFile>]|Указывает имя файла для использования на локальном компьютере. Если *Локальный_файл* не указан, будет использовано *Удаленный_файл* имя.|  
+
+|   Параметр   |                                                              Описание                                                               |
+|---------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| <remoteFile>  |                                                   Задает удаленный файл для копирования.                                                   |
+| [<LocalFile>] | Указывает имя файла для использования на локальном компьютере. Если *Локальный_файл* не указан, будет использовано *Удаленный_файл* имя. |
+
 ## <a name="remarks"></a>Примечания  
 **Получить** команда идентична **recv** команды.  
 ## <a name="BKMK_Examples"></a>Примеры  
@@ -48,4 +50,4 @@ Get test.txt test1.txt
 ## <a name="additional-references"></a>Дополнительные ссылки  
 -   [FTP: ascii](ftp-ascii.md)  
 -   [FTP: двоичные](ftp-binary.md)  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

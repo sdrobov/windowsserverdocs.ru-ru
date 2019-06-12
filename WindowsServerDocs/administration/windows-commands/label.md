@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6dea364b1afe385d03b0519538ff7bbd6bb9df28
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d0c68fbbf3ea776bbf6cd49fc4fa446d5dd46542
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883255"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66437909"
 ---
 # <a name="label"></a>label
 
@@ -45,19 +45,19 @@ label [/mp] [<Volume>] [<Label>]
 
 ## <a name="remarks"></a>Примечания
 
--   Windows отображает метку тома и серийный номер (если таковой имеется) как часть списка каталогов.
--   Метка тома NTFS может быть до 32 символов, включая пробелы. Метки томов NTFS сохраняют и отобразить случай, который использовался при создании метки.
--   Если не указать значение для **метка** параметра **метка** команда отображает выходные данные в следующем формате:  
-    ```
-    Volume in drive C: xxxxxxxxxxx 
-    Volume Serial Number is xxxx-xxxx 
-    Volume label (32 characters, ENTER for none)?
-    ```  
-    Можно ввести новую метку тома, или нажмите клавишу ВВОД, чтобы сохранить текущую метку. При нажатии клавиши ВВОД и тома в настоящее время имеет метку, **метка** команда запрашивает со следующим сообщением:  
-    ```
-    Delete current volume label (Y/N)?
-    ```  
-    Нажмите клавишу Y, чтобы удалить метку, или нажмите клавишу N, чтобы сохранить метки.
+- Windows отображает метку тома и серийный номер (если таковой имеется) как часть списка каталогов.
+- Метка тома NTFS может быть до 32 символов, включая пробелы. Метки томов NTFS сохраняют и отобразить случай, который использовался при создании метки.
+- Если не указать значение для **метка** параметра **метка** команда отображает выходные данные в следующем формате:  
+  ```
+  Volume in drive C: xxxxxxxxxxx 
+  Volume Serial Number is xxxx-xxxx 
+  Volume label (32 characters, ENTER for none)?
+  ```  
+  Можно ввести новую метку тома, или нажмите клавишу ВВОД, чтобы сохранить текущую метку. При нажатии клавиши ВВОД и тома в настоящее время имеет метку, **метка** команда запрашивает со следующим сообщением:  
+  ```
+  Delete current volume label (Y/N)?
+  ```  
+  Нажмите клавишу Y, чтобы удалить метку, или нажмите клавишу N, чтобы сохранить метки.
 
 ## <a name="BKMK_examples"></a>Примеры
 
@@ -66,22 +66,22 @@ label [/mp] [<Volume>] [<Label>]
 label a:sales-july
 ```
 Чтобы удалить метку для диска C, выполните следующие действия:
-1.  В командной строке введите:  
-    ```
-    Label
-    ```  
-    Отображать результат, аналогичный приведенному ниже:  
-    ```
-    Volume in drive C: is Main Disk
-    Volume Serial Number is 6789-ABCD
-    Volume label (32 characters, ENTER for none)?
-    ```  
-2.  Нажмите клавишу ВВОД. Может появиться следующее сообщение:  
-    ```
-    Delete current volume label (Y/N)?
-    ```  
-3.  Нажмите клавишу Y, чтобы удалить метку.
+1. В командной строке введите:  
+   ```
+   Label
+   ```  
+   Отображать результат, аналогичный приведенному ниже:  
+   ```
+   Volume in drive C: is Main Disk
+   Volume Serial Number is 6789-ABCD
+   Volume label (32 characters, ENTER for none)?
+   ```  
+2. Нажмите клавишу ВВОД. Может появиться следующее сообщение:  
+   ```
+   Delete current volume label (Y/N)?
+   ```  
+3. Нажмите клавишу Y, чтобы удалить метку.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

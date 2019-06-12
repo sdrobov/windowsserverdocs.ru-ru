@@ -13,14 +13,14 @@ ms.topic: article
 ms.assetid: ''
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: b86726fd6e9ee37dbfd43357d8040b43b8dfb200
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7fb7b5f7ae6e10d1007317949a42c48b4765f35c
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853345"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446059"
 ---
-#<a name="step-1-plan-the-basic-directaccess-infrastructure"></a>Шаг 1 плана базовой инфраструктуры DirectAccess
+# <a name="step-1-plan-the-basic-directaccess-infrastructure"></a>Шаг 1 плана базовой инфраструктуры DirectAccess
 Первым шагом для базового развертывания DirectAccess на одном сервере является планирование инфраструктуры, необходимой для развертывания. В этом разделе пошагово описывается планирование инфраструктуры:  
   
 |Задача|Описание|  
@@ -253,5 +253,5 @@ DirectAccess использует Active Directory и объектов поли�
   
 ### <a name="BKMK_Links"></a>Следующий шаг  
   
--   [Шаг 2. Планирование развертывания базового DirectAccess](da-basic-plan-s2-deployment.md)  
+-   [Шаг 2. Планирование базового развертывания DirectAccess](da-basic-plan-s2-deployment.md)  
   

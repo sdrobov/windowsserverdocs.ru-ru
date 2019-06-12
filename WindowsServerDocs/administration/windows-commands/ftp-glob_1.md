@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 249e9546bec467f92991b15a3d65df173036e464
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8824fab77c3cc10828b31abbe2f9034778c39c47
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857375"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438743"
 ---
 # <a name="ftp-glob1"></a>ftp: glob_1
 
@@ -32,12 +32,12 @@ glob
 ### <a name="parameters"></a>Параметры  
 none  
 ## <a name="remarks"></a>Примечания  
--   По умолчанию этот режим включен.  
--   Этот режим позволяет использовать звездочку (*) и вопросительный знак (?) как символы-шаблоны в локальные пути к файлу или имена.  
-## <a name="BKMK_Examples"></a>Примеры  
-Свернуть или развернуть подстановочные имена локальных файлов.  
-```  
-glob  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- По умолчанию этот режим включен.  
+- Этот режим позволяет использовать звездочку (*) и вопросительный знак (?) как символы-шаблоны в локальные пути к файлу или имена.  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  Свернуть или развернуть подстановочные имена локальных файлов.  
+  ```  
+  glob  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

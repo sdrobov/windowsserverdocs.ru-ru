@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 43abc30a-300d-4752-b845-10a6b9f32244
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: edd59208237f9b1042427dfecba0a407a34b30a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9d19ac813280981341019330470cc5d53ee00778
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835815"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446113"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>Шаг 1 настраивать сложную инфраструктуру DirectAccess
 
@@ -246,7 +246,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 1.  На DNS-сервере внутренней сети: На **запустить** введите**dnsmgmt.msc**, и нажмите клавишу ВВОД.  
   
-2.  В левой области консоли **Диспетчер DNS** разверните зону прямого просмотра для вашего домена. Щелкните домен правой кнопкой и выберите **Новый узел (A или AAAA)**.  
+2.  В левой области консоли **Диспетчер DNS** разверните зону прямого просмотра для вашего домена. Щелкните домен правой кнопкой и выберите **Новый узел (A или AAAA)** .  
   
 3.  В диалоговом окне **Новый узел** в поле **IP-адрес**:  
   
@@ -264,7 +264,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 5.  В диалоговом окне **DNS** нажмите кнопку **ОК**, а затем — **Готово**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -336,7 +336,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 10. При появлении запроса на перезагрузку компьютера нажмите кнопку **Перезагрузить сейчас**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -425,7 +425,7 @@ Restart-Computer
   
     10. На странице **Проверка архива** нажмите кнопку **Далее**, а затем кнопку **Готово**.  
   
-![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***  
+![Windows PowerShell](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -556,7 +556,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>Следующий шаг  
   
--   [Шаг 2. Настройка серверов DirectAccess с расширенными параметрами](da-adv-configure-s2-servers.md)  
+-   [Шаг 2. Настройка расширенных серверов DirectAccess](da-adv-configure-s2-servers.md)  
   
 
 

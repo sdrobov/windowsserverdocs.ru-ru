@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e9a2b2162fcf11385a5a866372e57338df87c541
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7e9a5b397127e9eb88352fb4d7bc28955023d4b7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447213"
 ---
 # <a name="enable-access-based-enumeration-on-a-namespace"></a>Включение перечисления на основе доступа для пространства имен
 
@@ -78,15 +78,15 @@ ms.locfileid: "59850595"
 
 ## <a name="to-control-folder-visibility-by-using-a-command-line"></a>Управление видимостью папки с помощью командной строки
 
-1.  Откройте окно командной строки на сервере, где установлена служба роли **Распределенная файловая система** или компонент **Средства распределенной файловой системы**.
+1. Откройте окно командной строки на сервере, где установлена служба роли **Распределенная файловая система** или компонент **Средства распределенной файловой системы**.
 
-2.  Введите следующую команду, где *&lt;DFSPath&gt;* — это путь к папке DFS (ссылка), *< домена\\учетной записи >* — это имя учетной записи группы или пользователя и *(...)*  заменяется дополнительные записи управления доступом (ACE):
+2. Введите следующую команду, где *&lt;DFSPath&gt;* — это путь к папке DFS (ссылка), *< домена\\учетной записи >* — это имя учетной записи группы или пользователя и *(...)*  заменяется дополнительные записи управления доступом (ACE):
 
-    ```
-    dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
-    ```
+   ```
+   dfsutil property sd grant <DFSPath> DOMAIN\Account:R (...) Protect Replace
+   ```
 
-    Например, чтобы заменить существующие разрешения с разрешениями, позволяет "Администраторы домена" и CONTOSO\\группам инструкторов Read (R) доступ к \\contoso.office\public\training папку, введите следующую команду:
+   Например, чтобы заменить существующие разрешения с разрешениями, позволяет "Администраторы домена" и CONTOSO\\группам инструкторов Read (R) доступ к \\contoso.office\public\training папку, введите следующую команду:
 
    ```
    dfsutil property sd grant \\contoso.office\public\training "CONTOSO\Domain Admins":R CONTOSO\Trainers:R Protect Replace 
@@ -104,6 +104,6 @@ ms.locfileid: "59850595"
 ## <a name="see-also"></a>См. также
 
 -   [Создание пространства имен DFS](create-a-dfs-namespace.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 -   [Установка DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx)
 -   [Использование наследуемых разрешений с перечислением на основе доступа](using-inherited-permissions-with-access-based-enumeration.md)

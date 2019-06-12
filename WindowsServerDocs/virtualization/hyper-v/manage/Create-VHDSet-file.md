@@ -11,12 +11,12 @@ ms.technology: compute-hyper-v
 ms.assetid: 444e1496-9e5a-41cf-bfbc-306e2ed8e00a
 audience: IT Pros
 ms.reviewer: kathydav
-ms.openlocfilehash: 61f2450857cbeaffd7f75f7b259e9f9de06ba5c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a5a6f79d362b9058ca29d979457a1dcdfc0c9f82
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870405"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445690"
 ---
 # <a name="create-hyper-v-vhd-set-files"></a>Создать файлы наборов виртуального жесткого диска Hyper-V
 Задать виртуальный жесткий ДИСК файлы являются новой общей модели виртуального диска для гостевых кластеров в Windows Server 2016. Файлы виртуального жесткого диска наборов поддерживает интерактивное изменение размера общие виртуальные диски, поддержка реплики Hyper-V и может быть включено в согласованное контрольные точки. 
@@ -45,20 +45,20 @@ PS c:\>New-VHD -Path c:\base.vhds -SizeBytes 10GB
 
 Миграция существующих общий диск VHDX для виртуальных жестких ДИСКОВ требуется перевести виртуальную Машину в автономный режим. Это рекомендуемый процесс, с помощью Windows PowerShell:
 
-1.  Удалите vhdx-ФАЙЛ из виртуальной Машины. Например выполните: 
-  ``` PowerShell
-  PS c:\>Remove-VMHardDiskDrive existing.vhdx
-  ```
+1. Удалите vhdx-ФАЙЛ из виртуальной Машины. Например выполните: 
+   ``` PowerShell
+   PS c:\>Remove-VMHardDiskDrive existing.vhdx
+   ```
   
-2.  Преобразуйте VHDX на VHD. Например выполните:
-  ``` PowerShell
-  PS c:\>Convert-VHD existing.vhdx new.vhds
-  ```
+2. Преобразуйте VHDX на VHD. Например выполните:
+   ``` PowerShell
+   PS c:\>Convert-VHD existing.vhdx new.vhds
+   ```
   
-3.  Добавьте виртуальный жесткий ДИСК к виртуальной Машине. Например выполните:
-  ``` PowerShell
-  PS c:\>Add-VMHardDiskDrive new.vhds
-  ```
+3. Добавьте виртуальный жесткий ДИСК к виртуальной Машине. Например выполните:
+   ``` PowerShell
+   PS c:\>Add-VMHardDiskDrive new.vhds
+   ```
   
 
 

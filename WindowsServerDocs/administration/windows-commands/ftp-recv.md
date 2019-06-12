@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4979010c13d78c89c9a3e4965b567f7eef1f2ede
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5bfd68dcb745ebf7ef239883aa1c5322241b32df
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841105"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66438433"
 ---
 # <a name="ftp-recv"></a>FTP: получаемого сообщения
 
@@ -30,24 +30,26 @@ ms.locfileid: "59841105"
 recv <remoteFile> [<LocalFile>]  
 ```  
 ### <a name="parameters"></a>Параметры  
-|Параметр|Описание|  
-|-------|--------|  
-|<remoteFile>|Задает удаленный файл для копирования.|  
-|[<LocalFile>]|Указывает имя, используемое на локальном компьютере.|  
+
+|   Параметр   |                   Описание                    |
+|---------------|--------------------------------------------------|
+| <remoteFile>  |        Задает удаленный файл для копирования.        |
+| [<LocalFile>] | Указывает имя, используемое на локальном компьютере. |
+
 ## <a name="remarks"></a>Примечания  
--   **Recv** команда идентична **получить** команды.  
--   Если *Локальный_файл* не указан, будет использовано *Удаленный_файл* имя.  
-## <a name="BKMK_Examples"></a>Примеры  
-Копировать **test.txt** на локальном компьютере, с помощью текущего типа передачи файлов.  
-```  
-recv test.txt  
-```  
-Копировать **test.txt** на локальном компьютере как **test1.txt** тип переноса с помощью текущего файла.  
-```  
-recv test.txt test1.txt  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [FTP: ascii](ftp-ascii.md)  
--   [FTP: двоичные](ftp-binary.md)  
--   [FTP: получение](ftp-get.md)  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+- **Recv** команда идентична **получить** команды.  
+- Если *Локальный_файл* не указан, будет использовано *Удаленный_файл* имя.  
+  ## <a name="BKMK_Examples"></a>Примеры  
+  Копировать **test.txt** на локальном компьютере, с помощью текущего типа передачи файлов.  
+  ```  
+  recv test.txt  
+  ```  
+  Копировать **test.txt** на локальном компьютере как **test1.txt** тип переноса с помощью текущего файла.  
+  ```  
+  recv test.txt test1.txt  
+  ```  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
+- [FTP: ascii](ftp-ascii.md)  
+- [FTP: двоичные](ftp-binary.md)  
+- [FTP: получение](ftp-get.md)  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
