@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: 0ff29ef3-c458-4432-9065-e50a7de5b4b9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 08b07e902486ae633b30949270e15f8bf94afaaf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7828d75d58ff328e826cb685899a76347ce56953
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857495"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812206"
 ---
 # <a name="dynamic-host-configuration-protocol-dhcp"></a>Протокол DHCP
 
@@ -21,11 +21,11 @@ ms.locfileid: "59857495"
 
 Можно использовать в этом разделе представлен краткий обзор протокола DHCP в Windows Server 2016.
 
->[!NOTE]
->Дополнение к данному разделу доступна следующая документация по DHCP.
+> [!NOTE]
+> Дополнение к данному разделу доступна следующая документация по DHCP.
 >
->- [Новые возможности DHCP](What-s-New-in-DHCP.md)
->- [Развертывание DHCP с помощью Windows PowerShell](dhcp-deploy-wps.md)
+> - [Новые возможности DHCP](What-s-New-in-DHCP.md)
+> - [Развертывание DHCP с помощью Windows PowerShell](dhcp-deploy-wps.md)
 
 Конфигурация протокола DHCP (Dynamic Host) — это протокол клиент сервер, который автоматически предоставляет узел протокола Интернета (IP) с его IP-адреса и другие сведения конфигурации, такие как подсети маска и шлюз по умолчанию. RFC 2131 и 2132 определить на основе на протокол загрузки (BOOTP), с помощью которого DHCP совместно использует многие сведения о реализации протокола DHCP как IETF Internet Engineering Task Force () standard. DHCP позволяет узлам получить необходимые сведения о конфигурации TCP/IP от DHCP-сервера.
 

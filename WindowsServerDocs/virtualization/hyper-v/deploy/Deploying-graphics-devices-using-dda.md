@@ -9,12 +9,12 @@ ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 67a01889-fa36-4bc6-841d-363d76df6a66
-ms.openlocfilehash: 9e9a36df39c7bd7a96cc8c5681e83bf263ee5f8e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c528535fd34f57957a37992843933d4cd9f8824
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833875"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447870"
 ---
 # <a name="deploy-graphics-devices-using-discrete-device-assignment"></a>Развертывание графических устройств, с помощью дискретных назначение устройств
 
@@ -42,19 +42,19 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 
 Некоторое оборудование работает быстрее, если настроить виртуальную Машину в определенным образом.  Дополнительные сведения о ли требуются следующие конфигурации оборудования обратитесь к поставщику оборудования. Дополнительные сведения можно найти на [спланировать развертывание устройств, с помощью дискретных назначение устройств](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) и об этом [записи блога.](https://blogs.technet.microsoft.com/virtualization/2015/11/23/discrete-device-assignment-gpus/)
 
-1.  Включить совмещение записи на ЦП
-```
-Set-VM -GuestControlledCacheTypes $true -VMName VMName
-```
-2.  Настройте пространство MMIO 32-разрядная версия
-```
-Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
-```
-3.  Настроить больше пространства MMIO 32-разрядная версия
-```
-Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
-```
-Обратите внимание, что указанные выше значения пространство MMIO, разумного значения, задаваемые для экспериментов с одного графического Процессора.  Если после запуска виртуальной Машины, устройство содержит сообщение об ошибке не хватает ресурсов, вы скорее всего, потребуется изменить эти значения.  Кроме того Если назначение нескольких GPU, необходимо увеличить эти значения также.
+1. Включить совмещение записи на ЦП
+   ```
+   Set-VM -GuestControlledCacheTypes $true -VMName VMName
+   ```
+2. Настройте пространство MMIO 32-разрядная версия
+   ```
+   Set-VM -LowMemoryMappedIoSpace 3Gb -VMName VMName
+   ```
+3. Настроить больше пространства MMIO 32-разрядная версия
+   ```
+   Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
+   ```
+   Обратите внимание, что указанные выше значения пространство MMIO, разумного значения, задаваемые для экспериментов с одного графического Процессора.  Если после запуска виртуальной Машины, устройство содержит сообщение об ошибке не хватает ресурсов, вы скорее всего, потребуется изменить эти значения.  Кроме того Если назначение нескольких GPU, необходимо увеличить эти значения также.
 
 ## <a name="dismount-the-device-from-the-host-partition"></a>Отключите устройство от раздела узла
 ### <a name="optional---install-the-partitioning-driver"></a>Необязательно: установите драйвер секционирования
@@ -69,14 +69,14 @@ Set-VM -HighMemoryMappedIoSpace 33280Mb -VMName VMName
 
 ### <a name="dismount-the-device"></a>Отключение устройства
 В зависимости от поставщика, если драйвер по устранению рисков, либо необходимо использовать «-force» параметр или нет.
--   Если был установлен драйвер по устранению рисков
-```
-Dismount-VMHostAssignableDevice -LocationPath $locationPath
-```
--   Если при установке драйвера по устранению рисков
-```
-Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
-```
+- Если был установлен драйвер по устранению рисков
+  ```
+  Dismount-VMHostAssignableDevice -LocationPath $locationPath
+  ```
+- Если при установке драйвера по устранению рисков
+  ```
+  Dismount-VMHostAssignableDevice -force -LocationPath $locationPath
+  ```
 
 ## <a name="assigning-the-device-to-the-guest-vm"></a>Назначение устройства на гостевой виртуальной Машине
 Последним шагом является сообщить Hyper-V, что у виртуальной Машины должен быть доступ к устройству.  В дополнение к путь, определенный выше необходимо знать имя виртуальной машины.

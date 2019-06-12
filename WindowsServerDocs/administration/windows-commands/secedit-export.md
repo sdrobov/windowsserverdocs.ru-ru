@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f9d6268777d0791dbc0cdca2d4318399378698b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 398d2fa47f2418aec910569c2eb85aec408ad482
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813495"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441589"
 ---
 # <a name="seceditexport"></a>Secedit:Export
 
@@ -30,7 +30,6 @@ ms.locfileid: "59813495"
 
 ```
 Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration file name> [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
-
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -42,13 +41,13 @@ Secedit /export /db <database file name> [/mergedpolicy] /cfg <configuration fil
 |cfg|Обязательный.</br>Указывает путь и имя файла шаблона безопасности, который будет импортирован в базу данных для анализа.</br>Этот параметр/cfg допустим только при использовании с `/db \<database file name>` параметра. Если этот параметр не указан, анализ выполняется по конфигурации, уже хранится в базе данных.|
 |Области|Необязательно.</br>Определяет области безопасности, применяемые к системе. Если этот параметр не указан, все параметры безопасности, определенные в базе данных применяются к системе. Чтобы настроить несколько областей, разделите каждой области следует пробел. Поддерживаются следующие области безопасности:</br>-SecurityPolicy</br>    Локальная политика и политика домена для системы, включая политики учетных записей аудита политики, параметры безопасности и т. д.</br>-Group_Mgmt</br>    Настройка ограничений для всех групп, указанных в шаблоне безопасности.</br>-User_Rights</br>    Права пользователя на вход и предоставление привилегий.</br>-Помощью</br>    Обеспечение безопасности на локального реестра.</br>-Хранилище файлов</br>    Безопасность хранения локальных файлов.</br>-Services</br>    Безопасность для всех определенных служб.|
 |журнал|Необязательно.</br>Указывает путь и имя файла журнала для процесса.|
-|Скрытый|Необязательный.</br>Подавляет вывод на экран и журнала. Вы можете по-прежнему просматривать результаты анализа с помощью анализа и настройки безопасности – – оснастка консоли управления Майкрософт (MMC).|
+|Скрытый|Необязательно.</br>Подавляет вывод на экран и журнала. Вы можете по-прежнему просматривать результаты анализа с помощью анализа и настройки безопасности – – оснастка консоли управления Майкрософт (MMC).|
 
 ## <a name="remarks"></a>Примечания
 
 Эта команда используется для резервного копирования ваши политики безопасности на локальном компьютере в дополнение к импорта параметров на другой компьютер.
 
-Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*. повторно используется журнал).
+Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>. повторно используется журнал).
 
 В Windows Server 2008 `Secedit /refreshpolicy` был заменен `gpupdate`. Сведения о том, как обновить параметры безопасности, см. в разделе [Gpupdate](gpupdate.md).
 
@@ -67,4 +66,4 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg SecContoso.inf /log C
 
 -   [Secedit:import](secedit-import.md)
 -   [Secedit](secedit.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

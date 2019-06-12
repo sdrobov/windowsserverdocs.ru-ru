@@ -12,12 +12,12 @@ ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1a67cda9e4b04e8d861232b48f45915fb2b460d1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0240abfff58baedd79ab038af93b107dbb898eb2
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836415"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432940"
 ---
 # <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>Присоединение компьютеров к новой server1 Windows Server Essentials
 
@@ -31,7 +31,7 @@ ms.locfileid: "59836415"
   
  Процесс подключения клиентского компьютера к серверу аналогичен процессу для компьютеров, как присоединенных к домену, так и не присоединенных к домену.  
   
--   Перейдите к **http://***назначения servername***/ connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер.  
+- Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  

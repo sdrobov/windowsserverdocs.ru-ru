@@ -7,12 +7,12 @@ ms.assetid: eecb002e-6ae5-4075-9a83-2bbcee2a891c
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: ed3a3d4c5d0e55126f4dae8ecaf0ba1f32e46317
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dab27e71e42970507f321271edda90f6d161c691
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820225"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447390"
 ---
 # <a name="managing-the-host-guardian-service"></a>Управление службы защиты узла
 
@@ -221,7 +221,7 @@ Get-HgsKeyProtectionCertificate | Where-Object { $_.CertificateData.GetType().Na
 Эти параметры используются, важные для обеспечения согласованности, но не критично, чтобы получить HGS кластера обратно в оперативный режим после аварии.
 
 Чтобы записать имя службы HGS, выполните `Get-HgsServer` и запомните имя неструктурированный в аттестации и URL-адреса для защиты ключа.
-Например, если используется URL-адрес для аттестации "http://hgs.contoso.com/Attestation«, «hgs» — имя службы HGS.
+Например, если используется URL-адрес для аттестации "<http://hgs.contoso.com/Attestation>«, «hgs» — имя службы HGS.
 
 Домен Active Directory, используемый HGS должен работать как и других доменов Active Directory.
 При восстановлении HGS после аварии, вам не обязательно для повторного создания точный список объектов, которые есть в текущем домене.
@@ -702,10 +702,10 @@ HGS просто использует сертификаты для удобно
 10. Копирование обновленных KP в структуре размещения
 11. Применить KP на исходной виртуальной машине:
 
-    ```powershell
-    $updatedKP = Get-Content -Path .\updatedVM001.kp
-    Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
-    ```
+   ```powershell
+   $updatedKP = Get-Content -Path .\updatedVM001.kp
+   Set-VMKeyProtector -VMName VM001 -KeyProtector $updatedKP
+   ```
 12. Наконец запустите виртуальную Машину и убедитесь, что он выполняется успешно.
 
 > [!NOTE]
@@ -718,10 +718,10 @@ HGS просто использует сертификаты для удобно
 
 14. Отключите каждый сертификат, выполнив следующие команды:  
 
-    ```powershell
-    Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
-    Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
-    ```
+   ```powershell
+   Set-HgsKeyProtectionCertificate -CertificateType Signing -Thumbprint <Thumbprint> -IsEnabled $false
+   Set-HgsKeyProtectionCertificate -CertificateType Encryption -Thumbprint <Thumbprint> -IsEnabled $false
+   ```
 
 15. Убедившись, что виртуальные машины по-прежнему можете начать с сертификаты отключена, удалите сертификаты с HGS, выполнив следующие команды:
 

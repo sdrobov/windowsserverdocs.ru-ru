@@ -8,18 +8,18 @@ ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 41767b9e53c0106931e78f86f8675e413cca0d0a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 84e1ce7864f04550ee25253bcf038afdd7b919fe
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811676"
 ---
 # <a name="managing-virtual-machines-with-windows-admin-center"></a>Управление виртуальными машинами с помощью Windows Admin Center
 
 >Область применения. Windows Admin Center, предварительная версия Windows Admin Center
 
-Виртуальные машины средство доступно в [Server](manage-servers.md), [отказоустойчивого кластера](manage-failover-clusters.md) или [Hyper-Converged кластера](manage-hyper-converged.md) подключений, если роль Hyper-V включена на сервере или кластере. Можно использовать средство виртуальных машин для управления узлами Hyper-V под управлением Windows Server 2012 или более поздней версии, либо с возможностями рабочего стола или основных серверных компонентов. Также поддерживаются Hyper-V Server 2012 и 2016.
+Виртуальные машины средство доступно в [Server](manage-servers.md), [отказоустойчивого кластера](manage-failover-clusters.md) или [Hyper-Converged кластера](manage-hyper-converged.md) подключений, если роль Hyper-V включена на сервере или кластере. Можно использовать средство виртуальных машин для управления узлами Hyper-V под управлением Windows Server 2012 или более поздней версии, либо с возможностями рабочего стола или основных серверных компонентов. Hyper-V Server 2012, также поддерживаются 2016 и 2019 г.
 
 ## <a name="key-features"></a>Основные особенности
 
@@ -37,6 +37,8 @@ ms.locfileid: "59816885"
 - [Изменение параметров виртуальной машины](#change-virtual-machine-settings)
 - [Динамическая миграция виртуальной машины на другой узел кластера](#live-migrate-a-virtual-machine-to-another-cluster-node)
 - [Расширенное управление и устранение неполадок для одной виртуальной машины](#advanced-management-and-troubleshooting-for-a-single-virtual-machine)
+- [Управление виртуальной машиной через узел Hyper-V (VMConnect)](#manage-a-virtual-machine-through-the-hyper-v-host-vmconnect)
+- [Изменение параметров узла Hyper-V](#change-hyper-v-host-settings)
 - [Просмотреть журналы событий Hyper-V](#view-hyper-v-event-logs)
 - [Защита виртуальных машин с помощью Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery)
 
@@ -57,7 +59,7 @@ ms.locfileid: "59816885"
 ![Экран инвентаризации виртуальных машин](../media/manage-virtual-machines/virtual-machines-inventory.png)
 
 1. Нажмите кнопку **виртуальных машин** средство из левой части области навигации.
-2. Есть две вкладки в верхней части **виртуальных машин** средство, **Сводка** вкладку и **инвентаризации** вкладки. **Инвентаризации** вкладке перечислены виртуальные машины, доступных на текущем сервере или весь кластер и предоставляет команды для управления отдельными виртуальными машинами. Можно выполнить следующие действия: 
+2. Есть две вкладки в верхней части **виртуальных машин** средство, **Сводка** вкладку и **инвентаризации** вкладки. **Инвентаризации** вкладке перечислены виртуальные машины, доступных на текущем сервере или весь кластер и предоставляет команды для управления отдельными виртуальными машинами. Можно выполнить следующие действия:
     - Просмотрите список виртуальных машин, работающих на текущем сервере или кластере.
     - Просмотр состояния и сервера виртуальной машины, при просмотре виртуальных машин для кластера. Также просмотрите сведения об использовании ЦП и памяти с точки зрения узла, включая нехватки памяти, требуемый объем памяти и объем выделенной памяти и виртуальной машины время работы, пульса состояния и состояния защиты с помощью Azure Site Recovery.
     - [Создание новой виртуальной машины](#create-a-new-virtual-machine).
@@ -65,6 +67,7 @@ ms.locfileid: "59816885"
     - [Изменить параметры для виртуальной машины](#change-virtual-machine-settings).
     - Подключитесь к консоли виртуальной машины, с помощью VMConnect через узел Hyper-V.
     - [Репликация виртуальной машины с помощью Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
+    - Для операций, которые могут выполняться на нескольких виртуальных машинах, такие как начало, завершение работы, сохранение, приостановка удалить, сброс, можно выбрать несколько виртуальных машин и выполнить операцию за один раз.
 
 ПРИМЕЧАНИЕ. При подключении к кластеру, средство виртуальной машины будут отображаться только виртуальных машин. Мы планируем также Показывать некластеризованным виртуальных машин.
 
@@ -77,6 +80,10 @@ ms.locfileid: "59816885"
 3. Введите имя виртуальной машины и выберите между виртуальными машинами поколения 1 и 2.
 4. При создании виртуальной машины в кластере, вы можете изначально Создание виртуальной машины на узел. Если вы используете Windows Server 2016 или более поздней версии, средство предложит рекомендации узла для вас.
 5. Выберите путь для файлов виртуальной машины. Выберите том из раскрывающегося списка или нажмите кнопку **Обзор** чтобы выбрать папку, используя средство выбора папки. Файлы конфигурации виртуальной машины и файл виртуального жесткого диска будут сохранены в одной папке `\Hyper-V\\[virtual machine name]` путь выбранного тома или путь.
+
+   >[!Tip]
+   > В средстве выбора папки, можно перейти к любой доступен общий ресурс SMB в сети, введя путь в **имя_папки** как ```\\server\share```. С помощью общей сетевой папке, для хранилища виртуальных Машин потребуется [CredSSP](../understand/faq.md#does-windows-admin-center-use-credssp).
+
 6. Выберите число виртуальных процессоров, будь то требуется вложенной виртуализацией, настроить параметры памяти, сетевых адаптеров, виртуальные жесткие диски и выберите, следует ли установить операционную систему из ISO-файла образа или от сети.
 7. Нажмите кнопку **создать** для создания виртуальной машины.
 8. После того как виртуальная машина создается и отображается в списке виртуальных машин, можно запустить виртуальную машину.
@@ -88,7 +95,7 @@ ms.locfileid: "59816885"
 
 1. Нажмите кнопку **виртуальных машин** средство из левой части области навигации.
 2. В верхней части инструмента виртуальные машины, выберите **инвентаризации** вкладки. Выберите виртуальную машину из списка и нажмите кнопку **дополнительные** > **параметры**.
-3. Переключаться между **Общие**, **памяти**, **процессоров**, **дисков**, **сетей**, **Порядке загрузки** и **контрольные точки** , настроить необходимые параметры, а затем нажмите кнопку **Сохранить** сохранить параметры текущей вкладки. Доступные параметры зависят от создания виртуальной машины. Кроме того некоторые параметры нельзя изменить для работающих виртуальных машин, и вам потребуется сначала остановите виртуальную машину.
+3. Переключаться между **Общие**, **безопасности**, **памяти**, **процессоров**, **дисков**, **Сетей**, **порядке загрузки** и **контрольные точки** , настроить необходимые параметры, а затем нажмите кнопку **Сохранить** для сохранения текущей вкладки Параметры. Доступные параметры зависят от создания виртуальной машины. Кроме того некоторые параметры нельзя изменить для работающих виртуальных машин, и вам потребуется сначала остановите виртуальную машину.
 
 ## <a name="live-migrate-a-virtual-machine-to-another-cluster-node"></a>Динамическая миграция виртуальной машины на другой узел кластера
 
@@ -117,6 +124,26 @@ ms.locfileid: "59816885"
     - Подключитесь к консоли виртуальной машины, с помощью VMConnect через узел Hyper-V.
     - [Реплицируйте виртуальную машину с помощью Azure Site Recovery](#protect-virtual-machines-with-azure-site-recovery).
 
+## <a name="manage-a-virtual-machine-through-the-hyper-v-host-vmconnect"></a>Управление виртуальной машиной через узел Hyper-V (VMConnect)
+
+![Подключения через веб-браузере виртуальной Машины](../media/manage-virtual-machines/vm-connect.png)
+
+1. Нажмите кнопку **виртуальных машин** средство из левой части области навигации.
+2. В верхней части инструмента виртуальные машины, выберите **инвентаризации** вкладки. Выберите виртуальную машину из списка и нажмите кнопку **дополнительные** > **Connect** или **загрузить RDP-файл**. **Подключение** вы сможете взаимодействовать с гостевой виртуальной Машине через удаленный рабочий стол веб-консоли, интегрирован в Windows Admin Center. **Скачать RDP-файл** загрузит RDP-файл, который можно открыть в приложении подключение к удаленному рабочему столу (mstsc.exe). Оба варианта будет использовать VMConnect для подключения к гостевой виртуальной Машине через узел Hyper-V и нужно будет ввести учетные данные администратора для сервера узла Hyper-V.
+
+## <a name="change-hyper-v-host-settings"></a>Изменение параметров узла Hyper-V
+
+![Экран параметров узла Hyper-V](../media/manage-virtual-machines/host-settings.png)
+
+1. Подключение с сервера, гиперконвергентного кластера или отказоустойчивого кластера, нажмите кнопку **параметры** меню в нижней части левой панели навигации.
+2. На сервере узла Hyper-V или кластера, вы увидите **параметров узла Hyper-V** группы с использованием следующих разделов:
+    - Общие: Изменения виртуальных жестких дисков и виртуальных машин путь к файлу и низкоуровневой оболочки тип расписания (если поддерживается)
+    - Режим расширенного сеанса
+    - Охват NUMA
+    - Динамическая миграция
+    - Миграция хранилища
+3. При внесении любого узла Hyper-V, изменения параметров в подключении гиперконвергентного кластера или отказоустойчивого кластера, изменения будут применяться ко всем узлам кластера.
+
 ## <a name="view-hyper-v-event-logs"></a>Просмотреть журналы событий Hyper-V
 
 Можно просмотреть журналы событий Hyper-V непосредственно из средства виртуальных машин.
@@ -127,21 +154,20 @@ ms.locfileid: "59816885"
 
 ## <a name="protect-virtual-machines-with-azure-site-recovery"></a>Защита виртуальных машин с помощью Azure Site Recovery
 
-Windows Admin Center можно использовать для настройки Azure Site Recovery и репликации локальных виртуальных машин в Azure. [Подробнее](azure-services.md)
+Windows Admin Center можно использовать для настройки Azure Site Recovery и репликации локальных виртуальных машин в Azure. [Подробнее](../azure/azure-site-recovery.md)
 
 ## <a name="more-coming"></a>Дополнительные поступающих
 
 Управление виртуальными машинами в Windows Admin Center активно находится в стадии разработки и новые функции будут добавляться в ближайшем будущем. Можно просмотреть состояние и проголосовать за функции в UserVoice:
 
-|Запрос функции|
-|-------|
-|[Импорт и экспорт виртуальных машин](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481971--virtual-machines-import-export-vms)|
-|[Виртуальные машины сортировки в папках](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494712--virtual-machines-ability-to-sort-vm-into-folder)|
-|[Поддерживает дополнительные параметры виртуальных машин](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31915264--virtual-machines-expose-all-configurable-setting)|
-|[Поддержка реплики Hyper-V](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/32040253--virtual-machines-setup-and-manage-hyper-v-replic)|
-|[Делегировать права владения виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31663837--virtual-machines-owner-delegation)|
-|[Клонировать виртуальную машину](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31783288--virtual-machines-add-a-button-to-clone-a-vm)|
-|[Создание шаблона из существующей виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494649--virtual-machines-create-a-template-from-an-exist)|
-|[Просмотр виртуальных машин на узлах Hyper-V](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31734559--virtual-machines-find-vms-on-host-screen)|
-|[Настройка виртуальной локальной сети в области новой виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31710979--virtual-machines-new-new-vm-pane-need-vlan-opt)|
-|[**Просмотреть все или предложить новые функции**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bvirtual%20machines%5D)|
+- [Импорт и экспорт виртуальных машин](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31481971--virtual-machines-import-export-vms)
+- [Виртуальные машины сортировки в папках](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494712--virtual-machines-ability-to-sort-vm-into-folder)
+- [Поддерживает дополнительные параметры виртуальных машин](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31915264--virtual-machines-expose-all-configurable-setting)
+- [Поддержка реплики Hyper-V](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/32040253--virtual-machines-setup-and-manage-hyper-v-replic)
+- [Делегировать права владения виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31663837--virtual-machines-owner-delegation)
+- [Клонировать виртуальную машину](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31783288--virtual-machines-add-a-button-to-clone-a-vm)
+- [Создание шаблона из существующей виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31494649--virtual-machines-create-a-template-from-an-exist)
+- [Просмотр виртуальных машин на узлах Hyper-V](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31734559--virtual-machines-find-vms-on-host-screen)
+- [Настройка виртуальной локальной сети в области новой виртуальной машины](https://windowsserver.uservoice.com/forums/295071-management-tools/suggestions/31710979--virtual-machines-new-new-vm-pane-need-vlan-opt)
+
+[Просмотреть все или предложить новые функции](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5Bvirtual%20machines%5D).

@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 9514392da133911c900f68fc8f1be260b6c91138
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d912047ab0e3136c6dc05064f3a28aaaafd36c79
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873035"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447724"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>целевые показатели масштабируемости целевого сервера iSCSI
 
@@ -73,7 +73,7 @@ ms.locfileid: "59873035"
 <td><p>Локально подключенных виртуальных дисков или моментальных снимков на устройстве хранения</p></td>
 <td><p>32</p></td>
 <td><p>Да</p></td>
-<td><p>Локально подключенных виртуальных дисков не предоставляют все функции iSCSI и являются устаревшими — Дополнительные сведения, см. в разделе <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
+<td><p>Подключить локально виртуальные диски Дон&#39;t предложения, любой функции iSCSI и являются устаревшими — Дополнительные сведения см. в разделе <a href="https://technet.microsoft.com/library/dn303411.aspx">Features Removed or Deprecated in Windows Server 2012 R2</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -105,7 +105,7 @@ ms.locfileid: "59873035"
 <tr class="even">
 <td><p>Несколько активные узлы кластера</p></td>
 <td><p>Поддерживается</p></td>
-<td> 
+<td> 
 <p>Н/Д</p></td>
 <td><p>Каждый активный узел в отказоустойчивом кластере владеет кластеризованного экземпляра целевого сервера iSCSI различных с другими узлами, действующий как возможные узлы владельца.</p></td>
 </tr>
@@ -205,8 +205,7 @@ ms.locfileid: "59873035"
 <tr class="odd">
 <td><p>Разгрузка iSCSI</p></td>
 <td><p>Не поддерживается.</p></td>
-<td>              
-<p>Н/Д</p></td>
+<td><br/><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -249,7 +248,7 @@ ms.locfileid: "59873035"
 </thead>
 <tbody>
 <tr class="odd">
-<td><p>Из iSCSI-инициатора преобразования виртуального диска с собой базовый диск в динамический диск </p></td>
+<td><p>Из iSCSI-инициатора преобразования виртуального диска с собой базовый диск в динамический диск </p></td>
 <td><p>Да</p></td>
 <td><p>Нет</p></td>
 <td></td>
@@ -312,7 +311,7 @@ ms.locfileid: "59873035"
 <td><p>.vhdx: Да</p>
 <p>.vhd: Да (нет на Windows Server 2012)</p></td>
 <td><p>Да</p></td>
-<td><p>Отмена сопоставления не поддерживается.</p></td>
+<td><p>Отмена сопоставления&#39;не поддерживается.</p></td>
 </tr>
 <tr class="odd">
 <td><p>exFAT/FAT32 и FAT (при размещении тома виртуального жесткого диска)</p></td>
@@ -348,7 +347,7 @@ ms.locfileid: "59873035"
 <td><p>Тонкая подготовка</p></td>
 <td><p>Нет</p></td>
 <td><p>Н/Д</p></td>
-<td><p>Динамические виртуальные жесткие диски поддерживаются, но операций Unmap не поддерживается.</p></td>
+<td><p>Динамические виртуальные жесткие диски поддерживаются, но его можно отменить сопоставление&#39;не поддерживается.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Логические единицы сжатия</p></td>
@@ -542,9 +541,9 @@ ms.locfileid: "59873035"
 
 Ниже перечислены дополнительные ресурсы с информацией о сервере цели iSCSI и связанных технологиях.
 
-  - [Обзор блочного хранилища цели iSCSI](iscsi-target-server.md)
+- [Обзор блочного хранилища цели iSCSI](iscsi-target-server.md)
 
-  - [Обзор загрузки цели iSCSI](iscsi-boot-overview.md)
+- [Обзор загрузки цели iSCSI](iscsi-boot-overview.md)
 
-  - [Хранилища в Windows Server](..\storage.md)
+- [Хранилища в Windows Server](../storage.md)
 

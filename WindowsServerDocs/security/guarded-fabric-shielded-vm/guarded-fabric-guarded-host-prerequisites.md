@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 5f2c3ec4b2c434ea945d86c4b1593e2e416a5123
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 40c0f6df31061268b1e1ef8c15b0a02b0f50b0de
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819235"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66447473"
 ---
 # <a name="prerequisites-for-guarded-hosts"></a>Предварительные требования для защищенных узлов
 
@@ -45,15 +45,15 @@ ms.locfileid: "59819235"
 > Поддержку защиты узла Hyper-V позволяет на базе технологии виртуализации защиты целостности кода, который может быть несовместим с некоторыми устройствами. Мы настоятельно рекомендуем, протестировать эту конфигурацию в лабораторных условиях перед включением этой функции. В противном случае могут возникать непредвиденные ошибки, в том числе потеря данных или системная ошибки (STOP-ошибка). Дополнительные сведения см. в разделе [совместимое оборудование с помощью защиты целостности кода на основе Windows Server Virtualization](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
 
 **Следующий шаг.** 
->[!div class="nextstepaction"]
-[Записать сведения доверенного платформенного МОДУЛЯ](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
+> [!div class="nextstepaction"]
+> [Записать сведения доверенного платформенного МОДУЛЯ](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)
 
 ## <a name="host-key-attestation"></a>Аттестация ключей узла
 
 Защищенные узлы, с помощью аттестации ключей узла необходимо выполнить следующие условия:
 
 - **Оборудование**: Любой сервер, поддерживающий работу Hyper-V, появившийся с Windows Server 2019
-- **Операционная система**: Выпуск Windows Server Datacenter 2019 г.
+- **Операционная система**: Windows Server 2019 Datacenter Edition;
 - **Роли и компоненты**: Роль Hyper-V и компонент поддержку защиты узла Hyper-V 
 
 Узел можно присоединить к домену или рабочей группе. 
@@ -61,8 +61,8 @@ ms.locfileid: "59819235"
 Для аттестации ключей узла необходимо быть под управлением Windows Server 2019 и с v2 аттестации HGS. Дополнительные сведения см. в разделе [предварительные требования HGS](guarded-fabric-prepare-for-hgs.md#prerequisites). 
 
 **Следующий шаг.** 
->[!div class="nextstepaction"]
-[Создание пары ключей](guarded-fabric-create-host-key.md)
+> [!div class="nextstepaction"]
+> [Создание пары ключей](guarded-fabric-create-host-key.md)
 
 ## <a name="admin-trusted-attestation"></a>Аттестация по группе доверенного администратора
 
@@ -84,5 +84,5 @@ ms.locfileid: "59819235"
 > Поддержку защиты узла Hyper-V позволяет на базе технологии виртуализации защиты целостности кода, который может быть несовместим с некоторыми устройствами. Мы настоятельно рекомендуем, протестировать эту конфигурацию в лабораторных условиях перед включением этой функции. В противном случае могут возникать непредвиденные ошибки, в том числе потеря данных или системная ошибки (STOP-ошибка). Дополнительные сведения см. в разделе [совместимое оборудование с помощью защиты целостности кода на основе виртуализации Windows Server 2016](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md).
 
 **Следующий шаг.** 
->[!div class="nextstepaction"]
-[Установите защищенных узлов в группу безопасности](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)
+> [!div class="nextstepaction"]
+> [Установите защищенных узлов в группу безопасности](guarded-fabric-admin-trusted-attestation-creating-a-security-group.md)

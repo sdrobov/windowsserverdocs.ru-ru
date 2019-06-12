@@ -8,12 +8,12 @@ ms.date: 03/01/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 6f85c447ac0816c46e07145dbe9a491a29e17c0f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 228ef34ab25276c1cf98f9b2b64e997390023c87
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846475"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444010"
 ---
 # <a name="ad-fs-troubleshooting---azure-ad"></a>AD FS Устранение неполадок — Azure AD
 С ростом облака используется множеством компаний переходит на использование Azure AD для своих различных приложений и служб.  Федерации с Azure AD стала обычной практикой с во многих организациях.  В этом документе будут рассмотрены некоторые аспекты Устранение проблемы, связанные с этой федерации.  Некоторые подразделы общие документ по устранению неполадок по-прежнему относятся к федерации с Azure, поэтому в этом документе основное внимание уделяется только особенности с Azure AD и AD FS взаимодействия.
@@ -31,11 +31,11 @@ ms.locfileid: "59846475"
 
 ![](media/ad-fs-tshoot-azure/azure2.png)
 
-   2.  Убедитесь, что ваш пользовательский домен проверяется, щелкнув домена рядом с федерации на портале Azure.
-![](media/ad-fs-tshoot-azure/azure3.png)
+1. Убедитесь, что ваш пользовательский домен проверяется, щелкнув домена рядом с федерации на портале Azure.
+   ![](media/ad-fs-tshoot-azure/azure3.png)
 
-   3. Наконец, вы хотите проверить [DNS](ad-fs-tshoot-dns.md) и убедитесь, что серверов AD FS или WAP-серверы разрешают из Интернета.  Убедитесь, что это разрешает и возможности для перехода к нему.
-   4. Можно также использовать командлет PowerShell: `Get-AzureADDomain` также получить эту информацию.
+2. Наконец, вы хотите проверить [DNS](ad-fs-tshoot-dns.md) и убедитесь, что серверов AD FS или WAP-серверы разрешают из Интернета.  Убедитесь, что это разрешает и возможности для перехода к нему.
+3. Можно также использовать командлет PowerShell: `Get-AzureADDomain` также получить эту информацию.
 
 ![](media/ad-fs-tshoot-azure/azure6.png)
 
@@ -48,14 +48,14 @@ ms.locfileid: "59846475"
 - Для WS-Federation WAUTH строку запроса можно используйте для принудительного способ проверки подлинности.
 
 - Для SAML 2.0 используйте следующие команды:
-```
-<saml:AuthnContext>
-<saml:AuthnContextClassRef>
-urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
-</saml:AuthnContextClassRef>
-</saml:AuthnContext>
-```
-При отправке метод принудительной проверки подлинности с неверным или если этот метод проверки подлинности не поддерживается на AD FS или STS, появляется сообщение об ошибке, прежде чем вы прошли проверку подлинности.
+  ```
+  <saml:AuthnContext>
+  <saml:AuthnContextClassRef>
+  urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+  </saml:AuthnContextClassRef>
+  </saml:AuthnContext>
+  ```
+  При отправке метод принудительной проверки подлинности с неверным или если этот метод проверки подлинности не поддерживается на AD FS или STS, появляется сообщение об ошибке, прежде чем вы прошли проверку подлинности.
 
 |Метод проверки подлинности, нужно было|wauth URI|
 |-----|-----|
@@ -145,4 +145,4 @@ AD FS использует сертификат для подписи марке
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Устранение неполадок AD FS](ad-fs-tshoot-overview.md)
+- [Устранение неполадок в AD FS](ad-fs-tshoot-overview.md)

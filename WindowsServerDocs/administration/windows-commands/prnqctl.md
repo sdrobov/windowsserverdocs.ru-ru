@@ -13,25 +13,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 26af9527b7b16b42fd9d389f3409143dfc3e9aa9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1ba58970e76497f6e91c53c73a429eb65a275b2f
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858085"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442103"
 ---
 # <a name="prnqctl"></a>prnqctl
 
 >Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 пробную печать, приостанавливает или возобновляет работу принтера и очищает очередь принтера.  
-  
+
 ## <a name="syntax"></a>Синтаксис  
 ```  
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
 ## <a name="parameters"></a>Параметры  
+
 |Параметр|Описание|  
 |-------|--------|  
 |-z|Приостановка печати на принтер, указанный с помощью **-p** параметра.|  
@@ -44,11 +45,11 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 |/?|Отображение справки в командной строке.|  
 
 ## <a name="remarks"></a>Примечания  
--   **Prnqctl** команда — это сценарий Visual Basic, расположенный в %WINdir%\System32\printing_Admin_Scripts\\ <language> каталога. Чтобы использовать эту команду в командной строке, введите **cscript** следуют полный путь к файлу prnqctl, или изменить каталоги в соответствующую папку. Пример:  
-    ```  
-    cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
-    ```  
--   Если сведения, которые вы предоставляете содержит пробелы, используйте кавычки вокруг текста (например, `"computer Name"`).  
+- **Prnqctl** команда — это сценарий Visual Basic, расположенный в %WINdir%\System32\printing_Admin_Scripts\\ <language> каталога. Чтобы использовать эту команду в командной строке, введите **cscript** следуют полный путь к файлу prnqctl, или изменить каталоги в соответствующую папку. Пример:  
+  ```  
+  cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
+  ```  
+- Если сведения, которые вы предоставляете содержит пробелы, используйте кавычки вокруг текста (например, `"computer Name"`).  
 
 ## <a name="BKMK_examples"></a>Примеры  
 Чтобы напечатать пробную страницу на Laserprinter1 общего принтера в \\\Server1 компьютера, введите:  
@@ -65,5 +66,5 @@ cscript Prnqctl -x -p Laserprinter1
 ```  
 
 #### <a name="additional-references"></a>Дополнительные ссылки  
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 [Описание команды печати](print-command-reference.md)  

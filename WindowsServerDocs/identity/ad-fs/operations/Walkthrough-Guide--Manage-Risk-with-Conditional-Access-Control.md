@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f034c2eeafe9d52569e8181bbbb2e582b1059d51
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 7e6e1c97ccc903ca3aff558354941e6a84d3fb79
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188859"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444734"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>Пошаговое руководство: Управление рисками с использованием условного управления доступом
 
@@ -57,7 +57,7 @@ ms.locfileid: "66188859"
 
 #### <a name="to-verify-the-default-ad-fs-access-control-mechanism"></a>Проверка стандартного механизма управления доступом через службы AD FS
 
-1.  На клиентском компьютере откройте окно браузера и перейдите к примеру приложения: **https://webserv1.contoso.com/claimapp**.
+1.  На клиентском компьютере откройте окно браузера и перейдите к примеру приложения: **https://webserv1.contoso.com/claimapp** .
 
     В результате запрос будет автоматически перенаправлен серверу федерации и вам будет предложено ввести имя пользователя и пароль.
 
@@ -97,14 +97,18 @@ ms.locfileid: "66188859"
 1.  На сервере федерации откройте окно команд Windows PowerShell и выполните следующую команду:
 
 
-    `$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
+`$rp = Get-AdfsRelyingPartyTrust -Name claimapp`
+~~~
 
 
-2.  В том же окне команд Windows PowerShell выполните следующую команду:
+2. В том же окне команд Windows PowerShell выполните следующую команду:
 
 
-    `$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
-    Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
+`$GroupAuthzRule = '@RuleTemplate = "Authorization" @RuleName = "Foo" c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i)<group_SID>$"] =>issue(Type = "https://schemas.microsoft.com/authorization/claims/deny", Value = "DenyUsersWithClaim");'
+Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $GroupAuthzRule`
+~~~
 
 > [!NOTE]
 > Замените <group_SID> значением идентификатора безопасности для вашей группы Active Directory **Finance**.

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f24cf173d1bacd70d92b325bfe7b342d0589a490
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 305b915a0d7e8ab152b072ff131854f56b9b0386
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874285"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441532"
 ---
 # <a name="seceditimport"></a>Secedit:import
 
@@ -30,7 +30,6 @@ ms.locfileid: "59874285"
 
 ```
 Secedit /import /db <database file name> /cfg <configuration file name> [/overwrite] [/areas [securitypolicy | group_mgmt | user_rights | regkeys | filestore | services]] [/log <log file name>] [/quiet]
-
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -38,7 +37,7 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 |Параметр|Описание|
 |---------|-----------|
 |DB|Обязательный.</br>Указывает путь и имя базы данных, которая содержит хранимую конфигурацию, в который будет выполняться импорт.</br>Если имя файла содержит имя базы данных, для которой не безопасности шаблон (как определено в файле конфигурации), связанный с ним, `/cfg \<configuration file name>` необходимо также указать параметр командной строки.|
-|перезапись|Необязательный.</br>Указывает, должен ли шаблон безопасности, в параметре/cfg перезаписывать любой шаблон или составной шаблон, который хранится в базе данных вместо шаблон.</br>Этот параметр допустим только тогда, когда `/cfg \<configuration file name>` также используется параметр. Если этот параметр не указан, шаблон в параметре/cfg добавляется шаблон.|
+|перезапись|Необязательно.</br>Указывает, должен ли шаблон безопасности, в параметре/cfg перезаписывать любой шаблон или составной шаблон, который хранится в базе данных вместо шаблон.</br>Этот параметр допустим только тогда, когда `/cfg \<configuration file name>` также используется параметр. Если этот параметр не указан, шаблон в параметре/cfg добавляется шаблон.|
 |cfg|Обязательный.</br>Указывает путь и имя файла шаблона безопасности, который будет импортирован в базу данных для анализа.</br>Этот параметр/cfg допустим только при использовании с `/db \<database file name>` параметра. Если этот параметр не указан, анализ выполняется по конфигурации, уже хранится в базе данных.|
 |перезапись|Необязательный.</br>Указывает, должен ли шаблон безопасности, в параметре/cfg перезаписывать любой шаблон или составной шаблон, который хранится в базе данных вместо шаблон.</br>Этот параметр допустим только тогда, когда `/cfg \<configuration file name>` также используется параметр. Если этот параметр не указан, шаблон в параметре/cfg добавляется шаблон.|
 |Области|Необязательно.</br>Определяет области безопасности, применяемые к системе. Если этот параметр не указан, все параметры безопасности, определенные в базе данных применяются к системе. Чтобы настроить несколько областей, разделите каждой области следует пробел. Поддерживаются следующие области безопасности:</br>-SecurityPolicy</br>    Локальная политика и политика домена для системы, включая политики учетных записей аудита политики, параметры безопасности и т. д.</br>-Group_Mgmt</br>    Настройка ограничений для всех групп, указанных в шаблоне безопасности.</br>-User_Rights</br>    Права пользователя на вход и предоставление привилегий.</br>-Помощью</br>    Обеспечение безопасности на локального реестра.</br>-Хранилище файлов</br>    Безопасность хранения локальных файлов.</br>-Services</br>    Безопасность для всех определенных служб.|
@@ -49,7 +48,7 @@ Secedit /import /db <database file name> /cfg <configuration file name> [/overwr
 
 Перед импортом INF-файл на другой компьютер, запустите /generaterollback secedit команды в базе данных, которой будет выполняться импорт и secedit / validate файл импорта, чтобы проверить его целостность.
 
-Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Documents and Settings\*UserAccount*\My Documents\Security\Logs\*DatabaseName*. повторно используется журнал).
+Если путь к файлу журнала не указан, файл журнала по умолчанию (*systemroot*\Documents and Settings\*UserAccount<em>\My Documents\Security\Logs\*DatabaseName</em>. повторно используется журнал).
 
 В Windows Server 2008 `Secedit /refreshpolicy` был заменен `gpupdate`. Сведения о том, как обновить параметры безопасности, см. в разделе [Gpupdate](gpupdate.md).
 
@@ -66,8 +65,8 @@ Secedit /import /db C:\Security\FY12\SecDbContoso.sdb /cfg NetworkShare\Policies
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Secedit:Export](secedit-export.md)
+-   [Secedit:export](secedit-export.md)
 -   [Secedit:generaterollback](secedit-generaterollback.md)
--   [Secedit: проверка](secedit-validate.md)
+-   [Secedit:validate](secedit-validate.md)
 -   [Secedit](secedit.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 945a5f4cf0e6c491479b095671ff5e77416c6fa3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7cde62cb23c69a425522e40ed65ee2d40ef28268
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445592"
 ---
 # <a name="migrate-the-ad-fs-web-agent"></a>Перенос веб-агент AD FS
 
@@ -21,14 +21,14 @@ ms.locfileid: "59877595"
   
 > [!IMPORTANT]
 >  Перенесенный агент AD FS 1.1, использующий токены Windows, работает только со службой федерации AD FS 1.1, которая устанавливается с Windows Server 2008 R2 или Windows Server 2008. Дополнительные сведения см. в разделе [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md).  
->   
+> 
 >  Перенесенный веб-агент по утверждениям AD FS 1.1 функционирует со следующими системами:  
->   
->  -   службой федерации AD FS 1.1, установленной с Windows Server 2008 R2 или Windows Server 2008;  
-> -   службой федерации AD FS 2.0, установленной в Windows Server 2008 R2 или Windows Server 2008;  
-> -   Службой федерации AD FS устанавливается вместе с Windows Server 2012  
->   
->  Дополнительные сведения см. в разделе [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md).  
+> 
+> - службой федерации AD FS 1.1, установленной с Windows Server 2008 R2 или Windows Server 2008;  
+>   -   службой федерации AD FS 2.0, установленной в Windows Server 2008 R2 или Windows Server 2008;  
+>   -   Службой федерации AD FS устанавливается вместе с Windows Server 2012  
+> 
+>   Дополнительные сведения см. в разделе [Interoperating with AD FS 1.x](Interoperating-with-AD-FS-1.x.md).  
   
   
 ## <a name="next-steps"></a>Следующие шаги
@@ -36,4 +36,4 @@ ms.locfileid: "59877595"
  [Подготовка к миграции прокси-сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-proxy.md)   
  [Перенос сервера AD FS 2.0 Federation](migrate-the-ad-fs-fed-server.md)   
  [Перенос прокси-сервера AD FS 2.0 Federation](migrate-the-ad-fs-2-fed-server-proxy.md)   
- [Миграция 1.1 веб-агентов AD FS](migrate-the-ad-fs-web-agent.md)
+ [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

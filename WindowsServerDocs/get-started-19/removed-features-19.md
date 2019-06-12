@@ -13,12 +13,12 @@ ms.author: jgerend
 manager: jasgro
 ms.date: 05/21/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 820dfed8a0a58d3ccc64023325c373b761461ba8
-ms.sourcegitcommit: 8ba2c4de3bafa487a46c13c40e4a488bf95b6c33
+ms.openlocfilehash: 597da91aa40d9af4526b5358a88128b52d040645
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65976523"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501444"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-windows-server-2019"></a>Компоненты удалены или замены, начиная с Windows Server 2019
 
@@ -54,5 +54,5 @@ ms.locfileid: "65976523"
 | Консоль управления доверенного платформенного модуля (TPM)|Сведения, ранее доступным в консоли управления доверенным платформенным Модулем теперь доступна в [ **σρςπξιρςβ** ](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/wdsc-device-security) странице в [центр безопасности Защитника Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center). |
 | Режим аттестации Active Directory для службы защиты узла|Мы разрабатываем больше не режим аттестации узла защиты службы Active Directory — вместо этого мы добавили новый режим аттестации, [размещения Аттестация ключей](../security/guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md), это гораздо проще и столь же являются совместимыми, как на основе Active Directory аттестации.  Этот новый режим обеспечивающее эквивалентную функциональность, процесс установки, более простое управление и меньшим числом зависимостей инфраструктуры, чем аттестации Active Directory. Аттестация ключей узла имеет никаких дополнительных аппаратных требований за пределы аттестации Active Directory, какие требуется, поэтому все существующие системы будет оставаться совместимым с новым режимом. См. в разделе [развертывание защищенных узлов](../security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md) Дополнительные сведения о возможностях аттестации. |
 | Служба OneSync|Служба OneSync синхронизирует данные для приложений, почта, календарь и люди. Мы добавили в приложение Outlook, которое обеспечивает синхронизацию с тем же модулем синхронизации. |
-| Поддержка удаленного разностного сжатия API|Поддержка удаленного разностного сжатия API включить синхронизации данных с помощью удаленного источника с помощью технологий сжатия, сведены к минимуму объем данных, отправляемых по сети. Эта поддержка не используется в любого продукта Microsoft. |
+| Поддержка удаленного разностного сжатия API|Поддержка удаленного разностного сжатия API включить синхронизации данных с помощью удаленного источника с помощью технологий сжатия, сведены к минимуму объем данных, отправляемых по сети. |
 | Расширения коммутатора WFP упрощенного фильтра|Расширения коммутатора упрощенного фильтра WFP позволяет разработчикам создавать [простой сетевой пакет расширения виртуального коммутатора Hyper-V фильтрации](https://docs.microsoft.com/en-us/windows-hardware/drivers/network/using-virtual-switch-filtering). Вы получите те же функциональные возможности по созданию полного расширения фильтрации. Таким образом мы будем удаление этого расширения в будущем. |

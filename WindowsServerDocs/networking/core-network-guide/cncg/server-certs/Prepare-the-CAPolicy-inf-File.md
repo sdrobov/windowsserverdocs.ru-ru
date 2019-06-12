@@ -8,12 +8,12 @@ ms.prod: windows-server-threshold
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 80c7155224502379e2e9618ceb38709c5051a6b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 19a87df7c4f165d3b0e6c5add4bc40ff97cc87cb
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857845"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446459"
 ---
 # <a name="capolicyinf-syntax"></a>Синтаксис файла CAPolicy.inf
 >   Область применения. Windows Server (полугодовой канал), Windows Server 2016
@@ -51,7 +51,7 @@ ms.locfileid: "59857845"
 Signature="$Windows NT$"      #key=value
 ```
 
-###  <a name="version"></a>Версия
+###  <a name="version"></a>Version
 
 Определяет файл как INF-файл. Версия — единственный необходимый раздел и должен находиться в начале файла CAPolicy.inf.
 
@@ -206,53 +206,53 @@ Certutil -setreg CACRLDeltaPeriodUnits 1
 
 **Предварительные требования.** Необходимо быть членом группы "Администраторы".
 
-1.  На компьютере, где вы планируете установить AD CS, откройте Windows PowerShell, введите **c:\CAPolicy.inf Блокнот** и нажмите клавишу ВВОД.
+1. На компьютере, где вы планируете установить AD CS, откройте Windows PowerShell, введите **c:\CAPolicy.inf Блокнот** и нажмите клавишу ВВОД.
 
-2.  Когда появится приглашение создать новый файл, нажмите кнопку **Да**.
+2. Когда появится приглашение создать новый файл, нажмите кнопку **Да**.
 
-3.  Введите в качестве содержимого файла следующее:
+3. Введите в качестве содержимого файла следующее:
    ```
    [Version]  
-    Signature="$Windows NT$"  
-    [PolicyStatementExtension]  
-    Policies=InternalPolicy  
-    [InternalPolicy]  
-    OID=1.2.3.4.1455.67.89.5  
-    Notice="Legal Policy Statement"  
-    URL=https://pki.corp.contoso.com/pki/cps.txt  
-    [Certsrv_Server]  
-    RenewalKeyLength=2048  
-    RenewalValidityPeriod=Years  
-    RenewalValidityPeriodUnits=5  
-    CRLPeriod=weeks  
-    CRLPeriodUnits=1  
-    LoadDefaultTemplates=0  
-    AlternateSignatureAlgorithm=1  
-    [CRLDistributionPoint]  
-    [AuthorityInformationAccess]
+   Signature="$Windows NT$"  
+   [PolicyStatementExtension]  
+   Policies=InternalPolicy  
+   [InternalPolicy]  
+   OID=1.2.3.4.1455.67.89.5  
+   Notice="Legal Policy Statement"  
+   URL=https://pki.corp.contoso.com/pki/cps.txt  
+   [Certsrv_Server]  
+   RenewalKeyLength=2048  
+   RenewalValidityPeriod=Years  
+   RenewalValidityPeriodUnits=5  
+   CRLPeriod=weeks  
+   CRLPeriodUnits=1  
+   LoadDefaultTemplates=0  
+   AlternateSignatureAlgorithm=1  
+   [CRLDistributionPoint]  
+   [AuthorityInformationAccess]
    ```
-1.  Нажмите кнопку **файл**, а затем нажмите кнопку **Сохранить как**.
+4. Нажмите кнопку **файл**, а затем нажмите кнопку **Сохранить как**.
 
-2.  Перейдите в папку % systemroot %.
+5. Перейдите в папку % systemroot %.
 
-3.  Убедитесь, что:
+6. Убедитесь, что:
 
-    -   в поле **Имя файла** установлено значение **CAPolicy.inf**
+   -   в поле **Имя файла** установлено значение **CAPolicy.inf**
 
-    -   в поле**Тип файла** выбрано **Все файлы**;
+   -   в поле**Тип файла** выбрано **Все файлы**;
 
-    -   в поле **Кодировка** выбрано **ANSI**.
+   -   в поле **Кодировка** выбрано **ANSI**.
 
-4.  Нажмите кнопку **Сохранить**.
+7. Нажмите кнопку **Сохранить**.
 
-5.  Когда появится предложение перезаписать файл, нажмите кнопку **Да**.
+8. Когда появится предложение перезаписать файл, нажмите кнопку **Да**.
 
-    ![Сохранить как расположение файла CAPolicy.inf](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
+   ![Сохранить как расположение файла CAPolicy.inf](../../../media/Prepare-the-CAPolicy-inf-File/001-SaveCAPolicyORCA1.gif)
 
-    >   [!CAUTION]  
-    >   Обязательно сохраните файл CAPolicy.inf с расширением "inf". Если вы специально не укажете **.inf** в конце имени файла и выберете предложенные настройки, то файл будет сохранен как текстовый и не будет использоваться при установке ЦС.
+   > [!CAUTION]
+   >   Обязательно сохраните файл CAPolicy.inf с расширением "inf". Если вы специально не укажете **.inf** в конце имени файла и выберете предложенные настройки, то файл будет сохранен как текстовый и не будет использоваться при установке ЦС.
 
-6.  Закройте Блокнот.
+9. Закройте Блокнот.
 
->   [!IMPORTANT]  
+> [!IMPORTANT]
 >   В файле CAPolicy.inf, можно увидеть, имеется строка с указанием URL-адрес https://pki.corp.contoso.com/pki/cps.txt. Раздел внутренней политики файла CAPolicy.inf показан только в качестве примера того, как вы будете указывать расположение уведомления о правилах работы с сертификатами (CPS). В этом руководстве не содержатся инструкции по созданию сертификатами (CPS).

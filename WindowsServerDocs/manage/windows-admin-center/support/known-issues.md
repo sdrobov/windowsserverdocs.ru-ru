@@ -7,21 +7,22 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.date: 04/12/2019
-ms.openlocfilehash: 7bf23c5af5620241574864babd07fd852115a450
-ms.sourcegitcommit: 39ab8041d166e6817a95417d6aa30bc7abeeef54
+ms.date: 06/07/2019
+ms.openlocfilehash: e7cf6fc6a4fae2eee76409bd6af4ef2ff6ed35a3
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66260280"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811777"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center — известные проблемы
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+> Относится к: Windows Admin Center, предварительная версия Windows Admin Center
 
 Если возникнет проблема, не описанная на этой странице, [свяжитесь с нами](http://aka.ms/WACfeedback).
 
 ## <a name="lenovo-xclarity-integrator"></a>Интегратор Lenovo XClarity
+
 Ранее раскрытой несовместимости расширение Lenovo XClarity интегратор и Windows Admin Center версии 1904 теперь проблемы в Windows Admin Center версии 1904.1. Мы настоятельно рекомендуем обновить до последней поддерживаемой версии Windows Admin Center.
 
 - Интегратор XClarity Lenovo версией 1.1 расширения полностью совместима с Windows Admin Center 1904.1. Мы настоятельно рекомендуем обновить до последней версии Windows Admin Center и Lenovo расширения.
@@ -50,8 +51,8 @@ ms.locfileid: "66260280"
 
 - Если у вас есть Windows Admin Center устанавливается как шлюз и список соединений будет поврежден, выполните следующие действия:
 
->[!WARNING]
->Это приведет к удалению список соединений и параметры для всех пользователей Windows Admin Center на шлюзе.
+   > [!WARNING]
+   >Это приведет к удалению список соединений и параметры для всех пользователей Windows Admin Center на шлюзе.
 
   1. Удалите Windows Admin Center
   2. Удалите папку **Интерфейс управления сервером** в разделе **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
@@ -82,7 +83,7 @@ ms.locfileid: "66260280"
 
 - При использовании Azure Active Directory в качестве поставщика удостоверений и когда платформа Windows Admin Center настроена с помощью самозаверяющего сертификата или другого недоверенного сертификата, выполнение проверки подлинности AAD в Microsoft Edge является невозможным.  [15968377]
 
-- Если у вас есть развернут как служба Windows Admin Center и Microsoft Edge при использовании в качестве браузера, подключение шлюза в Azure могут не работать после порождении новое окно браузера. Попробуйте решить эту проблему, добавив https://login.microsoftonline.com, https://login.live.com, и URL-адрес шлюза как надежные сайты и разрешенных сайтов для параметры блокирования всплывающих окон в браузере на стороне клиента. Дополнительные рекомендации о решении в [руководство по устранению неполадок](troubleshooting.md#azlogin). [17990376]
+- Если у вас есть развернут как служба Windows Admin Center и Microsoft Edge при использовании в качестве браузера, подключение шлюза в Azure могут не работать после порождении новое окно браузера. Попробуйте решить эту проблему, добавив https://login.microsoftonline.com, https://login.live.com, и URL-адрес шлюза как надежные сайты и разрешенных сайтов для параметры блокирования всплывающих окон в браузере на стороне клиента. Дополнительные рекомендации о решении в [руководство по устранению неполадок](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
 
 - Если у вас установлен в режиме рабочего стола Windows Admin Center, вкладку браузера в Microsoft Edge не будет отображать значка. [17665801]
 
@@ -100,8 +101,6 @@ ms.locfileid: "66260280"
 
 - Установка Windows 10: Mozilla Firefox имеет собственный хранилище сертификатов, поэтому необходимо импортировать ```Windows Admin Center Client``` сертификат в Firefox для использования Windows Admin Center в Windows 10.
 
-<a id="websockets"></a>
-
 ## <a name="websocket-compatibility-when-using-a-proxy-service"></a>WebSocket совместимости с помощью прокси-службы
 
 Модули "Удаленный рабочий стол", PowerShell и "События" в Windows Admin Center используют протокол WebSocket, который часто не поддерживается при использовании службы прокси-сервера. Поддержка WebSocket в прокси-сервере приложений Azure AD находится [на этапе тестирования](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/). В настоящий момент осуществляется сбор сведений об их совместимости.
@@ -114,8 +113,6 @@ ms.locfileid: "66260280"
 Введите `$PSVersiontable` в PowerShell, чтобы проверить, что платформа WMF установлена, и что используется версия 5.1 или более поздняя версия.
 
 Если она не установлена, можно [скачать и установить WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
-
-<a id="rbacknownissues"></a>
 
 ## <a name="role-based-access-control-rbac"></a>Role Based Access Control (RBAC)
 
@@ -141,7 +138,7 @@ ms.locfileid: "66260280"
 
 ### <a name="events"></a>События
 
-- На события оказывает влияние [совместимость с WebSocket при использовании службы прокси-сервера.](#websockets)
+- На события оказывает влияние [совместимость с WebSocket при использовании службы прокси-сервера.](#websocket-compatibility-when-using-a-proxy-service)
 
 - Возможна ошибка, ссылающаяся на "размер пакета" при экспорте больших файлов журнала. [16630279]
 
@@ -153,7 +150,7 @@ ms.locfileid: "66260280"
 
 ### <a name="powershell"></a>PowerShell
 
-- На PowerShell влияет [совместимость с WebSocket при использовании службы прокси-сервера](#websockets)
+- На PowerShell влияет [совместимость с WebSocket при использовании службы прокси-сервера](#websocket-compatibility-when-using-a-proxy-service)
 
 - Вставка с помощью одного щелчка правой кнопкой мыши, как в консоли PowerShell рабочего стола, не работает. Вместо этого откроется контекстное меню браузера, в котором можно выбрать команду "Вставить". Сочетание клавиш CTRL + V также работает.
 
@@ -173,7 +170,7 @@ ms.locfileid: "66260280"
 
 - Некоторые конфигурации могут блокировать Windows Admin Center клиент удаленного рабочего стола с помощью групповой политики. Если вы столкнулись с этим, включите ```Allow users to connect remotely by using Remote Desktop Services``` в разделе ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Это повлияет на удаленный рабочий стол с [совместимости websocket.](#websockets)
+- Это повлияет на удаленный рабочий стол с [совместимости websocket.](#websocket-compatibility-when-using-a-proxy-service)
 
 - Средство "Удаленный рабочий стол" в настоящий момент не поддерживает копирование/вставку любого текста, изображения или файла между локальным рабочим столом и удаленным сеансом.
 

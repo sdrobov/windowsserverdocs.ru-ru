@@ -9,20 +9,20 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: a4bbeeedfb40e789a799103f9a29a848a2b32324
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6055d9b694f72a6a874acdcb5135fde61bcf0d76
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877355"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442748"
 ---
 # <a name="ca-backup-and-restore-windows-powershell-cmdlets"></a>Командлеты резервного копирования ЦС и восстановление Windows PowerShell
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
->
-**Автор**: Джастин Тернер, старший инженер по улучшению поддержки с группой Windows  
-  
-> [!NOTE]  
+> Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> 
+> **Автор**: Джастин Тернер, старший инженер по улучшению поддержки с группой Windows  
+> 
+> [!NOTE]
 > Этот материал создан инженером службы поддержки клиентов Майкрософт и предназначен для опытных администраторов и архитекторов систем, которым нужны более глубокие технические сведения о функциях и решениях в Windows Server 2012 R2, а не обычная информация, доступная в статьях на сайте TechNet. Однако он не был отредактирован согласно требованиям сайта, поэтому некоторые формулировки могут быть не такими выверенными, как на станицах TechNet.  
   
 ## <a name="overview"></a>Обзор  

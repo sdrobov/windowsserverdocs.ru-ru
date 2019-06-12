@@ -11,12 +11,12 @@ ms.assetid: 81c1f32d-7814-4992-8a66-dd4b77c939b4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
-ms.openlocfilehash: 1863c1736d3c8573b3d11c6bef492c6645d28a77
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5950a75da4569979794a5848bd41ab349dc34676
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859765"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812655"
 ---
 # <a name="hyper-v-feature-compatibility-by-generation-and-guest"></a>Компонент Hyper-V совместимости в зависимости от поколения и гостя
 
@@ -27,7 +27,7 @@ ms.locfileid: "59859765"
 Имейте в виду, что некоторые функции зависят от оборудования или другие инфраструктуры. Сведения об оборудовании, см. в разделе [требования к системе для Hyper-V в Windows Server 2016](System-requirements-for-Hyper-V-on-Windows.md). В некоторых случаях это функция может использоваться с любой поддерживаемая операционная система. Дополнительные сведения, в которых поддерживаются операционные системы см. в разделе:  
   
 * [Поддерживаемые виртуальные машины Linux и FreeBSD](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)  
-* [Поддерживаемые гостевые операционные системы Windows](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
+* [Поддерживаемые гостевые ОС Windows на виртуальной машине](Supported-Windows-guest-operating-systems-for-Hyper-V-on-Windows.md)  
   
 ## <a name="availability-and-backup"></a>Доступность и резервное копирование  
   
@@ -49,7 +49,7 @@ ms.locfileid: "59859765"
 ## <a name="development-and-test"></a>Разработка и тестирование  
 Компонент  | Создание | Гостевая операционная система  
 ------------- | ------------- | -----------  
-Последовательные или COM-порты | 1 и 2 <br>**Примечание.** Для поколения 2 используйте Windows PowerShell для настройки. Дополнительные сведения см. в разделе [добавить COM-порт для отладки на уровне ядра](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#BKMK_Debug). | Все поддерживаемые гостевые  
+Последовательные или COM-порты | 1 и 2 <br>**Примечание.** Для поколения 2 используйте Windows PowerShell для настройки. Дополнительные сведения см. в разделе [добавить COM-порт для отладки на уровне ядра](./plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v.md#add-a-com-port-for-kernel-debugging). | Все поддерживаемые гостевые  
   
 ## <a name="mobility"></a>Мобильность  
   

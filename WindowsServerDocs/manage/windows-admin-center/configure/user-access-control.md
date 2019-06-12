@@ -5,23 +5,23 @@ ms.technology: manage
 ms.topic: article
 author: haley-rowland
 ms.author: harowl
-ms.date: 03/19/2019
+ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: b19657f4ce1a1a2cfb94f7234f07805ba0abd42c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 96d09b25ddb2f473fb4fe22c0cf716bfcf8becaa
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850575"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811924"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>Настройка управления доступом пользователей и разрешений
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+> Относится к: Windows Admin Center, предварительная версия Windows Admin Center
 
 Если это еще не сделано, ознакомьтесь с [параметры контроля доступа пользователей в Windows Admin Center](../plan/user-access-options.md)
 
->[!NOTE]
+> [!NOTE]
 > Доступ на основе групп в Windows Admin Center не поддерживается в средах рабочей группы или недоверенных доменах.
 
 ## <a name="gateway-access-role-definitions"></a>Определения ролей доступ шлюза
@@ -41,7 +41,7 @@ ms.locfileid: "59850575"
 
 На **пользователей** вкладке вы можете управлять доступом к Windows Admin Center как пользователь шлюза. По умолчанию и если не указать группу безопасности, любой пользователь, который обращается к URL-адрес шлюза имеет доступ. Когда вы добавите одну или несколько групп безопасности в список пользователей, доступ будет ограничен членами этих групп.
 
-Если вы не используете домен Active Directory в вашей среде, управление доступом осуществляется с ```Users``` и ```Administrators``` локальных групп на компьютере шлюза Windows Admin Center.
+Если вы не используете домен Active Directory в вашей среде, управление доступом осуществляется с `Users` и `Administrators` локальных групп на компьютере шлюза Windows Admin Center.
 
 ### <a name="smartcard-authentication"></a>Проверка подлинности смарт-карты
 
@@ -143,6 +143,7 @@ Set-ADComputer -Identity $nodeObject -PrincipalsAllowedToDelegateToAccount $null
 
 В модели развертывания на одном компьютере идеально подходит для простых средах с лишь несколько компьютеров для управления.
 Настройка компьютера с поддержкой управления доступом на основе ролей приведет следующие изменения:
+
 -   Модули PowerShell с помощью функций, необходимых Windows Admin Center будет устанавливаться на системном диске, в разделе `C:\Program Files\WindowsPowerShell\Modules`. Все модули будут начинаться с **Microsoft.Sme**
 -   Desired State Configuration будет выполняться однократной настройки для настройки конечной точки Just Enough Administration на компьютере с именем **Microsoft.Sme.PowerShell**. Эта конечная точка определяет три роли, используемые Windows Admin Center и будет выполняться как временный локальный администратор, когда пользователь подключается к нему.
 -   к элементу управления, какие пользователи имеют разрешение доступа к роли, которые будут созданы 3 новые локальные группы:
@@ -191,6 +192,7 @@ Invoke-RestMethod -Uri "https://localhost:6516/api/nodes/all/features/jea/endpoi
 ```
 
 При развертывании ZIP-архив, вы увидите следующую структуру папок:
+
 - InstallJeaFeatures.ps1
 - JustEnoughAdministration (каталог)
 - Модули (каталог)
@@ -198,6 +200,7 @@ Invoke-RestMethod -Uri "https://localhost:6516/api/nodes/all/features/jea/endpoi
     - WindowsAdminCenter.Jea (каталог)
 
 Чтобы настроить поддержку для управления доступом на основе ролей на узле, вам потребуется выполнить следующие действия:
+
 1.  Скопируйте JustEnoughAdministration Microsoft.SME. \*и WindowsAdminCenter.Jea модулей в каталог модуля PowerShell на целевом компьютере. Как правило, она находится на `C:\Program Files\WindowsPowerShell\Modules`.
 2.  Обновление **InstallJeaFeature.ps1** файл в соответствии с выбранной конфигурации для конечной точки RBAC.
 3.  Запустите InstallJeaFeature.ps1 для компиляции ресурсов DSC.

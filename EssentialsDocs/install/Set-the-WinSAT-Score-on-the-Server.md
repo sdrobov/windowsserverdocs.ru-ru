@@ -12,12 +12,12 @@ ms.assetid: 911dc494-0f8f-4723-93d6-2106f914b906
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 77866acccac13ac48da8779700c8654f2c7f3277
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4e5ce037c7a8c802419cd980fc0272c4f687c6a6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819955"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433450"
 ---
 # <a name="set-the-winsat-score-on-the-server"></a>Установка на сервере системы оценки WinSAT
 
@@ -30,19 +30,19 @@ ms.locfileid: "59819955"
   
 #### <a name="to-obtain-the-winsat-cpu-score"></a>Получение оценки ЦП средства WinSAT  
   
-1.  Скопируйте Resources\WinServerSAT\\* на носителе ADK на компьютере-образце.  
+1. Скопируйте Resources\WinServerSAT\\* на носителе ADK на компьютере-образце.  
   
-2.  На компьютере-образце откройте окно командной строки с повышенными привилегиями.  
+2. На компьютере-образце откройте окно командной строки с повышенными привилегиями.  
   
-3.  Если папка %ProgramFiles%\Windows Server\Bin\OEM не существует, введите следующую команду и нажмите ВВОД  
+3. Если папка %ProgramFiles%\Windows Server\Bin\OEM не существует, введите следующую команду и нажмите ВВОД  
   
-     **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
+    **mkdir "%ProgramFiles%\Windows Server\Bin\OEM"**  
   
-4.  Введите следующую команду и нажмите ВВОД.  
+4. Введите следующую команду и нажмите ВВОД.  
   
-     **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
+    **WinServerSAT.exe "%ProgramFiles%\Windows Server\Bin\OEM\WinServerSAT.xml"**  
   
- В примере показано содержимое XML созданного файла WinServerSAT.xml.  
+   В примере показано содержимое XML созданного файла WinServerSAT.xml.  
   
 ```  
   

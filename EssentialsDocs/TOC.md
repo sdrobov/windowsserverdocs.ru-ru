@@ -76,7 +76,7 @@
 ### [Перенос параметров и данных на целевой сервер для миграции на Windows Server Essentials](migrate/Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Перенос параметров и данных Windows SBS 2003 на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Перенос параметров и данных Windows SBS 2008 на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-SBS-2008-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
-### [Перенос параметров и данных Windows SBS 2011 Essentials на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
+### [Перенос параметров и данных Windows SBS 2011 Essentials на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md)
 ### [Перенос параметров и данных Windows SBS 2011 Standard на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-SBS-2011-Standard-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Перенос параметров и данных Windows Server 2008 Foundation на целевой сервер для миграции на Windows Server Essentials](migrate/Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md)
 ### [Выполнение задач после миграции на Windows Server Essentials](migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md)

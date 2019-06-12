@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 03/25/2019
+ms.date: 06/04/2019
 description: Новые и обновленные разделы документации по локального хранилища для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: fa3da6e14c36fecfa48c3688a36518babb257920
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 3245e6bc5320cc0ffae01817a8f7b9caeaa6c685
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192684"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501488"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
@@ -22,13 +22,19 @@ ms.locfileid: "66192684"
 
 В этом разделе перечислены новые и обновленные разделы в [хранения](storage.md) документации по Windows Server.
 
-> Если вы ищете истории обновления для Windows Server, см. в разделе [Журнал обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+> Если вы ищете истории обновления для Windows Server, см. в разделе [Журнал обновлений Windows 10 и Windows Server 2019](https://support.microsoft.com/help/4464619) или [журнале центра обновлений Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## <a name="june-2019"></a>2019 июня
+
+| Новый или измененный раздел                                        | Описание|
+| ---                                                         | ---           |
+| [Служба миграции хранилища часто задаваемые вопросы](storage-migration-service/faq.md#consolidate-servers) | Добавлены сведения о оптимизации производительности. |
 
 ## <a name="may-2019"></a>Май 2019 г.
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
-|[Удаление тома](storage-spaces/delete-volumes.md)| Оператор new        |
+|[Удаление томов](storage-spaces/delete-volumes.md)| Оператор new        |
 |[Создание томов](storage-spaces/create-volumes.md)| Добавлены шаги и видео по созданию тома в Windows Admin Center.|
 |[Увеличение размеров томов](storage-spaces/resize-volumes.md)| Добавлены шаги и видео для изменения размера тома в Windows Admin Center.|
 
@@ -105,7 +111,7 @@ ms.locfileid: "66192684"
 |[Развертывание дисковых пространств на автономном сервере](storage-spaces/deploy-standalone-storage-spaces.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Обзор файловой системы NTFS](file-server/ntfs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Используйте Robocopy для предварительно заполнить файлов для репликации DFS](dfs-replication/preseed-dfsr-with-robocopy.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Vssadmin - средство командной строки для предыдущих версий](..\administration\windows-commands\vssadmin.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Vssadmin - средство командной строки для предыдущих версий](../administration/windows-commands/vssadmin.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Обзор диспетчера ресурсов файлового сервера](fsrm/fsrm-overview.md)| Добавлена информация о новом параметре реестра в Windows Server 2016 версии 1803.|
 |[Репликация сервера на сервер хранилища](storage-replica/server-to-server-storage-replication.md)|Добавлены сведения об использовании Windows Admin Center.|
 |[Реплика хранилища известные проблемы](storage-replica/storage-replica-known-issues.md)|Добавлена новая информация.|
@@ -195,13 +201,13 @@ ms.locfileid: "66192684"
 
 ## <a name="may-2017"></a>Май 2017
 
-|Новый или измененный раздел|Описание|
-|---|---|
-|[Обзор компонента дедупликации данных](data-deduplication/overview.md) и <br>[Установка дедупликации данных](data-deduplication/install-enable.md)|Обновлены требования к системе (добавлено новое обновление программного обеспечения). |
-|[Развертывание рабочих папок](work-folders/deploy-work-folders.md)|Добавлены сведения о поддержке и обновленных обязательных шагах прокси-сервера приложений Azure AD.|
-|[Развертывание локальных дисковых](storage-spaces/deploy-storage-spaces-direct.md)|Добавлен шаг 1.3 с необходимыми компонентами и исправлен устаревший параметр в командлете Enable-NetAdapterQos.||[Общие сведения о реплике хранилища](storage-replica/storage-replica-overview.md) (и другие разделы о реплике хранилища)|Добавлены рекомендации по использованию быстрого и эксклюзивного хранилища для журналов реплики хранилища.|
-|[Ответы на вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)|Добавлены сведения о том, как выбрать подходящую топологию репликации.|
-|[Требования к оборудованию прямые дисковые пространства в хранилище](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Изменены требования к износостойкости кэш-дисков.|
+|                                                           Новый или измененный раздел                                                           |                                          Описание                                           |
+|------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
+| [Обзор компонента дедупликации данных](data-deduplication/overview.md) и <br>[Установка дедупликации данных](data-deduplication/install-enable.md) |              Обновлены требования к системе (добавлено новое обновление программного обеспечения).               |
+|                                      [Развертывание рабочих папок](work-folders/deploy-work-folders.md)                                       |         Добавлены сведения о поддержке и обновленных обязательных шагах прокси-сервера приложений Azure AD.          |
+|                            [Развертывание локальных дисковых](storage-spaces/deploy-storage-spaces-direct.md)                             | Добавлен шаг 1.3 с необходимыми компонентами и исправлен устаревший параметр в командлете Enable-NetAdapterQos. |
+|               [Ответы на вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)                |             Добавлены сведения о том, как выбрать подходящую топологию репликации.              |
+|               [Требования к оборудованию прямые дисковые пространства в хранилище](storage-spaces/storage-spaces-direct-hardware-requirements.md)               |                    Изменены требования к износостойкости кэш-дисков.                     |
 
 ## <a name="april-2017"></a>Апрель 2017 г.
 

@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6024b118504a233e9e7483711df4e0a05b632d5a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 29d52e57a18bf956d135179b503255efd256b35e
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869445"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66446849"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>Шаг 3 план многосайтового развертывания
 
@@ -151,39 +151,39 @@ ms.locfileid: "59869445"
 ### <a name="routing"></a>Маршрутизация  
 При многосайтовом развертывании симметричной маршрутизации обеспечивается с использованием Teredo или IP-HTTPS. Если в корпоративной сети развернут IPv6 Обратите внимание на следующее:  
   
-1.  Префиксы Teredo или IP-HTTPS из каждой точки входа должны маршрутизироваться в корпоративной сети на связанный сервер удаленного доступа.  
+1. Префиксы Teredo или IP-HTTPS из каждой точки входа должны маршрутизироваться в корпоративной сети на связанный сервер удаленного доступа.  
   
-2.  Маршруты должны настраиваться в инфраструктуре маршрутизации корпоративной сети.  
+2. Маршруты должны настраиваться в инфраструктуре маршрутизации корпоративной сети.  
   
-3.  Для каждой точки входа во внутренней сети должны быть одного до трех маршруты:  
+3. Для каждой точки входа во внутренней сети должны быть одного до трех маршруты:  
   
-    1.  Этот префикс IP-HTTPS-префикс выбирается администратором в окне добавления точки входа мастера.  
+   1. Этот префикс IP-HTTPS-префикс выбирается администратором в окне добавления точки входа мастера.  
   
-    2.  Префикс VPN IPv6 (необязательно). Этот префикс можно выбрать после включения VPN для точки входа  
+   2. Префикс VPN IPv6 (необязательно). Этот префикс можно выбрать после включения VPN для точки входа  
   
-    3.  Префикс Teredo (необязательно). Этот префикс используется, только в том случае, если настроены два последовательных общедоступных IPv4-адреса внешнего адаптера сервера удаленного доступа. Префикс основан на первый общедоступный адрес IPv4 пары адресов. Например, если внешние адреса:  
+   3. Префикс Teredo (необязательно). Этот префикс используется, только в том случае, если настроены два последовательных общедоступных IPv4-адреса внешнего адаптера сервера удаленного доступа. Префикс основан на первый общедоступный адрес IPv4 пары адресов. Например, если внешние адреса:  
   
-        1.  www.xxx.yyy.zzz  
+      1. www.xxx.yyy.zzz  
   
-        2.  www.xxx.yyy.zzz+1  
+      2. www.xxx.yyy.zzz+1  
   
-        Затем используется префикс Teredo для настройки 2001:0:WWXX:YYZZ:: / 64, где WWXX: YYZZ — шестнадцатеричное представление www.xxx.yyy.zzz адрес IPv4.  
+      Затем используется префикс Teredo для настройки 2001:0:WWXX:YYZZ:: / 64, где WWXX: YYZZ — шестнадцатеричное представление www.xxx.yyy.zzz адрес IPv4.  
   
-        Обратите внимание, что можно использовать следующий сценарий для вычисления префикс Teredo.  
+      Обратите внимание, что можно использовать следующий сценарий для вычисления префикс Teredo.  
   
-        ```  
-        $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
-        $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
+      ```  
+      $TeredoIPv4 = (Get-NetTeredoConfiguration).ServerName # Use for a Remote Access server that is already configured  
+      $TeredoIPv4 = "20.0.0.1" # Use for an IPv4 address  
   
-            [Byte[]] $TeredoServerAddressBytes = `  
-            [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
-            [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
-            [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
+          [Byte[]] $TeredoServerAddressBytes = `  
+          [System.Net.IPAddress]::Parse("2001::").GetAddressBytes()[0..3] + `  
+          [System.Net.IPAddress]::Parse($TeredoIPv4).GetAddressBytes() + `  
+          [System.Net.IPAddress]::Parse("::").GetAddressBytes()[0..7]  
   
-        Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
-        ```  
+      Write-Host "The server's Teredo prefix is $([System.Net.IPAddress]$TeredoServerAddressBytes)/64"  
+      ```  
   
-    4.  Все маршруты, выше должно быть направлено в IPv6-адрес внутреннего адаптера сервера удаленного доступа (или внутренний виртуальный IP-адрес (VIP) адрес для загрузки с балансировкой точки входа).  
+   4. Все маршруты, выше должно быть направлено в IPv6-адрес внутреннего адаптера сервера удаленного доступа (или внутренний виртуальный IP-адрес (VIP) адрес для загрузки с балансировкой точки входа).  
   
 > [!NOTE]  
 > Если IPv6 развертывается в корпоративной сети и администрирование сервера удаленного доступа выполняется удаленно с помощью DirectAccess, маршруты для Teredo и префиксы IP-HTTPS из других точек входа должны добавляться к каждому серверу удаленного доступа, так, чтобы трафик перенаправляются к внутренней сети.  

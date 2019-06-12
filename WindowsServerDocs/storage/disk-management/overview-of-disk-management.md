@@ -1,23 +1,23 @@
 ---
 title: Обзор средства управления дисками
 description: Управление дисками — это системная служебная программа, в Windows, которая позволяет выполнять задачи Дополнительные хранилища, например инициализация нового диска, расширение томов, сжатие секций и изменение буквы дисков.
-ms.date: 4/2/2018
+ms.date: 06/07/2019
 ms.prod: windows-server-threshold
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 2a467c64a3e0ff38b5165b9e001fc2deb2d92148
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a3885ae6b09ad431fd1ea5e4c593e02c7bb274d9
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819285"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812546"
 ---
 # <a name="overview-of-disk-management"></a>Обзор средства управления дисками
 
-> **Область применения:** Windows 10, Windows 8.1, Windows 7, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Область применения:** Windows 10, Windows 8.1, Windows 7, Windows Server (полугодовой канал), Windows Server 2019 г., Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Управление дисками — это системная служебная программа, в Windows, дающий возможность выполнять задачи Дополнительные хранилища. Ниже приведены некоторые задачи, которые хорошо подходят для управления дисками.
 
@@ -51,9 +51,9 @@ ms.locfileid: "59819285"
 
 ## <a name="see-also"></a>См. также
 
-- [Управление дисками](manage-disks.md)
+- [Как управлять дисками](manage-disks.md)
 - [Управление базовыми томами](manage-basic-volumes.md)
-- [Устранение неполадок управления дисками](troubleshooting-disk-management.md)
+- [Диагностика с помощью оснастки "Управление дисками"](troubleshooting-disk-management.md)
 - [Варианты восстановления в Windows 10](https://support.microsoft.com/help/12415/windows-10-recovery-options)
 - [Поиск потерянных файлов после обновления до Windows 10](https://support.microsoft.com/help/12386/windows-10-find-lost-files-after-update)
 - [Резервное копирование и восстановление файлов](https://support.microsoft.com/help/17143/windows-10-back-up-your-files)

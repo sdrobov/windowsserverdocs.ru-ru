@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 220b0b72734d1456e3cf877ebc2ff267a7dd56ad
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 167f74522172790d8f5b3fc1dea46d0b7059cd20
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190648"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501682"
 ---
 # <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>Создание приложения с помощью конфиденциальных клиентов OAuth с AD FS 2016 или более поздней версии на стороне сервера
 
@@ -226,25 +226,25 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
 
 #### <a name="testing-the-confidential-client-solution"></a>Тестирование решения конфиденциального клиента  
 
-1.  В верхней части Visual Studio убедитесь, что установлен Internet Explorer и щелкните зеленую стрелку.  
+1. В верхней части Visual Studio убедитесь, что установлен Internet Explorer и щелкните зеленую стрелку.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
 
-2.  Когда появится страница ASP.Net, щелкните **зарегистрировать** в верхнем правом углу страницы.  Введите имя пользователя и пароль и нажмите кнопку **зарегистрировать** кнопки.  Это создает локальную учетную запись в базе данных SQL.  
+2. Когда появится страница ASP.Net, щелкните **зарегистрировать** в верхнем правом углу страницы.  Введите имя пользователя и пароль и нажмите кнопку **зарегистрировать** кнопки.  Это создает локальную учетную запись в базе данных SQL.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-4.  Обратите внимание, что теперь веб-сайте ASP.NET говорит Hello abby@contoso.com!.  Нажмите кнопку **профиль**.  
+3. Обратите внимание, что теперь веб-сайте ASP.NET говорит Hello abby@contoso.com!.  Нажмите кнопку **профиль**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 
-5.  Это откроет страницу без все сведения и говорит, что мы должны щелкните здесь, чтобы войти.  Нажмите кнопку **здесь**.  
+4. Это откроет страницу без все сведения и говорит, что мы должны щелкните здесь, чтобы войти.  Нажмите кнопку **здесь**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
 
-6.  Теперь быть отображается запрос на вход в службы AD FS.  
+5. Теперь быть отображается запрос на вход в службы AD FS.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
+   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
 
 ## <a name="next-steps"></a>Следующие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

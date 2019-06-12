@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 796ee001e20cff5587c5409f7571d223ff7900a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 299cf420b44e4a15985d00489edf84784316540d
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810574"
 ---
 # <a name="upgrade-and-conversion-options-for-windows-server-2016"></a>Параметры обновления и преобразования для Windows Server2016
 
@@ -109,7 +109,8 @@ ms.locfileid: "59857945"
 
 Вы можете также преобразовать ознакомительную версию Windows Server2016 Standard в розничную версию Windows Server2016 Datacenter за одно действие, используя ту же команду и соответствующий ключ продукта.
 
-> Дополнительные сведения о Dism.exe см. в статье [Параметры командной строки DISM](https://go.microsoft.com/fwlink/?LinkId=192466).
+> [!TIP] 
+> Дополнительные сведения о Dism.exe см. в разделе [параметры командной строки DISM](https://go.microsoft.com/fwlink/?LinkId=192466).
 
 ## <a name="converting-a-current-retail-edition-to-a-different-current-retail-edition"></a>Переход с текущего розничного выпуска на другой текущий розничный выпуск
 
@@ -125,7 +126,3 @@ Windows Server 2016 Standard вы можете преобразовать сис
 Для перехода выполните команду в командной строке с повышенными привилегиями: **slmgr /ipk \<key\>**
 
 где \<key\> — соответствующий ключ продукта корпоративной, розничной версии или версии для изготовителей оборудования.
-
-
- 
-

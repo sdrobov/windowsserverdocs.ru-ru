@@ -12,12 +12,12 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d2005b72adede72b718fa5b49b93435f5fbac1bd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 445472822de09263b84821e552c931ca19f14b2b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882505"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432532"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Переход с Windows Server Essentials на Windows Server 2012 Standard
 
@@ -53,28 +53,28 @@ ms.locfileid: "59882505"
 ## <a name="transition-to--windows-server-2012-standard"></a>Переход на Windows Server 2012 Standard  
  После того, как вы решили переход из Windows Server Essentials в Windows Server 2012 Standard, полный следующие два действия:  
   
-1.  Приобретите лицензию на Windows Server 2012 Standard и соответствующее количество пользователей и/или устройств клиентские лицензии для вашей среды.  
+1. Приобретите лицензию на Windows Server 2012 Standard и соответствующее количество пользователей и/или устройств клиентские лицензии для вашей среды.  
   
-     Вы можете приобрести лицензии для Windows Server 2012 Standard, у дистрибьютора,, или с помощью [Microsoft Partner](https://pinpoint.microsoft.com/SelectCulture.aspx).  
+    Вы можете приобрести лицензии для Windows Server 2012 Standard, у дистрибьютора,, или с помощью [Microsoft Partner](https://pinpoint.microsoft.com/SelectCulture.aspx).  
   
-    > [!NOTE]
-    >  Если вы приобрели по Windows Server 2012 Standard изначально и охвачены право установки одного из двух виртуальных экземпляров как Windows Server Essentials, вы не обязательно должны приобрести дополнительные компоненты или действия.  
-    >   
-    >  При покупке по Windows Server 2012 Standard через канал корпоративного лицензирования, можно загрузить ISO-образ и ключ продукта для Windows Server 2012 Standard из Volume Licensing Service Center (VLSC).  
-    >   
-    >  При приобретении Windows Server 2012 Standard из других каналов можно загрузить ISO-образ и ознакомительный ключ продукта для Windows Server Essentials из [центра оценки TechNet](https://technet.microsoft.com/evalcenter/jj659306.aspx). Далее описано, как выполнить переход, чтобы преобразовать пробную версию продукта в полную лицензионную версию, обеспечиваемую поддержкой.  
+   > [!NOTE]
+   >  Если вы приобрели по Windows Server 2012 Standard изначально и охвачены право установки одного из двух виртуальных экземпляров как Windows Server Essentials, вы не обязательно должны приобрести дополнительные компоненты или действия.  
+   >   
+   >  При покупке по Windows Server 2012 Standard через канал корпоративного лицензирования, можно загрузить ISO-образ и ключ продукта для Windows Server 2012 Standard из Volume Licensing Service Center (VLSC).  
+   >   
+   >  При приобретении Windows Server 2012 Standard из других каналов можно загрузить ISO-образ и ознакомительный ключ продукта для Windows Server Essentials из [центра оценки TechNet](https://technet.microsoft.com/evalcenter/jj659306.aspx). Далее описано, как выполнить переход, чтобы преобразовать пробную версию продукта в полную лицензионную версию, обеспечиваемую поддержкой.  
   
-2.  Откройте Windows PowerShell от имени администратора и выполните следующую команду:  
+2. Откройте Windows PowerShell от имени администратора и выполните следующую команду:  
   
-     **DISM / online/set-edition: ServerStandard/ACCEPTEULA/ProductKey:** *Ключ продукта*  
+    **DISM / online/set-edition: ServerStandard/ACCEPTEULA/ProductKey:** *Ключ продукта*  
   
-     Где *ключ продукта* — ключ продукта устанавливаемой копии Windows Server 2012 Standard.  
+    Где *ключ продукта* — ключ продукта устанавливаемой копии Windows Server 2012 Standard.  
   
-     Для завершения перехода сервер перезагрузится.  
+    Для завершения перехода сервер перезагрузится.  
   
- После перехода компоненты Windows Server Essentials на сервере и поддержка до 75 пользователей и 75 устройств. Если любое из этих ограничений превышено, следует использовать Windows Server 2012 Standard собственных средств для управления учетными записями пользователей и устройств.  
+   После перехода компоненты Windows Server Essentials на сервере и поддержка до 75 пользователей и 75 устройств. Если любое из этих ограничений превышено, следует использовать Windows Server 2012 Standard собственных средств для управления учетными записями пользователей и устройств.  
   
- Кроме того после перехода на Windows Server 2012 Standard, возможности работы с мультимедиа Windows Server Essentials, больше не доступны. Это касается компонентов мультимедиа удаленного веб-доступа и параметров мультимедиа на информационной панели.  
+   Кроме того после перехода на Windows Server 2012 Standard, возможности работы с мультимедиа Windows Server Essentials, больше не доступны. Это касается компонентов мультимедиа удаленного веб-доступа и параметров мультимедиа на информационной панели.  
   
 ## <a name="turn-off--windows-server-essentials-features"></a>Выключить компоненты Windows Server Essentials  
  Если вы больше не нужны, панели мониторинга Windows Server Essentials и другие дополнительные компоненты для управления сервером, можно отключить и удалить их с сервера.  
@@ -97,22 +97,22 @@ ms.locfileid: "59882505"
   
 #### <a name="from-the-get-help-and-support-pane"></a>Из центра справки и поддержки  
   
-1.  Щелкните ссылку "Центр справки и поддержки" на домашней странице.  
+1. Щелкните ссылку "Центр справки и поддержки" на домашней странице.  
   
-2.  Нажмите кнопку **Windows Server Essentials мастер выключения компонентов**.  
+2. Нажмите кнопку **Windows Server Essentials мастер выключения компонентов**.  
   
- Возможно, некоторые задачи, выполняемые **Windows Server Essentials мастер выключения компонентов** не будет успешно завершена. В некоторых случаях это может препятствовать запуску информационной панели. Тогда можно запустить мастер вручную, выполнив следующий файл:  
+   Возможно, некоторые задачи, выполняемые **Windows Server Essentials мастер выключения компонентов** не будет успешно завершена. В некоторых случаях это может препятствовать запуску информационной панели. Тогда можно запустить мастер вручную, выполнив следующий файл:  
   
- **%SystemDrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**  
+   **%SystemDrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**  
   
 ## <a name="see-also"></a>См. также  
   
 
 -   [Переход на Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
   
--   [Миграция данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
 
 -   [Переход на Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
   
--   [Миграция данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

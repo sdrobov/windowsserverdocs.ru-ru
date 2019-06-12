@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 5454f91394dbdc659db85a675d1c8bfac18b2a86
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d56bc89189c3b17367549aeb076633a6ea0e1007
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853925"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442744"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Расширенное управление репликацией и топологией Active Directory с помощью Windows PowerShell (уровень 200)
 
@@ -228,7 +228,7 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
   
 Например, после быстрого развертывания новых филиалов, сопровождающегося объединением существующих, может потребоваться внести сотни изменений в сайты в соответствии с их физическим расположением, характеристиками сети и новыми требованиями к емкости. Эти изменения можно внести не с помощью средств Dssites.msc и Adsiedit.msc, а автоматически. Это особенно удобно, если вам приходится действовать на основе таблиц с данными, предоставленными группами сетевой инфраструктуры и технического обслуживания.  
   
-**Get-Adreplication\***  командлеты возвращают сведения о топологии репликации и по конвейеру в **Set-Adreplication\***  командлеты в пакетном режиме. **Получить** командлеты не изменяют данные, они отображаются только данные, или для создания Windows PowerShell объекты сеанса, которые могут выполняться конвейерная передача **Set-Adreplication\***  командлетов. Командлеты **New** и **Remove** полезны для создания и удаления объектов топологии Active Directory.  
+**Get-Adreplication\\** * командлеты возвращают сведения о топологии репликации и по конвейеру в **Set-Adreplication\\** * командлеты в пакетном режиме. **Получить** командлеты не изменяют данные, они отображаются только данные, или для создания Windows PowerShell объекты сеанса, которые могут выполняться конвейерная передача **Set-Adreplication\\** * командлетов. Командлеты **New** и **Remove** полезны для создания и удаления объектов топологии Active Directory.  
   
 Например, можно создавать сайты с помощью файла CSV:  
   

@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 18ce084ec7d1b602dfca913372d6a0e279671a6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a2eb6c670e704564bed49486b8950dab96da8a80
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867415"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66444569"
 ---
 # <a name="migrate-the-active-directory-federation-services-proxy-server-to-windows-server-2012-r2"></a>Перенос прокси-сервер служб федерации Active Directory в Windows Server 2012 R2
 
@@ -26,15 +26,15 @@ ms.locfileid: "59867415"
   
 При планировании развертывания прокси-сервера веб-приложения можно использовать сведения в следующих разделах.  
   
--   [Планирование инфраструктуры прокси-сервера веб-приложения](https://technet.microsoft.com/library/dn383648.aspx)  
+- [Планирование инфраструктуры прокси-сервера веб-приложения](https://technet.microsoft.com/library/dn383648.aspx)  
   
--   [Планирование сервера прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383647.aspx)  
+- [Планирование сервера прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383647.aspx)  
   
- При развертывании прокси-сервера веб-приложения можно следовать процедурам в следующих разделах.  
+  При развертывании прокси-сервера веб-приложения можно следовать процедурам в следующих разделах.  
   
--   [Настройка инфраструктуры прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383644.aspx)  
+- [Настройка инфраструктуры прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383644.aspx)  
   
--   [Установка и настройка сервера прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383662.aspx)  
+- [Установка и настройка сервера прокси-сервера веб-приложений](https://technet.microsoft.com/library/dn383662.aspx)  
   
 ## <a name="next-steps"></a>Следующие шаги
  [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   

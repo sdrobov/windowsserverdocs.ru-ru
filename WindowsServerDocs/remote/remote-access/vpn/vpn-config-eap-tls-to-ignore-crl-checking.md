@@ -15,19 +15,19 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: ac59c554c69a6138a106a648c3fab3ed4fe05b7b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 781239f45b9b260b7d374c2a6972cdb8faad2879
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836425"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749594"
 ---
 # <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>Шаг 7.1. Настройка игнорирования проверки списка отзыва сертификатов (CRL) в EAP-TLS
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-&#171;  [**Предыдущих:** Шаг 7. (Необязательно) Условный доступ для VPN-подключения с помощью Azure AD](ad-ca-vpn-connectivity-windows10.md)<br>
-&#187; [ **Next:** Шаг 7.2. Создать корневые сертификаты для проверки подлинности VPN с Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**Предыдущих:** Шаг 7. (Необязательно) Условный доступ для VPN-подключения с помощью Azure AD](ad-ca-vpn-connectivity-windows10.md)
+- [**Далее:** Шаг 7.2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >Для реализации этого изменения в реестр вызывает подключения IKEv2, использование сертификатов облака с помощью PEAP переход на другой, но подключения IKEv2 с использованием сертификатов проверки подлинности клиента, выданный ЦС на предприятии продолжает работать.
@@ -47,11 +47,11 @@ ms.locfileid: "59836425"
 
 2. Перейдите к **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**.
 
-3. Нажмите кнопку **изменить > New** и выберите **DWORD (32-разрядное) значение** и тип **IgnoreNoRevocationCheck**.
+3. Выберите **изменить > New** и выберите **DWORD (32-разрядное) значение** и введите **IgnoreNoRevocationCheck**.
 
 4. Дважды щелкните **IgnoreNoRevocationCheck** и задать для него значение **1**.
 
-5. Нажмите кнопку **ОК** и перезагрузите сервер. Перезапуск службы RRAS и NPS не достаточно.
+5. Выберите **ОК** и перезагрузите сервер. Перезапуск службы RRAS и NPS не достаточно.
 
 Дополнительные сведения см. в разделе [как включить или отключить проверка отзыва сертификатов (CRL) на клиентах](https://technet.microsoft.com/library/bb680540.aspx).
 
@@ -62,8 +62,6 @@ ms.locfileid: "59836425"
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-[Шаг 7.2. Создать корневые сертификаты для проверки подлинности VPN с Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): На этом шаге настраивается условного доступа корневые сертификаты для проверки подлинности VPN с Azure AD, который автоматически создает VPN-сервер облачного приложения в клиенте. 
-
----
+[Шаг 7.2. Создать корневые сертификаты для проверки подлинности VPN с Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md): На этом шаге настраивается условного доступа корневые сертификаты для проверки подлинности VPN с Azure AD, который автоматически создает VPN-сервер облачного приложения в клиенте.

@@ -8,12 +8,12 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 11/09/2016
-ms.openlocfilehash: 7b046490c606cdf9e1436f503bf46a9cd4280ea9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 90107bd49268f232fd6d532c304c2fdd050bcbf5
+ms.sourcegitcommit: c6acac3622e5d34714ca5c569805931681f98779
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831095"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66391498"
 ---
 # <a name="whats-new-in-kerberos-authentication"></a>What's New in Kerberos Authentication
 
@@ -50,6 +50,8 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos\Paramete
 Чтобы настроить поддержку для имен узлов IP адрес в имена участников-служб, создайте запись TryIPSPN. Эта запись не существует в реестре по умолчанию. После создания этой записи измените значение DWORD на 1. Если не задан, имена узлов адрес IP-адрес не предпринимается.
 
 Если имя участника-службы регистрируется в Active Directory, затем успешной проверки подлинности с использованием Kerberos. 
+
+Дополнительные сведения см. документ [Настройка Kerberos для IP-адресов](configuring-kerberos-over-ip.md).
 
 ## <a name="kdc-support-for-key-trust-account-mapping"></a>Поддержка центра распространения КЛЮЧЕЙ для сопоставления учетных записей доверие на основе ключей
 

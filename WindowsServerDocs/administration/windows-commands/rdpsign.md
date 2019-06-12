@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 648b179f5b2feb8a7585c815aee47804e3bf1532
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9e35d3a3e85ed046fb658bbf5a97ab5fc5eec6d3
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882275"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442010"
 ---
 # <a name="rdpsign"></a>rdpsign
 
@@ -36,6 +36,7 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 ```
 
 ## <a name="parameters"></a>Параметры
+
 |Параметр|Описание|
 |-------|--------|
 |/SHA1 \<хэш >|Указывает отпечаток, представляющий собой Secure Hash Algorithm 1 (SHA1) хэш сертификата для подписи, включенный в хранилище сертификатов.|
@@ -55,20 +56,20 @@ rdpsign /sha1 <hash> [/q | /v |] [/l] <file_name.rdp>
 -   Если любой из RDP-файлы невозможно прочитать или записать, средство продолжит следующий файл, если указано несколько файлов.
 
 ## <a name="BKMK_examples"></a>Примеры
--   Чтобы подписать RDP-файл с именем File1.rdp, перейдите к папке, где был сохранен файл RDP и введите следующее:
-    ```
-    rdpsign /sha1 hash file1.rdp
-    ```
-    > [!NOTE]
-    > *Хэш* значение представляет отпечаток сертификата SHA1, без пробелов.
--   Чтобы проверить правильность цифровой подписи проходит успешно для RDP-файл без фактически подписи файла, введите следующее:
-    ```
-    rdpsign /sha1 hash /l file1.rdp
-    ```
--   Для нескольких RDP-файлов, разделяйте их имена файлов разделяются пробелами. Например для нескольких RDP-файлов, которые называются File1.rdp File2.rdp и File3.rdp, введите следующее:
-    ```
-    rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
-    ```
-## <a name="see-also"></a>См. также
-[Синтаксис командной строки Key](command-line-syntax-key.md)
-[служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)
+- Чтобы подписать RDP-файл с именем File1.rdp, перейдите к папке, где был сохранен файл RDP и введите следующее:
+  ```
+  rdpsign /sha1 hash file1.rdp
+  ```
+  > [!NOTE]
+  > *Хэш* значение представляет отпечаток сертификата SHA1, без пробелов.
+- Чтобы проверить правильность цифровой подписи проходит успешно для RDP-файл без фактически подписи файла, введите следующее:
+  ```
+  rdpsign /sha1 hash /l file1.rdp
+  ```
+- Для нескольких RDP-файлов, разделяйте их имена файлов разделяются пробелами. Например для нескольких RDP-файлов, которые называются File1.rdp File2.rdp и File3.rdp, введите следующее:
+  ```
+  rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
+  ```
+  ## <a name="see-also"></a>См. также
+  [Синтаксис командной строки Key](command-line-syntax-key.md)
+  [служб удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)

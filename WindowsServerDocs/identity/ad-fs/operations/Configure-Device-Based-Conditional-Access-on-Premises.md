@@ -9,12 +9,12 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 0df290248f049b3f8a823e902cefa860fa074091
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: bcb6c415aae33b9742d7a7080ec169ca947098b9
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189851"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66445007"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Настройка локального условного доступа с помощью зарегистрированных устройств
 
@@ -92,11 +92,11 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
   
-2.  На сервере-источнике AD FS убедитесь, использованная в Доменных службах Active Directory пользователя с правами администратора Enterprise (EA) и откройте командную строку powershell с повышенными правами.  Затем выполните следующие команды PowerShell:  
+2. На сервере-источнике AD FS убедитесь, использованная в Доменных службах Active Directory пользователя с правами администратора Enterprise (EA) и откройте командную строку powershell с повышенными правами.  Затем выполните следующие команды PowerShell:  
     
-    `Import-module activedirectory`  
-    `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" ` 
-3.  На всплывающем окне нажмите кнопку "Да".
+   `Import-module activedirectory`  
+   `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" ` 
+3. На всплывающем окне нажмите кнопку "Да".
 
 >Примечание. Если ваша служба AD FS настроена на использование групповой управляемой учетной записи службы, введите имя учетной записи в формате "domain\accountname$"
 
@@ -111,7 +111,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device4.png)  
 
-4.  После выполнения этой команды отобразится сообщение об успешном завершении.
+4. После выполнения этой команды отобразится сообщение об успешном завершении.
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device5.png) 
 
@@ -131,9 +131,9 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device7.png) 
 
-3.  Выполните следующую команду PowerShell 
+3. Выполните следующую команду PowerShell 
 
-    `PS C:>Initialize-ADSyncDomainJoinedComputerSync -AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred ` 
+   `PS C:>Initialize-ADSyncDomainJoinedComputerSync -AdConnectorAccount [AD connector account name] -AzureADCredentials $aadAdminCred ` 
 
 Где [AD connector account name] — имя учетной записи, которую вы настроили в Azure AD Connect при добавлении локального каталога AD DS.
   
@@ -180,7 +180,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 - объект типа serviceConnectionpoint в CN=&lt;guid&gt;, CN=Device Registration
 
 - Configuration,CN=Services,CN=Configuration,DC=&lt;домен&gt;  
- - доступ для чтения и записи к указанному имени учетной записи соединителя AD в новом объекте</br></br> 
+  - доступ для чтения и записи к указанному имени учетной записи соединителя AD в новом объекте</br></br> 
 
 
 - объект типа msDS-DeviceRegistrationServiceContainer в CN = Device Registration Services, CN = Device Registration Configuration, CN = Services, CN = Configuration, DC = & ltdomain >  

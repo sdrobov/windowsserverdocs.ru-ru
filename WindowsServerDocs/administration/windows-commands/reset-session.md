@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6510f8b21186b856eb489c1add0674b8984b0e56
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5a0991c76ba890bb94b0dcf258df6207ed228e72
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857095"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66441794"
 ---
 # <a name="reset-session"></a>reset session
 
@@ -36,6 +36,7 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 ```  
 
 ## <a name="parameters"></a>Параметры  
+
 |Параметр|Описание|  
 |-------|--------|  
 |\<Имя сеанса >|Задает имя сеанса, который вы хотите сбросить. Чтобы определить имя сеанса, используйте **запрос сеанса** команды.|  
@@ -51,15 +52,15 @@ reset session {<SessionName> | <SessionID>} [/server:<ServerName>] [/v]
 -   **/Server** параметр является обязательным только в том случае, если вы используете **сбросить настройки сеанса** с удаленного сервера.  
 
 ## <a name="BKMK_examples"></a>Примеры  
--   Чтобы сбросить сеанс, обозначенный как rdp-tcp #6, введите следующую команду:  
-    ```  
-    reset session rdp-tcp#6  
-    ```  
--   Чтобы сбросить настройки сеанса, использующего код сеанса 3, введите:  
-    ```  
-    reset session 3  
-    ```  
+- Чтобы сбросить сеанс, обозначенный как rdp-tcp #6, введите следующую команду:  
+  ```  
+  reset session rdp-tcp#6  
+  ```  
+- Чтобы сбросить настройки сеанса, использующего код сеанса 3, введите:  
+  ```  
+  reset session 3  
+  ```  
 
 #### <a name="additional-references"></a>Дополнительная справка  
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 [Службы удаленных рабочих столов &#40;служб терминалов&#41; описанием команды](remote-desktop-services-terminal-services-command-reference.md)  

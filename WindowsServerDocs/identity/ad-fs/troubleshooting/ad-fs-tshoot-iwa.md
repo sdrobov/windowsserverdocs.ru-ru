@@ -8,12 +8,12 @@ ms.date: 02/21/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 91f252f5b0eca0f4c44e0b1a4564037298bf023c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9703a8652b0e0bbafe48858cbfbcc8aa9aa31ef8
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814065"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812046"
 ---
 # <a name="ad-fs-troubleshooting---integrated-windows-authentication"></a>AD FS Устранение неполадок — встроенная проверка подлинности Windows
 Встроенная проверка подлинности Windows позволяет пользователям войти, используя свои учетные данные Windows и возможности единого входа (SSO), с помощью Kerberos или NTLM.
@@ -24,7 +24,7 @@ ms.locfileid: "59814065"
     - Токен привязки канала
     - Конфигурация Internet Explorer
 
-## <a name="spn-misonfiguration"></a>Misonfiguration имени участника-службы
+## <a name="spn-misconfiguration"></a>Неправильной настройки имени участника-службы
 Имя участника-службы (SPN) — это уникальный идентификатор экземпляра службы. Имена участников-служб используются проверкой подлинности Kerberos для связи с экземпляром службы с учетной записью входа службы. Это позволяет клиентскому приложению для запроса, что служба проверки подлинности учетной записи, даже если клиент не имеет имя учетной записи.
 
 Пример того, как имя SPN используется с AD FS выглядит следующим образом:
@@ -67,13 +67,14 @@ ms.locfileid: "59814065"
 
 Существуют 2 основным моментам, которые можно запретить это happeing.
    - Включение встроенной проверки подлинности Windows не установлен в свойствах обозревателя IE.  Это расположенный в свойства обозревателя "->" Дополнительно "->" безопасности.
-![Интегрированные](media/ad-fs-tshoot-iwa/iwa4.png)
+   
+   ![Интегрированные](media/ad-fs-tshoot-iwa/iwa4.png)
    
    - Зоны безопасности не настроены надлежащим образом
        - Полные доменные имена не находятся в зоне интрасети
        - URL-адрес для AD FS не находится в зоне интрасети.
 
-![Интегрированные](media/ad-fs-tshoot-iwa/iwa5.png)
+      ![Интегрированные](media/ad-fs-tshoot-iwa/iwa5.png)
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Устранение неполадок AD FS](ad-fs-tshoot-overview.md)
+- [Устранение неполадок в AD FS](ad-fs-tshoot-overview.md)
