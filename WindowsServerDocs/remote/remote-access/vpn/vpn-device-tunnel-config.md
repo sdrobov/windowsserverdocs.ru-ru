@@ -9,16 +9,16 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: 005721873ad3a0df942bc9e23eba13728965ccba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 989216f90e78689b464240cff957bab1d9c1229b
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864555"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749569"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Настройка VPN-туннели устройства в Windows 10
 
->Область применения. Windows 10 версии 1709
+>Относится к: Windows 10 версии 1709
 
 AlwaysOn VPN дает возможность создать профиль VPN, выделенный для устройства или компьютера. Всегда на VPN-подключения включают два типа туннелей. 
 
@@ -92,22 +92,23 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 В зависимости от потребностей каждого конкретного развертывания сценария, — еще одна функция VPN, можно настроить с помощью туннеля устройства [доверенные определение сетевого](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
 
 ```
- <!-- inside/outside detection --> 
-  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection> 
+ <!-- inside/outside detection -->
+  <TrustedNetworkDetection>corp.contoso.com</TrustedNetworkDetection>
 ```
 
 ## <a name="deployment-and-testing"></a>Развертывание и тестирование
 
-Туннели устройства можно настроить с помощью сценария Windows PowerShell и инструментария управления Windows \(WMI\) моста. Всегда на VPN-туннеля устройства должен быть настроен в контексте **LOCAL SYSTEM** учетной записи. Чтобы добиться этого, он будет необходимо использовать [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), используя один из [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) состава [Sysinternals](https://docs.microsoft.com/sysinternals/) набор служебных программ.
+Туннели устройства можно настроить с помощью сценариев Windows PowerShell и с помощью моста инструментария управления Windows (WMI). Всегда на VPN-туннеля устройства должен быть настроен в контексте **LOCAL SYSTEM** учетной записи. Чтобы добиться этого, он будет необходимо использовать [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), используя один из [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) состава [Sysinternals](https://docs.microsoft.com/sysinternals/) набор служебных программ.
 
-Инструкции по развертыванию каждого устройства `(.\Device)` и каждого пользователя `(.\User)` профилировать, см. в разделе [PowerShell с помощью сценариев с поставщиком WMI моста](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider). 
+Инструкции по развертыванию каждого устройства `(.\Device)` и каждого пользователя `(.\User)` профилировать, см. в разделе [PowerShell с помощью сценариев с поставщиком WMI моста](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 Выполните следующую команду Windows PowerShell, чтобы убедиться, что вы успешно развернули профиль устройства:
 
-    `Get-VpnConnection -AllUserConnection`
+  ```powershell
+  Get-VpnConnection -AllUserConnection
+  ```
 
 Вывод списка устройства\-широкий профили VPN, развернутых на устройстве.
-
 
 ### <a name="example-windows-powershell-script"></a>Пример сценария PowerShell для Windows
 
@@ -170,15 +171,15 @@ Write-Host "$Message"
 
 ### <a name="vpn-client-configuration-resources"></a>Ресурсы конфигурации клиента VPN
 
-Это ресурсы настройки клиента VPN.
+Ниже приведены ресурсы настройки клиента VPN.
 
 - [Как создание профилей VPN в System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
 - [Настройка клиента Windows 10 AlwaysOn VPN-подключений](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [Параметры для профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
-### <a name="remote-access-server-ras-gateway-resources"></a>Сервер удаленного доступа \(RAS\) ресурсы шлюза
+### <a name="remote-access-server-gateway-resources"></a>Удаленные ресурсы сервера Access Gateway
 
-Ниже приведены ресурсы шлюза RAS.
+Ниже приведены ресурсы шлюза сервера удаленного доступа (RAS).
 
 - [Настройка RRAS с сертификатом проверки подлинности компьютера](https://technet.microsoft.com/library/dd458982.aspx)
 - [Устранение неполадок VPN-подключения IKEv2](https://technet.microsoft.com/library/dd941612.aspx)
@@ -187,4 +188,3 @@ Write-Host "$Message"
 >[!IMPORTANT]
 >Используя туннель устройства шлюза Microsoft RAS, необходимо настроить сервер RRAS для поддержки проверки подлинности сертификата компьютера IKEv2, включив **разрешить проверку подлинности сертификата компьютера для IKEv2** метод проверки подлинности, как описано [здесь](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). Когда этот параметр включен, настоятельно рекомендуется, **набора VpnAuthProtocol** командлет PowerShell вместе с **RootCertificateNameToAccept** используется необязательный параметр, чтобы убедиться, что Подключения IKEv2 в RRAS разрешены только для клиентских сертификатов VPN, привязанные к явно определенной внутренней и закрытого корневого центра сертификации. Кроме того **доверенные корневые центры сертификации** хранилище на сервере RRAS исправляются, чтобы убедиться, что он не содержит общедоступные центры сертификации рассматривался [здесь](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Аналогичные методы могут также необходимо учитывать для других VPN-шлюзов.
 
----

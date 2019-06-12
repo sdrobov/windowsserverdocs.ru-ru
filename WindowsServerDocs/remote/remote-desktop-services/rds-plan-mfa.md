@@ -13,16 +13,16 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
-ms.openlocfilehash: 50cbabf377e5b01c44360d776b9ff999826303c6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5ca2a29b0287dbd940afeb4404a85f1d978447f9
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814875"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805112"
 ---
 # <a name="remote-desktop-services---multi-factor-authentication"></a>Службы удаленных рабочих столов - многофакторной проверки подлинности
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2019 г., Windows Server 2016
 
 Воспользуйтесь преимуществами Active Directory с многофакторной проверкой подлинности для обеспечения высокого уровня защиты вашей бизнес-ресурсов.
 
@@ -31,4 +31,4 @@ ms.locfileid: "59814875"
 - При подключении к шлюзу удаленных рабочих Столов для защищенный удаленный доступ, сообщение SMS или мобильное приложение многофакторной
 - Правильно проверки подлинности и подключения к ресурсу!
 
-Дополнительные сведения о процессе конфигурации, ознакомьтесь с [интеграция инфраструктуры шлюза удаленных рабочих столов с помощью расширения сервера политики сети (NPS) и Azure AD ](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).
+Дополнительные сведения о процессе конфигурации, ознакомьтесь с [интеграция инфраструктуры шлюза удаленных рабочих столов с помощью расширения сервера политики сети (NPS) и Azure AD](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).

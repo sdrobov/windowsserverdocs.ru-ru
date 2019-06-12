@@ -2,18 +2,18 @@
 title: Новые возможности Windows Server
 description: Новые возможности вычислений, удостоверения, управления, автоматизации, сетей, безопасности, хранения.
 ms.prod: windows-server
-ms.date: 05/21/2019
+ms.date: 06/03/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: c39336dfa02e798a609fd5b16f5f844442f32c89
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.openlocfilehash: 8e19c7a51ef1f50f974dc380e00315f9980da560
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976669"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501355"
 ---
 # <a name="whats-new-in-windows-server"></a>Новые возможности в Windows Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "65976669"
 
 Освобождает канал долгосрочного обслуживания (LTSC):
 
-- [Новые возможности в Windows Server 2019 г.](../get-started-19/whats-new-19.md)
+- [Новые возможности Windows Server 2019](../get-started-19/whats-new-19.md)
 - [Что нового в Windows Server 2016?](whats-new-in-windows-server-2016.md)
 
 Полугодовой канал выпусков:
@@ -31,7 +31,9 @@ ms.locfileid: "65976669"
 - [Новые возможности в Windows Server версии 1903](../get-started-19/whats-new-in-windows-server-1903.md)
 - [Что нового в Windows Server версии 1809?](whats-new-in-windows-server-1809.md)
 - [Что нового в Windows Server версии 1803?](whats-new-in-windows-server-1803.md)
-- [Что нового в Windows Server версии 1709?](whats-new-in-windows-server-1709.md)
+- [Новые возможности в Windows Server версии 1709](whats-new-in-windows-server-1709.md) (не поддерживается с 9 апреля 2019 г.)
+
+Выпуски Windows Server Semi-Annual Channel добавляя новые функциональные возможности операционной системы в более быстром темпе. Новый выпуск в следующем месяце каждые шесть месяцев и поддерживается в течение 18 месяцев. Проверьте [сведения о выпуске Windows Server](windows-server-release-info.md) и [странице поддержки жизненного цикла](https://support.microsoft.com/lifecycle) для поддержки дат и по возможности всегда используйте последний выпуск.
 
 ## <a name="see-also"></a>См. также
 

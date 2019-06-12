@@ -7,22 +7,22 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/09/2019
-ms.openlocfilehash: d7c842a9b393f67c482dadeaa4090627887a67a3
-ms.sourcegitcommit: 75f257d97d345da388cda972ccce0eb29e82d3bc
+ms.date: 06/06/2019
+ms.openlocfilehash: 85eca06a5d8c103851596055099876cb53a902ad
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65613213"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810555"
 ---
 # <a name="creating-volumes-in-storage-spaces-direct"></a>Создание томов в локальных дисковых пространствах
 
->Относится к: Windows Server 2019, Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 В этом разделе описывается создание тома в кластере дисковыми пространствами с помощью Windows Admin Center, PowerShell или Диспетчер отказоустойчивости кластеров.
 
-   >[!TIP]
-   >  Сначала просмотрите статью [Планирование томов в локальных дисковых пространствах](plan-volumes.md).
+> [!TIP]
+> Сначала просмотрите статью [Планирование томов в локальных дисковых пространствах](plan-volumes.md).
 
 ## <a name="create-a-three-way-mirror-volume"></a>Создание тома трехстороннее зеркало
 
@@ -105,14 +105,14 @@ ms.locfileid: "65613213"
 - **StoragePoolFriendlyName:** Имя хранилища пула, например *«S2D на имя кластера»*
 - **Размер:** Размер тома, например *«10 ТБ»*
 
-   >[!NOTE]
-   >  Вычисления в Windows, в том числе PowerShell, выполняются с помощью двоичных чисел (с основанием 2), а диски обычно помечаются с помощью десятичных чисел (с основанием 10). Поэтому диск размером 1 ТБ (1 000 000 000 000 байтов) отображается в Windows как приблизительно 909 ГБ. Это нормально. При создании томов с помощью командлета **New-Volume** параметр **Size** следует указывать с помощью двоичных чисел (с основанием 2). Например, укажите "909 ГБ" или "0,909495 ТБ", чтобы создать том размером примерно 1 000 000 000 000 байтов.
+   > [!NOTE]
+   > Вычисления в Windows, в том числе PowerShell, выполняются с помощью двоичных чисел (с основанием 2), а диски обычно помечаются с помощью десятичных чисел (с основанием 10). Поэтому диск размером 1 ТБ (1 000 000 000 000 байтов) отображается в Windows как приблизительно 909 ГБ. Это нормально. При создании томов с помощью командлета **New-Volume** параметр **Size** следует указывать с помощью двоичных чисел (с основанием 2). Например, укажите "909 ГБ" или "0,909495 ТБ", чтобы создать том размером примерно 1 000 000 000 000 байтов.
 
 ### <a name="example-with-2-or-3-servers"></a>Пример. С 2 или 3 серверами
 
 Если в развертывании только два сервера, локальные дисковые пространства будут автоматически использовать двустороннее зеркальное отображение. Если в развертывании только три сервера, они будут автоматически использовать трехстороннее зеркальное отображение.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB
 ```
 
@@ -124,7 +124,7 @@ New-Volume -FriendlyName "Volume1" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 В следующем примере *"Volume2"* использует трехстороннее зеркальное отображение, а *"Volume3"*  — двойную четность (также называется "помехоустойчивым кодированием").
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume2" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Mirror
 New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -Size 1TB -ResiliencySettingName Parity
 ```
@@ -137,7 +137,7 @@ New-Volume -FriendlyName "Volume3" -FileSystem CSVFS_ReFS -StoragePoolFriendlyNa
 
 Чтобы просмотреть их, выполните командлет **Get-StorageTier**.
 
-```
+```PowerShell
 Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedundancy
 ```
 
@@ -145,7 +145,7 @@ Get-StorageTier | Select FriendlyName, ResiliencySettingName, PhysicalDiskRedund
 
 Чтобы создать многоуровневые тома, сошлитесь на эти шаблоны уровней с помощью параметров **StorageTierFriendlyNames** и **StorageTierSizes** командлета **New-Volume**. Например, следующий командлет создает один том, в котором трехстороннее зеркальное отображение и двойная четность распределены в пропорции 30:70.
 
-```
+```PowerShell
 New-Volume -FriendlyName "Volume4" -FileSystem CSVFS_ReFS -StoragePoolFriendlyName S2D* -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 300GB, 700GB
 ```
 

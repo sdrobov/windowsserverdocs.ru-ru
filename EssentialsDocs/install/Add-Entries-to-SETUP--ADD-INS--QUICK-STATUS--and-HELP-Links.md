@@ -12,12 +12,12 @@ ms.assetid: c0a8f10d-fd85-4c8d-b9bb-176cb1db1f46
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6d3303f2c6d84932ad9d5dee8a547cd478447732
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0a66d0d36a3012369a9bc26c513dad069235ad8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59864395"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433797"
 ---
 # <a name="add-entries-to-setup-add-ins-quick-status-and-help-links"></a>Добавление элементов в ссылки УСТАНОВКИ, НАДСТРОЕК, КРАТКОГО СОСТОЯНИЯ и СПРАВКИ
 
@@ -33,111 +33,111 @@ ms.locfileid: "59864395"
   
 ##### <a name="to-define-the-tasks-and-links"></a>Определение задач и ссылок  
   
-1.  Откройте Visual Studio 2010 или более высокой версии с правами администратора, щелкнув эту программу правой кнопкой мыши в меню Пуск и выбрав команду **Запуск от имени администратора**.  
+1. Откройте Visual Studio 2010 или более высокой версии с правами администратора, щелкнув эту программу правой кнопкой мыши в меню Пуск и выбрав команду **Запуск от имени администратора**.  
   
-2.  В меню **Файл**выберите команду **Создать**и щелкните пункт **Проект**.  
+2. В меню **Файл**выберите команду **Создать**и щелкните пункт **Проект**.  
   
-3.  В области **Шаблоны** выберите пункт **Библиотека классов**, введите **OEMHomePageContent** в поле **Имя** и нажмите кнопку **OK**.  
+3. В области **Шаблоны** выберите пункт **Библиотека классов**, введите **OEMHomePageContent** в поле **Имя** и нажмите кнопку **OK**.  
   
-4.  Удалите файл Class1.cs.  
+4. Удалите файл Class1.cs.  
   
-5.  Щелкните правой кнопкой мыши новый проект, выберите команду **Добавить**и щелкните пункт **Новый элемент**.  
+5. Щелкните правой кнопкой мыши новый проект, выберите команду **Добавить**и щелкните пункт **Новый элемент**.  
   
-6.  В области **Шаблоны** щелкните пункт **Файл XML**, введите **OEMHomePageContent.home** в поле **Имя** и нажмите кнопку **Добавить**.  
+6. В области **Шаблоны** щелкните пункт **Файл XML**, введите **OEMHomePageContent.home** в поле **Имя** и нажмите кнопку **Добавить**.  
   
-    > [!NOTE]
-    >  Если файл XML устанавливается без файла ресурсов, ему необходимо присвоить имя OEMHomePageContent.home. Если он входит в сборку, имя может быть любым (расширение должно быть HOME).  
+   > [!NOTE]
+   >  Если файл XML устанавливается без файла ресурсов, ему необходимо присвоить имя OEMHomePageContent.home. Если он входит в сборку, имя может быть любым (расширение должно быть HOME).  
   
-7.  Добавьте следующий код XML в файл OEMHomePageContent.home:  
+7. Добавьте следующий код XML в файл OEMHomePageContent.home:  
   
-    ```  
+   ```  
   
-    <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
-       <SetupMyServerTasks>  
-          <Task name="MyTask"  
-             description="MyTaskDescription"  
-             id="GUID">  
-                  <Action   
-                  name=?MyAction1Name?   
-                  image=?IconForAction1?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                  <Action   
-                  name=?MyAction2Name?   
-                  image=?IconForAction2?  
-                  type=?TaskType?  
-                  exelocation=?ActionExeLocation? />  
-                   ¦  
-           </Task>  
-                   ¦  
-        </SetupMyServerTasks>  
-    <MailServiceTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
-    </MailServiceTasks>  
-    <LineOfBusinessTasks>  
-         <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
+   <Tasks version=?2.0? xmlns=?https://schemas.microsoft.com/WindowsServerSolutions/2010/01/Dashboard>  
+      <SetupMyServerTasks>  
+         <Task name="MyTask"  
+            description="MyTaskDescription"  
+            id="GUID">  
+                 <Action   
+                 name=?MyAction1Name?   
+                 image=?IconForAction1?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                 <Action   
+                 name=?MyAction2Name?   
+                 image=?IconForAction2?  
+                 type=?TaskType?  
+                 exelocation=?ActionExeLocation? />  
+                  ¦  
+          </Task>  
+                  ¦  
+       </SetupMyServerTasks>  
+   <MailServiceTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œConnect to Email Service? category. -->  
+   </MailServiceTasks>  
+   <LineOfBusinessTasks>  
+        <!-- Same schema as in œSetupMyServerTasks? but the tasks are shown in œAdd-ins? category. -->  
   
-    <GetQuickStatusTasks>  
-          <Task name="MyQuickStatusTask1"  
-             description="MyQuickStatusTask1Desc   "  
-             id="GUID"  
-             assembly="AssemblyName of quick status query implementation"  
-             class="ClassName of quick status query implementation"           
-             replaceid="GUID"/>  
-               <!--  Same schema as Actions in œSetupMyServerTasks? -->   
-             </Task>  
-    </GetQuickStatusTasks>  
-       <Links>  
-          <Link  
-             ID=?GUID?  
-             Title="Displayed text of the link"  
-             Description="A very short description"  
-             ShellExecPath="Path to the application or URL"/>  
-       </Links>  
-    </Tasks>  
-    ```  
+   <GetQuickStatusTasks>  
+         <Task name="MyQuickStatusTask1"  
+            description="MyQuickStatusTask1Desc   "  
+            id="GUID"  
+            assembly="AssemblyName of quick status query implementation"  
+            class="ClassName of quick status query implementation"           
+            replaceid="GUID"/>  
+              <!--  Same schema as Actions in œSetupMyServerTasks? -->   
+            </Task>  
+   </GetQuickStatusTasks>  
+      <Links>  
+         <Link  
+            ID=?GUID?  
+            Title="Displayed text of the link"  
+            Description="A very short description"  
+            ShellExecPath="Path to the application or URL"/>  
+      </Links>  
+   </Tasks>  
+   ```  
   
-     Где  
+    Где  
   
-    |Атрибут|Описание|  
-    |---------------|-----------------|  
-    |Имя (задача)|Имя, которое отображается для задачи в списке. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
-    |описание (задача)|Описание задачи. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
-    |ИД (задача)|Идентификатор задачи. Этот идентификатор должен представлять собой идентификатор GUID. Новый GUID создается для задачи **exe**, однако для **глобальной** задачи используется GUID, созданный при определении задачи для области задач на подчиненной вкладке. Дополнительные сведения о создании GUID см. в разделе [Создание Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|  
-    |image|Это поле будет пропущено.|  
-    |Имя (действие)|Отображение названия задачи.|  
-    |Тип (действие)|Описание типа задачи. Задача может быть одной из следующих: **глобальная** задача, **exe** или URL-задача. Задача **глобального** типа - это та же глобальная задача, которая создавалась при определении задач для области задач на подчиненной вкладке. Дополнительные сведения о создании глобальной задачи, который может использоваться как в области задач на подчиненной вкладке и в списках задачи перед началом работы и задач на домашней странице см. в разделе œCreating вспомогательных классов? в точками: Создание подчиненной вкладки? из [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). Задача **exe** может использоваться для запуска приложений из списка "Задачи перед началом работы" или "Стандартные задачи".|  
-    |exelocation|Путь к приложению, связанному с задачей. Этот атрибут используется только для задач **exe**.|  
-    |replaceid|Идентификатор задачи, которая заменяется этой задачей.|  
-    |сборка|Имя сборки, содержащее класс для реализации быстрого запроса состояния. Сборка должна находиться в Program files\ windows server\bin\\.|  
-    |класс|Имя класса обеспечивает реализацию быстрого запроса состояния. Класс должен реализовывать интерфейс **ITaskStatusQuery**.|  
-    |Заголовок (ссылка)|Текст, отображаемый для ссылки. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
-    |Описание (ссылка)|Описание назначения ссылки. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
-    |ShellExecPath|Путь к приложению или URL-адрес.<br /><br /> **Примечание.** В атрибуте ShellExecPath поддерживаются переменные среды.|  
+   |Атрибут|Описание|  
+   |---------------|-----------------|  
+   |Имя (задача)|Имя, которое отображается для задачи в списке. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
+   |описание (задача)|Описание задачи. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
+   |ИД (задача)|Идентификатор задачи. Этот идентификатор должен представлять собой идентификатор GUID. Новый GUID создается для задачи **exe**, однако для **глобальной** задачи используется GUID, созданный при определении задачи для области задач на подчиненной вкладке. Дополнительные сведения о создании GUID см. в разделе [Создание Guid (guidgen.exe)](https://go.microsoft.com/fwlink/?LinkId=116098).|  
+   |image|Это поле будет пропущено.|  
+   |Имя (действие)|Отображение названия задачи.|  
+   |Тип (действие)|Описание типа задачи. Задача может быть одной из следующих: **глобальная** задача, **exe** или URL-задача. Задача **глобального** типа - это та же глобальная задача, которая создавалась при определении задач для области задач на подчиненной вкладке. Дополнительные сведения о создании глобальной задачи, который может использоваться как в области задач на подчиненной вкладке и в списках задачи перед началом работы и задач на домашней странице см. в разделе œCreating вспомогательных классов? в точками: Создание подчиненной вкладки? из [Windows Server Solutions SDK](https://go.microsoft.com/fwlink/?LinkID=248648). Задача **exe** может использоваться для запуска приложений из списка "Задачи перед началом работы" или "Стандартные задачи".|  
+   |exelocation|Путь к приложению, связанному с задачей. Этот атрибут используется только для задач **exe**.|  
+   |replaceid|Идентификатор задачи, которая заменяется этой задачей.|  
+   |сборка|Имя сборки, содержащее класс для реализации быстрого запроса состояния. Сборка должна находиться в Program files\ windows server\bin\\.|  
+   |класс|Имя класса обеспечивает реализацию быстрого запроса состояния. Класс должен реализовывать интерфейс **ITaskStatusQuery**.|  
+   |Заголовок (ссылка)|Текст, отображаемый для ссылки. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
+   |Описание (ссылка)|Описание назначения ссылки. При создании файла внедренных ресурсов значением этого атрибута является строковый ресурс.|  
+   |ShellExecPath|Путь к приложению или URL-адрес.<br /><br /> **Примечание.** В атрибуте ShellExecPath поддерживаются переменные среды.|  
   
-     В следующем примере кода показан способ определения ссылки на приложение.  
+    В следующем примере кода показан способ определения ссылки на приложение.  
   
-    ```  
-    <Links>  
-       <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Calc" Description="Launches Calc" ShellExecPath="%windir%\system32\calc.exe" />  
+   </Links>  
+   ```  
   
-     В следующем примере кода показан способ определения ссылки на веб-страницу.  
+    В следующем примере кода показан способ определения ссылки на веб-страницу.  
   
-    ```  
-    <Links>  
-       <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
-    </Links>  
-    ```  
+   ```  
+   <Links>  
+      <Link Title="Browser" Description="Open browser" ShellExecPath="http://www.adventureworks.com/" />  
+   </Links>  
+   ```  
   
-8.  Измените значения атрибутов для представления задачи или ссылки.  
+8. Измените значения атрибутов для представления задачи или ссылки.  
   
 9. В **обозревателе решений** щелкните правой кнопкой мыши файл **OEMHomePageContent.home**, затем нажмите кнопку **Свойства**.  В области **Свойства** перейдите к опции **Действие построения** и выберите **Внедренный ресурс**.  
   
 10. Сохраните файл OEMHomePageContent.home.  
   
- Для получения сведений о реализации быстрого запроса состояния обращайтесь к документам и примерам в [пакете SDK для решений Windows Server](https://go.microsoft.com/fwlink/?LinkID=248648).  
+    Для получения сведений о реализации быстрого запроса состояния обращайтесь к документам и примерам в [пакете SDK для решений Windows Server](https://go.microsoft.com/fwlink/?LinkID=248648).  
   
 #### <a name="change-the-status-of-a-setupadd-ins-task"></a>Изменение состояния задачи УСТАНОВКА / НАДСТРОЙКИ  
  Состояние задач, указанных в списках УСТАНОВКА И НАДСТРОЙКИ, можно менять: завершенные (настроенные для надстроек) и незавершенные (не настроенные для надстроек).  

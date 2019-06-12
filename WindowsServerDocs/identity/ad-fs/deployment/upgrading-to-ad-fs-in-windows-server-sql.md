@@ -9,15 +9,18 @@ ms.prod: windows-server-threshold
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8ada2ae5c9fcdb77f35200581848041f222ed7f3
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 0a3db2a095d1a31f55bd1c8bfc5bf3c9f6bb65b8
+ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191964"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66687397"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Обновление до AD FS в Windows Server 2016 с SQL Server
 
+
+> [!NOTE]  
+> Только начинающиеся в определенный период времени, запланированные для завершения обновления. Не рекомендуется хранить AD FS в смешанном режиме в течение продолжительного периода времени, оставляя AD FS в смешанном режиме может вызвать проблемы с фермой.
 
 
 ## <a name="moving-from-a-windows-server-2012-r2-ad-fs-farm-to-a-windows-server-2016-ad-fs-farm"></a>Перемещение из фермы Windows Server 2012 R2 AD FS в ферме Windows Server 2016 AD FS  
@@ -112,4 +115,3 @@ ms.locfileid: "66191964"
     Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
     ```
 5. Убедитесь, что ConfigurationVersion был обновлен с помощью команды Powershell Get-WebApplicationProxyConfiguration.
-    

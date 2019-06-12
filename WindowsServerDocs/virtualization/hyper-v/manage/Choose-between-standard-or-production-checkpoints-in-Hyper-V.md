@@ -11,12 +11,12 @@ ms.assetid: 92bb573b-03b7-470e-b72e-e35edf52b349
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 239cce3c9f1acb2d45935e0f60fb1875b004485b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3591e17c9485fc8f9e365f6322c4f48e783db8ce
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880955"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442222"
 ---
 # <a name="choose-between-standard-or-production-checkpoints-in-hyper-v"></a>Выбор между стандартных или рабочих контрольных точек в Hyper-V
 
@@ -29,7 +29,7 @@ ms.locfileid: "59880955"
   
 - Стандартные контрольные точки захвата состояния, данных и конфигурации оборудования работающей виртуальной машины и предназначены для использования в сценариях разработки и тестирования. Стандартные контрольные точки можно использовать в том случае, если необходимо повторно создать определенное состояние или условие с работающей виртуальной машины, чтобы можно было устранить проблему.  
  
- ## <a name="change-checkpoints-to-production-or-standard-checkpoints"></a>Изменить контрольные точки для рабочей среды или стандартные контрольные точки  
+  ## <a name="change-checkpoints-to-production-or-standard-checkpoints"></a>Изменить контрольные точки для рабочей среды или стандартные контрольные точки  
   
 1.  В **диспетчера Hyper-V**, щелкните правой кнопкой мыши виртуальную машину и нажмите кнопку **параметры**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59880955"
   
 -   [Рабочие контрольные точки](../What-s-new-in-Hyper-V-on-Windows.md#BKMK_check)  
   
--   [Включение или отключение контрольных точек](Enable-or-disable-checkpoints-in-Hyper-V.md)  
+-   [Включение и отключение контрольных точек](Enable-or-disable-checkpoints-in-Hyper-V.md)  
   
 
 

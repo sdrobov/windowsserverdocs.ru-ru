@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 33b782ded2ae1bdd8b00c08b81e4e0ee7f885899
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 62b366b8fa388319a758ab853d28d1c49cb1bf06
+ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188834"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719719"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>Настройка многофакторной Идентификации Azure в качестве поставщика проверки подлинности с AD FS
 
@@ -65,17 +65,14 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 При использовании Azure MFA для аутентификации с помощью AD FS, требуются следующие предварительные требования:  
   
 - [Подписку Azure с помощью Azure Active Directory](https://azure.microsoft.com/pricing/free-trial/).  
-- [Многофакторная Идентификация Azure](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/)  
-- Веб-прокси приложения возможность взаимодействовать со следующими через порты 80 и 443:
-
-    - https://adnotifications.windowsazure.com
-    - https://login.microsoftonline.com
+- [Многофакторная Идентификация Azure](https://azure.microsoft.com/documentation/articles/multi-factor-authentication/) 
 
 
 > [!NOTE]
 > Azure AD и Azure MFA, включаются в Azure AD Premium и Enterprise Mobility Suite (EMS).  При наличии любой из этих отдельных подписок не обязательно.
+
 - В Windows Server 2016 AD FS в локальной среде.  
-   - Сервер должен иметь возможность взаимодействовать с помощью следующих URL-адресов через порты 80 и 443.
+   - Сервер должен иметь возможность взаимодействовать со следующим URL-адресам, через порт 443.
       - https://adnotifications.windowsazure.com
       - https://login.microsoftonline.com
 - — В локальной среде [федерацию с Azure AD.](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-get-started-custom/#configuring-federation-with-ad-fs)  

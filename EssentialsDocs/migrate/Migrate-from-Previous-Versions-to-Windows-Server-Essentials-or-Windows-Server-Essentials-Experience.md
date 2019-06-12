@@ -12,12 +12,12 @@ ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 213ee4304d9d4ebdb7580f7f78fdaca78aa454c9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 107a20cae83072ee0066ba0a335eb5078341e59b
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883875"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432857"
 ---
 # <a name="migrate-from-previous-versions-to-windows-server-essentials-or-windows-server-essentials-experience"></a>Миграция с предыдущих версий на Windows Server Essentials или Windows Server Essentials Experience
 
@@ -40,23 +40,23 @@ ms.locfileid: "59883875"
 ## <a name="migration-process-summary"></a>Сводка по процессу миграции  
  Настоящее руководство по миграции состоит из следующих разделов:  
   
-1.  [Шаг 1. Подготовка к миграции исходного сервера для Windows Server Essentials](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md).  Убедитесь, что исходный сервер и сеть готовы к миграции. В этом разделе подробно описаны архивация параметров исходного сервера, проверка работоспособности его системы, установка последних пакетов обновления и исправлений, а также проверка параметров сети.  
+1. [Шаг 1. Подготовка к миграции исходного сервера для Windows Server Essentials](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md).  Убедитесь, что исходный сервер и сеть готовы к миграции. В этом разделе подробно описаны архивация параметров исходного сервера, проверка работоспособности его системы, установка последних пакетов обновления и исправлений, а также проверка параметров сети.  
   
-2.  [Шаг 2. Установка Windows Server Essentials в качестве нового репликата контроллера домена](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md). В этом разделе описывается установка Windows Server Essentials или Windows Server 2012 R2 Standard (с включенной ролью Windows Server Essentials Experience) как контроллер домена.  
+2. [Шаг 2. Установка Windows Server Essentials в качестве нового репликата контроллера домена](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md). В этом разделе описывается установка Windows Server Essentials или Windows Server 2012 R2 Standard (с включенной ролью Windows Server Essentials Experience) как контроллер домена.  
   
-3.  [Шаг 3. Присоединение компьютеров к новому серверу Windows Server Essentials](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  В этом разделе описывается процесс присоединения клиентских компьютеров к новому серверу под управлением Windows Server Essentials и обновления параметров групповой политики.  
+3. [Шаг 3. Присоединение компьютеров к новому серверу Windows Server Essentials](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  В этом разделе описывается процесс присоединения клиентских компьютеров к новому серверу под управлением Windows Server Essentials и обновления параметров групповой политики.  
   
-4.  [Шаг 4. Перенос параметров и данных на целевой сервер для миграции Windows Server Essentials](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
+4. [Шаг 4. Перенос параметров и данных на целевой сервер для миграции Windows Server Essentials](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
   
-5.  [Шаг 5. Включение перенаправления папок на конечный сервер для миграции Windows Server Essentials](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Если перенаправление папок включено на исходном сервере, его можно включить на конечном сервере и затем удалить старый параметр групповой политики "Перенаправление папок".  
+5. [Шаг 5. Включение перенаправления папок на конечный сервер для миграции Windows Server Essentials](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Если перенаправление папок включено на исходном сервере, его можно включить на конечном сервере и затем удалить старый параметр групповой политики "Перенаправление папок".  
   
-6.  [Шаг 6. Понижение уровня и удаление исходного сервера из новой сети Windows Server Essentials](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md).  Прежде чем удалить исходный сервер из сети, необходимо принудительно обновить групповую политику и понизить уровень исходного сервера.  
+6. [Шаг 6. Понижение уровня и удаление исходного сервера из новой сети Windows Server Essentials](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md).  Прежде чем удалить исходный сервер из сети, необходимо принудительно обновить групповую политику и понизить уровень исходного сервера.  
   
-7.  [Шаг 7. Выполнение задач после миграции для миграции Windows Server Essentials](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md).  Завершив миграцию всех параметров и данных на Windows Server Essentials, вы можете сопоставить разрешенные компьютеры с учетными записями пользователей.  
+7. [Шаг 7. Выполнение задач после миграции для миграции Windows Server Essentials](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md).  Завершив миграцию всех параметров и данных на Windows Server Essentials, вы можете сопоставить разрешенные компьютеры с учетными записями пользователей.  
   
-8.  [Шаг 8. Запустите Windows Server Essentials Best Practices Analyzer](Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md).  После завершения миграции параметров и данных на Windows Server Essentials, необходимо запустить Windows Server Essentials рекомендации анализатор соответствия рекомендациям (BPA).  
+8. [Шаг 8. Запустите Windows Server Essentials Best Practices Analyzer](Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md).  После завершения миграции параметров и данных на Windows Server Essentials, необходимо запустить Windows Server Essentials рекомендации анализатор соответствия рекомендациям (BPA).  
   
- Для выполнения некоторых процедур миграции нужно открыть окно командной строки от имени администратора. Ниже описано, как это сделать.  
+   Для выполнения некоторых процедур миграции нужно открыть окно командной строки от имени администратора. Ниже описано, как это сделать.  
   
 ###  <a name="BKMK_OpenACommandPromptAsAdmin"></a> Чтобы открыть окно командной строки на исходном сервере с правами администратора  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59883875"
   
 ## <a name="see-also"></a>См. также  
   
--   [Миграция данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
 
--   [Миграция данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
+-   [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

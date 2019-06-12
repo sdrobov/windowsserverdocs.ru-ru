@@ -7,13 +7,13 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
-ms.date: 05/21/2019
-ms.openlocfilehash: af887c0e1c66a017ee091fb2cab2dc61fa9ac1dc
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
+ms.date: 06/04/2019
+ms.openlocfilehash: 7110fe78982fec616174a93514d86fb2e1cf9fa5
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65976546"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810765"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Новые возможности в Windows Server 2019
 
@@ -21,9 +21,17 @@ ms.locfileid: "65976546"
 
 В этом разделе описаны некоторые новые функции в Windows Server 2019. Windows Server 2019 лежит прочный фундамент для Windows Server 2016 и привносит множество инноваций на четыре основные темы: Гибридное облако, безопасность, платформы приложений и Гиперконвергентная инфраструктура (HCI).
 
-Новые возможности в выпусках Windows Server Semi-Annual Channel см. в статье [новые возможности в Windows Server](../get-started/whats-new-in-windows-server.md). 
+Новые возможности в выпусках Windows Server Semi-Annual Channel см. в статье [новые возможности в Windows Server](../get-started/whats-new-in-windows-server.md).
 
 ## <a name="general"></a>Общие
+
+### <a name="windows-admin-center"></a>Windows Admin Center
+
+Windows Admin Center представляет собой локально развертываемое браузерное приложение для управления серверами, кластерами, гиперконвергентной инфраструктурой и ПК под управлением Windows 10. Он поставляется без дополнительной платы в составе Windows и готов для использования в рабочей среде.
+
+Можно установить Windows Admin Center на Windows Server 2019, а также Windows 10 и более ранних версиях Windows и Windows Server и использовать его для управления, серверов и кластеров под управлением Windows Server 2008 R2 и более поздних версий.
+
+Дополнительные сведения см. в разделе [Windows Admin Center](../manage/windows-admin-center/understand/windows-admin-center.md).
 
 ### <a name="desktop-experience"></a>Возможности рабочего стола
 
@@ -60,8 +68,6 @@ ms.locfileid: "65976546"
 -   Функция [Контролируемый доступ к файлам](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc) защищает конфиденциальные данные от программ-шантажистов, блокируя доступ недоверенных процессов к защищенным папкам.
 
 -   [Защита от эксплойтов](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/exploit-protection-exploit-guard) — это набор мер защиты от уязвимостей (замена EMET), которые можно легко настроить для обеспечения безопасности системы и приложений.
-
-
 
 Функция [Управление приложениями в Защитнике Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) (также известна как политика целостности кода (CI)) была выпущена в Windows Server 2016.
 Пользователи сообщали, что это отличное решение, которое, однако, сложно развернуть.
@@ -111,7 +117,7 @@ ms.locfileid: "65976546"
 
 ### <a name="storage-spaces-direct"></a>Локальные дисковые пространства
 
-Ниже приведен список новых возможностей в локальных дисковых пространствах. Дополнительные сведения см. в разделе [Новые возможности локальных дисковых пространств](../storage/whats-new-in-storage.md#storage-spaces-direct).
+Ниже приведен список новых возможностей в локальных дисковых пространствах. Дополнительные сведения см. в разделе [Новые возможности локальных дисковых пространств](../storage/whats-new-in-storage.md#storage-spaces-direct). Также см. в разделе [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview) для сведения о получении проверенные дисковые системы.
 
 - **Сжатие томов ReFS и дедупликации**
 - **Собственная поддержка для постоянной памяти**

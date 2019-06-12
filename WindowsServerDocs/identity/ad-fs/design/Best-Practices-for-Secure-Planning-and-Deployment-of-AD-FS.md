@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: df1afc77afffd9b737965215a5c9d96f278c8129
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 4a2fb188bd0a46ebd54ae068e8e4eeb63788aaa0
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191667"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501580"
 ---
 # <a name="best-practices-for-secure-planning-and-deployment-of-ad-fs"></a>Рекомендации по безопасному планированию и развертыванию AD FS
 
@@ -23,7 +23,12 @@ ms.locfileid: "66191667"
   
 ## <a name="core-security-best-practices-for-ad-fs"></a>Ключевые рекомендации по безопасности AD FS  
 Следующие базовые рекомендации являются общими для всех вариантов установки AD FS и где вы хотите расширить или усовершенствовать безопасность системы или развертывания:  
-  
+
+-   **Защита AD FS в качестве системы «Уровня 0»** 
+
+    AD FS является, по существу, система проверки подлинности.  Таким образом он должен рассматриваться как системы «Уровня 0» как и другие системные идентификации в сети.  [Документация Microsoft](https://docs.microsoft.com/en-us/windows-server/identity/securing-privileged-access/securing-privileged-access-reference-material) Подробнее о модель разделения администрирования Active Directory. 
+
+
 -   **Используйте мастер настройки безопасности для применения к серверам федерации и компьютерами прокси-серверов федерации AD FS-рекомендации по безопасности**  
   
     Мастер настройки безопасности (SCW) — это средство, который предустанавливается на Windows Server 2008, Windows Server 2008 R2 и Windows Server 2012 компьютеров. Его можно использовать для применения рекомендаций безопасности с целью уменьшения поверхности атаки на сервер на основе устанавливаемых серверных ролей.  

@@ -12,12 +12,12 @@ ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c6abc11ba2ce8a9f1d32c6a884db6332586de78b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62f31f859ed3fd0f77baf37d3467d4702b24ad95
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822645"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432913"
 ---
 # <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>Присоединение компьютеров к новой network1 Windows Server Essentials
 
@@ -27,13 +27,13 @@ ms.locfileid: "59822645"
  Следующий шаг в процессе миграции является присоединение клиентских компьютеров к новой сети Windows Server Essentials и обновление параметров групповой политики.  
   
 ### <a name="domain-joined-client-computers"></a>Клиентские компьютеры, присоединенные к домену  
- Перейдите к **http://***назначения servername***/ connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
+ Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  
   
 ### <a name="non-domain-joined-client-computers"></a>Клиентские компьютеры, не присоединенные к домену  
- Перейдите к **http://***назначения servername***/ connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
+ Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  

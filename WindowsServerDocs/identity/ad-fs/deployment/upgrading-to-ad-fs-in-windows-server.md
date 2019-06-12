@@ -9,16 +9,18 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: c8e72f1075b984506f9f992cd45cf853b50bddeb
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 6f3cdc34ee03fab1a8fb1d42ebed2d2f76e2618d
+ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191918"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66687413"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью базы данных WID
 
 
+> [!NOTE]  
+> Только начинающиеся в определенный период времени, запланированные для завершения обновления. Не рекомендуется хранить AD FS в смешанном режиме в течение продолжительного периода времени, оставляя AD FS в смешанном режиме может вызвать проблемы с фермой.
 
 ## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Обновление до Windows Server 2019 Windows Server 2012 R2 или 2016 AD FS фермы
 Следующий документ показывает, как для обновления фермы AD FS для AD FS в Windows Server 2019 при использовании Внутренней базой данных Windows.  
@@ -27,6 +29,7 @@ ms.locfileid: "66191918"
 В AD FS для Windows Server 2016 появилась на уровне поведения фермы (FBL). Это параметр уровня фермы, который определяет, что можно использовать функции AD FS фермы.
 
 В следующей таблице перечислены значения FBL версией Windows Server:
+
 | Версия Windows Server  | FBL | Имя базы данных конфигурации AD FS |
 | ------------- | ------------- | ------------- |
 | 2012 R2  | 1  | AdfsConfiguration |

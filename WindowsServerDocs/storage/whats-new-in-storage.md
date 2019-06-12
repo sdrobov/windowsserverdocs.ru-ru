@@ -8,20 +8,20 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 05/29/2019
-ms.openlocfilehash: 5469d663f64fdb453e03863f409b675473d3f6aa
-ms.sourcegitcommit: 8eea7aadbe94f5d4635c4ffedc6a831558733cc0
+ms.openlocfilehash: f72156b050aa943cfafaf1fa2539911d6d1e089e
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66308572"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501482"
 ---
 # <a name="whats-new-in-storage-in-windows-server"></a>Новые возможности хранилища в Windows Server
 
->Область применения Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 В этом разделе приводятся сведения о новых и измененных функциях хранилища в 2019 Windows Server, Windows Server 2016 и выпусков Windows Server Semi-Annual Channel.
 
-## <a name="whats-new-in-storage-in-windows-server-2019-and-windows-server-version-1903"></a>Новые возможности хранилища в Windows Server 2019 и Windows Server версии 1903
+## <a name="whats-new-in-storage-in-windows-server-version-1903"></a>Новые возможности хранилища в Windows Server версии 1903
 
 Этот выпуск Windows Server добавляет следующие изменения и технологии.
 
@@ -271,14 +271,14 @@ Windows Server версии 1709 — это первый выпуск Windows Se
 
 Дополнительные сведения об этих улучшениях безопасности - называемый усилению защиты UNC см. в статье базы знаний Майкрософт [3000483](https://support.microsoft.com/kb/3000483) и [MS15-011 & MS15-014: Усиление безопасности групповой политики](https://blogs.technet.microsoft.com/srd/2015/02/10/ms15-011-ms15-014-hardening-group-policy).  
 
-### <a name="work-folders"></a>Рабочие папки
+### <a name="work-folders"></a>рабочие папки
 Улучшено уведомление об изменениях при сервер рабочих папок под управлением Windows Server 2016 и клиент рабочих папок — Windows 10.
 
 **Какой эффект дает это изменение?**<br>
 При использовании Windows Server 2012 R2, если изменения файлов синхронизируются с сервером рабочих папок, клиенты не получают уведомления об изменениях и ожидают обновления 10 минут.  При использовании Windows Server 2016 сервер рабочих папок немедленно уведомляет клиентов Windows 10, и изменения файлов синхронизируются немедленно.
 
 **Что работает иначе?**<br>
-Это новая функция в Windows Server 2016. Для нее требуется сервер рабочих папок с ОС Windows Server 2016 и клиенты с ОС Windows 10.
+Это новая функция в Windows Server 2016. Для нее требуется сервер рабочих папок с ОС Windows Server 2016 и клиенты с ОС Windows 10.
 
 Если вы используете клиент более ранней версии или сервер рабочих папок с ОС Windows Server 2012 R2, клиент будет по-прежнему производить опрос для проверки наличия изменений каждые десять минут.
 

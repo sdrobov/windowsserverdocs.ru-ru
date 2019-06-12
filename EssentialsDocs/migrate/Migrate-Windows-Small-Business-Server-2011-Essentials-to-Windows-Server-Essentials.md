@@ -12,12 +12,12 @@ ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5d65429e31e43aa15d1631878ae7e1486e9fd60f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8f41efde192ea039a6ee9c7f9f3a4b49bedf4f48
+ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835155"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826990"
 ---
 # <a name="migrate-windows-small-business-server-2011-essentials-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2011 Essentials на Windows Server Essentials
 
@@ -27,11 +27,11 @@ ms.locfileid: "59835155"
   
 > [!NOTE]
 >  Во избежание проблем во время миграции группа разработки продукта Windows Server Essentials настоятельно рекомендует читать этот документ, прежде чем приступить к переносу.  
-  
+> 
 > [!NOTE]
-
+> 
 >  Чтобы перенести данные сервера в последнюю версию Windows Server Essentials, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
-
+> 
 >  Чтобы перенести данные сервера в последнюю версию Windows Server Essentials, см. в разделе [миграции на Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
   
@@ -53,7 +53,7 @@ ms.locfileid: "59835155"
   
 3.  [Присоединение компьютеров к новому серверу Windows Server Essentials](Join-computers-to-the-new-Windows-Server-Essentials-server.md).  В этом разделе рассматриваются присоединении клиентских компьютеров к новому серверу Windows Server Essentials и обновления параметров групповой политики.  
   
-4.  [Перенос SBS 2011 Essentials параметров и данных на конечный сервер](Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
+4.  [Перенос SBS 2011 Essentials параметров и данных на конечный сервер](Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
   
 5.  [Включение перенаправления папок на целевом сервере Windows Server Essentials](Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md).  Если перенаправление папок включено на исходном сервере, его можно включить на конечном сервере и затем удалить старый параметр групповой политики "Перенаправление папок".  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59835155"
   
 3.  [Присоединение компьютеров к новому серверу Windows Server Essentials](../migrate/Join-computers-to-the-new-Windows-Server-Essentials-server.md).  В этом разделе рассматриваются присоединении клиентских компьютеров к новому серверу Windows Server Essentials и обновления параметров групповой политики.  
   
-4.  [Перенос SBS 2011 Essentials параметров и данных на конечный сервер](../migrate/Move-Windows-SBS-2011-Essentials-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
+4.  [Перенос SBS 2011 Essentials параметров и данных на конечный сервер](../migrate/Move-Windows-SBS-2011-Essentials-to-the-Destination-Server-for-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.  
   
 5.  [Включение перенаправления папок на целевом сервере Windows Server Essentials](../migrate/Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md).  Если перенаправление папок включено на исходном сервере, его можно включить на конечном сервере и затем удалить старый параметр групповой политики "Перенаправление папок".  
   

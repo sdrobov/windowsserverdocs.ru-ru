@@ -12,12 +12,12 @@ ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cf0c062b92c687f5f7b33b419eafdca2dd3bbbfc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8c3ba4746211690ad52f775b8bdc1ccf9b6c74b7
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828515"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433727"
 ---
 # <a name="add-health-alerts"></a>Добавление оповещений о работоспособности
 
@@ -32,13 +32,13 @@ ms.locfileid: "59828515"
   
 #### <a name="to-install-the-xml-files-on-the-server"></a>Установка XML-файлов на сервере  
   
-1.  В папке **%ProgramFiles%\Windows Server\Bin\Feature Definitions** создайте новую папку с именем **MyHealthAddIn**. Этой папке можно присвоить любое имя. Рекомендуется задать для нее имя компонента.  
+1. В папке **%ProgramFiles%\Windows Server\Bin\Feature Definitions** создайте новую папку с именем **MyHealthAddIn**. Этой папке можно присвоить любое имя. Рекомендуется задать для нее имя компонента.  
   
-2.  Скопируйте файлы Definition.xml.config и Definition.xml.config в новую папку.  
+2. Скопируйте файлы Definition.xml.config и Definition.xml.config в новую папку.  
   
-3.  При создании двоичных файлов для условий или действий необходимо также скопировать эти файлы в папку **%ProgramFiles%\Windows Server\Bin**.  
+3. При создании двоичных файлов для условий или действий необходимо также скопировать эти файлы в папку **%ProgramFiles%\Windows Server\Bin**.  
   
- Клиентские компьютеры выполняют каждые 6 часов запланированные задачи, которые помещают XML-файлы в соответствующие папки. Можно выполнить принудительную синхронизацию между клиентским компьютером и сервером, запустив задачу вручную.  
+   Клиентские компьютеры выполняют каждые 6 часов запланированные задачи, которые помещают XML-файлы в соответствующие папки. Можно выполнить принудительную синхронизацию между клиентским компьютером и сервером, запустив задачу вручную.  
   
 #### <a name="to-install-the-xml-files-on-the-client-computer"></a>Установка XML-файлов на клиентском компьютере  
   

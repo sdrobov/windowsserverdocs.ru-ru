@@ -9,16 +9,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 227906685d77c31587c66d1c292f20ca94775058
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d16a9ddea96760b41c6cd2e4239b9bb51c8b3b38
+ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59881055"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66501641"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>Выбор дисков для локальных дисковых пространств
 
->Область применения. Windows Server 2016
+>Относится к: 2019 Windows, Windows Server 2016
 
 В этом разделе приведены рекомендации по выбору носителей для [локальных дисковых пространств](storage-spaces-direct-overview.md), которые будут соответствовать вашим требованиям к производительности и емкости.
 
@@ -116,7 +116,7 @@ ms.locfileid: "59881055"
 
 Мы рекомендуем ограничить общий объем хранилища на сервер — приблизительно до 100 терабайт (ТБ). Чем больше объем хранилища на сервер, тем больше времени необходимо для повторной синхронизации данных после простоя или перезагрузки, например при применении обновлений программного обеспечения.
 
-Текущий максимальный размер на пул носителей — 1 петабайт (ПБ) или 1000 терабайт.
+Текущий максимальный размер каждого пула носителей составляет 4 до нескольких петабайт (PB) (4 000 ТБ) для Windows Server 2019 или 1 ПБ для Windows Server 2016.
 
 ## <a name="see-also"></a>См. также
 
@@ -124,4 +124,4 @@ ms.locfileid: "59881055"
 - [Понять, в кэш в Storage Spaces Direct](understand-the-cache.md)
 - [Требования к оборудованию прямые дисковые пространства в хранилище](storage-spaces-direct-hardware-requirements.md)
 - [Планирование томов в дисковых пространств](plan-volumes.md)
-- [Эффективность сбоя допуска и хранилища](storage-spaces-fault-tolerance.md)
+- [Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)

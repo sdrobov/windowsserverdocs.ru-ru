@@ -11,12 +11,12 @@ ms.assetid: 897f2454-5aee-445c-a63e-f386f514a0f6
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/22/2019
-ms.openlocfilehash: 1d19b3dc7000a4bf5558f351ce67ce7406b3d5d8
-ms.sourcegitcommit: b190fac4bfa5599751a60d3fc3b4c4a64dd9afd7
+ms.openlocfilehash: 160adc0e838cb732ba792cbdd7fd9fa200c68794
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66009077"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66810508"
 ---
 # <a name="upgrade-virtual-machine-version-in-hyper-v-on-windows-10-or-windows-server"></a>Обновление версии виртуальной машины в Hyper-V в Windows 10 или Windows Server
 
@@ -53,7 +53,7 @@ Get-VM * | Format-Table Name, Version
 Update-VMVersion <vmname>
 ```
 
-## <a name="BKMK_SupportedConfigVersions"></a>Поддерживаемые версии виртуальных машин конфигурации
+## <a name="supported-virtual-machine-configuration-versions"></a>Поддерживаемые версии виртуальных машин конфигурации
 
 Выполните командлет PowerShell [Get VMHostSupportedVersion](https://docs.microsoft.com/powershell/module/hyper-v/get-vmhostsupportedversion) знать, какие версии конфигурации виртуальной машины, поддерживает узла Hyper-V. При создании виртуальной машины, он создается с конфигурацией версии по умолчанию. Чтобы увидеть, что такое значение по умолчанию, выполните следующую команду.
 

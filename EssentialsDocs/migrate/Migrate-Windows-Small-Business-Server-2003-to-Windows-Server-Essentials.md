@@ -12,12 +12,12 @@ ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 83a7f45e91516621400e94c873d59d7cb6976702
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4c89a508745c8db36272aa8d6c646878618656f6
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846605"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66432879"
 ---
 # <a name="migrate-windows-small-business-server-2003-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2003 на Windows Server Essentials
 
@@ -27,14 +27,14 @@ ms.locfileid: "59846605"
   
 > [!IMPORTANT]
 >   Windows Server Essentials требуется 64-разрядной среде.  Windows Server Essentials не поддерживает 32-разрядной среде.  
-  
+> 
 > [!NOTE]
 >  Во избежание проблем во время миграции группа разработки продукта Windows Server Essentials настоятельно рекомендует читать этот документ, прежде чем приступить к переносу.  
-  
+> 
 > [!NOTE]
-
+> 
 >  Чтобы перенести данные сервера в последнюю версию Windows Server Essentials, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
-
+> 
 >  Чтобы перенести данные сервера в последнюю версию Windows Server Essentials, см. в разделе [миграции на Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
   

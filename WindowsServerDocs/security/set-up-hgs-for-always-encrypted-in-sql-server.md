@@ -7,12 +7,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 11/03/2018
-ms.openlocfilehash: 2f800dfa01077287f8200dd8abea0be899776683
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 70f6f8c2db742361deecaa216b053d8b1d057a3d
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866695"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812612"
 ---
 # <a name="setting-up-the-host-guardian-service-for-always-encrypted-with-secure-enclaves-in-sql-server"></a>Настройка службы защиты узла для постоянного шифрования с помощью безопасного enclaves в SQL Server 
 
@@ -39,8 +39,8 @@ ms.locfileid: "59866695"
 
 - для обеспечения работы HGS серверы 1 – 3. 
 
-  >[!NOTE]
-  >Только один сервер HGS является обязательным для тестирования или подготовительной среде.
+  > [!NOTE]
+  > Только один сервер HGS является обязательным для тестирования или подготовительной среде.
 
   Эти серверы должны быть надежно защищены, так как они управляют тем, какие машины могут работать с помощью постоянного шифрования с помощью безопасного enclaves экземпляры SQL Server. 
   Рекомендуется, что различным администраторам управлять кластером HGS и выполнение HGS на физическом оборудовании, изолированным от остальной инфраструктуры, или структура отдельных виртуализации или подписки Azure.
@@ -110,11 +110,13 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
    Для HgsServiceName укажите DNN, вы выбрали.
 
    Для режима доверенного платформенного МОДУЛЯ:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustTpm
    ```
 
    Для режима ключа узла:
+
    ```powershell
    Initialize-HgsAttestation -HgsServiceName 'hgs' -TrustHostKey 
    ```
@@ -148,13 +150,13 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
 
 По умолчанию при инициализации сервера HGS он настраивает веб-сайтов IIS для взаимодействия только протокол HTTP.
 
->[!NOTE]
->Настройка HTTPS, используя сертификаты серверов HGS хорошо известного и надежного необходима для предотвращения атак man-in--middle и поэтому рекомендуется для рабочих развертываний.
+> [!NOTE]
+> Настройка HTTPS, используя сертификаты серверов HGS хорошо известного и надежного необходима для предотвращения атак man-in--middle и поэтому рекомендуется для рабочих развертываний.
 
 [!INCLUDE [Configure HTTPS](../../includes/configure-hgs-for-https.md)] 
 
->[!NOTE]
->Для постоянного шифрования с помощью безопасного enclaves SSL-сертификат должен быть доверенным на обоих компьютерах узлов под управлением SQL Server и компьютеров, выполняющих клиентских приложений базы данных, понадобится HGS. 
+> [!NOTE]
+> Для постоянного шифрования с помощью безопасного enclaves SSL-сертификат должен быть доверенным на обоих компьютерах узлов под управлением SQL Server и компьютеров, выполняющих клиентских приложений базы данных, понадобится HGS. 
 
 ## <a name="collect-attestation-info-from-the-host-machines"></a>Собирать сведения аттестации с компьютеров узла
 
@@ -197,6 +199,7 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
    ```powershell
    Get-ComputerInfo -Property DeviceGuard* 
    ```
+
 5. Собирайте идентификатор доверенного платформенного МОДУЛЯ и базовых показателей:
 
    ```powershell 
@@ -216,6 +219,7 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
    Add-HgsAttestationTpmPolicy -Name ServerA-Baseline -Path C:\temp\TpmBaseline-ServerA.tcglog 
    Add-HgsAttestationCiPolicy -Name AllowMicrosoft-Audit -Path C:\temp\AllowMicrosoft-Audit.bin 
    ```
+
 9. Первый сервер готов к подтверждающим! 
    На хост-компьютере запустите следующую команду, чтобы указать, куда подтверждающим (Изменение DNS-имя, что и кластер HGS, обычно будет использоваться имя службы HGS в сочетании с доменным именем HGS). 
    Если появится сообщение об ошибке HostUnreachable, убедитесь, вы можете разрешить и проверить связь с DNS-имена серверов HGS. 
@@ -231,8 +235,8 @@ Get-CimInstance -ClassName Win32_Tpm -Namespace root/cimv2/Security/MicrosoftTpm
 
 ### <a name="collecting-host-keys"></a>Сбор ключей узла 
 
->[!NOTE] 
->Аттестация ключей узла рекомендуется только для использования в тестовой среде. Аттестация доверенного платформенного МОДУЛЯ обеспечивает надежную гарантии, что доверенный код выполняется enclaves VBS обработки конфиденциальных данных на сервере SQL Server и компьютеры настраиваются с рекомендуемыми параметрами безопасности. 
+> [!NOTE] 
+> Аттестация ключей узла рекомендуется только для использования в тестовой среде. Аттестация доверенного платформенного МОДУЛЯ обеспечивает надежную гарантии, что доверенный код выполняется enclaves VBS обработки конфиденциальных данных на сервере SQL Server и компьютеры настраиваются с рекомендуемыми параметрами безопасности. 
 
 Если вы решили настроить HGS в режиме аттестации ключей узла, необходимо создавать и собирать ключи из каждого хост-компьютере и зарегистрировать их в службе защиты узла. 
 

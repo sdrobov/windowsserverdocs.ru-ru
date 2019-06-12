@@ -6,14 +6,14 @@ ms.topic: article
 manager: klaasl
 ms.author: jeffpatt
 author: JeffPatt24
-ms.date: 4/5/2017
+ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 87fdcf06c601d3362488eaf6a83e4f88ad191305
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5497651f57a0276daced614687e89f8047af9116
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828235"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66812675"
 ---
 # <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS
 
@@ -32,11 +32,12 @@ ms.locfileid: "59828235"
 -   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
->   Инструкции в этом разделе предназначены для среды Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+> Инструкции, описанные в этом разделе относятся к среде Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 На шаге 1 вы установили и настроили AD FS. Теперь необходимо выполнить следующие действия после настройки для AD FS.  
   
-## <a name="configure-dns-entries"></a>Настройка записей DNS  
+## <a name="configure-dns-entries"></a>Настройка записей DNS
+
 Вам необходимо создать две записи DNS для AD FS. Эти две записи уже использовались на шагах по подготовке к установке при создании сертификата с альтернативным именем субъекта (SAN).  
   
 Записи DNS имеют следующий вид:  
@@ -53,12 +54,13 @@ ms.locfileid: "59828235"
   
 -   **enterpriseregistration.contoso.com**  
   
-## <a name="create-the-a-and-cname-records-for-ad-fs"></a>Создание записей A и CNAME для AD FS  
+## <a name="create-the-a-and-cname-records-for-ad-fs"></a>Создание записей A и CNAME для AD FS
+
 Чтобы создать записи A и CNAME для AD FS, выполните следующие действия.  
   
 1.  На контроллере домена откройте раздел "Диспетчер DNS".  
   
-2.  Разверните папку "Зоны прямого просмотра", щелкните правой кнопкой мыши домен и выберите **Новый узел (A)**.  
+2.  Разверните папку "Зоны прямого просмотра", щелкните правой кнопкой мыши домен и выберите **Новый узел (A)** .  
   
 3.  Откроется окно **Новый узел**. В поле **Имя** введите псевдоним для имени службы AD FS. В тестовом примере используется имя **blueadfs**.  
   
@@ -66,10 +68,10 @@ ms.locfileid: "59828235"
   
     > [!IMPORTANT]  
     > При настройке AD FS с помощью пользовательского интерфейса Windows Server, а не Windows PowerShell, необходимо создать запись A вместо CNAME для AD FS. Причина этого в том, что имя субъекта-службы, созданное с помощью пользовательского интерфейса, содержит только псевдоним, используемый для настройки службы AD FS в качестве узла.  
-    >   
+
 4.  В поле **IP-адрес** введите IP-адрес сервера AD FS. В тестовом примере используется адрес **192.168.0.160**. Нажмите кнопку **Добавить узел**.  
   
-5.  В папке "Зоны прямого просмотра" щелкните правой кнопкой мыши домен и выберите **Новый псевдоним (CNAME)**.  
+5.  В папке "Зоны прямого просмотра" щелкните правой кнопкой мыши домен и выберите **Новый псевдоним (CNAME)** .  
   
 6.  В окне **Новая запись ресурса** добавьте имя псевдонима **enterpriseregistration** и введите FQDN для сервера AD FS. Этот псевдоним используется для присоединения устройств и должен иметь имя **enterpriseregistration**.
   
@@ -77,12 +79,13 @@ ms.locfileid: "59828235"
   
 Чтобы выполнить те же действия через Windows PowerShell, используйте следующую команду. Команду необходимо выполнить на контроллере домена.  
   
-```powershell  
+```Powershell  
 Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name blueadfs -A -IPv4Address 192.168.0.160   
-Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistration -CName  -HostNameAlias 2016-ADFS.contoso.com   
+Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistration -CName  -HostNameAlias 2016-ADFS.contoso.com
 ```  
   
-## <a name="set-up-the-ad-fs-relying-party-trust-for-work-folders"></a>Настройка отношений доверия с проверяющей стороной AD FS для рабочих папок  
+## <a name="set-up-the-ad-fs-relying-party-trust-for-work-folders"></a>Настройка отношений доверия с проверяющей стороной AD FS для рабочих папок
+
 Вы можете настроить отношения доверия с проверяющей стороной для рабочих папок, несмотря на то что рабочие папки еще не настроены. Необходимо настроить отношения доверия с проверяющей стороной, чтобы рабочие папки могли использовать AD FS. Так как вы настраиваете AD FS, самое время выполнить этот шаг.  
   
 Настройка отношений доверия с проверяющей стороной:  
@@ -101,7 +104,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  На странице **Настройка URL-адреса** нажмите кнопку **Далее**.  
   
-8. На **настроить идентификаторы** странице, добавьте следующий идентификатор: **https://windows-server-work-folders/V1**. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
+8. На **настроить идентификаторы** странице, добавьте следующий идентификатор: `https://windows-server-work-folders/V1`. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
   
 9. На странице "Выбор политики контроля доступа" выберите **Разрешить всем** и нажмите кнопку **Далее**.  
   
@@ -131,7 +134,8 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 18. Нажмите кнопку **Готово**. На вкладке "Правила преобразования выдачи" будет указано правило WorkFolders. Нажмите кнопку **ОК**.  
   
-### <a name="set-relying-part-trust-options"></a>Настройка параметров отношений доверия с проверяющей стороной  
+### <a name="set-relying-part-trust-options"></a>Настройка параметров отношений доверия с проверяющей стороной
+
 После настройки отношений доверия с проверяющей стороной для AD FS необходимо завершить настройку путем выполнения пяти команд в Windows PowerShell. Эти команды настраивают параметры, которые нужны рабочим папкам для успешного обмена данными с AD FS и не могут быть настроены через пользовательский интерфейс. Речь идет о следующих параметрах:  
   
 -   включение использования веб-маркеров JSON (JWT);  
@@ -154,7 +158,8 @@ Set-ADFSRelyingPartyTrust -TargetIdentifier "https://windows-server-work-folders
 Grant-AdfsApplicationPermission -ServerRoleIdentifier "https://windows-server-work-folders/V1" -AllowAllRegisteredClients -ScopeNames openid,profile  
 ```  
   
-## <a name="enable-workplace-join"></a>Включение Workplace Join  
+## <a name="enable-workplace-join"></a>Включение Workplace Join
+
 Включать Workplace Join не обязательно, но это может быть полезным, если вам требуется предоставить пользователям возможность использовать их персональные устройства для доступа к рабочим ресурсам.  
   
 Чтобы включить регистрацию устройств для Workplace Join, необходимо выполнить следующие команды Windows PowerShell, которые настроят регистрацию устройств и установят глобальную политику проверки подлинности:  
@@ -165,7 +170,8 @@ Initialize-ADDeviceRegistration -ServiceAccountName <your AD FS service account>
 Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true   
 ```  
   
-## <a name="export-the-ad-fs-certificate"></a>Экспорт сертификата AD FS  
+## <a name="export-the-ad-fs-certificate"></a>Экспорт сертификата AD FS
+
 Далее экспортируйте самозаверяющий сертификат AD FS, чтобы установить его на следующие компьютеры в тестовой среде:  
   
 -   сервер, используемый для рабочих папок;  
@@ -194,7 +200,7 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 8.  Разверните папку **Console Root\Certificates\(Local Computer)\Personal\Certificates**.  
   
-9.  Щелкните правой кнопкой мыши **Сертификат AD FS**, нажмите **Все задачи**, а затем — **Экспорт...**.  
+9.  Щелкните правой кнопкой мыши **Сертификат AD FS**, нажмите **Все задачи**, а затем — **Экспорт...** .  
   
 10. Откроется мастер экспорта сертификатов. Выберите **Да, экспортировать закрытый ключ**.  
   
@@ -206,7 +212,8 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 Процесс установки сертификата описан далее в рамках процедуры развертывания.  
   
-## <a name="manage-the-private-key-setting"></a>Управление настройкой закрытого ключа  
+## <a name="manage-the-private-key-setting"></a>Управление настройкой закрытого ключа
+
 Вам необходимо предоставить учетной записи службы AD FS разрешение на доступ к закрытому ключу нового сертификата. Вам снова потребуется предоставить это разрешение при замене сертификата обмена данными после истечения срока его действия. Чтобы предоставить разрешение, сделайте следующее:  
   
 1.  Нажмите кнопку **Пуск** и выберите команду **Выполнить**.  
@@ -237,14 +244,13 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 Если у вас нет параметра для управления закрытыми ключами, может потребоваться выполнить следующую команду: `certutil -repairstore my *`  
   
-## <a name="verify-that-ad-fs-is-operational"></a>Проверка работоспособности AD FS  
-Чтобы Проверка работоспособности AD FS, откройте окно браузера и перейдите к https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml 
+## <a name="verify-that-ad-fs-is-operational"></a>Проверка работоспособности AD FS
+
+Чтобы Проверка работоспособности AD FS, откройте окно браузера и перейдите к `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`, изменив URL-адрес в соответствии с вашей средой.
   
 В окне браузера отобразятся метаданные сервера федерации без форматирования. Если вы видите данные без ошибок или предупреждений SSL, ваш сервер федерации работает.  
   
 Далее: [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
   
 ## <a name="see-also"></a>См. также  
-[Обзор рабочих папок](Work-Folders-Overview.md)  
-  
-
+[Обзор рабочих папок](Work-Folders-Overview.md)

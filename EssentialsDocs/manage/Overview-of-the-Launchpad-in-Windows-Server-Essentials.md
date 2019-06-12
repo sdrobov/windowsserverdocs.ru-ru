@@ -12,12 +12,12 @@ ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9c240320d990652a4669499d99c1fc3eba9e06fa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4dd32d57f6f36bdbf94c763fe0cbd1f37ff990b8
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883595"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433109"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Обзор Launchpad в Windows Server Essentials
 
@@ -29,20 +29,20 @@ ms.locfileid: "59883595"
   
  Использование панели запуска Windows Server Essentials поддерживают следующие операционные системы Windows:  
   
--   **Windows 8**: все выпуски.  
+- **Windows 8**: все выпуски.  
   
--   **Windows 7**: все выпуски.  
--   **Windows 10**: все выпуски. 
+- **Windows 7**: все выпуски.  
+- **Windows 10**: все выпуски. 
   
- Следующие операционные системы Windows не поддерживают использование панели запуска Windows Server Essentials:  
+  Следующие операционные системы Windows не поддерживают использование панели запуска Windows Server Essentials:  
   
--   **Дополнительные серверы**: панель запуска Windows Server Essentials нельзя использовать на других компьютерах под управлением операционной системы Windows Server.  
+- **Дополнительные серверы**: панель запуска Windows Server Essentials нельзя использовать на других компьютерах под управлением операционной системы Windows Server.  
   
- Содержание раздела:  
+  Содержание раздела:  
   
--   [Использовать панель запуска](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
+- [Использовать панель запуска](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Launchpad)  
   
--   [Использование панели запуска на компьютере Mac](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
+- [Использование панели запуска на компьютере Mac](Overview-of-the-Launchpad-in-Windows-Server-Essentials.md#BKMK_Mac)  
   
 ##  <a name="BKMK_Launchpad"></a> Использовать панель запуска  
  В панели запуска Windows Server Essentials доступны следующие сведения и ссылки.  
@@ -50,13 +50,13 @@ ms.locfileid: "59883595"
 ### <a name="backup"></a>Резервное копирование  
  Щелкните элемент **Архивация** , чтобы открыть **Свойства архивации** для данного компьютера. На странице **Свойства архивации** можно выполнить следующие действия:  
   
--   Запуск и остановка архивации.  
+- Запуск и остановка архивации.  
   
--   Просмотр состояния и сведений о последней архивации.  
+- Просмотр состояния и сведений о последней архивации.  
   
--   Указание способа управления питанием компьютера при выполнении архивации.  
+- Указание способа управления питанием компьютера при выполнении архивации.  
   
- Сведения об использовании панели запуска для архивации данных компьютера, см. в разделе [Управление архивацией клиента](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
+  Сведения об использовании панели запуска для архивации данных компьютера, см. в разделе [Управление архивацией клиента](Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md).  
   
 ### <a name="remote-web-access"></a>Удаленный веб-доступ  
  Щелкните элемент **Удаленный веб-доступ**, чтобы открыть сайт удаленного веб-доступа в веб-браузере. Сайт удаленного веб-доступа позволяет подключиться к другим компьютерам и получить доступ к некоторым сетевым ресурсам из офиса или из любого удаленного расположения с компьютера, подключенного к сети Интернет. Дополнительные сведения об удаленном веб-доступе см. в разделе [Manage Remote Web Access](Manage-Remote-Web-Access-in-Windows-Server-Essentials.md).  

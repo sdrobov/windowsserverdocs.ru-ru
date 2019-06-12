@@ -13,16 +13,16 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: 8af3a389ec726bbb5ebd62db57d9b3a9861ac63f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 792c9320f6976a4fc7f2ccd235f66daa0cb19b19
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890965"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805188"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Развертывание двух узлов дисковых пространств масштабируемого файлового сервера для хранилища UPD в Azure
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2019 г., Windows Server 2016
 
 Службы удаленных рабочих столов (RDS) требуется присоединенных к домену файловый сервер для дисков профилей пользователей (UPD). Для развертывания присоединенных к домену масштабируемого файлового сервера высокой доступности (SOFS) в Azure, используйте дисковые пространства с Windows Server 2016. Если вы не знакомы с диски UPD или служб удаленных рабочих столов, ознакомьтесь с [Добро пожаловать в службы удаленных рабочих столов](welcome-to-rds.md).
 
@@ -66,7 +66,7 @@ ms.locfileid: "59890965"
       - Используйте автоматически созданную виртуальную сеть.
       - Выполните шаги по установке AD DS.
 5. Настройка узлов кластера файловых серверов. Это можно сделать путем развертывания [Windows Server 2016 хранилище пробелы прямой кластера масштабируемых файловых СЕРВЕРОВ шаблона Azure](https://azure.microsoft.com/resources/templates/301-storage-spaces-direct/) или выполнив следующие шаги 6 – 11, чтобы развернуть вручную.
-5. Чтобы вручную настроить узлов кластера файловых серверов:
+6. Чтобы вручную настроить узлов кластера файловых серверов:
    1. Создайте первый узел. 
       1. Создайте виртуальную машину из образа Windows Server 2016. (Щелкните **New > виртуальные машины > Windows Server 2016.** Выберите **Resource Manager**, а затем нажмите кнопку **создать**.)
       2. Настройте базовую конфигурацию следующим образом:
@@ -80,59 +80,59 @@ ms.locfileid: "59890965"
    2. Создайте второй узел. Повторите шаг выше со следующими изменениями:
       - Имя: my-fsn2
       - Высокая доступность — выберите необходимую группу доступности, созданного ранее.  
-6. [Подключить диски данных](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) на узел кластера виртуальных машин в соответствии с вашей пользователя должна (как показано в таблице выше). После данных диски создаются и подключен к виртуальной Машине, задайте **кэширования узла** для **None**.
-7. Настройка IP-адреса для всех виртуальных машин для **статических**. 
+7. [Подключить диски данных](https://azure.microsoft.com/documentation/articles/virtual-machines-windows-attach-disk-portal/) на узел кластера виртуальных машин в соответствии с вашей пользователя должна (как показано в таблице выше). После данных диски создаются и подключен к виртуальной Машине, задайте **кэширования узла** для **None**.
+8. Настройка IP-адреса для всех виртуальных машин для **статических**. 
    1. В группе ресурсов, выберите виртуальную Машину, а затем нажмите кнопку **сетевые интерфейсы** (в разделе **параметры**). Выберите перечисленные сетевой интерфейс и нажмите кнопку **IP-конфигурации**. Выберите перечисленные IP-конфигурации, выберите **статический**, а затем нажмите кнопку **Сохранить**.
    2. Обратите внимание, домен контроллера my-для нашего примера частный IP-адрес (10.x.x.x).
-8. Значение основной адрес DNS-сервера на сетевые интерфейсы виртуальных машин для узлов кластера сервера Мои контроллера домена. Выберите виртуальную Машину и нажмите кнопку **сетевых интерфейсов > DNS-серверы > пользовательская служба DNS**. Введите частный IP-адрес, указанный выше и нажмите кнопку **Сохранить**.
-9. Создание [учетной записи хранения Azure, чтобы быть в облако-свидетель](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness). (Если вы используете соответствующих инструкциях, остановитесь, когда вы сможете «Настройка облака следящего сервера с отработки отказа кластера диспетчер графическим интерфейсом пользователя» — мы сделаем этот шаг ниже.)
-10. Настройте дисковые пространства файлового сервера. Подключиться к узлу виртуальной Машины и запустите следующие командлеты Windows PowerShell.
-   1. Установка компонента отказоустойчивости кластеров и компонент сервера файл на виртуальных машинах узла кластера сервера два файла:
+9. Значение основной адрес DNS-сервера на сетевые интерфейсы виртуальных машин для узлов кластера сервера Мои контроллера домена. Выберите виртуальную Машину и нажмите кнопку **сетевых интерфейсов > DNS-серверы > пользовательская служба DNS**. Введите частный IP-адрес, указанный выше и нажмите кнопку **Сохранить**.
+10. Создание [учетной записи хранения Azure, чтобы быть в облако-свидетель](https://docs.microsoft.com/windows-server/failover-clustering/deploy-cloud-witness). (Если вы используете соответствующих инструкциях, остановитесь, когда вы сможете «Настройка облака следящего сервера с отработки отказа кластера диспетчер графическим интерфейсом пользователя» — мы сделаем этот шаг ниже.)
+11. Настройте дисковые пространства файлового сервера. Подключиться к узлу виртуальной Машины и запустите следующие командлеты Windows PowerShell.
+    1. Установка компонента отказоустойчивости кластеров и компонент сервера файл на виртуальных машинах узла кластера сервера два файла:
 
-      ```powershell
-      $nodes = ("my-fsn1", "my-fsn2")
-      icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
-      icm $nodes {Install-WindowsFeature FS-FileServer} 
-      ```
-   2. Проверка виртуальных машин узла кластера и создание двух узлов кластера масштабируемых файловых СЕРВЕРОВ:
+       ```powershell
+       $nodes = ("my-fsn1", "my-fsn2")
+       icm $nodes {Install-WindowsFeature Failover-Clustering -IncludeAllSubFeature -IncludeManagementTools} 
+       icm $nodes {Install-WindowsFeature FS-FileServer} 
+       ```
+    2. Проверка виртуальных машин узла кластера и создание двух узлов кластера масштабируемых файловых СЕРВЕРОВ:
 
-      ```powershell
-      Test-Cluster -node $nodes
-      New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
-      ``` 
-   3. Настройте облако-свидетель. Использование cloud следящий сервер хранилища учетной записи имени и ключа.
+       ```powershell
+       Test-Cluster -node $nodes
+       New-Cluster -Name MY-CL1 -Node $nodes –NoStorage –StaticAddress [new address within your addr space]
+       ``` 
+    3. Настройте облако-свидетель. Использование cloud следящий сервер хранилища учетной записи имени и ключа.
 
-      ```powershell
-      Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
-      ```
-   4. Включение локальных дисковых.
+       ```powershell
+       Set-ClusterQuorum –CloudWitness –AccountName <StorageAccountName> -AccessKey <StorageAccountAccessKey> 
+       ```
+    4. Включение локальных дисковых.
 
-      ```powershell
-      Enable-ClusterS2D 
-      ```
+       ```powershell
+       Enable-ClusterS2D 
+       ```
       
-   5. Создание тома виртуального диска.
+    5. Создание тома виртуального диска.
 
-      ```powershell
-      New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
-      ```
-      Чтобы просмотреть сведения о общий том кластера в кластере масштабируемых файловых СЕРВЕРОВ, выполните следующий командлет:
+       ```powershell
+       New-Volume -StoragePoolFriendlyName S2D* -FriendlyName VDisk01 -FileSystem CSVFS_REFS -Size 120GB 
+       ```
+       Чтобы просмотреть сведения о общий том кластера в кластере масштабируемых файловых СЕРВЕРОВ, выполните следующий командлет:
 
-      ```powershell
-      Get-ClusterSharedVolume
-      ```
+       ```powershell
+       Get-ClusterSharedVolume
+       ```
    
-   6. Создание масштабируемого файлового сервера (SOFS):
+    6. Создание масштабируемого файлового сервера (SOFS):
 
-      ```powershell
-      Add-ClusterScaleOutFileServerRole -Name my-sofs1 -Cluster MY-CL1
-      ```
+       ```powershell
+       Add-ClusterScaleOutFileServerRole -Name my-sofs1 -Cluster MY-CL1
+       ```
 
-   7. Создайте новый файловый ресурс SMB в кластере масштабируемых файловых СЕРВЕРОВ.
+    7. Создайте новый файловый ресурс SMB в кластере масштабируемых файловых СЕРВЕРОВ.
 
-      ```powershell
-      New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
-      New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
-      ```
+       ```powershell
+       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
+       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
+       ```
 
-Теперь у вас есть общую папку в &#92;\my-sofs1\UpdStorage, который можно использовать для хранилища UPD при вы [включить UPD](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) для пользователей. 
+Теперь у вас есть общую папку в `\\my-sofs1\UpdStorage`, который можно использовать для хранилища UPD при вы [включить UPD](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) для пользователей. 

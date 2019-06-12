@@ -12,12 +12,12 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1b78432ca92028bc96b2cbfc9fa40196f61e8bf8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dded002df4ed0bbd70c549a8841b769a77f2fd6a
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833705"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433543"
 ---
 # <a name="hosted-windows-server-essentials"></a>Размещенный сервер Windows Server Essentials
 
@@ -45,89 +45,89 @@ ms.locfileid: "59833705"
   
  Обращайте внимание на следующие аспекты:  
   
-1.  Необходимо пропускать начальную настройку (IC); для этого нужно создать файл SkipIC.txt в корне любого диска. После установки сервера и перед IC нажмите комбинацию клавиш Shift+F10 для вызова окна cmd и создайте файл a SkipIC.txt на диске C:/. После настройки не забудьте удалить файл SkipIC.txt.  
+1. Необходимо пропускать начальную настройку (IC); для этого нужно создать файл SkipIC.txt в корне любого диска. После установки сервера и перед IC нажмите комбинацию клавиш Shift+F10 для вызова окна cmd и создайте файл a SkipIC.txt на диске C:/. После настройки не забудьте удалить файл SkipIC.txt.  
   
-2.  Если необходимо выполнить развертывание Windows Server Essentials на диске объемом менее 90 ГБ, следует добавить раздел реестра, перед sysprep:  
+2. Если необходимо выполнить развертывание Windows Server Essentials на диске объемом менее 90 ГБ, следует добавить раздел реестра, перед sysprep:  
   
-    ```  
-    %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v HWRequirementChecks /t REG_DWORD /d 0 /f  
-    ```  
+   ```  
+   %systemroot%\system32\reg.exe add "HKLM\Software\microsoft\windows server\setup" /v HWRequirementChecks /t REG_DWORD /d 0 /f  
+   ```  
   
- После sysprep можно воспользоваться образом диска, подготовленным командой sysprep, или запечатать его обратно в Install.wim для нового развертывания.  
+   После sysprep можно воспользоваться образом диска, подготовленным командой sysprep, или запечатать его обратно в Install.wim для нового развертывания.  
   
- Если применяется диспетчер виртуальных машин, можно создать шаблон, используя запущенный экземпляр. При создании шаблона будет выполнена команда sysprep по отношению к запущенному экземпляру, и машина будет выключена. После сохранения в библиотеку можно загружать экземпляр в зависимости от конкретного случая.  
+   Если применяется диспетчер виртуальных машин, можно создать шаблон, используя запущенный экземпляр. При создании шаблона будет выполнена команда sysprep по отношению к запущенному экземпляру, и машина будет выключена. После сохранения в библиотеку можно загружать экземпляр в зависимости от конкретного случая.  
   
 ##  <a name="BKMK_automatedeployment"></a> Как автоматизировать развертывание?  
  После получения настроенного образа пользователь может выполнить развертывание с помощью своего собственного образа. Для выполнения полуавтоматической установки необходимо предоставить / развернуть файл unattend.xml для установки WinPE. Чтобы сделать полностью автоматической установки, необходимо также предоставить файл cfg.ini для начальной настройки Windows Server Essentials.  
   
-1.  Выполнение только автоматической установки WinPE. Будет выполнена автоматическая установка только WinPE, которая будет остановлена перед начальной настройкой, чтобы пользователи смогли ввести информацию об организации, домене и администраторе после RDP в сеанс сервера. Выполните указанные ниже действия.  
+1. Выполнение только автоматической установки WinPE. Будет выполнена автоматическая установка только WinPE, которая будет остановлена перед начальной настройкой, чтобы пользователи смогли ввести информацию об организации, домене и администраторе после RDP в сеанс сервера. Выполните указанные ниже действия.  
   
-    1.  Предоставьте файл Windows unattend.xml. Выполните [Windows 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) для создания файла и введите всю необходимую информацию, включая имя сервера, ключи продуктов и пароль администратора. В разделе "Microsoft-Windows-Setup" файла unattend.xml укажите приведенные ниже данные.  
+   1.  Предоставьте файл Windows unattend.xml. Выполните [Windows 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) для создания файла и введите всю необходимую информацию, включая имя сервера, ключи продуктов и пароль администратора. В разделе "Microsoft-Windows-Setup" файла unattend.xml укажите приведенные ниже данные.  
   
-        ```  
-        <InstallFrom>  
-                 <MetaData>  
-                     <Key>IMAGE/WINDOWS/EDITIONID</Key>  
-                     <Value>ServerSolution</Value>  
-                 </MetaData>  
-                 <MetaData>  
-                     <Key>IMAGE/WINDOWS/INSTALLATIONTYPE</Key>  
-                     <Value>Server</Value>  
-                 </MetaData>  
-           </InstallFrom>  
-        ```  
+       ```  
+       <InstallFrom>  
+                <MetaData>  
+                    <Key>IMAGE/WINDOWS/EDITIONID</Key>  
+                    <Value>ServerSolution</Value>  
+                </MetaData>  
+                <MetaData>  
+                    <Key>IMAGE/WINDOWS/INSTALLATIONTYPE</Key>  
+                    <Value>Server</Value>  
+                </MetaData>  
+          </InstallFrom>  
+       ```  
   
-    2.  Порт RDP 3389 должен быть открыт на общедоступный IP-адрес, таким образом, клиент может использовать администратора и пароль, указанный в файле unattend.xml для протокола удаленного рабочего СТОЛА на сервер, чтобы завершить первоначальную настройку.  
+   2.  Порт RDP 3389 должен быть открыт на общедоступный IP-адрес, таким образом, клиент может использовать администратора и пароль, указанный в файле unattend.xml для протокола удаленного рабочего СТОЛА на сервер, чтобы завершить первоначальную настройку.  
   
-    > [!NOTE]
-    >  Если не менять пароль, задаваемый по умолчанию, установка сервера будет приостановлена и появится окно с предложением ввести пароль.**Примечание** Конечные пользователи должны использовать существующую по умолчанию учетную запись администратора для входа на сервер и выполнения начальной настройки.  
+   > [!NOTE]
+   >  Если не менять пароль, задаваемый по умолчанию, установка сервера будет приостановлена и появится окно с предложением ввести пароль.**Примечание** Конечные пользователи должны использовать существующую по умолчанию учетную запись администратора для входа на сервер и выполнения начальной настройки.  
   
- Если используется диспетчер виртуальных машин, можно задать пароль администратора в консоли при создании нового экземпляра из шаблона.  
+   Если используется диспетчер виртуальных машин, можно задать пароль администратора в консоли при создании нового экземпляра из шаблона.  
   
-1.  Выполнение полностью автоматической установки и автоматической начальной настройки. Выполните указанные ниже действия.  
+2. Выполнение полностью автоматической установки и автоматической начальной настройки. Выполните указанные ниже действия.  
   
-    1.  Если развертывание начинается с установки WinPE, создайте файл unattend.xml, как описано выше.  
+   1.  Если развертывание начинается с установки WinPE, создайте файл unattend.xml, как описано выше.  
   
-    2.  См. раздел Windows Server Essentials ADK, озаглавленном [Создание файла Cfg.ini](https://technet.microsoft.com/library/jj200150), для создания файла cfg.ini.  
+   2.  См. раздел Windows Server Essentials ADK, озаглавленном [Создание файла Cfg.ini](https://technet.microsoft.com/library/jj200150), для создания файла cfg.ini.  
   
-    3.  Предоставьте информацию в [InitialConfiguration].  
+   3.  Предоставьте информацию в [InitialConfiguration].  
   
-        ```  
-        WebDomainName=yourdomainname  
-        TrustedCertFileName=c:\cert\a.pfx  
-        TrustedCertPassword=Enteryourpassword  
-        EnableVPN=true  
-        EnableRWA=true  
-        ; Provide all information so that after setup is complete, your customer can use your domain name to visit the server directly with the admin/user information you provide in the [InitialConfiguration] section.  
+       ```  
+       WebDomainName=yourdomainname  
+       TrustedCertFileName=c:\cert\a.pfx  
+       TrustedCertPassword=Enteryourpassword  
+       EnableVPN=true  
+       EnableRWA=true  
+       ; Provide all information so that after setup is complete, your customer can use your domain name to visit the server directly with the admin/user information you provide in the [InitialConfiguration] section.  
   
-        VpnIPv4StartAddress=<IPV4Address>  
-        VpnIPv4EndAddress=<IPV4Address>  
-        VpnBaseIPv6Address=<IPV6Address>  
-        VpnIPv6PrefixLength=<number>  
-        ; Provide this information. IPv4StartAddress and IPv4Endaddress are required so that your VPN client can acquire valid IP through this range.  
+       VpnIPv4StartAddress=<IPV4Address>  
+       VpnIPv4EndAddress=<IPV4Address>  
+       VpnBaseIPv6Address=<IPV6Address>  
+       VpnIPv6PrefixLength=<number>  
+       ; Provide this information. IPv4StartAddress and IPv4Endaddress are required so that your VPN client can acquire valid IP through this range.  
   
-        IPv4DNSForwarder=<IPV4Address,IPV4Address,Â¦>  
-        IPv6DNSForwarder=<IPV6Address,IPV6Address,Â¦>  
-        ; Provide this information as needed according to your network environment settings.  
-        ```  
+       IPv4DNSForwarder=<IPV4Address,IPV4Address,Â¦>  
+       IPv6DNSForwarder=<IPV6Address,IPV6Address,Â¦>  
+       ; Provide this information as needed according to your network environment settings.  
+       ```  
   
-    4.  Предоставьте информацию в [PostOSInstall].  
+   4.  Предоставьте информацию в [PostOSInstall].  
   
-        ```  
-        IsHosted=true   
-        ; Must have, this will prevent Initial Configure webpage available for other computers under same subnet.  
+       ```  
+       IsHosted=true   
+       ; Must have, this will prevent Initial Configure webpage available for other computers under same subnet.  
   
-        StaticIPv4Address=<IPV4Address>  
-        StaticIPv4Gateway=<IPV4Address>  
-        StaticIPv6Address=<IPV6Address>  
-        StaticIPv6SubnetPrefixLength=<number>  
-        StaticIPv6Gateway=<IPV6Address>  
-        ; All these are optional if you have DHCP Server Service on the subnet, otherwise provide static IP here.  
-        ```  
+       StaticIPv4Address=<IPV4Address>  
+       StaticIPv4Gateway=<IPV4Address>  
+       StaticIPv6Address=<IPV6Address>  
+       StaticIPv6SubnetPrefixLength=<number>  
+       StaticIPv6Gateway=<IPV6Address>  
+       ; All these are optional if you have DHCP Server Service on the subnet, otherwise provide static IP here.  
+       ```  
   
-    5.  Если указать параметр WebDomainName, убедитесь, что запись DNS также обновляется для указания s общедоступный IP-адрес сервера.  
+   5.  Если указать параметр WebDomainName, убедитесь, что запись DNS также обновляется для указания s общедоступный IP-адрес сервера.  
   
-    6.  Если параметр WebDomainName не задается, необходимо открыть порт 3389, чтобы клиенты могли использовать RDP для подключения к серверу и завершения настройки VPN.  
+   6.  Если параметр WebDomainName не задается, необходимо открыть порт 3389, чтобы клиенты могли использовать RDP для подключения к серверу и завершения настройки VPN.  
   
 > [!NOTE]
 >  Убедитесь, что часовой пояс сервера узла виртуальной Машины и виртуальной Машины Windows Server Essentials не отличаются. В противном случае могут возникать различные ошибки (может произойти сбой начальной настройки при выполнении задач, связанных с сертификатом; сертификат может не работать в течение нескольких часов после установки; информация об устройстве может не обновляться надлежащим образом и пр.).  
@@ -140,61 +140,61 @@ ms.locfileid: "59833705"
  Подключение к VPN можно выполнить во время автоматического развертывания с помощью сценария Windows PowerShell, либо же его можно установить с помощью мастера после начальной настройки.  
   
 
--   Инструкции по подключению VPN во время автоматической настройки приведены в разделе [How do I automate the deployment?](Hosted-Windows-Server-Essentials.md#BKMK_automatedeployment) данного документа.  
+- Инструкции по подключению VPN во время автоматической настройки приведены в разделе [How do I automate the deployment?](Hosted-Windows-Server-Essentials.md#BKMK_automatedeployment) данного документа.  
 
--   Инструкции по подключению VPN во время автоматической настройки приведены в разделе [How do I automate the deployment?](../install/Hosted-Windows-Server-Essentials.md#BKMK_automatedeployment) данного документа.  
+- Инструкции по подключению VPN во время автоматической настройки приведены в разделе [How do I automate the deployment?](../install/Hosted-Windows-Server-Essentials.md#BKMK_automatedeployment) данного документа.  
 
   
--   Чтобы подключить VPN с помощью сценария Windows PowerShell, выполните следующий командлет с правами администратора и предоставьте всю необходимую информацию.  
+- Чтобы подключить VPN с помощью сценария Windows PowerShell, выполните следующий командлет с правами администратора и предоставьте всю необходимую информацию.  
   
-    ```  
-    ##  
-    ## To configure external domain and SSL certificate (if not yet done in unattended Initial Configuration).  
-    ##  
+  ```  
+  ##  
+  ## To configure external domain and SSL certificate (if not yet done in unattended Initial Configuration).  
+  ##  
   
-    $myExternalDomainName = 'remote.contoso.com';   ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
-    $mySslCertificateFile = 'C:\ssl.pfx';   ## full path to SSL certificate file  
-    $mySslCertificatePassword = ConvertTo-SecureString '******';   ## password for private key of the SSL certificate  
-    $skipCertificateVerification = $true;   ## whether or not, skip verification for the SSL certificate  
+  $myExternalDomainName = 'remote.contoso.com';   ## corresponds to A or AAAA DNS record(s) that can be resolved on Internet and routed to the server  
+  $mySslCertificateFile = 'C:\ssl.pfx';   ## full path to SSL certificate file  
+  $mySslCertificatePassword = ConvertTo-SecureString '******';   ## password for private key of the SSL certificate  
+  $skipCertificateVerification = $true;   ## whether or not, skip verification for the SSL certificate  
   
-    Add-Type -AssemblyName 'Wssg.Web.DomainManagerObjectModel';  
-    [Microsoft.WindowsServerSolutions.RemoteAccess.Domains.DomainConfigurationHelper]::SetDomainNameAndCertificate($myExternalDomainName,$mySslCertificateFile,$mySslCertificatePassword,$skipCertificateVerification);  
-    ##  
-    ## To install VPN with static IPv4 pool (and allow all existing users to establish VPN).  
-    ##  
+  Add-Type -AssemblyName 'Wssg.Web.DomainManagerObjectModel';  
+  [Microsoft.WindowsServerSolutions.RemoteAccess.Domains.DomainConfigurationHelper]::SetDomainNameAndCertificate($myExternalDomainName,$mySslCertificateFile,$mySslCertificatePassword,$skipCertificateVerification);  
+  ##  
+  ## To install VPN with static IPv4 pool (and allow all existing users to establish VPN).  
+  ##  
   
-    Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyToExistingUsers;  
-    ```  
+  Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyToExistingUsers;  
+  ```  
   
- Если установить подключение к VPN до передачи сервера клиентам невозможно, необходимо сделать порт сервера 3389 доступным по Интернету, чтобы конечные пользователи могли использовать RDP для подключения к серверу и самостоятельно выполнять настройку.  
+  Если установить подключение к VPN до передачи сервера клиентам невозможно, необходимо сделать порт сервера 3389 доступным по Интернету, чтобы конечные пользователи могли использовать RDP для подключения к серверу и самостоятельно выполнять настройку.  
   
- Ниже представлены две стандартные топологии сети сервера, а также способы настройки VPN/удаленного веб-доступа (RWA):  
+  Ниже представлены две стандартные топологии сети сервера, а также способы настройки VPN/удаленного веб-доступа (RWA):  
   
--   Топология 1 (рекомендуемая)  
+- Топология 1 (рекомендуемая)  
   
-    -   Сервер в отдельной виртуальной сети под устройством NAT.  
+  -   Сервер в отдельной виртуальной сети под устройством NAT.  
   
-    -   Служба DHCP подключена в виртуальной сети, либо серверу присвоен статический IP-адрес.  
+  -   Служба DHCP подключена в виртуальной сети, либо серверу присвоен статический IP-адрес.  
   
-    -   Порт сервера 443 доступен с порта 443 общего IP-адреса.  
+  -   Порт сервера 443 доступен с порта 443 общего IP-адреса.  
   
-    -   Для порта 443 разрешен сквозной режим VPN.  
+  -   Для порта 443 разрешен сквозной режим VPN.  
   
-    -   Пул адресов IPv4 VPN должен располагаться в пределах одной подсети адреса сервера.  
+  -   Пул адресов IPv4 VPN должен располагаться в пределах одной подсети адреса сервера.  
   
-    -   Каждую секунду серверу должен назначаться статический IP-адрес в пределах одной сети, но вне пула адресов VPN.  
+  -   Каждую секунду серверу должен назначаться статический IP-адрес в пределах одной сети, но вне пула адресов VPN.  
   
--   Топология 2  
+- Топология 2  
   
-    -   У сервера имеется частный IP-адрес.  
+  -   У сервера имеется частный IP-адрес.  
   
-    -   Порт 443 на сервере доступен с общедоступного IP-адрес s порт 443.  
+  -   Порт 443 на сервере доступен с общедоступного IP-адрес s порт 443.  
   
-    -   Для порта 443 разрешен сквозной режим VPN.  
+  -   Для порта 443 разрешен сквозной режим VPN.  
   
-    -   Пул адресов IPv4 VPN должен располагаться в другом диапазоне адресов сервера.  
+  -   Пул адресов IPv4 VPN должен располагаться в другом диапазоне адресов сервера.  
   
- Топология 2 не предусматривает сценарии со вторым сервером.  
+  Топология 2 не предусматривает сценарии со вторым сервером.  
   
 ## <a name="how-do-i-perform-common-tasks-via-windows-powershell"></a>Выполнение обычных задач посредством Windows PowerShell  
  **Включение удаленного веб-доступа**  
@@ -308,11 +308,11 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
  **Локальная архивация** позволяет регулярно выполнять добавочную архивацию на уровне блоков на отдельный диск. Как поставщик услуг можно подключить виртуальный диск к виртуальной Машине Windows Server Essentials и назначить выполнение архивации сервера на этот виртуальный диск. Виртуальный диск должен находиться на другом диске и виртуальная машина Windows Server Essentials.  
   
--   Если у вас есть другой механизм архивации ВМ Windows Server Essentials, и ваши пользователи видели функцию внутренней архивации сервера Windows Server Essentials не требуется, можно отключить эту функцию и удалить все связанные пользовательского интерфейса из Windows Server Essentials Панель мониторинга. Дополнительные сведения см. в разделе Настройка архивации сервера [документа ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124).  
+- Если у вас есть другой механизм архивации ВМ Windows Server Essentials, и ваши пользователи видели функцию внутренней архивации сервера Windows Server Essentials не требуется, можно отключить эту функцию и удалить все связанные пользовательского интерфейса из Windows Server Essentials Панель мониторинга. Дополнительные сведения см. в разделе Настройка архивации сервера [документа ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
- **Удаленная архивация** позволяет периодически архивировать данные сервера на облачную службу. Можно загрузить и установить Microsoft Azure Backup интеграции модуля для Windows Server Essentials использовать Azure Backup, предоставляемой корпорацией Майкрософт.  
+  **Удаленная архивация** позволяет периодически архивировать данные сервера на облачную службу. Можно загрузить и установить Microsoft Azure Backup интеграции модуля для Windows Server Essentials использовать Azure Backup, предоставляемой корпорацией Майкрософт.  
   
- В случае если вы или ваши пользователи предпочитают другую облачную службу, необходимо выполнить следующие действия:  
+  В случае если вы или ваши пользователи предпочитают другую облачную службу, необходимо выполнить следующие действия:  
   
 1.  Обновите пользовательский интерфейс панели мониторинга Windows Server Essentials, чтобы на ней присутствовала ссылка в предпочтительный облачную службу, вместо значения по умолчанию Azure Backup. Дополнительные сведения см. в разделе "Настройка образа" [документа ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124).  
   
@@ -328,17 +328,17 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
  При выполнении полной архивации данных клиента необходимо учитывать следующие аспекты:  
   
--   Производительность: первоначальная архивация данных клиента может занять много времени в связи с большим объемом данных для загрузки.  
+- Производительность: первоначальная архивация данных клиента может занять много времени в связи с большим объемом данных для загрузки.  
   
--   Стабильность: иногда подключение к Интернету бывает нестабильным со стороны клиента. Архивация данных клиента является возобновляемым процессом, и контрольная точка по умолчанию — 40 ГБ (база данных архивации создает контрольную точку каждый раз, когда происходит архивация данных объемом 40 ГБ). Это значение можно уменьшить, если подключение к Интернету нестабильно.  
+- Стабильность: иногда подключение к Интернету бывает нестабильным со стороны клиента. Архивация данных клиента является возобновляемым процессом, и контрольная точка по умолчанию — 40 ГБ (база данных архивации создает контрольную точку каждый раз, когда происходит архивация данных объемом 40 ГБ). Это значение можно уменьшить, если подключение к Интернету нестабильно.  
   
-    -   Для выполнения манипуляций с контрольными точками на сервере необходимо установить для ключа регистрации HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs значение 1.  
+  -   Для выполнения манипуляций с контрольными точками на сервере необходимо установить для ключа регистрации HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs значение 1.  
   
-    -   Для изменения предельного значения контрольной точки на клиентском устройстве необходимо изменить значение HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold по умолчанию (40 ГБ).  
+  -   Для изменения предельного значения контрольной точки на клиентском устройстве необходимо изменить значение HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold по умолчанию (40 ГБ).  
   
--   Восстановление исходного состояния клиента: поскольку среда предустановки Windows не поддерживает VPN-подключения, функция восстановления исходного состояния клиента недоступна.  
+- Восстановление исходного состояния клиента: поскольку среда предустановки Windows не поддерживает VPN-подключения, функция восстановления исходного состояния клиента недоступна.  
   
- **История файлов** — это функция Windows 8.1 для архивации данных профиля (библиотеки, рабочий стол, контакты, Избранное) в общую сетевую папку. В Windows Server Essentials мы позволяет осуществлять централизованное управление параметрами истории файлов всех клиентов Windows 8.1, присоединенных к Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Можно отключить эту функцию, выполнив действия, описанные в создание файла Cfg.ini части [документа ADK](https://technet.microsoft.com/library/jj200150).  
+  **История файлов** — это функция Windows 8.1 для архивации данных профиля (библиотеки, рабочий стол, контакты, Избранное) в общую сетевую папку. В Windows Server Essentials мы позволяет осуществлять централизованное управление параметрами истории файлов всех клиентов Windows 8.1, присоединенных к Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Можно отключить эту функцию, выполнив действия, описанные в создание файла Cfg.ini части [документа ADK](https://technet.microsoft.com/library/jj200150).  
   
 ### <a name="storage-management"></a>Управление хранилищами  
  [Новая функция управления дисковыми пространствами](https://technet.microsoft.com/library/hh831739.aspx) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Вы также можете присоединить диск iSCSI на Windows Server Essentials для увеличения хранилища.  
@@ -348,61 +348,61 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
  **Развертывание сервера**  
   
--   Развертывание сервера Windows Server Essentials в лабораторной среде.  
+- Развертывание сервера Windows Server Essentials в лабораторной среде.  
   
--   Настройка образа Windows Server Essentials при необходимости.  
+- Настройка образа Windows Server Essentials при необходимости.  
   
--   Автоматизация развертывания Windows Server Essentials с помощью файла автоматической и файл cfg.ini.  
+- Автоматизация развертывания Windows Server Essentials с помощью файла автоматической и файл cfg.ini.  
   
--   Перенос локальных Windows SBS на размещенный Windows Server Essentials.  
+- Перенос локальных Windows SBS на размещенный Windows Server Essentials.  
   
--   Обновление с Windows Server Essentials в Windows Server 2012.  
+- Обновление с Windows Server Essentials в Windows Server 2012.  
   
- **Конфигурация сервера**  
+  **Конфигурация сервера**  
   
--   Настройте повсеместный доступ (VPN, удаленный веб-доступ, DirectAccess).  
+- Настройте повсеместный доступ (VPN, удаленный веб-доступ, DirectAccess).  
   
--   Настройте параметры хранилища и папки сервера.  
+- Настройте параметры хранилища и папки сервера.  
   
--   (Если применимо) настройте параметры архивации сервера, оперативной архивации, архивации данных клиента, истории файлов.  
+- (Если применимо) настройте параметры архивации сервера, оперативной архивации, архивации данных клиента, истории файлов.  
   
--   (Если применимо) настройте и управляйте дисковыми пространствами.  
+- (Если применимо) настройте и управляйте дисковыми пространствами.  
   
--   (Если применимо) настройте интеграцию служб электронной почты (Office 365, размещенная служба Exchange и пр.).  
+- (Если применимо) настройте интеграцию служб электронной почты (Office 365, размещенная служба Exchange и пр.).  
   
--   (Если применимо) настройте сервер мультимедиа.  
+- (Если применимо) настройте сервер мультимедиа.  
   
- **Управление сервером**  
+  **Управление сервером**  
   
--   Управляйте пользователями.  
+- Управляйте пользователями.  
   
--   Настройте и получайте электронные уведомления для оповещений.  
+- Настройте и получайте электронные уведомления для оповещений.  
   
--   В случае ошибки / предупреждения запустите BPA.  
+- В случае ошибки / предупреждения запустите BPA.  
   
--   Настройте пакет мониторинг System Center.  
+- Настройте пакет мониторинг System Center.  
   
--   Настройте функцию восстановления сервера на случай повреждения.  
+- Настройте функцию восстановления сервера на случай повреждения.  
   
- **Взаимодействие с клиентом**  
+  **Взаимодействие с клиентом**  
   
--   Развертывание клиентов через Интернет ((ПК или Mac OS).  
+- Развертывание клиентов через Интернет ((ПК или Mac OS).  
   
--   С помощью панели запуска на клиентском компьютере войдите в общую папку.  
+- С помощью панели запуска на клиентском компьютере войдите в общую папку.  
   
--   Получите доступ к ресурсам сервера через службу удаленного веб-доступа с помощью различных устройств (ПК, телефон, планшет).  
+- Получите доступ к ресурсам сервера через службу удаленного веб-доступа с помощью различных устройств (ПК, телефон, планшет).  
   
--   Приложение My Server для ОС Windows Phone.  
+- Приложение My Server для ОС Windows Phone.  
   
--   (Если применимо) история файлов, архивация и восстановление данных клиента (без BMR), перенаправление папок.  
+- (Если применимо) история файлов, архивация и восстановление данных клиента (без BMR), перенаправление папок.  
   
--   (Если применимо) интеграция служб электронной почты.  
+- (Если применимо) интеграция служб электронной почты.  
   
 ## <a name="where-can-i-get-more-support"></a>Дополнительная информация  
  С документами SDK и ADK можно ознакомиться, перейдя по следующим ссылкам:  
   
--   [ПАКЕТ SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
+- [ПАКЕТ SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
   
--   [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
+- [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
   
- Вы можете оставить отчет об ошибках в разделе Соединение. Для создания журналов необходимо заархивировать папку на сервере и на клиентах, подключенных к серверу: C:\ProgramData\Microsoft\Windows Server\Logs.
+  Вы можете оставить отчет об ошибках в разделе Соединение. Для создания журналов необходимо заархивировать папку на сервере и на клиентах, подключенных к серверу: C:\ProgramData\Microsoft\Windows Server\Logs.

@@ -15,23 +15,23 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 210540846f5d62dfc74a2e629a6b7675ccf9894d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4aaad98cd04c9b07bdea848294e10d9bcb602064
+ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837375"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749552"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>Шаг 7.4. Развертывание сертификатов корневого условного доступа к локальным AD
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 На этом шаге вы развернуть условного доступа корневой сертификат как доверенный корневой сертификат для проверки подлинности VPN в локальной AD.
 
-&#171;  [**Предыдущих:** Шаг 7.3. Настройка политики условного доступа](vpn-config-conditional-access-policy.md)<br>
-&#187; [ **Next:** Шаг 7.5. Создание OMA-DM на основе VPNv2 профилей на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md)
+- [**Предыдущих:** Шаг 7.3. Настройка политики условного доступа](vpn-config-conditional-access-policy.md)
+- [**Далее:** Шаг 7.5. Создание профилей VPNv2 на основе OMA-DM на устройствах с Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-1. На **VPN-подключения** щелкните **скачать сертификат**. 
+1. На **VPN-подключения** выберите **скачать сертификат**. 
    
     ![Загрузить сертификат для условного доступа](../../media/Always-On-Vpn/06.png)
 
@@ -56,16 +56,17 @@ ms.locfileid: "59837375"
     >[!NOTE]
     >По умолчанию **средства управления центра сертификации** установленных серверов центра сертификации. Они могут устанавливаться на других серверах члены как часть **средства администрирования ролей** в диспетчере сервера.
 
-    2.  На VPN-сервер, в меню «Пуск» введите **pkiview.msc** откроется диалоговое окно PKI предприятия.
+    2.  На VPN-сервере, в меню «Пуск» введите **pkiview.msc** откроется диалоговое окно PKI предприятия.
 
     В.  В меню «Пуск» введите **pkiview.msc** откроется диалоговое окно PKI предприятия.
 
     Г.  Щелкните правой кнопкой мыши **PKI предприятия** и выберите **управление AD контейнерами**.
 
-    Г.  Убедитесь, что каждый сертификат gen 1 корневого ЦС Майкрософт VPN находится в каталоге:<ul><li>NTAuthCertificates</li><li>Контейнеру AIA</li><li>Контейнера центров сертификации</li></ul>
+    Г.  Убедитесь, что каждый сертификат gen 1 корневого ЦС Майкрософт VPN находится в каталоге:
+      - NTAuthCertificates
+      - Контейнеру AIA
+      - Контейнера центров сертификации
 
-    
-## <a name="next-step"></a>Дальнейшие действия
-[Шаг 7.5. Создание OMA-DM на основе VPNv2 профилей на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md): На этом этапе можно создать OMA-DM на основе профилей VPNv2, с помощью Intune для развертывания политики конфигурации VPN-устройства. Если вы хотите SCCM или скрипт PowerShell для создания профилей VPNv2, см. в разделе [VPNv2 CSP параметры](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) для получения дополнительных сведений.
+## <a name="next-steps"></a>Следующие шаги
 
----
+[Шаг 7.5. Создание OMA-DM на основе VPNv2 профилей на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md): На этом этапе можно создать OMA-DM на основе профилей VPNv2, с помощью Intune для развертывания политики конфигурации VPN-устройства. Если вы хотите SCCM или скрипт PowerShell для создания профилей VPNv2, см. в разделе [VPNv2 CSP параметры](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) для получения дополнительных сведений.

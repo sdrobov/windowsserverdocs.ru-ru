@@ -13,16 +13,16 @@ ms.topic: article
 ms.assetid: 3bba28d4-23e2-449f-8319-7d2190f68d56
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 31209b3770fb910c843b6fd39d6e76b8672088a9
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: bdb40e39b69e9cc0df805e351e6ed077e14e6872
+ms.sourcegitcommit: d888e35f71801c1935620f38699dda11db7f7aad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266757"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66805056"
 ---
 # <a name="step-2-plan-advanced-directaccess-deployments"></a>Шаг 2 плана Расширенное развертывание DirectAccess
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (полугодовой канал), Windows Server 2016
 
 Следующий шаг для развертывания расширенного DirectAccess на одном сервере с IPv4 и IPv6 после планирования инфраструктуры DirectAccess — планирование параметров в мастере настройки удаленного доступа.  
   

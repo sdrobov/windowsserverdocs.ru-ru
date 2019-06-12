@@ -11,18 +11,27 @@ ms.topic: article
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.date: 05/06/2019
+ms.date: 06/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e2b79a1f914bdbc971299493ca00680e2504fbd3
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 7730790495babf4a70fb5a70ce93464faa86f1e3
+ms.sourcegitcommit: 1102e91571c88c7a1a2e021a6c53af1def7bb0a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476033"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66736530"
 ---
 # <a name="whats-new-for-the-remote-desktop-client-on-android"></a>Новые возможности клиента удаленного рабочего стола на устройстве Android?
 
 Мы регулярно обновляем [клиента удаленного рабочего стола для Android](remote-desktop-android.md), добавляя новые компоненты и устранение проблем. Ознакомьтесь с последними обновлениями ниже.
+
+## <a name="updates-for-version-8171"></a>Обновления для версии 8.1.71
+
+*Дата публикации: 06/05/2019*
+
+- Удалена поддержка версии Android 4.0.3 и 4.0.4.
+- Исправлена проблема, где удаленные ресурсы с тем же именем не правильно.
+- Обновить значок приложения.
+- Незначительные исправления ошибок и улучшения.
 
 ## <a name="updates-for-version-8170"></a>Обновления для версии 8.1.70
 
