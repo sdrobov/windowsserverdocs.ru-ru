@@ -11,19 +11,18 @@
 ## Планирование
 ### [Какой тип установки подойдет именно вам?](plan/installation-options.md)
 ### [Варианты доступа пользователей](plan/user-access-options.md)
-### [Варианты интеграции с Azure](plan/azure-integration-options.md)
 
 ## Развертывание
 ### [Подготовка среды](deploy/prepare-environment.md)
 ### [Установка Windows Admin Center](deploy/install.md)
 ### [Высокая доступность](deploy/high-availability.md)
 
+
 ## Настройка
 ### [Параметры Windows Admin Center](configure/settings.md)
 ### [Управление доступом пользователей и разрешениями](configure/user-access-control.md)
 ### [Применение расширений](configure/using-extensions.md)
-### [Настройка интеграции с Azure](configure/azure-integration.md)
-### [Управление виртуальными машинами Azure с помощью Windows Admin Center](configure/manage-azure-vms.md)
+### [Общие подключения](configure/shared-connections.md)
 
 ## Используйте
 ### [Начало работы](use/get-started.md)
@@ -31,12 +30,25 @@
 ### [Управление гиперконвергентной инфраструктурой](use/manage-hyper-converged.md)
 ### [Управление отказоустойчивыми кластерами](use/manage-failover-clusters.md)
 ### [Управление виртуальными машинами Hyper-V](use/manage-virtual-machines.md)
-### [Настройка служб Azure](use/azure-services.md)
-#### [Защита виртуальных машин Hyper-V с помощью Azure Site Recovery](use/azure-site-recovery.md)
-#### [Обновление серверов с помощью Управления обновлениями Azure](use/azure-update-management.md)
 ### [Ведение журнала](use/logging.md)
-### [Общие инструкции по устранению неполадок](use/troubleshooting.md)
-### [Известные проблемы](use/known-issues.md)
+
+
+## Подключение к Azure
+### [Azure гибридных служб](azure/index.md)
+#### [Служба архивации Azure](azure/azure-backup.md)
+#### [Azure Site Recovery](azure/azure-site-recovery.md)
+#### [Службы синхронизации файлов Azure](azure/azure-file-sync.md)
+#### [Azure Monitor](azure/azure-monitor.md)
+#### [Управление обновлениями в Azure](azure/azure-update-management.md)
+### [Подключение Windows Admin Center в Azure](azure/azure-integration.md)
+### [Развертывание Windows Admin Center в Azure](azure/deploy-wac-in-azure.md)
+### [Управление виртуальными машинами Azure с помощью Windows Admin Center](azure/manage-azure-vms.md)
+
+## Поддержка
+### [Политика поддержки](support/index.md)
+### [Общие инструкции по устранению неполадок](support/troubleshooting.md)
+### [Известные проблемы](support/known-issues.md)
+
 
 ## Расширение
 ### [Обзор расширений](extend/extensibility-overview.md)
@@ -59,10 +71,14 @@
 #### [Использование PowerShell в расширении](extend/guides/powershell.md)
 #### [Руководство по значку CSS](extend/guides/cssicons.md)
 #### [Переход на последнюю версию пакета SDK](extend/guides/migration-guide-0_1-1_0.md)
+#### [Включение обнаружения баннер расширения](extend/guides/extension-discovery-banner.md)
 ### [Публикация расширений](extend/publish-extensions.md)
 ### Практические примеры
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
+#### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+
+

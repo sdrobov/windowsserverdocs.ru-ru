@@ -7,19 +7,18 @@ ms.topic: article
 author: phstee
 ms.author: NedPyle; Danlo; DKruse
 ms.date: 4/14/2017
-ms.openlocfilehash: ed9e9c6e2280aa69408455a111eddb3af7f88750
-ms.sourcegitcommit: d84dc3d037911ad698f5e3e84348b867c5f46ed8
+ms.openlocfilehash: dc8a845a6d352fa03517e2a092c44b6d1c1def4b
+ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66266698"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66811465"
 ---
 # <a name="performance-tuning-for-file-servers"></a>Настройка параметров производительности файловых серверов
 
 Следует правильно выбирать оборудование в соответствии с ожидаемой нагрузкой на файловый сервер и с учетом таких параметров, как средняя и пиковая нагрузка, емкость, планы развития и время отклика. Аппаратные ограничения снижают эффективность программной настройки.
 
 ## <a name="general-tuning-parameters-for-clients"></a>Общие параметры для настройки клиентов
-
 
 Следующие параметры реестра REG\_DWORD могут влиять на производительность клиентских компьютеров, которые взаимодействуют с файловыми серверами SMB:
 
@@ -94,9 +93,9 @@ ms.locfileid: "66266698"
 
     Значение по умолчанию — 10 секунд. Обозначает срок хранения кэша каталогов.
 
-    > [!Note]   Этот параметр управляет кэшированием метаданных каталогов при отсутствии аренды каталогов.
-
-     
+    > [!NOTE]
+    > Этот параметр контролирует кэширование метаданных каталога при отсутствии аренды каталогов.
+     
 
 -   **DirectoryCacheEntrySizeMax**
 
@@ -222,7 +221,7 @@ ms.locfileid: "66266698"
 | FileNotFoundCacheEntriesMax | 32768 | 128     |
 | MaxCmds                     | 32768 | 15      |
 
- 
+ 
 
 Начиная с Windows 8, вы можете настроить многие из этих параметров SMB с помощью командлетов Windows PowerShell **Set-SmbClientConfiguration** и **Set-SmbServerConfiguration**. Кроме того, Windows PowerShell позволяет настраивать параметры, доступные только в реестре.
 

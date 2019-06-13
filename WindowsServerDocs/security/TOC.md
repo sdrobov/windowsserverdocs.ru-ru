@@ -84,6 +84,7 @@
 ### [Аутентификация с открытым ключом устройства, присоединенного к домену](kerberos/domain-joined-device-public-key-authentication.md)
 ### [Ограниченное делегирование Kerberos](kerberos/kerberos-constrained-delegation-overview.md)
 ### [Предотвращение изменения пароля, в котором используются секретные ключи RC4, протоколом Kerberos](kerberos/preventing-kerberos-change-password-that-uses-rc4-secret-keys.md)
+### [Настройка Kerberos для IP-адресов](kerberos/configuring-kerberos-over-ip.md)
 ## [NTLM](kerberos/ntlm-overview.md)
 ## [Пароли](kerberos/passwords-overview.md)
 ## [TLS-SSL (Schannel SSP)](tls/tls-ssl-schannel-ssp-overview.md)

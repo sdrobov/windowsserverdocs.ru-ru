@@ -3,4 +3,7 @@
 ## [Локальные дисковые пространства](../storage/storage-spaces/storage-spaces-direct-overview.md)
 ## [Отказоустойчивая кластеризация](../failover-clustering/failover-clustering-overview.md)
 ## [Программно-конфигурируемая сеть](https://docs.microsoft.com/windows-server/networking/sdn/)
+## [Windows Admin Center](../manage/windows-admin-center/overview.md)
+## [Подключение к Azure](../azure-hybrid-services/index.md)
+## [Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview)
 ## [Программно-определяемый центр обработки данных на основе Windows Server (WSSD)](https://www.microsoft.com/en-us/cloud-platform/software-defined-datacenter)
