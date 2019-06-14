@@ -12,12 +12,12 @@ ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d740b71a2c3b9ed8ddb0ecfae6da2cf7d4f689a5
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: a66f98b0896e706f520aa057b91cce2fe662d22d
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63720416"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433318"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Управление устройствами в Windows Server Essentials
 
@@ -64,13 +64,13 @@ ms.locfileid: "63720416"
   
 #### <a name="to-view-the-status-of-network-computers"></a>Просмотр статуса сетевых компьютеров  
   
-1.  Откройте панель мониторинга Windows Server Essentials.  
+1. Откройте панель мониторинга Windows Server Essentials.  
   
-2.  На панели навигации щелкните **Устройства**.  
+2. На панели навигации щелкните **Устройства**.  
   
-3.  В области списка просмотрите статус всех компьютеров в сети.  
+3. В области списка просмотрите статус всех компьютеров в сети.  
   
- В следующей таблице описаны разные задачи, выполняемые на компьютере, в том числе задачи резервного копирования, которые доступны на панели мониторинга Windows Server Essentials. Некоторые задачи актуальны только для конкретного компьютера, поэтому они видны только при выделении компьютера в списке.  
+   В следующей таблице описаны разные задачи, выполняемые на компьютере, в том числе задачи резервного копирования, которые доступны на панели мониторинга Windows Server Essentials. Некоторые задачи актуальны только для конкретного компьютера, поэтому они видны только при выделении компьютера в списке.  
   
 ### <a name="computer-tasks-in-the-dashboard"></a>Задачи с компьютером, доступные на панели мониторинга  
   

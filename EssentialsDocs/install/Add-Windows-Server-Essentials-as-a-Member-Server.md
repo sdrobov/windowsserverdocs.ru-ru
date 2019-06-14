@@ -12,12 +12,12 @@ ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 413c1d5d3bec7f002b73e9861aa119d495c5cfb2
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 502e54cf719895dd11030cf163159f6cdda47164
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63717124"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66433728"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Добавление Windows Server Essentials в качестве рядового сервера
 
@@ -49,23 +49,23 @@ ms.locfileid: "63717124"
   
 #### <a name="to-join-windows-server-essentials-to-a-workgroup-or-domain"></a>Присоединение Windows Server Essentials к рабочей группе или домену  
   
-1.  После завершения установки Windows Server Essentials на втором сервере закройте мастер настройки Windows Server Essentials.  
+1. После завершения установки Windows Server Essentials на втором сервере закройте мастер настройки Windows Server Essentials.  
   
-2.  В поле **Поиск** введите **System Settings**и в результатах поиска выберите **Просмотр расширенных параметров системы**.  
+2. В поле **Поиск** введите **System Settings**и в результатах поиска выберите **Просмотр расширенных параметров системы**.  
   
-3.  В окне **Свойства системы** перейдите на вкладку **Имя компьютера**.  
+3. В окне **Свойства системы** перейдите на вкладку **Имя компьютера**.  
   
-4.  В окне **Имя компьютера** в разделе **Домен** нажмите кнопку **Изменить**.  
+4. В окне **Имя компьютера** в разделе **Домен** нажмите кнопку **Изменить**.  
   
-5.  В **изменение имени компьютера или домена**в **член** выберите, если вы хотите присоединить сервер под управлением Windows Server Essentials для **рабочей группы** или **Домена**.  
+5. В **изменение имени компьютера или домена**в **член** выберите, если вы хотите присоединить сервер под управлением Windows Server Essentials для **рабочей группы** или **Домена**.  
   
-    -   Чтобы добавить сервер к рабочей группе, введите команду **workgroup**, а затем нажмите кнопку **ОК**.  
+   -   Чтобы добавить сервер к рабочей группе, введите команду **workgroup**, а затем нажмите кнопку **ОК**.  
   
-    -   Чтобы присоединить этот сервер к существующему домену Active Directory, введите имя домена и нажмите кнопку **ОК**.  
+   -   Чтобы присоединить этот сервер к существующему домену Active Directory, введите имя домена и нажмите кнопку **ОК**.  
   
-6.  Чтобы изменения вступили в силу, перезагрузите сервер.  
+6. Чтобы изменения вступили в силу, перезагрузите сервер.  
   
- После присоединения сервера к домену основного сервера s, вы можете настроить Windows Server Essentials, запустив мастер настройки Windows Server Essentials из диспетчера сервера.  
+   После присоединения сервера к домену основного сервера s, вы можете настроить Windows Server Essentials, запустив мастер настройки Windows Server Essentials из диспетчера сервера.  
   
 #### <a name="to-configure-windows-server-essentials-experience-on-a-member-server"></a>Настройка Windows Server Essentials Experience на рядовом сервере  
   
