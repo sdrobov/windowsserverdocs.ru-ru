@@ -15,15 +15,15 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 9f8310baf659810d5d51587bafcc868c59ace61a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852055"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63687276"
 ---
 # <a name="server-role-upgrade-and-migration-matrix-for-windows-server-2016"></a>Матрица обновления и миграции ролей сервера для Windows Server 2016
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 Таблица на этой странице описывает варианты обновления и миграции для ролей сервера, касающиеся перехода на Windows Server 2016. Указания по миграции отдельных ролей см. в статье [Миграция ролей и функций в Windows Server](https://docs.microsoft.com/windows-server/get-started/migrate-roles-and-features). Дополнительные сведения об установке и обновлении см. в статье [Установка, обновление и миграция Windows Server](https://docs.microsoft.com/windows-server/get-started/installation-and-upgrade).
 
