@@ -38,7 +38,7 @@ ms.locfileid: "66462167"
                                         </div>
                                         <div class="cardText">
                                             <h2>Что нового?</h2>
-                                            <p>Узнайте, что&#39;возможности Windows Server</p>
+                                            <p>Узнайте о новых возможностях Windows Server.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -135,8 +135,8 @@ ms.locfileid: "66462167"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h2>Подключение к службам Azure гибридные</h2>
-                                            <p>Соединиться с сервером или кластером Azure гибридных служб для объединения лучшее из локальных и облачных.</p>
+                                            <h2>Подключение к гибридным службам Azure</h2>
+                                            <p>Подключите свой сервер или кластер к гибридным службам Azure, чтобы объединить преимущества локальной и облачной сред.</p>
             </li>
                     <li class="fullSpan">
                     <HR COLOR="purple" SIZE="6" WIDTH="60%">
@@ -280,7 +280,7 @@ ms.locfileid: "66462167"
        <hr width="80%">
             <li>2. <a href="https://docs.microsoft.com/windows-server/failover-clustering/failover-cluster-csvs">Использование общих томов кластера в отказоустойчивом кластере</a></li>
        <hr width="80%">
-            <li>3. <a href="https://docs.microsoft.com/windows-server/failover-clustering/whats-new-in-failover-clustering">Что&#39;s, новые возможности отказоустойчивой кластеризации</a></li>
+            <li>3. <a href="https://docs.microsoft.com/windows-server/failover-clustering/whats-new-in-failover-clustering">Новые возможности отказоустойчивой кластеризации</a></li>
             </ol>
         </td>
     </tr>
@@ -451,7 +451,7 @@ ms.locfileid: "66462167"
             <ol>
             <li>1. <a href="https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings">Параметры реестра протокола TLS</a></li>
        <hr width="80%">
-            <li>2. <a href="https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server">Рекомендации по отключению системных служб в Windows Server 2016 с возможностями рабочего стола </a></li>
+            <li>2. <a href="https://docs.microsoft.com/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server">Руководство по отключению системных служб в Windows Server 2016 с возможностями рабочего стола</a></li>
        <hr width="80%">
             <li>3. <a href="https://docs.microsoft.com/windows-server/security/windows-authentication/credentials-processes-in-windows-authentication">Процедуры с учетными данными в проверке подлинности Windows</a></li>
             </ol>
@@ -619,7 +619,7 @@ ms.locfileid: "66462167"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <h3>Windows Server 2012 и<br> Windows Server 2012 R2</h3>
+                                            <h3>Windows Server 2012 и<br> Windows Server 2012 R2</h3>
                                             <p></p>
                                         </div>
                                     </div>

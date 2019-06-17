@@ -34,13 +34,13 @@
 
 
 ## Подключение к Azure
-### [Azure гибридных служб](azure/index.md)
-#### [Служба архивации Azure](azure/azure-backup.md)
+### [Гибридные службы Azure](azure/index.md)
+#### [Azure Backup](azure/azure-backup.md)
 #### [Azure Site Recovery](azure/azure-site-recovery.md)
-#### [Службы синхронизации файлов Azure](azure/azure-file-sync.md)
+#### [Синхронизация файлов Azure](azure/azure-file-sync.md)
 #### [Azure Monitor](azure/azure-monitor.md)
-#### [Управление обновлениями в Azure](azure/azure-update-management.md)
-### [Подключение Windows Admin Center в Azure](azure/azure-integration.md)
+#### [Управление обновлениями Azure](azure/azure-update-management.md)
+### [Подключение Windows Admin Center к Azure](azure/azure-integration.md)
 ### [Развертывание Windows Admin Center в Azure](azure/deploy-wac-in-azure.md)
 ### [Управление виртуальными машинами Azure с помощью Windows Admin Center](azure/manage-azure-vms.md)
 
@@ -71,7 +71,7 @@
 #### [Использование PowerShell в расширении](extend/guides/powershell.md)
 #### [Руководство по значку CSS](extend/guides/cssicons.md)
 #### [Переход на последнюю версию пакета SDK](extend/guides/migration-guide-0_1-1_0.md)
-#### [Включение обнаружения баннер расширения](extend/guides/extension-discovery-banner.md)
+#### [Включение баннера обнаружения расширений](extend/guides/extension-discovery-banner.md)
 ### [Публикация расширений](extend/publish-extensions.md)
 ### Практические примеры
 #### [DataON](extend/case-studies/dataon.md)

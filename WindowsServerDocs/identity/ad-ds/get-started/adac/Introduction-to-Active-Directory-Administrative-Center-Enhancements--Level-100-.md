@@ -9,12 +9,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: d16447425b86fef979732c4785db27d1542116b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: d3b5f3eee338128fb424c28e7280bb7f543c9f58
+ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840175"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66442999"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Введение в дополнительные возможности центра администрирования Active Directory (уровень 100)
 
@@ -56,9 +56,9 @@ ms.locfileid: "59840175"
 В следующих шагах будет использовать Центр администрирования Active Directory для выполнения следующих задач Корзина Active Directory в Windows Server 2012:
 
 - [Шаг 1. Повышение режима работы леса](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_ffl)
-- [Шаг 2. Включить корзину](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
-- [Шаг 3. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
-- [Шаг 4. Восстановление удаленных объектов](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
+- [Шаг 2. Включить корзину](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
+- [Шаг 3. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
+- [Шаг 4. Восстановление удаленных объектов](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
 
 > [!NOTE]
 > Для выполнения следующих шагов требуется членство в группе администраторов предприятия или эквивалентные разрешения.
@@ -75,7 +75,7 @@ ms.locfileid: "59840175"
 
 3. Щелкните целевой домен в левой области навигации и на панели **Задачи** выберите **Повышение режима работы леса**. Выберите режим работы леса не ниже Windows Server 2008 R2 или более поздней версии и нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -95,11 +95,11 @@ Set-ADForestMode -Identity contoso.com -ForestMode Windows2008R2Forest -Confirm:
 
 2. Щелкните **Управление**, **Добавить узлы перехода** и выберите соответствующий целевой домен в диалоговом окне **Добавление узлов перехода** , а затем нажмите кнопку **ОК**.
 
-3. В области **задач** щелкните **Включить корзину...******, нажмите кнопку **ОК** в предупреждающем сообщении, а затем нажмите кнопку **ОК** для обновления сообщения центра администрирования Active Directory.
+3. В области **задач** щелкните **Включить корзину...** **** , нажмите кнопку **ОК** в предупреждающем сообщении, а затем нажмите кнопку **ОК** для обновления сообщения центра администрирования Active Directory.
 
 4. Нажмите клавишу F5, чтобы обновить центр администрирования Active Directory.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -142,7 +142,7 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
 5. Щелкните **group1** и в области**задач** выберите **Свойства**.
 6. Щелкните **Члены группы**, выберите команду **Добавить**, введите **test1;test2**и нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -159,7 +159,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
    - **NameOU1**
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -167,7 +167,6 @@ Add-ADGroupMember -Identity group1 -Member test1
 1..2 | ForEach-Object {New-ADUser -SamAccountName test$_ -Name "test$_" -Path "DC=fabrikam,DC=com" -AccountPassword (ConvertTo-SecureString -AsPlainText "p@ssword1" -Force) -Enabled $true}
 New-ADGroup -Name "group1" -SamAccountName group1 -GroupCategory Security -GroupScope Global -DisplayName "group1"
 New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
-
 ```
 
 ### <a name="bkmk_restore_del_obj"></a>Шаг 4. Восстановление удаленных объектов
@@ -182,7 +181,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 3. Выберите пользователей **test1** и **test2**, щелкните **Удалить** в области **задач** и нажмите кнопку **Да** , чтобы подтвердить удаление.
 
-    ![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+    ![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
     Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -199,7 +198,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
@@ -219,7 +218,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 6. Чтобы убедиться, что объекты были восстановлены в расположение **OU1**, перейдите в целевой домен, дважды щелкните **OU1** и проверьте, указаны ли там учетные записи пользователей.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -253,9 +252,9 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 В следующей пошаговой процедуре вы используете центр администрирования Active Directory для выполнения следующих задач, связанных с детально настроенной политикой паролей:
 
 - [Шаг 1. Повышение режима работы домена](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_dfl)
-- [Шаг 2. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
-- [Шаг 3. Создание новой детально настроенной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
-- [Шаг 4. Просмотр результирующего набора политик для пользователя](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
+- [Шаг 2. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
+- [Шаг 3. Создание новой детально настроенной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
+- [Шаг 4. Просмотр результирующего набора политик для пользователя](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
 - [Шаг 5. Изменение детально настроенной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
 - [Шаг 6. Удаление детально настроенной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
 
@@ -274,7 +273,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 3. Щелкните целевой домен в левой области навигации и в области **Задачи** выберите **Повышение режима работы домена**. Выберите режим работы леса не ниже Windows Server 2008 или более поздней версии и нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -284,7 +283,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="bkmk2_test_fgpp"></a>Шаг 2. Создание тестовых пользователей, группы и подразделения
 
-Чтобы создать тестовых пользователей и группу для этого шага, выполните процедуры, описанные здесь: [Шаг 3. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (вам не нужно для демонстрации детально настроенной политики паролей создавать Подразделение).
+Чтобы создать тестовых пользователей и группу для этого шага, выполните процедуры, описанные здесь: [Шаг 3. Создание тестовых пользователей, группы и подразделения](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) (вам не нужно для демонстрации детально настроенной политики паролей создавать Подразделение).
 
 #### <a name="bkmk_create_fgpp"></a>Шаг 3. Создание новой детально настроенной политики паролей
 
@@ -310,7 +309,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 6. Нажмите кнопку **ОК** , чтобы подтвердить создание.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -335,7 +334,7 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 
 5. Изучите политику параметров паролей и нажмите кнопку **Отмена**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -361,7 +360,7 @@ Get-ADUserResultantPasswordPolicy test1
 
 6. Нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -387,7 +386,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 7. В диалоговом окне подтверждения нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)Windows PowerShell эквивалентные команды ***
+![Введение в центр администрирования AD](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
