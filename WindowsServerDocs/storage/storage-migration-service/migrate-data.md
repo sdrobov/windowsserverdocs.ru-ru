@@ -8,12 +8,12 @@ ms.date: 02/13/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 856eb7c2c2dfe0e0e3300fcf826e75b56258dc1b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 879a87d4383d07e37227ecf6fffa5d002a77bbc0
+ms.sourcegitcommit: 214e827934e7b3e8987e9e0ab2cf00047d332c89
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447657"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67153319"
 ---
 # <a name="use-storage-migration-service-to-migrate-a-server"></a>Использование службы хранилища миграции для переноса сервера
 
@@ -35,7 +35,7 @@ ms.locfileid: "66447657"
     - Инструментарий управления Windows (WMI-In)
 
    > [!NOTE]
-   > Если вы используете сторонние брандмауэры, диапазонов портов для входящего трафика для открытия, TCP/445 (SMB), TCP/135 (Сопоставитель конечных точек RPC/DCOM) и TCP 1025-65535 (временные порты RPC/DCOM).
+   > Если вы используете сторонние брандмауэры, диапазонов портов для входящего трафика для открытия, TCP/445 (SMB), TCP/135 (Сопоставитель конечных точек RPC/DCOM) и TCP 1025-65535 (временные порты RPC/DCOM). Порты службы миграции хранилища, TCP/28940 (Orchestrator) и TCP/28941 (прокси).
 
 1. Если вы используете сервер orchestrator для управления миграцией, и вы хотите загрузить события или журнала при передаче данных, к файлам и принтерам (SMB — входящий) правило проверьте, включено ли на этом сервере, а также.
 
