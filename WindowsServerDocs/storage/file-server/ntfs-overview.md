@@ -6,18 +6,18 @@ ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
-ms.date: 09/06/2018
+ms.date: 06/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f85e321381adcf607c3504005a0a3448ab0f098a
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 2e45fd1eb13044fdf0ba0f66a6e909a3f2d39bc3
+ms.sourcegitcommit: 6fec3ca19ddaecbc936320d98cca0736dd8505d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63738446"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67196167"
 ---
 # <a name="ntfs-overview"></a>Обзор NTFS
 
->Относится к: Windows 10, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Относится к: Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 NTFS — основная файловая система в последних версиях Windows и Windows Server — предоставляет полный набор функций, включая дескрипторы безопасности, шифрование, дисковые квоты и расширенные метаданные и может использоваться для предоставления непрерывно с Общие тома кластера (CSV) доступные тома, которые могут осуществлять одновременно из нескольких узлов отказоустойчивого кластера.
 
@@ -93,8 +93,11 @@ format /L /A:64k
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-|Тип содержимого|Ссылок|
-|---|---|
-|Оценка|- [Новые возможности файловой системы NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)<br>- [Новые возможности файловой системы NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)<br>- [Работоспособность NTFS и Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))<br>- [Самостоятельное восстановление, NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (появился в Windows Server 2008)<br>- [Транзакционная NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (появился в Windows Server 2008)|
-|Ресурсы сообщества|- [Блог группы разработчиков хранилища Windows](https://blogs.msdn.microsoft.com/san/)|
-|Связанные технологии|- [Хранилища в Windows Server](../storage.md)<br>- [Использование общих томов в отказоустойчивом кластере кластера](../../failover-clustering/failover-cluster-csvs.md)<br>- [Общих томов кластера](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#cluster-shared-volumes>) и [конструкции хранилища](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)#storage-design>) разделы [проектирование инфраструктуры облака](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831630(v%3dws.11)) <br>- [Дисковые пространства](../storage-spaces/overview.md)<br>- [Общие сведения о Resilient File System (ReFS)](../refs/refs-overview.md)
+- [Рекомендации по размерам кластера для ReFS и NTFS](https://techcommunity.microsoft.com/t5/Storage-at-Microsoft/Cluster-size-recommendations-for-ReFS-and-NTFS/ba-p/425960)
+- [Общие сведения о Resilient File System (ReFS)](../refs/refs-overview.md)
+- [Новые возможности файловой системы NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn466520(v%3dws.11)) (Windows Server 2012 R2)
+- [Новые возможности файловой системы NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff383236(v=ws.10)) (Windows Server 2008 R2, Windows 7)
+- [Работоспособность NTFS и Chkdsk](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831536(v%3dws.11))
+- [Самостоятельное восстановление, NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)) (появился в Windows Server 2008)
+- [Транзакционная NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc730726(v%3dws.10)) (появился в Windows Server 2008)
+- [Хранилища в Windows Server](../storage.md)
