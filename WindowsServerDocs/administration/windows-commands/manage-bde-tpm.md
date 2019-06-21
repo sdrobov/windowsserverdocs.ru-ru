@@ -1,6 +1,6 @@
 ---
 title: доверенный платформенный модуль готов
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d41c846034ad421d0da81bda57acbcd419c1ae1
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bc3cfa583866335d214282be08366854dec77d0f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437388"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280000"
 ---
 # <a name="manage-bde-tpm"></a>готов: доверенного платформенного модуля
 
 > Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > [!IMPORTANT]
-> Эта команда не поддерживается для использования на компьютерах под управлением Windows 8, Windows Server 2012 или более поздних операционных системах. Для этих компьютеров можно использовать [управления доверенным платформенным Модулем командлеты для Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/trustedplatformmodule/).
+> Эта команда не поддерживается для использования на компьютерах под управлением Windows 8, Windows Server 2012 или более поздних операционных системах. Для этих компьютеров можно использовать [управления доверенным платформенным Модулем командлеты для Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/).
 > Если вы используете эту команду на компьютере под управлением Windows 7 или Windows Server 2008, можно настроить по-прежнему компьютера доверенного платформенного модуля (TPM) с помощью следующей команды. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 > ## <a name="syntax"></a>Синтаксис
 > ```

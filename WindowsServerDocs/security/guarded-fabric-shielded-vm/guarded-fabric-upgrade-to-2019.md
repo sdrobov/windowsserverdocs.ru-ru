@@ -6,12 +6,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 11/21/2018
-ms.openlocfilehash: 274bdf027947ffb6fe807d4acd0a3b2174c20e28
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 39974806c02e55b37d3d16748c4ca0e3f361ee45
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867455"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284108"
 ---
 # <a name="upgrade-a-guarded-fabric-to-windows-server-2019"></a>Обновление защищенной структуры до Windows Server 2019
 
@@ -52,7 +52,7 @@ ms.locfileid: "59867455"
 
 Обновление кластера HGS потребует временно удалить один узел из кластера за раз во время его обновления. Это позволит снизить емкостью кластера, чтобы отвечать на запросы с узлов Hyper-V и может привести к большим временем ответа или простои служб для клиентов. Убедитесь, что вы имеете достаточную емкость для обработки аттестации и выходом ключевых версий запросы перед обновлением развернутый сервер HGS.
 
-Чтобы обновить кластер HGS, выполните следующие действия на каждом узле кластера, по одному узлу во время:
+Чтобы обновить кластер HGS, выполните следующие действия на каждом узле кластера, один узел за раз.
 
 1.  Удалите сервер HGS из кластера, выполнив `Clear-HgsServer` в строке PowerShell с повышенными привилегиями. Этот командлет приведет к удалению хранилища реплицируются HGS, HGS веб-сайтов и узел из отказоустойчивого кластера.
 2.  Если HGS сервер является контроллером домена (конфигурация по умолчанию), будет необходимо запустить `adprep /forestprep` и `adprep /domainprep` на первом узле, обновляется для подготовки домена для обновления ОС. См. в разделе [документации по обновлению доменных служб Active Directory](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers#supported-in-place-upgrade-paths) Дополнительные сведения.
@@ -69,9 +69,9 @@ Set-HgsServerVersion  v2
 
 Перед обновлением узлов Hyper-V для Windows Server 2019, убедитесь, что HGS кластера уже обновлен до Windows Server 2019 и что после перемещения всех виртуальных машин с сервера Hyper-V.
 
-1.  При использовании политики целостности кода для управления приложениями в Защитнике Windows на сервере (всегда так при использовании аттестации доверенного платформенного МОДУЛЯ), убедитесь, что политика находится в режиме аудита или отключены перед повторной попыткой обновления сервера. [Дополнительные сведения об отключении политики WDAC](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/disable-windows-defender-application-control-policies)
+1.  При использовании политики целостности кода для управления приложениями в Защитнике Windows на сервере (всегда так при использовании аттестации доверенного платформенного МОДУЛЯ), убедитесь, что политика находится в режиме аудита или отключены перед повторной попыткой обновления сервера. [Дополнительные сведения об отключении политики WDAC](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/disable-windows-defender-application-control-policies)
 2.  Следуйте указаниям в [Центр обновления Windows Server](http://aka.ms/upgradecenter) обновление ведущее приложение для Windows Server 2019. Если на узле Hyper-V входит в отказоустойчивый кластер, рассмотрите возможность использования [последовательного обновления кластерной ОС](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
-3.  [Тестирование и повторное включение](https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defender-application-control/audit-windows-defender-application-control-policies) политики управления приложениями в Защитнике Windows, если у вас есть один включена до обновления.
+3.  [Тестирование и повторное включение](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/audit-windows-defender-application-control-policies) политики управления приложениями в Защитнике Windows, если у вас есть один включена до обновления.
 4.  Запустите `Get-HgsClientConfiguration` для проверки, если **IsHostGuarded = True**, то есть узел успешно передает аттестацию с сервером HGS.
 5.  При использовании аттестации TPM, может потребоваться [повторно записать политику целостности кода или базовый показатель доверенного платформенного МОДУЛЯ](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md) после обновления до пройти аттестацию.
 6.  Запущены экранированных виртуальных машин на узле снова!

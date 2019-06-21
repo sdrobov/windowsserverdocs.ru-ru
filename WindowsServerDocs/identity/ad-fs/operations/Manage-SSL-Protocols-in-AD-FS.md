@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e834c50965c3af569dbe3756d677ec4cb2372542
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c1153cd81185dcfe83d291161a85481e5a7d0700
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883925"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280551"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Управление протоколов SSL/TLS и комплектов шифров для служб AD FS
 Следующая документация содержит сведения о том, как отключить и включить определенные протоколы TLS/SSL и комплекты шифров, которые используются службами AD FS
@@ -256,10 +256,10 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 Чтобы включить комплект шифров, добавление его строковое значение для ключа Мультистроковый параметр функции.  Например если необходимо, чтобы TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521 затем мы бы добавили его в строку.
 
-Полный список поддерживаемых шифров наборов см. в разделе [шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx).  В этом документе приведена таблица наборов, которые включены по умолчанию и те, которые поддерживаются, но не включена по умолчанию.  Для определения приоритетов комплектов шифров см. в разделе [расстановка приоритетов шифров Schannel](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx).
+Полный список поддерживаемых шифров наборов см. в разделе [шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  В этом документе приведена таблица наборов, которые включены по умолчанию и те, которые поддерживаются, но не включена по умолчанию.  Для определения приоритетов комплектов шифров см. в разделе [расстановка приоритетов шифров Schannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
 
 ## <a name="enabling-strong-authentication-for-net-applications"></a>Включение строгой проверки подлинности для приложений .NET
-3.5/4.0/4.5.x приложений .NET Framework можно перевести протокола по умолчанию протокол TLS 1.2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра будет принудительно приложений .NET для использования TLS 1.2.
+3\.5/4.0/4.5.x приложений .NET Framework можно перевести протокола по умолчанию протокол TLS 1.2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра будет принудительно приложений .NET для использования TLS 1.2.
 
 > [!IMPORTANT]
 > Для AD FS на Windows Server 2016 и Windows Server 2012 R2 необходимо использовать .NET Framework 4.0/4.5.x ключ:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319
@@ -280,7 +280,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-- [Наборы шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/aa374757.aspx)
-- [Наборы шифров TLS в Windows 8.1](https://msdn.microsoft.com/en-us/library/windows/desktop/mt767781.aspx)
-- [Расстановка приоритетов для комплектов шифров Schannel](https://msdn.microsoft.com/en-us/library/windows/desktop/bb870930.aspx)
+- [Наборы шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)
+- [Наборы шифров TLS в Windows 8.1](https://msdn.microsoft.com/library/windows/desktop/mt767781.aspx)
+- [Расстановка приоритетов для комплектов шифров Schannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)
 - [Говоря в шифры и других таинственным tongues](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)

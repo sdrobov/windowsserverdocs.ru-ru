@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server-threshold
 ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ms.technology: identity-adds
-ms.openlocfilehash: eae4cab2bd709097fe0efd0745baeb0ec685abc7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 65e33e6507d2affc4d07cc0780a7baf91a170a09
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829615"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280590"
 ---
 # <a name="performing-a-nonauthoritative-restore-of-active-directory-domain-services"></a>Выполняет принудительное восстановление доменных служб Active Directory 
 
@@ -24,7 +24,7 @@ ms.locfileid: "59829615"
   
 В следующих процедурах используются Wbadmin.exe для выполнения непринудительное восстановление Active Directory или доменных служб Active Directory (AD DS). При использовании другого решения резервного копирования, или если вы собираетесь выполнить Полномочное восстановление SYSVOL позже в процессе восстановления леса, нужно выполнить Полномочное восстановление SYSVOL с помощью этих альтернативных методов.  
   
-- Если вы используете службы репликации файлов (FRS) для репликации SYSVOL, выполните действия, описанные в [статьи 290762](https://go.microsoft.com/fwlink/?LinkId=148443) в базе знаний Майкрософт, с помощью **BurFlags** раздел реестра для повторной инициализации репликации FRS Задает или при необходимости статьи 315457 [315457](https://support.microsoft.com/kb/315457)для перестроения дерева SYSVOL. Чтобы определить, если SYSVOL реплицируется с FRS, см. в разделе [папки SYSVOL определение ли контроллера домена реплицируется с DFSR или FRS](https://msdn.microsoft.com/en-us/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).  
+- Если вы используете службы репликации файлов (FRS) для репликации SYSVOL, выполните действия, описанные в [статьи 290762](https://go.microsoft.com/fwlink/?LinkId=148443) в базе знаний Майкрософт, с помощью **BurFlags** раздел реестра для повторной инициализации репликации FRS Задает или при необходимости статьи 315457 [315457](https://support.microsoft.com/kb/315457)для перестроения дерева SYSVOL. Чтобы определить, если SYSVOL реплицируется с FRS, см. в разделе [папки SYSVOL определение ли контроллера домена реплицируется с DFSR или FRS](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).  
 - Если вы используете репликации распределенной файловой системы (DFS) для репликации SYSVOL, см. в разделе [выполнения заслуживающую доверия синхронизацию SYSVOL с репликацией DFSR](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).  
 
 ## <a name="performing-a-nonauthoritative-restore"></a>Выполнение непринудительное восстановление
@@ -49,5 +49,5 @@ ms.locfileid: "59829615"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- [Руководство по восстановлению из леса AD](AD-Forest-Recovery-Guide.md)
-- [Восстановление леса AD - процедуры](AD-Forest-Recovery-Procedures.md)
+- [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
+- [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

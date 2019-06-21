@@ -7,12 +7,12 @@ author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: a0062230dd3d9e9c52aa317f87e06b0e84507dc4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad8e2a8eade1ea9d3faaba8f387b1f489854e589
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861065"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280635"
 ---
 # <a name="deploy-windows-admin-center-with-high-availability"></a>Развертывание Windows Admin Center с высоким уровнем доступности
 
@@ -22,7 +22,7 @@ ms.locfileid: "59861065"
 
 [Дополнительные сведения о других вариантах развертывания Windows Admin Center.](../plan/installation-options.md)
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 - Отказоустойчивый кластер из двух или более узлов в Windows Server 2016 или 2019 г. [Дополнительные сведения о развертывании отказоустойчивого кластера](../../../failover-clustering/failover-clustering-overview.md).
 - Кластер общего тома (CSV) для Windows Admin Center для хранения постоянных данных, доступную всем узлам в кластере. 10 ГБ, будет достаточно для CSV-файла.
@@ -38,9 +38,9 @@ ms.locfileid: "59861065"
     - `-staticAddress`. Необязательно. Один или несколько статических адресов для общей службы кластера. 
     - `-msiPath`. Путь к MSI-файл Windows Admin Center.
     - `-certPath`. Необязательно. Путь к PFX-файл сертификата.
-    - `-certPassword`. Необязательный. Пароль для PFX-файла сертификата, указанный в SecureString `-certPath`
-    - `-generateSslCert`. Необязательный. Если вы не хотите предоставить подписанный сертификат, включают этот флаг параметр, чтобы создать самозаверяющий сертификат. Обратите внимание на то, что сертификат с собственной подписью истечет через 60 дней.
-    - `-portNumber`. Необязательный. Если не указать порт, через порт 443 (HTTPS) развертывания службы шлюза. Чтобы использовать другой порт указать в этом параметре. Обратите внимание, что если вы используете другой номер порта (что-либо, кроме порта 443), обращения к Windows Admin Center, перейдя к https://\<clientAccessPoint\>:\<порт\>.
+    - `-certPassword`. Необязательно. Пароль для PFX-файла сертификата, указанный в SecureString `-certPath`
+    - `-generateSslCert`. Необязательно. Если вы не хотите предоставить подписанный сертификат, включают этот флаг параметр, чтобы создать самозаверяющий сертификат. Обратите внимание на то, что сертификат с собственной подписью истечет через 60 дней.
+    - `-portNumber`. Необязательно. Если не указать порт, через порт 443 (HTTPS) развертывания службы шлюза. Чтобы использовать другой порт указать в этом параметре. Обратите внимание, что если вы используете другой номер порта (что-либо, кроме порта 443), обращения к Windows Admin Center, перейдя к https://\<clientAccessPoint\>:\<порт\>.
 
 > [!NOTE]
 > ```Install-WindowsAdminCenterHA.ps1``` Скрипт поддерживает ```-WhatIf ``` и ```-Verbose``` параметров
@@ -74,7 +74,7 @@ $certPassword = Read-Host -AsSecureString
 
 ### <a name="update-the-certificate-used-by-windows-admin-center"></a>Обновить сертификат, используемый Windows Admin Center
 
-Вы можете обновить сертификат, используемый при развертывании Windows Admin Center высокого уровня ДОСТУПНОСТИ в любое время, предоставляя новый сертификат PFX-файл и и пароль.
+Вы можете обновить сертификат, используемый при развертывании Windows Admin Center высокого уровня ДОСТУПНОСТИ в любое время, указав новый сертификат PFX-файл и пароль.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString

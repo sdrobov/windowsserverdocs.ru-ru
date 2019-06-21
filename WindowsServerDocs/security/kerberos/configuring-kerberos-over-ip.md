@@ -1,12 +1,12 @@
 ---
 title: Настройка Kerberos для IP-адреса
 description: Поддержка аутентификации Kerberos для имен участников-служб на основе IP-адресов
-ms.openlocfilehash: 30741f7a0f1978fcaa6ac83c98a54c07e1ef25c5
-ms.sourcegitcommit: c6acac3622e5d34714ca5c569805931681f98779
+ms.openlocfilehash: aa2685fcff2fdf231e5e5884d25885585f0bd6c9
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66391525"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67279971"
 ---
 # <a name="kerberos-clients-allow-ipv4-and-ipv6-address-hostnames-in-service-principal-names-spns"></a>Клиенты Kerberos разрешить hostnames адреса IPv4 и IPv6 в имена участника-службы (SPN)
 
@@ -30,7 +30,7 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos
 
 IP-адресов не используются обычно вместо имен узлов, так как IP-адреса часто являются временными. Это может привести к конфликты и ошибки проверки подлинности, как Арендованные адреса истекает и обновления. Поэтому регистрация имени участника службы на основе адреса IP-адрес создается вручную и должен использоваться только когда невозможно переключиться на основе DNS имя узла.
 
-Рекомендуется использовать [Setspn.exe](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) средство. Обратите внимание на то, что имя SPN можно зарегистрировать только для одной учетной записи в Active Directory одновременно, рекомендуется наличие аренды статического IP-адресов при использовании DHCP.
+Рекомендуется использовать [Setspn.exe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) средство. Обратите внимание на то, что имя SPN можно зарегистрировать только для одной учетной записи в Active Directory одновременно, рекомендуется наличие аренды статического IP-адресов при использовании DHCP.
 
 ```
 Setspn -s <service>/ip.address> <domain-user-account>  

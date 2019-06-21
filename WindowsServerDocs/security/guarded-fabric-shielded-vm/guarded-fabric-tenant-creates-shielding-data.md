@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 25ed17d964f12c2f497ccde443dad9f8bc253b20
-ms.sourcegitcommit: 21165734a0f37c4cd702c275e85c9e7c42d6b3cb
+ms.openlocfilehash: 3c36eff8aabd1fa1c6456dce1d08ebe504102e8c
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2019
-ms.locfileid: "65034672"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284169"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>Экранированные виртуальные машины для клиентов - создания данных экранирования для определения экранированной виртуальной Машины
 
@@ -199,7 +199,7 @@ Export-PfxCertificate -Cert $RdpCertificate -FilePath .\rdpCert.pfx -Password $p
 В качестве альтернативы к мастеру файл данных экранирования, можно запустить [New ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/new-shieldingdatafile?view=win10-ps) создать файл данных экранирования.
 
 Все файлы данных экранирования должны быть настроены правильные владельца и защиты сертификаты для авторизации ваши экранированные виртуальные машины для выполнения в защищенной структуре.
-Можно проверить наличие любого guardians установлен локально с [Get-HgsGuardian](https://docs.microsoft.com/en-us/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Владелец guardians имеют закрытые ключи, а guardians для вашего центра обработки данных обычно нет.
+Можно проверить наличие любого guardians установлен локально с [Get-HgsGuardian](https://docs.microsoft.com/powershell/module/hgsclient/get-hgsguardian?view=win10-ps). Владелец guardians имеют закрытые ключи, а guardians для вашего центра обработки данных обычно нет.
 
 Если вам нужно создать опекуном владельца, выполните следующую команду:
 
@@ -238,7 +238,7 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 Более одного диска шаблона, которому можно доверять, указав разделенный запятыми список томов квалификаторы для `-VolumeIDQualifier` параметра.
 И, наконец, если у вас есть другие файлы, которые необходимо сопровождать файл ответов с виртуальной Машиной, используйте `-OtherFile` параметр и укажите разделенный запятыми список путей к файлам.
 
-См. в документации командлета [New ShieldingDataFile](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) и [New VolumeIDQualifier](https://docs.microsoft.com/en-us/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) Дополнительные сведения о дополнительных способах настройки файла данных экранирования.
+См. в документации командлета [New ShieldingDataFile](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) и [New VolumeIDQualifier](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) Дополнительные сведения о дополнительных способах настройки файла данных экранирования.
 
 ## <a name="see-also"></a>См. также
 

@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 6f3907426fd1124c5ed0a411a155490a2a537239
-ms.sourcegitcommit: a3958dba4c2318eaf2e89c7532e36c78b1a76644
+ms.openlocfilehash: 572f923c33739b854808372a826e9c9bbc6aaca3
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719677"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280855"
 ---
 # <a name="upgrade-domain-controllers-to-windows-server-2016"></a>Обновление контроллеров домена до Windows Server 2016
 
@@ -27,7 +27,7 @@ ms.locfileid: "66719677"
 1. Убедитесь, что целевой сервер отвечает требованиям к системе. 
 2. Проверка совместимости приложений. 
 3. Просмотрите рекомендации по переходу на Windows Server 2016 
-4. Проверьте параметры безопасности. Дополнительные сведения см. в разделе [нерекомендуемые компоненты и изменения в поведении, связанные с AD DS в Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/get-started/deprecated-features). 
+4. Проверьте параметры безопасности. Дополнительные сведения см. в разделе [нерекомендуемые компоненты и изменения в поведении, связанные с AD DS в Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/deprecated-features). 
 5. Проверьте подключение к целевому серверу с компьютера, где планируется установка. 
 6. Проверьте доступность необходимых ролей хозяина операций. 
    - Для установки первого контроллера домена под управлением Windows Server 2016 в существующем домене и лесу, компьютер, на котором проводится установка должен быть подключен к **хозяин схемы** , чтобы выполнять команду adprep/forestprep и хозяин инфраструктуры Чтобы выполнить команду adprep/domainprep. 

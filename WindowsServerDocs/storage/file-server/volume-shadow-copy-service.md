@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: d67f15d65feb28fb05fc056fd3c34c04cee80d09
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0a4af25723c6d1e796cd3255875c15faf21fb8be
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447767"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284387"
 ---
 # <a name="volume-shadow-copy-service"></a>Служба теневого копирования томов
 
@@ -380,7 +380,7 @@ VSS позволяет создавать теневые копии целых �
 > <UL>
 > <LI>Он не может удалить файлы из теневой копии, который был создан на сервере Windows с помощью функции предыдущих версий.<BR><BR>
 > <LI>Он не может удалить файлы из теневых копий общих папок.<BR><BR>
-> <LI>Его можно удалить файлы из теневой копии, который был создан с помощью <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> программы, но он не может удалить файлы из теневой копии, который был создан с помощью <a href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> служебной программы.<BR><BR>
+> <LI>Его можно удалить файлы из теневой копии, который был создан с помощью <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a> программы, но он не может удалить файлы из теневой копии, который был создан с помощью <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">Vssadmin</a> служебной программы.<BR><BR>
 > <LI>Файлы будут удалены из теневой копии на основе результативности. Это означает, что они не обязательно быть удалены.<BR><BR></LI></UL>
 
 

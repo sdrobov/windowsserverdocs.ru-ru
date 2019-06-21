@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ipam
+ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: f2f2f1a5-ac2f-41b7-a495-98ad0e2a9b20
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 04838cba63805d20ba31629ed9c8e95290046320
-ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
+ms.openlocfilehash: 64de9327dedadbe421e4cceb71496de3609be398
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65624684"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283823"
 ---
 # <a name="whats-new-in-ipam"></a>Новые возможности IPAM
 
@@ -43,7 +42,7 @@ IPAM предоставляет широко настраиваемые возм
 ### <a name="EIP"></a>Улучшенное управление IP-адрес  
 Следующие возможности улучшения функций управления адрес IPAM.  
 >[!NOTE]
->Справочник по командам IPAM Windows PowerShell, см. в разделе [командлеты сервера управления IP-адресами (IPAM) в Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/ipamserver/).  
+>Справочник по командам IPAM Windows PowerShell, см. в разделе [командлеты сервера управления IP-адресами (IPAM) в Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/).  
   
 #### <a name="support-for-31-32-and-128-subnets"></a>Поддержка /31 /32 и /128 подсетей  
 IPAM в Windows Server 2016 теперь поддерживает /31 /32 и /128 подсетей. Например, два адреса подсети (/ 31 IPv4) могут потребоваться точка-точка между коммутаторами. Кроме того, некоторыми параметрами может потребоваться один замыкания на себя адресов (/ 32 для IPv4, / 128 для IPv6).  
@@ -57,7 +56,7 @@ IPAM в Windows Server 2016 теперь поддерживает /31 /32 и /12
 >[!NOTE]
 >Эта функция фактически не выделить подсетей, он только выводит их доступности. Тем не менее, можно передать выходные данные командлета в **IpamSubnet добавить** команду, чтобы создать подсеть.  
   
-Дополнительные сведения см. в разделе [IpamFreeSubnet найти](https://docs.microsoft.com/en-us/powershell/module/ipamserver/Find-IpamFreeSubnet).  
+Дополнительные сведения см. в разделе [IpamFreeSubnet найти](https://docs.microsoft.com/powershell/module/ipamserver/Find-IpamFreeSubnet).  
   
 #### <a name="find-free-address-ranges-with-find-ipamfreerange"></a>**Найти свободный адрес диапазоны с IpamFreeRange поиска**  
   
@@ -68,7 +67,7 @@ IPAM в Windows Server 2016 теперь поддерживает /31 /32 и /12
 > [!NOTE]
 > Эта функция фактически не выделить диапазоны, он только выводит их доступности. Тем не менее, можно передать выходные данные командлета в **Add-IpamRange** команду, чтобы создать диапазон.  
   
-Дополнительные сведения см. в разделе [IpamFreeRange найти](https://docs.microsoft.com/en-us/powershell/module/ipamserver/Find-IpamFreeRange).  
+Дополнительные сведения см. в разделе [IpamFreeRange найти](https://docs.microsoft.com/powershell/module/ipamserver/Find-IpamFreeRange).  
   
 ### <a name="EDNS"></a>Улучшенное управление службы DNS  
 IPAM в Windows Server 2016 теперь поддерживает обнаружение DNS-серверов на основе файла, присоединенных к домену в лесу Active Directory, в котором работает IPAM.  
@@ -129,5 +128,5 @@ IPAM в Windows Server 2016 теперь поддерживает обнаруж
   
 -   Области DHCP  
   
-Дополнительные сведения см. в разделе [управление доступом на основе ролей с помощью Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) и [командлеты сервера управления IP-адресами (IPAM) в Windows PowerShell](https://docs.microsoft.com/en-us/powershell/module/ipamserver/).  
+Дополнительные сведения см. в разделе [управление доступом на основе ролей с помощью Windows PowerShell](../../technologies/ipam/Manage-Role-Based-Access-Control-with-Windows-PowerShell.md) и [командлеты сервера управления IP-адресами (IPAM) в Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/).  
 

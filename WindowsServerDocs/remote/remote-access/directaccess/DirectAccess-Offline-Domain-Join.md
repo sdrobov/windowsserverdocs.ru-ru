@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 55528736-6c19-40bd-99e8-5668169ef3c7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: a9cd811c680f15d53ecbd28d9201f28d9cb8af2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 59b5933a81c7021e58ea14e6ea4c4da374ce35cb
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853065"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283664"
 ---
 # <a name="directaccess-offline-domain-join"></a>Автономное присоединение к домену DirectAccess
 
@@ -77,7 +76,7 @@ DirectAccess Автономное присоединение к домену —
 #### <a name="granting-user-rights-to-join-workstations-to-the-domain"></a>Предоставление прав пользователя для присоединения к домену рабочих станций  
 Консоль управления групповыми политиками (GPMC) можно использовать для изменения политики домена или создайте новую политику, которая имеет параметры, которые предоставляют пользователю право на добавление рабочих станций к домену.  
   
-Членство в группе **"Администраторы домена"**, или эквивалентной является минимальным требованием для предоставления прав пользователя.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальные и доменные группы по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477).   
+Членство в группе **"Администраторы домена"** , или эквивалентной является минимальным требованием для предоставления прав пользователя.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальные и доменные группы по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) (https://go.microsoft.com/fwlink/?LinkId=83477).   
   
 ###### <a name="to-grant-rights-to-join-workstations-to-a-domain"></a>Предоставить права на присоединение к домену рабочих станций  
   

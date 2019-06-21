@@ -9,16 +9,16 @@ manager: daveba
 ms.author: jgerend
 ms.date: 03/08/2019
 description: Новые и обновленные разделы в документации по отказоустойчивой кластеризации Windows Server 2016
-ms.openlocfilehash: 4044475995175ea527a1ecc487bc0e1cc6f75003
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6dd5c98b14134d42901fad79a375298ad0e7e23
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861225"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280180"
 ---
 # <a name="change-history-for-failover-clustering-topics"></a>Журнал изменений разделов, посвященных отказоустойчивой кластеризации
 
->Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Относится к: Windows Server 2019, Windows Server 2016
 
 В этом разделе перечислены новые и обновленные разделы в [отказоустойчивой кластеризации](failover-clustering-overview.md) документации по Windows Server.
 
@@ -28,7 +28,7 @@ ms.locfileid: "59861225"
 
 |Новый или измененный раздел                                    |Описание |
 |--------------------------------------------------------|------------|
-|[Сходство кластера](cluster-affinity.md)| Оператор new     |
+|[Сходство кластеров](cluster-affinity.md)| Оператор new     |
 
 ## <a name="february-2019"></a>Февраль 2019 г.
 
@@ -42,13 +42,13 @@ ms.locfileid: "59861225"
 |Новый или измененный раздел                                    |Описание |
 |--------------------------------------------------------|------------|
 |[Развертывание файлового ресурса-свидетеля](file-share-witness.md)    | Оператор new        |
-|[Домен кластера миграции](cluster-domain-migration.md) | Оператор new        |
+|[Перенос кластера между доменами](cluster-domain-migration.md) | Оператор new        |
 
 ## <a name="november-2018"></a>ноябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Настройка учетных записей кластера в Active Directory](configure-ad-accounts.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[Настройка учетных записей кластеров в Active Directory](configure-ad-accounts.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
 
 ## <a name="october-2018"></a>Октябрь 2018 г.
 
@@ -60,24 +60,24 @@ ms.locfileid: "59861225"
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Наборы кластера](../storage/storage-spaces/cluster-sets.md)| Новый раздел|
+|[Наборы кластеров](../storage/storage-spaces/cluster-sets.md)| Новый раздел|
 
 ## <a name="may-2018"></a>Май 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Настройка и управление кворумом](manage-cluster-quorum.md) | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки. |
+|[Настройка кворума и управление им](manage-cluster-quorum.md) | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки. |
 
 ## <a name="april-2018"></a>Апрель 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows](troubleshooting-using-WER-reports.md)| Новый раздел. |
-|[Масштабируемого файлового сервера для данных приложений](sofs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Масштабируемый файловый сервер для данных приложений](sofs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Требования к оборудованию](clustering-requirements.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Использование общих томов (CSV) кластера](failover-cluster-csvs.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Использование общих томов кластера (CSV)](failover-cluster-csvs.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Создание отказоустойчивого кластера](create-failover-cluster.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Предварительная настройка кластера в Доменных службах Active Directory](prestage-cluster-adds.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Предварительная подготовка кластера в AD DS](prestage-cluster-adds.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 |[Развертывание облака-свидетеля для отказоустойчивого кластера](deploy-cloud-witness.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
 
 ## <a name="june-2017"></a>Июнь, 2017 г.
@@ -91,7 +91,7 @@ ms.locfileid: "59861225"
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Общие сведения о кластерном обновлении](cluster-aware-updating.md)|Новый раздел.|
-|[Требования кластерного обновления и рекомендации](cluster-aware-updating-requirements.md)|Новый раздел.|
+|[Требования и рекомендации для кластерного обновления](cluster-aware-updating-requirements.md)|Новый раздел.|
 |[Дополнительные параметры кластерного обновления](cluster-aware-updating-options.md)|Новый раздел.|
 |[Часто задаваемые вопросы о кластерного обновления](cluster-aware-updating-faq.md)|Новый раздел.|
 |[Кластерное обновление подключаемых модулей](cluster-aware-updating-plug-ins.md)|Новый раздел.|

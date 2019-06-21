@@ -8,16 +8,16 @@ ms.date: 05/23/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f28458ed9e781df6eca2478b02fb667d9240ca48
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a638ec25be4fc99b4eccd1d9fa541e640ef9e15c
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445301"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280656"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Создание метода нестандартную проверку подлинности для AD FS в Windows Server
 
-В этом пошаговом руководстве приводятся инструкции по реализации метода нестандартную проверку подлинности для AD FS в Windows Server 2012 R2. Дополнительные сведения см. в разделе [дополнительных методов проверки подлинности](https://msdn.microsoft.com/en-us/library/dn758113\(v=msdn.10\)).
+В этом пошаговом руководстве приводятся инструкции по реализации метода нестандартную проверку подлинности для AD FS в Windows Server 2012 R2. Дополнительные сведения см. в разделе [дополнительных методов проверки подлинности](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\)).
 
 
 > [!WARNING]
@@ -224,7 +224,7 @@ ms.locfileid: "66445301"
          }
          }
 
-         /// Returns an array indicating the type of claim that that the adapter uses to identify the user being authenticated.
+         /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
          /// Note that although the property is an array, only the first element is currently used.
          /// MUST BE ONE OF THE FOLLOWING
          /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
@@ -377,7 +377,7 @@ ms.locfileid: "66445301"
 
 2.  Установите службу роли AD FS и настроить ферму с по крайней мере один узел.
 
-    Подробные инструкции для настройки сервера федерации в лабораторной среде, см. в разделе [Windows Server 2012 R2 AD FS Deployment Guide](https://msdn.microsoft.com/en-us/library/dn486820\(v=msdn.10\)).
+    Подробные инструкции для настройки сервера федерации в лабораторной среде, см. в разделе [Windows Server 2012 R2 AD FS Deployment Guide](https://msdn.microsoft.com/library/dn486820\(v=msdn.10\)).
 
 3.  Скопируйте инструментов Gacutil.exe на сервер.
 
@@ -641,6 +641,6 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 #### <a name="other-resources"></a>Прочие ресурсы
 
-[Дополнительные методы проверки подлинности](https://msdn.microsoft.com/en-us/library/dn758113\(v=msdn.10\))  
-[Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](https://msdn.microsoft.com/en-us/library/dn280949\(v=msdn.10\))
+[Дополнительные методы проверки подлинности](https://msdn.microsoft.com/library/dn758113\(v=msdn.10\))  
+[Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](https://msdn.microsoft.com/library/dn280949\(v=msdn.10\))
 

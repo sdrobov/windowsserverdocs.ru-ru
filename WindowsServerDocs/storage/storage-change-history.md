@@ -9,16 +9,16 @@ manager: brianlic
 ms.author: jgerend
 ms.date: 06/04/2019
 description: Новые и обновленные разделы документации по локального хранилища для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: 3245e6bc5320cc0ffae01817a8f7b9caeaa6c685
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 442d640809d3ae9cf4a11feb646fbbd566e6e3fa
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501488"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284460"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
-> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 В этом разделе перечислены новые и обновленные разделы в [хранения](storage.md) документации по Windows Server.
 
@@ -73,10 +73,10 @@ ms.locfileid: "66501488"
 |---                                                         |---           |
 |[Вложенная устойчивость](storage-spaces/nested-resiliency.md)    | Новый раздел    |
 |[Известные проблемы службы миграции хранилища](storage-migration-service/known-issues.md)   | Новый раздел    |
-|[Репликация DFS. Вопросы и ответы](dfs-replication/dfsr-faq.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/) библиотеки|
-|[Перенос репликации SYSVOL в репликацию DFS](dfs-replication/migrate-sysvol-to-dfsr.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
-|[SMB: необходимо открыть порты для совместного использования файлов и принтеров](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
-|[Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[Репликация DFS. Вопросы и ответы](dfs-replication/dfsr-faq.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/) библиотеки|
+|[Перенос репликации SYSVOL в репликацию DFS](dfs-replication/migrate-sysvol-to-dfsr.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[SMB: необходимо открыть порты для совместного использования файлов и принтеров](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
 
 ## <a name="october-2018"></a>Октябрь 2018 г.
 

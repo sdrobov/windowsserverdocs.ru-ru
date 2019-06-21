@@ -8,12 +8,12 @@ ms.date: 06/04/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 258f25a7e1ec5c796c15450625397e96db25d693
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 8f0f16f14ccf9099af8ff8bb8b27209c75c87cfc
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501523"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284469"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Часто задаваемые вопросы (FAQ) службы миграции хранилища
 
@@ -131,7 +131,7 @@ ms.locfileid: "66501523"
 
 - **Включите обработку высокой производительности.** Убедитесь, что для параметров BIOS или UEFI настроена высокая производительность, например отключено C-состояние, установлена скорость QPI, включена архитектура NUMA и установлена максимально возможная частота памяти. Убедитесь, что управление питанием в Windows Server имеет значение для высокой производительности. При необходимости перезагрузите компьютер. Не забудьте вернуть их в соответствующие состояния после завершения миграции. 
 
-- **Настройка оборудования** проверки [производительности настройке рекомендации для Windows Server 2016](https://docs.microsoft.com/en-us/windows-server/administration/performance-tuning/) по настройке orchestrator и конечных компьютерах под управлением Windows Server 2019 г. и Windows Server 2016. [Настройка производительности сетевой подсистемы](https://docs.microsoft.com/en-us/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) раздел содержит особенно полезные сведения.
+- **Настройка оборудования** проверки [производительности настройке рекомендации для Windows Server 2016](https://docs.microsoft.com/windows-server/administration/performance-tuning/) по настройке orchestrator и конечных компьютерах под управлением Windows Server 2019 г. и Windows Server 2016. [Настройка производительности сетевой подсистемы](https://docs.microsoft.com/windows-server/networking/technologies/network-subsystem/net-sub-performance-tuning-nics) раздел содержит особенно полезные сведения.
 
 - **Используйте более быстрое хранилище.** Хотя он может быть сложным, скорость хранилища компьютера источника, следует убедиться, что целевое хранилище составляет не менее, как быстро в производительности операций записи ввода-ВЫВОДА, как источником является на производительность операций чтения ввода-ВЫВОДА, чтобы убедитесь, что без лишних узких мест в передаче. Если целевой виртуальной Машины, убедитесь, что, по крайней мере в рамках миграции, оно запускается в наиболее быстрый уровень хранилища узлах гипервизора, такие как на уровне флэш-памяти или с кластерами прямой HCI пространств хранения зеркальных флэш-памяти или гибридных пробелы. После завершения миграции SMS виртуальной Машины можно выполнить динамическую миграцию к узлу или уровня медленнее.
 

@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61040e19-5960-4eb0-b612-d710627988f7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ec725eea286c359461b0f4a7b8763b97464e7067
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f49d9ab0e28e84cbb46015d50778653b35f5ea85
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867095"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281936"
 ---
 # <a name="troubleshooting-directaccess"></a>Диагностика DirectAccess
 
@@ -35,7 +34,7 @@ ms.locfileid: "59867095"
 |Возникли проблемы, относящиеся к конфигурации с несколькими узлами (например, включение многосайтового, добавление ярлыков или установка контроллера домена для точки входа)|Выполните действия, описанные в [Устранение многосайтового развертывания](https://technet.microsoft.com/library/jj554657(v=ws.11).aspx).|  
 |Конфигурации состояния на панели мониторинга отображается предупреждение или ошибку|Выполните действия, описанные в [мониторинг статуса распределения конфигурации сервера удаленного доступа](https://technet.microsoft.com/library/jj574221(v=ws.11).aspx).|  
 |Возникновения проблемы, связанные с настройкой балансировки (например, конфигурации не проходит, когда работы подсистемы балансировки нагрузки, или возникли проблемы при добавлении или удаление серверов из кластера)|Если включение балансировки нагрузки или добавления узла и конфигурации обновляются при нажатии кнопки **применить**, но кластер не образуют правильно на сервере, выполните следующую команду: **cmd.exe /c «reg add HKLM\ SYSTEM\CurrentControlSet\Services\RaMgmtSvc\Parameters /f /v DebugFlag /t REG_DWORD /d ««0xffffffff»» "** сбор пользователю интерфейс журналов на новом сервере.|  
-|Отображается состояние операции, ошибка или предупреждение после выполнения шагов, чтобы исправить ситуацию|Если состояние операций отображаются неверные сведения (например, ошибки, даже после того, как исправить их):<br /><br />-   Enable the registry key **cmd.exe /c "reg add HKLM\SYSTEM\CurrentControlSet\Services\RaMgmtSvc\Parameters /f /v EnableTracing /t REG_DWORD /d ""5"" "**.<br />— Обновлять состояние операций и собирать журналы из **%windir%/tracing**.|  
+|Отображается состояние операции, ошибка или предупреждение после выполнения шагов, чтобы исправить ситуацию|Если состояние операций отображаются неверные сведения (например, ошибки, даже после того, как исправить их):<br /><br />-   Enable the registry key **cmd.exe /c "reg add HKLM\SYSTEM\CurrentControlSet\Services\RaMgmtSvc\Parameters /f /v EnableTracing /t REG_DWORD /d ""5"" "** .<br />— Обновлять состояние операций и собирать журналы из **%windir%/tracing**.|  
 |Windows 8 и более поздних версий клиентских компьютеров DirectAccess описываться «Нет Интернет», как состояние подключения DirectAccess и индикатор состояния сетевых подключений (NCSI) сообщает ограниченным подключением.|Это может произойти, если Принудительное туннелирование включено в конфигурации DirectAccess и, по этой причине используется только IP-HTTPS. Чтобы устранить эту проблему, можно создать и настроить прокси-сервер. Затем NCSI использует прокси-сервера для выполнения Проверка подключения к Интернету. Рекомендуется добавить статического прокси-сервера для таблицы политики разрешения имен (NRPT) с помощью следующей процедуры.<br /><br />Перед выполнением команды в этой процедуре, не забудьте заменить все доменные имена, имена компьютеров и другие переменные команды Windows PowerShell со значениями, которые подходят для развертывания.<br /><br />**Настройка статического прокси-сервера для правило NRPT**<br />1.  Отображение «.» Правило NRPT: `Get-DnsClientNrptRule -GpoName "corp.example.com\DirectAccess Client Settings" -Server <DomainControllerNetBIOSName>`<br />2.  Запомните имя (GUID) объекта «.» Правило NRPT. Имя (GUID) должно начинаться с **DA-{.}**<br />3.  Задайте прокси-объект «.» Правило NRPT для **proxy.corp.example.com:8080**:  `Set-DnsClientNrptRule -Name "DA-{..}" -Server <DomainControllerNetBIOSName> -GPOName "corp.example.com\DirectAccess Client Settings" -DAProxyServerName "proxy.corp.example.com:8080" -DAProxyType "UseProxyName"`<br />4.  Отображение «.» Правило NRPT, снова запустив `Get-DnsClientNrptRule`и убедитесь, что **ProxyFQDN:port** теперь настроен правильно.<br />5.  Обновление групповой политики, выполнив `gpupdate /force` на клиенте DirectAccess при внутренне подключен клиент, отобразите NRPT с помощью `Get-DnsClientNrptPolicy` и убедитесь, что «.» правило показывает **ProxyFQDN:port**.|  
   
 

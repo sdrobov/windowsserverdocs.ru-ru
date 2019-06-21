@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Конфигурация сервера OpenSSH для Windows
-ms.openlocfilehash: 8e6476e4005bd5bbc2d40c8a59d39510ca1beb70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7eff3d3e1af67c9daf7a68c67c3609c0ee89fc93
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827285"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280035"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 1809 и Server 2019#
 
@@ -28,7 +28,7 @@ OpenSSH хранит подробную документацию для пара
 Командная оболочка | Команду, чтобы использовать
 ------------- | -------------- 
 Command | path
-PowerShell | $env:\path
+PowerShell | $env:path
 
 Настройка по умолчанию ssh shell выполняется в реестре Windows, добавив полный путь к исполняемому файлу Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH в строковом параметре DefaultShell оболочки. 
 
@@ -53,7 +53,7 @@ New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Wi
 При настройке пользователя или группы на основе правил домена пользователя или группы, используйте следующий формат: ``` user?domain* ```.
 Windows позволяет несколько форматов для указания домена субъекты, но многие противоречит стандартные шаблоны Linux. По этой причине * добавляется для охвата полные доменные имена. Кроме того, этот подход использует «?», а не @, чтобы избежать конфликтов с username@host формат. 
 
-Рабочие группы пользователей или групп и учетных записей, подключенной к Интернету всегда разрешаются до своего имени локальной учетной записи (не доменной частью, аналогичную стандартные имена в Unix). Пользователи и группы домена относятся исключительно к [NameSamCompatible](https://docs.microsoft.com/en-us/windows/desktop/api/secext/ne-secext-extended_name_format) формат — domain_short_name\user_name. Всех пользователей или групп на основе конфигурации, что правила нужно соблюдать этот формат.
+Рабочие группы пользователей или групп и учетных записей, подключенной к Интернету всегда разрешаются до своего имени локальной учетной записи (не доменной частью, аналогичную стандартные имена в Unix). Пользователи и группы домена относятся исключительно к [NameSamCompatible](https://docs.microsoft.com/windows/desktop/api/secext/ne-secext-extended_name_format) формат — domain_short_name\user_name. Всех пользователей или групп на основе конфигурации, что правила нужно соблюдать этот формат.
 
 Примеры для пользователей и групп домена 
 

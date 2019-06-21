@@ -11,12 +11,12 @@ ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
 author: KBDAzure
 ms.author: kathydav
 ms.date: 09/21/2017
-ms.openlocfilehash: 8b7d9233b105f710d620b5142205fb2eadd0248a
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 6ec5db82ecae2fb74731f3c52b9113325837a2fb
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141373"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280010"
 ---
 # <a name="whats-new-in-hyper-v-on-windows-server"></a>Новые возможности в Hyper-V в Windows Server
 
@@ -212,7 +212,7 @@ Set-VMFirmware TestVM -SecureBootTemplate MicrosoftUEFICertificateAuthority
   
 ### <a name="virtual-machine-configuration-version-updated"></a>Версия конфигурации виртуальной машины \(обновлены\)
 
-Версия представляет совместимости конфигурация виртуальной машины, сохраненное состояние и файлы моментальных снимков с версией Hyper-V. Виртуальные машины с версии 5 совместимы с Windows Server 2012 R2 и могут работать в Windows Server 2012 R2 и Windows Server 2016. Виртуальные машины с версиями, представленный в Windows Server 2016 и и Windows Server 2019 не будут работать в Hyper-V в Windows Server 2012 R2.   
+Версия представляет совместимости конфигурация виртуальной машины, сохраненное состояние и файлы моментальных снимков с версией Hyper-V. Виртуальные машины с версии 5 совместимы с Windows Server 2012 R2 и могут работать в Windows Server 2012 R2 и Windows Server 2016. Виртуальные машины с версиями, появившиеся в Windows Server 2016 и Windows Server 2019 не будет работать в Hyper-V в Windows Server 2012 R2.   
   
 При перемещении или импорте виртуальной машины на сервере под управлением Hyper-V в Windows Server 2016 или Windows Server 2019 из Windows Server 2012 R2, конфигурацию виртуальной машины не обновляется автоматически. Это означает, что можно будет переместить виртуальную машину обратно на сервер под управлением Windows Server 2012 R2. Но это также означает, что нельзя использовать новые функции виртуальной машины, пока вы вручную не обновите версию конфигурации виртуальной машины.  
   

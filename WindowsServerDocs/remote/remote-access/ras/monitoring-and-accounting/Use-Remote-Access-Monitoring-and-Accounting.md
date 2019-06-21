@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 92519b49-0df4-43c1-9717-f13570644212
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 454bc8dc5a9cbf8dc4e759196a13e7920de2eaf7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c794d4b8169c81c63162f119467f5f03d10ce756
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823525"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282651"
 ---
 # <a name="use-remote-access-monitoring-and-accounting"></a>Мониторинг и учет удаленного доступа
 
@@ -31,12 +30,12 @@ ms.locfileid: "59823525"
 > [!NOTE]  
 > Помимо этой статьи, доступны следующие разделы о мониторинге удаленного доступа.  
 >   
-> -   [Мониторинг текущей нагрузки на сервере удаленного доступа](Monitor-the-existing-load-on-the-Remote-Access-server.md)  
+> -   [Мониторинг текущей нагрузки сервера удаленного доступа](Monitor-the-existing-load-on-the-Remote-Access-server.md)  
 > -   [Мониторинг статуса распределения конфигурации сервера удаленного доступа](Monitor-the-configuration-distribution-status-of-the-Remote-Access-server.md)  
 > -   [Мониторинг статуса работы сервера удаленного доступа и его компонентов](Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components.md)  
-> -   [Поиск и устранение проблем операций сервера удаленного доступа](Identify-and-resolve-Remote-Access-server-operations-problems.md)  
-> -   [Мониторинг подключенных удаленных клиентов для действия и состояние](Monitor-connected-remote-clients-for-activity-and-status.md)  
-> -   [Создание отчета об использовании для удаленных клиентов, использование статистических данных](Generate-a-usage-report-for-remote-clients-using-historical-data.md)  
+> -   [Выявление и ликвидация сбоев в работе сервера удаленного доступа](Identify-and-resolve-Remote-Access-server-operations-problems.md)  
+> -   [Мониторинг активности и статуса подключенных удаленных клиентов](Monitor-connected-remote-clients-for-activity-and-status.md)  
+> -   [Создание отчетов по использованию на основе зарегистрированных ранее данных для удаленных клиентов](Generate-a-usage-report-for-remote-clients-using-historical-data.md)  
 
 ## <a name="in-this-guide"></a>В данном руководстве  
 В этом документе приводятся инструкции по использованию возможностей мониторинга удаленного доступа с помощью консоли управления DirectAccess и соответствующих командлетов Windows PowerShell, предусмотренных для сервера удаленного доступа.  

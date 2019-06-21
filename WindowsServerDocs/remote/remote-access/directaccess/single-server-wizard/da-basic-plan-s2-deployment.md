@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ddcb162-dd92-406c-acab-d3de7239c644
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 8c21b7fa62246170caeb07cb5865c1ff311e0f09
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c82d5e48f26d9defceb3b7583e06eeedbc71a082
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848755"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281665"
 ---
 # <a name="step-2-plan-the-basic-directaccess-deployment"></a>Шаг 2 Планирование развертывания базового DirectAccess
 
@@ -53,7 +52,7 @@ ms.locfileid: "59848755"
   
 -   **Сетевые адаптеры** -DirectAccess мастер автоматически обнаруживает сетевых адаптеров, настроенных на сервере DirectAccess. Можно убедиться в том, что из выбраны правильные адаптеры **проверки** страницы.  
   
--   **Сертификат IP-HTTPS** — так как не PKI, необходимых в этом развертывании, мастер автоматически подготавливает самозаверяющие сертификаты для IP-HTTPS и сервера сетевых расположений (Если сертификаты отсутствуют) и автоматически включает Прокси-сервер Kerberos. Мастер также включает NAT64 и DNS64 для преобразования протокола в среде только с IPv4. После того как мастер успешно завершит применение параметров, нажмите команду **"Закрыть"**.  
+-   **Сертификат IP-HTTPS** — так как не PKI, необходимых в этом развертывании, мастер автоматически подготавливает самозаверяющие сертификаты для IP-HTTPS и сервера сетевых расположений (Если сертификаты отсутствуют) и автоматически включает Прокси-сервер Kerberos. Мастер также включает NAT64 и DNS64 для преобразования протокола в среде только с IPv4. После того как мастер успешно завершит применение параметров, нажмите команду **"Закрыть"** .  
   
 -   **Клиенты Windows 7** -не удается включить поддержку для клиентов Windows 7 с помощью мастера, Приступая к работе. Эту функцию можно включить из мастер расширенной настройки. Дополнительные сведения см. в разделе [развертывание одиночного сервера DirectAccess с расширенными параметрами](../single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).  
   

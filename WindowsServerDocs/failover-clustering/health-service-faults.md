@@ -8,15 +8,15 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 31a38eacea3af3c0a288d61a77a24b4fa45a1932
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72b1593503db75aa275b9eb45c8342cee6724001
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843375"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280397"
 ---
 # <a name="health-service-faults"></a>Ошибки службы работоспособности
-> Область применения: Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-faults"></a>Что такое ошибок
 
@@ -136,7 +136,7 @@ public void DiscoverObjects(CimSession Session)
 
 Это те же объекты, вы можете получить в PowerShell с помощью командлетов, например **Get-StorageSubSystem**, **Get-StorageNode**, и **Get-Volume**.
 
-Доступны те же свойства, описанные по адресу [классы API управления хранилищами](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx).
+Доступны те же свойства, описанные по адресу [классы API управления хранилищами](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
 
 ```
 ...
@@ -291,7 +291,7 @@ class FaultsObserver : IObserver
 |---------------------------|-----------------------------------------------------------------|
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
-| Причина                    | «Томе заканчивается доступное пространство.»                 |
+| `Reason`                    | «Томе заканчивается доступное пространство.»                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | Установка в стойку A06, RU 25, слоте 11                                        |
@@ -318,7 +318,7 @@ class FaultsObserver : IObserver
 | ChangeType                | 0                                                               |
 | FaultId                   | {12345-12345-12345-12345-12345}                                 |
 | FaultType                 | Microsoft.Health.FaultType.Volume.Capacity                      |
-| Причина                    | «Томе заканчивается доступное пространство.»                 |
+| `Reason`                    | «Томе заканчивается доступное пространство.»                 |
 | PerceivedSeverity         | 5                                                               |
 | FaultingObjectDescription | Contoso XYZ9000 S.N. 123456789                                  |
 | FaultingObjectLocation    | Установка в стойку A06, RU 25, слоте 11                                        |
@@ -391,7 +391,7 @@ class FaultsObserver : IObserver
 * Причина: *«В пул носителей не поддерживает минимальный рекомендуемый объем резерва. Это может ограничить возможность восстановления данных устойчивости в случае сбоя диска.»*
 * RecommendedAction: *«Добавление дополнительной емкости для пула носителей, либо освободить емкость. Минимальный рекомендуемый резерва зависит от развертывания, но имеет емкость, накопленные приблизительно 2 дисков.»*
 
-### <a name="volume-capacity-2sup1sup"></a>**Емкость тома (2)**<sup>1</sup>
+### <a name="volume-capacity-2sup1sup"></a>**Емкость тома (2)** <sup>1</sup>
 
 #### <a name="faulttype-microsofthealthfaulttypevolumecapacity"></a>FaultType: Microsoft.Health.FaultType.Volume.Capacity
 * Серьезность: Предупреждение
@@ -498,7 +498,7 @@ class FaultsObserver : IObserver
 * Причина: *«Развертывание встроенного по была отменена из-за слишком много физических дисков, Сбой попытки обновления встроенного по».*
 * RecommendedAction: *«Restart встроенного по разворачивать после устранения проблемы встроенного по.»*
 
-### <a name="storage-qos-3sup2sup"></a>**Качество обслуживания хранилища (3)**<sup>2</sup>
+### <a name="storage-qos-3sup2sup"></a>**Качество обслуживания хранилища (3)** <sup>2</sup>
 
 #### <a name="faulttype-microsofthealthfaulttypestorqosinsufficientthroughput"></a>FaultType: Microsoft.Health.FaultType.StorQos.InsufficientThroughput
 * Серьезность: Предупреждение

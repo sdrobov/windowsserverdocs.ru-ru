@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-bc
+ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 36d8379378529a94874c82e0aa90a6440f0281b2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: fd1757f6da011c2f774d8f97f628e5f0e87d3bf7
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822235"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284027"
 ---
 # <a name="enable-branchcache-on-a-file-share-optional"></a>Включение BranchCache в общем файловом ресурсе (необязательно)
 
@@ -39,7 +38,7 @@ ms.locfileid: "59822235"
   
 3.  В **Добавление или удаление оснасток**в **Доступные оснастки**, дважды щелкните **общих папок**. Выбрав объект с локального компьютера, откроется мастер общих папок. Настроить представление, которое вы хотите использовать, щелкните **Готово**, а затем нажмите кнопку **ОК**.  
   
-4.  Дважды щелкните **общих папок (локальный)**, а затем нажмите кнопку **общих папок**.  
+4.  Дважды щелкните **общих папок (локальный)** , а затем нажмите кнопку **общих папок**.  
   
 5.  В области сведений щелкните правой кнопкой мыши общую папку затем **свойства**. Дистрибутивного общего ресурса **свойства** откроется диалоговое окно.  
   

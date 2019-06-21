@@ -13,12 +13,12 @@ ms.author: coreyp
 manager: dongill
 ms.date: 05/22/2018
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 7e5253e1da9f011c3a0e940abd7e6f17f9a223a9
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 861c8f35cf57fc7c8d03914dba2d971d50b66fc5
+ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440109"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298167"
 ---
 # <a name="windows-commands"></a>Команды Windows
 
@@ -53,7 +53,7 @@ ms.locfileid: "66440109"
  [W](#w) | 
 [X](#x) | Y | Z
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Информация, содержащаяся в этот PDF-ФАЙЛ, относится к:
 
 -   Windows Server 2019
@@ -225,6 +225,7 @@ PowerShell была разработана для расширения возм�
 - [chkntfs](chkntfs.md)
 - [choice](choice.md)
 - [cipher](cipher.md)
+- [«cleanmgr»](clean-mgr.md)
 - [clip](clip.md)
 - [cls](cls.md)
 - [Cmd](Cmd.md)

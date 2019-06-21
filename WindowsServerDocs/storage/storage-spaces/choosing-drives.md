@@ -9,12 +9,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 10/08/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: d16a9ddea96760b41c6cd2e4239b9bb51c8b3b38
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 8bdce646c631b56309f86292f0895fe80b0adf31
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501641"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284502"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>Выбор дисков для локальных дисковых пространств
 
@@ -116,7 +116,7 @@ ms.locfileid: "66501641"
 
 Мы рекомендуем ограничить общий объем хранилища на сервер — приблизительно до 100 терабайт (ТБ). Чем больше объем хранилища на сервер, тем больше времени необходимо для повторной синхронизации данных после простоя или перезагрузки, например при применении обновлений программного обеспечения.
 
-Текущий максимальный размер каждого пула носителей составляет 4 до нескольких петабайт (PB) (4 000 ТБ) для Windows Server 2019 или 1 ПБ для Windows Server 2016.
+Текущий максимальный размер каждого пула носителей — 4 до нескольких петабайт (PB) (4 000 ТБ) для Windows Server 2019 или 1 ПБ для Windows Server 2016.
 
 ## <a name="see-also"></a>См. также
 

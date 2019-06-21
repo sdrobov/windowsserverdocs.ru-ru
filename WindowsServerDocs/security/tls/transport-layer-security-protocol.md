@@ -13,12 +13,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: 77e3ee9d89bff7ab6e95ea47ffa141e6e1004ba4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a3b241fe0d2a61361d551b7f515507ad55d71cd
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853025"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284232"
 ---
 # <a name="transport-layer-security-protocol"></a>Протокол TLS
 
@@ -41,7 +41,7 @@ TLS и SSL предполагается, что транспорт ориент�
 **Уровни протоколов TLS и SSL**
 
 
-Schannel SSP реализует протоколы TLS и SSL без изменений. Собственный протокол SSL, но Internet Engineering Task Force дает открытых спецификаций TLS. Сведения о какой TLS или SSL версии поддерживается в версиях Windows, см. в разделе [протоколы TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/en-us/library/windows/desktop/mt808159(v=vs.85).aspx). В следующей таблице перечислены спецификации для каждой версии TLS. Каждая спецификация содержатся следующие сведения:
+Schannel SSP реализует протоколы TLS и SSL без изменений. Собственный протокол SSL, но Internet Engineering Task Force дает открытых спецификаций TLS. Сведения о какой TLS или SSL версии поддерживается в версиях Windows, см. в разделе [протоколы TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159(v=vs.85).aspx). В следующей таблице перечислены спецификации для каждой версии TLS. Каждая спецификация содержатся следующие сведения:
 
 -   The TLS Record Protocol
 

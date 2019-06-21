@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-da
+ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb0cf464-0668-40f8-8222-feb6bae6d3d5
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: d2bab7abd8acd958ccb0b0c1d64bc4245b61be36
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: deb220ad5ee83e2849f962c588d6150892d990d6
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854075"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281790"
 ---
 # <a name="deploy-a-single-directaccess-server-using-the-getting-started-wizard"></a>Развертывание одного сервера DirectAccess с помощью мастера начальной настройки
 
@@ -29,9 +28,9 @@ ms.locfileid: "59854075"
 ## <a name="before-you-begin-deploying-see-the-list-of-unsupported-configurations-known-issues-and-prerequisites"></a>Перед началом развертывания ознакомьтесь со списком неподдерживаемых конфигураций, известных проблем и предварительных условий.  
 Внимание предварительные условия и другие сведения, прежде чем развернуть DirectAccess можно использовать следующие разделы.  
   
--   [DirectAccess неподдерживаемые конфигурации](../../../remote-access/directaccess/DirectAccess-Unsupported-Configurations.md)  
+-   [Неподдерживаемые конфигурации DirectAccess](../../../remote-access/directaccess/DirectAccess-Unsupported-Configurations.md)  
   
--   [Необходимые условия для развертывания DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
+-   [Предварительные требования для развертывания DirectAccess](../../../remote-access/directaccess/Prerequisites-for-Deploying-DirectAccess.md)  
   
 ## <a name="BKMK_OVER"></a>Описание сценария  
 В этом сценарии один компьютер под управлением Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012, настроен как сервер DirectAccess с параметрами по умолчанию в несколько простых шагов мастера, отсутствует необходимость настраивать параметры инфраструктуры, такие как центр сертификации (ЦС) или группы безопасности Active Directory.  

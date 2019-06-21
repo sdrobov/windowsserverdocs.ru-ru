@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ''
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ab2b0731a5673e14fb130d539324701a336f30ac
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 853788f20c452391c802f0681fa23978b4892c6a
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863635"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67281231"
 ---
 # <a name="deploy-remote-access-in-a-cluster"></a>Развертывание удаленного доступа в кластере
 
@@ -29,7 +28,7 @@ Windows Server 2016 и Windows Server 2012 объединить DirectAccess и 
 ## <a name="BKMK_OVER"></a>Описание сценария  
 Развертывание в кластере объединяет несколько серверов удаленного доступа в единый блок, который действует как единая точка контакта для удаленных клиентских компьютеров, подключающихся к внутренней корпоративной сети с помощью внешнего виртуального IP-адреса черезDirectAccessилиVPN\(Виртуальный IP-адрес\) адрес кластера удаленного доступа.  Трафик в кластер балансируется с помощью Windows NLB или балансировщик нагрузки с внешним \(например F5 больших\-IP-адрес\).  
 
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Перед началом развертывания этого сценария ознакомьтесь со списком важных требований.  
 
 -   Балансировка нагрузки по умолчанию с помощью Windows NLB.  

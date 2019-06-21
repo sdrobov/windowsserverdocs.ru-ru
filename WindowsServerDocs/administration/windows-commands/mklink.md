@@ -1,6 +1,6 @@
 ---
 title: mklink
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca9f5f00bc92d7929f782be45562e80bba455d74
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 1ea80b81b268b31f637c72a828fee8b6f0229a47
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501455"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280026"
 ---
 # <a name="mklink"></a>mklink
 Создает символьную ссылку.
@@ -52,6 +52,6 @@ rd \MyFolder
 del \MyFile.file
 ```
 ## <a name="additional-references"></a>Дополнительная справка
--   [Новый элемент](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
--   [del](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/del)
--   [rmdir](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rd)
+-   [Новый элемент](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/new-item?view=powershell-6)
+-   [del](https://docs.microsoft.com/windows-server/administration/windows-commands/del)
+-   [rmdir](https://docs.microsoft.com/windows-server/administration/windows-commands/rd)

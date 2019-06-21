@@ -9,12 +9,12 @@ ms.date: 05/20/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7a4ad8c0199f0f62d7cd69a43897cb4608ddb365
-ms.sourcegitcommit: ccc802338b163abdad2e53b55f39addcfea04603
+ms.openlocfilehash: eb31a76dbd7ccdff3ea3ee0d6bb26f9ee16ae93f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687368"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280708"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS экстрасети и смарт-блокировка экстрасети
 
@@ -237,7 +237,7 @@ AD FS предоставляет три командлеты для управл
 ## <a name="event-logging--user-activity-information-for-ad-fs-extranet-lockout"></a>Ведение журнала событий и действий пользователя для блокировки экстрасети AD FS
 
 ### <a name="connect-health"></a>Connect Health
-Рекомендуемый способ наблюдения за действиям в учетной записи пользователя — Connect Health. Connect Health создает, загружаемые отчеты о опасных IP-адресов и попытки ввода неправильного пароля. Каждый элемент в отчете о ненадежном IP-адресе показывает статистические данные о неудачных AD FS действий входа превышающих указанный порог. Можно задать уведомления по электронной почте для предупреждения администраторов о, как только это происходит с помощью настраиваемых параметров электронной почты. Дополнительные сведения и инструкции по настройке, см. в статье [Connect Health документации](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-health-adfs).
+Рекомендуемый способ наблюдения за действиям в учетной записи пользователя — Connect Health. Connect Health создает, загружаемые отчеты о опасных IP-адресов и попытки ввода неправильного пароля. Каждый элемент в отчете о ненадежном IP-адресе показывает статистические данные о неудачных AD FS действий входа превышающих указанный порог. Можно задать уведомления по электронной почте для предупреждения администраторов о, как только это происходит с помощью настраиваемых параметров электронной почты. Дополнительные сведения и инструкции по настройке, см. в статье [Connect Health документации](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-health-adfs).
 
 ### <a name="ad-fs-extranet-smart-lockout-events"></a>События AD FS экстрасети смарт-блокировка.
 Для событий смарт-блокировка экстрасети для записи ESL должен быть включен в режиме «только для журнала» или «применить», и включен аудит безопасности служб федерации Active Directory.

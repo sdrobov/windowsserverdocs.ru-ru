@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: 4af0f96b0af3a547ab7d509d031a9e23cce8b654
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 059bb3c1b15afdc579ba048b8bbb02ed185f3d42
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443216"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280957"
 ---
 # <a name="virtualized-domain-controller-deployment-and-configuration"></a>Развертывание и настройка виртуализированного контроллера домена
 
@@ -153,7 +153,7 @@ ms.locfileid: "66443216"
     >   
     > Поскольку это новый метод, вашему программному обеспечению анализа сети требуются обновленные средства синтаксического анализа, чтобы включить поля для нового Opnum 28 в существующий UUID E3514235-4B06-11D1-AB04-00C04FC2DCD2. В противном случае вы не сможете анализировать данный трафик.  
     >   
-    > Дополнительные сведения см. в разделе [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](https://msdn.microsoft.com/en-us/library/hh554213(v=prot.13).aspx).  
+    > Дополнительные сведения см. в разделе [4.1.29 IDL_DRSAddCloneDC (Opnum 28)](https://msdn.microsoft.com/library/hh554213(v=prot.13).aspx).  
   
 ***Это также означает, что при использовании неполностью маршрутизируемых сетей клонирования виртуализированного контроллера домена требуются сегменты сети с доступом к PDCE***. После клонирования клонированный контроллер домена можно переместить в другую сеть — как физический контроллер домена — при условии, что вы тщательно обновите информацию логического сайта доменных служб Active Directory.  
   

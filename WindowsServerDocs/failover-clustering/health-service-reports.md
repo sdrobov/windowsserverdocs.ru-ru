@@ -8,15 +8,15 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: bc21b9fdec5700fec23dc6af7ca15873ded34bea
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e018c0270a0bf410dada9c05d2c25e51fdfac1d8
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821965"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280154"
 ---
 # <a name="health-service-reports"></a>Отчеты о работоспособности службы
-> Область применения: Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-reports"></a>Что такое отчеты  
 
@@ -110,7 +110,7 @@ public void DiscoverObjects(CimSession Session)
 
 Это те же объекты, вы можете получить в PowerShell с помощью командлетов, например **Get-StorageSubSystem**, **Get-StorageNode**, и **Get-Volume**.
 
-Доступны те же свойства, описанные по адресу [классы API управления хранилищами](https://msdn.microsoft.com/en-us/library/windows/desktop/hh830612(v=vs.85).aspx).
+Доступны те же свойства, описанные по адресу [классы API управления хранилищами](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
 
 ```
 ...
@@ -131,7 +131,7 @@ foreach (CimInstance Node in Nodes)
 
 ### <a name="iobserveronnext"></a>IObserver.OnNext()
 
-Этот пример кода использует [шаблон разработки наблюдателя](https://msdn.microsoft.com/en-us/library/ee850490(v=vs.110).aspx) для реализация объекта Observer, **OnNext()** метод будет вызываться при поступлении каждого нового примера метрик. Его **OnCompleted()** будет вызываться метод Если/при потоковой передаче заканчивается. Например можно использовать его чтобы повторно инициировать потоковой передачи, поэтому она продолжается неопределенное время.
+Этот пример кода использует [шаблон разработки наблюдателя](https://msdn.microsoft.com/library/ee850490(v=vs.110).aspx) для реализация объекта Observer, **OnNext()** метод будет вызываться при поступлении каждого нового примера метрик. Его **OnCompleted()** будет вызываться метод Если/при потоковой передаче заканчивается. Например можно использовать его чтобы повторно инициировать потоковой передачи, поэтому она продолжается неопределенное время.
 
 ```
 class MetricsObserver<T> : IObserver<T>

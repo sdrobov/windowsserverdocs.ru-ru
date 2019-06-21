@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac2f6015-50a5-4909-8f67-8565f9d332a2
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3091c770fb9b207d82deaa571970bfeb44d17ee3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 607e3f5b2aa7e4c81e507a3d551d3d56e1f0b347
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875885"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67282587"
 ---
 # <a name="deploy-multiple-remote-access-servers-in-a-multisite-deployment"></a>Развертывание нескольких серверов удаленного доступа в многосайтовом развертывании
 
@@ -39,7 +38,7 @@ ms.locfileid: "59875885"
   
 Поддержка клиентов под управлением Windows 7 необходимо включить вручную в каждой точки входа и выбора точки входа, эти клиенты не поддерживается.  
   
-## <a name="prerequisites"></a>предварительные требования  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед началом развертывания этого сценария ознакомьтесь со списком важных требований.  
   
 -   [Развертывание одиночного сервера DirectAccess с расширенными параметрами](../../directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md) должны быть развернуты перед многосайтового развертывания.  

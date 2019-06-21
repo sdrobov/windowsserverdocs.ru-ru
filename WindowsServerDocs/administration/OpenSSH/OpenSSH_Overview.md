@@ -5,12 +5,12 @@ author: maertendMSFT
 keywords: OpenSSH, SSH, Win32-OpenSSH
 title: OpenSSH в Windows
 ms.product: w10
-ms.openlocfilehash: 68ced1ff133495d7658e486e7e72321e18857b21
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6563fbe4fe69acad4d295a3f7fe166e92d38444
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843365"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280051"
 ---
 # <a name="openssh-in-windows"></a>OpenSSH в Windows
 
@@ -32,5 +32,5 @@ OpenSSH — это открытая версия средств Secure Shell (SS
 
 Дополнительные подробную документацию для общих возможностей OpenSSH доступна через Интернет в [OpenSSH.com](https://www.openssh.com/manual.html). 
 
-Master [OpenSSH проект с открытым кодом](https://www.openssh.com) управляется разработчиков проекта OpenBSD. Вилки Microsoft этого проекта находится в [Github](https://github.com/PowerShell/openssh-portable).
-Отзывы о Windows OpenSSH буду оно может быть указано путем создания вопросов Github в нашем [репозиторий OpenSSH Github](https://github.com/PowerShell/openssh-portable). 
+Master [OpenSSH проект с открытым кодом](https://www.openssh.com) управляется разработчиков проекта OpenBSD. Вилки Microsoft этого проекта находится в [GitHub](https://github.com/PowerShell/openssh-portable).
+Отзывы о Windows OpenSSH буду оно может быть указано путем создания вопросов GitHub в нашем [репозиторий OpenSSH GitHub](https://github.com/PowerShell/openssh-portable). 

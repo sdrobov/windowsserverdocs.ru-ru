@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: fe00072932d9c7f283ebd887a5292ac9a9d0e37f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4d156820781d2a9defc989fa1acf35d4289fb24f
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66446030"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284084"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Управление Гиперконвергентной инфраструктуры с помощью Windows Admin Center
 
@@ -21,7 +21,7 @@ ms.locfileid: "66446030"
 
 ## <a name="what-is-hyper-converged-infrastructure"></a>Что такое Hyper-Converged инфраструктуры
 
-Гиперконвергентное инфраструктуры объединяет программно определяемых вычислений, хранилища и сети в один кластер для обеспечения высокой производительности, экономичные и легко масштабируются виртуализации. Эта возможность появилась в Windows Server 2016 с [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview), [программно-Конфигурируемую сеть](https://docs.microsoft.com/en-us/windows-server/networking/sdn/software-defined-networking) и [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
+Гиперконвергентное инфраструктуры объединяет программно определяемых вычислений, хранилища и сети в один кластер для обеспечения высокой производительности, экономичные и легко масштабируются виртуализации. Эта возможность появилась в Windows Server 2016 с [Storage Spaces Direct](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview), [программно-Конфигурируемую сеть](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking) и [Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/hyper-v-on-windows-server).
 
 > [!Tip]
 > Необходимы для инфраструктуры Hyper-Converged? Корпорация Майкрософт рекомендует эти [определяемые серверное программное обеспечение Windows](https://microsoft.com/wssd) решения от наших партнеров. Они разработаны, собраны и проверены в нашей эталонной архитектуры для обеспечения совместимости и надежности, чтобы оперативно настраивайте и быстрый запуск.

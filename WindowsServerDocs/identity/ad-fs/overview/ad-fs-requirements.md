@@ -9,12 +9,12 @@ ms.date: 03/06/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: e62032533b15ec3d93896d242273612faafdca58
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1e72556f9a630e188b59722e09650f9e48fb6852
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444105"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280473"
 ---
 # <a name="ad-fs-requirements"></a>Требования AD FS
 
@@ -110,7 +110,7 @@ AD FS и прокси веб-приложения требования к обо
   
 -   Для доступа через экстрасеть, необходимо развернуть службы роли прокси веб-приложения \- частью роли сервера удаленного доступа. 
 
--   Прокси-серверы сторонних должен поддерживать [протокола MS-ADFSPIP](https://msdn.microsoft.com/en-us/library/dn392811.aspx) поддерживаться в качестве прокси-сервер AD FS.  Перечень сторонних поставщиков см. в разделе [часто задаваемые вопросы о](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
+-   Прокси-серверы сторонних должен поддерживать [протокола MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx) поддерживаться в качестве прокси-сервер AD FS.  Перечень сторонних поставщиков см. в разделе [часто задаваемые вопросы о](AD-FS-FAQ.md#what-third-party-proxies-are-available-for-ad-fs-that-support-ms-adfspip).
 
 -   AD FS 2016 требует серверы прокси веб-приложения в Windows Server 2016.  Невозможно настроить прокси-сервер нижнего уровня для фермы AD FS 2016 под управлением на уровне поведения фермы 2016.
   

@@ -6,19 +6,18 @@ ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
 ms.suite: na
-ms.technology:
-- networking-ras
+ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: f110ad945139da3b07b33bbb0adb3e8084743fdb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7cbcc844c356978f5bb5f34b66aa36dec9b163c1
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812245"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67283006"
 ---
 # <a name="deploy-remote-access-in-an-enterprise"></a>Развертывание удаленного доступа на предприятии
 
@@ -32,9 +31,9 @@ ms.locfileid: "59812245"
   
 ## <a name="before-you-begin-deploying-see-the-list-of-unsupported-configurations-known-issues-and-prerequisites"></a>Перед началом развертывания ознакомьтесь со списком неподдерживаемых конфигураций, известных проблем и предварительных условий.  
   
--   [DirectAccess неподдерживаемые конфигурации](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
+-   [Неподдерживаемые конфигурации DirectAccess](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
   
--   [DirectAccess известные проблемы](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
+-   [DirectAccess — известные проблемы](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
   
 -   [Необходимые условия для развертывания DirectAccess)](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/prerequisites-for-deploying-directaccess)  
   
@@ -46,9 +45,9 @@ ms.locfileid: "59812245"
   
 -   [Развертывание удаленного доступа в кластере](cluster/Deploy-Remote-Access-In-Cluster.md)  
   
--   [Развертывание нескольких серверов удаленного доступа в многосайтового развертывания](multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment.md)  
+-   [Развертывание нескольких серверов удаленного доступа в многосайтовом развертывании](multisite/Deploy-Multiple-Remote-Access-Servers-in-a-Multisite-Deployment.md)  
   
--   [Развертывание удаленного доступа с проверкой подлинности OTP](otp/Deploy-RA-OTP.md)  
+-   [Развертывание удаленного доступа с проверкой подлинности методом OTP](otp/Deploy-RA-OTP.md)  
   
 -   [Развертывание удаленного доступа в среде с несколькими лесами](multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment.md)  
   

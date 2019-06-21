@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.date: 01/18/2019
 description: В этой статье описывается перемещение кластера Windows Server 2019 из одного домена в другой
 ms.localizationpriority: medium
-ms.openlocfilehash: 1054de942e807f00586903683faeaf695ec2f033
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.openlocfilehash: 5d5aaa333d2e20fa25e4738e343f326d63f75c6b
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66452928"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280215"
 ---
 # <a name="failover-cluster-domain-migration"></a>Миграция домена отказоустойчивого кластера
 
@@ -61,7 +61,7 @@ ms.locfileid: "66452928"
 Как показано в анимации, этот параметр не является необратимым, но требуется другое оборудование или узел из существующего кластера, не был удален.
 
 1. Создайте новый clusterin нового домена и при этом иметь доступные старого кластера.
-2. Используйте [мастера миграции кластера](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) для переноса всех ресурсов в новый кластер. Напоминание, это не копирует данные, поэтому необходимо будет выполняться отдельно.
+2. Используйте [мастера миграции кластера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754481(v=ws.10)) для переноса всех ресурсов в новый кластер. Напоминание, это не копирует данные, поэтому необходимо будет выполняться отдельно.
 3. Вывод из эксплуатации или удалите старый кластер.
 
 В обоих случаях необходимо иметь все новому кластеру [кластерными приложениями](https://technet.microsoft.com/aa369082(v=vs.90)) драйверы, устарели, и возможно тестирование, чтобы убедитесь, что все будет выполняться правильно.  Это много времени, если также нужно переместить данные.
