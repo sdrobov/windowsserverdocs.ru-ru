@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 72266dcedcda080ee98dd7bc90da8db1a27255b4
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: aa7fae25f68030702aecd378d797301d5cb83186
+ms.sourcegitcommit: 6b6c3601fb7493ab145ccff02db26d7123df9a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192531"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316345"
 ---
 # <a name="ad-fs-operations"></a>Операции AD FS
 
@@ -53,13 +53,13 @@ ms.locfileid: "66192531"
 - [Настройка заголовков ответа HTTP безопасности с AD FS 2019 г.](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [Делегирование доступа к командлету Powershell AD FS пользователям без прав администратора](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
 - [Элементы управления аутентификацией устройств в AD FS](../ad-fs/operations/device-authentication-controls-in-AD-FS.md) 
-
 - [Улучшение взаимодействия с SAML 2.0](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 - [Присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Управление рисками с использованием условного управления доступом](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [Управление SSL-сертификатами в AD FS и WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [Настройка среды лаборатории AD FS](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+- [SQL тонкой настройки и адресации задержки](../ad-fs/operations/adfs-sql-latency.md) 
 - [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Пошаговое руководство. Управление рисками с использованием условного управления доступом](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 - [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
