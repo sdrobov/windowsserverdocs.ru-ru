@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a7f4f29b37793b45a614bd592feddb339dd05c3d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 3cc4194b562dad17d0c2021f4aaf061114e2c94b
+ms.sourcegitcommit: 9bece8049b1766bd9bb0d5eb5921413a2de2ca61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280605"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351302"
 ---
 ## <a name="best-practices-for-securing-active-directory-federation-services"></a>Рекомендации по обеспечению безопасности служб федерации Active Directory
 
@@ -34,6 +34,9 @@ ms.locfileid: "67280605"
 >Обратите внимание, что порт 49443 только требуется, если используется проверка подлинности сертификата пользователя, который является необязательным для Azure AD и Office 365.
 
 ![Топология AD FS Standard](media/Best-Practices-Securing-AD-FS/adfssec2.png)
+
+>[!NOTE]
+> Порт 808 (Windows Server 2012 R2) или порт 1501 (Windows Server 2016 +) является портов Net.TCP AD FS использует локальной конечной точки WCF для передачи данных конфигурации для процесса службы и Powershell. Этот порт можно увидеть, выполнив Get-AdfsProperties | Выберите NetTcpPort. Это локальный порт, который будет необходимо открыть в брандмауэре, но будет отображаться при сканировании порт. 
 
 ### <a name="azure-ad-connect-and-federation-serverswap"></a>Azure AD Connect и серверы федерации и WAP
 В этой таблице описываются порты и протоколы, которые необходимы для обмена данными между сервером Azure AD Connect и серверами федерации и WAP.  

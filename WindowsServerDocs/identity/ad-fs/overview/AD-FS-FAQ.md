@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: fc92e8b30d6b4c0c765333d3e22311e551d3365d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 1fe73df2ce209fc47c7414d33cb1e0a83d31dcd7
+ms.sourcegitcommit: 9bece8049b1766bd9bb0d5eb5921413a2de2ca61
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280496"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351286"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>Часто задаваемые вопросы (FAQ) AD FS
 
@@ -300,3 +300,6 @@ ADFS и серверов веб-приложение поддерживает л
 В AD FS 2016 привязки токена включается автоматически и вызывает несколько известных проблем со сценариями прокси-сервера и федерации результаты в эту ошибку. Чтобы устранить эту проблему, выполните следующую команду Powershell и удаление поддержки привязки токена.
 
 `Set-AdfsProperties -IgnoreTokenBinding $true`
+
+### <a name="i-have-upgraded-my-farm-from-ad-fs-in-windows-server-2016-to-ad-fs-in-windows-server-2019-the-farm-behavior-level-for-the-ad-fs-farm-has-been-successfully-raised-to-2019-but-the-web-application-proxy-configuration-is-still-displayed-as-windows-server-2016"></a>Я обновления моей фермой AD FS в Windows Server 2016 до AD FS в Windows Server 2019. На уровне поведения фермы для фермы AD FS успешно увеличен до 2019 г., но конфигурация в прокси веб-приложения по-прежнему отображается как Windows Server 2016?
+После обновления до Windows Server 2019 версию конфигурации прокси веб-приложения будет отображаться как Windows Server 2016. Прокси веб-приложения не поддерживает новые функции определенной версии для Windows Server 2019 и на уровне поведения фермы успешно создано на AD FS, прокси веб-приложения будет продолжать отображать как Windows Server 2016 намеренно. 
