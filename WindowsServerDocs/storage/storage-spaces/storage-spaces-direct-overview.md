@@ -6,16 +6,16 @@ ms.manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
-ms.date: 06/07/2019
+ms.date: 06/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: Обзор дисковыми пространствами, в состав Windows Server, который позволяет кластера серверов с помощью внутреннего хранилища в программно определяемого хранилища решение.
 ms.localizationpriority: medium
-ms.openlocfilehash: 1ff63794de25565a9ade7eb4e8b66cf1e394c14a
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 98801af7f753e071e27f100f20ed149110c90f66
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812698"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407683"
 ---
 # <a name="storage-spaces-direct-overview"></a>Обзор локальных дисковых пространств
 
@@ -30,8 +30,8 @@ ms.locfileid: "66812698"
 |       |       |
 |   -   |   -   |
 | **Понять**<br><ul><li>Обзор (вы здесь)</li><li>[Общие сведения о кэше](understand-the-cache.md)</li><li>[Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)<li>[Рекомендации по симметрии диска](drive-symmetry-considerations.md)</li><li>[Принцип работы и отслеживание повторной синхронизации хранилища](understand-storage-resync.md)</li><li>[Общие сведения о кворуме кластеров и пулов](understand-quorum.md)</li><li>[Наборы кластеров](cluster-sets.md)</li> | **План**<br><ul><li>[Требования к оборудованию](storage-spaces-direct-hardware-requirements.md)</li><li>[Использование кэша чтения в памяти CSV](csv-cache.md)</li><li>[Выбор дисков](choosing-drives.md)</li><li>[Планирование томов](plan-volumes.md)</li><li>[Использование кластеров гостевых виртуальных машин](storage-spaces-direct-in-vm.md)</li><li>[Аварийное восстановление](storage-spaces-direct-disaster-recovery.md)</li> |
-| **Развертывание**<br><ul><li>[Развертывание локальных дисковых пространств](deploy-storage-spaces-direct.md)</li><li>[Создание томов](create-volumes.md)</li><li>[Вложенная устойчивость](nested-resiliency.md)</li><li>[Настройка кворума](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Обновление кластера Локальных дисковых пространств в Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li> | **Управление**<br><ul><li>[Управление с помощью Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Добавление серверов или дисков](add-nodes.md)</li><li>[Перевод сервера в автономный режим для обслуживания](maintain-servers.md)</li><li>[Удаление серверов](remove-servers.md)</li><li>[Увеличение размеров томов](resize-volumes.md)</li><li>[Удаление томов](delete-volumes.md)</li><li>[Обновление встроенного ПО дисков](../update-firmware.md)</li><li>[Журнал производительности](performance-history.md)</li><li>[Разграничение выделения томов](delimit-volume-allocation.md)</li><li>[Используйте Azure Monitor в гиперконвергированный кластер](configure-azure-monitor.md)</li> |
-| **Устранение неполадок**<br><ul><li>[Устранение неполадок работоспособности и состояния работоспособности](storage-spaces-states.md)</li><li>[Сбор диагностических данных с дисковыми пространствами](data-collection.md)</li> | **Последние сообщения в блоге**<br><ul><li>[13.7 миллиона операций ввода-ВЫВОДА, с дисковыми пространствами: новой записи отрасли для гиперконвергентной инфраструктуры](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Гиперконвергентной инфраструктуры, в Windows Server 2019 — обратный отсчет начинается с момента сейчас!](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Пять больших объявления от Windows Server Summit](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10 000 кластерами дисковых и инвентаризации...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
+| **Развертывание**<br><ul><li>[Развертывание локальных дисковых пространств](deploy-storage-spaces-direct.md)</li><li>[Создание томов](create-volumes.md)</li><li>[Вложенная устойчивость](nested-resiliency.md)</li><li>[Настройка кворума](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Обновление кластера Локальных дисковых пространств в Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[Понять и развернуть постоянной памяти](deploy-pmem.md)</li> | **Управление**<br><ul><li>[Управление с помощью Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Добавление серверов или дисков](add-nodes.md)</li><li>[Перевод сервера в автономный режим для обслуживания](maintain-servers.md)</li><li>[Удаление серверов](remove-servers.md)</li><li>[Увеличение размеров томов](resize-volumes.md)</li><li>[Удаление томов](delete-volumes.md)</li><li>[Обновление встроенного ПО дисков](../update-firmware.md)</li><li>[Журнал производительности](performance-history.md)</li><li>[Разграничение выделения томов](delimit-volume-allocation.md)</li><li>[Используйте Azure Monitor в гиперконвергированный кластер](configure-azure-monitor.md)</li> |
+| **Устранение неполадок**<br><ul><li>[Сценарии устранения неполадок](troubleshooting-storage-spaces.md)</li><li>[Устранение неполадок работоспособности и состояния работоспособности](storage-spaces-states.md)</li><li>[Сбор диагностических данных с дисковыми пространствами](data-collection.md)</li><li>[Управление работоспособностью памяти класса хранилища](Storage-class-memory-health.md)</li> | **Последние сообщения в блоге**<br><ul><li>[13.7 миллиона операций ввода-ВЫВОДА, с дисковыми пространствами: новой записи отрасли для гиперконвергентной инфраструктуры](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Гиперконвергентной инфраструктуры, в Windows Server 2019 — обратный отсчет начинается с момента сейчас!](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Пять больших объявления от Windows Server Summit](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10 000 кластерами дисковых и инвентаризации...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
 
 ## <a name="videos"></a>Видео
 

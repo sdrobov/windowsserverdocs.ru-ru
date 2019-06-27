@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: b479697366239144e5ca9d3486b84191eb51dc4d
-ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
+ms.openlocfilehash: fbec7cd2b8312f03998cfb27b739d0866d3a47c5
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67301615"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407666"
 ---
 # <a name="using-disk-cleanup-on-windows-server"></a>Использование программы очистки диска в Windows Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "67301615"
 
 Чтобы запустить средство очистки диска, выполните команду Cleanmgr.exe либо выберите **запустить**выберите **средств администрирования Windows**и выберите **очистки диска**.
 
-Кроме того Очистка диска с помощью [cleanmgr Windows команда](../../administration/windows-commands/clean-mgr.md) и использовать параметры командной строки для указания, что очистка диска удаляет определенные файлы.
+Кроме того Очистка диска с помощью [cleanmgr Windows команда](../../administration/windows-commands/cleanmgr.md) и использовать параметры командной строки для указания, что очистка диска удаляет определенные файлы.
 
 ## <a name="enable-disk-cleanup-on-an-earlier-version-of-windows-server-by-installing-the-desktop-experience"></a>Включить очистки диска на более раннюю версию Windows Server, установив возможности рабочего стола
 
@@ -78,4 +78,4 @@ ms.locfileid: "67301615"
 
 [Освободите место на диске в Windows 10](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
 
-[«cleanmgr»](../../administration/windows-commands/clean-mgr.md)
+[«cleanmgr»](../../administration/windows-commands/cleanmgr.md)

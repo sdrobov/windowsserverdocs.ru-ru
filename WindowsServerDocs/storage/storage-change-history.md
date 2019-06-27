@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 06/04/2019
+ms.date: 06/25/2019
 description: Новые и обновленные разделы документации по локального хранилища для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: 442d640809d3ae9cf4a11feb646fbbd566e6e3fa
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 52e1de646a3acb56b764ee1b781d852d8bf93225
+ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284460"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67407616"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
@@ -26,8 +26,9 @@ ms.locfileid: "67284460"
 
 ## <a name="june-2019"></a>2019 июня
 
-| Новый или измененный раздел                                        | Описание|
+| Новый или измененный раздел                                        | Описание |
 | ---                                                         | ---           |
+| [Очистка диска](file-server/disk-cleanup.md)                                              | Создать (перенести из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
 | [Служба миграции хранилища часто задаваемые вопросы](storage-migration-service/faq.md#consolidate-servers) | Добавлены сведения о оптимизации производительности. |
 
 ## <a name="may-2019"></a>Май 2019 г.
@@ -42,9 +43,10 @@ ms.locfileid: "67284460"
 
 |Новый или измененный раздел                                        |Описание|
 |---                                                         |---           |
-|[Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md)| Оператор new|
-|[Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Оператор new        |
-|[Репликация DFS](dfs-replication/dfsr-overview.md)        | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) библиотеки|
+| [Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md) | Оператор new |
+| [Понять и развернуть постоянной памяти](storage-spaces/deploy-pmem.md) | Оператор new |
+| [Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Оператор new        |
+| [Репликация DFS](dfs-replication/dfsr-overview.md)        | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)) библиотеки|
 
 ## <a name="february-2019"></a>Февраль 2019 г.
 
