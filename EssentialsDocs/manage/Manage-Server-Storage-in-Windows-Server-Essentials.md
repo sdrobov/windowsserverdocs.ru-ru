@@ -234,7 +234,7 @@ ms.locfileid: "66433237"
   
 3. Для завершения работы мастера следуйте инструкциям на экране.  
   
-   Дополнительные сведения об увеличении емкости пула хранения см. в разделе [Use the new hard drive to increase storage pool capacity](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
+   Дополнительные сведения об увеличении емкости пула носителей см. в разделе [использование нового жесткого диска для увеличения емкости пула носителей](Manage-Server-Storage-in-Windows-Server-Essentials.md#BKMK_4c).  
   
 ## <a name="see-also"></a>См. также  
   
