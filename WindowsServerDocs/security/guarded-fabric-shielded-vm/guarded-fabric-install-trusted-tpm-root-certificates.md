@@ -6,13 +6,13 @@ ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 06/21/2019
-ms.openlocfilehash: 211d2f24b01d1e308f012df681f9e16a2190449f
-ms.sourcegitcommit: 260b1d78cb28b88b876579e1ac9a41a74e8752fd
+ms.date: 06/27/2019
+ms.openlocfilehash: 0d42befcfacfffd302cfcb27f9f3c2c973534398
+ms.sourcegitcommit: 2c2c37170c65434179bcf2989d557f97dcbe1b9f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398800"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419222"
 ---
 # <a name="install-trusted-tpm-root-certificates"></a>Установка доверенных корневых сертификатов доверенного платформенного МОДУЛЯ
 
@@ -35,7 +35,23 @@ HGS будет выглядеть в окне «TrustedTPM_RootCA» и «Trusted
 
 Повторите перечисленные ниже шаги на **каждый сервер HGS**:
 
-1.  Скачать последний пакет из [ https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab ](https://tpmsec.microsoft.com/TPMCerts/TrustedTPM.cab).
+1.  Скачать последний пакет из [ https://go.microsoft.com/fwlink/?linkid=2097925 ](https://go.microsoft.com/fwlink/?linkid=2097925).
+
+2.  Проверьте подпись CAB-файл, чтобы гарантировать его подлинность. Не продолжайте работу, если подпись не является допустимой.
+
+    ```powershell
+    Get-AuthenticodeSignature .\TrustedTpm.cab
+    ```
+    
+    Вот пример выходных данных:
+    
+    ```
+    Directory: C:\Users\Administrator\Downloads
+        
+    SignerCertificate                         Status                                 Path
+    -----------------                         ------                                 ----
+    0DD6D4D4F46C0C7C2671962C4D361D607E370940  Valid                                  TrustedTpm.cab
+    ```
 
 2.  Разверните CAB-файл.
 
