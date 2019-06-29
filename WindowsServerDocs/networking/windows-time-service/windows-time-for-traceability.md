@@ -9,12 +9,12 @@ ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: e25217feba45516cd0e9a3aa2bf1a2581d2087f5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3256ff55ec8f293cd37acbea6122584a63847284
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838045"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469576"
 ---
 # <a name="windows-time-for-traceability"></a>Время Windows для отслеживания
 >Относится к: Windows Server 2016 версии 1709 или более поздней версии и Windows 10 версии 1703 или более поздней версии
@@ -41,7 +41,6 @@ ms.locfileid: "59838045"
 
 В следующем разделе описываются события, зарегистрированные для использования в сценариях возможности трассировки.
 
-<!-- use tabs like the group policies -->
 # <a name="257tab257"></a>[257](#tab/257)
 Это событие регистрируется при запуске службы времени Windows (W32Time) и записывает сведения о текущее время, текущее значение счетчика тактов, конфигурацию среды выполнения, поставщиков времени и текущей частоты синхронизации.
 
@@ -82,7 +81,7 @@ w32tm.exe /query /status /verbose
 |Данные в журнал |<ul><li>Текущее время в формате UTC</li><li>Текущий счетчик тактов</li></ul> |
 |Механизм регулирования  |Нет. Это событие возникает каждый раз при остановке службы. |
 
-**Пример текста:**
+**Пример текста:** 
 `W32time service is stopping at 2018-03-01T05:42:13.944Z (UTC), System Tick Count 6370250.`
 
 # <a name="259tab259"></a>[259](#tab/259)

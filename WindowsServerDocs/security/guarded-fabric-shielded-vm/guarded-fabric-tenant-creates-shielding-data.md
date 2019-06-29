@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/30/2019
-ms.openlocfilehash: 3c36eff8aabd1fa1c6456dce1d08ebe504102e8c
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: d1d269ecdbfd4803c51da4817b62caf01d2091ae
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284169"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469617"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>Экранированные виртуальные машины для клиентов - создания данных экранирования для определения экранированной виртуальной Машины
 
@@ -43,8 +43,6 @@ ms.locfileid: "67284169"
 Так как клиенты только возможность подключения к их экранированные виртуальные машины с помощью удаленного рабочего стола или других средств удаленного управления, очень важно убедиться, что клиенты можно проверить, они подключаются к нужной конечной точке (то есть не «злоумышленник в середине» перехват подключения).
 
 Чтобы убедиться, что вы подключаетесь к нужному серверу рекомендуется установить и настроить сертификат для служб удаленных рабочих столов для представления при инициировании подключения. Клиентского компьютера, подключающегося к серверу проверит ли она доверяет сертификат и Показывать предупреждение, если это не так. Как правило чтобы убедиться, что подключающийся клиент доверяет сертификату, RDP выдают сертификаты PKI клиента. Дополнительные сведения о [с использованием сертификатов служб удаленных рабочих столов](https://technet.microsoft.com/library/dn781533.aspx) можно найти на сайте TechNet.
-
-<!-- The previous link comes from Windows 2012 R2 content, but as of Sept 2016, there isn't a more recent link that covers the same information. -->
 
 > [!NOTE]
 > При выборе сертификат протокола удаленного рабочего СТОЛА, чтобы включить в файл данных экранирования, не забудьте использовать групповой сертификат. Один файл данных экранирования может использоваться для создания неограниченное количество виртуальных машин. Так как каждая виртуальная машина будет совместно использовать тот же сертификат, групповой сертификат гарантирует, что сертификат будет действителен, независимо от того, имя узла виртуальной Машины.
@@ -142,8 +140,6 @@ Export-PfxCertificate -Cert $RdpCertificate -FilePath .\rdpCert.pfx -Password $p
         $relecloudmetadata = Get-SCGuardianConfiguration
 
         $relecloudmetadata.InnerXml | Out-File .\RelecloudGuardian.xml -Encoding UTF8
-
-<!-- Note that the VMM PowerShell cmdlets aren't Windows PowerShell, so "VMM PowerShell" is the correct terminology for them. -->
 
 Получите средство защиты файлов метаданных для каждой защищенной структуры, которые вы хотите разрешить ваши экранированные виртуальные машины под управлением перед продолжением.
 

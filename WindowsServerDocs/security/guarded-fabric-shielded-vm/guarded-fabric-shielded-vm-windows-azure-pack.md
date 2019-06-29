@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 600ccd74c379daa281f438b1200179dcae210817
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4cb5ed3433e04b7a5fe7004e517eb4cc38c7eb53
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447349"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469660"
 ---
 # <a name="shielded-vms--for-tenants---deploying-a-shielded-vm-by-using-windows-azure-pack"></a>Экранированные виртуальные машины для клиентов - развертывание экранированной виртуальной Машины с помощью Windows Azure Pack
 
@@ -22,8 +22,6 @@ ms.locfileid: "66447349"
 Если его поддерживает ваш поставщик услуг, можно использовать для развертывания экранированной виртуальной Машины Windows Azure Pack.
 
 Выполните следующие действия:
-
-<!-- When we have a link to the topic about how tenants subscribe, add that link as an indented item just under step 1 below. -->
 
 1. Подписаться на один или несколько планов, предлагаемые в Windows Azure Pack.
 

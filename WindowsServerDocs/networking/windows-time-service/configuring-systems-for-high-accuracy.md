@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: 2a5a7a6bd6313f7a4eadd827e3d754c1e467c3bc
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: 9bfa4e7d4f8777f8fef299cf3991238e31564ace
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63745411"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469598"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>Настройка системы для высокая точность
 >Относится к: Windows Server 2016 и Windows 10 версии 1607 или более поздней версии
@@ -91,7 +91,6 @@ ms.locfileid: "63745411"
 - Сервер времени объект и источник
 
 Это измерение можно получить с помощью средства w32tm.exe папки "Входящие".  Выполните указанные ниже действия.
-<!-- Use PowerShell to import the CSV then average the RTT Column -->
 
 1. Выполнять вычисления с целевой и время сервера б.
     

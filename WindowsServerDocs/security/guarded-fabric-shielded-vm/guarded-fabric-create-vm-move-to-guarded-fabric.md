@@ -9,21 +9,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: dd9b89f34a3b4af8bb98d2399a524790aa65de0e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9601145048b8798cfb102757384da49bed16a538
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447483"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469629"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-new-shielded-vm-on-premises-and-moving-it-to-a-guarded-fabric"></a>Экранированные виртуальные машины для клиентов - создания нового экранированных виртуальных Машин в локальной и переместить его на защищенной структуры
 
 >Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
-
-
-<!-- NOTE THAT THIS FILE HAS A "redirect_url" LINE IN THE METADATA. EVENTUALLY WE WILL PROBABLY STRIP OUT THE DETAILED METADATA AND THE CONTENT BELOW, SO IT'S PURELY A REDIRECTED TOPIC. However, as of mid-November 2016, we're still deciding. -->
-
-
 
 В этом разделе описываются шаги для создания экранированной виртуальной Машины с помощью только Hyper-V; то есть без Virtual Machine Manager, диски шаблона и файл данных экранирования. Это происходит редко для большинства общедоступных облачных средах размещения, но могут быть полезны при тестировании защищенной структуре или предприятии сценариях, где виртуальной Машины перемещается из отделов структуры для общих ИТ-инфраструктуры и должны быть зашифрованы перед миграцией.
 
@@ -33,7 +28,7 @@ ms.locfileid: "66447483"
 
 1.  Перед началом процедуры, убедитесь, что на узле Hyper-V под управлением Windows Server 2016 с следующие роли и компоненты, устанавливаемые:
 
-    - Роль
+    - Role
 
         - Hyper-V
 

@@ -16,12 +16,12 @@ ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
 ms.custom: H1Hack27Feb2017
-ms.openlocfilehash: 588bc3f87c78feccac47d18d31d37be3b1a02d2f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f075f91e97f806555507bfc0e0c5f3d1589a71e6
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835105"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469653"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Развертывание служб федерации Active Directory в Azure
 AD FS предоставляет упрощенной и безопасной федерации удостоверений и веб-возможности единого входа (SSO). Федерация с Azure AD или O365 дает пользователям возможность проверки подлинности с помощью локальных учетных данных и доступ ко всем ресурсам в облаке. Таким образом, становится важным для высокой доступности инфраструктуры AD FS, чтобы обеспечить доступ к ресурсам в локальной среде и в облаке. Развертывание AD FS в Azure может помочь добиться высокого уровня доступности, необходимые в связи с минимальными усилиями.
@@ -63,7 +63,7 @@ AD FS предоставляет упрощенной и безопасной ф
 * В подсети панели нажмите кнопку "Добавить"
 * Укажите подсети имя и адрес места сведения, чтобы создать подсеть
 
-![Подсеть](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
+![Subnet](./media/how-to-connect-fed-azure-adfs/deploynetwork2.png)
 
 ![Подсеть сети Периметра](./media/how-to-connect-fed-azure-adfs/deploynetwork3.png)
 
@@ -115,7 +115,7 @@ AD FS предоставляет упрощенной и безопасной ф
 
 Создайте следующие группы доступности.
 
-| Группа доступности | Роль | Домены сбоя | Домены обновления |
+| Группа доступности | Role | Домены сбоя | Домены обновления |
 |:---:|:---:|:---:|:--- |
 | contosodcset |DC/ADFS |3 |5 |
 | contosowapset |WAP |3 |5 |
@@ -123,7 +123,7 @@ AD FS предоставляет упрощенной и безопасной ф
 ### <a name="4-deploy-virtual-machines"></a>4. Развертывание виртуальных машин
 Следующим шагом является развертывание виртуальных машин, которые будут размещаться разные роли в своей инфраструктуре. Рекомендуется использовать менее двух виртуальных машин в каждой группе доступности. Создайте четыре виртуальные машины для базового развертывания.
 
-| Компьютер | Роль | Подсеть | Группа доступности | Учетная запись хранения | IP-адрес |
+| Мachine | Role | Subnet | Группа доступности | Учетная запись хранения | IP-адрес |
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | contosodc1 |DC/ADFS |INT |contosodcset |contososac1 |Static |
 | contosodc2 |DC/ADFS |INT |contosodcset |contososac2 |Static |
@@ -139,7 +139,7 @@ AD FS предоставляет упрощенной и безопасной ф
 ### <a name="5-configuring-the-domain-controller--ad-fs-servers"></a>5. Настройка контроллера домена и серверы AD FS
  Чтобы проверять подлинность запросов все входящие запросы, AD FS необходимо связаться с контроллером домена. Чтобы сэкономить на дорогостоящем маршруте из Azure на локальный контроллер домена для проверки подлинности, рекомендуется развертывать реплику контроллера домена в Azure. Для достижения высокого уровня доступности, рекомендуется создать группу доступности не менее 2 контроллеров домена.
 
-| Контроллер домена | Роль | Учетная запись хранения |
+| Контроллер домена | Role | Учетная запись хранения |
 |:---:|:---:|:---:|
 | contosodc1 |Реплика |contososac1 |
 | contosodc2 |Реплика |contososac2 |
@@ -277,11 +277,6 @@ AD FS предоставляет упрощенной и безопасной ф
 
 ![Правила доступа INT (входящий трафик)](./media/how-to-connect-fed-azure-adfs/nsg_int.png)
 
-<!--
-[comment]: <> (![INT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgintinbound.png))
-[comment]: <> (![INT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgintoutbound.png))
--->
-
 **9.2. Обеспечение защиты подсети DMZ**
 
 | Правило | Описание | Поток |
@@ -290,11 +285,6 @@ AD FS предоставляет упрощенной и безопасной ф
 | DenyInternetOutbound |Либо, кроме HTTPS к Интернету заблокирован |Исходящий |
 
 ![Правила доступа EXT (входящий трафик)](./media/how-to-connect-fed-azure-adfs/nsg_dmz.png)
-
-<!--
-[comment]: <> (![EXT access rules (inbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzinbound.png))
-[comment]: <> (![EXT access rules (outbound)](./media/how-to-connect-fed-azure-adfs/nsgdmzoutbound.png))
--->
 
 > [!NOTE]
 > Если проверка сертификата пользователя клиента (clientTLS проверки подлинности с помощью X509 сертификатов пользователей) является обязательным, AD FS требуется TCP порт 49443 был включен для получения доступа.

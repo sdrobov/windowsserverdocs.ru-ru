@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: networking
-ms.openlocfilehash: b68e6b915d029e53d47c6cffe214ec6e11bba6ea
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 75465aad45fc1b5e360fa1153a6530a771731f66
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812385"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469439"
 ---
 # <a name="accurate-time-for-windows-server-2016"></a>Точное время для Windows Server 2016
 
@@ -24,7 +24,6 @@ ms.locfileid: "66812385"
 > [!NOTE]
 > Краткий обзор службы времени Windows, взгляните на это [общий обзор видео](https://aka.ms/WS2016TimeVideo).
 
-<!-- Not sure what to do with the following -->
 В этом разделе мы рассмотрим... Эти разделы относятся Включение точное время: 
 
 - Усовершенствования

@@ -4,33 +4,34 @@ description: На этом необязательном шаге можно то
 ms.prod: windows-server-threshold
 ms.technology: networking-ras
 ms.topic: article
-ms.assetid: ''
 ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
-ms.date: 07/13/2018
+ms.date: 06/28/2019
 ms.reviewer: deverette
-ms.openlocfilehash: c87d0075696bf8ab5794667d42c40829c3eb61bd
-ms.sourcegitcommit: 0948a1abff1c1be506216eeb51ffc6f752a9fe7e
+ms.openlocfilehash: f6383030f70dd7c0487edd534bcc0ad42010f409
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66749527"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469313"
 ---
 # <a name="step-7-optional-conditional-access-for-vpn-connectivity-using-azure-ad"></a>Шаг 7. (Необязательно) Условный доступ для VPN-подключения с помощью Azure AD
 
 - [**Предыдущих:** Шаг 6. Настройка подключений постоянно подключенного VPN-профиля клиента Windows 10](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [**Далее:** Шаг 7.1. Настройка игнорирования проверки списка отзыва сертификатов (CRL) в EAP-TLS](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
-На этом необязательном шаге можно точно настроить как VPN пользователи доступ к ресурсам с помощью [условного доступа Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). С помощью условного доступа Azure AD для подключения к виртуальной частной сети (VPN) можно защитить VPN-подключений. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD). 
+На этом необязательном шаге можно точно настроить как VPN пользователи доступ к ресурсам с помощью [условного доступа Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). С помощью условного доступа Azure AD для подключения к виртуальной частной сети (VPN) можно защитить VPN-подключений. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD).
 
-## <a name="prerequisites"></a>предварительные требования
+## <a name="prerequisites"></a>Предварительные требования
 
 Вы знакомы со следующими статьями:
+
 - [Условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
 - [VPN и условный доступ](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
 
 Чтобы настроить условный доступ Azure Active Directory для VPN-подключения, необходимо иметь следующие условия:
+
 - [Инфраструктура сервера](always-on-vpn/deploy/vpn-deploy-server-infrastructure.md)
 - [Сервер удаленного доступа для Always On VPN](always-on-vpn/deploy/vpn-deploy-ras.md)
 - [Сервер политики сети](always-on-vpn/deploy/vpn-deploy-nps.md)
@@ -48,9 +49,13 @@ ms.locfileid: "66749527"
 На этом шаге настраивается корневые сертификаты для проверки подлинности VPN с Azure AD, который автоматически создает VPN server облачного приложения в клиенте.  
 
 Чтобы настроить условный доступ для VPN-подключения, вам потребуется:
-1. Создание VPN-сертификат на портале Azure (можно создать несколько сертификатов).
+
+1. Создание VPN-сертификат на портале Azure.
 2. Скачайте VPN-сертификат.
 3. Разверните сертификат на VPN-сервере.
+
+> [!IMPORTANT]
+> Создав VPN-сертификат на портале Azure, Azure AD начнется сразу же использовать его для выдачи короткий годности сертификатов VPN-клиента. Крайне важно, что VPN-сертификат немедленно развернуть на VPN-сервере, чтобы избежать проблем с проверкой учетных данных VPN-клиента.
 
 ## <a name="step-73-configure-the-conditional-access-policyvpn-config-conditional-access-policymd"></a>[Шаг 7.3. Настройка политики условного доступа](vpn-config-conditional-access-policy.md)
 
@@ -67,13 +72,14 @@ ms.locfileid: "66749527"
 На этом этапе развертывании доверенный корневой сертификат для проверки подлинности VPN в локальной AD.
 
 Чтобы развернуть доверенный корневой сертификат, вам потребуется:
+
 1. Добавьте Скачанный сертификат в виде *доверенного корневого ЦС для проверки подлинности VPN*.
 2. Импортируйте корневой сертификат VPN-сервера и VPN-клиента.
 3. Убедитесь, что сертификаты присутствуют и Показать как доверенные.
 
 ## <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devicesvpn-create-oma-dm-based-vpnv2-profilesmd"></a>[Шаг 7.5. Создание профилей VPNv2 на основе OMA-DM на устройствах с Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-На этом этапе можно создать OMA-DM на основе профилей VPNv2, с помощью Intune для развертывания политики конфигурации VPN-устройства. Если вы хотите использовать SCCM или скрипт PowerShell для создания профилей VPNv2, см. в разделе [VPNv2 CSP параметры](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) для получения дополнительных сведений. 
+На этом этапе можно создать OMA-DM на основе профилей VPNv2, с помощью Intune для развертывания политики конфигурации VPN-устройства. Если вы хотите использовать SCCM или скрипт PowerShell для создания профилей VPNv2, см. в разделе [VPNv2 CSP параметры](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) для получения дополнительных сведений.
 
 ## <a name="next-steps"></a>Следующие шаги
 
@@ -81,7 +87,7 @@ ms.locfileid: "66749527"
 
 ## <a name="related-topics"></a>См. также
 
-- [Настройка профилей VPNv2](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): VPN-клиент теперь может интегрироваться с облачной платформой условного доступа для соблюдения требований при использовании удаленных клиентов. На этом шаге необходимо настроить профили VPNv2 с  **\<DeviceCompliance > \<включено > значение true,\<и включения >** . 
+- [Настройка профилей VPNv2](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access): VPN-клиент теперь может интегрироваться с облачной платформой условного доступа для соблюдения требований при использовании удаленных клиентов. На этом шаге необходимо настроить профили VPNv2 с  **\<DeviceCompliance > \<включено > значение true,\<и включения >** .
 
 - [Усовершенствование удаленного доступа в Windows 10 с профилем VPN автоматического](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Узнайте, как корпорация Майкрософт реализовала условного доступа для VPN-подключения. Профили VPN содержат все сведения, необходимые устройства для подключения к корпоративной сети, включая методы проверки подлинности, которые поддерживаются и VPN-сервер, на которой должны подключаться устройства. Изменения в юбилейном обновлении Windows 10, включая условный доступ и единый вход, дали нам для создания профиля подключения VPN с использованием AlwaysOn. Мы создали профиль подключения для присоединенных к домену и устройств, управляемых Intune Microsoft, с помощью консоли System Center Configuration Manager.
 

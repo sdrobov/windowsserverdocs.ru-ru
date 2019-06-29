@@ -8,18 +8,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 8e14cdeed435f23f28ca514e232fbcfa6220fc74
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 81e6ed7950fe13c5bed4a3f8850d64e7185b8ddd
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887725"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469640"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>Экранированные виртуальные машины: Подготовка виртуальной Машины вспомогательный виртуальный жесткий ДИСК экранирования
 
 >Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
-
-<!-- This comment creates a break between the Applies To above and the Important note below. -->
 
 > [!IMPORTANT]
 > Прежде чем начать эти процедуры, убедитесь, что установлен последним накопительным обновлением для Windows Server 2016 или используете последнюю Windows 10 [средства удаленного администрирования сервера](https://www.microsoft.com/en-us/download/details.aspx?id=45520). В противном случае процедуры не будет работать. 

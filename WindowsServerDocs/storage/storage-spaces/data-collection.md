@@ -10,12 +10,12 @@ ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: eaa7d92fe6f77697614cacf1405a25e5a42e14b7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 51cf96fb462b68f2ba01d49642a858430c71e9f5
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59880275"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469605"
 ---
 # <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>Сбор диагностических данных с дисковыми пространствами
 
@@ -23,15 +23,7 @@ ms.locfileid: "59880275"
 
 Существуют различные инструменты диагностики, которые могут использоваться для сбора данных, необходимые для устранения неполадок дисковых пространств и отказоустойчивого кластера. В этой статье основное внимание уделено **Get-SDDCDiagnosticInfo** -это средство одна операция сенсорного ввода, которое будет собирать все важные сведения, которые помогут вам диагностировать кластера.
 
-<!-- The health summary report is a great start to understanding the status of your system to start diagnosing an issue. -->
-
 Учитывая, что журналы и другие сведения, **Get SDDCDiagnosticInfo** являются плотным, сведения об устранении неполадок, представленные ниже, будет полезно для устранения неполадок Дополнительные вопросы, переданных на обработку и, возможно требуются данные для отправки в корпорацию Майкрософт для рассмотрения.
-
-<!--
-## Collecting live dumps
-
-Windows will trigger the collection of a ``` LiveDump ``` when there are known resources that are hanging in kernel calls. ``` RHS ``` will trigger ```LiveDump``` collection if both the resource type and cluster ``` DumpPolicy ``` are set to 1. For physical disk it is set out of the box
--->
 
 ## <a name="installing-get-sddcdiagnosticinfo"></a>Installing Get-SDDCDiagnosticInfo
 
@@ -185,60 +177,6 @@ Get-SddcDiagnosticInfo -ClusterName S2D-Cluster -WriteToPath d:\SDDCDiagTemp
 ### <a name="logs-and-xml-files"></a>XML-файлы и журналы
 
 Скрипт выполняется различных журналов, сбор скрипты и сохраняет результат в виде XML-файлов. Мы собираем журналы кластера и работоспособности, сведения о системе (MSInfo32), нефильтрованные журналы событий (отказоустойчивой кластеризации, dis диагностики, hyper-v, дисковых пространств и многое другое) и хранения диагностической информации (операционные журналы). Последние сведения о собираемой информации, см. в разделе [файл сведений GitHub (что мы собираем)](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/blob/master/README.md#what-does-the-cmdlet-output-include).
-
-<!--
-## Enabling event channels
-
-When Windows Server is installed, many event channels are enabled by default. But sometimes when diagnosing an issue, we want to be able to enable some of these event channels since it will help in triaging and diagnosing system issues.
-
-You could enable additional event channels on each server node in your cluster as needed; however, this approach presents two problems:
-
-1. You need to remember to enable the same event channels on every new server node that you add to your cluster.
-2. When diagnosing, it can be tedious to enable specific event channels, reproduce the error, and repeat this process until you root cause.
-
-To avoid these issues, you can enable event channels on cluster startup. The list of enabled event channels on your cluster can be configured using the public property **EnabledEventLogs**. By default, the following event channels are enabled:
-
-```powershell
-PS C:\Windows\system32> (get-cluster).EnabledEventLogs
-```
-
-Here's an example of the output:
-```
-Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic,4,0xFFFFFFFD
-Microsoft-Windows-SMBDirect/Debug,4
-Microsoft-Windows-SMBServer/Analytic
-Microsoft-Windows-Kernel-LiveDump/Analytic
-```
-
-The **EnabledEventLogs** property is a multistring, where each string is in the form: **channel-name, log-level, keyword-mask**. The **keyword-mask** can be a hexadecimal (prefix 0x), octal (prefix 0), or decimal number (no prefix) number that each event contains (so you can filter by it). For instance, to add a new event channel to the list and to configure both **log-level** and **keyword-mask** you can run:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,321"
-```
-
-If you want to set the **log-level** but keep the **keyword-mask** at its default value, you can use either of the following commands:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,2,"
-```
-
-If you want to keep the **log-level** at its default value, but set the **keyword-mask** you can run the following command:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,0xf1"
-```
-
-If you want to keep both the **log-level** and the **keyword-mask** at their default values, you can run any of the following commands:
-
-```powershell
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,"
-(get-cluster).EnabledEventLogs += "Microsoft-Windows-WinINet/Analytic,,"
-```
-
-These event channels will be enabled on every cluster node when the cluster service starts or whenever the **EnabledEventLogs** property is changed.
--->
 
 ## <a name="how-to-consume-the-xml-files-from-get-pcstoragediagnosticinfo"></a>Как использовать XML-файлы из Get-PCStorageDiagnosticInfo
 Вы можете использовать данные из XML-файлов, в данных, собираемых **Get PCStorageDiagnosticInfo** командлета. Эти файлы имеют сведения о виртуальных дисков, физические диски, базовый кластер сведения и другие PowerShell связанные выходные данные. 
