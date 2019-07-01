@@ -48,7 +48,7 @@
 ### [Политика поддержки](support/index.md)
 ### [Общие инструкции по устранению неполадок](support/troubleshooting.md)
 ### [Известные проблемы](support/known-issues.md)
-
+### [Условия лицензии на Windows Admin Center](../../windows-server-licensing/windows-admin-center-licensing.md)
 
 ## Расширение
 ### [Обзор расширений](extend/extensibility-overview.md)
@@ -74,6 +74,7 @@
 #### [Включение баннера обнаружения расширений](extend/guides/extension-discovery-banner.md)
 ### [Публикация расширений](extend/publish-extensions.md)
 ### Практические примеры
+#### [BiitOps](extend/case-studies/biitops.md)
 #### [DataON](extend/case-studies/dataon.md)
 #### [Fujitsu](extend/case-studies/fujitsu.md)
 #### [Lenovo](extend/case-studies/lenovo.md)
@@ -81,5 +82,6 @@
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
 #### [Squared Up](extend/case-studies/squared-up.md)
+#### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
 
 

@@ -13,3 +13,4 @@
 ## [Удаленные или подлежащие замене компоненты, начиная с Windows Server 2019](removed-features-19.md)
 ## [Удаленные или подлежащие замене компоненты начиная с Windows Server версии 1903](removed-features-1903.md)
 ## [Информация о выпуске Windows Server](../get-started/windows-server-release-info.md)
+## [Условия лицензии на Windows Server](../windows-server-licensing/windows-server-licensing.md)

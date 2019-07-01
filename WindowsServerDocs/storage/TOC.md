@@ -40,6 +40,7 @@
 ### [Развертывание сетевой файловой системы](nfs/deploy-nfs.md)
 ### [Обзор файловой системы NTFS](file-server/ntfs-overview.md)
 ### [Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)
+### [Использование очистки диска](file-server/disk-cleanup.md)
 ## [Диспетчер ресурсов файлового сервера](fsrm/fsrm-overview.md)
 ### [Контрольный список. Применение квоты к тому или папке](fsrm/checklist-apply-quota-to-volume-or-folder.md)
 ### [Контрольный список. Применение фильтра блокировки файлов к тому или папке](fsrm/checklist-apply-file-screen-to-volume-or-folder.md)
@@ -128,7 +129,9 @@
 #### [Создание томов](storage-spaces/create-volumes.md)
 #### [Вложенная устойчивость](storage-spaces/nested-resiliency.md)
 #### [Настройка кворума](../failover-clustering/manage-cluster-quorum.md)
-#### [Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [Обновление кластера Локальных дисковых пространств](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)
+#### [Общие сведения о постоянной памяти и ее развертывании](storage-spaces/deploy-pmem.md)
+
 ### Управление
 #### [Управление с помощью Windows Admin Center](../manage/windows-admin-center/use/manage-hyper-converged.md)
 #### [Добавление серверов или дисков](storage-spaces/add-nodes.md)
@@ -148,11 +151,14 @@
 ##### [Примеры сценариев](storage-spaces/performance-history-scripting.md)
 #### [Разграничение выделения томов](storage-spaces/delimit-volume-allocation.md)
 #### [Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md)
+
 ### Устранение неполадок
 #### [Сценарии устранения неполадок](storage-spaces/troubleshooting-storage-spaces.md)
 #### [Состояния работоспособности и операционные состояния](storage-spaces/storage-spaces-states.md)
 #### [Сбор данных](storage-spaces/data-collection.md)
 #### [Вопросы и ответы](storage-spaces/storage-spaces-direct-faq.md)
+#### [Управление работоспособностью памяти класса хранилища](storage-spaces/Storage-class-memory-health.md)
+
 ## [Рабочие папки](work-folders/work-folders-overview.md)
 ### [Проектирование реализации рабочих папок](work-folders/plan-work-folders.md)
 ### [Развертывание рабочих папок](work-folders/deploy-work-folders.md)
@@ -163,6 +169,5 @@
 #### [Шаг 4. Настройка WAP](work-folders/deploy-work-folders-adfs-step4.md)
 #### [Шаг 5. Настройка клиентов](work-folders/deploy-work-folders-adfs-step5.md)
 ## [Качество обслуживания хранилища](storage-qos/storage-qos-overview.md)
-## [Управление работоспособностью памяти класса хранилища](storage-spaces/Storage-class-memory-health.md)
 ## [Журнал изменений разделов, посвященных хранилищу](storage-change-history.md)
 
