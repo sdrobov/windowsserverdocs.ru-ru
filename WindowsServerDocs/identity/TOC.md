@@ -421,6 +421,7 @@
 #### [Планирование локального условного доступа на основе устройств](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
 #### [Настройка среды лаборатории AD FS](ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
+#### [Fine tuning SQL and addressing latency issues with AD FS](ad-fs/operations/adfs-sql-latency.md) (Точная настройка SQL и устранение проблем с задержкой с использованием AD FS)
 #### [Пошаговое руководство. Управление рисками для уязвимых приложений с помощью дополнительной многофакторной идентификации](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 #### [Пошаговое руководство. Управление рисками с использованием условного управления доступом](ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 #### [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
