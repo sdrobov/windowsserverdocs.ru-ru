@@ -5,16 +5,16 @@ description: ''
 author: billmath
 ms.author: billmath
 manager: femila
-ms.date: 04/01/2019
+ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: a831154a8b1e84f5ed879375980882e208c33d73
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 525ba403473a9de522d9ab30662adc868b17b88d
+ms.sourcegitcommit: c02756b7f5c92bf5018e17192f6fffb4754b0f06
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66190348"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533506"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>Средство ускоренного восстановления AD FS
 
@@ -213,6 +213,13 @@ RngCryptoServiceProvider используется для создания слу
 > При выполнении восстановления, может создать файл PostRestore_Instructions обзором дополнительной проверки подлинности поставщиков хранилищ атрибутов, и отношения доверия поставщиков утверждений локального нужно установить вручную перед запуском службы AD FS.
 
 ## <a name="version-release-history"></a>Журнал выпуска версий
+
+### <a name="version-10820"></a>Версия 1.0.82.0
+Выпуск: Июль 2019 г.
+
+**Исправленные проблемы:**
+- Исправление ошибки для службы федерации Active Directory службы имена учетных записей, которые содержат escape-символы LDAP
+
 
 ### <a name="version-10810"></a>Версия: 1.0.81.0
 Выпуск: Апрель 2019 г.
