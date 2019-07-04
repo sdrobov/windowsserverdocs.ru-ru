@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 06/07/2019
 ms.prod: windows-server-threshold
-ms.openlocfilehash: d0e57a1ef3f1b84fbdf4ebf0b3d2d205dc7a1987
-ms.sourcegitcommit: 078304c4b92bb57eb85ba29634afc92cc028c644
+ms.openlocfilehash: 53f34992b875730be80ba479f387095aebbc8132
+ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298164"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469562"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Вопросы и ответы: Windows Admin Center
 
@@ -148,10 +148,6 @@ Windows Admin Center и SCVMM являются дополнительными р
 * Последний выпуск можно [скачать здесь](https://aka.ms/WACDownload).
 
 ### <a name="windows-admin-center-preview"></a>Ознакомительная версия Windows Admin Center
-<!--
-> [!NOTE]
-> The current GA version (Windows Admin Center 1904) contains all previous preview functionality.
-> The Insider Preview will return in the coming months. -->
 
 * Эта версия подойдет для ИТ-администраторов, которые хотят на регулярной основе использовать самые последние и интересные возможности. Мы намерены предоставлять последующие обновленные выпуски примерно каждый месяц. Базовая платформа продолжает оставаться готовой для применения в рабочей среде, а лицензия предоставляет права на использование в коммерческих целях. Тем не менее, обратите внимание, что новые средства и возможности будут отмечены как "ДЛЯ ОЗНАКОМЛЕНИЯ", и ими можно будет пользоваться для оценки их работы.
 * Для получения последнего ознакомительного выпуска зарегистрированные участники программы предварительной оценки могут скачать ознакомительную версию Windows Admin Center непосредственно на [странице загрузки предварительных сборок Windows Server для участников программы предварительной оценки Windows](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver) в раскрывающемся списке "Дополнительные файлы для загрузки". Если вы еще не зарегистрированы как участник программы предварительной оценки, обратитесь к разделу по [началу работы с Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) на портале Программы предварительной оценки Windows для бизнеса.
