@@ -11,26 +11,26 @@ ms.topic: get-started-article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 7f74b35e93d4ddbe39b955daf7f78c4ef693aa9a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.openlocfilehash: 0fd21f5c38968a303169b99186effd3d66f1e69b
+ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835185"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67280302"
 ---
 # <a name="updating-nano-server"></a>Обновление сервера Nano Server
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
 
-Сервер Nano Server предоставляет несколько способов поддержания системы в актуальном состоянии. По сравнению с другими вариантами установки Windows Server сервер Nano Server имеет более активную модуль обслуживания, похожую на Windows 10. Такие периодические выпуски называют выпусками **Current Branch for Business (CBB)**. Этот подход обеспечивает поддержку клиентов, которые желают реализовывать инновации более быстро и следовать быстрым жизненным циклам разработки облачных технологий. Дополнительные сведения о CBB доступны в блоге [Windows Server](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
+Сервер Nano Server предоставляет несколько способов поддержания системы в актуальном состоянии. По сравнению с другими вариантами установки Windows Server сервер Nano Server имеет более активную модуль обслуживания, похожую на Windows 10. Такие периодические выпуски называют выпусками **Current Branch for Business (CBB)** . Этот подход обеспечивает поддержку клиентов, которые желают реализовывать инновации более быстро и следовать быстрым жизненным циклам разработки облачных технологий. Дополнительные сведения о CBB доступны в блоге [Windows Server](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/).
 
-**Между выпусками CBB** актуальное состояние сервера Nano Server поддерживается благодаря ряду *накопительных обновлений*. Например, первого накопительного обновления для сервера Nano Server было выпущено 26 сентября 2016 г. с [KB4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120). Доступность этого и последующих накопительных обновлений позволяет нам предоставлять вам различные варианты установки этих обновлений на сервере Nano Server. В этой статье мы будем использовать обновление KB3192366 в качестве примера, чтобы показать получение и применение накопительных обновлений для сервера Nano Server. Дополнительные сведения о модели накопительных обновлений см. в блоге [Центра обновления Майкрософт](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
+**Между выпусками CBB** актуальное состояние сервера Nano Server поддерживается благодаря ряду *накопительных обновлений*. Например, первый накопительный пакет обновления для сервера Nano Server был выпущен 26 сентября 2016 г. (статья базы знаний [№ 4093120](https://support.microsoft.com/help/4093120/windows-10-update-kb4093120)). Доступность этого и последующих накопительных обновлений позволяет нам предоставлять вам различные варианты установки этих обновлений на сервере Nano Server. В этой статье мы будем использовать обновление KB3192366 в качестве примера, чтобы показать получение и применение накопительных обновлений для сервера Nano Server. Дополнительные сведения о модели накопительных обновлений см. в блоге [Центра обновления Майкрософт](https://blogs.technet.microsoft.com/mu/2016/10/25/patching-with-windows-server-2016/).
 
 > [!NOTE]
 > Если устанавливается необязательный пакет Nano Server с носителя или из онлайн-репозитория, он не будет содержать последних исправлений безопасности. Чтобы избежать несоответствия версий дополнительных пакетов и базовой операционной системы, последний накопительный пакет обновления следует установить сразу после установки любых дополнительных пакетов и **перед** перезапуском сервера.
 
-В случае накопительный пакет обновления для Windows Server 2016: 26 сентября 2016 г. ([KB3192366](https://support.microsoft.com/en-us/kb/3192366)), сначала следует установить последние Servicing Stack Update для Windows 10 версии 1607: 23 августа 2016 г. как необходимый компонент ([KB3176936](https://support.microsoft.com/en-us/kb/3176936)). Для большинства следующих вариантов потребуются MSU-файлы, содержащие пакеты обновления .cab. Посетите каталог Центра обновления Майкрософт, чтобы загрузить каждый из этих пакетов обновления:
+В случае с накопительным пакетом обновления для Windows Server 2016, 26 сентября 2016 г. ([статья базы знаний № 3192366](https://support.microsoft.com/en-us/kb/3192366)), сначала следует установить последнее обновление стека обслуживания для Windows 10 версии 1607 за 23 августа 2016 г. как необходимый компонент ([статья базы знаний № 3192366](https://support.microsoft.com/en-us/kb/3176936)). Для большинства следующих вариантов потребуются MSU-файлы, содержащие пакеты обновления .cab. Посетите каталог Центра обновления Майкрософт, чтобы загрузить каждый из этих пакетов обновления:
 - [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3192366)
 - [https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936](https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB3176936)
 
@@ -52,21 +52,21 @@ ms.locfileid: "59835185"
 > [!NOTE]
 > При использовании средств DISM для обслуживания сервера Nano Server необходимо использовать версию DISM не ниже версии обслуживаемого сервера Nano Server. Для этого нужно запустить DISM из соответствующей версии Windows, установить подходящую версию [Комплекта средств для развертывания и оценки (ADK)](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit) или запустить DISM на самом сервере Nano Server.
 
-## <a name="option-1-integrate-a-cumulative-update-into-a-new-image"></a>Вариант 1. Интегрировать накопительное обновление в новый образ
+## <a name="option-1-integrate-a-cumulative-update-into-a-new-image"></a>Вариант 1. Интеграция накопительного пакета обновления с новым образом
 Если вы создаете новый образ сервера Nano Server, можно интегрировать последнее накопительное обновление непосредственно в образ, чтобы установить все обновления при первой загрузке.
 
 ```powershell
 New-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab', 'C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab' -<other parameters>
 ```
 
-## <a name="option-2-integrate-a-cumulative-update-into-an-existing-image"></a>Вариант 2. Интегрировать накопительное обновление в существующий образ
+## <a name="option-2-integrate-a-cumulative-update-into-an-existing-image"></a>Вариант 2. Интеграция накопительного пакета обновления с существующим образом
 При наличии существующего образа сервера Nano Server, который вы используете как основу для создания определенных экземпляров сервера Nano Server, можно интегрировать последнее накопительное обновление непосредственно в существующий базовый образ, чтобы все обновления устанавливались при первой загрузке машин, созданных с помощью этого образа.
 
 ```powershell
 Edit-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.0-KB3176936-x64.cab', 'C:\ServicingPackages_cabs\Windows10.0-KB3192366-x64.cab' -TargetPath .\NanoServer.wim
 ```
 
-## <a name="option-3-apply-the-cumulative-update-to-an-existing-offline-vhd-or-vhdx"></a>Вариант 3. Примените накопительное обновление для существующей автономной VHD или VHDX
+## <a name="option-3-apply-the-cumulative-update-to-an-existing-offline-vhd-or-vhdx"></a>Вариант 3. Применение накопительного пакета обновления к существующему автономному диску VHD или VHDX
 Если у вас есть существующий виртуальный жесткий диск (VHD или VHDX), применить обновление к виртуальному жесткому диску можно с помощью средств DISM. Необходимо убедиться, что диск не используется, завершив работу всех виртуальных машин, использующих диск, или отключив файл виртуального жесткого диска.
 
 - Использование PowerShell
@@ -85,7 +85,7 @@ Edit-NanoServerImage -ServicingPackagePath 'C:\ServicingPackages_cabs\Windows10.
    dism.exe /Unmount-Image /MountDir:C:\MountDir /Commit
    ```
 
-## <a name="option-4-apply-the-cumulative-update-to-a-running-nano-server"></a>Вариант 4. Примените накопительное обновление работающий сервер Nano Server
+## <a name="option-4-apply-the-cumulative-update-to-a-running-nano-server"></a>Вариант 4. Применение накопительного пакета обновления к работающему серверу Nano Server
 Если у вас есть работающая виртуальная машина или физический хост Nano Server и вы загрузили CAB-файл для обновления, применить обновление к подключенной к сети системе можно с помощью средств DISM. Потребуется копировать CAB-файл локально на сервер Nano Server или в доступное сетевое расположение. Если вы применяете обновление для служебного стека, не забудьте перезапустить сервер после применения обновления для служебного стека и до применения дополнительных обновлений.
 
 > [!NOTE]
@@ -125,7 +125,7 @@ Enter-PSSession $s
    Restart-Computer; exit
    ```
 
-## <a name="option-5-download-and-install-the-cumulative-update-to-a-running-nano-server"></a>Способ 5: Скачайте и установите накопительный пакет обновления на работающий сервер Nano Server
+## <a name="option-5-download-and-install-the-cumulative-update-to-a-running-nano-server"></a>Вариант 5. Загрузка и установка накопительного пакета обновления на работающем сервере Nano Server
 
 Если имеется работающая виртуальная машина или физический хост сервера Nano Server, можно использовать поставщика WMI Центра обновления Windows для загрузки и установки обновления в подключенной к сети операционной системе. При использовании этого метода загружать MSU-файл отдельно от каталога Центра обновления Майкрософт не требуется. Поставщик WMI обнаружит, загрузит и установит все доступные обновления одновременно.
 
@@ -156,10 +156,10 @@ Enter-PSSession -ComputerName (Read-Host "Enter Nano Server IP address") -Creden
    
 ## <a name="additional-options"></a>Дополнительные параметры
 Другие методы обновления сервера Nano Server могут частично совпадать с вышеперечисленными или дополнять их. Эти варианты включают использование служб Windows Server Update Services (WSUS), диспетчера System Center Virtual Machine Manager (VMM), Планировщика задач или стороннее решение.
-- [Настройте Центр обновления Windows для WSUS](https://msdn.microsoft.com/en-us/library/dd939844(v=ws.10).aspx), установив следующие разделы реестра:
-  - WUServer
-  - WUStatusServer (как правило, значение совпадает со значением WUServer)
-  - UseWUServer
-  - AUOptions
-- [Управление обновлениями структуры в VMM](https://technet.microsoft.com/library/gg675084(v=sc.12).aspx)
-- [Регистрация запланированной задачи](https://technet.microsoft.com/library/jj649811.aspx)
+- [Настройка Центра обновления Windows для WSUS](https://msdn.microsoft.com/library/dd939844(v=ws.10).aspx) путем установки следующих разделов реестра:
+  - WUServer;
+  - WUStatusServer (как правило, значение совпадает со значением WUServer);
+  - UseWUServer;
+  - AUOptions.
+- [Управление обновлениями структуры в VMM](https://technet.microsoft.com/library/gg675084(v=sc.12).aspx).
+- [Регистрация запланированной задачи](https://technet.microsoft.com/library/jj649811.aspx).
