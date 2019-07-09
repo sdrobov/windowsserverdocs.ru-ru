@@ -1,5 +1,5 @@
 ---
-title: Ключ установки клиента KMS
+title: Ключи установки клиента KMS
 description: Ключи, необходимые для активации продуктов Windows на сервере KMS
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
@@ -10,42 +10,42 @@ ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: get-started-article
 ms.openlocfilehash: c0d85da8a51a43acd7765957b34220829a43b086
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810705"
 ---
-# <a name="kms-client-setup-keys"></a>Ключ установки клиента KMS
+# <a name="kms-client-setup-keys"></a>Ключи установки клиента KMS
 
->Относится к: Windows Server 2019 г., Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+>Относится к: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
-Компьютеры, работающие под управлением лицензируемых версий Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, и Windows Server 2008 по умолчанию являются клиентами KMS, для которых не требуется дополнительная настройка.
+Компьютеры, работающие под управлением лицензируемых версий Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, и Windows Server 2008, по умолчанию являются клиентами KMS, для которых не требуется дополнительная настройка.
 
 > [!NOTE]
-> В приведенных далее таблицах «LTSC» означает «Долгосрочного обслуживания канал,» а «LTSB» — «Ветви Long-Term Servicing Branch.» 
+> В приведенных далее таблицах LTSC означает Long-Term Servicing Channel, а LTSB — Long-Term Servicing Branch. 
 
-**Чтобы использовать перечисленные здесь ключи (которые многократной), сначала нужно получить узел KMS в данном развертывании.** Если узел KMS еще не настроен, см. раздел [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) , где рассматривается процедура настройки.
+**Чтобы использовать перечисленные здесь ключи (универсальные ключи многократной установки), в своей среде сначала нужно запустить узел KMS.** Если узел KMS еще не настроен, см. раздел [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) , где рассматривается процедура настройки.
 
-При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиент KMS необходимо установить соответствующий ключ установки (GVLK) из приведенных ниже таблиц. Чтобы установить ключ установки клиента, откройте командную строку администратора в клиенте, введите **slmgr/ipk \<ключ установки\>**  и нажмите клавишу **ввод**.
+При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиент KMS необходимо установить соответствующий ключ установки (GVLK) из приведенных ниже таблиц. Чтобы установить ключ установки клиента, откройте командную строку администратора в клиенте, введите **slmgr /ipk \<ключ установки\>** и нажмите клавишу **ВВОД**.
 
 | Действие    | Ресурс   |
 |--------------------|------------------------|
 | При активации Windows вне сценария активации корпоративных лицензий (то есть при активации розничной версии Windows) **эти ключи работать не будут**. | Для розничных версий Windows используйте следующие ссылки: |
-| Устраните эту ошибку, возникающую при попытке активировать Windows 8.1, Windows Server 2012 R2 или более поздняя система: "Ошибка: 0xC004F050 Служба лицензирования программного обеспечения сообщила, что данный ключ продукта недопустим"… | [Установите это обновление](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) на узле KMS, если он работает под управлением Windows 8.1, Windows Server 2012 R2, Windows 8 или Windows Server 2012. |
+| Исправьте ошибку, которую вы получили при попытке активации системы Windows 8.1, Windows Server 2012 R2 или более новой системы. "Ошибка: 0xC004F050 Служба лицензирования программного обеспечения сообщила, что данный ключ продукта недопустим"… | [Установите это обновление](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) на узле KMS, если он работает под управлением Windows 8.1, Windows Server 2012 R2, Windows 8 или Windows Server 2012. |
 
--   [Скачать Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
+-   [Получение Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
 
 -   [Получение нового ключа продукта Windows](https://support.microsoft.com/help/10749/windows-product-key)
 
--   [Подлинная Windows справочные материалы и руководства](https://support.microsoft.com/help/15087/windows-genuine)
+-   [Подлинная система Windows. Справка и инструкции](https://support.microsoft.com/help/15087/windows-genuine)
 
 
 >   Если вы используете Windows Server 2008 R2 или Windows 7, необходимо внимательно отслеживать обновления для поддержки использования этих систем в качестве узлов KMS для клиентов Windows 10.
 
-## <a name="windows-server-semi-annual-channel-versions"></a>Версии Windows Server Semi-Annual Channel
+## <a name="windows-server-semi-annual-channel-versions"></a>Версии Semi-Annual Channel для Windows Server
 
-### <a name="windows-server-version-1903-and-windows-server-version-1809"></a>Windows Server, версии 1903 и Windows Server версии 1809
+### <a name="windows-server-version-1903-and-windows-server-version-1809"></a>Windows Server, версия 1903, и Windows Server, версия 1809
 
 | Версия операционной системы  | Ключ установки клиента KMS          |
 |---------------------------|-------------------------------|
@@ -66,16 +66,16 @@ ms.locfileid: "66810705"
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
-## <a name="windows-server-ltscltsb-versions"></a>Версии Windows Server LTSC/LTSB
+## <a name="windows-server-ltscltsb-versions"></a>Версии Windows Server LTSC и LTSB
 
-### <a name="windows-server-2019"></a>Windows Server 2019
+### <a name="windows-server-2019"></a>Windows Server 2019
 | Версия операционной системы       | Ключ установки клиента KMS          |
 |--------------------------------|-------------------------------|
-| Центр обработки данных Windows Server 2019 г. | WMDGN-G9PQG-XVVXX-R3X43-63DFG  | 
+| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG  | 
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C  |
 | Windows Server 2019 Essentials|WVDHN-86M7X-466P6-VHXV7-YY726|
 
-### <a name="windows-server-2016"></a>Windows Server 2016
+### <a name="windows-server-2016"></a>Windows Server 2016
 
 | Версия операционной системы       | Ключ установки клиента KMS          |
 |--------------------------------|-------------------------------|
@@ -83,16 +83,16 @@ ms.locfileid: "66810705"
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
 | Windows Server2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
-## <a name="windows-10-all-supported-semi-annual-channel-versions"></a>Windows 10 для всех поддерживаемых версий полугодовой канал
+## <a name="windows-10-all-supported-semi-annual-channel-versions"></a>Windows 10, все поддерживаемые версии Semi-Annual Channel
 
-См. в разделе [справочные материалы по Windows жизненного цикла](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) сведения о поддерживаемых версиях и конечных дат службы.
+См. в разделе [Справочные материалы по жизненному циклу Windows](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) сведения о поддерживаемых версиях и конечных датах обслуживания.
 
 | Версия операционной системы          | Ключ установки клиента KMS          |
 |-----------------------------------|-------------------------------|
 |Windows 10 Pro|W269N-WFGWX-YVC9B-4J6C9-T83GX|
 |Windows 10 Pro N|MH37W-N47XK-V7XM9-C7227-GCQG9|
-|Рабочие станции Windows 10 Pro|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
-|Рабочие станции Windows 10 Pro N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
+|Windows 10 Pro для рабочих станций|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
+|Windows 10 Pro для рабочих станций N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
 |Windows 10 Pro для образовательных учреждений|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
 |Windows 10 Pro для образовательных учреждений N|YVWGF-BXNMC-HTQYQ-CPQ99-66QFC|
 |Windows 10 для образовательных учреждений|NW6C2-QMPVW-D7KKK-3GKT6-VCFB2|
@@ -102,14 +102,14 @@ ms.locfileid: "66810705"
 |Windows 10 Корпоративная G|YYVX9-NTFWV-6MDM3-9PT4T-4M68B|
 |Windows 10 Корпоративная G N|44RPN-FTY23-9VTTB-MP9BX-T84FV|
 
-## <a name="windows-10-ltscltsb-versions"></a>Версии Windows 10 LTSC/с долгосрочным Обслуживанием
+## <a name="windows-10-ltscltsb-versions"></a>Версии Windows 10 LTSC и LTSB
 
-### <a name="windows-10-ltsc-2019"></a>Windows 10 LTSC 2019 г.
+### <a name="windows-10-ltsc-2019"></a>Windows 10 LTSC 2019
 
 |Версия операционной системы|Ключ установки клиента KMS|
 |-|-|
-|Windows 10 Корпоративная LTSC 2019 г.|M7XTQ-FN8P6-TTKYV-9D4CC-J462D|
-|Windows 10 Enterprise N LTSC 2019 г.|92NFX-8DJQP-P6BBQ-THF9C-7CG2H|
+|Windows 10 Корпоративная LTSC 2019|M7XTQ-FN8P6-TTKYV-9D4CC-J462D|
+|Windows 10 Корпоративная N LTSC 2019|92NFX-8DJQP-P6BBQ-THF9C-7CG2H|
 
 ### <a name="windows-10-ltsb-2016"></a>Windows 10 LTSB 2016
 
@@ -125,7 +125,7 @@ ms.locfileid: "66810705"
 | Windows 10 Корпоративная 2015 с долгосрочным обслуживанием   | WNMTR-4C88C-JK8YV-HQ7T2-76DF9 |
 | Windows 10 Корпоративная 2015 с долгосрочным обслуживанием N | 2F77B-TNFGY-69QQF-B8YKP-D69TJ |
 
-## <a name="earlier-versions-of-windows-server"></a>Более ранних версиях Windows Server
+## <a name="earlier-versions-of-windows-server"></a>Предшествующие версии Windows Server
 ### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 | Версия операционной системы               | Ключ установки клиента KMS          |
@@ -153,7 +153,7 @@ ms.locfileid: "66810705"
 | Версия операционной системы                         | Ключ установки клиента KMS          |
 |--------------------------------------------------|-------------------------------|
 | Windows Server 2008 R2 Web                       | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4 |
-| Windows Server 2008 R2 HPC Edition               | TT8MH-CG224-D3D7Q-498W2-9QCTX |
+| Windows Server 2008 R2 HPC Edition               | TT8MH-CG224-D3D7Q-498W2-9QCTX |
 | Windows Server 2008 R2 Standard                  | YC6KT-GKW9T-YTKYR-T4X34-R7VHC |
 | Windows Server 2008 R2 Enterprise                | 489J6-VHDMP-X63PK-3K798-CPX3Y |
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
@@ -166,7 +166,7 @@ ms.locfileid: "66810705"
 | Windows Web Server 2008                        | WYR28-R7TFJ-3X2YQ-YCY4H-M249D |
 | Windows Server 2008 Standard                   | TM24T-X9RMF-VWXK6-X8JC9-BFGM2 |
 | Windows Server 2008 Standard без Hyper-V   | W7VD6-7JFBR-RX26B-YKQ3Y-6FFFJ |
-| Windows Server 2008 Enterprise                 | YQGMW-MPWTJ-34KDK-48M3W-X4Q6V |
+| Windows Server 2008 Enterprise                 | YQGMW-MPWTJ-34KDK-48M3W-X4Q6V |
 | Windows Server 2008 Enterprise без Hyper-V | 39BXF-X8Q23-P2WWT-38T2F-G3FPG |
 | Windows Server 2008 HPC                        | RCTX3-KWVHP-BR6TB-RB6DM-6X7HP |
 | Windows Server 2008 Datacenter                 | 7M67G-PC374-GR742-YH8V4-TCBY3 |
@@ -200,10 +200,10 @@ ms.locfileid: "66810705"
 |--------------------------------------------------|-------------------------------|
 | Windows 7 Профессиональная                           | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
 | Windows 7 Профессиональная N                         | MRPKT-YTG23-K7D7T-X2JMM-QY7MG |
-| Windows 7 Профессиональная E                         | W82YF-2Q76Y-63HXB-FGJG9-GF7QX |
+| Windows 7 Профессиональная E                         | W82YF-2Q76Y-63HXB-FGJG9-GF7QX |
 | Windows 7 Корпоративная                             | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
 | Windows 7 Корпоративная N                           | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
-| Windows 7 Корпоративная E                           | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
+| Windows 7 Корпоративная E                           | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 
 
 См. также

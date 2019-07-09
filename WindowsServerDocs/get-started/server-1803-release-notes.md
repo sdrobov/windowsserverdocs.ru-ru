@@ -1,6 +1,6 @@
 ---
-title: Заметки о выпуске — важные проблемы в Windows Server версии 1803
-description: Дополнительные сведения об известных проблемах, ограничения или другие сведения, необходимые перед установкой Windows Server версии 1803
+title: Примечания к выпуску — важные проблемы в Windows Server версии 1803
+description: Узнайте о любых известных проблемах, ограничениях или другой информации, необходимой перед установкой Windows Server версии 1803
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,27 +14,27 @@ ms.author: elizapo
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: e9bd860769ec375a6d89ac452e3430b791fff3ad
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868505"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63688735"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1803"></a>Заметки о выпуске: Важные проблемы в Windows Server версии 1803
 
 >Область применения. Windows Server Semi-Annual Channel
 
-Эти заметки о выпуске суммировать самые важные проблемы в операционной системе Windows Server, включая информацию о способах устранения или обхода проблемы. Чтобы узнать о новых возможностях в этом выпуске, см. в разделе [новые возможности в Windows Server версии ниже 1803](whats-new-in-windows-server-1803.md). Ознакомьтесь с [контейнеры Windows о](https://docs.microsoft.com/virtualization/windowscontainers/about/) тем, кто заинтересован в под управлением Windows Server, версии 1803, контейнер. 
+В этих примечаниях к выпуску кратко изложены наиболее важные проблемы в операционной системе Windows Server, включая способы устранения или обхода известных проблем. Подробные сведения о новых возможностях этого выпуска см. в статье [Новые возможности Windows Server версии 1803](whats-new-in-windows-server-1803.md). Ознакомьтесь со статьей [О контейнерах Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/), если вас интересует запуск контейнера Windows Server версии 1803. 
 
-Если не указано обратное, эти заметки распространяются на все выпуски и варианты установки Windows Server версии 1803.  
+Если не указано иное, все эти проблемы распространяются на все выпуски и варианты установи Windows Server версии 1803.  
 
-Мы постоянно обновлять эту статью. В случае обнаружения известных проблем, мы будем их здесь описать. 
+Мы постоянно обновляем эту статью. В случае обнаружения известных проблем, мы будем описывать их здесь. 
 
 
-## <a name="software-defined-datacenter"></a>Программно определяемого центра обработки данных
+## <a name="software-defined-datacenter"></a>Программно-определяемый центр обработки данных
 
-Функции программно определяемого центра обработки данных, такие как дисковые пространства, программно конфигурируемой сети и экранированных виртуальных машин не включены в Windows Server версии 1803. Как описано в разделе [обновления Windows Server Semi-Annual Channel](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/), Windows Server полугодовой канал предназначен для контейнеров и сценариев приложений, которые выигрывают от ускорит внедрение инноваций. 
+Возможности программно-определяемого центра обработки данных, такие как локальные дисковые пространства, программно-определяемые сети и экранированные виртуальные машины, не включены в состав Windows Server версии 1803. Как описано в [обновлении Windows Server Semi-Annual Channel](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/), полугодовой канал Windows Server ориентирован на контейнеры и сценарии приложений, которые выигрывают от более быстрых инноваций. 
 
-Если вам нужна инфраструктурные роли, используйте выпуск Long-Term Servicing Channel: Windows Server 2016 (доступен) или [Windows Server 2019](https://cloudblogs.microsoft.com/windowsserver/2018/03/20/introducing-windows-server-2019-now-available-in-preview) (ожидается в этом году).
+Если вам нужны инфраструктурные роли, используйте выпуск Long-Term Servicing Channel: Windows Server 2016 (доступен сейчас) или [Windows Server 2019](https://cloudblogs.microsoft.com/windowsserver/2018/03/20/introducing-windows-server-2019-now-available-in-preview) (ожидается в этом году).
 
-Мы стремимся к созданию лучшей платформой для гиперконвергентной инфраструктуры, и мы продолжим для разработки новых компонентов и улучшения существующих на основе ваших отзывов. Благодарим вас за помощь в [более 10 000 кластеров дисковых](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum)! Мы будем рады общий доступ к более позднее в этом году.
+Мы стремимся создать лучшую платформу для гиперконвергентной инфраструктуры и продолжаем разрабатывать новые функции и улучшать существующие на основе ваших отзывов. Благодарим вас за помощь в получении [более 10 000 кластеров дискового пространства прямого подключения](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum)! Мы планируем еще один выпуск новостей позднее в этом году.

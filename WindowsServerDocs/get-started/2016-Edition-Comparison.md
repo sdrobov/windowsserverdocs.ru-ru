@@ -15,15 +15,15 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 2c26d6d0c4c4465b5f9073dbcac951fc0adce1d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882055"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63688542"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Сравнение выпусков Windows Server 2016 Standard и Datacenter
 
-> Область применения. Windows Server 2016
+> Область применения. Windows Server 2016
   
 ## <a name="locks-and-limits"></a>Блокировки и ограничения
 |Блокировки и ограничения|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
@@ -32,7 +32,7 @@ ms.locfileid: "59882055"
 |Максимальное число подключений SMB|16 777 216|16 777 216|
 |Максимальное число подключений RRAS|Без ограничений|Без ограничений|
 |Максимальное число подключений IAS|2 147 483 647|2 147 483 647|
-|Максимальное число подключений RDS|65535|65535|
+|Максимальное число подключений RDS|65 535|65 535|
 |Максимальное число сокетов в 64-разрядной версии|64|64|
 |Максимальное число ядер|Без ограничений|Без ограничений|
 |Максимальный объем ОЗУ|24 ТБ|24 ТБ|
@@ -80,7 +80,7 @@ ms.locfileid: "59882055"
 |Режим Windows Server Essentials| |Да|Да|
 |Службы Windows Server Update Services| |Да|Да|
 
-## <a name="features"></a>Компоненты
+## <a name="features"></a>Возможности
 
 |Компоненты Windows Server, доступные для установки с помощью диспетчера серверов (или PowerShell)|Windows Server 2016 Standard|Windows Server 2016 Datacenter|  
 |-------------------|----------|---------------------------|  
@@ -160,7 +160,7 @@ ms.locfileid: "59882055"
 |Вариант установки Nano Server|Да|Да|
 |Диспетчер серверов|Да|Да|
 |SMB Direct и SMB через RDMA|Да|Да|
-|Программно-конфигурируемая сеть|Нет|Да|
+|Программно-определяемая сеть|Нет|Да|
 |Служба управления хранилищами|Да|Да|
 |Дисковые пространства|Да|Да|
 |Локальные дисковые пространства|Нет|Да|

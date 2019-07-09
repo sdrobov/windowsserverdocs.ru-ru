@@ -12,25 +12,25 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 8a19082121e2d859bc4694fd3f7332e9d0d0b3b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812265"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63687655"
 ---
 # <a name="powershell-on-nano-server"></a>PowerShell на сервере Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
   
 > [!IMPORTANT]
-> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
+> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md). 
   
 ## <a name="powershell-editions"></a>Выпуски PowerShell   
   
 Начиная с версии 5.1, среда PowerShell доступна в разных выпусках, обладающих различными наборами функций и совместимостью с платформами.  
   
-- **Desktop Edition:** На платформе .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в полноценных выпусках Windows, такие как ядро сервера и Windows Desktop.  
-- **Выпуск Core:** Опирается на .NET Core и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
+- **Выпуск Desktop** создан на базе платформы .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенными для версий PowerShell в полноценных выпусках Windows, таких как Server Core и Windows Desktop.  
+- **Выпуск Core** создан на базе платформы .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенными для версий PowerShell в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
   
 Запущенный выпуск PowerShell указан в свойстве PSEdition объекта $PSVersionTable.  
 ```powershell  
@@ -123,7 +123,7 @@ At line:1 char:1
 * Инфраструктура, модули и командлеты рабочего процесса PowerShell   
 * Out-Printer   
 * Update-List   
-* Командлеты WMI версии 1: Get-WmiObject, Invoke-WmiMethod, Register-WmiEvent, Remove-WmiObject, Set-WmiInstance (используйте модуль CimCmdlets.)   
+* Командлеты инструментария управления Windows (WMI) версии 1: Get-WmiObject, Invoke-WmiMethod, Register-WmiEvent, Remove-WmiObject, Set-WmiInstance (используйте вместо них модуль CimCmdlets).   
   
 ## <a name="using-windows-powershell-desired-state-configuration-with-nano-server"></a>Использование настройки требуемого состояния Windows PowerShell с помощью сервера Nano Server  
   

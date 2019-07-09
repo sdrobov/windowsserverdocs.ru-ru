@@ -13,15 +13,15 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.openlocfilehash: 18e20433050371dc02782fb8630a885e53ae31ad
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "63688707"
 ---
 # <a name="automatic-virtual-machine-activation"></a>Автоматическая активация виртуальной машины
 
-> Относится к: Windows Server 2019 г., Windows Server Semi-Annual Channel, Windows Server 2016, Windows Server 2012 R2
+> Относится к: Windows Server 2019, Semi-Annual Channel для Windows Server, Windows Server 2016, Windows Server 2012 R2
 
 Автоматическая активация виртуальной машины (AVMA) — это механизм подтверждения законности приобретения, помогающий удостовериться, что продукты Windows используются в соответствии с правами на использование продуктов и условиями лицензионного соглашения на использование программного обеспечения корпорации Майкрософт.
 
@@ -45,25 +45,25 @@ AVMA предоставляет ряд преимуществ на сервер�
 
 ## <a name="system-requirements"></a>Системные требования
 
-AVMA требуется, чтобы сервер виртуализации Майкрософт под управлением Windows Server 2019 Datacenter, Windows Server 2016 Datacenter или Windows Server 2012 R2. 
+Для AVMA требуется Microsoft Virtualization Server с Windows Server 2019 Datacenter, Windows Server 2016 Datacenter или Windows Server 2012 R2. 
 
-Ниже приведены Гости, которые могут активироваться узлы другой версии.
+Ниже представлен список гостей, которых можно активировать с помощью различных версий серверов узла.
 
-|Версия сервера узла|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
+|Версия сервера узла|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|
 |-|-|-|-|
-|Windows Server 2019|X|X|X|
-|Windows Server 2016| |X|X|
+|Windows Server 2019|X|X|X|
+|Windows Server 2016| |X|X|
 |Windows Server 2012 R2| ||X|
 
-Обратите внимание на то, что они активировать все выпуски (Datacenter, Standard и Essentials).
+Обратите внимание на то, что они активируют все выпуски (Datacenter, Standard и Essentials).
 
 Это средство не работает с другими технологиями виртуализации сервера.
 
 ## <a name="how-to-implement-avma"></a>Реализация AVMA
 
-1.  На сервере виртуализации Windows Server Datacenter установите и настройте роль Microsoft Hyper-V Server. Дополнительные сведения см. в разделе [Установка Hyper-V Server](../virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server.md).
+1.  На сервере виртуализации Windows Server Datacenter установите и настройте роль Microsoft Hyper-V Server. Дополнительную информацию см. в статье об [установке Hyper-V Server](../virtualization/hyper-v/get-started/install-the-hyper-v-role-on-windows-server.md).
 
-2.  [Создание виртуальной машины](../virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md) и установить в поддерживаемой операционной системе на нее.
+2.  [Создайте виртуальную машину](../virtualization/hyper-v/get-started/create-a-virtual-machine-in-hyper-v.md) и установите на ней поддерживаемую серверную операционную систему.
 
 3.  Установите ключ AVMA на виртуальной машине. В командной строке с повышенными привилегиями введите следующую команду:
     
@@ -134,7 +134,7 @@ AVMA требуется, чтобы сервер виртуализации Ма
 
   - Адреса RDP
 
-Дополнительные сведения о том, как получить эту информацию см. в разделе [Hyper-V сценария: Просмотр KVP guestintrinsicexchangeitems](http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx).
+Дополнительные сведения о том, как получить эту информацию, см. в публикации [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx) (GuestIntrinsicExchangeItems KVP в скрипте Hyper-V).
 
 
 > [!NOTE]

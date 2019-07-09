@@ -1,6 +1,6 @@
 ---
-title: Активация Windows Server 2019 г.
-description: Как активировать Windows Server 2019
+title: Активация Windows Server 2019
+description: Сведения о том, как активировать Windows Server 2019
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,42 +14,42 @@ ms.author: coreyp
 manager: jasgroce
 ms.localizationpriority: medium
 ms.openlocfilehash: 4cc669fee4fbd31edc8813f16761ecb9f90532df
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810917"
 ---
-# <a name="windows-server-2019-activation"></a>Активация Windows Server 2019 г.
+# <a name="windows-server-2019-activation"></a>Активация Windows Server 2019
 
->Область применения. Windows Server 2019, Windows Server 2016
+>Область применения. Windows Server 2019, Windows Server 2016
 
-Ниже представлены начальной рекомендации по планированию, которые необходимо проверить для активации службы управления ключами (KMS), включающие Windows Server 2019. Сведения о KMS-активации, включающие старше указанных ниже операционных систем, см. в разделе [шаг 1: Просмотр и выбор методов активации](https://technet.microsoft.com/library/jj134256(WS.11).aspx).
+Ниже представлена информация, с которой необходимо ознакомиться, прежде чем планировать активацию служб управления ключами (KMS) с использованием Windows Server 2019. Сведения об активации KMS с использованием более старых операционных систем, не указанных здесь, см. в разделе [Шаг 1. Просмотр и выбор методов активации](https://technet.microsoft.com/library/jj134256(WS.11).aspx).
 
 KMS использует клиент-серверную модель для активных клиентов. Для активации клиенты KMS подключаются к серверу KMS, который называется узлом KMS. Узел KMS должен находиться в локальной сети.
 
-Узлы KMS не обязательно должны быть выделенными серверами, и службы KMS могут размещаться на сервере вместе с другими службами. Узел KMS можно запустить в любой физической или виртуальной системе под управлением Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 8.1 или Windows Server 2012.
+Узлы KMS не обязательно должны быть выделенными серверами, и службы KMS могут размещаться на сервере вместе с другими службами. Узел KMS можно запустить на любой физической или виртуальной системе под управлением Windows 10, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows 8.1 или Windows Server 2012.
 
 Узел KMS, запущенный в Windows 10 или Windows 8.1, может активировать только компьютеры с клиентскими операционными системами.
-В следующей таблице перечислены требования к клиенту и узла KMS для сетей, включающих клиенты Windows Server 2016, Windows Server 2019 и Windows 10.
+В следующей таблице перечислены общие требования к узлу и клиенту KMS для сетей, включающих клиенты Windows Server 2016, Windows Server 2019 и Windows 10.
 
 > [!NOTE]
 > - Для поддержки активации новых клиентов может потребоваться установить обновления на сервере KMS. Если возникнут ошибки активации, убедитесь, что установлены необходимые обновления, перечисленные под этой таблицей.
-> - Если вы работаете с виртуальными машинами, см. в разделе [автоматическая активация виртуальной машины](vm-activation-19.md) сведения и ключи AVMA.
+> - Если вы работаете с виртуальными машинами, см. сведения и ключи AVMA в разделе [Автоматическая активация виртуальной машины](vm-activation-19.md).
 
 |Группа ключей продукта|KMS можно разместить в|Выпуски Windows, активируемые этим узлом KMS|  
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------|  
-|Корпоративная лицензия на Windows Server 2019 г.|Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />Windows Server 2019<br /><br />|Windows Server Semi-Annual Channel<br /><br />2019 Windows Server (все выпуски)<br /><br />Windows Server 2016 (все выпуски)<br /><br />Windows 10 Корпоративная LTSC 2019 г. <br /><br />Windows 10 Корпоративная N LTSC 2019 г.<br /><br />Windows 10 LTSB (2015 и 2016)<br /><br />Windows 10 Профессиональная<br /><br />Windows 10 Корпоративная<br /><br />Windows 10 Pro для рабочих станций<br /><br />Windows 10 для образовательных учреждений<br /><br />Windows Server 2012 R2 (все выпуски)<br /><br />Windows 8.1 Профессиональная<br /><br />Windows 8.1 Корпоративная<br /><br />Windows Server 2012 (все выпуски)<br /><br />Windows Server 2008 R2 (все выпуски)<br /><br />Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br />Windows 7 Корпоративная<br />| 
-|Корпоративная лицензия для Windows Server 2016|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server Semi-Annual Channel <br><br>Windows Server 2016 (все выпуски)<br /><br />Windows 10 LTSB (2015 и 2016)<br /><br />Windows 10 Профессиональная<br /><br />Windows 10 Корпоративная<br /><br />Windows 10 Pro для рабочих станций<br><br>Windows 10 для образовательных учреждений<br><br>Windows Server 2012 R2 (все выпуски)<br /><br />Windows 8.1 Профессиональная<br /><br />Windows 8.1 Корпоративная<br /><br />Windows Server 2012 (все выпуски)<br /><br />Windows Server 2008 R2 (все выпуски)<br /><br />Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br />Windows 7 Корпоративная<br /><br />| 
-|Корпоративная лицензия для Windows 10|Windows 7<br /><br /> Windows 8.1<br /><br /> Windows 10|Windows 10 Профессиональная<br /><br /> Windows 10 Профессиональная N<br /><br /> Windows 10 Корпоративная<br /><br /> Windows 10 Корпоративная N<br /><br /> Windows 10 для образовательных учреждений<br /><br /> Windows 10 для образовательных учреждений N<br /><br /> Windows 10 Корпоративная LTSB (2015)<br /><br /> Windows 10 Корпоративная с долгосрочным Обслуживанием N (2015)<br /><br /> Windows 10 Pro для рабочих станций<br><br>Windows 8.1 Профессиональная<br /><br /> Windows 8.1 Корпоративная<br /><br /> Windows 7 Профессиональная<br /><br /> Windows 7 Корпоративная<br /><br />|  
-|Корпоративная лицензия на "Windows Server 2012 R2 для Windows 10"|Windows Server 2008 R2<br /><br /> Windows Server2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Профессиональная<br /><br /> Windows 10 Корпоративная<br /><br />Windows 10 Корпоративная LTSB (2015)<br><br>Windows 10 Pro для рабочих станций<br><br>Windows 10 для образовательных учреждений<br><br> Windows Server 2012 R2 (все выпуски)<br /><br /> Windows 8.1 Профессиональная<br /><br /> Windows 8.1 Корпоративная<br /><br /> Windows Server 2012 (все выпуски)<br /><br /> Windows Server 2008 R2 (все выпуски)<br /><br /> Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br /> Windows 7 Корпоративная|
+|Корпоративная лицензия для Windows Server 2019|Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />Windows Server 2019<br /><br />|Windows Server Semi-Annual Channel<br /><br />Windows Server 2019 (все выпуски)<br /><br />Windows Server 2016 (все выпуски)<br /><br />Windows 10 Корпоративная LTSC 2019 <br /><br />Windows 10 Корпоративная LTSC N 2019<br /><br />Windows 10 LTSB (2015 и 2016)<br /><br />Windows 10 Профессиональная<br /><br />Windows 10 Корпоративная<br /><br />Windows 10 Pro для рабочих станций<br /><br />Windows 10 для образовательных учреждений<br /><br />Windows Server 2012 R2 (все выпуски)<br /><br />Windows 8.1 Профессиональная<br /><br />Windows 8.1 Корпоративная<br /><br />Windows Server 2012 (все выпуски)<br /><br />Windows Server 2008 R2 (все выпуски)<br /><br />Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br />Windows 7 Корпоративная<br />| 
+|Корпоративная лицензия для Windows Server 2016|Windows Server 2012<br /><br />Windows Server 2012 R2<br /><br />Windows Server 2016<br /><br />|Windows Server Semi-Annual Channel <br><br>Windows Server 2016 (все выпуски)<br /><br />Windows 10 LTSB (2015 и 2016)<br /><br />Windows 10 Профессиональная<br /><br />Windows 10 Корпоративная<br /><br />Windows 10 Pro для рабочих станций<br><br>Windows 10 для образовательных учреждений<br><br>Windows Server 2012 R2 (все выпуски)<br /><br />Windows 8.1 Профессиональная<br /><br />Windows 8.1 Корпоративная<br /><br />Windows Server 2012 (все выпуски)<br /><br />Windows Server 2008 R2 (все выпуски)<br /><br />Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br />Windows 7 Корпоративная<br /><br />| 
+|Корпоративная лицензия для Windows 10|Windows 7<br /><br /> Windows 8.1<br /><br /> Windows 10|Windows 10 Профессиональная<br /><br /> Windows 10 Профессиональная N<br /><br /> Windows 10 Корпоративная<br /><br /> Windows 10 Корпоративная N<br /><br /> Windows 10 для образовательных учреждений<br /><br /> Windows 10 для образовательных учреждений N<br /><br /> Windows 10 Корпоративная с долгосрочным обслуживанием (2015)<br /><br /> Windows 10 Корпоративная с долгосрочным обслуживанием N (2015)<br /><br /> Windows 10 Pro для рабочих станций<br><br>Windows 8.1 Профессиональная<br /><br /> Windows 8.1 Корпоративная<br /><br /> Windows 7 Профессиональная<br /><br /> Windows 7 Корпоративная<br /><br />|  
+|Корпоративная лицензия на "Windows Server 2012 R2 для Windows 10"|Windows Server 2008 R2<br /><br /> Windows Server2012 Standard<br /><br /> Windows Server 2012 Datacenter<br /><br /> Windows Server 2012 R2 Standard<br /><br />Windows Server 2012 R2 Datacenter|Windows 10 Профессиональная<br /><br /> Windows 10 Корпоративная<br /><br />Windows 10 Корпоративная с долгосрочным обслуживанием (2015)<br><br>Windows 10 Pro для рабочих станций<br><br>Windows 10 для образовательных учреждений<br><br> Windows Server 2012 R2 (все выпуски)<br /><br /> Windows 8.1 Профессиональная<br /><br /> Windows 8.1 Корпоративная<br /><br /> Windows Server 2012 (все выпуски)<br /><br /> Windows Server 2008 R2 (все выпуски)<br /><br /> Windows Server 2008 (все выпуски)<br /><br />Windows 7 Профессиональная<br /><br /> Windows 7 Корпоративная|
 
 > [!NOTE]  
 > В зависимости от того, какая операционная система используется на сервере KMS и какие ОС требуется активировать, может потребоваться установить одно или несколько из следующих обновлений:
-> - Установки службы KMS в Windows 7 или в Windows Server 2008 R2 следует обновить, чтобы обеспечить поддержку активации клиентов под управлением Windows 10. Дополнительные сведения см. в разделе [обновление, которое позволяет узлам Windows 7 и Windows Server 2008 R2 KMS для активации Windows 10](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10).  
-> - Чтобы обеспечить поддержку активации клиентов под управлением Windows 10 и Windows Server 2016 или Windows Server 2019, или новой версии клиента или серверной операционных систем необходимо обновить установки KMS в Windows Server 2012. Дополнительные сведения см. в разделе [июля 2016 г. накопительный пакет обновления для Windows Server 2012](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012). 
-> - Чтобы обеспечить поддержку активации клиентов под управлением Windows 10 и Windows Server 2016 или Windows Server 2019, или новой версии клиента или серверной операционных систем необходимо обновить установки KMS в Windows 8.1 или Windows Server 2012 R2. Дополнительные сведения см. в разделе [июля 2016 г. накопительный пакет обновления для Windows 8.1 и Windows Server 2012 R2](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2).  
-> - Windows Server 2008 R2 не может быть обновлены для поддержки активации клиентов под управлением Windows Server 2016, Windows Server 2019 или более новых операционных системах. 
+> - Установки службы KMS в Windows 7 или в Windows Server 2008 R2 следует обновить, чтобы обеспечить поддержку активации клиентов под управлением Windows 10. Дополнительные сведения см. в статье  [Обновление, которое позволяет узлам KMS под управлением Windows 7 и Windows Server 2008 R2 активировать Windows 10](https://support.microsoft.com/help/3079821/update-that-enables-windows-7-and-windows-server-2008-r2-kms-hosts-to-activate-windows-10).  
+> - Установки KMS в Windows Server 2012 должны быть обновлены для поддержки активации клиентов под управлением Windows 10, Windows Server 2016 или Windows Server 2019 либо более поздней версии клиентской или серверной операционных систем. Дополнительные сведения см. в статье  [Накопительный пакет обновления для Windows Server 2012 за июль 2016 г.](https://support.microsoft.com/help/3172615/july-2016-update-rollup-for-windows-server-2012) 
+> - Установки KMS в Windows 8.1 или Windows Server 2012 R2 должны быть обновлены для поддержки активации клиентов под управлением Windows 10, Windows Server 2016 или Windows Server 2019 либо более поздней версии клиентской или серверной операционных систем. Дополнительные сведения см. в разделе  [Накопительный пакет обновления для Windows 8.1 и Windows Server 2012 R2 за июль 2016 г.](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8.1-and-windows-server-2012-r2)  
+> - Windows Server 2008 R2 невозможно обновить для поддержки активации клиентов с Windows Server 2016, Windows Server 2019 или более новыми операционными системами. 
 
 Один узел KMS может поддерживать неограниченное количество клиентов KMS. Если в среде более 50 клиентов, рекомендуется выделить хотя бы два узла KMS на случай, если один из них станет недоступен. Большинство организаций могут использовать всего лишь два узла KMS для всей своей инфраструктуры.
 
@@ -71,9 +71,9 @@ KMS может активировать физические и виртуаль
 > [!NOTE] 
 > Чтобы запросить это исключение, обращайтесь в центр обработки вызовов по активации. Дополнительные сведения см. в разделе [Корпоративное лицензирование Майкрософт](https://go.microsoft.com/fwlink/?LinkID=73076).
 
-Компьютеры под управлением лицензирования многопользовательские версии Windows 10, Windows Server 2019, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2, по умолчанию, клиенты KMS без дополнительной настройки требуется.
+Компьютеры, работающие под управлением версий Windows 10, Windows Server 2019, Windows Server 2016, Windows 8.1, Windows Server 2012 R2, Windows Server 2012, Windows 7, Windows Server 2008 R2 с корпоративными лицензиями, по умолчанию являются клиентами KMS, для которых не требуется дополнительная настройка.
 
-При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиенте KMS необходимо установить соответствующий ключ установки клиента KMS. Дополнительные сведения см. в разделе [ключи установки клиента KMS](../get-started/KMSclientkeys.md). 
+При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиенте KMS необходимо установить соответствующий ключ установки клиента KMS. Дополнительные сведения см. в разделе  [Ключи установки клиента KMS](../get-started/KMSclientkeys.md). 
  
 
  

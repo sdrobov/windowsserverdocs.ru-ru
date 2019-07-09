@@ -1,5 +1,5 @@
 ---
-title: Начало работы
+title: Приступая к работе
 description: 'Основные сведения о сервере: требования к системе, заметки о выпуске и варианты обновления'
 ms.prod: windows-server-threshold
 ms.service: na
@@ -11,20 +11,20 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: e7ff669b1a1ca3bed5d7c827c40bc46e81ea3f02
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810597"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Начало работы с Windows Server2016
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
-![Значок, указывающий поле с флажком](../media/landing-icons/getstarted.png) эта коллекция содержит подробные сведения, помогающие определить, если вы готовы перейти на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server2016, вы можете вернуться в главный центр [Windows Server2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
+![Значок с установленным флажком](../media/landing-icons/getstarted.png) Эта коллекция содержит подробные сведения, помогающие определить готовность к переходу на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server2016, вы можете вернуться в главный центр [Windows Server2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
 
 > [!Note]
 > Чтобы скачать Windows Server 2016, см. статью [Ознакомительные версии Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
@@ -33,19 +33,19 @@ ms.locfileid: "66810597"
 ## <a name="system-requirementssystem-requirementsmd"></a>[Требования к системе](system-requirements.md)
 Вы можете узнать требования к аппаратному обеспечению для установки и запуска Windows Server2016.
 
-## <a name="release-notes-important-issues-in-windows-serverwindows-server-2016-ga-release-notesmd"></a>[Заметки о выпуске. Важные проблемы в Windows Server](Windows-Server-2016-GA-Release-Notes.md)
+## <a name="release-notes-important-issues-in-windows-serverwindows-server-2016-ga-release-notesmd"></a>[Заметки о выпуске. Неполадки в Windows Server](Windows-Server-2016-GA-Release-Notes.md)
 Проблемы, которые могут вызвать серьезные неполадки, если их не устранить или не обойти.
 
 ## <a name="recommendations-for-moving-to-windows-server-2016recommendations-moving-to-server2016md"></a>[Рекомендации по переходу на Windows Server 2016](Recommendations-moving-to-Server2016.md)
 Полный список доступных вариантов перехода к использованию Windows Server2016 вразличных сценариях.
 
-## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[Компоненты, удаленные или устаревшие функции в Windows Server 2016](deprecated-features.md)
+## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016](deprecated-features.md)
 Компоненты, которые уже удалены из Windows Server2016 или отмечены как потенциальные для дальнейшего удаления.
 
-## <a name="upgrade-and-conversion-optionssupported-upgrade-pathsmd"></a>[Параметры обновления и преобразования](Supported-Upgrade-Paths.md)
+## <a name="upgrade-and-conversion-optionssupported-upgrade-pathsmd"></a>[Варианты обновления и преобразования](Supported-Upgrade-Paths.md)
 Описание всех способов перехода на Windows Server2016 с любой используемой вами версии.
 
-## <a name="server-role-upgrade-and-migration-matrixserver-role-upgradeability-tablemd"></a>[Матрица обновления роли сервера и миграции](Server-Role-Upgradeability-Table.md)
+## <a name="server-role-upgrade-and-migration-matrixserver-role-upgradeability-tablemd"></a>[Матрица обновления и миграции роли сервера](Server-Role-Upgradeability-Table.md)
 Сведения о дополнительных шагах, необходимых для перевода отдельных ролей сервера на Windows Server2016
 
 ## <a name="server-application-compatibility-tableserver-application-compatibilitymd"></a>[Таблица совместимости серверных приложений](Server-Application-Compatibility.md)
