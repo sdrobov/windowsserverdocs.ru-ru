@@ -9,15 +9,15 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: c75d887a6427673319999522b890d523f4276871
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59870965"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63738482"
 ---
 # <a name="manage-basic-volumes"></a>Управление базовыми томами
 
-> **Область применения:** Windows 10, Windows 8.1, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> **Относится к:** Windows 10, Windows 8.1, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Базовый диск — это физический диск, содержащий основные разделы, расширенные разделы или логические диски. Разделы и логические диски на базовых дисках называются базовыми томами. Базовые тома можно создавать только на базовых дисках.
 
@@ -25,6 +25,6 @@ ms.locfileid: "59870965"
 
 ## <a name="see-also"></a>См. также
 
--   [Назначьте путь к папке точки подключения на диск](assign-a-mount-point-folder-path-to-a-drive.md)
+-   [Назначение диску пути к папке точки подключения](assign-a-mount-point-folder-path-to-a-drive.md)
 -   [Расширение базового тома](extend-a-basic-volume.md)
 -   [Сжатие базового тома](shrink-a-basic-volume.md)

@@ -1,6 +1,6 @@
 ---
 title: Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016
-description: Список компонентов и функций Windows Server 2016, которые уже удалены из продукта в текущем выпуске или будут удалены в последующих выпусках (устаревшая версия). Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах.
+description: Список компонентов и функций в Windows Server 2016, которые уже удалены в текущем выпуске или будут удалены в следующих (и не рекомендуются к использованию). Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах.
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
@@ -11,19 +11,19 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 83855cf7e4fa86a932298dd15735dc5bf7277dfb
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "65976597"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Компоненты, удаленные или не рекомендуемые к использованию в Windows Server2016
 
->Относится к: Windows Server 2016
+>Относится к: Windows Server 2016
 
 В этой статье приведен список компонентов и функций в Windows Server 2016, которые уже удалены в текущем выпуске или будут удалены в следующих (и не рекомендуются к использованию). Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах. Данный список не является исчерпывающим и может быть изменен с выходом следующих версий ОС. Дополнительные сведения о конкретных компонентах и функциях и их замене см. в соответствующей документации.
 
-Информацию о что были удалены или устарели в новых версиях, см. в разделе [компоненты удалены или замены, начиная с Windows Server 2019](../get-started-19/removed-features-19.md).
+Сведения о том, что было удалено или объявлено нерекомендуемым в новых версиях, см. в разделе о [компонентах, которые были удалены или будут заменены, начиная с Windows Server 2019](../get-started-19/removed-features-19.md).
 
 ## <a name="features-removed-from-windows-server-2016"></a>Компоненты, удаленные из Windows Server 2016
 
@@ -46,21 +46,21 @@ ms.locfileid: "65976597"
 Компонент Journal.dll удален из Windows Server 2016. Замены нет.  
 
 ### <a name="security-configuration-wizard"></a>Мастер настройки безопасности  
-Мастер настройки безопасности удален. Вместо этого функции являются защищенными по умолчанию. Если вам необходимо управлять специальными параметрами безопасности, можно использовать групповую политику или [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
+Мастер настройки безопасности удален. Вместо этого функции являются защищенными по умолчанию. Если вам необходимо управлять определенными параметрами безопасности, можно использовать групповую политику или [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
 
 ### <a name="sqm"></a>SQM  
 Были удалены компоненты участия, управляющие участием в программе улучшения качества ПО. 
 
 ### <a name="windows-update"></a>Центр обновления Windows
-Команда **wuauclt.exe /detectnow** была удалена и больше не поддерживается. Чтобы запустить поиск обновлений, выполните одно из следующих действий.
+Команда **wuauclt.exe /detectnow** была удалена и больше не поддерживается. Чтобы активировать поиск обновлений, выполните одно из следующих действий.
 
-- Выполните следующие команды PowerShell:
+- Выполните следующие команды PowerShell.
     ````powershell
     $AutoUpdates = New-Object -ComObject "Microsoft.Update.AutoUpdate"`
     $AutoUpdates.DetectNow()` 
     ````
 
-- Можете также использовать этот сценарий VBScript:
+- Можете также использовать этот сценарий VBScript.
     ````vb
     Set automaticUpdates = CreateObject("Microsoft.Update.AutoUpdate")
     automaticUpdates.DetectNow()
@@ -71,9 +71,9 @@ ms.locfileid: "65976597"
 
 ### <a name="configuration-tools"></a>Средства настройки  
 
--   **Scregedit.exe** является устаревшим. Если у вас есть сценарии, зависящие от Scregedit.exe, измените их для использования методов Reg.exe или Windows PowerShell.  
+-   **Scregedit.exe** не рекомендуется к использованию. Если у вас есть сценарии, зависящие от Scregedit.exe, измените их для использования методов Reg.exe или Windows PowerShell.  
 
--   **Sconfig.exe** является устаревшим. Лучше используйте Windows PowerShell.  
+-   **Sconfig.exe** не рекомендуется к использованию. Лучше используйте Windows PowerShell.  
 
 ### <a name="netcfg-custom-apis"></a>Настраиваемые API-интерфейсы NetCfg  
 Установка PrintProvider, NetClient и ISDN с помощью настраиваемых API-интерфейсов NetCfg не рекомендуется.  

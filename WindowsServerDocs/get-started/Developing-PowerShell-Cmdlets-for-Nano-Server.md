@@ -13,15 +13,15 @@ ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: c3376d03a2e9f02b20aba608de0228efd7dfddea
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443627"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Разработка командлетов PowerShell для сервера Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -36,8 +36,8 @@ ms.locfileid: "66443627"
   
 Начиная с версии 5.1, среда PowerShell доступна в разных выпусках, обладающих различными наборами функций и совместимостью с платформами.  
   
-- **Desktop Edition:** На платформе .NET Framework и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в полноценных выпусках Windows, такие как ядро сервера и Windows Desktop.  
-- **Выпуск Core:** Опирается на .NET Core и обеспечивает совместимость со скриптами и модулями, предназначенные для версий PowerShell, выполняющихся в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
+- **Выпуск Desktop** Создан на базе платформы .NET Framework и обеспечивает совместимость со сценариями и модулями, предназначенными для версий PowerShell в полноценных выпусках Windows, таких как Server Core и Windows Desktop.  
+- **Выпуск Core** Создан на базе платформы .NET Framework и обеспечивает совместимость со сценариями и модулями, предназначенными для версий PowerShell в сокращенных выпусках Windows, таких как Nano Server и Windows IoT.  
   
 Запущенный выпуск PowerShell указан в свойстве PSEdition объекта $PSVersionTable.  
 ```powershell  
@@ -110,14 +110,14 @@ At line:1 char:1
 Краткие и подробные шаги по установке сервера Nano Server на виртуальных машинах или физических компьютерах приведены в разделе [Установка сервера Nano Server](Getting-Started-with-Nano-Server.md), который является родительским по отношению к данному.  
   
 > [!NOTE]  
-> Для разработки на базе сервера Nano Server может оказаться полезным установить сервер Nano Server с использованием параметра -Development в New-NanoServerImage. Это позволит устанавливать неподписанные драйверы, копировать двоичные файлы отладчика, открыть порт для отладки, включить тестовую подпись и установку пакетов AppX без лицензии разработчика. Пример:  
+> Для разработки на базе сервера Nano Server может оказаться полезным установить сервер Nano Server с использованием параметра -Development в New-NanoServerImage. Это позволит устанавливать неподписанные драйверы, копировать двоичные файлы отладчика, открыть порт для отладки, включить тестовую подпись и установку пакетов AppX без лицензии разработчика. Например:  
 >  
 >`New-NanoServerImage -DeploymentType Guest -Edition Standard -MediaPath \\Path\To\Media\en_us -BasePath .\Base -TargetPath .\NanoServer.wim -Development`  
   
 ## <a name="determining-the-type-of-cmdlet-implementation"></a>Определение типа реализации командлета  
 PowerShell поддерживает несколько типов реализации для командлетов, которые определяют, какие средства и процедуры используются в процессе создания или переноса для работы на сервере Nano Server. Ниже приведены поддерживаемые типы реализации:  
 * CIM — состоит из файлов CDXML, наложенных на поставщиков CIM (WMI версии 2)   
-* .NET — состоит из сборок .NET, которые реализуют управляемые интерфейсы командлетов, обычно написанные на языке C#   
+* .NET — состоит из сборок .NET, которые реализуют управляемые интерфейсы командлетов, обычно написанные на языке C.   
 * Сценарий PowerShell — состоит из модулей сценариев (psm1) или сценариев (ps1), написанных на языке PowerShell   
   
 Если вы не знаете, какую реализацию вы использовали для существующих командлетов, которые требуется перенести, установите продукт или компонент и найдите папку модуля PowerShell в одном из следующих расположений:   
@@ -125,7 +125,7 @@ PowerShell поддерживает несколько типов реализа
 * %windir%\system32\WindowsPowerShell\v1.0\Modules   
 * %ProgramFiles%\WindowsPowerShell\Modules   
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
-* \<расположение установки продукта >   
+* \<расположение установки продукта>   
     
   Проверьте эти расположения на соответствие следующим условиям:  
   * Командлеты CIM имеют расширения файла CDXML.  
@@ -160,11 +160,11 @@ PowerShell поддерживает несколько типов реализа
 Проверьте установку Visual Studio перед использованием модуля SDK, чтобы убедиться в соблюдении этих условий. Обязательно выберите установку указанного выше компонента во время установки Visual Studio или измените существующий экземпляр Visual Studio 2015, чтобы установить этот компонент.  
   
 Модуль SDK PowerShell Core включает в себя следующие командлеты:  
-- Новый NanoCSharpProject: Создает новый Visual Studio C# проектов, предназначенных для CoreCLR и PowerShell Core, входящие в выпуске Windows Server 2016 Nano Server.  
-- Show-sdksetupreadme: переходит Откроется корневой папки SDK в проводнике и открывает файл README.txt для настройки вручную.  
-- Install-RemoteDebugger: Устанавливает и настраивает удаленный отладчик Visual Studio на компьютере Nano Server.  
-- Start-RemoteDebugger: Запускает удаленный отладчик на удаленном компьютере под управлением Nano Server.  
-- STOP-RemoteDebugger: Останавливает удаленный отладчик на удаленном компьютере под управлением Nano Server.  
+- New-NanoCSharpProject: создает проект C# Visual Studio, ориентированный на CoreCLR и PowerShell Core, входящие в выпуск Windows Server 2016 для Nano Server.  
+- Show-SdkSetupReadMe: переходит в корневую папку SDK в проводнике и открывает файл README.txt для настройки вручную.  
+- Install-RemoteDebugger: устанавливает и настраивает удаленный отладчик Visual Studio на компьютере Nano Server.  
+- Start-RemoteDebugger: запускает удаленный отладчик на удаленном компьютере под управлением Nano Server.  
+- Stop-RemoteDebugger: останавливает удаленный отладчик на удаленном компьютере под управлением Nano Server.  
   
 Чтобы получить подробные сведения об использовании этих командлетов, выполните команду Get-Help для каждого командлета после установки и импорта модуля следующим образом:  
   
@@ -242,7 +242,7 @@ $result.RemoteAddress = 1.1.1.1
   
 ### <a name="migrating-from-wmi-net-to-mi-net"></a>Переход с WMI .NET на MI .NET  
   
-[WMI .NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) не поддерживается, поэтому все командлеты, использующие старый API необходимо перенести на поддерживаемый API WMI: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx). Доступ к MI .NET осуществляется напрямую из C# или с помощью командлетов в модуле CimCmdlets.   
+[WMI .NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) не поддерживается, поэтому все командлеты, использующие старый API, необходимо перенести на поддерживаемый API WMI: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx). Доступ к MI .NET осуществляется напрямую из C# или с помощью командлетов в модуле CimCmdlets.   
   
 ### <a name="cimcmdlets-module"></a>Модуль CimCmdlets  
   

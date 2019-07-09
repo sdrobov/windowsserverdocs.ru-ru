@@ -15,17 +15,17 @@ ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: d089af3562467aa1c222b17d9a1ad69d9c1b5008
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66810587"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016 
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016 
 
-В этом разделе описаны минимальные системные требования для запуска Windows Server&reg; 2016 или Windows Server версии 1709.
+В этом разделе описаны минимальные требования к системе для запуска Windows Server&reg; 2016 или Windows Server версии 1709.
 
 > [!NOTE]  
 > В этом выпуске чистая установка является рекомендованной.  
@@ -53,7 +53,7 @@ ms.locfileid: "66810587"
 - Поддержка CMPXCHG16b, LAHF/SAHF и PrefetchW  
 - Поддержка преобразования адресов второго уровня (EPT или NPT)  
 
-[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) — это средство позволяет проверить, какие из этих возможностей, имеет ЦП.
+[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) — инструменты, который можно использовать, чтобы проверить, которой из этих возможностей обладает ваш ЦП.
 
 ## <a name="ram"></a>ОЗУ  
 Ниже указаны примерные требования к ОЗУ для данного продукта.  
@@ -117,8 +117,8 @@ ms.locfileid: "66810587"
 > Микросхема доверенного платформенного модуля (TPM) не является обязательным требованием для установки данного выпуска, однако она необходима для использования определенных функций, таких как шифрование диска BitLocker. Если компьютер использует доверенный платформенный модуль, он должен соответствовать следующим требованиям.  
 >  
 > - Аппаратный доверенный платформенный модуль должен иметь спецификации доверенного платформенного модуля версии 2.0.  
-> - Доверенные платформенные модули, реализующие версию 2.0, должны иметь сертификат EK, который должен быть либо предварительно подготовлен для доверенного платформенного модуля поставщиком оборудования, либо поддерживать получение устройством во время первой загрузки.  
-> - Доверенные платформенные модули, которые реализуют версию 2.0, должны поставляться с банками PCR SHA-256 и реализовывать PCR от 0 до 23 для SHA-256. Допускается поставка доверенных платформенных модулей с одним переключаемым банком PCR, который может использоваться для измерений как SHA-1, так и SHA-256.  
+> - Доверенный платформенный модуль, реализующий версию 2.0, должен иметь сертификат EK, который либо заранее подготовлен для доверенного платформенного модуля поставщиком оборудования, либо может быть получен устройством при первой загрузке.  
+> - Доверенный платформенный модуль, реализующий версию 2.0, должен поставляться в комплекте с банками памяти SHA-256 PCR и реализовать PCR от 0 до 23 для алгоритма SHA-256. Допускается поставка доверенных платформенных модулей с одним банком PCR, который можно использовать для расчета алгоритмов SHA-1 и SHA-256.  
 > - Параметр UEFI, запрашивающий выключение доверенного платформенного модуля, не является обязательным требованием.  
 
 ## <a name="installation-of-nano-server"></a>Установка сервера Nano Server  
@@ -126,6 +126,6 @@ ms.locfileid: "66810587"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 - [Требования к процессору Windows](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
-- [Сравнение выпусков Standard и Datacenter Windows Server 2016](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
-- [Требования к системе Windows 10](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
+- [Сравнение выпусков Windows Server 2016 Standard и Datacenter](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
+- [Системные требования Windows 10](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
 - [Скачать таблицу лицензирования Windows Server 2016](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

@@ -1,6 +1,6 @@
 ---
-title: Службы удаленных рабочих столов - подключаться с любого устройства
-description: Дополнительные сведения о различных способах, которые пользователи могут подключаться к удаленному рабочему столу.
+title: 'Службы удаленных рабочих столов: подключение с любого устройства'
+description: Узнайте о различных способах, которыми пользователи могут подключаться к удаленному рабочему столу.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,17 +13,17 @@ author: lizap
 ms.author: spatnaik
 ms.date: 09/23/2016
 manager: scottman
-ms.openlocfilehash: b06c081965869ece6c7418646413421382ae0c3b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7ff06314dc518dcc206da331327e2f974c9a5f6d
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59887125"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63743443"
 ---
-# <a name="remote-desktop-services---connect-from-any-device"></a>Службы удаленных рабочих столов - подключаться с любого устройства
+# <a name="remote-desktop-services---connect-from-any-device"></a>Службы удаленных рабочих столов: подключение с любого устройства
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-Доступ к корпоративным ресурсам из любого Windows, Apple или Android компьютера, планшета или телефона. Разрешить пользователям легко видеть их доступные рабочие столы и приложения с любого устройства через веб-канал к удаленному рабочему Столу.
+Обращайтесь к корпоративным ресурсам с любого компьютера, планшета или телефона Windows, Apple или Android. Позвольте пользователям легко просматривать доступные им рабочие столы и приложения с любого устройства через веб-канал удаленных рабочих столов.
 
-Дополнительные сведения о [клиенты удаленного рабочего стола Microsoft](clients/remote-desktop-clients.md).
+Узнайте больше о [клиентах удаленного рабочего стола (Майкрософт)](clients/remote-desktop-clients.md).

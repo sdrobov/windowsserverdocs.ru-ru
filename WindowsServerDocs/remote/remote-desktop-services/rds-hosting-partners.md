@@ -1,6 +1,6 @@
 ---
-title: RDS - партнеров для размещения рабочих столов и приложений
-description: Список партнеров, которые можно размещать рабочие столы и приложения с помощью RDS.
+title: 'RDS: партнеры для размещения рабочих столов и приложений'
+description: Список партнеров, у которых можно размещать рабочие столы и приложения с помощью RDS.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -14,32 +14,32 @@ ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
 ms.openlocfilehash: 6081b84aa5c714dc8114408eed077a1822d58218
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849935"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "63743785"
 ---
-# <a name="remote-desktop-services-hosting-partners-and-assessment"></a>Размещение партнеров и оценки служб удаленных рабочих столов
+# <a name="remote-desktop-services-hosting-partners-and-assessment"></a>Партнеры по размещению служб удаленных рабочих столов и их оценка
 
-Недавно корпорация Майкрософт выпустила новый путь обучения партнерской сети корпорации Майкрософт: «Размещение рабочего стола Windows и приложений с помощью служб удаленных рабочих столов в Azure».
+Недавно корпорация Майкрософт выпустила новую схему обучения в Microsoft Partner Network: "Размещение рабочего стола и приложений Windows с помощью служб удаленных рабочих столов в Azure".
 
-Если вы являетесь партнером Майкрософт и требуется включить в список партнеров, которые прошли оценку, ниже приведены шаги, которые можно предпринять для завершения обучения.
+Если вы являетесь партнером корпорации Майкрософт и хотите войти в список партнеров, которые прошли оценку, то ниже приведены шаги, которые можно выполнить, чтобы пройти схему обучения.
 
-1. Стать [Microsoft Partner](https://partner.microsoft.com/), если вы еще не.
-2. Контрольные значения [размещение Windows и приложений с помощью служб удаленных рабочих столов в Azure семинара](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=2915&rowId=3603).
-3. Воспользоваться [технической оценки](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=1660&rowId=2220&trackPathId=9871).
-4. Убедиться, что вы выполнили [требования для компетенции облачной платформы](https://partner.microsoft.com/en-us/membership/cloud-platform-competency).
+1. Станьте [партнером корпорации Майкрософт](https://partner.microsoft.com/), если вы им еще не являетесь.
+2. Просмотрите учебный семинар [Размещение рабочего стола и приложений Windows с помощью служб удаленных рабочих столов в Azure](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=2915&rowId=3603).
+3. Пройдите [техническую оценку](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=1660&rowId=2220&trackPathId=9871).
+4. Убедитесь, что вы выполнили [требования для компетенции "Облачная платформа"](https://partner.microsoft.com/en-us/membership/cloud-platform-competency).
 
-Уже партнера корпорации Майкрософт и остались вопросы? Обратитесь в службу удаленного рабочего стола на <rdhostingpartners@microsoft.com>.  
+Вы уже партнер корпорации Майкрософт и у вас остались вопросы? Обратитесь к группе удаленного рабочего стола: <rdhostingpartners@microsoft.com>.  
 
 
-## <a name="partners-who-have-passed-the-learning-path-assessment"></a>Партнеры, которые прошли обучение путь оценки 
+## <a name="partners-who-have-passed-the-learning-path-assessment"></a>Партнеры, которые прошли оценку по схеме обучения 
 
-Если вы являетесь клиентом, вы ищете партнера для настольных компьютеров Windows узлов и приложений в Azure для пользователей, мы компиляции список партнеров, которые прошли оценку. Вот [список этих партнеров](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/RDS-Hosting-Partners.pdf), а как 03/28/2017, который можно загрузить.
+Если вы являетесь клиентом, который ищет партнера для размещения рабочих столов и приложений Windows в Azure для пользователей, то можете ознакомиться с составленным нами списком партнеров, которые прошли оценку. Вот [этот список партнеров](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/RDS-Hosting-Partners.pdf) от 28 марта 2017 года, который можно скачать.
 
-Можно найти дополнительные сведения для каждого участника, выполнив следующие действия:
+Можно найти дополнительные сведения о каждом партнере, выполнив следующие действия.
 
-1. Откройте [Найдите партнера](https://partnercenter.microsoft.com/pcv/search).
-2. Очистить **расположение** поля.
-3. Введите имя участника в **я ищу помощь** поля.
+1. Откройте страницу [Найти партнера](https://partnercenter.microsoft.com/pcv/search).
+2. Очистите поле **Расположение**.
+3. Введите имя партнера в поле **Мне нужна помощь с**.

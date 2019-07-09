@@ -12,15 +12,15 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 7c1623e365be71cac2fd58da5444ce4358d75309
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443562"
 ---
 # <a name="nano-server-quick-start"></a>Краткое руководство по серверу Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -37,13 +37,13 @@ ms.locfileid: "66443562"
   
 1. Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server 2016 в папку на жестком диске.  
   
-2. Запустите Windows PowerShell с правами администратора, перейдите в каталог в папку, где были помещены в папку NanoServerImageGenerator, а затем импортируйте модуль с `Import-Module .\NanoServerImageGenerator -Verbose`  
+2. Запустите Windows PowerShell с правами администратора, перейдите в папку, куда скопировали NanoServerImageGenerator, а затем импортируйте модуль с помощью команды `Import-Module .\NanoServerImageGenerator -Verbose`  
    >[!NOTE]  
    >Может потребоваться настроить политику выполнения Windows PowerShell. `Set-ExecutionPolicy RemoteSigned` должен подойти.  
   
 3. Создайте виртуальный жесткий диск для выпуска Standard, который задает имя компьютера и включает **гостевые драйверы** Hyper-V, выполнив указанную ниже команду, при этом вам будет предложено ввести пароль администратора для нового виртуального жесткого диска:  
   
-   `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>` Где  
+   `New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerVM\NanoServerVM.vhd -ComputerName <computer name>`, где:  
   
    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
   
@@ -78,14 +78,14 @@ ms.locfileid: "66443562"
   
 1.  Скопируйте папку *NanoServerImageGenerator* из папки \NanoServer ISO-образа Windows Server 2016 в папку на жестком диске.  
   
-2.  Запустите Windows PowerShell с правами администратора, перейдите в каталог в папку, где были помещены в папку NanoServerImageGenerator, а затем импортируйте модуль с `Import-Module .\NanoServerImageGenerator -Verbose`  
+2.  Запустите Windows PowerShell с правами администратора, перейдите в папку, куда скопировали NanoServerImageGenerator, а затем импортируйте модуль с помощью команды `Import-Module .\NanoServerImageGenerator -Verbose`  
   
 >[!NOTE]  
 >Может потребоваться настроить политику выполнения Windows PowerShell. `Set-ExecutionPolicy RemoteSigned` должен подойти.  
   
 3. Создайте виртуальный жесткий диск, который задает имя компьютера и включает драйверы OEM и Hyper-V, выполнив указанную ниже команду, при этом вам будет предложено ввести пароль администратора для нового виртуального жесткого диска:  
   
-   `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering` Где  
+   `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath <path to root of media> -BasePath .\Base -TargetPath .\NanoServerPhysical\NanoServer.vhd -ComputerName <computer name> -OEMDrivers -Compute -Clustering`, где:  
   
    -   **-MediaPath <path to root of media\>** указывает путь к корню содержимого ISO-образа Windows Server 2016. Например, если вы скопировали содержимое ISO в d:\TP5ISO, следует использовать этот путь.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "66443562"
   
    -   **Computer_name** — это имя компьютера для создаваемого Nano Server.  
   
-   **Пример:** `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath F:\ -BasePath .\Base -TargetPath .\Nano1\NanoServer.vhd -ComputerName Nano-srv1 -OEMDrivers -Compute -Clustering`  
+   **Пример:**  `New-NanoServerImage -Edition Standard -DeploymentType Host -MediaPath F:\ -BasePath .\Base -TargetPath .\Nano1\NanoServer.vhd -ComputerName Nano-srv1 -OEMDrivers -Compute -Clustering`  
   
    Этот пример создает виртуальный жесткий диск из ISO-образа, подключенного как F:\\. При создании виртуального жесткого диска он будет использовать папку с именем Base в том же каталоге, где был запущен New-NanoServerImage. Виртуальный жесткий диск помещается в папку Nano1 внутри папки, из которой выполняется команда. Имя компьютера будет иметь значение Nano-srv1, для него будут установлены драйверы OEM к наиболее распространенному оборудованию, а также включена роль Hyper-V и функция кластеризации. Для Nano Server используется выпуск Standard.  
   

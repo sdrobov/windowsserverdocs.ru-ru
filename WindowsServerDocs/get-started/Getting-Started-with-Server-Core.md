@@ -1,6 +1,6 @@
 ---
 title: Установка основных серверных компонентов
-description: Как получить и установить установки основных серверных компонентов на Windows Server 2019, Windows Server 2016 или Windows Server (Semi-Annual Channel).
+description: Как получить и установить основные серверные компоненты на сервер Windows Server 2019, Windows Server 2016 или Windows Server (Semi-Annual Channel).
 ms.prod: windows-server-threshold
 ms.date: 05/21/2019
 ms.technology: server-general
@@ -12,32 +12,32 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 6f685ce29088b56bb243d21315787ab90e6863a4
-ms.sourcegitcommit: c8cc0b25ba336a2aafaabc92b19fe8faa56be32b
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "65976723"
 ---
 # <a name="install-server-core"></a>Установка основных серверных компонентов
 
-> Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
   
-При установке Windows Server в первый раз, у вас есть следующие варианты установки:
+При первой установке Windows Server доступны следующие варианты установки.
 
 >[!NOTE]
-> В следующем списке выпуски без возможностей рабочего стола являются вариантами установки основных серверных компонентов
+> В следующем списке выпуски без возможностей рабочего стола являются вариантами установки основных серверных компонентов:
 
--   Windows Server Standard
--   Windows Server Standard с возможностями рабочего стола
--   Windows Server Datacenter
--   Windows Server Datacenter с возможностями рабочего стола
+-   Windows Server Standard;
+-   Windows Server Standard с возможностями рабочего стола;
+-   Windows Server Datacenter;
+-   Windows Server Datacenter с возможностями рабочего стола.
 
-При установке Windows Server (полугодовой канал), у вас есть следующие варианты установки:
+При первой установке Windows Server (Semi-Annual Channel) доступны следующие варианты установки:
 
--   Windows Server Standard 
--   Windows Server Datacenter
+-   Windows Server Standard; 
+-   Windows Server Datacenter.
 
-Вариант "Установка основных серверных компонентов" сокращает требования к свободному пространству на диске и уменьшает поле для потенциальных атак, поэтому мы рекомендуем выбрать данный вариант установки, если нет особой необходимости в дополнительных элементах пользовательского интерфейса и графических средствах управления, которые включены в вариант "Сервер с возможностями рабочего стола". Если вам требуются дополнительные элементы пользовательского интерфейса, см. раздел [Установка сервера с возможностями рабочего стола](Getting-Started-with-Server-with-Desktop-Experience.md). 
+Вариант установки "Основные серверные компоненты" сокращает требования к свободному пространству на диске и уменьшает поле для потенциальных атак, поэтому мы рекомендуем выбрать именно его, если нет особой необходимости в дополнительных элементах пользовательского интерфейса и графических средствах управления, которые включены в вариант "Сервер с возможностями рабочего стола". Если вам требуются дополнительные элементы пользовательского интерфейса, см. раздел [Установка сервера с возможностями рабочего стола](Getting-Started-with-Server-with-Desktop-Experience.md). 
 
 При выборе основных серверных компонентов стандартный пользовательский интерфейс (возможности рабочего стола) не устанавливается. Вы управляете сервером с помощью командной строки, Windows PowerShell или методами удаленного взаимодействия.
 
@@ -49,14 +49,14 @@ ms.locfileid: "65976723"
 
 **Локальные установка, настройка и удаление ролей сервера:** в командной строке с использованием Windows PowerShell.
 
-**Установка, Настройка и деинсталляция ролей сервера с клиентского компьютера Windows (или сервера с возможностями рабочего стола, которые установлены):** с помощью диспетчера серверов, средств удаленного администрирования сервера (RSAT), Windows PowerShell или Windows Admin Center .
+**Удаленная установка, настройка и удаление ролей сервера на клиентском компьютере Windows (или на сервере с установленными возможностями рабочего стола)** с помощью диспетчера серверов, средств удаленного администрирования сервера (RSAT), Windows PowerShell или Windows Admin Center.
 
 >[!NOTE]
 >
 >Для средства удаленного администрирования сервера следует использовать версию Windows 10.
 >Консоль управления (MMC) недоступна в локальной среде.
 
-**Доступные роли сервера примере:**
+**Примеры доступных ролей сервера:**
 
 - Службы сертификатов Active Directory
 - Доменные службы Active Directory
@@ -76,21 +76,21 @@ ms.locfileid: "65976723"
    - Виртуализация
    - Службы активации корпоративных лицензий
 
-Роли, не включенные в основных серверных компонентов, см. в разделе [ролей, служб ролей и компонентов не в Windows Server - Server Core](../administration/server-core/server-core-removed-roles.md).
+Роли, не включенные в перечень основных серверных компонентов, описываются в разделе о [ролях, службах ролей и компонентах, не включенных в список основных серверных компонентов Windows Server](../administration/server-core/server-core-removed-roles.md).
 
-## <a name="installing-on-windows-server-2019-or-windows-server-2016"></a>Установка в Windows Server 2019 г. или Windows Server 2016
+## <a name="installing-on-windows-server-2019-or-windows-server-2016"></a>Установка в Windows Server 2019 или Windows Server 2016
 
-Для установки общие шаги и параметры для Windows Server (канал обслуживания долго термин), см. в разделе [установки Windows Server и обновления](installation-and-upgrade.md).
+Общие шаги и параметры установки для Windows Server (Long-Term Servicing Channel) приведены в разделе [Установка и обновление Windows Server](installation-and-upgrade.md).
 
 ## <a name="installing-on-windows-server-semi-annual-channel"></a>Установка в Windows Server (Semi-Annual Channel)
 
-Шаги установки для Windows Server (полугодовой канал), так же, как установка предыдущих версий Windows Server (из. ISO-образ), за исключением следующих случаев:
+Шаги установки для Windows Server (Semi-Annual Channel) идентичны процессу установки предыдущих версий Windows Server (из ISO-образа) со следующими исключениями.
 
 - Не поддерживается переход с предыдущих версий Windows Server на Windows Server версии 1709. Всегда требуется новая установка.
-   Это означает, что при запуске setup.exe на рабочем столе Windows компьютера, процесс установки не поддерживает параметр обновления (закрашен серым).
-- Отсутствует версия оценки для Windows Server (Semi-Annual Channel)
-- Версия для поставщиков оборудования или розничной продажи отсутствует. Windows Server (Semi-Annual Channel) можно лицензировать только через программы Software Assurance или лояльности.
+   Это означает, что при выполнении файла setup.exe на рабочем столе компьютера с Windows мастер установки не предоставит возможность перехода с предыдущей версии (она будет выделена серым).
+- Ознакомительная версия для Windows Server (Semi-Annual Channel) отсутствует.
+- Версия для поставщиков оборудования или розничной продажи отсутствует. Лицензирование Windows Server (Semi-Annual Channel) осуществляется только через программу Software Assurance или программы лояльности.
 
-Дополнительные сведения о полугодовой канал, см. в разделе [сравнение каналы обслуживания](../get-started-19/servicing-channels-19.md).
+Дополнительные сведения о Semi-Annual Channel см. в разделе [Каналы обслуживания Windows Server: LTSC и SAC](../get-started-19/servicing-channels-19.md).
 
-Новые возможности в Windows Server Semi-Annual Channel см. в разделе [новые возможности в Windows Server](whats-new-in-windows-server.md)
+Описание новых возможностей Windows Server Semi-Annual Channel см. в статье [Новые возможности в Windows Server](whats-new-in-windows-server.md).

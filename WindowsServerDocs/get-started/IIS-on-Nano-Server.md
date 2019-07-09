@@ -13,15 +13,15 @@ author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
 ms.openlocfilehash: 54c8d05c028cbca364b6a46052d12cdcb12c01b0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
-ms.translationtype: MT
+ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
+ms.lasthandoff: 06/17/2019
 ms.locfileid: "66443614"
 ---
 # <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
@@ -30,9 +30,9 @@ ms.locfileid: "66443614"
 
 В этом выпуске Nano Server доступны следующие функции служб IIS:  
 
-|Компонент|По умолчанию включено|  
+|Функция|По умолчанию включено|  
 |-----------|----------------------|  
-|**Общие функции HTTP**||  
+|**Общие компоненты HTTP**||  
 |Документ по умолчанию|x|  
 |Просмотр каталогов|x|  
 |Ошибки HTTP|x|  
@@ -46,7 +46,7 @@ ms.locfileid: "66443614"
 |**Производительность**||  
 |Сжатие статического содержимого|x|  
 |Сжатие динамического содержимого||  
-|**безопасность**||  
+|**Безопасность**||  
 |Фильтрация запросов|x|  
 |Обычная проверка подлинности||  
 |Проверка подлинности с сопоставлением сертификата клиента||  
@@ -62,10 +62,10 @@ ms.locfileid: "66443614"
 |Фильтры ISAPI||  
 |Серверные включаемые модули||  
 |Протокол WebSocket||  
-|**Средства управления**||  
+|**Инструменты управления**||  
 |Модуль IISAdministration для Windows PowerShell|x|  
 
-Серия статей о других конфигурациях служб IIS (например, с помощью ASP.NET, PHP и Java), а также других связанных содержимого публикуется в [ http://iis.net/learn ](http://iis.net/learn).  
+Цикл статей о других конфигурациях служб IIS (например, с использованием ASP.NET, PHP и Java), а также другие материалы по этой теме опубликованы здесь: [http://iis.net/learn](http://iis.net/learn).  
 
 ## <a name="installing-iis-on-nano-server"></a>Установка служб IIS на сервере Nano Server  
 Эту роль сервера можно установить либо в автономном режиме (при отключенном Nano Server), либо в сети (с использованием Nano Server). Рекомендуется установка в автономном режиме.  
@@ -122,14 +122,14 @@ ms.locfileid: "66443614"
 
 4. Перейдите в каталог с недавно созданным XML-файлом и выполните команду  
 
-   **DISM / online /apply-unattend:.\unattend.xml**  
+   **dism /online /apply-unattend:.\unattend.xml**  
 
 
 5. Убедитесь, что пакет IIS и связанный с ним языковой пакет установлены правильно, выполнив следующую команду:  
 
-   **DISM / online/Get-Packages**  
+   **dism /online /get-packages**  
 
-   Вы должны увидеть «идентификатор пакета: Microsoft-NanoServer-IIS-Package ~ 31bf3856ad364e35 ~ amd64 ~ ~ 10.0.14393.1000" появиться дважды: один раз для типа выпуска: Языковой пакет и один раз для типа выпуска: Пакет дополнительных компонентов.  
+   Вы должны увидеть две записи "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" — для элементов "Тип выпуска: Языковый пакет" и "Тип выпуска: Пакет функций".  
 
 6. Запустите службу W3SVC либо с помощью команды **net start w3svc**, либо перезапустив Nano Server.  
 
@@ -145,7 +145,7 @@ ms.locfileid: "66443614"
 
 Каждая из функций служб IIS существует в виде набора элементов конфигурации. Например, функция проверки подлинности Windows включает в себя следующие элементы:  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |-----------|--------------------------|  
 |`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll`|  
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" \/>`|  
@@ -225,7 +225,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 3.  На сервере Nano Server импортируйте сертификат в хранилище "My" с помощью следующей команды:  
 
-    **YOUR_PFX_PASSWD -p - ImportPFX certoc.exe Мои c:\temp\test.pfx**  
+    **certoc.exe -ImportPFX -p YOUR_PFX_PASSWD My c:\temp\test.pfx**  
 
 4.  Извлеките отпечаток нового сертификата (в данном примере это 61E71251294B2A7BB8259C2AC5CF7BA622777E73) с помощью `Get-ChildItem Cert:\LocalMachine\my`.  
 
@@ -242,7 +242,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
     $sm.CommitChanges()  
     ```  
 
-    Можно также использовать указание имени сервера (SNI) с именем конкретного узла со следующим синтаксисом: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>Приложение 1. Список вложенных функций IIS
 
@@ -286,7 +286,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 ### <a name="common-http-features"></a>Общие компоненты HTTP  
 **Документ по умолчанию**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="DefaultDocumentModule" image="%windir%\System32\inetsrv\defdoc.dll" />`|  
 |`<modules>`|`<add name="DefaultDocumentModule" lockItem="true" />`|  
@@ -297,7 +297,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Просмотр каталогов**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
 |`<globalModules>`|`<add name="DirectoryListingModule" image="%windir%\System32\inetsrv\dirlist.dll" />`|  
 |`<modules>`|`<add name="DirectoryListingModule" lockItem="true" />`|  
@@ -307,7 +307,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Ошибки HTTP**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
 |`<globalModules>`|`<add name="CustomErrorModule" image="%windir%\System32\inetsrv\custerr.dll" />`|  
 |`<modules>`|`<add name="CustomErrorModule" lockItem="true" />`|  
@@ -315,7 +315,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Статическое содержимое**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="StaticFileModule" image="%windir%\System32\inetsrv\static.dll" />`|  
 |`<modules>`|`<add name="StaticFileModule" lockItem="true" />`|  
@@ -325,7 +325,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Перенаправление HTTP**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
 |`<globalModules>`|`<add name="HttpRedirectionModule" image="%windir%\System32\inetsrv\redirect.dll" />`|  
 |`<modules>`|`<add name="HttpRedirectionModule" lockItem="true" />`|  
@@ -334,28 +334,28 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 ### <a name="health-and-diagnostics"></a>Работоспособность и диагностика  
 **Ведение журнала HTTP**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
 |`<globalModules>`|`<add name="HttpLoggingModule" image="%windir%\System32\inetsrv\loghttp.dll" />`|  
 |`<modules>`|`<add name="HttpLoggingModule" lockItem="true" />`|  
 |`<httpLogging>`|`<httpLogging dontLog="false" />`|  
 
-**Настраиваемое протоколирование**  
+**Настраиваемое ведение журнала**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="CustomLoggingModule" image="%windir%\System32\inetsrv\logcust.dll" />`|  
 |`<modules>`|`<add name="CustomLoggingModule" lockItem="true" />`|  
 
 **Монитор запросов**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="RequestMonitorModule" image="%windir%\System32\inetsrv\iisreqs.dll" />`|  
 
 **Трассировка**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="TracingModule" image="%windir%\System32\inetsrv\iisetw.dll" \/><br /><add name="FailedRequestsTracingModule" image="%windir%\System32\inetsrv\iisfreb.dll" />`|  
 |`<modules>`|`<add name="FailedRequestsTracingModule" lockItem="true" />`|  
@@ -364,7 +364,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 ### <a name="performance"></a>Производительность  
 **Сжатие статического содержимого**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="StaticCompressionModule" image="%windir%\System32\inetsrv\compstat.dll" />`|  
 |`<modules>`|`<add name="StaticCompressionModule" lockItem="true" />`|  
@@ -372,7 +372,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Сжатие динамического содержимого**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |-----------|--------------------------|  
 |`<globalModules>`|`<add name="DynamicCompressionModule" image="%windir%\System32\inetsrv\compdyn.dll" />`|  
 |`<modules>`|`<add name="DynamicCompressionModule" lockItem="true" />`|  
@@ -382,7 +382,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 **Фильтрация запросов**  
 
 
-|       `Section`        |                                                                                                                                        Элементы конфигурации                                                                                                                                        |
+|       Раздел        |                                                                                                                                        Элементы конфигурации                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  `<globalModules>`   |                                                                                                        `<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`                                                                                                        |
 |     `<modules>`      |                                                                                                                       `<add name="RequestFilteringModule" lockItem="true" />`                                                                                                                        |
@@ -390,32 +390,32 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Обычная проверка подлинности**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
 |`<globalModules>`|`<add name="BasicAuthenticationModule" image="%windir%\System32\inetsrv\authbas.dll" />`|  
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
 |`<basicAuthentication>`|`<basicAuthentication enabled="false" />`|  
 
-**Проверка подлинности с сопоставлением сертификата клиента**  
+**Аутентификация с сопоставлением сертификата клиента**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="CertificateMappingAuthentication" image="%windir%\System32\inetsrv\authcert.dll" />`|  
 |`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" />`|  
 |`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
 
-**Дайджест-проверка подлинности**  
+**Дайджест-аутентификация**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="DigestAuthenticationModule" image="%windir%\System32\inetsrv\authmd5.dll" />`|  
 |`<modules>`|`<add name="DigestAuthenticationModule" lockItem="true" />`|  
 |`<other>`|`<digestAuthentication enabled="false" />`|  
 
-**Проверка подлинности с сопоставлением сертификата клиента IIS**  
+**Аутентификация с сопоставлением сертификата клиента IIS**  
 
 
-|                  `Section`                   |                                         Элементы конфигурации                                         |
+|                  Раздел                   |                                         Элементы конфигурации                                         |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------|
 |             `<globalModules>`              | `<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />` |
 |                `<modules>`                 |               `<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>\`                |
@@ -423,7 +423,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Ограничения IP-адресов и доменов**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|```<add name="IpRestrictionModule" image="%windir%\System32\inetsrv\iprestr.dll" /><br /><add name="DynamicIpRestrictionModule" image="%windir%\System32\inetsrv\diprestr.dll" />```|  
 |`<modules>`|`<add name="IpRestrictionModule" lockItem="true" \/><br /><add name="DynamicIpRestrictionModule" lockItem="true" \/>`|  
@@ -431,7 +431,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Авторизация URL-адреса**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="UrlAuthorizationModule" image="%windir%\System32\inetsrv\urlauthz.dll" />`|  
 |`<modules>`|`<add name="UrlAuthorizationModule" lockItem="true" />`|  
@@ -439,23 +439,23 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Проверка подлинности Windows**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
 |`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll" />`|  
 |`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
 |`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
 
 ### <a name="application-development"></a>Разработка приложений  
-**Инициализация приложений**  
+**Инициализация приложения**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="ApplicationInitializationModule" image="%windir%\System32\inetsrv\warmup.dll" />`|  
 |`<modules>`|`<add name="ApplicationInitializationModule" lockItem="true" />`|  
 
 **CGI**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|`<add name="CgiModule" image="%windir%\System32\inetsrv\cgi.dll" /><br /><add name="FastCgiModule" image="%windir%\System32\inetsrv\iisfcgi.dll" />`|  
 |`<modules>`|`<add name="CgiModule" lockItem="true" /><br /><add name="FastCgiModule" lockItem="true" />`|  
@@ -463,7 +463,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Расширения ISAPI**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
 |`<globalModules>`|`<add name="IsapiModule" image="%windir%\System32\inetsrv\isapi.dll" />`|  
 |`<modules>`|`<add name="IsapiModule" lockItem="true" />`|  
@@ -471,14 +471,14 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Фильтры ISAPI**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
 |`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
 |`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
 
-**Включения на стороне сервера**  
+**Серверные включаемые модули**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
 |`<globalModules>`|<`add name="ServerSideIncludeModule" image="%windir%\System32\inetsrv\iis_ssi.dll" />`|  
 |`<modules>`|`<add name="ServerSideIncludeModule" lockItem="true" />`|  
@@ -487,7 +487,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 **Протокол WebSocket**  
 
-|`Section`|Элементы конфигурации|  
+|Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
 |`<globalModules>`|`<add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" />`|  
 |`<modules>`|`<add name="WebSocketModule" lockItem="true" />`|  
