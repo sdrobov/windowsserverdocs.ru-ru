@@ -1,6 +1,6 @@
 ---
 title: dfsrmig
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e0fb68fc962602969a18145c67ad6c361515db6a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: cce34684509a72912cc867b2d637477f868d289d
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436152"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792257"
 ---
 # <a name="dfsrmig"></a>dfsrmig
 
@@ -79,14 +79,14 @@ dfsrmig [/SetGlobalState <state> | /GetGlobalState | /GetMigrationState | /creat
   ```
   В этом примере показаны типовые выходные данные из **dfsrmig /GetMigrationState** команды при локальной миграции состояния на некоторые контроллеры домена соответствуют ли состояние глобального миграции.
   ```
-  The following Domain Controllers are not in sync with Global state ( Prepared ):
-Domain Controller (Local Migration State)   DC type
-=========
-CONTOSO-DC2 ( start )   ReadOnly DC
-CONTOSO-DC3 ( Preparing )   Writable DC
-Migration has not yet reached a consistent state on all domain controllers
-State information might be stale due to AD latency.
-```
+    The following Domain Controllers are not in sync with Global state ( Prepared ):
+    Domain Controller (Local Migration State)   DC type
+    =========
+    CONTOSO-DC2 ( start )   ReadOnly DC
+    CONTOSO-DC3 ( Preparing )   Writable DC
+    Migration has not yet reached a consistent state on all domain controllers
+    State information might be stale due to AD latency.
+  ```
 Создание глобальных объектов и параметров, которые использует репликация DFS в Доменных службах Active Directory на контроллерах домена, где эти параметры не были созданы автоматически во время миграции или там, где эти параметры не соответствуют, введите:
 ```
 dfsrmig /createGlobalObjects

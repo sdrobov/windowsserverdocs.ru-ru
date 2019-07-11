@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: e5ea9d22-a503-4ed4-96b3-0ee2ccf4fd17
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 16a2dcdc573fac2631b5a9890ee04f2efb08d90a
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 973ef70614f056adac1463918cc425d82b21ac62
+ms.sourcegitcommit: be243a92f09048ca80f85d71555ea6ee3751d712
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282532"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792315"
 ---
 # <a name="step-3-plan-the-multisite-deployment"></a>Шаг 3 план многосайтового развертывания
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 После планирования инфраструктуры многосайтового, Планирование требований любой дополнительный сертификат, каким образом клиентские компьютеры выбирать точки входа и IPv6-адресов, назначенных в развертывании.  
 
@@ -162,11 +162,11 @@ ms.locfileid: "67282532"
   
    3. Префикс Teredo (необязательно). Этот префикс используется, только в том случае, если настроены два последовательных общедоступных IPv4-адреса внешнего адаптера сервера удаленного доступа. Префикс основан на первый общедоступный адрес IPv4 пары адресов. Например, если внешние адреса:  
   
-      1. www.xxx.yyy.zzz  
+      1. www\.xxx.yyy.zzz  
   
-      2. www.xxx.yyy.zzz+1  
+      2. www\.xxx.yyy.zzz+1  
   
-      Затем используется префикс Teredo для настройки 2001:0:WWXX:YYZZ:: / 64, где WWXX: YYZZ — шестнадцатеричное представление www.xxx.yyy.zzz адрес IPv4.  
+      Затем используется префикс Teredo для настройки 2001:0:WWXX:YYZZ:: / 64, где WWXX: YYZZ — шестнадцатеричное представление www адрес IPv4\.xxx.yyy.zzz.  
   
       Обратите внимание, что можно использовать следующий сценарий для вычисления префикс Teredo.  
   
