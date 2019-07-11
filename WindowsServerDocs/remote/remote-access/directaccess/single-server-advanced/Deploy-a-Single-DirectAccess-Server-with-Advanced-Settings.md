@@ -36,7 +36,7 @@ ms.locfileid: "67283604"
 В этом сценарии один компьютер под управлением Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012, настроен как сервер DirectAccess с расширенными параметрами.  
   
 > [!NOTE]  
-> Если требуется настроить базовое развертывание лишь с простыми настройками, см. раздел [Deploy a Single DirectAccess Server Using the Getting Started Wizard](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). В простом сценарии DirectAccess настраивается с параметрами по умолчанию с помощью мастера, при этом отсутствует необходимость настраивать параметры инфраструктуры, такие как центр сертификации (ЦС) или группы безопасности Active Directory.  
+> Если вы хотите настроить базовое развертывание лишь с простыми настройками, см. в разделе [развертывание одного сервера DirectAccess с помощью мастера начальной настройки](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md). В простом сценарии DirectAccess настраивается с параметрами по умолчанию с помощью мастера, при этом отсутствует необходимость настраивать параметры инфраструктуры, такие как центр сертификации (ЦС) или группы безопасности Active Directory.  
   
 ## <a name="in-this-scenario"></a>Содержание сценария  
 Чтобы настроить один сервер DirectAccess с расширенными параметрами, необходимо выполнить несколько этапов планирования и развертывания.  

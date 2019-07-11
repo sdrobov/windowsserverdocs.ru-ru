@@ -72,7 +72,7 @@ ms.locfileid: "66189074"
 
 -   Параметры и методы многофакторной проверки подлинности.
 
--   Включение или отключение проверки подлинности. Дополнительные сведения см. в разделе [Join to Workplace from Any Device for SSO and Seamless Second Factor Authentication Across Company Applications](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
+-   Включение или отключение проверки подлинности. Дополнительные сведения см. в разделе [присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная проверка подлинности между компании приложениях](../../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md).
 
 Политики проверки подлинности на основе отношения доверия с проверяющей стороной применяются, в частности, при попытке доступа к этому отношению доверия с проверяющей стороной (приложению или службе). При настройке политики проверки подлинности на основе отношения доверия с проверяющей стороной можно настроить следующие параметры:
 
