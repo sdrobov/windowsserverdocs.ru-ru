@@ -7,8 +7,10 @@
 #### [Рекомендуемые параметры сбалансированной схемы управления питанием](hardware/power/recommended-balanced-plan-parameters.md)
 ## Настройка роли сервера
 ### [Сервер Active Directory](role/active-directory-server/index.md)
+#### [Планирование ресурсов для доменных служб Active Directory](role/active-directory-server/capacity-planning-for-active-directory-domain-services.md)
 #### [Рекомендации по определению сайта](role/active-directory-server/site-definition-considerations.md)
 #### [Рекомендации по оборудованию](role/active-directory-server/hardware-considerations.md)
+#### [Рекомендации по использованию памяти](role/active-directory-server/memory-usage-considerations.md)
 #### [Рекомендации по протоколу LDAP](role/active-directory-server/ldap-considerations.md)
 #### [Устранение проблем с производительностью доменных служб Active Directory](role/active-directory-server/troubleshoot.md)
 ### [Файловый сервер](role/file-server/index.md)
