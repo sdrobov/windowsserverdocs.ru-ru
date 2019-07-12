@@ -159,9 +159,9 @@ ms.locfileid: "66443054"
 |-|-|-|-|  
 |Тип или политика шифрования|Состояние по умолчанию в Windows Server 2008|Состояние по умолчанию в Windows Server 2012 и Windows Server 2008 R2|Примечание|  
 |AllowNT4Crypto|Отключено|Отключено|Сторонние клиенты SMB могут быть несовместимы с параметрами безопасности по умолчанию на контроллерах домена. В любом случае эти параметры можно настроить, чтобы разрешить взаимодействие, но только за счет ухудшения безопасности. Дополнительные сведения см. в разделе [статье 942564](https://go.microsoft.com/fwlink/?LinkId=164558) в базе знаний Майкрософт (https://go.microsoft.com/fwlink/?LinkId=164558).|  
-|DES|Enabled|Отключено|[Статья 977321](https://go.microsoft.com/fwlink/?LinkId=177717) в базы знаний Майкрософт ()https://go.microsoft.com/fwlink/?LinkId=177717)|  
+|DES|Enabled|Отключено|[Статья 977321](https://go.microsoft.com/fwlink/?LinkId=177717) в базы знаний Майкрософт (https://go.microsoft.com/fwlink/?LinkId=177717)|  
 |CBT/расширенная защита для встроенной проверки подлинности|Н/Д|Enabled|См. в разделе [советы корпорации Майкрософт по безопасности (937811)](https://go.microsoft.com/fwlink/?LinkId=164559) (https://go.microsoft.com/fwlink/?LinkId=164559) и [статья 976918](https://go.microsoft.com/fwlink/?LinkId=178251) в базе знаний Майкрософт (https://go.microsoft.com/fwlink/?LinkId=178251).<br /><br />Просмотрите и установите исправление, описанное в [статьи 977073](https://go.microsoft.com/fwlink/?LinkId=186394) (https://go.microsoft.com/fwlink/?LinkId=186394) базы знаний Майкрософт при необходимости.|  
-|LMv2|Enabled|Отключено|[Статья 976918](https://go.microsoft.com/fwlink/?LinkId=178251) в базы знаний Майкрософт ()https://go.microsoft.com/fwlink/?LinkId=178251)|  
+|LMv2|Enabled|Отключено|[Статья 976918](https://go.microsoft.com/fwlink/?LinkId=178251) в базы знаний Майкрософт (https://go.microsoft.com/fwlink/?LinkId=178251)|  
 
 ## <a name="BKMK_SysReqs"></a>Требования к операционной системе
 

@@ -75,5 +75,5 @@ ms.locfileid: "67284374"
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Общее представление об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)()https://technet.microsoft.com/library/cc731402.aspx)
+[Общее представление об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

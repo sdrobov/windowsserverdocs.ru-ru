@@ -28,7 +28,7 @@ ms.locfileid: "67284438"
 
 
 > [!NOTE]
-> Чтобы загрузить версия этого руководства, посетите <a href="http://go.microsoft.com/fwlink/?linkid=150375">руководство по миграции репликации SYSVOL: FRS на DFS</a> ()http://go.microsoft.com/fwlink/?LinkId=150375)
+> Чтобы загрузить версия этого руководства, посетите <a href="http://go.microsoft.com/fwlink/?linkid=150375">руководство по миграции репликации SYSVOL: FRS на DFS</a> (http://go.microsoft.com/fwlink/?LinkId=150375)
 <br>
 
 
