@@ -90,7 +90,7 @@ ms.locfileid: "66435973"
 -   Процесс установки системы Windows Server Essentials полностью выполнен, и сервер работает. Если программное обеспечение Connector не сможет связаться с сервером, оно завершит процесс установки.  
 
 
--   Клиентский компьютер работает под управлением поддерживаемой операционной системы. Дополнительные сведения см. в разделе [Supported operating systems for client computers](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4).
+-   Клиентский компьютер работает под управлением поддерживаемой операционной системы. Дополнительные сведения см. в разделе [поддерживаемые операционные системы для клиентских компьютеров](Get-Connected-in-Windows-Server-Essentials.md#BKMK_4).
 
 
 -   Клиентский компьютер должен иметь допустимое подключение к Интернету.  
@@ -121,13 +121,13 @@ ms.locfileid: "66435973"
 
 > [!NOTE]
 > 
->  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Соответствующие инструкции см. в разделе [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+>  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Требования и инструкции см. в разделе [подключение компьютеров к серверу Windows Server Essentials без присоединения к домену](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
 
- Пошаговые инструкции по подключению компьютера к серверу Windows Server Essentials см. в разделе [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+ Пошаговые инструкции по подключению компьютера к серверу под управлением Windows Server Essentials см. в разделе [подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
->  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Соответствующие инструкции см. в разделе [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+>  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Требования и инструкции см. в разделе [подключение компьютеров к серверу Windows Server Essentials без присоединения к домену](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
 
- Пошаговые инструкции по подключению компьютера к серверу Windows Server Essentials см. в разделе [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+ Пошаговые инструкции по подключению компьютера к серверу под управлением Windows Server Essentials см. в разделе [подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
 
 ###  <a name="BKMK_3"></a> Необходимые условия для подключения к сети компьютера Mac  
@@ -295,7 +295,7 @@ ms.locfileid: "66435973"
 -   Развертывает сеть VPN на клиентском компьютере и обеспечивает взаимодействие одним щелчком, если функция VPN включена в Windows Server Essentials, или предоставляет возможности автоматического соединения, если функция VPN включена в Windows Server Essentials  
 
 
- Сведения о подключении компьютера к серверу см. в разделе [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+ Сведения о подключении компьютера к серверу см. в разделе [подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
 ###  <a name="BKMK_6"></a> Сведения об имени и пароля пользователя сети  
  Имя пользователя сети и пароль можно узнать у пользователя, который управляет вашим сервером. Эти учетные данные можно использовать для подключения компьютера к серверу и доступа к информации на сервере.  
@@ -396,9 +396,9 @@ ms.locfileid: "66435973"
 
 > [!NOTE]
 > 
->  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Соответствующие инструкции см. в разделе [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+>  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Требования и инструкции см. в разделе [подключение компьютеров к серверу Windows Server Essentials без присоединения к домену](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
 > 
->  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Соответствующие инструкции см. в разделе [Connect computers to a Windows Server Essentials server without joining the domain](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
+>  В среде локального клиента для Windows Server Essentials или Windows Server Essentials компьютеры можно подключать к серверу не добавляя их в домен Windows Server Essentials. Этот метод недоступен для всех поддерживаемые клиентских операционных систем, и такие компоненты, например, как групповая политика и виртуальные частные сети (VPN), которым требуется, чтобы компьютер был подключен к домену, недоступны. Требования и инструкции см. в разделе [подключение компьютеров к серверу Windows Server Essentials без присоединения к домену](Get-Connected-in-Windows-Server-Essentials.md#BKMK_10).  
 
 
 ##### <a name="to-connect-a-client-computer-to-the-server"></a>Подключение клиентского компьютера к серверу  
@@ -483,7 +483,7 @@ ms.locfileid: "66435973"
     -    Windows 7 Профессиональная (x86 и x64), Windows 7 Корпоративная (x86 и x64), Windows 7 Ultimate (x86 и x64)  
 
 
--   Компьютер должен удовлетворять всем требованиям для клиентских компьютеров в Windows Server Essentials. Дополнительные сведения см. в разделе [Prerequisites for connecting a computer to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2).  
+-   Компьютер должен удовлетворять всем требованиям для клиентских компьютеров в Windows Server Essentials. Дополнительные сведения см. в разделе [предварительные требования для подключения компьютера к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_2).  
 
 
 -   Чтобы включить подключение без присоединения к домену, необходимо войти в систему на компьютере с учетной записью, которая является членом локальной группы администраторов.  
@@ -516,7 +516,7 @@ ms.locfileid: "66435973"
     ```  
 
 
-4.  Выполните задачу из раздела [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+4.  Выполните действия, описанные в [подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
 
 ####  <a name="BKMK_SecondServer"></a> Присоединение второго сервера к сети  
@@ -598,7 +598,7 @@ ms.locfileid: "66435973"
 -   Позволяет настраивать и удаленно администрировать систему Windows Server Essentials с вашего домашнего компьютера  
 
 
- Пошаговые инструкции по подключению компьютера к серверу Windows Server Essentials см. в подразделе [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).   
+ Пошаговые инструкции по подключению компьютера к серверу Windows Server Essentials см. в разделе [подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).   
 
 
 ###  <a name="BKMK_12"></a> Перемещение данных и параметров компьютера вручную  

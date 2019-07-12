@@ -24,7 +24,7 @@ ms.locfileid: "66433643"
 >Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_AddIns"></a> Автоматизация установки надстройки во время установки  
- Для установки надстроек во время установки воспользуйтесь файлом PostIC.cmd, описанным в разделе [Create the PostIC.cmd File for Running Post Initial Configuration Tasks](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) настоящего документа.  
+ Для установки надстроек во время установки воспользуйтесь файлом PostIC.cmd, описанным в разделе [Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md) настоящего документа.  
   
  Добавьте следующую запись в файл PostIC.cmd:  
   
