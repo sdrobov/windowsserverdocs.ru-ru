@@ -28,10 +28,10 @@ ms.locfileid: "66190644"
   
 Роль прокси-сервера федерации в организации зависит от того, поместить ли прокси-сервера федерации в организации партнера по учетным записям или в организации партнера по ресурсам. Например при помещении прокси-сервера федерации в сети периметра партнера по учетным записям, его роль — это собрать учетные данные пользователя из клиентского обозревателя. При помещении прокси-сервера федерации в сети периметра партнера по ресурсам, он передает маркер безопасности, запросы на сервер федерации ресурсов и создает токены безопасности организации в ответ на маркеры безопасности, предоставляемые его Партнеры по учетным записям.  
   
-Дополнительные сведения см. в разделах [Review the Role of the Federation Server Proxy in the Account Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md) и [Review the Role of the Federation Server Proxy in the Resource Partner](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md).  
+Дополнительные сведения см. в разделе [сведения о роли прокси-сервера федерации в партнере по учетным записям](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Account-Partner.md) и [сведения о роли прокси-сервера федерации в организации партнера по ресурсам](Review-the-Role-of-the-Federation-Server-Proxy-in-the-Resource-Partner.md)  
   
 ## <a name="how-to-create-a-federation-server-proxy"></a>Создание прокси-сервера федерации  
-Можно создать прокси-сервера федерации с помощью AD FS прокси-сервера мастер настройки сервера федерации или команда Fsconfig.exe\-линия. Инструкции см. в разделе [Configure a Computer for the Federation Server Proxy Role](../../ad-fs/deployment/Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md).  
+Можно создать прокси-сервера федерации с помощью AD FS прокси-сервера мастер настройки сервера федерации или команда Fsconfig.exe\-линия. Инструкции о том, как это сделать, см. в разделе [Настройка компьютера для роли прокси-сервера федерации](../../ad-fs/deployment/Configure-a-Computer-for-the-Federation-Server-Proxy-Role.md).  
   
 Общие сведения о том, как настроить все необходимые компоненты, необходимые для развертывания прокси-сервера федерации см. в разделе [контрольный список: Настройка прокси-сервера федерации](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md).  
   
