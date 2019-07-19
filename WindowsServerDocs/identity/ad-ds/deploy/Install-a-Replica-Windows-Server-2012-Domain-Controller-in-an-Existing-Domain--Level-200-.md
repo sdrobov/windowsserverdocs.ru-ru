@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: cb4432084386cb3296163f24c801be1c74b379df
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a7fec85301e2b70fb64f35f0b6e345adde29eed0
+ms.sourcegitcommit: 67833e36b8b2c6194a1426a974c5ad9c859fa4c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883045"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329646"
 ---
 # <a name="install-a-replica-windows-server-2012-domain-controller-in-an-existing-domain-level-200"></a>Установка реплики контроллера домена Windows Server 2012 в существующем домене (уровень 200)
 
@@ -22,28 +22,28 @@ ms.locfileid: "59883045"
 
 В этом разделе рассматриваются действия, необходимые для обновления существующего леса или домена до Windows Server 2012 с помощью диспетчера сервера или Windows PowerShell. В нем описывается, как добавить контроллеры домена с ОС Windows Server 2012 в существующий домен.  
   
--   [Обновление и рабочий процесс репликации](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Workflow)  
+-   [Рабочий процесс обновления и реплики](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Workflow)  
   
--   [Обновление и реплики Windows PowerShell](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS)  
+-   [Обновление и реплика Windows PowerShell](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_PS)  
   
 -   [Развертывание](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md#BKMK_Dep)  
   
-## <a name="BKMK_Workflow"></a>Обновление и рабочий процесс репликации  
+## <a name="BKMK_Workflow"></a>Рабочий процесс обновления и реплики  
 На схеме ниже показан процесс настройки доменных служб Active Directory. Предполагается, что вы ранее установили роль доменных служб Active Directory и запустили мастер настройки доменных служб Active Directory с помощью диспетчера сервера, чтобы создать контроллер домена в существующем домене.  
   
 ![Установка реплики](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/adds_forestupgrade.png)  
   
-## <a name="BKMK_PS"></a>Обновление и реплики Windows PowerShell  
+## <a name="BKMK_PS"></a>Обновление и реплика Windows PowerShell  
   
 |||  
 |-|-|  
-|**Командлет ADDSDeployment**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-DomainName***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-ADPrepCredential*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-AllowDomainControllerReinstall*<br /><br />-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-DNSDelegationCredential*<br /><br />-Force<br /><br />*-InstallationMediaPath*<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-NoGlobalCatalog*<br /><br />-Norebootoncompletion<br /><br />*-ReplicationSourceDC*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-SystemKey*<br /><br />*-SYSVOLPath*<br /><br />*-UseExistingAccount*<br /><br />*-Whatif*|  
+|**Командлет Аддсдеплоймент**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
+|Install-AddsDomainController|-SkipPreChecks<br /><br />***-Имя_домена***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-SiteName*<br /><br />*-Адпрепкредентиал*<br /><br />-ApplicationPartitionsToReplicate<br /><br />*-Алловдомаинконтроллерреинсталл*<br /><br />-Confirm<br /><br />*-Креатеднсделегатион*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-Днсделегатионкредентиал*<br /><br />-Force<br /><br />*-Инсталлатионмедиапас*<br /><br />*-Инсталлднс*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />-NoDnsOnNetwork<br /><br />*-Ноглобалкаталог*<br /><br />-Norebootoncompletion<br /><br />*-Репликатионсаурцедк*<br /><br />-SkipAutoConfigureDNS<br /><br />-SiteName<br /><br />*-Системкэй*<br /><br />*-Сисволпас*<br /><br />*-Усиксистингаккаунт*<br /><br />*-WhatIf*|  
   
 > [!NOTE]  
 > Аргумент **-credential** требуется только в том случае, если вы еще не вошли как член групп "Администраторы предприятия" и "Администраторы схемы" (при обновлении леса) или группы "Администраторы домена" (при добавлении нового контроллера домена в существующий домен).  
   
-## <a name="BKMK_Dep"></a>Развертывание  
+## <a name="BKMK_Dep"></a>Развертывания  
   
 ### <a name="deployment-configuration"></a>Deployment Configuration  
 ![Установка реплики](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_SMI_TR_UpgradeDeployConfig.png)  
@@ -306,7 +306,7 @@ Install-addsdomaincontroller
   
 ![Установка реплики](media/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-/ADDS_PSUpgradeProgress.png)  
   
-Чтобы удаленно настроить контроллер домена с помощью Windows PowerShell, заключите командлет **install-adddomaincontroller***в* командлет **invoke-command**. Для этого необходимо использовать фигурные скобки.  
+Чтобы настроить контроллер домена удаленно с помощью Windows PowerShell, заключите *командлет* **Install-аддсдомаинконтроллер** в командлет **Invoke-Command** . Для этого необходимо использовать фигурные скобки.  
   
 ```  
 invoke-command {install-addsdomaincontroller "domainname <domain> -credential (get-credential)} -computername <dc name>  
