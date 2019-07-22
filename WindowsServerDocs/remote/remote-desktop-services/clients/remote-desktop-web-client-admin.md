@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 45164e9eca0873c82148aa3b7baa179a3f626dd7
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 02c7098c8e3f93ce315e7d9a881613a03924e78b
+ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66804972"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300698"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>Настройка веб-клиента удаленного рабочего стола для пользователей
 
@@ -259,7 +259,7 @@ ms.locfileid: "66804972"
 Будучи администратором, вы можете отключить сбор данных телеметрии для развертывания с помощью следующего командлета PowerShell.
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -SuppressTelemetry $true
+    Set-RDWebClientDeploymentSetting -Name "SuppressTelemetry" $true
    ```
 
 По умолчанию пользователь может включить или отключить сбор данных телеметрии. Логическое значение **$false** будет соответствовать поведению клиента по умолчанию. Логическое значение **$true** отключает телеметрию и запрещает включение телеметрии пользователем.
@@ -268,15 +268,15 @@ ms.locfileid: "66804972"
 По умолчанию пользователи могут выбрать, как запускать удаленные ресурсы: сделать это в браузере или скачать RDP-файл для обработки другим клиентом, установленным на своем компьютере. Будучи администратором, вы можете ограничить метод запуска удаленных ресурсов для развертывания с помощью следующей команды PowerShell.
 
    ```PowerShell
-    Set-RDWebClientDeploymentSetting -LaunchResourceInBrowser ($true|$false)
+    Set-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser" ($true|$false)
    ```
  По умолчанию пользователь может выбрать любой из методов запуска. Логическое значение **$true** вынудит пользователя запускать ресурсы в браузере. Логическое значение **$false** вынудит пользователя запускать ресурсы, скачивая RDP-файл для обработки с помощью локально установленного клиента RDP.
 
 ### <a name="reset-rdwebclientdeploymentsetting-configurations-to-default"></a>Сброс конфигурации RDWebClientDeploymentSetting до значений по умолчанию
-Чтобы сбросить все параметры развертывания веб-клиента до конфигурации по умолчанию, выполните следующий командлет PowerShell.
-
+Чтобы сбросить параметр веб-клиента на уровне развертывания до конфигурации по умолчанию, выполните следующий командлет PowerShell и укажите имя сбрасываемого параметра, используя параметр --Name.
    ```PowerShell
-    Reset-RDWebClientDeploymentSetting 
+    Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
+    Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```
 
 ## <a name="troubleshooting"></a>Поиск и устранение неисправностей
