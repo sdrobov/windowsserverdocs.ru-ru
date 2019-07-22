@@ -72,7 +72,7 @@ ms.locfileid: "66190591"
   
     Дополнительные сведения о добавлении сервера федерации в ферму см. в разделе [Добавление сервера федерации в ферму серверов федерации](../../ad-fs/deployment/Add-a-Federation-Server-to-a-Federation-Server-Farm.md).  
   
-Более подробные сведения о работе каждого из этих вариантов, см. в разделе [The Role of the AD FS Configuration Database](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
+Более подробные сведения о работе каждого из этих вариантов, см. в разделе [Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).  
   
 Дополнительные сведения о том, как настроить все необходимые компоненты, необходимые для развертывания сервера федерации см. в разделе [контрольный список: Настройка сервера федерации](../../ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server.md).  
   
