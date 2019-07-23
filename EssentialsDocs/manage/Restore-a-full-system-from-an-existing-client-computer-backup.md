@@ -145,7 +145,7 @@ ms.locfileid: "66433091"
   
      Для получения информации о поиске драйверов для компьютера см. [Где найти драйверы для моего устройства](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_FindDrivers)  
   
--   Для Windows Server Essentials: Если вы не можете найти Windows Server Essentials восстановить компакт-диска, можно создать загрузочный ФЛЭШ-накопитель USB. Дополнительные сведения см. в разделе [Create a bootable USB flash drive to restore a client computer](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable).  
+-   Для Windows Server Essentials: Если вы не можете найти Windows Server Essentials восстановить компакт-диска, можно создать загрузочный ФЛЭШ-накопитель USB. Дополнительные сведения см. в разделе [создать загрузочное USB флэш-памяти для восстановления клиентского компьютера](Restore-a-full-system-from-an-existing-client-computer-backup.md#BKMK_CreateBootable).  
   
 #### <a name="to-use-the-full-system-restore-wizard"></a>Использование мастера полного восстановления системы  
   

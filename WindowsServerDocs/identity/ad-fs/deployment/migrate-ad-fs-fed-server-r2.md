@@ -43,7 +43,7 @@ ms.locfileid: "66444620"
 Вам нужно экспортировать SSL-сертификат, используемый службой федерации, и его закрытый ключ в PFX-файл. Дополнительные сведения см. в разделе [Экспорт части закрытого ключа сертификата проверки подлинности сервера](export-the-private-key-portion-of-a-server-authentication-certificate.md).  
   
 > [!NOTE]
->  Если вы планируете развернуть службу регистрации устройств в процессе выполнения AD FS в Windows Server 2012 R2, необходимо получить новый SSL-сертификат. Дополнительные сведения см. в статьях [Enroll an SSL Certificate for AD FS](enroll-an-ssl-certificate-for-ad-fs.md) и [Configure a federation server with Device Registration Service](configure-a-federation-server-with-device-registration-service.md).  
+>  Если вы планируете развернуть службу регистрации устройств в процессе выполнения AD FS в Windows Server 2012 R2, необходимо получить новый SSL-сертификат. Дополнительные сведения см. в разделе [подачи заявки на SSL-сертификат AD FS](enroll-an-ssl-certificate-for-ad-fs.md) и [Настройка сервера федерации с помощью службы регистрации устройств](configure-a-federation-server-with-device-registration-service.md).  
   
 Чтобы просмотреть используемые сертификаты для подписи маркеров и для связи со службой, создайте список всех используемых сертификатов в отдельном файле с помощью следующей команды Windows PowerShell:  
   

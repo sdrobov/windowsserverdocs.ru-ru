@@ -26,7 +26,7 @@ ms.locfileid: "66443054"
 Рекомендуемым способом обновления домена является повышение уровня контроллеров домена, на которых выполняются более новые версии Windows Server, и понижение уровня старых контроллеров домена при необходимости. Этот метод является предпочтительным для обновления операционной системы существующего контроллера домена. Далее приведены общие действия до повышения уровня контроллера домена, под управлением более новой версии Windows Server:  
   
 1. Убедитесь, что целевой сервер отвечает [требованиям к системе](https://technet.microsoft.com/library/dn303418.aspx).  
-2. Проверьте [Application compatibility](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
+2. Проверьте [совместимости приложений](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_AppCompat).  
 3. Проверьте параметры безопасности. Дополнительные сведения см. в разделах [Нерекомендуемые компоненты и изменения в поведении, связанные с доменными службами Active Directory в Windows Server 2012](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2012-R2-and-Windows-Server-2012.md#BKMK_DeprecatedFeatures) и [Secure default settings in Windows Server 2008 и Windows Server 2008 R2](https://technet.microsoft.com/library/upgrade-domain-controllers-to-windows-server-2008-r2(WS.10).aspx#BKMK_SecureDefault).  
 4. Проверьте подключение к целевому серверу с компьютера, где планируется установка.  
 5. Проверьте доступность необходимых ролей хозяина операций.  

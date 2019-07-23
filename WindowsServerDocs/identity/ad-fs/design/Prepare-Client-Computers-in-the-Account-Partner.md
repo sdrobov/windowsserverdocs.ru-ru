@@ -24,7 +24,7 @@ ms.locfileid: "66190987"
   
 -   Настройка Internet Explorer на каждом клиентском компьютере доверять сервер федерации учетных записей.  
   
-    Дополнительные сведения см. в разделе [Configure Client Computers to Trust the Account Federation Server](../../ad-fs/deployment/Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md).  
+    Дополнительные сведения см. в разделе [Настройка клиентских компьютеров доверия сервер федерации учетных записей](../../ad-fs/deployment/Configure-Client-Computers-to-Trust-the-Account-Federation-Server.md).  
   
 -   Установите соответствующую учетную запись сервера федерации, сервер федерации ресурсов и веб-сервером Secure Sockets Layer \(SSL\) сертификаты \(или эквивалент сертификаты, которые восходят по цепочке с доверенным корневым расположением\) на каждом клиентский компьютер.  
   
