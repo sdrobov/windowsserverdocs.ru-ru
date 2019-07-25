@@ -1,92 +1,92 @@
 ---
-title: Ролей, служб ролей и компонентов не в Windows Server - основных серверных компонентов
-description: Дополнительные сведения о ролях и компонентах, не включена в вариант установки Server Core для Windows Server.
+title: Роли, службы ролей и компоненты, отсутствующие в Windows Server — Server Core
+description: Сведения о ролях и компонентах, не включенных в вариант установки Server Core для Windows Server.
 ms.prod: windows-server-threshold
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 02/23/2018
-ms.openlocfilehash: 308bc8a5d25e2ec67438f0ee03cbfce6f7411ca2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce5107e8e0ab573df7588428db65c8b223cf1f13
+ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825535"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476517"
 ---
-# <a name="roles-role-services-and-features-not-in-windows-server---server-core"></a>Ролей, служб ролей и компонентов не в Windows Server - основных серверных компонентов
+# <a name="roles-role-services-and-features-not-in-windows-server---server-core"></a>Роли, службы ролей и компоненты, отсутствующие в Windows Server — Server Core
 
-> Относится к: Windows Server (полугодовой канал) и Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016 и Windows Server (половина ежегодного канала)
 
-Следующие роли, службы ролей и компоненты были удалены из с вариантом установки основных серверных компонентов Windows Server. Используйте эти сведения помогут понять, если параметр Server Core работает для вашей среды.
+Следующие роли, службы ролей и компоненты были удалены из варианта установки Server Core Windows Server. Используйте эти сведения, чтобы определить, работает ли параметр Server Core для вашей среды.
 
 > [!NOTE]
-> Также можно просмотреть список ролей, служб ролей и функций, [включаются в Server Core](server-core-roles-and-services.md). Это очень большой список, для получения наилучших результатов выполните поиск этого списка для конкретных ролей и компонентов, вас интересует.
+> Вы также можете просмотреть список ролей, служб ролей и компонентов, [входящих в Server Core](server-core-roles-and-services.md). Это очень большой список, поэтому для получения наилучших результатов найдите в списке конкретную роль или интересующую вас функцию.
 
-## <a name="roles-not-in-server-core"></a>Роли не в основных серверных компонентов
+## <a name="roles-not-in-server-core"></a>Роли, не являющиеся базовыми для сервера
 
 - Факс
-- MultiPointServerRole
+- мултипоинтсерверроле
 - NPAS
-- СЛУЖБЫ РАЗВЕРТЫВАНИЯ WINDOWS
+- WDS
 
-## <a name="role-services-not-in-server-core"></a>Службы ролей не в основных серверных компонентов
-Обратите внимание, что для некоторых служб ролей удаленного рабочего стола, включаются в основных серверных компонентов (посредника подключений, лицензирование, узел виртуализации), а другие — нет (шлюз RD Session Host Web Access).
+## <a name="role-services-not-in-server-core"></a>Службы ролей не в Server Core
+Обратите внимание, что некоторые службы роли удаленный рабочий стол включены в Server Core (посредник подключений, лицензирование, узел виртуализации), а другие — нет (шлюз, узел сеансов удаленных рабочих столов, Веб-доступ).
 
-- Сервер печати сканирования
-- Печать из Интернета
-- Шлюз служб удаленных рабочих СТОЛОВ
-- RDS-сервера удаленных рабочих Столов
-- Веб-доступа к RDS
-- Web-Mgmt-Console
-- Веб Lgcy-Mgmt-Console
-- Развертывания WDS
-- WDS-Transport *(до Windows Server версии ниже 1803)*
+- Print-Scan-Server
+- Печать — Интернет
+- Шлюз RDS
+- RDS-RD-Server
+- RDS-Web — доступ
+- Веб-управление — консоль
+- Web-Лгци-руководства-консоль
+- Развертывание WDS
+- WDS — транспорт *(до Windows Server версии 1803)*
 
-## <a name="features-not-in-server-core"></a>Функции не в основных серверных компонентов
+## <a name="features-not-in-server-core"></a>Компоненты, отсутствующие в Server Core
 
 - BITS-IIS-Ext
-- BitLocker NetworkUnlock
-- Direct-Play
-- Интернет Print-Client
-- Монитор порта LPR
-- Многоадресной рассылки MSMQ
-- ПАКЕТ АДМИНИСТРИРОВАНИЯ ДИСПЕТЧЕРА ПОДКЛЮЧЕНИЙ
-- Удаленный помощник
-- СРЕДСТВА УДАЛЕННОГО АДМИНИСТРИРОВАНИЯ СЕРВЕРА SMTP
-- RSAT-функция — Сервис BitLocker-RemoteAdminTool
-- RSAT-сервер Bits
-- RSAT-NLB
-- RSAT-SNMP
-- СРЕДСТВА УДАЛЕННОГО АДМИНИСТРИРОВАНИЯ СЕРВЕРА WINS
-- Hyper-V-Tools
-- Средства RSAT-служб удаленных рабочих СТОЛОВ
+- BitLocker — Нетворкунлокк
+- Прямое воспроизведение
+- Internet-Print-Client
+- Порт LPR-Monitor
+- MSMQ — многоадресная рассылка
+- CMAK
+- Удаленная поддержка
+- RSAT — SMTP
+- RSAT-Feature-Tools-BitLocker-Ремотеадминтул
+- RSAT-BITS-Server
+- RSAT — NLB
+- RSAT — SNMP
+- RSAT — WINS
+- Средства Hyper-V-Tools
+- RSAT-RDS-Tools
 - RSAT-RDS-Gateway
-- Средства удаленного администрирования сервера RDS-Licensing диагностики-пользовательского интерфейса
-- RDS-лицензирования-пользовательский Интерфейс
-- UpdateServices-пользовательского интерфейса
-- RSAT-ADCS
-- RSAT-ADCS-Mgmt
-- RSAT--ответчика
+- RSAT-RDS-Licensing-диагностика — пользовательский интерфейс
+- RDS-Licensing — пользовательский интерфейс
+- UpdateServices — пользовательский интерфейс
+- RSAT — ADCS
+- RSAT-ADCS-управление
+- RSAT-Online-ответчик
 - RSAT-ADRMS
-- Средства удаленного администрирования сервера факсов
+- RSAT-Fax
 - RSAT-File-Services
-- RSAT-DFS-Mgmt-Con
-- RSAT-FSRM-Mgmt
+- RSAT-DFS-SC-Con
+- RSAT-FSRM-управление
 - RSAT-NFS-Admin
 - RSAT-NPAS
 - RSAT-Print-Services
-- Средства RSAT-ва
-- WDS AdminPack
+- RSAT-ва-Tools
+- WDS — Админпакк
 - SMTP-сервер
-- Клиент TFTP
-- Перенаправитель WebDAV
-- Биометрическая платформа
-- Windows Defender графического пользовательского интерфейса
-- Windows Identity Foundation —
-- Интегрированная среда Сценариев PowerShell
-- Служба поиска
-- Windows TIFF-IFilter
+- TFTP — клиент
+- WebDAV — перенаправитель
+- Биометрический — платформа
+- Защитник Windows-GUI
+- Windows-Identity-Foundation
+- PowerShell — интегрированная среда сценариев
+- Поиск-служба
+- Windows-TIFF-IFilter
 - Беспроводные сети
 - Средство просмотра XPS
 

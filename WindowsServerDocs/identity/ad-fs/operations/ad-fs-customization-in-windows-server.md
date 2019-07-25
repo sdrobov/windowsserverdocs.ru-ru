@@ -9,29 +9,29 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b5aa22ad99529d99e2d7381a434916e8e749f185
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 7f990c3412707e38a00110ac4d3cb3787fa18ee3
+ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188761"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476535"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Настройка AD FS в Windows Server 2016
 
 
-В ответ на отзывы от организаций, с помощью AD FS мы добавили дополнительные средства для настройки пользователя вход в систему для отдельных приложений, которые защищены AD FS.  
-Помимо указания содержимого веб-приложения, например текст описания и ссылки, теперь можно указать всего веб-темы каждого приложения.  Сюда входят логотип, иллюстрация, стилей или файл всей onload.js.  
+В ответ на отзывы от организаций, использующих AD FS, мы добавили дополнительные средства для настройки пользовательского интерфейса входа для отдельных приложений, защищенных AD FS.  
+Помимо указания веб-содержимого для каждого приложения, например текста описания и ссылок, теперь можно указать все веб-темы для каждого приложения.  Сюда входят логотип, иллюстрация, таблицы стилей или весь файл OnLoad. js.  
   
 ## <a name="global-settings"></a>Глобальные параметры    
-Общие глобальных параметров см. в [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) , поставляемых с AD FS в Windows Server 2012 R2.  
+Общие глобальные параметры можно найти в статье [настройка AD FS страниц входа](https://technet.microsoft.com/library/dn280950.aspx) в систему, поставляемых с AD FS в Windows Server 2012 R2.  
   
 ## <a name="pre-requisites"></a>Предварительные требования  
-Перед выполнением процедуры, описанные в этом документе, необходимы следующие предварительные требования.  
+Перед выполнением процедур, описанных в этом документе, необходимо выполнить следующие предварительные требования.  
   
--   AD FS в Windows Server 2016 TP4 или более поздней версии  
+-   AD FS в Windows Server 2016 TP4; или более поздней версии  
   
-## <a name="configure-ad-fs-relying-parties"></a>Настройка AD FS проверяющим сторонам  
-На доверяющей стороной вход веб элементов и темы можно настроить с помощью приведенных ниже примерах PowerShell:  
+## <a name="configure-ad-fs-relying-parties"></a>Настройка проверяющих сторон AD FS  
+Веб-элементы и темы для входа на проверяющую сторону можно настроить с помощью примеров PowerShell, приведенных ниже.  
   
 ### <a name="customize-messages"></a>Настройка сообщений  
   
@@ -43,7 +43,7 @@ PS C:\>Set-AdfsRelyingPartyWebContent
     -SignInPageDescription "This text appears below the credential prompt"  
 ```  
   
-### <a name="customize-company-name-logo-and-image"></a>Настроить название компании, логотип и изображения  
+### <a name="customize-company-name-logo-and-image"></a>Настройка имени компании, логотипа и изображения  
   
 ```  
 PS C:\>Set-AdfsRelyingPartyWebTheme  
@@ -52,7 +52,7 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
     -Illustration @{path="C:\Images\appillustration.jpg"}  
 ```  
   
-### <a name="customize-entire-page"></a>Настройка всей страницы  
+### <a name="customize-entire-page"></a>Настроить всю страницу  
   
 ```  
 PS C:\>Set-AdfsRelyingPartyWebTheme  
@@ -60,31 +60,31 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
     -OnLoadScriptPath @{path="c:\scripts\adfstheme\onload.js"}  
 ```  
   
-## <a name="custom-themes-and-advanced-custom-themes"></a>Пользовательские темы и расширенные пользовательские темы  
+## <a name="custom-themes-and-advanced-custom-themes"></a>Пользовательские темы и дополнительные пользовательские темы  
   
-Пользовательские темы см. в статье [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx) и [Advanced Customization of AD FS Sign-in Pages.](https://technet.microsoft.com/library/dn636121.aspx)  
+Сведения о пользовательских темах см. в разделе [Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx) и [расширенная настройка AD FS страниц входа.](https://technet.microsoft.com/library/dn636121.aspx)  
   
-## <a name="assigning-custom-web-themes-per-rp"></a>Назначение пользовательских веб-тем в RP  
+## <a name="assigning-custom-web-themes-per-rp"></a>Назначение пользовательских веб-тем для RP  
   
-Чтобы назначить пользовательскую тему на RP используйте следующую процедуру:  
+Чтобы назначить пользовательскую тему на RP, используйте следующую процедуру:  
   
-1. Создать новую тему в качестве копии по умолчанию, глобальной темы в AD FS  
-<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code> 2.  Экспортируйте тему для настройки <code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
-3. Настройка темы файлов (изображений, css, onload.js) - в любом редакторе или заменить файл 4. Импорт настроенных файлов из файловой системы в AD FS (предназначенных для новой темы) <code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
-5. Применить тему новых, специализированных конкретного поставщика Ресурсов (или Доверяющей стороны) <code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
+1. Создать новую тему как копию для глобальной темы по умолчанию в AD FS  
+<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>2. Экспорт темы для настройки<code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
+3.Настройка файлов тем (изображений, CSS, OnLoad. js) — в любом удобном редакторе или при замене файла 4. импорта настроенных файлов из файловой системы в AD FS (для новой темы).<code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
+5.Применить новую настроенную тему к конкретному RP (или RP)<code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
   
 ## <a name="home-realm-discovery"></a>Обнаружение домашней области  
-Для обнаружения домашней области настройки см. в разделе [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
+Сведения о настройке распознавания для домашней области см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
   
-## <a name="updated-password-page"></a>Пароль, измененный страницы  
-Сведения о настройке страница обновления паролей см. в разделе [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).  
+## <a name="updated-password-page"></a>Страница обновленного пароля  
+Сведения о настройке страницы "Обновление пароля" см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## <a name="customizing-and-alternate-ids"></a>Настройка и альтернативные идентификаторы  
-Пользователи могут входить в службы федерации Active Directory (AD FS)-приложениями с помощью идентификатора пользователя, которая принимается доменными службами Active Directory (AD DS) в любой форме. К ним относятся имена участника-пользователя (UPN) (johndoe@contoso.com) или домена полные имена учетной записи sam (contoso\johndoe или contoso.com\johndoe).  Дополнительные сведения о см. в разделе [настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
+Пользователи могут входить в приложения с поддержкой службы федерации Active Directory (AD FS) (AD FS), используя любую форму идентификатора пользователя, принимаемого службами домен Active Directory (AD DS). К ним относятся имена участников-пользователей (UPNjohndoe@contoso.com) () или полные доменные имена учетных записей SAM (contoso\johndoe или contoso. ком\жохндое).  Дополнительные сведения об этом см. в разделе [Настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
   
-Кроме того можно настроить страницу входа AD FS по предоставлению конечным пользователям подсказка о альтернативного имени пользователя. Это можно сделать, добавив дополнительные сведения см. описание настроенной страницы входа в систему [Customizing the AD FS Sign-in Pages.](https://technet.microsoft.com/library/dn280950.aspx)   
+Кроме того, вы можете настроить страницу входа AD FS, чтобы дать конечным пользователям указание о альтернативном ИДЕНТИФИКАТОРе входа. Для этого можно добавить настраиваемое описание страницы входа. Дополнительные сведения см [. в разделе Настройка страниц входа AD FS.](https://technet.microsoft.com/library/dn280950.aspx)   
   
-Кроме того, это можно сделать, настроив «Войти с учетной записью организации» строку над полем имени пользователя.  Сведения о см. в разделе [Advanced Customization of AD FS Sign-in Pages](https://technet.microsoft.com/library/dn636121.aspx).  
+Это можно также сделать, настроив строку "вход с помощью учетной записи организации" над полем username (имя пользователя).  Дополнительные сведения см. в разделе [Расширенная настройка AD FS страниц входа](https://technet.microsoft.com/library/dn636121.aspx).  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка входа AD FS пользователя](AD-FS-user-sign-in-customization.md)  
+[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)  
