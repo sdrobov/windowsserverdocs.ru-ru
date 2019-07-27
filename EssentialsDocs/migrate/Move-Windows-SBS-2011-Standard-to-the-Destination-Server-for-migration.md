@@ -1,6 +1,6 @@
 ---
 title: Перенос параметров и данных Windows SBS 2011 Standard на целевой сервер для миграции Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -12,12 +12,12 @@ ms.assetid: 16b24026-2fe3-4bd0-b82f-900e1564be99
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cd57e5d00093861686c7a6ed4ef4096fd5cdf0c4
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: ef8e717fe235b8d85f4d53442610818b31ad7d1d
+ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828578"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590419"
 ---
 # <a name="move-windows-sbs-2011-standard-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Перенос параметров и данных Windows SBS 2011 Standard на целевой сервер для миграции Windows Server Essentials
 
@@ -25,17 +25,17 @@ ms.locfileid: "66828578"
 
 Перенесите параметры и данные на целевой сервер следующим образом: 
  
-1. [Копирование данных на конечный сервер](#copy-data-to-the-destination-server)
+1. [Копирование данных на целевой сервер](#copy-data-to-the-destination-server)
 
-2. [Импорт учетных записей пользователей Active Directory для панели мониторинга Windows Server Essentials (необязательно)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
+2. [Импорт Active Directory учетных записей пользователей на панель мониторинга Windows Server Essentials (необязательно)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
 
 3. [Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
 
 4. [Настройка сети](#configure-the-network)
 
-5. [Удаление устаревших объектов групповой политики Active Directory (необязательно)](#remove-legacy-active-directory-group-policy-objects)
+5. [Удаление устаревших Active Directory групповая политика объектов (необязательно)](#remove-legacy-active-directory-group-policy-objects)
 
-6. [Сопоставить разрешенные компьютеры с учетных записей пользователей](#map-permitted-computers-to-user-accounts)
+6. [Сопоставьте разрешенные компьютеры учетным записям пользователей](#map-permitted-computers-to-user-accounts)
 
 ## <a name="copy-data-to-the-destination-server"></a>Копирование данных на целевой сервер
  Перед копированием данных с исходного сервера на целевой сервер выполните следующие действия. 
@@ -55,17 +55,17 @@ ms.locfileid: "66828578"
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
  
  Где
- - \<SourceServerName\> имя исходного сервера
- - \<SharedSourceFolderName\> — имя общей папки на исходном сервере
- - \<DestinationServerName\> — это имя конечного сервера
- - \<SharedDestinationFolderName\> — общая папка на целевом сервере, в который будут копироваться данные. 
+ - \<SourceServerName\> — имя исходного сервера.
+ - \<Шаредсаурцефолдернаме\> — имя общей папки на исходном сервере.
+ - \<Дестинатионсервернаме\> — имя целевого сервера,
+ - \<Шареддестинатионфолдернаме\> — это общая папка на целевом сервере, куда будут копироваться данные. 
 
 3. Повторите предыдущую операцию для каждой общей папки, которую вы перемещаете с исходного сервера. 
 
-## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Импорт учетных записей пользователей Active Directory на панель мониторинга Windows Server Essentials
- По умолчанию все учетные записи пользователей, созданные на исходном сервере, автоматически переносятся на панели мониторинга в Windows Server Essentials. Однако процесс автоматического переноса учетной записи пользователя Active Directory завершится сбоем, если некоторые свойства не будут соответствовать требованиям миграции. Для импорта пользователей Active Directory можно использовать следующий командлет Windows PowerShell. 
+## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Импорт Active Directory учетных записей пользователей на панель мониторинга Windows Server Essentials
+ По умолчанию все учетные записи пользователей, созданные на исходном сервере, автоматически переносятся на панель мониторинга в Windows Server Essentials. Однако процесс автоматического переноса учетной записи пользователя Active Directory завершится сбоем, если некоторые свойства не будут соответствовать требованиям миграции. Для импорта пользователей Active Directory можно использовать следующий командлет Windows PowerShell. 
  
-#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Импорт учетной записи пользователя Active Directory на панель мониторинга Windows Server Essentials
+#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Импорт учетной записи Active Directory пользователя на панель мониторинга Windows Server Essentials
  
 1. Войдите на целевой сервер как администратор домена. 
  
@@ -119,8 +119,8 @@ ms.locfileid: "66828578"
 > [!NOTE]
 > Если на втором сервере вы настроили локальный сервер Exchange Server, необходимо убедиться, что порт 25 (SMTP) также открыт и перенаправляется на IP-адрес локального сервера Exchange Server. 
  
-## <a name="remove-legacy-active-directory-group-policy-objects"></a>Удаление устаревших Active Directory объектов групповой политики
- Объекты групповой политики (GPO) обновляются для Windows Server Essentials. Они являются подмножеством объектов групповой политики Windows Small Business Server 2011. Для Windows Server Essentials Windows Small Business Server 2011 объектов групповой политики и инструментария управления Windows (WMI) необходимо вручную удалить несколько для предотвращения конфликтов с групповой политики Windows Server Essentials и фильтров WMI. 
+## <a name="remove-legacy-active-directory-group-policy-objects"></a>Удаление устаревших Active Directory объектов групповая политика
+ Групповая политика объекты (GPO) обновляются для Windows Server Essentials. Они являются подмножеством объектов групповой политики Windows Small Business Server 2011. В Windows Server Essentials для предотвращения конфликтов с объектами групповой политики Windows Server Essentials и фильтрами WMI необходимо вручную удалить ряд объектов групповой политики и инструментарий управления Windows (WMI) (WMI) для Windows Small Business Server 2011. 
  
 > [!NOTE]
 > При изменении исходных объектов групповой политики Windows Small Business Server 2011 необходимо сохранить их копии в другом месте и затем удалить сами объекты из Windows Small Business Server 2011. 
@@ -131,17 +131,17 @@ ms.locfileid: "66828578"
  
 2. Нажмите кнопку **Пуск** и выберите пункт **Управление сервером**. 
  
-3. В области навигации щелкните **расширенного управления**, нажмите кнопку **Управление групповой политикой**, а затем нажмите кнопку **леса: *** < имя_домена\>* . 
+3. В области навигации выберите пункт **Расширенное управление**, щелкните **Групповая политика управление**, а затем выберите **лес:** _< йоурдомаиннаме\>_ . 
  
-4. Нажмите кнопку **домены**, нажмите кнопку *< имя_домена\>* , а затем нажмите кнопку **объектов групповой политики**. 
+4. Щелкните **Domains**(домены), щелкните *<\>йоурдомаиннаме*, а затем — **Групповая политика объекты**. 
  
 5. Щелкните правой кнопкой мыши **Small Business Server - политика аудита**, нажмите **Удалить**, а затем **ОК**. 
  
 6. Повторите шаг 5, чтобы удалить следующие объекты групповой политики, которые применяются к сети: 
  
- - Windows SBS клиента Windows 7 и Windows Vista политики 
+ - Клиент Windows SBS, Windows 7 и политика Windows Vista 
  
- - Политика клиента Windows XP для Windows SBS 
+ - Политика Windows XP клиента Windows SBS 
  
  - Политика CSE Windows SBS 
  
@@ -161,20 +161,20 @@ ms.locfileid: "66828578"
  
 2. Нажмите кнопку **Пуск** и выберите пункт **Управление сервером**. 
  
-3. В области навигации щелкните **функции**, нажмите кнопку **Управление групповой политикой**, а затем нажмите кнопку **леса: *** < Имя_сетевого_домена\>* 
+3. В области навигации щелкните **компоненты**, выберите **Групповая политика управление**, а затем выберите **лес:** _\> < йоурнетворкдомаиннаме_ . 
  
-4. Нажмите кнопку **домены**, нажмите кнопку *< Имя_сетевого_домена\>* , а затем нажмите кнопку **фильтры WMI**. 
+4. Щелкните **домены**, щелкните *<\>йоурнетворкдомаиннаме*, а затем щелкните **фильтры WMI**. 
  
 5. Щелкните правой кнопкой мыши **Windows SBS Client** (Клиент Windows SBS), выберите пункт **Удалить**, а затем нажмите кнопку **Да**. 
  
-6. Щелкните правой кнопкой мыши **Windows SBS клиента Windows 7 и Windows Vista**, нажмите кнопку **удалить**, а затем нажмите кнопку **Да**. 
+6. Щелкните правой кнопкой мыши **клиент Windows SBS Windows 7 и Windows Vista**, выберите пункт **Удалить**, а затем нажмите кнопку **Да**. 
  
-7. Щелкните правой кнопкой мыши **Windows SBS клиента Windows XP**, нажмите кнопку **удалить**, а затем нажмите кнопку **Да**. 
+7. Щелкните правой кнопкой мыши **клиент Windows SBS Windows XP**, выберите пункт **Удалить**, а затем нажмите кнопку **Да**. 
  
 8. Убедитесь, что эти фильтры WMI удалены. 
  
 ## <a name="map-permitted-computers-to-user-accounts"></a>Сопоставление разрешенных компьютеров с учетными записями пользователей
- Если пользователь использует удаленный веб-доступ в Windows Small Business Server 2011, отображаются все компьютеры в сети. Среди них также могут быть компьютеры, разрешения на доступ к которым у пользователя нет. В Windows Server Essentials пользователь должен быть явно назначен компьютеру, чтобы он отображался в удаленного веб-доступа. Каждая учетная запись пользователя, которая переносятся из Windows Small Business Server 2011, должна быть сопоставлена с одним или несколькими компьютерами. 
+ Если пользователь использует удаленный веб-доступ в Windows Small Business Server 2011, отображаются все компьютеры в сети. Среди них также могут быть компьютеры, разрешения на доступ к которым у пользователя нет. В Windows Server Essentials пользователь должен быть явно назначен компьютеру для отображения в удаленном Веб-доступ. Каждая учетная запись пользователя, которая переносятся из Windows Small Business Server 2011, должна быть сопоставлена с одним или несколькими компьютерами. 
  
 #### <a name="to-map-user-accounts-to-computers"></a>Сопоставление учетных записей и компьютеров 
  
