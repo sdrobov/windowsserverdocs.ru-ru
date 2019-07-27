@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c26d6d0c4c4465b5f9073dbcac951fc0adce1d5
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 4a305141b839772bb024140bd803073a67e266b2
+ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63688542"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68544575"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2016"></a>Сравнение выпусков Windows Server 2016 Standard и Datacenter
 
@@ -123,7 +123,7 @@ ms.locfileid: "63688542"
 |Ограничение пропускной способности SMB|Да|Да|
 |SMTP-сервер|Да|Да|
 |Служба SNMP|Да|Да|
-|Подсистема балансировки нагрузки программного обеспечения|Да|Да|
+|Подсистема балансировки нагрузки программного обеспечения|Нет|Да|
 |Реплика хранилища|Нет|Да|
 |Клиент Telnet|Да|Да|
 |TFTP-клиент|Да, если продукт установлен как сервер с возможностями рабочего стола|Да, если продукт установлен как сервер с возможностями рабочего стола|
