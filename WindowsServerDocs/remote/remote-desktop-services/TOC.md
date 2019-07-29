@@ -66,13 +66,21 @@
 
 ## [Дополнительная поддержка удаленных рабочих столов](rds-get-support.md)
 ## [Клиенты удаленного рабочего стола](clients/remote-desktop-clients.md)
+### Известные проблемы с удаленным рабочим столом
+#### [Устранение неполадок с подключениями к удаленному рабочему столу](troubleshoot/rdp-error-general-troubleshooting.md)
+#### [Клиенты не могут подключиться и получают ошибку "Класс не зарегистрирован"](troubleshoot/rdp-error-class-not-registered.md)
+#### [Клиенты не могут подключиться и получают ошибку "Нет доступных лицензий"](troubleshoot/rdp-error-no-licenses-available.md)
+#### [Пользователь не может пройти проверку подлинности или проходит ее дважды](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
+#### [При подключении возникает ошибка "Служба удаленных рабочих столов сейчас занята"](troubleshoot/remote-desktop-service-currently-busy.md)
+#### [Клиент удаленного рабочего стола отключается и не может повторно подключиться к тому же сеансу](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
+#### [Удаленный ноутбук отключается от беспроводной сети](troubleshoot/remote-laptop-disconnects-wireless-network.md)
+#### [Низкая производительность или проблемы с приложениями во время подключения к удаленному рабочему столу](troubleshoot/poor-performance-or-application-problems.md)
 ### Общие сведения
 #### [Какой клиент вам подходит?](clients/remote-desktop-app-compare.md)
 #### [Параметры файла удаленного рабочего стола](clients/rdp-files.md)
 #### [Схема URI удаленного рабочего стола](clients/remote-desktop-uri.md)
 #### [Вопросы и ответы по клиенту удаленного рабочего стола](clients/remote-desktop-client-faq.md)
 #### [Параметры конфиденциальности для управляемых приложений и настольных компьютеров](clients/remote-privacy-settings.md)
-#### [Устранение неполадок с подключениями к удаленному рабочему столу](clients/troubleshoot-remote-desktop-connections.md)
 ### Клиент удаленного рабочего стола для Windows
 #### [Начало работы](clients/windows.md)
 #### [Что нового в клиенте Windows?](clients/windows-whatsnew.md)
