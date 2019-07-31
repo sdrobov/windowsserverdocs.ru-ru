@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.date: 07/17/2019
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 994e2324042dd441abbb114da2b8806574ce0352
-ms.sourcegitcommit: e5553285d509f15c20ba98ad9e8bf69b09531560
+ms.openlocfilehash: e67102d1fa8b35d90e97df64cb8bd2991b205ad5
+ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307486"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68658880"
 ---
 # <a name="install-windows-admin-center"></a>Установка Windows Admin Center
 
@@ -27,7 +27,7 @@ ms.locfileid: "68307486"
 
 ## <a name="determine-your-installation-type"></a>Определение типа установки
 
-Проверьте [Параметры установки](../plan/installation-options.md) , включая [Поддерживаемые операционные системы](../plan/installation-options.md#supported-operating-systems-installation). Сведения об установке центра администрирования Windows на виртуальной машине в Azure см. в статье [Развертывание центра администрирования Windows в Azure](../azure/deploy-wac-in-azure.md).
+Проверьте [Параметры установки](../plan/installation-options.md) , включая [Поддерживаемые операционные системы](https://docs.microsoft.com/windows-server/manage/windows-admin-center/plan/installation-options#installation-supported-operating-systems). Сведения об установке центра администрирования Windows на виртуальной машине в Azure см. в статье [Развертывание центра администрирования Windows в Azure](../azure/deploy-wac-in-azure.md).
 
 ## <a name="install-on-windows-10"></a>Установка в Windows 10
 
