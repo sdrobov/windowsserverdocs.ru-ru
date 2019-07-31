@@ -7,6 +7,7 @@
 ## [Требования к системе](sys-reqs-19.md)
 ## [Активация Windows Server 2019](activation-19.md)
 ## [Активация виртуальных машин Windows Server 2019](vm-activation-19.md)
+## [Устранение ошибок активации](../get-started/activation-error-codes.md)
 ## [Совместимость Windows Server 2019 и серверных приложений корпорации Майкрософт](app-compat-19.md)
 ## [Функция совместимости приложений основных серверных компонентов по запросу (FOD)](install-fod-19.md)
 ## [Сравнение выпусков Standard и Datacenter](editions-comparison-19.md)

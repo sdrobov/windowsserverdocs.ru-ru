@@ -293,7 +293,7 @@ SC config storqosflt start= disabled
 
     Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 
-Обратите `Status: "{Access Denied}"` внимание, что `A process has requested access to an object, but has not been granted those access rights.` и сообщение это известная проблема в реплике хранилища и исправлена в обновлении с 12 сентября 2017 г. — KB4038782 (сборка ОС 14393,1715)https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
+Обратите `Status: "{Access Denied}"` внимание, что `A process has requested access to an object, but has not been granted those access rights.` и сообщение это известная проблема в реплике хранилища и исправлена в обновлении с 12 сентября 2017 г. — KB4038782 (сборка ОС 14393,1715) https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
 
 ## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>Ошибка «Не удалось подключить ресурс "Диск кластера x" к сети». для растянутого кластера
 
