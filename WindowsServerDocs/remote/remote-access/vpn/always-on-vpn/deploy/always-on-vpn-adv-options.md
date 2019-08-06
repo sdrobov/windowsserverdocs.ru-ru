@@ -10,12 +10,12 @@ ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: ae3c088122a0100f94b4d9bca41078d901487237
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: e09a23b6f1c14c4c14b00fd19d84d0abb71d0163
+ms.sourcegitcommit: e40fce7b8b4bc0bef278e676435306f14078cf00
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590411"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787208"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Дополнительные возможности Always On VPN
 
@@ -62,17 +62,15 @@ ms.locfileid: "68590411"
 
 **Доступность**
 
-В следующей таблице перечислены приблизительные даты выпуска исправлений для каждой версии Windows.
+В следующей таблице перечислены выпуски, содержащие исправления для каждой версии Windows.
 
-|Версия операционной системы |Дата выпуска или выпуска * |
+|Версия операционной системы |Выпуск  |
 |---------|---------|
 |Windows Server версии 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, версия 1809  |Q3, 2019  |
-|Windows Server версии 1803  |Q3, 2019  |
-|Windows Server версии 1709  |Q3, 2019  |
+|Windows Server 2019<br />Windows Server, версия 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server версии 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
+|Windows Server версии 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, версия 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
-  
-\*Все даты выпуска перечислены в календарных кварталах. Даты являются приблизительными и могут изменяться без предварительного уведомления. При выпуске обновления ссылка на выпуск заменяет дату выпуска.
 
 **Настройка необходимых компонентов** 
 
@@ -81,7 +79,7 @@ ms.locfileid: "68590411"
 1. На сервере RRAS используйте командлет PowerShell **Set-впнауспротокол** , чтобы настроить параметр **рутцертификатенаметоакцепт** .<br /><br />
    В следующем примере перечисляются команды для этого. В примере **CN = корневой центр сертификации Contoso** представляет различающееся имя корневого центра сертификации. 
    ``` powershell
-   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority,*" } )
+   $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )
    Set-VpnAuthProtocol -RootCertificateNameToAccept $cert1 -PassThru
    ```
 **Настройка сервера RRAS для принудительного отзыва сертификатов для VPN-подключений, основанных на сертификатах компьютеров IKEv2**
