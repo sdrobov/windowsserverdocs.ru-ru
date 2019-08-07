@@ -68,7 +68,7 @@
 ## [Клиенты удаленного рабочего стола](clients/remote-desktop-clients.md)
 ### Известные проблемы с удаленным рабочим столом
 #### [Устранение неполадок с подключениями к удаленному рабочему столу](troubleshoot/rdp-error-general-troubleshooting.md)
-#### [Клиенты не могут подключиться и получают ошибку "Класс не зарегистрирован"](troubleshoot/rdp-error-class-not-registered.md)
+#### [Клиенты не могут подключиться и получают сообщение об ошибке "Класс не зарегистрирован"](troubleshoot/rdp-error-class-not-registered.md)
 #### [Клиенты не могут подключиться и получают ошибку "Нет доступных лицензий"](troubleshoot/rdp-error-no-licenses-available.md)
 #### [Пользователь не может пройти проверку подлинности или проходит ее дважды](troubleshoot/cannot-authenticate-or-must-authenticate-twice.md)
 #### [При подключении возникает ошибка "Служба удаленных рабочих столов сейчас занята"](troubleshoot/remote-desktop-service-currently-busy.md)
