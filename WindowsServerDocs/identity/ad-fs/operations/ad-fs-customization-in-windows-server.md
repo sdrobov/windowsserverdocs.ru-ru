@@ -69,9 +69,9 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
 Чтобы назначить пользовательскую тему на RP, используйте следующую процедуру:  
   
 1. Создать новую тему как копию для глобальной темы по умолчанию в AD FS  
-<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code>2. Экспорт темы для настройки<code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
-3.Настройка файлов тем (изображений, CSS, OnLoad. js) — в любом удобном редакторе или при замене файла 4. импорта настроенных файлов из файловой системы в AD FS (для новой темы).<code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
-5.Применить новую настроенную тему к конкретному RP (или RP)<code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
+<code>New-AdfsWebTheme -Name AppSpecificTheme -SourceName default</code> 2. Экспорт темы для настройки <code>Export-AdfsWebTheme -Name AppSpecificTheme -DirectoryPath c:\appspecifictheme</code>  
+3. Настройка файлов тем (изображений, CSS, OnLoad. js) — в любом удобном редакторе или при замене файла 4. импорта настроенных файлов из файловой системы в AD FS (для новой темы). <code>Set-AdfsWebTheme -TargetName AppSpecificTheme -AdditionalFileResource @{Uri='/adfs/portal/script/onload.js';Path="c:\appspecifictheme\script\onload.js"}</code>  
+5. Применить новую настроенную тему к конкретному RP (или RP) <code>Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme</code>  
   
 ## <a name="home-realm-discovery"></a>Обнаружение домашней области  
 Сведения о настройке распознавания для домашней области см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
