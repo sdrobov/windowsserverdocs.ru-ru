@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 386ef1d8683b75bdc94fc1aa4ac7cb8acf6cd6fa
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: c5c4ac470d1187aa6186f6f05cab3df185a642fd
+ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544487"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68914560"
 ---
 # <a name="step-2-configure-wsus"></a>Шаг 2. Настройка WSUS
 
@@ -389,11 +389,11 @@ ms.locfileid: "68544487"
 
 2.  В меню **Пуск**введите **cmd**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.
 
-3.  Перейдите в папку *% ProgramFiles% * * * * \Update\\Services\Tools**.
+3.  Перейдите в папку _% ProgramFiles%_ **\Update Services\Tools\\**  .
 
 4.  В окне командной строки введите следующую команду:
 
-    **WSUSutil configuressl * * * certificateName*
+    **Wsusutil configuressl** _
 
     Где:
 
