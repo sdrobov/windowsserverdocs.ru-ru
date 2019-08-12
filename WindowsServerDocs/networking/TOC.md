@@ -83,6 +83,10 @@
 #### [Использование политики DNS для применения фильтров к запросам DNS](dns/deploy/apply-filters-on-dns-queries.md)
 #### [Использование политики DNS для балансировки нагрузки приложений](dns/deploy/app-lb.md)
 #### [Использование политики DNS для балансировки нагрузки приложений с учетом сведений о географическом расположении](dns/deploy/app-lb-geo.md)
+### [Устранение неполадок с DNS](dns/troubleshoot/troubleshoot-dns-data-collection.md)
+#### [Устранение неполадок DNS-клиентов](dns/troubleshoot/troubleshoot-dns-client.md)
+##### [Отключение кэширования на стороне клиента DNS на DNS-клиентах](dns/troubleshoot/disable-dns-client-side-caching.md)
+#### [Устранение неполадок DNS-серверов](dns/troubleshoot/troubleshoot-dns-server.md)
 
 ## [Протокол DHCP](technologies/dhcp/dhcp-top.md)
 ### [Новые возможности протокола DHCP](technologies/dhcp/What-s-New-in-DHCP.md)
