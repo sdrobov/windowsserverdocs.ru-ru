@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c5c4ac470d1187aa6186f6f05cab3df185a642fd
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 660cb0412abdf1ecb1afcba53a4aeb79ac407e56
+ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68914560"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68952462"
 ---
 # <a name="step-2-configure-wsus"></a>Шаг 2. Настройка WSUS
 
@@ -56,33 +56,33 @@ ms.locfileid: "68914560"
 ### <a name="211-connection-from-the-wsus-server-to-the-internet"></a>2.1.1. Подключение к Интернету с сервера WSUS
 Если между службами WSUS и сетью Интернет располагается корпоративный брандмауэр, возможно, потребуется настроить данный брандмауэр для обеспечения возможности получения обновлений службами WSUS. Для получения обновлений из Центра обновления Майкрософт сервер WSUS использует порт 443 для протокола HTTPS. Хотя большая часть корпоративных брандмауэров разрешает такой тип трафика, существуют некоторые компании, которые ограничивают доступ к Интернету с серверов из-за политик безопасности компании. Если ваша организация запрещает доступ, необходимо получить авторизацию, чтобы разрешить доступ к Интернету из WSUS в следующий список URL-адресов:
 
-- http://windowsupdate.microsoft.com
+- HTTP\://windowsupdate.Microsoft.com
 
-- http://*.windowsupdate.microsoft.com
+- HTTP\://.windowsupdate.Microsoft.com\*
 
-- https://*.windowsupdate.microsoft.com
+- HTTPS\://.windowsupdate.Microsoft.com\*
 
-- http://*.update.microsoft.com
+- HTTP\://.Update.Microsoft.com\*
 
-- https://*.update.microsoft.com
+- HTTPS\://.Update.Microsoft.com\*
 
-- http://*.windowsupdate.com
+- HTTP\://.windowsupdate.com\*
 
-- http://download.windowsupdate.com
+- HTTP\://download.windowsupdate.com
 
-- https://download.microsoft.com
+- HTTPS\://download.Microsoft.com
 
-- http://*.download.windowsupdate.com
+- HTTP\://.download.windowsupdate.com\*
 
-- http://wustat.windows.com
+- HTTP\://wustat.Windows.com
 
-- http://ntservicepack.microsoft.com
+- HTTP\://ntservicepack.Microsoft.com
 
-- http://go.microsoft.com
+- HTTP\://go.Microsoft.com
 
-- http://dl.delivery.mp.microsoft.com
+- HTTP\://DL.Delivery.MP.Microsoft.com
 
-- https://dl.delivery.mp.microsoft.com
+- HTTPS\://DL.Delivery.MP.Microsoft.com
 
 > [!IMPORTANT]
 > В случае, когда WSUS не удается получить обновления из-за конфигурации брандмауэра, см. [статью 885819](https://support.microsoft.com/kb/885819) в базе знаний Майкрософт.
@@ -389,11 +389,11 @@ ms.locfileid: "68914560"
 
 2.  В меню **Пуск**введите **cmd**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.
 
-3.  Перейдите в папку _% ProgramFiles%_ **\Update Services\Tools\\**  .
+3.  Перейдите в папку _% ProgramFiles%_ **\\Update Services\\\\ Tools** .
 
 4.  В окне командной строки введите следующую команду:
 
-    **Wsusutil configuressl** _
+    **Wsusutil configuressl**_certificateName_
 
     Где:
 

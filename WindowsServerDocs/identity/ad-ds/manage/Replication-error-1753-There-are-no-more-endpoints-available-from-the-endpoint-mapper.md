@@ -9,83 +9,69 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adds
-ms.openlocfilehash: e7d2b47c9c14af22cdcf29fb388779e7639e38cb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9c8efee98cc8128443d9c835ccc5cb6b7695a094
+ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442777"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68952469"
 ---
 # <a name="replication-error-1753-there-are-no-more-endpoints-available-from-the-endpoint-mapper"></a>Ошибка репликации 1753: в системе отображения конечных точек не осталось доступных конечных точек
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server
 
+В этой статье описываются симптомы, причины и способы устранения Active Directory операций, которые завершаются ошибкой Win32 1753: "В модуле сопоставления конечных точек больше нет доступных конечных узлов".
 
-<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd"> <introduction>
-    <para>В этом разделе объясняется симптомы, причины и способы решения Active Directory репликации ошибка 8524 Операция DSA не может быть продолжена из-за ошибка поиска в DNS.</para>
-    <list class="bullet">
-      <listItem>
-        <para>
-          <link xlink:href="f7022f0d-0099-410c-8178-c654e624bc42#BKMK_Symptoms">Проблема</link>
-        </para>
-      </listItem> <listItem>
-        <para>
-          <link xlink:href="f7022f0d-0099-410c-8178-c654e624bc42#BKMK_Cause">Причина</link>
-        </para>
-      </listItem> <listItem>
-        <para>
-          <link xlink:href="f7022f0d-0099-410c-8178-c654e624bc42#BKMK_Resolutions">Способы их устранения</link>
-        </para>
-      </listItem> <listItem>
-        <para>
-          <link xlink:href="f7022f0d-0099-410c-8178-c654e624bc42#BKMK_MoreInfo">Дополнительные сведения</link>
-        </para>
-      </listItem>
-    </list>
-  </introduction>
-  <section address="BKMK_Symptoms">
-    <title>Проблема</title>
-    <content>
-      <para>В этой статье описывается проблема, причина и решение пошаговые инструкции по с операциями Active Directory, завершающимися с ошибкой Win32 1753: &quot;Осталось доступных конечных точек.&quot;</para>
-      <list class="ordered">
-        <listItem>
-          <para>Отчеты DCDIAG, проверка подключения, тестирования репликации Active Directory или KnowsOfRoleHolders теста завершилось ошибкой 1753: &quot;Осталось доступных конечных точек.&quot;</para>
-          <code>Testing server: &lt;site&gt;&lt;DC Name&gt;
+Программа DCDIAG сообщает о том, что проверка подключения Active Directory репликации тестов или теста Кновсофролехолдерс завершилась ошибкой 1753: "В модуле сопоставления конечных точек больше нет доступных конечных узлов".
+
+```
+Testing server: <site><DC Name>
 Starting test: Connectivity
 * Active Directory LDAP Services Check
 * Active Directory RPC Services Check
-[&lt;DC Name&gt;] <codeFeaturedElement>DsBindWithSpnEx() failed with error 1753,
-There are no more endpoints available from the endpoint mapper..</codeFeaturedElement>
+[<DC Name>] DsBindWithSpnEx() failed with error 1753,
+There are no more endpoints available from the endpoint mapper..
 Printing RPC Extended Error Info:
-Error Record 1, ProcessID is &lt;process ID&gt; (DcDiag) 
-System Time is: &lt;date&gt; &lt;time&gt;
+Error Record 1, ProcessID is <process ID> (DcDiag)
+System Time is: <date> <time>
 Generating component is 2 (RPC runtime)
 Status is 1753: There are no more endpoints available from the endpoint mapper. Detection location is 500
 NumberOfParameters is 4
 Unicode string: ncacn_ip_tcp
-Unicode string: &lt;source DC object GUID&gt;._msdcs.contoso.com
+Unicode string: <source DC object GUID>._msdcs.contoso.com
 Long val: -481213899
 Long val: 65537
-Error Record 2, ProcessID is 700 (DcDiag) 
-System Time is: &lt;date&gt; &lt;time&gt;
+Error Record 2, ProcessID is 700 (DcDiag)
+System Time is: <date> <time>
 Generating component is 2 (RPC runtime)
-<codeFeaturedElement>Status is 1753: There are no more endpoints available from the endpoint mapper.</codeFeaturedElement>
+Status is 1753: There are no more endpoints available from the endpoint mapper.
 NumberOfParameters is 1
 Unicode string: 1025
-[Replications Check,&lt;DC Name&gt;] A recent replication attempt failed:
-From &lt;source DC&gt; to &lt;destination DC&gt;
-Naming Context: &lt;DN path of directory partition&gt;
-The replication generated an error <codeFeaturedElement>(1753):
-There are no more endpoints available from the endpoint mapper.</codeFeaturedElement> 
-The failure occurred at &lt;date&gt; &lt;time&gt;.
-The last success occurred at &lt;date&gt; &lt;time&gt;.
+[Replications Check,<DC Name>] A recent replication attempt failed:
+From <source DC> to <destination DC>
+Naming Context: <DN path of directory partition>
+The replication generated an error (1753):
+There are no more endpoints available from the endpoint mapper.
+The failure occurred at <date> <time>.
+The last success occurred at <date> <time>.
 3 failures have occurred since the last success.
-The directory on &lt;DC name&gt; is in the process.
+The directory on <DC name> is in the process.
 of starting up or shutting down, and is not available.
 Verify machine is not hung during boot.
-</code>
-        </listItem>
-<listItem><para>REPADMIN. EXE-файла сообщает, что попытка репликации не удалось с состоянием 1753 г.</para><para>Часто упоминаются 1753 г состояние включают, но не ограничиваются команды REPADMIN:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN/REPLSUM</para></listItem><listItem><para>REPADMIN /SHOWREPL</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN/SHOWREPS</para></listItem><listItem><para>REPADMIN/SYNCALL</para></listItem></list></TD></tr></tbody></table><para>Пример выходных данных из &quot;REPADMIN/SHOWREPS&quot; изображающие входящая репликация с CONTOSO-DC2 для CONTOSO-DC1, выдающие &quot;доступ к репликации отвергнут&quot; ошибки показан ниже:</para><code>Default-First-Site-NameCONTOSO-DC1
+```
+
+REPADMIN. EXE сообщает о том, что попытка репликации завершилась ошибкой с состоянием 1753.
+Команды REPADMIN, которые обычно упоминают состояние 1753, включают, но не ограничиваются:
+
+* REPADMIN/РЕПЛСУМ
+* REPADMIN/ШОВРЕПЛ
+* REPADMIN/SHOWREPS
+* REPADMIN/СИНКАЛЛ
+
+Пример выходных данных из файла "REPADMIN/SHOWREPS", который показывает, что входящая репликация с CONTOSO-DC2 на CONTOSO-DC1 завершилась сбоем с ошибкой "отказано в доступе к репликации", показана ниже:
+
+```
+Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -94,342 +80,200 @@ DSA invocationID: b6dc8589-7e00-4a5d-b688-045aef63ec01
 DC=contoso,DC=com
 Default-First-Site-NameCONTOSO-DC2 via RPC
 DSA object GUID: 74fbe06c-932c-46b5-831b-af9e31f496b2
-Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 1753 (0x6d9):
-There are no more endpoints available from the endpoint mapper.</codeFeaturedElement>
-&lt;#&gt; consecutive failure(s).
-Last success @ &lt;date&gt; &lt;time&gt;.
+Last attempt @ <date> <time> failed, result 1753 (0x6d9):
+There are no more endpoints available from the endpoint mapper.
+<#> consecutive failure(s).
+Last success @ <date> <time>.
+```
 
-</code></listItem><listItem><para><ui>Проверка топологии репликации</ui> команда в Active Directory — сайты и службы возвращает &quot;отсутствуют дополнительные конечные точки конечных точек.&quot;</para><para>Щелкните правой кнопкой мыши на объект соединения из исходного контроллера домена и выборе <ui>Проверка топологии репликации</ui> завершается сбоем с &quot;отсутствуют дополнительные конечные точки конечных точек.&quot; На экране ниже выводится сообщение об ошибке:</para><para>Текст заголовка диалогового окна: Проверка топологии репликации</para><para>Текст сообщения диалогового окна: </para><para>При попытке связаться с контроллером домена произошла следующая ошибка: Осталось доступных конечных точек.</para></listItem><listItem><para><ui>Реплицировать сейчас</ui> команда в Active Directory — сайты и службы возвращает &quot;отсутствуют дополнительные конечные точки конечных точек.&quot;</para><para>Щелкнув объект соединения из исходного контроллера домена и выбрав <ui>Реплицировать сейчас</ui> завершается сбоем с &quot;отсутствуют дополнительные конечные точки конечных точек.&quot; На экране ниже выводится сообщение об ошибке:</para><para>Текст заголовка диалогового окна: Теперь репликация</para><para>Текст сообщения диалогового окна: Произошла следующая ошибка при попытке синхронизации контекста именования &lt;имя секции каталога %&gt; от контроллера домена &lt;исходный контроллер домена&gt; к контроллеру домена &lt;конечный контроллер домена&gt;:</para><para>
+Команда **проверить топологию репликации** в Active Directory сайтов и служб возвращает "нет доступных конечных точек из сопоставителя конечной точки".
 
-Осталось доступных конечных точек.</para><para>Операция не будет продолжена</para></listItem><listItem><para>NTDS KCC "," Общие NTDS "или" Microsoft-Windows-ActiveDirectory_DomainService с состоянием-2146893022 событий в журнале службы каталогов в средстве просмотра событий.</para><para>События Active Directory, которые часто упоминаются состояние-2146893022 включают, но не ограничиваются:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Идентификатор события</para></TD><TD><para>Источник события</para></TD><TD><para>Строка событий</para></TD></tr></thead><tbody><tr><TD><para>1655</para></TD><TD><para>NTDS Общие</para></TD><TD><para>Попытки обмена данными с помощью следующих глобального каталога Active Directory и попытки завершились с ошибкой.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Не удалось установить связь репликации для следующего раздела каталога с возможностью записи.</para></TD></tr><tr><TD><para>1265</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Проверки согласованности знаний (KCC) Добавление соглашения репликации для следующий каталог секции и исходный контроллер домена не удалось.</para></TD></tr></tbody></table></listItem>
-</list>
-    </content>
-  </section>
-  <section address="BKMK_Cause">
-    <title>Причина</title>
-    <content>
-      <para>На следующей схеме показан рабочий процесс RPC, начиная с регистрации серверного приложения с помощью модуля сопоставления конечной точки RPC (EPM) на шаге 1, чтобы передавать данные от клиента RPC клиентскому приложению на шаге 7. </para>
-      <para>&lt;ADDS_RPCWorkflow&gt;</para>
-      <para>Шаги 1 – 7 карты для следующих операций:</para>
-      <list class="ordered">
-        <listItem>
-          <para>Серверное приложение регистрирует ее конечных точек RPC Endpoint Mapper (EPM) </para>
-        </listItem>
-        <listItem>
-          <para>Клиент отправляет вызов RPC (от имени пользователя, операционной системы или приложения инициировавшим операцию) </para>
-        </listItem>
-        <listItem>
-          <para>RPC на стороне клиента связывается на конечных компьютерах EPM и задать для конечной точки для завершения этого клиентского вызова </para>
-        </listItem>
-        <listItem>
-          <para>Сервер&#39;s EPM отвечает с конечной точкой </para>
-        </listItem>
-        <listItem>
-          <para>Серверное приложение обращается к RPC на стороне клиента </para>
-        </listItem>
-        <listItem>
-          <para>Серверное приложение выполняет вызов, возвращает результат клиенту RPC </para>
-        </listItem>
-        <listItem>
-          <para>RPC на стороне клиента передает результат обратно в клиентское приложение</para>
-        </listItem>
-      </list>
-      <para>Сбой между шагами #3 и #4 создается сбоя 1753 г. В частности ошибка 1753 означает, что клиенту RPC (контроллер домена назначения) не удалось связаться с RPC-сервер (исходного контроллера домена) через порт 135, но EPM на RPC-сервер (исходный контроллер домена) не удалось найти интересующими приложением RPC и вернул ошибку на стороне сервера 1753 г. Наличие ошибки 1753 указывает, что клиент RPC (контроллер домена назначения) получил ответа на ошибку на стороне сервера от RPC-сервер (репликации AD исходного контроллера домена) по сети. </para>
-      <para>Корневой 1753 причины ошибки: </para>
-      <list class="ordered">
-        <listItem>
-          <para>Серверное приложение не запускалось (т. е. шаг 1 в &quot;сведения&quot; схеме, расположенную над никогда не выполнялась).</para>
-        </listItem>
-        <listItem>
-          <para>Запустить приложение сервера, но был какой-либо сбой во время инициализации, препятствующая регистрации конечных точек RPC (т. е. шаг 1 в &quot;сведения&quot; приведенной выше схеме не удается).</para>
-        </listItem>
-        <listItem>
-          <para>Серверное приложение к работе, но впоследствии умер. (т. е. шаг 1 в &quot;сведения&quot; приведенной выше схеме выполнено успешно, но было отменено позже, так как сервер умер).</para>
-        </listItem>
-        <listItem>
-          <para>Серверное приложение вручную отменять регистрацию конечных точек (как и 3, но намеренно. Но, вероятно, не включен для полноценного списка.)</para>
-        </listItem>
-        <listItem>
-          <para>Клиент RPC (контроллер домена назначения) связаться с на другой сервер RPC, чем тот из-за имени в IP-адрес ошибки сопоставления в DNS, WINS или файл узла/Lmhosts.</para>
-        </listItem>
-      </list>
-      <para>Ошибка 1753 не вызвано: </para>
-      <list class="bullet">
-        <listItem>
-          <para>Отсутствие сетевого подключения между клиентом RPC (контроллер домена назначения) и RPC-сервер (исходного контроллера домена) через порт 135</para>
-        </listItem>
-        <listItem>
-          <para>Отсутствие сетевого подключения между RPC-сервер (исходного контроллера домена) через порт 135 и клиент RPC (контроллер домена назначения) временных портов. </para>
-        </listItem>
-        <listItem>
-          <para>Несоответствие паролей или невозможности с исходного контроллера домена для расшифровки зашифрованный пакет Kerberos </para>
-        </listItem>
-      </list>
-      <para> </para>
-    </content>
-  </section>
-  <section address="BKMK_Resolutions">
-    <title>Способы их устранения</title>
-    <content>
-      <list class="ordered">
-        <listItem>
-          <para>
-            <embeddedLabel>Проверьте, запущена служба регистрации его службы с помощью конечных точек ли</embeddedLabel>
-          </para>
-          <para>Для Windows 2000 и контроллеров домена Windows Server 2003: Убедитесь, что исходный контроллер домена загружается в обычном режиме. </para>
-          <para>
-Для Windows Server 2008 или Windows Server 2008 R2: из консоли исходного контроллера домена, запустите диспетчер служб (services.msc) и убедитесь, что <embeddedLabel>доменных служб Active Directory</embeddedLabel> служба запущена. </para>
-        </listItem>
-        <listItem>
-          <para>
-            <embeddedLabel>Проверьте этот клиент RPC (контроллер домена назначения), подключенных к нужному серверу RPC (исходный контроллер домена)</embeddedLabel>
-          </para>
-          <para>Все контроллеры домена в лесу Active Directory распространенных зарегистрировать контроллер домена запись CNAME в _msdcs. &lt;корневого домена леса&gt; зоны DNS, независимо от того, они находятся в пределах леса доменов. Контроллер домена запись CNAME является производным от <embeddedLabel>objectGUID</embeddedLabel> атрибута объекта параметров NTDS для каждого контроллера домена. </para>
-          <para>При выполнении операции на основе репликации, контроллер домена назначения запрашивает источник контроллеры домена запись CNAME DNS. Запись CNAME содержит имя полного имени компьютера исходного контроллера домена, которое используется для получения источника контроллеры домена IP-адрес с помощью поиска в кэше клиента DNS, размещения / LMHost файл поиска узла A / AAAA записи в DNS или WINS. </para>
-          <para>Устаревших объектов параметров NTDS и неверный сопоставлений имя IP-в DNS, WINS, узел и LMHOST файлов может вызвать клиент RPC (контроллер домена назначения) для подключения к серверу RPC не так (исходный контроллер домена). Кроме того неверный сопоставление имя IP-может привести к клиент RPC (контроллер домена назначения) для подключения к компьютеру, даже не поддерживает приложение сервера RPC интерес (роль Active Directory в данном случае) установлен. (Пример: запись устаревших узла для DC2 содержит IP-адрес DC3 или компьютере его члена). </para>
-          <para>Проверяет соответствие objectGUID для исходного контроллера домена, который существует в месте назначения копирования контроллеров домена Active Directory objectGUID исходного контроллера домена, хранящиеся в источнике копии контроллеров домена Active Directory. Если есть несоответствие, используйте repadmin/showobjmeta на объекте параметров ntds, чтобы узнать, какой из них соответствует последней продвижение исходного контроллера домена (подсказка: сравнение отметки даты для объекта параметров NTDS создать дату из/showobjmeta от последней датой продвижения в исходный файл dcpromo.log контроллеров домена. Возможно создание Дата DCPROMO и использование последнее изменение. Сам файл ЖУРНАЛА). Если идентификаторы GUID объекта не совпадают, скорее всего контроллер домена назначения имеет устаревший объект параметров NTDS для исходного контроллера домена, записи CNAME подразумевается запись узла с неправильное имя для сопоставления IP-адрес. </para>
-          <para>В контроллер домена назначения выполните команду IPCONFIG режиме, чтобы определить, какие DNS-серверы целевой контроллер домена, используемого для разрешения имен:</para>
-          <code>c:&gt;ipconfig /all</code>
-          <para>На контроллер домена назначения запустите команду NSLOOKUP в источнике запись CNAME контроллера домена с полным контроллеров домена:</para>
-          <code>c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs primary DNS Server IP &gt;
-c:&gt;nslookup -type=cname &lt;fully qualified cname of source DC&gt; &lt;destination DCs secondary DNS Server IP&gt;</code>
-          <para>Убедитесь, что IP-адрес, возвращаемый методом NSLOOKUP &quot;владеет&quot; имя узла или идентификатор безопасности исходного контроллера домена:</para>
-          <code>C:&gt;NBTSTAT -A &lt;IP address returned by NSLOOKUP in the step above&gt;</code>
-          <para>или</para>
-          <para>Войдите на консоль исходного контроллера домена, запустите &quot;IPCONFIG&quot; из CMD и убедитесь, что исходный контроллер домена, которому принадлежит IP-адрес, возвращаемый выше команды NSLOOKUP</para>
-          <para>Проверка для сопоставления IP-адресов в DNS узла устарел или повторяющиеся</para>
-          <code>NSLOOKUP -type=hostname &lt;single label hostname of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
-NSLOOKUP -type=hostname &lt;single label hostname of source DC&gt; &lt;secondary DNS Server IP on destination DC&gt;
+Щелкните правой кнопкой мыши объект подключения из исходного контроллера домена и выберите пункт **проверить топологию репликации** с ошибкой "в модуле сопоставления конечных точек отсутствуют другие конечные точки. Ниже показано сообщение об ошибке на экране.
 
-NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;primary DNS Server IP on destination DC&gt;
-NSLOOKUP -type=hostname &lt;fully qualified computer name of source DC&gt; &lt;secondary DNS Server IP on dest. DC&gt;</code>
-<para>Если в записи узла существует недопустимый IP-адресов, изучите ли очистку DNS включен и правильно настроен. </para><para>Если тесты выше или сеть трассировки&#39;t Показать имя запроса, возвращающего недопустимый IP-адрес, рассмотрите возможность устаревшие записи в файлы узла, файлы LMHOSTS и WINS-серверы. Обратите внимание на то, что DNS-серверы также можно настроить для разрешения WINS отката.</para>
-</listItem>
-        <listItem>
-          <para>
-            <embeddedLabel>Убедитесь, что серверное приложение (Active Directory и т.п) был зарегистрирован Сопоставитель конечных точек на RPC-сервер (исходный контроллер домена)</embeddedLabel>
-          </para>
-          <para>Active Directory использует сочетание хорошо известного и динамически зарегистрированных портов. В этой таблице перечислены стандартные порты и протоколы, используемые контроллерами домена Active Directory.</para>
-          <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
-            <thead>
-              <tr>
-                <TD>
-                  <para>Приложения сервера RPC</para>
-                </TD>
-                <TD>
-                  <para>Port</para>
-                </TD>
-                <TD>
-                  <para>TCP</para>
-                </TD>
-                <TD>
-                  <para>UDP</para>
-                </TD>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <TD>
-                  <para>DNS-сервер</para>
-                </TD>
-                <TD>
-                  <para>53</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>Kerberos</para>
-                </TD>
-                <TD>
-                  <para>88</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>Сервер LDAP</para>
-                </TD>
-                <TD>
-                  <para>389</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>Microsoft-доменных служб Active Directory</para>
-                </TD>
-                <TD>
-                  <para>445</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>LDAP SSL</para>
-                </TD>
-                <TD>
-                  <para>636</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>Сервер глобального каталога</para>
-                </TD>
-                <TD>
-                  <para>3268</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para />
-                </TD>
-              </tr>
-              <tr>
-                <TD>
-                  <para>Сервер глобального каталога</para>
-                </TD>
-                <TD>
-                  <para>3269</para>
-                </TD>
-                <TD>
-                  <para>X</para>
-                </TD>
-                <TD>
-                  <para />
-                </TD>
-              </tr>
-            </tbody>
-          </table>
-          <para>Порты не зарегистрированы с помощью конечных точек. </para>
-          <para>Active Directory и другие приложения также зарегистрировать службы, которые получают динамически назначаемые порты в диапазон временных портов RPC. Такие приложения сервера RPC назначаются динамически, TCP-портов от 1024 до 5000 на компьютерах с Windows 2000 и Windows Server 2003 и порта между 49152 и 65535 диапазона на компьютерах с Windows Server 2008 и Windows Server 2008 R2. RPC-порт, используемый при репликации могут быть жестко в реестре, выполняя действия, описанные в <externalLink> <linkText>статье базы Знаний 224196</linkText> <linkUri> <a href="https://support.microsoft.com/kb/224196" data-raw-source="https://support.microsoft.com/kb/224196"> https://support.microsoft.com/kb/224196 </a> </linkUri> </externalLink>. Active Directory продолжает регистрировать с EPM при настройке для использования жестко заданный порт. </para>
-          <para>Убедитесь, что RPC-сервер приложения интерес зарегистрировался с помощью конечных точек RPC на сервере RPC (исходный контроллер домена в случае репликации AD). </para>
-          <para>Существует ряд способов для выполнения этой задачи, но один — для установки и запуска PORTQRY в командной строке администратора привилегированных CMD на консоли исходного контроллера домена, используя синтаксис: </para>
-          <code>c:&amp;gt;portquery -n &lt;source DC&gt; -e 135 &gt;file.txt</code>
-          <para>В выходных данных portqry, обратите внимание, номера портов, динамически зарегистрированных &quot;интерфейс DRS Directory NT MS&quot; (UUID = 351...) для <embeddedLabel>протокола ncacn_ip_tcp</embeddedLabel>. В следующем фрагменте показано portquery пример выходных данных из контроллера домена Windows Server 2008 R2 и UUID / пары протокола, используемые службой каталогов Active Directory они выделены <embeddedLabel>полужирным</embeddedLabel>: </para>
-          <code>UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+Текст заголовка диалогового окна: Текст сообщения диалогового окна проверки топологии репликации: При попытке обращения к контроллеру домена произошла следующая ошибка: В модуле сопоставления конечных точек больше нет доступных конечных узлов.
+
+Команда " **Реплицировать сейчас** " в Active Directory "сайты и службы" возвращает "нет доступных конечных точек из сопоставителя конечной точки".
+Щелкнув правой кнопкой мыши объект подключения из исходного контроллера домена и выбрав пункт **репликация** завершается с ошибкой "в модуле сопоставления конечных точек больше нет доступных конечных узлов.
+Ниже показано сообщение об ошибке на экране.
+
+Текст заголовка диалогового окна: Текст сообщения диалога "реплицировать сейчас": Произошла следующая ошибка при попытке синхронизации контекста \<именования% >, полученного из контроллера \<домена, > контроллера домена в \<конечный контроллер доменов >:
+
+В модуле сопоставления конечных точек больше нет доступных конечных узлов.
+Операция не будет продолжена
+
+События NTDS KCC, NTDS General или Microsoft-Windows-ActiveDirectory_DomainService с состоянием-2146893022 регистрируются в журнале служб каталогов в Просмотр событий.
+
+Active Directory события, которые обычно упоминаются в состоянии-2146893022, включают в себя не только:
+
+| Идентификатор события | Источник события | Строка события|
+| --- | --- | --- |
+| 1655 | NTDS General | Active Directory попытка установить связь со следующим глобальным каталогом, и попытки были неудачными. |
+| 1925 | NTDS KCC | Сбой при попытке установить канал репликации для следующего изменяемого раздела каталога. |
+| 1265 | NTDS KCC | Сбой при попытке добавить соглашение о репликации для следующего раздела каталога и исходного контроллера домена в ходе проверки согласованности знаний. |
+
+## <a name="cause"></a>Причина
+
+Ниже показан рабочий процесс RPC, который начинается с регистрации серверного приложения с помощью сопоставителя конечных точек RPC (EPM) на шаге 1 для передачи данных из клиента RPC в клиентское приложение на шаге 7.
+
+### <a name="adds-rpc-workflow"></a>Добавляет рабочий процесс RPC
+
+1. Серверное приложение регистрирует свои конечные точки с помощью сопоставителя конечных точек RPC (EPM)
+1. Клиент выполняет вызов RPC (от имени пользователя, операционной системы или операции, инициированной приложением)
+1. Клиентский RPC обращается к конечным компьютерам и запрашивает у конечной точки, чтобы завершить вызов клиента.
+1. Конечная точка компьютера сервера отвечает конечной точкой
+1. Клиентское приложение обращается к серверу RPC на стороне клиента
+1. Серверное приложение выполняет вызов, возвращает результат в RPC клиента.
+1. RPC на стороне клиента передает результат обратно клиентскому приложению.
+
+Сбой 1753 возникает при сбое между действиями #3 и #4. В частности, ошибка 1753 означает, что RPC-клиент (конечный контроллер домена) мог связаться с сервером RPC (исходный контроллер домена) через порт 135, но на сервере RPC (исходном контроллере домена) не удалось разместить интересующее приложение RPC и возвращена ошибка на стороне сервера 1753. Наличие ошибки 1753 указывает на то, что RPC-клиент (конечный контроллер домена) получил от сервера RPC ответ на ошибку на стороне сервера (исходный контроллер домена репликации Active Directory) по сети.
+
+Ниже перечислены основные причины возникновения ошибки 1753.
+
+* Серверное приложение никогда не запускалось (т. е. шаг #1 в схеме "Дополнительные сведения", расположенной выше, не была предпринята).
+* Серверное приложение запущено, но во время инициализации произошла ошибка, препятствующая его регистрации в сопоставителе конечных точек RPC (т. е. шаг #1 на приведенной выше схеме "Дополнительные сведения" была предпринята, но не удалась).
+* Серверное приложение запущено, но впоследствии умер. (т. е. шаг #1 на схеме "Дополнительные сведения" выше был успешно выполнен, но был отменен позже, так как сервер умер).
+* Серверное приложение вручную отменяет регистрацию своих конечных точек (аналогично 3, но намеренно. Это не скорее всего, но включается для полноты.)
+* RPC-клиент (конечный контроллер домена) связывался с другим сервером RPC по сравнению с предполагаемым, вызванным ошибкой сопоставления IP-адресов в DNS, WINS или Host/LMHOSTS File.
+
+Ошибка 1753 не вызвана следующими причинами:
+
+* Отсутствие сетевого подключения между клиентом RPC (целевым контроллером домена) и RPC-сервером (исходным контроллером домена) через порт 135
+* Отсутствие сетевого подключения между сервером RPC (исходным контроллером домена) с помощью порта 135 и RPC-клиента (конечный контроллер домена) через временный порт.
+* Несоответствие пароля или невозможность исходного контроллера домена для расшифровки зашифрованного пакета Kerberos
+
+## <a name="resolutions"></a>Действия по устранению
+
+Убедитесь, что служба, регистрирующая службу, запустила средство сопоставления конечных точек
+
+* Для контроллеров домена Windows 2000 и Windows Server 2003: Убедитесь, что исходный контроллер домена загружен в нормальный режим.
+* Для Windows Server 2008 или Windows Server 2008 R2: В консоли исходного контроллера домена запустите Диспетчер служб (Services. msc) и убедитесь, что служба домен Active Directory Services запущена.
+
+Убедитесь, что клиент RPC (конечный контроллер домена) подключен к предполагаемому серверу RPC (исходный контроллер домена).
+
+Все контроллеры домена в общем лесу Active Directory регистрируют запись CNAME контроллера домена в _msdcs. \<корневой домен леса > зону DNS, независимо от того, в каком домене они находятся в пределах леса. Запись CNAME контроллера домена является производной от атрибута objectGUID объекта параметров NTDS для каждого контроллера доменов.
+
+При выполнении операций на основе репликации целевой контроллер домена запрашивает DNS для записи CNAME исходного контроллера домена. Запись CNAME содержит полное имя компьютера исходного контроллера домена, которое используется для получения исходного IP-адреса DCs с помощью поиска в кэше DNS-клиента, поиска файлов Host/LMHOSTS, размещения записи A/AAAA в DNS или WINS.
+
+Устаревшие объекты параметров NTDS и неправильные сопоставления имен с IP-адресами в DNS, WINS, Host и LMHOSTS могут привести к тому, что RPC-клиент (конечный контроллер домена) сможет подключиться к неправильному серверу RPC (исходный контроллер домена). Кроме того, неправильное сопоставление имени с IP-адресом может привести к тому, что клиент RPC (конечный контроллер домена) будет подключаться к компьютеру, на котором не будет даже установлен серверное приложение RPC (в данном случае роль Active Directory). (Пример: устаревшая запись узла для DC2 содержит IP-адрес DC3 или компьютера члена).
+
+Убедитесь, что objectGUID исходного контроллера домена, который существует в целевой копии DCs, Active Directory соответствует значению objectGUID исходного контроллера домена, хранящемуся в копии Active Directory в исходном DC. В случае несоответствия используйте команду repadmin/шовобжмета на объекте NTDS Settings, чтобы увидеть, какой из них соответствует последнему подвижению исходного контроллера домена (указание: Сравните отметки даты для объекта параметров NTDS Дата создания, начиная с/шовобжмета и до последней даты продвижения в Исходный контроллер домена Dcpromo. log файл. Может потребоваться использовать последнюю дату изменения или создания DCPROMO. Сам файл журнала). Если идентификаторы GUID объекта не идентичны, то конечный контроллер домена, скорее всего, будет иметь устаревший объект параметров NTDS для исходного контроллера домена, запись CNAME которой ссылается на запись узла с неправильным именем для сопоставления IP-адресов.
+
+На целевом контроллере домена выполните команду IPCONFIG/ALL, чтобы определить DNS-серверы, используемые целевым контроллером домена для разрешения имен.
+
+```
+c:>ipconfig /all
+```
+
+На целевом контроллере домена выполните команду NSLOOKUP для записи CNAME исходного контроллера домена с полным именем.
+
+```
+c:>nslookup -type=cname <fully qualified cname of source DC> <destination DCs primary DNS Server IP >
+c:>nslookup -type=cname <fully qualified cname of source DC> <destination DCs secondary DNS Server IP>
+```
+
+Убедитесь, что IP-адрес, возвращенный программой NSLOOKUP "владеет" именем узла и идентификатором безопасности исходного контроллера домена:
+
+```
+C:>NBTSTAT -A <IP address returned by NSLOOKUP in the step above>
+```
+
+Войдите в консоль исходного контроллера домена, выполните команду "IPCONFIG" из командной строки и убедитесь, что исходный контроллер домена владеет IP-адресом, возвращенным приведенной выше командой NSLOOKUP.
+
+Проверка наличия устаревших или дублирующихся узлов в DNS-сопоставлениях
+
+```
+NSLOOKUP -type=hostname <single label hostname of source DC> <primary DNS Server IP on destination DC>
+NSLOOKUP -type=hostname <single label hostname of source DC> <secondary DNS Server IP on destination DC>
+
+NSLOOKUP -type=hostname <fully qualified computer name of source DC> <primary DNS Server IP on destination DC>
+NSLOOKUP -type=hostname <fully qualified computer name of source DC> <secondary DNS Server IP on dest. DC>
+```
+
+Если в записях узла существуют недопустимые IP-адреса, проверьте, включена ли очистка DNS.
+
+Если вышеприведенные тесты или трассировка сети не отображают запрос имени, возвращающий недопустимый IP-адрес, рассмотрите возможность устаревания записей в файлах узлов, файлах Lmhosts и WINS-серверах. Обратите внимание, что DNS-серверы также можно настроить для выполнения резервного разрешения имен WINS.
+
+* Убедитесь, что серверное приложение (Active Directory et al) зарегистрировано с модулем сопоставления конечных точек на сервере RPC (исходный контроллер домена).
+* Active Directory использует сочетание хорошо известных и динамически регистрируемых портов. В этой таблице перечислены хорошо известные порты и протоколы, используемые Active Directory контроллерами домена.
+
+| Серверное приложение RPC | Port | TCP | UDP |
+| --- | --- | --- | --- |
+| DNS-сервер | 53 | X | X |
+| Kerberos | 88 | X | X |
+| Сервер LDAP | 389 | X | X |
+| Microsoft-DS | 445 | X | X |
+| LDAP SSL | 636 | X | X |
+| Сервер глобального каталога | 3268 | X |   |
+| Сервер глобального каталога | 3269 | X |   |
+
+Хорошо известные порты не регистрируются с помощью сопоставителя конечных точек.
+
+Active Directory и другие приложения также регистрируют службы, которые получают динамически назначаемые порты в диапазоне временных портов RPC. Такие серверные приложения RPC динамически назначают TCP-порты между 1024 и 5000 на компьютерах под управлением Windows 2000 и Windows Server 2003 и порты в диапазоне от 49152 до 65535 на компьютерах под управлением Windows Server 2008 и Windows Server 2008 R2. Порт RPC, используемый репликацией, можно жестко закодировать в реестре, выполнив действия, описанные в [статье базы знаний 224196](https://support.microsoft.com/kb/224196). Active Directory будет продолжать регистрацию в EPM, если настроено использование жестко закодированного порта.
+
+Убедитесь, что интересующее серверное приложение RPC зарегистрировано с помощью сопоставителя конечных точек RPC на сервере RPC (исходный контроллер домена в случае репликации AD).
+
+Эту задачу можно выполнить несколькими способами, но можно установить и запустить PORTQRY из командной строки привилегированного администратора на консоли исходного контроллера домена с помощью синтаксиса:
+
+```
+portquery -n <source DC> -e 135 > file.txt
+```
+
+В выводе программы PortQry Обратите внимание на номера портов, которые динамически регистрируются с помощью протокола ncacn_ip_tcp в протоколе MS NT Directory DRS Interface (UUID = 351...). В следующем фрагменте показан пример выходных данных порткуери из контроллера домена Windows Server 2008 R2:
+
+```
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_np:CONTOSO-DC01[\pipe\lsass] 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_np:CONTOSO-DC01[\PIPE\protected_storage] 
-<codeFeaturedElement>UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_ip_tcp:CONTOSO-DC01[49156]</codeFeaturedElement> 
+UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
+ncacn_ip_tcp:CONTOSO-DC01[49156] 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
 ncacn_http:CONTOSO-DC01[49157] 
 UUID: e3514235-4b06-11d1-ab04-00c04fc2dcd2 MS NT Directory DRS Interface
-ncacn_http:CONTOSO-DC01[6004]</code>
-          <para />
-        </listItem>
-        <listItem>
-          <para>Другие возможные способы устранения этой ошибки:</para>
-          <list class="ordered">
-            <listItem>
-              <para>Убедитесь, что исходный контроллер домена загружается в обычном режиме и полностью начали роль операционной системы и контроллера домена на исходный контроллер домена.</para>
-            </listItem>
-            <listItem>
-              <para>Убедитесь, что запущена служба домена Active Directory. Если служба остановлена или не была настроена со значениями по умолчанию запуска, восстановить значения по умолчанию запуска, перезагрузите измененные контроллер домена, затем повторите операцию.</para>
-            </listItem>
-            <listItem>
-              <para>Проверьте состояние запуска значение и службы для службы RPC и локатора RPC для версии операционной системы клиент RPC (контроллер домена назначения) и RPC-сервер (исходный контроллер домена). Если служба остановлена или не была настроена со значениями по умолчанию запуска, восстановить значения по умолчанию запуска, перезагрузите измененные контроллер домена, затем повторите операцию.</para>
-              <para>Кроме того убедитесь, что контекст службы соответствует по умолчанию параметры, перечисленные в следующей таблице.</para>
-              <table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11">
-                <thead>
-                  <tr>
-                    <TD>
-                      <para>Обслуживание</para>
-                    </TD>
-                    <TD>
-                      <para>Состояние по умолчанию (тип запуска) в Windows Server 2003 и более поздние версии </para>
-                    </TD>
-                    <TD>
-                      <para>Состояние по умолчанию (тип запуска) в Windows Server 2000</para>
-                    </TD>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <TD>
-                      <para>Удаленный вызов процедур</para>
-                    </TD>
-                    <TD>
-                      <para>К работе (автоматический режим)</para>
-                    </TD>
-                    <TD>
-                      <para>К работе (автоматический режим)</para>
-                    </TD>
-                  </tr>
-                  <tr>
-                    <TD>
-                      <para>Локатор удаленного вызова процедур</para>
-                    </TD>
-                    <TD>
-                      <para>Значение NULL или остановлена (вручную)</para>
-                    </TD>
-                    <TD>
-                      <para>К работе (автоматический режим)</para>
-                    </TD>
-                  </tr>
-                </tbody>
-              </table>
-            </listItem>
-            <listItem>
-              <para>Убедитесь, что размер диапазона динамических портов не ограничено. Ниже приведен синтаксис Windows Server 2008 и Windows Server 2008 R2 NETSH для перечисления диапазон портов RPC:</para>
-              <code>&gt;netsh int ipv4 show dynamicport tcp
-&gt;netsh int ipv4 show dynamicport udp
-&gt;netsh int ipv6 show dynamicport tcp
-&gt;netsh int ipv6 show dynamicport udp</code>
-            </listItem>
-            <listItem>
-              <para>Убедитесь, что определения жестко заданный порт, определенные в статье базы Знаний 224196 попадает в диапазон динамических портов для контроллеров доменов ОС версии источника.</para>
-              <para>Просмотрите <externalLink> <linkText>статье базы Знаний 224196</linkText> <linkUri> <a href="https://support.microsoft.com/kb/224196" data-raw-source="https://support.microsoft.com/kb/224196"> https://support.microsoft.com/kb/224196 </a> </linkUri> </externalLink> и убедитесь, что жестко заданный порт попадает в диапазон временных портов для исходный контроллер домена&#39;s версии операционной системы.</para>
-            </listItem>
-            <listItem>
-              <para>Убедитесь, что существует в группе HKLM\Software\Microsoft\Rpc разделе ClientProtocols и содержит следующие значения по умолчанию 5:</para>
-              <code>ncacn_http REG_SZ rpcrt4.dll
-ncacn_ip_tcp REG_SZ rpcrt4.dll
-<codeFeaturedElement>ncacn_nb_tcp REG_SZ rpcrt4.dll</codeFeaturedElement>
-ncacn_np REG_SZ rpcrt4.dll
-ncacn_ip_udp REG_SZ rpcrt4.dll</code>
-            </listItem>
-          </list>
-        </listItem>
-      </list>
-    </content>
-  </section>
-  <section address="BKMK_MoreInfo">
-    <title>Дополнительные сведения</title>
-    <content>
-      <para>
-        <embeddedLabel>Пример неправильное имя IP-адрес, сопоставление вызывает ошибки RPC 1753 и-2146893022: указано неверное имя целевого участника</embeddedLabel>
-      </para>
-      <para>Домен contoso.com состоит из DC1 и DC2 с x.x.1.1 адресов IP и x.x.1.2. Узел &quot;объект&quot; / &quot;AAAA&quot; записей для DC2 зарегистрированы правильно на всех DNS-серверов, настроенных для DC1. Кроме того в файл HOSTS на DC1 содержит сопоставление DC2s полное доменное имя узла с IP-адрес адрес x.x.1.2 запись. Позже DC2&#39;s IP-адрес изменяется от X.X.1.2 X.X.1.3 и новый член компьютер присоединен к домену с x.x.1.2 адрес IP-адрес. Репликации AD инициируется попыток <ui>Реплицировать сейчас</ui> команда оснастки Active Directory — сайты и службы завершается с ошибкой 1753 г., как показано в трассировке ниже:</para>
-      <code>F# SRC    DEST    Operation 
+ncacn_http:CONTOSO-DC01[6004]
+```
+
+Другие возможные способы устранения этой ошибки:
+
+* Убедитесь, что исходный контроллер домена загружен в нормальном режиме и что роль ОС и контроллера домена на исходном контроллере домена полностью запущена.
+* Убедитесь, что служба домен Active Directory запущена. Если служба в данный момент остановлена или не была настроена с использованием значений запуска по умолчанию, сбросьте значения параметров запуска по умолчанию, перезагрузите измененный контроллер домена и повторите операцию.
+* Убедитесь, что значение запуска и состояние службы для службы RPC и локатора RPC указаны правильно для версии ОС клиента RPC (конечный контроллер домена) и RPC-сервера (исходный контроллер домена). Если служба в данный момент остановлена или не была настроена с использованием значений запуска по умолчанию, сбросьте значения параметров запуска по умолчанию, перезагрузите измененный контроллер домена и повторите операцию.
+   * Кроме того, убедитесь, что контекст службы соответствует параметрам по умолчанию, перечисленным в следующей таблице.
+
+      | Обслуживание | Состояние по умолчанию (тип запуска) в Windows Server 2003 и более поздних версиях | Состояние по умолчанию (тип запуска) в Windows Server 2000 |
+      | --- | --- | --- |
+      | Удаленный вызов процедур | Запущено (автоматически) | Запущено (автоматически) |
+      | Указатель удаленного вызова процедур | NULL или остановлено (вручную) | Запущено (автоматически) |
+
+* Убедитесь, что размер динамического диапазона портов не ограничен. Ниже приведен синтаксис NETSH для Windows Server 2008 и Windows Server 2008 R2 для перечисления диапазона портов RPC:
+
+   ```
+   netsh int ipv4 show dynamicport tcp
+   netsh int ipv4 show dynamicport udp
+   netsh int ipv6 show dynamicport tcp
+   netsh int ipv6 show dynamicport udp
+   ```
+
+* Убедитесь, что определение жестко закодированных портов, определенных в KB 224196, попадает в диапазон динамических портов для исходной версии ОС DCs. Ознакомьтесь с [статьей 224196 базы знаний](https://support.microsoft.com/kb/224196) и убедитесь, что жестко закодированный порт попадает в диапазон временных портов для версии операционной системы исходного контроллера домена.
+
+* Убедитесь, что раздел ClientProtocols существует в разделе Хклм\софтваре\микрософт\рпк и содержит следующие 5 значений по умолчанию:
+
+   ```
+   ncacn_http REG_SZ rpcrt4.dll
+   ncacn_ip_tcp REG_SZ rpcrt4.dll
+   ncacn_nb_tcp REG_SZ rpcrt4.dll
+   ncacn_np REG_SZ rpcrt4.dll
+   ncacn_ip_udp REG_SZ rpcrt4.dll
+   ```
+
+## <a name="more-information"></a>Дополнительные сведения
+
+Пример неверного имени для сопоставления IP-адресов, вызывающий ошибку RPC 1753 vs.-2146893022: имя целевого участника неверно
+
+Домен contoso.com состоит из DC1 и DC2 с IP-адресами x. x. 1.1 и x. x. 1.2. Записи узла "A"/"AAAA" для DC2 правильно зарегистрированы на всех DNS-серверах, настроенных для DC1. Кроме того, файл HOSTs на компьютере DC1 содержит сопоставление записей DC2s с полным именем узла с IP-адресом x. x. 1.2. Позже DC2's IP-адреса изменяются с X. X. 1.2 на X. X. 1.3, а новый компьютер-член присоединяется к домену с IP адресом x. x. 1.2. Попытки репликации AD, активируемые командой " **Реплицировать сейчас** " в Active Directory "сайты и службы", вызывают ошибку 1753, как показано в трассировке ниже:
+
+```
+F# SRC    DEST    Operation
 1 x.x.1.1 x.x.1.2 ARP:Request, x.x.1.1 asks for x.x.1.2
 2 x.x.1.2 x.x.1.1 ARP:Response, x.x.1.2 at 00-13-72-28-C8-5E
 3 x.x.1.1 x.x.1.2 TCP:Flags=......S., SrcPort=50206, DstPort=DCE endpoint resolution(135)
@@ -437,28 +281,36 @@ ncacn_ip_udp REG_SZ rpcrt4.dll</code>
 5 x.x.1.1 x.x.1.2 ARP:Response, x.x.1.1 at 00-15-5D-42-2E-00
 6 x.x.1.2 x.x.1.1 TCP:Flags=...A..S., SrcPort=DCE endpoint resolution(135)
 7 x.x.1.1 x.x.1.2 TCP:Flags=...A...., SrcPort=50206, DstPort=DCE endpoint resolution(135)
-8 x.x.1.1 x.x.1.2 MSRPC:c/o Bind: UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA} EPT(EPMP) 
-9 x.x.1.2 x.x.1.1 MSRPC:c/o Bind Ack: Call=0x2 Assoc Grp=0x5E68 Xmit=0x16D0 Recv=0x16D0 
-<codeFeaturedElement>10</codeFeaturedElement> x.x.1.1 x.x.1.2 EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} [DCE endpoint resolution(135)]
-<codeFeaturedElement>11</codeFeaturedElement> x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
-</code>
-      <para>В кадре <embeddedLabel>10</embeddedLabel>, контроллер домена назначения запрашивает конечных точек контроллеры домена источника через порт 135 для класса службы репликации Active Directory UUID E351... </para>
-      <para>В кадре <embeddedLabel>11</embeddedLabel>, исходный контроллер домена, в этом случае компьютера-члена, который еще не размещена роль контроллера домена и поэтому не зарегистрирован E351... UUID для символические ошибкой EP_S_NOT_REGISTERED, которой сопоставляется десятичное ошибка 1753 г. ответ службы репликации с его локальной EPM шестнадцатеричный ошибка 0x6d9 и сообщением об ошибке &quot;конечных точек доступны дополнительные конечные точки не&quot; .</para>
-      <para>Более поздней версии, с x.x.1.2 адрес IP-адрес компьютера-члена возвращает повышены до объектов реплики &quot;MayberryDC&quot; в домене contoso.com. Опять же <ui>Реплицировать сейчас</ui> команда используется для запуска репликации, но сейчас произойдет на экране ошибка &quot;указано неверное имя целевого участника.&quot; Компьютер, сетевой адаптер назначается IP-адрес адрес x.x.1.2 <placeholder>является</placeholder> контроллером домена, в данный момент загружается в обычном режиме и зарегистрировал E351... Служба репликации UUID с его локальной EPM, но он не является владельцем имени или безопасности удостоверение DC2 и не может расшифровать запросе Kerberos от DC1, поэтому теперь запрос завершается сбоем с ошибкой &quot;указано неверное имя целевого участника.&quot; Ошибка сопоставляется десятичное ошибка-2146893022 / hex ошибка 0x80090322. </para>
-      <para>Такие недопустимые сопоставления узла с IP-может быть вызвано устаревших записей в узле / файлы lmhost host A / AAAA регистрации в DNS или WINS. </para>
-      <para>Сводка. В этом примере не удалось, так как контроллер домена для разрешения для назначения вызвало Недопустимое сопоставление в-IP-адрес узла (в файле узла в данном случае) &quot;источника&quot; контроллера домена не запущена служба доменных служб Active Directory (или даже установленных для то пошло), репликация, имя участника-службы еще не зарегистрирован и исходный контроллер домена вернул ошибку 1753 г. Во втором случае Недопустимое сопоставление в-IP-адрес узла (в файле узла) вызвала контроллер домена для подключения к контроллеру домена, которое зарегистрировано E351 назначения... репликация имени участника-службы, но этот источник имел другое удостоверение имени узла и безопасности чем предполагаемого исходного контроллера домена, неудачных попыток с ошибкой-2146893022: Указано неверное имя целевого участника.</para>
-    </content>
-  </section>
-  <relatedTopics>
-    <externalLink>
-      <linkText>Устранение неполадок, связанных с операциями Active Directory, завершающимися с ошибкой 1753 г. Осталось доступных конечных точек. </linkText> 
-      <linkUri> <a href="https://support.microsoft.com/kb/2089874" data-raw-source="https://support.microsoft.com/kb/2089874"> https://support.microsoft.com/kb/2089874 </a> </linkUri> 
-    </externalLink> 
-<externalLink> <linkText>Статья 839880 ошибок Устранение неполадок конечных точек RPC, с помощью поддержки Windows Server 2003 Средства на компакт-диске продукта</linkText><linkUri><a href="https://support.microsoft.com/kb/839880" data-raw-source="https://support.microsoft.com/kb/839880">https://support.microsoft.com/kb/839880</a></linkUri></externalLink>
-<externalLink><linkText>КБ статье 832017 Обзор и сетевой порт службы требования к системе Windows Server</linkText><linkUri><a href="https://support.microsoft.com/kb/832017/" data-raw-source="https://support.microsoft.com/kb/832017/">https://support.microsoft.com/kb/832017/</a></linkUri></externalLink>
-<externalLink><linkText>статья 224196 ограничение Active Трафик репликации каталога и клиента RPC трафика к определенному порту</linkText><linkUri><a href="https://support.microsoft.com/kb/224196/" data-raw-source="https://support.microsoft.com/kb/224196/">https://support.microsoft.com/kb/224196/</a></linkUri></externalLink>
-<externalLink><linkText>статье базы Знаний 154596 способы настройки динамического выделения портов RPC для работы с брандмауэром</linkText><linkUri><a href="https://support.microsoft.com/kb/154596" data-raw-source="https://support.microsoft.com/kb/154596">https://support.microsoft.com/kb/154596</a></linkUri></externalLink><externalLink><linkText>как RPC Works</linkText><linkUri><a href="https://msdn.microsoft.com/library/aa373935(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373935(VS.85).aspx">https://msdn.microsoft.com/library/aa373935(VS.85).aspx</a></linkUri></externalLink><externalLink><linkText>как подготавливает сервер для подключения</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373938(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373938(VS.85).aspx"> https://msdn.microsoft.com/library/aa373938(VS.85).aspx </a> </linkUri> </externalLink> 
-<externalLink> <linkText>Как клиент устанавливает соединение</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373937(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373937(VS.85).aspx"> https://msdn.microsoft.com/library/aa373937(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>Регистрации интерфейса</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa375357(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa375357(VS.85).aspx"> https://msdn.microsoft.com/library/aa375357(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>Доступность сервера в сети</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373974(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373974(VS.85).aspx"> https://msdn.microsoft.com/library/aa373974(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>Регистрации конечных точек</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa375255(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa375255(VS.85).aspx"> https://msdn.microsoft.com/library/aa375255(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>Прослушивание клиентских вызовов</linkText> <linkUri> <a href="https://msdn.microsoft.com/library/aa373966(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373966(VS.85).aspx"> https://msdn.microsoft.com/library/aa373966(VS.85).aspx </a> </linkUri> </externalLink> <externalLink> <linkText>Как клиент устанавливает соединение</linkText><linkUri><a href="https://msdn.microsoft.com/library/aa373937(VS.85).aspx" data-raw-source="https://msdn.microsoft.com/library/aa373937(VS.85).aspx">https://msdn.microsoft.com/library/aa373937(VS.85).aspx</a></linkUri></externalLink><span class=" class=""></span class="></linkText><linkUri><a href="https://msdn.microsoft.com/library/dd207688(PROT.13).aspx" data-raw-source="https://msdn.microsoft.com/library/dd207688(PROT.13).aspx">https://msdn.microsoft.com/library/dd207688(PROT.13).aspx</a></linkUri></externalLink></relatedTopics>
-</developerConceptualDocument>
+8 x.x.1.1 x.x.1.2 MSRPC:c/o Bind: UUID{E1AF8308-5D1F-11C9-91A4-08002B14A0FA} EPT(EPMP)
+9 x.x.1.2 x.x.1.1 MSRPC:c/o Bind Ack: Call=0x2 Assoc Grp=0x5E68 Xmit=0x16D0 Recv=0x16D0
+10 x.x.1.1 x.x.1.2 EPM:Request: ept_map: NDR, DRSR(DRSR) {E3514235-4B06-11D1-AB04-00C04FC2DCD2} [DCE endpoint resolution(135)]
+11 x.x.1.2 x.x.1.1 EPM:Response: ept_map: 0x16C9A0D6 - EP_S_NOT_REGISTERED
+```
 
+В кадре **10**целевой контроллер домена отправляет запрос на сопоставление исходных конечных точек контроллеров домена по порту 135 для Active Directory E351 UUID класса службы репликации...
 
+В кадре **11**исходный контроллер домена, в данном случае рядовой компьютер, на котором еще не размещена роль контроллера домена, не зарегистрировал E351... UUID для службы репликации с локальным EPM реагирует на символьную ошибку EP_S_NOT_REGISTERED, которая соответствует десятичной ошибке 1753, шестнадцатеричной ошибке 0x6d9 и понятной ошибке "больше нет доступных конечных точек из сопоставителя конечной точки".
+
+Позже член компьютера с IP-адресом x. x. 1.2 будет повышен до реплики "Майберридк" в домене contoso.com. Опять же, команда **replicate Now** используется для активации репликации, но в этом случае происходит сбой при возникновении ошибки на экране "имя целевого участника неверно". Компьютер, сетевой адаптер которого назначен IP-адрес x. x. 1.2, является контроллером домена, в настоящий момент загружается в нормальный режим и зарегистрировал E351... UUID службы репликации с локальным EPM, но не владеет именем или удостоверением безопасности DC2 и не может расшифровать запрос Kerberos от DC1, поэтому запрос теперь завершается ошибкой "имя целевого участника неверно". Ошибка сопоставляется с десятичной ошибкой-2146893022/Hex Error 0x80090322.
+
+Такие недопустимые сопоставления узлов и IP-адресов могут быть вызваны устаревшими записями в файлах Host/LMHOSTS, узлами A/AAAA-регистрации в DNS или WINS.
+
+Суммар В этом примере произошел сбой из-за неправильного сопоставления "узел-IP" (в этом случае в файле узла) конечный контроллер домена разрешается в "исходный" контроллер домена, на котором не запущена служба домен Active Directory Services (или даже не установлена), поэтому репликация Имя участника-службы еще не зарегистрировано, а исходный контроллер домена вернул ошибку 1753. Во втором случае недопустимое сопоставление узла с IP-адресом (опять же в файле узла) привело к тому, что конечный контроллер домена подключится к контроллеру домена, который зарегистрировал E351... имя субъекта-службы репликации, но у этого источника было другое имя узла и идентификатор безопасности, чем у предполагаемого исходного контроллера домена, поэтому попытки завершились с ошибкой-2146893022: Неправильное имя целевого участника.
+
+## <a name="related-topics"></a>См. также
+
+* [Устранение неполадок Active Directory операций, которые завершились ошибкой 1753: В модуле сопоставления конечных точек больше нет доступных конечных узлов.](https://support.microsoft.com/kb/2089874)
+* [Статья 839880. Устранение ошибок сопоставителя конечных точек RPC с помощью средств поддержки Windows Server 2003 с компакт-диска продукта](https://support.microsoft.com/kb/839880)
+* [Статья базы знаний 832017: Обзор службы и требования к сетевым портам для системы Windows Server](https://support.microsoft.com/kb/832017/)
+* [Статья базы знаний 224196 с ограниченным трафиком Active Directory репликации и трафиком RPC клиента к определенному порту](https://support.microsoft.com/kb/224196/)
+* [Статья базы знаний 154596 Настройка динамического выделения портов RPC для работы с брандмауэрами](https://support.microsoft.com/kb/154596)
+* [Как работает RPC](https://msdn.microsoft.com/library/aa373935(VS.85).aspx)
+* [Как сервер готовится к подключению](https://msdn.microsoft.com/library/aa373938(VS.85).aspx)
+* [Как клиент устанавливает подключение](https://msdn.microsoft.com/library/aa373937(VS.85).aspx)
+* [Регистрация интерфейса](https://msdn.microsoft.com/library/aa375357(VS.85).aspx)
+* [Обеспечение доступности сервера в сети](https://msdn.microsoft.com/library/aa373974(VS.85).aspx)
+* [Регистрация конечных точек](https://msdn.microsoft.com/library/aa375255(VS.85).aspx)
+* [Ожидание вызовов клиента](https://msdn.microsoft.com/library/aa373966(VS.85).aspx)
+* [Как клиент устанавливает подключение](https://msdn.microsoft.com/library/aa373937(VS.85).aspx)
+* [Запрещение Active Directory трафика репликации и трафика клиента RPC к определенному порту](https://support.microsoft.com/kb/224196)
+* [Имя участника-службы для целевого контроллера домена в AD DS](https://msdn.microsoft.com/library/dd207688(PROT.13).aspx)
