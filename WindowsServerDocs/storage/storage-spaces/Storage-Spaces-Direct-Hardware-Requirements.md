@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 08/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d899ec41b9a87089f03a576fa11dfa7d210fe194
-ms.sourcegitcommit: b68ff64ecd87959cd2acde4a47506a01035b542a
+ms.openlocfilehash: 59c04a858ceae44ee51c1de10fc40b27dc22ef90
+ms.sourcegitcommit: e04565e4a1fb7aaed04addd2bc87cc6ec4c82e81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830896"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69529892"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>Требования к оборудованию для локальных дисковых пространств
 
@@ -27,7 +27,7 @@ ms.locfileid: "68830896"
    > [!TIP]
    > Хотите оценить Локальные дисковые пространства без оборудования? Используйте виртуальные машины Hyper-V или Azure, как описано в разделе [использование Локальные дисковые пространства в кластерах гостевой виртуальной машины](storage-spaces-direct-in-vm.md).
 
-## <a name="base-requirements"></a>Базовые требования
+## <a name="base-requirements"></a>Основные требования
 
 Системы, компоненты, устройства и драйверы должны быть сертифицированы для **Windows server 2016** в [каталоге Windows Server](https://www.windowsservercatalog.com). Кроме того, на серверах, дисках, адаптерах шины и сетевых адаптерах рекомендуется использовать программно-определяемый **центр обработки данных (SDDC** ) и (или) **программно-определяемый центр обработки данных (SDDC) Premium** (АКС), как показано на рисунке. см. Существует более 1 000 компонентов с АКС SDDC.
 
@@ -58,7 +58,7 @@ ms.locfileid: "68830896"
 - Зеркальное отображение RAID 1 **не** требуется, но поддерживается для загрузки
 - Рекомендуемое: 200 ГБ, минимальный размер
 
-## <a name="networking"></a>Сеть
+## <a name="networking"></a>Сети
 
 Для Локальные дисковые пространства требуется надежная сеть с высокой пропускной способностью и низкой задержкой между каждым узлом.  
 
@@ -131,5 +131,5 @@ ms.locfileid: "68830896"
 
 | Максимальные значения                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
-| Необработанная емкость на сервер | 100 ТБ               | 100 ТБ               |
+| Необработанная емкость на сервер | 400 ТБ               | 100 ТБ               |
 | Емкость пула           | 4 ПБ (4 000 ТБ)      | 1 ПБ                 |
