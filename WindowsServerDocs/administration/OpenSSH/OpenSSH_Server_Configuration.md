@@ -1,59 +1,59 @@
 ---
 ms.date: 09/27/2018
 ms.topic: conceptual
-keywords: OpenSSH, SSH, SSHD, установка, Настройка
+keywords: OpenSSH, SSH, SSHD, установка, установка
 contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Конфигурация сервера OpenSSH для Windows
-ms.openlocfilehash: 7eff3d3e1af67c9daf7a68c67c3609c0ee89fc93
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: ed424c33c4cd2c19a9b5e985ab6083bcbcb9fbdc
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280035"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546262"
 ---
-# <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 1809 и Server 2019#
+# <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 1809 и сервера 2019
 
-В этом разделе конфигурации Windows для сервера OpenSSH (sshd). 
+В этом разделе рассматривается Конфигурация Windows для сервера OpenSSH (sshd). 
 
-OpenSSH хранит подробную документацию для параметров конфигурации сети на [OpenSSH.com](https://www.openssh.com/manual.html), который является не будут скопированы в этот набор документации. 
+OpenSSH поддерживает подробную документацию по параметрам конфигурации в Интернете по адресу [OpenSSH.com](https://www.openssh.com/manual.html), который не дублируется в этом наборе документации. 
 
 ## <a name="configuring-the-default-shell-for-openssh-in-windows"></a>Настройка оболочки по умолчанию для OpenSSH в Windows
 
-По умолчанию командная оболочка предоставляет интерфейс, который пользователь видит при подключении к серверу, с помощью SSH. Начальное значение по умолчанию Windows — Windows командной оболочки (cmd.exe). Также включает Windows PowerShell и Bash и командных оболочках третьих лиц, также доступны для Windows и могут использоваться в качестве оболочки по умолчанию для сервера.
+Командная оболочка по умолчанию предоставляет пользователю возможности, отображаемые при подключении к серверу с помощью SSH. Начальными окнами по умолчанию является Командная оболочка Windows (cmd. exe). Windows также включает PowerShell и bash, и оболочки команд сторонних производителей также доступны для Windows и могут быть настроены в качестве оболочки по умолчанию для сервера.
 
-Чтобы задать командную оболочку по умолчанию, сначала убедитесь в папке установки OpenSSH в системном пути. Для Windows в папку установки по умолчанию является SystemDrive:WindowsDirectory\System32\openssh. Следующие команды показывает текущее значение параметра path и добавьте папку установки по умолчанию OpenSSH к нему. 
+Чтобы задать командную оболочку по умолчанию, сначала убедитесь, что папка установки OpenSSH находится в системном пути. Для Windows папка установки по умолчанию — SystemDrive: WindowsDirectory\System32\openssh. Следующие команды показывают текущий параметр пути и добавляют к ней папку установки по умолчанию OpenSSH. 
 
-Командная оболочка | Команду, чтобы использовать
+Командная оболочка | Используемая команда
 ------------- | -------------- 
 Command | path
-PowerShell | $env:path
+PowerShell | $env:p ь
 
-Настройка по умолчанию ssh shell выполняется в реестре Windows, добавив полный путь к исполняемому файлу Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH в строковом параметре DefaultShell оболочки. 
+Настройка оболочки SSH по умолчанию выполняется в реестре Windows путем добавления полного пути к исполняемому файлу оболочки в Computer\HKEY_LOCAL_MACHINE\SOFTWARE\OpenSSH в строковом значении Дефаултшелл. 
 
-Например следующую команду Powershell задает быть PowerShell.exe оболочку по умолчанию:
+Например, следующая команда PowerShell устанавливает оболочку по умолчанию как PowerShell. exe:
 
 ```powershell
 New-ItemProperty -Path "HKLM:\SOFTWARE\OpenSSH" -Name DefaultShell -Value "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -PropertyType String -Force
 ```
 
-## <a name="windows-configurations-in-sshdconfig"></a>Конфигураций Windows в sshd_config 
+## <a name="windows-configurations-in-sshd_config"></a>Конфигурации Windows в sshd_config 
 
-В Windows sshd считывает данные конфигурации из %programdata%\ssh\sshd_config по умолчанию или другого файла конфигурации можно составить, запустив sshd.exe с параметром -f.
-Если файл отсутствует, sshd он создается с конфигурацией по умолчанию при запуске службы.
+В Windows sshd считывает данные конфигурации из%ProgramData%\ssh\sshd_config по умолчанию или можно указать другой файл конфигурации, запустив sshd. exe с параметром-f.
+Если файл отсутствует, sshd создает его с конфигурацией по умолчанию при запуске службы.
 
-Элементы, перечисленные ниже предоставляют конфигурации, относящиеся к Windows ставшего возможным благодаря записей в sshd_config. Существуют другие параметры конфигурации в, не перечисленных здесь, как они подробно описаны в документации [документации Win32 OpenSSH](https://github.com/powershell/win32-openssh/wiki). 
+Перечисленные ниже элементы предоставляют конфигурацию Windows, которая может быть представлена в записях в sshd_config. Существуют другие параметры конфигурации, которые не перечислены здесь, так как они подробно описаны в [документации по Win32 OpenSSH](https://github.com/powershell/win32-openssh/wiki)в Интернете. 
 
 
-### <a name="allowgroups-allowusers-denygroups-denyusers"></a>AllowGroups DenyUsers AllowUsers DenyGroups, 
+### <a name="allowgroups-allowusers-denygroups-denyusers"></a>Алловграупс, Алловусерс, Дениграупс, Денюсерс 
 
-Управление, каким пользователям и группам можно соединиться с сервером выполняется с помощью директив AllowGroups, AllowUsers, DenyGroups и DenyUsers. Разрешить или запретить директивы, обрабатываются в следующем порядке: DenyUsers, AllowUsers, DenyGroups и наконец AllowGroups. Все имена учетных записей необходимо указать в нижнем регистре. См. в разделе ШАБЛОНОВ в ssh_config Дополнительные сведения о шаблонах для подстановочных знаков.
+Управление тем, какие пользователи и группы могут подключаться к серверу, осуществляется с помощью директив Алловграупс, Алловусерс, Дениграупс и Денюсерс. Директивы allow/deny обрабатываются в следующем порядке: Денюсерс, Алловусерс, Дениграупс и, наконец, Алловграупс. Все имена учетных записей должны быть указаны в нижнем регистре. Дополнительные сведения о шаблонах для подстановочных знаков см. в разделе ЗАКОНОМЕРНОсти в ssh_config.
 
-При настройке пользователя или группы на основе правил домена пользователя или группы, используйте следующий формат: ``` user?domain* ```.
-Windows позволяет несколько форматов для указания домена субъекты, но многие противоречит стандартные шаблоны Linux. По этой причине * добавляется для охвата полные доменные имена. Кроме того, этот подход использует «?», а не @, чтобы избежать конфликтов с username@host формат. 
+При настройке правил на основе пользователя или группы с пользователем или группой домена используйте следующий формат: ``` user?domain* ```.
+Windows поддерживает несколько форматов для указания субъектов домена, но многие конфликтуют со стандартными шаблонами Linux. По этой причине * добавляется в подопределение полных доменных имен. Кроме того, этот подход использует "?" вместо @, чтобы избежать конфликтов с username@host форматом. 
 
-Рабочие группы пользователей или групп и учетных записей, подключенной к Интернету всегда разрешаются до своего имени локальной учетной записи (не доменной частью, аналогичную стандартные имена в Unix). Пользователи и группы домена относятся исключительно к [NameSamCompatible](https://docs.microsoft.com/windows/desktop/api/secext/ne-secext-extended_name_format) формат — domain_short_name\user_name. Всех пользователей или групп на основе конфигурации, что правила нужно соблюдать этот формат.
+Пользователи и группы рабочей группы, а также подключенные к Интернету учетные записи всегда разрешаются по имени локальной учетной записи (нет части домена, похожей на стандартные имена UNIX). Пользователи и группы домена строго разрешаются в формате [намесамкомпатибле](https://docs.microsoft.com/windows/desktop/api/secext/ne-secext-extended_name_format) -domain_short_name\user_name. Все правила конфигурации на основе пользователей и групп должны соответствовать этому формату.
 
 Примеры для пользователей и групп домена 
 
@@ -70,71 +70,71 @@ AllowUsers localuser@192.168.2.23
 AllowGroups sshusers
 ```
 
-### <a name="authenticationmethods"></a>AuthenticationMethods 
+### <a name="authenticationmethods"></a>аусентикатионмесодс 
 
-Для Windows OpenSSH только доступные методы проверки подлинности являются «password» и «publickey».
+Для Windows OpenSSH единственными доступными методами проверки подлинности являются "Password" и "PublicKey".
 
-### <a name="authorizedkeysfile"></a>AuthorizedKeysFile 
+### <a name="authorizedkeysfile"></a>аусоризедкэйсфиле 
 
-По умолчанию используется «.ssh/authorized_keys .ssh/authorized_keys2». Если путь не является абсолютным, он берется относительно домашнем каталоге пользователя (или путь к образу профиля). Пример: c:\users\user.
+Значение по умолчанию — ". ssh/authorized_keys. ssh/authorized_keys2". Если путь не является абсолютным, он принимается относительно домашнего каталога пользователя (или пути к образу профиля). Символа. к:\усерс\усер.
 
-### <a name="chrootdirectory-support-added-in-v7700"></a>ChrootDirectory (поддержка добавлена в v7.7.0.0)
+### <a name="chrootdirectory-support-added-in-v7700"></a>Чрутдиректори (поддержка добавлена в версии v 7.7.0.0)
 
-Эта директива поддерживается только с сеансами sftp. Не соблюдает системе удаленного сеанса в cmd.exe. Чтобы настроить сервер sftp только chroot, присвоено ForceCommand внутренней sftp. Также может настроить scp с chroot, путем реализации пользовательской оболочки, которая позволила бы только scp и sftp.
+Эта директива поддерживается только для сеансов SFTP. Удаленный сеанс в cmd. exe не соблюдается. Чтобы настроить сервер чрут только SFTP, задайте для Форцекомманд значение Internal-SFTP. Вы также можете настроить SCP с помощью чрут, реализовав пользовательскую оболочку, которая будет разрешать только SCP и SFTP.
 
 ### <a name="hostkey"></a>HostKey
 
-По умолчанию используется % programdata%/ssh/ssh_host_rsa_key programdata%/ssh/ssh_host_ecdsa_key "," %programdata%/ssh/ssh_host_ed25519_key "и" %. Если отсутствуют значения по умолчанию, sshd автоматически создает эти при запуске службы.
+Значения по умолчанию:% папка ProgramData%/SSH/ssh_host_ecdsa_key,% папка ProgramData%/SSH/ssh_host_ed25519_key и% папка ProgramData%/SSH/ssh_host_rsa_key. Если значения по умолчанию отсутствуют, sshd автоматически создает их при запуске службы.
 
 ### <a name="match"></a>Сопоставление
 
-Обратите внимание, что шаблон правила в этом разделе. Имена пользователей и групп должны быть в нижнем регистре.
+Обратите внимание на правила шаблона в этом разделе. Имена пользователей и групп должны быть в нижнем регистре.
 
-### <a name="permitrootlogin"></a>PermitRootLogin
+### <a name="permitrootlogin"></a>пермитрутлогин
 
-Неприменимо в Windows. Чтобы предотвратить имя входа администратора, используйте администраторов с директивой DenyGroups.
+Неприменимо в Windows. Чтобы предотвратить вход администратора, используйте администраторы с директивой Дениграупс.
 
-### <a name="syslogfacility"></a>SyslogFacility
+### <a name="syslogfacility"></a>сислогфаЦилити
 
-Если вам требуется файл на основе ведения журнала, используйте LOCAL0. Журналы создаются в разделе % programdata%\ssh\logs.
-Любое другое значение, включая значение по умолчанию AUTH направляет ведение журнала трассировки событий Windows. Дополнительные сведения см. в разделе средства ведения журнала в Windows.
+Если требуется ведение журнала на основе файлов, используйте LOCAL0. Журналы создаются в разделе%програмдата%\сш\логс.
+Любое другое значение, включая проверку подлинности по умолчанию, направляет ведение журнала в ETW. Дополнительные сведения см. в статье средства ведения журнала в Windows.
 
 ### <a name="not-supported"></a>Не поддерживается. 
 
-Следующие параметры конфигурации не доступны в версии OpenSSH, который поставляется в Windows Server 2019 и Windows 10 1809:
+Следующие параметры конфигурации недоступны в версии OpenSSH, которая поставляется в Windows Server 2019 и Windows 10 1809:
 
-* AcceptEnv
-* AllowStreamLocalForwarding
-* AuthorizedKeysCommand
-* AuthorizedKeysCommandUser
-* AuthorizedPrincipalsCommand
-* AuthorizedPrincipalsCommandUser
+* акцептенв
+* алловстреамлокалфорвардинг
+* аусоризедкэйскомманд
+* аусоризедкэйскоммандусер
+* аусоризедпринЦипалскомманд
+* аусоризедпринЦипалскоммандусер
 * сжатие;
-* ExposeAuthInfo
-* GSSAPIAuthentication
-* GSSAPICleanupCredentials
-* GSSAPIStrictAcceptorCheck
-* HostbasedAcceptedKeyTypes
-* HostbasedAuthentication
-* HostbasedUsesNameFromPacketOnly
-* IgnoreRhosts
-* IgnoreUserKnownHosts
-* KbdInteractiveAuthentication
-* KerberosAuthentication
-* KerberosGetAFSToken
-* KerberosOrLocalPasswd
-* KerberosTicketCleanup
-* PermitTunnel
-* PermitUserEnvironment
-* PermitUserRC
-* PidFile
-* PrintLastLog
-* RDomain
-* StreamLocalBindMask
-* StreamLocalBindUnlink
-* StrictModes
+* експосеаусинфо
+* гссапиаусентикатион
+* гссапиклеанупкредентиалс
+* гссапистриктакцепторчекк
+* хостбаседакцептедкэйтипес
+* хостбаседаусентикатион
+* хостбаседусеснамефромпаккетонли
+* игнорерхостс
+* игнореусеркновнхостс
+* кбдинтерактивеаусентикатион
+* керберосаусентикатион
+* керберосжетафстокен
+* керберосорлокалпассвд
+* керберостиккетклеануп
+* пермиттуннел
+* пермитусеренвиронмент
+* пермитусеррк
+* пидфиле
+* принтластлог
+* рдомаин
+* стреамлокалбиндмаск
+* стреамлокалбиндунлинк
+* стриктмодес
 * X11DisplayOffset
 * X11Forwarding
 * X11UseLocalhost
-* XAuthLocation
+* ксауслокатион
 

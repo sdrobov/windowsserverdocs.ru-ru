@@ -8,12 +8,12 @@ author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
 ms.date: 12/18/2018
-ms.openlocfilehash: b144127de2ceea99e36549974101d190154aaeaf
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 78006dbbd2bdc569c15ac9967d8c5c542664312c
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476524"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546287"
 ---
 # <a name="administer-a-server-core-server"></a>Администрирование сервера Server Core
 
@@ -41,7 +41,7 @@ ms.locfileid: "68476524"
    New-NetIPaddress -InterfaceIndex 12 -IPAddress 192.0.2.2 -PrefixLength 24 -DefaultGateway 192.0.2.1
    ```
 
-   Где:
+   где:
    - **InterfaceIndex** — это значение **ifindex** из шага 2. (В нашем примере — 12)
    - **IPAddress** — это статический IP-адрес, который вы хотите задать. (В нашем примере это 191.0.2.2)
    - **PrefixLength** — это длина префикса (другая форма маски подсети) для НАСТРОЕННОГО IP-адреса. (Для нашего примера — 24)
@@ -52,7 +52,7 @@ ms.locfileid: "68476524"
    Set-DNSClientServerAddress –InterfaceIndex 12 -ServerAddresses 192.0.2.4
    ```
    
-   Где:
+   где:
    - **InterfaceIndex** — это значение ifindex из шага 2.
    - **Сервераддрессес** — это IP-адрес DNS-сервера.
 5. Чтобы добавить несколько DNS-серверов, выполните следующий командлет: 
@@ -90,8 +90,8 @@ ms.locfileid: "68476524"
 > [!NOTE]
 > Вы также можете активировать сервер по телефону, используя [сервер службы управления ключами (KMS)](../../get-started/server-2016-activation.md)или удаленно. Для удаленной активации выполните следующий командлет с удаленного компьютера: 
 > 
-> ```powershell
-> **cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato**
+> ```
+> cscript windows\system32\slmgr.vbs <ServerName> <UserName> <password>:-ato
 > ```
  
 ### <a name="configure-windows-firewall"></a>Настройка брандмауэра Windows
@@ -136,7 +136,7 @@ ms.locfileid: "68476524"
 |Задача|Command| 
 |----|-------|
 |Настройка сервера для использования прокси-сервера|**Netsh WinHTTP Set Proxy \<ServerName\>:\<номер порта\>** <br>**Примечание.** Установка основных серверных компонентов не может получить доступ к Интернету через прокси-сервер, для которого требуется пароль, чтобы разрешить подключения.|
-|Настройка сервера для обхода прокси-сервера для адресов Интернета|**Netsh винттп Set Proxy \<ServerName\>:\<No Port\> No-List = "\<Local\>"**| 
+|Настройка сервера для обхода прокси-сервера для адресов Интернета|**Netsh WinHTTP Set Proxy \<ServerName\>:\<No Port\> No-List = "\<Local\>"**| 
 |Отображение или изменение конфигурации IPSEC|**Netsh IPSec**| 
 |Отображение или изменение конфигурации защиты доступа к сети|**Netsh NAP**| 
 |Отображение или изменение преобразования IP-адресов в физический адрес|**arp**| 
@@ -147,7 +147,7 @@ ms.locfileid: "68476524"
 |Отображение прыжков для сетевых подключений|**pathping**| 
 |Трассировка прыжков для сетевых подключений|**tracert**| 
 |Отображение конфигурации маршрутизатора с поддержкой многоадресной рассылки|**mrinfo**| 
-|Включение удаленного администрирования брандмауэра|**netsh advfirewall firewall set Rule Group = "удаленное управление брандмауэром Windows" новое включить = да**| 
+|Включение удаленного администрирования брандмауэра|**netsh advfirewall firewall set Rule Group = "удаленное управление брандмауэром защитника Windows" новое включить = да**| 
  
 
 ### <a name="updates-error-reporting-and-feedback"></a>Обновления, отчеты об ошибках и отзывы

@@ -8,12 +8,12 @@ ms.topic: article
 ms.assetid: bc22d29c-678c-462d-88b3-1c737dceca75
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fec546e0608c36f9b3d907e486a0a3a24e7d1728
-ms.sourcegitcommit: e04565e4a1fb7aaed04addd2bc87cc6ec4c82e81
+ms.openlocfilehash: 2a47403d4f88d5487fb4ffb0e35c46438aadcd8a
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 08/16/2019
-ms.locfileid: "69529897"
+ms.locfileid: "69546522"
 ---
 # <a name="use-regular-expressions-in-nps"></a>Использование регулярных выражений в NPS
 
@@ -28,7 +28,7 @@ ms.locfileid: "69529897"
 
 |  Символов  |                                                                                 Описание                                                                                  |                                                                 Пример                                                                 |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|     `\`|                                                              Помечает следующий символ как символ для сопоставления.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
+|     `\ `     |                                                              Помечает следующий символ как символ для сопоставления.                                                               |                      `/n/ matches the character "n". The sequence /\n/ matches a line feed or newline character.`                       |
 |     `^`     |                                                                 Соответствует началу ввода или строки.                                                                  |                                                                 &nbsp;                                                                  |
 |     `$`     |                                                                    Соответствует концу ввода или строки.                                                                     |                                                                 &nbsp;                                                                  |
 |     `*`     |                                                             Соответствует предыдущему символу ноль или более раз.                                                              |                                                  `/zo*/ matches either "z" or "zoo."`                                                   |
