@@ -14,12 +14,12 @@ manager: dougkim
 ms.author: helohr
 ms.date: 05/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 341262243b5bbe8ed046382d7490a6e5c39b8965
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b7810d0b8b7cbd8d886b99a07d1419cb5e8197ed
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66188135"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546418"
 ---
 # <a name="remote-desktop-clients"></a>Клиенты удаленного рабочего стола
 
@@ -35,8 +35,8 @@ ms.locfileid: "66188135"
 |----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
 | Windows  | [Клиент Windows 10 в Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                      | [Начало работы с удаленного рабочего стола для Windows](windows.md)                |
 | Android  | [Клиент Android в Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)        | [Начало работы с удаленного рабочего стола на устройстве Android](remote-desktop-android.md) |
-| iOS      | [Клиент iOS в магазине iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id714464092?mt=8)     | [Начало работы с удаленного рабочего стола на устройстве iOS](remote-desktop-ios.md)         |
-| macOS    | [Клиент macOS в магазине iTunes](https://itunes.apple.com/us/app/microsoft-remote-desktop/id1295203466?mt=12) | [Начало работы с удаленного рабочего стола на компьютере Mac](remote-desktop-mac.md)         |
+| iOS      | [Клиент iOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [Начало работы с удаленного рабочего стола на устройстве iOS](remote-desktop-ios.md)         |
+| macOS    | [Клиент macOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Начало работы с удаленного рабочего стола на компьютере Mac](remote-desktop-mac.md)         |
 
 ## <a name="configuring-the-remote-pc"></a>Настройка удаленного компьютера
 
