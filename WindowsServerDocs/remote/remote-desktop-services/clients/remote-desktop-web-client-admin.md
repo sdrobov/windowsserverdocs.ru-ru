@@ -8,12 +8,12 @@ ms.date: 11/2/2018
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: d6761c43eefe04430603a1a16e9e8d256176a736
-ms.sourcegitcommit: 25376e261ebd5e85355c298cfd0bbd6b578a6a0c
+ms.openlocfilehash: d167fb5dfdfbb2a302c2b0fca9286dc034b730e3
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68729540"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546340"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>Настройка веб-клиента удаленного рабочего стола для пользователей
 
@@ -273,9 +273,10 @@ ms.locfileid: "68729540"
  По умолчанию пользователь может выбрать любой из методов запуска. Логическое значение **$true** вынудит пользователя запускать ресурсы в браузере. Логическое значение **$false** вынудит пользователя запускать ресурсы, скачивая RDP-файл для обработки с помощью локально установленного клиента RDP.
 
 ### <a name="reset-rdwebclientdeploymentsetting-configurations-to-default"></a>Сброс конфигурации RDWebClientDeploymentSetting до значений по умолчанию
-Чтобы сбросить параметр веб-клиента на уровне развертывания до конфигурации по умолчанию, выполните следующий командлет PowerShell и укажите имя сбрасываемого параметра, используя параметр --Name.
-  
-  ```PowerShell
+
+Чтобы сбросить параметр веб-клиента на уровне развертывания до конфигурации по умолчанию, выполните следующий командлет PowerShell и укажите имя сбрасываемого параметра, используя параметр -name.
+
+   ```PowerShell
     Reset-RDWebClientDeploymentSetting -Name "LaunchResourceInBrowser"
     Reset-RDWebClientDeploymentSetting -Name "SuppressTelemetry"
    ```

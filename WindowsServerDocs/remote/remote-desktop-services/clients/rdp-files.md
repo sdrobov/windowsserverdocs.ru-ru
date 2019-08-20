@@ -13,18 +13,18 @@ manager: dongill
 ms.author: helohr
 ms.date: 05/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b11f4356496607d59e6c1b8dff2fb8edc0535cb
-ms.sourcegitcommit: 25376e261ebd5e85355c298cfd0bbd6b578a6a0c
+ms.openlocfilehash: ecc3236d44146015564fa593aaf8a20d3bfa42ff
+ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68729552"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546465"
 ---
 # <a name="supported-remote-desktop-rdp-file-settings"></a>Поддерживаемые параметры RDP-файла удаленного рабочего стола
 
 Следующая таблица содержит список поддерживаемых параметров RDP-файла, которые можно использовать с клиентами Windows и HTML. Знак "x" в столбце платформы означает, что параметр поддерживается. Тем не менее это не полный список поддерживаемых параметров для клиентов Windows и HTML5. Мы продолжим обновлять эту таблицу, добавляя дополнительные поддерживаемые параметры RDP для клиентов Windows и HTML5, а также для клиентов macOS, iOS и Android.
 
-Дополнительные сведения о том, как для пула узлов настроить свойства протокола RDP с помощью PowerShell, см. в [этой статье](https://docs.microsoft.com/azure/virtual-desktop/customize-rdp-properties).
+См. об [использовании PowerShell для настройки свойств протокола удаленного рабочего стола для пула узлов](https://go.microsoft.com/fwlink/?linkid=2098243&clcid=0x409).
 
 | Параметры RDP                        | Описание            | Значения                 | Значение по умолчанию          | Виртуальный рабочий стол Windows | Windows | HTML5   |
 |------------------------------------|------------------------|------------------------|:----------------------:|:-----------------------:|:-------:|:-------:|

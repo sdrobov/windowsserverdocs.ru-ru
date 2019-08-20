@@ -1,48 +1,43 @@
 ---
-title: Установка, обновление, миграция в Windows Server 2019
-description: Как выполняется чистая установка, обновление на месте или миграция в Windows Server 2019.
-ms.custom: na
+title: Установка, обновление или миграция в Windows Server 2019
+description: Как выполнить чистую установку, обновление на месте или миграцию в Windows Server
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 99f7daa4-30ce-4d13-be65-0a4e99cca754
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 1fd955a640832eb161666f74b93d91bb2c3eff11
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 7e90738a157f620124bfca3d5f1f4c12789d3bf2
+ms.sourcegitcommit: b17ccf7f81e58e8f4dd844be8acf784debbb20ae
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810818"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69023918"
 ---
-# <a name="install--upgrade--migrate-to-windows-server-2019"></a>Установка, обновление, миграция в Windows Server 2019
+# <a name="install-upgrade-or-migrate-to-windows-server"></a>Установка, обновление или миграция в Windows Server
 
->Область применения. Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 > [!IMPORTANT]
-> Расширенная поддержка Windows Server 2008 R2 и Windows Server 2008 закончится в январе 2020 года. [Узнайте больше о вариантах обновления](http://aka.ms/upgradecenter).
+> Расширенная поддержка Windows Server 2008 R2 и Windows Server 2008 закончится в январе 2020 года. [Узнайте больше о вариантах обновления](http://aka.ms/upgradecenter). Чтобы скачать Windows Server 2019, см. об [ознакомительных версиях Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
-Пришло время перейти на более новую версию Windows Server? В зависимости от того, какая операционная система сейчас установлена на вашем компьютере, у вас есть множество вариантов.
+Пришло время перейти на более новую версию Windows Server? В зависимости от того, какая операционная система сейчас установлена на вашем компьютере, у вас есть несколько вариантов.
 
 ## <a name="clean-install"></a>Чистая установка
-Если вы хотите перейти со старой версии Windows Server на Windows Server 2019 на том же оборудовании, вам нужна **чистая установка**. Здесь вы просто устанавливаете более новую операционную систему поверх старой на имеющемся у вас оборудовании, удаляя, таким образом, предыдущую операционную систему. Это самый простой способ, но для начала вам необходимо создать резервную копию данных и запланировать переустановку приложений. Существует несколько факторов, которые следует учитывать, например требования к системе. Поэтому обязательно проверьте данные [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418) и [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
+
+Самый простой способ установить Windows Server — выполнить чистую установку на пустой сервер или перезаписать существующую операционную систему. Это самый простой способ, но для начала вам необходимо создать резервную копию данных и запланировать переустановку приложений. Существует несколько факторов, которые следует учитывать, например требования к системе. Поэтому обязательно проверьте данные [Windows Server 2019](https://go.microsoft.com/fwlink/?linkid=2006124), [Windows Server 2016](https://go.microsoft.com/fwlink/?LinkID=825558), [Windows Server 2012 R2](https://technet.microsoft.com/library/dn303418) и [Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).
 
 ## <a name="in-place-upgrade"></a>Обновление на месте
 
-Если вы хотите использовать то же оборудование и сохранить все роли сервера, которые вы настроили, без сброса настроек сервера, вам подойдет **обновление на месте**, когда вы переходите со старой операционной системы на более новую, сохраняя параметры, роли сервера и данные неповрежденными. Например, если ваш сервер работает под управлением Windows Server 2012 R2, вы можете обновить его до Windows Server 2016 или Windows Server 2019. Однако не каждая устаревшая операционная система позволяет перейти на любую новую ОС. См. доступные варианты обновления на следующей схеме.
-
-![Схема вариантов обновления Windows Server на месте](media/upgrade-paths.png)
+Если вы хотите использовать то же оборудование и сохранить все роли сервера, которые вы настроили, без сброса настроек сервера, вам подойдет **обновление на месте**, когда вы переходите со старой операционной системы на более новую, сохраняя параметры, роли сервера и данные неповрежденными. Например, если ваш сервер работает под управлением Windows Server 2012 R2, вы можете обновить его до Windows Server 2016 или Windows Server 2019. Однако не каждая устаревшая операционная система позволяет перейти на любую новую ОС. 
 
 Посетите [Центр обновления Windows Server](http://aka.ms/upgradecenter), чтобы получить пошаговые инструкции по обновлению:
 
 [![Снимок экрана: Центр обновления Windows Server](media/upgrade-center.png)](http://aka.ms/upgradecenter)
 
-## <a name="cluster-os-rolling-upgrade"></a>Последовательное обновление ОС кластера
+## <a name="cluster-os-rolling-upgrade"></a>Последовательное обновление операционной системы кластера
 
 Последовательное обновление ОС кластера позволяет администратору обновлять ОС узлов кластера с Windows Server 2012 R2 до Windows Server 2016, не останавливая рабочие нагрузки Hyper-V или масштабируемого файлового сервера. Эта функция позволяет избежать простоя, который может нарушать соглашения об уровне обслуживания. Подробнее эта новая функция рассматривается в статье [Последовательное обновление ОС кластера](https://technet.microsoft.com/windows-server-docs/failover-clustering/cluster-operating-system-rolling-upgrade).
 
@@ -51,8 +46,5 @@ ms.locfileid: "66810818"
 Документация по миграции Windows Server помогает переместить одну роль или компонент за раз с исходного компьютера, работающего под управлением Windows Server, на другой целевой компьютер, работающий под управлением Windows Server такой же или более новой версии. Для этих целей миграция определяется как перемещение одной роли или компонента и его данных на другой компьютер без обновления компонентов на том же компьютере. 
 
 ## <a name="license-conversion"></a>Преобразование лицензии
+
 Для некоторых версий ОС можно перейти с определенного выпуска версии на другой выпуск той же версии за один шаг с помощью простой команды и соответствующего лицензионного ключа. Это называется **преобразованием лицензии**. Например, если ваш сервер работает под управлением Windows Server 2016 Standard, вы можете преобразовать его в Windows Server 2016 Datacenter. Следует помнить, что вы можете перейти с плана Standard Server 2016 на Server 2016 Datacenter, вы не сможете обратить этот процесс и перейти с Datacenter на Standard. В некоторых выпусках Windows Server можно также свободно выбирать переход на оригинальную версию, версию с корпоративным лицензированием и розничную версию с помощью той же команды и соответствующего ключа.
-
-
- 
- 
