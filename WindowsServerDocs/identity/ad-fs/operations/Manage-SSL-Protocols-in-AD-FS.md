@@ -1,6 +1,6 @@
 ---
-title: Управление протоколов SSL/TLS и комплектов шифров для служб AD FS
-description: Часто задаваемые вопросы для AD FS 2016
+title: Управление протоколами SSL/TLS и комплектами шифров для AD FS
+description: Часто задаваемые вопросы по AD FS 2016
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,60 +8,60 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: c1153cd81185dcfe83d291161a85481e5a7d0700
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 951e7d74a3370d9863d747e349d7fe701615e225
+ms.sourcegitcommit: 2e38b26742f3b16c153170d6f5219c020a8e9383
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280551"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69896818"
 ---
-# <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Управление протоколов SSL/TLS и комплектов шифров для служб AD FS
-Следующая документация содержит сведения о том, как отключить и включить определенные протоколы TLS/SSL и комплекты шифров, которые используются службами AD FS
+# <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Управление протоколами SSL/TLS и комплектами шифров для AD FS
+В следующей документации содержатся сведения о том, как отключить и включить определенные протоколы TLS/SSL и комплекты шифров, используемые AD FS
 
-## <a name="tlsssl-schannel-and-cipher-suites-in-ad-fs"></a>Протокол TLS/SSL, SChannel и комплектов шифров в AD FS
+## <a name="tlsssl-schannel-and-cipher-suites-in-ad-fs"></a>TLS/SSL, SChannel и комплекты шифров в AD FS
 
-Безопасности транспортного уровня (TLS) и Secure Sockets Layer (SSL) — это протоколы, которые для защиты обмена данными.  Службы федерации Active Directory использует эти протоколы для обмена данными.  Сегодня существует несколько версий этих протоколов.
+Протоколы TLS и SSL (SSL) обеспечивают безопасность обмена данными.  Службы федерации Active Directory (AD FS) использует эти протоколы для обмена данными.  В настоящее время существует несколько версий этих протоколов.
 
-Канал Schannel — это безопасности поддержки поставщика (SSP), реализующий SSL, TLS и DTLS Internet стандартные протоколы проверки подлинности. Интерфейс поставщика поддержки безопасности (SSPI) является интерфейсом API, используемым системами Windows для выполнения функций, связанных с безопасностью, включая проверку подлинности. Интерфейс SSPI работает как общий интерфейс для нескольких поставщиков поддержки безопасности (SSP), включая поставщика SCHANNEL SSP.
+Schannel — это поставщик поддержки безопасности (SSP), реализующий стандартные протоколы проверки подлинности SSL, TLS и DTLS Internet. Интерфейс поставщика поддержки безопасности (SSPI) является интерфейсом API, используемым системами Windows для выполнения функций, связанных с безопасностью, включая проверку подлинности. Интерфейс SSPI работает как общий интерфейс для нескольких поставщиков поддержки безопасности (SSP), включая поставщика SCHANNEL SSP.
 
-Комплект шифров — это набор алгоритмов шифрования. Schannel SSP Реализация протоколов TLS/SSL используют алгоритмы из комплекта шифров для создания ключей и шифрования информации. Комплект шифров указывает один алгоритм для каждой из следующих задач:
+Комплект шифров — это набор алгоритмов шифрования. Реализация протокола TLS/SSL в ПОСТАВЩИКе SChannel использует алгоритмы из набора шифров для создания ключей и шифрования информации. Комплект шифров указывает один алгоритм для каждой из следующих задач:
 
 - обмена ключами;
 - массового шифрования;
 - проверки подлинности сообщений.
 
-AD FS использует Schannel.dll для выполнения ее взаимодействие защищенный обмен данными.  В настоящее время AD FS поддерживает все протоколы и комплекты шифров, поддерживаемые Schannel.dll.
+AD FS использует SChannel. dll для выполнения взаимодействия с безопасной связью.  В настоящее время AD FS поддерживает все протоколы и комплекты шифров, поддерживаемые SChannel. dll.
 
-## <a name="managing-the-tlsssl-protocols-and-cipher-suites"></a>Управление протоколы TLS/SSL и комплекты шифров
+## <a name="managing-the-tlsssl-protocols-and-cipher-suites"></a>Управление протоколами TLS/SSL и комплектами шифров
 > [!IMPORTANT]
-> Этот раздел содержит шаги, которые описывают, как вносить изменения в реестр. Тем не менее при неправильном изменении реестра, могут возникнуть серьезные проблемы. Внимательно выполняйте описанные действия. 
+> В этом разделе содержатся инструкции по изменению реестра. Однако при неправильном изменении реестра могут возникнуть серьезные проблемы. Внимательно выполняйте описанные действия. 
 > 
-> Имейте в виду, что изменение параметров безопасности для безопасного канала SCHANNEL может прервать или предотвращения связи между некоторыми клиентами и серверами.  Это происходит, если необходим безопасный обмен данными, и они не имеют протокол для установления соединений с.
+> Имейте в виду, что изменение параметров безопасности по умолчанию для канала SCHANNEL может привести к нарушению или предотвращению обмена данными между определенными клиентами и серверами.  Это происходит, если требуется безопасная связь и у них нет протокола для согласования связи с.
 > 
-> В случае применения этих изменений, они должны применяться для всех серверов AD FS в ферме.  После применения этих изменений требуется перезагрузка.
+> При применении этих изменений они должны быть применены ко всем AD FSным серверам в ферме.  После применения этих изменений требуется перезагрузка.
 
-В современной день и возраст, укреплении безопасности серверов и удаление старых или слабые комплекты шифров становится основное приоритетное во многих организациях.  Наборы программного обеспечения, тестируется ваши серверы и предоставляют подробные сведения об этих протоколов и наборов.  Для сохранения совместимости или достижения безопасного оценок, удалив или отключив слабый протоколов и шифров становится обязательным.  В оставшейся части этого документа будут представлены рекомендации о том, как включить или отключить определенные протоколы и комплекты шифров.
+В сегодняшний день и возраст, усиление защиты серверов и удаление старых или слабых комплектов шифров становится основным приоритетом для многих организаций.  Доступны пакеты программного обеспечения, которые проверяют серверы и предоставляют подробные сведения об этих протоколах и наборах.  Чтобы сохранить соответствие требованиям или обеспечить безопасность, удаление или отключение более слабых протоколов или наборов шифров стало необходимостью.  В оставшейся части этого документа содержатся инструкции по включению и отключению определенных протоколов и комплектов шифров.
 
-Ниже разделы реестра находятся в одном расположении:  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Используйте команду regedit и PowerShell для включения или отключения этих протоколов и шифров.
+Приведенные ниже разделы реестра находятся в одном расположении:  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols.  Используйте Regedit или PowerShell, чтобы включить или отключить эти протоколы и комплекты шифров.
 
 ![Раздел реестра](media/Managing-SSL-Protocols-in-AD-FS/registry.png)
 
-## <a name="enable-and-disable-ssl-20"></a>Включение и отключение SSL 2.0
-Чтобы включить или отключить SSL 2.0 используйте следующие разделы реестра и их значения.
+## <a name="enable-and-disable-ssl-20"></a>Включение и отключение SSL 2,0
+Используйте следующие разделы реестра и их значения для включения и отключения SSL 2,0.
 
-### <a name="enable-ssl-20"></a>Включить протокол SSL 2.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server] "DisabledByDefault"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client] "DisabledByDefault"=dword:00000000 
+### <a name="enable-ssl-20"></a>Включение SSL 2,0
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ сервер] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ сервер] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ клиент] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ клиент] "DisabledByDefault" = DWORD: 00000000 
 
-### <a name="disable-ssl-20"></a>Отключить протокол SSL 2.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SL 2.0\Server] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server] "DisabledByDefault"=dword:00000001 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Client] "DisabledByDefault"=dword:00000001
+### <a name="disable-ssl-20"></a>Отключение SSL 2,0
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ сервер] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ сервер] "DisabledByDefault" = DWORD: 00000001 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ клиент] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0 \ клиент] "DisabledByDefault" = DWORD: 00000001
 
-### <a name="using-powershell-to-disable-ssl-20"></a>С помощью PowerShell, чтобы отключить SSL 2.0
+### <a name="using-powershell-to-disable-ssl-20"></a>Отключение SSL 2,0 с помощью PowerShell
 
 ``` powershell
 New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 2.0\Server' -Force | Out-Null
@@ -78,22 +78,22 @@ New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders
 Write-Host 'SSL 2.0 has been disabled.'
 ```
 
-## <a name="enable-and-disable-ssl-30"></a>Включение и отключение SSL 3.0
-Используйте следующие разделы реестра и их значения для включения и отключения SSL 3.0.
+## <a name="enable-and-disable-ssl-30"></a>Включение и отключение SSL 3,0
+Используйте следующие разделы реестра и их значения для включения и отключения SSL 3,0.
 
 ### <a name="enable-ssl-30"></a>Включение SSL 3.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server] "DisabledByDefault"=dword:00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client] "DisabledByDefault"=dword:00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ сервер] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ сервер] "DisabledByDefault" = DWORD: 00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ клиент] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ клиент] "DisabledByDefault" = DWORD: 00000000 
 
-### <a name="disable-ssl-30"></a>Отключить протокол SSL 3.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server] "DisabledByDefault"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Client] "DisabledByDefault"=dword:00000001 
+### <a name="disable-ssl-30"></a>Отключение SSL 3,0
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ сервер] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ сервер] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ клиент] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0 \ клиент] "DisabledByDefault" = DWORD: 00000001 
 
-### <a name="using-powershell-to-disable-ssl-30"></a>С помощью PowerShell для отключения SSL 3.0
+### <a name="using-powershell-to-disable-ssl-30"></a>Отключение SSL 3,0 с помощью PowerShell
 
 ```powershell
     New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\SSL 3.0\Server' -Force | Out-Null
@@ -110,27 +110,27 @@ Write-Host 'SSL 2.0 has been disabled.'
     Write-Host 'SSL 3.0 has been disabled.'
 ```
 
-## <a name="enable-and-disable-tls-10"></a>Включение и отключение TLS 1.0
-Используйте следующие разделы реестра и их значения для включения и отключения TLS 1.0.
+## <a name="enable-and-disable-tls-10"></a>Включение и отключение TLS 1,0
+Используйте следующие разделы реестра и их значения для включения и отключения TLS 1,0.
 
 > [!IMPORTANT]
-> Отключение TLS 1.0 приведет к разрыву WAP AD FS отношение доверия.  Если отключить TLS 1.0 следует включить строгое проверки подлинности для приложений.  См. в разделе [Включение строгой проверки подлинности](#enabling-strong-authentication-for-net-applications) 
+> Отключение TLS 1,0 приведет к разрыву WAP для AD FS доверия.  При отключении TLS 1,0 необходимо включить строгую проверку подлинности для приложений.  См. раздел [Включение строгой проверки](#enabling-strong-authentication-for-net-applications) подлинности 
 
 
 
-### <a name="enable-tls-10"></a>Включите протокол TLS 1.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "DisabledByDefault"=dword:00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client] "DisabledByDefault"=dword:00000000 
+### <a name="enable-tls-10"></a>Включение TLS 1,0
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ сервер] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ сервер] "DisabledByDefault" = DWORD: 00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ клиент] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ клиент] "DisabledByDefault" = DWORD: 00000000 
 
-### <a name="disable-tls-10"></a>Отключение TLS 1.0
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server] "DisabledByDefault"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client] "DisabledByDefault"=dword:00000001 
+### <a name="disable-tls-10"></a>Отключение TLS 1,0
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ сервер] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ сервер] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ клиент] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0 \ клиент] "DisabledByDefault" = DWORD: 00000001 
 
-### <a name="using-powershell-to-disable-tls-10"></a>С помощью PowerShell, чтобы отключить TLS 1.0
+### <a name="using-powershell-to-disable-tls-10"></a>Отключение TLS 1,0 с помощью PowerShell
 
 ```powershell
     New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server' -Force | Out-Null
@@ -148,22 +148,22 @@ Write-Host 'SSL 2.0 has been disabled.'
 ```
 
 
-## <a name="enable-and-disable-tls-11"></a>Включение и отключение TLS 1.1
-Используйте следующие разделы реестра и их значения для включения и отключения TLS 1.1.
+## <a name="enable-and-disable-tls-11"></a>Включение и отключение TLS 1,1
+Используйте следующие разделы реестра и их значения для включения и отключения TLS 1,1.
 
-### <a name="enable-tls-11"></a>Включение протокола TLS 1.1
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server] "DisabledByDefault"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "DisabledByDefault"=dword:00000000
+### <a name="enable-tls-11"></a>Включение TLS 1,1
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ сервер] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ сервер] "DisabledByDefault" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ клиент] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ клиент] "DisabledByDefault" = DWORD: 00000000
 
-### <a name="disable-tls-11"></a>Отключить TLS 1.1
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server] "DisabledByDefault"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Client] "DisabledByDefault"=dword:00000001 
+### <a name="disable-tls-11"></a>Отключение TLS 1,1
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ сервер] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ сервер] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ клиент] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1 \ клиент] "DisabledByDefault" = DWORD: 00000001 
 
-### <a name="using-powershell-to-disable-tls-11"></a>С помощью PowerShell, чтобы отключить TLS 1.1
+### <a name="using-powershell-to-disable-tls-11"></a>Отключение TLS 1,1 с помощью PowerShell
 
 ``` powershell
     New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.1\Server' -Force | Out-Null
@@ -180,23 +180,23 @@ Write-Host 'SSL 2.0 has been disabled.'
     Write-Host 'TLS 1.1 has been disabled.'
 ```
 
-## <a name="enable-and-disable-tls-12"></a>Включение и отключение TLS 1.2
+## <a name="enable-and-disable-tls-12"></a>Включение и отключение TLS 1,2
 
-Используйте следующие разделы реестра и их значения для включения и отключения TLS 1.2.
+Используйте следующие разделы реестра и их значения для включения и отключения TLS 1,2.
 
-### <a name="enable-tls-12"></a>Включение протокола TLS 1.2
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000
+### <a name="enable-tls-12"></a>Включение TLS 1,2
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ сервер] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ сервер] "DisabledByDefault" = DWORD: 00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ клиент] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ клиент] "DisabledByDefault" = DWORD: 00000000
 
-### <a name="disable-tls-12"></a>Отключить TLS 1.2
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000001
+### <a name="disable-tls-12"></a>Отключение TLS 1,2
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ сервер] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ сервер] "DisabledByDefault" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ клиент] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2 \ клиент] "DisabledByDefault" = DWORD: 00000001
 
-### <a name="using-powershell-to-disable-tls-12"></a>С помощью PowerShell, чтобы отключить TLS 1.2
+### <a name="using-powershell-to-disable-tls-12"></a>Отключение TLS 1,2 с помощью PowerShell
 
 ```powershell
     New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Force | Out-Null
@@ -215,7 +215,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 ## <a name="enable-and-disable-rc4"></a>Включение и отключение RC4 
 
-Используйте следующие разделы реестра и их значения для включения и отключения RC4.  Разделы реестра этой шифров можно найти здесь:
+Используйте следующие разделы реестра и их значения для включения и отключения RC4.  Разделы реестра для этого набора шифров находятся здесь:
 
 - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\
 
@@ -225,15 +225,15 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 ### <a name="enable-rc4"></a>Включить RC4
 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled"=dword:00000001
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled"=dword:00000001 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = DWORD: 00000001 
 
-### <a name="disable-rc4"></a>Отключить RC4
+### <a name="disable-rc4"></a>Отключение RC4
 
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled"=dword:00000000
-- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled"=dword:00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = DWORD: 00000000 
 
 ### <a name="using-powershell"></a>Использование PowerShell
 
@@ -248,28 +248,28 @@ Write-Host 'SSL 2.0 has been disabled.'
     New-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128' -name 'Enabled' -value '0' -PropertyType 'DWord' -Force | Out-Null
 ```
 
-## <a name="enabling-or-disabling-additional-cipher-suites"></a>Включение или отключение дополнительных шифров
+## <a name="enabling-or-disabling-additional-cipher-suites"></a>Включение или отключение дополнительных комплектов шифров
 
-Вы можете отключить определенные конкретных шифры, удалив их из HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002 
+Некоторые определенные шифры можно отключить, удалив их из HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Cryptography\Configuration\Local\SSL\00010002. 
 
 ![Раздел реестра](media/Managing-SSL-Protocols-in-AD-FS/suites.png)
 
-Чтобы включить комплект шифров, добавление его строковое значение для ключа Мультистроковый параметр функции.  Например если необходимо, чтобы TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521 затем мы бы добавили его в строку.
+Чтобы включить комплект шифров, добавьте его строковое значение в ключ многострочного значения функций.  Например, если мы хотим включить TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521, добавьте его в строку.
 
-Полный список поддерживаемых шифров наборов см. в разделе [шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  В этом документе приведена таблица наборов, которые включены по умолчанию и те, которые поддерживаются, но не включена по умолчанию.  Для определения приоритетов комплектов шифров см. в разделе [расстановка приоритетов шифров Schannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
+Полный список поддерживаемых комплектов шифров см. в разделе комплекты [шифров в TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  Этот документ содержит таблицу наборов, включенных по умолчанию и поддерживаемых, но не включенных по умолчанию.  Чтобы определить приоритеты для комплектов шифров, см. раздел Определение приоритетов для комплектов [шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
 
 ## <a name="enabling-strong-authentication-for-net-applications"></a>Включение строгой проверки подлинности для приложений .NET
-3\.5/4.0/4.5.x приложений .NET Framework можно перевести протокола по умолчанию протокол TLS 1.2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра будет принудительно приложений .NET для использования TLS 1.2.
+Приложения .NET Framework 3.5/4.0/4.5. x могут переключить протокол по умолчанию на TLS 1,2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра принудительно заставит приложения .NET использовать TLS 1,2.
 
 > [!IMPORTANT]
-> Для AD FS на Windows Server 2016 и Windows Server 2012 R2 необходимо использовать .NET Framework 4.0/4.5.x ключ:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework\v4.0.30319
+> Для AD FS в Windows Server 2016 и Windows Server 2012 R2 необходимо использовать ключ .NET Framework 4.0/4.5. x:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319
 
 
-Для платформы .NET Framework 3.5 используйте следующий раздел реестра:
+Для .NET Framework 3,5 Используйте следующий раздел реестра:
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework\v2.0.50727] "SchUseStrongCrypto"=dword:00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
 
-Для платформы .NET Framework 4.0/4.5.x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319 «SchUseStrongCrypto» = DWORD: 00000001
+Для .NET Framework 4.0/4.5. x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
 
 ![Строгая проверка подлинности](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 
@@ -280,7 +280,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-- [Наборы шифров TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)
-- [Наборы шифров TLS в Windows 8.1](https://msdn.microsoft.com/library/windows/desktop/mt767781.aspx)
-- [Расстановка приоритетов для комплектов шифров Schannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)
-- [Говоря в шифры и других таинственным tongues](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)
+- [Комплекты шифров в TLS/SSL (общедоступный поставщик услуг Schannel)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)
+- [Комплекты шифров TLS в Windows 8.1](https://msdn.microsoft.com/library/windows/desktop/mt767781.aspx)
+- [Определение приоритетов для комплектов шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)
+- [Говорить в шифрах и других загадочными тонгуес](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)
