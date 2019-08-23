@@ -1,32 +1,27 @@
 ---
 title: Создание DVD-диска восстановления сервера с многоязычной поддержкой
-description: Описывает способ использования Windows Server Essentials
-ms.custom: na
+description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
-4author: nnamuhcs
-ms.author: coreyp
-manager: dongill
-ms.openlocfilehash: e2bbc7bf7af71c671153bf7ba3356ddc08dcc38b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+author: daveba
+ms.author: daveba
+ms.openlocfilehash: 59d8d41e5836ba88b405a058c8340f454b081c06
+ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433633"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69980249"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>Создание DVD-диска восстановления сервера с многоязычной поддержкой
 
 >Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_MLHeadedRecovery"></a> Создать программу установки сервера и DVD-диска восстановления сервера для поддержки нескольких языков на локально администрируемых серверов  
+##  <a name="BKMK_MLHeadedRecovery"></a>Создание конфигурации сервера и DVD-диска восстановления сервера для поддержки нескольких языков на локально администрируемых серверах  
   
 > [!NOTE]
->  Необходимо сначала создать многоязыковой образ Windows, как описано в разделе [Пошаговое руководство: Создание многоязыкового образа Windows](https://technet.microsoft.com/library/jj126995) перед добавлением в install.wim языковой пакет Windows Server Essentials.  
+>  Сначала необходимо создать многоязыковой образ Windows, как описано в [разделе Пошаговое руководство. Создание](https://technet.microsoft.com/library/jj126995) многоязыкового образа Windows перед добавлением пакета лангауаже для Windows Server Essentials в install. wim.  
   
  Существует два этапа установки: среда предустановки Windows (Windows PE) и начальная настройка. По умолчанию страница выбора языка при начальной настройке не отображается.  
   
@@ -49,7 +44,7 @@ ms.locfileid: "66433633"
   
 2.  создание распространяемых носителей.  
   
-### <a name="prerequisites"></a>предварительные требования  
+### <a name="prerequisites"></a>Предварительные требования  
  Чтобы добавить многоязычную поддержку в программу установки Windows, необходимо следующее:  
   
 
@@ -58,23 +53,23 @@ ms.locfileid: "66433633"
 -   Обслуживающий компьютер со всеми средствами и исходными файлами, необходимыми для создания настраиваемого образа среды предустановки Windows. Дополнительные сведения см. в разделе [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
 
   
--   Windows Server Essentials DVD-диска.  
+-   DVD-диск Windows Server Essentials.  
   
--   Windows Server Essentials языкового пакета DVD-диска.  
+-   DVD-диск языкового пакета Windows Server Essentials.  
   
-###  <a name="BKMK_Steps"></a> Добавление поддержки нескольких языков  
- Чтобы добавить поддержку нескольких языков в программу установки Windows необходимо обновить файл Install.wim, добавив в Windows Server 2012 и Windows Server Essentials языковых пакетов к нему.  
+###  <a name="BKMK_Steps"></a>Добавление поддержки нескольких языков  
+ Чтобы добавить поддержку нескольких языков в программа установки Windows вы обновите файл install. wim, добавив в него Windows Server 2012 и языковые пакеты Windows Server Essentials.  
   
 #### <a name="update-installwim"></a>Обновление файла install.wim  
- На этом шаге добавьте Windows Server 2012 и языковые пакеты Windows Server Essentials в Install.wim.  
+ На этом шаге вы добавите языковые пакеты Windows Server 2012 и Windows Server Essentials в install. wim.  
   
 > [!NOTE]
->  Убедитесь, что установить языковые пакеты для Windows Server 2012. Это обеспечит использование надлежащей фирменной символики. Windows Server 2012 многоязыкового пользовательского интерфейса языка доступны на [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Следуйте инструкциям, описанным в [Пошаговое руководство: Создание многоязыкового образа Windows создание](https://technet.microsoft.com/library/jj126995.aspx) на создании многоязыкового образа Windows перед добавлением языкового пакета Windows Server Essentials в install.wim.  
+>  Убедитесь, что установлены языковые пакеты для Windows Server 2012. Это обеспечит использование надлежащей фирменной символики. Языковые пакеты многоязыкового пользовательского интерфейса для Windows Server 2012 доступны на [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Следуйте инструкциям, описанным в [разделе Пошаговое руководство. Создание многоязыкового образа](https://technet.microsoft.com/library/jj126995.aspx) Windows при создании многоязычного образа Windows перед добавлением языкового пакета Windows Server Essentials в install. wim.  
 >   
->  Языковые пакеты Windows Server Essentials находятся на носителе языковых пакетов в пакеты \Language\\< CultureName\>.  
+>  Языковые пакеты Windows Server Essentials доступны на носителе языкового пакета в \лангуаже Packs\\< cultureName\>.  
   
 > [!NOTE]
->  Не все языковые пакеты могут быть доступны до выхода Windows Server 2012.  
+>  Не все языковые пакеты могут быть недоступны до выпуска Windows Server 2012.  
   
 ###### <a name="to-add-language-packs-to-installwim"></a>Добавление языковых пакетов в файл install.wim  
   
@@ -89,9 +84,9 @@ ms.locfileid: "66433633"
     ```  
   
 
-2.  Добавьте языковые файлы для поддержки создания USB восстановление резервной копии клиента флэш-памяти, выполнив процедуру, описанную в [Создание многоязычного носителя для восстановления клиента](Build-Multi-Language-Client-Restore-Media.md).  
+2.  Добавьте файлы, зависящие от языка, для поддержки создания USB-устройства восстановления резервного копирования клиента с помощью процедуры, описанной в статье [Создание носителя для восстановления клиента на нескольких языках](Build-Multi-Language-Client-Restore-Media.md).  
 
-2.  Добавьте языковые файлы для поддержки создания USB восстановление резервной копии клиента флэш-памяти, выполнив процедуру, описанную в [Создание многоязычного носителя для восстановления клиента](../install/Build-Multi-Language-Client-Restore-Media.md).  
+2.  Добавьте файлы, зависящие от языка, для поддержки создания USB-устройства восстановления резервного копирования клиента с помощью процедуры, описанной в статье [Создание носителя для восстановления клиента на нескольких языках](../install/Build-Multi-Language-Client-Restore-Media.md).  
 
   
 3.  Используя команду `DISM /Gen-LangINI` , заново создайте файл Lang.ini на съемном носителе для отражения поддержки дополнительных языков, например:  
@@ -109,13 +104,13 @@ ms.locfileid: "66433633"
   
 ## <a name="see-also"></a>См. также  
 
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
 
- [Создание и настройка образа](../install/Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа для развертывания](../install/Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 
