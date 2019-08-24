@@ -10,12 +10,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 7bc98a8c9a57b2b7f63523f0411d648ca82137aa
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 46e8548e24f0d0991f69427741b0e04da6398334
+ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980333"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009098"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>AD FS часто задаваемые вопросы
 
@@ -76,9 +76,9 @@ AD FS поддерживает несколько конфигураций с н
 ## <a name="design"></a>Конструктор
 
 ### <a name="what-third-party-multi-factor-authentication-providers-are-available-for-ad-fs"></a>Какие сторонние поставщики многофакторной идентификации доступны для AD FS?
-AD FS предоставляет механизм расширяемости для интеграции сторонних поставщиков MFA. Для этого не задана программа сертификации. Предполагается, что поставщик выполнил необходимые проверки перед выпуском. 
+AD FS предоставляет расширяемый механизм для интеграции сторонних поставщиков MFA. Для этого не задана программа сертификации. Предполагается, что поставщик выполнил необходимые проверки перед выпуском. 
 
-Список поставщиков, которые получили уведомления Майкрософт, публикуются в [поставщиках MFA для AD FS](..\operations\Configure-Additional-Authentication-Methods-for-AD-FS.md).  Всегда могут быть доступны поставщики, о которых мы незнакомы, и мы будем обновлять список, как мы будем изучать.
+Список поставщиков, которые получили уведомления Майкрософт, публикуются в [поставщиках MFA для AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  Всегда могут быть доступны поставщики, о которых мы незнакомы, и мы будем обновлять список, как мы будем изучать.
 
 ### <a name="are-third-party-proxies-supported-with-ad-fs"></a>Поддерживаются ли AD FSы сторонними прокси-серверами?
 Да, сторонние прокси-серверы могут размещаться перед прокси, но любой сторонний прокси должен поддерживать [протокол MS-адфспип](https://msdn.microsoft.com/library/dn392811.aspx) , используемый вместо прокси веб-приложения.
