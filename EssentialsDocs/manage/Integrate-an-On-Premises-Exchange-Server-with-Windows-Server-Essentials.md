@@ -375,7 +375,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
       **Конфигурация аррконфиг — CERT** _путь к файлу сертификата_ **— имена узлов** _имена узлов для Exchange Server_ **-TargetServer** _имя сервера Exchange Server_  
 
-      Например, **Конфигурация аррконфиг — CERT** _к:\темп\цертификате.пфкс_ **— имена узлов** _mail.contoso.com_ * *-TargetServer * * _ексчанжесвр_  
+      Например, **Конфигурация аррконфиг — CERT** _к:\темп\цертификате.пфкс_ **— имена узлов** _mail.contoso.com_ **-TargetServer ** _ексчанжесвр_  
 
       Замените *mail.contoso.com* именем вашего домена. Замените *ExchangeSvr* именем вашего сервера Exchange Server.  
 
