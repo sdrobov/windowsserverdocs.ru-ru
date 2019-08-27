@@ -16,6 +16,7 @@
 ## [Параметры обновления и преобразования для Windows Server2016](Supported-Upgrade-paths.md)
 ## [Перенос и обновление ролей Windows Server 2016](Server-Role-Upgradeability-Table.md)
 ## [Таблица совместимости приложений Windows Server 2016](Server-Application-compatibility.md)
+## [Удаленные или подлежащие замене компоненты в Windows Server](../get-started-19/removed-features.md)
 ## [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016](Deprecated-Features.md)
 ## [Сравнение выпусков Windows Server 2016](2016-Edition-Comparison.md)
 ## [Преимущество гибридного использования Azure для Windows Server](azure-hybrid-benefit.md)

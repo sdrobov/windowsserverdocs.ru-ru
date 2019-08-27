@@ -2,22 +2,22 @@
 title: Новые возможности Windows Server
 description: Новые возможности вычислений, удостоверения, управления, автоматизации, сетей, безопасности, хранения.
 ms.prod: windows-server
-ms.date: 06/03/2019
+ms.date: 08/22/2019
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e19c7a51ef1f50f974dc380e00315f9980da560
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: a6a093f873ee925a2763ba5243f868204bd077f3
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66501355"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000652"
 ---
 # <a name="whats-new-in-windows-server"></a>Новые возможности Windows Server
 
->Область применения. Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Вы можете ознакомиться с новыми возможностями, реализованными в каждом из выпусков Windows Server.  
 
@@ -39,3 +39,4 @@ ms.locfileid: "66501355"
 
 - [Заметки о выпуске. Важные проблемы в Windows Server 2019](../get-started-19/rel-notes-19.md)
 - [Заметки о выпуске. Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)
+- [Удаленные или подлежащие замене компоненты в Windows Server](../get-started-19/removed-features.md)

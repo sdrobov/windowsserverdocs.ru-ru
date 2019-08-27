@@ -1,24 +1,20 @@
 ---
 title: Удаленные или подлежащие замене возможности в Windows Server (версия 1709)
 description: Компоненты и функции, удаленные или запланированные к удалению в выпусках.
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
-ms.date: 06/05/2018
-author: jaimeo
-ms.author: jaimeo
+ms.date: 08/22/2019
+author: jasongerend
+ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 37970f3bee2070cffc77bff855a8f28641196b24
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: b4303d05a87fe06e84df0cc55e2c1af8b34047e6
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66452858"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000633"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1709"></a>Удаленные или подлежащие замене возможности в Windows Server версии 1709
 
@@ -26,7 +22,12 @@ ms.locfileid: "66452858"
 
 Ниже приведен список функций и возможностей Windows Server версии 1709, которые либо удалены из продукта в этом выпуске, либо рассматриваются для возможной замены в последующих выпусках. Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах. **Этот список не является исчерпывающим и может быть изменен в следующих выпусках.** 
 
+> [!TIP]
+> - Ранний доступ к сборкам Windows Server можно получить, вступив в [Программу предварительной оценки Windows](https://insider.windows.com), — это отличный способ для проверки изменений в функциональных возможностях.
+> - У вас есть вопросы о других выпусках? См. сведения об [удаленных или подлежащих замене компонентах в Windows Server](../get-started-19/removed-features.md).
+
 ## <a name="features-removed-from-windows-server-version-1709"></a>Возможности, удаленные из Windows Server версии 1709
+
 Windows Server версии 1709 содержит те же возможности, что и Windows Server 2016. Однако в этом выпуске доступны другие варианты установки, чем в Windows Server 2016:
 
 - Являясь полугодовым выпуском канала, Windows Server версии 1709 предоставляет только вариант установки основных серверных компонентов. Более подробную информацию см [Сравнение каналов обслуживания](../get-started-19/servicing-channels-19.md).

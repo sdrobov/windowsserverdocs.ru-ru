@@ -5,15 +5,15 @@ ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
-ms.date: 06/20/2019
+ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 0612f4ff102d6b5d1fd24372ac20a98c3ec02edb
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 7af852ba934de2dd29a76972d7a7ec73606e9b4c
+ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476569"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009119"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -129,6 +129,7 @@ Windows Admin Center можно подготовить к работе и зап
 
 Узнайте о наших последних выпущенных функциях:
 
+- Версия [1908](https://aka.ms/wac1908) — включает визуальные обновления, Packetmon, FlowLog Audit, подключение Azure Monitor для кластеров и поддержку WinRM с использованием HTTPS (порт 5986).
 - Версия [1907](https://aka.ms/wac1907) — добавлены ссылки для оценки затрат Azure и внесены улучшения в функции импорта, экспорта и добавления тегов для виртуальных машин.
 - Версия [1906](https://aka.ms/wac1906) — добавлены функции импорта/экспорта виртуальных машин, переключение учетных записей Azure, добавление подключений из Azure, экспериментирование с настройкой подключений, улучшения производительности и средство профилирования производительности.
 - Версия 1904.1 является самым последним общедоступным выпуском — обновлением для улучшения стабильности подключаемых модулей шлюзов.

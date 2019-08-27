@@ -366,8 +366,8 @@
 
 
 ### Разработка AD FS
-#### [Концепции современной проверки подлинности с использованием AD FS](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
-#### [Современные процессы проверки подлинности с использованием AD FS и сценарии приложений](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
+#### [Основные понятия AD FS OpenID Connect / OAuth](ad-fs/development/ad-fs-openid-connect-oauth-concepts.md)
+#### [Подключения AD FS OpenID или потоки OAuth и сценарии использования приложений](ad-fs/overview/ad-fs-openid-connect-oauth-flows-scenarios.md)
 
 #### [Создание пользовательского метода проверки подлинности для AD FS](ad-fs/development/ad-fs-build-custom-auth-method.md)
 #### [Создание подключаемых модулей с помощью модели оценки риска AD FS за 2019 г.](ad-fs/development/ad-fs-risk-assessment-model.md)

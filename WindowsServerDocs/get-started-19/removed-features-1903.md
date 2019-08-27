@@ -4,16 +4,16 @@ description: В этой статье приведен список компон
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-ms.date: 06/11/2019
+ms.date: 08/22/2019
 author: jasongerend
 ms.author: jgerend
 manager: daveba
-ms.openlocfilehash: 9c79b6da3f9aace55b9464f252f97f19e50cc584
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 079f1a6544aac606358a741ecb3fffae791a4985
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280185"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000672"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1903"></a>Удаленные или подлежащие замене компоненты в Windows Server версии 1903
 
@@ -21,7 +21,7 @@ ms.locfileid: "67280185"
 
 В этой статье приведен список компонентов и возможностей в Windows Server версии 1903, которые уже удалены в этом выпуске или будут заменены в последующих выпусках. Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах. **Этот список не является исчерпывающим и может быть изменен в следующих выпусках.**
 
-Дополнительные сведения см. в статье [Удаленные или подлежащие замене компоненты в Windows Server версии 2019](removed-features-19.md).
+См. сведения об [удаленных или подлежащих замене компонентах в Windows Server](removed-features.md).
 
 ## <a name="features-were-no-longer-developing"></a>Компоненты, которые мы больше не разрабатываем
 

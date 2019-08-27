@@ -11,7 +11,9 @@
 ## [Совместимость Windows Server 2019 и серверных приложений корпорации Майкрософт](app-compat-19.md)
 ## [Функция совместимости приложений основных серверных компонентов по запросу (FOD)](install-fod-19.md)
 ## [Сравнение выпусков Standard и Datacenter](editions-comparison-19.md)
-## [Удаленные или подлежащие замене компоненты, начиная с Windows Server 2019](removed-features-19.md)
-## [Удаленные или подлежащие замене компоненты начиная с Windows Server версии 1903](removed-features-1903.md)
+## Удаленные компоненты
+### [Удаленные или подлежащие замене компоненты в Windows Server](removed-features.md)
+### [Удаленные или подлежащие замене компоненты, начиная с Windows Server 2019](removed-features-19.md)
+### [Удаленные или подлежащие замене компоненты начиная с Windows Server версии 1903](removed-features-1903.md)
 ## [Информация о выпуске Windows Server](../get-started/windows-server-release-info.md)
 ## [Условия лицензии на Windows Server](../windows-server-licensing/windows-server-licensing.md)

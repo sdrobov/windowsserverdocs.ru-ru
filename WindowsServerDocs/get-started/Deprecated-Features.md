@@ -4,18 +4,18 @@ description: Список компонентов и функций в Windows Se
 ms.prod: windows-server-threshold
 ms.technology: server-general
 ms.topic: article
-ms.date: 05/21/2019
+ms.date: 08/22/2019
 ms.assetid: 5d10c5f9-ebac-49a0-b808-c0b1702e0437
 author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: a58b7d1fe7124eb26b29c13ca53031ded8ed3d62
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: a35da3fda1736139290a2503a5c06317cf322ccc
+ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544542"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000613"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Компоненты, удаленные или не рекомендуемые к использованию в Windows Server2016
 
@@ -23,7 +23,8 @@ ms.locfileid: "68544542"
 
 В этой статье приведен список компонентов и функций в Windows Server 2016, которые уже удалены в текущем выпуске или будут удалены в следующих (и не рекомендуются к использованию). Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах. Данный список не является исчерпывающим и может быть изменен с выходом следующих версий ОС. Дополнительные сведения о конкретных компонентах и функциях и их замене см. в соответствующей документации.
 
-Сведения о том, что было удалено или объявлено нерекомендуемым в новых версиях, см. в разделе о [компонентах, которые были удалены или будут заменены, начиная с Windows Server 2019](../get-started-19/removed-features-19.md).
+> [!TIP]
+> См. сведения о том, что было [удалено или объявлено нерекомендуемым в новых версиях Windows Server](../get-started-19/removed-features.md).
 
 ## <a name="features-removed-from-windows-server-2016"></a>Компоненты, удаленные из Windows Server 2016
 
@@ -32,8 +33,8 @@ ms.locfileid: "68544542"
 > [!NOTE]  
 > При переходе на Windows Server 2016 с более раннего выпуска, чем Windows Server 2012 R2 или Windows Server 2012, рекомендуется также ознакомиться со статьями [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx) и [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx).  
 
+### <a name="share-and-storage-management"></a>Управление общими ресурсами и хранилищами
 
-### <a name="file-server"></a>Файловый сервер  
 Оснастка "Управление общими ресурсами и хранилищами" для консоли управления (MMC) была удалена. Вместо этого выполните одно из указанных ниже действий.  
 
 -   Если на компьютере, которым вы хотите управлять, запущена более ранняя ОС, чем Windows Server 2016, подключитесь к нему с помощью удаленного рабочего стола и используйте локальную версию оснастки "Управление общими ресурсами и хранилищами".  
@@ -42,16 +43,20 @@ ms.locfileid: "68544542"
 
 -   Используйте Hyper-V на клиентском компьютере, чтобы запустить виртуальную машину под управлением Windows 7, Windows 8 или Windows 8.1 с оснасткой "Управление общими ресурсами и хранилищами" в средстве удаленного администрирования сервера.  
 
-### <a name="journaldll"></a>Journal.dll  
+### <a name="journaldll"></a>Journal.dll
+
 Компонент Journal.dll удален из Windows Server 2016. Замены нет.  
 
-### <a name="security-configuration-wizard"></a>Мастер настройки безопасности  
+### <a name="security-configuration-wizard"></a>Мастер настройки безопасности
+
 Мастер настройки безопасности удален. Вместо этого функции являются защищенными по умолчанию. Если вам необходимо управлять определенными параметрами безопасности, можно использовать групповую политику или [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
 
-### <a name="sqm"></a>SQM  
+### <a name="sqm"></a>SQM
+
 Были удалены компоненты участия, управляющие участием в программе улучшения качества ПО. 
 
 ### <a name="windows-update"></a>Центр обновления Windows
+
 Команда **wuauclt.exe /detectnow** была удалена и больше не поддерживается. Чтобы активировать поиск обновлений, выполните одно из следующих действий.
 
 - Выполните следующие команды PowerShell.
@@ -66,7 +71,8 @@ ms.locfileid: "68544542"
     automaticUpdates.DetectNow()
     ````
 
-## <a name="features-deprecated-starting-with-windows-server-2016"></a>Компоненты, считающиеся устаревшими с момента выхода Windows Server 2016 
+## <a name="features-deprecated-starting-with-windows-server-2016"></a>Компоненты, считающиеся устаревшими с момента выхода Windows Server 2016
+
 Начиная с этого выпуска перечисленные ниже функции и компоненты не рекомендуются к использованию. Со временем они будут полностью удалены из операционной системы, однако на данный момент все еще входят в ее состав, хотя и с некоторыми ограничениями. Рекомендуем заранее предусмотреть альтернативные варианты использования для приложений, кода и режимов, зависимых от данных компонентов.  
 
 ### <a name="configuration-tools"></a>Средства настройки  
@@ -75,11 +81,14 @@ ms.locfileid: "68544542"
 
 -   **Sconfig.exe** не рекомендуется к использованию. Лучше используйте Windows PowerShell.  
 
-### <a name="netcfg-custom-apis"></a>Настраиваемые API-интерфейсы NetCfg  
+### <a name="netcfg-custom-apis"></a>Настраиваемые API-интерфейсы NetCfg
+
 Установка PrintProvider, NetClient и ISDN с помощью настраиваемых API-интерфейсов NetCfg не рекомендуется.  
 
 ### <a name="remote-management"></a>Удаленное управление  
+
 WinRM.vbs не рекомендуется к использованию. Вместо этого используйте функции в поставщике WinRM Windows PowerShell.  
 
-### <a name="smb"></a>SMB  
+### <a name="smb"></a>SMB
+
 SMB 2+ через NetBT не рекомендуется к использованию. Вместо этого внедрите SMB через TCP или RDMA. 
