@@ -64,9 +64,35 @@
 ### [Настройка заголовка "Рабочие ресурсы" для RDS с помощью PowerShell в Windows Server](rds-work-resources.md)
 ### [Диагностика проблем с производительностью в приложениях с помощью счетчиков производительности](rds-rdsh-performance-counters.md)
 
-## [Дополнительная поддержка удаленных рабочих столов](rds-get-support.md)
-## [Клиенты удаленного рабочего стола](clients/remote-desktop-clients.md)
-### Известные проблемы с удаленным рабочим столом
+## Доступ к материалам по Удаленному рабочему столу
+### [Доступные клиенты Удаленного рабочего стола](clients/remote-desktop-clients.md)
+### Клиент Microsoft Store
+#### [Приступая к работе с клиентом Microsoft Store](clients/windows.md)
+#### [Что нового в клиенте Microsoft Store?](clients/windows-whatsnew.md)
+### Клиент Android
+#### [Приступая к работе с клиентом Android](clients/remote-desktop-android.md)
+#### [Что нового в клиенте Android?](clients/android-whatsnew.md)
+### Клиент iOS
+#### [Приступая к работе с клиентом iOS](clients/remote-desktop-ios.md)
+#### [Что нового в клиенте iOS?](clients/ios-whatsnew.md)
+### Клиент macOS
+#### [Приступая к работе с клиентом macOS](clients/remote-desktop-mac.md)
+#### [Что нового в клиенте macOS?](clients/mac-whatsnew.md)
+### Веб-клиент
+#### [Приступая к работе с веб-клиентом](clients/remote-desktop-web-client.md)
+#### [Что нового в веб-клиенте?](clients/web-client-whatsnew.md)
+### Настройка удаленного рабочего стола на компьютере
+#### [Поддерживаемые компьютеры](clients/remote-desktop-supported-config.md)
+#### [Предоставление доступа к компьютеру через удаленный рабочий стол](clients/remote-desktop-allow-access.md)
+#### [Предоставление доступа к компьютеру за пределами сети](clients/remote-desktop-allow-outside-access.md)
+#### [Изменение прослушивающего порта удаленного рабочего стола на вашем компьютере](clients/change-listening-port.md)
+### Дополнительные сведения
+#### [Какой клиент вам подходит?](clients/remote-desktop-app-compare.md)
+#### [Параметры файла удаленного рабочего стола](clients/rdp-files.md)
+#### [Схема URI удаленного рабочего стола](clients/remote-desktop-uri.md)
+#### [Вопросы и ответы по клиенту удаленного рабочего стола](clients/remote-desktop-client-faq.md)
+#### [Параметры конфиденциальности для управляемых приложений и настольных компьютеров](clients/remote-privacy-settings.md)
+### Известные проблемы
 #### [Устранение неполадок с подключениями к удаленному рабочему столу](troubleshoot/rdp-error-general-troubleshooting.md)
 #### [Клиенты не могут подключиться и получают сообщение об ошибке "Класс не зарегистрирован"](troubleshoot/rdp-error-class-not-registered.md)
 #### [Клиенты не могут подключиться и получают ошибку "Нет доступных лицензий"](troubleshoot/rdp-error-no-licenses-available.md)
@@ -75,29 +101,5 @@
 #### [Клиент удаленного рабочего стола отключается и не может повторно подключиться к тому же сеансу](troubleshoot/rdp-client-disconnects-cannot-reconnect-same-session.md)
 #### [Удаленный ноутбук отключается от беспроводной сети](troubleshoot/remote-laptop-disconnects-wireless-network.md)
 #### [Низкая производительность или проблемы с приложениями во время подключения к удаленному рабочему столу](troubleshoot/poor-performance-or-application-problems.md)
-### Общие сведения
-#### [Какой клиент вам подходит?](clients/remote-desktop-app-compare.md)
-#### [Параметры файла удаленного рабочего стола](clients/rdp-files.md)
-#### [Схема URI удаленного рабочего стола](clients/remote-desktop-uri.md)
-#### [Вопросы и ответы по клиенту удаленного рабочего стола](clients/remote-desktop-client-faq.md)
-#### [Параметры конфиденциальности для управляемых приложений и настольных компьютеров](clients/remote-privacy-settings.md)
-### Клиент удаленного рабочего стола для Windows
-#### [Начало работы](clients/windows.md)
-#### [Что нового в клиенте Windows?](clients/windows-whatsnew.md)
-### Клиент удаленного рабочего стола для Android
-#### [Начало работы](clients/remote-desktop-android.md)
-#### [Что нового в клиенте Android?](clients/android-whatsnew.md)
-### Клиент удаленного рабочего стола для iOS
-#### [Начало работы](clients/remote-desktop-ios.md)
-#### [Что нового в клиенте iOS?](clients/ios-whatsnew.md)
-### Клиент удаленного рабочего стола для Mac
-#### [Начало работы](clients/remote-desktop-mac.md)
-#### [Что нового в клиенте Mac OS?](clients/mac-whatsnew.md)
-### Веб-клиент удаленного рабочего стола
-#### [Доступ к веб-клиенту удаленного рабочего стола](clients/remote-desktop-web-client.md)
-#### [Что нового в веб-клиенте?](clients/web-client-whatsnew.md)
-### Настройка удаленного рабочего стола на компьютере
-#### [Поддерживаемые компьютеры](clients/remote-desktop-supported-config.md)
-#### [Предоставление доступа к компьютеру через удаленный рабочий стол](clients/remote-desktop-allow-access.md)
-#### [Предоставление доступа к компьютеру за пределами сети](clients/remote-desktop-allow-outside-access.md)
-#### [Изменение прослушивающего порта удаленного рабочего стола на вашем компьютере](clients/change-listening-port.md)
+
+## [Дополнительные ресурсы](rds-get-support.md)
