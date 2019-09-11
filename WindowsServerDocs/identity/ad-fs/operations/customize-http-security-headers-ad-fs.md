@@ -9,12 +9,12 @@ ms.date: 02/19/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 3c497cbafb8f9313f988a1b892d2b8fef68115eb
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 4fd1e62e67f66a217a1d4f3a26933723a4645a31
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68523901"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865572"
 ---
 # <a name="customize-http-security-response-headers-with-ad-fs-2019"></a>Настройка заголовков ответов безопасности HTTP с помощью AD FS 2019 
  
@@ -179,9 +179,9 @@ Set-AdfsResponseHeaders -CORSTrustedOrigins https://example1.com,https://example
 #### <a name="csp-customization"></a>Настройка CSP 
 Настройка заголовка CSP включает изменение политики безопасности, определяющей, что браузер ресурсов может загружать веб-страницу. Политика безопасности по умолчанию —  
  
-`Content-Security-Policy: default-src ‘self’ ‘unsafe-inline’ ‘’unsafe-eval’; img-src ‘self’ data:;` 
+`Content-Security-Policy: default-src ‘self' ‘unsafe-inline' ‘'unsafe-eval'; img-src ‘self' data:;` 
  
-Директива **Default-src** используется для директивы Modify [-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) , не перечисляя каждую директиву явным образом. Например, в приведенном ниже примере политика 1 совпадает с политикой 2.  
+Директива **Default-src** используется для [директивы Modify-src](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/default-src) , не перечисляя каждую директиву явным образом. Например, в приведенном ниже примере политика 1 совпадает с политикой 2.  
 
 Политика 1 
 ```PowerShell
@@ -190,14 +190,14 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
  
 Политика 2
 ```PowerShell 
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self’; img-src ‘self’; font-src 'self';  
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "script-src ‘self'; img-src ‘self'; font-src 'self';  
 frame-src 'self'; manifest-src 'self'; media-src 'self';" 
 ```
 
 Если директива указана явно, указанное значение переопределяет значение, заданное для Default-src. В приведенном ниже примере img-src принимает значение "*" (что позволяет загружать изображения из любого источника), а другие директивы src принимают значение как "Self" (с максимальным приоритетом на тот же источник, что и веб-страница).  
 
 ```PowerShell
-Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self’; img-src *" 
+Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue "default-src ‘self'; img-src *" 
 ```
 Для политики Default-src можно определить следующие источники. 
  

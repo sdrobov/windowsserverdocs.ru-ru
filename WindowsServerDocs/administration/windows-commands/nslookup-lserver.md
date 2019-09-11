@@ -1,6 +1,6 @@
 ---
 title: nslookup lserver
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2f2f787915f2b941d6c098d44de1bb0e04dbd491
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 30c5ba8b7fef9b09d854aca998948f7891d99a02
+ms.sourcegitcommit: ee8e0b217be6f6b2532ee7265fb4be00c106e124
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436913"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70878127"
 ---
 # <a name="nslookup-lserver"></a>nslookup lserver
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменение сервера по умолчанию к указанному домену доменных имен (DNS).
+Изменяет сервер по умолчанию на указанный домен службы доменных имен (DNS).
 ## <a name="syntax"></a>Синтаксис
 ```
 lserver <DNSDomain> 
@@ -34,10 +34,10 @@ lserver <DNSDomain>
 |    Параметр    |                      Описание                      |
 |-----------------|-------------------------------------------------------|
 |   <DNSDomain>   | Указывает новый домен DNS для сервера по умолчанию.  |
-| {help &#124; ?} | Отображает краткое описание **nslookup** подкоманды. |
+| {Help &#124; ?} | Отображает краткую сводку подкоманд **nslookup** . |
 
 ## <a name="remarks"></a>Примечания
-- **Lserver** команда использует исходным сервером для поиска сведений о домене DNS. Это отличается от **server** команду, которая использует текущий сервер.
+- Команда **лсервер** использует исходный сервер для поиска сведений об указанном домене DNS. Это отличается от команды **Server** , которая использует текущий сервер по умолчанию.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [nslookup server](nslookup-server.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)для[сервера nslookup](nslookup-server.md) 
+  

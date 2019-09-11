@@ -1,5 +1,5 @@
 ---
-title: Конфиденциальность и AD FS
+title: Конфиденциальность и AD FS пользователей
 description: ''
 author: billmath
 ms.author: billmath
@@ -8,24 +8,24 @@ ms.date: 04/24/2018
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 93d0f892fe6fc5ceae8d8afaaa280b9202179d86
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 56087f8ff990e4b089c4efdd1bf1bc88915d12e1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188556"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869397"
 ---
 # <a name="user-privacy-and-ad-fs"></a>Конфиденциальность пользователей и AD FS
 
 
 
 >[!Note] 
-> В этой статье приводятся пошаговые инструкции для удаления персональных данных с устройства и может использоваться для поддержки обязанности в GDPR. Если вам нужны Общие сведения о GDPR, см. в разделе [GDPR раздел центра доверия службы](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
+> В этой статье описываются действия по удалению персональных данных с устройства и их использование для поддержки обязательств в GDPR. Если вы ищете общие сведения о GDPR, см. [раздел GDPR в центре управления безопасностью](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
 
 >[!Note] 
->Если вы заинтересованы в Просмотр или удаление персональных данных, ознакомьтесь с разделом [запросы субъектов данных Azure для применения GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) статьи. Если вам нужны Общие сведения о GDPR, см. в разделе [GDPR раздел центра доверия службы](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
+>Если вы заинтересованы в просмотре или удалении персональных данных, ознакомьтесь с [запросом на тему данных Azure для статьи GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-azure) . Если вы ищете общие сведения о GDPR, см. [раздел GDPR в центре управления безопасностью](https://www.microsoft.com/en-us/TrustCenter/Privacy/gdpr/default.aspx).
 
 ## <a name="next-steps"></a>Следующие шаги
-* [Просмотр политики конфиденциальности корпорации Майкрософт в центре управления безопасностью](https://www.microsoft.com/trustcenter)
+* [Проверка политики конфиденциальности Майкрософт в центре управления безопасностью](https://www.microsoft.com/trustcenter)
 
  

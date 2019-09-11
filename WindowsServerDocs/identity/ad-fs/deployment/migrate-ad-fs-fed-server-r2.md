@@ -1,6 +1,6 @@
 ---
-title: Перенос сервера AD FS 2.0 federation
-description: Сведения о переносе сервера AD FS в Windows Server 2012 R2.
+title: Перенос сервера федерации AD FS 2,0
+description: Содержит сведения о миграции AD FS Server на Windows Server 2012 R2.
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,22 +8,22 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 46d0b643d786443093e0dfeafe4cddde3278ff76
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d72217d9e8dc3b0f47382e08346dca977ac14b67
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444620"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867930"
 ---
-# <a name="migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Перенос сервера AD FS 2.0 федерации в AD FS на Windows Server 2012 R2
+# <a name="migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Миграция сервера федерации AD FS 2,0 в AD FS в Windows Server 2012 R2
 
-Чтобы перенести сервер федерации AD FS, к которой принадлежит фермы AD FS с одним узлом, ферме WIF или ферме SQL Server в Windows Server 2012 R2, необходимо выполнить следующие задачи:  
+Чтобы перенести сервер AD FS Федерации, который входит в ферму AD FS с одним узлом, ферму WIF или SQL Server ферму на Windows Server 2012 R2, необходимо выполнить следующие задачи.  
   
-1.  [Экспорт и резервное копирование данных конфигурации AD FS](migrate-ad-fs-fed-server-r2.md#export-and-backup-the-ad-fs-configuration-data)  
+1.  [Экспорт и архивация данных конфигурации AD FS](migrate-ad-fs-fed-server-r2.md#export-and-backup-the-ad-fs-configuration-data)  
   
 2.  [Создание фермы серверов федерации Windows Server 2012 R2](migrate-ad-fs-fed-server-r2.md#create-a-windows-server-2012-r2-federation-server-farm)  
   
-3.  [Импорт исходных данных конфигурации в ферме Windows Server 2012 R2 AD FS](migrate-ad-fs-fed-server-r2.md#import-the-original-configuration-data-into-the-windows-server-2012-r2-ad-fs-farm)  
+3.  [Импорт исходных данных конфигурации в ферму AD FS Windows Server 2012 R2](migrate-ad-fs-fed-server-r2.md#import-the-original-configuration-data-into-the-windows-server-2012-r2-ad-fs-farm)  
   
 ##  <a name="export-and-backup-the-ad-fs-configuration-data"></a>Экспорт данных конфигурации AD FS и создание их резервной копии  
  Чтобы экспортировать параметры конфигурации AD FS, необходимо выполнить следующие процедуры:  
@@ -43,7 +43,7 @@ ms.locfileid: "66444620"
 Вам нужно экспортировать SSL-сертификат, используемый службой федерации, и его закрытый ключ в PFX-файл. Дополнительные сведения см. в разделе [Экспорт части закрытого ключа сертификата проверки подлинности сервера](export-the-private-key-portion-of-a-server-authentication-certificate.md).  
   
 > [!NOTE]
->  Если вы планируете развернуть службу регистрации устройств в процессе выполнения AD FS в Windows Server 2012 R2, необходимо получить новый SSL-сертификат. Дополнительные сведения см. в разделе [подачи заявки на SSL-сертификат AD FS](enroll-an-ssl-certificate-for-ad-fs.md) и [Настройка сервера федерации с помощью службы регистрации устройств](configure-a-federation-server-with-device-registration-service.md).  
+>  Если вы планируете развернуть службу регистрации устройств как часть работы AD FS в Windows Server 2012 R2, необходимо получить новый SSL-сертификат. Дополнительные сведения см. в разделе [подачи заявки на SSL-сертификат AD FS](enroll-an-ssl-certificate-for-ad-fs.md) и [Настройка сервера федерации с помощью службы регистрации устройств](configure-a-federation-server-with-device-registration-service.md).  
   
 Чтобы просмотреть используемые сертификаты для подписи маркеров и для связи со службой, создайте список всех используемых сертификатов в отдельном файле с помощью следующей команды Windows PowerShell:  
   
@@ -61,7 +61,7 @@ Get-ADFSProperties | Out-File “.\properties.txt”`.
 
 Выходной файл будет содержать следующие важные значения конфигурации:  
  
-|**Имя свойства службы федерации, предоставленное Get-ADFSProperties**|**Имя свойства службы федерации в консоли управления AD FS**|
+|**Служба федерации имя свойства, сообщаемое Get-ADFSProperties**|**служба федерации имя свойства в консоли управления AD FS**|
 |-----|-----|  
 |HostName|Имя службы федерации|  
 |Идентификатор|Идентификатор службы федерации|  
@@ -103,14 +103,14 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
   
 ###  <a name="to-export-claims-provider-trusts-and-relying-party-trusts"></a>Экспорт отношений доверия с поставщиком утверждений и отношений доверия с проверяющей стороной  
   
-1.  Для экспорта AD FS отношения доверия поставщика утверждений и отношения доверия с проверяющей стороной, необходимо выполнить вход от имени администратора (но не администратора домена) федерации сервера и выполнить следующую команду Windows PowerShell сценарий, который находится в **мультимедиа / server_support/adfs** папку установочного компакт-диска Windows Server 2012 R2: `export-federationconfiguration.ps1`.  
+1.  Чтобы экспортировать AD FS доверия поставщиков утверждений и отношения доверия с проверяющей стороной, необходимо войти в систему с учетной записью администратора (но не администратора домена) на сервер федерации и запустить следующий сценарий Windows PowerShell, расположенный на **носителе или server_support. Папка/адфс** установочного компакт-диска Windows Server 2012 R2 `export-federationconfiguration.ps1`:.  
   
 > [!IMPORTANT]
 >  Сценарий экспорта принимает следующие параметры:  
 > 
-> - Экспорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-CertificatePassword < securestring\>]  
->   -   Экспорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-CertificatePassword < securestring\>] [- RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >]  
->   -   Экспорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-CertificatePassword < securestring\>] [- RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
+> - Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString]  
+>   -   Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString] [- Релингпартитрустидентифиер < String [] >] [-Клаимспровидертрустидентифиер < строка [] >]  
+>   -   Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString] [- Релингпартитрустнаме < String [] >] [-Клаимспровидертрустнаме < строка [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** — командлет экспортирует только те отношения доверия с проверяющей стороной, идентификаторы которых указаны в массиве строк. Значение по умолчанию NONE, то есть не экспортируется ни одно отношение доверия с проверяющей стороной. Если не указаны параметры RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName и ClaimsProviderTrustName, сценарий экспортирует все отношения доверия с проверяющей стороной и отношения доверия с поставщиком утверждений.  
 > 
@@ -120,15 +120,15 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
 > 
 >   **-ClaimsProviderTrustName <string[]>** — командлет экспортирует только те отношения доверия с поставщиком утверждений, имена которых указаны в массиве строк. Значение по умолчанию NONE, то есть не экспортируется ни одно отношение доверия с поставщиком утверждений.  
 > 
->   **-Path < строка\>**  -путь к папке, которая будет содержать экспортируемые файлы.  
+>   **-Path < строка\>**  — путь к папке, в которой будут храниться экспортированные файлы.  
 > 
->   **-ComputerName < строка\>**  -имя узла сервера службы маркеров безопасности. По умолчанию используется локальный компьютер. При переносе AD FS 2.0 или AD FS в Windows Server 2012 на AD FS в Windows Server 2012 R2 здесь указывается имя компьютера, на котором установлен сервер AD FS прежних версий.  
+>   **-ComputerName < строка\>**  — указывает имя узла сервера STS. По умолчанию используется локальный компьютер. При переносе AD FS 2.0 или AD FS в Windows Server 2012 на AD FS в Windows Server 2012 R2 здесь указывается имя компьютера, на котором установлен сервер AD FS прежних версий.  
 > 
->   **-Credential < PSCredential\>**  — Указывает учетную запись пользователя, имеющую разрешение на выполнение этого действия. По умолчанию используется текущий пользователь.  
+>   **-Credential < PSCredential\>**  — указывает учетную запись пользователя, имеющую разрешение на выполнение этого действия. По умолчанию используется текущий пользователь.  
 > 
 >   **-Force** — запрещает вывод запросов на подтверждение для пользователя.  
 > 
->   **-CertificatePassword < SecureString\>**  -указывает пароль для закрытых ключей сертификатов служб AD FS. Если этот параметр не определен, то при необходимости экспортировать сертификат AD FS с закрытым ключом сценарий выведет запрос на ввод пароля.  
+>   **-CertificatePassword < SecureString\>**  — задает пароль для экспорта закрытых ключей сертификатов AD FS. Если этот параметр не определен, то при необходимости экспортировать сертификат AD FS с закрытым ключом сценарий выведет запрос на ввод пароля.  
 > 
 >   **Inputs**: Нет  
 > 
@@ -136,10 +136,10 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
   
 ###  <a name="to-back-up-custom-attribute-stores"></a>Создание резервных копий пользовательских хранилищ атрибутов  
   
-1.  Кроме того, необходимо вручную экспортировать все пользовательские хранилища атрибутов, которые вы хотите сохранить в новой ферме AD FS в Windows Server 2012 R2.  
+1.  Необходимо вручную экспортировать все хранилища настраиваемых атрибутов, которые вы хотите сохранить в новой ферме AD FS в Windows Server 2012 R2.  
   
 > [!NOTE]
->  В Windows Server 2012 R2 AD FS требуются пользовательские хранилища атрибутов, основанных на .NET Framework 4.0 или более поздней версии. Чтобы установить и настроить платформу .Net Framework 4.5, выполните инструкции на странице установки [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) .  
+>  В Windows Server 2012 R2 AD FS требуются пользовательские хранилища атрибутов, основанные на .NET Framework 4,0 или более поздней версии. Чтобы установить и настроить платформу .Net Framework 4.5, выполните инструкции на странице установки [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) .  
   
 Дополнительные сведения об используемых службами AD FS пользовательских хранилищах атрибутов можно получить, выполнив следующую команду Windows PowerShell: 
 
@@ -149,17 +149,17 @@ Get-ADFSAttributeStore
 
 Действия по обновлению или переносу пользовательских хранилищ атрибутов могут быть разными.  
   
-2. Необходимо также вручную экспортировать все DLL-файлы пользовательских хранилищ атрибутов, которые вы хотите сохранить в новой ферме AD FS в Windows Server 2012 R2. Действия по обновлению или переносу DLL-файлов пользовательских хранилищ атрибутов могут быть разными.  
+2. Также необходимо вручную экспортировать все DLL-файлы хранилищ настраиваемых атрибутов, которые необходимо сохранить в новой ферме AD FS в Windows Server 2012 R2. Действия по обновлению или переносу DLL-файлов пользовательских хранилищ атрибутов могут быть разными.  
   
 ##  <a name="create-a-windows-server-2012-r2-federation-server-farm"></a>Создание фермы сервера федерации Windows Server 2012 R2  
   
-1.  Установка операционной системы Windows Server 2012 R2 на компьютере, который будет выступать в качестве сервера федерации, а затем добавьте роль сервера AD FS. Дополнительные сведения см. в разделе [Install the AD FS Role Service](install-the-ad-fs-role-service.md). Затем настройте новую службу федерации при помощи мастера настройки служб федерации Active Directory или через Windows PowerShell. Дополнительную информацию см. в разделе, посвященном настройке первого сервера федерации в новой ферме серверов федерации в статье о [настройке сервера федерации](configure-a-federation-server.md).  
+1.  Установите операционную систему Windows Server 2012 R2 на компьютер, который будет функционировать как сервер федерации, а затем добавьте роль сервера AD FS. Дополнительные сведения см. в разделе [Install the AD FS Role Service](install-the-ad-fs-role-service.md). Затем настройте новую службу федерации при помощи мастера настройки служб федерации Active Directory или через Windows PowerShell. Дополнительную информацию см. в разделе, посвященном настройке первого сервера федерации в новой ферме серверов федерации в статье о [настройке сервера федерации](configure-a-federation-server.md).  
 
 При выполнении этого шага необходимо следовать приведенным ниже указаниям:  
   
 -   Для настройки службы федерации необходимо иметь привилегии администратора домена.  
   
--   Необходимо использовать то же имя службы федерации (имя фермы), которое использовалось в AD FS 2.0 или AD FS в Windows Server 2012. Если вы не используете то же имя службы федерации, сертификаты, резервные копии не будут работать в службы федерации Windows Server 2012 R2, который вы пытаетесь настроить.  
+-   Необходимо использовать то же имя службы федерации (имя фермы), которое использовалось в AD FS 2.0 или AD FS в Windows Server 2012. Если вы не используете одно и то же имя службы федерации, сертификаты, для которых была создана резервная копия, не будут работать в службе Федерации Windows Server 2012 R2, которую вы пытаетесь настроить.  
   
 -   Определите, будет ли ферма серверов федерации базироваться на WID или SQL Server. Для SQL-фермы необходимо указать расположение базы данных SQL Server и имя экземпляра.  
   
@@ -170,7 +170,7 @@ Get-ADFSAttributeStore
 2. После настройки первого узла можно добавить в новую ферму дополнительные узлы. Дополнительную информацию см. в разделе, посвященном добавлению сервера федерации в существующую ферму серверов федерации в статье о [настройке сервера федерации](configure-a-federation-server.md).  
   
 ##  <a name="import-the-original-configuration-data-into-the-windows-server-2012-r2-ad-fs-farm"></a>Импорт исходных данных конфигурации в ферму AD FS Windows Server 2012 R2  
- Теперь, когда у вас есть ферма серверов федерации AD FS, работающая в Windows Server 2012 R2, можно импортировать исходные данные конфигурации AD FS.  
+ Теперь, когда у вас есть AD FS ферма серверов федерации под Windows Server 2012 R2, можно импортировать в нее исходные данные конфигурации AD FS.  
   
 1.  Импортируйте и настройте другие пользовательские сертификаты служб федерации Active Directory, в том числе внешние сертификаты для подписания маркеров и сертификаты для шифрования или расшифровки маркеров, а также сертификат для связи со службой, если он не совпадает с SSL-сертификатом.  
   
@@ -184,7 +184,7 @@ Set-ADFSProperties –AutoCertificateRollover $false
   
 2. Настройте все пользовательские параметры служб AD FS, например AutoCertificateRollover или SSO lifetime, с помощью командлета Set-AdfsProperties.  
   
-3. Чтобы импортировать отношения доверия проверяющей стороны AD FS и отношения доверия с поставщиком утверждений, необходимо войти качестве администратора (но не администратора домена) федерации сервера и выполнить следующую команду Windows PowerShell сценарий, который находится в папке \support\adfs компакт-диска установки Windows Server 2012 R2:  
+3. Чтобы AD FS импортировать отношения доверия с проверяющей стороной и отношения доверия поставщиков утверждений, необходимо войти в систему с учетной записью администратора (но не администратора домена) на сервер федерации и запустить следующий сценарий Windows PowerShell, расположенный в папке \суппорт\адфс установочного компакт-диска Windows Server 2012 R2:  
   
 ``` powershell 
 import-federationconfiguration.ps1  
@@ -193,9 +193,9 @@ import-federationconfiguration.ps1
 > [!IMPORTANT]
 >  Этот сценарий импорта принимает следующие параметры:  
 > 
-> - Импорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-LogPath < строка\>] [-CertificatePassword < securestring \>]  
->   -   Импорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-LogPath < строка\>] [-CertificatePassword < securestring \>] [-RelyingPartyTrustIdentifier < string [] >] [-ClaimsProviderTrustIdentifier < string [] >  
->   -   Импорт FederationConfiguration.ps1-путь < строка\> [-ComputerName < строка\>] [-учетных данных < pscredential\>] [-Force] [-LogPath < строка\>] [-CertificatePassword < securestring \>] [-RelyingPartyTrustName < string [] >] [-ClaimsProviderTrustName < string [] >]  
+> - Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>]  
+>   -   Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>] [-Релингпартитрустидентифиер < String [] >] [-клаимспровидертрустидентифиер < строка [] >  
+>   -   Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>] [-Релингпартитрустнаме < String [] >] [-клаимспровидертрустнаме < строка [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** — командлет импортирует только те отношения доверия с проверяющей стороной, идентификаторы которых указаны в массиве строк. Значение по умолчанию NONE, то есть не импортируется ни одно отношение доверия с проверяющей стороной. Если не указаны параметры RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName и ClaimsProviderTrustName, сценарий импортирует все отношения доверия с проверяющей стороной и отношения доверия с поставщиком утверждений.  
 > 
@@ -205,17 +205,17 @@ import-federationconfiguration.ps1
 > 
 >   **-ClaimsProviderTrustName <string[]>** — командлет импортирует только те отношения доверия с поставщиком утверждений, имена которых указаны в массиве строк. Значение по умолчанию NONE, то есть не импортируется ни одно отношение доверия с поставщиком утверждений.  
 > 
->   **-Path < строка\>**  -путь к папке, которая содержит файлы конфигурации для импорта.  
+>   **-Path < строка\>**  — путь к папке, содержащей импортируемые файлы конфигурации.  
 > 
->   **-LogPath < строка\>**  -путь к папке, содержащей импортируемый файл журнала. В этой папке будет создан файл с именем import.log.  
+>   **-LogPath < строка\>**  — путь к папке, которая будет содержать файл журнала импорта. В этой папке будет создан файл с именем import.log.  
 > 
->   **-ComputerName < строка\>**  -указывает имя узла сервера службы маркеров безопасности. По умолчанию используется локальный компьютер. При переносе AD FS 2.0 или AD FS в Windows Server 2012 на AD FS в Windows Server 2012 R2 этот параметр используется для указания имени узла, на котором установлен сервер AD FS прежних версий.  
+>   **-ComputerName < строка\>**  — указывает имя узла сервера STS. По умолчанию используется локальный компьютер. При переносе AD FS 2.0 или AD FS в Windows Server 2012 на AD FS в Windows Server 2012 R2 этот параметр используется для указания имени узла, на котором установлен сервер AD FS прежних версий.  
 > 
->   **-Credential < PSCredential\>** — Указывает учетную запись пользователя, имеющую разрешение на выполнение этого действия. По умолчанию используется текущий пользователь.  
+>   **-Credential < PSCredential\>** — указывает учетную запись пользователя, имеющую разрешение на выполнение этого действия. По умолчанию используется текущий пользователь.  
 > 
 >   **-Force** — запрещает вывод запросов на подтверждение для пользователя.  
 > 
->   **-CertificatePassword < SecureString\>**  -указывает пароль для закрытых ключей сертификатов служб AD FS. Если этот параметр не определен, то при необходимости импортировать сертификат AD FS с закрытым ключом сценарий выведет запрос на ввод пароля.  
+>   **-CertificatePassword < SecureString\>**  — задает пароль для импорта закрытых ключей сертификатов AD FS. Если этот параметр не определен, то при необходимости импортировать сертификат AD FS с закрытым ключом сценарий выведет запрос на ввод пароля.  
 > 
 >   **Inputs:** string — эта команда принимает в качестве входного значения путь к папке импорта. Этой команде можно передать параметр Export-FederationConfiguration.  
 > 
@@ -241,11 +241,11 @@ import-federationconfiguration.ps1
     <URI N="WSFedEndpoint">https://myapp.cloudapp.net:83/</URI>  
     ```  
 > [!IMPORTANT]
->  Если в отношении доверия с поставщиком утверждений в Active Directory исходной системы настроены какие-либо пользовательские правила для утверждений (которые отличаются от правил AD FS по умолчанию), они не будут перенесены данными сценариями. Это обусловлено Windows Server 2012 R2 содержит новые значения по умолчанию. Все пользовательские правила необходимо объединить путем добавления их вручную в доверия с поставщиком утверждений Active Directory в новой ферме Windows Server 2012 R2.  
+>  Если в отношении доверия с поставщиком утверждений в Active Directory исходной системы настроены какие-либо пользовательские правила для утверждений (которые отличаются от правил AD FS по умолчанию), они не будут перенесены данными сценариями. Это связано с тем, что в Windows Server 2012 R2 установлены новые значения по умолчанию. Все пользовательские правила должны быть объединены путем их ручного добавления в Active Directory отношения доверия поставщиков утверждений в новой ферме Windows Server 2012 R2.  
   
 4. Настройте все пользовательские параметры конечных точек служб федерации Active Directory. В консоли управления AD FS выберите элемент **Конечные точки**. Проверьте задействованные конечные точки AD FS по списку задействованных конечных точек AD FS, который был экспортирован в файл в процессе подготовки к переносу AD FS.  
   
-    \- и -  
+    \-Перетаскивани  
   
     Настройте все пользовательские описания утверждений. В консоли управления AD FS выберите элемент **Описания утверждений**. Сверьте список описаний утверждений AD FS со списком описаний утверждений, который был экспортирован в файл при подготовке к переносу AD FS. Добавьте все пользовательские описания утверждений, содержащиеся в вашем файле, но не включенные в список по умолчанию AD FS. Обратите внимание, что свойство утверждения Identifier на консоли управления соответствует свойству ClaimType в файле.  
   
@@ -253,24 +253,24 @@ import-federationconfiguration.ps1
   
 6. Настройте свойства служб, которые соответствуют параметрам в файле web.config прежних версий.  
   
-   -   Если **useRelayStateForIdpInitiatedSignOn** был добавлен **web.config** файл в AD FS 2.0 или AD FS в ферме Windows Server 2012, необходимо настроить следующие свойства службы в AD FS в Ферме Windows Server 2012 R2:  
+   -   Если **усерелайстатефоридпинитиатедсигнон** был добавлен в файл **Web. config** в AD FS 2,0 или AD FS в ферме Windows Server 2012, то необходимо настроить следующие свойства службы в AD FS в ферме Windows Server 2012 R2:  
   
-       -   AD FS в Windows Server 2012 R2 включает в себя **%systemroot%\ADFS\Microsoft.IdentityServer.Servicehost.exe.config** файла. Создайте элемент с таким же синтаксисом как **web.config** элемент file: `<useRelayStateForIdpInitiatedSignOn enabled="true" />`. Включите этот элемент как часть **< microsoft.identityserver.web >** раздел **Microsoft.IdentityServer.Servicehost.exe.config** файла.  
+       -   AD FS в Windows Server 2012 R2 содержит файл **%системрут%\адфс\микрософт.идентитисервер.сервицехост.ЕКСЕ.конфиг** . Создайте элемент с тем же синтаксисом, что и элемент файла **Web. config** : `<useRelayStateForIdpInitiatedSignOn enabled="true" />`. Включите этот элемент как часть **< Microsoft. identityserver. web >** файла **Microsoft. identityserver. ServiceHost. exe. config** .  
   
-   -   Если **< persistIdentityProviderInformation включены = "true&#124;false» lifetimeInDays = «90» enablewhrPersistence =" true&#124;false» /\>**  был добавлен **web.config** файл в AD FS 2.0 или AD FS в ферме Windows Server 2012, необходимо настроить следующие свойства службы в AD FS в ферме Windows Server 2012 R2:  
+   -   Если **< персистидентитипровидеринформатион Enabled = "true&#124;false" лифетимеиндайс = "90" енаблевхрперсистенце = "true&#124;false"/\>**  был добавлен в файл **Web. config** в AD FS 2,0 или AD FS в Windows Server 2012. в ферме Windows Server 2012 R2 в AD FS необходимо настроить следующие свойства службы:  
   
-       1.  В AD FS в Windows Server 2012 R2, выполните следующую команду Windows PowerShell: `Set-AdfsWebConfig –HRDCookieEnabled –HRDCookieLifetime`.  
+       1.  В AD FS в Windows Server 2012 R2 выполните следующую команду Windows PowerShell: `Set-AdfsWebConfig –HRDCookieEnabled –HRDCookieLifetime`.  
   
-   -   Если **< singleSignOn включены = "true&#124;false» /\>**  был добавлен **web.config** файл в AD FS 2.0 или AD FS в ферме Windows Server 2012, не нужно задать любые дополнительные службы свойства в AD FS в ферме Windows Server 2012 R2. Единый вход включен по умолчанию в AD FS в ферме Windows Server 2012 R2.  
+   -   Если **< singleSignOn Enabled = "true&#124;false"/\>**  было добавлено в файл **Web. config** в AD FS 2,0 или AD FS в ферме Windows Server 2012, вам не нужно задавать дополнительные свойства службы в AD FS в Windows Server 2012 Ферма R2. Единый вход включен по умолчанию в AD FS в ферме Windows Server 2012 R2.  
   
-   -   Если были добавлены параметры localAuthenticationTypes **web.config** файл в AD FS 2.0 или AD FS в ферме Windows Server 2012, необходимо настроить следующие свойства службы в AD FS в ферме Windows Server 2012 R2:  
+   -   Если параметры Локалаусентикатионтипес были добавлены в файл **Web. config** в AD FS 2,0 или AD FS в ферме windows Server 2012, то необходимо настроить следующие свойства службы в AD FS в ферме windows Server 2012 R2:  
   
-       -   Интегрированы, Forms, TlsClient, Basic Transform list в эквивалентные AD FS в Windows Server 2012 R2 имеют глобальную проверку подлинности параметры политики для поддержки обоих типов федерации службы и прокси-сервер проверки подлинности. Эти параметры можно настроить в AD FS в оснастке "Управление" в разделе **Политики проверки подлинности**.  
+       -   Интегрированные, Forms, Тлсклиент, базовый список преобразований в эквивалентные AD FS в Windows Server 2012 R2 имеют глобальные параметры политики проверки подлинности для поддержки типов проверки подлинности службы федерации и прокси-сервера. Эти параметры можно настроить в AD FS в оснастке "Управление" в разделе **Политики проверки подлинности**.  
   
    После импорта исходных данных конфигурации при необходимости можно настроить страницы входа AD FS. Дополнительные сведения см. в разделе [Customizing the AD FS Sign-in Pages](../operations/AD-FS-Customization-in-Windows-Server-2016.md).  
   
 ## <a name="next-steps"></a>Следующие шаги
- [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
+ [Миграция служб ролей службы федерации Active Directory (AD FS) на Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
  [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)   
- [Миграция прокси-сервера федерации AD FS](migrate-fed-server-proxy-r2.md)   
- [Проверка переноса AD FS в Windows Server 2012 R2](verify-ad-fs-migration.md)
+ [Перенос прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)   
+ [Проверка AD FS миграции на Windows Server 2012 R2](verify-ad-fs-migration.md)

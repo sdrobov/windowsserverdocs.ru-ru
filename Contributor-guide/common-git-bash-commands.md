@@ -1,44 +1,44 @@
 ---
-title: Общие команды Git Bash для использования с GitHub
-description: Список некоторых из наиболее часто используемых команд в Git Bash при работе с GitHub.
+title: Распространенные команды git bash для использования с GitHub
+description: Список некоторых наиболее часто используемых команд в Git Bash при работе с GitHub.
 author: eross-msft
 ms.author: lizross
 ms.date: 05/06/2019
-ms.openlocfilehash: 210acaf2b7911892bcfd81b6bbe1975f141308a1
-ms.sourcegitcommit: 7e54a1bcd31cd2c6b18fd1f21b03f5cfb6165bf3
+ms.openlocfilehash: 4ce5d4d8ce382e9ba421c20595715ec473cca241
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461692"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70864994"
 ---
-# <a name="common-git-bash-commands"></a>Общие команды Git Bash
+# <a name="common-git-bash-commands"></a>Распространенные команды git bash
 
-Ниже перечислены некоторые наиболее часто используемые команды в Git Bash, когда их использование в вашей создания содержимого на основе и редактирования процесса.
+Это некоторые наиболее часто используемые команды в Git bash, основанные на том, когда они будут использоваться в процессе создания и редактирования содержимого.
 
-## <a name="master-branch-related"></a>Связанные ветви master
+## <a name="master-branch-related"></a>Связанные с главной ветвью
 
-Master должна всегда использовать в качестве основы любой новой ветви.
-
-| Command | Описание |
-|---------|-------------|
-| `git checkout master` | Перейти в главную ветвь с любой другой ветви |
-| `git pull upstream master` | Обновить локальную копию базы данных master из репозитория рабочей среде |
-
-## <a name="branch-related"></a>Связанные ветви
+В качестве основы для любой новой ветви всегда следует использовать Master.
 
 | Command | Описание |
 |---------|-------------|
-| `git branch` | Просмотра существующих ветвей |
-| `git checkout -B <name-of-branch>` | Создайте новую ветвь |
+| `git checkout master` | Переключение на главную базу из любой другой ветви |
+| `git pull upstream master` | Обновление локальной копии главного репозитория в рабочей базе данных |
+
+## <a name="branch-related"></a>Связанные с ветвью
+
+| Command | Описание |
+|---------|-------------|
+| `git branch` | Просмотр существующих ветвей |
+| `git checkout -B <name-of-branch>` | Создание новой ветви |
 | `git checkout <name-of-branch>` | Изменить на другую ветвь |
-| `git status` | Проверьте, что происходит в ветви |
-| `git branch -D <name-of-branch>` | Удаление существующей ветвью (убедиться, что вы не в его) |
+| `git status` | Проверка того, что происходит в вашей ветви |
+| `git branch -D <name-of-branch>` | Удаление существующей ветви (убедитесь, что вы не находитесь в ней) |
 
-## <a name="check-in-related-done-as-a-group-in-order"></a>Проверка в связанные (выполнено как группа, в порядке)
+## <a name="check-in-related-done-as-a-group-in-order"></a>Запись после изменения (выполняется как группа, по порядку)
 
 | Command | Описание |
 |---------|-------------|
-| `git add --all` | Сохраните работу и добавьте его в ветвь |
-| `git commit -m “public comment, including quotes”` | Зафиксируйте изменения в ветвь |
-| `git pull upstream master` | Обновить локальную копию базы данных master из репозитория рабочей среде |
-| `git push origin <name-of-branch>` | Отправка на удаленный версию локальной ветви |
+| `git add --all` | После сохранения работы добавьте ее в ветвь. |
+| `git commit -m “public comment, including quotes”` | Зафиксируйте изменения в ветви |
+| `git pull upstream master` | Обновление локальной копии главного репозитория в рабочей базе данных |
+| `git push origin <name-of-branch>` | Отправка в удаленную версию локальной ветви |

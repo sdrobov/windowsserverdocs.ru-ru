@@ -9,12 +9,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 7cc5709723b300f46ce108b36501e7ace272cd45
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 30fdda5ada01510027100efce1e95f310f69c6a1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544562"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865099"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>Устранение неполадок Локальные дисковые пространства
 
@@ -151,7 +151,7 @@ DeviceName:
 Volume Name:
 ``` 
 
-Отсоединенное **рабочее состояние** может произойти, если журнал "грязного" отслеживания региона (DRT) заполнен. Дисковые пространства используют "грязное" Отслеживание региона (DRT) для зеркальных пространств, чтобы гарантировать, что при возникновении сбоя питания в журнал заносятся все обновления метаданных, чтобы гарантировать, что дисковое пространство может вернуть или отменить операции по восстановлению дискового пространства в гибком и противоречивое состояние при восстановлении питания и резервном копировании системы. Если журнал DRT заполнен, виртуальный диск нельзя перевести в режим «в сети» до тех пор, пока метаданные DRT не будут синхронизированы и сброшены. Этот процесс требует выполнения полной проверки, что может занять несколько часов.
+**Отсоединенное рабочее состояние** может произойти, если журнал "грязного" отслеживания региона (DRT) заполнен. Дисковые пространства используют "грязное" Отслеживание региона (DRT) для зеркальных пространств, чтобы гарантировать, что при возникновении сбоя питания в журнал заносятся все обновления метаданных, чтобы гарантировать, что дисковое пространство может вернуть или отменить операции по восстановлению дискового пространства в гибком и противоречивое состояние при восстановлении питания и резервном копировании системы. Если журнал DRT заполнен, виртуальный диск нельзя перевести в режим «в сети» до тех пор, пока метаданные DRT не будут синхронизированы и сброшены. Этот процесс требует выполнения полной проверки, что может занять несколько часов.
 
 Чтобы устранить эту проблему, выполните следующие действия.
 1. Удалите затронутые виртуальные диски из CSV-файла.
@@ -203,7 +203,7 @@ Volume Name:
 
 Дополнительные сведения см. в разделе [Устранение неполадок Локальные дисковые пространства работоспособности и операционные состояния](storage-spaces-states.md).
 
-## <a name="event-5120-with-statusiotimeout-c00000b5"></a>Событие 5120 с STATUS_IO_TIMEOUT c00000b5 
+## <a name="event-5120-with-status_io_timeout-c00000b5"></a>Событие 5120 с STATUS_IO_TIMEOUT c00000b5 
 
 > [!Important]
 > **Для Windows Server 2016:** Чтобы снизить вероятность возникновения этих симптомов при установке обновления с исправлением, рекомендуется использовать процедуру режима обслуживания хранилища, приведенную ниже, чтобы установить [18 октября 2018 года, Накопительное обновление для Windows Server 2016](https://support.microsoft.com/help/4462928) или более поздней версии. Если на узлах в настоящее время установлено накопительное обновление Windows Server 2016, выпущенное [8 мая 2018](https://support.microsoft.com/help/4103723) [октября 2018](https://support.microsoft.com/help/KB4462917)г.
@@ -217,7 +217,7 @@ Event Source: Microsoft-Windows-FailoverClustering
 Event ID: 5120
 Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished. 
 
-Cluster Shared Volume ‘CSVName’ ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
+Cluster Shared Volume ‘CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
 ```
 
 Когда регистрируется событие 5120, создается динамический дамп для получения отладочной информации, которая может привести к дополнительным симптомам или повлиять на производительность. Создание динамического дампа создает краткую паузу, чтобы сделать возможным создание моментального снимка памяти для записи файла дампа. Системы, имеющие большой объем памяти и находящиеся под нагрузкой, могут привести к тому, что узлы удаляют членство в кластере, а также регистрировать следующее событие 1135.
@@ -410,7 +410,7 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 
 Чтобы устранить эту проблему, обновите встроенное по на дисках Intel до последней версии.  Для устранения этой проблемы известны версии встроенного по QDV101B1 с мая 2018.
 
-В 2018. в выпуске [средства центра обработки данных Intel SSD](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) входит обновление встроенного по QDV101B1 для ряда P4600 Intel SSD DC.
+В [2018. в выпуске средства центра обработки данных Intel SSD](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) входит обновление встроенного по QDV101B1 для ряда P4600 Intel SSD DC.
 
 
 ## <a name="physical-disk-healthy-and-operational-status-is-removing-from-pool"></a>Физический диск "Исправен" и оперативное состояние "Удаление из пула" 

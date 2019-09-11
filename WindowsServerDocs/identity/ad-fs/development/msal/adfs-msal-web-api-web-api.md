@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 08892fe771928fa4b68ce50bfef2b6a041c2d210
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 2ab6141b84d03102c5dedd1ede0ba99e5adf3e4a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983542"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867744"
 ---
 # <a name="scenario-web-api-calling-web-api-on-behalf-of-scenario"></a>Сценарий: Вызов веб-API через веб-API (от имени сценария) 
 > Область применения. AD FS 2019 и более поздних версий 

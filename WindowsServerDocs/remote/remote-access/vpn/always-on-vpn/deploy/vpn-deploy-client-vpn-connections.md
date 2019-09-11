@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
-ms.openlocfilehash: eab81443ba91b229495a124aae642570608c6bba
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: c3ac8295d048c599a1cb6d1ed141cd63a7a73f47
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658889"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871337"
 ---
 # <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений
 
@@ -318,7 +318,7 @@ $ProfileXML = @("
 ")
 ```
 
-### <a name="output-vpnprofilexml-for-intune"></a>Вывод VPN_Profile. XML для Intune
+### <a name="output-vpn_profilexml-for-intune"></a>Вывод VPN_Profile. XML для Intune
 
 Для сохранения XML-файла профиля можно использовать следующий пример команды:
 
@@ -326,7 +326,7 @@ $ProfileXML = @("
 $ProfileXML | Out-File -FilePath ($env:USERPROFILE + '\desktop\VPN_Profile.xml')
 ```
 
-### <a name="output-vpnprofileps1-for-the-desktop-and-system-center-configuration-manager"></a>Вывод VPN_Profile. ps1 для настольных систем и System Center Configuration Manager
+### <a name="output-vpn_profileps1-for-the-desktop-and-system-center-configuration-manager"></a>Вывод VPN_Profile. ps1 для настольных систем и System Center Configuration Manager
 
 В следующем примере кода выполняется настройка VPN-подключения AlwaysOn с помощью узла Профилексмл в поставщике служб шифрования поддержка vpnv2.
 
@@ -603,7 +603,7 @@ Write-Host "$Message"
 
 ## <a name="configure-the-vpn-client-by-using-windows-powershell"></a>Настройка VPN-клиента с помощью Windows PowerShell
 
-Чтобы настроить CSP поддержка vpnv2 на клиентском компьютере с Windows 10, запустите сценарий Windows PowerShell VPN_Profile. ps1, созданный в разделе [Создание XML-файла профиля](#create-the-profile-xml) . Откройте Windows PowerShell с правами администратора. в противном случае вы получите сообщение об ошибке "отказано в _доступе_".
+Чтобы настроить CSP поддержка vpnv2 на клиентском компьютере с Windows 10, запустите сценарий Windows PowerShell VPN_Profile. ps1, созданный в разделе [Создание XML-файла профиля](#create-the-profile-xml) . Откройте Windows PowerShell с правами администратора. в противном случае вы получите сообщение об ошибке " _отказано в доступе_".
 
 После запуска VPN_Profile. ps1 для настройки профиля VPN можно в любой момент выполнить проверку, выполнив следующую команду в интегрированной среде сценариев Windows PowerShell:
 

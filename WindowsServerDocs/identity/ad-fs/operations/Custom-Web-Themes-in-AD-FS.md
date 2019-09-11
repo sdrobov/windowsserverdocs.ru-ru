@@ -9,16 +9,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 2bce52a5704706ad72799d00879e2f4e48f9d703
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: affcc8b7d6aed56c37ddf00dd1c962c0d82fd85b
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189254"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865774"
 ---
 # <a name="custom-web-themes-in-ad-fs"></a>Пользовательские веб-темы в AD FS 
 
-Темы, входящий в комплект поставки out\-из\-\-поле вызывается по умолчанию. Можно экспортировать тему по умолчанию и воспользоваться ей, чтобы быстро приступить к работе. Можно настроить внешний вид и поведение, включая настройку макета (путем изменения CSS-файла), импортировать и применить эту новую тему, а затем работать с настроенными внешним видом и поведением. Использование CSS-файла упрощает взаимодействие с веб-дизайнерами.  
+Тема, которая поставляется\-\-\-из комплекта, называется по умолчанию. Можно экспортировать тему по умолчанию и воспользоваться ей, чтобы быстро приступить к работе. Можно настроить внешний вид и поведение, включая настройку макета (путем изменения CSS-файла), импортировать и применить эту новую тему, а затем работать с настроенными внешним видом и поведением. Использование CSS-файла упрощает взаимодействие с веб-дизайнерами.  
   
 Следующий командлет позволяет создать пользовательскую веб-тему, дублирующую веб-тему по умолчанию.  
   
@@ -45,17 +45,17 @@ ms.locfileid: "66189254"
   
   
   
-Для применения пользовательской веб-темы к AD FS, используйте следующий командлет.  
+Чтобы применить пользовательскую веб-тему к AD FS, используйте следующий командлет.  
   
 
 `Set-AdfsWebConfig -ActiveThemeName custom`  
 
   
-Чтобы добавить JavaScript к AD FS, используйте следующий командлет.  
+Чтобы добавить JavaScript в AD FS, используйте следующий командлет.  
   
  
-    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=’ /adfs/portal/script/onload.js’;path="D:\inetpub\adfsassets\script\onload.js"}  
+    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=' /adfs/portal/script/onload.js';path="D:\inetpub\adfsassets\script\onload.js"}  
 
 
-## <a name="additional-references"></a>Дополнительная справка 
-[Настройка входа AD FS пользователя](AD-FS-user-sign-in-customization.md)  
+## <a name="additional-references"></a>Дополнительные ссылки 
+[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)  

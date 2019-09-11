@@ -1,6 +1,6 @@
 ---
 title: Добавление Windows Server Essentials в качестве рядового сервера
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -12,18 +12,18 @@ ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 502e54cf719895dd11030cf163159f6cdda47164
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 09943f9708af3839ff21717316853fab9ba0283b
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433728"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865046"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Добавление Windows Server Essentials в качестве рядового сервера
 
 >Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Этот раздел относится к серверу под управлением Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter или Windows Server 2016 с установленной ролью Windows Server Essentials Experience. В оставшейся части этого документа роль Windows Server Essentials Experience будет называться Windows Server Essentials.  
+Этот раздел относится к серверу под Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter или Windows Server 2016 с установленной ролью Windows Server Essentials Experience. В оставшейся части этого документа роль Windows Server Essentials Experience будет называться Windows Server Essentials.  
   
 > [!NOTE]
 >   Windows Server Essentials можно развернуть только в качестве контроллера домена. В этом документе Windows Server Essentials не включает Windows Server Essentials.  
@@ -34,18 +34,18 @@ ms.locfileid: "66433728"
   
 -   Добавьте Windows Server Essentials в филиал своего офиса и присоедините его к контроллеру домена, расположенному в главном офисе с помощью стандартных средств. Вы можете включить функцию BranchCache для использования оптимальной пропускной способности данного рядового сервера.  
   
--   Добавьте Windows Server Essentials в качестве рядового сервера в сети Windows Server Essentials, чтобы расширить хранилище сети с помощью добавления дополнительных серверных папок на ваш рядовой сервер.  
+-   Добавьте Windows Server Essentials в качестве рядового сервера в сети Windows Server Essentials, чтобы расширить возможности хранения в сети путем добавления дополнительных серверных папок на рядовом сервере.  
   
--   Добавьте Windows Server Essentials в качестве рядового сервера в локальном офисе, если сервера-источника под управлением Windows Server Essentials размещено в Microsoft Azure или у стороннего поставщика услуг размещения. Использование Windows Server Essentials в качестве рядового сервера в локальном офисе позволяет оптимизировать пропускную способность.  
+-   Добавьте Windows Server Essentials в качестве рядового сервера в локальном офисе, если основной сервер под управлением Windows Server Essentials размещен в Microsoft Azure или размещен сторонними поставщиками услуг размещения. Использование Windows Server Essentials в качестве рядового сервера в локальном офисе позволяет оптимизировать пропускную способность.  
   
 ## <a name="adding-windows-server-essentials-as-a-member-server"></a>Добавление Windows Server Essentials в качестве рядового сервера  
- Чтобы добавить Windows Server Essentials в качестве рядового сервера для сервера-источника под управлением Windows Server 2012 R2 или Windows Server Essentials в существующей среде Active Directory, необходимо выполнить следующие действия:  
+ Чтобы добавить Windows Server Essentials в качестве рядового сервера к основному серверу под Windows Server 2012 R2 или Windows Server Essentials в существующей Active Directory среде, необходимо выполнить следующие действия.  
   
 1.  Присоедините сервер под управлением Windows Server Essentials к рабочей группе.  
   
-2.  Присоедините сервер под управлением Windows Server Essentials к домену основного сервера Windows Server Essentials.  
+2.  Присоедините сервер под Windows Server Essentials к домену основного сервера Windows Server Essentials.  
   
-3.  Настройка Windows Server Essentials Experience в диспетчере сервера.  
+3.  Настройте интерфейс Windows Server Essentials с диспетчер сервера.  
   
 #### <a name="to-join-windows-server-essentials-to-a-workgroup-or-domain"></a>Присоединение Windows Server Essentials к рабочей группе или домену  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66433728"
   
 4. В окне **Имя компьютера** в разделе **Домен** нажмите кнопку **Изменить**.  
   
-5. В **изменение имени компьютера или домена**в **член** выберите, если вы хотите присоединить сервер под управлением Windows Server Essentials для **рабочей группы** или **Домена**.  
+5. В области **изменение имени компьютера или домена**в разделе **член** выберите, следует ли присоединить сервер под Windows Server Essentials к **рабочей группе** или **домену**.  
   
    -   Чтобы добавить сервер к рабочей группе, введите команду **workgroup**, а затем нажмите кнопку **ОК**.  
   
@@ -65,14 +65,14 @@ ms.locfileid: "66433728"
   
 6. Чтобы изменения вступили в силу, перезагрузите сервер.  
   
-   После присоединения сервера к домену основного сервера s, вы можете настроить Windows Server Essentials, запустив мастер настройки Windows Server Essentials из диспетчера сервера.  
+   После присоединения сервера к домену основного сервера можно продолжить настройку Windows Server Essentials, запустив мастер настройки Windows Server Essentials из диспетчер сервера.  
   
 #### <a name="to-configure-windows-server-essentials-experience-on-a-member-server"></a>Настройка Windows Server Essentials Experience на рядовом сервере  
   
 1.  (Необязательно) При необходимости измените имя сервера.  
   
     > [!IMPORTANT]
-    >  Не удается изменить имя сервера, после настройки Windows Server Essentials Experience.  
+    >  После настройки интерфейса Windows Server Essentials изменить имя сервера невозможно.  
   
 2.  Войдите в сервер с помощью учетной записи администратора домена.  
   

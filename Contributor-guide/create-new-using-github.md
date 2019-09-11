@@ -4,12 +4,12 @@ description: Создание новых статей, связанных с Win
 author: eross-msft
 ms.author: lizross
 ms.date: 05/02/2019
-ms.openlocfilehash: f5e7e3d0cd17c64175fddaaac73c12daa2c2a32c
-ms.sourcegitcommit: ffd9c42374c7448deb5f53f7a865cb427b5e4e9e
+ms.openlocfilehash: 3f09c36c1e3960728ff016f5801deb854e3d3c96
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69887949"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865066"
 ---
 # <a name="create-new-windows-server-articles-using-github-and-visual-studio-code"></a>Создание новых статей по Windows Server с помощью GitHub и Visual Studio Code
 
@@ -27,7 +27,7 @@ ms.locfileid: "69887949"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Прежде чем начать работу в репозитории, необходимо создать и настроить учетную запись GitHub, настроить двухфакторную проверку, а также установить и настроить все необходимые средства. Если вы уже сделали это, можно перейти к разделу разветвления [репозитория](#fork-the-repository) этой статьи.
+Прежде чем начать работу в репозитории, необходимо создать и настроить учетную запись GitHub, настроить двухфакторную проверку, а также установить и настроить все необходимые средства. Если вы уже сделали это, можно перейти к [разделу разветвления репозитория](#fork-the-repository) этой статьи.
 
 1. [Создание учетной записи и профиля GitHub](https://review.docs.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=master#create-a-github-account-and-set-up-your-profile)
 
@@ -191,7 +191,7 @@ ms.locfileid: "69887949"
 
 #### <a name="to-submit-your-pull-request"></a>Отправка запроса на вытягивание
 
-1. Перейдите к https://github.com/MicrosoftDocs/windowsserverdocs-pr и выберите вкладку **запросы** на вытягивание.
+1. Перейдите к https://github.com/MicrosoftDocs/windowsserverdocs-pr и выберите вкладку **запросы на вытягивание** .
 
 2. В области **рецензенты** правой панели щелкните значок шестеренки, а затем введите псевдоним _виндовссерверконтент_ для проверки.
 

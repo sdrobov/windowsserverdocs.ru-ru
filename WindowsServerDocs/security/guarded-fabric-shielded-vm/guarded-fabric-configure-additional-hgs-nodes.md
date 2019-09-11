@@ -8,144 +8,144 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 10/22/2018
-ms.openlocfilehash: c0741845bdbd8bfbea00df21d1fe810a27fc6a3b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fe9cd63f08da849c2cb002ab853501370d736f0f
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443860"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870587"
 ---
 # <a name="configure-additional-hgs-nodes"></a>Настройка дополнительных узлов HGS
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-В производственной среде HGS должны настраиваться в высокодоступном кластере чтобы убедиться, что экранированные виртуальные машины можно быть включен, даже если это узел HGS выходит из строя. Для тестовых сред не требуются дополнительные узлы HGS.
+В рабочей среде HGS следует настроить в кластере с высоким уровнем доступности, чтобы обеспечить возможность включения экранированных виртуальных машин даже в том случае, если узел HGS выйдет из строя. Для тестовых сред дополнительные узлы HGS не требуются.
 
-Используйте один из этих методов для добавления узлов HGS, как лучше всего подходит для вашей среды.
+Используйте один из этих методов для добавления узлов HGS, которые лучше всего подходят для вашей среды.
 
 |                |                         |                              | 
 |----------------|-------------------------|------------------------------|
-|Новый лес HGS  | [С помощью PFX-файлы](#dedicated-hgs-forest-with-pfx-certificates) | [С использованием отпечатков сертификатов](#dedicated-hgs-forest-with-certificate-thumbprints) |
-|Существующий лес бастиона |  [С помощью PFX-файлы](#existing-bastion-forest-with-pfx-certificates) | [С использованием отпечатков сертификатов](#existing-bastion-forest-with-certificate-thumbprints) |
+|Новый лес HGS  | [Использование PFX-файлов](#dedicated-hgs-forest-with-pfx-certificates) | [Использование отпечатков сертификатов](#dedicated-hgs-forest-with-certificate-thumbprints) |
+|Существующий лес бастиона |  [Использование PFX-файлов](#existing-bastion-forest-with-pfx-certificates) | [Использование отпечатков сертификатов](#existing-bastion-forest-with-certificate-thumbprints) |
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Убедитесь, что каждый дополнительный узел: 
-- С той же конфигурацией оборудования и программного обеспечения, что и основной узел 
-- Подключается к той же сети, что и другие серверы HGS
-- Можно разрешить другие серверы HGS, их DNS-имена
+- Имеет ту же конфигурацию оборудования и программного обеспечения, что и основной узел 
+- Подключен к той же сети, что и другие серверы HGS
+- Может разрешать другие серверы HGS по их DNS-именам
 
-## <a name="dedicated-hgs-forest-with-pfx-certificates"></a>Выделенный лес HGS с PFX-сертификатов
+## <a name="dedicated-hgs-forest-with-pfx-certificates"></a>Выделенный лес HGS с сертификатами PFX
 
-1. Повысить уровень HGS узла до контроллера домена
-2. Инициализировать сервер HGS
+1. Повышение уровня узла HGS до контроллера домена
+2. Инициализация сервера HGS
 
-### <a name="promote-the-hgs-node-to-a-domain-controller"></a>Повысить уровень HGS узла до контроллера домена
+### <a name="promote-the-hgs-node-to-a-domain-controller"></a>Повышение уровня узла HGS до контроллера домена
 
 [!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-### <a name="initialize-the-hgs-server"></a>Инициализировать сервер HGS
+### <a name="initialize-the-hgs-server"></a>Инициализация сервера HGS
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-## <a name="dedicated-hgs-forest-with-certificate-thumbprints"></a>Выделенный лес HGS с отпечатки сертификатов
+## <a name="dedicated-hgs-forest-with-certificate-thumbprints"></a>Выделенный лес HGS с отпечаткой сертификатов
  
-1. Повысить уровень HGS узла до контроллера домена
-2. Инициализировать сервер HGS
-3. Установка закрытых ключей сертификатов
+1. Повышение уровня узла HGS до контроллера домена
+2. Инициализация сервера HGS
+3. Установка закрытых ключей для сертификатов
 
-### <a name="promote-the-hgs-node-to-a-domain-controller"></a>Повысить уровень HGS узла до контроллера домена
+### <a name="promote-the-hgs-node-to-a-domain-controller"></a>Повышение уровня узла HGS до контроллера домена
 
 [!INCLUDE [Promote to a domain controller](../../../includes/guarded-fabric-promote-domain-controller.md)] 
 
-### <a name="initialize-the-hgs-server"></a>Инициализировать сервер HGS
+### <a name="initialize-the-hgs-server"></a>Инициализация сервера HGS
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-### <a name="install-the-private-keys-for-the-certificates"></a>Установка закрытых ключей сертификатов
+### <a name="install-the-private-keys-for-the-certificates"></a>Установка закрытых ключей для сертификатов
 
 [!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
 
-## <a name="existing-bastion-forest-with-pfx-certificates"></a>Существующий лес бастиона с PFX-сертификатов
+## <a name="existing-bastion-forest-with-pfx-certificates"></a>Существующий лес бастиона с сертификатами PFX
 
-1. Присоединения узла к существующему домену
-2. Предоставить права компьютера для получения пароля групповой управляемой учетной записи и запустите Install-ADServiceAccount
-3. Инициализировать сервер HGS
+1. Присоединение узла к существующему домену
+2. Предоставьте компьютеру права на получение пароля gMSA и запуск Install-Адсервицеаккаунт
+3. Инициализация сервера HGS
 
-### <a name="join-the-node-to-the-existing-domain"></a>Присоединения узла к существующему домену
+### <a name="join-the-node-to-the-existing-domain"></a>Присоединение узла к существующему домену
 
-1. Убедитесь, что по крайней мере один сетевой Адаптер на узле настроена на использование DNS-сервера на первый сервер HGS.
-2. Присоедините новый узел HGS к тому же домену, что ваш первый узел HGS. 
+1. Убедитесь, что по крайней мере одна сетевая карта на узле настроена для использования DNS-сервера на первом сервере HGS.
+2. Присоедините новый узел HGS к тому же домену, что и ваш первый узел HGS. 
 
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Предоставить права компьютера для получения пароля групповой управляемой учетной записи и запустите Install-ADServiceAccount
-
-[!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)] 
-
-### <a name="initialize-the-hgs-server"></a>Инициализировать сервер HGS
-
-[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
-
-## <a name="existing-bastion-forest-with-certificate-thumbprints"></a>Существующий лес бастиона с отпечатки сертификатов
-
-1. Присоединения узла к существующему домену
-2. Предоставить права компьютера для получения пароля групповой управляемой учетной записи и запустите Install-ADServiceAccount
-3. Инициализировать сервер HGS
-4. Установка закрытых ключей сертификатов
-
-### <a name="join-the-node-to-the-existing-domain"></a>Присоединения узла к существующему домену
-
-1. Убедитесь, что по крайней мере один сетевой Адаптер на узле настроена на использование DNS-сервера на первый сервер HGS.
-2. Присоедините новый узел HGS к тому же домену, что ваш первый узел HGS. 
-
-### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Предоставить права компьютера для получения пароля групповой управляемой учетной записи и запустите Install-ADServiceAccount
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Предоставьте компьютеру права на получение пароля gMSA и запуск Install-Адсервицеаккаунт
 
 [!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)] 
 
-### <a name="initialize-the-hgs-server"></a>Инициализировать сервер HGS
+### <a name="initialize-the-hgs-server"></a>Инициализация сервера HGS
 
 [!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
 
-Может занять до 10 минут для шифрования и подписывания сертификатов на первом сервере HGS для репликации на этом узле.
+## <a name="existing-bastion-forest-with-certificate-thumbprints"></a>Существующий лес бастиона с отпечаткой сертификатов
 
-### <a name="install-the-private-keys-for-the-certificates"></a>Установка закрытых ключей сертификатов
+1. Присоединение узла к существующему домену
+2. Предоставьте компьютеру права на получение пароля gMSA и запуск Install-Адсервицеаккаунт
+3. Инициализация сервера HGS
+4. Установка закрытых ключей для сертификатов
+
+### <a name="join-the-node-to-the-existing-domain"></a>Присоединение узла к существующему домену
+
+1. Убедитесь, что по крайней мере одна сетевая карта на узле настроена для использования DNS-сервера на первом сервере HGS.
+2. Присоедините новый узел HGS к тому же домену, что и ваш первый узел HGS. 
+
+### <a name="grant-the-machine-rights-to-retrieve-gmsa-password-and-run-install-adserviceaccount"></a>Предоставьте компьютеру права на получение пароля gMSA и запуск Install-Адсервицеаккаунт
+
+[!INCLUDE [Grant the machine rights to retrieve the group MSA](../../../includes/guarded-fabric-grant-machine-rights-to-retrieve-gmsa.md)] 
+
+### <a name="initialize-the-hgs-server"></a>Инициализация сервера HGS
+
+[!INCLUDE [Initialize the HGS server](../../../includes/guarded-fabric-initialize-hgs-on-the-node.md)] 
+
+Шифрование и подпись сертификатов с первого сервера HGS для репликации на этот узел займет до 10 минут.
+
+### <a name="install-the-private-keys-for-the-certificates"></a>Установка закрытых ключей для сертификатов
 
 [!INCLUDE [Install private keys](../../../includes/guarded-fabric-install-private-keys.md)]
 
-## <a name="configure-hgs-for-https-communications"></a>Настройка HGS связь по протоколу HTTPS
+## <a name="configure-hgs-for-https-communications"></a>Настройка HGS для обмена данными по протоколу HTTPS
 
-Если вы хотите защитить HGS конечных точек с помощью SSL-сертификат, необходимо настроить SSL-сертификата на этот узел, а также всех остальных узлов в кластере HGS.
-SSL-сертификаты *не* реплицируется с HGS и не обязательно должны использовать те же ключи для каждого узла (т. е. может иметь разные сертификаты SSL для каждого узла).
+Если вы хотите защитить конечные точки HGS с помощью SSL-сертификата, необходимо настроить SSL-сертификат на этом узле, а также каждый другой узел в кластере HGS.
+Сертификаты SSL *не* реплицируются службой HGS и не требуют использования одинаковых ключей для каждого узла (т. е. для каждого узла можно использовать разные SSL-сертификаты).
 
-При запросе сертификат SSL, убедиться, что полное доменное имя кластера (как показано в выходных данных `Get-HgsServer`) является либо общее имя субъекта сертификата или включены в качестве альтернативного имени субъекта DNS.
-После получения сертификата от центра сертификации можно настроить HGS на работу с [HgsServer набора](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/set-hgsserver).
+При запросе SSL-сертификата убедитесь, что полное доменное имя кластера (как показано в выходных данных `Get-HgsServer`) является либо общим именем субъекта сертификата, либо включенным в качестве альтернативного DNS-имени субъекта.
+После получения сертификата из центра сертификации можно настроить HGS для его использования с помощью [Set-HgsServer](https://technet.microsoft.com/itpro/powershell/windows/hgsserver/set-hgsserver).
 
 ```powershell
 $sslPassword = Read-Host -AsSecureString -Prompt "SSL Certificate Password"
 Set-HgsServer -Http -Https -HttpsCertificatePath 'C:\temp\HgsSSLCertificate.pfx' -HttpsCertificatePassword $sslPassword
 ```
 
-Если вы уже установлен сертификат в локальном хранилище сертификатов и ссылка на него по отпечатку, выполните следующую команду:
+Если вы уже установили сертификат в локальное хранилище сертификатов и хотите сослаться на него по отпечатку, выполните следующую команду:
 
 ```powershell
 Set-HgsServer -Http -Https -HttpsCertificateThumbprint 'A1B2C3D4E5F6...'
 ```
 
-HGS всегда будет предоставлять портов HTTP и HTTPS для связи.
-Он не поддерживается для удаления привязки HTTP в IIS, однако вы можете использовать брандмауэр Windows или другие технологии брандмауэра сети для заблокируйте обмен данными через порт 80.
+HGS всегда будет предоставлять порты HTTP и HTTPS для обмена данными.
+Удаление привязки HTTP в IIS не поддерживается, однако можно использовать брандмауэр Windows или другие технологии сетевого брандмауэра, чтобы блокировать обмен данными через порт 80.
 
-## <a name="decommission-an-hgs-node"></a>Списание узлом HGS
+## <a name="decommission-an-hgs-node"></a>Списание узла HGS
 
-Чтобы списать узлом HGS:
+Чтобы списать узел HGS, сделайте следующее:
 
-1. [Очистить конфигурацию HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration).
+1. [Очистите конфигурацию HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration).
 
-   Это удаляет узел из кластера и удаляет аттестации и защиты ключей. 
-   Если это последний узел в кластере, - Force необходим для обозначения того, вы хотите удалить последний узел и удалите кластер в Active Directory. 
+   Это приведет к удалению узла из кластера и удалению службы аттестации и защиты ключей. 
+   Если это последний узел в кластере,-Force требуется, чтобы указать, что нужно удалить последний узел и уничтожить кластер в Active Directory. 
    
-   Если HGS развертывается в лесу-бастионе (по умолчанию), который является единственным шагом. 
-   При необходимости, можно отсоединить компьютер из домена, а также удаление групповой управляемой учетной записи из Active Directory.
+   Если HGS развертывается в лесу бастиона (по умолчанию), это единственный шаг. 
+   При необходимости можно отсоединить компьютер от домена и удалить учетную запись gMSA из Active Directory.
 
-1. Если HGS создали свой собственный домен, необходимо также [удаление HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) исключении из домена и понижение роли контроллера домена.
+1. Если HGS создала собственный домен, следует также [Удалить HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) , чтобы отменить присоединение к домену и понизить контроллер домена.
 
 
 

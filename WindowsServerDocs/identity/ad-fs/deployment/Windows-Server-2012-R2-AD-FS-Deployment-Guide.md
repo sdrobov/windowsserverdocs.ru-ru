@@ -9,17 +9,17 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 154e6e986bd0e78936a985ce7b80ee533ea5c82a
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 44b8fef82e2f758e99ef0f8d9b28a55d36f0cfdf
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66191830"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867999"
 ---
-# <a name="windows-server-ad-fs-deployment-guide"></a>Руководство по развертыванию Windows Server AD FS
+# <a name="windows-server-ad-fs-deployment-guide"></a>Рекомендации по развертыванию Windows Server AD FS
 
 
-Можно использовать службы федерации Active Directory \(AD FS\) с Windows Server 2016 и 2012 R2 операционной системы, чтобы создавать решения по управлению, которые расширяют распределенной идентификации, федеративного удостоверения проверки подлинности, и службы проверки подлинности в Интернете\-приложений на основе через границы организации и платформы. При развертывании служб федерации Active Directory можно расширить существующие возможности управления удостоверениями вашей организации в Интернете.  
+Вы можете использовать службы федерации Active Directory (AD FS) \(AD FS\) с операционной системой Windows Server 2016 и 2012 R2 для создания решений по управлению федеративными удостоверениями, которые расширяют распределенную идентификацию, проверку подлинности и службы авторизации для веб\--приложений в пределах организации и границ платформы. Развертывание AD FS позволяет расширить существующие возможности управления удостоверениями в Организации в Интернете.  
   
 -   [Развертывание фермы серверов федерации](Deploying-a-Federation-Server-Farm.md)  
   

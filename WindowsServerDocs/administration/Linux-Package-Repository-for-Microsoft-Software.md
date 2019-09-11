@@ -1,6 +1,6 @@
 ---
-title: Репозитория программного обеспечения Linux для продуктов Майкрософт
-description: В этом документе описывается, как использовать и установить пакеты программного обеспечения Linux для продуктов Майкрософт.
+title: Репозиторий программного обеспечения Linux для продуктов Майкрософт
+description: В этом документе описывается, как использовать и устанавливать программные пакеты Linux для продуктов Майкрософт.
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.service: na
@@ -11,32 +11,32 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: 77b309739125a2114ef4ada4adb305f4dd169b06
-ms.sourcegitcommit: 927adf32faa6052234ad08f21125906362e593dc
+ms.openlocfilehash: bade9fff306272188ac8d2b91a3d9921c80fe036
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67033324"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866889"
 ---
-# <a name="linux-software-repository-for-microsoft-products"></a>Репозитория программного обеспечения Linux для продуктов Майкрософт
+# <a name="linux-software-repository-for-microsoft-products"></a>Репозиторий программного обеспечения Linux для продуктов Майкрософт
 
 ## <a name="overview"></a>Обзор
-Корпорация Майкрософт создает и поддерживает широкий набор программных продуктов для систем Linux и делает их доступными через стандартный репозиториями пакетов APT и YUM. В этом документе описывается настройка в репозитории в системе Linux, таким образом, вы можете затем установку или обновление программного обеспечения корпорации Майкрософт Linux с помощью средств управления стандартный пакет вашему дистрибутиву.
+Корпорация Майкрософт создает и поддерживает различные программные продукты для систем Linux и делает их доступными через стандартные репозитории пакетов APT и YUM. В этом документе описывается, как настроить репозиторий в системе Linux, чтобы можно было установить или обновить программное обеспечение Microsoft Linux с помощью стандартных средств управления пакетами для дистрибутива.
 
-Репозитория программного обеспечения корпорации Майкрософт Linux состоит из нескольких вложенных репозиториев:
+Репозиторий программного обеспечения Microsoft Linux состоит из нескольких дочерних репозиториев:
 
- - рабочую среду — в рабочей, вложенный репозиторий предназначен для пакетов, предназначен для использования в рабочей среде. Эти пакеты коммерчески поддерживаются корпорацией Майкрософт в соответствии с условиями договора на поддержку или программа, которая содержит с корпорацией Майкрософт.
+ - произ. рабочий репозиторий рабочей области предназначен для пакетов, предназначенных для использования в рабочей среде. Эти пакеты коммерчески поддерживаются корпорацией Майкрософт в соответствии с условиями действующего соглашения о поддержке или программы, имеющейся в корпорации Майкрософт.
 
- - MSSQL-server - эти репозитории содержат пакеты для Microsoft SQL Server на базе Linux — см. также: [SQL Server в Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
+ - MSSQL-Server — эти репозитории содержат пакеты для Microsoft SQL Server на Linux — см. также: [SQL Server на Linux](https://www.microsoft.com/en-us/sql-server/sql-server-vnext-including-Linux).
 
 > [!Note]
-> Пакеты в репозиториях программного обеспечения Linux, распространяются условия лицензионного соглашения, расположенного в пакетах. Прочитайте условия лицензии перед использованием пакета. Установка и использование пакета означает согласие с настоящими условиями. Если вы не согласны с условиями лицензии, не используйте пакет.
+> Пакеты в репозиториях программного обеспечения Linux подчиняются условиям лицензии, расположенным в пакетах. Ознакомьтесь с условиями лицензионного соглашения перед использованием пакета. Установка и использование пакета составляют принятие этих условий. Если вы не согласны с условиями лицензии, не используйте пакет.
 
 
 ## <a name="configuring-the-repositories"></a>Настройка репозиториев
-Путем установки пакета Linux, к которому применяется дистрибутив Linux и версии репозиториями можно настроить автоматически. Будет установлена Конфигурация репозитория, а также открытый ключ GPG, используемый средствами, такими как apt и yum/zypper для проверки подписанных пакетов и/или метаданные репозитория.
+Репозитории можно настроить автоматически, установив пакет Linux, который относится к дистрибутиву и версии Linux. Пакет установит конфигурацию репозитория вместе с открытым ключом GPG, который используется такими инструментами, как APT/Yum/zypper, для проверки подписанных пакетов и метаданных репозитория.
 
-### <a name="enterprise-linux-rhel-and-variants"></a>Enterprise Linux (RHEL и вариантов)
+### <a name="enterprise-linux-rhel-and-variants"></a>Enterprise Linux (RHEL и варианты)
 
  - Enterprise Linux 6 (EL6)
 
@@ -49,31 +49,31 @@ ms.locfileid: "67033324"
 
 ### <a name="ubuntu"></a>Ubuntu
 
- - Ubuntu 14.04 (верный)
+ - Ubuntu 14,04 (Trusted)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/14.04/prod
         sudo apt-get update
 
- - Ubuntu 16.04 (Xenial)
+ - Ubuntu 16,04 (Xenial)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/16.04/prod
         sudo apt-get update
 
- - Ubuntu 18.04 (Bionic)
+ - Ubuntu 18,04 (Бионик)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
         sudo apt-get update
 
- - Ubuntu 18.10 (космическая)
+ - Ubuntu 18,10 (космическими)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
         sudo apt-get update
 
- - Ubuntu 19.04 (Disco)
+ - Ubuntu 19,04 (Disco)
 
         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
@@ -84,18 +84,18 @@ ms.locfileid: "67033324"
         sudo rpm -Uvh https://packages.microsoft.com/config/sles/12/packages-microsoft-prod.rpm
 
 
-## <a name="manual-configuration"></a>Ручная настройка
-Файлы конфигурации репозитория будут доступны из [packages.microsoft.com/config](https://packages.microsoft.com/config/). Имя и расположение этих файлов можно найти, используя следующее соглашение об именовании, URI:
+## <a name="manual-configuration"></a>Настройка вручную
+Файлы конфигурации репозитория доступны в [Packages.Microsoft.com/config](https://packages.microsoft.com/config/). Имя и расположение этих файлов можно найти с помощью следующего соглашения об именовании URI:
 
         https://packages.microsoft.com/config/<Distribution>/<Version>/prod.(repo|list)
 
-**Пакет и репозитория подписывания ключа**
+**Ключ подписывания пакета и репозитория**
 
- - Открытый ключ GPG корпорации Майкрософт может быть скачан здесь: [https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
- - Открытый идентификатор ключа: Microsoft (подписей выпуска) <gpgsecurity@microsoft.com>
- - Отпечаток открытого ключа: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
+ - Открытый ключ Microsoft GPG можно скачать здесь:[https://packages.microsoft.com/keys/microsoft.asc](https://packages.microsoft.com/keys/microsoft.asc)
+ - Идентификатор открытого ключа: Майкрософт (подписывание выпуска)<gpgsecurity@microsoft.com>
+ - Отпечаток открытого ключа:`BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры:
 
  - RHEL/CentOS 7
 

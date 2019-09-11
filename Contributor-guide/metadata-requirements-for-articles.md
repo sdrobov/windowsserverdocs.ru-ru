@@ -1,28 +1,28 @@
 ---
-title: Добавьте теги необходимые метаданные для вашей статьи о Windows Server
-description: Список сведений, необходимо добавить как теги метаданных в верхнюю часть вашей статьи на тему Windows Server. Требуемые теги могут меняться, в соответствии с требованиями отчетов и группы.
+title: Добавление необходимых тегов метаданных в статью, связанную с Windows Server
+description: Список сведений, которые необходимо добавить в качестве тегов метаданных, в начало статей, посвященных Windows Server. Необходимые теги могут изменяться в зависимости от требований к отчетности и команде.
 author: eross-msft
 ms.author: lizross
 ms.date: 05/06/2019
-ms.openlocfilehash: f7c514def1353d44386b1bc53c8cabffe1e31fda
-ms.sourcegitcommit: 7e54a1bcd31cd2c6b18fd1f21b03f5cfb6165bf3
+ms.openlocfilehash: f0af6b48cd3fd28ae0a15752cb21bfe9a4abf14f
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65461643"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865089"
 ---
-# <a name="add-the-required-metadata-tags-to-your-windows-server-related-article"></a>Добавьте теги необходимые метаданные для вашей статьи о Windows Server
+# <a name="add-the-required-metadata-tags-to-your-windows-server-related-article"></a>Добавление необходимых тегов метаданных в статью, связанную с Windows Server
 
-В верхней части каждой статьи не существует определенных метаданных, который должен быть включен для отслеживания и оптимизации поисковой системы. Требуемые теги могут меняться, зависимости от требования к отчетности. Тем не менее вы должны уведомление, если вам нужно добавить или удалить все поля.
+В начале каждой статьи есть определенные метаданные, которые необходимо включать в целях отслеживания и SEO. Необходимые теги могут быть изменены в зависимости от требований к отчетам. Однако если необходимо добавить или удалить какие-либо поля, необходимо получать уведомления.
 
-Он должен выглядеть следующим образом, включая тремя дефисами (-) в верхней и нижней частях:
+Он должен выглядеть следующим образом, включая три дефиса (---) в верхней и нижней части:
 
 ```markdown
 
 ---
 title: The title of the article should go here. This is used in SEO and search results.
 
-description: A description for the article should go here. This is used in search results, to provide users with information about whether the article has the information they’re looking for.
+description: A description for the article should go here. This is used in search results, to provide users with information about whether the article has the information they're looking for.
 
 ms.prod: Use this specific text, windows-server-threshold
 
@@ -32,7 +32,7 @@ author: Your GitHub alias
 
 ms.author: Your Microsoft alias
 
-manager: Your manager’s Microsoft alias
+manager: Your manager's Microsoft alias
 
 ms.topic: Type of article, including article, landing-page, get-started-article, or reference
 

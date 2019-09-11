@@ -9,12 +9,12 @@ ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 188e635543e13154622f52bf02cf877b05cc8fda
-ms.sourcegitcommit: 286e3181ebd2cb9d7dc7fe651858a4e0d61d153f
+ms.openlocfilehash: fc924f5e5bdd7dabecac4fdd6805ad261a0fc634
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300712"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70866165"
 ---
 # <a name="ad-fs-rapid-restore-tool"></a>Средство ускоренного восстановления AD FS
 
@@ -235,13 +235,13 @@ RngCryptoServiceProvider используется для создания рас
 
 
 ### <a name="version-10750"></a>Версия: 1.0.75.0
-Отпускании Август 2018 г.
+Отпускании Август 2018 г.
 
 **Исправлены проблемы:**
 * Обновление Backup — ADFS при использовании параметра-Баккупдкм.  Средство определит, имеет ли текущий контекст доступ к контейнеру DKM.  В этом случае не требуются права администратора домена или учетные данные учетной записи службы.  Это позволяет автоматически создавать резервные копии без явного предоставления учетных данных или запуска от имени учетной записи администратора домена.
 
 ### <a name="version-10730"></a>Версия: 1.0.73.0
-Отпускании Август 2018 г.
+Отпускании Август 2018 г.
 
 **Исправлены проблемы:**
 * Обновите алгоритмы шифрования, чтобы приложение соответствовало стандарту FIPS.

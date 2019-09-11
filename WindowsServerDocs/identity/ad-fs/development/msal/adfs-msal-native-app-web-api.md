@@ -8,12 +8,12 @@ ms.date: 08/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: f1de6229d5360a4ea95d285f34ad32532762edca
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 588d717b8f03987b86af7dc0576d537ebd88c4ba
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983562"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70867615"
 ---
 # <a name="scenario-native-app-calling-web-api"></a>Сценарий: Вызов веб-API в собственном приложении 
 >Область применения. AD FS 2019 и более поздних версий 

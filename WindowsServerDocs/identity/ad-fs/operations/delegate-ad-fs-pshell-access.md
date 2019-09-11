@@ -9,12 +9,12 @@ ms.date: 01/31/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: 86bbb562e223fdf61dac3ce5646d97a57b2eba4c
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: f4b8f09e5c75f3b9086847a47d33bd76775f3cd1
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546304"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865497"
 ---
 # <a name="delegate-ad-fs-powershell-commandlet-access-to-non-admin-users"></a>Делегирование AD FS доступ к командлет PowerShell для пользователей без прав администратора 
 По умолчанию AD FS администрирование с помощью PowerShell может быть выполнено только администратором AD FS. Во многих крупных организациях это может не быть реальной рабочей моделью при работе с другими персонажами, такими как персонал службы поддержки.  
@@ -99,7 +99,7 @@ RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = 'C:\Program Files\Win
 
 Сохраните файл конфигурации сеанса. 
  
-Настоятельно рекомендуется протестировать [файл конфигурации сеанса](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Test-PSSessionConfigurationFile?view=powershell-5.1) , если вы редактировали файл pssc вручную с помощью текстового редактора, чтобы убедиться в правильности синтаксиса. Если файл конфигурации сеанса не прошел проверку, он не будет успешно зарегистрирован в системе.  
+Настоятельно рекомендуется [протестировать файл конфигурации сеанса](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Test-PSSessionConfigurationFile?view=powershell-5.1) , если вы редактировали файл pssc вручную с помощью текстового редактора, чтобы убедиться в правильности синтаксиса. Если файл конфигурации сеанса не прошел проверку, он не будет успешно зарегистрирован в системе.  
  
 ### <a name="install-the-jea-session-configuration-on-the-ad-fs-server"></a>Установка конфигурации сеанса JEA на сервере AD FS 
 

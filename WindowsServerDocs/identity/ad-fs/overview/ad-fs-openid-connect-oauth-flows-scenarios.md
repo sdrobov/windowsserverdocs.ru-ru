@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: identity-adfs
-ms.openlocfilehash: b83cc7c4c9062c68298e52f6f3b366e6953cb442
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: d7ed8f7976116ab245fa730a5a050e7ec46cebea
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69983512"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869488"
 ---
 # <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>AD FS OpenID Connect подключения/OAuth потоки и сценарии приложений
 Применимо к AD FS 2016 и более поздних версий
@@ -591,7 +591,7 @@ scope=openid
 |verification_uri|Универсальный код ресурса (URI), по которому пользователь должен обратиться к user_code, чтобы войти в систему.| 
 |verification_uri_complete|Универсальный код ресурса (URI), по которому пользователь должен обратиться к user_code, чтобы войти в систему. Это заполняется user_code, поэтому пользователю не нужно вводить user_code| 
 |expires_in|Число секунд до истечения срока действия device_code и user_code.| 
-|пределах|Количество секунд, в течение которых клиент должен ожидать между запросами опроса.| 
+|Пределах|Количество секунд, в течение которых клиент должен ожидать между запросами опроса.| 
 |message|Понятная пользователю строка с инструкциями для пользователя. Это можно локализовать, включив параметр запроса в запрос формы? МКТ = XX-XX, заполнив код языка и региональных параметров соответствующего языка.  
 
 ### <a name="authenticating-the-user"></a>Проверка подлинности пользователя 

@@ -1,6 +1,6 @@
 ---
-title: Строки и локализации в Windows Admin Center
-description: Дополнительные сведения о получении к локализации строк в пакете SDK Windows Admin Center (Гонолулу проекта)
+title: Строки и локализация в центре администрирования Windows
+description: Сведения о том, как подготовить строки для локализации в пакете SDK для Windows Admin Center (проект Хонолулу)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,26 +8,26 @@ ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: fb328f86c98141a5a2a1c4fd05ec1d4c96a7bc5f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 4cc624dcc985f13f97b7bbc767de6bbb9c72217a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845405"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869714"
 ---
-# <a name="strings-and-localization-in-windows-admin-center"></a>Строки и локализации в Windows Admin Center #
+# <a name="strings-and-localization-in-windows-admin-center"></a>Строки и локализация в центре администрирования Windows #
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
-Перейдем к более подробное руководство расширения пакета SDK для Windows Admin Center и поговорим о строках и локализации.
+Давайте подробно рассмотрим пакет SDK для расширений центра администрирования Windows и поговорим о строках и локализации.
 
-Обеспечение возможности локализации всех строк, которые отображаются на уровень представления данных, воспользуйтесь преимуществами файла strings.resjson под /src/resources/strings - он уже настроен. Если вам нужно добавить новую строку для расширения, добавьте его в этот файл resjson как новая запись. Существующая структура имеет следующий формат:
+Чтобы включить локализацию всех строк, отображаемых на уровне представления, воспользуйтесь файлом strings. resjson в разделе/СРК/ресаурцес/стрингс — он уже настроен. Если необходимо добавить новую строку в расширение, добавьте ее в этот файл RESJSON в качестве новой записи. Существующая структура имеет следующий формат:
 
 ``` ts
 "<YourExtensionName>_<Component>_<Accessor>": "Your string value goes here.",
 ```
 
-Можно использовать любой формат, нужный для строк, но имейте в виду, что в процессе создания (процесс, который принимает resjson и выводит можно использовать класс TypeScript) преобразует символ подчеркивания (_) точки (.).
+Для строк можно использовать любой формат, но имейте в виду, что процесс создания (процесс, который принимает RESJSON и выводит используемый класс TypeScript) преобразует символ подчеркивания (_) в точки (.).
 
 Например, эта запись:
 ``` ts
@@ -37,3 +37,44 @@ ms.locfileid: "59845405"
 ``` ts
 MsftSme.resourcesStrings<Strings>().HelloWorld.cim.title;
 ```
+
+## <a name="add-other-languages-for-localization"></a>Добавить другие языки для локализации ## 
+
+Для локализации на другие языки необходимо создать файл strings. resjson для каждого языка. Эти файлы должны быть местами в ```\loc\output\{!ExtensionName}\{!LanguageFolder}\strings.resjson```. Доступные языки с соответствующими папками:
+
+| Язык      | Папка      |
+| ------------- |-------------|
+| Čeština | cs-CZ |
+| Deutsch | de-DE |
+| Английский | en-US |
+| Español | es-ES |
+| Français | fr-FR | 
+| Magyar | hu-HU | 
+| Italiano | it-IT |
+| 日本語 | ja-JP | 
+| 한국어 | ko-KR | 
+| Nederlands | nl-NL |
+| Polski | pl-PL |
+| Português (Brasil) | pt-BR |
+| Português (Portugal) | pt-PT |
+| Русский | ru-RU |
+| Svenska | sv-SE |
+| Türkçe    | tr-TR |
+| 中文(简体) | zh-CN |
+| 中文(繁體) | zh-TW |
+> [!NOTE]
+> Если потребности в структуре файлов различаются в LOC/Output, необходимо настроить Локалеоффсет для задачи gulp "Generate-RESJSON-JSON-локализованный", которая находится в gulpfile. js. Это смещение является глубоким для папки loc, в которой он должен начинать поиск файлов strings. resjson.
+
+Каждый файл strings. resjson будет отформатирован так же, как упоминалось ранее в верхней части этого раздела. 
+
+Например, чтобы включить локализацию для Espaсol, включите следующую запись в ```\loc\output\HelloWorld\es-ES\strings.resjson```: 
+```json
+"HelloWorld_cim_title": "CIM Componente",
+```
+В любое время, когда вы добавили локализованные строки, для их появления необходимо запустить gulp. Выполните:
+``` cmd
+gulp generate 
+```
+
+Чтобы убедиться, что строки созданы, перейдите к ```\src\app\assets\strings\{!LanguageFolder}\strings.resjson```. Недавно добавленная запись появится в этом файле.
+Теперь при переключении языка в центре администрирования Windows вы увидите локализованные строки в расширении. 
