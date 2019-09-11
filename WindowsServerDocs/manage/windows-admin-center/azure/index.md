@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
 ms.date: 05/31/2019
-ms.openlocfilehash: 460399a57bc229b44d37a9fdd1e4938bf9e7d6ac
-ms.sourcegitcommit: fe621b72d45d0259bac1d5b9031deed3dcbed29d
+ms.openlocfilehash: b4b1f42db7d80fabe2e3361f3ab9ebf41ad8bc29
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66455365"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70865429"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Подключение Windows Server к гибридным службам Azure
 
@@ -59,7 +59,7 @@ ms.locfileid: "66455365"
 Синхронизируйте файлы на этом сервере с общими папками Azure. Сохраняйте все свои файлы локально или используйте распределение по уровням в облаке и кэшируйте только наиболее часто используемые файлы на сервере, размещая холодные данные в облачном хранилище. Используя возможность резервного копирования данных в облаке, можно не беспокоиться о резервном копировании данных на локальном сервере. Кроме того, благодаря многосайтовой синхронизации можно синхронизировать набор файлов на нескольких серверах.
 
 - **Добавление уровня безопасности для Windows Admin Center в виде проверки подлинности [Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/)**  
-Вы можете добавить еще один уровень безопасности для Windows Admin Center, настроив для пользователей, которым требуется доступ к шлюзу, обязательную проверку подлинности с помощью удостоверения Azure Active Directory (Azure AD). Проверка подлинности Azure AD также позволяет воспользоваться такими функциями безопасности Azure AD, как условный доступ и многофакторная проверка подлинности.  
+Вы можете добавить еще один уровень безопасности для Windows Admin Center, настроив для пользователей, которым требуется доступ к шлюзу, обязательную проверку подлинности с помощью удостоверения Azure Active Directory (Azure AD). Аутентификация Azure AD также позволяет воспользоваться такими функциями безопасности Azure AD, как условный доступ и многофакторная проверка подлинности.  
 Дополнительные сведения см. в разделе о [настройке проверки подлинности Azure AD для Windows Admin Center.](../configure/user-access-control.md#azure-active-directory)  
 
 - **Защита виртуальных машин Hyper-V с помощью [Azure Site Recovery](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)**  

@@ -1,0 +1,184 @@
+### YamlMime:Hub
+title: Документация по Windows Server
+summary: 'Windows Server является платформой для создания инфраструктуры подключенных приложений, сетей и веб-служб: от рабочей группы до центра обработки данных.'
+metadata:
+  title: Документация по Windows Server | Документация Майкрософт
+  description: 'Windows Server является платформой для создания инфраструктуры подключенных приложений, сетей и веб-служб: от рабочей группы до центра обработки данных.'
+  author: eross-msft
+  manager: daveba
+  ms.service: windows-server-threshold
+  ms.topic: hub-page
+  ms.date: 06/06/2019
+  ms.author: lizross
+  ms.openlocfilehash: 9af5ed848f824699d3ddf1830ff61f38a9475ac8
+  ms.sourcegitcommit: c7c743acada0ddf574d169a5c67b32d153fe77e7
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 09/10/2019
+  ms.locfileid: "70876259"
+highlightedContent:
+  items:
+  - title: Что нового в Windows Server 2019?
+    itemType: whats-new
+    url: /windows-server/get-started-19/whats-new-19
+  - title: Начало работы с Windows Server 2019
+    itemType: overview
+    url: /windows-server/get-started-19/get-started-19
+  - title: Windows Admin Center
+    itemType: how-to-guide
+    url: /windows-server/manage/windows-admin-center/overview
+  - title: Гиперконвергентная инфраструктура
+    itemType: overview
+    url: /windows-server/hyperconverged/index
+  - title: Подключение к гибридным службам Azure
+    itemType: how-to-guide
+    url: /windows-server/azure-hybrid-services/index
+  - title: Приступая к работе с Windows Server 2016
+    itemType: how-to-guide
+    url: /windows-server/get-started/server-basics
+  - title: Завершение обслуживания Windows Server 2008 R2 и Windows Server 2008
+    itemType: overview
+    url: /windows-server/get-started/modernize-windows-server-2008
+  - title: Программа предварительной оценки Windows для Server
+    itemType: overview
+    url: /windows-insider/at-work/
+conceptualContent:
+  items:
+  - title: Идентификация и доступ
+    links:
+    - url: /windows-server/identity/ad-ds/ad-ds-getting-started
+      itemType: overview
+      text: Приступая к работе с доменными службами Active Directory (AD DS)
+    - url: /windows-server/identity/active-directory-federation-services
+      itemType: overview
+      text: Службы федерации Active Directory (AD FS)
+    - url: /windows-server/identity/securing-privileged-access/securing-privileged-access
+      itemType: concept
+      text: Обеспечение безопасности привилегированного доступа
+    footerLink:
+      url: /windows-server/identity/identity-and-access
+      text: Дополнительные сведения
+  - title: Отказоустойчивая кластеризация
+    links:
+    - url: /windows-server/failover-clustering/whats-new-in-failover-clustering
+      itemType: whats-new
+      text: Что нового в отказоустойчивой кластеризации?
+    - url: /windows-server/failover-clustering/create-failover-cluster
+      itemType: how-to-guide
+      text: создание отказоустойчивого кластера
+    - url: /windows-server/failover-clustering/cluster-aware-updating
+      itemType: overview
+      text: Общие сведения о кластерном обновлении
+    footerLink:
+      url: /windows-server/failover-clustering/failover-clustering-overview
+      text: Дополнительные сведения
+  - title: Management
+    links:
+    - url: /windows-server/manage/windows-admin-center/overview
+      itemType: overview
+      text: Использование Windows Admin Center для управления средой
+    - url: /windows-server/manage/system-insights/overview
+      itemType: overview
+      text: Обзор системной аналитики
+    - url: /windows-server/administration/performance-tuning/
+      itemType: overview
+      text: Руководство по обеспечению высокой производительности Windows Server 2016
+    footerLink:
+      url: /windows-server/administration/manage-windows-server
+      text: Дополнительные сведения
+  - title: Сеть
+    links:
+    - url: /windows-server/networking/what-s-new-in-networking
+      itemType: whats-new
+      text: Новые возможности работы с сетями
+    - url: /windows-server/networking/sdn/
+      itemType: overview
+      text: Общие сведения о программно-конфигурируемой сети (SDN)
+    - url: /windows-server/networking/sdn/technologies/network-controller/network-controller
+      itemType: overview
+      text: Сетевой контроллер
+    footerLink:
+      url: /windows-server/networking/networking
+      text: Дополнительные сведения
+  - title: Пульт ДУ
+    links:
+    - url: /windows-server/remote/remote-desktop-services/welcome-to-rds
+      itemType: overview
+      text: Обзор служб удаленных рабочих столов
+    - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+      itemType: overview
+      text: Клиенты удаленного рабочего стола
+    - url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access
+      itemType: how-to-guide
+      text: 'Удаленный рабочий стол: разрешение доступа к компьютеру'
+    footerLink:
+      url: /windows-server/remote/index
+      text: Дополнительные сведения
+  - title: Безопасность и контроль
+    links:
+    - url: /windows-server/security/windows-authentication/windows-authentication-overview
+      itemType: overview
+      text: Обзор проверки подлинности Windows
+    - url: /windows-server/security/group-managed-service-accounts/getting-started-with-group-managed-service-accounts
+      itemType: how-to-guide
+      text: Приступая к работе с групповыми управляемыми учетными записями служб
+    - url: /windows-server/security/windows-authentication/credentials-processes-in-windows-authentication
+      itemType: overview
+      text: Процедуры с учетными данными в проверке подлинности Windows
+    footerLink:
+      url: /windows-server/security/security-and-assurance
+      text: Дополнительные сведения
+  - title: Хранилище
+    links:
+    - url: /windows-server/storage/whats-new-in-storage
+      itemType: whats-new
+      text: Новые возможности хранения
+    - url: /windows-server/storage/disk-management/overview-of-disk-management
+      itemType: overview
+      text: Обзор управления дисками
+    - url: /windows-server/storage/storage-spaces/understand-quorum
+      itemType: overview
+      text: Общие сведения о кворуме кластеров и пулов
+    footerLink:
+      url: /windows-server/storage/storage
+      text: Дополнительные сведения
+  - title: Устранение неполадок
+    links:
+    - url: /windows-server/manage/windows-admin-center/support/troubleshooting
+      itemType: how-to-guide
+      text: Устранение неполадок в Windows Admin Center
+    - url: /windows-server/failover-clustering/troubleshooting-using-wer-reports
+      itemType: how-to-guide
+      text: Устранение неполадок отказоустойчивой кластеризации с помощью отчетов об ошибках Windows
+    - url: /windows-server/storage/disk-management/troubleshooting-disk-management
+      itemType: how-to-guide
+      text: Устранение неполадок в управлении дисками
+    footerLink:
+      url: /windows-server/troubleshoot/windows-server-support-solutions
+      text: Дополнительные сведения
+  - title: Виртуализация
+    links:
+    - url: /virtualization/windowscontainers/
+      itemType: overview
+      text: Обзор контейнеров в Windows
+    - url: /windows-server/virtualization/hyper-v/hyper-v-on-windows-server
+      itemType: overview
+      text: Hyper-V в Windows Server
+    - url: /windows-server/virtualization/hyper-v-virtual-switch/hyper-v-virtual-switch
+      itemType: overview
+      text: Обзор виртуального коммутатора Hyper-V
+    footerLink:
+      url: /windows-server/virtualization/virtualization
+      text: Дополнительные сведения
+additionalContent:
+  sections:
+  - items:
+    - title: Windows Server 2012 R2 и Windows Server 2012
+      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2012 R2 и Windows Server 2012.
+      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
+    - title: Windows Server 2008 R2 и Windows Server 2008
+      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2008 R2 и Windows Server 2008.
+      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
+    - title: История разработчика для Windows Server 2008
+      summary: Содержимое для разработчиков, а также других технических специалистов и руководителей, заинтересованных в изучении некоторых новых и расширенных функций в Windows Server 2008.
+      url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
