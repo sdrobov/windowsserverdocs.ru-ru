@@ -1,6 +1,6 @@
 ---
 title: nslookup set type
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4fb647b723586202e2bd88f1ab4c8943e305a73a
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: bc4da57f2e0b8e9727523ed72d55e6042adee5e9
+ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436492"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70975293"
 ---
 # <a name="nslookup-set-type"></a>nslookup set type
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет тип записи ресурса для запроса.
 ## <a name="syntax"></a>Синтаксис
@@ -30,33 +30,33 @@ ms.locfileid: "66436492"
 set type=<ResourceRecordtype>
 ```
 ## <a name="parameters"></a>Параметры
-<ResourceRecordtype> Указывает тип записи ресурса DNS. Тип записи ресурса по умолчанию — A. В следующей таблице перечислены допустимые значения для этой команды.
+<ResourceRecordtype>Указывает тип записи ресурса DNS. Тип записи ресурса по умолчанию —. В следующей таблице перечислены допустимые значения для этой команды.
 
 | Значение |                                                   Описание                                                   |
 |-------|-----------------------------------------------------------------------------------------------------------------|
-|   Объект   |                                      Указывает компьютер,&#39;IP-адрес                                      |
-|  ЛЮБОЙ  |                                     Указывает компьютер,&#39;IP-адрес.                                      |
-| ЗАПИСЬ CNAME |                                    Указывает каноническое имя для псевдонима.                                     |
-|  GID  |                                  Указывает идентификатор группы для имени.                                  |
-| HINFO |                          Указывает компьютер,&#39;s ЦП и тип операционной системы.                           |
-|  МБ   |                                        Указывает имя домена почтового ящика.                                         |
-|  MG   |                                         Задает член группы электронной почты.                                          |
-| MINFO |                                   Указывает сведения о списке почтовых ящиков или почты.                                   |
+|   Объект   |                                      Указывает IP-&#39;адрес компьютера                                      |
+|  ВСЕМИ  |                                     Указывает IP-&#39;адрес компьютера.                                      |
+| ПСЕВДОНИМ |                                    Задает каноническое имя для псевдонима.                                     |
+|  ОПЕРАЦИОННОЙ  |                                  Задает идентификатор группы для имени группы.                                  |
+| HINFO |                          Указывает процессор компьютера&#39;и тип операционной системы.                           |
+|  МБ   |                                        Указывает доменное имя почтового ящика.                                         |
+|  MG   |                                         Указывает члена почтовой группы.                                          |
+| СООТВЕТСТВУЮЩУЮ |                                   Указывает сведения о почтовом ящике или списке рассылки.                                   |
 |  MR   |                                     Указывает имя домена переименования почты.                                      |
 |  MX   |                                          Указывает почтовый обменник.                                          |
-|  NS   |                                 Указывает имя DNS-сервер для указанной зоны.                                 |
-|  PTR  | Указывает компьютер, если запрос является IP-адресом; в противном случае определяет указатель на другие сведения. |
-|  SOA  |                                Указывает начало записи зоны для зоны DNS.                                 |
+|  NS   |                                 Указывает сервер DNS-имен для именованной зоны.                                 |
+|  УКАЗАТЕЛЬ  | Указывает имя компьютера, если запрос является IP-адресом; в противном случае указывает указатель на другую информацию. |
+|  АРХИТЕКТУРА  |                                Указывает начальную зону для зоны DNS.                                 |
 |  TXT  |                                         Задает текстовую информацию.                                         |
-|  UID  |                                         Задает идентификатор пользователя.                                          |
-| UINFO |                                         Указывает сведения о пользователе.                                         |
-|  WKS  |                                         Описывает хорошо известной службы.                                         |
-| {справки |                                                       ?}                                                        |
+|  ТАКОЙ  |                                         Указывает идентификатор пользователя.                                          |
+| УИНФО |                                         Указывает сведения о пользователе.                                         |
+|  ЕЙ  |                                         Описание хорошо известной службы.                                         |
+| {Справка |                                                       ?}                                                        |
 
-Отображает краткое описание <strong>nslookup</strong> подкоманды
+Отображает краткую сводку подкоманд <strong>nslookup</strong> .
 ## <a name="remarks"></a>Примечания
-- <strong>Задайте тип</strong> команда выполняет ту же функцию, что <strong>задать querytype</strong> команды.
-- Дополнительные сведения о типах записей ресурсов см. в разделе Request for Comments (подробнее).
+- Команда <strong>Set Type</strong> выполняет ту же функцию, что и команда <strong>Set QueryType</strong> .
+- Дополнительные сведения о типах записей ресурсов см. в статье запрос комментария (RFC) 1035.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">Ключ синтаксиса команд</a>
-  <a href="nslookup-set-querytype.md" data-raw-source="[nslookup set querytype](nslookup-set-querytype.md)">nslookup задать querytype</a>
+  <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">Ключ синтаксиса командной строки</a><a href="nslookup-set-querytype.md" data-raw-source="[nslookup set querytype](nslookup-set-querytype.md)">nslookup set QueryType</a> 
+  
