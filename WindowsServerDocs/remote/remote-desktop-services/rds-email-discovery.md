@@ -8,12 +8,12 @@ ms.date: 3/27/2018
 ms.localizationpriority: medium
 ms.topic: article
 author: christianmontoya
-ms.openlocfilehash: 5b3f162b8eee70fbc452b7400b737454c3fffb59
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ca9484cc8abffcc21b4ed11756fb009b55046a0c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712659"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870974"
 ---
 # <a name="set-up-email-discovery-to-subscribe-to-your-rds-feed"></a>Настройка обнаружения электронной почты для оформления подписки на RDS-канал
 
@@ -38,4 +38,4 @@ ms.locfileid: "63712659"
 
    Имена полей записей DNS зависят от регистратора доменных имен, но этот процесс приведет к записи типа TXT с именем _msradc. \<domain_name\> (например, _msradc.contoso.com) со значением полного веб-канала удаленных рабочих столов.
 
-Готово! Теперь запустите приложение удаленного рабочего стола на вашем устройстве и подпишитесь.
+Вот и все! Теперь запустите приложение удаленного рабочего стола на вашем устройстве и подпишитесь.
