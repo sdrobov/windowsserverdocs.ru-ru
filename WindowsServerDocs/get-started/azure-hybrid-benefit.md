@@ -8,12 +8,12 @@ ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
-ms.openlocfilehash: 62821abc6c9eec660fa6af832bb1aba151708021
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 187abe06b469abe511d4bbbfb0aac9237d3c650a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63686434"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868519"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Преимущество гибридного использования Azure для Windows Server
 
@@ -79,7 +79,7 @@ ms.locfileid: "63686434"
     "{"ImageType":"WindowsServerBYOL","ServiceType":"Standard_A1","VMName":"","UsageType":"ComputeHR"}" 
     ```
 
-Обратите внимание, что выставление счетов не применяется в режиме реального времени, т. е. виртуальная машина с преимуществом гибридного использования может отобразиться в счете только через несколько часов с момента активации.
+Обратите внимание, что выставление счетов не применяется в режиме реального времени, т. е. виртуальная машина с преимуществом гибридного использования может отобразиться в счете только через несколько часов после момента активации.
 Вы можете ввести результаты в **средстве подсчета преимущества гибридного использования Azure для Windows Server SA** ниже, чтобы получить количество требуемых лицензий WS, покрытых программой SA или подписками.
 
 Обязательно выполните инвентаризацию в каждой принадлежащей вам подписке, чтобы получить полное представление о вашей позиции лицензирования.

@@ -66,6 +66,9 @@
 
 ## Доступ к материалам по Удаленному рабочему столу
 ### [Доступные клиенты Удаленного рабочего стола](clients/remote-desktop-clients.md)
+### Клиент Удаленного рабочего стола
+#### [Приступая к работе с клиентом Удаленного рабочего стола](clients/windowsdesktop.md)
+#### [Что нового в клиенте Удаленного рабочего стола](clients/windowsdesktop-whatsnew.md)
 ### Клиент Microsoft Store
 #### [Приступая к работе с клиентом Microsoft Store](clients/windows.md)
 #### [Что нового в клиенте Microsoft Store?](clients/windows-whatsnew.md)

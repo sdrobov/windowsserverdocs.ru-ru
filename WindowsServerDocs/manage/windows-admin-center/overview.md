@@ -8,18 +8,18 @@ ms.author: niwashbu
 ms.date: 08/22/2019
 ms.localizationpriority: high
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 7af852ba934de2dd29a76972d7a7ec73606e9b4c
-ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
+ms.openlocfilehash: cdd7986486fd3cad07f5e4577aaf0ab404bfb5d3
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009119"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869594"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
 > Относится к: Windows Admin Center, ознакомительная версия Windows Admin Center
 
-**Windows Admin Center** (ранее под кодовым названием **Project Honolulu**) — это продукт эволюции встроенных средств управления Windows Server; это единая консоль, объединяющая все аспекты локального и удаленного управления серверами. Так как платформа развертывается локально, а в качестве интерфейса управления используется браузер, подключение к Интернету и Azure не требуются. Windows Admin Center предоставляет полный контроль над всеми аспектами вашего развертывания, включая частные сети, не подключенные к Интернету.
+**Windows Admin Center** (прежнее кодовое название — **Project Honolulu**) — это продукт эволюции встроенных средств управления Windows Server; это единая консоль, объединяющая все аспекты локального и удаленного управления серверами. Так как платформа развертывается локально, а в качестве интерфейса управления используется браузер, подключение к Интернету и Azure не требуются. Windows Admin Center предоставляет полный контроль над всеми аспектами вашего развертывания, включая частные сети, не подключенные к Интернету.
 
 ## <a name="introduction"></a>Введение
 
