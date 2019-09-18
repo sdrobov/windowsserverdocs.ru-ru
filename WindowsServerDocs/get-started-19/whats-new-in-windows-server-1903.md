@@ -7,12 +7,12 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.date: 05/21/2019
-ms.openlocfilehash: 0ec6a7ec624818b92fb306089f3dea3c786c0827
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: cde394cd4e626466f17a27a68660e85f9fe55553
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280308"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868533"
 ---
 # <a name="whats-new-in-windows-server-version-1903"></a>Новые возможности Windows Server версии 1903
 
@@ -38,7 +38,7 @@ ms.locfileid: "67280308"
 
 ## <a name="directx-hardware-acceleration-in-containers"></a>Аппаратное ускорение DirectX в контейнерах
 
-Мы реализовали поддержку аппаратного ускорения API-интерфейсов DirectX в контейнерах Windows, например в сценариях машинного обучения с использованием аппаратных средств локального графического процессора. Дополнительные сведения см. в статье [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939) (Обеспечение ускорения с помощью графического процессора для контейнеров Windows).
+Мы реализовали поддержку аппаратного ускорения интерфейсов API DirectX в контейнерах Windows, например в сценариях машинного обучения с использованием аппаратных средств локального графического процессора. Дополнительные сведения см. в статье [Bringing GPU acceleration to Windows containers](https://techcommunity.microsoft.com/t5/Containers/Bringing-GPU-acceleration-to-Windows-containers/ba-p/393939) (Обеспечение ускорения с помощью графического процессора для контейнеров Windows).
 
 ## <a name="updated-container-identity-and-group-managed-service-account-documentation"></a>Обновления касательно идентификации контейнеров и документации о групповой управляемой учетной записи службы
 

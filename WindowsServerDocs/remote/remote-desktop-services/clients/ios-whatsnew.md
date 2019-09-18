@@ -8,21 +8,21 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: df19f9f27b79f5549d487f6035eba2345dd87ea6
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 3bdf50ed04e291014ed5b70b572b3123fa925d10
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150999"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987348"
 ---
 # <a name="whats-new-in-the-ios-client"></a>Что нового в клиенте iOS?
 
-Мы регулярно обновляем [клиент удаленного рабочего стола для iOS](remote-desktop-ios.md), добавляя новые компоненты и устраняя проблемы. Ознакомьтесь с последними обновлениями ниже.
+Мы регулярно обновляем [клиент удаленного рабочего стола для iOS](remote-desktop-ios.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
 
 ## <a name="remote-desktop-ios-beta-client"></a>Бета-версия клиента удаленного рабочего стола для iOS
 

@@ -13,12 +13,12 @@ manager: ''
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 85e332f5f66b59676ddd3b5383b1e5844c2b4c83
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 8af2b1a171a77def2bbb74cc7301e0562cb5b92c
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68529924"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870604"
 ---
 # <a name="user-cant-authenticate-or-must-authenticate-twice"></a>Пользователь не может выполнить аутентификацию или должен выполнить ее дважды
 
@@ -35,11 +35,11 @@ ms.locfileid: "68529924"
 
 Чтобы решить эту проблему, выполните одно из указанных ниже действий.
 
-  - [Измените членство пользователя в группе или назначение прав пользователя](#modify-the-users-group-membership-or-user-rights-assignment).
+  - [Измените членство пользователя в группах или назначенные ему права](#modify-the-users-group-membership-or-user-rights-assignment).
   - Отключите NLA (не рекомендуется).
   - Используйте клиенты удаленного рабочего стола, отличающиеся от Windows 10. Например, в клиентах Windows 7 нет такой проблемы.
 
-### <a name="modify-the-users-group-membership-or-user-rights-assignment"></a>Изменение членства пользователя в группе или назначение прав пользователя
+### <a name="modify-the-users-group-membership-or-user-rights-assignment"></a>Изменение членства пользователя в группах или назначенных ему прав
 
 Если эта проблема затрагивает одного пользователя, наиболее простым решением будет добавить этого пользователя в группу **Пользователи удаленного рабочего стола**.
 

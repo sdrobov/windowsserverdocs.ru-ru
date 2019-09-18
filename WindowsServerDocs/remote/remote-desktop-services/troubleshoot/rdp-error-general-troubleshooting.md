@@ -13,12 +13,12 @@ manager: ''
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: a1a2e325f3860f0b06353a59c5d37f6b5b2a1d11
-ms.sourcegitcommit: f6503e503d8f08ba8000db9c5eda890551d4db37
+ms.openlocfilehash: 39b11dac044c38f1ae80d4401fbb66af0317ab56
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68529934"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870702"
 ---
 # <a name="general-remote-desktop-connection-troubleshooting"></a>Устранение неполадок с подключениями к Удаленному рабочему столу
 
@@ -120,7 +120,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
    ```
 
 2. Введите **qwinsta**. 
-    ![Команда qwinsta выводит список процессов, которые прослушиваются на порту компьютера.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
+    ![Команда qwinsta выводит список процессов, которые ожидают передачи данных через порты компьютера.](../media/troubleshoot-remote-desktop-connections/WPS_qwinsta.png)
 3. Если в списке содержится **rdp-tcp** с состоянием **Listen**, прослушиватель протокола удаленного рабочего стола работает. Перейдите к разделу [Проверка порта прослушивателя протокола RDP](#check-the-rdp-listener-port). В противном случае перейдите к шагу 4.
 4. Экспортируйте конфигурацию прослушивателя RDP с рабочего компьютера.
     1. Войдите на компьютер с той же версией операционной системы, что и у затронутого компьютера, и получите доступ к реестру компьютера (например, с помощью редактора реестра).

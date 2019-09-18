@@ -13,18 +13,18 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
-ms.openlocfilehash: 79fd05458d0d838e34402bf28ef83b9327bfcceb
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ab9a6118641b49dfa971e66dc9ba75ef88bbd84a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63743456"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870877"
 ---
 # <a name="remote-desktop-services---high-availability"></a>Высокая доступность служб удаленных рабочих столов
 
 >Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
-В крупномасштабных системах неизбежны сбои и регулирование. Очень просто настроить роли инфраструктуры удаленных рабочих столов для поддержки высокой доступности и обеспечить пользователям удобное подключение без проблем.
+В крупномасштабных системах неизбежны сбои и регулирование. Очень просто настроить роли инфраструктуры удаленных рабочих столов для поддержки высокой доступности и обеспечить пользователям удобное подключение.
 
 Приведенные ниже элементы в службах удаленных рабочих столов представляют роли инфраструктуры удаленных рабочих столов. Также приводятся соответствующие рекомендации для обеспечения высокого уровня доступности.
 - [Посредник подключений к удаленному рабочему столу](Deploy-a-Remote-Desktop-Connection-Broker-cluster.md)

@@ -13,12 +13,12 @@ author: lizap
 ms.author: elizapo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: e9bd860769ec375a6d89ac452e3430b791fff3ad
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 506236cbb3893fe200b39aa1d58ed44cdbd9704a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63688735"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868376"
 ---
 # <a name="release-notes-important-issues-in-windows-server-version-1803"></a>Заметки о выпуске: Важные проблемы в Windows Server версии 1803
 
@@ -33,7 +33,7 @@ ms.locfileid: "63688735"
 
 ## <a name="software-defined-datacenter"></a>Программно-определяемый центр обработки данных
 
-Возможности программно-определяемого центра обработки данных, такие как локальные дисковые пространства, программно-определяемые сети и экранированные виртуальные машины, не включены в состав Windows Server версии 1803. Как описано в [обновлении Windows Server Semi-Annual Channel](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/), полугодовой канал Windows Server ориентирован на контейнеры и сценарии приложений, которые выигрывают от более быстрых инноваций. 
+Возможности программно-определяемого центра обработки данных, такие как Локальные дисковые пространства, программно-определяемые сети и экранированные виртуальные машины, не включены в состав Windows Server версии 1803. Как описано в [обновлении Windows Server Semi-Annual Channel](https://cloudblogs.microsoft.com/windowsserver/2018/03/29/windows-server-semi-annual-channel-update/), полугодовой канал Windows Server ориентирован на контейнеры и сценарии приложений, которые выигрывают от более быстрых инноваций. 
 
 Если вам нужны инфраструктурные роли, используйте выпуск Long-Term Servicing Channel: Windows Server 2016 (доступен сейчас) или [Windows Server 2019](https://cloudblogs.microsoft.com/windowsserver/2018/03/20/introducing-windows-server-2019-now-available-in-preview) (ожидается в этом году).
 

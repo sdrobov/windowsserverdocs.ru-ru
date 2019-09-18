@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: c0d85da8a51a43acd7765957b34220829a43b086
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 964139ac5fdaee4d580d29ab0f7543c7d5f15d0b
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810705"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868459"
 ---
 # <a name="kms-client-setup-keys"></a>Ключи установки клиента KMS
 
@@ -25,7 +25,7 @@ ms.locfileid: "66810705"
 > [!NOTE]
 > В приведенных далее таблицах LTSC означает Long-Term Servicing Channel, а LTSB — Long-Term Servicing Branch. 
 
-**Чтобы использовать перечисленные здесь ключи (универсальные ключи многократной установки), в своей среде сначала нужно запустить узел KMS.** Если узел KMS еще не настроен, см. раздел [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) , где рассматривается процедура настройки.
+**Чтобы использовать перечисленные здесь ключи (универсальные ключи многократной установки), в своей среде сначала нужно запустить узел KMS.** Если узел KMS еще не настроен, обратитесь к разделу [Deploy KMS Activation](https://technet.microsoft.com/library/dn502531(v=ws.11).aspx) (Развертывание активации KMS), в котором рассматривается процедура установки.
 
 При преобразовании узла KMS, компьютера, использующего ключ MAK или работающего под управлением розничной лицензионной версии Windows, в клиент KMS необходимо установить соответствующий ключ установки (GVLK) из приведенных ниже таблиц. Чтобы установить ключ установки клиента, откройте командную строку администратора в клиенте, введите **slmgr /ipk \<ключ установки\>** и нажмите клавишу **ВВОД**.
 

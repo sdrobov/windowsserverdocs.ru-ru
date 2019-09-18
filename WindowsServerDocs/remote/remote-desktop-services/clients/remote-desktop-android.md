@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ccc96013efb71a2403f9be2df03461eba5ff1fc1
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 1099f1c8bb635ee1b4bb33c6483f128ee0ecdfb9
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70151011"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871239"
 ---
 # <a name="get-started-with-the-android-client"></a>Приступая к работе с клиентом Android
 
@@ -143,7 +143,7 @@ ms.locfileid: "70151011"
 ### <a name="start-a-remote-desktop-connection"></a>Запуск подключения к удаленному рабочему столу
 
 1. Коснитесь подключения к удаленному рабочему столу для запуска сеанса. 
-2. Если появится запрос на проверку сертификата для удаленного рабочего стола, коснитесь пункта **Подключение**. Можно также выбрать **Don’t ask me again for connections to this computer** (Больше не спрашивать при подключении к этому компьютеру), чтобы всегда принимать сертификат.
+2. Если появится запрос на проверку сертификата для удаленного рабочего стола, коснитесь пункта **Подключение**. Можно также выбрать **Больше не выводить запрос о подключениях к этому компьютеру**, чтобы всегда принимать сертификат.
 
 ### <a name="manage-global-app-settings"></a>Управление глобальными параметрами приложения
 

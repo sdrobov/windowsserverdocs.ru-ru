@@ -8,21 +8,21 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: a8ecdf217f847f495b2cb90dd3511a8db9e72c95
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 6a4a6ae860dc8eabc4856ff3aa66268ed8d588de
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150988"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987365"
 ---
 # <a name="whats-new-in-the-windows-store-client"></a>Что нового в клиенте Microsoft Store?
 
-Мы регулярно обновляем [клиент удаленного рабочего стола для Windows](windows.md), добавляя новые компоненты и устраняя проблемы. Ознакомьтесь с последними обновлениями ниже.
+Мы регулярно обновляем [клиент Microsoft Store](windows.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
 
 ## <a name="updates-for-version-1011098"></a>Обновления для версии 10.1.1098
 
@@ -30,7 +30,7 @@ ms.locfileid: "70150988"
 
 - Теперь можно задать отображаемое имя для учетных записей пользователей, чтобы сохранять одно имя пользователя с разными паролями.
 - Теперь можно выбрать существующую учетную запись пользователя при добавлении удаленных ресурсов.
-- Устранена проблема, из-за которой клиент не завершает работу правильно.
+- Устранена проблема, из-за которой клиент не завершал работу правильно.
 - Клиент теперь правильно обрабатывает приостановку, когда открыты вторичные окна.
 - Дополнительные исправления ошибок.
 

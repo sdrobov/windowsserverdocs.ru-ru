@@ -8,21 +8,21 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 9ae58103b00941bb71d447641b1cdab7c02fa20b
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 9fbd3e9c5f7938fbf6a80e9f5dc950a2c0a9a257
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70151023"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987342"
 ---
 # <a name="whats-new-in-the-macos-client"></a>Что нового в клиенте macOS?
 
-Мы регулярно обновляем [клиент удаленного рабочего стола для macOS](remote-desktop-mac.md), добавляя новые компоненты и устраняя проблемы. Ознакомьтесь с последними обновлениями ниже.
+Мы регулярно обновляем [клиент удаленного рабочего стола для macOS](remote-desktop-mac.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
 
 Если возникнут проблемы, с нами всегда можно связаться, выбрав **Справка > Сообщить о проблеме**.
 
@@ -117,7 +117,7 @@ ms.locfileid: "70151023"
 
 ## <a name="updates-for-version-1023"></a>Обновления для версии 10.2.3
 
-*Дата публикации: 06.11.2018*
+*Дата публикации: 11.06.2018*
 
 - Добавлена поддержка параметра "remoteapplicationcmdline" RDP-файла для сценариев удаленных приложений.
 - Заголовок окна сеанса теперь содержит имя RDP-файла (и имя сервера), если он запускается из RDP-файла.

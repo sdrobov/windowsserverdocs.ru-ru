@@ -8,21 +8,21 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6ee224cd5bf7ccdeb3b0d55d091a5d322583c101
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 7a2061878cdbc7a5ace923835a334736e976e248
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150991"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987332"
 ---
 # <a name="whats-new-in-the-android-client"></a>Что нового в клиенте Android?
 
-Мы регулярно обновляем [клиент удаленного рабочего стола для Android](remote-desktop-android.md), добавляя новые компоненты и устраняя проблемы. Ознакомьтесь с последними обновлениями ниже.
+Мы регулярно обновляем [клиент удаленного рабочего стола для Android](remote-desktop-android.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
 
 ## <a name="updates-for-version-8171"></a>Обновления для версии 8.1.71
 

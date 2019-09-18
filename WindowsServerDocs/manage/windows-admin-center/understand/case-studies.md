@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 61f447f68ec6c85ed1554e176c78c4caec5dfde4
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 4707a6b54ad7a216f18c22367985e55d07e7a2eb
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63747888"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869507"
 ---
 # <a name="windows-admin-center-case-studies"></a>Примеры использования Windows Admin Center
 
@@ -38,7 +38,7 @@ ms.locfileid: "63747888"
 
 ### <a name="the-challenge"></a>**Задача**
 
-Первым вариантом использования Windows Admin Center компанией является Hyper-V и отказоустойчивая кластеризация. Также компания оценивает возможность применения Windows Admin Center для создания гиперконвергированного кластера.
+Первым вариантом использования Windows Admin Center компанией Ava6 является Hyper-V и отказоустойчивая кластеризация. Также компания оценивает возможность применения Windows Admin Center для создания гиперконвергированного кластера.
 
 Windows Admin Center помогает Ava6 управлять Windows Server, развернутым в выпуске Core, особенно для управления драйверами.  Windows Admin Center позволяет клиентам более эффективно использовать Hyper-V и отказоустойчивый кластер, в частности для управления виртуальными машинами, а также предоставляет графический интерфейс пользователя для работы с гиперконвергированным решением.
 
@@ -46,7 +46,7 @@ Windows Admin Center помогает Ava6 управлять Windows Server, р
 
 Компания Ava6 развернула Windows Admin Center в виде одного экземпляра для управления виртуальными машинами.
 
-Клиенты Ava6 были впечатлены потенциалом Windows Admin Center и предпочитают возможности управления этой платформы для работы с Hyper-V и отказоустойчивым кластером другим продуктам.  До развертывания Windows Admin Center управление драйверами было слишком сложным на сервере выпуска Core.  Платформа Windows Admin Center также позволила предложить пользователям S2D аналогичное решение, как у компаний-конкурентов, таких как Nutanix и VMWare.
+Клиенты Ava6 были впечатлены потенциалом Windows Admin Center и предпочитают возможности управления этой платформы для работы с Hyper-V и отказоустойчивым кластером другим продуктам.  До развертывания Windows Admin Center управление драйверами было слишком сложным на сервере выпуска Core.  Платформа Windows Admin Center также позволила компании Ava6 предложить пользователям S2D аналогичное решение, как у компаний-конкурентов, таких как Nutanix и VMWare.
 
 ## <a name="comparex"></a>Comparex
 

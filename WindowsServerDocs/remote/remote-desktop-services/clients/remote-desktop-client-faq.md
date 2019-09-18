@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e6f91aa02cd0f19d480c24309be5797c273b0f2e
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: e0dbe709681cf679347ccad2677ff3cda6690f3d
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66804947"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871234"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>Часто задаваемые вопросы о клиентах удаленного рабочего стола
 
@@ -234,7 +234,7 @@ ms.locfileid: "66804947"
 ### <a name="what-does-the-failed-to-parse-ntlm-challenge-error-mean"></a>Что означает ошибка "Failed to parse NTLM challenge" (Не удалось проанализировать запрос защиты NTLM)?
 Эта ошибка вызвана неправильной настройкой параметров на удаленном компьютере. Убедитесь, что на удаленном компьютере для параметра уровня безопасности RDP задано значение "Совместимый с клиентом". (Обратитесь к администратору системы, если вам необходима помощь в этом.)
 
-### <a name="what-does-tsrap-you-are-not-allowed-to-connect-to-the-given-host-mean"></a>Что означает сообщение "TS_RAP You are not allowed to connect to the given host" (TS_RAP: вам запрещено подключение к заданному узлу)?
+### <a name="what-does-ts_rap-you-are-not-allowed-to-connect-to-the-given-host-mean"></a>Что означает сообщение "TS_RAP You are not allowed to connect to the given host" (TS_RAP: вам запрещено подключение к заданному узлу)?
 Эта ошибка возникает, когда политика авторизации ресурсов на сервере шлюза запрещает вашему имени пользователя подключение к удаленному компьютеру. Это может произойти в следующих случаях.
 
 - Имя удаленного компьютера совпадает с именем шлюза. Затем при попытке подключения к удаленному компьютеру вместо него устанавливается подключение со шлюзом, разрешения на доступ к которому, вероятно, у вас нет. Если вам нужно подключиться к шлюзу, не используйте внешнее имя шлюза в качестве имени компьютера. Вместо этого используйте localhost, IP-адрес (127.0.0.1) или внутреннее имя сервера.

@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 06/07/2019
 ms.prod: windows-server-threshold
-ms.openlocfilehash: 53f34992b875730be80ba479f387095aebbc8132
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: d2a2acc9261ac1a25e140cc298cc58e4b0fb6e52
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469562"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70869061"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Вопросы и ответы: Windows Admin Center
 
@@ -27,7 +27,7 @@ Windows Admin Center — это облегченная платформа на 
 
 ## <a name="can-i-use-windows-admin-center-in-production-environments"></a>Можно ли использовать Windows Admin Center в рабочих средах?
 
-Да. Платформа Windows Admin Center официально доступна и готова к широкому использованию в рабочих развертываниях. Текущие возможности платформы и основные средства отвечают стандартным требованиям Майкрософт, предъявляемым к выпуску, и нашей шкале качества в отношении удобства использования, надежности, производительности, доступности, безопасности и простоты внедрения.
+Да. Платформа Windows Admin Center официально доступна и готова к широкому использованию в рабочих развертываниях. Текущие возможности платформы и основные средства отвечают стандартным требованиям корпорации Майкрософт, предъявляемым к выпуску, и нашей шкале качества в отношении удобства использования, надежности, производительности, доступности, безопасности и простоты внедрения.
 
 [!INCLUDE [support-policy](../includes/support-policy.md)]
 

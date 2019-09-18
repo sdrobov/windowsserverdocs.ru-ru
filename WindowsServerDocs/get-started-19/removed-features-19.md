@@ -13,12 +13,12 @@ ms.author: jgerend
 manager: jasgro
 ms.date: 08/22/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 59a31d01d1c5775c837010eca964c72fad8b5c92
-ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
+ms.openlocfilehash: 0f6b6ac42c096c6c80404c2d650905e73da8a97a
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000691"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70868647"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-windows-server-2019"></a>Удаленные или подлежащие замене компоненты в Windows Server версии 2019
 
@@ -28,7 +28,7 @@ ms.locfileid: "70000691"
 
 > [!TIP]
 > - Ранний доступ к сборкам Windows Server можно получить, вступив в [Программу предварительной оценки Windows](https://insider.windows.com), — это отличный способ для проверки изменений в функциональных возможностях.
-> - У вас есть вопросы о других выпусках? Узнайте об [удаленных или подлежащие замене компонентах в Windows Server](removed-features.md).
+> - У вас есть вопросы о других выпусках? См. сведения об [удаленных или подлежащих замене компонентах в Windows Server](removed-features.md).
 
 **Этот список не является исчерпывающим и может быть изменен**. 
 
@@ -50,7 +50,7 @@ ms.locfileid: "70000691"
 
 | Функция     | Вместо этого можно использовать... |
 | ----------- | --------------------- |
-| Диск для хранилища ключей в Hyper-V|Мы прекращаем работу над компонентом диска для хранилища ключей в Hyper-V. Если вы используете виртуальные машины первого поколения, обратитесь к статье [Generation 1 virtual machine security settings](../virtualization/hyper-v/learn-more/generation-1-virtual-machine-security-settings-for-hyper-v.md) (Параметры безопасности для виртуальной машины первого поколения). При создании виртуальных машин в качестве более безопасного решения используйте виртуальные машины второго поколения и устройства с доверенными платформенными модулями. |
+| Диск для хранилища ключей в Hyper-V|Мы прекращаем работу над компонентом диска для хранилища ключей в Hyper-V. Если вы используете виртуальные машины 1-го поколения, обратитесь к статье [Параметры безопасности для виртуальной машины поколения 1](../virtualization/hyper-v/learn-more/generation-1-virtual-machine-security-settings-for-hyper-v.md). При создании виртуальных машин используйте виртуальные машины 2-го поколения и устройства с доверенными платформенными модулями, чтобы получить более безопасное решение. |
 | Консоль управления доверенным платформенным модулем (TPM)|Сведения, ранее доступные в консоли управления доверенным платформенным модулем, теперь доступны на странице [**Device security**](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/wdsc-device-security) (Безопасность устройств) в [Центре безопасности Защитника Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-security-center/windows-defender-security-center). |
 | Режим аттестации на основе Active Directory для службы защиты узла|Мы прекращаем разработку режима аттестации на основе Active Directory для службы защиты узла. Вместо этого мы добавили новый режим аттестации — [аттестация на основе ключа узла](../security/guarded-fabric-shielded-vm/guarded-fabric-create-host-key.md), который гораздо проще и является столь же совместимым, как и аттестация на основе Active Directory.  Этот новый режим обеспечивает аналогичные функции, а также оптимизацию установки, более простое управление и меньшее число зависимостей инфраструктуры, чем аттестация на основе Active Directory. Аттестация на основе ключей узла не имеет никаких дополнительных требований к оборудованию, кроме требований к аттестации на основе Active Directory, поэтому все существующие системы останутся совместимыми с новым режимом. Дополнительные сведения о возможностях аттестации см. в статье [Deploy guarded hosts](../security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md) (Развертывание защищенных узлов). |
 | Служба OneSync | Служба OneSync синхронизирует данные приложений "Почта", "Календарь" и "Люди". В приложение Outlook был добавлен механизм синхронизации, который обеспечивает аналогичный процесс синхронизации. |

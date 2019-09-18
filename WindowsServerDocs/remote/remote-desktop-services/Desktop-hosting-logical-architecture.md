@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
 author: lizap
 manager: dongill
-ms.openlocfilehash: 14c32831445b12b314c71e538320c2ce5a9b7ee4
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: f70cfbf7d65ee0a8fb4439ea51a995e6428ede5e
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63749424"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70871356"
 ---
 # <a name="remote-desktop-services-architecture"></a>Архитектура служб удаленных рабочих столов
 
@@ -49,7 +49,7 @@ ms.locfileid: "63749424"
 
 ### <a name="rds-deployment-with-azure-ad-domain-services"></a>Развертывание служб удаленных рабочих столов с помощью доменных служб Azure AD
 
-Два стандартные архитектурные диаграммы, показанные выше, основаны на традиционном каталоге Active Directory (AD), развернутом на виртуальной машине Windows Server. Тем не менее, если у вас нет традиционного каталога AD, а только клиент Azure AD — в рамках таких служб, как Office 365, — но вам по-прежнему нужно использовать службы удаленных рабочих столов, можно использовать [доменные службы Azure AD](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview) для создания полностью управляемого домена в среде IaaS Azure, который будет поддерживать тех же пользователей, которые существуют в вашем клиенте Azure AD. Это избавляет от сложностей ручной синхронизации пользователей и управления большим числом виртуальных машин. Доменные службы Azure AD могут работать в любом развертывании: базовом или высокодоступном.
+Два стандартные архитектурные диаграммы, показанные выше, основаны на традиционном каталоге Active Directory (AD), развернутом на виртуальной машине Windows Server. Тем не менее, если у вас нет традиционного каталога AD, а только клиент Azure AD — в рамках таких служб, как Office 365, — но вам по-прежнему нужно использовать службы удаленных рабочих столов, то можно использовать [доменные службы Azure AD](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-overview) для создания полностью управляемого домена в среде IaaS Azure, который будет поддерживать тех же пользователей, которые существуют в вашем клиенте Azure AD. Это избавляет от сложностей ручной синхронизации пользователей и управления большим числом виртуальных машин. Доменные службы Azure AD могут работать в любом развертывании: базовом или высокодоступном.
 
 ![Azure AD и развертывание служб удаленных рабочих столов](./media/aadds-rds.png)
 

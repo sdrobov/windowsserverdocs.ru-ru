@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: 4f6e68ba1025e23e052d3c40535483ee90cb9b4b
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: ef13369fa325d136f9e3847db9872a80b650ca37
+ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "63712263"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70870630"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>Рекомендуемые параметры для рабочих столов VDI
 
@@ -398,7 +398,7 @@ ms.locfileid: "63712263"
 ||Разрешить прокрутку от краев|     Отключено|
 ||Отключить полезные советы|        Enabled|
 |Проводник|||
-||Не показывать уведомление "установлено новое приложение"|     Enabled|
+||Не показывать уведомление "Установлено новое приложение"|     Enabled|
 |Обозреватель игр|||
 ||Выключить загрузку сведений об игре|     Enabled|
 ||Отключить обновления игр|        Enabled|
@@ -465,7 +465,7 @@ ms.locfileid: "63712263"
 ||Разрешить использование Кортаны на экране блокировки|      Отключено|
 ||Разрешить средствам поиска и Кортане использовать информацию о местоположении|     Отключено|
 ||Запретить поиск в Интернете|      Enabled|
-||Don’t search the web or display web results in Search (Не выполнять поиск в Интернете и не отображать результаты из Интернета в поиске)|        Enabled|
+||Не выполнять поиск в Интернете и не отображать результаты из Интернета в поиске|        Enabled|
 ||Не добавлять местоположения в формате UNC для индексирования с помощью панели управления|     Enabled|
 ||Отключить индексирование файлов в кэше автономных файлов|        Enabled|
 |**Microsoft Store**|||

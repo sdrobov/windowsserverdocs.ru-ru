@@ -8,21 +8,21 @@ ms.suite: na
 ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
-author: lizap
-manager: dongill
-ms.author: elizapo
-ms.date: 08/27/2019
+author: heidilohr
+manager: daveba
+ms.author: helohr
+ms.date: 09/11/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4eaa9a187b4a8f7879cabf15724bfcfe3f625939
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 14d5eab00271ea825bb84a2d8189a44c38fa5388
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150960"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987368"
 ---
 # <a name="whats-new-in-the-web-client"></a>Что нового в веб-клиенте?
 
-Мы регулярно обновляем [веб-клиент удаленного рабочего стола](remote-desktop-web-client.md), добавляя новые компоненты и устраняя проблемы. Ознакомьтесь с последними обновлениями ниже.
+Мы регулярно обновляем [веб-клиент удаленного рабочего стола](remote-desktop-web-client.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
 
 > [!NOTE]
 > Мы изменили систему управления версиями для веб-клиента. Начиная с версии 1.0.18.0, все выпуски веб-клиента будут иметь номера версий (в формате W.X.Y.Z). Номера версий выпусков для веб-клиента удаленного рабочего стола всегда будут заканчиваться на 0 (например, W.X.Y.0). Каждый выпуск веб-клиента виртуального рабочего стола Windows меняет последнюю цифру до следующего выпуска веб-клиента удаленного рабочего стола (например, 1.0.18.1).

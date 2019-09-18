@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 03927cd531617c6e0c9572fc4ce74768e10bc66a
-ms.sourcegitcommit: 51eaab0f860312d97293fd90f3e632e7caee3df1
+ms.openlocfilehash: 14df478c681074f8081190048fb5579d7fa9f653
+ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70150936"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70987323"
 ---
 # <a name="get-started-with-the-windows-store-client"></a>Приступая к работе с клиентом Microsoft Store
 
@@ -30,8 +30,8 @@ ms.locfileid: "70150936"
 Приведенные ниже сведения помогут вам начать работу. Если у вас возникнут вопросы, ознакомьтесь с разделом с [вопросами и ответами](remote-desktop-client-faq.md).
 
 > [!NOTE]
-> - Хотите узнать о новых выпусках для клиента Windows? Перейдите к статье [Новые возможности клиента удаленного рабочего стола в Windows?](windows-whatsnew.md).
-> - Клиент можно использовать в любой версии Windows 10.
+> - Хотите узнать о новых выпусках для клиента Microsoft Store? Ознакомьтесь с разделом [Что нового в клиенте Microsoft Store?](windows-whatsnew.md)
+> - Клиент можно использовать в любой поддерживаемой версии Windows 10.
 
 ## <a name="get-the-rd-client-and-start-using-it"></a>Получение клиента удаленного рабочего стола и начало работы с ним
 
