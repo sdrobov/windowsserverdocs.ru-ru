@@ -1,4 +1,4 @@
-# [Удаленный доступ](index.md)
+# [Удаленный](index.md)
 ## [Службы MultiPoint](multipoint-services/MultiPoint-Services.md)
 ### [Планирование развертывания служб MultiPoint](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [Основные сведения о службах MultiPoint](multipoint-services/Introducing-MultiPoint-services.md)
