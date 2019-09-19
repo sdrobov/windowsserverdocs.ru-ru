@@ -1,6 +1,6 @@
 ---
 title: nslookup server
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba58e223d0aa35b4157b813b10bf1d274313a1c1
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e24e55026d12a0d8afc5b6f1bef926ece9087bd0
+ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436968"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105009"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменение сервера по умолчанию к указанному домену доменных имен (DNS).
+Изменяет сервер по умолчанию на указанный домен службы доменных имен (DNS).
 ## <a name="syntax"></a>Синтаксис
 ```
 server <DNSDomain>
@@ -34,10 +34,10 @@ server <DNSDomain>
 |    Параметр    |                          Описание                           |
 |-----------------|----------------------------------------------------------------|
 |   <DNSDomain>   | Обязательный. Указывает новый домен DNS для сервера по умолчанию. |
-| {help &#124; ?} |     Отображает краткое описание **nslookup** подкоманды.      |
+| {Help &#124; ?} |     Отображает краткую сводку подкоманд **nslookup** .      |
 
 ## <a name="remarks"></a>Примечания
-- **Server** команда текущий сервер использует для поиска информации о домене DNS. Это отличается от **lserver** команду, которая использует исходным сервером.
+- Команда **сервера** использует текущий сервер по умолчанию для поиска сведений об указанном домене DNS. Это отличается от команды **лсервер** , которая использует первоначальный сервер.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [nslookup lserver](nslookup-lserver.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)[nslookup лсервер](nslookup-lserver.md) 
+  

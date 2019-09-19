@@ -1,6 +1,6 @@
 ---
 title: nslookup set
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server-threshold
 ms.reviewer: na
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 99ac8736ca8223a1a444784c4cf605a973a9e4dd
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 928d222714bf01cac1585a25e8cac3ec6c8b0233
+ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436544"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71105055"
 ---
 # <a name="nslookup-set"></a>nslookup set
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменяет параметры конфигурации, которые влияют на том, как функция уточняющих запросов.
+Изменяет параметры конфигурации, влияющие на работу функций Lookup.
 ## <a name="syntax"></a>Синтаксис
 ```
 set <KeyWord>[=<Value>]
@@ -33,12 +33,12 @@ set <KeyWord>[=<Value>]
 
 |    Параметр    |                                                                                                                    Описание                                                                                                                    |
 |-----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    <KeyWord>    | Указывает подкоманды, являются производными от **задать** подкоманды. Например, подкоманды **set d2** имеет ключевое слово [**не**]**d2**. Список команд, которые являются производными от **задать** см Дополнительные ссылки. |
-|     <Value>     |                                                                                      Указывает значение параметра конфигурации nslookup для каждой подкоманды.                                                                                      |
-| {help &#124; ?} |                                                                                               Отображает краткое описание **nslookup** подкоманды.                                                                                               |
+|    <KeyWord>    | Определяет подкоманды, которые являются производными от подкоманды **Set** . Например, набор подкоманд **D2** имеет ключевое слово [**No**]**D2**. Список подкоманд, которые являются производными от подкоманды **Set** , см. в разделе Дополнительные ссылки. |
+|     <Value>     |                                                                                      Задает значение параметра конфигурации nslookup для каждой подкоманды.                                                                                      |
+| {Help &#124; ?} |                                                                                               Отображает краткую сводку подкоманд **nslookup** .                                                                                               |
 
 ## <a name="remarks"></a>Примечания
-Используйте **установить все** для вывода всех текущих параметров.
+Используйте **параметр Set All** , чтобы просмотреть список текущих параметров.
 ## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[nslookup задать все](nslookup-set-all.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)[nslookup set ALL](nslookup-set-all.md) 
+
