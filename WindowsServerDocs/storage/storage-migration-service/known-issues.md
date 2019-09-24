@@ -8,12 +8,12 @@ ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server-threshold
 ms.technology: storage
-ms.openlocfilehash: 16e62d9232d0ec1b01333d73bc5b4a1555ffbad0
-ms.sourcegitcommit: 61767c405da44507bd3433967543644e760b20aa
+ms.openlocfilehash: d8437e0e33a370ab698d25f25b43fbbcbae97792
+ms.sourcegitcommit: 45415ba58907d650cfda45f4c57f6ddf1255dcbf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70987403"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71206920"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -248,6 +248,15 @@ ms.locfileid: "70987403"
    ```PowerShell
    Register-SMSProxy -ComputerName *destination server* -Force
    ```
+## <a name="error-dll-was-not-found-when-running-inventory-from-a-cluster-node"></a>Ошибка "DLL не найдена" при выполнении инвентаризации с узла кластера
+
+При попытке запустить инвентаризацию с помощью службы миграции хранилища Orchestrator, установленной на узле отказоустойчивого кластера Windows Server 2019 и нацеливания на общий источник файлового сервера отказоустойчивого кластера Windows Server, появляется следующее сообщение об ошибке:
+
+    DLL not found
+    [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
+
+Чтобы решить эту проблему, установите "средства управления отказоустойчивыми кластерами" (RSAT-Cluster-Management) на сервере, на котором запущена служба миграции хранилища Orchestrator. 
+
 
 ## <a name="see-also"></a>См. также
 
