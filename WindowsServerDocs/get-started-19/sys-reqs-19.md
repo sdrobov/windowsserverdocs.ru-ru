@@ -1,28 +1,24 @@
 ---
 title: Требования к системе Windows Server 2019
 description: В этом разделе описываются минимальные требования к хранилищу, ЦП, сети, памяти и ОЗУ при выполнении чистой установки Windows Server 2019.
-ms.custom: na
 ms.prod: windows-server-threshold
-ms.reviewer: na
-ms.suite: na
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131f860e
-author: coreyp-at-msft
-ms.author: coreyp
+author: jasongerend
+ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: d97ec0efee86165f82bdf99a316d24d9c39ec958
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 70ebf445515fd227d0f35b0c267f4fe34b2b83a9
+ms.sourcegitcommit: 081661f50d6dafb77180149956a02e679270c710
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66810714"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71037583"
 ---
 # <a name="system-requirements"></a>Требования к системе
 
->Область применения. Windows Server 2019 
+> Относится к: Windows Server 2019
 
 В этом разделе описаны минимальные системные требования для запуска Windows Server&reg; 2019.
 
@@ -46,9 +42,10 @@ ms.locfileid: "66810714"
 - Поддержка CMPXCHG16b, LAHF/SAHF и PrefetchW  
 - Поддержка преобразования адресов второго уровня (EPT или NPT)  
 
-[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) — средство, которое можно использовать, чтобы проверить, какой из этих возможностей обладает ваш ЦП.
+[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) — инструменты, который можно использовать, чтобы проверить, которой из этих возможностей обладает ваш ЦП.
 
-## <a name="ram"></a>ОЗУ  
+## <a name="ram"></a>ОЗУ
+
 Ниже указаны примерные требования к ОЗУ для данного продукта.  
 
 **Минимальные требования**  
@@ -60,7 +57,7 @@ ms.locfileid: "66810714"
 >   
 > Чтобы этого не случилось, выполните одно из указанных ниже действий.  
 >   
-> -   Выделите виртуальной машине, на которой планируется установить данный выпуск, более 800 МБ ОЗУ. По завершении установки можно уменьшить этот объем до 512 МБ в зависимости от реальной конфигурации сервера.  
+> -   Выделите виртуальной машине, на которой планируется установить данный выпуск, более 800 МБ ОЗУ. По завершении установки можно уменьшить этот объем до 512 МБ в зависимости от реальной конфигурации сервера. Если вы изменили загрузочный образ, чтобы выполнить установку с дополнительными языками и обновлениями, то для выполнения установки может потребоваться выделить более 800 МБ ОЗУ.  
 > -   Прервите процесс загрузки данного выпуска на виртуальной машине, нажав клавиши SHIFT+F10. Используйте программу Diskpart.exe в открывшейся командной строке, чтобы создать и отформатировать раздел для установки. Запустите **Wpeutil createpagefile /path=C:\pf.sys** (предполагается, что созданный вами раздел для установки — C:). Закройте окно командной строки и продолжите установку.  
 
 ## <a name="storage-controller-and-disk-space-requirements"></a>Требования к контроллеру запоминающего устройства и пространству на диске  

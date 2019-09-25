@@ -9,12 +9,12 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 7e90738a157f620124bfca3d5f1f4c12789d3bf2
-ms.sourcegitcommit: b17ccf7f81e58e8f4dd844be8acf784debbb20ae
+ms.openlocfilehash: 1c0c6ca10e7ebac16d81fe1393e471a7878fd0ca
+ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69023918"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71143761"
 ---
 # <a name="install-upgrade-or-migrate-to-windows-server"></a>Установка, обновление или миграция в Windows Server
 
@@ -33,9 +33,7 @@ ms.locfileid: "69023918"
 
 Если вы хотите использовать то же оборудование и сохранить все роли сервера, которые вы настроили, без сброса настроек сервера, вам подойдет **обновление на месте**, когда вы переходите со старой операционной системы на более новую, сохраняя параметры, роли сервера и данные неповрежденными. Например, если ваш сервер работает под управлением Windows Server 2012 R2, вы можете обновить его до Windows Server 2016 или Windows Server 2019. Однако не каждая устаревшая операционная система позволяет перейти на любую новую ОС. 
 
-Посетите [Центр обновления Windows Server](http://aka.ms/upgradecenter), чтобы получить пошаговые инструкции по обновлению:
-
-[![Снимок экрана: Центр обновления Windows Server](media/upgrade-center.png)](http://aka.ms/upgradecenter)
+Ознакомьтесь со статьей [Общие сведения об обновлениях Windows Server](../upgrade/upgrade-overview.md), чтобы получить пошаговые инструкции по обновлению.
 
 ## <a name="cluster-os-rolling-upgrade"></a>Последовательное обновление операционной системы кластера
 
