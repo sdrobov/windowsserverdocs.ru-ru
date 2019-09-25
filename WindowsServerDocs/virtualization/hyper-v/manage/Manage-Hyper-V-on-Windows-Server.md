@@ -1,37 +1,38 @@
 ---
-title: Управление Hyper-V в Windows Server 2016
-description: Ссылки на статьи об управлении Hyper-V
+title: Управление Hyper-V в Windows Server
+description: Содержит ссылки на статьи об управлении Hyper-V
 ms.prod: windows-server-threshold
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c06b632-dd19-46ca-9f51-130c321963d8
-author: KBDAzure
-ms.author: kathydav
+author: jasongerend
+ms.author: jgerend
 ms.date: 01/08/2018
-ms.openlocfilehash: 0f5f7600dd47a97e6f49669426d32054e4ab847d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e8a9d4a894990c793c3725f93a51f04c93be41e3
+ms.sourcegitcommit: d12d9e6afd71d23e8a24682ad80d2cf3bc486588
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867425"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71226015"
 ---
 # <a name="manage-hyper-v-on-windows-server"></a>Управление Hyper-V в Windows Server
 
->Область применения. Windows Server 2016, Windows Server 2019 г.
+>Область применения. Windows Server 2016, Windows Server 2019
 
-Используйте ресурсы в этом разделе для управления Hyper-V в Windows Server 2016.
+Используйте ресурсы в этом разделе, чтобы упростить управление Hyper-V в Windows Server.
 
-- [Выбор между стандартных или рабочих контрольных точек](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)  
-- [Включение или отключение контрольных точек](Enable-or-disable-checkpoints-in-Hyper-V.md) 
+- [Настройка устройств с энергонезависимой памятью для виртуальных машин Hyper-V](persistent-memory-cmdlets.md)
+- [Выбор стандартных или рабочих контрольных точек](Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
+- [Создание набора VHD](Create-VHDSet-file.md)
+- [Включение и отключение контрольных точек](Enable-or-disable-checkpoints-in-Hyper-V.md)
 - [Управление узлами с помощью диспетчера Hyper-V](Remotely-manage-Hyper-V-hosts.md)
-- [Управление элементы управления ресурсами ЦП узла](manage-hyper-v-minroot-2016.md)
-- [С помощью групп ЦП виртуальной Машины](manage-hyper-v-cpugroups.md)
-- [Управление виртуальными машинами Windows с помощью PowerShell Direct](Manage-Windows-virtual-machines-with-PowerShell-Direct.md)  
-- [Настройка реплики Hyper-V](Set-up-Hyper-V-Replica.md)
-- [Использование динамической миграции без отказоустойчивой кластеризации для перемещения виртуальной машины](Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
-  
-
-
+- [Элементы управления ресурсами ЦП узла управления](manage-hyper-v-minroot-2016.md)
+- [Использование групп ЦП виртуальных машин](manage-hyper-v-cpugroups.md)
+- [Управление типами планировщика гипервизора](manage-hyper-v-scheduler-types.md)
+- [Сведения о выборе типа планировщика Hyper-V](about-hyper-v-scheduler-type-selection.md)
+- [Управление службами интеграции](Manage-Hyper-V-integration-services.md)
+- [Управление виртуальными машинами Windows с помощью PowerShell Direct](Manage-Windows-virtual-machines-with-powershell-direct.md)
+- [Настройка реплики Hyper-V](Set-up-Hyper-V-Replica.md) 
+- [Включение оборудования для мониторинга производительности Intel](Performance-Monitoring-Hardware.md)
+- [Перемещение виртуальных машин с помощью динамической миграции](Live-migration-overview.md)
