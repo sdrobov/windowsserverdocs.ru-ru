@@ -34,6 +34,7 @@
 #### [Обновление версии виртуальной машины](hyper-v/deploy/Upgrade-virtual-machine-version-in-Hyper-V-on-Windows-or-Windows-Server.md)
 #### [Развертывание графических устройств с помощью DDA](hyper-v/deploy/deploying-graphics-devices-using-dda.md)
 #### [Развертывание запоминающих устройств с помощью DDA](hyper-v/deploy/deploying-storage-devices-using-dda.md)
+
 ### [Управление](hyper-v/manage/Manage-Hyper-V-on-Windows-Server.md)
 #### [Настройка устройств с энергонезависимой памятью для виртуальных машин Hyper-V](hyper-v/manage/persistent-memory-cmdlets.md)
 #### [Выбор стандартных или рабочих контрольных точек](hyper-v/manage/Choose-between-standard-or-production-checkpoints-in-Hyper-V.md)
@@ -46,11 +47,14 @@
 #### [Сведения о выборе типа планировщика Hyper-V](hyper-v/manage/about-hyper-v-scheduler-type-selection.md)
 #### [Управление службами интеграции](hyper-v/manage/Manage-Hyper-V-integration-services.md)
 #### [Управление виртуальными машинами Windows с помощью PowerShell Direct](hyper-v/manage/Manage-Windows-virtual-machines-with-powershell-direct.md)
-#### [Настройка реплики Hyper-V](hyper-v/manage/Set-up-Hyper-V-Replica.md) 
-#### [Перемещение виртуальных машин с помощью динамической миграции](hyper-v/manage/Live-migration-overview.md) 
-##### [Общие сведения о динамической миграции](hyper-v/manage/Live-migration-overview.md) 
+#### [Настройка реплики Hyper-V](hyper-v/manage/Set-up-Hyper-V-Replica.md)
+#### [Включение оборудования для мониторинга производительности Intel](hyper-v/manage/Performance-Monitoring-Hardware.md)
+#### [Перемещение виртуальных машин с помощью динамической миграции](hyper-v/manage/Live-migration-overview.md)
+##### [Общие сведения о динамической миграции](hyper-v/manage/Live-migration-overview.md)
 ##### [Настройка узлов для динамической миграции](hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) 
-##### [Использование динамической миграции без отказоустойчивой кластеризации](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md) 
+##### [Использование динамической миграции без отказоустойчивой кластеризации](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
+
+
 ### [Обеспечение высокой производительности Hyper-V](../administration/performance-tuning/role/hyper-v-server/index.md)
 ## [Виртуальный коммутатор Hyper-V](hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md)
 ### [Удаленный доступ к памяти (RDMA) и объединение внедренных коммутаторов](hyper-v-virtual-switch/rdMA-and-Switch-Embedded-Teaming.md)
