@@ -1,8 +1,8 @@
 ---
-title: С помощью команды add-ImageGroup
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Add-Имажеграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 71050bfecdac4933bfe36f40ce09dae626735664
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5e870bd5435e1aa2b155fee880d32c0d784ac398
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829905"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363679"
 ---
-# <a name="using-the-add-imagegroup-command"></a>С помощью команды add-ImageGroup
+# <a name="using-the-add-imagegroup-command"></a>Использование команды Add-Имажеграуп
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Добавляет группу образов на сервер служб развертывания Windows.
 ## <a name="syntax"></a>Синтаксис
@@ -32,17 +32,17 @@ wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-mediaGroup:<Image group name>|Указывает имя группы образов для добавления.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы добавить группу образов, введите одно из следующих:
+Медиаграуп: <Image group name>|Указывает имя добавляемой группы образов.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы добавить группу образов, введите одно из следующих действий.
 ```
 wdsutil /add-ImageGroumediaGroup:ImageGroup2
 wdsutil /verbose /add-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-AllImageGroups](using-the-get-allimagegroups-command.md)
-[с помощью команды get-ImageGroup](using-the-get-imagegroup-command.md) 
- [ С помощью команды remove-ImageGroup](using-the-remove-imagegroup-command.md)
-[подкоманда: set-ImageGroup](subcommand-set-imagegroup.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды get-аллимажеграупс](using-the-get-allimagegroups-command.md)
+ с помощью команды[Get-Имажеграуп](using-the-get-imagegroup-command.md)
+[с помощью команды Remove-Имажеграуп](using-the-remove-imagegroup-command.md)
+[: Set-имажеграуп](subcommand-set-imagegroup.md)

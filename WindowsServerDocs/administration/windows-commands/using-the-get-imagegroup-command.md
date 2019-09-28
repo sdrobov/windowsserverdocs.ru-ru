@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-ImageGroup
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Имажеграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9dcb76155dc1044730673ed46a53cad57441a246
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d6531a3b69840a0a4910b2effdd3e349b76edf2c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59862605"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363120"
 ---
-# <a name="using-the-get-imagegroup-command"></a>С помощью команды get-ImageGroup
+# <a name="using-the-get-imagegroup-command"></a>Использование команды Get-Имажеграуп
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Извлекает сведения о группы образов и образы в нем.
+Извлекает сведения о группе образов и содержащихся в ней изображениях.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/detailed]
@@ -32,21 +32,21 @@ wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-mediaGroup:<Image group name>|Указывает имя группы образов.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-|[/ подробные]|Возвращает метаданные изображения для каждого образа. Если этот параметр не используется, чтобы вернуть только имя образа, описание и имя файла является поведение по умолчанию.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы просмотреть сведения о группы образов, введите:
+Медиаграуп: <Image group name>|Указывает имя группы образов.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/детаилед]|Возвращает метаданные изображения для каждого изображения. Если этот параметр не используется, поведение по умолчанию — возврат только имени, описания и имени файла изображения.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы просмотреть сведения о группе образов, введите:
 ```
 wdsutil /Get-ImageGroumediaGroup:ImageGroup1
 ```
-Чтобы просмотреть сведения, включая метаданные, введите следующую команду:
+Чтобы просмотреть сведения, включая метаданные, введите:
 ```
 wdsutil /verbose /Get-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /detailed
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды add-ImageGroup](using-the-add-imagegroup-command.md)
-[с помощью команды get-AllImageGroups](using-the-get-allimagegroups-command.md) 
- [ С помощью команды remove-ImageGroup](using-the-remove-imagegroup-command.md)
-[подкоманда: set-ImageGroup](subcommand-set-imagegroup.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды add-имажеграуп](using-the-add-imagegroup-command.md)
+ с[помощью команды Get-Аллимажеграупс](using-the-get-allimagegroups-command.md)
+[с помощью команды Remove-Имажеграуп](using-the-remove-imagegroup-command.md)
+[: Set-имажеграуп](subcommand-set-imagegroup.md)

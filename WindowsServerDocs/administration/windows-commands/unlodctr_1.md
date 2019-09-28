@@ -1,8 +1,8 @@
 ---
 title: unlodctr
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e1a662da10acc65b4ad2fd0d055cf9d46de603be
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 85a66b521f404358705962078f33af4bec1ebae5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363902"
 ---
 # <a name="unlodctr"></a>unlodctr
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Удаляет имена счетчиков производительности и текст описания для службы или драйвера устройства из системного реестра.   
+Удаляет имена счетчиков производительности и поясняющий текст для службы или драйвера устройства из системного реестра.   
 
 ## <a name="syntax"></a>Синтаксис  
 ```  
@@ -33,20 +33,20 @@ Unlodctr <DriverName>
 ### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|\<DriverName >|Удаляет производительности, счетчик параметры имени и текст для драйвера или службы, описания <DriverName> из реестра Windows Server 2003.|  
+|@no__t 0DriverName >|Удаляет параметры имени счетчика производительности и поясняющий текст для драйвера или службы <DriverName> из реестра Windows Server 2003.|  
 |/?|Отображение справки в командной строке.|  
 
 ## <a name="remarks"></a>Примечания  
 > [!WARNING]  
 > Неправильное изменение реестра может серьезно повредить систему. Перед внесением изменений следует сделать резервную копию всех ценных данных на компьютере.  
 
-Если сведения, которые вы предоставляете содержит пробелы, используйте кавычки вокруг текста (например, "<DriverName>«).  
+Если предоставленные сведения содержат пробелы, заключите его в кавычки (например, "<DriverName>").  
 
-## <a name="BKMK_Examples"></a>Примеры  
-Чтобы удалить текущие параметры реестра производительности и счетчиков текст описания для службы передачи протокола SMTP (Simple Mail):  
+## <a name="BKMK_Examples"></a>Примеров  
+Чтобы удалить текущие параметры реестра производительности и текст объяснения счетчика для службы SMTP:  
 ```  
 unlodctr SMTPSVC  
 ```  
 ## <a name="additional-references"></a>Дополнительная справка  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   

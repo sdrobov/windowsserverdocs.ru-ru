@@ -1,30 +1,30 @@
 ---
-title: Перенос сервера AD FS 2.0 federation
-description: Сведения о подготовке к миграции изолированного сервера AD FS в Windows Server 2012.
+title: Перенос сервера федерации AD FS 2,0
+description: Содержит сведения о готовности к миграции изолированного AD FS сервера на Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: f1262290690355b8e22ebea7137d3e25552f86da
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 227cf82712ea8741f68cc56315e200f4b219f857
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838145"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359360"
 ---
-# <a name="migrate-the-ad-fs-20-federation-server"></a>Перенос сервера AD FS 2.0 federation
+# <a name="migrate-the-ad-fs-20-federation-server"></a>Перенос сервера федерации AD FS 2,0
 
 
-Этот документ является отправной точкой для миграции AD FS 2.0 Federation Server до Windows Server 2012.  Выберите тот, который лучше всего соответствует вашему сценарию миграции:  
+Этот документ является отправной точкой для миграции сервера федерации AD FS 2,0 на Windows Server 2012.  Выберите тот, который лучше подходит для вашего сценария миграции:  
   
--   [Миграция изолированного сервера федерации AD FS или фермы AD FS с одним узлом](migrate-ad-fs-stand-alone-server.md)  
+-   [Миграция изолированного AD FS сервера федерации или AD FS фермы с одним узлом](migrate-ad-fs-stand-alone-server.md)  
   
--   [Миграция фермы внутренней базы данных Windows](migrate-ad-fs-wid-farm.md)  
+-   [Миграция фермы WID](migrate-ad-fs-wid-farm.md)  
   
--   [Миграция фермы SQL Server](migrate-ad-fs-sql-farm.md) 
+-   [Перенос фермы SQL Server](migrate-ad-fs-sql-farm.md) 
 
   
 
@@ -34,8 +34,8 @@ ms.locfileid: "59838145"
 
   
 ## <a name="next-steps"></a>Следующие шаги
- [Подготовка к миграции сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к миграции прокси-сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера AD FS 2.0 Federation](migrate-the-ad-fs-fed-server.md)   
- [Перенос прокси-сервера AD FS 2.0 Federation](migrate-the-ad-fs-2-fed-server-proxy.md)   
- [Миграция 1.1 веб-агентов AD FS](migrate-the-ad-fs-web-agent.md)
+ [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

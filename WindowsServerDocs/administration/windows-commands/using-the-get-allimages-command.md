@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-AllImages
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Аллимажес
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 57b81dd3dd3a24876c4401e80d08130ed5243888
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5122a5660031d503795715c0005b404f910d6626
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363501"
 ---
-# <a name="using-the-get-allimages-command"></a>С помощью команды get-AllImages
+# <a name="using-the-get-allimages-command"></a>Использование команды Get-Аллимажес
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Извлекает сведения о всех образов на сервере.
+Извлекает сведения обо всех образах на сервере.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil /Get-AllImages [/Server:<Server name>] /Show:{Boot | Install | LegacyRis | All} [/detailed]
@@ -32,20 +32,17 @@ wdsutil /Get-AllImages [/Server:<Server name>] /Show:{Boot | Install | LegacyRis
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-|/ Показать: {загрузки &#124; установить &#124; LegacyRis &#124; все}|-   **Загрузки** возвращает только образы загрузки.<br />-   **Установка** возвращает установки образов, а также сведения о групп образов, содержащих их.<br />-   **LegacyRis** возвращает только образы на удаленной установки (RIS).<br />-   **Все** возвращает загрузку информации об изображении, сведениями об установке образа (в том числе сведения о группах образ) и сведения об образе RIS.|
-|[/ подробные]|Указывает, что все метаданные изображения из каждого образа должны быть возвращены. Если данный параметр не указан, по умолчанию задается для возврата только имя образа, описание и имя файла.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы просмотреть сведения об образах, введите одно из следующих:
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|/Show: { &#124; установка &#124; легацирис &#124; все}|-   **Загрузка** возвращает только загрузочные образы.<br />-   .**Установка** возвращает образы установки, а также сведения о группах образов, содержащих их.<br />-   **легацирис** возвращает только образы служб удаленной установки (RIS).<br />-   **ALL** возвращает сведения об образе загрузки, сведения об образе установки (включая сведения о группах образов) и сведения об образе RIS.|
+|[/детаилед]|Указывает, что должны возвращаться все метаданные изображения из каждого изображения. Если этот параметр не используется, поведение по умолчанию — возврат только имени, описания и имени файла изображения.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы просмотреть сведения об образах, введите одно из следующих действий:
 ```
 wdsutil /Get-AllImages /Show:Install
 wdsutil /verbose /Get-AllImages /Server:MyWDSServer /Show:All /detailed
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды add образа](using-the-add-image-command.md)
-[с помощью команды копирования образа](using-the-copy-image-command.md)
-[Using Команда export-Image](using-the-export-image-command.md)
-[с помощью команды remove образа](using-the-remove-image-command.md)
-[с помощью команды заменить изображение](using-the-replace-image-command.md) 
- [Подкоманда: set-Image](subcommand-set-image.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды add-Image](using-the-add-image-command.md)
+ с помощью команды[Copy-](using-the-copy-image-command.md)Image @no__t[-5 с помощью команды](using-the-export-image-command.md)Remove-Image, 
+ с помощью[команды Удалить изображение](using-the-remove-image-command.md)@no__t[-9 с помощью Команда Replace-Image](using-the-replace-image-command.md)1[подкоманда: Set-Image](subcommand-set-image.md)

@@ -1,7 +1,7 @@
 ---
 title: Шаг 2. Настройка служб WSUS
 description: Раздел "Настройка служб Windows Server Update Service (WSUS)". Настройте службы WSUS на шаге 2 в ходе выполнения четырех шагов по развертыванию WSUS
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
@@ -10,12 +10,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 660cb0412abdf1ecb1afcba53a4aeb79ac407e56
-ms.sourcegitcommit: a9625758fbfb066494fe62e0da5f9570ccb738a3
+ms.openlocfilehash: d1a78d2006a45bb2af8f87a91d7bb888964ddbcb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68952462"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361675"
 ---
 # <a name="step-2-configure-wsus"></a>Шаг 2. Настройка WSUS
 
@@ -25,11 +25,11 @@ ms.locfileid: "68952462"
 
 |Задача|Описание|
 |----|--------|
-|[2,1. Настройка сетевых подключений](#21-configure-network-connections)|Настройка кластерной сети при помощи мастера настройки сети.|
-|[2,2. Настройка служб WSUS с помощью мастера настройки WSUS](#22-configure-wsus-by-using-the-wsus-configuration-wizard)|Мастер настройки WSUS служит для выполнения базовой настройки служб WSUS.|
-|[2,3. Настройка групп компьютеров WSUS](#23-configure-wsus-computer-groups)|Создайте группы компьютеров в консоли администрирования WSUS для управления обновлениями в организации.|
-|[2,4. Настройка обновлений клиента](#24-configure-client-updates)|Укажите, как и когда автоматические обновления будут применяться к клиентским компьютерам.|
-|[2,5. Защита WSUS с помощью протокола SSL](#25-secure-wsus-with-the-secure-sockets-layer-protocol)|Настройте протокол SSL для защиты служб Windows Server Update Services (WSUS).|
+|[2,1. Настройка сетевых подключений @ no__t-0|Настройка кластерной сети при помощи мастера настройки сети.|
+|[2,2. Настройка служб WSUS с помощью мастера настройки WSUS @ no__t-0|Мастер настройки WSUS служит для выполнения базовой настройки служб WSUS.|
+|[2,3. Настройка групп компьютеров WSUS @ no__t-0|Создайте группы компьютеров в консоли администрирования WSUS для управления обновлениями в организации.|
+|[2,4. Настройка обновлений клиента @ no__t-0|Укажите, как и когда автоматические обновления будут применяться к клиентским компьютерам.|
+|[2,5. Защита WSUS с помощью протокола SSL @ no__t-0|Настройте протокол SSL для защиты служб Windows Server Update Services (WSUS).|
 
 ## <a name="21-configure-network-connections"></a>2.1. Настройка сетевых подключений
 До начала процесса настройки убедитесь в том, что вы знаете ответы на следующие вопросы.
@@ -56,33 +56,33 @@ ms.locfileid: "68952462"
 ### <a name="211-connection-from-the-wsus-server-to-the-internet"></a>2.1.1. Подключение к Интернету с сервера WSUS
 Если между службами WSUS и сетью Интернет располагается корпоративный брандмауэр, возможно, потребуется настроить данный брандмауэр для обеспечения возможности получения обновлений службами WSUS. Для получения обновлений из Центра обновления Майкрософт сервер WSUS использует порт 443 для протокола HTTPS. Хотя большая часть корпоративных брандмауэров разрешает такой тип трафика, существуют некоторые компании, которые ограничивают доступ к Интернету с серверов из-за политик безопасности компании. Если ваша организация запрещает доступ, необходимо получить авторизацию, чтобы разрешить доступ к Интернету из WSUS в следующий список URL-адресов:
 
-- HTTP\://windowsupdate.Microsoft.com
+- HTTP @ no__t-0//windowsupdate. Microsoft. com
 
-- HTTP\://.windowsupdate.Microsoft.com\*
+- HTTP @ no__t-0 @ no__t-1\*.windowsupdate.microsoft.com
 
-- HTTPS\://.windowsupdate.Microsoft.com\*
+- HTTPS @ no__t-0 @ no__t-1\*.windowsupdate.microsoft.com
 
-- HTTP\://.Update.Microsoft.com\*
+- HTTP @ no__t-0 @ no__t-1\*.update.microsoft.com
 
-- HTTPS\://.Update.Microsoft.com\*
+- HTTPS @ no__t-0 @ no__t-1\*.update.microsoft.com
 
-- HTTP\://.windowsupdate.com\*
+- HTTP @ no__t-0 @ no__t-1\*.windowsupdate.com
 
-- HTTP\://download.windowsupdate.com
+- HTTP @ no__t-0//Download. windowsupdate. com
 
-- HTTPS\://download.Microsoft.com
+- HTTPS @ no__t-0//Download. Microsoft. com
 
-- HTTP\://.download.windowsupdate.com\*
+- HTTP @ no__t-0 @ no__t-1\*.download.windowsupdate.com
 
-- HTTP\://wustat.Windows.com
+- HTTP @ no__t-0//вустат. Windows. com
 
-- HTTP\://ntservicepack.Microsoft.com
+- HTTP @ no__t-0//нтсервицепакк. Microsoft. com
 
-- HTTP\://go.Microsoft.com
+- HTTP @ no__t-0//go. Microsoft. com
 
-- HTTP\://DL.Delivery.MP.Microsoft.com
+- HTTP @ no__t-0//DL. Delivery. MP. Microsoft. com
 
-- HTTPS\://DL.Delivery.MP.Microsoft.com
+- HTTPS @ no__t-0//DL. Delivery. MP. Microsoft. com
 
 > [!IMPORTANT]
 > В случае, когда WSUS не удается получить обновления из-за конфигурации брандмауэра, см. [статью 885819](https://support.microsoft.com/kb/885819) в базе знаний Майкрософт.
@@ -264,7 +264,7 @@ ms.locfileid: "68952462"
 
 -   [Шаг 4. Настройка параметров групповой политики для автоматического обновления](4-configure-group-policy-settings-for-automatic-updates.md)
 
--   [2,3. Настройка групп](#23-configure-wsus-computer-groups) компьютеров в этом разделе
+-   [2,3. Настройка групп компьютеров @ no__t-0 в этом разделе
 
 ### <a name="configure-automatic-updates-in-group-policy"></a>Настройка автоматического обновления в групповой политике
 
@@ -389,7 +389,7 @@ ms.locfileid: "68952462"
 
 2.  В меню **Пуск**введите **cmd**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.
 
-3.  Перейдите в папку _% ProgramFiles%_ **\\Update Services\\\\ Tools** .
+3.  Перейдите в папку _% ProgramFiles%_ **\\Update Services @ no__t-3Tools @ no__t-4** .
 
 4.  В окне командной строки введите следующую команду:
 
