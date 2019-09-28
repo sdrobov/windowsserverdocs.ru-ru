@@ -1,7 +1,7 @@
 ---
 title: Удаление серверов в локальных дисковых пространствах
 ms.assetid: 9d8499a7-1307-473d-9f00-8a051164fad2
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosdar
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,16 +10,16 @@ author: cosmosdarwin
 description: Сведения о том, как удалить серверы из кластера локальных дисковых пространств в Windows Server.
 ms.date: 2/5/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 9fcb67b3c5fbcff0ca2a48ee9a1d2e109af3e9a8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ce8caef2b51279c97cc012045750b7a73d97a4ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59890785"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402803"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>Удаление серверов в локальных дисковых пространствах
 
->Относится к: Windows Server 2019, Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server 2016
 
 В этой статье описано, как удалить серверы в [локальных дисковых пространствах](storage-spaces-direct-overview.md) с помощью PowerShell.
 
@@ -58,7 +58,7 @@ Remove-ClusterNode <Name> -CleanUpDisks
 
 #### <a name="enough-capacity"></a>Достаточно памяти
 
-Во-первых необходимо иметь достаточную емкость хранилища в оставшихся серверов, чтобы вместить все тома.
+Во первых, необходимо иметь достаточно места на оставшихся серверах для размещения всех томов.
 
 Например, если у вас четыре сервера, каждый из которых состоит из 10 дисков по 1 ТБ, у вас есть 40 ТБ физической памяти. После удаления одного сервера и всех его дисков у вас останется 30 ТБ места. Если ваши тома занимают более 30 ТБ места, они не поместятся на остающихся серверах, поэтому командлет вернет ошибку и не будет перемещать данные.
 
@@ -81,4 +81,4 @@ Remove-ClusterNode <Name> -CleanUpDisks
 
 ## <a name="see-also"></a>См. также
 
-- [Общие сведения о дисковых хранилища](storage-spaces-direct-overview.md)
+- [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)

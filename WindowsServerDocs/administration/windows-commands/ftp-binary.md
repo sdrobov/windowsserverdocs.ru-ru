@@ -1,8 +1,8 @@
 ---
-title: двоичный FTP
-description: Разделе команд Windows для двоичного файла с ftp
+title: двоичный файл FTP
+description: Раздел команд Windows для двоичного файла FTP
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,31 +13,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cadd59bff3bd2acf5c6d700caef66ca5c871b523
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 48579523f44232dec3357a20e8082050cc5175e6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376581"
 ---
-# <a name="ftp-binary"></a>FTP: двоичные
+# <a name="ftp-binary"></a>FTP: двоичный формат
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Задает тип передачи файла в двоичный формат.   
+Задает тип перемещения файла binary.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 binary  
 ```  
 ### <a name="parameters"></a>Параметры  
 none  
-## <a name="remarks-optional-section"></a>"Примечания" <optional section>  
-**FTP** поддерживает как ASCII, так и типа двоичных файлов. Использовать двоичный формат, при передаче исполняемых файлов. В двоичном режиме файлы передаются в байту. Дополнительные сведения о передаче файлов ASCII, см. в разделе **ftp: ascii** в дополнительные ссылки.  
-## <a name="BKMK_Examples"></a>Примеры  
-Задайте тип передачи файла в двоичный формат.  
+## <a name="remarks-optional-section"></a>Примечания <optional section>  
+**протокол FTP** поддерживает как ASCII, так и двоичные файлы изображений. Используйте двоичный формат при передаче исполняемых файлов. В двоичном режиме файлы передаются в однобайтовых единицах. Дополнительные сведения о переносе файлов ASCII см. в разделе **FTP: ASCII** в дополнительных ссылках.  
+## <a name="BKMK_Examples"></a>Примеров  
+Задайте для параметра тип перемещения файла значение двоичный.  
 ```  
 binary  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [FTP: ascii](ftp-ascii.md)  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [FTP: ASCII](ftp-ascii.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

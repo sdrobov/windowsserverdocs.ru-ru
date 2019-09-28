@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d5760820613c3b791b577a600cae543621eee257
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c8a5863865d465d55f1d5865fdcbdeeb942ce194
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845595"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71409080"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Управление репликацией и топологией Active Directory с помощью Windows PowerShell (уровень 100)
 
@@ -26,11 +26,11 @@ Windows PowerShell для Active Directory предоставляет возмо
 > Командлеты Windows PowerShell для репликации и топологии Active Directory доступны в следующих средах:
 > 
 > -    Контроллер домена Windows Server 2012
-> -    Установленным экземпляром Windows Server 2012 с помощью средства удаленного администрирования сервера для AD DS и AD LDS.
-> -   Windows&reg; 8 с помощью средства удаленного администрирования сервера для AD DS и AD LDS установлен.
+> -    Windows Server 2012 с средства удаленного администрирования сервера для AD DS и AD LDS.
+> -   Windows @ no__t-0 8 с средства удаленного администрирования сервера для AD DS и AD LDS установлен.
 
 ## <a name="installing-the-active-directory-module-for-windows-powershell"></a>Установка модуля Active Directory для Windows PowerShell
-Модуль Active Directory для Windows PowerShell устанавливается по умолчанию при установке роли сервера AD DS на сервере под управлением Windows Server 2012. Дополнительные действия, помимо добавления роли сервера, не требуются. Можно также установить модуль Active Directory на сервере под управлением Windows Server 2012, установив средства удаленного администрирования сервера, и модуль Active Directory можно установить на компьютер под управлением Windows 8, скачав и установив [ Средства администрирования удаленного сервера (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972). Установка описывается в разделе [Инструкции](https://www.microsoft.com/download/details.aspx?id=28972).
+Модуль Active Directory для Windows PowerShell устанавливается по умолчанию, когда роль сервера AD DS установлена на сервере под управлением Windows Server 2012. Дополнительные действия, помимо добавления роли сервера, не требуются. Кроме того, модуль Active Directory можно установить на сервере под управлением Windows Server 2012, установив средства удаленного администрирования сервера, и можно установить модуль Active Directory на компьютере с Windows 8, загрузив и установив [ Средства удаленного администрирования сервера (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972). Установка описывается в разделе [Инструкции](https://www.microsoft.com/download/details.aspx?id=28972).
 
 ## <a name="scenarios-for-testing-windows-powershell-for-active-directory-replication-and-topology-management-cmdlets"></a>Сценарии для тестирования командлетов управления репликацией и топологией Windows PowerShell для Active Directory
 Следующие сценарии предназначены для ознакомления администраторов с новыми командлетами управления:
@@ -65,7 +65,7 @@ Windows PowerShell для Active Directory предоставляет возмо
     > 
     > Пример. Введите `Get-ADRep` и нажмите клавишу TAB несколько раз, чтобы пропустить совпадающие команды, пока не достигнете команды `Get-ADReplicationSite`. Автозаполнение также работает для имен параметров, таких как `Filter`.
 
-    Для форматирования выходных данных из `Get-ADReplicationSite` команды в виде таблицы и ограничить отображение конкретными полями, можно передать выходные данные, чтобы `Format-Table` команды (или "`ft`" для краткости):
+    Чтобы отформатировать выходные данные команды `Get-ADReplicationSite` в виде таблицы и ограничить отображение конкретными полями, можно передать выходные данные в команду `Format-Table` (или "`ft`" для краткого):
 
     `Get-ADReplicationSite -Filter * | ft Name`
 
@@ -142,7 +142,7 @@ Windows PowerShell для Active Directory предоставляет возмо
 
     `Get-ADReplicationUpToDatenessVectorTable DC1`
 
-    При этом выводится список наивысших номеров последовательного обновления (USN), отображаемый на **DC1** для каждого контроллера домена в лесу. Значение параметра **Сервер** относится к серверу, на котором ведется таблица: в данном случае — **DC1**. Значение параметра **Партнер** относится к партнеру репликации (прямому или непрямому), в связи с которым были внесены изменения. Значение параметра UsnFilter является наивысшим номером последовательного обновления (USN), отображаемым на **DC1** для партнера. Если в лесу добавляется новый контроллер домена, он будет отсутствовать в **DC1**в таблице до **DC1** получит изменение, исходящее от нового домена.
+    При этом выводится список наивысших номеров последовательного обновления (USN), отображаемый на **DC1** для каждого контроллера домена в лесу. Значение параметра **Сервер** относится к серверу, на котором ведется таблица: в данном случае — **DC1**. Значение параметра **Партнер** относится к партнеру репликации (прямому или непрямому), в связи с которым были внесены изменения. Значение параметра UsnFilter является наивысшим номером последовательного обновления (USN), отображаемым на **DC1** для партнера. Если новый контроллер домена добавлен в лес, он не появится в таблице **DC1**до тех пор, пока **DC1** не получит изменения, поступающие из нового домена.
 
 #### <a name="to-view-the-up-to-dateness-vector-table-for-all-domain-controllers-in-a-domain"></a>Просмотр векторной таблицы синхронизации для всех контроллеров домена в домене
 
@@ -155,6 +155,6 @@ Windows PowerShell для Active Directory предоставляет возмо
     Сортировка позволяет легко сравнить последний номер последовательного обновления (USN), отображаемый на каждом контроллере домена для данного партнера репликации. Это быстрый способ убедиться, что репликация проходит во всей среде. Если репликация работает правильно, то значения параметра UsnFilter, указанные в отчете для данного партнера репликации, должны быть похожи на всех контроллерах домена.
 
 ## <a name="see-also"></a>См. также
-[Расширенной репликации Active Directory и управление топологиями, с помощью Windows PowerShell &#40;уровень 200&#41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
+[Расширенная репликация Active Directory и управление топологией &#40;с помощью Windows PowerShell уровня 200&#41;](Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md)
 
 

@@ -1,8 +1,8 @@
 ---
-title: кэш bitsadmin и deleteurl
-description: Раздел Windows команды для **bitsadmin кэша и deleteurl** — удаляет все записи кэша для заданного URL-адреса.
+title: кэш битсадмин и делетеурл
+description: Раздел команд Windows для **кэша битсадмин и делетеурл** — удаляет все записи кэша для данного URL-адреса.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a831c49e1461761cb7466b46e7a5ad8e037f4ec9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 869d3bc0f011cc82aaea9b7468667964051e1c00
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382060"
 ---
-# <a name="bitsadmin-cache-and-deleteurl"></a>кэш bitsadmin и deleteurl
+# <a name="bitsadmin-cache-and-deleteurl"></a>кэш битсадмин и делетеурл
 
 
 
@@ -36,15 +36,15 @@ bitsadmin /DeleteURL url
 
 |Параметр|Описание|
 |---------|-----------|
-|url|URL-адрес, определяющий удаленный файл.|
+|url|Универсальный указатель ресурсов, определяющий удаленный файл.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример удаляет все записи кэша для https://www.microsoft.com/en/us/default.aspx
+В следующем примере удаляются все записи кэша для https://www.microsoft.com/en/us/default.aspx.
 ```
 C:\>bitsadmin /DeleteURL https://www.microsoft.com/en/us/default.aspx 
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

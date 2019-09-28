@@ -2,22 +2,22 @@
 title: Создание отчетов по требованию
 description: В этой статье описывается, как создавать отчеты по требованию с целью анализа использования диска на сервере
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: b51ab0ad2a9c670aa63c4c86f7ff2c052139cb95
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9b3cde8a01c40a04df1bc433687029a2e0e7c394
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445975"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403011"
 ---
 # <a name="generate-reports-on-demand"></a>Создание отчетов по требованию
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 В ходе повседневных операций можно использовать параметр **Создать отчеты** для создания одного или нескольких отчетов по требованию. С помощью этих отчетов можно анализировать различные аспекты текущего использования диска на сервере. Текущие данные собираются до создания отчетов.
 

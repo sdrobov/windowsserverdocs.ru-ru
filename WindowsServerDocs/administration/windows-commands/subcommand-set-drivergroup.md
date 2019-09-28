@@ -1,8 +1,8 @@
 ---
-title: Подкоманды DriverGroup набора
-description: 'Раздел Windows команды для ***- '
+title: Набор подкоманд-Дриверграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e645e16a3d78dd91bad98fedbb04896025b0eaf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 751985cffea32b5129909576f0631cce83adc9a2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852705"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370843"
 ---
-# <a name="subcommand-set-drivergroup"></a>Подкоманда: set-DriverGroup
+# <a name="subcommand-set-drivergroup"></a>Подкоманда: Set-Дриверграуп
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает свойства существующей группы драйверов на сервере.
 ## <a name="syntax"></a>Синтаксис
@@ -32,13 +32,13 @@ wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Nam
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/ DriverGroup:<Group Name>|Задает имя группы драйверов.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
-|[/ Name:<New Group Name>]|Указывает новое имя для группы драйверов.|
-|[/ Включен: {Да &#124; нет}|Включает или отключает группу драйверов.|
-|[/ Применимости: {соответствует &#124; все}]|Указывает, какие пакеты для установки при удовлетворении условий фильтра. **Соответствует** означает, что установка только пакетов драйверов, которые соответствуют оборудованию клиента s. **Все** означает, что установка всех пакетов на клиентах независимо от их оборудования.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы задать свойства для группы драйверов, введите одно из следующих:
+|/Дриверграуп: <Group Name>|Указывает имя группы драйверов.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Name: <New Group Name>]|Указывает новое имя для группы драйверов.|
+|[/Enabled: {Да &#124; }|Включает или отключает группу драйверов.|
+|[/Аппликабилити: {сопоставлено &#124; всех}]|Указывает, какие пакеты следует установить при соблюдении условий фильтра. **Сопоставление** означает установку только пакетов драйверов, соответствующих оборудованию клиента. **Все** означает установку всех пакетов на клиентах независимо от их оборудования.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы задать свойства для группы драйверов, введите один из следующих параметров.
 ```
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 ```
@@ -46,5 +46,5 @@ wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Name:colorprinterdrivers /Applicability:All
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[подкоманда: set-DriverGroupFilter](subcommand-set-drivergroupfilter.md)
+[Синтаксическая клавиша командной строки](command-line-syntax-key.md)
+[подкоманда: Set-дриверграупфилтер](subcommand-set-drivergroupfilter.md)

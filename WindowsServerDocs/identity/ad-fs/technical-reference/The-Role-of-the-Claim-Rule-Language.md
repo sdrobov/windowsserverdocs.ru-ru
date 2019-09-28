@@ -6,15 +6,15 @@ ms.author: billmath
 manager: femila
 ms.date: 07/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: dda9d148-d72f-4bff-aa2a-f2249fa47e4c
 ms.technology: identity-adfs
-ms.openlocfilehash: 0c2d411be7ef807198df30074ea706d7c5398617
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ff4c43bb8dc5582716638f0a3f6e4f6a8022aece
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869362"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407373"
 ---
 # <a name="the-role-of-the-claim-rule-language"></a>Роль языка правил утверждений
 Язык правил утверждений службы федерации Active Directory (AD FS) (AD FS) выступает в качестве административного блока для поведения входящих и исходящих утверждений, тогда как обработчик утверждений выступает в качестве механизма обработки для логики на языке правил утверждений, который определяет настраиваемое правило. Дополнительные сведения о том, как все правила обрабатываются подсистемой утверждений, см. [в разделе роль подсистемы утверждений](The-Role-of-the-Claims-Engine.md).  
@@ -144,7 +144,7 @@ AD FS также предоставляет набор стандартных ш
 
 -   ClaimSet. ValueType  
 
--   Имя\[\_свойстваутверждения.Properties(этосвойствовозвращаетпустуюстроку,еслисвойство_nameненайденовколлекциисвойствутверждения.\] )  
+-   ClaimSet. Properties @ no__t-0property @ no__t-1name @ no__t-2 (это свойство возвращает пустую строку, если свойство _name не найдено в коллекции свойств утверждения. )  
 
 Для вызова внутри выражения можно использовать функцию Режексреплаце. Эта функция принимает входное выражение и сопоставляет его с заданным шаблоном. Если шаблон соответствует, выходные данные соответствия заменяются замещающим значением.  
 
@@ -159,7 +159,7 @@ exists([issuer == "MSFT"])
 ## <a name="rule-body"></a>Тело правила  
 Тело правила может содержать только один оператор выдачи. Если условия используются без использования функции Exists, тело правила выполняется один раз для каждого совпадения части условий.  
 
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 [Создание правила для отправки утверждений с помощью настраиваемого правила](https://technet.microsoft.com/library/dd807049.aspx)  
 
 

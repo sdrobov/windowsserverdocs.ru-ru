@@ -1,28 +1,28 @@
 ---
 title: Служба WINS
-description: Этот раздел содержит сведения о списании WINS и использовании DNS для служб разрешения имен в сети.
+description: В этом разделе содержатся сведения о списании WINS и использовании DNS для служб разрешения имен в сети.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 32eabe7d-1130-4001-a79a-8ddb31993e5b
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: bbc1871d29021aa3c99f14368a4711dac63f4cee
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 219c313dfeb26319cd5f537df417724de7044648
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405245"
 ---
 #  <a name="windows-internet-name-service-wins"></a>Служба WINS
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 WINS — это традиционная служба регистрации и разрешения имен компьютеров, которая сопоставляет NetBIOS-имена компьютеров с IP-адресами.
 
-Если у вас еще нет WINS, развернутый в вашей сети, не развертывание WINS - вместо этого, развертывание доменных имен \(DNS\). DNS также предоставляет службы регистрации и разрешения имени компьютера и включает много дополнительных преимуществ по сравнению с WINS, такие как интеграция с доменными службами Active Directory.
+Если вы еще не развернули WINS в своей сети, не развертывайте WINS-вместо этого разверните службу доменных имен \(DNS @ no__t-1. Служба DNS также предоставляет службы регистрации и разрешения имен компьютеров и включает множество дополнительных преимуществ по сравнению с WINS, например интеграцию со службами домен Active Directory.
 
-Дополнительные сведения см. в разделе [доменных имен (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top)
+Дополнительные сведения см. в разделе [Служба доменных имен (DNS)](https://docs.microsoft.com/windows-server/networking/dns/dns-top) .
 
-Если вы уже развернули WINS в сети, рекомендуется размещать DNS, а затем списать WINS.
+Если вы уже развернули службу WINS в сети, рекомендуется развернуть DNS, а затем списать службу WINS.

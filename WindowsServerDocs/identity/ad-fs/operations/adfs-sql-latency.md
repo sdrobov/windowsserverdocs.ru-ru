@@ -6,14 +6,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 06/20/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 29c8e8ba52f62a335ab136756e759b6114ecfb20
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 785ecd4de86c06dd12eb57e41efaa1103f2afdc5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865606"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357815"
 ---
 # <a name="fine-tuning-sql-and-addressing-latency-issues-with-ad-fs"></a>Тонкая настройка SQL и устранение проблем с задержкой с помощью AD FS
 В обновлении для [AD FS 2016](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) мы предоставили следующие усовершенствования для сокращения задержки между базами данных. В ближайшее обновление для AD FS 2019 будут включены следующие улучшения.
@@ -105,11 +105,11 @@ AD FS регистрирует обратный вызов для изменен
     
     В мастере добавьте следующую запись. Обратите внимание, что все три ключа чувствительны к регистру. 
 
-    &lt;усерактивитифармроле masterFQDN = [полное доменное имя выбранного первичного] Master = "true"/&gt;
+    &lt;useractivityfarmrole masterFQDN = [полное доменное имя выбранного первичного] Master = "true"/&gt;
     
     На других узлах добавьте следующую запись:
 
-   &lt;усерактивитифармроле masterFQDN = [полное доменное имя выбранного первичного] Master = "false"/&gt;
+   &lt;useractivityfarmrole masterFQDN = [полное доменное имя выбранного первичного] Master = "false"/&gt;
  
     >[!NOTE] 
     >Так как несколько баз данных артефактов не синхронизируют данные, значения есл не будут синхронизированы между артефактом баз данных.

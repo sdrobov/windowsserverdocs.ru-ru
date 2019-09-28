@@ -1,7 +1,7 @@
 ---
 title: Диагностика проблем со скоростью реагирования приложений на узлах сеансов удаленных рабочих столов с помощью счетчиков производительности
 description: Ваше приложение медленно работает в сеансе удаленного рабочего стола? Узнайте о счетчиках производительности, с помощью которых можно выполнять диагностику проблем с производительностью приложения на узле сеанса удаленного рабочего стола.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
@@ -10,12 +10,12 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 3eb1e4b6da971d788383b8facbf8bbcbe00a5953
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b59d93d576967ee83b3efecc2630034eab919bf2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870908"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403902"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>Диагностика проблем с производительностью приложений на узлах сеансов удаленных рабочих столов с помощью счетчиков производительности
 
