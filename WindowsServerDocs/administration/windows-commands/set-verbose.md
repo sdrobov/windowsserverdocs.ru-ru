@@ -1,8 +1,8 @@
 ---
-title: Задать подробный журнал
-description: 'Раздел Windows команды для ***- '
+title: Задать verbose
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ec47dea822c338dfe1b809c662d1e31e9a5a9703
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: dcd9dbf5d3f2d371bc348400db932100de2c0523
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441328"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370936"
 ---
-# <a name="set-verbose"></a>Задать подробный журнал
+# <a name="set-verbose"></a>Задать verbose
 
 
 
-Указывает, предоставляется ли подробные выходные данные во время создания теневой копии. При использовании без параметров, **задать подробный журнал** отображает справку в командной строке.
+Указывает, следует ли предоставлять подробный вывод при создании теневой копии. Если используется без параметров, команда **Set verbose** выводит справку из командной строки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,11 +36,11 @@ set verbose {on | off}
 
 | Параметр | Описание |
 |-----------|-------------|
-|    {on    |    OFF}     |
+|    {on    |    автоном     |
 
 ## <a name="remarks"></a>Примечания
 
--   Если включен режим подробного протоколирования, **задать** предоставляет сведения о записи включения или исключения и данные, метаданные сжатия данных и извлечения.
+-   Если параметр verbose имеет значение ON, **параметр SET** предоставляет сведения о включении или исключении модуля записи, а также сведения о сжатии и извлечении метаданных.
 
 #### <a name="additional-references"></a>Дополнительная справка
 

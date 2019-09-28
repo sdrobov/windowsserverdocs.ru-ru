@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: c30f8a9b856db8250a16210931e6f8dd73c07aa7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 6e99fc43d4acb7a70dfd3a8ba19dae6492c41b2b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869606"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357053"
 ---
 # <a name="using-powershell-in-your-extension"></a>Использование PowerShell в расширении #
 
@@ -92,7 +92,7 @@ this.getNodeName().subscribe(
 ### <a name="key-options"></a>Ключевые параметры ###
 При вызове API PowerShell доступны несколько параметров. Каждый раз при создании сеанса его можно создать с ключом или без него. 
 
-**Раздел** При этом создается сеанс с ключом, который может быть просмотрен и использован повторно, даже для разных компонентов (это означает, что Component1 может создать сеанс с ключом "эксперт-ROCKS", а Component2 может использовать тот же сеанс). Если указан ключ, создаваемый сеанс должен быть удален путем вызова Dispose (), как было сделано в примере выше. Сеанс не следует хранить без удаления в течение более чем 5 минут. 
+**Раздел:** При этом создается сеанс с ключом, который может быть просмотрен и использован повторно, даже для разных компонентов (это означает, что Component1 может создать сеанс с ключом "эксперт-ROCKS", а Component2 может использовать тот же сеанс). Если указан ключ, создаваемый сеанс должен быть удален путем вызова Dispose (), как было сделано в примере выше. Сеанс не следует хранить без удаления в течение более чем 5 минут. 
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNode}', '{!Key}');
 ```
@@ -102,7 +102,7 @@ this.getNodeName().subscribe(
 ```ts
   const session = this.appContextService.powerShell.createSession('{!TargetNodeName}');
 ```
-или диспетчер конфигурации служб 
+или 
 ``` ts 
 const session = this.appContextService.powerShell.createAutomaticSession('{!TargetNodeName}');
 ```

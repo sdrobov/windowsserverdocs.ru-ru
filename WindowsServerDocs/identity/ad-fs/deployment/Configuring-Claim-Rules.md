@@ -6,31 +6,31 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: e11d507f726323e774bf54f09a390b0c4b68e0a0
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 9634f4004fbb3354020ce025cd403b15f77b6cbc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192254"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359699"
 ---
 # <a name="configuring-claim-rules"></a>Настройка правил утверждений
 
-В утверждениях\-удостоверений на основе модели, функция служб федерации Active Directory \(AD FS\) как федерации служб является выпустить маркер, содержащий набор утверждений. Правила утверждений управляют решение в отношении утверждений, выдаваемых AD FS. Правила утверждений и все данные конфигурации сервера хранятся в базе данных конфигурации AD FS.  
+В модели идентификации Claims @ no__t-0based функция службы федерации Active Directory (AD FS) \(AD FS @ no__t-2 в качестве служб федерации — выдача маркера, содержащего набор утверждений. Правила утверждений управляют принятием решения в отношении утверждений, которые AD FS проблемы. Правила утверждений и все данные конфигурации сервера хранятся в базе данных конфигурации AD FS.  
   
-AD FS делает выдачи решения, которые основаны на удостоверениях, который предоставляется в форме утверждений и других контекстных сведений. На высоком уровне AD FS работает как обработчик правил, выполнив одно набор утверждений в качестве входных данных, выполняет ряд преобразований и возвращает другой набор утверждений как выходные данные.  
+AD FS принимает решения на выдачу на основе сведений об удостоверениях, предоставленных ему в виде утверждений и других контекстных сведений. На высоком уровне AD FS работает как обработчик правил, используя один набор заявок в качестве входных данных, выполняет ряд преобразований, а затем возвращает другой набор заявок в качестве выходных данных.  
   
--   [Создайте правило, чтобы пропуск или Фильтрация входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
+-   [Создание правила для передачи или фильтрации входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Pass-Through-or-Filter-an-Incoming-Claim.md)  
   
 -   [Создание правила для разрешения всем пользователям](../../ad-fs/operations/Create-a-Rule-to-Permit-All-Users.md)  
 
--   [Создание правила для отправки AD FS 1.x утверждения, совместимые](../../ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md)
+-   [Создание правила для отправки утверждения, совместимого с AD FS 1. x](../../ad-fs/operations/Create-a-Rule-to-Send-an-AD-FS-1x-Compatible-Claim.md)
   
 -   [Создание правила для разрешения или запрета пользователям на основе входящего утверждения](../../ad-fs/operations/Create-a-Rule-to-Permit-or-Deny-Users-Based-on-an-Incoming-Claim.md)  
   
--   [Создание правила для отправки атрибутов LDAP как утверждений](../../ad-fs/operations/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
+-   [Создание правила для отправки атрибутов LDAP в качестве утверждений](../../ad-fs/operations/Create-a-Rule-to-Send-LDAP-Attributes-as-Claims.md)  
   
 -   [Создание правила для отправки членства в группе в качестве утверждения](../../ad-fs/operations/Create-a-Rule-to-Send-Group-Membership-as-a-Claim.md)  
   

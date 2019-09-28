@@ -1,9 +1,9 @@
 ---
 title: Объединение внедренных коммутаторов для SDN
-description: Можно использовать в этом разделе представлен краткий обзор Switch Embedded объединения карт в Windows Server 2016.
+description: Этот раздел содержит краткий обзор объединения внедренных команд в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -12,19 +12,19 @@ ms.topic: article
 ms.assetid: aa5b5d11-3921-44f9-8e14-e378c75fca76
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ff59390b54adba42e677d73e559f2fd8dd42c571
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 32f35eccfe55b01a0f3326df2bda9db26a23abe2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355639"
 ---
 # <a name="switch-embedded-teaming-for-sdn"></a>Объединение внедренных коммутаторов для SDN
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-НАБОР представляют собой альтернативное решение объединение Сетевых карт, который можно использовать в средах Hyper-V и стек программно определяемой сети (SDN) в Windows Server 2016. НАБОР объединяет некоторые функции объединения Сетевых карт в виртуальный коммутатор Hyper-V. 
+— Это альтернативное решение для объединения сетевых карт, которое можно использовать в средах, включающих Hyper-V и стек программно-определяемых сетей (SDN) в Windows Server 2016. Установите некоторые функции объединения сетевых карт в виртуальный коммутатор Hyper-V. 
 
-НАБОР позволяет группировать между одной и восемь физические сетевые адаптеры Ethernet в один или несколько программных виртуальных сетевых адаптеров. Эти виртуальные сетевые адаптеры обеспечивают высокую производительность и отказоустойчивость в случае сбоя сетевого адаптера.
+НАБОР позволяет группировать один и восемь физических сетевых адаптеров Ethernet в один или несколько программных виртуальных сетевых адаптеров. Эти виртуальные сетевые адаптеры обеспечивают высокую производительность и отказоустойчивость в случае сбоя сетевого адаптера.
 
-Дополнительные сведения см. в разделе [удаленный доступ к памяти (RDMA) и коммутатора внедренных коммутаторов (SET)](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).
+Дополнительные сведения см. в разделе [Удаленный доступ к памяти (RDMA) и объединение коммутаторов (Set) Embedded](../../../virtualization//hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).

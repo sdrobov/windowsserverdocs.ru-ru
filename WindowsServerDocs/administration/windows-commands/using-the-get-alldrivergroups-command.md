@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-AllDriverGroups
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Аллдриверграупс
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 236a2f798fb07ee6eafb9baf9314dbf46a984cdf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bed6c784b2fafa30f2beb0394b64fe570ddd8ff7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59874005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363377"
 ---
-# <a name="using-the-get-alldrivergroups-command"></a>С помощью команды get-AllDriverGroups
+# <a name="using-the-get-alldrivergroups-command"></a>Использование команды Get-Аллдриверграупс
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает сведения о всех групп драйверов на сервере.
+Отображает сведения обо всех группах драйверов на сервере.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | Filters | All}]
@@ -32,10 +32,10 @@ wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | F
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
-|[/ Show: {PackageMetaData &#124; фильтры &#124; все}]|Отображает метаданные для всех пакетов драйверов в указанной группе. **PackageMetaData** отображаются сведения обо всех фильтрах, для группы драйверов. **Фильтры** отображает метаданные для всех пакетов драйверов и фильтры для группы.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы просмотреть сведения о файле драйвера, введите следующую команду:
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Show: {Паккажеметадата &#124; фильтрует &#124; все}]|Отображает метаданные для всех пакетов драйверов в указанной группе. **Паккажеметадата** отображает сведения обо всех фильтрах для группы драйверов. **Фильтры** отображает метаданные для всех пакетов драйверов и фильтров для группы.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы просмотреть сведения о файле драйвера, введите:
 ```
 wdsutil /Get-AllDriverGroups /Server:MyWdsServer /Show:All
 ```
@@ -43,5 +43,5 @@ wdsutil /Get-AllDriverGroups /Server:MyWdsServer /Show:All
 wdsutil /Get-AllDriverGroups [/Show:PackageMetaData]
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-DriverGroup](using-the-get-drivergroup-command.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды Get-дриверграуп](using-the-get-drivergroup-command.md) .

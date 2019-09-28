@@ -1,6 +1,6 @@
 ---
-title: Параметры службы работоспособности
-ms.prod: windows-server-threshold
+title: Параметры служба работоспособности
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -8,21 +8,21 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 569cf7ba30fd3f993394efd3735a56d116c067e0
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1b10d7c5432b10262e8df85d427f17f402d4f64a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858335"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361039"
 ---
-# <a name="health-service-settings"></a>Параметры службы работоспособности
-> Область применения: Windows Server 2016
+# <a name="health-service-settings"></a>Параметры служба работоспособности
+> Относится к: Windows Server 2019, Windows Server 2016
 
-Служба работоспособности — это новая функция в Windows Server 2016, которая улучшает ежедневного мониторинга и опыт эксплуатации кластеров дисковыми пространствами.
+Служба работоспособности — это новая функция Windows Server 2016, которая улучшает повседневный мониторинг и рабочую среду для кластеров под управлением Локальные дисковые пространства.
 
-Многие из параметров, которые управляют поведением службы работоспособности, предоставляются как параметры. Можно изменить эти настройки интенсивность ошибок или действия, включите определенными параметрами, включить или выключить и многое другое.
+Многие параметры, управляющие поведением служба работоспособности, предоставляются в качестве параметров. Их можно изменить, чтобы настроить интенсивность ошибок или действий, включить или выключить определенное поведение и многое другое.
 
-Чтобы задать или изменить параметры, используйте следующий командлет PowerShell.
+Используйте следующий командлет PowerShell, чтобы задать или изменить параметры.
 
 ### <a name="usage"></a>Использование
 
@@ -38,7 +38,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 ### <a name="common-settings"></a>Общие параметры
 
-Ниже перечислены некоторые часто редактируемых параметры вместе со значениями по умолчанию.
+Ниже перечислены некоторые часто изменяемые параметры вместе со значениями по умолчанию.
 
 #### <a name="volume-capacity-threshold"></a>Пороговое значение емкости тома
 
@@ -48,7 +48,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.Volume.CapacityThreshold.Critical" = 90
 ```
 
-#### <a name="pool-reserve-capacity-threshold"></a>Пороговое значение резерва емкости для пула
+#### <a name="pool-reserve-capacity-threshold"></a>Порог резервирования емкости пула
 
 ```
 "System.Storage.StoragePool.CheckPoolReserveCapacity.Enabled" = True
@@ -65,9 +65,9 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.PhysicalDisk.Unresponsive.Reset.CountAllowed"              = 3
 ```
 
-#### <a name="supported-components-document"></a>Поддерживаемые компоненты документа
+#### <a name="supported-components-document"></a>Документ о поддерживаемых компонентах
 
-См. в предыдущем разделе.
+См. предыдущий раздел.
 
 #### <a name="firmware-rollout"></a>Развертывание встроенного по
 
@@ -80,14 +80,14 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.Storage.PhysicalDisk.AutoFirmwareUpdate.RollOut.FailureTolerance"  = 3
 ```
 
-#### <a name="platform--quiescence"></a>Платформа / замороженной
+#### <a name="platform--quiescence"></a>Платформа или замороженной
 
 ```
 "Platform.Quiescence.MinDelaySeconds" = 120 (i.e. 2 minutes)
 "Platform.Quiescence.MaxDelaySeconds" = 420 (i.e. 7 minutes)
 ```
 
-#### <a name="metrics"></a>Метрики
+#### <a name="metrics"></a>metrics
 
 ```
 "System.Reports.ReportingPeriodSeconds" = 1
@@ -101,5 +101,5 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 
 ## <a name="see-also"></a>См. также
 
-- [Служба работоспособности в Windows Server 2016](health-service-overview.md)
-- [Дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)
+- [служба работоспособности в Windows Server 2016](health-service-overview.md)
+- [Локальные дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)

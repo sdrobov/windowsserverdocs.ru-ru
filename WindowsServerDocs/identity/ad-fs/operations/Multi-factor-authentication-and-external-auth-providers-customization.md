@@ -6,15 +6,15 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: 08724d45-9be4-4c56-a5f1-2cf40864e136
 ms.technology: identity-adfs
-ms.openlocfilehash: 23ec5acbe442527b4eb44c4b857e183b5e0c37ea
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8271e65e05a8da1d397f087242308f04a51a6249
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865720"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357932"
 ---
 # <a name="multi-factor-authentication-and-external-authentication-providers-customization"></a>Настройка многофакторной идентификации и внешних поставщиков проверки подлинности 
 
@@ -50,5 +50,5 @@ ms.locfileid: "70865720"
   
 Дополнительные сведения см. в [разделе Руководство по решению: Управление рисками с\-использованием многофакторного [управления](https://technet.microsoft.com/library/dn280937.aspx) доступом и руководством по решению: Управление рисками с помощью\-дополнительной многофакторной проверки](https://tnstage.redmond.corp.microsoft.com/library/dn280949.aspx)подлинности для конфиденциальных приложений.  
 
-## <a name="additional-references"></a>Дополнительные ссылки 
+## <a name="additional-references"></a>Дополнительная справка 
 [AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md) 

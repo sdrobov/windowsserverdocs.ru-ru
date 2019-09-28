@@ -1,7 +1,7 @@
 ---
 title: Развертывание гибридной облачной системы Windows Server — транзитная проверка подлинности
 description: Как настроить Гибридное облако Microsoft для печати с сквозной проверкой подлинности
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: Windows Server 2016
@@ -12,12 +12,12 @@ author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: 8d4d842b917a52f2c6852cf5c3ed261c0be2cc1c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e9d461e2e9442e9473a6d2c9b13d9ede17361348
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866854"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370399"
 ---
 # <a name="deploy-windows-server-hybrid-cloud-print-with-passthrough-authentication"></a>Развертывание гибридного облака Windows Server с сквозной проверкой подлинности
 
@@ -63,7 +63,7 @@ ms.locfileid: "70866854"
 
 - Шаг 1. Установка Azure AD Connect для синхронизации между Azure AD и локальной службой AD
 - Шаг 2. Установка гибридного облачного пакета печати на сервере печати
-- Шаг 3. Установка прокси приложения Azure (схема AAP) с сквозной проверкой подлинности
+- Шаг 3. Установка прокси приложения Azure (схема AAP) с сквозной проверкой подлинности
 - Шаг 4. Настройка необходимых политик MDM
 - Шаг 5. Публикация общих принтеров
 
@@ -254,7 +254,7 @@ ms.locfileid: "70866854"
 
         > ПРИМЕЧАНИЕ. Также можно ввести все необходимые значения параметров в командной строке.<br>
         **Publish-клаудпринтер** Синтаксис команд PowerShell: <br>
-        Publish-клаудпринтер-строка \<\> принтера — строка \<с\>производителем — строка модели \< \<\> — строка орглокатион — SDDL\> \< String-дисковерендпоинт\<строка -принтсерверендпоинт\<строка -азуреклиентид\<строка-\> азуретенантгуид\> \> \> \<String[\> - дисковериресаурцеид\<строка]\> <br>
+        Publish-Клаудпринтер-Printer \<string @ no__t-1-производитель \<string @ no__t-3-Model \<string @ no__t-5-Орглокатион \<string @ no__t-7-SDDL \<string @ no__t-9-Дисковерендпоинт \>0string Принтсерверендпоинт 2string @ no__t-13-Азуреклиентид 4string @ no__t-15-Азуретенантгуид 6string @ no__t-17 [-Дисковериресаурцеид 8string @ no__t-19] <br>
         Пример команды:`publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
 
 

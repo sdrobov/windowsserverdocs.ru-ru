@@ -6,15 +6,15 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 5bd53022646b554e4a6cc09925607c66cead21e9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ef38b0280a5753b0995e85d0809de6b632fa3afc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865894"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358116"
 ---
 # <a name="configure-authentication-policies"></a>Настройка политик аутентификации
 
@@ -327,6 +327,6 @@ c1:[Type == `"https://schemas.microsoft.com/claims/authnmethodsreferences`", Val
 c2:[Type == `"https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork`", Value =~ `"^(?i)false$`"] => issue(Type = `"https://schemas.microsoft.com/authorization/claims/permit`", Value = `"PermitUsersWithClaim`");"  
 ~~~
 
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 
 [Операции AD FS](../../ad-fs/AD-FS-2016-Operations.md)

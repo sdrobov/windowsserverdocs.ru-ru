@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 07/10/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d72217d9e8dc3b0f47382e08346dca977ac14b67
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9e947f1894516de232a0db50bcbb56c7452098cd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867930"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359421"
 ---
 # <a name="migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Миграция сервера федерации AD FS 2,0 в AD FS в Windows Server 2012 R2
 
@@ -103,14 +103,14 @@ Get-ADFSClaimDescription | Out-File “.\claimtypes.txt”`.
   
 ###  <a name="to-export-claims-provider-trusts-and-relying-party-trusts"></a>Экспорт отношений доверия с поставщиком утверждений и отношений доверия с проверяющей стороной  
   
-1.  Чтобы экспортировать AD FS доверия поставщиков утверждений и отношения доверия с проверяющей стороной, необходимо войти в систему с учетной записью администратора (но не администратора домена) на сервер федерации и запустить следующий сценарий Windows PowerShell, расположенный на **носителе или server_support. Папка/адфс** установочного компакт-диска Windows Server 2012 R2 `export-federationconfiguration.ps1`:.  
+1.  Чтобы экспортировать AD FS доверия поставщиков утверждений и отношения доверия с проверяющей стороной, необходимо войти в систему с учетной записью администратора (но не администратора домена) на сервер федерации и запустить следующий сценарий Windows PowerShell, расположенный на **носителе или server_support. Папка/адфс** установочного компакт-диска Windows Server 2012 R2: `export-federationconfiguration.ps1`.  
   
 > [!IMPORTANT]
 >  Сценарий экспорта принимает следующие параметры:  
 > 
-> - Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString]  
->   -   Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString] [- Релингпартитрустидентифиер < String [] >] [-Клаимспровидертрустидентифиер < строка [] >]  
->   -   Експорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-CertificatePassword <\>SecureString] [- Релингпартитрустнаме < String [] >] [-Клаимспровидертрустнаме < строка [] >]  
+> - Експорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-CertificatePassword < SecureString @ no__t-3]  
+>   -   Експорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-CertificatePassword < SecureString @ no__t-3] [-Релингпартитрустидентифиер < строка [] >] [-Клаимспровидертрустидентифиер < String [] >]  
+>   -   Експорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-CertificatePassword < SecureString @ no__t-3] [– Релингпартитрустнаме < String [] >] [- Клаимспровидертрустнаме < String [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** — командлет экспортирует только те отношения доверия с проверяющей стороной, идентификаторы которых указаны в массиве строк. Значение по умолчанию NONE, то есть не экспортируется ни одно отношение доверия с проверяющей стороной. Если не указаны параметры RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName и ClaimsProviderTrustName, сценарий экспортирует все отношения доверия с проверяющей стороной и отношения доверия с поставщиком утверждений.  
 > 
@@ -193,9 +193,9 @@ import-federationconfiguration.ps1
 > [!IMPORTANT]
 >  Этот сценарий импорта принимает следующие параметры:  
 > 
-> - Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>]  
->   -   Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>] [-Релингпартитрустидентифиер < String [] >] [-клаимспровидертрустидентифиер < строка [] >  
->   -   Импорт-федератионконфигуратион. ps1-Path < строка\> [-ComputerName < строка\>] [-Credentials <\>PSCredential] [-Force] [-logPath строка\><] [-CertificatePassword < SecureString \>] [-Релингпартитрустнаме < String [] >] [-клаимспровидертрустнаме < строка [] >]  
+> - Импорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-LogPath < строка @ no__t-3] [-CertificatePassword < SecureString @ no__t-4]  
+>   -   Импорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-LogPath < строка @ no__t-3] [-CertificatePassword < SecureString @ no__t-4] [- Релингпартитрустидентифиер < String [] >] [-Клаимспровидертрустидентифиер < строка [] >  
+>   -   Импорт-федератионконфигуратион. ps1-Path < строка @ no__t-0 [-ComputerName < строка @ no__t-1] [-Credential < PSCredential @ no__t-2] [-Force] [-LogPath < строка @ no__t-3] [-CertificatePassword < SecureString @ no__t-4] [- Релингпартитрустнаме < String [] >] [-Клаимспровидертрустнаме < строка [] >]  
 > 
 >   **-RelyingPartyTrustIdentifier <string[]>** — командлет импортирует только те отношения доверия с проверяющей стороной, идентификаторы которых указаны в массиве строк. Значение по умолчанию NONE, то есть не импортируется ни одно отношение доверия с проверяющей стороной. Если не указаны параметры RelyingPartyTrustIdentifier, ClaimsProviderTrustIdentifier, RelyingPartyTrustName и ClaimsProviderTrustName, сценарий импортирует все отношения доверия с проверяющей стороной и отношения доверия с поставщиком утверждений.  
 > 

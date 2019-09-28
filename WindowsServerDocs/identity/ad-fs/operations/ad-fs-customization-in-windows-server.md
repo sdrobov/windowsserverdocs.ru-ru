@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b8832e7e53e94761a489e850726bbd206b8be62b
-ms.sourcegitcommit: 02f1e11ba37a83e12d8ffa3372e3b64b20d90d00
+ms.openlocfilehash: 4b0ea70bd9346bf8abee4e0d96a8915e29cac462
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68863429"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357778"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Настройка AD FS в Windows Server 2016
 
@@ -85,7 +85,7 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
 Сведения о настройке страницы "Обновление пароля" см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## <a name="customizing-and-alternate-ids"></a>Настройка и альтернативные идентификаторы  
-Пользователи могут входить в приложения с поддержкой службы федерации Active Directory (AD FS) (AD FS), используя любую форму идентификатора пользователя, принимаемого службами домен Active Directory (AD DS). К ним относятся имена участников-пользователей (UPNjohndoe@contoso.com) () или полные доменные имена учетных записей SAM (contoso\johndoe или contoso. ком\жохндое).  Дополнительные сведения об этом см. в разделе [Настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
+Пользователи могут входить в приложения с поддержкой службы федерации Active Directory (AD FS) (AD FS), используя любую форму идентификатора пользователя, принимаемого службами домен Active Directory (AD DS). Они включают имена участников-пользователей (UPN) (johndoe@contoso.com) или полные доменные имена SAM (contoso\johndoe или contoso. ком\жохндое).  Дополнительные сведения об этом см. в разделе [Настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
   
 Кроме того, вы можете настроить страницу входа AD FS, чтобы дать конечным пользователям указание о альтернативном ИДЕНТИФИКАТОРе входа. Для этого можно добавить настраиваемое описание страницы входа. Дополнительные сведения см [. в разделе Настройка страниц входа AD FS.](https://technet.microsoft.com/library/dn280950.aspx)   
   

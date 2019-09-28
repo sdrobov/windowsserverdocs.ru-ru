@@ -1,7 +1,7 @@
 ---
 title: Поддержка экспресс-доставки обновлений (независимые поставщики программного обеспечения)
 description: Раздел "Служба обновления Windows Server (WSUS)". как независимые поставщики программного обеспечения могут настраивать выпуск Express Update с помощью WSUS
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -11,12 +11,12 @@ author: sakitong
 ms.author: coreyp
 manager: lizapo
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f5893d47219e9263ed7f35bee472848a47c6164
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a4880a1a66d9c722cfda9e194c4eff38c5058674
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868739"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361720"
 ---
 # <a name="express-update-delivery-isv-support"></a>Поддержка экспресс-доставки обновлений (независимые поставщики программного обеспечения)
 
@@ -95,7 +95,7 @@ WSUS выступает в качестве интерфейса для Цент
 
 1. Используйте [API-интерфейсы WSUS](https://msdn.microsoft.com/library/windows/desktop/microsoft.updateservices.administration.updatefile(v=vs.85).aspx) для доступа к пути к файлу обновления и имени файла для службы MU.
 
-    Метаданные для каждого обновления на сервере WSUS содержат путь к файлу обновления и имя файла на центр обновления Майкрософт следующим образом (Центр обновления Майкрософт имя узла полужирным шрифтом, после которого следует путь к файлу и **<http://download.windowsupdate.com>** имя файла):/c/msdownload/Update/Software/updt/2016/09/ Windows 10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74. msu
+    Метаданные каждого обновления на сервере WSUS содержат путь к файлу обновления и имя файла на Центр обновления Майкрософт следующим образом (Центр обновления Майкрософт имя узла полужирным шрифтом, за которым следует путь к файлу и имя файла): **<http://download.windowsupdate.com>** /c/msdownload/Update/Software/updt/2016/09/ Windows 10.0-kb3195781-x64_0c06079bccc35cba35a48bd2b1ec46f818bd2e74. msu
 
 2. Скачайте файлы из Центр обновления Майкрософт и храните их в кэше файлов ISV с помощью одного из следующих двух методов: 
 

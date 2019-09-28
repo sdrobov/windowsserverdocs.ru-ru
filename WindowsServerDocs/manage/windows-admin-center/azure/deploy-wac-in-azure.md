@@ -7,13 +7,13 @@ author: jwwool
 ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d0ebc957715f88898a9c14d2841d8b820f862a0d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 42216375d1784a5bc853994a9de7cff72920088d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869139"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357320"
 ---
 # <a name="deploy-windows-admin-center-in-azure"></a>Развертывание центра администрирования Windows в Azure
 
@@ -103,7 +103,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>Пример 2 То же, что и #1, но с использованием сертификата из Azure Key Vault.
+#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>Пример 2: То же, что и #1, но с использованием сертификата из Azure Key Vault.
 
 ```PowerShell
 $scriptParams = @{
@@ -118,7 +118,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-3-using-a-local-msi-on-an-existing-vm-to-deploy-wac"></a>Пример 3 Использование локального MSI-файла на существующей виртуальной машине для развертывания ВАК.
+#### <a name="example-3-using-a-local-msi-on-an-existing-vm-to-deploy-wac"></a>Пример 3. Использование локального MSI-файла на существующей виртуальной машине для развертывания ВАК.
 
 ```PowerShell
 $MsiPath = "C:\Users\<username>\Downloads\WindowsAdminCenter<version>.msi"

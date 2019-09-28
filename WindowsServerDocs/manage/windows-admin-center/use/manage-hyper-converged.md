@@ -7,13 +7,13 @@ author: daniellee-msft
 ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 5df035b448b80aa147067004c6a2f14aa03a9684
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: d692251e1ba0fef43e4eeee6f259f26f4347f3c0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869086"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356884"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Управление инфраструктурой с технологией Hyper-in с помощью центра администрирования Windows
 
@@ -46,7 +46,7 @@ ms.locfileid: "70869086"
 
 Центр администрирования Windows для инфраструктуры Hyper-in активно разрабатывается корпорацией Майкрософт. Он получает частые обновления, которые улучшают существующие возможности и добавляют новые функции.
 
-## <a name="before-you-start"></a>Перед началом
+## <a name="before-you-start"></a>Прежде чем начать
 
 Для управления кластером в качестве инфраструктуры с технологией Hyper-V в центре администрирования Windows требуется операционная система Windows Server 2016 или Windows Server 2019, а также поддержка Hyper-V и Локальные дисковые пространства. При необходимости также можно включить программно-определяемую сеть и управлять ими с помощью центра администрирования Windows.
 
@@ -131,7 +131,7 @@ ms.locfileid: "70869086"
 > [!Important]
 > Среды SDN с проверкой подлинности Kerberos для обмена данными обмена в настоящее время не поддерживаются.
 
-## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
+## <a name="frequently-asked-questions"></a>Вопросы и ответы
 
 ### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019"></a>Существуют ли различия между управлением Windows Server 2016 и Windows Server 2019?
 
@@ -157,7 +157,7 @@ ms.locfileid: "70869086"
 
 Пользоваться Windows Admin Center можно бесплатно в рамках оплаченной лицензии на Windows.
 
-Вы можете использовать центр администрирования Windows (доступен в виде отдельной загрузки) с действительными лицензиями Windows Server или Windows 10 без дополнительных затрат — он лицензируется в рамках дополнительного лицензионного соглашения Windows.
+Платформу Windows Admin Center (доступна в виде отдельно скачиваемых файлов) можно использовать с действующими лицензиями на Windows Server или Windows 10 без дополнительной платы. Ее использование регламентируется дополнительным лицензионным соглашением Windows.
 
 ### <a name="does-windows-admin-center-require-system-center"></a>Требуется ли для работы с Windows Admin Center пакет продуктов System Center?
 
@@ -278,7 +278,7 @@ ms.locfileid: "70869086"
 
 ![Мониторинг инфраструктуры SDN](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## <a name="feedback"></a>Отзывы
+## <a name="feedback"></a>Отзыв
 
 Это все о ваших отзывах! Самым важным преимуществом частого обновления является прослушивание того, что работает и что необходимо улучшить. Вот несколько способов сообщить нам о том, что вы думаете:
 

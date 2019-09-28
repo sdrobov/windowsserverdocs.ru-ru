@@ -1,8 +1,8 @@
 ---
-title: Подкоманды stop-TransportServer
-description: Раздел Windows команды stop-TransportServer
+title: Подкоманда-Транспортсервер
+description: Раздел команд Windows для команды "Транспортсервер"
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8f7410a8720337e509325b99863446bd8d19eb26
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2a2444328a426429c2dce5ceee3272cf1dc814cc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853455"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370724"
 ---
-# <a name="subcommand-stop-transportserver"></a>Подкоманда: stop-TransportServer
+# <a name="subcommand-stop-transportserver"></a>Подкоманда: Транспортсервер
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Останавливает все службы на транспортном сервере.
 ## <a name="syntax"></a>Синтаксис
@@ -32,17 +32,17 @@ wdsutil [Options] /Stop-TransportServer [/Server:<Server name>]
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Задает имя используемого транспортного сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если сервер транспорта не указан, будет использоваться локальный сервер.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы остановить службы, введите одно из следующих:
+|[/Server: <Server name>]|Указывает имя транспортного сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если транспортный сервер не указан, будет использоваться локальный сервер.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы отключить службы, введите одно из следующих действий.
 ```
 wdsutil /Stop-TransportServer
 wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды disable-TransportServer](using-the-disable-transportserver-command.md)
-[с помощью команды enable-TransportServer](using-the-enable-transportserver-command.md) 
- [ С помощью команды get-TransportServer](using-the-get-transportserver-command.md)
-[подкоманда: set-TransportServer](subcommand-set-transportserver.md)
-[подкоманда: start-TransportServer](subcommand-start-transportserver.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды disable-транспортсервер](using-the-disable-transportserver-command.md)
+[с помощью команды Enable-Транспортсервер](using-the-enable-transportserver-command.md)
+[с помощью команды Get-транспортсервер](using-the-get-transportserver-command.md)
+[. команда Set-Транспортсервер](subcommand-set-transportserver.md)
+[: Start-транспортсервер](subcommand-start-transportserver.md)

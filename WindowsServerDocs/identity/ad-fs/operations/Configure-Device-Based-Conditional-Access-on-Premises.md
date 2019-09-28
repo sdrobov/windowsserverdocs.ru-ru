@@ -7,56 +7,56 @@ ms.author: billmath
 manager: femila
 ms.date: 08/11/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bcb6c415aae33b9742d7a7080ec169ca947098b9
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a7646144b591fd7327f881cb54489201140e9287
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445007"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358146"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Настройка локального условного доступа с помощью зарегистрированных устройств
 
 
-Следующий документ поможет вам Установка и Настройка локального условного доступа с зарегистрированных устройств.
+Следующий документ поможет вам установить и настроить локальный условный доступ с зарегистрированными устройствами.
 
 ![Условный доступ](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
 
-## <a name="infrastructure-pre-requisites"></a>Предварительные требования инфраструктуры
-Ниже предварительным являются обязательными, прежде чем начать с локального условного доступа. 
+## <a name="infrastructure-pre-requisites"></a>Предварительные требования к инфраструктуре
+Перед началом локального условного доступа необходимо выполнить следующие требования. 
 
 |Требование|Описание
 |-----|-----
-|Подписка Azure AD с Azure AD Premium | Чтобы включить устройство записи за в локальной среде условный доступ — [подходит бесплатную пробную версию](https://azure.microsoft.com/trial/get-started-active-directory/)  
-|Подписка Intune|требуется только для интеграции управления мобильными Устройствами для сценариев соответствия устройства -[подходит бесплатную пробную версию](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0)
-|Azure AD Connect|Ноябрь 2015 г. исправление QFE или более поздней версии.  Получить последнюю версию [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=47594).  
-|Windows Server 2016|Сборка 10586 или более поздней версии, для AD FS  
-|Схема Windows Server 2016 Active Directory|Необходим уровень схемы 85 или более поздней версии.
-|Контроллер домена Windows Server 2016|Это только необходимые для развертываний доверием ключ Hello для бизнеса.  Дополнительные сведения можно найти в [здесь](https://aka.ms/whfbdocs).  
-|Клиент Windows 10|Build 10586 или более новую, присоединенных к домену выше необходим для присоединения к домену Windows 10 и Microsoft Passport для рабочих сценариев только  
+|Подписка Azure AD с Azure AD Premium | Для включения обратной записи устройства в локальный условный доступ — [Бесплатная пробная версия](https://azure.microsoft.com/trial/get-started-active-directory/)  
+|Подписка Intune|[Бесплатная пробная версия](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) необходима только для интеграции с MDM для сценариев соответствия устройств.
+|Azure AD Connect|Ноябрь 2015 QFE или более поздней версии.  Получить последнюю версию можно [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=47594).  
+|Windows Server 2016|Сборка 10586 или более новая версия для AD FS  
+|Схема Active Directory Windows Server 2016|Требуется уровень схемы 85 или выше.
+|Контроллер домена Windows Server 2016|Это требуется только для развертываний "Hello для бизнеса — доверие".  Дополнительные сведения можно найти [здесь](https://aka.ms/whfbdocs).  
+|Клиент Windows 10|Сборка 10586 или более новая, присоединенная к указанному выше домену, требуется для присоединения к домену Windows 10 и Microsoft Passport for Work сценариев  
 |Учетная запись пользователя Azure AD с назначенной лицензией Azure AD Premium|Для регистрации устройства  
 
 
  
 ## <a name="upgrade-your-active-directory-schema"></a>Обновление схемы Active Directory
-Чтобы использовать локального условного доступа с зарегистрированных устройств, необходимо сначала обновить схему AD.  Должны быть выполнены следующие условия:
-    - Схема должна быть 85 или более поздней версии
-    - Это только необходимые для леса, который соединяется с AD FS
+Чтобы использовать локальный условный доступ с зарегистрированными устройствами, необходимо сначала обновить схему AD.  Должны выполняться следующие условия.
+    - Схема должна быть версии 85 или более поздней.
+    - Это требуется только для леса, к которому присоединен AD FS
 
 > [!NOTE]
-> Если вы установили Azure AD Connect перед обновлением до версии схемы (уровень 85 или более поздней версии) в Windows Server 2016, необходимо будет повторно запустите установку Azure AD Connect и обновить в локальной схеме AD для обеспечения правила синхронизации для Атрибут msDS-KeyCredentialLink настраивается.
+> Если вы установили Azure AD Connect до обновления до версии схемы (уровень 85 или выше) в Windows Server 2016, необходимо будет повторно запустить Azure AD Connect установку и обновить локальную схему AD, чтобы убедиться, что правило синхронизации для msDS-Кэйкредентиаллинк настроен.
 
-### <a name="verify-your-schema-level"></a>Проверьте уровень схемы
-Чтобы проверить уровень схемы, сделайте следующее:
+### <a name="verify-your-schema-level"></a>Проверка уровня схемы
+Чтобы проверить уровень схемы, выполните следующие действия.
 
-1.  Можно использовать ADSIEdit или LDP и подключитесь к контекст именования схемы.  
-2.  С помощью ADSIEdit, щелкните правой кнопкой мыши «CN = Schema, CN = Configuration, DC =<domain>, DC =<com> и выберите пункт Свойства.  Relpace домена и части com со сведениями о леса.
-3.  В разделе Редактор атрибутов найдите атрибута objectVersion по адресу, и он сообщит вам, вашей версии.  
+1.  Можно использовать ADSIEdit или LDP и подключиться к контексту именования схемы.  
+2.  С помощью ADSIEdit правой кнопкой мыши щелкните "CN = Schema, CN = Configuration, DC = <domain>, DC = <com>" и выберите пункт "Свойства".  Релпаце домен и com-части с информацией о лесе.
+3.  В редакторе атрибутов выберите атрибут Обжектверсион, и он сообщит вам о своей версии.  
 
 ![Редактирование ADSI](media/Configure-Device-Based-Conditional-Access-on-Premises/adsiedit.png)  
 
-Также можно использовать следующий командлет PowerShell (замените объект с именования сведения о контексте схемы):
+Можно также использовать следующий командлет PowerShell (замените объект сведениями о контексте именования схемы):
 
 ``` powershell
 Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVersion
@@ -65,21 +65,21 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![PowerShell](media/Configure-Device-Based-Conditional-Access-on-Premises/pshell1.png) 
 
-Дополнительные сведения об обновлении см. в разделе [обновление контроллеров домена до Windows Server 2016](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md). 
+Дополнительные сведения об обновлении см. [в статье обновление контроллеров домена до Windows Server 2016](../../ad-ds/deploy/Upgrade-Domain-Controllers-to-Windows-Server-2016.md). 
 
 ## <a name="enable-azure-ad-device-registration"></a>Включение регистрации устройств Azure AD  
-Чтобы настроить этот сценарий, необходимо настроить возможность регистрации устройства в Azure AD.  
+Чтобы настроить этот сценарий, необходимо настроить функцию регистрации устройств в Azure AD.  
 
-Чтобы сделать это, следуйте инструкциям в разделе [настройке присоединения к Azure AD в вашей организации](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-setup/)  
+Для этого выполните действия, описанные в разделе [Настройка присоединение к Azure AD в вашей организации](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-setup/) .  
 
-## <a name="setup-ad-fs"></a>Настройка AD FS  
-1. Создание [новой фермы AD FS 2016](https://technet.microsoft.com/library/dn486775.aspx).   
-2.  Или [перенести](../../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md) ферме AD FS 2016 из AD FS 2012 R2  
-4. Развертывание [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnectfed-whatis/) использование пользовательский путь для подключения AD FS в Azure AD.  
+## <a name="setup-ad-fs"></a>AD FS установки  
+1. Создайте [новую ферму AD FS 2016](https://technet.microsoft.com/library/dn486775.aspx).   
+2.  Или [перенесите](../../ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md) ферму в AD FS 2016 с AD FS 2012 R2  
+4. Развертывание [Azure AD Connect](https://azure.microsoft.com/documentation/articles/active-directory-aadconnectfed-whatis/) с использованием пользовательского пути для подключения AD FS к Azure AD.  
 
-## <a name="configure-device-write-back-and-device-authentication"></a>Настроить устройство записи обратно и проверку подлинности устройства  
+## <a name="configure-device-write-back-and-device-authentication"></a>Настройка проверки подлинности при обратной записи устройства и устройства  
 > [!NOTE]
-> Если вы запустили Azure AD Connect, используя стандартные параметры, к объектам правильного AD будут созданы для вас.  Однако в большинстве случаев AD FS, Azure AD Connect была запущена с настраиваемые параметры для настройки AD FS, поэтому следующие действия необходимы.  
+> Если вы выполняли Azure AD Connect с помощью стандартных параметров, правильные объекты Active Directory были созданы специально для вас.  Однако в большинстве AD FS сценариев Azure AD Connect был запущен с пользовательскими настройками для настройки AD FS, поэтому необходимо выполнить следующие действия.  
 
 ### <a name="create-ad-objects-for-ad-fs-device-authentication"></a>Создание объектов AD для проверки подлинности устройств в AD FS  
 Если в вашей ферме AD FS еще не настроена проверка подлинности устройств (это можно проверить в консоли управления AD FS в разделе "Служба" -> "Регистрация устройств"), выполните следующие действия, чтобы создать верные объекты и конфигурацию AD DS.  
@@ -92,11 +92,11 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device2.png)
   
-2. На сервере-источнике AD FS убедитесь, использованная в Доменных службах Active Directory пользователя с правами администратора Enterprise (EA) и откройте командную строку powershell с повышенными правами.  Затем выполните следующие команды PowerShell:  
+2. На сервере-источнике AD FS Войдите в систему как AD DS пользователя с правами администратора предприятия и откройте командную строку PowerShell с повышенными привилегиями.  Затем выполните следующие команды PowerShell:  
     
    `Import-module activedirectory`  
    `PS C:\> Initialize-ADDeviceRegistration -ServiceAccountName "<your service account>" ` 
-3. На всплывающем окне нажмите кнопку "Да".
+3. Во всплывающем окне нажмите кнопку Да.
 
 >Примечание. Если ваша служба AD FS настроена на использование групповой управляемой учетной записи службы, введите имя учетной записи в формате "domain\accountname$"
 
@@ -121,7 +121,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
     
     `PS C:>Import-Module -Name "C:\Program Files\Microsoft Azure Active Directory Connect\AdPrep\AdSyncPrep.psm1" ` 
 
->Примечание: при необходимости, скопируйте файл AdSyncPrep.psm1 с вашего сервера Azure AD Connect.  Этот файл находится в каталоге Program Files\Microsoft Azure Active Directory Connect\AdPrep
+>Примечание. при необходимости скопируйте файл Адсинкпреп. PSM1 с сервера Azure AD Connect.  Этот файл находится в каталоге Program Files\Microsoft Azure Active Directory Connect\AdPrep
 
 ![Регистрация устройств](media/Configure-Device-Based-Conditional-Access-on-Premises/device6.png)   
 
@@ -183,46 +183,46 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
   - доступ для чтения и записи к указанному имени учетной записи соединителя AD в новом объекте</br></br> 
 
 
-- объект типа msDS-DeviceRegistrationServiceContainer в CN = Device Registration Services, CN = Device Registration Configuration, CN = Services, CN = Configuration, DC = & ltdomain >  
+- Объект типа msDS-Девицерегистратионсервицеконтаинер в CN = Device Registration Services, CN = Конфигурация регистрации устройств, CN = Services, CN = Configuration, DC = & лтдомаин >  
 
 
 - объект типа msDS-DeviceRegistrationService в указанном выше контейнере  
 
-### <a name="see-it-work"></a>Увидеть это в действии  
-Для оценки новых утверждений и политики, необходимо сначала зарегистрируйте устройство.  Например, можно с помощью параметров приложения в системе компьютера Windows 10, "->" о присоединения к Azure AD, или присоединения к домену Windows 10 можно настроить автоматическую регистрацию устройств следующие дополнительные действия [здесь](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/).  Сведения о соединении Windows 10 для мобильных устройств, см. в документе [здесь](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory).  
+### <a name="see-it-work"></a>Просмотреть работу  
+Чтобы оценить новые утверждения и политики, сначала зарегистрируйте устройство.  Например, вы можете присоединить компьютер с Windows 10 к Azure AD с помощью приложения "Параметры" в разделе "система" — > о программе или настроить присоединение к домену Windows 10 с автоматической регистрацией устройств, [выполнив дополнительные действия.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  Сведения о присоединении устройств с Windows 10 Mobile см. в документе [здесь](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory).  
 
-Для целей оценки самый простой вход AD FS с помощью тестового приложения, в которой отображается список утверждений. Можно видеть новых утверждений, включая isManaged isCompliant и trusttype.  Если включить Microsoft Passport для работы, вы увидите также prt утверждения.  
+Для простейшего ознакомления Войдите в AD FS с помощью тестового приложения, в котором отображается список утверждений. Вы сможете увидеть новые заявки, включая "управляемые", "трусттипе" и "не соответствует".  Если включить Microsoft Passport для работы, вы также увидите утверждение PRT.  
  
 
-## <a name="configure-additional-scenarios"></a>Настроить дополнительные сценарии  
-### <a name="automatic-registration-for-windows-10-domain-joined-computers"></a>Автоматическая регистрация для Windows 10 к домену компьютеров  
-Чтобы включить автоматическую регистрацию устройств для Windows 10 домена компьютеров, присоединенных к, выполните шаги 1 и 2 [здесь](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/).   
-Это поможет вам в достижении следующее:  
+## <a name="configure-additional-scenarios"></a>Настройка дополнительных сценариев  
+### <a name="automatic-registration-for-windows-10-domain-joined-computers"></a>Автоматическая регистрация для компьютеров, присоединенных к домену Windows 10  
+Чтобы включить автоматическую регистрацию устройств для компьютеров, присоединенных к домену Windows 10, выполните шаги 1 [и 2.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)   
+Это поможет вам получить следующие сведения:  
 
-1. Убедитесь, точка подключения службы в Доменных службах Active Directory существует и имеет соответствующие разрешения (мы создали этот объект выше, но она не помешает проверить).  
-2. Убедитесь, что AD FS настроена правильно  
-3. Убедитесь, что система AD FS имеет правильные конечные точки включены и настроены правила утверждений   
-4. Настройка параметров групповой политики, необходимые для автоматической регистрации присоединенных к домену компьютеров   
+1. Убедитесь, что точка подключения службы в AD DS существует и имеет необходимые разрешения (мы создали этот объект, но он не имеет вреда для двойной проверки).  
+2. Убедитесь, что AD FS настроен правильно  
+3. Убедитесь, что в системе AD FS установлены правильные конечные точки и настроены правила утверждений.   
+4. Настройка параметров групповой политики, необходимых для автоматической регистрации присоединенных к домену компьютеров   
 
 ### <a name="microsoft-passport-for-work"></a>Microsoft Passport for Work   
-Сведения о включении Windows 10 с помощью Microsoft Passport for Work см. в разделе [включить Microsoft Passport for Work в вашей организации.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)  
+Сведения о включении Windows 10 с Microsoft Passport for Work см [. в разделе включение Microsoft Passport for work в Организации.](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)  
 
 ### <a name="automatic-mdm-enrollment"></a>Автоматическая регистрация MDM   
-Чтобы включить автоматическую регистрацию MDM для зарегистрированных устройств, можно использовать isCompliant утверждения в политике управления доступом, сделайте [здесь.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
+Чтобы включить автоматическую регистрацию зарегистрированных устройств MDM, чтобы можно было использовать утверждение, соответствующее политике управления доступом, выполните действия, описанные [здесь.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
 
 ## <a name="troubleshooting"></a>Устранение неполадок  
-1.  Если отобразится сообщение об ошибке `Initialize-ADDeviceRegistration` , сообщает об объекте уже существуют в неверном состоянии, такие как «объект службы drs обнаружена без всех необходимых атрибутов», вы может выполнить команды powershell Azure AD Connect ранее и есть частичную конфигурацию в AD DS.  Попробуйте вручную удалить объекты, находящиеся под **CN = Device Registration Configuration, CN = Services, CN = Configuration, DC =&lt;домена&gt;**  и повторить попытку.  
-2.  Присоединенные к домену Windows 10 клиентов  
-    1. Убедитесь, что работает, проверку подлинности устройства, для входа в домен, присоединенных к клиента как тестовая учетная запись пользователя. Чтобы запустить подготовку быстро, блокировать и разблокировать рабочий стол по крайней мере один раз.   
-    2. Инструкции для проверки учетных данных ключа stk ссылку на объект AD DS (синхронизации по-прежнему необходимо дважды запустить?)  
-3.  Если вы получите ошибку при попытке регистрации компьютера Windows, устройство уже было зарегистрировано, но вы не можете или уже отменить регистрацию устройства, возможно, фрагмент конфигурации регистрации устройства в реестре.  Чтобы исследовать и удалить ее, выполните следующие действия:  
-    1. На компьютере Windows, откройте средство Regedit и перейдите к **HKLM\Software\Microsoft\Enrollments**   
-    2. В этом разделе будет много подразделов в виде идентификатора GUID.  Перейдите в папку подраздела, который содержит значения ~ 17 в нем и имеет «EnrollmentType», «6» [MDM объединить] или «13» (присоединение к Azure AD)  
-    3. Изменить **EnrollmentType** для **0** 
-    4. Повторите попытку регистрации устройства или регистрации  
+1.  Если возникает ошибка в `Initialize-ADDeviceRegistration`, которая сообщает об объекте, уже существующем в неправильном состоянии, например "объект службы DRS был найден без всех необходимых атрибутов", возможно, вы уже выполнили Azure AD Connect команды PowerShell и Частичная Настройка в AD DS.  Попробуйте удалить вручную объекты в разделе **CN = Device Registration Configuration, CN = Services, CN = Configuration, DC = &lt;domain @ no__t-2** и повторите попытку.  
+2.  Для клиентов, присоединенных к домену Windows 10  
+    1. Чтобы проверить, работает ли проверка подлинности устройства, войдите на клиент, присоединенный к домену, в качестве тестовой учетной записи пользователя. Чтобы быстро запустить подготовку, заблокируйте и разблокируйте Рабочий стол по крайней мере один раз.   
+    2. Инструкции по проверке связи учетных данных ключа СТК для объекта AD DS (синхронизация по-прежнему должна выполняться дважды?)  
+3.  При получении сообщения об ошибке при попытке зарегистрировать компьютер Windows, на котором устройство уже зарегистрировано, но вы не можете или уже отменяли регистрацию устройства, в реестре может быть фрагмент конфигурации регистрации устройства.  Чтобы исследовать и удалить это, выполните следующие действия.  
+    1. На компьютере Windows откройте редактор реестра и перейдите по адресу **хклм\софтваре\микрософт\енроллментс** .   
+    2. В этом разделе в форме GUID будет много подразделов.  Перейдите к подразделу, который содержит ~ 17 значений и имеет "Енроллменттипе" из "6" [присоединено к MDM] или "13" (присоединенные к Azure AD).  
+    3. Изменить **енроллменттипе** на **0** 
+    4. Попробуйте зарегистрировать устройство или повторить регистрацию  
 
 ### <a name="related-articles"></a>Связанные статьи  
 * [Защита доступа к Office 365 и другим приложениям, подключенным к Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
-* [Политики условного доступа устройств к службам Office 365](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Настройка локального условного доступа, с помощью регистрации устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
-* [Подключение присоединенных к домену устройств к Azure AD для работы в Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  
+* [Политики для устройств условного доступа для служб Office 365](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
+* [Настройка локального условного доступа с помощью Регистрация устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
+* [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  

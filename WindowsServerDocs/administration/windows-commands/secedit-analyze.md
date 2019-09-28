@@ -2,7 +2,7 @@
 title: 'Secedit: анализ'
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 83f9e977a059e1a1f1b882d5a968054dacf6b3be
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 6fd12d5055853a97b6bd253a83798d35effaa1f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868870"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371167"
 ---
 # <a name="seceditanalyze"></a>Secedit: анализ
 
@@ -39,7 +39,7 @@ Secedit /analyze /db <database file name> [/cfg <configuration file name>] [/ove
 |базе|Обязательный.</br>Указывает путь и имя файла базы данных, содержащей сохраненную конфигурацию, для которой будет выполняться анализ.</br>Если имя файла указывает базу данных, для которой не был создан шаблон безопасности (представленный файлом конфигурации), `/cfg \<configuration file name>` необходимо также указать параметр командной строки.|
 |CFG|Необязательно.</br>Указывает путь и имя файла для шаблона безопасности, который будет импортирован в базу данных для анализа.</br>Этот параметр/cfg допустим только при использовании с `/db \<database file name>` параметром. Если этот параметр не указан, анализ выполняется для любой конфигурации, уже хранящейся в базе данных.|
 |перезапись|Необязательно.</br>Указывает, должен ли шаблон безопасности в параметре/cfg перезаписывать любой шаблон или составной шаблон, хранящийся в базе данных, вместо того, чтобы добавлять результаты в сохраненный шаблон.</br>Этот параметр командной строки допустим только в том случае, `/cfg \<configuration file name>` если используется параметр. Если он не указан, шаблон в параметре/cfg добавляется к сохраненному шаблону.|
-|Журналь|Необязательно.</br>Указывает путь и имя файла журнала, который будет использоваться в процессе.|
+|log|Необязательно.</br>Указывает путь и имя файла журнала, который будет использоваться в процессе.|
 |Тихо|Необязательно.</br>Подавляет вывод на экран. Вы по-прежнему можете просматривать результаты анализа с помощью оснастки "Настройка и анализ безопасности" консоли управления (MMC).|
 
 ## <a name="remarks"></a>Примечания
@@ -61,7 +61,7 @@ Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /log C:\Security\FY11\Sec
 Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительная справка
 
 -   [Программу Secedit](secedit.md)
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
