@@ -1,8 +1,8 @@
 ---
-title: С помощью команды add образа
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Add-Image
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0433e0775bd2088170ae17fcfe432cdaee0bf99d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0d671dd482710c486a6936cdbe3b1cc6b331866
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59817465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363739"
 ---
-# <a name="using-the-add-image-command"></a>С помощью команды add образа
+# <a name="using-the-add-image-command"></a>Использование команды Add-Image
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-добавления образов на сервере служб развертывания Windows. Примеры об использовании этой команды, см. в разделе [примеры](#BKMK_examples).
+Добавляет образы на сервер служб развертывания Windows. Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
 ## <a name="syntax"></a>Синтаксис
 для загрузочных образов используйте следующий синтаксис:
 ```
@@ -47,24 +47,24 @@ wdsutil /add-ImagmediaFile:<wim file path>
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-mediaFile:<.wim file path>|Указывает полный путь и имя файла образа Windows (WIM), содержащей изображения должен быть добавлен.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-Тип носителя: {загрузки&#124;установить}|Задает тип изображения для добавления.|
-|[/Skipverify]|Указывает, что проверка целостности, не быть выполнено на исходный файл изображения, прежде чем изображение будет добавлено.|
-|[/ Name:<Name>]|Задает отображаемое имя изображения.|
-|[/ Description:<Description>]|Задает описание образа.|
-|[/ Filename:<Filename>]|Указывает имя нового файла WIM-файла. Это позволяет изменить имя файла WIM-файла, при добавлении изображения. Если имя файла не указано, будет использоваться имя исходного файла изображения. Во всех случаях служб развертывания Windows проверяет, чтобы определить, является ли имя файла уникальным в хранилище образов загрузки конечного компьютера.|
-|\mediaGroup:<Image group name>]|Указывает имя группы образов, в которой будут добавляться изображения. Если на сервере существует более одной группы образов, необходимо указать группу образов. Если группы образов еще не существует, этот параметр не указан, будет создана новая группа образа. В противном случае будет использоваться существующие группы образов.|
-|[/ SingleImage:<Single image name>] [/ Name:<Name>] [/ Description:<Description>]|Копирует указанное изображение одной из WIM-файл и задает изображение отображаемое имя и описание.|
-|[/ UnattendFile:<Unattend file path>]|Указывает полный путь к файлу автоматической установки должны быть сопоставлены образы, которые добавляются. Если **/SingleImage** не указан, один и тот же файл автоматической установки, которые будут связаны с всех образов в WIM-файле.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы добавить загрузочный образ, введите следующую команду:
+mediaFile: путь к файлу <. wim >|Указывает полный путь и имя файла образа Windows (WIM-файла), содержащего добавляемые образы.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+mediaType: {Установка&#124;загрузки}|Указывает тип добавляемых образов.|
+|[/Скипверифи]|Указывает, что проверка целостности не будет выполняться для исходного файла изображения перед добавлением образа.|
+|[/Name: <Name>]|Задает отображаемое имя изображения.|
+|/Description<Description>]|Задает описание образа.|
+|[/Филенаме: <Filename>]|Указывает новое имя файла для WIM-файла. Это позволяет изменить имя файла WIM при добавлении образа. Если имя файла не указано, будет использоваться имя файла исходного изображения. Во всех случаях службы развертывания Windows проверяют, является ли имя файла уникальным в хранилище загрузочных образов конечного компьютера.|
+|\Медиаграуп: <Image group name>]|Указывает имя группы образов, в которую будут добавлены образы. Если на сервере существует более одной группы образов, необходимо указать группу образов. Если этот элемент не указан и группа образов еще не существует, будет создана новая группа образов. В противном случае будет использоваться существующая группа образов.|
+|[/Синглеимаже: <Single image name>] [/Name: <Name>] /Description<Description>]|Копирует указанный отдельный образ из WIM-файла и задает отображаемое имя и описание образа.|
+|[/Unattendfile.: <Unattend file path>]|Указывает полный путь к файлу автоматической установки, который будет связан с добавляемыми изображениями. Если **/синглеимаже** не указан, то тот же файл автоматической установки будет связан со всеми образами в WIM-файле.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы добавить загрузочный образ, введите:
 ```
 wdsutil /add-ImagmediaFile:"C:\MyFolder\Boot.wimmediatype:Boot
 wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share\Boot.wim /Server:MyWDSServemediatype:Boot /Name:"My WinPE Image" 
 /Description:"WinPE Image containing the WDS Client" /Filename:WDSBoot.wim
 ```
-Чтобы добавить образ установки, введите одно из следующих:
+Чтобы добавить образ установки, введите одно из следующих действий:
 ```
 wdsutil /add-ImagmediaFile:"C:\MyFolder\Install.wimmediatype:Install
 wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
@@ -72,10 +72,8 @@ wdsutil /verbose /Progress /add-ImagmediaFile:\\MyServer\Share \Install.wim /Ser
 /Description:"Windows Pro image with Microsoft Office" /Filename:"Win Pro.wim" /UnattendFile:"\\server\share\unattend.xml"
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды копирования образа](using-the-copy-image-command.md)
-[с помощью команды Export-Image](using-the-export-image-command.md)
-[Using Команда Get-Image](using-the-get-image-command.md)
-[с помощью команды remove образа](using-the-remove-image-command.md)
-[с помощью команды заменить изображение](using-the-replace-image-command.md) 
- [ Подкоманда: set-Image](subcommand-set-image.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды copy-Image](using-the-copy-image-command.md)
+ с[помощью команды Export-Image](using-the-export-image-command.md)
+ с помощью команды[Get](using-the-get-image-command.md)-Image 
+ с помощью[команды Remove-](using-the-remove-image-command.md)Image @no__t[-9 с помощью Команда Replace-Image](using-the-replace-image-command.md)1[подкоманда: Set-Image](subcommand-set-image.md)

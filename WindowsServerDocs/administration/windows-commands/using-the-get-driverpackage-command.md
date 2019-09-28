@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-DriverPackage
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Дриверпаккаже
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b0f123d281625140b3c4ba46316cb9b773bf5fee
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: f3d31d9a02454b0f7fca06b28a4df27174f7b02e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440516"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363188"
 ---
-# <a name="using-the-get-driverpackage-command"></a>С помощью команды get-DriverPackage
+# <a name="using-the-get-driverpackage-command"></a>Использование команды Get-Дриверпаккаже
 
 
 
@@ -36,14 +36,14 @@ WDSUTIL /Get-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package Name
 
 |        Параметр         |                                                                           Описание                                                                            |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/ Server:\<имя сервера >] |              Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.               |
-| [/ DriverPackage:\<имя >] |                                                        Указывает имя пакета драйверов для отображения.                                                         |
-|    [/ PackageId:\<идентификатор >]    | Указывает идентификатор служб развертывания Windows из пакета драйверов для отображения. Если пакет драйверов не может быть однозначно идентифицируется по имени, необходимо указать идентификатор. |
-|     [/ Show: {драйверы     |                                                                              Файлы                                                                               |
+| [/Server: \<Server имя >] |              Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.               |
+| [/Дриверпаккаже: @no__t — 0Name >] |                                                        Указывает имя пакета драйверов для отображения.                                                         |
+|    [/Паккажеид: @no__t — 0ID >]    | Указывает идентификатор служб развертывания Windows для отображаемого пакета драйверов. Если пакет драйвера не может быть однозначно идентифицирован по имени, необходимо указать идентификатор. |
+|     [/Show: {Drivers     |                                                                              Файлы                                                                               |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы просмотреть сведения о пакете драйверов, введите одно из следующих:
+Чтобы просмотреть сведения о пакете драйвера, введите одно из следующих действий:
 ```
 WDSUTIL /Get-DriverPackage /PackageId:{4D36E972-E325-11CE-BFC1-08002BE10318}
 ```

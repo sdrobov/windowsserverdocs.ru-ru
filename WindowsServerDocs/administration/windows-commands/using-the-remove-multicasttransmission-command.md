@@ -1,8 +1,8 @@
 ---
-title: С помощью команды remove-MulticastTransmission
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Remove-Мултикасттрансмиссион
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dc3ba385644ef9da9b5d592142091ff087cd7545
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 279554124b046f645b3c83e1490657aa8782104a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839685"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362817"
 ---
-# <a name="using-the-remove-multicasttransmission-command"></a>С помощью команды remove-MulticastTransmission
+# <a name="using-the-remove-multicasttransmission-command"></a>Использование команды Remove-Мултикасттрансмиссион
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отключает многоадресной передачи для изображения. Если не указать **/force**, существующие клиенты будут завершения передачи образа, но новые клиенты не смогут присоединиться.
+Отключает передачу многоадресной рассылки для образа. Если не указать **/Force**, существующие клиенты будут выполнять перенос образа, но новые клиенты не смогут присоединяться.
 ## <a name="syntax"></a>Синтаксис
 **Windows Server 2008**
 ```
@@ -49,15 +49,15 @@ wdsutil [Options] /remove-MulticastTransmissiomedia:<Image name>
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-мультимедиа:<Image name>|Задает имя образа.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, используется локальный сервер.|
-Тип носителя: {установить&#124;загрузки}|Задает тип изображения. Обратите внимание, что этот параметр должен быть установлен в **установить** для Windows Server 2008.|
-|/ Архитектура: {x86 &#124; ia64 &#124; x64}|Задает архитектуру загрузочного образа, который связан с Запуск передачи. Так как это может быть то же имя образа для загрузочных образов в различных архитектур, следует указать архитектуры, чтобы убедиться, что используется правильный передачи.|
-|\mediaGroup:<Image group name>]|Указывает группу образов, содержащий изображение. Если указано имя группы не образа и только один образ группа существует на сервере, будет использоваться этой группы образов. Если на сервере существует более одной группы образов, необходимо использовать этот параметр, чтобы указать имя группы.|
-|[/ Filename:<File name>]|Указывает имя файла. Если исходное изображение не может быть однозначно идентифицируется по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-|[/ force]|Удаляет передачи и завершения всех клиентов. Если не указано значение для **/force** параметр, существующие клиенты могут выполнить передачу образа, но новые клиенты не смогут присоединиться.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы остановить пространства имен (текущих клиентов будет завершена передача, но новые клиенты не смогут соединиться с), тип:
+носитель: <Image name>|Указывает имя изображения.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+mediaType: {Загрузка&#124;установки}|Указывает тип изображения. Обратите внимание, что этот параметр должен быть установлен для **установки** для Windows Server 2008.|
+|/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру загрузочного образа, связанного с передачей для запуска. Так как для образов загрузки в разных архитектурах можно использовать одно и то же имя образа, следует указать архитектуру, чтобы гарантировать использование правильной передачи.|
+|\Медиаграуп: <Image group name>]|Указывает группу образов, содержащую образ. Если имя группы образов не указано и на сервере существует только одна группа образов, используется эта группа образов. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать имя группы образов.|
+|[/Филенаме: <File name>]|Указывает имя файла. Если исходный образ не может быть однозначно определен по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+|/Force|удаляет передачу и завершает работу всех клиентов. Если не указано значение параметра **/Force** , существующие клиенты могут завершить перенос образа, но новые клиенты не смогут присоединиться.|
+## <a name="BKMK_examples"></a>Примеров
+Для завершения передачи пространства имен (текущие клиенты будут выполнять передачу, но новые клиенты не смогут присоединиться) введите:
 ```
 wdsutil /remove-MulticastTransmissiomedia:"Vista with Office"
 /Imagetype:Install
@@ -66,15 +66,15 @@ wdsutil /remove-MulticastTransmissiomedia:"Vista with Office"
 wdsutil /remove-MulticastTransmissiomedia:"x64 Boot Image"
 /Imagetype:Boot /Architecture:x64
 ```
-Чтобы выполнить завершение всех клиентов, введите следующую команду:
+Для принудительного завершения работы всех клиентов введите:
 ```
 wdsutil /remove-MulticastTransmission /Server:MyWDSServer
 /Image:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1
 /Filename:install.wim /force
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-AllMulticastTransmissions](using-the-get-allmulticasttransmissions-command.md)
-[с помощью команды get-MulticastTransmission](using-the-get-multicasttransmission-command.md) 
- [С помощью команды новый MulticastTransmission](using-the-new-multicasttransmission-command.md)
-[подкоманда: start-MulticastTransmission](subcommand-start-multicasttransmission.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды get-аллмултикасттрансмиссионс](using-the-get-allmulticasttransmissions-command.md)
+ с[помощью команды Get-Мултикасттрансмиссион](using-the-get-multicasttransmission-command.md)
+[с помощью команды New-мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)
+[ . Подкоманда: Start-Мултикасттрансмиссион](subcommand-start-multicasttransmission.md)

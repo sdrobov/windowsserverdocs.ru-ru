@@ -1,8 +1,8 @@
 ---
-title: С помощью команды remove-пространство имен
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Remove-Namespace
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 115c0a90a60e18ee4b89758200773d1dfec2163f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b4c087442c43fd885fe4554cb29f9b2788420e05
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362791"
 ---
-# <a name="using-the-remove-namespace-command"></a>С помощью команды remove-пространство имен
+# <a name="using-the-remove-namespace-command"></a>Использование команды Remove-Namespace
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Удаление пользовательского пространства имен.
+Удаляет пользовательское пространство имен.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/force]
@@ -32,20 +32,20 @@ wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/ Пространство имен:<Namespace name>|Задает имя пространства имен. Понятное имя, и оно должно быть уникальным.<br /><br />-   **Служба роли сервера развертывания**: Синтаксис имени пространства имен: /Namespace:WDS:<ImageGroup>/<ImageName>/<Index>. Пример: **WDS:ImageGroup1/Install.wim/1**<br />-   **Служба роли сервера транспорта**: Это значение должно соответствовать имя, присвоенное пространство имен, если он был создан на сервере.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, используется локальный сервер.|
-|[/ force]|немедленно удаляет пространство имен и завершает выполнение всех клиентов. Обратите внимание, что, если не указано **/force**, существующие клиенты могут выполнить передачу, но новые клиенты не смогут присоединиться.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы остановить пространства имен (текущих клиентов можно выполнить передачу, но новые клиенты не смогут присоединиться к), тип:
+|/Namespace: <Namespace name>|Указывает имя пространства имен. Это не понятное имя, оно должно быть уникальным.<br /><br />**служба роли сервера развертывания**-   : Синтаксис имени пространства имен —/namespace: WDS: <ImageGroup> @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4. Пример: **WDS: ImageGroup1/install. wim/1**<br />**служба роли транспортного сервера**-   : Это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+|/Force|немедленно удаляет пространство имен и завершает работу всех клиентов. Обратите внимание, что если не указать **/Force**, существующие клиенты могут завершить перенос, но новые клиенты не смогут присоединиться.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы присвоить пространство имен (текущие клиенты могут завершить процесс перемещения, но новые клиенты не смогут присоединиться), введите:
 ```
 wdsutil /remove-Namespace /Namespace:"Custom Auto 1"
 ```
-Чтобы выполнить завершение всех клиентов, введите следующую команду:
+Для принудительного завершения работы всех клиентов введите:
 ```
 wdsutil /remove-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /force
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-AllNamespaces](using-the-get-allnamespaces-command.md)
-[с помощью команды новое пространство имен](using-the-new-namespace-command.md) 
- [ Подкоманда: start-пространство имен](subcommand-start-namespace.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды get-аллнамеспацес](using-the-get-allnamespaces-command.md)
+[с помощью команды New-Namespace](using-the-new-namespace-command.md)
+[подкоманда: Start-Namespace](subcommand-start-namespace.md)

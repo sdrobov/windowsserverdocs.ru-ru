@@ -1,7 +1,7 @@
 ---
-title: Высокой производительности сети (HPN)
+title: Высокопроизводительная сеть (ХПН)
 description: ''
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -9,32 +9,32 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/20/2018
-ms.openlocfilehash: 61fc384902e02dc8c58f0a74e9ae857bd81f62d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e91dc072342272a87f6a0d98c4a5cff46b0b1cdc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867055"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355286"
 ---
-# <a name="high-performance-networking-hpn"></a>Высокой производительности сети (HPN)
+# <a name="high-performance-networking-hpn"></a>Высокопроизводительная сеть (ХПН)
 
-Высокопроизводительные сети (HPNs) играют роль в требования к обработке в реальном времени данных. Например действия, такие как центр обработки данных репликации, центра обработки данных аварийного восстановления и высокой производительности распределенных вычислений, требуют большого объема данных передачи и низкой задержкой сети. HPNs благодаря возможностям динамического подключения высокопроизводительных сетевых ресурсов и сделать более доступным управляемым. 
+Высокопроизводительные сети (Хпнс) играют роль в требованиях к обработке данных в режиме реального времени. Например, для таких действий, как репликация центра данных, аварийное восстановление центра обработки данных и высокопроизводительное распределенное вычисление, требуется переносить данные большого объема и низкая задержка в сети. Хпнс с возможностями динамического подключения делают высокопроизводительные сетевые ресурсы более доступными и управляемыми. 
 
 
-Следующие сетевые темы высокой производительности.
+Высокопроизводительные сетевые разделы включают в себя:
 
-- [Insider preview](hpn-insider-preview.md)
+- [Insider Preview](hpn-insider-preview.md)
 
-- [Технологии разгрузки и оптимизации сети](network-offload-and-optimization.md)
+- [Разгрузка сети и технологии оптимизации](network-offload-and-optimization.md)
 
-  - [(Т) программное обеспечение только функции и технологии](hpn-software-only-features.md)
+  - [Только программные компоненты и технологии](hpn-software-only-features.md)
 
-  - [Программное обеспечение и оборудование (SH) интегрировать функции и технологии](hpn-software-hardware-features.md)
+  - [Программно и аппаратно интегрируемые компоненты и технологии](hpn-software-hardware-features.md)
 
-  - [Только (HO) аппаратных средств и технологий](hpn-hardware-only-features.md)
+  - [Только аппаратные компоненты и технологии](hpn-hardware-only-features.md)
 
-  - [Дополнительные свойства сетевого Адаптера](hpn-nic-advanced-properties.md)
+  - [Дополнительные свойства NIC](hpn-nic-advanced-properties.md)
 
-- [RSC в vSwitch.](rsc-in-the-vswitch.md)
+- [RSC в vSwitch](rsc-in-the-vswitch.md)
 
 ---

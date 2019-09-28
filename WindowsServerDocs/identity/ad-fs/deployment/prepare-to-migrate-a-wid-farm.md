@@ -1,30 +1,30 @@
 ---
-title: Подготовка к миграции фермы внутренней базы данных Windows AD FS 2.0
-description: Сведения о подготовке к миграции фермы внутренней базы данных Windows 2.0 сервера AD FS в Windows Server 2012.
+title: Подготовка к миграции фермы AD FS 2,0 WID
+description: Содержит сведения о готовности к миграции фермы AD FS 2,0 Server WID на Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a0e4bb77003ab24e0e31268509fb8667a671bea6
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e6612856a2e00c47e9cc87c75c802ff86697b781
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445535"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359261"
 ---
-# <a name="prepare-to-migrate-an-ad-fs-20-wid-farm"></a>Подготовка к миграции фермы внутренней базы данных Windows AD FS 2.0  
- Чтобы подготовиться к миграции серверов AD FS 2.0 federation, относящихся к ферме внутренней базы данных Windows (WID) для Windows Server 2012, необходимо экспортировать и резервное копирование данных конфигурации AD FS с этих серверов.  
+# <a name="prepare-to-migrate-an-ad-fs-20-wid-farm"></a>Подготовка к миграции фермы AD FS 2,0 WID  
+ Чтобы подготовиться к миграции серверов федерации AD FS 2,0, принадлежащих ферме на основе внутренней базы данных Windows (WID), на Windows Server 2012, необходимо экспортировать и создать резервную копию данных конфигурации AD FS этих серверов.  
   
  Чтобы экспортировать данные конфигурации AD FS, выполните следующие действия.  
   
--   [Шаг 1. — Экспорт параметров службы](#step-1-export-service-settings)  
+-   [Шаг 1. экспорт параметров службы](#step-1-export-service-settings)  
   
--   [Шаг 2. Резервное копирование хранилищ настраиваемых атрибутов](#step-2-back-up-custom-attribute-stores)  
+-   [Шаг 2. Резервное копирование пользовательских атрибутов хранилища @ no__t-0  
   
--   [Шаг 3. Резервное копирование пользовательских настроек веб-страницы](#step-3-back-up-webpage-customizations)  
+-   [Шаг 3. Резервное копирование настроек веб-страниц @ no__t-0  
   
 ## <a name="step-1-export-service-settings"></a>Шаг 1. Экспорт параметров службы  
  Для того чтобы экспортировать параметры службы, выполните следующие действия.  
@@ -56,8 +56,8 @@ ms.locfileid: "66445535"
  Чтобы выполнить резервное копирование пользовательских настроек веб-страницы, копируйте веб-страницы AD FS и файл **web.config** из каталога, сопоставленного виртуальному пути **“/adfs/ls”** , в IIS. По умолчанию он находится в каталоге **%systemdrive%\inetpub\adfs\ls**.  
 
 ## <a name="next-steps"></a>Следующие шаги
- [Подготовка к миграции сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к миграции прокси-сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера AD FS 2.0 Federation](migrate-the-ad-fs-fed-server.md)   
- [Перенос прокси-сервера AD FS 2.0 Federation](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

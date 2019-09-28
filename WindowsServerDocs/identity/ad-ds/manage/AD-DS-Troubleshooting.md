@@ -7,25 +7,25 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 88513a889bc361f5733fc6b18f3d261dbcb2f1b1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 995ba44a64ae022b52213b9c912f94144d4c2543
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876475"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369326"
 ---
 # <a name="ad-ds-troubleshooting"></a>Диагностика доменных служб Active Directory
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2
 
-В этом разделе содержатся, устранение неполадок, рекомендации и процедуры для диагностики и устранения проблем, которые могут возникнуть при использовании репликации Active Directory.
+В этом разделе содержатся рекомендации и процедуры диагностики и устранения проблем, которые могут возникнуть при Active Directory репликации.
 
-Это содержимое в основном посвящена отклики на сообщения журнала событий службы каталогов и сообщениях об ошибках на основе инструментов может быть вызвано средства Repadmin.exe и Dcdiag.exe. Эти средства доступны на все контроллеры домена, работающих под управлением Windows Server 2016 и 2012 R2. Также можно установить средства удаленного администрирования сервера (RSAT) на сервере под управлением Windows 10.
+Этот материал посвящен главным образом ответам на сообщения журнала событий службы каталогов и сообщения об ошибках на основе средств, которые могут быть переданы средствам Repadmin. exe и Dcdiag. exe. Эти средства доступны на всех контроллерах домена под Windows Server 2016 или 2012 R2. Средства удаленного администрирования сервера (RSAT) можно также установить на рядовом сервере под Windows 10.
 
-Сведения об установке средства удаленного администрирования сервера, см. в статье [средства удаленного администрирования сервера](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+Дополнительные сведения об установке RSAT см. в статье [средства удаленного администрирования сервера](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
 
 [Настройка компьютера для устранения неполадок Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
 
-[Устранение неполадок репликации Active Directory](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
+[Устранение неполадок с репликацией Active Directory](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)

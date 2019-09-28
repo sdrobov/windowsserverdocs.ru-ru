@@ -1,30 +1,30 @@
 ---
-title: Материалах по лицензированию для Windows Server
-description: Дополнительные сведения о соглашениях о лицензировании Windows Server.
+title: Лицензирование содержимого для Windows Server
+description: Узнайте о соглашениях о лицензировании Windows Server.
 ms.topic: reference
 author: eross-msft
 ms.author: lizross
 ms.date: 06/11/2019
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 2965d56c1fe968a1ccb7d0e191e9028f7831ceb8
-ms.sourcegitcommit: 9109f35563471ec0f7165bf3d1e1b448fe6e1924
+ms.prod: windows-server
+ms.openlocfilehash: d1aa268b3f5c944496791718c4b396e1313bb13d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346521"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363978"
 ---
-# <a name="windows-server---license-terms"></a>Windows Server — условия лицензионного соглашения
+# <a name="windows-server---license-terms"></a>Windows Server — условия лицензии
 
-Просмотрите наши условия лицензии, связанные с Windows Server.
+Ознакомьтесь с нашими условиями лицензии, относящимися к Windows Server.
 
 - [Дополнительное программное обеспечение для Windows Server 2016](https://docs.microsoft.com/legal/windows-server/Additional-Software)
 
-- [Срок действия Windows Server Technical Preview](https://docs.microsoft.com/legal/windows-server/WinServer2016expiry)
+- [Истечение срока действия Windows Server Technical Preview](https://docs.microsoft.com/legal/windows-server/WinServer2016expiry)
 
-- [Условия лицензионного соглашения Windows Server 2016 Technical Preview](https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms)
+- [Условия лицензии для технической предварительной версии Windows Server 2016](https://docs.microsoft.com/legal/windows-server/WinServer2016licenseterms)
 
-- [Условия лицензии программного обеспечения Майкрософт — MICROSOFT. WINDOWSSERVER. SYSTEMINSIGHTS](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
+- [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт — Майкрософт. WINDOWSSERVER. системинсигхтс](https://docs.microsoft.com/legal/windows-server/system-insights-eula)
 
-- [Условия лицензии программного обеспечения Майкрософт — MICROSOFT. WINDOWSSERVER. SYSTEMINSIGHTS. ВОЗМОЖНОСТИ](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
+- [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт — Майкрософт. WINDOWSSERVER. СИСТЕМИНСИГХТС. РЕЧЬ](https://docs.microsoft.com/legal/windows-server/system-insights-capabilities-eula)
 
-- [Windows Admin Center — условия лицензионного соглашения](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-admin-center-licensing)
+- [Центр администрирования Windows — условия лицензии](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-admin-center-licensing)

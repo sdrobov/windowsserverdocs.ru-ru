@@ -1,8 +1,8 @@
 ---
-title: WBADMIN get дисков
-description: 'Раздел Windows команды для ***- '
+title: Wbadmin get Disks
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b7d30567285fa0e295758c8b4f4c7cdb45ae621c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3440e061a97e54c32179ef7d71f469093e9fae00
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858875"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362425"
 ---
-# <a name="wbadmin-get-disks"></a>WBADMIN get дисков
+# <a name="wbadmin-get-disks"></a>Wbadmin get Disks
 
 
 
-Список внутренних и внешних дисков, подключенных для локального компьютера.
+Список внутренних и внешних дисков, находящихся в сети для локального компьютера.
 
-Чтобы получить список дисков, которые находятся в оперативном режиме с помощью подкоманды, необходимо быть членом **операторы архива** группы или **Администраторы** группа, или должна была быть делегированы соответствующие разрешения. Кроме того, необходимо запустить **wbadmin** из командной строки с повышенными правами. (Чтобы открыть командную строку, щелкните правой кнопкой мыши **командной**, а затем нажмите кнопку **Запуск от имени администратора**.)
+Чтобы получить список дисков, которые находятся в сети с помощью этой подкоманды, необходимо быть членом группы " **Операторы архива** " или " **Администраторы** ", либо вам должны быть делегированы соответствующие разрешения. Кроме того, необходимо запустить программу **Wbadmin** из командной строки с повышенными привилегиями. (Чтобы открыть командную строку с повышенными привилегиями, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,10 +36,10 @@ wbadmin get disks
 
 ## <a name="parameters"></a>Параметры
 
-Подкоманды не имеет параметров.
+Эта подкоманда не имеет параметров.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [WBADMIN](wbadmin.md)
--   [Get-WBDisk](https://technet.microsoft.com/library/jj902446.aspx) командлета
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Wbadmin](wbadmin.md)
+-   Командлет [Get-вбдиск](https://technet.microsoft.com/library/jj902446.aspx)

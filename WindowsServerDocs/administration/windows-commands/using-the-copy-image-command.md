@@ -1,8 +1,8 @@
 ---
-title: С помощью команды копирования образа
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Copy-Image
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52c9c0bb45e60e76077bf90534e93f2c6fc1df18
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f269884e9c1f96151c9e1220242fad917b76831
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363565"
 ---
-# <a name="using-the-copy-image-command"></a>С помощью команды копирования образа
+# <a name="using-the-copy-image-command"></a>Использование команды Copy-Image
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Копирует образы, которые находятся в той же группе образа. Чтобы копировать изображения между групп образов, используйте [с помощью команды Export-Image](using-the-export-image-command.md) команду и затем [с помощью команды add образа](using-the-add-image-command.md) команды.
-Примеры об использовании этой команды, см. в разделе [примеры](#BKMK_examples).
+Копирует образы, которые находятся в одной и той же группе образов. Для копирования образов между группами образов используйте команду [Export-Image](using-the-export-image-command.md) , а затем команду [Add-Image](using-the-add-image-command.md) .
+Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /copy-Imagmedia:<Image name> [/Server:<Server name>]
@@ -40,27 +40,25 @@ wdsutil [Options] /copy-Imagmedia:<Image name> [/Server:<Server name>]
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-мультимедиа:<Image name>|Указывает имя образа для копирования.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-MediaType:install|Задает тип изображения для копирования. Этот параметр должен быть установлен в **установить**.|
-|\mediaGroup:<Image group name>]|Указывает группу образов, содержащий изображение для копирования. Если группа образа не указана, существует только одна группа на сервере по умолчанию будет использоваться этой группы образов. Если на сервере существует более одной группы образов, необходимо указать группу образов.|
-|[/ Filename:<Filename>]|Указывает имя файла изображения для копирования. Если исходное изображение не может быть однозначно идентифицируется по имени, необходимо указать имя файла.|
-|/DestinationImage|Задает параметры для конечного изображения, как описано в следующей таблице.<br /><br />-/ Name:<Name> -задает отображаемое имя изображения для копирования.<br />-/Filename:<Filename> — задает имя файла изображения назначения, который будет содержать копии образа.<br />-[/ Description: <Description>] — Задает описание копирования образа.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы создать копию указанное изображение и назовите его WindowsVista.wim, введите следующую команду:
+носитель: <Image name>|Задает имя копируемого образа.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+mediaType: Установка|Указывает тип копируемого изображения. Этот параметр должен быть установлен в значение " **установить**".|
+|\Медиаграуп: <Image group name>]|Указывает группу образов, содержащую копируемый образ. Если группа образов не указана и на сервере существует только одна группа, то эта группа образов будет использоваться по умолчанию. Если на сервере существует более одной группы образов, необходимо указать группу образов.|
+|[/Филенаме: <Filename>]|Указывает имя файла копируемого образа. Если исходный образ не может быть однозначно определен по имени, необходимо указать имя файла.|
+|/дестинатионимаже|Задает параметры для конечного образа, как описано в следующей таблице.<br /><br />-/Name: <Name> — задает отображаемое имя копируемого образа.<br />-/Филенаме: <Filename> — задает имя конечного файла образа, который будет содержать копию образа.<br />-[/Description: <Description>] — Задает описание копии образа.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы создать копию указанного образа и назовите ее Виндовсвиста. wim, введите:
 ```
 wdsutil /copy-Imagmedia:"Windows Vista with Officemediatype:Install /DestinationImage /Name:"copy of Windows Vista with Office" /Filename:"WindowsVista.wim"
 ```
-Чтобы создать копию заданного изображения, применить указанные параметры и назовите ее WindowsVista.wim, тип:
+Чтобы создать копию указанного образа, примените указанные параметры и назовите копию Виндовсвиста. wim, введите:
 ```
 wdsutil /verbose /Progress /copy-Imagmedia:"Windows Vista with Office" /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
 /Filename:install.wim /DestinationImage /Name:"copy of Windows Vista with Office" /Filename:"WindowsVista.wim" /Description:"This is a copy of the original Windows image with Office installed"
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды add образа](using-the-add-image-command.md)
-[с помощью команды Export-Image](using-the-export-image-command.md)
-[Using Команда Get-Image](using-the-get-image-command.md)
-[с помощью команды remove образа](using-the-remove-image-command.md)
-[с помощью команды заменить изображение](using-the-replace-image-command.md) 
- [ Подкоманда: set-Image](subcommand-set-image.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды add-Image](using-the-add-image-command.md)
+ с[помощью команды Export-Image](using-the-export-image-command.md)
+ с помощью команды[Get](using-the-get-image-command.md)-Image 
+ с помощью[команды Remove-](using-the-remove-image-command.md)Image @no__t[-9 с помощью Команда Replace-Image](using-the-replace-image-command.md)1[подкоманда: Set-Image](subcommand-set-image.md)

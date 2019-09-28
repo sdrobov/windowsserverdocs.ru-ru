@@ -5,13 +5,13 @@ author: MicrosoftGuyJFlo
 ms.author: joflore
 ms.date: 04/19/2018
 ms.topic: article
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 287d7ef0b8645d8e808b8b8d9f195d05ffed1cc0
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.prod: windows-server
+ms.openlocfilehash: 19e8eef008d3818c413808ab1f085a7cc247ec36
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868324"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369498"
 ---
 # <a name="virtualizing-domain-controllers-using-hyper-v"></a>Виртуализация контроллеров домена с помощью Hyper-V
 
@@ -104,7 +104,7 @@ VHD-файл виртуального контроллера домена экв
 <thead>
 <tr class="header">
 <th>Размеры</th>
-<th>Тест</th>
+<th>Тестирование</th>
 <th>Физическое движение</th>
 <th>виртуализаци</th>
 <th>Изменений</th>
@@ -237,7 +237,7 @@ System Center Virtual Machine Manager (VMM) 2008 обеспечивает уни
 > [!NOTE]
 > Это руководство недавно обновлялось, чтобы отразить текущую рекомендацию по синхронизации времени для гостевого контроллера домена только из иерархии домена, а не из предыдущей рекомендации по частичному отключению синхронизации времени между узлом. системный и гостевой контроллер домена.
 
-## <a name="storage"></a>Служба хранилища
+## <a name="storage"></a>Хранилище
 
 Чтобы оптимизировать производительность виртуальной машины контроллера домена и обеспечить устойчивость Active Directory записи, используйте следующие рекомендации по хранению файлов операционной системы, Active Directory и VHD:
 

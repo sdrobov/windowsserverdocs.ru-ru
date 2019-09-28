@@ -1,9 +1,9 @@
 ---
 title: Новые возможности виртуализации сети Hyper-V в Windows Server 2016
-description: Этот раздел содержит сведения о новых возможностях виртуализации сети Hyper-V в Windows Server 2016
+description: В этом разделе содержатся сведения о новых возможностях виртуализации сети Hyper-V в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -13,51 +13,51 @@ ms.assetid: 0254275a-0a77-40a9-b68a-1029284c03fe
 ms.author: pashort
 author: shortpatti
 ms.date: 03/19/2018
-ms.openlocfilehash: c87ccfba7b9ccc77646f58ade2853766524e67b1
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 57db82fdd8c7524afb427c61f754e9b8ede8e7b7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67284044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355673"
 ---
 # <a name="whats-new-in-hyper-v-network-virtualization-in-windows-server-2016"></a>Новые возможности виртуализации сети Hyper-V в Windows Server 2016
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В этом разделе описываются возможности виртуализации сети Hyper-V (HNV), которые являются новыми или измененными в Windows Server 2016.  
+В этом разделе описывается новая или измененная функция виртуализации сети Hyper-V (HNV) в Windows Server 2016.  
   
-## <a name="BKMK_IPAM2012R2"></a>Обновления в виртуализации сети  
-HNV обеспечивает расширенную поддержку в следующих областях:  
+## <a name="BKMK_IPAM2012R2"></a>Обновления в HNV  
+HNV предлагает расширенную поддержку в следующих областях:  
   
 |Компонент или функциональная возможность|Новая или улучшенная|Описание|  
 |--------------------------|-------------------|---------------|  
-|[Программируемые коммутатора Hyper-V](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|Оператор new|Политики HNV можно программировать через сетевой контроллер Майкрософт.|  
-|[Поддержка инкапсуляция VXLAN](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|Оператор new|Hyper-v теперь поддерживает инкапсуляцию VXLAN.|  
-|[Взаимодействие программного обеспечения подсистемы балансировки нагрузки (SLB)](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|Оператор new|HNV полностью интегрировано с подсистемой балансировки нагрузки программного обеспечения Майкрософт.|  
-|[Совместимые IEEE Ethernet заголовки](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|Улучшенная|Стандартам IEEE Ethernet|  
+|[Программируемый коммутатор Hyper-V](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SDN)|Оператор new|Политика HNV может быть программируемой через сетевой контроллер (Майкрософт).|  
+|[Поддержка инкапсуляции ВКСЛАН](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#VXLAN)|Оператор new|HNV теперь поддерживает инкапсуляцию ВКСЛАН.|  
+|[Взаимодействие Load Balancer программного обеспечения (SLB)](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#SLB)|Оператор new|HNV полностью интегрирован с программным обеспечением Майкрософт Load Balancer.|  
+|[Соответствующие заголовки IEEE Ethernet](../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/../../../sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md#L2)|Улучшенная|Соответствует стандартам IEEE Ethernet|  
   
-### <a name="SDN"></a>Программируемые коммутатора Hyper-V  
-HNV является основным строительным блоком обновленные программно определяемой сети (SDN) в решении Майкрософт, а также полностью интегрированы в стек SDN.  
+### <a name="SDN"></a>Программируемый коммутатор Hyper-V  
+HNV — это фундаментальный строитель обновленного программного обеспечения (SDN) корпорации Майкрософт, который полностью интегрирован в стек SDN.  
   
-Новый сетевой контроллер Майкрософт помещает политики HNV вниз, чтобы агент узла под управлением на каждом узле, с помощью Open коммутатор vSwitch протокола управления базы данных (OVSDB) как южного интерфейс (SBI). Агент узла хранит эту политику, с помощью настройки из [VTEP схемы](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) и программы правила сложного потока в высокопроизводительных подсистема обработки потока в коммутаторе Hyper-V.  
+Новый сетевой контроллер Майкрософт отправляет политики HNV в агент узла, работающий на каждом узле, используя открытый протокол управления vSwitch (ОВСДБ) в качестве интерфейса Подсистемамми (ЛИКВИДНЫЙ SBI). Агент узла сохраняет эту политику, используя настройку [схемы втеп](https://github.com/openvswitch/ovs/blob/master/vtep/vtep.ovsschema) и программирует сложные правила потока в подсистему обработки потока в коммутаторе Hyper-V.  
   
-Подсистема обработки потока внутри коммутатора Hyper-V — это тот же механизм, используемый в Microsoft Azure&trade;, которой было доказано любого масштаба, в общедоступном облаке Microsoft Azure. Кроме того совместимых с Microsoft Azure, таким образом привнесения общедоступного облака Microsoft Azure enterprise и служба размещения весь стек SDN вверх через сетевой контроллер и поставщик сетевых ресурсов (сведения о ожидается в ближайшее время) Клиенты поставщика.  
+Подсистема обработки потока в коммутаторе Hyper-V является тем же механизмом, который используется в Microsoft Azure @ no__t-0, который был проверен на уровне Hyper-Scale в Microsoft Azure общедоступном облаке. Кроме того, весь стек SDN переключается через сетевой контроллер и поставщик сетевых ресурсов (сведения скоро выводятся Microsoft Azure в ближайшее время), что позволяет получить мощь Microsoft Azure общедоступного облака в нашем предприятии и службе хостинга. Клиенты поставщика.  
   
 > [!NOTE]  
-> Дополнительные сведения о OVSDB, см. в разделе [RFC 7047](https://www.rfc-editor.org/info/rfc7047).  
+> Дополнительные сведения о ОВСДБ см. в [документе RFC 7047](https://www.rfc-editor.org/info/rfc7047).  
   
-Коммутатор Hyper-V поддерживает оба правила с отслеживанием и без отслеживания состояния потока, исходя из простого поиска «действие» в корпорации Майкрософт подсистема обработки потока.  
+Коммутатор Hyper-V поддерживает правила потока без отслеживания состояния и с отслеживанием состояния на основе простого действия "сопоставление" в подсистеме обработки потока Майкрософт.  
  
-![Windows Server 2016 Hyper-V коммутатора](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
+![Коммутатор Hyper-V Windows Server 2016](../../../media/what-s-new-in-hyper-v-network-virtualization-in-windows-server/HNVOverview.png)  
   
-### <a name="VXLAN"></a>Поддержка инкапсуляция VXLAN  
-Виртуальные расширяемые локальной сети (VXLAN - [RFC 7348](https://www.rfc-editor.org/info/rfc7348)) протокола широко используется на рынке с поддержкой от поставщиков, таких как Cisco, Brocade, Dell, HP и другим пользователям. Hyper-v теперь также поддерживает эта схема инкапсуляция с использованием режима распределения MAC через сетевой контроллер Майкрософт для программы сопоставления для клиента наложения сети IP-адресов (адрес заказчика или ЦС) на лежащие физической сети IP-адреса (поставщик Адрес или PA). Как NVGRE, так и VXLAN разгружает задач поддерживаются для повышения производительности через сторонних драйверов.  
+### <a name="VXLAN"></a>Поддержка инкапсуляции ВКСЛАН  
+Виртуальный расширяемый протокол расширенной локальной сети (ВКСЛАН- [RFC 7348](https://www.rfc-editor.org/info/rfc7348)) широко распространен на рынке, благодаря поддержке от таких поставщиков, как Cisco, вооруженный, Dell, HP и др. Кроме того, HNV теперь поддерживает эту схему инкапсуляции с использованием режима распространения MAC через сетевой контроллер Майкрософт для сопоставления программ для IP-адресов сети наложения клиентов (адрес клиента или ЦС) физическим IP-адресам ундерлай сети (поставщик Адрес или PA. Разгрузки задач NVGRE и ВКСЛАН поддерживаются для повышения производительности с помощью драйверов сторонних производителей.  
   
-### <a name="SLB"></a>Взаимодействие программного обеспечения подсистемы балансировки нагрузки (SLB)  
-Windows Server 2016 включает подсистему балансировки нагрузки (SLB) с полной поддержкой трафика виртуальной сети и беспрепятственного взаимодействия с HNV. Реализуется через подсистему обработки потока высокопроизводительных v коммутатора плоскости данных и управляется сетевым контроллером, виртуальный IP-адрес (VIP) / динамический SLB сопоставления IP-адрес (DIP).  
+### <a name="SLB"></a>Взаимодействие Load Balancer программного обеспечения (SLB)  
+Windows Server 2016 включает в себя программную подсистему балансировки нагрузки с полной поддержкой трафика виртуальной сети и беспрепятственного взаимодействия с HNV. SLB реализуется с помощью подсистемы выполнения потоков в коммутаторе плоскости данных v-Switch и контролируется сетевым контроллером для сопоставлений виртуальных IP-адресов и динамических IP-адресов (DIP).  
   
-### <a name="L2"></a>Совместимые IEEE Ethernet заголовки  
-HNV реализует правильные заголовки L2 Ethernet, чтобы обеспечить взаимодействие с использованием сторонних виртуальных и физических устройств, которые зависят от стандартных протоколов. Microsoft, гарантирует все передаваемые пакеты совместимые значения во всех полях для этого взаимодействия. Кроме того, поддержка большие кадры (данных MTU > 1780) в физической сети L2 требуется учетная запись для пакета, издержки, вызванные протоколы encapsulation (NVGRE, VXLAN) гарантией того, гостевые виртуальные машины, подключенные к виртуальной сети HNV Ведение 1514 MTU.  
+### <a name="L2"></a>Соответствующие заголовки IEEE Ethernet  
+HNV реализует правильные заголовки Ethernet уровня L2 для обеспечения взаимодействия с виртуальными и физическими устройствами сторонних производителей, которые зависят от стандартных отраслевых протоколов. Корпорация Майкрософт гарантирует, что все передаваемые пакеты имеют соответствующие значения во всех полях, чтобы обеспечить это взаимодействие. Кроме того, поддержка крупных кадров (MTU > 1780) в физической сети L2 должна учитывать служебные расходы на пакеты, представленные протоколами инкапсуляции (NVGRE, ВКСЛАН), и гарантирует, что Гостевые виртуальные машины, подключенные к виртуальной сети HNV, сохраняют 1514 MTU.  
   
 ## <a name="see-also"></a>См. также  
   
