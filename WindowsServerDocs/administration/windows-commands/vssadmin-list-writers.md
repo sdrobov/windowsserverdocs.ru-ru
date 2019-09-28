@@ -1,25 +1,25 @@
 ---
-title: Модули записи vssadmin list
-description: Описание команды vssadmin list модуля записи.
-ms.prod: windows-server-threshold
+title: Vssadmin list writers
+description: Описание команды vssadmin list Writer.
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e3bd77d844ed6b613659d095d7ef07b9e5f40f61
-ms.sourcegitcommit: 2977c707a299929c6ab0d1e0adab2e1c644b8306
+ms.openlocfilehash: f62f44b3a47a0fe2d307c9d65d6cdc473f60db74
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63706997"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362578"
 ---
-# <a name="vssadmin-list-writers"></a>Модули записи vssadmin list
+# <a name="vssadmin-list-writers"></a>Vssadmin list writers
 
 >Относится к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-Отображает список подписанных записи теневых копий.
+Перечисляются записи теневого копирования томов с подпиской.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,9 +29,9 @@ vssadmin list writers
 
 ## <a name="parameters"></a>Параметры
 
-Без параметров.
+Нет параметров.
 
 ## <a name="additional-references"></a>Дополнительная справка
 
 * [Ключ синтаксиса командной строки](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
-* [vssadmin](vssadmin.md)
+* [List](vssadmin.md)

@@ -7,32 +7,32 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d6b656c3a7d335a493c406908f31cb885498d5e3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f5410f8bbc070735990ca82ac7027f8da971ef49
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369434"
 ---
 # <a name="changes-made-by-adprepexe"></a>Changes Made by Adprep.exe
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-В этом разделе описаны изменения, которые вносит Adprep.exe в Windows Server 2012 R2 и Windows Server 2012.  
+В этом разделе описаны изменения, вносимые в средство Adprep. exe в Windows Server 2012 R2 и Windows Server 2012.  
   
--   [Обновления леса](../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md)  
+-   [Обновления на уровне леса](../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md)  
   
--   [Обновление на уровне домена](../../../ad-ds/deploy/Domain-Wide-Updates.md)  
+-   [Обновления на уровне домена](../../../ad-ds/deploy/Domain-Wide-Updates.md)  
   
--   [Обновление контроллера домена только для чтения](../../../ad-ds/deploy/RODC/Read-Only-Domain-Controller-Updates.md)  
+-   [Обновления контроллера домена только для чтения](../../../ad-ds/deploy/RODC/Read-Only-Domain-Controller-Updates.md)  
   
--   [Обновление схемы](../../../ad-ds/deploy/Schema-Updates.md)  
+-   [Обновления схемы](../../../ad-ds/deploy/Schema-Updates.md)  
   
 ## <a name="see-also"></a>См. также  
-[Windows Server 2008 R2: Приложение изменения в Adprep.exe для поддержки AD DS](https://technet.microsoft.com/library/dd378876.aspx)  
-[Windows Server 2008: Приложение изменения в Adprep.exe для поддержки AD DS](https://technet.microsoft.com/library/cc770703.aspx)  
+@no__t 0Windows Server 2008 R2: Приложение по внесению изменений в файл Adprep. exe для поддержки AD DS @ no__t-0  
+@no__t 0Windows Server 2008: Приложение по внесению изменений в файл Adprep. exe для поддержки AD DS @ no__t-0  
   
 
 
