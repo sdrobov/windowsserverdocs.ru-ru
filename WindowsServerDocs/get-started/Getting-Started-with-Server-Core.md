@@ -1,7 +1,7 @@
 ---
 title: Установка основных серверных компонентов
 description: Как получить и установить основные серверные компоненты на сервер Windows Server 2019, Windows Server 2016 или Windows Server (Semi-Annual Channel).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 05/21/2019
 ms.technology: server-general
 ms.tgt_pltfrm: na
@@ -11,12 +11,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 542eeea4bfae53defc2624b3b56a7db5ae454c2c
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e6264a59a837003e49e82529750cfb153cc37b92
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868452"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360337"
 ---
 # <a name="install-server-core"></a>Установка основных серверных компонентов
 

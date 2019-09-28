@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cd5ca15a9e098f60c6c82980e3148ebcf9ee9932
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 6aafa37b06599f4114cf076e87415fece128fb05
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869341"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407338"
 ---
 # <a name="the-role-of-the-claims-pipeline"></a>Роль канала утверждений
 Конвейер утверждений в службы федерации Active Directory (AD FS) \(AD FS\) представляет путь, по которому утверждения должны следовать за служба Федерации, прежде чем их можно будет выдать. Служба федерации управляет всем сквозным\-\-процессом обработки утверждений с помощью различных стадий конвейера утверждений, которые также включают обработку правил утверждений обработчиком правил утверждений.  

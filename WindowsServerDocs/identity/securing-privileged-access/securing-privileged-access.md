@@ -1,7 +1,7 @@
 ---
-title: Защита привилегированного доступа
+title: Обеспечение безопасности привилегированного доступа
 description: Поэтапный подход к защите привилегированного доступа
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: conceptual
 ms.assetid: f5dec0c2-06fe-4c91-9bdc-67cc6a3ede60
 ms.date: 02/25/2019
@@ -9,14 +9,14 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 9080f7209660b225d795219127a71ece479855d1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e6ff22d0563fa11aa633004966b2cd2648ba5877
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869230"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357700"
 ---
-# <a name="securing-privileged-access"></a>Защита привилегированного доступа
+# <a name="securing-privileged-access"></a>Обеспечение безопасности привилегированного доступа
 
 >Область применения. Windows Server
 
@@ -102,7 +102,7 @@ ms.locfileid: "70869230"
 
 [Azure Advanced Threat protection (ATP)](/azure-advanced-threat-protection/what-is-atp) — это облачное решение для обеспечения безопасности, которое идентифицирует, обнаруживает и помогает исследовать сложные угрозы, скомпрометированные удостоверения и действия по предварительной проверке, направленные на локальный Active Directory PXE.
 
-## <a name="phase-2-significant-incremental-improvements"></a>Этап 2. Существенные добавочные улучшения
+## <a name="phase-2-significant-incremental-improvements"></a>Этап 2. Существенные добавочные улучшения
 
 Этап 2 построен на работе, выполненной на этапе 1, и предназначен для выполнения в течение примерно 90 дней. На этой схеме показаны шаги этого этапа.
 

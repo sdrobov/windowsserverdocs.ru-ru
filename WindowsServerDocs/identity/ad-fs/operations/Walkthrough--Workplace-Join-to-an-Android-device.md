@@ -1,36 +1,36 @@
 ---
 ms.assetid: a33bd54c-e6db-4b58-8264-c0f34bd8ba39
-title: Пошаговое руководство. присоединение к рабочему месту на устройстве Android
+title: Пошаговое руководство. Workplace Join на устройство Android
 description: ''
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 73dbe4d62d460f9487467c7d4198d62b3b6af539
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: c021e8b67963df4f885059c75eff5e94d6dcdafb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188928"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407477"
 ---
-# <a name="walkthrough-workplace-join-to-an-android-device"></a>Пошаговое руководство: Присоединение к рабочему месту на устройстве Android
+# <a name="walkthrough-workplace-join-to-an-android-device"></a>Пошаговое руководство: Workplace Join на устройство Android
 
 
 
 ## <a name="join-your-device-with-workplace-join"></a>Присоединение устройства с использованием функции присоединения к рабочему месту
 
 > [!NOTE]
-> Android присоединение к рабочему месту требуется Azure Active Directory службы регистрации для устройств. Чтобы применить условные политики локальное устройство, инструмент синхронизации каталогов (DirSync) должны быть развернуты с включенным параметром обратной записью объектов устройств. В настоящее время обратную запись устройств в Active Directory из Azure Active Directory занимает до 3 часов. Таким образом пользователям придется ждать 3 часа для доступа к локальным веб-приложения, после создания рабочей учетной записи. Дополнительные сведения о развертывании регистрации устройств Azure Active Directory service, см. в разделе, [Azure Active Directory Обзор службы регистрации устройств](https://msdn.microsoft.com/library/azure/dn788908.aspx)
+> Присоединение к рабочей области Android требует Регистрация устройств Azure Active Directory службы. Чтобы применить условные политики устройств локально, необходимо развернуть средство синхронизации каталогов (DirSync) с включенным параметром обратной записи объектов устройств. В настоящее время обратная запись устройства в Active Directory из Azure Active Directory может занять до 3 часов. Таким образом, пользователи должны подождать 3 часа, чтобы получить доступ к локальным веб-приложениям, после создания рабочей учетной записи. Дополнительные сведения о развертывании службы Регистрация устройств Azure Active Directory см. в разделе [Обзор службы регистрация устройств Azure Active Directory](https://msdn.microsoft.com/library/azure/dn788908.aspx) .
 
-#### <a name="create-a-work-account-that-joins-your-device-with-workplace-join"></a>Создание рабочей учетной записи, который присоединяет устройства с помощью workplace Join
+#### <a name="create-a-work-account-that-joins-your-device-with-workplace-join"></a>Создание рабочей учетной записи, которая присоединяет устройство к рабочей области
 
-1.  Необходимо установить приложение Azure Authenticator на устройстве, чтобы создать рабочую учетную запись, который соединяется с присоединение к рабочему месту устройства. Следующий URL-адрес содержит инструкции о том, как установить приложение Azure authenticator на устройстве Android и добавить рабочую учетную запись. Рабочая учетная запись делает устройства Android в доверенное устройство и предоставляет единый вход (SSO) для приложений на устройствах. Можно использовать надежное устройство для доступа к веб-приложений и современных бизнес-приложений, согласно рекомендациям ИТ-администратору. Дополнительные сведения см. в разделе [Azure Authenticator для Android](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
+1.  Необходимо установить приложение Azure Authenticator на устройстве, чтобы создать рабочую учетную запись, которая присоединяет устройство к рабочей области. Следующий URL-адрес содержит инструкции по установке приложения Azure Authenticator на устройстве Android и добавлению рабочей учетной записи. Рабочая учетная запись превращает устройство Android в доверенное устройство и обеспечивает единый вход (SSO) для приложений на устройстве. Вы можете использовать доверенное устройство для доступа к веб-приложениям и современным бизнес-приложениям, как это рекомендовано ИТ-администратором. Дополнительные сведения см. в статье [Azure Authenticator для Android](https://docs.microsoft.com/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to).
 
 ## <a name="see-also"></a>См. также
-[Присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная проверка подлинности между компании приложениях](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-[Настройка локального условного доступа с помощью Azure Active Directory службы регистрации для устройств](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)
+[Присоединение к рабочему месту с любого устройства для единого входа и однофакторной проверки подлинности в приложениях компании](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
+[Настройка локального условного доступа с помощью службы регистрация устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)
 
 

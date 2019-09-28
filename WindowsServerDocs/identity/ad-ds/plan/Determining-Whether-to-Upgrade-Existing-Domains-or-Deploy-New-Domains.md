@@ -7,28 +7,28 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e07965b079a953d062f5bdaaca8f9f9f32500610
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0effdb3ae3ba6294e8a28f4f6b780f4d0c6a8582
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851795"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402619"
 ---
 # <a name="determining-whether-to-upgrade-existing-domains-or-deploy-new-domains"></a>Обновление имеющихся доменов и развертывание новых доменов
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Каждый домен в проекте будет иметь новый домен или существующего обновления домена. Необходимо переместить пользователей из существующих доменов, которые не обновляются в новых доменов.  
+Каждый домен в вашем проекте будет либо новым доменом, либо существующим обновленным доменом. Пользователи из существующих доменов, которые не обновляются, должны быть перемещены в новые домены.  
   
-Перемещение учетных записей между доменами может повлиять на конечных пользователей. Перед тем, как перенос пользователей в новый домен или при обновлении существующих доменов, оцените долгосрочного административные преимущества нового домена AD DS со стоимостью перемещение пользователей в домен.  
+Перемещение учетных записей между доменами может повлиять на конечных пользователей. Прежде чем принять решение о том, следует ли переместить пользователей в новый домен или обновить существующие домены, оцените долгосрочные преимущества администрирования нового домена AD DS в отношении стоимости перемещения пользователей в домен.  
   
-Дополнительные сведения об обновлении доменов Active Directory для Windows Server 2008, см. в разделе [обновления доменов Active Directory до Windows Server 2008 и Windows Server 2008 R2 доменов доменных Служб](https://technet.microsoft.com/library/cc731188.aspx).  
+Дополнительные сведения об обновлении доменов Active Directory до Windows Server 2008 см. в разделе [обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](https://technet.microsoft.com/library/cc731188.aspx).  
   
-Дополнительные сведения о реструктуризации доменов AD DS внутри и между лесами см. в разделе Active Directory Migration Tool версии 3.1 руководство по миграции ([https://go.microsoft.com/fwlink/?LinkId=93678](https://go.microsoft.com/fwlink/?LinkId=93678)).  
+Дополнительные сведения о реструктуризации AD DS доменов в лесах и между лесами см. в статье миграция Active Directory средства миграции версии 3,1 ([https://go.microsoft.com/fwlink/?LinkId=93678](https://go.microsoft.com/fwlink/?LinkId=93678)).  
   
-Для рабочего листа, чтобы помочь в документировании планов для новых и обновленных доменов, загрузите Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip из задания вспомогательные средства для Windows Server 2003 Deployment Kit ([ https://go.microsoft.com/fwlink/?LinkID=102558 ](https://go.microsoft.com/fwlink/?LinkID=102558)) и откройте «Домена планирование» (DSSLOGI_5.doc).  
+Чтобы помочь вам в документировании планов для новых и обновленных доменов, скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip из комплекта вспомогательных заданий для пакета развертывания Windows Server 2003 ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)) и откройте "домен Планирование "(DSSLOGI_5. doc).  
   
 
 

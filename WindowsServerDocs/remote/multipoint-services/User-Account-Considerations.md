@@ -2,7 +2,7 @@
 title: Соображения по поводу учетных записей пользователей
 description: Предоставляет учетную запись пользователя, имя пользователя и пароль для служб MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: c4a0355b5e081e0673447fb86f1475d0b34c3792
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c81d14d46e96d39676e1fb6fa31892e0d5e1b683
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871497"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389259"
 ---
 # <a name="user-account-considerations"></a>Соображения по поводу учетных записей пользователей
 В этом разделе описываются проблемы, с которыми вы, как пользователь с правами администратора, следует учитывать при создании учетных записей пользователей и управлении ими. Управление учетными записями пользователей осуществляется на вкладке Пользователи в диспетчере MultiPoint. Дополнительные сведения см. в статье [Управление учетными данными пользователей](Manage-User-Accounts.md).  

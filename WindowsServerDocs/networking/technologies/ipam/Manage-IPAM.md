@@ -1,9 +1,9 @@
 ---
 title: Управление IPAM
-description: Этот раздел является частью в руководстве по управления IP Address Management (IPAM) в Windows Server 2016.
+description: Этот раздел является частью руководства по управлению IP-адресами (IPAM) в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,35 +12,35 @@ ms.topic: article
 ms.assetid: c68905ef-d54f-4fc8-80ac-1006125db64f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 12d86504df02e7a94709feb9319659ec662d71f5
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 165ffe41fd79fc9f71f96ef65317375e4120cc5c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283916"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405613"
 ---
 # <a name="manage-ipam"></a>Управление IPAM
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Это руководство содержит администрирования и сведения об устранении неполадок для функции управления IP-адресами (IPAM) в Windows Server 2016.  
+Это руководство содержит сведения об администрировании и устранении неполадок для функции управления IP-адресами (IPAM) в Windows Server 2016.  
   
-В Windows Server 2016 IPAM поддерживает запись ресурса DNS, сервер условной пересылки и Управление зонами DNS для присоединенных к домену интегрированный с Active Directory и файловой поддержкой DNS-серверов. Кроме того IPAM поддерживает все функции и управление доступом на основе ролей в предыдущих версиях технологии.  
+В Windows Server 2016 IPAM поддерживает запись ресурсов DNS, условный сервер пересылки и управление зонами DNS как для присоединенных к домену Active Directory, так и для DNS-серверов с файловой поддержкой. Кроме того, IPAM поддерживает управление доступом на основе ролей и все функции в предыдущих версиях технологии.  
   
 Ниже перечислены разделы данного руководства.  
   
--   [Управление записями ресурсов DNS](../../technologies/ipam/DNS-Resource-Record-Management.md)  
+-   [Управление записью ресурса DNS](../../technologies/ipam/DNS-Resource-Record-Management.md)  
   
--   [Управление зонами DNS](../../technologies/ipam/DNS-Zone-Management.md)  
+-   [Управление зоной DNS](../../technologies/ipam/DNS-Zone-Management.md)  
   
--   [Управление ресурсами в нескольких лесах Active Directory](../../technologies/ipam/Manage-Resources-in-Multiple-Active-Directory-Forests.md)  
+-   [Управление ресурсами в нескольких Active Directory лесах](../../technologies/ipam/Manage-Resources-in-Multiple-Active-Directory-Forests.md)  
   
 -  [Очистка данных об использовании](../../technologies/ipam/Purge-Utilization-Data.md)  
   
 -   [Управление доступом на основе ролей](../../technologies/ipam/Role-based-Access-Control.md)  
   
 ## <a name="see-also"></a>См. также  
-[Управление IP-адресами &#40;IPAM&#41;](IP-Address-Management--IPAM-.md)  
+[IPAM по управлению &#40;IP-адресами&#41;](IP-Address-Management--IPAM-.md)  
   
 
 

@@ -1,7 +1,7 @@
 ---
 title: Развертывание сервера Nano Server
 description: Сведения о создании и развертывании настраиваемых образов, пакетов, драйверов, доменов, ролей и функций
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: DonGill
 ms.technology: server-nano
@@ -12,12 +12,12 @@ ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: e61844cfb04f95723fe9d08b9bd2e8b481714eea
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 34cb9a50fad7ea64cd8af5b893f5fbd5217a95e1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66442233"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391847"
 ---
 # <a name="deploy-nano-server"></a>Развертывание сервера Nano Server
 
@@ -84,7 +84,7 @@ Nano Server Image Builder создает настроенные образы Nan
 |                                                                     Развертывание на физическом компьютере                                                                     |                                                                                                                                                                                        - Package Microsoft-NanoServer-Host-Package                                                                                                                                                                                        |
 |     BitLocker, доверенный платформенный модуль (TPM), шифрование тома, идентификация платформы, поставщики служб шифрования и другие функции, связанные с безопасным запуском     |                                                                                                                                                                                    -Package Microsoft-NanoServer-SecureStartup-Package                                                                                                                                                                                    |
 |                                                                    Поддержка экранированных виртуальных машин в Hyper-V                                                                     |                                                                                                                                         -Package Microsoft-NanoServer-ShieldedVM-Package<br />**Примечание.** Этот пакет доступен только для выпуска Datacenter сервера Nano Server.                                                                                                                                         |
-|                                                             Агент протокола SNMP                                                             |                                   -Package Microsoft-NanoServer-SNMP-Agent-Package.cab<br />**Примечание.** Не содержится на установочном носителе Windows Server 2016. Доступен только в Интернете. Дополнительные сведения см. в разделе [Установка ролей и компонентов в сети](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online).                                    |
+|                                                             Агент протокола SNMP                                                             |                                   -Package Microsoft-NanoServer-SNMP-Agent-Package.cab<br />**Примечание.** Не содержится на установочном носителе Windows Server 2016. Доступна только в Интернете. Дополнительные сведения см. в разделе [Установка ролей и компонентов в сети](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online).                                    |
 |               Служба IPHelper, которая обеспечивает возможность туннельного подключения с помощью технологий туннелирования для IPv6 (6to4, ISATAP, Port Proxy и Teredo) и IP-HTTP.               |                                -Package Microsoft-NanoServer-IPHelper-Service-Package.cab<br />**Примечание.** Не содержится на установочном носителе Windows Server 2016. Доступна только в Интернете. Дополнительные сведения см. в разделе [Установка ролей и компонентов в сети](https://technet.microsoft.com/windows-server-docs/get-started/deploy-nano-server#a-namebkmkonlineainstalling-roles-and-features-online).                                 |
 
 > [!NOTE]  

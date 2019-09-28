@@ -1,6 +1,6 @@
 ---
 title: Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
@@ -8,31 +8,31 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 06/06/2019
 ms.assetid: 0a48852e-48cc-4047-ae58-99f11c273942
-ms.openlocfilehash: 5497651f57a0276daced614687e89f8047af9116
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 6364c3f8dc35fbafa518a106780ae6b767d4d40c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812675"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365783"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-2-ad-fs-post-configuration-work"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2 AD FS работы после настройки
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этой статье описывается второй шаг процесса развертывания рабочих папок с помощью службы федерации Active Directory (AD FS) и прокси-службы веб-приложения. Другие шаги этого процесса можно найти в следующих статьях:  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Общие сведения о](deploy-work-folders-adfs-overview.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Средств](deploy-work-folders-adfs-overview.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1 — Настройка AD FS](deploy-work-folders-adfs-step1.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 1. Настройка AD FS @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 3. Настройка рабочих папок @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 4 — Настройка прокси веб-приложения](deploy-work-folders-adfs-step4.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 4. Настройка прокси веб-приложения @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 5. Настройка клиентов @ no__t-0  
   
 > [!NOTE]
-> Инструкции, описанные в этом разделе относятся к среде Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+> Инструкции, описанные в этом разделе, предназначены для среды Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 На шаге 1 вы установили и настроили AD FS. Теперь необходимо выполнить следующие действия после настройки для AD FS.  
   
@@ -104,7 +104,7 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 7.  На странице **Настройка URL-адреса** нажмите кнопку **Далее**.  
   
-8. На **настроить идентификаторы** странице, добавьте следующий идентификатор: `https://windows-server-work-folders/V1`. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
+8. На странице **Настройка идентификаторов** добавьте следующий идентификатор: `https://windows-server-work-folders/V1`. Этот идентификатор представляет собой жестко заданное значение, используемое рабочими папками, и отправляется службой рабочих папок при обмене данными с AD FS. Нажмите кнопку **Далее**.  
   
 9. На странице "Выбор политики контроля доступа" выберите **Разрешить всем** и нажмите кнопку **Далее**.  
   
@@ -124,13 +124,13 @@ Add-DnsServerResourceRecord  -ZoneName "contoso.com" -Name enterpriseregistratio
   
 17. В таблице сопоставлений введите следующие значения:  
   
-    -   — Имя участника-пользователя: имя участника-пользователя  
+    -   Имя участника-пользователя: имя участника-пользователя  
   
     -   Отображаемое имя: Имя  
   
-    -   Фамилия: Фамилия  
+    -   Образование Фамилия  
   
-    -   Данное имя: Заданное имя  
+    -   Заданное имя: Заданное имя  
   
 18. Нажмите кнопку **Готово**. На вкладке "Правила преобразования выдачи" будет указано правило WorkFolders. Нажмите кнопку **ОК**.  
   
@@ -242,15 +242,15 @@ Set-ADFSGlobalAuthenticationPolicy -DeviceAuthenticationEnabled $true
   
 13. В окне **Разрешения** предоставьте учетной записи хотя бы разрешения на чтение и нажмите кнопку **ОК**.  
   
-Если у вас нет параметра для управления закрытыми ключами, может потребоваться выполнить следующую команду: `certutil -repairstore my *`  
+Если у вас нет возможности управлять закрытыми ключами, может потребоваться выполнить следующую команду: `certutil -repairstore my *`.  
   
 ## <a name="verify-that-ad-fs-is-operational"></a>Проверка работоспособности AD FS
 
-Чтобы Проверка работоспособности AD FS, откройте окно браузера и перейдите к `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`, изменив URL-адрес в соответствии с вашей средой.
+Чтобы убедиться, что AD FS работает, откройте окно браузера и перейдите в `https://blueadfs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`, изменив URL-адрес в соответствии с вашей средой.
   
 В окне браузера отобразятся метаданные сервера федерации без форматирования. Если вы видите данные без ошибок или предупреждений SSL, ваш сервер федерации работает.  
   
-Далее: [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
+Далее: [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 3. Настройка рабочих папок @ no__t-0  
   
 ## <a name="see-also"></a>См. также  
-[Обзор рабочих папок](Work-Folders-Overview.md)
+[Общие сведения о рабочих папках](Work-Folders-Overview.md)

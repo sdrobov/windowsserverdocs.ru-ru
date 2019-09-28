@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 40471354af5434e77a300303572ccce639ba2489
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a9bdc3b237d0d0f44995f2c359cc3ef6ed8568a3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443785"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71400370"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-forest-level-200"></a>Установка нового леса Active Directory в Windows Server 2012 (уровень 200)
 
@@ -22,15 +22,15 @@ ms.locfileid: "66443785"
 
 В этом разделе на базовом уровне описывается новая функция повышения роли контроллера домена в доменных службах Active Directory Windows Server 2012. В доменных службах Active Directory в Windows Server 2012 средство Dcpromo заменено диспетчером сервера и системой развертывания на основе Windows PowerShell.  
   
--   [Доменные службы Active Directory упрощает администрирование](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SimplifiedAdmin)  
+-   [Упрощенное администрирование служб домен Active Directory Services](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SimplifiedAdmin)  
   
 -   [Технический обзор](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_TechOverview)  
   
--   [Развертывание леса с помощью диспетчера серверов](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SMForest)  
+-   [Развертывание леса с диспетчер сервера](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_SMForest)  
   
 -   [Развертывание леса с помощью Windows PowerShell](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-.md#BKMK_PSForest)  
   
-## <a name="BKMK_SimplifiedAdmin"></a>Доменные службы Active Directory упрощает администрирование  
+## <a name="BKMK_SimplifiedAdmin"></a>Упрощенное администрирование служб домен Active Directory Services  
 В Windows Server 2012 реализовано упрощенное администрирование доменных служб Active Directory нового поколения, которое представляет собой наиболее радикальную модернизацию системы управления доменами с момента выпуска Windows Server 2000. Упрощенное администрирование доменных служб Active Directory было разработано с учетом двенадцатилетнего опыта работы с Active Directory. Оно улучшает поддержку административных возможностей для архитекторов и администраторов, делает их более гибкими и интуитивно понятными. Достигнуто это было путем создания новых версий существующих технологий, а также расширения возможностей компонентов, появившихся в Windows Server 2008 R2.  
   
 ### <a name="what-is-ad-ds-simplified-administration"></a>Что такое упрощенное администрирование доменных служб Active Directory?  
@@ -56,9 +56,9 @@ ms.locfileid: "66443785"
 ### <a name="what-you-should-know-before-you-begin"></a>Что следует знать перед началом работы  
 В этом разделе предполагается, что вы знакомы с предыдущими выпусками доменных служб Active Directory, поэтому в нем не приводятся базовые сведения об их назначении и функциональных возможностях. Дополнительную информацию о доменных службах Active Directory можно найти на страницах портала TechNet, ссылки на которые приведены ниже:  
   
--   [Доменные службы Active Directory для Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
+-   [Службы домен Active Directory для Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
   
--   [Доменные службы Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+-   [Службы домен Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
   
 -   [Технический справочник по Windows Server](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
   
@@ -76,11 +76,11 @@ ms.locfileid: "66443785"
 #### <a name="ad-ds-role-configuration"></a>Настройка роли доменных служб Active Directory  
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DeploymentConfiguration_Forest.gif)  
   
-Активная конфигурация доменные службы Directory «ранее — DCPROMO» является теперь является отдельной операцией, от установки роли. После установки роли доменных служб Active Directory администратор настраивает сервер в качестве контроллера домена с помощью отдельного мастера в диспетчере сервера или с помощью модуля Windows PowerShell ADDSDeployment.  
+Настройка служб домен Active Directory "ранее называлась DCPROMO" теперь является отдельной операцией при установке роли. После установки роли доменных служб Active Directory администратор настраивает сервер в качестве контроллера домена с помощью отдельного мастера в диспетчере сервера или с помощью модуля Windows PowerShell ADDSDeployment.  
   
 Настройка роли доменных служб Active Directory осуществляется на основе двенадцатилетнего практического опыта. Контроллеры домена настраиваются в соответствии с новейшими рекомендациями Майкрософт. Например, служба доменных имен (DNS) и глобальные каталоги устанавливаются по умолчанию в каждом контроллере домена.  
   
-Мастер настройки диспетчера сервера AD DS объединяет множество отдельных диалоговых окон в уменьшении числа запросов и скрытым параметрам в режиме «расширенный». Весь процесс повышения роли осуществляется в ходе установки с помощью одного раскрывающегося диалогового окна. Мастер и модуль Windows PowerShell ADDSDeployment выводят информацию о существенных изменениях и проблемах безопасности, а также ссылки на дополнительные материалы.  
+Мастер настройки диспетчер сервера AD DS объединяет множество отдельных диалоговых окон в меньшее количество запросов и больше не скрывает параметры в расширенном режиме. Весь процесс повышения роли осуществляется в ходе установки с помощью одного раскрывающегося диалогового окна. Мастер и модуль Windows PowerShell ADDSDeployment выводят информацию о существенных изменениях и проблемах безопасности, а также ссылки на дополнительные материалы.  
   
 Программа Dcpromo.exe сохранена в Windows Server 2012 только для автоматической установки посредством командной строки. Она больше не используется для запуска графического мастера установки. Настоятельно рекомендуется отказаться от использования программы Dcpromo.exe в целях автоматической установки, заменив ее модулем ADDSDeployment, так как соответствующий исполняемый файл не будет включен в следующую версию Windows.  
   
@@ -91,18 +91,18 @@ ms.locfileid: "66443785"
 > [!IMPORTANT]
 > Программа Dcpromo.exe больше не предоставляет графический мастер и не используется для установки двоичных файлов роли или компонента. При попытке запустить Dcpromo.exe из проводника происходит ошибка:  
 > 
-> «Мастер установки доменных служб Active Directory перемещен в диспетчер серверов. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220921>.»  
+> "Мастер установки доменных служб Active Directory перемещается в диспетчер сервера. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220921>».  
 > 
 > При попытке выполнить команду Dcpromo.exe /unattend двоичные файлы по-прежнему устанавливаются, как в предыдущих операционных системах, но выводится предупреждение:  
 > 
-> «Dcpromo автоматической операция заменена модулем ADDSDeployment для Windows PowerShell. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220924>.»  
+> "Автоматическая операция Dcpromo заменена модулем Аддсдеплоймент для Windows PowerShell. Дополнительные сведения см. в разделе <https://go.microsoft.com/fwlink/?LinkId=220924>».  
 > 
 > В Windows Server 2012 использовать программу dcpromo.exe не рекомендуется. Она не будет включена в будущие версии Windows и не будет улучшаться далее в текущей. Администраторам следует прекратить ее использование и перейти на поддерживаемые модули Windows PowerShell для создания контроллеров домена из командной строки.  
   
 #### <a name="prerequisite-checking"></a>Проверка предварительных требований  
 Настройка контроллера домена также включает этап проверки предварительных требований, на котором проводится оценка леса и домена перед повышением роли контроллера домена. При этом проверяются доступность роли FSMO, права пользователей, совместимость расширенной схемы и другие требования. Новая структура процесса позволяет уменьшить число проблем, при которых повышение роли контроллера домена прерывается посередине из-за неустранимой ошибки конфигурации. Это снижает вероятность образования потерянных метаданных контроллеров домена в лесу или возникновения серверов, которые считают себя контроллерами домена, хотя не являются ими.  
   
-## <a name="BKMK_SMForest"></a>Развертывание леса с помощью диспетчера серверов  
+## <a name="BKMK_SMForest"></a>Развертывание леса с диспетчер сервера  
 В этом разделе описывается, как установить первый контроллер домена в корневом домене леса с помощью диспетчера сервера на компьютере Windows Server 2012 с графическим интерфейсом.  
   
 ### <a name="server-manager-ad-ds-role-installation-process"></a>Процесс установки роли доменных служб Active Directory с помощью диспетчера сервера  
@@ -182,7 +182,7 @@ ms.locfileid: "66443785"
 #### <a name="active-directory-domain-services"></a>Доменные службы Active Directory  
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ADDSIntro.png)  
   
-В диалоговом окне **Доменные службы Active Directory** приводится ограниченная информация о требованиях и рекомендациях. Оно служит главным образом подтверждением того, что вы выбрали роли AD DS «Если этот экран не отображается, вы не выбрали AD DS.  
+В диалоговом окне **Доменные службы Active Directory** приводится ограниченная информация о требованиях и рекомендациях. В основном он выступает в качестве подтверждения того, что выбрана роль AD DS "Если этот экран не отображается, значит не выбрано AD DS.  
   
 #### <a name="confirmation"></a>Подтверждение операций  
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_Confirmation.png)  
@@ -202,7 +202,7 @@ ms.locfileid: "66443785"
   
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_TaskNotofications.png)  
   
-**Сведения AD DS**  
+**Сведения о AD DS**  
   
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_TR_ADDSDetails.png)  
   
@@ -220,12 +220,12 @@ ms.locfileid: "66443785"
 ### <a name="uninstallingdisabling"></a>Удаление или отключение  
 Роль доменных служб Active Directory удаляется так же, как любая другая роль, вне зависимости от того, была ли роль сервера повышена до контроллера домена. Однако по завершении удаления роли доменных служб Active Directory необходимо перезапустить сервер.  
   
-Удаление роли доменных служб Active Directory отличается от установки тем, что для его завершения необходимо понизить роль контроллера домена. Это требуется для того, чтобы удаление двоичных файлов роли в контроллере домена сопровождалось надлежащей очисткой метаданных в лесу. Дополнительные сведения см. в разделе [понижение уровня контроллеров домена и доменов &#40;Уровень200&#41;](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
+Удаление роли доменных служб Active Directory отличается от установки тем, что для его завершения необходимо понизить роль контроллера домена. Это требуется для того, чтобы удаление двоичных файлов роли в контроллере домена сопровождалось надлежащей очисткой метаданных в лесу. Дополнительные сведения см. в статье [понижение роли контроллеров &#40;домена и&#41;доменов уровня 200](../../ad-ds/deploy/Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
 > [!WARNING]  
 > Удаление ролей доменных служб Active Directory с помощью программы Dism.exe или модуля Windows PowerShell DISM после повышения роли до контроллера домена не поддерживается и приводит к тому, что сервер перестает загружаться нормально.  
 >   
-> В отличие от диспетчера сервера или модуля Addsdeployment для Windows PowerShell DISM — это собственная система обслуживания, которая не распознает AD DS или его конфигурацию. Не используйте программу Dism.exe или модуль Windows PowerShell DISM для удаления роли доменных служб Active Directory, если сервер все еще является контроллером домена.  
+> В отличие от диспетчер сервера или модуля развертывания AD DS для Windows PowerShell, DISM — это собственная система обслуживания, которая не имеет ведомых AD DS или его конфигурации. Не используйте программу Dism.exe или модуль Windows PowerShell DISM для удаления роли доменных служб Active Directory, если сервер все еще является контроллером домена.  
   
 ### <a name="create-an-ad-ds-forest-root-domain-with-server-manager"></a>Создание корневого домена леса доменных служб Active Directory с помощью диспетчера сервера  
 На схеме ниже показан процесс настройки доменных служб Active Directory. Предполагается, что вы ранее установили роль доменных служб Active Directory и запустили **мастер настройки доменных служб Active Directory** с помощью диспетчера сервера.  
@@ -242,7 +242,7 @@ ms.locfileid: "66443785"
 Подробнее о допустимых доменных именах см. в статье базы знаний [Соглашения об именовании в Active Directory для компьютеров, доменов, сайтов и подразделений](https://support.microsoft.com/kb/909264).  
   
 > [!WARNING]  
-> Имена лесов Active Directory не должны совпадать с внешними именами DNS. Например, если URL-адрес DNS Интернета — http://contoso.com, необходимо выбрать другое имя для вашего внутреннего леса избежать проблем с совместимость с будущими версиями. Данное имя должно быть уникальным и достаточно редким для веб-трафика, например corp.contoso.com.  
+> Имена лесов Active Directory не должны совпадать с внешними именами DNS. Например, если URL-адрес DNS имеет http://contoso.com, необходимо выбрать другое имя для внутреннего леса, чтобы избежать будущих проблем совместимости. Данное имя должно быть уникальным и достаточно редким для веб-трафика, например corp.contoso.com.  
   
 В новом лесу не требуются новые учетные данные для учетной записи администратора домена. Процесс повышения роли контроллера домена использует учетные данные встроенной учетной записи администратора из первого контроллера домена, применяемого для создания корневого домена леса. Не существует стандартного способа отключить или заблокировать встроенную учетную запись администратора, и она может быть единственной точкой входа в лес, если другие учетные записи администраторов домена использовать невозможно. Перед развертыванием нового леса необходимо знать пароль.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66443785"
 #### <a name="domain-controller-options"></a>Параметры контроллера домена  
 ![Установка нового леса](media/Install-a-New-Windows-Server-2012-Active-Directory-Forest--Level-200-/ADDS_SMI_DCOptions_Forest.gif)  
   
-На странице **Параметры контроллера домена** можно настроить **режим работы леса** и **режим работы домена** для нового корневого домена леса. По умолчанию эти параметры используются Windows Server 2012 в новом корневом домене леса. Режим работы леса Windows Server 2012 не предоставляет никаких новых функциональных возможностей через режим работы леса Windows Server 2008 R2. Режим работы домена Windows Server 2012 требуется только для использования новых параметров Kerberos «всегда предоставлять утверждения» и «Отказывать незащищенным проверкам подлинности». Основное назначение режимов работы Windows Server 2012 — ограничение участия в контроллерах домена к домену, соответствующие требованиям к минимальной допустимой операционной системы только. Другими словами можно указать, что ОС Windows Server 2012 домен функционального уровня только для контроллеров домена под управлением Windows Server 2012.  Windows Server 2012 реализует новый флаг контроллера домена с именем **DS_WIN8_REQUIRED** в **DSGetDcName** функции NetLogon, который контроллеры домена Windows Server 2012. Это позволяет более гибко создавать однородные или разнородные леса с учетом операционных систем, под управлением которых могут работать контроллеры домена.  
+На странице **Параметры контроллера домена** можно настроить **режим работы леса** и **режим работы домена** для нового корневого домена леса. По умолчанию эти параметры являются Windows Server 2012 в новом корневом домене леса. Функциональный уровень леса Windows Server 2012 не предоставляет никаких новых функциональных возможностей по отношению к режиму работы леса Windows Server 2008 R2. Режим работы домена Windows Server 2012 является обязательным только для реализации новых параметров Kerberos "всегда предоставлять утверждения" и "отказ в незащищенных запросах проверки подлинности". В основном использование функциональных уровней в Windows Server 2012 заключается в ограничении участия в домене контроллерами домена, которые удовлетворяют минимально разрешенным требованиям к операционной системе. Иными словами, можно указать только контроллеры домена Windows Server 2012, на которых выполняется Windows Server 2012, может размещаться домен.  В Windows Server 2012 реализован новый флаг контроллера домена с именем **DS_WIN8_REQUIRED** в функции **DSGetDcName** службы Netlogon, которая только находит контроллеры домена Windows Server 2012. Это позволяет более гибко создавать однородные или разнородные леса с учетом операционных систем, под управлением которых могут работать контроллеры домена.  
   
 Подробнее о расположении контроллеров домена см. в статье [Функции службы каталогов](https://msdn.microsoft.com/library/ms675900(VS.85).aspx).  
   
@@ -354,7 +354,7 @@ Install-ADDSForest `
 |||  
 |-|-|  
 |Командлет ServerManager|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Install-WindowsFeature/Add-WindowsFeature|***-Имя***<br /><br />*-Restart*<br /><br />*-IncludeAllSubFeature*<br /><br />*-IncludeManagementTools*<br /><br />-Source<br /><br />*-ComputerName*<br /><br />-Credential<br /><br />-LogPath<br /><br />*-Vhd*<br /><br />*-ConfigurationFilePath*|  
+|Install-WindowsFeature/Add-WindowsFeature|***-Имя***<br /><br />*-Restart*<br /><br />*-Инклудеаллсубфеатуре*<br /><br />*-IncludeManagementTools*<br /><br />-Source<br /><br />*-ComputerName*<br /><br />-Credential<br /><br />-LogPath<br /><br />*— Виртуальный жесткий диск*<br /><br />*-Конфигуратионфилепас*|  
   
 > [!NOTE]  
 > Хотя аргумент **-IncludeManagementTools** необязателен, его настоятельно рекомендуется использовать при установке двоичных файлов роли доменных служб Active Directory.  
@@ -434,7 +434,7 @@ Install-WindowsFeature | select-object | Format-List
 > [!NOTE]  
 > Аргумент **Select-Object -expandproperty** немного снижает общую производительность установки.  
   
-### <a name="BKMK_PS"></a>Создание корневого домена леса доменных служб Active Directory с помощью Windows PowerShell  
+### <a name="BKMK_PS"></a>Создание AD DS корневого домена леса с помощью Windows PowerShell  
 Чтобы установить новый лес Active Directory с помощью модуля ADDSDeployment, используйте следующий командлет:  
   
 ```powershell  
@@ -446,7 +446,7 @@ Install-addsforest
 |||  
 |-|-|  
 |Командлет ADDSDeployment|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|install-addsforest|-Confirm<br /><br />*-CreateDNSDelegation*<br /><br />*-DatabasePath*<br /><br />*-DomainMode*<br /><br />***-DomainName***<br /><br />***-DomainNetBIOSName***<br /><br />*-DNSDelegationCredential*<br /><br />*-ForestMode*<br /><br />-Force<br /><br />*-InstallDNS*<br /><br />*-LogPath*<br /><br />-NoDnsOnNetwork<br /><br />-NoRebootOnCompletion<br /><br />*-SafeModeAdministratorPassword*<br /><br />-SkipAutoConfigureDNS<br /><br />-SkipPreChecks<br /><br />*-SYSVOLPath*<br /><br />*-Whatif*|  
+|install-addsforest|-Confirm<br /><br />*-Креатеднсделегатион*<br /><br />*-DatabasePath*<br /><br />*-Домаинмоде*<br /><br />***-Имя_домена***<br /><br />***-Домаиннетбиоснаме***<br /><br />*-Днсделегатионкредентиал*<br /><br />*-Леса*<br /><br />-Force<br /><br />*-Инсталлднс*<br /><br />*-LogPath*<br /><br />-NoDnsOnNetwork<br /><br />-NoRebootOnCompletion<br /><br />*-SafeModeAdministratorPassword*<br /><br />-SkipAutoConfigureDNS<br /><br />-SkipPreChecks<br /><br />*-Сисволпас*<br /><br />*-WhatIf*|  
   
 > [!NOTE]  
 > Аргумент **-DomainNetBIOSName** является обязательным, если требуется изменить 15-значное имя, созданное автоматически на базе префикса доменного имени DNS, или если длина имени превышает 15 символов.  
@@ -569,12 +569,12 @@ $pw | ConvertFrom-SecureString | Set-Content $file
 > Отключать перезагрузку не рекомендуется. Для правильной работы контроллер домена должен перезагрузиться.  
   
 ## <a name="see-also"></a>См. также  
-[Доменные службы Active Directory (портал TechNet)](https://technet.microsoft.com/library/cc770946(WS.10).aspx)  
-[Доменные службы Active Directory для Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
-[Доменные службы Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
-[Технический справочник по Windows Server (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
-[Центр администрирования Active Directory: Начало работы (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
-[Администрирование Active Directory с помощью Windows PowerShell (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
-[Попросите команды разработчиков служб каталогов (официальный коммерческое использование Microsoft блог технической поддержки)](http://blogs.technet.com/b/askds)  
+[Службы домен Active Directory (портал TechNet)](https://technet.microsoft.com/library/cc770946(WS.10).aspx)  
+[Службы домен Active Directory для Windows Server 2008 R2](https://technet.microsoft.com/library/dd378801(WS.10).aspx)  
+[Службы домен Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891(WS.10).aspx)  
+[Техническое руководство по Windows Server (Windows Server 2003)](https://technet.microsoft.com/library/cc739127(WS.10).aspx)  
+Центр администрирования каталога [Active: Начало работы (Windows Server 2008 R2) ](https://technet.microsoft.com/library/dd560651(WS.10).aspx)  
+[Active Directory администрирования с помощью Windows PowerShell (Windows Server 2008 R2)](https://technet.microsoft.com/library/dd378937(WS.10).aspx)  
+[Обратитесь к группе по службам каталогов (официальный блог по технической поддержке корпорации Майкрософт)](http://blogs.technet.com/b/askds)  
   
 

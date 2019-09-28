@@ -1,29 +1,29 @@
 ---
 title: Подготовка к миграции прокси-сервера федерации AD FS 2.0
-description: Сведения о подготовке к миграции прокси-сервера AD FS в Windows Server 2012.
+description: Содержит сведения о готовности к переносу прокси-сервера AD FS Server в Windows Server 2012.
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 06/28/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2b2275af0934413fa2de02de720d609feda7392c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 20fbf3ea9231706635df2bd4c1d541fde0c1484b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66444450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408203"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-proxy"></a>Подготовка к миграции прокси-сервера федерации AD FS 2.0
 
-Чтобы подготовиться к миграции прокси AD FS 2.0 federation server до Windows Server 2012, необходимо экспортировать и резервное копирование данных конфигурации AD FS с этого прокси-сервера.  Действия, описанные в этом разделе, относятся к сценарию с одним или несколькими прокси-серверами федерации.  
+Чтобы подготовиться к переносу прокси-сервера AD FS 2,0 Федерации на Windows Server 2012, необходимо экспортировать и создать резервную копию данных конфигурации AD FS с помощью этого прокси-сервера.  Действия, описанные в этом разделе, относятся к сценарию с одним или несколькими прокси-серверами федерации.  
   
  Чтобы экспортировать данные конфигурации AD FS, выполните следующие действия.  
   
--   [Шаг 1. Экспорт параметров службы прокси-сервера](#step-1-export-proxy-service-settings)  
+-   [Шаг 1. Экспорт параметров прокси-службы @ no__t-0  
   
--   [Шаг 2. Резервное копирование пользовательских настроек веб-страницы](#step-2-back-up-webpage-customizations)  
+-   [Шаг 2. Резервное копирование настроек веб-страниц @ no__t-0  
   
 ##  <a name="step-1-export-proxy-service-settings"></a>Шаг 1. Экспорт параметров службы прокси-сервера  
  Чтобы экспортировать параметры службы прокси-сервера федерации, выполните следующие действия.  
@@ -53,8 +53,8 @@ ms.locfileid: "66444450"
  Чтобы выполнить резервное копирование пользовательских настроек веб-страницы, скопируйте веб-страницы прокси-сервера AD FS и файл **web.config** из каталога, сопоставленного виртуальному пути **“/adfs/ls”** , в IIS.  По умолчанию он находится в каталоге **%systemdrive%\inetpub\adfs\ls**.  
   
 ## <a name="next-steps"></a>Следующие шаги
- [Подготовка к миграции сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к миграции прокси-сервера AD FS 2.0 Federation](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера AD FS 2.0 Federation](migrate-the-ad-fs-fed-server.md)   
- [Перенос прокси-сервера AD FS 2.0 Federation](migrate-the-ad-fs-2-fed-server-proxy.md)   
+ [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

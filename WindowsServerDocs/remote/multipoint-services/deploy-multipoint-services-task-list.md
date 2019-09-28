@@ -3,7 +3,7 @@ title: Задачи по развертыванию служб MultiPoint
 description: Список всех задач, участвующих в развертывании служб MultiPoint, а также ссылки на инструкции
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: e08c5784-5b3e-4028-86c1-96deaee41f09
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 9f0b69da06fb783ac7cccc2dc5bc7337dae59d66
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9d50cfc3ed48f77281af400e9e80fb8b4895bac5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871450"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394756"
 ---
 # <a name="task-lists-multipoint-services"></a>Списки задач: Службы MultiPoint
 Списки задач в этом разделе помогут вам развернуть систему служб MultiPoint и отследить завершенные задачи. Не все задачи применяются к каждой среде. Например, некоторые задачи выполняются только при развертывании сервера MultiPoint в домене Active Directory. Другие, например создание станций с разделением экрана или развертывание виртуальных рабочих столов для станций, являются необязательными. Процедуры, объясняющие, как выполнять эти задачи, см. в разделе [развертывание служб MultiPoint](deploying-multipoint-services.md).  

@@ -1,8 +1,8 @@
 ---
-title: FTP mls_1
-description: 'Раздел Windows команды для ***- '
+title: mls_1 FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a379ead9c56af096e121048a8c0f596f6879bb0
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: a84a0f8f3121ea19876744e9ef04bebf5f9fcb08
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438543"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376261"
 ---
-# <a name="ftp-mls1"></a>FTP: mls_1
+# <a name="ftp-mls_1"></a>FTP: mls_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Вывод сокращенного списка файлов и подкаталогов в удаленном каталоге.   
+Отображает сокращенный список файлов и подкаталогов в удаленном каталоге.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 mls <remoteFile>[ ] <LocalFile>  
@@ -34,19 +34,19 @@ mls <remoteFile>[ ] <LocalFile>
 |  Параметр   |                       Описание                       |
 |--------------|---------------------------------------------------------|
 | <remoteFile> | Указывает файл, для которого требуется просмотреть список. |
-| <LocalFile>  |  Указывает локальный файл, в котором для сохранения списка.  |
+| <LocalFile>  |  Указывает локальный файл для хранения списка.  |
 
 ## <a name="remarks"></a>Примечания  
-- Указание *Удаленных_файлов*  
-  Введите дефис ( **-** ) использовать текущий рабочий каталог на удаленном компьютере.  
-- Указание *Локальный_файл*  
-  Введите дефис ( **-** ) для вывода списка на экране.  
-  ## <a name="BKMK_Examples"></a>Примеры  
-  Отображение сокращенного списка файлов и подкаталогов для **dir1** и **dir2**.  
+- Указание *ремотефилес*  
+  Введите дефис ( **-** ), чтобы использовать текущий рабочий каталог на удаленном компьютере.  
+- Указание параметра *локальный_файл*  
+  Введите дефис ( **-** ) для отображения списка на экране.  
+  ## <a name="BKMK_Examples"></a>Примеров  
+  Отображение сокращенного списка файлов и подкаталогов для **Dir1** и **Dir2**.  
   ```  
   mls dir1 dir2 -  
   ```  
-  Сохранить сокращенный список файлов и подкаталогов для **dir1** и **dir2** в локальном файле **файл**  
+  Сохраните сокращенный список файлов и подкаталогов для **Dir1** и **Dir2** в локальном файле **дирлист. txt.**  
   ```  
   mls dir1 dir2 dirlist.txt   
   ```  

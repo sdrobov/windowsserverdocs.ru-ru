@@ -1,8 +1,8 @@
 ---
 title: справка
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 078c779e7813d2aa7499e515d9729edf92452237
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: c3d76a71ec287e5c874ae3e4dec34016c5c80336
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438200"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375577"
 ---
 # <a name="help"></a>справка
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает список доступных команд или подробной справки по указанной команде.  
+Отображает список доступных команд или подробные справочные сведения об указанной команде.  
   
   
   
@@ -38,20 +38,20 @@ help [<command>]
   
 | Параметр |                              Описание                              |
 |-----------|-----------------------------------------------------------------------|
-| <command> | Указывает команду для отображения подробной справки. |
+| <command> | Указывает команду, для которой отображаются подробные справочные сведения. |
   
 ## <a name="remarks"></a>Примечания  
   
--   Если команда не указана, **помочь** отобразит все возможные команды.  
+-   Если команда не указана, в **справке** будут отображаться все возможные команды.  
   
-## <a name="BKMK_examples"></a>Примеры  
-Чтобы вывести список всех команд, доступных в DiskPart, введите следующую команду:  
+## <a name="BKMK_examples"></a>Примеров  
+Чтобы отобразить список всех команд, доступных в DiskPart, введите:  
   
 ```  
 help  
 ```  
   
-Чтобы отобразить подробные справочные сведения об использовании **создать основной раздел** в DiskPart, введите команду:  
+Чтобы просмотреть подробные справочные сведения о том, как использовать команду **создать секцию** в DiskPart, введите:  
   
 ```  
 help create partition primary  

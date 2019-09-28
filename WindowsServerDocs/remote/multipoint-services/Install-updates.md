@@ -1,9 +1,9 @@
 ---
 title: Установка обновлений
-description: Дополнительные сведения об установке обновлений в службах MultiPoint
+description: Сведения об установке обновлений для служб MultiPoint
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,19 +13,19 @@ ms.assetid: b201be28-b2d9-403c-a5e9-739d64c1b296
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: c13c3e7031c8fc95ded6c8b256e7a7e9be197606
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f1bc412d6c0101db3a2be97a71f208e4d59433b1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872675"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389644"
 ---
 # <a name="install-updates"></a>Установка обновлений
-Мы рекомендуем установить обновления, если он доступен. Установка обновлений требуется подключение к Интернету.  
+Рекомендуется устанавливать обновления, если они доступны. Для установки обновлений требуется подключение к Интернету.  
 
 1.  На **начальном экране** откройте **Панель управления**.  
   
-2.  В панели управления введите **обновления**, а затем нажмите кнопку **проверять наличие обновлений**.  
+2.  На панели управления введите **обновления**, а затем нажмите кнопку **проверить наличие обновлений**.  
   
-3.  Если веб-узел Windows Update перечислены все обновления, которые необходимы на компьютере, установите обновления.  
+3.  Если на веб-сайте Центр обновления Windows указаны обновления, которые необходимы на компьютере, установите обновления.  
   

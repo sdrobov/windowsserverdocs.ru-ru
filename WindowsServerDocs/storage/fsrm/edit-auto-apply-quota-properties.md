@@ -2,22 +2,22 @@
 title: Редактирование свойств автоматически применяемой квоты
 description: В этой статье описывается процесс изменения свойств автоматически применяемой квоты
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: aa2155268d42293ade925d53da5e29142d13aae4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4b4fda5cdfeed8df02fee922c8dc5fddc75c56ff
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878065"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403113"
 ---
 # <a name="edit-auto-apply-quota-properties"></a>Редактирование свойств автоматически применяемой квоты
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 При внесении изменений в автоматически применяемые квоты вы можете распространить эти изменения на существующие квоты в пути автоматически применяемой квоты. Можно изменить только те квоты, которые по-прежнему соответствуют исходной автоматически применяемой квоте, или все квоты в пути автоматически применяемой квоты, независимо от любых изменений, которые были внесены в квоты с момента их создания. Данная функция упрощает процесс обновления свойств квот, которые являются производными автоматически применяемой квоты, за счет возможности централизованного изменения.
 
@@ -45,6 +45,6 @@ ms.locfileid: "59878065"
 ## <a name="see-also"></a>См. также
 
 -   [Управление квотами](quota-management.md)
--   [Создание автоматически назначаемой квоты](create-auto-apply-quota.md)
+-   [Создание автоматически применяемой квоты](create-auto-apply-quota.md)
 
 

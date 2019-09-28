@@ -1,8 +1,8 @@
 ---
-title: готов off
-description: 'Раздел Windows команды для ***- '
+title: Manage-bde выкл.
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d8b2fb5abb739c2905c29336d543888d4d0d50ef
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a3da40146441a057db73dd76442189e3357415de
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837765"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374017"
 ---
-# <a name="manage-bde-off"></a>готов: off
+# <a name="manage-bde-off"></a>Управление-BDE: выкл.
 
 
 
-Расшифровывает диск и отключить BitLocker. По завершении расшифровки, удаляются все предохранители ключа. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Расшифровывает диск и отключает BitLocker. Все предохранители ключа удаляются после завершения расшифровки. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ manage-bde -off [<Volume>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Тома >|Буква диска, за которым следует двоеточие, пути GUID тома или подключенный том.|
-|-computername|Указывает, что Manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать **- cn** как сокращенную версию этой команды.|
-|\<Имя >|Представляет имя компьютера, на которой требуется изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
-|-? или /?|Отображение кратких справки в командной строке.|
-|-help или -h|Отображает полную справку в командной строке.|
+|@no__t 0Volume >|Буква диска, за которой следует двоеточие, путь GUID тома или подключенный том.|
+|-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
+|\<Имя >|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|-? или/?|Отображает краткую справку в командной строке.|
+|-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-В следующем примере демонстрируется использование **-off** команду, чтобы отключить BitLocker на диске C.
+В следующем примере показано использование команды **-Off** для отключения BitLocker на диске C.
 ```
 manage-bde –off C:
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [Готов](manage-bde.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Управление — BDE](manage-bde.md)

@@ -1,8 +1,8 @@
 ---
-title: С помощью команды отключения
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Disable
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9ee32827dc08c60003f06377fae0d81497477d8d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 52e1bdf48d682c06356cd2cc52cb8ca3f65a89f4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59829525"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363547"
 ---
-# <a name="using-the-disable-command"></a>С помощью команды отключения
+# <a name="using-the-disable-command"></a>Использование команды Disable
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отключает все службы для служб развертывания Windows.
 ## <a name="subcommands"></a>Подкоманды
 |Подкоманда|Описание|
 |-------|--------|
-|[С помощью команду disable сервера](using-the-disable-server-command.md)|Отключает все службы служб развертывания Windows на указанном сервере (сервере развертывания).|
-|[Используя команду disable-TransportServer](using-the-disable-transportserver-command.md)|Отключает все службы служб развертывания Windows на указанном сервере транспорта.|
+|[Использование команды «Disable-Server»](using-the-disable-server-command.md)|Отключает все службы развертывания Windows на указанном сервере (сервере развертывания).|
+|[Использование команды Disable-Транспортсервер](using-the-disable-transportserver-command.md)|Отключает все службы развертывания Windows на указанном транспортном сервере.|

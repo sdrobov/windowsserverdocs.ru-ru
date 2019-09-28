@@ -2,7 +2,7 @@
 title: Доменные службы Azure AD и службы удаленных рабочих столов
 description: Узнайте, как интегрировать доменные службы Azure AD в среду развертываемых служб удаленных рабочих столов.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: remote-desktop-services
@@ -12,12 +12,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: christianmontoya
 ms.localizationpriority: medium
-ms.openlocfilehash: 511aee3ea5be7e5c70c75cbc4d1febe1ec58dd97
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d3fe370f18df980acaeaa847bd96642b97613f80
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871069"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71387634"
 ---
 # <a name="integrate-azure-ad-domain-services-with-your-rds-deployment"></a>Интеграция доменных служб Azure AD в среду развертываемых служб удаленных рабочих столов
 

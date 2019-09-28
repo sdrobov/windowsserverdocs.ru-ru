@@ -6,14 +6,14 @@ ms.author: billmath
 manager: daveba
 ms.date: 05/23/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: fc71ca2b8d130ab00014f850ccae25e9138d501b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 2ef16ddeb241d55b61b484805ff91cb247985d8d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867570"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358881"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Создание пользовательского метода проверки подлинности для AD FS в Windows Server
 
@@ -62,7 +62,7 @@ ms.locfileid: "70867570"
 
     ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "Создание поставщика")
 
-3.  Создайте копию **Microsoft. IdentityServer. Web. dll** из% windir%\\ADFS на сервере Windows Server 2012 R2, где была установлена AD FS, и вставьте ее в папку проекта на компьютере разработчика.
+3.  Создайте копию **Microsoft. IdentityServer. Web. dll** из папки% windir% \\ADFS на сервере Windows Server 2012 R2, где была установлена AD FS, и вставьте ее в папку проекта на компьютере разработчика.
 
 4.  В **Обозреватель решений**щелкните правой кнопкой мыши **ссылки** и **Добавить ссылку...**
 
@@ -325,9 +325,7 @@ ms.locfileid: "70867570"
         <input id="context" type="hidden" name="Context" value="%Context%"/>
         <!-- End inputs are required by the presentation framework. -->
         <p id="pageIntroductionText">Это содержимое предоставляется адаптером образца MFA. Входные данные запроса должны быть представлены ниже.</p>
-        <label for="challengeQuestionInput" class="block">Текст вопроса</label>
-        <input id="challengeQuestionInput" name="ChallengeQuestionAnswer" type="text" value="" class="text" placeholder="Answer placeholder" />
-        <div id="submissionArea" class="submitMargin">
+        <label for="challengeQuestionInput" class="block">Question Text @ no__t-1 @ no__t-2 @ no__t-3<div id="submissionArea" class="submitMargin">
         <input id="submitButton" type="submit" name="Submit" value="Submit" onclick="return AuthPage.submitAnswer()"/>
         </div>
         </form>
@@ -381,7 +379,7 @@ ms.locfileid: "70867570"
 
 3.  Скопируйте средства Gacutil. exe на сервер.
 
-    Gacutil. exe можно найти в **файле% хомедриве%\\Program Files (x86\\) Microsoft\\SDKs Windows\\v\\8.0\\a bin NETFX\\ 4,0 Tools** на компьютере с Windows 8.  Вам потребуется сам файл **gacutil. exe** , а также **1033**, **en-US**и другую локализованную папку ресурсов, расположенную под расположением **средств NETFX 4,0** .
+    Gacutil. exe можно найти в **файле% хомедриве% \\Program Files (x86) \\Microsoft SDKs @ no__t-3Windows @ no__t-4V 8.0 a @ no__t-5bin @ no__t-6NETFX 4,0 Tools @** no__t-7 на компьютере с Windows 8.  Вам потребуется сам файл **gacutil. exe** , а также **1033**, **en-US**и другую локализованную папку ресурсов, расположенную под расположением **средств NETFX 4,0** .
 
 4.  Скопируйте файлы поставщика (один или несколько подписанных DLL-файлов строгого имени) в ту же папку, где находится программа **gacutil. exe** (расположение предназначено только для удобства).
 

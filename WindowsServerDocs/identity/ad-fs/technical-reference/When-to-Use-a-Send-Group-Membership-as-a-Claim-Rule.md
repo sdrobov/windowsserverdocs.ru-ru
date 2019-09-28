@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 546507254f796e6a2fbe71e3ba30a7597ea51295
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 82dd9cec2c75a796eb0def508082508a5d0dbf5f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869269"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385435"
 ---
 # <a name="when-to-use-a-send-group-membership-as-a-claim-rule"></a>Когда следует использовать правило "Отправлять членство в группе как утверждение"
 Это правило можно использовать в службы федерации Active Directory (AD FS) \(AD FS\) , если требуется выдать новое значение исходящего утверждения только тем пользователям, которые являются членами указанной Active Directory группы безопасности. При использовании этого правила одно утверждение выдается только для указанной группы, соответствующей логике правила, как описано в следующей таблице.  
@@ -74,7 +74,7 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", 
 => issue(Type = "http://schemas.xmlsoap.org/claims/Group", Value = "administrators", Issuer = c.Issuer, OriginalIssuer = c.OriginalIssuer, ValueType = c.ValueType);  
 ```  
   
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 [Создание правила для отправки атрибутов LDAP в качестве утверждений](https://technet.microsoft.com/library/dd807115.aspx)  
   
 

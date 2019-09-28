@@ -1,60 +1,60 @@
 ---
-title: Развертывание Windows Admin Center с высоким уровнем доступности
-description: Развертывание Windows Admin Center с высоким уровнем доступности (Гонолулу проекта)
+title: Развертывание центра администрирования Windows с высоким уровнем доступности
+description: Развертывание центра администрирования Windows с высоким уровнем доступности (проект Хонолулу)
 ms.technology: manage
 ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: ad8e2a8eade1ea9d3faaba8f387b1f489854e589
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.prod: windows-server
+ms.openlocfilehash: 6ae7bd9ed7aee5835ac1f53b9e10879ad8824f52
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406943"
 ---
-# <a name="deploy-windows-admin-center-with-high-availability"></a>Развертывание Windows Admin Center с высоким уровнем доступности
+# <a name="deploy-windows-admin-center-with-high-availability"></a>Развертывание центра администрирования Windows с высоким уровнем доступности
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
-Вы можете развернуть Windows Admin Center в отказоустойчивом кластере для обеспечения высокой доступности для службы шлюза Windows Admin Center. Решение, представленное вполне решение активный / пассивный, где действует только один экземпляр Windows Admin Center. В случае сбоя одного из узлов в кластере Windows Admin Center корректно при сбое на другой узел, позволяя продолжить управление серверами в вашей среде без проблем. 
+Центр администрирования Windows можно развернуть в отказоустойчивом кластере, чтобы обеспечить высокий уровень доступности для службы шлюза центра администрирования Windows. Предоставленное решение является активным-пассивным решением, в котором активен только один экземпляр центра администрирования Windows. В случае сбоя одного из узлов в кластере центр администрирования Windows корректно переключается на другой узел, позволяя без проблем управлять серверами в среде. 
 
-[Дополнительные сведения о других вариантах развертывания Windows Admin Center.](../plan/installation-options.md)
+[Узнайте о других вариантах развертывания центра администрирования Windows.](../plan/installation-options.md)
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Отказоустойчивый кластер из двух или более узлов в Windows Server 2016 или 2019 г. [Дополнительные сведения о развертывании отказоустойчивого кластера](../../../failover-clustering/failover-clustering-overview.md).
-- Кластер общего тома (CSV) для Windows Admin Center для хранения постоянных данных, доступную всем узлам в кластере. 10 ГБ, будет достаточно для CSV-файла.
-- Скрипт развертывания высокого уровня доступности из [ZIP-файл Windows Admin Center высокого уровня ДОСТУПНОСТИ скрипт](https://aka.ms/WACHAScript). Скачайте ZIP-файл, содержащий сценарий на локальный компьютер и скопируйте скрипт при необходимости зависимости от указанных ниже инструкций.
-- Рекомендуется, но это необязательно: подписанный сертификат PFX-файл и пароль. Не нужно установить сертификат на узлах кластера — сценарий сделает это за вас. Если не указан, сценарий установки создает самозаверяющий сертификат, срок действия которого истекает через 60 дней.
+- Отказоустойчивый кластер из двух или более узлов на Windows Server 2016 или 2019. Дополнительные [сведения о развертывании отказоустойчивого кластера](../../../failover-clustering/failover-clustering-overview.md).
+- Общий том кластера (CSV) для центра администрирования Windows для хранения постоянных данных, доступных для всех узлов в кластере. для CSV-файла будет достаточно 10 ГБ.
+- Скрипт развертывания высокого уровня доступности из [ZIP-файла сценария высокой надежности Windows Admin Center](https://aka.ms/WACHAScript). Скачайте ZIP-файл, содержащий сценарий, на локальный компьютер, а затем скопируйте сценарий по мере необходимости в соответствии с приведенными ниже инструкциями.
+- Рекомендуется, но необязательно: подписанный сертификат. pfx & пароль. Вам не нужно устанавливать сертификат на узлах кластера. сценарий сделает это самостоятельно. Если он не указан, сценарий установки создает самозаверяющий сертификат, срок действия которого истекает через 60 дней.
 
-## <a name="install-windows-admin-center-on-a-failover-cluster"></a>Установка Windows Admin Center в отказоустойчивом кластере
+## <a name="install-windows-admin-center-on-a-failover-cluster"></a>Установка центра администрирования Windows в отказоустойчивом кластере
 
-1. Копировать ```Install-WindowsAdminCenterHA.ps1``` скрипт на узел в кластере. Загрузите или скопируйте MSI-файл Windows Admin Center на тот же узел.
-2. Подключитесь к узлу с помощью протокола удаленного рабочего СТОЛА и запустите ```Install-WindowsAdminCenterHA.ps1``` сценарий из этого узла со следующими параметрами:
-    - `-clusterStorage`: локальный путь общего тома кластера для хранения данных Windows Admin Center.
-    - `-clientAccessPoint`: выберите имя, которое будет использоваться для доступа к Windows Admin Center. Например, если вы запустите скрипт с параметром `-clientAccessPoint contosoWindowsAdminCenter`, будет доступ к службе Windows Admin Center, посетив `https://contosoWindowsAdminCenter.<domain>.com`
-    - `-staticAddress`. Необязательно. Один или несколько статических адресов для общей службы кластера. 
-    - `-msiPath`. Путь к MSI-файл Windows Admin Center.
-    - `-certPath`. Необязательно. Путь к PFX-файл сертификата.
-    - `-certPassword`. Необязательно. Пароль для PFX-файла сертификата, указанный в SecureString `-certPath`
-    - `-generateSslCert`. Необязательно. Если вы не хотите предоставить подписанный сертификат, включают этот флаг параметр, чтобы создать самозаверяющий сертификат. Обратите внимание на то, что сертификат с собственной подписью истечет через 60 дней.
-    - `-portNumber`. Необязательно. Если не указать порт, через порт 443 (HTTPS) развертывания службы шлюза. Чтобы использовать другой порт указать в этом параметре. Обратите внимание, что если вы используете другой номер порта (что-либо, кроме порта 443), обращения к Windows Admin Center, перейдя к https://\<clientAccessPoint\>:\<порт\>.
+1. Скопируйте сценарий ```Install-WindowsAdminCenterHA.ps1``` на узел в кластере. Скачайте или скопируйте файл Windows Admin Center. msi на тот же узел.
+2. Подключитесь к узлу через RDP и запустите сценарий ```Install-WindowsAdminCenterHA.ps1``` из этого узла со следующими параметрами:
+    - `-clusterStorage` — локальный путь общий том кластера для хранения данных центра администрирования Windows.
+    - `-clientAccessPoint`: выберите имя, которое будет использоваться для доступа к центру администрирования Windows. Например, если запустить скрипт с параметром `-clientAccessPoint contosoWindowsAdminCenter`, вы получите доступ к службе центра администрирования Windows, посетив `https://contosoWindowsAdminCenter.<domain>.com`
+    - `-staticAddress`. Необязательно. Один или несколько статических адресов для универсальной службы кластера. 
+    - `-msiPath`. Путь к файлу центра администрирования Windows. msi.
+    - `-certPath`. Необязательно. Путь к PFX-файлу сертификата.
+    - `-certPassword`. Необязательно. Пароль SecureString для сертификата. pfx, указанный в `-certPath`
+    - `-generateSslCert`. Необязательно. Если вы не хотите предоставлять подписанный сертификат, включите этот флаг параметра, чтобы создать самозаверяющий сертификат. Обратите внимание, что срок действия самозаверяющего сертификата истекает через 60 дней.
+    - `-portNumber`. Необязательно. Если порт не указан, служба шлюза развертывается на порте 443 (HTTPS). Чтобы использовать другой порт, укажите в этом параметре. Обратите внимание, что при использовании настраиваемого порта (что еще не 443) вы получите доступ к центру администрирования Windows, перейдя по https://\<clientAccessPoint @ no__t-1: \<port @ no__t-3.
 
 > [!NOTE]
-> ```Install-WindowsAdminCenterHA.ps1``` Скрипт поддерживает ```-WhatIf ``` и ```-Verbose``` параметров
+> Скрипт ```Install-WindowsAdminCenterHA.ps1``` поддерживает параметры ```-WhatIf ``` и ```-Verbose```.
 
 ### <a name="examples"></a>Примеры
 
-#### <a name="install-with-a-signed-certificate"></a>Установка с использованием подписанного сертификата.
+#### <a name="install-with-a-signed-certificate"></a>Установите с подписанным сертификатом:
 
 ```powershell
 $certPassword = Read-Host -AsSecureString
 .\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -certPath "cert.pfx" -certPassword $certPassword -Verbose
 ```
 
-#### <a name="install-with-a-self-signed-certificate"></a>Установка с использованием самозаверяющего сертификата.
+#### <a name="install-with-a-self-signed-certificate"></a>Установите с самозаверяющим сертификатом:
 
 ```powershell
 .\Install-WindowsAdminCenterHA.ps1 -clusterStorage "C:\ClusterStorage\Volume1" -clientAccessPoint "contoso-ha-gateway" -msiPath ".\WindowsAdminCenter.msi" -generateSslCert -Verbose
@@ -62,26 +62,26 @@ $certPassword = Read-Host -AsSecureString
 
 ## <a name="update-an-existing-high-availability-installation"></a>Обновление существующей установки высокого уровня доступности
 
-Используйте тот же ```Install-WindowsAdminCenterHA.ps1``` сценария для обновления развертывания высокого уровня ДОСТУПНОСТИ, не теряя данные подключения.
+Используйте тот же сценарий ```Install-WindowsAdminCenterHA.ps1```, чтобы обновить развертывание с высоким уровнем доступности без потери данных подключения.
 
-### <a name="update-to-a-new-version-of-windows-admin-center"></a>Обновление до новой версии Windows Admin Center
+### <a name="update-to-a-new-version-of-windows-admin-center"></a>Обновление до новой версии центра администрирования Windows
 
-При выпуске новой версии Windows Admin Center, просто запустите ```Install-WindowsAdminCenterHA.ps1``` скрипт еще раз с единственным ```msiPath``` параметр:
+При выпуске новой версии центра администрирования Windows просто запустите сценарий ```Install-WindowsAdminCenterHA.ps1``` с параметром ```msiPath```:
 
 ```powershell
 .\Install-WindowsAdminCenterHA.ps1 -msiPath '.\WindowsAdminCenter.msi' -Verbose
 ```
 
-### <a name="update-the-certificate-used-by-windows-admin-center"></a>Обновить сертификат, используемый Windows Admin Center
+### <a name="update-the-certificate-used-by-windows-admin-center"></a>Обновление сертификата, используемого центром администрирования Windows
 
-Вы можете обновить сертификат, используемый при развертывании Windows Admin Center высокого уровня ДОСТУПНОСТИ в любое время, указав новый сертификат PFX-файл и пароль.
+Вы можете в любое время обновить сертификат, используемый центром администрирования Windows с высоким уровнем доступности, указав PFX-файл и пароль нового сертификата.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString
 .\Install-WindowsAdminCenterHA.ps1 -certPath "cert.pfx" -certPassword $certPassword -Verbose
 ```
 
-Также вы можете обновить сертификат в то же время, обновление платформы Windows Admin Center с помощью нового MSI-файла.
+Вы также можете обновить сертификат одновременно с новым MSI-файлом платформы центра администрирования Windows.
 
 ```powershell
 $certPassword = Read-Host -AsSecureString
@@ -90,7 +90,7 @@ $certPassword = Read-Host -AsSecureString
 
 ## <a name="uninstall"></a>Удалить
 
-Чтобы удалить развертывание высокой ДОСТУПНОСТИ Windows Admin Center в отказоустойчивом кластере, передайте ```-Uninstall``` параметр ```Install-WindowsAdminCenterHA.ps1``` скрипта.
+Чтобы удалить развертывание с высоким уровнем доступности центра администрирования Windows из отказоустойчивого кластера, передайте параметр ```-Uninstall``` в скрипт ```Install-WindowsAdminCenterHA.ps1```.
 
 ```powershell
 .\Install-WindowsAdminCenterHA.ps1 -Uninstall -Verbose
@@ -98,4 +98,4 @@ $certPassword = Read-Host -AsSecureString
 
 ## <a name="troubleshooting"></a>Устранение неполадок
 
-Журналы сохраняются во временной папке CSV-файла (например, C:\ClusterStorage\Volume1\temp).
+Журналы сохраняются во временной папке в CSV-файле (например, C:\ClusterStorage\Volume1\temp).

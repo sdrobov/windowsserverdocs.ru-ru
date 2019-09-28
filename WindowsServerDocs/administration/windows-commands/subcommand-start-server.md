@@ -1,8 +1,8 @@
 ---
-title: Подкоманды start-Server
-description: 'Раздел Windows команды для ***- '
+title: Подкоманда Start-Server
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a89e3f17aeed7eb3156e28997206517342be109
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 78407f3474c48b928535abb652d2c023dd1c1c14
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383819"
 ---
-# <a name="subcommand-start-server"></a>Подкоманда: start-Server
+# <a name="subcommand-start-server"></a>Подкоманда: Start-Server
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 запускает все службы для сервера служб развертывания Windows.
 ## <a name="syntax"></a>Синтаксис
@@ -32,19 +32,17 @@ wdsutil [Options] /start-Server [/Server:<Server name>]
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Указывает имя сервера для запуска. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы запустить сервер, введите одно из следующих:
+|[/Server: <Server name>]|Указывает имя сервера для запуска. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы запустить сервер, введите одно из следующих действий:
 ```
 wdsutil /start-Server
 wdsutil /verbose /start-Server /Server:MyWDSServer
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды отключения сервера](using-the-disable-server-command.md)
-[с помощью команды enable-Server](using-the-enable-server-command.md)
-[Using Команда Get-Server](using-the-get-server-command.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды disable-Server](using-the-disable-server-command.md)
+ с[помощью команды Enable-](using-the-enable-server-command.md)Server 
+ с помощью команды[Get](using-the-get-server-command.md)-Server 
 [с помощью команды Initialize-Server](using-the-initialize-server-command.md)
-[подкоманда: set-Server](subcommand-set-server.md) 
- [ Подкоманда: stop-Server](subcommand-stop-server.md)
-[параметр uninitialize сервера](the-uninitialize-server-option.md)
+[ . Подкоманда: Set-Server](subcommand-set-server.md)1,[подкоманда:](subcommand-stop-server.md)@no__t-Server-13[параметр Uninitialize-Server](the-uninitialize-server-option.md)

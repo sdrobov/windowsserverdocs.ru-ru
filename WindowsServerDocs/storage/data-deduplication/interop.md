@@ -2,27 +2,27 @@
 ms.assetid: 60fca6b2-f1c0-451f-858f-2f6ab350d220
 title: Взаимодействие при дедупликации данных
 ms.technology: storage-deduplication
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: wmgries
 manager: klaasl
 ms.author: wgries
 ms.date: 09/16/2016
-ms.openlocfilehash: b82e02b7896c3795ae7470ca03bb8d19a8d5e403
-ms.sourcegitcommit: fe621b72d45d0259bac1d5b9031deed3dcbed29d
+ms.openlocfilehash: fb3c9842f1d698151bffebbe5f77618c8b19b366
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66455422"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403194"
 ---
 # <a name="data-deduplication-interoperability"></a>Взаимодействие при дедупликации данных
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2019 г.
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2019
 
 ## <a name="supported"></a>Поддерживается
 
 ### <a name="refs"></a>ReFS
-Дедупликация данных поддерживается начиная с Windows Server 2019. 
+Дедупликация данных поддерживается в Windows Server 2019. 
 
 ### <a name="failover-clustering"></a>Отказоустойчивая кластеризация
 
@@ -64,14 +64,14 @@ ms.locfileid: "66455422"
     wbadmin get versions
     ```
 
-    Этот идентификатор версии выходных данных будет Строка даты и времени, например: 08/18/2016-06:22.
+    Этот идентификатор выходной версии будет строкой даты и времени, например: 08/18/2016-06:22.
 
 4. Восстановите весь том.
     ```PowerShell
     wbadmin start recovery –version:02/16/2012-06:22 -itemtype:Volume  -items:E: -recoveryTarget:E:
     ```
 
-    **--OR--**  
+    **--ИЛИ--**  
 
     Восстановите определенную папку (в данном случае папку E:\Docs).
     ```PowerShell

@@ -1,8 +1,8 @@
 ---
-title: Подробности
-description: 'Раздел Windows команды для ***- '
+title: Налог
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9970d6ca5e9ceb74384439049ebd981231d5144f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b3d63993e3a5aabe44580553a15514808b28e2ea
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378463"
 ---
-# <a name="detail"></a>Подробности
+# <a name="detail"></a>Налог
 
 
 
-Отображает сведения о диске, секции, тома или виртуального жесткого диска (VHD).
+Отображает сведения о выбранном диске, разделе, томе или виртуальном жестком диске (VHD).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,12 +39,12 @@ detail vdisk
 
 |Параметр|Описание|
 |---------|-----------|
-|[сведения о диске](detail-disk.md)|Отображает свойства выбранного диска и тома на этом диске.|
-|[Сведения о секции](detail-partition.md)|Отображает свойства выбранной секции.|
-|[Сведения о томе](detail-volume.md)|Отображает диски, на которых размещен текущий том.|
-|[виртуальный диск данных](detail-vdisk.md)|Отображает свойства выбранного виртуального жесткого диска.|
+|[Диск сведений](detail-disk.md)|Отображает свойства выбранного диска и тома на этом диске.|
+|[Подробное секционирование](detail-partition.md)|Отображает свойства выбранной секции.|
+|[Подробный том](detail-volume.md)|Отображает диски, на которых находится текущий том.|
+|[Подробные сведения VDISK](detail-vdisk.md)|Отображает свойства выбранного виртуального жесткого диска.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

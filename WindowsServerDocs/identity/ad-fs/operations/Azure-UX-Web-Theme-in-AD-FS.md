@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 10/24/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 25ba9505f3f93fb236d6e60e49efc4206482f977
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f4dd1d45646475be3788cd6b615b1743976eedae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358410"
 ---
 # <a name="using-an-azure-ad-ux-web-theme-in-active-directory-federation-services"></a>Использование веб-темы Azure AD UX в службы федерации Active Directory (AD FS)
 Вход в AD FS Forms в настоящее время не отражает интерфейс входа Azure/O365.  Чтобы обеспечить более единообразную и эффективную работу конечных пользователей, мы выпустили веб-тему таблицы каскадных стилей, которую можно применить к серверам AD FS.  В настоящее время вход в формы для AD FS в Windows Server 2016 выглядит следующим образом:
@@ -48,7 +48,7 @@ ms.locfileid: "70866005"
 ------- | ------- | ----------
 Эмблема отображается в верхней части панели входа. | Прозрачный JPG или PNG<br>Максимальная высота: 36 ПКС<br>Максимальная ширина: 245 ПКС | Используйте логотип своей организации здесь.<br>Использовать прозрачное изображение. Не думайте, что фон будет белым.<br>Не добавляйте отступы вокруг логотипа на изображении, или логотип будет выглядеть непропорционально мелким.
 
-### <a name="background"></a>Фоновый
+### <a name="background"></a>Фон
 
 Описание | Ограничения | Рекомендации
 ------- | ------- | ----------

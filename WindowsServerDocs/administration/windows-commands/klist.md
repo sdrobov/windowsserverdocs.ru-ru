@@ -2,7 +2,7 @@
 title: klist
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a8f574b65ec8c123379e1b02ee1571cc9f21fa1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4b35069faa835b59f2655262f640ddb18068702f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867054"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375306"
 ---
 # <a name="klist"></a>klist
 
@@ -166,6 +166,6 @@ klist [-lh <LogonId.HighPart>] [-li <LogonId.LowPart>] tickets | tgt | purge | s
    klist purge_bind
    ```
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительная справка
 
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

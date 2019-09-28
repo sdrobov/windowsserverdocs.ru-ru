@@ -1,8 +1,8 @@
 ---
-title: Список теней
-description: 'Раздел Windows команды для ***- '
+title: перечислить тени
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 50e4c4b8c7ea97ec65cecb6b8e904abd8c6d98eb
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2640c04aef34cd6433efe529ac08c0294ba1c3b9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374760"
 ---
-# <a name="list-shadows"></a>Список теней
+# <a name="list-shadows"></a>перечислить тени
 
 
 
-Перечисляет постоянные и существующие непостоянный теневые копии, в системе.
+Список постоянных и существующих непостоянных теневых копий, имеющихся в системе.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,10 +36,10 @@ list shadows {all | set <SetID> | id <ShadowID>}
 
 |Параметр|Описание|
 |---------|-----------|
-|all|Перечислены все теневые копии.|
-|Задайте \<SetID >|Выводит список теневых копий, принадлежащих указанным идентификатором набор теневого копирования.|
-|id \<ShadowID>|Перечисляет все теневой копии с идентификатором указанного теневого копирования.|
+|all|Список всех теневых копий.|
+|Set \<SetID >|Выводит список теневых копий, принадлежащих указанному ИДЕНТИФИКАТОРу набора теневых копий.|
+|ID @no__t — 0ShadowID >|Отображает все теневые копии с указанным ИДЕНТИФИКАТОРом теневой копии.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

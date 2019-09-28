@@ -1,8 +1,8 @@
 ---
 title: netcfg
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aed535f843da6d735526ea97c07f94564dc00dc6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8f8368aaff16592a55cc9def84d593cf323f28ee
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871325"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373289"
 ---
 # <a name="netcfg"></a>netcfg
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Устанавливает среду предустановки Windows (WinPE), это упрощенная версия Windows, используемая для развертывания рабочих станций.   
+Устанавливает среда предустановки Windows (WinPE), облегченную версию Windows, используемую для развертывания рабочих станций.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 netcfg [/v] [/e] [/winpe] [/l ] /c /i  
@@ -32,42 +32,42 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 ### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|/v|Запустить в режиме подробного протоколирования (детализация)|  
-|/e|Использование обслуживания переменных среды во время установки и удаления|  
-|/WinPE|Устанавливает TCP/IP, NetBIOS и клиент Microsoft для среды предустановки Windows|  
-|/l|Предоставляет расположение INF|  
-|/c|Предоставляет класс компонента должен быть установлен; протокол, службы или клиента|  
-|/i|Содержит идентификатор компонента|  
-|/s|Предоставляет тип компоненты для отображения<br /><br />\ta = адаптеров, n = net компонентов|  
+|/v|Выполнение в подробном режиме (подробный)|  
+|/e|Использование переменных среды обслуживания во время установки и удаления|  
+|/винпе|Устанавливает TCP/IP, NetBIOS и Microsoft Client для предустановки Windows среды|  
+|/l|Предоставляет расположение INF-файла|  
+|/c|Предоставляет класс устанавливаемого компонента. Протокол, служба или клиент|  
+|/i|Предоставляет идентификатор компонента|  
+|/s|Предоставляет тип отображаемых компонентов<br /><br />\та = адаптеры, n = компоненты сети|  
 |/?|Отображение справки в командной строке.|  
-## <a name="BKMK_Examples"></a>Примеры  
-Для установки протокола *пример* с помощью c:\oemdir\example.inf:  
+## <a name="BKMK_Examples"></a>Примеров  
+Чтобы установить *Пример* протокола с помощью к:\оемдир\ексампле.инф, выполните следующие действия.  
 ```  
 netcfg /l c:\oemdir\example.inf /c p /i example  
 ```  
-Чтобы установить *MS_Server* службы:  
+Чтобы установить службу *MS_Server* , выполните следующие действия.  
 ```  
 netcfg /c s /i MS_Server  
 ```  
-Чтобы установить TCP/IP, NetBIOS и клиент Microsoft для среды предустановки Windows  
+Установка протокола TCP/IP, NetBIOS и Microsoft Client для среды предустановки Windows  
 ```  
 netcfg /v /winpe  
 ```  
-Для отображения, если компонент *MS_IPX* установлен:  
+Чтобы отобразить, если компонент *MS_IPX* установлен:  
 ```  
 netcfg /q MS_IPX  
 ```  
-Чтобы удалить компонент *MS_IPX*:  
+Чтобы удалить *MS_IPX*компонента, выполните следующие действия.  
 ```  
 netcfg /u MS_IPX  
 ```  
-Чтобы показать все компоненты net.  
+Чтобы отобразить все установленные сетевые компоненты, выполните следующие действия.  
 ```  
 netcfg /s n  
 ```  
-Для привязки пути, содержащие показано *MS_TCPIP*:  
+Для отображения путей привязки, содержащих *MS_TCPIP*:  
 ```  
 netcfg /b ms_tcpip  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getnotifyinterface
-description: Раздел Windows команды для **bitsadmin getnotifyinterface** -определяет, если другая программа зарегистрировал интерфейс обратного вызова COM для указанного задания.
+description: Раздел команд Windows для **битсадмин жетнотифинтерфаце** . определяет, зарегистрировал ли другая программа интерфейс обратного вызова com для указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8316721a20cc477f9e8e15fc57b5d1c861da3ff4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 826e13cf8a3e54935ceb5a72ff82647cacfc3be5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381475"
 ---
 # <a name="bitsadmin-getnotifyinterface"></a>bitsadmin getnotifyinterface
 
-Определяет, зарегистрирован ли другая программа интерфейс обратного вызова COM (интерфейс уведомлений) для указанного задания.
+Определяет, зарегистрировал ли другая программа интерфейс обратного вызова COM (интерфейс уведомления) для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,22 +34,22 @@ bitsadmin /GetNotifyInterface <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-Отображает ЗАРЕГИСТРИРОВАННЫЕ или не ЗАРЕГИСТРИРОВАН.
+Отображает ЗАРЕГИСТРИРОВАНные или отмененные регистрации.
 
 > [!NOTE]
-> Это не позволяет указать программу, зарегистрировать интерфейс обратного вызова.
+> Невозможно определить программу, которая зарегистрировала интерфейс обратного вызова.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается интерфейс уведомлений для задания с именем *myDownloadJob*.
+В следующем примере извлекается интерфейс notify для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetNotifyInterface myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,8 +1,8 @@
 ---
-title: ksetup:addenctypeattr
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: адденктипеаттр'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 711da6a81269fc838ca091765ddbcac63c3fe6e4
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f207d36ff52be4b0dc222d96d62a2ac9e38f573f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59886395"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375305"
 ---
-# <a name="ksetupaddenctypeattr"></a>ksetup:addenctypeattr
+# <a name="ksetupaddenctypeattr"></a>ksetup: адденктипеаттр
 
 
 
@@ -36,47 +36,47 @@ ksetup /addenctypeattr <DomainName> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | 
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Имя домена >|Имя домена, к которому вы хотите установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
-|Тип шифрования|Необходимо принимать следующие поддерживаемые типы шифрования:</br>-   DES-CBC-CRC</br>-   DES-CBC-MD5</br>-   RC4-HMAC-MD5</br>-   AES128-CTS-HMAC-SHA1-96</br>-   AES256-CTS-HMAC-SHA1-96|
+|@no__t 0DomainName >|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
+|Тип шифрования|Должен быть одним из следующих поддерживаемых типов шифрования:</br>-DES-CBC-CRC</br>-DES-CBC-MD5</br>-RC4-HMAC-MD5</br>-AES128-CTS-HMAC-SHA1-96</br>-AES256-CTS-HMAC-SHA1-96|
 
 ## <a name="remarks"></a>Примечания
 
-Чтобы просмотреть тип шифрования для Kerberos билет предоставления билета (TGT) и ключ сеанса, выполните **klist** команды и просмотреть выходные данные.
+Чтобы просмотреть тип шифрования билета предоставления билета Kerberos (TGT) и ключа сеанса, выполните команду **klist** и просмотрите выходные данные.
 
-Можно задать или добавить несколько типов шифрования, разделив типов шифрования в команде с пробелом. Тем не менее вы можете делать только для одного домена за раз.
+Можно задать или добавить несколько типов шифрования, разделяя типы шифрования в команде пробелами. Однако это можно сделать только для одного домена за раз.
 
-Если команда успешного или неуспешного выполнения, отображается сообщение о состоянии.
+Если команда завершается успешно или неудачно, отображается сообщение о состоянии.
 
-Чтобы задать домен, который необходимо для подключения и использования, выполните **/Domain ksetup \<DomainName >** команды.
+Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/domain \<DomainName >** .
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Определите текущие типы шифрования, установленных на этом компьютере:
+Определите текущие типы шифрования, установленные на этом компьютере:
 ```
 klist
 ```
-Задайте для домена corp.contoso.com.
+Задайте для домена значение corp.contoso.com:
 ```
 ksetup /domain corp.contoso.com
 ```
-Добавьте тип шифрования AES-256-CTS-HMAC-SHA1-96 список возможных типов для домена corp.contoso.com:
+Добавьте тип шифрования AES-256-CTS-HMAC-SHA1-96 в список возможных типов для домена corp.contoso.com:
 ```
 ksetup /addenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ```
-Атрибут типа шифрования, задайте для AES-256-CTS-HMAC-SHA1-96 для домена corp.contoso.com:
+Задайте для атрибута типа шифрования значение AES-256-CTS-HMAC-SHA1-96 для домена corp.contoso.com:
 ```
 ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ```
-Убедитесь, что атрибут типа шифрования был так, как предполагалось, для домена:
+Убедитесь, что атрибут типа шифрования был установлен в соответствии с целью домена:
 ```
 ksetup /getenctypeattr corp.contoso.com
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [klist](klist.md)
--   [ksetup:domain](ksetup-domain.md)
--   [ksetup:setenctypeattr](ksetup-setenctypeattr.md)
--   [ksetup:getenctypeattr](ksetup-getenctypeattr.md)
--   [ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Klist](klist.md)
+-   [Ksetup:domain](ksetup-domain.md)
+-   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
+-   [Ksetup:getenctypeattr](ksetup-getenctypeattr.md)
+-   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

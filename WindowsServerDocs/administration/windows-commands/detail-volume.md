@@ -1,8 +1,8 @@
 ---
-title: Сведения о томе
-description: 'Раздел Windows команды для ***- '
+title: подробный том
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b7cae6dc9b82992b58c4f94801f90c0b7072492b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f8cd5889bfd2aea835cb64ef1a4076faee0f39b3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378468"
 ---
-# <a name="detail-volume"></a>Сведения о томе
+# <a name="detail-volume"></a>подробный том
 
 
 
-Отображает диски, на которых размещен текущий том.
+Отображает диски, на которых находится текущий том.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,17 +34,17 @@ detail volume
 
 ## <a name="remarks"></a>Примечания
 
--   Для успешного выполнения этой операции необходимо выбрать том. Используйте **выберите том** команду, чтобы выбрать том и перетянуть внимание к нему.
--   Сведения о томе не применяются к томам, только для чтения, например дисковод компакт-дисков или DVD-диска.
+-   Для выполнения этой операции необходимо выбрать том. Используйте команду **выбрать том** , чтобы выбрать том и переместить фокус на него.
+-   Сведения о томе неприменимы к томам только для чтения, например DVD-дискам или дисководам компакт-дисков.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы просмотреть все диски, в которых находится текущего тома, введите следующую команду:
+Чтобы просмотреть все диски, в которых находится текущий том, введите:
 ```
 detail volume
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getbytestotal
-description: Раздел Windows команды для **bitsadmin getbytestotal** -извлекает размер указанного задания.
+description: Раздел команд Windows для **битсадмин жетбитестотал** — получение размера указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7a33b02dbdea63e87bd8ce56a2d50e15ca19d05
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 38b0f09e13919e0c75d2b7429dd66f765b434de5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59882865"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381755"
 ---
 # <a name="bitsadmin-getbytestotal"></a>bitsadmin getbytestotal
 
 
 
-Возвращает размер указанного задания
+Возвращает размер указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,15 +36,15 @@ bitsadmin /GetBytesTotal <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается размер задания с именем *myDownloadJob*.
+В следующем примере извлекается размер задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetBytesTotal myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

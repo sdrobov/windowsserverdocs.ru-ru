@@ -2,7 +2,7 @@
 title: MEM в WinSAT
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb0d0027b1b896a51517fb8d58f0a7562fcbd960
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 23bbaf8551031a2e573b117e672a656213efde12
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868759"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361985"
 ---
 # <a name="winsat-mem"></a>MEM в WinSAT
 
@@ -65,5 +65,5 @@ winsat mem <parameters>
 -   Членство в группе локальных администраторов или эквивалентной является минимальным требованием для использования **WinSAT**. Команда должна быть выполнена из окна командной строки с повышенными привилегиями.
 -   Чтобы открыть окно командной строки с повышенными привилегиями, нажмите кнопку **Пуск**, выберите пункт **стандартные**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительная справка
 

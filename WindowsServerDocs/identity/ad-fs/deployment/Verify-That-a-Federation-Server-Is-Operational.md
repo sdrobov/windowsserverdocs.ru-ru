@@ -6,15 +6,15 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: bdaa43fcb501405529415de950ecdf40a91ed088
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 6d27c8d69affe001630d8deaa2c21f334f8f86ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868045"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408310"
 ---
 # <a name="verify-that-a-federation-server-is-operational"></a>Проверка работоспособности сервера федерации
 
@@ -47,7 +47,7 @@ ms.locfileid: "70868045"
   
 4.  В столбце **идентификатор события** найдите событие с идентификатором 100. Если сервер федерации настроен правильно, вы увидите новое событие — в журнале приложений Просмотр событий — с ИДЕНТИФИКАТОРом события 100. Это событие проверяет, удалось ли серверу федерации успешно взаимодействовать с служба федерации.  
   
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 [Контрольный список. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)  
   
 

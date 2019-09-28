@@ -1,9 +1,9 @@
 ---
-title: Шаг 3 Проверка развертываний
-description: Этот раздел является частью руководства развертывание одиночного сервера DirectAccess с помощью Приступая к работе мастера для Windows Server 2016
+title: Шаг 3. Проверка развертываний
+description: Эта статья является частью руководств по развертыванию одного сервера DirectAccess с помощью мастера начало работы для Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: 45e9edd6-acca-4d59-851a-a0cc8bd8b4c6
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e9e78ed78671c5c61fb3736cccf4e095b5186e23
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 29457f6f1859a8f3aee2f9d0f84e226b20905175
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281653"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388528"
 ---
-# <a name="step-3-verify-deployments"></a>Шаг 3 Проверка развертываний
+# <a name="step-3-verify-deployments"></a>Шаг 3. Проверка развертываний
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В этом разделе описывается, как для проверки правильности настройки базового развертывания DirectAccess.  
+В этом разделе описывается, как проверить правильность настройки базового развертывания DirectAccess.  
   
 ### <a name="to-verify-access-to-internal-resources-through-directaccess"></a>Проверка доступа к внутренним ресурсам с помощью DirectAccess  
   
@@ -39,7 +39,7 @@ ms.locfileid: "67281653"
   
 ## <a name="BKMK_Links"></a>Предыдущий шаг  
   
--   [Шаг 2. Настройка сервера DirectAccess](da-basic-configure-s2-server.md)  
+-   [Шаг 2. Настройка сервера DirectAccess @ no__t-0  
   
 
 

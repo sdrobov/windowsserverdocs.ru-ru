@@ -1,8 +1,8 @@
 ---
-title: Команда mdir FTP
-description: 'Раздел Windows команды для ***- '
+title: мдир FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4ec445c3e367a46dc40d10a37c0b3b8e53a10e3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 08aa5bb216a3d0155c100c761e476bb963e59311
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438329"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375851"
 ---
-# <a name="ftp-mdir"></a>ftp: mdir
+# <a name="ftp-mdir"></a>FTP: мдир
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает список каталогов, файлов и подкаталогов в удаленном каталоге.   
+Отображает список каталогов файлов и подкаталогов в удаленном каталоге.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 mdir <remoteFile>[ ] <LocalFile>  
@@ -34,20 +34,20 @@ mdir <remoteFile>[ ] <LocalFile>
 |  Параметр   |                               Описание                                |
 |--------------|--------------------------------------------------------------------------|
 | <remoteFile> |   Указывает каталог или файл, для которого требуется просмотреть список.   |
-| <LocalFile>  | Задает локальный файл для сохранения списка. Это обязательный параметр. |
+| <LocalFile>  | Указывает локальный файл для хранения списка. Это обязательный параметр. |
 
 ## <a name="remarks"></a>Примечания  
-- Можно использовать **mdir из** для указания нескольких файлов.  
-- Указание *Удаленный_файл*  
-  Введите дефис ( **-** ) использовать текущий рабочий каталог на удаленном компьютере.  
-- Указание *Локальный_файл*  
-  Введите дефис ( **-** ) для вывода списка на экране.  
-  ## <a name="BKMK_Examples"></a>Примеры  
-  Отобразить список каталогов **dir1** и **dir2** на экране  
+- **Мдир** можно использовать для указания нескольких файлов.  
+- Указание *ремотефиле*  
+  Введите дефис ( **-** ), чтобы использовать текущий рабочий каталог на удаленном компьютере.  
+- Задание параметра *локальный_файл*  
+  Введите дефис ( **-** ) для отображения списка на экране.  
+  ## <a name="BKMK_Examples"></a>Примеров  
+  Отображение списка каталогов **Dir1** и **Dir2** на экране  
   ```  
   mdir dir1 dir2 -  
   ```  
-  Сохранить объединенный список каталогов **dir1** и **dir2** в локальный файл с именем **файл**  
+  Сохраните Объединенный каталог со списком **Dir1** и **Dir2** в локальном файле с именем **дирлист. txt.**  
   ```  
   mdir dir1 dir2 dirlist.txt  
   ```  

@@ -1,8 +1,8 @@
 ---
-title: выйти из программы FTP
-description: 'Раздел Windows команды для ***- '
+title: выход из FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,28 +13,28 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32b527a01c2c82ff3847affb31e03ee7acf883ac
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dd523710fa5352c0d3df0d7f1cbc3ddeb3b49000
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59819485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376048"
 ---
-# <a name="ftp-quit"></a>FTP: выйти из программы
+# <a name="ftp-quit"></a>FTP: Quit
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Завершает сеанс ftp с удаленным компьютером и завершает работу **ftp** к командной строке операционной системы.   
+Завершает сеанс FTP с удаленным компьютером и выводит его **из** командной строки операционной системы.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 quit  
 ```  
 ### <a name="parameters"></a>Параметры  
 none  
-## <a name="BKMK_Examples"></a>Примеры  
-Завершить сеанс ftp с удаленного компьютера и выхода **ftp** к командной строке операционной системы.  
+## <a name="BKMK_Examples"></a>Примеров  
+Завершите сеанс FTP с удаленным компьютером и завершите работу службы **FTP** с командной строкой операционной системы.  
 ```  
 quit  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

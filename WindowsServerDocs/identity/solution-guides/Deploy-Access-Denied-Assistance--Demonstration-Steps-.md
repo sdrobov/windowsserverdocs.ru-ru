@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 441dad92611e1a4a1135bd15bbcdfd05f38c1be3
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: afc05f395753e5c5614e92d109d71e05980d5d92
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66445826"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407175"
 ---
 # <a name="deploy-access-denied-assistance-demonstration-steps"></a>Развертывание помощи при отказе в доступе (поэтапная демонстрация)
 
@@ -24,11 +24,11 @@ ms.locfileid: "66445826"
   
 **В этом документе**  
   
--   [Шаг 1. Настройка помощи при отказе в доступе](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_1)  
+-   [Шаг 1. Настройка отказа в доступе @ no__t-0  
   
--   [Шаг 2. Настройка параметров уведомлений по электронной почте](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_2)  
+-   [Шаг 2. Настройка параметров уведомлений по электронной почте @ no__t-0  
   
--   [Шаг 3. Проверьте правильность настройки помощи при отказе в доступе](Deploy-Access-Denied-Assistance--Demonstration-Steps-.md#BKMK_3)  
+-   [Шаг 3. Убедитесь, что Справка по отказу в доступе настроена правильно @ no__t-0  
   
 > [!NOTE]  
 > В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -38,7 +38,7 @@ ms.locfileid: "66445826"
   
 Настроить помощь при отказе в доступе для домена с помощью групповой политики можно следующим образом.  
   
-[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
 #### <a name="to-configure-access-denied-assistance-by-using-group-policy"></a>Настройка помощи при отказе в доступе с использованием групповой политики  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66445826"
   
     3.  Оставьте для оставшихся параметров значения по умолчанию.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
+![solution руководство по использованию](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -88,7 +88,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 Или же можно настроить помощь при отказе в доступе отдельно для каждого файлового сервера, используя консоль диспетчера ресурсов файлового сервера.  
   
-[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1a)  
+[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1a)  
   
 #### <a name="to-configure-access-denied-assistance-by-using-file-server-resource-manager"></a>Настройка помощи при отказе в доступе с использованием консоли диспетчера ресурсов файлового сервера  
   
@@ -118,7 +118,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\Software\Policies\Microsoft\W
   
 8.  Нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
+![solution руководство по использованию](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
   
@@ -128,7 +128,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 После настройки помощи при отказе в доступе необходимо включить эту функцию для всех типов файлов с помощью групповой политики.  
   
-[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1c)  
+[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1c)  
   
 #### <a name="to-configure-access-denied-assistance-for-all-file-types-by-using-group-policy"></a>Настройка помощи при отказе в доступе для всех типов файлов с использованием групповой политики  
   
@@ -142,7 +142,7 @@ Set-FSRMAdrSetting -Event "AccessDenied" -DisplayMessage "Type the text that the
   
 5.  Выберите вариант **Включен**, а затем нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
+![solution руководство по использованию](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования. 
   
@@ -153,7 +153,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
 Также вы можете указать отдельное сообщение при отказе в доступе для каждой общей папки на файловом сервере, используя консоль диспетчера ресурсов файлового сервера.  
   
-[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1b)  
+[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1b)  
   
 #### <a name="to-specify-a-separate-access-denied-message-for-a-shared-folder-by-using-file-server-resource-manager"></a>Указание отдельного сообщения при отказе в доступе для общей папки с использованием диспетчера ресурсов файлового сервера  
   
@@ -181,7 +181,7 @@ Set-GPRegistryValue -Name "Name of GPO" -key "HKLM\SOFTWARE\Policies\Microsoft\W
   
 7.  Нажмите кнопку **ОК**, а затем кнопку **Закрыть**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
+![solution руководство по использованию](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования. 
   
@@ -192,7 +192,7 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
 ## <a name="BKMK_2"></a>Шаг 2. Настройка параметров уведомлений по электронной почте  
 Параметры уведомлений по электронной почте необходимо настроить на каждом файловом сервере, который будет отправлять сообщения для помощи при отказе в доступе.  
   
-[Этот шаг, с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
 1.  Откройте диспетчер ресурсов файлового сервера. В диспетчере серверов откройте меню **Сервис** и щелкните **Диспетчер ресурсов файлового сервера**.  
   
@@ -204,13 +204,13 @@ Set-FSRMMgmtProperty -Namespace "folder path" -Name "AccessDeniedMessage_MS" -Va
   
     -   В поле **Имя или IP-адрес SMTP-сервера** введите имя или IP-адрес SMTP-сервера в вашей организации.  
   
-    -   В **по умолчанию Администраторы-получатели** и **по умолчанию «From» адрес электронной почты** введите адрес электронной почты администратора файлового сервера.  
+    -   В полях " **Администраторы по умолчанию** **" и "от" адреса электронной почты по умолчанию** введите адрес электронной почты администратора файлового сервера.  
   
 5.  Нажмите кнопку **Отправить проверочное сообщение электронной почты**, чтобы убедиться, что уведомления по электронной почте настроены правильно.  
   
 6.  Нажмите кнопку **ОК**.  
   
-![руководства по решениям](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
+![solution руководство по использованию](media/Deploy-Access-Denied-Assistance--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
   
@@ -219,16 +219,16 @@ set-FSRMSetting -SMTPServer "server1" -AdminEmailAddress "fileadmin@contoso.com"
 ```  
   
 ## <a name="BKMK_3"></a>Шаг 3. Проверка правильности настройки помощи при отказе в доступе  
-Можно проверить правильность настройки отказом в доступе, попросив пользователя, запустившего Windows 8 пытаются получить доступ к общей папке или к файлу в этой папке, что они не имеют доступа к. Когда появится сообщение об отказе в доступе, пользователь увидит кнопку **Запрос помощи** . Нажав кнопку "Запрос помощи", пользователь сможет указать обоснование доступа и отправить сообщение электронной почты владельцу папки или администратору файлового сервера. Владелец папки или администратор файлового сервера могут проверить, пришло ли сообщение и содержит ли оно необходимые сведения.  
+Чтобы убедиться в правильности настройки помощника по доступу, пользователь, работающий под управлением Windows 8, пытается получить доступ к общей папке или файлу в этой общей папке, к которой у них нет доступа. Когда появится сообщение об отказе в доступе, пользователь увидит кнопку **Запрос помощи** . Нажав кнопку "Запрос помощи", пользователь сможет указать обоснование доступа и отправить сообщение электронной почты владельцу папки или администратору файлового сервера. Владелец папки или администратор файлового сервера могут проверить, пришло ли сообщение и содержит ли оно необходимые сведения.  
   
 > [!IMPORTANT]  
-> Если вы хотите проверить помощь при отказе в доступе при пользователя, который работает под управлением Windows Server 2012, необходимо установить возможности рабочего стола перед подключением к общей папке.  
+> Если вы хотите проверить помощь при отказе в доступе, установив пользователя, работающего под управлением Windows Server 2012, перед подключением к общей папке необходимо установить возможности рабочего стола.  
   
 ## <a name="BKMK_Links"></a>См. также  
   
 -   [Сценарий. Помощь при отказе в доступе](Scenario--Access-Denied-Assistance.md)  
   
--   [Планирование отказом в доступе](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)  
+-   [Планирование помощи при отказе в доступе](assetId:///b169f0a4-8b97-4da8-ae4a-c8f1986d19e1)  
   
 -   [Динамический контроль доступа. Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
   

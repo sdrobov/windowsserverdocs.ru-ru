@@ -2,22 +2,22 @@
 title: Настройка аудита фильтра блокировки файлов
 description: В этой статье описывается процесс настройки аудита фильтра блокировки файлов для создания отчета аудита фильтра блокировки файлов
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 89592a9e1f61374d2d909678a91dc4a06e0b1972
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a9444e158a935f4e931aa7a5d634d970c5acc88e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59824475"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394568"
 ---
 # <a name="configure-file-screen-audit"></a>Настройка аудита фильтра блокировки файлов
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 С помощью диспетчера ресурсов файлового сервера можно записывать действия фильтра блокировки файлов в базу данных аудита. Данные, хранящиеся в этой базе данных, используются для создания отчета аудита фильтра блокировки файлов.
 
@@ -34,5 +34,5 @@ ms.locfileid: "59824475"
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
--   [Управление ресурсами хранилища](storage-reports-management.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
+-   [Управление отчетами хранилища](storage-reports-management.md)

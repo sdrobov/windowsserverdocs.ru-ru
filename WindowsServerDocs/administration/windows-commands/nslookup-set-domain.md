@@ -1,8 +1,8 @@
 ---
 title: nslookup set domain
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d1af9f30dd2c44111adecb477a6469333f4f7685
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: f140a371a6374baa7921ca823df469156593423c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436777"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372934"
 ---
 # <a name="nslookup-set-domain"></a>nslookup set domain
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменяет имя домена доменных имен (DNS) по умолчанию к имени, указанному.
+изменяет доменное имя DNS по умолчанию на указанное имя.
 ## <a name="syntax"></a>Синтаксис
 ```
 set domain=<DomainName>
@@ -33,12 +33,12 @@ set domain=<DomainName>
 
 |    Параметр    |                                           Описание                                           |
 |-----------------|-------------------------------------------------------------------------------------------------|
-|  <DomainName>   | Указывает новое имя для DNS-имя домена по умолчанию. Имя домена по умолчанию — имя узла. |
-| {help &#124; ?} |                      Отображает краткое описание **nslookup** подкоманды.                      |
+|  <DomainName>   | Указывает новое имя для доменного имени DNS по умолчанию. Доменное имя по умолчанию — имя узла. |
+| {Help &#124; ?} |                      Отображает краткую сводку подкоманд **nslookup** .                      |
 
 ## <a name="remarks"></a>Примечания
-- DNS-имя домена по умолчанию добавляется к запросу поиска в зависимости от состояния **defname** и **поиска** параметры. Список поиска DNS домена содержит родительские для домена DNS, если он имеет по крайней мере два компонента в его имени. Например если DNS-домена по умолчанию — mfg.widgets.com, список поиска называется mfg.widgets.com и widgets.com. Используйте **set srchlist используется** команду, чтобы указать другой список и **установить все** команду, чтобы отобразить в списке.
+- Доменное имя DNS по умолчанию добавляется к поисковому запросу в зависимости от состояния параметров **дефнаме** и **поиска** . Список поиска доменов DNS содержит родительские домены DNS по умолчанию, если в имени содержится по крайней мере два компонента. Например, если домен DNS по умолчанию — mfg.widgets.com, список поиска будет называться как mfg.widgets.com, так и widgets.com. Используйте команду **Set срчлист** , чтобы указать другой список, и команда **Set All** для вывода списка.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [nslookup set srchlist используется](nslookup-set-srchlist.md)
-  [nslookup задать все](nslookup-set-all.md)
+  [Синтаксис командной строки](command-line-syntax-key.md)
+  [nslookup set срчлист](nslookup-set-srchlist.md)
+  [nslookup set ALL](nslookup-set-all.md)

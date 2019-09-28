@@ -1,39 +1,39 @@
 ---
-title: Выберите, следует ли установить HGS в свой собственный нового леса или в существующем лесу бастиона
+title: Выберите, следует ли устанавливать HGS в новом лесу или в существующем лесу бастиона.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 4e02cd37391e629c9b947095fe32626bd15726ff
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 28c7eceefa4747a35d1b989df4a2c5e43a8d6a42
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827505"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386788"
 ---
-# <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>Выберите, следует ли установить HGS в свой собственный выделенный лес или в существующем лесу бастиона
+# <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>Выберите, следует ли устанавливать HGS в собственном выделенном лесу или в существующем лесу бастиона.
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 
-В лесу Active Directory для HGS важна, так как его Администраторы имеют доступ к ключам, что элемент управления экранированных виртуальных машин. Установка по умолчанию будет установить новый лес выделенный для HGS и настроить другие зависимости. Этот вариант рекомендуется, поскольку среде является самодостаточным и известно для обеспечения безопасности при его создании. 
+Лес Active Directory для HGS является конфиденциальным, так как его администраторы имеют доступ к ключам, которые управляют экранированными виртуальными машинами. При установке по умолчанию будет настроен новый лес, выделенный для HGS, и настроены другие зависимости. Этот вариант рекомендуется, так как среда самодостаточна и безопасна при ее создании. 
 
-Только технические требования для установки HGS в существующем лесу будет добавляться в корневом домене; некорневых домены не поддерживаются. Но существуют также эксплуатационные требования и связанные с безопасностью рекомендации по использованию существующего леса. Подходящий лесов создаются специально для обслуживания одной конфиденциальные функции, такие как леса, используемые [Privileged Access Management для AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) или [усиленной безопасности администратора среды (ESAE) лес](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). Таких лесов обычно имеют следующие характеристики:
+Единственным техническим требованием для установки HGS в существующем лесу является добавление его в корневой домен. Некорневые домены не поддерживаются. Но существуют также эксплуатационные требования и рекомендации по обеспечению безопасности для использования существующего леса. Подходящие леса предназначены специально для обслуживания одной конфиденциальной функции, такой как лес, используемый [privileged Access Management для AD DS](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services) или [леса расширенной административной среды (ЕСАЕ)](https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access-reference-material#ESAE_BM). Такие леса обычно представляют следующие характеристики:
 
-- У них есть несколько администраторов (отдельно от администраторов структуры)
-- Они имеют небольшое количество входов
+- У них несколько администраторов (отделены от администраторов структуры)
+- У них небольшое количество входов
 - Они не являются универсальными по своей природе 
 
-Лесов общего назначения, такие как рабочий лес не подходят для использования с HGS. Fabric лесов также уже не годятся, поскольку HGS должен быть изолирован от администраторов структуры.
+Леса общего назначения, такие как рабочие леса, не подходят для использования в HGS. Леса структуры также не подходят, так как HGS необходимо изолировать от администраторов структуры.
 
 ## <a name="next-step"></a>Дальнейшие действия
 
-Выберите вариант установки, который лучше всего подходит для вашей среды:
+Выберите вариант установки, который лучше подходит для вашей среды:
 
-- [Установка HGS в свой собственный выделенный лес](guarded-fabric-install-hgs-default.md)
+- [Установка HGS в собственном выделенном лесу](guarded-fabric-install-hgs-default.md)
 - [Установка HGS в существующем лесу бастиона](guarded-fabric-install-hgs-in-a-bastion-forest.md)
 
 

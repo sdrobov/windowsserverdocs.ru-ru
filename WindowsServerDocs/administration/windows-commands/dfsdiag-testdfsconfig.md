@@ -1,8 +1,8 @@
 ---
-title: dfsdiag TestDFSConfig
-description: 'Раздел Windows команды для ***- '
+title: дфсдиаг Тестдфсконфиг
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,30 +13,30 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 922b78b87f3bb66765b87348a3bf136e14c9e837
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8008e02d588edaa6fe7700a331c43f9680d89431
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436132"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378418"
 ---
-# <a name="dfsdiag-testdfsconfig"></a>dfsdiag TestDFSConfig
+# <a name="dfsdiag-testdfsconfig"></a>дфсдиаг Тестдфсконфиг
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Проверяет конфигурацию распределенной файловой системы \(DFS\) пространства имен, выполнив следующие действия:  
+Проверяет конфигурацию пространства имен распределенная файловая система \(DFS @ no__t-1, выполняя следующие действия.  
   
--   проверяет, что службу пространств имен DFS запущена и что тип запуска установлен Авто на всех серверах пространства имен.  
+-   проверяет, что служба пространства имен DFS запущена и для нее задан тип запуска автоматически на всех серверах пространства имен.  
   
--   Проверяет согласованность между серверами пространства имен DFS конфигурации реестра.  
+-   проверяет, является ли конфигурация реестра DFS согласованной между серверами пространства имен.  
   
--   Проверяет следующие зависимости на кластеризованных пространство имен серверов, работающих под управлением Windows Server 2008 или более поздней версии:  
+-   Проверяет следующие зависимости на серверах кластеризованных пространств имен, работающих под Windows Server 2008 или более поздней версии:  
   
-    -   Пространство имен корневого зависимости ресурса для ресурса сетевого имени.  
+    -   Зависимость корневого ресурса пространства имен от ресурса сетевого имени.  
   
-    -   Сети имя ресурса зависимость от ресурса IP-адреса.  
+    -   Зависимость ресурса сетевого имени от ресурса IP-адреса.  
   
-    -   Зависимости ресурса корневого пространства имен на ресурс физического диска.  
+    -   Зависимость корневого ресурса пространства имен от ресурса физического диска.  
   
   
   
@@ -50,10 +50,10 @@ dfsdiag /TestDFSConfig /DFSRoot:<namespace>
   
 |       Параметр       |               Описание               |
 |-----------------------|-----------------------------------------|
-| \/DFSRoot:<namespace> | Пространство имен \(корень DFS\) для диагностики. |
+| \/DFSRoot: <namespace> | Пространство имен \(DFS root @ no__t-1 для диагностики. |
   
-## <a name="BKMK_Examples"></a>Примеры  
-Чтобы подлежит Уточнению введите:  
+## <a name="BKMK_Examples"></a>Примеров  
+Для УТОЧНЕНия введите:  
   
 ```  
 dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace  
@@ -63,6 +63,6 @@ dfsdiag /TestDFSConfig /DFSRoot:\\Contoso.com\MyNamespace
   
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
--   [dfsdiag](dfsdiag.md)  
+-   [дфсдиаг](dfsdiag.md)  
   
 

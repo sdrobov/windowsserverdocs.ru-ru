@@ -1,8 +1,8 @@
 ---
 title: cprofile
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a581a01b95456c56c6cbf177dfd6049c3514f1d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: efc296d43ff6cbe0c409f244160a9c14786d3be0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434199"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378993"
 ---
 # <a name="cprofile"></a>cprofile
 
 
 
-Cprofile - Cprofile является устаревшим и не обязательно будут поддерживаться в будущих версиях Windows.
+Кпрофиле-Кпрофиле является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
 
-Cprofile.exe: Очистить профиль. Данное средство включено во всех операционных системах Windows Server 2003, за исключением Windows Server 2003, Web edition. Дополнительные сведения см. в разделе [средства служб терминалов и параметры](https://technet.microsoft.com/library/cc776289(v=ws.10).aspx).
+Кпрофиле. exe: Чистый профиль. Это средство входит во все операционные системы Windows Server 2003, кроме Windows Server 2003, Web Edition. Дополнительные сведения см. в разделе [средства и параметры служб терминалов](https://technet.microsoft.com/library/cc776289(v=ws.10).aspx).
 
 # #
 

@@ -1,8 +1,8 @@
 ---
 title: nslookup set all
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fa534ec194486d334aa7c5b615ce32496a4ba43b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 0e752427a07fe290c3f70e7dce60a0e21f805e8d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436822"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373028"
 ---
 # <a name="nslookup-set-all"></a>nslookup set all
 
@@ -36,11 +36,11 @@ set all
 
 | Параметр | Описание |
 |-----------|-------------|
-|   {справки   |     ?}      |
+|   {Справка   |     ?}      |
 
 ## <a name="remarks"></a>Примечания
 
--   **Установить все** также выводит сведения о сервере по умолчанию и компьютер (узел).
+-   При **установке всех** параметров также выводятся сведения о сервере и компьютере по умолчанию (то есть узле).
 
 #### <a name="additional-references"></a>Дополнительная справка
 

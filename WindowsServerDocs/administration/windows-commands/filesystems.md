@@ -1,8 +1,8 @@
 ---
 title: файловые системы
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f19d1977c5a66f5835326b31b1fae573af43d455
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6ebb65223bd69af2253bc77dcbe2c433255513b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377185"
 ---
 # <a name="filesystems"></a>файловые системы
 
 
 
-Отображает сведения о текущей файловой системы тома с фокусом, а также список файловых систем, которые поддерживаются для форматирования тома.
+Отображает сведения о текущей файловой системе тома, имеющего фокус, и перечисляет файловые системы, поддерживаемые для форматирования тома.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ filesystems
 
 ## <a name="remarks"></a>Примечания
 
--   Для успешного выполнения этой операции необходимо выбрать том. Используйте **выберите том** команду, чтобы выбрать том и перетянуть внимание к нему.
+-   Для выполнения этой операции необходимо выбрать том. Используйте команду **выбрать том** , чтобы выбрать том и переместить фокус на него.
 
 #### <a name="additional-references"></a>Дополнительная справка
 

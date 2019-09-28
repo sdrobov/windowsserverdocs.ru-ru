@@ -1,7 +1,7 @@
 ---
 title: Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server
 description: Список операционных систем Windows, поддерживаемых для использования в качестве гостя на виртуальной машине. Также содержит ссылки на похожие статьи для предыдущих версий Hyper-V.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: lizap
 ms.author: elizapo
 ms.date: 01/08/2019
-ms.openlocfilehash: b24c67de90f8773eec69f10381bd9ce1e121853e
-ms.sourcegitcommit: b68ff64ecd87959cd2acde4a47506a01035b542a
+ms.openlocfilehash: f491f283861098bbe98e253cb2ff1d5cee2ac57f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68830880"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365465"
 ---
 # <a name="supported-windows-guest-operating-systems-for-hyper-v-on-windows-server"></a>Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server
 
@@ -34,7 +34,7 @@ Hyper-V поддерживает несколько версий дистриб�
 |-------------------------------------|----------------------------------------|------------------------|---------|  
 |Windows Server версии 1903 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы||
 |Windows Server, версия 1809 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы|| 
-|Windows Server 2019 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы||
+|Windows Server 2019 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы||
 |Windows Server версии 1803 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы|| 
 |Windows Server 2016 |240 для поколения 2;<br>64 для поколения 1|Встроенные методы|| 
 |Windows Server 2012 R2 |64|Встроенные методы||  
@@ -59,7 +59,7 @@ Hyper-V поддерживает несколько версий дистриб�
 |Операционная система узла|Раздел|  
 |-------------------------|---------|  
 |Windows 10|[Поддерживаемые гостевые операционные системы для клиента Hyper-V в Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/about/supported-guest-os)|  
-|Windows Server 2012 R2 и Windows 8.1|-   [Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server 2012 R2 и Windows 8.1](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Виртуальные машины Linux и FreeBSD в Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
+|Windows Server 2012 R2 и Windows 8.1|-   [Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server 2012 R2 и Windows 8.1](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [виртуальных машин Linux и FreeBSD в Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|  
 |Windows Server 2012 и Windows 8|[Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server 2012 и Windows 8](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|  
 |Windows Server 2008 и Windows Server 2008 R2|[О виртуальных машинах и гостевых операционных системах](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|  
   

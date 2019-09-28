@@ -1,8 +1,8 @@
 ---
-title: Подкоманды start-MulticastTransmission
-description: 'Раздел Windows команды для ***- '
+title: Подкоманда Start-Мултикасттрансмиссион
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7e3e59a0907caf2769d5df00aeaf00589ab450d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c0e05a1d625e560d85f0af6ae1d76ef8116ddfd8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842685"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383829"
 ---
-# <a name="subcommand-start-multicasttransmission"></a>Подкоманда: start-MulticastTransmission
+# <a name="subcommand-start-multicasttransmission"></a>Подкоманда: Start-Мултикасттрансмиссион
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Запуск передачи образа рассылкой по расписанию.
+запускает пересылку образа по расписанию.
 ## <a name="syntax"></a>Синтаксис
 **Windows Server 2008**
 ```
@@ -49,27 +49,27 @@ wdsutil [Options] /start-MulticastTransmissiomedia:<Image name>
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-мультимедиа:<Image name>|Задает имя образа.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-Тип носителя: {установить&#124;загрузки}|Задает тип изображения. Обратите внимание, что этот параметр должен быть установлен в **установить** для Windows Server 2008.|
-|/ Архитектура: {x86 &#124; ia64 &#124; x64}|Архитектура загрузочного образа, который связан с Запуск передачи. Так как это может быть то же имя образа для загрузочных образов в различных архитектур, следует указать архитектуры, чтобы убедиться, что используется правильный передачи.|
-|\mediaGroup:<Image group name>]|Задает группу изображений изображения. Если указано имя группы не образа и только один образ группа существует на сервере, будет использоваться этой группы образов. Если на сервере существует более одной группы образов, необходимо использовать этот параметр, чтобы указать имя группы.|
-|[/ Filename:<File name>]|Указывает имя файла, содержащего изображение. Если изображение не может быть однозначно идентифицируется по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы запустить многоадресной передачи, введите одно из следующих:
+носитель: <Image name>|Указывает имя изображения.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+mediaType: {Загрузка&#124;установки}|Указывает тип изображения. Обратите внимание, что этот параметр должен быть установлен для **установки** для Windows Server 2008.|
+|/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Архитектура загрузочного образа, связанного с передачей для запуска. Так как для образов загрузки можно использовать одно и то же имя образа в разных архитектурах, следует указать архитектуру, чтобы гарантировать использование правильной передачи.|
+|\Медиаграуп: <Image group name>]|Задает группу образов для образа. Если имя группы образов не указано и на сервере существует только одна группа образов, будет использоваться эта группа образов. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать имя группы образов.|
+|[/Филенаме: <File name>]|Указывает имя файла, содержащего образ. Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы начать многоадресную передачу, введите одно из следующих действий:
 ```
 wdsutil /start-MulticastTransmissiomedia:"Vista with Office"
 /Imagetype:Install
 wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:"Vista with Officemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
-Для запуска загрузочного образа многоадресной передачи для Windows Server 2008 R2, тип:
+Чтобы запустить многоадресную передачу образа загрузки для Windows Server 2008 R2, введите:
 ```
 wdsutil /start-MulticastTransmission /Server:MyWDSServemedia:"X64 Boot Imagemediatype:Boot /Architecture:x64
 /Filename:boot.wim\n\
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-AllMulticastTransmissions](using-the-get-allmulticasttransmissions-command.md)
-[с помощью команды get-MulticastTransmission](using-the-get-multicasttransmission-command.md) 
- [С помощью команды новый MulticastTransmission](using-the-new-multicasttransmission-command.md)
-[с помощью команды remove-MulticastTransmission](using-the-remove-multicasttransmission-command.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды get-аллмултикасттрансмиссионс](using-the-get-allmulticasttransmissions-command.md)
+ с помощью команды[Get-мултикасттрансмиссион](using-the-get-multicasttransmission-command.md)
+ с помощью[команды New-мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)
+[с помощью Команда Remove-Мултикасттрансмиссион](using-the-remove-multicasttransmission-command.md)

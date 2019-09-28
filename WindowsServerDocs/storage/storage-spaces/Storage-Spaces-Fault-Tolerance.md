@@ -1,6 +1,6 @@
 ---
 title: Отказоустойчивость и эффективность хранения данных в дисковых пространствах прямого подключения
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: cosmosdarwin
 ms.manager: eldenc
 ms.technology: storage-spaces
@@ -10,16 +10,16 @@ ms.date: 10/11/2017
 ms.assetid: 5e1d7ecc-e22e-467f-8142-bad6d82fc5d0
 description: Описание типов устойчивости в локальных дисковых пространствах, в том числе зеркального отображения и четности.
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e6a29e82a85ec9570cda827060dfe1cdf192c53
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d2220584c0021352110b27c3107d1113eb17ef59
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59849575"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393805"
 ---
 # <a name="fault-tolerance-and-storage-efficiency-in-storage-spaces-direct"></a>Отказоустойчивость и эффективность хранения данных в дисковых пространствах прямого подключения
 
->Область применения. Windows Server 2016
+>Относится к: Windows Server 2016
 
 В этом разделе представлены параметры устойчивости, доступные в [дисковых пространствах прямого подключения](storage-spaces-direct-overview.md), и описаны требования к масштабированию, эффективность хранилищ и общие преимущества и недостатки каждого из них. Кроме того, в разделе приводятся некоторые инструкции по использованию, которые помогут вам приступить к работе, и ссылки на полезные документы, блоги и дополнительные материалы.
 
@@ -102,7 +102,7 @@ ms.locfileid: "59849575"
 > [!IMPORTANT]
 > Мы рекомендуем использовать зеркалирование для большинства требовательных к производительности рабочих нагрузок. Дополнительные сведения о том, как обеспечить баланс производительности и емкости в зависимости от рабочей нагрузки, см. в разделе [Планирование томов](plan-volumes.md#choosing-the-resiliency-type).
 
-## <a name="summary"></a>Сводка
+## <a name="summary"></a>Суммар
 
 В этом разделе описываются типы устойчивости, доступные в локальных дисковых пространствах, минимальные требования к масштабированию при использовании каждого из этих типов, число допустимых сбоев для каждого из этих типов и соответствующая эффективность хранения.
 
@@ -171,7 +171,7 @@ ms.locfileid: "59849575"
 |    15                 |    RS 6+2           |    75 %        |
 |    16                 |    LRC (12, 2, 1)   |    80 %        |
 
-## <a name="examples"></a>Примеры
+## <a name="examples"></a>Примеров
 
 Если у вас больше двух серверов, рекомендуется использовать трехстороннее зеркалирование и (или) двойную четность, так как эти варианты обеспечивают лучшую отказоустойчивость. В частности, они обеспечивают безопасность и постоянную доступность всех данных даже в случае одновременного отказа двух доменов сбоя (т. е. двух серверов в случае локальных дисковых пространств).
 
@@ -179,18 +179,18 @@ ms.locfileid: "59849575"
 
 Следующие шесть примеров показывают, какие ситуации **допустимы** при использовании трехстороннего зеркалирования и (или) двойной четности.
 
-- **1.**    Один диск потерян (включая кэш-дисках)
-- **2.**    Один сервер потеряно
+- **1.**    Потерян один диск (включая диски кэша)
+- **2.**    Один сервер потерян
 
 ![fault-tolerance-examples-1-and-2](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-12.png)
 
-- **3.**    Один сервер и один диск потеряно
-- **4.**    Два диска, теряются при разных серверах
+- **3-5.**    Один сервер и один диск утеряны
+- **четырех.**    Два диска теряются на разных серверах
 
 ![fault-tolerance-examples-3-and-4](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-34.png)
 
-- **5.**    Потеряно более двух дисков, до тех пор, пока не более двух серверы больше подвержены
-- **6.**    Двух серверов потеряна
+- **5.0.**    Потеряно более двух дисков, пока затрагивается не более двух серверов
+- **1-6.**    Потеряны два сервера
 
 ![fault-tolerance-examples-5-and-6](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-56.png)
 
@@ -200,8 +200,8 @@ ms.locfileid: "59849575"
 
 На протяжении жизненного цикла дисковые пространства могут обработать любое количество сбоев, потому что после каждого сбоя восстанавливается полная устойчивость системы (при наличии достаточного времени). При этом в любой момент времени безопасно переносить отказы могут не более двух доменов сбоя. Ниже приведены примеры ситуаций, с которыми **не могут** справиться трехстороннее зеркалирование и (или) двойная четность.
 
-- **7.** Диски, теряются при три или более серверов за один раз
-- **8.** Три или более серверов потеряна за один раз
+- **7.** Диски, потерянные на трех или более серверах одновременно
+- **8.** Три или более серверов теряются одновременно
 
 ![fault-tolerance-examples-7-and-8](media/Storage-Spaces-Fault-Tolerance/Fault-Tolerance-Example-78.png)
 
@@ -213,10 +213,10 @@ ms.locfileid: "59849575"
 
 Каждая ссылка ниже упоминается в тексте этого раздела.
 
-- [Дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
-- [Информация о домене сбоя в Windows Server 2016](../../failover-clustering/fault-domains.md)
-- [Помехоустойчивое кодирование в Azure с использованием Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
-- [Коды реконструкции локального и ускорение тома с контролем четности](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
-- [Тома в API управления хранилищами](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
-- [Демонстрация эффективность хранения в корпорации Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
-- [Емкости калькулятор предварительной версии для хранения пространствами.](http://aka.ms/s2dcalc)
+- [Локальные дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
+- [Поддержка домена сбоя в Windows Server 2016](../../failover-clustering/fault-domains.md)
+- [Очистки кода в Azure с помощью Microsoft Research](https://www.microsoft.com/en-us/research/publication/erasure-coding-in-windows-azure-storage/)
+- [Коды локальных реконструкции и сочетания томов четности](https://blogs.technet.microsoft.com/filecab/2016/09/06/volume-resiliency-and-efficiency-in-storage-spaces-direct/)
+- [Тома в API управления хранилищем](https://blogs.technet.microsoft.com/filecab/2016/08/29/deep-dive-volumes-in-spaces-direct/)
+- [Демонстрация эффективности хранения данных в Microsoft Ignite 2016](https://www.youtube.com/watch?v=-LK2ViRGbWs&t=36m55s)
+- [Предварительная версия калькулятора емкости для Локальные дисковые пространства](http://aka.ms/s2dcalc)

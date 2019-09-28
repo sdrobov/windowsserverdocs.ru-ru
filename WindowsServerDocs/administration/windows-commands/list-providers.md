@@ -1,8 +1,8 @@
 ---
-title: Список поставщиков
-description: 'Раздел Windows команды для ***- '
+title: список поставщиков
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f94df982205d639f64dde2cfb014c851bac02b61
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ed2da9e5c38c13377e694f9e39a63a15b9f144b2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840645"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374742"
 ---
-# <a name="list-providers"></a>Список поставщиков
+# <a name="list-providers"></a>список поставщиков
 
 
 
-Список поставщиков теневых копий, зарегистрированных в системе.
+Перечисляет поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -34,13 +34,13 @@ ms.locfileid: "59840645"
 list providers
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы получить список поставщиков зарегистрированные на данный момент теневых копий, введите следующую команду:
+Чтобы получить список зарегистрированных в данный момент поставщиков теневых копий, введите:
 ```
 list providers
 ```
-Выходные данные, аналогичную появится следующее:
+Выходные данные, аналогичные показанным ниже.
 ```
 * ProviderID: {b5946137-7b9f-4925-af80-51abd60b20d5}
         Type: [1] VSS_PROV_SYSTEM
@@ -52,4 +52,4 @@ list providers
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

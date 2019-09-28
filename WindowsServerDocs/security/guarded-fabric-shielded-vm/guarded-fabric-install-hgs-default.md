@@ -1,26 +1,26 @@
 ---
 title: Установка HGS в новом лесу
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 84f88d96f1e16767dec3b21b34aa226e544afaac
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6dfbe24fb4d9011b48f366d7e5df92fdb80685d5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447403"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386590"
 ---
 # <a name="install-hgs-in-a-new-forest"></a>Установка HGS в новом лесу 
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 ## <a name="add-the-hgs-server-role"></a>Добавление роли сервера HGS
 
-Выполните следующие команды в сеанс PowerShell с повышенными правами для добавления роли сервера HGS и установить HGS.
+Выполните следующие команды в сеансе PowerShell с повышенными привилегиями, чтобы добавить роль сервера HGS и установить HGS.
 
 [!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
 
@@ -30,9 +30,9 @@ ms.locfileid: "66447403"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Дальнейшие действия для настройки аттестации на основе доверенного платформенного МОДУЛЯ, см. в разделе [инициализировать кластер HGS, использующий режим доверенного платформенного МОДУЛЯ на нового выделенного леса (по умолчанию)](guarded-fabric-initialize-hgs-tpm-mode-default.md).
-- Для выполнения следующих действий настроить аттестацию ключей узла, см. в разделе [инициализировать кластер HGS, используя режим ключа из нового выделенного леса (по умолчанию)](guarded-fabric-initialize-hgs-key-mode-default.md).
-- Для следующего действия по настройке аттестации на основе администратора (является устаревшим в Windows Server 2019), см. в разделе [инициализировать кластер HGS, используя режим AD из нового выделенного леса (по умолчанию)](guarded-fabric-initialize-hgs-ad-mode-default.md).
+- Дальнейшие действия по настройке аттестации на основе TPM см. в статье [Инициализация кластера HGS с помощью режима TPM в новом выделенном лесу (по умолчанию)](guarded-fabric-initialize-hgs-tpm-mode-default.md).
+- Дальнейшие действия по настройке аттестации ключа узла см. в статье [Инициализация кластера HGS с помощью режима ключей в новом выделенном лесу (по умолчанию)](guarded-fabric-initialize-hgs-key-mode-default.md).
+- Дальнейшие действия по настройке аттестации на основе администратора (не рекомендуется в Windows Server 2019) см. в статье [Инициализация кластера HGS с помощью режима AD в новом выделенном лесу (по умолчанию)](guarded-fabric-initialize-hgs-ad-mode-default.md).
 
 ## <a name="next-step"></a>Дальнейшие действия
 

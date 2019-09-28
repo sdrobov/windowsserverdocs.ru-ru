@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Раздел Windows команды для ***-bitsadmin setnotifycmdlineSets команду командной строки, который будет выполняться после завершения задания передачи данных, или когда задание переходит в состояние.
+description: Раздел команд Windows для * * * *-битсадмин Сетнотификмдлинесетс команда командной строки, которая будет выполняться, когда задание завершает передачу данных или когда задание переходит в состояние.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f1cea4e99cbaaf3881c6f436bdb932090ad6b006
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a307fe552e7d8ec5852de953a3a439cb02246ec
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859075"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380478"
 ---
 # <a name="bitsadmin-setnotifycmdline"></a>bitsadmin setnotifycmdline
 
-Задает команду командной строки, который будет выполняться после завершения задания передачи данных, или когда задание переходит в состояние.
+Задает команду командной строки, которая будет запускаться, когда задание завершает передачу данных или когда задание переходит в состояние.
 
-**БИТЫ 1.2 и более ранних версий**: Не поддерживается.
+**BITS 1,2 и более ранних версий**: Не поддерживается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
-|ProgramName|Имя команды для выполнения после завершения задания.|
-|ProgramParameters|Параметры, которые вы хотите передать *ProgramName*.|
+|Job|Отображаемое имя задания или идентификатор GUID|
+|ProgramName|Имя команды, выполняемой по завершении задания.|
+|програмпараметерс|Параметры, которые необходимо передать в *ProgramName*.|
 
 ## <a name="remarks"></a>Примечания
 
-Можно указать значение NULL для *ProgramName* и *ProgramParameters*. Если *ProgramName* имеет значение NULL, *ProgramParameters* должен иметь значение NULL.
+Для *ProgramName* и *програмпараметерс*можно указать значение null. Если *ProgramName* имеет значение null, *програмпараметерс* должен иметь значение null.
 
 > [!IMPORTANT]
-> Если *ProgramParameters* не NULL, то первый параметр в *ProgramParameters* должно соответствовать *ProgramName*.
+> Если *програмпараметерс* не равен null, то первый параметр в *Програмпараметерс* должен соответствовать *ProgramName*.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере задается команда командной строки, используемые службой для запуска блокнота, когда задание с именем *myDownloadJob* завершения.
+В следующем примере задается команда командной строки, используемая службой для запуска программы «Блокнот» при завершении задания с именем *мидовнлоаджоб* .
 ```
 C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
@@ -59,4 +59,4 @@ C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe "not
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

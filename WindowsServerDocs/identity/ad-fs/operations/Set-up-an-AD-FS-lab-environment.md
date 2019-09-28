@@ -6,15 +6,15 @@ author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 5c91cb97a1b8371d1e3f8e496f026727681e2304
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 921cf4b4b5629df735b20ba59f239abfd6b0d6d6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865594"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407508"
 ---
 # <a name="set-up-an-ad-fs-lab-environment"></a>Настройка среды лаборатории AD FS
 
@@ -255,7 +255,7 @@ ms.locfileid: "70865594"
   
 2.  Скопируйте содержимое файлов C:Program Files (x86) Windows Identity Foundation Сдкв 3.5 Самплескуикк Стартвеб Аппликатионпассивередиректбаседклаимсаваревебапп в К:инетпубклаимапп.  
   
-3.  Редактируйте файл **Default.aspx.cs**, чтобы фильтрация утверждений не осуществлялась. Этот шаг нужен для того, чтобы в примере приложения отображались все утверждения, изданные сервером федерации. Выполните следующие действия:  
+3.  Редактируйте файл **Default.aspx.cs**, чтобы фильтрация утверждений не осуществлялась. Этот шаг нужен для того, чтобы в примере приложения отображались все утверждения, изданные сервером федерации. Выполните следующие действия.  
   
     1.  Откройте **Default.aspx.cs** в текстовом редакторе.  
   

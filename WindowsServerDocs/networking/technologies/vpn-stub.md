@@ -1,24 +1,24 @@
 ---
 title: Виртуальная частная сеть (VPN)
-description: В этом разделе предоставляет ссылки на документацию VPN для Windows Server 2016.
-ms.prod: windows-server-threshold
+description: Этот раздел содержит ссылки на документацию по VPN для Windows Server 2016.
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4d8454c9-701b-471e-9c34-caf1b90bfeba
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 5ca535efbd99fbee8025555d871e47b3576b4f75
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 82628378d10cabed52ed99bad24d6e8347db7259
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827735"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395838"
 ---
 # <a name="virtual-private-networking-vpn"></a>Виртуальная частная сеть (VPN)
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Документация по VPN теперь находится в **удаленного** этой библиотеки в разделе **удаленного доступа**. Перейдите к [виртуальную частную сеть (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
+Документация по VPN теперь находится в разделе **Удаленный** **доступ**в удаленной части этой библиотеки. Перейдите в раздел [Виртуальная частная сеть (VPN)](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/vpn-top).
 
 

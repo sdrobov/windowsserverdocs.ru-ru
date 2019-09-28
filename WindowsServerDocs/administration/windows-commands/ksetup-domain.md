@@ -1,8 +1,8 @@
 ---
-title: ksetup:domain
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: домен'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f53e807891b434709b1a8faed7aae8e8d444f6e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0a4d9f09def32c7518046c25887f4154020c5d7e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857455"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375124"
 ---
-# <a name="ksetupdomain"></a>ksetup:domain
+# <a name="ksetupdomain"></a>ksetup: домен
 
 
 
-Задает имя домена для всех операций Kerberos. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Задает доменное имя для всех операций Kerberos. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,21 +36,21 @@ ksetup /domain <DomainName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Имя домена >|Имя домена, к которому вы хотите установить соединение. Используйте полное доменное имя или простую форму имени, например contoso.com или contoso.|
+|@no__t 0DomainName >|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например contoso.com или contoso.|
 
 ## <a name="remarks"></a>Примечания
 
 Нет.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Установите подключение к допустимый домен, например Microsoft с помощью подкоманды /mapuser:
+Установите подключение к допустимому домену, например Microsoft, с помощью подкоманды/мапусер:
 ```
 ksetup /mapuser principal@realm domain-user /domain domain-name
 ```
-Если подключение установлено успешно, вы получите новый TGT или существующих TGT будет обновлен.
+После успешного подключения вы получите новый TGT или обновите существующий TGT.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,8 +1,8 @@
 ---
 title: logman create
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cb87ee824bb5802864d4e661fd231b8854ce8b40
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 22e6d19669152f3c9e4761ce2bde5b6d9e524e14
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837825"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374490"
 ---
 # <a name="logman-create"></a>logman create
 
@@ -34,10 +34,10 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 
 |Параметр|Описание|
 |---------|-----------|
-|[Logman создать счетчик](logman-create-counter.md)|Создание сборщика данных счетчика.|
-|[Logman создать трассировку](logman-create-trace.md)|Создание сборщика данных трассировки.|
-|[Logman Создание оповещения](logman-create-alert.md)|Создание сборщика данных оповещений.|
-|[Logman Создание cfg](logman-create-cfg.md)|Создание конфигурации сборщика данных.|
-|[Logman Создание api](logman-create-api.md)|Создание API трассировки сборщика данных.|
+|[переlogman создать счетчик](logman-create-counter.md)|Создание сборщика данных счетчиков.|
+|[создать трассировку Logman](logman-create-trace.md)|Создание сборщика данных трассировки.|
+|[создать оповещение Logman](logman-create-alert.md)|Создание сборщика данных предупреждений.|
+|[Logman Create cfg](logman-create-cfg.md)|Создание сборщика данных конфигурации.|
+|[Создание API Logman](logman-create-api.md)|Создание сборщика данных трассировки API.|
 
 #### <a name="additional-references"></a>Дополнительная справка

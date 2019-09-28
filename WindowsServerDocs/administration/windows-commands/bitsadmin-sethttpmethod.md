@@ -1,8 +1,8 @@
 ---
-title: bitsadmin sethttpmethod
-description: Раздел Windows команды для **bitsadmin sethttpmethod** -задает команду HTTP для использования.
+title: битсадмин сесттпмесод
+description: Раздел команд Windows для **битсадмин сесттпмесод** — ЗАДАЕТ команду HTTP для использования.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 710df3eedb0bbad60f28c519ef683d60ca55fcd2
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0f23b3b06bb3da448bb4cf18344aecfa31dcecd9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59866435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380608"
 ---
-# <a name="bitsadmin-sethttpmethod"></a>bitsadmin sethttpmethod
+# <a name="bitsadmin-sethttpmethod"></a>битсадмин сесттпмесод
 
-Задает команду HTTP для использования.
+Задает используемую команду HTTP.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,9 +33,9 @@ bitsadmin /GetHttpMethod <Job> <HTTPMethod>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
-|HTTPMethod|Для использования HTTP-команда|
+|Job|Отображаемое имя задания или идентификатор GUID|
+|HTTPMethod|Используемая команда HTTP|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

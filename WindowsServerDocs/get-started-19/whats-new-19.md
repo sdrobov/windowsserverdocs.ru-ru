@@ -1,19 +1,19 @@
 ---
 title: Новые возможности Windows Server 2019
 description: В этой статье приведен обзор новых возможностей Windows Server 2019, включая возможности рабочего стола, службу миграции хранилища, системную аналитику, сетевой адаптер Azure, улучшения Локальных дисковых пространств и другие изменения.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 665363c17cf5cb8d8ad52872128f2f63c07ea683
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 13eed225dfc144d5e7e59be13dbed14d4de8bb01
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868551"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360778"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Новые возможности Windows Server 2019
 

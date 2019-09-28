@@ -6,14 +6,14 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: b222cd4b97beecd25c14b9f8f39627bf46cb7716
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a579d0274ff4b53a72c17760a6d53ef796625d3a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869537"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356909"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center — известные проблемы
 
@@ -45,7 +45,7 @@ ms.locfileid: "70869537"
     New-NetFirewallRule -DisplayName "SmeInboundOpenException" -Description "Windows Admin Center inbound port exception" -LocalPort <port> -RemoteAddress Any -Protocol TCP
     ```
 
-## <a name="general"></a>Общее
+## <a name="general"></a>Общие
 
 - Если центр администрирования Windows установлен в качестве шлюза в **Windows Server 2016** при интенсивном использовании, то служба может аварийно завершить работу из-за ошибки в журнале событий ```Faulting application name: sme.exe``` , ```Faulting module name: WsmSvc.dll```который содержит и. Это вызвано ошибкой, которая была исправлена в Windows Server 2019. Исправление для Windows Server 2016 включало накопительное обновление за Февраль 2019, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
@@ -146,7 +146,7 @@ ms.locfileid: "70869537"
 
 ### <a name="files"></a>Файлы
 
-- Передача и скачивание больших файлов еще не поддерживаются. (\~предел 100 МБ) [12524234]
+- Передача и скачивание больших файлов еще не поддерживаются. (@no__t — ограничение 0100mb) [12524234]
 
 ### <a name="powershell"></a>PowerShell
 
@@ -192,7 +192,7 @@ ms.locfileid: "70869537"
 
 - При выборе автоматической перезагрузки она произойдет до того, как состояние обновится до 100%. [13098852]
 
-### <a name="storage"></a>Служба хранилища
+### <a name="storage"></a>Хранилище
 
 - Получение сведений о квотах может завершиться ошибкой без уведомления об ошибке (по-прежнему возникает ошибка в консоли браузера) [18962274]
 

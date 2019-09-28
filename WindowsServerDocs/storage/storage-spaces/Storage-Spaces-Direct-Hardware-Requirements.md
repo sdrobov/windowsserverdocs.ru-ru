@@ -1,6 +1,6 @@
 ---
 title: Требования к оборудованию для локальных дисковых пространств
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 description: Минимальные требования к оборудованию для тестирования локальных дисковых пространств.
 ms.author: eldenc
 ms.manager: eldenc
@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 08/05/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f3f8bff39550108b0417b9513bee4a248dca432
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 63a7152ec6abb318a096ac321ae7ccfaaef4d199
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546380"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402938"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>Требования к оборудованию для локальных дисковых пространств
 
@@ -27,13 +27,13 @@ ms.locfileid: "69546380"
    > [!TIP]
    > Хотите оценить Локальные дисковые пространства без оборудования? Используйте виртуальные машины Hyper-V или Azure, как описано в разделе [использование Локальные дисковые пространства в кластерах гостевой виртуальной машины](storage-spaces-direct-in-vm.md).
 
-## <a name="base-requirements"></a>Основные требования
+## <a name="base-requirements"></a>Базовые требования
 
-Системы, компоненты, устройства и драйверы должны быть сертифицированы для **Windows server 2016** в [каталоге Windows Server](https://www.windowsservercatalog.com). Кроме того, на серверах, дисках, адаптерах шины и сетевых адаптерах рекомендуется использовать программно-определяемый **центр обработки данных (SDDC** ) и (или) **программно-определяемый центр обработки данных (SDDC) Premium** (АКС), как показано на рисунке. см. Существует более 1 000 компонентов с АКС SDDC.
+Системы, компоненты, устройства и драйверы должны быть **сертифицированы для Windows server 2016** в [каталоге Windows Server](https://www.windowsservercatalog.com). Кроме того, на серверах, дисках, адаптерах шины и сетевых адаптерах рекомендуется использовать программно-определяемый **центр обработки данных (SDDC** ) и (или) **программно-определяемый центр обработки данных (SDDC) Premium** (АКС), как показано на рисунке. см. Существует более 1 000 компонентов с АКС SDDC.
 
 ![снимок экрана каталога Windows Server, в котором отображается АКС SDDC](media/hardware-requirements/sddc-aqs.png)
 
-Полностью настроенный кластер (серверы, сеть и хранилище) должен пройти все [проверочные тесты](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) в мастере в Диспетчер отказоустойчивости кластеров или с помощью `Test-Cluster` [командлета](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) в PowerShell.
+Полностью настроенный кластер (серверы, сеть и хранилище) должен пройти все [проверочные тесты кластера](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) для мастера в Диспетчер отказоустойчивости кластеров или с помощью [командлета](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) `Test-Cluster` в PowerShell.
 
 Кроме того, применяются следующие требования.
 
@@ -52,13 +52,13 @@ ms.locfileid: "69546380"
 - Память для Windows Server, виртуальных машин и других приложений или рабочих нагрузок; плюс
 - 4 ГБ ОЗУ на терабайт (ТБ) емкости кэша на каждом сервере для метаданных Локальные дисковые пространства
 
-## <a name="boot"></a>Файле
+## <a name="boot"></a>файле
 
 - Любое загрузочное устройство, поддерживаемое Windows Server, которое [теперь включает сатадом](https://cloudblogs.microsoft.com/windowsserver/2017/08/30/announcing-support-for-satadom-boot-drives-in-windows-server-2016/)
 - Зеркальное отображение RAID 1 **не** требуется, но поддерживается для загрузки
 - Рекомендуемое: 200 ГБ, минимальный размер
 
-## <a name="networking"></a>Сети
+## <a name="networking"></a>Сеть
 
 Для Локальные дисковые пространства требуется надежная сеть с высокой пропускной способностью и низкой задержкой между каждым узлом.  
 
@@ -83,7 +83,7 @@ ms.locfileid: "69546380"
 - Поддерживаются диски SATA, SAS и NVMe (M. 2, U. 2 и Add-on-Card).
 - поддерживаются собственные диски 512N, 512e и 4 КБ.
 - Твердотельные накопители должны обеспечивать [защиту от потери питания](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
-- Одинаковое число и типы дисков на каждом сервере — см. раздел [требования](drive-symmetry-considerations.md) к симметрии
+- Одинаковое число и типы дисков на каждом сервере — см. раздел [требования к симметрии](drive-symmetry-considerations.md)
 - Размер устройств кэша должен составлять 32 ГБ или больше.
 - При использовании постоянных устройств памяти в качестве устройств кэширования необходимо использовать устройства с устройствами NVMe или SSD (жесткие диски не используются).
 - Драйвер NVMe является поставляемым корпорацией Майкрософт, включенным в Windows. (сторнвме. sys)
@@ -129,7 +129,7 @@ ms.locfileid: "69546380"
 
 ### <a name="maximum-capacity"></a>Максимальная емкость
 
-| Максимальные значения                | Windows Server 2019  | Windows Server 2016  |
+| Максимальные значения                | Windows Server 2019  | Windows Server 2016  |
 | ---                     | ---------            | ---------            |
 | Необработанная емкость на сервер | 400 ТБ               | 100 ТБ               |
 | Емкость пула           | 4 ПБ (4 000 ТБ)      | 1 ПБ                 |

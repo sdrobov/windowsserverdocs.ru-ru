@@ -8,52 +8,34 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d0cf58ea8d37efccf80ce262b64e604218bd8d0b
-ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
+ms.prod: windows-server
+ms.openlocfilehash: 5cb26bcff99d9cf3a1ee8b3a937ad6098a913c3d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67407651"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362063"
 ---
 # <a name="windows-commands"></a>Команды Windows
 
-Всех поддерживаемых версий Windows (сервер и клиент) имеют набор встроенных команд консоли Win32.
+Все поддерживаемые версии Windows (сервер и клиент) имеют набор встроенных команд консоли Win32.
 
-Этот набор документации описаны команды Windows, можно использовать для автоматизации задач с помощью скриптов или средств работы со сценариями.
+Этот набор документации описывает команды Windows, которые можно использовать для автоматизации задач с помощью скриптов или средств создания скриптов.
 
-Чтобы найти сведения о конкретной команде, в следующем окне A-Z, выберите имя команды, затем нажмите кнопку имя команды.
+Чтобы найти сведения о конкретной команде, в следующем меню A-Z щелкните букву, с которой начинается команда, а затем щелкните имя команды.
 
-[ОБЪЕКТ](#a) |
-[B](#b) | 
+[@NO__T-](#a)1[B](#b) | 
 [C](#c) | 
 [D](#d) | 
-[E](#e)  | 
- [F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[Я](#i)  |
- [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n)  | 
- [O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r)  | 
- [S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v)  | 
- [W](#w) | 
-[X](#x) | Y | Z
+[E](#e) | 
+[F](#f) |
+1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | ГАРМОШКОЙ
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-Сведения, содержащиеся в этом разделе, относятся к:
+Сведения, содержащиеся в этом разделе, применимы к:
 
--   Windows Server 2019
+-   Windows Server 2019
 -   Windows Server (Semi-Annual Channel)
 -   Windows Server 2016
 -   Windows Server 2012 R2
@@ -63,56 +45,38 @@ ms.locfileid: "67407651"
 -   Windows 10
 -   Windows 8.1
 
-### <a name="command-shell-overview"></a>Командная оболочка: Обзор
+### <a name="command-shell-overview"></a>Общие сведения о командной оболочке
 
-Интерпретатор команд был первый оболочки, встроенные в Windows для автоматизации обычных задач, таких как управление учетными записями пользователей или еженощное резервное копирование с файлами пакетный (BAT). С помощью сервера сценариев Windows можно выполнить более сложные сценарии в командной оболочке. Дополнительные сведения см. в разделе [cscript](cscript.md) или [wscript](wscript.md). Можно более эффективно выполнять операции с помощью сценариев, чем с помощью пользовательского интерфейса. Сценарии принять все команды, доступные в командной строке.
+Командная оболочка была первой оболочкой, встроенной в Windows, для автоматизации стандартных задач, таких как управление учетными записями пользователей или ночное резервное копирование с пакетными файлами (bat). С помощью сервера сценариев Windows можно выполнять более сложные сценарии в командной оболочке. Дополнительные сведения см. в разделе [cscript](cscript.md) или [Wscript](wscript.md). С помощью скриптов можно более эффективно выполнять операции, чем с помощью пользовательского интерфейса. Скрипты принимают все команды, доступные в командной строке.
 
-Windows состоит из двух командных оболочках. Командная оболочка и [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Каждой оболочки — это программа, которая обеспечивает прямую связь между пользователем и операционной системы или приложения, предоставляющий среду для автоматизации ИТ-операций.
+Windows имеет две командные оболочки: Командная оболочка и [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?view=powershell-6). Каждая оболочка представляет собой программную программу, обеспечивающую прямой обмен данными между вами и операционной системой или приложением, предоставляя среду для автоматизации ИТ-операций.
 
-PowerShell была разработана для расширения возможностей командной оболочки для выполнения команд PowerShell, называющихся командлетами. Командлеты похожи на команды Windows, но обеспечивают большую гибкость, язык сценариев. Команды Windows и командлеты PowerShell можно запустить в Powershell, но командная оболочка может выполняться только в том случае, команды Windows и не командлеты PowerShell.
+PowerShell был разработан для расширения возможностей командной оболочки для выполнения команд PowerShell, называемых командлетами. Командлеты похожи на команды Windows, но предоставляют более расширяемый язык сценариев. Вы можете выполнять команды Windows и командлеты PowerShell в PowerShell, но Командная оболочка может выполнять только команды Windows, а не командлеты PowerShell.
 
-Для наиболее надежной, актуальные Windows автоматизации рекомендуется использовать PowerShell вместо команды Windows или Windows скрипт узла для Windows автоматизации. 
+Для наиболее надежной и последней версии службы автоматизации Windows рекомендуется использовать PowerShell вместо команд Windows или сервера сценариев Windows для службы автоматизации Windows. 
 > [!NOTE]
->Можно также загрузить и установить [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), открытым исходным кодом версии PowerShell. 
+>Вы также можете скачать и установить [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), версию PowerShell с открытым исходным кодом. 
 
 > [!CAUTION]
-> Неправильное изменение реестра может серьезно повредить систему. Прежде чем вносить следующие изменения в реестр, сделайте резервные копии всех важных данных на компьютере.
+> Неправильное изменение реестра может серьезно повредить систему. Перед внесением следующих изменений в реестр следует создать резервную копию всех ценных данных на компьютере.
 
 > [!NOTE]
-> Чтобы включить или отключить завершения файлов и папок имя в командной оболочке в сеансе входа в систему компьютера или пользователя, выполните **regedit.exe** и задайте следующее **значение reg_DWOrd**:
+> Чтобы включить или отключить Автозаполнение имени файла и каталога в командной оболочке на компьютере или в сеансе входа пользователя, запустите **программу regedit. exe** и задайте следующее **значение reg_DWOrd**:
 > 
 > HKEY_LOCAL_MACHINE\Software\Microsoft\Command Processor\completionChar\reg_DWOrd
 > 
-> Для задания **reg_DWOrd** значение, используйте шестнадцатеричное значение управляющего символа для определенной функции (например, **0-9** — это вкладка и **0 08** является Backspace). Пользовательские настройки имеют приоритет над параметрами компьютера и параметры командной строки имеют приоритет над параметрами реестра.
+> Чтобы задать значение **reg_DWOrd** , используйте шестнадцатеричное значение управляющего символа для конкретной функции (например, **0 9** — TAB, а **0 08** — Backspace). Заданные пользователем параметры имеют приоритет над параметрами компьютера, а параметры командной строки имеют приоритет над параметрами реестра.
 
-## <a name="command-line-reference-a-z"></a>Справочник по командной строке, A – Z
+## <a name="command-line-reference-a-z"></a>Справочник по командной строке A-Z
 
-Чтобы найти сведения о конкретной команде Windows, в следующем окне A-Z, выберите имя команды, затем нажмите кнопку имя команды.
+Чтобы найти сведения об определенной команде Windows, в следующем меню A-Z щелкните букву, с которой начинается команда, а затем щелкните имя команды.
 
-[ОБЪЕКТ](#a) |
-[B](#b) | 
+[@NO__T-](#a)1[B](#b) | 
 [C](#c) | 
 [D](#d) | 
-[E](#e)  | 
- [F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[Я](#i)  |
- [J](#j) | 
-[K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n)  | 
- [O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r)  | 
- [S](#s) | 
-[T](#t) | 
-[U](#u) | 
-[V](#v)  | 
- [W](#w) | 
-[X](#x) | Y | Z)
+[E](#e) | 
+[F](#f) |
+1[G](#g)3[H](#h)5[I](#i)7[J](#j)9[K](#k)1[L ](#l)3[M](#m)5[N](#n)7[O](#o)9[P](#p)1[Q](#q)3[R](#r)5[S](#s)7[T](#t)9[U](#u)1[V](#v)3 [W](#w)5[X](#x) | Y | ГАРМОШКОЙ
 
 ### <a name="a"></a>Объект
 -   [append](append.md)
@@ -155,7 +119,7 @@ PowerShell была разработана для расширения возм�
   -   [bitsadmin getnotifyflags](bitsadmin-getnotifyflags.md)
   -   [bitsadmin getnotifyinterface](bitsadmin-getnotifyinterface.md)
   -   [bitsadmin getowner](bitsadmin-getowner.md)
-  -   [приоритет bitsadmin get](bitsadmin-getpriority.md)
+  -   [битсадмин получить приоритет](bitsadmin-getpriority.md)
   -   [bitsadmin getproxybypasslist](bitsadmin-getproxybypasslist.md)
   -   [bitsadmin getproxylist](bitsadmin-getproxylist.md)
   -   [bitsadmin getproxyusage](bitsadmin-getproxyusage.md)
@@ -188,7 +152,7 @@ PowerShell была разработана для расширения возм�
   -   [bitsadmin setreplyfilename](bitsadmin-setreplyfilename.md)
   -   [bitsadmin suspend](bitsadmin-suspend.md)
   -   [bitsadmin takeownership](bitsadmin-takeownership.md)
-  -   [bitsadmin передачи](bitsadmin-transfer.md)
+  -   [Перенос битсадмин](bitsadmin-transfer.md)
   -   [bitsadmin util](bitsadmin-util.md)
   -   [bitsadmin wrap](bitsadmin-wrap.md)
 - [bootcfg](bootcfg.md)
@@ -224,7 +188,7 @@ PowerShell была разработана для расширения возм�
 - [chkntfs](chkntfs.md)
 - [choice](choice.md)
 - [cipher](cipher.md)
-- [«cleanmgr»](cleanmgr.md)
+- [cleanmgr](cleanmgr.md)
 - [clip](clip.md)
 - [cls](cls.md)
 - [Cmd](Cmd.md)
@@ -298,7 +262,7 @@ PowerShell была разработана для расширения возм�
   -   [fsutil usn](fsutil-usn.md)
   -   [fsutil volume](fsutil-volume.md)
   -   [fsutil wim](fsutil-wim.md)
-- [FTP](ftp.md)
+- [адресов](ftp.md)
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)
 
@@ -330,28 +294,28 @@ PowerShell была разработана для расширения возм�
 ### <a name="k"></a>K
 - [klist](klist.md)
 - [ksetup](ksetup.md)
-  -   [ksetup:setrealm](ksetup-setrealm.md)
-  -   [ksetup:mapuser](ksetup-mapuser.md)
-  -   [ksetup:addkdc](ksetup-addkdc.md)
-  -   [ksetup:delkdc](ksetup-delkdc.md)
-  -   [ksetup:addkpasswd](ksetup-addkpasswd.md)
-  -   [ksetup:delkpasswd](ksetup-delkpasswd.md)
-  -   [ksetup:Server](ksetup-server.md)
-  -   [ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)
-  -   [ksetup:removerealm](ksetup-removerealm.md)
-  -   [ksetup:domain](ksetup-domain.md)
-  -   [ksetup:ChangePassword](ksetup-changepassword.md)
-  -   [ksetup:listrealmflags](ksetup-listrealmflags.md)
-  -   [ksetup:setrealmflags](ksetup-setrealmflags.md)
-  -   [ksetup:addrealmflags](ksetup-addrealmflags.md)
-  -   [ksetup:delrealmflags](ksetup-delrealmflags.md)
-  -   [ksetup:dumpstate](ksetup-dumpstate.md)
-  -   [ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
-  -   [ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)
-  -   [ksetup:setenctypeattr](ksetup-setenctypeattr.md)
-  -   [ksetup:getenctypeattr](ksetup-getenctypeattr.md)
-  -   [ksetup:addenctypeattr](ksetup-addenctypeattr.md)
-  -   [ksetup:delenctypeattr](ksetup-delenctypeattr.md) 
+  -   [ksetup: сетреалм](ksetup-setrealm.md)
+  -   [ksetup: мапусер](ksetup-mapuser.md)
+  -   [ksetup: аддкдк](ksetup-addkdc.md)
+  -   [ksetup: делкдк](ksetup-delkdc.md)
+  -   [ksetup: аддкпассвд](ksetup-addkpasswd.md)
+  -   [ksetup: делкпассвд](ksetup-delkpasswd.md)
+  -   [ksetup: сервер](ksetup-server.md)
+  -   [ksetup: сеткомпутерпассворд](ksetup-setcomputerpassword.md)
+  -   [ksetup: ремовереалм](ksetup-removerealm.md)
+  -   [ksetup: домен](ksetup-domain.md)
+  -   [ksetup: ChangePassword](ksetup-changepassword.md)
+  -   [ksetup: листреалмфлагс](ksetup-listrealmflags.md)
+  -   [ksetup: сетреалмфлагс](ksetup-setrealmflags.md)
+  -   [ksetup: аддреалмфлагс](ksetup-addrealmflags.md)
+  -   [ksetup: делреалмфлагс](ksetup-delrealmflags.md)
+  -   [ksetup: думпстате](ksetup-dumpstate.md)
+  -   [ksetup: аддхосттореалммап](ksetup-addhosttorealmmap.md)
+  -   [ksetup: делхосттореалммап](ksetup-delhosttorealmmap.md)
+  -   [ksetup: сетенктипеаттр](ksetup-setenctypeattr.md)
+  -   [ksetup: жетенктипеаттр](ksetup-getenctypeattr.md)
+  -   [ksetup: адденктипеаттр](ksetup-addenctypeattr.md)
+  -   [ksetup: деленктипеаттр](ksetup-delenctypeattr.md) 
 - [ktmutil](ktmutil.md)
 - [ktpass](ktpass.md)
 
@@ -361,10 +325,10 @@ PowerShell была разработана для расширения возм�
 - [logman](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
-  -   [Logman start & 124; остановить](logman-start-stop.md)
+  -   [Запуск Logman & 124; позиции](logman-start-stop.md)
   -   [logman delete](logman-delete.md)
   -   [logman update](logman-update.md)
-  -   [Logman import & 124; Экспорт](logman-import-export.md)
+  -   [Импорт & 124; программе](logman-import-export.md)
 - [logoff](logoff.md)
 - [lpq](lpq.md)
 - [lpr](lpr.md)
@@ -373,24 +337,24 @@ PowerShell была разработана для расширения возм�
 - [macfile](macfile.md)
 - [makecab](makecab.md)
 - [manage-bde](manage-bde.md)
-  -   [готов: состояние](manage-bde-status.md)
-  -   [готов: на](manage-bde-on.md)
-  -   [готов: off](manage-bde-off.md)
-  -   [готов: Приостановка](manage-bde-pause.md)
-  -   [готов: возобновление](manage-bde-resume.md)
-  -   [готов: блокировки](manage-bde-lock.md)
-  -   [готов: разблокировки](manage-bde-unlock.md)
-  -   [готов: автоматическое разблокирование диска](manage-bde-autounlock.md)
-  -   [готов: предохранители](manage-bde-protectors.md)
-  -   [готов: доверенного платформенного модуля](manage-bde-tpm.md)
-  -   [готов: setidentifier](manage-bde-setidentifier.md)
-  -   [готов: ForceRecovery](manage-bde-forcerecovery.md)
-  -   [готов: изменение пароля](manage-bde-changepassword.md)
-  -   [готов: changepin](manage-bde-changepin.md)
-  -   [готов: changekey](manage-bde-changekey.md)
-  -   [готов: KeyPackage](manage-bde-keypackage.md)
-  -   [готов: обновление](manage-bde-upgrade.md)
-  -   [готов: WipeFreeSpace](manage-bde-wipefreespace.md)
+  -   [Manage-bde: Status](manage-bde-status.md)
+  -   [Manage-bde: on](manage-bde-on.md)
+  -   [Управление-BDE: выкл.](manage-bde-off.md)
+  -   [Управление — BDE: Pause](manage-bde-pause.md)
+  -   [Управление — BDE: Resume](manage-bde-resume.md)
+  -   [Управление — BDE: Lock](manage-bde-lock.md)
+  -   [Управление — BDE: Unlock](manage-bde-unlock.md)
+  -   [Manage-bde: автоматическое разблокирование](manage-bde-autounlock.md)
+  -   [Manage-bde: protectors](manage-bde-protectors.md)
+  -   [Manage-bde: TPM](manage-bde-tpm.md)
+  -   [Manage-bde: сетидентифиер](manage-bde-setidentifier.md)
+  -   [manage-BDE: ForceRecovery](manage-bde-forcerecovery.md)
+  -   [Manage-bde: ChangePassword](manage-bde-changepassword.md)
+  -   [Manage-bde: чанжепин](manage-bde-changepin.md)
+  -   [Manage-bde: чанжекэй](manage-bde-changekey.md)
+  -   [manage-BDE: KeyPackage](manage-bde-keypackage.md)
+  -   [Manage-bde: обновление](manage-bde-upgrade.md)
+  -   [manage-BDE: WipeFreeSpace](manage-bde-wipefreespace.md)
 - [mapadmin](mapadmin.md)
 - [Md](Md.md)
 - [mkdir](mkdir.md)
@@ -421,8 +385,8 @@ PowerShell была разработана для расширения возм�
 - [nfsstat](nfsstat.md)
 - [nlbmgr](nlbmgr.md)
 - [nslookup](nslookup.md)
-  -   [выход команды nslookup](nslookup-exit-command.md)
-  -   [Команда nslookup пальцем](nslookup-finger-command.md)
+  -   [Команда nslookup Exit](nslookup-exit-command.md)
+  -   [Команда nslookup Finger](nslookup-finger-command.md)
   -   [nslookup help](nslookup-help.md)
   -   [nslookup ls](nslookup-ls.md)
   -   [nslookup lserver](nslookup-lserver.md)
@@ -491,16 +455,16 @@ PowerShell была разработана для расширения возм�
 - [rdpsign](rdpsign.md)
 - [recover](recover.md)
 - [reg](reg.md)
-  -   [Добавление REG](reg-add.md)
-  -   [Сравнение REG](reg-compare.md)
-  -   [Копировать REG](reg-copy.md)
-  -   [reg delete](reg-delete.md)
+  -   [Добавление reg](reg-add.md)
+  -   [reg compare](reg-compare.md)
+  -   [копирование reg](reg-copy.md)
+  -   [удалить reg](reg-delete.md)
   -   [reg export](reg-export.md)
-  -   [reg import](reg-import.md)
-  -   [REG нагрузки](reg-load.md)
-  -   [reg query](reg-query.md)
-  -   [Восстановление REG](reg-restore.md)
-  -   [REG сохранить](reg-save.md)
+  -   [импорт реестра](reg-import.md)
+  -   [Загрузить reg](reg-load.md)
+  -   [запрос reg](reg-query.md)
+  -   [Восстановление реестра](reg-restore.md)
+  -   [сохранить reg](reg-save.md)
   -   [reg unload](reg-unload.md)
 - [regini](regini.md)
 - [regsvr32](regsvr32.md)
@@ -524,23 +488,23 @@ PowerShell была разработана для расширения возм�
 
 ### <a name="s"></a>S
 - [schtasks](schtasks.md)
-- [Scwcmd](Scwcmd.md)
-  -   [Scwcmd: анализ](scwcmd-analyze.md)
-  -   [Scwcmd: Настройка](scwcmd-configure.md)
-  -   [Scwcmd: регистрация](scwcmd-register.md) 
-  -   [Scwcmd: отката](scwcmd-rollback.md) 
-  -   [Scwcmd: преобразование](scwcmd-transform.md) 
-  -   [Scwcmd: представление](scwcmd-view.md) 
+- [команду scwcmd](Scwcmd.md)
+  -   [команду scwcmd: анализ](scwcmd-analyze.md)
+  -   [команду scwcmd: Настройка](scwcmd-configure.md)
+  -   [команду scwcmd: регистрация](scwcmd-register.md) 
+  -   [команду scwcmd: откат](scwcmd-rollback.md) 
+  -   [команду scwcmd: преобразование](scwcmd-transform.md) 
+  -   [команду scwcmd: Просмотр](scwcmd-view.md) 
 - [secedit](secedit.md)
   -   [Secedit: анализ](secedit-analyze.md)
   -   [Secedit: Настройка](secedit-configure.md)
-  -   [Secedit:Export](secedit-export.md)
-  -   [Secedit:generaterollback](secedit-generaterollback.md)
-  -   [Secedit:import](secedit-import.md)
-  -   [Secedit: проверка](secedit-validate.md)
+  -   [Secedit: экспорт](secedit-export.md)
+  -   [Secedit: женератероллбакк](secedit-generaterollback.md)
+  -   [Secedit: импорт](secedit-import.md)
+  -   [Secedit: Проверка](secedit-validate.md)
 - [serverceipoptin](serverceipoptin.md)
 - [Servermanagercmd](Servermanagercmd.md)
-- [serverweroptin](serverweroptin.md)
+- [сервервероптин](serverweroptin.md)
 - [set](set_1.md)
 - [setlocal](setlocal.md)
 - [setx](setx.md)
@@ -581,7 +545,7 @@ PowerShell была разработана для расширения возм�
 -   [typeperf](typeperf.md)
 -   [tzutil](tzutil.md)
 
-### <a name="u"></a>U
+### <a name="u"></a>ТЬ
 -   [unlodctr](unlodctr_1.md)
 
 ### <a name="v"></a>V
@@ -594,21 +558,21 @@ PowerShell была разработана для расширения возм�
 ### <a name="w"></a>W
 - [waitfor](waitfor.md)
 - [wbadmin](wbadmin.md)
-  -   [Wbadmin enable backup](wbadmin-enable-backup.md)
-  -   [Отключите WBADMIN резервное копирование](wbadmin-disable-backup.md)
-  -   [начало архивации WBADMIN](wbadmin-start-backup.md)
-  -   [WBADMIN остановка задания](wbadmin-stop-job.md)
-  -   [WBADMIN get версий](wbadmin-get-versions.md)
-  -   [WBADMIN get элементов](wbadmin-get-items.md)
-  -   [Wbadmin start восстановления](wbadmin-start-recovery.md)
-  -   [состояние WBADMIN get](wbadmin-get-status.md)
-  -   [WBADMIN get дисков](wbadmin-get-disks.md)
+  -   [Wbadmin включить резервное копирование](wbadmin-enable-backup.md)
+  -   [Wbadmin отключить архивацию](wbadmin-disable-backup.md)
+  -   [Wbadmin start backup](wbadmin-start-backup.md)
+  -   [Wbadmin останавливает задание](wbadmin-stop-job.md)
+  -   [Wbadmin get versions](wbadmin-get-versions.md)
+  -   [Wbadmin get Items](wbadmin-get-items.md)
+  -   [Wbadmin start Recovery](wbadmin-start-recovery.md)
+  -   [Wbadmin get Status](wbadmin-get-status.md)
+  -   [Wbadmin get Disks](wbadmin-get-disks.md)
   -   [Wbadmin start systemstaterecovery](wbadmin-start-systemstaterecovery.md)
-  -   [Wbadmin start systemstatebackup](wbadmin-start-systemstatebackup.md)
-  -   [WBADMIN delete systemstatebackup](wbadmin-delete-systemstatebackup.md)
-  -   [Wbadmin start sysrecovery](wbadmin-start-sysrecovery.md)
-  -   [WBADMIN восстановления каталога](wbadmin-restore-catalog.md)
-  -   [WBADMIN delete каталога](wbadmin-delete-catalog.md)
+  -   [Wbadmin start системстатебаккуп](wbadmin-start-systemstatebackup.md)
+  -   [Wbadmin Delete системстатебаккуп](wbadmin-delete-systemstatebackup.md)
+  -   [Wbadmin start сисрековери](wbadmin-start-sysrecovery.md)
+  -   [Wbadmin Restore Catalog](wbadmin-restore-catalog.md)
+  -   [Wbadmin Удаление каталога](wbadmin-delete-catalog.md)
 - [wdsutil](wdsutil.md)
 - [wecutil](wecutil.md)
 - [wevtutil](wevtutil.md)
@@ -618,7 +582,7 @@ PowerShell была разработана для расширения возм�
 - [winnt32](winnt32.md)
 - [winpop](winpop.md)
 - [winrs](winrs.md)
-- [WLBS](wlbs_1.md)
+- [сетевой](wlbs_1.md)
 - [wmic](wmic.md)
 - [wscript](wscript.md)
 

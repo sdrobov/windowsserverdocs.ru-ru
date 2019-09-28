@@ -7,30 +7,30 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: fc2aaa9f7c7c42b6e94995ff473a580ce560ed93
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00e307da35911189114257eea88ccaf90ceab1ae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390724"
 ---
 # <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Расширенная настройка управления AD DS при помощи центра администрирования Active Directory (уровень 200)
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-В этой статье рассматривается обновленный Центр администрирования Active Directory и приводится более подробное описание новой корзины Active Directory, детальной политики паролей и средства просмотра журнала Windows PowerShell, включая их архитектуру, примеры задач и информацию об устранении неполадок. Общие сведения см. в разделе [введение в возможности администрирования Active Directory Center &#40;уровень 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
+В этой статье рассматривается обновленный Центр администрирования Active Directory и приводится более подробное описание новой корзины Active Directory, детальной политики паролей и средства просмотра журнала Windows PowerShell, включая их архитектуру, примеры задач и информацию об устранении неполадок. Общие сведения см. [в статье Введение в центр администрирования Active Directory улучшения &#40;уровня 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
   
-- [Архитектура центра администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
-- [Включение и управление Active Directory Корзина через Центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
-- [Настройка и управление детально настроенными политиками паролей через Центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
-- [Использование средства просмотра журнала PowerShell Windows Центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
+- [Архитектура центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
+- [Включение и управление корзиной Active Directory с помощью центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
+- [Настройка детальных политик паролей и управление ими с помощью центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
+- [Использование центр администрирования Active Directory средства просмотра журнала Windows PowerShell](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
 - [Устранение неполадок управления AD DS](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Tshoot)  
   
-## <a name="BKMK_Arch"></a>Архитектура центра администрирования Active Directory  
+## <a name="BKMK_Arch"></a>Архитектура центр администрирования Active Directory  
   
-### <a name="active-directory-administrative-center-executables-dlls"></a>Центр администрирования Active Directory исполняемых файлов, библиотек DLL  
+### <a name="active-directory-administrative-center-executables-dlls"></a>Центр администрирования Active Directory исполняемых файлов, DLL  
 
 Модуль и базовая архитектура Центра администрирования Active Directory с появлением новой корзины Active Directory, детальной политики паролей и средства просмотра журнала не изменились,  
   
@@ -42,13 +42,13 @@ ms.locfileid: "59820005"
   
 Базовый Windows PowerShell и слой операций для новой корзины представлены ниже:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
   
-## <a name="BKMK_EnableRecycleBin"></a>Включение и управление Active Directory Корзина через Центр администрирования Active Directory  
+## <a name="BKMK_EnableRecycleBin"></a>Включение и управление корзиной Active Directory с помощью центр администрирования Active Directory  
   
 ### <a name="capabilities"></a>Возможности  
   
-- Windows Server 2012 или более новые Центр администрирования Active Directory позволяет настраивать и управлять ими Корзина Active Directory для любого раздела домена в лесу. Для активации корзины Active Directory или восстановления объектов в разделы доменов больше не нужно использовать Windows PowerShell или Ldp.exe.
+- Центр администрирования Active Directory Windows Server 2012 или более поздней версии позволяет настраивать корзину Active Directory и управлять ею для любого раздела домена в лесу. Для активации корзины Active Directory или восстановления объектов в разделы доменов больше не нужно использовать Windows PowerShell или Ldp.exe.
 - В Центре администрирования Active Directory есть расширенные условия фильтрации, упрощающие адресное восстановление в крупных средах с большим количеством удаленных объектов.
   
 ### <a name="limitations"></a>Ограничения  
@@ -58,15 +58,15 @@ ms.locfileid: "59820005"
 - Центр администрирования Active Directory не позволяет восстанавливать поддеревья объектов за одно действие. Например, если вы удалите организационное подразделение с вложенными подразделениями, пользователями, группами и компьютерами, то при восстановлении этого организационного подразделения дочерние объекты восстановлены не будут.  
   
     > [!NOTE]  
-    > Центр администрирования Active Directory пакетная операция восстановления включает «максимум усилий» сортировку удаленных объектов *в пределах сделанной выборки* , чего родительские объекты предшествуют дочерним в списке восстановления. В простых тестовых случаях поддеревья объектов можно восстановить одним действием. Но случаях угла, например выделение, содержащее частичного деревья - деревьев с некоторыми из удаленных родительских узлов отсутствует - или имеются ошибки, например пропуск дочерних объектов при восстановления родительских завершается со сбоем, могут не работать должным образом. В связи с этим поддеревья объектов необходимо восстанавливать только после восстановления родительских объектов.  
+    > Центр администрирования Active Directory операция восстановления пакетной службы выполняет «наилучшую» сортировку удаленных объектов *в выделенном фрагменте* , чтобы родители были упорядочены до дочерних элементов списка восстановления. В простых тестовых случаях поддеревья объектов можно восстановить одним действием. Но в угловых случаях, например при выборе, содержащем частичные деревья деревьев, с некоторыми удаленными родительскими узлами или с ошибками, например при пропуске дочерних объектов, когда происходит сбой при восстановлении родительского объекта, может не работать должным образом. В связи с этим поддеревья объектов необходимо восстанавливать только после восстановления родительских объектов.  
   
-Корзина Active Directory требует Windows Server 2008 R2 режим работы леса и должен быть членом группы "Администраторы предприятия". Активированную корзину Active Directory отключить нельзя. Корзина Active Directory увеличивает размер базы данных Active Directory (NTDS.DIT) на каждом контроллере домена в лесу. Объекты сохраняются в корзине вместе со всеми соответствующими данными атрибутов, поэтому со временем она занимает все больше места на диске.  
+Для корзины Active Directory требуется режим работы леса Windows Server 2008 R2. необходимо быть членом группы "Администраторы предприятия". Активированную корзину Active Directory отключить нельзя. Корзина Active Directory увеличивает размер базы данных Active Directory (NTDS.DIT) на каждом контроллере домена в лесу. Объекты сохраняются в корзине вместе со всеми соответствующими данными атрибутов, поэтому со временем она занимает все больше места на диске.  
   
 ### <a name="enabling-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Активация корзины Active Directory через Центр администрирования Active Directory
 
 Чтобы включить корзину Active Directory, откройте **Центр администрирования Active Directory** и щелкните имя своего леса на панели управления На панели **Задачи** выберите команду **Включить корзину**.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBin.png)  
   
 В Центре администрирования Active Directory откроется диалоговое окно **Подтверждение включения корзины** . Оно содержит предупреждение о том, что операция включения корзины необратима. Нажмите кнопку **ОК**, чтобы включить корзину Active Directory. В Центре администрирования Active Directory откроется другое диалоговое окно с сообщением о том, что корзина Active Directory не будет функционировать полностью, пока изменения в конфигурации не будут реализованы на всех контроллерах доменов.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "59820005"
 > - функциональный уровень леса ниже Windows Server 2008 R2;  
 > - корзина уже включена.  
 
-Ниже приведен эквивалентный командлет Windows PowerShell для Active Directory.  
+Эквивалент Active Directory командлета Windows PowerShell:  
 
 ```powershell
 Enable-ADOptionalFeature  
@@ -88,21 +88,21 @@ Enable-ADOptionalFeature
 
 В этом разделе в качестве примера используется существующий домен **corp.contoso.com**. Он объединяет пользователей в организационное подразделение **UserAccounts**. Организационное подразделение **UserAccounts** содержит три подразделения, каждое из которых, в свою очередь, содержит свои подразделения, пользователей и группы.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_EnableRecycleBinExampleOU.png)  
   
 #### <a name="storage-and-filtering"></a>Хранение и фильтрация
 
 Все объекты, удаленные в лесу, попадают в корзину Active Directory. Объекты хранятся в соответствии с атрибутом **msDS-deletedObjectLifetime**, который по умолчанию совпадает с атрибутом **tombstoneLifetime** леса. В любом лесу, созданном с помощью Windows Server 2003 SP1 или более поздней версии, значение атрибута **tombstoneLifetime** по умолчанию устанавливается равным 180 дням. В любом лесу, обновленном с Windows 2000 или установленном с помощью Windows Server 2003 (без пакетов обновления), атрибут tombstoneLifetime по умолчанию НЕ УСТАНАВЛИВАЕТСЯ, поэтому Windows использует внутреннее значение по умолчанию, равное 60 дням. Все эти параметры можно настраивать. Для восстановления объектов, удаленных из разделов доменов в лесу, можно использовать Центр администрирования Active Directory. Для восстановления объектов, удаленных из других разделов, например из раздела "Конфигурация", используйте командлет **Restore-ADObject**. При включении корзины Active Directory под каждым разделом домена в Центре администрирования Active Directory появляется контейнер **Удаленные объекты**.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_DeletedObjectsContainer.png)  
   
 Контейнер **Удаленные объекты** содержит список всех доступных для восстановления объектов в этом разделе домена. Удаленные объекты с превышенным значением атрибута **msDS-deletedObjectLifetime** называются утилизированными. Центр администрирования Active Directory не показывает утилизированные объекты и не позволяет их восстановить.  
   
-Более глубокое объяснение архитектуры в корзину и правила обработки, см. в разделе [Корзина AD: Общие сведения, реализация, рекомендации и устранение неполадок](http://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx).  
+Более подробное описание архитектуры и правил обработки в корзине см. в разделе [The AD Корзина: Основные сведения, реализация, рекомендации и устранение неполадок в no__t-0.  
   
 Центр администрирования Active Directory искусственно ограничивает количество отображаемых в контейнере объектов до 20 000 штук. Чтобы увеличить этот лимит до 100 000 объектов, откройте меню **Управление** и выберите пункт **Параметры списка управления**.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_MgmtList.png)  
   
 #### <a name="restoration"></a>Восстановление  
   
@@ -110,19 +110,19 @@ Enable-ADOptionalFeature
 
 Центр администрирования Active Directory предлагает эффективные критерии поиска и параметры фильтрации, которые необходимо изучить до того, как они вам потребуются в реальной жизни. Домены специально удаляют множество объектов с истекшим сроком хранения. Учитывая, что срок хранения объектов обычно составляет 180 дней, в случае инцидента вы просто не сможете восстановить все объекты.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_AddCriteria.png)  
   
 Вместо того чтобы составлять сложные фильтры LDAP и конвертировать значения UTC в даты и время, составьте список соответствующих объектов с помощью простого и расширенного меню **Фильтр** . Если вы знаете дату удаления, названия объектов или другие ключевые данные, используйте их в качестве фильтра. Для переключения расширенных параметров фильтрации используйте шевроны справа от поля поиска.  
   
 Операция восстановления поддерживает все стандартные параметры фильтрации точно так же, как и другие поисковые службы. Из встроенных фильтров для восстановления объектов обычно используются следующие:  
   
-- *ANR (разрешение неоднозначных имен — не указано в меню, но используется при вводе в *** фильтра *** поле)*  
+- *ANR (разрешение неоднозначных имен — не указано в меню, но используется при вводе в поле * * * * Фильтр * * * *)*  
 - Последнее изменение между заданными датами  
 - Объект — пользователь, InetOrgPerson, компьютер, группа или организационное подразделение  
 - Имя  
 - Дата удаления  
 - Последний известный родительский объект  
-- Тип  
+- Type  
 - Описание  
 - Город  
 - Страна или регион  
@@ -137,11 +137,11 @@ Enable-ADOptionalFeature
 - имя участника-пользователя  
 - Почтовый индекс  
 
-Можно добавить несколько критериев. Например можно найти все объекты пользователя, удаленные 24 сентября 2012 г. из Чикаго, штат Иллинойс, сотрудниками в должности руководителя.
+Можно добавить несколько критериев. Например, можно найти все объекты-пользователи, удаленные 24 сентября 2012 из Чикаго, Иллинойс с заголовком должности менеджер.
   
 Вы также можете добавить, изменить или переупорядочить заголовки столбцов, чтобы получить больше данных для выбора объектов к восстановлению.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
 Дополнительные сведения о разрешении неоднозначных имен см. в разделе [Атрибуты ANR](https://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
   
@@ -155,17 +155,17 @@ Enable-ADOptionalFeature
   
 Объект вернется в свое исходное расположение.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreSingle.gif)  
   
-Нажмите кнопку **восстановления...**  Чтобы изменить расположение для восстановления. Это полезно в том случае, если родительский контейнер восстанавливаемого объекта также был удален, но вы не хотите восстанавливать его.  
+Нажмите кнопку **восстановить в...** , чтобы изменить расположение для восстановления. Это полезно, если родительский контейнер удаленного объекта также был удален, но вы не хотите восстанавливать его.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestoreToSingle.gif)  
   
 ##### <a name="multiple-peer-objects"></a>Несколько аналогичных объектов
 
 Вы можете восстановить сразу несколько объектов одного уровня, например всех пользователей организационного подразделения. Удерживая клавишу CTRL, щелкните один или несколько удаленных объектов, которые нужно восстановить. Щелкните **Восстановить** на панели задач. Вы также можете выбрать все указанные объекты, нажав комбинацию клавиш CTRL+A, или определенный диапазон объектов, нажав и удерживая клавишу SHIFT, а затем первый и последний искомые объекты.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RestorePeers.png)  
   
 ##### <a name="multiple-parent-and-child-objects"></a>Несколько дочерних и родительских объектов
 
@@ -180,29 +180,29 @@ Enable-ADOptionalFeature
   
 **Эта операция не может быть выполнена, т.к. родитель объекта либо не подтвержден, либо удален.**  
   
-Родительские отношения каждого объекта обозначаются атрибутом **Последний известный родительский объект**. При обновлении Центра администрирования Active Directory после восстановления родительского объекта атрибут **Последний известный родительский объект** переносится из удаленного в восстановленное расположение. Таким образом можно восстановить дочерний объект, при расположении родительского объекта больше не указывается различающееся имя контейнера удаленных объектов.  
+Родительские отношения каждого объекта обозначаются атрибутом **Последний известный родительский объект**. При обновлении Центра администрирования Active Directory после восстановления родительского объекта атрибут **Последний известный родительский объект** переносится из удаленного в восстановленное расположение. Таким образом, можно восстановить этот дочерний объект, если расположение родительского объекта больше не показывает различающееся имя контейнера удаленных объектов.  
   
 Предположим, что администратор случайно удалил организационное подразделение Sales, содержащее дочерние подразделения и пользователей.  
   
-Во-первых, определите значение атрибута **последний известный родительский объект** атрибут для всех удаленных пользователей и как его считывает **OU = Sales\0ADEL:*< guid + контейнера удаленных объектов различающееся имя > ***:  
+Сначала обратите внимание на значение **последнего известного родительского** атрибута для всех удаленных пользователей и как он считывает **OU = Sales\0ADEL:* < GUID + Deleted Objects различающееся имя контейнера > * * *:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
   
 Отфильтруйте неоднозначное имя Sales. Вы получите список удаленных подразделений, которые затем нужно будет восстановить:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSales.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSales.png)  
   
-Обновите Центр администрирования Active Directory, чтобы просмотреть последний известный родительский объект атрибута объекта удаленного пользователя на восстановленной различающееся имя Подразделения Sales.  
+Обновите центр администрирования Active Directory, чтобы увидеть, что последний известный родительский атрибут объекта User изменился на восстановленное различающееся имя подразделения продаж:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesRestored.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesRestored.gif)  
   
 Отфильтруйте всех пользователей подразделения Sales. Нажмите комбинацию клавиш CTRL+A, чтобы выбрать всех удаленных пользователей подразделения Sales. Щелкните **Восстановить** , чтобы перенести объекты из контейнера **Удаленные объекты** в организационное подразделение Sales с теми же атрибутами и членством в группах.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesUndelete.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParentSalesUndelete.png)  
   
 Если организационное подразделение **Sales** включало дочерние подразделения, восстановите сначала эти подразделения, а затем их дочерние объекты и т. д.  
   
-Порядок восстановления всех вложенных удаленных объектов путем указания удаленного родительского контейнера, см. в разделе [приложении б: Восстановление сразу нескольких удаленных объектов Active Directory (образец сценария)](https://technet.microsoft.com/library/dd379504(WS.10).aspx).  
+Сведения о восстановлении всех вложенных удаленных объектов путем указания удаленного родительского контейнера см. в разделе [Appendix B: Восстановление нескольких удаленных объектов Active Directory (пример скрипта) ](https://technet.microsoft.com/library/dd379504(WS.10).aspx).  
   
 Командлет Active Directory в Windows PowerShell, предназначенный для восстановления удаленных объектов, выглядит следующим образом:  
 
@@ -220,7 +220,7 @@ Restore-adobject
 2. Щелкните шеврон, чтобы открыть меню **Добавить условия**, а затем выберите и добавьте параметр **Последнее изменение между заданными датами**. Последнее изменение между заданными датами (атрибут **whenChanged**) будет приближено к времени удаления, а в некоторых средах эти значения будут идентичны. Этот запрос запускает поиск на стороне сервера.  
 3. Выберите удаленные объекты для восстановления с помощью дополнительной фильтрации, сортировки и других действий с результатами поиска, а затем восстановите объекты как обычно.  
   
-## <a name="BKMK_FGPP"></a>Настройка и управление детально настроенными политиками паролей через Центр администрирования Active Directory  
+## <a name="BKMK_FGPP"></a>Настройка детальных политик паролей и управление ими с помощью центр администрирования Active Directory  
   
 ### <a name="configuring-fine-grained-password-policies"></a>Настройка детальной политики паролей
 
@@ -230,19 +230,19 @@ Restore-adobject
   
 На панели навигации выберите представление в виде дерева, щелкните свой домен, **Система**, **Контейнер параметров паролей**, а затем на панели "Задачи" щелкните **Создать** и **Параметры пароля**.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_PasswordSettings.png)  
   
 ### <a name="managing-fine-grained-password-policies"></a>Управление детальной политикой паролей
 
 При создании новой или редактировании уже существующей детальной политики паролей открывается редактор **Параметры пароля**. Здесь можно настроить все желаемые политики паролей как Windows Server 2008 или Windows Server 2008 R2, но только в специальном редакторе.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_CreatePasswordSettings.png)  
   
 Заполните все обязательные (отмеченные звездочкой) и желаемые дополнительные поля и щелкните **Добавить** , чтобы указать, к каким пользователям или группам необходимо применить эту политику. FGPP перезаписывает параметры политики домена по умолчанию для выбранных субъектов безопасности. На представленном выше рисунке максимально ограничивающая политика применяется только к встроенной учетной записи администратора, чтобы предотвратить компрометацию. Эта политика слишком сложна для ее соблюдения стандартными пользователями, но идеально подходит для учетной записи высокого риска, которой пользуются только специалисты.  
   
 Также необходимо указать очередность применения и выбрать пользователей и группы для применения политики в соответствующем домене.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_Precedence.png)  
   
 Командлет Active Directory в Windows PowerShell, предназначенный для настройки детальной политики паролей, выглядит следующим образом:  
   
@@ -258,19 +258,19 @@ Set-ADFineGrainedPasswordPolicy
 
 Командлет для настройки детальной политики паролей в Windows Server 2008 R2 и Windows Server 2012 работает одинаково. На приведенном ниже рисунке обозначены соответствующие атрибуты для этих командлетов:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPP.gif)  
   
-Центр администрирования Active Directory позволяет также найти результирующую детальную политику паролей, примененную к конкретному пользователю. Щелкните правой кнопкой мыши любой пользователь и нажмите кнопку **просмотреть итоговые параметры пароля...**  открыть *параметры пароля* страницу, которая применяется к пользователю напрямую или косвенно:  
+Центр администрирования Active Directory позволяет также найти результирующую детальную политику паролей, примененную к конкретному пользователю. Щелкните правой кнопкой мыши любого пользователя и выберите пункт **просмотреть результирующие параметры пароля...** , чтобы открыть страницу *параметров пароля* , которая применяется к этому пользователю при явном или неявном назначении:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RSOP.png)  
   
 В разделе **Свойства** вы найдете **Напрямую связанные параметры пароля**— параметры детальной политики пароля, назначенные соответствующему пользователю или группе напрямую:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_FGPPSettings.gif)  
   
-Детальные не отображается. для этого необходимо использовать **просмотреть итоговые параметры пароля...**  параметр.  
+Неявное назначение ФГПП здесь не отображается; для этого необходимо использовать параметр **просмотреть результирующие параметры пароля...** .  
   
-## <a name="BKMK_HistoryViewer"></a>Использование средства просмотра журнала PowerShell Windows Центр администрирования Active Directory
+## <a name="BKMK_HistoryViewer"></a>Использование центр администрирования Active Directory средства просмотра журнала Windows PowerShell
 
 Будущее управления Windows связано с Windows PowerShell. Благодаря размещению графических средств поверх платформы автоматизации задач управление сложнейшими распределенными системами стало последовательным и эффективным. Зная принципы работы Windows PowerShell, вы сможете полностью раскрыть свой потенциал и извлечь максимальную пользу из своих инвестиций в компьютерное оборудование.  
   
@@ -278,27 +278,27 @@ Set-ADFineGrainedPasswordPolicy
   
 Средство просмотра журнала Windows PowerShell в Центре администрирования Active Directory позволяет учиться на основе практического опыта.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
   
 Чтобы открыть средство просмотра журнала Windows PowerShell, нажмите на шеврон (стрелку).  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RaiseViewer.png)  
   
 Затем создайте пользователя или измените членство в группе. Средство просмотра журнала постоянно обновляется — в нем появляется свернутое представление каждого командлета, выполненного Центром администрирования Active Directory, и указываются его аргументы.  
   
 Разверните любую интересующую вас строку, чтобы увидеть значения всех аргументов командлета:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ViewArgs.png)  
   
 Откройте меню **Запустить задачу** и создайте заметку, а затем воспользуйтесь Центром администрирования Active Directory для создания, изменения или удаления объекта. Укажите свои действия.  Закончив внесение изменений, выберите команду **Закончить задачу**. В заметке к задаче все выполненные действия будут представлены в виде свернутого примечания, позволяющего лучше понять суть задачи.  
   
 Например, все команды Windows PowerShell, которые использовались для изменения пароля пользователя и удаления пользователя из группы, будут выглядеть следующим образом:  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_RemoveUser.gif)  
   
 Если установить флажок "Показать все", в окне появятся также командлеты Windows PowerShell с глаголом Get-*, предназначенные только для извлечения данных.  
   
-![Управление расширенной AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)  
+![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ShowAll.png)  
   
 В средстве просмотра журнала отображаются тексты всех команд, выполненных Центром администрирования Active Directory, и может показаться, что некоторые команды выполняются без причины. Например, создать нового пользователя можно с помощью команды:  
 
@@ -326,9 +326,9 @@ set-aduser
   
 #### <a name="logging-options"></a>Варианты ведения журнала
 
-Центр администрирования Active Directory теперь содержит встроенное ведение журнала, как часть конфигурации файла трассировки. Создайте или измените следующий файл, расположенный в той же папке, что и файл dsac.exe:  
+Центр администрирования Active Directory теперь содержит встроенное ведение журнала в составе файла конфигурации трассировки. Создайте или измените следующий файл, расположенный в той же папке, что и файл dsac.exe:  
   
-**dsac.exe.config**
+**дсак. exe. config**
   
 Создайте следующее содержимое:  
   
@@ -439,7 +439,7 @@ set-aduser
 Выбранный уровень Verbose (Подробно) включает стеки .NET для каждой функции, однако отражаемые данные могут пригодиться только при устранении неполадок с файлом Dsac.exe, связанных с нарушением прав доступа или аварийным сбоем. Такая проблема может возникнуть по двум причинам:
   
 - На одном из запрашиваемых контроллеров доменов не запущена веб-служба Active Directory.
-- Сетевые соединения блокируются для веб-службы с компьютера под управлением центра администрирования Active Directory.
+- Сетевая связь блокируется службой ADWS с компьютера, на котором выполняется центр администрирования Active Directory.
 
 > [!IMPORTANT]  
 > Существует также отдельная версия этой службы, которая называется [Active Directory Management Gateway](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=2852)и работает в среде Windows Server 2008 с пакетом обновления 2 (SP2) и Windows Server 2003 с пакетом обновления 2 (SP2).
@@ -450,7 +450,7 @@ set-aduser
 |Ошибка|Операция|
 | --- | --- |  
 |"Не удается подключиться к какому-либо домену. Обновите состояние или попробуйте еще раз, когда подключение станет доступным".|Отображается при запуске приложения "Центр администрирования Active Directory".|
-|«Не удается найти доступный сервер в *<NetBIOS domain name>* домена, на котором выполняется служба веб-Active Directory (ADWS)»|Отображается при попытке выбора узла домена в приложении "Центр администрирования Active Directory"|
+|"Не удается найти доступный сервер в домене *<NetBIOS domain name>* , на котором выполняется Active Directory веб-службы (ADWS)"|Отображается при попытке выбора узла домена в приложении "Центр администрирования Active Directory"|
   
 Для решения этой проблемы выполните указанные ниже действия.  
   
@@ -486,4 +486,4 @@ set-aduser
   
 ## <a name="see-also"></a>См. также
 
-[Корзина AD, детально настроенной политики паролей и журнал PowerShell](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  
+[Корзина AD, детальная политика паролей и журнал PowerShell](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md)  
