@@ -2,7 +2,7 @@
 title: Настройка установки основных серверных компонентов Windows Server с помощью Sconfig.cmd
 description: Пояснения об использовании файла Sconfig.cmd
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.date: 10/17/2017
@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 617005fd2d4e63c3cfc11bed28404656b2a81d6e
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 8f07c3546fd43dd3ce9cfa32094bc691fa0bcb2e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66749575"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71360246"
 ---
 # <a name="configure-a-server-core-installation-of-windows-server-2016-or-windows-server-version-1709-with-sconfigcmd"></a>Настройка установки основных серверных компонентов Windows Server 2016 или Windows Server версии 1709 с помощью Sconfig.cmd
 
