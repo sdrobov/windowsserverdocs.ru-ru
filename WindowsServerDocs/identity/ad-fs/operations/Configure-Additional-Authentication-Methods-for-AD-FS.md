@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 07/26/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: adb587412d65506c35705c5eaa8dbea8c660d117
-ms.sourcegitcommit: 9f955be34c641b58ae8b3000768caa46ad535d43
+ms.openlocfilehash: f78c60ccd65b4c9148d53d894c572a4402948806
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68590357"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407683"
 ---
 # <a name="configure-additional-authentication-methods-for-ad-fs"></a>Настройка дополнительных методов проверки подлинности для службы федерации Active Directory
 
@@ -23,7 +23,7 @@ ms.locfileid: "68590357"
 > [!NOTE]
 > Выбирая проверку подлинности сертификата, убедитесь в том, что сертификаты смарт-карт представлены в защищенном виде и имеют требование ввода ПИН-кода.
 
-Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Подробнее о [решениях для удостоверений Microsoft Azure](http://aka.ms/m2w274).<br /><br />Создайте гибридное решение для удостоверений в Microsoft Azure:<br /> - [Подробнее о многофакторной идентификации Azure.](http://aka.ms/ey6o9r)<br /> - [Управление удостоверениями для гибридных сред с одним лесом с использованием проверки подлинности в облаке.](http://aka.ms/g1jat8)<br /> - [Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений.](http://aka.ms/kt1bbm)
+Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Подробнее о [решениях для удостоверений Microsoft Azure](http://aka.ms/m2w274).<br /><br />Создайте гибридное решение для удостоверений в Microsoft Azure:<br /> - [Узнайте о многофакторной идентификации Azure.](http://aka.ms/ey6o9r)<br /> -  —[Управление удостоверениями для гибридных сред с одним лесом с использованием проверки подлинности в облаке.](http://aka.ms/g1jat8)<br /> - [. Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений.](http://aka.ms/kt1bbm)
 
 ## <a name="microsoft-and-third-party-additional-authentication-methods"></a>Корпорация Майкрософт и сторонние дополнительные методы проверки подлинности
 Также можно настроить и включить методы проверки подлинности Майкрософт и сторонних производителей в AD FS в Windows Server 2012 R2. После установки и регистрации в AD FS можно применить MFA в рамках глобальной политики проверки подлинности или для отдельной проверяющей стороны.
@@ -45,7 +45,7 @@ ms.locfileid: "68590357"
 |Одно удостоверение| AD FS защитника|[Адаптер AD FS защитника](https://www.oneidentity.com/products/defender/)|
 |Удостоверение проверки связи|Адаптер Пингид MFA для AD FS|[Адаптер Пингид MFA для AD FS](https://documentation.pingidentity.com/pingid/pingidAdminGuide/index.shtml#pid_c_PingIDforADFSSSO.html)|
 |RSA, подразделение безопасности EMC|Агент проверки подлинности RSA SecurID для служб федерации Microsoft Active Directory|[Агент проверки подлинности RSA SecurID для Microsoft службы федерации Active Directory (AD FS)](http://www.emc.com/security/rsa-securid/rsa-authentication-agents/microsoft-ad-fs.htm)|
-|SafeNet, Inc.|Агент службы проверки подлинности SafeNet (SAS) для AD FS|[Служба проверки подлинности компании SafeNet: Руководство по конфигурации агента AD FS](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)|
+|SafeNet, Inc.|Агент службы проверки подлинности SafeNet (SAS) для AD FS|Служба проверки подлинности @no__t 0SafeNet: Руководство по конфигурации агента AD FS](http://www.safenet-inc.com/resources/integration-guide/data-protection/Safenet_Authentication_Service/SafeNet_Authentication_Service__AD_FS_Agent_Configuration_Guide/?langtype=1033)|
 |секуремфа|Поставщик OTP Секуремфа| [Поставщики многофакторной идентификации ADFS](https://www.securemfa.com/)|
 |Swisscom|Служба проверки подлинности Mobile ID и службы подписей|[Служба проверки подлинности с ИД мобильного устройства](http://swisscom.ch/mid)|
 |Symantec|Служба проверки и защиты идентификации Symantec (VIP)|[Проверка Symantec и служба защиты идентификации (VIP)](http://www.symantec.com/vip-authentication-service)|

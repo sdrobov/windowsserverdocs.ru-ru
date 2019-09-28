@@ -1,9 +1,9 @@
 ---
-title: Шаг 3 Проверка развертывания
-description: Этот раздел является частью руководства DirectAccess добавить в развертывание существующего удаленного доступа (VPN) для Windows Server 2016
+title: Шаг 3. Проверка развертывания
+description: Эта статья является частью инструкции по добавлению DirectAccess в существующее развертывание удаленного доступа (VPN) для Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: 43ac612e-2e77-418c-8171-ebb2086b7cb6
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 639431405635b7b0792b7a73bd9bb524e0827832
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 82acca0309835149ca35676784120b3130e72a54
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67281820"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388704"
 ---
-# <a name="step-3-verify-the-deployment"></a>Шаг 3 Проверка развертывания
+# <a name="step-3-verify-the-deployment"></a>Шаг 3. Проверка развертывания
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В этом разделе описывается убедитесь, что вы правильно настроили развертывание DirectAccess.  
+В этом разделе описывается, как проверить правильность настройки развертывания DirectAccess.  
   
 ### <a name="to-verify-access-to-internal-resources-through-directaccess"></a>Проверка доступа к внутренним ресурсам с помощью DirectAccess  
   

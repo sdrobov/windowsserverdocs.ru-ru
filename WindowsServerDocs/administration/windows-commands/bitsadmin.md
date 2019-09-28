@@ -1,8 +1,8 @@
 ---
 title: bitsadmin
-description: Раздел Windows команды для **bitsadmin** -bitsadmin является средством командной строки, которое можно использовать для создания, загрузки, или отправить задания и отслеживать ход их выполнения.
+description: Раздел команд Windows для **битсадмин** -битсадмин — это программа командной строки, которую можно использовать для создания, загрузки и передачи заданий, а также для отслеживания хода их выполнения.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,36 +13,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da0f05ec716cffb7d7532ebac50a091729a6bb18
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b53293b28a83ecced34d248741996c958531d517
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59821075"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380105"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
-> **Применяется к**: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
+> **Применимо к**: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
-bitsadmin является средством командной строки, которое можно использовать для создания загрузки или отправки заданий и отслеживать ход их выполнения. Средство bitsadmin использует параметры для определения работы для выполнения.  Можно вызвать `bitsadmin /?` или `bitsadmin /HELP` для получения списка параметров.
+битсадмин — это программа командной строки, которую можно использовать для создания заданий скачивания или отправки и отслеживания хода их выполнения. Средство битсадмин использует параметры для указания выполняемой работы.  Чтобы получить список параметров, можно вызвать `bitsadmin /?` или `bitsadmin /HELP`.
 
-Большинство коммутаторов требует \<задания\> параметр, который установлен для задания отображаемое имя или идентификатор GUID. Обратите внимание на то, что отображаемое имя задания могут быть неуникальными. **/ Create** и **/list** коммутаторы возвращают идентификатор GUID задания.
+Для большинства параметров требуется параметр \<Job @ no__t-1, для которого задано отображаемое имя задания или идентификатор GUID. Обратите внимание, что отображаемое имя задания может быть неуникальным. Параметры **/CREATE** и **/List** возвращают идентификатор GUID задания.
 
-По умолчанию доступны сведения о пользовательских заданий. Для доступа к информации для задания другого пользователя, требуются права администратора. Если задание создано в состоянии с повышенными правами, затем необходимо запустить bitsadmin из окно с повышенными привилегиями; в противном случае будет иметь доступ только для чтения к заданию.
+По умолчанию можно получить доступ к сведениям о собственных заданиях. Для доступа к сведениям о заданиях другого пользователя необходимо иметь права администратора. Если задание было создано в состоянии с повышенными привилегиями, необходимо запустить битсадмин из окна с повышенными привилегиями; в противном случае у вас будет доступ к заданию только для чтения.
 
-Многие параметры, соответствующие методам в [интерфейсы BITS](/windows/desktop/bits/bits-interfaces). Подробные сведения, которые можно применять с помощью ключа см. в разделе соответствующего метода.
+Многие из параметров соответствуют методам в [интерфейсах BITS](/windows/desktop/bits/bits-interfaces). Дополнительные сведения, которые могут быть связаны с использованием параметра, см. в соответствующем методе.
 
-Используйте перечисленные ниже параметры для создания задания, задание и получение свойств задания и отслеживать состояние задания. Примеры, показывающие, как использовать некоторые из этих параметров для выполнения задач, см. в разделе [bitsadmin примеры](bitsadmin-examples.md).
+Используйте следующие параметры для создания задания, задания и получения свойств задания, а также для наблюдения за состоянием задания. Примеры, демонстрирующие использование некоторых из этих параметров для выполнения задач, см. в разделе [битсадмин examples](bitsadmin-examples.md).
 
-## <a name="switches"></a>Коммутаторы
+## <a name="switches"></a>Аргументы
 
 [bitsadmin addfile](bitsadmin-addfile.md)  
 [bitsadmin addfileset](bitsadmin-addfileset.md)  
 [bitsadmin addfilewithranges](bitsadmin-addfilewithranges.md)  
-[bitsadmin кэша](bitsadmin-cache.md)  
-[Отмена bitsadmin](bitsadmin-cancel.md)  
-[Полный bitsadmin](bitsadmin-complete.md)  
-[Создание bitsadmin](bitsadmin-create.md)  
+[bitsadmin cache](bitsadmin-cache.md)  
+[bitsadmin cancel](bitsadmin-cancel.md)  
+[bitsadmin complete](bitsadmin-complete.md)  
+[bitsadmin create](bitsadmin-create.md)  
 [bitsadmin getaclflags](bitsadmin-getaclflags.md)  
 [bitsadmin getbytestotal](bitsadmin-getbytestotal.md)  
 [bitsadmin getbytestransferred](bitsadmin-getbytestransferred.md)  
@@ -58,8 +58,8 @@ bitsadmin является средством командной строки, �
 [bitsadmin getfilestransferred](bitsadmin-getfilestransferred.md)  
 [bitsadmin gethelpertokenflags](bitsadmin-gethelpertokenflags.md)  
 [bitsadmin gethelpertokensid](bitsadmin-gethelpertokensid.md)  
-[bitsadmin gethttpmethod](bitsadmin-gethttpmethod.md)
-[bitsadmin getmaxdownloadtime](bitsadmin-getmaxdownloadtime.md)  
+[битсадмин жесттпмесод](bitsadmin-gethttpmethod.md)
+[битсадмин жетмаксдовнлоадтиме](bitsadmin-getmaxdownloadtime.md)  
 [bitsadmin getminretrydelay](bitsadmin-getminretrydelay.md)  
 [bitsadmin getmodificationtime](bitsadmin-getmodificationtime.md)  
 [bitsadmin getnoprogresstimeout](bitsadmin-getnoprogresstimeout.md)  
@@ -80,21 +80,21 @@ bitsadmin является средством командной строки, �
 [bitsadmin gettemporaryname](bitsadmin-gettemporaryname.md)  
 [bitsadmin gettype](bitsadmin-gettype.md)  
 [bitsadmin getvalidationstate](bitsadmin-getvalidationstate.md)  
-[bitsadmin справки](bitsadmin-help.md)  
-[сведения о bitsadmin](bitsadmin-info.md)  
-[Список bitsadmin](bitsadmin-list.md)  
+[bitsadmin help](bitsadmin-help.md)  
+[bitsadmin info](bitsadmin-info.md)  
+[bitsadmin list](bitsadmin-list.md)  
 [bitsadmin listfiles](bitsadmin-listfiles.md)  
-[bitsadmin makecustomheaderswriteonly](bitsadmin-makecustomheaderswriteonly.md)
-[bitsadmin монитора](bitsadmin-monitor.md)  
+[монитор битсадмин](bitsadmin-monitor.md) [битсадмин макекустомхеадерсвритеонли](bitsadmin-makecustomheaderswriteonly.md)
+  
 [bitsadmin nowrap](bitsadmin-nowrap.md)  
-[bitsadmin кэширования](bitsadmin-peercaching.md)  
-[одноранговые узлы bitsadmin](bitsadmin-peers.md)  
+[bitsadmin peercaching](bitsadmin-peercaching.md)  
+[bitsadmin peers](bitsadmin-peers.md)  
 [bitsadmin rawreturn](bitsadmin-rawreturn.md)  
 [bitsadmin removeclientcertificate](bitsadmin-removeclientcertificate.md)  
 [bitsadmin removecredentials](bitsadmin-removecredentials.md)  
 [bitsadmin replaceremoteprefix](bitsadmin-replaceremoteprefix.md)  
-[Сброс bitsadmin](bitsadmin-reset.md)  
-[Возобновление bitsadmin](bitsadmin-resume.md)  
+[bitsadmin reset](bitsadmin-reset.md)  
+[bitsadmin resume](bitsadmin-resume.md)  
 [bitsadmin setaclflag](bitsadmin-setaclflag.md)  
 [bitsadmin setclientcertificatebyid](bitsadmin-setclientcertificatebyid.md)  
 [bitsadmin setclientcertificatebyname](bitsadmin-setclientcertificatebyname.md)  
@@ -104,8 +104,8 @@ bitsadmin является средством командной строки, �
 [bitsadmin setdisplayname](bitsadmin-setdisplayname.md)  
 [bitsadmin sethelpertoken](bitsadmin-sethelpertoken.md)  
 [bitsadmin sethelpertokenflags](bitsadmin-sethelpertokenflags.md)  
-[bitsadmin sethttpmethod](bitsadmin-sethttpmethod.md)
-[bitsadmin setmaxdownloadtime](bitsadmin-setmaxdownloadtime.md)  
+[битсадмин сесттпмесод](bitsadmin-sethttpmethod.md)
+[битсадмин сетмаксдовнлоадтиме](bitsadmin-setmaxdownloadtime.md)  
 [bitsadmin setminretrydelay](bitsadmin-setminretrydelay.md)  
 [bitsadmin setnoprogresstimeout](bitsadmin-setnoprogresstimeout.md)  
 [bitsadmin setnotifycmdline](bitsadmin-setnotifycmdline.md)  
@@ -116,8 +116,8 @@ bitsadmin является средством командной строки, �
 [bitsadmin setreplyfilename](bitsadmin-setreplyfilename.md)  
 [bitsadmin setsecurityflags](bitsadmin-setsecurityflags.md)  
 [bitsadmin setvalidationstate](bitsadmin-setvalidationstate.md)  
-[Приостановка bitsadmin](bitsadmin-suspend.md)  
+[bitsadmin suspend](bitsadmin-suspend.md)  
 [bitsadmin takeownership](bitsadmin-takeownership.md)  
-[Передача bitsadmin](bitsadmin-transfer.md)  
+[bitsadmin transfer](bitsadmin-transfer.md)  
 [bitsadmin util](bitsadmin-util.md)  
-[bitsadmin переноса по словам](bitsadmin-wrap.md)  
+[bitsadmin wrap](bitsadmin-wrap.md)  

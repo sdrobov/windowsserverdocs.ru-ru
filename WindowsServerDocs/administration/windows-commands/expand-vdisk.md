@@ -1,8 +1,8 @@
 ---
-title: Разверните виртуальный диск
-description: 'Раздел Windows команды для ***- '
+title: развернуть виртуальный диск
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8019ce62d6cf38c7430a789f68749444ac91ad48
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8fb5d7b58b7aa4bc9557086c73020820cfa04284
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439438"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377295"
 ---
-# <a name="expand-vdisk"></a>Разверните виртуальный диск
+# <a name="expand-vdisk"></a>развернуть виртуальный диск
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-размер, который можно указать при развертывании виртуального жесткого диска (VHD).
+Расширение виртуального жесткого диска (VHD) до указанного размера.
 > [!NOTE]
-> Эта команда применяется только к Windows 7 и Windows Server 2008 R2.
+> Эта команда применима только к Windows 7 и Windows Server 2008 R2.
 > ## <a name="syntax"></a>Синтаксис
 > ```
 > expand vdisk maximum=<n>
@@ -35,22 +35,22 @@ ms.locfileid: "66439438"
 > 
 > |  Параметр  |                      Описание                      |
 > |-------------|-------------------------------------------------------|
-> | Максимальное =<n> | Указывает новый размер виртуального жесткого диска в мегабайтах (МБ). |
+> | максимум = <n> | Указывает новый размер виртуального жесткого диска в мегабайтах (МБ). |
 > 
 > ## <a name="remarks"></a>Примечания
-> - Виртуальный жесткий ДИСК должен быть выбран и отсоединить для выполнения данной операции. Используйте **выберите виртуальный диск** команду, чтобы выбрать том и перетянуть внимание к нему.
->   ## <a name="BKMK_Examples"></a>Примеры
->   Чтобы развернуть выбранный VHD-ФАЙЛ до 20 ГБ, введите:
+> - Для выполнения этой операции необходимо выбрать и отсоединить виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать том и переместить фокус на него.
+>   ## <a name="BKMK_Examples"></a>Примеров
+>   Чтобы расширить выбранный виртуальный жесткий диск до 20 ГБ, введите:
 >   ```
 >   expand vdisk maximum=20000
 >   ```
 >   ## <a name="additional-references"></a>Дополнительные ссылки
 > - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 > - [подключить виртуальный диск](attach-vdisk.md)
-> - [сжать виртуальный диск](compact-vdisk.md)
+> - [Compact VDISK](compact-vdisk.md)
 
 -   [Отсоединить виртуальный диск](detach-vdisk.md)
--   [виртуальный диск данных](detail-vdisk.md)
--   [Слияние виртуальный диск](merge-vdisk.md)
--   [Выберите виртуальный диск](select-vdisk.md)
+-   [подробные сведения VDISK](detail-vdisk.md)
+-   [Слияние VDISK](merge-vdisk.md)
+-   [выбрать виртуальный диск](select-vdisk.md)
 -   [list_1](list_1.md)

@@ -2,7 +2,7 @@
 title: Блокировка и отмена блокировки станции
 ms.custom: na
 description: Сведения о том, как запретить пользователю или группе доступ к системе служб MultiPoint.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 5972d7e596f4a35d323832cad68349bcc0fe99ed
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 06e47d8eb203007a20d24aa9d187bb1374d0a4d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871772"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395527"
 ---
 # <a name="block-or-unblock-a-station"></a>Блокировка и отмена блокировки станции
 Если нужно привлечь внимание одного или нескольких пользователей, можно заблокировать их в системе MultiPoint Services. Пока пользователи заблокированы, их сеансы остаются активными в системной памяти компьютера служб MultiPoint до тех пор, пока станции не будут разблокированы. Сообщение, отображаемое заблокированному пользователю, можно изменить.  

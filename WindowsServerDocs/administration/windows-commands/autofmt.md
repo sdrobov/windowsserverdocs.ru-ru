@@ -1,8 +1,8 @@
 ---
 title: autofmt
-description: Раздел Windows команды для **autofmt** -форматы диска или раздела при вызове из консоли восстановления Windows.
+description: Раздел команд Windows для **аутофмт** — форматирует диск или раздел при вызове из консоли восстановления Windows.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,25 +13,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e976a74a8d491710b9f306f2f45ccab2b190dae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a15a50966ef4fdcd0abe6615fccae719d73b2d82
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816815"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382256"
 ---
 # <a name="autofmt"></a>autofmt
 
 
 
-Форматирование диска или раздела при вызове из консоли восстановления Windows.
+Форматирует диск или раздел при вызове из консоли восстановления Windows.
 
 ## <a name="remarks"></a>Примечания
 
-Не удается запустить **Autofmt** непосредственно из командной строки.
+Невозможно запустить **аутофмт** непосредственно из командной строки.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Работа с файловыми системами](https://go.microsoft.com/fwlink/?LinkId=4509)

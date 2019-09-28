@@ -1,19 +1,19 @@
 ---
 title: Новые возможности Windows Server версии 1803
 description: Новые возможности вычислений, удостоверения, управления, автоматизации, сетей, безопасности, хранения.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
 ms.date: 05/07/2018
-ms.openlocfilehash: a489d3f8958304d685116186f5db9e1c854114bf
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 211a0e2b49e9f15682a251f96dc338d124e2f998
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "65976543"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391383"
 ---
 # <a name="whats-new-in-windows-server-version-1803"></a>Новые возможности Windows Server версии 1803
 
@@ -45,7 +45,7 @@ Windows Server версии 1709 была выпущен в сентябре 20
 | Новые выпуски  | Каждые 2–3 года  | Каждые 6 месяцев |
 | Поддержка  | 5 лет основной поддержки + 5 лет расширенной поддержки  | 18 месяцев |
 | Выпуски  | Все доступные выпуски Windows Server  | Выпуски Standard и Datacenter |
-| Кому можно использовать  | Все клиенты во всех каналах | Только облачные клиенты и Software Assurance |
+| Кто может использовать  | Все клиенты во всех каналах | Только клиенты облака и клиенты Software Assurance |
 | Параметры установки  | Основные серверные компоненты и сервер с возможностями рабочего стола  | Основные серверные компоненты для узла контейнеров, образа контейнера и образа контейнера Nano Server |
 
 ## <a name="application-platform-and-containers"></a>Платформа приложений и контейнеры

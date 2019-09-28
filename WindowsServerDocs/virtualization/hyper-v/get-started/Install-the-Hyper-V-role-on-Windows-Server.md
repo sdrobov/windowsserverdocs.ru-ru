@@ -1,7 +1,7 @@
 ---
 title: Установка роли Hyper-V в Windows Server
-description: Инструкции по установке Hyper-V с помощью диспетчера серверов или Windows PowerShell
-ms.prod: windows-server-threshold
+description: Содержит инструкции по установке Hyper-V с помощью диспетчер сервера или Windows PowerShell.
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,28 +11,28 @@ ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
 author: KBDAzure
 ms.author: kathydav
 ms.date: 12/02/2016
-ms.openlocfilehash: 80154c569701608ad190fb76eb3737578895d187
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 2687a907852e2a81f03b147df1425cd01b34fb76
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812378"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392811"
 ---
 # <a name="install-the-hyper-v-role-on-windows-server"></a>Установка роли Hyper-V в Windows Server
 
->Область применения. Windows Server 2016, Windows Server 2019 г.
+>Область применения. Windows Server 2016, Windows Server 2019
   
-Для создания и запуска виртуальных машин, установить роль Hyper-V в Windows Server с помощью диспетчера серверов или **Install-WindowsFeature** в Windows PowerShell. Windows 10, см. в разделе [Установка Hyper-V в Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+Чтобы создать и запустить виртуальные машины, установите роль Hyper-V в Windows Server с помощью диспетчер сервера или командлета **Install-WindowsFeature** в Windows PowerShell. Для Windows 10 см. статью [Установка Hyper-V в Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
-Дополнительные сведения о Hyper-V, см. в разделе [Общие сведения о технологии Hyper-V](../Hyper-V-Technology-Overview.md). Чтобы опробовать Windows Server 2019, можно загрузить и установить пробную. См. в разделе [центре оценки программного обеспечения](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
+Дополнительные сведения о Hyper-V см. в статье [Обзор технологии Hyper-v](../Hyper-V-Technology-Overview.md). Чтобы испытать Windows Server 2019, можно скачать и установить ознакомительную версию. См. [Центр оценки](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019).
 
-Перед установкой Windows Server или Добавление роли Hyper-V, убедитесь, что:
-- Совместима оборудования компьютера. Дополнительные сведения см. в разделе [требования к системе для Windows Server](../../../get-started/System-Requirements.md) и [требования к системе для Hyper-V в Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).
-- Вы не планируете использовать виртуализации сторонних приложений, основанных на те же функции процессора, необходимых для Hyper-V. Например, VMWare Workstation и VirtualBox. Можно установить Hyper-V, не удалив эти другие приложения. Но при попытке использовать их для управления виртуальными машинами, при выполнении низкоуровневой оболочки Hyper-V, виртуальных машин может не запуститься или привести может выполняться. Дополнительные сведения и инструкции для выключения низкоуровневой оболочки Hyper-V, если необходимо использовать одно из этих приложений, см. в разделе [виртуализации приложения не работают вместе с Hyper-V, Device Guard и Credential Guard](https://support.microsoft.com/help/3204980/virtualization-applications-do-not-work-together-with-hyper-v-device-g).
+Перед установкой Windows Server или добавлением роли Hyper-V убедитесь, что:
+- Оборудование компьютера совместимо. Дополнительные сведения см. в разделе [требования к системе для Windows Server](../../../get-started/System-Requirements.md) и [требования к системе для Hyper-V в Windows Server](../System-requirements-for-Hyper-V-on-Windows.md).
+- Вы не планируете использовать сторонние приложения виртуализации, использующие те же функции процессора, которые требуются Hyper-V. Примеры включают VMWare Workstation и VirtualBox. Вы можете установить Hyper-V без удаления этих приложений. Но если вы попытаетесь использовать их для управления виртуальными машинами при запуске гипервизора Hyper-V, виртуальные машины могут не запускаться или могут работать ненадежно. Дополнительные сведения и инструкции по отключению низкоуровневой оболочки Hyper-V при необходимости использования одного из этих приложений см. в статье [приложения виртуализации не работают вместе с Hyper-V, Device Guard и Credential Guard](https://support.microsoft.com/help/3204980/virtualization-applications-do-not-work-together-with-hyper-v-device-g).
 
-Если вы хотите установить только средства управления, такие как диспетчер Hyper-V, см. в разделе [удаленно управлять узлами Hyper-V с помощью диспетчера Hyper-V](../Manage/Remotely-manage-Hyper-V-hosts.md).
+Если вы хотите установить только средства управления, такие как диспетчер Hyper-V, см. раздел [Удаленное управление узлами Hyper-v с помощью диспетчера Hyper-v](../Manage/Remotely-manage-Hyper-V-hosts.md).
   
-## <a name="install-hyper-v-by-using-server-manager"></a>Установите Hyper-V с помощью диспетчера серверов  
+## <a name="install-hyper-v-by-using-server-manager"></a>Установка Hyper-V с помощью диспетчер сервера  
   
 1. В **диспетчере серверов** в меню **Управление** выберите **Добавить роли и компоненты**.  
   
@@ -50,32 +50,32 @@ ms.locfileid: "66812378"
   
 8. На странице **Подтверждение выбранных элементов для установки** выберите **Автоматический перезапуск конечного сервера, если требуется** и нажмите кнопку **Установить**.  
   
-9. Когда установка будет завершена, проверьте правильность установки Hyper-V. Откройте **все серверы** странице в диспетчере сервера и выберите сервер, на котором установлен Hyper-V. Проверьте **роли и компоненты** на странице для выбранного сервера.  
+9. После завершения установки убедитесь, что Hyper-V установлен правильно. Откройте страницу **все серверы** в Диспетчер сервера и выберите сервер, на котором установлена Hyper-V. Просмотрите плитку **роли и компоненты** на странице выбранного сервера.  
   
-## <a name="install-hyper-v-by-using-the-install-windowsfeature-cmdlet"></a>Установите Hyper-V с помощью командлета Install-WindowsFeature  
+## <a name="install-hyper-v-by-using-the-install-windowsfeature-cmdlet"></a>Установка Hyper-V с помощью командлета Install-WindowsFeature  
   
 1. На рабочем столе Windows нажмите кнопку "Пуск" и введите любую часть имени **Windows PowerShell**.  
   
-2. Щелкните правой кнопкой мыши Windows PowerShell и выберите **Запуск от имени администратора**.  
+2. Щелкните правой кнопкой мыши Windows PowerShell и выберите команду **Запуск от имени администратора**.  
   
-3. Чтобы установить Hyper-V на сервере, на удаленном подключении, выполните следующую команду и замените `<computer_name>` с именем сервера.  
+3. Чтобы установить Hyper-V на сервере, к которому вы подключены удаленно, выполните следующую команду и замените `<computer_name>` на имя сервера.  
   
     ```powershell
     Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
     ```  
   
-    Если вы подключены локально на сервере, выполните команду без `-ComputerName <computer_name>`.  
+    Если вы подключены локально к серверу, выполните команду без `-ComputerName <computer_name>`.  
   
-4. После перезагрузки сервера, вы увидите что роль Hyper-V установлена и узнайте, какие другие роли и компоненты установлены, выполнив следующую команду:  
+4. После перезагрузки сервера можно увидеть, что роль Hyper-V установлена и узнать, какие другие роли и компоненты установлены, выполнив следующую команду:  
   
     ```powershell
     Get-WindowsFeature -ComputerName <computer_name>  
     ```  
   
-    Если вы подключены локально на сервере, выполните команду без `-ComputerName <computer_name>`.  
+    Если вы подключены локально к серверу, выполните команду без `-ComputerName <computer_name>`.  
   
 > [!NOTE]  
-> Если установить эту роль на сервере под управлением параметра установки основных серверных компонентов Windows Server 2016 и используйте параметр `-IncludeManagementTools`, устанавливается только Hyper-V Module for Windows PowerShell. Можно использовать средство управления графическим интерфейсом пользователя, диспетчер Hyper-V, на другом компьютере для удаленного управления сервером Hyper-V, который выполняется на установке Server Core. Инструкции по удаленное подключение, см. в разделе [удаленно управлять узлами Hyper-V с помощью диспетчера Hyper-V](../Manage/Remotely-manage-Hyper-V-hosts.md).  
+> Если установить эту роль на сервере, на котором выполняется параметр установки Server Core в Windows Server 2016 и использовать параметр `-IncludeManagementTools`, то установлен только модуль Hyper-V для Windows PowerShell. Для удаленного управления узлом Hyper-V, работающим в установке Server Core, можно использовать средство управления графического интерфейса пользователя (диспетчер Hyper-V) на другом компьютере. Инструкции по удаленному подключению см. в статье [Удаленное управление узлами Hyper-v с помощью диспетчера Hyper-v](../Manage/Remotely-manage-Hyper-V-hosts.md).  
   
 ## <a name="see-also"></a>См. также  
   

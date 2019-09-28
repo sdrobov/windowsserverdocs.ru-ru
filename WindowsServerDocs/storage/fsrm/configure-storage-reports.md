@@ -2,22 +2,22 @@
 title: Настройка отчетов хранилища
 description: В этой статье описывается процесс настройки параметров по умолчанию для отчетов хранилища
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f62109a8d3ea3e4e6386956789d276f9aa911e80
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d3500f4ea4fc264f3cb663f17c3a50439b9cb454
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885235"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394259"
 ---
 # <a name="configure-storage-reports"></a>Настройка отчетов хранилища
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Для отчетов хранилища можно настраивать параметры по умолчанию. Эти параметры по умолчанию используются отчетами об инцидентах, которые создаются при возникновении события квоты или события фильтра блокировки файлов. Они также используются для отчетов по расписанию и по требованию, и при определении конкретных свойств этих отчетов параметры по умолчанию можно переопределить.
 
@@ -42,5 +42,5 @@ ms.locfileid: "59885235"
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
--   [Управление ресурсами хранилища](storage-reports-management.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
+-   [Управление отчетами хранилища](storage-reports-management.md)

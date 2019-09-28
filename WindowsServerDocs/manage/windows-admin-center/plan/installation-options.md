@@ -6,14 +6,14 @@ ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 36c9dfcb38ef417df56206cdb18633cc877183c4
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: 144c57bba621ee1b94a66914f8d9b6c0292f8b03
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68658901"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406870"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>Какой тип установки подойдет именно вам?
 
@@ -37,19 +37,19 @@ ms.locfileid: "68658901"
 | Windows 10, версия 1709 или более поздняя  | Локальный клиент |
 | Windows Server Semi-Annual Channel | Уровень шлюза, управляемый сервер, отказоустойчивый кластер |
 | Windows Server 2016                | Уровень шлюза, управляемый сервер, отказоустойчивый кластер |
-| Windows Server 2019                | Уровень шлюза, управляемый сервер, отказоустойчивый кластер |
+| Windows Server 2019                | Уровень шлюза, управляемый сервер, отказоустойчивый кластер |
 
 В центр администрирования Windows:
 
-- **В сценарии с локальным клиентом:** Запустите шлюз центра администрирования Windows из меню "Пуск" и подключитесь к нему из клиентского веб-браузера, `https://localhost:6516`выполнив доступ к.
-- **В других сценариях:** Подключитесь к шлюзу центра администрирования Windows на другом компьютере из клиентского браузера, используя его URL-адрес, например,`https://servername.contoso.com`
+- **В сценарии с локальным клиентом:** Запустите шлюз центра администрирования Windows из меню "Пуск" и подключитесь к нему из клиентского веб-браузера, обратившись к `https://localhost:6516`.
+- **В других сценариях:** Подключитесь к шлюзу центра администрирования Windows на другом компьютере из клиентского браузера, используя его URL-адрес, например `https://servername.contoso.com`.
 
 > [!WARNING]
 > Установка центра администрирования Windows на контроллере домена не поддерживается. [Узнайте больше о рекомендациях по обеспечению безопасности контроллера домена](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/security-best-practices/securing-domain-controllers-against-attack). 
 
 ## <a name="installation-supported-web-browsers"></a>Систему Поддерживаемые веб-браузеры
 
-Microsoft ребро и Google Chrome тестируются и поддерживаются в Windows 10. Другие веб-браузеры, включая Internet Explorer и Firefox, в настоящее время не являются частью нашей тестовой матрицы и, следовательно, не поддерживаются *официально* . В этих браузерах могут возникнуть проблемы с запуском центра администрирования Windows. Например, браузер Firefox имеет собственное хранилище сертификатов, поэтому необходимо импортировать `Windows Admin Center Client` сертификат в Firefox, чтобы использовать центр администрирования Windows в Windows 10. Дополнительные сведения см. в разделе [Известные проблемы, связанные с браузером](../support/known-issues.md#browser-specific-issues).
+Microsoft ребро и Google Chrome тестируются и поддерживаются в Windows 10. Другие веб-браузеры, включая Internet Explorer и Firefox, в настоящее время не являются частью нашей тестовой матрицы и, следовательно, не поддерживаются *официально* . В этих браузерах могут возникнуть проблемы с запуском центра администрирования Windows. Например, браузер Firefox имеет собственное хранилище сертификатов, поэтому необходимо импортировать сертификат `Windows Admin Center Client` в Firefox, чтобы использовать центр администрирования Windows в Windows 10. Дополнительные сведения см. в разделе [Известные проблемы, связанные с браузером](../support/known-issues.md#browser-specific-issues).
 
 ## <a name="management-target-supported-operating-systems"></a>Целевой объект управления: Поддерживаемые операционные системы
 
@@ -59,7 +59,7 @@ Microsoft ребро и Google Chrome тестируются и поддержи
 | ------------------------- |--------------- | ----- | ------------------------ |
 | Windows 10, версия 1709 или более поздняя | Да (с помощью управления компьютером) | Н/Д | Н/Д |
 | Windows Server Semi-Annual Channel | Да | Да | Н/Д |
-| Windows Server 2019 | Да | Да | Да |
+| Windows Server 2019 | Да | Да | Да |
 | Windows Server 2016 | Да | Да | Да, с [последним накопительным обновлением](../use/manage-hyper-converged.md#prepare-your-windows-server-2016-cluster-for-windows-admin-center) |
 | Microsoft Hyper-V Server 2016 | Да | Да | Н/Д |
 | Windows Server 2012 R2 | Да | Да | Н/Д |
