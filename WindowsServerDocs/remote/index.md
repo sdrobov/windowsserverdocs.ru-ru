@@ -1,7 +1,7 @@
 ---
 title: Пульт ДУ
 description: Инструкции по использованию возможностей удаленного доступа и управления серверами.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage
 ms.technology: manage-rsat
 ms.topic: landing-page
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.localizationpriority: high
-ms.openlocfilehash: e714f7d296a85ee9b3aad71230e62ac2c1673138
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 659f40f2e6e33378ef9828a746f72c43edaf0859
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891455"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395866"
 ---
 # <a name="remote"></a>Пульт ДУ
 

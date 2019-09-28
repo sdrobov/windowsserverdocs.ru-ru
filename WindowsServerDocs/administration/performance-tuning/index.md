@@ -1,18 +1,18 @@
 ---
 title: Руководство по обеспечению высокой производительности Windows Server 2016
 description: Руководство по обеспечению высокой производительности Windows Server 2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: landing-page
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 1445ae40428bc8626f8e2a12cbfc2a1e6f41592f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f684a87b091ffd95bb65c0b5f3aa0dfc9f405825
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59891965"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355035"
 ---
 # <a name="performance-tuning-guidelines-for-windows-server-2016"></a>Руководство по обеспечению высокой производительности Windows Server 2016
 
@@ -26,7 +26,7 @@ ms.locfileid: "59891965"
 ## <a name="in-this-guide"></a>В данном руководстве
 В этом руководстве рекомендации по обеспечению высокой производительности Windows Server 2016 разделены на три категории:
 
-|настройка серверного оборудования; | роль сервера; | настройка подсистемы сервера. |
+|настройка серверного оборудования; | Роль сервера | настройка подсистемы сервера. |
 |:---:|:---:|:---:|
 |[Рекомендации по обеспечению высокой производительности оборудования](hardware/index.md) |[Серверы Active Directory](role/active-directory-server/index.md) |[Управление памятью и кэшем](subsystem/cache-memory-management/index.md)|
 |[Рекомендации по питанию оборудования](hardware/power.md)|[Файловые серверы](role/file-server/index.md)|[Подсистема сети](../../networking/technologies/network-subsystem/net-sub-performance-top.md)|
