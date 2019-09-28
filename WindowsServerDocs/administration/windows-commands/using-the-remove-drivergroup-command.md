@@ -1,8 +1,8 @@
 ---
-title: С помощью команды remove-DriverGroup
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Remove-Дриверграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b56f162861caf4493550f9e063065e9544e52eae
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d22ae4e191c2110a0b8d4cc50c24c2f3ec4a7e60
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885755"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362929"
 ---
-# <a name="using-the-remove-drivergroup-command"></a>С помощью команды remove-DriverGroup
+# <a name="using-the-remove-drivergroup-command"></a>Использование команды Remove-Дриверграуп
 
 
 
@@ -36,12 +36,12 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/ DriverGroup:\<имя группы >|Указывает имя группы драйверов для удаления.|
-|[/ Server:\<имя сервера >]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
+|/Дриверграуп: \<Group имя >|Указывает имя удаляемой группы драйверов.|
+|[/Server: \<Server имя >]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы удалить группу драйверов, введите одно из следующих:
+Чтобы удалить группу драйверов, введите одну из следующих:
 ```
 WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers
 ```
@@ -51,4 +51,4 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:PrinterDrivers /Server:MyWdsServer
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

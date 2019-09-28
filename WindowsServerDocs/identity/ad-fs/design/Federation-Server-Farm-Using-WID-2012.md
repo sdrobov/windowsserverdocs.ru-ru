@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2298ba360bb59c950a78514d137c0b4d5fbdd1af
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5f6911bea712dadd9a0b666c3bf8cbe9a260efb7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867822"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359142"
 ---
 # <a name="federation-server-farm-using-wid"></a>Ферма серверов федерации с использованием WID
 
@@ -27,7 +27,7 @@ ms.locfileid: "70867822"
 > [!NOTE]  
 > Рекомендуется использовать по крайней мере два сервера федерации в конфигурации с балансировкой нагрузки\-.  
   
-## <a name="deployment-considerations"></a>Рекомендации по развертыванию  
+## <a name="deployment-considerations"></a>Вопросы развертывания  
 В этом разделе описываются различные вопросы о предполагаемой аудитории, преимуществах и ограничениях, связанных с этой топологией развертывания.  
   
 ### <a name="who-should-use-this-topology"></a>Кто должен использовать эту топологию?  

@@ -1,8 +1,8 @@
 ---
-title: Подкоманды ImageGroup набора
-description: 'Раздел Windows команды для ***- '
+title: Набор подкоманд-Имажеграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d0c7ba47148ba6f8295ab720dd0118759ac9346c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 10023e493ae4db51783b7401c12bc1605145b86c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822985"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370788"
 ---
-# <a name="subcommand-set-imagegroup"></a>Подкоманда: set-ImageGroup
+# <a name="subcommand-set-imagegroup"></a>Подкоманда: Set-Имажеграуп
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменяет атрибуты группы образов.
+изменяет атрибуты группы образов.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server name>] [/Name:<New image group name>] [/Security:<SDDL>]
@@ -32,23 +32,23 @@ wdsutil [Options] /Set-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-mediaGroup:<Image group name>|Указывает имя группы образов.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если не указан, будет использоваться локальный сервер.|
-|[/ Name:<New image group name>]|Указывает новое имя группы образов.|
-|[/ Безопасности:<SDDL>]|Указывает новый дескриптор безопасности, группы образов, в формате языка (SDDL язык) для определения дескриптора безопасности.|
-## <a name="BKMK_examples"></a>Примеры
+Медиаграуп: <Image group name>|Указывает имя группы образов.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если не указано, будет использоваться локальный сервер.|
+|[/Name: <New image group name>]|Указывает новое имя группы образов.|
+|[/Секурити: <SDDL>]|Указывает новый дескриптор безопасности группы образов в формате языка определения дескрипторов безопасности (SDDL).|
+## <a name="BKMK_examples"></a>Примеров
 Чтобы задать имя для группы образов, введите:
 ```
 wdsutil /Set-ImageGroumediaGroup:ImageGroup1 /Name:"New Image Group Name"
 ```
-Чтобы задать различные параметры для группы образов, введите:
+Чтобы указать различные параметры для группы образов, введите:
 ```
 wdsutil /verbose /Set-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /Name:"New Image Group Name" 
 /Security:"O:BAG:S-1-5-21-2176941838-3499754553-4071289181-513 D:AI(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA) (A;ID;0x1200a9;;;AU)(A;OICIIOID;GXGR;;;AU)"
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды add-ImageGroup](using-the-add-imagegroup-command.md)
-[с помощью команды get-AllImageGroups](using-the-get-allimagegroups-command.md) 
- [ С помощью команды get-ImageGroup](using-the-get-imagegroup-command.md)
-[с помощью команды remove-ImageGroup](using-the-remove-imagegroup-command.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды add-имажеграуп](using-the-add-imagegroup-command.md)
+ с[помощью команды Get-аллимажеграупс](using-the-get-allimagegroups-command.md)
+ с помощью команды Get-имажеграуп с помощью команды[Remove-](using-the-remove-imagegroup-command.md) [имажеграуп](using-the-get-imagegroup-command.md)
+.
