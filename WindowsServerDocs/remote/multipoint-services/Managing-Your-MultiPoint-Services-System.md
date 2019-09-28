@@ -2,7 +2,7 @@
 title: Управление системой MultiPoint Services
 description: Узнайте, как управлять службами MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,22 +13,22 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 34bc4dc025e783f4803f2b78dbc573da7912492c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c1e6d7f63251627d6d193820f22af638ba17a0b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59865615"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389565"
 ---
 # <a name="managing-your-multipoint-services-system"></a>Управление системой MultiPoint Services
-MultiPoint Services позволяет подключить к одному компьютеру несколько станций. Традиционная станция состоит из [*концентратора*](Switch-Between-Modes.md) или нулевого клиента, монитора, клавиатуры и мыши. Также поддерживаются клиенты протокола удаленного рабочего стола (RDP), подключенный к сети.  
+MultiPoint Services позволяет подключить к одному компьютеру несколько станций. Традиционная станция состоит из [*концентратора*](Switch-Between-Modes.md) или нулевого клиента, монитора, клавиатуры и мыши. Также поддерживаются клиенты, подключенные к сети протокол удаленного рабочего стола (RDP).  
   
 На следующем рисунке показан пример структуры системы MultiPoint Services, в которую входят четыре *станции*. Подобная система позволяет нескольким пользователям работать с одним и тем же компьютером как независимо друг от друга, так и в группе.  
   
-![Снимок экрана: макет системы MultiPoint Services](./media/WMSMultiPointServerSystemLayout.gif)  
+![Изображение системного макета служб MultiPoint](./media/WMSMultiPointServerSystemLayout.gif)  
   
-MultiPoint Services включает в себя MultiPoint Manager, которая поможет вам, пользователь с правами администратора, чтобы отслеживать и контролировать систему MultiPoint и панель мониторинга MultiPoint, на которой повседневные административные функции. Эти разделы, включенные в это непротиворечивую описаны многие из задач, выполняемых в MultiPoint Manager и панели мониторинга MultiPoint.  
+Службы MultiPoint включают в себя диспетчер MultiPoint, который помогает вам, как пользователь с правами администратора, отслеживать систему MultiPoint и управлять ею, а также панель мониторинга MultiPoint, которая обеспечивает повседневную административную функциональность. В разделах, содержащихся в этом справочном разделе, описываются многие задачи, которые можно выполнить в диспетчере MultiPoint и панели мониторинга MultiPoint.  
   
 ## <a name="see-also"></a>См. также  
-[Управление рабочими столами пользователей с помощью MultiPoint Dashboard](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
+[Управление рабочими столами пользователей с помощью панели мониторинга MultiPoint](Manage-User-Desktops-Using-MultiPoint-Dashboard.md)  
 [Вопросы безопасности и конфиденциальности](Privacy-and-Security-Considerations.md)  

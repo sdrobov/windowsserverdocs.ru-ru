@@ -2,7 +2,7 @@
 title: Включение и отключение защиты диска
 description: Узнайте, как использовать защиту диска с помощью служб MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.assetid: 00aba4c4-0244-4b39-8c85-c46fd96e1d6a
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: d037b0843f5ba50c98e0d6e7cb10836c8d6fa23a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ad5f12a3901a3faf3559abae76e0ba924dce2eb9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871746"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389749"
 ---
 # <a name="enable-or-disable-disk-protection"></a>Включение и отключение защиты диска
 Функция защиты диска позволяет возвращать систему служб MultiPoint в определенное состояние при каждой ее перезагрузке. Используя функцию защиты диска, пользователи могут временно вносить изменения в систему служб MultiPoint, а после перезагрузки сервера эти изменения отменяются. Примеры изменений, которые будут отброшены при перезапуске сервера, включают в себя настройку профиля пользователя, сохранение файлов, изменение параметров или установку приложений.  

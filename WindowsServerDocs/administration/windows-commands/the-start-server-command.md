@@ -1,8 +1,8 @@
 ---
-title: Начало команды Server
-description: 'Раздел Windows команды для ***- '
+title: Команда запуска сервера
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,22 +13,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4580c98b3f43decf8989965abe6d2fee63eda78b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e18ed6a7707516410e96ecf4b6bd43e668667c2d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889105"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385097"
 ---
-# <a name="the-start-server-command"></a>Начало команды Server
+# <a name="the-start-server-command"></a>Команда запуска сервера
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-запускает многоадресной передачи, пространство имен, транспортный сервер или все службы на сервере служб развертывания Windows.
+запускает многоадресную передачу, пространство имен, транспортный сервер или все службы на сервере служб развертывания Windows.
 ## <a name="subcommands"></a>Подкоманды
 |Подкоманда|Описание|
 |-------|--------|
-|[Подкоманда: start-MulticastTransmission](subcommand-start-multicasttransmission.md)|Запуск передачи.|
-|[Подкоманда: start-пространство имен](subcommand-start-namespace.md)|запускает пространства имен.|
-|[Подкоманда: start-Server](subcommand-start-server.md)|запускает все службы на сервере служб развертывания Windows.|
-|[Подкоманда: start-TransportServer](subcommand-start-transportserver.md)|запускает все службы на транспортном сервере.|
+|[Подкоманда: Start-Мултикасттрансмиссион](subcommand-start-multicasttransmission.md)|запускает передачу.|
+|[Подкоманда: Start-Namespace](subcommand-start-namespace.md)|запускает пространство имен.|
+|[Подкоманда: Start-Server](subcommand-start-server.md)|запускает все службы на сервере служб развертывания Windows.|
+|[Подкоманда: Start-Транспортсервер](subcommand-start-transportserver.md)|запускает все службы на транспортном сервере.|

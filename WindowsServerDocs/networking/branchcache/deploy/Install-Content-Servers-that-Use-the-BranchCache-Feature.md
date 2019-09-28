@@ -1,31 +1,31 @@
 ---
 title: Установка серверов содержимого, использующих компонент BranchCache
-description: Этот раздел является частью BranchCache развертывания руководство для Windows Server 2016, который показывает, как развернуть BranchCache в режимах распределенный и размещенный кэш, чтобы оптимизировать использование пропускной способности глобальной сети в филиалах
+description: Эта статья является частью руководства по развертыванию BranchCache для Windows Server 2016, в котором показано, как развернуть BranchCache в распределенном и размещенном режимах кэша для оптимизации использования пропускной способности глобальной сети в филиалах.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 3a87bab4d5dd1b05020eee4f8cb86e5e8cb18509
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ab33f5066daa0ef339c38974e4022cf8e61ace57
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813615"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406450"
 ---
 # <a name="install-content-servers-that-use-the-branchcache-feature"></a>Установка серверов содержимого, использующих компонент BranchCache
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Развертывание серверов содержимого, защищенный гипертекстовый протокол (HTTPS) веб-серверов, протокол передачи гипертекста (HTTP) веб-серверы и службы фоновой интеллектуальной службы передачи (BITS)-серверы приложений, таких как Windows Server Update Services (на основе WSUS) и серверы системы сайта распространения филиала System Center Configuration Manager, необходимо установить компонент BranchCache, запустите службу BranchCache и (для WSUS серверов) выполнить дополнительные действия по настройке.  
+Для развертывания серверов содержимого, которые являются веб-серверами с протоколом HTTPS, веб-серверами HTTP и фоновой интеллектуальной службы передачи (BITS), например Windows Server Update Services ( WSUS) и System Center Configuration Manager серверах системы сайта распространения филиалов необходимо установить функцию BranchCache, запустить службу BranchCache и (только для серверов WSUS) выполнить дополнительные действия по настройке.  
   
-В следующих разделах для развертывания серверов содержимого.  
+Сведения о развертывании серверов содержимого см. в следующих разделах.  
   
--   [Установите компонент BranchCache](Install-the-BranchCache-Feature.md)  
+-   [Установка функции BranchCache](Install-the-BranchCache-Feature.md)  
   
--   [Настройка Windows Server Update Services &#40;WSUS&#41; серверам содержимого](configure-wsus-content-servers.md)  
+-   [Настройка серверов &#40;содержимого&#41; WSUS Windows Server Update Services](configure-wsus-content-servers.md)  
   
 
 

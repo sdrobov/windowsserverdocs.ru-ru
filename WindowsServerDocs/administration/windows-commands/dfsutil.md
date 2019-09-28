@@ -1,7 +1,7 @@
 ---
 title: Dfsutil
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 45545b4e12d31c293ead5b18b83efd50d7bc37bb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1a06806b109bbd324213f935892bbbab415362df
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66439649"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377976"
 ---
 # <a name="dfsutil"></a>Dfsutil
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Команды dfsutil управляет пространств имен DFS, серверов и клиентов. Dfsutil команды используют исходное терминология распределенной файловой системы, с обновленной терминологии пространств имен DFS, предоставляется как объяснение для большинства команд.
+Команда Dfsutil управляет пространствами имен DFS, серверами и клиентами. команды Dfsutil используют исходную терминологию распределенная файловая система с обновленными терминологиями пространств имен DFS, предоставленными в качестве объяснения для большинства команд.
 
-Примеры использования этой команды см. в разделе 
+Примеры использования этой команды см. в разделе. 
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,28 +38,28 @@ command </parameter> </param2>
 
 |Параметр|Описание|
 |-------|--------|
-|[Dfsutil корневой](dfsutil-root.md)|Отображает, создает, удаляет, импортирует, экспортирует корневые пространства имен.|
-|[Dfsutil ссылку](dfsutil-link.md)|Отображает, создает, удаляет или перемещение папки \(ссылки\).|
-|[Dfsutil целевой объект](dfsutil-target.md)|Отображает, создать, удалить сервер папки целевой объект или пространства имен.|
-|[Dfsutil свойство](dfsutil-property.md)|Отображение или изменение сервера на целевой объект или пространство имен папок.|
-|[Dfsutil клиента](dfsutil-client.md)|Отображает или изменяет ключи клиента сведения или реестра.|
-|[Dfsutil сервера](dfsutil-server.md)|Отображает или изменяет конфигурацию пространства имен.|
-|[Dfsutil Diag](dfsutil-diag.md)|Выполнить диагностику или просмотр dfsdirs\/dfspath.|
-|[Dfsutil домена](dfsutil-domain.md)|Отображает все домена\-на основе пространства имен в домене.|
-|[Dfsutil кэша](dfsutil-cache.md)|Отображает или очищает кэш клиента.|
-|[Dfsutil oldcli](dfsutil-oldcli.md)|Использовать dfsutil \/oldcli команду, чтобы использовать исходный dfsutil синтаксиса.|
+|[Dfsutil root](dfsutil-root.md)|Отображает, создает, удаляет, импортирует и экспортирует корни пространства имен.|
+|[Dfsutil Link](dfsutil-link.md)|Отображает, создает, удаляет или перемещает папки \(links @ no__t-1.|
+|[Dfsutil Target](dfsutil-target.md)|Отображает, создает, удаляет целевой объект папки или сервер пространства имен.|
+|[Dfsutil, свойство](dfsutil-property.md)|Отображает или изменяет целевой объект папки или сервер пространства имен.|
+|[Dfsutil Client](dfsutil-client.md)|Отображает или изменяет сведения о клиенте или разделы реестра.|
+|[Dfsutil Server](dfsutil-server.md)|Отображает или изменяет конфигурацию пространства имен.|
+|[Dfsutil DIAG](dfsutil-diag.md)|Выполните диагностику или просмотрите дфсдирс @ no__t-0dfspath.|
+|[Dfsutil domain](dfsutil-domain.md)|Отображает все пространства имен Domain @ no__t-0based в домене.|
+|[Dfsutil Cache](dfsutil-cache.md)|Отображает или очищает кэш клиента.|
+|[Dfsutil олдкли](dfsutil-oldcli.md)|Используйте команду Dfsutil \/oldcli, чтобы использовать исходный синтаксис команды Dfsutil.|
 
-## <a name="remarks-optional-section"></a>"Примечания" <optional section>
-Если указать объект \(например сервер пространства имен\) в конце команды, большинство команд отобразится информация об объекте без дополнительных параметров или команды. Например при использовании dfsutil команды Root, после добавления корневого пространства имен в команду, чтобы просмотреть сведения о корневой.
+## <a name="remarks-optional-section"></a>Примечания <optional section>
+Если указать объект \(such в качестве сервера пространства имен @ no__t-1 в конце команды, в большинстве команд будут отображаться сведения об объекте без дополнительных параметров или команд. Например, при использовании команды Dfsutil root можно добавить к команде корень пространства имен, чтобы просмотреть сведения об корне.
 
-## <a name="BKMK_Examples"></a>Примеры
-&lt;Здесь будут размещаться подробное описание вашего примера.&gt;
+## <a name="BKMK_Examples"></a>Примеров
+&lt;Here, где вы размещаете подробное описание примера. &gt;
 
 ```
 This /is /the /example /of /calling /command /with /parameters
 ```
 
-&lt;Здесь будут размещаться подробное описание еще один пример.&gt;
+&lt;Here, где вы размещаете подробное описание другого примера. &gt;
 
 ```
 This /is /a:different /example

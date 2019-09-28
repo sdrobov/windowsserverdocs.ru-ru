@@ -1,8 +1,8 @@
 ---
 title: Управление рабочими столами пользователей с помощью панели мониторинга MultiPoint
-description: Общие сведения о панели мониторинга MultiPoint
+description: Содержит общие сведения о панели мониторинга MultiPoint.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,17 +13,17 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 049910029f0ed2623ae34131d3755964d3499d0e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b250d820e7086054d18d62eebe8ce9d3686f8d5d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837345"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405101"
 ---
 # <a name="manage-user-desktops-using-multipoint-dashboard"></a>Управление рабочими столами пользователей с помощью панели мониторинга MultiPoint
-В системе MultiPoint Services рабочий стол — это программный пользовательский интерфейс, отображаемый на мониторе каждой пользовательской *станции*. MultiPoint Dashboard — это средство, позволяющее управлять такими рабочими столами.   
+В системе MultiPoint Services рабочий стол — это программный пользовательский интерфейс, отображаемый на мониторе каждой пользовательской *станции*. Панель мониторинга MultiPoint — это средство, помогающее управлять настольными системами.   
   
-В MultiPoint Dashboard на **Главная** вкладке, можно сделать следующее:  
+На панели мониторинга MultiPoint на вкладке **Главная** можно выполнить следующие действия.  
   
 - Просмотр рабочих столов  
 Вы можете просматривать эскизы всех активных рабочих столов. Сведения о просмотре эскизов см. в разделе [Параметры просмотра для эскизов сеансов](View-Options-for-Session-Thumbnails-in-MultiPoint-Dashboard.md).  

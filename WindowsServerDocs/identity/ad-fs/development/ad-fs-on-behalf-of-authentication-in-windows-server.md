@@ -7,14 +7,14 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 89b2bf8422fb1151a7e502b381f9842f77009277
-ms.sourcegitcommit: 4fa147d552481d8279a5390f458a9f7788061977
+ms.openlocfilehash: 9c6c6e7d2c12b6b822989bba05370015f7cd1833
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009132"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407816"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -44,7 +44,7 @@ ms.locfileid: "70009132"
 Пример будет состоять из трех модулей
 
 
-Module | Описание
+Модуль | Описание
 -------|------------
 тодоклиент | Собственный клиент, с которым взаимодействует пользователь
 Файле todoservice | Веб-API среднего уровня, который выступает в качестве клиента для серверной части WebAPI
@@ -277,11 +277,11 @@ Module | Описание
 | Ключ                      | Значение                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например https://localhost:44321/                                                                                         |
-| IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например<https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
+| IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например <https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
 | IDA: ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
-| IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
-| IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, например https://localhost:44300                                                                                                                     |
-| IDA: центр сертификации            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
+| IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml.                                                                                             |
+| IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, например https://localhost:44300.                                                                                                                     |
+| IDA: центр сертификации            | Это URL-адрес для службы AD FS, например https://fs.anandmsft.com/adfs/.                                                                                                                                          |
 
 Все остальные ключи Ida: XXXXXXX в узле **appSettings** можно закомментировать или удалить.
 
@@ -494,10 +494,10 @@ Module | Описание
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 Вы также можете просмотреть подробные трассировки на Fiddler. Запустите Fiddler и включите расшифровку по протоколу HTTPS. Вы видите, что мы делаем два запроса к конечной точке/адфс/оаутинклудес.
-В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![ AD FS OBO.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![ AD FS OBO @ no__t-2.
 
-Во втором взаимодействии с конечной точкой маркера можно увидеть, что в параметре **requested_token_use** задано значение **on_behalf_of** , и мы используем маркер доступа https://localhost:44321/ , полученный для веб-службы среднего уровня, то есть как утверждение для получения токен "от имени".
-![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
+Во втором взаимодействии с конечной точкой маркера можно увидеть, что параметр **requested_token_use** установлен как **on_behalf_of** , и мы используем маркер доступа, полученный для веб-службы среднего уровня, т. е. https://localhost:44321/ в качестве утверждения для получения токен "от имени".
+![AD FS OBO @ NO__T-1
 
 ## <a name="next-steps"></a>Следующие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

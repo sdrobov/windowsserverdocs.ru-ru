@@ -4,16 +4,16 @@ description: Файл CAPolicy. inf содержит различные пара
 manager: alanth
 ms.topic: article
 ms.assetid: 65b36794-bb09-4c1b-a2e7-8fc780893d97
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: fb2e25dcd27ed3046eeeb444a9f167ccff6e1dd3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 810f6f8ba9e33f1f26f49f542ad6d23819deb463
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868960"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406291"
 ---
 # <a name="capolicyinf-syntax"></a>Синтаксис файла CAPolicy. INF
 >   Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
@@ -42,7 +42,7 @@ ms.locfileid: "70868960"
 
 -   _Значение_ — это параметр, который отображается справа от знака равенства.
 
-В примере ниже **[Version]** — это раздел, **Signature** — это ключ, а **\$"Windows NT\$"** — это значение.
+В примере ниже **[Version]** — это раздел, **Signature** — ключ, а **"\$Windows NT @ no__t-4"** — это значение.
 
 Пример.
 

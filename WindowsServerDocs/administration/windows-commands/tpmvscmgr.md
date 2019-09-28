@@ -2,7 +2,7 @@
 title: tpmvscmgr
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b1d9b049615322bffc39b5b372ce145579b57b2
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0051750f557786b0a564ec20a32089e089898cc0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868766"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385663"
 ---
 # <a name="tpmvscmgr"></a>tpmvscmgr
 
@@ -87,6 +87,6 @@ tpmvscmgr.exe destroy /instance <instance ID>
 ```
 где \<идентификатор экземпляра > — значение, печатаемое на экране при создании карты пользователем. В частности, для первой созданной карты идентификатор экземпляра — ROOT\SMARTCARDREADER\0000.
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительная справка
 
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,9 +1,9 @@
 ---
 title: Планирование развертывания для удаленного управления клиентами DirectAccess
-description: Этот раздел является частью руководства клиенты DirectAccess управление удаленно в Windows Server 2016.
+description: Этот раздел является частью руководств по удаленному управлению клиентами DirectAccess в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,22 +12,22 @@ ms.topic: article
 ms.assetid: ab518c0d-a496-414e-b9c7-f4378d8b13aa
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 21783b2ac4135344a13d69a983fe22800df1f40d
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 0224d47b85a3988a4adf312dad8f149a76c24778
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282799"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404588"
 ---
 # <a name="plan-deployment-for-remote-management-of-directaccess-clients"></a>Планирование развертывания для удаленного управления клиентами DirectAccess
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В следующих разделах приводятся шаги планирования для развертывания на одном сервере удаленного доступа, которые можно использовать для удаленного управления клиентами DirectAccess.  
+В следующих разделах приводятся шаги по планированию развертывания одного сервера удаленного доступа, который можно использовать для удаленного управления клиентами DirectAccess.  
   
-[Шаг 1. Планирование инфраструктуры удаленного доступа](Step-1-Plan-the-Remote-Access-Infrastructure.md): Этот раздел поможет вам спланировать настройки сетевой топологии и сервера, требования к брандмауэру, требования к сертификатам, требования к системе имя домена, сервер сетевых расположений DirectAccess и конфигурации серверов управления, Active Directory требования и создания объекта групповой политики.  
+[Шаг 1. Спланируйте инфраструктуру удаленного доступа @ no__t-0: Этот раздел поможет спланировать топологию сети и параметры сервера, требования к брандмауэру, требования к системе доменных имен, конфигурации сервера сетевого расположения DirectAccess и серверов управления, Active Directory требования и создание объекта групповая политика.  
   
-[Шаг 2. Планирование развертывания удаленного доступа](Step-2-Plan-the-Remote-Access-Deployment.md): Планирование клиента и стратегии развертывания сервера и серверов инфраструктуры.  
+[Шаг 2. Спланируйте развертывание удаленного доступа @ no__t-0: Планируйте стратегии развертывания клиентов и серверов и конфигурации серверов инфраструктуры.  
 
   
 

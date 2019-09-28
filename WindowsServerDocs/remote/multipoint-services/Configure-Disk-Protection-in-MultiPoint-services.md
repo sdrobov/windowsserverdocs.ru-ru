@@ -2,7 +2,7 @@
 title: Настройка защиты диска в службах MultiPoint
 description: Узнайте, как настроить защиту диска для служб MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: 867848b65b02b6a7436fc5c86ba796a1b42aec42
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ae930162de32335ac32e3bda0ac381a26c5ea6dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871744"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389819"
 ---
 # <a name="configure-disk-protection"></a>Настройка защиты диска
 Можно использовать защиту диска в службах MultiPoint для защиты системного тома от нежелательных обновлений, чтобы запланировать сохранение обновлений Windows в процессе защиты диска, временно отключить защиту диска и удалить защиту диска.  

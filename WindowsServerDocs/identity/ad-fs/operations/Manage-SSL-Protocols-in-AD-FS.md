@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 951e7d74a3370d9863d747e349d7fe701615e225
-ms.sourcegitcommit: 2e38b26742f3b16c153170d6f5219c020a8e9383
+ms.openlocfilehash: 44fb4c02421a431edb502daecaa38f00fb4dd2ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69896818"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407537"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Управление протоколами SSL/TLS и комплектами шифров для AD FS
 В следующей документации содержатся сведения о том, как отключить и включить определенные протоколы TLS/SSL и комплекты шифров, используемые AD FS
@@ -114,7 +114,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 Используйте следующие разделы реестра и их значения для включения и отключения TLS 1,0.
 
 > [!IMPORTANT]
-> Отключение TLS 1,0 приведет к разрыву WAP для AD FS доверия.  При отключении TLS 1,0 необходимо включить строгую проверку подлинности для приложений.  См. раздел [Включение строгой проверки](#enabling-strong-authentication-for-net-applications) подлинности 
+> Отключение TLS 1,0 приведет к разрыву WAP для AD FS доверия.  При отключении TLS 1,0 необходимо включить строгую проверку подлинности для приложений.  См. раздел [Включение строгой проверки подлинности](#enabling-strong-authentication-for-net-applications) 
 
 
 
@@ -256,20 +256,20 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 Чтобы включить комплект шифров, добавьте его строковое значение в ключ многострочного значения функций.  Например, если мы хотим включить TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521, добавьте его в строку.
 
-Полный список поддерживаемых комплектов шифров см. в разделе комплекты [шифров в TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  Этот документ содержит таблицу наборов, включенных по умолчанию и поддерживаемых, но не включенных по умолчанию.  Чтобы определить приоритеты для комплектов шифров, см. раздел Определение приоритетов для комплектов [шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
+Полный список поддерживаемых комплектов шифров см. в разделе комплекты [шифров в TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  Этот документ содержит таблицу наборов, включенных по умолчанию и поддерживаемых, но не включенных по умолчанию.  Чтобы определить приоритеты для комплектов шифров, см. раздел [Определение приоритетов для комплектов шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
 
 ## <a name="enabling-strong-authentication-for-net-applications"></a>Включение строгой проверки подлинности для приложений .NET
 Приложения .NET Framework 3.5/4.0/4.5. x могут переключить протокол по умолчанию на TLS 1,2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра принудительно заставит приложения .NET использовать TLS 1,2.
 
 > [!IMPORTANT]
-> Для AD FS в Windows Server 2016 и Windows Server 2012 R2 необходимо использовать ключ .NET Framework 4.0/4.5. x:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319
+> Для AD FS в Windows Server 2016 и Windows Server 2012 R2 необходимо использовать ключ .NET Framework 4.0/4.5. x:  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-0. NETFramework\v4.0.30319
 
 
 Для .NET Framework 3,5 Используйте следующий раздел реестра:
 
-[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
+[HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft @ no__t-0. NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
 
-Для .NET Framework 4.0/4.5. x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
+Для .NET Framework 4.0/4.5. x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft @ no__t-0. NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
 
 ![Строгая проверка подлинности](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 

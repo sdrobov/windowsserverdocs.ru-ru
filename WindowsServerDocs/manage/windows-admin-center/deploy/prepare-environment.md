@@ -7,13 +7,13 @@ author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 19013c3f132b7486647ade2c9c4950b65c21b8e7
-ms.sourcegitcommit: feec5cbe983c8c5800ccd4fc214914084fcceaba
+ms.prod: windows-server
+ms.openlocfilehash: 72e71ce2d1427f392aa02d32597f92d031f9a5c9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70975318"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407001"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Подготовка среды для Windows Admin Center
 
@@ -125,7 +125,7 @@ ms.locfileid: "70975318"
 3. Введите **1**, чтобы включить удаленное управление.
 4. Введите **4** для возврата в главное меню.
 
-### <a name="step-3-enable-file-server-role"></a>Шаг 3. Включите роль файлового сервера
+### <a name="step-3-enable-file-server-role"></a>Шаг 3. Включите роль файлового сервера
 
 Чтобы включить роль файлового сервера для обеспечения базовых возможностей обмена файлами и удаленного управления, выполните следующие действия.
 

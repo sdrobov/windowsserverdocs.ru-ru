@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 6af0dd0fe88099c04bca291a7b3351aa8e83d253
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 0119cb063d2a68fb4cc96d3fa1cc2867230989ff
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66192557"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408582"
 ---
 # <a name="ad-fs-design"></a>Разработка AD FS
 
@@ -26,8 +26,8 @@ ms.locfileid: "66192557"
 
   
 ## <a name="see-also"></a>См. также  
-Для планирования емкости AD FS в Windows Server 2016 см. в разделе [таблица планирования емкости AD FS.](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
+Планирование емкости для AD FS в Windows Server 2016 см. на [листе планирования емкости AD FS.](http://adfsdocs.blob.core.windows.net/adfs/ADFSCapacity2016.xlsx)  
   
-[Обзор служб федерации Active Directory](../Active-Directory-Federation-Services.md)  
+[Обзор службы федерации Active Directory (AD FS)](../Active-Directory-Federation-Services.md)  
   
 

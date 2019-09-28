@@ -2,7 +2,7 @@
 title: Учетные записи пользователей служб MultiPoint
 description: Сведения об учетных записях пользователей в службах MultiPoint, особенно о том, какой тип использовать для различных сценариев
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 67aa84244aa9ebfcd8375bd82f9d6ae431fc5eac
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ff81af2a0aa8da7f801ec14c27dc00c9bae6e8aa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871424"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71388960"
 ---
 # <a name="example-scenarios-multipoint-services-user-accounts"></a>Примеры сценариев Учетные записи пользователей служб MultiPoint
 Что необходимо сделать для реализации сценария учетной записи пользователя, выбранного для среды служб MultiPoint? В следующих таблицах описаны задачи, выполняемые для настройки учетных записей пользователей и подготовки станций для общих или отдельных учетных записей пользователей на автономном компьютере MultiPoint или на сетевых серверах в Рабочей группе или домене Active Directory. Выберите сценарий, применяемый к вашей среде. Затем перейдите по ссылкам в таблице, чтобы завершить каждую необходимую задачу настройки.  

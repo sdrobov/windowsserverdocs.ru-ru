@@ -1,30 +1,30 @@
 ---
-title: Инициализация с помощью узла Аттестация ключей HGS
+title: Инициализация HGS с помощью аттестации ключа узла
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: f19b61ee79b815bb2d2b61676c7b4a8a41e64f31
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 92b8b61a2c940ed7ca2879f6639b11f4a92a694f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59875835"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403620"
 ---
-# <a name="initialize-hgs-using-host-key-attestation"></a>Инициализация с помощью узла Аттестация ключей HGS
+# <a name="initialize-hgs-using-host-key-attestation"></a>Инициализация HGS с помощью аттестации ключа узла
 
->Относится к: Windows Server 2019
+>Относится к: Windows Server 2019
 
-Этот шаг зависит от того, ли при инициализации HGS в новом лесу или существующем лесу бастиона.
+Этот шаг зависит от того, инициализируется ли HGS в новом лесу или в существующем лесу бастиона:
 
-- [Инициализировать кластер HGS в новом лесу (по умолчанию)](guarded-fabric-initialize-hgs-key-mode-default.md)
+- [Инициализация кластера HGS в новом лесу (по умолчанию)](guarded-fabric-initialize-hgs-key-mode-default.md)
 
   -Или-
 
-- [Инициализировать кластер HGS в существующем лесу бастиона](guarded-fabric-initialize-hgs-key-mode-bastion.md)
+- [Инициализация кластера HGS в существующем лесу бастиона](guarded-fabric-initialize-hgs-key-mode-bastion.md)
 
 
 

@@ -7,16 +7,16 @@ ms.author: joflore
 manager: mtillman
 ms.date: 11/14/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 9b3db1390e8191451ef270ce29a2a37463b1de3c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 00f3851ce74a496bd530c8ea682ea312f8b06a0a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390935"
 ---
-# <a name="demoting-domain-controllers-and-domains"></a>Понижение уровня контроллеров домена и доменов
+# <a name="demoting-domain-controllers-and-domains"></a>Понижение роли контроллеров домена и доменов
 
 >Область применения. Windows Server
 
@@ -24,19 +24,19 @@ ms.locfileid: "59869775"
   
 ## <a name="ad-ds-removal-workflow"></a>Рабочий процесс удаления AD DS
 
-![Рабочий процесс удаления диаграммы для AD DS](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)  
+![Диаграмма рабочего процесса удаления AD DS](media/Demoting-Domain-Controllers-and-Domains--Level-200-/adds_demotedomainforest.png)  
 
 > [!CAUTION]
 > Удаление ролей доменных служб Active Directory с помощью программы Dism.exe или модуля Windows PowerShell DISM после повышения роли до контроллера домена не поддерживается и приводит к тому, что сервер перестает загружаться нормально.
 >
 > В отличие от диспетчера сервера или модуля ADDSDeployment для Windows PowerShell, DISM — это собственная система обслуживания, которая не распознает доменные службы Active Directory или их конфигурацию. Не используйте программу Dism.exe или модуль Windows PowerShell DISM для удаления роли доменных служб Active Directory, если сервер все еще является контроллером домена.
 
-## <a name="demotion-and-role-removal-with-powershell"></a>Удаление понижения роли и роли с помощью PowerShell
+## <a name="demotion-and-role-removal-with-powershell"></a>Понижение роли и удаление ролей с помощью PowerShell
 
 |||  
 |-|-|  
-|**Командлеты ADDSDeployment и ServerManager**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Uninstall-AddsDomainController|-SkipPreChecks<br /><br />*-LocalAdministratorPassword*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-DNSDelegationRemovalCredential*<br /><br />-Force<br /><br />*-ForceRemoval*<br /><br />*-IgnoreLastDCInDomainMismatch*<br /><br />*-IgnoreLastDNSServerForZone*<br /><br />*-LastDomainControllerInDomain*<br /><br />-Norebootoncompletion<br /><br />*-RemoveApplicationPartitions*<br /><br />*-RemoveDNSDelegation*<br /><br />-RetainDCMetadata|  
+|**Командлеты Аддсдеплоймент и ServerManager**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
+|Uninstall-AddsDomainController|-SkipPreChecks<br /><br />*-Локаладминистраторпассворд*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-Днсделегатионремовалкредентиал*<br /><br />-Force<br /><br />*-Форцеремовал*<br /><br />*-ИгнореластдЦиндомаинмисматч*<br /><br />*-Игнореластднссерверфорзоне*<br /><br />*-Ластдомаинконтроллериндомаин*<br /><br />-Norebootoncompletion<br /><br />*-Ремовеаппликатионпартитионс*<br /><br />*-Ремоведнсделегатион*<br /><br />-RetainDCMetadata|  
 |Uninstall-WindowsFeature/Remove-WindowsFeature|***-Имя***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
   
 > [!NOTE]  
@@ -54,21 +54,21 @@ ms.locfileid: "59869775"
 
 * На панели навигации выберите пункт **AD DS** или **Все серверы**. Перейдите вниз к разделу **Роли и компоненты**. В списке **Роли и компоненты** щелкните правой кнопкой мыши **Доменные службы Active Directory** и выберите команду **Удалить роль или компонент**. В этом интерфейсе пропускается страница **Выбор сервера**.  
 
-   ![Диспетчер сервер — все серверы и удаления ролей и компонентов](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)  
+   ![Диспетчер сервера-All Servers — удаление ролей и компонентов](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection.png)  
 
-Командлеты ServerManager **Uninstall-WindowsFeature** и **Remove-WindowsFeature** помешает удаления роли AD DS, пока не будет понижена роль контроллера домена.
+Командлеты ServerManager **uninstall-WindowsFeature** и **Remove-WindowsFeature** не позволяют удалить роль AD DS, пока контроллер домена не будет понижен.
   
 ### <a name="server-selection"></a>Server Selection
 
-![Удаление мастера ролей и компонентов Выбор целевого сервера](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection2.png)  
+![Мастер удаления ролей и компонентов Выбор целевого сервера](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection2.png)  
 
 В диалоговом окне **Выбор сервера** можно выбрать один из серверов, ранее добавленных в пул, если он доступен. Локальный сервер, на котором запущен диспетчер сервера, доступен всегда.  
 
 ### <a name="server-roles-and-features"></a>"Роли сервера" и "Компоненты"
 
-![Удаление ролей и компонентов мастер - выберите роли для удаления](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerRoles.png)  
+![Мастер удаления ролей и компонентов — Выбор ролей для удаления](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerRoles.png)  
 
-Чтобы понизить роль контроллера домена, снимите флажок **Доменные службы Active Directory**. Если сервер в настоящее время является контроллером домена, роль доменных служб Active Directory не удаляется, а открывается диалоговое окно **Результаты проверки** с предложением понизить роль. В противном случае двоичные файлы удаляются так же, как в случае с любой другой ролью.  
+Чтобы понизить роль контроллера домена, снимите флажок **Доменные службы Active Directory**. Если сервер в настоящее время является контроллером домена, роль доменных служб Active Directory не удаляется, а открывается диалоговое окно **Результаты проверки** с предложением понизить роль. В противном случае он удаляет двоичные файлы, как и любые другие функции ролей.  
 
 * Не удаляйте другие роли или компоненты, связанные с доменными службами Active Directory, такие как DNS, консоль управления групповыми политиками или средства удаленного администрирования сервера, если вы планируете немедленно повысить роль контроллера домена снова. Удаление дополнительных ролей и компонентов увеличивает время, необходимое для повторного повышения роли, так как диспетчер сервера повторно устанавливает их при переустановке роли.  
 * Если вы планируете понизить роль контроллера домена навсегда, удалите ненужные роли и компоненты доменных служб Active Directory по собственному усмотрению. Для этого необходимо снять флажки, соответствующие этим ролям и компонентам.  
@@ -89,24 +89,24 @@ Uninstall-addsdomaincontroller
 Uninstall-windowsfeature  
 ```
 
-![Удаление ролей и компонентов мастер - диалоговое окно подтверждения](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_RemoveFeatures.png)  
+![Мастер удаления ролей и компонентов — диалоговое окно подтверждения](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_RemoveFeatures.png)  
 
-![Удаление ролей и функций мастер — проверка](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Demote.png)  
+![Мастер удаления ролей и компонентов — Проверка](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Demote.png)  
 
 ### <a name="credentials"></a>Учетные данные
 
-![Active Directory мастер настройки доменных служб — Выбор учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Credentials.png)  
+![Мастер настройки служб домен Active Directory — Выбор учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Credentials.png)  
 
 Параметры понижения уровня настраиваются на странице **Учетные данные** . Учетные данные, необходимые для понижения уровня, представлены в следующем списке:  
 
-* Для понижения уровня дополнительного контроллера домена требуются учетные данные администратора домена. Выбрав **принудительно удалить контроллер домена** можно понизить уровень контроллера домена без удаления метаданных объекта контроллера домена из Active Directory.  
+* Для понижения уровня дополнительного контроллера домена требуются учетные данные администратора домена. Выбор **принудительного удаления этого контроллера домена** понижает роль контроллера домена без удаления метаданных объекта контроллера домена из Active Directory.  
 
    > [!WARNING]  
    > Этот параметр следует выбрать, только если контроллер домена не может установить связь с другими контроллерами домена и нет *другого способа* разрешить эту сетевую проблему. Принудительное понижение уровня оставляет потерянные метаданные в Active Directory на оставшихся контроллерах домена леса. Помимо этого, все нереплицированные изменения на этом контроллере домена, например пароли и новые учетные записи пользователей, навсегда теряются. Потерянные метаданные — это основная причина обращения в службу поддержки пользователей Майкрософт по поводу AD DS, Exchange, SQL и другого программного обеспечения.  
    >
    > При принудительном понижении уровня контроллера домена *необходимо* немедленно почистить метаданные вручную. Этапы очистки см. в разделе [Очистка метаданных сервера](https://technet.microsoft.com/library/cc816907(WS.10).aspx).  
 
-   ![Active Directory мастер настройки доменных служб — учетные данные Принудительное удаление](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
+   ![Мастер настройки служб домен Active Directory — принудительное удаление учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
   
 * Для понижения уровня последнего контроллера домена требуется членство в группе администраторов предприятия, так как при этом удаляется сам домен (если это последний домен леса, при этом удаляется лес). Диспетчер сервера сообщает, является ли текущий контроллер последним контроллером в домене. Для подтверждения того, что контроллер является последним в домене, необходимо установить флажок **Последний контроллер домена в домене** .  
 
@@ -120,7 +120,7 @@ Uninstall-windowsfeature
 
 ### <a name="warnings"></a>Предупреждения
 
-![Мастер настройки служб домена Active Directory - влияние роли FSMO учетные данные](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Warnings.png)  
+![Мастер настройки домен Active Directory Services — влияние ролей FSMO учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Warnings.png)  
 
 Страница **Предупреждения** информирует о возможных последствиях удаления контроллера домена. Чтобы продолжить, необходимо установить флажок **Продолжить удаление**.
 
@@ -131,9 +131,9 @@ Uninstall-windowsfeature
 
 ### <a name="removal-options"></a>Параметры удаления
 
-![Active Directory мастер настройки доменных служб — DNS удалить учетные данные и разделы приложений](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ReviewOptions.png)  
+![Мастер настройки служб домен Active Directory — учетные данные для удаления DNS и разделов приложений](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ReviewOptions.png)  
 
-Страница **Параметры удаления** выводится или не выводится в зависимости от того, был ли выбран параметр **Последний контроллер домена в домене** на странице **Учетные данные**. На ней можно настроить дополнительные параметры удаления. Чтобы активировать кнопку **Далее**, выберите параметры **Игнорировать последний DNS-сервер в зоне**, **Удалить разделы приложений** и **Удалить делегирование DNS** .
+Страница **Параметры удаления** выводится или не выводится в зависимости от того, был ли выбран параметр **Последний контроллер домена в домене** на странице **Учетные данные**. На ней можно настроить дополнительные параметры удаления. Установите флажок **пропускать последний DNS-сервер для зоны**, **удалить разделы приложений**и **Удалить делегирование DNS** , чтобы включить кнопку **Далее** .
 
 Параметры выводятся, только если они применимы к этому контроллеру домена. Например, если делегирование DNS для сервера не используется, соответствующий флажок отображаться не будет.
 
@@ -150,9 +150,9 @@ Uninstall-windowsfeature
 
 ### <a name="new-administrator-password"></a>Новый пароль администратора
 
-![Мастер настройки служб домена Active Directory - новый пароль администратора учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_NewAdminPwd.png)  
+![Мастер настройки служб домен Active Directory — учетные данные новый пароль администратора](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_NewAdminPwd.png)  
 
-**Новый пароль администратора** страницы, необходимо указать пароль для учетной записи администратора встроенные локального компьютера, после завершения понижения роли, и компьютер стал рядовым сервером домена или компьютером рабочей группы.
+На странице **новый пароль администратора** необходимо указать пароль для встроенной учетной записи администратора локального компьютера, после завершения понижения роли, когда компьютер станет рядовым сервером домена или рабочей группой.
 
 Если аргументы командлета **Uninstall-ADDSDomainController** не заданы, они имеют те же значения по умолчанию, что и параметры в диспетчере сервера.
 
@@ -161,14 +161,14 @@ Uninstall-windowsfeature
 * Если этот аргумент *не указан* , командлет предлагает ввести и подтвердить скрытый пароль. Это предпочтительный вариант использования при интерактивном выполнении командлета.
 * Если аргумент указан *со значением*, это значение должно быть защищенной строкой. Это не является предпочтительным вариантом использования при интерактивном выполнении командлета.
 
-Например, можно вручную ввести запрос пароля с помощью **Read-Host** командлет, чтобы пользователю ввести защищенную строку.
+Например, можно вручную запросить пароль с помощью командлета **Read-Host** , чтобы запросить безопасную строку у пользователя.
 
 ```
 -localadministratorpassword (read-host -prompt "Password:" -assecurestring)
 ```
 
 > [!WARNING]
-> Так как в предыдущих вариантах пароль не подтверждается, соблюдайте повышенную осторожность: пароль невидим.
+> Поскольку два предыдущих варианта не подтверждают пароль, будьте предельно осторожны: пароль не отображается.
 
 Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется. Пример:
 
@@ -181,7 +181,7 @@ Uninstall-windowsfeature
 
 ### <a name="confirmation"></a>Подтверждение операций
 
-![Мастер настройки служб домена Active Directory — Просмотр параметров](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Confirmation.png)
+![Мастер настройки служб домен Active Directory. параметры проверки](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Confirmation.png)
 
 На странице **Подтверждение** приводится описание запланированного понижения роли. Список параметров конфигурации понижения роли не отображается. Это последняя страница мастера, отображаемая перед тем, как начнется понижение роли. При нажатии на кнопку "Просмотреть сценарий" создается сценарий понижения роли Windows PowerShell.
 
@@ -195,13 +195,13 @@ Uninstall-DomainController
 
 Пример:
 
-![Пример удаления PowerShell-ADDSDomainController.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
+![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 
 Запрос на перезагрузку — это последняя возможность отменить эту операцию при использовании модуля Windows PowerShell ADDSDeployment. Чтобы подавить этот запрос, используйте аргумент **-force** или **confirm:$false**.  
 
 ### <a name="demotion"></a>Понижение уровня
 
-![Active Directory мастер настройки доменных служб - понижения роли в процессе выполнения](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Demotion.png)  
+![Мастер настройки служб домен Active Directory — выполняется понижение уровня](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Demotion.png)  
 
 Когда появляется страница **Понижение уровня**, это означает, что настройка контроллера домена началась и ее нельзя остановить или отменить. Подробная информация об операциях выводится на этой странице и записывается в следующие журналы:  
 
@@ -210,34 +210,34 @@ Uninstall-DomainController
 
 Так как командлеты **Uninstall-AddsDomainController** и **Uninstall-WindowsFeature** выполняют по одному действию каждый, они показаны здесь на этапе подтверждения с минимальным необходимым набором аргументов. При нажатии на клавишу ВВОД запускается процесс понижения роли, после чего компьютер перезапускается.
 
-![Пример удаления PowerShell-ADDSDomainController.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
+![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 
-![Пример удаления PowerShell-WindowsFeature](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
+![Пример удаления PowerShell — WindowsFeature](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallWindowsFeature.png)
 
 Чтобы автоматически закрывать напоминание о перезагрузке, используйте аргументы **-force** или **-confirm:$false** с любым командлетом Windows PowerShell ADDSDeployment. Чтобы предотвратить автоматическую перезагрузку сервера по завершении повышения роли, используйте аргумент **-norebootoncompletion:$false**.
 
 > [!WARNING]
 > Отключать перезагрузку не рекомендуется. Для правильной работы рядовой сервер должен перезагрузиться.
 
-![Пример Принудительное удаление PowerShell-ADDSDomainController.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallFinished.png)
+![Удаление PowerShell — пример Аддсдомаинконтроллер Force](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallFinished.png)
 
 Ниже приводится пример принудительного понижения с минимальным набором обязательных аргументов **-forceremoval** и **-demoteoperationmasterrole**. Аргумент **-credential** не требуется, поскольку пользователь выполнил вход как член группы администраторов предприятия:
 
-![Пример удаления PowerShell-ADDSDomainController.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
+![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleForce.png)
 
 Ниже приведен пример удаления последнего контроллера домена в домене с минимальным набором обязательных аргументов **-lastdomaincontrollerindomain** и **-removeapplicationpartitions**:
 
-![Пример удаления PowerShell-ADDSDomainController - LastDomainControllerInDomain](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleLastDC.png)
+![Удаление PowerShell — пример Аддсдомаинконтроллер-Ластдомаинконтроллериндомаин](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallExampleLastDC.png)
 
-Если вы попытаетесь удалить роль Доменных службах Active Directory перед понижением роли сервера, Windows PowerShell блокирует с ошибкой:
+При попытке удалить роль AD DS перед понижением роли сервера Windows PowerShell блокирует ошибку:
 
-![Этап готовности к установке удаления сбой во время удаления AD-Domain-Services и продолжить удаление невозможно. 1. Контроллер домена должен быть понижена, прежде чем можно удалить роль служб Active DirectoryDomain.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallError.png)
+![Не удалось продолжить выполнение предварительных условий при удалении AD-Domain-Services, и удаление не может быть продолжено. 1. Прежде чем можно будет удалить активную роль Директоридомаин Services, необходимо понизить уровень контроллера домена.](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallError.png)
 
 > [!IMPORTANT]
 > Чтобы получить возможность удалить двоичные файлы роли доменных служб Active Directory, необходимо перезапустить компьютер после понижения роли сервера.
 
 ### <a name="results"></a>Результаты
 
-![Вы действительно хотите выйти предупреждение после удаления AD DS](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_DemoteSignoff.png)
+![Вы собираетесь отключить предупреждение после удаления AD DS](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_DemoteSignoff.png)
 
 На странице **Результаты** показано, успешно ли было выполнено повышение роли, а также приводится важная для администраторов информация. Контроллер домена автоматически перезагрузится через 10 секунд.

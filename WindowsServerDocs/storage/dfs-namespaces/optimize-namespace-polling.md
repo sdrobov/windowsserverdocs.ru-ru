@@ -2,22 +2,22 @@
 title: Оптимизация опроса пространства имен
 description: В этой статье рассматривается оптимизация опроса пространства имен для поддержания согласованности доменного пространства имен на всех серверах пространства имен.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 995b01604b680746c4b0d6502b3b3968503d4210
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8b5a80324851674c8d980bc1b6cda3a5ea51483f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878275"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402153"
 ---
 # <a name="optimize-namespace-polling"></a>Оптимизация опроса пространства имен
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Для поддержания согласованности доменного пространства имен на всех серверах пространства имен эти серверы должны периодически опрашивать доменные службы Active Directory (AD DS), чтобы получать самые свежие данные пространства имен. 
 
@@ -35,9 +35,9 @@ ms.locfileid: "59878275"
     -   Выбирайте вариант **Оптимизировать для масштабируемости**, если пространство имен размещено на более чем 16 серверах пространства имен. При этом уменьшается нагрузка на эмулятор основного контроллера домена (PDC), но увеличивается время, затрачиваемое на репликацию изменений пространства имен на все серверы пространства имен. Пока изменения не будут реплицированы на все серверы, пользователи могут получать несогласованное представление пространства имен.
 
 > [!NOTE]
-> Чтобы задать режим опроса пространства имен с помощью Windows PowerShell, используйте [EnableRootScalability DfsnRoot набора](https://technet.microsoft.com/library/jj884281.aspx) командлет, который появился в Windows Server 2012.
+> Чтобы задать режим опроса пространства имен с помощью Windows PowerShell, используйте командлет [Set-Дфснрут енаблерутскалабилити](https://technet.microsoft.com/library/jj884281.aspx) , который появился в windows Server 2012.
 
 ## <a name="see-also"></a>См. также
 
 -   [Настройка пространств имен DFS](tuning-dfs-namespaces.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)

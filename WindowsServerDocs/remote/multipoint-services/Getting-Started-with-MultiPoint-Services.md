@@ -2,7 +2,7 @@
 title: начало работы со службами MultiPoint
 description: Общие сведения о службах MultiPoint и о том, как приступить к работе.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 2ed2084038236dc8914eefe6bdafc133817b7b41
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: cf31e62345b006ef9572a2ea97a23e3e0bf41b64
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871683"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395371"
 ---
 # <a name="getting-started-with-multipoint-services"></a>начало работы со службами MultiPoint
 Система служб MultiPoint позволяет нескольким пользователям использовать несколько станций, которые физически подключены к одному компьютеру с помощью концентраторов станции. Каждая станция обычно состоит из центра станции, мыши, клавиатуры и монитора видео. Каждый пользователь на станции служб MultiPoint использует уникальный сеанс Windows для управления, который можно управлять с помощью MultiPoint Manager.  

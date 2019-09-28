@@ -1,19 +1,19 @@
 ---
 title: О шифровании дампа
 description: Описывает шифрование файлов дампа и устранение неполадок шифрования.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: dongill
 ms.topic: article
 author: larsiwer
 ms.asset: b78ab493-e7c3-41f5-ab36-29397f086f32
 ms.author: kathydav
 ms.date: 11/03/2016
-ms.openlocfilehash: d46deee7fc9d911de2a6ee44ae097affe1d658a3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e1e374a75c11321820393bede83ca9ea225f5424
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872141"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392822"
 ---
 # <a name="about-dump-encryption"></a>О шифровании дампа
 Шифрование дампа можно использовать для шифрования аварийных дампов и динамических дампов, созданных для системы. Дампы шифруются с помощью симметричного ключа шифрования, который создается для каждого дампа. Затем сам ключ шифруется с помощью открытого ключа, заданного доверенным администратором узла (предохранитель ключа шифрования аварийного дампа). Это гарантирует, что только кто-то, у которого есть соответствующий закрытый ключ, сможет расшифровывать и, следовательно, получать доступ к содержимому дампа. Эта возможность используется в защищенной структуре.

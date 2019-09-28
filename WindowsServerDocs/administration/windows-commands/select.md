@@ -1,8 +1,8 @@
 ---
 title: отключения
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c3723dd414adca68c22011ef3f6be02eb6531d5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7dc3bc8775f971968f096ba4344348e77c112cfa
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889905"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384108"
 ---
 # <a name="select"></a>отключения
 
 
 
-Перемещение фокуса на диске, секции, тома или виртуального жесткого диска (VHD).
+Перемещает фокус на диск, раздел, том или виртуальный жесткий диск (VHD).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,17 +39,17 @@ select vdisk
 
 |Параметр|Описание|
 |---------|-----------|
-|[Выберите диск](select-disk.md)|Перемещение фокуса на диск.|
-|[Выберите секцию](select-partition.md)|Перемещение фокуса на секции.|
-|[Выберите том](select-volume.md)|Перемещение фокуса на томе.|
-|[Выберите виртуальный диск](select-vdisk.md)|Перемещение фокуса к виртуальному жесткому диску.|
+|[Выбор диска](select-disk.md)|Перемещает фокус на диск.|
+|[Выбор Секции](select-partition.md)|Сдвигает фокус на секцию.|
+|[Выбор тома](select-volume.md)|Перемещает фокус на том.|
+|[Выбрать виртуальный диск](select-vdisk.md)|Перемещает фокус на виртуальный жесткий диск.|
 
 ## <a name="remarks"></a>Примечания
 
--   Если том с соответствующей секции, секции выбирается автоматически.
--   Если выбрана секция с соответствующим томом, том будет определяться автоматически.
+-   Если выбран том с соответствующим разделом, раздел будет выбран автоматически.
+-   Если секция выбрана с соответствующим томом, том будет выбран автоматически.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

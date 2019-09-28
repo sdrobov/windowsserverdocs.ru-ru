@@ -2,7 +2,7 @@
 title: Начало работы с групповыми управляемыми учетными записями служб
 description: Безопасность Windows Server
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-gmsa
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 3d07f137aa40b26b4f4fd69c050415b82608ed7e
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 8086ce329c532e07363fd22fe424a9a1dda04250
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546369"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386894"
 ---
 # <a name="getting-started-with-group-managed-service-accounts"></a>Начало работы с групповыми управляемыми учетными записями служб
 
@@ -60,7 +60,7 @@ ms.locfileid: "69546369"
 |-------|-----|-----------|------------|
 |Учетная запись компьютера в системе Windows|Домен|Ограничена одним сервером в домене|Управляется компьютером|
 |Учетная запись компьютера без системы Windows|Домен|Любой сервер в домене|Нет|
-|Виртуальная учетная запись|Локальные|Ограничена одним сервером|Управляется компьютером|
+|Виртуальная учетная запись|Локальная|Ограничена одним сервером|Управляется компьютером|
 |Автономная управляемая учетная запись Windows 7|Домен|Ограничена одним сервером в домене|Управляется компьютером|
 |Учетная запись пользователя|Домен|Любой сервер в домене|Нет|
 |Групповая управляемая учетная запись службы|Домен|Любой сервер, присоединенный к домену Windows Server 2012|Управляется контроллером домена и извлекается узлом|
@@ -153,7 +153,7 @@ ms.locfileid: "69546369"
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД (модуль Active Directory загрузится автоматически):
 
-    **New-адсервицеаккаунт [-имя] <string> -dNSHostName <string> [-керберосенкриптионтипе <ADKerberosEncryptionType>] [-манажедпассвординтервалиндайс < Nullable [Int32] >] [-принЦипалсалловедторетриевеманажедпассворд < ADPrincipal [] >]-SamAccountName <string> -ServicePrincipalNames < String [] >**
+    **New-Адсервицеаккаунт [-name] <string>-DNSHostName <string> [-Керберосенкриптионтипе <ADKerberosEncryptionType>] [-Манажедпассвординтервалиндайс < Nullable [Int32] >] [-ПринЦипалсалловедторетриевеманажедпассворд < ADPrincipal [] >]-SamAccountName <string>-ServicePrincipalNames < String [] >**
 
     |Параметр|Строка|Пример|
     |-------|-----|------|
@@ -185,7 +185,7 @@ ms.locfileid: "69546369"
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **New-адсервицеаккаунт [-имя] <string> -рестрикттуутбаундаусентикатиононли [-манажедпассвординтервалиндайс < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]**
+    **New-Адсервицеаккаунт [-имя] <string>-Рестрикттуутбаундаусентикатиононли [-Манажедпассвординтервалиндайс < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]**
 
     |Параметр|Строка|Пример|
     |-------|-----|------|
@@ -247,11 +247,11 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Get-адсервицеаккаунт [-name] <string> -принЦипалсалловедторетриевеманажедпассворд**
+    **Get-Адсервицеаккаунт [-name] <string>-ПринЦипалсалловедторетриевеманажедпассворд**
 
 3.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Set-адсервицеаккаунт [-name] <string> -принЦипалсалловедторетриевеманажедпассворд < адпринЦипал [] >**
+    **Set-Адсервицеаккаунт [-name] <string>-ПринЦипалсалловедторетриевеманажедпассворд < АдпринЦипал [] >**
 
 |Параметр|Строка|Пример|
 |-------|-----|------|
@@ -307,11 +307,11 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Get-адсервицеаккаунт [-name] <string> -принЦипалсалловедторетриевеманажедпассворд**
+    **Get-Адсервицеаккаунт [-name] <string>-ПринЦипалсалловедторетриевеманажедпассворд**
 
 3.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Set-адсервицеаккаунт [-name] <string> -принЦипалсалловедторетриевеманажедпассворд < адпринЦипал [] >**
+    **Set-Адсервицеаккаунт [-name] <string>-ПринЦипалсалловедторетриевеманажедпассворд < АдпринЦипал [] >**
 
 |Параметр|Строка|Пример|
 |-------|-----|------|

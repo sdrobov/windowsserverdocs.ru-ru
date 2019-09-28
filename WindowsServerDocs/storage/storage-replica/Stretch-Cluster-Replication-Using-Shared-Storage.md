@@ -1,6 +1,6 @@
 ---
 title: Репликация растянутого кластера с помощью общего хранилища
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: eldenc
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -8,12 +8,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 6c5b9431-ede3-4438-8cf5-a0091a8633b0
-ms.openlocfilehash: 3acfcfd13ee3f78bac59a96b6021e5489f4e39ac
-ms.sourcegitcommit: 6f8993e2180c4d3c177e3e1934d378959396b935
+ms.openlocfilehash: 654b4aea135c360f5fc5f59fdf85627fe8dd4cc2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000750"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402963"
 ---
 # <a name="stretch-cluster-replication-using-shared-storage"></a>Репликация растянутого кластера с помощью общего хранилища
 
@@ -36,7 +36,7 @@ ms.locfileid: "70000750"
 
 ![Схема, на которой показаны два узла на сайте Redmond, репликация которых обеспечивается двумя узлами того же кластера на сайте Bellevue](./media/Stretch-Cluster-Replication-Using-Shared-Storage/Storage_SR_StretchClusterExample.png)  
 
-**РИС. 1.  Репликация хранилища в кластере с растяжением**  
+@NO__T 0FIGURE 1:  Репликация хранилища в кластере Stretch @ no__t-0  
 
 ## <a name="prerequisites"></a>Предварительные требования  
 -   Лес доменных служб Active Directory (использовать Windows Server 2016 не обязательно).  
@@ -792,7 +792,7 @@ ms.locfileid: "70000750"
     > [!NOTE]
     > При использовании компьютера удаленного управления понадобится указать имя кластера для этих командлетов, а также имена двух групп ресурсов.  
 
-### <a name="related-topics"></a>См. также  
+### <a name="related-topics"></a>Связанные разделы  
 - [Общие сведения о реплике хранилища](storage-replica-overview.md)  
 - [Репликация сервера на серверное хранилище](server-to-server-storage-replication.md)  
 - [Репликация кластера в кластерное хранилище](cluster-to-cluster-storage-replication.md)  

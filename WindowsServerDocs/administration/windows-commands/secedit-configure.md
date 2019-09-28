@@ -2,7 +2,7 @@
 title: 'Secedit: Настройка'
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9844ed9ac1c53d0a3b9f8bb28ab085a20a48509d
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: f0e1b900d01ad7f0e84d3235f24a00fe108eaa36
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868823"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384271"
 ---
 # <a name="seceditconfigure"></a>Secedit: Настройка
 
@@ -40,7 +40,7 @@ Secedit /configure /db <database file name> [/cfg <configuration file name>] [/o
 |CFG|Необязательно.</br>Указывает путь и имя файла для шаблона безопасности, который будет импортирован в базу данных для анализа.</br>Этот параметр/cfg допустим только при использовании с `/db \<database file name>` параметром. Если этот параметр не указан, анализ выполняется для любой конфигурации, уже хранящейся в базе данных.|
 |перезапись|Необязательно.</br>Указывает, должен ли шаблон безопасности в параметре/cfg перезаписывать любой шаблон или составной шаблон, хранящийся в базе данных, вместо того, чтобы добавлять результаты в сохраненный шаблон.</br>Этот параметр командной строки допустим только в том случае, `/cfg \<configuration file name>` если используется параметр. Если он не указан, шаблон в параметре/cfg добавляется к сохраненному шаблону.|
 |Зон|Необязательно.</br>Указывает области безопасности, применяемые к системе. Если этот параметр не указан, все параметры безопасности, определенные в базе данных, применяются к системе. Чтобы настроить несколько областей, разделяйте их пробелами. Поддерживаются следующие области безопасности:</br>-SecurityPolicy</br>    Локальная политика и политика домена для системы, включая политики учетных записей, политики аудита, параметры безопасности и т. д.</br>- Group_Mgmt</br>    Ограниченные параметры группы для всех групп, указанных в шаблоне безопасности.</br>- User_Rights</br>    Права входа пользователя и предоставление привилегий.</br>-Регкэйс</br>    Безопасность локальных разделов реестра.</br>— Хранилище файлов</br>    Безопасность локального хранилища файлов.</br>-Службы</br>    Безопасность для всех определенных служб.|
-|Журналь|Необязательно.</br>Указывает путь и имя файла журнала для процесса.|
+|log|Необязательно.</br>Указывает путь и имя файла журнала для процесса.|
 |Тихо|Необязательно.</br>Подавляет вывод на экран и журнал. Вы по-прежнему можете просматривать результаты анализа с помощью оснастки "Настройка и анализ безопасности" консоли управления (MMC).|
 
 ## <a name="remarks"></a>Примечания
@@ -60,7 +60,7 @@ Secedit /analyze /db C:\Security\FY11\SecDbContoso.sdb /log C:\Security\FY11\Sec
 Secedit /configure /db C:\Security\FY11\SecDbContoso.sdb /cfg SecContoso.inf /overwrite /log C:\Security\FY11\SecAnalysisContosoFY11.xml /quiet
 ```
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительная справка
 
 -   [Программу Secedit](secedit.md)
 -   [Secedit:analyze](secedit-analyze.md)

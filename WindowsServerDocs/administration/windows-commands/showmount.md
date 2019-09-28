@@ -1,8 +1,8 @@
 ---
 title: showmount
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 26acf24922e6ac53a5c902d65eb0f23bff0af93b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e1d197072db93130de880b5ec52d1875720b1d26
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852355"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383910"
 ---
 # <a name="showmount"></a>showmount
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Можно использовать **showmount** для отображения подключенные каталоги.  
+Для просмотра подключенных каталогов можно использовать **шовмаунт** .  
   
 ## <a name="syntax"></a>Синтаксис  
 ```
@@ -32,13 +32,13 @@ showmount {-e|-a|-d} <Server>
 ```
 
 ## <a name="description"></a>Описание  
-**Showmount** команда\-строки служебная программа отображает сведения об экспорте сервером для NFS на компьютере, указанном с подключенными файловыми системами *сервера*. Если *Server* не указан, **showmount** отображает сведения о компьютере, на котором **showmount** команда.  
+Служебная программа **шовмаунт** Command @ no__t-1line отображает сведения о подключенных файловых системах, экспортированных сервером для NFS на компьютере, указанном *сервером*. Если *сервер* не указан, **шовмаунт** отображает сведения о компьютере, на котором выполняется команда **шовмаунт** .  
   
-Необходимо указать один из следующих вариантов:  
+Необходимо указать один из следующих параметров:  
   
-- **\-e** -отображает все файловые системы, экспортированный на сервере.  
-- **\-** -отображает все сетевой файловой системы \(NFS\) клиентов и каталогов на сервере каждого подключен.  
-- **\-d** -отображаются все каталоги на сервере, на который в данный момент подключены клиенты NFS.  
+- **\-E** -отображает все файловые системы, экспортированные на сервере.  
+- **\-A** — отображает все клиенты сетевой файловой системы \(NFS @ no__t-3 и каталоги на сервере, на котором они подключены.  
+- **\-d** — отображает все каталоги на сервере, которые в настоящее время подключены клиентами NFS.  
   
 ## <a name="see-also"></a>См. также  
-[Службы сетевой файл системы Справочник по командам](services-for-network-file-system-command-reference.md)  
+[Справочник по командам служб для NFS](services-for-network-file-system-command-reference.md)  

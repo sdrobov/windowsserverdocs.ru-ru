@@ -1,16 +1,16 @@
 ---
 title: Команды DiskPart
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 7155dbf34f9986b3ebdd8b549b6a861cf7fcfe3a
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 0826b773927f09cc846fb1cfdf4d5dfbf75d5cca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560430"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377826"
 ---
 # <a name="diskpart-commands"></a>Команды DiskPart
 
@@ -18,7 +18,7 @@ ms.locfileid: "69560430"
 
 Команды DiskPart позволяют управлять дисками компьютера (дисками, разделами, томами или виртуальными жесткими дисками). Прежде чем можно будет использовать команды DiskPart, необходимо сначала вывести список, а затем выбрать объект, чтобы получить фокус. Когда объект имеет фокус, любые команды DiskPart, которые вы вводите, будут действовать для этого объекта.
 
-Вы можете получить список доступных объектов и определить число или букву диска с помощью команд **List Disk, List Volume, list partition**и **List VDISK** . Команды List **Disk, List VDISK** и **list volume** отображают все диски и тома на компьютере. Однако команда **list partition** отображает только разделы на диске, имеющем фокус. При использовании команд **List** рядом с объектом с фокусом\*отображается звездочка ().
+Вы можете получить список доступных объектов и определить число или букву диска с помощью команд **List Disk, List Volume, list partition**и **List VDISK** . Команды List **Disk, List VDISK** и **list volume** отображают все диски и тома на компьютере. Однако команда **list partition** отображает только разделы на диске, имеющем фокус. При использовании команд **List** отображается звездочка (\*) рядом с объектом с фокусом.
 
 При выборе объекта фокус остается на этом объекте до тех пор, пока не будет выбран другой объект. Например, если фокус установлен на диске 0 и вы выбрали том 8 на диске 2, фокус переместится с диска 0 на диск 2, том 8. Некоторые команды автоматически меняют фокус. Например, при создании новой секции фокус автоматически переключается на новую секцию.
 
@@ -55,7 +55,7 @@ ms.locfileid: "69560430"
       
   - [Функция](convert.md)  
       
-  - [Создания](create.md)  
+  - [Создание](create.md)  
       
   - [Удаление](delete.md)  
       
@@ -81,7 +81,7 @@ ms.locfileid: "69560430"
       
   - [Активный](inactive.md)  
       
-  - [List](list.md)  
+  - [Числ](list.md)  
       
   - [Слияние VDISK](merge-vdisk.md)  
       
@@ -103,7 +103,7 @@ ms.locfileid: "69560430"
       
   - [San](san.md)  
       
-  - [Выбрать](select.md)  
+  - [Метьте](select.md)  
       
   - [Идентификатор набора](set-id.md)  
       
@@ -112,7 +112,7 @@ ms.locfileid: "69560430"
   - [UniqueID](uniqueid.md)  
       
 
-## <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительная справка
 
 [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

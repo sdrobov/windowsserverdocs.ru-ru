@@ -2,18 +2,18 @@
 title: Развертывание беспроводного доступа
 description: Эта статья является частью сетевого руководством по Windows Server 2016 "развертывание 802.1 с проверкой подлинности на основе пароля"
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4b66f517-b17d-408c-828f-a3793086bc1f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 64098a152d9ba485cfed80e0d0541f0e5ea72bf2
-ms.sourcegitcommit: 47a9514a68e42ac236065fd6b641204b769223d1
+ms.openlocfilehash: f07520dcdefa04cb43760c5e5c66e28c0d1ce878
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127671"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406248"
 ---
 # <a name="wireless-access-deployment"></a>Развертывание беспроводного доступа
 

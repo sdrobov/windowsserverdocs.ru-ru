@@ -1,9 +1,9 @@
 ---
 title: Контроль управления доступом на основе ролей с помощью Windows PowerShell
-description: Этот раздел является частью в руководстве по управления IP Address Management (IPAM) в Windows Server 2016.
+description: Этот раздел является частью руководства по управлению IP-адресами (IPAM) в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ipam
@@ -12,35 +12,35 @@ ms.topic: article
 ms.assetid: 4f13f78e-0114-4e41-9a28-82a4feccecfc
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 11dd417be4720b09851fc03f111edaaf06b55e59
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: dec5c9b9b5d5fe858e063af70ff0a8e16991e632
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67282136"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355223"
 ---
 # <a name="manage-role-based-access-control-with-windows-powershell"></a>Контроль управления доступом на основе ролей с помощью Windows PowerShell
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Чтобы узнать, как с помощью IPAM для управления доступом на основе ролей с помощью Windows PowerShell можно использовать в этом разделе.  
+С помощью этого раздела вы узнаете, как использовать IPAM для управления доступом на основе ролей с помощью Windows PowerShell.  
   
 >[!NOTE]
->Справочник по командам IPAM Windows PowerShell, см. в разделе [IpamServer командлетов в Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps).  
+>Справочник по командам Windows PowerShell для IPAM см. в разделе [командлеты ипамсервер в Windows PowerShell](https://docs.microsoft.com/powershell/module/ipamserver/?view=win10-ps).  
   
-Новые команды Windows PowerShell IPAM дают возможность извлечения и изменения области доступа объектов DNS и DHCP. В следующей таблице показано нужную команду для каждого объекта IPAM.  
+Новые команды Windows PowerShell IPAM предоставляют возможность извлечения и изменения областей доступа объектов DNS и DHCP. В следующей таблице показана правильная команда, используемая для каждого объекта IPAM.  
   
 |Объект IPAM|Command|Описание|  
 |---------------|-----------|---------------|  
-|DNS-сервер|Get-IpamDnsServer|Этот командлет возвращает объект DNS-сервер в IPAM|  
-|Зона DNS|Get-IpamDnsZone|Этот командлет возвращает объект зоны DNS в IPAM|  
-|DNS Resource Record|Get-IpamResourceRecord|Этот командлет возвращает объект записи ресурсов DNS в IPAM|  
-|Сервер условной пересылки DNS|Get-IpamDnsConditionalForwarder|Этот командлет возвращает объект сервер условной пересылки DNS в IPAM|  
-|DHCP-сервер|Get-IpamDhcpServer|Этот командлет возвращает объект сервера DHCP в IPAM|  
-|Суперобласть DHCP|Get-IpamDhcpSuperscope|Этот командлет возвращает объект суперобласти DHCP в IPAM|  
-|Область DHCP|Get-IpamDhcpScope|Этот командлет возвращает объект области DHCP в IPAM|  
+|DNS-сервер|Get-Ипамднссервер|Этот командлет возвращает объект DNS-сервера в IPAM|  
+|Зона DNS|Get-Ипамднсзоне|Этот командлет возвращает объект зоны DNS в IPAM|  
+|Запись ресурса DNS|Get-Ипамресаурцерекорд|Этот командлет возвращает объект записи ресурсов DNS в IPAM|  
+|DNS-сервер условной пересылки|Get-Ипамднскондитионалфорвардер|Этот командлет возвращает DNS-объект условной пересылки в IPAM|  
+|DHCP-сервер|Get-Ипамдхкпсервер|Этот командлет возвращает объект DHCP-сервера в IPAM|  
+|Суперобласть DHCP|Get-Ипамдхкпсуперскопе|Этот командлет возвращает объект суперобласти DHCP в IPAM|  
+|Область DHCP|Get-Ипамдхкпскопе|Этот командлет возвращает объект области DHCP в IPAM|  
   
-В следующем примере выходных данных команды `Get-IpamDnsZone` командлет извлекает **dublin.contoso.com** зоны DNS.  
+В следующем примере выходных данных команды командлет `Get-IpamDnsZone` извлекает зону DNS **Dublin.contoso.com** .  
   
 ```  
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com  
@@ -53,8 +53,8 @@ DynamicUpdateStatus  : None
 ScavengeStaleRecords : False  
 ```  
   
-## <a name="setting-access-scopes-on-ipam-objects"></a>Задание области доступа в объектах IPAM  
-Можно задать области доступа IPAM объектов с помощью `Set-IpamAccessScope` команды. Эта команда используется для задания области доступа конкретное значение для объекта или, чтобы вызвать объекты наследовать область доступа от родительских объектов. Ниже перечислены объекты, которые можно настроить с помощью следующей команды.  
+## <a name="setting-access-scopes-on-ipam-objects"></a>Настройка областей доступа для объектов IPAM  
+Области доступа для объектов IPAM можно задать с помощью команды `Set-IpamAccessScope`. С помощью этой команды можно задать в качестве области доступа конкретное значение для объекта или сделать так, чтобы объекты наследовали область доступа от родительских объектов. Ниже приведены объекты, которые можно настроить с помощью этой команды.  
   
 -   Область DHCP  
   
@@ -62,9 +62,9 @@ ScavengeStaleRecords : False
   
 -   Суперобласть DHCP  
   
--   Сервер условной пересылки DNS  
+-   DNS-сервер условной пересылки  
   
--   DNS Resource Records  
+-   Записи ресурсов DNS  
   
 -   DNS-сервер  
   
@@ -78,7 +78,7 @@ ScavengeStaleRecords : False
   
 -   Подсеть IP-адресов  
   
-Ниже приведен синтаксис для `Set-IpamAccessScope` команды.  
+Ниже приведен синтаксис команды `Set-IpamAccessScope`.  
   
 ```  
 NAME  
@@ -116,7 +116,7 @@ SYNTAX
     Set-IpamAccessScope [-IpamBlock] -InputObject <ciminstance[]> [-AccessScopePath <string>] [-IsInheritedAccessScope] [-PassThru] [-CimSession <CimSession[]>] [-ThrottleLimit <int>] [-AsJob] [-WhatIf] [-Confirm]  [<CommonParameters>]  
 ```  
   
-В следующем примере область доступа зоны DNS **dublin.contoso.com** меняется с **Dublin** для **Европа**.  
+В следующем примере область доступа зоны DNS **Dublin.contoso.com** изменяется с **Дублин** на **Европа**.  
   
 ```  
 PS C:\Users\Administrator.CONTOSO> Get-IpamDnsZone -ZoneType Forward -ZoneName dublin.contoso.com  

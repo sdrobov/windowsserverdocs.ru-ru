@@ -1,8 +1,8 @@
 ---
 title: Изменение сопоставления выбранных систем MultiPoint
-description: Узнайте, как изменить сопоставление некоторых, но не всех систем в службах MultiPoint
+description: Узнайте, как сопоставить некоторые, но не все системы в службах MultiPoint.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,18 +13,18 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: f564ea241307ba5d5375ef431ac034c4eaf7e935
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 13ccafd5100ce19145cc0a15867308cc237b92ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59844245"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389404"
 ---
 # <a name="remap-selected-multipoint-systems"></a>Изменение сопоставления выбранных систем MultiPoint
 Изменение сопоставления станций в MultiPoint Dashboard позволяет связывать с мониторами клавиатуры и мыши. Пока выполняется изменение сопоставления системы служб MultiPoint, работа станций локальных пользователей приостанавливается.  
   
 > [!CAUTION]  
-> Изменение сопоставления в основном используется в целях устранения неполадок. Параметры, такие как имя и автоматически станции\-входа в систему, стираются перераспределения.  
+> Изменение сопоставления в основном используется в целях устранения неполадок. Параметры станции, такие как Name и Auto @ no__t-0logon, удаляются во время процесса повторного сопоставления.  
   
 #### <a name="to-remap-a-multipoint-services-system"></a>Изменение сопоставления системы служб MultiPoint  
   

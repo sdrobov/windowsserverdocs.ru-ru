@@ -2,22 +2,22 @@
 title: Создание папки в пространстве имен DFS
 description: В этой статье рассматривается, как папку в пространстве имен DFS.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 47bb13aa404cdf4fef86b7250425a92cc208ba9d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7389b825afe5ccae3059f50ffdedac72ecd5ac9a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856855"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402251"
 ---
 # <a name="create-a-folder-in-a-dfs-namespace"></a>Создание папки в пространстве имен DFS
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Папки можно использовать для создания дополнительных уровней иерархии в пространстве имен. Можно также создавать папки с конечными объектами папок, чтобы добавлять в пространство имен общие папки. Папки DFS с конечными объектами папок не могут содержать другие папки DFS, поэтому, если вы хотите добавить в пространство имен уровень иерархии, не добавляйте в папку конечные объекты папки.
 
@@ -41,6 +41,6 @@ ms.locfileid: "59856855"
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 
 

@@ -7,14 +7,14 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 505939967bd9a132d2eca4e6979cf3676b3d8e51
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 45e175c2520d764b7a7221f362c16ea95ea3e2ca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885395"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401896"
 ---
 # <a name="virtualized-domain-controller-technical-reference-level-300"></a>Технический справочник по виртуализированным контроллерам домена (уровень 300)
 
@@ -24,12 +24,12 @@ ms.locfileid: "59885395"
   
 -   [Архитектура виртуализованных контроллеров доменов](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Architecture.md)  
   
--   [Развертывание виртуализированных контроллеров домена и конфигурации](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)  
+-   [Развертывание и настройка виртуализированного контроллера домена](../../../ad-ds/get-started/virtual-dc/Virtualized-Domain-Controller-Deployment-and-Configuration.md)  
   
--   [Виртуализированные домена контроллера, устранение неполадок](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)  
+-   [Диагностика виртуализированного контроллера домена](../../../ad-ds/manage/virtual-dc/Virtualized-Domain-Controller-Troubleshooting.md)  
   
--   [Приложение технического справочника по контроллера virtualized Domain](../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md)  
+-   [Техническое справочное приложение по виртуализированному контроллеру домена](../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md)  
   
--   [Дополнительные ресурсы контроллера virtualized Domain](../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Additional-Resources.md)  
+-   [Дополнительные ресурсы по виртуализированному контроллеру домена](../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Additional-Resources.md)  
   
 

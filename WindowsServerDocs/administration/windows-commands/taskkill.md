@@ -2,7 +2,7 @@
 title: taskkill
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9050788a06b66e54be59c69dd8cc837092123b00
-ms.sourcegitcommit: ee8e0b217be6f6b2532ee7265fb4be00c106e124
+ms.openlocfilehash: 21aec17c649960daffd1aeba80d4448bb9d0ecf7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70878134"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383660"
 ---
 # <a name="taskkill"></a>taskkill
 
@@ -56,7 +56,7 @@ taskkill [/s <computer> [/u [<Domain>\]<UserName> [/p [<Password>]]]] {[/fi <Fil
 |   СЕССИИ   | eq, ne, gt, lt, ge, le |                                                                Номер сеанса                                                                |
 |   CPUtime   | eq, ne, gt, lt, ge, le | Время ЦП в формате <em>чч</em> **:** <em>мм</em> **:** <em>СС</em>, где *mm* и *SS* находятся в диапазоне от 0 до 59, а *чч* — любое число без знака |
 |  МЕМУСАЖЕ   | eq, ne, gt, lt, ge, le |                                                              Использование памяти в КБ                                                              |
-|  ИМЯ ПОЛЬЗОВАТЕЛЯ   |         eq, ne         |                                               Любое допустимое имя пользователя *(пользователя или пользователя* *домена*\\ *)*                                               |
+|  ИМЕН   |         eq, ne         |                                               Любое допустимое имя пользователя *(пользователя или пользователя* *домена*\\ *)*                                               |
 |  ОБСЛУЖИВАНИЕ   |         eq, ne         |                                                                 Служебное имя                                                                 |
 | WINDOWTITLE |         eq, ne         |                                                                 Заголовок окна                                                                 |
 |   МОДУЛЕ   |         eq, ne         |                                                                   Имя DLL                                                                   |

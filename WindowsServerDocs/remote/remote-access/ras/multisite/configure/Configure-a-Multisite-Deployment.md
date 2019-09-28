@@ -1,9 +1,9 @@
 ---
 title: Настройка многосайтового развертывания
-description: Этот раздел является частью руководства развертывание несколькими серверами удаленного доступа в многосайтового развертывания в Windows Server 2016.
+description: Эта статья является частью руководств по развертыванию нескольких серверов удаленного доступа в многосайтовом развертывании в Windows Server 2016.
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,26 +12,26 @@ ms.topic: article
 ms.assetid: cb84920e-7cf5-4266-b071-d09e3d5e1f10
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 28fcb2506e59ff2afb501a2c8bc74da2d6f0cd15
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 25c0ce5d62268f64113ebc39345b2d50867bebf7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280990"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71367119"
 ---
 # <a name="configure-a-multisite-deployment"></a>Настройка многосайтового развертывания
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
- Windows Server 2016 объединяет DirectAccess и удаленного доступа (RAS) VPN в единую роль удаленного доступа. Данный обзор представляет введение в шаги настройки, необходимые для развертывания одного Windows Server 2016 или удаленного доступа Windows Server 2012 многосайтового развертывания.  
+ Windows Server 2016 объединяет VPN-подключение DirectAccess и службы удаленного доступа (RAS) в одну роль удаленного доступа. В этом обзоре приводятся общие сведения о шагах настройки, необходимых для развертывания одного многосайтового развертывания Windows Server 2016 или Windows Server 2012 с удаленным доступом.  
   
--   Шаг 1. [Развертывание одиночного сервера DirectAccess с расширенными параметрами](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings). Установите и настройте сервер удаленного доступа. Многосайтовое развертывание необходимо установить один сервер перед настройкой многосайтового развертывания.  
+-   Шаг 1. [Разверните один сервер DirectAccess с дополнительными параметрами](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings). Установите и настройте отдельный сервер удаленного доступа. Для многосайтового развертывания необходимо установить один сервер перед настройкой многосайтового развертывания.  
   
--   [Шаг 2. Настройка инфраструктуры многосайтового](Step-2-Configure-the-Multisite-Infrastructure.md). Для многосайтового развертывания необходимо настроить дополнительные сайты Active Directory и контроллеры домена. Дополнительными группами безопасности и объекты групповой политики (GPO) также необходимы, если вы не используете автоматически настраиваемые объекты групповой политики.  
+-   [Шаг 2. Настройте многосайтовую инфраструктуру @ no__t-0. Для многосайтового развертывания необходимо настроить дополнительные Active Directory сайты и контроллеры домена. Дополнительные группы безопасности и групповая политика объекты (GPO) также необходимы, если не используются автоматически настроенные объекты групповой политики.  
   
--   [Шаг 3. Настройка многосайтового развертывания](Step-3-Configure-the-Multisite-Deployment.md)— Установка роли удаленного доступа на дополнительных серверах удаленного доступа, включение многосайтового развертывания и дополнительные серверы в качестве точки входа для развертывания.  
+-   [Шаг 3. Настройка многосайтового развертывания @ no__t-0 — Установка роли удаленного доступа на дополнительных серверах удаленного доступа, включение многосайтового развертывания и Настройка дополнительных серверов в качестве точек входа для развертывания.  
   
--   [Шаг 4. Проверка многосайтового развертывания](Step-4-Verify-the-Multisite-Deployment.md) 
+-   [Шаг 4. Проверка многосайтового развертывания @ no__t-0 
   
 
 

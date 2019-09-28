@@ -1,8 +1,8 @@
 ---
 title: bitsadmin setnotifyflags
-description: Раздел Windows команды для **bitsadmin setnotifyflags** -задает событие флаги уведомления для указанного задания.
+description: Раздел команд Windows для **битсадмин сетнотифифлагс** — устанавливает флаги уведомления о событиях для указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bc817e03e0f1916ea392830d14985a7a1377d69a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d9cfabf05610cbbe8fa65fd16b0d33e161dcef9b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868795"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380452"
 ---
 # <a name="bitsadmin-setnotifyflags"></a>bitsadmin setnotifyflags
 
-Задает событие флаги уведомления для указанного задания.
+Задает флаги уведомления о событии для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,22 +34,22 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
-|NotifyFlags|См. в разделе "Примечания"|
+|Job|Отображаемое имя задания или идентификатор GUID|
+|нотифифлагс|См. примечания|
 
 ## <a name="remarks"></a>Примечания
 
-**NotifyFlags** параметр может содержать один или несколько из следующих флагов уведомлений.
+Параметр **нотифифлагс** может содержать один или несколько следующих флагов уведомления.
 
-|---|---| | 1 | Создать событие, когда все файлы в задании были перенесены. | | 2 | Создавать событие при возникновении ошибки. | | 4 | Отключение уведомлений. |
+|-----|-----| | 1 | Создавать событие при передаче всех файлов в задании. | | 2 | Создавать событие при возникновении ошибки. | | 4 | Отключить уведомления. |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример устанавливает флаги уведомления для передана и события ошибок заданий для задания с именем *myDownloadJob*.
+В следующем примере задается задание notify flags для события "передано" и "ошибка" для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

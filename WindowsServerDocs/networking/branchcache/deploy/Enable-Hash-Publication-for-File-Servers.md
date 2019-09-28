@@ -1,32 +1,32 @@
 ---
 title: Включение возможности публикации хэша для файловых серверов
-description: Этот раздел является частью BranchCache развертывания руководство для Windows Server 2016, который показывает, как развернуть BranchCache в режимах распределенный и размещенный кэш, чтобы оптимизировать использование пропускной способности глобальной сети в филиалах
+description: Эта статья является частью руководства по развертыванию BranchCache для Windows Server 2016, в котором показано, как развернуть BranchCache в распределенном и размещенном режимах кэша для оптимизации использования пропускной способности глобальной сети в филиалах.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 6f7d9c286f80b8c1ad4fb2370389f1afcd16dff8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 62ebddf85a2a86b9759d970f29b3c8edbeba63f0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406469"
 ---
 # <a name="enable-hash-publication-for-file-servers"></a>Включение возможности публикации хэша для файловых серверов
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Вы можете включить публикация хэша BranchCache на сервере один файл или на нескольких файловых серверов.  
+Вы можете включить публикацию хэша BranchCache на одном файловом сервере или на нескольких файловых серверах.  
   
--   Чтобы включить публикацию хэшей для одного файлового сервера с помощью групповой политики с локального компьютера, см. в разделе [включить публикацию хэшей для файловых серверов Non-Domain член](../../branchcache/deploy/Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
+-   Сведения о включении публикации на основе хэша на одном файловом сервере с помощью локального компьютера групповая политика см. в разделе [Включение публикации хэша для файловых серверов, не являющихся членами домена](../../branchcache/deploy/Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
   
--   Чтобы включить публикацию хэшей для нескольких файловых серверов, с помощью групповой политики домена, см. в разделе [разрешить публикацию хэшей для файловых серверов член домена](../../branchcache/deploy/Enable-Hash-Publication-for-Domain-Member-File-Servers.md).  
+-   Сведения о включении публикации хэша на нескольких файловых серверах с помощью групповая политика домена см. в разделе [Включение публикации хэша для файловых серверов-членов домена](../../branchcache/deploy/Enable-Hash-Publication-for-Domain-Member-File-Servers.md).  
   
 > [!NOTE]  
-> Если у вас есть несколько файловых серверов и вы хотите включить публикацию хэшей на каждом сетевом ресурсе, а не Включение публикация хэша для всех общих ресурсов, можно использовать инструкции в разделе [включить публикация хэша для файла Non-Domain серверах](Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
+> Если у вас есть несколько файловых серверов и вы хотите включить публикацию хэша для каждого общего ресурса, вместо того, чтобы включать публикацию хэша для всех общих ресурсов, можно воспользоваться инструкциями в разделе [Включение публикации хэша для файловых серверов, не являющихся членами домена](Enable-Hash-Publication-for-Non-Domain-Member-File-Servers.md).  
   
 
 

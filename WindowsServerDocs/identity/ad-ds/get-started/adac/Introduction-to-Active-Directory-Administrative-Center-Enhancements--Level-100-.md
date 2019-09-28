@@ -7,14 +7,14 @@ author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5b328db355810f8e3a33b28637f789e8c703d781
-ms.sourcegitcommit: f3b61dcd8aa0aa744db4ea938aac633c19217b0a
+ms.openlocfilehash: a3bd82feb3a0caf827091bd0cb10edf991921b3c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70746337"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71390624"
 ---
 # <a name="introduction-to-active-directory-administrative-center-enhancements-level-100"></a>Введение в дополнительные возможности центра администрирования Active Directory (уровень 100)
 
@@ -36,7 +36,7 @@ ms.locfileid: "70746337"
 
 Начиная с Windows Server 2008 R2 корзина Active Directory основана на существующей инфраструктуре восстановления полностью удаленных объектов и расширяет возможности сохранения и восстановления случайно удаленных объектов Active Directory.
 
-Если корзина Active Directory включена, все ссылочные и нессылочные атрибуты удаленных объектов Active Directory сохраняются, а объекты полностью восстанавливаются в том же логически согласованном состоянии, в котором они находились непосредственно перед удалением. Например, восстановленные учетные записи пользователей автоматически восстанавливают все членства в группах и соответствующие права доступа, которыми они обладали внутри и вне доменов в момент перед удалением. Корзина Active Directory применяется для сред AD DS и AD LDS. Подробное описание Active Directory корзины см. в разделе [новые возможности AD DS. Active Directory корзина](https://technet.microsoft.com/library/dd391916(WS.10).aspx).
+Если корзина Active Directory включена, все ссылочные и нессылочные атрибуты удаленных объектов Active Directory сохраняются, а объекты полностью восстанавливаются в том же логически согласованном состоянии, в котором они находились непосредственно перед удалением. Например, восстановленные учетные записи пользователей автоматически восстанавливают все членства в группах и соответствующие права доступа, которыми они обладали внутри и вне доменов в момент перед удалением. Корзина Active Directory применяется для сред AD DS и AD LDS. Подробное описание Active Directory корзины см. в разделе [What's New в AD DS: Active Directory корзина @ no__t-0.
 
 **Новые возможности** В Windows Server 2012 и более поздних версиях функция корзины Active Directory, дополненная новым графическим интерфейсом пользователя для управления и восстановления удаленных объектов. Теперь пользователи могут просмотреть список удаленных объектов и восстановить их в исходное или желаемое местоположение.
 
@@ -55,10 +55,10 @@ ms.locfileid: "70746337"
 
 На следующих шагах вы будете использовать ADAC для выполнения следующих задач Active Directory корзины в Windows Server 2012:
 
-- [Шаг 1. Повышение функционального уровня леса](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_ffl)
-- [Шаг 2. Включение корзины](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_enable_recycle_bin)
-- [Шаг 3. Создание тестовых пользователей, групп и подразделений](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env)
-- [Шаг 4. Восстановление удаленных объектов](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_restore_del_obj)
+- [Шаг 1. Повышение функционального уровня леса @ no__t-0
+- [Шаг 2. Включение корзины @ no__t-0
+- [Шаг 3. Создание тестовых пользователей, групп и подразделений @ no__t-0
+- [Шаг 4. Восстановление удаленных объектов @ no__t-0
 
 > [!NOTE]
 > Для выполнения следующих шагов требуется членство в группе администраторов предприятия или эквивалентные разрешения.
@@ -75,7 +75,7 @@ ms.locfileid: "70746337"
 
 3. Щелкните целевой домен в левой области навигации и на панели **Задачи** выберите **Повышение режима работы леса**. Выберите функциональный уровень леса не ниже Windows Server 2008 R2 или более поздней версии, а затем нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -99,7 +99,7 @@ Set-ADForestMode -Identity contoso.com -ForestMode Windows2008R2Forest -Confirm:
 
 4. Нажмите клавишу F5, чтобы обновить центр администрирования Active Directory.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -125,8 +125,8 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
 
    - Полное имя: test1
    - Вход пользователя (SamAccountName): test1
-   - Парольp@ssword1
-   - Подтверждение пароля:p@ssword1
+   - Пароль: p@ssword1
+   - Подтверждение пароля: p@ssword1
 
 5. Повторите предыдущие шаги, чтобы создать второго пользователя, test2.
 
@@ -142,7 +142,7 @@ Enable-ADOptionalFeature -Identity 'CN=Recycle Bin Feature,CN=Optional Features,
 5. Щелкните **group1** и в области**задач** выберите **Свойства**.
 6. Щелкните **Члены группы**, выберите команду **Добавить**, введите **test1;test2**и нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -159,7 +159,7 @@ Add-ADGroupMember -Identity group1 -Member test1
 
    - **NameOU1**
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -181,7 +181,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 3. Выберите пользователей **test1** и **test2**, щелкните **Удалить** в области **задач** и нажмите кнопку **Да** , чтобы подтвердить удаление.
 
-    ![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+    ![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
     Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -198,7 +198,7 @@ New-ADOrganizationalUnit -Name OU1 -Path "DC=fabrikam,DC=com"
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 ```powershell
 Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADObject
@@ -218,7 +218,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 6. Чтобы убедиться, что объекты были восстановлены в расположение **OU1**, перейдите в целевой домен, дважды щелкните **OU1** и проверьте, указаны ли там учетные записи пользователей.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -230,7 +230,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 Операционная система Windows Server 2008 предоставляет организациям возможность определить разные политики паролей и блокировки учетных записей для разных групп пользователей в домене. В доменах Active Directory до Windows Server 2008 ко всем пользователям в домене можно было применить только одну политику паролей и политику блокировки учетных записей. Эти политики устанавливались в политике домена по умолчанию. В результате организации, которые хотели установить разные параметры паролей и блокировки учетных записей для разных групп пользователей, были вынуждены либо создавать фильтр паролей, либо развертывать несколько доменов. Оба варианта требуют высоких затрат.
 
-При помощи детально настроенных политик паролей можно задать несколько политик паролей в одном домене и применять различные ограничения в рамках политик паролей и блокировки учетных записей для разных групп пользователей в домене. Например, для учетных записей привилегированных пользователей можно установить более строгие параметры, а для остальных — менее строгие. В других случаях можно применять особую политику паролей для учетных записей, пароли которых синхронизируются с другими источниками данных. Подробное описание политик с детализированными паролями см. в разделе [AD DS: Детализированные политики паролей](https://technet.microsoft.com/library/cc770394(WS.10).aspx)
+При помощи детально настроенных политик паролей можно задать несколько политик паролей в одном домене и применять различные ограничения в рамках политик паролей и блокировки учетных записей для разных групп пользователей в домене. Например, для учетных записей привилегированных пользователей можно установить более строгие параметры, а для остальных — менее строгие. В других случаях можно применять особую политику паролей для учетных записей, пароли которых синхронизируются с другими источниками данных. Подробное описание политик с детализированными паролями см. в разделе [AD DS: Детализированные политики паролей @ no__t-0
 
 **Новые возможности**
 
@@ -251,12 +251,12 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 В следующей пошаговой процедуре вы используете центр администрирования Active Directory для выполнения следующих задач, связанных с детально настроенной политикой паролей:
 
-- [Шаг 1. Повышение режима работы домена](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_raise_dfl)
-- [Шаг 2. Создание тестовых пользователей, групп и подразделений](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk2_test_fgpp)
-- [Шаг 3. Создание новой детальной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
-- [Шаг 4. Просмотр результирующего набора политик для пользователя](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_view_resultant_fgpp)
-- [Шаг 5. Изменение детальной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_edit_fgpp)
-- [Шаг 6. Удаление детальной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_delete_fgpp)
+- [Шаг 1. Повышение функционального уровня домена @ no__t-0
+- [Шаг 2. Создание тестовых пользователей, групп и организационных подразделений @ no__t-0
+- [Шаг 3. Создание новой детальной политики паролей @ no__t-0
+- [Шаг 4. Просмотр результирующего набора политик для пользователя @ no__t-0
+- [Шаг 5. Изменение детальной политики паролей @ no__t-0
+- [Шаг 6. Удаление детальной политики паролей @ no__t-0
 
 > [!NOTE]
 > Для выполнения следующих шагов требуется членство в группе администраторов домена или эквивалентные разрешения.
@@ -273,7 +273,7 @@ Get-ADObject -Filter 'Name -Like "*test*"' -IncludeDeletedObjects | Restore-ADOb
 
 3. Щелкните целевой домен в левой области навигации и в области **Задачи** выберите **Повышение режима работы домена**. Выберите функциональный уровень леса не ниже Windows Server 2008 или более поздней версии, а затем нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -283,7 +283,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 #### <a name="bkmk2_test_fgpp"></a>Шаг 2. Создание тестовых пользователей, группы и подразделения
 
-Чтобы создать тестовых пользователей и группу, необходимые для этого шага, выполните процедуры, описанные здесь: [Шаг 3. Создание тестовых пользователей, групп и](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_test_env) подразделений (для демонстрации детальной политики паролей не нужно создавать подразделение).
+Чтобы создать тестовых пользователей и группу, необходимые для этого шага, выполните процедуры, описанные здесь: [Шаг 3. Создание тестовых пользователей, групп и подразделений @ no__t-0 (для демонстрации детальной политики паролей не нужно создавать подразделение).
 
 #### <a name="bkmk_create_fgpp"></a>Шаг 3. Создание новой детально настроенной политики паролей
 
@@ -309,7 +309,7 @@ Set-ADDomainMode -Identity contoso.com -DomainMode 3
 
 6. Нажмите кнопку **ОК** , чтобы подтвердить создание.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -320,7 +320,7 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 
 #### <a name="bkmk_view_resultant_fgpp"></a>Шаг 4. Просмотр результирующего набора политик для пользователя
 
-В следующей процедуре вы увидите результирующие параметры пароля для пользователя, который является членом группы, которой назначена детальная политика паролей на [шаге 3. Создайте новую политику](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)детализации паролей.
+В следующей процедуре вы увидите результирующие параметры пароля для пользователя, который является членом группы, которой назначена детальная политика паролей в [Step 3: Создайте новую детальную политику паролей @ no__t-0.
 
 ##### <a name="to-view-a-resultant-set-of-policies-for-a-user"></a>Чтобы просмотреть результирующую политику для пользователя:
 
@@ -328,13 +328,13 @@ Add-ADFineGrainedPasswordPolicySubject TestPswd -Subjects group1
 
 2. Щелкните **Управление**, **Добавить узлы перехода** и выберите соответствующий целевой домен в диалоговом окне **Добавление узлов перехода** , а затем нажмите кнопку **ОК**.
 
-3. Выберите пользователя **test1** , принадлежащего группе, группа **group1** , в [которой вы сопоставлены детализированную политику паролей на шаге 3. Создайте новую политику](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)детализации паролей.
+3. Выберите пользователя ( **test1** ), принадлежащего группе, группа **group1** , которой вы со2Stepи детальную политику паролей, в @no__t 3: Создайте новую детальную политику паролей @ no__t-0.
 
 4. Щелкните **Просмотреть итоговые параметры пароля** в области**задач**.
 
 5. Изучите политику параметров паролей и нажмите кнопку **Отмена**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -344,7 +344,7 @@ Get-ADUserResultantPasswordPolicy test1
 
 #### <a name="bkmk_edit_fgpp"></a>Шаг 5. Изменение детально настроенной политики паролей
 
-В следующей процедуре будет изменена политика с детализированным изменением паролей, созданная на [шаге 3. Создание новой детальной политики паролей](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp)
+В следующей процедуре будет изменена политика с детализированными паролями, созданная в [Step 3: Создание новой детальной политики паролей @ no__t-0
 
 ##### <a name="to-edit-a-fine-grained-password-policy"></a>Чтобы изменить детально настроенную политику паролей:
 
@@ -354,13 +354,13 @@ Get-ADUserResultantPasswordPolicy test1
 
 3. В **области навигации** центра администрирования Active Directory разверните узел **Система** и щелкните **Контейнер параметров пароля**.
 
-4. Выберите политику детализированных паролей, созданную на [шаге 3. Создайте новую политику](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) с детализированными паролями и щелкните **Свойства** в области **задачи** .
+4. Выберите политику с детализированными паролями, созданную в [Step 3: Создайте новую детальную политику паролей @ no__t-0 и нажмите кнопку **Свойства** в области **задачи** .
 
 5. В разделе **Вести журнал паролей** измените значение параметра **Сохранено паролей** на **30**.
 
 6. Нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 
@@ -378,7 +378,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 3. В области навигации центра администрирования Active Directory разверните контейнер **System** и щелкните **Password Settings Container**.
 
-4. Выберите политику детализированных паролей, созданную на [шаге 3. Создайте новую политику](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md#bkmk_create_fgpp) детализации паролей и в области **задачи** щелкните **Свойства**.
+4. Выберите политику с детализированными паролями, созданную в [Step 3: Создайте новую детальную политику паролей @ no__t-0 и в области **задачи** щелкните **свойства**.
 
 5. Очистите чекбокс **Защитить от случайного удаления** и нажмите кнопку **ОК**.
 
@@ -386,7 +386,7 @@ Set-ADFineGrainedPasswordPolicy TestPswd -PasswordHistoryCount:"30"
 
 7. В диалоговом окне подтверждения нажмите кнопку **ОК**.
 
-![Введение в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
+![Intro в центр администрирования AD.](media/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.
 

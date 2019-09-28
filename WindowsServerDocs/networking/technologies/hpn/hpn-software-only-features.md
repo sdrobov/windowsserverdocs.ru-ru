@@ -1,7 +1,7 @@
 ---
 title: Только программные функции и технологии
 description: Эти функции реализуются как часть операционной системы и не зависят от базовых сетевых адаптеров. Иногда для оптимальной работы эти функции нуждаются в некоторой настройке сетевой карты. К таким примерам относятся такие компоненты Hyper-v, как качество обслуживания виртуальной машины (Вмкос), списки управления доступом (ACL) и компоненты, отличные от Hyper-V, такие как объединение сетевых карт.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/20/2018
-ms.openlocfilehash: 27fbbcc5eedb1bc8ee37a85356542335c2eac77a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 8c354d53db983d0437749de918b2d5f12ede0f5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871931"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405694"
 ---
 # <a name="software-only-so-features-and-technologies"></a>Только программные функции и технологии
 Функции только программного обеспечения реализуются как часть операционной системы и не зависят от базовых сетевых адаптеров. Иногда для оптимальной работы эти функции нуждаются в некоторой настройке сетевой карты. К таким примерам относятся такие компоненты Hyper-v, как качество обслуживания виртуальной машины (Вмкос), списки управления доступом (ACL) и компоненты, отличные от Hyper-V, такие как объединение сетевых карт.

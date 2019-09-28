@@ -1,6 +1,6 @@
 ---
 title: Обзор диспетчера ресурсов файлового сервера (FSRM)
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage
@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 5/14/2018
 description: Файловый сервер диспетчер ресурсов (FSRM) — это средство, которое позволяет управлять данными и классифицировать их на файловый сервер Windows Server.
-ms.openlocfilehash: 49e7731c9f1e0f312728894e99bc88b0391738d8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 719176307afc320ad676fd1acfc07ad9d15920cf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866945"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394168"
 ---
 # <a name="file-server-resource-manager-fsrm-overview"></a>Обзор диспетчера ресурсов файлового сервера (FSRM)
 
@@ -67,7 +67,7 @@ ms.locfileid: "70866945"
       ```
       fsutil usn deletejournal /d <VolumeName>
       ```
-    Например: `fsutil usn deletejournal /d c:`
+    Пример: `fsutil usn deletejournal /d c:`
 
 3. Откройте редактор реестра, например, введя `regedit` в тот же сеанс PowerShell.
 4. Перейдите к следующему разделу: **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings**
@@ -88,7 +88,7 @@ ms.locfileid: "70866945"
                     System Reserved \\?\Volume{8d3c9e8a-0000-0000-0000-100000000000}\
         C                           \\?\Volume{8d3c9e8a-0000-0000-0000-501f00000000}\
        ```
-    2. В редакторе реестра щелкните правой кнопкой мыши ключ **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings** и выберите пункт **новое** > **многострочное значение**.
+    2. В редакторе реестра щелкните правой кнопкой мыши ключ **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SrmSvc\Settings** и выберите пункт **новое** > .**многострочное значение**.
     3. Присвойте этому `SkipUSNCreationForVolumes`значению имя.
     4. Введите путь к каждому тому, на котором вы пропускаете создание журнала изменений, размещая каждый путь на отдельной строке. Пример:
 
@@ -98,7 +98,7 @@ ms.locfileid: "70866945"
         ```
 
         > [!NOTE] 
-        > Редактор реестра может сообщить, что он удалил пустые строки, отображая это предупреждение, что можно спокойно проигнорировать: *Данные типа REG_MULTI_SZ не могут содержать пустые строки. Редактор реестра удалит все найденные пустые строки.*
+        > Редактор реестра может сообщить, что он удалил пустые строки, отображая это предупреждение, что можно спокойно проигнорировать: *Data типа REG_MULTI_SZ не может содержать пустые строки. Редактор реестра удалит все найденные пустые строки.*
 
 7. Запустите службу СРМСВК. Например, в сеансе PowerShell введите `Start-Service SrmSvc`.
 

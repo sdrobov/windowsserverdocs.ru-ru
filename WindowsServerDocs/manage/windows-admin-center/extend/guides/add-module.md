@@ -1,31 +1,31 @@
 ---
 title: Добавление модуля в расширение средства
-description: Разработка расширение средства пакета SDK Windows Admin Center (Гонолулу проекта) — Добавление модуля к расширению средства
+description: Разработка расширения инструмента Windows Admin Center SDK (Project Хонолулу). Добавление модуля в расширение средства
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: d8d901097eb280679a388ff66161e3514befcd13
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.prod: windows-server
+ms.openlocfilehash: 9d30980ca404187ff1481242c1c0ef0a3d571416
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66452652"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357095"
 ---
 # <a name="add-a-module-to-a-tool-extension"></a>Добавление модуля в расширение средства
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
-В этой статье мы добавим пустой модуль расширения инструмент, который мы создали с помощью интерфейса командной строки Windows Admin Center.
+В этой статье мы добавим пустой модуль в расширение инструмента, созданное с помощью интерфейса командной строки центра администрирования Windows.
 
 ## <a name="prepare-your-environment"></a>Подготовка среды
 
-Если это еще не сделано, следуйте указаниям, приведенным в разработке [средство](../develop-tool.md) (или [решение](../develop-solution.md)) расширение для подготовки среды и создать новый, пустой средство расширение.
+Если вы еще этого не сделали, следуйте указаниям в [подсказке](../develop-tool.md) по разработке средства (или [решения](../develop-solution.md)) для подготовки среды и создания нового пустого расширения инструмента.
 
-## <a name="use-the-angular-cli-to-create-a-module-and-component"></a>С помощью Angular CLI для создания модуля (и компонент)
+## <a name="use-the-angular-cli-to-create-a-module-and-component"></a>Использование угловой панели CLI для создания модуля (и компонента)
 
 Если вы не знакомы с Angular, настоятельно рекомендуется прочитать документацию на веб-сайте Angular.Io, чтобы ознакомиться с Angular и NgModule. Дополнительные сведения о NgModule см. здесь: https://angular.io/guide/ngmodule
 
@@ -33,7 +33,7 @@ ms.locfileid: "66452652"
 * Дополнительные сведения о создании нового компонента в Angular CLI: https://github.com/angular/angular-cli/wiki/generate-component
 
 
-Откройте командную строку, измените каталог \src\app в проекте, а затем выполните следующие команды, заменив ```{!ModuleName}``` именем своего модуля (с пробелами):
+Откройте командную строку, измените каталог на \срк\апп в проекте, а затем выполните следующие команды, заменив ```{!ModuleName}``` именем модуля (пробелы удалены):
 
 ```
 cd \src\app
@@ -57,7 +57,7 @@ ng generate component ManageFooWorksPortal
 
 Если вы не знакомы с Angular, настоятельно рекомендуется ознакомиться с маршрутизацией и навигацией в Angular. В следующих разделах рассматриваются необходимые элементы маршрутизации, которые позволяют Windows Admin Center переходить к вашему расширению и между представлениями в вашем расширении в ответ на действия пользователя. Подробнее см. здесь: https://angular.io/guide/router
 
-Используйте имя модуля, которое вы использовали на предыдущем шаге.
+Используйте то же имя модуля, которое использовалось на предыдущем шаге.
 
 ### <a name="add-content-to-new-routing-file"></a>Добавление содержимого в новый файл маршрутизации
 
@@ -136,7 +136,7 @@ ng generate component ManageFooWorksPortal
 
 * Убедитесь, что операторы ```import``` упорядочены в алфавитном порядке по источнику.
 
-### <a name="add-content-to-new-component-typescript-file"></a>Добавьте новый файл компонента typescript содержимое
+### <a name="add-content-to-new-component-typescript-file"></a>Добавить содержимое в файл typescript нового компонента
 
 Откройте файл ```{!module-name}.component.ts```, соответствующий этому соглашению об именовании:
 
@@ -155,9 +155,9 @@ public ngOnInit() {
     // TODO
 }
 ```
-### <a name="update-app-routingmodulets"></a>Обновление приложения routing.module.ts
+### <a name="update-app-routingmodulets"></a>Обновление App-Routing. Module. TS
 
-Открыть файл ```app-routing.module.ts```и измените путь по умолчанию, чтобы он загрузит новый модуль, который вы только что создали.  Найти запись для ```path: ''```и обновите ```loadChildren``` загрузить модуль вместо модуль по умолчанию:
+Откройте файл ```app-routing.module.ts``` и измените путь по умолчанию, чтобы он загружал только что созданный модуль.  Найдите запись для ```path: ''``` и обновите ```loadChildren```, чтобы загрузить модуль вместо модуля по умолчанию:
 
 | Значение | Объяснение | Пример |
 | ----- | ----------- | ------- |
@@ -170,7 +170,7 @@ public ngOnInit() {
         loadChildren: 'app/{!module-name}/{!module-name}.module#{!ModuleName}Module'
     },
 ```
-Вот пример пути по умолчанию обновлен:
+Ниже приведен пример обновленного пути по умолчанию.
 ``` ts
     {
         path: '', 
@@ -179,6 +179,6 @@ public ngOnInit() {
 ```
 
 
-## <a name="build-and-side-load-your-extension"></a>Сборки и на стороне загрузить расширение
+## <a name="build-and-side-load-your-extension"></a>Сборка и загрузка на стороне вашего расширения
 
-Теперь вы добавили модуля для расширения.  Далее можно [построения и стороны нагрузки](../develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center, чтобы просмотреть результаты.
+Теперь вы добавили модуль в расширение.  Затем вы можете [создать и загрузить](../develop-tool.md#build-and-side-load-your-extension) свои расширения в центре администрирования Windows, чтобы увидеть результаты.

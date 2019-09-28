@@ -2,7 +2,7 @@
 ms.assetid: 20dff664-2370-469b-96a8-df1acf7c7f12
 title: Дополнительные ресурсы
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.service: ''
 ms.suite: na
@@ -13,36 +13,36 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/07/2018
-ms.openlocfilehash: e50527358dbffa36f8f14e290a548568e3d0635e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 36fb987bae28edc6745227bc9ce9a51d16cce9b3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66443259"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391138"
 ---
 # <a name="additional-resources"></a>Дополнительные ресурсы
 
 >Область применения. Windows Server
 
-Подробные сведения об использовании Repadmin.exe для управления репликацией Active Directory см. следующий ресурс: 
+Подробные сведения об использовании программы repadmin. exe для управления репликацией Active Directory см. в следующем ресурсе: 
 
-- [Мониторинг и устранение неполадок репликации Active Directory, с помощью Repadmin](https://go.microsoft.com/fwlink/?LinkId=122830)
+- [Мониторинг и устранение неполадок Active Directory репликации с помощью repadmin](https://go.microsoft.com/fwlink/?LinkId=122830)
 
-Сведения об определенных событиях, которые были зарегистрированы для проблемы с Active Directory см. следующий ресурс:
+Сведения о конкретных событиях, регистрируемых в журнале Active Directory проблем, см. в следующем ресурсе:
 
 - [Active Directory](https://go.microsoft.com/fwlink/?LinkId=122877)
 
-Сведения об известных проблемах и рекомендации по Active Directory см. следующие ресурсы:
+Сведения о Active Directory известных проблемах и рекомендациях см. в следующих ресурсах:
 
-- [Известные проблемы при создании доверия доменов и лесов](https://go.microsoft.com/fwlink/?LinkId=128784)
-- [Советы и рекомендации для администрирования доменов и лесов](https://go.microsoft.com/fwlink/?LinkId=128785)
-- [Известные проблемы для резервного копирования доменных служб Active Directory](https://go.microsoft.com/fwlink/?LinkId=128793)
-- [Известные проблемы для принудительного восстановления](https://go.microsoft.com/fwlink/?LinkId=128788)
-- [Советы и рекомендации для принудительного восстановления](https://go.microsoft.com/fwlink/?LinkId=128791) 
-- [Возможные проблемы при добавлении контроллеров домена в удаленных сайтах](https://go.microsoft.com/fwlink/?LinkId=128794)
-- [Рекомендации по добавлению в удаленных сайтах контроллеры домена](https://go.microsoft.com/fwlink/?LinkId=128796)
+- [Известные проблемы при создании отношений доверия между доменами и лесами](https://go.microsoft.com/fwlink/?LinkId=128784)
+- [Рекомендации по администрированию отношений доверия между доменами и лесами](https://go.microsoft.com/fwlink/?LinkId=128785)
+- [Известные проблемы при резервном копировании домен Active Directory служб](https://go.microsoft.com/fwlink/?LinkId=128793)
+- [Известные проблемы с полномочным восстановлением](https://go.microsoft.com/fwlink/?LinkId=128788)
+- [Рекомендации по полномочному восстановлению](https://go.microsoft.com/fwlink/?LinkId=128791) 
+- [Известные проблемы при добавлении контроллеров домена на удаленных сайтах](https://go.microsoft.com/fwlink/?LinkId=128794)
+- [Рекомендации по добавлению контроллеров домена на удаленных сайтах](https://go.microsoft.com/fwlink/?LinkId=128796)
 
-Общие сведения об управлении и настройке доменных служб Active Directory (AD DS) и как это работает см. следующие ресурсы:
+Общие сведения об управлении службами домен Active Directory и их настройке (AD DS), а также о том, как они работают, см. в следующих ресурсах:
 
-- [Администрирование с операциями Active Directory](https://go.microsoft.com/fwlink/?LinkId=128798)
+- [Администрирование операций Active Directory](https://go.microsoft.com/fwlink/?LinkId=128798)
 - [Коллекция Active Directory](https://go.microsoft.com/fwlink/?LinkId=34157)

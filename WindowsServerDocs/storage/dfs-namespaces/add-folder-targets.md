@@ -1,23 +1,23 @@
 ---
 title: Добавление конечных объектов папок
 description: В этом разделе рассматривается, как добавлять конечные объекты папок (UNC-пути)
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: brianlic
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: 8cc61189076669d5c24244294b2f0eee2b783517
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b0685ea795d53b36fad92d54f817f67de57e3a82
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403190"
 ---
 # <a name="add-folder-targets"></a>Добавление конечных объектов папок
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Конечный объект папки — это путь в формате UNC к общей папке или к другому пространству имен, которое связано с папкой в пространстве имен. Добавление нескольких конечных объектов папки повышает доступность папки в пространстве имен.
 
@@ -42,5 +42,5 @@ ms.locfileid: "59831005"
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
--   [Репликация конечных объектов папки с помощью репликации DFS](replicate-folder-targets-using-dfs-replication.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Репликация целевых объектов папки с помощью репликация DFS](replicate-folder-targets-using-dfs-replication.md)

@@ -2,22 +2,22 @@
 title: Программы командной строки диспетчера ресурсов файлового сервера
 description: В этой статье приведено описание инструментов командной строки Windows Server 2016
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 9b31c133b0ee4382b5b9aeded9b3852c7230d2d8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 78c054c5b0c3de19d1f3acd825335eab2f140541
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394295"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>Программы командной строки диспетчера ресурсов файлового сервера
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Диспетчер ресурсов файлового сервера устанавливает командлеты PowerShell [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager), а также следующие программы командной строки:
 
@@ -27,9 +27,9 @@ ms.locfileid: "59858445"
 
 Эти средства можно использовать для управления ресурсами хранилища на локальном или удаленном компьютере. Дополнительные сведения об этих инструментах командной строки см. в следующих источниках.
 
--   **Dirquota**: <https://go.microsoft.com/fwlink/?LinkId=92741>
--   **Filescrn**: <https://go.microsoft.com/fwlink/?LinkId=92742>
--   **Storrept**: <https://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Диркуота**: <https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Филескрн**: <https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Сторрепт**: <https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]
@@ -59,4 +59,4 @@ ms.locfileid: "59858445"
 
 ## <a name="see-also"></a>См. также
 
--   [Управление ресурсами хранилища](managing-remote-storage-resources.md)
+-   [Управление ресурсами удаленного хранилища](managing-remote-storage-resources.md)

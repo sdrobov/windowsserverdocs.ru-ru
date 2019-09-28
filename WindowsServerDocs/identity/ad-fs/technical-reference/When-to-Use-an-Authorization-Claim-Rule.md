@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 3189056de8feff65d37b1846059d871c99ee9ede
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 49246d9df294b966f0ba38b1d3c1f361ce5f1d5f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869217"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407263"
 ---
 # <a name="when-to-use-an-authorization-claim-rule"></a>Использование правила для утверждений авторизации
 Это правило можно использовать в службы федерации Active Directory (AD FS) \(AD FS\) , когда необходимо получить тип входящего утверждения, а затем применить действие, которое определит, будет ли пользователь разрешать или запрещать доступ на основе значения, которое вы Укажите в правиле. При использовании этого правила вы проходите или преобразуете утверждения, которые соответствуют следующей логике правила, на основе параметров, которые настраиваются в правиле.  

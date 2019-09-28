@@ -1,8 +1,8 @@
 ---
 title: Управление системными задачами с помощью диспетчера MultiPoint
-description: Обзор задач управления в MultiPoint Manager
+description: Общие сведения о задачах управления в диспетчере MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,15 +13,15 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 52400b5ed74e4dcc9350e74ac8bc31182fdbbccc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 185f4c88286138af61f92f3f349efd8f584ed73c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845115"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405057"
 ---
 # <a name="manage-system-tasks-using-multipoint-manager"></a>Управление системными задачами с помощью диспетчера MultiPoint
-В MultiPoint Manager, можно использовать **Главная** tab, чтобы выполнять задачи служб MultiPoint и проверять состояние системы. На вкладке **Главная** доступны следующие задачи:  
+В диспетчере MultiPoint можно использовать вкладку **Главная** для выполнения задач служб MultiPoint и проверки состояния системы. На вкладке **Главная** доступны следующие задачи:  
   
 -   Редактирование параметров, выбранных вами при установке системы MultiPoint Services, как описано в статье [Редактирование параметров сервера](Edit-Server-Settings.md).  
   
@@ -37,8 +37,8 @@ ms.locfileid: "59845115"
 
 ## <a name="see-also"></a>См. также  
 [Изменение параметров сервера](Edit-Server-Settings.md)  
-[Перезагрузка или завершение работы](Restart-or-Shut-Down.md)  
+[Перезагрузка и завершение работы](Restart-or-Shut-Down.md)  
 [Переключение между режимами](Switch-Between-Modes.md)  
-[Включение или отключение защиты диска](Enable-or-Disable-Disk-Protection.md)  
+[Включение и отключение защиты диска](Enable-or-Disable-Disk-Protection.md)  
 [Переназначение всех станций](Remap-All-Stations.md)  
 [Добавление или удаление компьютеров](Add-or-Remove-Computers.md)

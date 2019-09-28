@@ -1,7 +1,7 @@
 ---
-title: Сети
+title: Сеть
 description: В этом разделе представлен обзор технологий программно-конфигурируемой сети и сетевой платформы, которые доступны в Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 layout: LandingPage
 ms.technology: networking
 ms.topic: landing-page
@@ -10,14 +10,14 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: fb36f0ff804b139149922596a05d1ff649884bdd
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0d9c30f52082f10b482df3403fc79daa6c888798
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868969"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406771"
 ---
-# <a name="networking"></a>Сети
+# <a name="networking"></a>Сеть
 
 >[!TIP]
 > Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).

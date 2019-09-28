@@ -1,163 +1,163 @@
 ---
 ms.assetid: 5a64e790-6725-4099-aa08-8067d57c3168
-title: Создание приложения с помощью конфиденциальных клиентов OAuth с AD FS 2016 или более поздней версии на стороне сервера
+title: Создание приложения на стороне сервера с использованием конфиденциальных клиентов OAuth с AD FS 2016 или более поздней версии
 description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 167f74522172790d8f5b3fc1dea46d0b7059cd20
-ms.sourcegitcommit: cd12ace92e7251daaa4e9fabf1d8418632879d38
+ms.openlocfilehash: 5b2bf036de1de8300e36c3413c551e51d408a4d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66501682"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407866"
 ---
-# <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>Создание приложения с помощью конфиденциальных клиентов OAuth с AD FS 2016 или более поздней версии на стороне сервера
+# <a name="build-a-server-side-application-using-oauth-confidential-clients-with-ad-fs-2016-or-later"></a>Создание приложения на стороне сервера с использованием конфиденциальных клиентов OAuth с AD FS 2016 или более поздней версии
 
 
-AD FS 2016 и более поздние версии поддерживают клиентов, способных сохранять свои собственные секрета, например приложения или службы, на веб-сервере.  Эти клиенты известны как конфиденциальные.
-Ниже приведена схема веб-приложения на веб-сервере и работа в качестве конфиденциального клиента к AD FS:  
+AD FS 2016 и более поздних выпусков обеспечивают поддержку клиентов, способных поддерживать собственный секрет, например приложение или службу, выполняемые на веб-сервере.  Эти клиенты называются конфиденциальными клиентами.
+Ниже приведена схема веб-приложения, работающего на веб-сервере и обслуживающего конфиденциальный клиент для AD FS:  
 
 ## <a name="pre-requisites"></a>Предварительные требования  
-Ниже приведен список предварительных требований, которые требуются перед выполнением этого документа. В этом документе предполагается, что AD FS был установлен.  
+Ниже приведен список предварительных требований, которые необходимы перед завершением этого документа. В этом документе предполагается, что AD FS установлен.  
 
 -   Клиентские средства GitHub  
 
--   AD FS в Windows Server 2016 TP4 или более поздней версии  
+-   AD FS в Windows Server 2016 TP4; или более поздней версии  
 
 -   Visual Studio 2013 или более поздней версии.  
 
 ## <a name="create-an-application-group-in-ad-fs-2016-or-later"></a>Создание группы приложений в AD FS 2016 или более поздней версии
-В следующем разделе описываются способы настройки приложения в AD FS 2016 или более поздней версии.  
+В следующем разделе описано, как настроить группу приложений в AD FS 2016 или более поздней версии.  
 
 #### <a name="create-the-application-group"></a>Создание группы приложений  
 
-1.  В оснастке управления AD FS, щелкните правой кнопкой мыши на группы приложений и выберите **добавить группу приложений**.  
+1.  В AD FS управления щелкните правой кнопкой мыши группы приложений и выберите команду **Добавить группу приложений**.  
 
-2.  В мастере группы приложений для **имя** введите **ADFSOAUTHCC** и в разделе **клиентские / серверные приложения** выберите **серверного приложения доступ к веб-API** шаблона.  Нажмите кнопку **Далее**.  
+2.  В мастере группы приложений в поле **имя** введите **адфсоаускк** и в разделе **клиент-сервер приложения** выберите **серверное приложение, осуществляющее доступ к шаблону веб-API** .  Нажмите кнопку **Далее**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_2.PNG)  
 
-3.  Копировать **идентификатор клиента** значение.  Он будет использоваться позже в качестве значения для **ida: ClientId** в файле web.config приложения.  
+3.  Скопируйте значение **идентификатора клиента** .  Он будет использоваться позже в качестве значения для **Ida: ClientID** в файле Web. config приложения.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_3.PNG)  
 
 4.  Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44323** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  
 
-5.  На **настроить учетные данные приложения** экрана, установите флажок в **создать общий секрет** и скопируйте секрет.  Он будет использоваться позже в качестве значения для **ida: ClientSecret** в файле web.config приложения.  Нажмите кнопку **Далее**.  
+5.  На экране **Настройка учетных данных приложения** установите флажок **создать общий секрет** и скопируйте секретный код.  Он будет использоваться позже в качестве значения для **Ida: ClientSecret** в файле Web. config приложения.  Нажмите кнопку **Далее**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)   
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_4.PNG)   
 
-6. На **настроить веб-API** экрана, введите следующую команду для **идентификатор** -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  Это значение будет использоваться позднее для **ida: GraphResourceId** в файле web.config приложения.  
+6. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор** -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  Это значение будет использоваться позже для **Ida: графресаурцеид** в файле Web. config приложения.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_9.PNG)  
 
-7. На **применяются политики управления доступом** выберите **разрешение для каждого** и нажмите кнопку **Далее**.  
+7. На экране **Применить политику управления доступом** выберите **разрешение все** и нажмите кнопку **Далее**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_7.PNG)  
 
-8. На **Настройка разрешений приложения** экрана, убедитесь, что **openid** и **user_impersonation** установлены и нажмите кнопку **Далее**.  
+8. На экране **Настройка разрешений приложения** убедитесь, что выбраны **OpenID Connect** и **User_impersonation** , и нажмите кнопку **Далее**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_8.PNG)  
 
-9. На **Сводка** щелкните **Далее**.  
+9. На экране **Сводка** нажмите кнопку **Далее**.  
 
-10. На **завершить** щелкните **закрыть**.  
+10. На экране **Завершение** нажмите кнопку **Закрыть**.  
 
 ## <a name="upgrade-the-database"></a>Обновление базы данных  
-Visual Studio 2015, использованный при создании этого пошагового руководства.   Чтобы получить пример, работа с Visual Studio 2015 необходимо обновить файл базы данных.  Выполните следующие действия.  
+Для создания этого пошагового руководства использовалась Visual Studio 2015.   Чтобы получить пример работы с Visual Studio 2015, необходимо обновить файл базы данных.  Выполните следующие действия.  
 
-В этом разделе описывается скачать пример веб-API и обновить базу данных в Visual Studio 2015.   Мы будем использовать пример Azure AD, [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity).  
+В этом разделе описывается, как скачать пример веб-API и обновить базу данных в Visual Studio 2015.   Мы будем использовать пример Azure AD, приведенный [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity).  
 
-Загрузите пример проекта, использование Git Bash и введите следующую команду:  
+Чтобы скачать пример проекта, используйте Git Bash и введите следующую команду:  
 
 ```  
 git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi-oauth2-useridentity.git  
 ```  
 
-![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_10.PNG)  
+![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_10.PNG)  
 
-#### <a name="to-upgrade-the-database-file"></a>Чтобы обновить файл базы данных  
+#### <a name="to-upgrade-the-database-file"></a>Обновление файла базы данных  
 
-1.  Откройте проект в Visual Studio, будет существовать всплывающее окно, информирующее о том, что приложению требуется SQL Server 2012 Express, или необходимо обновить базу данных.  Нажмите кнопку ОК.  
+1.  Откройте проект в Visual Studio. появится всплывающее окно с сообщением о том, что приложению требуется SQL Server 2012 Express или необходимо обновить базу данных.  Нажмите кнопку ОК.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_12.PNG)  
 
-2.  Далее компиляции приложения, выбрав построения "->" Построить решение вверху.  Это позволит восстановить все пакеты NuGet.  
+2.  Затем скомпилируйте приложение, выбрав Build-> Build Solution (в верхней части).  При этом будут восстановлены все пакеты NuGet.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_13.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_13.PNG)  
 
-3.  Теперь в верхней, выберите **представление** -> **обозревателя серверов**.  Когда откроется окно, в разделе **подключения к данным**, щелкните правой кнопкой мыши **DefaultConnection** и выберите **Изменение подключения**.  
+3.  Теперь в верхней части выберите **View** -> **Обозреватель сервера**.  После открытия в разделе **подключения к данным**щелкните правой кнопкой мыши **DefaultConnection** и выберите пункт **изменить подключение**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_14.PNG)  
 
-4.  На **Изменение подключения**в разделе **имя файла базы данных (новой или существующей)** выберите **Обзор** и предоставить **path\filename.mdf**. Нажмите кнопку **Да** на диалоговое окно.
+4.  При **изменении соединения**в поле **имя файла базы данных (новое или существующее)** выберите **Обзор** и укажите **пас\филенаме.МДФ**. Нажмите кнопку **Да** в диалоговом окне.
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_6.PNG)
 
-5.  На **Изменение подключения**выберите **Дополнительно**.  
+5.  В меню **изменить подключение**выберите **Дополнительно**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_15.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_15.PNG)  
 
-6.  В свойствах, найдите источник данных и используйте раскрывающийся список, чтобы изменить его из **(LocalDb\v11.0)** для **(LocalDB) \MSSQLLocalDB**.  
+6.  В окне Дополнительные свойства выберите источник данных и с помощью раскрывающегося списка измените его с **(LocalDb\v11.0)** на **(LocalDb) \MSSQLLocalDB**.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_16.PNG)  
 
-7.  Нажмите кнопку ОК. Нажмите кнопку ОК.  Нажмите "Да", чтобы обновить базу данных.  
+7.  Нажмите кнопку ОК. Нажмите кнопку ОК.  Нажмите кнопку Да, чтобы обновить базу данных.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_17.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_17.PNG)  
 
-8.  После завершения этой операции, более чем в правой части, скопируйте значение в поле рядом с полем **строку подключения.**  
+8.  Когда это завершится, скопируйте значение в поле, расположенное справа от **строки подключения.**  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_18.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_18.PNG)  
 
-9.  Теперь откройте файл Web.config и замените значение в connectionString со значением, скопированный ранее.  Сохраните файл Web.config.  
-
-    > [!NOTE]  
-    > Описанные выше действия необходимы, чтобы мы могли получить новые строки подключения.  В противном случае при запуске обновления базы данных ниже возникнет ошибка.  
-
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_19.PNG)  
-
-10. В верхней части Visual Studio, выберите **представление** -> **Other Windows** -> **консоль диспетчера пакетов**.  
-
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_20.PNG)  
-
-11. Внизу, в консоли диспетчера пакетов введите: `Enable-Migrations` и нажмите клавишу ВВОД.  
+9.  Теперь откройте файл Web. config и замените значение в connectionString на значение, скопированное ранее.  Сохраните файл Web. config.  
 
     > [!NOTE]  
-    > Если вы получаете сообщение об ошибке: Enable-Migrations не распознается как командлет, введите Install-Package EntityFramework, чтобы обновить EntityFramework.  
+    > Чтобы получить новый параметр connectionString, необходимо выполнить описанные выше действия.  В противном случае при запуске обновления базы данных ниже произойдет ошибка.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_21.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_19.PNG)  
 
-12. Внизу, в консоли диспетчера пакетов введите: `Add-Migration <anynamehere>` и нажмите клавишу ВВОД.  
+10. В верхней части Visual Studio выберите **просмотр** ->  другая**консоль диспетчера пакетов** **Windows** -> .  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_22.PNG)  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_20.PNG)  
 
-13. Внизу, в консоли диспетчера пакетов введите: `Update-Database` и нажмите клавишу ВВОД.  
+11. В нижней части консоли диспетчера пакетов введите: `Enable-Migrations` и нажмите клавишу ВВОД.  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_23.PNG)  
+    > [!NOTE]  
+    > Если появится сообщение о том, что параметр Включить-миграция не распознан как командлет, введите Install-Package EntityFramework, чтобы обновить EntityFramework.  
 
-## <a name="modify-the-webapi-in-visual-studio"></a>Изменить веб-API в Visual Studio  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_21.PNG)  
 
-#### <a name="to-modify-the-sample-web-api"></a>Чтобы изменить пример веб-API  
+12. В нижней части консоли диспетчера пакетов введите: `Add-Migration <anynamehere>` и нажмите клавишу ВВОД.  
 
-1.  Откройте пример, с помощью Visual Studio.  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_22.PNG)  
 
-2.  Откройте файл web.config.  Измените следующие значения:  
+13. В нижней части консоли диспетчера пакетов введите: `Update-Database` и нажмите клавишу ВВОД.  
 
-    -   IDA: ClientId — введите значение из #3 в предыдущем разделе группы приложений создание.  
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_23.PNG)  
 
-    -   IDA: ClientSecret — введите значение из #5 в предыдущем разделе группы приложений создание.  
+## <a name="modify-the-webapi-in-visual-studio"></a>Изменение WebApi в Visual Studio  
 
-    -   IDA: GraphResourceId - введите значение из #6 в предыдущем разделе группы приложений создание.  
+#### <a name="to-modify-the-sample-web-api"></a>Изменение примера веб-API  
 
-    ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)  
+1.  Откройте пример с помощью Visual Studio.  
 
-3.  Откройте файл Startup.Auth.cs под App_Start и внесите следующие изменения:  
+2.  Откройте файл Web. config.  Измените следующие значения:  
+
+    -   IDA: ClientId — введите значение из #3 в разделе Создание группы приложений выше.  
+
+    -   IDA: ClientSecret — введите значение из #5 в разделе Создание группы приложений выше.  
+
+    -   IDA: Графресаурцеид — введите значение из #6 в разделе Создание группы приложений выше.  
+
+    ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_24.PNG)  
+
+3.  Откройте файл Startup.Auth.cs в разделе App_Start и внесите в него следующие изменения:  
 
     -   Закомментируйте следующие строки:  
 
@@ -167,84 +167,84 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-webapp-webapi
         //public static readonly string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);  
         ```  
 
-    -   Добавьте следующую строку на его место:  
+    -   Добавьте в его место следующее:  
 
         ```  
         public static readonly string Authority = "https://<your_fsname>/adfs";  
         ```  
 
-        где < your_fsname > замещается часть url службы федерации, например adfs.contoso.com DNS  
+        где < your_fsname > заменяется частью DNS URL-адреса службы федерации, например adfs.contoso.com  
 
-        ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_25.PNG)  
+        ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_25.PNG)  
 
 4.  Откройте файл UserProfileController.cs и внесите следующие изменения:  
 
-    -   Закомментируйте следующие:  
+    -   Закомментируйте следующее:  
 
         ```  
         //authContext = new AuthenticationContext(Startup.Authority, new TokenDbCache(userObjectID));  
         ```  
 
-    -   Измените оба вхождения со следующими:  
+    -   Замените оба вхождения следующим:  
 
         ```  
         authContext = new AuthenticationContext(Startup.Authority, false, new TokenDbCache(userObjectID));  
         ```  
 
-        ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_27.PNG)  
+        ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_27.PNG)  
 
-    -   Закомментируйте следующие:  
+    -   Закомментируйте следующее:  
 
         ```  
         //authContext = new AuthenticationContext(Startup.Authority);  
         ```  
 
-    -   Измените оба вхождения со следующими:  
+    -   Замените оба вхождения следующим:  
 
         ```  
         authContext = new AuthenticationContext(Startup.Authority, false);  
         ```  
 
-        ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_28.PNG)  
+        ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_28.PNG)  
 
-    -   Теперь закомментируйте все экземпляры из следующих:  
+    -   Теперь закомментируйте все экземпляры следующего:  
 
         ```  
         Uri redirectUri = new Uri(Request.Url.GetLeftPart(UriPartial.Authority).ToString() + "/OAuth");  
         ```  
 
-    -   Замените все вхождения следующее:  
+    -   Замените все вхождения следующим:  
 
         ```  
         Uri redirectUri = new Uri(Request.Url.GetLeftPart(UriPartial.Authority).ToString());  
         ```  
 
-        ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_34.PNG)  
+        ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_34.PNG)  
 
 ## <a name="test-the-solution"></a>Тестирование решения  
-В этом разделе мы будем тестировать решение конфиденциального клиента.  Используйте следующую процедуру для тестирования решения.  
+В этом разделе будет протестировать конфиденциальное клиентское решение.  Для тестирования решения используйте следующую процедуру.  
 
-#### <a name="testing-the-confidential-client-solution"></a>Тестирование решения конфиденциального клиента  
+#### <a name="testing-the-confidential-client-solution"></a>Тестирование решения для конфиденциального клиента  
 
-1. В верхней части Visual Studio убедитесь, что установлен Internet Explorer и щелкните зеленую стрелку.  
+1. В верхней части Visual Studio убедитесь, что выбран Internet Explorer, и щелкните зеленую стрелку.  
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
+   ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_36.png)  
 
-2. Когда появится страница ASP.Net, щелкните **зарегистрировать** в верхнем правом углу страницы.  Введите имя пользователя и пароль и нажмите кнопку **зарегистрировать** кнопки.  Это создает локальную учетную запись в базе данных SQL.  
+2. Получив страницу ASP.Net, щелкните **зарегистрировать** в верхней правой части страницы.  Введите имя пользователя и пароль, затем нажмите кнопку **зарегистрировать** .  В базе данных SQL будет создана локальная учетная запись.  
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
+   ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_31.PNG)  
 
-3. Обратите внимание, что теперь веб-сайте ASP.NET говорит Hello abby@contoso.com!.  Нажмите кнопку **профиль**.  
+3. Обратите внимание, что на сайте ASP.NET указано Hello abby@contoso.com!.  Щелкните **профиль**.  
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
+   ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_32.PNG)  
 
-4. Это откроет страницу без все сведения и говорит, что мы должны щелкните здесь, чтобы войти.  Нажмите кнопку **здесь**.  
+4. Это приводит к отображению страницы без каких-либо сведений и говорит о том, что для входа необходимо щелкнуть здесь.  Щелкните **здесь**.  
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
+   ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_33.PNG)  
 
-5. Теперь быть отображается запрос на вход в службы AD FS.  
+5. Теперь вам будет предложено войти в AD FS.  
 
-   ![AD FS Oauth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
+   ![AD FS OAuth](media/Enabling-Oauth-Confidential-Clients-with-AD-FS-2016/AD_FS_Confidential_35.PNG)  
 
 ## <a name="next-steps"></a>Следующие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

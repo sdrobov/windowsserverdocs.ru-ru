@@ -1,36 +1,36 @@
 ---
 title: Проверка конфигурации HGS
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 8f01df37-f18e-4386-ae73-ecf84feaa9df
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 8098edd1eea475cea1face5541459b262364a07b
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: d219b7aa9ca1e17df3281fd756106a6f07864116
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469544"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386347"
 ---
 # <a name="verify-the-hgs-configuration"></a>Проверка конфигурации HGS
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 
-Далее нам нужно проверить, что все работает должным образом. Чтобы сделать это, выполните следующую команду в консоль Windows PowerShell с повышенными привилегиями:
+Далее необходимо убедиться, что все работает правильно. Для этого выполните следующую команду в консоли Windows PowerShell с повышенными привилегиями:
 
 ```powershell
 Get-HgsTrace -RunDiagnostics
 ```
 
-Так как конфигурация HGS еще не содержит сведения об узлах, которые будут в защищенной структуры, диагностика показывает, что нет узлов будут иметь возможность оценить, требуется ли успешно еще. Игнорировать этот результат и просмотреть другие сведения, предоставленные функцией диагностики.
+Так как конфигурация HGS еще не содержит сведений об узлах, которые будут находиться в защищенной структуре, диагностика сообщит, что ни один из узлов еще не сможет успешно выполнить аттестацию. Игнорируйте этот результат и ознакомьтесь с другими сведениями, предоставленными системой диагностики.
 
 [!INCLUDE [Guarded fabric diagnostics tool](../../../includes/guarded-fabric-diagnostics-tool.md)] 
 
-Выполните диагностику на каждом узле в кластере HGS.
+Запустите диагностику на каждом узле в кластере HGS.
 
 ## <a name="next-step"></a>Дальнейшие действия
 

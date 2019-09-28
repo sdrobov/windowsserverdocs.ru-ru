@@ -7,18 +7,18 @@ ms.author: gawatu
 manager: gawatu
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-file-systems
-ms.openlocfilehash: 54165700209320eee50fc63d98d78cbf4a92d053
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 81186624e19f9235cbdf8c7f0d44bd2927a68099
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838115"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394024"
 ---
 # <a name="block-cloning-on-refs"></a>Блокирование клонирования в ReFS
 
->Относится к: Windows Server 2019 г., Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Клонирование блоков — это копирование диапазон байтов файла от имени приложения, при этом конечный файл может совпадать с исходным или нет. К сожалению, операции копирования являются дорогостоящими, поскольку они инициируют затратные операции чтения и записи физических данных. 
 
@@ -64,8 +64,8 @@ ms.locfileid: "59838115"
 
 ## <a name="see-also"></a>См. также
 
--   [Общие сведения о reFS](refs-overview.md)
--   [Потоки целостности reFS](integrity-streams.md)
--   [Общие сведения о дисковых хранилища](../storage-spaces/storage-spaces-direct-overview.md)
+-   [Обзор ReFS](refs-overview.md)
+-   [Потоки целостности ReFS](integrity-streams.md)
+-   [Обзор Локальные дисковые пространства](../storage-spaces/storage-spaces-direct-overview.md)
 -   [DUPLICATE_EXTENTS_DATA](https://msdn.microsoft.com/library/windows/desktop/mt590821(v=vs.85).aspx)
 -   [FSCTL_DUPLICATE_EXTENTS_TO_FILE](https://msdn.microsoft.com/library/windows/desktop/mt590823(v=vs.85).aspx)

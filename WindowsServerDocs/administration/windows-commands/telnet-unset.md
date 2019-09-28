@@ -1,8 +1,8 @@
 ---
-title: Telnet не задано
-description: 'Раздел Windows команды для ***- '
+title: Telnet не определено
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37c4d84d1664fdc13ea7ffec60bf981b264dba00
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6f0eb98c4168d2f664780dad42ca1aea5463d24
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853895"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383481"
 ---
-# <a name="telnet-unset"></a>Telnet: отменить задание
+# <a name="telnet-unset"></a>Telnet: не задано
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отключает ранее параметры set.   
+Отключает ранее установленные параметры.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]  
@@ -32,18 +32,18 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 ### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|bsasdel|Отправляет **Backspace** как **Backspace**.|  
-|CRLF|Отправляет **ввод** ключа как CR. Также называется режим перевода строки.|  
-|delasbs|Отправляет **удалить** как **удалить**.|  
-|escape|Удаляет параметр символ escape.|  
-|локального|Включение, отключение локального.|  
+|бсасдел|Отправляет **Backspace** в виде **Backspace**.|  
+|CRLF|Отправляет клавишу **Ввод** в виде CR. Также называется режимом перевода строки.|  
+|деласбс|Отправляет **Удаление** как **Удаление**.|  
+|Выполняет|Удаляет параметр escape-символа.|  
+|локалечо|Отключает локалечо.|  
 |logging|Отключает ведение журнала.|  
 |NTLM|Отключает проверку подлинности NTLM.|  
 |?|Отображает справку для этой команды.|  
-## <a name="BKMK_Examples"></a>Примеры  
+## <a name="BKMK_Examples"></a>Примеров  
 Отключите ведение журнала.  
 ```  
 u logging  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

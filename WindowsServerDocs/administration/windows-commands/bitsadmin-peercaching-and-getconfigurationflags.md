@@ -1,8 +1,8 @@
 ---
-title: bitsadmin кэширования и getconfigurationflags
-description: Раздел Windows команды для **bitsadmin кэширования и getconfigurationflags** - получает конфигурацию флаги, определяющие, если компьютер обслуживает содержимое для одноранговых узлов и можно загрузить содержимое из одноранговых узлов.
+title: битсадмин (кэшированный) и жетконфигуратионфлагс
+description: Раздел команд Windows для **битсадмин кэширования и жетконфигуратионфлагс** — Получает флаги конфигурации, которые определяют, обслуживает ли компьютер содержимое одноранговым узлам, и могут скачивать содержимое с одноранговых узлов.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6afa39993cf90b2d71b6b681680c3b4e1fd9b56b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 94c7eb1a115fe9152b149b8cf65765b179080cc3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826355"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381086"
 ---
-# <a name="bitsadmin-peercaching-and-getconfigurationflags"></a>bitsadmin кэширования и getconfigurationflags
+# <a name="bitsadmin-peercaching-and-getconfigurationflags"></a>битсадмин (кэшированный) и жетконфигуратионфлагс
 
 
 
-Получает флаги конфигурации, определяющие, если компьютер обслуживает содержимое для одноранговых узлов и можно загрузить содержимое из одноранговых узлов.
+Возвращает флаги конфигурации, определяющие, будет ли компьютер обслуживать содержимое одноранговым узлам, а также скачивать содержимое с одноранговых узлов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,15 +36,15 @@ bitsadmin /PeerCaching /GetConfigurationFlags <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается конфигурация флаги для задания с именем *myJob*.
+В следующем примере показано получение флагов конфигурации для задания с именем *myJob*.
 ```
 C:\> Bitsadmin /PeerCaching /GetConfigurationFlags myJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

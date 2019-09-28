@@ -1,7 +1,7 @@
 ---
 title: Виртуальное масштабирование на стороне приема (vRSS)
 description: Узнайте о виртуальном масштабировании на стороне приема (vRSS) в Windows Server и о настройке виртуального сетевого адаптера для балансировки нагрузки входящего сетевого трафика между несколькими ядрами ядра процессора в виртуальной машине. Кроме того, можно настроить несколько физических ядер для виртуального сетевого адаптера узла (vNIC).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 9be477b3-f81d-4e84-a6b0-ac4c1ea97715
@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 manager: dougkim
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ae017d7d78adea565942a952aaea3da1669f39a9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b24cabe3597af35e7c7f3c6f81d360bb11675e23
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871805"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395786"
 ---
 # <a name="virtual-receive-side-scaling-vrss"></a>Виртуальное масштабируемое \(vRSS на стороне приема\)
 

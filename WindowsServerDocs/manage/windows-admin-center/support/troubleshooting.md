@@ -6,25 +6,25 @@ ms.topic: article
 author: jwwool
 ms.author: jeffrew
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 4d108161dd4f6b57d4a86cbcaa5852aff53f0ac3
-ms.sourcegitcommit: 63926404009f9e1330a4a0aa8cb9821a2dd7187e
+ms.openlocfilehash: f4e772550aaba6fe9a4f78a6032eaabde4aeb0bf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469515"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71406863"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Устранение неполадок в Windows Admin Center
 
-> Относится к: Windows Admin Center, предварительная версия Windows Admin Center
+> Относится к: Windows Admin Center, ознакомительная версия Windows Admin Center
 
 > [!Important]
 > Это руководство поможет вам в диагностике и разрешении проблем, которые не позволяют использовать Windows Admin Center. Если у вас возникает проблема с определенным средством, проверьте, возможно, эта проблема [уже известна.](http://aka.ms/wacknownissues)
 
-## <a name="installer-fails-with-message-the-module-microsoftpowershelllocalaccounts-could-not-be-loaded"></a>Установщика завершается сбоем с сообщением: **_Не удалось загрузить модуль «Microsoft.PowerShell.LocalAccounts»._ **
+## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>Программа установки завершает работу с сообщением: **_Не удалось загрузить модуль "Microsoft. PowerShell. LocalAccounts"._**
 
-Это может произойти, если ваш путь к модулю PowerShell по умолчанию были изменены или удалены. Чтобы устранить проблему, убедитесь, что ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` — **первый** элемента в переменной среды PSModulePath. Это можно сделать с помощью следующей строки PowerShell:
+Это может произойти, если путь модуля PowerShell по умолчанию был изменен или удален. Чтобы устранить эту проблему, убедитесь, что ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` является **первым** элементом в переменной среды PSModulePath. Это можно сделать с помощью следующей строки PowerShell:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
@@ -34,7 +34,7 @@ ms.locfileid: "67469515"
 
 ### <a name="if-youve-installed-windows-admin-center-as-an-app-on-windows-10"></a>Если вы установили Windows Admin Center в качестве **приложения в Windows 10**
 
-* Убедитесь, что Windows Admin Center запущен. Найдите значок Windows Admin Center ![](../media/trayIcon.PNG) на панели задач или **рабочий стол Windows Admin Center / SmeDesktop.exe** в диспетчере задач. Если ни того, ни другого нет, запустите **Windows Admin Center** из меню "Пуск".
+* Убедитесь, что Windows Admin Center запущен. Найдите значок центра администрирования Windows ![](../media/trayIcon.PNG) в области уведомлений или **Desktop/смедесктоп. exe** в диспетчере задач. Если ни того, ни другого нет, запустите **Windows Admin Center** из меню "Пуск".
 
 > [!NOTE] 
 > После перезагрузки необходимо запустить Windows Admin Center из меню "Пуск".  
@@ -47,13 +47,13 @@ ms.locfileid: "67469515"
 
   * Попробуйте открыть браузер в приватном режиме, и если это сработает, вам потребуется очистить кэш.
 
-* Недавно обновления Windows 10 до новой сборки или версии?
+* Вы недавно выполнили обновление Windows 10 до новой сборки или версии?
 
-  * Это возможно, был удален настройки доверенных узлов. [Следуйте этим инструкциям, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts)
+  * Возможно, были удалены параметры доверенных узлов. [Выполните эти инструкции, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts)
 
 ### <a name="if-youve-installed-windows-admin-center-as-a-gateway-on-windows-server"></a>Если вы установили Windows Admin Center в качестве **шлюза в Windows Server**
 
-* Обновлении с предыдущей версии Windows Admin Center? Убедитесь, что правила брандмауэра не был удален из-за [Это известная проблема](known-issues.md#upgrade). Используйте следующую команду PowerShell, чтобы определить, существует ли правило. Если это не так, следуйте [эти инструкции](known-issues.md#upgrade) для ее восстановления.
+* Выполнялось ли обновление с предыдущей версии центра администрирования Windows? Убедитесь, что правило брандмауэра не было удалено из-за [этой известной проблемы](known-issues.md#upgrade). Используйте следующую команду PowerShell, чтобы определить, существует ли правило. В противном случае выполните [эти инструкции](known-issues.md#upgrade) , чтобы создать его заново.
     
     ```powershell
     Get-NetFirewallRule -DisplayName "SmeInboundOpenException"
@@ -63,20 +63,20 @@ ms.locfileid: "67469515"
 
 * Убедитесь, что вы используете браузер Microsoft Edge или Google Chrome.
 
-* На сервере, откройте диспетчер задач > службы и убедитесь, что **ServerManagementGateway / Windows Admin Center** запущена.
+* На сервере откройте диспетчер задач > службы и убедитесь, что **серверманажементгатевай/Windows Admin Center** работает.
 ![](../media/Service-TaskMan.PNG)
 
-* Проверьте сетевое подключение к шлюзу (Замените \<значения > сведениями из развертывания)
+* Проверьте сетевое подключение к шлюзу (замените \<values > информацией из развертывания).
 
     ```powershell
     Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
     ```
 
-### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>Если вы установили Windows Admin Center на Машине Azure под управлением Windows Server
+### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>Если вы установили центр администрирования Windows на виртуальной машине Azure Windows Server,
 
 * [Проверка версии Windows](#check-the-windows-version)
 * Добавили ли вы правило для портов входящего трафика HTTPS? 
-* [Дополнительные сведения об установке Windows Admin Center на виртуальной Машине Azure](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
+* [Дополнительные сведения об установке центра администрирования Windows на виртуальной машине Azure](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
 ### <a name="check-the-windows-version"></a>Проверьте версию Windows
 
@@ -84,38 +84,38 @@ ms.locfileid: "67469515"
 
 * Если вы используете Windows 10 версии 1703 или ниже, Windows Admin Center не поддерживается в вашей версии Microsoft Edge. Выполните обновление до более новой версии Windows 10, либо используйте Google Chrome.
 
-* Если вы используете более insider preview версии Windows 10 или Server с версией сборки между 17134 и 17637, Windows возникала ошибка, вызвавшая Windows Admin Center переход на другой. Используйте текущий поддерживаемой версии Windows.
+* Если вы используете предварительную версию Windows 10 или сервера с версией сборки от 17134 до 17637, в Windows возникала ошибка, приведшая к сбою центра администрирования Windows. Используйте текущую поддерживаемую версию Windows.
 
-### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>Убедитесь, что служба удаленного управления Windows (WinRM) запущена на компьютере шлюза и на управляемом узле
+### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>Убедитесь, что служба служба удаленного управления Windows (WinRM) запущена как на компьютере шлюза, так и на управляемом узле.
 
-* Откройте диалоговое окно запуска с клавиша с эмблемой Windows + R
-* Тип ```services.msc``` и нажмите клавишу ВВОД
-* В открывшемся окне, внешний вид для удаленного управления Windows (WinRM) и убедитесь, что она запущена и настроена для автоматического запуска
+* Открытие диалогового окна запуска с помощью Виндовскэй + R
+* Введите ```services.msc``` и нажмите клавишу ВВОД
+* В открывшемся окне найдите служба удаленного управления Windows (WinRM), убедитесь, что он запущен и настроен на автоматический запуск.
 
-### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>Обновления сервера 2016 до 2019 г.?
+### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>Вы выполнили обновление сервера с 2016 до 2019?
 
-* Это возможно, был удален настройки доверенных узлов. [Следуйте этим инструкциям, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts) 
+* Возможно, были удалены параметры доверенных узлов. [Выполните эти инструкции, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts) 
 
-## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>Я получаю сообщение: «Не удается безопасно подключаться к этой странице. Возможно, сайт использует устаревшие или небезопасные параметры безопасности TLS.
+## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>Я получаю сообщение: "Не удается безопасно подключиться к этой странице. Это может быть вызвано тем, что сайт использует устаревшие или ненадежные параметры безопасности TLS.
 
-Компьютер будет ограничен подключений HTTP/2. Windows Admin Center использует встроенную проверку подлинности Windows, который не поддерживается в HTTP/2. Добавьте следующие два значения в разделе ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` на **компьютер под управлением обозревателя** на снятие ограничения HTTP/2:
+Ваш компьютер ограничен подключениями HTTP/2. Центр администрирования Windows использует встроенную проверку подлинности Windows, которая не поддерживается в HTTP/2. Добавьте следующие два значения реестра в раздел ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` на компьютере, на **котором выполняется браузер** , чтобы удалить ограничение HTTP/2:
 
 ```
 EnableHttp2Cleartext=dword:00000000
 EnableHttp2Tls=dword:00000000
 ```
 
-## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>У меня возникли проблемы со средствами удаленного рабочего стола, события и PowerShell.
+## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>У меня возникли проблемы с удаленный рабочий стол, событиями и средствами PowerShell.
 
-Эти три средства требуется протокол websocket, который обычно блокируется прокси-серверы и брандмауэры. Если вы используете Google Chrome, [известная проблема](known-issues.md#google-chrome) websockets и проверка подлинности NTLM.
+Для этих трех средств требуется протокол WebSocket, который обычно блокируется прокси-серверами и брандмауэрами. Если вы используете Google Chrome, существует [известная ошибка](known-issues.md#google-chrome) с WebSockets и проверкой подлинности NTLM.
 
 ## <a name="i-can-connect-to-some-servers-but-not-others"></a>Удается подключиться к некоторым серверам, но к другим нет
 
-* Войдите на локально компьютере шлюза и попытаться ```Enter-PSSession <machine name>``` в PowerShell, заменив \<имя компьютера > с именем компьютера, который вы пытаетесь управлять в Windows Admin Center. 
+* Войдите на компьютер шлюза локально и попробуйте ```Enter-PSSession <machine name>``` в PowerShell, заменив имя \<machine name > именем компьютера, которым вы пытаетесь управлять, в центре администрирования Windows. 
 
 * Если в вашей среде вместо домена используется рабочая группа, см. [использование Windows Admin Center в рабочей группе](#using-windows-admin-center-in-a-workgroup).
 
-* **С помощью учетных записей локального администратора:** Если вы используете учетную запись локального пользователя, который не является встроенной учетной записи администратора, необходимо включить политику на конечном компьютере, выполнив следующую команду в PowerShell или командной строки от имени администратора на целевом компьютере:
+* **Использование учетных записей локального администратора:** При использовании локальной учетной записи пользователя, которая не является встроенной учетной записью администратора, необходимо включить политику на целевом компьютере, выполнив следующую команду в PowerShell или в командной строке с правами администратора на целевом компьютере:
 
     ```
     REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1
@@ -149,7 +149,7 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
 
 При установке Windows Admin Center пользователю предоставляется возможность задать параметр TrustedHosts шлюза через Windows Admin Center. Это обязательно в среде рабочей группы и при использовании учетных данных локального администратора в домене. Если вы решили пропустить настройку этого параметра, необходимо вручную настроить TrustedHosts.
 
-**Изменение TrustedHosts с помощью команд PowerShell:**
+**Чтобы изменить TrustedHosts с помощью команд PowerShell, выполните следующие действия.**
 
 1. Откройте сеанс PowerShell от имени администратора.
 2. Просмотрите текущие настройки TrustedHosts:
@@ -186,42 +186,42 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
     Set-Item WSMan:localhost\Client\TrustedHosts -Value '<paste values from text file>'
     ```
 
-## <a name="i-previously-had-windows-admin-center-installed-and-now-nothing-else-can-use-the-same-tcpip-port"></a>Windows Admin Center установлен ранее, и теперь ничего можно использовать один и тот же порт TCP/IP
+## <a name="i-previously-had-windows-admin-center-installed-and-now-nothing-else-can-use-the-same-tcpip-port"></a>У меня был установлен центр администрирования Windows, и теперь никто не может использовать один и тот же порт TCP/IP.
 
-Вручную выполните следующие две команды в командной строке с повышенными правами:
+Вручную выполните эти две команды в командной строке с повышенными привилегиями:
 
 ```cmd
 netsh http delete sslcert ipport=0.0.0.0:443
 netsh http delete urlacl url=https://+:443/
 ```
 
-## <a name="azure-features-dont-work-properly-in-edge"></a>Компоненты Azure не работают в браузере Edge
+## <a name="azure-features-dont-work-properly-in-edge"></a>Функции Azure не работают должным образом на границе
 
-Edge имеет [известные проблемы](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) связанного зон безопасности, которые влияют на входа в Azure в Windows Admin Center. Если у вас возникают трудности, с помощью функций Azure, при использовании Edge, попробуйте добавить https://login.microsoftonline.com, https://login.live.com и URL-адрес шлюза как надежные сайты для разрешенных сайтов для Edge параметры блокирования всплывающих окон в браузере на стороне клиента. 
+На границе есть [Известные проблемы](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) , связанные с зонами безопасности, которые влияют на вход Azure в центре администрирования Windows. Если у вас возникли проблемы с использованием функций Azure при использовании ребра, попробуйте добавить https://login.microsoftonline.com, https://login.live.com и URL-адрес шлюза в качестве доверенных сайтов и разрешенные сайты для параметров блокирования всплывающих окон в клиентском браузере. 
 
 Выполните указанные ниже действия.
-1. Поиск **обозревателя** в Windows меню "Пуск"
-2. Перейдите к **безопасности** вкладку
-3. В разделе **Надежные узлы** , щелкните на **сайты** и добавьте URL-адреса в открывшемся диалоговом окне. Вам потребуется добавить URL-адрес шлюза и https://login.microsoftonline.com и https://login.live.com.
-4. Перейдите к **конфиденциальности** вкладку
-5. В разделе **блокирование всплывающих окон** щелкните **параметры** и добавьте URL-адреса в открывшемся диалоговом окне. Вам потребуется добавить URL-адрес шлюза и https://login.microsoftonline.com и https://login.live.com.
+1. Поиск **свойств Интернета** в меню "Пуск" Windows
+2. Перейдите на вкладку **Безопасность** .
+3. В разделе **Trusted Sites (надежные сайты** ) нажмите кнопку **Sites (сайты** ) и добавьте URL-адреса в открывшемся диалоговом окне. Вам потребуется добавить URL-адрес шлюза, а также https://login.microsoftonline.com и https://login.live.com.
+4. Перейдите на вкладку " **Конфиденциальность** "
+5. В разделе **блокирование всплывающих окон** нажмите кнопку **Параметры** и добавьте URL-адреса в открывшемся диалоговом окне. Вам потребуется добавить URL-адрес шлюза, а также https://login.microsoftonline.com и https://login.live.com.
 
-## <a name="having-an-issue-with-an-azure-related-feature"></a>Возникла проблема с функции связанных с Azure?
+## <a name="having-an-issue-with-an-azure-related-feature"></a>Возникли проблемы с функцией, связанной с Azure?
 
-Отправьте нам электронное письмо по адресу wacFeedbackAzure@microsoft.com со следующими сведениями:
-* Общие проблемы, возвращенными [приведенные ниже вопросы](#providing-feedback-on-issues).
-* Опишите свою проблему и шаги, предпринятые для воспроизведения проблемы. 
-* Ранее регистрации шлюза в Azure с помощью New-AadApp.ps1 загружаемый скрипт и затем обновить до версии 1807? Или вы зарегистрировали шлюза в Azure с помощью пользовательского интерфейса из шлюза параметры > Azure?
-* Такое учетную запись Azure, связанные с несколькими каталогами и клиентами?
-    * Если это так: При регистрации приложения Azure AD для Windows Admin Center, был каталог, используемый каталогом по умолчанию в Azure? 
-* У учетной записи Azure доступ к нескольким подпискам?
-* У подписку, которую вы использовали присоединенного выставления счетов?
-* Были вы вошли в несколько учетных записей Azure перед возникновением проблемы?
-* Требуется ли многофакторная проверка подлинности учетной записи Azure?
-* — Это компьютер, который вы пытаетесь управлять виртуальной Машины Azure?
-* Windows Admin Center устанавливается на виртуальной Машине Azure?
+Отправьте нам сообщение электронной почты по адресу wacFeedbackAzure@microsoft.com со следующими сведениями:
+* Общие сведения о проблемах из [перечисленных ниже вопросов](#providing-feedback-on-issues).
+* Опишите вопрос и действия, которые были выполнены для воспроизведения проблемы. 
+* Вы ранее зарегистрировали шлюз в Azure с помощью загружаемого сценария Нев-аадапп. ps1, а затем выполнили обновление до версии 1807? Или вы зарегистрировали шлюз в Azure с помощью пользовательского интерфейса из параметров шлюза > Azure?
+* Связана ли ваша учетная запись Azure с несколькими каталогами или клиентами?
+    * Если да, сделайте следующее. При регистрации приложения Azure AD в центре администрирования Windows использовался ли каталог, используемый по умолчанию в Azure? 
+* Имеет ли ваша учетная запись Azure доступ к нескольким подпискам?
+* Присоединена ли к подписке выставление счетов?
+* Вошли ли вы в несколько учетных записей Azure, когда столкнулись с проблемой?
+* Нужна ли учетная запись Azure для многофакторной проверки подлинности?
+* Вы пытаетесь управлять виртуальной машиной Azure?
+* Установлен ли центр администрирования Windows на виртуальной машине Azure?
 
-## <a name="providing-feedback-on-issues"></a>Отправка отзывов о проблемах
+## <a name="providing-feedback-on-issues"></a>Предоставление отзыва о проблемах
 
 Перейдите в средство "Просмотр событий" > "Приложения и службы" > Microsoft-ServerManagementExperience и проверьте наличие каких-либо ошибок и предупреждений.
 
@@ -230,7 +230,7 @@ Edge имеет [известные проблемы](https://github.com/AzureAD
 Укажите все ошибки и предупреждения, которые удастся найти в журнале событий, а также следующие сведения: 
 
 * Платформа, на которой **установлен** Windows Admin Center (Windows 10 или Windows Server):
-    * Если установлен на сервере, что такое Windows [версии](#check-the-windows-version) из **компьютер под управлением обозревателя** для доступа к Windows Admin Center: 
+    * Если на сервере установлен, что такое [версия](#check-the-windows-version) Windows на компьютере, на **котором работает браузер** , для доступа к центру администрирования Windows: 
     * Вы используете самозаверяющий сертификат, созданный установщиком?
     * Если вы используете свой собственный сертификат, соответствует ли имя субъекта компьютеру?
     * Если вы используете свой собственный сертификат, указано ли в нем альтернативное имя субъекта?

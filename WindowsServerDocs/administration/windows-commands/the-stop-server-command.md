@@ -1,8 +1,8 @@
 ---
-title: Команды остановки сервера
-description: 'Раздел Windows команды для ***- '
+title: Команда "прерывать сервер"
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: adcb668ebfef009eecb98d746fb6c7b87cafa19b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 58e418af275dae7964f45d7ff6af1a6914a67920
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827645"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363954"
 ---
-# <a name="the-stop-server-command"></a>Команды остановки сервера
+# <a name="the-stop-server-command"></a>Команда "прерывать сервер"
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Останавливает службы для служб развертывания Windows.
 ## <a name="subcommands"></a>Подкоманды
 |Подкоманда|Описание|
 |-------|--------|
-|[Подкоманда: stop-Server](subcommand-stop-server.md)|Останавливает все службы на сервере служб развертывания Windows (сервер развертывания).|
-|[Подкоманда: stop-TransportServer](subcommand-stop-transportserver.md)|Останавливает все службы на транспортном сервере.|
+|[Подкоманда:-сервер](subcommand-stop-server.md)|Останавливает все службы на сервере служб развертывания Windows (сервер развертывания).|
+|[Подкоманда: Транспортсервер](subcommand-stop-transportserver.md)|Останавливает все службы на транспортном сервере.|

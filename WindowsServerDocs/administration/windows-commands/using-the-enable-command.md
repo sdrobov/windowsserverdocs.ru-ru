@@ -1,8 +1,8 @@
 ---
-title: С помощью команды Enable
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Enable
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1634ce163a232726bee06bbba63b713fe7920c0d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: cd886fa6f84e4d52ef90e998871d84ded8fdaf53
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59848645"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392244"
 ---
-# <a name="using-the-enable-command"></a>С помощью команды Enable
+# <a name="using-the-enable-command"></a>Использование команды Enable
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Включает все службы для служб развертывания Windows.
 ## <a name="subcommands"></a>Подкоманды
-|Subommand|Описание|
+|субомманд|Описание|
 |-------|--------|
-|[С помощью команды enable сервера](using-the-enable-server-command.md)|Включает все службы на указанном сервере служб развертывания Windows (сервер развертывания).|
-|[С помощью команды enable-TransportServer](using-the-enable-transportserver-command.md)|Включает все службы на указанном сервере транспорта.|
+|[Использование команды Enable-Server](using-the-enable-server-command.md)|Включает все службы на указанном сервере служб развертывания Windows (сервер развертывания).|
+|[Использование команды Enable-Транспортсервер](using-the-enable-transportserver-command.md)|Включает все службы на указанном транспортном сервере.|

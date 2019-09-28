@@ -1,43 +1,43 @@
 ---
 title: Использование пользовательского подключаемого модуля шлюза в расширении средства
-description: Разработка модуля средства пакета SDK Windows Admin Center (Гонолулу проекта) - использовать настраиваемый шлюз подключаемый модуль средства расширения
+description: Разработка расширения инструмента Windows Admin Center SDK (Project Хонолулу). Использование подключаемого модуля пользовательского шлюза в расширении средства
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 348ebf5b99de7f582a3edf57b0a190f87f1c4a5b
-ms.sourcegitcommit: 48bb3e5c179dc520fa879b16c9afe09e07c87629
+ms.prod: windows-server
+ms.openlocfilehash: 829cbf6df8cc2738bf4066b36210b860595774ed
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66452600"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385227"
 ---
 # <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>Использование пользовательского подключаемого модуля шлюза в расширении средства
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
-В этой статье мы будем использовать подключаемый модуль пользовательского шлюза в расширении инструментов новый, пустой, созданной с помощью интерфейса командной строки Windows Admin Center.
+В этой статье мы будем использовать пользовательский подключаемый модуль шлюза в новом, пустом расширении инструмента, созданном с помощью интерфейса командной строки центра администрирования Windows.
 
 ## <a name="prepare-your-environment"></a>Подготовка среды ##
 
-Если это еще не сделано, следуйте указаниям, приведенным в [разрабатывать расширения средство](../develop-tool.md) для подготовки среды и создайте новый, пустой средства расширения.
+Если вы еще этого не сделали, следуйте указаниям в [подсказке по разработке расширения](../develop-tool.md) для подготовки среды и созданию нового пустого расширения инструмента.
 
-## <a name="add-a-module-to-your-project"></a>Добавить модуль в проект ##
+## <a name="add-a-module-to-your-project"></a>Добавление модуля в проект ##
 
-Если это еще не сделано, добавьте новый [пустого модуля](add-module.md) в проект, который будет использоваться на следующем шаге.  
+Если вы еще этого не сделали, добавьте новый [пустой модуль](add-module.md) в проект, который мы будем использовать на следующем шаге.  
 
-## <a name="add-integration-to-custom-gateway-plugin"></a>Добавить настраиваемый шлюз подключаемого модуля интеграции ##
+## <a name="add-integration-to-custom-gateway-plugin"></a>Добавление интеграции в пользовательский подключаемый модуль шлюза ##
 
-Теперь мы будем использовать подключаемый модуль пользовательского шлюза в новый, пустой модуль, который мы только что создали.
+Теперь мы будем использовать пользовательский подключаемый модуль шлюза в новом пустом модуле, который мы только что создали.
 
-### <a name="create-pluginservicets"></a>Создание plugin.service.ts
+### <a name="create-pluginservicets"></a>Создание подключаемого модуля. Service. TS
 
-Перейдите в каталог нового модуля инструмент, созданный ранее (```\src\app\{!Module-Name}```) и создайте новый файл ```plugin.service.ts```.
+Перейдите в каталог нового созданного модуля инструментов (```\src\app\{!Module-Name}```) и создайте новый файл ```plugin.service.ts```.
 
-Добавьте следующий код в файл, который только что создали:
+Добавьте следующий код в только что созданный файл:
 ``` ts
 import { Injectable } from '@angular/core';
 import { AppContextService, HttpService } from '@microsoft/windows-admin-center-sdk/angular';
@@ -61,16 +61,16 @@ export class PluginService {
 }
 ```
 
-Изменить ссылки на ```Sample Uno``` и ```Sample%20Uno``` к имени функции соответствующим образом.
+Измените ссылки на ```Sample Uno``` и ```Sample%20Uno``` на имя функции, как нужно.
 
 [!WARNING]
-> Это рекомендуется, встроенные в ```this.appContextService.node``` используется вызов любого API, который определен в настраиваемый шлюз подключаемого модуля. Это гарантирует, что если необходимы учетные данные внутри подключаемого модуля шлюза, они будут обработаны правильно.
+> Рекомендуется использовать встроенный ```this.appContextService.node``` для вызова любого API, который определен в подключаемом модуле пользовательского шлюза. Это гарантирует, что если в подключаемом модуле шлюза требуются учетные данные, которые будут обрабатываться должным образом.
 
-### <a name="modify-modulets"></a>Изменить module.ts
+### <a name="modify-modulets"></a>Изменение модуля. TS
 
-Откройте ```module.ts``` файл нового модуля, созданного ранее (т. е. ```{!Module-Name}.module.ts```):
+Откройте файл ```module.ts``` созданного ранее модуля (т. е. ```{!Module-Name}.module.ts```):
 
-Добавьте следующие операторы import:
+Добавьте следующие операторы импорта:
 
 ``` ts
 import { HttpService } from '@microsoft/windows-admin-center-sdk/angular';
@@ -78,7 +78,7 @@ import { Http } from '@microsoft/windows-admin-center-sdk/core';
 import { PluginService } from './plugin.service';
 ```
 
-Добавьте следующие поставщики (после объявления):
+Добавьте следующие поставщики (после объявлений):
 
 ``` ts
   ,
@@ -89,11 +89,11 @@ import { PluginService } from './plugin.service';
   ]
 ```
 
-### <a name="modify-componentts"></a>Изменить component.ts
+### <a name="modify-componentts"></a>Изменение компонента Component. TS
 
-Откройте ```component.ts``` файл нового модуля, созданного ранее (т. е. ```{!Module-Name}.component.ts```):
+Откройте файл ```component.ts``` созданного ранее модуля (т. е. ```{!Module-Name}.component.ts```):
 
-Добавьте следующие операторы import:
+Добавьте следующие операторы импорта:
 
 ``` ts
 import { ActivatedRouteSnapshot } from '@angular/router';
@@ -110,7 +110,7 @@ import { PluginService } from './plugin.service';
   private responseResult: string;
 ```
 
-Измените параметры конструктора и измените или добавьте следующие функции:
+Измените конструктор и измените или добавьте следующие функции:
 
 ``` ts
   constructor(private appContextService: AppContextService, private plugin: PluginService) {
@@ -133,16 +133,16 @@ import { PluginService } from './plugin.service';
   }
 ```
 
-### <a name="modify-componenthtml"></a>Изменить component.html ###
+### <a name="modify-componenthtml"></a>Изменение Component. HTML ###
 
-Откройте ```component.html``` файл нового модуля, созданного ранее (т. е. ```{!Module-Name}.component.html```):
+Откройте файл ```component.html``` созданного ранее модуля (т. е. ```{!Module-Name}.component.html```):
 
-Добавьте следующее содержимое HTML-файле:
+Добавьте следующее содержимое в HTML-файл:
 ``` html
 <button (click)="onClick()" >go</button>
 {{ responseResult }}
 ```
 
-## <a name="build-and-side-load-your-extension"></a>Сборки и на стороне загрузить расширение
+## <a name="build-and-side-load-your-extension"></a>Сборка и загрузка на стороне вашего расширения
 
-Теперь вы готовы к [построения и стороны нагрузки](../develop-tool.md#build-and-side-load-your-extension) расширения в Windows Admin Center.
+Теперь все готово для [сборки и загрузки на стороне](../develop-tool.md#build-and-side-load-your-extension) вашего расширения в центре администрирования Windows.

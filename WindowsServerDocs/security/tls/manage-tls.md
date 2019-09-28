@@ -2,7 +2,7 @@
 title: Управление безопасностью транспортного уровня (TLS)
 description: Безопасность Windows Server
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-tls-ssl
@@ -12,12 +12,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic-msft
 ms.date: 05/16/2018
-ms.openlocfilehash: f691775d5ab24de8b23df048c13ec3d7c572833f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a4ac1ea5b0648dbb80f103c146ad3df23fc04ab7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870294"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402346"
 ---
 # <a name="manage-transport-layer-security-tls"></a>Управление безопасностью транспортного уровня (TLS)
 
@@ -124,7 +124,7 @@ Windows не может использовать именованную крив
 1.  В Windows 10 и Windows Server 2016 используйте программу **certutil. exe** , чтобы добавить в Windows новую зарегистрированную именованную кривую.
 2.  На этом же компьютере откройте консоль управления групповыми политиками (GPMC), создайте новый объект групповая политика и измените его.
 3.  Выберите **Конфигурация компьютера | Предпочтения | Параметры Windows | Реестр**.  Щелкните правой кнопкой мыши **Реестр**. Наведите указатель мыши на пункт **создать** и выберите **элемент сбора**. Переименуйте элемент сбора в соответствии с именем кривой. Вы создадите один элемент сбора реестра для каждого раздела реестра в разделе *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters*.
-4.  Настройте вновь созданную коллекцию реестра предпочтений групповая политика, добавив новый **элемент реестра** для каждого значения реестра, указанного в разделе *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters\[курвенаме ]* .
+4.  Настройте вновь созданную коллекцию реестра предпочтений групповая политика, добавив новый **элемент реестра** для каждого значения реестра, указанного в разделе *HKEY_LOCAL_MACHINE\CurrentControlSet\Control\Cryptography\ECCParameters @ no__t-2curveName]* . .
 5.  Разверните объект групповая политика, содержащий элемент сбора групповая политика реестра, на компьютерах с Windows 10 и Windows Server 2016, которые должны получить новые именованные кривые.
 
     ![GPP распределить кривые](../media/Transport-Layer-Security-protocol/gpp-distribute-curves.png)

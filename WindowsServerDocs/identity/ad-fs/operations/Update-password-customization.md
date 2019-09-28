@@ -1,22 +1,22 @@
 ---
 ms.assetid: 7e804590-6d6c-4cca-ac14-02d4dff06cec
-title: Обновить настройки пароль
+title: Изменение настройки пароля
 description: ''
 author: billmath
 ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e67c04c98a53f4f1db36e6586fa77bcf181a8d5a
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: e007d4449cb62e7888c30f5b5929e393d7b571ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66188974"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407452"
 ---
-# <a name="update-password-customization"></a>Обновить настройки пароль 
+# <a name="update-password-customization"></a>Изменение настройки пароля 
 
 
 Возможны ситуации, когда пользователи не смогут подключиться к корпоративной сети, чтобы изменить пароль к своей учетной записи. Это может создавать проблемы, особенно для удаленных сотрудников, которые зачастую живут далеко от ближайшего офиса компании. Для подобных особых случаев страница обновления паролей может использоваться только при наличии подключения к Интернету.  
@@ -28,10 +28,10 @@ ms.locfileid: "66188974"
 ![обновление](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
 ## <a name="customize-the-update-password-page-description"></a>Настройка описания страницы обновления пароля  
-Чтобы настроить описание страницы обновления пароля, используйте следующий командлет Windows PowerShell и синтаксисом.  
+Чтобы настроить описание страницы обновления пароля, используйте следующий командлет и синтаксис Windows PowerShell.  
   
 
     Set-AdfsGlobalWebContent -UpdatePasswordPageDescriptionText "This is the Contoso Update Password page."  
 
 ## <a name="additional-references"></a>Дополнительная справка 
-[Настройка входа AD FS пользователя](AD-FS-user-sign-in-customization.md)  
+[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)  

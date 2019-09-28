@@ -1,8 +1,8 @@
 ---
-title: bitsadmin setmaxdownloadtime
-description: Раздел Windows команды для **bitsadmin setmaxdownloadtime** -задает время ожидания загрузки в секундах.
+title: битсадмин сетмаксдовнлоадтиме
+description: Раздел команд Windows для **битсадмин сетмаксдовнлоадтиме** — задает время ожидания загрузки в секундах.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f13b44429bec2718af1a648f273fead18d4e9e08
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 985453de5bd2f4a06b5635ae5b0a9794d30175b0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59830995"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380558"
 ---
-# <a name="bitsadmin-setmaxdownloadtime"></a>bitsadmin setmaxdownloadtime
+# <a name="bitsadmin-setmaxdownloadtime"></a>битсадмин сетмаксдовнлоадтиме
 
 
 
@@ -36,20 +36,20 @@ bitsadmin /SetMaxDownloadTime <Job> <Timeout>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 |Время ожидания|Время ожидания в секундах|
 
 ## <a name="remarks"></a>Примечания
 
 -   Н/Д
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере устанавливается время ожидания для задания с именем *myDownloadJob* 10 секунд.
+В следующем примере задается время ожидания для задания с именем *мидовнлоаджоб* равным 10 секундам.
 ```
 C:\>bitsadmin /SetMaxDownloadTime myDownloadJob 10
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

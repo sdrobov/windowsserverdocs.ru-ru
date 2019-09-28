@@ -1,8 +1,8 @@
 ---
 title: autoconv
-description: Раздел Windows команды для **autoconv** — преобразует файл таблицы размещения (Fat), и тома Fat32 в NTFS файловая система.
+description: 'Раздел команд Windows для **аутоконв** : Преобразование томов FAT и FAT32 в файловую систему NTFS.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,22 +13,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1d135da085558f12a51c8febfd72aa805e1d12f1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bf36be6bcf3dd8f6c61c6ab0d8780ed77dd8903a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59872495"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383450"
 ---
 # <a name="autoconv"></a>autoconv
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Преобразует файл таблицы размещения (Fat) и тома Fat32 в файловой системе NTFS, изменения существующих файлов и каталогов содержимого во время запуска после **autochk** выполняется. тома, преобразованные в файловую систему NTFS не удается преобразовать обратно в Fat или Fat32.
+Преобразует тома с файловой системой FAT и FAT32 в файловую систему NTFS, при этом существующие файлы и каталоги остаются без изменений при запуске после запуска **Autochk** . тома, преобразованные в файловую систему NTFS, не могут быть преобразованы обратно в FAT или FAT32.
 ## <a name="remarks"></a>Примечания
-Не удается запустить **autoconv** в командной строке. Это будет выполняться только во время запуска, если задать с помощью **convert.exe**.
+Невозможно запустить **аутоконв** в командной строке. Это будет выполняться при запуске, если задано с помощью **Convert. exe**.
 ## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[autochk](autochk.md)
-[преобразовать](convert.md)
-[работа с файловыми системами](https://go.microsoft.com/fwlink/?LinkId=4509)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[Autochk](autochk.md)
+[Convert](convert.md)
+[Работа с файловыми системами](https://go.microsoft.com/fwlink/?LinkId=4509)

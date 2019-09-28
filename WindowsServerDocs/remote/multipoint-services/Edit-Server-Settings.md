@@ -2,7 +2,7 @@
 title: Изменение параметров сервера
 description: Сведения о параметрах служб MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.assetid: afb64b94-9055-4703-b8ce-a8839b2718da
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 8a6a9d8e6a76a8fb3c0da59c8fb487d0311f04d7
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5973bf6a23d0ce3f91620eaa3537f751ec19303c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871711"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389690"
 ---
 # <a name="edit-server-settings"></a>Изменение параметров сервера
 При установке MultiPoint Services вы настроили параметры своей системы, включая согласие на использование определенных программ. В этой статье описываются параметры, которые можно задать для системы MultiPoint Services, и рассказывается, как их изменить.  

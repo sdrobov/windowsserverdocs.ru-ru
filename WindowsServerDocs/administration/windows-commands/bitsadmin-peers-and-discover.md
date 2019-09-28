@@ -1,8 +1,8 @@
 ---
-title: bitsadmin одноранговым узлам и обнаружение
-description: Раздел Windows команды для **bitsadmin одноранговым узлам и обнаруживать** -снова обнаруживает одноранговых узлов.
+title: битсадминные узлы и обнаружение
+description: Раздел команд Windows для **одноранговых узлов битсадмин и обнаружение** — обнаружение одноранговых узлов еще раз.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c6fe6ea93e2bf8c103340feb1c9247130411c4d3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bad7458d9cace050a9d07fc5978dc9d048094b4b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380970"
 ---
-# <a name="bitsadmin-peers-and-discover"></a>bitsadmin одноранговым узлам и обнаружение
+# <a name="bitsadmin-peers-and-discover"></a>битсадминные узлы и обнаружение
 
 
 
-Выполняет обнаружение одноранговых узлов.
+Обнаружение одноранговых узлов еще раз.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ ms.locfileid: "59832655"
 bitsadmin /Peers /Discover 
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример выполняет обнаружение одноранговых узлов.
+В следующем примере обнаруживаются одноранговые узлы.
 ```
 C:\>bitsadmin /Peers /Discover
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

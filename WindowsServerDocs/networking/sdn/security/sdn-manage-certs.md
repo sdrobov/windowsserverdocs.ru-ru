@@ -2,19 +2,19 @@
 title: Управление сертификатами для программно определяемых сетей
 description: С помощью этого раздела вы узнаете, как управлять сертификатами для сетевого контроллера обмена и Подсистемамми при развертывании программно-определяемой сети (SDN) в Windows Server 2016 Datacenter.
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
 ms.author: pashort
 author: shortpatti
 ms.date: 08/22/2018
-ms.openlocfilehash: 8e2feba8232ae87d59478d3522c4e6f02baf27b8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b1cff080630c68ee8c4b7f0904f8fd0978330edc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870102"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405985"
 ---
 # <a name="manage-certificates-for-software-defined-networking"></a>Управление сертификатами для программно определяемых сетей
 

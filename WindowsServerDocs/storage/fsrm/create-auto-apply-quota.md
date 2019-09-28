@@ -2,22 +2,22 @@
 title: Создание автоматически применяемой квоты
 description: В этой статье описывается процесс создания автоматически применяемой квоты на основе шаблона квоты
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: e2837df448434252470d783a6c06f0690ba09021
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 68967ff920f25c05affc206ed45bad9275e781b6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394237"
 ---
 # <a name="create-an-auto-apply-quota"></a>Создание автоматически применяемой квоты
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 С помощью автоматически применяемых квот можно назначать шаблон квоты родительскому тому или папке. Затем диспетчер ресурсов файлового сервера автоматически создает квоты на основе этого шаблона. Квоты создаются для каждой из существующих вложенных папок, а также для вложенных папок, которые будут созданы в будущем.
 
@@ -43,4 +43,4 @@ ms.locfileid: "59847925"
 ## <a name="see-also"></a>См. также
 
 -   [Управление квотами](quota-management.md)
--   [Изменение автоматически назначаемой квоты](edit-auto-apply-quota-properties.md)
+-   [Редактирование свойств автоматически применяемой квоты](edit-auto-apply-quota-properties.md)

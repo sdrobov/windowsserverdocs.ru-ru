@@ -2,22 +2,22 @@
 title: Настройка пределов уведомлений
 description: В этой статье описывается процесс добавления ограничений по времени в различные типы уведомлений
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: dba5b3b3c8b651935ec3c69695583d04087b7f2d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4a33b7f125479da1e7b701f5427a0f15903caf66
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826315"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71401949"
 ---
 # <a name="configure-notification-limits"></a>Настройка пределов уведомлений
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Чтобы уменьшить количество уведомлений, которые накапливаются при постоянном превышении порога квоты или при попытке сохранить запрещенный файл, диспетчер ресурсов файлового сервера применяет ограничения по времени к следующим типам уведомлений.
 
@@ -43,5 +43,5 @@ ms.locfileid: "59826315"
 
 ## <a name="see-also"></a>См. также
 
--   [Параметры диспетчера ресурсов файлового сервера в параметр](setting-file-server-resource-manager-options.md)
+-   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 -   [Программы командной строки](command-line-tools.md)

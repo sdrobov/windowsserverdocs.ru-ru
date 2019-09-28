@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 1a3f3e711d8e8443eb80109245eef42c668353d9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 61c129ab8472d7e85602fa0a0244c4a925050d93
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869287"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407301"
 ---
 # <a name="when-to-use-a-custom-claim-rule"></a>Когда следует использовать настраиваемое правило для утверждений
 Вы пишете настраиваемое правило утверждения в \(службы федерации Active Directory (AD FS)\) AD FS с помощью языка правил утверждений, который является платформой, используемой подсистемой выдачи утверждений для программного создания, преобразования, передачи и фильтрации. претензи. Используя настраиваемое правило, вы можете создавать правила с более сложной логикой, чем с помощью стандартного шаблона правил. Рассмотрите возможность использования настраиваемого правила, когда требуется выполнять следующее.  

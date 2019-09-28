@@ -2,7 +2,7 @@
 title: Выход из сеанса пользователя или его отключение
 description: Узнайте, как вручную выйти из системы пользователя
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 0e516a617341ffebadbdeb571a39f50369446f11
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: c636af35a78eab76d69c68b6f506b64dcb555f81
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871655"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395266"
 ---
 # <a name="log-off-or-disconnect-user-sessions"></a>Выход из сеанса пользователя или его отключение
 Пользователи служб MultiPoint могут выполнять вход и выход из сеансов рабочего стола, как и в случае с любыми сеансами Windows. Пользователи также могут отключить или приостановить сеанс, чтобы станция служб MultiPoint не использовалась, но сеансы остаются активными в памяти компьютера системы служб MultiPoint.  

@@ -1,8 +1,8 @@
 ---
-title: С помощью команды add-DriverPackage
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Add-Дриверпаккаже
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 893bcd3b28aaa5d501017fe65b7b5205e9452693
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: f5370d301f5fec15f4812b3d65588297d179455d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440689"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363752"
 ---
-# <a name="using-the-add-driverpackage-command"></a>С помощью команды add-DriverPackage
+# <a name="using-the-add-driverpackage-command"></a>Использование команды Add-Дриверпаккаже
 
 
 
@@ -36,15 +36,15 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 
 |          Параметр           |                                                              Описание                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|   INF-файл:\<путь к INF-файла >   |                                           Указывает полный путь к INF-файл для добавления.                                            |
-|    / Server:\<имя сервера >    | Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер. |
-|      / Архитектура: {x86      |                                                                 IA64                                                                  |
-| [/ DriverGroup:\<имя группы >] |                             Указывает имя группы драйверов, в которую должен быть добавлен пакет.                              |
-|   [/ Name:\<понятное имя >]   |                                           Указывает понятное имя для пакета драйверов.                                            |
+|   Инффиле: \<Inf путь к файлу >   |                                           Указывает полный путь к добавляемому INF-файлу.                                            |
+|    /Server: \<Server имя >    | Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер. |
+|      /Арчитектуре: {x86      |                                                                 ia64                                                                  |
+| [/Дриверграуп: @no__t — 0Group имя >] |                             Указывает имя группы драйверов, в которую должен быть добавлен пакет.                              |
+|   [/Name: \<Friendly имя >]   |                                           Указывает понятное имя для пакета драйверов.                                            |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы добавить пакет драйвера, введите одно из следующих:
+Чтобы добавить пакет драйвера, введите один из следующих элементов:
 ```
 WDSUTIL /verbose /Add-DriverPackage /InfFile:"C:\Temp\Display.inf"
 ```

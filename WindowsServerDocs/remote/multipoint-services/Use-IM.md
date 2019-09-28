@@ -1,8 +1,8 @@
 ---
 title: Использование обмена мгновенными сообщениями
-description: Узнайте, как использовать обмен мгновенными сообщениями в службах MultiPoint
+description: Узнайте, как использовать мгновенные сообщения в службах MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,19 +13,19 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 9c87024206f08c18915805a492de052caa8adcba
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 202c5c1c336bb1692f819e5dfb9dba41914c288e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832835"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394857"
 ---
 # <a name="use-im"></a>Использование обмена мгновенными сообщениями
 Если эта возможность включена в параметрах сервера, пользователи станции и панели мониторинга MultiPoint могут обмениваться конфиденциальными сообщениями с помощью системы обмена мгновенными сообщениями.
   
 #### <a name="to-send-a-chat-message-from-the-multipoint-dashboard-to-a-user"></a>Отправка мгновенного сообщения из панели мониторинга MultiPoint пользователю  
   
-1.  На панели мониторинга MultiPoint выберите эскиз или образы пользователей, которым вы хотите отправить сообщение.  
+1.  В панели мониторинга MultiPoint щелкните эскиз изображения или изображения пользователя, ИПУ отправить сообщение.  
   
 2.  Щелкните **Отправить** на ленте. Откроется окно обмена мгновенными сообщениями.  
 

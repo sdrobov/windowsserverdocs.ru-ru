@@ -1,8 +1,8 @@
 ---
-title: Представление Scwcmd
-description: 'Раздел Windows команды для ***- '
+title: Команду scwcmd, представление
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2ef1dd72903108edd6c5fb450c536a9325fcf546
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a69db16696f42950af97b62ba6f28c4083954137
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889555"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371189"
 ---
 # <a name="scwcmd-view"></a>Scwcmd: view
 
 > Область применения. Windows Server 2012 R2, Windows Server 2012
 
-Отображает XML-файл с помощью указанного .xsl преобразования. Эта команда может быть полезен для отображения мастера настройки безопасности (SCW) XML-файлов с помощью различных представлений.
+Визуализирует XML-файл с помощью указанного преобразования XSL. Эта команда может быть полезной для отображения файлов мастера настройки безопасности (SCW). XML с использованием различных представлений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,21 +36,21 @@ scwcmd view /x:<Xmlfile.xml> [/s:<Xslfile.xsl>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/x:\<Xmlfile.xml>|Задает XML-файл для просмотра. Этот параметр должен быть указан.|
-|/s:\<Xslfile.xsl>|Указывает .xsl преобразование для применения к XML-файла, в ходе процесса подготовки к просмотру. Этот параметр является необязательным для XML-файлов SCW. Когда **представление** команда используется для подготовки к просмотру в SCW XML-файл, он попытается автоматически загрузить правильный по умолчанию преобразование для указанного XML-файла. Если указано .xsl преобразование, преобразование должно быть написано таким образом, предполагается, что XML-файл находится в том же каталоге, что преобразование .xsl.|
+|/x: @no__t -0Xmlfile. XML >|Указывает XML-файл для просмотра. Этот параметр должен быть указан.|
+|/s: @no__t -0Xslfile. xsl >|Указывает преобразование XSL, применяемое к XML-файлу как часть процесса отрисовки. Этот параметр является необязательным для файлов SCW. XML. Если команда **View** используется для отображения файла SCW. XML, она автоматически попытается загрузить правильное преобразование по умолчанию для указанного XML-файла. Если задано преобразование XSL, преобразование должно быть написано с учетом предположения, что XML-файл находится в том же каталоге, что и преобразование XSL.|
 |/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
-Scwcmd.exe доступна только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
+Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Чтобы просмотреть Policyfile.xml путем использования преобразования Policyview.xsl, введите следующую команду:
+Чтобы просмотреть Полицифиле. XML с помощью преобразования Полицивиев. xsl, введите:
 ```
 scwcmd view /x:C:\policies\Policyfile.xml /s:C:\viewers\Policyview.xsl
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

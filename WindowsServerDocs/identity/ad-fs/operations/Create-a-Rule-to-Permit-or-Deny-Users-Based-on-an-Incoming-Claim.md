@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d057c943b9c14b74b44472d446625b60f5ad9d22
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 061d7b64ae0be0ebc1408d74f18f8c59926714ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865958"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407611"
 ---
 # <a name="create-a-rule-to-permit-or-deny-users-based-on-an-incoming-claim"></a>Создание правила для разрешения или запрета пользователям на основании входящего утверждения 
 
@@ -113,7 +113,7 @@ ms.locfileid: "70865958"
   
 8.  В диалоговом окне **изменение правил утверждений** нажмите кнопку **ОК** , чтобы сохранить правило.  
 
-## <a name="additional-references"></a>Дополнительные ссылки 
+## <a name="additional-references"></a>Дополнительная справка 
 [Настройка правил для утверждения](Configure-Claim-Rules.md)  
  
 [Контрольный список. Создание правил утверждений для отношений доверия с проверяющей стороной](https://technet.microsoft.com/library/ee913578.aspx)  

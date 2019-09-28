@@ -1,8 +1,8 @@
 ---
-title: С помощью новой команды
-description: 'Раздел Windows команды для ***- '
+title: Использование команды "создать"
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,22 +13,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d61d1fe652f3b41e5a02f9ec8a0d204d4dc8324
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e8ca818468050cf21a55a4c9963ea2411ab018c7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873945"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392074"
 ---
-# <a name="using-the-new-command"></a>С помощью новой команды
+# <a name="using-the-new-command"></a>Использование команды "создать"
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Создает записи и обнаружение образов, многоадресных передач и пространств имен.
+создает записи и обнаружения образов, многоадресных передач и пространств имен.
 ## <a name="subcommands"></a>Подкоманды
 |Подкоманда|Описание|
 |-------|--------|
-|[С помощью команды новый CaptureImage](using-the-new-captureimage-command.md)|Создает новый образ записи из существующего образа загрузки.|
-|[С помощью команды новый DiscoverImage](using-the-new-discoverimage-command.md)|Создает новый образ обнаружения из существующего образа загрузки.|
-|[С помощью команды новый MulticastTransmission](using-the-new-multicasttransmission-command.md)|Создает новый многоадресной передачи.|
-|[С помощью команды новое пространство имен](using-the-new-namespace-command.md)|Создает новое пространство имен.|
+|[Использование команды New-Каптуреимаже](using-the-new-captureimage-command.md)|Создает новый образ записи из существующего образа загрузки.|
+|[Использование команды New-Дисковеримаже](using-the-new-discoverimage-command.md)|Создает новый образ обнаружения из существующего образа загрузки.|
+|[Использование команды New-Мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)|создает новую многоадресную передачу.|
+|[Использование команды New-Namespace](using-the-new-namespace-command.md)|Создает новое пространство имен.|

@@ -2,22 +2,22 @@
 title: Изменение периода кэширования ссылок клиентами
 description: В этой статье рассматривается, как изменить период времени, в течение которого клиенты кэшируют ссылки.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 08a1212c983de6e2492609330c1be222286e9e8f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c6fcf64dc15404ca59e3ce5552b258f782441cfb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59888775"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402276"
 ---
 # <a name="change-the-amount-of-time-that-clients-cache-referrals"></a>Изменение периода кэширования ссылок клиентами
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Ссылка — это упорядоченный список конечных объектов, которые клиентский компьютер получает от контроллера домена или сервера пространства имен, когда пользователь обращается к корню пространства имен или папке с конечными объектами в пространстве имен. Можно указать, в течение какого времени клиенты будут кэшировать ссылку, прежде чем запрашивать новую.
 
@@ -43,6 +43,6 @@ ms.locfileid: "59888775"
 ## <a name="see-also"></a>См. также
 
 -   [Настройка пространств имен DFS](tuning-dfs-namespaces.md)
--   [Делегирование разрешений на управление для пространства имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
+-   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 
 

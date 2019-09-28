@@ -2,17 +2,17 @@
 title: ПРОТОКОЛА Порты общего доступа к файлам и принтерам должны быть открыты
 TOCTitle: 'SMB: File and printer sharing ports should be open'
 ms.date: 07/02/2012
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: a22801be6ec73b6819a190c793d28feae4edcf69
-ms.sourcegitcommit: 23a6e83b688119c9357262b6815c9402c2965472
+ms.openlocfilehash: 22cd926fdb873538631a6f6850157dceb5a020d7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69560436"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385834"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>ПРОТОКОЛА Порты общего доступа к файлам и принтерам должны быть открыты
 
@@ -21,7 +21,7 @@ ms.locfileid: "69560436"
 
 Область применения. Windows Server 2019, Windows Server 2016, Windows Server 2012 R2 и Windows Server 2012, Windows Server 2008 R2
 
-*Этот раздел предназначен для устранения определенной проблемы, обнаруженной анализатор соответствия рекомендациям сканированием. Сведения, приведенные в этом разделе, следует применять только к компьютерам, на которых были запущены файловые службы анализатор соответствия рекомендациям и которые столкнулись с проблемой, описанной в этом разделе. Дополнительные сведения о рекомендациях и проверках см.* в разделе [анализатор соответствия рекомендациям](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a).
+раздел *This предназначен для устранения определенной проблемы, обнаруженной при проверке анализатор соответствия рекомендациям. Сведения, приведенные в этом разделе, следует применять только к компьютерам, на которых были запущены файловые службы анализатор соответствия рекомендациям и которые столкнулись с проблемой, описанной в этом разделе. Дополнительные сведения о рекомендациях и проверках см. в разделе @ no__t-0 [анализатор соответствия рекомендациям](http://go.microsoft.com/fwlink/?linkid=122786%0d%0a).
 
 
 <table>
@@ -73,7 +73,7 @@ ms.locfileid: "69560436"
 
 4.  Для каждого правила щелкните правой кнопкой мыши правило и выберите пункт **включить правило**.
 
-## <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительная справка
 
 [Общее представление об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

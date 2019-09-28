@@ -1,19 +1,19 @@
 ---
 title: Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей
 description: Обзор технологий перенаправления папок, автономные файлы и перемещаемых профилей пользователей.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: d6c980cd9e7d96261ffe467f4d9da627e3c50102
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: ae1b23244f141cd0806ee14d3c40117ba72aeebb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867235"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402052"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей
 
@@ -129,7 +129,7 @@ ms.locfileid: "70867235"
 
 Дополнительные сведения по данной теме см. на следующих ресурсах.
 
-| Тип содержимого | Ссылки |
+| Тип содержимого | Ссылок |
 | --- | --- |
 | Оценка продукта | [Поддержка информационных работников с надежными файловыми службами и хранилищем](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[Новые возможности автономные файлы](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows 7 и Windows Server 2008 R2)<br>[Новые возможности автономные файлы для Windows Vista](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Изменения в автономные файлы в Windows Vista](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (Журнал TechNet Magazine) |
 | Развертывание | [Развертывание перенаправления папок, автономные файлы и перемещаемых профилей пользователей](deploy-folder-redirection.md)<br>[Реализация решения для централизованного использования данных в конечных пользователях: Перенаправление папок и автономные файлыная проверка и развертывание технологий](http://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Управление пользовательским руководством по развертыванию пользовательских данных](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Пошаговое руководство по настройке новых функций автономных файлов для компьютеров под управлением Windows 7](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Использование перенаправления папок](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Реализация перенаправления папок](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
