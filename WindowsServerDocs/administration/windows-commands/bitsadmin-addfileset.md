@@ -1,8 +1,8 @@
 ---
 title: bitsadmin addfileset
-description: Раздел Windows команды для **bitsadmin addfileset** -добавляет один или несколько файлов для указанного задания.
+description: Раздел команд Windows для **битсадмин аддфилесет** . добавляет один или несколько файлов в указанное задание.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f8f6ff32dfa6042272c68647477d77183ce9cb76
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 464f2da151d5a7bfffde286e52d9158560d48dcc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381993"
 ---
 # <a name="bitsadmin-addfileset"></a>bitsadmin addfileset
 
-Добавляет один или несколько файлов для указанного задания.
+Добавляет один или несколько файлов к указанному заданию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,10 +34,10 @@ bitsadmin /addfileset <Job> <TextFile>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
-|Текстовый файл|Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла.</br>Примечание. Имена, разделенные пробелами. Строки, начинающиеся с символа #, рассматриваются как комментарий.|
+|Job|Отображаемое имя задания или идентификатор GUID|
+|TextFile|Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла.</br>Примечание. Имена разделяются пробелами. Строки, начинающиеся с символа #, обрабатываются как комментарии.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
 ```
 C:\>bitsadmin /addfileset files.txt
@@ -45,4 +45,4 @@ C:\>bitsadmin /addfileset files.txt
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

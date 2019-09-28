@@ -1,8 +1,8 @@
 ---
 title: perfmon
-description: 'Разделе команд Windows для системного монитора '
+description: 'Раздел команд Windows для PerfMon '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/25/2018
-ms.openlocfilehash: 000ed11a0eaae36d158ae7a9f044871d4b18aacc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 52503952f2212f7de00d8e7677925b0123f0bbef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814585"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372334"
 ---
 # <a name="perfmon"></a>perfmon
 
-Запустите монитор производительности и надежности Windows в режиме изолированного конкретных.
+Запустите монитор надежности и производительности Windows в определенном автономном режиме.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,11 +34,11 @@ perfmon </res|report|rel|sys>
 
 |Параметр|Описание|
 |---------|-----------|
-|/ RES|Откройте представление ресурса.|
-|/ Report|Запустите набор сборщиков данных для системы диагностики и отображения отчета о результатах.|
-|/Rel|Запуск монитора стабильности системы.|
-|/ PF|Запустите системный монитор.|
+|/RES|Запустите представление ресурсов.|
+|/Report|Запустите группу сборщиков данных диагностики системы и отобразите отчет о результатах.|
+|/рел|Запустите монитор надежности.|
+|/sys|Запустите системный монитор.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Монитор производительности Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))
+[Системный монитор Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749154(v%3dws.11))

@@ -1,8 +1,8 @@
 ---
 title: nslookup set recurse
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de948d9e182cf6489c1869a5725bce8319484293
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 68a5dc26387ddeb6541cc1c85005cd9dab4b433a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436671"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372893"
 ---
 # <a name="nslookup-set-recurse"></a>nslookup set recurse
 
 
 
-Указывает, что сервер имя системы доменных имен (DNS) для запроса других серверов, если он не содержит данные.
+Предписывает серверу доменных имен (DNS) запрашивать другие серверы, если у него нет информации.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,9 +36,9 @@ set [no]recurse
 
 |   Параметр   |                                                                  Описание                                                                  |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| **norecurse** |                Останавливает имя сервера доменных имен (DNS) запрашивать другие серверы, если он не содержит данные.                |
-|  **Recurse**  | Указывает, что сервер имя системы доменных имен (DNS) для запроса других серверов, если он не содержит данные. По умолчанию используется синтаксис **recurse**. |
-|     {справки     |                                                                      ?}                                                                       |
+| **неповторение** |                Останавливает запрос сервера доменных имен (DNS) от других серверов, если он не содержит сведений.                |
+|  **Recurse**  | Предписывает серверу доменных имен (DNS) запрашивать другие серверы, если у него нет информации. Синтаксис по умолчанию — **рекурсия**. |
+|     {Справка     |                                                                      ?}                                                                       |
 
 #### <a name="additional-references"></a>Дополнительная справка
 

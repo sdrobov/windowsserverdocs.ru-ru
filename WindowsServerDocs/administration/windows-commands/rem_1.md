@@ -1,8 +1,8 @@
 ---
 title: rem
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d78bbfe4434170078beb1fd3b3526b017a03e0be
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 56534f75baf514d1c1760edfd41f6f94ab4ae1ab
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59857025"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371598"
 ---
 # <a name="rem"></a>rem
 
 
 
-Предоставляет способ добавлять комментарии в скрипт.
+Предоставляет способ добавления комментариев в скрипт.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,9 +32,9 @@ ms.locfileid: "59857025"
 rem
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В этом примере сценария **rem** используется для создания комментария к выполнению сценария:
+В этом примере сценария **REM** используется для предоставления комментариев о том, что делает скрипт:
 ```
 rem The commands in this script set up 3 drives.
 rem The first drive is a primary partition and is
@@ -52,5 +52,5 @@ assign f:
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

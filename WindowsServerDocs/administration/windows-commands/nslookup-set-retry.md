@@ -1,8 +1,8 @@
 ---
 title: nslookup set retry
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 876d8332e778aa0b3049354a21fbe01adb883729
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 306bcc4f5e7ac98767c3c2e274100cf917874a8e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436650"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372861"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает число повторных попыток.
 ## <a name="syntax"></a>Синтаксис
@@ -33,11 +33,11 @@ set retry=<Number>
 
 |    Параметр    |                                      Описание                                       |
 |-----------------|----------------------------------------------------------------------------------------|
-|    <Number>     | Указывает новое значение для числа повторных попыток. По умолчанию количество повторных попыток равно 4. |
-| {help &#124; ?} |                 Отображает краткое описание **nslookup** подкоманды.                  |
+|    <Number>     | Указывает новое значение для числа повторных попыток. По умолчанию число повторных попыток равно 4. |
+| {Help &#124; ?} |                 Отображает краткую сводку подкоманд **nslookup** .                  |
 
 ## <a name="remarks"></a>Примечания
-- Если ответ на запрос не получен в течение отведенного времени, время ожидания удваивается, и повторном запросе. Этот параметр задает, сколько раз запрос будет повторен. Можно изменить период ожидания с **задать время ожидания** подкоманды.
+- Если ответ на запрос не получен в течение определенного промежутка времени, время ожидания удваивается и запрос отсылается повторно. Значение параметра Retry определяет количество повторных попыток отправки запроса перед предоставлением. Вы можете изменить интервал ожидания с помощью подкоманды **Set timeout** .
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [nslookup задать время ожидания](nslookup-set-timeout.md)
+  [Синтаксис командной строки](command-line-syntax-key.md)
+  [параметр nslookup set timeout](nslookup-set-timeout.md)

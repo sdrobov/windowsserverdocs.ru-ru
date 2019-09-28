@@ -1,8 +1,8 @@
 ---
 title: bootcfg query
-description: Раздел Windows команды для **запроса bootcfg** -запросы и отображает [загрузчик] и [операционные системы], раздел записи из файла Boot.ini.
+description: Раздел команд Windows для запросов **bootcfg query** и отображает записи разделов [boot loader] и [Operating Systems] из Boot. ini.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e79acc100a9ec9955f2692a3c6ee812d0310b687
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: ae82357cfe178343872448c2ebd46c49a797b5a9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434728"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379912"
 ---
 # <a name="bootcfg-query"></a>bootcfg query
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Запрос и отображение [загрузчик] и [операционные системы] разделе записей из файла Boot.ini.
+Запрашивает и отображает записи разделов [boot loader] и [Operating Systems] из Boot. ini.
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -35,12 +35,12 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
 |        Термин         |                                                                                             Определение                                                                                              |
 |---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    /s <computer>    |                                         Указывает имя или IP-адрес удаленного компьютера (не используйте символы обратной косой черты). По умолчанию используется локальный компьютер.                                          |
-| /u <Domain>\\<User> | Выполняет команду с разрешениями учетной записи пользователя, указанного по <User>или <Domain> \\ <User>. По умолчанию используется разрешения текущего, вошедшего в систему пользователя на компьютере, используя следующую команду. |
-|    /p <Password>    |                                                        Указывает пароль для учетной записи пользователя, который указан в **/u** параметра.                                                        |
+| /u <Domain> @ no__t-1 @ no__t-2 | Выполняет команду с разрешениями учетной записи пользователя, заданного <User>or <Domain> @ no__t-2 @ no__t-3. По умолчанию заданы разрешения текущего вошедшего в систему пользователя на компьютере, выполняющем команду. |
+|    /p <Password>    |                                                        Указывает пароль учетной записи пользователя, указанной в параметре **/u** .                                                        |
 |         /?          |                                                                                Отображение справки в командной строке.                                                                                 |
 
 ##### <a name="remarks"></a>Примечания
-- Ниже приведен пример **неправильный** выходные данные:
+- Ниже приведен пример выходных данных **bootcfg/query** .
   ```
   Boot Loader Settings
   ----------
@@ -53,10 +53,10 @@ bootcfg /query [/s <computer> [/u <Domain>\<User> /p <Password>]]
   path:            multi(0)disk(0)rdisk(0)partition(1)\WINDOWS
   OS Load Options: /fastdetect /debug /debugport=com1:
   ```
-- Параметры загрузки часть **запроса bootcfg** выходных данных отображает каждый элемент в разделе [загрузчик] файла Boot.ini.
-- Загрузочные записи часть **запроса bootcfg** выходных данных отображаются следующие сведения для каждой записи операционной системы в разделе [operating systems] файла Boot.ini: Загрузочной записи, понятное имя, путь и параметры загрузки операционной системы.
-  ## <a name="BKMK_examples"></a>Примеры
-  В следующих примерах показано, как можно использовать **неправильный** команды:
+- В разделе параметры загрузчика в выходных данных **запроса bootcfg** отображаются все записи в раздел [boot loader] файла Boot. ini.
+- В разделе загрузочные записи в выходных данных **bootcfg query** отображаются следующие сведения для каждой записи операционной системы в раздел [Operating Systems] файла Boot. ini: Идентификатор загрузочной записи, понятное имя, путь и параметры загрузки ОС.
+  ## <a name="BKMK_examples"></a>Примеров
+  В следующих примерах показано, как можно использовать команду **bootcfg/query** :
   ```
   bootcfg /query
   bootcfg /query /s srvmain /u maindom\hiropln /p p@ssW23

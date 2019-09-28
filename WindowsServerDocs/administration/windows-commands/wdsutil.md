@@ -1,8 +1,8 @@
 ---
 title: wdsutil
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,40 +13,40 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b918d6a637b743564883c7bb251c7e84a6d6030
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 0072008c4af32f05c9924cf85c0559cd924cff7c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826955"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362200"
 ---
 # <a name="wdsutil"></a>wdsutil
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-WDSUtil — это программа командной строки, используемые для управления сервером служб развертывания Windows. Для выполнения этих команд, щелкните **запустить**, щелкните правой кнопкой мыши **командной**и нажмите кнопку **Запуск от имени администратора**.  
+WDSUTIL — это служебная программа командной строки, используемая для управления сервером служб развертывания Windows. Чтобы выполнить эти команды, нажмите кнопку **Пуск**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.  
 ## <a name="commands"></a>Команды  
 |Command|Описание|  
 |------|--------|  
-|[С помощью команды add](using-the-add-command.md)|Добавляет объекты или предварительно подготавливает компьютеры.|  
-|[С помощью команды утвердить AutoaddDevices](using-the-approve-autoadddevices-command.md)|Утверждает компьютеры, которые являются администратора ожидающие утверждения.|  
-|[С помощью команды convert RiprepImage](using-the-convert-riprepimage-command.md)|Преобразует существующего удаленной установки подготовки образа в файл образа Windows (WIM).|  
-|[С помощью копии, команда](using-the-copy-command.md)|Копирует образ или группу драйверов.|  
-|[С помощью команды delete-AutoaddDevices](using-the-delete-autoadddevices-command.md)|Удаляет компьютеры, находящиеся в базе данных автоматического добавления (в которой хранятся сведения о компьютерах, на сервере).|  
-|[С помощью команды отключения](using-the-disable-command.md)|Отключает все службы для служб развертывания Windows.|  
-|[С помощью команды отключения клиента](using-the-disconnect-client-command.md)|Отключает клиента от многоадресной передачи или пространства имен.|  
-|[С помощью команды Enable](using-the-enable-command.md)|Включает все службы для служб развертывания Windows.|  
-|[С помощью команды Export-Image](using-the-export-image-command.md)|Экспортирует образ из хранилища образов в WIM-файл.|  
-|[С помощью команды get](using-the-get-command.md)|Возвращает свойства и атрибуты об указанном объекте.|  
-|[С помощью команды Initialize-Server](using-the-initialize-server-command.md)|Настройка сервера служб развертывания Windows для первого использования.|  
-|[С помощью новой команды](using-the-new-command.md)|Создает новый режим захвата и образы обнаружения также как многоадресных передач и пространств имен.|  
-|[Ход выполнения команды](the-progress-command.md)|Отображает состояние хода выполнения во время выполнения команды.|  
-|[С помощью команды AutoaddDevices отклонения](using-the-reject-autoadddevices-command.md)|Отклоняет компьютеров, администратор ожидающие утверждения.|  
-|[Команда удаления](using-the-remove-command.md)|Удаляет объекты.|  
-|[С помощью команды заменить изображение](using-the-replace-image-command.md)|заменяет образ загрузки или установки новой версии этого образа.|  
-|[Команда Set](the-set-command.md)|Задает свойства и атрибуты в указанном объекте.|  
-|[Начало команды Server](the-start-server-command.md)|запускает все службы на сервере служб развертывания Windows, включая многоадресных передач, пространства имен и транспортный сервер.|  
-|[Команды остановки сервера](the-stop-server-command.md)|Останавливает все службы на сервере служб развертывания Windows.|  
-|[Параметр uninitialize сервера](the-uninitialize-server-option.md)|Отменяет изменения, внесенные во время инициализации сервера.|  
-|[Команда Update-ServerFiles](the-update-serverfiles-command.md)|Обновление сервера файлов в общей папке remoteInstall.|  
+|[Использование команды Add](using-the-add-command.md)|Добавляет объекты или предварительно подготовленные компьютеры.|  
+|[Использование команды "утвердить-Аутоадддевицес"](using-the-approve-autoadddevices-command.md)|Утверждает компьютеры, ожидающие утверждения администратором.|  
+|[Использование команды Convert-Рипрепимаже](using-the-convert-riprepimage-command.md)|преобразует существующий образ подготовки удаленной установки (RIPrep) в файл образа Windows (WIM).|  
+|[Использование команды Copy](using-the-copy-command.md)|Копирование образа или группы драйверов.|  
+|[Использование команды Delete-Аутоадддевицес](using-the-delete-autoadddevices-command.md)|Удаляет компьютеры, которые находятся в базе данных автоматического добавления (в которой хранятся сведения о компьютерах на сервере).|  
+|[Использование команды Disable](using-the-disable-command.md)|Отключает все службы для служб развертывания Windows.|  
+|[Использование команды Disconnect-Client](using-the-disconnect-client-command.md)|Отключает клиент от многоадресной передачи или пространства имен.|  
+|[Использование команды Enable](using-the-enable-command.md)|Включает все службы для служб развертывания Windows.|  
+|[Использование команды Export-Image](using-the-export-image-command.md)|Экспортирует образ из хранилища образов в WIM-файл.|  
+|[Использование команды Get](using-the-get-command.md)|Извлекает свойства и атрибуты указанного объекта.|  
+|[Использование команды Initialize-Server](using-the-initialize-server-command.md)|Настраивает сервер служб развертывания Windows для первоначального использования.|  
+|[Использование команды "создать"](using-the-new-command.md)|создает новую запись и обнаруживает образы, а также многоадресные передачи и пространства имен.|  
+|[Команда Progress](the-progress-command.md)|Отображает состояние хода выполнения во время выполнения команды.|  
+|[Использование команды REJECT-Аутоадддевицес](using-the-reject-autoadddevices-command.md)|Отклоняет компьютеры, ожидающие утверждения администратором.|  
+|[Использование команды Remove](using-the-remove-command.md)|Удаляет объекты.|  
+|[Использование команды replace-Image](using-the-replace-image-command.md)|заменяет образ загрузки или установки новой версией этого образа.|  
+|[Команда Set](the-set-command.md)|Задает свойства и атрибуты для указанного объекта.|  
+|[Команда запуска сервера](the-start-server-command.md)|запускает все службы на сервере служб развертывания Windows, включая многоадресную передачу, пространства имен и транспортный сервер.|  
+|[Команда "прерывать сервер"](the-stop-server-command.md)|Останавливает все службы на сервере служб развертывания Windows.|  
+|[Параметр Uninitialize-Server](the-uninitialize-server-option.md)|Отмена изменений, внесенных во время инициализации сервера.|  
+|[Команда Update-Серверфилес](the-update-serverfiles-command.md)|Обновляет файлы сервера на общем ресурсе remoteInstall.|  
 |[Команда verbose](the-verbose-command.md)|Отображает подробные выходные данные для указанной команды.|  

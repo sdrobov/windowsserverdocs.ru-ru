@@ -2,7 +2,7 @@
 title: Справочник по командам печати
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a9b0ab1e3e9ecb170eb4535cb7e4e643d791e5b
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 73850c35b6f228c49496a2bb4505fe8203cb52ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544535"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372170"
 ---
 # <a name="print-command-reference"></a>Справочник по командам печати
 
@@ -35,7 +35,7 @@ ms.locfileid: "68544535"
 |                  [prncnfg](prncnfg.md)                   |                                     Настраивает или отображает сведения о конфигурации принтера.                                      |
 |                  [prndrvr](prndrvr.md)                   |                                                 добавляет, удаляет и перечисляет драйверы принтера.                                                  |
 |                  [prnjobs](prnjobs.md)                   |                                              приостанавливает, возобновляет, отменяет и перечисляет задания печати.                                               |
-|                  [prnmngr](prnmngr.md)                   |            добавляет, удаляет и перечисляет принтеры или подключения принтеров в дополнение к настройке и отображению принтера по умолчанию.            |
+|                  [prnmngr](prnmngr.md)                   |            Добавляет, удаляет и перечисляет принтеры или подключения принтеров в дополнение к настройке и отображению принтера по умолчанию.            |
 |                  [prnport](prnport.md)                   |           Создание, удаление и перечисление стандартных портов принтера TCP/IP, а также отображение и изменение конфигурации портов.            |
 |                  [prnqctl](prnqctl.md)                   |                                Печать тестовой страницы, приостановка или возобновление печати принтера и очистка очереди печати.                                |
 |                   [pubprn](pubprn.md)                    |                                       Публикует принтер в службе каталогов Active Directory.                                       |

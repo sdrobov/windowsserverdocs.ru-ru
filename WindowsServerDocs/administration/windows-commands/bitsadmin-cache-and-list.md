@@ -1,8 +1,8 @@
 ---
-title: bitsadmin кэша и список
-description: Раздел Windows команды для **bitsadmin кэша и список** — перечисляет все записи кэша.
+title: кэш битсадмин и список
+description: Раздел команд Windows для **кэша битсадмин и список** -список всех записей кэша.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fc745d71b4022d7bfeca8f8963ec2f226c637b85
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: dca3d4f4d2c71c2c7e2065f144d7b1e8e5a600a8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59851485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381959"
 ---
-# <a name="bitsadmin-cache-and-list"></a>bitsadmin кэша и список
+# <a name="bitsadmin-cache-and-list"></a>кэш битсадмин и список
 
 
 
-Перечисляет все записи кэша.
+Список всех записей кэша.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ ms.locfileid: "59851485"
 bitsadmin /Cache /List [/Verbose] 
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере перечисляются все записи кэша в подробном формате.
+В следующем примере выводится список всех записей кэша в подробном формате.
 ```
 C:\> bitsadmin /Cache /List /Verbose
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

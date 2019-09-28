@@ -1,8 +1,8 @@
 ---
 title: msiexec
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 59bea5f646bc04e529851f583ad7c4c7b16d44f5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 21ea9fdb50aa6b142274b814a38c43d93bc635c0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846295"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373420"
 ---
 # <a name="msiexec"></a>msiexec
 
 
 
-## <a name="msiexec"></a>msiexec
+## <a name="msiexec"></a>Программе
 
-Предоставляет средства для установки, изменения и выполнения операций с установщика Windows из командной строки.
+Предоставляет средства для установки, изменения и выполнения операций с установщик Windows из командной строки.
 
-Синтаксис и примеры использования этой команды, см. в разделе [Msiexec](https://go.microsoft.com/fwlink/?LinkId=94329).
+Синтаксис и примеры использования этой команды см. в разделе [msiexec](https://go.microsoft.com/fwlink/?LinkId=94329).

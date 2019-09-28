@@ -1,8 +1,8 @@
 ---
 title: convert
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a77e1fca9605c7e5cc4ff059db08ffbfcc81f81
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d78f7adbc26acf9787ad39019e1450542a6acda2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859285"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71379030"
 ---
 # <a name="convert"></a>convert
 
 
 
-Преобразует диск из одного диска типа в другой.
+Преобразует диск с одного типа диска в другой.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,12 +39,12 @@ convert mbr
 
 |Параметр|Описание|
 |---------|-----------|
-|[Преобразование](convert-basic.md)|Преобразовывает пустой динамический диск в базовый.|
-|[Преобразовать в динамический](convert-dynamic.md)|Преобразует базовый диск в динамический диск.|
-|[Преобразовать в gpt](convert-gpt.md)|Преобразует пустой базовый диск со стилем разделов основная загрузочная запись (MBR) в базовый диск со стилем разделов (GPT) таблицы разделов GUID.|
-|[Преобразовать mbr](convert-mbr.md)|Преобразует пустой базовый диск со стилем разделов таблицы разделов GUID (GPT) в базовый диск со стилем раздела основная загрузочная запись (MBR).|
+|[Преобразование базовых](convert-basic.md)|Преобразовывает пустой динамический диск в базовый.|
+|[Преобразовать динамический](convert-dynamic.md)|Преобразует базовый диск в динамический диск.|
+|[Преобразование GPT](convert-gpt.md)|Преобразует пустой базовый диск с стилем разделов основной загрузочной записи (MBR) в базовый диск с стилем разделов GPT.|
+|[Преобразование MBR](convert-mbr.md)|Преобразует пустой базовый диск со стилем разделов GPT в базовый диск с стилем разделов основной загрузочной записи (MBR).|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

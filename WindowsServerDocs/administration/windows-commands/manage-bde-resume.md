@@ -1,8 +1,8 @@
 ---
-title: Возобновление готов
-description: 'Раздел Windows команды для ***- '
+title: Управление — возобновление BDE
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b4f655cf6e37df7397c45f1214fa8799776a758
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 803f1df39b411bd7881e2dc8f05112025053e0db
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59823135"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373916"
 ---
-# <a name="manage-bde-resume"></a>готов: возобновление
+# <a name="manage-bde-resume"></a>Управление — BDE: Resume
 
 
 
-Возобновляет работу BitLocker шифрования или расшифровки после приостановки. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Возобновляет шифрование или расшифровку BitLocker после его приостановки. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ manage-bde -resume [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Диск >|Представляет букву диска, за которым следует двоеточие.|
-|-computername|Указывает, что Manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать **- cn** как сокращенную версию этой команды.|
-|\<Имя >|Представляет имя компьютера, на которой требуется изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
-|-? или /?|Отображение кратких справки в командной строке.|
-|-help или -h|Отображает полную справку в командной строке.|
+|@no__t 0Drive >|Представляет букву диска, за которой следует двоеточие.|
+|-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
+|\<Имя >|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|-? или/?|Отображает краткую справку в командной строке.|
+|-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-В следующем примере демонстрируется использование **-возобновить** команду, чтобы возобновить шифрование BitLocker на диске C.
+В следующем примере показано использование команды **-Resume** для возобновления шифрования BitLocker на диске C.
 ```
 manage-bde –resume C:
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [Готов](manage-bde.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Управление — BDE](manage-bde.md)

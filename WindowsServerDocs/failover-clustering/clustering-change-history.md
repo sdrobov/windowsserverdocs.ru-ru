@@ -1,62 +1,62 @@
 ---
 ms.assetid: 289cbd10-e7ec-4f2e-8dd1-eb5692565578
 title: Журнал изменений разделов, посвященных отказоустойчивой кластеризации
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.topic: article
 author: JasonGerend
 manager: daveba
 ms.author: jgerend
 ms.date: 03/08/2019
-description: Новые и обновленные разделы в документации по отказоустойчивой кластеризации Windows Server 2016
-ms.openlocfilehash: d6dd5c98b14134d42901fad79a375298ad0e7e23
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+description: Новые и обновленные разделы документации по отказоустойчивой кластеризации для Windows Server 2016
+ms.openlocfilehash: 501ad8f63eafdeadffcf5d67646c9e85005cf329
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280180"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361213"
 ---
 # <a name="change-history-for-failover-clustering-topics"></a>Журнал изменений разделов, посвященных отказоустойчивой кластеризации
 
->Относится к: Windows Server 2019, Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server 2016
 
-В этом разделе перечислены новые и обновленные разделы в [отказоустойчивой кластеризации](failover-clustering-overview.md) документации по Windows Server.
+В этом разделе перечислены новые и обновленные разделы документации по [отказоустойчивой кластеризации](failover-clustering-overview.md) для Windows Server.
 
 > Если вы ищете журнал обновлений для Windows Server 2016, изучите статью [Журнал обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## <a name="march-2019"></a>Марта 2019 г.
+## <a name="march-2019"></a>Март 2019
 
 |Новый или измененный раздел                                    |Описание |
 |--------------------------------------------------------|------------|
 |[Сходство кластеров](cluster-affinity.md)| Оператор new     |
 
-## <a name="february-2019"></a>Февраль 2019 г.
+## <a name="february-2019"></a>Февраль 2019 г.
 
 |Новый или измененный раздел                                    |Описание |
 |--------------------------------------------------------|------------|
 | [Обновление отказоустойчивого кластера на одном оборудовании](upgrade-option-same-hardware.md)| Оператор new |
 |[Развертывание двухузлового файлового сервера](deploy-two-node-clustered-file-server.md)| Оператор new |
 
-## <a name="january-2019"></a>Января 2019
+## <a name="january-2019"></a>Январь 2019 г.
 
 |Новый или измененный раздел                                    |Описание |
 |--------------------------------------------------------|------------|
 |[Развертывание файлового ресурса-свидетеля](file-share-witness.md)    | Оператор new        |
 |[Перенос кластера между доменами](cluster-domain-migration.md) | Оператор new        |
 
-## <a name="november-2018"></a>ноябрь 2018 г.
+## <a name="november-2018"></a>Ноябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Настройка учетных записей кластеров в Active Directory](configure-ad-accounts.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/) библиотеки|
+|[Настройка учетных записей кластеров в Active Directory](configure-ad-accounts.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 
 ## <a name="october-2018"></a>Октябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Новые возможности кластеризации](whats-new-in-failover-clustering.md)| Обновления для Windows Server 2019 г.|
+|[Новые возможности кластеризации](whats-new-in-failover-clustering.md)| Обновления для Windows Server 2019|
 
-## <a name="june-2018"></a>Июня 2018 г.
+## <a name="june-2018"></a>Июнь 2018
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -66,45 +66,45 @@ ms.locfileid: "67280180"
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Настройка кворума и управление им](manage-cluster-quorum.md) | Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки. |
+|[Настройка кворума и управление им](manage-cluster-quorum.md) | Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) . |
 
 ## <a name="april-2018"></a>Апрель 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows](troubleshooting-using-WER-reports.md)| Новый раздел. |
-|[Масштабируемый файловый сервер для данных приложений](sofs-overview.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Требования к оборудованию](clustering-requirements.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Использование общих томов кластера (CSV)](failover-cluster-csvs.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Создание отказоустойчивого кластера](create-failover-cluster.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Предварительная подготовка кластера в AD DS](prestage-cluster-adds.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
-|[Развертывание облака-свидетеля для отказоустойчивого кластера](deploy-cloud-witness.md)|Миграция из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) библиотеки.|
+|[Масштабируемый файловый сервер для данных приложений](sofs-overview.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
+|[Требования к оборудованию](clustering-requirements.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
+|[Использование общих томов кластера (CSV)](failover-cluster-csvs.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
+|[Создание отказоустойчивого кластера](create-failover-cluster.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
+|[Предварительная подготовка кластера в AD DS](prestage-cluster-adds.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
+|[Развертывание облачного следящего сервера для отказоустойчивого кластера](deploy-cloud-witness.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
 
 ## <a name="june-2017"></a>Июнь, 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Дополнительные параметры кластерного обновления](cluster-aware-updating-options.md)|Добавлены сведения об использовании профиля выполнения пути, содержащие пробелы.|
+|[Дополнительные параметры обновления с поддержкой кластера](cluster-aware-updating-options.md)|Добавлены сведения об использовании путей к профилю выполнения, включающих пробелы.|
 
 ## <a name="april-2017"></a>Апрель 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Общие сведения о кластерном обновлении](cluster-aware-updating.md)|Новый раздел.|
+|[Обзор обновления с поддержкой кластера](cluster-aware-updating.md)|Новый раздел.|
 |[Требования и рекомендации для кластерного обновления](cluster-aware-updating-requirements.md)|Новый раздел.|
-|[Дополнительные параметры кластерного обновления](cluster-aware-updating-options.md)|Новый раздел.|
-|[Часто задаваемые вопросы о кластерного обновления](cluster-aware-updating-faq.md)|Новый раздел.|
-|[Кластерное обновление подключаемых модулей](cluster-aware-updating-plug-ins.md)|Новый раздел.|
-|[Развертывание облака-свидетеля для отказоустойчивого кластера](deploy-cloud-witness.md)|Уточнено, тип учетной записи хранения, который требуется (нельзя использовать хранилище Azure класса Premium или учетные записи хранения BLOB-объектов).|
+|[Дополнительные параметры обновления с поддержкой кластера](cluster-aware-updating-options.md)|Новый раздел.|
+|[Вопросы и ответы по обновлению с поддержкой кластера](cluster-aware-updating-faq.md)|Новый раздел.|
+|[Подключаемые модули обновления с поддержкой кластера](cluster-aware-updating-plug-ins.md)|Новый раздел.|
+|[Развертывание облачного следящего сервера для отказоустойчивого кластера](deploy-cloud-witness.md)|Разъяснен требуемый тип учетной записи хранения (вы не можете использовать хранилище Azure класса Premium или учетные записи хранения BLOB-объектов).|
 
 ## <a name="march-2017"></a>Март, 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Развертывание облака-свидетеля для отказоустойчивого кластера](deploy-cloud-witness.md)| Обновленные снимки экрана в соответствии с изменениями в Microsoft Azure.|
+|[Развертывание облачного следящего сервера для отказоустойчивого кластера](deploy-cloud-witness.md)| Обновлены снимки экрана, чтобы соответствовать изменениям в Microsoft Azure.|
 
 ## <a name="february-2017"></a>Февраль 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
-|[Последовательное обновление ОС кластера](Cluster-Operating-System-Rolling-Upgrade.md)|Удалить ненужные предупреждение и добавлена ссылка.|
+|[Последовательное обновление операционной системы кластера](Cluster-Operating-System-Rolling-Upgrade.md)|Удалено ненужное замечание и добавлена ссылка.|

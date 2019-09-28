@@ -1,8 +1,8 @@
 ---
-title: bitsadmin sethelpertoken
-description: Раздел Windows команды для **bitsadmin sethelpertoken** -задает основной маркер текущей командной строке (или токен учетной записи произвольных локального пользователя, если указано) как вспомогательный маркер задание передачи службы BITS.
+title: битсадмин сеселпертокен
+description: Раздел команд Windows для **битсадмин сеселпертокен** . задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве вспомогательного токена задания передачи BITS.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -12,18 +12,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 558a1aca66a7b3ec447136ceff9237d13efe4ede
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 91c03366998168dad9ab4530ef36a5020b8ad6ec
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853005"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380570"
 ---
-# <a name="bitsadmin-sethelpertoken"></a>bitsadmin sethelpertoken
+# <a name="bitsadmin-sethelpertoken"></a>битсадмин сеселпертокен
 
-Задает основной маркер текущей командной строке (или токен учетной записи произвольных локального пользователя, если указан), как задание передачи службы BITS [вспомогательный маркер](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs).
+Задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве [вспомогательного токена](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs)задания передачи BITS.
 
-**БИТЫ 3.0 и более ранних версий**: Не поддерживается.
+**BITS 3,0 и более ранних версий**: Не поддерживается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,9 +35,9 @@ bitsadmin /SetHelperToken <Job> [\<username@domain\> \<password\>]
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания.|
-|\<username@domain\> \<Пароль\>|Необязательный&mdash;учетные данные локального пользователя учетной записи которого маркер для использования.|
+|Job|Отображаемое имя задания или идентификатор GUID.|
+|\< @ no__t-1 @ no__t-2 \<password @ no__t-4|Необязательные учетные данные @ no__t-0The учетной записи локального пользователя, токен которой необходимо использовать.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

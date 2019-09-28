@@ -1,8 +1,8 @@
 ---
-title: Метаданные набора
-description: 'Раздел Windows команды для ***- '
+title: Задание метаданных
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82d2cd9ba447a0ea261f91dc01c11e45dfc0aa9b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ac73a4131d3f4065cd1aeae873734b079ad664e2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835995"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370951"
 ---
-# <a name="set-metadata"></a>Метаданные набора
+# <a name="set-metadata"></a>Задание метаданных
 
 
 
-Задает имя и расположение файла метаданных создания тени, используется для передачи теневые копии с одного компьютера на другой. При использовании без параметров, **задать метаданные** отображает справку в командной строке.
+Задает имя и расположение файла метаданных теневого копирования, используемого для перемещения теневых копий с одного компьютера на другой. Если используется без параметров, **параметр SET Metadata** отображает справку в командной строке.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,9 +36,9 @@ set metadata [<Drive>:][<Path>]<MetaData.cab>
 
 |Параметр|Описание|
 |---------|-----------|
-|[\<Диска >:] [<Path>]|Указывает расположение для создания файла метаданных.|
-|\<MetaData.cab >|Указывает имя CAB-файл для хранения метаданных создания тени.|
+|[@no__t 0Drive >:] [<Path>]|Указывает расположение для создания файла метаданных.|
+|@no__t -0MetaData. cab >|Указывает имя CAB-файла для хранения метаданных создания теневой копии.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

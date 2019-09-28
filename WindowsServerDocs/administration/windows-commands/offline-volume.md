@@ -1,8 +1,8 @@
 ---
-title: Отключенный том
-description: 'Раздел Windows команды для ***- '
+title: автономный том
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,21 +13,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd14492a40046472f43f37d79c393c9467fe4a88
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 71e507bde827233ce1f15aacd5e13523236a080e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372568"
 ---
-# <a name="offline-volume"></a>Отключенный том
+# <a name="offline-volume"></a>автономный том
 
 
 
-Переводит online том с фокусом в автономный режим.
+Перевод сетевого тома в состояние "вне сети".
 
 > [!IMPORTANT]
-> Эта команда DiskPart не доступна в любом выпуске Windows Vista.
+> Эта команда DiskPart недоступна ни в одном из выпусков Windows Vista.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,20 +39,20 @@ offline volume [noerr]
 
 |Параметр|Описание|
 |---------|-----------|
-|успешного|для использования в сценариях. При обнаружении ошибки, DiskPart продолжает обрабатывать команды, как если бы ошибки не было. Без этого параметра по ошибке будет возобновлено DiskPart завершить работу с кодом ошибки.|
+|Noerr|только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 
 ## <a name="remarks"></a>Примечания
 
--   Для этого необходимо выбрать том. Используйте **выберите том** команду, чтобы выбрать диск и перетянуть внимание к нему.
+-   Для этого необходимо выбрать том. Используйте команду **Выбор тома** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы отключить диск, имеющий фокус, введите следующую команду:
+Чтобы перевести диск с фокусом в режим вне сети, введите:
 ```
 offline volume
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

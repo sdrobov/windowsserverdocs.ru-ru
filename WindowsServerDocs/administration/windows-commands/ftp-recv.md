@@ -1,8 +1,8 @@
 ---
-title: число полученных FTP
-description: 'Раздел Windows команды для ***- '
+title: FTP recv
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5bfd68dcb745ebf7ef239883aa1c5322241b32df
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6ec35a2044945e3d39a2a78d39923de3a56eb18d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438433"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376126"
 ---
-# <a name="ftp-recv"></a>FTP: получаемого сообщения
+# <a name="ftp-recv"></a>FTP: recv
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Копирует удаленный файл на локальный компьютер, используя текущий тип передачи файла.   
+Копирует удаленный файл на локальный компьютер, используя текущий тип перемещения файлов.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 recv <remoteFile> [<LocalFile>]  
@@ -33,23 +33,23 @@ recv <remoteFile> [<LocalFile>]
 
 |   Параметр   |                   Описание                    |
 |---------------|--------------------------------------------------|
-| <remoteFile>  |        Задает удаленный файл для копирования.        |
+| <remoteFile>  |        Указывает удаленный файл для копирования.        |
 | [<LocalFile>] | Указывает имя, используемое на локальном компьютере. |
 
 ## <a name="remarks"></a>Примечания  
-- **Recv** команда идентична **получить** команды.  
-- Если *Локальный_файл* не указан, будет использовано *Удаленный_файл* имя.  
-  ## <a name="BKMK_Examples"></a>Примеры  
-  Копировать **test.txt** на локальном компьютере, с помощью текущего типа передачи файлов.  
+- Команда **recv** идентична команде **Get** .  
+- Если параметр *локальный_файл* не указан, файлу присваивается имя *ремотефиле* .  
+  ## <a name="BKMK_Examples"></a>Примеров  
+  Скопируйте файл **Test. txt** на локальный компьютер, используя текущий тип перемещения файлов.  
   ```  
   recv test.txt  
   ```  
-  Копировать **test.txt** на локальном компьютере как **test1.txt** тип переноса с помощью текущего файла.  
+  Скопируйте файл **Test. txt** на локальный компьютер в файле **test1. txt** , используя текущий тип перемещения файлов.  
   ```  
   recv test.txt test1.txt  
   ```  
   ## <a name="additional-references"></a>Дополнительные ссылки  
-- [FTP: ascii](ftp-ascii.md)  
-- [FTP: двоичные](ftp-binary.md)  
-- [FTP: получение](ftp-get.md)  
+- [FTP: ASCII](ftp-ascii.md)  
+- [FTP: двоичный формат](ftp-binary.md)  
+- [FTP: Get](ftp-get.md)  
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

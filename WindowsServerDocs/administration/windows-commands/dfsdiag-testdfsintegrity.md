@@ -1,8 +1,8 @@
 ---
-title: dfsdiag TestDFSIntegrity
-description: 'Раздел Windows команды для ***- '
+title: дфсдиаг Тестдфсинтегрити
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,24 +13,24 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a79e034f7c60be89266eb29dcd69e8f73b2aafe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7f344e2d1fecc542efc39688f20165fd3e39a04a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837095"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378428"
 ---
-# <a name="dfsdiag-testdfsintegrity"></a>dfsdiag TestDFSIntegrity
+# <a name="dfsdiag-testdfsintegrity"></a>дфсдиаг Тестдфсинтегрити
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Проверяет целостность распределенной файловой системы \(DFS\) пространства имен, выполняя следующие тесты:  
+Проверяет целостность пространства имен распределенная файловая система \(DFS @ no__t-1, выполняя следующие тесты:  
   
--   Проверяет наличие DFS повреждение метаданных или несоответствий между контроллерами домена.  
+-   Проверяет наличие повреждений метаданных DFS или несоответствий между контроллерами домена.  
   
--   Проверяет конфигурацию доступа\-перечисление, чтобы обеспечить согласованность между DFS метаданные общего ресурса сервера имен на основе.  
+-   Проверяет конфигурацию перечисления доступа @ no__t-0based, чтобы обеспечить согласованность между метаданными DFS и общим ресурсом сервера пространства имен.  
   
--   Обнаруживает вложенные папки DFS \(ссылки\), повторяющиеся папки и папки с перекрывающимися целевым объектам папки.  
+-   Обнаруживает перекрывающиеся папки DFS \(links @ no__t-1, дублирующиеся папки и папки с перекрывающимися целевыми объектами папок.  
   
   
   
@@ -44,12 +44,12 @@ dfsdiag /TestDFSIntegrity /DFSRoot:<DFS root path> [/Recurse] [/Full]
   
 |Параметр|Описание|  
 |-------|--------|  
-|\/DFSRoot:<DFS root path>|Пространство имен DFS для диагностики.|  
-|\/Recurse|Выполняет тестирования, в том числе сцеплений пространства имен.|  
-|\/Полный|Проверяет согласованность общего ресурса и конфигурация на стороне списки управления доступом NTFS и клиента на все целевые объекты папки. Он также проверяет, что online свойству.|  
+|\/DFSRoot: <DFS root path>|Пространство имен DFS для диагностики.|  
+|@no__t 0Recurse|Выполняет тестирование, включая взаимосвязи пространств имен.|  
+|@no__t 0Full|проверяет согласованность общего ресурса и ACL NTFS и конфигурации клиента для всех целевых объектов папки. Он также проверяет, задано ли свойство Online.|  
   
-## <a name="BKMK_Examples"></a>Примеры  
-Чтобы подлежит Уточнению введите:  
+## <a name="BKMK_Examples"></a>Примеров  
+Для УТОЧНЕНия введите:  
   
 ```  
 dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full  
@@ -57,8 +57,8 @@ dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
   
 ## <a name="additional-references"></a>Дополнительные ссылки  
   
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
--   [dfsdiag](dfsdiag.md)  
+-   [дфсдиаг](dfsdiag.md)  
   
 

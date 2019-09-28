@@ -1,22 +1,22 @@
 ---
 ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
-title: Обновление встроенного ПО дисков в Windows Server 2016
-ms.prod: windows-server-threshold
+title: Обновление встроенного ПО дисков
+ms.prod: windows-server
 ms.author: toklima
 ms.manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 50291bd4da05d9c2736c84443b444b9a43f46344
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f0530101bb7d597d2d95c26648aad65d62b69ca
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884785"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365872"
 ---
-# <a name="updating-drive-firmware-in-windows-server-2016"></a>Обновление встроенного ПО дисков в Windows Server 2016
->Относится к: Windows 10, Windows Server (полугодовой канал), Windows Server 2016
+# <a name="updating-drive-firmware"></a>Обновление встроенного ПО дисков
+>Относится к: Windows Server 2019, Windows Server 2016, Windows 10
 
 Обновление встроенного ПО для дисков всегда являлось трудоемкой задачей с высокой вероятностью простоя. Именно поэтому мы вносим усовершенствования для дисковых пространств, Windows Server, Windows 10 версии 1703 или более поздней версии. Если у вас есть диски, которые поддерживают новый механизм обновления встроенного ПО, включенный в состав Windows, встроенное ПО рабочих дисков можно обновить без простоев. Тем не менее, если вы собираетесь обновить встроенное ПО рабочего диска, обязательно ознакомьтесь с нашими советами о том, как свести к минимуму риск при использовании этой новой функциональности.
 
@@ -30,11 +30,11 @@ ms.locfileid: "59884785"
 Сведения о том, поддерживает ли оборудование обновление встроенного ПО диска Windows, можно получить у поставщика решения.
 Ниже приведены ссылки на различные требования:
 
--   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) — в **[Если реализовано\] встроенного по, скачивание и активация** раздел
+-   КОНТРОЛЛЕРА [Device. Storage. HD. SATA.](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) в разделе **[if implementsd @ No__t-2 Download встроенного по & активации** .
     
--   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) — в **[Если реализовано\] встроенного по, скачивание и активация** раздел
+-   ЖЕСТКИХ [Device. Storage. HD. SAS](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) — в разделе **[if Implements @ No__t-2 Download встроенного по & активации** .
 
--   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) — в разделах **5.7** и **5.8**.
+-   NVMe [Device. Storage. контроллердриве. NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) — в разделах **5,7** и **5,8**.
 
 ## <a name="powershell-cmdlets"></a>Командлеты PowerShell
 
@@ -164,7 +164,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-Если вы хотите см. в разделе служба работоспособности в действии и Дополнительные сведения о ее механизме развертывания, взглянем на этот видеоролик: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+Если вы хотите просмотреть служба работоспособности в действии и узнать больше о механизме развертывания, просмотрите это видео: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>Вопросы и ответы
 
@@ -195,7 +195,7 @@ $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponen
 
 ### <a name="what-happens-if-the-update-fails"></a>Что произойдет в случае сбоя обновления?
 
-Обновление может завершиться ошибкой по различным причинам, к которым относятся: (1) диск не поддерживает нужные команды для Windows для обновления его встроенного по. В этом случае новый образ встроенного ПО никогда не активируется, и диск продолжает работать со старым образом. 2) Не удается скачать образ или применить его к диску (несоответствие версий, повреждение образа и т. д). В этом случае диск выполняет команду активации с ошибкой. При этом старый образ по-прежнему продолжит работать.
+Обновление может завершиться ошибкой по различным причинам: 1. диск не поддерживает правильные команды для обновления встроенного по Windows. В этом случае новый образ встроенного ПО никогда не активируется, и диск продолжает работать со старым образом. 2) Не удается скачать образ или применить его к диску (несоответствие версий, повреждение образа и т. д). В этом случае диск выполняет команду активации с ошибкой. При этом старый образ по-прежнему продолжит работать.
 
 Если диск не отвечает после обновления встроенного ПО, скорее всего, вы столкнулись с ошибкой в самом встроенном ПО. Протестируйте все обновления встроенного ПО в лабораторной среде, прежде чем помещать их в рабочую среду. Единственный способ исправления может заключаться в замене диска.
 

@@ -1,8 +1,8 @@
 ---
 title: удалить
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7f1483f1ea0e5336edb96f2ff86dca55c3b2dbf8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9f8f5d33d7cff4dbba77ec5875b80d6e63be66da
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59820815"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371591"
 ---
 # <a name="remove"></a>удалить
 
 
 
-Удаляет буква диска или монтирования точка с тома.
+Удаляет букву диска или точку подключения из тома.
 

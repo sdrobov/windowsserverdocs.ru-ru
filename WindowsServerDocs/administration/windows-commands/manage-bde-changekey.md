@@ -1,8 +1,8 @@
 ---
-title: готов changekey
-description: 'Раздел Windows команды для ***- '
+title: Управление — BDE чанжекэй
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 991d05cb79e6596c3efb3e69b681203838cd8c20
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 436d4bbec0dbb31fd9cdfb4fc29057e32d87888a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842095"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374111"
 ---
-# <a name="manage-bde-changekey"></a>готов: changekey
+# <a name="manage-bde-changekey"></a>Manage-bde: чанжекэй
 
 
 
@@ -36,21 +36,21 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Диск >|Представляет букву диска, за которым следует двоеточие.|
-|\<PathToExternalKeyDirectory >|Представляет расположение каталога, чтобы сохранить файл ключа внешних запуска, который может использоваться для разблокировки диска.|
-|-computername|Указывает, что Manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать **- cn** как сокращенную версию этой команды.|
-|\<Имя >|Представляет имя компьютера, на которой требуется изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
-|-? или /?|Отображение кратких справки в командной строке.|
-|-help или -h|Отображает полную справку в командной строке.|
+|@no__t 0Drive >|Представляет букву диска, за которой следует двоеточие.|
+|@no__t 0PathToExternalKeyDirectory >|Представляет расположение каталога, в котором сохраняется внешний файл ключа запуска, который можно использовать для разблокировки диска.|
+|-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
+|\<Имя >|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|-? или/?|Отображает краткую справку в командной строке.|
+|-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-В следующем примере демонстрируется использование **- changekey** команду, чтобы создать новый ключ запуска на диске E для использования с шифрованием BitLocker на диске C.
+В следующем примере показано использование команды **-чанжекэй** для создания нового ключа запуска на диске E для использования с шифрованием BitLocker на диске C.
 ```
 manage-bde –changekey C: E:\
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [Готов](manage-bde.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Управление — BDE](manage-bde.md)

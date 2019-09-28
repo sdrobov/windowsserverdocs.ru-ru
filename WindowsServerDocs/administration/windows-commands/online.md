@@ -1,8 +1,8 @@
 ---
 title: в сети
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8063ac09b1d8d9bf4dd4e6665c1725fcb77ae89
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 489cef1ad4dc5fec5f477f95a6f2fad391b3bf02
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59828115"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372492"
 ---
 # <a name="online"></a>в сети
 
 
 
-Принимает автономный диск или том в оперативный режим.
+Принимает автономный диск или том в состояние "в сети".
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,8 +37,8 @@ Offline volume
 
 |Параметр|Описание|
 |---------|-----------|
-|[автономный диск](offline-disk.md)|Принимает автономный диск с фокусом в оперативный режим.|
-|[Отключенный том](offline-volume.md)|Переводит том вне сети с фокусом в оперативный режим.|
+|[Автономный диск](offline-disk.md)|Переключается на автономный диск, находящиеся в состоянии "в сети".|
+|[Автономный том](offline-volume.md)|Переключается на автономный том, чтобы перейти в состояние "в сети".|
 
 #### <a name="additional-references"></a>Дополнительная справка
 

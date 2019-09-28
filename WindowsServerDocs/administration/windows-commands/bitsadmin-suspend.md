@@ -1,8 +1,8 @@
 ---
 title: bitsadmin suspend
-description: Раздел Windows команды для **bitsadmin приостановить** -приостанавливает работу указанного задания.
+description: Раздел команд Windows для **битсадмин Suspend** — приостановка указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 87e1bbd1b068d68fb60655043735c6c1aeb07707
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a3a484df2b50cdc8893512020b835f913793d2c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59825925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380378"
 ---
 # <a name="bitsadmin-suspend"></a>bitsadmin suspend
 
-> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Приостанавливает работу указанного задания.
+Приостанавливает указанное задание.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,15 +36,15 @@ bitsadmin /Suspend <Job>
 
 |Параметр|Описание|
 |-------|--------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-Чтобы перезапустить задание, используйте [bitsadmin resume](bitsadmin-resume.md) переключения.
+Чтобы перезапустить задание, используйте параметр [возобновления битсадмин](bitsadmin-resume.md) .
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример приостанавливает задание с именем *myDownloadJob*.
+В следующем примере приостанавливается задание с именем *мидовнлоаджоб*.
 
 ```
 C:\>bitsadmin /Suspend myDownloadJob
@@ -52,4 +52,4 @@ C:\>bitsadmin /Suspend myDownloadJob
 
 #### <a name="additional-references"></a>Дополнительные ссылки
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

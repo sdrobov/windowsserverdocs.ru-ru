@@ -1,8 +1,8 @@
 ---
 title: dispdiag
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c96c70aac1b3329e050fa8b02743e61fed44d15
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9b640883a207648d2ef6c9a7d6e5366cd0bb384c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831465"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71377764"
 ---
 # <a name="dispdiag"></a>dispdiag
 
 
 
-В журналах отображаются сведения в файл.
+Журналы отображают сведения в файле.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,8 +36,8 @@ dispdiag [-testacpi] [-d] [-delay <Seconds>] [-out <FilePath>]
 
 |Параметр|Описание|
 |---------|-----------|
-|-testacpi|Запускает тест диагностики сочетание клавиш. Отображает имя ключа, кода и проверки кода для любого ключа нажаты во время теста.|
+|-тестакпи|Выполняет тестовую диагностику с сочетанием клавиш. Отображает имя ключа, код и код сканирования для любой клавиши, нажатой во время теста.|
 |-d|Создает файл дампа с результатами теста.|
-|-delay \<секунд >|Задерживает сбор данных на указанное время в *секунд*.|
-|-out \<FilePath >|Указывает путь и имя файла для сохранения собранных данных. Это должен быть последним параметром.|
-|-?|Отображает доступные параметры и предоставляет справку по их использованию.|
+|-Delay \<Seconds >|Задерживает сбор данных в указанное время в *секундах*.|
+|-out @no__t — 0FilePath >|Указывает путь и имя файла для сохранения собранных данных. Это должен быть последний параметр.|
+|-?|Отображает доступные параметры команды и предоставляет справку по их использованию.|

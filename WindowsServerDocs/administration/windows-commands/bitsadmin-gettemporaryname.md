@@ -1,8 +1,8 @@
 ---
-title: bitsadmin gettemporaryname
-description: Раздел Windows команды для **bitsadmin gettemporaryname** -сообщает временного имени файла для заданного файла, в рамках задания.
+title: битсадмин жеттемпораринаме
+description: Раздел команд Windows для **битсадмин жеттемпораринаме** . сообщает о временном имени файла заданного в задании.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 762a2a5943202b38e94a245b74745e6631e0792d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7b665fae4c0bfdd5ea04b929be49f9590430b358
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59876715"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381302"
 ---
-# <a name="bitsadmin-gettemporaryname"></a>bitsadmin gettemporaryname
+# <a name="bitsadmin-gettemporaryname"></a>битсадмин жеттемпораринаме
 
 
 
-Сообщает временного имени файла для заданного файла, в рамках задания.
+Сообщает имя временного файла заданного файла в задании.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,16 +36,16 @@ bitsadmin /GetTemporaryName <Job> <file index>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 |Индекс файла|Начинается с 0|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере сообщается временного имени файла, файла 2 задания с именем *myJob*.
+В следующем примере выводится временное имя файла 2 для задания с именем *myJob*.
 ```
 C:\>bitsadmin /GetTemporaryName myJob 1 
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

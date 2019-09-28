@@ -1,8 +1,8 @@
 ---
 title: reg
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,39 +13,39 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a4ca4f354462c1e34b1ccd6357913e3b72d569b8
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 196c32775fe17afc29d75969ec2ba98465768cce
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838035"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371707"
 ---
 # <a name="reg"></a>reg
 
 
 
-Выполняет операции на данные подраздела реестра и значения реестра. **Reg** следующие команды:
+Выполняет операции с данными подраздела реестра и значениями в записях реестра. В число команд **reg** входят следующие:
 
-[Добавление REG](reg-add.md)
+[Reg add](reg-add.md)
 
-[Сравнение REG](reg-compare.md)
+[Reg compare](reg-compare.md)
 
-[Копировать REG](reg-copy.md)
+[Reg copy](reg-copy.md)
 
-[reg delete](reg-delete.md)
+[Reg delete](reg-delete.md)
 
-[reg export](reg-export.md)
+[Reg export](reg-export.md)
 
-[reg import](reg-import.md)
+[Reg import](reg-import.md)
 
-[REG нагрузки](reg-load.md)
+[Reg load](reg-load.md)
 
-[reg query](reg-query.md)
+[Reg query](reg-query.md)
 
-[Восстановление REG](reg-restore.md)
+[Reg restore](reg-restore.md)
 
-[REG сохранить](reg-save.md)
+[Reg save](reg-save.md)
 
-[reg unload](reg-unload.md)
+[Reg unload](reg-unload.md)
 
-Некоторые операции позволяют просмотреть или настроить записи реестра на локальном или удаленных компьютерах, а другие можно настроить только на локальных компьютерах. С помощью **reg** для настройки реестра удаленных компьютеров ограничивает параметры, которые можно использовать в некоторых операций. Проверьте синтаксис и параметры для каждой операции, чтобы убедиться, что они могут использоваться на удаленных компьютерах
+Некоторые операции позволяют просматривать или настраивать записи реестра на локальных или удаленных компьютерах, в то время как другие позволяют настраивать только локальные компьютеры. Использование **reg** для настройки реестра удаленных компьютеров ограничивает параметры, которые можно использовать в некоторых операциях. Проверьте синтаксис и параметры каждой операции, чтобы убедиться, что они могут использоваться на удаленных компьютерах.

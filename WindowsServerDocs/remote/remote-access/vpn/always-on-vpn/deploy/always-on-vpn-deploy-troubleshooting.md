@@ -1,7 +1,7 @@
 ---
 title: Устранение неполадок постоянно подключенного VPN-профиля
 description: В этом разделе приведены инструкции по проверке и устранению неполадок Always On развертывании VPN в Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.date: 06/11/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 60873c8bbf71ad5afa58bd9e19b1a3fd650bc65f
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 649fbc16e3dfef2ed1061d0ba6a5c22a8712b186
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871347"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404380"
 ---
 # <a name="troubleshoot-always-on-vpn"></a>Устранение неполадок постоянно подключенного VPN-профиля 
 
@@ -118,7 +118,7 @@ ms.locfileid: "70871347"
 
 ## <a name="nps-logs"></a>Журналы NPS
 
-NPS создает и сохраняет журналы учета NPS. По умолчанию они хранятся в файлах% systemroot%\\system32\\\\ в файле с именем*XXXX*. txt, где *XXXX* — это Дата создания файла.
+NPS создает и сохраняет журналы учета NPS. По умолчанию они хранятся в папке% SYSTEMROOT% \\System32 @ no__t-1Logfiles @ no__t-2 в файле с именем*XXXX*. txt, где *XXXX* — это Дата создания файла.
 
 По умолчанию эти журналы находятся в формате значений с разделителями-запятыми, но не содержат строки заголовка. Строка заголовка:
 

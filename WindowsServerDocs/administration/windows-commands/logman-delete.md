@@ -1,8 +1,8 @@
 ---
 title: logman delete
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e396d79dc936f56a69fac9469c020348640f1094
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 8360a4955a5ebed3eb25fda77acf587c56fbf5d6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66437781"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374434"
 ---
 # <a name="logman-delete"></a>logman delete
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Удаление существующего сборщика данных.  
 
@@ -34,14 +34,14 @@ logman delete <[-n] <name>> [options]
 
 |        Параметр        |                                                                               Описание                                                                               |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|           /?            |                                                                    Отображение контекстной справки.                                                                     |
-|   -s <computer name>    |                                                          Выполнение команды на удаленный компьютер.                                                          |
+|           /?            |                                                                    Отображает контекстную справку.                                                                     |
+|   -s <computer name>    |                                                          Выполните команду на указанном удаленном компьютере.                                                          |
 |     -config <value>     |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
-|       [-n]. <name>       |                                                                   Имя целевой сборщика данных.                                                                    |
-|          -ets           |                                              Отправьте команды сеансам трассировки событий напрямую без сохранения или планирования.                                               |
-| -[-]u <user [password]> | Указывает пользователя для запуска от имени. Введя \* для пароля выводит приглашение для ввода пароля. Пароль не отображается при вводе пароля. |
+|       [-n] <name>       |                                                                   Имя целевого сборщика данных.                                                                    |
+|          -ETS           |                                              Отправка команд в сеансы трассировки событий напрямую без сохранения или планирования.                                               |
+| -[-] u < пользователь [пароль] > | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 
-## <a name="BKMK_examples"></a>Примеры  
+## <a name="BKMK_examples"></a>Примеров  
 Следующая команда удаляет perf_log сборщика данных.  
 ```  
 logman delete perf_log  

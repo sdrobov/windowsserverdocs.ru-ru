@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getproxybypasslist
-description: Раздел Windows команды для **bitsadmin getproxybypasslist** -извлекает список обхода прокси-сервера для указанного задания.
+description: Раздел команд Windows для **битсадмин жетпроксибипасслист** — извлекает список обхода прокси-сервера для указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 020b8fc0019eb103a0e469258be8705b80dd45de
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 87cc131402707eac40329750e98218ec52083b94
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59854115"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381418"
 ---
 # <a name="bitsadmin-getproxybypasslist"></a>bitsadmin getproxybypasslist
 
@@ -34,19 +34,19 @@ bitsadmin /GetProxyBypassList <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-В списке пропускаемых адресов содержит имена узлов или IP-адреса или оба параметра, они не будут направляться через прокси-сервер. Список может содержать "\<локальный >» для ссылки на все серверы в той же локальной сети. Список может быть точкой с запятой или с разделителями пробелами.
+Список обхода содержит имена узлов или IP-адреса, которые не направляются через прокси-сервер. Список может содержать "\<local >" для ссылки на все серверы в одной локальной сети. Список может быть разделен точкой с запятой или пробелами.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается список обхода прокси-сервера для задания с именем *myDownloadJob*.
+В следующем примере извлекается список обхода прокси-сервера для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetProxyBypassList myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

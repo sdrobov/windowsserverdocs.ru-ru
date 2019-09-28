@@ -1,8 +1,8 @@
 ---
 title: импорт
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddef3958bc431519e3cb89b658a58d1f4dba6938
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 50a095c323806dd523994c36c5b427d4ecedf8ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835265"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375502"
 ---
 # <a name="import"></a>импорт
 
 
 
-Импортирует переносимой теневой копии из загруженных метаданных файла в систему.
+импортирует переносимую теневую копию из загруженного файла метаданных в систему.
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -36,12 +36,12 @@ import
 
 ## <a name="remarks"></a>Примечания
 
--   Немедленно переносимых теневых копий не хранятся в системе. Сведения о них хранятся в файле резервной копии компонентов документа XML, который DiskShadow автоматически запрашивает и сохраняет в CAB-файл метаданных в рабочем каталоге. Можно изменить путь и имя этого файла с помощью **задать метаданные** команды.
--   Перед использованием **импорта**, необходимо загрузить файл метаданных DiskShadow с помощью **загрузить метаданные** команды.
+-   Переносимые теневые копии не сохраняются немедленно в системе. Их сведения хранятся в XML-файле документа компонентов резервного копирования, который DiskShadow автоматически запрашивает и сохраняет в файле метаданных. cab в рабочем каталоге. Путь и имя этого файла можно изменить с помощью команды **Set Metadata** .
+-   Прежде чем можно будет использовать **Импорт**, необходимо загрузить файл метаданных Diskshadow с помощью команды **загрузить метаданные** .
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Ниже приведен пример сценария DiskShadow, который демонстрирует использование **импорта** команды:
+Ниже приведен пример скрипта DiskShadow, демонстрирующий использование команды **Import** :
 ```
 #Sample DiskShadow script demonstrating IMPORT
 SET CONTEXT PERSISTENT
@@ -61,4 +61,4 @@ IMPORT
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

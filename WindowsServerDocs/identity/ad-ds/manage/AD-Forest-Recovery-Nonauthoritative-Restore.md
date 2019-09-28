@@ -1,39 +1,39 @@
 ---
-title: Восстановление леса AD - непринудительное восстановление
+title: Восстановление леса Active Directory — неполномочное восстановление
 description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
 ms.date: 08/09/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.assetid: e4ce1d18-d346-492a-8bca-f85513aa3ac1
 ms.technology: identity-adds
-ms.openlocfilehash: 65e33e6507d2affc4d07cc0780a7baf91a170a09
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: d7792cd739931d758125c8946606beb043ce19dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280590"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71369088"
 ---
-# <a name="performing-a-nonauthoritative-restore-of-active-directory-domain-services"></a>Выполняет принудительное восстановление доменных служб Active Directory 
+# <a name="performing-a-nonauthoritative-restore-of-active-directory-domain-services"></a>Выполнение неполномочного восстановления служб домен Active Directory 
 
 >Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
-Чтобы выполнить непринудительное восстановление, выполните следующую процедуру.  
+Чтобы выполнить неполномочное восстановление, выполните следующую процедуру.  
   
-В следующих процедурах используются Wbadmin.exe для выполнения непринудительное восстановление Active Directory или доменных служб Active Directory (AD DS). При использовании другого решения резервного копирования, или если вы собираетесь выполнить Полномочное восстановление SYSVOL позже в процессе восстановления леса, нужно выполнить Полномочное восстановление SYSVOL с помощью этих альтернативных методов.  
+В следующих процедурах используется программа WBADMIN. exe для выполнения неполномочного восстановления Active Directory или служб домен Active Directory (AD DS). Если вы используете другое решение для резервного копирования или планируете выполнить полномочное восстановление SYSVOL позже в процессе восстановления леса, можно выполнить полномочное восстановление SYSVOL с помощью следующих альтернативных методов:  
   
-- Если вы используете службы репликации файлов (FRS) для репликации SYSVOL, выполните действия, описанные в [статьи 290762](https://go.microsoft.com/fwlink/?LinkId=148443) в базе знаний Майкрософт, с помощью **BurFlags** раздел реестра для повторной инициализации репликации FRS Задает или при необходимости статьи 315457 [315457](https://support.microsoft.com/kb/315457)для перестроения дерева SYSVOL. Чтобы определить, если SYSVOL реплицируется с FRS, см. в разделе [папки SYSVOL определение ли контроллера домена реплицируется с DFSR или FRS](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).  
-- Если вы используете репликации распределенной файловой системы (DFS) для репликации SYSVOL, см. в разделе [выполнения заслуживающую доверия синхронизацию SYSVOL с репликацией DFSR](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md).  
+- Если для репликации SYSVOL используется служба репликации файлов (FRS), выполните действия, описанные в [статье 290762](https://go.microsoft.com/fwlink/?LinkId=148443) базы знаний Майкрософт, с помощью раздела реестра **BurFlags** для повторной инициализации наборов реплик FRS или при необходимости см. статью 315457 [. 315457](https://support.microsoft.com/kb/315457). перестроение дерева SYSVOL. Сведения о том, как определить, реплицируется ли SYSVOL с помощью FRS, см. в разделе [Определение репликации папки SYSVOL контроллера домена с помощью DFSR или FRS](https://msdn.microsoft.com/library/windows/desktop/cc507518.aspx#determining_whether_a_domain_controller_s_sysvol_folder_is_replicated_by_dfsr_or_frs).  
+- Если для репликации SYSVOL используется репликация распределенная файловая система (DFS), см. статью [выполнение полномочной синхронизации SYSVOL, реплицированной](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)с помощью DFSR.  
 
-## <a name="performing-a-nonauthoritative-restore"></a>Выполнение непринудительное восстановление
+## <a name="performing-a-nonauthoritative-restore"></a>Выполнение неполномочного восстановления
 
-Используйте следующую процедуру для выполнения непринудительное восстановление AD DS и SYSVOL Полномочное восстановление в то же время с помощью wbadmin.exe на Контроллере домена, выполняется Windows Server 2012, Windows Server 2008 R2 или Windows Server 2008. Резервное копирование необходимо явно включить данные о состоянии системы; Архив всего сервера, используемый для восстановления всего сервера не будет работать. Дополнительные сведения о создании резервной копии состояния системы см. в разделе [резервное копирование данных состояния системы](AD-Forest-Recovery-Backing-up-System-State.md).  
+Используйте следующую процедуру для выполнения неполномочного восстановления AD DS и полномочного восстановления SYSVOL одновременно с помощью программы WBADMIN. exe на контроллере домена под управлением Windows Server 2012, Windows Server 2008 R2 или Windows Server 2008. Резервная копия должна содержать данные состояния системы явным образом. полное резервное копирование сервера, используемое для полного восстановления сервера, не будет работать. Дополнительные сведения о создании резервной копии состояния системы см. [в разделе Резервное копирование данных о состоянии системы](AD-Forest-Recovery-Backing-up-System-State.md).  
   
-### <a name="to-perform-a-nonauthoritative-restore-of-ad-ds-and-authoritative-restore-of-sysvol-using-wbadminexe"></a>Для выполнения непринудительное восстановление, службы AD DS и принудительное восстановление с помощью wbadmin.exe SYSVOL  
+### <a name="to-perform-a-nonauthoritative-restore-of-ad-ds-and-authoritative-restore-of-sysvol-using-wbadminexe"></a>Выполнение неполномочного восстановления AD DS и полномочного восстановления SYSVOL с помощью WBADMIN. exe  
   
-- Включить **- authsysvol** переключиться в команду восстановления, как показано в следующем примере:  
+- Включите параметр **-ауссисвол** в команду восстановления, как показано в следующем примере:  
 
    ```  
    wbadmin start systemstaterecovery <otheroptions> -authsysvol  

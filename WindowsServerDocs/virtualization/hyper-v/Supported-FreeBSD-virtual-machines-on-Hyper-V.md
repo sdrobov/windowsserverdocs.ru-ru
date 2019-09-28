@@ -1,7 +1,7 @@
 ---
 title: Поддерживаемые виртуальные машины FreeBSD в Hyper-V
 description: Список служб и компонентов интеграции Linux, входящих в каждую версию
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 930e758f-bd50-46b4-a3a4-9857110f17b4
 author: shirgall
 ms.author: kathydav
 ms.date: 08/30/2017
-ms.openlocfilehash: 3ca1de87469c30a8cadbf047e77aff441145a499
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: b7b02e1ec93d6255412a89e7e7d7b8246cf5e50e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869479"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365507"
 ---
 # <a name="supported-freebsd-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины FreeBSD в Hyper-V
 
@@ -46,7 +46,7 @@ ms.locfileid: "70869479"
 |Сегментация TCP и разгрузка контрольной суммы|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|||
 |Разгрузка крупного приема (ЛРО)|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;||||
 |SR-IOV;|2019, 2016|||||||
-|**[Хранилище](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Примечание 1|Примечание 1|Примечание 1|Примечание 1|Примечание 1, 2|Примечание 1, 2|
+|**[Объема](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||Примечание 1|Примечание 1|Примечание 1|Примечание 1|Примечание 1, 2|Примечание 1, 2|
 |Изменение размера VHDX|2019, 2016, 2012 R2|&#10004;Примечание 7|&#10004;Примечание 7|||||
 |виртуальный адаптер Fibre Channel;|2019, 2016, 2012 R2|||||||
 |Динамическая Архивация виртуальных машин|2019, 2016, 2012 R2|&#10004;||||||

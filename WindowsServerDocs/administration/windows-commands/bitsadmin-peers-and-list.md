@@ -1,8 +1,8 @@
 ---
-title: bitsadmin коллег и список
-description: Разделе команд Windows для **bitsadmin одноранговые элементы и перечисления** -список всех одноранговых узлов.
+title: одноранговые узлы и список битсадмин
+description: Раздел команд Windows для **одноранговых узлов и списков битсадмин** . список всех узлов.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb6535b7250f49b38f6205f289a8e5dca59023d7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b3e088740117bcd94105d80e1bc4b6c59ad5e965
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380915"
 ---
-# <a name="bitsadmin-peers-and-list"></a>bitsadmin коллег и список
+# <a name="bitsadmin-peers-and-list"></a>одноранговые узлы и список битсадмин
 
 
 
-Список всех одноранговых узлов.
+Список всех узлов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ ms.locfileid: "59853485"
 bitsadmin /Peers /List 
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере перечисляются все одноранговые узлы.
+В следующем примере перечисляются все узлы.
 ```
 C:\>bitsadmin /Peers /List
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

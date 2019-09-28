@@ -1,8 +1,8 @@
 ---
 title: serverceipoptin
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fca2497af308faf298e1df03d8b07c68bf9e8b98
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f400a8f66f15e5a138cf355ad54d276cfa7f3ce3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59840565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371008"
 ---
 # <a name="serverceipoptin"></a>serverceipoptin
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Позволяет участвовать в программе улучшения качества клиента (CEIP).
+Позволяет участвовать в программа улучшения качества программного обеспечения (CEIP).
 ## <a name="syntax"></a>Синтаксис
 ```
 serverceipoptin [/query] [/enable] [/disable]
@@ -32,23 +32,23 @@ serverceipoptin [/query] [/enable] [/disable]
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/ Query|Проверяет текущее значение параметра.|
-|/ Enable|Активирует участие.|
-|/ Disable|Отключает участие.|
+|/Query|проверяет текущее значение параметра.|
+|разрешение|Включает участие.|
+|/Disable|Отключает участие.|
 |/?|Отображение справки в командной строке.|
-## <a name="BKMK_Examples"></a>Примеры
-Чтобы проверить текущие параметры, введите следующую команду:
+## <a name="BKMK_Examples"></a>Примеров
+Чтобы проверить текущие параметры, введите:
 ```
 serverceipoptin /query
 ```
-Чтобы включить участие, введите следующую команду:
+Чтобы включить участие, введите:
 ```
 serverceipoptin /enable
 ```
-Чтобы отказаться от участия, введите:
+Чтобы отключить участие, введите:
 ```
 serverceipoptin /disable
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

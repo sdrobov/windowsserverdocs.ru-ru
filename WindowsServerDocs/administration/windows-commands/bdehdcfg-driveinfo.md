@@ -1,8 +1,8 @@
 ---
-title: bdehdcfg driveinfo
-description: 'Раздел Windows команды для ** bdehdcfg: driveinfo ** — отображает букву диска, общий размер, максимальное свободное пространство и характеристики секции.'
+title: BdeHdCfg дривеинфо
+description: 'Раздел команд Windows для * * BdeHdCfg: дривеинфо * * — отображает букву диска, общий размер, максимальный объем свободного пространства и характеристики секции.'
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b2dd62e34f8205e0b5d395ba759fff4b4937b0ad
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: b0f4541bfd71fb7639d18e6e548559ed02918815
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435041"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382268"
 ---
-# <a name="bdehdcfg-driveinfo"></a>Bdehdcfg: driveinfo
+# <a name="bdehdcfg-driveinfo"></a>BdeHdCfg: дривеинфо
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает имя диска, общий размер, максимальное свободное пространство и характеристики секции. Отображаются только допустимые разделы. Если существует четыре секции основной или дополнительный незанятое пространство отсутствует. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Отображает букву диска, общий размер, максимальный объем свободного пространства и характеристики секции. В списке перечислены только допустимые секции. Нераспределенное место отсутствует в списке, если уже существуют четыре первичных или расширенных раздела. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 ## <a name="syntax"></a>Синтаксис
 ```
 bdehdcfg -driveinfo <DriveLetter>
@@ -33,12 +33,12 @@ bdehdcfg -driveinfo <DriveLetter>
 
 |   Параметр   |                  Описание                  |
 |---------------|-----------------------------------------------|
-| <DriveLetter> | Указывает букву диска, за которым следует двоеточие. |
+| <DriveLetter> | Указывает букву диска, за которой следует двоеточие. |
 
 ## <a name="remarks"></a>Примечания
-Команда носит исключительно информационный характер и делает без изменений на диск.
-## <a name="BKMK_Examples"></a>Пример
-Следующий пример кода отображает сведения о накопителе для диска C.
+Команда предназначена только для информационных целей и не вносит изменения в диск.
+## <a name="BKMK_Examples"></a>Например
+В следующем примере отображаются сведения о диске для диска C.
 ```
 bdehdcfg  driveinfo C:
 ```

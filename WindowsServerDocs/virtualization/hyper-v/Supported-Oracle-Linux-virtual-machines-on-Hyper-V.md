@@ -1,7 +1,7 @@
 ---
 title: Поддерживаемые виртуальные машины Oracle Linux в Hyper-V
 description: Список служб и компонентов интеграции Linux, входящих в каждую версию
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: c02fdb5b-62f3-43cb-a190-ab74b3ebcf77
 author: shirgall
 ms.author: kathydav
 ms.date: 06/01/2017
-ms.openlocfilehash: 3005907a085d1769716105f570f47f0114eae68d
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 4b09b8e760ce716da7f5aa6abecbead52293e77b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544710"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365495"
 ---
 # <a name="supported-oracle-linux-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Oracle Linux в Hyper-V
 
@@ -30,7 +30,7 @@ ms.locfileid: "68544710"
 
 * [Неразрывная Корпоративная серия ядра](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_uek)
 
-* [Заметки о](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_notes)
+* [Примечания](Supported-Oracle-Linux-virtual-machines-on-Hyper-V.md#BKMK_notes)
 
 ## <a name="table-legend"></a>Условные обозначения таблицы
 
@@ -40,7 +40,7 @@ ms.locfileid: "68544710"
 
 * (*пусто*) — функция недоступна
 
-* **UEK R\*x qu\*y** — неразрывный корпоративный ядра (UEK), где *x* — это номер выпуска, а *y* — ежеквартальное обновление.
+* **UEK R @ no__t-1x qu @ no__t-2Y** -неразрывный корпоративный ядра (UEK), где *x* — это номер выпуска, а *y* — ежеквартальное обновление.
 
 ## <a name="BKMK_rhc"></a>Серия ядра, совместимая с Red Hat
 
@@ -145,7 +145,7 @@ Oracle Linux неработоспособный корпоративный яд�
 
    1. Создайте файл **/etc/udev/Rules.d/100-Balloon.rules**. Для файла можно использовать любое другое требуемое имя.
 
-   2. Добавьте в файл следующее содержимое:`SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`
+   2. Добавьте в файл следующее содержимое: `SUBSYSTEM=="memory", ACTION=="add", ATTR{state}="online"`.
 
    3. Перезагрузите систему, чтобы включить поддержку горячего добавления.
 

@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getproxyusage
-description: Раздел Windows команды для **bitsadmin getproxyusage** — получает параметр использования прокси-сервера для указанного задания.
+description: Раздел команд Windows для **битсадмин жетпроксюсаже** — получение параметра использования прокси-сервера для указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 20ba418b8dfcf3d96d9b20b22e53797a232a13f1
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ea9a22f4fb35af3436d02d9f23b62ce0888a26b0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863885"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381288"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
 
 
-Получает параметр использования прокси-сервера для указанного задания.
+Извлекает параметр использования прокси-сервера для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,23 +36,23 @@ bitsadmin /GetProxyUsage <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-Возможными значениями являются:
--   НАСТРОЕННОГО — использовать значения по умолчанию Internet Explorer владельца.
+Возможные значения:
+-   Преднастройка — используйте значения по умолчанию для свойства Owner в Internet Explorer.
 -   NO_PROXY — не использовать прокси-сервер.
--   ПЕРЕОПРЕДЕЛИТЬ — использовать список явных прокси-сервера.
--   АВТООБНАРУЖЕНИЕ — автоматическое определение параметров прокси-сервера.
+-   Переопределение — Используйте явный список прокси-серверов.
+-   Автообнаружение — автоматическое определение параметров прокси-сервера.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается использование прокси-сервера для задания с именем *myDownloadJob*.
+В следующем примере извлекается использование прокси-сервера для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetProxyUsage myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

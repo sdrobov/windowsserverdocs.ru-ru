@@ -1,8 +1,8 @@
 ---
 title: FTP mkdir
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a03bb9766ffe62a80e8661bf8ce2a8eea2ce536b
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 900548cbca67c53887d2d46b4e05612ed00a1660
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438564"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376240"
 ---
 # <a name="ftp-mkdir"></a>FTP: mkdir
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 создает каталог на удаленном компьютере.   
 ## <a name="syntax"></a>Синтаксис  
@@ -33,10 +33,10 @@ mkdir <directory>
 
 |  Параметр  |                   Описание                   |
 |-------------|-------------------------------------------------|
-| <directory> | Указывает имя каталога. |
+| <directory> | Указывает имя нового удаленного каталога. |
 
-## <a name="BKMK_Examples"></a>Примеры  
-Создайте каталог с именем **dir1** на удаленном компьютере.  
+## <a name="BKMK_Examples"></a>Примеров  
+Создайте на удаленном компьютере каталог с именем **Dir1** .  
 ```  
 mkdir dir1  
 ```  

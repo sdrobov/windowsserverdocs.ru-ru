@@ -1,8 +1,8 @@
 ---
-title: ksetup:addkpasswd
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: аддкпассвд'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a85eb6dfe30c33126504744a7659fe2cc573087
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 72c27cb6b068dc46cd58e753b4b08d68b39bfb20
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856825"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375190"
 ---
-# <a name="ksetupaddkpasswd"></a>ksetup:addkpasswd
+# <a name="ksetupaddkpasswd"></a>ksetup: аддкпассвд
 
 
 
-Добавляет адрес сервера пароль (Kpasswd) Kerberos для сферы. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Добавляет адрес сервера пароля Kerberos (Кпассвд) для области. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,31 +34,31 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 ### <a name="parameters"></a>Параметры
 
-Если области Kerberos, что рабочая станция проверки подлинности для поддержки Kerberos изменить протокол паролей, можно настроить клиентский компьютер под управлением ОС Windows, чтобы использовать сервер пароль Kerberos. Этот параметр настроен со стороны сферы.
+Если область Kerberos, в которой выполняется проверка подлинности на рабочей станции, поддерживает протокол Kerberos для изменения пароля, можно настроить клиентский компьютер под управлением операционной системы Windows для использования сервера паролей Kerberos. Этот параметр настраивается на стороне области.
 
 |Параметр|Описание|
 |---------|-----------|
-|\<RealmName>|Имя области указывается как верхний регистр DNS-имя, например CORP. CONTOSO.COM и для них значение по умолчанию области или области = при **ksetup** выполняется.|
-|\<KpasswdName >|Без учета регистра полное доменное имя, например mitkdc.microsoft.com указанное имя контроллера Kerberos-домена, для использования в качестве сервера пароль Kerberos. Если отсутствует имя KDC, DNS может использоваться для поиска KDC.|
+|@no__t 0RealmName >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или области = при запуске **ksetup** .|
+|@no__t 0KpasswdName >|Имя KDC, которое будет использоваться в качестве сервера паролей Kerberos, указывается как полное доменное имя без учета регистра, например mitkdc.microsoft.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS.|
 
 ## <a name="remarks"></a>Примечания
 
-Если области Kerberos, что рабочая станция проверки подлинности для поддержки Kerberos изменить протокол паролей, можно настроить клиентский компьютер под управлением ОС Windows, чтобы использовать сервер пароль Kerberos.
+Если область Kerberos, в которой выполняется проверка подлинности на рабочей станции, поддерживает протокол Kerberos для изменения пароля, можно настроить клиентский компьютер под управлением операционной системы Windows для использования сервера паролей Kerberos.
 
-Выполните команду **ksetup** для проверки имени контроллера Kerberos-домена. Если **kpasswd =** не отображается в выходных данных, сопоставление не настроен.
+Выполните команду **ksetup** , чтобы проверить имя KDC. Если **кпассвд =** не отображается в выходных данных, сопоставление не было настроено.
 
-Одновременно можно добавить дополнительные одному имени контроллера Kerberos-домена.
+Можно добавить дополнительные имена KDC по одному.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Настроить область, CORP. CONTOSO.COM, так что он использует сервер KDC, отличных от Windows, mitkdc.contoso.com, сервер паролей:
+Настройте область, CORP. CONTOSO.COM, чтобы в качестве сервера паролей использовался сервер, отличный от Windows KDC, mitkdc.contoso.com:
 ```
 ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Результатом на сервере Windows Kerberos пароль, который контролирует все пароли для проверки подлинности между ним и области.
+Это приводит к подлинности сервера паролей Kerberos, отличного от Windows, который управляет всеми паролями для аутентификации между ним и областью.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [ksetup:delkpasswd](ksetup-delkpasswd.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Ksetup:delkpasswd](ksetup-delkpasswd.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
