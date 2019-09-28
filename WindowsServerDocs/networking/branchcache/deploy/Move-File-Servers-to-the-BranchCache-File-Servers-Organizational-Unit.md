@@ -1,38 +1,38 @@
 ---
 title: Перемещение файловых серверов в подразделение файловых серверов BranchCache
-description: Этот раздел является частью BranchCache развертывания руководство для Windows Server 2016, который показывает, как развернуть BranchCache в режимах распределенный и размещенный кэш, чтобы оптимизировать использование пропускной способности глобальной сети в филиалах
+description: Эта статья является частью руководства по развертыванию BranchCache для Windows Server 2016, в котором показано, как развернуть BranchCache в распределенном и размещенном режимах кэша для оптимизации использования пропускной способности глобальной сети в филиалах.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 56c915ec-edb1-43b0-8ad2-c93841bb566f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 037b354bb6725ac7f91fc323b81bbdf15d03ac15
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ad297e25f258140fce4af3f825e362f62748c77d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59885905"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71356531"
 ---
 # <a name="move-file-servers-to-the-branchcache-file-servers-organizational-unit"></a>Перемещение файловых серверов в подразделение файловых серверов BranchCache
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Эту процедуру можно использовать для добавления BranchCache файловых серверов с подразделением (OU) в доменных службах Active Directory (AD DS).  
+Эту процедуру можно использовать для добавления файловых серверов BranchCache в подразделение (OU) в домен Active Directory Services (AD DS).  
   
 Минимальным требованием для выполнения этой процедуры является членство в группе **Администраторы домена** или аналогичной.  
   
 > [!NOTE]  
-> Прежде чем добавлять учетные записи компьютеров в подразделение, с помощью этой процедуры, необходимо создать Подразделение BranchCache для файловых серверов в консоли Active Directory — пользователи и компьютеры. Дополнительные сведения см. в разделе [Создание BranchCache файл серверы подразделения](../../branchcache/deploy/Create-the-BranchCache-File-Servers-Organizational-Unit.md).  
+> Перед добавлением учетных записей компьютеров в подразделение с помощью этой процедуры необходимо создать подразделение файловых серверов BranchCache в консоли Active Directory пользователи и компьютеры. Дополнительные сведения см. [в разделе Создание подразделения файловых серверов BranchCache](../../branchcache/deploy/Create-the-BranchCache-File-Servers-Organizational-Unit.md).  
   
-### <a name="to-move-file-servers-to-the-branchcache-file-servers-organizational-unit"></a>Для перемещения файловых серверов на BranchCache файл серверы подразделения  
+### <a name="to-move-file-servers-to-the-branchcache-file-servers-organizational-unit"></a>Перемещение файловых серверов в организационное подразделение файловых серверов BranchCache  
   
-1.  На компьютере, где установлены службы AD DS в диспетчере серверов щелкните **средства**, а затем нажмите кнопку **Active Directory — пользователи и компьютеры**. Откроется консоль Active Directory — пользователи и компьютеры.  
+1.  На компьютере, где установлен AD DS, в диспетчер сервера щелкните **средства**, а затем — **Active Directory пользователи и компьютеры**. Откроется консоль Active Directory пользователи и компьютеры.  
   
-2.  В консоли "Active Directory — пользователи и компьютеры" Найдите учетную запись компьютера для файлового сервера BranchCache, щелкните левой кнопкой, выберите учетную запись и затем перетаскивание учетная запись компьютера, на файловых серверах BranchCache OU, созданный ранее. Например, если вы ранее создали Подразделение с именем **BranchCache файловые серверы**перетащите учетная запись компьютера на **BranchCache файловые серверы** Подразделения.  
+2.  В консоли Active Directory пользователи и компьютеры найдите учетную запись компьютера для файлового сервера BranchCache, щелкните ее левой кнопкой мыши, чтобы выбрать учетную запись, а затем перетащите учетную запись компьютера в созданном ранее подразделении файловых серверов BranchCache. Например, если вы ранее создали подразделение с именем **файловые серверы BranchCache**, перетащите учетную запись компьютера в подразделении **файловых серверов BranchCache** .  
   
-3.  Повторите предыдущий шаг для каждого файлового сервера BranchCache в домене, который требуется переместить Подразделение.  
+3.  Повторите предыдущий шаг для каждого файлового сервера BranchCache в домене, который необходимо переместить в подразделение.  
   
 
 

@@ -1,7 +1,7 @@
 ---
 title: Операции обновления
 description: Раздел, посвященный управлению обновлениями, включая процесс утверждения, см. в статье Windows Server Update Service (WSUS).
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-wsus
@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2618586fdc38588bb58e122116345eb88a680a3f
-ms.sourcegitcommit: 6423dfa9cecb3b06bdd563cae113c3e80a4ec330
+ms.openlocfilehash: 7121f6303bef48486720d4cdca4582fd897467c4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71105065"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361480"
 ---
 # <a name="updates-operations"></a>Операции обновления
 
@@ -186,7 +186,7 @@ ms.locfileid: "71105065"
 
 -   Обновления, которые заменяют другое обновление (значок с синим квадратом вверху).
 
-В Windows Server Update Services нет функции, которая автоматически отклоняет заменяемые обновления после утверждения нового обновления. Рекомендуется сначала задать для утверждения значение "не утверждено", а затем использовать мастер очистки сервера, чтобы автоматически отклонить обновление при удовлетворении всех соответствующих условий. Дополнительные сведения можно найти в разделе  [Мастер очистки сервера](the-server-cleanup-wizard.md).
+В Windows Server Update Services нет функции, которая автоматически отклоняет заменяемые обновления после утверждения нового обновления. Рекомендуется сначала задать для утверждения значение "не утверждено", а затем использовать мастер очистки сервера, чтобы автоматически отклонить обновление при удовлетворении всех соответствующих условий. Дополнительные сведения см. в следующих разделах: [Мастер очистки сервера](the-server-cleanup-wizard.md).
 
 ## <a name="approving-superseding-or-superseded-updates"></a>Утверждение заменяемых или заменяемых обновлений
 Как правило, обновление, заменяющее другие обновления, выполняет одно или несколько из следующих действий.

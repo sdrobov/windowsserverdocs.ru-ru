@@ -1,8 +1,8 @@
 ---
-title: С помощью команды новое пространство имен
-description: 'Раздел Windows команды для ***- '
+title: Использование команды New-Namespace
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 50d51101afe95c99b7034fc50b3d30b799ee02ce
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 1df6634bc7598701db050f3d240e41dbb6f06019
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59871155"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363015"
 ---
-# <a name="using-the-new-namespace-command"></a>С помощью команды новое пространство имен
+# <a name="using-the-new-namespace-command"></a>Использование команды New-Namespace
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Создает и настраивает новое пространство имен. Этот параметр следует использовать при наличии только транспортный сервер установлена служба роли. Если у вас есть служба роли сервера развертывания и службы роли транспортного сервера установлен (по умолчанию), используйте [с помощью команды новый MulticastTransmission](using-the-new-multicasttransmission-command.md). Обратите внимание на то, что необходимо зарегистрировать поставщика содержимого, прежде чем использовать этот параметр.
+создает и настраивает новое пространство имен. Этот параметр следует использовать, если установлена только служба роли транспортного сервера. Если у вас установлена служба роли сервера развертывания и служба роли транспортного сервера (по умолчанию), используйте [команду New-мултикасттрансмиссион](using-the-new-multicasttransmission-command.md). Обратите внимание, что перед использованием этого параметра необходимо зарегистрировать поставщик содержимого.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /New-Namespace [/Server:<Server name>]
@@ -40,25 +40,25 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, используется локальный сервер.|
-|/ FriendlyName:<Friendly name>|Указывает понятное имя пространства имен.|
-|[/ Description:<Description>]|Задает описание пространства имен.|
-|/ Пространство имен:<Namespace name>|Задает имя пространства имен. Обратите внимание, что это не понятное имя, и оно должно быть уникальным.<br /><br />-   **Служба роли сервера развертывания**: Для этого параметра используется следующий синтаксис /Namespace:WDS:<Image group>/<Image name>/<Index>. Пример: **WDS:ImageGroup1/Install.wim/1**<br />-   **Служба роли сервера транспорта**: Это значение должно соответствовать имени, заданное при создании пространства имен, на сервере.|
-|/ Поставщик содержимого:<Name>]|Указывает имя поставщика содержимого, которое предоставляет содержимое для пространства имен.|
-|[/ ConfigString:<Configuration string>]|Строка конфигурации для поставщика содержимого.|
-|/Namespacetype: {AutoCast &#124; ScheduledCast}|Задает параметры для передачи. Необходимо указать параметры, используя следующие параметры:<br /><br />-[/ time: <time>] — Задает время начала передачи, используя следующий формат: ГГГГ/мм/DD:hh:mm. Этот параметр применяется только к рассылки по расписанию.<br />-[/ Клиентов: <Number of clients>] — Задает минимальное число клиентов для ожидания перед началом передачи. Этот параметр применяется только к рассылки по расписанию.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы создать пространство имен Автоматическая передача, введите:
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+|/FriendlyName: <Friendly name>|Указывает понятное имя пространства имен.|
+|/Description<Description>]|Задает описание пространства имен.|
+|/Namespace: <Namespace name>|Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<br /><br />**служба роли сервера развертывания**-   : Для этого параметра используется синтаксис/namespace: WDS: <Image group> @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4. Пример: **WDS: ImageGroup1/install. wim/1**<br />**служба роли транспортного сервера**-   : Это значение должно совпадать с именем, заданным при создании пространства имен на сервере.|
+|/Контентпровидер: <Name>]|Указывает имя поставщика содержимого, который предоставит содержимое для пространства имен.|
+|[/Конфигстринг: <Configuration string>]|Задает строку конфигурации для поставщика содержимого.|
+|/Намеспацетипе: {автотрансляция &#124; счедуледкаст}|Задает параметры передачи. Параметры задаются с помощью следующих параметров.<br /><br />-[/Тиме: <time>] — задает время начала передачи с использованием следующего формата: ГГГГ/мм/дд: чч: мм. Этот параметр применяется только к передачам по расписанию.<br />-[/Клиентс: <Number of clients>] — задает минимальное число клиентов для ожидания перед началом передачи. Этот параметр применяется только к передачам по расписанию.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы создать пространство имен автоматического приведения, введите:
 ```
 wdsutil /New-Namespace /FriendlyName:"Custom AutoCast Namespace" /Namespace:"Custom Auto 1" /ContentProvider:MyContentProvider /Namespacetype:AutoCast
 ```
-Чтобы создать пространство имен рассылкой по расписанию, введите следующую команду:
+Чтобы создать пространство имен с расписанием, введите:
 ```
 wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:"Custom Scheduled Namespace" /Namespace:"Custom Auto 1" /ContentProvider:MyContentProvider 
 /Namespacetype:ScheduledCast /time:"2006/11/20:17:00" /Clients:20
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды get-AllNamespaces](using-the-get-allnamespaces-command.md)
-[с помощью команды remove-Namespace](using-the-remove-namespace-command.md) 
- [ Подкоманда: start-пространство имен](subcommand-start-namespace.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды get-аллнамеспацес](using-the-get-allnamespaces-command.md)
+[с помощью команды Remove-Namespace](using-the-remove-namespace-command.md)
+[подкоманда: Start-Namespace](subcommand-start-namespace.md)

@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-DriverPackageFile
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Дриверпаккажефиле
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 264bdb6d51622e6323be00b44014b86cd9662e61
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 21bbe17e56177da5cd2c1bf83c712d256cc794c8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440501"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363149"
 ---
-# <a name="using-the-get-driverpackagefile-command"></a>С помощью команды get-DriverPackageFile
+# <a name="using-the-get-driverpackagefile-command"></a>Использование команды Get-Дриверпаккажефиле
 
 
 
-Отображает сведения о пакете драйверов, включая драйверы и файлы, содержащиеся в ней.
+Отображает сведения о пакете драйверов, включая драйверы и файлы, которые он содержит.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,13 +36,13 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 |         Параметр         |                              Описание                               |
 |---------------------------|------------------------------------------------------------------------|
-| / INF-файл:\<путь к INF-файла > | Указывает полный путь и имя пакета драйвера INF-файла. |
-|    [/ Архитектура: {x86    |                                  IA64                                  |
-|     [/ Show: {драйверы      |                                 Файлы                                  |
+| /Инффиле: \<Inf путь к файлу > | Указывает полный путь и имя файла INF-файла пакета драйвера. |
+|    [/Арчитектуре: {x86    |                                  ia64                                  |
+|     [/Show: {Drivers      |                                 Файлы                                  |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы просмотреть сведения о файле драйвера, введите следующую команду:
+Чтобы просмотреть сведения о файле драйвера, введите:
 ```
 WDSUTIL /Get-DriverPackageFile /InfFile:"C:\temp\1394.inf" /Architecture:x86
 ```

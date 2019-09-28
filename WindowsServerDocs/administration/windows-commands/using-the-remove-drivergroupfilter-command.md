@@ -1,8 +1,8 @@
 ---
-title: С помощью команды remove-DriverGroupFilter
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Remove-Дриверграупфилтер
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a546ead7220273955368c582ac1e3f9b3f61c191
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 75b4a1446b5fb4db4132a39b6e5ba70cd1c4ab4b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59883435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71362925"
 ---
-# <a name="using-the-remove-drivergroupfilter-command"></a>С помощью команды remove-DriverGroupFilter
+# <a name="using-the-remove-drivergroupfilter-command"></a>Использование команды Remove-Дриверграупфилтер
 
 
 
-Удаляет правила фильтрации из группы драйверов на сервере.
+Удаляет правило фильтрации из группы драйверов на сервере.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,13 +36,13 @@ WDSUTIL /Remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server nam
 
 |Параметр|Описание|
 |---------|-----------|
-|/ DriverGroup:\<имя группы >|Задает имя группы драйверов.|
-|[/ Server:\<имя сервера >]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
-|[/ FilterType:\<FilterType >]|Указывает тип фильтра, чтобы удалить из группы. \<FilterType > может принимать одно из следующих:</br>**BiosVendor**</br>**BiosVersion**</br>**Тип корпуса**</br>**Изготовитель**</br>**UUID**</br>**версия ОС**</br>**OsEdition**</br>**OsLanguage**|
+|/Дриверграуп: \<Group имя >|Указывает имя группы драйверов.|
+|[/Server: \<Server имя >]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Филтертипе: @no__t — 0FilterType >]|Указывает тип фильтра, удаляемого из группы. \<FilterType > может быть одним из следующих:</br>**биосвендор**</br>**биосверсион**</br>**чассистипе**</br>**Производителя**</br>**UUID**</br>**OsVersion**</br>**оседитион**</br>**ослангуаже**|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы удалить фильтр, введите одно из следующих:
+Чтобы удалить фильтр, введите один из следующих элементов:
 ```
 WDSUTIL /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer
 ```
@@ -52,4 +52,4 @@ WDSUTIL /Remove-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufa
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
