@@ -1,38 +1,38 @@
 ---
-title: Инициализировать кластер HGS, используя режим AD в лесу-бастионе
+title: Инициализация кластера HGS с помощью режима AD в лесу бастиона
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 887fc8655a6ff3e862fa04b5b450456b04c55718
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: c69561f7d17bb1d36d90fc66cf4c1a196072fc72
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447463"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402367"
 ---
-# <a name="initialize-the-hgs-cluster-using-ad-mode-in-an-existing-bastion-forest"></a>Инициализировать кластер HGS, режиме AD в существующем лесу бастиона
+# <a name="initialize-the-hgs-cluster-using-ad-mode-in-an-existing-bastion-forest"></a>Инициализация кластера HGS с помощью режима AD в существующем лесу бастиона
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 >[!IMPORTANT]
->Аттестацию с доверием администратора (режим AD) является устаревшим, начиная с Windows Server 2019. Для сред, где аттестацию доверенного платформенного МОДУЛЯ не поддерживается, Настройка [размещения Аттестация ключей](guarded-fabric-initialize-hgs-key-mode-bastion.md). Аттестация ключей узла обеспечивает аналогичный уверенность в режим AD и проще в настройке. 
+>Служба аттестации, доверенная для администраторов (режим AD), устарела, начиная с Windows Server 2019. Для сред, в которых невозможно подтвердить аттестацию доверенного платформенного модуля, настройте [аттестацию ключа узла](guarded-fabric-initialize-hgs-key-mode-bastion.md). Аттестация ключа узла обеспечивает аналогичные гарантии в режиме AD и проще в настройке. 
 
-Доменные службы Active Directory устанавливается на компьютере, но должны оставаться ненастроенный.
+Домен Active Directory службы будут установлены на компьютере, но должны остаться ненастроенными.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
 
-Прежде чем продолжить, убедитесь, что предварительно подготовленного кластера объектов для службы защиты узла и вошедшего пользователя предоставлены **полный контроль** над объектами VCO и CNO в Active Directory.
-Имя объекта виртуального компьютера необходимо передать для `-HgsServiceName` параметра и имя кластера, чтобы `-ClusterName` параметра.
+Прежде чем продолжить, убедитесь, что объекты кластера предварительно подготовлены для службы защиты узла и предоставил вошедшему в систему пользователю **полный контроль** над объектами VCO и CNO в Active Directory.
+Имя объекта виртуального компьютера должно быть передано параметру `-HgsServiceName`, а имя кластера — параметру `-ClusterName`.
 
 > [!TIP]
-> Внимательно проверьте контроллеров домена AD, чтобы обеспечить объектов кластера были реплицированы на контроллеры домена перед продолжением.
+> Прежде чем продолжить, проверьте контроллеры доменов AD, чтобы убедиться, что объекты кластера реплицированы на все контроллеры домена.
 
-Если вы используете сертификаты на основе PFX-ФАЙЛ, выполните следующие команды на сервер HGS:
+Если вы используете сертификаты на основе PFX, выполните на сервере HGS следующие команды:
 
 ```powershell
 $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
@@ -43,7 +43,7 @@ Install-ADServiceAccount -Identity 'HGSgMSA'
 Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersGroup 'HgsJeaReviewers' -JeaAdministratorsGroup 'HgsJeaAdmins' -HgsServiceName 'HgsService' -ClusterName 'HgsCluster' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustActiveDirectory
 ```
 
-Если вы используете сертификатов, установленных на локальном компьютере (например, поддержкой HSM и не экспортируются сертификаты), используйте `-SigningCertificateThumbprint` и `-EncryptionCertificateThumbprint` параметров вместо этого.
+Если вы используете сертификаты, установленные на локальном компьютере (например, сертификаты с защитой от HSM и неэкспортируемые сертификаты), используйте параметры `-SigningCertificateThumbprint` и `-EncryptionCertificateThumbprint`.
 
 ## <a name="next-step"></a>Дальнейшие действия
 

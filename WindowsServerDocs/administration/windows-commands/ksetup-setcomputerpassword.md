@@ -1,8 +1,8 @@
 ---
-title: ksetup:setcomputerpassword
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: сеткомпутерпассворд'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0679bb9ee429e05c7679411c5493bd21b530ef8e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d1d3742476385eb770c9cb5c798c1f6ab27c74f8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831545"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374945"
 ---
-# <a name="ksetupsetcomputerpassword"></a>ksetup:setcomputerpassword
+# <a name="ksetupsetcomputerpassword"></a>ksetup: сеткомпутерпассворд
 
 
 
@@ -36,19 +36,19 @@ ksetup /setcomputerpassword <Password>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Пароль >|Введенный пароль используется для задания учетной записи компьютера на локальном компьютере.</br>Пароль можно задать только с помощью учетной записи с правами администратора. Пароль может составлять от 1 до 156 буквенно-цифровые или специальные символы.|
+|@no__t 0Password >|Использует указанный пароль для задания учетной записи компьютера на локальном компьютере.</br>Пароль можно задать только с помощью учетной записи с правами администратора. Пароль может содержать от 1 до 156 букв и специальных символов.|
 
 ## <a name="remarks"></a>Примечания
 
-Эта команда влияет только учетная запись компьютера.
+Эта команда влияет только на учетную запись компьютера.
 
-Необходимо перезагрузить компьютер для изменения пароля вступили в силу.
+Чтобы изменение пароля вступило в силу, необходимо перезагрузить компьютер.
 
-Пароль учетной записи компьютера не отображается в реестре или в качестве выходных данных из **ksetup** команды.
+Пароль учетной записи компьютера не отображается в реестре или в качестве выходных данных команды **ksetup** .
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Измените пароль учетной записи компьютера, на локальном компьютере из IPops897 на IPop$ 897!.
+Измените пароль учетной записи компьютера на локальном компьютере с IPops897 на ИПОП $897!.
 ```
 ksetup /setcomputerpassword IPop$897!
 ```
@@ -56,4 +56,4 @@ ksetup /setcomputerpassword IPop$897!
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

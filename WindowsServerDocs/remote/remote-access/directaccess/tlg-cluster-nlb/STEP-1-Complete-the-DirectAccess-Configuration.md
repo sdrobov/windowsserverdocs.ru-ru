@@ -1,9 +1,9 @@
 ---
-title: Шаг 1 завершение настройки DirectAccess
-description: Этот раздел входит руководство по лаборатории тестирования — продемонстрировать DirectAccess в кластере с помощью Windows NLB для Windows Server 2016
+title: Шаг 1. Завершение настройки DirectAccess
+description: Этот раздел является частью руководства по тестовой лаборатории. демонстрация DirectAccess в кластере с Windows NLB для Windows Server 2016
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-da
@@ -12,18 +12,18 @@ ms.topic: article
 ms.assetid: e1e15544-b575-4f39-af0b-771bfae8b0b7
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0d341fd8608a12639bcb0c855d10c91b830e6365
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: cb009d5872d2045124601f1459e829a4d15f3058
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283401"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404884"
 ---
-# <a name="step-1-complete-the-directaccess-configuration"></a>Шаг 1 завершение настройки DirectAccess
+# <a name="step-1-complete-the-directaccess-configuration"></a>Шаг 1. Завершение настройки DirectAccess
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Первым делом нужно выполнить все действия в [руководство по лаборатории тестирования: Демонстрации настройки отдельного сервера DirectAccess в смешанной IPv4 и IPv6](https://go.microsoft.com/fwlink/p/?LinkId=237004). Если вы уже выполнили действия, описанные в этой лаборатории тестирования проводит и сохранен образ моментальный снимок или диск лаборатории тестирования, можно восстановить моментальный снимок или образ и начать к следующему шагу.  
+Первым шагом является выполнение всех действий, описанных в руководстве по [Test Lab: Демонстрация установки одиночного сервера DirectAccess с смешанными IPv4 и IPv6 @ no__t-0. Если вы уже выполнили действия в этом руководстве по тестированию и сохранили моментальный снимок или образ диска в тестовой лаборатории, можно восстановить моментальный снимок или образ и начать со следующего шага.  
   
 
 

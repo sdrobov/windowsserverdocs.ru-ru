@@ -1,43 +1,43 @@
 ---
 title: Рекомендации
-description: Пакет SDK для Windows Admin Center руководства (Гонолулу проекта)
+description: Руководство по пакету SDK для Windows Admin Center (проект Хонолулу)
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
 ms.author: niwashbu
 ms.date: 09/17/2018
 ms.localizationpriority: medium
-ms.prod: windows-server-threshold
-ms.openlocfilehash: 0620329bc0059c830359a125dd865ffd39ae72b9
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.prod: windows-server
+ms.openlocfilehash: b7e091e4b9bef11b37a8247b52390404e258ae3b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59836155"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71357110"
 ---
 # <a name="guides"></a>Рекомендации
 
->Область применения. Windows Admin Center, предварительная версия Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
 ## <a name="guides"></a>Рекомендации
-Ниже приведены некоторые руководства по разработке с помощью пакета SDK Windows Admin Center.
+Ниже приведены некоторые руководства по разработке с помощью пакета SDK для Windows Admin Center.
 
-- [Добавление модуля к расширению средства](guides/add-module.md)
-- [Добавление в расширение средство iFrame](guides/add-iframe.md)
-- [Использовать настраиваемый шлюз подключаемый модуль средства расширения](guides/use-custom-gateway-plugin.md)
-- [Создание поставщика подключения](guides/create-connection-provider.md)
-- [Изменение поведения навигации корневого](guides/modify-root-navigation.md)
-- [Управлять видимостью ваше средство](guides/dynamic-tool-display.md)
-- [Строки и локализации](guides/strings-localization.md)
-- [С помощью PowerShell в модуле](guides/powershell.md)
-- [Руководство по значок CSS](guides/cssicons.md)
+- [Добавление модуля в расширение инструмента](guides/add-module.md)
+- [Добавление iFrame в расширение инструмента](guides/add-iframe.md)
+- [Использование пользовательского подключаемого модуля шлюза в расширении инструмента](guides/use-custom-gateway-plugin.md)
+- [Создание поставщика подключений](guides/create-connection-provider.md)
+- [Изменение поведения корневой навигации](guides/modify-root-navigation.md)
+- [Управление отображением вашего инструмента](guides/dynamic-tool-display.md)
+- [Строки и локализация](guides/strings-localization.md)
+- [Использование PowerShell в расширении](guides/powershell.md)
+- [Руководство по значку CSS](guides/cssicons.md)
 
-## <a name="sdk-design-toolkit"></a>Набор средств разработки пакета SDK
+## <a name="sdk-design-toolkit"></a>Набор средств разработки SDK
 
-- Ознакомьтесь с нашей Windows Admin Center [набор средств разработки SDK](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)! Этот набор средств призвана помочь быстро макетирования расширений в PowerPoint с помощью Windows Admin Center стили элементов управления и шаблоны страниц. См. в разделе, расширение может выглядеть в Windows Admin Center прежде чем приступить к кодированию!
+- Ознакомьтесь с нашим [набором средств разработки пакета SDK](https://github.com/Microsoft/windows-admin-center-sdk/blob/master/WindowsAdminCenterDesignToolkit.zip)для Windows Admin Center! Этот набор средств предназначен для быстрого макетирования расширений в PowerPoint с помощью стилей, элементов управления и шаблонов страниц центра администрирования Windows. Прежде чем приступить к написанию кода, посмотрите, как ваше расширение будет выглядеть в центре администрирования Windows!
 
-## <a name="sample-code-included-with-the-sdk"></a>Пример кода, в состав пакета SDK
+## <a name="sample-code-included-with-the-sdk"></a>Пример кода, входящий в состав пакета SDK
 
-- Пример кода можно найти для [средство](develop-tool.md), [решение](develop-solution.md), и [подключаемого модуля шлюза](develop-gateway-plugin.md) типов расширения в нашей документации по пакету SDK. Существует, вы воспользуетесь Windows Admin Center интерфейса командной строки для создания нового проекта расширения, а затем выполните отдельные руководства для настройки проекта в соответствии с требованиями.
+- Пример кода можно найти для типов расширений [подключаемого модуля](develop-gateway-plugin.md) [средства](develop-tool.md), [решения](develop-solution.md)и шлюза в документации по пакету SDK. Вы будете использовать интерфейс командной строки центра администрирования Windows для создания нового проекта расширения, а затем следуйте индивидуальным руководствам по настройке проекта в соответствии с вашими потребностями.
 
-- [Средства разработчика](https://aka.ms/wacsdk), размещенного на сайте GitHub пакета SDK — это расширение решения, содержащего широкий набор элементов управления, которые можно просматривать и использовать в свое собственное расширение.  Средства разработчика — это полнофункциональное расширение, которое можно без публикации загрузить в Windows Admin Center в режиме разработчика.
+- [Средства для разработчиков](https://aka.ms/wacsdk), размещенный на нашем сайте пакета SDK для GitHub, — это расширение решения, содержащее обширную коллекцию элементов управления, которые можно просматривать и использовать в собственном расширении.  Средства разработчика — это полнофункциональное расширение, которое можно без публикации загрузить в Windows Admin Center в режиме разработчика.

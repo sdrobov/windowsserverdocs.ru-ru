@@ -2,22 +2,22 @@
 title: Создание пространства имен DFS
 description: В этой статье рассматривается, как создать пространство имен DFS.
 ms.date: 6/5/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 4256e124e75be72f94cbd35c182edfe38e92bc90
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f4d4b86dd1a105576ac4d1749213696b319ba528
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59847505"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402210"
 ---
 # <a name="create-a-dfs-namespace"></a>Создание пространства имен DFS
 
-> Относится к: Windows Server 2019, Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Чтобы создать новое пространство имен, можно использовать диспетчер сервера для создания пространства имен при установке службы роли "Пространства имен DFS". Также можно использовать [командлет New-DfsnRoot](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) из сеанса Windows PowerShell. 
 
@@ -36,13 +36,13 @@ ms.locfileid: "59847505"
     Чтобы создать изолированное пространство имен в отказоустойчивом кластере, укажите имя экземпляра кластерного файлового сервера на странице **Сервер пространства имен** в **Мастере создания нового пространства имен**.
 
 > [!IMPORTANT]
-> Не пытайтесь создать доменное пространство имен, с помощью режима Windows Server 2008, если режим работы леса Windows Server 2003 или более поздней версии. В противном случае в пространстве имен, для которого нельзя удалить папки DFS, выдавая сообщение об ошибке: «Невозможно удалить папку. Не удается завершить выполнение функции".
+> Не пытайтесь создать пространство имен на основе домена, используя режим Windows Server 2008, если режим работы леса не равен Windows Server 2003 или более поздней версии. Это может привести к созданию пространства имен, для которого нельзя удалить папки DFS, при этом выдается следующее сообщение об ошибке: "Не удается удалить папку. Не удается завершить выполнение функции".
 
 ## <a name="see-also"></a>См. также
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
 -   [Выбор типа пространства имен](choose-a-namespace-type.md)
--   [Добавить серверы пространств имен для пространства имен DFS на основе домена](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
+-   [Добавление серверов пространств имен в доменное пространство имен DFS](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md).
 
 

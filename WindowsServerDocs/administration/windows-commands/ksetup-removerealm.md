@@ -1,8 +1,8 @@
 ---
-title: ksetup:removerealm
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: ремовереалм'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 579b0772e4642389b90aa370dad80a3eebea9d34
-ms.sourcegitcommit: 08eba714d3ceb5f2dfb5486d6b990da1aa4dcbdd
+ms.openlocfilehash: 11858d8a24d4f125c83b3e4092ac48f336a9ef0b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65564720"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374954"
 ---
-# <a name="ksetupremoverealm"></a>ksetup:removerealm
+# <a name="ksetupremoverealm"></a>ksetup: ремовереалм
 
 
 
-Удаляет всю информацию для указанной области из реестра. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Удаляет из реестра все сведения для указанной области. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,25 +36,25 @@ ksetup /removerealm <RealmName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<RealmName>|Имя области указывается как верхний регистр DNS-имя, например CORP. CONTOSO.COM и указана как область по умолчанию при **ksetup** выполняется.|
+|@no__t 0RealmName >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM, и он указывается в качестве области по умолчанию при запуске **ksetup** .|
 
 ## <a name="remarks"></a>Примечания
 
-Имя области хранится в двух местах в реестре: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** и **\CurrentControlSet\Control\Lsa\Kerberos**.
+Имя области хранится в двух местах реестра: **HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001** и **\куррентконтролсет\контрол\лса\керберос**.
 
-Имя области по умолчанию нельзя удалить из контроллера домена, так как данная команда восстановит данные DNS, и его удаления может перестать работать контроллера домена.
+Невозможно удалить имя сферы по умолчанию из контроллера домена, так как это приведет к сбросу данных DNS, и удаление может привести к невозможности использования контроллера домена.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Ошибочно присвоено имя области, сделав опечатку «.COM» на локальном компьютере CORP. CONTOSO. CON
+По ошибке задается имя области с ошибкой ". COM" на локальном компьютере в CORP. Компанией. ПАРАЛЛЕЛЬ
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```
-Удалите это имя ошибочные сферы с локального компьютера:
+Удалите это ошибочное имя области с локального компьютера:
 ```
 ksetup /removerealm CORP.CONTOSO.CON
 ```
-Проверки удаления, запустив **ksetup** и просмотрите выходные данные.
+Проверьте удаление, выполнив **ksetup** , и проверьте выходные данные.
 
 #### <a name="additional-references"></a>Дополнительная справка
 

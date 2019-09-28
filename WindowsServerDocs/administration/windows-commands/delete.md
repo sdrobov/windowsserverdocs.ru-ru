@@ -1,8 +1,8 @@
 ---
-title: "\"Удалить\""
-description: 'Раздел Windows команды для ***- '
+title: delete
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7cfa1c125d9ad1859550ae746839600283d07f44
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c2dd1edc8404ef89ae087e49b9e1d4b302d1c8ad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59813075"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378598"
 ---
-# <a name="delete"></a>"Удалить"
+# <a name="delete"></a>delete
 
 
 
-Удаляет раздел или том. Динамический диск также удаляет из списка дисков.
+Удаляет раздел или том. Он также удаляет динамический диск из списка дисков.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,9 +38,9 @@ delete volume
 
 |Параметр|Описание|
 |---------|-----------|
-|[Удалить диск](delete-disk.md)|Удаление отсутствующего динамического диска из списка дисков.|
-|[Удалить раздел](delete-partition.md)|Удаление секции.|
-|[Удаление тома](delete-volume.md)|Удаление тома.|
+|[Удалить диск](delete-disk.md)|Удаляет отсутствующий динамический диск из списка дисков.|
+|[Удалить секцию](delete-partition.md)|Удаляет секцию.|
+|[Удалить том](delete-volume.md)|Удаляет том.|
 
 #### <a name="additional-references"></a>Дополнительная справка
 

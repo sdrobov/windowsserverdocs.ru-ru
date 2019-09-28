@@ -1,8 +1,8 @@
 ---
-title: FTP remotehelp_1
-description: 'Раздел Windows команды для ***- '
+title: remotehelp_1 FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd64af157f7ce05330cdafe6e4db6787fa765859
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bac6fbe4a55c3fed4caab4e30ba848ec9ea68e21
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59889595"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376029"
 ---
-# <a name="ftp-remotehelp1"></a>FTP: remotehelp_1
+# <a name="ftp-remotehelp_1"></a>FTP: remotehelp_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает справку для удаленных команд.   
+Отображает справку по удаленным командам.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 remotehelp [<Command>]  
@@ -32,18 +32,18 @@ remotehelp [<Command>]
 ### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|[<Command>]|Задает имя команды, о которой требуется справка. Если *команда* не указан, **ftp** отображает список всех удаленных команд.|  
+|[<Command>]|Указывает имя команды, для которой требуется справка. Если *команда* не указана, **протокол FTP** отображает список всех удаленных команд.|  
 ## <a name="remarks"></a>Примечания  
-Можно запустить с помощью удаленных команд **квоты** или **литерала**.  
-## <a name="BKMK_Examples"></a>Примеры  
+Удаленные команды можно выполнять с помощью **кавычек** или **Literal**.  
+## <a name="BKMK_Examples"></a>Примеров  
 Отображение списка удаленных команд.  
 ```  
 remotehelp  
 ```  
-Отображают сведения о синтаксисе для **проделывать** удаленной команды.  
+Отображение синтаксиса для удаленной команды **достижением** .  
 ```  
 remotehelp feat  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [FTP: Квота](ftp-quote.md)  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [FTP: кавычка](ftp-quote.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

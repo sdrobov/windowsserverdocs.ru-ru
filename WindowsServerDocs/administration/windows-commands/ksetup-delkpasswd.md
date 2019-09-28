@@ -1,8 +1,8 @@
 ---
-title: ksetup:delkpasswd
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: делкпассвд'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a1c701707f736fe51a1f4af70a2571e63025f281
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: dce7d9666040ff0c234139932ea60e3589dfecb2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438044"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375132"
 ---
-# <a name="ksetupdelkpasswd"></a>ksetup:delkpasswd
+# <a name="ksetupdelkpasswd"></a>ksetup: делкпассвд
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Удаляет сервер пароль Kerberos (Kpasswd) для области. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+удаляет сервер паролей Kerberos (Кпассвд) для области. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 ## <a name="syntax"></a>Синтаксис
 ```
 ksetup /delkpasswd <RealmName> <KpasswdName>
@@ -33,18 +33,18 @@ ksetup /delkpasswd <RealmName> <KpasswdName>
 
 |   Параметр   |                                                                                                   Описание                                                                                                   |
 |---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  <RealmName>  |                                Имя области указывается как верхний регистр DNS-имя, например CORP. CONTOSO.COM и для них значение по умолчанию области или области = при **ksetup** выполняется.                                |
-| <KpasswdName> | Без учета регистра, полное доменное имя, например mitkdc.contoso.com указанное имя контроллера Kerberos-домена для использования в качестве сервера пароль Kerberos. Если отсутствует имя KDC, DNS может использоваться для поиска KDC. |
+|  <RealmName>  |                                Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или области = при запуске **ksetup** .                                |
+| <KpasswdName> | Имя KDC, используемое в качестве сервера паролей Kerberos, называется без учета регистра, полное доменное имя, например mitkdc.contoso.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS. |
 
 ## <a name="remarks"></a>Примечания
-Выполните команду **ksetup** для проверки имени контроллера Kerberos-домена. Если **kpasswd =** не отображается в выходных данных, то сопоставление не настроен. Будут перечислены несколько сопоставлений, если задать.
-## <a name="BKMK_Examples"></a>Примеры
-Проверьте область CORP. CONTOSO.COM использует mitkdc.contoso.com сервер KDC, отличных от Windows, что и сервер пароль:
+Выполните команду **ksetup** , чтобы проверить имя KDC. Если **кпассвд =** не отображается в выходных данных, сопоставление не было настроено. Если задано значение, будут перечислены несколько сопоставлений.
+## <a name="BKMK_Examples"></a>Примеров
+Проверьте КОРПОРАТИВную область. CONTOSO.COM использует в качестве сервера паролей не Windows Server KDC mitkdc.contoso.com:
 ```
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Чтобы проверить, команда работал должным образом, запустите **ksetup** на компьютере Windows для проверки области CORP. CONTOSO.COM не сопоставлен с сервера пароль Kerberos (KDC имя).
+Чтобы убедиться в том, что команда работала правильно, запустите **ksetup** на компьютере Windows, чтобы убедиться в наличии сферы Corp. CONTOSO.COM не сопоставляется с сервером паролей Kerberos (имя KDC).
 ## <a name="additional-references"></a>Дополнительные ссылки
 -   [ksetup](ksetup.md)
--   [ksetup:delkpasswd](ksetup-delkpasswd.md)
+-   [ksetup: делкпассвд](ksetup-delkpasswd.md)
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

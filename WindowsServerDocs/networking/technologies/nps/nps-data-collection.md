@@ -6,17 +6,17 @@ manager: mtillman
 ms.author: joflore
 ms.reviewer: richagi
 ms.custom: it-pro
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: ''
 ms.date: 05/01/2018
-ms.openlocfilehash: cd145402ed70aa52da7188dee9dd64ce17fea155
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: d393ad4af81ee1c24fa5f28b8a3b05217e7b34dd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871879"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71396299"
 ---
 # <a name="network-policy-server-user-data-collection"></a>Сбор данных пользователя сервера политики сети
 
@@ -41,7 +41,7 @@ ms.locfileid: "70871879"
 
 Если данные учета включены и настроены, то записи попыток проверки подлинности пользователя NPS можно получить из SQL Server или файлов журнала в зависимости от конфигурации. 
 
-Если данные учета настроены для SQL Server, запросите все записи, где `'<username>'`User_Name =.
+Если данные учета настроены для SQL Server, запросите все записи, где User_Name = `'<username>'`.
 
 Если данные учета настроены для файла журнала, выполните поиск в `<username>` файле журнала, чтобы найти все записи журнала.
 

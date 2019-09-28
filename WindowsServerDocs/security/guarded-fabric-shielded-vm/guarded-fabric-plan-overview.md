@@ -1,25 +1,25 @@
 ---
 title: Планирование защищенной структуры и экранированных виртуальных машин
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: a754b78c-048d-4be9-a846-cf41ff0bcbc4
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.openlocfilehash: befb34c5d684c09b3be22704cab3a9806e47487d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f0ace5a081569cbe1ecb86c63fd88635035cf908
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879275"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403553"
 ---
 # <a name="planning-a-guarded-fabric"></a>Планирование защищенной структуры
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-В следующих разделах рассматриваются планировать развертывание защищенной структуры и экранированных виртуальных машин (ВМ):
+В следующих разделах рассматривается планирование развертывания защищенной структуры и экранированных виртуальных машин.
 
-- [Защищенной структуры и экранированной виртуальной Машины, руководство для поставщиков услуг размещения](guarded-fabric-planning-for-hosters.md) 
-- [Совместимое оборудование с помощью защиты целостности кода на основе виртуализации Windows Server 2016](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
-- [Защищенной структуры и экранированной виртуальной Машины, руководство для клиентов](guarded-fabric-shielded-vm-planning-for-tenants.md)
+- [Рекомендации по планированию защищенной структуры и экранированной виртуальной машины для поставщиков услуг размещения](guarded-fabric-planning-for-hosters.md) 
+- [Совместимое оборудование с защитой целостности кода на основе виртуализации Windows Server 2016](guarded-fabric-compatible-hardware-with-virtualization-based-protection-of-code-integrity.md)
+- [Рекомендации по планированию защищенной структуры и экранированной виртуальной машины для клиентов](guarded-fabric-shielded-vm-planning-for-tenants.md)

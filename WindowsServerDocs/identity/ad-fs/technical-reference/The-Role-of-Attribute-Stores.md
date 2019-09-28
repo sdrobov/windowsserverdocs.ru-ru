@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bd9c47c0f786fa8c7814519b26d33daaf01080a3
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 0a1543f2c935c2ef76ea014567b18bfc778c7401
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869385"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407389"
 ---
 # <a name="the-role-of-attribute-stores"></a>Роль хранилищ атрибутов
 Службы федерации Active Directory (AD FS) использует термин "хранилища атрибутов" для ссылки на каталоги или базы данных, используемые в Организации для хранения своих учетных записей пользователей и связанных с ними значений атрибутов. После настройки в организации поставщика удостоверений AD FS извлекает эти значения атрибутов из магазина и создает заявки на основе этих сведений, чтобы веб-приложение или служба, размещенная в организации проверяющей стороны, могла сделать соответствующий принятие решений об авторизации каждый раз \(, когда федеративный пользователь, учетная запись которого хранится в\) организации поставщика удостоверений, пытается получить доступ к приложению или службе.  

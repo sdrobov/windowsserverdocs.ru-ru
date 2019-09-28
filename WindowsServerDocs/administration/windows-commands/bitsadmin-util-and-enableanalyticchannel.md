@@ -1,8 +1,8 @@
 ---
-title: bitsadmin util и enableanalyticchannel
-description: Раздел Windows команды для **bitsadmin util и enableanalyticchannel** - включает или отключает аналитического канала клиента BITS.
+title: битсадмин util и енаблеаналитикчаннел
+description: Раздел команд Windows для **битсадмин util и енаблеаналитикчаннел** — включает или отключает канал АНАЛИТИКИ клиента BITS.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 814442a4d9b1a4d6e45b28f41a89b7a144be1cbf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2c73c704e0c49c6f8309ce0a5c9646afb3392f79
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877325"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380259"
 ---
-# <a name="bitsadmin-util-and-enableanalyticchannel"></a>bitsadmin util и enableanalyticchannel
+# <a name="bitsadmin-util-and-enableanalyticchannel"></a>битсадмин util и енаблеаналитикчаннел
 
 
 
-Включает или отключает аналитического канала клиента BITS.
+Включает или отключает аналитический канал клиента BITS.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ ms.locfileid: "59877325"
 bitsadmin /Util /EnableAnalyticChannel TRUE|FALSE
 ```
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере включается аналитического канала клиента BITS.
+В следующем примере включается канал аналитики клиента BITS.
 ```
 C:\>bitsadmin /Util / EnableAnalyticChannel TRUE
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

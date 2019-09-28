@@ -2,22 +2,22 @@
 title: Подключение к удаленному компьютеру
 description: В этой статье описано, как подключиться к удаленному компьютеру, чтобы управлять ресурсами хранилища из диспетчера ресурсов файлового сервера
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 93d2be926437b65ed8eb84a828ea0d7da6a51086
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4d813933ec3073ecb3348468ca4b8f2e124c403d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818865"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402012"
 ---
 # <a name="connect-to-a-remote-computer"></a>Подключение к удаленному компьютеру 
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Чтобы управлять ресурсами хранилища на удаленном компьютере, можно подключиться к компьютеру из диспетчера ресурсов файлового сервера. При установленном подключении диспетчер ресурсов файлового сервера позволяет управлять квотами, файлами фильтра блокировки файлов, управлять категориями, планировать создание задач по управлению файлами и создавать отчеты по этим удаленным ресурсам.
 
@@ -47,4 +47,4 @@ ms.locfileid: "59818865"
 
 ## <a name="see-also"></a>См. также
 
--   [Управление ресурсами хранилища](managing-remote-storage-resources.md)
+-   [Управление ресурсами удаленного хранилища](managing-remote-storage-resources.md)

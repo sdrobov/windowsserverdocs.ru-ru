@@ -1,7 +1,7 @@
 ---
 title: Рекомендации по запуску FreeBSD в Hyper-V
 description: Содержит рекомендации по запуску FreeBSD на виртуальных машинах.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 0c66f1c8-2606-43a3-b4cc-166acaaf2d2a
 author: shirgall
 ms.author: kathydav
 ms.date: 01/09/2017
-ms.openlocfilehash: 598087411b35dde2e4a1cb606fae6a4602fe588e
-ms.sourcegitcommit: 6f968368c12b9dd699c197afb3a3d13c2211f85b
+ms.openlocfilehash: 1d284b38e1bdb642aa40ecbb8e82caa7712f7aad
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68544689"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365628"
 ---
 # <a name="best-practices-for-running-freebsd-on-hyper-v"></a>Рекомендации по запуску FreeBSD в Hyper-V
 
@@ -28,13 +28,13 @@ ms.locfileid: "68544689"
 
 Протокол CARP позволяет нескольким узлам использовать один и тот же IP-адрес и идентификатор виртуального узла (ВХИД), чтобы обеспечить высокий уровень доступности для одной или нескольких служб. В случае сбоя одного или нескольких узлов другие узлы прозрачно перейдут, чтобы пользователи не могли заметить сбой службы. Чтобы использовать CARP в FreeBSD 10,2, следуйте инструкциям в руководстве по [FreeBSD](https://www.freebsd.org/doc/en/books/handbook/carp.html) и выполните следующие действия в диспетчере Hyper-V.
 
-* Убедитесь, что виртуальная машина имеет сетевой адаптер, и ей назначен виртуальный коммутатор. Выберите виртуальную машину и щелкните**Параметры** **действия** > .
+* Убедитесь, что виртуальная машина имеет сетевой адаптер, и ей назначен виртуальный коммутатор. Выберите виртуальную машину и выберите **действия** > **Параметры**.
 
 ![Снимок экрана параметров виртуальной машины с выбранным сетевым адаптером](media/Hyper-V_Settings_NetworkAdapter.png)
 
 * Включите подмену MAC-адресов. Для этого
 
-   1. Выберите виртуальную машину и щелкните**Параметры** **действия** > .
+   1. Выберите виртуальную машину и выберите **действия** > **Параметры**.
 
    2. Разверните узел **сетевой адаптер** и выберите **Дополнительные функции**.
 

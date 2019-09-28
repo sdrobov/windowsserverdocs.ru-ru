@@ -1,8 +1,8 @@
 ---
 title: Удаление FTP
-description: Раздел Windows команды для удаления ftp
+description: Раздел команд Windows для FTP-удаления
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c8af4beb83b789be1456d5556a0aa07749590fb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 1b566da14751921e2f38acd922ececbbc972daa6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376454"
 ---
-# <a name="ftp-delete"></a>FTP: удаление
+# <a name="ftp-delete"></a>FTP: Delete
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Удаление файлов на удаленных компьютерах.   
+Удаляет файлы на удаленных компьютерах.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 delete <remoteFile>  
@@ -35,8 +35,8 @@ delete <remoteFile>
 |--------------|-------------------------------|
 | <remoteFile> | Указывает файл для удаления. |
 
-## <a name="BKMK_Examples"></a>Примеры  
-Удаление файла test.txt на удаленном компьютере.  
+## <a name="BKMK_Examples"></a>Примеров  
+Удалите файл Test. txt на удаленном компьютере.  
 ```  
 delete test.txt  
 ```  

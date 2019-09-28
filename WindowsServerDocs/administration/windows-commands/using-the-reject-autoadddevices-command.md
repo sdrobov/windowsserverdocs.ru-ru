@@ -1,8 +1,8 @@
 ---
-title: С помощью команды AutoaddDevices отклонения
-description: 'Раздел Windows команды для ***- '
+title: Использование команды REJECT-Аутоадддевицес
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: af46aec7c8f02b3600983b66bd1b0ac6f5dd1dcc
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2e8fda3037ef921e2b2a7a0acb616b8a67545ff9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852565"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363001"
 ---
-# <a name="using-the-reject-autoadddevices-command"></a>С помощью команды AutoaddDevices отклонения
+# <a name="using-the-reject-autoadddevices-command"></a>Использование команды REJECT-Аутоадддевицес
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отклоняет компьютеров, ожидающих утверждения администратора. При включении политики автоматического добавления административное утверждение является обязательным, перед установкой образа неизвестные компьютеры (те, которые не были предварительно настроены). Вы можете включить этой политики с помощью **Отклик PXE** вкладки на странице свойств сервера s.
+Отклоняет компьютеры, ожидающие административного утверждения. Если включена политика автоматического добавления, то перед неизвестными компьютерами (не требующими предварительной подготовки) требуется административное утверждение, чтобы установить образ. Эту политику можно включить с помощью вкладки **Отклик PXE** страницы свойств сервера.
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Request ID or ALL>
@@ -32,10 +32,10 @@ wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Req
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-|/RequestId:<Request ID &#124; ALL>|Указывает идентификатор запроса, назначенный для ожидающего компьютера. Чтобы отклонить все ожидающие компьютеры, укажите **все**.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы отклонить один компьютер, введите:
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|/Рекуестид: идентификатор &#124; запроса < Все >|Указывает идентификатор запроса, назначенный ожидающему компьютеру. Чтобы отклонить все ожидающие компьютеры, укажите **все**.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы отклонить отдельный компьютер, введите:
 ```
 wdsutil /Reject-AutoaddDevices /RequestId:12
 ```
@@ -44,7 +44,7 @@ wdsutil /Reject-AutoaddDevices /RequestId:12
 wdsutil /verbose /Reject-AutoaddDevices /Server:MyWDSServer /RequestId:ALL
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды утвердить-AutoaddDevices](using-the-approve-autoadddevices-command.md)
-[с помощью команды delete-AutoaddDevices](using-the-delete-autoadddevices-command.md) 
- [ С помощью команды get-AutoaddDevices](using-the-get-autoadddevices-command.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды "утвердить-аутоадддевицес](using-the-approve-autoadddevices-command.md)" 
+[с помощью команды "Delete-Аутоадддевицес](using-the-delete-autoadddevices-command.md)" 
+[с помощью команды Get-аутоадддевицес](using-the-get-autoadddevices-command.md) .

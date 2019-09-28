@@ -1,42 +1,42 @@
 ---
 title: Управление NPS
-description: В этом разделе ссылки на процедуры по управлению NPSs в Windows Server 2016.
+description: В этом разделе приведены ссылки на процедуры по управлению НПСС в Windows Server 2016.
 manager: brianlic
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 6005dc27-f49e-427f-92f7-b0e558ffe3ff
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 0d8b32ddc6eb1dacff2fa70bbbe045b16805c42b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7de8ddb79e9b23688c31e55795844c2cd714cb52
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59855555"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405388"
 ---
 # <a name="manage-npss"></a>Управление NPS
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Подразделы в этом разделе можно использовать для управления NPSs.
+Для управления НПСС можно использовать подразделы этого раздела.
 
 >[!NOTE]
->Дополнительную документацию сервера политики сети можно использовать в следующих разделах библиотеки.
->- [Приступая к работе с сервером политики сети](nps-getstart-top.md)
+>Дополнительную документацию по серверу политики сети можно получить с помощью следующих разделов библиотеки.
+>- [начало работы с сервером политики сети](nps-getstart-top.md)
 >- [Развертывание сервера политики сети](nps-deploy.md) 
 
 Этот раздел содержит следующие подразделы.
 
-- [Настройка компонентов NPS на многосетевом компьютере](nps-multihomed-configure.md)
-- [Настройка сведений о UDP-порт сервера политики сети](nps-udp-ports-configure.md)
-- [Отключите пересылку уведомлений сервера](nps-disable-nas-notifications.md)
-- [Экспортировать конфигурацию с NPS для импорта на другом сервере](nps-manage-export.md)
-- [Увеличить одновременных проверок подлинности, обрабатываемые NPS](nps-concurrent-auth.md)
+- [Настройка сервера политики сети на компьютере с несколькими сетевыми интерфейсами](nps-multihomed-configure.md)
+- [Настройка сведений UDP-порта NPS](nps-udp-ports-configure.md)
+- [Отключить перенаправление уведомлений NAS](nps-disable-nas-notifications.md)
+- [Экспорт конфигурации NPS для импорта на другом сервере](nps-manage-export.md)
+- [Увеличение количества одновременных проверок подлинности, обрабатываемых NPS](nps-concurrent-auth.md)
 - [Установка сервера политики сети](nps-manage-install.md)
-- [Балансировка нагрузки сервера прокси-сервера политики сети](nps-manage-proxy-lb.md)
-- [Зарегистрируйте сервер политики сети в домене Active Directory](nps-manage-register.md)
-- [Отмена регистрации сервер политики сети из домена Active Directory.](nps-manage-unregister.md)
-- [Использование регулярных выражений на сервере политики сети](nps-crp-reg-expressions.md)
-- [Проверьте конфигурацию после внесения изменений NPS](nps-manage-verify.md)
+- [Балансировка нагрузки прокси-сервера NPS](nps-manage-proxy-lb.md)
+- [Регистрация сервера политики сети в домене Active Directory](nps-manage-register.md)
+- [Отмена регистрации сервера политики сети в домене Active Directory](nps-manage-unregister.md)
+- [Использование регулярных выражений в NPS](nps-crp-reg-expressions.md)
+- [Проверка конфигурации после изменений NPS](nps-manage-verify.md)
 

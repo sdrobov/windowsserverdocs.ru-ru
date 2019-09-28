@@ -1,7 +1,7 @@
 ---
 ms.assetid: 87174225-a60f-4718-b4cc-9b172f205b72
 title: Журнал изменений разделов, посвященных хранилищу
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
@@ -9,12 +9,12 @@ manager: brianlic
 ms.author: jgerend
 ms.date: 08/19/2019
 description: Новые и обновленные разделы документации по локальному хранилищу для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: d5ab2d8ae4ca90e259f8bc996494439190bc5279
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: ce937dfb5c6c0b46c8085cbb202590567ea829d3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584818"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71393929"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
@@ -86,14 +86,14 @@ ms.locfileid: "69584818"
 |[SMB: необходимо открыть порты для совместного использования файлов и принтеров](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 |[Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 
-## <a name="october-2018"></a>Октябрь 2018 г.
+## <a name="october-2018"></a>Октябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Что нового в хранилище?](whats-new-in-storage.md)|Добавлены сведения о новых возможностях Windows Server 2019|
 |[Известные проблемы с репликой хранилища](storage-replica/storage-replica-known-issues.md)|Добавлены сведения о новом обновлении.|
 
-## <a name="september-2018"></a>Сентябрь 2018 г.
+## <a name="september-2018"></a>Сентябрь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -103,7 +103,7 @@ ms.locfileid: "69584818"
 | [Целевой сервер iSCSI](iscsi/iscsi-target-server.md) | Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
 | [Ограничения масштабируемости целевого сервера iSCSI](iscsi/iscsi-target-server-limits.md) |Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
 
-## <a name="june-2018"></a>Июнь 2018 г.
+## <a name="june-2018"></a>Июнь 2018
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -145,14 +145,14 @@ ms.locfileid: "69584818"
 |[Развертывание перемещаемых профилей пользователей](folder-redirection/deploy-roaming-user-profiles.md)|Перемещен из библиотеки предыдущих версий и обновлен.|
 |[Часто задаваемые вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)|Добавлен файл [CSV, необходимый для репликации в кластере Stretch или между кластерами](storage-replica/storage-replica-frequently-asked-questions.md#FAQ7.5).|
 
-## <a name="february-2018"></a>Февраль 2018 г.
+## <a name="february-2018"></a>Февраль 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Работоспособность дисковых пространств и операционные состояния](storage-spaces/storage-spaces-states.md)| Новый раздел.|
 |[Использование Локальные дисковые пространства с кэшем чтения в памяти CSV](storage-spaces/csv-cache.md)| Новый раздел. |
 
-## <a name="january-2018"></a>Январь 2018 г.
+## <a name="january-2018"></a>Январь 2018 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -164,7 +164,7 @@ ms.locfileid: "69584818"
 |Новый или измененный раздел|Описание|
 |---|---|
 |[Изменение буквы диска](disk-management/change-a-drive-letter.md)|Новый раздел.|
-|[Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)|Повторное написание [состояния диска не инициализировано, или на диске нет полного](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) раздела, чтобы добавить подробные инструкции по устранению неполадок на основе запросов клиентов.|
+|[Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)|[Повторное написание состояния диска не инициализировано, или на диске нет полного](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) раздела, чтобы добавить подробные инструкции по устранению неполадок на основе запросов клиентов.|
 |[Инициализация новых дисков](disk-management/initialize-new-disks.md)|Переписана, чтобы облегчить понимание и устранение вопросов, возникающих у пользователей.|
 |[Планирование томов в Локальные дисковые пространства](storage-spaces/plan-volumes.md)|Добавлена таблица, суммирующая типы устойчивости, доступные в четырех и более крупных кластерах.|
 |[Обзор ReFS](refs/refs-overview.md)|Уточнены Рекомендуемые рабочие нагрузки для четности с зеркальным отображением и исправлены поддерживаемые файлы и размеры томов для ReFS и NTFS.|
@@ -178,7 +178,7 @@ ms.locfileid: "69584818"
 |[Новые возможности в хранилище](whats-new-in-storage.md)|Добавлены сведения о новых возможностях Windows Server версии 1709.|
 |[Добавление серверов или дисков](storage-spaces/add-nodes.md)|Добавлены сведения о том, как Локальные дисковые пространства автоматически оптимизирует использование диска после добавления дисков.|
 
-## <a name="october-2017"></a>Октябрь 2017 г.
+## <a name="october-2017"></a>Октябрь 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -229,7 +229,7 @@ ms.locfileid: "69584818"
 |[Развертывание Локальные дисковые пространства](storage-spaces/deploy-storage-spaces-direct.md)|Удалена ссылка на устаревшее обновление программного обеспечения и исправлена опечатка в примере выходных данных.|
 |[Известные проблемы с репликой хранилища](storage-replica/storage-replica-known-issues.md)|Добавлена новая информация.|
 
-## <a name="march-2017"></a>Март 2017 г.
+## <a name="march-2017"></a>Март, 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|
@@ -243,7 +243,7 @@ ms.locfileid: "69584818"
 |[Добавление сервера или дисков в Локальные дисковые пространства](storage-spaces/add-nodes.md)|Добавлены новые изображения и содержимое.|
 |[Требования к оборудованию Локальные дисковые пространства](storage-spaces/storage-spaces-direct-hardware-requirements.md)|Добавлены последние требования.|
 
-## <a name="january-2017"></a>Январь 2017 г.
+## <a name="january-2017"></a>Январь 2017 г.
 
 |Новый или измененный раздел|Описание|
 |---|---|

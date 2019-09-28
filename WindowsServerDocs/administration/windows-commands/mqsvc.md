@@ -1,8 +1,8 @@
 ---
 title: mqsvc
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 092f3c685b370defff2c41f2d6cb0acf3073bea3
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8dcf98fa02eaede162fd75181af7a070b8a0aed4
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869385"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373519"
 ---
 # <a name="mqsvc"></a>mqsvc
 
 
 
-Технологии служба очереди сообщений позволяет приложениям, выполняющимся в разное время, взаимодействовать через неоднородные сети и системы, которые могут быть временно отключены. Очередь сообщений обеспечивает гарантированную доставку сообщений, эффективную маршрутизацию, безопасность и обмена сообщениями на основе приоритета. Его можно использовать для реализации решения для асинхронные и синхронные сценарии обмена сообщениями. Дополнительные сведения об этой команде см. в разделе [Message Queuing (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=248723) на сайте MSDN.
+Технология очередей сообщений позволяет приложениям, работающим в разное время, взаимодействовать через разнородные сети и системы, которые могут быть временно автономными. Служба очереди сообщений обеспечивает гарантированную доставку сообщений, эффективную маршрутизацию, безопасность и обмен сообщениями на основе приоритетов. Его можно использовать для реализации решений как в асинхронных, так и в синхронных сценариях обмена сообщениями. Дополнительные сведения об этой команде см. в статье [очередь сообщений (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=248723) на сайте MSDN.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,4 +38,4 @@ Mqsvc.exe
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

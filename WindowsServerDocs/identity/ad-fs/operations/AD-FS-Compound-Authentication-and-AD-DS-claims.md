@@ -6,14 +6,14 @@ ms.author: billmath
 manager: femila
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b67177c8bf0ce9869aa51c3012d57f3208ac02f5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 78db6f8b6961cecea55b8d371e9abf952cafdab3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866287"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358675"
 ---
 # <a name="compound-authentication-and-ad-ds-claims-in-ad-fs"></a>Комплексная аутентификация и утверждения AD DS в AD FS
 Windows Server 2012 улучшает проверку подлинности Kerberos, представляя составную проверку подлинности.  Составная проверка подлинности позволяет запросу службы предоставления билетов Kerberos (TGS) включать два удостоверения: 
@@ -59,7 +59,7 @@ AD FS 2012 и более поздние версии позволяют выда
 ![Управление групповая политика](media/AD-FS-Compound-Authentication-and-AD-DS-claims/gpmc4.png)
 4.  Закройте редактор управления групповыми политиками.
 
-### <a name="step-3-ensure-the-ad-fs-servers-have-been-updated"></a>Шаг 3. Убедитесь, что AD FS серверы обновлены.
+### <a name="step-3-ensure-the-ad-fs-servers-have-been-updated"></a>Шаг 3. Убедитесь, что AD FS серверы обновлены.
 Необходимо убедиться, что на серверах AD FS установлены следующие обновления.
 
 |Обновление|Описание|
@@ -164,7 +164,7 @@ Set-ADServiceAccount -Identity “ADFS Service Account” -CompoundIdentitySuppo
 3.  В диалоговом окне Создать установите для параметра Поддержка клиентов Kerberos значение **включено** и нажмите кнопку **Применить** и **ОК**.
 4.  Закройте редактор управления групповыми политиками.
 
-### <a name="step-3-configure-the-primary-authentication-provider"></a>Шаг 3. Настройка основного поставщика проверки подлинности
+### <a name="step-3-configure-the-primary-authentication-provider"></a>Шаг 3. Настройка основного поставщика проверки подлинности
 
 1. Установите для основного поставщика проверки подлинности **проверку подлинности Windows** для параметров AD FS интрасети.
 2. В области Управление AD FSми в разделе **политики проверки подлинности**выберите **Основная проверка подлинности** и в разделе **глобальные параметры** нажмите кнопку **изменить**.

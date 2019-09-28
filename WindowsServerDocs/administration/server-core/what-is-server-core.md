@@ -1,18 +1,18 @@
 ---
 title: Что такое Server Core?
 description: Дополнительные сведения о варианте установки Server Core в Windows Server
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: lizap
 ms.localizationpriority: medium
 ms.date: 02/20/2018
-ms.openlocfilehash: ce00bc973b7b750e33326cdec24193ba537b5294
-ms.sourcegitcommit: 216d97ad843d59f12bf0b563b4192b75f66c7742
+ms.openlocfilehash: 269be253367ba2bc692a5903e7d519a40f487d8b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476478"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383337"
 ---
 # <a name="what-is-the-server-core-installation-option-in-windows-server"></a>Что такое вариант установки Server Core в Windows Server?
 
@@ -83,7 +83,7 @@ ms.locfileid: "68476478"
 | В диспетчере Hyper-V                    | недоступно  | доступен                      |
 
 
-Дополнительные сведения о том, *что входит* в ядро сервера, см. [в разделе роли, службы ролей и функции, включенные в Windows Server-Server Core](server-core-roles-and-services.md). Дополнительные сведения о том, что *не* включено в Server Core, см. [в разделе роли, службы ролей и компоненты, не включенные в Server Core](server-core-removed-roles.md) .
+Дополнительные сведения *о том, что входит* в ядро сервера, см. [в разделе роли, службы ролей и функции, включенные в Windows Server-Server Core](server-core-roles-and-services.md). Дополнительные сведения о том, что *не* включено в Server Core, см. [в разделе роли, службы ролей и компоненты, не включенные в Server Core](server-core-removed-roles.md) .
 
 ## <a name="get-started-using-server-core"></a>Приступая к работе с Server Core
 Используйте следующие сведения для установки, настройки и управления вариантом установки основных серверных компонентов Windows Server.

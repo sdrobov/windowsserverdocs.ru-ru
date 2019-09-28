@@ -1,8 +1,8 @@
 ---
 title: bitsadmin getreplyprogress
-description: Раздел Windows команды для **bitsadmin getreplyprogress** -извлекает размер и ход выполнения ответ сервера.
+description: Раздел команд Windows для **битсадмин жетреплипрогресс** — получение размера и хода выполнения ответа сервера.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aafecfb5873392ef86e6f7cceb139091b15e3b99
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c791fe98271b497e5ecf48338ab3bbb0cc50de98
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59852935"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381241"
 ---
 # <a name="bitsadmin-getreplyprogress"></a>bitsadmin getreplyprogress
 
-Извлекает размер и ход выполнения ответ сервера.
+Возвращает размер и ход ответа сервера.
 
-**БИТЫ 1.2 и более ранних версий**: Не поддерживается.
+**BITS 1,2 и более ранних версий**: Не поддерживается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,19 +36,19 @@ bitsadmin /GetReplyProgress <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-Допустимо только для задания отправки ответа.
+Допустимо только для заданий отправки и ответа.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример извлекает ответ о ходе выполнения задания с именем *myDownloadJob*.
+В следующем примере извлекается ход выполнения ответа для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetReplyProgress myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

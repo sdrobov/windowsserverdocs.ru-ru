@@ -2,22 +2,22 @@
 title: Управление ресурсами удаленного хранилища
 description: В этой статье описывается, как управлять ресурсами хранилища на удаленном компьютере
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 29870c33e17c75fe25601237d7de47302662d21f
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 5c6dc9c931e130e36e01655de05fbd209f50f3dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476167"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394084"
 ---
 # <a name="managing-remote-storage-resources"></a>Управление ресурсами удаленного хранилища
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Существует два способа управления ресурсами на удаленном компьютере.
 

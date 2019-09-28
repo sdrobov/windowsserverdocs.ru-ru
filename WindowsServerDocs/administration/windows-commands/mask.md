@@ -1,8 +1,8 @@
 ---
-title: Маска
-description: 'Раздел Windows команды для ***- '
+title: Виде
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 353e6080d1f6c548bc907b58655f31d0bce6de8b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2f0dc83d7d9f7204f56e95c62b7cfad991f539ef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858025"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373710"
 ---
-# <a name="mask"></a>Маска
+# <a name="mask"></a>Виде
 
 
 
-Удаляет аппаратных теневых копий, которые были импортированы с помощью **импорта** команды.
+Удаляет аппаратные теневые копии, импортированные с помощью команды **Import** .
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -38,19 +38,19 @@ mask <ShadowSetID>
 
 |Параметр|Описание|
 |---------|-----------|
-|ShadowSetID|Удаляет теневых копий, принадлежащие указанным идентификатором набор теневого копирования.|
+|шадовсетид|Удаляет теневые копии, принадлежащие указанному ИДЕНТИФИКАТОРу набора теневых копий.|
 
 ## <a name="remarks"></a>Примечания
 
--   Вы можете использовать существующий псевдоним или переменную среды, вместо *ShadowSetID*. Используйте **добавить** без параметров, чтобы просмотреть существующие псевдонимы.
+-   Вместо *шадовсетид*можно использовать существующий псевдоним или переменную среды. Чтобы просмотреть существующие псевдонимы, используйте параметр **Добавить** без параметров.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы удалить % Import_1% импортированных теневого копирования, введите следующую команду:
+Чтобы удалить импортированную теневую копию% Import_1%, введите:
 ```
 mask %Import_1%
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

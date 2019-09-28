@@ -1,8 +1,8 @@
 ---
 title: nfsstat
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9db8b903d4c3681b2b3bae3424f8af83696ae2c7
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4f9db119596b5602f18acfa10af6aa1b7cbbc9b2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853295"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373177"
 ---
 # <a name="nfsstat"></a>nfsstat
 
 
 
-Можно использовать **nfsstat** для отображения или сбросить количество вызовов на сервер для NFS.
+**Нфсстат** можно использовать для вывода или сброса счетчиков вызовов, сделанных для сервера для NFS.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,4 +34,4 @@ nfsstat [-z]
 
 ## <a name="description"></a>Описание
 
-При использовании без **- z** параметр, **nfsstat** командной строки служебная программа отображает количество NFS версии 2, NFS V3 и вызовы V3 подключения, выполненный к серверу, так как счетчики было присвоено значение 0, либо если службы к работе или сброса счетчиков с помощью **nfsstat - z**.
+При использовании без параметра **-z** программа командной строки **нфсстат** отображает количество вызовов NFS v2, NFS v3 и Mount v3, выполненных на сервере, так как счетчики были заданы как 0, как при запуске службы, так и при сбросе счетчиков с помощью  **нфсстат-z**.

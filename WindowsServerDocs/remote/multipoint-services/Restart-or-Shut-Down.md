@@ -2,7 +2,7 @@
 title: Перезагрузка и завершение работы
 description: Узнайте, как перезапустить или полностью завершить работу системы в службах MultiPoint.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: d2ef7185dc660e50dfde1816ed843b9c2586e930
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 76155fa5f8baf877999bdc3eb0753d7805087a72
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871574"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71389418"
 ---
 # <a name="restart-or-shut-down"></a>Перезагрузка и завершение работы
 После установки оборудования либо установки или обновления программного обеспечения может потребоваться перезагрузка главного компьютера или всех *станций* в системе MultiPoint Services. При добавлении на станцию нового устройства может потребоваться связь устройств с этой станцией. Дополнительные сведения о том, как *связывать станции*, см. в статье [Переключение между режимами](Switch-Between-Modes.md).  

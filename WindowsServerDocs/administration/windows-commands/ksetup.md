@@ -1,8 +1,8 @@
 ---
 title: ksetup
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0194cf81d069d7a5c1223f0a514d593e4870d397
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 265f67bff65794938485472a41064837551c7699
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59868845"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374805"
 ---
 # <a name="ksetup"></a>ksetup
 
 
 
-Выполняет задачи, связанные с настройкой и обслуживанием протокол Kerberos и центр распространения ключей (KDC) для поддержки сфер Kerberos, которые не являются также домены Windows. Примеры использования этой команды см. в разделе в подразделе примеров в каждой из связанных подразделов.
+Выполняет задачи, связанные с настройкой и обслуживанием протокола Kerberos и центр распространения ключей (KDC) для поддержки сфер Kerberos, которые также не являются доменами Windows. Примеры использования этой команды см. в разделе "примеры" в каждой из связанных подразделов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -59,38 +59,38 @@ ksetup
 
 |Параметр|Описание|
 |---------|-----------|
-|[ksetup:setrealm](ksetup-setrealm.md)|Этот компьютер становится членом областью Kerberos.|
-|[ksetup:mapuser](ksetup-mapuser.md)|Сопоставляет субъектом Kerberos учетной записи.|
-|[ksetup:addkdc](ksetup-addkdc.md)|Определяет запись центра распространения КЛЮЧЕЙ для данной области.|
-|[ksetup:delkdc](ksetup-delkdc.md)|Удаление элемента KDC сферы.|
-|[ksetup:addkpasswd](ksetup-addkpasswd.md)|Добавляет адрес сервера Kpasswd для сферы.|
-|[ksetup:delkpasswd](ksetup-delkpasswd.md)|Удаляет адрес сервера Kpasswd для сферы.|
-|[ksetup:Server](ksetup-server.md)|Позволяет указать имя компьютера Windows, к которому следует применить изменения.|
-|[ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)|Задает пароль для компьютера домена учетной записи (или участника узла).|
-|[ksetup:removerealm](ksetup-removerealm.md)|Удаляет всю информацию для указанной области из реестра.|
-|[ksetup:domain](ksetup-domain.md)|Можно указать домен (если \<DomainName > не было задано с помощью **/domain**).|
-|[ksetup:ChangePassword](ksetup-changepassword.md)|Позволяет использовать Kpasswd для изменения пароля пользователя, вошедшего в систему.|
-|[ksetup:listrealmflags](ksetup-listrealmflags.md)|Перечисляет доступные флаги сферы, **ksetup** может обнаружить.|
-|[ksetup:setrealmflags](ksetup-setrealmflags.md)|Задает флаги сферы для определенной области.|
-|[ksetup:addrealmflags](ksetup-addrealmflags.md)|Добавляет флаги сферы дополнительные области.|
-|[ksetup:delrealmflags](ksetup-delrealmflags.md)|Удаляет флаги сферы из сферы.|
-|[ksetup:dumpstate](ksetup-dumpstate.md)|Анализирует конфигурацию Kerberos на заданном компьютере. Добавляет узел в области сопоставления в реестр.|
-|[ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)|Добавляет значение реестра для сопоставления узла к области Kerberos.|
-|[ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)|Удаляет параметр реестра, который сопоставляется с главного компьютера области Kerberos.|
-|[ksetup:setenctypeattr](ksetup-setenctypeattr.md)|Задает один или несколько типов шифрования атрибуты доверия для домена.|
-|[ksetup:getenctypeattr](ksetup-getenctypeattr.md)|Возвращает атрибут шифрования типы доверия для домена.|
-|[ksetup:addenctypeattr](ksetup-addenctypeattr.md)|Добавляет типы шифрования атрибут шифрования типы доверия для домена.|
-|[ksetup:delenctypeattr](ksetup-delenctypeattr.md)|Удаляет атрибут шифрования типы доверия для домена.|
+|[Ksetup:setrealm](ksetup-setrealm.md)|Делает этот компьютер членом области Kerberos.|
+|[Ksetup:mapuser](ksetup-mapuser.md)|Сопоставляет субъекта Kerberos с учетной записью.|
+|[Ksetup:addkdc](ksetup-addkdc.md)|Определяет запись KDC для данной области.|
+|[Ksetup:delkdc](ksetup-delkdc.md)|Удаляет запись KDC для области.|
+|[Ksetup:addkpasswd](ksetup-addkpasswd.md)|Добавляет адрес сервера Кпассвд для области.|
+|[Ksetup:delkpasswd](ksetup-delkpasswd.md)|Удаляет адрес сервера Кпассвд для области.|
+|[Ksetup:server](ksetup-server.md)|Позволяет указать имя компьютера Windows, на котором будут применяться изменения.|
+|[Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)|Задает пароль для учетной записи домена компьютера (или субъекта-узла).|
+|[Ksetup:removerealm](ksetup-removerealm.md)|Удаляет из реестра все сведения для указанной области.|
+|[Ksetup:domain](ksetup-domain.md)|Позволяет указать домен (если \<DomainName > не был задан с помощью **/domain**).|
+|[Ksetup:changepassword](ksetup-changepassword.md)|Позволяет использовать Кпассвд для изменения пароля пользователя, вошедшего в систему.|
+|[Ksetup:listrealmflags](ksetup-listrealmflags.md)|Список доступных флагов области, которые **ksetup** может обнаружить.|
+|[Ksetup:setrealmflags](ksetup-setrealmflags.md)|Задает флаги области для определенной области.|
+|[Ksetup:addrealmflags](ksetup-addrealmflags.md)|Добавляет дополнительные флаги сферы в область.|
+|[Ksetup:delrealmflags](ksetup-delrealmflags.md)|Удаляет флаги сферы из области.|
+|[Ksetup:dumpstate](ksetup-dumpstate.md)|Анализирует конфигурацию Kerberos на данном компьютере. Добавляет в реестр сопоставление узла с областью.|
+|[Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)|Добавляет значение реестра для отображения узла в области Kerberos.|
+|[Ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)|Удаляет значение реестра, которое сопоставляет главный компьютер с областью Kerberos.|
+|[Ksetup:setenctypeattr](ksetup-setenctypeattr.md)|Задает один или несколько типов шифрования для атрибутов доверия для домена.|
+|[Ksetup:getenctypeattr](ksetup-getenctypeattr.md)|Возвращает атрибут доверия типов шифрования для домена.|
+|[Ksetup:addenctypeattr](ksetup-addenctypeattr.md)|Добавляет типы шифрования в атрибут Trust типов шифрования для домена.|
+|[Ksetup:delenctypeattr](ksetup-delenctypeattr.md)|Удаляет атрибут доверия типов шифрования для домена.|
 |/?|Отображает справку в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
-**Ksetup** используется для изменения параметров компьютера для обнаружения сферы Kerberos. В реализациях под управлением ОС, отличных от Microsoft Kerberos эти сведения обычно сохраняется в файл Krb5.conf. В операционных системах Windows Server он хранится в реестре. Это средство можно использовать для изменения этих параметров. Эти параметры используются, рабочие станции, чтобы найти сфер Kerberos и контроллерами домена, чтобы найти сфер Kerberos для отношения доверия между областями.
+**Ksetup** используется для изменения параметров компьютера для обнаружения сфер Kerberos. В реализациях, отличных от Microsoft Kerberos, эта информация обычно хранится в файле krb5. conf. В операционных системах Windows Server она хранится в реестре. Это средство можно использовать для изменения этих параметров. Эти параметры используются рабочими станциями для нахождение сфер Kerberos и контроллеров домена для нахождение сфер Kerberos для отношений доверия между сферами.
 
-**Ksetup** инициализирует раздела реестра для поставщика поддержки безопасности (SSP) Kerberos использует для обнаружения сферы Kerberos KDC, если компьютер под управлением Windows Server 2003, Windows Server 2008 или Windows Server 2008 R2 и не является членом группы Windows домен. После настройки клиентского компьютера под управлением Windows, операционной системы можно выполнить вход на учетные записи пользователей, в области Kerberos.
+**Ksetup** инициализирует разделы реестра, используемые поставщиком службы поддержки безопасности Kerberos (SSP) для определения местонахождения центра распространения ключей для области Kerberos, если компьютер работает под windows Server 2003, windows Server 2008 или windows Server 2008 R2 и не является членом Windows поддомен. После настройки пользователь клиентского компьютера, работающего под управлением операционной системы Windows, может войти в учетные записи в области Kerberos.
 
-Протокол Kerberos версии 5 используется по умолчанию для проверки подлинности сети на компьютерах под управлением Windows XP Professional, Windows Vista и Windows 7. Kerberos SSP пытается найти в реестре имя домена сферы пользователя и затем разрешает имя в IP-адресом, запрашивая DNS-сервер. Протокол Kerberos можно использовать DNS для поиска KDC с использованием только имени области, но он должен быть специально настроен для этого.
+Протокол Kerberos версии 5 используется по умолчанию для проверки подлинности сети на компьютерах под управлением Windows XP Professional, Windows Vista и Windows 7. ПОСТАВЩИК удостоверений Kerberos ищет в реестре доменное имя области пользователя, а затем разрешает имя в IP-адрес, запрашивая DNS-сервер. Протокол Kerberos может использовать DNS для определения Кдкс только с именем области, но для этого он должен быть специально настроен.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

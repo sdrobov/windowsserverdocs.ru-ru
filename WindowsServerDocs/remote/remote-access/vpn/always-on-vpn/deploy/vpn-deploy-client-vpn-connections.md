@@ -1,7 +1,7 @@
 ---
 title: Настройка подключений постоянно подключенного VPN-профиля клиента Windows 10
 description: На этом шаге вы узнаете о параметрах и схеме Профилексмл, а также о настройке клиентских компьютеров Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 05/29/2018
@@ -10,12 +10,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.reviewer: deverette
-ms.openlocfilehash: c3ac8295d048c599a1cb6d1ed141cd63a7a73f47
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9621f9bdca0416965861112ba23c1c8dd731f67b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871337"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404289"
 ---
 # <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений
 
@@ -863,7 +863,7 @@ PSComputerName  : WIN01
 >[!NOTE]
 >Теперь Intune использует группы Azure AD. Если Azure AD Connect синхронизирует группу "пользователи VPN" из локальной среды в Azure AD, а пользователи назначены группе "пользователи VPN", вы можете продолжать работу.
 
-Создайте политику конфигурации VPN-устройства, чтобы настроить клиентские компьютеры Windows 10 для всех пользователей, добавленных в группу. Так как шаблон Intune предоставляет параметры VPN, скопируйте \<только еафостконфиг > \</еафостконфиг только > части файла VPN_ProfileXML.
+Создайте политику конфигурации VPN-устройства, чтобы настроить клиентские компьютеры Windows 10 для всех пользователей, добавленных в группу. Поскольку шаблон Intune предоставляет параметры VPN, скопируйте только часть \<EapHostConfig > \</Еафостконфиг > части файла VPN_ProfileXML.
 
 ### <a name="create-the-always-on-vpn-configuration-policy"></a>Создание Always On политики конфигурации VPN
 

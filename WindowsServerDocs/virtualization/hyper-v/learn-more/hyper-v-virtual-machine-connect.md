@@ -2,7 +2,7 @@
 title: Подключение к виртуальной машине Hyper-V
 description: Описание подключения к виртуальной машине, которое обеспечивает удаленный доступ к виртуальной машине. Содержит сведения о том, как выполнять общие задачи, такие как отправка Ctrl-Alt-Delete на виртуальную машину.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 manager: dongill
@@ -13,12 +13,12 @@ ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 04f3bc581a0065c62ba8878473e45f714ce8a069
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: fba83d22d9e5d9f31a5809781aa04943cc4cd3af
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872106"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71364150"
 ---
 # <a name="hyper-v-virtual-machine-connection"></a>Подключение к виртуальной машине Hyper-V
 

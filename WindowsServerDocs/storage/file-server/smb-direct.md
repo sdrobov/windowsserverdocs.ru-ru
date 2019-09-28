@@ -1,29 +1,29 @@
 ---
-title: Повысить производительность файлового сервера с помощью SMB Direct
-description: Описывается компонент SMB Direct в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2016.
-ms.prod: windows-server-threshold
+title: Повышение производительности файлового сервера с помощью SMB Direct
+description: Описание функции SMB Direct в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2016.
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: ed8fd5b4114fc9fd9c7dc278a98cea8cc67a8749
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 41126aa0d054607449d57928c1777679e5087e73
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826445"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394456"
 ---
 # <a name="smb-direct"></a>SMB Direct
 
 >Относится к: Windows Server 2012 R2, Windows Server 2012, Windows Server 2016
 
-Windows Server 2012 R2, Windows Server 2012 и Windows Server 2016 включают функции, SMB Direct, который поддерживает использование сетевых адаптеров с возможностью удаленный доступ к памяти (RDMA). Сетевые адаптеры с RDMA могут работать на полной скорости с очень малой задержкой, используя при этом очень малую часть ресурсов ЦП. При использовании этой функции для таких рабочих нагрузок, как Hyper-V и Microsoft SQL Server, работа с удаленным файловым сервером будет похожа на работу с локальным хранилищем. Особенности SMB Direct:
+Windows Server 2012 R2, Windows Server 2012 и Windows Server 2016 включают функцию, называемую SMB Direct, которая поддерживает использование сетевых адаптеров с возможностью удаленного доступа к памяти (RDMA). Сетевые адаптеры с RDMA могут работать на полной скорости с очень малой задержкой, используя при этом очень малую часть ресурсов ЦП. При использовании этой функции для таких рабочих нагрузок, как Hyper-V и Microsoft SQL Server, работа с удаленным файловым сервером будет похожа на работу с локальным хранилищем. Особенности SMB Direct:
 
-- Увеличение пропускной способности: Использует пропускную способность высокоскоростных сетей, в которых сетевые адаптеры координируют передачу больших объемов данных со скоростью линии.
-- Низкая задержка: Обеспечивает предельно быстрые отклики на сетевые запросы и, как следствие, делает удаленное хранилище файлов ощущение это напрямую подключенное блочное хранилище.
-- Низкая загрузка ЦП: Использует меньше тактов центрального Процессора во время передачи по сети, которая остается больше мощности для серверных приложений.
+- Увеличение пропускной способности: Использует полную пропускную способность сетей высокой скорости, когда сетевые адаптеры координируют передачу больших объемов данных по скорости линии.
+- Низкая задержка: Предоставляет очень быстрые ответы на сетевые запросы, и в результате делает удаленное хранилище файлов так, как если бы оно было напрямую подключено к блочному хранилищу.
+- Низкая загрузка ЦП: Использует меньше циклов ЦП при передаче данных по сети, что оставляет больше возможностей для серверных приложений.
 
 SMB Direct автоматически настраивается с помощью Windows Server 2012 R2 и Windows Server 2012.
 
@@ -41,7 +41,7 @@ SMB при помощи SMB Multichannel определяет, обладает 
 
 Для поддержки SMB Direct необходимо соблюдать следующие требования.
 
-- По крайней мере два компьютера с Windows Server 2012 R2 или Windows Server 2012
+- По крайней мере два компьютера под управлением Windows Server 2012 R2 или Windows Server 2012
 - Один или несколько сетевых адаптеров с функцией RDMA.
 
 ### <a name="considerations-when-using-smb-direct"></a>Вопросы использования SMB Direct
@@ -49,7 +49,7 @@ SMB при помощи SMB Multichannel определяет, обладает 
 - Можно использовать SMB Direct в отказоустойчивом кластере. Однако необходимо при этом убедиться, что сеть кластера, используемая для клиентского доступа, подходит для работы с SMB Direct. Отказоустойчивая кластеризация поддерживает использование нескольких сетей для клиентского доступа наряду с сетевыми адаптерами с поддержкой RSS (Receive Side Scaling) и RDMA.
 - SMB Direct можно использовать в управляющей операционной системе Hyper-V для поддержки использования Hyper-V через SMB и для обеспечения хранилища для виртуальной машины, которая использует стек хранилища Hyper-V. Однако сетевые адаптеры с RDMA недоступны напрямую для клиента Hyper-V. Если подключить сетевой адаптер с RDMA к виртуальному коммутатору, виртуальные сетевые адаптеры этого коммутатора не будут поддерживать RDMA.
 - При отключении SMB Multichannel отключается также и SMB Direct. SMB Multichannel определяет возможности сетевого адаптера, в том числе поддержку функции RDMA; если SMB Multichannel отключен, SMB Direct не может использоваться клиентом.
-- SMB Direct не поддерживается в Windows RT. SMB Direct требует поддержки сетевых адаптеров с поддержкой RDMA, которая доступна только в Windows Server 2012 R2 и Windows Server 2012.
+- SMB Direct не поддерживается в Windows RT. Для SMB Direct требуется поддержка сетевых адаптеров с поддержкой RDMA, которые доступны только в Windows Server 2012 R2 и Windows Server 2012.
 - SMB Direct не поддерживается в более ранних версиях Windows Server. Он поддерживается только в Windows Server 2012 R2 и Windows Server 2012.
 
 ## <a name="enabling-and-disabling-smb-direct"></a>Включение и отключение SMB Direct
@@ -72,7 +72,7 @@ Disable-NetAdapterRdma <name>
 Set-NetOffloadGlobalSetting -NetworkDirect Disabled
 ```
 
-Если RDMA отключен на клиенте или сервере, система не может использовать его. *Network Direct* это внутреннее имя для Windows Server 2012 R2 и Windows Server 2012 базовой сетевой поддержки интерфейсов RDMA.
+Если RDMA отключен на клиенте или сервере, система не может использовать его. *Сеть Direct* — это внутреннее имя для windows Server 2012 R2 и windows Server 2012 Basic Networking support для интерфейсов RDMA.
 
 ### <a name="re-enable-smb-direct"></a>Повторное включение SMB Direct
 
@@ -98,7 +98,7 @@ Set-NetOffloadGlobalSetting -NetworkDirect Enabled
 
 ### <a name="compare-a-file-copy-with-and-without-using-smb-direct"></a>Сравнение времени копирования файлов с использованием и без использования SMB Direct
 
-Вот как можно измерить увеличенную пропускную способность SMB Direct:
+Ниже показано, как измерять повышенную пропускную способность SMB Direct.
 
 1. Настройте SMB Direct
 2. Измерьте время копирования большого файла с использованием SMB Direct.
@@ -112,7 +112,7 @@ Set-NetOffloadGlobalSetting -NetworkDirect Enabled
 
 ### <a name="fail-one-of-multiple-network-adapters-during-a-file-copy-with-smb-direct"></a>Сымитируйте отказ одного из сетевых адаптеров во время копирования файлов с использованием SMB Direct
 
-Вот как проверить отказоустойчивость SMB Direct:
+Вот как можно проверить возможность отработки отказа SMB Direct:
 
 1. Убедитесь, что SMB Direct работает в конфигурации для нескольких сетевых адаптеров.
 2. Запустите копирование большого файла. Во время копирования сымитируйте отказ одного из сетевых трактов путем отключения одного из кабелей (или отключения одного из сетевых адаптеров).
@@ -123,6 +123,6 @@ Set-NetOffloadGlobalSetting -NetworkDirect Enabled
 
 ## <a name="more-information"></a>Дополнительные сведения
 
-- [Общие сведения о Server Message Block](file-server-smb-overview.md)
-- [Повышение сервера, хранилища и доступности сети: Обзор сценария](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-- [Развертывание Hyper-V через SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
+- [Общие сведения о блоке сообщений сервера](file-server-smb-overview.md)
+- Доступность сервера, хранилища и сети @no__t 0Increasing: Обзор сценария](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
+- [Развертывание Hyper-V по протоколу SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)

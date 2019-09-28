@@ -1,8 +1,8 @@
 ---
-title: Ход выполнения команды
-description: 'Раздел Windows команды для ***- '
+title: Команда Progress
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5fff31c91b4d267011f2d738b4fc3acb3f0f2377
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 841d9103354e3162489492ba7dd97e726b37d37d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59832705"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370178"
 ---
-# <a name="the-progress-command"></a>Ход выполнения команды
+# <a name="the-progress-command"></a>Команда Progress
 
 
 
-Отображение хода выполнения команды. Можно использовать **/хода выполнения** с другими командами WDSUTIL, которые выполняются. Обратите внимание, что необходимо указать **/ verbose** и **/хода выполнения** сразу после **WDSUTIL**.
+Показывает ход выполнения команды. **/Прогресс** можно использовать с любыми другими выполняемыми командами WDSUTIL. Обратите внимание, что необходимо указать **/verbose** и **/прогресс** непосредственно после **WDSUTIL**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ WDSUTIL /progress <commands>
 
 ## <a name="examples"></a>Примеры
 
-Чтобы отобразить ход выполнения инициализации сервера, введите следующую команду:
+Чтобы инициализировать сервер и отобразить ход выполнения, введите:
 ```
 WDSUTIL /Verbose /Progress /Initialize-Server /Server:MyWDSServer /RemInst:"C:\RemoteInstall"
 ```

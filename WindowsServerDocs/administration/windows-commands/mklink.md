@@ -2,7 +2,7 @@
 title: mklink
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ea80b81b268b31f637c72a828fee8b6f0229a47
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 9d930cbf7acbfceab16f2fa619aaaac6e789c131
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67280026"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373643"
 ---
 # <a name="mklink"></a>mklink
 Создает символьную ссылку.
@@ -35,16 +35,16 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 
 |Параметр|Описание|
 |---------|-----------|
-|/d|Создание символической ссылки каталога. По умолчанию **mklink** создает Символическая ссылка на файл.|
-|/h|Создает жесткую связь вместо символьную ссылку.|
-|/j|Создание соединения для каталога.|
-|\<Ссылка >|Задает имя используемого символьную ссылку, который создается.|
-|\<Целевой объект >|Указывает путь (относительный или абсолютный), адресованный новую символическую связь.|
+|/d|Создает символьную ссылку каталога. По умолчанию **Mklink** создает символьную ссылку на файл.|
+|/h|Создает жесткую связь вместо символьной ссылки.|
+|/j|Создает соединение с каталогом.|
+|@no__t 0Link >|Указывает имя создаваемой символьной ссылки.|
+|@no__t 0Target >|Указывает путь (относительный или абсолютный), на который ссылается Новая символьная ссылка.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере демонстрируется создание и удаление связей с именем MyFolder и MyFile.file из корневого каталога в каталог \Users\User1\Documents и example.file, расположенный в каталоге:
+В примере входящей показано создание и удаление символической ссылки с именем MyFolder и MyFile. file из корневого каталога в каталог \Users\User1\Documents и файла example. File, расположенного в каталоге:
 ```
 mklink /d \MyFolder \Users\User1\Documents
 mklink /h \MyFile.file \User1\Documents\example.file

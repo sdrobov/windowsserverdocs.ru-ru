@@ -2,7 +2,7 @@
 title: средстве инвентаризации программного обеспечения
 description: Описывает установку и управление агрегатором ведения журнала инвентаризации программного обеспечения
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: manage-software-inventory-logging
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0edecb86c7d5afa7d267c75ec858ded9af36e4c0
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 81dbfb89d2e72af57c070db8473fd3b0e521906c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70866323"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382936"
 ---
 # <a name="software-inventory-logging-aggregator"></a>средстве инвентаризации программного обеспечения
 
@@ -69,7 +69,7 @@ ms.locfileid: "70866323"
 
 -   **Руководители руководителей и финансов**, которым требуется сообщать об использовании программного обеспечения корпорации Майкрософт в ИТ и развертываниях своих организаций.
 
-## <a name="getting-started"></a>Начало работы
+## <a name="getting-started"></a>начало работы
 **Предварительные условия**
 
 Средство инвентаризации программного обеспечения, установленное по крайней мере на одном сервере для сбора данных и создания отчетов либо на виртуальной машине, либо на физическом оборудовании:

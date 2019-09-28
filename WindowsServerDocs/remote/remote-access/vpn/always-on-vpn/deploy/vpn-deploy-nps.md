@@ -1,7 +1,7 @@
 ---
 title: Установка и настройка сервера политики сети
 description: Сервер политики сети. Обработка запросов на подключение, отправленных VPN-сервером, проверяет, имеет ли пользователь разрешение на подключение, удостоверение пользователя и регистрирует аспекты запроса на подключение, выбранные при настройке учета RADIUS в NPS.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: ''
@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 08/30/2018
-ms.openlocfilehash: 553f3327e6252d2b03744b2e0fc88f340701f3a9
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 5cb0d342afec9c28259efb7a2e15666358f3cb5b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871332"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71404257"
 ---
 # <a name="step-4-install-and-configure-the-network-policy-server-nps"></a>Шаг 4. Установка и настройка сервера политики сети (NPS)
 
@@ -171,7 +171,7 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 
 4. В поле Укажите сервер удаленного доступа или VPN-клиенты выберите имя VPN-сервера, добавленного на предыдущем шаге. Например, если NetBIOS-имя VPN-сервера — RAS1, выберите **RAS1**.
 
-5. Щелкните **Далее**.
+5. Выберите **Далее**.
 
 6. В разделе Настройка методов проверки подлинности выполните следующие действия.
 
@@ -191,7 +191,7 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 
     7. Нажмите кнопку **ОК** , чтобы закрыть диалоговое окно Изменение свойств защищенного EAP.
 
-7. Щелкните **Далее**.
+7. Выберите **Далее**.
 
 8. В разделе Указание групп пользователей выполните следующие действия.
 
@@ -199,7 +199,7 @@ Install-WindowsFeature NPAS -IncludeManagementTools
 
     2. Введите **VPN-пользователей**, а затем нажмите кнопку **ОК**.
 
-    3. Щелкните **Далее**.
+    3. Выберите **Далее**.
 
 9. В окне укажите IP-фильтры нажмите кнопку **Далее**.
 

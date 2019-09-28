@@ -2,22 +2,22 @@
 title: Задачи управления файлами
 description: В этой статье описывается процесс автоматизации задач управления файлами
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: d8d798611a00e29337a5d45979947a51f03bcdee
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: 257ee2955c4f521d14f01ec197fd45e5194eef02
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65475875"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394100"
 ---
 # <a name="file-management-tasks"></a>Задачи управления файлами
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Задачи управления файлами автоматизируют процессы поиска наборов файлов на сервере и применения простых команд. Можно запланировать периодическое выполнение этих задач с целью сокращения повторяющихся расходов. Файлы, которые будут обрабатываться задачей управления файлами, можно определять с помощью любого из следующих свойств:
 

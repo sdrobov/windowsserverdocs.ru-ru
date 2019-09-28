@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a1210918067bbb71ea26dff4db11561bbeb09dbd
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 08382a8eccaafac257165587fe7b6c18a8ecfbbc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70869254"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407276"
 ---
 # <a name="when-to-use-a-send-ldap-attributes-as-claims-rule"></a>Когда следует использовать правило "Отправлять атрибуты LDAP как утверждения"
 Это правило можно использовать в \(службы федерации Active Directory (AD FS) AD FS\) , если требуется выдать исходящие утверждения, содержащие \(фактические значения атрибутов LDAP\) , которые существуют в хранилище атрибутов, которое затем связывает тип утверждения с каждым из атрибутов LDAP. Дополнительные сведения о хранилищах атрибутов см. [в разделе роль хранилищ атрибутов](The-Role-of-Attribute-Stores.md).  
@@ -147,7 +147,7 @@ param = regexreplace(c1.Value, ".*DC=(?<domain>.+),DC=corp,DC=fabrikam,DC=com", 
 > [!NOTE]  
 > Эти правила работают только в том случае, если менеджер пользователя находится в том же домене, \(что и пользователь,\)Corp.fabrikam.com в этом примере.  
   
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 [Создание правила для отправки атрибутов LDAP в качестве утверждений](https://technet.microsoft.com/library/dd807115.aspx)  
   
 

@@ -3,7 +3,7 @@ title: Станции MultiPoint
 description: Сведения о станциях в службах MultiPoint, включая различные параметры для пользователей
 ms.custom: na
 ms.date: 07/22/2016
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ ms.assetid: f9f9d618-ccfe-41ea-a52c-00c3c7adb51a
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 4aa08f58f8fdf6d6fce816ee090275b0bf46a844
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7b8f757d552bf54cd7f4eed0783ba8e0062b9d30
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871627"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405072"
 ---
 # <a name="multipoint--stations"></a>Станции MultiPoint
 В среде системы служб MultiPoint *станции* — это конечные точки пользователя для подключения к компьютеру, на котором выполняются службы MultiPoint. Каждая станция предоставляет пользователю независимый интерфейс Windows 10. Поддерживаются следующие типы станций:  

@@ -2,22 +2,22 @@
 title: Настройка уведомлений по электронной почте
 description: В этой статье описывается процесс настройки уведомлений по электронной почте
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 541ceec25e8cb0fae0b55c3de3be269982546c54
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 9fef24dccc71eab49fa8c77f0f80d5ec3b3a9327
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447663"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402028"
 ---
 # <a name="configure-e-mail-notifications"></a>Настройка уведомлений по электронной почте
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 При создании квот и фильтров блокировки файлов вы можете включить уведомления по электронной почте, которые отправляются пользователям при приближении к ограничению квоты или после попытки сохранить заблокированные файлы. При создании отчетов хранилища вы можете отправлять отчеты указанным получателям по электронной почте. Чтобы периодически уведомлять определенных администраторов о событиях превышения квоты и блокировки файлов или отправлять отчеты хранилища, можно настроить одного или нескольких получателей по умолчанию.
 

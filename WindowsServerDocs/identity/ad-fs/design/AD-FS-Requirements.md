@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 247381b35a038627b5d8c91ac4dda0cc4fab6195
-ms.sourcegitcommit: ccec91c1d32a978159f9b8bb5e39ead5805c26c4
+ms.openlocfilehash: 720c20437f7e6da875b809b2816f0d4df5d210d6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71143777"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71359186"
 ---
 # <a name="ad-fs-requirements"></a>Требования AD FS
 
@@ -185,7 +185,7 @@ AD FS создает\-основанные на сеансах и постоян
 ## <a name="BKMK_extranet"></a>Требования к экстрасети  
 Чтобы предоставить доступ в экстрасети к службе AD FS, необходимо развернуть службу роли прокси-службы веб приложения в качестве роли, развернутой в экстрасети, которая безопасно передает запросы проверки подлинности в службу AD FS. Это обеспечивает изоляцию конечных точек службы AD FS, а также изоляцию всех ключей \(безопасности, таких как сертификаты\) для подписи маркеров, от запросов, исходящих из Интернета. Кроме того, для таких функций, как обратимая блокировка учетных записей в экстрасети, требуется использовать прокси-сервер. Дополнительные сведения о прокси веб-приложения см. в разделе [прокси веб-приложения](https://technet.microsoft.com/library/dn584107.aspx).  
   
-Если вы хотите использовать\-сторонний прокси-сервер для доступа к экстрасети,\-этот прокси-сервер стороннего производителя должен поддерживать протокол, определенный в [http: download.Microsoft.com\/\/\/\/ download. 9\/5E\/95EF66AF\-90264BB0\-A41DA4F81802D92C%5bMS\-адфспип% 5 d.PDF.\/\-\-\/](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf)  
+Если вы хотите использовать третий прокси-сервер @ no__t-0party для доступа к экстрасети, этот третий прокси-сервер @ no__t-1party должен поддерживать протокол, определенный в [http: @no__t -3\/download.microsoft.com @ no__t-5download @ no__t-69 @ no__t-75 @ no__t-](https://download.microsoft.com/download/9/5/E/95EF66AF-9026-4BB0-A41D-A4F81802D92C/%5bMS-ADFSPIP%5d.pdf)8E @ no__t-995EF66AF @ no__t-109026 @ no__t-114BB0 @ no__t-12A41D  
   
 ## <a name="BKMK_7"></a>Требования к сети  
 Правильная настройка следующих сетевых служб очень важна для успешного развертывания AD FS в Организации:  

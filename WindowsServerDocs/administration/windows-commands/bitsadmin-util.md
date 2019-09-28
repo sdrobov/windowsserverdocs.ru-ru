@@ -1,8 +1,8 @@
 ---
 title: bitsadmin util
-description: Раздел Windows команды для **bitsadmin util** -список **Util** коммутаторов
+description: Раздел команд Windows для **битсадмин util** -список параметров **util**
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: edc8c5b2d2d42a50902603c56ef7326133bb22f6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a192df3254ac28cbbd9c8186e321b77e087e63e8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59867015"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380173"
 ---
 # <a name="bitsadmin-util"></a>bitsadmin util
 
-> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,12 +38,12 @@ bitsadmin /Util /version
 
 |Параметр|Описание|
 |-------|--------|
-|[bitsadmin util и справки](bitsadmin-util-and-help.md)|Отображает использование командной строки для коммутаторов /Util. Можно также указать /?. **BITSAdmin 1.5 и более ранних**: Не поддерживается.|
-|[bitsadmin util и getieproxy](bitsadmin-util-and-getieproxy.md)|Извлекает использование прокси-сервера для учетной записи данной службы.|
-|[bitsadmin util и repairservice](bitsadmin-util-and-repairservice.md)|действия по восстановлению известные проблемы со службой BITS|
-|[bitsadmin util и setieproxy](bitsadmin-util-and-setieproxy.md)|Указывает параметры прокси-сервера для использования при передаче файлов с помощью учетной записи службы.|
-|[bitsadmin util и версии](bitsadmin-util-and-version.md)|Отображает версию службы BITS|
+|[bitsadmin util и help](bitsadmin-util-and-help.md)|Отображает сведения об использовании командной строки для параметров/утил. Можно также указать/?. **Битсадмин 1,5 и более ранних версий**: Не поддерживается.|
+|[bitsadmin util и getieproxy](bitsadmin-util-and-getieproxy.md)|Возвращает сведения об использовании прокси-сервера для данной учетной записи службы.|
+|[bitsadmin util и repairservice](bitsadmin-util-and-repairservice.md)|Исправление известных проблем со службой BITS|
+|[bitsadmin util и setieproxy](bitsadmin-util-and-setieproxy.md)|Указывает параметры прокси-сервера, используемые при передаче файлов с помощью учетной записи службы.|
+|[bitsadmin util и version](bitsadmin-util-and-version.md)|Отображает версию службы BITS.|
 
 #### <a name="additional-references"></a>Дополнительные ссылки
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

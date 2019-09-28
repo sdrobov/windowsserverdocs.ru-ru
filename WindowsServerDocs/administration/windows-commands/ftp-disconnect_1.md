@@ -1,8 +1,8 @@
 ---
-title: FTP disconnect_1
-description: Разделе команд Windows, для ftp disconnect_1
+title: disconnect_1 FTP
+description: Раздел команд Windows для FTP disconnect_1
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,28 +13,28 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 49aeb97ab679c22cbd6faa94380eb2c7a7ee8abe
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6c9aa880063784fa0ac4fb6251e3e2cc5ed16f8e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59853945"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376420"
 ---
-# <a name="ftp-disconnect1"></a>ftp: disconnect_1
+# <a name="ftp-disconnect_1"></a>FTP: disconnect_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отключает от удаленного компьютера и сохраняет **ftp >** строки.   
+Отключается от удаленного компьютера и оставляет запрос **FTP->** .   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 disconnect  
 ```  
 ### <a name="parameters"></a>Параметры  
 none  
-## <a name="BKMK_Examples"></a>Примеры  
-Отключиться от удаленного компьютера и сохранить **ftp >** строки.  
+## <a name="BKMK_Examples"></a>Примеров  
+Отключитесь от удаленного компьютера и оставьте запрос **FTP->** .  
 ```  
 disconnect  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)  
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

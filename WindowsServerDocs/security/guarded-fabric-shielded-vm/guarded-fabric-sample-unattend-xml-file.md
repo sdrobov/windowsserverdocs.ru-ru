@@ -1,52 +1,52 @@
 ---
 title: Создание специализированного файла ответов ОС
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 299aa38e-28d2-4cbe-af16-5b8c533eba1f
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 5717fcc9e1732b6273620e633c140c6df58ec8b7
-ms.sourcegitcommit: 29ad32b9dea298a7fe81dcc33d2a42d383018e82
+ms.openlocfilehash: 4920f9a90bd0190d390a9d35b3d265023d69efac
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65624656"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386501"
 ---
 # <a name="create-os-specialization-answer-file"></a>Создание специализированного файла ответов ОС
 
->Относится к: Windows Server 2019 г., Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-В рамках подготовки к развертыванию экранированных виртуальных машин необходимо создать файл ответов специализации операционной системы. В Windows это часто называется «unattend.xml» файла. **New-ShieldingDataAnswerFile** функции Windows PowerShell помогает сделать это. После этого можно использовать файл ответов, при создании экранированных виртуальных машин из шаблона с помощью System Center Virtual Machine Manager (или любой другой контроллер структуры).
+При подготовке к развертыванию экранированных виртуальных машин может потребоваться создать файл ответов специализации операционной системы. В Windows этот файл обычно называется файлом unattend. XML. Это можно сделать с помощью функции **New-шиелдингдатаансверфиле** Windows PowerShell. Затем можно использовать файл ответов при создании экранированных виртуальных машин из шаблона с помощью System Center Virtual Machine Manager (или любого другого контроллера структуры).
 
-Общие рекомендации для файлов автоматической установки для экранированных виртуальных машин см. в разделе [создайте файл ответов](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
+Общие рекомендации по использованию файлов автоматической установки для экранированных виртуальных машин см. [в разделе Создание файла ответов](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file).
  
-## <a name="downloading-the-new-shieldingdataanswerfile-function"></a>Загрузка функции New-ShieldingDataAnswerFile
+## <a name="downloading-the-new-shieldingdataanswerfile-function"></a>Скачивание функции New-Шиелдингдатаансверфиле
 
-Вы можете получить **New-ShieldingDataAnswerFile** функции из [коллекции PowerShell](https://aka.ms/gftools). Если на компьютере установлено подключение к Интернету, это можно сделать с помощью PowerShell, выполнив следующую команду:
+Функцию **New-шиелдингдатаансверфиле** можно получить из [коллекция PowerShell](https://aka.ms/gftools). Если компьютер подключен к Интернету, его можно установить из PowerShell с помощью следующей команды:
 
 ```powershell
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-`unattend.xml` Выходные данные можно упаковать в данные экранирования, а также дополнительные артефакты, чтобы его можно использовать для создания экранированных виртуальных машин на основе шаблонов.
+Вывод `unattend.xml` можно упаковать в данные экранирования вместе с дополнительными артефактами, чтобы их можно было использовать для создания экранированных виртуальных машин из шаблонов.
 
-В следующих разделах показано, как можно использовать для параметров функции `unattend.xml` файл, содержащий различные параметры:
+В следующих разделах показано, как можно использовать параметры функции для файла `unattend.xml`, содержащего различные параметры.
 
-- [Базовый Windows файл ответов](#basic-windows-answer-file)
-- [Файл с помощью присоединения к домену ответов Windows](#windows-answer-file-with-domain-join)
-- [Файл ответов Windows со статическими адресами IPv4](#windows-answer-file-with-static-ipv4-addresses)
-- [Файл ответов Windows с помощью пользовательского языкового стандарта](#windows-answer-file-with-a-custom-locale)
-- [Базовый файл ответов для Linux](#basic-linux-answer-file)
+- [Базовый файл ответов Windows](#basic-windows-answer-file)
+- [Файл ответов Windows с присоединением к домену](#windows-answer-file-with-domain-join)
+- [Файл ответов Windows со статическими IPv4-адресами](#windows-answer-file-with-static-ipv4-addresses)
+- [Файл ответов Windows с пользовательским языковым стандартом](#windows-answer-file-with-a-custom-locale)
+- [Основной файл ответов Linux](#basic-linux-answer-file)
 
 ## <a name="basic-windows-answer-file"></a>Базовый файл ответов Windows
 
-Следующие команды создают файл ответов Windows, который просто устанавливает пароль учетной записи администратора и имя узла.
-Сетевым адаптерам виртуальной Машины будет использовать DHCP для получения IP-адресов, а не виртуальная машина будет присоединен к домену Active Directory.
-При появлении предложения ввести учетные данные администратора, укажите желаемое имя пользователя и пароль.
-Используйте для имени пользователя «Администратор», если вы хотите настроить встроенной учетной записи администратора.
+Следующие команды создают файл ответов Windows, который просто задает пароль учетной записи администратора и имя узла.
+Сетевые адаптеры виртуальной машины будут использовать DHCP для получения IP-адресов, а виртуальная машина не будет присоединена к домену Active Directory.
+При появлении запроса на ввод учетных данных администратора укажите требуемое имя пользователя и пароль.
+Используйте "Администратор" для имени пользователя, если вы хотите настроить встроенную учетную запись администратора.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -54,17 +54,17 @@ $adminCred = Get-Credential -Message "Local administrator account"
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred
 ```
 
-## <a name="windows-answer-file-with-domain-join"></a>Файл с помощью присоединения к домену ответов Windows
+## <a name="windows-answer-file-with-domain-join"></a>Файл ответов Windows с присоединением к домену
 
-Следующие команды создают файл ответов Windows, который присоединяет экранированной виртуальной Машины к домену Active Directory.
-Сетевым адаптерам виртуальной Машины будет использовать DHCP для получения IP-адресов.
+Следующие команды создают файл ответов Windows, который присоединяет экранированную виртуальную машину к домену Active Directory.
+Сетевые адаптеры виртуальной машины будут использовать DHCP для получения IP-адресов.
 
-Первый запрос учетных данных будет запрашивать данные учетной записи локального администратора.
-Используйте для имени пользователя «Администратор», если вы хотите настроить встроенной учетной записи администратора.
+В первом запросе учетных данных будет запрашиваться информация об учетной записи локального администратора.
+Используйте "Администратор" для имени пользователя, если вы хотите настроить встроенную учетную запись администратора.
 
-Второй запрос учетных данных будет запрашивать учетные данные, имеющие право на присоединение компьютера к домену Active Directory.
+Во втором запросе учетных данных будет предложено ввести учетные данные, которые имеют право присоединить компьютер к домену Active Directory.
 
-Не забудьте изменить значение «-DomainName» параметра на полное доменное имя домена Active Directory.
+Не забудьте изменить значение параметра-имя_домена на полное доменное имя домена Active Directory.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -72,27 +72,27 @@ $domainCred = Get-Credential -Message "Domain join credentials"
 
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -DomainName 'my.contoso.com' -DomainJoinCredentials $domainCred
 ```
-## <a name="windows-answer-file-with-static-ipv4-addresses"></a>Файл ответов Windows со статическими адресами IPv4
+## <a name="windows-answer-file-with-static-ipv4-addresses"></a>Файл ответов Windows со статическими IPv4-адресами
 
-Следующие команды создают файл ответов Windows, использующего статические IP-адреса, предоставляемые диспетчер структуры, такие как System Center Virtual Machine Manager во время развертывания.
+Приведенные ниже команды создают файл ответов Windows, который использует статические IP-адреса, предоставленные диспетчером структуры в процессе развертывания, например System Center Virtual Machine Manager.
 
-Virtual Machine Manager предоставляет три компонента статический IP-адрес, используя пул IP-адресов: IPv4-адрес, IPv6-адрес, адрес шлюза и DNS-адрес. Если требуется, чтобы любые дополнительные поля, включаемые или требуется пользовательская настройка сети, необходимо будет вручную изменить файл ответов, созданный с помощью скрипта.
+Virtual Machine Manager предоставляет три компонента для статического IP-адреса с помощью пула IP-адресов: IPv4-адрес, IPv6-адрес, адрес шлюза и адрес DNS. Если требуется включить дополнительные поля или запрашивать пользовательскую конфигурацию сети, необходимо вручную изменить файл ответов, созданный сценарием.
 
-Далее на снимках экрана показано пулы IP-адресов, которые можно настроить в Virtual Machine Manager. Эти пулы необходимы в том случае, если вы хотите использовать статический IP-адрес.
+На следующих снимках экрана показаны пулы IP-адресов, которые можно настроить в Virtual Machine Manager. Эти пулы необходимы, если вы хотите использовать статический IP-адрес.
 
-В настоящее время функция поддерживает только один DNS-сервер. Вот, что параметры DNS выглядит следующим образом:
+В настоящее время функция поддерживает только один DNS-сервер. Параметры DNS будут выглядеть следующим образом:
 
-![Настройка DNS-сервера с помощью пула статических IP-адресов](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-dns-settings.png)
+![Настройка DNS-сервера со статическим пулом IP-адресов](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-dns-settings.png)
 
-Вот, как будет выглядеть итоги для создания пула IP-адреса. Иными словами необходимо иметь только один сетевой маршрут, один шлюз и один DNS-сервер - и необходимо указать IP-адрес.
+Вот как будет выглядеть сводка по созданию пула статических IP-адресов. Вкратце, необходимо иметь только один сетевой маршрут, один шлюз и один DNS-сервер, и необходимо указать IP-адрес.
 
-![Сводка по созданию пула статических IP-адрес](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-summary.png)
+![Сводка по созданию пула статических IP-адресов](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-summary.png)
 
-Необходимо настроить сетевой адаптер для виртуальной машины. На следующем рисунке показан, где можно настроить эту конфигурацию и как переключиться статический IP-адрес.
+Необходимо настроить сетевой адаптер для виртуальной машины. На следующем снимке экрана показано, где задать эту конфигурацию и как переключить ее на статический IP-адрес.
 
-![Настройте оборудование для использования статического IP-адреса](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
+![Настройка оборудования для использования статического IP-адреса](../media/Guarded-Fabric-Shielded-VM/guarded-host-unattend-static-ip-address-pool-network-adapter-settings.png)
 
-Затем вы можете использовать `-StaticIPPool` параметр для включения статических элементов IP-адрес в файле ответов. Параметры `@IPAddr-1@`, `@NextHop-1-1@`, и `@DNSAddr-1-1@` в ответе файл затем заменяется реальные значения, заданные в Virtual Machine Manager во время развертывания.
+Затем можно использовать параметр `-StaticIPPool`, чтобы включить статические IP-элементы в файл ответов. Параметры `@IPAddr-1@`, `@NextHop-1-1@` и `@DNSAddr-1-1@` в файле ответов будут заменены реальными значениями, указанными в Virtual Machine Manager во время развертывания.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -100,12 +100,12 @@ $adminCred = Get-Credential -Message "Local administrator account"
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -StaticIPPool IPv4Address
 ```
 
-## <a name="windows-answer-file-with-a-custom-locale"></a>Файл ответов Windows с помощью пользовательского языкового стандарта
+## <a name="windows-answer-file-with-a-custom-locale"></a>Файл ответов Windows с пользовательским языковым стандартом
 
-Следующие команды создают файл ответов Windows с помощью пользовательского языкового стандарта.
+Следующие команды создают файл ответов Windows с настраиваемым языковым стандартом.
 
-При появлении предложения ввести учетные данные администратора, укажите желаемое имя пользователя и пароль.
-Используйте для имени пользователя «Администратор», если вы хотите настроить встроенной учетной записи администратора.
+При появлении запроса на ввод учетных данных администратора укажите требуемое имя пользователя и пароль.
+Используйте "Администратор" для имени пользователя, если вы хотите настроить встроенную учетную запись администратора.
 
 ```powershell
 $adminCred = Get-Credential -Message "Local administrator account"
@@ -114,13 +114,13 @@ $domainCred = Get-Credential -Message "Domain join credentials"
 New-ShieldingDataAnswerFile -Path '.\ShieldedVMAnswerFile.xml' -AdminCredentials $adminCred -Locale es-ES
 ```
 
-## <a name="basic-linux-answer-file"></a>Базовый файл ответов для Linux
+## <a name="basic-linux-answer-file"></a>Основной файл ответов Linux
 
-Начиная с Windows Server версии 1709, можно запустить некоторые Linux гостевых ОС в экранированные виртуальные машины.
-При использовании агента System Center Virtual Machine Manager Linux для уточнения этих виртуальных машинах, командлет New-ShieldingDataAnswerFile можно создать файлы совместимых ответов для него.
+Начиная с Windows Server версии 1709, вы можете запускать определенные гостевые ОС Linux в экранированных виртуальных машинах.
+Если вы используете Агент System Center Virtual Machine Manager Linux для специализации этих виртуальных машин, командлет New-Шиелдингдатаансверфиле может создать для него совместимые файлы ответов.
 
-В файле ответов Linux обычно будет включать пароль пользователя root, корневой ключ SSH и при необходимости статические данные о пуле IP-адрес.
-Замените путь к открытый ключ SSH перед запуском приведенный ниже сценарий.
+В файле ответов Linux, как правило, вы включаете корневой пароль, корневой ключ SSH и, при необходимости, сведения о пуле статических IP-адресов.
+Перед выполнением приведенного ниже сценария замените путь к общедоступной половине ключа SSH.
 
 ```powershell
 $rootPassword = Read-Host -Prompt "Root password" -AsSecureString

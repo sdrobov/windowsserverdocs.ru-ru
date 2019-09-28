@@ -2,19 +2,19 @@
 title: Шифрование виртуальной сети
 description: Шифрование виртуальной сети позволяет выполнять шифрование трафика виртуальной сети между виртуальными машинами, взаимодействующими друг с другом в подсетях, помеченных как "шифрование включено".
 manager: dougkim
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 7da0f509-7b02-4a0f-90fb-d97c83a2bc4e
 ms.author: pashort
 author: shortpatti
 ms.date: 08/08/2018
-ms.openlocfilehash: 056edc49d6089be5f9753d41ebd0cec7feacc0c5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7ecb2a1373efcf15aada451313e334e210c76d1e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870038"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355525"
 ---
 # <a name="virtual-network-encryption"></a>Шифрование виртуальной сети
 

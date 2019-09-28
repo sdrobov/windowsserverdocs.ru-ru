@@ -1,8 +1,8 @@
 ---
-title: Контекст набора
-description: 'Раздел Windows команды для ***- '
+title: Задать контекст
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f24e795f2d7c92d462cf822e70e4830b53827e5
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 16f71d831f374f495abf2239cb8e694eee69efdf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845855"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71370979"
 ---
-# <a name="set-contex"></a>Набор контекстного
+# <a name="set-contex"></a>Задать контекста
 
 
 
-Задает контекст для теневой копии. При использовании без параметров, **контекст набора** отображает справку в командной строке.
+Задает контекст для создания теневой копии. Если используется без параметров, **контекст Set** отображает справку в командной строке.
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -38,22 +38,22 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 
 |Параметр|Описание|
 |---------|-----------|
-|clientaccessible|Указывает, что теневая копия пригодна для использования в клиентских версиях Windows.|
-|Постоянные|Указывает, что теневая копия сохраняется по выходе из программы, сброса или перезапуска.|
-|volatile|Операции удаления теневой копии на выход из или сброса.|
-|NoWriters|Указывает, что все авторы исключаются.|
+|клиентакцессибле|Указывает, что теневая копия может использоваться клиентскими версиями Windows.|
+|надежно|Указывает, что теневая копия сохраняется по выходу из программы, сбросу или перезапуску.|
+|независимо|Удаляет теневую копию при выходе или сбросе.|
+|средства записи|Указывает, что все модули записи исключены.|
 
 ## <a name="remarks"></a>Примечания
 
--   *Clientaccessible* контекст является постоянным по умолчанию.
+-   По умолчанию контекст *клиентакцессибле* является постоянным.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы предотвратить удаление при выходе из DiskShadow теневые копии, введите:
+Чтобы предотвратить удаление теневых копий при выходе из сценария DiskShadow, введите:
 ```
 set context persistent
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

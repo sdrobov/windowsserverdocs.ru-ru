@@ -1,8 +1,8 @@
 ---
 title: bitsadmin rawreturn
-description: Раздел Windows команды для **bitsadmin rawreturn** -возвращает данные для синтаксического анализа.
+description: Раздел команд Windows для **битсадмин равретурн** . Возвращает данные, подходящие для синтаксического анализа.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4e12c8e621021d35ac618b4592515fe38c36be0e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 86d769de460538acda696194348980de5752d6d8
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434890"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380884"
 ---
 # <a name="bitsadmin-rawreturn"></a>bitsadmin rawreturn
 
-Возвращает данные для синтаксического анализа.
+Возвращает данные, подходящие для синтаксического анализа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,13 +32,13 @@ bitsadmin /RawReturn
 
 ## <a name="remarks"></a>Примечания
 
-Символы новой строки полосковых линий и форматирование выходных данных.
+Удаляет символы новой строки и форматирование из выходных данных.
 
-Как правило, эта команда используется в сочетании с **создать** и **получить\\** * коммутаторов для получения только значения. Необходимо указать этот параметр перед другими параметрами.
+Как правило, эта команда используется совместно с параметрами **CREATE** и **Get @ no__t-2*** для получения только значения. Этот параметр необходимо указать перед другими коммутаторами.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример извлекает необработанные данные для состояния задания с именем *myDownloadJob*.
+В следующем примере извлекаются необработанные данные для состояния задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /RawReturn /GetState myDownloadJob
 ```

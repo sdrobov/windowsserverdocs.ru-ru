@@ -1,28 +1,28 @@
 ---
-title: Материалах по лицензированию для Windows Server и Windows Admin Center
-description: Дополнительные сведения о Windows Admin Center, соглашения о лицензировании.
+title: Лицензирование содержимого Windows Server и центра администрирования Windows
+description: Узнайте о лицензионных соглашениях центра администрирования Windows.
 ms.topic: reference
 author: eross-msft
 ms.author: lizross
 ms.date: 06/11/2019
-ms.prod: windows-server-threshold
-ms.openlocfilehash: aee759de2f242afc661ccf230d1234031a764b69
-ms.sourcegitcommit: 9109f35563471ec0f7165bf3d1e1b448fe6e1924
+ms.prod: windows-server
+ms.openlocfilehash: ad9e0bfb77464e99118ebded5745abf6e23e687f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67346531"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392516"
 ---
-# <a name="windows-admin-center---license-terms"></a>Windows Admin Center — условия лицензионного соглашения
+# <a name="windows-admin-center---license-terms"></a>Центр администрирования Windows — условия лицензии
 
-Ознакомьтесь с условиями лицензии наши Windows Admin Center.
+Ознакомьтесь с условиями лицензии центра администрирования Windows.
 
-- [Условия лицензии программного обеспечения Майкрософт - предварительной версии расширений для Microsoft Windows Admin Center](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula)
+- [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт — предварительные версии расширений для центра администрирования Microsoft Windows](https://docs.microsoft.com/legal/windows-server/windows-admin-center/windows-pre-release-extension-eula)
 
-- [Условия лицензии для расширения](https://docs.microsoft.com/legal/windows-server/windows-admin-center/license-terms-for-extensions)
+- [Условия лицензии для расширений](https://docs.microsoft.com/legal/windows-server/windows-admin-center/license-terms-for-extensions)
 
-- [Предварительный просмотр условия - Windows Admin Center - лицензии программного обеспечения корпорации Майкрософт](https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-prerelease-eula)
+- [Условия лицензионного соглашения на использование программного обеспечения Майкрософт — центр администрирования Windows — Предварительная версия](https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-prerelease-eula)
 
-- [Windows Admin Center для Microsoft Windows Server и Microsoft Windows ОС (версии 10)](https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-product-ga-eula)
+- [Центр администрирования Windows для Microsoft Windows Server и операционной системы Microsoft Windows (версия 10)](https://docs.microsoft.com/legal/windows-server/windows-admin-center/wac-product-ga-eula)
 
-- [Условия лицензии, связанные с сервером Windows](https://docs.microsoft.com/legal/windows-server/windows-server-licensing)
+- [Условия лицензии, связанные с Windows Server](https://docs.microsoft.com/legal/windows-server/windows-server-licensing)

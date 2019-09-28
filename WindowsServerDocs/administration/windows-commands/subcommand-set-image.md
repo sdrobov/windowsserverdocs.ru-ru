@@ -1,8 +1,8 @@
 ---
-title: Подкоманды set-Image
-description: 'Раздел Windows команды для ***- '
+title: Набор подкоманд-Image
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e63c67210764de76edae18a1897a68d763f9d695
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 4584bd6253b1991aba7e87fc42ff484101681081
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59856485"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383864"
 ---
-# <a name="subcommand-set-image"></a>Подкоманда: set-Image
+# <a name="subcommand-set-image"></a>Подкоманда: Set-Image
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Изменяет атрибуты изображения.
+изменяет атрибуты изображения.
 ## <a name="syntax"></a>Синтаксис
-для образов загрузки:
+для загрузочных образов:
 ```
 wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>mediatype:Boot /Architecture:{x86 | ia64 | x64} [/Filename:<File name>] [/Name:<Name>] 
 [/Description:<Description>] [/Enabled:{Yes | No}]
@@ -46,36 +46,33 @@ wdsutil /Set-Imagmedia:<Image name> [/Server:<Server name>]
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-мультимедиа:<Image name>|Задает имя образа.|
-|[/ Server:<Server name>]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.|
-Тип носителя: {загрузки &#124; установить}|Задает тип изображения.|
-|/ Архитектура: {x86 &#124; ia64 &#124; x64}|Задает архитектуру изображения. Так как в различных архитектур, может иметь одно и то же имя образа для различных загрузочных образов, указание архитектуры гарантирует, правильное изображение было изменено.|
-|[/ Filename:<File name>]|Если изображение не может быть однозначно идентифицируется по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-|[/ Name]|Задает имя образа.|
-|[/ Description:<Description>]|Задает описание образа.|
-|[/ Включен: {Да &#124; No}]|Включает или отключает изображение.|
-|\mediaGroup:<Image group name>]|Указывает группу образов, содержащий изображение. Если указано имя группы не образа и только один образ группа существует на сервере, будет использоваться этой группы образов. Если на сервере существует более одной группы образов, необходимо использовать этот параметр, чтобы указать группу образов.|
-|[/ UserFilter:<SDDL>]|Задает фильтр пользователя на изображении. Строка фильтра должен быть в формате языка определения дескрипторов безопасности (SDDL). Обратите внимание, что, в отличие от **/Security** параметр для групп образов, этот параметр ограничивает только кто может просматривать в определении образа и не фактическое изображение файловых ресурсов. Чтобы ограничить доступ к файловым ресурсам и таким образом доступ все образы в группу образов, необходимо будет настроить безопасность для самой группе, изображение.|
-|[/ UnattendFile:<Unattend file path>]|Задает полный путь к файлу автоматической установки связываемых с изображением. Пример: **D:\Files\Unattend\Img1Unattend.xml**|
-|[/ OverwriteUnattend: {Да &#124; No}]|Можно указать **/Overwrite** перезаписать файл автоматической установки, если уже существует файл автоматической установки, связанный с изображением. Обратите внимание, что значение по умолчанию — **нет**.|
-## <a name="BKMK_examples"></a>Примеры
-Чтобы задать значения для загрузочного образа, введите одно из следующих:
+носитель: <Image name>|Указывает имя изображения.|
+|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+mediaType: {Установка &#124; загрузки}|Указывает тип изображения.|
+|/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру образа. Поскольку одно и то же имя образа можно использовать для разных образов загрузки в разных архитектурах, указание архитектуры гарантирует, что образ будет изменен.|
+|[/Филенаме: <File name>]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+|/Name|Указывает имя изображения.|
+|/Description<Description>]|Задает описание образа.|
+|[/Enabled: {Да &#124; }]|Включает или отключает образ.|
+|\Медиаграуп: <Image group name>]|Указывает группу образов, содержащую образ. Если имя группы образов не указано и на сервере существует только одна группа образов, будет использоваться эта группа образов. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
+|[/Усерфилтер: <SDDL>]|Задает фильтр пользователя на изображении. Строка фильтра должна быть в формате языка определения дескрипторов безопасности (SDDL). Обратите внимание, что, в отличие от параметра **/секурити** для групп образов, этот параметр запрещает только те, кто может видеть определение образа, а не фактические ресурсы файла изображения. Чтобы ограничить доступ к файловым ресурсам и, следовательно, доступ ко всем образам в группе образов, необходимо настроить безопасность для самой группы образов.|
+|[/Unattendfile.: <Unattend file path>]|Задает полный путь к файлу автоматической установки, который должен быть связан с изображением. Пример: **D:\Files\Unattend\Img1Unattend.xml**|
+|[/Овервритеунаттенд: {Да &#124; }]|Можно указать параметр **/overwrite** , чтобы перезаписать файл автоматической установки, если файл автоматической установки, связанный с этим образом, уже существует. Обратите внимание, что значение по умолчанию — **нет**.|
+## <a name="BKMK_examples"></a>Примеров
+Чтобы задать значения для загрузочного образа, введите одно из следующих значений:
 ```
 wdsutil /Set-Imagmedia:"WinPE boot imagemediatype:Boot /Architecture:x86 /Description:"New description"
 wdsutil /verbose /Set-Imagmedia:"WinPE boot image" /Server:MyWDSServemediatype:Boot /Architecture:x86 /Filename:boot.wim 
 /Name:"New Name" /Description:"New Description" /Enabled:Yes
 ```
-Чтобы задать значения для образа установки, введите одно из следующих:
+Чтобы задать значения для образа установки, введите одно из следующих значений:
 ```
 wdsutil /Set-Imagmedia:"Windows Vista with Officemediatype:Install /Description:"New description" 
 wdsutil /verbose /Set-Imagmedia:"Windows Vista with Office" /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
 /Filename:install.wim /Name:"New name" /Description:"New description" /UserFilter:"O:BAG:DUD:AI(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;0x1200a9;;;AU)" /Enabled:Yes /UnattendFile:\\server\share\unattend.xml /OverwriteUnattend:Yes
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса команд](command-line-syntax-key.md)
-[с помощью команды add образа](using-the-add-image-command.md)
-[с помощью команды копирования образа](using-the-copy-image-command.md)
-[Using Команда export-Image](using-the-export-image-command.md)
-[с помощью команды get образа](using-the-get-image-command.md)
-[с помощью команды remove образа](using-the-remove-image-command.md) 
- [ С помощью команды заменить изображение](using-the-replace-image-command.md)
+[Синтаксис командной строки](command-line-syntax-key.md)
+[с помощью команды add-Image](using-the-add-image-command.md)
+ с помощью команды[Copy-](using-the-copy-image-command.md)Image @no__t[-5 с](using-the-export-image-command.md)помощью команды Get-Image, 
+ с помощью[команды получения](using-the-get-image-command.md)изображения @no__t[-9 с помощью Команда Remove-Image](using-the-remove-image-command.md)1[с помощью команды replace-Image](using-the-replace-image-command.md)

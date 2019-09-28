@@ -1,8 +1,8 @@
 ---
-title: FTP mput_1
-description: 'Раздел Windows команды для ***- '
+title: mput_1 FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dd19a97246aa6155182cb055deceb4b5a5019f6c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6308f7b47d58bc25d964944f96fbc83a26350962
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438579"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376214"
 ---
-# <a name="ftp-mput1"></a>ftp: mput_1
+# <a name="ftp-mput_1"></a>FTP: mput_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Тип переноса копирование файлов на удаленный компьютер, с помощью текущего файла.   
+Копирует локальные файлы на удаленный компьютер, используя текущий тип перемещения файлов.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 mput <LocalFile>[ ]  
@@ -35,12 +35,12 @@ mput <LocalFile>[ ]
 |-------------|----------------------------------------------------------|
 | <LocalFile> | Указывает локальный файл для копирования на удаленный компьютер. |
 
-## <a name="BKMK_Examples"></a>Примеры  
-Копировать **Program1.exe** и **Program2.exe** к удаленному компьютеру с помощью текущего типа передачи файлов.  
+## <a name="BKMK_Examples"></a>Примеров  
+Скопируйте **Program1. exe** и **Program2. exe** на удаленный компьютер, используя текущий тип перемещения файлов.  
 ```  
 mput Program1.exe Program2.exe  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [FTP: ascii](ftp-ascii.md)  
--   [FTP: двоичные](ftp-binary.md)  
+-   [FTP: ASCII](ftp-ascii.md)  
+-   [FTP: двоичный формат](ftp-binary.md)  
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

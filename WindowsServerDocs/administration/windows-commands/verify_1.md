@@ -1,8 +1,8 @@
 ---
 title: проверить
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e5e99237c2bac93625dedec0254c274e4f8dbc9f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 840fd3609ed3aded1c9cfebd4e395ddcc6d5588b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59827255"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363103"
 ---
 # <a name="verify"></a>проверить
 
 
 
-Сообщает **cmd** необходимость проверки правильности записи файлов на диск. При использовании без параметров, **проверьте** отображается текущее значение параметра.
+Указывает **cmd** , следует ли проверять правильность записанных файлов на диск. При использовании без параметров **Убедитесь** , что отображается текущее значение.
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -38,20 +38,20 @@ verify [on | off]
 
 |Параметр|Описание|
 |---------|-----------|
-|[на \| off]|Коммутаторы **проверьте** задание или отключить.|
+|[вкл \| Выкл.]|Переключает параметр **проверки** на значение ON или OFF.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Для отображения текущих **проверьте** введите:
+Чтобы отобразить текущую настройку **проверки** , введите:
 ```
 verify
 ```
-Чтобы включить **проверьте** на введите:
+Чтобы включить параметр **проверить** , введите:
 ```
 Verify on
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

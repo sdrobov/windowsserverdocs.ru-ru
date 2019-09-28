@@ -1,8 +1,8 @@
 ---
-title: bitsadmin кэша
-description: Раздел Windows команды для **bitsadmin кэша** переключается — содержит список bitsadmin, переключается/Cache
+title: кэш битсадмин
+description: Раздел команд Windows для коммутаторов **кэша битсадмин** — содержит список параметров битсадмин/Cache
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 80077957df0891d738364552491a66a00e831168
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: aaf1df20c7f0be97a9449fc952523dc7dfacc16b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435050"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381861"
 ---
-# <a name="bitsadmin-cache"></a>bitsadmin кэша
+# <a name="bitsadmin-cache"></a>кэш битсадмин
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,16 +43,16 @@ bitsadmin /Cache /SetExpirationtime
 
 |Параметр|Описание|
 |-------|--------|
-|[bitsadmin cache и help](bitsadmin-cache-and-help.md)|Отображает команды\-строка использование \/кэшировать коммутаторов.|
-|[bitsadmin cache и clear](bitsadmin-cache-clear.md)|Очищает локальный кэш.|
+|[bitsadmin cache и help](bitsadmin-cache-and-help.md)|Отображает команду @ no__t-0line, используемую для коммутаторов \/Cache.|
+|[bitsadmin cache и clear](bitsadmin-cache-clear.md)|Удаляет локальный кэш.|
 |[bitsadmin cache и delete](bitsadmin-cache-and-delete.md)|Удаляет запись кэша.|
 |[bitsadmin cache и deleteurl](bitsadmin-cache-and-deleteurl.md)|Удаляет все записи кэша для заданного URL-адреса.|
-|[bitsadmin cache и list](bitsadmin-cache-and-list.md)|Перечисляет все записи кэша.|
-|[bitsadmin cache и info](bitsadmin-cache-and-info.md)|Создает дамп конкретной записи кэша.|
+|[bitsadmin cache и list](bitsadmin-cache-and-list.md)|Список всех записей кэша.|
+|[bitsadmin cache и info](bitsadmin-cache-and-info.md)|Создает дамп определенной записи кэша.|
 |[bitsadmin cache и getlimit](bitsadmin-cache-and-getlimit.md)|Возвращает предельный размер кэша.|
-|[bitsadmin cache и setlimit](bitsadmin-cache-and-setlimit.md)|Задает предельный размер кэша.|
+|[bitsadmin cache и setlimit](bitsadmin-cache-and-setlimit.md)|Задает ограничение кэша.|
 |[bitsadmin cache и getexpirationtime](bitsadmin-cache-and-getexpirationtime.md)|Получает время истечения срока действия кэша.|
-|[bitsadmin cache и setexpirationtime](bitsadmin-cache-and-setexpirationtime.md)|Задает время истечения срока действия кэша.|
+|[bitsadmin cache и setexpirationtime](bitsadmin-cache-and-setexpirationtime.md)|Задает срок действия кэша.|
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

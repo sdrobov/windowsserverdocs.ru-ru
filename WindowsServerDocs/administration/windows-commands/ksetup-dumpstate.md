@@ -1,8 +1,8 @@
 ---
-title: ksetup:dumpstate
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: думпстате'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e5e8f20188fc27cc08dfd37c5fdbd811925f476
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 625d05b2fea9ae58681648c64e309aa8b2a201ed
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59863125"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374995"
 ---
-# <a name="ksetupdumpstate"></a>ksetup:dumpstate
+# <a name="ksetupdumpstate"></a>ksetup: думпстате
 
 
 
-Отображает текущее состояние области параметров для всех областей, которые определены на компьютере. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Отображает текущее состояние параметров области для всех областей, определенных на компьютере. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,20 +38,20 @@ ksetup /dumpstate
 
 ## <a name="remarks"></a>Примечания
 
-Выходные данные этой команды включают область по умолчанию (домен, что компьютер является членом) и все области, которые определены на этом компьютере. Ниже приведен для каждой области.
--   Все ключ центры распространения (KDC), которые связаны с этой области
--   Все **область набора** флаги для этой области
+Выходные данные этой команды включают область по умолчанию (домен, членом которого является компьютер) и все сферы, определенные на этом компьютере. Для каждой области предусмотрено следующее:
+-   Все центры распределения ключей (Кдкс), связанные с этой областью
+-   Все флаги **области набора** для этой области
 -   Пароль KDC
 
-Эта команда не отображает имя домена, который указан с обнаружением DNS или с помощью команды **/Domain ksetup**.
+Эта команда не отображает имя домена, указанное при обнаружении DNS, или командой **ksetup/Domain**.
 
-Эта команда не отображает пароль компьютера, который задается с помощью команды **ksetup /setcomputerpassword**.
+Эта команда не отображает пароль компьютера, заданный с помощью команды **ksetup/сеткомпутерпассворд**.
 
-**Ksetup** создает тот же вывод, как **ksetup /dumpstate**.
+**Ksetup** создает те же выходные данные, что и **Ksetup/думпстате**.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Найти большинство конфигураций сферы Kerberos на компьютере:
+Поиск большинства конфигураций области Kerberos на компьютере:
 ```
 ksetup /dumpstate
 ```
@@ -59,4 +59,4 @@ ksetup /dumpstate
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Ksetup](ksetup.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

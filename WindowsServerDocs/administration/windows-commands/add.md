@@ -1,8 +1,8 @@
 ---
 title: добавление
-description: Раздел Windows команды для **добавить** -отражает простого тома с фокусом на указанном диске.
+description: Раздел команд Windows для **Add** -дублирует простой том с фокусом на указанный диск.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5ed2dc4c8bbd6ff8e1bca498ebe50216185dc720
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c126676d1e600b5133e91408d9ff7b9a8e5a3510
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59850945"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71382799"
 ---
 # <a name="add"></a>добавление
 
 
 
-Зеркально отражает простого тома с фокусом на указанном диске.
+Зеркально отображает простой том с фокусом на указанный диск.
 
 > [!IMPORTANT]
-> Эта команда DiskPart не доступна в любом выпуске Windows Vista.
+> Эта команда DiskPart недоступна ни в одном из выпусков Windows Vista.
 

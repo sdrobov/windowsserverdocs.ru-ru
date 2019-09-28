@@ -1,8 +1,8 @@
 ---
 title: bitsadmin list
-description: Раздел Windows команды для **bitsadmin списка** -перечислены задания передачи, принадлежащих текущему пользователю.
+description: Раздел команд Windows для **битсадмин List** — список заданий перемещения, принадлежащих текущему пользователю.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f0b88001b9c4ae01b57006ffeef66dec0348ca77
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: bd4787f51dc2a7843ff6cf5c4f786658e530ad8f
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59873865"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381096"
 ---
 # <a name="bitsadmin-list"></a>bitsadmin list
 
 
 
-Список заданий передачи, принадлежащих текущему пользователю.
+Список заданий перемещения, принадлежащих текущему пользователю.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ bitsadmin /List [/allusers][/verbose]
 
 |Параметр|Описание|
 |---------|-----------|
-|/ Allusers|Необязательно — перечисляет задания для всех пользователей|
-|/ Verbose|Необязательно — содержит подробные сведения для каждого задания.|
+|/аллусерс|(Необязательно) список заданий для всех пользователей|
+|/Verbose|(Необязательно) предоставляет подробные сведения для каждого задания.|
 
 ## <a name="remarks"></a>Примечания
 
-Пользователь должен обладать правами администратора для использования параметра /allusers
+Для использования параметра/аллусерс необходимо иметь права администратора.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Следующий пример извлекает сведения о заданиях, принадлежащих текущему пользователю.
+В следующем примере извлекаются сведения о заданиях, принадлежащих текущему пользователю.
 ```
 C:\>bitsadmin /List 
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

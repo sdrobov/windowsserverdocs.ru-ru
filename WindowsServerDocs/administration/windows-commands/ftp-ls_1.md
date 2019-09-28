@@ -1,8 +1,8 @@
 ---
-title: FTP ls_1
-description: 'Раздел Windows команды для ***- '
+title: ls_1 FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,21 +13,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6abf8466f90ac29846f2e1ee7d305e7e4280231e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d183f6a014273b78befd14c8d3208508948ffc54
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438635"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376250"
 ---
-# <a name="ftp-ls1"></a>ftp: ls_1
+# <a name="ftp-ls_1"></a>FTP: ls_1
 
-> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > 
-> Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Вывод сокращенного списка файлов и подкаталогов с удаленного компьютера.   
+Отображает сокращенный список файлов и подкаталогов с удаленного компьютера.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 ls [<remotedirectory>] [<LocalFile>]  
@@ -37,14 +37,14 @@ ls [<remotedirectory>] [<LocalFile>]
 |      Параметр      |                                                                       Описание                                                                        |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [<remotedirectory>] | Указывает каталог, для которого требуется просмотреть список. Если каталог не указан, используется текущий рабочий каталог на удаленном компьютере. |
-|    [<LocalFile>]    |               Указывает локальный файл, в котором для сохранения списка. Если локальный файл не указан, результаты отображаются на экране.               |
+|    [<LocalFile>]    |               Указывает локальный файл для хранения списка. Если локальный файл не указан, результаты отображаются на экране.               |
 
-## <a name="BKMK_Examples"></a>Примеры  
+## <a name="BKMK_Examples"></a>Примеров  
 Отображение сокращенного списка файлов и подкаталогов с удаленного компьютера.  
 ```  
 ls  
 ```  
-Получить сокращенный список каталогов **dir1** на удаленном компьютере и сохраните его в локальном файле называется **файл**  
+Получите сокращенный список каталогов **Dir1** на удаленном компьютере и сохраните его в локальном файле с именем **дирлист. txt.**  
 ```  
 ls dir1 dirlist.txt   
 ```  

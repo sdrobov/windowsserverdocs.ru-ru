@@ -2,7 +2,7 @@
 title: Завершение сеанса пользователя
 description: Узнайте, когда и как вручную завершить сеанс пользователя в службах MultiPoint
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -12,12 +12,12 @@ ms.assetid: 51b1076b-cce5-45a7-8cf2-ecc6aa390d14
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 2b290dbe14129a2d5fe297c5c95479e764dc55de
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 73a04399c244adf1f9d8b6ec2c41dc0593e5ddd9
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871697"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395425"
 ---
 # <a name="end-a-user-session"></a>Завершение сеанса пользователя
 Необходимо завершить сеанс пользователя, если необходимо выполнить вход пользователя из системы служб MultiPoint, чтобы вернуть параметры рабочего стола по умолчанию. Он получит предупреждение о завершении соединения. Необходимо завершить подключение пользователя, если вы хотите:  

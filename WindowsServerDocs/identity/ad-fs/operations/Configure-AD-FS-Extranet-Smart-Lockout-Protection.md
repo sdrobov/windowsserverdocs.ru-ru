@@ -7,14 +7,14 @@ ms.author: billmath
 manager: mtilman
 ms.date: 05/20/2019
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8ddefae96806b50b0ab98f67b9313b85c577bb70
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9ef595cc98a95caca0f2043b011868e0573a5b19
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865826"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407706"
 ---
 # <a name="ad-fs-extranet-lockout-and-extranet-smart-lockout"></a>AD FS для блокировки экстрасети и Smart-блокировки экстрасети
 
@@ -287,7 +287,7 @@ AD FS будет записывать события блокировки экс
 Ответ. При включенном есл AD FS отслеживает действия учетной записи и известные расположения для пользователей в базе данных Адфсартифактсторе. Размер этой базы данных масштабируется относительно числа отслеживаемых пользователей и известных расположений. При планировании включения есл можно оценить размер базы данных Адфсартифактсторе, чтобы она увеличивалась с частотой до 1 ГБ на 100 000 пользователей. Если AD FS ферма использует внутреннюю базу данных Windows (WID), расположением по умолчанию для файлов базы данных является К:\виндовс\вид\дата\.. Чтобы предотвратить заполнение этого диска, перед включением есл убедитесь, что у вас есть как минимум 5 ГБ свободного хранилища. Помимо дискового пространства, следует запланировать общий объем памяти процесса для увеличения после включения есл до дополнительной 1 ГБ ОЗУ для заполнения пользователем 500 000 или менее.
 
 
-## <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительная справка  
 [Рекомендации по обеспечению безопасности службы федерации Active Directory (AD FS)](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
 [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)

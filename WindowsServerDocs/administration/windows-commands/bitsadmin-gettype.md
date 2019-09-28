@@ -1,8 +1,8 @@
 ---
 title: bitsadmin gettype
-description: Раздел Windows команды для **bitsadmin gettype** -извлекает тип задания указанного задания.
+description: Раздел команд Windows для **битсадмин GetType** — Извлекает тип задания для указанного задания.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ff0118f14acbf4e9f37c02e660bd9c7f6e8d0f70
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ca46cb813809621f4fa79b3265198206729a392c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381339"
 ---
 # <a name="bitsadmin-gettype"></a>bitsadmin gettype
 
 
 
-Возвращает тип задания указанного задания.
+Возвращает тип задания для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,19 +36,19 @@ bitsadmin /GetType <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 ## <a name="remarks"></a>Примечания
 
-Тип можно загрузить, отправить, отправки-ОТВЕТА или UNKNOWN.
+Тип может быть СКАЧАН, отправлен, отправлен-REPLY или UNKNOWN.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается тип задания для задания с именем *myDownloadJob*.
+В следующем примере извлекается тип задания для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /GetType myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

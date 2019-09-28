@@ -1,38 +1,38 @@
 ---
-title: Инициализация с использованием режима клавиши в лесу-бастионе кластера HGS
+title: Инициализация кластера HGS с помощью режима ключей в лесу бастиона
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: e785ee17bf68c07d965816480baa0d59062fc434
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: e72de1c85e0a9c3decf1fd3b5085363b57ca387c
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447420"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403632"
 ---
-# <a name="initialize-the-hgs-cluster-using-key-mode-in-an-existing-bastion-forest"></a>Инициализировать HGS кластера с помощью режима клавиши в существующем лесу бастиона
+# <a name="initialize-the-hgs-cluster-using-key-mode-in-an-existing-bastion-forest"></a>Инициализация кластера HGS с помощью режима ключей в существующем лесу бастиона
 
-> Относится к: Windows Server 2019
+> Относится к: Windows Server 2019
 > 
 > [!div class="step-by-step"]
 > [«Установка HGS в новом лесу](guarded-fabric-install-hgs-in-a-bastion-forest.md)
-> [создать ключ узла»](guarded-fabric-create-host-key.md)
+> [Создание ключа узла»](guarded-fabric-create-host-key.md)
 
-Доменные службы Active Directory устанавливается на компьютере, но должны оставаться ненастроенный.
+Домен Active Directory службы будут установлены на компьютере, но должны остаться ненастроенными.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
 
-Прежде чем продолжить, убедитесь, что предварительно подготовленного кластера объектов для службы защиты узла и вошедшего пользователя предоставлены **полный контроль** над объектами VCO и CNO в Active Directory.
-Имя объекта виртуального компьютера необходимо передать для `-HgsServiceName` параметра и имя кластера, чтобы `-ClusterName` параметра.
+Прежде чем продолжить, убедитесь, что объекты кластера предварительно подготовлены для службы защиты узла и предоставил вошедшему в систему пользователю **полный контроль** над объектами VCO и CNO в Active Directory.
+Имя объекта виртуального компьютера должно быть передано параметру `-HgsServiceName`, а имя кластера — параметру `-ClusterName`.
 
 > [!TIP]
-> Внимательно проверьте контроллеров домена AD, чтобы обеспечить объектов кластера были реплицированы на контроллеры домена перед продолжением.
+> Прежде чем продолжить, проверьте контроллеры доменов AD, чтобы убедиться, что объекты кластера реплицированы на все контроллеры домена.
 
-Если вы используете сертификаты на основе PFX-ФАЙЛ, выполните следующие команды на сервер HGS:
+Если вы используете сертификаты на основе PFX, выполните на сервере HGS следующие команды:
 
 ```powershell
 $signingCertPass = Read-Host -AsSecureString -Prompt "Signing certificate password"
@@ -43,5 +43,5 @@ Install-ADServiceAccount -Identity 'HGSgMSA'
 Initialize-HgsServer -UseExistingDomain -ServiceAccount 'HGSgMSA' -JeaReviewersGroup 'HgsJeaReviewers' -JeaAdministratorsGroup 'HgsJeaAdmins' -HgsServiceName 'HgsService' -ClusterName 'HgsCluster' -SigningCertificatePath '.\signCert.pfx' -SigningCertificatePassword $signPass -EncryptionCertificatePath '.\encCert.pfx' -EncryptionCertificatePassword $encryptionCertPass -TrustHostKey
 ```
 
-Если вы используете сертификатов, установленных на локальном компьютере (например, поддержкой HSM и не экспортируются сертификаты), используйте `-SigningCertificateThumbprint` и `-EncryptionCertificateThumbprint` параметров вместо этого.
+Если вы используете сертификаты, установленные на локальном компьютере (например, сертификаты с защитой от HSM и неэкспортируемые сертификаты), используйте параметры `-SigningCertificateThumbprint` и `-EncryptionCertificateThumbprint`.
 

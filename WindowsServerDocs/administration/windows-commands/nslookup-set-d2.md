@@ -1,8 +1,8 @@
 ---
 title: nslookup set d2
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e1e2ecade2887ef38a1209b49577ea0c851ca8d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fce9512990a25f3db295cc9a67a4bc63a37d1060
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436829"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372975"
 ---
 # <a name="nslookup-set-d2"></a>nslookup set d2
 
 
 
-Включает углубленный режим отладки, включить или отключить. Выводятся все поля каждого пакета.
+Включает или выключает режим полной отладки. Выводятся все поля каждого пакета.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,9 +36,9 @@ set [no]d2
 
 | Параметр |                             Описание                              |
 |-----------|----------------------------------------------------------------------|
-| **nod2**  | Отключает углубленный режим отладки. По умолчанию используется синтаксис **nod2**. |
-|  **d2**   |                 Включает углубленный режим отладки.                  |
-|   {справки   |                                  ?}                                  |
+| **nod2**  | Отключает режим полной отладки. Синтаксис по умолчанию — **nod2**. |
+|  **D2**   |                 Включает режим углубленной отладки.                  |
+|   {Справка   |                                  ?}                                  |
 
 #### <a name="additional-references"></a>Дополнительная справка
 

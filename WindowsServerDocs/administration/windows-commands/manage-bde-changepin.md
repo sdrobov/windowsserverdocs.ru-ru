@@ -1,8 +1,8 @@
 ---
-title: changepin готов
-description: 'Раздел Windows команды для ***- '
+title: Управление — BDE чанжепин
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7da4690dd93eb0f660bdf3a1b1fe7432e503eb07
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: af20ade2eb9fb280b6bb15ebb850c5275e0acdf6
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374863"
 ---
-# <a name="manage-bde-changepin"></a>готов: changepin
+# <a name="manage-bde-changepin"></a>Manage-bde: чанжепин
 
 
 
-Изменение ПИН-код для диска операционной системы. Пользователю предлагается ввести новый ПИН-код. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Изменяет ПИН-код для диска операционной системы. Пользователю предлагается ввести новый ПИН-код. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ manage-bde -changepin [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Диск >|Представляет букву диска, за которым следует двоеточие.|
-|-computername|Указывает, что Manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать **- cn** как сокращенную версию этой команды.|
-|\<Имя >|Представляет имя компьютера, на которой требуется изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
-|-? или /?|Отображение кратких справки в командной строке.|
-|-help или -h|Отображает полную справку в командной строке.|
+|@no__t 0Drive >|Представляет букву диска, за которой следует двоеточие.|
+|-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
+|\<Имя >|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|-? или/?|Отображает краткую справку в командной строке.|
+|-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-В следующем примере демонстрируется использование **- changepin** команду, чтобы изменить ПИН-код, используемый с помощью BitLocker на диске C.
+В следующем примере показано использование команды **-чанжепин** для изменения ПИН-кода, используемого с BitLocker на диске C.
 ```
 manage-bde –changepin C:
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [Готов](manage-bde.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Управление — BDE](manage-bde.md)

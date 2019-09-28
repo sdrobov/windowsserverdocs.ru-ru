@@ -1,8 +1,8 @@
 ---
 title: nslookup set class
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7953f450c17afdee849515f8d8945631a30f4b98
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 312b409490603fcb0ded63a78f3a2936f5216de1
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436842"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372978"
 ---
 # <a name="nslookup-set-class"></a>nslookup set class
 
 
 
-изменяет класс запроса. Класс определяет группу протоколов информации.
+Изменяет класс запроса. Класс указывает группу протоколов сведений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,8 +36,8 @@ set class=<Class>
 
 | Параметр |                                                                                                                                    Описание                                                                                                                                    |
 |-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<Класс >  | Класс по умолчанию — IN. Ниже перечислены допустимые значения для этой команды.</br>-В: Задает класс Интернета.</br>-CHAOS: Задает класс Chaos.</br>-HESIOD: Задает класс MIT Athena Hesiod.</br>-ЛЮБОЕ: Указывает, любой из перечисленных выше. |
-|   {справки   |                                                                                                                                        ?}                                                                                                                                         |
+| \<Класс >  | Класс по умолчанию находится в. Ниже перечислены допустимые значения для этой команды.</br>ОКНЕ Указывает класс Интернета.</br>CHAOS Указывает класс Chaos.</br>-ХЕСИОД: Указывает класс MIT Афина Хесиод.</br>ВСЕМИ Указывает любой из перечисленных выше подстановочных знаков. |
+|   {Справка   |                                                                                                                                        ?}                                                                                                                                         |
 
 #### <a name="additional-references"></a>Дополнительная справка
 

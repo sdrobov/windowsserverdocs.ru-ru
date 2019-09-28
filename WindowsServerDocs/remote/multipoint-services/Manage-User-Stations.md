@@ -2,7 +2,7 @@
 title: Управление пользовательскими станциями
 description: Узнайте, как управлять пользовательскими станциями в службах MultiPoint.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,12 +13,12 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 6de378284f5cd41f5c5c3228c8305176367b5dd5
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 7f46d2a68fc6247bddc1251c32ac55544b6fbf52
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871616"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405067"
 ---
 # <a name="manage-user-stations"></a>Управление пользовательскими станциями
 В этом разделе рассматривается управление *станциями*, составляющими систему MultiPoint Services. Управление системой служб MultiPoint включает в себя управление аппаратными и программными компонентами MultiPoint Manager. В системе служб MultiPoint Настольный компьютер — это программный интерфейс, представленный на мониторе для каждой пользовательской станции.  

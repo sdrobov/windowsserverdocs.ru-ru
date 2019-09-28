@@ -1,8 +1,8 @@
 ---
 title: jetpack
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a3bffc29519df139921bdb1de53e67acd558b306
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b011658c6a745d62707cf88404379b17b0e05eef
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59858015"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375322"
 ---
 # <a name="jetpack"></a>jetpack
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-сжимает базу данных службы имя Windows Internet (WINS) или протокол динамической конфигурации узла (DHCP). Корпорация Майкрософт рекомендует сжатие базы данных WINS, каждый раз, когда он достигает 30 МБ. 
+сжимает службу Windows Internet Name Service (WINS) или базу данных протокола DHCP. Корпорация Майкрософт рекомендует сжимать базу данных WINS при каждом приближении 30 МБ. 
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -35,32 +35,32 @@ jetpack.EXE <database name> <temp database name>
 |Параметр|Описание|
 |-------|--------|
 |<database name>|Указывает исходный файл базы данных.|
-|<temp database name>|Указывает файл временной базы данных.|
+|<temp database name>|Указывает временный файл базы данных.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
-Для сжатия базы данных WINS:
+## <a name="BKMK_Examples"></a>Примеров
+Чтобы сжать базу данных WINS, выполните следующие действия.
 ```
 cd %SYSTEMROOT%\SYSTEM32\WINS
 NET STOP WINS
 jetpack WINS.MDB TMP.MDB
 NET start WINS
 ```
-Для сжатия базы данных DHCP:
+Чтобы сжать базу данных DHCP, выполните следующие действия.
 ```
 cd %SYSTEMROOT%\SYSTEM32\DHCP
 NET STOP DHCPSERver
 jetpack DHCP.MDB TMP.MDB
 NET start DHCPSERver
 ```
-В приведенных выше примеров **Tmp.mdb** является временной базы данных, который используется программой jetpack.exe. **WINS.mdb** является базы данных WINS. **DHCP.mdb** — база данных DHCP.
-сжимает Jetpack.exe WINS или базы данных DHCP, выполнив указанные ниже:
-1.  Сведения в файл временной базы данных с именем базы данных копируются **Tmp.mdb**.
-2.  Удаляет исходный файл базы данных, **Wins.mdb** или **Dhcp.mdb**.
-3.  Переименовывает файлы временной базы данных исходного файла.
+В приведенных выше примерах файл **tmp. mdb** является временной базой данных, используемой программой Jetpack. exe. **WINS. mdb** — это база данных WINS. **DHCP. mdb** — это база данных DHCP.
+Программа Jetpack. exe сжимает базу данных WINS или DHCP, выполняя следующие действия.
+1.  Копирует сведения из базы данных во временный файл базы данных с именем **tmp. mdb**.
+2.  удаляет исходный файл базы данных, **WINS. mdb** или **DHCP. mdb**.
+3.  Переименовывает временные файлы базы данных в исходное имя файла.
 
 > [!NOTE]
-> В процессе сжатия jetpack.exe создает временный файл с именем, который задается параметром *имя временной базы данных* параметра. Временный файл удаляется при завершении процесса compact. Убедитесь, что у вас нет файла, уже находящихся в WINS или DHCP папку с тем же именем, что и указанный в *имя временной базы данных* параметра.
+> В процессе сжатия программа Jetpack. exe создает временный файл с именем, указанным в параметре *имени временной базы данных* . Временный файл удаляется по завершении сжатия. Убедитесь, что у вас нет файла, существующего в папке WINS или DHCP, имя которой совпадает с именем, указанным в параметре *имени временной базы данных* .
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

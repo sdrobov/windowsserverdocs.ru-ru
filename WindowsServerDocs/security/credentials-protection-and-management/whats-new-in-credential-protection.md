@@ -2,7 +2,7 @@
 title: Новые возможности защиты учетных данных
 description: Безопасность Windows Server
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: security-credential-protection
@@ -13,77 +13,77 @@ author: gitmichiko
 ms.author: michikos
 manager: dongill
 ms.date: 03/06/2017
-ms.openlocfilehash: 475b6a0b24b811008ee213c1604d98d9aa9eb092
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 2351be82ad1d8b9af17715ce363836f57c71ea66
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66447033"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386920"
 ---
 # <a name="whats-new-in-credential-protection"></a>Новые возможности защиты учетных данных
 
-## <a name="credential-guard-for-signed-in-user"></a>Credential Guard для выполнившего вход пользователя
+## <a name="credential-guard-for-signed-in-user"></a>Credential Guard для пользователя, выполнившего вход
 
-Начиная с Windows 10 версии 1507, Kerberos и NTLM использовать безопасность на основе виртуализации для защиты секретов Kerberos и NTLM сеанса входа вошедшего в систему пользователя. 
+Начиная с Windows 10 версии 1507, Kerberos и NTLM используют безопасность на основе виртуализации для защиты секретов Kerberos & NTLM для сеанса входа пользователя, выполнившего вход. 
 
-Начиная с Windows 10 версии 1511, диспетчер учетных данных безопасности на основе виртуализации для защиты использует сохраненные учетные данные типа учетных данных домена. Учетные данные вошедшего в систему и домена сохраненные учетные данные не передаются на удаленном узле, с помощью удаленного рабочего стола. Credential Guard можно включить без блокировки UEFI.
+Начиная с Windows 10 версии 1511, диспетчер учетных данных использует безопасность на основе виртуализации для защиты сохраненных учетных данных типа учетных данных домена. Учетные данные для входа и сохраненные учетные данные домена не будут переданы удаленному узлу с помощью удаленного рабочего стола. Credential Guard можно включить без блокировки UEFI.
 
-Начиная с Windows 10 версии 1607, изолированный режим пользователя входит в состав Hyper-V, он больше не устанавливается отдельно для развертывания Credential Guard.
+Начиная с Windows 10, версия 1607 в режиме изолированного пользователя входит в состав Hyper-V, поэтому она больше не устанавливается отдельно для развертывания Credential Guard.
 
-[Дополнительные сведения о Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
+Дополнительные [сведения об Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard).
 
 
-## <a name="remote-credential-guard-for-signed-in-user"></a>Удаленный Credential Guard для выполнившего вход пользователя
+## <a name="remote-credential-guard-for-signed-in-user"></a>Удаленный Credential Guard для пользователя, выполнившего вход
 
-Начиная с Windows 10 версии 1607, удаленный Credential Guard защищает учетные данные пользователя, вошедшего в систему, при использовании удаленного рабочего стола, защищая секреты Kerberos и NTLM на клиентском устройстве. Для удаленного узла к сетевым ресурсам следует расценивать как пользователь запросы проверки подлинности требуется клиентское устройство, чтобы использовать секреты.
+Начиная с Windows 10, версия 1607 Remote Credential Guard защищает учетные данные пользователя, выполнившего вход, при использовании удаленный рабочий стол путем защиты секретов Kerberos и NTLM на клиентском устройстве. Чтобы удаленный узел оценил сетевые ресурсы в качестве пользователя, для запросов проверки подлинности требуется, чтобы клиентское устройство использовало секреты.
 
-Начиная с Windows 10 версии 1703, удаленный Credential Guard позволяет защитить учетные данные пользователя при использовании удаленного рабочего стола.
+Начиная с Windows 10, версия 1703 Remote Credential Guard защищает предоставленные учетные данные пользователя при использовании удаленный рабочий стол.
 
-[Дополнительные сведения о удаленный credential guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).
+Дополнительные [сведения об удаленном Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard).
 
-## <a name="domain-protections"></a>Функции защиты домена
+## <a name="domain-protections"></a>Защита домена
 
-Функции защиты домена требуется домен Active Directory.
+Для защиты домена требуется домен Active Directory.
 
-### <a name="domain-joined-device-support-for-authentication-using-public-key"></a>Поддержка устройств, присоединенных к домену для проверки подлинности с помощью открытого ключа
+### <a name="domain-joined-device-support-for-authentication-using-public-key"></a>Поддержка устройства, присоединенного к домену, для проверки подлинности с помощью открытого ключа
 
-Начиная с Windows 10 версии 1507 и Windows Server 2016, если сможет зарегистрировать его привязанного открытого ключа с помощью Windows Server 2016 с контроллера домена (DC) устройств, присоединенных к домену, затем устройство может проверять подлинность с помощью открытого ключа, с помощью Kerberos PKINIT Проверка подлинности к контроллеру домена Windows Server 2016.
+Начиная с Windows 10 версии 1507 и Windows Server 2016, если присоединенное к домену устройство может зарегистрировать свой открытый ключ в контроллере домена Windows Server 2016, то устройство может пройти проверку подлинности с помощью открытого ключа, используя Kerberos PKINIT. Проверка подлинности на контроллере домена Windows Server 2016.
 
-Начиная с Windows Server 2016, KDC поддерживают проверку подлинности с помощью ключа доверия Kerberos.  
+Начиная с Windows Server 2016, Кдкс поддерживает проверку подлинности с использованием доверия Kerberos Key.  
 
-[Дополнительные сведения о поддержки открытого ключа для присоединенных к домену устройства и ключа доверия Kerberos](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
+Дополнительные [сведения о поддержке открытых ключей для устройств, присоединенных к домену, & доверительных отношений ключей Kerberos](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
 
-### <a name="pkinit-freshness-extension-support"></a>Поддержка расширения актуальность PKINIT
+### <a name="pkinit-freshness-extension-support"></a>Поддержка расширения PKINIT
 
-Начиная с Windows 10 версии 1507 и Windows Server 2016, Kerberos клиент попытается расширение актуальность PKInit открытого ключа на основе проверок. 
+Начиная с Windows 10, версии 1507 и Windows Server 2016, клиенты Kerberos будут пытаться получить свежее расширение PKInit для входа на основе открытых ключей. 
 
-Начиная с Windows Server 2016, KDC может поддерживать актуальность PKInit расширения.  По умолчанию KDC не предоставит PKInit расширения их актуальность. 
+Начиная с Windows Server 2016, Кдкс может поддерживать свежее расширение PKInit.  По умолчанию Кдкс не будет предоставлять свежее расширение PKInit. 
 
-[Дополнительные сведения о поддержке расширение актуальность PKINIT](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
+Дополнительные [сведения о поддержке расширения PKINIT](https://technet.microsoft.com/windows-server-docs/security/kerberos/whats-new-in-kerberos-authentication).
 
-### <a name="rolling-public-key-only-users-ntlm-secrets"></a>Последовательное открытого ключа только NTLM секретные данные пользователей
+### <a name="rolling-public-key-only-users-ntlm-secrets"></a>Пошаговые секреты NTLM пользователя только открытого ключа
 
-Начиная с Windows Server 2016 режим работы домена (DFL), контроллеры домена могут поддерживать последовательное открытого ключа только NTLM секретные данные пользователей. Этот компонент недоступен в нижнем DFLs.
+Начиная с Windows Server 2016 режим работы домена (ДФЛ), контроллеры домена могут поддерживать откат секретов NTLM пользователя только открытого ключа. Эта функция недоступен в более низких Дфлс.
 
 > [!WARNING] 
-> Добавление контроллера домена к домену с помощью последовательных секреты NTLM включена перед тем, как контроллер домена был дополнен по крайней мере 8 ноября 2016 года обслуживание выполняется риск аварийное завершение работы контроллера домена. 
+> Добавление контроллера домена в домен с развернутыми секретами NTLM перед обновлением контроллера домена по крайней мере до 8 ноября обслуживание 2016 выполняет риск сбоя контроллера домена. 
 
-Конфигурация: Для новых доменов эта функция включена по умолчанию. Для существующих доменов должно быть настроено в центре администрирования Active Directory: 
+Конфигурация: Для новых доменов эта функция включена по умолчанию. Для существующих доменов его необходимо настроить в центре администрирования Active Directory: 
 
-1. Из центра администрирования Active Directory, щелкните правой кнопкой мыши домен в левой панели и выберите **свойства**.
+1. В центре администрирования Active Directory щелкните правой кнопкой мыши домен на левой панели и выберите пункт **Свойства**.
 
     ![Свойства домена](../media/Credentials-Protection-And-Management/domain-properties.png)
 
-2. Выберите **развертыванию истекающим сроком действия NTLM секретов во время входа, для пользователей, которым необходимо использовать Microsoft Passport или смарт-карты для интерактивного входа**.
+2. Установите флажок **включить истечение срока действия секретов NTLM при входе для пользователей, которым необходимо использовать Microsoft Passport или смарт-карту для интерактивного входа**в систему.
 
-    ![Срок действия которых истекает NTLM секреты Autoroll](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
+    ![Секреты NTLM срок действия автонакат](../media/Credentials-Protection-And-Management/autoroll-ntlm.png)
 
 3. Нажмите кнопку **ОК**. 
 
-### <a name="allowing-network-ntlm-when-user-is-restricted-to-specific-domain-joined-devices"></a>Разрешает сетевому NTLM в том случае, когда пользователь предназначен только для определенных устройств, присоединенных к домену
+### <a name="allowing-network-ntlm-when-user-is-restricted-to-specific-domain-joined-devices"></a>Разрешение сетевой NTLM, если пользователь ограничен конкретными устройствами, присоединенными к домену
 
-Начиная с Windows Server 2016 функциональный уровень домена (DFL), контроллеры домена может поддерживать допускающему сети NTLM, если пользователь не ограничены конкретных устройств, присоединенных к домену. Эта возможность недоступна в нижнем DFLs.
+Начиная с Windows Server 2016 режим работы домена (ДФЛ), контроллеры домена могут поддерживать сетевую NTLM, если пользователь ограничен конкретными устройствами, присоединенными к домену. Эта функция недоступна в более низких Дфлс.
 
-Конфигурация: Политики проверки подлинности, нажмите кнопку **разрешить сетевой проверки подлинности NTLM пользователь может выполнять только на выбранные устройства**. 
+Конфигурация: В политике проверки подлинности щелкните **Разрешить проверку подлинности сети NTLM, если пользователь ограничен выбранными устройствами**. 
 
-[Дополнительные сведения о политиках проверки подлинности](https://technet.microsoft.com/windows-server-docs/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos).
+Дополнительные [сведения о политиках проверки подлинности](https://technet.microsoft.com/windows-server-docs/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos).

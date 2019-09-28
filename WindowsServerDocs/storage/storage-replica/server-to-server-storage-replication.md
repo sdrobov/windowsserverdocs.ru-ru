@@ -1,7 +1,7 @@
 ---
 title: Репликация хранилища "сервер-сервер"
 description: Как настроить и использовать реплику хранилища для репликации "сервер-сервер" в Windows Server, включая Windows Admin Center и PowerShell.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 manager: siroy
 ms.author: nedpyle
 ms.technology: storage-replica
@@ -9,12 +9,12 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 04/26/2019
 ms.assetid: 61881b52-ee6a-4c8e-85d3-702ab8a2bd8c
-ms.openlocfilehash: fccdb8547ff27083ce943892842c2e2d05e5ace8
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: a21000e857d702846703deb4f55380e1a998f6d2
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865286"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402958"
 ---
 # <a name="server-to-server-storage-replication-with-storage-replica"></a>Репликация хранилища "сервер-сервер" с репликой хранилища
 
@@ -190,7 +190,7 @@ ms.locfileid: "70865286"
 
     **Рис. 2. Отчет о топологии репликации хранилища**
 
-## <a name="step-3-set-up-server-to-server-replication"></a>Шаг 3. Настройка репликации "сервер-сервер"
+## <a name="step-3-set-up-server-to-server-replication"></a>Шаг 3. Настройка репликации "сервер-сервер"
 ### <a name="using-windows-admin-center"></a>Использование центра администрирования Windows
 
 1. Добавьте исходный сервер.
@@ -446,7 +446,7 @@ ms.locfileid: "70865286"
 1. После создания виртуальной машины см [. шаг 2. Подготавливает операционную систему, функции, роли, хранилище и](#provision-os)сеть.
 
 
-## <a name="related-topics"></a>См. также  
+## <a name="related-topics"></a>Связанные разделы  
 - [Общие сведения о реплике хранилища](storage-replica-overview.md)  
 - [Растяжение репликации кластера с помощью общего хранилища](stretch-cluster-replication-using-shared-storage.md)  
 - [Репликация кластера в кластерное хранилище](cluster-to-cluster-storage-replication.md)

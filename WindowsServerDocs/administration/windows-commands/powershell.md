@@ -2,7 +2,7 @@
 title: PowerShell
 description: Узнайте, как открыть консоль PowerShell из командной строки.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,64 +13,64 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 1e2ccf6187e4480f94b30632b6f8f9f092052541
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 2c43c71fce9bb25efcf3f03284160d5534475a8a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66811076"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372199"
 ---
 # <a name="powershell"></a>PowerShell
 
-Windows PowerShell — это ориентированная на задачи оболочка командной строки и язык сценариев, предназначенный специально для системного администрирования. Созданная на основе .NET Framework служба Windows PowerShell помогает ИТ-специалистам и опытным пользователям в управлении и автоматизации администрирования операционной системы Windows, а также приложений, работающих под управлением Windows.
+Windows PowerShell — это оболочка командной строки на основе задач и язык сценариев, разработанный специально для администрирования системы. Созданная на основе .NET Framework служба Windows PowerShell помогает ИТ-специалистам и опытным пользователям в управлении и автоматизации администрирования операционной системы Windows, а также приложений, работающих под управлением Windows.
 
-**PowerShell.exe** средство командной строки запускает сеанс Windows PowerShell в окне командной строки. При использовании **PowerShell.exe**, своих необязательных параметров можно использовать для настройки сеанса. Например можно начать сеанс, который использует политику выполнения конкретного задания, или одно, исключающее профиль Windows PowerShell. В противном случае сеанс совпадает с любой сеанс, который запускается в консоли Windows PowerShell.
+Программа командной строки **PowerShell. exe** запускает сеанс Windows PowerShell из окна командной строки. При использовании **PowerShell. exe**можно использовать его необязательные параметры для настройки сеанса. Например, можно запустить сеанс, в котором используется конкретная политика выполнения или одна из которых исключает профиль Windows PowerShell. В противном случае сеанс будет таким же, как и любой сеанс, запущенный в консоли Windows PowerShell.
 
-## <a name="using-powershellexe"></a>С помощью PowerShell.exe
+## <a name="using-powershellexe"></a>Использование PowerShell. exe
 
-Можно использовать **PowerShell.exe** средство командной строки для запуска сеанса Windows PowerShell в окне командной строки.
+Можно использовать программу командной строки **PowerShell. exe** для запуска сеанса Windows PowerShell в командной строке.
 
-- Чтобы запустить сеанс Windows PowerShell в окне командной строки, введите `PowerShell`. Объект **PS** добавляется префикс в командную строку, чтобы указать, что вы находитесь в сеансе Windows PowerShell.
+- Чтобы запустить сеанс Windows PowerShell в окне командной строки, введите `PowerShell`. В командную строку добавляется префикс **PS** , указывающий, что вы используете сеанс Windows PowerShell.
 
-- Чтобы запустить сеанс с политикой выполнения конкретного задания, используйте **ExecutionPolicy** параметра.
+- Чтобы запустить сеанс с определенной политикой выполнения, используйте параметр **ExecutionPolicy** .
 
     ```
     PowerShell.exe -ExecutionPolicy Restricted
     ```
 
-- Чтобы запустить сеанс Windows PowerShell без профили Windows PowerShell, используйте **NoProfile** параметра.
+- Чтобы запустить сеанс Windows PowerShell без профилей Windows PowerShell, используйте параметр- **Profile** .
 
     ```
     PowerShell.exe -NoProfile
     ```
   
-- Чтобы запустить сеанс, используйте **ExecutionPolicy** параметра.
+- Чтобы начать сеанс, используйте параметр **ExecutionPolicy** .
 
     ```
     PowerShell.exe -ExecutionPolicy Restricted
     ```
   
-- Чтобы просмотреть файл справки PowerShell.exe, используйте следующий формат команды.  
+- Чтобы просмотреть файл справки PowerShell. exe, используйте следующий формат команды:  
     
     ```
     PowerShell.exe -help, -?, /?
     ```
 
-- Чтобы завершить сеанс Windows PowerShell в окне командной строки, введите `exit`. Возвращает типичный командной строки.
+- Чтобы завершить сеанс Windows PowerShell в окне командной строки, введите `exit`. Типичная Командная строка возвращает.
 
-Полный список **PowerShell.exe** параметров командной строки, см. в разделе [about_PowerShell.Exe](https://go.microsoft.com/fwlink/?LinkID=113439).
+Полный список параметров командной строки **PowerShell. exe** см. в разделе [about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439).
 
 ## <a name="other-ways-to-start-windows-powershell"></a>Другие способы запуска Windows PowerShell
 
-Сведения о других способах запуска Windows PowerShell, см. в разделе [запуск Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
+Дополнительные сведения о других способах запуска Windows PowerShell см. в разделе [Запуск Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
 
 ## <a name="remarks"></a>Примечания
 
-Windows PowerShell работает в варианте установки основных серверных компонентов операционных систем Windows Server. Тем не менее, функции, требующие графического пользовательского интерфейса такие как [Windows PowerShell сценарии среды Интегрированной](https://technet.microsoft.com/library/hh849182)и [Out-GridView](https://go.microsoft.com/fwlink/?LinkID=113364) и [Show-Command](https://go.microsoft.com/fwlink/?LinkID=217448)командлеты, не работают при установке ядра сервера.
+Windows PowerShell выполняется в варианте установки Server Core в операционных системах Windows Server. Тем не менее функции, требующие графического пользовательского интерфейса, такие как [Интегрированная среда сценариев Windows PowerShell (ISE)](https://technet.microsoft.com/library/hh849182), и командлеты [Out-GridView](https://go.microsoft.com/fwlink/?LinkID=113364) и [Показывать-Command](https://go.microsoft.com/fwlink/?LinkID=217448) , не выполняются в установках Server Core.
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[about_PowerShell.exe](https://go.microsoft.com/fwlink/?LinkID=113439)
-[about_PowerShell_Ise.exe](https://go.microsoft.com/fwlink/?LinkId=256512)
+[about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439)
+[about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512)
 [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
-[Создание сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также
+[написание сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также

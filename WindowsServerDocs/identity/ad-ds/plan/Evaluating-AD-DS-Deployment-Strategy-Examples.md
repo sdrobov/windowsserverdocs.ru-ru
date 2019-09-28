@@ -7,34 +7,34 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 169d0a55f9fb167390c13ac1c89f8d68427f318d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3d04530c53150a3222b609a80938d7fdfcdfeff7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842115"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402589"
 ---
 # <a name="evaluating-ad-ds-deployment-strategy-examples"></a>Оценка примеров стратегии развертывания доменных служб Active Directory
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Рассмотрим следующий пример вымышленной компании Contoso Pharmaceuticals, который развертывается в среде доменных служб Active Directory (AD DS). The Contoso environment consists of four domains. Режим работы леса — Windows Server 2003. Ниже показана структура текущего домена для организации Contoso.  
+Рассмотрим следующий пример вымышленной компании Contoso Pharmaceuticals, которая развертывает службы домен Active Directory Services (AD DS) в своей среде. Среда Contoso состоит из четырех доменов. Функциональный уровень леса — Windows Server 2003. На следующем рисунке показана текущая структура домена для компании Contoso.  
   
-![Стратегии развертывания AD DS](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)  
+![Стратегия развертывания AD DS](media/Evaluating-AD-DS-Deployment-Strategy-Examples/3dd79e00-48f8-4927-989c-c55a79caf1be.gif)  
   
-После рассмотрения его существующей среды и определения задач развертывания, Contoso установить следующие стратегии развертывания AD DS:  
+После проверки существующей среды и определения целей развертывания компания Contoso установила следующую стратегию развертывания AD DS:  
   
--   Домены обновления Windows Server 2003 к доменам Windows Server 2008.  
+-   Обновите домены Windows Server 2003 до доменов Windows Server 2008.  
   
--   Включите дополнительные возможности AD DS, вызывая режимы работы домена и леса до Windows Server 2008.  
+-   Включение расширенных функций AD DS путем повышения функциональных уровней домена и леса до Windows Server 2008.  
   
--   Измените домен africa.concorp.contoso.com в пределах леса для объединения этого домена с доменом emea.concorp.contoso.con.  
+-   Измените структуру домена africa.concorp.contoso.com в лесу, чтобы консолидировать этот домен с доменом EMEA. Corp. contoso. Con.  
   
-Повышение режима работы леса до Windows Server 2008 позволит Contoso, чтобы воспользоваться всеми преимуществами новых функций AD DS. Реструктуризация доменов в пределах леса, в том случае, как показано на следующем рисунке, сократит администрирования, необходимые для управления доменами.  
+Повышение функционального уровня леса до Windows Server 2008 позволит компании Contoso воспользоваться всеми преимуществами новых функций AD DS. При реструктуризации доменов в пределах леса, как показано на следующем рисунке, уменьшается объем администрирования, необходимый для управления доменами.  
   
-![Стратегии развертывания AD DS](media/Evaluating-AD-DS-Deployment-Strategy-Examples/1c061755-413d-452d-b121-6910f8555327.gif)  
+![Стратегия развертывания AD DS](media/Evaluating-AD-DS-Deployment-Strategy-Examples/1c061755-413d-452d-b121-6910f8555327.gif)  
   
 
 

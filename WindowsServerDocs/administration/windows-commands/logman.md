@@ -1,8 +1,8 @@
 ---
 title: logman
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,28 +13,28 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d4819169ae59d3fed83fc10e6e98f7b39ce8a43
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 420c591a8a6c15d563a344d0450be5eb7da46191
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59831905"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374261"
 ---
 # <a name="logman"></a>logman
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-**Logman** создает и управляет журналов сеанс трассировки событий и производительности и поддерживает многие функции мониторинга производительности из командной строки.
+**Logman** создает сеанс трассировки событий и журналы производительности и управляет ими, а также поддерживает многие функции системного монитора из командной строки.
 ## <a name="syntax"></a>Синтаксис
 ```
 logman [create | query | start | stop | delete| update | import | export | /?] [options]
 ```
 ## <a name="actions"></a>Действия
-|Действие|Описание|
+|Action|Описание|
 |-----|--------|
-|[Создание Logman](logman-create.md)|Создание счетчика, трассировки, сборщик данных конфигурации или API.|
-|[Logman запроса](logman-query.md)|свойства сборщика данных запроса.|
-|[Logman start &#124; остановить](logman-start-stop.md)|запустить или остановить сбор данных.|
-|[Logman delete](logman-delete.md)|Удаление существующего сборщика данных.|
-|[Logman update](logman-update.md)|Обновление свойств сбора данных.|
-|[Logman import &#124; экспорта](logman-import-export.md)|Импорт набора сборщиков данных из XML-файла или экспорт сборщиков данных в XML-файл.|
+|[logman create](logman-create.md)|Создание счетчика, трассировки, сборщика данных конфигурации или API.|
+|[logman query](logman-query.md)|запросите свойства сборщика данных.|
+|[logman start &#124; stop](logman-start-stop.md)|Запуск или завершение сбора данных.|
+|[logman delete](logman-delete.md)|Удаление существующего сборщика данных.|
+|[logman update](logman-update.md)|Обновление свойств существующего сборщика данных.|
+|[logman import &#124; export](logman-import-export.md)|Импорт набора сборщиков данных из XML-файла или экспорт набора сборщиков данных в XML-файл.|

@@ -1,8 +1,8 @@
 ---
 title: Команда Set
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,26 +13,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ad041a6fd1c4cd7fd05def0ea44923e6c59f0bf
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 8131685b227444a0114e9c0eb70d6191a78f3da0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879225"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71385084"
 ---
 # <a name="the-set-command"></a>Команда Set
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Получение свойств и атрибутов для серверов служб развертывания Windows, подготовленных компьютеров, образов, групп образов и транспортные серверы-концентраторы.
+Задает свойства и атрибуты для серверов служб развертывания Windows, предварительно подготовленных компьютеров, образов, групп образов и транспортных серверов.
 ## <a name="subcommands"></a>Подкоманды
 |Подкоманда|Описание|
 |-------|--------|
-|[Подкоманда: set-Device](subcommand-set-device.md)|Изменяет атрибуты предварительно настроенного компьютера. Предварительно настроенный компьютер — это компьютер, на который была связана с объектом учетной записи компьютера в серверах домена active directory (AD DS). Предварительно настроенным клиентам, также называются известных компьютеров.|
-|[Подкоманда: set-Image](subcommand-set-image.md)|Изменяет атрибуты существующего образа.|
-|[Подкоманда: set-ImageGroup](subcommand-set-imagegroup.md)|Изменяет атрибуты существующего группы образов.|
-|[Подкоманда: set-Server](subcommand-set-server.md)|Настраивает параметры для сервера служб развертывания Windows.|
-|[Подкоманда: set-TransportServer](subcommand-set-transportserver.md)|Настраивает параметры для транспортного сервера.|
-|[Подкоманда: set-DriverPackage](subcommand-set-driverpackage.md)|Переименовывает и/или включить или отключить пакет драйверов на сервере.|
-|[Подкоманда: set-DriverGroup](subcommand-set-drivergroup.md)|Задает свойства существующей группы драйверов на сервере.|
-|[Подкоманда: set-DriverGroupFilter](subcommand-set-drivergroupfilter.md)|Добавляет или удаляет существующий фильтр группа драйверов из группы драйверов.|
+|[Подкоманда: Set-Device](subcommand-set-device.md)|изменяет атрибуты предварительно подготовленного компьютера. Предварительно подготовленный компьютер — это компьютер, который был связан с объектом учетной записи компьютера на серверах домена Active Directory (AD DS). Предварительно подготовленные клиенты также называются известными компьютерами.|
+|[Подкоманда: Set-Image](subcommand-set-image.md)|изменяет атрибуты существующего образа.|
+|[Подкоманда: Set-Имажеграуп](subcommand-set-imagegroup.md)|изменяет атрибуты существующей группы образов.|
+|[Подкоманда: Set-Server](subcommand-set-server.md)|Настраивает параметры для сервера служб развертывания Windows.|
+|[Подкоманда: Set-Транспортсервер](subcommand-set-transportserver.md)|Настраивает параметры для транспортного сервера.|
+|[Подкоманда: Set-Дриверпаккаже](subcommand-set-driverpackage.md)|Переименовывает и (или) включает или отключает пакет драйверов на сервере.|
+|[Подкоманда: Set-Дриверграуп](subcommand-set-drivergroup.md)|Задает свойства существующей группы драйверов на сервере.|
+|[Подкоманда: Set-Дриверграупфилтер](subcommand-set-drivergroupfilter.md)|Добавляет или удаляет существующий фильтр группы драйверов из группы драйверов.|

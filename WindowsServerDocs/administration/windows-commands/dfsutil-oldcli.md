@@ -1,7 +1,7 @@
 ---
-title: Dfsutil oldcli
+title: Dfsutil олдкли
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -12,17 +12,17 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a95dfa0c0949147def761614c802bc0c48470145
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: f9b3411878d351f036bde22dc7c3290f4eb8f26e
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59878695"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378214"
 ---
-# <a name="dfsutil-oldcli"></a>Dfsutil oldcli
+# <a name="dfsutil-oldcli"></a>Dfsutil олдкли
 
 
 
 ## <a name="this-topic-is-no-longer-available"></a>Этот раздел больше не доступен
 
-К сожалению, запрашиваемая статья больше не доступен.
+К сожалению, запрошенный Вами раздел больше не доступен.

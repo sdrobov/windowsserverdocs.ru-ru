@@ -1,8 +1,8 @@
 ---
 title: Перезагрузка и завершение работы систем MultiPoint
-description: Узнайте, как выключить или перезагрузить один или несколько систем
+description: Узнайте, как завершить работу или перезапустить одну или несколько систем.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: multipoint-services
 ms.reviewer: na
 ms.suite: na
@@ -13,24 +13,24 @@ author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 33622c38dc6e0b95e8f54ec7e93c3cf60a7cf2aa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6f0c5c0f444130f0b8bcb3540c0b2e243de755e7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59845745"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71395082"
 ---
 # <a name="restart-or-shut-down-multipoint-systems"></a>Перезагрузка и завершение работы систем MultiPoint
-Вы можете перезагрузка или завершение работы одного MultiPoint Services или нескольких систем MultiPoint Services в MultiPoint Dashboard.  
+Вы можете перезапустить или завершить работу одной системы служб MultiPoint или нескольких систем служб MultiPoint на панели мониторинга MultiPoint.  
   
-## <a name="restart-a-multipoint-services-system-or-multiple-systems"></a>Перезапуск системы MultiPoint Services или нескольких систем  
+## <a name="restart-a-multipoint-services-system-or-multiple-systems"></a>Перезапуск системы служб MultiPoint или нескольких систем  
   
-1.  Нажмите кнопку **систем**.  
+1.  Щелкните **системы**.  
   
-2.  Выберите эскиз сервера, который требуется перезапустить, а затем на **оборудования** щелкните **перезапустите**.  
+2.  Щелкните эскиз сервера, который требуется перезапустить, а затем на вкладке **оборудование** нажмите кнопку **перезапустить**.  
   
 ## <a name="to-shut-down-a-multipoint-services-system-or-multiple-systems"></a>Выключение одной или нескольких систем MultiPoint Services  
   
-1.  Нажмите кнопку **систем** вкладки.  
+1.  Перейдите на вкладку **системы** .  
   
-2.  Выберите эскиз сервера, который требуется перезапустить, а затем на **оборудования** щелкните **завершение работы**.
+2.  Щелкните эскиз сервера, который требуется перезапустить, а затем на вкладке **оборудование** нажмите кнопку **завершить работу**.

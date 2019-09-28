@@ -1,8 +1,8 @@
 ---
-title: bitsadmin getsecurityflags
-description: Раздел Windows команды для **bitsadmin getsecurityflags** — сообщает флаги безопасности HTTP для перенаправления URL-адреса и проверяет выполнение сертификат сервера во время передачи.
+title: битсадмин жетсекуритифлагс
+description: Раздел команд Windows для **битсадмин жетсекуритифлагс** . сообщает о флагах безопасности HTTP для перенаправления URL-адресов и проверках, выполняемых на сертификате сервера во время перемещения.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e1db167b12d47afccb8842da617f1e9fe72acff
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fb53664a6366b411ae1eb9b0fe7c93392d60b542
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434961"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381456"
 ---
-# <a name="bitsadmin-getsecurityflags"></a>bitsadmin getsecurityflags
+# <a name="bitsadmin-getsecurityflags"></a>битсадмин жетсекуритифлагс
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Флаги безопасности отчеты HTTP для перенаправления URL-адрес и проверки над сертификат сервера во время передачи.
+Сообщает о флагах безопасности HTTP для перенаправления URL-адресов и проверках, выполняемых на сертификате сервера во время перемещения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,10 +36,10 @@ bitsadmin /GetSecurityFlags <Job>
 
 |Параметр|Описание|
 |-------|--------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
-## <a name="BKMK_examples"></a>Примеры
-В следующем примере извлекается securitly флаги из задания с именем *myJob*.
+## <a name="BKMK_examples"></a>Примеров
+В следующем примере извлекаются флаги секуритли из задания с именем *myJob*.
 
 ```
 C:\>bitsadmin /GetSecurityFlags myJob 

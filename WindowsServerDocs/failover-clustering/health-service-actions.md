@@ -1,6 +1,6 @@
 ---
-title: Действия службы работоспособности
-ms.prod: windows-server-threshold
+title: служба работоспособности действия
+ms.prod: windows-server
 manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
@@ -8,18 +8,18 @@ ms.topic: article
 ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: efdf8f04e68fcbdc7051e78d6725cb919e740ffa
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 519f0321f36fb7afc86962950aeab729d7a38adb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59843025"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71361098"
 ---
-# <a name="health-service-actions"></a>Действия службы работоспособности
+# <a name="health-service-actions"></a>служба работоспособности действия
 
-> Область применения: Windows Server 2016
+> Относится к: Windows Server 2019, Windows Server 2016
 
-Служба работоспособности — это новая функция в Windows Server 2016, которая улучшает ежедневного мониторинга и опыт эксплуатации кластеров дисковыми пространствами.
+Служба работоспособности — это новая функция Windows Server 2016, которая улучшает повседневный мониторинг и рабочую среду для кластеров под управлением Локальные дисковые пространства.
 
 ## <a name="actions"></a>Действия  
 
@@ -35,7 +35,7 @@ Get-StorageHealthAction
 
 ### <a name="coverage"></a>Покрытие  
 
-В Windows Server 2016 **Get-StorageHealthAction** командлет может возвращать следующие сведения:  
+В Windows Server 2016 командлет **Get-сторажехеалсактион** может возвращать следующие сведения:  
 
 -   сбой снятия с учета, потеря связи или отсутствие ответа от физического диска;  
 
@@ -47,5 +47,5 @@ Get-StorageHealthAction
 
 ## <a name="see-also"></a>См. также
 
-- [Служба работоспособности в Windows Server 2016](health-service-overview.md)
-- [Документация для разработчиков, примеры кода и справочник по API на сайте MSDN](https://msdn.microsoft.com/windowshealthservice)
+- [служба работоспособности в Windows Server 2016](health-service-overview.md)
+- [Документация для разработчиков, пример кода и Справочник по API на сайте MSDN](https://msdn.microsoft.com/windowshealthservice)

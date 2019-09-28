@@ -1,7 +1,7 @@
 ---
 ms.assetid: 2bab6bf6-90e7-46a7-b917-14a7a8f55366
 title: Управление работоспособностью памяти хранилища (NVDIMM-N) в Windows
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.author: jgerend
 ms.manager: dongill
 ms.technology: storage-spaces
@@ -9,25 +9,25 @@ ms.topic: article
 author: JasonGerend
 ms.date: 06/25/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4ebec8618c79c43816680387ae5e495f125b3c54
-ms.sourcegitcommit: 545dcfc23a81943e129565d0ad188263092d85f6
+ms.openlocfilehash: 03d986832e14e0dd7b80324de3c9f14d0537dba5
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67407551"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402911"
 ---
 # <a name="storage-class-memory-nvdimm-n-health-management-in-windows"></a>Управление работоспособностью памяти хранилища (NVDIMM-N) в Windows
 
-> Область применения. Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows 10
+> Область применения. Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows 10
 
 В этой статье представлены сведения об обработке ошибок и управлении работоспособностью памяти хранилища (NVDIMM-N) в Windows для системных администраторов и ИТ-специалистов. Описаны различия между памятью хранилища и традиционными запоминающими устройствами.
 
 Если вы не знакомы с поддержкой Windows устройств памяти хранилища, просмотрите обзор, представленный в следующих видеороликах.
 - [Использование энергонезависимой памяти (NVDIMM-N) в качестве блочного хранилища в Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)
-- [Использование энергонезависимой памяти (NVDIMM-N) в качестве хранилища с байтовой адресацией в Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
-- [Ускорение производительности SQL Server 2016 с постоянной памяти в Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
+- [Использование энергонезависимой памяти (NVDIMM-N) в качестве хранилища с байтовым адресом в Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P470)
+- [Ускорение SQL Server 2016 с помощью постоянной памяти в Windows Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-Windows-Server-2016-SCM--FAST)
 
-Также см. в разделе [общие принципы и развертывание постоянной памяти в Storage Spaces Direct](deploy-pmem.md).
+См. также раздел [изучение и развертывание энергонезависимой памяти в Локальные дисковые пространства](deploy-pmem.md).
 
 JEDEC-совместимые устройства памяти хранилища NVDIMM-N поддерживаются в Windows с помощью собственных драйверов начиная с Windows Server 2016 и Windows 10 (версия 1607). Эти устройства работают точно так же, как и другие диски (HDD и SSD), но есть некоторые отличия.
 

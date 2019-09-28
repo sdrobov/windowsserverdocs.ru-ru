@@ -1,8 +1,8 @@
 ---
 title: break
-description: 'Раздел Windows команды для **break_1** -наборов или очищает расширенных CTRL + C проверки системах MS-DOS. При использовании без параметров, **break** отображается текущее значение параметра. '
+description: 'Раздел команд Windows для **break_1** : задает или очищает расширенную проверку CTRL + C в системах MS-DOS. Если используется без параметров, параметр **break** отображает текущее значение. '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d08eaa5194c8895aeb42ac58dfb68d2fc44e70bd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 73afdac29efbfd9efec88d297cf4185ca1b92d62
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59869055"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380488"
 ---
 # <a name="break"></a>break
 
 
 
-Задает или удаляет значение расширенной проверки системах MS-DOS CTRL + C. При использовании без параметров, **break** отображается текущее значение параметра.
+Задает или очищает расширенную проверку CTRL + C в системах MS-DOS. Если используется без параметров, параметр **break** отображает текущее значение.
 
 > [!NOTE]
 > Эта команда больше не используется. Она включена только для обеспечения совместимости с существующими файлами MS-DOS и ее применение не влияет на результат, поскольку необходимые действия выполняются автоматически.
@@ -37,8 +37,8 @@ break=[on|off]
 
 ## <a name="remarks"></a>Примечания
 
-Если включен и работает на платформе Windows, расширения команд вставки **break** команды в пакетном файле вводит жестко точки останова, если отлаживается отладчиком.
+Если расширения команд включены и работают на платформе Windows, при вставке команды **break** в пакетный файл при отладке отладчика он переходит в жестко запрограммированную точку останова.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,8 +1,8 @@
 ---
-title: changepassword готов
-description: 'Раздел Windows команды для ***- '
+title: Manage-bde ChangePassword
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6d08a275ef2408b4b2bee40486067ed5a427433c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 2dee55aba2f5439b2902072a8e6fe2da2707ce29
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59839985"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71374086"
 ---
-# <a name="manage-bde-changepassword"></a>готов: изменение пароля
+# <a name="manage-bde-changepassword"></a>Manage-bde: ChangePassword
 
 
 
-Изменяет пароль для диска с данными. Пользователю предлагается ввести новый пароль. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Изменяет пароль для диска данных. Пользователю будет предложено ввести новый пароль. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,20 +36,20 @@ manage-bde -changepassword [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Диск >|Представляет букву диска, за которым следует двоеточие.|
-|-computername|Указывает, что Manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать **- cn** как сокращенную версию этой команды.|
-|\<Имя >|Представляет имя компьютера, на которой требуется изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
-|-? или /?|Отображение кратких справки в командной строке.|
-|-help или -h|Отображает полную справку в командной строке.|
+|@no__t 0Drive >|Представляет букву диска, за которой следует двоеточие.|
+|-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
+|\<Имя >|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|-? или/?|Отображает краткую справку в командной строке.|
+|-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-В следующем примере демонстрируется использование **- changepassword** команду, чтобы изменить пароль, используемый для снятия блокировки BitLocker на диске D. данных
+В следующем примере показано использование команды **-ChangePassword** для изменения пароля, используемого для разблокировки BitLocker на диске данных D.
 ```
 manage-bde –changepassword D:
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
--   [Готов](manage-bde.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   [Управление — BDE](manage-bde.md)

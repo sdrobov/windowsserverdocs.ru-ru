@@ -1,8 +1,8 @@
 ---
-title: FTP prompt_1
-description: 'Раздел Windows команды для ***- '
+title: prompt_1 FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 65f7505dfcb3677fcaace9bd645cca7e7ba70b7d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 08c7f9c14f4168bb5d3aa874711669eede8d0d87
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438591"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376197"
 ---
-# <a name="ftp-prompt1"></a>ftp: prompt_1
+# <a name="ftp-prompt_1"></a>FTP: prompt_1
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Переключение между **строке** режима включения и отключения.   
+Включает и выключает режим **запроса** .   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 prompt  
@@ -32,10 +32,10 @@ prompt
 ### <a name="parameters"></a>Параметры  
 none  
 ## <a name="remarks"></a>Примечания  
-- По умолчанию **строке** включен.  
-- **FTP** запрашивает при передаче нескольких файлов, чтобы можно было выборочно получить или сохранить файлы.  **Mget** и **mput** передавать все файлы в том случае, если **строке** отключен.  
-  ## <a name="BKMK_Examples"></a>Примеры  
-  Включить режим подсказки и отключить.  
+- По умолчанию **запрос** включен.  
+- запросы **FTP** при передаче нескольких файлов, позволяющие выборочно получать или хранить файлы.  **Mget** и **мпут** переносят все файлы, если **запрос** отключен.  
+  ## <a name="BKMK_Examples"></a>Примеров  
+  Включение и отключение режима подсказки.  
   ```  
   prompt  
   ```  

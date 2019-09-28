@@ -2,7 +2,7 @@
 title: Техническая информация по Windows Server для ИТ-администраторов — Windows Server
 description: Получите технические статьи по текущим и прежним выпускам Windows Server, а также ознакомительные версии для ИТ-специалистов.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: server-general
@@ -14,12 +14,12 @@ author: lizap
 ms.author: elizapo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: f9a4e4e0dde0c2c6178629f0dee744448edc72dd
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: 5430dfa2facfb7412077931637f5e95e35f0d934
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812599"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71392471"
 ---
 # <a name="windows-server---it-administrator-content-for-current-and-previous-releases"></a>Windows Server: информация по текущим и прежним выпускам для ИТ-администраторов
 
@@ -34,31 +34,31 @@ Windows Server является платформой для создания и�
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 
-[Технические материалы по Windows Server 2016](windows-server-2016.md)
+[Техническое содержимое по Windows Server 2016](windows-server-2016.md)
 
 ## <a name="windows-server-2012-r2-and-windows-server-2012"></a>Windows Server 2012 R2 и Windows Server 2012
 
-[Windows Server 2012 R2 и технической библиотеке Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
+[Техническая библиотека Windows Server 2012 R2 и Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
 
-[Библиотека разработчика Windows Server 2012 R2 в MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
+[Библиотека разработчиков Windows Server 2012 R2 на сайте MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
 
 ## <a name="windows-server-2008-r2-and-windows-server-2008"></a>Windows Server 2008 R2 и Windows Server 2008
 
-[Windows Server 2008 R2 и технической библиотеке Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
+[Техническая библиотека Windows Server 2008 R2 и Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
  
-[Библиотека для разработчиков Windows Server 2008 на сайте MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
+[Библиотека разработчиков Windows Server 2008 на сайте MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
 
 ## <a name="windows-server-2003"></a>Windows Server 2003
 
 [Техническая библиотека Windows Server 2003](https://www.microsoft.com/download/details.aspx?id=53314) — скачать PDF-версию архивного содержимого
 
-[Библиотека для разработчиков Windows Server 2003 на сайте MSDN](https://msdn.microsoft.com/library/dn792549.aspx)
+[Библиотека разработчиков Windows Server 2003 на сайте MSDN](https://msdn.microsoft.com/library/dn792549.aspx)
 
 ## <a name="product-evaluations"></a>Ознакомительные версии продуктов
 
-[Скачайте ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
+[Загрузите ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
-[Скачайте пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
+[Загрузите пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 
 ## <a name="related-links"></a>Связанные ссылки
 [Сведения о продукте Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) 

@@ -1,8 +1,8 @@
 ---
-title: bitsadmin makecustomheaderswriteonly
-description: Раздел Windows команды для **bitsadmin makecustomheaderswriteonly** -сделать задания пользовательских заголовков HTTP только для записи (не может быть отменено).
+title: битсадмин макекустомхеадерсвритеонли
+description: Раздел команд Windows для **битсадмин макекустомхеадерсвритеонли** . Создание настраиваемых заголовков HTTP задания только для записи (не может быть отменено).
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 18d170098a5e913522b5daa42a22c66b67c2206b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 64bf048ddc76ad1d751509e95d09403db1de7883
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59861895"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381031"
 ---
-# <a name="bitsadmin-makecustomheaderswriteonly"></a>bitsadmin makecustomheaderswriteonly
+# <a name="bitsadmin-makecustomheaderswriteonly"></a>битсадмин макекустомхеадерсвритеонли
 
-Создать задание пользовательские заголовки HTTP только для записи (не может быть отменено).
+Сделать так, чтобы настраиваемые заголовки HTTP задания были только для записи (не могут быть отменены).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,8 +33,8 @@ bitsadmin /MakeCustomHeadersWriteOnly <Job>
 
 |Параметр|Описание|
 |---------|-----------|
-|Job|Отображаемое имя или идентификатор GUID задания|
+|Job|Отображаемое имя задания или идентификатор GUID|
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,7 +1,7 @@
 ---
 title: Поддерживаемые виртуальные машины Ubuntu в Hyper-V
 description: Список служб и компонентов интеграции Linux, входящих в каждую версию
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
@@ -11,12 +11,12 @@ ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 06/13/2019
-ms.openlocfilehash: ad0f79767310595244d0d57876c20b9548a81a96
-ms.sourcegitcommit: e2b565ce85a97c0c51f6dfe7041f875a265b35dd
+ms.openlocfilehash: ed1c1a9f678dd7cb68b59d2df239ca278b7a3688
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584816"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365478"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Ubuntu в Hyper-V
 
@@ -49,7 +49,7 @@ ms.locfileid: "69584816"
 |vRSS|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |Сегментация TCP и разгрузка контрольной суммы|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |SR-IOV;|2019, 2016|&#10004;|&#10004;|&#10004;|||
-|**[Хранилище](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||
+|**[Объема](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#storage)**||||||
 |Изменение размера VHDX|2019, 2016, 2012 R2|&#10004;|&#10004;|&#10004;|&#10004;||
 |виртуальный адаптер Fibre Channel;|2019, 2016, 2012 R2|&#10004;Примечание 2|&#10004;Примечание 2|&#10004;Примечание 2|&#10004;Примечание 2||
 |Динамическая Архивация виртуальных машин|2019, 2016, 2012 R2|&#10004;Примечание 3, 4, 6|&#10004;Примечание 3, 4, 5|&#10004;Примечание 3, 4, 5|&#10004;Примечание 3, 4, 5||

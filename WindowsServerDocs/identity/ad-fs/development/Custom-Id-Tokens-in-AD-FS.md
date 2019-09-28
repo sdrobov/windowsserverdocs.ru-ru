@@ -6,15 +6,15 @@ ms.author: billmath
 manager: mtillman
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: d2577be364d7bb2e74ab7e06490b7bc3f150441a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 88ae6837872c5a6cf6bb1d8533a0aa14b82ca573
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867703"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71358909"
 ---
 # <a name="customize-claims-to-be-emitted-in-id_token-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Настройте утверждения, которые будут выдаваться в id_token при использовании OpenID Connect Connect или OAuth с AD FS 2016 или более поздней версии.
 
@@ -57,43 +57,43 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 2. В мастере группы приложений в поле Имя введите **адфсссо** и в разделе клиент-сервер приложения выберите **собственное приложение, обращающееся к шаблону веб-приложения** . Нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
 3. Скопируйте значение **идентификатора клиента** .  Он будет использоваться позже в качестве значения для Ida: ClientId в файле Web. config приложения.
 
 4. Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44320/** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
 5. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор** -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  Это значение будет использоваться позже для **Ida: ResourceId** в файле Web. config приложения.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
 6. На экране **Выбор политики управления доступом** выберите **разрешение все** и нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
 
 7. На экране **Настройка разрешений приложения** убедитесь, что выбраны **OpenID Connect** и **Аллатклаимс** , и нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
 
 8. На экране **Сводка** нажмите кнопку **Далее**.  
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
 
 9. На экране **Завершение** нажмите кнопку **Закрыть**.
 
 10. В AD FS Управление щелкните группы приложений, чтобы получить список всех групп приложений. Щелкните правой кнопкой мыши **адфсссо** и выберите пункт **свойства**. Выберите **адфсссо-Web API** и нажмите кнопку **изменить...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.png)
 
 11. На экране **Свойства веб-API на адфсссо** выберите вкладку **правила преобразования выдачи** и нажмите кнопку **Добавить правило...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
 
 12. На странице **мастера добавления правила преобразования утверждений** выберите **Отправить утверждения с помощью настраиваемого правила** из раскрывающегося списка и нажмите кнопку **Далее** .
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
 
 13. На экране **мастера добавления правила преобразования утверждений** введите **форкустомидтокен** в качестве **имени правила утверждений** и в **настраиваемое правило**— в соответствии с правилом утверждения. Нажмите кнопку **Готово** .
 
@@ -102,7 +102,7 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
     => issue(claim=x);  
     ```
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
 
 ```
 

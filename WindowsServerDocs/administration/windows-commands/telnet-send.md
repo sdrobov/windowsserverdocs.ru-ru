@@ -1,8 +1,8 @@
 ---
-title: Отправить Telnet
-description: 'Раздел Windows команды для ***- '
+title: Отправка Telnet
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 36dc7f861e88cf991af57dda2f150107c6870f0f
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 958e0e507e5a0ae836da98de8d677a116dbb38bd
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66441039"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71383635"
 ---
-# <a name="telnet-send"></a>Telnet: Отправка
+# <a name="telnet-send"></a>Telnet: send
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отправляет команды telnet на Telnet-сервер.   
+Отправляет команды Telnet на сервер Telnet.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]  
@@ -33,17 +33,17 @@ sen[d] {ao | ayt | brk | esc | ip | synch | <string>} [?]
 
 | Параметр |                     Описание                      |
 |-----------|------------------------------------------------------|
-|    AO     |       Отправляет команду telnet прервать выходных данных.        |
-|    айт    |       Отправляет команды telnet являются вы существует.       |
-|    brk    |            Отправляет brk команды telnet.            |
-|    ESC    |      Отправляет текущий telnet escape-символ.      |
-|    IP-адрес     |     Отправляет команду telnet прерывания процесса.     |
-|   Синхронизация   |           Отправляет синхронизации команды telnet.           |
-| <string>  | Отправляет любой строки, введенные на Telnet-сервер. |
-|     ?     |     Отображает справку, связанную с помощью следующей команды.      |
+|    AO     |       Отправляет выходные данные команды Telnet Abort.        |
+|    айт    |       Отправляет команду Telnet.       |
+|    брк    |            Отправляет команду Telnet БРК.            |
+|    ESC    |      Отправляет текущий escape-символ Telnet.      |
+|    см     |     Отправляет процесс прерывания команды Telnet.     |
+|   Синхронизация   |           Отправка команды Telnet Synch.           |
+| <string>  | Отправляет любую строку, введенную на сервер Telnet. |
+|     ?     |     Отображает справку, связанную с этой командой.      |
 
-## <a name="BKMK_Examples"></a>Примеры  
-Send вы существует на Telnet-сервер.  
+## <a name="BKMK_Examples"></a>Примеров  
+Отправьте их на сервер Telnet.  
 ```  
 sen ayt  
 ```  

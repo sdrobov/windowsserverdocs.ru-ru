@@ -1,8 +1,8 @@
 ---
 title: rundll32
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b1f288d21a1dcac25ecc00f685ea179d8a6542f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 29a87f9f07c25a0c671e47550e0a054d8308f747
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59835035"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71384417"
 ---
 # <a name="rundll32"></a>rundll32
 
 
 
-Загружает и выполняет 32-разрядной библиотеки динамической компоновки (DLL). Не предусмотрены настраиваемые параметры для Rundll32. Справочная информация предоставляется в конкретной библиотеке DLL, с помощью **rundll32** команды.
+Загружает и выполняет 32-разрядные библиотеки динамической компоновки (DLL). Настраиваемые параметры для rundll32 отсутствуют. Справочные сведения предоставляются для конкретной библиотеки DLL, выполняемой с помощью команды **rundll32** .
 
-Необходимо запустить **rundll32** команду из командной строки с повышенными правами. Чтобы открыть командную строку с повышенными правами, нажмите кнопку **запустить**, щелкните правой кнопкой мыши **командной строки**, а затем нажмите кнопку **Запуск от имени администратора**.
+Необходимо выполнить команду **rundll32** из командной строки с повышенными привилегиями. Чтобы открыть командную строку с повышенными привилегиями, нажмите кнопку **Пуск**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,12 +38,12 @@ Rundll32 <DLLname>
 
 |Параметр|Описание|
 |---------|-----------|
-|[Rundll32 printui.dll,PrintUIEntry](rundll32-printui.md)|Отображает интерфейс пользователя принтера|
+|[Rundll32 PRINTUI. dll, Принтуиентри](rundll32-printui.md)|Отображает пользовательский интерфейс принтера|
 
 ## <a name="remarks"></a>Примечания
 
-Rundll32 может вызывать только функции из библиотеки DLL, написанные явным образом вызывать Rundll32. Дополнительные сведения о Rundll32 требования см. в разделе [статьи 164787](https://go.microsoft.com/fwlink/?LinkID=165773) в базе знаний Майкрософт (https://go.microsoft.com/fwlink/?LinkID=165773).
+Rundll32 может вызывать функции только из библиотеки DLL, которые явно написаны для вызова с помощью rundll32. Дополнительные сведения о требованиях rundll32 см. в [статье 164787](https://go.microsoft.com/fwlink/?LinkID=165773) базы знаний майкрософт (https://go.microsoft.com/fwlink/?LinkID=165773) ).
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

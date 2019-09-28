@@ -1,8 +1,8 @@
 ---
-title: С помощью команды get-AllMulticastTransmissions
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Get-Аллмултикасттрансмиссионс
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b05f8802a288d80960cf79356675cb9adce9c260
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 644684ffb356ef07120bc391e3d3da2daf768eaf
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66440533"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363345"
 ---
-# <a name="using-the-get-allmulticasttransmissions-command"></a>С помощью команды get-AllMulticastTransmissions
+# <a name="using-the-get-allmulticasttransmissions-command"></a>Использование команды Get-Аллмултикасттрансмиссионс
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает сведения о всех многоадресных передач на сервере.
+Отображает сведения обо всех многоадресных передачах на сервере.
 ## <a name="syntax"></a>Синтаксис
 для Windows Server 2008:
 ```
@@ -38,21 +38,21 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 
 |        Параметр        |                                                                                                                                                                                                                                                                   Объяснение                                                                                                                                                                                                                                                                    |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/ Server:<Server name>] |                                                                                                                                                                                 Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя (FQDN). Если имя сервера не указан, будет использоваться локальный сервер.                                                                                                                                                                                  |
-|         [/ Show]         | **Windows Server 2008**<br /><br />/Show:clients - Отображает сведения о клиентских компьютерах, подключенных к многоадресные передачи.<br /><br />**Windows Server 2008 R2**<br /><br />Демонстрация: {загрузки &#124; установить &#124; все}-тип возвращаемого изображения.                                **Загрузки** возвращает загружена только передачи образа.                                  **Установка** возвращает только установить передачи образа. **Все** возвращает оба типы изображений. |
+| [/Server: <Server name>] |                                                                                                                                                                                 Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.                                                                                                                                                                                  |
+|         /Show         | **Windows Server 2008**<br /><br />/Show: Clients — отображает сведения о клиентских компьютерах, подключенных к многоадресным передачам.<br /><br />**Windows Server 2008 R2**<br /><br />Показывать: {установить &#124; &#124; все для загрузки} — тип возвращаемого образа.                                Функция **загрузки** возвращает только передачи загрузочных образов.                                  **Установка** возвращает только передачи образов. **ALL** возвращает оба типа изображений. |
 |                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-|    /Details:Clients     |                                                                                                                                                                                              Поддерживается только для Windows Server 2008 R2. При его наличии, будет отображаться клиентов, подключенных к передаче.                                                                                                                                                                                               |
-| [/ExcludedeletePending] |                                                                                                                                                                                                                                              Исключает все деактивированные передачи данных из списка.                                                                                                                                                                                                                                               |
+|    /детаилс: клиенты     |                                                                                                                                                                                              Поддерживается только для Windows Server 2008 R2. При наличии клиенты, подключенные к передаче, будут отображаться.                                                                                                                                                                                               |
+| [/Ексклудеделетепендинг] |                                                                                                                                                                                                                                              Исключает из списка все деактивированные передачи.                                                                                                                                                                                                                                               |
 
-## <a name="BKMK_examples"></a>Примеры
-Чтобы просмотреть сведения о всех передач, введите:
+## <a name="BKMK_examples"></a>Примеров
+Чтобы просмотреть сведения обо всех передачах, введите:
 - Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions`
-- Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Show:All` Чтобы просмотреть сведения о всех передач, за исключением отключенных передач, введите:
+- Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Show:All` чтобы просмотреть сведения обо всех передачах, за исключением неактивированных передач, введите:
 - Windows Server 2008: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
 - Windows Server 2008 R2: `wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
   #### <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [с помощью команды get-MulticastTransmission](using-the-get-multicasttransmission-command.md)
-  [с помощью команды новый MulticastTransmission](using-the-new-multicasttransmission-command.md) 
-   [С помощью команды remove-MulticastTransmission](using-the-remove-multicasttransmission-command.md)
-  [подкоманда: start-MulticastTransmission](subcommand-start-multicasttransmission.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+  [с помощью команды get-мултикасттрансмиссион](using-the-get-multicasttransmission-command.md)
+  [с помощью команды New-Мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)
+  [с помощью команды Remove-мултикасттрансмиссион](using-the-remove-multicasttransmission-command.md)
+  [ . Подкоманда: Start-Мултикасттрансмиссион](subcommand-start-multicasttransmission.md)

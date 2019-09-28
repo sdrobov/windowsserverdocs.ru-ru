@@ -1,8 +1,8 @@
 ---
-title: 'Secedit: проверка'
-description: 'Раздел Windows команды для ***- '
+title: 'Secedit: Проверка'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cca64f6b2904ed11f6b45e316c8e4da0093c373e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ece0a0324b77eb4226b679bc29f7bd599f15a120
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59877915"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371105"
 ---
-# <a name="seceditvalidate"></a>Secedit: проверка
+# <a name="seceditvalidate"></a>Secedit: Проверка
 
 
 
-Проверяет параметры безопасности, хранящиеся в шаблоне безопасности (INF-файл). Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Проверяет параметры безопасности, хранящиеся в шаблоне безопасности (INF-файле). Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,21 +37,21 @@ Secedit /validate <configuration file name>
 
 |Параметр|Описание|
 |---------|-----------|
-|Имя файла конфигурации|Обязательный.</br>Указывает путь и имя файла шаблона безопасности, который будет проверяться.|
+|Имя файла конфигурации|Обязательный.</br>Указывает путь и имя файла для шаблона безопасности, который будет проверен.|
 
 ## <a name="remarks"></a>Примечания
 
-Проверка шаблонов параметров безопасности может помочь, если один является поврежден или неправильно задано.
+Проверка шаблонов безопасности может помочь в том, что один из них поврежден или настроен неправильно.
 
-Шаблон недопустимый безопасности не применяются.
+Недопустимый шаблон безопасности не будет применен.
 
-Файл журнала не будет обновляться.
+Файл журнала не будет обновлен.
 
-В Windows Server 2008 `Secedit /refreshpolicy` был заменен `gpupdate`. Сведения о том, как обновить параметры безопасности, см. в разделе [Gpupdate](gpupdate.md).
+В Windows Server 2008 `Secedit /refreshpolicy` был заменен на. `gpupdate` Сведения о том, как обновить параметры безопасности, см. в разделе [gpupdate](gpupdate.md).
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-После выполнения отката на шаблон безопасности, который вы хотите убедитесь, что откат INF-файла, secRBKcontoso.inf, является допустимым.
+После выполнения отката в шаблоне безопасности необходимо убедиться, что INF-файл отката Секрбкконтосо. inf является допустимым.
 ```
 Secedit /validate secRBKcontoso.inf
 ```
@@ -59,5 +59,5 @@ Secedit /validate secRBKcontoso.inf
 #### <a name="additional-references"></a>Дополнительная справка
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
--   [Secedit](secedit.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Программу Secedit](secedit.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

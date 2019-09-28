@@ -1,19 +1,19 @@
 ---
 title: Развертывание основных компьютеров для перенаправления папок и перемещаемых профилей пользователей
 description: Включение поддержки основного компьютера и назначение основных компьютеров пользователям с перенаправлением папок и перемещаемыми профилями пользователей.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: fe026b97f15b4094303c8162c5363cc6205dedd1
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: be2b41cf32e2020422c32415e2d8f4273eb09859
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70867276"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394436"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>Развертывание основных компьютеров для перенаправления папок и перемещаемых профилей пользователей
 
@@ -70,7 +70,7 @@ ms.locfileid: "70867276"
 4. Щелкните правой кнопкой мыши **папку перенаправить только на основных компьютерах**, а затем выберите **изменить**.
 5. Выберите **включено**и нажмите кнопку **ОК**.
 
-## <a name="step-3-optionally-enable-primary-computers-for-roaming-user-profiles-in-group-policy"></a>Шаг 3. При необходимости включите основные компьютеры для перемещаемых профилей пользователей в групповая политика
+## <a name="step-3-optionally-enable-primary-computers-for-roaming-user-profiles-in-group-policy"></a>Шаг 3. При необходимости включите основные компьютеры для перемещаемых профилей пользователей в групповая политика
 
 Следующий шаг — при необходимости настройте групповая политика, чтобы включить поддержку основного компьютера для перемещаемых профилей пользователей. Это позволяет профилю пользователя перемещаться по компьютерам, назначенным основным компьютерам пользователя, но не на других компьютерах.
 

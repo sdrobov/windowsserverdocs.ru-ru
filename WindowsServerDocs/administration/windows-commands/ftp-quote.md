@@ -1,8 +1,8 @@
 ---
-title: Квота FTP
-description: 'Раздел Windows команды для ***- '
+title: Цитата FTP
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f468bfc384673818dc53be303f82cd4803cb2eb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 65660cf7311713295dae8a94c9174229f5ee44be
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66438491"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71376080"
 ---
-# <a name="ftp-quote"></a>FTP: Квота
+# <a name="ftp-quote"></a>FTP: кавычка
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отправляет verbatim аргументы с удаленного FTP-сервером. Возвращается код ответа единый ftp.   
+Отправляет точные аргументы на удаленный FTP-сервер. Возвращается один код ответа FTP.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 quote <Argument>[ ]  
@@ -33,15 +33,15 @@ quote <Argument>[ ]
 
 | Параметр  |                    Описание                    |
 |------------|---------------------------------------------------|
-| <Argument> | Задает аргумент для отправки на сервер ftp. |
+| <Argument> | Указывает аргумент для отправки на FTP-сервер. |
 
 ## <a name="remarks"></a>Примечания  
-**Квоты** команда идентична **литерала** команды.  
-## <a name="BKMK_Examples"></a>Примеры  
-Отправить **выйти из программы** команду на удаленном FTP-сервер.  
+Команда **quote** идентична команде **Literal** .  
+## <a name="BKMK_Examples"></a>Примеров  
+Отправка команды **Quit** на удаленный FTP-сервер.  
 ```  
 quote quit  
 ```  
 ## <a name="additional-references"></a>Дополнительные ссылки  
--   [ftp: literal_1](ftp-literal_1.md)  
+-   [FTP: literal_1](ftp-literal_1.md)  
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

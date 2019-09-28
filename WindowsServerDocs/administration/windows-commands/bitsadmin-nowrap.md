@@ -1,8 +1,8 @@
 ---
 title: bitsadmin nowrap
-description: Раздел Windows команды для **bitsadmin nowrap** -усекает любую строку вывода текста, выходящие за пределы правый край окна команд.
+description: Раздел команд Windows для **битсадминing** — усекает любую строку выходного текста, выходящего за пределы крайнего правого края окна командной строки.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4130f606a6b1874e1ea31952160de44d6e09c6b6
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 3806ec51161eeae498e3c9b367b2aacf0bd32c99
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59822925"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71381050"
 ---
 # <a name="bitsadmin-nowrap"></a>bitsadmin nowrap
 
-Усекает любую строку вывода текста, выходящие за пределы правый край окна команд.
+Усекает любую строку выходного текста, выходящего за пределы крайнего правого края окна командной строки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,15 +32,15 @@ bitsadmin /NoWrap
 
 ## <a name="remarks"></a>Примечания
 
-По умолчанию всех коммутаторов, за исключением **монитор** переключения, поместите выходные данные. Укажите **NoWrap** переключения, прежде чем другими параметрами.
+По умолчанию все параметры, кроме коммутатора **монитора** , заключают выходные данные в оболочку. Укажите параметр "не **переносить** " перед другими параметрами.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере извлекается состояние задания с именем *myDownloadJob* и не переносит выходные данные
+В следующем примере извлекается состояние для задания с именем *мидовнлоаджоб* и не выполняется заключение в оболочку выходных данных.
 ```
 C:\>bitsadmin /NoWrap /GetState myDownloadJob
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

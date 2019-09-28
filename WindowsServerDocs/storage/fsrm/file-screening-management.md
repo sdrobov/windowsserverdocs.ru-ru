@@ -2,22 +2,22 @@
 title: Управление фильтрами блокировки файлов
 description: В этой статье описывается, как создавать фильтры блокировки файлов, создавать уведомления, определять шаблоны фильтра блокировки файлов и создавать исключения для фильтров блокировки файлов.
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 05fcaf402347d16bf8c28528d402664ae5f99165
-ms.sourcegitcommit: ed27ddbe316d543b7865bc10590b238290a2a1ad
+ms.openlocfilehash: ac5032630f960329675f896a303ef197d6a4dbb3
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65476047"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71403105"
 ---
 # <a name="file-screening-management"></a>Управление фильтрами блокировки файлов
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (полугодовой канал), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 На узле **Управление фильтрами блокировки файлов** оснастки консоли управления Microsoft® (MMC) диспетчера ресурсов файлового сервера можно выполнять следующие задачи:
 
@@ -33,7 +33,7 @@ ms.locfileid: "65476047"
 Этот раздел содержит следующие темы:
 
 -   [Определение групп файлов для блокировки](define-file-groups-for-screening.md)
--   [Создать фильтр блокировки файлов](create-file-screen.md)
+-   [Создание фильтра блокировки файлов](create-file-screen.md)
 -   [Создание исключения для фильтра блокировки файлов](create-file-screen-exception.md)
 -   [Создание шаблона для фильтра блокировки файлов](create-file-screen-template.md)
 -   [Редактирование свойств шаблона для фильтра блокировки файлов](edit-file-screen-template-properties.md)

@@ -1,8 +1,8 @@
 ---
 title: nslookup set port
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 47eb780631da766f49c0ca2cac8ef90007a95c7e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 5e1d7565499b87d861b727be54442a86527a85a7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436709"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372919"
 ---
 # <a name="nslookup-set-port"></a>nslookup set port
 
 
 
-Изменяет имя сервера по умолчанию TCP/UDP доменных имен (DNS) порт на указанное значение.
+Изменяет порт сервера доменных имен (DNS) TCP/UDP по умолчанию на указанное значение.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,8 +36,8 @@ set port=<Port>
 
 | Параметр |                                          Описание                                          |
 |-----------|-----------------------------------------------------------------------------------------------|
-|  \<Порт >  | Указывает новое значение для порта сервера имен DNS TCP/UDP. По умолчанию используется порт 53. |
-|   {справки   |                                              ?}                                               |
+|  @no__t 0Port >  | Указывает новое значение для порта сервера DNS-имен TCP/UDP по умолчанию. Порт по умолчанию — 53. |
+|   {Справка   |                                              ?}                                               |
 
 #### <a name="additional-references"></a>Дополнительная справка
 

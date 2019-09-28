@@ -2,22 +2,22 @@
 title: Определение групп файлов для блокировки
 description: В этой статье описывается, как определять группы файлов для создания пространства имен для фильтра блокировки файлов, определять исключения для фильтра блокировки файлов или по отчетам хранилища "Файлы по группам файлов".
 ms.date: 7/7/2017
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 6e043692500370b6c084a4db068027d13afc957f
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: b56d7b0439e3dc6f1a2e0a1c96f761dbb77cb0a0
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838435"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394386"
 ---
 # <a name="define-file-groups-for-screening"></a>Определение групп файлов для блокировки
 
-> Относится к: Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 *Группа файлов* используется для определения пространства имен для фильтра блокировки файлов, исключения для фильтра блокировки файлов или отчета хранилища **Файлы по группам файлов**. Она состоит из набора шаблонов имен файлов, сгруппированных следующим образом.
 
@@ -41,16 +41,16 @@ ms.locfileid: "59838435"
 
     -   Для каждого набора файлов, которые вы хотите включить в группу файлов, в окне **Файлы для включения** введите шаблон имени файла и нажмите кнопку **Добавить**.
     -   Для каждого набора файлов, которые вы хотите исключить из группы файлов, в окне **Файлы для исключения** введите шаблон имени файла и нажмите кнопку **Добавить**.
-        Обратите внимание, что применяются правила стандартные подстановочные, например,  **\*.exe** выбирает всех исполняемых файлов.
+        Обратите внимание, что применяются стандартные правила с подстановочными знаками, например **@no__t -1. exe** выбирает все исполняемые файлы.
 
 5.  Нажмите кнопку **ОК**.
 
 ## <a name="see-also"></a>См. также
 
--   [Блокировки управления](file-screening-management.md)
--   [Создать фильтр блокировки файлов](create-file-screen.md)
--   [Создание исключения фильтра блокировки файлов](create-file-screen-exception.md)
--   [Создать шаблон фильтра блокировки файлов](create-file-screen-template.md)
--   [Управление ресурсами хранилища](storage-reports-management.md)
+-   [Управление блокировкой файлов](file-screening-management.md)
+-   [Создание фильтра блокировки файлов](create-file-screen.md)
+-   [Создание исключения для фильтра блокировки файлов](create-file-screen-exception.md)
+-   [Создание шаблона для фильтра блокировки файлов](create-file-screen-template.md)
+-   [Управление отчетами хранилища](storage-reports-management.md)
 
 

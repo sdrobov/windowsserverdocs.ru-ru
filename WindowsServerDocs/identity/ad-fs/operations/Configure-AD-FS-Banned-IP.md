@@ -1,49 +1,49 @@
 ---
-title: Настройка AD FS заблокированных IP-адреса
+title: Настройка AD FS запрещенных IP-адресов
 description: ''
 author: billmath
 ms.author: billmath
 manager: mtillman
 ms.date: 06/28/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 01ef992554a1e0961d8d795e9baa7730a1a1d682
-ms.sourcegitcommit: 0b5fd4dc4148b92480db04e4dc22e139dcff8582
+ms.openlocfilehash: 2b518f92f80d06e4bd0854fde94013a412aae515
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66189888"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71407710"
 ---
-# <a name="ad-fs-and-banned-ip-addresses"></a>AD FS и запрещенных IP-адресов
+# <a name="ad-fs-and-banned-ip-addresses"></a>AD FS и запрещенные IP-адреса
 
 
-В июня 2018 г., AD FS на Windows Server 2016 появилась **заблокированных IP-адреса** в AD FS обновление июня 2018 г.  Это обновление позволяет настраивать набор IP-адресов глобально в AD FS, чтобы запросы, поступающие из этих IP-адресов, или у этих IP-адресов **x-forwarded-for** или **x-ms-forwarded--IP-адрес клиента** заголовки, будут блокироваться AD FS.
+В июне 2018 AD FS на Windows Server 2016 предоставила **запрещенные IP-адреса** AD FS Июнь 2018.  Это обновление позволяет настроить набор IP-адресов глобально в AD FS, чтобы запросы, поступающие с этих IP-адресов, или IP-адреса из заголовков **x и** **MS-Forwarded-Client-IP** были заблокированы AD FS.
 
-## <a name="adding-banned-ips"></a>Добавление заблокированных IP-адресов
-Чтобы добавить глобальный список заблокированных IP-адресов, используйте ниже командлет Powershell:
+## <a name="adding-banned-ips"></a>Добавление запрещенных IP-адресов
+Чтобы добавить запрещенные IP-адреса в глобальный список, используйте следующий командлет PowerShell:
 
 ``` powershell
 PS C:\ >Set-AdfsProperties -AddBannedIps "1.2.3.4", "::3", "1.2.3.4/16"
 ```
 
-Допустимые форматы
+Разрешенные форматы
 
 1.  IPv4
 2.  IPv6
-3.  Формат CIDR с IPv4- или версии 6
+3.  Формат CIDR с IPv4 или V6
 
-Ограничено 300 записей для заблокированных IP-адресов. Формат CIDR или диапазон можно использовать для запрета большой блок операций с одной записи.
+Существует ограничение в 300 записей для запрещенных IP-адресов. Можно использовать CIDR или формат диапазона для запрета большого блока записей с одной записью.
 
-## <a name="removing-banned-ips"></a>Удаление заблокированных IP-адресов
-Чтобы удалить запрещенных IP-адресов из глобального списка, используйте ниже командлет Powershell:
+## <a name="removing-banned-ips"></a>Удаление запрещенных IP-адресов
+Чтобы удалить запрещенные IP-адреса из глобального списка, используйте следующий командлет PowerShell:
 
 ``` powershell
 PS C:\ >Set-AdfsProperties -RemoveBannedIps "1.2.3.4"
 ```
 
-#### <a name="read-banned-ips"></a>Чтение заблокированных IP-адресов
-Чтобы считать текущий набор запрещенных IP-адресов, используйте ниже командлет Powershell:
+#### <a name="read-banned-ips"></a>Чтение запрещенных IP-адресов
+Чтобы прочитать текущий набор запрещенных IP-адресов, используйте следующий командлет PowerShell:
 
 ``` powershell
 PS C:\ >Get-AdfsProperties 
@@ -58,7 +58,7 @@ BannedIpList                   : {1.2.3.4, ::3,1.2.3.4/16}
 
 
 ## <a name="additional-references"></a>Дополнительная справка  
-[Рекомендации по обеспечению безопасности служб федерации Active Directory](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
+[Рекомендации по обеспечению безопасности службы федерации Active Directory (AD FS)](../../ad-fs/deployment/best-practices-securing-ad-fs.md)
 
 [Set-AdfsProperties](https://technet.microsoft.com/itpro/powershell/windows/adfs/set-adfsproperties)
 

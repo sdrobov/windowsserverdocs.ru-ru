@@ -1,9 +1,9 @@
 ---
 title: Справочник по командам BGP для Windows PowerShell
-description: Можно использовать в этом разделе как ссылка, при написании сценариев Windows PowerShell в Windows Server 2016, чтобы добавить, настроить и удалить возможности BGP из маршрутизаторов шлюза удаленного доступа и удаленного доступа к локальной сети (LAN).
+description: Этот раздел можно использовать в качестве справочной документации при написании сценариев Windows PowerShell в Windows Server 2016 для добавления, настройки и удаления возможностей BGP из шлюза RAS и маршрутизаторов локальной сети удаленного доступа (LAN).
 manager: brianlic
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-ras
@@ -12,58 +12,58 @@ ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ef1dc1c8193a2f923f8154164e6b59fe54202527
-ms.sourcegitcommit: afb0602767de64a76aaf9ce6a60d2f0e78efb78b
+ms.openlocfilehash: 2da5bc3008b9b686ddb2bce460ced39f98183f28
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67283651"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71394619"
 ---
 # <a name="bgp-windows-powershell-command-reference"></a>Справочник по командам BGP для Windows PowerShell
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Можно использовать в этом разделе как ссылка, при написании сценариев Windows PowerShell для добавления, настройки и удалить возможности BGP из маршрутизаторов шлюза удаленного доступа и удаленного доступа к локальной сети (LAN).  
+Этот раздел можно использовать в качестве справочной документации при написании сценариев Windows PowerShell для добавления, настройки и удаления возможностей BGP из шлюза RAS и маршрутизаторов локальной сети удаленного доступа (LAN).  
   
-Эти команды BGP входят в набор для Windows Server 2016 команд Windows PowerShell удаленного доступа. Этот раздел поможет вам быстро найти команды BGP, которые вы хотите использовать в скриптах.  
+Эти команды BGP входят в набор команд Windows PowerShell для удаленного доступа для Windows Server 2016. Этот раздел поможет быстро находить команды BGP, которые нужно использовать в скриптах.  
   
-Дополнительные сведения о всех команд удаленного доступа, см. в разделе [командлеты удаленного доступа](https://technet.microsoft.com/library/hh918399.aspx).  
+Дополнительные сведения обо всех командах удаленного доступа см. в разделе [Командлеты удаленного доступа](https://technet.microsoft.com/library/hh918399.aspx).  
   
 ## <a name="bgp-command-reference"></a>Справочник по командам BGP  
-В следующих разделах имя команды, назначение и синтаксис для каждой команды BGP, а также ссылку на команду в ссылке удаленного доступа, который содержит более подробные сведения о каждой из них.  
+В следующих разделах приводятся имя команды, назначение и синтаксис для каждой команды BGP, а также ссылка на команду в справочнике по удаленному доступу, в которой содержатся более подробные сведения о каждой команде.  
   
-Этот справочник содержит следующие разделы.  
+Эта ссылка содержит следующие разделы.  
   
--   [Добавление команд](#bkmk_add)  
+-   [Добавить команды](#bkmk_add)  
   
 -   [Очистить команды](#bkmk_clear)  
   
--   [Отключение и Включение команды](#bkmk_disable)  
+-   [Отключение и включение команд](#bkmk_disable)  
   
--   [Получить команды](#bkmk_get)  
+-   [Получение команд](#bkmk_get)  
   
 -   [Команды установки](#bkmk_install)  
   
 -   [Удалить команды](#bkmk_remove)  
   
--   [Набор команд](#bkmk_set)  
+-   [Команды Set](#bkmk_set)  
   
--   [Start и Stop команды](#bkmk_start)  
+-   [Команды запуска и завершения](#bkmk_start)  
   
 -   [Команды удаления](#bkmk_uninstall)  
   
-### <a name="bkmk_add"></a>Добавление команд  
-Ниже приведены команды Добавить BGP.  
+### <a name="bkmk_add"></a>Добавить команды  
+Ниже приведены команды BGP Add.  
   
-[Добавить BgpCustomRoute](https://technet.microsoft.com/library/dn262684.aspx)  
+[Add-Бгпкустомрауте](https://technet.microsoft.com/library/dn262684.aspx)  
   
-Добавляет настраиваемые маршруты в таблицу маршрутизации BGP.  
+Добавляет пользовательские маршруты в таблицу маршрутизации BGP.  
   
 ```  
 Add-BgpCustomRoute [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-Interface <String[]> ] [-Network <String[]> ] [-PassThru] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Добавление указано](https://technet.microsoft.com/library/dn262687.aspx)  
+[Add-BgpPeer](https://technet.microsoft.com/library/dn262687.aspx)  
   
 Добавляет новый узел BGP.  
   
@@ -71,15 +71,15 @@ Add-BgpCustomRoute [-CimSession <CimSession[]> ] [-InformationAction <System.Man
 Add-BgpPeer [-Name] <String> -LocalIPAddress <IPAddress> -PeerASN <UInt32> -PeerIPAddress <IPAddress> [-CimSession <CimSession[]> ] [-HoldTimeSec <UInt16> ] [-IdleHoldTimeSec <UInt16> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-LocalASN <UInt32> ] [-MaxAllowedPrefix <UInt32> ] [-OperationMode <OperationMode> {Mixed | Server} ] [-PassThru] [-PeeringMode <PeeringMode> {Automatic | Manual} ] [-RouteReflectorClient <Boolean> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Weight <UInt16> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Добавить BgpRouteAggregate](https://technet.microsoft.com/library/mt463113.aspx)  
+[Add-Бгпраутеаггрегате](https://technet.microsoft.com/library/mt463113.aspx)  
   
-Добавляет новый маршрут агрегатные для определенных маршрутов BGP.  
+Добавляет новый статистический маршрут для конкретных маршрутов BGP.  
   
 ```  
 Add-BgpRouteAggregate -Prefix <String> [-AttributePolicy <String[]> ] [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-PassThru] [-PreserveASPath <PreserveASPath> ] [-RoutingDomain <String> ] [-SummaryOnly <SummaryOnly> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Добавить BgpRouter](https://technet.microsoft.com/library/dn262665.aspx)  
+[Add-Бгпраутер](https://technet.microsoft.com/library/dn262665.aspx)  
   
 Добавляет маршрутизатор BGP для указанного идентификатора клиента.  
   
@@ -87,64 +87,64 @@ Add-BgpRouteAggregate -Prefix <String> [-AttributePolicy <String[]> ] [-CimSessi
 Add-BgpRouter -BgpIdentifier <IPAddress> -LocalASN <UInt32> [-CimSession <CimSession[]> ] [-ClientToClientReflection <ClientToClientReflection> ] [-ClusterId <UInt32> ] [-CompareMEDAcrossASN <Boolean> ] [-DefaultGatewayRouting <Boolean> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-IPv6Routing <IPv6RoutingState> {Disabled | Enabled} ] [-LocalIPv6Address <IPAddress> ] [-PassThru] [-RouteReflector <RouteReflector> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-TransitRouting <TransitRouting> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Добавить BgpRoutingPolicy](https://technet.microsoft.com/library/dn262662.aspx)  
+[Add-Бгпраутингполици](https://technet.microsoft.com/library/dn262662.aspx)  
   
-Добавляет политику маршрутизации BGP в хранилище политики.  
+Добавляет политику маршрутизации BGP в хранилище политик.  
   
 ```  
 Add-BgpRoutingPolicy [-Name] <String> [-PolicyType] <PolicyType> {Deny | Allow | ModifyAttribute} [-AddCommunity <String[]> ] [-CimSession <CimSession[]> ] [-ClearMED] [-Force] [-IgnorePrefix <String[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-MatchASNRange <UInt32[]> ] [-MatchCommunity <String[]> ] [-MatchNextHop <IPAddress[]> ] [-MatchPrefix <String[]> ] [-NewLocalPref <UInt32]> ] [-NewMED <UInt32]> ] [-NewNextHop <IPAddress> ] [-PassThru] [-RemoveAllCommunities] [-RemoveCommunity <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Добавить BgpRoutingPolicyForPeer](https://technet.microsoft.com/library/dn262680.aspx)  
+[Add-Бгпраутингполицифорпир](https://technet.microsoft.com/library/dn262680.aspx)  
   
-Добавление политики маршрутизации BGP узлов BGP.  
+Добавляет политики маршрутизации BGP к одноранговым узлам BGP.  
   
 ```  
 Add-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
 ### <a name="bkmk_clear"></a>Очистить команды  
-Ниже приведены команды, снимите флажок для BGP  
+Ниже приведены команды Clear для BGP.  
   
-[Clear-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463114.aspx)  
+[Clear-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463114.aspx)  
   
-Очищает flap маршрута, гашение сведения для указанного набора маршруты BGP.  
+Очищает сведения о ослаблении колыханий маршрута для указанного набора маршрутов BGP.  
   
 ```  
 Clear-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Prefix <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_disable"></a>Отключение и Включение команды  
-Ниже приведены команды отключения и включения для BGP  
+### <a name="bkmk_disable"></a>Отключение и включение команд  
+Ниже приведены команды Disable и Enable для BGP.  
   
-[Disable-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463100.aspx)  
+[Disable-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463100.aspx)  
   
-Отключает маршрут гашение для хлопания маршруты BGP.  
+Отключает ослабление маршрута для маршрутов BGP неустойчивый.  
   
 ```  
 Disable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Enable-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463102.aspx)  
+[Enable-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463102.aspx)  
   
-Маршрут включает гашение для хлопания маршруты BGP.  
+Включает ослабление маршрута для маршрутов BGP неустойчивый.  
   
 ```  
 Enable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-PassThru] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_get"></a>Получить команды  
+### <a name="bkmk_get"></a>Получение команд  
 Ниже приведены команды Get для BGP.  
   
-[Get-BgpCustomRoute](https://technet.microsoft.com/library/dn262664.aspx)  
+[Get-Бгпкустомрауте](https://technet.microsoft.com/library/dn262664.aspx)  
   
-Возвращает сведения о пользовательских маршрутов от маршрутизатора BGP.  
+Получает настраиваемые сведения о маршруте от маршрутизатора BGP.  
   
 ```  
 Get-BgpCustomRoute [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get указано](https://technet.microsoft.com/library/dn262659.aspx)  
+[Get-BgpPeer](https://technet.microsoft.com/library/dn262659.aspx)  
   
 Возвращает сведения о конфигурации для узлов BGP.  
   
@@ -152,39 +152,39 @@ Get-BgpCustomRoute [-CimSession <CimSession[]> ] [-InformationAction <System.Man
 Get-BgpPeer [[-Name] <String[]> ] [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpRouteAggregate](https://technet.microsoft.com/library/mt463103.aspx)  
+[Get-Бгпраутеаггрегате](https://technet.microsoft.com/library/mt463103.aspx)  
   
-Получает все агрегированные маршруты BGP, настроенную администратором.  
+Возвращает все сводные маршруты BGP, настроенные администратором.  
   
 ```  
 Get-BgpRouteAggregate [-CimSession <CimSession[]> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Prefix <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463108.aspx)  
+[Get-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463108.aspx)  
   
-Возвращает конфигурацию отбрасывания обработчика маршрутов BGP.  
+Извлекает конфигурацию подсистемы ослабления маршрута BGP.  
   
 ```  
 Get-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpRouteInformation](https://technet.microsoft.com/library/dn262667.aspx)  
+[Get-Бгпраутеинформатион](https://technet.microsoft.com/library/dn262667.aspx)  
   
-Извлекает сведения о маршруте BGP для префиксов сети один или несколько из таблицы маршрутизации BGP.  
+Получает сведения о маршруте BGP для одного или нескольких префиксов сети из таблицы маршрутизации BGP.  
   
 ```  
 Get-BgpRouteInformation [-CimSession <CimSession[]> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Network <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Type <RouteType> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpRouter](https://technet.microsoft.com/library/dn262660.aspx)  
+[Get-Бгпраутер](https://technet.microsoft.com/library/dn262660.aspx)  
   
-Возвращает сведения о конфигурации для маршрутизаторов BGP.  
+Возвращает сведения о конфигурации маршрутизаторов BGP.  
   
 ```  
 Get-BgpRouter [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String[]> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpRoutingPolicy](https://technet.microsoft.com/library/dn262672.aspx)  
+[Get-Бгпраутингполици](https://technet.microsoft.com/library/dn262672.aspx)  
   
 Возвращает сведения о конфигурации политик маршрутизации BGP.  
   
@@ -192,9 +192,9 @@ Get-BgpRouter [-CimSession <CimSession[]> ] [-InformationAction <System.Manageme
 Get-BgpRoutingPolicy [[-Name] <String[]> ] [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PolicyType <PolicyType> {Deny | Allow | ModifyAttribute} ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Get-BgpStatistics](https://technet.microsoft.com/library/dn262685.aspx)  
+[Get-Бгпстатистикс](https://technet.microsoft.com/library/dn262685.aspx)  
   
-Извлекает BGP пиринг сообщениями и маршрутам объявления статистику.  
+Извлекает связанное с пирингом BGP сообщение и статистику объявлений маршрутов.  
   
 ```  
 Get-BgpStatistics [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
@@ -205,7 +205,7 @@ Get-BgpStatistics [-CimSession <CimSession[]> ] [-InformationAction <System.Mana
   
 [Install-RemoteAccess](https://technet.microsoft.com/library/hh918408.aspx)  
   
-Выполняет проверки предварительных требований для DirectAccess (DA) и убедитесь, что это может быть установлено, устанавливает DA для удаленного доступа (RA) (включает управление удаленным клиентам), или для управления только для удаленных клиентов, устанавливает VPN (удаленного доступа VPN и VPN сеть), и устанавливает маршрутизации BGP.  
+Выполняет проверки готовности для DirectAccess (DA), чтобы убедиться, что она может быть установлена, устанавливает DA для удаленного доступа (RA) (включая управление удаленными клиентами) или только для управления удаленными клиентами, устанавливает VPN (VPN удаленного доступа и VPN типа "сеть-сеть"). и устанавливает маршрутизацию BGP.  
   
 ```  
 Parameter Set: MultiTenant  
@@ -216,7 +216,7 @@ Install-RemoteAccess [-VpnType] <String> {Vpn | VpnS2S | SstpProxy | RoutingOnly
 ```  
   
 > [!IMPORTANT]  
-> При установке шлюза удаленного доступа в мультитенантном режиме, необходимо указать, включен ли протокол BGP для каждого клиента с помощью **Enable-RemoteAccessRoutingDomain** команду Windows PowerShell с **-тип** значение параметра **все**. В следующем примере кода показано, как для установки удаленного доступа в мультитенантном режиме со всеми функциями удаленного доступа (типа "точка сеть" сеть сеть VPN и BGP маршрутизации) включена для двух клиентов: Contoso и Fabrikam.  
+> При установке шлюза RAS в многоклиентский режим необходимо указать, включен ли протокол BGP для каждого клиента с помощью команды Windows PowerShell **Enable-ремотеакцессраутингдомаин** с параметром **-Type** со значением **ALL**. В следующем примере кода показано, как установить RAS в режиме многоадресной рассылки со всеми компонентами удаленного доступа (VPN-подключение типа "точка — сеть", VPN-подключением типа "сеть — сеть" и маршрутизацией BGP) для двух клиентов, Contoso и Fabrikam.  
   
 ```  
 $Contoso_RoutingDomain = "ContosoTenant"  
@@ -228,40 +228,40 @@ Enable-RemoteAccessRoutingDomain -Name $Contoso_RoutingDomain -Type All -PassThr
 Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassThru  
 ```  
   
-При использовании удаленного доступа в качестве маршрутизатора локальной сети, а не как шлюз, можно по-прежнему использовать BGP, которая предоставляет преимущество с динамической маршрутизацией в интрасети. Для установки удаленного доступа в качестве маршрутизатора BGP локальной сети, введите следующую команду в командной строке Windows PowerShell и нажмите клавишу ВВОД.  
+Если вы используете удаленный доступ в качестве маршрутизатора локальной сети, а не шлюза, вы по-прежнему можете использовать BGP, который предоставляет преимущества динамической маршрутизации в интрасети. Чтобы установить удаленный доступ в качестве маршрутизатора локальной сети BGP, введите следующую команду в командной строке Windows PowerShell и нажмите клавишу ВВОД.  
   
 ```  
 Install-RemoteAccess -VpnType RoutingOnly  
 ```  
   
 ### <a name="bkmk_remove"></a>Удалить команды  
-Ниже приведены команды удаления для BGP.  
+Ниже приведены команды Remove для BGP.  
   
-[Remove-BgpCustomRoute](https://technet.microsoft.com/library/dn262669.aspx)  
+[Remove-Бгпкустомрауте](https://technet.microsoft.com/library/dn262669.aspx)  
   
-Удаление настраиваемых маршрутов от маршрутизатора BGP.  
+Удаляет настраиваемые маршруты из маршрутизатора BGP.  
   
 ```  
 Remove-BgpCustomRoute [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-Interface <String[]> ] [-Network <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Remove указано](https://technet.microsoft.com/library/dn262675.aspx)  
+[Remove-BgpPeer](https://technet.microsoft.com/library/dn262675.aspx)  
   
-Удаляет узлы BGP из маршрутизатора.  
+Удаляет узлы BGP с маршрутизатора.  
   
 ```  
 Remove-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Remove-BgpRouteAggregate](https://technet.microsoft.com/library/mt463110.aspx)  
+[Remove-Бгпраутеаггрегате](https://technet.microsoft.com/library/mt463110.aspx)  
   
-Удаляет набор указанный агрегированные маршруты BGP.  
+Удаляет набор указанных статистических маршрутов BGP.  
   
 ```  
 Remove-BgpRouteAggregate [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Prefix <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Remove-BgpRouter](https://technet.microsoft.com/library/dn262678.aspx)  
+[Remove-Бгпраутер](https://technet.microsoft.com/library/dn262678.aspx)  
   
 Удаляет маршрутизатор BGP.  
   
@@ -269,27 +269,27 @@ Remove-BgpRouteAggregate [-CimSession <CimSession[]> ] [-Force] [-InformationAct
 Remove-BgpRouter [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String[]> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Remove-BgpRoutingPolicy](https://technet.microsoft.com/library/dn262656.aspx)  
+[Remove-Бгпраутингполици](https://technet.microsoft.com/library/dn262656.aspx)  
   
-Удаляет маршрут политик из хранилища политик.  
+Удаляет политики маршрутизации из хранилища политик.  
   
 ```  
 Remove-BgpRoutingPolicy [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[Remove-BgpRoutingPolicyForPeer](https://technet.microsoft.com/library/dn262681.aspx)  
+[Remove-Бгпраутингполицифорпир](https://technet.microsoft.com/library/dn262681.aspx)  
   
-Удаляет маршрут политики из узлов BGP.  
+Удаляет политики маршрутизации с узлов BGP.  
   
 ```  
 Parameter Set: Remove1  
 Remove-BgpRoutingPolicyForPeer [-CimSession <CimSession[]> ] [-Direction <PolicyDirection> {Ingress | Egress} ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-PolicyName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_set"></a>Набор команд  
+### <a name="bkmk_set"></a>Команды Set  
 Ниже приведены команды Set для BGP.  
   
-[SET указано](https://technet.microsoft.com/library/dn262673.aspx)  
+[Set-BgpPeer](https://technet.microsoft.com/library/dn262673.aspx)  
   
 Обновляет конфигурацию указанного узла BGP.  
   
@@ -297,60 +297,60 @@ Remove-BgpRoutingPolicyForPeer [-CimSession <CimSession[]> ] [-Direction <Policy
 Set-BgpPeer [-Name] <String> [-CimSession <CimSession[]> ] [-ClearPrefixLimit] [-Force] [-HoldTimeSec <UInt16> ] [-IdleHoldTimeSec <UInt16> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-LocalASN <UInt32> ] [-LocalIPAddress <IPAddress> ] [-MaxAllowedPrefix <UInt32> ] [-OperationMode <OperationMode> {Mixed | Server} ] [-PassThru] [-PeerASN <UInt32> ] [-PeeringMode <PeeringMode> {Automatic | Manual} ] [-PeerIPAddress <IPAddress> ] [-RouteReflectorClient <Boolean> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Weight <UInt16> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[SET-BgpRouteAggregate](https://technet.microsoft.com/library/mt463115.aspx)  
+[Set-Бгпраутеаггрегате](https://technet.microsoft.com/library/mt463115.aspx)  
   
-Обновляет свойства указанной агрегатной маршрут BGP.  
+Обновляет свойства указанного статистического маршрута BGP.  
   
 ```  
 Set-BgpRouteAggregate -Prefix <String> [-AttributePolicy <String[]> ] [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-PassThru] [-PreserveASPath <PreserveASPath> ] [-RoutingDomain <String> ] [-SummaryOnly <SummaryOnly> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[SET-BgpRouteFlapDampening](https://technet.microsoft.com/library/mt463116.aspx)  
+[Set-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463116.aspx)  
   
-Настраивает гашение обработчик маршрута BGP.  
+Настраивает подсистему ослабления маршрута BGP.  
   
 ```  
 Set-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-HalfLife <UInt32> ] [-HalfLifeUnreachable <UInt32> ] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-MaxSuppressTime <UInt32> ] [-PassThru] [-ReuseThreshold <UInt32> ] [-RoutingDomain <String> ] [-SuppressThreshold <UInt32> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[SET-BgpRouter](https://technet.microsoft.com/library/dn262652.aspx)  
+[Set-Бгпраутер](https://technet.microsoft.com/library/dn262652.aspx)  
   
-Обновляет конфигурацию локального маршрутизатора BGP для идентификатор указанного клиента.  
+Обновляет конфигурацию локального маршрутизатора BGP для указанного идентификатора клиента.  
   
 ```  
 Set-BgpRouter [-BgpIdentifier <IPAddress> ] [-CimSession <CimSession[]> ] [-ClientToClientReflection <ClientToClientReflection> ] [-ClusterId <UInt32> ] [-CompareMEDAcrossASN <Boolean> ] [-DefaultGatewayRouting <Boolean> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-IPv6Routing <IPv6RoutingState> {Disabled | Enabled} ] [-LocalASN <UInt32> ] [-LocalIPv6Address <IPAddress> ] [-PassThru] [-RouteReflector <RouteReflector> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-TransitRouting <TransitRouting> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[SET-BgpRoutingPolicy](https://technet.microsoft.com/library/dn262670.aspx)  
+[Set-Бгпраутингполици](https://technet.microsoft.com/library/dn262670.aspx)  
   
-Изменение конфигурации маршрутизации с политики.  
+Изменяет конфигурацию политики маршрутизации.  
   
 ```  
 Set-BgpRoutingPolicy [-Name] <String> [-AddCommunity <String[]> ] [-CimSession <CimSession[]> ] [-ClearMED] [-Force] [-IgnorePrefix <String[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-MatchASNRange <UInt32[]> ] [-MatchCommunity <String[]> ] [-MatchNextHop <IPAddress[]> ] [-MatchPrefix <String[]> ] [-NewLocalPref <UInt32]> ] [-NewMED <UInt32]> ] [-NewNextHop <IPAddress> ] [-PassThru] [-PolicyType <PolicyType> {Deny | Allow | ModifyAttribute} ] [-RemoveAllCommunities] [-RemoveCommunity <String[]> ] [-RemovePolicyClause <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[SET-BgpRoutingPolicyForPeer](https://technet.microsoft.com/library/dn262674.aspx)  
+[Set-Бгпраутингполицифорпир](https://technet.microsoft.com/library/dn262674.aspx)  
   
-Изменение политики маршрутизации BGP для узлов BGP.  
+Изменяет политики маршрутизации BGP для узлов BGP.  
   
 ```  
 Set-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_start"></a>Start и Stop команды  
-Ниже приведены команды Start и Stop для BGP.  
+### <a name="bkmk_start"></a>Команды запуска и завершения  
+Ниже приведены команды запуска и завершения для BGP.  
   
-[Start указано](https://technet.microsoft.com/library/dn262683.aspx)  
+[Start-BgpPeer](https://technet.microsoft.com/library/dn262683.aspx)  
   
-Запускает маршрутизации сеансы для узлов BGP.  
+Запускает маршрутизацию сеансов для узлов BGP.  
   
 ```  
 Start-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-[STOP указано](https://technet.microsoft.com/library/dn262661.aspx)  
+[BgpPeer](https://technet.microsoft.com/library/dn262661.aspx)  
   
-Останавливает маршрутизации сеансы для узлов BGP.  
+Останавливает маршрутизацию сеансов для узлов BGP.  
   
 ```  
 Stop-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
@@ -359,9 +359,9 @@ Stop-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-Informa
 ### <a name="bkmk_uninstall"></a>Команды удаления  
 Ниже приведены команды удаления для шлюза RAS и BGP.  
   
-[Удаление удаленного доступа](https://technet.microsoft.com/library/hh918390.aspx)  
+[Uninstall-RemoteAccess](https://technet.microsoft.com/library/hh918390.aspx)  
   
-Удаляет удаленный доступ с компьютера, включая все функции удаленного доступа и функциональные возможности (шлюз RAS, BGP и т. д).  
+Удаляет удаленный доступ с компьютера, включая все компоненты и функции удаленного доступа (шлюз RAS, BGP и т. д.).  
   
 ```  
 Uninstall-RemoteAccess [-CimSession <CimSession[]> ] [-ComputerName <String> ] [-EntrypointName <String> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-ThrottleLimit <Int32> ] [-VpnType <String> {Vpn | VpnS2S} ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  

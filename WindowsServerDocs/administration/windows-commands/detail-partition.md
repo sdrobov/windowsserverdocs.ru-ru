@@ -1,8 +1,8 @@
 ---
-title: Сведения о секции
-description: 'Раздел Windows команды для ***- '
+title: подробное секционирование
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,14 +13,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3a955303a5f06c64dcdb64de110686be570ef149
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 9ead078217804def619998b1d31e55744f2e1c6b
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59846645"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71378525"
 ---
-# <a name="detail-partition"></a>Сведения о секции
+# <a name="detail-partition"></a>подробное секционирование
 
 
 
@@ -34,16 +34,16 @@ detail partition
 
 ## <a name="remarks"></a>Примечания
 
--   Для успешного выполнения этой операции необходимо выбрать секцию. Используйте **выберите секцию** команду, чтобы выбрать раздел и перетянуть внимание к нему.
+-   Для выполнения этой операции необходимо выбрать секцию. Используйте команду **Выбор секции** , чтобы выбрать секцию и переместить фокус на нее.
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы просмотреть свойства выбранного раздела, введите:
+Чтобы просмотреть свойства выбранной секции, введите:
 ```
 detail partition
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

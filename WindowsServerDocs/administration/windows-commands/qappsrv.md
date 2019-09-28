@@ -1,8 +1,8 @@
 ---
 title: qappsrv
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,26 +13,26 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c104146422abb0ccc69ba9bcbd83393878dde45
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 6968b7a456ceee409993e22a7a101ed2d76a3d6a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59841695"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71371941"
 ---
 # <a name="qappsrv"></a>qappsrv
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображение списка всех серверов узла сеансов удаленных рабочих столов (узел сеансов удаленных рабочих Столов) в сети.
+Отображается список всех серверов узлов сеансов удаленный рабочий стол в сети.
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы найти новые возможности в последней версии, см. в разделе [какие возможности служб удаленных рабочих столов в Windows Server 2012](https://technet.microsoft.com/library/hh831527) в технической библиотеке Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
 ## <a name="remarks"></a>Примечания
-Эта команда совпадает со значением **запроса termserver** команды.
+Эта команда аналогична команде **Query термсервер** .
 
 #### <a name="additional-references"></a>Дополнительные ссылки
-[запрос termserver](query-termserver.md)
-[ключ синтаксиса командной строки](command-line-syntax-key.md)
-[служб удаленных рабочих столов &#40;служб терминалов&#41; Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)
+[запрос термсервер](query-termserver.md)
+[синтаксис командной строки](command-line-syntax-key.md)
+[службы удаленных рабочих столов &#40;Справочник по командам&#41; служб терминалов](remote-desktop-services-terminal-services-command-reference.md)

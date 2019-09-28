@@ -1,17 +1,17 @@
 ---
 title: Репликация DFS. Вопросы и ответы
 ms.date: 06/18/2014
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 5bf85938f242ec29d75b32cdcb8b03c5f34bd1bb
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 12410d619245153f759b54e7a8aff257888f04dc
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871970"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71386070"
 ---
 # <a name="dfs-replication-frequently-asked-questions-faq"></a>Репликация DFS. Вопросы и ответы
 
@@ -666,7 +666,7 @@ RDC используется, когда файл превышает порог�
   - Конфликт может находиться на сервере, отличном от источника конфликта.  
       
 
-## <a name="staging"></a>Промежуточное хранение
+## <a name="staging"></a>Поэтапное создание
 
 ### <a name="does-dfs-replication-continue-staging-files-when-replication-is-disabled-by-a-schedule-or-bandwidth-throttling-quota-or-when-a-connection-is-manually-disabled"></a>Репликация DFS продолжить промежуточное хранение файлов, если репликация отключена по расписанию или квоте регулирования пропускной способности или если подключение отключено вручную?
 

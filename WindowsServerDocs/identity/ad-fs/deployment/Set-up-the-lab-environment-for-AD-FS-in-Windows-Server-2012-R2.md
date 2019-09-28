@@ -7,14 +7,14 @@ ms.author: billmath
 manager: femila
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c1ead3b649b22429afd1090efecab552aef7ebf8
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 52199ab8ca6f82443e78e72c6980746fa561363a
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66442421"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71408301"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2
 
@@ -28,7 +28,7 @@ ms.locfileid: "66442421"
 
 -   [Пошаговое руководство. Управление рисками с использованием условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
 
--   [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для уязвимых приложений](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
+-   [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 
 > [!NOTE]
 > Не рекомендуется устанавливать на одном компьютере и веб-сервер, и сервер федерации.
@@ -37,32 +37,32 @@ ms.locfileid: "66442421"
 
 1.  [Шаг 1. Настройка контроллера домена (DC1)](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_1)
 
-2.  [Шаг 2. Настройка сервера федерации (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
+2.  [Шаг 2. Настройка сервера федерации (ADFS1) с помощью службы регистрации устройств](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)
 
-3.  [Шаг 3. Настройка веб-сервера (WebServ1) и пример приложения на основе утверждений](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
+3.  [Шаг 3. Настройка веб-сервера (WebServ1) и примера приложения на основе утверждений](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_5)
 
-4.  [Шаг 4. Настройка клиентского компьютера (КЛИЕНТ1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
+4.  [Шаг 4. Настройка клиентского компьютера (CLIENT1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
 ## <a name="BKMK_1"></a>Шаг 1. настройка контроллера домена (DC1)
-Для целей данной тестовой среды, можно назвать корневой домен Active Directory **contoso.com** и укажите <strong>pass@word1</strong> как пароль администратора.
+Для целей этой тестовой среды можно вызвать корневой Active Directory домена **contoso.com** и указать <strong>pass@word1</strong> в качестве пароля администратора.
 
--   Установите службу роли AD DS и установить доменные службы Active Directory (AD DS), чтобы сделать компьютер контроллером домена в Windows Server 2012 R2. Это действие обновляет схему AD DS в рамках создания контроллера домена. Дополнительные сведения и пошаговые инструкции см. в разделе[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx).
+-   Установите службу роли AD DS и установите службы домен Active Directory (AD DS), чтобы сделать компьютер контроллером домена в Windows Server 2012 R2. Это действие обновляет схему AD DS в процессе создания контроллера домена. Дополнительные сведения и пошаговые инструкции см. в разделе[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx).
 
-### <a name="BKMK_2"></a>Создание тестовых учетных записей Active Directory
+### <a name="BKMK_2"></a>Создание учетных записей Active Directory тестирования
 После того как контроллер домена станет функциональным, можно создать тестовую группу и тестовые учетные записи пользователей в этом домене и добавить учетную запись пользователя в учетную запись группы. Эти учетные записи используются для выполнения пошаговых инструкций в соответствующих руководствах, которые перечислены ранее в этой статье.
 
 Создайте следующие учетные записи.
 
-- Пользователь: **Robert Hatley** со следующими учетными данными. Имя пользователя: **RobertH** и пароль: <strong>P@ssword</strong>
+- Пользователь: **Robert Hatley** со следующими учетными данными. Имя пользователя: **Роберс** и пароль:<strong>P@ssword</strong>
 
-- Группа: **Процент**
+- Группа: **Финансовой**
 
-Сведения о создании записей пользователей и групп в Active Directory (AD), см. в разделе [ https://technet.microsoft.com/library/cc783323%28v.aspx ](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
+Сведения о создании учетных записей пользователей и групп в Active Directory (AD) см. в [https://technet.microsoft.com/library/cc783323%28v.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx)разделе.
 
-Добавьте учетную запись **Robert Hatley** в группу **Finance** . Сведения о том, как добавить пользователя в группу в Active Directory, см. в разделе [ https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx ](https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx).
+Добавьте учетную запись **Robert Hatley** в группу **Finance** . Сведения о добавлении пользователя в группу в Active Directory см. в разделе [https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx](https://technet.microsoft.com/library/cc737130%28v=ws.10%29.aspx).
 
 ### <a name="create-a-gmsa-account"></a>Создание учетной записи GMSA
-Учетная запись группы управляемых учетной записи службы (GMSA) необходима во время установки служб федерации Active Directory (AD FS) и настройки.
+Учетная запись групповой управляемой учетной записи службы (GMSA) требуется во время установки и настройки службы федерации Active Directory (AD FS) (AD FS).
 
 ##### <a name="to-create-a-gmsa-account"></a>Создание групповой управляемой учетной записи службы
 
@@ -75,9 +75,9 @@ ms.locfileid: "66442421"
     ```
 
 ## <a name="BKMK_4"></a>Шаг 2. настройте сервер федерации (ADFS1), воспользовавшись службой регистрации устройств.
-Для настройки другой виртуальной машины, установите Windows Server 2012 R2 и подключить его к домену **contoso.com**. Укажите компьютер после присоединения его к домену и продолжите для установки и настройки роли AD FS.
+Чтобы настроить другую виртуальную машину, установите Windows Server 2012 R2 и подключите ее к домену **contoso.com**. Настройте компьютер после его присоединения к домену, а затем перейдите к установке и настройке роли AD FS.
 
-Просмотреть видео, см. в разделе [серии Active Directory Federation Services инструкции по видео: Установка фермы серверов AD FS](https://technet.microsoft.com/video/dn469436).
+Видеоматериалы см [. в статье службы федерации Active Directory (AD FS) практические видеоматериалы: Установка фермы](https://technet.microsoft.com/video/dn469436)серверов AD FS.
 
 ### <a name="install-a-server-ssl-certificate"></a>Установка SSL-сертификата сервера
 Необходимо установить SSL-сертификат на сервере ADFS1 в хранилище локального компьютера. Сертификат ДОЛЖЕН иметь следующие атрибуты.
@@ -90,13 +90,13 @@ ms.locfileid: "66442421"
 
 Дополнительные сведения о настройке SSL-сертификатов см. в разделе [Настройка SSL и TLS на веб-сайте в домене с помощью ЦС предприятия](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
 
-[Серии видеороликов с практическими службы федерации Active Directory: Обновление сертификатов](https://technet.microsoft.com/video/adfs-updating-certificates).
+[Службы федерации Active Directory (AD FS) серии видеороликов: Обновление сертификатов](https://technet.microsoft.com/video/adfs-updating-certificates).
 
 ### <a name="install-the-ad-fs-server-role"></a>Установка роли сервера AD FS
 
 ##### <a name="to-install-the-federation-service-role-service"></a>Установка службы роли службы федерации
 
-1. Войдите на сервер с помощью учетной записи администратора домена administrator@contoso.com.
+1. Войдите на сервер, используя учетную запись administrator@contoso.comадминистратора домена.
 
 2. Запустите диспетчер сервера. Для запуска диспетчера серверов щелкните **Диспетчер серверов** на экране **Запуск** в ОС Windows или щелкните **Диспетчер серверов** на панели задач Windows рабочего стола Windows. На вкладке **Быстрый запуск** плитки **приветствия** на странице **Панель мониторинга** щелкните **Добавить роли и компоненты**. Либо выберите пункт **Добавить роли и компоненты** в меню **Управление**.
 
@@ -148,12 +148,12 @@ ms.locfileid: "66442421"
 9. На странице **Результаты** проверьте результаты, убедитесь, что конфигурация успешно завершена, а затем нажмите **Для развертывания службы федерации нужно выполнить следующие действия**.
 
 ### <a name="configure-device-registration-service"></a>Настройка службы регистрации устройств
-Затем необходимо настроить на сервере ADFS1 службу регистрации устройств. Просмотреть видео, см. в разделе [серии Active Directory Federation Services инструкции по видео: Включение службы регистрации устройств](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service).
+Затем необходимо настроить на сервере ADFS1 службу регистрации устройств. Видеоматериалы см [. в статье службы федерации Active Directory (AD FS) практические видеоматериалы: Включение службы](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)регистрации устройств.
 
 ##### <a name="to-configure-device-registration-service-for-windows-server-2012-rtm"></a>Настройка службы регистрации устройств для Windows Server 2012 RTM
 
 1.  > [!IMPORTANT]
-    > **Дальнейший шаг актуален для сборки Windows Server 2012 R2 RTM.**
+    > **Следующий шаг относится к сборке RTM Windows Server 2012 R2.**
 
     Откройте командное окно Windows PowerShell и введите:
 
@@ -163,7 +163,7 @@ ms.locfileid: "66442421"
 
     В ответ на запрос ввода учетной записи службы введите **contoso\fsgmsa$** .
 
-    Теперь выполните командлет Windows PowerShell.
+    Теперь запустите командлет Windows PowerShell.
 
     ```
     Enable-AdfsDeviceRegistration
@@ -174,14 +174,14 @@ ms.locfileid: "66442421"
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>Добавление записей ресурсов узла (А) и псевдонима (CNAME) в DNS
 В DC1 необходимо убедиться, что для службы регистрации устройств созданы следующие записи доменной службы имен (DNS).
 
-|Ввод|Тип|Адрес|
+|Ввод|Type|Адрес|
 |---------|--------|-----------|
 |adfs1|Узел (A)|IP-адрес сервера AD FS|
 |enterpriseregistration|Псевдоним (CNAME)|adfs1.contoso.com|
 
 Можно воспользоваться следующей процедурой для добавления записи ресурса узла (А) на корпоративные серверы DNS-имен для сервера федерации и службы регистрации устройств.
 
-Членство в группе "Администраторы" или эквивалентной ей группе является минимальным требованием для выполнения этой процедуры. Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в ГИПЕРССЫЛКУ "<https://go.microsoft.com/fwlink/?LinkId=83477>" Локальные и доменные группы по умолчанию (<https://go.microsoft.com/fwlink/p/?LinkId=83477>).
+Членство в группе "Администраторы" или эквивалентной ей группе является минимальным требованием для выполнения этой процедуры. Проверьте сведения об использовании соответствующих учетных записей и членства в группах в гиперссылке<https://go.microsoft.com/fwlink/?LinkId=83477>"" локальных и доменных групп<https://go.microsoft.com/fwlink/p/?LinkId=83477>по умолчанию ().
 
 ##### <a name="to-add-a-host-a-and-alias-cname-resource-records-to-dns-for-your-federation-server"></a>Добавление записей ресурсов узла (А) и псевдонима (CNAME) в DNS для сервера федерации
 
@@ -203,31 +203,31 @@ ms.locfileid: "66442421"
     > В реальном развертывании, если у компании несколько суффиксов имени участника-пользователя, необходимо создать несколько записей CNAME, по одной для каждого из этих суффиксов в DNS.
 
 ## <a name="BKMK_5"></a>Шаг 3. настройка веб-сервера (WebServ1) и примера приложения на основе утверждений
-Настройте виртуальную машину (WebServ1), установив операционную систему Windows Server 2012 R2 и подключить его к домену **contoso.com**. После подключения к домену можно продолжить установку и настройку роли веб-сервера.
+Настройте виртуальную машину (WebServ1), установив операционную систему Windows Server 2012 R2 и подключая ее к домену **contoso.com**. После подключения к домену можно продолжить установку и настройку роли веб-сервера.
 
 Для завершения пошаговых руководств, перечисленных ранее в этом разделе, необходимо иметь пример приложения, безопасность которого обеспечивается вашим сервером федерации (ADFS1).
 
-Вы можете скачать Windows Identity Foundation SDK ([https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451), включающий пример приложения на основе утверждений.
+Вы можете скачать пакет SDK для Windows Identity[https://www.microsoft.com/download/details.aspx?id=4451](https://www.microsoft.com/download/details.aspx?id=4451)Foundation (в состав которого входит пример приложения на основе утверждений.
 
 Для настройки веб-сервера с использованием примера приложения на основе утверждений необходимо выполнить следующие действия.
 
 > [!NOTE]
-> Эти шаги протестированы на веб-сервере, операционной системой Windows Server 2012 R2.
+> Эти действия были протестированы на веб-сервере под управлением операционной системы Windows Server 2012 R2.
 
 1.  [Установка роли веб-сервера и Windows Identity Foundation](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_15)
 
-2.  [Установка Windows Identity Foundation SDK](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
+2.  [Установка пакета SDK для Windows Identity Foundation](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_13)
 
-3.  [Настройка приложения на базе утверждений в IIS](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
+3.  [Настройка простого приложения утверждений в службах IIS](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_9)
 
-4.  [Создать отношение доверия с проверяющей стороной на сервере федерации](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
+4.  [Создание отношения доверия с проверяющей стороной на сервере федерации](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
 
 ### <a name="BKMK_15"></a>Установка роли веб-сервера и Windows Identity Foundation
 
 1. > [!NOTE]
    > Необходимо иметь доступ к установочному носителю Windows Server 2012 R2.
 
-   Вход на WebServ1, используя <strong>administrator@contoso.com</strong> и пароль <strong>pass@word1</strong>.
+   Войдите в WebServ1 с помощью <strong>administrator@contoso.com</strong> и пароля. <strong>pass@word1</strong>
 
 2. В диспетчере серверов на вкладке **Быстрый запуск** плитки **Приветствие** на странице **Панель мониторинга** щелкните **Добавить роли и компоненты**. Либо выберите пункт **Добавить роли и компоненты** в меню **Управление**.
 
@@ -245,13 +245,13 @@ ms.locfileid: "66442421"
 
 9. На странице **Выбор служб ролей** выберите и разверните узел **Разработка приложений**. Выберите **ASP.NET 3.5**, щелкните **Добавление компонентов**и нажмите кнопку **Далее**.
 
-10. На странице **Подтверждение выбранных элементов для установки** щелкните **Указать альтернативный исходный путь**. Введите путь к каталогу Sxs, расположенный на установочном носителе Windows Server 2012 R2. Например, D:\Sources\Sxs. Нажмите кнопку **ОК**, а затем кнопку **Установить**.
+10. На странице **Подтверждение выбранных элементов для установки** щелкните **Указать альтернативный исходный путь**. Введите путь к каталогу SxS, который находится на установочном носителе Windows Server 2012 R2. Например, D:\Sources\Sxs. Нажмите кнопку **ОК**, а затем кнопку **Установить**.
 
-### <a name="BKMK_13"></a>Установка Windows Identity Foundation SDK
+### <a name="BKMK_13"></a>Установка пакета SDK для Windows Identity Foundation
 
-1.  Запустите файл WindowsIdentityFoundation-SDK-3.5.msi, чтобы установить Windows Identity Foundation SDK 3.5 (https://www.microsoft.com/download/details.aspx?id=4451). Выберите все параметры по умолчанию.
+1.  Запустите Виндовсидентитифаундатион-СДК-3.5. msi, чтобы установить пакет SDK для Windows Identity https://www.microsoft.com/download/details.aspx?id=4451) Foundation 3,5 (. Выберите все параметры по умолчанию.
 
-### <a name="BKMK_9"></a>Настройка приложения на базе утверждений в IIS
+### <a name="BKMK_9"></a>Настройка простого приложения утверждений в службах IIS
 
 1.  Установите действующий SSL-сертификат из хранилища сертификатов компьютера. Сертификат должен содержать имя веб-сервера, **webserv1.contoso.com**.
 
@@ -263,7 +263,7 @@ ms.locfileid: "66442421"
 
     2.  Найдите файл для второго экземпляра `ExpectedClaims`.
 
-    3.  Закомментируйте утверждение `IF` целиком, включая круглые скобки. Обозначьте комментарии знаком «/ /» (без кавычек) в начале строки.
+    3.  Закомментируйте утверждение `IF` целиком, включая круглые скобки. Укажите комментарии, вводя символы "//" (без кавычек) в начале строки.
 
     4.  Оператор `FOREACH` теперь должен выглядеть так же, как в примере кода.
 
@@ -308,9 +308,9 @@ ms.locfileid: "66442421"
 
     1.  Запустите FedUtil.exe, расположенный в **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**.
 
-    2.  Значение расположения конфигурации приложений **C:\inetput\claimapp\web.config** и задайте URI приложения на URL-адрес для сайта,  **https://webserv1.contoso.com /claimapp/** . Нажмите кнопку **Далее**.
+    2.  Задайте для расположения конфигурации приложения значение **к:\инетпут\клаимапп\веб.конфиг** и задайте для URI приложения URL-адрес сайта **https://webserv1.contoso.com /клаимапп/** . Нажмите кнопку **Далее**.
 
-    3.  Выберите **Use an existing STS** и перейдите по URL-АДРЕСУ метаданных сервера AD FS **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Нажмите кнопку **Далее**.
+    3.  Выберите **использовать СУЩЕСТВУЮЩУЮ STS** и перейдите к URL-адресу метаданных сервера AD FS **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Нажмите кнопку **Далее**.
 
     4.  Выберите **Отключить проверку цепочки сертификатов**, а затем нажмите кнопку **Далее**.
 
@@ -318,15 +318,15 @@ ms.locfileid: "66442421"
 
     6.  Установите флажок, чтобы **Запланировать задание для выполнения ежедневных обновлений метаданных WS-Federation**. Нажмите кнопку **Готово**.
 
-    7.  Пример приложения настроен. Если вы проверяете URL-адреса приложения **https://webserv1.contoso.com/claimapp** , он должен перенаправить вас на сервер федерации. На сервере федерации должна отображаться страница ошибки, потому что отношения доверия с проверяющей стороной еще не настроены. Другими словами не обеспечена этого тестового приложения AD FS.
+    7.  Пример приложения настроен. Если вы проверите URL **https://webserv1.contoso.com/claimapp** -адрес приложения, он должен перенаправить вас на сервер федерации. На сервере федерации должна отображаться страница ошибки, потому что отношения доверия с проверяющей стороной еще не настроены. Иными словами, вы не защищаете это тестовое приложение с AD FS.
 
-Теперь необходимо обеспечить безопасность примера приложения, выполняется на веб-сервер AD FS. Для этого достаточно добавить отношения доверия с проверяющей стороной на сервер федерации (ADFS1). Просмотреть видео, см. в разделе [серии Active Directory Federation Services инструкции по видео: Добавление Relying Party Trust](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust).
+Теперь вы должны защитить пример приложения, которое выполняется на веб-сервере, с AD FS. Для этого достаточно добавить отношения доверия с проверяющей стороной на сервер федерации (ADFS1). Видеоматериалы см [. в статье службы федерации Active Directory (AD FS) практические видеоматериалы: Добавьте отношение доверия](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)с проверяющей стороной.
 
-### <a name="BKMK_11"></a>Создать отношение доверия с проверяющей стороной на сервере федерации
+### <a name="BKMK_11"></a>Создание отношения доверия с проверяющей стороной на сервере федерации
 
 1.  На сервере федерации (ADFS1) в разделе **Консоль управления AD FS** перейдите в область **Отношения доверия с проверяющей стороной**, а затем щелкните **Добавить отношения доверия с проверяющей стороной**.
 
-2.  На странице **Выбор источника данных** выберите **Импортировать данные о проверяющей стороне, опубликованные в Интернете или локальной сети**, введите URL-адрес метаданных для **claimapp**, а затем нажмите кнопку **Далее**. Запустите созданный инструментом FedUtil.exe XML-файл метаданных. Он находится по адресу **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml** .
+2.  На странице **Выбор источника данных** выберите **Импортировать данные о проверяющей стороне, опубликованные в Интернете или локальной сети**, введите URL-адрес метаданных для **claimapp**, а затем нажмите кнопку **Далее**. Запустите созданный инструментом FedUtil.exe XML-файл метаданных. Он находится в **https://webserv1.contoso.com/claimapp/federationmetadata/2007-06/federationmetadata.xml** .
 
 3.  На странице **Указание отображаемого имени** укажите **отображаемое имя** отношений доверия с проверяющей стороной, **claimapp**, а затем нажмите кнопку **Далее**.
 
@@ -353,18 +353,18 @@ ms.locfileid: "66442421"
 ## <a name="BKMK_10"></a>Шаг 4. настройка клиентского компьютера (Клиент1)
 Настройте другую виртуальную машину и установите Windows 8.1. Эта виртуальная машина должна быть в той же виртуальной сети, что и другие машины. Эта машина НЕ должна быть объединена в домен Contoso.
 
-Клиент должен доверять SSL-сертификат, который используется для сервера федерации (ADFS1), которая настраивается в [шаг 2: Настройка сервера федерации (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). Система также должна быть в состоянии проверить информацию об отзыве сертификата.
+Клиент должен доверять SSL-сертификату, который используется для сервера федерации (ADFS1), настроенного на [шаге 2. Настройте сервер федерации (ADFS1) со службой](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4)регистрации устройств. Система также должна быть в состоянии проверить информацию об отзыве сертификата.
 
 Необходимо также настроить и использовать учетную запись Microsoft для входа на Клиент1.
 
 ## <a name="see-also"></a>См. также
 
 
-- [Серии видеороликов с практическими службы федерации Active Directory: Установка фермы серверов AD FS](https://technet.microsoft.com/video/dn469436)
-- [Серии видеороликов с практическими службы федерации Active Directory: Обновление сертификатов](https://technet.microsoft.com/video/adfs-updating-certificates)
-- [Серии видеороликов с практическими службы федерации Active Directory: Добавление доверия проверяющей стороны](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
-- [Серии видеороликов с практическими службы федерации Active Directory: Включение службы регистрации устройств](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
-- [Серии видеороликов с практическими службы федерации Active Directory: Установка прокси веб-приложения](https://technet.microsoft.com/video/dn469438)
+- [Службы федерации Active Directory (AD FS) серии видеороликов: Установка фермы серверов AD FS](https://technet.microsoft.com/video/dn469436)
+- [Службы федерации Active Directory (AD FS) серии видеороликов: Обновление сертификатов](https://technet.microsoft.com/video/adfs-updating-certificates)
+- [Службы федерации Active Directory (AD FS) серии видеороликов: Добавление отношения доверия с проверяющей стороной](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust)
+- [Службы федерации Active Directory (AD FS) серии видеороликов: Включение службы регистрации устройств](https://technet.microsoft.com/video/adfs-how-to-enabling-the-device-registration-service)
+- [Службы федерации Active Directory (AD FS) серии видеороликов: Установка прокси веб-приложения](https://technet.microsoft.com/video/dn469438)
 
 
 

@@ -1,8 +1,8 @@
 ---
 title: netsh
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,19 +13,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 30040f5d22711e3913e25bbf03407df07ab06b8d
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5b3cc1f1145b9c96d2444953c956ac70f7fa856d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59859505"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71373267"
 ---
 # <a name="netsh"></a>netsh
 
 
 
-**Netsh** — программа командной строки сценариев, которая позволяет локально или удаленно, отображать или изменять параметры сети текущего компьютера.
+**Netsh** — это служебная программа для работы со сценариями командной строки, которая позволяет локально или удаленно отображать или изменять конфигурацию сети текущего компьютера.
 
-Существуют функциональные различия между **netsh** команд в Windows Server® 2003, Windows Server® 2008 и Windows Server® 2008 R2:
--   Дополнительные сведения о **netsh** команд в Windows Server 2003, см. в разделе [Netsh](https://technet.microsoft.com/library/cc779693(v=ws.10).aspx).
--   Дополнительные сведения о **netsh** команды для Windows Server 2008 и Windows Server 2008 R2, см. в разделе [Технический справочник по Netsh](https://technet.microsoft.com/library/cc754753(v=ws.10).aspx).
+Существуют функциональные различия между командами **netsh** в windows server® 2003, windows server® 2008 и windows server® 2008 R2:
+-   Дополнительные сведения о командах **netsh** в Windows Server 2003 см. в разделе [netsh](https://technet.microsoft.com/library/cc779693(v=ws.10).aspx).
+-   Дополнительные сведения о командах **netsh** для windows Server 2008 и windows Server 2008 R2 см. в разделе [netsh Technical Reference](https://technet.microsoft.com/library/cc754753(v=ws.10).aspx).

@@ -1,8 +1,8 @@
 ---
 title: nslookup set srchlist
-description: 'Раздел Windows команды для ***- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 39b28e7d43df2427caae46d323cd30f03b6b484c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: fb93a9f7cf969161536e88bec929b7e6ba0f0e5d
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436572"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71372768"
 ---
 # <a name="nslookup-set-srchlist"></a>nslookup set srchlist
 
->Область применения. Windows Server (полугодовой канал), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-изменяет значение по умолчанию доменных имен (DNS) и имя списке доменов.
+изменяет доменное имя службы доменных имен (DNS) по умолчанию и список поиска.
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -34,17 +34,17 @@ Set srchlist=<DomainName>[/...]
 
 |    Параметр    |                                                                                        Описание                                                                                        |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  <DomainName>   | Указывает новые имена для списка домена и поиск DNS по умолчанию. Имя домена по умолчанию основан на имени узла. Можно указать до шести имен, разделенных косой чертой (/). |
-| {help &#124; ?} |                                                                   Отображает краткое описание **nslookup** подкоманды.                                                                   |
+|  <DomainName>   | Указывает новые имена для домена DNS по умолчанию и списка поиска. Значение доменного имени по умолчанию основано на имени узла. Можно указать не более шести имен, разделенных косыми чертами (/). |
+| {Help &#124; ?} |                                                                   Отображает краткую сводку подкоманд **nslookup** .                                                                   |
 
 ## <a name="remarks"></a>Примечания
-- **Set srchlist используется**переопределяет значение по умолчанию список DNS-домен и имя **домена набора** команды. Используйте **установить все** команду, чтобы отобразить в списке.
-  ## <a name="BKMK_examples"></a>Примеры
-  В следующем примере задается DNS-домена mfg.widgets.com и список поиска из трех имен:
+- Команда **Set срчлист**переопределяет доменное имя DNS по умолчанию и список поиска для команды **set domain** . Чтобы отобразить список, используйте команду **Set All** .
+  ## <a name="BKMK_examples"></a>Примеров
+  В следующем примере для домена DNS задается имя mfg.widgets.com, а в списке поиска — три.
   ```
   set srchlist=mfg.widgets.com/mrp2.widgets.com/widgets.com
   ```
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса команд](command-line-syntax-key.md)
-  [nslookup задайте домен](nslookup-set-domain.md)
-  [nslookup задать все](nslookup-set-all.md)
+  [Синтаксис командной строки](command-line-syntax-key.md)
+  [nslookup set domain](nslookup-set-domain.md)
+  [nslookup set ALL](nslookup-set-all.md)

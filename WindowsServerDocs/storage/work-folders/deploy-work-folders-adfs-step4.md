@@ -1,6 +1,6 @@
 ---
 title: Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 4. Настройка прокси-службы веб-приложения
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: storage-work-folders
 ms.topic: article
 manager: klaasl
@@ -8,31 +8,31 @@ ms.author: jeffpatt
 author: JeffPatt24
 ms.date: 6/242017
 ms.assetid: 4a11ede0-b000-4188-8190-790971504e17
-ms.openlocfilehash: 4cbf85f8413353801f048f253859c9f3ef9c7691
-ms.sourcegitcommit: 6ef4986391607bb28593852d06cc6645e548a4b3
+ms.openlocfilehash: ff0c6d4a6e457947c063a7ea5c3ce6463e9c17bb
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66812559"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71365747"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 4, настройки прокси веб-приложения
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-4-set-up-web-application-proxy"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 4. Настройка прокси веб-приложения
 
->Относится к: Windows Server (полугодовой канал), Windows Server 2016
+>Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этой статье описывается четвертый шаг процесса развертывания рабочих папок с помощью службы федерации Active Directory (AD FS) и прокси-службы веб-приложения. Другие шаги этого процесса можно найти в следующих статьях:  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Общие сведения о](deploy-work-folders-adfs-overview.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Средств](deploy-work-folders-adfs-overview.md)  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1 — Настройка AD FS](deploy-work-folders-adfs-step1.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 1. Настройка AD FS @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 2, работы после конфигурации AD FS](deploy-work-folders-adfs-step2.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 2 AD FS действия после настройки @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 3, настроить рабочие папки](deploy-work-folders-adfs-step3.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 3. Настройка рабочих папок @ no__t-0  
   
--   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
+-   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 5. Настройка клиентов @ no__t-0  
 
 > [!NOTE]
->   Инструкции, описанные в этом разделе относятся к среде Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
+>   Инструкции, описанные в этом разделе, предназначены для среды Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
 
 Чтобы настроить прокси-службу веб-приложения для использования с рабочими папками, используйте следующие процедуры.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "66812559"
   
    В тестовом примере используйте следующие значения:  
   
-   Имя: **WorkFolders**  
+   Имя: **воркфолдерс**  
   
    Внешний URL-адрес: **https://workfolders.contoso.com**  
   
@@ -150,9 +150,9 @@ ms.locfileid: "66812559"
     >[!NOTE]
     > Если у вас есть несколько серверов рабочих папок, необходимо опубликовать веб-приложение рабочих папок для каждого сервера рабочих папок (повторите шаги с 1 по 10).  
   
-Далее: [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
+Далее: [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 5. Настройка клиентов @ no__t-0  
   
 ## <a name="see-also"></a>См. также  
-[Обзор рабочих папок](Work-Folders-Overview.md)  
+[Общие сведения о рабочих папках](Work-Folders-Overview.md)  
   
 

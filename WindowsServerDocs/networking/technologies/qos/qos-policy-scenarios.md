@@ -1,19 +1,19 @@
 ---
 title: Сценарии политики качества обслуживания
 description: В этом разделе приводятся сценарии политики качества обслуживания (QoS), демонстрирующие использование групповая политика для определения приоритета сетевого трафика конкретных приложений и служб в Windows Server 2016.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: c4306f06-a117-4f65-b78b-9fd0d1133f95
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: e0968157532c0b3bd926acbaff4291e27a71de31
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 9ac5ab31db1b8c184fd179ecb3e6b87f7fffd2ba
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871875"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71405238"
 ---
 # <a name="qos-policy-scenarios"></a>Сценарии политики качества обслуживания
 

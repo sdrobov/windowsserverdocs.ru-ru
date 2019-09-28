@@ -1,8 +1,8 @@
 ---
-title: ksetup:addhosttorealmmap
-description: 'Раздел Windows команды для ***- '
+title: 'ksetup: аддхосттореалммап'
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25cf258309c94f0efde980018dd5dcf3c7df4d60
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e6a28c6001707fac245de7136b5fb5bd38495027
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837505"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71375648"
 ---
-# <a name="ksetupaddhosttorealmmap"></a>ksetup:addhosttorealmmap
+# <a name="ksetupaddhosttorealmmap"></a>ksetup: аддхосттореалммап
 
 
 
-Добавляет сопоставление службы имя участника (SPN) указанного узла и областью. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Добавляет сопоставление имени участника-службы (SPN) между указанным узлом и областью. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,25 +36,25 @@ ksetup /addhosttorealmmap <HostName> <RealmName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Имя узла >|Имя узла — имя компьютера, и он может быть задана как полное доменное имя компьютера.|
-|\<RealmName>|Имя области указывается как верхний регистр DNS-имя, например CORP. CONTOSO.COM.|
+|@no__t 0HostName >|Имя узла — это имя компьютера, оно может быть указано в качестве полного доменного имени компьютера.|
+|@no__t 0RealmName >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM.|
 
 ## <a name="remarks"></a>Примечания
 
-Эта команда позволяет сопоставить узел или несколько узлов, совместно использующих один и тот же суффикс DNS к области.
+Эта команда позволяет сопоставлять узел или несколько узлов, совместно использующих один и тот же DNS-суффикс к области.
 
-Сопоставление регистрируется в реестре в **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**.
+Сопоставление записывается в реестр в **HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm**.
 
-## <a name="BKMK_Examples"></a>Примеры
+## <a name="BKMK_Examples"></a>Примеров
 
-Как часть настройки области CONTOSO сопоставьте главного компьютера IPops897 к области:
+В рамках настройки сферы CONTOSO сопоставьте главный компьютер IPops897 области:
 ```
 ksetup /addhosttorealmmap IPops897 CONTOSO
 ```
-Убедитесь в реестре, что сопоставление должным образом.
+Проверьте в реестре, что сопоставление выполняется правильно.
 
 #### <a name="additional-references"></a>Дополнительная справка
 
--   [ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)
+-   [Ksetup:delhosttorealmmap](ksetup-delhosttorealmmap.md)
 -   [Ksetup](ksetup.md)
--   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+-   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

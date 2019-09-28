@@ -1,8 +1,8 @@
 ---
-title: bitsadmin setvalidationstate
-description: Раздел Windows команды для **bitsadmin setvalidationstate** -задает состояние проверки содержимого для заданного файла, в рамках задания.
+title: битсадмин сетвалидатионстате
+description: Раздел команд Windows для **битсадмин сетвалидатионстате** — задает состояние проверки содержимого заданного файла в задании.
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a832e8f3d21681f67a4486df33c387e5a8456718
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 37d7fa3a8a91abf1e7b6ac5a51b6cebd78984a91
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66434869"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71380396"
 ---
-# <a name="bitsadmin-setvalidationstate"></a>bitsadmin setvalidationstate
+# <a name="bitsadmin-setvalidationstate"></a>битсадмин сетвалидатионстате
 
 
 
-Задает состояние проверки содержимого для заданного файла, в рамках задания.
+Задает состояние проверки содержимого заданного файла в задании.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,13 +36,13 @@ bitsadmin /SetValidationState <Job> <file index> <true|false>
 
 | Параметр  |          Описание           |
 |------------|--------------------------------|
-|    Job     | Отображаемое имя или идентификатор GUID задания |
+|    Job     | Отображаемое имя задания или идентификатор GUID |
 | Индекс файла |         Начинается с 0          |
 |    True    |             False              |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-В следующем примере задается состояние проверки содержимого файла 2 значение true для задания с именем *myJob*.
+В следующем примере состояние проверки содержимого файла 2 устанавливается равным TRUE для задания с именем *myJob*.
 ```
 C:\>bitsadmin /SetValidationState myJob 2 TRUE 
 ```

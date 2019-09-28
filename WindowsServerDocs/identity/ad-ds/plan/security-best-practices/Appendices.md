@@ -7,34 +7,34 @@ ms.author: joflore
 manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 74fc677c8855e1f66913102f321a1e6f46b2a698
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: d3540e5d8ca40e464e1f9c58d0ba56283c6ea5f7
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59826525"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71402434"
 ---
 # <a name="appendices"></a>Приложения
 
 >Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Приложения включаются в этом документе для расширения сведений, содержащихся в тексте документа. Список приложений и краткое описание каждого из них в включены в следующей таблице.  
+В этот документ включены приложений для дополнения сведений, содержащихся в тексте документа. Список приложений и краткое описание каждого из них приведены в следующей таблице.  
   
 
 |**Приложение**|**Описание**|  
 | --- | --- | 
-|[Приложение б. Привилегированные учетные записи и группы в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)|Предоставляет общие сведения, которые помогут вам определить пользователей и группы, которые следует сосредоточиться на обеспечение безопасности, так как они могут использоваться злоумышленниками для компрометации и даже удалить установки Active Directory.|  
-|[Приложение c. Защищенные учетные записи и группы в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)|Содержит сведения о защищенных группах в Active Directory. Он также содержит сведения для ограниченной настройки группы, которые считаются защищенных групп и затрагивает AdminSDHolder и дескрипторы безопасности SDProp (удаления).|  
-|[Приложение г. Обеспечение безопасности встроенной учетной записи администратора учетных записей в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)|Содержит рекомендации для защиты учетной записи администратора в каждом домене в лесу.|  
-|[Приложение д. Защита групп корпоративных администраторов в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)|Содержит рекомендации для обеспечения безопасности в группу "Администраторы предприятия" в лесу.|  
-|[Приложение е. Защита групп администраторов домена в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)|Содержит рекомендации для обеспечения безопасности в группу "Администраторы домена" в каждом домене в лесу.|  
-|[Приложение ж Защита групп администраторов в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)|Содержит рекомендации для защиты встроенная группа администраторов в каждом домене в лесу.|  
-|[Приложение h. Обеспечение безопасности в учетные записи локального администратора и группы](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)|Содержит рекомендации по безопасности локальных учетных записей администратора и группы "Администраторы" на присоединенных к домену серверах и рабочих станциях.|  
-|[Приложение и: Создание управления учетных записей для защищенных учетных записей и групп в Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)|Предоставляет сведения для создания учетных записей, которые ограниченные привилегии можно жестко контролировать, но может использоваться для заполнения привилегированных групп в Active Directory, когда требуется повышение прав временный.|   
-|[Приложение м: События для мониторинга](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)|Список событий, для которых необходимо отслеживать в вашей среде.|  
-|[Приложение н: Ссылки на документы и Рекомендуемая литература](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)|Содержит список рекомендуемых для чтения. Также содержит список ссылок на внешние документы и их URL-адреса, чтобы читатели печатные копии этого документа можно получить доступ к этой информации.|  
+|[Приложение Б. Привилегированные учетные записи и группы в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-B--Privileged-Accounts-and-Groups-in-Active-Directory.md)|Общие сведения, помогающие в определении пользователей и групп, на которые следует обратить внимание, поскольку они могут быть использованы злоумышленниками для взлома и даже уничтожения установки Active Directory.|  
+|[Приложение В. Защищенные учетные записи и группы в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory.md)|Содержит сведения о защищенных группах в Active Directory. Он также содержит сведения о ограниченной настройке (удалении) групп, которые считаются защищенными группами и зависят от AdminSDHolder и SDProp.|  
+|[Приложение Г. Защита встроенных учетных записей администраторов в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-D--Securing-Built-In-Administrator-Accounts-in-Active-Directory.md)|Содержит рекомендации, помогающие защитить учетную запись администратора в каждом домене леса.|  
+|[Приложение Д. Защита групп корпоративных администраторов в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-E--Securing-Enterprise-Admins-Groups-in-Active-Directory.md)|Содержит рекомендации по защите группы администраторов предприятия в лесу.|  
+|[Приложение Е. Защита групп администраторов домена в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-F--Securing-Domain-Admins-Groups-in-Active-Directory.md)|Содержит рекомендации по защите группы администраторов домена в каждом домене леса.|  
+|[Приложение Ж. Защита групп администраторов в Active Directory](../../../ad-ds/plan/security-best-practices/Appendix-G--Securing-Administrators-Groups-in-Active-Directory.md)|Содержит рекомендации по защите встроенной группы администраторов в каждом домене леса.|  
+|[Приложение З. Защита учетных записей и групп локальных администраторов](../../../ad-ds/plan/security-best-practices/Appendix-H--Securing-Local-Administrator-Accounts-and-Groups.md)|Содержит рекомендации по защите учетных записей локальных администраторов и групп администраторов на серверах и рабочих станциях, присоединенных к домену.|  
+|[Приложение И. Создание учетных записей управления для защищенных учетных записей и групп в Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md)|Предоставляет сведения для создания учетных записей с ограниченными привилегиями и может быть жестко контролироваться, но их можно использовать для заполнения привилегированных групп в Active Directory, если требуется временное повышение прав.|   
+|[Приложение М. События для мониторинга](../../../ad-ds/plan/Appendix-L--Events-to-Monitor.md)|Список событий, которые следует отслеживать в среде.|  
+|[Приложение Н. Ссылки на документы и рекомендуемая литература](../../../ad-ds/manage/Appendix-M--Document-Links-and-Recommended-Reading.md)|Содержит список рекомендуемых для чтения данных. Также содержит список ссылок на внешние документы и их URL-адреса, чтобы читатели жестких копий этого документа могли получить доступ к этим сведениям.|  
   
 
 
