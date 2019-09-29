@@ -1,8 +1,8 @@
 ---
-title: С помощью команды копирования DriverGroup
-description: 'Раздел Windows команды для ***- '
+title: Использование команды Copy-Дриверграуп
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: manage-windows-commands
@@ -13,18 +13,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68d9c6f4ca78991bb4c286042a6172211161dd1e
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: c08ce616c9b0e2bf79c7f13f922e27d7f7f7ca62
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59842085"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71363591"
 ---
-# <a name="using-the-copy-drivergroup-command"></a>С помощью команды копирования DriverGroup
+# <a name="using-the-copy-drivergroup-command"></a>Использование команды Copy-Дриверграуп
 
 
 
-Дублирует существующую группу драйверов на сервере, включая фильтры, пакеты драйверов и включение или отключение состояния.
+Дублирует существующую группу драйверов на сервере, включая фильтры, пакеты драйверов, состояние включения или отключения.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,13 +36,13 @@ WDSUTIL /Copy-DriverGroup [/Server:<Server name>] /DriverGroup:<Source Group Nam
 
 |Параметр|Описание|
 |---------|-----------|
-|[/ Server:\<имя сервера >]|Указывает имя сервера. Это может быть имя NetBIOS или полное доменное имя. Если имя сервера не указан, используется локальный сервер.|
-|/ DriverGroup:\<имя исходной группы >|Задает имя исходной группы драйверов.|
-|/ GroupName:\<новое имя группы >|Указывает имя новой группы драйверов.|
+|[/Server: \<Server имя >]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|/Дриверграуп: @no__t — имя группы 0Source >|Указывает имя исходной группы драйверов.|
+|/Граупнаме: @no__t — имя группы 0New >|Указывает имя новой группы драйверов.|
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="BKMK_examples"></a>Примеров
 
-Чтобы скопировать группу драйверов, введите одно из следующих:
+Чтобы скопировать группу драйверов, введите одну из следующих:
 ```
 WDSUTIL /Copy-DriverGroup /Server:MyWdsServer /DriverGroup:PrinterDrivers /GroupName:X86PrinterDrivers
 ```
@@ -52,4 +52,4 @@ WDSUTIL /Copy-DriverGroup /DriverGroup:PrinterDrivers /GroupName:ColorPrinterDri
 
 #### <a name="additional-references"></a>Дополнительная справка
 
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
