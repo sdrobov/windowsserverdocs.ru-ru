@@ -1,7 +1,7 @@
 ---
 title: Ключи установки клиента KMS
 description: Ключи, необходимые для активации продуктов Windows на сервере KMS
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.mktglfcycl: manage
 ms.sitesec: library
 author: jasongerend
@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 05/21/2019
 ms.topic: get-started-article
-ms.openlocfilehash: 964139ac5fdaee4d580d29ab0f7543c7d5f15d0b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: e981343e0a811ada6a1634b193d6e1af3531f9ae
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868459"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71391774"
 ---
 # <a name="kms-client-setup-keys"></a>Ключи установки клиента KMS
 
