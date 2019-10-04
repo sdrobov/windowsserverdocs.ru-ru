@@ -8,12 +8,12 @@ ms.date: 07/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 391430b75670f207520a7d972b54ba293616d0e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 150c9f1e70df4f634886ea65efd9c61ef075f26a
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393909"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940709"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -257,6 +257,13 @@ ms.locfileid: "71393909"
 
 Чтобы решить эту проблему, установите "средства управления отказоустойчивыми кластерами" (RSAT-Cluster-Management) на сервере, на котором запущена служба миграции хранилища Orchestrator. 
 
+## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Ошибка "при выполнении инвентаризации с исходным компьютером Windows Server 2003 больше нет доступных конечных точек"
+
+При попытке запустить инвентаризацию с помощью накопительного пакета обновления для службы миграции хранилища, исправленного в [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) или более поздней версии, появляется следующее сообщение об ошибке:
+
+    There are no more endpoints available from the endpoint mapper  
+
+Чтобы решить эту проблему, временно удалите накопительный пакет обновления KB4512534 (и все его заменяющие) с компьютера Orchestrator службы миграции хранилища. После завершения миграции переустановите Последнее накопительное обновление.  
 
 ## <a name="see-also"></a>См. также
 

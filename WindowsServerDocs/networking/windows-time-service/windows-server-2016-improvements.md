@@ -6,14 +6,14 @@ ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 2b8c6148af21e94e4a56661402f36dcb2e636461
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 73922a07d8d5396aa9ced377bfc3c9be97a9950d
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70871827"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935098"
 ---
 ## <a name="windows-server-2016-improvements"></a>Улучшения Windows Server 2016
 
@@ -28,7 +28,7 @@ ms.locfileid: "70871827"
 
 Кроме того, уровень Стратум, который узел сообщает гостевой системе, является более прозрачным.  Ранее узел представит фиксированный Стратум из 2, независимо от его точности.  С учетом изменений в Windows Server 2016 узел сообщает о Стратум, который больше, чем Стратум узла, что приводит к повышению времени для виртуальных гостевых систем.  Узел Стратум определяется с помощью W32Time через обычные средства в зависимости от времени его источника.  Присоединенные к домену гости Windows 2016 будут находить наиболее точные часы, а не по умолчанию для узла.  По этой причине мы рекомендуем вручную отключить параметр поставщика времени Hyper-V для компьютеров, участвующих в домене в Windows 2012 R2 и ниже.
 
-### <a name="monitoring"></a>Отслеживание
+### <a name="monitoring"></a>Мониторинг
 Счетчики системного монитора были добавлены.  Они позволяют выполнять базовые показатели, отслеживать и устранять точность времени.  Эти счетчики включают:
 
 Счетчик|Описание|
@@ -191,7 +191,7 @@ ms.locfileid: "70871827"
 
 Если вы хотите настроить контроллер домена как ГТИМЕСЕРВ, его можно настроить вручную с помощью следующей команды.  В этом случае контроллер домена использует другие компьютеры в качестве главного часов.  Это может быть устройство или выделенный компьютер.
 
-    w32tm /config /manualpeerlist:”master_clock1,0x8 master_clock2,0x8” /syncfromflags:manual /reliable:yes /update
+    w32tm /config /manualpeerlist:"master_clock1,0x8 master_clock2,0x8" /syncfromflags:manual /reliable:yes /update
 
 > [!NOTE]
 > Дополнительные сведения см. [в разделе Настройка службы времени Windows](https://technet.microsoft.com/library/cc731191.aspx) .

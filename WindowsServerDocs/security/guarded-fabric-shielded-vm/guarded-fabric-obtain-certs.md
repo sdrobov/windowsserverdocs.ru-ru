@@ -7,13 +7,13 @@ ms.assetid: f4b4d1a8-bf6d-4881-9150-ddeca8b48038
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 08/29/2018
-ms.openlocfilehash: b3e6aadbcbf2f2b826ca97d4ebb58c3736528b59
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 09/25/2019
+ms.openlocfilehash: e8f4a3696ec5096281ba1ffd130aa97004530cc1
+ms.sourcegitcommit: de71970be7d81b95610a0977c12d456c3917c331
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386518"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71940738"
 ---
 # <a name="obtain-certificates-for-hgs"></a>Получение сертификатов для HGS
 
@@ -81,7 +81,7 @@ Remove-Item $encCert.PSPath
 
 Свойство SSL-сертификата | Обязательное значение
 -------------------------|---------------
-Имя субъекта             | Имя кластера HGS (имя распределенной сети). Это будет объединение имени службы HGS, предоставленного для `Initialize-HgsServer`, и имени домена HGS.
+Имя субъекта             | Имя кластера HGS (название распределенной сети или полное доменное имя объекта виртуального компьютера). Это будет объединение имени службы HGS, предоставленного для `Initialize-HgsServer`, и имени домена HGS.
 Альтернативное имя субъекта | Если для достижения кластера HGS будет использоваться другое DNS-имя (например, если оно находится за подсистемой балансировки нагрузки), обязательно включите эти DNS-имена в поле SAN запроса на сертификат.
 
 Параметры для указания этого сертификата при инициализации сервера HGS рассматриваются в разделе [Настройка первого узла HGS](guarded-fabric-initialize-hgs.md).

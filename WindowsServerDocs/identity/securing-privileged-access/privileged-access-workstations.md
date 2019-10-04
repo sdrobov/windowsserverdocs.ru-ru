@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 29e3785d1c004d669e0060854acb6af1d2953644
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb91ca583fd71a7fbe38369606d2dcc4a816d8aa
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357924"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935008"
 ---
 # <a name="privileged-access-workstations"></a>Рабочие станции c привилегированным доступом
 
@@ -511,66 +511,136 @@ ms.locfileid: "71357924"
 В этом разделе мы настроим групповые политики для предотвращения входа в узлы нижнего уровня для привилегированных учетных записей администраторов.
 
 1. Создайте объект групповой политики **Ограничение входа в рабочую станцию**. Этот параметр ограничит вход в стандартные рабочие станции с помощью учетных записей администраторов уровня 0 и 1.  Этот объект GPO должен быть связан с подразделением верхнего уровня "рабочие станции" и иметь следующие параметры:
-   * В разделе \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве пакетного задания выберите **определить следующие параметры политики** и добавьте группы уровня 0 и 1.     Корпоративные администраторы домена Администраторы схемы администраторы домен \ администраторы учетные записи операторы резервного копирования операторы печати операторы сервера контроллеры доменов контроллеры домена только для чтения групповая политика создатели владельцы опер аторс
+   * В разделе \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве пакетного задания выберите **определить следующие параметры политики** и добавьте группы уровня 0 и 1.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Встроенные группы уровня 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Все пользовательские созданные группы с действующим уровнем доступа 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > This Group was created earlier in Phase 1.
+     > [!NOTE]
+     > Эта группа была создана ранее на этапе 1.
 
-   * В окне \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве службы выберите **определить следующие параметры политики** и добавьте группы уровня 0 и 1.     Корпоративные администраторы домена Администраторы схемы администраторы домен \ администраторы учетные записи операторы резервного копирования операторы печати операторы сервера контроллеры доменов контроллеры домена только для чтения групповая политика создатели владельцы опер аторс
+   * В окне \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве службы выберите **определить следующие параметры политики** и добавьте группы уровня 0 и 1.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Примечание. Встроенные группы уровня 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Примечание. Все пользовательские созданные группы с действующим уровнем доступа 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
          Tier 1 Admins
 
-         > [!NOTE]
-         > Note: This Group was created earlier in Phase 1
+     > [!NOTE]
+     > Примечание. Эта группа была создана ранее на этапе 1
 
 2. Создайте новый объект групповой политики для **ограничения входа на сервер** . Этот параметр ограничит учетные записи администратора уровня 0 от входа на серверы уровня 1.  Этот объект GPO должен быть связан с подразделением верхнего уровня "серверы уровня 1" и имеет следующие параметры:
-   * В разделе \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве пакетного задания выберите **определить следующие параметры политики** и добавьте группы уровня 0.     Корпоративные администраторы домена Администраторы схемы администраторы домен \ администраторы учетные записи операторы резервного копирования операторы печати операторы сервера контроллеры доменов контроллеры домена только для чтения групповая политика создатели владельцы опер аторс
+   * В разделе \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени вход в качестве пакетного задания выберите **определить следующие параметры политики** и добавьте группы уровня 0.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
 
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
-
-         Other Delegated Groups
-
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
-
-   * В окне Конфигурация компьютера \ компьютер \ параметры \ локальные \ Policies\User права Ассигнмент\дени вход в качестве службы выберите **определить следующие параметры политики** и добавьте группы уровня 0.     Корпоративные администраторы домена Администраторы схемы администраторы домен \ администраторы учетные записи операторы резервного копирования операторы печати операторы сервера контроллеры доменов контроллеры домена только для чтения групповая политика создатели владельцы опер аторс
-
-         > [!NOTE]
-         > Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
-
-         Other Delegated Groups
-
-         > [!NOTE]
-         > Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
-
-   * В окне \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени локальный вход, выберите **определить следующие параметры политики** и добавьте группы уровня 0.     Корпоративные администраторы домена Администраторы схемы администраторы учетных записей операторы резервного копирования операторы печати операторы сервера контроллеры домена контроллеры доменов только для чтения групповая политика создателей владельцы операторы шифрования
-
-         > [!NOTE]
-         > Note: Built-in Tier 0 Groups, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Встроенные группы уровня 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
          Other Delegated Groups
 
-         > [!NOTE]
-         > Note: Any custom created groups with effective Tier 0 access, see Tier 0 equivalency for more details.
+     > [!NOTE]
+     > Все пользовательские созданные группы с действующим уровнем доступа 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
+
+   * В окне Конфигурация компьютера \ компьютер \ параметры \ локальные \ Policies\User права Ассигнмент\дени вход в качестве службы выберите **определить следующие параметры политики** и добавьте группы уровня 0.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
+
+     > [!NOTE]
+     > Встроенные группы уровня 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
+
+         Other Delegated Groups
+
+     > [!NOTE]
+     > Все пользовательские созданные группы с действующим уровнем доступа 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
+
+   * В окне \ Конфигурация компьютера \ параметры безопасности \ локальные политики Policies\User права Ассигнмент\дени локальный вход, выберите **определить следующие параметры политики** и добавьте группы уровня 0.
+     ```
+     Enterprise Admins
+     Domain Admins
+     Schema Admins
+     DOMAIN\Administrators
+     Account Operators
+     Backup Operators
+     Print Operators
+     Server Operators
+     Domain Controllers
+     Read-Only Domain Controllers
+     Group Policy Creators Owners
+     Cryptographic Operators
+     ```
+
+     > [!NOTE]
+     > Примечание. Встроенные группы уровня 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
+
+         Other Delegated Groups
+
+     > [!NOTE]
+     > Примечание. Все пользовательские созданные группы с действующим уровнем доступа 0 см. в разделе эквивалентность уровня 0 для получения дополнительных сведений.
 
 #### <a name="deploy-your-paws"></a>Разверните свои рабочие станции с привилегированным доступом.
 
