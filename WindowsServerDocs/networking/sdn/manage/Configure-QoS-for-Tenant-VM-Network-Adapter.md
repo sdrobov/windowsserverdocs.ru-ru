@@ -1,9 +1,9 @@
 ---
 title: Настройка качества обслуживания (QoS) для сетевого адаптера виртуальной машины клиента
-description: При настройке QoS для сетевого адаптера виртуальной машины клиента вы можете выбрать между мостом центра обработки данных или программно определенным сетевым интерфейсом Sdn QoS.
+description: При настройке QoS для сетевого адаптера виртуальной машины клиента вы можете выбрать между мостом \(\)центра обработки данных или программно определенным сетевым \(интерфейсом Sdn\) QoS.
 manager: dougkim
 ms.custom: na
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.technology: networking-sdn
@@ -13,12 +13,12 @@ ms.assetid: 6d783ff6-7dd5-496c-9ed9-5c36612c6859
 ms.author: pashort
 author: shortpatti
 ms.date: 08/23/2018
-ms.openlocfilehash: 99ef286b91bec4bcb008bfd9f62003e75a5a5921
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 1074525abe375e78ab0d2065ce8e98f894f50c61
+ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70870017"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71355852"
 ---
 # <a name="configure-quality-of-service-qos-for-a-tenant-vm-network-adapter"></a>Настройка качества обслуживания (QoS) для сетевого адаптера виртуальной машины клиента
 
