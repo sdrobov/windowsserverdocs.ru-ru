@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 51d9636013fef182c4abb74ae196e08c51ff11d8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 30e4c2c7c5cf2668d62e96d8d2a54dc33e3d2a55
+ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362754"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960962"
 ---
 # <a name="using-the-remove-imagegroup-command"></a>Использование команды Remove-Имажеграуп
 
@@ -41,8 +41,8 @@ wdsutil /remove-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /remove-ImageGroumediaGroup:"My Image Group" /Server:MyWDSServer 
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды add-имажеграуп](using-the-add-imagegroup-command.md)
-[с помощью команды Get-Аллимажеграупс](using-the-get-allimagegroups-command.md)
-[с помощью команды Get-Имажеграуп](using-the-get-imagegroup-command.md)
-[: Set-имажеграуп](subcommand-set-imagegroup.md)
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+[Использование команды Add-Имажеграуп](using-the-add-imagegroup-command.md)  
+[Использование команды Get-Аллимажеграупс](using-the-get-allimagegroups-command.md)  
+[Использование команды Get-Имажеграуп](using-the-get-imagegroup-command.md)  
+[Подкоманда: Set-Имажеграуп](subcommand-set-imagegroup.md)  
