@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b3111d4e980395c1a7c971af715017d455e1a29c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 51693f81e8e394df02bf35f1a6d91ed06b98e4bb
+ms.sourcegitcommit: c9d856c22b42d2a4fb8fe6acc6c5b6be673647f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384916"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72165044"
 ---
 # <a name="qprocess"></a>qprocess
 
@@ -32,7 +32,7 @@ ms.locfileid: "71384916"
 ## <a name="remarks"></a>Примечания
 Эта команда аналогична команде **запроса Process** .
 
-#### <a name="additional-references"></a>Дополнительные ссылки
-[процесс запроса](query-process.md)
-[синтаксис командной строки](command-line-syntax-key.md)
-[службы удаленных рабочих столов &#40;Справочник по командам&#41; служб терминалов](remote-desktop-services-terminal-services-command-reference.md)
+## <a name="additional-references"></a>Дополнительная справка
+[процесс запроса](query-process.md)  
+[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+[Справочник &#40;по командам служб&#41; терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)  

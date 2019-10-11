@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 5b1dd3b728f941d9c3732abccf19363cf631284e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54ed455955053ebb234864f827759385ecf3d3c5
+ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387748"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71935029"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>Часто задаваемые вопросы о клиентах удаленного рабочего стола
 
@@ -166,7 +166,7 @@ ms.locfileid: "71387748"
 2. Включите параметры **Использовать все мониторы** и **Во весь экран**.
 
 ### <a name="is-bi-directional-sound-supported"></a>Поддерживается ли двунаправленный звук?
-Восходящая передача звука (от клиента к серверу, для микрофонов) не поддерживается клиентом удаленного рабочего стола.
+Двунаправленный звук можно настроить в клиенте Windows отдельно для каждого подключения. Соответствующие параметры доступны в разделе **Удаленное аудио** на вкладке параметров **Локальные ресурсы**.
 
 ### <a name="what-can-i-do-if-the-sound-wont-play"></a>Что делать, если звук не воспроизводится?
 Выйдите из сеанса (не просто отключитесь, а совсем выйдите из системы), а затем снова войдите в систему.

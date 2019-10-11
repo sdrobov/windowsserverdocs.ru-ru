@@ -1,21 +1,21 @@
 ---
-title: Общие процедуры устранения неполадок с KMS и DNS
+title: Рекомендации по устранению проблем с активацией, связанных с DNS
 description: ''
 ms.topic: article
-ms.date: 07/22/2019
+ms.date: 09/10/2019
 ms.technology: server-general
 ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 12e3c1fa82a567c43507df2f2ffd72595c3903ba
-ms.sourcegitcommit: af80963a1d16c0b836da31efd9c5caaaf6708133
+ms.openlocfilehash: e2bd9c766f07591e0c643a6cea644b2db7a95364
+ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68664896"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960963"
 ---
-# <a name="common-troubleshooting-procedures-for-kms-and-dns-issues"></a>Общие процедуры устранения неполадок с KMS и DNS
+# <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>Рекомендации по устранению проблем с активацией, связанных с DNS.
 
 Вы можете попробовать выполнить некоторые из этих инструкций, если выполняется одно или несколько из следующих условий.
 
