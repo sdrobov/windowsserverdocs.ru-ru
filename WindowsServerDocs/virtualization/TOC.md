@@ -51,6 +51,7 @@
 #### [Включение оборудования для мониторинга производительности Intel](hyper-v/manage/Performance-Monitoring-Hardware.md)
 #### [Перемещение виртуальных машин с помощью динамической миграции](hyper-v/manage/Live-migration-overview.md)
 ##### [Общие сведения о динамической миграции](hyper-v/manage/Live-migration-overview.md)
+
 ##### [Настройка узлов для динамической миграции](hyper-v/deploy/Set-up-hosts-for-live-migration-without-Failover-Clustering.md) 
 ##### [Использование динамической миграции без отказоустойчивой кластеризации](hyper-v/manage/Use-live-migration-without-Failover-Clustering-to-move-a-virtual-machine.md)
 
