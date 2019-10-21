@@ -1,6 +1,6 @@
 ---
 title: mklink
-description: 'Раздел Windows команды для ****- '
+description: 'Раздел команд Windows для * * * *- '
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d930cbf7acbfceab16f2fa619aaaac6e789c131
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7a5f9b819f16d058feb1dee74a8408ed174e04c
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373643"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588041"
 ---
 # <a name="mklink"></a>mklink
 Создает символьную ссылку.
@@ -38,13 +38,13 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 |/d|Создает символьную ссылку каталога. По умолчанию **Mklink** создает символьную ссылку на файл.|
 |/h|Создает жесткую связь вместо символьной ссылки.|
 |/j|Создает соединение с каталогом.|
-|@no__t 0Link >|Указывает имя создаваемой символьной ссылки.|
-|@no__t 0Target >|Указывает путь (относительный или абсолютный), на который ссылается Новая символьная ссылка.|
+|\<Link >|Указывает имя создаваемой символьной ссылки.|
+|\<Target >|Указывает путь (относительный или абсолютный), на который ссылается Новая символьная ссылка.|
 |/?|Отображение справки в командной строке.|
 
 ## <a name="BKMK_examples"></a>Примеров
 
-В примере входящей показано создание и удаление символической ссылки с именем MyFolder и MyFile. file из корневого каталога в каталог \Users\User1\Documents и файла example. File, расположенного в каталоге:
+В следующем примере демонстрируется создание и удаление символьной ссылки с именем MyFolder и MyFile. file из корневого каталога в каталог \Users\User1\Documents и файл example. File, находящийся в каталоге:
 ```
 mklink /d \MyFolder \Users\User1\Documents
 mklink /h \MyFile.file \User1\Documents\example.file

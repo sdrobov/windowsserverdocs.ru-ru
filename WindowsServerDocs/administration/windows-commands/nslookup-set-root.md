@@ -1,6 +1,6 @@
 ---
 title: nslookup set root
-description: 'Раздел Windows команды для ****- '
+description: 'Раздел команд Windows для * * * *- '
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 08cf41ec9b6ac30699013112216a538dcf625fd5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5a1737275bf6321525bbba56cd4d6a77ef973423
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372845"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591027"
 ---
 # <a name="nslookup-set-root"></a>nslookup set root
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет имя корневого сервера, используемого для запросов.
 ## <a name="syntax"></a>Синтаксис
@@ -36,8 +36,8 @@ set root=<RootServer>
 |  <RootServer>   | Указывает новое имя для корневого сервера. Значение по умолчанию — ns.nic.ddn.mil. |
 | {Help &#124; ?} |              Отображает краткую сводку подкоманд **nslookup** .               |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Примечания.
 - Подкоманда **set root** влияет на **корневую** подкоманду.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-  [root nslookup](nslookup-root.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md) 
+  [корневой элемент nslookup](nslookup-root.md)

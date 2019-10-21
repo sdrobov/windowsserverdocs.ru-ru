@@ -7,12 +7,12 @@ ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 99133f2c582b180f240740fc2f39e99527bc0cf8
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: 62fe4f00cef121e6241a403ee339047cda9488b5
+ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71124824"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72591080"
 ---
 # <a name="upgrade-windows-server-2016-to-windows-server-2019"></a>Обновление Windows Server 2016 до Windows Server 2019
 
@@ -24,13 +24,13 @@ ms.locfileid: "71124824"
 
 ### <a name="to-collect-your-info"></a>Получение сведений
 
-1. Откройте командную строку, перейдите к `c:\Windows\system32`и введите **systemInfo. exe**.
+1. Откройте командную строку, перейдите в `c:\Windows\system32` и введите **systemInfo. exe**.
 
 2. Скопируйте, вставьте и сохраните полученные сведения о системе в любом месте на устройстве.
 
 3. Введите **ipconfig/all** в командной строке, а затем скопируйте и вставьте полученные сведения о конфигурации в то же расположение, как описано выше.
 
-4. Откройте редактор реестра, перейдите к кусту HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion, а затем скопируйте и вставьте Windows Server **буилдлабекс** (Version) и **EditionID** (Edition) в то же расположение, что и ранее.
+4. Откройте редактор реестра, перейдите к разделу `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`, а затем скопируйте и вставьте Windows Server **буилдлабекс** (Version) и **EditionID** (Edition) в то же расположение, что и ранее.
 
 После сбора всех данных, относящихся к Windows Server, настоятельно рекомендуется создать резервную копию операционной системы, приложений и виртуальных машин. Кроме того, необходимо **завершить работу**, выполнить **быструю миграцию**или **выполнить миграцию** всех виртуальных машин, запущенных в данный момент на сервере. Во время обновления на месте не могут выполняться виртуальные машины.
 
@@ -80,12 +80,12 @@ ms.locfileid: "71124824"
 
 ### <a name="to-make-sure-your-upgrade-was-successful"></a>Чтобы проверить успешность обновления
 
-1. Откройте редактор реестра, перейдите к кусту HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion и просмотрите поле **ProductName**. Вы должны увидеть ваш выпуск Windows Server 2019, например **Windows server 2019 Datacenter**.
+1. Откройте редактор реестра, перейдите к разделу `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion` и просмотрите поле **ProductName**. Вы должны увидеть ваш выпуск Windows Server 2019, например **Windows server 2019 Datacenter**.
 
 2. Убедитесь, что все приложения работают и что клиентские подключения к приложениям выполнены успешно.
 
-Если вы считаете, что во время обновления возникли проблемы, скопируйте и заархивировать каталог `C:\Windows\Panther`(обычно) и обратитесь в `%SystemRoot%\Panther` службу поддержки Майкрософт.
+Если вы считаете, что во время обновления возникли проблемы, скопируйте и заархивировать каталог `%SystemRoot%\Panther` (обычно `C:\Windows\Panther`) и обратитесь в службу поддержки Майкрософт.
 
-## <a name="related-articles"></a>Связанные статьи
+## <a name="related-articles"></a>Смежные разделы
 
 - Дополнительные сведения и сведения о Windows Server 2019 см. в статье Начало [работы с Windows server 2019](https://docs.microsoft.com/windows-server/get-started-19/get-started-19).

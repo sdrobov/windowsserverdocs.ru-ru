@@ -9,16 +9,16 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 00f3851ce74a496bd530c8ea682ea312f8b06a0a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e3f320b67196a2400ebedbaeaf0a5b59969400e8
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390935"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588096"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>Понижение роли контроллеров домена и доменов
 
->Область применения. Windows Server
+>Область применения: Windows Server
 
 В этом разделе описывается, как удалить доменные службы Active Directory с помощью диспетчера сервера или Windows PowerShell.
   
@@ -36,7 +36,7 @@ ms.locfileid: "71390935"
 |||  
 |-|-|  
 |**Командлеты Аддсдеплоймент и ServerManager**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Uninstall-AddsDomainController|-SkipPreChecks<br /><br />*-Локаладминистраторпассворд*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-Днсделегатионремовалкредентиал*<br /><br />-Force<br /><br />*-Форцеремовал*<br /><br />*-ИгнореластдЦиндомаинмисматч*<br /><br />*-Игнореластднссерверфорзоне*<br /><br />*-Ластдомаинконтроллериндомаин*<br /><br />-Norebootoncompletion<br /><br />*-Ремовеаппликатионпартитионс*<br /><br />*-Ремоведнсделегатион*<br /><br />-RetainDCMetadata|  
+|Uninstall-Аддсдомаинконтроллер|-SkipPreChecks<br /><br />*-Локаладминистраторпассворд*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-Днсделегатионремовалкредентиал*<br /><br />-Force<br /><br />*-Форцеремовал*<br /><br />*-ИгнореластдЦиндомаинмисматч*<br /><br />*-Игнореластднссерверфорзоне*<br /><br />*-Ластдомаинконтроллериндомаин*<br /><br />-Norebootoncompletion<br /><br />*-Ремовеаппликатионпартитионс*<br /><br />*-Ремоведнсделегатион*<br /><br />-RetainDCMetadata|  
 |Uninstall-WindowsFeature/Remove-WindowsFeature|***-Имя***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
   
 > [!NOTE]  
@@ -104,7 +104,7 @@ Uninstall-windowsfeature
    > [!WARNING]  
    > Этот параметр следует выбрать, только если контроллер домена не может установить связь с другими контроллерами домена и нет *другого способа* разрешить эту сетевую проблему. Принудительное понижение уровня оставляет потерянные метаданные в Active Directory на оставшихся контроллерах домена леса. Помимо этого, все нереплицированные изменения на этом контроллере домена, например пароли и новые учетные записи пользователей, навсегда теряются. Потерянные метаданные — это основная причина обращения в службу поддержки пользователей Майкрософт по поводу AD DS, Exchange, SQL и другого программного обеспечения.  
    >
-   > При принудительном понижении уровня контроллера домена *необходимо* немедленно почистить метаданные вручную. Этапы очистки см. в разделе [Очистка метаданных сервера](https://technet.microsoft.com/library/cc816907(WS.10).aspx).  
+   > При принудительном понижении уровня контроллера домена *необходимо* немедленно почистить метаданные вручную. Этапы очистки см. в разделе [Очистка метаданных сервера](ad-ds-metadata-cleanup.md).  
 
    ![Мастер настройки служб домен Active Directory — принудительное удаление учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ForceDemote.png)  
   
@@ -118,7 +118,7 @@ Uninstall-windowsfeature
 -lastdomaincontrollerindomain <{ $true | false }>  
 ```
 
-### <a name="warnings"></a>Предупреждения
+### <a name="warnings"></a>предупреждения;
 
 ![Мастер настройки домен Active Directory Services — влияние ролей FSMO учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Warnings.png)  
 
@@ -170,7 +170,7 @@ Uninstall-windowsfeature
 > [!WARNING]
 > Поскольку два предыдущих варианта не подтверждают пароль, будьте предельно осторожны: пароль не отображается.
 
-Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется. Пример:
+Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется. Пример
 
 ```
 -localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
@@ -188,12 +188,12 @@ Uninstall-windowsfeature
 Нажмите кнопку **Понизить уровень**, чтобы выполнить следующий командлет ADDSDeployment:
 
 ```
-Uninstall-DomainController
+Uninstall-ADDSDomainController
 ```
 
 Для просмотра информации о конфигурации используйте необязательный аргумент **Whatif** с командлетом **Uninstall-ADDSDomainController**. Это позволит просмотреть явные и неявные значения аргументов командлета.
 
-Пример:
+Пример
 
 ![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 
@@ -208,7 +208,7 @@ Uninstall-DomainController
 * %systemroot%\debug\dcpromo.log
 * %systemroot%\debug\dcpromoui.log
 
-Так как командлеты **Uninstall-AddsDomainController** и **Uninstall-WindowsFeature** выполняют по одному действию каждый, они показаны здесь на этапе подтверждения с минимальным необходимым набором аргументов. При нажатии на клавишу ВВОД запускается процесс понижения роли, после чего компьютер перезапускается.
+Поскольку **uninstall-аддсдомаинконтроллер** и **uninstall-WindowsFeature** имеют только одно действие каждый, они показаны на этапе подтверждения с минимальными необходимыми аргументами. При нажатии на клавишу ВВОД запускается процесс понижения роли, после чего компьютер перезапускается.
 
 ![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstallConfirm.png)
 
