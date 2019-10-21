@@ -8,12 +8,12 @@ ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: e2bd9c766f07591e0c643a6cea644b2db7a95364
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: 3165c926c50c2f91544895e0d328f1dae7424b4a
+ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960963"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72588039"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>Рекомендации по устранению проблем с активацией, связанных с DNS.
 
@@ -66,7 +66,7 @@ ms.locfileid: "71960963"
 
 Для активации клиентов KMS нужно настроить узел KMS. Если в вашей среде нет узлов KMS, установите и активируйте их с помощью соответствующего ключа узла KMS. Настроив компьютер в сети для размещения программного обеспечения KMS, опубликуйте параметры DNS.
 
-Сведения о настройке узла KMS см. в инструкциях по [активации с помощью службы управления ключами](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) и [установке и настройке VMAT](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+Сведения о настройке узла KMS см. в разделах [Активация с помощью службы управления ключами](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) и [Установка и настройка средства управления активацией корпоративных лицензий](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
 
 [Вернитесь к списку инструкций](#list).
 
