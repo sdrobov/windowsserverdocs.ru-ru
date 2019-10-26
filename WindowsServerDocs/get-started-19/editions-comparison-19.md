@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 manager: jasgroce
 ms.localizationpriority: medium
-ms.openlocfilehash: 24ae0e11a3e8ca2b50bd6722f7bd7d18b8c1c532
-ms.sourcegitcommit: e92a78f8d307200e64617431a701b9112a9b4e48
+ms.openlocfilehash: 2cb368b5ff4723c1afb53c5a9e787d9f8a39bef3
+ms.sourcegitcommit: 40e4ba214954d198936341c4d6ce1916dc891169
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71973875"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690458"
 ---
 # <a name="comparison-of-standard-and-datacenter-editions-of-windows-server-2019"></a>Сравнение выпусков Windows Server 2019 Standard и Datacenter
 
@@ -155,7 +155,6 @@ ms.locfileid: "71973875"
 |Балансировка сетевой нагрузки|Да|Да|
 |Windows PowerShell|Да|Да|
 |Установка основных серверных компонентов|Да|Да|
-|Вариант установки Nano Server|Да|Да|
 |Диспетчер серверов|Да|Да|
 |SMB Direct и SMB через RDMA|Да|Да|
 |Программно-определяемая сеть|Нет| <strong>Да</strong> |
