@@ -11,14 +11,14 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 manager: jasgro
-ms.date: 08/22/2019
+ms.date: 10/22/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 261023223b56e235320b7ad414fa91206420b1ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a2d3a871165812ac3a27e65b5f52cc56a05c9efe
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360836"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812295"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-windows-server-2019"></a>Удаленные или подлежащие замене компоненты в Windows Server версии 2019
 
@@ -41,6 +41,7 @@ ms.locfileid: "71360836"
 | Бизнес-сканирование, также известное как распределенное управление сканированием (DSM)|Мы удаляем это безопасное сканирование и возможность управления сканером — устройств, поддерживающих эту функцию, нет. |
 | Компоненты печати — теперь это дополнительные компоненты для варианта установки основных серверных компонентов.|В предыдущих выпусках Windows Server компоненты печати были *отключены* по умолчанию в варианте установки основных серверных компонентов. Мы внесли изменения в Windows Server 2016, сделав эти компоненты включенными по умолчанию. В Windows Server 2019 эти компоненты печати опять отключены по умолчанию для основных серверных компонентов. Чтобы включить компоненты печати, выполните командлет **Install-WindowsFeature Print-Server**. |
 | [Брокер подключений к удаленному рабочему столу и узел виртуализации удаленных рабочих столов](../remote/remote-desktop-services/desktop-hosting-service.md) в установке основных серверных компонентов|В большинстве развертываний служб удаленных рабочих столов эти роли совместно размещаются с узлом сеансов удаленных рабочих столов (RDSH), что требует наличия Server с возможностями рабочего стола. Для обеспечения единообразия в RDSH мы изменяем эти роли, и они также будут требовать Server с возможностями рабочего стола. Эти роли RDS больше не доступны для использования в [установке основных серверных компонентов](../administration/server-core/what-is-server-core.md). Если вам необходимо [развернуть эти роли как часть инфраструктуры удаленного рабочего стола](../remote/remote-desktop-services/rds-deploy-infrastructure.md), можно [установить их в Windows Server с возможностями рабочего стола](../get-started/getting-started-with-server-with-desktop-experience.md). <br/><br/>Эти роли также включаются в вариант установки с возможностями рабочего стола в Windows Server 2019. |
+| [3D-видеоадаптер RemoteFX (vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|Мы разрабатываем новые параметры ускорения графики для виртуализованных сред. В качестве альтернативы также можно использовать [Дискретное назначение устройств (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md). |
 
 ## <a name="features-were-no-longer-developing"></a>Компоненты, которые мы больше не разрабатываем
 

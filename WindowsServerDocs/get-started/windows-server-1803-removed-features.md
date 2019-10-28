@@ -7,13 +7,13 @@ ms.localizationpriority: medium
 ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
-ms.date: 08/22/2019
-ms.openlocfilehash: 482897b31bfaf3c4fe1f6b44a184463e88c5ae65
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 10/22/2019
+ms.openlocfilehash: 68edc1f0aaa857d0342f963e19964f5c9e389ed0
+ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391310"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72812327"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1803"></a>Удаленные или подлежащие замене компоненты в Windows Server версии 1803
 
@@ -52,7 +52,7 @@ ms.locfileid: "71391310"
 | [Службы MultiPoint](../remote/multipoint-services/multipoint-services.md)|Мы больше не разрабатываем роль служб MultiPoint в составе Windows Server. Службы соединителя MultiPoint доступны в функции [Компонент по требованию](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities) для Windows Server и Windows 10. Можно использовать [Службы удаленных рабочих столов](../remote/remote-desktop-services/welcome-to-rds.md), в частности, Узел сеансов служб удаленных рабочих столов для обеспечения связи RDP. |
 | [Автономные пакеты символов](https://docs.microsoft.com/windows-hardware/drivers/debugger/debugger-download-symbols) (MSI-файлы символов для отладки)|Мы больше не предлагаем пакеты символов в виде загружаемых MSI-файлов. Вместо этого [сервер символов (Майкрософт) станет хранилищем символов на основе Azure](https://blogs.msdn.microsoft.com/windbg/2017/10/18/update-on-microsofts-symbol-server/). Если вам требуются символы Windows, подключитесь к серверу символов (Майкрософт), чтобы закэшировать символы в локальном режиме, или используйте файл манифеста с SymChk.exe на компьютере с доступом в Интернет. |
 | [Брокер подключений к удаленному рабочему столу и узел виртуализации удаленных рабочих столов](../remote/remote-desktop-services/desktop-hosting-service.md) в установке основных серверных компонентов|В большинстве развертываний служб удаленных рабочих столов эти роли совместно размещаются с узлом сеансов удаленных рабочих столов (RDSH), что требует наличия Server с возможностями рабочего стола. Для обеспечения единообразия в RDSH мы изменяем эти роли, и они также будут требовать Server с возможностями рабочего стола. Мы больше не разрабатываем эти роли RDS для использования в [установке Server Core](../administration/server-core/what-is-server-core.md). Если вам необходимо [развернуть эти роли как часть инфраструктуры удаленного рабочего стола](../remote/remote-desktop-services/rds-deploy-infrastructure.md), можно [установить их в Windows Server 2016 с возможностями рабочего стола](getting-started-with-server-with-desktop-experience.md). <br/><br/>Эти роли также включаются в вариант установки с возможностями рабочего стола в Windows Server 2019. Их можно проверить в [сборке программы предварительной оценки Windows для Windows Server 2019](https://docs.microsoft.com/windows-insider/at-work/), просто не забудьте выбрать образ LTSC. |
-| [RemoteFX vGPU](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|Мы разрабатываем новые параметры ускорения графики для виртуализованных сред. В качестве альтернативы также можно использовать [Дискретное назначение устройств (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md). |
+| [3D-видеоадаптер RemoteFX (vGPU)](../remote/remote-desktop-services/rds-remotefx-vgpu.md)|Мы разрабатываем новые параметры ускорения графики для виртуализованных сред. В качестве альтернативы также можно использовать [Дискретное назначение устройств (DDA)](../virtualization/hyper-v/plan/plan-for-deploying-devices-using-discrete-device-assignment.md). |
 | [Политика программных ограничений](../identity/software-restriction-policies/software-restriction-policies.md) в групповой политике|Вместо использования политики программных ограничений в групповой политике можно использовать [AppLocker](https://docs.microsoft.com/windows/security/threat-protection/applocker/applocker-overview) или [управление приложениями в Защитнике Windows](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control) для управления тем, к каким приложениям пользователи могут получить доступ и какой код может выполняться в ядре. |
 | Дисковые пространства в общей конфигурации с использованием структуры SAS|Вместо этого разворачивайте [локальные дисковые пространства](../storage/storage-spaces/storage-spaces-direct-overview.md). Локальные дисковые пространства поддерживают использование сертифицированных HLK корпусов SAS, но в конфигурации без общего доступа, как описано в [требованиях к оборудованию локальных дисковых пространств](../storage/storage-spaces/storage-spaces-direct-hardware-requirements.md). |
 | Режим Windows Server Essentials|Мы больше не разрабатываем роль режима Essentials для Windows Server Standard и SKU Windows Server Datacenter. Если вам требуется простое серверное решение для предприятий малого и среднего бизнеса, проверьте наше новое решение [Microsoft 365 для бизнеса](https://www.microsoft.com/microsoft-365/business) или используйте [Windows Server 2016 Essentials](https://docs.microsoft.com/windows-server-essentials/get-started/get-started). |
