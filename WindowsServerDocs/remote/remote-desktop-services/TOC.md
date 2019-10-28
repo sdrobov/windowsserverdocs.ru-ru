@@ -12,7 +12,7 @@
 ### [Высокая доступность](rds-plan-high-availability.md)
 ### [Многофакторная идентификация](rds-plan-mfa.md)
 ### [Безопасное хранилище данных](rds-plan-secure-data-storage.md)
-### [Выбор технологии отрисовки графики](rds-graphics-virtualization.md)
+### [Ускорение с помощью GPU](rds-graphics-virtualization.md)
 ### [Подключение с любого устройства](rds-plan-connect-from-any-device.md)
 ### [Выбор способа оплаты](rds-plan-choose-how-you-pay.md)
 ### [Office 2016 в развертываниях RDS и VDI](https://docs.microsoft.com/deployoffice/rds-office-vdi-rdsh)
@@ -56,7 +56,6 @@
 ##### [Создание плана аварийного восстановления](rds-disaster-recovery-plan.md)
 
 ## [Запуск и настройка](rds-run-and-tune.md)
-### [Установка и настройка RemoteFX vGPU для служб удаленных рабочих столов](rds-remotefx-vgpu.md)
 ### [Управление коллекциями сеансов личных рабочих столов](rds-manage-personal-collection.md)
 ### [Рекомендуемая конфигурация для рабочих столов VDI](rds-vdi-recommendations.md)
 ### [Оптимизация Windows 10 версии 1803 для роли инфраструктуры виртуальных рабочих столов (VDI)](rds-vdi-recommendations-1803.md)
