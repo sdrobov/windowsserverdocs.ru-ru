@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 830a2d99443938c25625211f590984819a20d566
-ms.sourcegitcommit: 40e4ba214954d198936341c4d6ce1916dc891169
+ms.openlocfilehash: 597bcbe647bca3595dc8251ce4d6bf52265d8731
+ms.sourcegitcommit: 4b4ff8d9e18b2ddcd1916ffa2cd58fffbed8e7ef
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72690442"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72986434"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -133,7 +133,7 @@ ms.locfileid: "72690442"
   Имя журнала: Microsoft-Windows-Сторажемигратионсервице-proxy/Debug Source: Microsoft-Windows-Сторажемигратионсервице-proxy Дата: 2/26/2019 9:00:04 AM ИД события: 10000 Категория задачи: нет уровня: ключевые слова ошибок:      
   Пользователь: компьютер сетевой службы: srv1.contoso.com Описание:
 
-  02/26/2019-09:00:04.860 [Ошибка] ошибка при переносе для \\srv1. contoso. ком\публик\инди.ПНГ: (5) отказано в доступе.
+  02/26/2019-09:00:04.860 [Ошибка] ошибка при переносе для \\SRV1. contoso. ком\публик\инди.ПНГ: (5) отказано в доступе.
 Трассировка стека: в Microsoft. Сторажемигратион. Proxy. Service. Trace. Филедирутилс. OpenFile (строковое имя файла, Десиредакцесс Десиредакцесс, Шаремоде Шаремоде, CreationDisposition creationDisposition, Флагсандаттрибутес flagsAndAttributes) в Microsoft. Сторажемигратион. Proxy. Service. Перемещение. Филедирутилс. Жеттаржетфиле (строковый путь) в Microsoft. Сторажемигратион. Proxy. Service. Re. Филедирутилс. Жеттаржетфиле (FileInfo-файл) в Microsoft. Сторажемигратион. Proxy. Service. передает. Филетрансфер. Инитиализесаурцефилеинфо () в Microsoft. Сторажемигратион. Proxy. Service. Re. Филетрансфер. reby () в Microsoft. Сторажемигратион. Proxy. Service. Перемещение. Филетрансфер. Тритрансфер () [Д:\ос\срк\басе\дмс\прокси\трансфер\трансферпрокси\филетрансфер.КС:: TryTransfer:: 55]
 
 
@@ -287,7 +287,25 @@ ms.locfileid: "72690442"
    
 2.  Запустите службу миграции хранилища, которая создаст новую базу данных.
 
+## <a name="error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails"></a>Ошибка "сбой CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO для ресурса netName" и прямую миграцию кластера Windows Server 2008 R2
 
+При попытке выполнить операцию вырезания источника кластера Windows Server 2008 R2 на этапе "Переименование исходного компьютера" зависает. появится следующая ошибка:
+
+    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+    Source:        Microsoft-Windows-StorageMigrationService-Proxy
+    Date:          10/17/2019 6:44:48 PM
+    Event ID:      10000
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      WIN-RNS0D0PMPJH.contoso.com
+    Description:
+    10/17/2019-18:44:48.727 [Erro] Exception error: 0x1. Message: Control code CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource 2008r2FS., stackTrace:    at Microsoft.FailoverClusters.Framework.ClusterUtils.NetnameRepairVCO(SafeClusterResourceHandle netNameResourceHandle, String netName)
+       at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
+       at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
+
+Эта проблема вызвана отсутствием API в более ранних версиях Windows Server. В настоящее время невозможно перенести кластеры Windows Server 2008 и Windows Server 2003. Вы можете выполнять инвентаризацию и перенос без проблем в кластерах Windows Server 2008 R2, а затем вручную выполнять прямую миграцию, вручную изменяя и IP-адрес исходного файлового сервера в кластере, а затем изменяя NetName и IP-адреса конечного кластера. адрес, соответствующий исходному источнику. 
 
 ## <a name="see-also"></a>См. также
 
