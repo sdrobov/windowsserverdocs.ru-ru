@@ -20,7 +20,7 @@
 ##### [Язык правил преобразования утверждений](solution-guides/Claims-Transformation-Rules-Language.md)
 #### [Приложение А. Глоссарий по динамическому контролю доступа](solution-guides/appendix-A--Dynamic-Access-Control-Glossary.md)
 #### [Приложение Б. Настройка тестовой среды](solution-guides/appendix-B--Setting-Up-the-Test-Environment.md)
-
+### [Настройка веб-службы регистрации сертификатов для продления на основе ключей сертификата через настраиваемый порт](solution-guides/certificate-enrollment-certificate-key-based-renewal.md)
 
 ## [Доменные службы Active Directory](ad-ds/active-directory-Domain-Services.md)
 
