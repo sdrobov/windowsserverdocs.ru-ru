@@ -27,6 +27,7 @@
 ## Используйте
 ### [Начало работы](use/get-started.md)
 ### [Управление серверами](use/manage-servers.md)
+### [Развертывание гиперконвергентной инфраструктуры](use/deploy-hyperconverged-infrastructure.md)
 ### [Управление гиперконвергентной инфраструктурой](use/manage-hyper-converged.md)
 ### [Управление отказоустойчивыми кластерами](use/manage-failover-clusters.md)
 ### [Управление виртуальными машинами Hyper-V](use/manage-virtual-machines.md)
