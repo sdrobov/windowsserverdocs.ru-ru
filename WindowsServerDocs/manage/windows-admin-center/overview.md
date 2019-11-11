@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 09/18/2019
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: e235c8013afa573712feaec75bbd1ca195c0e307
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c914a472869f9887c83733d6aab614b5676d17d7
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357002"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567141"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -25,9 +25,9 @@ ms.locfileid: "71357002"
 
 >[!VIDEO https://www.youtube.com/embed/PcQj6ZklmK0]
 
-![Информационная схема по Windows Admin Center](media/WAC1809Poster_thumb.PNG)
+![Информационная схема по Windows Admin Center](media/WAC1910Poster_thumb.PNG)
 
-[Скачать PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1809Poster.pdf)
+[Скачать PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
 
 ## <a name="quick-start"></a>Быстрый запуск
 
@@ -86,6 +86,7 @@ Windows Admin Center можно подготовить к работе и зап
             <ul>
             <li><a href="use/get-started.md">Запуск и добавление подключений</a>
             <li><a href="use/manage-servers.md">Управление серверами</a>
+            <li><a href="use/deploy-hyperconverged-infrastructure.md">Развертывание гиперконвергентной инфраструктуры</a>
             <li><a href="use/manage-hyper-converged.md">Управление гиперконвергентной инфраструктурой</a>
             <li><a href="use/manage-failover-clusters.md">Управление отказоустойчивыми кластерами</a>
             <li><a href="use/manage-virtual-machines.md">Управление виртуальными машинами</a>
@@ -129,11 +130,12 @@ Windows Admin Center можно подготовить к работе и зап
 
 Узнайте о наших последних выпущенных функциях:
 
+- Версия [1910](https://aka.ms/wac1910) является последним общедоступным выпуском. В нем представлены новые гибридные службы Azure и функции, которые ранее находились на этапе предварительной версии для общедоступного канала.
 - В версии [1909](https://aka.ms/wac1909) представлен тип подключения для виртуальных машин Azure и унифицированы типы подключения для традиционных отказоустойчивых кластеров и кластеров HCI.
 - В версии [1908](https://aka.ms/wac1908) добавлены обновления визуальных компонентов, Packetmon, FlowLog Audit, подключение Azure Monitor для кластеров и поддержка WinRM по протоколу HTTPS (порт 5986).
 - В версии [1907](https://aka.ms/wac1907) добавлены ссылки для оценки затрат на Azure и внесены улучшения в функции импорта, экспорта и добавления тегов для виртуальных машин.
 - В версии [1906](https://aka.ms/wac1906) добавлены функции импорта и экспорта виртуальных машин, переключение учетных записей Azure, добавление подключений из Azure, экспериментирование с настройкой подключений, улучшения производительности и средство профилирования производительности.
-- Версия 1904.1 является самым последним общедоступным выпуском — обновлением для улучшения стабильности подключаемых модулей шлюзов.
+- Версия 1904.1 была техническим обновлением для улучшения стабильности подключаемых модулей шлюзов.
 - Версия [1904](https://aka.ms/wac1904) была общедоступным выпуском, который представил инструмент гибридных служб Azure и содержал функции, которые ранее были в предварительной версии для общедоступного канала.
 - В версии [1903](https://aka.ms/wac1903) были добавлены уведомления по электронной почте из Azure Monitor, возможность добавлять соединения с сервером или ПК из Active Directory, а также новые средства для управления Active Directory, DHCP и DNS.
 - В версии [1902](https://aka.ms/wac1902) был добавлен список общих подключений и улучшения в управлении программно-определяемой сетью (SDN), включая новые средства SDN для управления ACL, подключениями шлюзов и логическими сетями.

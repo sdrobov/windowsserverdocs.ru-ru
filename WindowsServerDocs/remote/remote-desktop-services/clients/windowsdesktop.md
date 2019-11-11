@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/24/2019
+ms.date: 10/31/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 961d636fb59b33d0c562ec25d13174abbe766606
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: aff7e6e1f37cad66530679ade024c089a4ba034e
+ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404072"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73567168"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Приступая к работе с клиентом для Windows Desktop
 
@@ -33,9 +33,11 @@ ms.locfileid: "71404072"
 
 ## <a name="install-the-client"></a>Установка клиента
 
-Сейчас вы можете скачать клиент для 64-разрядной версии Windows. Мы обновим этот список, когда станут доступны клиенты для других версий Windows.
+Выберите клиент, который соответствует вашей версии Windows:
 
-- [Клиент для Windows (64-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2068602)
+- [Windows (64-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2068602)
+- [Windows (32-разрядная ознакомительная версия)](https://go.microsoft.com/fwlink/?linkid=2098960)
+- [Windows для ARM64 (ознакомительная версия)](https://go.microsoft.com/fwlink/?linkid=2098961)
 
 Можно установить клиент для текущего пользователя, что не требует прав администратора. Кроме того, администратор может установить и настроить клиент, чтобы все пользователи устройства могли получить к нему доступ.
 
