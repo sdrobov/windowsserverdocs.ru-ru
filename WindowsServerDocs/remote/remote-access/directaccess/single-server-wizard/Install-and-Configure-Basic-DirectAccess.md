@@ -21,15 +21,15 @@ ms.locfileid: "71404900"
 ---
 # <a name="install-and-configure-basic-directaccess"></a>Установка и настройка базового DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом обзоре содержатся общие сведения о шагах настройки, необходимых для развертывания одного сервера DirectAccess под Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012with Basic Settings.  
   
--   [Шаг 1. Настройте базовую инфраструктуру DirectAccess @ no__t-0. На этой стадии настраиваются параметры сети и сервера, а также DNS и Active Directory.  
+-   [Шаг 1. Настройка базовой инфраструктуры DirectAccess](da-basic-configure-s1-infrastructure.md). На этой стадии настраиваются параметры сети и сервера, а также DNS и Active Directory.  
   
--   [Шаг 2. Настройте базовый сервер DirectAccess @ no__t-0. Этот этап включает в себя настройку клиентских компьютеров DirectAccess и параметров сервера.  
+-   [Шаг 2. Настройка базового сервера DirectAccess](da-basic-configure-s2-server.md). Этот этап включает в себя настройку клиентских компьютеров DirectAccess и параметров сервера.  
   
--   [Шаг 3. Проверьте развертывания @ no__t-0. На этой стадии проверяется развертывание.  
+-   [Шаг 3. Проверка развертываний](da-basic-configure-s3-verify.md). На этой стадии проверяется развертывание.  
   
 Перед началом развертывания следует спланировать действия в соответствии с инструкциями раздела [Планирование развертывания базового DirectAccess](Plan-a-Basic-DirectAccess-Deployment.md).  
   

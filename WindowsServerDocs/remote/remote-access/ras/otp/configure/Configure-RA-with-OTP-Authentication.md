@@ -21,18 +21,18 @@ ms.locfileid: "71404419"
 ---
 # <a name="configure-remote-access-with-otp-authentication"></a>Настройка удаленного доступа с проверкой подлинности OTP
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016 и Windows Server 2012 объединяют VPN DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в одну роль удаленного доступа. В этом обзоре приводятся общие сведения о шагах настройки, необходимых для развертывания одного многосайтового развертывания Windows Server 2016 или Windows Server 2012 с удаленным доступом.  
 
 
-- [Шаг 1. Реализуйте односерверное развертывание с удаленным доступом @ no__t-0. Установите и настройте отдельный сервер удаленного доступа. Инструкции см. в статье [развертывание одного сервера DirectAccess с дополнительными параметрами](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).
+- [Шаг 1. Реализация развертывания удаленного доступа с одним сервером](../../multisite/configure/Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md). Установите и настройте отдельный сервер удаленного доступа. Инструкции см. в статье [развертывание одного сервера DirectAccess с дополнительными параметрами](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).
 
-- [Шаг 2. Настройте сервер RADIUS @ no__t-0.
+- [Шаг 2. Настройка сервера RADIUS](Step-2-Configure-the-RADIUS-Server.md).
 
-- [Шаг 3. Настройте сервер удаленного доступа для OTP @ no__t-0.
+- [Шаг 3. Настройка сервера удаленного доступа для OTP](Step-3-Configure-the-Remote-Access-Server-for-OTP.md).
 
-- [Шаг 4. Проверьте DirectAccess с OTP @ no__t-0.
+- [Шаг 4. Проверка DirectAccess с OTP](Step-4-Verify-DirectAccess-with-OTP.md).
   
 
 

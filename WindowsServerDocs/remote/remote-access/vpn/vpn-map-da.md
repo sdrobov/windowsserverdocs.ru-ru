@@ -18,10 +18,10 @@ ms.locfileid: "71404277"
 ---
 # <a name="always-on-vpn-features-and-functionalities"></a>Always On компонентов и функций VPN
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
-- [**Прошлом** Always On развертывание VPN для Windows Server и Windows 10 @ no__t-0
-- [**Очеред** Дополнительные сведения об улучшениях Always On VPN @ no__t-0
+- [**Назад:** Always On развертывание VPN для Windows Server и Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md)
+- [**Далее:** Дополнительные сведения об улучшениях Always On VPN](../vpn/always-on-vpn/always-on-vpn-enhancements.md)
 
 В этом разделе вы узнаете о функциях и возможностях Always On VPN.  Следующая таблица не является исчерпывающим списком, однако она включает некоторые наиболее распространенные функции и возможности, используемые в решениях удаленного доступа. 
 
@@ -60,7 +60,7 @@ ms.locfileid: "71404277"
 
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Дополнительные сведения об улучшениях Always On VPN](always-on-vpn/always-on-vpn-enhancements.md)
 

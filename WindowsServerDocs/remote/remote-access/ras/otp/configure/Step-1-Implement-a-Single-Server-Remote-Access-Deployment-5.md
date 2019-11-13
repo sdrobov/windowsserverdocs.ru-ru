@@ -21,7 +21,7 @@ ms.locfileid: "71404411"
 ---
 # <a name="step-1-implement-a-single-server-remote-access-deployment"></a>Шаг 1. Реализация развертывания удаленного доступа на одном сервере
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Первый этап настройки для развертывания удаленного доступа с использованием OTP заключается в реализации расширенного развертывания с одним сервером и последующем планировании добавления сервера RADIUS.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "71404411"
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 2. Настройка сервера RADIUS @ no__t-0  
+-   [Шаг 2. Настройка сервера RADIUS](Step-2-Configure-the-RADIUS-Server.md)  
   
 
 

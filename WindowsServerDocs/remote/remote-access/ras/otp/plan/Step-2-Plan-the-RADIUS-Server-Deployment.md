@@ -21,7 +21,7 @@ ms.locfileid: "71404392"
 ---
 # <a name="step-2-plan-the-radius-server-deployment"></a>Шаг 2. Планирование развертывания сервера RADIUS
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 После развертывания одного сервера удаленного доступа запланируйте сервер проверки подлинности одноразового пароля (OTP).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71404392"
   
 -   При развертывании сервера RADIUS настраивается общий секрет и номер порта для трафика RADIUS. Запишите эти сведения. они необходимы при настройке сервера удаленного доступа.  
   
-Пример лабораторного руководства по тестированию, который настраивает проверку подлинности OTP с помощью сервера RSA SecurID, см. в разделе Руководство по @no__t 0Test Lab: Демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID @ no__t-0.  
+Пример лабораторного руководства по тестированию, который настраивает проверку подлинности OTP с помощью сервера RSA SecurID, можно просмотреть в разделе [руководство по тестированию: демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/tlg-otp-securid/test-lab-guide-demonstrate-directaccess-with-otp-authentication-and-rsa-securid).  
   
   
   

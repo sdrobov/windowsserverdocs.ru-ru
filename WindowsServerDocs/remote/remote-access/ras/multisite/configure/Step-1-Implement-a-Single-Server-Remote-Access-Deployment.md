@@ -21,7 +21,7 @@ ms.locfileid: "71404491"
 ---
 # <a name="step-1-implement-a-single-server-remote-access-deployment"></a>Шаг 1. Реализация развертывания удаленного доступа на одном сервере
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Первый этап настройки для развертывания удаленного доступа в многосайтовой топологии состоит в реализации расширенного развертывания с одним сервером и последующем планировании добавления серверов к каждой точке входа на одном сайте.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "71404491"
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 2. Настройка межсайтовой инфраструктуры @ no__t-0  
+-   [Шаг 2. Настройка межсайтовой инфраструктуры](Step-2-Configure-the-Multisite-Infrastructure.md)  
 
 
 

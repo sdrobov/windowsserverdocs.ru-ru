@@ -22,17 +22,17 @@ ms.locfileid: "71404624"
 ---
 # <a name="configure-a-remote-access-cluster"></a>Настройка кластера удаленного доступа
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016 и Windows Server 2012 объединяют Always On VPN-подключения VPN и службы маршрутизации и удаленного доступа (RRAS) в одну роль удаленного доступа. В этом обзоре содержатся общие сведения о шагах настройки, необходимых для развертывания одного сервера удаленного доступа Windows Server 2016 или Windows Server 2012 в кластере с балансировкой нагрузки.
   
--  Шаг 1. [Разверните VPN-сервер Always On с дополнительными параметрами](../../../vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md).
+-  Шаг 1. [Развертывание VPN-сервера Always On с дополнительными параметрами](../../../vpn/always-on-vpn/deploy/always-on-vpn-adv-options.md).
   
--   [Шаг 2. Подготовка серверов кластера @ no__t-0.  
+-   [Шаг 2. Подготовка серверов кластера](Step-2-Prepare-Cluster-Servers.md).  
   
--   [Шаг 3. Настройте кластер с балансировкой нагрузки @ no__t-0.  
+-   [Шаг 3. Настройка кластера с балансировкой нагрузки](Step-3-Configure-a-Load-Balanced-Cluster.md).  
   
--   [Шаг 4. Проверьте кластер @ no__t-0.  
+-   [Шаг 4. Проверка кластера](Step-4-Verify-the-Cluster.md).  
   
 
 

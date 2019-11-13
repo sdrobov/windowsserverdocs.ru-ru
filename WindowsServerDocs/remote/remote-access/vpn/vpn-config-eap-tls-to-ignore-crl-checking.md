@@ -24,10 +24,10 @@ ms.locfileid: "71388075"
 ---
 # <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>Шаг 7.1. Настройка игнорирования проверки списка отзыва сертификатов (CRL) в EAP-TLS
 
->Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**Прошлом** Шаг 7. Используемых Условный доступ для VPN-подключений с помощью Azure AD](ad-ca-vpn-connectivity-windows10.md)
-- [**Очеред** Шаг 7.2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+- [**Назад:** Шаг 7. Используемых Условный доступ для VPN-подключений с помощью Azure AD](ad-ca-vpn-connectivity-windows10.md)
+- [**Далее:** Шаг 7,2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 >[!IMPORTANT]
 >Несоблюдение этого изменения реестра приведет к сбою подключений IKEv2, использующих облачные сертификаты с PEAP, но подключения IKEv2 с использованием сертификатов проверки подлинности клиента, выданных из локального ЦС, будут продолжать работать.
@@ -45,7 +45,7 @@ ms.locfileid: "71388075"
 
 1. Откройте **файл Regedit. exe** на сервере NPS.
 
-2. Перейдите по адресу **HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13**.
+2. Перейдите к **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\rasman\ppp\eap\13**.
 
 3. Выберите **изменить > создать** и выберите **значение DWORD (32-bit)** и введите **игнореноревокатиончекк**.
 
@@ -62,6 +62,6 @@ ms.locfileid: "71388075"
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-[Шаг 7.2. Создайте корневые сертификаты для проверки подлинности VPN с помощью Azure AD @ no__t-0: На этом шаге вы настроите корневой сертификат условного доступа для проверки подлинности VPN с помощью Azure AD, который автоматически создает облачное приложение VPN-сервера в клиенте.
+[Шаг 7,2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md). на этом шаге вы настроите корневые сертификаты условного доступа для проверки подлинности VPN с помощью Azure AD, которая автоматически создает облачное приложение VPN-сервера в клиенте.

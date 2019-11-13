@@ -21,12 +21,12 @@ ms.locfileid: "71394554"
 ---
 # <a name="directaccess-test-lab-guides"></a>Руководства по лаборатории тестирования DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Ниже приведены ссылки на руководства лаборатории тестирования для DirectAccess в Windows Server 2016, Windows Server 2012 R2 и Windows Server 2012.
 
-- [Руководство по лаборатории тестирования. Демонстрация DirectAccess в кластере с Windows NLB @ no__t-0
+- [Руководство по тестовой лаборатории: демонстрация DirectAccess в кластере с помощью Windows NLB](tlg-cluster-nlb/Test-Lab-Guide-Demonstrate-DirectAccess-in-a-Cluster-with-Windows-NLB.md)
 
-- [Руководство по лаборатории тестирования. Демонстрация многосайтового развертывания DirectAccess @ no__t-0
+- [Руководство по тестовой лаборатории: демонстрация многосайтового развертывания DirectAccess](tlg-multisite/Test-Lab-Guide-Demonstrate-a-DirectAccess-Multisite-Deployment.md)
 
-- [Руководство по лаборатории тестирования. Демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID @ no__t-0
+- [Руководство по тестовой лаборатории: демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID](tlg-otp-securid/Test-Lab-Guide-Demonstrate-DirectAccess-with-OTP-Authentication-and-RSA-SecurID.md)

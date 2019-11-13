@@ -21,13 +21,13 @@ ms.locfileid: "71388600"
 ---
 # <a name="plan-a-basic-directaccess-deployment"></a>Планирование развертывания базового DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе описаны этапы планирования, необходимые для развертывания одного сервера DirectAccess под Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012 с базовыми функциями.  
   
-1.  [Шаг 1. Спланируйте базовую инфраструктуру DirectAccess @ no__t-0 — спланируйте топологию сети и сервера, параметры брандмауэра, требования к сертификатам, DNS и Active Directory.  
+1.  [Шаг 1. Планирование базовой инфраструктуры DirectAccess](da-basic-plan-s1-infrastructure.md)— Планирование топологии сети и сервера, параметров брандмауэра, требований к сертификатам, DNS и Active Directory.  
   
-2.  [Шаг 2. Спланируйте базовое развертывание DirectAccess. @ no__t-0 — Планирование развертывания клиента и сервера.  
+2.  [Шаг 2. Планирование развертывания клиентов и серверов в базовом плане развертывания DirectAccess](da-basic-plan-s2-deployment.md).  
   
 ## <a name="next-step"></a>Дальнейшие действия  
 По завершении планирования вы можете приступить к развертыванию сервера. Инструкции см. в статье [Установка и Настройка базового DirectAccess](Install-and-Configure-Basic-DirectAccess.md).  

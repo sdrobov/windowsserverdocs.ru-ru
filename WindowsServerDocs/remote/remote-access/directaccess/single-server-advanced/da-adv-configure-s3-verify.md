@@ -21,7 +21,7 @@ ms.locfileid: "71404905"
 ---
 # <a name="step-3-verify-the-advanced-directaccess-deployment"></a>Шаг 3. Проверка расширенного развертывания DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе описывается, как проверить правильность настройки развертывания DirectAccess.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "71404905"
   
 ## <a name="BKMK_Links"></a>Предыдущий шаг  
   
--   [Шаг 2. Настройка серверов DirectAccess @ no__t-0  
+-   [Шаг 2. Настройка серверов DirectAccess](Step-2-Configuring-DirectAccess-Servers.md)  
   
 
 

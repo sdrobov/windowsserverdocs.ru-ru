@@ -15,21 +15,21 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71365794"
 ---
-# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: Шаг 1, настройка AD FS
+# <a name="deploy-work-folders-with-ad-fs-and-web-application-proxy-step-1-set-up-ad-fs"></a>Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 1. Настройка AD FS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этой статье описывается первый шаг процесса развертывания рабочих папок с помощью службы федерации Active Directory (AD FS) и прокси-службы веб-приложения. Другие шаги этого процесса можно найти в следующих статьях:  
   
--   [Deploy рабочие папки с AD FS и прокси веб-приложения: Средств](deploy-work-folders-adfs-overview.md)  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: обзор](deploy-work-folders-adfs-overview.md)  
   
--   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 2 AD FS действия после настройки @ no__t-0  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: шаг 2, AD FS работы после настройки](deploy-work-folders-adfs-step2.md)  
   
--   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 3. Настройка рабочих папок @ no__t-0  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: шаг 3, Настройка рабочих папок](deploy-work-folders-adfs-step3.md)  
   
--   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 4. Настройка прокси веб-приложения @ no__t-0  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: шаг 4, Настройка прокси веб-приложения](deploy-work-folders-adfs-step4.md)  
   
--   [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 5. Настройка клиентов @ no__t-0  
+-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения: шаг 5, Настройка клиентов](deploy-work-folders-adfs-step5.md)  
   
 > [!NOTE]
 >   Инструкции, описанные в этом разделе, предназначены для среды Windows Server 2019 или Windows Server 2016. Если вы используете Windows Server 2012 R2, следуйте [инструкциями для Windows Server 2012 R2](https://technet.microsoft.com/library/dn747208(v=ws.11).aspx).
@@ -104,7 +104,7 @@ ms.locfileid: "71365794"
 SAN enterpriseregistration требуется для Workplace Join.  
   
 ### <a name="set-the-server-ip-address"></a>Установка IP-адреса сервера  
-Измените IP-адрес сервера на статический IP-адрес. Для примера теста используйте класс IP-адреса A, который является 192.168.0.160/маской подсети. 255.255.0.0 и шлюз по умолчанию: 192.168.0.1/предпочтительный DNS: 192.168.0.150 (IP-адрес контроллера домена @ no__t-0.  
+Измените IP-адрес сервера на статический IP-адрес. В тестовом примере используется IP-адрес класса A, а именно 192.168.0.160 / маска подсети: 255.255.0.0 / Шлюз по умолчанию: 192.168.0.1 / Основной DNS-сервер: 192.168.0.150 (IP-адрес контроллера домена\).  
   
 ## <a name="install-the-ad-fs-role-service"></a>Установка службы роли AD FS  
 Для установки AD FS выполните следующие действия:  
@@ -182,7 +182,7 @@ $thumbprint = $cert.Thumbprint
 Install-ADFSFarm -CertificateThumbprint $thumbprint -FederationServiceDisplayName "Contoso Corporation" –FederationServiceName blueadfs.contoso.com -GroupServiceAccountIdentifier contoso\ADFSService$ -OverwriteConfiguration -ErrorAction Stop  
 ```  
   
-Далее: [Deploy рабочие папки с AD FS и прокси веб-приложения: Шаг 2 AD FS действия после настройки @ no__t-0  
+Следующий шаг: [Развертывание рабочих папок с помощью AD FS и прокси-службы веб-приложения. Шаг 2. Действия после настройки AD FS](deploy-work-folders-adfs-step2.md)  
   
 ## <a name="see-also"></a>См. также  
 [Общие сведения о рабочих папках](Work-Folders-Overview.md)  

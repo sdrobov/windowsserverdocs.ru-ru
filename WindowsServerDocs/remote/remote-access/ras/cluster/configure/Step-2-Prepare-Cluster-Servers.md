@@ -21,7 +21,7 @@ ms.locfileid: "71367408"
 ---
 # <a name="step-2-prepare-cluster-servers"></a>Шаг 2. Подготовка серверов кластера
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Прежде чем можно будет настроить развертывание кластера, необходимо подготовить дополнительные серверы для добавления в кластер.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "71367408"
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 3. Настройка кластера с балансировкой нагрузки @ no__t-0  
+-   [Шаг 3. Настройка кластера с балансировкой нагрузки](Step-3-Configure-a-Load-Balanced-Cluster.md)  
   
 
 

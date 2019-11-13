@@ -17,7 +17,7 @@ ms.locfileid: "71405828"
 ---
 # <a name="troubleshoot-sdn"></a>Устранение неполадок SDN
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В подразделах этого раздела содержатся сведения об устранении неполадок с технологиями программно-определяемой сети (SDN), которые входят в Windows Server 2016.
 
@@ -33,7 +33,7 @@ ms.locfileid: "71405828"
 Этот раздел содержит следующие подразделы.
 
 - [Диагностика стека программно-конфигурируемой сети Windows Server](https://docs.microsoft.com/windows-server/networking/sdn/troubleshoot/troubleshoot-windows-server-software-defined-networking-stack)
-- @No__t записи блога. Устранение неполадок 0SDN: Ошибки связи UDP и изменение сертификата сетевого контроллера @ no__t-0
+- [Устранение неполадок в записи блога: ошибки связи UDP и изменение сертификата сетевого контроллера](https://techcommunity.microsoft.com/t5/Networking-Blog/SDN-Troubleshooting-UDP-Communication-failures-and-changing-the/ba-p/339694)
 - Сообщения [в блоге проблемы с сертификатами в программно-определяемой сети (SDN)](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshooting-certificate-issues-in-Software-Defined/ba-p/339671)
 - Запись блога [, посвященная поиску локального адреса шлюза Sdn для ПИРИНГА BGP в Windows Server 2016](https://techcommunity.microsoft.com/t5/Networking-Blog/How-to-find-the-SDN-gateway-local-address-for-BGP-peering-in/ba-p/339663)
 - [Устранение неполадок в записи блога Настройка параметров пропускной способности VPN шлюза RAS для Sdn в Virtual Machine Manager](https://techcommunity.microsoft.com/t5/Networking-Blog/Troubleshoot-Configuring-SDN-RAS-Gateway-VPN-Bandwidth-Settings/ba-p/339661)

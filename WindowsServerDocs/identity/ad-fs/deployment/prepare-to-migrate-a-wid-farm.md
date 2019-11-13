@@ -22,9 +22,9 @@ ms.locfileid: "71359261"
   
 -   [Шаг 1. экспорт параметров службы](#step-1-export-service-settings)  
   
--   [Шаг 2. Резервное копирование пользовательских атрибутов хранилища @ no__t-0  
+-   [Шаг 2. Резервное копирование пользовательских хранилищ атрибутов](#step-2-back-up-custom-attribute-stores)  
   
--   [Шаг 3. Резервное копирование настроек веб-страниц @ no__t-0  
+-   [Шаг 3. Резервное копирование настроек веб-страниц](#step-3-back-up-webpage-customizations)  
   
 ## <a name="step-1-export-service-settings"></a>Шаг 1. Экспорт параметров службы  
  Для того чтобы экспортировать параметры службы, выполните следующие действия.  
@@ -55,9 +55,9 @@ ms.locfileid: "71359261"
 ## <a name="step-3-back-up-webpage-customizations"></a>Шаг 3. Резервное копирование пользовательских настроек веб-страницы  
  Чтобы выполнить резервное копирование пользовательских настроек веб-страницы, копируйте веб-страницы AD FS и файл **web.config** из каталога, сопоставленного виртуальному пути **“/adfs/ls”** , в IIS. По умолчанию он находится в каталоге **%systemdrive%\inetpub\adfs\ls**.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Подготовка к миграции прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенесите сервер федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
  [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

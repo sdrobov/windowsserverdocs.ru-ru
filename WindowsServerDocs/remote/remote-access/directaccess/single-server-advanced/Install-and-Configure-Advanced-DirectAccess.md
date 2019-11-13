@@ -21,19 +21,19 @@ ms.locfileid: "71388639"
 ---
 # <a name="install-and-configure-advanced-directaccess"></a>Установка и настройка DirectAccess с расширенными параметрами
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом обзоре перечислены этапы настройки, необходимые для развертывания одного сервера DirectAccess под Windows Server 2016, Windows Server 2012 R2 или Windows Server 2012 с IPv4 и IPv6.  
   
--   [Шаг 1. Настройка расширенной инфраструктуры DirectAccess @ no__t-0.  
+-   [Шаг 1. Настройка расширенной инфраструктуры DirectAccess](da-adv-configure-s1-infrastructure.md).  
   
     На этом этапе вы настраиваете параметры сети и серверов, сертификаты, систему DNS, развертывание сервера сетевых расположений, серверы управления DirectAccess, параметры Active Directory и объекты групповой политики (GPO).  
   
--   [Шаг 2. Настройка расширенных серверов DirectAccess @ no__t-0.  
+-   [Шаг 2. Настройка расширенных серверов DirectAccess](da-adv-configure-s2-servers.md).  
   
     На этом настраиваются клиентские компьютеры DirectAccess, параметры сервера, серверы инфраструктуры и приложений.  
   
--   [Шаг 3. Проверьте расширенное развертывание DirectAccess @ no__t-0.  
+-   [Шаг 3. Проверка расширенного развертывания DirectAccess](da-adv-configure-s3-verify.md).  
   
     На этом этапе выполняется проверка развертывания.  
   

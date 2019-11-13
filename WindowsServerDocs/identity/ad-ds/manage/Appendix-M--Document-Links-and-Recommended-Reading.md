@@ -16,12 +16,12 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71368944"
 ---
-# <a name="appendix-m-document-links-and-recommended-reading"></a>Приложение M: Ссылки на документы и Рекомендуемые материалы для чтения
+# <a name="appendix-m-document-links-and-recommended-reading"></a>Приложение Н. Ссылки на документы и рекомендуемая литература
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
-## <a name="appendix-m-document-links-and-recommended-reading"></a>Приложение M: Ссылки на документы и Рекомендуемые материалы для чтения  
+## <a name="appendix-m-document-links-and-recommended-reading"></a>Приложение Н. Ссылки на документы и рекомендуемая литература  
   
 ### <a name="document-links"></a>Ссылки на документы  
 Следующая таблица содержит список ссылок на внешние документы и их URL-адреса, чтобы читатели жестких копий этого документа могли получить доступ к этим сведениям. Ссылки перечисляются в том порядке, в котором они отображаются в документе.  
@@ -40,7 +40,7 @@ ms.locfileid: "71368944"
 |[служба поддержки Майкрософт статья 814777](https://support.microsoft.com/kb/814777)|[https://support.microsoft.com/kb/814777](https://support.microsoft.com/kb/814777)|  
 |[Открытие проекта безопасности веб-приложений (OWASP)](https://www.owasp.org/index.php/Main_Page)|[https://www.owasp.org/index.php/Main_Page](https://www.owasp.org/index.php/Main_Page)|  
 |[Жизненный цикл разработки системы безопасности Майкрософт](https://www.microsoft.com/security/sdl/default.aspx)|[https://www.microsoft.com/security/sdl/default.aspx](https://www.microsoft.com/security/sdl/default.aspx)|  
-|[Устранение атак Pass-a-hash (PtH) и других методов кражи учетных данных](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|[https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating Pass-a-hash (PtH) и другие кражи учетных данных Techniques_English. PDF](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|  
+|[Устранение атак Pass-a-hash (PtH) и других методов кражи учетных данных](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|[https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating атаки Pass-a-hash (PtH) и другие кражи учетных данных Techniques_English. PDF](https://download.microsoft.com/download/7/7/A/77ABC5BD-8320-41AF-863C-6ECFB10CB4B9/Mitigating%20Pass-the-Hash%20(PtH)%20Attacks%20and%20Other%20Credential%20Theft%20Techniques_English.pdf)|  
 |[Определенные злоумышленников и целевые атаки](https://www.microsoft.com/download/details.aspx?id=34793)|[https://www.microsoft.com/download/details.aspx?id=34793](https://www.microsoft.com/download/details.aspx?id=34793)|  
 |[Решение для управления паролем встроенной учетной записи администратора с помощью объекта групповой политики](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789)|[https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789](https://code.msdn.microsoft.com/windowsdesktop/Solution-for-management-of-ae44e789)|  
 |[служба поддержки Майкрософт статья 817433](https://support.microsoft.com/?id=817433)|[https://support.microsoft.com/?id=817433](https://support.microsoft.com/?id=817433)|  
@@ -90,7 +90,7 @@ ms.locfileid: "71368944"
 |[Управление Retina CS](http://www.wideeyesecurity.com/products.asp)|[http://www.wideeyesecurity.com/products.asp](http://www.wideeyesecurity.com/products.asp)|  
 |[луменсион](http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA)|[http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA](http://www.lumension.com/?rpLeadSourceId=5009&gclid=CKuai_e13rMCFal7QgodMFkAyA)|  
 |[Управление уязвимостью луменсион](http://www.lumension.com/Solutions/Vulnerability-Management.aspx)|[http://www.lumension.com/Solutions/Vulnerability-Management.aspx](http://www.lumension.com/Solutions/Vulnerability-Management.aspx)|  
-|Руководство по @no__tю и контрмерам: Права пользователя @ no__t-0|[https://technet.microsoft.com/library/hh125917(v=ws.10).aspx](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|  
+|[Руководство по угрозам и контрмерам: права пользователя](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|[https://technet.microsoft.com/library/hh125917(v=ws.10).aspx](https://technet.microsoft.com/library/hh125917(v=ws.10).aspx)|  
 |[Устранение угроз и уязвимостей](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx)|[https://technet.microsoft.com/library/cc755181(v=ws.10).aspx](https://technet.microsoft.com/library/cc755181(v=ws.10).aspx)|  
 |[Права пользователя](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx)|[https://technet.microsoft.com/library/dd349804(v=WS.10).aspx](https://technet.microsoft.com/library/dd349804(v=WS.10).aspx)|  
 |[Доступ к диспетчеру учетных данных как доверенному вызывающему объекту](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|[https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2](https://technet.microsoft.com/library/db585464-a2be-41b1-b781-e9845182f4b6(v=ws.10)#BKMK_2)|  
@@ -166,7 +166,7 @@ ms.locfileid: "71368944"
 |Рекомендации [по делегированию администрирования Active Directory](https://www.microsoft.com/download/details.aspx?id=21678) для Windows Server 2003|[https://www.microsoft.com/en-us/download/details.aspx?id=21678](https://www.microsoft.com/download/details.aspx?id=21678)|  
 |[Жизненный цикл служба поддержки Майкрософт](https://support.microsoft.com/lifecycle/)|[https://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx](https://support.microsoft.com/common/international.aspx?RDPATH=%2flifecycle%2fdefault.aspx)|  
 |[Техническая спецификация Active Directory](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|[https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx)|  
-|сообщение [Error, когда пользователи, не имеющие прав администратора с делегированным управлением, пытаются присоединить компьютеры к контроллеру домена на базе Windows Server 2003 или Windows Server 2008: "Отказано в доступе" ](https://support.microsoft.com/kb/932455)|[https://support.microsoft.com/kb/932455](https://support.microsoft.com/kb/932455)| 
+|[Сообщение об ошибке, когда пользователи, не имеющие прав администратора, которым был делегированный контроль, пытаются присоединить компьютеры к контроллеру домена на базе Windows Server 2003 или Windows Server 2008: "доступ запрещен"](https://support.microsoft.com/kb/932455)|[https://support.microsoft.com/kb/932455](https://support.microsoft.com/kb/932455)| 
 |[Пошаговое руководств по использованию механизма проверки подлинности для AD DS в Windows Server 2008 R2](https://technet.microsoft.com/library/dd378897(WS.10).aspx)|[https://technet.microsoft.com/library/dd378897(WS.10).aspx](https://technet.microsoft.com/library/dd378897(WS.10).aspx)|  
 |[Ограниченная проверка KDC](https://www.microsoft.com/download/details.aspx?id=6382)|[https://www.microsoft.com/download/details.aspx?id=6382](https://www.microsoft.com/download/details.aspx?id=6382)|  
   
@@ -189,7 +189,7 @@ ms.locfileid: "71368944"
 |Рекомендации [по делегированию администрирования Active Directory](https://www.microsoft.com/download/details.aspx?id=21678) для Windows Server 2003|  
 |[Жизненный цикл служба поддержки Майкрософт](https://support.microsoft.com/lifecycle/)|  
 |[Техническая спецификация Active Directory](https://msdn.microsoft.com/library/cc223122(v=prot.20).aspx) — сведения о дшеуристикс|  
-|сообщение [Error, когда пользователи, не имеющие прав администратора с делегированным управлением, пытаются присоединить компьютеры к контроллеру домена на базе Windows Server 2003 или Windows Server 2008: "Отказано в доступе" ](https://support.microsoft.com/kb/932455)|  
+|[Сообщение об ошибке, когда пользователи, не имеющие прав администратора, которым был делегированный контроль, пытаются присоединить компьютеры к контроллеру домена на базе Windows Server 2003 или Windows Server 2008: "доступ запрещен"](https://support.microsoft.com/kb/932455)|  
 |[Рекомендации по обеспечению безопасности установки Active Directory. doc](https://go.microsoft.com/fwlink/?LinkId=140862)|  
 |[Рекомендации по безопасности Hyper-V](https://www.microsoft.com/download/details.aspx?id=16650)|  
 |Пошаговое [руководств по использованию механизма проверки подлинности для AD DS в Windows Server 2008 R2](https://technet.microsoft.com/library/dd378897(WS.10).aspx).|  

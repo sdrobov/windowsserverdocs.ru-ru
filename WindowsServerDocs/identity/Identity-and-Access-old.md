@@ -19,10 +19,10 @@ ms.locfileid: "71391122"
 ---
 # <a name="identity-and-access-in-windows-server-2016"></a>Удостоверения и доступ в Windows Server 2016
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
  Следующие новые компоненты удостоверения повышают уровень защиты сред Active Directory для организаций, а также помогают перейти к развертываниям только для облачной среды и гибридным развертываниям, в которых некоторые приложения и службы размещены в облаке, а другие — на локальном компьютере. Улучшения описаны в следующих разделах.
 
@@ -36,8 +36,8 @@ ms.locfileid: "71391122"
 ## <a name="privileged-access-management-for-active-directory-domain-services-40ad-ds41httpstechnetmicrosoftcomlibrarydn903243aspx"></a>[Privileged Access Management для служб &#40;домен Active Directory AD DS&#41;](https://technet.microsoft.com/library/dn903243.aspx)
 Управление привилегированным доступом (PAM) для доменных служб Active Directory (AD DS) — это решение, на основе Microsoft Identity Manager (MIM), Windows Server 2012 R2 и Windows Server 2016.
 
-## <a name="windows-10-for-the-enterprise-ways-to-use-devices-for-workhttpsazuremicrosoftcomdocumentationarticlesactive-directory-azureadjoin-windows10-devices-overviewrnd1"></a>@no__t 0Windows 10 для предприятия: Способы использования устройств для работы @ no__t-0
-Windows 10 предоставляет возможность использовать Azure Active Directory. Устройства с Windows 10 можно подключить к Azure AD, и пользователи смогут входить в Windows с учетными записями Azure AD или добавлять свои идентификаторы Azure для получения доступа к бизнес-приложениям и ресурсам.
+## <a name="windows-10-for-the-enterprise-ways-to-use-devices-for-workhttpsazuremicrosoftcomdocumentationarticlesactive-directory-azureadjoin-windows10-devices-overviewrnd1"></a>[Windows 10 для предприятий: способы использования устройств для работы](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1)
+Windows 10 предоставляет возможность для использования Azure Active Directory. Устройства с Windows 10 можно подключить к Azure AD, и пользователи смогут входить в Windows с учетными записями Azure AD или добавить свои идентификаторы Azure для получения доступа к бизнес-приложениям и ресурсам.
 
 ## <a name="active-directory-domain-servicesidentityad-dsactive-directory-domain-servicesmd"></a>[Доменные службы Active Directory](../identity/ad-ds/Active-Directory-Domain-Services.md)
 Подробная документация по всем возможностям для служб AD DS в Windows Server 2016.
