@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/31/2019
+ms.date: 11/12/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6a8e66398bc61a69250b84101a3cb66f2c8f3548
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: db9c2b64e018b41b053974b5459bd320098a6d2d
+ms.sourcegitcommit: 315f015102c42c6fa7694e76adecdfb448390391
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567068"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74019591"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -30,14 +30,14 @@ ms.locfileid: "73567068"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Public (Общее)     |1.2.247  |
-|Предварительная оценка    |1.2.428  |
+|Public (Общее)     |1.2.431  |
+|Предварительная оценка    |1.2.431  |
 
-## <a name="updates-for-version-12428"></a>Обновления для версии 1.2.428
+## <a name="updates-for-version-12431"></a>Обновления для версии 1.2.431
 
-*Дата публикации: 31.10.2019*
+*Дата публикации: 12.11.2019*
 
-- Теперь доступны предварительные версии клиента для 32-разрядной платформы и платформы ARM64.
+- Теперь доступны версии клиента для 32-разрядной платформы и платформы ARM64.
 - Теперь клиент сохраняет любые изменения панели подключения (например, ее расположение, размер и закрепленное состояние) и применяет их в сеансах.
 - Обновлены диалоговые окна сведений о шлюзе и состояния подключения.
 - Устранена проблема, из-за которой при попытке подключиться после истечения срока действия маркера Azure Active Directory появлялись сразу два запроса учетных данных.

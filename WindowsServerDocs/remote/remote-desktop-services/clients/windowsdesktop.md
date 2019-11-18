@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 10/31/2019
+ms.date: 11/12/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: aff7e6e1f37cad66530679ade024c089a4ba034e
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 2f786a1db0854ae89c1ceb23942793deb7f608e1
+ms.sourcegitcommit: 315f015102c42c6fa7694e76adecdfb448390391
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567168"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74019603"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Приступая к работе с клиентом для Windows Desktop
 
@@ -36,8 +36,8 @@ ms.locfileid: "73567168"
 Выберите клиент, который соответствует вашей версии Windows:
 
 - [Windows (64-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2068602)
-- [Windows (32-разрядная ознакомительная версия)](https://go.microsoft.com/fwlink/?linkid=2098960)
-- [Windows для ARM64 (ознакомительная версия)](https://go.microsoft.com/fwlink/?linkid=2098961)
+- [Windows (32-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2098960)
+- [Windows для ARM64](https://go.microsoft.com/fwlink/?linkid=2098961)
 
 Можно установить клиент для текущего пользователя, что не требует прав администратора. Кроме того, администратор может установить и настроить клиент, чтобы все пользователи устройства могли получить к нему доступ.
 

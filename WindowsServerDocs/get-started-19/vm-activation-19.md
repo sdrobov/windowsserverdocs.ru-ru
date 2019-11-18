@@ -12,12 +12,12 @@ ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.localizationpriority: medium
-ms.openlocfilehash: 8887f2419176dd187ab01fb4d04988000c7ba74d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 43c0ce500058bd4115d58b68dc79068a52c0bb3e
+ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391910"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73956085"
 ---
 # <a name="automatic-virtual-machine-activation"></a>Автоматическая активация виртуальной машины
 
@@ -88,7 +88,7 @@ AVMA предоставляет ряд преимуществ на сервер�
 |Standard|  TNK62-RXVTB-4P47B-2D623-4GF74|
 |Essentials|    2CTP7-NHT64-BP62M-FV6GG-HFV28|
  
-Перечисленные ниже ключи AVMA можно использовать для Windows Server версии 1809.
+Перечисленные ниже ключи AVMA можно использовать для Windows Server версий 1909, 1903 и 1809.
 
 |Выпуск|   Ключ AVMA|
 |-|-|
@@ -134,7 +134,7 @@ AVMA предоставляет ряд преимуществ на сервер�
 
   - Адреса RDP
 
-Дополнительные сведения о том, как получить эту информацию, см. в публикации [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](http://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx) (GuestIntrinsicExchangeItems KVP в скрипте Hyper-V).
+Дополнительные сведения о том, как получить эту информацию, см. в публикации [Hyper-V Script: Looking at KVP GuestIntrinsicExchangeItems](https://blogs.msdn.com/b/virtual_pc_guy/archive/2008/11/18/hyper-v-script-looking-at-kvp-guestintrinsicexchangeitems.aspx) (GuestIntrinsicExchangeItems KVP в скрипте Hyper-V).
 
 
 > [!NOTE]
