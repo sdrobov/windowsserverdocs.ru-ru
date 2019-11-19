@@ -18,19 +18,22 @@ ms.locfileid: "71402491"
 ---
 # <a name="replication-error-1396-logon-failure-the-target-account-name-is-incorrect"></a>Ошибка репликации 1396: вход в систему не произведен. Конечная учетная запись указана неверно
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd"> <introduction> @ no__t-2 @ no__t-3<para>В этой статье описываются симптомы, причины и способы устранения сбоев Active Directory репликации с ошибкой Win32 1396: Ошибка входа &quot;ошибка: неправильное имя целевой учетной записи.&quot; </para>
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd"> <introduction>
+    <para>В этой статье описываются симптомы, причины и способы устранения сбоев Active Directory репликации с ошибкой Win32 1396: Сбой @no__t 0Logon: Неверное имя целевой учетной записи. &quot; </para>
     <list class="bullet"> <listItem> @ no__t-2 @ no__t-3<para>
-          <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Symptoms">Symptoms</link>
-        </para>
-      </listItem> <listItem> @ no__t-2 @ no__t-3<para>
+          <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Symptoms">Симптомы</link>
+ @ no__t-2</para>
+      </listItem> <listItem>
+        <para>
           <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Causes">Вызывает</link>
         </para>
-      </listItem> <listItem> @ no__t-2 @ no__t-3<para>
+      </listItem> <listItem>
+        <para>
           <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Resolutions">Разрешение</link>
-        </para>
+ @ no__t-2</para>
       </listItem>
     </list>
   </introduction>
@@ -39,7 +42,7 @@ ms.locfileid: "71402491"
     <content>
       <para />
       <list class="ordered">
-<listItem><para>Программа DCDIAG сообщает о том, что проверка Active Directory репликации завершилась ошибкой 1396: Ошибка входа в систему: неверное имя целевой учетной записи.&quot;</para><code>Testing server: &lt;Site name&gt;&lt;DC Name&gt;
+<listItem><para>Программа DCDIAG сообщает о том, что проверка Active Directory репликации завершилась ошибкой 1396: Ошибка входа в систему: Неверное имя целевой учетной записи. &quot;</para><code>Testing server: &lt;Site name&gt;&lt;DC Name&gt;
 Starting test: Replications
 [Replications Check,&lt;DC Name&gt;] A recent replication attempt failed:
 From &lt;source DC&gt; to &lt;destination DC&gt;
@@ -48,7 +51,7 @@ Naming Context: CN=&lt;DN path of naming context&gt;
 Logon Failure: The target account name is incorrect.</codeFeaturedElement>
 The failure occurred at &lt;date&gt; &lt;time&gt;.
 The last success occurred at &lt;date&gt; &lt;time&gt;.
-XX failures have occurred since the last success</code></listItem><listItem><para>REPADMIN. EXE сообщает о том, что последняя попытка репликации завершилась ошибкой с состоянием 1396.</para><para>Команды REPADMIN, которые обычно упоминают состояние 1396, включают, но не ограничиваются:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN/ADD</para></listItem><listItem><para>REPADMIN/РЕПЛСУМ</para></listItem><listItem><para>REPADMIN/РЕХОСТ</para></listItem><listItem><para>REPADMIN/ШОВВЕКТОР/ЛАТЕНЦИ</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN/SHOWREPS</para></listItem><listItem><para>REPADMIN/ШОВРЕПЛ</para></listItem><listItem><para>REPADMIN/СИНКАЛЛ</para></listItem></list></TD></tr></tbody></table><para>Пример выходных данных &quot;REPADMIN/SHOWREPS&quot; в котором показано, как входящая репликация с CONTOSO-DC2 на CONTOSO-DC1 завершилась сбоем с &quot;сбоем входа в систему: неправильное имя целевой учетной записи.&quot; ошибка показана ниже:</para><code>Default-First-Site-NameCONTOSO-DC1
+XX failures have occurred since the last success</code></listItem><listItem><para>REPADMIN. EXE сообщает о том, что последняя попытка репликации завершилась ошибкой с состоянием 1396.</para><para>Команды REPADMIN, которые обычно упоминают состояние 1396, включают, но не ограничиваются:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><tbody><tr><TD><list class="bullet"><listItem><para>REPADMIN/ADD</para></listItem><listItem><para>REPADMIN/РЕПЛСУМ</para></listItem><listItem><para>REPADMIN/РЕХОСТ</para></listItem><listItem><para>REPADMIN/ШОВВЕКТОР/ЛАТЕНЦИ</para></listItem></list></TD><TD><list class="bullet"><listItem><para>REPADMIN/SHOWREPS</para></listItem><listItem><para>REPADMIN/ШОВРЕПЛ</para></listItem><listItem><para>REPADMIN/СИНКАЛЛ</para></listItem></list></TD></tr></tbody></table><para>Пример выходных данных из &quot;REPADMIN/SHOWREPS @ no__t-1 показывает входящую репликацию с CONTOSO-DC2 на CONTOSO-DC1, отработку отказа &quot;Logon: Неверное имя целевой учетной записи. &quot; отображается следующее сообщение об ошибке:</para><code>Default-First-Site-NameCONTOSO-DC1
 DSA Options: IS_GC 
 Site Options: (none)
 DSA object GUID: b6dc8589-7e00-4a5d-b688-045aef63ec01
@@ -61,8 +64,8 @@ Last attempt @ &lt;date&gt; &lt;time&gt; failed, <codeFeaturedElement>result 139
 Logon Failure: The target account name is incorrect.</codeFeaturedElement>
 &lt;#&gt; consecutive failure(s).
 Last success @ &lt;date&gt; &lt;time&gt;.
-</code></listItem><listItem><para>Команда " <ui>Реплицировать сейчас</ui> " в Active Directory "сайты и службы" возвращает &quot;ошибка входа в систему: неверное имя целевой учетной записи.&quot;</para><para>Если щелкнуть правой кнопкой мыши объект подключения из исходного контроллера домена и выбрать команду " <ui>реплицировать</ui> ", произойдет сбой с &quot;ошибка входа в систему: неправильное имя целевой учетной записи.&quot; отображается сообщение об ошибке на экране ниже:</para><para>Текст заголовка диалогового окна:</para><para>Реплицировать сейчас</para><para>Текст сообщения диалогового окна: </para><para>Произошла следующая ошибка при попытке синхронизации контекста именования &lt;пути DNS&gt; из контроллера домена &lt;исходный DC&gt; на контроллер домена &lt;целевой контроллер домена&gt;: Ошибка входа: неправильное имя целевой учетной записи. Эта операция не будет продолжена. </para></listItem><listItem><para>События NTDS KCC, NTDS General или Microsoft-Windows-ActiveDirectory_DomainService с состоянием 1396 регистрируются в журнале служб каталогов в Просмотр событий.</para><para>Active Directory события, которые обычно упоминают состояние 1396, включают в себя не только:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Идентификатор события</para></TD><TD><para>Источник события</para></TD><TD><para>Строка события</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Мастер установки доменных служб Active Directory (Dcpromo) не удалось установить подключение к следующему контроллеру домена.</para></TD></tr><tr><TD><para>1645</para><para>В этом событии выводится имя субъекта-службы из трех частей.</para></TD><TD><para>Репликация NTDS</para></TD><TD><para>Active Directory не удалось выполнить проверенный удаленный вызов процедуры на другом контроллере домена, поскольку имя участника требуемой службы для конечного контроллера домена не зарегистрировано на контроллере домена, являющемся центром распространения ключей и разрешающим данное имя участника-службы.</para></TD></tr><tr><TD><para>1655</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Домен Active Directory служб попытались связаться со следующим глобальным каталогом, и попытки были неудачными.</para></TD></tr><tr><TD><para>2847</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Средство проверки согласованности знаний находило подключение репликации для локальной службы каталогов только для чтения и попыталось обновить ее удаленно на следующем экземпляре службы каталогов. Сбой операции. Будет выполнена повторная попытка.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Сбой при попытке установить канал репликации для следующего изменяемого раздела каталога.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Попытка установить связь репликации с разделом каталога только для чтения со следующими параметрами завершилась ошибкой.</para></TD></tr><tr><TD><para>5781</para></TD><TD><para>СЛУЖБЕ</para></TD><TD><para> Серверу не удается зарегистрировать свое имя в DNS.</para></TD></tr></tbody></table></listItem><listItem><para>Сбой DCPROMO с ошибкой на экране</para><para>Текст заголовка диалогового окна:</para><para>Сбой установки Active Directory</para><para>Текст сообщения диалогового окна:</para><para>Операция завершилась сбоем, так как службе каталогов не удалось создать объект сервера для CN = NTDS Settings, CN = Сервербеингпромотед, CN = Servers, CN = site, CN = Sites, CN = Configuration, DC = contoso, DC = com на сервере ReplicationSourceDC.contoso.com. </para><para>Убедитесь, что предоставленные сетевые учетные данные имеют достаточный доступ для добавления реплики. </para><para>
-Ошибка входа в &quot;: неправильное имя целевой учетной записи. &quot;</para><para>В этом случае события с ИДЕНТИФИКАТОРом 1645, 1168 и 1125 регистрируются на сервере, на котором выполняется повышение уровня.</para></listItem><listItem><para>Сопоставьте диск с помощью команды <embeddedLabel>net use</embeddedLabel>:</para><code>C:&gt;net use z: &lt;server_name&gt;c$
+</code></listItem><listItem><para>Команда " <ui>Реплицировать сейчас</ui> " в Active Directory "сайты и службы" возвращает &quot;Logon сбой: Неверное имя целевой учетной записи. &quot;</para><para>Если щелкнуть правой кнопкой мыши объект подключения из исходного контроллера домена и выбрать команду " <ui>Реплицировать сейчас</ui> " не удается, произойдет сбой &quot;Logon: Неверное имя целевой учетной записи. &quot; Ниже показано сообщение об ошибке на экране.</para><para>Текст заголовка диалогового окна:</para><para>Реплицировать сейчас</para><para>Текст сообщения диалогового окна: </para><para>При попытке синхронизации контекста именования &lt;partition DNS Path @ no__t-1 из контроллера домена &lt;source DC @ no__t-3 к контроллеру домена &lt;destination DC @ no__t-5 произошла следующая ошибка: Ошибка входа в систему: Неверное имя целевой учетной записи. Эта операция не будет продолжена. </para></listItem><listItem><para>События NTDS KCC, NTDS General или Microsoft-Windows-ActiveDirectory_DomainService с состоянием 1396 регистрируются в журнале служб каталогов в Просмотр событий.</para><para>Active Directory события, которые обычно упоминают состояние 1396, включают в себя не только:</para><table xmlns:caps="https://schemas.microsoft.com/build/caps/2013/11"><thead><tr><TD><para>Идентификатор события</para></TD><TD><para>Источник события</para></TD><TD><para>Строка события</para></TD></tr></thead><tbody><tr><TD><para>1125</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Мастер установки доменных служб Active Directory (Dcpromo) не удалось установить подключение к следующему контроллеру домена.</para></TD></tr><tr><TD><para>1645</para><para>В этом событии выводится имя субъекта-службы из трех частей.</para></TD><TD><para>Репликация NTDS</para></TD><TD><para>Active Directory не удалось выполнить проверенный удаленный вызов процедуры на другом контроллере домена, поскольку имя участника требуемой службы для конечного контроллера домена не зарегистрировано на контроллере домена, являющемся центром распространения ключей и разрешающим данное имя участника-службы.</para></TD></tr><tr><TD><para>1655</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Домен Active Directory служб попытались связаться со следующим глобальным каталогом, и попытки были неудачными.</para></TD></tr><tr><TD><para>2847</para></TD><TD><para>Microsoft-Windows-ActiveDirectory_DomainService</para></TD><TD><para>Средство проверки согласованности знаний находило подключение репликации для локальной службы каталогов только для чтения и попыталось обновить ее удаленно на следующем экземпляре службы каталогов. Сбой операции. Будет выполнена повторная попытка.</para></TD></tr><tr><TD><para>1925</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Сбой при попытке установить канал репликации для следующего изменяемого раздела каталога.</para></TD></tr><tr><TD><para>1926</para></TD><TD><para>NTDS KCC</para></TD><TD><para>Попытка установить связь репликации с разделом каталога только для чтения со следующими параметрами завершилась ошибкой.</para></TD></tr><tr><TD><para>5781</para></TD><TD><para>СЛУЖБЕ</para></TD><TD><para> Серверу не удается зарегистрировать свое имя в DNS.</para></TD></tr></tbody></table></listItem><listItem><para>Сбой DCPROMO с ошибкой на экране</para><para>Текст заголовка диалогового окна:</para><para>Сбой установки Active Directory</para><para>Текст сообщения диалогового окна:</para><para>Не удалось выполнить операцию по следующей причине: Службе каталогов не удалось создать объект сервера для CN = Settings Settings, CN = Сервербеингпромотед, CN = Servers, CN = site, CN = Sites, CN = Configuration, DC = contoso, DC = com на сервере ReplicationSourceDC.contoso.com. </para><para>Убедитесь, что предоставленные сетевые учетные данные имеют достаточный доступ для добавления реплики. </para><para>
+Сбой @no__t 0Logon: Неверное имя целевой учетной записи. &quot;</para><para>В этом случае события с ИДЕНТИФИКАТОРом 1645, 1168 и 1125 регистрируются на сервере, на котором выполняется повышение уровня.</para></listItem><listItem><para>Сопоставьте диск с помощью команды <embeddedLabel>net use</embeddedLabel>:</para><code>C:&gt;net use z: &lt;server_name&gt;c$
 System error 1396 has occurred.
 Logon Failure: The target account name is incorrect.</code><para>В этом случае сервер также может регистрировать событие с ИДЕНТИФИКАТОРом 333 в журнале системных событий и использовать большой объем виртуальной памяти для приложения, например SQL Server.</para></listItem><listItem><para>Неверное время контроллера домена.</para></listItem><listItem><para>После восстановления учетной записи KRBTGT для RODC, которая была удалена, KDC не будет запускаться на контроллере домена только для чтения. Например, после восстановления появляется ошибка 1396. </para><para>
 Событие с ИД 1645 регистрируется на RODC. </para><para>
@@ -71,9 +74,7 @@ Dcdiag также сообщает об ошибке, которая не мож
     </content>
   </section>
   <section address="BKMK_Causes">
-    <title>Вызывает</title>
-    <content>
-      <para />
+    <title>Causes @ no__t-1 @ no__t-2 @ no__t-3<para />
       <list class="ordered">
         <listItem>
           <para>Имя субъекта-службы не существует в глобальном каталоге, поиск которого выполняется в KDC от имени клиента, пытающегося пройти проверку подлинности с помощью Kerberos.</para>
@@ -93,13 +94,9 @@ Dcdiag также сообщает об ошибке, которая не мож
     </content>
   </section>
   <section address="BKMK_Resolutions">
-    <title>Разрешение</title>
-    <content>
-      <list class="ordered">
-        <listItem>
-          <para>Проверьте журнал событий службы каталогов на целевом контроллере домена для события репликации NTDS 1645 и обратите внимание на следующее:</para>
+    <title>Resolutions @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4 @ no__t-5<para>Проверьте журнал событий службы каталогов на целевом контроллере домена для события репликации NTDS 1645 и обратите внимание на следующее:</para>
           <para>Имя целевого контроллера домена</para>
-          <para>Искомое имя участника-службы (E3514235-4B06-11D1-AB04-00C04FC2DCD2/&lt;GUID объекта для исходного контроллера домена Параметры NTDS Settings&gt;/&lt;конечный домен&amp;amp; gt;.&amp;//lt; TLD&amp;amp; gt; @&lt;конечный домен&gt;.&lt;TLD&gt;</para>
+          <para>Искомое имя участника-службы (E3514235-4B06-11D1-AB04-00C04FC2DCD2/&lt;object GUID для исходного контроллера домена NTDS Settings, объект @ no__t-1 @ no__t-2 @ no__t-3target Domain @ no__t-4amp; gt;. &amp;Amp; lt; TLD @ no__t-6amp; gt; @ &lt;target Domain @ no__t-8. &lt;tld @ no__t-10</para>
           <para>KDC, используемый целевым контроллером домена</para>
         </listItem>
         <listItem>
@@ -107,7 +104,7 @@ Dcdiag также сообщает об ошибке, которая не мож
           <code>nltest /dsgetdc &lt;forest root DNS domain name &gt; /gc</code>
           <para>Выполните проверку локатора NLTEST сразу после попытки репликации, которая завершается ошибкой 1396 на целевом контроллере домена. </para>
           <para>Это должно указывать, что сборщик ключей (KDC) выполняет поиск имен участников-служб. </para>
-          <para>Сборка мусора, поиск которой выполняется в KDC, также может быть захвачена в Microsoft-Windows-ActiveDirectory_DomainService событии 1655.</para>
+          <para>Сборка мусора, поиск которой выполняется в KDC, также может быть захвачена в Microsoft-Windows-ActiveDirectory_DomainService Event 1655.</para>
         </listItem>
         <listItem>
           <para>Найдите имя участника-службы, обнаруженное на шаге 1, в глобальном каталоге, обнаруженном на шаге 2.</para>
@@ -125,12 +122,9 @@ Dcdiag также сообщает об ошибке, которая не мож
       </list>
     </content>
   </section>
-  <relatedTopics>
-    <externalLink> 
-      <linkText>Устранение неполадок Active Directory операций, которые завершились ошибкой 1396: Ошибка входа в систему: неверное имя целевой учетной записи.</linkText> 
-      <linkUri><a href="https://support.microsoft.com/kb/2183411/en-gb" data-raw-source="https://support.microsoft.com/kb/2183411/en-gb">https://support.microsoft.com/kb/2183411/en-gb</a></linkUri> 
+  <relatedTopics> @ no__t-1 @ no__t-2Troubleshooting Active Directory операции, которые завершаются ошибкой 1396: Ошибка входа в систему: Неверное имя целевой учетной записи. </linkText>
+      <linkUri><a href="https://support.microsoft.com/kb/2183411/en-gb" data-raw-source="https://support.microsoft.com/kb/2183411/en-gb">https://support.microsoft.com/kb/2183411/en-gb</a></linkUri>
     </externalLink>
-  </relatedTopics>
-</developerConceptualDocument>
+  </relatedTopics> @ no__t-6
 
 
