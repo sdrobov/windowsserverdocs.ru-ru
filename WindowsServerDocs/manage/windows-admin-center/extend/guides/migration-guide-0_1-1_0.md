@@ -1,6 +1,6 @@
 ---
-title: Миграция из пакета SDK для Windows Admin Center 0,1 на 1,0
-description: Это руководств поможет вам перейти с пакета SDK Windows Admin Center версии 0,1 на 1,0
+title: Migrate from Windows Admin Center SDK 0.1 to 1.0
+description: This guide will help you migrate from Windows Admin Center SDK version 0.1 to 1.0
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -9,66 +9,66 @@ ms.date: 02/26/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: c52870178e7caff0abc8ddcccc62966d637dd3c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 214847318401cebdcb7f1924a731b4439c9d8a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 11/19/2019
 ms.locfileid: "71357057"
 ---
-# <a name="migrate-from-windows-admin-center-sdk-01-to-10"></a>Миграция из пакета SDK для Windows Admin Center 0,1 на 1,0
+# <a name="migrate-from-windows-admin-center-sdk-01-to-10"></a>Migrate from Windows Admin Center SDK 0.1 to 1.0
 
->Область применения. Ознакомительная версия Windows Admin Center
+>Applies To: Windows Admin Center Preview
 
-Это поможет вам перейти с пакета SDK Windows Admin Center версии 0,1 на 1,0.  
+This guide will help you migrate from Windows Admin Center SDK version 0.1 to 1.0.  
 
-## <a name="1-learn-about-new-controls-with-the-dev-guide-extension"></a>1. Дополнительные сведения о новых элементах управления с помощью расширения "рекомендации разработчика"
+## <a name="1-learn-about-new-controls-with-the-dev-guide-extension"></a>1. Learn about new controls with the Dev Guide extension
 
-Windows Admin Center версии 1902 и более поздних версий включает в себя расширение **руководств по разработке** , которое можно использовать для поиска примеров элементов управления (включая новые доступные элементы управления) и сценариев, помогающих создать собственное расширение.  В разделе "руководством разработчика" заменяется расширение **средства для разработчиков** из более ранних версий пакета SDK.
+Windows Admin Center version 1902 and later includes the **Dev Guide** extension, which you can use to find examples of controls (including newly available controls) and scenarios to help you build your own extension.  Dev Guide replaces the **Developer Tools** extension from earlier versions of the SDK.
 
-### <a name="use-the-dev-guide-in-windows-admin-center"></a>Использование руководств по разработке в центре администрирования Windows
+### <a name="use-the-dev-guide-in-windows-admin-center"></a>Use the Dev Guide in Windows Admin Center
 
-Это решение доступно в виде решения в центре администрирования Windows версии 1902 и более поздних.  Руководству по разработке предварительно установлено, но его необходимо включить с помощью параметров.
+Dev Guide is available as a solution in Windows Admin Center version 1902 and later.  Dev Guide is pre-installed, but it needs to be enabled via settings.
 
-**Включите руководство по разработке в центре администрирования Windows:**
+**Enable Dev Guide in Windows Admin Center:**
 
-* Откройте центр администрирования Windows (версия 1902 и более поздние).
-* Щелкните значок **параметров** в правом верхнем углу окна.
-* Перейдите на вкладку **Дополнительно** .
-* В разделе " *ключи экспериментов*" нажмите кнопку **Добавить** .
-* Введите новое значение ```msft.sme.shell.devguide``` в пустом поле, созданном на предыдущем шаге.
-* Нажмите кнопку **сохранить и перезагрузить** .
+* Open Windows Admin Center (version 1902 and later)
+* Click on the **Settings** icon in the top right corner of the window
+* Select the **Advanced** tab
+* Under *Experiment Keys*, click **Add**
+* Enter a new value ```msft.sme.shell.devguide``` in the empty field that was created by the previous step
+* Click **Save and Reload**
 
-**Откройте руководство разработчика в центре администрирования Windows:**
+**Open Dev Guide in Windows Admin Center:**
 
-* Откройте центр администрирования Windows (версия 1902 и более поздние).
-* Щелкните раскрывающийся список в верхнем левом углу, чтобы отобразить все типы решений.
-* Выберите решение для **разработки руководств** 
-    * Если вы не видите решение в списке, убедитесь, что вы включили его (см. раздел выше) и перегрузили центр администрирования Windows.
-* Просмотрите содержимое руководств по разработке, выбрав одну из вкладок.
-    * **6xx** Содержит примеры кода для *управления* сценариями AS и *Notifications*
-    * **Элементы управления** Содержит примеры каждого доступного элемента управления в пакете SDK
-    * **Канал** Содержит примеры доступных преобразователей и функций форматирования
-    * **Специальные** Содержит примеры стилей CSS, доступных в пакете SDK
-    * **Мсфтсме:** Содержит примеры и рекомендации для расширенных сценариев 
+* Open Windows Admin Center (version 1902 and later)
+* Click the drop-down in the top left to show all solution types
+* Select the **Dev Guide** solution 
+    * If you don't see the solution listed, make sure you have enabled the dev guide (see section above) and have reloaded Windows Admin Center.
+* Browse the content of Dev Guide by selecting one of the tabs
+    * **Landing:** Contains code samples for *Manage As* and *Notification* scenarios
+    * **Controls:** Contains examples of each available control in the SDK
+    * **Pipes:** Contains examples of available converter and formatter functions
+    * **Styles:** Contains examples of CSS styles available in the SDK
+    * **MsftSme:** Contains examples and guidance for advanced scenarios 
 
-### <a name="browse-the-source-code-of-dev-guide-on-github"></a>Обзор исходного кода в разделе "руководством разработчика" на сайте GitHub
+### <a name="browse-the-source-code-of-dev-guide-on-github"></a>Browse the source code of Dev Guide on GitHub
 
-Вы можете просмотреть [Исходный код](https://github.com/Microsoft/windows-admin-center-sdk/) руководства разработчика на GitHub, чтобы найти примеры кода HTML, CSS и TypeScript.
+You can browse the [source code](https://github.com/Microsoft/windows-admin-center-sdk/) of Dev Guide on GitHub to find example HTML, CSS, and TypeScript code samples.
 
-## <a name="2-prepare-your-development-environment-for-the-latest-sdk"></a>2. Подготовка среды разработки к использованию последнего пакета SDK
+## <a name="2-prepare-your-development-environment-for-the-latest-sdk"></a>2. Prepare your development environment for the latest SDK
 
-Установите или обновите Node. js версии [10.15.1 LTS или более поздней](https://nodejs.org/en/).
+Install or update node.js version [10.15.1 LTS or later](https://nodejs.org/en/).
 
-Обновите интерфейс командной строки центра администрирования Windows до последней версии:
+Update the Windows Admin Center CLI to the latest version:
 
-[//]: # "Удаление NPM-g windows-admin-center-cli@next"
+[//]: # "npm uninstall -g windows-admin-center-cli@next"
 
 ``` cmd
 npm uninstall -g windows-admin-center-cli
 npm install -g windows-admin-center-cli
 ```
 
-Обновите глобальные зависимости до следующих версий:
+Update your global dependencies to these versions:
 
 ``` cmd
 npm install npm@6.4.1 -g
@@ -78,46 +78,46 @@ npm install typescript@3.1.6 -g
 npm install tslint@5.11.0 -g
 ```
 
-## <a name="3-create-a-new-project-with-the-latest-sdk"></a>3. Создание нового проекта с помощью последнего пакета SDK
+## <a name="3-create-a-new-project-with-the-latest-sdk"></a>3. Create a new project with the latest SDK
 
-Используйте CLI центра администрирования Windows, чтобы создать проект, предназначенный для версии ```next``` (пакет SDK 1,0):
+Use the Windows Admin Center CLI to create a new project targeting the ```next``` version (SDK 1.0):
 
-[//]: # "Создание ВАК--компания "Contoso Inc" — инструмент "Управление разработкой foo" — экспериментальная версия"
+[//]: # "wac create --company 'Contoso Inc' --tool 'Manage Foo Works' --version experimental"
 
 ``` cmd
 wac create --company "Contoso Inc" --tool "Manage Foo Works" --version next
 ```
 
-Затем измените каталог на только что созданную папку, а затем установите необходимые локальные зависимости, запустив ```npm install ```.
+Next, change directory into the folder just created, then install required local dependencies by running ```npm install ```.
 
-## <a name="4-modify-an-existing-project-to-use-the-latest-sdk"></a>4. Изменение существующего проекта для использования последнего пакета SDK
+## <a name="4-modify-an-existing-project-to-use-the-latest-sdk"></a>4. Modify an existing project to use the latest SDK
 
-ВНИМАНИЕ! Перед продолжением создайте резервную копию проекта.
+IMPORTANT: Make a backup of your project before continuing.
 
-Измените следующую строку в ```package.json``` на целевую версию ```next``` (пакет SDK 1,0):
+Modify the following line in ```package.json``` to target the ```next``` version (SDK 1.0):
 
-[//]: # ""@microsoft/windows-admin-center-sdk": "экспериментальный""
+[//]: # "'@microsoft/windows-admin-center-sdk': 'experimental'"
 
 ``` json
 "@microsoft/windows-admin-center-sdk": "next",
 ```
 
-Затем выполните ```npm install```, чтобы обновить ссылки в рамках проекта.
+Then run ```npm install``` to update references throughout your project.
 
-## <a name="5-use-the-sdk-cli-to-fix-common-migration-issues"></a>5. Устранение распространенных проблем с миграцией с помощью интерфейса командной строки SDK
+## <a name="5-use-the-sdk-cli-to-fix-common-migration-issues"></a>5. Use the SDK CLI to fix common migration issues
 
-ВНИМАНИЕ! Перед продолжением создайте резервную копию проекта.
+IMPORTANT: Make a backup of your project before continuing.
 
-В корневой папке проекта выполните следующую команду CLI в проекте, чтобы устранить распространенные проблемы при миграции автоматически:
+From the root folder of your project, run the following CLI command on your project to fix common migration issues automatically:
 
 ``` cmd
 wac updateSeven --update
 ```
 
-Эта команда CLI автоматически обращается к следующим проблемам:
+This CLI command addresses the following issues automatically:
 
-* Повторное создание ```package-lock.json```
-* Обновление файлов в среде угловой компиляции:
+* Regenerate ```package-lock.json```
+* Update files in the angular compilation environment:
     - ```.gitignore```
     - ```tslint.json```
     - ```tsconfig.json```
@@ -128,170 +128,170 @@ wac updateSeven --update
     - ```src\tsconfig.lib.json```
     - ```src\tsconfig.spec.json```
 
-## <a name="6-use-the-sdk-cli-to-understand-common-migration-issues"></a>6. Использование интерфейса командной строки SDK для ознакомления с распространенными проблемами миграции
+## <a name="6-use-the-sdk-cli-to-understand-common-migration-issues"></a>6. Use the SDK CLI to understand common migration issues
 
-В корневой папке проекта выполните следующую команду CLI, чтобы выполнить аудит проекта и найти распространенные проблемы миграции, которые необходимо решить вручную.
+From the root folder of your project, run the following CLI command to audit your project and find common migration issues that need to be addressed manually:
 
 ``` cmd
 wac updateSeven --audit
 ```
 
-В проекте будут найдены экземпляры следующих проблем:
+This will find instances of the following issues in your project:
 
-### <a name="replace-usage-of-the-following-css-classes-with-these-sme-classes"></a>Замените использование следующих классов CSS следующими классами эксперт:
+### <a name="replace-usage-of-the-following-css-classes-with-these-sme-classes"></a>Replace usage of the following CSS classes with these sme classes:
 
-| Старый класс CSS | Новый класс CSS |
+| Old CSS class | New CSS class |
 | -- | -- |
-| . автоматическое отклонение-размер |  . Эксперт-позиционировать-Flex — авто |
-| . Border — все |  . Эксперт-Border-вкладыш-SM и. Эксперт-border-color — Base-90 |
-| . Border — снизу |  . Эксперт-Border-Bottom-SM и. Эксперт-Border-низ-Color — Base-90 |
-| . Border — по горизонтали |  . Эксперт-Border-Horizontal-SM и. Эксперт — граница по горизонтали — цвет — базовый — 90 |
-| . Граница — слева |  . Эксперт-Border-left-SM и. Эксперт-Border-ЛЕВСИМВ-Color — Base-90 |
-| . Border — справа |  . Эксперт-Border-right-SM и. Эксперт-Border-right-Color — Base-90 |
-| . Border — сверху |  . Эксперт-Border-Top-SM и. Эксперт-Border-Top-Color — Base-90 |
-| . Border — по вертикали |  . Эксперт-Border-Vertical-SM и. Эксперт-Border-Vertical-Color — Base-90 |
-| . Break-Word |  . Эксперт-упорядочивать-WS-Wrap |
-| . БТН |  . Эксперт — кнопка или кнопка |
-| . БТН — основной |  . сме-буттон. Эксперт — кнопка-PRIMARY или. Button. Эксперт — основной |
-| . цвет — темный |  . Эксперт — цвет — Alt |
-| . цвет-светлое |  . Эксперт — цвет — базовый |
-| . цвет-светло-серый |  . Эксперт — цвет — базовый — 90 |
-| . Fixed-Flex-size |  . Эксперт-положение — Flex — нет |
-| . Flex — макет |  . Эксперт-упорядочива-Stack-h или. Эксперт-упорядочива-Stack-v |
-| . шрифт — полужирный |  . Эксперт-Font-emphasis1 |
-| . выделение |  . Эксперт — фон-цвет — желтый |
-| . по горизонтали |  . Эксперт-упорядочива-Stack-h |
-| . без прокрутки |  . Эксперт-позиционировать-Flex — авто |
-| . не переносить |  . Эксперт-упорядочива-Stack-h или. Эксперт-упорядочива-Stack-v |
-| . Relative |  . Эксперт — относительный макет |
-| . Relative — по центру |  . Эксперт-Layout — абсолютный эксперт-положение-центр |
-| . обратить |  . Эксперт-упорядочива-Stack — обратный |
-| . растяжение — абсолютный |  . Эксперт — Layout — Absolute. Эксперт-положение-вкладыш — нет |
-| . растяжение — фиксированное |  . Эксперт — Layout — fixed. Эксперт-положение-вкладыш — нет |
-| . Stretch — по вертикали |  . Эксперт-позиционировать-Stretch-v |
-| . Stretch-Width |  . Эксперт-позиционировать-Stretch-h |
-| . по вертикали |  . Эксперт-упорядочива-Stack-v |
-| . по вертикали — только прокрутка |  . Эксперт-упорядочива-Overflow-Hide-x эксперт-упорядочивать-Overflow-Auto-y |
-| . Wrap |  . Эксперт-упорядочива-врапстакк-h или. Эксперт-упорядочивать-врапстакк-v |
+| .auto-flex-size |  .sme-position-flex-auto |
+| .border-all |  .sme-border-inset-sm AND .sme-border-color-base-90 |
+| .border-bottom |  .sme-border-bottom-sm AND .sme-border-bottom-color-base-90 |
+| .border-horizontal |  .sme-border-horizontal-sm AND .sme-border-horizontal-color-base-90 |
+| .border-left |  .sme-border-left-sm AND .sme-border-left-color-base-90 |
+| .border-right |  .sme-border-right-sm AND .sme-border-right-color-base-90 |
+| .border-top |  .sme-border-top-sm AND .sme-border-top-color-base-90 |
+| .border-vertical |  .sme-border-vertical-sm AND .sme-border-vertical-color-base-90 |
+| .break-word |  .sme-arrange-ws-wrap |
+| .btn |  .sme-button OR button |
+| .btn-primary |  .sme-button.sme-button-primary OR .button.sme-button-primary |
+| .color-dark |  .sme-color-alt |
+| .color-light |  .sme-color-base |
+| .color-light-gray |  .sme-color-base-90 |
+| .fixed-flex-size |  .sme-position-flex-none |
+| .flex-layout |  .sme-arrange-stack-h OR .sme-arrange-stack-v |
+| .font-bold |  .sme-font-emphasis1 |
+| .highlight |  .sme-background-color-yellow |
+| .horizontal |  .sme-arrange-stack-h |
+| .no-scroll |  .sme-position-flex-auto |
+| .nowrap |  .sme-arrange-stack-h OR .sme-arrange-stack-v |
+| .relative |  .sme-layout-relative |
+| .relative-center |  .sme-layout-absolute .sme-position-center |
+| .reverse |  .sme-arrange-stack-reversed |
+| .stretch-absolute |  .sme-layout-absolute .sme-position-inset-none |
+| .stretch-fixed |  .sme-layout-fixed .sme-position-inset-none |
+| .stretch-vertical |  .sme-position-stretch-v |
+| .stretch-width |  .sme-position-stretch-h |
+| .vertical |  .sme-arrange-stack-v |
+| .vertical-scroll-only |  .sme-arrange-overflow-hide-x sme-arrange-overflow-auto-y |
+| .wrap |  .sme-arrange-wrapstack-h OR .sme-arrange-wrapstack-v |
 
-### <a name="replace-usage-of-the-following-components-with-these-sme-components"></a>Замените использование следующих компонентов следующими компонентами эксперт:
+### <a name="replace-usage-of-the-following-components-with-these-sme-components"></a>Replace usage of the following components with these sme components:
 
-| Старый компонент | Новый компонент |
+| Old component | New component |
 | -- | -- |
-| . Предупреждение |  Эксперт — оповещение |
-| . Alert — опасность |  Эксперт — оповещение |
-| . Навигатор |  Эксперт — оповещение |
-| . CheckBox |  Эксперт-Form-Field [type = "CheckBox"] |
-| . ComboBox |  Эксперт-Form-поле [type = "Select"] |
-| . панель мониторинга |  Эксперт-Layout-Content-Zone-Padding эксперт-упорядочива-Stack-h |
-| . Details — панель |  Эксперт-свойство-Grid |
-| . Details — панель-контейнер |  Эксперт-свойство-Grid |
-| . Details — вкладка |  Эксперт-Property-Grid или эксперт-Pivot |
-| . Details — оболочка |  Эксперт-свойство-Grid |
-| . отключено |  Эксперт — отключено |
-| . формы-кнопки | Эксперт-Form-поле |
-| . форма-элемент управления | Эксперт-Form-поле |
-| . форма-элементы управления | Эксперт-Form-поле |
-| . форма-группа | Эксперт-Form-поле |
-| . форма-группа-метка | Эксперт-Form-поле |
-| . форма-ввод | Эксперт-Form-поле |
-| . форма — растяжение | Эксперт-Form-поле |
-| . Input-File | Эксперт-Form-поле |
-| . NAV — вкладки |  Эксперт — Сводная таблица |
-| . Radio |  Эксперт-Form-поле [type = "Radio"] |
-| . обязательное — подговорить | Эксперт-Form-поле |
-| . сеарчбокс |  Эксперт-Form-поле [type = "Search"] |
-| . переключатель |  Эксперт-Form-Field [type = "переключить ключ"] |
-| . Tool-Container |  Эксперт-Layout-Content-Zone или эксперт-Layout-Content-Zone-Padding |
+| .alert |  sme-alert |
+| .alert-danger |  sme-alert |
+| .breadCrumb |  sme-alert |
+| .checkbox |  sme-form-field[type="checkbox"] |
+| .combobox |  sme-form-field[type="select"] |
+| .dashboard |  sme-layout-content-zone-padded sme-arrange-stack-h |
+| .details-panel |  sme-property-grid |
+| .details-panel-container |  sme-property-grid |
+| .details-tab |  sme-property-grid OR sme-pivot |
+| .details-wrapper |  sme-property-grid |
+| .disabled |  sme-disabled |
+| .form-buttons | sme-form-field |
+| .form-control | sme-form-field |
+| .form-controls | sme-form-field |
+| .form-group | sme-form-field |
+| .form-group-label | sme-form-field |
+| .form-input | sme-form-field |
+| .form-stretch | sme-form-field |
+| .input-file | sme-form-field |
+| .nav-tabs |  sme-pivot |
+| .radio |  sme-form-field[type="radio"] |
+| .required-clue | sme-form-field |
+| .searchbox |  sme-form-field[type="search"] |
+| .toggle-switch |  sme-form-field[type="toggle-switch"] |
+| .tool-container |  sme-layout-content-zone OR sme-layout-content-zone-padded |
 
-### <a name="these-css-classes-are-deprecated-and-are-no-longer-supported"></a>Эти классы CSS являются устаревшими и больше не поддерживаются:
+### <a name="these-css-classes-are-deprecated-and-are-no-longer-supported"></a>These CSS classes are deprecated and are no longer supported:
 
-| Старый класс | Не рекомендуется |
+| Old class | Не рекомендуется |
 | -- | -- |
-| . приемлемо | не рекомендуется |
-| . цвет-ошибка | не рекомендуется |
-| . цвет-сведения | не рекомендуется |
-| . цвет — успешное завершение | не рекомендуется |
-| . цвет — предупреждение | не рекомендуется |
-| . Delete — кнопка | не рекомендуется |
-| . Details — содержимое | не рекомендуется |
-| . ошибка-Обложка | не рекомендуется |
-| . Error — сообщение | не рекомендуется |
-| . пошаговая панель — Кнопка | не рекомендуется |
-| . Header — контейнер | не рекомендуется |
-| . Icon — Win | не рекомендуется |
-| . отступ | не рекомендуется |
-| . недопустимо | не рекомендуется |
-| . Item-List | не рекомендуется |
-| . модальная прокрутка | не рекомендуется |
-| . несколько разделов | не рекомендуется |
-| . без панели действий | не рекомендуется |
-| . переполнение полей | не рекомендуется |
-| . Overflow — инструмент | не рекомендуется |
-| . ход выполнения — покрытие | не рекомендуется |
-| . правая панель | не рекомендуется |
-| . ROLLUP | не рекомендуется |
-| . ROLLUP — состояние | не рекомендуется |
-| . свертка-заголовок | не рекомендуется |
-| . ROLLUP — значение | не рекомендуется |
-| . сеарчбокс — панель действий | не рекомендуется |
-| . size-h-1 | не рекомендуется |
-| . size-h-2 | не рекомендуется |
-| . size-h-3 | не рекомендуется |
-| . size-h-4 | не рекомендуется |
-| . size-h-полный | не рекомендуется |
-| . size-h-половина | не рекомендуется |
-| . size-v-1 | не рекомендуется |
-| . size-v-2 | не рекомендуется |
-| . size-v-3 | не рекомендуется |
-| . size-v-4 | не рекомендуется |
-| . состояние — значок | не рекомендуется |
-| . SVG — 16px | не рекомендуется |
-| . Таблица — отступ | не рекомендуется |
-| . Таблица-SM | не рекомендуется |
-| . тонкий | не рекомендуется |
-| . плитка | не рекомендуется |
-| . плитка-текст | не рекомендуется |
-| . плитка — содержимое | не рекомендуется |
-| . плитка-нижний колонтитул | не рекомендуется |
-| . плитка-заголовок | не рекомендуется |
-| . плитка-макет | не рекомендуется |
-| . плитка-таблица | не рекомендуется |
-| панель инструментов | не рекомендуется |
-| . панель инструментов | не рекомендуется |
-| . Tool-Header | не рекомендуется |
-| . Tool-Header-Box | не рекомендуется |
-| . панель инструментов | не рекомендуется |
-| . Использование линейчатой диаграммы | не рекомендуется |
-| . Использование-линейчатая с областями | не рекомендуется |
-| . Использование-линейчатая-фон | не рекомендуется |
-| . Использование-линейчатая-заголовок | не рекомендуется |
-| . Usage-линейчатое-значение | не рекомендуется |
-| . Использование-диаграмма | не рекомендуется |
-| . Usage — сообщение | не рекомендуется |
-| . Usage — область сообщения | не рекомендуется |
-| . Usage-сообщение-заголовок | не рекомендуется |
-| . Предупреждение | не рекомендуется |
-| . пробел | не рекомендуется |
+| .acceptable | (deprecated) |
+| .color-error | (deprecated) |
+| .color-info | (deprecated) |
+| .color-success | (deprecated) |
+| .color-warning | (deprecated) |
+| .delete-button | (deprecated) |
+| .details-content | (deprecated) |
+| .error-cover | (deprecated) |
+| .error-message | (deprecated) |
+| .guided-pane-button | (deprecated) |
+| .header-container | (deprecated) |
+| .icon-win | (deprecated) |
+| .indent | (deprecated) |
+| .invalid | (deprecated) |
+| .item-list | (deprecated) |
+| .modal-scrollable | (deprecated) |
+| .multi-section | (deprecated) |
+| .no-action-bar | (deprecated) |
+| .overflow-margins | (deprecated) |
+| .overflow-tool | (deprecated) |
+| .progress-cover | (deprecated) |
+| .right-panel | (deprecated) |
+| .rollup | (deprecated) |
+| .rollup-status | (deprecated) |
+| .rollup-title | (deprecated) |
+| .rollup-value | (deprecated) |
+| .searchbox-action-bar | (deprecated) |
+| .size-h-1 | (deprecated) |
+| .size-h-2 | (deprecated) |
+| .size-h-3 | (deprecated) |
+| .size-h-4 | (deprecated) |
+| .size-h-full | (deprecated) |
+| .size-h-half | (deprecated) |
+| .size-v-1 | (deprecated) |
+| .size-v-2 | (deprecated) |
+| .size-v-3 | (deprecated) |
+| .size-v-4 | (deprecated) |
+| .status-icon | (deprecated) |
+| .svg-16px | (deprecated) |
+| .table-indent | (deprecated) |
+| .table-sm | (deprecated) |
+| .thin | (deprecated) |
+| .tile | (deprecated) |
+| .tile-body | (deprecated) |
+| .tile-content | (deprecated) |
+| .tile-footer | (deprecated) |
+| .tile-header | (deprecated) |
+| .tile-layout | (deprecated) |
+| .tile-table | (deprecated) |
+| .toolbar | (deprecated) |
+| .tool-bar | (deprecated) |
+| .tool-header | (deprecated) |
+| .tool-header-box | (deprecated) |
+| .tool-pane | (deprecated) |
+| .usage-bar | (deprecated) |
+| .usage-bar-area | (deprecated) |
+| .usage-bar-background | (deprecated) |
+| .usage-bar-title | (deprecated) |
+| .usage-bar-value | (deprecated) |
+| .usage-chart | (deprecated) |
+| .usage-message | (deprecated) |
+| .usage-message-area | (deprecated) |
+| .usage-message-title | (deprecated) |
+| .warning | (deprecated) |
+| .white-space | (deprecated) |
 
-## <a name="7-understand-and-resolve-issues-with-observable-objects"></a>7. Анализ и устранение проблем с наблюдаемыми объектами
+## <a name="7-understand-and-resolve-issues-with-observable-objects"></a>7. Understand and resolve issues with observable objects
 
-### <a name="update--rxjs-function-use-for-observable-objects"></a>Обновление использования функции ```rxjs``` для наблюдаемых объектов
+### <a name="update--rxjs-function-use-for-observable-objects"></a>Update  ```rxjs``` function use for observable objects
 
-Это некоторые распространенные имена функций, которые были изменены, в проекте могут быть другие.
+These are some common function names that have been changed, there may be others in your project.
 
-* Обновление ```Observable.empty()``` на ```empty()```
-* Обновление ```Observable.of()``` на ```of()```
-* Обновление ```.switchMap()``` на ```.pipe(switchMap())```
-* Обновление ```.map()``` на ```.pipe(map())```
-* Обновление ```flatMap()``` на ```mergeMap()```
+* Update ```Observable.empty()``` to ```empty()```
+* Update ```Observable.of()``` to ```of()```
+* Update ```.switchMap()``` to ```.pipe(switchMap())```
+* Update ```.map()``` to ```.pipe(map())```
+* Update ```flatMap()``` to ```mergeMap()```
 
 
-### <a name="resolve-runtime-issues-with-map-and-filter-functions-on-observable-objects"></a>Устранение проблем среды выполнения с функциями ```.map()``` и ```.filter()``` для наблюдаемых объектов
+### <a name="resolve-runtime-issues-with-map-and-filter-functions-on-observable-objects"></a>Resolve runtime issues with ```.map()``` and ```.filter()``` functions on observable objects
 
-Если компилятор не может правильно определить тип объекта ```observable```, ```.map()``` и ```.filter()``` функции из объекта ```array``` могут быть сопоставлены с объектом, что приведет к ошибкам во время выполнения.  Убедитесь, что функции возвращают объект ```observable```, указывающий явный тип данных, чтобы избежать этой проблемы.
+If the compiler cannot properly identify an ```observable``` object's type, ```.map()``` and ```.filter()``` functions from the ```array``` object might be mapped instead to your object, causing errors at runtime.  Make sure that your functions return an ```observable``` object specifying an explicit data type to avoid this issue.
 
-```any``` без возвращаемого типа могут вызвать эту проблему, найдите код с помощью следующих шаблонов:
+```any``` and no return type can cause this problem, look for code with these patterns:
 
 ``` ts
 public getMyObservable(): any { //any return type can cause issues
@@ -303,31 +303,31 @@ public getMyObservable() { //no return type can cause issues
 }
 ```
 
-## <a name="8-resolve-other-common-issues"></a>8. Устранение других распространенных проблем
+## <a name="8-resolve-other-common-issues"></a>8. Resolve other common issues
 
-Эти методы помогут устранить другие распространенные проблемы.
+These techniques will help resolve other common issues:
 
-* Выполните ```ng lint --fix```, чтобы устранить распространенные проблемы Lint
-* Повторное выполнение ```gulp build``` для постепенного устранения проблем, которые ```gulp build``` могут разрешить автоматически.
+* Run ```ng lint --fix``` to fix common lint issues
+* Run ```gulp build``` repeatedly to incrementally fix issues that ```gulp build``` can resolve automatically
 
-## <a name="9-build-and-serve-your-project"></a>9. Создание и обслуживание проекта
+## <a name="9-build-and-serve-your-project"></a>9. Build and serve your project
 
-Выполните следующие команды, чтобы собрать и обслуживать проект с помощью последней версии (пакет SDK 1,0):
+Run the following commands to build and serve your project with the latest version (SDK 1.0):
 
 ``` cmd
 gulp build
 gulp serve --port 4201
 ```
 
-## <a name="10-turn-on-dark-theme-in-windows-admin-center"></a>10. Включить темную тему в центре администрирования Windows
+## <a name="10-turn-on-dark-theme-in-windows-admin-center"></a>10. Turn on dark theme in Windows Admin Center
 
-Чтобы включить темную тему в Windows Admin Center версии 1902 и более поздних, выполните следующие действия.
+To turn on dark theme in Windows Admin Center version 1902 and later, follow these steps:
 
-* Откройте центр администрирования Windows (версия 1902 и более поздние).
-* Щелкните значок **параметров** в правом верхнем углу окна.
-* Перейдите на вкладку **Дополнительно** .
-* В разделе " *ключи экспериментов*" нажмите кнопку **Добавить** .
-* Введите новое значение ```msft.sme.shell.personalization``` в пустом поле, созданном на предыдущем шаге.
-* Нажмите кнопку **сохранить и перезагрузить** .
-* Теперь параметры будут иметь новую вкладку, **персонализацию**.  Выберите эту вкладку
-* Изменение **цветов** на **темный режим (Предварительная версия)**
+* Open Windows Admin Center (version 1902 and later)
+* Click on the **Settings** icon in the top right corner of the window
+* Select the **Advanced** tab
+* Under *Experiment Keys*, click **Add**
+* Enter a new value ```msft.sme.shell.personalization``` in the empty field that was created by the previous step
+* Click **Save and Reload**
+* Settings will now have a new tab, **Personalization**.  Select this tab
+* Change **Colors** to **Dark mode (preview)**
