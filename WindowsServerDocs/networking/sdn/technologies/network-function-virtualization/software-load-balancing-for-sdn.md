@@ -19,9 +19,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71355573"
 ---
-# <a name="software-load-balancing-slb-for-sdn"></a>Программная балансировка нагрузки \(SLB @ no__t-1 для SDN
+# <a name="software-load-balancing-slb-for-sdn"></a>Программная балансировка нагрузки \(\) SLB для SDN
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно узнать о программной балансировке нагрузки для программно определенных сетей в Windows Server 2016.  
 

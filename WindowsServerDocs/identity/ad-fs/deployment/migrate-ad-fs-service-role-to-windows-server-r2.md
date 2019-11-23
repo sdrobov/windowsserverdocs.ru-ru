@@ -62,8 +62,8 @@ ms.locfileid: "71359387"
 |Сервер федерации AD FS 2,0, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере. Дополнительные сведения см. в следующих разделах:<br /><br /> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
 |AD FS сервер федерации, установленный в Windows Server 2012|Поддерживается миграция на том же сервере.  Подробную информацию см. в следующих разделах:<br /><br /> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
   
-## <a name="next-steps"></a>Следующие шаги
- [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)   
- [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)   
- [Перенос прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)   
+## <a name="next-steps"></a>Дальнейшие действия
+ [Подготовка к миграции сервера AD FS федерации](prepare-migrate-ad-fs-server-r2.md)   
+ [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)   
+ [Перенос  прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)  
  [Проверка AD FS миграции на Windows Server 2012 R2](verify-ad-fs-migration.md)

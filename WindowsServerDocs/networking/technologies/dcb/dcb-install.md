@@ -15,9 +15,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71405788"
 ---
-# <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>Установка моста центра обработки данных \(DCB @ no__t-1 в Windows Server 2016 или Windows 10
+# <a name="install-data-center-bridging-dcb-in-windows-server-2016-or-windows-10"></a>Установка моста центра обработки данных \(DCB\) в Windows Server 2016 или Windows 10
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно узнать, как установить DCB в Windows Server 2016 или Windows 10.
 
@@ -30,8 +30,8 @@ ms.locfileid: "71405788"
 Вы можете использовать команды DCB из этого руководств в следующих операционных системах.
 
 - Windows Server (Semi-Annual Channel)
-- Windows Server 2016
-- Windows 10 \(Все версии @ no__t-1
+- Windows Server 2016
+- Windows 10 \(все версии\)
 
 Следующие операционные системы включают предыдущие версии DCB, которые несовместимы с командами, используемыми в документации по DCB для Windows Server 2016 и Windows 10.
 
@@ -42,8 +42,8 @@ ms.locfileid: "71405788"
 
 Ниже приведен список требований к оборудованию для DCB.
 
-- Сетевой адаптер DCB @ no__t-0capable Ethernet @ no__t-1S @ no__t-2 должен быть установлен на компьютерах, которые предоставляют Windows Server 2016 DCB.
-- Параметры оборудования DCB @ no__t-0capable должны быть развернуты в сети.
+- На компьютерах, на которых размещаются Windows Server 2016, должен быть установлен\) сетевой адаптер\(\-с поддержкой сетевого адаптера DCB.
+- Аппаратные коммутаторы с поддержкой\-DCB должны быть развернуты в сети.
 
 
 ## <a name="install-dcb-in-windows-server-2016"></a>Установка DCB в Windows Server 2016
@@ -81,7 +81,7 @@ ms.locfileid: "71405788"
 7. В окне **Выбор компонентов**нажмите кнопку **Далее**. 
 8. 7.In **Подтвердите выборы установки**и нажмите кнопку **установить**. На странице **ход выполнения установки** отображается состояние в процессе установки. После появления сообщения о том, что установка прошла успешно, нажмите кнопку **Закрыть**.
 
-### <a name="configure-the-kernel-debugger-to-allow-qos-optional"></a>Настройка отладчика ядра для разрешения QoS \(Optional @ no__t-1
+### <a name="configure-the-kernel-debugger-to-allow-qos-optional"></a>Настройка отладчика ядра на разрешение QoS \(необязательно\)
 
  По умолчанию отладчики ядра блокируют NetQos. Независимо от метода, который использовался для установки DCB, если на компьютере установлен отладчик ядра, необходимо настроить отладчик, чтобы разрешить включение и настройку QoS, выполнив следующую команду.
 

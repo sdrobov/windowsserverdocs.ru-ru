@@ -22,10 +22,10 @@ ms.locfileid: "71362806"
 ---
 # <a name="using-the-remove-driverpackage-command"></a>Использование команды Remove-Дриверпаккаже
 
-> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > 
-> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Удаляет пакет драйвера с сервера.
 ## <a name="syntax"></a>Синтаксис
@@ -36,9 +36,9 @@ wdsutil /remove-DriverPackage [/Server:<Server name>] {/DriverPackage:<Package N
 
 |        Параметр        |                                                                            Описание                                                                             |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/Server: <Server name>] |              Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.              |
-| [/Дриверпаккаже: <Name>] |                                                        Указывает имя удаляемого пакета драйверов.                                                         |
-|    [/Паккажеид: <ID>]    | Указывает идентификатор служб развертывания Windows для удаляемого пакета драйверов. Если пакет драйвера не может быть однозначно идентифицирован по имени, необходимо указать идентификатор. |
+| [/Server:<Server name>] |              Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.              |
+| [/Дриверпаккаже:<Name>] |                                                        Указывает имя удаляемого пакета драйверов.                                                         |
+|    [/Паккажеид:<ID>]    | Указывает идентификатор служб развертывания Windows для удаляемого пакета драйверов. Если пакет драйвера не может быть однозначно идентифицирован по имени, необходимо указать идентификатор. |
 
 ## <a name="BKMK_examples"></a>Примеров
 Чтобы просмотреть сведения об образах, введите одно из следующих действий:
@@ -50,4 +50,4 @@ wdsutil /remove-DriverPackage /Server:MyWdsServer /DriverPackage:MyDriverPackage
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
 [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды Remove-дриверпаккажес](using-the-remove-driverpackages-command.md) .
+[с помощью команды Remove-дриверпаккажес](using-the-remove-driverpackages-command.md)

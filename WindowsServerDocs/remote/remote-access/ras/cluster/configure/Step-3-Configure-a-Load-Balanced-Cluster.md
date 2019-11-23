@@ -21,7 +21,7 @@ ms.locfileid: "71404637"
 ---
 # <a name="step-3-configure-a-load-balanced-cluster"></a>Шаг 3. Настройка кластера с балансировкой нагрузки
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 После подготовки серверов для кластера настройте балансировку нагрузки на одном сервере, настройте необходимые сертификаты и разверните кластер.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "71404637"
   
 4.  В зависимости от того, что вы выбрали при планировании, выполните следующие действия.  
   
-    1.  Windows NLB: На странице **метод балансировки нагрузки** щелкните **использовать балансировку сетевой нагрузки Windows (NLB)** , а затем нажмите кнопку **Далее**.  
+    1.  Windows NLB: на странице **метод балансировки нагрузки** щелкните **использовать балансировку сетевой нагрузки Windows (NLB)** , а затем нажмите кнопку **Далее**.  
   
-    2.  Внешняя подсистема балансировки нагрузки: На странице **метод балансировки нагрузки** щелкните **использовать внешнюю подсистему балансировки нагрузки**, а затем нажмите кнопку **Далее**.  
+    2.  Внешняя подсистема балансировки нагрузки: на странице **метод балансировки нагрузки** щелкните **использовать внешнюю подсистему балансировки нагрузки**, а затем нажмите кнопку **Далее**.  
   
 5.  В одном развертывании сетевого адаптера на странице **выделенные IP-адреса** выполните следующие действия, а затем нажмите кнопку **Далее**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "71404637"
     > [!NOTE]  
     > Если используется внешняя балансировка нагрузки, запишите виртуальные IP-адреса и укажите их в качестве внешних подсистем балансировки нагрузки.  
   
-0Windows команды PowerShell для](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -247,7 +247,7 @@ Set-RemoteAccessLoadBalancer -InternetDedicatedIPAddress "2.1.1.20/255.255.255.0
   
 12. В диалоговом окне **Добавление и удаление серверов** нажмите кнопку **Закрыть**.  
   
-0Windows команды PowerShell для](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -277,7 +277,7 @@ Add-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 7.  В диалоговом окне **Добавление и удаление серверов** нажмите кнопку **Закрыть**.  
   
-0Windows команды PowerShell для](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -298,7 +298,7 @@ Remove-RemoteAccessLoadBalancerNode -RemoteAccessServer <server name>
   
 4.  В диалоговом окне **Отключение балансировки нагрузки** нажмите кнопку **Закрыть**.  
   
-0Windows команды PowerShell для](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../../media/Step-3-Configure-a-Load-Balanced-Cluster/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -317,7 +317,7 @@ set-RemoteAccessLoadBalancer -disable
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Шаг 4. Проверка кластера @ no__t-0  
+-   [Шаг 4. Проверка кластера](Step-4-Verify-the-Cluster.md)  
   
 
 

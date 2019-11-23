@@ -18,7 +18,7 @@ ms.locfileid: "71369339"
 ---
 # <a name="ad-forest-recovery---adding-the-gc"></a>Восстановление леса AD — Добавление сборки мусора
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 Используйте следующую процедуру, чтобы добавить глобальный каталог к контроллеру домена.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "71369339"
 3. Разверните контейнер **серверы** , а затем разверните объект сервера для контроллера домена, к которому необходимо добавить глобальный каталог.  
 4. Щелкните правой кнопкой мыши **Параметры NTDS**и выберите пункт **свойства**.  
 5. Установите флажок **глобальный каталог** .  
-![Add GC @ no__t-1
+![добавить](media/AD-Forest-Recovery-Add-GC/addgc1.png) GC
 
 ## <a name="to-add-the-global-catalog-using-repadmin"></a>Добавление глобального каталога с помощью средства Repadmin  
 
@@ -81,7 +81,7 @@ ms.locfileid: "71369339"
    nltest /dsgetdc:nonroot domain name /KDC /Force  
    ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)  

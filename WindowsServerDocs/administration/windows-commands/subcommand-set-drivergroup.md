@@ -22,7 +22,7 @@ ms.locfileid: "71370843"
 ---
 # <a name="subcommand-set-drivergroup"></a>Подкоманда: Set-Дриверграуп
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает свойства существующей группы драйверов на сервере.
 ## <a name="syntax"></a>Синтаксис
@@ -32,9 +32,9 @@ wdsutil /Set-DriverGroup /DriverGroup:<Group Name> [/Server:<Server Name>] [/Nam
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/Дриверграуп: <Group Name>|Указывает имя группы драйверов.|
-|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
-|[/Name: <New Group Name>]|Указывает новое имя для группы драйверов.|
+|/Дриверграуп:<Group Name>|Указывает имя группы драйверов.|
+|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Name:<New Group Name>]|Указывает новое имя для группы драйверов.|
 |[/Enabled: {Да &#124; }|Включает или отключает группу драйверов.|
 |[/Аппликабилити: {сопоставлено &#124; всех}]|Указывает, какие пакеты следует установить при соблюдении условий фильтра. **Сопоставление** означает установку только пакетов драйверов, соответствующих оборудованию клиента. **Все** означает установку всех пакетов на клиентах независимо от их оборудования.|
 ## <a name="BKMK_examples"></a>Примеров
@@ -46,5 +46,5 @@ wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Enabled:Yes
 wdsutil /Set-DriverGroup /DriverGroup:printerdrivers /Name:colorprinterdrivers /Applicability:All
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
-[Синтаксическая клавиша командной строки](command-line-syntax-key.md)
-[подкоманда: Set-дриверграупфилтер](subcommand-set-drivergroupfilter.md)
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[подкоманды: Set-дриверграупфилтер](subcommand-set-drivergroupfilter.md)

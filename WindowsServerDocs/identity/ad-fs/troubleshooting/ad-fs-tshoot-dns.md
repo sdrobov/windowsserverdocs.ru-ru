@@ -29,7 +29,7 @@ ms.locfileid: "71407205"
 
 ### <a name="to-use-a-ping-test"></a>Использование проверки связи
 1.  Открытие командной строки
-2. Введите PING <name of adfs server> a. Пример.  Проверка связи sts.contoso.com
+2. Введите PING <name of adfs server> a. Пример: PING sts.contoso.com
 3. Вы должны увидеть ответ от сервера
 
 ![Ping](media/ad-fs-tshoot-dns/dns1.png)
@@ -40,7 +40,7 @@ ms.locfileid: "71407205"
 ### <a name="to-use-a-nslookup"></a>Использование NSLookup
 1.  Открытие командной строки
 2. Введите PING <name of adfs server> a. Пример: nslookup sts.contoso.com
-3. Вы должны увидеть сведения о DNS для сервера ![NSLookup @ no__t-1.
+3. Вы должны увидеть сведения о DNS для сервера ![NSLookup](media/ad-fs-tshoot-dns/dns2.png)
 
 ## <a name="tracert"></a>Tracert
 Определяет путь, полученный к назначению путем отправки эхо-запроса протокола ICMP или ICMPv6-сообщений в назначение с добавочным увеличением срока жизни (TTL) значений полей.   Дополнительные сведения см. в разделе [tracert](https://technet.microsoft.com/library/ff961507.aspx).
@@ -49,8 +49,8 @@ ms.locfileid: "71407205"
 ### <a name="to-use-tracert"></a>Использование tracert
 1.  Открытие командной строки
 2. Введите tracert <name of adfs server> a. Пример: tracert sts.contoso.com
-3. Вы должны увидеть путь назначения, используемый для доступа к серверу ![Tracert @ no__t-1.
+3. Вы должны увидеть путь назначения, используемый для доступа к серверу ![tracert](media/ad-fs-tshoot-dns/dns3.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Устранение неполадок в AD FS](ad-fs-tshoot-overview.md)

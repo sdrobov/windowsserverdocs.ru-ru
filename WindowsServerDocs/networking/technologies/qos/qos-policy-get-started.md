@@ -17,9 +17,9 @@ ms.locfileid: "71405286"
 ---
 # <a name="getting-started-with-qos-policy"></a>начало работы с политикой QoS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Чтобы приступить к работе со службой качества обслуживания \(QoS @ no__t-1, можно использовать следующие разделы.
+Следующие разделы содержат сведения о начале работы со службой качества обслуживания \(QoS\).
 
 - [Как работает политика качества обслуживания](qos-policy-works.md)
 - [Архитектура политики качества обслуживания](qos-policy-architecture.md)

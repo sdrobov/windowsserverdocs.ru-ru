@@ -18,7 +18,7 @@ ms.locfileid: "71357542"
 ---
 # <a name="deploy-implementing-retention-of-information-on-file-servers-demonstration-steps"></a>Deploy Implementing Retention of Information on File Servers (Demonstration Steps)
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Вы может задать периоды хранения для папок и поместить файлы на удержание по юридическим причинам, используя инфраструктуру классификации файлов и диспетчер ресурсов файлового сервера.  
   
@@ -26,18 +26,18 @@ ms.locfileid: "71357542"
   
 -   [Предварительные условия](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Prereqs)  
   
--   [Шаг 1. Создание определений свойств ресурсов @ no__t-0  
+-   [Шаг 1. Создание определений свойств ресурсов](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [Шаг 2. Настройка уведомлений @ no__t-0  
+-   [Шаг 2. Настройка уведомлений](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step2)  
   
--   [Шаг 3. Создание задачи управления файлами @ no__t-0  
+-   [Шаг 3. Создание задачи управления файлами](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
--   [Шаг 4. Классификация файла вручную @ no__t-0  
+-   [Шаг 4. Классификация файла вручную](Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
 > В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Предварительные условия  
 В этом разделе предполагается, что SMTP-сервер настроен для отправки уведомлений об окончания срока действия файла.  
   
 ## <a name="BKMK_Step1"></a>Шаг 1. Создание определений свойств ресурсов  
@@ -57,7 +57,7 @@ ms.locfileid: "71357542"
   
 5.  Щелкните правой кнопкой **Обнаруживаемость**и выберите **Включить**.  
   
-![solution руководство по использованию](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -91,7 +91,7 @@ Set-ADResourceProperty -Enabled:$true -Identity:'CN=Discoverability_MS,CN=Resour
   
 6.  Нажмите кнопку **ОК**.  
   
-![solution руководство по использованию](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -142,7 +142,7 @@ Set-FsrmSetting -SmtpServer IP address of SMTP server -FromEmailAddress "FromEma
   
 11. Нажмите кнопку **ОК**.  
   
-![solution руководство по использованию](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Implementing-Retention-of-Information-on-File-Servers--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -185,10 +185,10 @@ $fmj1=New-FSRMFileManagementJob -Name "Retention Task" -Namespace @('D:\Finance 
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Сценарий. Реализация хранения информации на файловых серверах](Scenario--Implement-Retention-of-Information-on-File-Servers.md)  
+-   [Сценарий: реализация хранения информации на файловых серверах](Scenario--Implement-Retention-of-Information-on-File-Servers.md)  
   
 -   [Планирование хранения информации на файловых серверах](assetId:///edf13190-7077-455a-ac01-f534064a9e0c)  
   
--   [Динамический контроль доступа. Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [Динамический контроль доступа: обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

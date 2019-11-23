@@ -17,7 +17,7 @@ ms.locfileid: "71406167"
 ---
 # <a name="domain-name-system-dns"></a>Служба доменных имен (DNS)
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Служба доменных имен (DNS) — это один из стандартных отраслевых протоколов, включающих TCP/IP, а клиент DNS и DNS-сервер предоставляют службам разрешения имен IP-адресов компьютеров и пользователей.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "71406167"
 > -   [Новые возможности DNS-клиента](What-s-New-in-DNS-Client.md)  
 > -   [Новые возможности DNS-сервера](What-s-New-in-DNS-Server.md)  
 > -   [Рекомендации по сценариям политики DNS](deploy/DNS-Policy-Scenario-Guide.md)  
-> -   Видео @no__t 0Windows Server 2016: Управление DNS в IPAM @ no__t-0  
+> -   Видео: [Windows Server 2016: Управление DNS в IPAM](https://channel9.msdn.com/Blogs/windowsserver/Windows-Server-2016-DNS-management-in-IPAM)  
   
 В Windows Server 2016 DNS является ролью сервера, которую можно установить с помощью диспетчер сервера или команд Windows PowerShell. При установке нового леса Active Directory и домена служба DNS автоматически устанавливается с Active Directory в качестве глобального сервера каталога для леса и домена.  
   

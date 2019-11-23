@@ -1,6 +1,6 @@
 ---
 title: nslookup set root
-description: 'Раздел команд Windows для * * * *- '
+description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -36,8 +36,8 @@ set root=<RootServer>
 |  <RootServer>   | Указывает новое имя для корневого сервера. Значение по умолчанию — ns.nic.ddn.mil. |
 | {Help &#124; ?} |              Отображает краткую сводку подкоманд **nslookup** .               |
 
-## <a name="remarks"></a>Примечания.
+## <a name="remarks"></a>Замечания
 - Подкоманда **set root** влияет на **корневую** подкоманду.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса командной строки](command-line-syntax-key.md) 
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
   [корневой элемент nslookup](nslookup-root.md)

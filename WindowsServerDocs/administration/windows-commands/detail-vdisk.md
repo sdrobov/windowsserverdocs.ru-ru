@@ -22,9 +22,9 @@ ms.locfileid: "71378557"
 ---
 # <a name="detail-vdisk"></a>подробные сведения VDISK
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает свойства выбранного виртуального жесткого диска \(VHD @ no__t-1.  
+Отображение свойств выбранного виртуального жесткого диска \(\)VHD.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71378557"
 detail vdisk  
 ```  
   
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Замечания  
   
 -   Для выполнения этой операции необходимо выбрать виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать виртуальный диск и переместить фокус на него.  
   

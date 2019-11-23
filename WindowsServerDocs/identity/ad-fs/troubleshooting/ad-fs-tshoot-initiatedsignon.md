@@ -22,18 +22,18 @@ ms.locfileid: "71366188"
 По умолчанию для AD FS в Windows 2016 не включена страница входа.  Чтобы включить его, можно использовать команду PowerShell Set-AdfsProperties.  Для включения страницы используйте следующую процедуру:
 
 1.  Открыть Windows PowerShell
-2.  Введите: `Get-AdfsProperties` и нажмите клавишу ВВОД.
-3.  Убедитесь, что для **енаблеидпинитиатедсигнонпаже** задано значение false ![False @ no__t-2.
-4.  В PowerShell введите: `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`.
+2.  Ввод: `Get-AdfsProperties` и нажмите клавишу ВВОД
+3.  Убедитесь, что для **енаблеидпинитиатедсигнонпаже** задано значение false ![false](media/ad-fs-tshoot-initiatedsignon/idp2.png)
+4.  В PowerShell введите: `Set-AdfsProperties -EnableIdpInitiatedSignonPage $true`
 5.  Вы не увидите подтверждение, поэтому снова введите Get-AdfsProperties и убедитесь, что **енаблеидпинитатедсигнонпаже** имеет значение true.
-![True @ no__t-1
+![true](media/ad-fs-tshoot-initiatedsignon/idp4.png)
 
 ## <a name="test-authentication"></a>Тест проверки подлинности
 Используйте следующую процедуру, чтобы протестировать проверку подлинности AD FS на странице входа, инициированной IDP.
 
-1.  Откройте веб-браузер и перейдите на страницу входа в IDP.  Например https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+1.  Откройте веб-браузер и перейдите на страницу входа в IDP.  Пример: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
 2.  Вам будет предложено выполнить вход.  Введите свои учетные данные.
-![Sign-on @ no__t-1
+![вход](media/ad-fs-tshoot-initiatedsignon/idp5.png)
 3.  Если это успешно, необходимо войти в.
 
 
@@ -42,15 +42,15 @@ ms.locfileid: "71366188"
 
 1.  На клиенте Windows 10 нажмите кнопку Пуск и введите свойства браузера и выберите Свойства обозревателя.
 2.   Перейдите на вкладку Безопасность, щелкните Местная интрасеть и нажмите кнопку сайты.
-![Seamless @ no__t-1
+![простой](media/ad-fs-tshoot-initiatedsignon/idp8.png)
 1.  Нажмите кнопку Дополнительно.
 2.  Введите URL-адрес и нажмите кнопку Добавить.  Нажмите кнопку Закрыть.
-URL-адрес @no__t 0Add @ no__t-1
+![добавить URL-](media/ad-fs-tshoot-initiatedsignon/idp9.png)
 1.  Нажмите кнопку ОК.  Нажмите кнопку ОК.  При этом должны быть закрыты параметры Интернета.
-2.  Откройте веб-браузер и перейдите на страницу входа в IDP.  Например https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
+2.  Откройте веб-браузер и перейдите на страницу входа в IDP.  Пример: https://sts.contoso.com/adfs/ls/idpinitiatedsignon.htm
 3.  Нажмите кнопку войти.  Необходимо автоматически войти в систему и не запрашивать учетные данные.
-![Seamless @ no__t-1
+![простой](media/ad-fs-tshoot-initiatedsignon/idp6.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Устранение неполадок в AD FS](ad-fs-tshoot-overview.md)

@@ -16,7 +16,7 @@ ms.locfileid: "71403632"
 ---
 # <a name="initialize-the-hgs-cluster-using-key-mode-in-an-existing-bastion-forest"></a>Инициализация кластера HGS с помощью режима ключей в существующем лесу бастиона
 
-> Относится к: Windows Server 2019
+> Область применения: Windows Server 2019
 > 
 > [!div class="step-by-step"]
 > [«Установка HGS в новом лесу](guarded-fabric-install-hgs-in-a-bastion-forest.md)
@@ -27,7 +27,7 @@ ms.locfileid: "71403632"
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)] 
 
 Прежде чем продолжить, убедитесь, что объекты кластера предварительно подготовлены для службы защиты узла и предоставил вошедшему в систему пользователю **полный контроль** над объектами VCO и CNO в Active Directory.
-Имя объекта виртуального компьютера должно быть передано параметру `-HgsServiceName`, а имя кластера — параметру `-ClusterName`.
+Имя объекта виртуального компьютера необходимо передать в параметр `-HgsServiceName`, а имя кластера — в параметр `-ClusterName`.
 
 > [!TIP]
 > Прежде чем продолжить, проверьте контроллеры доменов AD, чтобы убедиться, что объекты кластера реплицированы на все контроллеры домена.

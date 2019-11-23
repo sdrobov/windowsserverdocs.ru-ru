@@ -22,7 +22,7 @@ ms.locfileid: "71403396"
 ---
 # <a name="schannel-security-support-provider-technical-reference"></a>Технический справочник по поставщику поддержки безопасности Schannel
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 Эта ссылка для ИТ-специалистов содержит сведения о протоколе TLS, протоколе SSL (SSL) и протоколе датаграммы протокола DTLS, как реализовано в рамках поддержки безопасности SChannel. Поставщик (SSP).
 
@@ -32,6 +32,7 @@ ms.locfileid: "71403396"
 - [Протокол DTLS](datagram-transport-layer-security-protocol.md)
 
 ## <a name="see-also"></a>См. также
-Проверка [подлинности Windows](../windows-authentication/windows-authentication-overview.md)@no__t — 1[Проверка подлинности Kerberos](../kerberos/kerberos-authentication-overview.md)
+[Проверка подлинности Windows](../windows-authentication/windows-authentication-overview.md)
+[Проверка подлинности Kerberos](../kerberos/kerberos-authentication-overview.md)
 
 

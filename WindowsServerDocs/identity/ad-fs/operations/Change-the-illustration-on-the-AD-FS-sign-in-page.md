@@ -21,7 +21,7 @@ ms.locfileid: "71358287"
 ## <a name="change-the-illustration"></a>Изменение иллюстрации  
 
 
-Чтобы изменить рисунок, рисунок слева, отображаемый на странице Sign @ no__t-0in, должен использовать следующий командлет и синтаксис Windows PowerShell.  
+Чтобы изменить иллюстрацию, рисунок слева, отображаемый на странице Sign\-to, используйте следующий командлет и синтаксис Windows PowerShell.  
 
 ![изменить иллюстрацию](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   

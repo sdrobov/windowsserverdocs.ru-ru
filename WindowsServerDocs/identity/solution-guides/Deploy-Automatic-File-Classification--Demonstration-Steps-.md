@@ -18,7 +18,7 @@ ms.locfileid: "71357589"
 ---
 # <a name="deploy-automatic-file-classification-demonstration-steps"></a>Развертывание автоматической классификации данных (поэтапная демонстрация)
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описывается, как включить свойства ресурсов в Active Directory, создать правила классификации на файловом сервере и назначить значения свойствам ресурсов для файлов на сервере. Для этого примера создаются следующие правила классификации:  
   
@@ -28,13 +28,13 @@ ms.locfileid: "71357589"
   
 **В этом документе**  
   
--   [Шаг 1. Создание определений свойств ресурсов @ no__t-0  
+-   [Шаг 1. Создание определений свойств ресурсов](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [Шаг 2. Создание правила классификации содержимого строки @ no__t-0  
+-   [Шаг 2. Создание правила классификации содержимого строки](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
   
--   [Шаг 3. Создание правила классификации содержимого регулярного выражения @ no__t-0  
+-   [Шаг 3. Создание правила классификации содержимого регулярного выражения](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
--   [Шаг 4. Убедитесь, что файлы классифицированы как no__t-0  
+-   [Шаг 4. Проверка того, что файлы классифицированы](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
 > В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
@@ -56,7 +56,7 @@ ms.locfileid: "71357589"
   
 5.  Щелкните правой кнопкой мыши **Личные сведения** и выберите команду **Включить**.  
   
-![solution руководство по использованию](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -65,7 +65,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=Impact_MS,CN=Resource Prop
 Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 ```  
   
-## <a name="BKMK_Step2"></a>Шаг 2. Создание правила классификации строкового содержимого  
+## <a name="BKMK_Step2"></a>Шаг 2. Создание правила классификации содержимого строки  
 Правило классификации строкового содержимого ищет в файле определенную строку. Если она найдена, значение свойства ресурса можно настроить. В этом примере выполняется сканирование каждого файла в общей сетевой папке и поиск строки "Contoso Confidential". Если строка найдена, связанный файл классифицируется как особо важный для бизнеса.  
   
 [Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
@@ -89,7 +89,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
 8.  На вкладке **Область действия** нажмите кнопку **Добавить**и выберите папки, которые необходимо включить в это правило, например D:\Finance Documents.  
   
     > [!NOTE]  
-    > Также можно выбрать динамическое пространство имен для этой области действия. Дополнительные сведения о динамических пространствах имен для правил классификации см. [в разделе новые возможности файлового сервера диспетчер ресурсов в Windows Server 2012 \[redirected @ no__t-2](assetId:///d53c603e-6217-4b98-8508-e8e492d16083).  
+    > Также можно выбрать динамическое пространство имен для этой области действия. Дополнительные сведения о динамических пространствах имен для правил классификации см. [в разделе новые возможности файлового сервера диспетчер ресурсов в Windows Server 2012 \[перенаправлен\]](assetId:///d53c603e-6217-4b98-8508-e8e492d16083).  
   
 9. На вкладке **Классификация** выполните следующие действия.  
   
@@ -107,7 +107,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 13. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![solution руководство по использованию](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -149,13 +149,13 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 9. В столбце **Тип выражения** выберите элемент **Регулярное выражение**.  
   
-10. В столбце **выражение** введите **^ (?! 000) ([0-7] \d @ no__t-2 | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d @ no__t-3 $**  
+10. В столбце **выражение** введите **^ (?! 000) ([0-7] \d{2}| 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$**  
   
 11. В столбце **Минимальное число повторений** введите **10**и нажмите кнопку **ОК**.  
   
 12. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![solution руководство по использованию](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell</em>***  
+![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -163,7 +163,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
-## <a name="BKMK_Step4"></a>Шаг 4. Проверка классификации файлов  
+## <a name="BKMK_Step4"></a>Шаг 4. Убедитесь, что файлы классифицированы правильно  
 Вы можете убедиться, что файлы классифицируются правильно, просмотрев свойства файла, созданного в папке, указанной в правилах классификации.  
   
 #### <a name="to-verify-that-the-files-are-classified-correctly"></a>Проверка классификации файлов  
@@ -176,7 +176,7 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
     3.  Закройте отчет об автоматической классификации.  
   
-    4.  Это можно сделать, выполнив в Windows PowerShell следующую команду: **Start-Фсрмклассификатион ' "Рундуратион 0 — подтверждение: $false**  
+    4.  Это можно сделать с помощью Windows PowerShell, выполнив следующую команду: **Start-фсрмклассификатион ' "рундуратион 0 — Confirm: $false**  
   
 2.  Перейдите к папке, указанной в правилах классификации, например D:\Finance Documents.  
   
@@ -186,11 +186,11 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 ## <a name="BKMK_Links"></a>См. также  
   
--   [Сценарий. Получение четкого представления о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
+-   [Сценарий: получение сведений о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
 -   [Планирование автоматической классификации файлов](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 
   
--   [Динамический контроль доступа. Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [Динамический контроль доступа: обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
   
 

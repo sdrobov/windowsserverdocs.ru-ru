@@ -21,7 +21,7 @@ ms.locfileid: "71404914"
 ---
 # <a name="step-2-configure-the-basic-directaccess-server"></a>Шаг 2. Настройка базового сервера DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе описывается настройка параметров клиента и сервера, необходимых для базового развертывания DirectAccess. Прежде чем приступить к развертыванию, убедитесь, что выполнены действия по планированию, описанные в разделе [планирование базового развертывания DirectAccess](Plan-a-Basic-DirectAccess-Deployment.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71404914"
   
 7.  В диалоговом окне **Ход установки** убедитесь в успешном завершении установки, а затем нажмите кнопку **Закрыть**.  
   
-0Windows команды PowerShell для](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-2-Configure-the-DirectAccess-Server/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующий командлет Windows PowerShell или командлет устанавливает роль удаленного доступа: 
 
@@ -121,7 +121,7 @@ ms.locfileid: "71404914"
   
 ## <a name="BKMK_Links"></a>Предыдущий шаг  
   
--   [Шаг 1. Настройка инфраструктуры DirectAccess](Step-1-Configure-the-DirectAccess-Infrastructure.md).  
+-   [Шаг 1. Настройка инфраструктуры DirectAccess](Step-1-Configure-the-DirectAccess-Infrastructure.md)  
   
 ## <a name="next-step"></a>Дальнейшие действия  
   

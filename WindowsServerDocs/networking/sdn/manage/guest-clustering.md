@@ -22,14 +22,14 @@ ms.locfileid: "71406037"
 ---
 # <a name="guest-clustering-in-a-virtual-network"></a>Кластеризация гостевых систем в виртуальной сети
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Виртуальные машины, подключенные к виртуальной сети, могут использовать только IP-адреса, назначенные сетевому контроллеру для связи в сети.  Технологии кластеризации, для которых требуется плавающий IP-адрес, например отказоустойчивая кластеризация (Майкрософт), требуются дополнительные действия для правильной работы.
 
-Для обеспечения доступности плавающего IP-адреса необходимо использовать программное обеспечение Load Balancer \(SLB @ no__t-1 Virtual IP \(VIP @ no__t-3.  Программная подсистема балансировки нагрузки должна быть настроена с проверкой работоспособности на порте этого IP-адреса, чтобы SLB направляли трафик на компьютер, на котором в данный момент находится этот IP-адрес.
+Для обеспечения доступности плавающего IP-адреса следует использовать программное обеспечение Load Balancer \(SLB\) виртуальном IP-адресе \(VIP\).  Программная подсистема балансировки нагрузки должна быть настроена с проверкой работоспособности на порте этого IP-адреса, чтобы SLB направляли трафик на компьютер, на котором в данный момент находится этот IP-адрес.
 
 
-## <a name="example-load-balancer-configuration"></a>Пример. Конфигурация подсистемы балансировки нагрузки
+## <a name="example-load-balancer-configuration"></a>Пример: Конфигурация подсистемы балансировки нагрузки
 
 В этом примере предполагается, что вы уже создали виртуальные машины, которые станут узлами кластера, и подключили их к виртуальной сети.  Инструкции см. в статье [Создание виртуальной машины и подключение к виртуальной сети клиента или VLAN](https://technet.microsoft.com/windows-server-docs/networking/sdn/manage/create-a-tenant-vm).  
 
@@ -50,7 +50,7 @@ ms.locfileid: "71406037"
    $LoadBalancerProperties = new-object Microsoft.Windows.NetworkController.LoadBalancerProperties
    ```
 
-3. Создайте внешний IP-адрес @ no__t-0end.
+3. Создайте интерфейсный IP-адрес переднего\-.
 
    ```PowerShell
    $LoadBalancerProperties.frontendipconfigurations += $FrontEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerFrontendIpConfiguration
@@ -63,7 +63,7 @@ ms.locfileid: "71406037"
    $FrontEnd.properties.privateIPAllocationMethod = "Static"
    ```
 
-4. Создайте пул назад @ no__t-0end, который будет содержать узлы кластера.
+4. Создайте конечный пул\-для хранения узлов кластера.
 
    ```PowerShell
    $BackEnd = new-object Microsoft.Windows.NetworkController.LoadBalancerBackendAddressPool
@@ -132,7 +132,7 @@ ms.locfileid: "71406037"
 
 9. Используемых Если вы используете отказоустойчивый кластер Майкрософт, перейдите к следующему примеру. 
 
-## <a name="example-2-configuring-a-microsoft-failover-cluster"></a>Пример 2: Настройка отказоустойчивого кластера Microsoft
+## <a name="example-2-configuring-a-microsoft-failover-cluster"></a>Пример 2. Настройка отказоустойчивого кластера Microsoft
 
 Для настройки отказоустойчивого кластера можно выполнить следующие действия.
 

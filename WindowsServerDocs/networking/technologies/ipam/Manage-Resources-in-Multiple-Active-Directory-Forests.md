@@ -21,7 +21,7 @@ ms.locfileid: "71355228"
 ---
 # <a name="manage-resources-in-multiple-active-directory-forests"></a>Управление ресурсами в нескольких лесах Active Directory
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела вы узнаете, как использовать IPAM для управления контроллерами домена, DHCP-серверами и DNS-серверами в нескольких Active Directory лесах.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71355228"
 ![Настройка обнаружения серверов](../../media/Manage-Resources-in-Multiple-Active-Directory-Forests/ipam_serverdiscovery.jpg)  
 
 >[!NOTE]
->Чтобы подготовить групповая политика @ no__t-0based для сценария перекрестного леса Active Directory, убедитесь, что вы запускаете следующий командлет Windows PowerShell на сервере IPAM, а не в контроллерах домена-доверенных доменов. Например, если IPAM-сервер присоединен к лесу corp.contoso.com, а доверенный лес — fabrikam.com, можно выполнить следующий командлет Windows PowerShell на сервере IPAM в corp.contoso.com для групповая политика @ no__t-0based подготовки на лес fabrikam.com. Для выполнения этого командлета необходимо быть членом группы "Администраторы домена" в лесу fabrikam.com.
+>Для групповая политика подготовки\-на основе Active Directory сценария между лесами убедитесь, что на сервере IPAM выполняется следующий командлет Windows PowerShell, а не контроллеры домена-доверия. Например, если IPAM-сервер присоединен к лесу corp.contoso.com, а доверенный лес — fabrikam.com, можно выполнить следующий командлет Windows PowerShell на сервере IPAM в corp.contoso.com для групповая политика\-подготовки в лесу fabrikam.com. Для выполнения этого командлета необходимо быть членом группы "Администраторы домена" в лесу fabrikam.com.
 
     
     Invoke-IpamGpoProvisioning -Domain fabrikam.COM -GpoPrefixName IPAMSERVER -IpamServerFqdn IPAM.CORP.CONTOSO.COM

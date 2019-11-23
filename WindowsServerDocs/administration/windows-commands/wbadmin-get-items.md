@@ -53,7 +53,7 @@ wbadmin get items
 ```
 wbadmin get items -version:03/31/2013-09:00
 ```
-Вывод списка элементов из резервной копии Server01, которая выполнялась 30 апреля 2013 в 9:00 утра и хранятся в \\ @ no__t-1servername\share, введите:
+Вывод списка элементов из резервной копии Server01, которая выполнялась 30 апреля 2013 в 9:00 утра и хранятся в \\\\сервернаме\шаре, введите:
 ```
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```

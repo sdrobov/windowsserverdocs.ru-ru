@@ -22,7 +22,7 @@ ms.locfileid: "71372764"
 ---
 # <a name="nslookup-set-timeout"></a>nslookup set timeout
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет начальное число секунд ожидания ответа на запрос поиска.
 ## <a name="syntax"></a>Синтаксис
@@ -36,7 +36,7 @@ set timeout=<Number>
 |    <Number>     | Указывает количество секунд ожидания ответа. Значение по умолчанию (в секундах) ожидания равно 5. |
 | {Help &#124; ?} |                      Отображает краткую сводку подкоманд **nslookup** .                       |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 - Если ответ на запрос не получен в течение указанного периода времени, время ожидания удваивается и запрос отправляется снова. Для управления числом повторных попыток можно использовать команду **set retry** .
   ## <a name="BKMK_examples"></a>Примеров
   В следующем примере устанавливается время ожидания для получения ответа в течение 2 секунд:
@@ -44,5 +44,5 @@ set timeout=<Number>
   set timeout=2
   ```
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Синтаксис командной строки](command-line-syntax-key.md)
-  [параметр nslookup set retry](nslookup-set-retry.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+  [nslookup set retry](nslookup-set-retry.md)

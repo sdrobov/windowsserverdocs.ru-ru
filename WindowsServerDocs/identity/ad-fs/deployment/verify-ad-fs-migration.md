@@ -23,17 +23,17 @@ ms.locfileid: "71408180"
   
 ### <a name="to-verify-that-a-federation-server-is-operational"></a>Проверка работоспособности сервера федерации  
   
-1.  Откройте окно браузера и в адресной строке введите имя сервера федерации, а затем добавьте его с помощью `federationmetadata/2007-06/federationmetadata.xml` , чтобы перейти к конечной точке метаданных службы федерации. Например, `https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml` .  
+1.  Откройте окно браузера и в адресной строке введите имя сервера федерации, а затем добавьте его с помощью `federationmetadata/2007-06/federationmetadata.xml`, чтобы перейти к конечной точке метаданных службы федерации. Например, `https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml`.  
   
 Если в окне браузера вы увидите метаданные сервера федерации без каких-либо ошибок или предупреждений по поводу SSL-сертификата, то сервер федерации работоспособен.  
   
 2. Также можно перейти на страницу входа служб федерации Active Directory (добавьте к имени службы федерации строку `adfs/ls/idpinitiatedsignon.htm`, например `https://fs.contoso.com/adfs/ls/idpinitiatedsignon.htm`).  Появится страница входа в службы федерации Active Directory, на которой можно выполнить вход с учетными данными администратора домена.  
   
 > [!IMPORTANT]
->  Обязательно настройте параметры браузера, чтобы они доверяли роли сервера федерации, добавив имя службы федерации (например, `https://fs.contoso.com`) в зону локальной интрасети браузера.  
+>  Не забудьте настроить параметры браузера, чтобы доверять роли сервера федерации, добавив имя службы федерации (например, `https://fs.contoso.com`) в зону локальной интрасети браузера.  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Миграция служб ролей службы федерации Active Directory (AD FS) на Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
  [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)  
- [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)   
+ [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)   
  [Перенос прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)   

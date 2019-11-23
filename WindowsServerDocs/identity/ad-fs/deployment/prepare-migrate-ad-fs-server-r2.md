@@ -150,8 +150,8 @@ ms.locfileid: "71359307"
   
 -   Если нужно выполнить перенос фермы AD FS SQL Server, то следует знать, что в процессе миграции создается новый экземпляр базы данных SQL, в который необходимо импортировать исходные данные конфигурации.  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Миграция служб ролей службы федерации Active Directory (AD FS) на Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
- [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)   
- [Перенос прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)   
+ [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)   
+ [Перенос  прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)  
  [Проверка AD FS миграции на Windows Server 2012 R2](verify-ad-fs-migration.md)

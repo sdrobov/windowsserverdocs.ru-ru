@@ -20,7 +20,7 @@ ms.locfileid: "71366781"
 ---
 # <a name="hyper-v-technology-overview"></a>Обзор технологии Hyper-V
 
->Область применения. Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Область применения: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Hyper-V — это продукт виртуализации оборудования Майкрософт. Она позволяет создавать и запускать программную версию компьютера, называемую *виртуальной машиной*. Каждая виртуальная машина действует как полноценный компьютер, запускающий операционную систему и программы. Если вам нужны вычислительные ресурсы, виртуальные машины предоставляют больше гибкости, помогают экономить время и деньги и являются более эффективным способом использования оборудования, чем запуск одной операционной системы на физическом оборудовании.
 
@@ -90,7 +90,7 @@ Hyper-V также имеет средства для управления и п
 
 - В диспетчере Hyper-V
 - [Модуль Hyper-V для Windows PowerShell](https://docs.microsoft.com/powershell/module/hyper-v/index)
-- [Подключение к виртуальной машине](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) \(sometimes с именем VMConnect @ no__t-2
+- \([подключения к виртуальной машине](https://docs.microsoft.com/windows-server/virtualization/hyper-v/learn-more/hyper-v-virtual-machine-connect) иногда называют VMConnect\)
 - [Windows PowerShell Direct](manage/Manage-Windows-virtual-machines-with-PowerShell-Direct.md)
 
 ## <a name="related-technologies"></a>Связанные технологии

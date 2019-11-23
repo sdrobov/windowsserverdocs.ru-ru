@@ -18,7 +18,7 @@ ms.locfileid: "71409090"
 ---
 # <a name="ad-forest-recovery---removing-the-global-catalog"></a>Восстановление леса AD — удаление глобального каталога  
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
  Используйте следующую процедуру, чтобы удалить глобальный каталог из контроллера домена. 
   
@@ -31,7 +31,7 @@ ms.locfileid: "71409090"
 3. Разверните контейнер **серверы** , а затем разверните объект *сервера* для контроллера домена, из которого необходимо удалить глобальный каталог. 
 4. Щелкните правой кнопкой мыши **Параметры NTDS**и выберите пункт **свойства**. 
 5. Снимите флажок **глобальный каталог** . 
-   ![Remove GC @ no__t-1
+   ![удалить](media/AD-Forest-Recovery-Remove-GC/removegc1.png) GC
 6. Щелкните **Применить**.
   
 ## <a name="to-remove-the-global-catalog-using-repadmin"></a>Удаление глобального каталога с помощью средства Repadmin  
@@ -42,7 +42,7 @@ ms.locfileid: "71409090"
    repadmin.exe /options DC_NAME –IS_GC  
    ```  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

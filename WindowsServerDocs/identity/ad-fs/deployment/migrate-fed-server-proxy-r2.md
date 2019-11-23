@@ -36,9 +36,9 @@ ms.locfileid: "71359369"
   
 - [Установка и настройка сервера прокси веб-приложения](https://technet.microsoft.com/library/dn383662.aspx)  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Миграция служб ролей службы федерации Active Directory (AD FS) на Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
- [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)   
- [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)    
+ [Подготовка к миграции сервера AD FS федерации](prepare-migrate-ad-fs-server-r2.md)   
+ [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)    
  [Проверка AD FS миграции на Windows Server 2012 R2](verify-ad-fs-migration.md)
 

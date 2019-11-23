@@ -17,7 +17,7 @@ ms.locfileid: "71940701"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>Подтверждение аттестации защищенных узлов
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 Администратор структуры должен подтвердить, что узлы Hyper-V могут работать как защищенные узлы. Выполните следующие действия по крайней мере на одном защищенном узле:
 
@@ -31,7 +31,7 @@ ms.locfileid: "71940701"
 
 3. Настройте URL-адреса защиты ключа и аттестации узла:
 
-    - **С помощью Windows PowerShell**: URL-адреса защиты ключа и аттестации можно настроить, выполнив следующую команду в консоли Windows PowerShell с повышенными привилегиями. Для @no__t 0FQDN @ no__t-1 используйте полное доменное имя кластера HGS (например, HGS. бастиона. local) или попросите администратора HGS запустить командлет **Get-HgsServer** на сервере HGS для получения URL-адресов.
+    - С **помощью Windows PowerShell**: можно настроить URL-адреса защиты ключа и аттестации, выполнив следующую команду в консоли Windows PowerShell с повышенными привилегиями. Для &lt;полного доменного имени&gt;используйте полное доменное имя кластера HGS (например, HGS. бастиона. local) или попросите администратора HGS запустить командлет **Get-HgsServer** на сервере HGS для получения URL-адресов.
 
         ```PowerShell
         Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
@@ -39,10 +39,10 @@ ms.locfileid: "71940701"
 
         Чтобы настроить резервный сервер HGS, повторите эту команду и укажите резервные URL-адреса для служб защиты и аттестации ключей. Дополнительные сведения см. в разделе [резервная конфигурация](guarded-fabric-manage-branch-office.md#fallback-configuration).
 
-    - **Через VMM**: Если вы используете System Center 2016-Virtual Machine Manager (VMM), вы можете настроить URL-адреса аттестации и защиты ключей в VMM. Дополнительные сведения см. в статье [Настройка глобальных параметров HGS](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) в разделе **подготавливать защищенные узлы в VMM**.
+    - С **помощью VMM**. Если вы используете System Center 2016-Virtual Machine Manager (VMM), вы можете настроить URL-адреса аттестации и защиты ключей в VMM. Дополнительные сведения см. в статье [Настройка глобальных параметров HGS](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) в разделе **подготавливать защищенные узлы в VMM**.
 
     >**Примечания**
-    > - Если администратор HGS [включил протокол HTTPS на сервере HGS](guarded-fabric-configure-hgs-https.md), начните использовать URL-адреса с @no__t – 1.
+    > - Если администратор HGS [включил протокол HTTPS на сервере HGS](guarded-fabric-configure-hgs-https.md), начните использовать URL-адреса с `https://`.
     > - Если администратор HGS включил протокол HTTPS на сервере HGS и использовал самозаверяющий сертификат, необходимо импортировать сертификат в хранилище доверенных корневых центров сертификации на каждом узле. Для этого выполните следующую команду на каждом узле:
        ```PowerShell
        Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root
@@ -62,7 +62,7 @@ ms.locfileid: "71940701"
     ```
 
     > [!IMPORTANT]
-    > Если вы используете Windows Server 2019 или Windows 10 версии 1809 и используете политики целостности кода, `Get-HgsTrace` возвращают ошибку для **активной диагностики политики целостности кода** .
+    > Если вы используете Windows Server 2019 или Windows 10 версии 1809 и используете политики целостности кода, `Get-HgsTrace` возвращать ошибку для **активной диагностики политики целостности кода** .
     > Вы можете спокойно проигнорировать этот результат, если это единственный сбой диагностики.
 
 ## <a name="next-step"></a>Дальнейшие действия

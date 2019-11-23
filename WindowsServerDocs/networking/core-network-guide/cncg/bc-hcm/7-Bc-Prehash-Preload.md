@@ -15,9 +15,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71356252"
 ---
-# <a name="prehash-and-preload-content-on-the-hosted-cache-server-optional"></a>Предварительное хэширование и загрузка содержимого на сервере размещенного кэша \(Optional @ no__t-1
+# <a name="prehash-and-preload-content-on-the-hosted-cache-server-optional"></a>Предварительное хэширование и загрузка содержимого на сервере размещенного кэша \(необязательно\)
 
->Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Процедуры, описанные в этом разделе, можно использовать для предварительной хэширования содержимого на серверах содержимого, добавления содержимого в пакеты данных и последующей загрузки содержимого на серверы размещенного кэша. 
 

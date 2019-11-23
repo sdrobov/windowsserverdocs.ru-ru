@@ -17,9 +17,9 @@ ms.locfileid: "71406441"
 ---
 # <a name="install-the-branchcache-feature"></a>Установка компонента BranchCache
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Эту процедуру можно использовать для установки функции BranchCache и запуска службы BranchCache на компьютере под управлением Windows Server @ no__t-0 2016, Windows Server 2012 R2 или Windows Server 2012.  
+Эту процедуру можно использовать для установки функции BranchCache и запуска службы BranchCache на компьютере под Windows Server&reg; 2016, Windows Server 2012 R2 или Windows Server 2012.  
   
 Членство в группах " **Администраторы** " или "эквивалентное" является минимальным требованием для выполнения этой процедуры.  
   

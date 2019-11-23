@@ -22,7 +22,7 @@ ms.locfileid: "71381861"
 ---
 # <a name="bitsadmin-cache"></a>кэш битсадмин
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -43,7 +43,7 @@ bitsadmin /Cache /SetExpirationtime
 
 |Параметр|Описание|
 |-------|--------|
-|[bitsadmin cache и help](bitsadmin-cache-and-help.md)|Отображает команду @ no__t-0line, используемую для коммутаторов \/Cache.|
+|[bitsadmin cache и help](bitsadmin-cache-and-help.md)|Отображает\-командной строки, используемой для коммутаторов кэша \/.|
 |[bitsadmin cache и clear](bitsadmin-cache-clear.md)|Удаляет локальный кэш.|
 |[bitsadmin cache и delete](bitsadmin-cache-and-delete.md)|Удаляет запись кэша.|
 |[bitsadmin cache и deleteurl](bitsadmin-cache-and-deleteurl.md)|Удаляет все записи кэша для заданного URL-адреса.|

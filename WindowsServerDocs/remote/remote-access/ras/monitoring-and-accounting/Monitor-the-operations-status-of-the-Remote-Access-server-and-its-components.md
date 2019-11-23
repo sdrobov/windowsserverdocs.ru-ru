@@ -21,9 +21,9 @@ ms.locfileid: "71404547"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>Мониторинг статуса работы сервера удаленного доступа и его компонентов
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
+**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
   
 Консоль управления на сервере удаленного доступа может использоваться для отслеживания состояния операций.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71404547"
   
 4.  Нажмите кнопку **Обновить** в разделе **задачи** на правой панели, чтобы перезагрузить состояние операции. Состояние операций автоматически обновляется каждые пять минут, то есть интервалом обновления по умолчанию. Чтобы изменить интервал обновления по умолчанию, щелкните **настроить интервал обновления**.  
   
-0Windows команды PowerShell для](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   

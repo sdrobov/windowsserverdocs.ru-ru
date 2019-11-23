@@ -19,7 +19,7 @@ ms.locfileid: "71358303"
 # <a name="changing-the-company-logo-on-the-ad-fs-sign-in-page"></a>Изменение логотипа компании на странице входа AD FS
 
 #### <a name="change-company-logo"></a>Изменение логотипа компании  
-Чтобы изменить эмблему компании, которая отображается на странице Sign @ no__t-0in, используйте следующий командлет PowerShell Windows PowerShell и синтаксис.  
+Чтобы изменить эмблему компании, которая отображается на странице входа\-на страницу, используйте следующий командлет PowerShell Windows PowerShell и синтаксис.  
 
 ![изменить логотип](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
   

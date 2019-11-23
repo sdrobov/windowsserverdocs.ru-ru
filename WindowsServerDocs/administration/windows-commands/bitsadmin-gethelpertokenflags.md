@@ -21,9 +21,9 @@ ms.locfileid: "71381566"
 ---
 # <a name="bitsadmin-gethelpertokenflags"></a>битсадмин жеселпертокенфлагс
 
-Возвращает флаги использования [вспомогательного токена](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs) , связанного с заданием передачи BITS.
+Возвращает флаги использования [вспомогательного маркера](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs) , связанного с заданием передачи BITS.
 
-**BITS 3,0 и более ранних версий**: Не поддерживается.
+**BITS 3,0 и более ранних версий**: не поддерживается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ bitsadmin /GetHelperTokenFlags <Job>
 |---------|-----------|
 |Job|Отображаемое имя задания или идентификатор GUID|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Возможные возвращаемые значения включают следующее.
 

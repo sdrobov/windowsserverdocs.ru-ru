@@ -17,7 +17,7 @@ ms.locfileid: "71356221"
 ---
 # <a name="install-the-web-server-web1"></a>Установка веб-сервера WEB1
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Роль веб-сервера (IIS) в Windows Server 2016 предоставляет безопасную, простую в управлении модульную и расширяемую платформу для надежного размещения веб-сайтов, служб и приложений. Службы IIS позволяют обмениваться информацией с пользователями в Интернете, в интрасети или в экстрасети. IIS — это единая веб-платформа, которая интегрирует IIS, ASP.NET, FTP-службы, PHP и Windows Communication Foundation (WCF).  
 

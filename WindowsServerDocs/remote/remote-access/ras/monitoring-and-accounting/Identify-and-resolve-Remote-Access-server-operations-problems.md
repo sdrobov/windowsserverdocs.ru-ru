@@ -21,9 +21,9 @@ ms.locfileid: "71404567"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>Выявление и ликвидация сбоев в работе сервера удаленного доступа
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
+**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
   
 Следующие процедуры используются для определения проблем с операциями сервера удаленного доступа, их основных причин и разрешения, необходимого для устранения проблем.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "71404567"
   
 2.  В списке **служб**прокрутите вниз и щелкните правой кнопкой мыши **вспомогательный метод IP**и выберите пункт **запустить**.  
   
-0Windows команды PowerShell для](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   

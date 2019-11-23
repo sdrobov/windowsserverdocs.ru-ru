@@ -22,7 +22,7 @@ ms.locfileid: "71372011"
 ---
 # <a name="pubprn"></a>pubprn
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Публикует принтер в доменных службах Active Directory.
 
@@ -35,28 +35,28 @@ cscript pubprn {<ServerName> | <UNCprinterpath>}
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|@no__t 0ServerName >|Указывает имя сервера Windows, на котором размещен принтер, который требуется опубликовать. Если компьютер не указан, используется локальный компьютер.|
-|@no__t 0UNCprinterpath >|UNC-путь к общему принтеру, который требуется опубликовать.|
-|"LDAP://CN = <Container>, DC = <Container>"|Указывает путь к контейнеру в доменных службах Active Directory, в котором требуется опубликовать принтер.|
+|\<ServerName >|Указывает имя сервера Windows, на котором размещен принтер, который требуется опубликовать. Если компьютер не указан, используется локальный компьютер.|
+|\<Ункпринтерпас >|UNC-путь к общему принтеру, который требуется опубликовать.|
+|"LDAP://CN =<Container>, DC =<Container>"|Указывает путь к контейнеру в доменных службах Active Directory, в котором требуется опубликовать принтер.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Примечания
--   Команда **Pubprn** — это Visual Basic сценарий, расположенный в каталоге%WINdir%\System32\printing_Admin_Scripts @ no__t-1 @ no__t-2. Чтобы использовать эту команду, в командной строке введите **cscript** , а затем полный путь к файлу Pubprn или измените каталоги на соответствующую папку. Пример:
+## <a name="remarks"></a>Замечания
+-   Команда **Pubprn** — это Visual Basic сценарий, расположенный в каталоге%windir%\system32\ printing_Admin_Scripts\\<language>. Чтобы использовать эту команду, в командной строке введите **cscript** , а затем полный путь к файлу Pubprn или измените каталоги на соответствующую папку. Например:
     ```
     cscript %WINdir%\System32\printing_Admin_Scripts\en-US\pubprn
     ```
--   Если предоставленные сведения содержат пробелы, заключите его в кавычки (например, `"computer Name"`).
+-   Если предоставленные сведения содержат пробелы, заключите текст в кавычки (например, `"computer Name"`).
 
 ## <a name="BKMK_examples"></a>Примеров
-Чтобы опубликовать все принтеры на компьютере \\ \ Server1 в контейнер MyContainer в домене MyDomain.company.Com, введите:
+Чтобы опубликовать все принтеры на компьютере \\\Server1 в контейнере MyContainer в домене MyDomain.company.Com, введите:
 ```
 cscript Ppubprn Server1 "LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com"
 ```
-Чтобы опубликовать принтер Laserprinter1 на сервере \\ \ Server1 в контейнере MyContainer в домене MyDomain.company.Com, введите:
+Чтобы опубликовать принтер Laserprinter1 на сервере \\\Server1 в контейнер MyContainer в домене MyDomain.company.Com, введите:
 ```
 cscript Ppubprn \\Server1\Laserprinter1 "LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com"
 ```
 
 #### <a name="additional-references"></a>Дополнительные ссылки
 [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[Печать Справочник по командам](print-command-reference.md)
+[Печать справочника по командам](print-command-reference.md)

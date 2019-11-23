@@ -19,9 +19,9 @@ ms.locfileid: "71404249"
 ---
 # <a name="web-application-proxy-in-windows-server"></a>Прокси-служба веб-приложения в Windows Server
 
->Область применения. Windows Server @ no__t-0 2016
+>Область применения: Windows Server&reg; 2016
 
-содержимое **This относится к локальной версии прокси-службы веб приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
+**Это содержимое относится к локальной версии прокси веб-приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 В этом разделе описано, что нового и изменено в прокси веб-приложения для Windows Server 2016. Новые функции и изменения, перечисленные здесь, скорее всего, оказывают наибольшее влияние на работу с предварительной версией.  
   

@@ -38,7 +38,7 @@ ms.locfileid: "71408280"
 
   - Откройте Windows PowerShell и выполните следующую команду: `$fscredential = Get-Credential`.  
   - Введите имя и пароль учетной записи службы, записанные в ходе подготовки фермы серверов SQL к миграции.  
-  - Выполните следующую команду: `Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"`, где `Data Source` — значение источника данных в строке подключения к хранилищу политик в следующем файле: `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`.  
+  - Выполните следующую команду: `Add-AdfsFarmNode -ServiceAccountCredential $fscredential -SQLConnectionString "Data Source=<Data Source>;Integrated Security=True"`, где `Data Source` — это значение источника данных в строке подключения к хранилищу политик в следующем файле: `%programfiles%\Active Directory Federation Services 2.0\Microsoft.IdentityServer.Servicehost.exe.config`.  
   
 5. Добавьте только что обновленный сервер до Windows Server 2012 в подсистему балансировки нагрузки.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "71408280"
   
 7. Когда все серверы в ферме SQL Server обновлены до Windows Server 2012, восстановите оставшиеся AD FS настройки, например пользовательские хранилища атрибутов.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Подготовка к миграции прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенесите сервер федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
  [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)
 

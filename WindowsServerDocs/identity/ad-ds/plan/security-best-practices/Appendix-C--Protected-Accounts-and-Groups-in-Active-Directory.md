@@ -18,7 +18,7 @@ ms.locfileid: "71408725"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 ## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
 
@@ -32,7 +32,7 @@ ms.locfileid: "71408725"
 
 #### <a name="protected-accounts-and-groups-in-active-directory-by-operating-system"></a>Защищенные учетные записи и группы в Active Directory операционной системой
 
-| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
+| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
 | --- | --- | --- | --- |
 |Операторы учета|Операторы учета|Операторы учета|Операторы учета|
 |Администратор|Администратор|Администратор|Администратор|
@@ -53,7 +53,7 @@ ms.locfileid: "71408725"
 
 #### <a name="adminsdholder"></a>AdminSDHolder
 
-Объект AdminSDHolder предназначен для предоставления разрешений "Template" для защищенных учетных записей и групп в домене. AdminSDHolder создается автоматически как объект в системном контейнере каждого Active Directory домена. Путь: **CN = AdminSDHolder, CN = System, DC = < domain_component >, DC = < domain_component >?.**  
+Объект AdminSDHolder предназначен для предоставления разрешений "Template" для защищенных учетных записей и групп в домене. AdminSDHolder создается автоматически как объект в системном контейнере каждого Active Directory домена. Его путь: **CN = adminSDHolder, CN = System, DC = < domain_component >, DC = < domain_component >?.**  
 
 В отличие от большинства объектов в домене Active Directory, владельцем которых являются группы "Администраторы", объект AdminSDHolder принадлежит группе "Администраторы домена". По умолчанию EAs может вносить изменения в объект AdminSDHolder любого домена, как и Администраторы домена домена и группы администраторов. Кроме того, несмотря на то, что владелец по умолчанию AdminSDHolder является группой администраторов домена, члены группы Администраторы или Администраторы предприятия могут становиться владельцами объекта.  
 
@@ -88,7 +88,7 @@ SDProp — это процесс, который выполняется кажд
 
    ![защищенные учетные записи и группы](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_10.png)  
 
-4. Убедитесь, что подключение установлено успешно, как указано в **Dn: (RootDSE)**  на следующем снимке экрана щелкните **Подключение** , а затем — **Привязка**.  
+4. Убедитесь, что подключение установлено успешно, как указано **DN: (RootDSE)** на следующем снимке экрана, щелкните **Подключение** и нажмите кнопку **привязать**.  
 
    ![защищенные учетные записи и группы](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_11.png)  
 
@@ -107,7 +107,7 @@ SDProp — это процесс, который выполняется кажд
 8. В диалоговом окне заполненное изменение нажмите кнопку выполнить и убедитесь, что изменения, внесенные в объект AdminSDHolder, появились на этом объекте.  
 
 > [!NOTE]  
-> Сведения об изменении объекта AdminSDHolder для предоставления назначенных непривилегированных учетных записей для изменения членства в защищенных группах см. в разделе [Appendix I: Создание учетных записей управления для защищенных учетных записей и групп в Active Directory @ no__t-0.  
+> Сведения об изменении объекта AdminSDHolder для предоставления назначенных непривилегированных учетных записей для изменения членства в защищенных группах см. [в разделе приложение I. Создание учетных записей управления для защищенных учетных записей и групп в Active Directory](../../../ad-ds/manage/component-updates/Appendix-I--Creating-Management-Accounts-for-Protected-Accounts-and-Groups-in-Active-Directory.md).  
 
 Если вы предпочитаете выполнять SDProp вручную с помощью LDIFDE или сценария, можно создать запись изменения, как показано ниже:  
 
@@ -127,7 +127,7 @@ SDProp — это процесс, который выполняется кажд
 
    ![защищенные учетные записи и группы](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_17.gif)  
 
-4. Убедитесь, что подключение установлено успешно, как указано в **Dn: (RootDSE)**  на следующем снимке экрана щелкните **Подключение** , а затем — **Привязка**.  
+4. Убедитесь, что подключение установлено успешно, как указано **DN: (RootDSE)** на следующем снимке экрана, щелкните **Подключение** и нажмите кнопку **привязать**.  
 
    ![защищенные учетные записи и группы](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_18.gif)  
 

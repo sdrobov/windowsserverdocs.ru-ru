@@ -22,7 +22,7 @@ ms.locfileid: "71363377"
 ---
 # <a name="using-the-get-alldrivergroups-command"></a>Использование команды Get-Аллдриверграупс
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения обо всех группах драйверов на сервере.
 ## <a name="syntax"></a>Синтаксис
@@ -32,7 +32,7 @@ wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | F
 ## <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server: <Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
 |[/Show: {Паккажеметадата &#124; фильтрует &#124; все}]|Отображает метаданные для всех пакетов драйверов в указанной группе. **Паккажеметадата** отображает сведения обо всех фильтрах для группы драйверов. **Фильтры** отображает метаданные для всех пакетов драйверов и фильтров для группы.|
 ## <a name="BKMK_examples"></a>Примеров
 Чтобы просмотреть сведения о файле драйвера, введите:
@@ -44,4 +44,4 @@ wdsutil /Get-AllDriverGroups [/Show:PackageMetaData]
 ```
 #### <a name="additional-references"></a>Дополнительные ссылки
 [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды Get-дриверграуп](using-the-get-drivergroup-command.md) .
+[с помощью команды Get-дриверграуп](using-the-get-drivergroup-command.md)

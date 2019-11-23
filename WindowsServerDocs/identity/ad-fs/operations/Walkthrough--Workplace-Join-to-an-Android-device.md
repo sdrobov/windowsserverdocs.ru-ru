@@ -16,7 +16,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71407477"
 ---
-# <a name="walkthrough-workplace-join-to-an-android-device"></a>Пошаговое руководство: Workplace Join на устройство Android
+# <a name="walkthrough-workplace-join-to-an-android-device"></a>Пошаговое руководство. Workplace Join на устройство Android
 
 
 
@@ -31,6 +31,6 @@ ms.locfileid: "71407477"
 
 ## <a name="see-also"></a>См. также
 [Присоединение к рабочему месту с любого устройства для единого входа и однофакторной проверки подлинности в приложениях компании](Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
-[Настройка локального условного доступа с помощью службы регистрация устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)
+[настройке локального условного доступа с помощью службы регистрация устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)
 
 

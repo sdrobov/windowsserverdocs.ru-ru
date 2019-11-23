@@ -21,7 +21,7 @@ ms.locfileid: "71404935"
 ---
 # <a name="step-1-configure-advanced-directaccess-infrastructure"></a>Шаг 1. Настройка расширенной инфраструктуры DirectAccess
 
->Область применения. Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описывается, как настроить инфраструктуру, необходимую для расширенного развертывания службы удаленного доступа, в котором используется один сервер DirectAccess в смешанной среде с поддержкой IPv4 и IPv6. Прежде чем приступать к развертыванию, убедитесь, что выполнены шаги по планированию, описанные в статье [планирование расширенного развертывания DirectAccess](../../../remote-access/directaccess/single-server-advanced/Plan-an-Advanced-DirectAccess-Deployment.md).  
   
@@ -208,7 +208,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 ##### <a name="to-install-the-ip-https-certificate-from-an-internal-ca"></a>Установка сертификата IP-HTTPS из внутреннего ЦС  
   
-1.  На сервере DirectAccess: На **начальном** экране введите**MMC. exe**и нажмите клавишу ВВОД.  
+1.  На сервере DirectAccess: на **начальном** экране введите**MMC. exe**и нажмите клавишу ВВОД.  
   
 2.  В консоли MMC в меню **Файл** выберите пункт **Добавить или удалить оснастку**.  
   
@@ -243,7 +243,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 ### <a name="NLS_DNS"></a>Создание сервера сетевого расположения  
   
-1.  На DNS-сервере внутренней сети: На **начальном** экране введите**днсмгмт. msc**и нажмите клавишу ВВОД.  
+1.  На DNS-сервере внутренней сети: на **начальном** экране введите**днсмгмт. msc**и нажмите клавишу ВВОД.  
   
 2.  В левой области консоли **Диспетчер DNS** разверните зону прямого просмотра для вашего домена. Щелкните домен правой кнопкой и выберите **Новый узел (A или AAAA)** .  
   
@@ -263,7 +263,7 @@ Set-DAClientDNSConfiguration "DNSSuffix "." "ProxyServer <Name of the proxy serv
   
 5.  В диалоговом окне **DNS** нажмите кнопку **ОК**, а затем — **Готово**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -335,7 +335,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 10. При появлении запроса на перезагрузку компьютера нажмите кнопку **Перезагрузить сейчас**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -424,11 +424,11 @@ Restart-Computer
   
     10. На странице **Проверка архива** нажмите кнопку **Далее**, а затем кнопку **Готово**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
--   Чтобы создать резервную копию GPO промежуточного клиента "Параметры клиента DirectAccess — промежуточное хранение" в домене "corp.contoso.com" в папку резервного копирования "К:\баккупс @ no__t-0:  
+-   Чтобы создать резервную копию GPO промежуточного клиента "Параметры клиента DirectAccess — промежуточное хранение" в домене "corp.contoso.com" в папку резервного копирования "К:\баккупс\":  
   
     ```  
     $backup = Backup-GPO "Name 'DirectAccess Client Settings - Staging' "Domain 'corp.contoso.com' "Path 'C:\Backups\'  
@@ -469,7 +469,7 @@ Restart-Computer
   
 6.  В диалоговом окне **Выбор пользователей, контактов, компьютеров или учетных записей служб** выберите клиентские компьютеры, которые необходимо активировать для DirectAccess, а затем нажмите кнопку **ОК**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows powershell** @no__t  
+![](../../../media/Step-1-Configuring-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**эквивалентных команд Windows PowerShell Windows PowerShell**  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -501,7 +501,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 #### <a name="to-install-the-network-location-server-certificate-from-an-internal-ca"></a>Установка сертификата сервера сетевых расположений из внутреннего ЦС  
   
-1.  На сервере, на котором будет расположен веб-сайт сервера сетевых расположений, выполните следующие действия. На **начальном** экране введите**MMC. exe**и нажмите клавишу ВВОД.  
+1.  На сервере, где будет размещаться веб-сайт сервера сетевого расположения: на **начальном** экране введите**MMC. exe**и нажмите клавишу ВВОД.  
   
 2.  В консоли MMC в меню **Файл** выберите пункт **Добавить или удалить оснастку**.  
   
@@ -545,9 +545,9 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
     Точки распространения CRL можно получить с помощью:  
   
-    -   Веб-серверы с использованием URL-адреса на основе HTTP, например: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl.  
+    -   Веб-серверы с использованием URL-адреса на основе HTTP, например: https://crl.corp.contoso.com/crld/corp-APP1-CA.crl  
   
-    -   Файловые серверы, доступ к которым осуществляется по UNC-пути, например @no__t – 0 \ CRL. Corp. contoso. com\crld\corp-APP1-CA.crl  
+    -   Файловые серверы, доступ к которым осуществляется по UNC-пути, например \\\crl.corp.contoso.com\crld\corp-APP1-CA.crl  
   
     Если внутренняя точка распространения CRL доступна только по IPv6, необходимо настроить правило безопасности брандмауэра Windows в режиме повышенной безопасности, чтобы исключить защиту IPsec IPv6-адреса интрасети для IPv6-адресов точек распространения CRL.  
   
@@ -555,7 +555,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>Следующий шаг  
   
--   [Шаг 2. Настройка расширенных серверов DirectAccess](da-adv-configure-s2-servers.md)  
+-   [Шаг 2. Настройка расширенных серверов DirectAccess](da-adv-configure-s2-servers.md)  
   
 
 

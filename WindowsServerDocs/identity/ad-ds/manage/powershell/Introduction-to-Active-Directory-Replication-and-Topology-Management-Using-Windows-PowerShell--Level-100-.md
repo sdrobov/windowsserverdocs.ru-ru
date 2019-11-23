@@ -18,7 +18,7 @@ ms.locfileid: "71409080"
 ---
 # <a name="introduction-to-active-directory-replication-and-topology-management-using-windows-powershell-level-100"></a>Управление репликацией и топологией Active Directory с помощью Windows PowerShell (уровень 100)
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Windows PowerShell для Active Directory предоставляет возможность управления репликацией, сайтами, доменами и лесами, контроллерами доменов и разделами. Пользователи предыдущих средств управления, таких как оснастка "Active Directory – сайты и службы" и repadmin.exe, обратят внимание на то, что похожая функциональность теперь доступна в рамках Windows PowerShell для контекста Active Directory. Кроме того, командлеты совместимы с существующими командлетами Windows PowerShell для Active Directory, что приводит к созданию упрощенного взаимодействия и позволяет пользователям легко создавать сценарии автоматизации.
 
@@ -27,10 +27,10 @@ Windows PowerShell для Active Directory предоставляет возмо
 > 
 > -    Контроллер домена Windows Server 2012
 > -    Windows Server 2012 с средства удаленного администрирования сервера для AD DS и AD LDS.
-> -   Windows @ no__t-0 8 с средства удаленного администрирования сервера для AD DS и AD LDS установлен.
+> -   Windows&reg; 8 с средства удаленного администрирования сервера для AD DS и AD LDS.
 
 ## <a name="installing-the-active-directory-module-for-windows-powershell"></a>Установка модуля Active Directory для Windows PowerShell
-Модуль Active Directory для Windows PowerShell устанавливается по умолчанию, когда роль сервера AD DS установлена на сервере под управлением Windows Server 2012. Дополнительные действия, помимо добавления роли сервера, не требуются. Кроме того, модуль Active Directory можно установить на сервере под управлением Windows Server 2012, установив средства удаленного администрирования сервера, и можно установить модуль Active Directory на компьютере с Windows 8, загрузив и установив [ Средства удаленного администрирования сервера (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972). Установка описывается в разделе [Инструкции](https://www.microsoft.com/download/details.aspx?id=28972).
+Модуль Active Directory для Windows PowerShell устанавливается по умолчанию, когда роль сервера AD DS установлена на сервере под управлением Windows Server 2012. Дополнительные действия, помимо добавления роли сервера, не требуются. Кроме того, модуль Active Directory можно установить на сервере под управлением Windows Server 2012, установив средства удаленного администрирования сервера, и можно установить модуль Active Directory на компьютере с Windows 8, загрузив и установив [средства удаленного администрирования сервера (RSAT)](https://www.microsoft.com/download/details.aspx?id=28972). Установка описывается в разделе [Инструкции](https://www.microsoft.com/download/details.aspx?id=28972).
 
 ## <a name="scenarios-for-testing-windows-powershell-for-active-directory-replication-and-topology-management-cmdlets"></a>Сценарии для тестирования командлетов управления репликацией и топологией Windows PowerShell для Active Directory
 Следующие сценарии предназначены для ознакомления администраторов с новыми командлетами управления:
@@ -43,7 +43,7 @@ Windows PowerShell для Active Directory предоставляет возмо
 
 ## <a name="lab-requirements"></a>Лабораторные требования
 
--   Два контроллера домена Windows Server 2012: **DC1** и **DC2**, которые входят в домен contoso.com и находятся на сайте CORPORATE в рамках этого домена.
+-   Два контроллера домена Windows Server 2012: **DC1** и **DC2** , которые являются частью домена contoso.com и находятся на корпоративном сайте в пределах этого домена.
 
 ## <a name="view-domain-controllers-and-their-sites"></a>Просмотр контроллеров домена и соответствующих сайтов
 На этом этапе с помощью модуля Active Directory для Windows PowerShell можно просмотреть существующие контроллеры домена и топологию репликации для домена.
@@ -63,9 +63,9 @@ Windows PowerShell для Active Directory предоставляет возмо
     > [!TIP]
     > Для автозаполнения команд в Windows PowerShell можно использовать клавишу TAB.
     > 
-    > Пример. Введите `Get-ADRep` и нажмите клавишу TAB несколько раз, чтобы пропустить совпадающие команды, пока не достигнете команды `Get-ADReplicationSite`. Автозаполнение также работает для имен параметров, таких как `Filter`.
+    > Пример: Введите `Get-ADRep` и нажмите клавишу TAB несколько раз, чтобы пропустить совпадающие команды, пока не достигнете команды `Get-ADReplicationSite`. Автозаполнение также работает для имен параметров, таких как `Filter`.
 
-    Чтобы отформатировать выходные данные команды `Get-ADReplicationSite` в виде таблицы и ограничить отображение конкретными полями, можно передать выходные данные в команду `Format-Table` (или "`ft`" для краткого):
+    Чтобы отформатировать выходные данные команды `Get-ADReplicationSite` в виде таблицы и ограничить отображение конкретными полями, можно передать выходные данные в команду `Format-Table` (или "`ft`" для краткости):
 
     `Get-ADReplicationSite -Filter * | ft Name`
 
