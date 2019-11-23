@@ -21,9 +21,9 @@ ms.locfileid: "71367218"
 ---
 # <a name="monitor-the-existing-load-on-the-remote-access-server"></a>Мониторинг текущей нагрузки сервера удаленного доступа
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
+**Примечание.** Windows Server 2012 объединяет DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в единую роль удаленного доступа.  
   
 Термин **нагрузка** означает статистику, связанную с числом подключений на сервере удаленного доступа. Ниже приведены шаги, необходимые для наблюдения за нагрузкой на сервере удаленного доступа.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "71367218"
   
 Теперь **системный монитор** будет отображать выбранную статистику нагрузки на сервер.  
   
-0Windows команды PowerShell для](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Monitor-the-existing-load-on-the-Remote-Access-server/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   

@@ -25,10 +25,10 @@ ms.locfileid: "71359227"
   
 -   [Подготовка к миграции SQL Server фермы](prepare-to-migrate-a-sql-server-farm.md)  
   
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к переносу прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Подготовка к миграции прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенесите сервер федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
  [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)
   

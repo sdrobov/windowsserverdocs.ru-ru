@@ -22,7 +22,7 @@ ms.locfileid: "71372729"
 ---
 # <a name="nslookup-set"></a>nslookup set
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет параметры конфигурации, влияющие на работу функций Lookup.
 ## <a name="syntax"></a>Синтаксис
@@ -37,8 +37,8 @@ set <KeyWord>[=<Value>]
 |     <Value>     |                                                                                      Задает значение параметра конфигурации nslookup для каждой подкоманды.                                                                                      |
 | {Help &#124; ?} |                                                                                               Отображает краткую сводку подкоманд **nslookup** .                                                                                               |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 Используйте **параметр Set All** , чтобы просмотреть список текущих параметров.
 ## <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)[nslookup set ALL](nslookup-set-all.md) 
-
+[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[nslookup set ALL](nslookup-set-all.md)

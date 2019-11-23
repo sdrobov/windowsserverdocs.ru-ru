@@ -16,7 +16,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392974"
 ---
->Область применения. Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Область применения: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 # <a name="export-and-import-virtual-machines"></a>Экспорт и импорт виртуальных машин
 
@@ -38,7 +38,7 @@ ms.locfileid: "71392974"
 
 ### <a name="using-powershell"></a>Использование PowerShell
 
-Откройте сеанс от имени администратора и выполните команду, подобную приведенной ниже, после замены \<vm Name @ no__t-1 и \<path @ no__t-3:
+Откройте сеанс от имени администратора и выполните команду, подобную следующей, после замены имени \<виртуальной машины\> и пути \<\>:
 
 ```powershell
 Export-VM -Name \<vm name\> -Path \<path\>

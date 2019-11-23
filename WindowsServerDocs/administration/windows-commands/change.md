@@ -22,7 +22,7 @@ ms.locfileid: "71379554"
 ---
 # <a name="change"></a>изменить
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 изменения параметров сервера для входа в систему, сопоставления COM-портов и режима установки для серверов удаленный рабочий стол узла сеансов
 > [!NOTE]

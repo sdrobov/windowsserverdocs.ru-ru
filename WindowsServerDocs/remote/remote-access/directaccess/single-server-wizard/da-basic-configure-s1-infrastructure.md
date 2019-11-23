@@ -21,7 +21,7 @@ ms.locfileid: "71388573"
 ---
 # <a name="step-1-configure-the-basic-directaccess-infrastructure"></a>Шаг 1. Настройка базовой инфраструктуры DirectAccess
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе описывается, как настроить инфраструктуру, необходимую для базового развертывания DirectAccess с использованием одного сервера DirectAccess в смешанной среде с поддержкой IPv4 и IPv6. Прежде чем приступить к развертыванию, убедитесь, что выполнены действия по планированию, описанные в разделе [планирование базового развертывания DirectAccess](../../../remote-access/directaccess/single-server-wizard/Plan-a-Basic-DirectAccess-Deployment.md).  
   
@@ -121,7 +121,7 @@ ms.locfileid: "71388573"
   
 5.  Нажмите кнопку **Готово**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
 
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -134,7 +134,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 -   **Сервер IP-HTTPS** — клиенты DirectAccess должны иметь возможность разрешить DNS-имя сервера удаленного доступа из Интернета.  
   
--   **Проверка отзыва списка отзыва сертификатов** . DirectAccess использует проверку отзыва сертификатов для подключения IP-HTTPS между клиентами DirectAccess и сервером удаленного доступа, а также для подключения на основе протокола HTTPS между клиентом DirectAccess и сетью. сервер расположения. В обоих случаях у клиентов DirectAccess должна быть возможность разрешения расположения точки распространения CRL и доступа к ней.  
+-   **Проверка отзыва списка отзыва сертификатов** . DirectAccess использует проверку отзыва сертификатов для подключения IP-HTTPS между клиентами DirectAccess и сервером удаленного доступа, а также для подключения на основе протокола HTTPS между клиентом DirectAccess и сервером сетевого расположения. В обоих случаях у клиентов DirectAccess должна быть возможность разрешения расположения точки распространения CRL и доступа к ней.  
   
 ## <a name="ConfigAD"></a>Настройка Active Directory  
 Сервер удаленного доступа и клиентские компьютеры DirectAccess должны принадлежать домену Active Directory. Клиентские компьютеры DirectAccess должны быть членом домена одного из следующих типов:  
@@ -149,7 +149,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 1.  В диспетчере серверов щелкните **Локальный сервер**. В области сведений перейдите по ссылке **Имя компьютера**.  
   
-2.  В диалоговом окне **Свойства системы** перейдите на вкладку **Имя компьютера** . На вкладке **Имя компьютера** нажмите кнопку **Изменить**.  
+2.  В диалоговом окне **Свойства системы** перейдите на вкладку **имя компьютера** . На вкладке **имя компьютера** нажмите кнопку **изменить**.  
   
 3.  В поле **Имя компьютера**введите имя компьютера, если вы меняете имя компьютера при присоединении сервера к домену. В разделе **Член групп**выберите **Домен**и введите имя домена, к которому нужно присоединить сервер, например corp.contoso.com, а затем нажмите **ОК**.  
   
@@ -183,7 +183,7 @@ Add-DnsServerResourceRecordAAAA -Name <network_location_server_name> -ZoneName <
   
 9. В диалоговом окне **Свойства системы** нажмите кнопку "Закрыть". Щелкните **Перезагрузить сейчас**, когда появится сообщение о необходимости перезагрузки.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>Windows PowerShell</em> @no__t***  
+![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -227,7 +227,7 @@ Restart-Computer
   
 6.  В диалоговом окне **Выбор пользователей, контактов, компьютеров, учетных записей служб или групп** выберите клиентские компьютеры, для которых хотите установить DirectAccess, после чего щелкните **OK**.  
   
-0Windows команды PowerShell для](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**Windows powershell** @no__t  
+![](../../../media/Step-1-Configure-the-DirectAccess-Infrastructure/PowerShellLogoSmall.gif)**эквивалентных команд Windows PowerShell Windows PowerShell**  
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
@@ -238,7 +238,7 @@ Add-ADGroupMember -Identity DirectAccess_clients_group_name -Members <computer_n
   
 ## <a name="BKMK_Links"></a>Следующий шаг  
   
--   [Шаг 2. Настройка базового сервера DirectAccess](da-basic-configure-s2-server.md)  
+-   [Шаг 2. Настройка базового сервера DirectAccess](da-basic-configure-s2-server.md)  
   
 
 

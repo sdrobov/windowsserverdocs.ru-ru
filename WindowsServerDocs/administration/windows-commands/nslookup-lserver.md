@@ -22,7 +22,7 @@ ms.locfileid: "71373080"
 ---
 # <a name="nslookup-lserver"></a>nslookup lserver
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет сервер по умолчанию на указанный домен службы доменных имен (DNS).
 ## <a name="syntax"></a>Синтаксис
@@ -36,8 +36,8 @@ lserver <DNSDomain>
 |   <DNSDomain>   | Указывает новый домен DNS для сервера по умолчанию.  |
 | {Help &#124; ?} | Отображает краткую сводку подкоманд **nslookup** . |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 - Команда **лсервер** использует исходный сервер для поиска сведений об указанном домене DNS. Это отличается от команды **Server** , которая использует текущий сервер по умолчанию.
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса командной строки](command-line-syntax-key.md)для[сервера nslookup](nslookup-server.md) 
-  
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+  [nslookup Server](nslookup-server.md)

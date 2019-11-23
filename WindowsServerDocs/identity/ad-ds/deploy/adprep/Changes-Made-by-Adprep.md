@@ -18,7 +18,7 @@ ms.locfileid: "71369434"
 ---
 # <a name="changes-made-by-adprepexe"></a>Changes Made by Adprep.exe
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описаны изменения, вносимые в средство Adprep. exe в Windows Server 2012 R2 и Windows Server 2012.  
   
@@ -31,8 +31,8 @@ ms.locfileid: "71369434"
 -   [Обновления схемы](../../../ad-ds/deploy/Schema-Updates.md)  
   
 ## <a name="see-also"></a>См. также  
-@no__t 0Windows Server 2008 R2: Приложение по внесению изменений в файл Adprep. exe для поддержки AD DS @ no__t-0  
-@no__t 0Windows Server 2008: Приложение по внесению изменений в файл Adprep. exe для поддержки AD DS @ no__t-0  
+[Windows Server 2008 R2: приложение изменений в Adprep. exe для поддержки AD DS](https://technet.microsoft.com/library/dd378876.aspx)  
+[Windows Server 2008: приложение изменений в Adprep. exe для поддержки AD DS](https://technet.microsoft.com/library/cc770703.aspx)  
   
 
 

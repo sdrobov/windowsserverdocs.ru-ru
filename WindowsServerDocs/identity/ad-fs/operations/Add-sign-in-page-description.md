@@ -1,6 +1,6 @@
 ---
 ms.assetid: 330c7b61-dde0-432f-9b74-d250ad9cc808
-title: Добавить подпись @ no__t-0in описание страницы
+title: Добавить знак\-в описании страницы
 description: ''
 author: billmath
 ms.author: billmath
@@ -16,11 +16,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71407749"
 ---
-# <a name="add-sign-in-page-description"></a>Добавить подпись @ no__t-0in описание страницы
+# <a name="add-sign-in-page-description"></a>Добавить знак\-в описании страницы
 
 
-## <a name="to-add-sign-in-page-description"></a>Добавление знака @ no__t — описание страницы 0in  
-Чтобы добавить описание страницы Sign @ no__t-0in на страницу Sign @ no__t-1in, используйте следующий командлет и синтаксис Windows PowerShell.  
+## <a name="to-add-sign-in-page-description"></a>Добавление\-знака в описание страницы  
+Чтобы добавить знак\-в поле Описание страницы на страницу входа\-на странице, используйте следующий командлет и синтаксис Windows PowerShell.  
 
 ![добавить описание входа](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom2.png)
 
@@ -28,9 +28,9 @@ ms.locfileid: "71407749"
  
   
 > [!IMPORTANT]  
-> Строка для параметра `SignInPageDescriptionText` поддерживает чистый HTML-код с тегами и без них. Таким образом, можно также выполнить следующий командлет без использования тега &lt;p @ no__t-1.  `Set-AdfsGlobalWebContent -SignInPageDescriptionText "Sign-in to Contoso requires device registration. Click <A href='http://fs1.contoso.com/deviceregistration/'>here</A> for more information." ` 
+> Строка для параметра `SignInPageDescriptionText` поддерживает чистый HTML-код с тегами и без них. Таким образом, можно также выполнить следующий командлет, не используя тег &lt;p&gt;.  `Set-AdfsGlobalWebContent -SignInPageDescriptionText "Sign-in to Contoso requires device registration. Click <A href='http://fs1.contoso.com/deviceregistration/'>here</A> for more information." ` 
 
-После настройки страницы Sign @ no__t-0in Настройка имеет приоритет. Поэтому следует настроить для всех языков, которые требуется поддерживать. Все настроенное содержимое принимает параметр, определяющий языковой стандарт. При настройке локализованного содержимого необходимо сначала настроить языковой стандарт Country @ no__t-0less, например en, перед настройкой страны и региона @ no__t-1specific locale, например "EN @ no__t-2US".  
+После настройки знака\-на странице Параметры настройки имеют приоритет. Поэтому следует настроить для всех языков, которые требуется поддерживать. Все настроенное содержимое принимает параметр, определяющий языковой стандарт. При настройке локализованного содержимого его необходимо настроить с использованием страны\-меньше языкового стандарта, например en, перед настройкой страны и региона\-определенного языкового стандарта, например en\-US.  
 
 ## <a name="additional-references"></a>Дополнительная справка 
 [AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)  

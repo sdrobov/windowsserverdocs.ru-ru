@@ -22,7 +22,7 @@ ms.locfileid: "71363079"
 ---
 # <a name="using-the-get-namespace-command"></a>Использование команды Get-Namespace
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о пользовательском пространстве имен.
 ## <a name="syntax"></a>Синтаксис
@@ -38,8 +38,8 @@ wdsutil /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/det
 
 |               Параметр               |                                                                                                                                                                                         Описание                                                                                                                                                                                          |
 |---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      /Namespace: <Namespace name>      | Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<br /><br />— Сервер развертывания: Синтаксис имени пространства имен —/Намспаце: WDS: <ImageGroup> @ no__t-1 @ no__t-2 @ no__t-3 @ no__t-4. Пример: **WDS: ImageGroup1/install. wim/1**<br />— Транспортный сервер: Это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
-|        [/Server: <Server name>]        |                                                                                                             Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.                                                                                                              |
+|      /Namespace:<Namespace name>      | Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<br /><br />-Сервер развертывания. синтаксис имени пространства имен —/Намспаце: WDS:<ImageGroup>/<ImageName>/<Index>. Например: **WDS: ImageGroup1/install. wim/1**<br />— Транспортный сервер. это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
+|        [/Server:<Server name>]        |                                                                                                             Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.                                                                                                              |
 | [/Show: Clients] или [/детаилс: Clients] |                                                                                                                                                  Отображает сведения о клиентских компьютерах, подключенных к указанному пространству имен.                                                                                                                                                  |
 
 ## <a name="BKMK_examples"></a>Примеров
@@ -51,8 +51,8 @@ wdsutil /Get-Namespace /Namespace:"Custom Auto 1"
 - Windows Server 2008: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /Show:Clients`
 - Windows Server 2008 R2: `wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:"Custom Auto 1" /details:Clients`
   #### <a name="additional-references"></a>Дополнительные ссылки
-  [Синтаксис командной строки](command-line-syntax-key.md)
-  [с помощью команды get-аллнамеспацес](using-the-get-allnamespaces-command.md)
-   с[помощью команды New-Namespace](using-the-new-namespace-command.md)
-  [с помощью команды Remove-Namespace,](using-the-remove-namespace-command.md)
-  [: Start-Namespace.](subcommand-start-namespace.md)
+  [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+  [с помощью команды Get-Аллнамеспацес,](using-the-get-allnamespaces-command.md)
+  [помощью команды New-Namespace](using-the-new-namespace-command.md)
+  [помощью команды Remove-Namespace,](using-the-remove-namespace-command.md)
+  [подкоманде: Start-Namespace.](subcommand-start-namespace.md)

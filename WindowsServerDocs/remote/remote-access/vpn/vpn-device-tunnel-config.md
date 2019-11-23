@@ -18,7 +18,7 @@ ms.locfileid: "71388026"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Настройка туннелей VPN-устройств в Windows 10
 
->Относится к: Windows 10, версия 1709
+>Область применения: Windows 10 версии 1709
 
 Always On VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: 
 
@@ -100,7 +100,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 Туннели устройств можно настроить с помощью сценария Windows PowerShell и моста инструментарий управления Windows (WMI) (WMI). Туннель VPN-устройства Always On должен быть настроен в контексте **локальной системной** учетной записи. Для этого потребуется использовать [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), один из комплекта [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) , входящий в комплект служебных программ [Sysinternals](https://docs.microsoft.com/sysinternals/) Suite.
 
-Рекомендации по развертыванию на устройство `(.\Device)` vs. для каждого пользователя `(.\User)` профиль см. в разделе [Использование сценариев PowerShell с поставщиком моста WMI](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
+Рекомендации по развертыванию для каждого устройства `(.\Device)` и для каждого пользователя `(.\User)` профиле см. в статье [Использование сценариев PowerShell с поставщиком моста WMI](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 Выполните следующую команду Windows PowerShell, чтобы убедиться, что профиль устройства успешно развернут.
 
@@ -108,7 +108,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
   Get-VpnConnection -AllUserConnection
   ```
 
-В выходных данных отображается список профилей VPN Device @ no__t-0wide, развернутых на устройстве.
+В выходных данных отображается список профилей устройств,\-широкие VPN-профили, развернутые на устройстве.
 
 ### <a name="example-windows-powershell-script"></a>Пример сценария Windows PowerShell
 
@@ -186,5 +186,5 @@ Write-Host "$Message"
 - [Настройка удаленного доступа на основе IKEv2](https://technet.microsoft.com/library/ff687731.aspx)
 
 >[!IMPORTANT]
->При использовании туннеля устройства с шлюзом Microsoft RAS необходимо настроить сервер RRAS для поддержки проверки подлинности на основе сертификата компьютера IKEv2, включив параметр Разрешить проверку подлинности на основе **сертификата компьютера для** проверки подлинности IKEv2, как описано ниже. [здесь](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). После включения этого параметра настоятельно рекомендуется использовать командлет PowerShell **Set-впнауспротокол** вместе с необязательным параметром **рутцертификатенаметоакцепт** , чтобы гарантировать, что подключения RRAS по протоколу IKEv2 разрешены только для Сертификаты VPN-клиентов, которые связаны с явно заданным внутренним или частным корневым центром сертификации. Кроме того, необходимо внести изменения в хранилище **доверенных корневых центров сертификации** на сервере RRAS, чтобы убедиться, что он не содержит общедоступных центров сертификации, как описано [здесь](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Аналогичные методы также могут быть рассмотрены для других VPN-шлюзов.
+>При использовании туннеля устройства с шлюзом Microsoft RAS необходимо настроить сервер RRAS для поддержки проверки подлинности сертификата компьютера по протоколу IKEv2, включив параметр Разрешить проверку подлинности на основе **сертификата компьютера для** проверки подлинности IKEv2, как описано [здесь](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). После включения этого параметра настоятельно рекомендуется использовать командлет PowerShell **Set-впнауспротокол** вместе с необязательным параметром **рутцертификатенаметоакцепт** , чтобы убедиться, что подключения RRAS по протоколу IKEv2 разрешены только для сертификатов VPN-клиентов, которые связаны с явно определенным внутренним или частным корневым центром сертификации. Кроме того, необходимо внести изменения в хранилище **доверенных корневых центров сертификации** на сервере RRAS, чтобы убедиться, что он не содержит общедоступных центров сертификации, как описано [здесь](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Аналогичные методы также могут быть рассмотрены для других VPN-шлюзов.
 

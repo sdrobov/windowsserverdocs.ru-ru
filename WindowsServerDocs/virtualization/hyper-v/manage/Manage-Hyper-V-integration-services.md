@@ -17,7 +17,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392768"
 ---
->Область применения. Windows 10, Windows Server 2016, Windows Server 2019
+>Область применения: Windows 10, Windows Server 2016, Windows Server 2019
 
 # <a name="manage-hyper-v-integration-services"></a>Управление Integration Services Hyper-V
 
@@ -98,7 +98,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 ### <a name="use-windows-services-to-start-or-stop-an-integration-service-within-a-windows-guest"></a>Использование служб Windows для запуска или завершения работы службы интеграции в гостевой системе Windows
 
-1. Откройте диспетчер служб, запустив ```services.msc``` в качестве администратора или дважды щелкнув значок службы на панели управления.
+1. Откройте диспетчер служб, запустив ```services.msc``` от имени администратора или дважды щелкнув значок службы на панели управления.
 
     ![Снимок экрана, на котором отображается панель "службы Windows"](media/HVServices.png) 
 
@@ -190,21 +190,21 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     ```
   
    Ниже перечислены управляющие программы интеграции, которые могут быть включены в список. Если таковые отсутствуют, они могут не поддерживаться в вашей системе или быть не установлены. Дополнительные сведения см. [в статье Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows](https://technet.microsoft.com/library/dn531030.aspx).  
-   - **hv_vss_daemon**: Эта управляющая программа необходима для создания динамических резервных копий виртуальных машин Linux.
+   - **hv_vss_daemon**. Эта управляющая программа необходима для создания динамических резервных копий виртуальных машин Linux.
    - **hv_kvp_daemon**: Эта управляющая программа позволяет задавать и запрашивать внутренние и внешние пары значений ключа.
-   - **hv_fcopy_daemon**: Эта управляющая программа реализует службу копирования файлов между узлом и гостем.  
+   - **hv_fcopy_daemon**. Эта управляющая программа реализует службу копирования файлов между узлом и гостем.  
 
-### <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры.
 
 В этих примерах демонстрируется остановка и запуск управляющей программы KVP с именем `hv_kvp_daemon`.
 
-1. Чтобы предотвратить процесс управляющей программы, используйте идентификатор процесса \(PID @ no__t-1. Чтобы найти PID, просмотрите второй столбец выходных данных или используйте `pidof`. Управляющие программы Hyper-V выполняются от имени привилегированного пользователя, поэтому требуются корневые разрешения.
+1. Чтобы предотвратить процесс управляющей программы, используйте идентификатор процесса \(\) PID. Чтобы найти PID, просмотрите второй столбец выходных данных или используйте `pidof`. Управляющие программы Hyper-V выполняются от имени привилегированного пользователя, поэтому требуются корневые разрешения.
 
     ``` BASH
     sudo kill -15 `pidof hv_kvp_daemon`
     ```
 
-1. Чтобы убедиться, что все процессы `hv_kvp_daemon` исчезли, выполните:
+1. Чтобы убедиться, что весь процесс `hv_kvp_daemon` пропала, выполните:
 
     ```
     ps -ef | hv
@@ -216,7 +216,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     sudo hv_kvp_daemon
     ``` 
 
-1. Чтобы убедиться, что процесс `hv_kvp_daemon` указан с новым ИДЕНТИФИКАТОРом процесса, выполните:
+1. Чтобы убедиться, что `hv_kvp_daemon` процесс указан с новым ИДЕНТИФИКАТОРом процесса, выполните:
 
     ```
     ps -ef | hv
@@ -231,7 +231,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 > [!NOTE]
 > Файл образа vmguest. ISO не входит в Hyper-V в Windows 10, так как он больше не нужен.
 
-| Гость  | Механизм обновления | Примечания |
+| Гость  | Механизм обновления | Заметки |
 |:---------|:---------|:---------|
 | Windows 10 | Центр обновления Windows | |
 | Windows 8.1 | Центр обновления Windows | |
@@ -239,7 +239,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 | Windows 7 | Центр обновления Windows | Требуется служба интеграции для обмена данными.* |
 | Windows Vista с пакетом обновления 2 (SP2) | Центр обновления Windows | Требуется служба интеграции для обмена данными.* |
 | - | | |
-| Windows Server 2016 | Центр обновления Windows | |
+| Windows Server 2016 | Центр обновления Windows | |
 | Windows Server, Semi-Annual Channel | Центр обновления Windows | |
 | Windows Server 2012 R2 | Центр обновления Windows | |
 | Windows Server 2012 | Центр обновления Windows | Требуется служба интеграции для обмена данными.* |
@@ -254,7 +254,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 **Для виртуальных машин, работающих на узлах под управлением Windows 8.1:**
 
-| Гость  | Механизм обновления | Примечания |
+| Гость  | Механизм обновления | Заметки |
 |:---------|:---------|:---------|
 | Windows 10 | Центр обновления Windows | |
 | Windows 8.1 | Центр обновления Windows | |
@@ -263,7 +263,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 | Windows Vista с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows XP с пакетами обновления 2 и 3 (SP2, SP3) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | - | | |
-| Windows Server 2016 | Центр обновления Windows | |
+| Windows Server 2016 | Центр обновления Windows | |
 | Windows Server, Semi-Annual Channel | Центр обновления Windows | |
 | Windows Server 2012 R2 | Центр обновления Windows | |
 | Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
@@ -279,7 +279,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 **Для виртуальных машин, работающих на узлах под управлением Windows 8:**
 
-| Гость  | Механизм обновления | Примечания |
+| Гость  | Механизм обновления | Заметки |
 |:---------|:---------|:---------|
 | Windows 8.1 | Центр обновления Windows | |
 | Windows 8 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |

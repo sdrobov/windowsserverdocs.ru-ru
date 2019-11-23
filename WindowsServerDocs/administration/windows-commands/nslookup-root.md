@@ -22,7 +22,7 @@ ms.locfileid: "71373389"
 ---
 # <a name="nslookup-root"></a>nslookup root
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 изменяет сервер по умолчанию на сервер для корня пространства имен домена службы доменных имен (DNS).
 ## <a name="syntax"></a>Синтаксис
@@ -35,8 +35,8 @@ root
 |-----------------|-------------------------------------------------------|
 | {Help &#124; ?} | Отображает краткую сводку подкоманд **nslookup** . |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 - В настоящее время используется сервер имен ns.nic.ddn.mil. Эта команда является синонимом для лсервер ns.nic.ddn.mil. Имя корневого сервера можно изменить с помощью команды **set root** .
   ## <a name="additional-references"></a>Дополнительные ссылки
-  [Синтаксис командной строки](command-line-syntax-key.md)
-  [параметр nslookup set root](nslookup-set-root.md)
+  [Ключ синтаксиса командной строки
+  команду](command-line-syntax-key.md) [nslookup set root](nslookup-set-root.md)

@@ -22,7 +22,7 @@ ms.locfileid: "71383219"
 ---
 # <a name="create-and-manage-server-groups"></a>Создание групп серверов и управление ими
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описывается создание пользовательских групп серверов, определяемых пользователем, в диспетчер сервера в Windows Server.
 

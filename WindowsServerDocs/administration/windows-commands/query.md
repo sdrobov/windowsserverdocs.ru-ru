@@ -1,5 +1,5 @@
 ---
-title: query
+title: запрос
 description: 'Раздел Windows команды для ****- '
 ms.custom: na
 ms.prod: windows-server
@@ -20,9 +20,9 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71371838"
 ---
-# <a name="query"></a>query
+# <a name="query"></a>запрос
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о процессах, сеансах и серверах узла сеансов удаленный рабочий стол.
 
