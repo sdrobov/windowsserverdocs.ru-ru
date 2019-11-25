@@ -22,7 +22,7 @@ ms.locfileid: "71403727"
 ---
 # <a name="what39s-new-for-managed-service-accounts"></a>Новые&#39;возможности управляемых учетных записей служб
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе для ИТ-специалистов описываются изменения функциональности управляемых учетных записей служб с введением групповой управляемой учетной записи службы (gMSA) в Windows Server 2012 и Windows 8.
 
@@ -57,6 +57,6 @@ ms.locfileid: "71403727"
 
 -   [Обзор доменных служб Active Directory](active-directory-domain-services-overview.md)
 
--   Учетные записи службы [Managed: Основные сведения, реализация, рекомендации и устранение неполадок в no__t-0
+-   [Управляемые учетные записи служб: основные сведения, реализация, рекомендации и устранение неполадок](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 
 
