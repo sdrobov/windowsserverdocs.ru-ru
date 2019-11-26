@@ -21,21 +21,25 @@ ms.locfileid: "71402491"
 >Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
-<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd"> <introduction> @ no__t-2 @ no__t-3<para>В этой статье описываются симптомы, причины и способы устранения сбоев Active Directory репликации с ошибкой Win32 1396: Ошибка входа &quot;ошибка: неправильное имя целевой учетной записи.&quot; </para>
-    <list class="bullet"> <listItem> @ no__t-2 @ no__t-3<para>
-          <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Symptoms">Symptoms</link>
+<developerConceptualDocument xmlns="https://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="https://www.w3.org/1999/xlink" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://ddue.schemas.microsoft.com/authoring/2003/5 http://clixdevr3.blob.core.windows.net/ddueschema/developer.xsd"> <introduction>
+    <para>В этой статье описываются симптомы, причины и способы устранения сбоев Active Directory репликации с ошибкой Win32 1396: Ошибка входа &quot;ошибка: неправильное имя целевой учетной записи.&quot; </para>
+    <list class="bullet"> <listItem>
+        <para>
+          <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Symptoms">Симптомы</link>
         </para>
-      </listItem> <listItem> @ no__t-2 @ no__t-3<para>
+      </listItem> <listItem>
+        <para>
           <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Causes">Вызывает</link>
         </para>
-      </listItem> <listItem> @ no__t-2 @ no__t-3<para>
+      </listItem> <listItem>
+        <para>
           <link xlink:href="d3a01966-74c9-4c49-ba11-354b9acf7519#BKMK_Resolutions">Разрешение</link>
         </para>
       </listItem>
     </list>
   </introduction>
   <section address="BKMK_Symptoms">
-    <title>Symptoms</title>
+    <title>Симптомы</title>
     <content>
       <para />
       <list class="ordered">

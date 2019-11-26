@@ -1,6 +1,6 @@
 ---
-title: Storage Migration Service known issues
-description: Known issues and troubleshooting support for Storage Migration Service, such as how to collect logs for Microsoft Support.
+title: Известные проблемы со службой миграции хранилища
+description: Известные проблемы и устранение неполадок службы миграции хранилища, например получение журналов для служба поддержки Майкрософт.
 author: nedpyle
 ms.author: nedpyle
 manager: siroy
@@ -15,62 +15,62 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74310372"
 ---
-# <a name="storage-migration-service-known-issues"></a>Storage Migration Service known issues
+# <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
-This topic contains answers to known issues when using [Storage Migration Service](overview.md) to migrate servers.
+Этот раздел содержит ответы на известные проблемы, возникающие при использовании [службы миграции хранилища](overview.md) для миграции серверов.
 
-Storage Migration Service is released in two parts: the service in Windows Server, and the user interface in Windows Admin Center. The service is available in Windows Server, Long-Term Servicing Channel, as well as Windows Server, Semi-Annual Channel; while Windows Admin Center is available as a separate download. We also periodically include changes in cumulative updates for Windows Server, released via Windows Update. 
+Служба миграции хранилища выпускается в два этапа: служба в Windows Server и пользовательский интерфейс в центре администрирования Windows. Служба доступна в Windows Server, долгосрочном канале обслуживания, а также на Windows Server, полугодовой канал; Хотя центр администрирования Windows доступен для загрузки отдельно. Мы также периодически включаем изменения в накопительные обновления для Windows Server, выпущенные с помощью Центр обновления Windows. 
 
-For example, Windows Server, version 1903 includes new features and fixes for Storage Migration Service, which are also available for Windows Server 2019 and Windows Server, version 1809 by installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
+Например, Windows Server версии 1903 включает новые функции и исправления для службы миграции хранилища, которые также доступны для Windows Server 2019 и Windows Server версии 1809 путем установки [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
 
-## <a name="collecting-logs"></a> How to collect log files when working with Microsoft Support
+## <a name="collecting-logs"></a>Как получать файлы журналов при работе с служба поддержки Майкрософт
 
-The Storage Migration Service contains event logs for the Orchestrator service and the Proxy Service. The urchestrator server always contains both event logs, and destination servers with the proxy service installed contain the proxy logs. These logs are located under:
+Служба миграции хранилища содержит журналы событий для службы Orchestrator и прокси-службы. Сервер урчестратор всегда содержит оба журнала событий, а целевые серверы с установленной службой прокси содержат журналы прокси-сервера. Эти журналы находятся в папке:
 
-- Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService
-- Application and Services Logs \ Microsoft \ Windows \ StorageMigrationService-Proxy
+- Журналы приложений и служб \ Microsoft \ Windows \ Сторажемигратионсервице
+- Журналы приложений и служб \ Microsoft \ Windows \ Сторажемигратионсервице-proxy
 
-If you need to gather these logs for offline viewing or to send to Microsoft Support, there is an open source PowerShell script available on GitHub:
+Если необходимо собрать эти журналы для просмотра в автономном режиме или для отправки в служба поддержки Майкрософт, в GitHub доступен сценарий PowerShell с открытым исходным кодом:
 
- [Storage Migration Service Helper](https://aka.ms/smslogs) 
+ [Вспомогательная служба службы миграции хранилища](https://aka.ms/smslogs) 
 
-Review the README for usage.
+Ознакомьтесь с ФАЙЛОМ README для использования.
 
-## <a name="storage-migration-service-doesnt-show-up-in-windows-admin-center-unless-managing-windows-server-2019"></a>Storage Migration Service doesn't show up in Windows Admin Center unless managing Windows Server 2019
+## <a name="storage-migration-service-doesnt-show-up-in-windows-admin-center-unless-managing-windows-server-2019"></a>Служба миграции хранилища не отображается в центре администрирования Windows, если управление Windows Server 2019 не выполняется.
 
-When using the 1809 version of Windows Admin Center to manage a Windows Server 2019 orchestrator, you don't see the tool option for Storage Migration Service. 
+При использовании версии 1809 центра администрирования Windows для управления Windows Server 2019 Orchestrator не отображается параметр средства для службы миграции хранилища. 
 
-The Windows Admin Center Storage Migration Service extension is version-bound to only manage Windows Server 2019 version 1809 or later operating systems. If you use it to manage older Windows Server operating systems or insider previews, the tool will not appear. Это поведение реализовано намеренно. 
+Расширение "Служба миграции хранилища центра администрирования Windows" привязано к версии только для Windows Server 2019 версии 1809 или более поздних операционных систем. Если вы используете ее для управления более старыми операционными системами Windows Server или предварительными версиями Insider Preview, это средство не будет отображаться. Это поведение реализовано намеренно. 
 
-To resolve, use or upgrade to Windows Server 2019 build 1809 or later.
+Чтобы разрешить, используйте или обновите до Windows Server 2019 Build 1809 или более поздней версии.
 
-## <a name="storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer"></a>Storage Migration Service cutover validation fails with error "Access is denied for the token filter policy on destination computer"
+## <a name="storage-migration-service-cutover-validation-fails-with-error-access-is-denied-for-the-token-filter-policy-on-destination-computer"></a>Сбой проверки прямую миграцию службы миграции хранилища с ошибкой "отказано в доступе для политики фильтрации токенов на конечном компьютере"
 
-When running cutover validation, you receive error "Fail: Access is denied for the token filter policy on destination computer." This occurs even if you provided correct local administrator credentials for both the source and destination computers.
+При выполнении проверки прямую миграцию появляется сообщение об ошибке "ошибка: доступ запрещен для политики фильтрации маркеров на конечном компьютере". Это происходит даже в том случае, если указаны правильные учетные данные локального администратора для исходного и конечного компьютеров.
 
-This issue was fixed in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. 
+Эта проблема была исправлена в обновлении [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) . 
 
-## <a name="storage-migration-service-isnt-included-in-windows-server-2019-evaluation-or-windows-server-2019-essentials-edition"></a>Storage Migration Service isn't included in Windows Server 2019 Evaluation or Windows Server 2019 Essentials edition
+## <a name="storage-migration-service-isnt-included-in-windows-server-2019-evaluation-or-windows-server-2019-essentials-edition"></a>Служба переноса хранилища не входит в ознакомительную версию Windows Server 2019 или Windows Server 2019 Essentials
 
-When using Windows Admin Center to connect to a [Windows Server 2019 Evaluation release](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) or Windows Server 2019 Essentials edition, there isn't an option to manage the Storage Migration Service. Storage Migration Service also isn't included in Roles and Features.
+При использовании центра администрирования Windows для подключения к [ознакомительному выпуску Windows server 2019](https://www.microsoft.com/evalcenter/evaluate-windows-server-2019) или windows Server 2019 Essentials нет возможности управлять службой миграции хранилища. Служба миграции хранилища также не входит в роли и компоненты.
 
-This issue is caused by a servicing issue in the Evaluation media of Windows Server 2019 and Windows Server 2019 Essentials. 
+Эта проблема вызвана проблемой обслуживания в ознакомительной версии Windows Server 2019 и Windows Server 2019 Essentials. 
 
-To work around this issue for evaluation, install a retail, MSDN, OEM, or Volume License version of Windows Server 2019 and don't activate it. Without activation, all editions of Windows Server operate in evaluation mode for 180 days. 
+Чтобы обойти эту ошибку для ознакомительной версии, установите розничную, MSDN, OEM или корпоративную лицензию Windows Server 2019 и не активируйте ее. Без активации все выпуски Windows Server работают в режиме оценки 180 дней. 
 
-We have fixed this issue in a later release of Windows Server.  
+Мы устранили эту ошибку в более позднем выпуске Windows Server.  
 
-## <a name="storage-migration-service-times-out-downloading-the-transfer-error-csv"></a>Storage Migration Service times out downloading the transfer error CSV
+## <a name="storage-migration-service-times-out-downloading-the-transfer-error-csv"></a>Истекло время ожидания для службы миграции хранилища при скачивании CSV-файла ошибки переноса
 
-When using Windows Admin Center or PowerShell to download the transfer operations detailed errors-only CSV log, you receive error:
+При использовании Windows Admin Center или PowerShell для загрузки подробных сведений об ошибках операций перемещения — только журнал CSV, появляется сообщение об ошибке:
 
- >   Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
+ >   Журнал перемещений. Убедитесь, что в брандмауэре разрешен общий доступ к файлам. : Эта операция запроса, отправленная в NET. TCP://localhost: 28940/SMS/Service/1/Send, не получила ответ в течение заданного времени ожидания (00:01:00). Время, выделенное для выполнения этой операции, может быть составной частью более длительного времени ожидания. Это может быть вызвано тем, что служба все еще обрабатывает операцию или потому, что службе не удалось отправить ответное сообщение. Попробуйте увеличить время ожидания операции (путем приведения канала или прокси-сервера к адрес IContextChannel и установки свойства OperationTimeout) и убедитесь, что служба может подключиться к клиенту.
 
-This issue is caused by an extremely large number of transferred files that cannot be filtered in the default one minute timeout allowed by Storage Migration Service. 
+Эта проблема вызвана очень большим количеством переданных файлов, которые не могут быть отфильтрованы по умолчанию в течение минуты времени ожидания, разрешенного службой миграции хранилища. 
 
-To work around this issue:
+Чтобы обойти эту ошибку, сделайте следующее:
 
-1. On the orchestrator computer, edit the *%SYSTEMROOT%\SMS\Microsoft.StorageMigration.Service.exe.config* file using Notepad.exe to change the "sendTimeout" from its 1 minute default to 10 minutes
+1. На компьютере Orchestrator измените файл *%системрут%\смс\микрософт.сторажемигратион.сервице.ЕКСЕ.конфиг* с помощью программы Notepad. exe, чтобы изменить значение "SendTimeout" с 1 минуты по умолчанию на 10 минут.
 
    ```
      <bindings>
@@ -79,165 +79,165 @@ To work around this issue:
                  sendTimeout="00:01:00"
    ```
 
-2. Restart the "Storage Migration Service" service on the orchestrator computer. 
-3. On the orchestrator computer, start Regedit.exe
+2. Перезапустите службу "Служба миграции хранилища" на компьютере Orchestrator. 
+3. На компьютере Orchestrator запустите программу regedit. exe.
 4. Найдите и выберите следующий подраздел реестра. 
 
    `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
 5. В меню "Правка" выберите пункт "Создать", а затем выберите "Значение DWORD". 
-6. Type "WcfOperationTimeoutInMinutes" for the name of the DWORD, and then press ENTER.
-7. Right-click "WcfOperationTimeoutInMinutes", and then click Modify. 
-8. In the Base data box, click "Decimal"
-9. In the Value data box, type "10", and then click OK.
-10. Exit Registry Editor.
-11. Attempt to download the errors-only CSV file again. 
+6. Введите "Вкфоператионтимеаутинминутес" в качестве имени DWORD и нажмите клавишу ВВОД.
+7. Щелкните правой кнопкой мыши "Вкфоператионтимеаутинминутес" и выберите команду "Изменить". 
+8. В поле Базовые данные щелкните "десятичное число"
+9. В поле данные значения введите "10", а затем нажмите кнопку ОК.
+10. Закройте редактор реестра.
+11. Попытайтесь снова скачать CSV-файл с ошибками. 
 
-We intend to change this behavior in a later release of Windows Server 2019.  
+Мы планируем изменить это поведение в более позднем выпуске Windows Server 2019.  
 
-## <a name="validation-warnings-for-destination-proxy-and-credential-administrative-privileges"></a>Validation warnings for destination proxy and credential administrative privileges
+## <a name="validation-warnings-for-destination-proxy-and-credential-administrative-privileges"></a>Предупреждения проверки для прокси-сервера назначения и права администратора учетных данных
 
-When validating a transfer job, you see the following warnings:
+При проверке задания перемещения отображаются следующие предупреждения.
 
- > **The credential has administrative privileges.**
- > Warning: Action isn't available remotely.
- > **The destination proxy is registered.**
- > Warning: The destination proxy wasn't found.
+ > **Учетные данные имеют права администратора.**
+ > Предупреждение: действие удаленно недоступно.
+ > **Целевой прокси-сервер зарегистрирован.**
+ > Предупреждение: целевой прокси-сервер не найден.
 
-If you have not installed the Storage Migration Service Proxy service on the Windows Server 2019 destination computer, or the destination computer is Windows Server 2016 or Windows Server 2012 R2, this behavior is by design. We recommend migrating to a Windows Server 2019 computer with the proxy installed for significantly improved transfer performance.  
+Если вы не установили прокси-службу службы миграции хранилища на конечный компьютер с Windows Server 2019, или на целевом компьютере установлена ОС Windows Server 2016 или Windows Server 2012 R2, это поведение предназначено для разработки. Мы рекомендуем перейти на компьютер под Windows Server 2019 с установленным прокси-сервером, чтобы значительно повысить производительность переноса.  
 
-## <a name="certain-files-do-not-inventory-or-transfer-error-5-access-is-denied"></a>Certain files do not inventory or transfer, error 5 "Access is denied"
+## <a name="certain-files-do-not-inventory-or-transfer-error-5-access-is-denied"></a>Некоторые файлы не передаются или переносятся, ошибка 5 "доступ запрещен"
 
-When inventorying or transferring files from source to destination computers, files from which a user has removed Administrators group permissions fail to migrate. Examining the Storage Migration Service-Proxy debug shows:
+При инвентаризации или передаче файлов из источника на конечные компьютеры файлы, из которых пользователь удалил разрешения группы администраторов, не смогут выполнить миграцию. Проверка службы миграции хранилища — Отладка прокси показывает:
 
-  Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug Source:        Microsoft-Windows-StorageMigrationService-Proxy Date:          2/26/2019 9:00:04 AM Event ID:      10000 Task Category: None Level:         Error Keywords:      
-  User:          NETWORK SERVICE Computer:      srv1.contoso.com Description:
+  Имя журнала: Microsoft-Windows-Сторажемигратионсервице-proxy/Debug Source: Microsoft-Windows-Сторажемигратионсервице-proxy Дата: 2/26/2019 9:00:04 AM ИД события: 10000 Категория задачи: нет уровня: ключевые слова ошибок:      
+  Пользователь: компьютер сетевой службы: srv1.contoso.com Описание:
 
-  02/26/2019-09:00:04.860 [Error] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
-Stack Trace: at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.OpenFile(String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes) at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(String path) at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(FileInfo file) at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.InitializeSourceFileInfo() at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.Transfer() at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()    [d:\os\src\base\dms\proxy\transfer\transferproxy\FileTransfer.cs::TryTransfer::55]
+  02/26/2019-09:00:04.860 [Ошибка] ошибка при переносе для \\SRV1. contoso. ком\публик\инди.ПНГ: (5) отказано в доступе.
+Трассировка стека: в Microsoft. Сторажемигратион. Proxy. Service. Trace. Филедирутилс. OpenFile (строковое имя файла, Десиредакцесс Десиредакцесс, Шаремоде Шаремоде, CreationDisposition creationDisposition, Флагсандаттрибутес flagsAndAttributes) в Microsoft. Сторажемигратион. Proxy. Service. Перемещение. Филедирутилс. Жеттаржетфиле (строковый путь) в Microsoft. Сторажемигратион. Proxy. Service. Re. Филедирутилс. Жеттаржетфиле (FileInfo-файл) в Microsoft. Сторажемигратион. Proxy. Service. передает. Филетрансфер. Инитиализесаурцефилеинфо () в Microsoft. Сторажемигратион. Proxy. Service. Re. Филетрансфер. reby () в Microsoft. Сторажемигратион. Proxy. Service. Перемещение. Филетрансфер. Тритрансфер () [Д:\ос\срк\басе\дмс\прокси\трансфер\трансферпрокси\филетрансфер.КС:: TryTransfer:: 55]
 
 
-This issue is caused by a code defect in the Storage Migration Service where the backup privilege was not being invoked. 
+Эта проблема вызвана дефектом кода в службе миграции хранилища, в котором не были вызваны права на резервное копирование. 
 
-To resolve this issue, install [Windows Update April 2, 2019—KB4490481 (OS Build 17763.404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) on the orchestrator computer and the destination computer if the proxy service is installed there. Ensure that the source migration user account is a local administrator on the source computer and the Storage Migration Service orchestrator. Ensure that the destination migration user account is a local administrator on the destination computer and the Storage Migration Service orchestrator. 
+Чтобы устранить эту проблему, установите [Центр обновления Windows 2 апреля 2019 г. — KB4490481 (сборка ос 17763,404)](https://support.microsoft.com/help/4490481/windows-10-update-kb4490481) на компьютере Orchestrator и конечном компьютере, если прокси-служба установлена там. Убедитесь, что исходная учетная запись миграции пользователя является локальным администратором на исходном компьютере и службой миграции хранилища Orchestrator. Убедитесь, что учетная запись миграции конечного пользователя является локальным администратором на конечном компьютере и службой миграции хранилища Orchestrator. 
 
-## <a name="dfsr-hashes-mismatch-when-using-storage-migration-service-to-preseed-data"></a>DFSR hashes mismatch when using Storage Migration Service to preseed data
+## <a name="dfsr-hashes-mismatch-when-using-storage-migration-service-to-preseed-data"></a>Несоответствие хэшей DFSR при использовании службы миграции хранилища для предзаполнения данных
 
-When using the Storage Migration Service to transfer files to a new destination, then configuring the DFS Replication (DFSR) to replicate that data with an existing DFSR server through preseeded replication or DFSR database cloning, all files experiemce a hash mismatch and are re-replicated. The data streams, security streams, sizes, and attributes all appear to be perfectly matched after using SMS to transfer them. Examining the files with ICACLS or the DFSR Database cloning debug log reveals:
+Когда вы используете службу миграции хранилища для переноса файлов в новое место назначения, а затем настраиваете репликация DFS (DFSR) для репликации этих данных с имеющимся сервером DFSR через предварительно заполненную репликацию или клонирование базы данных DFSR, все файлы експериемце хэш-код несоответствие и повторно реплицируются. Все потоки данных, потоки безопасности, размеры и атрибуты полностью совпадают после использования SMS для их перемещения. При проверке файлов с помощью ICACLS или журнала отладки клонирования базы данных DFSR выясняется следующее:
 
-Source file:
+Исходный файл:
 
-  icacls d:\test\Source:
+  icacls Д:\тест\саурце:
 
-  icacls d:\test\thatcher.png /save out.txt /t thatcher.png D:AI(A;;FA;;;BA)(A;;0x1200a9;;;DD)(A;;0x1301bf;;;DU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)
+  icacls д:\тест\сатчер.ПНГ/Save out. txt/t Сатчер. png Д:АИ (A;; ОС;;; BA) (A;; 0 x1200a9;;;D D) (A;; 0 x1301bf;;;D U) (A; ИДЕНТИФИКАТОР; ОС;;; BA) (A; ИДЕНТИФИКАТОР; ОС;;; SY) (A; ID; 0x1200a9;;; BU
 
-Destination file:
+Конечный файл:
 
-  icacls d:\test\thatcher.png /save out.txt /t thatcher.png D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
+  icacls д:\тест\сатчер.ПНГ/Save out. txt/t Сатчер. png Д:АИ (A;; ОС;;; BA) (A;; 0 x1301bf;;;D U) (A;; 0 x1200a9;;;D D) (A; ИДЕНТИФИКАТОР; ОС;;; BA) (A; ИДЕНТИФИКАТОР; ОС;;; SY) (A; ID; 0x1200a9;;; BU)**S: PAINO_ACCESS_CONTROL**
 
-DFSR Debug Log:
+Журнал отладки DFSR:
 
-  20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found. 
+  20190308 10:18:53.116 3948 ДБКЛ 4045 [WARN] Дбклоне:: не удалось найти запись о несоответствии Идтаблеимпортупдате. 
 
-  Local ACL hash:1BCDFE03-A18BCE01-D1AE9859-23A0A5F6 LastWriteTime:20190308 18:09:44.876 FileSizeLow:1131654 FileSizeHigh:0 Attributes:32 
+  Локальный хэш ACL: 1BCDFE03-A18BCE01-D1AE9859-23A0A5F6 LastWriteTime: 20190308 18:09:44.876 Филесизелов: 1131654 Филесизехигх: 0 Атрибуты: 32 
 
-  Clone ACL hash:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B** LastWriteTime:20190308 18:09:44.876 FileSizeLow:1131654 FileSizeHigh:0 Attributes:32 
+  Клонировать хэш ACL:**DDC4FCE4-DDF329C4-977CED6D-F4D72A5B** LastWriteTime: 20190308 18:09:44.876 филесизелов: 1131654 филесизехигх: 0 Атрибуты: 32 
 
-This issue is fixed by the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update
+Эта проблема устранена с помощью обновления [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)
 
-## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-when-transferring-from-windows-server-2008-r2"></a>Error "Couldn't transfer storage on any of the endpoints" when transferring from Windows Server 2008 R2
+## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-when-transferring-from-windows-server-2008-r2"></a>Ошибка "не удалось передать хранилище на любую из конечных точек" при передаче из Windows Server 2008 R2
 
-When attempting to transfer data from a Windows Server 2008 R2 source computer, no data transfers and you receive error:  
+При попытке передачи данных с исходного компьютера Windows Server 2008 R2 передача данных не происходит и возникает ошибка:  
 
-  Couldn't transfer storage on any of the endpoints.
+  Не удалось переместить хранилище на любую из конечных точек.
 0x9044
 
-This error is expected if your Windows Server 2008 R2 computer isn't fully patched with all Critical and Important updates from Windows Update. Irrespective of Storage Migration Service, we always recommend patching a Windows Server 2008 R2 computer for security purposes, as that operating system doesn't contain the security improvements of newer versions of Windows Server.
+Эта ошибка возникает, если на компьютере под Windows Server 2008 R2 не установлено полное обновление со всеми критически важными и важными обновлениями Центр обновления Windows. Независимо от службы миграции хранилища, мы всегда рекомендуем установить исправление для безопасности компьютера под управлением Windows Server 2008 R2, так как эта операционная система не содержит улучшений безопасности более новых версий Windows Server.
 
-## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-and-check-if-the-source-device-is-online---we-couldnt-access-it"></a>Error "Couldn't transfer storage on any of the endpoints" and "Check if the source device is online - we couldn't access it."
+## <a name="error-couldnt-transfer-storage-on-any-of-the-endpoints-and-check-if-the-source-device-is-online---we-couldnt-access-it"></a>Ошибка "не удалось переместить хранилище на любую из конечных точек" и "проверить, подключено ли исходное устройство к сети."
 
-When attempting to transfer data from a source computer, some or all shares do not transfer, with summary error:
+При попытке переместить данные с исходного компьютера некоторые или все общие папки не передаются, со сводной ошибкой:
 
-   Couldn't transfer storage on any of the endpoints.
+   Не удалось переместить хранилище на любую из конечных точек.
 0x9044
 
-Examining the SMB transfer details shows error:
+При проверке сведений о переносе SMB отображается ошибка:
 
-   Check if the source device is online - we couldn't access it.
+   Проверьте, подключено ли исходное устройство к сети. не удалось получить к нему доступ.
 
-Examining the StorageMigrationService/Admin event log shows:
+Просмотр журнала событий Сторажемигратионсервице/Admin показывает:
 
-   Couldn't transfer storage.
+   Не удалось переместить хранилище.
 
-   Job: Job1 ID:  
-   State: Failed Error: 36931 Error Message: 
+   Задание: идентификатор Job1:  
+   Состояние: ошибка "сбой": 36931 сообщение об ошибке: 
 
-   Guidance: Check the detailed error and make sure the transfer requirements are met. The transfer job couldn't transfer any source and destination computers. This could be because the orchestrator computer couldn't reach any source or destination computers, possibly due to a firewall rule, or missing permissions.
+   Руководство. Проверьте подробные сведения об ошибке и убедитесь, что выполнены требования к переносу. Заданию перемещения не удалось переместить исходные и конечные компьютеры. Это может быть вызвано тем, что компьютеру Orchestrator не удалось достичь доступа к исходным или конечным компьютерам, возможно, из-за правила брандмауэра или отсутствия разрешений.
 
-Examining the StorageMigrationService-Proxy/Debug log shows:
+При проверке журнала Сторажемигратионсервице-proxy/Debug отображаются следующие сведения:
 
-   07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
-at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate() at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)    [d:\os\src\base\dms\proxy\transfer\transferproxy\TransferRequestHandler.cs::
+   07/02/2019-13:35:57.231 [Ошибка] сбой проверки перемещения. ErrorCode: 40961, конечная точка источника недоступна или не существует, либо исходные учетные данные недопустимы, или у пользователя, прошедшего проверку, недостаточно разрешений для доступа к нему.
+в Microsoft. Сторажемигратион. Proxy. Service. reby. Трансфероператион. Validate () в Microsoft. Сторажемигратион. Proxy. Service. Re. Трансферрекуессандлер. ProcessRequest (Филетрансферрекуест fileTransferRequest, идентификатор GUID)    [Д:\ос\срк\басе\дмс\прокси\трансфер\трансферпрокси\трансферрекуессандлер.КС::
 
-This was a code defect that would manifest if your migration account does not have at least Read permissions to the SMB shares. This issue was first fixed in cumulative update [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062). 
+Это был дефект кода, который был бы манифестом, если у учетной записи миграции нет разрешений по крайней мере на чтение для общих ресурсов SMB. Эта проблема была впервые исправлена в накопительном обновлении [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062). 
 
-## <a name="error-0x80005000-when-running-inventory"></a>Error 0x80005000 when running inventory
+## <a name="error-0x80005000-when-running-inventory"></a>Ошибка 0x80005000 при выполнении инвентаризации
 
-After installing [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) and attempting to run inventory, inventory fails with errors:
+После установки [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) и попытки запустить инвентаризацию происходит сбой инвентаризации с ошибками:
 
-  EXCEPTION FROM HRESULT: 0x80005000
+  ИСКЛЮЧЕНИЕ из HRESULT: 0x80005000
   
-  Log Name:      Microsoft-Windows-StorageMigrationService/Admin Source:        Microsoft-Windows-StorageMigrationService Date:          9/9/2019 5:21:42 PM Event ID:      2503 Task Category: None Level:         Error Keywords:      
-  User:          NETWORK SERVICE Computer:      FS02.TailwindTraders.net Description: Couldn't inventory the computers.
-Job: foo2 ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b State: Failed Error: 36934 Error Message: Inventory failed for all devices Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
+  Имя журнала: Microsoft-Windows-Сторажемигратионсервице/Admin Source: Microsoft-Windows-Сторажемигратионсервице Дата: 9/9/2019 5:21:42 PM ИД события: 2503 Категория задачи: нет уровня: ключевые слова ошибок:      
+  Пользователь: компьютер сетевой службы: FS02. Описание TailwindTraders.net: не удалось выполнить инвентаризацию компьютеров.
+Задание: Foo2 ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b State: Failed Error: 36934 сообщение об ошибке: не удалось выполнить инвентаризацию для всех устройств. Ознакомьтесь с подробными сведениями об ошибке и убедитесь, что соблюдены требования к инвентаризации. Заданию не удалось выполнить инвентаризацию указанных исходных компьютеров. Это может быть вызвано тем, что компьютеру Orchestrator не удалось связаться с ним по сети, возможно, из-за правила брандмауэра или отсутствия разрешений.
   
-  Log Name:      Microsoft-Windows-StorageMigrationService/Admin Source:        Microsoft-Windows-StorageMigrationService Date:          9/9/2019 5:21:42 PM Event ID:      2509 Task Category: None Level:         Error Keywords:      
-  User:          NETWORK SERVICE Computer:      FS02.TailwindTraders.net Description: Couldn't inventory a computer.
-Job: foo2 Computer: FS01.TailwindTraders.net State: Failed Error: -2147463168 Error Message: Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+  Имя журнала: Microsoft-Windows-Сторажемигратионсервице/Admin Source: Microsoft-Windows-Сторажемигратионсервице Дата: 9/9/2019 5:21:42 PM ИД события: 2509 Категория задачи: нет уровня: ключевые слова ошибок:      
+  Пользователь: компьютер сетевой службы: FS02. Описание TailwindTraders.net: не удалось выполнить инвентаризацию компьютера.
+Задание: Foo2 Computer: FS01. TailwindTraders.net State: Failed Error:-2147463168 сообщение об ошибке: см. инструкции по проверке подробной ошибки и соблюдению требований к инвентаризации. Инвентаризации не удалось определить какие бы то ни было аспекты указанного исходного компьютера. Это может быть вызвано отсутствием разрешений или привилегиями в источнике или заблокированным портом брандмауэра.
   
-This error is caused by a code defect in Storage Migration Service when you provide migration credentials in the form of a User Principal Name (UPN), such as 'meghan@contoso.com'. The Storage Migration Service orchestrator service fails to parse this format correctly, which leads to a failure in a domain lookup that was added for cluster migration support in KB4512534 and 19H1.
+Эта ошибка вызвана дефектом кода в службе миграции хранилища при предоставлении учетных данных миграции в виде имени участника-пользователя (UPN), например "meghan@contoso.com". Службе Orchestrator Migration Service не удается правильно проанализировать этот формат, что приводит к сбою уточняющего запроса домена, добавленного для поддержки миграции кластера в KB4512534 и 19H1.
 
-To workaround this issue, provide credentials in the domain\user format, such as 'Contoso\Meghan'.
+Чтобы обойти эту проблему, укажите учетные данные в формате домен \ пользователь, например "Контосо\мегхан".
 
-## <a name="error-serviceerror0x9006-or-the-proxy-isnt-currently-available-when-migrating-to-a-windows-server-failover-cluster"></a>Error "ServiceError0x9006" or "The proxy isn't currently available." when migrating to a Windows Server failover cluster
+## <a name="error-serviceerror0x9006-or-the-proxy-isnt-currently-available-when-migrating-to-a-windows-server-failover-cluster"></a>Ошибка "ServiceError0x9006" или "прокси-сервер в настоящее время недоступен". При переходе на отказоустойчивый кластер Windows Server
 
-When attempting to transfer data against a clustered File Server, you receive errors such as: 
+При попытке перемещения данных на кластеризованный файловый сервер появляются следующие ошибки: 
 
-   Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
-0x9006 ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+   Убедитесь, что прокси-служба установлена и запущена, и повторите попытку. Прокси-сервер в настоящее время недоступен.
+0x9006 ServiceError0x9006, Microsoft. Сторажемигратион. Commands. Унрегистерсмспроксикомманд
 
-This error is expected if the File Server resource moved from its original Windows Server 2019 cluster owner node to a new node and the Storage Migration Service Proxy feature wasn't installed on that node.
+Эта ошибка возникает, если ресурс файлового сервера перемещен с исходного узла владельца кластера Windows Server 2019 на новый узел, а функция прокси-сервера службы миграции хранилища не установлена на этом узле.
 
-As a workaround, move the destination File Server resource back to the original owner cluster node that was in use when you first configured transfer pairings.
+Чтобы избежать этого, переместите целевой ресурс файлового сервера обратно на исходный узел кластера владельца, который использовался при первой настройке пар передачи.
 
-As an alternative workaround:
+В качестве альтернативного решения:
 
-1. Install the Storage Migration Service Proxy feature on all nodes in a cluster.
-2. Run the following Storage Migration Service PowerShell command on the orchestrator computer: 
+1. Установите компонент прокси-сервера службы миграции хранилища на всех узлах кластера.
+2. Выполните следующую команду PowerShell для службы миграции хранилища на компьютере Orchestrator: 
 
    ```PowerShell
    Register-SMSProxy -ComputerName *destination server* -Force
    ```
-## <a name="error-dll-was-not-found-when-running-inventory-from-a-cluster-node"></a>Error "Dll was not found" when running inventory from a cluster node
+## <a name="error-dll-was-not-found-when-running-inventory-from-a-cluster-node"></a>Ошибка "DLL не найдена" при выполнении инвентаризации с узла кластера
 
-When attempting to run inventory with the Storage Migration Service orchestrator installed on a Windows Server 2019 failover cluster node and targeting a Windows Server failover cluster general use file server source, you receive the following error:
+При попытке запустить инвентаризацию с помощью службы миграции хранилища Orchestrator, установленной на узле отказоустойчивого кластера Windows Server 2019 и нацеливания на общий источник файлового сервера отказоустойчивого кластера Windows Server, появляется следующее сообщение об ошибке:
 
     DLL not found
     [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)   
 
-To workaround this issue, install the "Failover Cluster Management Tools" (RSAT-Clustering-Mgmt) on the server running the Storage Migration Service orchestrator. 
+Чтобы решить эту проблему, установите "средства управления отказоустойчивыми кластерами" (RSAT-Cluster-Management) на сервере, на котором запущена служба миграции хранилища Orchestrator. 
 
-## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Error "There are no more endpoints available from the endpoint mapper" when running inventory against a Windows Server 2003 source computer
+## <a name="error-there-are-no-more-endpoints-available-from-the-endpoint-mapper-when-running-inventory-against-a-windows-server-2003-source-computer"></a>Ошибка "при выполнении инвентаризации с исходным компьютером Windows Server 2003 больше нет доступных конечных точек"
 
-When attempting to run inventory with the Storage Migration Service orchestrator server patched with the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) cumulative update or later, you receive the following error:
+При попытке запустить инвентаризацию с помощью накопительного пакета обновления для службы миграции хранилища, исправленного в [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) или более поздней версии, появляется следующее сообщение об ошибке:
 
     There are no more endpoints available from the endpoint mapper  
 
-To workaround this issue, temporarily uninstall the KB4512534 cumulative update (and any that superceded it) from the Storage Migration Service orchestrator computer. When the migration is complete, reinstall the latest cumulative update.  
+Чтобы решить эту проблему, временно удалите накопительный пакет обновления KB4512534 (и все его заменяющие) с компьютера Orchestrator службы миграции хранилища. После завершения миграции переустановите Последнее накопительное обновление.  
 
-Note, under some circumstances, uninstalling KB4512534 or its superseding updates may cause Storage Migration Service to no longer start. To resolve this issue, you can backup and delete the Storage Migration Service database:
+Обратите внимание, что в некоторых обстоятельствах удаление KB4512534 или заменяющих обновлений может привести к тому, что служба миграции хранилища больше не будет запущена. Чтобы устранить эту проблему, можно создать резервную копию и удалить базу данных службы миграции хранилища:
 
-1.  Open an elevated cmd prompt, where you are a member of Administrators on the Storage Migration Service orchestrator server, and run:
+1.  Откройте командную строку с повышенными привилегиями, в которой вы являетесь членом группы администраторов на сервере Orchestrator службы миграции хранилища, и выполните следующую команду:
 
      ```
      TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
@@ -255,11 +255,11 @@ Note, under some circumstances, uninstalling KB4512534 or its superseding update
      ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA) /T /C
      ```
    
-2.  Start the Storage Migration Service service, which will create a new database.
+2.  Запустите службу миграции хранилища, которая создаст новую базу данных.
 
-## <a name="error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails"></a>Error "CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource" and Windows Server 2008 R2 cluster cutover fails
+## <a name="error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails"></a>Ошибка "сбой CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO для ресурса netName" и кластера Windows Server 2008 R2, сбой прямую миграцию
 
-When attempting to run cut over of a Windows Server 2008 R2 cluster source, the cut over gets stuck at phase "Renaming the source computer..." and you receive the following error:
+При попытке выполнить операцию вырезания источника кластера Windows Server 2008 R2 на этапе "Переименование исходного компьютера" зависает. появится следующая ошибка:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -275,11 +275,11 @@ When attempting to run cut over of a Windows Server 2008 R2 cluster source, the 
        at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
-This issue is caused by a missing API in older versions of Windows Server. Currently there is no way to migrate Windows Server 2008 and Windows Server 2003 clusters. You can perform inventory and transfer without issue on Windows Server 2008 R2 clusters, then manually perform cutover by manually changing the cluster's source file server resource netname and IP address, then changing the the destination cluster netname and IP address to match the original source. 
+Эта проблема вызвана отсутствием API в более ранних версиях Windows Server. В настоящее время невозможно перенести кластеры Windows Server 2008 и Windows Server 2003. Вы можете выполнять инвентаризацию и перенос без проблем в кластерах Windows Server 2008 R2, а затем вручную выполнять прямую миграцию, вручную изменяя и IP-адрес исходного файлового сервера в кластере, а затем изменяя NetName и IP-адреса конечного кластера. адрес, соответствующий исходному источнику. 
 
-## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>Cutover hangs on "38% Mapping network interfaces on the source computer..." 
+## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>Прямую миграцию зависает на "38% сопоставлении сетевых интерфейсов на исходном компьютере..." 
 
-When attempting to run cut over of a source computer, having set the source computer to use a new static (not DHCP) IP address on one or more network interfaces, the cut over gets stuck at phase "38% Mapping network interfaces on the source comnputer..." and you receive the following error in the SMS event log:
+При попытке выполнить вырезание с исходного компьютера с установленным исходным компьютером на использование нового статического (не DHCP) IP-адреса в одном или нескольких сетевых интерфейсах на этапе «вырезание на уровне "38% сопоставлений сетевых интерфейсов на источнике комнпутер..." в журнале событий SMS появится следующая ошибка:
 
     Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
     Source:        Microsoft-Windows-StorageMigrationService-Proxy
@@ -302,18 +302,18 @@ When attempting to run cut over of a source computer, having set the source comp
 
     Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
 
-Examining the source computer shows that the original IP address fails to change. 
+Проверка исходного компьютера показывает, что исходный IP-адрес не меняется. 
 
-This issue does not happen if you selected "Use DHCP" on the Windows Admin Center "configure cutover" screen, only if you specify a new static IP address, subnet, and gateway. 
+Эта проблема не возникает, если выбран параметр "использовать DHCP" на экране "Настройка прямую миграцию" центра администрирования Windows, только если указан новый статический IP-адрес, подсеть и шлюз. 
 
-This issue is caused by a regression in the [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) update. There are currently two workarounds for this issue:
+Эта проблема вызвана регрессией обновления [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) . В настоящее время существует два способа решения этой проблемы:
 
-  - Prior to cut over: instead of setting a new static IP address on cutover, select "Use DHCP" and ensure that a DHCP scope covers that subnet. SMS will configure the source computer to use DHCP on source computer interfaces and cut over will proceed normally. 
+  - Перед вырезанием: вместо установки нового статического IP-адреса на прямую миграцию выберите "использовать DHCP" и убедитесь, что область DHCP охватывает эту подсеть. Сервер SMS настроит исходный компьютер на использование DHCP на исходных компьютерах и выполнит переработку, как обычно. 
   
-  - If cut over is already stuck: logon to the source computer and enable DHCP on its network interfaces, after ensuring that a DHCP scope covers that subnet. When the source computer acquires a DHCP-provided IP address, SMS will proceed with the cut over normally.
+  - Если вырезание уже остановлено: Войдите на исходный компьютер и включите DHCP для сетевых интерфейсов, убедившись, что область DHCP охватывает эту подсеть. Когда исходный компьютер получает IP-адрес, предоставленный службой DHCP, сервер SMS продолжит работу с вырезанием в обычном режиме.
   
-In both workarounds, after cut over completes, you can then set a static IP address on the old source computer as you see fit and stop using DHCP.   
+В обоих обходных решениях после вырезания по завершении можно установить статический IP-адрес на старом исходном компьютере в соответствии с последующим отображением и остановкой использования DHCP.   
 
 ## <a name="see-also"></a>См. также
 
-- [Storage Migration Service overview](overview.md)
+- [Обзор службы миграции хранилища](overview.md)

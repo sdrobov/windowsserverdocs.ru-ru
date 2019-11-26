@@ -1,6 +1,6 @@
 ---
-title: Storage Migration Service overview
-description: Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+title: Обзор службы миграции хранилища
+description: Служба миграции хранилища упрощает миграцию хранилища на Windows Server или в Azure. Он предоставляет графическое средство для инвентаризации данных на серверах Windows и Linux, а затем передает данные на новые серверы или на виртуальные машины Azure. Служба миграции хранилища также предоставляет возможность передачи удостоверения сервера на целевой сервер, чтобы приложения и пользователи могли получать доступ к своим данным без изменения ссылок или путей.
 author: jasongerend
 ms.author: jgerend
 manager: elizapo
@@ -15,76 +15,76 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74310384"
 ---
-# <a name="storage-migration-service-overview"></a>Storage Migration Service overview
+# <a name="storage-migration-service-overview"></a>Обзор службы миграции хранилища
 
->Applies to: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (Semi-Annual Channel)
+>Область применения: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server (половина ежегодного канала)
 
-Storage Migration Service makes it easier to migrate storage to Windows Server or to Azure. It provides a graphical tool that inventories data on Windows and Linux servers and then transfers the data to newer servers or to Azure virtual machines. Storage Migration Service also provides the option to transfer the identity of a server to the destination server so that apps and users can access their data without changing links or paths.
+Служба миграции хранилища упрощает миграцию хранилища на Windows Server или в Azure. Он предоставляет графическое средство для инвентаризации данных на серверах Windows и Linux, а затем передает данные на новые серверы или на виртуальные машины Azure. Служба миграции хранилища также предоставляет возможность передачи удостоверения сервера на целевой сервер, чтобы приложения и пользователи могли получать доступ к своим данным без изменения ссылок или путей.
 
-This topic discusses why you'd want to use Storage Migration Service, how the migration process works, and what the requirements are for source and destination servers.
+В этом разделе обсуждается, зачем использовать службу миграции хранилища, как работает процесс миграции и каковы требования к исходным и целевым серверам.
 
-## <a name="why-use-storage-migration-service"></a>Why use Storage Migration Service
+## <a name="why-use-storage-migration-service"></a>Зачем использовать службу миграции хранилища
 
-Use Storage Migration Service because you've got a server (or a lot of servers) that you want to migrate to newer hardware or virtual machines. Storage Migration Service is designed to help by doing the following:
+Используйте службу миграции хранилища, так как у вас есть сервер (или большое количество серверов), который вы хотите перенести на более новое оборудование или виртуальные машины. Служба миграции хранилища предназначена для помощи в выполнении следующих действий.
 
-- Inventory multiple servers and their data
-- Rapidly transfer files, file shares, and security configuration from the source servers
-- Optionally take over the identity of the source servers (also known as cutting over) so that users and apps don't have to change anything to access existing data
-- Manage one or multiple migrations from the Windows Admin Center user interface
+- Инвентаризация нескольких серверов и их данных
+- Быстро переносите файлы, общие файловые ресурсы и конфигурацию безопасности с исходных серверов
+- При необходимости Возьмите идентификаторы исходных серверов (также называемые обрезкой), чтобы пользователям и приложениям не применялось никаких изменений для доступа к существующим данным.
+- Управление одной или несколькими процессами миграции из пользовательского интерфейса центра администрирования Windows
 
-![Diagram showing Storage Migration Service migrating files & configuration from source servers to destination servers, Azure VMs, or Azure File Sync.](media/overview/storage-migration-service-diagram.png)
+![Схема, показывающая, что служба миграции хранилища выполняет миграцию файлов & конфигурацию с исходных серверов на целевые серверы, виртуальные машины Azure или Синхронизация файлов Azure.](media/overview/storage-migration-service-diagram.png)
 
-**Figure 1: Storage Migration Service sources and destinations**
+**Рис. 1. источники и назначения службы миграции хранилища**
 
-## <a name="how-the-migration-process-works"></a>How the migration process works
+## <a name="how-the-migration-process-works"></a>Принцип работы процесса миграции
 
-Migration is a three-step process:
+Процесс миграции состоит из трех этапов:
 
-1. **Inventory servers** to gather info about their files and configuration (shown in Figure 2).
-2. **Transfer (copy) data** from the source servers to the destination servers.
-3. **Cut over to the new servers** (optional).<br>The destination servers assume the source servers' former identities so that apps and users don't have to change anything. <br>The source servers enter a maintenance state where they still contain the same files they always have (we never remove files from the source servers) but are unavailable to users and apps. You can then decommission the servers at your convenience.
+1. **Инвентаризация серверов** для сбора сведений о файлах и конфигурации (показано на рис. 2).
+2. **Перенос (копирование) данных** с исходных серверов на целевые серверы.
+3. **Вырежьте на новые серверы** (необязательно).<br>Целевые серверы предполагают наличие бывших удостоверений исходных серверов, чтобы приложениям и пользователям не применялось ничего. <br>Исходные серверы вводят состояние обслуживания, где они по-прежнему содержат те же файлы, которые они всегда имеют (мы никогда не удаляют файлы с исходных серверов), но недоступны пользователям и приложениям. После этого вы сможете списать серверы с вашего удобства.
 
-![Screenshot showing a server ready to be scanned](media/migrate/inventory.png)
-**Figure 2: Storage Migration Service inventorying servers**
+Снимок экрана ![, показывающий сервер, готовый к сканированию](media/migrate/inventory.png)
+**рис. 2. Инвентаризация серверов службы миграции хранилища**
 
 ## <a name="requirements"></a>Требования
 
-To use Storage Migration Service, you need the following:
+Для использования службы миграции хранилища необходимо следующее:
 
-- A **source server** or **failover cluster** to migrate files and data from
-- A **destination server** running Windows Server 2019 (clustered or standalone) to migrate to. Windows Server 2016 and Windows Server 2012 R2 work as well but are around 50% slower
-- An **orchestrator server** running Windows Server 2019 to manage the migration  <br>If you're migrating only a few servers and one of the servers is running Windows Server 2019, you can use that as the orchestrator. If you're migrating more servers, we recommend using a separate orchestrator server.
-- A **PC or server running [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md)** to run the Storage Migration Service user interface, unless you prefer using PowerShell to manage the migration. The Windows Admin Center and Windows Server 2019 version must both be at least version 1809.
+- **Исходный сервер** или **отказоустойчивый кластер** для переноса файлов и данных из
+- **Целевой сервер** под Windows Server 2019 (кластеризованный или автономный), на который выполняется миграция. Windows Server 2016 и Windows Server 2012 R2 работают так же, как и более чем на 50%
+- **Сервер Orchestrator** под управлением Windows Server 2019 для управления миграцией  <br>Если выполняется миграция только нескольких серверов и один из серверов работает под Windows Server 2019, его можно использовать в качестве Orchestrator. При переносе дополнительных серверов рекомендуется использовать отдельный сервер Orchestrator.
+- **Компьютер или сервер с запущенным [центром администрирования Windows](../../manage/windows-admin-center/understand/windows-admin-center.md)**  для запуска пользовательского интерфейса службы миграции хранилища, если вы не предпочитаете использовать PowerShell для управления миграцией. Центр администрирования Windows и версия Windows Server 2019 должны иметь версию не ниже 1809.
 
-We strongly recommend that the orchestrator and destination computers have at least two cores or two vCPUs, and at least 2 GB of memory. Inventory and transfer operations are significantly faster with more processors and memory.
+Настоятельно рекомендуется, чтобы в Orchestrator и на конечных компьютерах имелось по крайней мере два ядра или два виртуальных ЦП и не менее 2 ГБ памяти. Операции инвентаризации и перемещения выполняются значительно быстрее с увеличением количества процессоров и памяти.
 
-### <a name="security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports"></a>Security requirements, the Storage Migration Service proxy service, and firewall ports
+### <a name="security-requirements-the-storage-migration-service-proxy-service-and-firewall-ports"></a>Требования безопасности, служба-посредник службы миграции хранилища и порты брандмауэра
 
-- A migration account that is an administrator on the source computers and the orchestrator computer.
-- A migration account that is an administrator on the destination computers and the orchestrator computer.
-- The orchestrator computer must have the File and Printer Sharing (SMB-In) firewall rule enabled *inbound*.
-- The source and destination computers must have the following firewall rules enabled *inbound* (though you might already have them enabled):
+- Учетная запись миграции, которая является администратором на исходных компьютерах и на компьютере Orchestrator.
+- Учетная запись миграции, которая является администратором на конечных компьютерах и компьютером Orchestrator.
+- На компьютере Orchestrator должны быть включены *Входящие*правила брандмауэра для общего доступа к файлам и принтерам (SMB-in).
+- На исходном и целевом компьютерах должны быть включены следующие правила брандмауэра *(хотя* они уже могут быть включены):
   - Общий доступ к файлам и принтерам (входящий трафик SMB)
-  - Netlogon Service (NP-In)
-  - Windows Management Instrumentation (DCOM-In)
+  - Служба Netlogon (NP-in)
+  - Инструментарий управления Windows (WMI) (DCOM-in)
   - Инструментарий управления Windows (WMI-In)
   
   > [!TIP]
-  > Installing the Storage Migration Service Proxy service on a Windows Server 2019 computer automatically opens the necessary firewall ports on that computer. To do so, connect to the destination server in Windows Admin Center and then go to **Server Manager** (in Windows Admin Center) > **Roles and features**, select **Storage Migration Service Proxy**, and then select **Install**.
+  > При установке прокси-сервера службы миграции хранилища на компьютер под Windows Server 2019 автоматически открываются необходимые порты брандмауэра на этом компьютере. Для этого подключитесь к целевому серверу в центре администрирования Windows, а затем перейдите в **Диспетчер сервера** (в центре администрирования windows) > **роли и компоненты**, выберите **прокси-служба миграции хранилища**и нажмите кнопку **установить**.
 
 
-- If the computers belong to an Active Directory Domain Services domain, they should all belong to the same forest. The destination server must also be in the same domain as the source server if you want to transfer the source's domain name to the destination when cutting over. Cutover technically works across domains, but the fully-qualified domain name of the destination will be different from the source...
+- Если компьютеры принадлежат к домену домен Active Directory Services, все они должны принадлежать к одному лесу. Целевой сервер также должен находиться в том же домене, что и исходный сервер, если вы хотите переместить имя домена источника в место назначения при вырезание. Прямую миграцию технически работает в разных доменах, но полное доменное имя назначения будет отличаться от исходного...
 
-### <a name="requirements-for-source-servers"></a>Requirements for source servers
+### <a name="requirements-for-source-servers"></a>Требования к исходным серверам
 
-The source server must run one of the following operating systems:
+Исходный сервер должен работать под управлением одной из следующих операционных систем:
 
 - Windows Server, Semi-Annual Channel
 - Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 - Windows Server 2008
 - Windows Server 2003 R2
 - Windows Server 2003
@@ -101,43 +101,43 @@ The source server must run one of the following operating systems:
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
-Note: Windows Small Business Server and Windows Server Essentials are domain controllers. Storage Migration Service can't yet cut over from domain controllers, but can inventory and transfer files from them.   
+Примечание. Windows Small Business Server и Windows Server Essentials являются контроллерами домена. Служба миграции хранилища еще не может быть перенесена с контроллеров домена, но может выполнять инвентаризацию и передачу файлов из них.   
 
-You can migrate the following additional source types if the orchestrator is running Windows Server, version 1903 or later, or if the orchestrator is running an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+Можно выполнить миграцию следующих дополнительных типов источников, если Orchestrator работает под управлением Windows Server версии 1903 или более поздней или если на сервере Orchestrator запущена более ранняя версия Windows Server с установленным [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) :
 
 - Отказоустойчивые кластеры
-- Linux servers that use Samba. We've tested the following:
+- Серверы Linux, использующие Samba. Мы протестировали следующее:
     - CentOS 7
     - Debian GNU/Linux 8
-    - RedHat Enterprise Linux 7.6
+    - RedHat Enterprise Linux 7,6
     - SUSE Linux Enterprise Server (SLES) 11 SP4
-    - Ubuntu 16.04 LTS and 12.04.5 LTS
-    - Samba 4.8, 4.7, 4.3, 4.2, and 3.6
+    - Ubuntu 16,04 LTS и 12.04.5 LTS
+    - Samba 4,8, 4,7, 4,3, 4,2 и 3,6
 
-### <a name="requirements-for-destination-servers"></a>Requirements for destination servers
+### <a name="requirements-for-destination-servers"></a>Требования к целевым серверам
 
-The destination server must run one of the following operating systems:
+Целевой сервер должен работать под управлением одной из следующих операционных систем:
 
 - Windows Server, Semi-Annual Channel
 - Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016
 - Windows Server 2012 R2
 
 > [!TIP]
-> Destination servers running Windows Server 2019 or Windows Server, Semi-Annual Channel or later have double the transfer performance of earlier versions of Windows Server. This performance boost is due to the inclusion of a built-in Storage Migration Service proxy service, which also opens the necessary firewall ports if they're not already open.
+> Целевые серверы под управлением Windows Server 2019 или Windows Server, полугодовой канал или более поздней версии имеют удвоенную производительность передачи более ранних версий Windows Server. Это повышение производительности связано с включением встроенной службы "прокси-служба миграции хранилища", которая также открывает необходимые порты брандмауэра, если они еще не открыты.
 
-## <a name="whats-new-in-storage-migration-service"></a>What's new in Storage Migration Service
+## <a name="whats-new-in-storage-migration-service"></a>Новые возможности службы миграции хранилища
 
-The following new features are available when running the Storage Migration Server orchestrator on Windows Server, version 1903 or later, or an earlier version of Windows Server with [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) installed:
+Следующие новые возможности доступны при запуске сервера миграции хранилища Orchestrator на Windows Server, версии 1903 или более поздней или более ранней версии Windows Server с установленным [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) .
 
 - Перенос локальных пользователей и групп на новый сервер.
-- Migrate storage from failover clusters, migrate to failover clusters, and migrate between standalone servers and failover clusters
+- Перенос хранилища из отказоустойчивых кластеров, миграция на отказоустойчивые кластеры и миграция между автономными серверами и отказоустойчивыми кластерами
 - Перенос хранилища с сервера Linux, использующего Samba.
 - Более простая синхронизация перенесенных общих ресурсов в Azure с помощью компонента "Синхронизация файлов Azure".
 - Перенос в новые сети, такие как Azure.
 
 ## <a name="see-also"></a>См. также
 
-- [Migrate a file server by using Storage Migration Service](migrate-data.md)
-- [Storage Migration Services frequently asked questions (FAQ)](faq.md)
-- [Storage Migration Service known issues](known-issues.md)
+- [Перенос файлового сервера с помощью службы миграции хранилища](migrate-data.md)
+- [Часто задаваемые вопросы о службах миграции хранилища](faq.md)
+- [Известные проблемы со службой миграции хранилища](known-issues.md)
