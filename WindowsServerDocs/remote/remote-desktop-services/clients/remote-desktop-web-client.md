@@ -8,12 +8,12 @@ ms.date: 08/27/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 69beba2c59617da5b501dc55e2509e41ce4ee3fd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6c37c28fded08ba68e46a10a534ee0269c714938
+ms.sourcegitcommit: 89aea00fe0e00fc8b1a6e20af36ad04df8c9fe5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404116"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189471"
 ---
 # <a name="get-started-with-the-web-client"></a>Приступая к работе с веб-клиентом
 
@@ -58,6 +58,10 @@ ms.locfileid: "71404116"
 ## <a name="copy-and-paste-from-the-remote-desktop-web-client"></a>Копирование и вставка из веб-клиента удаленного рабочего стола
 
 Веб-клиент в настоящее время поддерживает копирование и вставку только для текста. Файлы невозможно копировать или вставлять через веб-клиент. Кроме того, можно использовать только **CTRL+C** и **CTRL+V** для копирования и вставки текста.
+
+## <a name="use-an-input-method-editor-ime-in-the-remote-session"></a>Использование редактора методов ввода (IME) в удаленном сеансе
+
+Чтобы использовать редактор метода ввода для работы со сложными символами в удаленном сеансе, щелкните значок шестеренки на панели навигации, чтобы открыть боковую панель **Параметры**, и задайте для параметра **Включить редактор метода ввода** значение **Вкл.** В удаленном сеансе должен быть установлен и включен редактор метода ввода. 
 
 ## <a name="get-help-with-the-web-client"></a>Помощь в работе с веб-клиентом
 
