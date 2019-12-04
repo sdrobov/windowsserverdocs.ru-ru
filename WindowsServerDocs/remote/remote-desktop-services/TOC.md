@@ -8,6 +8,8 @@
 ## [Планирование и проектирование](rds-plan-and-design.md)
 ### [Сборка в любом расположении](rds-plan-build-anywhere.md)
 ### [Ориентация на различные виды пользователей](rds-plan-cater-to-users.md)
+### [Рабочие нагрузки Удаленного рабочего стола](remote-desktop-workloads.md)
+### [Размеры виртуальных машин](virtual-machine-recs.md)
 ### [Доступ из любого расположения](rds-plan-access-from-anywhere.md)
 ### [Высокая доступность](rds-plan-high-availability.md)
 ### [Многофакторная идентификация](rds-plan-mfa.md)
