@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: 'Раздел Windows команды для ****- '
+description: 'Раздел команд Windows для * * * *- '
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e9840bc20ddf6193241fe36055698e2bd3222496
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f5096ab82ebbd01cb4f3a7dc0cf0b15e4b9fae8e
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361884"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781331"
 ---
 # <a name="wmic"></a>wmic
 
@@ -31,7 +31,7 @@ ms.locfileid: "71361884"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-command </parameter>
+wmic </parameter>
 ```
 
 ## <a name="sub-commands"></a>Подкоманды
@@ -44,14 +44,6 @@ command </parameter>
 |путь|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
 |локального|Отображает текущие значения всех глобальных коммутаторов.|
 |[выйти \| exit]|Выход из командной оболочки WMIC.|
-
-## <a name="parameters"></a>Параметры
-
-|Параметр|Описание|
-|---------|-----------|
-|</parameter>|\<краткое описание начинается с глагола. >|
-|</param2>|\<другое краткое описание начинается с глагола. >|
-
 
 ## <a name="BKMK_examples"></a>Примеров
 

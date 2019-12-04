@@ -9,126 +9,142 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 169ee7d16fbac043c088c1e568600ee93e70d8a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 428e35524fbcfe5177b544e1c6cc6fa32ec32056
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359335"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791370"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью базы данных WID
 
 
-> [!NOTE]  
+> [!NOTE]
 > Начать обновление только с определенного времени, запланированного на завершение. Не рекомендуется держать AD FS в смешанном режиме в течение продолжительного периода времени, так как сохранение AD FS в смешанном режиме может вызвать проблемы с фермой.
 
 ## <a name="upgrading-a-windows-server-2012-r2-or-2016-ad-fs-farm-to-windows-server-2019"></a>Обновление фермы AD FS Windows Server 2012 R2 или 2016 до Windows Server 2019
-В следующем документе описано, как обновить ферму AD FS до AD FS в Windows Server 2019 при использовании базы данных WID.  
+В следующем документе описано, как обновить ферму AD FS до AD FS в Windows Server 2019 при использовании базы данных WID.
 
-### <a name="ad-fs-farm-behavior-levels-fbl"></a>Уровни поведения AD FS фермы (ФБЛ)  
+### <a name="ad-fs-farm-behavior-levels-fbl"></a>Уровни поведения AD FS фермы (ФБЛ)
 В AD FS для Windows Server 2016 был введен уровень поведения фермы (ФБЛ). Это параметр на уровне фермы, определяющий функции, которые может использовать ферма AD FS.
 
 В следующей таблице перечислены значения ФБЛ по версии Windows Server:
 
-| Версия Windows Server  | ФБЛ | Имя базы данных конфигурации AD FS |
+| Версия Windows Server  | фбл | Имя базы данных конфигурации AD FS |
 | ------------- | ------------- | ------------- |
 | 2012 R2  | 1  | адфсконфигуратион |
 | 2016  | 3  | AdfsConfigurationV3 |
-| 2019 г.  | 4  | AdfsConfigurationV4 |
+| 2019  | 추가를 클릭합니다.  | AdfsConfigurationV4 |
 
-> [!NOTE]  
+> [!NOTE]
 > При обновлении ФБЛ создается новая база данных конфигурации AD FS.  В таблице выше приведены имена баз данных конфигурации для каждой версии AD FS Windows Server и значения ФБЛ.
 
 ### <a name="new-vs-upgraded-farms"></a>Новые и обновленные фермы VS
-По умолчанию ФБЛ в новой ферме AD FS соответствует значению для версии Windows Server первого установленного узла фермы.  
+По умолчанию ФБЛ в новой ферме AD FS соответствует значению для версии Windows Server первого установленного узла фермы.
 
-AD FS сервер более поздней версии можно присоединить к ферме AD FS 2012 R2 или 2016, и ферма будет работать в том же ФБЛ, что и существующие узлы. При наличии нескольких версий Windows Server, работающих в одной ферме со значением ФБЛ самой низкой версии, ферма называется "смешанной". Однако вы не сможете использовать возможности более поздних версий, пока не будет вызвана ФБЛ. С помощью смешанной фермы:  
+AD FS сервер более поздней версии можно присоединить к ферме AD FS 2012 R2 или 2016, и ферма будет работать в том же ФБЛ, что и существующие узлы. При наличии нескольких версий Windows Server, работающих в одной ферме со значением ФБЛ самой низкой версии, ферма называется "смешанной". Однако вы не сможете использовать возможности более поздних версий, пока не будет вызвана ФБЛ. С помощью смешанной фермы:
 
--   Администраторы могут добавлять новые серверы федерации Windows Server 2019 в существующую ферму Windows Server 2012 R2 или 2016. В результате ферма находится в смешанном режиме и работает на том же уровне поведения фермы, что и исходная ферма. Чтобы обеспечить согласованное поведение в ферме, нельзя настроить или использовать функции более новых версий Windows Server AD FS.  
+- Администраторы могут добавлять новые серверы федерации Windows Server 2019 в существующую ферму Windows Server 2012 R2 или 2016. В результате ферма находится в смешанном режиме и работает на том же уровне поведения фермы, что и исходная ферма. Чтобы обеспечить согласованное поведение в ферме, нельзя настроить или использовать функции более новых версий Windows Server AD FS.
 
-- Прежде чем можно будет возникать ФБЛ, администраторы должны удалить AD FS узлы предыдущих версий Windows Server из фермы.  В случае с фермой WID Обратите внимание, что для этого требуется, чтобы один из новых серверов федерации Windows Server 2019 TP был повышен до роли основного узла в ферме.
+- Прежде чем можно будет возникать ФБЛ, администраторы должны удалить AD FS узлы предыдущих версий Windows Server из фермы.  Обратите внимание, что в случае фермы WID необходимо, чтобы один из новых серверов федерации Windows Server 2019 был повышен до роли основного узла в ферме.
 
--   После того как все серверы федерации в ферме имеют одну и ту же версию Windows Server, может возникнуть ФБЛ.  В результате все новые AD FS Windows Server 2019 могут быть настроены и использованы.
+- После того как все серверы федерации в ферме имеют одну и ту же версию Windows Server, может возникнуть ФБЛ.  В результате все новые AD FS Windows Server 2019 могут быть настроены и использованы.
 
-Учтите, что в режиме смешанной фермы AD FS ферма не поддерживает новые функции и функции, появившиеся в AD FS в Windows Server 2019. Это означает, что Организации, желающие испытать новые функции, не смогут сделать это до тех пор, пока не будет вызвано ФБЛ. Поэтому, если ваша организация планирует протестировать новые функции до того, как Расинг ФБЛ, для этого потребуется развернуть отдельную ферму.  
+Учтите, что в режиме смешанной фермы AD FS ферма не поддерживает новые функции и функции, появившиеся в AD FS в Windows Server 2019. Это означает, что Организации, желающие испытать новые функции, не смогут сделать это до тех пор, пока не будет вызвано ФБЛ. Поэтому, если ваша организация планирует протестировать новые функции до создания ФБЛ, для этого потребуется развернуть отдельную ферму.
 
-В оставшейся части документа содержатся инструкции по добавлению сервера федерации Windows Server 2019 в среду Windows Server 2016 или 2012 R2 и последующему порождению ФБЛ в Windows Server 2019. Эти шаги были выполнены в тестовой среде, описанной в схеме архитектуры ниже.  
+В оставшейся части документа содержатся инструкции по добавлению сервера федерации Windows Server 2019 в среду Windows Server 2016 или 2012 R2 и последующему порождению ФБЛ в Windows Server 2019. Эти шаги были выполнены в тестовой среде, описанной в схеме архитектуры ниже.
 
-> [!NOTE]  
+> [!NOTE]
 > Прежде чем перейти к AD FS в Windows Server 2019 ФБЛ, необходимо удалить все узлы Windows Server 2016 или 2012 R2. Нельзя просто обновить операционную систему Windows Server 2016 или 2012 R2 до Windows Server 2019 и стать узлом 2019. Его необходимо будет удалить и заменить новым узлом 2019.
 
+##### <a name="to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level"></a>Обновление AD FS фермы до уровня поведения фермы Windows Server 2019
 
+1. С помощью диспетчер сервера установите роль службы федерации Active Directory (AD FS) на Windows Server 2019.
 
-##### <a name="to-upgrade-your-ad-fs-farm-to-windows-server-2019-farm-behavior-level"></a>Обновление AD FS фермы до уровня поведения фермы Windows Server 2019  
+2. С помощью мастера настройки AD FS присоедините новый сервер Windows Server 2019 к существующей ферме AD FS.
 
-1.  С помощью диспетчер сервера установите роль службы федерации Active Directory (AD FS) на Windows Server 2019.
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)
 
-2.  С помощью мастера настройки AD FS присоедините новый сервер Windows Server 2019 к существующей ферме AD FS.  
+3. На сервере федерации Windows Server 2019 откройте управление AD FS. Обратите внимание, что возможности управления недоступны, так как этот сервер федерации не является сервером-источником.
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_1.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)
 
-3.  На сервере федерации Windows Server 2019 откройте управление AD FS. Обратите внимание, что возможности управления недоступны, так как этот сервер федерации не является сервером-источником.  
+4. На сервере Windows Server 2019 Откройте командное окно PowerShell с повышенными привилегиями и выполните следующий командлет:
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_3.png)  
+```PowerShell
+Set-AdfsSyncProperties -Role PrimaryComputer
+```
 
-4.  На сервере Windows Server 2019 откройте окно командной строки PowerShell с повышенными привилегиями и выполните следующую команду командлет: `Set-AdfsSyncProperties -Role PrimaryComputer`.
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_4.png)  
+5. На AD FS сервере, который ранее был настроен как основной, откройте окно командной строки PowerShell с повышенными привилегиями и выполните следующий командлет:
 
-5.  На AD FS сервере, который ранее был настроен как основной, откройте окно командной строки PowerShell с повышенными привилегиями и выполните следующую команду командлет: `Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN} `.
+```PowerShell
+Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
+```
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_5.png)
 
-6.  Теперь на сервере федерации Windows Server 2016 откройте управление AD FS. Обратите внимание, что теперь все возможности администратора отображаются, так как основная роль была перенесена на этот сервер.  
+6. Теперь на сервере федерации Windows Server 2016 откройте управление AD FS. Обратите внимание, что теперь все возможности администратора отображаются, так как основная роль была перенесена на этот сервер.
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_6.png)
 
-7.  Если вы обновляете ферму AD FS 2012 R2 до 2016 или 2019, то для обновления фермы требуется, чтобы схема AD была не меньше уровня 85.  Чтобы обновить схему с установочного носителя Windows Server 2016, откройте командную строку и перейдите в каталог суппорт\адпреп. Выполните следующую команду: `adprep /forestprep`.
+7. Если вы обновляете ферму AD FS 2012 R2 до 2016 или 2019, то для обновления фермы требуется, чтобы схема AD была не меньше уровня 85.  Чтобы обновить схему с установочного носителя Windows Server 2016, откройте командную строку и перейдите в каталог суппорт\адпреп. Выполните следующую команду: `adprep /forestprep`
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_7.png)
 
-    После выполнения этого действия `adprep/domainprep`
-    >[!NOTE]
-    >Перед выполнением следующего шага убедитесь, что Windows Server является текущим, запустив Центр обновления Windows из параметров. Продолжайте этот процесс, пока не перестанут требоваться обновления.
-    >
+После выполнения этого действия `adprep/domainprep`
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)  
+> [!NOTE]
+> Перед выполнением следующего шага убедитесь, что Windows Server является текущим, запустив Центр обновления Windows из параметров. Продолжайте этот процесс, пока не перестанут требоваться обновления.
 
-8. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующую команду командлет:
-    >[!NOTE]
-    > Перед выполнением следующего шага необходимо удалить все серверы 2012 R2 из фермы.
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
-    `Invoke-AdfsFarmBehaviorLevelRaise`  
+8. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующий командлет:
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)  
+> [!NOTE]
+> Перед выполнением следующего шага необходимо удалить все серверы 2012 R2 из фермы.
 
-9. При появлении запроса введите Y. Это начнет повышать уровень. После завершения этого процесса вы успешно вызвали ФБЛ.  
+```PowerShell
+Invoke-AdfsFarmBehaviorLevelRaise
+```
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_9.png)
+
+9. При появлении запроса введите Y. Это начнет повышать уровень. После завершения этого процесса вы успешно вызвали ФБЛ.
+
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_10.png)
 
 10. Теперь, если вы переходите к AD FS управления, вы увидите, что добавлены новые возможности для более поздней версии AD FS
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_12.png)
 
-11. Аналогичным образом можно использовать PowerShell командлет: `Get-AdfsFarmInformation` для отображения текущего ФБЛ.  
+11. Аналогичным образом можно использовать командлет PowerShell: `Get-AdfsFarmInformation` для отображения текущего ФБЛ.
 
-    ![upgrade](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)  
+![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_13.png)
 
-12. Чтобы обновить серверы WAP до последнего уровня, на каждом прокси-сервере необходимо повторно настроить WAP, выполнив следующую команду PowerShell в окне с повышенными привилегиями:  
-    ```powershell
-    $trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
-    Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred  
-    ```
-    Удалите старые серверы из кластера и обеспечьте только серверы WAP, на которых работает последняя версия сервера, которая была перенастроена ранее, выполнив следующую командлет PowerShell.
-    ```powershell
-    Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
-    ```
-    Проверьте конфигурацию WAP, выполнив комммандлет Get-Вебаппликатионпроксиконфигуратион. Коннектедсерверснаме будет отражать запуск сервера из предыдущей команды.
-    ```powershell
-    Get-WebApplicationProxyConfiguration
-    ```
-    Чтобы обновить Конфигуратионверсион серверов WAP, выполните следующую команду PowerShell.
-    ```powershell
-    Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
-    ```
-    Это приведет к завершению обновления серверов WAP.
+12. Чтобы обновить серверы WAP до последнего уровня, на каждом прокси-сервере необходимо повторно настроить WAP, выполнив следующий командлет PowerShell в окне с повышенными привилегиями:
+
+```PowerShell
+$trustcred = Get-Credential -Message "Enter Domain Administrator credentials"
+Install-WebApplicationProxy -CertificateThumbprint {SSLCert} -fsname fsname -FederationServiceTrustCredential $trustcred
+```
+
+Удалите старые серверы из кластера и обеспечьте только серверы WAP, на которых работает последняя версия сервера, которая была перенастроена ранее, выполнив следующий командлет PowerShell.
+
+```PowerShell
+Set-WebApplicationProxyConfiguration -ConnectedServersName WAPServerName1, WAPServerName2
+```
+
+Проверьте конфигурацию WAP, выполнив командлет Get-Вебаппликатионпроксиконфигуратион. Коннектедсерверснаме будет отражать запуск сервера из предыдущей команды.
+
+```PowerShell
+Get-WebApplicationProxyConfiguration
+```
+Чтобы обновить Конфигуратионверсион серверов WAP, выполните следующую команду PowerShell.
+
+```PowerShell
+Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
+```
+
+Это приведет к завершению обновления серверов WAP.

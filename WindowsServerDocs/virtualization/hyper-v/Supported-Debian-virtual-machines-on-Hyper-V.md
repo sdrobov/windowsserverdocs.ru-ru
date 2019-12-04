@@ -11,16 +11,16 @@ ms.assetid: 3cc62c10-02a3-4633-960c-23bf91a45bd5
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 71b1985da522ef9ee2d7745bd19d2548e0241a2f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 60f2f3a6ed885f2da80b9beac51eeb703789ec91
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366769"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791763"
 ---
 # <a name="supported-debian-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Debian в Hyper-V
 
->Область применения. Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Область применения: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Следующая схема распределения признаков показывает функции, которые имеются в каждой версии. Известные проблемы и способы их решения для каждого распространения перечислены после таблицы.
 
@@ -32,7 +32,7 @@ ms.locfileid: "71366769"
 
 * (*пусто*) — функция недоступна
 
-| **Возможность**                                                                                                                                  | **Версия операционной системы Windows Server** | **10 (бустер)** | **9.0 — 9.6 (Stretch)** | **8.0 — 8.11 (Jessie)** | **7.0 — 7.11 (wheezy)** |
+| **Функциями**                                                                                                                                  | **Версия операционной системы Windows Server** | **10 (бустер)** | **9.0 — 9.6 (Stretch)** | **8.0 — 8.11 (Jessie)** | **7.0 — 7.11 (wheezy)** |
 |----------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|-----------------------|-----------------------|-----------------------|-----------------------|
 | **Доступность**                                                                                                                             |                                             | Встроенные              | Встроенные              | Встроенные              | Встроенные (Примечание 6)     |
 | **[Центральный](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**                                                   | 2019, 2016, 2012 R2, 2012, 2008 R2          | &#10004;              | &#10004;              | &#10004;              | &#10004;              |
@@ -68,7 +68,7 @@ ms.locfileid: "71366769"
 | Транзитный/ДДА PCI                                                                                                                          | 2019, 2016                                  | &#10004;Примечание 8       | &#10004;Примечание 8       |                       |                       |
 | **[Виртуальные машины поколения 2](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#generation-2-virtual-machines)** |                                             |                       |                       |                       |                       |
 | Загрузка с помощью UEFI                                                                                                                              | 2019, 2016, 2012 R2                         | &#10004;Примечание 7       | &#10004;Примечание 7       | &#10004;Примечание 7       |                       |
-| Безопасная загрузка                                                                                                                                  | 2019, 2016                                  |                       |                       |                       |                       |
+| Безопасная загрузка                                                                                                                                  | 2019, 2016                                  | &#10004;              |                       |                       |                       |
 
 
 ## <a name="BKMK_notes"></a>Заметки о

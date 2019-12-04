@@ -12,16 +12,16 @@ ms.topic: article
 ms.assetid: a0726752-0a78-472b-9667-2f91636c1b3b
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 4673fcf369bdb95d3aa20028ee57f78ffbcaf9c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6128dfb4ab4f6bd29d66cf4823345817f2cb119c
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356695"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791502"
 ---
 # <a name="branchcache-network-shell-and-windows-powershell-commands"></a>Команды BranchCache Network Shell и Windows PowerShell
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В Windows Server 2016 можно настроить BranchCache и управлять им с помощью Windows PowerShell или команд сетевой оболочки (Netsh) для BranchCache.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "71356695"
   
 -   [Команды Netsh для BranchCache в Windows Server 2008 R2](https://technet.microsoft.com/library/dd979561(v=ws.10))  
   
--   [Командлеты BranchCache в Windows PowerShell](https://technet.microsoft.com/library/hh848392.aspx) для windows Server 2012.  
+-   [Командлеты BranchCache в Windows PowerShell](https://docs.microsoft.com/powershell/module/branchcache/?view=win10-ps)
   
 > [!TIP]  
 > Чтобы просмотреть список команд Windows PowerShell для BranchCache в командной строке Windows PowerShell, введите `Get-Command -Module BranchCache` в командной строке Windows PowerShell и нажмите клавишу ВВОД.  

@@ -9,21 +9,21 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 84ce4986d27884f817eb5e632ac8dc1c5a22b922
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2d5630ece940e5bd7895510c245d14b67c847a70
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791123"
 ---
 # <a name="active-directory-domain-services-overview"></a>Обзор доменных служб Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 Каталог — это иерархическая структура, в которой хранятся сведения об объектах в сети. Служба каталогов, например домен Active Directory Services (AD DS), предоставляет методы для хранения данных каталога и предоставления доступа к этим данным сетевым пользователям и администраторам. Например, AD DS хранит сведения об учетных записях пользователей, таких как имена, пароли, Номера телефонов и т. д., а также позволяет другим полномочным пользователям в той же сети получить доступ к этим сведениям.
 
-Active Directory хранит сведения об объектах в сети и упрощает поиск и использование этих сведений для администраторов и пользователей. Active Directory использует структурированное хранилище данных в качестве базы для логической, иерархической организации сведений о каталоге.
+Active Directory хранит сведения об объектах в сети и предоставляет эту информацию администраторам и пользователям, которые могут легко найти и использовать ее. Active Directory использует структурированное хранилище данных в качестве основы для логической иерархической организации сведений в каталоге.
 
 Это хранилище данных, также называемое каталогом, содержит сведения об Active Directoryных объектах. Обычно эти объекты включают в себя общие ресурсы, такие как серверы, тома, принтеры, учетные записи пользователей и компьютеров сети. Дополнительные сведения о Active Directory хранилище данных см. в разделе [хранилище данных каталога](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx).
 
@@ -45,7 +45,7 @@ Active Directory также включает:
  В этом разделе приводятся ссылки на основные понятия Active Directory:
  
 * [Технологии структуры и хранения Active Directory](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
-* [Роли контроллера доменов](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
+* [Роли контроллера домена](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
 * [Схема Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
 * [Общие сведения о доверии](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
 * [Технологии репликации Active Directory](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 

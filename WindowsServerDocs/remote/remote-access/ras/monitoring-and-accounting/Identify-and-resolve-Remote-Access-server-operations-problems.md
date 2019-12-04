@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: db10f784f383938edb29b18d7e8febf869378abc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 831f484db8325bf9a27e9065ac5cf74913d0805c
+ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404567"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74791161"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>Выявление и ликвидация сбоев в работе сервера удаленного доступа
 
@@ -76,7 +76,7 @@ ms.locfileid: "71404567"
   
     **Решение**  
   
-    1.  Чтобы убедиться, что служба запущена, введите команду **Get-Service ифлпск** в командной строке Windows PowerShell.  
+    1.  Чтобы убедиться, что служба запущена, введите в командной строке Windows PowerShell команду **Get-Service IpHlpSvc** .  
   
     2.  Чтобы включить службу, введите команду **Start-Service IpHlpSvc** в командной строке Windows PowerShell с повышенными привилегиями.  
   
@@ -95,9 +95,6 @@ ms.locfileid: "71404567"
   
 Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
-```  
+```PowerShell
 PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  
-```  
-  
-
-
+```

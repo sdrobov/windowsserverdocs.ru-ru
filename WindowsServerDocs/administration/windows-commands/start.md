@@ -1,6 +1,6 @@
 ---
 title: start
-description: 'Раздел Windows команды для ****- '
+description: 'Раздел команд Windows для * * * *- '
 ms.custom: na
 ms.prod: windows-server
 ms.reviewer: na
@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1fb0875c972f8259b47f48ef84ed486fc678d8b0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3e481048c23e634869b0238188d4a0ef8b49cb3e
+ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370889"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74781311"
 ---
 # <a name="start"></a>start
 
@@ -31,7 +31,7 @@ ms.locfileid: "71370889"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/b {<Command> | <Program>} [<Parameters>]]
+start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/low | /normal | /high | /realtime | /abovenormal | belownormal}] [/affinity <HexAffinity>] [/wait] [/elevate] [/b {<Command> | <Program>} [<Parameters>]]
 ```
 
 ## <a name="parameters"></a>Параметры
@@ -46,12 +46,13 @@ start ["<Title>"] [/d <Path>] [/i] [{/min | /max}] [{/separate | /shared}] [{/lo
 |/лов \|/Нормал \|/хигх \|/реалтиме \|/абовенормал \|/беловнормал|Запускает приложение в указанном классе приоритета. Допустимые значения класса приоритета: **/лов**, **/Нормал**, **/хигх**, **/реалтиме**, **/абовенормал**и **/беловнормал**.|
 |/Аффинити \<Хексаффинити >|Применяет указанную маску схожести процессоров (выраженную в виде шестнадцатеричного числа) к новому приложению.|
 |/Wait|Запускает приложение и ждет его завершения.|
+|/елевате|Запускает приложение от имени администратора.|
 |b|Запускает приложение, не открывая новое окно командной строки. Обработка CTRL + C игнорируется, если приложение не поддерживает обработку CTRL + C. Чтобы прервать работу приложения, используйте сочетание клавиш CTRL + BREAK.|
 |/b \<команд > \| \<программы >|Указывает запускаемую команду или программу.|
-|Параметры \<>|Указывает параметры для передачи в команду или программу.|
+|Параметры \<|Указывает параметры для передачи в команду или программу.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания.
 
 - Можно запускать неисполняемые файлы с помощью сопоставления файлов, вводя имя файла в виде команды.
 - При выполнении команды, содержащей строку "CMD" в качестве первого маркера без квалификатора расширения или пути, "CMD" заменяется значением переменной COMSPEC. Это не позволяет пользователям выбирать **cmd** из текущего каталога.
