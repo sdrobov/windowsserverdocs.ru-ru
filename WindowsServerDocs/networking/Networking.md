@@ -10,12 +10,12 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: ac6d9abf96348a596fbd2f886cb67b5d97f686e2
-ms.sourcegitcommit: cbf0c7c37797c22af989639fac82fc0eee94497f
+ms.openlocfilehash: f3b580b108677b391065ad83f61e52504fe9ac91
+ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74700157"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74823844"
 ---
 # <a name="networking"></a>Возможности работы с сетями в
 
@@ -252,7 +252,7 @@ ms.locfileid: "74700157"
             </div>
         </div>
     </li>
-    <hr />
+   <hr />
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -263,7 +263,7 @@ ms.locfileid: "74700157"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3><a href="dns/dns-top.md">&gt;&quot;системы доменных имен (DNS)</a></h3>
+                        <h3><a href="dns/dns-top.md">Служба доменных имен (DNS)</a></h3>
                         <hr />
                         <p>Служба доменных имен (DNS) — это один из стандартных отраслевых протоколов, включающих TCP/IP, а клиент DNS и DNS-сервер предоставляют службам разрешения имен IP-адресов компьютеров и пользователей.</p>
                     </div>
@@ -382,7 +382,7 @@ ms.locfileid: "74700157"
                         <p>К технологиям разгрузки и оптимизации сети в Windows Server 2016 относятся возможности и технологии Software Only (SO), интегрированные возможности и технологии Software and Hardware (SH), а также возможности и технологии Hardware Only (HO).</p>
                         <p>Кроме того, доступна следующая документация по технологиям разгрузки и оптимизации.<p>
                         <hr />
-                        <a href="technologies/conv-nic/cnic-top.md">Высокопроизводительная сеть</a>
+                        <a href="technologies/conv-nic/cnic-top.md">Сетевая карта с согласованным сетевым интерфейсом (NIC)</a>
                         <hr />
                         <a href="technologies/dcb/dcb-top.md">Мост центра обработки данных (DCB)</a>
                         <hr />
