@@ -11,5 +11,5 @@
 ## [Безопасность и контроль](security/security-and-assurance.md)
 ## [Хранилище](storage/storage.md)
 ## [Виртуализация](virtualization/virtualization.md)
-## [Устранение неполадок](troubleshoot/windows-server-support-solutions.md)
+## [Устранение неполадок](troubleshoot/windows-server-troubleshooting.md)
 ## [Другие версии Windows Server](windows-server-versions.md)
