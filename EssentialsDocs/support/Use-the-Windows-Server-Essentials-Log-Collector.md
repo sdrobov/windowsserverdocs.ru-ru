@@ -1,6 +1,6 @@
 ---
 title: Использование сборщика журналов Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -12,38 +12,38 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ba5c0de9d8689c63c95ea3410a74fc9a7289aeab
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: df467921f8a8f5633d2b0bd792885fe2c9ae2212
+ms.sourcegitcommit: a937eb17915a4a0e444a36ddb0fac9c9771cfbfa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66435989"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74877909"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Использование сборщика журналов Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-При устранении проблем с компьютером, представитель в службу поддержки Майкрософт и поддержки может попросить вас собрать журналы из серверов, компьютеров или в сети с помощью сборщика журналов Windows Server Essentials.  
+При устранении неполадок, связанных с компьютером, у представителя службы поддержки пользователей Майкрософт могут попросить вас собрать журналы с серверов, компьютеров в сети или с помощью сборщика журналов Windows Server Essentials.  
   
  Сборщик журналов копирует журналы программ, событий и прочую информацию среды в единый ZIP-файл по указанному адресу. Сборщик журналов можно запускать непосредственно c сервера или любого компьютер сети, а также через удаленное подключение к компьютерам.  
   
 > [!NOTE]
-> - Сборщик журналов не проводит анализ сетевых проблем и не вносит изменения в настройки серверов или компьютеров сети. Дополнительную информацию об устранении сетевых неполадок см. в справочной документации по вашему серверу.  
->   -   В этом руководстве компьютеры сети за исключением сервера называются сетевых компьютеров.  
->   -   [Загрузить пакет установки сборщика журналов Windows Server Essentials](https://go.microsoft.com/fwlink/?LinkID=266341).  
+>Сборщик журналов не проводит анализ сетевых проблем и не вносит изменения в настройки серверов или компьютеров сети. Дополнительную информацию об устранении сетевых неполадок см. в справочной документации по вашему серверу.  
+>В этом разделе Компьютеры в сети, отличные от сервера, называются сетевыми компьютерами.  
+>[Скачайте пакет установки сборщика журнала Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=34821).  
   
  Чтобы установить и запустить сборщик журналов, выполните шаги, описанные в следующих разделах.  
   
 
-1.  [Установка сборщика журналов](Install-the-Windows-Server-Essentials-Log-Collector.md)  
+1. [Установка сборщика данных журнала](Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2.  [Запуск сборщика журналов](Run-the-Windows-Server-Essentials-Log-Collector.md)  
+2. [Запуск сборщика данных журнала](Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
-1.  [Установка сборщика журналов](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
+3. [Установка сборщика данных журнала](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2.  [Запуск сборщика журналов](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
+4. [Запуск сборщика данных журнала](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
-  
+
 ## <a name="environment-information-collected"></a>Сбор сведений о среде  
  Для каждого компьютера сети или сервера, указанного вами, сборщик журналов собирает следующие сведения о среде и помещает их в файл журнала коллекции:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66435989"
   
 ### <a name="server-logs-and-registry-information"></a>Сведения из журналов и реестра сервера  
   
--   Журналы сервера из < ProgramData\>\Microsoft\Windows Server\Logs  
+-   Журналы серверных продуктов, из < папка ProgramData\>\Микрософт\виндовс Сервер\логс  
   
 -   Запланированные задачи  
   
@@ -128,21 +128,21 @@ ms.locfileid: "66435989"
   
 -   Файл журнала Panther  
   
--   Службы  
+-   "Службы"  
   
 -   Разделы реестра из  
   
-    -   \\\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\  
+    -   \\\ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Server \  
   
-    -   \\\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DevicesProviderSvc  
+    -   \\\ HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\девицеспровидерсвк  
   
-    -   \\\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DomainManagerProviderSvc  
+    -   \\\ HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\домаинманажерпровидерсвк  
   
 ### <a name="network-computer-logs-and-registry-information"></a>Сведения из журналов и реестра компьютеров сети  
   
--   Журналы компьютеров сети < ProgramData\>\Microsoft\Windows Server\Logs  
+-   Журналы продуктов для сетевого компьютера в < папка ProgramData\>\Микрософт\виндовс Сервер\логс  
   
--   Файл оповещений о работоспособности в < ProgramData\>\Microsoft\Windows Server\Data  
+-   Файл оповещений о работоспособности в < папка ProgramData\>\Микрософт\виндовс Сервер\дата  
   
 -   Журналы центра обновления Windows  
   
@@ -150,7 +150,7 @@ ms.locfileid: "66435989"
   
 -   Сведения о запланированных задачах  
   
--   Разделы реестра из \\\HKEY_LOCAL_MACHINE \SOFTWARE\Microsoft\Windows Server\  
+-   Разделы реестра из \\\ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Server \  
   
 ## <a name="logs-for-computers-that-do-not-run-a-version-of-the-windows-operating-system"></a>Журналы компьютеров, которые работают не под управлением ОС Windows  
  Сборщик журналов не собирает файлы журналов с компьютеров, которые работают не под управлением ОС Windows. При использовании компьютеров, работающих под управлением ОС, отличной от Windows, вручную скопируйте следующие файлы журналов в ту же папку, где хранятся файлы сборщика журналов:  
@@ -159,14 +159,14 @@ ms.locfileid: "66435989"
   
 -   Library/Logs/Windows Server.log  
   
--   Library/Logs/CrashReporter/LaunchPad-< nnn\> (скопируйте все LaunchPad - < nnn\>файлы .crash)  
+-   Библиотека/журналы/Крашрепортер/панель запуска — < nnn\> (копирование всех файлов "Панель запуска-< nnn\>. сбой")  
   
--   Library/Logs/DiagnosticReports/LaunchPad-< nnn\> (скопируйте все LaunchPad - < nnn\>файлы .crash)  
+-   Библиотека/журналы/Диагностикрепортс/панель запуска — < nnn\> (копирование всех файлов "Панель запуска-< nnn\>. сбой")  
   
 ## <a name="see-also"></a>См. также  
   
 
--   [Устранение неполадок сборщика журналов](Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
+-   [Устранение ошибок сборщика журналов](Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 
--   [Устранение неполадок сборщика журналов](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
+-   [Устранение ошибок сборщика журналов](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 

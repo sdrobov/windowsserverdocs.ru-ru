@@ -1,31 +1,35 @@
 ---
 ms.assetid: fd3bc84a-48eb-4f00-9dc2-846bf2c2668b
 title: Диагностика доменных служб Active Directory
-description: ''
+description: Обзор раздела "Устранение неполадок" для AD DS
 ms.author: joflore
 author: MicrosoftGuyJFlo
-manager: mtillman
-ms.date: 08/07/2018
+manager: dcscontentpm
+ms.date: 11/22/2019
 ms.topic: article
 ms.prod: windows-server
+audience: Admin
+ms.custom:
+- CSSTroubleshoot
 ms.technology: identity-adds
-ms.openlocfilehash: 995ba44a64ae022b52213b9c912f94144d4c2543
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 500ffe05fe75db99f98fda09b5f86b8547ea7e32
+ms.sourcegitcommit: 30de12eebeb0fc79567d6bb6ab513692ea2415d3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369326"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74853589"
 ---
 # <a name="ad-ds-troubleshooting"></a>Диагностика доменных служб Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2
+>Область применения: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
-В этом разделе содержатся рекомендации и процедуры диагностики и устранения проблем, которые могут возникнуть при Active Directory репликации.
+В этом разделе содержатся рекомендации по устранению неполадок и процедуры диагностики и устранения проблем, которые могут возникнуть во время репликации Active Directory. Она посвящена тому, как реагировать на записи в журнале событий службы каталогов и как интерпретировать сообщения, которые такие средства, как Repadmin. exe и Dcdiag. exe, могут сообщать о них.
 
-Этот материал посвящен главным образом ответам на сообщения журнала событий службы каталогов и сообщения об ошибках на основе средств, которые могут быть переданы средствам Repadmin. exe и Dcdiag. exe. Эти средства доступны на всех контроллерах домена под Windows Server 2016 или 2012 R2. Средства удаленного администрирования сервера (RSAT) можно также установить на рядовом сервере под Windows 10.
+Repadmin. exe и Dcdiag. exe доступны на всех контроллерах домена под управлением Windows Server 2012 R2 или более поздних версий. Дополнительные сведения об использовании этих средств для устранения неполадок см. в следующих статьях.
 
-Дополнительные сведения об установке RSAT см. в статье [средства удаленного администрирования сервера](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+- [Настройка компьютера для устранения неполадок Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
+- [Устранение неполадок с репликацией Active Directory](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
 
-[Настройка компьютера для устранения неполадок Active Directory](../manage/troubleshoot/Configuring-a-Computer-for-Troubleshooting.md)
+Еще одна полезная технология — трассировка событий Windows (ETW). ETW можно использовать для устранения неполадок подключений LDAP между контроллерами домена. Дополнительные сведения см. [в разделе Использование ETW для устранения неполадок подключений LDAP](../manage/troubleshoot/troubleshoot-ldap-using-etw.md).
 
-[Устранение неполадок с репликацией Active Directory](../manage/troubleshoot/Troubleshooting-Active-Directory-Replication-Problems.md)
+Средства удаленного администрирования сервера (RSAT) можно также установить на рядовом сервере под Windows 10. Дополнительные сведения об установке RSAT см. в разделе [средства удаленного администрирования сервера](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
