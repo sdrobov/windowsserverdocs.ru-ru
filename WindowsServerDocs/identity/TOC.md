@@ -197,6 +197,7 @@
 
 ### [Устранение неполадок доменных служб Active Directory](ad-ds/manage/AD-DS-Troubleshooting.md)
 #### [Настройка компьютера для устранения неполадок](ad-ds/manage/troubleshoot/Configuring-a-computer-for-Troubleshooting.md)
+#### [Устранение неполадок с подключениями LDAP с помощью ETW](ad-ds/manage/troubleshoot/troubleshoot-ldap-using-etw.md)
 #### [Устранение неполадок с репликацией Active Directory](ad-ds/manage/troubleshoot/Troubleshooting-active-directory-Replication-Problems.md)
 ##### [Дополнительные ресурсы](additional-Resources_12.md)
 
