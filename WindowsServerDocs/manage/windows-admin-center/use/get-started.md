@@ -1,6 +1,6 @@
 ---
-title: Get started with Windows Admin Center
-description: Get started with Windows Admin Center
+title: Начало работы с Центром администрирования Windows
+description: Начало работы с Центром администрирования Windows
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,14 +8,14 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
-ms.openlocfilehash: fac17cd5975eeb699f205888edbe3f1c30b43394
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 1643568cd1a0cdbb693d773a8357d2c36b701fd3
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567155"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903985"
 ---
-# <a name="get-started-with-windows-admin-center"></a>Get Started with Windows Admin Center
+# <a name="get-started-with-windows-admin-center"></a>Приступая к работе с центром администрирования Windows
 
 >Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
 
@@ -23,267 +23,140 @@ ms.locfileid: "73567155"
 > Только начинаете знакомство с Windows Admin Center?
 > [Узнайте дополнительные сведения о Windows Admin Center](../understand/windows-admin-center.md) или [скачайте платформу](https://aka.ms/windowsadmincenter).
 
-## <a name="windows-admin-center-installed-on-windows-10"></a>Windows Admin Center installed on Windows 10
+## <a name="windows-admin-center-installed-on-windows-10"></a>Центр администрирования Windows, установленный в Windows 10
 
 > [!IMPORTANT]
-> You must be a member of the local administrator's group to use Windows Admin Center on Windows 10
+> Для использования центра администрирования Windows в Windows 10 необходимо быть членом группы локальных администраторов
 
-### <a name="selecting-a-client-certificate"></a>Selecting a client certificate
+### <a name="selecting-a-client-certificate"></a>Выбор сертификата клиента
 
-The first time you open Windows Admin Center on Windows 10, make sure to select the *Windows Admin Center Client* certificate (otherwise you'll get an HTTP 403 error saying "can't get to this page").
+При первом открытии центра администрирования Windows в Windows 10 необходимо выбрать сертификат *клиента центра администрирования Windows* (в противном случае вы получите ошибку HTTP 403 с сообщением "не удается перейти на эту страницу").
 
-In Microsoft Edge, when you are prompted with this dialog:
+В Microsoft погранично при появлении запроса в этом диалоговом окне:
  
-1. Click **More choices**
+1. Щелкните **больше вариантов**
 
     ![](../media/launch-cert-1.png)
 
-2. Select the certificate labeled **Windows Admin Center Client** and click **OK**
+2. Выберите сертификат под названием **клиент центра администрирования Windows** и нажмите кнопку **ОК** .
 
     ![](../media/launch-cert-2.png)
 
-3. Make sure **Always Allow Access** is selected and click **Allow**
+3. Убедитесь, что установлен флажок **всегда разрешать доступ** , и нажмите кнопку **Разрешить** .
 
     ![](../media/launch-cert-3.png)
 
-## <a name="connecting-to-managed-nodes-and-clusters"></a>Connecting to managed nodes and clusters
+## <a name="connecting-to-managed-nodes-and-clusters"></a>Подключение к управляемым узлам и кластерам
 
-After you have completed the installation of Windows Admin Center, you can add servers or clusters to manage from the main overview page.
+После завершения установки центра администрирования Windows можно добавить серверы или кластеры для управления с главной страницы обзора.
 
- **Add a single server or a cluster as a managed node**
+ **Добавление одного сервера или кластера в качестве управляемого узла**
 
-1. Click **+ Add** under **All Connections**.
+1. Щелкните **+ Добавить** в разделе **все подключения**.
 
    ![](../media/launch/addserver0.png)
 
-2. Choose to add a server, cluster, Windows PC, or an Azure VM:
+2. Выберите Добавление сервера, кластера, компьютера Windows или виртуальной машины Azure.
     
    ![](../media/launch/ChooseConnectionType.png)
 
-3. Type the name of the server or cluster to manage and click **Submit**. The server or cluster will be added to your connection list on the overview page.
+3. Введите имя сервера или кластера для управления и нажмите кнопку **Отправить**. Сервер или кластер будет добавлен в список подключений на странице "Обзор".
 
    ![](../media/launch/addserver2.png)
 
-   **-- OR --**
+   **--ИЛИ--**
 
-**Bulk import multiple servers**
+**Групповое импорт нескольких серверов**
 
- 1. On the **Add Server Connection** page, choose the **Import Servers** tab.
+ 1. На странице **Добавление соединения с сервером** перейдите на вкладку **Импорт серверов** .
 
     ![](../media/launch/import-servers.png)
 
- 2. Click **Browse** and select a text file that contains a comma, or new line separated, list of FQDNs for the servers you want to add.
+ 2. Нажмите кнопку **Обзор** и выберите текстовый файл, содержащий запятую, или новую строку с разделителями полных доменных имен для добавляемых серверов.
 
 > [!Note]
-> The .csv file created by [exporting your connections with PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) contains additional information beyond the server names and is not compatible with this import method.
+> CSV-файл, созданный при [экспорте подключений с помощью PowerShell](#use-powershell-to-import-or-export-your-connections-with-tags) , содержит дополнительные сведения за пределами имен серверов и не совместим с этим методом импорта.
 
-  **-- OR --**
+  **--ИЛИ--**
 
-**Add servers by searching Active Directory**
+**Добавление серверов путем поиска Active Directory**
 
- 1. On the **Add Server Connection** page, choose the **Search Active Directory** tab.
+ 1. На странице **Добавление соединения с сервером** перейдите на вкладку **Поиск Active Directory** .
 
     ![](../media/launch/search-ad.png)
 
- 2. Enter your search criteria and click **Search**. Wildcards (*) are supported.
+ 2. Введите условия поиска и нажмите кнопку **Поиск**. Поддерживаются подстановочные знаки (*).
 
- 3. After the search completes - select one or more of the results, optionally add tags, and click **Add**.
+ 3. После завершения поиска выберите один или несколько результатов, при необходимости добавьте теги и нажмите кнопку **Добавить**.
 
-## <a name="authenticate-with-the-managed-node"></a>Authenticate with the managed node ##
+## <a name="authenticate-with-the-managed-node"></a>Проверка подлинности с помощью управляемого узла ##
 
-Windows Admin Center supports several mechanisms for authenticating with a managed node. Single sign-on is the default.
+Центр администрирования Windows поддерживает несколько механизмов проверки подлинности с помощью управляемого узла. По умолчанию используется единый вход.
 
-**Single Sign-on**
+**Единый вход**
 
-You can use your current Windows credentials to authenticate with the managed node. This is the default, and Windows Admin Center attempts the sign-on when you add a server. 
+Вы можете использовать текущие учетные данные Windows для проверки подлинности на управляемом узле. Это значение по умолчанию, и центр администрирования Windows пытается войти в систему при добавлении сервера. 
 
-**Single sign-on when deployed as a Service on Windows Server**
+**Единый вход при развертывании в качестве службы в Windows Server**
 
-If you have installed Windows Admin Center on Windows Server, additional configuration is required for single sign-on.  [Configure your environment for delegation](../configure/user-access-control.md)
+Если вы установили центр администрирования Windows в Windows Server, для единого входа требуется дополнительная настройка.  [Настройка среды для делегирования](../configure/user-access-control.md)
 
-**-- OR --**
+**--ИЛИ--**
 
-**Use *Manage As* to Specify credentials**
+**Используйте *Управление как* для указания учетных данных**
 
-Under **All Connections**, select a server from the list and choose **Manage As** to specify the credentials that you will use to authenticate to the managed node:
+В разделе **все подключения**выберите сервер из списка и щелкните **Управление как** , чтобы указать учетные данные, которые будут использоваться для проверки подлинности на управляемом узле.
 
 ![](../media/launch-use-6.png)
 
-If Windows Admin Center is running in service mode on Windows Server, but you do not have Kerberos delegation configured, you must re-enter your Windows credentials:
+Если центр администрирования Windows работает в режиме службы в Windows Server, но делегирование Kerberos не настроено, необходимо повторно ввести учетные данные Windows:
 
 ![](../media/launch-use-7.png)
 
-You may apply the credentials to all connections, which will cache them for that specific browser session. If you reload your browser, you must re-enter your **Manage As** credentials.
+Вы можете применить учетные данные ко всем подключениям, которые будут кэшировать их для конкретного сеанса браузера. При перезагрузке браузера необходимо повторно ввести учетные данные **управления** .
 
-**Local Administrator Password Solution (LAPS)**
+**Решение "пароль локального администратора" (Lap)**
 
-If your environment uses [LAPS](https://technet.microsoft.com/mt227395.aspx), and you have Windows Admin Center installed on your Windows 10 PC, you can use LAPS credentials to authenticate with the managed node. **If you use this scenario, please** [provide feedback](https://aka.ms/WACFeedback).
+Если в вашей среде используется [Lap](https://technet.microsoft.com/mt227395.aspx)и на компьютере под управлением Windows 10 установлен центр администрирования Windows, для проверки подлинности на управляемом узле можно использовать учетные данные Lap. **Если вы используете этот сценарий, оставьте** [отзыв](https://aka.ms/WACFeedback).
 
-## <a name="using-tags-to-organize-your-connections"></a>Using tags to organize your connections
+## <a name="using-tags-to-organize-your-connections"></a>Использование тегов для Организации подключений
 
-You can use tags to identify and filter related servers in your connection list.  This allows you to see a subset of your servers in the connection list.  This is especially useful if you have many connections.
+Теги можно использовать для поиска и фильтрации связанных серверов в списке подключений.  Это позволяет просматривать подмножество серверов в списке подключений.  Это особенно удобно при наличии большого числа подключений.
 
-### <a name="edit-tags"></a>Edit tags
+### <a name="edit-tags"></a>Изменить Теги
 
-* Select a server or multiple servers in the All Connections list
-* Under **All Connections**, click **Edit Tags**
+* Выберите сервер или несколько серверов в списке все подключения
+* В разделе **все подключения**щелкните **изменить теги** .
 
 ![](../media/launch/tags-5.png)
 
-The **Edit Connection Tags** pane allows you to modify, add, or remove tags from your selected connection(s):
+Панель **изменение тегов подключения** позволяет изменять, добавлять или удалять теги выбранных соединений.
 
-* To add a new tag to your selected connection(s), select **Add tag** and enter the tag name you would like to use.
+* Чтобы добавить новый тег к выбранным соединениям, выберите **Добавить тег** и введите имя тега, который вы хотите использовать.
 
-* To tag the selected connections with an existing tag name, check the box next to the tag name you wish to apply.
+* Чтобы пометить выбранные соединения с существующим именем тега, установите флажок рядом с именем тега, который вы хотите применить.
 
-* To remove a tag from all selected connections, uncheck the box next to the tag you wish to remove.
+* Чтобы удалить тег из всех выбранных подключений, снимите флажок рядом с тегом, который вы хотите удалить.
 
-* If a tag is applied to a subset of the selected connections, the check box is shown in an intermediate state. You can click the box to check it and apply the tag to all selected connections, or click again to uncheck it and remove the tag from all selected connections.
+* Если к подмножеству выбранных соединений применяется тег, флажок отображается в промежуточном состоянии. Можно щелкнуть поле, чтобы проверить его и применить тег ко всем выбранным подключениям, или щелкнуть еще раз, чтобы снять его, и удалить тег из всех выбранных подключений.
 
 ![](../media/launch/tags-6.png)
 
-### <a name="filter-connections-by-tag"></a>Filter connections by tag
+### <a name="filter-connections-by-tag"></a>Фильтрация подключений по тегу
 
-Once tags have been added to one or more server connections, you can view the tags on the connection list, and filter the connection list by tags.
+После добавления тегов в одно или несколько подключений к серверу можно просмотреть теги в списке подключений и отфильтровать список подключений по тегам.
 
-* To filter by a tag, select the filter icon next to the search box.
+* Чтобы выполнить фильтрацию по тегу, щелкните значок фильтра рядом с полем поиска.
 ![](../media/launch/tags-7.png)
-* You can select "or", "and", or "not" to modify the filter behavior of the selected tags.
+* Можно выбрать "или", "и" или "не", чтобы изменить поведение фильтра для выбранных тегов.
 ![](../media/launch/tags-8.png)
 
-## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>Use PowerShell to import or export your connections (with tags)
+## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>Использование PowerShell для импорта или экспорта подключений (с тегами)
 
-```powershell
-# Load the module
-Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\ConnectionTools"
-# Available cmdlets: Export-Connection, Import-Connection
+[!INCLUDE [ps-connections](../includes/ps-connections.md)]
 
-# Export connections (including tags) to .csv files
-Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files
-Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-```
+## <a name="view-powershell-scripts-used-in-windows-admin-center"></a>Просмотр сценариев PowerShell, используемых в центре администрирования Windows
 
-### <a name="csv-file-format-for-importing-connections"></a>CSV file format for importing connections
-
-The format of the CSV file starts with the four headings ```"name","type","tags","groupId"```, followed by each connection on a new line.
-
-**name** is the FQDN of the connection
-
-**type** is the connection type. For the default connections included with Windows Admin Center, you will use one of the following:
-
-| Тип подключения. | Connection string |
-|------|-------------------------------|
-| Windows Server | msft.sme.connection-type.server |
-| Windows 10 PC | msft.sme.connection-type.windows-client |
-| Отказоустойчивый кластер | msft.sme.connection-type.cluster |
-| Hyper-Converged Cluster | msft.sme.connection-type.hyper-converged-cluster |
-
-**tags** are pipe-separated.
-
-**groupId** is used for shared connections. Use the value ```global``` in this column to make this a shared connection.
-
-### <a name="example-csv-file-for-importing-connections"></a>Example CSV file for importing connections
-
-```
-"name","type","tags","groupId"
-"myServer.contoso.com","msft.sme.connection-type.server","hyperv"
-"myDesktop.contoso.com","msft.sme.connection-type.windows-client","hyperv"
-"teamcluster.contoso.com","msft.sme.connection-type.cluster","legacyCluster|WS2016","global"
-"myHCIcluster.contoso.com,"msft.sme.connection-type.hyper-converged-cluster","myHCIcluster|hyperv|JIT|WS2019"
-"teamclusterNode.contoso.com","msft.sme.connection-type.server","legacyCluster|WS2016","global"
-"myHCIclusterNode.contoso.com","msft.sme.connection-type.server","myHCIcluster|hyperv|JIT|WS2019"
-```
-
-## <a name="import-rdcman-connections"></a>Import RDCman connections
-
-Use the script below to export saved connections in [RDCman](https://blogs.technet.microsoft.com/rmilne/2014/11/19/remote-desktop-connection-manager-download-rdcman-2-7/) to a file. You can then import the file into Windows Admin Center, maintaining your RDCMan grouping hierarchy using tags. Try it out!
-
-1. Copy and paste the code below into your PowerShell session:
-
-   ```powershell
-   #Helper function for RdgToWacCsv
-   function AddServers {
-    param (
-    [Parameter(Mandatory = $true)]
-    [Xml.XmlLinkedNode]
-    $node,
-    [Parameter()]
-    [String[]]
-    $tags,
-    [Parameter(Mandatory = $true)]
-    [String]
-    $csvPath
-    )
-    if ($node.LocalName -eq 'server') {
-        $serverName = $node.properties.name
-        $tagString = $tags -join "|"
-        Add-Content -Path $csvPath -Value ('"'+ $serverName + '","msft.sme.connection-type.server","'+ $tagString +'"')
-    } 
-    elseif ($node.LocalName -eq 'group' -or $node.LocalName -eq 'file') {
-        $groupName = $node.properties.name
-        $tags+=$groupName
-        $currNode = $node.properties.NextSibling
-        while ($currNode) {
-            AddServers -node $currNode -tags $tags -csvPath $csvPath
-            $currNode = $currNode.NextSibling
-        }
-    } 
-    else {
-        # Node type isn't relevant to tagging or adding connections in WAC
-    }
-    return
-   }
-
-   <#
-   .SYNOPSIS
-   Convert an .rdg file from Remote Desktop Connection Manager into a .csv that can be imported into Windows Admin Center, maintaining groups via server tags. This will not modify the existing .rdg file and will create a new .csv file
-
-    .DESCRIPTION
-    This converts an .rdg file into a .csv that can be imported into Windows Admin Center.
-
-    .PARAMETER RDGfilepath
-    The path of the .rdg file to be converted. This file will not be modified, only read.
-
-    .PARAMETER CSVdirectory
-    Optional. The directory you wish to export the new .csv file. If not provided, the new file is created in the same directory as the .rdg file.
-
-    .EXAMPLE
-    C:\PS> RdgToWacCsv -RDGfilepath "rdcmangroup.rdg"
-    #>
-   function RdgToWacCsv {
-    param(
-        [Parameter(Mandatory = $true)]
-        [String]
-        $RDGfilepath,
-        [Parameter(Mandatory = $false)]
-        [String]
-        $CSVdirectory
-    )
-    [xml]$RDGfile = Get-Content -Path $RDGfilepath
-    $node = $RDGfile.RDCMan.file
-    if (!$CSVdirectory){
-        $csvPath = [System.IO.Path]::GetDirectoryName($RDGfilepath) + [System.IO.Path]::GetFileNameWithoutExtension($RDGfilepath) + "_WAC.csv"
-    } else {
-        $csvPath = $CSVdirectory + [System.IO.Path]::GetFileNameWithoutExtension($RDGfilepath) + "_WAC.csv"
-    }
-    New-item -Path $csvPath
-    Add-Content -Path $csvPath -Value '"name","type","tags"'
-    AddServers -node $node -csvPath $csvPath
-    Write-Host "Converted $RDGfilepath `nOutput: $csvPath"
-   }
-   ```
-
-2. To create a .CSV file, run the following command:
-
-   ```powershell
-   RdgToWacCsv -RDGfilepath "path\to\myRDCManfile.rdg"
-   ```
-
-3. Import the resulting .CSV file in to Windows Admin Center, and all your RDCMan grouping hierarchy will be represented by tags in the connection list. For details, see [Use PowerShell to import or export your connections (with tags)](#use-powershell-to-import-or-export-your-connections-with-tags).
-
-## <a name="view-powershell-scripts-used-in-windows-admin-center"></a>View PowerShell scripts used in Windows Admin Center
-
-Once you've connected to a server, cluster, or PC, you can look at the PowerShell scripts that power the UI actions available in Windows Admin Center. From within a tool, click the PowerShell icon in the top application bar. Select a command of interest from the dropdown to navigate to the corresponding PowerShell script.
+После подключения к серверу, кластеру или ПК можно просмотреть сценарии PowerShell, которые позволяют получить доступ к действиям пользовательского интерфейса в центре администрирования Windows. В средстве щелкните значок PowerShell на верхней панели приложения. Выберите команду из раскрывающегося списка для перехода к соответствующему скрипту PowerShell.
 
 ![](../media/launch/showscript.png)

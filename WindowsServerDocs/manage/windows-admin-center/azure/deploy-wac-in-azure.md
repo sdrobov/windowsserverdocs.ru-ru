@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.date: 04/12/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 42216375d1784a5bc853994a9de7cff72920088d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1da4df284febbf18b5796322868451c45ab247ab
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357320"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903936"
 ---
 # <a name="deploy-windows-admin-center-in-azure"></a>Развертывание центра администрирования Windows в Azure
 
@@ -23,11 +23,11 @@ ms.locfileid: "71357320"
 
 [Переход к шагам по развертыванию вручную](#deploy-manually-on-an-existing-azure-virtual-machine)
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>Необходимые условия
 
 * Настройте учетную запись в [Azure Cloud Shell](https://shell.azure.com). Если вы впервые используете Cloud Shell, вам будет предложено связать или создать учетную запись хранения Azure с Cloud Shell.
-* В Cloud Shell **PowerShell** перейдите к домашнему каталогу:```PS Azure:\> cd ~```
-* Чтобы передать ```Deploy-WACAzVM.ps1``` файл, перетащите его с локального компьютера в любое место в окне Cloud Shell.
+* В Cloud Shell **PowerShell** перейдите к домашнему каталогу: ```PS Azure:\> cd ~```
+* Чтобы отправить файл ```Deploy-WACAzVM.ps1```, перетащите его с локального компьютера в любое место в окне Cloud Shell.
 
 При указании собственного сертификата:
 
@@ -41,7 +41,7 @@ ms.locfileid: "71357320"
 
 * **Credential** -[PSCredential] указывает учетные данные для виртуальной машины.
 
-* **Мсипас** -[строка] задает локальный путь к MSI-файлу центра администрирования Windows при развертывании центра администрирования Windows на существующей виртуальной машине. По умолчанию используется версия из http://aka.ms/WACDownload , если она не указана.
+* **Мсипас** -[строка] задает локальный путь к MSI-файлу центра администрирования Windows при развертывании центра администрирования Windows на существующей виртуальной машине. По умолчанию используется версия из https://aka.ms/WACDownload, если она опущена.
 
 * **VaultName** -[строка] указывает имя хранилища ключей, которое содержит сертификат.
 
@@ -89,7 +89,7 @@ $Image = "Win2016Datacenter"
 $Credential = Get-Credential
 ```
 
-#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>Пример 1: Используйте скрипт для развертывания шлюза ВАК на новой виртуальной машине в новой виртуальной сети и группе ресурсов. Используйте MSI из aka.ms/WACDownload и самозаверяющий сертификат из MSI.
+#### <a name="example-1-use-the-script-to-deploy-wac-gateway-on-a-new-vm-in-a-new-virtual-network-and-resource-group-use-the-msi-from-akamswacdownload-and-a-self-signed-cert-from-the-msi"></a>Пример 1. Использование скрипта для развертывания шлюза ВАК на новой виртуальной машине в новой виртуальной сети и группе ресурсов. Используйте MSI из aka.ms/WACDownload и самозаверяющий сертификат из MSI.
 
 ```PowerShell
 $scriptParams = @{
@@ -103,7 +103,7 @@ $scriptParams = @{
 ./Deploy-WACAzVM.ps1 @scriptParams
 ```
 
-#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>Пример 2: То же, что и #1, но с использованием сертификата из Azure Key Vault.
+#### <a name="example-2-same-as-1-but-using-a-certificate-from-azure-key-vault"></a>Пример 2. то же, что и #1, но с использованием сертификата из Azure Key Vault.
 
 ```PowerShell
 $scriptParams = @{
@@ -147,7 +147,7 @@ Set-AzNetworkSecurityGroup -NetworkSecurityGroup $newNSG
 ### <a name="requirements-for-managed-azure-vms"></a>Требования к управляемой виртуальной машине Azure
 
 Порт 5985 (WinRM через HTTP) должен быть открыт и иметь активный прослушиватель.
-Вы можете использовать приведенный ниже код в Azure Cloud Shell для обновления управляемых узлов. ```$ResourceGroupName```и ```$Name``` используют те же переменные, что и скрипт развертывания, но необходимо ```$Credential``` использовать конкретные для управляемой виртуальной машины.
+Вы можете использовать приведенный ниже код в Azure Cloud Shell для обновления управляемых узлов. ```$ResourceGroupName``` и ```$Name``` используют те же переменные, что и скрипт развертывания, но необходимо использовать ```$Credential```, характерные для управляемой виртуальной машины.
 
 ```powershell
 Enable-AzVMPSRemoting -ResourceGroupName $ResourceGroupName -Name $Name
@@ -166,7 +166,7 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 
 2. Установите подключение к виртуальной машине по удаленному рабочему столу, а затем скопируйте MSI с локального компьютера и вставьте его в ВИРТУАЛЬную машину.
 
-3. Дважды щелкните MSI-файл, чтобы начать установку, и следуйте инструкциям мастера. Имейте в виду следующее.
+3. Дважды щелкните MSI-файл, чтобы начать установку, и следуйте инструкциям мастера. Обратите внимание на такие моменты:
 
    - По умолчанию установщик использует рекомендованный порт 443 (HTTPS). Если вы хотите выбрать другой порт, обратите внимание, что этот порт также необходимо открыть в брандмауэре. 
 
@@ -190,10 +190,10 @@ Invoke-AzVMCommand -ResourceGroupName $ResourceGroupName -Name $Name -ScriptBloc
 На этом этапе вы можете получить доступ к центру администрирования Windows из современного браузера (ребра или Chrome) на локальном компьютере, перейдя к DNS-имени виртуальной машины шлюза. 
 
 > [!NOTE]
-> Если вы выбрали порт, отличный от 443, вы можете получить доступ к центру администрирования Windows, перейдя\<по адресу https://DNS\>-\<имени виртуальной машины: Пользовательский порт.\>
+> Если вы выбрали порт, отличный от 443, вы можете получить доступ к центру администрирования Windows, перейдя по адресу https://\<DNS-имя виртуальной машины\>:\<настраиваемый порт\>
 
 При попытке доступа к центру администрирования Windows браузер запрашивает учетные данные для доступа к виртуальной машине, на которой установлен центр администрирования Windows. Здесь необходимо ввести учетные данные, которые входят в локальную группу "Пользователи" или "Локальные администраторы" виртуальной машины. 
 
-Чтобы добавить другие виртуальные машины в виртуальной сети, убедитесь, что служба удаленного управления Windows выполняется на целевых виртуальных машинах, выполнив следующую команду в PowerShell или в командной строке на целевой виртуальной машине:`winrm quickconfig`
+Чтобы добавить другие виртуальные машины в виртуальной сети, убедитесь, что служба удаленного управления Windows запущена на целевых виртуальных машинах, выполнив следующую команду в PowerShell или в командной строке на целевой виртуальной машине: `winrm quickconfig`
 
 Если вы еще не присоединились к доменной виртуальной машине Azure, виртуальная машина ведет себя как сервер в Рабочей группе, поэтому необходимо убедиться, что учетная запись [используется в качестве центра администрирования Windows в Рабочей группе](../support/troubleshooting.md#using-windows-admin-center-in-a-workgroup).

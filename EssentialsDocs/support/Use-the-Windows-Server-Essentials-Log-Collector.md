@@ -12,12 +12,12 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: df467921f8a8f5633d2b0bd792885fe2c9ae2212
-ms.sourcegitcommit: a937eb17915a4a0e444a36ddb0fac9c9771cfbfa
+ms.openlocfilehash: 3bc43b08df30d03f29d9f343b7d6ed4d63c85eda
+ms.sourcegitcommit: 39244de670f712857a5fdd56630e95d57b7001a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/06/2019
-ms.locfileid: "74877909"
+ms.locfileid: "74897674"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Использование сборщика журналов Windows Server Essentials
 
@@ -30,6 +30,7 @@ ms.locfileid: "74877909"
 > [!NOTE]
 >Сборщик журналов не проводит анализ сетевых проблем и не вносит изменения в настройки серверов или компьютеров сети. Дополнительную информацию об устранении сетевых неполадок см. в справочной документации по вашему серверу.  
 >В этом разделе Компьютеры в сети, отличные от сервера, называются сетевыми компьютерами.  
+>
 >[Скачайте пакет установки сборщика журнала Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=34821).  
   
  Чтобы установить и запустить сборщик журналов, выполните шаги, описанные в следующих разделах.  

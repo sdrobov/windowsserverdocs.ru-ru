@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 23943c9567f371f7598c7dcda6db434760cabeab
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: c05987360256f7b7ed58911c1ded86586fc8b3aa
+ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567088"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74903906"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center — известные проблемы
 
@@ -25,64 +25,64 @@ ms.locfileid: "73567088"
 
 - При установке Windows Admin Center с использованием собственного сертификата следует помнить, что если вы скопируете отпечаток из средства MMC для управления сертификатами, [он будет содержать недопустимый символ в начале.](https://support.microsoft.com/help/2023835/certificate-thumbprint-displayed-in-mmc-certificate-snap-in-has-extra) В качестве решения введите первый символ отпечатка и скопируйте/вставьте остальные символы.
 
-- Using port below 1024 is not supported. In service mode, you may optionally configure port 80 to redirect to your specified port.
+- Использование порта, приведенного ниже 1024, не поддерживается. В режиме обслуживания при необходимости можно настроить порт 80 для перенаправления на указанный порт.
 
 ## <a name="general"></a>"Общие"
 
-- If you have Windows Admin Center installed as a gateway on **Windows Server 2016** under heavy use, the service may crash with an error in the event log that contains ```Faulting application name: sme.exe``` and ```Faulting module name: WsmSvc.dll```. This is due to a bug that has been fixed in Windows Server 2019. The patch for Windows Server 2016 was included the February 2019 cumulative update, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
+- Если центр администрирования Windows установлен в качестве шлюза на **Windows Server 2016** при интенсивном использовании, то служба может аварийно завершить работу из-за ошибки в журнале событий, содержащей ```Faulting application name: sme.exe``` и ```Faulting module name: WsmSvc.dll```. Это вызвано ошибкой, которая была исправлена в Windows Server 2019. Исправление для Windows Server 2016 включало накопительное обновление за Февраль 2019, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
-- If you have Windows Admin Center installed as a gateway and your connection list appears to be corrupted, perform the following steps:
+- Если в качестве шлюза установлен центр администрирования Windows, а список подключений поврежден, выполните следующие действия.
 
    > [!WARNING]
-   >This will delete the connection list and settings for all Windows Admin Center users on the gateway.
+   >Это приведет к удалению списка подключений и параметров для всех пользователей центра администрирования Windows на шлюзе.
 
   1. Удалите Windows Admin Center
   2. Удалите папку **Интерфейс управления сервером** в разделе **C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft**
   3. Переустановите Windows Admin Center
 
-- Если не закрыть средство и не пользоваться им в течение длительного периода времени, может возникнуть несколько ошибок **Ошибка: недопустимое состояние пространства выполнения этой операции**. В этом случае обновите окно браузера. If you encounter this, [send us feedback](https://aka.ms/WACfeedback).
+- Если не закрыть средство и не пользоваться им в течение длительного периода времени, может возникнуть несколько ошибок **Ошибка: недопустимое состояние пространства выполнения этой операции**. В этом случае обновите окно браузера. Если вы столкнетесь с этим, [отправьте нам отзыв](https://aka.ms/WACfeedback).
 
-- There may be minor variance between version numbers of OSS running in Windows Admin Center modules, and what is listed within the 3rd Party Software Notice.
+- Между номерами версий ОС, работающих в модулях Windows Admin Center, может быть незначительная дисперсия, а также информация, которая содержится в указании стороннего программного обеспечения.
 
-### <a name="extension-manager"></a>Extension Manager
+### <a name="extension-manager"></a>диспетчер расширений
 
-- When you update Windows Admin Center, you must reinstall your extensions.
-- If you add an extension feed that is inaccessible, there is no warning. [14412861]
+- При обновлении центра администрирования Windows необходимо переустановить расширения.
+- Если добавить веб-канал расширения, который недоступен, предупреждение не будет. [14412861]
 
 ## <a name="browser-specific-issues"></a>Проблемы, связанные с браузером
 
 ### <a name="microsoft-edge"></a>Microsoft Edge
 
-- If you have Windows Admin Center deployed as a service and you are using Microsoft Edge as your browser, connecting your gateway to Azure may fail after spawning a new browser window. Try to work around this issue by adding https://login.microsoftonline.com, https://login.live.com, and the URL of your gateway as trusted sites and allowed sites for pop-up blocker settings on your client side browser. For more guidance on fixing this in the [troubleshooting guide](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
+- Если вы развернули центр администрирования Windows в качестве службы и используете Microsoft ребро в качестве браузера, подключение шлюза к Azure может завершиться сбоем после создания нового окна браузера. Попробуйте обойти эту ошибку, добавив https://login.microsoftonline.com , https://login.live.com и URL-адрес шлюза в качестве доверенных сайтов и разрешенных сайтов для параметров блокирования всплывающих окон в браузере на стороне клиента. Дополнительные сведения об устранении этой проблемы см. в [руководстве по устранению неполадок](troubleshooting.md#azure-features-dont-work-properly-in-edge). [17990376]
 
 ### <a name="google-chrome"></a>Google Chrome
 
-- Prior to version 70 (released late October, 2018) Chrome had a [bug](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) regarding the websockets protocol and NTLM authentication. Она влияет на работу следующих средств: "События", PowerShell, "Удаленный рабочий стол".
+- До версии 70 (выпущена с опозданием октября, 2018) возникла [Ошибка](https://bugs.chromium.org/p/chromium/issues/detail?id=423609) , касающаяся протокола WebSockets и проверки подлинности NTLM. Она влияет на работу следующих средств: "События", PowerShell, "Удаленный рабочий стол".
 
 - Chrome может отобразить несколько запросов на ввод учетных данных, в частности, во время добавления подключения в среде **рабочей группы** (не входящей в домен).
 
-- If you have Windows Admin Center deployed as a service, popups from the gateway URL need to be enabled for any Azure integration functionality to work.
+- Если у вас есть центр администрирования Windows, развернутый в качестве службы, для работы функций интеграции с Azure необходимо включить всплывающие окна из URL-адреса шлюза.
 
 ### <a name="mozilla-firefox"></a>Mozilla Firefox
 
 Платформа Windows Admin Center не тестировалась с Mozilla Firefox, однако большинство функций должны работать.
 
-- Windows 10 Installation: Mozilla Firefox has it's own certificate store, so you must import the ```Windows Admin Center Client``` certificate into Firefox to use Windows Admin Center on Windows 10.
+- Установка Windows 10: Mozilla Firefox имеет собственное хранилище сертификатов, поэтому необходимо импортировать сертификат ```Windows Admin Center Client``` в Firefox, чтобы использовать центр администрирования Windows в Windows 10.
 
-## <a name="websocket-compatibility-when-using-a-proxy-service"></a>WebSocket compatibility when using a proxy service
+## <a name="websocket-compatibility-when-using-a-proxy-service"></a>Совместимость WebSocket при использовании прокси-службы
 
 Модули "Удаленный рабочий стол", PowerShell и "События" в Windows Admin Center используют протокол WebSocket, который часто не поддерживается при использовании службы прокси-сервера. Поддержка WebSocket в прокси-сервере приложений Azure AD находится [на этапе тестирования](https://blogs.technet.microsoft.com/applicationproxyblog/2018/03/28/limited-websocket-support-now-in-public-preview/). В настоящий момент осуществляется сбор сведений об их совместимости.
 
-## <a name="support-for-windows-server-versions-before-2016-2012-r2-2012-2008-r2"></a>Support for Windows Server versions before 2016 (2012 R2, 2012, 2008 R2)
+## <a name="support-for-windows-server-versions-before-2016-2012-r2-2012-2008-r2"></a>Поддержка версий Windows Server до 2016 (2012 R2, 2012, 2008 R2)
 
 > [!NOTE]
-> Windows Admin Center requires PowerShell features that are not included in Windows Server 2012 R2, 2012, or 2008 R2. If you will manage Windows Server these with Windows Admin Center, you will need to install WMF version 5.1 or higher on those servers.
+> Центру администрирования Windows требуются функции PowerShell, которые не включены в Windows Server 2012 R2, 2012 или 2008 R2. Если вы будете управлять Windows Server с помощью центра администрирования Windows, необходимо установить WMF версии 5,1 или выше на этих серверах.
 
 Введите `$PSVersiontable` в PowerShell, чтобы проверить, что платформа WMF установлена, и что используется версия 5.1 или более поздняя версия.
 
 Если она не установлена, можно [скачать и установить WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
 
-## <a name="role-based-access-control-rbac"></a>Role Based Access Control (RBAC)
+## <a name="role-based-access-control-rbac"></a>Управление доступом на основе ролей (RBAC)
 
 - Развертывание RBAC не будет выполнено на компьютерах, которые настроены на использование функции управления приложениями в Защитнике Windows (WDAC, ранее эта функция называлась "Целостность кода".)[16568455]
 
@@ -102,11 +102,11 @@ ms.locfileid: "73567088"
 
 - Возможна ошибка, ссылающаяся на "размер пакета" при экспорте больших файлов журнала.
 
-  - To resolve this, use the following command in an elevated command prompt on the gateway machine: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
+  - Чтобы устранить эту проблему, используйте следующую команду в командной строке с повышенными привилегиями на компьютере шлюза: ```winrm set winrm/config @{MaxEnvelopeSizekb="8192"}```
 
 ### <a name="files"></a>Файлы
 
-- Передача и скачивание больших файлов еще не поддерживаются. (\~100mb limit) [12524234]
+- Передача и скачивание больших файлов еще не поддерживаются. (ограничение\~100 МБ) [12524234]
 
 ### <a name="powershell"></a>PowerShell
 
@@ -124,15 +124,15 @@ ms.locfileid: "73567088"
 
 ### <a name="remote-desktop"></a>Удаленный рабочий стол
 
-- When Windows Admin Center is deployed as a service, the Remote Desktop tool may fail to load after updating the Windows Admin Center service to a new version. To work around this issue, clear your browser cache.   [23824194]
+- При развертывании центра администрирования Windows в качестве службы средство удаленный рабочий стол может не загрузиться после обновления службы центра администрирования Windows до новой версии. Чтобы обойти эту ошибку, очистите кэш браузера.   [23824194]
 
-- The Remote Desktop tool may fail to connect when managing Windows Server 2012. [20258278]
+- При управлении Windows Server 2012 может произойти сбой подключения средства удаленный рабочий стол. [20258278]
 
-- When using the Remote Desktop to connect to a machine that is not Domain joined, you must enter your account in the ```MACHINENAME\USERNAME``` format.
+- При использовании удаленный рабочий стол для подключения к компьютеру, который не присоединен к домену, необходимо ввести учетную запись в формате ```MACHINENAME\USERNAME```.
 
-- Some configurations can block Windows Admin Center's remote desktop client with group policy. If you encounter this, enable ```Allow users to connect remotely by using Remote Desktop Services``` under ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
+- Некоторые конфигурации могут блокировать клиент удаленного рабочего стола центра администрирования Windows с помощью групповой политики. Если вы столкнулись с этим, включите ```Allow users to connect remotely by using Remote Desktop Services``` в разделе ```Computer Configuration/Policies/Administrative Templates/Windows Components/Remote Desktop Services/Remote Desktop Session Host/Connections```
 
-- Remote Desktop is effected by [websocket compatibility.](#websocket-compatibility-when-using-a-proxy-service)
+- Удаленный рабочий стол влияет на [Совместимость WebSocket.](#websocket-compatibility-when-using-a-proxy-service)
 
 - Средство "Удаленный рабочий стол" в настоящий момент не поддерживает копирование/вставку любого текста, изображения или файла между локальным рабочим столом и удаленным сеансом.
 
@@ -162,20 +162,20 @@ ms.locfileid: "73567088"
 
 ### <a name="updates"></a>Обновления
 
-- After installing updates, install status may be cached and require a browser refresh.
+- После установки обновлений состояние установки может кэшироваться и требовать обновления браузера.
 
-- You may encounter the error: "Keyset does not exist" when attempting to set up Azure Update management. In this case, please try the following remediation steps on the managed node -
-    1. Stop ‘Cryptographic Services' service.
-    2. Change folder options to show hidden files (if required).
-    3. Got to “%allusersprofile%\Microsoft\Crypto\RSA\S-1-5-18” folder and delete all its contents.
-    4. Restart ‘Cryptographic Services' service.
-    5. Repeat setting up Update Management with Windows Admin Center
+- При попытке настроить управление обновлениями Azure может возникнуть ошибка: "набор ключей не существует". В этом случае выполните следующие действия по исправлению на управляемом узле —
+    1. Останавливает службу служб шифрования.
+    2. Измените параметры папки, чтобы отображались скрытые файлы (если это необходимо).
+    3. Имеет папку "%Аллусерспрофиле%\микрософт\крипто\рса\с-1-5-18" и удаляет все ее содержимое.
+    4. Перезапустите службу служб шифрования.
+    5. Повторная настройка Управление обновлениями с помощью центра администрирования Windows
 
 ### <a name="virtual-machines"></a>Виртуальные машины
 
-- When managing the virtual machines on a Windows Server 2012 host, the in-browser VM connect tool will fail to connect to the VM. Downloading the .rdp file to connect to the VM should still work. [20258278]
+- При управлении виртуальными машинами на узле Windows Server 2012 средство подключения виртуальной машины в браузере не сможет подключиться к виртуальной машине. Загрузка RDP-файла для подключения к виртуальной машине должна продолжать работать. [20258278]
 
-- Azure Site Recovery – If ASR is setup on the host outside of WAC, you will be unable to protect a VM from within WAC [18972276]
+- Azure Site Recovery — если ASR настроен на узле за пределами ВАК, вы не сможете защитить виртуальную машину в ВАК [18972276].
 
 - Дополнительные функции, доступные в диспетчере Hyper-V, такие как "Диспетчер виртуальной SAN", "Перемещение виртуальных машин", "Экспорт виртуальных машин", "Репликация виртуальных машин", в настоящее время не поддерживаются.
 
@@ -187,11 +187,11 @@ ms.locfileid: "73567088"
 
 Решение "Управление компьютерами" содержит набор средств из решения "Диспетчер серверов", поэтому к нему относятся те же известные проблемы, а также следующие конкретные проблемы, характерные только для этого решения.
 
-- If you use a Microsoft Account ([MSA](https://account.microsoft.com/account/)) or if you use Azure Active Directory (AAD) to log on to you Windows 10 machine, you must use "manage-as" to provide credentials for a local administrator account [16568455]
+- Если вы используете учетную запись Майкрософт ([MSA](https://account.microsoft.com/account/)) или используете Azure Active Directory (AAD) для входа на компьютер с Windows 10, необходимо использовать команду "Управление как", чтобы предоставить учетные данные для учетной записи локального администратора [16568455].
 
-- При попытке управления локальным узлом вам будет предложено повысить уровень процесса шлюза. Если нажать кнопку **Нет** во всплывающем окне "Контроль учетных записей", Windows Admin Center не сможет его повторно отобразить. В этом случае завершите процесс шлюза, щелкнув правой кнопкой мыши значок Windows Admin Center на панели задач и выберите "Выйти", а затем перезапустите Windows Admin Center из меню "Пуск".
+- При попытке управления локальным узлом вам будет предложено повысить уровень процесса шлюза. Если в всплывающем окне управления учетными записями пользователей нажать кнопку **нет** , необходимо отменить попытки подключения и начать заново.
 
-- Windows 10 не поддерживает удаленное взаимодействие WinRM/PowerShell по умолчанию
+- В Windows 10 удаленное взаимодействие WinRM и PowerShell не включено по умолчанию.
   
   - Чтобы включить управление клиентом Windows 10, необходимо выполнить команду ```Enable-PSRemoting``` из командной строки PowerShell с повышенными привилегиями.
 
@@ -211,19 +211,19 @@ ms.locfileid: "73567088"
 
 - Некоторые команды, например **Диски – Обновление встроенного ПО**, **Серверы – Удаление** и **Тома – Открыть** отключены и в настоящее время не поддерживаются.
 
-## <a name="azure-services"></a>Azure services
+## <a name="azure-services"></a>Службы Azure
 
-### <a name="azure-file-sync-permissions"></a>Azure File Sync permissions
+### <a name="azure-file-sync-permissions"></a>Синхронизация файлов Azure разрешения
 
-Azure File Sync requires permissions in Azure that Windows Admin Center did not provide prior to version 1910. If you registered your Windows Admin Center gateway with Azure using a version earlier than Windows Admin Center version 1910, you will need to update your Azure Active Directory application to get the correct permissions to use Azure File Sync in the latest version of Windows Admin Center. The additional permission allows Azure File Sync to perform automatic configuration of storage account access as described in this article: [Ensure Azure File Sync has access to the storage account](https://docs.microsoft.com/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2Cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
+Для Синхронизация файлов Azure требуются разрешения в Azure, которые не были предоставлены центром администрирования Windows до версии 1910. Если вы зарегистрировали шлюз центра администрирования Windows в Azure с использованием более ранней версии, чем Windows Admin Center версии 1910, необходимо обновить приложение Azure Active Directory, чтобы получить правильные разрешения на использование Синхронизация файлов Azure в последней версии Центр администрирования Windows. Дополнительное разрешение позволяет Синхронизация файлов Azure выполнять автоматическую настройку доступа к учетной записи хранения, как описано в этой статье. [Убедитесь, что у синхронизация файлов Azure есть доступ к учетной записи хранения](https://docs.microsoft.com/azure/storage/files/storage-sync-files-troubleshoot?tabs=portal1%2Cazure-portal#tabpanel_CeZOj-G++Q-5_azure-portal).
 
-To update your Azure Active Directory app, you can do one of two things
-1. Go to **Settings** > **Azure** > **Unregister**, and then register Windows Admin Center with Azure again, making sure you choose to create a new Azure Active Directory application. 
-2. Go to your Azure Active Directory application and manually add the permission needed to your existing Azure Active Directory app registered with Windows Admin Center. To do this, go to **Settings** > **Azure** > **View in Azure**. From the **App Registration** blade in Azure, go to **API permissions**, select **Add a permission**. Scroll down to select **Azure Active Directory Graph**, select **Delegated permissions**, expand **Directory**, and select **Directory.AccessAsUser.All**. Click **Add permissions** to save the updates to the app.
+Чтобы обновить приложение Azure Active Directory, можно выполнить одно из двух действий.
+1. Перейдите в раздел **параметры** > **Azure** > **Отмена регистрации**, а затем снова Зарегистрируйте центр администрирования Windows в Azure, убедившись, что вы решили создать новое приложение Azure Active Directory. 
+2. Перейдите в приложение Azure Active Directory и вручную добавьте разрешение, необходимое для существующего Azure Active Directory приложения, зарегистрированного в центре администрирования Windows. Для этого перейдите в раздел **параметры** > представление > Azure **в Azure**. В колонке **Регистрация приложения** в Azure перейдите к разделу **разрешения API**и выберите **Добавить разрешение**. Прокрутите вниз, чтобы выбрать **диаграмму Azure Active Directory**, выберите **делегированные разрешения**, разверните **Каталог**и выберите **Directory. акцессасусер. ALL**. Нажмите кнопку **Добавить разрешения** , чтобы сохранить обновления в приложении.
 
-### <a name="options-for-setting-up-azure-management-services"></a>Options for setting up Azure management services
+### <a name="options-for-setting-up-azure-management-services"></a>Параметры для настройки служб управления Azure
 
-Azure management services including Azure Monitor, Azure Update Management, and Azure Security Center, use the same agent for an on-premises server: the Microsoft Monitoring Agent. Azure Update Management has a more limited set of supported regions and requires the Log Analytics workspace to be linked to an Azure Automation account. Because of this limitation, if you wish to set up multiple services in Windows Admin Center, you must set up Azure Update Management first, and then either Azure Security Center or Azure Monitor. If you've configured any Azure management services that use the Microsoft Monitoring Agent, and then try to set up Azure Update Management using Windows Admin Center, Windows Admin Center will only allow you to configure Azure Update Management if the existing resources linked to the Microsoft Monitoring Agent support Azure Update Management. If this is not the case you have two options:
+Службы управления Azure, в том числе Azure Monitor, Управление обновлениями Azure и центр безопасности Azure, используют один и тот же агент для локального сервера: Microsoft Monitoring Agent. Управление обновлениями Azure имеет ограниченный набор поддерживаемых регионов, и для нее требуется связать Log Analytics рабочую область с учетной записью службы автоматизации Azure. Из-за этого ограничения, если вы хотите настроить несколько служб в центре администрирования Windows, сначала необходимо настроить Azure Управление обновлениями, а затем — центр безопасности Azure или Azure Monitor. Если вы настроили какие бы то ни было службы управления Azure, использующие Microsoft Monitoring Agent, а затем пытаетесь настроить Azure Управление обновлениями с помощью центра администрирования Windows, центр администрирования Windows позволит настроить Управление обновлениями Azure только в том случае, если существующие ресурсы, связанные с Microsoft Monitoring Agent, поддерживают Управление обновлениями Azure. Если это не так, вы можете использовать два варианта:
 
-1. Go to the Control Panel > Microsoft Monitoring Agent to [disconnect your server from the existing Azure management solutions](https://docs.microsoft.com/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (like Azure Monitor or Azure Security Center). Then set up Azure Update Management in Windows Admin Center. After that, you can go back to set up your other Azure management solutions through Windows Admin Center without issues.
-2. You can [manually set up the Azure resources needed for Azure Update Management](https://docs.microsoft.com/azure/automation/automation-update-management) and then [manually update the Microsoft Monitoring Agent](https://docs.microsoft.com/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (outside of Windows Admin Center) to add the new workspace corresponding to the Update Management solution you wish to use.
+1. Перейдите на панель управления > Microsoft Monitoring Agent, чтобы [Отключить сервер от существующих решений управления Azure](https://docs.microsoft.com/azure/azure-monitor/platform/log-faq#q-how-do-i-stop-an-agent-from-communicating-with-log-analytics) (таких как Azure Monitor или центр безопасности Azure). Затем настройте Управление обновлениями Azure в центре администрирования Windows. После этого можно вернуться к настройке других решений по управлению Azure с помощью центра администрирования Windows без проблем.
+2. Вы можете [вручную настроить ресурсы Azure, необходимые для управление обновлениями Azure](https://docs.microsoft.com/azure/automation/automation-update-management) , а затем [вручную обновить Microsoft Monitoring Agent](https://docs.microsoft.com/azure/azure-monitor/platform/agent-manage#adding-or-removing-a-workspace) (за пределами центра администрирования Windows), чтобы добавить новую рабочую область, соответствующую используемому решению Управление обновлениями.

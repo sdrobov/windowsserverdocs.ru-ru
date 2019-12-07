@@ -1,6 +1,6 @@
 ---
 title: Установка сборщика журналов Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -12,25 +12,25 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ade18cec590392f35e7ad6b30d9a22ccdce44dcd
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: a1b1a5492a6e5dbc48899b3918314676884e0454
+ms.sourcegitcommit: 39244de670f712857a5fdd56630e95d57b7001a5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59837035"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74897677"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Установка сборщика журналов Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Мастер установки сборщика журналов Windows Server Essentials устанавливает сборщик данных журнала в качестве надстройки панели запуска. Можно установить и использовать сборщик данных журнала на сетевых компьютерах и сервере. После установки сборщик журналов появится на панели мониторинга.  
+Мастер установки сборщика журнала Windows Server Essentials устанавливает сборщик данных журнала как надстройку панели запуска. Можно установить и использовать сборщик данных журнала на сетевых компьютерах и сервере. После установки сборщик журналов появится на панели мониторинга.  
   
-###  <a name="BKMK_ToInstall"></a> Чтобы установить сборщик журналов  
+###  <a name="BKMK_ToInstall"></a>Установка сборщика данных журнала  
   
 1.  Скачайте пакет установки сборщика журналов на любой сервер или компьютер сети.  
   
     > [!NOTE]
-    >  Можно [загрузить пакет установки сборщика данных журнала](https://go.microsoft.com/fwlink/p/?LinkId=255470) с веб-сайта Майкрософт.  
+    > [Скачайте пакет установки сборщика журнала Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=34821).  
   
 2.  Дважды щелкните значок сборщика журналов.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59837035"
   
 6.  Выберите **Установить надстройку**.  
   
-###  <a name="BKMK_Reinstall"></a> Переустановка сборщика журналов  
+###  <a name="BKMK_Reinstall"></a>Переустановка сборщика данных журнала  
  Если необходимо переустановить сборщик журналов, нужно удалить и переустановить сборщик журналов на сервере и на всех компьютерах сети. При удалении сборщика журналов с панели мониторинга на сервере сборщик журналов будет автоматически удален со всех компьютеров сети.  
   
 ##### <a name="to-uninstall-and-reinstall-the-log-collector"></a>Удаление и переустановка сборщика журналов  
@@ -62,12 +62,12 @@ ms.locfileid: "59837035"
   
 ##### <a name="to-manually-install-the-log-collector"></a>Установка сборщика журналов вручную  
   
-1.  Измените расширение скачанного файла установки из .wssx на .cab.  
+1.  Переименуйте расширение скачанного файла установки с всскс на CAB-файл.  
   
 2.  Дважды щелкните имя файла установки.  
   
 3.  При появлении диалогового окна щелкните **ОК** .  
   
-4.  Дважды щелкните имя файла с расширением с ˜.msi и выберите папку, в которой требуется извлечь его.  
+4.  Дважды щелкните имя файла, которое заканчивается на ". msi", и выберите папку для ее извлечения.  
   
 5.  Перейдите к папке с извлеченным файлом и дважды щелкните файл установки, чтобы мастер установки завершил установку.
