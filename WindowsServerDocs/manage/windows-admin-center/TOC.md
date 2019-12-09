@@ -23,6 +23,7 @@
 ### [Управление доступом пользователей и разрешениями](configure/user-access-control.md)
 ### [Применение расширений](configure/using-extensions.md)
 ### [Общие подключения](configure/shared-connections.md)
+### [Автоматизация с помощью PowerShell](configure/use-powershell.md)
 
 ## Используйте
 ### [Начало работы](use/get-started.md)
