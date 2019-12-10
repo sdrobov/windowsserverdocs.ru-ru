@@ -1,6 +1,5 @@
 # [Безопасность и контроль](security-and-assurance.md)
 ## [Обеспечение соответствия новым требованиям Генерального регламента о защите данных (GDPR) — Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
-## [Настройка HGS для Always Encrypted в SQL Server](set-up-hgs-for-always-encrypted-in-sql-server.md)
 ## [Настройка защищенной структуры и экранированных виртуальных машин для HGS](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Обзор](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)
 ### [Планирование](guarded-fabric-shielded-vm/guarded-fabric-plan-overview.md)
