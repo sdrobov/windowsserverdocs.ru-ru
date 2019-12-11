@@ -11,18 +11,18 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/12/2019
+ms.date: 11/18/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f786a1db0854ae89c1ceb23942793deb7f608e1
-ms.sourcegitcommit: 315f015102c42c6fa7694e76adecdfb448390391
+ms.openlocfilehash: e71aa2b1cccda85e0bf6f8a80ad68013346b30d4
+ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74019603"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829620"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Приступая к работе с клиентом для Windows Desktop
 
->Относится к: Windows 10 и Windows 7
+>Относится к: Windows 10, Windows 10 IoT Корпоративная и Windows 7
 
 Клиент удаленного рабочего стола для Windows Desktop можно использовать для удаленной работы с приложениями для Windows и рабочими столами Windows с другого устройства с Windows.
 
@@ -33,7 +33,7 @@ ms.locfileid: "74019603"
 
 ## <a name="install-the-client"></a>Установка клиента
 
-Выберите клиент, который соответствует вашей версии Windows:
+Выберите клиент, который соответствует версии Windows. Новый клиент Удаленного рабочего стола (MSRDC) поддерживает клиентские устройства Windows 10, Windows 10 IoT Корпоративная и Windows 7. 
 
 - [Windows (64-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2068602)
 - [Windows (32-разрядная версия)](https://go.microsoft.com/fwlink/?linkid=2098960)

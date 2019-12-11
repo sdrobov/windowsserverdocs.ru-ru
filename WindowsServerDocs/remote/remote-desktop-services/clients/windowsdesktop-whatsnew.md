@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 11/20/2019
+ms.date: 12/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 54994aad08c2f428b429082ed450235ed8bbe7e7
-ms.sourcegitcommit: 244b89505c5131dfdb90628857cc7e31741c84c2
+ms.openlocfilehash: 5526d401ba26cabcaccfc0b88df9b0e69f8149a5
+ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74265917"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74829609"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -30,17 +30,21 @@ ms.locfileid: "74265917"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Public (Общее)     |1.2.431  |
-|Предварительная оценка    |1.2.524  |
+|Public (Общее)     |1.2.535  |
+|Предварительная оценка    |1.2.535  |
 
-## <a name="updates-for-version-12524"></a>Обновления для версии 1.2.524
+## <a name="updates-for-version-12535"></a>Обновления для версии 1.2.535
 
-*Дата публикации: 20.11.2019*
+*Дата публикации: 04.12.2019*
 
-Загрузить: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4e7Nj), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4dZCo), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4dX1s)
+Загрузить: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
 
 - Теперь вы можете получать доступ к сведениям об обновлениях непосредственно с помощью кнопки "Дополнительные параметры" на панели команд в верхней части клиента.
 - Теперь вы можете отправлять отчеты об обратной связи с панели команд клиента.
+- Параметр обратной связи теперь отображается, только если доступен Центр отзывов.
+- Убедитесь, что уведомление об обновлении не отображается, если уведомления отключены с помощью политики.
+- Исправлена проблема, из-за которой не удавалось запускать некоторые файлы RDP.
+- Исправлена ошибка с запуском клиента из-за повреждения некоторых постоянных параметров.
 
 ## <a name="updates-for-version-12431"></a>Обновления для версии 1.2.431
 

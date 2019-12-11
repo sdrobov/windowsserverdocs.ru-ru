@@ -8,12 +8,12 @@ ms.assetid: ''
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 26b107264c9dfaca16ef445760089b8ac0ae8e22
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.openlocfilehash: d4d9a8917bf455d8ed84207e2f9ecc6d13d01c3d
+ms.sourcegitcommit: b18ee742662b24b25d29ef1079b1c49f220f1d57
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960973"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74691866"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Устранение неполадок по коду ошибки активации Windows
 
@@ -22,11 +22,19 @@ ms.locfileid: "71960973"
 
 В этой статье приводятся сведения по устранению ошибок, которые могут возникнуть при попытке использовать ключ многократной активации (MAK) или службы управления ключами (KMS) для активации корпоративных лицензий на компьютерах с Windows. Найдите код ошибки в таблице ниже, а затем щелкните ссылку, чтобы просмотреть подробные сведения об ошибке с таким кодом и способах ее устранения.
 
-Дополнительные сведения об активации корпоративных лицензий см. в статье [Plan for volume activation](https://docs.microsoft.com/en-us/windows/deployment/volume-activation/plan-for-volume-activation-client) (Планирование активации корпоративных лицензий).
+Дополнительные сведения об активации корпоративных лицензий см. в статье [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client) (Планирование активации корпоративных лицензий).
 
 Дополнительные сведения об активации корпоративных лицензий для текущих и последних версий Windows см. в [этой статье](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
 
 Дополнительные сведения об активации корпоративных лицензий для более ранних версий Windows (Windows Vista, Windows Server 2008, Windows Server 2008 R2 и Windows 7) см. в  [статье базы знаний № 929712](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+
+## <a name="diagnostic-tool"></a>Средство диагностики
+
+Служба поддержки Майкрософт и помощник по восстановлению (SaRA) упрощают устранение неполадок при активации Windows KMS. [Скачайте средство диагностики](https://aka.ms/SaRA-WindowsActivation).
+
+Это средство попытается активировать Windows. Если будет получен код ошибки активации, средство отобразит решения, соответствующие кодам ошибок.
+
+Поддерживаются следующие коды ошибок: 0xC004F038, 0xC004F039, 0xC004F041, 0xC004F074, 0xC004C008.
 
 ## <a name="summary-of-error-codes"></a>Сводка кодов ошибок
 
