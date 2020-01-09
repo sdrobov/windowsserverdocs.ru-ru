@@ -1,4 +1,4 @@
-# Начало работы
+# Приступая к работе
 ## [Начало работы с Windows Server 2016](Server-Basics.md)
 ## [Что нового в Windows Server 8?](whats-new-in-windows-server.md)
 ### [Новые возможности Windows Server 2019](../get-started-19/whats-new-19.md)
@@ -8,6 +8,7 @@
 ## [Сравнение каналов обслуживания](..\get-started-19\servicing-channels-19.md)
 ## [Установка и обновление выпусков Windows Server](Installation-and-Upgrade.md)
 ## [Обновление Windows Server 2008 и Windows Server 2008 R2](modernize-windows-server-2008.md)
+### [Использование дополнительных обновлений для системы безопасности Windows Server 2008 и 2008 R2](extended-security-updates.md)
 ### [Отправка специализированного образа Windows Server 2008 или 2008 R2 в Azure](uploading-specialized-WS08-image-to-azure.md)
 ## [Перенос ролей и компонентов Windows Server](Migrate-Roles-and-Features.md)
 ## [Требования к системе Windows Server 2016](System-Requirements.md)

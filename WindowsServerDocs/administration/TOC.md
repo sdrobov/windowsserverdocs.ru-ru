@@ -2,8 +2,7 @@
 ## [Использование Windows Admin Center для управления средой (новинка!)](../manage/windows-admin-center/overview.md)
 ## Управление системами и средами Windows Server
 ### [Управление функцией Hybrid Cloud Print в Windows Server](hybrid-cloud-print/hybrid-cloud-print-overview.md)
-#### [Развертывание функции Hybrid Cloud Print в Windows Server с помощью предварительной аутентификации](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
-#### [Развертывание функции Hybrid Cloud Print в Windows Server с помощью сквозной аутентификации](hybrid-cloud-print/hybrid-cloud-print-deploy-passthrough.md)
+#### [Развертывание функции Hybrid Cloud Print в Windows Server](hybrid-cloud-print/hybrid-cloud-print-deploy.md)
 ### [Что такое вариант установки основных серверных компонентов?](server-core/what-is-server-core.md)
 #### [Какие компоненты входят в вариант установки основных серверных компонентов?](server-core/server-core-roles-and-services.md)
 #### [Главные административные задачи в основных серверных компонентах](server-core/server-core-administer.md)
