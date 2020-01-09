@@ -7,95 +7,104 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 08/19/2019
+ms.date: 12/20/2019
 description: Новые и обновленные разделы документации по локальному хранилищу для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: ce937dfb5c6c0b46c8085cbb202590567ea829d3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d50d4ca5b49b7f895fad3d3866226f95c55ae485
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393929"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352775"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 В этом разделе перечислены новые и обновленные разделы документации по службе [хранилища](storage.md) для Windows Server.
 
 > Если вы ищете журнал обновлений для Windows Server, ознакомьтесь с журналом [обновлений Windows 10 и Windows server 2019](https://support.microsoft.com/help/4464619) или [журналом обновлений Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
 
-## <a name="august-2019"></a>2019 августа
+## <a name="december-2019"></a>Декабрь 2019 г.
 
-| Новый или измененный раздел                                        | Описание |
+| Новая или измененная статья                                        | Описание |
+| ---                                                         | ---           |
+| [Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)| Изменено для дальнейшего уточнения руководств на основе запросов клиентов.|
+| [Расширение тома в оснастке «Управление дисками»](disk-management/extend-a-basic-volume.md) | Добавлены рекомендации в ответ на отзывы пользователей. |
+| [Преобразование динамического диска в базовый](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | Исправлена ошибка в командной строке и добавлены некоторые сведения на основе отзывов пользователей. |
+
+
+## <a name="august-2019"></a>Август 2019 г.
+
+| Новая или измененная статья                                        | Описание |
 | ---                                                         | ---           |
 | [Служба миграции хранилища: вопросы и ответы](storage-migration-service/faq.md) | Обновлено в соответствии с новой поддержкой для источников Linux. |
 
 ## <a name="june-2019"></a>Июнь 2019 г.
 
-| Новый или измененный раздел                                        | Описание |
+| Новая или измененная статья                                        | Описание |
 | ---                                                         | ---           |
 | [Очистка диска](file-server/disk-cleanup.md)                                              | Создать (перенесено из [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11)))
 | [Служба миграции хранилища: вопросы и ответы](storage-migration-service/faq.md#can-i-consolidate-multiple-servers-into-one-server) | Добавлены сведения о оптимизации производительности. |
 
 ## <a name="may-2019"></a>Май 2019 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
-|[Удаление томов](storage-spaces/delete-volumes.md)| Оператор new        |
+|[Удаление томов](storage-spaces/delete-volumes.md)| Новая        |
 |[Создание томов](storage-spaces/create-volumes.md)| Добавлены шаги и видеоролики по созданию тома в центре администрирования Windows.|
 |[Увеличение размеров томов](storage-spaces/resize-volumes.md)| Добавлены шаги и видео по изменению размера тома в центре администрирования Windows.|
 
-## <a name="march-2019"></a>Март 2019
+## <a name="march-2019"></a>Март 2019 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
-| [Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md) | Оператор new |
-| [Общие сведения о постоянной памяти и ее развертывании](storage-spaces/deploy-pmem.md) | Оператор new |
-| [Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Оператор new        |
+| [Мониторинг с помощью Azure Monitor](storage-spaces/configure-azure-monitor.md) | Новая |
+| [Общие сведения о постоянной памяти и ее развертывании](storage-spaces/deploy-pmem.md) | Новая |
+| [Обновление кластера Локальных дисковых пространств в Windows Server 2019](storage-spaces/upgrade-storage-spaces-direct-to-windows-server-2019.md)| Новая        |
 | [Репликация DFS](dfs-replication/dfsr-overview.md)        | Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v%3dws.11))|
 
-## <a name="february-2019"></a>Февраль 2019 г.
+## <a name="february-2019"></a>Февраль 2019 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
 |[Известные проблемы со службой миграции хранилища](storage-migration-service/known-issues.md)   | Добавлена ошибка    |
 
 ## <a name="january-2019"></a>Январь 2019 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
 |[Принцип работы и отслеживание повторной синхронизации хранилища](storage-spaces/understand-storage-resync.md)|Новый раздел|
 
 ## <a name="december-2018"></a>Декабрь 2018 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
 |[Использование службы миграции хранилища для миграции сервера](storage-migration-service/migrate-data.md)| Добавлено пояснение о том, как мы переносите файлы |
 |[Межрегиональная межкластерная репликация хранилища в Azure](storage-replica/cluster-to-cluster-azure-cross-region.md)|Добавлены шаги проверки.|
 |[Межкластерная репликация хранилища в пределах одного региона в Azure](storage-replica/cluster-to-cluster-azure-one-region.md)|Добавлены шаги проверки.|
 |[Часто задаваемые вопросы о реплике хранилища](storage-replica/storage-replica-frequently-asked-questions.md)| Добавлена инструкция поддержки для дедупликации данных.|
 
-## <a name="november-2018"></a>Ноябрь 2018 г.
+## <a name="november-2018"></a>ноябрь 2018 г.
 
-|Новый или измененный раздел                                        |Описание|
+|Новая или измененная статья                                        |Описание|
 |---                                                         |---           |
 |[Вложенная устойчивость](storage-spaces/nested-resiliency.md)    | Новый раздел    |
 |[Известные проблемы со службой миграции хранилища](storage-migration-service/known-issues.md)   | Новый раздел    |
-|[Репликация DFS. Вопросы и ответы](dfs-replication/dfsr-faq.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/)|
+|[Репликация DFS: часто задаваемые вопросы](dfs-replication/dfsr-faq.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/)|
 |[Перенос репликации SYSVOL в репликацию DFS](dfs-replication/migrate-sysvol-to-dfsr.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
-|[SMB: необходимо открыть порты для совместного использования файлов и принтеров](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
+|[SMB: должны быть открыты порты общего доступа к файлам и принтерам](file-server/best-practices-analyzer/smb-open-file-sharing-ports.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 |[Служба теневого копирования томов](file-server/volume-shadow-copy-service.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/)|
 
 ## <a name="october-2018"></a>Октябрь 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Что нового в хранилище?](whats-new-in-storage.md)|Добавлены сведения о новых возможностях Windows Server 2019|
 |[Известные проблемы с репликой хранилища](storage-replica/storage-replica-known-issues.md)|Добавлены сведения о новом обновлении.|
 
 ## <a name="september-2018"></a>Сентябрь 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Обзор службы миграции хранилища](storage-migration-service/overview.md)| Новый раздел |
 |[Использование службы миграции хранилища для миграции сервера](storage-migration-service/migrate-data.md)| Новый раздел |
@@ -105,14 +114,14 @@ ms.locfileid: "71393929"
 
 ## <a name="june-2018"></a>Июнь 2018
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Репликация хранилища "сервер-сервер"](storage-replica/server-to-server-storage-replication.md)|Добавлены сведения об использовании виртуальных машин Azure, включая ExpressRoute.|
 |[Наборы кластеров](storage-spaces/cluster-sets.md)| Новый раздел|
 
 ## <a name="may-2018"></a>Май 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Обзор NFS](nfs/nfs-overview.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
 |[Развертывание NFS](nfs/deploy-nfs.md)|Перенесено из библиотеки [предыдущих версий](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012) .|
@@ -126,7 +135,7 @@ ms.locfileid: "71393929"
 
 ## <a name="april-2018"></a>Апрель 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Получение данных в Локальные дисковые пространства](storage-spaces/data-collection.md)| Новый раздел.|
 |[Общие сведения о дисковых пространствах](storage-spaces/overview.md)|Новый раздел.|
@@ -137,7 +146,7 @@ ms.locfileid: "71393929"
 
 ## <a name="march-2018"></a>Март 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Аварийное восстановление с помощью Локальные дисковые пространства](storage-spaces/storage-spaces-direct-disaster-recovery.md)| Новый раздел.|
 |[Основные сведения о кворуме в Локальные дисковые пространства](storage-spaces/understand-quorum.md)| Новый раздел.|
@@ -147,24 +156,24 @@ ms.locfileid: "71393929"
 
 ## <a name="february-2018"></a>Февраль 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Работоспособность дисковых пространств и операционные состояния](storage-spaces/storage-spaces-states.md)| Новый раздел.|
 |[Использование Локальные дисковые пространства с кэшем чтения в памяти CSV](storage-spaces/csv-cache.md)| Новый раздел. |
 
 ## <a name="january-2018"></a>Январь 2018 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Рекомендации по симметрии дисков в Локальные дисковые пространства](storage-spaces/drive-symmetry-considerations.md)| Новый раздел.|
 |[Использование реплики хранилища с Project Хонолулу](storage-replica/storage-replica-ui.md)|Новый раздел.|
 
 ## <a name="december-2017"></a>Декабрь 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Изменение буквы диска](disk-management/change-a-drive-letter.md)|Новый раздел.|
-|[Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)|[Повторное написание состояния диска не инициализировано, или на диске нет полного](disk-management/troubleshooting-disk-management.md#a-disks-status-is-not-initialized-or-the-disk-is-missing) раздела, чтобы добавить подробные инструкции по устранению неполадок на основе запросов клиентов.|
+|[Диагностика с помощью оснастки "Управление дисками"](disk-management/troubleshooting-disk-management.md)|[Повторное написание состояния диска не инициализировано, или на диске нет полного](disk-management/troubleshooting-disk-management.md#disks-that-are-missing-or-not-initialized-plus-general-troubleshooting-steps) раздела, чтобы добавить подробные инструкции по устранению неполадок на основе запросов клиентов.|
 |[Инициализация новых дисков](disk-management/initialize-new-disks.md)|Переписана, чтобы облегчить понимание и устранение вопросов, возникающих у пользователей.|
 |[Планирование томов в Локальные дисковые пространства](storage-spaces/plan-volumes.md)|Добавлена таблица, суммирующая типы устойчивости, доступные в четырех и более крупных кластерах.|
 |[Обзор ReFS](refs/refs-overview.md)|Уточнены Рекомендуемые рабочие нагрузки для четности с зеркальным отображением и исправлены поддерживаемые файлы и размеры томов для ReFS и NTFS.|
@@ -173,14 +182,14 @@ ms.locfileid: "71393929"
 
 ## <a name="november-2017"></a>Ноябрь 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Новые возможности в хранилище](whats-new-in-storage.md)|Добавлены сведения о новых возможностях Windows Server версии 1709.|
 |[Добавление серверов или дисков](storage-spaces/add-nodes.md)|Добавлены сведения о том, как Локальные дисковые пространства автоматически оптимизирует использование диска после добавления дисков.|
 
 ## <a name="october-2017"></a>Октябрь 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Развертывание Локальные дисковые пространства в гостевом кластере виртуальной машины](storage-spaces/storage-spaces-direct-in-vm.md)|Новый раздел.|
 |[Общие сведения об управлении дисками](disk-management/overview-of-disk-management.md)| Опубликованы 13 новых разделов для Windows и Windows Server.|
@@ -191,7 +200,7 @@ ms.locfileid: "71393929"
 
 ## <a name="july-2017"></a>Июль 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Пространства имен DFS](dfs-namespaces/dfs-overview.md)|Опубликовано 20 новых разделов для Windows Server 2016.|
 |[Диспетчер ресурсов файлового сервера](fsrm/fsrm-overview.md)|Опубликовано 33 новых раздела для Windows Server 2016.|
@@ -200,7 +209,7 @@ ms.locfileid: "71393929"
 
 ## <a name="june-2017"></a>Июнь, 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Планирование развертывания рабочих папок](work-folders/plan-work-folders.md)|Добавлены сведения о поддержке и обновленных требованиях прокси-сервера приложений Azure AD.|
 |[Рабочие папки](work-folders/work-folders-overview.md)|Добавлены сведения о поддержке и обновленных требованиях прокси-сервера приложений Azure AD.|
@@ -209,7 +218,7 @@ ms.locfileid: "71393929"
 
 ## <a name="may-2017"></a>Май 2017
 
-|                                                           Новый или измененный раздел                                                           |                                          Описание                                           |
+|                                                           Новая или измененная статья                                                           |                                          Описание                                           |
 |------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|
 | [Обзор компонента дедупликации данных](data-deduplication/overview.md) и <br>[Установка дедупликации данных](data-deduplication/install-enable.md) |              Обновлены требования к системе (добавлено новое обновление программного обеспечения).               |
 |                                      [Развертывание рабочих папок](work-folders/deploy-work-folders.md)                                       |         Добавлены сведения о поддержке и обновленных обязательных шагах прокси-сервера приложений Azure AD.          |
@@ -219,7 +228,7 @@ ms.locfileid: "71393929"
 
 ## <a name="april-2017"></a>Апрель 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Устранение неполадок при обновлении встроенного по](troubleshoot-firmware-update.md)|Новый раздел.|
 |[Рабочие папки](work-folders/work-folders-overview.md)|Новый раздел.|
@@ -231,13 +240,13 @@ ms.locfileid: "71393929"
 
 ## <a name="march-2017"></a>Март, 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Перевод сервера Локальные дисковые пространства в автономный режим для обслуживания](storage-spaces/maintain-servers.md)|Новый раздел.|
 
 ## <a name="february-2017"></a>Февраль 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Удаление серверов в Локальные дисковые пространства](storage-spaces/remove-servers.md)|Новый раздел.|
 |[Добавление сервера или дисков в Локальные дисковые пространства](storage-spaces/add-nodes.md)|Добавлены новые изображения и содержимое.|
@@ -245,7 +254,7 @@ ms.locfileid: "71393929"
 
 ## <a name="january-2017"></a>Январь 2017 г.
 
-|Новый или измененный раздел|Описание|
+|Новая или измененная статья|Описание|
 |---|---|
 |[Планирование томов](storage-spaces/plan-volumes.md)|Новый раздел.|
 |[Создание томов](storage-spaces/create-volumes.md)|Новый раздел.|

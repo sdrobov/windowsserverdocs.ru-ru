@@ -8,12 +8,12 @@ ms.date: 10/25/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 5963035846814f2ec3fd3417e629f71b146cc73e
-ms.sourcegitcommit: ac9946deb4fa70203a9b05e0386deb4244b8ca55
+ms.openlocfilehash: 968122612845a9be105ca7d3231edc0faa039e76
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74310384"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352680"
 ---
 # <a name="storage-migration-service-overview"></a>Обзор службы миграции хранилища
 
@@ -66,7 +66,7 @@ ms.locfileid: "74310384"
 - На исходном и целевом компьютерах должны быть включены следующие правила брандмауэра *(хотя* они уже могут быть включены):
   - Общий доступ к файлам и принтерам (входящий трафик SMB)
   - Служба Netlogon (NP-in)
-  - Инструментарий управления Windows (WMI) (DCOM-in)
+  - Инструментарий управления Windows (DCOM-In)
   - Инструментарий управления Windows (WMI-In)
   
   > [!TIP]
@@ -81,10 +81,10 @@ ms.locfileid: "74310384"
 
 - Windows Server, Semi-Annual Channel
 - Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016
 - Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 - Windows Server 2008
 - Windows Server 2003 R2
 - Windows Server 2003
@@ -93,11 +93,11 @@ ms.locfileid: "74310384"
 - Windows Small Business Server 2011
 - Windows Server 2012 Essentials
 - Windows Server 2012 R2 Essentials
-- Windows Server2016 Essentials
+- Windows Server 2016 Essentials
 - Windows Server 2019 Essentials
 - Windows Storage Server 2008
-- Windows Storage Server 2008 R2
-- Windows Storage Server 2012
+- Windows Storage Server 2008 R2
+- Windows Storage Server 2012.
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
@@ -105,9 +105,9 @@ ms.locfileid: "74310384"
 
 Можно выполнить миграцию следующих дополнительных типов источников, если Orchestrator работает под управлением Windows Server версии 1903 или более поздней или если на сервере Orchestrator запущена более ранняя версия Windows Server с установленным [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) :
 
-- Отказоустойчивые кластеры
+- Отказоустойчивые кластеры под Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Серверы Linux, использующие Samba. Мы протестировали следующее:
-    - CentOS 7
+    - CentOS 7.
     - Debian GNU/Linux 8
     - RedHat Enterprise Linux 7,6
     - SUSE Linux Enterprise Server (SLES) 11 SP4
@@ -120,7 +120,7 @@ ms.locfileid: "74310384"
 
 - Windows Server, Semi-Annual Channel
 - Windows Server 2019
-- Windows Server 2016
+- Windows Server 2016
 - Windows Server 2012 R2
 
 > [!TIP]
@@ -136,7 +136,7 @@ ms.locfileid: "74310384"
 - Более простая синхронизация перенесенных общих ресурсов в Azure с помощью компонента "Синхронизация файлов Azure".
 - Перенос в новые сети, такие как Azure.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [Перенос файлового сервера с помощью службы миграции хранилища](migrate-data.md)
 - [Часто задаваемые вопросы о службах миграции хранилища](faq.md)

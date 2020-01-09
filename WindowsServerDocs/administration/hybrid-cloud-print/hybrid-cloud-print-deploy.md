@@ -12,223 +12,344 @@ author: msjimwu
 ms.author: coreyp
 manager: dongill
 ms.date: 3/15/2018
-ms.openlocfilehash: af5cd5f83633df7e704f4b768baf8dc6d78546aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c756aaeb293f9e6822e979e0f305f0c4f98adf72
+ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370438"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75352212"
 ---
-# <a name="deploy-windows-server-hybrid-cloud-print-with-pre-authentication"></a>Развертывание функции Hybrid Cloud Print в Windows Server с помощью предварительной проверки подлинности
+# <a name="deploy-windows-server-hybrid-cloud-print"></a>Развертывание гибридной облачной печати Windows Server
 
 >Область применения: Windows Server 2016
 
-В этой статье для ИТ-администраторов описывается комплексное развертывание гибридного облачного решения Microsoft для печати. Эти уровни решения поверх существующих серверов Windows Server, работающих в качестве сервера печати, и позволяют присоединять Azure Active Directory и управляемые MDM, устройства для обнаружения и печати на управляемых принтерах Организации.
+В этой статье для ИТ-администраторов описывается комплексное развертывание решения Microsoft гибридного облака (HCP). Эти уровни решений поверх существующих серверов Windows Server, работающих в качестве сервера печати, и обеспечивают присоединение Azure Active Directory (Azure AD) и управляемые MDM, устройства для обнаружения и печати на управляемых принтерах Организации.
 
 ## <a name="pre-requisites"></a>Предварительные требования
 
 Перед началом установки необходимо получить несколько подписок, служб и компьютеров. Они приведены ниже:
 
--   Подписка Azure AD Premium
-    
-    Пробная подписка на Azure приведена в статье Начало [работы с подпиской Azure](https://azure.microsoft.com/trial/get-started-active-directory/). 
+- Подписка Azure AD Premium.
 
--   Служба MDM, например Intune
-    
-    Для пробной подписки на Intune см. [Microsoft Intune](https://www.microsoft.com/en-us/cloud-platform/microsoft-intune).
+  См. статью [Начало работы с подпиской Azure](https://azure.microsoft.com/trial/get-started-active-directory/) для пробной подписки в Azure.
 
--   Windows Server, работающий как Active Directory
+- Служба MDM, например Intune.
 
-    Дополнительные сведения о настройке Active Directory см. [в статье Пошаговое руководство. настройка Active Directory в Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/).
+  См. статью [Microsoft Intune](https://www.microsoft.com/cloud-platform/microsoft-intune) для пробной подписки на Intune.
 
--   Присоединенный к домену Windows Server 2016, работающий как сервер печати
-    
-    Сведения об установке ролей и служб ролей в Windows Server см. в [статье Установка ролей, служб ролей и компонентов с помощью мастера добавления ролей и](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw)компонентов.
+- Компьютер под Active Directory Windows Server 2016 или более поздней версии.
 
--   Azure AD Connect
-    
-    Дополнительные сведения о настройке Azure AD Connect см. в разделе [Выборочная установка Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-custom).
+  Дополнительные сведения о настройке Active Directory см. [в статье Пошаговое руководство. настройка Active Directory в Windows Server 2016](https://blogs.technet.microsoft.com/canitpro/2017/02/22/step-by-step-setting-up-active-directory-in-windows-server-2016/) .
 
--   Соединитель прокси приложения Azure на отдельном компьютере, присоединенном к домену Windows Server
-    
-    Дополнительные сведения о настройке соединителя прокси приложения Azure см. [в статье Начало работы с прокси приложения и установка соединителя](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-enable).
+- Выделенный, присоединенный к домену компьютер Windows Server 2016 или более поздней версии, работающий как сервер печати.
 
--   Общедоступное доменное имя
-    
-    Вы можете использовать имя домена, созданное Azure, или приобрести собственное доменное имя.
+- Выделенный, присоединенный к домену компьютер Windows Server 2016 или более поздней версии, работающий как сервер соединителя.
+
+  Дополнительные сведения см. в статье [Знакомство с соединителями Azure AD application proxy](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors) .
+
+- Для публикации принтеров в Windows 10 имеется обновление или более поздний компьютер.
+
+- Общедоступное доменное имя.
+
+  Вы можете использовать имя домена, созданное Azure (*имя_домена*. onmicrosoft.com), или приобрести собственное доменное имя. См. раздел [Добавление имени личного домена с помощью портала Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/add-custom-domain).
 
 ## <a name="deployment-steps"></a>Шаги развертывания
 
-В этом руководстве описаны пять (5) шагов установки:
+Приведенные ниже шаги предназначены для типичного гибридного развертывания для печати в облаке.
 
-- Шаг 1. Установка Azure AD Connect для синхронизации между Azure AD и локальной службой AD
-- Шаг 2. Установка гибридного облачного пакета печати на сервере печати
-- Шаг 3. Установка прокси приложения Azure (схема AAP) с ограниченным делегированием Kerberos (KCD)
-- Шаг 4. Настройка необходимых политик MDM
-- Шаг 5. Публикация общих принтеров
+### <a name="step-1---install-azure-ad-connect"></a>Шаг 1. Установка Azure AD Connect
 
-### <a name="step-1---install-azure-ad-connect-to-sync-between-azure-ad-and-on-premises-ad"></a>Шаг 1. Установка Azure AD Connect для синхронизации между Azure AD и локальной службой AD
-1. Загрузите Azure AD Connect программное обеспечение на компьютере Active Directory Windows Server
-2. Запустите пакет установки Azure AD Connect и выберите **параметр использовать Экспресс параметры** .
-3. Введите сведения, запрошенные в процессе установки, и нажмите кнопку **установить** .
+1. Azure AD Connect синхронизирует Azure AD с локальной службой AD. На компьютере Windows Server с Active Directory Скачайте и установите Azure AD Connect программное обеспечение с помощью стандартных параметров. См. раздел [Приступая к работе с Azure AD Connect с помощью стандартных параметров](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express).
 
-### <a name="step-2---install-hybrid-cloud-print-package-on-the-print-server"></a>Шаг 2. Установка гибридного облачного пакета печати на сервере печати
+### <a name="step-2---install-application-proxy"></a>Шаг 2. Установка прокси приложения
 
-1. Установка модулей PowerShell для гибридной облачной печати
-   - Выполните следующие команды из командной строки PowerShell с повышенными привилегиями.
-      - `find-module -Name "PublishCloudPrinter"`, чтобы убедиться, что компьютер может достичь коллекция PowerShell (PSGallery).
-      - `install-module -Name "PublishCloudPrinter"`
+1. Прокси приложения позволяет пользователям в вашей организации получать доступ к локальным приложениям из облака. Установите прокси приложения на сервере соединителя.
+    - Инструкции по установке см. [в разделе Учебник. Добавление локального приложения для удаленного доступа через прокси приложения в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-add-on-premises-application).
+    - Если организация имеет сложную топологию сети, рекомендуется использовать выделенную группу соединителей. См. раздел [Публикация приложений в отдельных сетях и расположениях с помощью групп соединителей](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connector-groups).
 
-     > Примечание. Вы можете увидеть обмен сообщениями о том, что "PSGallery" является недоверенным репозиторием.  Введите "y", чтобы продолжить установку.
+### <a name="step-3---register-and-configure-applications"></a>Шаг 3. Регистрация и настройка приложений
 
-2. Установка гибридного облачного решения для печати
-    - В той же командной строке PowerShell с повышенными привилегиями измените каталог на `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0`
-    - Выполните следующую команду: <br>
-        `CloudPrintDeploy.ps1 -AzureTenant <Domain name used by Azure AD Connect> -AzureTenantGuid <Azure AD Directory ID>`
-3. Настройка двух конечных точек IIS для поддержки SSL
-   -   SSL-сертификат может представлять собой самозаверяющий сертификат или один, выданный доверенным центром сертификации (ЦС).
-   -  Если используется самозаверяющий сертификат, убедитесь, что сертификат импортирован на клиентские компьютеры.
-4. Установка пакета SQLite
-   - Открытие командной строки PowerShell с повышенными привилегиями
-   - Выполните следующую команду, чтобы скачать пакеты NuGet System. Data. SQLite <br>
-       `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
-   - Выполните следующую команду, чтобы установить пакеты<br>
-   `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
+Чтобы включить проверку подлинности при взаимодействии со службами HCP, необходимо создать 3 приложения: 2 веб-приложения для представления двух служб HCP и 1 собственное приложение для взаимодействия с этими службами.
+
+1. Войдите в портал Azure, чтобы зарегистрировать веб-приложения.
+    - В разделе Azure Active Directory выберите **Регистрация приложений** > **Новая регистрация**.
+
+    ![Регистрация приложения AAD 1](../media/hybrid-cloud-print/AAD-AppRegistration.png)
+
+    - Введите имя приложения для службы обнаружения Mopria. Нажмите кнопку **Регистрация** для завершения.
+
+    ![Регистрация приложения AAD 2](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria.png)
+
+    - Повторите процедуру для корпоративной облачной службы печати.
+    - Повторите процедуру для собственного приложения.
+    - Три приложения должны отображаться в разделе **Регистрация приложений**.
+
+    ![Регистрация приложения AAD 3](../media/hybrid-cloud-print/AAD-AppRegistration-AllApps.png)
+
+2. Предоставление API для 2 веб-приложений.
+    - Находясь в колонке **Регистрация приложений** , щелкните приложение службы обнаружения Mopria, выберите **предоставить API**, а затем щелкните **задать** рядом с URI идентификатора приложения.
+
+    ![Функция AAD предоставляет API 1](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI.png)
+
+    - Щелкните **сохранить** , не изменяя значение по умолчанию для URI идентификатора приложения. Это значение нужно установить сейчас, и оно будет изменено позже.
+
+    ![Интерфейс AAD предоставляет API 2](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-Save.png)
+
+    - Щелкните **Добавить область**.
+
+    ![Интерфейс AAD предоставляет API 3](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-AddScope.png)
+
+    - Укажите имя области, разрешите как администраторам, так и пользователям согласие, введите описание согласия, а затем щелкните **Добавить область** для завершения.
+
+    ![Интерфейс AAD предоставляет API 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-ExposeAPI-ScopeName.png)
+
+    - Повторите процедуру для корпоративной облачной службы печати. Используйте другое имя области и описание согласия.
+
+    ![Интерфейс AAD предоставляет API 5](../media/hybrid-cloud-print/AAD-AppRegistration-ECP-ExposeAPI-ScopeName.png)
+
+3. Добавление разрешений API
+    - Вернитесь в колонку Регистрация приложений. Щелкните собственное приложение и выберите разрешения API. Щелкните **Добавить разрешение**.
+
+    ![Разрешение API AAD 1](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission.png)
+
+    - Переключитесь на **API, используемые моей организацией**, а затем используйте поле поиска, чтобы найти службу Mopria Discovery, добавленную ранее. Щелкните службу в результатах поиска.
+
+    ![Разрешение API AAD 2](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria.png)
+
+    - Выберите **делегированные разрешения**. Установите флажок рядом с областью API. Щелкните **Добавить разрешения**.
+
+    ![Разрешение API AAD 3](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Mopria-Add.png)
+
+    - Повторите, чтобы добавить разрешения для корпоративной облачной службы печати.
+
+    ![Разрешение API AAD 4](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-ECP-Add.png)
+
+    - После возврата в колонку разрешения API подождите 10 секунд, прежде чем щелкнуть **согласие общего администратора..** ..
+
+    ![Разрешение API AAD 5](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent.png)
+
+    - При появлении запроса нажмите кнопку **Да** .
+
+    ![Разрешение API AAD 6](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-GrantConsent-Yes.png)
+
+    - Убедитесь, что в столбце Состояние разрешения API отображается зеленый флажок.
+
+    ![Разрешение API AAD 7](../media/hybrid-cloud-print/AAD-AppRegistration-APIPermission-Verify.png)
+
+4. Настройка прокси приложения для веб-приложений
+    - Перейдите в раздел **Azure Active Directory** > **корпоративные приложения** > **все приложения**. Найдите службу Mopria Discovery и щелкните ее.
+
+    ![Прокси-сервер приложения AAD 1](../media/hybrid-cloud-print/AAD-EnterpriseApp-AllApps.png)
+
+    - Щелкните **прокси приложения**. Введите внутренний URL-адрес в формате `https://<fully qualified domain name of the Print Server>/mcs/`. Чтобы завершить, нажмите кнопку **сохранить** .
+
+    ![Прокси-сервер приложения AAD 2](../media/hybrid-cloud-print/AAD-EnterpriseApp-Mopria-AppProxy.png)
+
+    - Повторите процедуру для корпоративной облачной службы печати. Обратите внимание, что внутренний URL-адрес — `https://<fully qualified domain name of the Print Server>/ecp/`.
+
+    ![Прокси-сервер приложения AAD 3](../media/hybrid-cloud-print/AAD-EnterpriseApp-ECP-AppProxy.png)
+
+    - Перейдите в **Azure Active Directory** > **Регистрация приложений**. Щелкните службу Mopria Discovery. Обратите внимание, что в разделе **Обзор**URI идентификатора приложения был изменен с по умолчанию на внешний URL-адрес в разделе **прокси приложения**. Универсальный код ресурса (URI) будет использоваться во время установки сервера печати, в клиентской политике MDM и для публикации принтера.
+
+    ![Прокси-сервер приложения AAD 4](../media/hybrid-cloud-print/AAD-AppRegistration-Mopria-Overview.png)
+
+5. Назначение пользователей для приложений
+    - Перейдите в раздел **Azure Active Directory** > **корпоративные приложения** > **все приложения**. Найдите службу Mopria Discovery и щелкните ее.
+    - Щелкните " **Пользователи и группы** " и назначьте пользователей или щелкните " **свойства** " и измените " **требуется назначение пользователей** " ?
+    - Повторите процедуру для корпоративной облачной службы печати.
+
+6. Настройка URI перенаправления в собственном приложении
+    - Перейдите в **Azure Active Directory** > **Регистрация приложений**. Щелкните собственное приложение. Перейдите к разделу **Обзор** и скопируйте **идентификатор приложения (клиента)** .
+
+    ![URI перенаправления AAD 1](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Overview.png)
+
+    - Перейдите к разделу **Проверка подлинности**. Измените раскрывающийся список **тип** на `Public...`и введите два URI перенаправления, используя следующий формат, где `<NativeClientAppID>` из предыдущего шага:
+
+        `ms-appx-web://Microsoft.AAD.BrokerPlugin/<NativeClientAppID>`
+
+        `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
+
+    ![URI перенаправления AAD 2](../media/hybrid-cloud-print/AAD-AppRegistration-Native-Authentication.png)
+
+    - Чтобы завершить, нажмите кнопку **сохранить** .
+
+### <a name="step-4---setup-the-print-server"></a>Шаг 4. Настройка сервера печати
+
+1. Убедитесь, что на сервере печати установлены все доступные Центр обновления Windows. Примечание. сервер 2019 должен быть исправлен для сборки 17763,165 или более поздней версии.
+    - Установите следующие роли сервера:
+        - Роль сервера печати
+        - Службы IIS
+    - Дополнительные сведения об установке ролей сервера см. в [статье Установка ролей, служб ролей и компонентов с помощью мастера добавления ролей и](https://docs.microsoft.com/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features#BKMK_installarfw) компонентов.
+
+    ![Роли сервера печати](../media/hybrid-cloud-print/PrintServer-Roles.png)
+
+2. Установите модули PowerShell для гибридной облачной печати.
+    - Выполните следующие команды из командной строки PowerShell с повышенными привилегиями:
+
+        `find-module -Name "PublishCloudPrinter"`, чтобы убедиться, что компьютер может достичь коллекция PowerShell (PSGallery).
+
+        `install-module -Name "PublishCloudPrinter"`
+
+    > Примечание. Вы можете увидеть обмен сообщениями о том, что "PSGallery" является недоверенным репозиторием.  Введите "y", чтобы продолжить установку.
+
+    ![Публикация сервера печати в облачном принтере](../media/hybrid-cloud-print/PrintServer-PublishCloudPrinter.png)
+
+3. Установите гибридное облачное решение для печати.
+    - В той же командной строке PowerShell с повышенными привилегиями измените каталог на один из приведенных ниже (требуются кавычки):
+
+        `"C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0"`
+
+    - Запуск
+
+        `.\CloudPrintDeploy.ps1 -AzureTenant <Azure Active Directory domain name> -AzureTenantGuid <Azure Active Directory ID>`
+
+    - Чтобы найти Azure Active Directory доменное имя, обратитесь к снимку экрана ниже.
+
+    ![Сервер печати как получить доменное имя AAD](../media/hybrid-cloud-print/PrintServer-GetAADDomainName.png)
+
+    - Чтобы найти идентификатор Azure Active Directory, см. снимок экрана ниже.
+
+    ![Развертывание сервера печати в облаке](../media/hybrid-cloud-print/PrintServer-GetAADId.png)
+
+    - Выходные данные скрипта Клаудпринтдеплой выглядят следующим образом:
+
+    ![Развертывание сервера печати в облаке](../media/hybrid-cloud-print/PrintServer-CloudPrintDeploy.png)
+
+    - Проверьте файл журнала, чтобы узнать, есть ли какие-либо ошибки: `C:\Program Files\WindowsPowerShell\Modules\PublishCloudPrinter\1.0.0.0>notepad CloudPrintDeploy.log`
+
+4. Откройте Регитедит в командной строке с повышенными привилегиями. К компьютеру \ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс\куррентверсион\клаудпринт\ентерприсеклаудпринтсервице.
+    - Убедитесь, что для Азуреаудиенце задан универсальный код ресурса (URI) идентификатора приложения облачного приложения для печати в облаке.
+    - Убедитесь, что для Азуретенант задано имя домена Azure AD.
+
+    ![Разделы реестра сервера печати ECP](../media/hybrid-cloud-print/PrintServer-RegEdit-ECP.png)
+
+5. К компьютеру \ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс\куррентверсион\клаудпринт\моприадисковерисервице.
+    - Убедитесь, что Азуреаудиенце является URI идентификатора приложения для приложения службы обнаружения Mopria.
+    - Убедитесь, что Азуретенант является доменным именем Azure AD.
+    - Убедитесь, что URL-адрес — это URI идентификатора приложения для приложения службы Mopria Discovery.
+
+    ![Разделы реестра сервера печати Mopria](../media/hybrid-cloud-print/PrintServer-RegEdit-Mopria.png)
+
+6. Запустите **iisreset** в командной строке PowerShell с повышенными привилегиями. Это обеспечит вступление в силу всех изменений, внесенных в реестр на предыдущем шаге.
+
+7. Настройте конечные точки IIS для поддержки SSL.
+    - SSL-сертификат может представлять собой самозаверяющий сертификат или один, выданный доверенным центром сертификации (ЦС).
+    - При использовании самозаверяющего сертификата **Убедитесь, что сертификат импортирован на клиентские компьютеры**.
+    - При регистрации домена с сторонним поставщиком необходимо настроить конечные точки IIS с SSL-сертификатом. Подробные сведения см. в этом [руководству](https://www.sslsupportdesk.com/microsoft-server-2016-iis-10-10-5-ssl-installation/) .
+
+8. Установите пакет SQLite.
+   - Откройте командную строку PowerShell с повышенными привилегиями.
+   - Выполните следующую команду, чтобы скачать пакеты NuGet System. Data. SQLite.
+
+        `Register-PackageSource -Name nuget.org -ProviderName NuGet -Location https://www.nuget.org/api/v2/ -Trusted -Force`
+
+   - Выполните следующую команду, чтобы установить пакеты.
+
+        `Install-Package system.data.sqlite [-requiredversion x.x.x.x] -providername nuget`
 
    > Примечание. рекомендуется загрузить и установить последнюю версию, опустив параметр "-requiredversion".
 
-5. Скопируйте библиотеки DLL SQLite в папку Моприаклаудсервице webapp \<bin\> (**C:\\inetpub\\wwwroot\\моприаклаудсервице\\bin**): <br>
-   - Двоичные файлы SQLite должны иметь\\Program Files\\PackageManagement\\пакетов NuGet\\
+    ![Разделы реестра сервера печати Mopria](../media/hybrid-cloud-print/PrintServer-InstallSQLite.png)
 
-           \\System.Data.SQLite.**Core**.x.x.x.x\\lib\\net46\\System.Data.SQLite.dll
-           --\> \<bin\>\\System.Data.SQLite.dll  
-           \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x86\\SQLite.Interop.dll
-           --\> \<bin\>\\**x86**\\SQLite.Interop.dll  
-           \\System.Data.SQLite.**Core**.x.x.x.x\\build\\net46\\x64\\SQLite.Interop.dll
-           --\> \<bin\>\\**x64**\\SQLite.Interop.dll
-           \\System.Data.SQLite.**Linq**.x.x.x.x\\lib\\net46\\System.Data.SQLite.Linq.dll
-           --\> \<bin\>\\System.Data.SQLite.Linq.dll  
-           \\System.Data.SQLite.**EF6**.x.x.x.x\\lib\\net46\\System.Data.SQLite.EF6.dll
-           --\> \<bin\>\\System.Data.SQLite.EF6.dll
+9. Скопируйте библиотеки DLL SQLite в папку Моприаклаудсервице webapp bin (К:\инетпуб\ввврут\моприаклаудсервице\бин).
+    - Создайте файл PS1, содержащий сценарий PowerShell, приведенный ниже.
+    - Измените переменную $version на версию SQLite, установленную на предыдущем шаге.
+    - Запустите PS1 файл в командной строке PowerShell с повышенными привилегиями.
 
-   > Примечание. x. x. x. x — это версия SQLite, установленная выше.
+    ```powershell
+    $source = "\Program Files\PackageManagement\NuGet\Packages"
+    $core = "System.Data.SQLite.Core"
+    $linq = "System.Data.SQLite.Linq"
+    $ef6 = "System.Data.SQLite.EF6"
+    $version = "x.x.x.x"
+    $target = "C:\inetpub\wwwroot\MopriaCloudService\bin"
 
-6. Обновите файл `c:\inetpub\wwwroot\MopriaCloudService\web.config`, чтобы включить SQLite версии x. x. x. x в следующей \<среды выполнения\>/\<assemblyBinding\> разделов:
+    xcopy /y "$source\$core.$version\lib\net46\System.Data.SQLite.dll" "$target\"
+    xcopy /y "$source\$core.$version\build\net46\x86\SQLite.Interop.dll" "$target\x86\"
+    xcopy /y "$source\$core.$version\build\net46\x64\SQLite.Interop.dll" "$target\x64\"
+    xcopy /y "$source\$linq.$version\lib\net46\System.Data.SQLite.Linq.dll" "$target\"
+    xcopy /y "$source\$ef6.$version\lib\net46\System.Data.SQLite.EF6.dll" "$target\"
+    ```
 
-       <dependentAssembly>
-       assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
-       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-       </dependentAssembly>
-       <dependentAssembly>
-       <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-       </dependentAssembly>
-       <dependentAssembly>
-       <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-       </dependentAssembly>
-       <dependentAssembly>
-       <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
-       <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
-       </dependentAssembly>
+10. Обновите файл К:\инетпуб\ввврут\моприаклаудсервице\веб.конфиг, чтобы включить SQLite версии x. x. x. x в следующих `<runtime>/<assemblyBinding>` разделах. Это та же версия, которая использовалась на предыдущем шаге.
 
-7. Создайте базу данных SQLite:
-    -  Скачайте и установите двоичные файлы средств SQLite из <https://www.sqlite.org/>
-    -  Перейдите в раздел **c:\\inetpub\\wwwroot\\моприаклаудсервице\\каталог базы данных**
-    -  Выполните следующую команду, чтобы создать базу данных в этом каталоге: `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
-    -  В проводнике откройте свойства файла Моприадевицедб. DB, чтобы добавить пользователей и группы, которым разрешено публиковать в базе данных Mopria на вкладке Безопасность.
-        - Рекомендуется добавлять только необходимую группу пользователей admin.
-8. Регистрация 2 веб-приложения в Azure AD для поддержки проверки подлинности OAuth2
-   - Войдите как глобальный администратор на портал управления клиентами Azure AD.
-     1. Перейдите на вкладку "Регистрация приложений", чтобы добавить конечную точку печати
-        - Добавление приложения выберите "Регистрация нового приложения"
-        - Укажите соответствующее имя и выберите "веб-приложение или API".
-        - URL-адрес входа = "<http://MicrosoftEnterpriseCloudPrint/CloudPrint>"
-     2. Повторить для конечной точки обнаружения
-        - URL-адрес входа = "<http://MopriaDiscoveryService/CloudPrint>"
-     3. Повторение для собственного клиентского приложения
-        -   При предоставлении имени приложения убедитесь, что в качестве типа приложения выбрано "собственное клиентское приложение".
-        -   URI перенаправления = "https://\<Services-Machine-Endpoint\>/Редиректурл"
-     4. Переход в собственное клиентское приложение "Параметры"
-        -   Скопируйте значение Application ID, которое будет использоваться для последующих шагов установки.
-        -   Выберите "необходимые разрешения".
-            1.  Нажмите кнопку "Добавить".
-            2.  Щелкните "выбрать API".
-            3.  Найдите конечную точку печати и конечную точку обнаружения по имени, которое вы определили при создании конечной точки приложения.
-            4.  Добавление двух конечных точек
-            5.  Убедитесь, что параметр "делегированные разрешения" для каждой конечной точки приложения включен.
-            6.  Убедитесь, что вы нащелкнули кнопку "Готово" в нижней части страницы
-            7.  Щелкните "предоставить разрешения", когда будут добавлены обе конечные точки.  При появлении запроса на утверждение запроса выберите "Да".
-        -   Перейдите в раздел "перенаправление URI" и добавьте следующие URI перенаправления в список: `ms-appx-web://Microsoft.AAD.BrokerPlugin/\<NativeClientAppID\>`
-            `ms-appx-web://Microsoft.AAD.BrokerPlugin/S-1-15-2-3784861210-599250757-1266852909-3189164077-45880155-1246692841-283550366`
+    ```xml
+    ...
+    <dependentAssembly>
+    assemblyIdentity name="System.Data.SQLite" culture="neutral" publicKeyToken="db937bc2d44ff139" /
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.Core" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.EF6" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    <dependentAssembly>
+    <assemblyIdentity name="System.Data.SQLite.Linq" culture="neutral" publicKeyToken="db937bc2d44ff139" />
+    <bindingRedirect oldVersion="0.0.0.0-x.x.x.x" newVersion="x.x.x.x" />
+    </dependentAssembly>
+    ...
+    ```
 
-### <a name="step-3---install-azure-application-proxy-aap-with-kerberos-constrained-delegation-kcd"></a>Шаг 3. Установка прокси приложения Azure (схема AAP) с ограниченным делегированием Kerberos (KCD)
-1. Войдите на портал управления клиентами Azure AD (AAD).
-    - В списке меню AAD выберите "прокси приложения".
-    - Щелкните "включить прокси приложения" в верхней части экрана.
-    - Скачайте "соединитель прокси приложения" на компьютер Windows Server, присоединенный к домену, который будет использоваться в качестве прокси веб-приложения (WAP).
-2. На компьютере WAP Войдите как администратор и установите "соединитель прокси приложения".
-    - Во время установки назначьте соединителю прокси приложения учетные данные для своего принципа Azure, на котором вы хотите включить схема AAP.
-    - Убедитесь, что компьютер WAP присоединен к домену в локальной среде Active Directory
-3. На Active Directory компьютере выберите **Сервис — > пользователи и компьютеры** .
-    - Выберите компьютер, на котором работает соединитель прокси приложения
-    - Щелкните правой кнопкой мыши и выберите **свойства — вкладка делегирование >**
-    - Выберите **доверять компьютеру делегирование указанных служб.**
-    - Выберите **использовать любой протокол проверки подлинности.**
-    - В разделе **службы, в которых эта учетная запись может представлять делегированные учетные данные**
-        - Добавьте значение для удостоверения имени субъекта-службы компьютера, на котором выполняются службы (Моприадисковерисервице и Микрософтентерприсеклаудпринт Service).
-            - В поле SPN введите имя субъекта-службы самого компьютера, т. е. HOST/\<MachineName\>.\<\>домена "<br>
-                `HOST/appServer.Contoso.com`
-4. Вернитесь на портал управления клиентами AAD и добавьте прокси приложения.
-   - Перейдите на вкладку " **корпоративные приложения** ".
-   - Щелкните **создать приложение** .
-   - Выберите **Локальное приложение** и заполните поля.
-       - Имя: любое имя, которое вы хотите
-       - Внутренний URL-адрес. это внутренний URL-адрес облачной службы обнаружения Mopria, к которой может получить доступ компьютер WAP.
-       - Внешний URL-адрес: настройте соответствующим образом для вашей организации.
-       - Метод предварительной проверки подлинности: Azure Active Directory
+11. Создайте базу данных SQLite.
+    - Скачайте и установите двоичные файлы средств SQLite из `https://www.sqlite.org/`.
+    - Перейдите в каталог `c:\inetpub\wwwroot\MopriaCloudService\Database`.
+    - Выполните следующую команду, чтобы создать базу данных в этом каталоге:
 
-     >   Примечание. Если вы не нашли все приведенные выше параметры, добавьте прокси-сервер с доступными параметрами, а затем выберите только что созданный прокси **-сервер приложения** и добавьте все указанные выше сведения.
+        `sqlite3.exe MopriaDeviceDb.db ".read MopriaSQLiteDb.sql"`
 
-   - После создания вернитесь к **корпоративным приложениям** -> **все приложения**, выберите новое приложение, которое вы только что создали.
-   - Выберите **единый вход**и убедитесь, что для параметра Режим единого входа выбрано значение "встроенная проверка подлинности Windows".
-   - Задайте для свойства "имя субъекта-службы внутреннего приложения" имя субъекта-службы, указанное на шаге 3,3 выше.
-   - Убедитесь, что для параметра "делегированный идентификатор входа" задано значение "имя субъекта-пользователя".
+    - В проводнике откройте свойства файла Моприадевицедб. DB, чтобы добавить пользователей или группы, которым разрешено публиковать в базе данных Mopria на вкладке Безопасность. Пользователи или группы должны существовать в локальной Active Directory и синхронизироваться с Azure AD.
+    - Если решение развертывается в домене, не поддерживающем маршрутизацию (например, *mydomain*. local), домен Azure AD (например, *имя_домена*. onmicrosoft.com или приобретенный от стороннего поставщика) необходимо добавить в качестве суффикса имени участника-пользователя в локальную Active Directory. Это так же, как пользователь, который будет публиковать принтеры (например admin@*имя_домена*. onmicrosoft.com), можно добавить в параметр безопасности файла базы данных. См. статью [Подготовка домена без поддержки маршрутизации для синхронизации каталогов](https://docs.microsoft.com/office365/enterprise/prepare-a-non-routable-domain-for-directory-synchronization).
 
-5. Повторите 4, выше, для облачной службы печати в облаке и укажите внутренний URL-адрес облачной службы печати.
-6. Вернитесь на портал управления клиентами Azure AD и перейдите к **Регистрация приложений** и выберите собственное клиентское приложение — > "Параметры".
-    - Выберите **необходимые разрешения**
-        - Добавьте два новых прокси-приложения, которые вы только что создали.
-        - Предоставление делегированных разрешений для этих 2 приложений
-        - После добавления обоих прокси-приложений нажмите кнопку "предоставить разрешения".  При появлении запроса на утверждение запроса выберите "Да".
+    ![Разделы реестра сервера печати Mopria](../media/hybrid-cloud-print/PrintServer-SQLiteDB.png)
 
-7. Включение проверки подлинности Windows в службах IIS для облачной службы Mopria и облачных компьютеров службы печати в облаке
-    - Убедитесь, что установлена функция проверки подлинности Windows:
-        1. Открытие диспетчера сервера
-        2. Нажмите кнопку **Управление** .
-        3. Щелкните **Добавить роли и компоненты** .
-        4. Выбор **установки на основе ролей или компонентов**
-        5. Выберите сервер
-        6. В разделе веб-сервер (IIS) — > веб-сервер — > Безопасность выберите **Проверка подлинности Windows** .
-        7. Нажимайте кнопку "Далее" до завершения установки
-    - Включение проверки подлинности Windows в IIS:
-        1. Диспетчер открытия службы IIS (IIS)
-        2. Для каждой службы или сайта:
-            1.  Выберите службу или сайт
-            2.  Дважды щелкните **Проверка подлинности**
-            3.  Щелкните **Проверка подлинности Windows** и щелкните **включить** в разделе **действия** .
+### <a name="step-5-optional---configure-pre-authentication-with-azure-ad"></a>Шаг 5 \[необязательный\]. Настройка предварительной проверки подлинности с помощью Azure AD
 
-### <a name="step-4---configure-the-required-mdm-policies"></a>Шаг 4. Настройка необходимых политик MDM
-- Вход в поставщик MDM
-- Найдите группу политика печати корпоративного облака и настройте политики, следуя приведенным ниже рекомендациям.
-  - Клаудпринтоаусаусорити = идентификатор каталога AD https://login.microsoftonline.com/\<Azure\>
-  - Клаудпринтоаусклиентид = "идентификатор приложения" собственного веб-приложения, зарегистрированного на портале управления Azure AD.
-  - Клаудпринтердисковерендпоинт = External URL-адрес прокси приложения Azure Discovery Service, созданного на шаге 3,3 (должен быть точно таким же, но без завершающего/)
-  - Моприадисковериресаурцеид = External URL-адрес прокси приложения Azure Discovery Service, созданного на шаге 3,4 (должен быть точно такой же, включая замыкающий/)
-  - Клаудпринтресаурцеид = внешний URL-адрес прокси приложения облачной службы печати Azure, созданный на шаге 3,5 (должен быть точно такой же, включая замыкающий/)
-  - Дисковеримакспринтерлимит = \<положительное целое число\>
+1. Проверьте документ [ограниченное делегирование Kerberos для единого входа в приложения с помощью прокси приложения](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-configure-single-sign-on-with-kcd).
 
->   Примечание. Если вы используете службу Microsoft Intune, эти параметры можно найти в категории "Облачный принтер".
+2. Настройка локального Active Directory.
+    - На Active Directory компьютере откройте диспетчер сервера и последовательно выберите **сервис** > **Active Directory пользователи и компьютеры**.
+    - Перейдите к узлу **Компьютеры** и выберите сервер соединителя.
+    - Щелкните правой кнопкой мыши и выберите **свойства** -> вкладку **Делегирование** .
+    - Выберите **доверять компьютеру делегирование указанных служб**.
+    - Выберите **использовать любой протокол проверки подлинности**.
+    - В разделе **службы, в которых эта учетная запись может представлять делегированные учетные данные**.
+        - Добавьте имя участника-службы (SPN) компьютера сервера печати.
+        - Выберите узел для типа службы.
+    ![делегирование Active Directory](../media/hybrid-cloud-print/AD-Delegation.png)
+
+3. Убедитесь, что в службах IIS включена проверка подлинности Windows.
+    - На сервере печати откройте диспетчер сервера средства > > Диспетчер служб IIS.
+    - Перейдите на сайт.
+    - Дважды щелкните **Проверка подлинности**.
+    - Щелкните **Проверка подлинности Windows** и щелкните **включить** в разделе **действия**.
+    ](../media/hybrid-cloud-print/PrintServer-IIS-Authentication.png) проверки подлинности ![сервера печати IIS
+
+4. Настройка единого входа.
+    - На портал Azure перейдите в раздел **Azure Active Directory** > **корпоративные приложения** > **все приложения**.
+    - Выберите приложение Моприадисковерисервице.
+    - Перейдите на страницу **прокси приложения**. Измените метод предварительной проверки подлинности на **Azure Active Directory**.
+    - Выберите **Single sign-on** (Единый вход). В качестве метода единого входа выберите "встроенная проверка подлинности Windows".
+    - Задайте для **внутреннего субъекта-службы приложения** имя субъекта-службы компьютера сервера печати.
+    - Задайте для **идентификатора делегированного входа** значение "имя участника пользователя".
+    - Повторите процедуру для приложения Ентперисеклаудпринт.
+    ![](../media/hybrid-cloud-print/AAD-SingleSignOn-IWA.png) IWA единого входа AAD
+
+### <a name="step-6---configure-the-required-mdm-policies"></a>Шаг 6. Настройка необходимых политик MDM
+
+1. Войдите в поставщик MDM.
+2. Найдите группу политика печати корпоративного облака и настройте политики, следуя приведенным ниже рекомендациям.
+    - Клаудпринтоаусаусорити = `https://login.microsoftonline.com/<Azure AD Directory ID>`. Идентификатор каталога можно найти в разделе Azure Active Directory свойства >.
+    - Клаудпринтоаусклиентид = значение "Application \(Client\) ID" для собственного приложения. Его можно найти в разделе Azure Active Directory > Регистрация приложений > выберите Общие сведения о > в собственном приложении.
+    - Клаудпринтердисковерендпоинт = внешний URL-адрес приложения службы обнаружения Mopria. Его можно найти в разделе Azure Active Directory > Корпоративные приложения > Выберите прокси приложения службы обнаружения Mopria >. **Он должен быть точно таким же, но без замыкающего символа "/"** .
+    - Моприадисковериресаурцеид = URI идентификатора приложения для приложения службы обнаружения Mopria. Его можно найти в разделе Azure Active Directory > Регистрация приложений > выберите приложение службы обнаружения Mopria > Обзор. **Он должен точно совпадать с конечным "/"** .
+    - Клаудпринтресаурцеид = URI идентификатора приложения для приложения для печати в облаке предприятия. Его можно найти в разделе Azure Active Directory > Регистрация приложений > выберите Общие сведения о корпоративном облачном приложении для печати >. **Он должен точно совпадать с конечным "/"** .
+    - Дисковеримакспринтерлимит = \<положительное целое число\>.
+
+> Примечание. Если вы используете службу Microsoft Intune, эти параметры можно найти в категории "Облачный принтер".
 
 |Отображаемое имя Intune                     |Политика                         |
 |----------------------------------------|-------------------------------|
@@ -239,67 +360,102 @@ ms.locfileid: "71370438"
 |Максимальное число принтеров для запроса (только для мобильных устройств)  |дисковеримакспринтерлимит       |
 |URI ресурса службы обнаружения принтеров  |моприадисковериресаурцеид      |
 
->   Примечание. Если группа политик печати в облаке недоступна, но поставщик MDM поддерживает параметры OMA-URI, можно задать те же политики.  Дополнительные сведения см. в этой <a href="https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority">статье</a> .
+> Примечание. Если группа политик печати в облаке недоступна, но поставщик MDM поддерживает параметры OMA-URI, можно задать те же политики.  Дополнительные сведения см. на [этой](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-enterprisecloudprint#enterprisecloudprint-cloudprintoauthauthority) вкладке.
 
-- OMA-URI
-    - `CloudPrintOAuthAuthority = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthAuthority`
-        - Значение = `https://login.microsoftonline.com/`\<идентификатор каталога Azure AD\>
-    - `CloudPrintOAuthClientId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintOAuthClientId`
-        - Значение = \<идентификатор приложения собственного приложения Azure AD\>
-    - `CloudPrinterDiscoveryEndPoint = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrinterDiscoveryEndPoint`
-        - Значение = внешний URL-адрес прокси приложения службы обнаружения Mopria Azure, созданного на шаге 3,3 (должен быть точно таким же, но без замыкающего/)
-    - `MopriaDiscoveryResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/MopriaDiscoveryResourceId`
-        - Значение = внешний URL-адрес прокси приложения службы обнаружения Mopria Azure, созданного на шаге 3,4 (должен быть точно такой же, включая замыкающий/)
-    - `CloudPrintResourceId = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/CloudPrintResourceId`
-        - Значение = внешний URL-адрес прокси приложения облачной службы печати Azure, созданного на шаге 3,5 (должен быть точно такой же, включая замыкающий/)
-    - `DiscoveryMaxPrinterLimit = ./Vendor/MSFT/Policy/Config/EnterpriseCloudPrint/DiscoveryMaxPrinterLimit`
-        - Value = \<положительное целое число\>
+    - Значения для OMA-URI
+        - Клаудпринтоаусаусорити =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/клаудпринтоаусаусорити
+            - Значение = https://login.microsoftonline.com/<Azure AD Directory ID>
+        - Клаудпринтоаусклиентид =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/клаудпринтоаусклиентид
+            - Значение = < идентификатор приложения собственного приложения Azure AD >
+        - Клаудпринтердисковерендпоинт =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/клаудпринтердисковерендпоинт
+            - Значение = внешний URL-адрес приложения службы обнаружения Mopria (должен быть точно таким же, но без завершающего "/")
+        - Моприадисковериресаурцеид =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/моприадисковериресаурцеид
+            - Значение = URI идентификатора приложения для приложения службы обнаружения Mopria.
+        - Клаудпринтресаурцеид =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/клаудпринтресаурцеид
+            - Значение = URI идентификатора приложения для приложения для печати в облаке предприятия
+        - Дисковеримакспринтерлимит =./вендор/мсфт/Полици/конфиг/ентерприсеклаудпринт/дисковеримакспринтерлимит
+            - Value = положительное целое число
+    
+### <a name="step-7---publish-the-shared-printer"></a>Шаг 7. публикация общего принтера
 
-### <a name="step-5---publish-desired-shared-printers"></a>Шаг 5. Публикация требуемых общих принтеров
-1. Установка требуемого принтера на сервере печати
-2. Предоставление общего доступа к принтеру через пользовательский интерфейс свойств принтера
-3. Выберите требуемый набор пользователей для предоставления доступа
-4. Сохраните изменения и закройте окно свойств принтера.
-5. На компьютере с обновлением Windows 10 с правами создателя откройте командную строку Windows PowerShell с повышенными привилегиями.
-   1. Выполните следующие команды.
-      - `find-module -Name "PublishCloudPrinter"`, чтобы убедиться, что компьютер может достичь коллекция PowerShell (PSGallery).
-      - `install-module -Name "PublishCloudPrinter"`
+1. Установите нужный принтер на сервере печати.
+2. Предоставьте общий доступ к принтеру через пользовательский интерфейс свойств принтера.
+3. Выберите требуемый набор пользователей для предоставления доступа.
+4. Сохраните изменения и закройте окно Свойства принтера.
+5. Подготовьте обновление Windows 10 для создателя или более поздней версии. Присоедините компьютер к Azure AD и войдите в систему как пользователь, который синхронизируется с локальной Active Directory и ему было предоставлено соответствующее разрешение на доступ к файлу Моприадевицедб. DB.
+6. На компьютере с Windows 10 откройте командную строку Windows PowerShell с повышенными привилегиями.
+    - Выполните указанные ниже команды.
+        - `find-module -Name "PublishCloudPrinter"`, чтобы убедиться, что компьютер может достичь коллекция PowerShell (PSGallery).
+        - `install-module -Name "PublishCloudPrinter"`
 
-        >   Примечание. Вы можете увидеть обмен сообщениями о том, что "PSGallery" является недоверенным репозиторием.  Введите "y", чтобы продолжить установку.
+            > Примечание. Вы можете увидеть обмен сообщениями о том, что "PSGallery" является недоверенным репозиторием.  Введите "y", чтобы продолжить установку.
 
-      - Publish-Клаудпринтер
-        - Printer = имя общего принтера, которое было определено
-        - Manufacturer = изготовитель принтера
-        - Model = модель принтера
-        - Орглокатион = строка JSON, указывающая расположение принтера, например: `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}`
-        - SDDL = строка SDDL, представляющая разрешения для принтера. Это можно получить, изменив соответствующим образом вкладку Безопасность свойства принтера, а затем выполнив в командной строке следующую команду: `(Get-Printer PrinterName -full).PermissionSDDL`
-            Например, "Г:ДУД: (A; ОИЦИ; FA;;; WD) "
+        - `Publish-CloudPrinter`
+        - Printer = имя общего принтера. Это имя должно точно совпадать с именем общего ресурса, отображаемым на вкладке " **общий доступ** " свойств принтера, которое открывается на сервере печати.
 
-          > Примечание. необходимо добавить **`O:BA`** в качестве префикса в результат из команды командной строки выше, прежде чем задавать значение в качестве параметра SDDL.  Пример: SDDL = `O:BAG:DUD:(A;OICI;FA;;;WD)`
+        ![Свойства принтера сервера печати](../media/hybrid-cloud-print/PrintServer-PrinterProperties.png)
 
-        - Дисковерендпоинт = внешний URL-адрес прокси приложения службы обнаружения Mopria Azure, созданного на шаге 3,4
-        - Принтсерверендпоинт = внешний URL-адрес прокси приложения облачной службы печати Azure, созданный на шаге 3,5
-        - Азуреклиентид = идентификатор приложения зарегистрированного собственного значения веб-приложения выше
-        - Азуретенантгуид = идентификатор каталога вашего клиента Azure AD;
-        - Дисковериресаурцеид = [необязательно] идентификатор приложения для облачной службы обнаружения Mopria в прокси-службе
+        - Manufacturer = изготовитель принтера.
+        - Model = модель принтера.
+        - Орглокатион = строка JSON, указывающая расположение принтера, например
 
-        > Примечание. также можно ввести все необходимые значения параметров в командной строке.<br>
-        **Publish-клаудпринтер** Синтаксис команд PowerShell: <br>
-        Publish-Клаудпринтер-Printer \<строка\>-Manufacturer \<строка\>-Model \<строка\>-Орглокатион \<строка\>-SDDL \<String\>-Азуреклиентид \<строка\>-Азуретенантгуид \<строка\> [-DiscoveryResourceId \<String\>]\<\>\<\> <br>
-        Пример команды: `publish-cloudprinter -Printer EcpPrintTest -Manufacturer Microsoft -Model FilePrinterEcp -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor\_number", "vn":1, "depth":4}, {"category":"room\_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint https://<services-machine-endpoint>/mcs -PrintServerEndpoint https://<services-machine-endpoint>/ecp -AzureClientId <Native Web App ID> -AzureTenantGuid <Azure AD Directory ID> -DiscoveryResourceId <Proxied Mopria Discovery Cloud Service App ID>`
+            `{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"Microsoft", "depth":1}, {"category":"site", "vs":"Redmond, WA", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_number", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}`
 
+        - SDDL = строка SDDL, представляющая разрешения для принтера.
+            - Войдите на сервер печати с правами администратора, а затем выполните следующую команду PowerShell для принтера, который нужно опубликовать: `(Get-Printer PrinterName -full).PermissionSDDL`.
+            - Добавьте в результат из приведенной выше команды префикс **о:ба** AS. Например: Если строка, возвращенная предыдущей командой, имеет значение "Г:ДУД: (A; ОИЦИ; FA;;; WD) ", то SDDL =" О:баг: ДУД: (A; ОИЦИ; FA;;; WD) ".
+        - Дисковерендпоинт = Войдите в портал Azure и получите строку из корпоративных приложений > приложение службы обнаружения Mopria > прокси приложения > внешний URL-адрес. Опустить завершающий символ "/".
+        - Принтсерверендпоинт = Войдите в портал Azure, а затем получите строку из корпоративных приложений > Корпоративное приложение для печати в облаке > > внешний URL-адрес. Опустить завершающий символ "/".
+        - Азуреклиентид = идентификатор приложения зарегистрированного собственного приложения.
+        - Азуретенантгуид = идентификатор каталога вашего клиента Azure AD.
+        - Дисковериресаурцеид = URI идентификатора приложения для приложения службы обнаружения Mopria.
 
-## <a name="verifying-the-deployment"></a>Проверка развертывания
+    - Также можно ввести все необходимые значения параметров в командной строке. Используется следующий синтаксис:
+
+        `Publish-CloudPrinter -Printer <string> -Manufacturer <string> -Model <string> -OrgLocation <string> -Sddl <string> -DiscoveryEndpoint <string> -PrintServerEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
+
+        Пример команды:
+
+        `Publish-CloudPrinter -Printer HcpTestPrinter -Manufacturer Manufacturer1 -Model Model1 -OrgLocation '{"attrs": [{"category":"country", "vs":"USA", "depth":0}, {"category":"organization", "vs":"MyCompany", "depth":1}, {"category":"site", "vs":"MyCity, State", "depth":2}, {"category":"building", "vs":"Building 1", "depth":3}, {"category":"floor_name", "vs":1, "depth":4}, {"category":"room_name", "vs":"1111", "depth":5}]}' -Sddl "O:BAG:DUD:(A;OICI;FA;;;WD)" -DiscoveryEndpoint "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs" -PrintServerEndpoint "https://enterprisecloudprint-contoso.msappproxy.net/ecp" -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
+
+    - Используйте следующую команду, чтобы убедиться, что принтер опубликован.
+
+        `Publish-CloudPrinter -Query -DiscoveryEndpoint <string> -AzureClientId <string> -AzureTenantGuid <string> -DiscoveryResourceId <string>`
+
+        Пример команды:
+
+        `Publish-CloudPrinter -Query -DiscoveryEndpoint "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs" -AzureClientId "dbe4feeb-cb69-40fc-91aa-73272f6d8fe1" -AzureTenantGuid "8de6a14a-5a23-4c1c-9ae4-1481ce356034" -DiscoveryResourceId "https://mopriadiscoveryservice-contoso.msappproxy.net/mcs/"`
+
+## <a name="verify-the-deployment"></a>Проверка развертывания
+
 На устройстве, присоединенном к Azure AD, для которого настроены политики MDM:
-- Откройте веб-браузер и перейдите к https://&lt;Services-Machine-Endpoint&gt;/МКС/сервицес (внешний URL-адрес конечной точки обнаружения).
+- Откройте веб-браузер и перейдите по адресу https://mopriadiscoveryservice-*имя клиента*. msappproxy.NET/MCS/Services.
 - Вы должны увидеть текст JSON, описывающий набор функциональных возможностей этой конечной точки.
-- Перейдите в раздел "Параметры ОС —\> устройства-\> принтеры & Сканеры".
-    - Вы должны увидеть ссылку "Поиск по облачным принтерам"
-    - Щелкните ссылку
+- Последовательно выберите **параметры** > **устройства** > **принтеры & Сканеры**.
+    - Щелкните **Добавить принтер или сканер**.
+    - Вы увидите ссылку "Поиск по облачным принтерам" (или "Поиск принтеров в моей организации" на более новой машине Windows 10).
+    - Щелкните ссылку.
     - Щелкните ссылку "выберите расположение для поиска".
-        - Вы должны увидеть иерархию расположения устройств
+        - Вы должны увидеть иерархию расположения устройства.
     - Выберите расположение и нажмите кнопку " **ОК** ", а затем кнопку " **Поиск** ", чтобы найти принтеры.
-    - Выберите принтер и нажмите кнопку " **Добавить устройство** "
+    - Выберите принтер и нажмите кнопку **Добавить устройство** .
     - После успешной установки принтера распечатайте его на принтере из избранного приложения.
 
->   Примечание. при использовании принтера "Екппринттест" выходной файл можно найти на компьютере сервера печати в папке "C:\\Екптестаутпут\\Екптестпринт. XPS".
+> Примечание. при использовании принтера "Екппринттест" выходной файл можно найти на компьютере сервера печати в папке "C:\\Екптестаутпут\\Екптестпринт. XPS".
+
+## <a name="troubleshooting"></a>"Устранение неполадок"
+
+Существуют различные журналы, которые могут помочь в устранении сбоев.
+- В клиенте Windows 10.
+    - Используйте центр отзывов, чтобы добавить новый отзыв.
+        - Щелкните **Пуск** и введите "центр обратной связи".
+        - В разделе Категория выберите **проблемы**, **устройства и драйверы**, **Печать**.
+        - В разделе, посвященном добавлению дополнительных сведений, нажмите кнопку **начать запись** .
+        - Повторите задание печати, которое завершилось сбоем.
+        - Вернитесь в центр отзывов и нажмите кнопку " **закончить запись** ".
+        - Щелкните **Отправить** , чтобы отправить отзыв.
+    - Чтобы просмотреть журнал операций Azure AD, используйте Просмотр событий. Щелкните **Start** и введите "Просмотр событий". Перейдите к журналам приложений и служб > Microsoft > Windows > работы с AAD >.
+- На сервере соединителя.
+    - Чтобы просмотреть журнал прокси приложения, используйте Просмотр событий. Щелкните **Start** и введите "Просмотр событий". Перейдите к журналам приложений и служб > Microsoft > AadApplicationProxy > Connector > администратор.
+- На сервере печати.
+    - Журналы для приложения службы обнаружения Mopria и приложения для печати в облаке предприятия можно найти по адресу C:\inetpub\logs\LogFiles\W3SVC1.
