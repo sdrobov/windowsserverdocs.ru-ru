@@ -3,20 +3,18 @@ title: Изучение и настройка Azure Monitor
 description: Подробные сведения о настройке Azure Monitor и настройке оповещений электронной почты и SMS для кластера локальных дисковых пространств в Windows Server 2016 и 2019.
 keywords: Локальные дисковые пространства, Azure Monitor, уведомления, электронная почта, SMS
 ms.assetid: ''
-ms.prod: ''
+ms.prod: windows-server-threshold
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
-ms.date: 3/26/2019
-ms.localizationpriority: ''
-ms.openlocfilehash: 4a11ad670bdd26cdc771bb5ae357db4928995bb8
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.date: 01/10/2020
+ms.openlocfilehash: 933a22dad76f80b8ff76f604089bfd7c9bf3e207
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352643"
----
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919971"
 ---
 # <a name="use-azure-monitor-to-send-emails-for-health-service-faults"></a>Использование Azure Monitor для отправки сообщений электронной почты о сбоях служба работоспособности
 
@@ -26,6 +24,14 @@ ms.locfileid: "75352643"
 
 Это особенно полезно для локального кластера с поддержкой Hyper-in. Благодаря встроенной Azure Monitor Вы сможете настроить электронную почту, текст (SMS) и другие оповещения, чтобы проверить связь с вами при возникновении проблем с кластером (или если требуется отметить некоторые другие действия в зависимости от собираемых данных). Ниже будет кратко объяснено, как работает Azure Monitor, как установить Azure Monitor и как настроить его для отправки уведомлений.
 
+Если вы используете System Center, ознакомьтесь с [пакетом управления Локальные дисковые пространства](https://www.microsoft.com/download/details.aspx?id=100782) , который наблюдает за кластерами Локальные дисковые пространства windows Server 2019 и windows Server 2016.
+
+Этот пакет управления включает в себя:
+
+* Мониторинг работоспособности физического диска и производительности
+* Мониторинг работоспособности и производительности узла хранилища
+* Мониторинг работоспособности и производительности пула носителей
+* Тип устойчивости тома и состояние дедупликации
 
 ## <a name="understanding-azure-monitor"></a>Основные сведения о Azure Monitor
 
@@ -234,11 +240,11 @@ Event | where (EventLevelName == "Error")
 10. Нажмите кнопку **ОК**, чтобы завершить создание группы действий. 
 11. Щелкните **Создать правило генерации оповещений**, чтобы завершить создание этого правила. Оно начнет выполняться немедленно.<br><br> ![Завершение создания правила генерации оповещений](media/configure-azure-monitor/alert-rule-01.png)<br> 
 
-## <a name="see-alerts"></a>Просмотр оповещений
+### <a name="example-alert"></a>Пример оповещения
 
 Для справки вот как выглядит пример оповещения в Azure.
 
-![GIF оповещения в Azure "](media/configure-azure-monitor/alert.gif)
+![GIF оповещения в Azure](media/configure-azure-monitor/alert.gif)
 
 Ниже приведен пример сообщения электронной почты, которое будет отправлено Azure Monitor:
 
