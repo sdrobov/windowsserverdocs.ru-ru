@@ -10,20 +10,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b7d8158c-aee1-4c60-8a46-40ce5595b8e8
 author: HeidiLohr
-manager: dougkim
+manager: daveba
 ms.author: helohr
-ms.date: 05/07/2018
+ms.date: 01/07/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: b96ec92fea067d6482baeb54f19a1ec07e2229a8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b0b44eac6d76fb6d49c00dae0c0abe9450861026
+ms.sourcegitcommit: 28b71d779386cd31e1511217aa1a6f3ab186bf9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404158"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75682435"
 ---
 # <a name="remote-desktop-clients"></a>Клиенты удаленного рабочего стола
 
->Относится к: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Применяется к: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Вы можете использовать клиент удаленного рабочего стола (Майкрософт) для подключения к удаленному компьютеру и рабочим ресурсам практически из любой точки и с любого устройства. Вы можете подключаться к своему рабочему ПК и получать доступ ко всем своим приложениям, файлам и сетевым ресурсам, как если бы вы сидели за своим столом. Можно оставить открытыми приложения на работе, а затем увидеть те же приложения дома с помощью клиента удаленных рабочих столов.
 
@@ -31,12 +31,13 @@ ms.locfileid: "71404158"
 
 Доступны следующие клиентские приложения.
 
-| Устройство   | Получение приложения                                                                                                     | Инструкции по установке                                                                |
-|----------|-----------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
-| Windows  | [Клиент Windows 10 в Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                      | [Начало работы с удаленного рабочего стола для Windows](windows.md)                |
-| Android  | [Клиент Android в Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)        | [Начало работы с удаленного рабочего стола на устройстве Android](remote-desktop-android.md) |
-| iOS      | [Клиент iOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [Начало работы с удаленного рабочего стола на устройстве iOS](remote-desktop-ios.md)         |
-| macOS    | [Клиент macOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Начало работы с удаленного рабочего стола на компьютере Mac](remote-desktop-mac.md)         |
+| Устройство          | Получить приложение                                                                                                  | Инструкции по установке                                                                |
+|-----------------|-----------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| Настольный компьютер с Windows | [Клиент Удаленного рабочего стола](windowsdesktop.md#install-the-client)                                               | [Приступая к работе с клиентом Удаленного рабочего стола](windowsdesktop.md) |
+| Магазин Windows Store   | [Клиент Windows 10 в Microsoft Store](https://go.microsoft.com/fwlink/?LinkID=616709)                   | [Приступая к работе с клиентом Microsoft Store](windows.md)          |
+| Android         | [Клиент Android в Google Play](https://play.google.com/store/apps/details?id=com.microsoft.rdc.android)     | [Приступая к работе с клиентом Android](remote-desktop-android.md) |
+| iOS             | [Клиент iOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id714464092?mt=8)     | [Приступая к работе с клиентом iOS](remote-desktop-ios.md)         |
+| macOS           | [Клиент macOS в магазине iTunes](https://itunes.apple.com/app/microsoft-remote-desktop/id1295203466?mt=12) | [Приступая к работе с клиентом macOS](remote-desktop-mac.md)       |
 
 ## <a name="configuring-the-remote-pc"></a>Настройка удаленного компьютера
 

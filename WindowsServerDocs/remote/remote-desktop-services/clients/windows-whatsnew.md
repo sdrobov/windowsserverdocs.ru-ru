@@ -11,18 +11,27 @@ ms.topic: article
 author: heidilohr
 manager: daveba
 ms.author: helohr
-ms.date: 09/11/2019
+ms.date: 01/02/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e6d57f2feb5b21385cf247856be05f752ddee0cd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8b97b7a22d59727bedd6bdbd67a19087612ebfa0
+ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404082"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75653049"
 ---
 # <a name="whats-new-in-the-windows-store-client"></a>Что нового в клиенте Microsoft Store?
 
 Мы регулярно обновляем [клиент Microsoft Store](windows.md), добавляя новые компоненты и устраняя проблемы. Здесь вы найдете последние обновления.
+
+## <a name="updates-for-version-1011107"></a>Обновления для версии 10.1.1107
+
+*Дата публикации: 04.09.2019*
+
+- Теперь вы можете копировать файлы между локальными и удаленными компьютерами.
+- Теперь вы можете использовать свой адрес электронной почты для доступа к удаленным ресурсам (если это разрешено администратором).
+- Теперь вы можете изменять назначения учетных записей пользователей для веб-каналов удаленных ресурсов.
+- Теперь приложение отображает в проводнике правильный значок для RDP-файлов, назначенных этому приложению, вместо пустого значка по умолчанию.
 
 ## <a name="updates-for-version-1011098"></a>Обновления для версии 10.1.1098
 

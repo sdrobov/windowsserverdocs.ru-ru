@@ -1,12 +1,10 @@
 # [Windows Admin Center](overview.md)
 
 ## Общие сведения
-### [Привет, Windows Admin Center!](understand/windows-admin-center.md)
 ### [Что такое Windows Admin Center?](understand/what-is.md)
 ### [Вопросы и ответы](understand/faq.md)
 ### [Практические примеры](understand/case-studies.md)
 ### [Сопутствующие продукты для управления](understand/related-management.md)
-### [Просмотр видео](understand/videos.md)
 
 ## Планирование
 ### [Какой тип установки подойдет именно вам?](plan/installation-options.md)
@@ -34,7 +32,6 @@
 ### [Управление виртуальными машинами Hyper-V](use/manage-virtual-machines.md)
 ### [Ведение журнала](use/logging.md)
 
-
 ## Подключение к Azure
 ### [Гибридные службы Azure](azure/index.md)
 #### [Azure Backup](azure/azure-backup.md)
@@ -47,6 +44,7 @@
 ### [Управление виртуальными машинами Azure с помощью Windows Admin Center](azure/manage-azure-vms.md)
 
 ## Поддержка
+### [История выпусков](support/release-history.md)
 ### [Политика поддержки](support/index.md)
 ### [Общие инструкции по устранению неполадок](support/troubleshooting.md)
 ### [Известные проблемы](support/known-issues.md)
