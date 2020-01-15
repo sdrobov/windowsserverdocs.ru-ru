@@ -10,14 +10,14 @@ manager: dougkim
 ms.author: pashort
 author: shortpatti
 ms.date: 09/04/2018
-ms.openlocfilehash: 850aa376e8cd0060992573561a0c32af563b88ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3bbb70657cb009ce760ccfe273b24c6df17d3ca7
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405158"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949903"
 ---
-## <a name="resolve-vrss-issues"></a>Устранение проблем vRSS
+# <a name="resolve-vrss-issues"></a>Устранение проблем vRSS
 
 Если вы выполнили все подготовительные действия и вы по-прежнему не видите трафик балансировки нагрузки vRSS для виртуальной машины LPs, возможны различные проблемы.
 
@@ -34,7 +34,7 @@ ms.locfileid: "71405158"
 
    **Просмотр текущих параметров:** 
 
-   Выполните следующий командлет PowerShell\(на виртуальной машине для vrss на виртуальной машине\) или на узле \(для vNIC узла vrss\).
+   Выполните следующий командлет PowerShell на виртуальной машине\(для vRSS на виртуальной машине\) или на узле \(для узла\)vRSS vNIC.
 
    ```PowerShell
    Get-NetAdapterRss
@@ -48,7 +48,7 @@ ms.locfileid: "71405158"
    Enable-NetAdapterRss *
    ```
    
-   Другим системным способом настройки RSS является использование Netsh. Используйте 
+   Другим системным способом настройки RSS является использование Netsh. Используйте режим 
    
     ```cmd
    netsh int tcp show global

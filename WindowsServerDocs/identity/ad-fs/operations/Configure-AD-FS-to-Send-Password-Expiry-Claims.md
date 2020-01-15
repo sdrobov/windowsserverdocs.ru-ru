@@ -1,6 +1,6 @@
 ---
 ms.assetid: 03c82f43-ae2d-4038-b286-ae3858aed35a
-title: Настройка AD FS для отправки утверждений об истечении срока действия пароля
+title: Настройка AD FS для отправки утверждений об истечении срока действия пароля
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,14 +9,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 29760dcc0dffe9fe29289f20f1abca4cfd8325b1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 34a0544946da429f4e5b54a27b73c8bf139f5a8d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407693"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948559"
 ---
-# <a name="configure-ad-fs-to-send-password-expiry-claims"></a>Настройка AD FS для отправки утверждений об истечении срока действия пароля
+# <a name="configure-ad-fs-to-send-password-expiry-claims"></a>Настройка AD FS для отправки утверждений об истечении срока действия пароля
 
 
 Можно настроить службы федерации Active Directory (AD FS) (AD FS) для отправки утверждений об истечении срока действия пароля в отношения доверия проверяющей стороны (приложения), защищенные ADFS. Использование этих утверждений зависит от приложения. Например, в качестве проверяющей стороны в Office 365 были реализованы обновления для Exchange и Outlook, позволяющие уведомлять федеративных пользователей о сроках их действия в скором времени.
@@ -25,8 +25,8 @@ ms.locfileid: "71407693"
 
 ```
 @RuleName = "Issue Password Expiry Claims"
-c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
- => issue(store = "_PasswordExpiryStore", types = ("http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "http://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "http://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
+c1:[Type == "https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
+ => issue(store = "_PasswordExpiryStore", types = ("https://schemas.microsoft.com/ws/2012/01/passwordexpirationtime", "https://schemas.microsoft.com/ws/2012/01/passwordexpirationdays", "https://schemas.microsoft.com/ws/2012/01/passwordchangeurl"), query = "{0};", param = c1.Value);
 ```
 
 > [!NOTE]

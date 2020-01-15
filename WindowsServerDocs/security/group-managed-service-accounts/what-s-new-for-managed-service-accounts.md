@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: de4d64e3dbe4bc7c7cba32f066a696636632224d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 82d0ce962dfab0f7c9e5180e4b471894f507fb26
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403727"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950347"
 ---
 # <a name="what39s-new-for-managed-service-accounts"></a>Новые&#39;возможности управляемых учетных записей служб
 
@@ -31,7 +31,7 @@ ms.locfileid: "71403727"
 ## <a name="versions"></a>Новые возможности управляемых учетных записей служб в Windows Server 2012 и Windows 8
 Ниже описано, какие изменения были внесены в функции MSA в Windows Server 2012 и Windows 8.
 
-### <a name="group-managed-service-accounts"></a>Групповые управляемые учетные записи служб
+### <a name="group-managed-service-accounts"></a>Group Managed Service Accounts
 При настройке учетной записи домена для определенного сервера в домене клиентский компьютер имеет возможность пройти аутентификацию и подключиться к данной службе. Ранее только два типа учетной записи обеспечивали удостоверение, не требующее управления паролями. Однако эти типы учетных записей имеют ряд ограничений:
 
 -   Учетная запись компьютера ограничена одним сервером в домене, при этом пароли управляются данным компьютером.
@@ -51,12 +51,12 @@ ms.locfileid: "71403727"
 ### <a name="interoperability"></a>Удаленная или устаревшая функциональность
 Для Windows Server 2012 командлеты Windows PowerShell по умолчанию управляют учетными записями групповых управляемых служб вместо управляемых серверных учетных записей служб.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
--   [Общие сведения о групповой управляемых учетных записях служб](group-managed-service-accounts-overview.md)
+-   [Общие сведения о групповых управляемых учетных записях служб](group-managed-service-accounts-overview.md)
 
 -   [Обзор доменных служб Active Directory](active-directory-domain-services-overview.md)
 
--   [Управляемые учетные записи служб: основные сведения, реализация, рекомендации и устранение неполадок](http://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
+-   [Управляемые учетные записи служб: основные сведения, реализация, рекомендации и устранение неполадок](https://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 
 

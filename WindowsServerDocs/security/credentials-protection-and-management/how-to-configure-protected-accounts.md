@@ -12,12 +12,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: e728265f42289aeceb22c78053f0d84f9bdb9941
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4dbcc3165a6226c60a3c6a5acf500c643c8ef4d9
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387387"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949913"
 ---
 # <a name="how-to-configure-protected-accounts"></a>Настройка защищенных учетных записей
 
@@ -27,13 +27,13 @@ ms.locfileid: "71387387"
   
 -   [Защищенные пользователи](#protected-users)  
   
--   [Политики проверки подлинности](#authentication-policies)  
+-   [Политики аутентификации](#authentication-policies)  
   
 -   [Приемники команд политики проверки подлинности](#authentication-policy-silos)  
   
 В Windows 8.1 и Windows Server 2012 R2 встроены дополнительные средства защиты для предотвращения кражи учетных данных, рассмотренные в следующих статьях:  
   
--   [Режим ограниченного администрирования для удаленный рабочий стол](http://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)  
+-   [Режим ограниченного администрирования для удаленный рабочий стол](https://blogs.technet.com/b/kfalde/archive/20../restricted-admin-mode-for-rdp-in-windows-8-1-2012-r2.aspx)  
   
 -   [Защита LSA](https://technet.microsoft.com/library/dn408187)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "71387387"
   
 Члены группы "защищенные пользователи", которые вошли в Windows 8.1 устройства и узлы Windows Server 2012 R2, *больше не* могут использовать:  
   
--   Делегирование учетных данных по умолчанию (CredSSP) — учетные данные в виде обычного текста не кэшируются, даже если включена политика **делегирования учетных данных по умолчанию**.  
+-   Делегирование учетных данных по умолчанию (CredSSP) — учетные данные в виде обычного текста не кэшируются, даже если включена политика **делегирования учетных данных по умолчанию** .  
   
 -   Дайджест Windows — учетные данные в виде обычного текста не кэшируются, даже если они активны.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "71387387"
 -   Отклонение при использовании RC4 в предварительной проверке подлинности Kerberos: нельзя настроить.  
   
     > [!NOTE]  
-    > Хотя можно [изменить конфигурацию поддерживаемых способов шифрования](http://blogs.msdn.com/b/openspecification/archive/20../windows-configurations-for-kerberos-supported-encryption-type.aspx), не рекомендуется менять эти настройки для учетных записей компьютеров без предварительного тестирования в целевой среде.  
+    > Хотя можно [изменить конфигурацию поддерживаемых способов шифрования](https://blogs.msdn.com/b/openspecification/archive/20../windows-configurations-for-kerberos-supported-encryption-type.aspx), не рекомендуется менять эти настройки для учетных записей компьютеров без предварительного тестирования в целевой среде.  
   
 -   Ограничение времени жизни пользовательских билетов (TGT) до 4-х часов: используйте политики проверки подлинности.  
   
@@ -212,7 +212,7 @@ ms.locfileid: "71387387"
     > [!NOTE]  
     > Выбранный узел **проверки подлинности** является видимым для доменов, которые находятся в Windows Server 2012 R2 ДФЛ. Если узел не отображается, повторите попытку, используя учетную запись администратора домена из домена, который находится на сервере Windows Server 2012 R2 ДФЛ.  
   
-2.  Щелкните **Политики проверки подлинности** и нажмите **Новая**, чтобы создать новую политику.  
+2.  Щелкните **Политики проверки подлинности**и нажмите **Новая** , чтобы создать новую политику.  
   
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicy.gif)  
   
@@ -298,13 +298,13 @@ ms.locfileid: "71387387"
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CompClaimComplete.gif)  
   
 ##### <a name="troubleshoot-missing-computer-claims"></a>Диагностика неполадок, связанных с пропавшими утверждениями компьютера  
-Если утверждения были подготовлены, но стали недоступными, они могли быть настроены только для класса **Компьютер**.  
+Если утверждения были подготовлены, но стали недоступными, они могли быть настроены только для класса **Компьютер** .  
   
 Предположим, что необходимо ограничить проверку подлинности на основе подразделения компьютера (OU), который уже настроен, но только для классов **компьютеров** .  
   
 ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictComputers.gif)  
   
-Чтобы утверждение стало доступным и пользовательские возможности подключения к устройству ограничились, поставьте флажок рядом с пунктом **Пользователь**.  
+Чтобы утверждение стало доступным и пользовательские возможности подключения к устройству ограничились, поставьте флажок рядом с пунктом **Пользователь** .  
   
 ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_RestrictUsersComputers.gif)  
   
@@ -314,7 +314,7 @@ ms.locfileid: "71387387"
   
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicy.gif)  
   
-2.  Отметьте флажком пункт **Применить политику проверки подлинности для учетной записи**.  
+2.  Отметьте флажком пункт **Применить политику проверки подлинности для учетной записи** .  
   
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_UserPolicyAssign.gif)  
   
@@ -340,13 +340,13 @@ ms.locfileid: "71387387"
 Новые **сбои политики проверки подлинности — Журнал администрирования контроллера домена** в разделе **журналы приложений и служб** > **Microsoft** > **Windows** > **Проверка подлинности** , облегчающая обнаружение сбоев из-за политик проверки подлинности. По умолчанию он неактивен. Чтобы активировать его, щелкните правой кнопкой мыши по названию журнала и выберите пункт **Включить журнал**. Новые события по содержанию очень похожи на события аудита билетов предоставления билетов Kerberos и билетов служб. Подробную информацию об этих событиях см. в разделе [Политики проверки подлинности и приемники команд политик проверки подлинности](https://technet.microsoft.com/library/dn486813.aspx).  
   
 ### <a name="manage-authentication-policies-by-using-windows-powershell"></a>Управление политиками проверки подлинности с помощью Windows PowerShell  
-Эта команда создает политику проверки подлинности **TestAuthenticationPolicy**. Параметр **UserAllowedToAuthenticateFrom** определяет устройства, с которых пользователь может пройти проверку подлинности с помощью строки SDDL в файле под названием someFile.txt.  
+Эта команда создает политику проверки подлинности **TestAuthenticationPolicy**. Параметр **UserAllowedToAuthenticateFrom** определяет устройства, с которых пользователь может пройти проверку подлинности с помощью строки SDDL в файле someFile.txt.  
   
 ```  
 PS C:\> New-ADAuthenticationPolicy testAuthenticationPolicy -UserAllowedToAuthenticateFrom (Get-Acl .\someFile.txt).sddl  
 ```  
   
-Эта команда позволяет найти все политики проверки подлинности, отвечающие фильтру, который задается параметром **Filter**.  
+Эта команда позволяет найти все политики проверки подлинности, отвечающие фильтру, который задается параметром **Filter** .  
   
 ```  
 PS C:\> Get-ADAuthenticationPolicy -Filter "Name -like 'testADAuthenticationPolicy*'" -Server Server02.Contoso.com  
@@ -365,7 +365,7 @@ PS C:\> Set-ADAuthenticationPolicy -Identity ADAuthenticationPolicy1 -Descriptio
 PS C:\> Remove-ADAuthenticationPolicy -Identity ADAuthenticationPolicy1  
 ```  
   
-В этой команде используется командлет **Get-ADAuthenticationPolicy** и параметр **Filter** , чтобы найти все неактивные политики проверки подлинности. Набор результатов передается в командлет **Remove-ADAuthenticationPolicy**.  
+В этой команде используется командлет **Get-ADAuthenticationPolicy** и параметр **Filter** , чтобы найти все неактивные политики проверки подлинности. Результирующий набор передается по конвейеру командлету **Remove-ADAuthenticationPolicy** .  
   
 ```  
 PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthenticationPolicy  
@@ -425,7 +425,7 @@ PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthe
   
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_CreateNewAuthNPolicySilo.gif)  
   
-2.  В поле **Отображаемое имя** укажите имя для приемника команд. В разделе **Разрешенные учетные записи** щелкните **Добавить**, укажите названия учетных записей и нажмите **OK**. Вы можете использовать учетные записи пользователей, компьютеров или служб. После этого выберите, будет ли для всех субъектов использоваться одна политика или же для каждого типа субъекта следует задействовать отдельную, а также введите имя (имена) политики (политик).  
+2.  В поле **Отображаемое имя**укажите имя для приемника команд. В разделе **Разрешенные учетные записи**щелкните **Добавить**, укажите названия учетных записей и нажмите **OK**. Вы можете использовать учетные записи пользователей, компьютеров или служб. После этого выберите, будет ли для всех субъектов использоваться одна политика или же для каждого типа субъекта следует задействовать отдельную, а также введите имя (имена) политики (политик).  
   
     ![защищенные учетные записи](../media/how-to-configure-protected-accounts/ADDS_ProtectAcct_NewAuthNPolicySiloDisplayName.gif)  
   
@@ -436,7 +436,7 @@ PS C:\> Get-ADAuthenticationPolicy -Filter 'Enforce -eq $false' | Remove-ADAuthe
 PS C:\>New-ADAuthenticationPolicySilo -Name newSilo -Enforce  
 ```  
   
-Эта команда позволяет найти все приемники команд политик проверки подлинности, отвечающие фильтру, который задается параметром **Filter**. После этого результат передается в командлет **Format-Table** для отображения имени политики и значения параметра **Enforce** каждой политики.  
+Эта команда позволяет найти все приемники команд политик проверки подлинности, отвечающие фильтру, который задается параметром **Filter** . После этого результат передается в командлет **Format-Table** для отображения имени политики и значения параметра **Enforce** каждой политики.  
   
 ```  
 PS C:\>Get-ADAuthenticationPolicySilo -Filter 'Name -like "*silo*"' | Format-Table Name, Enforce -AutoSize  
@@ -466,7 +466,7 @@ PS C:\>Grant-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01
 PS C:\>Revoke-ADAuthenticationPolicySiloAccess -Identity Silo -Account User01 -Confirm:$False  
 ```  
   
-В этом примере сначала используется командлет **Get-ADComputer**, чтобы найти все учетные записи компьютеров, отвечающие фильтру, который задается с помощью параметра **Filter**. Результаты действия этой команды передаются в командлет **Set-ADAccountAuthenticatinPolicySilo**, чтобы применить для них приемник команд политик проверки подлинности *Silo* и политику проверки подлинности *AuthenticationPolicy02*.  
+В этом примере сначала используется командлет **Get-ADComputer** , чтобы найти все учетные записи компьютеров, отвечающие фильтру, который задается с помощью параметра **Filter** . Результаты действия этой команды передаются в командлет **Set-ADAccountAuthenticatinPolicySilo** , чтобы применить для них приемник команд политик проверки подлинности *Silo* и политику проверки подлинности *AuthenticationPolicy02* .  
   
 ```  
 PS C:\>Get-ADComputer -Filter 'Name -like "newComputer*"' | Set-ADAccountAuthenticationPolicySilo -AuthenticationPolicySilo Silo -AuthenticationPolicy AuthenticationPolicy02  

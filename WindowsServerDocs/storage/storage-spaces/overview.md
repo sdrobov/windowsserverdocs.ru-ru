@@ -7,12 +7,12 @@ ms.technology: storage-file-systems
 ms.topic: article
 author: jasongerend
 ms.date: 05/22/2018
-ms.openlocfilehash: 5de8b36916624b595d8f2ac9ddb0c000e015ee65
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cab92de2a96f1d44c8ad6a33e84aba08cad38837
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366061"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950244"
 ---
 # <a name="storage-spaces-overview"></a>Общие сведения о дисковых пространствах
 
@@ -20,7 +20,7 @@ ms.locfileid: "71366061"
 
 Существует четыре основных способа использования дисковых пространств:
 
-- **На компьютере с Windows** — дополнительные сведения см. [в разделе дисковые пространства в Windows 10](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10).
+- **На компьютере с Windows** — дополнительные сведения см. [в разделе дисковые пространства в Windows 10](https://windows.microsoft.com/windows-10/storage-spaces-windows-10).
 - **На изолированном сервере со всеми хранилищами на одном сервере** — дополнительные сведения см. в разделе [развертывание дисковых пространств на изолированном сервере](deploy-standalone-storage-spaces.md).
 - **На кластерном сервере с использованием Локальные дисковые пространства с локальным прямым подключением хранилища в каждом узле кластера** . Дополнительные сведения см. в разделе [общие сведения о Локальные дисковые пространства](storage-spaces-direct-overview.md).
 - **На кластерном сервере с одним или несколькими дисками хранилища SAS, содержащими все диски** . Дополнительные сведения см. в статье [Общие сведения о дисковых пространствах в кластере с общим SAS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v%3dws.11)).

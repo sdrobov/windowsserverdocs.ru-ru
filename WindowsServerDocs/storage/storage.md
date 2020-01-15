@@ -1,5 +1,5 @@
 ---
-title: Хранилище
+title: Хранение
 description: ''
 author: JasonGerend
 manager: elizapo
@@ -11,19 +11,19 @@ ms.topic: landing-page
 ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 03/08/2019
-ms.openlocfilehash: eadac31cb623a15dd308f7e33f984fe1fb46ffe5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7e7fbd6ce3fcef6b0f8da88927d83f28d3fff0a8
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365928"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950226"
 ---
-# <a name="storage"></a>Хранилище
+# <a name="storage"></a>Хранение
 
->Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 >[!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 <hr />
 Хранилище в Windows Server предоставляет новые и улучшенные возможности для клиентов программно-определяемых центров обработки данных, использующих виртуализированные рабочие нагрузки. Windows Server также обеспечивает расширенную поддержку для корпоративных клиентов, использующих файловые серверы с существующими рабочими нагрузками.
@@ -120,11 +120,11 @@ ms.locfileid: "71365928"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Файловые системы, протоколы и т. д.</h3>
+                        <h3>Файловые системы, протоколы и т. д.</h3>
 <HR />
                         <p><h3><a href="refs/refs-overview.md">ReFS</a></h3> Устойчивая файловая система, которая позволяет максимально увеличить доступность данных, масштабируется для очень больших наборов данных в различных рабочих нагрузках и обеспечивает целостность данных с помощью устойчивости к повреждению (независимо от сбоев программного обеспечения или оборудования).<p>
 <HR />
-                        <p><h3><a href="file-server/file-server-smb-overview.md">Протокол SMB</a></h3> Протокол общего доступа к файлам сети, позволяющий приложениям на компьютере читать и записывать файлы, а затем запрашивать службы от серверных программ в компьютерной сети. Протокол SMB может использоваться поверх протокола TCP/IP или других сетевых протоколов. С помощью протокола SMB приложение (или использующий его пользователь) может получать доступ к файлам и другим ресурсам удаленного сервера. Это позволяет приложениям читать, создавать и обновлять файлы на удаленном сервере. Этот протокол может также обмениваться данными с любой серверной программой, которая настроена на получение клиентских запросов SMB.<p>
+                        <p><h3><a href="file-server/file-server-smb-overview.md">Протокол SMB (Server Message Block)</a></h3> Протокол общего доступа к файлам сети, позволяющий приложениям на компьютере читать и записывать файлы, а затем запрашивать службы от серверных программ в компьютерной сети. Протокол SMB может использоваться поверх протокола TCP/IP или других сетевых протоколов. С помощью протокола SMB приложение (или использующий его пользователь) может получать доступ к файлам и другим ресурсам удаленного сервера. Это позволяет приложениям читать, создавать и обновлять файлы на удаленном сервере. Этот протокол может также обмениваться данными с любой серверной программой, которая настроена на получение клиентских запросов SMB.<p>
 <HR />
                         <p><h3><a href="storage-spaces/Storage-class-memory-health.md">Память класса хранения</a></h3> Обеспечивает производительность, аналогичную объему памяти компьютера (действительно быстро), но с сохранением данных на обычных дисках хранения. Система Windows работает с памятью класса хранилища так же, как обычными дисками (только более быстрыми), но есть ряд отличий в управлении работоспособностью устройств.<p>
 <HR />
@@ -146,4 +146,4 @@ ms.locfileid: "71365928"
 ## <a name="in-azure"></a>В Azure
 
 * [Служба хранилища Azure](https://azure.microsoft.com/documentation/services/storage/)
-* [Azure StorSimple](https://www.microsoft.com/en-us/cloud-platform/azure-storsimple)
+* [Azure StorSimple](https://www.microsoft.com/cloud-platform/azure-storsimple)

@@ -1,6 +1,6 @@
 ---
-title: Шаг 1. Подготовка исходного сервера к миграции на Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+title: Шаг 1. Подготовка исходного сервера для миграции Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server-2016-essentials
@@ -12,16 +12,16 @@ ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 23dd4cb7513619382df55d674d5c4ee876c41d18
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: f95ebfec13c2ec1f374c60f48d5f8af6c4b22324
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432588"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947392"
 ---
-# <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>Шаг 1. Подготовка исходного сервера к миграции на Windows Server Essentials
+# <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>Шаг 1. Подготовка исходного сервера для миграции Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 В этом разделе подробно описаны резервное копирование исходного сервера, проверка его работоспособности, установка последних пакетов обновления и исправлений, а также проверка конфигурации сети.  
 
@@ -30,15 +30,15 @@ ms.locfileid: "66432588"
 
 1.  [Резервное копирование исходного сервера](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
 
-2.  [Установите последние пакеты обновления](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Установка последних пакетов обновления](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
 
-3.  [Удалить журнал на как параметр учетной записи службы](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_DeleteSvcAcctSetting)  
+3.  [Удаление параметра "вход в качестве учетной записи службы"](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_DeleteSvcAcctSetting)  
 
 4.  [Оценка работоспособности исходного сервера](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_EvaluateHealth)  
 
-5.  [Создание плана для миграции бизнес приложений](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MigrateLOB)  
+5.  [Создание плана для миграции бизнес-приложений](Step-1--Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MigrateLOB)  
 
-###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a> Резервное копирование исходного сервера  
+###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>Резервное копирование исходного сервера  
  Перед началом миграции создайте резервную копию исходного сервера. Это поможет защитить данные от случайной утраты, если во время миграции произойдут неустранимые ошибки.  
 
 ##### <a name="to-back-up-the-source-server"></a>Чтобы создать резервную копию исходного сервера  
@@ -47,22 +47,22 @@ ms.locfileid: "66432588"
 
 2. Убедитесь, что резервное копирование выполнено успешно. Чтобы проверить целостность резервной копии, произвольно выберите несколько файлов из резервной копии, восстановите их в другом месте и убедитесь, что они совпадают с исходными.  
 
-   |Продукт|Resource|
+   |Продукт|Ресурс|
    |---|---|
    |Windows Small Business Server 2003|[Резервное копирование и восстановление Windows Small Business Server 2003](https://msdn.microsoft.com/library/cc875809.aspx) 
-   |Windows Small Business Server 2008|[Резервное копирование и восстановление данных на Windows Small Business Server 2008](https://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
+   |Windows Small Business Server 2008|[Резервное копирование и восстановление данных в Windows Small Business Server 2008](https://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
    |Windows Server 2008 Foundation|[Резервное копирование и восстановление](https://technet.microsoft.com/library/cc754097\(WS.10\).aspx)  
-   |Windows Small Business Server 2011 Essentials|[Дополнительные сведения о настройке архивации сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx)
+   |Windows Small Business Server 2011 Essentials|[Дополнительные сведения о настройке резервного копирования сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx)
    |Windows Small Business Server 2011 Standard|[Управление резервным копированием сервера](https://technet.microsoft.com/library/cc527488.aspx)  
    |Windows Server Essentials|[Управление резервным копированием и восстановлением в Windows Server Essentials](https://technet.microsoft.com/library/jj713536.aspx)
 
-###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a> Установите последние пакеты обновления  
+###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>Установка последних пакетов обновления  
  Необходимо установить последние обновления и пакеты обновлений на исходный сервер перед миграцией.  
 
-###  <a name="BKMK_DeleteSvcAcctSetting"></a> Удалить журнал на как параметр учетной записи службы  
+###  <a name="BKMK_DeleteSvcAcctSetting"></a>Удаление параметра "вход в качестве учетной записи службы"  
  При миграции с Windows Small Business Server 2003 или Windows Server 2003 удалите параметр учетной записи **Вход качестве службы** из групповой политики.  
 
-##### <a name="to-delete-the-log-on-as-a-service-account-setting"></a>Удалить журнал на как параметр учетной записи службы  
+##### <a name="to-delete-the-log-on-as-a-service-account-setting"></a>Удаление параметра входа в систему в качестве учетной записи службы  
 
 1.  Чтобы открыть средство **Управление групповой политикой** , щелкните **Пуск**, **Панель управления**, **Администрирование**и **Управление групповой политикой**.  
 
@@ -74,9 +74,9 @@ ms.locfileid: "66432588"
 
 5.  Снимите флажок **Определить следующие параметры политики** .  
 
-6.  Удалить \\\localhost\SYSVOL\\< имя_домена\>\scripts\SBS_LOGIN_SCRIPT.bat.  
+6.  Удалите \\\Локалхост\сисвол\\< имя_домена\>\скриптс\ SBS_LOGIN_SCRIPT. bat.  
 
-###  <a name="BKMK_EvaluateHealth"></a> Оценка работоспособности исходного сервера  
+###  <a name="BKMK_EvaluateHealth"></a>Оценка работоспособности исходного сервера  
  Важно оценить работоспособность исходного сервера перед началом миграции. Для проверки текущих обновлений, вывода отчета о работоспособности системы, а также запуска анализатора соответствия рекомендациям Windows Server используйте следующие процедуры.  
 
 #### <a name="download-and-install-critical-and-security-updates"></a>Загрузка и установка критически важных обновлений и обновлений для системы безопасности  
@@ -104,11 +104,11 @@ ms.locfileid: "66432588"
 1. Следующая таблица содержит ссылки на центр загрузки Майкрософт, из которого можно загрузить и установить анализатор соответствия рекомендациям (BPA) для исходного сервера.  
 
 
-   |             Если исходный сервер работает под управлением             |                                                     можно получить из средства анализатора соответствия Рекомендациям                                                      |
+   |             Если исходный сервер работает             |                                                     Средства анализатора соответствия рекомендациям можно получить из                                                      |
    |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-   |                     Windows SBS 2003                     | [Веб-сайт Microsoft Windows Small Business Server 2003 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=5334) |
-   |                     Windows SBS 2008                     | [Веб-сайт Microsoft Windows Small Business Server 2008 Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=6231) |
-   | Windows SBS 2011 Essentials или Windows SBS 2011 Standard |          [Веб-сайте Windows Server Solutions Best Practices Analyzer](https://www.microsoft.com/download/details.aspx?id=15556)           |
+   |                     Windows SBS 2003                     | [Веб-сайт анализатор соответствия рекомендациям Microsoft Windows Small Business Server 2003](https://www.microsoft.com/download/details.aspx?id=5334) |
+   |                     Windows SBS 2008                     | [Веб-сайт анализатор соответствия рекомендациям Microsoft Windows Small Business Server 2008](https://www.microsoft.com/download/details.aspx?id=6231) |
+   | Windows SBS 2011 Essentials или Windows SBS 2011 Standard |          [Веб-сайт анализатор соответствия рекомендациям решений Windows Server](https://www.microsoft.com/download/details.aspx?id=15556)           |
    |     Windows Server Essentials или Windows Server 2012     |                                                          панели мониторинга сервера                                                           |
 
 
@@ -119,15 +119,15 @@ ms.locfileid: "66432588"
 
 3. В области навигации щелкните ссылку **Начать сканирование**.  
 
-    Если исходный сервер работает под управлением Windows Server Essentials, сделайте следующее:  
+    Если исходный сервер работает под Windows Server Essentials, выполните следующие действия.  
 
    1.  Войдите на целевой сервер как администратор, а затем откройте панель мониторинга.  
 
    2.  На панели мониторинга перейдите на вкладку **Устройства** .  
 
-   3.  В <**Server** >**задачи** панели щелкните **анализатор соответствия рекомендациям**.  
+   3.  В области **задачи** >**сервера** < щелкните **анализатор соответствия рекомендациям**.  
 
-4. На панели сведений введите метку сканирования и нажмите кнопку **Начать сканирование**. Эта метка содержит имя отчета о сканировании, например, **SBS BPA Scan 1Jul2013**.  
+4. На панели сведений введите метку сканирования и нажмите кнопку **Начать сканирование**. Эта метка содержит имя отчета о сканировании, например **SBS BPA Scan 1Jul2013**.  
 
 5. После завершения сканирования щелкните ссылку **Просмотреть отчет о сканировании соответствия рекомендациям**.  
 
@@ -140,8 +140,8 @@ ms.locfileid: "66432588"
 
 Щелкните проблему в отчете, чтобы просмотреть ее описание и рекомендуемое решение. Не все проблемы, о которых сообщает анализатор соответствия рекомендациям, влияют на процесс миграции, но чтобы обеспечить успешную миграцию, следует устранить все проблемы, если это возможно.  
 
-####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a> Синхронизировать время исходного сервера с внешнего источника времени  
- Показатели времени исходного сервера и конечного сервера должны различаться максимум на пять минут, дата и часовой пояс должны быть одинаковы на обоих серверах. Если исходный сервер запущен на виртуальном компьютере, дата, время и часовой пояс сервера узла должны совпадать с данными исходного и конечного серверов. Для обеспечения успешной установки Windows Server Essentials, необходимо синхронизировать время исходного сервера с сервером протокола сетевого времени (NTP) в Интернете.  
+####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>Синхронизация времени исходного сервера с внешним источником времени  
+ Показатели времени исходного сервера и конечного сервера должны различаться максимум на пять минут, дата и часовой пояс должны быть одинаковы на обоих серверах. Если исходный сервер запущен на виртуальном компьютере, дата, время и часовой пояс сервера узла должны совпадать с данными исходного и конечного серверов. Чтобы обеспечить успешную установку Windows Server Essentials, необходимо синхронизировать время исходного сервера с сервером NTP в Интернете.  
 
 ###### <a name="to-synchronize-the-source-server-time-with-the-ntp-server"></a>Синхронизация времени исходного сервера с NTP-сервером  
 
@@ -149,37 +149,37 @@ ms.locfileid: "66432588"
 
 2.  Щелкните **Пуск**, нажмите кнопку **Выполнить**, в текстовом поле введите **cmd** и нажмите клавишу ВВОД.  
 
-3.  В командной строке введите syncfromflags: DOMHIER w32tm/config / reliable: не/Update, а затем нажмите клавишу ВВОД.  
+3.  В командной строке введите команду w32tm /config /syncfromflags:domhier /reliable:no /update и нажмите клавишу ВВОД.  
 
-4.  В командной строке введите net stop w32time и нажмите клавишу ВВОД.  
+4.  В командной строке введите команду net stop w32time и нажмите клавишу ВВОД.  
 
-5.  В командной строке введите net start w32time и нажмите клавишу ВВОД.  
+5.  В командной строке введите команду net start w32time и нажмите клавишу ВВОД.  
 
 > [!IMPORTANT]
->  Во время установки Windows Server Essentials у вас есть возможность проверить время на целевом сервере и изменить его при необходимости. Убедитесь, что это время отличается от времени на исходном сервере не более чем на пять минут. После завершения установки конечный сервер синхронизируется с NTP-сервером. Все компьютеры, присоединенные к домену, в том числе исходный сервер, синхронизируются с конечным сервером, который принимает роль хозяина эмулятора основного контроллера домена (PDC).  
+>  Во время установки Windows Server Essentials у вас есть возможность проверить время на целевом сервере и при необходимости изменить ее. Убедитесь, что это время отличается от времени на исходном сервере не более чем на пять минут. После завершения установки конечный сервер синхронизируется с NTP-сервером. Все компьютеры, присоединенные к домену, в том числе исходный сервер, синхронизируются с конечным сервером, который принимает роль хозяина эмулятора основного контроллера домена (PDC).  
 
-###  <a name="BKMK_MigrateLOB"></a> Создание плана для миграции бизнес приложений  
+###  <a name="BKMK_MigrateLOB"></a>Создание плана для миграции бизнес-приложений  
  Бизнес-приложения (LOB, line-of-business application) — это компьютерные приложения, жизненно необходимые для функционирования бизнеса. К ним относятся приложения в области бухгалтерского учета, управления логистическими цепочками и планирования ресурсов.  
 
  При планировании миграции бизнес-приложений необходимо проконсультироваться с поставщиком бизнес-приложения для определения подходящего метода миграции каждого из них. Также необходимо подготовить носители, используемые для установки бизнес-приложений на целевом сервере.  
 
 > [!NOTE]
->  Если вы использовали Windows Small Business Server 2011 Essentials SDK для разработки настраиваемых работоспособности системы или оповещения надстройки и вы хотите продолжить использование надстройки с Windows Server Essentials, необходимо также обновить надстройку и развернуть ее на целевом сервере.  
+>  Если вы использовали пакет SDK для Windows Small Business Server 2011 Essentials для разработки настраиваемой службы работоспособности или оповещений системы и вы хотите продолжить использовать надстройку с Windows Server Essentials, необходимо также обновить надстройку и развернуть ее на целевом сервере.  
 
 
 ### <a name="create-a-plan-to-migrate-email-hosted-on-windows-sbs-2011-windows-sbs-2008-and-windows-sbs-2003"></a>Создание плана миграции электронной почты, размещенной на Windows SBS 2011, Windows SBS 2008 и Windows SBS 2003  
- В Windows SBS 2011, Windows SBS 2008 и Windows SBS 2003 работа электронной почты обеспечивается через Microsoft Exchange Server. Тем не менее Windows Server Essentials не предоставляет службу входящих сообщений электронной почты. Если вы используете сервера под управлением Windows SBS 2011, Windows SBS 2008 или Windows SBS 2003 для размещения s корпоративной электронной почте, потребуется выполнять миграцию в альтернативное локальное или размещаемое решение.  
+ В Windows SBS 2011, Windows SBS 2008 и Windows SBS 2003 работа электронной почты обеспечивается через Microsoft Exchange Server. Однако Windows Server Essentials не предоставляет почтовую службу электронной почты. Если в настоящее время используется сервер под управлением Windows SBS 2011, Windows SBS 2008 или Windows SBS 2003 для размещения электронной почты компании, необходимо выполнить миграцию на альтернативное локальное или размещенное решение.  
 
 > [!NOTE]
 >  После обновления и подготовки исходного сервера для миграции рекомендуется создать архив обновленного сервера перед продолжением процесса миграции.  
 
 #### <a name="migrate-email-to-microsoft-office-365"></a>Миграция электронной почты в Microsoft Office 365  
- Если в качестве решения по электронной почте для домена вы выбрали Microsoft Office 365, выполните рекомендации из раздела [Миграция всех почтовых ящиков в облако путем прямой миграции Exchange](http://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) , чтобы начать миграцию электронной почты в Office 365. Мы рекомендуем выполнить миграцию электронной почты, прежде чем устанавливать Windows Server Essentials.  
+ Если в качестве решения по электронной почте для домена вы выбрали Microsoft Office 365, выполните рекомендации из раздела [Миграция всех почтовых ящиков в облако путем прямой миграции Exchange](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) , чтобы начать миграцию электронной почты в Office 365. Перед установкой Windows Server Essentials рекомендуется выполнить перенос электронной почты.  
 
 > [!NOTE]
->  Операция удаления локального сервера Exchange на исходном сервере является обязательным, если вы собираетесь интегрировать Windows Server Essentials с Office 365. Сведения о миграции общих папок сервера Exchange Server в Office 365 см. в записи блога [Сценарии миграции общих папок Microsoft Exchange 2013 для Office 365](http://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).  
+>  Удаление локального сервера Exchange на исходном сервере является обязательным, если вы планируете интегрировать Windows Server Essentials с Office 365. Сведения о миграции общих папок сервера Exchange Server в Office 365 см. в записи блога [Сценарии миграции общих папок Microsoft Exchange 2013 для Office 365](https://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).  
 >   
->  После завершения установки необходимо включить функцию интеграции Office 365 в Windows Server Essentials, запустив **интеграция с Microsoft Office 365** задачи.  
+>  После завершения установки необходимо включить функцию интеграции Office 365 в Windows Server Essentials, выполнив команду **Интеграция с Microsoft Office 365** .  
 
 > [!IMPORTANT]
 >  Чтобы разрешить средству миграции Office 365 подключаться к серверу Exchange Server, работающему на исходном сервере, на исходном сервере необходимо включить протокол RPC через HTTP. Сведения о включении RPC через HTTP см. в разделе [Начальное развертывание протокола RPC через HTTP в Small Business Server 2003 (Standard или Premium)](https://technet.microsoft.com/library/bb123622%28EXCHG.65%29.aspx). Если после включения протокола RPC через HTTP не удается запустить средство миграции Office 365, просмотрите параметр **ValidPorts** в реестре по адресу HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy и убедитесь, что для исходного сервера указано полное доменное имя (FQDN). Если полное доменное имя не указано, добавьте его вручную, как показано в следующем примере:  
@@ -187,7 +187,7 @@ ms.locfileid: "66432588"
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (вместо *contoso* введите имя своего домена).  
 
 #### <a name="migrate-email-to-another-on-premises-exchange-server"></a>Миграция электронной почты в другой локальный сервер Exchange Server  
- Сведения о миграции электронной почты на другой локальный Exchange Server, см. в разделе [интеграции локального сервера Exchange с Windows Server Essentials](https://technet.microsoft.com/library/jj200172.aspx). Рекомендуется установить новый локальный сервер Exchange Server после установки Windows Server Essentials и затем завершить процесс миграции электронной почты до понижения роли исходного сервера.  
+ Сведения о переносе электронной почты на другой локальный сервер Exchange Server см. в статье [Интеграция локального сервера Exchange Server с Windows Server Essentials](https://technet.microsoft.com/library/jj200172.aspx). Рекомендуется настроить новый локальный сервер Exchange после установки Windows Server Essentials, а затем завершить перенос электронной почты перед понижением роли исходного сервера.  
 
 > [!NOTE]
 >  В Exchange Server не входит соединитель POP3 для Windows Small Business Server. После миграции электронной почты на другой сервер Exchange Server возможности соединителя POP3 будут недоступны.  
@@ -195,8 +195,8 @@ ms.locfileid: "66432588"
 > [!NOTE]
 >  После обновления и подготовки исходного сервера к миграции следует создать резервную копию обновленного сервера перед продолжением миграции.  
 
-## <a name="next-steps"></a>Следующие шаги  
- Исходный сервер подготовлен для миграции на Windows Server Essentials.  Теперь перейдите к [шаг 2: Установка Windows Server Essentials в качестве нового репликата контроллера домена](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md).  
+## <a name="next-steps"></a>Дальнейшие действия  
+ Вы подготовили исходный сервер к переходу на Windows Server Essentials.  Теперь перейдите к [шагу 2. Установка Windows Server Essentials в качестве нового реплики контроллера домена](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md).  
 
-Чтобы просмотреть все действия, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

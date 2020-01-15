@@ -9,12 +9,12 @@ ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 442aef6daccda2ab3e95690a82f43f642e5a3f73
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 96659164a9eea1784cb529c47dd58be70d546f80
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358751"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948733"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>Создание собственного клиентского приложения с помощью общедоступных клиентов OAuth с AD FS 2016 или более поздней версии
 
@@ -41,10 +41,10 @@ ms.locfileid: "71358751"
 
 1. В AD FS управления щелкните правой кнопкой мыши **группы приложений** и выберите команду **Добавить группу приложений**.
 
-2. В мастере групп приложений в поле Имя введите любое предпочтительное имя, например Нативетодолистаппграуп. Выберите **собственное приложение, осуществляющее доступ к шаблону веб-API** . Нажмите кнопку **Далее**.
- ![Добавить группу приложений](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
+2. В мастере групп приложений в поле Имя введите любое предпочтительное имя, например Нативетодолистаппграуп. Выберите **собственное приложение, осуществляющее доступ к шаблону веб-API** . Нажмите **Далее**.
+ ![добавить группу приложений](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
 
-3. На странице **приложение машинного кода** запишите идентификатор, созданный AD FS. Это идентификатор, с помощью которого AD FS будет распознавать общедоступное клиентское приложение. Скопируйте значение **идентификатора клиента** . Он будет использоваться позже в качестве значения для **Ida: ClientID** в коде приложения. Если вы хотите, можно указать здесь любой настраиваемый идентификатор. URI перенаправления — любое произвольное значение, например, https://ToDoListClient размещение ![ собственного приложения](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
+3. На странице **приложение машинного кода** запишите идентификатор, созданный AD FS. Это идентификатор, с помощью которого AD FS будет распознавать общедоступное клиентское приложение. Скопируйте значение **идентификатора клиента** . Он будет использоваться позже в качестве значения для **Ida: ClientID** в коде приложения. Если вы хотите, можно указать здесь любой настраиваемый идентификатор. URI перенаправления — это любое произвольное значение, например, размещение https://ToDoListClient ![ собственном приложении](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
 
 4. На странице **Настройка веб-API** задайте значение идентификатора для веб-API. В этом примере это должно быть значение **URL-адреса SSL** , на котором должно выполняться веб-приложение. Это значение можно получить, щелкнув Свойства проекта Тулистсервер в решении. Позже это будет использоваться как значение **TODO: тодолистресаурцеид** в файле **app. config** собственного клиентского приложения, а также как **TODO: тодолистбасеаддресс**.
 ![Веб-API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
@@ -59,7 +59,7 @@ ms.locfileid: "71358751"
 Чтобы настроить правило для утверждений, откройте только что созданную группу приложений и дважды щелкните веб-API. Выберите вкладку Правила преобразования выдачи, а затем нажмите кнопку Добавить правило. В поле Тип правила утверждения выберите настраиваемое правило утверждения, а затем добавьте правило утверждения, как показано ниже.
 
 ```  
-c:[Type == "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
+c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"), query = ";givenName;{0}", param = c.Value);
 ```
 
@@ -156,7 +156,7 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 Запуск приложения
 
 1. В решении NativeClient-DotNet щелкните правой кнопкой мыши и выберите пункт Свойства. Измените запускаемый проект, как показано ниже, на несколько запускаемых проектов и задайте для параметра TodoListClient и TodoListService значение Start.
-![Свойства решения](media/native-client-with-ad-fs-2016/solutionproperties.png)
+![свойства решения](media/native-client-with-ad-fs-2016/solutionproperties.png)
 
 2.  Нажмите клавишу F5 или выберите Отладка > продолжить в строке меню. Это приведет к запуску собственного приложения и WebAPI. Нажмите кнопку Вход в собственном приложении, чтобы открыть интерактивный вход из AD AL и перенаправить в службу AD FS. Введите учетные данные допустимого пользователя.
 ![Вход в систему](media/native-client-with-ad-fs-2016/sign-in.png)
@@ -167,5 +167,5 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 
 ![Вход](media/native-client-with-ad-fs-2016/clienttodoadd.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

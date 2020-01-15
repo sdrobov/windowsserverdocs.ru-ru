@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd8a26d158f53121074881ac8ff204287f9a19ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a14233e01c19df650d1059e1b60cd5398b05709a
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382975"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946995"
 ---
 # <a name="manage-software-inventory-logging"></a>Управление журналом инвентаризации программного обеспечения
 
@@ -31,20 +31,20 @@ ms.locfileid: "71382975"
 - **Windows Server 2012 (выпуск Standard или Datacenter)** 
 
 > [!NOTE] 
-> Прежде чем применить пакет обновления, убедитесь, что установлен [WMF 4,0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) .
+> Прежде чем применить пакет обновления, убедитесь, что установлен [WMF 4,0](https://www.microsoft.com/download/details.aspx?id=40855) .
 
--  Пакет обновления WMF 4.0 для Windows Server 2012: [KB 3119938](https://support.microsoft.com/en-us/kb/3119938)
+-  Пакет обновления WMF 4.0 для Windows Server 2012: [KB 3119938](https://support.microsoft.com/kb/3119938)
 
-- **Windows Server 2008 R2 SP1**
+- **Windows Server 2008 R2 с пакетом обновления 1**
 
 > [!NOTE] 
-> Прежде чем применить пакет обновления, убедитесь, что установлен [WMF 4,0](https://www.microsoft.com/en-us/download/details.aspx?id=40855) .
+> Прежде чем применить пакет обновления, убедитесь, что установлен [WMF 4,0](https://www.microsoft.com/download/details.aspx?id=40855) .
 
 
-- Требуется [.NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653)
+- Требуется [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653)
 
 
-- Пакет обновления WMF 4.0 для Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/en-us/kb/3109118)
+- Пакет обновления WMF 4.0 для Windows Server 2008 R2: [KB 3109118](https://support.microsoft.com/kb/3109118)
 
 
 Существует два основных способа проведения инвентаризации с помощью этой функции.  
@@ -248,7 +248,7 @@ SystemManufacturer        : Microsoft Corporation
   
 |||||  
 |-|-|-|-|  
-|**Функций**|**Имя значения**|**Данные**|**Соответствующий командлет (доступен только в работающей операционной системе)**|  
+|**Функция**|**Имя значения**|**Данные**|**Соответствующий командлет (доступен только в работающей операционной системе)**|  
 |Запуск и остановка функции|CollectionState|1 или 0|[Start-SilLogging](https://technet.microsoft.com/library/dn283391.aspx), [Stop-SilLogging](https://technet.microsoft.com/library/dn283394.aspx)|  
 |Указывает целевую точку агрегирования в сети.|TargetUri|Строка|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -TargetURI|  
 |Указывает отпечаток сертификата или хэш сертификата, используемый для проверки подлинности SSL для целевого веб-сервера.|CertificateThumbprint|Строка|[Set-SilLogging](https://technet.microsoft.com/library/dn283387.aspx) -CertificateThumbprint|  

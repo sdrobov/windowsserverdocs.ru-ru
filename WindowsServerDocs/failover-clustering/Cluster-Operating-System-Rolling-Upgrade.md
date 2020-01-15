@@ -7,12 +7,12 @@ ms.assetid: 6e102c1f-df26-4eaa-bc7a-d0d55d3b82d5
 author: jasongerend
 ms.author: jgerend
 ms.date: 03/27/2018
-ms.openlocfilehash: f7d20a099f287d2ee05ae6e908c173e1eb3cfc66
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fc1799db76f528a599ef70eec5093da0a76206a2
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361841"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948530"
 ---
 # <a name="cluster-operating-system-rolling-upgrade"></a>Последовательное обновление операционной системы кластера
 
@@ -52,7 +52,7 @@ ms.locfileid: "71361841"
 - Обновление кластера Локальные дисковые пространства до Windows Server версии 1709 не поддерживается.
 - Если в качестве рабочей нагрузки кластера используются виртуальные машины Hyper-V или масштабируемый файловый сервер, обновление без простоя может быть отключено.
 - Убедитесь, что узлы Hyper-V имеют процессоры, поддерживающие таблицу адресации второго уровня (SLAT), используя один из следующих методов.  
-        -Проверьте, [совместимы ли вы с SLAT? Совет по WP8 SDK](http://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) , посвященный двум методам проверки того, поддерживает ли ЦП SLAT  
+        -Проверьте, [совместимы ли вы с SLAT? Совет по WP8 SDK](https://blogs.msdn.com/b/devfish/archive/2012/11/06/are-you-slat-compatible-wp8-sdk-tip-01.aspx) , посвященный двум методам проверки того, поддерживает ли ЦП SLAT  
         — Скачайте средство [Coreinfo v 3.31](https://technet.microsoft.com/sysinternals/cc835722) , чтобы определить, поддерживает ли ЦП SLAT.
 
 ## <a name="cluster-transition-states-during-cluster-os-rolling-upgrade"></a>Состояния переходов кластера во время последовательного обновления ОС кластера
@@ -277,7 +277,7 @@ ms.locfileid: "71361841"
 **Можно ли использовать System Center 2016 Virtual Machine Manager (SCVMM) для автоматизации процесса последовательного обновления ОС кластера?**  
     Да, можно автоматизировать процесс последовательного обновления ОС кластера с помощью VMM в System Center 2016.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также статью  
 -   [Заметки о выпуске: важные проблемы в Windows Server 2016](../get-started/Release-Notes--Important-Issues-in-Windows-Server-2016-Technical-Preview.md)  
 -   [Что нового в Windows Server 2016?](../get-started/What-s-New-in-windows-server-2016.md)  
 -   [Новые возможности отказоустойчивой кластеризации в Windows Server](whats-new-in-failover-clustering.md)  

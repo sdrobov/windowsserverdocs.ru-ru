@@ -11,12 +11,12 @@ ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: high
-ms.openlocfilehash: a29c43a87ccb55e85b018bc1b6dfe84bc53495b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fe2022ba3ff382d1070495b28dfdb03a34f9be42
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403449"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950316"
 ---
 # <a name="security--assurance"></a>Безопасность и надежность
 
@@ -86,7 +86,7 @@ ms.locfileid: "71403449"
                             </div>
                           </a>
                         </li><li>
- <a href="http://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx">
+ <a href="https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -104,7 +104,7 @@ ms.locfileid: "71403449"
                             </div>
                           </a>
                         </li><li>
- <a href="http://channel9.msdn.com/events/ignite/2015/brk2482">
+ <a href="https://channel9.msdn.com/events/ignite/2015/brk2482">
                             <div class="cardSize">
                                 <div class="cardPadding">
                                     <div class="card">
@@ -139,13 +139,13 @@ ms.locfileid: "71403449"
                     <div class="cardText">
                         <h3>Безопасная виртуализация с использованием экранированных виртуальных машин</h3>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Экранированная виртуальная машина в Channel 9</a></h3>Пошаговое описание технологии и преимуществ экранированных виртуальных машин</p>
+                        <p><h3><a href="https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016">Экранированная виртуальная машина в Channel 9</a></h3>Пошаговое описание технологии и преимуществ экранированных виртуальных машин</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=xip5Qtk-7d8">Демонстрация экранированной виртуальной машины</a></h3>В этом 4-минутном видео описывается предназначение экранированных виртуальных машин, а также различия между экранированными и неэкранированными виртуальными машинами.</p>
 <HR />
                         <p><h3><a href="http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm">Видеоруководство по использованию экранированных виртуальных машин в Windows Server</a></h3>В этом пошаговом видеоруководстве показано, как служба защиты узла включает экранированные виртуальные машины, обеспечивая защиту конфиденциальных данных от несанкционированного доступа администраторов узла Hyper-V.</p>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3457">Видео с конференции Microsoft Ignite. Усиление защиты структуры: защита секретных данных клиента в Hyper-V</a></h3>В этой презентации Ignite обсуждаются дополнительные улучшения Hyper-V и диспетчера виртуальных машин, а также новая роль сервера-защитника узла для запуска экранированных виртуальных машин. </p>
+                        <p><h3><a href="https://channel9.msdn.com/events/ignite/2015/brk3457">Видео с конференции Microsoft Ignite. Усиление защиты структуры: защита секретных данных клиента в Hyper-V</a></h3>В этой презентации Ignite обсуждаются дополнительные улучшения Hyper-V и диспетчера виртуальных машин, а также новая роль сервера-защитника узла для запуска экранированных виртуальных машин. </p>
 <HR />
                         <p><h3><a href="guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md">Руководство по развертыванию защищенной структуры</a></h3>В этом руководстве содержится информация об установке и проверке Windows Server и System Center Virtual Machine Manager для узлов защищенной структуры и экранированных виртуальных машин.</p>
 <HR />
@@ -201,9 +201,9 @@ ms.locfileid: "71403449"
 <HR />
                         <p><h3><a href="https://technet.microsoft.com/library/mt150258.aspx">JIT-администрирование с помощью Microsoft Identity Manager</a></h3> В этой статье рассматриваются функции и возможности Microsoft Identity Manager, включая поддержку управления JIT-управления привилегированным доступом.</p>
 <HR />
-                        <p><h3><a href="http://channel9.msdn.com/events/ignite/2015/brk3873">Защита Windows и Microsoft Azure Active Directory с помощью Privileged Access Management</a></h3>В этой презентации Ignite описаны стратегии и инвестиции корпорации Майкрософт в Windows Server, PowerShell, Active Directory, Identity Manager и Azure Active Directory для устранения рисков доступа администратора с помощью более надежной проверки подлинности и управления доступом с использованием технологий администрирования Just in Time (JIT) и Just Enough Administration (JEA).</p>
+                        <p><h3><a href="https://channel9.msdn.com/events/ignite/2015/brk3873">Защита Windows и Microsoft Azure Active Directory с помощью Privileged Access Management</a></h3>В этой презентации Ignite описаны стратегии и инвестиции корпорации Майкрософт в Windows Server, PowerShell, Active Directory, Identity Manager и Azure Active Directory для устранения рисков доступа администратора с помощью более надежной проверки подлинности и управления доступом с использованием технологий администрирования Just in Time (JIT) и Just Enough Administration (JEA).</p>
 <HR />
-                        <p><h3><a href="http://aka.ms/JEA">Статья о технологии Just Enough Administration</a></h3>В этом документе представлена концепция и технические детали технологии Just Enough Administration — инструментария PowerShell для предприятий, предназначенного для сокращения рисков путем ограничения доступа операторам. Доступ предоставляется только к определенным ресурсам, необходимым для решения поставленных задач.</p>
+                        <p><h3><a href="https://aka.ms/JEA">Статья о технологии Just Enough Administration</a></h3>В этом документе представлена концепция и технические детали технологии Just Enough Administration — инструментария PowerShell для предприятий, предназначенного для сокращения рисков путем ограничения доступа операторам. Доступ предоставляется только к определенным ресурсам, необходимым для решения поставленных задач.</p>
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=xnBrbkY9P20">Демонстрационное видео по Just Enough Administration</a></h3>Демонстрационное пошаговое руководство по Just Enough Administration.</p>
                     </div>
@@ -223,7 +223,7 @@ ms.locfileid: "71403449"
                     <div class="cardText">
                         <h3>Защита учетных данных</h3>
 <HR />
-                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Защита извлеченных учетных данных домена с помощью Credential Guard</a></h3>Для защиты секретов Credential Guard использует безопасность на основе виртуализации, чтобы только привилегированное системное ПО могло получать доступ к этим данным. Несанкционированный доступ к секретам может привести к атакам, направленным на кражу учетных данных, например типа Pass-the-Hash или Pass-The-Ticket.</a> Credential Guard предотвращает такие атаки, защищая хэши паролей NTLM и билеты Kerberos Ticket Granting.</p>
+                        <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard">Защита извлеченных учетных данных домена с помощью Credential Guard</a></h3>Для защиты секретов Credential Guard использует безопасность на основе виртуализации, чтобы только привилегированное системное ПО могло получать доступ к этим данным. Несанкционированный доступ к секретам может привести к атакам, направленным на кражу учетных данных, например типа Pass-the-Hash или Pass-The-Ticket.</a> Credential Guard предотвращает такие атаки, защищая хэши паролей NTLM и билеты для предоставления билетов Kerberos.</p>
 <HR />
                         <p><h3><a href="https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard">Защита учетных данных удаленного рабочего стола с помощью Remote Credential Guard</a></h3> Remote Credential Guard позволяет защитить учетные данные через подключение к удаленному рабочему столу путем перенаправления запросов Kerberos обратно к устройству, запрашивающему соединение. Remote Credential Guard также предоставляет единый вход пользователей в систему для сеансов доступа к удаленному рабочему столу. </p>
 <HR />
@@ -253,7 +253,7 @@ ms.locfileid: "71403449"
 <HR />
                         <p><h3><a href="https://www.youtube.com/watch?v=_SaDw1dRy2k">OMS и Windows Server</a></h3>Это 3-минутное видео показывает, как OMS может помочь в обнаружении потенциально вредоносного поведения, блокируемого Windows Server.</p>
 <HR />
-                        <p><h3><a href="http://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">Microsoft Advanced Threat Analytics</a></h3>В этой записи блога рассматривается служба Microsoft Advanced Threat Analytics — локальный продукт, который использует сетевой трафик Active Directory и данные SIEM для выявления потенциальных угроз и предупреждения о них.</p>
+                        <p><h3><a href="https://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx">Microsoft Advanced Threat Analytics</a></h3>В этой записи блога рассматривается служба Microsoft Advanced Threat Analytics — локальный продукт, который использует сетевой трафик Active Directory и данные SIEM для выявления потенциальных угроз и предупреждения о них.</p>
                     </div>
                 </div>
             </div>

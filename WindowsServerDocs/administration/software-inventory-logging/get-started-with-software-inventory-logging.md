@@ -13,12 +13,12 @@ author: brentfor
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a38c984b2d81fc4db980a969ef0312109950b867
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: add11bf51570e3cafa2bd03ee3585de89f3eecab
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382998"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75946960"
 ---
 # <a name="get-started-with-software-inventory-logging"></a>Приступая к работе с журналом инвентаризации программного обеспечения
 
@@ -26,7 +26,7 @@ ms.locfileid: "71382998"
 
  Ведение журнала инвентаризации программного обеспечения собирает данные инвентаризации программного обеспечения Майкрософт на уровне каждого сервера. Прежде чем использовать ведение журнала инвентаризации программного обеспечения с Windows Server 2012 R2, убедитесь, что Центр обновления Windows [kb 3000850](https://support.microsoft.com/kb/3000850) и [KB 3060681](https://support.microsoft.com/kb/3060681) установлены в каждой системе, которая будет включена в опись. Для Windows Server 2016 не требуется никаких Центр обновления Windows. Кроме того, если вы хотите использовать возможность SIL для пересылки данных на сервер агрегирования, убедитесь, что для вашей сети используются SSL-сертификаты.
 
-## <a name="BKMK_OVER"></a>Описание функции
+## <a name="BKMK_OVER"></a> Описание функции
 Журнал инвентаризации программного обеспечения в Windows Server — это компонент с простым набором командлетов PowerShell, который помогает администраторам получить список программ Майкрософт, установленных на их серверах. Он также предоставляет возможность периодически собирать и перенаправлять эти данные по сети с помощью протокола HTTPS для статистической обработки. Управление этим компонентом, главным образом для ежечасного сбора и перенаправления, также выполняется с помощью команд PowerShell.
 
 > [!NOTE]
@@ -49,5 +49,5 @@ ms.locfileid: "71382998"
 [Управление журналом инвентаризации программного обеспечения](manage-software-inventory-logging.md)<br>
 [Командлеты ведения журнала инвентаризации программного обеспечения в Windows PowerShell](https://technet.microsoft.com/library/dn283390.aspx)<br>
 [Набор средств оценки и планирования Майкрософт](https://www.microsoft.com/download/en/details.aspx?id=7826)
-[средство управления активацией корпоративных лицензий](http://blogs.technet.com/b/volume-licensing/)
+[средство управления активацией корпоративных лицензий](https://blogs.technet.com/b/volume-licensing/)
 

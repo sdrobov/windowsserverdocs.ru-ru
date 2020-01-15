@@ -10,19 +10,19 @@ ms.date: 10/17/2019
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 829ae15495d54aca8c476909988ea5a44ea487e7
-ms.sourcegitcommit: 8a017624682fe0172076f9169a9fa17aa972907f
+ms.openlocfilehash: 5e6312075fffd62b599fb62f39cc94ca1f309a44
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74852631"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950164"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Устранение неполадок компонентов Windows Server
 
 >- [!TIP]
 > Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими [библиотеками Windows Server](/previous-versions/windows/) на docs.Microsoft.com. Кроме того, можно [выполнить поиск](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) конкретных сведений на этом сайте.
 
-Корпорация Майкрософт регулярно выпускает оба обновления для Windows Server. Необходимо вовремя обновлять серверы, чтобы они могли получать будущие обновления, в том числе обновления безопасности. Ознакомьтесь с [журналом обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/en-us/help/4000825/windows-10-windows-server-2016-update-history) , чтобы получить полный список выпущенных обновлений.
+Корпорация Майкрософт регулярно выпускает оба обновления для Windows Server. Необходимо вовремя обновлять серверы, чтобы они могли получать будущие обновления, в том числе обновления безопасности. Ознакомьтесь с [журналом обновлений Windows 10 и Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-windows-server-2016-update-history) , чтобы получить полный список выпущенных обновлений.
 
 Этот раздел содержит дополнительные разделы по устранению неполадок и ссылки, которые помогут устранить проблемы с Windows Server. Будут добавлены дополнительные разделы по мере их появления.
 

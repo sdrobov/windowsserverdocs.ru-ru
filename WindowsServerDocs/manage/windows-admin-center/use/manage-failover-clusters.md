@@ -8,25 +8,25 @@ ms.author: jol
 ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 16e758f0a8746d41adcdafb2bc1be2d91a3fc29c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7f015ac4c9906447069501bf0922b36306a51d7
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406800"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950497"
 ---
 # <a name="manage-failover-clusters-with-windows-admin-center"></a>Управление отказоустойчивыми кластерами с помощью центра администрирования Windows
 
->Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
+>Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
 
 > [!Tip]
 > Только начинаете знакомство с Windows Admin Center?
-> [Узнайте дополнительные сведения о Windows Admin Center](../understand/windows-admin-center.md) или [скачайте платформу](https://aka.ms/windowsadmincenter).
+> [Скачайте или Узнайте больше о центре администрирования Windows](../overview.md).
 
 ## <a name="managing-failover-clusters"></a>Управление отказоустойчивыми кластерами
 [Отказоустойчивая кластеризация](https://docs.microsoft.com/windows-server/failover-clustering/failover-clustering-overview) — это компонент Windows Server, позволяющий объединять несколько серверов в отказоустойчивый кластер для повышения доступности и масштабируемости приложений и служб, таких как масштабируемый файловый сервер, Hyper-V и Microsoft SQL Server.
 
-Хотя можно управлять узлами отказоустойчивого кластера как отдельными серверами, добавляя их в качестве [подключений к серверу](manage-servers.md) в центре администрирования Windows, их также можно добавить в качестве отказоустойчивых кластеров для просмотра ресурсов кластера, хранилища, сети, узлов, ролей, виртуальных служб и управления ими. Компьютеры и виртуальные коммутаторы.
+Хотя можно управлять узлами отказоустойчивого кластера как отдельными серверами, добавляя их в качестве [подключений к серверу](manage-servers.md) в центре администрирования Windows, их также можно добавить в качестве отказоустойчивых кластеров для просмотра ресурсов кластера, хранилища, сети, узлов, ролей, виртуальных машин и виртуальных коммутаторов и управления ими.
 
 ![Экран обзора отказоустойчивого кластера](../media/manage-failover-clusters/fcm-overview.png)
 
@@ -44,11 +44,11 @@ ms.locfileid: "71406800"
 > [!NOTE]
 > Можно также управлять кластером с поддержкой Hyper-in, добавив кластер в качестве [подключения к кластеру с технологией Hyper-](manage-hyper-converged.md) in в центре администрирования Windows.
 
-## <a name="tools"></a>Инструменты
+## <a name="tools"></a>Средства
 
 Для подключений к отказоустойчивому кластеру доступны следующие средства.
 
-| Инструмент | Описание |
+| Средство | Описание |
 | ---- | ----------- |
 | Обзор | Просмотр сведений о отказоустойчивом кластере и управление ресурсами кластера |
 | Диски | Просмотр общих дисков и томов кластера |

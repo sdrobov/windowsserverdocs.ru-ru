@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: phstee
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 498e72377197bd2185a518949520275c36295a77
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ee14a2bd9290dbaa5653640a80528d163635142d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355077"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947215"
 ---
 # <a name="additional-performance-tuning-resources"></a>Дополнительные ресурсы по настройке производительности
 
@@ -25,7 +25,7 @@ ms.locfileid: "71355077"
 
 -   [Совет по повышению производительности обработки транзакций](http://www.tpc.org/)
 
--   [Комплект средств для развертывания и оценки Windows](https://developer.microsoft.com/en-us/windows/hardware/windows-assessment-deployment-kit)
+-   [Комплект средств для развертывания и оценки Windows](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit)
 
 ## <a name="power-management-tuning-resources"></a>Ресурсы по настройке управления питанием
 
@@ -33,25 +33,25 @@ ms.locfileid: "71355077"
 
 -   [Использование PowerCfg для вычисления эффективности энергопотребления системы](https://technet.microsoft.com/library/cc748940.aspx)
 
--   [Средство политики сходства прерываний](https://support.microsoft.com/en-us/kb/252867)
+-   [Средство политики сходства прерываний](https://support.microsoft.com/kb/252867)
 
 ## <a name="networking-subsystem-tuning-resources"></a>Ресурсы по настройке подсистемы сети
 
--   [Масштабируемая сеть: Устранение узких мест обработки приема — знакомство с RSS](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc)
+-   [Масштабируемая сеть: устранение узких мест обработки приема — знакомство с RSS](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc)
 
 -   [Платформа фильтрации Windows](https://msdn.microsoft.com/windows/hardware/gg463267.aspx)
 
--   [Руководство по развертыванию сетей: Развертывание высокоскоростных сетевых компонентов](https://technet.microsoft.com/library/gg162681.aspx)
+-   [Руководство по развертыванию сетей: развертывание высокоскоростных сетевых компонентов](https://technet.microsoft.com/library/gg162681.aspx)
 
 ## <a name="storage-subsystem-tuning-resources"></a>Ресурсы по настройке подсистемы хранения
 
--   [Анализ производительности дисковой подсистемы для Windows](https://download.microsoft.com/download/e/b/a/eba1050f-a31d-436b-9281-92cdfeae4b45/subsys_perf.doc) (Части этого документа устарели, но многие из общих наблюдений и руководств по-прежнему являются точными и актуальными.)
+-   [Анализ производительности дисковой подсистемы для Windows](https://download.microsoft.com/download/e/b/a/eba1050f-a31d-436b-9281-92cdfeae4b45/subsys_perf.doc) (части этого документа устарели, но многие общие наблюдения и рекомендации по-прежнему являются точными и актуальными).
 
 ## <a name="file-server-tuning-resources"></a>Ресурсы по настройке файлового сервера
 
 -   [Рекомендации по настройке производительности для служб Microsoft для сетевой файловой системы](https://technet.microsoft.com/library/bb463205.aspx)
 
--   [\[MS-ФССО\]: Обзор системы служб доступа к файлам](https://download.microsoft.com/download/5/0/1/501ED102-E53F-4CE0-AA6B-B0F93629DDC6/Windows/%5bMS-FSSO%5d.pdf)
+-   [\[MS-ФССО\]: обзор системы служб доступа к файлам](https://download.microsoft.com/download/5/0/1/501ED102-E53F-4CE0-AA6B-B0F93629DDC6/Windows/%5bMS-FSSO%5d.pdf)
 
 -   [Отключение средства диагностики автонастройки TCP](https://support.microsoft.com/kb/967475)
 
@@ -65,7 +65,7 @@ ms.locfileid: "71355077"
 
 -   [Динамическая память по настройке Hyper-V](https://technet.microsoft.com/library/ff817651.aspx)
 
--   [Балансировка узлов NUMA](http://blogs.technet.com/b/winserverperformance/archive/2009/12/10/numa-node-balancing.aspx)
+-   [Балансировка узлов NUMA](https://blogs.technet.com/b/winserverperformance/archive/2009/12/10/numa-node-balancing.aspx)
 
 -   [Поставщик WMI Hyper-V](https://msdn2.microsoft.com/library/cc136992(VS.85).aspx)
 
@@ -73,9 +73,9 @@ ms.locfileid: "71355077"
 
 -   [О виртуальных машинах и гостевых операционных системах](https://technet.microsoft.com/library/cc794868(v=ws.10))
 
--   [Оптимизация и устранение неполадок в хранилище Hyper-V](http://blogs.msdn.com/b/microsoft_press/archive/2013/07/24/new-book-optimizing-and-troubleshooting-hyper-v-storage.aspx)
+-   [Оптимизация и устранение неполадок в хранилище Hyper-V](https://blogs.msdn.com/b/microsoft_press/archive/2013/07/24/new-book-optimizing-and-troubleshooting-hyper-v-storage.aspx)
 
--   [Оптимизация и устранение неполадок сети Hyper-V](http://blogs.msdn.com/b/microsoft_press/archive/2013/07/12/rtm-d-today-optimizing-and-troubleshooting-hyper-v-networking.aspx)
+-   [Оптимизация и устранение неполадок сети Hyper-V](https://blogs.msdn.com/b/microsoft_press/archive/2013/07/12/rtm-d-today-optimizing-and-troubleshooting-hyper-v-networking.aspx)
 
 ## <a name="print-server-tuning-resources"></a>Ресурсы по настройке сервера печати
 
@@ -97,9 +97,9 @@ ms.locfileid: "71355077"
 
 -   [Настройка производительности для оперативной обработки транзакций (OLTP)](https://msdn.microsoft.com/library/windows/hardware/dn567642(v=vs.85).aspx)
 
--   [Практическое руководство. Настройка SQL Server для использования программной архитектуры NUMA](https://go.microsoft.com/fwlink/?LinkId=98292)
+-   [Как настроить SQL Server для использования программной архитектуры NUMA](https://go.microsoft.com/fwlink/?LinkId=98292)
 
--   [Практическое руководство. Сопоставьте порты TCP/IP с узлами NUMA](https://go.microsoft.com/fwlink/?LinkId=98293)
+-   [Как сопоставлять порты TCP/IP с узлами NUMA](https://go.microsoft.com/fwlink/?LinkId=98293)
 
 -   [ALTER SERVER CONFIGURATION (Transact-SQL)](https://msdn.microsoft.com/library/ee210585.aspx)
 

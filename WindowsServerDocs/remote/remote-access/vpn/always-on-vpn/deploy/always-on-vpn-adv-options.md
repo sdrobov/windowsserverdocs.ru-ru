@@ -10,12 +10,12 @@ ms.author: pashort, v-tea
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: d186946c0d4490201b7989ba8d418f9c667aa6e4
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: 73d64cd143b7bbd13e0eb9bb5fadfbb1e7c65416
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945319"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950439"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Дополнительные возможности Always On VPN
 
@@ -121,7 +121,7 @@ ms.locfileid: "74945319"
    Event ID:      41  
    ...  
    Event Xml:
-   <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+   <Event xmlns="https://schemas.microsoft.com/win/2004/08/events/event">
     <UserData>  
      <CertVerifyRevocation>  
       <Certificate fileRef="C97AE73E9823E8179903E81107E089497C77A720.cer" subjectName="client01.corp.contoso.com" />  
@@ -142,11 +142,11 @@ ms.locfileid: "74945319"
 
 Дополнительные сведения о аттестации ключей TPM в Windows 10 см. в разделе [аттестация ключей TPM](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/component-updates/tpm-key-attestation).
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Далее
 
 [Начните планирование развертывания Always on VPN](always-on-vpn-deploy-planning.md). перед установкой роли сервера удаленного доступа на компьютере, который планируется использовать в качестве VPN-сервера, выполните следующие действия. После соответствующего планирования можно развернуть VPN Always On и при необходимости настроить условный доступ для VPN-подключения с помощью Azure AD.  
 
-## <a name="related-topics"></a>Статьи по теме
+## <a name="related-topics"></a>Связанные темы
 - [Балансировка нагрузки прокси-сервера NPS](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md). клиенты протокол RADIUS (RADIUS), которые представляют собой серверы сетевого доступа, такие как серверы виртуальной частной сети (VPN) и точки беспроводного доступа, создают запросы на подключение и отправляют их на серверы RADIUS, такие как NPS. В некоторых случаях сервер политики сети может одновременно получить слишком много запросов на подключение, что приведет к снижению производительности или перегрузке.
 
 - [Обзор диспетчера трафика](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview). в этом разделе приводится обзор диспетчера трафика Azure, который позволяет управлять распределением пользовательского трафика для конечных точек служб. Диспетчер трафика использует службу доменных имен (DNS) для направления клиентских запросов к наиболее подходящей конечной точке в зависимости от метода маршрутизации трафика и работоспособности конечных точек. 

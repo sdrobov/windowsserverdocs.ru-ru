@@ -6,33 +6,33 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 56877bc5ddb3ea5f24f4057051775094654d8bbf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d8d9d47ff8f14ce316d2352729247ab2dcf4acbc
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386045"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949703"
 ---
 # <a name="migrate-sysvol-replication-to-dfs-replication"></a>Перенос репликации SYSVOL в репликацию DFS
 
 
 Обновлено: 25 августа 2010 г.
 
-Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 и Windows Server 2008
+Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Контроллеры домена используют специальную общую папку с именем SYSVOL для репликации сценариев входа в систему и групповая политика файлов объектов на другие контроллеры домена. Windows 2000 Server и Windows Server 2003 используют службу репликации файлов (FRS) для репликации SYSVOL, в то время как Windows Server 2008 использует более новую службу репликация DFS в доменах, использующих режим работы домена Windows Server 2008, и FRS для доменов, которые выполнение более старых режимов работы домена.
 
-Чтобы использовать репликация DFS для репликации папки SYSVOL, можно либо создать новый домен, использующий режим работы домена Windows Server 2008, либо выполнить процедуру, описанную в этом документе, чтобы обновить существующий домен и перенести репликацию в. Репликация DFS.
+Чтобы использовать репликация DFS для репликации папки SYSVOL, можно либо создать новый домен, использующий режим работы домена Windows Server 2008, либо выполнить процедуру, описанную в этом документе, чтобы обновить существующий домен и перенести репликацию в. репликация DFS.
 
-В этом документе предполагается, что у вас есть базовые знания домен Active Directory служб (AD DS), FRS и репликации распределенная файловая система (репликация DFS). Дополнительные сведения см. в статьях [Обзор служб домен Active Directory](http://go.microsoft.com/fwlink/?linkid=147787), [Обзор FRS](http://go.microsoft.com/fwlink/?linkid=121763)или [Обзор репликация DFS](http://go.microsoft.com/fwlink/?linkid=121762)
+В этом документе предполагается, что у вас есть базовые знания домен Active Directory служб (AD DS), FRS и репликации распределенная файловая система (репликация DFS). Дополнительные сведения см. в статьях [Обзор служб домен Active Directory](https://go.microsoft.com/fwlink/?linkid=147787), [Обзор FRS](https://go.microsoft.com/fwlink/?linkid=121763)или [Обзор репликация DFS](https://go.microsoft.com/fwlink/?linkid=121762)
 
 
 > [!NOTE]
-> Чтобы скачать печатную версию этого учебника, перейдите к <a href="http://go.microsoft.com/fwlink/?linkid=150375">руководству по миграции репликации SYSVOL: FRS на DFS</a> (http://go.microsoft.com/fwlink/?LinkId=150375)
+> Чтобы скачать печатную версию этого учебника, перейдите к статье <a href="https://go.microsoft.com/fwlink/?linkid=150375">руководство по миграции репликации SYSVOL: FRS — репликация DFS</a> (https://go.microsoft.com/fwlink/?LinkId=150375)
 <br>
 
 
-## <a name="in-this-guide"></a>В данном руководстве
+## <a name="in-this-guide"></a>В этом руководстве
 
 [Общие сведения о миграции SYSVOL](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd640170(v=ws.10))
 
@@ -70,17 +70,17 @@ ms.locfileid: "71386045"
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Серия миграции SYSVOL: Часть 1. Введение в процесс миграции SYSVOL](http://go.microsoft.com/fwlink/?linkid=121756)
+[Серия миграции SYSVOL. часть 1 — Введение в процесс миграции SYSVOL](https://go.microsoft.com/fwlink/?linkid=121756)
 
-[Серия миграции SYSVOL: Часть 2 — Dfsrmig. exe: Средство миграции SYSVOL](http://go.microsoft.com/fwlink/?linkid=121757)
+[Серия миграции SYSVOL: часть 2 — Dfsrmig. exe: средство миграции SYSVOL](https://go.microsoft.com/fwlink/?linkid=121757)
 
-[Серия миграции SYSVOL: Часть 3. Переход в состояние "ПОДГОТОВЛЕНо"](http://go.microsoft.com/fwlink/?linkid=121758)
+[Серия миграции SYSVOL: часть 3 — миграция в состояние "ПОДГОТОВЛЕНо"](https://go.microsoft.com/fwlink/?linkid=121758)
 
-[Серия миграции SYSVOL: Часть 4. Переход в состояние "перенаправлено"](http://go.microsoft.com/fwlink/?linkid=121759)
+[Серия миграции SYSVOL: часть 4 — переход в состояние "перенаправлено"](https://go.microsoft.com/fwlink/?linkid=121759)
 
-[Серия миграции SYSVOL: Часть 5. Переход в состояние "удалено"](http://go.microsoft.com/fwlink/?linkid=121760)
+[Серия миграции SYSVOL: часть 5 — переход в состояние "удалено"](https://go.microsoft.com/fwlink/?linkid=121760)
 
-[Пошаговое руководством для распределенных файловых систем в Windows Server 2008](http://go.microsoft.com/fwlink/?linkid=85231)
+[Пошаговое руководством для распределенных файловых систем в Windows Server 2008](https://go.microsoft.com/fwlink/?linkid=85231)
 
-[Технический справочник по FRS](http://go.microsoft.com/fwlink/?linkid=121764)
+[Технический справочник по FRS](https://go.microsoft.com/fwlink/?linkid=121764)
 

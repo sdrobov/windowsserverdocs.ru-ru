@@ -9,19 +9,19 @@ ms.date: 08/11/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a7646144b591fd7327f881cb54489201140e9287
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0eb0271dd27791e6f59e896e43bf79b15b89e730
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358146"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949455"
 ---
 # <a name="configure-on-premises-conditional-access-using-registered-devices"></a>Настройка локального условного доступа с помощью зарегистрированных устройств
 
 
 Следующий документ поможет вам установить и настроить локальный условный доступ с зарегистрированными устройствами.
 
-![Условный доступ](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+![условный доступ](media/Using-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
 
 ## <a name="infrastructure-pre-requisites"></a>Предварительные требования к инфраструктуре
 Перед началом локального условного доступа необходимо выполнить следующие требования. 
@@ -30,7 +30,7 @@ ms.locfileid: "71358146"
 |-----|-----
 |Подписка Azure AD с Azure AD Premium | Для включения обратной записи устройства в локальный условный доступ — [Бесплатная пробная версия](https://azure.microsoft.com/trial/get-started-active-directory/)  
 |Подписка Intune|[Бесплатная пробная версия](https://portal.office.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) необходима только для интеграции с MDM для сценариев соответствия устройств.
-|Azure AD Connect|Ноябрь 2015 QFE или более поздней версии.  Получить последнюю версию можно [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=47594).  
+|Подключение к Azure AD|Ноябрь 2015 QFE или более поздней версии.  Получить последнюю версию можно [здесь](https://www.microsoft.com/download/details.aspx?id=47594).  
 |Windows Server 2016|Сборка 10586 или более новая версия для AD FS  
 |Схема Active Directory Windows Server 2016|Требуется уровень схемы 85 или выше.
 |Контроллер домена Windows Server 2016|Это требуется только для развертываний "Hello для бизнеса — доверие".  Дополнительные сведения можно найти [здесь](https://aka.ms/whfbdocs).  
@@ -40,7 +40,7 @@ ms.locfileid: "71358146"
 
  
 ## <a name="upgrade-your-active-directory-schema"></a>Обновление схемы Active Directory
-Чтобы использовать локальный условный доступ с зарегистрированными устройствами, необходимо сначала обновить схему AD.  Должны выполняться следующие условия.
+Чтобы использовать локальный условный доступ с зарегистрированными устройствами, необходимо сначала обновить схему AD.  Должны быть выполнены следующие условия.
     - Схема должна быть версии 85 или более поздней.
     - Это требуется только для леса, к которому присоединен AD FS
 
@@ -210,7 +210,7 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 ### <a name="automatic-mdm-enrollment"></a>Автоматическая регистрация MDM   
 Чтобы включить автоматическую регистрацию зарегистрированных устройств MDM, чтобы можно было использовать утверждение, соответствующее политике управления доступом, выполните действия, описанные [здесь.](https://blogs.technet.microsoft.com/ad/2015/08/14/windows-10-azure-ad-and-microsoft-intune-automatic-mdm-enrollment-powered-by-the-cloud/)  
 
-## <a name="troubleshooting"></a>Поиск и устранение неисправностей  
+## <a name="troubleshooting"></a>"Устранение неполадок"  
 1.  Если возникает ошибка в `Initialize-ADDeviceRegistration`, которая сообщает о том, что объект уже существует в неправильном состоянии, например "объект службы DRS был найден без всех необходимых атрибутов", возможно, вы уже выполняли Azure AD Connect команды PowerShell и в AD DS есть частичная конфигурация.  Попробуйте удалить вручную объекты в разделе **CN = Device Registration Configuration, CN = Services, CN = Configuration, DC =&lt;домена&gt;** и повторите попытку.  
 2.  Для клиентов, присоединенных к домену Windows 10  
     1. Чтобы проверить, работает ли проверка подлинности устройства, войдите на клиент, присоединенный к домену, в качестве тестовой учетной записи пользователя. Чтобы быстро запустить подготовку, заблокируйте и разблокируйте Рабочий стол по крайней мере один раз.   
@@ -224,5 +224,5 @@ Get-ADObject "cn=schema,cn=configuration,dc=domain,dc=local" -Property objectVer
 ### <a name="related-articles"></a>Связанные статьи  
 * [Защита доступа к Office 365 и другим приложениям, подключенным к Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access/)  
 * [Политики для устройств условного доступа для служб Office 365](https://azure.microsoft.com/documentation/articles/active-directory-conditional-access-device-policies/)  
-* [Настройка локального условного доступа с помощью Регистрация устройств Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
-* [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  
+* [Настройка локального условного доступа с помощью регистрации устройств в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-device-registration-on-premises-setup)  
+* [Подключение присоединенных к домену устройств к Azure AD для работы в Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)  

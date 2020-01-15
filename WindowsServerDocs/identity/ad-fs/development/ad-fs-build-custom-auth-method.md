@@ -8,12 +8,12 @@ ms.date: 05/23/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2ef16ddeb241d55b61b484805ff91cb247985d8d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bc881efcd932e36e40f4483ae5a8378884db64a6
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358881"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948868"
 ---
 # <a name="build-a-custom-authentication-method-for-ad-fs-in-windows-server"></a>Создание пользовательского метода проверки подлинности для AD FS в Windows Server
 
@@ -60,7 +60,7 @@ ms.locfileid: "71358881"
 
 2.  Выберите Библиотека классов и убедитесь, что вы используете .NET 4,5.
 
-    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "Создание") поставщика
+    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.71a57ae1-d53d-462b-a846-5b3c02c7d3f2(MSDN.10).jpg "Создание поставщика")
 
 3.  Создайте копию **Microsoft. IdentityServer. Web. dll** из папки% windir%\\ADFS на сервере Windows Server 2012 R2, где была установлена AD FS, и вставьте ее в папку проекта на компьютере разработчика.
 
@@ -70,13 +70,13 @@ ms.locfileid: "71358881"
 
 6.  Нажмите кнопку **ОК** , чтобы подтвердить новую ссылку:
 
-    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "Создание") поставщика
+    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.f18df353-9259-4744-b4b6-dd780ce90951(MSDN.10).jpg "Создание поставщика")
 
     Теперь необходимо настроить разрешение всех типов, необходимых для поставщика. 
 
 7.  Добавьте в проект новый класс (щелкните проект правой кнопкой мыши, **добавьте... Класс...** ) и присвойте ему имя, например **мядаптер**, как показано ниже:
 
-    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "Создание") поставщика
+    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.6b6a7a8b-9d66-40c7-8a86-a2e3b9e14d09(MSDN.10).jpg "Создание поставщика")
 
 8.  В новом файле MyAdapter.cs замените существующий код следующим:
 
@@ -227,10 +227,10 @@ ms.locfileid: "71358881"
          /// Returns an array indicating the type of claim that the adapter uses to identify the user being authenticated.
          /// Note that although the property is an array, only the first element is currently used.
          /// MUST BE ONE OF THE FOLLOWING
-         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
+         /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname"
          /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn"
          /// "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress"
-         /// "http://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
+         /// "https://schemas.microsoft.com/ws/2008/06/identity/claims/primarysid"
          public string[] IdentityClaims
          {
          get { return new[] { "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn" }; }
@@ -343,7 +343,7 @@ ms.locfileid: "71358881"
 
 14. Затем выберите **проект-\>добавить компонент... Файл ресурсов** и назовите файловые **ресурсы**и нажмите кнопку **Добавить:**
 
-   ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "Создание") поставщика
+   ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.3369ad8f-f65f-4f36-a6d5-6a3edbc1911a(MSDN.10).jpg "Создание поставщика")
 
 15. Затем в файле **Resources. resx** выберите **Добавить ресурс... Добавить существующий файл**.  Перейдите к текстовому файлу (содержащему фрагмент HTML), сохраненному ранее.
 
@@ -361,7 +361,7 @@ ms.locfileid: "71358881"
 
 2.  На вкладке **Подписывание** установите флажок **подписать сборку** и выберите **\<создать...\>** в разделе **выберите файл ключа строгого имени:** введите имя файла ключа и пароль и нажмите кнопку **ОК**.  Убедитесь, что установлен флажок **подпись сборки** и снят флажок **только отложенная подпись** .  Страница **подписывания** свойств должна выглядеть следующим образом:
 
-    ![Построение поставщика](media/ad-fs-build-custom-auth-method/Dn783423.0b1a1db2-d64e-4bb8-8c01-ef34296a2668(MSDN.10).jpg "Сборка") поставщика
+    ![Создание поставщика](media/ad-fs-build-custom-auth-method/Dn783423.0b1a1db2-d64e-4bb8-8c01-ef34296a2668(MSDN.10).jpg "сборки поставщика")
 
 3.  Затем выполните сборку решения.
 
@@ -409,7 +409,7 @@ ms.locfileid: "71358881"
 
     В этом случае поставщик будет отображаться как один из поставщиков в системе.
 
-    Пример.
+    Пример:
 
         PS C:\>$typeName = "MFAadapter.MyAdapter, MFAadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”
         PS C:\>Register-AdfsAuthenticationProvider -TypeName $typeName -Name “MyMFAAdapter”
@@ -460,12 +460,12 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 2. Затем настройте глобальные или проверяющие правила для конкретного субъекта, чтобы активировать MFA:
 
-   Пример 1. Создание глобального правила для запроса MFA для внешних запросов:`PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'`
+   Пример 1. Создание глобального правила для запроса MFA для внешних запросов:`PS C:\>Set-AdfsAdditionalAuthenticationRule –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );'`
 
    Пример 2. Создание правил MFA для запроса MFA для внешних запросов к конкретной проверяющей стороне.  (Обратите внимание, что отдельные поставщики не могут быть подключены к отдельным проверяющим сторонам в AD FS в Windows Server 2012 R2).
 
        PS C:\>$rp = Get-AdfsRelyingPartyTrust –Name <Relying Party Name>
-       PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "http://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "http://schemas.microsoft.com/claims/multipleauthn" );'
+       PS C:\>Set-AdfsRelyingPartyTrust –TargetRelyingParty $rp –AdditionalAuthenticationRules 'c:[type == "https://schemas.microsoft.com/ws/2012/01/insidecorporatenetwork", value == "false"] => issue(type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", value = "https://schemas.microsoft.com/claims/multipleauthn" );'
 
 ### <a name="authenticate-with-mfa-using-your-adapter"></a>Проверка подлинности с помощью MFA с использованием адаптера
 
@@ -487,9 +487,9 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
     Если настроено несколько адаптеров, вы увидите страницу выбора MFA с понятным именем выше.
 
-    Проверка подлинности ![с помощью](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "адаптера")
+    ![Проверка подлинности с помощью адаптера](media/ad-fs-build-custom-auth-method/Dn783423.c98d2712-cbd3-4cb9-ac03-2838b81c4f63(MSDN.10).jpg "проверка подлинности с помощью адаптера")
 
-    Проверка подлинности ![с помощью](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "адаптера")
+    ![Проверка подлинности с помощью адаптера](media/ad-fs-build-custom-auth-method/Dn783423.fd3aefc0-ef6c-4a8c-a737-4914c78ff2d2(MSDN.10).jpg "проверка подлинности с помощью адаптера")
 
 Теперь у вас есть рабочая реализация интерфейса, и вы имеете знания о том, как работает модель. Вы можете Трим в качестве дополнительного примера для установки точек останова в Бегинаусентикатион, а также Трендаусентикатион.  Обратите внимание на то, как Бегинаусентикатион выполняется при первом входе пользователя в форму MFA, в то время как Трендаусентикатион активируется при каждой отправке формы.
 
@@ -539,7 +539,7 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
      outgoingClaims = new[] 
      {
      // Return the required authentication method claim, indicating the particulate authentication method used.
-     new Claim( "http://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", 
+     new Claim( "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", 
      "http://example.com/myauthenticationmethod1" )
      };
      return null;
@@ -559,13 +559,13 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 Снимите все флажки, связанные с MFA, в пользовательском интерфейсе MFA, как показано ниже, а затем нажмите кнопку ОК.
 
-![очистить]политику(media/ad-fs-build-custom-auth-method/Dn783423.c111b4e7-5b05-413c-8b0f-222a0e91ac1f(MSDN.10).jpg "очистки") политики
+![очистить политику](media/ad-fs-build-custom-auth-method/Dn783423.c111b4e7-5b05-413c-8b0f-222a0e91ac1f(MSDN.10).jpg "сброс политики")
 
 ### <a name="unregister-provider-windows-powershell"></a>Отмена регистрации поставщика (Windows PowerShell)
 
 `PS C:\> Unregister-AdfsAuthenticationProvider –Name “YourAuthProviderName”`
 
-Пример:`PS C:\> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
+Пример: `PS C:\> Unregister-AdfsAuthenticationProvider –Name “MyMFAAdapter”`
 
 Обратите внимание, что передаваемое "имя" значение совпадает с именем "имя", предоставленным командлету Register-Адфсаусентикатионпровидер.  Это также свойство Name, которое выводится из Get-Адфсаусентикатионпровидер.
 
@@ -577,11 +577,11 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 1.  Сначала используйте следующую команду, чтобы найти полное строгое имя записи:`C:\>.\gacutil.exe /l <yourAdapterAssemblyName>`
 
-    Пример:`C:\>.\gacutil.exe /l mfaadapter`
+    Пример: `C:\>.\gacutil.exe /l mfaadapter`
 
 2.  Затем используйте следующую команду, чтобы удалить ее из глобального кэша сборок:`.\gacutil /u “<output from the above command>”`
 
-    Пример:`C:\>.\gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
+    Пример: `C:\>.\gacutil /u “mfaadapter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=e675eb33c62805a0, processorArchitecture=MSIL”`
 
 ### <a name="add-the-updated-assembly-to-gac"></a>Добавление обновленной сборки в глобальный кэш сборок
 
@@ -597,7 +597,7 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 2.  `PS C:\>Register-AdfsAuthenticationProvider -TypeName $typeName -Name “MyMFAAdapter1”`
 
-3.  Перезапустите службу AD FS.
+3.  Перезагрузите службу AD FS.
 
 ### <a name="create-the-authentication-policy-using-the-ad-fs-management-snap-in"></a>Создание политики проверки подлинности с помощью оснастки "Управление AD FS"
 
@@ -633,9 +633,9 @@ Example:`PS C:\>Set-AdfsGlobalAuthenticationPolicy –AdditionalAuthenticationPr
 
 Вы должны увидеть успешный вход при вводе "адфабрик" на странице проверки подлинности MFA.
 
-![Вход с помощью адаптера]для(media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "входа с помощью адаптера")
+![вход с помощью адаптера](media/ad-fs-build-custom-auth-method/Dn783423.630d8a91-3bfe-4cba-8acf-03eae21530ee(MSDN.10).jpg "Выполните вход с использованием адаптера")
 
-![Вход с помощью адаптера]для(media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "входа с помощью адаптера")
+![вход с помощью адаптера](media/ad-fs-build-custom-auth-method/Dn783423.c340fa73-f70f-4870-b8dd-07900fea4469(MSDN.10).jpg "Выполните вход с использованием адаптера")
 
 ## <a name="see-also"></a>См. также
 

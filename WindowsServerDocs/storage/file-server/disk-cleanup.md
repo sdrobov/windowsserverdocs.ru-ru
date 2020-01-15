@@ -8,16 +8,16 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 2de3452a3528122beb26f403fb0c73d7ff13efd7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bb93ec15fd138ee65797c9d27413552c3a1759a6
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402118"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949672"
 ---
 # <a name="using-disk-cleanup-on-windows-server"></a>Использование программы "Очистка диска" в Windows Server
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Средство очистки диска очищает ненужные файлы в среде Windows Server. Это средство доступно по умолчанию в Windows Server 2019 и Windows Server 2016, но, возможно, потребуется выполнить несколько действий вручную, чтобы включить его в более ранних версиях Windows Server.
 
@@ -63,8 +63,8 @@ ms.locfileid: "71402118"
 
 | Операционная система  | Architecture (Архитектура)  | Расположение файла  |
 | ----------------- | -------------- | --------------- |
-| Windows Server 2008 R2 | 64-разрядная | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da\cleanmgr.exe 
-| Windows Server 2008 R2 | 64-разрядная | C:\Windows\winsxs\amd64_microsoft-windows-cleanmgr.resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63\cleanmgr.exe.mui |
+| Windows Server 2008 R2 | 64-разрядная версия | К:\виндовс\винсксс\ amd64_microsoft — Windows-cleanmgr_31bf3856ad364e35_6.1.7600.16385_none_c9392808773cd7da \клеанмгр.ЕКСЕ 
+| Windows Server 2008 R2 | 64-разрядная версия | К:\виндовс\винсксс\ amd64_microsoft-Windows-Cleanmgr. resources_31bf3856ad364e35_6.1.7600.16385_en-us_b9cb6194b257cc63 \клеанмгр.ЕКСЕ.Муи |
 
 Перейдите к файлу Cleanmgr. exe и переместите его в **%systemroot%\System32**.
 
@@ -76,6 +76,6 @@ ms.locfileid: "71402118"
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Освободить место на диске в Windows 10](https://support.microsoft.com/en-us/help/12425/windows-10-free-up-drive-space)
+[Освободить место на диске в Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
 
 [cleanmgr](../../administration/windows-commands/cleanmgr.md)

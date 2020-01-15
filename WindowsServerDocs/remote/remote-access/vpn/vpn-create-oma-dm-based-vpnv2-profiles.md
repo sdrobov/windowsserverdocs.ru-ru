@@ -15,12 +15,12 @@ ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 67d8a66552f77a66e1689989f412a844ef527880
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 016d9d2dcc26572f8d248ef2f4a922da2e456b83
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404328"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949898"
 ---
 # <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>Шаг 7.5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10
 
@@ -35,7 +35,7 @@ ms.locfileid: "71404328"
 
 Все, что обсуждалось в этом разделе, — это минимум, необходимый для обеспечения работы VPN с условным доступом. Он не охватывает разбиение туннелирования, использование WIP, создание настраиваемых профилей конфигурации устройств Intune для получения Аутовпн работы или единого входа. Интегрируйте приведенные ниже параметры в профиль VPN, созданный ранее на [шаге 5. Настройка клиента Windows 10 Always On VPN-подключений](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md).  В этом примере мы будем интегрировать их в [настройку VPN-клиента с помощью политики Intune](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune) . 
 
-**Готовности к установке**
+**Необходимое условие.**
 
 На клиентском компьютере с Windows 10 уже настроено VPN-подключение с помощью Intune.   
 
@@ -54,7 +54,7 @@ ms.locfileid: "71404328"
 3. Перейдите к разделу, который заканчивается на **\</акцептсервернаме >\</еаптипе >** и вставьте следующую строку между этими двумя значениями, чтобы предоставить VPN-клиенту логику для выбора сертификата условного доступа AAD:
 
     ```XML
-    <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
+    <TLSExtensions xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="https://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
     ```
 
 4. Выберите колонку **Условный доступ** и тугле **Условный доступ для этого VPN-подключения** , чтобы **включить**его.
@@ -90,13 +90,13 @@ ms.locfileid: "71404328"
 
 Вы завершили настройку профиля VPN для использования условного доступа Azure AD. 
 
-|Если вы хотите...  |Затем см...  |
+|Если вы хотите…  |Затем см...  |
 |---------|---------|
 |Дополнительные сведения о том, как условный доступ работает с VPN  |[VPN и условный доступ](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access). на этой странице содержатся дополнительные сведения о том, как условный доступ работает с VPN.      |
 |Дополнительные сведения о дополнительных возможностях VPN  |[Дополнительные функции VPN](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features). на этой странице приводятся рекомендации по включению фильтров трафика VPN, настройке АВТОМАТИЧЕСКИх VPN-подключений с помощью триггеров приложений и настройке NPS для разрешения VPN-подключений только от клиентов, использующих сертификаты, выданные Azure AD.        |
 
 
-## <a name="related-topics"></a>Статьи по теме
+## <a name="related-topics"></a>Связанные темы
 
 - [Поддержка VPNV2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp). в этом разделе содержится обзор службы CSP поддержка vpnv2. Поставщик службы настройки поддержка vpnv2 позволяет серверу управления мобильными устройствами (MDM) настраивать профиль VPN устройства.
 

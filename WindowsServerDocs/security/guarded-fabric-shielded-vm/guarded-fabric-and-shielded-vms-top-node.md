@@ -9,39 +9,39 @@ author: rpsqrd
 ms.author: justinha
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: c06432a039341978956066344710920652187b97
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f23d0be0d860695b014f57fd55d8e321e81a70ca
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403663"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950329"
 ---
 # <a name="guarded-fabric-and-shielded-vms"></a>Защищенная структура и экранированные виртуальные машины
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных услуг и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), являющейся, как правило, кластером из трех узлов, одного или нескольких защищенных узлов и набора экранированных виртуальных машин.
+Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), являющейся, как правило, кластером из трех узлов, одного или нескольких защищенных узлов и набора экранированных виртуальных машин.
 
 > [!IMPORTANT]
 > Перед развертыванием экранированных виртуальных машин в рабочей среде убедитесь, что установлено последнее накопительное обновление.
 
 ## <a name="videos-blog-and-overview-topic-about-guarded-fabrics-and-shielded-vms"></a>Видеоролики, блоги и обзорные разделы о защищенных структурах и экранированных виртуальных машинах
 
-- Видео [Как защитить структуру виртуализации от предварительных угроз с помощью Windows Server 2019](https://myignite.techcommunity.microsoft.com/sessions/64690)
-- Видео [Общие сведения о экранированных виртуальных машинах в Windows Server 2016](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
-- Видео [Познакомьтесь с экранированными виртуальными машинами с помощью Windows Server 2016 Hyper-V](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
-- Видео [Развертывание экранированных виртуальных машин и защищенной структуры с помощью Windows Server 2016](https://mva.microsoft.com/en-US/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474)
-- Серверах [Блог по безопасности центра обработки данных и частного облака](https://blogs.technet.microsoft.com/datacentersecurity/)
+- Видео. [Защита структуры виртуализации от предварительных угроз с помощью Windows Server 2019](https://myignite.techcommunity.microsoft.com/sessions/64690)
+- Видео. [Введение в экранированные виртуальные машины в Windows Server 2016](https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016)
+- Видео. перейдем [к экранированным виртуальным машинам с помощью Windows Server 2016 Hyper-V](https://channel9.msdn.com/events/Ignite/2016/BRK3124)
+- Видео. [развертывание экранированных виртуальных машин и защищенной структуры с помощью Windows Server 2016](https://mva.microsoft.com/training-courses/deploying-shielded-vms-and-a-guarded-fabric-with-windows-server-2016-17131?l=WFLef7vUD_4604300474)
+- Блог: [блог по безопасности центра обработки данных и частного облака](https://blogs.technet.microsoft.com/datacentersecurity/)
 - Обзор: [Обзор защищенной структуры и экранированных виртуальных машин](Guarded-Fabric-and-Shielded-VMs.md)
 
-## <a name="planning-topics"></a>Темы по планированию
+## <a name="planning-topics"></a>Разделы, посвященные планированию
 
 - [Структура планирования для поставщиков услуг размещения](guarded-fabric-planning-for-hosters.md)
 - [Структура планирования для клиентов](guarded-fabric-shielded-vm-planning-for-tenants.md)
 
-## <a name="deployment-topics"></a>Разделы по развертыванию
+## <a name="deployment-topics"></a>Разделы, посвященные развертыванию
 
-- [Рекомендации по развертыванию](guarded-fabric-deploying-hgs-overview.md)
+- [Руководство по развертыванию](guarded-fabric-deploying-hgs-overview.md)
     - [Быстрый запуск](guarded-fabric-deployment-overview.md)
     - [Развертывание HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
     - [Развертывание защищенных узлов](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)

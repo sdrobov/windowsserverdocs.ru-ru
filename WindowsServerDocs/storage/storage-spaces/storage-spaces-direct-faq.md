@@ -9,12 +9,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: df9dac8c761a83a13fb937a99cba3697dce95201
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 19dcc1c57fe7c7eea74b003553a0b0a6ab5508aa
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402797"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950229"
 ---
 # <a name="storage-spaces-direct---frequently-asked-questions-faq"></a>Локальные дисковые пространства-часто задаваемые вопросы
 
@@ -44,7 +44,7 @@ ms.locfileid: "71402797"
 
 Нет. По умолчанию при использовании одного типа устройства для создания пула не настраивает диски кэша, и все диски будут использоваться для емкости. Вы можете добавить диски NVME в конфигурацию, а диски NVME будут настроены для кэширования.
  
-## <a name="i-have-configured-a-2-rack-fault-domain-rack-1-has-2-fault-domains-rack-2-has-1-fault-domain-each-server-has-4-capacity-100-gb-devices-can-i-use-all-1200-gb-of-space-from-the-pool"></a>Я настроил домен сбоя с 2 стойками: В СТОЙКу 1 есть 2 домена сбоя, в СТОЙКе 2 — 1 домен сбоя. На каждом сервере есть 4 емкости 100 ГБ устройств. Можно ли использовать все 1 200 ГБ пространства из пула?
+## <a name="i-have-configured-a-2-rack-fault-domain-rack-1-has-2-fault-domains-rack-2-has-1-fault-domain-each-server-has-4-capacity-100-gb-devices-can-i-use-all-1200-gb-of-space-from-the-pool"></a>Я настроил домен сбоя из двух стоек: в СТОЙКе 1 есть 2 домена сбоя, в СТОЙКе 2 — 1 домен сбоя. На каждом сервере есть 4 емкости 100 ГБ устройств. Можно ли использовать все 1 200 ГБ пространства из пула?
 
 Нет, можно использовать только 800 ГБ. В домене сбоя в стойке необходимо убедиться в том, что у вас есть двусторонняя зеркальная конфигурация, чтобы каждый Чак и ее дубликат в другой стойке.
  
@@ -58,7 +58,7 @@ ms.locfileid: "71402797"
  
 ## <a name="is-there-a-calculator-that-shows-the-exact-size-of-the-disks-that-are-being-set-aside-for-cache-capacity-and-resiliency-that-would-enable-me-to-plan-better"></a>Есть ли калькулятор, показывающий точный размер дисков, которые задаются для кэша, емкости и устойчивости, что позволит мне лучше спланировать их?
 
-С помощью калькулятора дисковых пространств можно помочь в планировании. Он доступен по адресу http://aka.ms/s2dcalc.
+С помощью калькулятора дисковых пространств можно помочь в планировании. Он доступен по адресу https://aka.ms/s2dcalc.
  
 ## <a name="what-is-the-best-configuration-that-you-would-recommend-when-configuring-6-servers-and-3-racks"></a>Какова лучшая конфигурация, рекомендуемая при настройке 6 серверов и 3 стоек?
 
@@ -76,7 +76,7 @@ Get-PhysicalDisk -SerialNumber <SerialNumber> | Enable-StorageMaintenanceMode
 
 Для проверки поддержки рекомендуется обратиться к поставщику оборудования. Поставщики оборудования проверяют решение на оборудовании и комментарии о том, поддерживается ли он. Например, на момент написания этой статьи такие серверы, как R730/R730xd/R630 с более чем 8 слотами дисков, могут поддерживать SES и совместимы с Локальные дисковые пространства. Dell поддерживает только HBA330 с Локальные дисковые пространства. R620 не поддерживает SES и несовместим с Локальные дисковые пространства.
 
-Для получения дополнительных сведений о поддержке оборудования перейдите на следующий веб-сайт: Каталог Windows Server
+Для получения дополнительных сведений о поддержке оборудования перейдите на следующий веб-сайт: каталог Windows Server.
  
 ## <a name="how-does-storage-spaces-direct-make-use-of-ses"></a>Как Локальные дисковые пространства использовать SES?
 

@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 9a116cc9d86dfe0bb4450efa0f18580a062af722
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: ddc8eea67cde9d6677836af1201e169c911e77e0
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903723"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950480"
 ---
 # <a name="manage-servers-with-windows-admin-center"></a>Управление серверами с помощью центра администрирования Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "74903723"
 
 > [!Tip]
 > Только начинаете знакомство с Windows Admin Center?
-> [Узнайте дополнительные сведения о Windows Admin Center](../understand/windows-admin-center.md) или [скачайте платформу](https://aka.ms/windowsadmincenter).
+> [Скачайте или Узнайте больше о центре администрирования Windows](../overview.md).
 
 ## <a name="managing-windows-server-machines"></a>Управление компьютерами с Windows Server
 
@@ -43,15 +43,15 @@ ms.locfileid: "74903723"
 > [!NOTE]
 > В центре администрирования Windows также можно добавить [отказоустойчивые кластеры](manage-failover-clusters.md) или кластеры с [поддержкой Hyper-](manage-hyper-converged.md) в качестве отдельного подключения.
 
-## <a name="tools"></a>Инструменты
+## <a name="tools"></a>Средства
 
 Для подключений к серверу доступны следующие средства.
 
-| Инструмент | Описание |
+| Средство | Описание |
 | ---- | ----------- |
 | [Обзор](#overview) | Просмотр сведений о сервере и контроль состояния сервера |
 | [Active Directory](#active-directory-preview) | Управление Active Directory |
-| [Backup](#backup) | Просмотр и настройка Azure Backup |  
+| [Azure Backup](#backup) | Просмотр и настройка Azure Backup |  
 | [Сертификаты](#certificates) | Просмотр и изменение сертификатов |
 | [Контейнеры](#containers) | Просмотр контейнеров |
 | [Устройства](#devices) | Просмотр и изменение устройств |
@@ -62,7 +62,7 @@ ms.locfileid: "74903723"
 | [Брандмауэр](#firewall). | Просмотр и изменение правил брандмауэра |
 | [Установленные приложения](#installed-apps) | Просмотр и удаление установленных приложений |
 | [Локальные пользователи и группы](#local-users-and-groups) | Просмотр и изменение локальных пользователей и групп |
-| [Сети](#network) | Просмотр и изменение сетевых устройств |
+| [Сеть](#network) | Просмотр и изменение сетевых устройств |
 | [Мониторинг пакетов](https://aka.ms/wac1908) | Мониторинг сетевых пакетов |
 | [Системный монитор](https://aka.ms/perfmon-blog) | Просмотр счетчиков производительности и отчетов |
 | [PowerShell](#powershell) | Взаимодействие с сервером с помощью PowerShell |
@@ -77,7 +77,7 @@ ms.locfileid: "74903723"
 | [Служба миграции хранилища](#storage-migration-service) | Перенос серверов и файловых ресурсов в Azure или Windows Server 2019 |
 | [Реплика хранилища](#storage-replica) | Использование реплики хранилища для управления репликацией хранилища "сервер-сервер" |
 | [Системная аналитика](#system-insights) | System Insights позволяет получить представление о работе сервера. |
-| [Updates](#updates) | Просмотреть установленные и проверить новые обновления |
+| [Обновления](#updates) | Просмотреть установленные и проверить новые обновления |
 | [Виртуальные машины](manage-virtual-machines.md) | Просмотр виртуальных машин и управление ими |
 | [Виртуальные коммутаторы](#virtual-switches) | Просмотр виртуальных коммутаторов и управление ими |
 
@@ -109,7 +109,7 @@ ms.locfileid: "74903723"
 
 Доступны следующие возможности управления Active Directory:
 
-- Создать пользователя
+- создание пользователя;
 - Создание группы
 - Поиск пользователей, компьютеров и групп
 - Область сведений для пользователей, компьютеров и групп при выборе в сетке
@@ -189,7 +189,7 @@ ms.locfileid: "74903723"
 
 [**Просмотрите Отзывы и предлагаемые функции для DHCP**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BDHCP%5D).
 
-## <a name="dns"></a>DNS
+## <a name="dns"></a>Служба доменных имен (DNS)
 
 **Служба DNS** позволяет управлять подключенными устройствами на компьютере или сервере.
 
@@ -372,7 +372,7 @@ ms.locfileid: "74903723"
 
 [**Просмотр отзывов и предлагаемых функций для ролей и компонентов**](https://windowsserver.uservoice.com/forums/295071/filters/top?category_id=319162&query=%5BRoles%20and%20Features%5D).
 
-## <a name="scheduled-tasks"></a>Запланированные задачи
+## <a name="scheduled-tasks"></a>Назначенные задачи
 
 **Запланированные задачи** позволяют управлять запланированными задачами на компьютере или сервере.
 
@@ -417,7 +417,7 @@ ms.locfileid: "74903723"
 - Просмотр и изменение параметров управления доступом на основе ролей
 - Просмотр и изменение параметров узла Hyper-V (если применимо)
 
-## <a name="storage"></a>Хранилище
+## <a name="storage"></a>Хранение
 
 **Хранилище** позволяет управлять устройствами хранения данных на компьютере или сервере.
 

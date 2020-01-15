@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b0d6133a6fb43b8624dc1329db632fb5dd4aa070
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4f5d2cfa8383bcf3c0813b272f8c4828473b8df9
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358450"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948599"
 ---
 # <a name="client-access-control-policies-in-ad-fs-20"></a>Политики управления доступом клиентов в AD FS 2,0
 Политики клиентского доступа в службы федерации Active Directory (AD FS) 2,0 позволяют ограничить или предоставить пользователям доступ к ресурсам.  В этом документе описано, как включить политики клиентского доступа в AD FS 2,0 и как настроить наиболее распространенные сценарии.
@@ -25,7 +25,7 @@ ms.locfileid: "71358450"
 
 ### <a name="step-1-install-the-update-rollup-2-for-ad-fs-20-package-on-your-ad-fs-servers"></a>Шаг 1. Установите накопительный пакет обновления 2 для пакета AD FS 2,0 на серверах AD FS
 
-Скачайте [накопительный пакет обновления 2 для пакета службы федерации Active Directory (AD FS) (AD FS) 2,0](https://support.microsoft.com/en-us/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) и установите его на всех серверах федерации и прокси-серверах федерации.
+Скачайте [накопительный пакет обновления 2 для пакета службы федерации Active Directory (AD FS) (AD FS) 2,0](https://support.microsoft.com/help/2681584/description-of-update-rollup-2-for-active-directory-federation-services-ad-fs-2.0) и установите его на всех серверах федерации и прокси-серверах федерации.
 
 ### <a name="step-2-add-five-claim-rules-to-the-active-directory-claims-provider-trust"></a>Шаг 2. добавление пяти правил утверждений в Active Directory отношения доверия поставщика утверждений
 
@@ -195,7 +195,7 @@ ms.locfileid: "71358450"
 IP-адреса, связанные с инфраструктурой Exchange Online, не будут отображаться в списке.
 
 
-#### <a name="regular-expressions"></a>Регулярные выражения
+#### <a name="regular-expressions"></a>Использование регулярных выражений
 
 Если необходимо сопоставить диапазон IP-адресов, необходимо создать регулярное выражение для выполнения сравнения. В следующих шагах мы предложим примеры того, как создать такое выражение, которое будет соответствовать следующим диапазонам адресов (Обратите внимание, что эти примеры потребуется изменить в соответствии с диапазоном общедоступных IP-адресов):
 

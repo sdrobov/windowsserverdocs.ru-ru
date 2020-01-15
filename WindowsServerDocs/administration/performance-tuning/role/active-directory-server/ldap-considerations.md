@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: f6670c8cfd718360518869f0551461c45e5aed27
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e407f9f32339e3f9c75e3722ad218228b608b9d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370285"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947116"
 ---
 # <a name="ldap-considerations-in-adds-performance-tuning"></a>Рекомендации по LDAP в добавляет настройку производительности
 
@@ -60,7 +60,7 @@ ms.locfileid: "71370285"
 
 -   [Отслеживание дорогостоящих и неэффективных поисков](https://msdn.microsoft.com/library/ms808539.aspx)
 
--   Группа сборщиков данных диагностики Active Directory в мониторе производительности (от-за[Spa: Наборы сборщиков данных AD в Win2008 и более поздних версиях](http://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx))
+-   Группа сборщиков данных диагностики Active Directory в мониторе производительности (от-за[Spa: Наборы сборщиков данных AD в Win2008 и более поздних версиях](https://blogs.technet.com/b/askds/archive/2010/06/08/son-of-spa-ad-data-collector-sets-in-win2008-and-beyond.aspx))
 
 -   [Советник по производительности Microsoft Server](../../../server-performance-advisor/microsoft-server-performance-advisor.md) Пакет Advisor Active Directory
 
@@ -98,7 +98,7 @@ ms.locfileid: "71370285"
 
 -   [Индексированные атрибуты](https://msdn.microsoft.com/library/windows/desktop/ms677112.aspx)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [Настройка производительности Active Directory серверов](index.md)
 - [Рекомендации по оборудованию](hardware-considerations.md)

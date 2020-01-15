@@ -8,16 +8,16 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
-ms.openlocfilehash: 35efca71278c288189819d6c9fc49ba8195d18a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 923bc2c46f37cf7e631a744c9eae85c3dd7506dd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386818"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949813"
 ---
 >Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-### <a name="add-host-information-for-tpm-trusted-attestation"></a>Добавление сведений об узле для аттестации с доверенным платформенным модулем
+# <a name="add-host-information-for-tpm-trusted-attestation"></a>Добавление сведений об узле для аттестации с доверенным платформенным модулем
 
 Для режима TPM администратор структуры захватывает три типа информации об узле, каждый из которых необходимо добавить в конфигурацию HGS:
 
@@ -59,7 +59,7 @@ ms.locfileid: "71386818"
 
 Это завершает процесс настройки кластера HGS для работы в режиме TPM. Администратору структуры может потребоваться предоставить два URL-адреса из HGS, прежде чем можно будет завершить настройку для узлов. Чтобы получить эти URL-адреса, на сервере HGS выполните команду [Get-HgsServer](https://docs.microsoft.com/powershell/module/hgsserver/get-hgsserver?view=win10-ps).
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Далее
 
 > [!div class="nextstepaction"]
 > [Подтверждение аттестации](guarded-fabric-confirm-hosts-can-attest-successfully.md)

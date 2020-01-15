@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 05/31/2019
-ms.openlocfilehash: e76d1205c22d6ce484abc86ed5e3c74ac1010f29
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: b82d2eaa9283d99993102f1656262e2eda86cfff
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945293"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950128"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Подключение Windows Server к гибридным службам Azure
 
@@ -31,7 +31,7 @@ ms.locfileid: "74945293"
 
 ## <a name="discover-integrated-services-in-the-azure-hybrid-services-tool"></a>Поиск интегрированных служб в средстве для работы с гибридными службами Azure
 
-Средство для работы с гибридными службами Azure в [Windows Admin Center](../understand/windows-admin-center.md) объединяет все интегрированные службы Azure в единый центр, в котором можно легко определить все доступные службы Azure, которые повышают эффективность вашей локальной или гибридной среды.  
+Средство для работы с гибридными службами Azure в [Windows Admin Center](../overview.md) объединяет все интегрированные службы Azure в единый центр, в котором можно легко определить все доступные службы Azure, которые повышают эффективность вашей локальной или гибридной среды.  
 
 ![Снимок экрана Windows Admin Center, на котором показано средство для работы с гибридными службами Azure](../media/azure-services/ahs-discover.png)
 
@@ -155,7 +155,7 @@ ms.locfileid: "74945293"
 См. сведения об [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/overview).
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [Подключение Windows Admin Center к Azure](azure-integration.md)
 - [Развертывание Windows Admin Center в Azure](deploy-wac-in-azure.md)

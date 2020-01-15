@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 02/15/2019
-ms.openlocfilehash: 1643568cd1a0cdbb693d773a8357d2c36b701fd3
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: fc8e6ffa39320cfc73bf3f5bd0a5bc765ded24b4
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903985"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950526"
 ---
 # <a name="get-started-with-windows-admin-center"></a>Приступая к работе с центром администрирования Windows
 
@@ -21,7 +21,7 @@ ms.locfileid: "74903985"
 
 > [!Tip]
 > Только начинаете знакомство с Windows Admin Center?
-> [Узнайте дополнительные сведения о Windows Admin Center](../understand/windows-admin-center.md) или [скачайте платформу](https://aka.ms/windowsadmincenter).
+> [Узнайте дополнительные сведения о Windows Admin Center](../overview.md) или [скачайте платформу](https://aka.ms/windowsadmincenter).
 
 ## <a name="windows-admin-center-installed-on-windows-10"></a>Центр администрирования Windows, установленный в Windows 10
 
@@ -151,7 +151,7 @@ ms.locfileid: "74903985"
 * Можно выбрать "или", "и" или "не", чтобы изменить поведение фильтра для выбранных тегов.
 ![](../media/launch/tags-8.png)
 
-## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>Использование PowerShell для импорта или экспорта подключений (с тегами)
+## <a name="use-powershell-to-import-or-export-your-connections-with-tags"></a>Импорт и экспорт подключений (с тегами) с помощью PowerShell
 
 [!INCLUDE [ps-connections](../includes/ps-connections.md)]
 

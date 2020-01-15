@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
 ms.technology: identity-adds
-ms.openlocfilehash: f65508bf8973721a09c779a52f708d6a258e2cb5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f6bee5164849d6643c1744ce121b9ce91b5e7f7f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390226"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949043"
 ---
 # <a name="resources-to-verify-replication-is-working"></a>Ресурсы для проверки работы репликации 
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 После восстановления или повторной установки всех контроллеров домена можно убедиться, что AD DS и SYSVOL восстановлены и правильно реплицируются с помощью **repadmin/реплсум**, работающей на любой версии Windows Server.  
   
@@ -29,14 +29,14 @@ ms.locfileid: "71390226"
 
 Если первый восстановленный контроллер домена регистрирует событие с кодом 4614 ("контроллер домена ожидает выполнения начальной репликации. Реплицированная папка останется в состоянии начальной синхронизации до тех пор, пока она не будет реплицирована с партнером "") в журнал репликация DFS, а событие с ИДЕНТИФИКАТОРом 4602 не отображается, и вам потребуется выполнить следующие действия, чтобы восстановить SYSVOL, если он реплицируется с помощью СЛУЖБЕ  
 
-1. При появлении события DFSR 4612 на первом восстановленном контроллере домена выполните принудительное восстановление вручную, как описано в [2218556: Как принудительно выполнить полномочное и неполномочное синхронизацию для реплицированного каталога DFSR (например, "D4/D2" для FRS) ](https://support.microsoft.com/kb/2218556) (https://support.microsoft.com/kb/2218556) ).  
+1. Когда событие DFSR 4612 появляется на первом восстановленном контроллере домена, выполните принудительное восстановление вручную, как описано в [2218556: как принудительно выполнить полномочное и неполномочное синхронизацию для реплицированного SYSVOL (например, "D4/D2" для FRS)](https://support.microsoft.com/kb/2218556) (https://support.microsoft.com/kb/2218556).  
 2. Установите для **флага сисволреади** значение 1 вручную, как описано в [947022. общий ресурс NETLOGON отсутствует после установки домен Active Directory Services на новом полном или доступном только для чтения контроллере домена на базе Windows Server 2008](https://support.microsoft.com/kb/947022).  
 
-Можно также создать диагностический отчет репликация DFS. Дополнительные сведения см. [в разделе Создание диагностического отчета для репликация DFS](https://technet.microsoft.com/library/cc754227.aspx) и пошагового [руководств по DFS для Windows Server 2008](https://technet.microsoft.com/library/cc732863\(WS.10\).aspx). Если сервер работает под Windows Server 2008 R2, можно использовать [параметр командной строки Dfsrdiag. exe ReplicationState](http://blogs.technet.com/b/filecab/archive/2009/05/28/dfsrdiag-exe-replicationstate-what-s-dfsr-up-to.aspx).  
+Можно также создать диагностический отчет репликация DFS. Дополнительные сведения см. [в разделе Создание диагностического отчета для репликация DFS](https://technet.microsoft.com/library/cc754227.aspx) и пошагового [руководств по DFS для Windows Server 2008](https://technet.microsoft.com/library/cc732863\(WS.10\).aspx). Если сервер работает под Windows Server 2008 R2, можно использовать [параметр командной строки Dfsrdiag. exe ReplicationState](https://blogs.technet.com/b/filecab/archive/2009/05/28/dfsrdiag-exe-replicationstate-what-s-dfsr-up-to.aspx).  
 
 Можно также запустить тест репликации с помощью программы Dcdiag. exe, чтобы проверить наличие ошибок репликации. Дополнительные сведения см. в статье базы знаний [249256](https://support.microsoft.com/kb/249256).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 9c6c6e7d2c12b6b822989bba05370015f7cd1833
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ce000ec618d0c06ca938b21e9bc363250e1aa38f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407816"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949617"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -75,7 +75,7 @@ ms.locfileid: "71407816"
 
 Пример основан на существующем образце OBO в Azure, созданном с помощью Витторио Берточчи и доступен [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Выполните инструкции по клонированию проекта на компьютере разработки и создайте копию примера, чтобы начать работу с.
 
-## <a name="clone-or-download-this-repository"></a>Клонировать или скачать этот репозиторий
+## <a name="clone-or-download-this-repository"></a>Клонирование или скачивание этого репозитория
 
 Из оболочки или командной строки:
 
@@ -274,14 +274,14 @@ ms.locfileid: "71407816"
 * Открытие файла Web. config
 * Измените следующие ключи:
 
-| Раздел                      | Значение                                                                                                                                                                                                                   |
+| Раздел                      | Применение                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например https://localhost:44321/                                                                                         |
 | IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например <https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
-| IDA: ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
+| ida:ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
 | IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
 | IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, например https://localhost:44300                                                                                                                     |
-| IDA: центр сертификации            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
+| ida:Authority            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 Все остальные ключи Ida: XXXXXXX в узле **appSettings** можно закомментировать или удалить.
 
@@ -359,7 +359,7 @@ ms.locfileid: "71407816"
     // POST api/todolist
     public async Task Post(TodoItem todo)
     {
-      if (!ClaimsPrincipal.Current.FindFirst("http://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
+      if (!ClaimsPrincipal.Current.FindFirst("https://schemas.microsoft.com/identity/claims/scope").Value.Contains("user_impersonation"))
         {
             throw new HttpResponseException(new HttpResponseMessage { StatusCode = HttpStatusCode.Unauthorized, ReasonPhrase = "The Scope claim does not contain 'user_impersonation' or scope claim not found" });
         }
@@ -494,7 +494,7 @@ ms.locfileid: "71407816"
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 Вы также можете просмотреть подробные трассировки на Fiddler. Запустите Fiddler и включите расшифровку по протоколу HTTPS. Вы видите, что мы делаем два запроса к конечной точке/адфс/оаутинклудес.
-В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![ AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
 Во втором взаимодействии с конечной точкой маркера можно увидеть, что у нас есть **requested_token_use** в качестве **on_behalf_of** и мы используем маркер доступа, полученный для веб-службы среднего уровня, т. е. https://localhost:44321/ в качестве утверждения для получения маркера от имени.
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)

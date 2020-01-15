@@ -1,6 +1,6 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
-title: Что нового в установке и удалении доменных служб Active Directory
+title: Новые возможности при установке и удалении доменных служб Active Directory
 description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
@@ -9,14 +9,14 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 286d3ee6e9c2b9959a4cc60a710b1cb078612201
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1f24615491391d932609d7f80549985818ced8c1
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369561"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947906"
 ---
-# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Что нового в установке и удалении доменных служб Active Directory
+# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Новые возможности при установке и удалении доменных служб Active Directory
 
 >Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -80,7 +80,7 @@ Adprep was unable to check the specified user's group membership. This could hap
 
 Если вы запускаете программу adprep.exe, не указывая параметры /user и /userdomain, и хозяин операций работает под управлением Windows Server 2003, то adprep.exe обращается к контроллеру домена в домене текущего пользователя, выполнившего вход в систему. Если учетная запись этого пользователя не является учетной записью домена, программа adprep.exe не сможет выполнить проверку членства в группах. Adprep.exe также не сможет выполнить проверку членства в группах, если используются учетные данные смарт-карты, даже если вы укажете оба параметра /user и /userdomain.  
   
-Если работа Adprep завершается успешно, никаких действий выполнять не нужно. Если работа Adprep завершилась ошибками доступа, укажите учетную запись с правильным членством. Дополнительные сведения см. в разделе [Требования к учетным данным для выполнения программы adprep.exe и установки доменных служб Active Directory](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
+Если работа Adprep завершается успешно, никаких действий выполнять не нужно. Если работа Adprep завершилась ошибками доступа, укажите учетную запись с правильным членством. Дополнительные сведения см. в разделе [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
   
 ### <a name="syntax-for-adprep-in-windows-server-2012"></a>Синтаксис Adprep в Windows Server 2012
 
@@ -116,7 +116,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
 Другие проверки предварительных требований, которые были перенесены из прежнего мастера установки Active Directory (dcpromo.exe), включают следующее.  
 
-- Проверка имени леса: гарантирует, что имя леса является допустимым и в настоящее время не существует.  
+- Проверка имени леса: проверка того, является ли имя леса допустимым и не существует ли уже оно.  
 - Проверка NetBIOS-имени: проверка того, является ли указанное NetBIOS-имя допустимым и не конфликтует ли оно с существующими именами.  
 - Проверка путей к компонентам: проверка того, являются ли допустимыми пути к базе данных Active Directory, журналам и SYSVOL и достаточно ли для них свободного места на диске.  
 - Проверка имени дочернего домена: проверка того, являются ли имена родительского и нового дочернего доменов допустимыми и не конфликтуют ли они с существующими доменами.  
@@ -130,7 +130,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
 ## <a name="BKMK_KnownIssues"></a>Известные проблемы
 
-В этом разделе перечислены некоторые из известных проблем, влияющих на AD DS установки в Windows Server 2012. Дополнительные сведения об известных проблемах см. в разделе [Устранение проблем при развертывании контроллера домена](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).  
+В этом разделе перечислены некоторые из известных проблем, влияющих на AD DS установки в Windows Server 2012. Другие известные проблемы см. в разделе [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).  
 
 - Если доступ WMI к хозяину схемы заблокирован брандмауэром Windows при удаленном выполнении команды adprep /forestprep, то в журнале Adprep в каталоге %systemroot%\system32\debug\adprep появляется следующее сообщение об ошибке:  
 
@@ -176,7 +176,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
    В этом случае нужно запустить командлет ADDSDeployment отдельно от командлета, который не поддерживает собственные 64-разрядные процессы.  
 
-- В Windows Server 2012 имеется новая файловая система под названием «устойчивая файловая система». Не храните базу данных Active Directory, файлы журнала или SYSVOL на томе данных, отформатированном под файловую систему Resilient File System (ReFS). Дополнительные сведения о ReFS см. в статье [Создание файловой системы нового поколения для Windows: ReFS](http://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx).  
+- В Windows Server 2012 имеется новая файловая система под названием «устойчивая файловая система». Не храните базу данных Active Directory, файлы журнала или SYSVOL на томе данных, отформатированном под файловую систему Resilient File System (ReFS). Дополнительные сведения о ReFS см. в статье [Создание файловой системы нового поколения для Windows: ReFS](https://blogs.msdn.com/b/b8/archive/2012/01/16/building-the-next-generation-file-system-for-windows-refs.aspx).  
 - В диспетчер сервера серверы, выполняющие AD DS или другие роли сервера в установке Server Core и обновленные до Windows Server 2012, роль сервера может отображаться с красным состоянием, даже если события и состояние собираются как ожидается. Также могут повлиять серверы, на которых выполняется установка Server Core на предварительном выпуске Windows Server 2012.  
 
 ### <a name="active-directory-domain-services-installation-hangs-if-an-error-prevents-critical-replication"></a>Установка доменных служб Active Directory зависает, если ошибка мешает репликации критически важных данных

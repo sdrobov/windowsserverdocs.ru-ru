@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: c05987360256f7b7ed58911c1ded86586fc8b3aa
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 59c659041c7553d8e97a3bfbefbc3bde24098ef2
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903906"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949930"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center — известные проблемы
 
@@ -80,7 +80,7 @@ ms.locfileid: "74903906"
 
 Введите `$PSVersiontable` в PowerShell, чтобы проверить, что платформа WMF установлена, и что используется версия 5.1 или более поздняя версия.
 
-Если она не установлена, можно [скачать и установить WMF 5.1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+Если она не установлена, можно [скачать и установить WMF 5.1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## <a name="role-based-access-control-rbac"></a>Управление доступом на основе ролей (RBAC)
 
@@ -152,7 +152,7 @@ ms.locfileid: "74903906"
 
 - При выборе автоматической перезагрузки она произойдет до того, как состояние обновится до 100%. [13098852]
 
-### <a name="storage"></a>Хранилище
+### <a name="storage"></a>Хранение
 
 - Нижний уровень: DVD-диски, компакт-диски или гибкие диски не отображаются в виде тома на нижнем уровне.
 

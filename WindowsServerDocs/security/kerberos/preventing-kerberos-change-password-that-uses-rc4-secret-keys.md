@@ -8,16 +8,16 @@ manager: alanth
 author: justinha
 ms.technology: security-crdential-protection-and-management
 ms.date: 11/09/2016
-ms.openlocfilehash: 64018f7f118086f3d290cb1ffa9b8d2b3e81c27c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 21c2d3d79653bd02fea9d2ac0d09bd18690a388f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386268"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949746"
 ---
 # <a name="preventing-kerberos-change-password-that-uses-rc4-secret-keys"></a>Предотвращение изменения пароля, в котором используются секретные ключи RC4, протоколом Kerberos
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2008 R2 и Windows Server 2008
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2008 R2 и Windows Server 2008
 
 В этом разделе для ИТ-специалистов объясняются некоторые ограничения протокола Kerberos, которые могут привести к управлению учетной записью пользователя злонамеренным пользователем. В стандарте службы проверки подлинности Kerberos (V5) (RFC 4120) имеется ограничение, которое хорошо известно в отрасли, что позволяет злоумышленнику пройти проверку подлинности как пользователя или изменить пароль пользователя, если злоумышленнику известен секретный ключ пользователя.
 
@@ -31,8 +31,8 @@ ms.locfileid: "71386268"
 
     [!NOTE]
     Существует известная неполадка при отключении RC4, которая может привести к перезагрузке системы. См. следующие исправления:
-    - [Windows Server 2012 R2](https://support.microsoft.com/en-us/kb/3038261)
-    - [Windows Server 2012](https://support.microsoft.com/en-us/kb/3086213)
+    - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
+    - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
     - Нет доступных исправлений для более ранних версий Windows Server
 
 - Разверните домены, для которых задан режим работы домена Windows Server 2012 R2 или более поздней версии, и настройте пользователей в качестве членов группы безопасности "защищенные пользователи". Так как эта функция нарушает использование в протоколе Kerberos более чем RC4, см. раздел ресурсы в следующих разделах. [также](#see-also)

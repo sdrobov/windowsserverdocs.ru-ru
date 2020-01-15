@@ -1,5 +1,5 @@
 ---
-title: Обзор протокола NTLM
+title: NTLM Overview
 description: Безопасность Windows Server
 ms.custom: na
 ms.prod: windows-server
@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: b8dec2877646fd2bfe00da9d5c9047e8edfd6f1d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 74e6e05df037041b6c80239e26b39b5566474326
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386257"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949749"
 ---
-# <a name="ntlm-overview"></a>Обзор протокола NTLM
+# <a name="ntlm-overview"></a>NTLM Overview
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этой статье для ИТ Professional описывается NTLM, любые изменения в работе и предоставляются ссылки на технические ресурсы по проверке подлинности Windows и NTLM для Windows Server 2012 и предыдущих версий.
 
-## <a name="BKMK_OVER"></a>Описание функции
+## <a name="BKMK_OVER"></a> Описание функции
 Проверка подлинности NTLM — это семейство протоколов проверки подлинности, которые входят в состав Windows Msv1\_0. dll. Протоколы проверки подлинности NTLM включают LAN Manager версий 1 и 2, а также NTLM версий 1 и 2. Протоколы проверки подлинности NTLM выполняют проверку подлинности пользователей и компьютеров на основе запроса\/механизм ответа, который доказывает серверу или контроллеру домена о том, что пользователь знает пароль, связанный с учетной записью. При использовании протокола NTLM сервер ресурсов должен выполнять одно из следующих действий для проверки удостоверения пользователя или компьютера каждый раз, как возникает необходимость в новом маркере доступа:
 
 -   Свяжитесь со службой проверки подлинности домена на контроллере домена, чтобы получить домен учетной записи компьютера или пользователя, если эта учетная запись является учетной записью в домене.
@@ -47,17 +47,17 @@ ms.locfileid: "71386257"
 ## <a name="BKMK_INSTALL"></a>Сведения о диспетчер сервера
 NTLM нельзя использовать с диспетчером серверов. Для управления использованием проверки подлинности NTLM между компьютерными системами можно использовать параметры политики безопасности или групповые политики. В доменах протоколом проверки по умолчанию является Kerberos.
 
-## <a name="BKMK_LINKS"></a>См. также
+## <a name="BKMK_LINKS"></a> См. также
 В следующей таблице представлены материалы по NTLM и другим технологиям проверки подлинности Windows.
 
-|Тип содержимого|Ссылки|
+|Тип содержимого|Ссылок|
 |--------|-------|
 |**Оценка продукта**|[Введение в ограничение проверки подлинности NTLM](https://technet.microsoft.com/library/dd560653.aspx)<br /><br />[Изменения в проверке подлинности NTLM](https://technet.microsoft.com/library/dd566199.aspx)|
 |**Планирование**|[Путеводитель по моделированию угроз для ИТ – инфраструктуры](https://technet.microsoft.com/library/dd941826.aspx)<br /><br />[Угрозы и контрмеры: параметры безопасности в Windows Server 2003 и Windows XP](https://technet.microsoft.com/library/dd162275.aspx)<br /><br />[Руководство по угрозам и контрмерам: параметры безопасности в Windows Server 2008 и Windows Vista](https://technet.microsoft.com/library/dd349791.aspx)<br /><br />[Руководство по угрозам и контрмерам: параметры безопасности в Windows Server 2008 R2 и Windows 7](https://technet.microsoft.com/library/hh125921.aspx)|
 |**Развертывание**|[расширенная защита для проверки подлинности](https://support.microsoft.com/kb/968389)<br /><br />[Аудит и запрещение рекомендаций по использованию NTLM](https://technet.microsoft.com/library/jj865674(v=ws.10).aspx)<br /><br />[Обратитесь к группе служб каталогов: Блокировка NTLM и вы: методы анализа и аудита приложений в Windows 7](https://blogs.technet.com/askds/archive/2009/10/08/ntlm-blocking-and-you-application-analysis-and-auditing-methodologies-in-windows-7.aspx)<br /><br />[Блог о проверке подлинности Windows](https://blogs.technet.com/authentication/)<br /><br />[Настройка MaxConcurrentAPI для передачи\-NTLM с помощью проверки подлинности](https://social.technet.microsoft.com/wiki/contents/articles/9759.configuring-maxconcurrentapi-for-ntlm-pass-through-authentication.aspx)|
-|**Разработчик**|[Microsoft NTLM \(Windows\)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)<br /><br />[\[MS\-НЛМП\]: NT LAN Manager \(NTLM\) спецификация протокола проверки подлинности](https://msdn.microsoft.com/library/cc236621(PROT.10).aspx)<br /><br />[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) Authentication: протокол сетевого обмена новостей \(расширение NNTP\)](https://msdn.microsoft.com/library/cc236774(PROT.10).aspx)<br /><br />[\[MS\-НСТ\]: Спецификация протокола NTLM по протоколу HTTP](https://msdn.microsoft.com/library/cc237488(PROT.10).aspx)|
+|**Разработка**|[Microsoft NTLM \(Windows\)](https://msdn.microsoft.com/library/aa378749(VS.85).aspx)<br /><br />[\[MS\-НЛМП\]: NT LAN Manager \(NTLM\) спецификация протокола проверки подлинности](https://msdn.microsoft.com/library/cc236621(PROT.10).aspx)<br /><br />[\[MS\-NNTP\]: NT LAN Manager \(NTLM\) Authentication: протокол сетевого обмена новостей \(расширение NNTP\)](https://msdn.microsoft.com/library/cc236774(PROT.10).aspx)<br /><br />[\[MS\-НСТ\]: Спецификация протокола NTLM по протоколу HTTP](https://msdn.microsoft.com/library/cc237488(PROT.10).aspx)|
 |**Устранение неполадок**|На данный момент недоступно|
-|**Ресурсы сообщества**|[Эта лошадиная работа еще не завершена: узкие места NTLM и среда выполнения RPC](http://blogs.technet.com/b/askds/archive/2011/09/15/is-this-horse-dead-yet-ntlm-bottlenecks-and-the-rpc-runtime.aspx)|
+|**Ресурсы сообщества**|[Эта лошадиная работа еще не завершена: узкие места NTLM и среда выполнения RPC](https://blogs.technet.com/b/askds/archive/2011/09/15/is-this-horse-dead-yet-ntlm-bottlenecks-and-the-rpc-runtime.aspx)|
 
 
 

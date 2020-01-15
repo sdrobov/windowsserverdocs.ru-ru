@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 12/02/2019
-ms.openlocfilehash: d4046cc10a5e0fdc12cfb9587eef10d4263c2ddd
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.openlocfilehash: 503cd64cac0673829fe21bc15e8ad9d6a83bbb15
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74904031"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950515"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>Какой тип установки подойдет именно вам?
 
@@ -71,7 +71,7 @@ Microsoft ребро (включая [Microsoft ребро](https://microsoftedg
 > 
 > Введите `$PSVersiontable` в PowerShell, чтобы проверить, что платформа WMF установлена, и что используется версия 5.1 или более поздняя версия. 
 > 
-> Если WMF не установлен, можно [загрузить wmf 5,1](https://www.microsoft.com/en-us/download/details.aspx?id=54616).
+> Если WMF не установлен, можно [загрузить wmf 5,1](https://www.microsoft.com/download/details.aspx?id=54616).
 
 ## <a name="high-availability"></a>Высокая доступность
 

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 27d456dd274b917233f0484f055b679dc8c73214
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cce76e006272104033e1437e0ccf6cad5bc47f3f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403505"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950306"
 ---
 # <a name="passwords-overview"></a>Общие сведения о паролях
 
@@ -26,7 +26,7 @@ ms.locfileid: "71403505"
 
 В этой статье для ИТ-специалистов описываются пароли, используемые в операционных системах Windows, а также ссылки на документацию и обсуждение использования паролей в стратегии управления учетными данными.
 
-## <a name="BKMK_OVER"></a>Описание функции
+## <a name="BKMK_OVER"></a> Описание функции
 Современные операционные системы и приложения являются архитектурой на основе паролей, даже если вы используете смарт-карты или биометрические системы, все учетные записи по-прежнему имеют пароли, и их все еще можно использовать в некоторых обстоятельствах. Некоторые учетные записи, особенно учетные записи, используемые для запуска служб, даже не могут использовать смарт-карты и биометрические маркеры, поэтому для проверки подлинности необходимо использовать пароль. Windows защищает пароли с помощью криптографических хэшей.
 
 Дополнительные сведения о паролях Windows см. в статье [технический обзор паролей](https://technet.microsoft.com/library/hh994558(WS.10).aspx).
@@ -45,16 +45,16 @@ ms.locfileid: "71403505"
 ## <a name="BKMK_SOFT"></a>Требования к программному обеспечению
 В корпоративных средах пароли обычно управляются домен Active Directoryными службами. Также можно управлять паролями на локальном компьютере, используя параметры локальных параметров безопасности, политик учетных записей и политики паролей.
 
-## <a name="BKMK_LINKS"></a>См. также
+## <a name="BKMK_LINKS"></a> См. также
 В этой таблице перечислены дополнительные ресурсы для функций паролей, технологий и управления учетными данными.
 
-|Тип содержимого|Ссылки|
+|Тип содержимого|Ссылок|
 |--------|-------|
-|**Документация по сценариям**|[Защита цифрового удостоверения](http://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
+|**Документация по сценариям**|[Защита цифрового удостоверения](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)|
 |**Операции**|[Active Directory пользователей и компьютеров](https://technet.microsoft.com/library/cc754217.aspx)|
-|**Устранение неполадок**|[Узнайте, когда истекает срок действия пароля \- блоге Active Directory PowerShell](http://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
+|**Устранение неполадок**|[Узнайте, когда истекает срок действия пароля \- блоге Active Directory PowerShell](https://blogs.msdn.com/b/adpowershell/archive/2010/08/09/9970198.aspx)|
 |**Безопасность**| [Руководство по угрозам и контрмерам](https://technet.microsoft.com/library/hh125920(v=ws.10).aspx) windows Server 2008 R2 и Windows 7: политики учетных записей<br /><br />Руководство по [изменению и созданию надежных паролей](https://www.microsoft.com/security/online-privacy/passwords-create.aspx)|
 |**Средства и параметры**|[Справочник по параметрам групповая политика для Windows и Windows Server в центре загрузки Майкрософт](https://www.microsoft.com/download/en/details.aspx?amp;displaylang=en&displaylang=en&id=25250)|
-|**Ресурсы сообщества**|[Защита цифрового удостоверения](http://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<br /><br />[Вход в Windows 8 с идентификатором Windows Live ID](http://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<br /><br />[Вход с помощью графического пароля](http://blogs.msdn.com/b/b8/archive/2011/12/16/signing-in-with-a-picture-password.aspx)<br /><br />[Оптимизация защиты графических паролей](http://blogs.msdn.com/b/b8/archive/2011/12/19/optimizing-picture-password-security.aspx)|
+|**Ресурсы сообщества**|[Защита цифрового удостоверения](https://blogs.msdn.com/b/b8/archive/2011/12/14/protecting-your-digital-identity.aspx)<br /><br />[Вход в Windows 8 с идентификатором Windows Live ID](https://blogs.msdn.com/b/b8/archive/2011/09/26/signing-in-to-windows-8-with-a-windows-live-id.aspx)<br /><br />[Вход с помощью графического пароля](https://blogs.msdn.com/b/b8/archive/2011/12/16/signing-in-with-a-picture-password.aspx)<br /><br />[Оптимизация защиты графических паролей](https://blogs.msdn.com/b/b8/archive/2011/12/19/optimizing-picture-password-security.aspx)|
 
 

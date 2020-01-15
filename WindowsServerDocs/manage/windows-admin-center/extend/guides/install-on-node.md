@@ -8,31 +8,31 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: c5c87be882a32958946198eb6ff1b9d7000577e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3a93a1105862ffbf4fcbd1d23b15d9bcaa6010dc
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385288"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950504"
 ---
 # <a name="install-extension-payload-on-a-managed-node"></a>Установка полезных данных расширения на управляемом узле
 
->Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
+>Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
 
-## <a name="setup"></a>Установка
+## <a name="setup"></a>"Настройка"
 > [!NOTE]
 > Для выполнения этой инструкции потребуется сборка 1.2.1904.02001 или более поздняя версия. Чтобы проверить номер сборки, откройте центр администрирования Windows и щелкните вопросительный знак в правом верхнем углу.
 
 Создайте [расширение средства](../develop-tool.md) для центра администрирования Windows, если это еще не сделано. Закончив, запишите значения, используемые при создании расширения:
 
-| Значение | Объяснение | Пример |
+| Применение | Объяснение | Пример |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | Название вашей компании (с пробелами) | ```Contoso``` |
 | ```{!Tool Name}``` | Имя средства (с пробелами) | ```InstallOnNode``` |
 
 В папке расширения средства создайте папку ```Node``` (```{!Tool Name}\Node```). Все, что помещено в эту папку, будет скопировано на управляемый узел при использовании этого API. Добавьте файлы, необходимые для вашего варианта использования. 
 
-Также создайте скрипт ```{!Tool Name}\Node\installNode.ps1```. Этот сценарий будет запущен на управляемом узле после копирования всех файлов из папки ```{!Tool Name}\Node``` на управляемый узел. Добавьте любую дополнительную логику для вашего варианта использования. Пример файла ```{!Tool Name}\Node\installNode.ps1```:
+Также создайте скрипт ```{!Tool Name}\Node\installNode.ps1```. Этот сценарий будет запущен на управляемом узле после копирования всех файлов из папки ```{!Tool Name}\Node``` на управляемый узел. Добавьте любую дополнительную логику для вашего варианта использования. Пример ```{!Tool Name}\Node\installNode.ps1``` файла:
 
 ``` ps1
 # Add logic for installing payload on managed node
@@ -105,7 +105,7 @@ this.post('contoso.install-on-node', '1.0.0',
       );
 ```
 
-Также обновите ```\src\app\default.component.html``` на:
+Также обновите ```\src\app\default.component.html``` следующим образом:
 ``` html
 <button (click)="installOnNode()">Click to install</button>
 <sme-loading-wheel *ngIf="loading" size="large"></sme-loading-wheel>
@@ -138,13 +138,13 @@ export class DefaultModule { }
 
 Если пакет расширения ранее не создавался, следуйте руководству по работе с [расширениями публикации](../publish-extensions.md) . 
 > [!IMPORTANT]
-> В файле nuspec для этого расширения важно, чтобы значение ```<id>``` совпадало с именем в ```manifest.json``` проекта, а ```<version>``` соответствует тому, что было добавлено в ```\src\app\default.component.ts```. Также добавьте запись в раздел ```<files>```: 
+> В nuspec-файле для этого расширения важно, чтобы значение ```<id>``` совпадало с именем в ```manifest.json``` проекта, а ```<version>``` соответствует тому, что было добавлено в ```\src\app\default.component.ts```. Также добавьте запись в раздел ```<files>```: 
 > 
 > ```<file src="Node\**\*.*" target="Node" />```.
 
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>contoso.install-on-node</id>
     <version>1.0.0</version>
