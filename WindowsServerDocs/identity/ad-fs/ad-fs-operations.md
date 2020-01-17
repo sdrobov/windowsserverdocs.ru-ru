@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 99167850ff9ee193aca888d34d98503ea0554c30
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2db9cd83ed08673835a38e443e90c5eb092f43ac
+ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408556"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162485"
 ---
 # <a name="ad-fs-operations"></a>Операции AD FS
 
@@ -22,17 +22,18 @@ ms.locfileid: "71408556"
 
 Этот документ содержит список всех операций с документацией для AD FS. 
 
-## <a name="service-configuration"></a>Конфигурация службы
+## <a name="service-configuration"></a>Настройка службы
 - [Обновление SSL-сертификатов в AD FS и WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
 - [Средство ускоренного восстановления AD FS](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 - [Настройка альтернативной привязки имени узла для проверки подлинности сертификата в AD FS](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [Добавление хранилища атрибутов](../ad-fs/operations/Add-an-Attribute-Store.md)
 - [Настройка заголовков ответов безопасности HTTP с помощью AD FS 2019](../ad-fs/operations/customize-http-security-headers-ad-fs.md)
 - [Делегирование доступа к командлету Powershell AD FS пользователям без прав администратора](../ad-fs/operations/delegate-ad-fs-pshell-access.md)
-- [Точная настройка SQL и задержка адресов](../ad-fs/operations/adfs-sql-latency.md) 
+- [Точная настройка SQL и задержка адресов](../ad-fs/operations/adfs-sql-latency.md)
+- [Группы доступности AlwaysOn](../ad-fs/operations/ad-fs-always-on.md) 
 
 
-## <a name="authentication-configuration"></a>Конфигурация проверки подлинности
+## <a name="authentication-configuration"></a>Настройка аутентификации
 ### <a name="strong-authentication-mfa--password-less"></a>Строгая проверка подлинности (MFA) & без пароля
 - [Настройка внешних поставщиков проверки подлинности в качестве первичного в AD FS (2019 или более поздней версии)](../ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
 - [Настройка AD FS (2016 или более поздней версии) и Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
@@ -83,9 +84,9 @@ ms.locfileid: "71408556"
 - [Управление рисками с использованием условного управления доступом](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [Настройка среды лаборатории AD FS](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 - [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-- [Пошаговое руководство. Управление рисками с использованием условного управления доступом](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
-- [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
-- [Пошаговое руководство: Присоединение к рабочему месту с устройства iOS](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+- [Пошаговое руководство. Управление рисками с помощью контроля условного доступа](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+- [Пошаговое руководство. Workplace Join с устройством Windows](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [Пошаговое руководство. Workplace Join с устройством iOS](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
   
 

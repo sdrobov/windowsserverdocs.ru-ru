@@ -9,12 +9,12 @@ ms.date: 01/18/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b5f2202313c225d57b29997753b090e10b9c2e6c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c36555a8bca7882125451b2c86a0707e3de9b2db
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949296"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145930"
 ---
 # <a name="configuring-ad-fs-for-user-certificate-authentication"></a>Настройка AD FS для проверки подлинности сертификата пользователя
 
@@ -54,7 +54,7 @@ ms.locfileid: "75949296"
 В этом документе рассматриваются распространенные проблемы, возникающие при настройке AD FS для проверки подлинности сертификатов для пользователей. 
 
 ### <a name="check-if-certificate-trusted-issuers-is-configured-properly-in-all-the-ad-fswap-servers"></a>Проверьте, правильно ли настроены надежные издатели сертификатов на всех серверах AD FS и WAP.
-*Распространенный симптом: HTTP 204 "нет содержимого из HTTPS\://certuath.adfs.contoso.com"*
+*Распространенный симптом: HTTP 204 "нет содержимого из HTTPS\://certauth.adfs.contoso.com"*
 
 AD FS использует системную операционную систему Windows для подтверждения принадлежности сертификата пользователя и обеспечения его соответствия доверенному издателю путем выполнения проверки цепочки доверия сертификатов. Для сопоставления с доверенным издателем необходимо убедиться, что все корневые и промежуточные центры настроены как Доверенные издатели в хранилище центров сертификации локального компьютера. Чтобы проверить это автоматически, используйте [анализатор диагностики AD FS](https://adfshelp.microsoft.com/DiagnosticsAnalyzer/Analyze). Средство запрашивает все серверы и обеспечивает правильную подготовку правильных сертификатов. 
 1)  Скачайте и запустите средство в соответствии с инструкциями, приведенными на приведенной выше ссылке.

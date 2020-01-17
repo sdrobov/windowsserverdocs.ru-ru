@@ -8,12 +8,12 @@ ms.date: 08/19/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: b7a6dd37cfc054ead153d274ffa7f0d13844305e
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: 02829919c53e3488ad7f229ad8bee0d3ead14c9a
+ms.sourcegitcommit: 3f54036c74c5a67799fbc06a8a18a078ccb327f9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75953034"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76124902"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Служба миграции хранилища: часто задаваемые вопросы
 
@@ -138,6 +138,10 @@ ms.locfileid: "75953034"
 6. Убедитесь, что система имеет полный доступ ко всем файлам и вложенным папкам этой папки.
 7. Удалите разрешения собственных учетных записей.
 8. Запустите службу "Служба миграции хранилища".
+
+## <a name="does-the-storage-migration-service-migrate-locally-installed-applications-from-the-source-computer"></a>Переносят ли служба миграции хранилища локально установленные приложения с исходного компьютера?
+
+Нет, служба миграции хранилища не выполняет миграцию локально установленных приложений. После завершения миграции переустановите все приложения на конечный компьютер, работающий на исходном компьютере. Нет необходимости перенастраивать пользователей или их приложения; Служба миграции хранилища предназначена для того, чтобы сделать сервер невидимым для клиентов. 
 
 ## <a name="give-feedback"></a>Какие варианты можно оставить для отправки отзыва, ошибок в файлах или получения поддержки?
 

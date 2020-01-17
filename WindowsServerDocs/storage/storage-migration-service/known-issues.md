@@ -8,12 +8,12 @@ ms.date: 10/09/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: dccbfd7d3ff6d95615e9efecf840a840b42d0d27
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0f549310d568142f819e22422d41a72d38b306e2
+ms.sourcegitcommit: 8771a9f5b37b685e49e2dd03c107a975bf174683
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949648"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76145940"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -25,7 +25,7 @@ ms.locfileid: "75949648"
 
 ## <a name="collecting-logs"></a>Как получать файлы журналов при работе с служба поддержки Майкрософт
 
-Служба миграции хранилища содержит журналы событий для службы Orchestrator и прокси-службы. Сервер урчестратор всегда содержит оба журнала событий, а целевые серверы с установленной службой прокси содержат журналы прокси-сервера. Эти журналы находятся в папке:
+Служба миграции хранилища содержит журналы событий для службы Orchestrator и прокси-службы. Сервер Orchestrator всегда содержит оба журнала событий, а целевые серверы с установленной службой прокси содержат журналы прокси-сервера. Эти журналы находятся в папке:
 
 - Журналы приложений и служб \ Microsoft \ Windows \ Сторажемигратионсервице
 - Журналы приложений и служб \ Microsoft \ Windows \ Сторажемигратионсервице-proxy
