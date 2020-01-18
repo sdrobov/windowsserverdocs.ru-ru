@@ -7,17 +7,17 @@ ms.assetid: 227f723b-acb2-42a7-bbe3-44e82f930e35
 manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
-ms.date: 10/22/2018
-ms.openlocfilehash: 5277a97f7f58d9d7edb1457cb363cb6ddf1d8b59
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 01/14/2020
+ms.openlocfilehash: ece005617c4a2faac41c2be15967b2f43951517e
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403698"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265866"
 ---
 # <a name="configure-additional-hgs-nodes"></a>Настройка дополнительных узлов HGS
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 В рабочей среде HGS следует настроить в кластере с высоким уровнем доступности, чтобы обеспечить возможность включения экранированных виртуальных машин даже в том случае, если узел HGS выйдет из строя. Для тестовых сред дополнительные узлы HGS не требуются.
 
@@ -28,7 +28,7 @@ ms.locfileid: "71403698"
 |Новый лес HGS  | [Использование PFX-файлов](#dedicated-hgs-forest-with-pfx-certificates) | [Использование отпечатков сертификатов](#dedicated-hgs-forest-with-certificate-thumbprints) |
 |Существующий лес бастиона |  [Использование PFX-файлов](#existing-bastion-forest-with-pfx-certificates) | [Использование отпечатков сертификатов](#existing-bastion-forest-with-certificate-thumbprints) |
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Необходимые условия
 
 Убедитесь, что каждый дополнительный узел: 
 - Имеет ту же конфигурацию оборудования и программного обеспечения, что и основной узел 
@@ -141,16 +141,8 @@ HGS всегда будет предоставлять порты HTTP и HTTPS 
 
    Это приведет к удалению узла из кластера и удалению службы аттестации и защиты ключей. 
    Если это последний узел в кластере,-Force требуется, чтобы указать, что нужно удалить последний узел и уничтожить кластер в Active Directory. 
-   
+
    Если HGS развертывается в лесу бастиона (по умолчанию), это единственный шаг. 
    При необходимости можно отсоединить компьютер от домена и удалить учетную запись gMSA из Active Directory.
 
-1. Если HGS создала собственный домен, следует также [Удалить HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) , чтобы отменить присоединение к домену и понизить контроллер домена.
-
-
-
-## <a name="next-step"></a>Дальнейшие действия
-
-> [!div class="nextstepaction"]
-> [Проверка конфигурации HGS](guarded-fabric-verify-hgs-configuration.md)
-
+2. Если HGS создала собственный домен, следует также [Удалить HGS](guarded-fabric-manage-hgs.md#clearing-the-hgs-configuration) , чтобы отменить присоединение к домену и понизить контроллер домена.

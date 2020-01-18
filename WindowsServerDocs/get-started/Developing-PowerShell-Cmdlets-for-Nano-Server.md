@@ -1,5 +1,5 @@
 ---
-title: Разработка командлетов PowerShell для сервера Nano Server
+title: Разработка командлетов PowerShell для сервера Nano Server
 description: 'перенос CIM, командлеты .NET, C++ '
 ms.prod: windows-server
 ms.service: na
@@ -12,19 +12,19 @@ author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 80d6cdd3056d9c7e0a0815ce5856f961d79fcc34
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 434b79508dbf88a90348840573255c3084d6e989
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391781"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948456"
 ---
-# <a name="developing-powershell-cmdlets-for-nano-server"></a>Разработка командлетов PowerShell для сервера Nano Server
+# <a name="developing-powershell-cmdlets-for-nano-server"></a>Разработка командлетов PowerShell для сервера Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
-> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
+> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md). 
   
 ## <a name="overview"></a>Обзор  
 По умолчанию сервер Nano Server включает PowerShell Core во все установки Nano Server. PowerShell Core — это сокращенный выпуск PowerShell, который основан на .NET Core и выполняется в сокращенных выпусках Windows, таких как Nano Server и Windows IoT Core. PowerShell Core работает точно так же, как другие выпуски PowerShell, такие как Windows PowerShell в Windows Server 2016. Однако сокращенный размер Nano Server означает, что в PowerShell Core на базе Nano Server доступны не все возможности Windows Server 2016.  
@@ -138,7 +138,7 @@ PowerShell поддерживает несколько типов реализа
 ### <a name="building-c-for-nano-server"></a>Создание кода C++ для Nano Server  
 Чтобы получить библиотеки DLL на языке C++, работающие на Nano Server, скомпилируйте их для Nano Server, а не для конкретного выпуска.  
   
-Необходимые условия и пошаговое руководство по разработке на C++ для Nano Server см. в статье [Разработка собственных приложений на базе сервера Nano Server](http://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
+Необходимые условия и пошаговое руководство по разработке на C++ для Nano Server см. в статье [Разработка собственных приложений на базе сервера Nano Server](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
   
   
 ## <a name="porting-net-cmdlets"></a>Перенос командлетов .NET  
@@ -151,7 +151,7 @@ PowerShell поддерживает несколько типов реализа
   
 Модуль SDK для PowerShell Core предоставляет командлеты для настройки правильных ссылочных сборок CoreCLR и PowerShell Core, создания в Visual Studio 2015 проекта на C#, предназначенного для этих ссылочных сборок, и настройки удаленного отладчика на компьютере Nano Server, чтобы разработчики могли удаленно выполнять отладку своих командлетов .NET на сервере Nano Server в Visual Studio 2015.  
   
-Модулю SDK для PowerShell Core требуется Visual Studio 2015 с обновлением 2. Если у вас не установлена среда Visual Studio 2015, можно установить [Visual Studio Community 2015](https://www.visualstudio.com/en-us/products/visual-studio-community-vs.aspx).  
+Модулю SDK для PowerShell Core требуется Visual Studio 2015 с обновлением 2. Если у вас не установлена среда Visual Studio 2015, можно установить [Visual Studio Community 2015](https://www.visualstudio.com/products/visual-studio-community-vs.aspx).  
   
 Работа модуля SDK также зависит от наличия следующих компонентов в Visual Studio 2015:  
   

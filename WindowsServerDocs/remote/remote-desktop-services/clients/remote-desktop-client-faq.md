@@ -14,16 +14,16 @@ manager: dongill
 ms.author: elizapo
 ms.date: 07/16/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 54ed455955053ebb234864f827759385ecf3d3c5
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.openlocfilehash: 8ab42d7781c547d516a51c89e9c8ecba0ff72ad6
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71935029"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950433"
 ---
 # <a name="frequently-asked-questions-about-the-remote-desktop-clients"></a>Часто задаваемые вопросы о клиентах удаленного рабочего стола
 
->Относится к: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
+>Применяется к: Windows 10, Windows 8.1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2
 
 Теперь, когда вы настроили клиент удаленного рабочего стола на устройстве (Android, Mac, iOS или Windows), у вас могут возникнуть вопросы. Здесь приведены ответы на наиболее часто задаваемые вопросы о клиентах удаленного рабочего стола. 
 
@@ -67,7 +67,7 @@ ms.locfileid: "71935029"
 Можно предоставить отдельным пользователям разрешение на доступ к этому компьютеру. Для этого щелкните **Select users that can remotely access this PC** (Выбрать пользователей, которые могут удаленно подключаться к этому компьютеру).
 Члены группы "Администраторы" получают доступ автоматически.
 
-Для Windows 8.1 следуйте инструкциям по разрешению удаленных подключений в разделе [Подключение к другому компьютеру с помощью функции подключения к удаленному рабочему столу](https://support.microsoft.com/en-us/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
+Для Windows 8.1 следуйте инструкциям по разрешению удаленных подключений в разделе [Подключение к другому компьютеру с помощью функции подключения к удаленному рабочему столу](https://support.microsoft.com/help/17463/windows-7-connect-to-another-computer-remote-desktop-connection#1TC=windows-8).
 
 
 

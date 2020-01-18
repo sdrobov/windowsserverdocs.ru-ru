@@ -1,5 +1,5 @@
 ---
-title: Требования к системе
+title: Системные требования
 description: В этом разделе описываются минимальные требования к хранилищу, ЦП, сети, памяти и ОЗУ при выполнении каждого из вариантов чистой установки.
 ms.custom: na
 ms.prod: windows-server
@@ -14,14 +14,14 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 155e828c77670c7c489b334ec3e7c49aa0809d4d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9e8b0c04137ff3b11cdaa7aba3c7899ca6300848
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391625"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947741"
 ---
-# <a name="system-requirements"></a>Требования к системе
+# <a name="system-requirements"></a>Системные требования
 
 >Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016 
 
@@ -75,7 +75,7 @@ ms.locfileid: "71391625"
 
 Ниже указаны примерные **минимальные** требования к свободному месту на диске для системного раздела.  
 
-**Минимальные требования** 32 ГБ  
+**Минимальные требования** 32 ГБ  
 
 > [!NOTE]
 > Обратите ванимание, что 32 ГБ — это *абсолютный минимум* для успешной установки. Этот минимум должен позволять установить Windows Server 2016 в режиме установки основных серверных компонентов с ролью сервера веб-служб (IIS). Сервер в режиме установки основных серверных компонентов примерно на 4 ГБ меньше, чем тот же сервер с графическим пользовательским интерфейсом. 
@@ -128,4 +128,4 @@ ms.locfileid: "71391625"
 - [Требования к процессору Windows](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
 - [Сравнение выпусков Windows Server 2016 Standard и Datacenter](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
 - [Системные требования Windows 10](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
-- [Скачать таблицу лицензирования Windows Server 2016](http://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)
+- [Скачать таблицу лицензирования Windows Server 2016](https://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

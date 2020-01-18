@@ -1,6 +1,6 @@
 ---
 ms.assetid: 7671e0c9-faf0-40de-808a-62f54645f891
-title: Обновление до AD FS в Windows Server 2016
+title: Обновление до AD FS в Windows Server 2016
 description: ''
 author: billmath
 manager: femila
@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 428e35524fbcfe5177b544e1c6cc6fa32ec32056
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.openlocfilehash: ebcc679b2bc5ab3c6d7c70c9e84ba45697c80165
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791370"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265596"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью базы данных WID
 
@@ -101,6 +101,7 @@ Set-AdfsSyncProperties -Role SecondaryComputer -PrimaryComputerName {FQDN}
 ![обновить](media/Upgrading-to-AD-FS-in-Windows-Server-2016/ADFS_Mixed_8.png)
 
 8. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующий командлет:
+
 
 > [!NOTE]
 > Перед выполнением следующего шага необходимо удалить все серверы 2012 R2 из фермы.

@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 965a5c506535a2c52d6cc7b3557c6104182c12a5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3751b185677bfee9d0519b9a617bea1df063c1e7
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373687"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259079"
 ---
 # <a name="md"></a>Md
 
@@ -46,11 +46,11 @@ mkdir [<Drive>:]<Path>
 |\<путь >|Обязательный. Указывает имя и расположение нового каталога. Максимальная длина любого отдельного пути определяется файловой системой.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания.
 
 Расширения команд, включенные по умолчанию, позволяют использовать одну команду **MD** для создания промежуточных каталогов по указанному пути.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="BKMK_examples"></a>Примеры
 
 Чтобы создать каталог с именем Directory1 в текущем каталоге, введите:
 ```
@@ -63,10 +63,8 @@ md \Taxes\Property\Current
 Чтобы создать дерево каталогов Таксес\проперти\куррент в корневом каталоге, как в предыдущем примере, но при отключенных расширениях команд введите следующую последовательность команд:
 ```
 md \Taxes
-cd \Taxes 
-md Property
-cd Property
-md Current
+md \Taxes\Property
+md \Taxes\Property\Current
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка

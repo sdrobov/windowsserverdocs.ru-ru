@@ -8,16 +8,16 @@ ms.sitesec: library
 author: jasongerend
 ms.author: jgerend
 ms.date: 10/22/2019
-ms.openlocfilehash: 68edc1f0aaa857d0342f963e19964f5c9e389ed0
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: c3c948e447d060d1ce733778c3362d83ad116708
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812327"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948203"
 ---
 # <a name="features-removed-or-planned-for-replacement-starting-with-windows-server-version-1803"></a>Удаленные или подлежащие замене компоненты в Windows Server версии 1803
 
-> Относится к: Windows Server версии 1803
+> Применяется к: Windows Server версии 1803
 
 В каждом выпуске Windows Server добавляются новые компоненты и возможности. Иногда мы также удаляем компоненты и функциональные возможности. Как правило, это происходит, когда мы добавляем улучшенную функцию. Ниже приведены подробные сведения о функциях и возможностях, которые были удалены в Windows Server версии 1803.   
 
@@ -33,7 +33,7 @@ ms.locfileid: "72812327"
 
 | Функция    | Вместо этого можно использовать... |
 | ----------- | -------------------- |
-| [Служба репликации файлов](https://support.microsoft.com/en-us/help/4025991/windows-server-version-1709-no-longer-supports-frs)|Службы репликации файлов, представленные в Windows Server 2003 R2, замещаются функцией репликации DFS. Вам потребуется [перевести все контроллеры доменов, использующие FRS, на репликацию DFS с помощью SYSVOL](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/). |
+| [Служба репликации файлов](https://support.microsoft.com/help/4025991/windows-server-version-1709-no-longer-supports-frs)|Службы репликации файлов, представленные в Windows Server 2003 R2, замещаются функцией репликации DFS. Вам потребуется [перевести все контроллеры доменов, использующие FRS, на репликацию DFS с помощью SYSVOL](https://blogs.technet.microsoft.com/filecab/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol/). |
 | Виртуализация сети Hyper-V (HNV)|[Виртуализация сети](../networking/sdn/technologies/hyper-v-network-virtualization/whats-new-hyperv-network-virtualization-windows-server.md) теперь включена в Windows Server как часть решения [Программно-определяемая сеть](../networking/sdn/software-defined-networking.md) (SDN), которое также включает в себя контроллер сети, балансировку нагрузки программного обеспечения, определяемую пользователем маршрутизацию и списки управления доступом. |
 
 ## <a name="features-were-no-longer-developing"></a>Компоненты, которые мы больше не разрабатываем

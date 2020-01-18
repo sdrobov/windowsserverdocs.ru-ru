@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 227d66dafffd67b0b2e4f67158498cf43c7b59f8
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 10234611904a4ed5b58939d3fd5ca341221c073c
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950361"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259149"
 ---
 # <a name="protected-users-security-group"></a>Группа безопасности "Защищенные пользователи"
 
@@ -115,7 +115,7 @@ ms.locfileid: "75950361"
 Дополнительные сведения см. в разделе [How to Configure Protected Accounts](how-to-configure-protected-accounts.md).
 
 ## <a name="troubleshooting"></a>"Устранение неполадок"
-Для исправления событий, связанных с защищенными пользователями, имеется два операционных административных журнала. Эти новые журналы по умолчанию отключены и расположены в компоненте "Просмотр событий" в пути **Журналы приложений и служб\Microsoft\Windows\Microsoft\Проверка подлинности**.
+Для исправления событий, связанных с защищенными пользователями, имеется два операционных административных журнала. Эти новые журналы находятся в Просмотр событий и отключены по умолчанию и находятся в папке **Applications and Services логс\микрософт\виндовс\аусентикатион**.
 
 |Идентификатор события и журнал|Описание|
 |----------|--------|

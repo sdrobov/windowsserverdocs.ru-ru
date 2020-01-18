@@ -1,19 +1,19 @@
 ---
 title: Устранение неполадок DNS-клиентов
 description: В этой статье объясняется, как устранять неполадки DNS на стороне клиента.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 1f18159d6232bd9e7864b13419b3648c12b9f44f
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: dd34fae73cdcb20a896750e20d4a28f8777a378a
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917821"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265776"
 ---
 # <a name="troubleshooting-dns-clients"></a>Устранение неполадок DNS-клиентов
 
@@ -23,7 +23,7 @@ ms.locfileid: "68917821"
 
 1. Откройте окно командной строки от имени администратора на клиентском компьютере.
 
-2. Выполните следующую команду:
+2. Выполните следующую команду.
 
    ```cmd
    ipconfig /all
@@ -37,7 +37,7 @@ ms.locfileid: "68917821"
 
 Если у клиента нет допустимой конфигурации TCP/IP, используйте один из следующих методов.
 
-* Для динамически настроенных клиентов используйте `ipconfig /renew` команду, чтобы вручную обновить конфигурацию IP-адресов на DHCP-сервере.
+* Для динамически настроенных клиентов используйте команду `ipconfig /renew`, чтобы вручную обновить конфигурацию IP-адресов на DHCP-сервере.
 
 * Для статически настроенных клиентов измените свойства TCP/IP клиента, чтобы они использовали допустимые параметры конфигурации, или завершите настройку DNS для сети.
 
@@ -119,7 +119,7 @@ nslookup app1.corp.contoso.com
 nslookup <external name>
 ```
 
-Пример: 
+Пример 
 ```cmd
 nslookup bing.com
 ```
@@ -128,6 +128,6 @@ nslookup bing.com
 
 Чтобы устранить эту проблему, очистите кэш, выполнив `ipconfig /flushdns`.
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Далее
 
 Если разрешение имен по-прежнему не выполняется, перейдите к разделу [Устранение неполадок DNS-серверов](troubleshoot-dns-server.md) .

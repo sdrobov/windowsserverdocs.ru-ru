@@ -1,19 +1,19 @@
 ---
 title: Устранение неполадок системы доменных имен (DNS)
 description: В этой статье описывается, как выполнять получение данных при возникновении проблем с DNS.
-manager: willchen
+manager: dcscontentpm
 ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: a86b1f34c3b21f5bcde710e2a98323492ea51b62
-ms.sourcegitcommit: 0e3c2473a54f915d35687d30d1b4b1ac2bae4068
+ms.openlocfilehash: 11c52b3beca3afcc0a6bfc8cecee2143dce0f023
+ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68917781"
+ms.lasthandoff: 01/18/2020
+ms.locfileid: "76265836"
 ---
 # <a name="troubleshooting-domain-name-system-dns-issues"></a>Устранение неполадок системы доменных имен (DNS)
  

@@ -11,12 +11,12 @@ ms.date: 05/21/2019
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: a270334d-42a7-46ff-8eed-d8656a276544
-ms.openlocfilehash: c12ca84826a92fa045eb84b55e7406392161280b
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.openlocfilehash: 2fb0e7f8f84addf6528fe9832735e3dd0f7b93cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66452806"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947618"
 ---
 # <a name="changes-to-nano-server-in-windows-server-semi-annual-channel"></a>Изменения сервера Nano Server в Semi-Annual Channel для Windows Server
 
@@ -33,7 +33,7 @@ ms.locfileid: "66452806"
 - Устранение неполадок с новым контейнером Nano выполняется с помощью Docker.
 - Контейнеры Nano теперь можно запускать в среде IoT Базовая.
 
-## <a name="related-topics"></a>Статьи по теме
+## <a name="related-topics"></a>Связанные темы
 
-- [Документация по контейнерам Windows](http://aka.ms/windowscontainers)
+- [Документация по контейнерам Windows](https://aka.ms/windowscontainers)
 - [Обзор Semi-Annual Channel для Windows Server](../get-started-19/servicing-channels-19.md)

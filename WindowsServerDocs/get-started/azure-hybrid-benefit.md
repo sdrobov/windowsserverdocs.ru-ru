@@ -8,12 +8,12 @@ ms.topic: article
 author: greg-lindsay
 ms.author: greg-lindsay
 ms.localizationpriority: high
-ms.openlocfilehash: 187abe06b469abe511d4bbbfb0aac9237d3c650a
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 946c1266f1c2cdc78cedac6794abb9f8d26696cd
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70868519"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947697"
 ---
 # <a name="azure-hybrid-benefit-for-windows-server"></a>Преимущество гибридного использования Azure для Windows Server
 
@@ -84,7 +84,7 @@ ms.locfileid: "70868519"
 
 Обязательно выполните инвентаризацию в каждой принадлежащей вам подписке, чтобы получить полное представление о вашей позиции лицензирования.
 
-[Средство подсчета преимущества гибридного использования Azure для WS SA](http://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
+[Средство подсчета преимущества гибридного использования Azure для WS SA](https://download.microsoft.com/download/7/1/2/712FEFF0-155C-4ABF-96C0-CE4EC4DB0516/Azure_Hybrid_Benefit_Windows_Server_SA_Count_Tool.xlsx)
 
 Если вы выполнили все действия выше и убедились, что ваша среда полностью лицензирована для выполняемых экземпляров преимущества гибридного использования Azure, дальнейшие действия не требуются. Если вы обнаружили, что преимущество можно применять к дополнительным виртуальным машинам, вы можете оптимизировать расходы, переключившись на выполнение запущенных экземпляров с преимуществом.
 

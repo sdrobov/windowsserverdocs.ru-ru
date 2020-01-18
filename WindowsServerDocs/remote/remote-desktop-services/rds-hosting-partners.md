@@ -13,12 +13,12 @@ ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
-ms.openlocfilehash: 8433aa50d585300df03222b78cf0823985237aa5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4d9a6d4885566204bf9fc29cd9513d25d1b39deb
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403963"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949856"
 ---
 # <a name="remote-desktop-services-hosting-partners-and-assessment"></a>Партнеры по размещению служб удаленных рабочих столов и их оценка
 
@@ -29,7 +29,7 @@ ms.locfileid: "71403963"
 1. Станьте [партнером корпорации Майкрософт](https://partner.microsoft.com/), если вы им еще не являетесь.
 2. Просмотрите учебный семинар [Размещение рабочего стола и приложений Windows с помощью служб удаленных рабочих столов в Azure](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=2915&rowId=3603).
 3. Пройдите [техническую оценку](https://mspartnerlp.partner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=1660&rowId=2220&trackPathId=9871).
-4. Убедитесь, что вы выполнили [требования для компетенции "Облачная платформа"](https://partner.microsoft.com/en-us/membership/cloud-platform-competency).
+4. Убедитесь, что вы выполнили [требования для компетенции "Облачная платформа"](https://partner.microsoft.com/membership/cloud-platform-competency).
 
 Вы уже партнер корпорации Майкрософт и у вас остались вопросы? Обратитесь к группе удаленного рабочего стола: <rdhostingpartners@microsoft.com>.  
 

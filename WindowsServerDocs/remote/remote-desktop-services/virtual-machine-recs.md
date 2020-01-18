@@ -11,13 +11,13 @@ ms.date: 12/02/2019
 ms.tgt_pltfrm: na
 ms.topic: article
 author: Heidilohr
-manager: daveba
-ms.openlocfilehash: 964dba2fc1a3cc1cf0e9cfe2392d40b9ea8f5ece
-ms.sourcegitcommit: cbf0c7c37797c22af989639fac82fc0eee94497f
+manager: lizross
+ms.openlocfilehash: 9564643e02a0b659914736c4047a8d723816976f
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74700913"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919939"
 ---
 # <a name="virtual-machine-sizing-guidance"></a>Руководство по определению размеров виртуальной машины
 
@@ -29,10 +29,10 @@ ms.locfileid: "74700913"
 
 | Тип рабочей нагрузки | Максимальное число пользователей на виртуальный ЦП | Минимальный объем хранилища виртуального ЦП, а также ОЗУ/ОС | Примеры экземпляров Azure | Минимальный объем хранилища контейнера профилей |
 | --- | --- | --- | --- | --- |
-| Светлая | 6 | 2 виртуальных ЦП, 8 ГБ ОЗУ, 16 ГБ хранилища | D2s_v3, F2s_v2 | 30 ГБ |
+| Легкий | 6 | 2 виртуальных ЦП, 8 ГБ ОЗУ, 16 ГБ хранилища | D2s_v3, F2s_v2 | 30 ГБ |
 | Средний | 4 | 4 виртуальных ЦП, 16 ГБ ОЗУ, 32 ГБ хранилища | D4s_v3, F4s_v2 | 30 ГБ |
 | Тяжелый | 2 | 4 виртуальных ЦП, 16 ГБ ОЗУ, 32 ГБ хранилища | D4s_v3, F4s_v2 | 30 ГБ |
-| Питание | 1 | 6 виртуальных ЦП, 56 ГБ ОЗУ, 340 ГБ хранилища | D4s_v3, F4s_v2, NV6 | 30 ГБ |
+| Мощный | 1 | 6 виртуальных ЦП, 56 ГБ ОЗУ, 340 ГБ хранилища | D4s_v3, F4s_v2, NV6 | 30 ГБ |
 
 ## <a name="single-session-recommendations"></a>Рекомендации для односеансового режима
 

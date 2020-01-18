@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 1512589315489f5bc351ff105a56694e0947463b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e73511709bfbee69a6dcbaaff4341c8b067079f3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404134"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949867"
 ---
 # <a name="get-started-with-the-macos-client"></a>Приступая к работе с клиентом macOS
 
@@ -48,7 +48,7 @@ ms.locfileid: "71404134"
 Вот как можно создать подключение к удаленному рабочему столу.
 
 1. В Центре подключений щелкните **+** , а затем щелкните **Рабочий стол**.
-2. Введите следующие сведения.
+2. Введите следующие сведения:
    - **Имя компьютера** — это имя компьютера.
       - Это может быть имя компьютера с Windows (указанное в параметрах **Система**), доменное имя или IP-адрес.
       - Кроме того, в конец этого имени можно добавить сведения о порте, например *MyDesktop:3389*.
@@ -169,7 +169,7 @@ ms.locfileid: "71404134"
 > [!IMPORTANT]
 > Пользовательские модели аутентификации и авторизации, выпущенные до Windows 8.1, не поддерживается, хотя и рассматриваются в статье выше.
 
-Чтобы узнать больше об этой функции, ознакомьтесь со страницей [http://aka.ms/paa-sample](http://aka.ms/paa-sample).
+Чтобы узнать больше об этой функции, ознакомьтесь со страницей [https://aka.ms/paa-sample](https://aka.ms/paa-sample).
 
 
 > [!TIP]
