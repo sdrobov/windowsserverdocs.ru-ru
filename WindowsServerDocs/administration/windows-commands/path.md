@@ -56,7 +56,7 @@ path ;
 
 ## <a name="BKMK_examples"></a>Примеров
 
-Для поиска по путям К:\усер\таксес, Б:\усер\инвест и Б:\бин для внешних команд введите:
+Для поиска по путям K:\user\tasks, B:\user\invest и B:\bin для внешних команд введите:
 
 `path c:\user\taxes;b:\user\invest;b:\bin`
 

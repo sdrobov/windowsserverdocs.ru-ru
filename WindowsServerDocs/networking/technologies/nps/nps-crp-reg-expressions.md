@@ -82,7 +82,7 @@ ms.locfileid: "71396375"
 
 - Замена:
 
-**Для замены <em>user@example.microsoft.com</em> на _example. Microsoft. ком\усер_**
+**Для замены <em>user@example.microsoft.com</em> на _example.microsoft.com\user_**
 
 - Поиск:`(.*)@(.*)`
 
