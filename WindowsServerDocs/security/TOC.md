@@ -30,7 +30,6 @@
 ####### [Настройка DNS в HGS и одностороннего отношения доверия](guarded-fabric-shielded-vm/guarded-fabric-configure-dns-forwarding-and-trust.md)
 ##### [Настройка HTTPS](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https.md)
 ##### [Добавление узлов](guarded-fabric-shielded-vm/guarded-fabric-configure-additional-hgs-nodes.md)
-##### [Проверка конфигурации](guarded-fabric-shielded-vm/guarded-fabric-verify-hgs-configuration.md)
 #### [Развертывание защищенных узлов](guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)
 ##### [Предварительные условия](guarded-fabric-shielded-vm/guarded-fabric-guarded-host-prerequisites.md)
 ##### [Режим TPM](guarded-fabric-shielded-vm/guarded-fabric-tpm-trusted-attestation-capturing-hardware.md)

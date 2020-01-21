@@ -9,12 +9,12 @@ ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
 ms.date: 12/16/2019
-ms.openlocfilehash: a5af1ad5a730f1dc90111734a9b8b1aacc91201b
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: 83ab3663b2c03017ba1bf613a49c394be0511002
+ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75466347"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76162505"
 ---
 # <a name="how-to-use-windows-server-2008-and-2008-r2-extended-security-updates-esu"></a>Использование дополнительных обновлений для системы безопасности Windows Server 2008 и 2008 R2
 
@@ -49,6 +49,17 @@ ms.locfileid: "75466347"
 
 > [!NOTE]
 > Если вы запускаете виртуальные машины Windows Server 2008 или 2008 R2 в Azure, вам не нужно выполнять следующие действия. Для виртуальных машин Azure автоматически разрешается применение дополнительных обновлений для системы безопасности. Вам не нужно создавать ресурс дополнительного обновления безопасности и ключ, а дополнительная плата за использование дополнительных обновлений безопасности для виртуальных машин Azure не взимается.
+
+> [!NOTE]
+> Перед выполнением описанных ниже действий отправьте сообщение электронной почты по адресу [winsvresuchamps@microsoft.com](mailto:winsvresuchamps@microsoft.com), указав следующую информацию для добавления подписки в список разрешений:
+> * имя заказчика;
+> * подписка Azure;
+> * номер соглашения EA (для ESU);
+> * количество серверов ESU.
+> 
+> Команда изучит предоставленную информацию и добавит пользователя или подписку в список разрешений.
+> 
+> Если запросившая сторона не занесена в список разрешений, может возникнуть следующая ошибка: [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version) (Не удалось найти тип ресурса в пространстве имен Microsoft.WindowsESU).
 
 Чтобы зарегистрировать виртуальные машины, не относящиеся к Azure, для получения дополнительных обновлений безопасности и создать ключ, выполните на портале Azure перечисленные ниже действия.
 

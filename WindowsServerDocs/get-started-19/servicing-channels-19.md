@@ -8,16 +8,16 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 814bcf3e989e9aa9b83ba447d07c45ee95309a5a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3d443ff123cc041196f59d93d156415c34bdf70f
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391974"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947873"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Каналы обслуживания Windows Server: LTSC и SAC
 
->Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Пользователям Windows Server доступны два основных канала выпусков: Long-Term Servicing Channel и Semi-Annual Channel.
 
@@ -30,13 +30,13 @@ ms.locfileid: "71391974"
 > [!Note]  
 > **Текущий продукт LTSC — Windows Server 2019**. Чтобы остаться в этом канале, необходимо установить (или продолжить использовать) ОС Windows Server 2019, которую можно установить в режиме основных серверных компонентов или в режиме сервера с возможностями рабочего стола.
 
-## <a name="semi-annual-channel"></a>Semi-Annual Channel
+## <a name="semi-annual-channel"></a>Полугодовой канал
 
 Канал Semi-Annual Channel идеально подходит для клиентов, быстро внедряющих инновации. Он помогает им начать использовать возможности новой операционной системы раньше. Это касается как приложений, особенно основанных на контейнерах и микрослужбах, так и программного гибридного центра обработки данных. В рамках канала Semi-Annual Channel для продуктов Windows Server будут доступны новые выпуски два раза в год — весной и осенью. Для каждого выпуска в этом канале будет предоставляться поддержка в течение 18 месяцев, начиная с даты начального выпуска.
 
 Большая часть функций, реализованных в канале Semi-Annual Channel, будет содержаться в следующем выпуске канала Long-Term Servicing для Windows Server. Редакции, функции и вспомогательное содержимое, входящие в состав выпусков, будут зависеть от отзывов клиентов.
 
-Канал Semi-Annual Channel доступен корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), а также через Azure Marketplace или другого поставщика облачных услуг / услуг хостинга, а также в рамках программ лояльности, таких как подписки на Visual Studio.
+Канал Semi-Annual Channel доступен корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), а также через Azure Marketplace или другого поставщика облачных услуг / услуг хостинга, а также в рамках программ лояльности, таких как подписки на Visual Studio.
 
 > [!Note]  
 > **Текущим выпуском канала Semi-Annual Channel является Windows Server версии 1903**. Чтобы присоединиться к этому каналу, необходимо установить ОС Windows Server версии 1903, которую можно установить в режиме основных серверных компонентов или в виде сервера Nano Server, запущенного в контейнере. Обновления на месте выпуска Long-Term Servicing Channel не поддерживаются, так как они находятся в **разных каналах выпуска**. Выпуски канала Semi-Annual Channel не являются обновлениями — это следующий выпуск Windows Server на канале Semi-Annual Channel.
@@ -84,9 +84,9 @@ ms.locfileid: "71391974"
 
 Для выпусков Semi-Annual Channel следует применять чистую установку.
 
-- Volume Licensing Service Center (VLSC). Корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx), для получения этого выпуска следует перейти на веб-сайт [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажать кнопку **Вход**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск. 
+- Volume Licensing Service Center (VLSC). Корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), для получения этого выпуска следует перейти на веб-сайт [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажать кнопку **Вход**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск. 
 
-- Выпуски каналов Semi-Annual Channel также доступны в [Microsoft Azure](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
+- Выпуски каналов Semi-Annual Channel также доступны в [Microsoft Azure](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
 
 - Подписки Visual Studio. Подписчики Visual Studio могут получить выпуски Semi-Annual Channel, скачав их [на странице загрузки для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347). Если вы еще не являетесь подписчиком, перейдите на страницу [Подписки на Visual Studio](https://www.visualstudio.com/subscriptions/), зарегистрируйтесь, а затем перейдите на [страницу скачивания для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347), как указано выше. Выпуски, полученные с помощью подписок на Visual Studio, используются только для разработки и тестирования.
 
@@ -171,7 +171,7 @@ Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed
 ````
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 [Изменения сервера Nano Server в Semi-Annual Channel для Windows Server](../get-started/nano-in-semi-annual-channel.md)
 
