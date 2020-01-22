@@ -12,16 +12,16 @@ ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: d395c72a1e21cd8eda043eebf3b72bbd5c9a13e8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f94e2c083f0bc05231543c15120818481afbabb0
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391800"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947858"
 ---
 # <a name="install-nano-server"></a>Установка сервера Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md). 
@@ -51,14 +51,14 @@ Nano Server оптимально подходит для различных сц
 - Сервер Nano Server не может использовать прокси-сервер для доступа к Интернету.
 - Объединение сетевых карт (в частности, балансировка нагрузки и отработка отказа или LBFO) не поддерживается. Вместо этого поддерживается объединение внедренных коммутаторов (SET).
 - System Center Configuration Manager и System Center Data Protection Manager не поддерживаются.
-- Командлеты анализатора соответствия рекомендациям (BPA) и интеграция BPA с диспетчером серверов не поддерживаются.
+- Использование командлетов анализатора соответствия рекомендациям (BPA) и интеграция BPA с диспетчером сервера не поддерживаются.
 - Сервер Nano Server не поддерживает виртуальные адаптеры шины (HBA).
 - Сервер Nano Server ненужно активировать с помощью ключа продукта. Функционируя как узел Hyper-V, Nano Server не поддерживает [автоматическую активацию виртуальной машины](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Виртуальные машины, которые работают на узле Nano Server, можно активировать при помощи [сервера управления ключами](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) с лицензионным ключом универсального тома или воспользовавшись [активацией с помощью Active Directory](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).
 - Версия Windows PowerShell в составе сервера Nano Server имеет важные отличия. Сведения о них см. в разделе [PowerShell для Nano Server](PowerShell-on-Nano-Server.md).
 - Сервер Nano Server поддерживается только в модели Current Branch for Business (CBB), выпуск Long-Term Servicing Branch (LTSB) для сервера Nano Server сейчас отсутствует. Дополнительные сведения см. в следующих подразделах.
 
 ### <a name="current-branch-for-business"></a>Current Branch for Business
-Сервер Nano обслуживается по более активной модели, Current Branch for Business (CBB), чтобы предоставлять поддержку пользователям, которые работают в "облачном темпе" — используют циклы быстрой разработки. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год. В этой модели необходимо, чтобы программа [Software Assurance](https://www.microsoft.com/en-us/licensing/licensing-programs/software-assurance-default.aspx) для серверов Nano Server была развернута и использовалась в рабочей среде. Чтобы сохранить поддержку, администраторы должны использовать один из двух последних выпусков CBB. Но эти выпуски не обновляют существующие развертывания автоматически; администраторы должны при первой возможности вручную установить новый выпуск CBB. Некоторые дополнительные сведения см. в разделе [Новый вариант обслуживания Current Branch for Business для Windows Server 2016](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Новый вариант обслуживания Current Branch for Business для Windows Server 2016).
+Сервер Nano обслуживается по более активной модели, Current Branch for Business (CBB), чтобы предоставлять поддержку пользователям, которые работают в "облачном темпе" — используют циклы быстрой разработки. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год. В этой модели необходимо, чтобы программа [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) для серверов Nano Server была развернута и использовалась в рабочей среде. Чтобы сохранить поддержку, администраторы должны использовать один из двух последних выпусков CBB. Но эти выпуски не обновляют существующие развертывания автоматически; администраторы должны при первой возможности вручную установить новый выпуск CBB. Некоторые дополнительные сведения см. в разделе [Новый вариант обслуживания Current Branch for Business для Windows Server 2016](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Новый вариант обслуживания Current Branch for Business для Windows Server 2016).
 
 Варианты установки основных серверных компонентов или сервера с возможностями рабочего стола обслуживаются по [модели Long-Term Servicing Branch (LTSB)](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy), которая подразумевает пять лет основной и пять лет расширенной поддержки.
 

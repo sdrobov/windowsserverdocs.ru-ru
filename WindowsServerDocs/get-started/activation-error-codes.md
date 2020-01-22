@@ -8,12 +8,12 @@ ms.assetid: ''
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: d4d9a8917bf455d8ed84207e2f9ecc6d13d01c3d
-ms.sourcegitcommit: b18ee742662b24b25d29ef1079b1c49f220f1d57
+ms.openlocfilehash: 4e977dbf71eb4afd004a773d06933fd8646ce8eb
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74691866"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947669"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Устранение неполадок по коду ошибки активации Windows
 
@@ -26,7 +26,7 @@ ms.locfileid: "74691866"
 
 Дополнительные сведения об активации корпоративных лицензий для текущих и последних версий Windows см. в [этой статье](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
 
-Дополнительные сведения об активации корпоративных лицензий для более ранних версий Windows (Windows Vista, Windows Server 2008, Windows Server 2008 R2 и Windows 7) см. в  [статье базы знаний № 929712](https://support.microsoft.com/en-us/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
+Дополнительные сведения об активации корпоративных лицензий для более ранних версий Windows (Windows Vista, Windows Server 2008, Windows Server 2008 R2 и Windows 7) см. в  [статье базы знаний № 929712](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
 
 ## <a name="diagnostic-tool"></a>Средство диагностики
 
@@ -193,7 +193,7 @@ ms.locfileid: "74691866"
 
 #### <a name="resolution"></a>Разрешение
 
-Чтобы устранить эту проблему, убедитесь, что используется ключ MAK, предоставленный корпорацией Майкрософт. Чтобы проверить действительность ключа MAK, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+Чтобы устранить эту проблему, убедитесь, что используется ключ MAK, предоставленный корпорацией Майкрософт. Чтобы проверить действительность ключа MAK, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004c001-the-activation-server-determined-the-specified-product-key-is-invalid"></a>0xC004C001 Сервер активации определил, что указанный ключ продукта недопустим
 
@@ -203,7 +203,7 @@ ms.locfileid: "74691866"
 
 #### <a name="resolution"></a>Разрешение
 
-Убедитесь, что MAK является ключом, предоставленным Майкрософт. За дополнительной помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+Убедитесь, что MAK является ключом, предоставленным Майкрософт. За дополнительной помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004c003-the-activation-server-determined-the-specified-product-key-is-blocked"></a>0xC004C003 Сервер активации определил, что указанный ключ продукта заблокирован
 
@@ -213,7 +213,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-Чтобы получить новый ключ MAK, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers). После получения нового ключа MAK попробуйте повторно установить и активировать Windows.  
+Чтобы получить новый ключ MAK, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers). После получения нового ключа MAK попробуйте повторно установить и активировать Windows.  
 
 ### <a name="0xc004c008-the-activation-server-determined-that-the-specified-product-key-could-not-be-used"></a>0xC004C008 Сервер активации обнаружил, что указанный ключ продукта не удалось использовать
 
@@ -223,7 +223,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).  
+Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).  
 
 ### <a name="0xc004c020-the-activation-server-reported-that-the-multiple-activation-key-has-exceeded-its-limit"></a>0xC004C020 Сервер активации сообщил, что превышен предел для ключа многократной активации.
 
@@ -233,7 +233,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004c021-the-activation-server-reported-that-the-multiple-activation-key-extension-limit-has-been-exceeded"></a>0xC004C021 Сервер активации сообщил, что превышен предел расширения для ключа многократной активации
 
@@ -243,7 +243,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+Если необходимо большее число активаций, обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004f009-the-software-protection-service-reported-that-the-grace-period-expired"></a>0xC004F009 Служба защиты программного обеспечения сообщила, что льготный период истек.
 
@@ -253,7 +253,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-За помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+За помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004f00f-the-software-licensing-server-reported-that-the-hardware-id-binding-is-beyond-level-of-tolerance"></a>0xC004F00F Сервер лицензирования программного обеспечения сообщил, что идентификатор привязки оборудования выходит за границы допустимого отклонения
 
@@ -293,7 +293,7 @@ MAK заблокирован на сервере активации.
 
 Полный текст этого сообщения об ошибке выглядит так:
 
-> Ошибка: Неправильный ключ пакета лицензий (VLK). Для активации нужно изменить ключ продукта на правильный многопользовательский ключ активации (MAK) или розничный ключ. Требуется соответствующая лицензия на ОС и корпоративная лицензия, лицензия на обновление Windows 7 либо полная лицензия для Windows 7 из розничного источника. ЛЮБАЯ ДРУГАЯ ПОПЫТКА УСТАНОВКИ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ЯВЛЯЕТСЯ НАРУШЕНИЕМ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ И ЗАКОНОВ ОБ АВТОРСКИХ ПРАВАХ.  
+> Ошибка. Неправильный ключ пакета лицензий (VLK). Для активации нужно изменить ключ продукта на правильный многопользовательский ключ активации (MAK) или розничный ключ. Требуется соответствующая лицензия на ОС и корпоративная лицензия, лицензия на обновление Windows 7 либо полная лицензия для Windows 7 из розничного источника. ЛЮБАЯ ДРУГАЯ ПОПЫТКА УСТАНОВКИ ЭТОГО ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ ЯВЛЯЕТСЯ НАРУШЕНИЕМ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ И ЗАКОНОВ ОБ АВТОРСКИХ ПРАВАХ.  
 
 Текст ошибки верен, но неоднозначен. Эта ошибка означает, что в BIOS компьютера отсутствует маркер Windows, который идентифицирует его как систему изготовителя оборудования, на которой выполняется соответствующий выпуск Windows. Эта информация требуется для активации клиента KMS. Более точное значение этого кода: "Ошибка: неправильный ключ многократной установки".
 
@@ -310,7 +310,7 @@ MAK заблокирован на сервере активации.
   > В случае появления сообщения об ошибке 0x80072ee2 при попытке активации используйте приведенный ниже метод активации по телефону.
 - Выполните активацию по телефону, сделав следующее.
    1. Выполните команду **slmgr /dti**, а затем запишите значение идентификатора установки. </li>
-   1. Чтобы получить идентификатор подтверждения, обратитесь в один из [центров активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers) и сообщите идентификатор установки.</li>
+   1. Чтобы получить идентификатор подтверждения, обратитесь в один из [центров активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers) и сообщите идентификатор установки.</li>
    1. Чтобы выполнить активацию с помощью идентификатора подтверждения, выполните команду **slmgr /atp &lt;ИД_подтверждения&gt;** .
 
 ### <a name="0xc004f038-the-count-reported-by-your-key-management-service-kms-is-insufficient"></a>0xC004F038 Значение счетчика, которое сообщила служба управления ключами (KMS), недостаточно.
@@ -392,7 +392,7 @@ MAK заблокирован на сервере активации.
 
 #### <a name="resolution"></a>Разрешение
 
-За помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/en-us/Licensing/existing-customer/activation-centers).
+За помощью обратитесь в [Центры активации лицензий Майкрософт](https://www.microsoft.com/Licensing/existing-customer/activation-centers).
 
 ### <a name="0xc004f065-the-software-protection-service-reported-that-the-application-is-running-within-the-valid-non-genuine-period"></a>0xC004F065 Служба защиты программного обеспечения сообщила, что приложение выполняется в рамках допустимого периода для ПО с неподтвержденной подлинностью.
 

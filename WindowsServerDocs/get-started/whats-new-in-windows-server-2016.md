@@ -10,16 +10,16 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 76cfd0f0cca18fb072883a9e14fae420516bd329
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: afcda1d3f94c5f6fa7524317ac21c5540c07895c
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391360"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948266"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Новые возможности Windows Server 2016
 
->Относится к: Windows Server 2016
+>Применяется к: Windows Server 2016
 
 ![Значок, показывающий газету](media/whats-new.png) Дополнительные сведения о новых возможностях Windows Server см. в [этой статье](whats-new-in-windows-server.md). В этом разделе рассказывается о новых и измененных возможностях в Windows Server&reg; 2016. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском.
 
@@ -98,7 +98,7 @@ Windows Server 2016 и Windows 10 включает новую функцию P
 
 Дополнительные сведения см. в статье, посвященной [PowerShell на стороне синих](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/).
 
-## <a name="networkingnetworkingnetworkingmd"></a>[Сеть](../networking/Networking.md)  
+## <a name="networkingnetworkingnetworkingmd"></a>[Сетевое взаимодействие](../networking/Networking.md)  
 Эта область охватывает сетевые продукты и компоненты, позволяющие ИТ-специалистам проектировать, развертывать и обслуживать Windows Server 2016.  
 
 ### <a name="software-defined-networking"></a>Программно-определяемая сеть
@@ -136,7 +136,7 @@ Device Guard обеспечивает целостность кода режим
 
 Хранилище в Windows Server 2016 включает новые возможности и усовершенствования для программно-определяемого хранилища, а также для традиционных файловых серверов. Ниже представлено лишь несколько новых функций, дополнительные сведения см. в статье [Новые возможности хранилища в Windows Server 2016](../storage/whats-new-in-storage.md).
 
-### <a name="storage-spaces-direct"></a>Локальные дисковые пространства
+### <a name="storage-spaces-direct"></a>Дисковые пространства прямого подключения
 
 Локальные дисковые пространства позволяют создавать масштабируемые хранилища с высоким уровнем доступности с помощью серверов с локальным хранилищем. Они упрощают развертывание и администрирование программно-определяемых систем хранения данных и открывают возможность использования дисковых устройств новых классов, например SATA SSD и NVMe. Ранее для кластерных дисковых пространств с общими дисками это было невозможно.
 
@@ -195,7 +195,7 @@ Windows Server 2016 включает ряд новых возможностей
 
 - Максимальный размер DSN-имени увеличен с 256 до 3072 байтов. Дополнительные сведения см. в статьях об [IDtcToXaHelperFactory::Create](https://msdn.microsoft.com/library/ms686861(v=vs.85).aspx), [IDtcToXaHelperSinglePipe::XARMCreate](https://msdn.microsoft.com/library/ms679248(v=vs.85).aspx) и [IDtcToXaMapper::RequestNewResourceManager](https://msdn.microsoft.com/library/ms680310(v=vs.85).aspx).
 
-- Теперь можно настроить раздел реестра так, чтобы включить путь к файлу образа в имя файла журнала трассировки, упростив таким образом поиск нужного файла журнала трассировки. Дополнительные сведения о настройке диагностической трассировки для MSDTC на компьютере под управлением Windows см. в [этой статье](https://support.microsoft.com/en-us/kb/926099).
+- Теперь можно настроить раздел реестра так, чтобы включить путь к файлу образа в имя файла журнала трассировки, упростив таким образом поиск нужного файла журнала трассировки. Дополнительные сведения о настройке диагностической трассировки для MSDTC на компьютере под управлением Windows см. в [этой статье](https://support.microsoft.com/kb/926099).
 
 
 

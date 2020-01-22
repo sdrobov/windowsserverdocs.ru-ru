@@ -11,17 +11,17 @@ ms.date: 07/06/2018
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: dougkim
-ms.openlocfilehash: 7ff88368c937890d3d5c4f650f6c4c08d404069f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+manager: lizross
+ms.openlocfilehash: cf189b15ca15fb556424b5e4931f19d4be356d4d
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387858"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919960"
 ---
 # <a name="desktop-hosting-service"></a>Служба размещения рабочих столов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 В этой статье подробно описаны компоненты службы размещения рабочих столов.
 
@@ -43,7 +43,7 @@ ms.locfileid: "71387858"
 2. Настройка изолированного сервера AD DS в виртуальной сетевой среде клиента. Это обеспечивает полный контроль над экземпляром AD DS, работающим на виртуальных машинах.
 3. Создание VPN-подключения типа "сеть — сеть" к серверу AD DS, расположенному в локальной среде клиента. Это позволяет клиенту подключить свой существующий экземпляр AD DS, устранив дублирование пользователей, групп, подразделений и т. д.
 
-Дополнительные сведения доступны в следующих статьях.
+См. сведения в следующих статьях:
 
 * [Документация по доменным службам Active Directory](https://docs.microsoft.com/azure/active-directory-domain-services/)
 * [Руководство по эталонной архитектуре размещения рабочих столов для Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
@@ -72,7 +72,7 @@ ms.locfileid: "71387858"
 
 Маленькие клиенты могут снизить затраты путем объединения файлового сервера и [роли лицензирования удаленных рабочих столов](rds-roles.md#remote-desktop-licensing) на одной виртуальной машине в своей среде клиента.
 
-Дополнительные сведения доступны в следующих статьях.
+См. сведения в следующих статьях:
 
 * [Хранилище в Windows Server](../../storage/storage.md)
 * [Как подключить управляемый диск данных к виртуальной машине Windows на портале Azure](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)

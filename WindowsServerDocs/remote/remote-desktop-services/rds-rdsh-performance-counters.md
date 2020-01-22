@@ -10,16 +10,16 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: b59d93d576967ee83b3efecc2630034eab919bf2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7b222104abd5b0b964bac748c3be15049075191d
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403902"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75950427"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>Диагностика проблем с производительностью приложений на узлах сеансов удаленных рабочих столов с помощью счетчиков производительности
 
-> Относится к: Windows Server 2019, Windows 10
+> Применяется к: Windows Server 2019, Windows 10
 
 Плохая производительность приложений (когда приложения работают медленно или не отвечают) — одна из самых сложных проблем в плане диагностики. В большинстве случаев диагностику начинают со сбора данных о ЦП, памяти, дисковых операциях ввода/вывода и других метриках, после чего пытаются выяснить причину проблемы с помощью таких средств, как Windows Performance Analyzer. К сожалению, в большинстве случаев эти данные не помогают определить основную причину, так как данные счетчиков потребления ресурсов часто существенно колеблются. Из-за этого трудно сопоставить прочитанные данные с обнаруженной проблемой. Чтобы помочь вам быстрее устранять проблемы с производительностью приложений, мы добавили несколько новых счетчиков производительности (доступных [для загрузки](#download-windows-server-insider-software) через [Программу предварительной оценки Windows](https://insider.windows.com)), которые измеряют потоки ввода данных пользователем.
 
@@ -140,7 +140,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 ## <a name="download-windows-server-insider-software"></a>Скачивание программного обеспечения Windows Server для предварительной оценки
 
-Зарегистрированные участники программы могут перейти непосредственно на [страницу загрузки ПО Windows Server для предварительной оценки](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewserver), чтобы получить последние файлы для загрузки программного обеспечения.  Чтобы узнать, как зарегистрироваться в качестве участника программы предварительной оценки, перейдите к разделу [Начало работы](https://insider.windows.com/en-us/for-business-getting-started-server/).
+Зарегистрированные участники программы могут перейти непосредственно на [страницу загрузки ПО Windows Server для предварительной оценки](https://www.microsoft.com/software-download/windowsinsiderpreviewserver), чтобы получить последние файлы для загрузки программного обеспечения.  Чтобы узнать, как зарегистрироваться в качестве участника программы предварительной оценки, перейдите к разделу [Начало работы](https://insider.windows.com/en-us/for-business-getting-started-server/).
 
 ## <a name="share-your-feedback"></a>Поделитесь своим мнением
 

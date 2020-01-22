@@ -14,22 +14,22 @@ author: jaimeo
 ms.author: jaimeo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 7d5f899964414c10350cc22a594a959c940a1514
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dcd50b287ad0f3dd49a0df3c1fe531379bd4078e
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391520"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948229"
 ---
-# <a name="release-notes-important-issues-in-windows-server-version-1709"></a>Заметки о выпуске: Важные проблемы в Windows Server версии 1709
+# <a name="release-notes-important-issues-in-windows-server-version-1709"></a>Заметки о выпуске. Важные проблемы в Windows Server версии 1709
 
->Область применения. Windows Server Semi-Annual Channel
+>Область применения. Windows Server, Semi-Annual Channel
 
-В этих примечаниях к выпуску кратко изложены наиболее критические проблемы в операционной системе Windows Server&reg;, включая способы их устранения или обхода, если они известны. Информацию об изменениях структуры, новых компонентах и исправлениях в этом выпуске см. в статье [Новые возможности Windows Server версии 1709](whats-new-in-windows-server-1709.md) и в сообщениях групп разработчиков конкретных компонентов. Если не указано иное, эти заметки распространяются на все выпуски и варианты установки Windows Server2016.  
+В этих примечаниях к выпуску кратко изложены наиболее критические проблемы в операционной системе Windows Server&reg;, включая способы их устранения или обхода, если они известны. Информацию об изменениях структуры, новых компонентах и исправлениях в этом выпуске см. в статье [Новые возможности Windows Server версии 1709](whats-new-in-windows-server-1709.md) и в сообщениях групп разработчиков конкретных компонентов. Если не указано иное, эти заметки распространяются на все выпуски и варианты установки Windows Server 2016.  
 
 Этот документ постоянно обновляется. По мере обнаружения критических проблем, определения обходных путей и выпуска исправлений в документ добавляются соответствующие сведения.  
   
-## <a name="storage-spaces-direct"></a>Локальные дисковые пространства
+## <a name="storage-spaces-direct"></a>Дисковые пространства прямого подключения
 [comment]: # (ИД: неизвестно; Отправитель: stevenek; Состояние: утверждено)  
 Локальные дисковые пространства не входят в состав Windows Server версии 1709. Если вызвать командлет *Enable-ClusterStorageSpacesDirect* или его псевдоним *Enable-ClusterS2D* на сервере с Windows Server версии 1709, отобразится сообщение об ошибке "Запрошенная операция не поддерживается".
 
@@ -41,4 +41,4 @@ ms.locfileid: "71391520"
 
 Локальные дисковые пространства впервые появились в Windows Server 2016 и они лежат в основе нашей гиперконвергентной платформы. Мы рады тому, насколько положительно пользователи приняли гиперконвергентную платформу Майкрософт и делаем для них все возможное.
 
-Мы прислушиваемся к отзывам клиентов и разрабатываем [следующий набор нововведений](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) для нашей гиперконвергентной платформы. Эти возможности уже доступны в сборках для [участников программы предварительной оценки Windows](https://insider.windows.com/for-business/), и мы хотим, чтобы вы тоже ознакомились с ними и поделились своим мнением. Клиентам, которым нужно проверенное гиперконвергентное решение, мы рекомендуем программу [Windows Server Software Defined](http://microsoft.com/wssd).
+Мы прислушиваемся к отзывам клиентов и разрабатываем [следующий набор нововведений](https://blogs.technet.microsoft.com/windowsserver/2017/09/07/sneak-peek-2-windows-server-version-1709-hyper-converged-infrastructure/) для нашей гиперконвергентной платформы. Эти возможности уже доступны в сборках для [участников программы предварительной оценки Windows](https://insider.windows.com/for-business/), и мы хотим, чтобы вы тоже ознакомились с ними и поделились своим мнением. Клиентам, которым нужно проверенное гиперконвергентное решение, мы рекомендуем программу [Windows Server Software Defined](https://microsoft.com/wssd).

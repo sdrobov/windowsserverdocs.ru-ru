@@ -8,12 +8,12 @@ ms.assetid: ''
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 3165c926c50c2f91544895e0d328f1dae7424b4a
-ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
+ms.openlocfilehash: 17d4dc0ce531327db21d660481386fcc56498ae3
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588039"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75948285"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>Рекомендации по устранению проблем с активацией, связанных с DNS.
 
@@ -21,13 +21,13 @@ ms.locfileid: "72588039"
 
 - Для установки одной из следующих операционных систем используется корпоративный&nbsp;носитель и универсальный ключ многократной установки.
    - Windows Server 2019
-   - Windows Server 2016
-   - Windows Server 2012 R2
+   - Windows Server 2016
+   - Windows Server 2012 R2
    - Windows Server 2012
-   - Windows Server 2008 R2
-   - Windows Server 2008
-   - Windows 10
-   - Windows 8.1
+   - Windows Server 2008 R2
+   - Windows Server 2008
+   - Windows 10
+   - Windows 8.1
    - Windows 8
 - Мастеру активации не удается подключиться к главному компьютеру KMS.
 
@@ -88,7 +88,7 @@ ms.locfileid: "72588039"
 
 Проверьте реестр сервера узла службы KMS, чтобы определить, выполняется ли его регистрация в DNS. По умолчанию сервер узла службы KMS динамически регистрирует запись SRV DNS каждые 24 часа. 
 > [!IMPORTANT]
-> Внимательно выполните действия, описанные в этом разделе. Неправильное изменение реестра может привести к серьезным проблемам. Перед внесением изменений [создайте резервную копию реестра для его восстановления](https://support.microsoft.com/en-us/help/322756) в случае возникновения проблем.  
+> Внимательно выполните действия, описанные в этом разделе. Неправильное изменение реестра может привести к серьезным проблемам. Перед внесением изменений [создайте резервную копию реестра для его восстановления](https://support.microsoft.com/help/322756) в случае возникновения проблем.  
 
 Для проверки сделайте следующее:
 1. Откройте редактор реестра. Для этого щелкните правой кнопкой мыши **Пуск**, выберите **Выполнить**, введите **regedit** и нажмите клавишу ВВОД.
@@ -185,9 +185,9 @@ ms.locfileid: "72588039"
 
 - имя — &nbsp; **_vlmcs._TCP**;
 - тип — &nbsp;**SRV**;
-- Priority: **0**
-- Weight: **0**
-- Port: **1688**;
+- приоритет — **0**;
+- вес — **0**;
+- порт — **1688**;
 - имя узла — **&lt;*FQDN или преобразованное имя узла KMS*&gt;** .
 
 > [!NOTE]

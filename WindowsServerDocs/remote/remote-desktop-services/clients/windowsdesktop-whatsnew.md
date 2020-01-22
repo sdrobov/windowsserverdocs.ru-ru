@@ -9,16 +9,16 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
-ms.date: 12/04/2019
+ms.date: 01/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5526d401ba26cabcaccfc0b88df9b0e69f8149a5
-ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
+ms.openlocfilehash: f1f4d6b32b8b7d717d2d424e0a60c5edc96f4cac
+ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829609"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75953065"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -30,14 +30,27 @@ ms.locfileid: "74829609"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Public (Общее)     |1.2.535  |
-|Предварительная оценка    |1.2.535  |
+|Общие     |1.2.535  |
+|Предварительная оценка    |1.2.594  |
+
+## <a name="updates-for-version-12594"></a>Обновления для версии 1.2.594
+
+*Дата публикации: 14.01.2020*
+
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cC), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cI), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oh9C)
+
+- Теперь можно выбрать, какие рабочие столы будут использоваться для подключений к рабочему столу. Чтобы изменить этот параметр, щелкните правой кнопкой мыши значок подключения к рабочему столу и выберите **Параметры**.
+- Исправлена проблема, при которой параметры подключения не отображали правильные коэффициенты масштабирования.
+- Исправлена проблема, при которой экранный диктор не мог прочитать диалоговое окно, отображаемое во время инициирования подключения.
+- Исправлена проблема, при которой имя пользователя отображалось неправильно, если имена Azure Active Directory и Active Directory не совпадали.
+- Исправлена проблема, из-за которой клиент переставал отвечать во время инициирования подключения при отсутствии подключения к сети.
+- Исправлена проблема, из-за которой клиент переставал отвечать при подключении гарнитуры.
 
 ## <a name="updates-for-version-12535"></a>Обновления для версии 1.2.535
 
 *Дата публикации: 04.12.2019*
 
-Загрузить: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
 
 - Теперь вы можете получать доступ к сведениям об обновлениях непосредственно с помощью кнопки "Дополнительные параметры" на панели команд в верхней части клиента.
 - Теперь вы можете отправлять отчеты об обратной связи с панели команд клиента.
@@ -50,7 +63,7 @@ ms.locfileid: "74829609"
 
 *Дата публикации: 12.11.2019*
 
-Загрузить: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - Теперь доступны версии клиента для 32-разрядной платформы и платформы ARM64.
 - Теперь клиент сохраняет любые изменения панели подключения (например, ее расположение, размер и закрепленное состояние) и применяет их в сеансах.
@@ -70,7 +83,7 @@ ms.locfileid: "74829609"
 
 *Дата публикации: 17.09.2019*
 
-Загрузить: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Улучшены резервные языки для локализованной версии. (Например, FR-CA будет правильно отображаться на французском, а не на английском языке.)
 - Теперь при удалении подписки клиент правильно удаляет сохраненные учетные данные из диспетчера учетных данных.

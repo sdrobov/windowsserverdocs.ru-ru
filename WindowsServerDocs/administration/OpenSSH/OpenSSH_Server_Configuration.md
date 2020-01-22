@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Конфигурация сервера OpenSSH для Windows
-ms.openlocfilehash: ed424c33c4cd2c19a9b5e985ab6083bcbcb9fbdc
-ms.sourcegitcommit: 0467b8e69de66e3184a42440dd55cccca584ba95
+ms.openlocfilehash: 5eb3d86950d169fd01512d330f0c04669beeffae
+ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546262"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76259043"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 версии 1809 и Windows Server 2019
 
@@ -84,7 +84,7 @@ AllowGroups sshusers
 
 ### <a name="hostkey"></a>HostKey
 
-По умолчанию используются значения %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key и %programdata%/ssh/ssh_host_rsa_key. Если эти файлы отсутствуют, sshd автоматически создает их при запуске службы.
+По умолчанию используются значения %programdata%/ssh/ssh_host_ecdsa_key, %programdata%/ssh/ssh_host_ed25519_key, %programdata%/ssh/ssh_host_dsa_key и %programdata%/ssh/ssh_host_rsa_key. Если эти файлы отсутствуют, sshd автоматически создает их при запуске службы.
 
 ### <a name="match"></a>Сопоставление
 
@@ -99,7 +99,7 @@ AllowGroups sshusers
 Если вам требуется ведение журнала в файле, используйте LOCAL0. Журналы создаются в папке %programdata%\ssh\logs.
 Любое другое значение, включая используемое по умолчанию AUTH, направляет журналы в ETW. Дополнительные сведения см. в статье о возможностях по ведению журнала в Windows.
 
-### <a name="not-supported"></a>Не поддерживается. 
+### <a name="not-supported"></a>Не поддерживается 
 
 Следующие параметры конфигурации недоступны в версии OpenSSH, которая поставляется в составе Windows Server 2019 и Windows 10 версии 1809:
 

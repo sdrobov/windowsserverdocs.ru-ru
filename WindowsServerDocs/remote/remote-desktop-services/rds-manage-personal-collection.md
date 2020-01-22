@@ -12,18 +12,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 6bf0ad3a2cd35c9794fd13631ed29df94725685c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7be6b2bfe1105357811927f5da7092e8c16c3446
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387409"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75949841"
 ---
-## <a name="manage-your-personal-desktop-session-collections"></a>Управление коллекциями сеансов личных рабочих столов
+# <a name="manage-your-personal-desktop-session-collections"></a>Управление коллекциями сеансов личных рабочих столов
 
 Используйте следующие сведения для управления коллекцией сеансов личных удаленных рабочих столов в службах удаленных рабочих столов.
 
-### <a name="manually-assign-a-user-to-a-personal-session-host"></a>Назначение пользователю личного узла сеансов вручную
+## <a name="manually-assign-a-user-to-a-personal-session-host"></a>Назначение пользователю личного узла сеансов вручную
 Используйте командлет **Set-RDPersonalSessionDesktopAssignment**, чтобы вручную назначить пользователю на личный сервер узла сеансов в коллекции. Этот командлет поддерживает следующие параметры.
 
 -CollectionName \<строка\>
@@ -49,7 +49,7 @@ ms.locfileid: "71387409"
 
 **-Path**: задает путь и имя файла для импорта.
  
-### <a name="removing-a-user-assignment-from-a-personal-session-host"></a>Удаление назначения пользователю личного узла сеансов
+## <a name="removing-a-user-assignment-from-a-personal-session-host"></a>Удаление назначения пользователю личного узла сеансов
 Используйте командлет **Remove-RDPersonalSessionDesktopAssignment**, чтобы удалить связь между личным сеансовым рабочим столом и пользователем. Этот командлет поддерживает следующие параметры.
 
 -CollectionName \<строка\>
@@ -64,7 +64,7 @@ ms.locfileid: "71387409"
 
 **-Force**: принудительное выполнение команды без запроса подтверждения у пользователя.
 
-### <a name="query-user-assignments"></a>Запрос назначений пользователей
+## <a name="query-user-assignments"></a>Запрос назначений пользователей
 Используйте командлет **Get-RDPersonalSessionDesktopAssignment**, чтобы получить список личных сеансовых рабочих столов и связанных учетных записей пользователей. Этот командлет поддерживает следующие параметры.
 
 -CollectionName \<строка\>
@@ -87,4 +87,4 @@ ms.locfileid: "71387409"
 -Path \<строка\>
 
 
-Все новые командлеты поддерживают общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+Все новые командлеты поддерживают общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

@@ -9,16 +9,16 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 11/12/2019
 ms.topic: get-started-article
-ms.openlocfilehash: e2879c56b1dd41b8d357959cca473dd69da77d10
-ms.sourcegitcommit: b9ec35416a06854c1bc875a2b731d42a436fe313
+ms.openlocfilehash: f2320b80fb372a227098f952dc8e7f0758420f34
+ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73956083"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75947820"
 ---
 # <a name="kms-client-setup-keys"></a>Ключи установки клиента KMS
 
->Относится к: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
+>Применяется к: Windows Server 2019, Windows Server Semi-Annual Channel, Windows Server 2016, Windows 10
 
 Компьютеры, работающие под управлением лицензируемых версий Windows Server, Windows 10, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Server 2008 R2, Windows Vista, и Windows Server 2008, по умолчанию являются клиентами KMS, для которых не требуется дополнительная настройка.
 
@@ -32,9 +32,9 @@ ms.locfileid: "73956083"
 | Действие    | Ресурс   |
 |--------------------|------------------------|
 | При активации Windows вне сценария активации корпоративных лицензий (то есть при активации розничной версии Windows) **эти ключи работать не будут**. | Для розничных версий Windows используйте следующие ссылки: |
-| Исправьте ошибку, которую вы получили при попытке активации системы Windows 8.1, Windows Server 2012 R2 или более новой системы. "Ошибка: 0xC004F050 Служба лицензирования программного обеспечения сообщила, что данный ключ продукта недопустим"… | [Установите это обновление](https://support.microsoft.com/en-us/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) на узле KMS, если он работает под управлением Windows 8.1, Windows Server 2012 R2, Windows 8 или Windows Server 2012. |
+| Исправьте ошибку, которую вы получили при попытке активации системы Windows 8.1, Windows Server 2012 R2 или более новой системы. "Error: 0xC004F050 The Software Licensing Service reported that the product key is invalid…" | [Установите это обновление](https://support.microsoft.com/help/3172614/july-2016-update-rollup-for-windows-8-1-and-windows-server-2012-r2) на узле KMS, если он работает под управлением Windows 8.1, Windows Server 2012 R2, Windows 8 или Windows Server 2012. |
 
--   [Получение Windows 10](https://www.microsoft.com/en-us/windows/get-windows-10)
+-   [Получение Windows 10](https://www.microsoft.com/windows/get-windows-10)
 
 -   [Получение нового ключа продукта Windows](https://support.microsoft.com/help/10749/windows-product-key)
 
@@ -61,17 +61,17 @@ ms.locfileid: "73956083"
 | Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C  |
 | Windows Server 2019 Essentials|WVDHN-86M7X-466P6-VHXV7-YY726|
 
-### <a name="windows-server-2016"></a>Windows Server 2016
+### <a name="windows-server-2016"></a>Windows Server 2016
 
 | Версия операционной системы       | Ключ установки клиента KMS          |
 |--------------------------------|-------------------------------|
 | Windows Server 2016 Datacenter | CB7KF-BWN84-R7R2Y-793K2-8XDDG |
 | Windows Server 2016 Standard   | WC2BQ-8NRM3-FDDYY-2BFGV-KHKQY |
-| Windows Server2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
+| Windows Server 2016 Essentials | JCKRF-N37P4-C2D82-9YXRT-4M63B |
 
 ## <a name="windows-10-all-supported-semi-annual-channel-versions"></a>Windows 10, все поддерживаемые версии Semi-Annual Channel
 
-См. в разделе [Справочные материалы по жизненному циклу Windows](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) сведения о поддерживаемых версиях и конечных датах обслуживания.
+См. в разделе [Справочные материалы по жизненному циклу Windows](https://support.microsoft.com/help/13853/windows-lifecycle-fact-sheet) сведения о поддерживаемых версиях и конечных датах обслуживания.
 
 | Версия операционной системы          | Ключ установки клиента KMS          |
 |-----------------------------------|-------------------------------|
@@ -79,11 +79,11 @@ ms.locfileid: "73956083"
 |Windows 10 Pro N|MH37W-N47XK-V7XM9-C7227-GCQG9|
 |Windows 10 Pro для рабочих станций|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
 |Windows 10 Pro для рабочих станций N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
-|Windows 10 Pro для образовательных учреждений|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
+|Windows 10 Pro для образовательных учреждений|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
 |Windows 10 Pro для образовательных учреждений N|YVWGF-BXNMC-HTQYQ-CPQ99-66QFC|
 |Windows 10 для образовательных учреждений|NW6C2-QMPVW-D7KKK-3GKT6-VCFB2|
 |Windows 10 для образовательных учреждений N |2WH4N-8QGBV-H22JP-CT43Q-MDWWJ|
-|Windows 10 Корпоративная  |NPPR9-FWDCX-D2C8J-H872K-2YT43|
+|Windows 10 Корпоративная  |NPPR9-FWDCX-D2C8J-H872K-2YT43|
 |Windows 10 Корпоративная N    |DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4|
 |Windows 10 Корпоративная G|YYVX9-NTFWV-6MDM3-9PT4T-4M68B|
 |Windows 10 Корпоративная G N|44RPN-FTY23-9VTTB-MP9BX-T84FV|
@@ -127,7 +127,7 @@ ms.locfileid: "73956083"
 | Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
 | Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
 
-### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
+### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 | Версия операционной системы               | Ключ установки клиента KMS          |
 |----------------------------------------|-------------------------------|
@@ -149,18 +149,18 @@ ms.locfileid: "73956083"
 | Windows Server 2012 Datacenter          | 48HP8-DN98B-MYWDG-T2DCC-8W83P |
 
 
-### <a name="windows-server-2008-r2"></a>Windows Server 2008 R2
+### <a name="windows-server-2008-r2"></a>Windows Server 2008 R2
 
 | Версия операционной системы                         | Ключ установки клиента KMS          |
 |--------------------------------------------------|-------------------------------|
-| Windows Server 2008 R2 Web                       | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4 |
+| Windows Server 2008 R2 Web                       | 6TPJF-RBVHG-WBW2R-86QPH-6RTM4 |
 | Windows Server 2008 R2 HPC Edition               | TT8MH-CG224-D3D7Q-498W2-9QCTX |
 | Windows Server 2008 R2 Standard                  | YC6KT-GKW9T-YTKYR-T4X34-R7VHC |
 | Windows Server 2008 R2 Enterprise                | 489J6-VHDMP-X63PK-3K798-CPX3Y |
 | Windows Server 2008 R2 Datacenter                | 74YFP-3QFB3-KQT8W-PMXWJ-7M648 |
 | Windows Server 2008 R2 for Itanium-based Systems | GT63C-RJFQ3-4GMB6-BRFB9-CB83V |
 
-### <a name="windows-server-2008"></a>Windows Server 2008
+### <a name="windows-server-2008"></a>Windows Server 2008
 
 | Версия операционной системы                       | Ключ установки клиента KMS          |
 |------------------------------------------------|-------------------------------|
@@ -176,7 +176,7 @@ ms.locfileid: "73956083"
 
 ## <a name="earlier-versions-of-windows"></a>Предшествующие версии Windows
 
-### <a name="windows-81"></a>Windows 8.1
+### <a name="windows-81"></a>Windows 8.1
 
 | Версия операционной системы               | Ключ установки клиента KMS          |
 |----------------------------------------|-------------------------------|
@@ -207,7 +207,7 @@ ms.locfileid: "73956083"
 | Windows 7 Корпоративная E                           | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 
 
-См. также
+См. также статью
 
 • [Планирование активации корпоративных лицензий](https://technet.microsoft.com/library/jj134042(v=ws.11).aspx)
 

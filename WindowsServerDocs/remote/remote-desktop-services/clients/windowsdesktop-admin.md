@@ -9,20 +9,20 @@ ms.technology: remote-desktop-services
 ms.tgt_pltfrm: na
 ms.topic: article
 author: heidilohr
-manager: daveba
+manager: lizross
 ms.author: helohr
 ms.date: 09/16/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: b3fc8be8ad53213c41c6683d3cfc9233198d50e3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2195c3bafaa01a1b1c16c17889d5e04d7213a5b6
+ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404103"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75919704"
 ---
 # <a name="windows-desktop-client-for-admins"></a>Клиент рабочего стола Windows для администраторов
 
->Относится к: Windows 10 и Windows 7
+>Применяется к: Windows 10 и Windows 7
 
 В этом разделе содержатся дополнительные сведения о клиенте рабочего стола Windows, которые могут оказаться полезными для администраторов. Основные сведения об использовании см. в статье [Приступая к работе с клиентом для Windows Desktop](windowsdesktop.md).
 
