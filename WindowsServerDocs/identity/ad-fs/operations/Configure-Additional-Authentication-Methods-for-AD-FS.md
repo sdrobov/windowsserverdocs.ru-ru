@@ -9,12 +9,12 @@ ms.date: 07/26/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 89a1f745e1e928a5e5bd79adb94e41fd9da399d9
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a7cfc80a1e137a4184afa0e8b33a488f1e35dcfa
+ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948543"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76519456"
 ---
 # <a name="configure-additional-authentication-methods-for-ad-fs"></a>Настройка дополнительных методов проверки подлинности для службы федерации Active Directory
 
@@ -33,6 +33,7 @@ ms.locfileid: "75948543"
 |Поставщик|Предложение|Ссылки на дополнительные сведения|
 |-|-|-| 
 |аперсона|Аперсона Адаптивная многофакторная проверка подлинности для единого входа Microsoft ADFS|[Адаптер ADFS Аперсона ASM](https://www.apersona.com/adfs)|
+|Циферкор Inc.|Многофакторная проверка подлинности Логинтк для AD FS|[Соединитель AD FS Логинтк](https://www.logintc.com/docs/connectors/adfs.html)|
 |Duo Security|Адаптер MFA для AD FS|[Duo для проверки подлинности AD FS](https://duo.com/docs/adfs)|
 |футурае|Набор проверки подлинности футурае для AD FS|[Футурае строгая проверка подлинности](https://futurae.com)|
 |Компания Gemalto|Службы идентификации и безопасности компании Gemalto|[http://www.gemalto.com/identity](http://www.gemalto.com/identity)|
