@@ -9,12 +9,12 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: a216c490c92461e07fd5093783ec2c3049e8accb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b5be8827cee22b35fb31bf08d1c960b150dcad84
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388026"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822657"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Настройка туннелей VPN-устройств в Windows 10
 
@@ -46,9 +46,9 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## <a name="vpn-device-tunnel-configuration"></a>Конфигурация туннеля VPN-устройства
 
-Приведенный ниже пример XML-кода профиля предоставляет хорошее руководство для сценариев, в которых для туннеля устройства требуются только инициированные клиентом опросы.  Фильтры трафика используются, чтобы ограничить туннель устройства только трафиком управления.  Эта конфигурация хорошо подходит для Центр обновления Windows, типовых сценариев обновления групповая политика (GP) и System Center Configuration Manager (SCCM), а также VPN-подключения для первого входа без кэшированных учетных данных или сценариев сброса пароля. 
+Приведенный ниже пример XML-кода профиля предоставляет хорошее руководство для сценариев, в которых для туннеля устройства требуются только инициированные клиентом опросы.  Фильтры трафика используются, чтобы ограничить туннель устройства только трафиком управления.  Эта конфигурация хорошо подходит для Центр обновления Windows, типичных групповая политика (GP) и Microsoft Endpoint Configuration Manager обновления, а также VPN-подключения для первого входа без кэшированных учетных данных или сценариев сброса пароля. 
 
-Для инициированных сервером push-уведомлений, таких как служба удаленного управления Windows (WinRM), Remote GPUpdate и Remote Update сценариев, необходимо разрешить входящий трафик в туннеле устройства, чтобы не использовать фильтры трафика.  Если в профиле туннеля устройства вы включите фильтры трафика, то туннель устройства отклоняет входящий трафик.  Это ограничение будет удалено в будущих выпусках.
+Для инициированных сервером вариантов push-уведомлений, таких как служба удаленного управления Windows (WinRM), Remote GPUpdate и Remote Configuration Manager Update, необходимо разрешить входящий трафик в туннеле устройства, чтобы не использовать фильтры трафика.  Если в профиле туннеля устройства вы включите фильтры трафика, то туннель устройства отклоняет входящий трафик.  Это ограничение будет удалено в будущих выпусках.
 
 
 ### <a name="sample-vpn-profilexml"></a>Пример VPN-Профилексмл
@@ -173,7 +173,7 @@ Write-Host "$Message"
 
 Ниже приведены ресурсы конфигурации VPN-клиента.
 
-- [Создание профилей VPN в System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles)
+- [Создание профилей VPN в Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
 - [Настройка клиента Windows 10 Always On VPN-подключений](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [Параметры профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 

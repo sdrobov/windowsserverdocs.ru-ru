@@ -8,18 +8,18 @@ ms.topic: get-started-article
 ms.assetid: 0f00ae6e-ae1b-41e3-8c50-65226b5b9c9e
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: ab33f5066daa0ef339c38974e4022cf8e61ace57
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9287408446b81805e3c13ff876535a615ecb03d5
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406450"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822797"
 ---
 # <a name="install-content-servers-that-use-the-branchcache-feature"></a>Установка серверов содержимого, использующих компонент BranchCache
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-Для развертывания серверов содержимого, которые являются веб-серверами с протоколом HTTPS, веб-серверами HTTP и фоновой интеллектуальной службы передачи (BITS), например Windows Server Update Services ( WSUS) и System Center Configuration Manager серверах системы сайта распространения филиалов необходимо установить функцию BranchCache, запустить службу BranchCache и (только для серверов WSUS) выполнить дополнительные действия по настройке.  
+Для развертывания серверов содержимого, которые являются веб-серверами с протоколом HTTPS, веб-серверами HTTP и фоновой интеллектуальной службы передачи (BITS), например Windows Server Update Services ( WSUS) и серверы системы сайта распространения филиала Microsoft Endpoint Configuration Manager, необходимо установить функцию BranchCache, запустить службу BranchCache и (только для серверов WSUS) выполнить дополнительные действия по настройке.  
   
 Сведения о развертывании серверов содержимого см. в следующих разделах.  
   

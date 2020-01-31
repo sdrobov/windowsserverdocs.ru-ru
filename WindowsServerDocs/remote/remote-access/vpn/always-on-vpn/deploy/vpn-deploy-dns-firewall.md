@@ -9,19 +9,19 @@ ms.localizationpriority: medium
 ms.author: pashort
 author: shortpatti
 ms.date: 06/11/2018
-ms.openlocfilehash: 326f1e8d52dc34ad433e8cc3bd4c4e84508026b7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: aa7658587b8434bfbaa6874498215a6b2c9213be
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388077"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822667"
 ---
 # <a name="step-5-configure-dns-and-firewall-settings"></a>Шаг 5. Настройка параметров DNS и брандмауэра
 
->Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
-- [**Прошлом** Шаг 4. Установка и настройка сервера политики сети](vpn-deploy-nps.md)
-- [**Очеред** Шаг 6. Настройка подключений постоянно подключенного VPN-профиля клиента Windows 10](vpn-deploy-client-vpn-connections.md)
+- [**Назад:** Шаг 4. Установка и настройка сервера NPS](vpn-deploy-nps.md)
+- [**Далее:** Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](vpn-deploy-client-vpn-connections.md)
 
 На этом шаге вы настроите параметры DNS и брандмауэра для VPN-подключения.
 
@@ -82,6 +82,6 @@ ms.locfileid: "71388077"
 
 Если вы не используете порты RADIUS по умолчанию в развертывании NPS, необходимо настроить брандмауэр таким образом, чтобы он разрешал трафик RADIUS на используемых портах. Дополнительные сведения см. в статье [Настройка брандмауэров для трафика RADIUS](../../../../../networking/technologies/nps/nps-firewalls-configure.md).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-[Шаг 6. Настройка клиента Windows 10 Always On VPN-](vpn-deploy-client-vpn-connections.md)подключений: На этом шаге вы настроите клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с помощью VPN-подключения. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, System Center Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.
+[Шаг 6. Настройка клиента Windows 10 Always On VPN-подключениях](vpn-deploy-client-vpn-connections.md). на этом этапе вы настраиваете клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с VPN-подключением. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, Microsoft Endpoint Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.

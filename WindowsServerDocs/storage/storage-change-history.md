@@ -7,14 +7,14 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.date: 12/20/2019
+ms.date: 1/16/2019
 description: Новые и обновленные разделы документации по локальному хранилищу для Windows Server для ИТ-специалистов.
-ms.openlocfilehash: d50d4ca5b49b7f895fad3d3866226f95c55ae485
-ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+ms.openlocfilehash: eb0e4f5cd357718be298290930bdf6fb9f7f041f
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75352775"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822607"
 ---
 # <a name="change-history-for-storage-topics-in-windows-server"></a>Журнал изменений разделов, посвященных хранилищу в Windows Server
 
@@ -23,6 +23,12 @@ ms.locfileid: "75352775"
 В этом разделе перечислены новые и обновленные разделы документации по службе [хранилища](storage.md) для Windows Server.
 
 > Если вы ищете журнал обновлений для Windows Server, ознакомьтесь с журналом [обновлений Windows 10 и Windows server 2019](https://support.microsoft.com/help/4464619) или [журналом обновлений Windows Server 2016](https://support.microsoft.com/help/4000825/windows-10-and-windows-server-2016-update-history).
+
+## <a name="january-2020"></a>2020 января
+
+| Новая или измененная статья | Описание |
+| --- | --- |
+|[Общие сведения о постоянной памяти и ее развертывании](storage-spaces/deploy-pmem.md) | Добавлена известная ошибка оборудования. |
 
 ## <a name="december-2019"></a>Декабрь 2019 г.
 
@@ -33,7 +39,7 @@ ms.locfileid: "75352775"
 | [Преобразование динамического диска в базовый](disk-management/change-a-dynamic-disk-back-to-a-basic-disk.md) | Исправлена ошибка в командной строке и добавлены некоторые сведения на основе отзывов пользователей. |
 
 
-## <a name="august-2019"></a>Август 2019 г.
+## <a name="august-2019"></a>Август 2019 г.
 
 | Новая или измененная статья                                        | Описание |
 | ---                                                         | ---           |
@@ -54,7 +60,7 @@ ms.locfileid: "75352775"
 |[Создание томов](storage-spaces/create-volumes.md)| Добавлены шаги и видеоролики по созданию тома в центре администрирования Windows.|
 |[Увеличение размеров томов](storage-spaces/resize-volumes.md)| Добавлены шаги и видео по изменению размера тома в центре администрирования Windows.|
 
-## <a name="march-2019"></a>Март 2019 г.
+## <a name="march-2019"></a>Март 2019
 
 |Новая или измененная статья                                        |Описание|
 |---                                                         |---           |

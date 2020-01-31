@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 054a41df281ff9720d381fd4854f34f56ed0307b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 33e00134960ca31ce966198ded0692550e164fd6
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388187"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822415"
 ---
 # <a name="deploy-always-on-vpn"></a>Развертывание постоянно подключенного VPN-профиля
 
@@ -73,12 +73,12 @@ ms.locfileid: "71388187"
 
 ## <a name="step-6-configure-windows-10-client-always-on-vpn-connectionsvpn-deploy-client-vpn-connectionsmd"></a>[Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](vpn-deploy-client-vpn-connections.md)
 
-На этом шаге вы настроите клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с помощью VPN-подключения. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, System Center Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.
+На этом шаге вы настроите клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с помощью VPN-подключения. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, Microsoft Endpoint Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.
 
 ## <a name="step-7-optional-configure-conditional-access-for-vpn-connectivityad-ca-vpn-connectivity-windows10md"></a>[Шаг 7. Используемых Настройка условного доступа для VPN-подключения](../../ad-ca-vpn-connectivity-windows10.md)
 
 На этом необязательном шаге можно точно настроить, как разрешенные VPN-пользователи получают доступ к ресурсам. Условный доступ Azure AD для VPN-подключения позволяет защитить VPN-подключения. Условный доступ — это механизм оценки на основе политик, позволяющий создавать правила доступа для любого приложения, подключенного к Azure AD. Дополнительные сведения см. в разделе [Azure Active Directory (Azure AD) условный доступ](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Далее
 
 [Шаг 1. Планируйте Always On развертывание VPN](always-on-vpn-deploy-planning.md): перед установкой роли сервера удаленного доступа на компьютере, который планируется использовать в качестве VPN-сервера. После надлежащего планирования можно развернуть Always On VPN и при необходимости настроить условный доступ для VPN-подключения с помощью Azure AD.  

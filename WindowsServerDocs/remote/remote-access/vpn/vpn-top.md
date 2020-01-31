@@ -9,16 +9,16 @@ ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
 ms.localizationpriority: medium
-ms.openlocfilehash: 6b647d8cbf9586408b49c1519b57d32e596fce10
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fdd409dee5a7a957580daeeb05209336edfd86f6
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404223"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822617"
 ---
 # <a name="virtual-private-networking-vpn"></a>Виртуальная частная сеть (VPN)
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 ## <a name="ras-gateway-as-a-single-tenant-vpn-server"></a>Шлюз RAS в качестве VPN-сервера одного клиента
 
@@ -37,17 +37,17 @@ ms.locfileid: "71404223"
 >[!NOTE]
 >Вы также можете развернуть шлюз RAS в качестве VPN-сервера с многопользовательским интерфейсом для использования с программно заданной сетью (SDN) или как сервер DirectAccess. Дополнительные сведения см. в статье [шлюз RAS](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [программно-определяемая сеть (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)и [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
-## <a name="related-topics"></a>См. также
-- [Always on функции и функции VPN](vpn-map-da.md): В этом разделе вы узнаете о функциях и функциях Always On VPN. 
+## <a name="related-topics"></a>Связанные темы
+- [Always on функции и функции VPN](vpn-map-da.md). в этом разделе вы узнаете о функциях и функциях Always on VPN. 
 
-- [Настройка туннелей VPN-устройств в Windows 10](vpn-device-tunnel-config.md): Always On VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: _туннель устройства_ и _туннель пользователя_. Туннель устройства используется для сценариев подключения предварительного входа и управления устройствами. Пользовательский туннель позволяет пользователям получать доступ к ресурсам Организации через VPN-серверы.
+- [Настройка туннелей VPN-устройств в Windows 10](vpn-device-tunnel-config.md): Always on VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: _туннель устройства_ и _туннель пользователя_. Туннель устройства используется для сценариев подключения предварительного входа и управления устройствами. Пользовательский туннель позволяет пользователям получать доступ к ресурсам Организации через VPN-серверы.
 
-- [Always on развертывание VPN для Windows Server 2016 и Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md): Содержит инструкции по развертыванию удаленного доступа в качестве отдельного VPN-шлюза RAS для VPN-подключений типа "точка — сеть", которые позволяют удаленным сотрудникам подключаться к сети Организации с Always On VPN-подключениями. Рекомендуется ознакомиться с руководством по проектированию и развертыванию для каждой из технологий, используемых в этом развертывании.
+- [Always on развертывание VPN для Windows Server 2016 и Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md): содержит инструкции по развертыванию удаленного доступа в качестве одного VPN-шлюза RAS для VPN-подключений типа "точка — сеть", которые позволяют удаленным сотрудникам подключаться к сети организации с Always on VPN-подключениями. Рекомендуется ознакомиться с руководством по проектированию и развертыванию для каждой из технологий, используемых в этом развертывании.
 
-- [Техническое руководство по VPN Windows 10](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide): Пошаговые инструкции по решениям для клиентов Windows 10 в корпоративном VPN-решении и настройке развертывания. Можно найти ссылки на поставщика службы настройки поддержка vpnv2 (CSP) и предоставить инструкции по настройке управления мобильными устройствами (MDM) с помощью Microsoft Intune и шаблона профиля VPN для Windows 10.
+- [Техническое руководство по VPN Windows 10](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide). пошаговые инструкции по принятию решений для клиентов Windows 10 в корпоративном VPN-решении и настройке развертывания. Можно найти ссылки на поставщика службы настройки поддержка vpnv2 (CSP) и предоставить инструкции по настройке управления мобильными устройствами (MDM) с помощью Microsoft Intune и шаблона профиля VPN для Windows 10.
 
-- [Создание профилей VPN в System Center Configuration Manager](https://docs.microsoft.com/sccm/protect/deploy-use/create-vpn-profiles): В этом разделе вы узнаете, как создавать профили VPN в System Center Configuration Manager (SCCM).
+- [Создание профилей VPN в Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles). в этом разделе вы узнаете, как создавать профили vpn в Configuration Manager.
 
-- [Настройка клиента Windows 10 Always on VPN-подключений](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections): В этом разделе описываются параметры и схема Профилексмл, а также описывается создание Профилексмл VPN. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения.
+- [Настройка клиента Windows 10 Always on VPN-подключениях](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections). в этом разделе описываются параметры и схема профилексмл, а также создание VPN профилексмл. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения.
 
-- [Параметры профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options): В этом разделе описываются параметры профиля VPN в Windows 10 и настраиваются профили VPN с помощью Intune или SCCM. Вы можете настроить все параметры VPN в Windows 10 с помощью узла Профилексмл в поставщике служб шифрования поддержка vpnv2.
+- [Параметры профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options). в этом разделе описываются параметры профиля VPN в Windows 10 и настраиваются профили VPN с помощью Intune или Configuration Manager. Вы можете настроить все параметры VPN в Windows 10 с помощью узла Профилексмл в поставщике служб шифрования поддержка vpnv2.

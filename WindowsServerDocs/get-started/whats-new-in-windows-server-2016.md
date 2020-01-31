@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: afcda1d3f94c5f6fa7524317ac21c5540c07895c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 0c140c61a5887cc63b2a9d0b468f8d1daf02cd76
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948266"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822717"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Новые возможности Windows Server 2016
 
@@ -86,7 +86,7 @@ Windows PowerShell 5.1 содержит важные новые компоне�
 ### <a name="powershell-desired-state-configuration-dsc-in-windows-management-framework-wmf-5"></a>Настройка требуемого состояния (DSC) PowerShell в Windows Management Framework (WMF) 5
 Windows Management Framework 5 включает в себя обновления для настройки требуемого состояния (DSC) Windows PowerShell, службы удаленного управления Windows (WinRM) и инструментария управления Windows (WMI).
 
-Дополнительные сведения о тестировании возможностей DSC в Windows Management Framework 5 см. в серии записей блога [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/) (Проверка компонентов PowerShell DSC). Чтобы скачать Windows Management Framework 5.1, перейдите в [этот раздел](https://docs.microsoft.com/powershell/wmf/5.1/install-configure).
+Дополнительные сведения о тестировании возможностей DSC в Windows Management Framework 5 см. в серии записей блога [Validate features of PowerShell DSC](https://blogs.msdn.microsoft.com/powershell/2015/07/06/validate-features-of-powershell-dsc/) (Проверка компонентов PowerShell DSC). Чтобы скачать Windows Management Framework 5.1, перейдите в [этот раздел](https://docs.microsoft.com/powershell/scripting/wmf/setup/install-configure).
 
 ### <a name="packagemanagement-unified-package-management-for-software-discovery-installation-and-inventory"></a>Унифицированное управление пакетами PackageManagement для обнаружения программного обеспечения, установки и инвентаризации
 Windows Server 2016 и Windows 10 включает новую функцию PackageManagement (раньше она называлась OneGet). С ее помощью ИТ-специалисты и разработчики могут автоматизировать удаленные или локальные операции обнаружения, установки и инвентаризации ПО. При этом не важно, какая технология установщика используется и где это ПО расположено. 
@@ -201,4 +201,3 @@ Windows Server 2016 включает ряд новых возможностей
 
 ## <a name="see-also"></a>См. также  
 -   [Заметки о выпуске. Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)  
-
