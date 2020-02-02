@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: ce000ec618d0c06ca938b21e9bc363250e1aa38f
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: b3a30c081731de97e1bdf9abe711a5ef6460be0f
+ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949617"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76918311"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -75,7 +75,7 @@ ms.locfileid: "75949617"
 
 Пример основан на существующем образце OBO в Azure, созданном с помощью Витторио Берточчи и доступен [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Выполните инструкции по клонированию проекта на компьютере разработки и создайте копию примера, чтобы начать работу с.
 
-## <a name="clone-or-download-this-repository"></a>Клонирование или скачивание этого репозитория
+## <a name="clone-or-download-this-repository"></a>Клонировать или скачать этот репозиторий
 
 Из оболочки или командной строки:
 
@@ -129,7 +129,7 @@ ms.locfileid: "75949617"
     => issue(claim = c);
 
     @RuleName = "Issue user_impersonation scope"
-    => issue(Type = "https://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
+    => issue(Type = "http://schemas.microsoft.com/identity/claims/scope", Value = "user_impersonation");
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO10.PNG)
 
@@ -278,10 +278,10 @@ ms.locfileid: "75949617"
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например https://localhost:44321/                                                                                         |
 | IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например <https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
-| ida:ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
+| IDA: ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
 | IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
 | IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, например https://localhost:44300                                                                                                                     |
-| ida:Authority            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
+| IDA: центр сертификации            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 Все остальные ключи Ida: XXXXXXX в узле **appSettings** можно закомментировать или удалить.
 
