@@ -65,7 +65,7 @@ HSTS — это механизм политики веб-безопасност�
 Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=<seconds>; includeSubDomains" 
 ``` 
 
-Пример: 
+Пример. 
 
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "Strict-Transport-Security" -SetHeaderValue "max-age=31536000; includeSubDomains" 
@@ -94,7 +94,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "Strict-Transport-Security"
 Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "<deny/sameorigin/allow-from<specified origin>>" 
  ```
 
-Пример: 
+Пример. 
 
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "X-Frame-Options" -SetHeaderValue "allow-from https://www.example.com" 
@@ -120,7 +120,7 @@ Set-AdfsResponseHeaders -RemoveHeaders "X-Frame-Options"
 Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "<0/1/1; mode=block/1; report=<reporting-uri>>" 
 ``` 
 
-Пример: 
+Пример. 
 
 ```PowerShell
 Set-AdfsResponseHeaders -SetHeaderName "X-XSS-Protection" -SetHeaderValue "1" 
@@ -210,7 +210,7 @@ Set-AdfsResponseHeaders -SetHeaderName "Content-Security-Policy" -SetHeaderValue
 >[!NOTE]
 >AD FS использует JavaScript в процессе проверки подлинности и, таким образом, включает JavaScript, включая источники "unsafe-inline" и "unsafe-eval" в политике по умолчанию.  
 
-### <a name="custom-headers"></a>Пользовательские заголовки 
+### <a name="custom-headers"></a>Настраиваемые заголовки 
 Помимо указанных выше заголовков ответа безопасности (HSTS, CSP, X-Frame-Options, X-XSS-Protection и CORS), AD FS 2019 предоставляет возможность установки новых заголовков.  
  
 Пример. Установка нового заголовка "Тессеадер" со значением "Тессеадервалуе" 
@@ -234,7 +234,7 @@ Set-AdfsResponseHeaders -SetHeaderName "TestHeader" -SetHeaderValue "TestHeaderV
 |Общий доступ к ресурсам в разных источниках (CORS)|[Совместимость браузера CORS](https://developer.mozilla.org/docs/Web/HTTP/CORS#Browser_compatibility) 
 |Политика безопасности содержимого (CSP)|[Совместимость с браузером CSP](https://developer.mozilla.org/docs/Web/HTTP/CSP#Browser_compatibility) 
 
-## <a name="next"></a>"Далее",
+## <a name="next"></a>Далее
 
 - [Использование AD FS руководств по устранению неполадок](https://aka.ms/adfshelp/troubleshooting )
 - [Устранение неполадок в AD FS](../../ad-fs/troubleshooting/ad-fs-tshoot-overview.md)
