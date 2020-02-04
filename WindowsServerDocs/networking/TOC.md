@@ -1,4 +1,4 @@
-# [Сеть](Networking.md)
+# [Сетевое взаимодействие](Networking.md)
 ## [Поддерживаемые сценарии сетевого взаимодействия в Windows Server](windows-server-supported-networking-scenarios.md)
 
 ## [Новые возможности работы с сетями](What-s-New-in-Networking.md)
@@ -253,7 +253,7 @@
 ### [План для SDN](sdn/plan/Plan-a-Software-Defined-Network-Infrastructure.md)
 #### [Требования к установке и подготовке для развертывания сетевого контроллера](sdn/plan/Installation-and-Preparation-Requirements-for-Deploying-Network-Controller.md)
 
-### [Развертывание SDN](sdn/deploy/Deploy-Software-Defined-Networking.md)
+### Развертывание SDN
 #### [Развертывание инфраструктуры SDN](sdn/deploy/Deploy-a-Software-Defined-Network-Infrastructure.md)
 ##### [Развертывание инфраструктуры SDN с помощью скриптов](sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md)
 #### [Развертывание технологий SDN с помощью Windows PowerShell](sdn/deploy/Deploy-Software-Defined-Network-Technologies-using-Windows-powershell.md)
