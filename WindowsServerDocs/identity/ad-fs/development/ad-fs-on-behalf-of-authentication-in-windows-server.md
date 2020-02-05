@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b3a30c081731de97e1bdf9abe711a5ef6460be0f
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: 70281f581974493d3182fb6fdd8f35cb37bed4bf
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918311"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001909"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -222,14 +222,13 @@ ms.locfileid: "76918311"
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO3.PNG)
 
-* Укажите имя соответствующего контроллера
+* Присвойте контроллеру соответствующее имя.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO13.PNG)
 
-* Добавьте следующий код в контроллер.
+* Добавьте следующий код в контроллер:
 
-
-~~~
+```cs
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -238,15 +237,16 @@ ms.locfileid: "76918311"
     using System.Web.Http;
     namespace WebAPIOBO.Controllers
     {
+        [Authorize]
         public class WebAPIOBOController : ApiController
         {
             public IHttpActionResult Get()
             {
-                return Ok("WebAPI via OBO");
+                return Ok($"WebAPI via OBO (user: {User.Identity.Name}");
             }
         }
     }
-~~~
+```
 
 Этот код будет просто возвращать строку, когда кто-то помещает запрос GET для WebAPI Вебапиобо
 

@@ -8,12 +8,12 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: d388da2b7416543c307bd931636902b4a7543e1e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7336637bd3186f885db6d94eeffd0d2311edf3ac
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403661"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001843"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>Экранированные виртуальные машины: поставщик услуг размещения настраивает Microsoft Azure Pack
 
@@ -48,7 +48,7 @@ ms.locfileid: "71403661"
 
 1.  Проверка [системных требований WAP](https://technet.microsoft.com/library/dn296442.aspx) и установка [необходимого программного обеспечения](https://technet.microsoft.com/library/dn469335.aspx).
 
-2.  Скачайте и установите [установщик веб-платформы](https://www.microsoft.com/web/downloads/platform.aspx). Если компьютер не подключен к Интернету, следуйте инструкциям по установке в [автономном режиме](http://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
+2.  Скачайте и установите [установщик веб-платформы](https://www.microsoft.com/web/downloads/platform.aspx). Если компьютер не подключен к Интернету, следуйте инструкциям по установке в [автономном режиме](https://www.iis.net/learn/install/web-platform-installer/web-platform-installer-v4-command-line-webpicmdexe-rtw-release).
 
 3.  Откройте установщик веб-платформы и найдите **Windows Azure Pack: портал и API Express** на вкладке **продукты** . Нажмите кнопку **добавить**, а затем **установите** в нижней части окна.
 
@@ -113,7 +113,7 @@ ms.locfileid: "71403661"
 
     На этом этапе настраивается Windows Azure Pack, и клиенты смогут подписываться на только что созданном плане и развертывать экранированные виртуальные машины. Дополнительные действия, которые необходимо выполнить для клиентов, см. в статье [экранированные виртуальные машины для клиентов. Развертывание экранированных виртуальных машин с помощью Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [Этапы настройки поставщика услуг размещения для защищенных узлов и экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

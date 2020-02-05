@@ -9,12 +9,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a4f9d8fa71671c4ad4651008729d4cee53c8ee2f
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: c3a7e7c420ef63adc906e6558ed7aff6819e983c
+ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918262"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013059"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>Настройка Azure MFA в качестве поставщика проверки подлинности с помощью AD FS
 
@@ -174,7 +174,7 @@ PS C:\> $newcert = New-AdfsAzureMfaTenantCertificate -TenantId <tenant id such a
 PS C:/> New-MsolServicePrincipalCredential -AppPrincipalId 981f26a1-7f43-403b-a875-f8b09b8cd720 -Type Asymmetric -Usage Verify -Value $newcert
 ```
 
-`$certbase64` — это новый сертификат.  Сертификат в кодировке Base64 можно получить, экспортировав сертификат (без закрытого ключа) в виде файла в кодировке DER и открыв его в Notepad. exe, а затем скопируйте или вставьте его в сеанс PowerShell и присвойте переменной `$certbase64`.
+`$newcert` — это новый сертификат. Сертификат в кодировке Base64 можно получить, экспортировав сертификат (без закрытого ключа) в виде файла в кодировке DER и открыв его в Notepad. exe, а затем скопируйте или вставьте его в сеанс PowerShell и присвойте переменной `$newcert`.
 
 ### <a name="verify-that-the-new-certificates-will-be-used-for-azure-mfa"></a>Убедитесь, что для Azure MFA будут использоваться новые сертификаты.
 

@@ -8,21 +8,21 @@ ms.assetid: 7110ad21-a33e-48d5-bb3c-129982913bc8
 manager: brianlic
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 66e5845bdc8f473929bfd97a3999be82cd7730c8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.openlocfilehash: 1e750a72ac8d47f99ea3382d076b8854acc24576
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405763"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001899"
 ---
 # <a name="deploy-dhcp-using-windows-powershell"></a>Развертывание DHCP с помощью Windows PowerShell
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Это руководство содержит инструкции по использованию Windows PowerShell для развертывания протокола динамической конфигурации узла протокола IP версии 4 \(DHCP-\) Server, который автоматически назначает IP-адреса и параметры DHCP клиентам IPv4 DHCP, подключенным к одной или нескольким подсетям в сети.
 
->[!NOTE]
->Чтобы скачать этот документ в формате Word из коллекции TechNet, см. статью [развертывание DHCP с помощью Windows PowerShell в Windows Server 2016](https://gallery.technet.microsoft.com/Deploy-DHCP-Using-Windows-246dd293).
+> [!NOTE]
+> Чтобы скачать этот документ в формате Word из коллекции TechNet, см. статью [развертывание DHCP с помощью Windows PowerShell в Windows Server 2016](https://gallery.technet.microsoft.com/Deploy-DHCP-Using-Windows-246dd293).
 
 Использование DHCP-серверов для назначения IP-адресов экономится в административных издержках, так как вам не нужно вручную настраивать параметры TCP/IP v4 для каждого сетевого адаптера на каждом компьютере в сети. При использовании DHCP конфигурация TCP/IP v4 выполняется автоматически при подключении компьютера или другого DHCP-клиента к сети.
 
@@ -85,13 +85,13 @@ TCP/IP обеспечивает основные служебные програ
 
 - Windows Server 2012 R2
 
-- Windows 8.1
+- Windows 8.1
 
 - Windows Server 2012
 
 - Windows 8
 
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 
 - Windows 7
 
@@ -214,8 +214,8 @@ IP-адреса можно исключить из распределения DH
 
 С помощью этого руководства можно развернуть DHCP в тестовой лаборатории перед развертыванием в рабочей среде. 
 
->[!NOTE]
->Если вы не хотите развертывать DHCP в лаборатории тестирования, можно перейти к разделу [развертывание DHCP](#bkmk_deploy).
+> [!NOTE]
+> Если вы не хотите развертывать DHCP в лаборатории тестирования, можно перейти к разделу [развертывание DHCP](#bkmk_deploy).
 
 Требования к лаборатории различаются в зависимости от того, используете ли вы физические серверы или виртуальные машины \(ВМ\)и используется ли домен Active Directory или Развертывание автономного DHCP-сервера.
 
@@ -234,7 +234,7 @@ IP-адреса можно исключить из распределения DH
 На физическом сервере в диспетчере Hyper-V создайте следующие элементы.
 
 1. Один **внутренний** виртуальный коммутатор. Не создавайте **внешний** виртуальный коммутатор, так как если узел Hyper\-V находится в подсети, ВКЛЮЧАЮЩЕЙ DHCP-сервер, тестовые виртуальные машины получат IP-адрес от DHCP-сервера. Кроме того, тестовый DHCP-сервер может назначить IP-адреса другим компьютерам в подсети, где установлен узел Hyper\-V.
-1. Одна виртуальная машина под Windows Server 2016 настроена в качестве контроллера домена с домен Active Directoryными службами, подключенными к созданному внутреннему виртуальному коммутатору. Для соответствия этому руководству этот сервер должен иметь статически настроенный IP-адрес 10.0.0.2. Сведения о развертывании AD DS см. в разделе **развертывание DC1** в [сетевом каталоге](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01)Windows Server 2016 Core.
+1. Одна виртуальная машина под Windows Server 2016 настроена в качестве контроллера домена с домен Active Directoryными службами, подключенными к созданному внутреннему виртуальному коммутатору. Для соответствия этому руководству этот сервер должен иметь статически настроенный IP-адрес 10.0.0.2. Сведения о развертывании AD DS см. в разделе **развертывание DC1** в [сетевом каталоге](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01)Windows Server 2016 Core.
 1. Одна виртуальная машина под управлением Windows Server 2016, которая будет настроена в качестве DHCP-сервера с помощью этого руководством и подключена к созданному внутреннему виртуальному коммутатору. 
 1. Одна виртуальная машина, работающая под управлением клиентской операционной системы Windows, подключенная к созданному внутреннему виртуальному коммутатору и используемая для проверки того, что DHCP-сервер динамически выделяет IP адреса и параметры DHCP клиентам DHCP.
 
@@ -257,12 +257,12 @@ IP-адреса можно исключить из распределения DH
 Для этого развертывания требуется один концентратор или коммутатор, два физических сервера и один физический клиент:
 
 1. Один концентратор Ethernet или коммутатор, к которому можно подключить физические компьютеры с кабелями Ethernet.
-2. Один физический компьютер под Windows Server 2016, настроенный как контроллер домена с домен Active Directoryными службами. Для соответствия этому руководству этот сервер должен иметь статически настроенный IP-адрес 10.0.0.2. Сведения о развертывании AD DS см. в разделе **развертывание DC1** в [сетевом каталоге](https://technet.microsoft.com/windows-server-docs/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01)Windows Server 2016 Core.
-3. Один физический компьютер под управлением Windows Server 2016, который будет настроен в качестве DHCP-сервера с помощью этого руководством. 
+2. Один физический компьютер под Windows Server 2016, настроенный как контроллер домена с домен Active Directoryными службами. Для соответствия этому руководству этот сервер должен иметь статически настроенный IP-адрес 10.0.0.2. Сведения о развертывании AD DS см. в разделе **развертывание DC1** в [сетевом каталоге](https://docs.microsoft.com/windows-server/networking/core-network-guide/core-network-guide#BKMK_deployADDNS01)Windows Server 2016 Core.
+3. Один физический компьютер под управлением Windows Server 2016, который будет настроен в качестве DHCP-сервера с помощью этого руководством.
 4. Один физический компьютер под управлением клиентской операционной системы Windows, который будет использоваться для проверки динамического выделения IP-адресов и параметров DHCP DHCP-сервером.
 
->[!NOTE]
->Если у вас недостаточно тестовых компьютеров для этого развертывания, можно использовать один тестовый компьютер как для AD DS, так и для DHCP-однако такая конфигурация не рекомендуется для рабочей среды.
+> [!NOTE]
+> Если у вас недостаточно тестовых компьютеров для этого развертывания, можно использовать один тестовый компьютер как для AD DS, так и для DHCP-однако такая конфигурация не рекомендуется для рабочей среды.
 
 **Развертывание автономного DHCP-сервера**
 
@@ -287,8 +287,8 @@ IP-адреса можно исключить из распределения DH
 - Значения параметров DHCP, такие как шлюз по умолчанию, доменное имя и DNS-серверы или WINS.
 - Имена интерфейсов
 
->[!IMPORTANT]
->Перед выполнением команды проверьте и измените каждую команду в среде.
+> [!IMPORTANT]
+> Перед выполнением команды проверьте и измените каждую команду в среде.
 
 ### <a name="where-to-install-dhcp---on-a-physical-computer-or-a-vm"></a>Где можно установить DHCP на физическом компьютере или на виртуальной машине?
 
@@ -321,8 +321,8 @@ Set-DnsClientServerAddress -InterfaceAlias "Ethernet" -ServerAddresses 10.0.0.2
 
 Дополнительные сведения об этих командах см. в следующих разделах.
 
-- [New-Нетипаддресс](https://technet.microsoft.com/itpro/powershell/windows/tcpip/new-netipaddress)
-- [Set-Днсклиентсервераддресс](https://technet.microsoft.com/itpro/powershell/windows/dns-client/set-dnsclientserveraddress)
+- [New-Нетипаддресс](https://docs.microsoft.com/powershell/module/nettcpip/New-NetIPAddress)
+- [Set-Днсклиентсервераддресс](https://docs.microsoft.com/powershell/module/dnsclient/Set-DnsClientServerAddress)
 
 **Переименование компьютера**
 
@@ -335,8 +335,8 @@ Restart-Computer
 
 Дополнительные сведения об этих командах см. в следующих разделах.
 
-- [Переименование компьютера](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/rename-computer)
-- [Restart-Computer](https://msdn.microsoft.com/powershell/reference/4.0/microsoft.powershell.management/restart-computer)
+- [Переименование компьютера](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/rename-computer)
+- [Restart-Computer](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.management/restart-computer)
 
 ### <a name="join-the-computer-to-the-domain-optional"></a>Присоедините компьютер к домену \(необязательно\)
 
@@ -354,7 +354,7 @@ Restart-Computer
 
 Дополнительные сведения о команде Add-Computer см. в следующем разделе.
 
-- [Add-Computer](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/add-computer)
+- [Add-Computer](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/add-computer?view=powershell-5.1)
 
 ### <a name="install-dhcp"></a>Установка DHCP
 
@@ -366,7 +366,7 @@ Install-WindowsFeature DHCP -IncludeManagementTools
 
 Дополнительные сведения об этой команде см. в следующем разделе.
 
-- [Install-WindowsFeature](https://technet.microsoft.com/itpro/powershell/windows/server-manager/install-windowsfeature)
+- [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/servermanager/install-windowsfeature)
 
 ### <a name="create-dhcp-security-groups"></a>Создание групп безопасности DHCP
 
@@ -387,19 +387,19 @@ Restart-Service dhcpserver
 Дополнительные сведения об этих командах см. в следующих разделах.
 
 - [Сетевая оболочка (Netsh)](../netsh/netsh.md)
-- [Restart-Service](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.management/restart-service)
+- [Restart-Service](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/restart-service)
 
 ### <a name="authorize-the-dhcp-server-in-active-directory-optional"></a>Авторизация DHCP-сервера в Active Directory \(необязательно\)
 
 При установке DHCP в среде домена необходимо выполнить следующие действия, чтобы авторизовать DHCP-сервер для работы в домене.
 
->[!NOTE]
->Неавторизованные DHCP-серверы, установленные в доменах Active Directory, не могут функционировать должным образом и не будут выделять IP-адреса клиентам DHCP. Автоматическое отключение неавторизованных DHCP-серверов — это функция безопасности, которая не позволяет неавторизованным DHCP-серверам назначать недопустимые адреса клиентам в сети.
+> [!NOTE]
+> Неавторизованные DHCP-серверы, установленные в доменах Active Directory, не могут функционировать должным образом и не будут выделять IP-адреса клиентам DHCP. Автоматическое отключение неавторизованных DHCP-серверов — это функция безопасности, которая не позволяет неавторизованным DHCP-серверам назначать недопустимые адреса клиентам в сети.
 
 Чтобы добавить DHCP-сервер в список разрешенных DHCP-серверов в Active Directory, можно использовать следующую команду: 
 
->[!NOTE]
->Если у вас нет среды домена, не выполняйте эту команду.
+> [!NOTE]
+> Если у вас нет среды домена, не выполняйте эту команду.
 
 ```
 Add-DhcpServerInDC -DnsName DHCP1.corp.contoso.com -IPAddress 10.0.0.3
@@ -421,8 +421,8 @@ IPAddress   DnsName
 
 Дополнительные сведения об этих командах см. в следующих разделах.
 
-- [Add-Дхкпсервериндк](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverindc)
-- [Get-Дхкпсервериндк](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc)
+- [Add-Дхкпсервериндк](https://docs.microsoft.com/powershell/module/dhcpserver/add-dhcpserverindc)
+- [Get-Дхкпсервериндк](https://docs.microsoft.com/powershell/module/dhcpserver/get-dhcpserverindc)
 
 ### <a name="notify-server-manager-that-post-install-dhcp-configuration-is-complete-optional"></a>Уведомлять диспетчер сервера о том, что после\-установки конфигурация DHCP завершена \(необязательно\)
 
@@ -436,7 +436,7 @@ Set-ItemProperty –Path registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\ServerM
 
 Дополнительные сведения об этой команде см. в следующем разделе.
 
-- [Set-ItemProperty](https://msdn.microsoft.com/powershell/reference/4.0/microsoft.powershell.management/set-itemproperty?f=255&MSPPError=-2147217396)
+- [Set-ItemProperty](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/set-itemproperty)
 
 ### <a name="set-server-level-dns-dynamic-update-configuration-settings-optional"></a>Задайте параметры конфигурации динамического обновления DNS на уровне сервера \(дополнительные\)
 
@@ -455,8 +455,8 @@ Set-DhcpServerDnsCredential -Credential $Credential -ComputerName "DHCP1.corp.co
 
 Дополнительные сведения об этих командах см. в следующих разделах.
 
-- [Set-DhcpServerv4DnsSetting](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverv4dnssetting)
-- [Set-Дхкпсерверднскредентиал](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverdnscredential)
+- [Set-DhcpServerv4DnsSetting](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverv4dnssetting)
+- [Set-Дхкпсерверднскредентиал](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/set-dhcpserverdnscredential)
 
 ### <a name="configure-the-corpnet-scope"></a>Настройка области корпоративной сети
 
@@ -471,9 +471,9 @@ Set-DhcpServerv4OptionValue -DnsDomain corp.contoso.com -DnsServer 10.0.0.2
 
 Дополнительные сведения об этих командах см. в следующих разделах.
 
-- [Add-DhcpServerv4Scope](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverv4scope)
-- [Add-DhcpServerv4ExclusionRange](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/add-dhcpserverv4exclusionrange)
-- [Set-DhcpServerv4OptionValue](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/set-dhcpserverv4optionvalue)
+- [Add-DhcpServerv4Scope](https://docs.microsoft.com/powershell/module/dhcpserver/Add-DhcpServerv4Scope)
+- [Add-DhcpServerv4ExclusionRange](https://docs.microsoft.com/powershell/module/dhcpserver/Add-DhcpServerv4ExclusionRange)
+- [Set-DhcpServerv4OptionValue](https://docs.microsoft.com/powershell/module/dhcpserver/Set-DhcpServerv4OptionValue)
 
 ### <a name="configure-the-corpnet2-scope-optional"></a>Настройка области Corpnet2 \(необязательно\)
 
@@ -487,8 +487,8 @@ Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -Compu
 
 При наличии дополнительных подсетей, обслуживаемых этим DHCP-сервером, можно повторить эти команды, используя разные значения для всех параметров команды, чтобы добавить области для каждой подсети.
 
->[!IMPORTANT]
->Убедитесь, что все маршрутизаторы между DHCP-клиентами и DHCP-сервером настроены для пересылки сообщений DHCP. Сведения о настройке пересылки DHCP см. в документации по маршрутизатору.
+> [!IMPORTANT]
+> Убедитесь, что все маршрутизаторы между DHCP-клиентами и DHCP-сервером настроены для пересылки сообщений DHCP. Сведения о настройке пересылки DHCP см. в документации по маршрутизатору.
 
 ## <a name="bkmk_verify"></a>Проверка функциональности сервера
 
@@ -498,24 +498,24 @@ Set-DhcpServerv4OptionValue -OptionID 3 -Value 10.0.1.1 -ScopeID 10.0.1.0 -Compu
 
 1. Убедитесь, что кабель Ethernet подсоединен как к компьютеру, так и к коммутатору Ethernet, концентратору или маршрутизатору.
 2. Если подключить клиентский компьютер к сегменту сети, отделенному от DHCP-сервера маршрутизатором, убедитесь, что маршрутизатор настроен на пересылку сообщений DHCP.
-3. Убедитесь, что DHCP-сервер разрешен в Active Directory, выполнив следующую команду, чтобы получить список разрешенных DHCP-серверов из Active Directory. [Get-дхкпсервериндк](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/get-dhcpserverindc).
+3. Убедитесь, что DHCP-сервер разрешен в Active Directory, выполнив следующую команду, чтобы получить список разрешенных DHCP-серверов из Active Directory. [Get-дхкпсервериндк](https://docs.microsoft.com/powershell/module/dhcpserver/Get-DhcpServerInDC).
 4. Убедитесь, что ваши области активированы, открыв консоль DHCP \(диспетчер сервера, **средства**, **DHCP-** \), разверните дерево сервера, чтобы проверить области, а затем щелкните правой\-каждую область. Если итоговое меню включает выделение **активировать**, нажмите кнопку **активировать**. \(если область уже активирована, выбор меню считывает значение **деактивировать**.\)
 
 ## <a name="bkmk_dhcpwps"></a>Команды Windows PowerShell для DHCP
 
 Следующая ссылка содержит описания команд и синтаксис для всех команд Windows PowerShell DHCP-сервера для Windows Server 2016. В разделе перечислены команды в алфавитном порядке на основе глагола в начале команд, например **Get** или **Set**.
 
->[!NOTE]
->Вы не можете использовать команды Windows Server 2016 в Windows Server 2012 R2.
+> [!NOTE]
+> Вы не можете использовать команды Windows Server 2016 в Windows Server 2012 R2.
 
-- [Модуль DhcpServer](https://technet.microsoft.com/itpro/powershell/windows/dhcp-server/index)
+- [Модуль DhcpServer](https://docs.microsoft.com/en-us/powershell/module/dhcpserver/)
 
 Следующая ссылка содержит описания команд и синтаксис для всех команд Windows PowerShell DHCP-сервера для Windows Server 2012 R2. В разделе перечислены команды в алфавитном порядке на основе глагола в начале команд, например **Get** или **Set**.
 
->[!NOTE]
->В Windows Server 2016 можно использовать команды Windows Server 2012 R2.
+> [!NOTE]
+> В Windows Server 2016 можно использовать команды Windows Server 2012 R2.
 
-- [Командлеты DHCP-сервера в Windows PowerShell](https://technet.microsoft.com/library/jj590751.aspx)
+- [Командлеты DHCP-сервера в Windows PowerShell](https://docs.microsoft.com/windows-server/networking/technologies/dhcp/dhcp-deploy-wps)
 
 ## <a name="bkmk_list"></a>Список команд Windows PowerShell в этом пошаговом окне
 

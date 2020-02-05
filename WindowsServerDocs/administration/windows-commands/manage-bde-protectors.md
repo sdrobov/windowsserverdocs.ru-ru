@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/06/2018
-ms.openlocfilehash: 7b25f6fe3c8a067d843fc12e9c1d1955a9606c09
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 86e170e199c7286d883f1248610c6f195add5b01
+ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373938"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77013039"
 ---
 # <a name="manage-bde-protectors"></a>Manage-bde: protectors
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Управляет методами защиты, используемыми для ключа шифрования BitLocker. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 ## <a name="syntax"></a>Синтаксис
@@ -48,7 +48,7 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 
 ### <a name="BKMK_addprotectors"></a>-Добавить синтаксис и параметры
 ```
-manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
+manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
 [-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
 [-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>] 
 [{-?|/?}] [{-help|-h}]
@@ -57,7 +57,7 @@ manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <Numeri
 |          Параметр           |                                                                                                                                                                                   Описание                                                                                                                                                                                   |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |           <Drive>            |                                                                                                                                                                 Представляет букву диска, за которой следует двоеточие.                                                                                                                                                                  |
-|      -рековерипассворд       |                                                                                                                                    Добавляет средство защиты числового пароля. Можно также использовать параметр **-RP** в качестве сокращенной версии этой команды.                                                                                                                                     |
+|      -рековерипассворд       |                                                                                                                                    добавляет средство защиты числового пароля. Можно также использовать параметр **-RP** в качестве сокращенной версии этой команды.                                                                                                                                     |
 |     <NumericalPassword>      |                                                                                                                                                                        Представляет пароль восстановления.                                                                                                                                                                        |
 |         -рековерикэй         |                                                                                                                                Добавляет предохранитель внешнего ключа для восстановления. Можно также использовать параметр **-ать** в качестве сокращенной версии этой команды.                                                                                                                                 |
 | <pathToExternalKeydirectory> |                                                                                                                                                               Представляет путь к каталогу ключа восстановления.                                                                                                                                                                |
@@ -72,13 +72,13 @@ manage-bde  protectors  add [<Drive>] [-forceupgrade] [-recoverypassword <Numeri
 |      -тпмандстартупкэй       |                                                                                                                    Добавляет предохранители TPM и ключа запуска для диска операционной системы. Можно также использовать параметр **-ТСК** в качестве сокращенной версии этой команды.                                                                                                                    |
 |   -тпмандпинандстартупкэй    |                                                                                                                Добавляет предохранители TPM, ПИН-кода и ключа запуска для диска операционной системы. Можно также использовать параметр **-тпск** в качестве сокращенной версии этой команды.                                                                                                                 |
 |          — пароль           |                                                                                                                              Добавляет предохранитель ключа пароля для диска данных. Можно также использовать параметр **-пароль** в качестве сокращенной версии этой команды.                                                                                                                              |
-|      -адаккаунторграуп       | Добавляет предохранитель удостоверения на основе идентификатора безопасности (SID) для тома.  Можно также использовать параметр **-SID** в качестве сокращенной версии этой команды. **СУЩЕСТВЕННО** По умолчанию средство защиты Адаккаунторграуп нельзя добавить удаленно с помощью WMI или Manage-bde.  Если для развертывания требуется возможность удаленного добавления этого предохранителя, необходимо включить ограниченное делегирование. |
+|      -адаккаунторграуп       | Добавляет предохранитель удостоверения на основе идентификатора безопасности (SID) для тома.  Можно также использовать параметр **-SID** в качестве сокращенной версии этой команды. **Важно.** По умолчанию средство защиты Адаккаунторграуп нельзя добавить удаленно с помощью WMI или Manage-bde.  Если для развертывания требуется возможность удаленного добавления этого предохранителя, необходимо включить ограниченное делегирование. |
 |        -ComputerName         |                                                                                                       Указывает, что для изменения защиты BitLocker на другом компьютере используется Manage-bde. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.                                                                                                       |
 |            <Name>            |                                                                                                         Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.                                                                                                         |
 
 ### <a name="BKMK_deleteprotectors"></a>-удалить синтаксис и параметры
 ```
-manage-bde  protectors  delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
+manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -93,7 +93,7 @@ manage-bde  protectors  delete <Drive> [-type {recoverypassword|externalkey|cert
 |    тпмандстартупкэй    |                                Указывает, что необходимо удалить все предохранители ключей, связанные с TPM и ключом запуска на диске.                                |
 |       тпмандпин        |                                    Указывает, что необходимо удалить предохранители ключей на основе ПИН-кода и TPM, связанные с диском.                                    |
 | тпмандпинандстартупкэй |                             Указывает, что необходимо удалить все предохранители ключей TPM, ПИН-кода и ключа запуска, связанные с диском.                             |
-|        password        |                                        Указывает, что необходимо удалить все предохранители ключа паролей, связанные с диском.                                         |
+|        пароль        |                                        Указывает, что необходимо удалить все предохранители ключа паролей, связанные с диском.                                         |
 |        для проверки подлинности        |                                        Указывает, что все предохранители ключей удостоверений, связанные с диском, должны быть удалены.                                         |
 |          — Идентификатор           |                Определяет предохранитель ключа для удаления с помощью идентификатора ключа. Этот параметр является альтернативным параметром параметра **-Type** .                 |
 |    <KeyProtectorID>    |        Определяет отдельный предохранитель ключа на диске для удаления. Идентификаторы предохранителя ключей можно отобразить с помощью команды **Manage-bde-protectors-Get** .         |
@@ -104,7 +104,7 @@ manage-bde  protectors  delete <Drive> [-type {recoverypassword|externalkey|cert
 
 ### <a name="BKMK_disableprot"></a>— Отключение синтаксиса и параметров
 ```
-manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
+manage-bde  -protectors  -disable <Drive> [-RebootCount <integer 0 - 15>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
 |   Параметр   |                                                                                                                                                                                                                   Описание                                                                                                                                                                                                                    |
@@ -119,23 +119,23 @@ manage-bde  protectors  disable <Drive> [-RebootCount <integer 0 - 15>] [-comput
 ## <a name="BKMK_Examples"></a>Примеров
 В следующем примере показано использование команды **-protectors** для добавления предохранителя ключа сертификата, идентифицируемого файлом сертификата, на диск E.
 ```
-manage-bde  protectors  add E: -certificate  cf "c:\File Folder\Filename.cer"
+manage-bde  -protectors  -add E: -certificate  -cf "c:\File Folder\Filename.cer"
 ```
 В следующем примере показано использование команды **-protectors** для добавления предохранителя ключа **адаккаунторграуп** , идентифицируемого именем домена и пользователя на диск E.
 ```
-manage-bde  protectors  add E: -sid DOMAIN\user
+manage-bde  -protectors  -add E: -sid DOMAIN\user
 ```
 В следующем примере показано использование команды **protectors** для отключения защиты до тех пор, пока компьютер не будет перезагружен 3 раза.
 ```
-manage-bde  protectors  disable C: -rc 3
+manage-bde  -protectors  -disable C: -rc 3
 ```
 В следующем примере показано использование команды **-protectors** для удаления предохранителей ключей на диске C для доверенного платформенного модуля и ключа запуска.
 ```
-manage-bde  protectors  delete C: -type tpmandstartupkey
+manage-bde  -protectors -delete C: -type tpmandstartupkey
 ```
 В следующем примере показано использование команды **-protectors** для резервного копирования всех сведений о восстановлении диска C в AD DS.
 ```
-manage-bde  protectors  adbackup C:
+manage-bde  -protectors  -adbackup C:
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
