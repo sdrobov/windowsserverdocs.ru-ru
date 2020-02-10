@@ -1,5 +1,5 @@
 ---
-title: IIS на сервере Nano Server
+title: IIS на сервере Nano Server
 description: Сведения о настройке IIS на сервере Nano Server
 ms.prod: windows-server
 ms.service: na
@@ -12,19 +12,19 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 04c2d7eab2f149505758ab21f08cd6b8bdb74b85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 96a5e5f23ad3cdfc829fd141c3c90f6c200f06c9
+ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360300"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "77001809"
 ---
-# <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
+# <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
-> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает. 
+> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md). 
 
 Вы можете установить роль сервера служб IIS на сервере Nano Server, используя параметр -Package с Microsoft-NanoServer-IIS-Package. Дополнительные сведения о настройке сервера Nano Server, включая установку пакетов, см. в статье [Установка сервера Nano Server](Getting-Started-with-Nano-Server.md).  
 
@@ -65,7 +65,7 @@ ms.locfileid: "71360300"
 |**Инструменты управления**||  
 |Модуль IISAdministration для Windows PowerShell|x|  
 
-Цикл статей о других конфигурациях служб IIS (например, с использованием ASP.NET, PHP и Java), а также другие материалы по этой теме опубликованы здесь: [http://iis.net/learn](http://iis.net/learn).  
+Цикл статей о других конфигурациях служб IIS (например, с использованием ASP.NET, PHP и Java), а также другие материалы по этой теме опубликованы здесь: [http://iis.net/learn](https://iis.net/learn).  
 
 ## <a name="installing-iis-on-nano-server"></a>Установка служб IIS на сервере Nano Server  
 Эту роль сервера можно установить либо в автономном режиме (при отключенном Nano Server), либо в сети (с использованием Nano Server). Рекомендуется установка в автономном режиме.  
@@ -242,7 +242,7 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
     $sm.CommitChanges()  
     ```  
 
-    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites["Default Web Site"].Bindings.Add("*:443:www.foo.bar.com", $hash, "My", "Sni".`  
+    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites["Default Web Site"].Bindings.Add("*:443: www.foo.bar.com", $hash, "My", "Sni".`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>Приложение 1. Список вложенных функций IIS
 
