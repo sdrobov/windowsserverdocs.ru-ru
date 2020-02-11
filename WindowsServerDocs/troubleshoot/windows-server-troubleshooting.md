@@ -14,12 +14,12 @@ ms.date: 1/24/2020
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 593fc4abbdce3ed53fa8d7ef73d529558b100bcc
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: cd4e61a9fac5b1a1f6a1b66309e514ef75b1e4db
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001799"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125135"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Устранение неполадок компонентов Windows Server
 
@@ -46,17 +46,17 @@ ms.locfileid: "77001799"
 
 ## <a name="troubleshoot-startup-and-restart"></a>Устранение неполадок при запуске и перезапуске
 
-- [Расширенное устранение неполадок при запуске Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup.md)
-- [Как определить соответствующий размер файла подкачки для 64-разрядных версий Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size.md)
-- [Создание ядра или завершение аварийного дампа](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump.md)
-- [Общие сведения о файле подкачки](https://docs.microsoft.com/windows/client-management/introduction-page-file.md)
-- [Настройка параметров системного сбоя и восстановления в Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options.md)
-- [Расширенное устранение неполадок при загрузке Windows](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems.md)
-- [Расширенное устранение неполадок при замораживании компьютера под управлением Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze.md)
-- [Расширенное устранение неполадок при фатальной ошибке или на синем экране](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors.md)
-- [Расширенное устранение неполадок для ошибки "ошибка" 7B или Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device.md)
-- [Расширенное устранение неполадок для события с ИДЕНТИФИКАТОРом 41 "система была перезагружена без аккуратного завершения работы"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart.md)
-- [При обновлении драйвера сетевого адаптера Broadcom появляется сообщение о фатальной ошибке](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update.md)
+- [Расширенное устранение неполадок при запуске Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
+- [Как определить соответствующий размер файла подкачки для 64-разрядных версий Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [Создание ядра или завершение аварийного дампа](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
+- [Общие сведения о файле подкачки](https://docs.microsoft.com/windows/client-management/introduction-page-file)
+- [Настройка параметров системного сбоя и восстановления в Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
+- [Расширенное устранение неполадок при загрузке Windows](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Расширенное устранение неполадок при замораживании компьютера под управлением Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
+- [Расширенное устранение неполадок при фатальной ошибке или на синем экране](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
+- [Расширенное устранение неполадок для ошибки "ошибка" 7B или Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
+- [Расширенное устранение неполадок для события с ИДЕНТИФИКАТОРом 41 "система была перезагружена без аккуратного завершения работы"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart)
+- [При обновлении драйвера сетевого адаптера Broadcom появляется сообщение о фатальной ошибке](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update)
 
 ## <a name="troubleshoot-ad-forest-recovery"></a>Устранение неполадок восстановления леса AD
 
