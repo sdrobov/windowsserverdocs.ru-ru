@@ -12,12 +12,12 @@ ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: f94e2c083f0bc05231543c15120818481afbabb0
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 09f031c19c8f6d1105d47b9f22d52db30e9c57ef
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822157"
 ---
 # <a name="install-nano-server"></a>Установка сервера Nano Server
 
@@ -50,7 +50,7 @@ Nano Server оптимально подходит для различных сц
 - Групповая политика не поддерживается. Тем не менее можно использовать [настройку требуемого состояния](https://msdn.microsoft.com/powershell/dsc/nanoDsc) для масштабного применения параметров.
 - Сервер Nano Server не может использовать прокси-сервер для доступа к Интернету.
 - Объединение сетевых карт (в частности, балансировка нагрузки и отработка отказа или LBFO) не поддерживается. Вместо этого поддерживается объединение внедренных коммутаторов (SET).
-- System Center Configuration Manager и System Center Data Protection Manager не поддерживаются.
+- Microsoft Endpoint Configuration Manager и System Center Data Protection Manager не поддерживаются.
 - Использование командлетов анализатора соответствия рекомендациям (BPA) и интеграция BPA с диспетчером сервера не поддерживаются.
 - Сервер Nano Server не поддерживает виртуальные адаптеры шины (HBA).
 - Сервер Nano Server ненужно активировать с помощью ключа продукта. Функционируя как узел Hyper-V, Nano Server не поддерживает [автоматическую активацию виртуальной машины](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Виртуальные машины, которые работают на узле Nano Server, можно активировать при помощи [сервера управления ключами](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) с лицензионным ключом универсального тома или воспользовавшись [активацией с помощью Active Directory](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).

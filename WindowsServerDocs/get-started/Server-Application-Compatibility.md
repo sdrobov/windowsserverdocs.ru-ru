@@ -14,12 +14,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: ''
 ms.localizationpriority: medium
-ms.openlocfilehash: cec3b81beaee7dab7259345c56e79c05739b5dad
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: e41d8fefa662120170b5e76e4f27d8f64fa538d7
+ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948415"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76822177"
 ---
 # <a name="windows-server-2016-and-microsoft-server-application-compatibility"></a>Совместимость Windows Server 2016 и серверных приложений корпорации Майкрософт
 
@@ -37,7 +37,7 @@ ms.locfileid: "75948415"
 |Microsoft System Center Virtual Machine Manager 2016|  Да|    [Новые возможности System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
 |Microsoft System Center Operations Manager 2016|   Да|    [Новые возможности System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
 |Microsoft System Center Data Protection Manager 2016|  Да|    [Новые возможности System Center](https://technet.microsoft.com/system-center-docs/get-started/what-s-new-in-system-center)|
-|Microsoft System Center Configuration Manager (версия 1606)|  Да|    [Новые возможности System Center Configuration Manager версии 1606](https://technet.microsoft.com/library/mt752488.aspx)|  
+|Диспетчер конфигураций (версии 1606)|  Да|    [Новые возможности в диспетчере конфигураций версии 1606](https://technet.microsoft.com/library/mt752488.aspx)|  
 |SharePoint Server 2016|    Да|    [Требования к оборудованию и программному обеспечению для SharePoint Server 2016](https://technet.microsoft.com/library/cc262485(v=office.16).aspx)|
 |Project Server 2016|   Да|    [Требования к программному обеспечению для Project Server 2016](https://technet.microsoft.com/library/ee683978(v=office.16).aspx)|
 |Exchange Server 2016|  Да|    [Обновления для Exchange 2016](https://technet.microsoft.com/library/jj907309(v=exchg.160).aspx)| 

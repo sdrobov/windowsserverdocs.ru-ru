@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/14/2020
+ms.date: 01/29/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: f1f4d6b32b8b7d717d2d424e0a60c5edc96f4cac
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: b2d5215c7089ce1aadbeae68890dca1a0ae1c294
+ms.sourcegitcommit: 9077469e372d2aafcad890cbc4e4a24c58a3838c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75953065"
+ms.lasthandoff: 01/30/2020
+ms.locfileid: "76889448"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -30,14 +30,14 @@ ms.locfileid: "75953065"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Общие     |1.2.535  |
-|Предварительная оценка    |1.2.594  |
+|Общие     |1.2.605  |
+|Предварительная оценка    |1.2.605  |
 
-## <a name="updates-for-version-12594"></a>Обновления для версии 1.2.594
+## <a name="updates-for-version-12605"></a>Обновления для версии 1.2.605
 
-*Дата публикации: 14.01.2020*
+*Дата публикации: 29.01.2020*
 
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cC), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4o4cI), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oh9C)
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - Теперь можно выбрать, какие рабочие столы будут использоваться для подключений к рабочему столу. Чтобы изменить этот параметр, щелкните правой кнопкой мыши значок подключения к рабочему столу и выберите **Параметры**.
 - Исправлена проблема, при которой параметры подключения не отображали правильные коэффициенты масштабирования.

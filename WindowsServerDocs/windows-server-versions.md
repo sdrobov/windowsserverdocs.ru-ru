@@ -16,7 +16,7 @@ manager: dongill
 ms.localizationpriority: medium
 ms.openlocfilehash: 5430dfa2facfb7412077931637f5e95e35f0d934
 ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/27/2019
 ms.locfileid: "71392471"
@@ -28,41 +28,41 @@ Windows Server является платформой для создания и�
 Используйте ссылки ниже для просмотра технической информации для ИТ-специалистов по различным версиям Windows Server.
 
 > [!IMPORTANT]
-> На вашем компьютере установлена операционная система Windows? Windows 10, Windows 8 или 8.1? Windows 7? У вас возникла проблема? Перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) — просто введите свою проблему в строке поиска. Вы найдете там информацию о Windows, Office, Skype и так далее. 
+> На вашем компьютере установлена операционная система Windows? Windows 10, Windows 8 или 8.1? Или даже Windows 7? У вас возникла проблема? Перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) и просто введите свою проблему в строке поиска. Вы найдете там информацию о Windows, Office, Skype и так далее. 
 > 
 > Информация ниже относится *только* к Windows **Server**.
 
 ## <a name="windows-server-2016"></a>Windows Server 2016
 
-[Техническое содержимое по Windows Server 2016](windows-server-2016.md)
+[Техническое содержимое для Windows Server 2016](windows-server-2016.md)
 
 ## <a name="windows-server-2012-r2-and-windows-server-2012"></a>Windows Server 2012 R2 и Windows Server 2012
 
 [Техническая библиотека Windows Server 2012 R2 и Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/) 
 
-[Библиотека разработчиков Windows Server 2012 R2 на сайте MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
+[Библиотека для разработчиков Windows Server 2012 R2 на сайте MSDN](https://msdn.microsoft.com/library/dn609939(v=vs.85).aspx) 
 
 ## <a name="windows-server-2008-r2-and-windows-server-2008"></a>Windows Server 2008 R2 и Windows Server 2008
 
-[Техническая библиотека Windows Server 2008 R2 и Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
+[Техническая библиотека Windows Server 2008 R2 и Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008)
  
-[Библиотека разработчиков Windows Server 2008 на сайте MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
+[Библиотека для разработчиков Windows Server 2008 на сайте MSDN](https://msdn.microsoft.com/library/hh738539.aspx) 
 
 ## <a name="windows-server-2003"></a>Windows Server 2003
 
-[Техническая библиотека Windows Server 2003](https://www.microsoft.com/download/details.aspx?id=53314) — скачать PDF-версию архивного содержимого
+[Техническая библиотека Windows Server 2003](https://www.microsoft.com/download/details.aspx?id=53314) — скачать PDF-версию архивного содержимого
 
-[Библиотека разработчиков Windows Server 2003 на сайте MSDN](https://msdn.microsoft.com/library/dn792549.aspx)
+[Библиотека для разработчиков Windows Server 2003 на сайте MSDN](https://msdn.microsoft.com/library/dn792549.aspx)
 
 ## <a name="product-evaluations"></a>Ознакомительные версии продуктов
 
-[Загрузите ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
+[Скачать ознакомительную версию Windows Server 2016](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016?i=1) 
 
-[Загрузите пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
+[Скачать пробную версию Windows Server 2012 R2](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2) 
 
 ## <a name="related-links"></a>Связанные ссылки
-[Сведения о продукте Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) 
+[Сведения о продукте Windows Server 2016](https://www.microsoft.com/cloud-platform/windows-server) 
 
 > [!TIP]
-> У вас возникли проблемы? Прежде всего, перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) и введите свою проблему в строке поиска. Вы можете получить поддержку по Windows, Office, Skype и другим продуктам. 
+> У вас возникла проблема? Прежде всего, перейдите на сайт [службы поддержки Майкрософт](https://support.microsoft.com) и введите свою проблему в строке поиска. Вы можете получить поддержку по Windows, Office, Skype и другим продуктам. 
 
