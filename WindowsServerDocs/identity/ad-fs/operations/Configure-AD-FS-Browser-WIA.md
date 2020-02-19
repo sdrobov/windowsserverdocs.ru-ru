@@ -9,12 +9,12 @@ ms.topic: article
 ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 576ec407e244485441e99ed831b4ed9a0dac198c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6223d261467f1e73b22d5035a73c37868081cef7
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358251"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465258"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>Настройка браузеров для использования встроенной проверки подлинности Windows (WIA) с AD FS
 
@@ -60,5 +60,10 @@ MSIE 10,0; Windows NT 6|IE 10,0 для Windows XP и более новых ве�
 Windows NT 6,3; Trident/7.0</br></br>Windows NT 6,3; Платформе х Trident/7.0</br></br>Windows NT 6,3; WOW64 Trident/7.0| Windows 8.1 классических операционных систем, различных платформ|
 Windows NT 6,2; Trident/7.0</br></br>Windows NT 6,2; Платформе х Trident/7.0</br></br>Windows NT 6,2; WOW64 Trident/7.0|Операционная система Windows 8 Desktop, различные платформы|
 Windows NT 6,1; Trident/7.0</br></br>Windows NT 6,1; Платформе х Trident/7.0</br></br>Windows NT 6,1; WOW64 Trident/7.0|Операционная система Windows 7 Desktop, различные платформы|
+Едг/79.0.309.43 | Microsoft ребро (Chromium) | 
 MSIPC| Клиент Microsoft технология защиты и контроля информации|
 Клиент Windows Rights Management|Клиент Windows Rights Management|
+
+### <a name="additional-links"></a>Дополнительные ссылки
+
+[Документация по Microsoft ребра](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string)

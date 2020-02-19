@@ -10,24 +10,24 @@ ms.topic: article
 author: adagashe
 ms.date: 10/24/2018
 ms.localizationpriority: ''
-ms.openlocfilehash: 67f35e3afa8e9eafabe7b22eb60cc85c7be6cb23
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0d64e6188b24b5a1ec45242c3d99366fdde5a623
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402876"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465218"
 ---
 # <a name="collect-diagnostic-data-with-storage-spaces-direct"></a>Сбор диагностических данных с помощью Локальные дисковые пространства
 
-> Относится к: Windows Server 2019, Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server 2016
 
 Существует несколько средств диагностики, которые можно использовать для сборов данных, необходимых для устранения неполадок Локальные дисковые пространства и отказоустойчивого кластера. В этой статье мы рассмотрим раздел **Get-сддкдиагностиЦинфо** — одно средство сенсорного ввода, которое будет собирать все важные сведения, помогающие в диагностике кластера.
 
-Учитывая, что журналы и другие сведения, указанные в **Get-сддкдиагностиЦинфо** , сжимаются, сведения об устранении неполадок, приведенных ниже, будут полезны при устранении сложных проблем, которые были переданы и могут потребовать передачи данных. Майкрософт для рассмотрения.
+Учитывая, что журналы и другие сведения, указанные в **Get-сддкдиагностиЦинфо** , сжимаются, сведения об устранении неполадок, приведенных ниже, будут полезны для устранения сложных проблем, которые были переданы в корпорацию Майкрософт для рассмотрения.
 
 ## <a name="installing-get-sddcdiagnosticinfo"></a>Установка Get-СддкдиагностиЦинфо
 
-Командлет PowerShell **Get-сддкдиагностиЦинфо** (также **Get-пксторажедиагностиЦинфо**, ранее известный как **Test-сторажехеалс**), можно использовать для сбора журналов и выполнения проверок работоспособности для отказоустойчивой кластеризации (кластера, ресурсов, сетей, узлов), дисковых пространств (физических дисков, корпусов, Виртуальные диски), общие тома кластера, общие файловые ресурсы SMB и дедупликация. 
+Командлет PowerShell **Get-сддкдиагностиЦинфо** (также **Get-пксторажедиагностиЦинфо**, ранее известный как **Test-сторажехеалс**), можно использовать для сбора журналов и выполнения проверок работоспособности для отказоустойчивой кластеризации (кластера, ресурсов, сетей, узлов), дисковых пространств (физических дисков, корпусов, виртуальных дисков), общих томов кластера, файловых ресурсов SMB и дедупликации. 
 
 Существует два способа установки сценария, оба из которых описаны ниже.
 
@@ -35,12 +35,15 @@ ms.locfileid: "71402876"
 
 [Коллекция PowerShell](https://www.powershellgallery.com/packages/PrivateCloud.DiagnosticInfo) является моментальным снимком репозитория GitHub. Обратите внимание, что для установки элементов из коллекция PowerShell требуется последняя версия модуля PowerShellGet, которая доступна в Windows 10, в Windows Management Framework (WMF) 5,0 или в установщике на основе MSI (для PowerShell 3 и 4).
 
+Во время этого процесса мы установим последнюю версию [средств диагностики сетей Майкрософт](https://www.powershellgallery.com/packages/MSFT.Network.Diag) , так как Get-сддкдиагностиЦинфо полагается на это. Этот модуль манифеста содержит средство диагностики и устранения неполадок сети, которые поддерживаются группой продуктов Майкрософт для сетей Microsoft Core.
+
 Вы можете установить модуль, выполнив следующую команду в PowerShell с правами администратора:
 
 ``` PowerShell
 Install-PackageProvider NuGet -Force
 Install-Module PrivateCloud.DiagnosticInfo -Force
 Import-Module PrivateCloud.DiagnosticInfo -Force
+Install-Module -Name MSFT.Network.Diag
 ```
 
 Чтобы обновить модуль, выполните следующую команду в PowerShell:
@@ -51,7 +54,7 @@ Update-Module PrivateCloud.DiagnosticInfo
 
 ### <a name="github"></a>GitHub
 
-[Репозиторий GitHub](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) — это самая последняя версия модуля, так как мы постоянно выполним итерацию. Чтобы установить модуль из GitHub, скачайте последнюю версию модуля из [архива](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) и извлеките каталог PrivateCloud. диагностиЦинфо в нужный путь модулей PowerShell, на который указывает ```$env:PSModulePath```.
+[Репозиторий GitHub](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/) — это самая последняя версия модуля, так как мы постоянно выполним итерацию. Чтобы установить модуль из GitHub, скачайте последнюю версию модуля из [архива](https://github.com/PowerShell/PrivateCloud.DiagnosticInfo/archive/master.zip) и извлеките каталог PrivateCloud. диагностиЦинфо в нужный путь модулей PowerShell, на который указывает ```$env:PSModulePath```
 
 ``` PowerShell
 # Allowing Tls12 and Tls11 -- e.g. github now requires Tls12

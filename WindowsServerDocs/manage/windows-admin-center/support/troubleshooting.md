@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 0b4e02e6759bdb91ea51b5dcf5e1d0ae307d13b4
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 5df216d8c7b829a6c60db4e5d771824a7bacdb47
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73567100"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465328"
 ---
 # <a name="troubleshooting-windows-admin-center"></a>Устранение неполадок в Windows Admin Center
 
@@ -22,9 +22,9 @@ ms.locfileid: "73567100"
 > [!Important]
 > Это руководство поможет вам в диагностике и разрешении проблем, которые не позволяют использовать Windows Admin Center. Если у вас возникает проблема с определенным средством, проверьте, возможно, эта проблема [уже известна.](https://aka.ms/wacknownissues)
 
-## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>Installer fails with message: **_The Module 'Microsoft.PowerShell.LocalAccounts' could not be loaded._**
+## <a name="installer-fails-with-message-_the-module-microsoftpowershelllocalaccounts-could-not-be-loaded_"></a>Программа установки завершает работу с сообщением:  **_не удалось загрузить модуль Microsoft. PowerShell. LocalAccounts._**
 
-This can happen if your default PowerShell module path has been modified or removed. To resolve the issue, make sure that ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` is the **first** item in your PSModulePath environment variable. You can achieve this with the following line of PowerShell:
+Это может произойти, если путь модуля PowerShell по умолчанию был изменен или удален. Чтобы устранить эту проблему, убедитесь, что ```%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules``` является **первым** элементом в переменной среды PSModulePath. Это можно сделать с помощью следующей строки PowerShell:
 
 ```powershell
 [Environment]::SetEnvironmentVariable("PSModulePath","%SystemRoot%\system32\WindowsPowerShell\v1.0\Modules;" + ([Environment]::GetEnvironmentVariable("PSModulePath","User")),"User")
@@ -34,12 +34,12 @@ This can happen if your default PowerShell module path has been modified or remo
 
 ### <a name="if-youve-installed-windows-admin-center-as-an-app-on-windows-10"></a>Если вы установили Windows Admin Center в качестве **приложения в Windows 10**
 
-* Убедитесь, что Windows Admin Center запущен. Look for the Windows Admin Center icon ![](../media/trayIcon.PNG) in the System tray or **Windows Admin Center Desktop / SmeDesktop.exe** in Task Manager. Если ни того, ни другого нет, запустите **Windows Admin Center** из меню "Пуск".
+* Убедитесь, что Windows Admin Center запущен. Найдите значок центра администрирования Windows ![](../media/trayIcon.PNG) в области уведомлений или **Desktop/смедесктоп. exe** в диспетчере задач. Если ни того, ни другого нет, запустите **Windows Admin Center** из меню "Пуск".
 
 > [!NOTE] 
 > После перезагрузки необходимо запустить Windows Admin Center из меню "Пуск".  
 
-* [Check the Windows version](#check-the-windows-version)
+* [Проверка версии Windows](#check-the-windows-version)
 
 * Убедитесь, что вы используете браузер Microsoft Edge или Google Chrome.
 
@@ -47,9 +47,9 @@ This can happen if your default PowerShell module path has been modified or remo
 
   * Попробуйте открыть браузер в приватном режиме, и если это сработает, вам потребуется очистить кэш.
 
-* Did you recently upgrade Windows 10 to a new build or version?
+* Вы недавно выполнили обновление Windows 10 до новой сборки или версии?
 
-  * This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts)
+  * Возможно, были удалены параметры доверенных узлов. [Выполните эти инструкции, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts)
 
 ### <a name="if-youve-installed-windows-admin-center-as-a-gateway-on-windows-server"></a>Если вы установили Windows Admin Center в качестве **шлюза в Windows Server**
 
@@ -57,20 +57,20 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * Убедитесь, что вы используете браузер Microsoft Edge или Google Chrome.
 
-* On the server, open Task Manager > Services and make sure **ServerManagementGateway / Windows Admin Center** is running.
+* На сервере откройте диспетчер задач > службы и убедитесь, что **серверманажементгатевай/Windows Admin Center** работает.
 ![](../media/Service-TaskMan.PNG)
 
-* Test the network connection to the Gateway (replace \<values> with the information from your deployment)
+* Проверьте сетевое подключение к шлюзу (замените значения \<> данными из развертывания).
 
     ```powershell
     Test-NetConnection -Port <port> -ComputerName <gateway> -InformationLevel Detailed
     ```
 
-### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>If you have installed Windows Admin Center in an Azure Windows Server VM
+### <a name="if-you-have-installed-windows-admin-center-in-an-azure-windows-server-vm"></a>Если вы установили центр администрирования Windows на виртуальной машине Azure Windows Server,
 
-* [Check the Windows version](#check-the-windows-version)
+* [Проверка версии Windows](#check-the-windows-version)
 * Добавили ли вы правило для портов входящего трафика HTTPS? 
-* [Learn more about installing Windows Admin Center in an Azure VM](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
+* [Дополнительные сведения об установке центра администрирования Windows на виртуальной машине Azure](https://docs.microsoft.com/windows-server/manage/windows-admin-center/configure/azure-integration#use-a-windows-admin-center-gateway-deployed-in-azure)
 
 ### <a name="check-the-windows-version"></a>Проверьте версию Windows
 
@@ -78,30 +78,30 @@ This can happen if your default PowerShell module path has been modified or remo
 
 * Если вы используете Windows 10 версии 1703 или ниже, Windows Admin Center не поддерживается в вашей версии Microsoft Edge. Выполните обновление до более новой версии Windows 10, либо используйте Google Chrome.
 
-* If you are using an insider preview version of Windows 10 or Server with a build version between 17134 and 17637, Windows had a bug which caused Windows Admin Center to fail. Please use a current supported version of Windows.
+* Если вы используете предварительную версию Windows 10 или сервера с версией сборки от 17134 до 17637, в Windows возникала ошибка, приведшая к сбою центра администрирования Windows. Используйте текущую поддерживаемую версию Windows.
 
-### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>Make sure the Windows Remote Management (WinRM) service is running on both the gateway machine and managed node
+### <a name="make-sure-the-windows-remote-management-winrm-service-is-running-on-both-the-gateway-machine-and-managed-node"></a>Убедитесь, что служба служба удаленного управления Windows (WinRM) запущена как на компьютере шлюза, так и на управляемом узле.
 
-* Open the run dialog with WindowsKey + R
-* Type ```services.msc``` and press enter
-* In the window that opens, look for Windows Remote Management (WinRM), make sure it is running and set to automatically start
+* Открытие диалогового окна запуска с помощью Виндовскэй + R
+* Введите ```services.msc``` и нажмите клавишу ВВОД
+* В открывшемся окне найдите служба удаленного управления Windows (WinRM), убедитесь, что он запущен и настроен на автоматический запуск.
 
-### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>Did you upgrade your server from 2016 to 2019?
+### <a name="did-you-upgrade-your-server-from-2016-to-2019"></a>Вы выполнили обновление сервера с 2016 до 2019?
 
-* This may have cleared your trusted hosts settings. [Follow these instructions to update your trusted hosts settings.](#configure-trustedhosts) 
+* Возможно, были удалены параметры доверенных узлов. [Выполните эти инструкции, чтобы обновить параметры доверенных узлов.](#configure-trustedhosts) 
 
-## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>I get the message: "Cant connect securely to this page. This might be because the site uses outdated or unsafe TLS security settings.
+## <a name="i-get-the-message-cant-connect-securely-to-this-page-this-might-be-because-the-site-uses-outdated-or-unsafe-tls-security-settings"></a>Я получаю сообщение: "не удается безопасно подключиться к этой странице. Это может быть вызвано тем, что сайт использует устаревшие или ненадежные параметры безопасности TLS.
 
-Your machine is restricted to HTTP/2 connections. Windows Admin Center uses integrated Windows authentication, which is not supported in HTTP/2. Add the following two registry values under the ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` key on **the machine running the browser** to remove the HTTP/2 restriction:
+Ваш компьютер ограничен подключениями HTTP/2. Центр администрирования Windows использует встроенную проверку подлинности Windows, которая не поддерживается в HTTP/2. Добавьте следующие два значения реестра в раздел ```HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Http\Parameters``` на компьютере, на **котором выполняется браузер** , чтобы удалить ограничение HTTP/2:
 
 ```
 EnableHttp2Cleartext=dword:00000000
 EnableHttp2Tls=dword:00000000
 ```
 
-## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>I'm having trouble with the Remote Desktop, Events, and PowerShell tools.
+## <a name="im-having-trouble-with-the-remote-desktop-events-and-powershell-tools"></a>У меня возникли проблемы с удаленный рабочий стол, событиями и средствами PowerShell.
 
-These three tools require the websocket protocol, which is commonly blocked by proxy servers and firewalls. If you are using Google Chrome, there is a [known issue](known-issues.md#google-chrome) with websockets and NTLM authentication.
+Для этих трех средств требуется протокол WebSocket, который обычно блокируется прокси-серверами и брандмауэрами. Если вы используете Google Chrome, существует [известная ошибка](known-issues.md#google-chrome) с WebSockets и проверкой подлинности NTLM.
 
 ## <a name="i-can-connect-to-some-servers-but-not-others"></a>Удается подключиться к некоторым серверам, но к другим нет
 
@@ -133,7 +133,7 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP-PUBLIC -RemoteAddress Any
     ```
 
-- **Windows 10**
+- **Windows 10**
 
     ```powershell
     Set-NetFirewallRule -Name WINRM-HTTP-In-TCP -RemoteAddress Any
@@ -165,8 +165,10 @@ REG ADD HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System /v LocalA
 
    > [!TIP]
    > Простой способ задать все значения TrustedHosts за один раз заключается в использовании подстановочных знаков.
-   > 
-   >     Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   >
+   > ```powershell
+   > Set-Item WSMan:\localhost\Client\TrustedHosts -Value '*'
+   > ```
 
 4. После завершения тестирования можно выполнить следующую команду в сеансе PowerShell с повышенными привилегиями для очистки параметров TrustedHosts:
 
@@ -193,7 +195,7 @@ netsh http delete urlacl url=https://+:443/
 
 На границе есть [Известные проблемы](https://github.com/AzureAD/azure-activedirectory-library-for-js/wiki/Known-issues-on-Edge) , связанные с зонами безопасности, которые влияют на вход Azure в центре администрирования Windows. Если у вас возникли проблемы с использованием функций Azure при использовании ребра, попробуйте добавить https://login.microsoftonline.com, https://login.live.com и URL-адрес шлюза в качестве доверенных сайтов, а также на разрешенные сайты для параметров блокирования всплывающих окон в браузере клиента. 
 
-Выполните указанные ниже действия.
+Для этого выполните следующее действие.
 1. Поиск **свойств Интернета** в меню "Пуск" Windows
 2. Перейдите на вкладку **Безопасность** .
 3. В разделе **Trusted Sites (надежные сайты** ) нажмите кнопку **Sites (сайты** ) и добавьте URL-адреса в открывшемся диалоговом окне. Вам потребуется добавить URL-адрес шлюза, а также https://login.microsoftonline.com и https://login.live.com.

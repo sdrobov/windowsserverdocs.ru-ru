@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4deff06a-d0ef-4e5a-9701-5911ba667201
-title: Средство ускоренного восстановления AD FS
+title: Средство ускоренного восстановления AD FS
 description: ''
 author: billmath
 ms.author: billmath
@@ -9,14 +9,14 @@ ms.date: 07/02/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 8b47cdc4770b1ed6478d1502ed5264164e99352b
-ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
+ms.openlocfilehash: 2570aae52da2925a62dd6c9262af325fb5461fff
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77013049"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465268"
 ---
-# <a name="ad-fs-rapid-restore-tool"></a>Средство ускоренного восстановления AD FS
+# <a name="ad-fs-rapid-restore-tool"></a>Средство ускоренного восстановления AD FS
 
 ## <a name="overview"></a>Обзор
 Сегодня AD FS обеспечивает высокую доступность, настроив ферму AD FS. В некоторых организациях можно было бы использовать один сервер AD FS развертывания, устраняя необходимость в нескольких AD FS серверах и инфраструктуре балансировки сетевой нагрузки, в то же время предоставляя некоторые гарантии того, что служба может быть быстро восстановлена в случае возникновения проблемы.
@@ -29,6 +29,9 @@ ms.locfileid: "77013049"
     - С помощью этого средства можно создать незащищенную резервную копию AD FS, которая может быть быстро развернута вместо сервера AD FS в сети
 2. Развертывание идентичных тестовых и рабочих сред
     - С помощью этого средства можно быстро создать точную копию рабочего AD FS в тестовой среде или быстро развернуть проверенную конфигурацию теста в рабочую среду.
+3. Миграция из конфигурации на основе SQL в WID и наоборот
+    - Используйте средство для перехода с конфигурации фермы на основе SQL на WID или наоборот. 
+
 
 >[!NOTE] 
 >Если используется репликация слиянием SQL или группы Always on доступность, средство быстрого восстановления не поддерживается. В качестве альтернативы рекомендуется использовать резервные копии на основе SQL и резервную копию SSL-сертификата.
@@ -54,7 +57,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
 >[!NOTE] 
 >Если используется встроенная база данных Windows (WID), это средство необходимо запустить на сервере-источнике AD FS.  С помощью командлета PowerShell `Get-AdfsSyncProperties` можно определить, является ли сервер сервером-источником.
 
-### <a name="system-requirements"></a>Системные требования
+### <a name="system-requirements"></a>Требования к системе
 
 - Это средство работает для AD FS в Windows Server 2012 R2 и более поздних версий. 
 - Требуемая версия .NET Framework — не менее 4,0. 
@@ -70,7 +73,7 @@ import-module 'C:\Program Files (x86)\ADFS Rapid Recreation Tool\ADFSRapidRecrea
     
 Наборы параметров
 
-![Средство ускоренного восстановления AD FS](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
+![Средство ускоренного восстановления AD FS](media/AD-FS-Rapid-Restore-Tool/parameter1.png)
 
 ### <a name="detailed-description"></a>Подробное описание
 
@@ -130,7 +133,7 @@ Backup-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\testE
 
 Командлет принимает следующие параметры: 
 
-![Средство ускоренного восстановления AD FS](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
+![Средство ускоренного восстановления AD FS](media/AD-FS-Rapid-Restore-Tool/parameter2.png)
 
 ### <a name="detailed-description"></a>Подробное описание
 
@@ -207,7 +210,7 @@ Restore-ADFS -StorageType "FileSystem" -StoragePath "C:\Users\administrator\test
 
 RngCryptoServiceProvider используется для создания расширяющего значения, используемого AES и классом Rfc2898DeriveBytes. 
 
-## <a name="log-files"></a>Файлы журнала
+## <a name="log-files"></a>Файлы журналов
 При каждом создании резервной копии или восстановления создается файл журнала. Их можно найти в следующем расположении:
 
 - **%локалаппдата%\адфсрапидрекреатионтул**

@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 4b0ea70bd9346bf8abee4e0d96a8915e29cac462
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f7402cf549a7a2fb4b112bf92b36182f882b9d73
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357778"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465248"
 ---
 # <a name="ad-fs-customization-in-windows-server-2016"></a>Настройка AD FS в Windows Server 2016
 
@@ -79,13 +79,13 @@ PS C:\>Set-AdfsRelyingPartyWebTheme
 `Set-AdfsRelyingPartyWebTheme -TargetRelyingPartyName urn:app1 -SourceWebThemeName AppSpecificTheme`  
   
 ## <a name="home-realm-discovery"></a>Обнаружение домашней области  
-Сведения о настройке распознавания для домашней области см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
+Сведения о настройке обнаружения домашней области см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## <a name="updated-password-page"></a>Страница обновленного пароля  
 Сведения о настройке страницы "Обновление пароля" см. [в разделе Настройка страниц входа AD FS](https://technet.microsoft.com/library/dn280950.aspx).  
   
 ## <a name="customizing-and-alternate-ids"></a>Настройка и альтернативные идентификаторы  
-Пользователи могут входить в приложения с поддержкой службы федерации Active Directory (AD FS) (AD FS), используя любую форму идентификатора пользователя, принимаемого службами домен Active Directory (AD DS). Они включают имена участников-пользователей (UPN) (johndoe@contoso.com) или полные доменные имена SAM (contoso\johndoe или contoso. ком\жохндое).  Дополнительные сведения об этом см. в разделе [Настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
+Пользователи могут входить в приложения с поддержкой службы федерации Active Directory (AD FS) (AD FS), используя любую форму идентификатора пользователя, принимаемого службами домен Active Directory (AD DS). К ним относятся имена участников-пользователей (UPN) (johndoe@contoso.com) или полные доменные имена учетных записей SAM (contoso\johndoe или contoso. ком\жохндое).  Дополнительные сведения об этом см. в разделе [Настройка альтернативного имени пользователя.](Configuring-Alternate-Login-ID.md)  
   
 Кроме того, вы можете настроить страницу входа AD FS, чтобы дать конечным пользователям указание о альтернативном ИДЕНТИФИКАТОРе входа. Для этого можно добавить настраиваемое описание страницы входа. Дополнительные сведения см [. в разделе Настройка страниц входа AD FS.](https://technet.microsoft.com/library/dn280950.aspx)   
   

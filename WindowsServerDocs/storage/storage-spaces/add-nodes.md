@@ -10,16 +10,16 @@ author: cosmosdarwin
 ms.date: 11/06/2017
 description: Добавление серверов или дисков в кластер Локальные дисковые пространства
 ms.localizationpriority: medium
-ms.openlocfilehash: 3d5949b8fce7253371ee7ecea5118596f713f037
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f5fb9da903bb76de3a075fa7feeeaba468d802c2
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393784"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465628"
 ---
 # <a name="adding-servers-or-drives-to-storage-spaces-direct"></a>Добавление серверов или дисков в локальные дисковые пространства
 
->Относится к: Windows Server 2019, Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server 2016
 
 В этом разделе описывается добавление серверов или дисков в локальные дисковые пространства.
 
@@ -121,7 +121,7 @@ New-Volume -FriendlyName <Name> -FileSystem CSVFS_ReFS -StoragePoolFriendlyName 
 
 #### <a name="option-3"></a>Способ 3
 
-Возможно, будет проще просто удалить существующий шаблон, а затем создать два новых. Это не повлияет на существующие тома, которые были созданы с помощью шаблона уровня: это просто шаблон.
+Возможно, будет проще просто удалить существующий шаблон, а затем создать два новых. Это не повлияет на существующие тома, созданные с помощью шаблона уровня. это просто шаблон.
 
 ```PowerShell
 Remove-StorageTier -FriendlyName Capacity

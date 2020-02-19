@@ -9,12 +9,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 70281f581974493d3182fb6fdd8f35cb37bed4bf
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 028396bffff6449a296e2922846fe2fc379fe624
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001909"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465618"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -274,7 +274,7 @@ ms.locfileid: "77001909"
 * Открытие файла Web. config
 * Измените следующие ключи:
 
-| Раздел                      | Применение                                                                                                                                                                                                                   |
+| Ключ                      | Значение                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например https://localhost:44321/                                                                                         |
 | IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например <https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
@@ -494,10 +494,10 @@ ms.locfileid: "77001909"
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 Вы также можете просмотреть подробные трассировки на Fiddler. Запустите Fiddler и включите расшифровку по протоколу HTTPS. Вы видите, что мы делаем два запроса к конечной точке/адфс/оаутинклудес.
-В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![ AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
 Во втором взаимодействии с конечной точкой маркера можно увидеть, что у нас есть **requested_token_use** в качестве **on_behalf_of** и мы используем маркер доступа, полученный для веб-службы среднего уровня, т. е. https://localhost:44321/ в качестве утверждения для получения маркера от имени.
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  
