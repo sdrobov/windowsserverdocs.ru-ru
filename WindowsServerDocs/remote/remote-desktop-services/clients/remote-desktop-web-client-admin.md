@@ -8,12 +8,12 @@ ms.date: 09/19/2019
 ms.topic: article
 author: Heidilohr
 ms.localizationpriority: medium
-ms.openlocfilehash: 864a15d7336abb56572ddc783ce41a35d6fc13bf
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a8521eae302ade84904e3ba09c001eac21fffd6a
+ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950410"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77125155"
 ---
 # <a name="set-up-the-remote-desktop-web-client-for-your-users"></a>Настройка веб-клиента удаленного рабочего стола для пользователей
 
@@ -170,10 +170,12 @@ ms.locfileid: "75950410"
 
 Следуйте инструкциям в разделе [Как опубликовать веб-клиент удаленного рабочего стола](remote-desktop-web-client-admin.md#how-to-publish-the-remote-desktop-web-client), но вместо шагов 4 и 5 выполните следующее.
 
-4. Импортируйте модуль PowerShell управления веб-клиентом удаленного рабочего стола из локальной папки.
-    ```PowerShell
-    Import-Module -Name "C:\WebClient\"
-    ```
+4. Получить последнюю версию модуля PowerShell для управления веб-клиентом можно двумя способами:
+    - Импортировать модуль PowerShell управления веб-клиентом удаленного рабочего стола.
+      ```PowerShell
+      Import-Module -Name RDWebClientManagement
+      ```
+    - Скопировать скачанную папку RDWebClientManagement в одну из локальных папок модуля PowerShell, перечисленных в разделе **$env:psmodulePath**, или добавить путь к папке со скачанными файлами в **$env:psmodulePath**.
 
 5. Разверните последнюю версию веб-клиента удаленного рабочего стола в локальной папке (замените соответствующий ZIP-файл).
     ```PowerShell
