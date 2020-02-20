@@ -35,7 +35,7 @@ ms.locfileid: "75949663"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Comment</p></th>
+<th><p>Комментарий</p></th>
 </tr>
 </thead>
 <tbody>
@@ -54,25 +54,25 @@ ms.locfileid: "75949663"
 <tr class="odd">
 <td><p>iSCSI них или виртуальные диски на экземпляре цели iSCSI</p></td>
 <td><p>256 (128 на Windows Server 2012)</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Сеансы, которые могут одновременно подключаться к экземпляру цели iSCSI</p></td>
 <td><p>544 (512 на Windows Server 2012)</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>Моментальные снимки на LU</p></td>
 <td><p>512</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td><p>Существует ограничение в 512 моментальных снимков на независимый том приложений iSCSI.</p></td>
 </tr>
 <tr class="even">
 <td><p>Локально подключенные виртуальные диски или моментальные снимки на устройство хранения</p></td>
 <td><p>32</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td><p>Локально подключенные виртуальные диски&#39;не предлагают никаких функций, связанных с iSCSI, и являются устаревшими. Дополнительные сведения см. <a href="https://technet.microsoft.com/library/dn303411.aspx">в разделе функции, удаленные или устаревшие в Windows Server 2012 R2</a>.</p></td>
 </tr>
 </tbody>
@@ -92,7 +92,7 @@ ms.locfileid: "75949663"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Comment</p></th>
+<th><p>Комментарий</p></th>
 </tr>
 </thead>
 <tbody>
@@ -106,19 +106,19 @@ ms.locfileid: "75949663"
 <td><p>Несколько активных узлов кластера</p></td>
 <td><p>Поддерживается</p></td>
 <td> 
-<p>Нет данных</p></td>
+<p>Н/Д</p></td>
 <td><p>Каждый активный узел в отказоустойчивом кластере владеет другим кластеризованным экземпляром сервера цели iSCSI с другими узлами, работающими как возможные узлы-владельцы.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Уровень восстановления при ошибке (Эрл)</p></td>
 <td><p>0</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Подключений на сеанс</p></td>
 <td><p>1</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -130,12 +130,12 @@ ms.locfileid: "75949663"
 <tr class="even">
 <td><p>Многопутевой ввод-вывод (MPIO)</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>Пути MPIO</p></td>
-<td><p>추가를 클릭합니다.</p></td>
+<td><p>4</p></td>
 <td><p>Нет</p></td>
 <td></td>
 </tr>
@@ -162,7 +162,7 @@ ms.locfileid: "75949663"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Comment</p></th>
+<th><p>Комментарий</p></th>
 </tr>
 </thead>
 <tbody>
@@ -175,7 +175,7 @@ ms.locfileid: "75949663"
 <tr class="even">
 <td><p>Портал (IP-адреса) поддерживается</p></td>
 <td><p>64</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -187,43 +187,43 @@ ms.locfileid: "75949663"
 <tr class="even">
 <td><p>IPv4</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>IPv6</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Разгрузка TCP</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Использование большой отправки (сегментации), контрольной суммы, контроля прерываний и разгрузки RSS</p></td>
 </tr>
 <tr class="odd">
 <td><p>разгрузка iSCSI</p></td>
 <td><p>Не поддерживается.</p></td>
-<td><br/><p>Нет данных</p></td>
+<td><br/><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
-<td><p>Кадры крупного размера</p></td>
+<td><p>Jumbo-кадры</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><p>IPSec</p></td>
+<td><p>Туннель</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Разгрузка CRC</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -243,13 +243,13 @@ ms.locfileid: "75949663"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Comment</p></th>
+<th><p>Комментарий</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td><p>От инициатора iSCSI, который преобразует виртуальный диск из базового диска в динамический </p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td><p>Нет</p></td>
 <td></td>
 </tr>
@@ -264,28 +264,28 @@ ms.locfileid: "75949663"
 <td><p>Минимальный размер формата виртуального жесткого диска</p></td>
 <td><p>VHDX: 3 МБ</p>
 <p>. VHD: 8 МБ</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td><p>Применяется ко всем поддерживаемым типам виртуальных жестких дисков: родительский, разностный и фиксированный.</p></td>
 </tr>
 <tr class="even">
 <td><p>Максимальный размер родительского VHD</p></td>
 <td><p>VHDX: 64 ТБ</p>
 <p>. VHD: 2 ТБ</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>Фиксированный максимальный размер VHD</p></td>
 <td><p>VHDX: 64 ТБ</p>
 <p>. VHD: 16 ТБ</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Максимальный размер разностного виртуального жесткого диска</p></td>
 <td><p>VHDX: 64 ТБ</p>
 <p>. VHD: 2 ТБ</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -310,55 +310,55 @@ ms.locfileid: "75949663"
 <td><p>Динамический формат VHD</p></td>
 <td><p>VHDX: Да</p>
 <p>. VHD: Да (нет в Windows Server 2012)</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td><p>Несопоставление&#39;не поддерживается t.</p></td>
 </tr>
 <tr class="odd">
 <td><p>exFAT/FAT32/FAT (объем размещения виртуального жесткого диска)</p></td>
 <td><p>Не поддерживается.</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>CSV v2</p></td>
 <td><p>Не поддерживается.</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>ReFS</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>NTFS</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>CFS не Майкрософт</p></td>
 <td><p>Не поддерживается.</p></td>
-<td><p>"Да",</p></td>
+<td><p>Да</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Тонкая подготовка</p></td>
 <td><p>Нет</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Динамические виртуальные жесткие диски поддерживаются, но&#39;сопоставление не поддерживается t.</p></td>
 </tr>
 <tr class="odd">
 <td><p>Сжатие логического устройства</p></td>
 <td><p>Да (только для Windows Server 2012 R2 и более поздних версий)</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Чтобы сжать LUN, используйте <a href="https://docs.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk">resize-исксивиртуалдиск</a> .</p></td>
 </tr>
 <tr class="even">
 <td><p>Клонирование логических устройств</p></td>
 <td><p>Не поддерживается.</p></td>
-<td><p>Нет данных</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Вы можете быстро клонировать данные диска с помощью разностных виртуальных жестких дисков.</p></td>
 </tr>
 </tbody>
@@ -376,7 +376,7 @@ ms.locfileid: "75949663"
 <tr class="header">
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
-<th><p>Comment</p></th>
+<th><p>Комментарий</p></th>
 </tr>
 </thead>
 <tbody>
@@ -434,9 +434,9 @@ ms.locfileid: "75949663"
 
 Поставщик хранилища цели iSCSI — это служба роли в Windows Server 2016, Windows Server 2012 R2 и Windows Server 2012; Кроме того, вы можете скачать и установить [поставщики хранилища цели iSCSI (VDS/VSS) для серверов приложений нижнего уровня](https://www.microsoft.com/download/details.aspx?id=34759) в следующих операционных системах, если сервер цели iSCSI работает под управлением Windows Server 2012:
 
-  - Windows Storage Server 2008 R2
+  - Windows Storage Server 2008 R2
 
-  - Windows Server 2008 R2
+  - Windows Server 2008 R2
 
   - Windows HPC Server 2008 R2
 
@@ -459,13 +459,13 @@ ms.locfileid: "75949663"
 </colgroup>
 <tbody>
 <tr class="odd">
-<td><p>Инициатор</p></td>
-<td><p>Windows Server 2012 R2</p></td>
+<td><p>Инициатора</p></td>
+<td><p>Windows Server 2012 R2</p></td>
 <td><p>Windows Server 2012</p></td>
-<td><p>Комментарии</p></td>
+<td><p>Comments</p></td>
 </tr>
 <tr class="even">
-<td><p>Windows Server 2012 R2</p></td>
+<td><p>Windows Server 2012 R2</p></td>
 <td><p>Проверено</p></td>
 <td></td>
 <td></td>
@@ -495,7 +495,7 @@ ms.locfileid: "75949663"
 <td></td>
 </tr>
 <tr class="odd">
-<td><p>CentOS 6.x</p></td>
+<td><p>CentOS 6. x</p></td>
 <td><p>Проверено</p></td>
 <td></td>
 <td><p>Необходимо выйти из сеанса и снова войти в систему для обнаружения измененного размера виртуального диска.</p></td>
@@ -513,7 +513,7 @@ ms.locfileid: "75949663"
 <td></td>
 </tr>
 <tr class="even">
-<td><p>SUSE Linux Enterprise Server 10</p></td>
+<td><p>SUSE Linux Enterprise Server 10</p></td>
 <td></td>
 <td><p>Проверено</p></td>
 <td></td>
@@ -529,7 +529,7 @@ ms.locfileid: "75949663"
 
 Мы также проверили следующие инициаторы iSCSI, выполняющие бездисковую загрузку с виртуальных дисков, размещенных на сервере iSCSI Target Server:
 
-  - Windows Server 2012 R2
+  - Windows Server 2012 R2
 
   - Windows Server 2012
 
@@ -537,7 +537,7 @@ ms.locfileid: "75949663"
 
   - CD или USB-диск с Ипксе
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 Ниже перечислены дополнительные ресурсы с информацией о сервере цели iSCSI и связанных технологиях.
 
