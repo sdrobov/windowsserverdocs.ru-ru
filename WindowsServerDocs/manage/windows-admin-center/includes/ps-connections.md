@@ -7,7 +7,7 @@ Import-Module "$env:ProgramFiles\windows admin center\PowerShell\Modules\Connect
 Export-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
 # Import connections (including tags) from a .csv file
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv"
-# Import connections (including tags) from .csv files, and remove any connections that are not explictly in the imported file using the -prune switch parameter 
+# Import connections (including tags) from .csv files, and remove any connections that are not explicitly in the imported file using the -prune switch parameter 
 Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -prune
 ```
 ### <a name="csv-file-format-for-importing-connections"></a>Формат CSV-файла для подключений для импорта
@@ -18,7 +18,7 @@ Import-Connection "https://wac.contoso.com" -fileName "WAC-connections.csv" -pru
 
 **type** — это тип соединения. Для соединений по умолчанию, включенных в Windows Admin Center, вы будете использовать одно из следующих.
 
-| Тип подключения. | Строка подключения. |
+| Тип подключения | Строка подключения. |
 |------|-------------------------------|
 | Windows Server | msft.sme.connection-type.server |
 | ПК с Windows 10 | msft.sme.connection-type.windows-client |
