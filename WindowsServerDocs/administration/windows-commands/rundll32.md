@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29a87f9f07c25a0c671e47550e0a054d8308f747
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7345c1ad59a4209e607245db1b2a79055ffcb5fe
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384417"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517290"
 ---
 # <a name="rundll32"></a>rundll32
 
@@ -42,7 +42,7 @@ Rundll32 <DLLname>
 
 ## <a name="remarks"></a>Примечания
 
-Rundll32 может вызывать функции только из библиотеки DLL, которые явно написаны для вызова с помощью rundll32. Дополнительные сведения о требованиях rundll32 см. в [статье 164787](https://go.microsoft.com/fwlink/?LinkID=165773) базы знаний майкрософт (https://go.microsoft.com/fwlink/?LinkID=165773) ).
+Rundll32 может вызывать только функции из библиотеки DLL, которые были явно написаны для вызова с помощью rundll32.
 
 #### <a name="additional-references"></a>Дополнительная справка
 

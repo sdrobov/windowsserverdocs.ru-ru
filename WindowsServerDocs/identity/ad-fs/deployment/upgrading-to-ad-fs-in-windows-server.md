@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: ebcc679b2bc5ab3c6d7c70c9e84ba45697c80165
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 913e45e52c5c6c137d2bf798bb5b86a65f9d1caa
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265596"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517579"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-using-a-wid-database"></a>Обновление до AD FS в Windows Server 2016 с помощью базы данных WID
 
@@ -149,3 +149,16 @@ Set-WebApplicationProxyConfiguration -UpgradeConfigurationVersion
 ```
 
 Это приведет к завершению обновления серверов WAP.
+
+
+> [!NOTE] 
+> В AD FS 2019 существует известная ошибка PRT, если выполняется Windows Hello для бизнеса с гибридным доверием сертификатов. Эта ошибка может возникать в журналах событий администратора ADFS: получен недопустимый запрос OAuth. Клиенту "имя" запрещено обращаться к ресурсу с областью "группы пользователей". Чтобы исправить эту ошибку, сделайте следующее: 
+> 1. Запустите консоль управления AD FS. Бросе в «Services > Scope descriptions»
+> 2. Щелкните правой кнопкой мыши "описания областей" и выберите "добавить описание области".
+> 3. В поле Имя введите "группы пользователей" и нажмите кнопку Применить > ОК.
+> 4. Запуск PowerShell от имени администратора
+> 5. Выполните команду "Get-Адфсаппликатионпермиссион". Найдите Скопенамес: {OpenID Connect, Аза} с Клиентролеидентифиер. Запишите ObjectIdentifier.
+> 6. Выполните команду "Set-Адфсаппликатионпермиссион-Таржетидентифиер < ObjectIdentifier из шага 5 >-AddScope" группы пользователей "
+> 7. Перезапустите службу ADFS.
+> 8. На клиенте выполните перезагрузку клиента. Пользователю должно быть предложено подготавливать WHFB.
+> 9. Если окно подготовка не появляется, необходимо получить журналы трассировки NGC и устранить неполадки.

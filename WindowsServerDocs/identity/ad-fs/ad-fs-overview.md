@@ -9,19 +9,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 62dc6d16d840abab34876a471a7fd27ce01bbbf7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f67ea0200a64dccb2e1f6148e84a8ca3f948e484
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408543"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517449"
 ---
 # <a name="ad-fs-overview"></a>Обзор служб федерации Active Directory
 
-
+Active Directory служба федерации (AD FS) позволяет управлять федеративными удостоверениями и доступом, обеспечивая безопасный общий доступ к цифровым удостоверениям и правам прав в рамках безопасности и границ предприятия. AD FS расширяет возможность использования функции единого входа, доступной в рамках одной безопасности или границы Организации, к приложениям с выходом в Интернет, обеспечивая клиентам, партнерам и поставщикам упрощенный пользовательский интерфейс при доступе к веб-приложения организации.
 
 Этот документ содержит список всех обзоров документации для AD FS для Windows Server. Это следующие атрибуты:
-  
   
   
 * [Новые возможности AD FS для Windows Server 2019](../ad-fs/overview/whats-new-active-directory-federation-services-windows-server.md)  
