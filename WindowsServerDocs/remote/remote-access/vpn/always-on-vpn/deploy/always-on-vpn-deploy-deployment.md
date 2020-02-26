@@ -9,12 +9,12 @@ ms.localizationpriority: medium
 ms.date: 11/05/2018
 ms.author: pashort
 author: shortpatti
-ms.openlocfilehash: 33e00134960ca31ce966198ded0692550e164fd6
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 8383aea81e91f52473fd564abf315423abfa83b1
+ms.sourcegitcommit: 9bc7a0478d72944f714f8041fa4506e0d1ed0366
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822415"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77607069"
 ---
 # <a name="deploy-always-on-vpn"></a>Развертывание постоянно подключенного VPN-профиля
 
@@ -27,16 +27,16 @@ ms.locfileid: "76822415"
 
 На следующей схеме показан процесс рабочего процесса для различных сценариев при развертывании Always On VPN.
 
-![Блок-схема Always On рабочего процесса развертывания VPN](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)
+[Блок-схема ![Always On рабочего процесса развертывания VPN](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
 
->[!IMPORTANT]
->Для этого развертывания не требуется, чтобы серверы инфраструктуры, например компьютеры под управлением домен Active Directory Services, Active Directory службы сертификатов и сервер политики сети, выполнялись под управлением Windows Server 2016. Можно использовать более ранние версии Windows Server, такие как Windows Server 2012 R2, для серверов инфраструктуры и для сервера, на котором выполняется удаленный доступ.
+> [!IMPORTANT]
+> Для этого развертывания не требуется, чтобы серверы инфраструктуры, например компьютеры под управлением домен Active Directory Services, Active Directory службы сертификатов и сервер политики сети, выполнялись под управлением Windows Server 2016. Можно использовать более ранние версии Windows Server, такие как Windows Server 2012 R2, для серверов инфраструктуры и для сервера, на котором выполняется удаленный доступ.
 
-## <a name="step-1-plan-the-always-on-vpn-deploymentalways-on-vpn-deploy-planningmd"></a>[Шаг 1. Планирование развертывания Always On VPN](always-on-vpn-deploy-planning.md)
+## <a name="step-1-plan-the-always-on-vpn-deployment"></a>[Шаг 1. Планирование развертывания Always On VPN](always-on-vpn-deploy-planning.md)
 
 На этом шаге вы начинаете планировать и подготавливать развертывание Always On VPN. Перед установкой роли сервера удаленного доступа на компьютере, который планируется использовать в качестве VPN-сервера. После надлежащего планирования можно развернуть Always On VPN и при необходимости настроить условный доступ для VPN-подключения с помощью Azure AD.
 
-## <a name="step-2-configure-the-always-on-vpn-server-infrastructurevpn-deploy-server-infrastructuremd"></a>[Шаг 2. Настройка инфраструктуры VPN-сервера Always On](vpn-deploy-server-infrastructure.md)
+## <a name="step-2-configure-the-always-on-vpn-server-infrastructure"></a>[Шаг 2. Настройка инфраструктуры VPN-сервера Always On](vpn-deploy-server-infrastructure.md)
 
 На этом шаге вы установите и настроите компоненты на стороне сервера, необходимые для поддержки VPN. Серверные компоненты включают настройку PKI для распространения сертификатов, используемых пользователями, VPN-сервером и сервером NPS.  Вы также настроите RRAS для поддержки подключений по протоколу IKEv2 и сервера NPS для выполнения авторизации подключений VPN.
 
@@ -46,7 +46,7 @@ ms.locfileid: "76822415"
 - **В ЦС сервера сертификатов Active Directory:** Создайте шаблоны сертификатов проверки подлинности пользователя, VPN-сервера и сервера NPS.
 - **В присоединенных к домену клиентах Windows 10:** Регистрация и проверка сертификатов пользователей.
 
-## <a name="step-3-configure-the-remote-access-server-for-always-on-vpnvpn-deploy-rasmd"></a>[Шаг 3. Настройка сервера удаленного доступа для Always On VPN](vpn-deploy-ras.md)
+## <a name="step-3-configure-the-remote-access-server-for-always-on-vpn"></a>[Шаг 3. Настройка сервера удаленного доступа для Always On VPN](vpn-deploy-ras.md)
 
 На этом шаге вы настраиваете VPN-подключение удаленного доступа, разрешающее подключения по протоколу IKEv2, запрещайте подключения от других протокола VPN и назначаете пул статических IP-адресов для выдачи IP-адресов для подключения разрешенных VPN-клиентов.
 
@@ -55,7 +55,7 @@ ms.locfileid: "76822415"
 - Регистрация и проверка сертификата VPN-сервера
 - Установка и настройка VPN удаленного доступа
 
-## <a name="step-4-install-and-configure-the-nps-servervpn-deploy-npsmd"></a>[Шаг 4. Установка и настройка сервера NPS](vpn-deploy-nps.md)
+## <a name="step-4-install-and-configure-the-nps-server"></a>[Шаг 4. Установка и настройка сервера NPS](vpn-deploy-nps.md)
 
 На этом шаге вы установите сервер политики сети (NPS) с помощью Windows PowerShell или мастера добавления ролей и компонентов диспетчер сервера. Вы также настроите NPS для выполнения всех операций проверки подлинности, авторизации и учета для запроса на подключение, полученного от VPN-сервера.
 
@@ -67,18 +67,18 @@ ms.locfileid: "76822415"
 - Настройка сетевой политики в NPS
 - Автоматическая регистрация сертификата сервера политики сети
 
-## <a name="step-5-configure-dns-and-firewall-settings-for-always-on-vpnvpn-deploy-dns-firewallmd"></a>[Шаг 5. Настройка параметров DNS и брандмауэра для Always On VPN](vpn-deploy-dns-firewall.md)
+## <a name="step-5-configure-dns-and-firewall-settings-for-always-on-vpn"></a>[Шаг 5. Настройка параметров DNS и брандмауэра для Always On VPN](vpn-deploy-dns-firewall.md)
 
 На этом шаге вы настроите параметры DNS и брандмауэра. При подключении удаленных VPN-клиентов они используют те же DNS-серверы, что используются внутренними клиентами, что позволяет им разрешать имена так же, как и остальные внутренние рабочие станции. 
 
-## <a name="step-6-configure-windows-10-client-always-on-vpn-connectionsvpn-deploy-client-vpn-connectionsmd"></a>[Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](vpn-deploy-client-vpn-connections.md)
+## <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>[Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](vpn-deploy-client-vpn-connections.md)
 
 На этом шаге вы настроите клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с помощью VPN-подключения. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, Microsoft Endpoint Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.
 
-## <a name="step-7-optional-configure-conditional-access-for-vpn-connectivityad-ca-vpn-connectivity-windows10md"></a>[Шаг 7. Используемых Настройка условного доступа для VPN-подключения](../../ad-ca-vpn-connectivity-windows10.md)
+## <a name="step-7-optional-configure-conditional-access-for-vpn-connectivity"></a>[Шаг 7. Используемых Настройка условного доступа для VPN-подключения](../../ad-ca-vpn-connectivity-windows10.md)
 
 На этом необязательном шаге можно точно настроить, как разрешенные VPN-пользователи получают доступ к ресурсам. Условный доступ Azure AD для VPN-подключения позволяет защитить VPN-подключения. Условный доступ — это механизм оценки на основе политик, позволяющий создавать правила доступа для любого приложения, подключенного к Azure AD. Дополнительные сведения см. в разделе [Azure Active Directory (Azure AD) условный доступ](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
-## <a name="next-step"></a>Далее
+## <a name="next-step"></a>Дальнейшие действия
 
 [Шаг 1. Планируйте Always On развертывание VPN](always-on-vpn-deploy-planning.md): перед установкой роли сервера удаленного доступа на компьютере, который планируется использовать в качестве VPN-сервера. После надлежащего планирования можно развернуть Always On VPN и при необходимости настроить условный доступ для VPN-подключения с помощью Azure AD.  
