@@ -12,16 +12,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5323210962298ff3f2d0b159cba7726adfbb89d1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7da68fa9cbe71f8a67e74671d64d11908ae4654
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361620"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169564"
 ---
 # <a name="running-wsus-replica-mode"></a>Работа в режиме реплики служб WSUS
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Сервер WSUS, работающий в режиме реплики, наследует утверждения обновлений и группы компьютеров, созданные на сервере администрирования. В сценарии, использующем режим реплики, обычно имеется один сервер администрирования, и одна или несколько серверов WSUS реплики распределены по всей Организации на основе сайта или организации топографии. Вы утверждаете обновления и создаете группы компьютеров на сервере администрирования, на котором серверы в режиме реплики будут зеркально отражены. Серверы в режиме реплики могут быть настроены только во время установки WSUS. Если вы реализовали этот сценарий, скорее всего, это важно в Организации, где управление утверждениями обновлений и группами компьютеров управляются централизованно.
 
