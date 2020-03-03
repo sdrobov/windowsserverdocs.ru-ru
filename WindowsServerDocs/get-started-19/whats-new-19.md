@@ -8,16 +8,16 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: 13eed225dfc144d5e7e59be13dbed14d4de8bb01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dd8cd6700323075a380aa062bfa1d208b3e30f83
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71360778"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465498"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Новые возможности Windows Server 2019
 
-> Относится к: Windows Server 2019
+> Применяется к: Windows Server 2019
 
 В этом разделе описаны некоторые новые функции Windows Server 2019. В основе операционной системы Windows Server 2019 лежит надежная платформа Windows Server 2016. Она предоставляет множество инновационных возможностей для работы с четырьмя основными областями: гибридное облако, безопасность, платформа приложений и гиперконвергентная инфраструктура (HCI).
 
@@ -107,7 +107,7 @@ Windows Admin Center представляет собой локально раз
 
 - Мы сделали CUBIC поставщиком контроля перегрузки протокола TCP по умолчанию, чтобы еще больше повысить пропускную способность!
 
-## <a name="storage"></a>Хранилище
+## <a name="storage"></a>Хранение
 
 Вот некоторые изменения, которые мы внесли в хранилище в Windows Server 2019. Подробные сведения см. в статье [What's new in Storage in Windows Server](../storage/whats-new-in-storage.md) (Новые возможности хранилища в Windows Server).
 
@@ -115,7 +115,7 @@ Windows Admin Center представляет собой локально раз
 
 Служба миграции хранилища — это новая технология, которая упрощает перенос серверов в более новую версию Windows Server. Она предоставляет графическое средство, которое выполняет инвентаризацию данных на серверах, передает данные и конфигурации на новые серверы, а затем при необходимости перемещает удостоверения старых серверов на новые серверы, чтобы пользователям и приложениям не требовалось вносить какие-либо изменения. Подробные сведения см. в разделе [Storage Migration Service overview](../storage/storage-migration-service/overview.md) (Обзор службы миграции хранилища).
 
-### <a name="storage-spaces-direct"></a>Локальные дисковые пространства
+### <a name="storage-spaces-direct"></a>Дисковые пространства прямого подключения
 
 Ниже приведен список новых возможностей в Локальных дисковых пространствах. Подробные сведения см. в разделе [Storage Spaces Direct (Windows Server 2019 only)](../storage/whats-new-in-storage.md#storage-spaces-direct) (Локальные дисковые пространства (только для Windows Server 2019). Информацию о приобретении проверенных систем с Локальными дисковыми пространствами см. в статье [Общие сведения об Azure Stack HCI](https://docs.microsoft.com/azure-stack/operator/azure-stack-hci-overview).
 
@@ -202,7 +202,7 @@ Windows Admin Center представляет собой локально раз
 Low Extra Delay Background Transport (LEDBAT) — это поставщик управления перегрузкой сети с низкой задержкой, разработанный для автоматического повышения пропускной способности для пользователей и приложений и потребления всей доступной пропускной способности, когда сеть не используется.   
 Эта технология предназначена для применения при развертывании крупных критических обновлений в ИТ-среде без ущерба для служб, использующихся пользователями, и связанной с ними пропускной способности.
 
-### <a name="windows-time-service"></a>Служба времени Windows
+### <a name="windows-time-service"></a>служба времени Windows
 
 В [службе времени Windows](https://docs.microsoft.com/windows-server/networking/windows-time-service/insider-preview) реализована полноценная поддержка UTC-совместимой корректировочной секунды, новый протокол времени под названием "Протокол точного времени" (Precision Time Protocol), а также трассировка в сквозном режиме.
 
