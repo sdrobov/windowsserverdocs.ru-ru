@@ -11,12 +11,12 @@ ms.tgt_pltfrm: na
 ms.topic: article
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: 6287b6233306a47d71951b589b5d3cb84ac0d761
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: e7708ffe5639c80067ed0dbc2794c4d6694e6247
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950397"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517509"
 ---
 # <a name="optimizing-windows-10-version-1803-for-a-virtual-desktop-infrastructure-vdi-role"></a>Оптимизация Windows 10 версии 1803 для роли инфраструктуры виртуальных рабочих столов (VDI)
 
@@ -91,7 +91,7 @@ ms.locfileid: "75950397"
 
 ### <a name="to-sysprep-or-not-sysprep"></a>Быть Sysprep или не быть
 
-В Windows 10 есть встроенное [средство SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), предназначенное для подготовки системы. Средство Sysprep используется, чтобы подготовить пользовательский образ Windows 10 для дублирования. Процесс Sysprep гарантирует, что итоговая операционная система будет обладать соответствующими уникальными характеристиками для запуска в рабочей среде.
+В Windows 10 есть встроенное [средство SysPrep](https://docs.microsoft.com/windows-hardware/manufacture/desktop/sysprep--system-preparation--overview), предназначенное для подготовки системы. Средство Sysprep используется, чтобы подготовить пользовательский образ Windows 10 для дублирования. Процесс Sysprep гарантирует, что итоговая операционная система будет обладать соответствующими уникальными характеристиками для запуска в рабочей среде.
 
 У средства Sysprep имеется несколько достоинств и недостатков. В случае VDI может потребоваться возможность настроить профиль пользователя по умолчанию, который будет использоваться в качестве шаблона профиля для последующих пользователей, осуществляющих вход с помощью этого образа. У вас могут быть приложения, которые требуется установить, но с возможностью управлять параметрами на уровне приложения.
 
