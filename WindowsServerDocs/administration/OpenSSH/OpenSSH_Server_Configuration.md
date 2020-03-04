@@ -6,12 +6,12 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Конфигурация сервера OpenSSH для Windows
-ms.openlocfilehash: 5eb3d86950d169fd01512d330f0c04669beeffae
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 61e6e24e6682802fd07e70dcb49aa0f382e1638e
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259043"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169594"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 версии 1809 и Windows Server 2019
 
@@ -76,7 +76,7 @@ AllowGroups sshusers
 
 ### <a name="authorizedkeysfile"></a>AuthorizedKeysFile 
 
-По умолчанию используется значение ".ssh/authorized_keys .ssh/authorized_keys2". Если путь не является абсолютным, он вычисляется относительно основного каталога пользователя (или пути к образу профиля). Например: c:\users\user.
+По умолчанию используется значение ".ssh/authorized_keys .ssh/authorized_keys2". Если путь не является абсолютным, он вычисляется относительно основного каталога пользователя (или пути к образу профиля). Например: c:\users\user. Обратите внимание, что если пользователь входит в группу администраторов, используется %programdata%/ssh/administrators_authorized_keys.
 
 ### <a name="chrootdirectory-support-added-in-v7700"></a>ChrootDirectory (добавлена поддержка в версии 7.7.0.0)
 

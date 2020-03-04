@@ -7,12 +7,12 @@ ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 62fe4f00cef121e6241a403ee339047cda9488b5
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 8510b37c652dc7dfa95569a64dff8b1b75372a2d
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591080"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517569"
 ---
 # <a name="upgrade-windows-server-2016-to-windows-server-2019"></a>Обновление Windows Server 2016 до Windows Server 2019
 
@@ -56,7 +56,7 @@ ms.locfileid: "72591080"
 
 7. Выберите выпуск Windows Server 2019, который вы хотите установить, а затем щелкните **Далее**.
 
-    ![Экран для выбора устанавливаемого выпуска Windows Server 2016](media/upgrade-2016-2019/select-os-edition.png)
+    ![Экран для выбора устанавливаемого выпуска Windows Server 2019](media/upgrade-2016-2019/select-os-edition.png)
 
 8. Выберите **Принимаю**, чтобы подтвердить условия лицензионного соглашения, исходя из вашего канала распространения (например, розничная, корпоративная, OEM, ODM версия и т. д.).
 

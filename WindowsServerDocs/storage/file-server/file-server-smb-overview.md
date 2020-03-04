@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 416145a8c4ec20eaf46cf4b5ac88a0cdf38bdf33
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: aafcfcd4d0f2f14836c5b7dee2bdbccbf99fa887
+ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919888"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78169624"
 ---
 # <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Общие сведения о совместном использовании файлов с помощью протокола SMB 3 в Windows Server
 
@@ -41,7 +41,7 @@ ms.locfileid: "75919888"
 
 | Компонент или функция  | Новинка или обновление  | Сводка  |
 | --------- | --------- | --------- |
-| Возможность требовать сквозную запись на диск в общих папках, которые не постоянно доступны | Создать | Чтобы дополнительно обеспечить запись в общую папку через стек программного обеспечения и оборудования на физический диск до сообщения о завершении операции записи, можно включить сквозную запись на общую папку с помощью команды `NET USE /WRITETHROUGH` или командлета PowerShell `New-SMBMapping -UseWriteThrough`. При использовании сквозной записи возникает небольшое уменьшение производительности. Дополнительные сведения см. в записи блога [Controlling write-through behaviors in SMB](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-write-through-behaviors-in-smb/bc-p/1083417#M677) (Управление поведением сквозной записи в SMB). |
+| Возможность требовать сквозную запись на диск в общих папках, которые не постоянно доступны | Создать | Чтобы гарантировать запись в общую папку через стек программного и аппаратного обеспечения на физический диск до получения сообщения о завершении операции записи, можно включить сквозную запись в общую папку с помощью команды `NET USE /WRITETHROUGH` или командлета PowerShell `New-SMBMapping -UseWriteThrough`. При использовании сквозной записи возникает небольшое уменьшение производительности. Дополнительные сведения см. в записи блога [Controlling write-through behaviors in SMB](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-write-through-behaviors-in-smb/bc-p/1083417#M677) (Управление поведением сквозной записи в SMB). |
 
 ## <a name="features-added-in-windows-server-version-1709-and-windows-10-version-1709"></a>Функции, добавленные в Windows Server версии 1709 и Windows 10 версии 1709
 

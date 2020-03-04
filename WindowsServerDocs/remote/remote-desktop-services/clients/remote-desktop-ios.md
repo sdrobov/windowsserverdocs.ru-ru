@@ -14,12 +14,12 @@ manager: lizross
 ms.author: helohr
 date: 02/11/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 1724f24a794003aaae0ac89ee892269eed045114
-ms.sourcegitcommit: 5797a2e67211651070404a5893f5c0a91c63e960
+ms.openlocfilehash: ef13227a9f7b83f01786bbb11498da912c86581b
+ms.sourcegitcommit: 32211610ad9a24d282b35ed8c0aaa179497c63bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/13/2020
-ms.locfileid: "77179358"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "77780823"
 ---
 # <a name="get-started-with-the-ios-client"></a>Приступая к работе с клиентом iOS
 
@@ -170,7 +170,12 @@ ms.locfileid: "77179358"
 
 ## <a name="supported-input-devices"></a>Поддерживаемые устройства ввода
 
-Сейчас клиент iOS поддерживает только мыши Swiftpoint GT и ProPoint. Дополнительные сведения о поддержке устройств см. в статье [Что нового в клиенте iOS](ios-whatsnew.md) и в [iOS App Store](https://aka.ms/rdios).
+Базовая [поддержка мыши по Bluetooth](https://support.apple.com/HT210546) доступна в iOS 13 и iPadOS в виде специальных возможностей. Более глубокая интеграция с мышью в клиенте удаленных рабочих столов поддерживается для мышей Swiftpoint GT и ProPoint. Кроме того, также поддерживаются внешние клавиатуры, совместимые с iOS и iPadOS.
+
+Дополнительные сведения о поддержке устройств см. в статье [Что нового в клиенте iOS](ios-whatsnew.md) и в [iOS App Store](https://aka.ms/rdios).
+
+> [!TIP]
+> Swiftpoint предлагает [эксклюзивную скидку на мыши ProPoint](https://www.swiftpoint.com/microsoft) для пользователей клиента iOS.
 
 ## <a name="use-a-keyboard-in-a-remote-session"></a>Использование клавиатуры в удаленном сеансе
 
@@ -180,20 +185,7 @@ ms.locfileid: "77179358"
 
 Если для вашего устройства iOS включен Bluetooth, клиент автоматически обнаружит клавиатуру Bluetooth.
 
-Обратите внимание, что из-за ограничений в ОС специальные клавиши, такие как Ctrl, Option (Параметр)и Function (Функция), не будут работать должным образом с клавиатурой Bluetooth. Работают следующие клавиши:
+Хотя определенные сочетания клавиш могут не работать должным образом в удаленном сеансе, многие из стандартных сочетаний клавиш Windows, такие как CTRL+C, CTRL+V и ALT+TAB, будут работать.
 
-- Буквенно-цифровые клавиши
-- Клавиши курсора
-- Клавиша TAB: Клавиша TAB работает, но Shift+Tab не работает
-- Home / Pos1: Alt+Left = Home
-- END: Alt+Right = End
-- Page Up: Alt+Up = Page Up
-- PAGE DOWN Alt+Down = Page Down
-- Выбрать все: Команда+A = Ctrl+A (выбрать все в большинстве программ)
-- Вырезать: Команда+X = Ctrl+A (вырезать в большинстве программ)
-- Копировать: Команда+C = Ctrl+C (Копировать в большинстве программ)
-- Вставить: Команда+V = Ctrl+V (вставить в большинстве программ)
-- Символы: "Alt+буквенно-цифровые клавиши" будут отображать различные символы в зависимости от настроенного языка
-
-> [!TIP]
+> [!IMPORTANT]
 > Вопросы и комментарии всегда приветствуются. Тем не менее не следует публиковать запрос для получения справки по устранению неполадок, используя область комментариев в конце этой статьи. Вместо этого перейдите на [форум по клиенту удаленного рабочего стола](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) и начните новую беседу. Есть предложение по новым функциям? Сообщите нам на [форуме UserVoice по клиенту](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

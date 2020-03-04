@@ -12,12 +12,12 @@ ms.assetid: 9f109c91-7c2e-4065-856c-ce9e2e9ce558
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 92c27884475beb83000fb7aac15339135e3f2109
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 8b0276b70f3899fe1f3e56aebd87ea087ea91fee
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948468"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465488"
 ---
 # <a name="deploy-nano-server"></a>Развертывание сервера Nano Server
 
@@ -492,7 +492,7 @@ Nano Server предлагает пакет, который включает н�
 2. Установить приложение на сервере Nano Server, запустив командлет [**Add-AppxPackage**](https://technet.microsoft.com/library/mt575516(v=wps.620).aspx) PowerShell, чтобы установить пакет WSA на Nano Server. Пример: `Add-AppxPackage wsaSample.appx`
 
 #### <a name="additional-resources-for-creating-apps"></a>Дополнительные ресурсы для создания приложений
-WSA является серверным расширением технологии пакетов приложений Windows (хотя и не размещается в Microsoft Store). Если требуется публиковать приложения с помощью WSA, в этих разделах можно ознакомиться с конвейером пакетов приложений:
+WSA является серверным расширением технологии пакетов приложений Windows (хотя и не размещается в Microsoft Store). Если вы хотите публиковать приложения с помощью WSA, вы можете узнать о конвейере пакетов приложений из этих разделов:
 
 - [Создание базового манифеста пакета](https://msdn.microsoft.com/library/windows/desktop/br211475.aspx)
 - [Упаковщик приложений (MakeAppx.exe)](https://msdn.microsoft.com/library/windows/desktop/hh446767(v=vs.85).aspx)

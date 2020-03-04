@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e73511709bfbee69a6dcbaaff4341c8b067079f3
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: ca68087ad238cbbd06c56e41dd65f318adae5222
+ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949867"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77465478"
 ---
 # <a name="get-started-with-the-macos-client"></a>Приступая к работе с клиентом macOS
 
@@ -40,7 +40,7 @@ ms.locfileid: "75949867"
 3. Добавьте подключение к удаленному рабочему столу или удаленный ресурс. Подключение используется для прямого подключения к компьютеру с Windows, а удаленный ресурс — для использования удаленного приложения RemoteApp, рабочего стола на основе сеансов или виртуального рабочего стола, опубликованного локально с помощью удаленного приложения RemoteApp и подключений к удаленному рабочему столу. Эта функция обычно доступна в корпоративных средах.
 
 ## <a name="what-about-the-mac-beta-client"></a>Что насчет бета-версии клиента Mac?
-Мы тестируем новые функции на нашем ознакомительном канале в HockeyApp. Хотите ее испытать? Перейдите на страницу [Microsoft Remote Desktop for Mac](https://go.microsoft.com/fwlink/?LinkID=619698) и нажмите кнопку **Download** (Скачать). Создание учетной записи или вход в HockeyApp для скачивания бета-версии клиента не требуется.
+Мы тестируем новые функции на нашем ознакомительном канале в AppCenter. Хотите ее испытать? Перейдите на страницу [Microsoft Remote Desktop for Mac](https://aka.ms/rdmacbeta) и нажмите кнопку **Download** (Скачать). Создавать учетную запись или входить в AppCenter для скачивания бета-версии клиента не нужно.
 
 Если у вас уже есть клиент, можно проверить наличие обновлений, чтобы убедиться, что вы используете последнюю версию. В окне бета-версии клиента выберите **Microsoft Remote Desktop Beta** (Бета-версия Удаленного рабочего стола (Майкрософт)) вверху и нажмите кнопку **Check for updates** (Проверить наличие обновлений). 
 

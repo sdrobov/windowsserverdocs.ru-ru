@@ -9,12 +9,12 @@ ms.date: 01/22/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: adce37d8d06399d3a00221a12f3449244720ade7
-ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
+ms.openlocfilehash: 8061f41dab0f02bccd59a659e0bcd209bd73a249
+ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519486"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77517559"
 ---
 # <a name="whats-new-in-active-directory-federation-services"></a>Новые возможности служб федерации Active Directory
 
@@ -108,6 +108,18 @@ ms.locfileid: "76519486"
 Г. AD FS преобразует code_verifier и сравнивает его с t(code_verifier) из шага (B).  Если они не равны, запрос доступа отклоняется. 
 
 #### <a name="faq"></a>Вопросы и ответы 
+> [!NOTE] 
+> Эта ошибка может возникать в журналах событий администратора ADFS: Received invalid Oauth request. The client 'NAME' is forbidden to access the resource with scope 'ugs'. (Получен недопустимый запрос OAuth. Клиенту с именем NAME запрещено обращаться к ресурсу с областью ugs.) Чтобы исправить эту ошибку, сделайте следующее: 
+> 1. Запустите консоль управления AD FS. Щелкните "Службы" > "Описания областей"
+> 2. Щелкните правой кнопкой мыши "Описания областей" и выберите "Добавить описание области".
+> 3. В поле "Имя" введите ugs и щелкните "Применить" > "ОК2".
+> 4. Запустите PowerShell от имени администратора.
+> 5. Выполните команду Get-AdfsApplicationPermission. Найдите запись ScopeNames :{openid, aza} с ClientRoleIdentifier. Запишите значение ObjectIdentifier.
+> 6. Выполните команду Set-AdfsApplicationPermission -TargetIdentifier <идентификатор объекта, полученный на шаге 5> -AddScope 'ugs'.
+> 7. Перезапустите службу ADFS.
+> 8. На компьютере клиента сделайте следующее: Перезапустите клиент. Пользователю должно быть предложено подготовить WHFB.
+> 9. Если окно подготовки не появляется, необходимо получить журналы трассировки NGC и устранить неполадки.
+
 **Вопрос.** Можно ли передавать значение ресурса в составе значения области, примерно как при отправке запросов к Azure AD? 
 </br>**Ответ.** С обновлением AD FS в Server 2019 вы сможете передать значение ресурса, внедренное в параметр scope. Параметр scope теперь можно упорядочить в виде списка с разделителями-пробелами, где каждая запись представляет собой структуру из ресурса и области. Например:  
 **< создать допустимый пример запроса >**
