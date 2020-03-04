@@ -204,6 +204,7 @@
 ### [Пример пакетного файла Netsh](technologies/netsh/netsh-wins.md)
 ### [Команды HTTP для Netsh](technologies/netsh/netsh-http.md)
 ### [Команды порта прокси-сервера интерфейса Netsh](technologies/netsh/netsh-interface-portproxy.md)
+### [Команды netsh mbn](technologies/netsh/netsh-mbn.md)
 
 ## [Настройка производительности сетевой подсистемы](technologies/network-subsystem/net-sub-performance-top.md)
 ### [Выбор сетевого адаптера](technologies/network-subsystem/net-sub-choose-nic.md)
