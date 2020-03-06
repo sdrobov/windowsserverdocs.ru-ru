@@ -10,15 +10,15 @@ author: cosmosdarwin
 ms.date: 09/19/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 21ba41f636c95660d16055908f6bef857b0f3608
-ms.sourcegitcommit: 73898afec450fb3c2f429ca373f6b48a74b19390
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934998"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370728"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>Выбор дисков для локальных дисковых пространств
 
->Относится к: Windows 2019, Windows Server 2016
+>Область применения: Windows 2019, Windows Server 2016
 
 В этом разделе приведены рекомендации по выбору носителей для [локальных дисковых пространств](storage-spaces-direct-overview.md), которые будут соответствовать вашим требованиям к производительности и емкости.
 
@@ -116,7 +116,7 @@ ms.locfileid: "71934998"
 
 Рекомендуем ограничить общую емкость хранилища на каждый сервер приблизительно 400 ТБ (ТБ). Чем больше объем хранилища на сервер, тем больше времени необходимо для повторной синхронизации данных после простоя или перезагрузки, например при применении обновлений программного обеспечения. Текущий максимальный размер для пула носителей составляет 4 петабайтного уровня (PB) (4 000 ТБ) для Windows Server 2019 или 1 петабайтного уровня для Windows Server 2016.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Общие сведения о кэше в Локальные дисковые пространства](understand-the-cache.md)
