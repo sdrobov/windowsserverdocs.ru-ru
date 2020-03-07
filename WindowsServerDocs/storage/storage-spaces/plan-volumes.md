@@ -10,11 +10,11 @@ author: cosmosdarwin
 ms.date: 06/28/2019
 ms.localizationpriority: medium
 ms.openlocfilehash: 52c600068d5dd447ff9faa7c40788664e222a83a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366888"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370747"
 ---
 # <a name="planning-volumes-in-storage-spaces-direct"></a>Планирование томов в локальных дисковых пространствах
 
@@ -41,7 +41,7 @@ ms.locfileid: "71366888"
 
 Рекомендуем ограничить общее число томов следующим образом:
 
-| Windows Server 2016          | Windows Server 2019          |
+| Windows Server 2016          | Windows Server 2019          |
 |------------------------------|------------------------------|
 | До 32 томов на кластер | До 64 томов на кластер |
 
@@ -128,7 +128,7 @@ ms.locfileid: "71366888"
 
 Рекомендуем ограничить размер каждого тома следующим образом:
 
-| Windows Server 2016 | Windows Server 2019 |
+| Windows Server 2016 | Windows Server 2019 |
 | ------------------- | ------------------- |
 | До 32 ТБ         | До 64 ТБ         |
 
@@ -199,7 +199,7 @@ ms.locfileid: "71366888"
 
 См. статью [Создание томов в локальных дисковых пространствах](create-volumes.md).
 
-### <a name="see-also"></a>См. также
+### <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Выбор дисков для Локальные дисковые пространства](choosing-drives.md)
