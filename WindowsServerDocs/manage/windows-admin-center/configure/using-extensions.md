@@ -8,15 +8,15 @@ ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 7c1a70e36dfac9b23ded8f920ffcc8cccbfff023
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
-ms.translationtype: HT
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74903954"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371122"
 ---
 # <a name="install-and-manage-extensions"></a>Установка расширений и управление ими
 
->Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
+>Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
 
 Windows Admin Center создан в качестве расширяемой платформы, в которой каждый тип подключения и средство — это расширение, которое можно по отдельности установить, удалить и обновить. Вы можете искать новые расширения, опубликованные корпорацией Майкрософт и другими разработчиками, а также устанавливать и обновлять их по отдельности, не обновляя всей установки Windows Admin Center. Вы можете также настроить отдельный веб-канал NuGet или общую папку и распространить расширения, чтобы использовать их внутри организации.
 
@@ -36,7 +36,7 @@ Windows Admin Center поддерживает несколько веб-кана
 1. Нажмите кнопку **Параметры** вверху правой > в левой области, щелкните **Расширения**.
 2. В правой области перейдите на вкладку **Веб-каналы**.
 3. Нажмите кнопку **Добавить**, чтобы добавить дополнительный веб-канал. Введите URL-адрес веб-канала NuGet версии 2, если используете веб-канал NuGet. Информацию о URL-адресе должен предоставить поставщик или администратор веб-канала NuGet. Если используется общая папка, введите полный путь к общей папке, в которой хранятся файлы пакета расширения (NUPKG-файл).
-4. Нажмите **Добавить**. Если для внесения этого изменения шлюз должен работать в режиме с повышенными привилегиями, появится запрос на повышение прав UAC.
+4. Нажмите кнопку **Добавить**. Если для внесения этого изменения шлюз должен работать в режиме с повышенными привилегиями, появится запрос на повышение прав UAC.
 
 В списке **Доступные расширения** можно будет увидеть расширения из всех зарегистрированных веб-каналов. Вы можете проверить, какой веб-канал является источником расширения, используя столбец **Package Feed** (Веб-канал пакета).
 
@@ -86,4 +86,4 @@ $feedUrlBase = "https://aka.ms/sme-extension-feed"
 
 [!INCLUDE [ps-extensions](../includes/ps-extensions.md)]
 
-### <a name="learn-more-about-building-an-extension-with-the-windows-admin-center-sdkextendextensibility-overviewmd"></a>Дополнительные сведения см. [Extensions for Windows Admin Center](../extend/extensibility-overview.md) (Расширения для Windows Admin Center).
+### <a name="learn-more-about-building-an-extension-with-the-windows-admin-center-sdk"></a>Дополнительные сведения см. [Extensions for Windows Admin Center](../extend/extensibility-overview.md) (Расширения для Windows Admin Center).
