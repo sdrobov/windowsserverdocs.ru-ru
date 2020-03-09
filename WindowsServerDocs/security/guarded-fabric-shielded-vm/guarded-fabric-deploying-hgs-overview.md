@@ -9,17 +9,17 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
 ms.openlocfilehash: e66e7f365553f3aa106abbebf372492e0cc08386
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265946"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371474"
 ---
 # <a name="deploying-the-host-guardian-service"></a>Развертывание службы защиты узла 
 
 >Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), являющейся, как правило, кластером из трех узлов, одного или нескольких защищенных узлов и набора экранированных виртуальных машин.
+Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), которая обычно представлена кластером из трех узлов, одним или несколькими защищенными узлами и набором экранированных виртуальных машин.
 
 ## <a name="video-deploying-a-guarded-fabric"></a>Видео. Развертывание защищенной структуры 
 
@@ -46,6 +46,6 @@ ms.locfileid: "76265946"
 | &nbsp; | &nbsp; |(14) [Создание экранированных виртуальных машин с помощью Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 14" hspace="8" align="right" /><br>[Создание экранированных виртуальных машин с помощью VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" />|
 
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)
