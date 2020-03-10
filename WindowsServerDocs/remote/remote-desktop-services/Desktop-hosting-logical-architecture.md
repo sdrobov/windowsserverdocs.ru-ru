@@ -14,15 +14,15 @@ ms.assetid: 7f73bb0a-ce98-48a4-9d9f-cf7438936ca1
 author: lizap
 manager: dongill
 ms.openlocfilehash: 7cd46cadf5ed5424e50556ee0c91a80804108113
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404218"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370797"
 ---
 # <a name="remote-desktop-services-architecture"></a>Архитектура служб удаленных рабочих столов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Ниже приведены различные конфигурации развертывания служб удаленных рабочих столов для размещения приложений Windows и рабочих столов для конечных пользователей.
 
