@@ -11,15 +11,15 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 140f67a9dab5cf1f10cdb0c5c51a031a0dfb9dd3
-ms.sourcegitcommit: 3743cf691a984e1d140a04d50924a3a0a19c3e5c
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "66443555"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371594"
 ---
 # <a name="windows-server-installation-and-upgrade"></a>Установка и обновление Windows Server
 
->Относится к: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Применяется к: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Ищете Windows Server 2019? Ознакомьтесь с разделом [Установка | Обновление | Миграция в Windows Server 2019](../get-started-19/install-upgrade-migrate-19.md).
 
@@ -71,7 +71,7 @@ ms.locfileid: "66443555"
 
 |Если вы используете эти версии и выпуски:|Доступно обновление до этих версий и выпусков:|
 |--------------------------------|---------------------------------------|
-|Windows Server2012 Standard|Windows Server2016 Standard или Datacenter|
+|Windows Server 2012 Standard|Windows Server 2016 Standard или Datacenter|
 |Windows Server 2012 Datacenter|Windows Server 2016 Datacenter|
 |Windows Server 2012 R2 Standard|Windows Server 2016 Standard или Datacenter|
 |Windows Server 2012 R2 Datacenter|Windows Server 2016 Datacenter|
@@ -79,15 +79,15 @@ ms.locfileid: "66443555"
 |Windows Server 2012 R2 Essentials|Windows Server 2016 Essentials|
 |Windows Storage Server 2012 Standard|Windows Storage Server 2016 Standard|
 |Windows Storage Server 2012 Workgroup|Windows Storage Server 2016 Workgroup|
-|Windows Storage Server 2012 R2 Standard|Windows Storage Server2016 Standard|
-|Windows Storage Server 2012 R2 Workgroup|Windows Storage Server2016 Workgroup|
+|Windows Storage Server 2012 R2 Standard|Windows Storage Server 2016 Standard|
+|Windows Storage Server 2012 R2 Workgroup|Windows Storage Server 2016 Workgroup|
  
 ### <a name="license-conversion"></a>Преобразование лицензии
 Вы можете перейти с Windows Server 2016 Standard (розничная версия) на Windows Server 2016 Datacenter (розничная версия).
 
 Вы можете перейти с Windows Server 2016 Essentials (розничная версия) на Windows Server 2016 Standard (розничная версия).
 
-Вы можете перейти с ознакомительной версии Windows Server2016 Standard, Windows Server2016 Standard (розничная версия) либо Datacenter (розничная версия).
+Вы можете перейти с ознакомительной версии Windows Server 2016 Standard, Windows Server 2016 Standard (розничная версия) либо Datacenter (розничная версия).
 
 Вы можете перейти с ознакомительной версии Windows Server 2016 Datacenter на Windows Server 2016 Datacenter (розничная версия).
  
@@ -103,7 +103,7 @@ ms.locfileid: "66443555"
 |Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1)|Windows Server 2012 R2 Standard или Windows Server 2012 R2 Datacenter|
 |Windows Web Server 2008 R2 с пакетом обновления 1 (SP1)|Windows Server 2012 R2 Standard|
 |Windows Server 2012 Datacenter|Windows Server 2012 R2 Datacenter|
-|Windows Server2012 Standard|Windows Server 2012 R2 Standard или Windows Server 2012 R2 Datacenter|
+|Windows Server 2012 Standard|Windows Server 2012 R2 Standard или Windows Server 2012 R2 Datacenter|
 |Hyper-V Server 2012|Hyper-V Server 2012 R2|
 
 ### <a name="license-conversion"></a>Преобразование лицензии
@@ -121,11 +121,11 @@ ms.locfileid: "66443555"
 |Используемая версия|Доступно обновление до следующих выпусков|
 |--------------------------|--------------------------|
 |Windows Server 2008 Standard с SP2 или Windows Server 2008 Enterprise с SP2|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
-|Windows Server 2008 Datacenter с пакетом обновления 2 (SP2)|Windows Server 2012 Datacenter|
-|Windows Web Server 2008|Windows Server2012 Standard|
+|Windows Server 2008 Datacenter с пакетом обновления 2 (SP2)|Windows Server 2012 Datacenter|
+|Windows Web Server 2008|Windows Server 2012 Standard|
 |Windows Server 2008 R2 Standard с пакетом обновления 1 (SP1) или Windows Server 2008 R2 Enterprise с пакетом обновления 1 (SP1)|Windows Server 2012 Standard, Windows Server 2012 Datacenter|
 |Windows Server 2008 R2 Datacenter с пакетом обновления 1 (SP1)|Windows Server 2012 Datacenter|
-|Windows Web Server 2008 R2|Windows Server2012 Standard|
+|Windows Web Server 2008 R2|Windows Server 2012 Standard|
 
 ### <a name="license-conversion"></a>Преобразование лицензии
 Вы можете перейти с Windows Server 2012 Standard (розничная версия) на Windows Server 2012 Datacenter (розничная версия).

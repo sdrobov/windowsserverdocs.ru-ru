@@ -11,15 +11,15 @@ description: Сведения о том, как удалить серверы и
 ms.date: 2/5/2017
 ms.localizationpriority: medium
 ms.openlocfilehash: ce8caef2b51279c97cc012045750b7a73d97a4ba
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402803"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370746"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>Удаление серверов в локальных дисковых пространствах
 
->Относится к: Windows Server 2019, Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server 2016
 
 В этой статье описано, как удалить серверы в [локальных дисковых пространствах](storage-spaces-direct-overview.md) с помощью PowerShell.
 
@@ -79,6 +79,6 @@ Remove-ClusterNode <Name> -CleanUpDisks
    >[!NOTE]
    > Ничего страшного, если в течение короткого периода у вас будет меньше серверов (например, во время сбоев или обслуживания). Но чтобы тома вернулись в полностью работоспособное состояние, необходимо минимальное количество серверов, указанное выше.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)

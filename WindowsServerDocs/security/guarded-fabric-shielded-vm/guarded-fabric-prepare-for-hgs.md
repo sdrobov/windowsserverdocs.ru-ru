@@ -9,30 +9,30 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ms.openlocfilehash: 9024557dd42ede27144bf10aa5873b6bb12d585c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403491"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371471"
 ---
 # <a name="review-prerequisites-for-the-host-guardian-service"></a>Проверка предварительных требований для службы защиты узла
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 
 В этом разделе рассматриваются предварительные требования для HGS и начальные шаги для подготовки к развертыванию HGS.
 
 ## <a name="prerequisites"></a>Предварительные требования 
 
--   **Оборудование**: HGS можно запустить на физических компьютерах или виртуальных машинах, но рекомендуется использовать физические компьютеры.
+-   **Оборудование**: можно запустить HGS на физических компьютерах или виртуальных машинах, но рекомендуется использовать физические компьютеры.
 
     Если вы хотите запустить HGS как физический кластер из трех узлов (для обеспечения доступности), необходимо иметь три физических сервера. (Для кластеризации рекомендуется, чтобы на трех серверах было очень похожее оборудование.)
   
--   **Операционная система**: Для аттестации ключа узла требуется ОС Windows Server 2019 Standard или Datacenter Edition с [аттестацией v2](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#versioned-attestation-policies). Для аттестации на основе доверенного платформенного модуля HGS может работать под управлением Windows Server 2019 или Windows Server 2016, Standard или Datacenter Edition.
+-   **Операционная система**: аттестация ключа узла требует выпуска Windows Server 2019 Standard или Datacenter Edition с [аттестацией v2](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md#versioned-attestation-policies). Для аттестации на основе доверенного платформенного модуля HGS может работать под управлением Windows Server 2019 или Windows Server 2016, Standard или Datacenter Edition.
 
--   **Роли сервера**: Служба защиты узла и вспомогательные роли сервера.
+-   **Роли сервера**: служба защиты узла и вспомогательные роли сервера.
 
--   **Разрешения и привилегии конфигурации для домена структуры (узла)** : Необходимо настроить перенаправление DNS между доменом (узлом) и доменом HGS. 
+-   **Разрешения и привилегии конфигурации для домена структуры (узла)** . необходимо настроить перенаправление DNS между доменом (узлом) и доменом HGS. 
     
 ## <a name="upgrading-hgs"></a>Обновление HGS
 

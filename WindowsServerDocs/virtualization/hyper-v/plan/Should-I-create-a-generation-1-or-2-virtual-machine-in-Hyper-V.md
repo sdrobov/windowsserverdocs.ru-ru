@@ -12,11 +12,11 @@ author: KBDAzure
 ms.author: kathydav
 ms.date: 12/05/2016
 ms.openlocfilehash: fce9b45f538b0d506b621b888d413c99590b1362
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465558"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78370628"
 ---
 # <a name="should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v"></a>Следует ли создать виртуальную машину поколения 1 или 2 в Hyper-V?
 
@@ -60,7 +60,7 @@ ms.locfileid: "77465558"
 |64-разрядные версии Windows|Поколение 1|Поколение 2|  
 |-------------------------------|----------------|----------------|  
 | Windows Server 2019 |&#10004;|&#10004;|  
-| Windows Server 2016 |&#10004;|&#10004;|  
+| Windows Server 2016 |&#10004;|&#10004;|  
 | Windows Server 2012 R2 |&#10004;|&#10004;|  
 | Windows Server 2012 |&#10004;|&#10004;|  
 |Windows Server 2008 R2|&#10004;| &#10006;|  
@@ -253,6 +253,6 @@ COM-порты недоступны на виртуальных машинах �
 
 ## <a name="see-also"></a>См. также  
 
-- [Виртуальные машины Linux и FreeBSD в Hyper-V](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
-- [Использование локальных ресурсов на виртуальной машине Hyper-V с VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md)
+- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) (Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windos).
+- [Use local resources on Hyper-V virtual machine with VMConnect](../learn-more/Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md) (Использование локальных ресурсов на виртуальной машине с VMConnect)
 - [Планирование масштабируемости Hyper-V в Windows Server 2016](Plan-for-Hyper-V-scalability-in-Windows-Server-2016.md)

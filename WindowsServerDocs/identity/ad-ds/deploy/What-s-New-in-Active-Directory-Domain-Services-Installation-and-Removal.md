@@ -1,6 +1,6 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
-title: Новые возможности при установке и удалении доменных служб Active Directory
+title: Что нового в установке и удалении доменных служб Active Directory
 description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
@@ -10,13 +10,13 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
 ms.openlocfilehash: 1f24615491391d932609d7f80549985818ced8c1
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947906"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371570"
 ---
-# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Новые возможности при установке и удалении доменных служб Active Directory
+# <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Что нового в установке и удалении доменных служб Active Directory
 
 >Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -34,7 +34,7 @@ ms.locfileid: "75947906"
 - **Новый процесс установки AD DS включает проверку предварительных требований.** Любые потенциальные ошибки можно обнаружить до начала установки. Условия возникновения ошибок можно заблаговременно устранить, предотвратив проблемы, связанные с неполным обновлением. Например, если нужно выполнить команду adprep /domainprep, мастер установки проверяет, достаточно ли у пользователя прав для выполнения операции.  
 - **Страницы настройки сгруппированы в последовательность, отражающую требования наиболее общих параметров повышения роли, при этом связанные параметры сгруппированы, что уменьшает количество страниц мастера.** Это улучшает контекст для выбора параметров установки.  
 - **Можно экспортировать сценарий Windows PowerShell, содержащий все параметры, заданные во время установки через графический интерфейс.** По окончании установки или удаления можно экспортировать параметры в сценарий Windows PowerShell для использования при автоматическом выполнении той же операции.  
-- **Перед перезагрузкой выполняется репликация только критически важных данных.** Новый переключатель позволяет разрешить репликацию некритических данных перед перезагрузкой. Дополнительные сведения см. в разделе [ADDSDeployment cmdlet arguments](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
+- **Перед перезагрузкой выполняется репликация только критически важных данных.** Новый переключатель позволяет разрешить репликацию некритических данных перед перезагрузкой. Дополнительные сведения см. в статье [Аргументы командлета ADDSDeployment](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
 
 ## <a name="BKMK_ADConfigurationWizard"></a>Мастер настройки служб домен Active Directory Services
 
@@ -60,9 +60,9 @@ ms.locfileid: "75947906"
 >   
 > Adprep.exe не является допустимым приложением Win32.  
 
-![Что нового](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
+![Новые возможности](media/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal/AdprepNotValid.gif)  
 
-Сведения об устранении других ошибок, возвращаемых программой Adprep.exe, см. в разделе [Known issues](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
+Сведения об устранении других ошибок, возвращаемых программой adprep.exe, см. в разделе [Известные проблемы](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_KnownIssues).  
 
 ### <a name="group-membership-check-against-windows-server-2003-operations-master-roles"></a>Проверка членства в группах в сопоставлении с ролями хозяина операций в Windows Server 2003
 
@@ -80,7 +80,7 @@ Adprep was unable to check the specified user's group membership. This could hap
 
 Если вы запускаете программу adprep.exe, не указывая параметры /user и /userdomain, и хозяин операций работает под управлением Windows Server 2003, то adprep.exe обращается к контроллеру домена в домене текущего пользователя, выполнившего вход в систему. Если учетная запись этого пользователя не является учетной записью домена, программа adprep.exe не сможет выполнить проверку членства в группах. Adprep.exe также не сможет выполнить проверку членства в группах, если используются учетные данные смарт-карты, даже если вы укажете оба параметра /user и /userdomain.  
   
-Если работа Adprep завершается успешно, никаких действий выполнять не нужно. Если работа Adprep завершилась ошибками доступа, укажите учетную запись с правильным членством. Дополнительные сведения см. в разделе [Credential requirements to run Adprep.exe and install Active Directory Domain Services](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
+Если работа Adprep завершается успешно, никаких действий выполнять не нужно. Если работа Adprep завершилась ошибками доступа, укажите учетную запись с правильным членством. Дополнительные сведения см. в разделе [Требования к учетным данным для выполнения программы adprep.exe и установки доменных служб Active Directory](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Creds).  
   
 ### <a name="syntax-for-adprep-in-windows-server-2012"></a>Синтаксис Adprep в Windows Server 2012
 
@@ -130,7 +130,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
 ## <a name="BKMK_KnownIssues"></a>Известные проблемы
 
-В этом разделе перечислены некоторые из известных проблем, влияющих на AD DS установки в Windows Server 2012. Другие известные проблемы см. в разделе [Troubleshooting Domain Controller Deployment](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).  
+В этом разделе перечислены некоторые из известных проблем, влияющих на AD DS установки в Windows Server 2012. Дополнительные сведения об известных проблемах см. в разделе [Устранение проблем при развертывании контроллера домена](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).  
 
 - Если доступ WMI к хозяину схемы заблокирован брандмауэром Windows при удаленном выполнении команды adprep /forestprep, то в журнале Adprep в каталоге %systemroot%\system32\debug\adprep появляется следующее сообщение об ошибке:  
 

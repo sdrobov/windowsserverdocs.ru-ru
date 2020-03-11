@@ -9,15 +9,15 @@ ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 39af45506ff7023cebe437992e90f6d4ec051333
-ms.sourcegitcommit: da6c4fa55a6a72924ac363753d04c5b682cee55b
-ms.translationtype: HT
+ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77624898"
+ms.lasthandoff: 03/05/2020
+ms.locfileid: "78371716"
 ---
 # <a name="configure-user-access-control-and-permissions"></a>Настройка управления доступом и разрешениями на уровне пользователей
 
-> Применяется к: Windows Admin Center, ознакомительная версия Windows Admin Center
+> Область применения: центр администрирования Windows, предварительная версия Windows Admin Center
 
 Если вы еще не сделали этого, ознакомьтесь с [параметрами контроля доступом пользователей в Windows Admin Center](../plan/user-access-options.md)
 
@@ -105,13 +105,13 @@ ms.locfileid: "77624898"
 
 [Краткое руководство. Требование Многофакторной идентификации для конкретных приложений с помощью условного доступа Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal-get-started)
 
-## <a name="configure-single-sign-on"></a>Настройте единый вход
+## <a name="configure-single-sign-on"></a>Настройка единого входа
 
 **Единый вход при развертывании в качестве службы в Windows Server**
 
 После установки Windows Admin Center в Windows 10 все готово к использованию единого входа. Однако если вы собираетесь использовать Windows Admin Center в Windows Server, то перед использованием единого входа необходимо настроить в среде некоторую форму делегирования Kerberos. Делегирование настраивает компьютер шлюза как доверенный для делегирования к целевому узлу. 
 
-Используйте следующий пример PowerShell, чтобы настроить [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) в вашей среде. В этом примере показано, как настроить Windows Server [node01.contoso.com] для принятия делегирования из шлюза Windows Admin Center [wac.contoso.com] в домене contoso.com.
+Используйте следующий пример PowerShell, чтобы настроить [ограниченное делегирование на основе ресурсов](https://docs.microsoft.com/windows-server/security/kerberos/kerberos-constrained-delegation-overview) в вашей среде. В этом примере показано, как настроить Windows Server [node01.contoso.com] для приема делегирования от шлюза центра администрирования Windows [wac.contoso.com] в домене contoso.com.
 
 ```powershell
 Set-ADComputer -Identity (Get-ADComputer node01) -PrincipalsAllowedToDelegateToAccount (Get-ADComputer wac)
