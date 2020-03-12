@@ -9,11 +9,11 @@ ms.assetid: 5bc71e71-920e-454f-8195-afebd2a23725
 author: cosmosdarwin
 ms.date: 02/09/2018
 ms.openlocfilehash: 158681e2038e3d8015933771d06d3bfb24d31586
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: b5c12007b4c8fdad56076d4827790a79686596af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370716"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865403"
 ---
 # <a name="health-service-in-windows-server"></a>служба работоспособности в Windows Server
 

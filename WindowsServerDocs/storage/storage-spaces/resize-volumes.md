@@ -7,18 +7,21 @@ author: cosmosdarwin
 ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
-ms.date: 05/07/2019
-ms.openlocfilehash: 20482fe1728b12d4fe56dcfa397352fbb4b4f981
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.date: 03/10/2020
+ms.openlocfilehash: 4ce41da1da3dc90f698008902170d7cc1541619c
+ms.sourcegitcommit: bb2eb0b12f2a32113899a59aa5644bc6e8cab3d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366094"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79089349"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>Расширение томов в локальных дисковых пространствах
-> Относится к: Windows Server 2019, Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server 2016
 
 В этом разделе приводятся инструкции по изменению размера томов в кластере [Локальные дисковые пространства](storage-spaces-direct-overview.md) с помощью центра администрирования Windows.
+
+> [!WARNING]
+> **Не поддерживается: изменение размера базового хранилища, используемого Локальные дисковые пространства.** Если вы используете Локальные дисковые пространства в виртуализированной среде хранения, в том числе в Azure, изменение размера или изменение характеристик устройств хранения, используемых виртуальными машинами, не поддерживается и приведет к недоступности данных. Вместо этого следуйте инструкциям в разделе [Добавление серверов или дисков](add-nodes.md) , чтобы добавить дополнительную емкость перед расширением томов.
 
 Ознакомьтесь с быстрым видео о том, как изменить размер тома.
 
@@ -50,7 +53,7 @@ ms.locfileid: "71366094"
 
 Чтобы ознакомиться с ними, выполните командлет **Get-** с соответствующим существительным в PowerShell.
 
-Пример:
+Например:
 
 ```PowerShell
 Get-VirtualDisk
@@ -139,7 +142,7 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 > [!TIP]
 > Чтобы убедиться, что размер тома изменился, выполните командлет **Get-Volume**.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Локальные дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
 - [Планирование томов в Локальные дисковые пространства](plan-volumes.md)
