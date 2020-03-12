@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e1e0235e50945fadd09fe9dd5ffeaf6d7119e482
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 875edcf191596d181ec0d70a83f9f3c20f5d5f4a
+ms.sourcegitcommit: a6ec589a39ef104ec2be958cd09d2f679816a5ab
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385603"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78261943"
 ---
 # <a name="ad-fs-openid-connectoauth-flows-and-application-scenarios"></a>Потоки OpenID Connect или OAuth в AD FS и сценарии использования приложений
 Применимо к AD FS 2016 и более поздних версий
@@ -292,7 +292,7 @@ client_id=6731de76-14a6-49ae-97bc-6eba6914391e
 
   1. Клиентское приложение выполняет запрос к API А с маркером А.  
   Примечание. Настраивая в AD FS поток On-Behalf-Of, убедитесь, что выбрана область `user_impersonation` и в запросе от клиента указана именно область `user_impersonation`. 
-  2. API А выполняет проверку подлинности через конечную точку выдачи маркера AD FS и запрашивает маркер для доступа к API А. Примечание. При настройке такого потока в AD FS зарегистрируйте API А в качестве серверного приложения с тем же значением clientID, что и идентификатор ресурса в API А. Дополнительные сведения см. в статье с примером потока On-Behalf-Of (Добавить ссылку!).  
+  2. API А выполняет проверку подлинности через конечную точку выдачи маркера AD FS и запрашивает маркер для доступа к API А. Примечание. При настройке такого потока в AD FS зарегистрируйте API А в качестве серверного приложения с тем же значением clientID, что и идентификатор ресурса в API А.
   3. Конечная точка выдачи маркера AD FS проверяет учетные данные API А с использованием маркера А и выдает маркер доступа для API Б (маркер Б). 
   4. Маркер Б передается в заголовке проверки подлинности при запросе к API Б. 
   5. API Б возвращает данные из защищенного ресурса. 
