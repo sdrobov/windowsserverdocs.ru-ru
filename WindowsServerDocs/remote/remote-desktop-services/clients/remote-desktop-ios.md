@@ -15,11 +15,11 @@ ms.author: helohr
 date: 02/11/2020
 ms.localizationpriority: medium
 ms.openlocfilehash: ef13227a9f7b83f01786bbb11498da912c86581b
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78370694"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323466"
 ---
 # <a name="get-started-with-the-ios-client"></a>Приступая к работе с клиентом iOS
 
@@ -188,4 +188,4 @@ ms.locfileid: "78370694"
 Хотя определенные сочетания клавиш могут не работать должным образом в удаленном сеансе, многие из стандартных сочетаний клавиш Windows, такие как CTRL+C, CTRL+V и ALT+TAB, будут работать.
 
 > [!IMPORTANT]
-> Вопросы и комментарии всегда приветствуются. Тем не менее не следует публиковать запрос для получения справки по устранению неполадок, используя область комментариев в конце этой статьи. Вместо этого перейдите на [форум по клиенту удаленного рабочего стола](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) и начните новую беседу. Есть предложение по новым функциям? Сообщите нам на [форуме UserVoice по клиенту](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Мы всегда приветствуем вопросы и комментарии. Тем не менее не стоит публиковать запрос для получения справки по устранению неполадок, используя область комментариев в конце этой статьи. Вместо этого перейдите на [форум по клиенту удаленного рабочего стола](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) и начните новую беседу. Есть предложение по новым функциям? Сообщите нам на [форуме UserVoice по клиенту](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

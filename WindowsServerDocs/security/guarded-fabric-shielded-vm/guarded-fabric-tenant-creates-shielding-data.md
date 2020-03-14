@@ -9,11 +9,11 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
 ms.openlocfilehash: 26ff5e27494e2f42a0c8e4d28e2b9820f8d19e6a
-ms.sourcegitcommit: 471464a674a53c468a2f1e28575c91245ce9badf
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548185"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322466"
 ---
 # <a name="shielded-vms-for-tenants---creating-shielding-data-to-define-a-shielded-vm"></a>Экранированные виртуальные машины для клиентов — создание данных экранирования для определения экранированной виртуальной машины
 
@@ -76,9 +76,9 @@ ms.locfileid: "75548185"
 
     | Заменяемый элемент | Строка подстановки |
     |-----------|-----------|
-    | имя_компьютера        | @ComputerName@      |
-    | Часовой пояс            | @TimeZone@          |
-    | ProductKey          | @ProductKey@        |
+    | ComputerName        | @ComputerName@      |
+    | TimeZone            | @TimeZone@          |
+    | Ключ_продукта          | @ProductKey@        |
     | IPAddr4-1           | @IP4Addr-1@         |
     | IPAddr6-1           | @IP6Addr-1@         |
     | Макаддр-1           | @MACAddr-1@         |
@@ -255,7 +255,7 @@ New-ShieldingDataFile -ShieldingDataFilePath "C:\temp\Marketing-LBI.pdk" -Policy
 
 Сведения о дополнительных способах настройки файла данных экранирования см. в документации по командлетам [New-шиелдингдатафиле](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-ShieldingDataFile?view=win10-ps) и [New-волумеидкуалифиер](https://docs.microsoft.com/powershell/module/shieldedvmdatafile/New-VolumeIDQualifier?view=win10-ps) .
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

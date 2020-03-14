@@ -9,11 +9,11 @@ ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 6795464bfbadd12fc220e941ad2175eb83d0f050
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949943"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322866"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Управление инфраструктурой с технологией Hyper-in с помощью центра администрирования Windows
 
@@ -131,7 +131,7 @@ ms.locfileid: "75949943"
 > [!Important]
 > Среды SDN с проверкой подлинности Kerberos для обмена данными обмена в настоящее время не поддерживаются.
 
-## <a name="frequently-asked-questions"></a>Вопросы и ответы
+## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
 ### <a name="are-there-differences-between-managing-windows-server-2016-and-windows-server-2019"></a>Существуют ли различия между управлением Windows Server 2016 и Windows Server 2019?
 
@@ -169,7 +169,7 @@ ms.locfileid: "75949943"
 
 Хотя центр администрирования Windows обеспечивает эффективную и удобную интеграцию с Microsoft Azureным облаком, основные возможности управления и мониторинга для инфраструктуры с технологией Hyper-in в локальной среде являются полностью локальными. Его можно установить и использовать без подключения к Интернету.
 
-## <a name="things-to-try"></a>Возможные решения
+## <a name="things-to-try"></a>Что следует предпринять
 
 Если вы только начинаете работу, ознакомьтесь с краткими руководствами, которые помогут узнать, как организована и работает центр администрирования Windows для инфраструктуры с технологией Hyper-in. Будьте внимательны и будьте осторожны с рабочими средами. Эти видеоролики были записаны в центре администрирования Windows версии 1804 и предварительной сборке Windows Server 2019.
 
@@ -278,7 +278,7 @@ ms.locfileid: "75949943"
 
 ![Мониторинг инфраструктуры SDN](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>Отзыв
 
 Это все о ваших отзывах! Самым важным преимуществом частого обновления является прослушивание того, что работает и что необходимо улучшить. Вот несколько способов сообщить нам о том, что вы думаете:
 
@@ -286,7 +286,7 @@ ms.locfileid: "75949943"
 - [Присоединяйтесь к форуму центра администрирования Windows в центре технического сообщества Майкрософт](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Твит в `@servermgmt`
 
-### <a name="see-also"></a>См. также статью
+### <a name="see-also"></a>См. также:
 
 - [Windows Admin Center](../overview.md)
 - [Локальные дисковые пространства](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

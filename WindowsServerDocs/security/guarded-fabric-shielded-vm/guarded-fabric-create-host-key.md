@@ -9,15 +9,15 @@ author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
 ms.openlocfilehash: 2aea6c8416a0f3af04ad6056c5d09a4d07708eaa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386655"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322016"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>Создание ключа узла и добавление его в HGS
 
->Относится к: Windows Server 2019
+>Область применения: Windows Server 2019
 
 
 В этом разделе описывается подготовка узлов Hyper-V к защищенным узлам с помощью аттестации ключа узла (режим ключей). Вы создадите пару ключей узла (или используйте существующий сертификат) и добавите открытую половину ключа в HGS.
@@ -66,6 +66,6 @@ Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
 > [!div class="nextstepaction"]
 > [Подтверждение успешной аттестации узлов](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Развертывание службы защиты узла для защищенных узлов и экранированных виртуальных машин](guarded-fabric-deploying-hgs-overview.md)

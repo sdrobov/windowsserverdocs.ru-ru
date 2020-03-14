@@ -9,22 +9,22 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: 86aff55b4c548ccf4fcbb04cc477dd63a889bebd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403203"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322636"
 ---
 # <a name="running-data-deduplication"></a>Выполнение дедупликации данных
 
-> Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 ## <a id="running-dedup-jobs-manually"></a>Запуск заданий дедупликации данных вручную
 
 Каждое запланированное задание дедупликации данных можно запустить вручную следующими командлетами PowerShell:
-* [`Start-DedupJob`](https://technet.microsoft.com/library/hh848442.aspx): Запуск нового задания дедупликации данных
-* [`Stop-DedupJob`](https://technet.microsoft.com/library/hh848439.aspx): Останавливает уже выполняющееся задание дедупликации данных (или удаляет его из очереди)
-* [`Get-DedupJob`](https://technet.microsoft.com/library/hh848452.aspx): Показывает все активные и поставленные в очередь задания дедупликации данных
+* [`Start-DedupJob`](https://technet.microsoft.com/library/hh848442.aspx): запускает новое задание дедупликации данных.
+* [`Stop-DedupJob`](https://technet.microsoft.com/library/hh848439.aspx): останавливает уже выполняющееся задание дедупликации данных (или удаляет его из очереди).
+* [`Get-DedupJob`](https://technet.microsoft.com/library/hh848452.aspx): отображает все активные и ожидающие в очереди задания дедупликации данных.
 
 При запуске задания вручную доступны все [параметры, доступные при планировании задания дедупликации данных](advanced-settings.md#modifying-job-schedules-available-settings), за исключением параметров планирования. Например, чтобы запустить вручную задание [оптимизации](understand.md#job-info-optimization) с высоким приоритетом и максимальным использованием ЦП и памяти, выполните следующую команду PowerShell с правами администратора:
 

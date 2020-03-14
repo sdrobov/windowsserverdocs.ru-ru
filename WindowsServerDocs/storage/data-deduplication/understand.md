@@ -9,15 +9,15 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: e26d285f1802e78b2cbf84e38407ff134e7b7035
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403228"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322396"
 ---
 # <a name="understanding-data-deduplication"></a>Понимание процесса дедупликации данных
 
-> Относится к:  Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала)
 
 В этом документе описывается, как работает [дедупликация данных](overview.md).
 
@@ -89,7 +89,7 @@ ms.locfileid: "71403228"
 > [!Warning]  
 > Не пытайтесь вручную изменять содержимое хранилища блоков, если вы не получали таких указаний от авторизованных представителей службы поддержки корпорации Майкрософт. Такие действия могут привести к повреждению или утрате данных.
 
-## <a name="frequently-asked-questions"></a>Вопросы и ответы
+## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 **Чем дедупликация данных отличается от других продуктов для оптимизации?**  
 Есть несколько важных различий между дедупликацией данных и другими распространенными решениями для оптимизации хранения.
 

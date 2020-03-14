@@ -14,11 +14,11 @@ author: evaseydl
 manager: scottman
 ms.author: evas
 ms.openlocfilehash: 7b8f757d552bf54cd7f4eed0783ba8e0062b9d30
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371826"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322806"
 ---
 # <a name="multipoint--stations"></a>Станции MultiPoint
 В среде системы служб MultiPoint *станции* — это конечные точки пользователя для подключения к компьютеру, на котором выполняются службы MultiPoint. Каждая станция предоставляет пользователю независимый интерфейс Windows 10. Поддерживаются следующие типы станций:  

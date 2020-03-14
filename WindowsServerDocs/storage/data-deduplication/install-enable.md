@@ -10,11 +10,11 @@ ms.author: wgries
 ms.date: 05/09/2017
 description: Как установить компонент дедупликации данных в Windows Server, определить, подходит ли рабочая нагрузка для дедупликации и включить дедупликацию на томах.
 ms.openlocfilehash: 36c9894fd8916643340134698f36af3bd50c34d8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402313"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322426"
 ---
 # <a name="install-and-enable-data-deduplication"></a>Установка и включение дедупликации данных
 > Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
@@ -31,7 +31,7 @@ ms.locfileid: "71402313"
 ### <a id="install-dedup-via-server-manager"></a>Установка дедупликации данных с помощью диспетчер сервера
 1. В мастере добавления ролей и компонентов выберите **Роли сервера**, а затем **Дедупликация данных**.  
 ![установить дедупликацию данных с помощью диспетчер сервера: выберите дедупликацию данных из ролей сервера](media/install-dedup-via-server-manager-1.png)
-2. Нажимайте кнопку **Далее** , пока не будет активирована кнопка **Установить** , а затем щелкните **Установить**.  
+2. Нажимайте кнопку **Далее**, пока не будет активирована кнопка **Установить**, а затем щелкните **Установить**.  
 ![установить дедупликацию данных с помощью диспетчер сервера: нажмите кнопку установить](media/install-dedup-via-server-manager-2.png)
 
 ### <a id="install-dedup-via-powershell"></a>Установка дедупликации данных с помощью PowerShell

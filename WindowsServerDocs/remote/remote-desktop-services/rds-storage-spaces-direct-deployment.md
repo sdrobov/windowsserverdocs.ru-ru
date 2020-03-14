@@ -13,16 +13,16 @@ author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: 2d82379dfbc03d28ec174e66862f130f2a3c50a6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e320f0eb04e81d80f7288d4d7b20b5369e209932
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387131"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319988"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Развертывание масштабируемого файлового сервера Локальных дисковых пространств с двумя узлами для хранения дисков UPD в Azure
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Службам удаленных рабочих столов (RDS) требуется присоединенный к домену файловый сервер для хранения дисков профилей пользователей (UPD). Для развертывания присоединенного к домену высокодоступного масштабируемого файлового сервера (SOFS) в Azure используйте Локальные дисковые пространства с Windows Server 2016. Если вы не работали с дисками UPD или службами удаленных рабочих столов, ознакомьтесь с разделом [Введение в службы удаленных рабочих столов](welcome-to-rds.md).
 
@@ -131,8 +131,8 @@ ms.locfileid: "71387131"
     7. Создайте файловый ресурс SMB в кластере SOFS.
 
        ```powershell
-       New-Item -Path C:\ClusterStorage\Volume1\Data -ItemType Directory
-       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\Volume1\Data
+       New-Item -Path C:\ClusterStorage\VDisk01\Data -ItemType Directory
+       New-SmbShare -Name UpdStorage -Path C:\ClusterStorage\VDisk01\Data
        ```
 
 Теперь у вас есть общая папка `\\my-sofs1\UpdStorage`, которую можно использовать для хранения дисков UPD, когда вы [включите возможности UPD](https://social.technet.microsoft.com/wiki/contents/articles/15304.installing-and-configuring-user-profile-disks-upd-in-windows-server-2012.aspx) для пользователей. 

@@ -11,11 +11,11 @@ ms.date: 06/07/2019
 description: Пошаговые инструкции по развертыванию программного хранилища с Локальные дисковые пространства в Windows Server в качестве инфраструктуры с технологией Hyper-in или конвергенции (также известной как агрегированная).
 ms.localizationpriority: medium
 ms.openlocfilehash: 60b29cbebb19cd8f1ce364d1eb7e920759375285
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371776"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323296"
 ---
 # <a name="deploy-storage-spaces-direct"></a>Развертывание локальных дисковых пространств
 

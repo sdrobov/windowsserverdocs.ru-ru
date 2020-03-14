@@ -9,15 +9,15 @@ ms.localizationpriority: medium
 ms.date: 12/02/2019
 ms.prod: windows-server
 ms.openlocfilehash: 4ce42420430e9a12dd6123ec18c9ded25abc97bb
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
-ms.translationtype: MT
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371695"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323546"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Вопросы и ответы: Windows Admin Center
 
-> Область применения: центр администрирования Windows, предварительная версия Windows Admin Center
+> Применяется к: Windows Admin Center, ознакомительная версия Windows Admin Center
 
 Здесь приведены ответы на наиболее часто задаваемые вопросы о Windows Admin Center.
 
@@ -37,7 +37,7 @@ Windows Admin Center — это облегченная платформа на 
 
 ## <a name="what-versions-of-windows-server-can-i-manage-with-windows-admin-center"></a>Какими версиями Windows Server можно управлять с помощью Windows Admin Center?
 
-Платформа Windows Admin Center оптимизирована для Windows Server 2019 и поддерживает ключевые возможности в выпуске Windows Server 2019: гибридные облачные сценарии и управление гиперконвергентной инфраструктурой в частности. Хотя центр администрирования Windows лучше работает с Windows Server 2019, он поддерживает управление различными версиями, которые уже используются клиентами: Windows Server 2012 и более поздние версии поддерживаются полностью. Доступны также ограниченные функции управления Windows Server 2008 R2.
+Платформа Windows Admin Center оптимизирована для Windows Server 2019 и поддерживает ключевые возможности в выпуске Windows Server 2019: гибридные облачные сценарии и управление гиперконвергентной инфраструктурой в частности. Несмотря на то что платформа Windows Admin Center лучше всего работает с Windows Server 2019, она поддерживает управление различными версиями, которые клиенты уже используют. Windows Server 2012 и более поздние версии полностью поддерживаются. Доступны также ограниченные функции управления Windows Server 2008 R2.
 
 ## <a name="is-windows-admin-center-a-complete-replacement-for-all-traditional-in-box-and-rsat-tools"></a>Является ли Windows Admin Center полноценной заменой для всех традиционных встроенных инструментов и средств удаленного администрирования сервера?
 

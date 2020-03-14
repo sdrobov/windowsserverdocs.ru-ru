@@ -8,11 +8,11 @@ manager: dongill
 author: rpsqrd
 ms.technology: security-guarded-fabric
 ms.openlocfilehash: 41912c90beacbb0c0c285ea4da8305c1afdf2a51
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386541"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322606"
 ---
 # <a name="managing-the-host-guardian-service"></a>Управление службой защиты узла
 
@@ -363,7 +363,7 @@ Hgs_DumpEncryptionKey          | Отрицательная политика, ч
 Действия по авторизации нового узла зависят от режима аттестации, для которого в настоящее время настроена HGS.
 Чтобы проверить режим аттестации для защищенной структуры, запустите `Get-HgsServer` на любом узле HGS.
 
-#### <a name="software-configuration"></a>Конфигурация программного обеспечения
+#### <a name="software-configuration"></a>Настройка программного обеспечения
 На новом узле Hyper-V убедитесь, что установлен Windows Server 2016 Datacenter Edition.
 Windows Server 2016 Standard не может запускать экранированные виртуальные машины в защищенной структуре.
 Узел может быть установлен на рабочем столе или Server Core.

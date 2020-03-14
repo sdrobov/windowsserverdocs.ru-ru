@@ -8,15 +8,15 @@ ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 7c1a70e36dfac9b23ded8f920ffcc8cccbfff023
-ms.sourcegitcommit: 06ae7c34c648538e15c4d9fe330668e7df32fbba
-ms.translationtype: MT
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78371122"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79323586"
 ---
 # <a name="install-and-manage-extensions"></a>Установка расширений и управление ими
 
->Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
 Windows Admin Center создан в качестве расширяемой платформы, в которой каждый тип подключения и средство — это расширение, которое можно по отдельности установить, удалить и обновить. Вы можете искать новые расширения, опубликованные корпорацией Майкрософт и другими разработчиками, а также устанавливать и обновлять их по отдельности, не обновляя всей установки Windows Admin Center. Вы можете также настроить отдельный веб-канал NuGet или общую папку и распространить расширения, чтобы использовать их внутри организации.
 
