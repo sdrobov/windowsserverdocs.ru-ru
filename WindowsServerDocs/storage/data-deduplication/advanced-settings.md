@@ -9,11 +9,11 @@ manager: klaasl
 ms.author: wgries
 ms.date: 09/15/2016
 ms.openlocfilehash: 1d0677cec134ddeb4c706d0f1231f2c26b39967e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403218"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79322646"
 ---
 # <a name="advanced-data-deduplication-settings"></a>Дополнительные параметры дедупликации данных
 
@@ -26,9 +26,9 @@ ms.locfileid: "71403218"
 
 ### <a id="modifying-job-schedules-change-schedule"></a>Изменение расписания дедупликации данных
 Для планирования заданий дедупликации данных используется планировщик заданий Windows. Кроме того, их можно просматривать и изменять по пути Microsoft\Windows\Дедупликация. Дедупликация данных включает несколько командлетов, упрощающих планирование.
-* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx) показывает текущие запланированные задания.
-* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx) создает новое запланированное задание.
-* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) изменяет существующее запланированное задание.
+* [`Get-DedupSchedule`](https://technet.microsoft.com/library/hh848446.aspx)показывает текущие запланированные задания.
+* [`New-DedupSchedule`](https://technet.microsoft.com/library/hh848445.aspx)создает новое запланированное задание.
+* [`Set-DedupSchedule`](https://technet.microsoft.com/library/hh848447.aspx) изменяет имеющееся запланированное задание.
 * [`Remove-DedupSchedule`](https://technet.microsoft.com/library/hh848451.aspx) удаляет запланированное задание.
 
 Обеспечить выполнение заданий в нерабочее время — наиболее распространенная причина для изменения при выполнении заданий дедупликации данных. В приведенном ниже пошаговом примере показано, как изменить расписание дедупликации данных для *оптимального* сценария: гиперконвергентный узел Hyper-V неактивен в выходные и после 19:00 в будние вечера. Чтобы изменить расписание, выполните следующие командлеты PowerShell с правами администратора.
@@ -208,7 +208,7 @@ ms.locfileid: "71403218"
     <tbody>
         <tr>
             <td>ChunkRedundancyThreshold</td>
-            <td>Количество ссылок на блок до его копирования в раздел активной зоны хранилища блоков. Значение раздела Hotspot заключается в том, что так называемые &quot;hot @ no__t-1 блоки, на которые часто встречаются несколько путей доступа для повышения времени доступа.</td>
+            <td>Количество ссылок на блок до его копирования в раздел активной зоны хранилища блоков. Значение раздела Hotspot заключается в том, что так называемые &quot;горячие&quot; блоки, на которые есть ссылки, часто имеют несколько путей доступа для повышения времени доступа.</td>
             <td>Положительные целые числа</td>
             <td>Основная причина изменения этого количества — это повышение скорости сохранения для томов с высокой дупликацией. Как правило, рекомендуемым параметром является значение по умолчанию (100), а&#39;длина — нет необходимости.</td>
         </tr>
@@ -310,7 +310,7 @@ ms.locfileid: "71403218"
         </tr>
         <tr>
             <td>DeepGCInterval</td>
-            <td>Этот параметр настраивает интервал, через который обычное задание сборки мусора становится <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">заданием полной сборки мусора</a>. Значение n означает, что каждое n<sup>-ое</sup> задание было заданием полной сборки мусора. Обратите внимание: полная сборка мусора всегда отключена (независимо от значения реестра) для томов с <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">архивным типом использования</a>. <code>Start-DedupJob -Type GarbageCollection -Full</code> можно использовать, если на томе резервного копирования требуется полная сборка мусора.</td>
+            <td>Этот параметр настраивает интервал, через который обычное задание сборки мусора становится <a href="advanced-settings.md#faq-full-v-regular-gc" data-raw-source="[full Garbage Collection jobs](advanced-settings.md#faq-full-v-regular-gc)">заданием полной сборки мусора</a>. Значение n означает, что каждое n<sup>-ое</sup> задание было заданием полной сборки мусора. Обратите внимание: полная сборка мусора всегда отключена (независимо от значения реестра) для томов с <a href="understand.md#usage-type-backup" data-raw-source="[Backup Usage Type](understand.md#usage-type-backup)">архивным типом использования</a>. <code>Start-DedupJob -Type GarbageCollection -Full</code> может использоваться, если на томе резервного копирования требуется полная сборка мусора.</td>
             <td>Целые числа (–1 означает "отключено")</td>
             <td>См. <a href="advanced-settings.md#faq-why-disable-full-gc" data-raw-source="[this frequently asked question](advanced-settings.md#faq-why-disable-full-gc)">этот вопрос и ответ</a>.</td>
         </tr>
@@ -318,7 +318,7 @@ ms.locfileid: "71403218"
 </table>
 
 ## <a id="faq"></a>Часто задаваемые вопросы
-<a id="faq-use-responsibly"></a>**I изменил параметр дедупликации данных, а задания выполняются медленнее или не завершаются, или снижается производительность рабочей нагрузки. Почему?**  
+<a id="faq-use-responsibly"></a>**я изменил параметр дедупликации данных, а задания выполняются медленнее или не завершаются, или производительность рабочей нагрузки уменьшилась. Почему?**  
 Эти параметры предоставляют широкие возможности для управления выполнением дедупликации данных. Используйте их ответственно и [наблюдайте за производительностью](run.md#monitoring-dedup).
 
 <a id="faq-running-dedup-jobs-manually"></a>**Я хочу запустить задание дедупликации данных прямо сейчас, но я не хочу создавать новое расписание — можно ли это сделать?**  
