@@ -14,12 +14,12 @@ manager: dongill
 ms.author: elizapo
 ms.date: 08/27/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: ca68087ad238cbbd06c56e41dd65f318adae5222
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 1b2ea23e95796f6cce90a1dc90de896c2242084a
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465478"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79319998"
 ---
 # <a name="get-started-with-the-macos-client"></a>Приступая к работе с клиентом macOS
 
@@ -174,4 +174,3 @@ ms.locfileid: "77465478"
 
 > [!TIP]
 > Мы всегда приветствуем вопросы и комментарии. Тем не менее не стоит публиковать запрос для получения справки по устранению неполадок, используя область комментариев в конце этой статьи. Вместо этого перейдите на [форум по клиенту удаленного рабочего стола](https://social.technet.microsoft.com/forums/windowsserver/en-us/home?forum=winrdc) и начните новую беседу. Есть предложение по новым функциям? Сообщите нам на [форуме UserVoice по клиенту](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
-

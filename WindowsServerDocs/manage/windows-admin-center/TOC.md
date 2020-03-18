@@ -23,7 +23,7 @@
 ### [Общие подключения](configure/shared-connections.md)
 ### [Автоматизация с помощью PowerShell](configure/use-powershell.md)
 
-## Используйте
+## Использование
 ### [Начало работы](use/get-started.md)
 ### [Управление серверами](use/manage-servers.md)
 ### [Развертывание гиперконвергентной инфраструктуры](use/deploy-hyperconverged-infrastructure.md)
@@ -83,7 +83,6 @@
 #### [NEC](extend/case-studies/nec.md)
 #### [Pure Storage](extend/case-studies/purestorage.md)
 #### [QCT](extend/case-studies/qct.md)
-#### [Squared Up](extend/case-studies/squared-up.md)
 #### [Thomas-Krenn](extend/case-studies/thomas-krenn.md)
 
 

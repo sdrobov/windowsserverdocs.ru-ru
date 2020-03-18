@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: 7b3a75258086a73fbd618c2e8221454d7e616556
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bb2f6d7fcbf18ef9bc67534982d1a98fdc5172a1
+ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949983"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79320038"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -25,7 +25,7 @@ Windows Admin Center представляет собой локально раз
 
 ## <a name="download-now"></a>Скачать сейчас
 
-Скачайте **[Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** из Центра оценки Майкрософт. Несмотря на то, что там отображается надпись Start your evaluation (Начните оценку), это общедоступная версия для производственного использования, включенная в состав лицензии Windows или Windows Server.
+**Скачайте [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** из Центра оценки Майкрософт. Несмотря на то что там отображается надпись Start your evaluation (Начните оценку), это общедоступная версия для производственного использования, включенная в состав лицензии Windows или Windows Server.
 
 Сведения об установке см. в [этой статье](deploy/install.md). Советы по началу работы с Windows Admin Center см. в [этой статье](use/get-started.md).
 
@@ -37,7 +37,7 @@ Windows Admin Center представляет собой локально раз
 
 |     |     |
 | --- | --- |
-| ![](media/simple-icon.png)| **Упрощение управления сервером** <br/> Управляйте серверами и кластерами с помощью модернизированных версий привычных инструментов, таких как диспетчер серверов. Установка занимает меньше пяти минут, и вы сразу можете приступать к управлению серверами в своей среде, целевая конфигурация не требуется. Дополнительные сведения см. в статье [Что такое Windows Admin Center?](understand/what-is.md). |
+| ![](media/simple-icon.png)| **Упрощение управления сервером** <br/> Управляйте серверами и кластерами с помощью модернизированных версий привычных инструментов, таких как диспетчер серверов. Установка занимает меньше пяти минут, и вы сразу можете приступать к управлению серверами в своей среде, дополнительная настройка не требуется. Дополнительные сведения см. в статье [Что такое Windows Admin Center?](understand/what-is.md). |
 | ![](media/future-icon.png)| **Работа с гибридными решениями** <br/> Интеграция с Azure позволяет дополнительно подключать локальные серверы к соответствующим облачным службам. Дополнительные сведения см. в статье [Подключение Windows Server к гибридным службам Azure](azure/index.md). |
 | ![](media/secure-icon.png)| **Оптимизация гиперконвергентного управления** <br/> Оптимизируйте управление гиперконвергентными кластерами Azure Stack HCI или Windows Server. Используйте упрощенные рабочие нагрузки для создания виртуальных машин, томов Локальных дисковых пространств, программно-определяемых сетей и многого другого, а также управления ими. Дополнительные сведения см. в статье [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md) (Управление гиперконвергентной инфраструктурой с помощью Windows Admin Center).|
 
