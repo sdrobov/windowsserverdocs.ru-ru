@@ -8,12 +8,12 @@ ms.date: 01/17/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 1a98de21e91fc7bdc431e7413c44089ce750bc05
-ms.sourcegitcommit: 840d1d8851f68936db3934c80796fb8722d3c64a
+ms.openlocfilehash: 70ce4ebca35e071cf6e27fe429d3c4e6f67d342c
+ms.sourcegitcommit: 8b801bd86e2ddf8255899b11f547daa920e5f651
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76519476"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110677"
 ---
 # <a name="storage-migration-service-overview"></a>Обзор службы миграции хранилища
 
@@ -84,11 +84,11 @@ ms.locfileid: "76519476"
 Исходный сервер должен работать под управлением одной из следующих операционных систем:
 
 - Windows Server, Semi-Annual Channel
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2012
-- Windows Server 2008 R2
+- Windows Server 2008 R2
 - Windows Server 2008
 - Windows Server 2003 R2
 - Windows Server 2003
@@ -97,11 +97,11 @@ ms.locfileid: "76519476"
 - Windows Small Business Server 2011
 - Windows Server 2012 Essentials
 - Windows Server 2012 R2 Essentials
-- Windows Server 2016 Essentials
+- Windows Server2016 Essentials
 - Windows Server 2019 Essentials
 - Windows Storage Server 2008
-- Windows Storage Server 2008 R2
-- Windows Storage Server 2012.
+- Windows Storage Server 2008 R2
+- Windows Storage Server 2012
 - Windows Storage Server 2012 R2
 - Windows Storage Server 2016
 
@@ -111,7 +111,7 @@ ms.locfileid: "76519476"
 
 - Отказоустойчивые кластеры под Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 - Серверы Linux, использующие Samba. Мы протестировали следующее:
-    - CentOS 7.
+    - CentOS 7
     - Debian GNU/Linux 8
     - RedHat Enterprise Linux 7,6
     - SUSE Linux Enterprise Server (SLES) 11 SP4
@@ -123,12 +123,16 @@ ms.locfileid: "76519476"
 Целевой сервер должен работать под управлением одной из следующих операционных систем:
 
 - Windows Server, Semi-Annual Channel
-- Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2019
+- Windows Server 2016
+- Windows Server 2012 R2
 
 > [!TIP]
 > Целевые серверы под управлением Windows Server 2019 или Windows Server, полугодовой канал или более поздней версии имеют удвоенную производительность передачи более ранних версий Windows Server. Это повышение производительности связано с включением встроенной службы "прокси-служба миграции хранилища", которая также открывает необходимые порты брандмауэра, если они еще не открыты.
+
+## <a name="azure-vm-migration"></a>Миграция виртуальных машин Azure
+
+Центр администрирования Windows версии 1910 позволяет развертывать виртуальные машины Azure. При этом развертывание виртуальной машины интегрируется в службу миграции хранилища. Вместо создания новых серверов и виртуальных машин на портале Azure вручную перед развертыванием рабочей нагрузки и, возможно, отсутствующими необходимыми действиями и настройками, центр администрирования Windows может развернуть виртуальную машину Azure, настроить ее хранилище, присоединить к домену, установить роли и Затем настройте распределенную систему. 
 
 ## <a name="whats-new-in-storage-migration-service"></a>Новые возможности службы миграции хранилища
 
@@ -140,7 +144,7 @@ ms.locfileid: "76519476"
 - Более простая синхронизация перенесенных общих ресурсов в Azure с помощью компонента "Синхронизация файлов Azure".
 - Перенос в новые сети, такие как Azure.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Перенос файлового сервера с помощью службы миграции хранилища](migrate-data.md)
 - [Часто задаваемые вопросы о службах миграции хранилища](faq.md)
