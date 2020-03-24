@@ -11,14 +11,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 01/29/2020
+ms.date: 03/04/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 1753780474332a6d5786a5804fc1b4fe5e3d8883
-ms.sourcegitcommit: 9077469e372d2aafcad890cbc4e4a24c58a3838c
+ms.openlocfilehash: 8b7aefa169fe2121c5a2da1f913714d23d989d16
+ms.sourcegitcommit: 056d355516f199e8a505c32b9aa685d0cde89e44
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/30/2020
-ms.locfileid: "76889438"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79518739"
 ---
 # <a name="get-started-with-the-windows-desktop-client"></a>Приступая к работе с клиентом для Windows Desktop
 
@@ -134,5 +134,6 @@ ms.locfileid: "76889438"
 
 Чтобы получить эти журналы, сделайте следующее.
 
-1. Откройте **проводник**.
-2. Перейдите к папке **%temp%\DiagOutputDir\RdClientAutoTrace**.
+1. Убедитесь в том, что нет активных сеансов и процесс клиента не выполняется в фоновом режиме, щелкнув правой кнопкой мыши значок **Удаленный рабочий стол** на панели задач и выбрав пункт **Отключение от всех сеансов**.
+2. Откройте **проводник**.
+3. Перейдите к папке **%temp%\DiagOutputDir\RdClientAutoTrace**.
