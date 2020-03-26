@@ -9,19 +9,19 @@ ms.date: 09/12/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 7098e81f486a5b0b4974c19b47e2d48c6f98832b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bca603344047ea5cc890bf9976ca5a6c79514136
+ms.sourcegitcommit: 9feb093a0acb8834c9ef3c066667c7062d85e6e1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355372"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80289799"
 ---
-# <a name="insider-preview"></a>Insider Preview
+# <a name="new-hpn-features-in-windows-server-2019"></a>Новые функции ХПН в Windows Server 2019
 
 
 ## <a name="dynamic-vrss-and-vmmq"></a>Динамические vRSS и ВММК
 
->Относится к: Windows Server 2019
+>Область применения: Windows Server 2019
 
 В прошлом очереди виртуальных машин и несколько очередей виртуальных машин включили более высокую пропускную способность для отдельных виртуальных машин, так как пропускная способность сети впервые достигла метки 10GbE и выше. К сожалению, планирование, задания базовых показателей, Настройка и мониторинг, необходимые для успешного выполнения, стали очень большими. часто это больше, чем ИТ, предназначенное для расходов ИТ. 
 
@@ -35,7 +35,7 @@ ms.locfileid: "71355372"
 
 ## <a name="receive-segment-coalescing-rsc-in-the-vswitch"></a>Объединение полученных сегментов в виртуальном коммутаторе
 
->Относится к: Windows Server 2019 и Windows 10, версия 1809
+>Область применения: Windows Server 2019 и Windows 10, версия 1809
 
 Объединение полученных сегментов (RSC) в vSwitch — это усовершенствование, объединяющее несколько TCP-сегментов в сегмент большего размера, прежде чем данные проходят через vSwitch. Большой сегмент повышает производительность сети для виртуальных рабочих нагрузок.
 
