@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 29976baf-b0e2-4c01-ab4d-f2940e2bc327
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: cd4349499313d093c153b50fdb4c2118c38dd42d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7902af2d63e8ebe94914f3b604e9bae3c1778aa9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396229"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316070"
 ---
 # <a name="getting-started-with-network-policy-server"></a>Начало работы с сервером политики сети
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе вы можете узнать о функциях и возможностях сервера политики сети.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "71396229"
 >- [Управление сервером политики сети](nps-manage-top.md)
   
   
-Этот раздел содержит следующие подразделы.
+Данный раздел содержит следующие темы.
   
 - [Обработка запроса на подключение](nps-crp-top.md)
 - [Политики сети](nps-np-overview.md)

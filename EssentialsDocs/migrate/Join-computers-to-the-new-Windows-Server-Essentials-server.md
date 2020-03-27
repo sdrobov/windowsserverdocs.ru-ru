@@ -1,9 +1,9 @@
 ---
-title: Присоединение компьютеров к новой server1 Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+title: Присоединение компьютеров к новому серверу Windows Server Essentials Server1
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,26 +12,26 @@ ms.assetid: cdfa9504-9881-4265-b308-c7ee8721bfaa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0240abfff58baedd79ab038af93b107dbb898eb2
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 6f7d20e2d74c311a34b98de7c33c755b5981fcef
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432940"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318973"
 ---
-# <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>Присоединение компьютеров к новой server1 Windows Server Essentials
+# <a name="join-computers-to-the-new-windows-server-essentials-server1"></a>Присоединение компьютеров к новому серверу Windows Server Essentials Server1
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_JoinComputers"></a>   
- Следующий шаг в процессе миграции является присоединение клиентских компьютеров к новой сети Windows Server Essentials и обновление параметров групповой политики.  
+ Следующим шагом процесса миграции является присоединение клиентских компьютеров к новой сети Windows Server Essentials и обновление параметров групповая политика.  
   
 > [!NOTE]
->  Если клиентский компьютер уже присоединен к исходному серверу, сначала необходимо удалить программное обеспечение Connector на клиентском компьютере перед подключением компьютера на конечный сервер.  
+>  Если клиентский компьютер уже присоединен к исходному серверу, то перед подключением компьютера к целевому серверу сначала необходимо удалить программное обеспечение Connector на клиентском компьютере.  
   
  Процесс подключения клиентского компьютера к серверу аналогичен процессу для компьютеров, как присоединенных к домену, так и не присоединенных к домену.  
   
-- Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер.  
+- Перейдите в **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  
@@ -47,7 +47,7 @@ ms.locfileid: "66432940"
   
 2.  В окне командной строки введите **GPRESULT /R** и нажмите клавишу ВВОД.  
   
-3.  Просмотрите результат для раздела, Групповая политика была применена с: и убедитесь, что указан целевой сервер, таких как **DestinationSrv.Domain.local**. Пример:  
+3.  Проверьте результаты, полученные в разделе групповая политика был применен из: и убедитесь, что в нем указан сервер назначения, например **дестинатионсрв. domain. local**. Например:  
   
     ```  
     USER SETTINGS  
@@ -67,6 +67,6 @@ ms.locfileid: "66432940"
   
     1.  Щелкните **Пуск**, затем **Выполнить**, введите **rsop.msc** (результирующая политика) и нажмите клавишу ВВОД.  
   
-    2.  Разверните дерево с крестиком на нем, пока не дойдете до узла.  
+    2.  Разверните дерево с крестиком на нем, пока не появится узел.  
   
     3.  Щелкните правой кнопкой мыши этот узел и щелкните **Просмотр ошибки** для получения сведения о причине сбоя параметров групповой политики на указанном компьютере.

@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: b6e679c6-4398-496c-88bc-115099f3a819
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ea3f959612de0f2bc56a887ba73aba47f1d3f141
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d4e005e65a3ff645ed91f488820435aff5173390
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406216"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317893"
 ---
 # <a name="use-dns-policy-for-application-load-balancing-with-geo-location-awareness"></a>Использование политики DNS для балансировки нагрузки приложений с помощью сведений о географическом расположении
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно узнать, как настроить политику DNS для балансировки нагрузки приложения с учетом географического расположения.
 
@@ -45,7 +45,7 @@ ms.locfileid: "71406216"
 >[!IMPORTANT]
 >В следующих разделах приведены примеры команд Windows PowerShell, которые содержат примеры значений для многих параметров. Перед выполнением этих команд обязательно замените примеры значений в этих командах значениями, подходящими для вашего развертывания.
 
-### <a name="bkmk_clientsubnets"></a>Создание подсетей клиента DNS
+### <a name="create-the-dns-client-subnets"></a><a name="bkmk_clientsubnets"></a>Создание подсетей клиента DNS
 
 Сначала необходимо выяснить подсети или пространство IP-адресов регионов Северная Америка и Европы.
 
@@ -61,7 +61,7 @@ ms.locfileid: "71406216"
     
 Дополнительные сведения см. в разделе [Add-днссерверклиентсубнет](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).
 
-### <a name="bkmk_zscopes2"></a>Создание областей зоны
+### <a name="create-the-zone-scopes"></a><a name="bkmk_zscopes2"></a>Создание областей зоны
 
 После завершения подсетей клиента необходимо разделить зону contosogiftservices.com на разные области зоны, каждая для центра обработки данных.
 
@@ -85,7 +85,7 @@ ms.locfileid: "71406216"
 
 Дополнительные сведения см. в разделе [Add-днссерверзонескопе](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps) .
 
-### <a name="bkmk_records2"></a>Добавление записей в области зоны
+### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records2"></a>Добавление записей в области зоны
 
 Теперь необходимо добавить записи, представляющие узел веб-сервера, в области зоны.
 
@@ -98,7 +98,7 @@ ms.locfileid: "71406216"
 
 Дополнительные сведения см. в разделе [Add-днссерверресаурцерекорд](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-### <a name="bkmk_policies2"></a>Создание политик DNS
+### <a name="create-the-dns-policies"></a><a name="bkmk_policies2"></a>Создание политик DNS
 
 После создания разделов (областей зоны) и добавления записей необходимо создать политики DNS, которые распределяют входящие запросы между этими областями.
 

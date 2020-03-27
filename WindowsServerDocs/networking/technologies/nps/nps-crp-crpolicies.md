@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 4ec45e0c-6b37-4dfb-8158-5f40677b0157
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 0b373e496567f414657b380bad952baefcbe4b18
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 021cef4a220b183f6580bca75bc6db68aba893cf
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396369"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316229"
 ---
 # <a name="connection-request-policies"></a>Политики запросов на подключение
 
@@ -121,7 +121,7 @@ ms.locfileid: "71396369"
 
 Параметры политики запросов на подключение — это набор свойств, которые применяются к входящему сообщению RADIUS. Параметры состоят из следующих групп свойств.
 
-- Authentication
+- Аутентификация
 - Учет
 - Управление атрибутами
 - Пересылка запроса
@@ -129,7 +129,7 @@ ms.locfileid: "71396369"
 
 Следующие разделы содержат дополнительные сведения об этих параметрах.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Аутентификация
 
 С помощью этого параметра можно переопределить параметры проверки подлинности, настроенные во всех сетевых политиках, а также указать методы и типы проверки подлинности, необходимые для подключения к сети.
 

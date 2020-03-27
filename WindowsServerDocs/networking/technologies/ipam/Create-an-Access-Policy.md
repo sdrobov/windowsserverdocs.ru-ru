@@ -10,18 +10,18 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 854bd064-2f86-4678-a940-a04b3e48ae10
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: da5cc366a08f9a3f5b69952a2dff1f717fb1647b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b5ce4c6dae668372521e5b8e0d5168a94cbb86e2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355361"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312644"
 ---
 # <a name="create-an-access-policy"></a>Создание политики доступа
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно создать политику доступа в консоли клиента IPAM.  
   

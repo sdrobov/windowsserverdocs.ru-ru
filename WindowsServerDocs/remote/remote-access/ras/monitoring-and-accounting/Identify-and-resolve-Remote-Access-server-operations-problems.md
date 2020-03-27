@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ce84c9f-fd1f-4463-8fc7-d2f33344a2c9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 831f484db8325bf9a27e9065ac5cf74913d0805c
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1fd3a20cb6429d60f450478f5e817a7506b28346
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791161"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314246"
 ---
 # <a name="identify-and-resolve-remote-access-server-operations-problems"></a>Выявление и ликвидация сбоев в работе сервера удаленного доступа
 
@@ -38,7 +38,7 @@ ms.locfileid: "74791161"
   
 - Восстановление службы поддержки IP-адресов  
   
-### <a name="BKMK_Simulate"></a>Моделирование проблемы операций  
+### <a name="simulate-an-operations-issue"></a><a name="BKMK_Simulate"></a>Моделирование проблемы операций  
   
 > [!CAUTION]  
 > Так как сервер удаленного доступа, вероятно, настроен правильно и в нем не возникли какие-либо проблемы, можно использовать следующую процедуру для имитации проблем с операциями. Если сервер в настоящее время обслуживает клиенты в рабочей среде, возможно, вы не хотите выполнять эти действия. Вы можете прочесть шаги, чтобы понять, как решить проблемы, которые могут возникнуть на сервере удаленного доступа в будущем.  
@@ -51,7 +51,7 @@ ms.locfileid: "74791161"
   
 2.  В списке **служб**прокрутите вниз и щелкните правой кнопкой мыши **вспомогательный метод IP**и выберите команду " **Закрыть**".  
   
-### <a name="BKMK_Identify"></a>Выявление проблемных операций и выполнение корректирующих действий  
+### <a name="identify-the-operations-issue-and-take-corrective-action"></a><a name="BKMK_Identify"></a>Выявление проблемных операций и выполнение корректирующих действий  
 Отключение службы поддержки IP-адресов вызовет серьезную ошибку на сервере удаленного доступа. На панели мониторинга отображается состояние операций сервера и сведения о ней.  
   
 ##### <a name="to-identify-the-details-and-take-corrective-action"></a>Для указания сведений и выполнения корректирующих действий  
@@ -82,7 +82,7 @@ ms.locfileid: "74791161"
   
     3.  Чтобы перезапустить службу, введите в командной строке Windows PowerShell с повышенными привилегиями команду **Restart-Service IpHlpSvc** .  
   
-### <a name="BKMK_Restart"></a>Восстановление службы поддержки IP-адресов  
+### <a name="restore-the-ip-helper-service"></a><a name="BKMK_Restart"></a>Восстановление службы поддержки IP-адресов  
 Чтобы восстановить службу поддержки IP на сервере удаленного доступа, можно выполнить описанные выше действия по запуску или перезапуску службы. также можно использовать следующую процедуру, чтобы отменить процедуру, которая использовалась для имитации сбоя службы поддержки IP-адресов.  
   
 ##### <a name="to-restart-the-ip-helper-service-on-the-remote-access-server"></a>Перезапуск службы поддержки IP на сервере удаленного доступа  
@@ -93,7 +93,7 @@ ms.locfileid: "74791161"
   
 ![](../../../media/Identify-and-resolve-Remote-Access-server-operations-problems/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
   
 ```PowerShell
 PS> Get-RemoteAccessHealth | Where-Object {$_.Component -eq "IP-HTTPS"} | Format-List -Property *  
