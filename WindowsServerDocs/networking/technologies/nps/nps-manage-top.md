@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a275b02c-62b3-4b8a-8417-a710f24bebfe
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a676a8b27c3f799a4cab275610016bfb311e044d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: bc96a6c4406988db2d7906d76af2c1abcfdffeac
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405372"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315900"
 ---
 # <a name="manage-network-policy-server-nps"></a>Управление сервером политики сети (NPS)
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Подразделы этого раздела можно использовать для управления сервером политики сети.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "71405372"
 >- [Планирование сервера политики сети](nps-plan-top.md)
 >- [Развертывание сервера политики сети](nps-deploy.md)  
   
-Этот раздел содержит следующие подразделы.  
+Данный раздел содержит следующие темы.  
   
 - [Управление сервером политики сети с помощью средств администрирования](nps-admintools.md)
 - [Настройка политик запросов на подключение](nps-crp-configure.md)

@@ -10,18 +10,18 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed49a0a3-1c45-42e5-8f13-cad20c1c1d68
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 83ea3c4e4feefacde3e1ed7be6b605d8c0e644a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 9a3d3fadbe2f187ae6b5a77137393b7ad7be338b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366970"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313633"
 ---
 # <a name="step-4-verify-directaccess-with-otp"></a>Шаг 4. Проверка DirectAccess с OTP
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе описывается, как проверить правильность настройки DirectAccess с помощью развертывания OTP.
   
@@ -36,7 +36,7 @@ ms.locfileid: "71366970"
 4. Убедитесь, что состояние OTP отображает зеленый значок и работает.  
   
     > [!NOTE]  
-    > Интервал обновления состояния работоспособности будет максимальной суммой значений из раздела реестра Хклм\систем\ккс\сервицес\рамгмтсвк\параметерс\хеалсрефрештимеаут и **интервала времени для активности сервера** , установленного в удаленном доступе. Настройка.  
+    > Интервал обновления состояния работоспособности будет иметь максимальную сумму значений из раздела реестра Хклм\систем\ккс\сервицес\рамгмтсвк\параметерс\хеалсрефрештимеаут и **интервал времени для активности сервера** , заданный в конфигурации удаленного доступа.  
   
 ### <a name="to-verify-access-to-internal-resources-using-otp-authentication"></a>Проверка доступа к внутренним ресурсам с помощью проверки подлинности OTP  
   

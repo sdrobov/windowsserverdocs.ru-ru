@@ -6,19 +6,19 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: 378213f5-2d59-4c9b-9607-1fc83f8072f1
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/08/2018
-ms.openlocfilehash: 40150e312f4776ec093c9230eedb646eec277f49
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e68da9be84e9567458467c9ebd89155e7c405c5c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405802"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312826"
 ---
 # <a name="configure-encryption-for-a-virtual-subnet"></a>Настройка шифрования для виртуальной подсети
 
->Относится к: Windows Server
+>Область применения: Windows Server
 
 Шифрование виртуальной сети обеспечивает шифрование трафика виртуальной сети между виртуальными машинами, взаимодействующими друг с другом в подсетях, помеченных как "шифрование включено". Для шифрования пакетов с помощью этой возможности также используется протокол DTLS в виртуальной подсети. Протокол DTLS обеспечивает защиту от перехвата, несанкционированных изменений и подделки со стороны любых лиц, имеющих доступ к физической сети.
 
@@ -118,7 +118,7 @@ ms.locfileid: "71405802"
 
 3. Установите сертификаты на каждом узле Hyper-v. 
 
-   PS c:\> dir c:\$SubjectName. *
+   PS C:\> dir c:\$SubjectName. *
 
 
 ~~~

@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: c3d33bed-83ef-4eb8-acf9-0719ecb4a931
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 10230b57075943a5d92dce7155e794293157cba4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e546705d022bbac2588ace5b3e2c6c807c96da63
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356635"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319300"
 ---
 # <a name="create-the-branchcache-hash-publication-group-policy-object"></a>Создание объекта групповой политики публикации хэша BranchCache
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Эту процедуру можно использовать для создания публикации хэша BranchCache групповая политика объекта (GPO).  
   
@@ -28,13 +28,13 @@ ms.locfileid: "71356635"
   
 ### <a name="to-create-the-branchcache-hash-publication-group-policy-object"></a>Создание групповая политика объекта для публикации хэша BranchCache  
   
-1.  Откройте Windows PowerShell, введите **mmc**и затем нажмите клавишу "ВВОД". Отобразится консоль управления (MMC).  
+1.  Откройте Windows PowerShell, введите **mmc** и нажмите клавишу ВВОД. Отобразится консоль управления (MMC).  
   
-2.  В консоли MMC в меню **файл** выберите команду **Добавить или удалить оснастку**. Откроется диалоговое окно **Добавление или удаление оснасток** .  
+2.  В консоли MMC в меню **Консоль** выберите **Добавить или удалить оснастку**. Откроется диалоговое окно **Добавление или удаление оснасток** .  
   
 3.  В окне " **Установка и удаление оснасток**" в окне **Доступные оснастки**дважды щелкните элемент **Управление Групповая политика**, а затем нажмите кнопку **ОК**.  
   
-4.  В консоли управления групповая политика Management разверните путь к созданному ранее подразделению файловых серверов BranchCache. Например, если лес называется example.com, домен называется example1.com, а ваше подразделение называется "файловые серверы BranchCache", разверните следующий путь: **Управление групповая политика**, **лес: example.com**, **домены**, **example1.com**, **файловые серверы BranchCache**.  
+4.  В консоли управления групповая политика Management разверните путь к созданному ранее подразделению файловых серверов BranchCache. Например, если лес называется example.com, то домен называется example1.com, а ваше подразделение называется "файловые серверы BranchCache", разверните следующий путь: **Групповая политика управление**, **лес: example.com**, **домены**, **example1.com**, **файловый сервер BranchCache**.  
   
 5.  Щелкните правой кнопкой мыши **файловые серверы BranchCache**, а затем выберите **создать объект GPO в этом домене и свяжите его**. Откроется диалоговое окно **Создание объекта групповой политики** . В поле **имя**введите имя нового объекта групповой политики. Например, если вы хотите присвоить имя публикации хэша для объекта BranchCache, введите **BranchCache hash publication**. Нажмите кнопку **ОК**.  
   

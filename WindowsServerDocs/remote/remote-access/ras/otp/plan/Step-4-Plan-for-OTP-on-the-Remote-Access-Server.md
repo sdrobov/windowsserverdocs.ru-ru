@@ -10,18 +10,18 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b97b2fd-767a-45c1-a64e-5b3edd0c8a47
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: cc833ea2ae5d24754a445d6c1252f21a59cc6f13
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1fafb5ee461bb44fc57e667f8af88f22a9649dae
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404386"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313480"
 ---
 # <a name="step-4-plan-for-otp-on-the-remote-access-server"></a>Шаг 4. Планирование OTP на сервере удаленного доступа
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 После планирования настройки сервера и сертификата для одноразового пароля (OTP), последним шагом в планировании развертывания OTP для удаленного доступа является планирование параметров клиента OTP на сервере удаленного доступа.  
   
@@ -31,19 +31,19 @@ ms.locfileid: "71404386"
 |[4,2. Планирование для клиентов Windows 7](#bkmk_4_2_Win7)|Запланируйте развертывание помощника по подключению DirectAccess (DCA) 2,0 на клиентских компьютерах Windows 7.|  
 |[4,3. Планирование смарт-карт](#BKMK_smartcard)|Планируйте использование смарт-карт для дополнительной авторизации.|  
   
-## <a name="bkmk_4_1_Exemptions"></a>4,1. Планирование исключений клиента OTP  
+## <a name="41-plan-for-otp-client-exemptions"></a><a name="bkmk_4_1_Exemptions"></a>4,1. Планирование исключений клиента OTP  
 Если проверка подлинности OTP включена, все пользователи по умолчанию должны пройти проверку подлинности, используя сочетание имени пользователя и пароля, а учетные данные OTP. Однако можно разрешить выбранным пользователям проходить проверку подлинности только с помощью имени пользователя и пароля без OTP. Для этого создайте группу безопасности и добавьте всех пользователей, которых требуется исключить из проверки подлинности OTP.  
   
 > [!NOTE]  
 > Только клиентские компьютеры из одного леса могут быть исключены из-за того, что для исключений клиентов можно выбрать только одну группу безопасности.  
   
-## <a name="bkmk_4_2_Win7"></a>4,2. Планирование для клиентов Windows 7  
+## <a name="42-plan-for-windows-7-clients"></a><a name="bkmk_4_2_Win7"></a>4,2. Планирование для клиентов Windows 7  
 По умолчанию клиентские компьютеры Windows 7 не могут проходить проверку подлинности с помощью OTP.  Клиентским компьютерам Windows 7 требуется DCA 2,0 для проверки подлинности с помощью OTP в развертывании удаленного доступа Windows Server 2012. Дополнительные сведения о DCA 2,0 см. в статье [Помощник по подключению directaccess 2,0](https://go.microsoft.com/fwlink/?LinkId=253699) в центре загрузки Майкрософт.  
   
-## <a name="BKMK_smartcard"></a>4,3. Планирование смарт-карт  
+## <a name="43-plan-for-smart-cards"></a><a name="BKMK_smartcard"></a>4,3. Планирование смарт-карт  
 При включении проверки подлинности OTP доступен параметр включения использования смарт-карт для дополнительной авторизации. Создайте группу безопасности, чтобы разрешить временный доступ в случае, если смарт-карта пользователя не работает.  
   
-## <a name="BKMK_Links"></a>См. также  
+## <a name="see-also"></a><a name="BKMK_Links"></a> См. также  
   
 -   [Настройка DirectAccess с проверкой подлинности OTP](https://technet.microsoft.com/windows-server-docs/networking/remote-access/ras/otp/deploy-ra-otp)  
   

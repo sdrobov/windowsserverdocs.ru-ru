@@ -10,18 +10,18 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67576533-206b-428a-956c-ed8c53218d9b
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9562972f731a553dbc3e5558fcce1d5c51d539d0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 141057d2ee3e648f589d255ea04fdef179cedf3c
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405883"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317036"
 ---
 # <a name="datacenter-firewall-overview"></a>Обзор брандмауэра центра обработки данных
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Брандмауэр центра обработки данных — это новая служба, входящая в состав Windows Server 2016. Это сетевой уровень, 5 кортежей (номера портов, источника и назначения, исходные и конечные IP-адреса), с отслеживанием состояния, межклиентский брандмауэр. При развертывании и предложении в качестве службы поставщиком служб Администраторы клиентов могут устанавливать и настраивать политики брандмауэра для защиты своих виртуальных сетей от нежелательного трафика, поступающиго из Интернета и сетей интрасети.  
   

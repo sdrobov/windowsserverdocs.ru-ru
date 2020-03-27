@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.assetid: eeca4cf7-90f0-485d-843c-76c5885c54b0
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 05/18/2018
-ms.openlocfilehash: d2fa9c82c4cab05b2a60916fee3f09c1ea48a472
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dbcd0380dffca29e782be2179024270da73a2c11
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388908"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309418"
 ---
 # <a name="remote-access"></a>Удаленный доступ
 
@@ -36,7 +36,7 @@ ms.locfileid: "71388908"
 >[!IMPORTANT]
 >Не пытайтесь развернуть удаленный доступ на виртуальной машине, \(\) виртуальной машины в Microsoft Azure. Использование удаленного доступа в Microsoft Azure не поддерживается. Удаленный доступ на виртуальной машине Azure нельзя использовать для развертывания VPN, DirectAccess или любой другой функции удаленного доступа в Windows Server 2016 или более ранних версиях Windows Server. Дополнительные сведения см. в [статье поддержка серверного программного обеспечения Майкрософт для Microsoft Azure виртуальных машин](https://support.microsoft.com/help/2721672/microsoft-server-software-support-for-microsoft-azure-virtual-machines).
 
-## <a name="bkmk_da"></a>Служба удаленного доступа \(RAS\)-шлюз RAS
+## <a name="remote-access-service-ras---ras-gateway"></a><a name="bkmk_da"></a>Служба удаленного доступа \(RAS\)-шлюз RAS
 
 При установке службы роли **DirectAccess и VPN** выполняется развертывание шлюза службы удаленного доступа \(\)**шлюза RAS** . Вы можете развернуть шлюз RAS для отдельного клиента виртуальная частная сеть шлюза RAS \(VPN-\) Server, VPN-сервера многоклиентского шлюза RAS и в качестве сервера DirectAccess.
 
@@ -51,7 +51,7 @@ ms.locfileid: "71388908"
 
 Дополнительные сведения см. в статье [шлюз RAS](ras-gateway/RAS-Gateway.md) и [протокол BGP (BGP)](bgp/Border-Gateway-Protocol-BGP.md).
 
-## <a name="bkmk_rras"></a>Маршруты
+## <a name="routing"></a><a name="bkmk_rras"></a>Маршруты
 
 Удаленный доступ можно использовать для маршрутизации сетевого трафика между подсетями в локальной сети. Маршрутизация обеспечивает поддержку маршрутизаторов преобразования сетевых адресов (NAT), маршрутизаторов локальной сети, использующих BGP, протокол RIP и маршрутизаторы с многоадресной рассылкой, с помощью протокола IGMP. В качестве полнофункционального маршрутизатора можно развернуть службу RAS на компьютере сервера или в виртуальной машине на компьютере с Hyper-V.
 
@@ -61,7 +61,7 @@ ms.locfileid: "71388908"
 Install-RemoteAccess -VpnType RoutingOnly
 ```  
 
-## <a name="bkmk_proxy"></a>Прокси веб-приложения
+## <a name="web-application-proxy"></a><a name="bkmk_proxy"></a>Прокси веб-приложения
 
 Прокси веб-приложения — это служба роли удаленного доступа в Windows Server 2016. Прокси-сервер веб-приложения предоставляет функции обратного прокси-сервера для веб-приложений в корпоративной сети, что делает их доступными для пользователей с любых устройств из-за пределов корпоративной сети. Прокси веб-приложения предварительно проверяет подлинность доступа к веб-приложениям с помощью службы федерации Active Directory (AD FS) (AD FS), а также выступает в качестве AD FS прокси-сервера.
 

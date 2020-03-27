@@ -10,24 +10,24 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84457351-1ca7-4e7c-8e2c-53d55b1fcdc0
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b9eb37433e26c174ccae85482163c976577ff479
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: eea83bd9788ffd704b6169c140adc68465f9325d
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388512"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310840"
 ---
 # <a name="step-2-configure-edge1"></a>Шаг 2. Настройка EDGE1
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Следующая процедура выполняется на сервере DirectAccess:
 
 ## <a name="to-configure-directaccess-on-edge1"></a>Настройка DirectAccess в EDGE1
   
-1.  На **начальном** экране введите**рамгмтуи. exe**и нажмите клавишу ВВОД. Если появится диалоговое окно **контроля учетных записей**, подтвердите, что отображаемое в нем действие именно то, которое требуется, и нажмите кнопку **Да**.  
+1.  На **начальном** экране введите**рамгмтуи. exe**и нажмите клавишу ВВОД. Если появится диалог **Контроль учетных записей**, подтвердите, что действие, которое оно отображает то, что нужно, затем щелкните **Да**.  
   
 2.  В левой области консоли управления удаленным доступом щелкните элемент **Конфигурация**.  
   

@@ -1,9 +1,9 @@
 ---
-title: Выполнение задач после миграции для Windows Server Essentials migration1
-description: Описывает способ использования Windows Server Essentials
+title: Задачи, выполняемые после миграции для Windows Server Essentials Migration1
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,45 +12,45 @@ ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 93d07938435ab1ce7686b1960974696582a2924c
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: cdbf16982fa40d20d99cf6b4826159c1a4542d33
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432660"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318823"
 ---
-# <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Выполнение задач после миграции для Windows Server Essentials migration1
+# <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Задачи, выполняемые после миграции для Windows Server Essentials Migration1
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Следующие задачи помогут вам завершить настройку конечного сервера с теми же параметрами, которые были на исходном сервере. Возможно, вы отключили некоторые из этих параметров на исходном сервере во время процесса миграции, поэтому они не были перенесены на конечный сервер. Либо они относятся к необязательным операциям, которые требуется выполнить.  
   
 
--   [Удаление DNS-записей исходного сервера](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
+-   [Удаление записей DNS исходного сервера](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Совместное использование бизнес- и другим папкам данных приложения](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+-   [Совместное использование бизнес-и других папок данных приложений](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
--   [Исправление проблем с компьютером клиента после переноса](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+-   [Устранение проблем с клиентскими компьютерами после миграции](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
--   [Предоставить право на вход в качестве пакетного задания встроенной группе администраторов](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
+-   [Предоставьте встроенной группе администраторов право на вход в систему в качестве пакетного задания.](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
--   [Удаление DNS-записей исходного сервера](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
+-   [Удаление записей DNS исходного сервера](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Совместное использование бизнес- и другим папкам данных приложения](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+-   [Совместное использование бизнес-и других папок данных приложений](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
--   [Исправление проблем с компьютером клиента после переноса](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+-   [Устранение проблем с клиентскими компьютерами после миграции](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
--   [Предоставить право на вход в качестве пакетного задания встроенной группе администраторов](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
+-   [Предоставьте встроенной группе администраторов право на вход в систему в качестве пакетного задания.](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
   
-##  <a name="BKMK_DeleteDNSEntries"></a> Удаление DNS-записей исходного сервера  
+##  <a name="delete-dns-entries-of-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>Удаление записей DNS исходного сервера  
  После списания исходного сервера, сервера сервер службы доменных имен (DNS) может все еще содержать элементы, указывающие на этот исходный сервер. Удалите эти записи DNS.  
   
 #### <a name="to-delete-dns-entries-that-point-to-the-source-server"></a>Чтобы удалить DNS-записи, которые ссылаются на исходный сервер  
   
-1.  Откройте **Диспетчер DNS**на конечном сервере .  
+1.  Откройте **Диспетчер DNS** на конечном сервере .  
   
-2.  В диспетчере DNS щелкните правой кнопкой мыши имя сервера, щелкните **Свойства**, а затем перейдите на вкладку **Серверы пересылки** .  
+2.  В диспетчере DNS щелкните правой кнопкой мыши имя сервера, щелкните **Свойства**, а затем перейдите на вкладку **Серверы пересылки**.  
   
 3.  Определите, имеется ли в списке пересылок запись, указывающая на исходный сервер. Если такая запись есть, нажмите кнопку **Изменить** и удалите эту запись в окне **Редактировать серверы пересылки**.  
   
@@ -68,19 +68,19 @@ ms.locfileid: "66432660"
   
 10. Повторите шаги 6–9, чтобы удалить все зоны обратного просмотра, которые указывают на исходный сервер.  
   
-##  <a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a> Совместное использование бизнес- и другим папкам данных приложения  
- Для скопированных на конечный сервер папок с данными бизнес-приложений и прочих приложений необходимо задать разрешения для общей папки и разрешения NTFS. После настройки разрешений общие папки отображаются в панели мониторинга Windows Server Essentials в **хранения** раздел.  
+##  <a name="share-line-of-business-and-other-application-data-folders"></a><a name="BKMK_ShareLineOfBusinessAndOtherApplications"></a>Совместное использование бизнес-и других папок данных приложений  
+ Для скопированных на конечный сервер папок с данными бизнес-приложений и прочих приложений необходимо задать разрешения для общей папки и разрешения NTFS. После настройки разрешений общие папки отображаются в панели мониторинга Windows Server Essentials в разделе " **хранилище** ".  
   
  Если для сопоставления дисков с общими папками вы используете сценарий входа, для сопоставления с дисками на конечном сервере сценарий необходимо обновить.  
   
-##  <a name="BKMK_FixClientComputerIssuesAfterMigrating"></a> Исправление проблем с компьютером клиента после переноса  
- При миграции на Windows Server Essentials из Windows Small Business Server 2003 Premium Edition с Microsoft Internet Security и Acceleration (ISA) Server установлена, клиентские компьютеры в сети по-прежнему имеют клиент брандмауэра Microsoft и Интернета Обозреватель настроен на использование прокси-сервер.  
+##  <a name="fix-client-computer-issues-after-migrating"></a><a name="BKMK_FixClientComputerIssuesAfterMigrating"></a>Устранение проблем с клиентскими компьютерами после миграции  
+ Если вы переноситесь на Windows Server Essentials с Windows Small Business Server 2003 Premium Edition с установленным сервером Microsoft Internet Security and Acceleration (ISA) Server, клиентские компьютеры по-прежнему имеют брандмауэр Майкрософт и Интернет. Обозреватель настроен для использования прокси-сервера.  
   
- Это приводит к проблемам со связью на клиентских компьютерах, так как прокси-сервер больше не существует. Если имеется другой прокси-сервером, на клиентских компьютерах продолжать использовать сервер под управлением Windows SBS 2003 для прокси-сервера. Для устранения этой проблемы необходимо перенастроить Internet Explorer, чтобы он не использовал прокси-сервер или использовал новый прокси-сервер.  
+ Это приводит к проблемам со связью на клиентских компьютерах, так как прокси-сервер больше не существует. Если настроен другой прокси-сервер, клиентские компьютеры продолжают использовать сервер под управлением Windows SBS 2003 для прокси-сервера. Для устранения этой проблемы необходимо перенастроить Internet Explorer, чтобы он не использовал прокси-сервер или использовал новый прокси-сервер.  
   
 #### <a name="to-reconfigure-internet-explorer"></a>Перенастройка Internet Explorer  
   
-1.  В Internet Explorer щелкните **Сервис**и выберите **Свойства обозревателя**.  
+1.  В Internet Explorer щелкните **Сервис** и выберите **Свойства обозревателя**.  
   
 2.  Перейдите на вкладку **Подключения**, затем **Параметры сети** и выполните одно из следующих действий:  
   
@@ -100,18 +100,18 @@ ms.locfileid: "66432660"
   
 4.  Перейдите на веб-сайт и убедитесь в правильности параметров подключения.  
   
-##  <a name="BKMK_AdminGroup"></a> Предоставить право на вход в качестве пакетного задания встроенной группе администраторов  
- После миграции существующего домена Windows Small Business Server 2003 на Windows Server Essentials, встроенной группе администраторов следует предоставить право на вход в качестве пакетного задания. Убедитесь, что встроенная группа администраторов по-прежнему имеет право на вход в качестве пакетного задания на целевой сервер. Администраторам требуется это разрешение для запуска оповещения на целевом сервере без входа в систему.  
+##  <a name="give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a><a name="BKMK_AdminGroup"></a>Предоставьте встроенной группе администраторов право на вход в систему в качестве пакетного задания.  
+ После переноса существующего домена Windows Small Business Server 2003 в Windows Server Essentials следует предоставить встроенной группе администраторов право на вход в систему в качестве пакетного задания. Убедитесь, что встроенная группа администраторов по-прежнему имеет право на вход в качестве пакетного задания на целевой сервер. Администраторам требуется это разрешение для запуска оповещения на целевом сервере без входа в систему.  
   
 #### <a name="to-give-the-built-in-administrators-group-the-right-to-log-on-as-a-batch-job"></a>Предоставление права на вход в качестве пакетного задания встроенной группе администраторов  
   
 1. На конечном сервере откройте средство администрирования **Управление групповой политикой**.  
   
-2. В **Управление групповой политикой** дереве консоли, разверните узел **леса:** *< ServerName\>* , разверните домены, а затем разверните свой сервер.  
+2. В дереве консоли **управления групповая политика** разверните узел **лес:** *< ServerName\>* , разверните узел Домены, а затем разверните свой сервер.  
   
 3. Разверните **Контроллеры домена**, щелкните правой кнопкой мыши **Политика контроллеров домена по умолчанию**, а затем нажмите **Изменить**.  
   
-4. В **редактор управления групповыми политиками**, нажмите кнопку **политика контроллеров домена по умолчанию**<em>< ServerName\></em>**политики**, а затем разверните **Конфигурация компьютера**.  
+4. В **редактор "Управление групповыми политиками"** щелкните **Политика контроллеры домена по умолчанию**<em>< имя_сервера\></em> **Политика**, а затем разверните узел **Конфигурация компьютера**.  
   
 5. Разверните **Политики**, разверните **Параметры Windows**, а затем разверните **Параметры безопасности**.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66432660"
   
 11. Щелкните **Проверить имена**, чтобы убедиться, что появляется встроенная группа администраторов, и нажмите три раза кнопку **ОК** для сохранения параметра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 
 -   [Миграция с Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  

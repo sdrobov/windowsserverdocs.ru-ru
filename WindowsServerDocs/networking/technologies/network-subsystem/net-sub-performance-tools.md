@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: c7789781-87e8-464e-981b-af887d01badd
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/16/2018
-ms.openlocfilehash: 09e775bfe956d67adbd70cf4ce3f9461e1c37cf5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bcf179484718aa029302281ea91c99588ad2857a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405519"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316556"
 ---
 # <a name="performance-tools-for-network-workloads"></a>Средства повышения производительности для рабочих нагрузок сети
 
@@ -24,13 +24,13 @@ ms.locfileid: "71405519"
 
 В этом разделе содержатся разделы о клиенте для трафика сервера, размер окна TCP/IP и советник по производительности Microsoft Server.
 
-##  <a name="bkmk_tuning"></a>Средство трафика от клиента к серверу
+##  <a name="client-to-server-traffic-tool"></a><a name="bkmk_tuning"></a>Средство трафика от клиента к серверу
 
 Клиент для трафика сервера \(Ктстраффик\) Tool предоставляет возможность создания и проверки сетевого трафика.
 
 Дополнительные сведения и о загрузке средства см. в разделе [ктстраффик (трафик между клиентом и сервером)](https://github.com/Microsoft/ctsTraffic).
   
-##  <a name="bkmk_size"></a>Размер окна TCP/IP
+##  <a name="tcpip-window-size"></a><a name="bkmk_size"></a>Размер окна TCP/IP
 
 Для адаптеров, использующих 1 ГБ, параметры, показанные в предыдущей таблице, должны обеспечить хорошую пропускную способность, так как NTttcp устанавливает размер окна TCP по умолчанию равным 64 КБ с помощью определенного параметра логического процессора \(SO_RCVBUF\) для соединения. Это обеспечивает хорошую производительность в сети с низкой задержкой.  
 
@@ -38,7 +38,7 @@ ms.locfileid: "71405519"
 
 Можно статически задать размер окна TCP большим значением с помощью параметра **-RB** . Этот параметр отключает автоматическую настройку окна TCP и рекомендуется использовать его только в том случае, если пользователь полностью понимает результирующее изменение в поведении TCP/IP. По умолчанию размер окна TCP задается в достаточном значении и корректируется только при высокой нагрузке или при использовании ссылок с высокой задержкой.  
 
-##  <a name="bkmk_advisor"></a>Советник по производительности Microsoft Server
+##  <a name="microsoft-server-performance-advisor"></a><a name="bkmk_advisor"></a>Советник по производительности Microsoft Server
 
 Советник по производительности Microsoft Server \(SPA\) помогает ИТ-администраторам получать метрики для выявления, сравнения и диагностики потенциальных проблем с производительностью в Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2 или Windows Server 2008. 
 

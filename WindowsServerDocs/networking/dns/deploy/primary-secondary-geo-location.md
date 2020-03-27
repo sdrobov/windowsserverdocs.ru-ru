@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: a9ee7a56-f062-474f-a61c-9387ff260929
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6a7836160fc7363ec3d7b2fb11e194db82970f9a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f9bc1a35016ca5946eddeada2088a83f1fa8ca05
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406159"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317752"
 ---
 # <a name="use-dns-policy-for-geo-location-based-traffic-management-with-primary-secondary-deployments"></a>Управление трафиком на основе географического расположения на основных и вспомогательных серверах с помощью политики DNS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела вы узнаете, как создать политику DNS для управления трафиком на основе географического расположения, если развертывание DNS включает как основной, так и дополнительный DNS-серверы.  
 
@@ -37,7 +37,7 @@ ms.locfileid: "71406159"
   
 Облачные службы Contoso имеют два центра обработки данных: один в США и другой в Европе, на котором Contoso размещает портал заказов на продукты для woodgrove.com.  
   
-Развертывание DNS Contoso включает два сервера-получателя: **SecondaryServer1**с IP-адресом 10.0.0.2; и **SecondaryServer2**с IP-адресом 10.0.0.3. Эти серверы-получатели функционируют в качестве серверов имен в двух разных регионах, где SecondaryServer1 находится в Европе и SecondaryServer2, расположенном в США.
+Развертывание Contoso DNS включает два вторичных сервера: **SecondaryServer1**с IP-адресом 10.0.0.2; и **SecondaryServer2**с IP-адресом 10.0.0.3. Эти серверы-получатели функционируют в качестве серверов имен в двух разных регионах, где SecondaryServer1 находится в Европе и SecondaryServer2, расположенном в США.
   
 В **сервер** (IP-адрес 10.0.0.1) доступна запись основной зоны с возможностью записи, где вносятся изменения в зоны. При обычной передаче зоны на серверы-получатели серверы-получатели всегда обновляются в соответствии с новыми изменениями зоны в сервер.
   
@@ -80,7 +80,7 @@ ms.locfileid: "71406159"
   
 ## <a name="how-to-configure-dns-policy-for-primary-secondary-geo-location-based-traffic-management"></a>Настройка политики DNS для управления трафиком на основе географического расположения
 
-Прежде чем начать, убедитесь, что выполнены все действия, описанные в разделе [Использование политики DNS для управления трафиком на основе географического расположения с первичными серверами](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md), а основной DNS-сервер настроен с зонами, областями зоны, подсетями клиента DNS и DNS. политик.  
+Прежде чем начать, убедитесь, что выполнены все действия, описанные в разделе [Использование политики DNS для управления трафиком на основе географического расположения с первичными серверами](../../dns/deploy/Scenario--Use-DNS-Policy-for-Geo-Location-Based-Traffic-Management-with-Primary-Servers.md), а основной DNS-сервер настроен с зонами, областями зоны, подсетями клиента DNS и политикой DNS.  
   
 > [!NOTE]
 > В этом разделе приведены инструкции по копированию подсетей клиентов DNS, областей зоны и политик DNS с основных серверов DNS на серверы-получатели DNS для начальной настройки DNS и проверки. В будущем может потребоваться изменить параметры подсети клиента DNS, области зоны и политики на сервере-источнике. В этом случае можно создать скрипты автоматизации для синхронизации серверов-получателей с сервером-источником.  

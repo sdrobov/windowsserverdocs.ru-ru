@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 356c61c2cc5b60f43a69f17966c97f3c69d05cda
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 86ce83142cafe8ebe61aff2fb193e9b646172651
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356037"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317888"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>Использование политики DNS для балансировки нагрузки приложений
 
@@ -79,7 +79,7 @@ ms.locfileid: "71356037"
 
 Дополнительные сведения см. в разделе [Add-днссерверзонескопе](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps) .
 
-#### <a name="bkmk_records"></a>Добавление записей в области зоны
+#### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>Добавление записей в области зоны
 
 Теперь необходимо добавить записи, представляющие узел веб-сервера, в области зоны.
 
@@ -100,7 +100,7 @@ ms.locfileid: "71356037"
 
 Дополнительные сведения см. в разделе [Add-днссерверресаурцерекорд](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
-#### <a name="bkmk_policies"></a>Создание политик DNS
+#### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>Создание политик DNS
 
 После создания разделов (областей зоны) и добавления записей необходимо создать политики DNS, которые распределяют входящие запросы по этим областям, чтобы на 50% запросов contosogiftservices.com был получен ответ с IP-адресом для Интернета. сервер в Сиэтле Datacenter и остальные равномерно распределяются между центрами обработки данных в Чикаго и Далласе.
 

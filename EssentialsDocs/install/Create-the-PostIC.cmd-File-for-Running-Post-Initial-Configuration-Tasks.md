@@ -1,9 +1,9 @@
 ---
 title: Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: 99e258bc-0695-48c9-b694-a7f3cbe2a2d0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e15cb8591fc701094dde884d0a55e08d2cf422bb
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 81a38f0baf3a47323f6bf8836e48d02bc955cde0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433602"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312063"
 ---
 # <a name="create-the-posticcmd-file-for-running-post-initial-configuration-tasks"></a>Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Существует возможность добавления настройки после начальной конфигурации; для этого необходимо написать собственный код, и затем вызвать этот код из файла сценария под именем PostIC.cmd. При использовании файла PostIC.cmd необходимо соблюдать следующие правила:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66433602"
   
 - Выполнение кода настройки должно продолжаться не более трех минут.  
   
-  Необходимо определить файл PostIC.cmd таким образом, чтобы в случае успешного выполнения кода возвращалось значение 0. При возвращении другого значения операционной системой выполняется поиск файла [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure), содержащего код, который должен выполняться в случае неудачного завершения кода в файле PostIC.cmd. Файлы PostIC.cmd и SetupFailure.cmd должны быть расположены в папке C:\Windows\Setup\Scripts.  
+  Необходимо определить файл PostIC.cmd таким образом, чтобы в случае успешного выполнения кода возвращалось значение 0. При возвращении другого значения операционной системой выполняется поиск файла [SetupFailure.cmd](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md#BKMK_SetupFailure), содержащего код, который должен выполняться в случае неудачного завершения скрипта PostIC.cmd. Файлы PostIC.cmd и SetupFailure.cmd должны быть расположены в папке C:\Windows\Setup\Scripts.  
   
 #### <a name="to-define-post-initial-configuration-customizations"></a>Определение настроек, выполняемых после начальной настройки  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66433602"
   
 4.  (Необязательно) Создайте файл SetupFailure.cmd, содержащий код, который выполняется, если файл PostIC.cmd возвращает значение, отличное от 0.  
   
-###  <a name="BKMK_SetupFailure"></a> SetupFailure.cmd  
+###  <a name="setupfailurecmd"></a><a name="BKMK_SetupFailure"></a>Сетупфаилуре. cmd  
  С помощью SetupFailure.cmd можно активировать отправку уведомлений о проблемах в начальной настройке. Файл SetupFailure.cmd содержит код, который следует запускать в случае возникновения проблемы. Файл SetupFailure.cmd расположен в папке C:\Windows\Setup\Scripts; он запускается при возникновении проблемы с задачей установки или при возвращении файлом PostIC.cmd значения, отличного от 0.  
   
 ##### <a name="to-define-notifications"></a>Определение уведомлений  
@@ -55,8 +55,8 @@ ms.locfileid: "66433602"
 3.  Сохраните файл SetupFailure.cmd в папке C:\Windows\Setup\Scripts.  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы с ADK Windows Server Essentials](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

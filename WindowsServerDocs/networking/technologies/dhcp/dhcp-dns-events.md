@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dhcp
 ms.topic: get-started-article
 ms.assetid: beb8c188-6fcf-4520-8825-d17f8ee9fb04
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: ccd8024af30f1103afa8eac52926a6b42d32940a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5d167666e632aa1a8d92de71feafc9014b66e7ce
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355429"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312607"
 ---
 # <a name="dhcp-logging-events-for-dns-registrations"></a>События ведения журнала DHCP для регистрации DNS
 
@@ -26,7 +26,7 @@ ms.locfileid: "71355429"
 
 Следующие новые события DHCP помогают легко определить, когда происходит сбой регистрации DNS из-за неправильно настроенной или отсутствующей зоны обратного\-поиска DNS.
 
-|ID|Событие|Значение|
+|ИДЕНТИФИКАТОР|Событие|Значение|
 |-----|--------------------|--------------------------------------------------------|
 |20317|DHCPv4. Форвардрекордднсфаилуре|Сбой регистрации пересылки записей для IPv4-адреса %1 и FQDN %2 с ошибкой %3. Скорее всего, это связано с тем, что зона прямого просмотра для этой записи не существует на DNS-сервере.|
 |20318|DHCPv4. Форвардрекордднстимеаут|Сбой регистрации пересылки записей для IPv4-адреса %1 и FQDN %2 с ошибкой %3.|

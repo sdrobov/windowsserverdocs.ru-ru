@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 5de80dc0-53be-42b7-8e5b-24d213bf2b25
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 527fbf52d68f36d198068514476868bcba930a68
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 1bb6447197bfed1108a62be077b0a076bef995da
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396452"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316351"
 ---
 # <a name="network-policy-server-management-with-administration-tools"></a>Управление сервером политики сети с помощью средств администрирования
 
@@ -38,7 +38,7 @@ ms.locfileid: "71396452"
 
 **Учетные данные администратора** 
 
-Для выполнения этой процедуры необходимо быть членом группы администраторов.
+Для выполнения этой процедуры необходимо быть членом группы Администраторы.
 
 ### <a name="to-configure-the-local-nps-by-using-the-nps-console"></a>Настройка локального сервера политики сети с помощью консоли NPS
 
@@ -58,7 +58,7 @@ ms.locfileid: "71396452"
 
 **Учетные данные администратора** 
 
-Для выполнения этой процедуры необходимо быть членом группы администраторов.
+Для выполнения этой процедуры необходимо быть членом группы Администраторы.
 
 ### <a name="to-manage-multiple-npss-by-using-the-nps-snap-in"></a>Управление несколькими НПСС с помощью оснастки NPS\-в
 

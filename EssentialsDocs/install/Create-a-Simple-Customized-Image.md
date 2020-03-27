@@ -1,9 +1,9 @@
 ---
 title: Создание простого настроенного образа
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: 29f9a09f-e4e8-476d-ada1-ab9202a670d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e18ff5ded94127449072d28d00b98e17dbe63c3a
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 74a1729f9445710b6b9d279f1603295eff2a5d25
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59884615"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312131"
 ---
 # <a name="create-a-simple-customized-image"></a>Создание простого настроенного образа
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Приведенную ниже процедуру можно использовать для создания простого настраиваемого образа.  
   
@@ -31,11 +31,11 @@ ms.locfileid: "59884615"
   
 2.  Создайте файл SkipIC.txt в корне системного диска.  
   
-3.  Перезагрузите сервер.  
+3.  Перезапустите сервер.  
   
-4.  Запустите сервер с помощью загрузочного USB-устройства флэш-памяти на DVD-диска, содержащего файл unattend.xml. Дополнительные сведения о создании загрузочного USB-накопителя см. в статье [Create a Bootable USB Flash Drive](Create-a-Bootable-USB-Flash-Drive.md).  
+4.  Запустите сервер с помощью загрузочного USB-устройства флэш-памяти на DVD-диска, содержащего файл unattend.xml. Дополнительные сведения о создании загрузочного USB-устройства флэш-памяти см. в статье [Создание загрузочного USB-устройства флэш-памяти](Create-a-Bootable-USB-Flash-Drive.md).  
   
-5.  Добавление фирменной символики на панель администрирования. Дополнительные сведения о добавлении доменов см. в разделе [Add Branding to the Dashboard, Remote Web Access, and Launchpad](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md).  
+5.  Добавление фирменной символики на панель администрирования. Дополнительные сведения о добавлении фирменной символики см. в статье [Добавление фирменной символики на панель администрирования, веб-сайт удаленного доступа и панель запуска](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md).  
   
 6.  Создайте файл OOBE.xml для отображения пользовательской информации, такой как название компании, эмблема и лицензионное соглашение. Дополнительные сведения о файле OOBE.xml см. в разделе [Create the Oobe.xml File Including Logo and EULA](Create-the-Oobe.xml-File-Including-Logo-and-EULA.md).  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59884615"
   
 8.  В качестве имени сервера используется случайно выбранная строка. Измените имя сервера на другую строку (например, ContosoServer) и уведомите своего клиента о новом имени сервера.  
   
-9. Подготовьте образ для развертывания, как описано в статье [Preparing the Image for Deployment](Preparing-the-Image-for-Deployment.md).  
+9. Подготовьте образ для развертывания как описано в статье [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md).  
   
 ## <a name="see-also"></a>См. также  
- [Начало работы с ADK Windows Server Essentials](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

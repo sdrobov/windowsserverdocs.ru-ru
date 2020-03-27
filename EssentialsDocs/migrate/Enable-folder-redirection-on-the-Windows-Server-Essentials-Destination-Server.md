@@ -1,9 +1,9 @@
 ---
 title: Включение перенаправления папок на целевом сервере 1 Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -13,24 +13,24 @@ ms.assetid: f67d195e-36f6-495a-8361-6d5faa889441
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 50995f0d03b400d6e44d16389afc69e5f25465ac
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 301224256c196b9788e80d38112ed94a6073e054
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432969"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319006"
 ---
 # <a name="enable-folder-redirection-on-the-windows-server-essentials-destination-server1"></a>Включение перенаправления папок на целевом сервере 1 Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Эту задачу можно выполнить, если на исходном сервере включено перенаправление папок.  
   
- Во-первых следует используйте панели мониторинга Windows Server Essentials для включения перенаправления папок на целевом сервере. Затем удалите старый параметр групповой политики перенаправления папок.  
+ Сначала используйте панель мониторинга Windows Server Essentials, чтобы включить перенаправление папок на целевом сервере. Затем удалите старый параметр групповой политики перенаправления папок.  
   
 ### <a name="to-enable-folder-redirection-on-the-destination-server"></a>Включение перенаправления папок на конечном сервере  
   
-1.  На конечном сервере откройте панель мониторинга Windows Server Essentials.  
+1.  На целевом сервере откройте панель мониторинга Windows Server Essentials.  
   
 2.  На панели навигации щелкните **Устройства**.  
   

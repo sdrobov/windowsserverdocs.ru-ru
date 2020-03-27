@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0305467b-ce39-4532-a05a-2cc5ff946f55
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: bae50345e8a6fd4018857e2a754d0274ce02855d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ce5219feca1d55191352d95f2aac017709a5a449
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71367251"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314296"
 ---
 # <a name="generate-a-usage-report-for-remote-clients-using-historical-data"></a>Создание отчетов по использованию на основе зарегистрированных ранее данных для удаленных клиентов
 
@@ -61,7 +61,7 @@ ms.locfileid: "71367251"
   
 ![](../../../media/Generate-a-usage-report-for-remote-clients-using-historical-data/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
   
 В следующем скрипте измените диапазон дат, для которого требуется отчет, в параметре **-StartDateTime** и **-енддатетиме** .  
   

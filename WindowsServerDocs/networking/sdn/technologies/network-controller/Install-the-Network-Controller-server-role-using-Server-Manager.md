@@ -7,14 +7,14 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 3a6e4352-ff62-4290-b8a4-5c83740070fc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 8b656bbd823a10f1e36d1757bb53c4565d4e828c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b8a3e1ede1cdec1ca5ee66be8d53d4420bec673b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405834"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317137"
 ---
 # <a name="install-the-network-controller-server-role-using-server-manager"></a>Установка роли сервера сетевого контроллера с помощью диспетчер сервера
 
@@ -39,19 +39,19 @@ ms.locfileid: "71405834"
   
     ![Роль сервера сетевого контроллера](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
-5.  Откроется диалоговое окно **Добавление компонентов, необходимых для сетевого контроллера** . Щелкните **Добавить компоненты**.  
+5.  Откроется диалоговое окно **Добавление компонентов, необходимых для сетевого контроллера** . Нажмите кнопку **Добавить компоненты**.  
   
     ![Добавление компонентов для сетевого контроллера](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_06.jpg)  
   
 6.  В окне **Выбор ролей сервера**нажмите кнопку **Далее**.  
   
-    ![Нажмите кнопку Далее.](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
+    ![Нажмите кнопку Далее](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_07.jpg)  
   
 7.  В окне **Выбор компонентов**нажмите кнопку **Далее**.  
   
 8.  В окне **сетевой контроллер** нажмите кнопку **Далее**.  
   
-9. Проверьте выбранные параметры в окне **Подтверждение установки**. Для установки сетевого контроллера необходимо перезагрузить компьютер после запуска мастера. По этой причине **при необходимости щелкните автоматически перезапустить целевой сервер**. Откроется диалоговое окно **Мастер добавления ролей и компонентов** . нажмите кнопку **Да**.  
+9. Проверьте выбранные параметры в окне **Подтверждение установки**. Для установки сетевого контроллера необходимо перезагрузить компьютер после запуска мастера. По этой причине **при необходимости щелкните автоматически перезапустить целевой сервер**. Откроется диалоговое окно **Мастер добавления ролей и компонентов** . Нажмите кнопку **Да**.  
   
     ![Мастер добавления ролей и компонентов](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/netc_install_11.jpg)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71405834"
   
 12. После перезагрузки компьютера войдите на компьютер и проверьте установку сетевого контроллера, просмотрев диспетчер сервера.  
   
-    ![Диспетчер серверов](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
+    ![Диспетчер сервера](../../../media/Install-the-Network-Controller-server-role-using-Server-Manager/nc_013.jpg)  
   
 ## <a name="see-also"></a>См. также  
 [Сетевой контроллер](Network-Controller.md)  

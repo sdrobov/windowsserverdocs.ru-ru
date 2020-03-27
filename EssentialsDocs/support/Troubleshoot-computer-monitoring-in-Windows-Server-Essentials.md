@@ -1,9 +1,9 @@
 ---
 title: Устранение неполадок мониторинга компьютеров в Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,27 +12,27 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1adf8ae2dd8763d0bc5a514609bb2470de6acde4
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 968c8c82bfde350e631f1f6ae4830a4fd920aa4b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436073"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318599"
 ---
 # <a name="troubleshoot-computer-monitoring-in-windows-server-essentials"></a>Устранение неполадок мониторинга компьютеров в Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-В этом разделе содержится информация об устранении неполадок, возникающих при мониторинге работоспособности компьютеров в средстве просмотра оповещений и через уведомления электронной почты в Windows Server Essentials.  
+В этом разделе содержатся сведения об устранении неполадок, возникших при наблюдении за состоянием работоспособности компьютеров в средстве просмотра оповещений и об уведомлениях по электронной почте в Windows Server Essentials.  
   
 > [!NOTE]
->  Самые последние сведения об устранении неполадок от сообщества Windows Server Essentials, мы рекомендуем посетить [форум по Windows Server Essentials](https://social.technet.microsoft.com/Forums/winserveressentials/threads). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.  
+>  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://social.technet.microsoft.com/Forums/winserveressentials/threads). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.  
   
-##  <a name="BKMK_TS"></a> Устранение неполадок в уведомлениях электронной почты для оповещений  
+##  <a name="troubleshooting-email-notifications-for-alerts"></a><a name="BKMK_TS"></a>Устранение неполадок уведомлений по электронной почте для оповещений  
  В данном разделе перечислены различные проблемы, которые могут возникнуть при использовании уведомлений электронной почты с оповещениями.  
   
 ### <a name="cannot-send-the-test-email-for-the-alert"></a>Не удается отправить тестовое уведомление по электронной почте  
- **Проблема** отобразится сообщение об ошибке сообщение об ошибке: не удается отправить тестовое электронное сообщение для предупреждения.  
+ **Ошибка** Появляется сообщение об ошибке, сообщающее, что не удается отправить тестовое сообщение для оповещения.  
   
  **Причина** Эта ошибка может возникнуть по одной из следующих причин, связанных с настройкой параметров оповещений:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66436073"
      %ProgramData%\Microsoft\Windows Server\Logs\SharedServiceHost-AlertServiceConfig.log  
   
     > [!TIP]
-    >  Для просмотра папки ProgramData необходимо включить отображение скрытых элементов. Если папка ProgramData, не отображается на ленте **представление** на вкладке **Показать/скрыть** группы выберите **скрытые элементы** текстовое поле.  
+    >  Для просмотра папки ProgramData необходимо включить отображение скрытых элементов. Если папка папка ProgramData не отображается, на вкладке **вид** ленты в группе **Показать/скрыть** выберите текстовое поле **скрытые элементы** .  
   
 ##### <a name="to-update-your-email-notification-setup-for-alerts"></a>Обновление настроек уведомлений электронной почты  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66436073"
   
 5.  Чтобы проверить обновленные параметры, выберите **Применить и отправить по электронной почте**.  
   
-6.  После успешной отправки тестового сообщения электронной почты нажмите кнопку **OK** , чтобы сохранить измененные параметры.  
+6.  После успешной отправки тестового сообщения электронной почты нажмите кнопку **OK**, чтобы сохранить измененные параметры.  
   
 ### <a name="test-email-notification-does-not-list-any-alerts"></a>Уведомление по электронной почте не содержит никаких оповещений  
  **Проблема** Тестовое уведомление электронной почты не содержит никаких оповещений, хотя в средстве просмотра оповещений они были отображены.  

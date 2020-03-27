@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/30/2018
-ms.openlocfilehash: 54a8b9490fdf83d04c6b69fa88f4e8beca4f703a
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 196a124533b98c6945186ee827494b206028d2c8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259069"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317404"
 ---
 # <a name="secure-the-network-controller"></a>Безопасность сетевого контроллера
 
@@ -33,7 +33,7 @@ ms.locfileid: "76259069"
 
 Сетевой контроллер поддерживает проверку подлинности, авторизацию и шифрование для обмена данными обмена. В следующих разделах приводятся сведения о настройке этих параметров безопасности.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Аутентификация
 
 При настройке проверки подлинности для обмена связи сетевого контроллера вы разрешаете узлам кластера сетевого контроллера и клиентам управления проверять удостоверение устройства, с которым они обмениваются данными.
 
@@ -94,7 +94,7 @@ ms.locfileid: "76259069"
 
 Дополнительные сведения см. в разделе [Install-нетворкконтроллерклустер](https://docs.microsoft.com/powershell/module/networkcontroller/install-networkcontrollercluster).
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Аутентификация
 
 При настройке проверки подлинности для связи кластера сетевого контроллера можно разрешить узлам кластера сетевого контроллера проверять удостоверения других узлов, с которыми они обмениваются данными.
 
@@ -125,7 +125,7 @@ ms.locfileid: "76259069"
 
 Связь между узлами сетевого контроллера шифруется с помощью шифрования на уровне транспорта WCF. Такая форма шифрования используется, когда методы проверки подлинности и авторизации являются сертификатами Kerberos или X509. Дополнительные сведения см. в следующих статьях.
 
-- [Практическое руководство. Защита службы с использованием учетных данных Windows](https://docs.microsoft.com/dotnet/framework/wcf/how-to-secure-a-service-with-windows-credentials)
+- [Как защитить службу с помощью учетных данных Windows](https://docs.microsoft.com/dotnet/framework/wcf/how-to-secure-a-service-with-windows-credentials)
 - [Как защитить службу с помощью сертификатов X. 509](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/how-to-secure-a-service-with-an-x-509-certificate).
 
 ## <a name="southbound-communication"></a>Подсистемамми связь
@@ -134,17 +134,17 @@ ms.locfileid: "76259069"
 
 В следующей таблице приведены сведения о взаимодействии сетевого контроллера с различными устройствами подсистемамми.
 
-| Устройство или служба подсистемамми | Используемый протокол              | Используемая проверка подлинности    |
+| Устройство или служба подсистемамми | Протокол              | Используемая проверка подлинности    |
 |---------------------------|-----------------------|------------------------|
 | Подсистема балансировки нагрузки программного обеспечения    | WCF (МУЛЬТИПЛЕКСОР), TCP (узел) | Сертификаты           |
 | Брандмауэр                  | овсдб                 | Сертификаты           |
 | Шлюз                   | WinRM                 | Kerberos, сертификаты |
-| Виртуальная сеть        | ОВСДБ, WCF            | Сертификаты           |
+| Виртуальные сети        | ОВСДБ, WCF            | Сертификаты           |
 | Определяемая пользователем маршрутизация      | овсдб                 | Сертификаты           |
 
 Для каждого из этих протоколов в следующем разделе описывается механизм связи.
 
-### <a name="authentication"></a>Authentication
+### <a name="authentication"></a>Аутентификация
 
 Для обмена данными с Подсистемамми используются следующие протоколы и методы проверки подлинности.
 

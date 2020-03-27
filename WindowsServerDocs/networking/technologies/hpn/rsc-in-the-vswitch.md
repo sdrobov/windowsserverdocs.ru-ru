@@ -7,17 +7,17 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: ''
 ms.author: dacuo
-author: shortpatti
+author: eross-msft
 ms.date: 09/07/2018
-ms.openlocfilehash: dce890d5ae542789c49bf08b5e7f25e62ea2e8c2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4a6fd33dce35cf2a185cf5e4357c37e8050197a2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355302"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312516"
 ---
 # <a name="rsc-in-the-vswitch"></a>RSC в vSwitch
->Относится к: Windows Server 2019
+>Область применения: Windows Server 2019
 
 Объединение полученных сегментов (RSC) в vSwitch — это функция обновления для Windows Server 2019 и Windows 10 от октября 2018, которая позволяет сократить загрузку ЦП узла и повысить пропускную способность для виртуальных рабочих нагрузок за счет объединения нескольких сегментов TCP в меньшее число, но больше сегментов. Обработка меньшего количества больших сегментов (Объединенных) более эффективна, чем обработка многочисленных небольших сегментов.
 
@@ -27,7 +27,7 @@ ms.locfileid: "71355302"
 
 Рабочие нагрузки, которые пути к данным проходят через виртуальный коммутатор, имеют преимущества от этой функции.
 
-Пример:
+Например:
 
 -   Размещение виртуальных сетевых адаптеров, включая:
 
@@ -66,7 +66,7 @@ Get-VMSwitch -Name vSwitchName | Select-Object *RSC*
 
 
 >[!IMPORTANT]
->Внимание! RSC в vSwitch можно включать и отключать на лету, не влияя на существующие подключения.
+>Важно. RSC в vSwitch можно включить и отключить на лету без влияния на существующие подключения.
 
 
 **Отключение RSC в vSwitch**
