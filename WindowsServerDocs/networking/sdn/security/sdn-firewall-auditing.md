@@ -6,19 +6,19 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: c4e2f6c7-0364-4bf8-bb66-9af59c0bbd74
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/22/2018
-ms.openlocfilehash: 246adc6b4fd3ea130196cf1786f7fa130703de1a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1452720d8ba71e7306dce0271ea7a9e6011b2952
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355757"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317371"
 ---
 # <a name="sdn-firewall-auditing"></a>Аудит брандмауэра SDN
 
->Относится к: Windows Server 2019
+>Область применения: Windows Server 2019
 
 Аудит брандмауэра — это новая возможность для брандмауэра SDN в Windows Server 2019. При включении брандмауэра SDN все потоки, обрабатываемые правилами брандмауэра SDN (ACL), для которых включено ведение журнала, записываются. Файлы журналов должны быть в виде синтаксиса, который согласуется с [журналами потоков наблюдателя за сетями Azure](https://docs.microsoft.com/azure/network-watcher/network-watcher-nsg-flow-logging-overview). Эти журналы можно использовать для диагностики или архивирования для последующего анализа. 
 

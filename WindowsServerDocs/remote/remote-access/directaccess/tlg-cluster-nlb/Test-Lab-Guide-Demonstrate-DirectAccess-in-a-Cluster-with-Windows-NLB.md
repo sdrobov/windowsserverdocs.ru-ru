@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: db15dcf5-4d64-48d7-818a-06c2839e1289
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e0c82f9f56ea680c11cd612e17326fe7cf96aeca
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 563ccf1cf68fc6ffd67a29533b3fb3b579a55ee6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388428"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308829"
 ---
 # <a name="test-lab-guide-demonstrate-directaccess-in-a-cluster-with-windows-nlb"></a>Руководство по лаборатории тестирования: демонстрация DirectAccess в кластере с балансировкой сетевой нагрузки Windows
 
@@ -31,12 +31,12 @@ ms.locfileid: "71388428"
 > [!IMPORTANT]  
 > Эта лаборатория является экспериментом, в котором используется минимальное количество компьютеров. Конфигурация, используемая в этом руководстве, приводится только для целей лаборатории тестирования, она не предназначена для использования в рабочей среде.  
   
-## <a name="KnownIssues"></a>Известные проблемы  
+## <a name="known-issues"></a><a name="KnownIssues"></a>Известные проблемы  
 Ниже приводятся известные проблемы, возникающие при настройке сценария кластера.  
   
 -   После настройки DirectAccess в развертывании с поддержкой только IPv4 с одним сетевым адаптером и после автоматической настройки в сетевом адаптере DNS64 по умолчанию (IPv6-адрес, который содержит «: 3333::») попытка включить балансировку нагрузки в консоли управления удаленным доступом приводит к запросу на ввод DIP IPv6. Если указать DIP IPv6, после нажатия кнопки **Зафиксировать** возникает ошибка: "Неправильный параметр".  
   
-    Чтобы решить эту проблему, выполните указанные ниже действия.  
+    Порядок разрешения этой проблемы  
   
     1.  Скачайте сценарии резервного копирования и восстановления из раздела [Настройка резервного копирования и восстановления конфигурации удаленного доступа](https://gallery.technet.microsoft.com/Back-up-and-Restore-Remote-e157e6a6).  
   

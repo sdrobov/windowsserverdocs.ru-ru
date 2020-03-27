@@ -1,9 +1,9 @@
 ---
 title: Настройка перенаправления папок на конечном сервере Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,20 +12,20 @@ ms.assetid: fe77ba67-128c-4fc3-9361-30fa6af42516
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6709aa2a342efd5837cf340b645961499baff6a5
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 44fb54a654689285c5db6d178e6d1c714779b91b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433008"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310601"
 ---
 # <a name="configure-folder-redirection-on-the-windows-server-essentials-destination-server"></a>Настройка перенаправления папок на конечном сервере Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Выполните эту задачу, если на исходном сервере включено перенаправление папок.  
   
- Сначала удалите старый параметр групповой политики перенаправления папок. Затем следует используйте панели мониторинга Windows Server Essentials для включения перенаправления папок на целевом сервере.  
+ Сначала удалите старый параметр групповой политики перенаправления папок. Затем используйте панель мониторинга Windows Server Essentials, чтобы включить перенаправление папок на целевом сервере.  
   
 ### <a name="to-delete-the-old-folder-redirection-group-policy-setting"></a>Удаление старого параметра групповой политики перенаправления папок  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66433008"
   
 ### <a name="to-enable-folder-redirection-on-the-destination-server"></a>Включение перенаправления папок на конечном сервере  
   
-1. На конечном сервере откройте панель мониторинга Windows Server Essentials.  
+1. На целевом сервере откройте панель мониторинга Windows Server Essentials.  
   
 2. На панели навигации щелкните элемент **Устройства**.  
   

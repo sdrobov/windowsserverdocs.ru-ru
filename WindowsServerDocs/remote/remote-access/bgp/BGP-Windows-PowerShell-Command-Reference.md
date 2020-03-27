@@ -10,18 +10,18 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b0240a3-b927-4a1e-b241-5f8f29a9552f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2da5bc3008b9b686ddb2bce460ced39f98183f28
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 22f4475df00e975ffc5cd0956a0126673a67f907
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394619"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309277"
 ---
 # <a name="bgp-windows-powershell-command-reference"></a>Справочник по командам BGP для Windows PowerShell
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Этот раздел можно использовать в качестве справочной документации при написании сценариев Windows PowerShell для добавления, настройки и удаления возможностей BGP из шлюза RAS и маршрутизаторов локальной сети удаленного доступа (LAN).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "71394619"
 ## <a name="bgp-command-reference"></a>Справочник по командам BGP  
 В следующих разделах приводятся имя команды, назначение и синтаксис для каждой команды BGP, а также ссылка на команду в справочнике по удаленному доступу, в которой содержатся более подробные сведения о каждой команде.  
   
-Эта ссылка содержит следующие разделы.  
+Этот справочный материал содержит следующие разделы.  
   
 -   [Добавить команды](#bkmk_add)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "71394619"
   
 -   [Команды удаления](#bkmk_uninstall)  
   
-### <a name="bkmk_add"></a>Добавить команды  
+### <a name="add-commands"></a><a name="bkmk_add"></a>Добавить команды  
 Ниже приведены команды BGP Add.  
   
 [Add-Бгпкустомрауте](https://technet.microsoft.com/library/dn262684.aspx)  
@@ -103,7 +103,7 @@ Add-BgpRoutingPolicy [-Name] <String> [-PolicyType] <PolicyType> {Deny | Allow |
 Add-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_clear"></a>Очистить команды  
+### <a name="clear-commands"></a><a name="bkmk_clear"></a>Очистить команды  
 Ниже приведены команды Clear для BGP.  
   
 [Clear-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463114.aspx)  
@@ -114,7 +114,7 @@ Add-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -Pol
 Clear-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-Prefix <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_disable"></a>Отключение и включение команд  
+### <a name="disable-and-enable-commands"></a><a name="bkmk_disable"></a>Отключение и включение команд  
 Ниже приведены команды Disable и Enable для BGP.  
   
 [Disable-Бгпраутефлапдампенинг](https://technet.microsoft.com/library/mt463100.aspx)  
@@ -133,7 +133,7 @@ Disable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-Informati
 Enable-BgpRouteFlapDampening [-CimSession <CimSession[]> ] [-Force] [-InformationAction <ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <String> ] [-PassThru] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_get"></a>Получение команд  
+### <a name="get-commands"></a><a name="bkmk_get"></a>Получение команд  
 Ниже приведены команды Get для BGP.  
   
 [Get-Бгпкустомрауте](https://technet.microsoft.com/library/dn262664.aspx)  
@@ -200,7 +200,7 @@ Get-BgpRoutingPolicy [[-Name] <String[]> ] [-CimSession <CimSession[]> ] [-Infor
 Get-BgpStatistics [-CimSession <CimSession[]> ] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_install"></a>Команды установки  
+### <a name="install-commands"></a><a name="bkmk_install"></a>Команды установки  
 Ниже приведены команды установки для шлюза RAS и BGP.  
   
 [Install-RemoteAccess](https://technet.microsoft.com/library/hh918408.aspx)  
@@ -234,7 +234,7 @@ Enable-RemoteAccessRoutingDomain -Name $Fabrikam_RoutingDomain -Type All -PassTh
 Install-RemoteAccess -VpnType RoutingOnly  
 ```  
   
-### <a name="bkmk_remove"></a>Удалить команды  
+### <a name="remove-commands"></a><a name="bkmk_remove"></a>Удалить команды  
 Ниже приведены команды Remove для BGP.  
   
 [Remove-Бгпкустомрауте](https://technet.microsoft.com/library/dn262669.aspx)  
@@ -286,7 +286,7 @@ Parameter Set: Remove1
 Remove-BgpRoutingPolicyForPeer [-CimSession <CimSession[]> ] [-Direction <PolicyDirection> {Ingress | Egress} ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-PolicyName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_set"></a>Команды Set  
+### <a name="set-commands"></a><a name="bkmk_set"></a>Команды Set  
 Ниже приведены команды Set для BGP.  
   
 [Set-BgpPeer](https://technet.microsoft.com/library/dn262673.aspx)  
@@ -337,7 +337,7 @@ Set-BgpRoutingPolicy [-Name] <String> [-AddCommunity <String[]> ] [-CimSession <
 Set-BgpRoutingPolicyForPeer -Direction <PolicyDirection> {Ingress | Egress} -PolicyName <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-PeerName <String[]> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_start"></a>Команды запуска и завершения  
+### <a name="start-and-stop-commands"></a><a name="bkmk_start"></a>Команды запуска и завершения  
 Ниже приведены команды запуска и завершения для BGP.  
   
 [Start-BgpPeer](https://technet.microsoft.com/library/dn262683.aspx)  
@@ -356,7 +356,7 @@ Start-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-InformationActi
 Stop-BgpPeer [-Name] <String[]> [-CimSession <CimSession[]> ] [-Force] [-InformationAction <System.Management.Automation.ActionPreference> {SilentlyContinue | Stop | Continue | Inquire | Ignore | Suspend} ] [-InformationVariable <System.String> ] [-RoutingDomain <String> ] [-ThrottleLimit <Int32> ] [-Confirm] [-WhatIf] [ <CommonParameters>] [ <WorkflowParameters>]  
 ```  
   
-### <a name="bkmk_uninstall"></a>Команды удаления  
+### <a name="uninstall-commands"></a><a name="bkmk_uninstall"></a>Команды удаления  
 Ниже приведены команды удаления для шлюза RAS и BGP.  
   
 [Uninstall-RemoteAccess](https://technet.microsoft.com/library/hh918390.aspx)  

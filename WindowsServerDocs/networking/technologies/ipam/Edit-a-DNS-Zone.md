@@ -10,18 +10,18 @@ ms.technology: networking-ipam
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a35164e1-11ad-47c8-9843-580d30c70d07
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2175cf9c740d7b727ba017922a77c94d4379c891
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: b2fa8ff6742dc393a5a2cc962c7f849049b5ef31
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355279"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312424"
 ---
 # <a name="edit-a-dns-zone"></a>Изменение зоны DNS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно изменить зону DNS в консоли клиента IPAM.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71355279"
   
     ![Изменение зоны DNS](../../media/Edit-a-DNS-Zone/ipam_EditZone_02.jpg)  
   
-6.  Откроется диалоговое окно **изменение зоны DNS** с выбранной страницей **Общие** . При необходимости измените общие свойства зоны. **DNS-сервер**, **Категория зоны**и **тип зоны**, а затем нажмите кнопку **Применить** или, если изменения завершены, **ОК**.  
+6.  Откроется диалоговое окно **изменение зоны DNS** с выбранной страницей **Общие** . При необходимости измените общие свойства зоны: **DNS-сервер**, **Категория зоны**и **тип зоны**, а затем нажмите кнопку **Применить** или, если изменения завершены, **ОК**.  
   
     ![Изменение свойств зоны и сохранение](../../media/Edit-a-DNS-Zone/ipam_EditZone_03a.jpg)  
   

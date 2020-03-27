@@ -11,16 +11,16 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.date: 07/13/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 804b7314054691fa0abc19f1cc4e4bffbd6457cf
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 1f004ec59c8d2eac2a944a69bbbfc9af76b39826
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822447"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307724"
 ---
 # <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>Шаг 7.5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10
 
@@ -63,7 +63,7 @@ ms.locfileid: "76822447"
 
     ![Условный доступ для Always On VPN — свойства](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
 
-5. Щелкните **ОК**.
+5. Нажмите кнопку **ОК**.
 
 6. Выберите **назначения**, в разделе включить, выберите **выберите группы для включения**.
 
@@ -86,7 +86,7 @@ ms.locfileid: "76822447"
 5. Выберите **синхронизировать** и убедитесь, что профиль VPN отображается в разделе Параметры\\сеть & Интернет\\VPN.
 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Вы завершили настройку профиля VPN для использования условного доступа Azure AD. 
 
@@ -96,7 +96,7 @@ ms.locfileid: "76822447"
 |Дополнительные сведения о дополнительных возможностях VPN  |[Дополнительные функции VPN](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features). на этой странице приводятся рекомендации по включению фильтров трафика VPN, настройке АВТОМАТИЧЕСКИх VPN-подключений с помощью триггеров приложений и настройке NPS для разрешения VPN-подключений только от клиентов, использующих сертификаты, выданные Azure AD.        |
 
 
-## <a name="related-topics"></a>Связанные темы
+## <a name="related-topics"></a>Связанные разделы
 
 - [Поддержка VPNV2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp). в этом разделе содержится обзор службы CSP поддержка vpnv2. Поставщик службы настройки поддержка vpnv2 позволяет серверу управления мобильными устройствами (MDM) настраивать профиль VPN устройства.
 

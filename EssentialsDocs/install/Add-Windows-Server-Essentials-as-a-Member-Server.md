@@ -3,7 +3,7 @@ title: Добавление Windows Server Essentials в качестве ряд
 description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: d09dd82f-f7d2-47ce-862d-fd9869f2021c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 09943f9708af3839ff21717316853fab9ba0283b
-ms.sourcegitcommit: f6490192d686f0a1e0c2ebe471f98e30105c0844
+ms.openlocfilehash: 4b87c066885ed2bf0ac6dfa29496317310b062d9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70865046"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310169"
 ---
 # <a name="add-windows-server-essentials-as-a-member-server"></a>Добавление Windows Server Essentials в качестве рядового сервера
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Этот раздел относится к серверу под Windows Server 2012 R2 Standard, Windows Server 2012 R2 Datacenter или Windows Server 2016 с установленной ролью Windows Server Essentials Experience. В оставшейся части этого документа роль Windows Server Essentials Experience будет называться Windows Server Essentials.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "70865046"
   
 1. После завершения установки Windows Server Essentials на втором сервере закройте мастер настройки Windows Server Essentials.  
   
-2. В поле **Поиск** введите **System Settings**и в результатах поиска выберите **Просмотр расширенных параметров системы**.  
+2. В поле **Поиск** введите **System Settings** и в результатах поиска выберите **Просмотр расширенных параметров системы**.  
   
 3. В окне **Свойства системы** перейдите на вкладку **Имя компьютера**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "70865046"
   
 2.  Войдите в сервер с помощью учетной записи администратора домена.  
   
-3.  Откройте диспетчер сервера.  
+3.  Откройте Диспетчер сервера.  
   
 4.  В области уведомлений в **диспетчере сервера** установите флажок, а затем выберите **Настройка Windows Server Essentials**.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "70865046"
   
 6.  Щелкните **Настройка**, чтобы приступить к настройке. Процесс настройки занимает около 10 минут.  
   
-7.  На рабочем столе щелкните значок панели мониторинга для запуска панели мониторинга. На домашней странице завершите задачи **Приступая к работе** , перечисленные на вкладке **Установка** .  
+7.  На рабочем столе щелкните значок панели мониторинга для запуска панели мониторинга. На домашней странице завершите задачи **Приступая к работе**, перечисленные на вкладке **Установка**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 
 -   [Установка Windows Server Essentials](Install-Windows-Server-Essentials.md)

@@ -6,29 +6,29 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/08/2018
-ms.openlocfilehash: 4d35501b8d876f2a178a4744d495125dea8da6c7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4ea035d80a32e245edc4633ee14e98b9d1153fff
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405814"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309730"
 ---
 # <a name="configure-virtual-network-peering"></a>Настройка пиринга виртуальной сети
 
->Относится к: Windows Server
+>Область применения: Windows Server
 
 В этой процедуре Windows PowerShell используется для создания двух виртуальных сетей, каждая из которых имеет одну подсеть. Затем настройте пиринг между двумя виртуальными сетями, чтобы обеспечить подключение между ними.
 
-- [Шаг 1. Создание первой виртуальной сети](#step-1-create-the-first-virtual-network)
+- [Шаг 1. Создание первой виртуальной сети](#step-1-create-the-first-virtual-network)
 
-- [Шаг 2. Создание второй виртуальной сети](#step-2-create-the-second-virtual-network)
+- [Шаг 2. Создание второй виртуальной сети](#step-2-create-the-second-virtual-network)
 
-- [Шаг 3. Настройка пиринга из первой виртуальной сети во вторую](#step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network)
+- [Шаг 3. Настройка пиринга из первой виртуальной сети во вторую](#step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network)
 
-- [Шаг 4. Настройка пиринга из второй виртуальной сети в первую](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
+- [Шаг 4. Настройка пиринга из второй виртуальной сети в первую](#step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network)
 
 
 >[!IMPORTANT]
@@ -92,7 +92,7 @@ New-NetworkControllerVirtualNetwork -ResourceId "Woodgrove_VNet1" -ConnectionUri
 
 ## <a name="step-3-configure-peering-from-the-first-virtual-network-to-the-second-virtual-network"></a>Шаг 3. Настройка пиринга из первой виртуальной сети во вторую
 
-На этом шаге вы настроите пиринг между первой виртуальной сетью и второй виртуальной сетью, созданными в предыдущих двух шагах. В следующем примере сценария устанавливается пиринг виртуальной сети из **Contoso_vnet1** в **Woodgrove_vnet1**.
+На этом шаге вы настроите пиринг между первой виртуальной сетью и второй виртуальной сетью, созданными в предыдущих двух шагах. В следующем примере скрипт устанавливает пиринг виртуальной сети из **Contoso_vnet1** в **Woodgrove_vnet1**.
 
 ```PowerShell
 $peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties
@@ -120,7 +120,7 @@ New-NetworkControllerVirtualNetworkPeering -ConnectionUri $uri -VirtualNetworkId
 
 ## <a name="step-4-configure-peering-from-the-second-virtual-network-to-the-first-virtual-network"></a>Шаг 4. Настройка пиринга из второй виртуальной сети в первую
 
-На этом шаге вы настроите пиринг между второй виртуальной сетью и первой виртуальной сетью, созданной в шагах 1 и 2 выше. В следующем примере сценария устанавливается пиринг виртуальной сети из **Woodgrove_vnet1** в **Contoso_vnet1**.
+На этом шаге вы настроите пиринг между второй виртуальной сетью и первой виртуальной сетью, созданной в шагах 1 и 2 выше. В следующем примере скрипт устанавливает пиринг виртуальной сети из **Woodgrove_vnet1** в **Contoso_vnet1**.
 
 ```PowerShell
 $peeringProperties = New-Object Microsoft.Windows.NetworkController.VirtualNetworkPeeringProperties 

@@ -7,16 +7,16 @@ ms.technology: networking-ras
 ms.workload: identity
 ms.topic: article
 ms.date: 06/28/2019
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 60be590d0d133f00817018018af42cfc23f1bee5
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: aeb35d8c3eafd436330b66ca7d5be68d78045df0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822397"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307840"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>Шаг 7.4. Развертывание корневых сертификатов условного доступа в локальную службу AD
 
@@ -57,6 +57,6 @@ ms.locfileid: "76822397"
       - Контейнер AIA
       - Контейнер центров сертификации
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 [Шаг 7,5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md). на этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Microsoft Endpoint Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры CSP поддержка vpnv2](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) .

@@ -10,23 +10,23 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 16359b15-a0e4-4f42-9d70-6ef0d851d219
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/26/2018
-ms.openlocfilehash: 0d90c9d5f03be5ae69b0f781d8acb51876dc4f8d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9518bab68b2d2f24f6c05c46e064035cc08d777f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406076"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312979"
 ---
 # <a name="manage-tenant-workloads"></a>Управление рабочими нагрузками клиента
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Этот раздел содержит ссылки на документацию, которая позволяет управлять рабочими нагрузками клиента путем добавления виртуальных машин клиента, использования сетевых виртуальных устройств, настройки программной балансировки нагрузки и т. д.
 
-Этот раздел содержит следующие темы.
+Этот раздел содержит следующие подразделы.
 
 - [Создание виртуальной машины и подключение к виртуальной сети клиента или VLAN](Create-a-Tenant-VM.md)
 - [Настройка качества обслуживания (QoS) для сетевого адаптера виртуальной машины клиента](Configure-QoS-for-Tenant-VM-Network-Adapter.md)

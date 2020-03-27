@@ -1,9 +1,9 @@
 ---
 title: Добавление информации о зарегистрированном партнере, заключившем партнерское соглашение об использовании интернет-служб Майкрософт
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,19 +12,19 @@ ms.assetid: 9bd191d6-ecc5-4230-a88e-f3fc281cb956
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 39ce43228cd7392bcc86de4a410c52676ce15047
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: ec8387c59ebf42eb4287807e5959a50cea4215c4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833045"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310245"
 ---
 # <a name="add-microsoft-online-service-partner-agreement-partner-of-record-information"></a>Добавление информации о зарегистрированном партнере, заключившем партнерское соглашение об использовании интернет-служб Майкрософт
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_3rdLevelDomanNames"></a>   
- Если вы являетесь партнером Microsoft Online Service Partner соглашения (MOSPA) для Office 365, чтобы убедиться, что вы правильно компенсируются запрос на подписку, отправляемых с Windows Server Essentials через модуль интеграции Office 365, необходимо создать раздел реестра, который содержит идентификационные данные вашей записи партнера (POR ID). Указанная ниже информация считывается и передается поставщику услуг через URL-адреса регистрации Office 365.  
+ Если вы являетесь партнером Microsoft Online Service Partner Agreement (МОСПА) для Office 365, чтобы обеспечить правильную компенсацию при порождении запроса на подписку из Windows Server Essentials с помощью модуля интеграции Office 365, необходимо создать раздел реестра, содержащий идентификатор партнера по записи (пор ID). Указанная ниже информация считывается и передается поставщику услуг через URL-адреса регистрации Office 365.  
   
 -   HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Server\MSO  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59833045"
   
 1.  На компьютере-образце нажмите кнопку **Пуск**, введите команду **regedit** и нажмите клавишу ВВОД.  
   
-2.  В левой области последовательно разверните узлы **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft**и **Windows Server**.  
+2.  В левой области последовательно разверните узлы **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft** и **Windows Server**.  
   
 3.  Щелкните правой кнопкой мыши узел **Windows Server**, выберите команду **Создать** и щелкните пункт **Раздел**.  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59833045"
   
 ## <a name="see-also"></a>См. также  
 
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
 
- [Создание и настройка образа](../install/Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа для развертывания](../install/Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

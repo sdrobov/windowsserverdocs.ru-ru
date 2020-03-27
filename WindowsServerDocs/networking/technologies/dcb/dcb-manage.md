@@ -6,14 +6,14 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: d635f96516040fcb30504f752c8194b0323c63f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d61287b82cd6d3b869b1120d3cb21b3c8792bd1e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405775"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312754"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>Управление мостом центра обработки данных (DCB)
 
@@ -87,7 +87,7 @@ ms.locfileid: "71405775"
     
     в. Назначение приоритета приложения
     
-    г) Параметры ДКБКС
+    . Параметры ДКБКС
 
 2. Настройте DCB на сетевом адаптере.
 
@@ -428,7 +428,7 @@ Remove-NetQosPolicy -Name "Network Management" -Store GPO:localhost
 
 Если настроить DCB с коммутатора и использовать ДКБКС для распространения конфигураций на сетевые адаптеры, то после включения DCB на сетевых адаптерах можно узнать, какие конфигурации будут получены и применены на сетевых адаптерах, начиная с операционной системы.
 
-###  <a name="bkmk_enabledcb"></a>Включение и отображение параметров DCB на сетевых адаптерах
+###  <a name="enable-and-display-dcb-settings-on--network-adapters"></a><a name="bkmk_enabledcb"></a>Включение и отображение параметров DCB на сетевых адаптерах
 
 ```
 PS C:\> Enable-NetAdapterQos M1
@@ -470,18 +470,18 @@ Capabilities :                       Hardware     Current
                NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0  
 
 ```
-## <a name="bkmk_wps"></a>Команды Windows PowerShell для DCB
+## <a name="windows-powershell-commands-for-dcb"></a><a name="bkmk_wps"></a>Команды Windows PowerShell для DCB
 
 Существуют команды Windows PowerShell для Windows Server 2016 и Windows Server 2012 R2. Вы можете использовать все команды для Windows Server 2012 R2 в Windows Server 2016.
 
 ### <a name="windows-server-2016-windows-powershell-commands-for-dcb"></a>Команды Windows PowerShell для Windows Server 2016 для DCB
 
-В следующем разделе для Windows Server 2016 приведены описания и синтаксис командлетов Windows PowerShell для всех мостов центра обработки данных \(DCB\) качество обслуживания \(качества обслуживания\)\-конкретных командлетах. Командлеты перечисляются в алфавитном порядке по команде в начале имени командлета.
+В следующем разделе для Windows Server 2016 приведены описания и синтаксис командлетов Windows PowerShell для всех мостов центра обработки данных \(DCB\) качество обслуживания \(качества обслуживания\)\-конкретных командлетах. Они указаны в алфавитном порядке по глаголу, с которого начинается командлет.
 
 - [Модуль Дкбкос](https://technet.microsoft.com/itpro/powershell/windows/dcbqos/dcbqos)
 
 ### <a name="windows-server-2012-r2-windows-powershell-commands-for-dcb"></a>Команды Windows PowerShell для Windows Server 2012 R2 для DCB
 
-В следующем разделе Windows Server 2012 R2 приведены описания и синтаксис командлетов Windows PowerShell для всех мостов центра обработки данных \(DCB\) качество обслуживания \(качества обслуживания\)\-конкретных командлетах. Командлеты перечисляются в алфавитном порядке по команде в начале имени командлета.
+В следующем разделе Windows Server 2012 R2 приведены описания и синтаксис командлетов Windows PowerShell для всех мостов центра обработки данных \(DCB\) качество обслуживания \(качества обслуживания\)\-конкретных командлетах. Они указаны в алфавитном порядке по глаголу, с которого начинается командлет.
 
 - [Командлеты качества обслуживания для моста центра обработки данных (DCB) в Windows PowerShell](https://technet.microsoft.com/library/hh967440.aspx)

@@ -1,18 +1,18 @@
 ---
 title: События системного журнала отказоустойчивой кластеризации
 description: Список событий отказоустойчивой кластеризации в системном журнале Windows Server. Эти события можно использовать для устранения неполадок в кластере.
-ms.prod: windows-server-threshold
+ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: 5c2606b96b42d08cc66da2e19596240c21bf4b88
-ms.sourcegitcommit: 10331ff4f74bac50e208ba8ec8a63d10cfa768cc
+ms.openlocfilehash: 0346b56ad2fe8a60ab84b7e6ab43e0558ed1c85b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75956456"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310049"
 ---
 # <a name="failover-clustering-system-log-events"></a>События системного журнала отказоустойчивой кластеризации
 
@@ -1250,6 +1250,6 @@ DNS-записи узла (A) и указателя (PTR), связанные с
 Ресурс физического диска кластера "%1" удалил моментальный снимок программного обеспечения. Моментальный снимок программного обеспечения на общий том кластера "%2" был удален, так как он старше "%3" дн. Идентификатор моментального снимка был "%4" и создан из узла "%5" в "%6".
 Ожидается, что после завершения задания резервного копирования моментальные снимки удаляются из приложения резервного копирования. Этот снимок превысил ожидаемое время существования моментального снимка. Проверьте с помощью приложения резервного копирования, что задания резервного копирования успешно завершены.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 -   [Подробные сведения о событии для компонентов отказоустойчивой кластеризации в Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

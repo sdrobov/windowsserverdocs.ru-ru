@@ -10,18 +10,18 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 9cce81998c6041aea223da29979a53d6069f599c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c9bc2b54927905346c980ef2b14d65310ca930b8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404744"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308584"
 ---
 # <a name="step-6-test-directaccess-connectivity-from-the-homenet-subnet"></a>Шаг 6. Тестирование подключения DirectAccess из подсети Хоменет
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Развертывание DirectAccess с одноразовым паролем (OTP) теперь завершено, и вы можете начать тестирование подключения из подсети Хоменет.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "71404744"
   
 1. На компьютере КЛИЕНТ1 убедитесь, что вы вошли в систему как **Пользователь1**.  
   
-2. На **начальном** экране введите**PowerShell. exe**, щелкните правой кнопкой мыши **PowerShell**, выберите пункт **Дополнительно**и щелкните **Запуск от имени администратора**. Если появится диалоговое окно **контроля учетных записей**, подтвердите, что отображаемое в нем действие именно то, которое требуется, и нажмите кнопку **Да**.  
+2. На **начальном** экране введите**PowerShell. exe**, щелкните правой кнопкой мыши **PowerShell**, выберите пункт **Дополнительно**и щелкните **Запуск от имени администратора**. Если появится диалог **Контроль учетных записей**, подтвердите, что действие, которое оно отображает то, что нужно, затем щелкните **Да**.  
   
 3. В окне Windows PowerShell введите **gpupdate/Force**и нажмите клавишу ВВОД.  
   
@@ -55,11 +55,11 @@ ms.locfileid: "71404744"
   
 13. В адресной строке Internet Explorer введите **https://app2.corp.contoso.com/** и нажмите клавишу ВВОД. Нажмите клавишу F5. Вы увидите веб-сайт IIS по умолчанию в.  
   
-14. На **начальном** экране введите<strong>\\ \ app1\files</strong>и нажмите клавишу ВВОД.  
+14. На **начальном** экране введите<strong>\\\app1\files</strong>и нажмите клавишу ВВОД.  
   
 15. В окне Общая папка **файлов** дважды щелкните файл **example. txt** . Вы увидите содержимое файла example. txt.  
   
-16. На **начальном** экране введите<strong>\\ \ app2\files</strong>и нажмите клавишу ВВОД.  
+16. На **начальном** экране введите<strong>\\\app2\files</strong>и нажмите клавишу ВВОД.  
   
 17. В окне Общая папка **файлов** дважды щелкните **новый текстовый файл document. txt** . Вы увидите содержимое нового файла текстовый файл document. txt.  
   

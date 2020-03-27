@@ -2,26 +2,26 @@
 title: Создание DVD-диска восстановления сервера с многоязычной поддержкой
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: 59d8d41e5836ba88b405a058c8340f454b081c06
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: b71fc748f7cc8d82420b7a62fe502135036db727
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980249"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312115"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>Создание DVD-диска восстановления сервера с многоязычной поддержкой
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-##  <a name="BKMK_MLHeadedRecovery"></a>Создание конфигурации сервера и DVD-диска восстановления сервера для поддержки нескольких языков на локально администрируемых серверах  
+##  <a name="create-a-server-setup-and-server-recovery-dvd-for-multiple-language-support-on-locally-administered-servers"></a><a name="BKMK_MLHeadedRecovery"></a>Создание конфигурации сервера и DVD-диска восстановления сервера для поддержки нескольких языков на локально администрируемых серверах  
   
 > [!NOTE]
->  Сначала необходимо создать многоязыковой образ Windows, как описано в [разделе Пошаговое руководство. Создание](https://technet.microsoft.com/library/jj126995) многоязыкового образа Windows перед добавлением пакета лангауаже для Windows Server Essentials в install. wim.  
+>  Сначала необходимо создать многоязыковой образ Windows, как описано в разделе [Пошаговое руководство. Создание многоязыкового образа Windows](https://technet.microsoft.com/library/jj126995) перед добавлением пакета Лангауаже для Windows Server Essentials в install. wim.  
   
  Существует два этапа установки: среда предустановки Windows (Windows PE) и начальная настройка. По умолчанию страница выбора языка при начальной настройке не отображается.  
   
@@ -48,25 +48,25 @@ ms.locfileid: "69980249"
  Чтобы добавить многоязычную поддержку в программу установки Windows, необходимо следующее:  
   
 
--   Обслуживающий компьютер со всеми средствами и исходными файлами, необходимыми для создания настраиваемого образа среды предустановки Windows. Дополнительные сведения см. в разделе [Prepare the Technician Computer](Prepare-the-Technician-Computer.md).  
+-   Обслуживающий компьютер со всеми средствами и исходными файлами, необходимыми для создания настраиваемого образа среды предустановки Windows. Для получения дополнительной информации см. раздел [Подготовка обслуживающего компьютера](Prepare-the-Technician-Computer.md).  
 
--   Обслуживающий компьютер со всеми средствами и исходными файлами, необходимыми для создания настраиваемого образа среды предустановки Windows. Дополнительные сведения см. в разделе [Prepare the Technician Computer](../install/Prepare-the-Technician-Computer.md).  
+-   Обслуживающий компьютер со всеми средствами и исходными файлами, необходимыми для создания настраиваемого образа среды предустановки Windows. Для получения дополнительной информации см. раздел [Подготовка обслуживающего компьютера](../install/Prepare-the-Technician-Computer.md).  
 
   
 -   DVD-диск Windows Server Essentials.  
   
 -   DVD-диск языкового пакета Windows Server Essentials.  
   
-###  <a name="BKMK_Steps"></a>Добавление поддержки нескольких языков  
+###  <a name="adding-multiple-language-support"></a><a name="BKMK_Steps"></a>Добавление поддержки нескольких языков  
  Чтобы добавить поддержку нескольких языков в программа установки Windows вы обновите файл install. wim, добавив в него Windows Server 2012 и языковые пакеты Windows Server Essentials.  
   
 #### <a name="update-installwim"></a>Обновление файла install.wim  
  На этом шаге вы добавите языковые пакеты Windows Server 2012 и Windows Server Essentials в install. wim.  
   
 > [!NOTE]
->  Убедитесь, что установлены языковые пакеты для Windows Server 2012. Это обеспечит использование надлежащей фирменной символики. Языковые пакеты многоязыкового пользовательского интерфейса для Windows Server 2012 доступны на [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Следуйте инструкциям, описанным в [разделе Пошаговое руководство. Создание многоязыкового образа](https://technet.microsoft.com/library/jj126995.aspx) Windows при создании многоязычного образа Windows перед добавлением языкового пакета Windows Server Essentials в install. wim.  
+>  Убедитесь, что установлены языковые пакеты для Windows Server 2012. Это обеспечит использование надлежащей фирменной символики. Языковые пакеты многоязыкового пользовательского интерфейса для Windows Server 2012 доступны на [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Следуйте инструкциям, описанным в разделе [Пошаговое руководство. Создание многоязыкового образа Windows для](https://technet.microsoft.com/library/jj126995.aspx) создания многоязычного образа Windows перед добавлением языкового пакета Windows Server Essentials в install. wim.  
 >   
->  Языковые пакеты Windows Server Essentials доступны на носителе языкового пакета в \лангуаже Packs\\< cultureName\>.  
+>  Языковые пакеты Windows Server Essentials доступны на носителе языкового пакета в \Лангуаже Packs\\< CultureName\>.  
   
 > [!NOTE]
 >  Не все языковые пакеты могут быть недоступны до выпуска Windows Server 2012.  

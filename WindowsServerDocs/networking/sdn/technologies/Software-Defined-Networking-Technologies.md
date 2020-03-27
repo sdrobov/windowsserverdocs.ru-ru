@@ -7,23 +7,23 @@ ms.service: virtual-network
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: b491089c-5bcb-49d4-95b1-915b7ce69f88
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 02/14/2019
-ms.openlocfilehash: b71b17760ec11d7d2ea6a3bfeb118899be9504e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f6a33d59cedecc49b50d01ebffb0fef9fe460afd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405957"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317218"
 ---
 # <a name="sdn-technologies"></a>Технологии SDN
 
->Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 В подразделах этого раздела содержится обзор и технические сведения о программно определенных сетевых технологиях, которые включены в Windows Server 2016.  
 
-## <a name="network-controllernetwork-controllernetwork-controllermd"></a>[Сетевой контроллер](network-controller/Network-Controller.md)
+## <a name="network-controller"></a>[Сетевой контроллер](network-controller/Network-Controller.md)
 
 Сетевой контроллер предоставляет централизованную, программируемую точку автоматизации для управления, настройки, мониторинга и устранения неполадок как виртуальной, так и физической сетевой инфраструктуры в центре обработки данных. С помощью сетевого контроллера можно автоматизировать настройку сетевой инфраструктуры, а не выполнять настройку сетевых устройств и служб вручную. 
 
@@ -39,23 +39,23 @@ ms.locfileid: "71405957"
 - физические сетевые маршрутизаторы; 
 - программные брандмауэры; 
 - VPN-шлюзы, включая многоклиентские шлюзы службы удаленного доступа (RAS) 
-- подсистемы балансировки нагрузки. 
+- Подсистемы балансировки нагрузки 
   
-## <a name="hyper-v-network-virtualizationhyper-v-network-virtualizationhyper-v-network-virtualizationmd"></a>[Виртуализация сети Hyper-V](hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
+## <a name="hyper-v-network-virtualization"></a>[Виртуализация сети Hyper-V](hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md)
 
 Виртуализация сети Hyper-V (HNV) помогает вам абстрактно использовать приложения и рабочие нагрузки из физической сети с помощью виртуальных сетей. Виртуальные сети обеспечивают необходимую многопользовательскую изоляцию в совместно используемой физической сетевой инфраструктуре, повышая тем самым эффективность использования ресурсов. Чтобы обеспечить возможность переноса существующих инвестиций, можно настроить виртуальные сети на существующих сетевых технологиях. Кроме того, виртуальные сети совместимы с виртуальными локальными сетями (VLAN).
   
-## <a name="hyper-v-virtual-switchvirtualizationhyper-v-virtual-switchhyper-v-virtual-switchmd"></a>[Виртуальный коммутатор Hyper-V](../../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md) 
+## <a name="hyper-v-virtual-switch"></a>[Виртуальный коммутатор Hyper-V](../../../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md) 
 
 Виртуальный коммутатор Hyper-V — это программный коммутатор уровня 2 Ethernet, доступный в диспетчере Hyper-V после установки роли сервера Hyper-V. Коммутатор предоставляет программно управляемые и расширяемые возможности для подключения виртуальных машин к виртуальным сетям и к физической сети. Кроме того, виртуальный коммутатор Hyper-V обеспечивает принудительное применение политик для уровней безопасности, изоляции и обслуживания.
   
 Также можно развернуть виртуальный коммутатор Hyper-V с включенным объединением коммутаторов (SET) и удаленным доступом к памяти (RDMA). Дополнительные сведения см. в разделе [Удаленный доступ к памяти (RDMA) и включение объединения внедренных команд (Set)](#remote-direct-memory-access-rdma-and-switch-embedded-teaming-set) в этом разделе.
 
-## <a name="internal-dns-service-idns-for-sdnidns-for-sdnmd"></a>[Внутренняя служба DNS (iDNS) для SDN](Idns-for-Sdn.md)
+## <a name="internal-dns-service-idns-for-sdn"></a>[Внутренняя служба DNS (iDNS) для SDN](Idns-for-Sdn.md)
 
 Размещенным виртуальным машинам и приложениям требуется, чтобы служба DNS взаимодействовала в своих сетях и с внешними ресурсами в Интернете. С помощью iDNS можно предоставить клиентам службы разрешения имен DNS для изолированных локальных пространств имен и Интернет-ресурсов. 
   
-## <a name="network-function-virtualizationnetwork-function-virtualizationnetwork-function-virtualizationmd"></a>[Виртуализация сетевой функции](network-function-virtualization/Network-Function-Virtualization.md)
+## <a name="network-function-virtualization"></a>[Виртуализация сетевой функции](network-function-virtualization/Network-Function-Virtualization.md)
 
 Аппаратные устройства, такие как подсистемы балансировки нагрузки, брандмауэры, маршрутизаторы и коммутаторы, все чаще становятся виртуальными устройствами. В корпорации Майкрософт виртуализованные сети, коммутаторы, шлюзы, NAT, подсистемы балансировки нагрузки и брандмауэры. Такая "виртуализация сетевых функций" является естественным этапом развития виртуализации серверов и сетей. Виртуальные устройства быстро создаются и создаются на новом рынке. Они продолжают создавать интерес и получать импульс как в платформах виртуализации, так и в облачных службах. 
   
@@ -77,14 +77,14 @@ ms.locfileid: "71405957"
   
 Кроме того, вы можете использовать команды Windows PowerShell, чтобы включить мост центра обработки данных (DCB), создать виртуальный коммутатор Hyper-V с виртуальным сетевым адаптером RDMA (vNIC) и создать виртуальный коммутатор Hyper-V с параметром SET и RDMA vNIC. Дополнительные сведения см. в разделе [Удаленный доступ к памяти (RDMA) и объединение коммутаторов (Set) Embedded](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/rdma-and-switch-embedded-teaming.md).
 
-## <a name="border-gateway-protocol-bgpremoteremote-accessbgpborder-gateway-protocol-bgpmd"></a>[Протокол пограничного шлюза (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
+## <a name="border-gateway-protocol-bgp"></a>[Протокол пограничного шлюза (BGP)](../../../remote/remote-access/bgp/Border-Gateway-Protocol-BGP.md)
   
 Протокол BGP (BGP) — это протокол динамической маршрутизации, который автоматически узнает маршруты между сайтами, использующими VPN-подключения типа "сеть — сеть". Поэтому BGP сокращает настройку маршрутизаторов вручную.   При настройке шлюза RAS BGP позволяет управлять маршрутизацией сетевого трафика между сетями виртуальных машин и удаленными сайтами клиентов.  
   
-## <a name="software-load-balancing-slb-for-sdnnetwork-function-virtualizationsoftware-load-balancing-for-sdnmd"></a>[Программная балансировка нагрузки для SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
+## <a name="software-load-balancing-slb-for-sdn"></a>[Программная балансировка нагрузки для SDN](network-function-virtualization/software-load-balancing-for-sdn.md)
 Поставщики облачных служб (CSP) и предприятия, которые развертывают SDN, могут использовать программную балансировку нагрузки (SLB) для равномерного распределения сетевого трафика клиентов клиента и клиента между ресурсами виртуальной сети. Windows Server SLB позволяет размещать одну и ту же рабочую нагрузку на нескольких серверах, что обеспечивает высокий уровень доступности и масштабирование. 
 
-## <a name="windows-server-containerscontainerscontainer-networking-overviewmd"></a>[Контейнеры Windows Server](Containers/Container-networking-overview.md)
+## <a name="windows-server-containers"></a>[Контейнеры Windows Server](Containers/Container-networking-overview.md)
 
 Контейнеры Windows Server — это упрощенный метод виртуализации операционной системы, который отделяет приложения или службы от других служб, работающих на том же узле контейнера. Каждый контейнер имеет свою операционную систему, процессы, файловую систему, реестр и IP-адреса, которые можно подключаться к виртуальным сетям. 
 

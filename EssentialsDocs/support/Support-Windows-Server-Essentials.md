@@ -3,7 +3,7 @@ title: Поддержка Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d6855e777ea6e59ce5a9596adc9ba2e186b0a3e5
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9142f44e61a7361bd4c40bdfdb5869e326d67343
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947385"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318660"
 ---
 # <a name="support-windows-server-essentials"></a>Поддержка Windows Server Essentials
 
@@ -25,7 +25,7 @@ ms.locfileid: "75947385"
 
 Этот раздел содержит сведения о возможностях поддержки и устранения неполадок Windows Server Essentials.  
   
-##  <a name="BKMK_Top"></a>Лучшие решения и обновления поддержки  
+##  <a name="top-support-solutions-and-updates"></a><a name="BKMK_Top"></a>Лучшие решения и обновления поддержки  
   
 -   [Лучшие решения поддержки для Windows Server 2012 R2 и Windows Server 2012](https://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75947385"
   
 -   [Исправление. невозможно включить роль Windows Server Update Services в Windows Server Essentials](https://support.microsoft.com/kb/2762663) (Февраль 2013)  
   
-## <a name="troubleshoot"></a>"Устранение неполадок"  
+## <a name="troubleshoot"></a>Устранение неполадок  
  В этом разделе вы найдете информацию, которая поможет вам справиться с распространенными проблемами, возникающими при использовании Windows Server Essentials. Сведения об устранении неполадок организованы в логические области, которые соответствуют ключевым возможностям продукта.  
   
 -   [Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
@@ -126,7 +126,7 @@ ms.locfileid: "75947385"
   
 -    Дополнительные сведения о безопасной совместной работе с партнерами и поставщиками см. в статье [улучшение совместной работы с компаниями малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).  
   
-## <a name="see-also"></a>См. также статью  
+## <a name="see-also"></a>См. также:  
   
 -   [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   

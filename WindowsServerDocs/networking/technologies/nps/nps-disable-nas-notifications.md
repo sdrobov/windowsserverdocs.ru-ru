@@ -6,22 +6,22 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a09bfb03-95fc-4534-bf3c-97078ef6b07e
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: b8ae0ab02a5c14675d543087f635d53ee63e0423
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: dd56dfd4db9dd41c98141e2239efcca544a364fe
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396249"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316161"
 ---
 # <a name="disable-nas-notification-forwarding-in-nps"></a>Отключение перенаправления уведомлений NAS в NPS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Эту процедуру можно использовать для отключения перенаправления сообщений запуска и отмены с серверов доступа к сети (NAS) членам группы удаленных серверов RADIUS, настроенной в NPS.
 
-Если вы настроили удаленные группы RADIUS-серверов и в **политиках запросов на подключение**NPS вы снимите флажок **пересылать запросы на учетную запись в эту группу удаленных серверов RADIUS** , эти группы по-прежнему отправляют уведомления о запуске и окончании NAS. Ошибка. 
+Если вы настроили удаленные группы RADIUS-серверов и в **политиках запросов на подключение**NPS вы снимите флажок **пересылать запросы на учетную запись в эту группу удаленных RADIUS-серверов** , эти группы по-прежнему отправляют сообщения о запуске и отмене уведомлений NAS. 
 
 Это создает ненужный сетевой трафик. Чтобы устранить этот трафик, отключите перенаправление уведомлений NAS для отдельных серверов в каждой группе удаленных серверов RADIUS.
 

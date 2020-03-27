@@ -10,23 +10,23 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a1c18f264a6a8d263f3e9f50bc325ef97f4240af
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 2f3581451b65e96a277b23bd6808d2dea6ba45c9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366925"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313439"
 ---
 # <a name="troubleshooting-enabling-otp"></a>Диагностика включения OTP
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе содержатся сведения об устранении неполадок, связанных с включением проверки подлинности DirectAccess методом OTP с помощью командлета PowerShell **Enable-даотпаусентикатион** или консоли управления удаленным доступом.
   
 ## <a name="failed-to-enroll-the-otp-signing-certificate"></a>Не удалось зарегистрировать сертификат для подписи OTP  
-**Получена ошибка** (журнал событий сервера). Не удается зарегистрировать сертификат подписи OTP с помощью шаблона сертификата < OTP_signing_template_name >  
+**Получена ошибка** (журнал событий сервера). Не удается зарегистрировать сертификат подписи OTP с помощью < шаблона сертификата OTP_signing_template_name >  
   
 **Причина**  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71366925"
 2.  Если шаблон не существует, создайте его, как описано в 3,3. в разделе Планирование сертификата центра регистрации или в случае существования другого совпадающего шаблона перенастройте OTP DirectAccess с новым именем шаблона.  
   
 ## <a name="failed-to-enable-directaccess-otp-when-webdav-is-installed"></a>Не удалось включить OTP DirectAccess при установке WebDAV  
-**Сценарий**. При попытке применить конфигурацию OTP DirectAccess в консоли управления удаленным доступом или с помощью командлета PowerShell `Enable-DAOtpAuthentication` операция завершается ошибкой.  
+**Сценарий**. При попытке применить конфигурацию OTP DirectAccess в консоли управления удаленным доступом или с помощью командлета `Enable-DAOtpAuthentication` PowerShell операция завершается ошибкой.  
   
 **Получена ошибка** (журнал событий сервера). Параметры OTP DirectAccess не могут быть применены, так как расширение WebDAV IIS запущено на сервере. Удалите WebDAV и снова примените параметры.  
   

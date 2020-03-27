@@ -1,9 +1,9 @@
 ---
-title: Присоединение компьютеров к новой network1 Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+title: Присоединение компьютеров к новой Network1 Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,28 +12,28 @@ ms.assetid: d94de050-3300-4323-a5ea-c824cb9cecc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 62f31f859ed3fd0f77baf37d3467d4702b24ad95
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 48703ed78ee7d604e67be06b540d4206617d4578
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432913"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318981"
 ---
-# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>Присоединение компьютеров к новой network1 Windows Server Essentials
+# <a name="join-computers-to-the-new-windows-server-essentials-network1"></a>Присоединение компьютеров к новой Network1 Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 ##  <a name="BKMK_JoinComputers"></a>   
- Следующий шаг в процессе миграции является присоединение клиентских компьютеров к новой сети Windows Server Essentials и обновление параметров групповой политики.  
+ Следующим шагом процесса миграции является присоединение клиентских компьютеров к новой сети Windows Server Essentials и обновление параметров групповая политика.  
   
 ### <a name="domain-joined-client-computers"></a>Клиентские компьютеры, присоединенные к домену  
- Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
+ Перейдите в **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  
   
 ### <a name="non-domain-joined-client-computers"></a>Клиентские компьютеры, не присоединенные к домену  
- Перейдите по адресу **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
+ Перейдите в **http://** <em>destination-servername</em> **/connect** и установите программное обеспечение Windows Server Connector, как если бы это был новый компьютер. Процесс установки для клиентских компьютеров, как присоединенных к домену, так и не присоединенных к нему, идентичен.  
   
 > [!NOTE]
 >  Программное обеспечение Windows Server Connector не поддерживает компьютеры, на которых выполняется ОС Windows XP или Windows Vista. Если у вас есть компьютеры с ОС Windows XP или Windows Vista, которые уже присоединены к домену, этот шаг можно пропустить.  
@@ -49,7 +49,7 @@ ms.locfileid: "66432913"
   
 2.  В окне командной строки введите **GPRESULT /R** и нажмите клавишу ВВОД.  
   
-3.  Просмотрите результат для раздела, Групповая политика была применена с: и убедитесь, что указан целевой сервер, таких как **DestinationSrv.Domain.local**. Пример:  
+3.  Проверьте результаты, полученные в разделе групповая политика был применен из: и убедитесь, что в нем указан сервер назначения, например **дестинатионсрв. domain. local**. Например:  
   
     ```  
     USER SETTINGS  
@@ -69,6 +69,6 @@ ms.locfileid: "66432913"
   
     1.  Щелкните **Пуск**, затем **Выполнить**, введите **rsop.msc** (результирующая политика) и нажмите клавишу ВВОД.  
   
-    2.  Разверните дерево с крестиком на нем, пока не дойдете до узла.  
+    2.  Разверните дерево с крестиком на нем, пока не появится узел.  
   
     3.  Щелкните правой кнопкой мыши этот узел и щелкните **Просмотр ошибки** для получения сведения о причине сбоя параметров групповой политики на указанном компьютере.

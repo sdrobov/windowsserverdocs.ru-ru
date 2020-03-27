@@ -6,19 +6,19 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/22/2018
-ms.openlocfilehash: 58e85c15723126f2976fac3ccc21b3cfc6585750
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8cdf4e100c65fae11637c681924746115444f71
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355927"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313026"
 ---
 # <a name="windows-server-2019-gateway-performance"></a>Производительность шлюза Windows Server 2019
 
->Относится к: Windows Server
+>Область применения: Windows Server
 
 
 В Windows Server 2016 одна из проблем клиента была невозможной для шлюза SDN в соответствии с требованиями к пропускной способности современных сетей. Пропускная способность сети туннелей IPsec и GRE была ограничена пропускной способностью одиночного подключения для подключения IPsec примерно 300 Мбит/с, а для подключения GRE — 2,5 Гбит/с.

@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: cd4908f0-0d6f-4c02-8f98-4dc88c3dcb65
 ms.date: 11/05/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
-ms.openlocfilehash: fdd409dee5a7a957580daeeb05209336edfd86f6
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: 55e99d4a02b88a7b5367d3b389237bf96829fd89
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822617"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307805"
 ---
 # <a name="virtual-private-networking-vpn"></a>Виртуальная частная сеть (VPN)
 
@@ -26,7 +26,7 @@ ms.locfileid: "76822617"
 
 - Служба удаленного доступа (RAS)
 - Маршрутизация
-- Прокси-сервер веб-приложения
+- Прокси-служба веб-приложения
 
 Эти технологии являются службами роли сервера удаленного доступа.
 
@@ -37,7 +37,7 @@ ms.locfileid: "76822617"
 >[!NOTE]
 >Вы также можете развернуть шлюз RAS в качестве VPN-сервера с многопользовательским интерфейсом для использования с программно заданной сетью (SDN) или как сервер DirectAccess. Дополнительные сведения см. в статье [шлюз RAS](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [программно-определяемая сеть (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)и [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
 
-## <a name="related-topics"></a>Связанные темы
+## <a name="related-topics"></a>Связанные разделы
 - [Always on функции и функции VPN](vpn-map-da.md). в этом разделе вы узнаете о функциях и функциях Always on VPN. 
 
 - [Настройка туннелей VPN-устройств в Windows 10](vpn-device-tunnel-config.md): Always on VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: _туннель устройства_ и _туннель пользователя_. Туннель устройства используется для сценариев подключения предварительного входа и управления устройствами. Пользовательский туннель позволяет пользователям получать доступ к ресурсам Организации через VPN-серверы.

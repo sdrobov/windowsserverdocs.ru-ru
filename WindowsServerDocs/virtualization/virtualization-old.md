@@ -5,23 +5,23 @@ ms.prod: windows-server
 manager: dougkim
 ms.technology: compute
 ms.topic: article
-author: shortpatti
-ms.author: pashort
+author: eross-msft
+ms.author: lizross
 ms.localizationpriority: medium
 ms.date: 03/16/2018
-ms.openlocfilehash: bbbd8ea812a25b0d538dcb87a380184412235b99
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d5a3390f1a072e5d155f19a97fe90ef481436f33
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364045"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307909"
 ---
 # <a name="virtualization"></a>Виртуализация
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016 
 
 >[!TIP]
-> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с нашими другими [библиотеками Windows Server](/previous-versions/windows/) на docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
 <img src="../media/landing-icons/virtualization.png" style='float:left; padding:.5em;' alt="Icon showing a box with spokes"> Виртуализация в Windows Server 2016 — одна из базовых технологий, необходимых для создания программно-определяемой инфраструктуры. Вместе с сетью и хранилищем функции виртуализации предоставляют гибкость, необходимую для поддержки рабочих нагрузок ваших клиентов.
 
@@ -41,7 +41,7 @@ ms.locfileid: "71364045"
                     </div>
                     <div class="cardText">
                         <h3>Защищенная структура и экранированные виртуальные машины</h3>
-                        <p>Поставщики облачных услуг и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), которая обычно представлена кластером из трех узлов, одним или несколькими защищенными узлами и набором экранированных виртуальных машин.</p>
+                        <p>Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), которая обычно представлена кластером из трех узлов, одним или несколькими защищенными узлами и набором экранированных виртуальных машин.</p>
                     </div>
                 </div>
             </div>
@@ -101,7 +101,7 @@ ms.locfileid: "71364045"
                     </div>
                     <div class="cardText">
                         <h3>Виртуальный коммутатор Hyper-V</h3>
-                        <p>Виртуальный коммутатор Hyper-V — это программный сетевой коммутатор Ethernet уровня 2, который доступен во всех версиях Hyper-V.</p>
+                        <p>Виртуальный коммутатор Hyper-V — это программный сетевой коммутатор Ethernet уровня 2, который доступен во всех версиях Hyper-V.</p>
 
                         <p>Виртуальный коммутатор Hyper-V доступен в диспетчере Hyper-V после установки роли сервера Hyper-V.</p>
 
@@ -139,7 +139,7 @@ ms.locfileid: "71364045"
 
 
 
-## <a name="related"></a>Статьи по теме
+## <a name="related"></a>Связанный
 
 Для создания среды виртуализации платформе Hyper-V требуется специальное оборудование. Подробные сведения см. в статье [System requirements for Hyper-V on Windows Server](./hyper-v/system-requirements-for-hyper-v-on-windows.md) (Требования к системе для Hyper-V в Windows Server). 
 

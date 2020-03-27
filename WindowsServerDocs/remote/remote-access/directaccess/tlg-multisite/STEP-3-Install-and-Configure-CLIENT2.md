@@ -10,14 +10,14 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f009fdd1-94e6-4ccb-8c6e-609a5394db53
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 4b2d8cb1538de35a97ae83888d26abd7ad7bc8b3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ad09bdef0fba9f8114a09e3ddadb8237be2b7d9f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388317"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80308707"
 ---
 # <a name="step-3-install-and-configure-client2"></a>Шаг 3. Установка и настройка КЛИЕНТ2
 
@@ -54,7 +54,7 @@ ms.locfileid: "71388317"
   
 2.  На странице **система** в области **имя компьютера, домен и параметры рабочей группы** нажмите кнопку **изменить параметры**.  
   
-3.  В диалоговом окне **"Свойства системы"** на вкладке **"Имя компьютера"** щелкните **"Изменить"** .  
+3.  В диалоговом окне **Свойства системы** на вкладке  **Имя компьютера** щелкните **Изменить**.  
   
 4.  В диалоговом окне **изменения имени компьютера или домена** выберите **домен**, введите **Corp.contoso.com**и нажмите кнопку **ОК**.  
   

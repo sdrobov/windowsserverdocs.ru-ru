@@ -6,18 +6,18 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0bc6746f-2adb-43d8-a503-52f473833164
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 297044397088bfb64b51e1553d3f69d5b933e81b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: c20c21c39e44d7eb3da812bbe71f175d0688d6c0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405907"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309658"
 ---
 # <a name="troubleshooting-converged-nic-configurations"></a>Устранение неполадок конфигураций Объединенных сетевых адаптеров
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Чтобы проверить, правильно ли настроена конфигурация RDMA на узле Hyper-V, можно использовать следующий сценарий.
 
@@ -82,7 +82,7 @@ ms.locfileid: "71405907"
 
 ## <a name="get-netadapterqos"></a>Get-Нетадаптеркос
 
-Чтобы просмотреть \(\) конфигурацию качества обслуживания сетевого адаптера, выполнив следующую команду Windows PowerShell.
+Чтобы просмотреть качество обслуживания сетевого адаптера \(качества обслуживания\), запустите следующую команду Windows PowerShell.
 
     Get-NetAdapterQos
 
@@ -96,7 +96,7 @@ ms.locfileid: "71405907"
 
 Если результаты являются непредвиденными, выполните следующие действия.
 
-1. Убедитесь, что физический сетевой адаптер поддерживает мосты \(\) "центр обработки данных" и "качество обслуживания"
+1. Убедитесь, что физический сетевой адаптер поддерживает мосты центра обработки данных \(DCB\) и QoS.
 2. Убедитесь, что драйверы сетевых адаптеров обновлены.
 
 --- 
@@ -125,7 +125,7 @@ IP-адрес удаленного узла отображается как по
 
 ## <a name="get-smbclientnetworkinterface"></a>Get-Смбклиентнетворкинтерфаце
 
-Можно использовать следующую команду, чтобы убедиться, что виртуальный сетевой адаптер, включенный для RDMA, сообщается\-в виде RDMA с поддержкой протокола SMB.
+Можно использовать следующую команду, чтобы убедиться, что виртуальный сетевой адаптер, включенный для RDMA, сообщается как RDMA\-с поддержкой SMB.
 
     Get-SmbClientNetworkInterface
 
@@ -145,9 +145,9 @@ IP-адрес удаленного узла отображается как по
 
 --- 
 
-## <a name="vstat-mellanox-specific"></a>\(специальная Mellanox для VSTA\)
+## <a name="vstat-mellanox-specific"></a>\) для VSTA \(, специфичные для Mellanox
 
-При использовании сетевых адаптеров Mellanox можно использовать команду **VSTA** для проверки RDMA на узлах Hyper-V с согласованной версией Ethernet \(роце.\)
+При использовании сетевых адаптеров Mellanox можно использовать команду **VSTA** для проверки RDMA на основе согласованного Ethernet \(роце\) версии на узлах Hyper-V.
 
 ### <a name="vstat-expected-results"></a>Ожидаемые результаты для VSTA
 
@@ -172,7 +172,7 @@ IP-адрес удаленного узла отображается как по
 
 --- 
 
-## <a name="related-topics"></a>См. также
+## <a name="related-topics"></a>Связанные разделы
 
 - [Конфигурация с согласованным СЕТЕВЫМ адаптером с одним сетевым адаптером](cnic-single.md)
 - [Конфигурация сетевого адаптера Объединенных сетевых адаптеров](cnic-datacenter.md)

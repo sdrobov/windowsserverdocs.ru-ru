@@ -3,7 +3,7 @@ title: Установка сборщика журналов Windows Server Essen
 description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a1b1a5492a6e5dbc48899b3918314676884e0454
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 75faeb3fe1c9ced32a37f2ac96ffedbadb2db76f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322096"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318686"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Установка сборщика журналов Windows Server Essentials
 
@@ -25,7 +25,7 @@ ms.locfileid: "79322096"
 
 Мастер установки сборщика журнала Windows Server Essentials устанавливает сборщик данных журнала как надстройку панели запуска. Можно установить и использовать сборщик данных журнала на сетевых компьютерах и сервере. После установки сборщик журналов появится на панели мониторинга.  
   
-###  <a name="BKMK_ToInstall"></a>Установка сборщика данных журнала  
+###  <a name="to-install-the-log-collector"></a><a name="BKMK_ToInstall"></a>Установка сборщика данных журнала  
   
 1.  Скачайте пакет установки сборщика журналов на любой сервер или компьютер сети.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "79322096"
   
 6.  Выберите **Установить надстройку**.  
   
-###  <a name="BKMK_Reinstall"></a>Переустановка сборщика данных журнала  
+###  <a name="reinstalling-the-log-collector"></a><a name="BKMK_Reinstall"></a>Переустановка сборщика данных журнала  
  Если необходимо переустановить сборщик журналов, нужно удалить и переустановить сборщик журналов на сервере и на всех компьютерах сети. При удалении сборщика журналов с панели мониторинга на сервере сборщик журналов будет автоматически удален со всех компьютеров сети.  
   
 ##### <a name="to-uninstall-and-reinstall-the-log-collector"></a>Удаление и переустановка сборщика журналов  

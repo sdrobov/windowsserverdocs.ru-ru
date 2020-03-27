@@ -1,9 +1,9 @@
 ---
 title: Устранение неполадок архивации и восстановления данных в Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 06/25/2013
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,23 +12,23 @@ ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 37e79661442ba9f66a564b6c6c8fb57db1978454
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 28e3564c93f192563626bfb44992ef9bc4a49598
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59812335"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313239"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Устранение неполадок архивации и восстановления данных в Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Выполните описанные ниже действия для устранения неполадок резервного копирования данных в Windows Server Essentials, включая проблемы с настройкой архивации, неполной или неудачной архивации, оповещений о работоспособности архивации, а также проблемы, связанные с восстановлением папок, файлов и всей системы.  
   
 > [!NOTE]
->  Самые последние сведения об устранении неполадок от сообщества Windows Server Essentials, см. в статье [форум по Windows Server Essentials](https://social.technet.microsoft.com/Forums//winserveressentials/threads).  
+>  Последние сведения об устранении неполадок из сообщества Windows Server Essentials см. на [форуме Windows Server Essentials](https://social.technet.microsoft.com/Forums//winserveressentials/threads).  
   
-##  <a name="BKMK_TroubleshootBackupConfigurationIssues"></a> Устранение неполадок архивации данных подключенных компьютеров  
+##  <a name="troubleshoot-backup-configuration-issues-for-a-connected-computer"></a><a name="BKMK_TroubleshootBackupConfigurationIssues"></a>Устранение неполадок конфигурации резервного копирования для подключенного компьютера  
  Для устранения неполадок с архивацией у компьютеров, резервное копирование которых производится с помощью вашего сервера под управлением Windows Server Essentials, выполните следующие действия.  
   
 ### <a name="errors"></a>Ошибки  
@@ -39,7 +39,7 @@ ms.locfileid: "59812335"
   
 -   Ошибка удаления компьютера из резервной копии  
   
-### <a name="resolutions"></a>Действия по устранению  
+### <a name="resolutions"></a>Решения  
   
 ##### <a name="to-troubleshoot-errors-that-occur-while-you-configure-backups-for-a-connected-computer"></a>Для устранения ошибок, возникающих во время настройки архивации для подключенных компьютеров  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59812335"
   
 6.  Удалите с компьютера ПО Windows Server Essentials Connector, а затем переустановите его. Дополнительные сведения см. в разделах [Удаление программного обеспечения Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) и [Установка программного обеспечения Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11).  
   
-##  <a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a> Устранение неполадок при архивации, которая не завершена  
+##  <a name="troubleshoot-a-backup-that-did-not-complete-properly"></a><a name="BKMK_TroubleshootaBackupThatDidNotCompleteProperly"></a>Устранение неполадок в резервной копии, которая не была завершена должным образом  
  Если резервной копии присвоен статус "Неудачно", резервная копия выполнена безуспешно и для восстановления недоступны никакие данные. Однако, если резервной копии присвоен статус «Не завершено», это означает, то не все элементы резервной копии были архивированы, но часть данных подлежит восстановлению.  
   
 ### <a name="errors"></a>Ошибки  
@@ -82,13 +82,13 @@ ms.locfileid: "59812335"
   
 -   Неудачная архивация данных  
   
-### <a name="resolutions"></a>Действия по устранению  
+### <a name="resolutions"></a>Решения  
   
 ##### <a name="to-identify-volumes-that-were-not-backed-up-successfully"></a>Определение томов, резервные копии которых не удалось успешно создать  
   
 1.  Откройте панель мониторинга Windows Server Essentials и выберите пункт **Компьютеры и архивация**.  
   
-2.  Щелкните имя компьютера, архивация данных которого не была успешно завершена, а затем выберите **Просмотреть свойства компьютера** в области **Задачи** .  
+2.  Щелкните имя компьютера, архивация данных которого не была успешно завершена, а затем выберите **Просмотреть свойства компьютера** в области **Задачи**.  
   
 3.  Щелкните резервную копию, которая не была успешно завершена, а затем выберите **Просмотр сведений**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59812335"
   
 1.  Убедитесь в том, что жесткий диск, подключенный к компьютеру, включен и работает правильно.  
   
-2.  Запустите команду **chkdsk /f /r** для устранения ошибок на жестком диске (**/f**) и восстановления читаемой информации из всех поврежденных секторов (**/r**). Дополнительные сведения о выполнении команды **chkdsk**см. в разделе [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562).  
+2.  Запустите команду **chkdsk /f /r** для устранения ошибок на жестком диске ( **/f**) и восстановления читаемой информации из всех поврежденных секторов ( **/r**). Дополнительные сведения о выполнении команды **chkdsk**см. в разделе [CHKDSK](https://go.microsoft.com/fwlink/?LinkId=206562).  
   
 3.  Убедитесь, что компьютер не был выключен или отключен от сети в процессе выполнения архивации.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "59812335"
   
         1.  В панели мониторинга выберите пункт **Система и безопасность**.  
   
-        2.  В разделе **Администрирование**выберите **Создание и форматирование разделов жесткого диска**.  
+        2.  В разделе **Администрирование** выберите **Создание и форматирование разделов жесткого диска**.  
   
         3.  Щелкните правой кнопкой мыши том, который требуется расширить. Если параметр **Расширение тома** активен, выберите его. Если параметр неактивен, вы не можете расширить том.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "59812335"
   
 6.  Запуск команды **vssadmin** в командной строке для устранения неполадок службы теневого копирования (VSS). Дополнительные сведения о команде **vssadmin**см. в разделе [VSSADMIN](https://go.microsoft.com/fwlink/?LinkID=94332).  
   
-##  <a name="BKMK_TroubleshootBackupHealthAlertIssues"></a> Устранение неполадок оповещений о работоспособности резервного копирования  
+##  <a name="troubleshoot-backup-health-alert-issues"></a><a name="BKMK_TroubleshootBackupHealthAlertIssues"></a>Устранение проблем с предупреждениями о работоспособности резервного копирования  
   
 ### <a name="errors"></a>Ошибки  
   
@@ -140,7 +140,7 @@ ms.locfileid: "59812335"
   
 -   Поставщик службы архивации данных клиентского компьютера для решений Windows Server завершил свою работу  
   
-### <a name="resolutions"></a>Действия по устранению  
+### <a name="resolutions"></a>Решения  
   
 ##### <a name="to-troubleshoot-a-backup-health-alert"></a>Для устранения неполадок оповещения работоспособности архивации  
   
@@ -175,13 +175,13 @@ ms.locfileid: "59812335"
   
 5.  Проверьте наличие оповещений о других неполадках, которые могут повлиять на архивацию данных клиента.  
   
-##  <a name="BKMK_FileAndFolder"></a> Устранение неполадок с восстановлением файла или папки  
+##  <a name="troubleshoot-a-file-or-folder-restore"></a><a name="BKMK_FileAndFolder"></a>Устранение неполадок при восстановлении файла или папки  
   
 ### <a name="errors"></a>Ошибки  
   
 -   Не удалось успешно завершить восстановление файла или папки  
   
-### <a name="resolutions"></a>Действия по устранению  
+### <a name="resolutions"></a>Решения  
   
 ##### <a name="to-troubleshoot-an-unsuccessful-file-or-folder-restore"></a>Устранение неполадок после неудачного восстановления файла или папки  
   
@@ -205,7 +205,7 @@ ms.locfileid: "59812335"
   
         1.  Откройте командную строку с правами администратора и выполните следующую команду:  
   
-             **%ProgramFiles%\Windows Server\Bin\BackupDriverInstaller.exe?  я**  
+             **%Програмфилес%\виндовс Сервер\бин\баккупдриверинсталлер.ЕКСЕ? -i**  
   
         2.  Обновите диспетчер устройств. Драйвер должен отобразиться в списке.  
   
@@ -217,31 +217,31 @@ ms.locfileid: "59812335"
   
         2.  Щелкните вкладку **Драйвер**, а затем нажмите кнопку **Обновить драйвер**.  
   
-        3.  Щелкните **Автоматический поиск обновленных драйверов**и следуйте инструкциям на экране для обновления драйвера.  
+        3.  Щелкните **Автоматический поиск обновленных драйверов** и следуйте инструкциям на экране для обновления драйвера.  
   
     6.  Закройте диспетчер устройств.  
   
 6.  Удалите с компьютера ПО Windows Server Essentials Connector, а затем переустановите его. Дополнительные сведения см. в разделах [Удаление программного обеспечения Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13) и [Установка программного обеспечения Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_11).  
   
-##  <a name="BKMK_Troubleshootfullsystemrestoreissues"></a> Устранение неполадок полное восстановление системы  
+##  <a name="troubleshoot-a-full-system-restore"></a><a name="BKMK_Troubleshootfullsystemrestoreissues"></a>Устранение неполадок при полном восстановлении системы  
   
 ### <a name="errors"></a>Ошибки  
   
 -   Не удается войти в учетную запись клиентского компьютера после полного восстановления системы.  
   
-### <a name="resolutions"></a>Действия по устранению  
+### <a name="resolutions"></a>Решения  
  Если имя компьютера было изменено, а затем возникла необходимость в восстановлении резервной копии, которая была создана до изменения имени компьютера, после восстановления при попытке войти под учетной записью домена будет выводиться ошибка со следующим текстом: "База данных диспетчера учетных записей на сервере не содержит записи для регистрации компьютера через доверительные отношения с этой рабочей станции.". Чтобы снова получить доступ к данному компьютеру, удалите программное обеспечение Connector, удалите компьютер из домена Windows, а затем снова подключите его к серверу.  
   
 ##### <a name="to-regain-network-access-to-a-restored-computer-after-a-computer-name-change"></a>Повторное получение доступа к сети для восстановленного компьютера после изменения его имени  
   
 1.  Войдите в учетную запись компьютера с правами локального администратора.  
   
-2.  Удалите программное обеспечение Connector. Дополнительные сведения см. в разделе [Uninstall the Connector software](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
+2.  Удалите программное обеспечение Connector. Дополнительные сведения см. в разделе [Удаление программного обеспечения Connector](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_13).  
   
-3.  Удаление компьютера из домена. Дополнительные сведения см. в разделе [Remove a computer from a Windows domain](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8).  
+3.  Удаление компьютера из домена. Дополнительные сведения см. в разделе [Удаление компьютера из домена Windows](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_8).  
   
 4.  Повторное подключение компьютера к серверу. Дополнительные сведения см. в разделе [Подключение компьютеров к серверу?](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 -   [Поддержка Windows Server Essentials](Support-Windows-Server-Essentials.md)

@@ -10,20 +10,20 @@ ms.technology: networking-da
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22ccd5c3-0a26-484c-88c8-54119d1228cc
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: edbc9a3e44f3f2aa2586f7c82462255beec3733b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f2874f5ab75723f6a0fec137dd1f1cd7d6a2efbb
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404999"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310966"
 ---
 # <a name="directaccess-deployment-paths-in-windows-server"></a>Возможности развертывания DirectAccess в Windows Server
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В этом разделе содержится список документации для двух основных путей развертывания удаленного доступа: **Basic** и **Advanced**.  
+В этом разделе содержится список документации для двух основных путей развертывания удаленного доступа: **базовый** и **Расширенный**.  
   
 Приведенный ниже раздел можно использовать для ознакомления с различиями между основными и расширенными путями развертывания, а также с ссылками на документацию для поиска руководства по развертыванию, которое лучше всего подходит для ваших целей.  
   

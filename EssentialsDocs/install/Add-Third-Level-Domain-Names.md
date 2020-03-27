@@ -1,9 +1,9 @@
 ---
 title: Добавление имен доменов третьего уровня
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,40 +12,40 @@ ms.assetid: e5b4a362-1881-4024-ae4e-cc3b05e50103
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 64bf24e45155fdd981e2061b3de7ebce1c53b36c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: 5608fb5417b9e958b45d150879daccc3b7767e59
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59833325"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310237"
 ---
 # <a name="add-third-level-domain-names"></a>Добавление имен доменов третьего уровня
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 В мастере настройки доменных имен можно предоставить пользователям возможность запрашивать имена доменов третьего уровня. Для этого необходимо создать и установить сборку кода, которая используется диспетчером доменов операционной системы.  
   
 ## <a name="create-a-provider-of-third-level-domain-names"></a>Создание поставщика имен доменов третьего уровня  
  Чтобы сделать доступными имена доменов третьего уровня, можно создать и установить сборку кода, которая предоставляет мастеру имена доменов. Для этого необходимо выполнить следующие задачи.  
   
--   [Добавление в сборку реализации интерфейса IDomainSignupProvider](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
+-   [Добавление в сборку реализации интерфейса Идомаинсигнуппровидер](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup)  
   
--   [Добавление в сборку реализации интерфейса IDomainMaintenanceProvider к сборке](Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
+-   [Добавление в сборку реализации интерфейса Идомаинмаинтенанцепровидер](Add-Third-Level-Domain-Names.md#BKMK_DomainMaintenance)  
   
--   [Поставьте на сборке подпись Authenticode](Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
+-   [Подписать сборку с помощью подписи Authenticode](Add-Third-Level-Domain-Names.md#BKMK_SignAssembly)  
   
--   [Установка сборки на компьютере-образце](Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
+-   [Установка сборки на эталонном компьютере](Add-Third-Level-Domain-Names.md#BKMK_InstallAssembly)  
   
--   [Перезапустите службу управление доменными именами Windows Server](Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
+-   [Перезапуск службы управления доменными именами Windows Server](Add-Third-Level-Domain-Names.md#BKMK_RestartService)  
   
-###  <a name="BKMK_DomainSignup"></a> Добавление в сборку реализации интерфейса IDomainSignupProvider  
+###  <a name="add-an-implementation-of-the-idomainsignupprovider-interface-to-the-assembly"></a><a name="BKMK_DomainSignup"></a>Добавление в сборку реализации интерфейса Идомаинсигнуппровидер  
  Интерфейс IDomainSignupProvider используется для обеспечения доступности доменов для мастера.  
   
 ##### <a name="to-add-the-idomainsignupprovider-code-to-the-assembly"></a>Добавление в сборку кода интерфейса IDomainSignupProvider  
   
 1.  Откройте Visual Studio 2008 с правами администратора, щелкнув эту программу правой кнопкой мыши в меню **Пуск** и выбрав команду **Запуск от имени администратора**.  
   
-2.  В меню **Файл**выберите команду **Создать**и щелкните пункт **Проект**.  
+2.  В меню **Файл** выберите команду **Создать** и щелкните пункт **Проект**.  
   
 3.  В диалоговом окне **Новый проект** последовательно щелкните **Visual C#** и **Библиотека классов**, введите имя решения и нажмите кнопку **ОК**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59833325"
   
 5.  Добавьте ссылки на файлы Wssg.Web.DomainManagerObjectModel.dll, CertManaged.dll, WssgCertMgmt.dll и WssgCommon.dll.  
   
-6.  Добавьте следующие инструкции using.  
+6.  Добавьте следующие директивы using.  
   
     ```c#  
   
@@ -278,7 +278,7 @@ ms.locfileid: "59833325"
   
 21. Сохраните проект, но закрывайте его, поскольку в него будут добавляться объекты при выполнении следующей процедуры. До завершения этой процедуры построение проекта невозможно.  
   
-###  <a name="BKMK_DomainMaintenance"></a> Добавление в сборку реализации интерфейса IDomainMaintenanceProvider к сборке  
+###  <a name="add-an-implementation-of-the-idomainmaintenanceprovider-interface-to-the-assembly"></a><a name="BKMK_DomainMaintenance"></a>Добавление в сборку реализации интерфейса Идомаинмаинтенанцепровидер  
  Интерфейс IDomainMaintenanceProvider используется для обслуживания домена после его создания.  
   
 ##### <a name="to-add-the-idomainmaintenanceprovider-code-to-the-assembly"></a>Добавление в сборку кода интерфейса IDomainMaintenanceProvider  
@@ -517,10 +517,10 @@ ms.locfileid: "59833325"
   
 14. Сохраните решение и выполните его построение.  
   
-###  <a name="BKMK_SignAssembly"></a> Поставьте на сборке подпись Authenticode  
+###  <a name="sign-the-assembly-with-an-authenticode-signature"></a><a name="BKMK_SignAssembly"></a>Подписать сборку с помощью подписи Authenticode  
  Чтобы сборку можно было использовать в операционной системе, на ней должна быть подпись Authenticode. Дополнительные сведения о подписи сборки см. в разделе [Подпись и проверка кода с помощью Authenticode](https://msdn.microsoft.com/library/ms537364\(VS.85\).aspx#SignCode).  
   
-###  <a name="BKMK_InstallAssembly"></a> Установка сборки на компьютере-образце  
+###  <a name="install-the-assembly-on-the-reference-computer"></a><a name="BKMK_InstallAssembly"></a>Установка сборки на эталонном компьютере  
  Поместите сборку в папку на компьютере-образце. Запишите путь к этой папке, поскольку его необходимо добавить в реестр на следующем шаге.  
   
 ### <a name="add-a-key-to-the-registry"></a>Добавление раздела реестра  
@@ -528,13 +528,13 @@ ms.locfileid: "59833325"
   
 ##### <a name="to-add-a-key-to-the-registry"></a>Добавление раздела в реестр  
   
-1.  На компьютере-образце нажмите кнопку **Пуск**, введите команду **regedit**и нажмите клавишу **ВВОД**.  
+1.  На компьютере-образце нажмите кнопку **Пуск**, введите команду **regedit** и нажмите клавишу **ВВОД**.  
   
 2.  В левой области последовательно разверните узлы **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft**, **Windows Server**, **Domain Managers** и **Providers**.  
   
 3.  Щелкните правой кнопкой мыши раздел **Providers**, выберите команду **Создать** и щелкните пункт **Раздел**.  
   
-4.  В качестве имени раздела введите идентификатор поставщика. Идентификатор — это GUID, определенный для поставщика на шаге 8 процедуры [Добавление в сборку реализации интерфейса IDomainSignupProvider](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
+4.  В качестве имени раздела введите идентификатор поставщика. Этот идентификатор представляет собой GUID, определенный для поставщика на шаге 8 процедуры [Добавление в сборку реализации интерфейса IDomainSignupProvider](Add-Third-Level-Domain-Names.md#BKMK_DomainSignup).  
   
 5.  Щелкните правой кнопкой мыши созданный раздел и выберите пункт **Строковый параметр**.  
   
@@ -560,27 +560,27 @@ ms.locfileid: "59833325"
   
 16. Введите полное имя класса поставщика, определенного в сборке, и нажмите кнопку **ОК**.  
   
-###  <a name="BKMK_RestartService"></a> Перезапустите службу управление доменными именами Windows Server  
+###  <a name="restart-the-windows-server-domain-name-management-service"></a><a name="BKMK_RestartService"></a>Перезапуск службы управления доменными именами Windows Server  
  Чтобы поставщик стал доступным для операционной системы, необходимо перезапустить службу управления доменными именами Windows Server.  
   
 ##### <a name="restart-the-service"></a>Перезапуск службы  
   
-1.  Нажмите кнопку **Пуск**, введите **mmc**, а затем нажмите клавишу **Ввод**.  
+1.  Нажмите кнопку **Пуск**, введите **mmc**, а затем нажмите клавишу **ВВОД**.  
   
 2.  Если консоль не отображается в оснастке "Службы", добавьте ее в список, выполнив следующие действия.  
   
     1.  В меню **Файл** выберите команду **Добавить или удалить оснастку**.  
   
-    2.  В списке **Доступные оснастки** выберите пункт **Службы**и нажмите кнопку **Добавить**.  
+    2.  В списке **Доступные оснастки** выберите пункт **Службы** и нажмите кнопку **Добавить**.  
   
-    3.  Убедитесь, что в диалоговом окне **Службы** выбран **локальный компьютер** , и нажмите кнопку **Готово**.  
+    3.  Убедитесь, что в диалоговом окне **Службы** выбран **локальный компьютер**, и нажмите кнопку **Готово**.  
   
     4.  Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно **Добавить или удалить оснастку**.  
   
-3.  Дважды щелкните пункт **Службы**, прокрутите список вниз, выберите **Управление доменами Windows Server**и щелкните **Перезапуск службы**.  
+3.  Дважды щелкните пункт **Службы**, прокрутите список вниз, выберите **Управление доменами Windows Server** и щелкните **Перезапуск службы**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

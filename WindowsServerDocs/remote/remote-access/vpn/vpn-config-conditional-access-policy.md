@@ -11,16 +11,16 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.topic: article
 ms.date: 05/25/2018
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 22983c085f2b9d9e7e16810e25c6fa50111f9fa6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 479c9fe4895f4181f8a776f024a7ff3c047fbc0e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404351"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80307815"
 ---
 # <a name="step-73-configure-the-conditional-access-policy"></a>Шаг 7.3. Настройка политики условного доступа
 
@@ -62,7 +62,7 @@ ms.locfileid: "71404351"
 
     в. На странице " **Выбор** " выберите группу **VPN-пользователей** и нажмите **кнопку Выбрать**.
 
-    г) На странице **Пользователи и группы** выберите **Готово**.
+    . На странице **Пользователи и группы** выберите **Готово**.
 
 5. На странице **создать** выполните следующие действия.
 
@@ -72,7 +72,7 @@ ms.locfileid: "71404351"
 
     б. На странице **облачные приложения** выберите **выбрать приложения**.
 
-    г) Выберите **VPN-сервер**.
+    . Выберите **VPN-сервер**.
 
 6.  На **новой** странице, чтобы открыть страницу **предоставление** , в разделе **элементы управления** выберите **предоставить**.
 
@@ -88,10 +88,10 @@ ms.locfileid: "71404351"
 
 8.  На **новой** странице в разделе **Включение политики**выберите **вкл**.
 
-    ![Включить политику](../../media/Always-On-Vpn/15.png)
+    ![Включение политики](../../media/Always-On-Vpn/15.png)
 
 9.  На странице **создать** нажмите кнопку **создать**.
 
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 [Шаг 7,4. Развертывание корневых сертификатов условного доступа в локальную службу AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md). на этом шаге вы развернете корневой сертификат условного доступа в качестве доверенного корневого сертификата для проверки подлинности VPN в локальной службе AD.

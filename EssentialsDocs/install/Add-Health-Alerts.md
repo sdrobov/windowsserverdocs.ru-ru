@@ -1,9 +1,9 @@
 ---
 title: Добавление оповещений о работоспособности
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: 270e0aac-dc42-46f3-a20b-a68ffbded06d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8c3ba4746211690ad52f775b8bdc1ccf9b6c74b7
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4166d65d0008f3427947322b285221e7b0090029
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433727"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80310256"
 ---
 # <a name="add-health-alerts"></a>Добавление оповещений о работоспособности
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Надстройка работоспособности предоставляет определения для оповещений, проверок работоспособности и исправления сетевых неполадок. Надстройка работоспособности состоит из XML-файлов, в которых содержатся заметки для кода или данных, используемых для оценки работоспособности определенных компонентов. Надстройки работоспособности создаются разработчиками и устанавливаются на сервере и клиентских компьютерах администратором.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66433727"
     >  При выполнении этой задачи не производится установка двоичных файлов. Двоичные файлы необходимо вручную скопировать в папку **%ProgramFiles%\Windows Server\Bin** на клиентском компьютере.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

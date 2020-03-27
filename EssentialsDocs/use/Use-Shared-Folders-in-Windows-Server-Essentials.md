@@ -1,9 +1,9 @@
 ---
 title: Использование общих папок в Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,50 +12,50 @@ ms.assetid: cb7f3d7d-4225-409a-9f6b-34a106e8dd24
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: eda19a5117a70fbaff04ec3fb3b89aa6e212f962
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: e5e76f3eb136078635d7db2fb7859c307a77d468
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816985"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313122"
 ---
 # <a name="use-shared-folders-in-windows-server-essentials"></a>Использование общих папок в Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  Windows Server Essentials представляет собой центральное местоположение для всех данных и файлов, доступных через общие папки, размещенные на сервере.  
   
  Существует несколько разных способов осуществления доступа к общим папкам в Windows Server Essentials с устройства, подключенного к серверу.  
   
 
--   [С помощью панели запуска Windows Server Essentials](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingLaunchpad)  
+-   [Использование панели запуска Windows Server Essentials](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingLaunchpad)  
   
--   [С помощью удаленного веб-доступа](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
+-   [Использование удаленного Веб-доступ](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
   
--   [С помощью приложения My Server для Windows Phone](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
+-   [Использование моего серверного приложения для Windows Phone](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
   
--   [С помощью приложения My Server для Windows 8](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
+-   [Использование моего серверного приложения для Windows 8](Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
   
-##  <a name="BKMK_UsingLaunchpad"></a> С помощью панели запуска Windows Server Essentials  
- Благодаря мастеру подключения компьютера к серверу можно работать с панелью запуска с любого компьютера, подключенного к серверу. Дополнительные сведения о подключении компьютера к серверу см. в разделе [Connect computers to the server](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+##  <a name="using-the-windows-server-essentials-launchpad"></a><a name="BKMK_UsingLaunchpad"></a>Использование панели запуска Windows Server Essentials  
+ Благодаря мастеру подключения компьютера к серверу можно работать с панелью запуска с любого компьютера, подключенного к серверу. Дополнительные сведения о подключении компьютера к серверу см. в разделе [Подключение компьютеров к серверу](Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
--   [С помощью панели запуска Windows Server Essentials](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingLaunchpad)  
+-   [Использование панели запуска Windows Server Essentials](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingLaunchpad)  
   
--   [С помощью удаленного веб-доступа](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
+-   [Использование удаленного Веб-доступ](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_UsingRWA)  
   
--   [С помощью приложения My Server для Windows Phone](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
+-   [Использование моего серверного приложения для Windows Phone](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_Phone)  
   
--   [С помощью приложения My Server для Windows 8](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
+-   [Использование моего серверного приложения для Windows 8](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md#BKMK_App)  
   
-##  <a name="BKMK_UsingLaunchpad"></a> С помощью панели запуска Windows Server Essentials  
- Благодаря мастеру подключения компьютера к серверу можно работать с панелью запуска с любого компьютера, подключенного к серверу. Дополнительные сведения о подключении компьютера к серверу см. в разделе [Connect computers to the server](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
+##  <a name="using-the-windows-server-essentials-launchpad"></a><a name="BKMK_UsingLaunchpad"></a>Использование панели запуска Windows Server Essentials  
+ Благодаря мастеру подключения компьютера к серверу можно работать с панелью запуска с любого компьютера, подключенного к серверу. Дополнительные сведения о подключении компьютера к серверу см. в разделе [Подключение компьютеров к серверу](../use/Get-Connected-in-Windows-Server-Essentials.md#BKMK_9).  
 
   
  После подключения компьютера к серверу ярлык "Панель запуска" добавляется в область уведомлений на рабочем столе. Дважды щелкните значок панели запуска и введите свои сетевые учетные данные, чтобы получить доступ к общим папкам с панели запуска. С помощью ссылки "Общие папки" на панели запуска можно загружать файлы из любых отображаемых общих папок и отправлять файлы в эти папки, перетаскивая файлы с локального компьютера в общие папки, и наоборот. Общие папки позволяют осуществлять потоковую передачу музыки и видео, воспроизводить слайдшоу и записывать ТВ-программы на любом компьютере, подключенном к серверу, а также воспроизводить слайдшоу для просмотра изображений.  
   
- Дополнительные сведения о панели запуска, см. в разделе [Обзор стартовой платформы](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md).  
+ Дополнительные сведения о панели запуска см. в разделе [Общие сведения](../manage/Overview-of-the-Launchpad-in-Windows-Server-Essentials.md)об элементе "Панель запуска".  
   
-###  <a name="BKMK_Launchpad"></a> Копирование или перемещение общих файлов или папок с помощью панели запуска  
+###  <a name="copy-or-move-shared-files-or-folders-using-the-launchpad"></a><a name="BKMK_Launchpad"></a>Копирование или перемещение общих файлов или папок с помощью панели запуска  
  При необходимости копировать или переместить общие файлы в Windows Server Essentials с помощью панели запуска щелкните вкладку **Общие папки** на панели запуска.  
   
  Если требуется переместить файл или папку из одного местоположения в другое в разделе **Общие папки**, можно воспользоваться методом перетаскивания так же, как при перемещении файлов и папок на компьютере. Откройте папку, которая содержит файл или папку для перемещения. Затем откройте нужную конечную папку в другом окне. Поместите окна на рабочем столе рядом друг с другом, чтобы было видно содержимое обоих, а затем перетащите файл или папку из первой папки во вторую.  
@@ -65,51 +65,51 @@ ms.locfileid: "59816985"
   
  Если требуется копировать файлы или папки из одного местоположения в другое в разделе **Общие папки**, можно воспользоваться методом копирования и вставки так же, как копируются файлы на компьютере. Откройте папку, которая содержит файлы для копирования. Щелкните правой кнопкой файлы, которые требуется копировать, и нажмите **Копировать**. Щелкните правой кнопкой папку, в которой нужно вставить копированные файлы, а затем щелкните **Вставить**.  
   
-##  <a name="BKMK_UsingRWA"></a> С помощью удаленного веб-доступа  
+##  <a name="using-remote-web-access"></a><a name="BKMK_UsingRWA"></a>Использование удаленного Веб-доступ  
 
- Можно осуществлять доступ к общим файлам и папкам с любого удаленного компьютера, используя веб-сайт удаленного веб-доступа. На компьютере в серверной сети, чтобы получить доступ к веб-сайт удаленного веб-доступа, откройте Интернет-браузер и введите https://<servername \> /remote. С помощью удаленного веб-доступа можно просматривать файлы в общих папках и управлять ими. Пошаговые инструкции см. в разделе [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ Можно осуществлять доступ к общим файлам и папкам с любого удаленного компьютера, используя веб-сайт удаленного веб-доступа. На компьютере в сети сервера для доступа к веб-сайту удаленного Веб-доступ откройте браузер и введите https://< ServerName\>/ремоте. С помощью удаленного веб-доступа можно просматривать файлы в общих папках и управлять ими. Пошаговые инструкции см. в разделе [Использование удаленного веб-доступ](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
- Можно осуществлять доступ к общим файлам и папкам с любого удаленного компьютера, используя веб-сайт удаленного веб-доступа. На компьютере в серверной сети, чтобы получить доступ к веб-сайт удаленного веб-доступа, откройте Интернет-браузер и введите https://<servername \> /remote. С помощью удаленного веб-доступа можно просматривать файлы в общих папках и управлять ими. Пошаговые инструкции см. в разделе [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ Можно осуществлять доступ к общим файлам и папкам с любого удаленного компьютера, используя веб-сайт удаленного веб-доступа. На компьютере в сети сервера для доступа к веб-сайту удаленного Веб-доступ откройте браузер и введите https://< ServerName\>/ремоте. С помощью удаленного веб-доступа можно просматривать файлы в общих папках и управлять ими. Пошаговые инструкции см. в разделе [Использование удаленного веб-доступ](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
   
 > [!NOTE]
->  Необходимо включить удаленный веб-доступ на сервере, чтобы осуществлять доступ к веб-сайту удаленного веб-доступа. Сведения об управлении удаленным веб-доступом см. в разделе [Manage Remote Web Access](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+>  Необходимо включить удаленный веб-доступ на сервере, чтобы осуществлять доступ к веб-сайту удаленного веб-доступа. Дополнительные сведения об управлении удаленными Веб-доступ см. в разделе [Manage remote веб-доступ](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
-###  <a name="BKMK_2"></a> Создание, переименование, перемещение, удалить или скопировать файлы и папки в удаленного веб-доступа  
+###  <a name="create-rename-move-delete-or-copy-files-and-folders-in-remote-web-access"></a><a name="BKMK_2"></a>Создание, переименование, перемещение, удаление или копирование файлов и папок в удаленном Веб-доступ  
 
- Удаленный веб-доступ позволяет создавать новые папки в существующей общей папке, переименовывать, перемещать, копировать или удалять файлы и папки на сервере. Дополнительные сведения см. в разделе Create, переименование, перемещение, удаление и копирование файлов и папок в удаленного веб-доступа? в разделе [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ Удаленный веб-доступ позволяет создавать новые папки в существующей общей папке, переименовывать, перемещать, копировать или удалять файлы и папки на сервере. Дополнительные сведения см. в разделе Создание, переименование, перемещение, удаление или копирование файлов и папок в удаленном Веб-доступ. в разделе [Использование удаленного веб-доступ](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
-###  <a name="BKMK_3"></a> Отправка и загрузка файлов в системе удаленного веб-доступа  
- На вкладке **Общие папки** удаленного веб-доступа можно отправлять и загружать файлы. Дополнительные сведения см. в разделе Отправка и загрузка файлов в системе удаленного веб-доступа? в разделе [Use Remote Web Access](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_3"></a>Отправка и скачивание файлов в удаленном Веб-доступ  
+ На вкладке **Общие папки** удаленного веб-доступа можно отправлять и загружать файлы. Дополнительные сведения см. в разделе Отправка и скачивание файлов в удаленном Веб-доступ. в разделе [Использование удаленного веб-доступ](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
- Удаленный веб-доступ позволяет создавать новые папки в существующей общей папке, переименовывать, перемещать, копировать или удалять файлы и папки на сервере. Дополнительные сведения см. в разделе Create, переименование, перемещение, удаление и копирование файлов и папок в удаленного веб-доступа? в разделе [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+ Удаленный веб-доступ позволяет создавать новые папки в существующей общей папке, переименовывать, перемещать, копировать или удалять файлы и папки на сервере. Дополнительные сведения см. в разделе Создание, переименование, перемещение, удаление или копирование файлов и папок в удаленном Веб-доступ. в разделе [Использование удаленного веб-доступ](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
   
-###  <a name="BKMK_3"></a> Отправка и загрузка файлов в системе удаленного веб-доступа  
- На вкладке **Общие папки** удаленного веб-доступа можно отправлять и загружать файлы. Дополнительные сведения см. в разделе Отправка и загрузка файлов в системе удаленного веб-доступа? в разделе [Use Remote Web Access](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+###  <a name="upload-and-download-files-in-remote-web-access"></a><a name="BKMK_3"></a>Отправка и скачивание файлов в удаленном Веб-доступ  
+ На вкладке **Общие папки** удаленного веб-доступа можно отправлять и загружать файлы. Дополнительные сведения см. в разделе Отправка и скачивание файлов в удаленном Веб-доступ. в разделе [Использование удаленного веб-доступ](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
 
   
-##  <a name="BKMK_Phone"></a> С помощью приложения My Server для Windows Phone  
+##  <a name="using-my-server-app-for-windows-phone"></a><a name="BKMK_Phone"></a>Использование моего серверного приложения для Windows Phone  
  Доступ к общим папкам можно осуществлять через систему Windows Phone, используя приложение "Мой сервер" для Windows Phone. Это приложение можно загрузить из [Магазина Windows Phone](http://www.windowsphone.com/apps/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a).  
   
-##  <a name="BKMK_App"></a> С помощью приложения My Server для Windows 8  
+##  <a name="using-my-server-app-for-windows-8"></a><a name="BKMK_App"></a>Использование моего серверного приложения для Windows 8  
  Доступ к общим папкам можно осуществлять и через Windows 8, используя приложение "Мой сервер" для Windows 8. Это приложение можно загрузить из [Магазина приложений для Windows 8](https://windows.microsoft.com/windows-8/apps).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 -   [Управление папками сервера](../manage/Manage-Server-Folders-in-Windows-Server-Essentials.md)  
   
--   [Управление серверным хранилищем](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
+-   [Управление хранилищем сервера](../manage/Manage-Server-Storage-in-Windows-Server-Essentials.md)  
   
 
--   [Установка подключения](Get-Connected-in-Windows-Server-Essentials.md)  
+-   [Подключиться](Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Удаленная работа](Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Воспроизведение мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md)
+-   [Воспроизведение цифрового мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md)
 
--   [Установка подключения](../use/Get-Connected-in-Windows-Server-Essentials.md)  
+-   [Подключиться](../use/Get-Connected-in-Windows-Server-Essentials.md)  
   
 -   [Удаленная работа](../use/Work-Remotely-in-Windows-Server-Essentials.md)  
   
--   [Воспроизведение мультимедиа](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
+-   [Воспроизведение цифрового мультимедиа](../use/Play-Digital-Media-in-Windows-Server-Essentials.md)
 

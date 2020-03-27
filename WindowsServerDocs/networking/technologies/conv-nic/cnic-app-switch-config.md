@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 6d53c797-fb67-4b9e-9066-1c9a8b76d2aa
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/14/2018
-ms.openlocfilehash: d10e8ca6e4689b89a8b9532f77613f17280282b1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 57fc944461254e78635913ac298bacc26a0789f2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355483"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309617"
 ---
 # <a name="physical-switch-configuration-for-converged-nic"></a>Конфигурация физического коммутатора для Объединенных сетевых адаптеров
 
@@ -45,7 +45,7 @@ ms.locfileid: "71355483"
 13. показывать запуск \(убедитесь, что конфигурация правильно настроена для портов\)
 14. WR \(, чтобы сохранить параметры между перезагрузками коммутатора\)
 
-### <a name="tips"></a>Предпринять
+### <a name="tips"></a>Советы.
 1.  No #command # инвертирует команду
 2.  Как добавить новую виртуальную ЛС: int VLAN 100 \(, если сеть хранения находится в 100 на виртуальной ЛС\)
 3.  Проверка существующих виртуальных ЛС: Отображение виртуальной ЛС
@@ -119,7 +119,7 @@ ms.locfileid: "71355483"
     
 --- 
 
-## <a name="related-topics"></a>Статьи по теме
+## <a name="related-topics"></a>Связанные разделы
 
 - [Конфигурация с согласованным СЕТЕВЫМ адаптером с одним сетевым адаптером](cnic-single.md)
 - [Конфигурация сетевого адаптера Объединенных сетевых адаптеров](cnic-datacenter.md)

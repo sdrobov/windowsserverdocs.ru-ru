@@ -10,19 +10,19 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/24/2018
-ms.openlocfilehash: 779c7bc4f6c4ff1e66fca68ced8b0eeb4d54abc5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f85f593ec3dca33c5b35fb065c7d84ed12ea9af2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406067"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309823"
 ---
 # <a name="create-delete-or-update-tenant-virtual-networks"></a>Создание, удаление или обновление виртуальных сетей клиентов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе вы узнаете, как создавать, удалять и обновлять виртуальные сети виртуализации сети Hyper-V после развертывания программно-определяемой сети (SDN). Виртуализация сети Hyper-V помогает изолировать сети клиентов, чтобы каждая сеть клиентов была отдельной сущностью. Каждая сущность не имеет возможности перекрестного подключения, если только не настроены рабочие нагрузки общего доступа.   
   
@@ -43,9 +43,9 @@ ms.locfileid: "71406067"
 ---------|---------|---------  
 Fabrikam    |5001         |24.30.1.0/24           
 Fabrikam     |5002         | 24.30.2.0/20          
-Компанией    |6001         |  24.30.1.0/24         
-Компанией    | 6002        |  24.30.2.0/24         
-Компанией     | 6003        | 24.30.3.0/24          
+Contoso    |6001         |  24.30.1.0/24         
+Contoso    | 6002        |  24.30.2.0/24         
+Contoso     | 6003        | 24.30.3.0/24          
   
 В следующем примере скрипта используются команды Windows PowerShell, экспортированные из модуля **нетворкконтроллер** для создания виртуальной сети Contoso и одной подсети:   
   

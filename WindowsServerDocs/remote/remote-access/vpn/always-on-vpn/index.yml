@@ -8,8 +8,8 @@ metadata:
   text: 'Always On VPN предоставляет единое решение для удаленного доступа для всех подключенных устройств, в том числе личных устройств. Благодаря Always On VPN соединение может предназначаться не только для пользователя или устройства, но и для них обоих. Например, можно включить аутентификацию устройств для управления удаленными устройствами, а затем включить аутентификацию пользователей для подключений к внутренним сайтам и службам компании.'
   keywords: 'Windows 10, Windows Server, Windows Server 2016, удаленный доступ, VPN'
   ms.localizationpriority: high
-  author: shortpatti
-  ms.author: pashort
+  author: eross-msft
+  ms.author: lizross
   ms.date: 11/05/2018
   ms.topic: article
   ms.devlang: na

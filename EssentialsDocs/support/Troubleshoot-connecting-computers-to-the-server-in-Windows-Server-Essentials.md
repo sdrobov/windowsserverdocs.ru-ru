@@ -1,9 +1,9 @@
 ---
 title: Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,104 +12,104 @@ ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 52ec9bf1caa4cb4c7ed661eec1448f3f2a4be980
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 4e2a707bf72ca7e371b6503116262e737102c769
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66436052"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318595"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials 
   
- Этот раздел содержит рекомендации по устранению неполадок, которые могут возникнуть при подключении компьютера к серверу, на котором работает Windows Server Essentials или Windows Server Essentials.  
+ В этом разделе содержатся рекомендации по устранению неполадок, которые могут возникнуть при подключении компьютера к серверу под Windows Server Essentials или Windows Server Essentials.  
   
 > [!NOTE]
->  Самые последние сведения об устранении неполадок от сообщества пользователей Windows Server Essentials и Windows Server Essentials, мы рекомендуем посетить [форум по Windows Server Essentials](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.  
+>  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials и Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.  
   
  В этом разделе представлены решения следующих проблем.  
   
 
--   Проблема 1. [Причина 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
+-   Выпуск 1. [выпуск 1](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
   
--   Проблема 2. [Причина 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
+-   Выпуск 2. [выпуск 2](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
   
--   Проблема 3. [Причина 3](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
+-   Вопрос 3. [выпуск 3](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
   
--   Проблема 4. [Проблема 4](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
+-   Выпуск 4. [выпуск 4](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
   
--   Проблема 5. [Проблема 5](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
+-   Причина 5: [Выпуск 5](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
   
--   Проблема 6. [Проблема 6](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
+-   Вопрос 6. [Выпуск 6](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
   
--   Проблема 7. [Проблема 7](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
+-   Выпуск 7. [Выпуск 7](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
   
--   Проблема 8. [Проблема 8](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
+-   Ошибка 8. [Ошибка 8](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
   
--   Проблема 9. [Проблема 9](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
+-   Выпуск 9. [Выпуск 9](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
   
--   Проблема 10. [Проблема 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
+-   Выпуск 10: [выпуск 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
--   Проблема 11. [Проблема 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
+-   Выпуск 11. [выпуск 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
 
--   Проблема 1. [Причина 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
+-   Выпуск 1. [выпуск 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
   
--   Проблема 2. [Причина 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
+-   Выпуск 2. [выпуск 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
   
--   Проблема 3. [Причина 3](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
+-   Вопрос 3. [выпуск 3](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
   
--   Проблема 4. [Проблема 4](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
+-   Выпуск 4. [выпуск 4](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
   
--   Проблема 5. [Проблема 5](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
+-   Причина 5: [Выпуск 5](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
   
--   Проблема 6. [Проблема 6](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
+-   Вопрос 6. [Выпуск 6](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
   
--   Проблема 7. [Проблема 7](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
+-   Выпуск 7. [Выпуск 7](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
   
--   Проблема 8. [Проблема 8](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
+-   Ошибка 8. [Ошибка 8](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
   
--   Проблема 9. [Проблема 9](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
+-   Выпуск 9. [Выпуск 9](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
   
--   Проблема 10. [Проблема 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
+-   Выпуск 10: [выпуск 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
--   Проблема 11. [Проблема 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
+-   Выпуск 11. [выпуск 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
 
   
-##  <a name="BMRK_Package"></a> Причина 1  
+##  <a name="issue-1"></a><a name="BMRK_Package"></a>Выпуск 1  
  **Проблема**  
   
- Получить пакет установки завершилась неудачно. Попробуйте установить соединитель Windows Server Essentials еще раз. Если проблема будет повторяться, обратитесь к администратору вашей сетевая ошибка при подключении компьютера к серверу  
+ Не удалось установить пакет. Попробуйте установить соединитель Windows Server Essentials еще раз. Если проблема не исчезнет, обратитесь к администратору сети при подключении компьютера к серверу.  
   
  **Описание**  
   
- Эта проблема может возникать при подключении компьютера к серверу, на котором работает Windows Server Essentials, хотя другие обновления Windows или установки приложений, ожидающих выполнения, и установка Connector отменяется.  
+ Эта проблема может возникать при подключении компьютера к серверу под Windows Server Essentials, в то время как другие обновления Windows или приложения ожидают установки соединителя.  
   
  **Решение**  
   
  Завершите все обновления или установки приложений. При появлении соответствующего запроса перезагрузите компьютер.  
   
-##  <a name="BKMK_ConnectorIssue2"></a> Причина 2  
+##  <a name="issue-2"></a><a name="BKMK_ConnectorIssue2"></a>Выпуск 2  
  **Проблема**  
   
  Не удается присоединить компьютер к Windows Server Essentials  
   
  **Описание**  
   
- Компьютеры, которые содержат символы, отличные от ASCII имя компьютера не может быть присоединен к Windows Server Essentials. Если имя компьютера содержит символы, отличные от ASCII, выводится сообщение об ошибке: "Произошла непредвиденная ошибка".  
+ Компьютеры, которые не имеют символов ASCII в имени компьютера, не могут быть присоединены к Windows Server Essentials. Если имя компьютера содержит символы, отличные от ASCII, выводится сообщение об ошибке: "Произошла непредвиденная ошибка".  
   
  **Решение**  
   
- Присвойте клиентскому компьютеру с именем, которое содержит только символы ASCII и повторите попытку добавления компьютера к Windows Server Essentials.  
+ Переименуйте клиентский компьютер, указав имя, содержащее только символы ASCII, и повторите попытку добавить компьютер в Windows Server Essentials.  
   
-##  <a name="BKMK_ConnectorIssue2a"></a> Причина 3  
+##  <a name="issue-3"></a><a name="BKMK_ConnectorIssue2a"></a>Выпуск 3  
  **Проблема**  
   
- Ошибка соединителя, установки программного обеспечения отменена при подключении компьютера к серверу  
+ Я получаю сообщение об установке программного обеспечения соединителя отменено при подключении компьютера к серверу.  
   
  **Описание**  
   
- Чтобы иметь возможность подключения компьютера к серверу, она системы должна иметь разрешения на полный доступ для папок сервера, на панели мониторинга Windows Server Essentials. Если необходимые разрешения не были предоставлены, будет показано сообщение "Установка программного обеспечения Connector отменена".  
+ Для подключения компьютера к серверу СИСТЕМная учетная запись должна иметь разрешения на полный доступ к серверным папкам, отображаемым на панели мониторинга Windows Server Essentials. Если необходимые разрешения не были предоставлены, будет показано сообщение "Установка программного обеспечения Connector отменена".  
   
  **Решение**  
   
@@ -127,20 +127,20 @@ ms.locfileid: "66436052"
   
 5.  Щелкните правой кнопкой мыши папку сервера, а затем выберите пункт **Свойства**.  
   
-6.  Откройте вкладку **Безопасность**.  
+6.  Перейдите на вкладку **Безопасность**.  
   
-7.  Если для системной учетной записи разрешение **Полный доступ** запрещено, нажмите кнопку **Изменить**, а затем — **СИСТЕМА**. В разделе **Разрешения для системы**установите флажок **Разрешить** рядом с вариантом **Полный доступ**.  
+7.  Если для системной учетной записи разрешение **Полный доступ** запрещено, нажмите кнопку **Изменить**, а затем — **СИСТЕМА**. В разделе **Разрешения для системы** установите флажок **Разрешить** рядом с вариантом **Полный доступ**.  
   
-8.  Дважды нажмите **ОК** , чтобы обновить разрешения и закрыть окно **Свойства**.  
+8.  Дважды нажмите **ОК**, чтобы обновить разрешения и закрыть окно **Свойства**.  
   
-##  <a name="BKMK_ConnectorIssueNetFramework"></a> Проблема 4  
+##  <a name="issue-4"></a><a name="BKMK_ConnectorIssueNetFramework"></a>Выпуск 4  
  **Проблема**  
   
- Я получаю To, запустите это приложение, необходимо установить одну из следующих версий платформы .NET Framework: V4.5.50709".  
+ Для запуска этого приложения необходимо установить одну из следующих версий .NET Framework: V 4.5.50709 "ошибка при подключении компьютера к серверу  
   
  **Описание**  
   
- При подключении компьютера к серверу, на котором работает Windows Server Essentials или Windows Server Essentials, мастер пытается установить .NET Framework версии 4.5.50709 на компьютере. Тем не менее если присутствует более ранней версии платформы .NET Framework 4.5, обновленный выпуск установить нельзя и попытка соединения завершается сообщением об ошибке: Для запуска этого приложения, необходимо установить один из следующих версий платформы .NET Framework: V4.5.50709. Обратитесь к издателю за инструкциями по получению соответствующей версии платформы .NET Framework.  
+ При подключении компьютера к серверу под управлением Windows Server Essentials или Windows Server Essentials мастер пытается установить .NET Framework версии 4.5.50709 на компьютере. Однако при наличии более ранней версии .NET Framework версии 4,5 невозможно установить обновленный выпуск, и попытка подключения завершится ошибкой: для запуска этого приложения необходимо установить одну из следующих версий .NET Framework: V 4.5.50709. Обратитесь к издателю выделения, чтобы получить инструкции по получению соответствующей версии .NET Framework.  
   
  **Решение**  
   
@@ -152,20 +152,20 @@ ms.locfileid: "66436052"
   
 2.  На панели управления в разделе **Программы** щелкните **Удаление программы**.  
   
-3.  Щелкните правой кнопкой мыши **Microsoft .NET Framework 4.5**и выберите команду **Удалить**.  
+3.  Щелкните правой кнопкой мыши **Microsoft .NET Framework 4.5** и выберите команду **Удалить**.  
   
 4.  После успешного удаления .NET Framework 4.5 подключите компьютер к серверу. Нужная версия .NET Framework 4.5 устанавливается вместе с ПО Connector.  
   
-##  <a name="BKMK_Time"></a> Проблема 5  
+##  <a name="issue-5"></a><a name="BKMK_Time"></a>Выпуск 5  
  **Проблема**  
   
- Я получаю сервер недоступен. Чтобы устранить эту проблему, обратитесь в службу лица, ответственного за вашей сети. сетевому администратору".  
+ Я получаю, что сервер недоступен. Чтобы устранить эту проблему, обратитесь к лицу, ответственному за вашу сеть. сетевому администратору".  
   
  **Описание**  
   
- Это может произойти, если дата и время на подключенном компьютере не синхронизированы с датой и временем на сервере.  Windows Server Essentials и Windows Server Essentials использовать службу синхронизации времени для синхронизации даты и времени на компьютерах в сети Windows Server Essentials или Windows Server Essentials. Синхронизация времени очень важна еще потому, что серверное время используется в установленном по умолчанию протоколе проверки подлинности как часть процесса проверки подлинности. Например если часы на клиентском компьютере не синхронизированы с правильную дату и время, Windows Server Essentials или Windows Server Essentials проверки подлинности может ошибочно интерпретировать запрос на вход как попытка вторжения и запрещать доступ пользователей.  
+ Это может произойти, если дата и время на подключенном компьютере не синхронизированы с датой и временем на сервере.  Windows Server Essentials и Windows Server Essentials используют службу синхронизации времени для синхронизации даты и времени компьютеров, работающих в сети Windows Server Essentials или Windows Server Essentials. Синхронизация времени очень важна еще потому, что серверное время используется в установленном по умолчанию протоколе проверки подлинности как часть процесса проверки подлинности. Например, если часы на клиентском компьютере не синхронизированы с правильными датой и временем, проверка подлинности Windows Server Essentials или Windows Server Essentials может ошибочно интерпретировать запрос на вход в систему в качестве попытки вторжения и запретить доступ пользователю.  
   
- Это может произойти, если менее 5% свободной памяти на сервере.  
+ Это может произойти, если объем свободной памяти сервера меньше 5%.  
   
  Это может произойти, если имеется VPN-подключение к Windows Essentials Server и предпринимается попытка настройки ПО Connector во внешней среде с помощью адреса домена.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66436052"
   
 1. На начальной странице клиентского компьютера откройте **панель управления**.  
   
-2. В панели управления щелкните **Часы, язык и регион**и **Дата и время**.  
+2. В панели управления щелкните **Часы, язык и регион** и **Дата и время**.  
   
 3. Щелкните **Изменить дату и время**, установите правильную дату и время и нажмите кнопку **ОК**.  
   
@@ -193,14 +193,14 @@ ms.locfileid: "66436052"
   
 #### <a name="to-change-the-date-and-time-on-the-server"></a>Изменение даты и времени на сервере  
   
-1.  Войдите на сервер, с помощью пароля, которая настраивается во время Windows Server Essentials или Windows Server Essentials установки и настройки.  
+1.  Войдите на сервер, используя пароль, настроенный во время установки и настройки Windows Server Essentials или Windows Server Essentials.  
   
     > [!NOTE]
     >  При удаленном администрировании сервера для входа на сервер необходимо использовать удаленное подключение к рабочему столу.  
   
 2.  На **начальной странице** откройте **Панель управления**.  
   
-3.  В панели управления щелкните **Часы, язык и регион**и **Дата и время**.  
+3.  В панели управления щелкните **Часы, язык и регион** и **Дата и время**.  
   
 4.  Щелкните **Изменить дату и время**, установите правильную дату и время и нажмите кнопку **ОК**.  
   
@@ -208,10 +208,10 @@ ms.locfileid: "66436052"
   
 6.  На клиентском компьютере повторите попытку подключения клиентского компьютера к серверу. Инструкции см. в подразделе "Подключение компьютеров к серверу".  
   
-##  <a name="BKMK_ServiceStopped"></a> Проблема 6  
+##  <a name="issue-6"></a><a name="BKMK_ServiceStopped"></a>Выпуск 6  
  **Проблема**  
   
- Я получаю произошла непредвиденная ошибка. Чтобы устранить эту проблему, обратитесь в службу лица, ответственного за вашей сети. сетевому администратору".  
+ Возникла непредвиденная ошибка. Чтобы устранить эту проблему, обратитесь к лицу, ответственному за вашу сеть. сетевому администратору".  
   
  **Описание**  
   
@@ -225,24 +225,24 @@ ms.locfileid: "66436052"
   
 1.  На **начальной** странице сервера откройте компонент **Администрирование**.  
   
-     В компоненте **Администрирование**правой кнопкой мыши щелкните **Internet Information Services (IIS)** и выберите **Открыть**.  
+     В компоненте **Администрирование** правой кнопкой мыши щелкните **Internet Information Services (IIS)** и выберите **Открыть**.  
   
 2.  В области навигации щелкните **Веб-службы сертификатов WSS**.  
   
 3.  На панели **Действия** нажмите кнопку **Начать**.  
   
-##  <a name="BKMK_ConnectorIssueReconnect"></a> Проблема 7  
+##  <a name="issue-7"></a><a name="BKMK_ConnectorIssueReconnect"></a>Выпуск 7  
  **Проблема**  
   
- При попытке подключения компьютера к серверу после неудачного подключения выводится предупреждение: компьютер с таким именем уже подключен к серверу  
+ Когда я пытаюсь снова подключить компьютер к серверу после неудачной попытки подключения, я получаю предупреждение о том, что компьютер с таким именем уже подключен к серверу.  
   
  **Описание**  
   
- Если предыдущая попытка подключения компьютера к серверу была отменена или прервана, при попытке повторного подключения может появиться следующее предупреждение: Компьютер с таким именем уже подключен к серверу. Это происходит потому, что сертификат был выдан при первой попытке подключения к серверу.  
+ Если предыдущая попытка подключения компьютера к серверу была прервана или прервана, при попытке подключения может появиться следующее предупреждение: компьютер с таким именем уже подключен к серверу. Это происходит потому, что сертификат был выдан при первой попытке подключения к серверу.  
   
  **Решение**. Если вы уверены, что никакой другой компьютер с таким же именем не подключен к серверу, нажмите кнопку **Далее** и следуйте инструкциям для завершения работы мастера **подключения компьютера к серверу**.  
   
-##  <a name="BKMK_JoinWin7"></a> Проблема 8  
+##  <a name="issue-8"></a><a name="BKMK_JoinWin7"></a>Выпуск 8  
  **Проблема**  
   
  При попытке подключения клиентского компьютера под управлением ОС Windows 7 Домашняя к серверу открывается веб-страница для запуска ПО Connector, но клиентский компьютер не может подключиться к серверу.  
@@ -255,30 +255,30 @@ ms.locfileid: "66436052"
   
  Отключите многоадресную рассылку на маршрутизаторе. На некоторых маршрутизаторах, возможно, потребуется отключить протокол маршрутизации RIP-2M. Дополнительные сведения см. в документации, предоставленной производителем маршрутизатора.  
   
-##  <a name="BKMK_ConnectorIssueAutologon"></a> Проблема 9  
+##  <a name="issue-9"></a><a name="BKMK_ConnectorIssueAutologon"></a>Выпуск 9  
  **Проблема**  
   
  После подключения компьютера к серверу перестал работать автоматический вход.  
   
  **Описание**  
   
- Если для учетной записи пользователя установлен автоматический вход, при подключении компьютера к Windows Server Essentials, эта настройка перезаписывается при установке по Connector на компьютере.  
+ Если для учетной записи пользователя задан автоматический вход во время подключения компьютера к Windows Server Essentials, этот параметр перезаписывается при установке программного обеспечения соединителя на компьютере.  
   
  **Решение** . Чтобы устранить эту проблему, при подключении компьютера к серверу запишите пароль, который используется для учетной записи пользователя. После установки ПО Connector настройте автоматический вход для этой учетной записи.  
   
 > [!NOTE]
->  Учетная запись домена Windows Server Essentials требуется пароль, отвечающий требованиям политики паролей по умолчанию.  
+>  Для учетной записи домена Windows Server Essentials требуется пароль, соответствующий требованиям политики паролей по умолчанию.  
   
-##  <a name="BKMK_ConnectorIssueOldLogs"></a> Проблема 10  
+##  <a name="issue-10"></a><a name="BKMK_ConnectorIssueOldLogs"></a>Выпуск 10  
  **Проблема**  
   
  Удаление предварительной версии ПО Connector не приводит к удалению существующих журналов.  
   
  **Описание**  
   
- После обновления с предварительной версии (бета-версии или версии-Кандидата) версии Windows Server Essentials на версии, необходимо удалить по Connector с каждого компьютера, который был подключен к серверу и затем подключите компьютер снова к установке версия программного обеспечения connector.  
+ После обновления предварительной версии (бета-версия или RC) Windows Server Essentials до выпущенной версии необходимо удалить программное обеспечение соединителя с каждого компьютера, подключенного к серверу, а затем снова подключиться к компьютеру, чтобы установить выпущенную версию. версия программного обеспечения соединителя.  
   
- Однако при удалении ПО Connector с сетевого компьютера существующие файлы журнала в папке %ProgramData%\Microsoft\Windows Server\Logs\ на этом компьютере не удаляются. Если вы не удалите папку журналов, файлы журналов могут быть повреждены при подключении компьютера к выпущенную версию Windows Server Essentials.  
+ Однако при удалении ПО Connector с сетевого компьютера существующие файлы журнала в папке %ProgramData%\Microsoft\Windows Server\Logs\ на этом компьютере не удаляются. Если не удалить папку Logs, файлы журнала могут быть повреждены при подключении компьютера к выпущенной версии Windows Server Essentials.  
   
  **Решение**. Во избежание повреждения файлов журнала вручную удалите папку журналов до повторного подключения клиентского компьютера к обновленному серверу.  
   
@@ -290,7 +290,7 @@ ms.locfileid: "66436052"
   
 3.  Повторное подключение компьютера к серверу. Будет установлена окончательная версия ПО Connector и создана новая папка журналов и файлы журналов.  
   
-##  <a name="BKMK_UpgradeClientOS"></a> Проблема 11  
+##  <a name="issue-11"></a><a name="BKMK_UpgradeClientOS"></a>Выпуск 11  
  **Проблема**  
   
  Необходимо обновить операционную систему на клиентском компьютере.  
@@ -301,12 +301,12 @@ ms.locfileid: "66436052"
   
  **Решение**  
   
- Перед обновлением клиентской операционной системы до другой версии (например, обновление Windows XP до Windows Vista или Windows Vista до Windows 7) следует удалить ПО Connector. Используйте компонент **Установка и удаление программ** на панели управления. После завершения обновления операционной системы клиента можно переустановить connector клиента, открыв http://<*server*> / connect через веб-браузер, где <*server*> — имя  Сервер Windows Server Essentials.  
+ Перед обновлением клиентской операционной системы до другой версии (например, обновление Windows XP до Windows Vista или Windows Vista до Windows 7) следует удалить ПО Connector. Используйте компонент **Установка и удаление программ** на панели управления. После завершения обновления клиентской операционной системы можно переустановить соединитель клиента, открыв http://<*server*>/Коннект в веб-браузере, где <*сервер*> является именем сервера Windows Server Essentials.  
   
  Если клиент уже был обновлен путем установки программного обеспечения Connector, воспользуйтесь компонентом **Установка и удаление программ** или **Программы и компоненты**, чтобы удалить программное обеспечение Connector. Затем установите программное обеспечение Connector еще раз.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 -   [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
--   [Windows 2012 Server Essentials подключения компьютера с устранения неполадок (TechNet Wiki)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+-   [Устранение неполадок в Windows 2012 Server Essentials Коннекткомпутер (вики-сайт TechNet)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)

@@ -1,9 +1,9 @@
 ---
 title: Настройка общих папок
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d8f52cbe76204bb00cb15c3093f69daf3d8abb6e
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 387f9570e87bd2bd65266489b0f3eac6c945e3be
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433535"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311916"
 ---
 # <a name="customize-shared-folders"></a>Настройка общих папок
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 По умолчанию папки сервера создаются в самом крупном разделе диска 0. Партнеры могут изменить их местоположение и указать дополнительные папки сервера, выполнив следующие действия:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "66433535"
   
    1.  На сервере переместите указатель мыши в правый верхний угол экрана и нажмите кнопку **Поиск**.  
   
-   2.  В поле поиска введите **regedit**, затем щелкните приложение **Regedit** .  
+   2.  В поле поиска введите **regedit**, затем щелкните приложение **Regedit**.  
   
    3.  В области навигации последовательно разверните **HKEY_LOCAL_MACHINE**, **SOFTWARE** и **Microsoft**.  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66433535"
   
    7.  Введите имя строки **CreateFoldersOnSystem**.  
   
-   8.  Нажмите правой кнопкой мыши запись **CreateFoldersOnSystem**, а затем выберите команду **Изменить**. Откроется диалоговое окно **Изменение строкового параметра** .  
+   8.  Нажмите правой кнопкой мыши запись **CreateFoldersOnSystem**, а затем выберите команду **Изменить**. Откроется диалоговое окно **Изменение строкового параметра**.  
   
-   9. Установите для нового раздела значение **1**и нажмите кнопку **ОК**.  
+   9. Установите для нового раздела значение **1** и нажмите кнопку **ОК**.  
   
 2. С помощью скрипта PostIC.cmd переместите папки в другое расположение или создайте дополнительные папки. См. следующий пример: [Пример 1. Создание настраиваемой папки и перемещение папок по умолчанию в новое расположение из PostIC.cmd с помощью Windows PowerShell](Customize-Shared-Folders.md#BKMK_Example1).  
   
-3. С помощью пакета SDK для решений Windows Server переместите папки в другое расположение или создайте дополнительные папки. См. следующий пример: [Пример 2. Создание настраиваемой папки и перемещение папок с помощью Windows Server Solutions SDK](Customize-Shared-Folders.md#BKMK_Example2).  
+3. С помощью пакета SDK для решений Windows Server переместите папки в другое расположение или создайте дополнительные папки. См. следующий пример: [Пример 2. Создание настраиваемой папки и перемещение папок по умолчанию с помощью пакета SDK для решений Windows Server](Customize-Shared-Folders.md#BKMK_Example2).  
   
    Партнеры могут также оставлять папки данных на диске C. В таком случае конечный пользователь или продавец может определить структуру папок данных на дисках с данными.  
   
-###  <a name="BKMK_Example1"></a> Пример 1. Создание настраиваемой папки и перемещение папок по умолчанию в новое расположение из PostIC.cmd с помощью Windows PowerShell  
+###  <a name="example-1-create-a-custom-folder-and-move-the-default-folders-to-a-new-location-from-posticcmd-by-using-windows-powershell"></a><a name="BKMK_Example1"></a>Пример 1. Создание настраиваемой папки и перемещение папок по умолчанию в новое расположение из папки POST. cmd с помощью Windows PowerShell  
   
 1.  Создайте файл PostIC.cmd для выполнения задач после завершения начальной настройки, как описано в разделе [Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66433535"
     Set ERRORLEVEL=%error_level%  
     ```  
   
-###  <a name="BKMK_Example2"></a> Пример 2. Создание настраиваемой папки и перемещение папок по умолчанию с помощью пакета SDK для решений Windows Server  
+###  <a name="example-2-create-a-custom-folder-and-move-an-existing-folder-by-using-the-windows-server-solutions-sdk"></a><a name="BKMK_Example2"></a>Пример 2. Создание настраиваемой папки и перемещение существующей папки с помощью пакета SDK для Windows Server Solutions  
  Созданный код может быть скомпилирован в исполняемый файл и впоследствии вызван из файла PostIC.cmd или напрямую вызван из установленной надстройки.  
   
 ```  
@@ -144,7 +144,7 @@ static void Main(string[] args)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

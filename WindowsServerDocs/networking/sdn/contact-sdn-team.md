@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: f9945c55-c2d0-448f-86dd-8c734e1b2987
-ms.author: pashort
+ms.author: lizross
 author: kallie-b
-ms.openlocfilehash: a62a661fc9bb665f71f0e16cb3298ff52f3137db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 84c0847313542953543316ceb6c3d9cffb99c2dc
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355988"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80309978"
 ---
 # <a name="contact-the-datacenter-and-cloud-networking-team"></a>Как связаться с рабочей группой Datacenter and Cloud Networking
 
@@ -23,17 +23,17 @@ ms.locfileid: "71355988"
 
 Существует множество способов связаться с Microsoft Teams, и пока мы делаем наши лучшие в команде SDN, чтобы отслеживать все возможности, используемые нашим сообществом, вот список форумов, которые чаще всего являются самыми активными. *Это ключевые ресурсы для наших пользователей, и, как таковые, они являются Отделом, который мы будем видеть ближе.*
 
-## <a name="twitterhttpstwittercommicrosoft_sdn"></a>[Twitter](https://twitter.com/Microsoft_SDN)
+## <a name="twitter"></a>[Twitter](https://twitter.com/Microsoft_SDN)
 
 Недавно мы запустили наше присутствие в Twitter в качестве [@Microsoft_SDN](https://twitter.com/Microsoft_SDN). Вы можете использовать наш обработчик Twitter, чтобы задавать вопросы, оставлять отзывы или создавать запросы к компонентам и документации.
 > В дополнение к месту, где можно связаться с вопросами, отзывами и запросами, рассмотрите Twitter, чтобы получить свой веб-канал на все встроенные функции SDN и контейнеры Windows — Twitter — это первое место, куда мы будем **публиковать новости**, объявлять о **новых функциях** и указывать сообществу на все наши **Последние блоги и ресурсы**.
 
-## <a name="github-microsoftsdn-repohttpsgithubcommicrosoftsdnissues"></a>GitHub ([репозиторий Microsoft/Sdn](https://github.com/Microsoft/SDN/issues))
+## <a name="github-microsoftsdn-repo"></a>GitHub ([репозиторий Microsoft/Sdn](https://github.com/Microsoft/SDN/issues))
 Перейдите [сюда](https://github.com/Microsoft/SDN/issues) , чтобы отправить проблемы в группу Sdn через наш репозиторий GitHub. Это лучшее место для **получения справки по устранению неполадок** или **сообщения об ошибках**.
 
 > GitHub — это лучшее место для обращения к нам по темам, которые содержат более подробные сведения, чем те, которые можно легко разместить в твите. *Нужна помощь с развертыванием SDN? Не знаете, как наши функции могут соответствовать уникальным потребностям вашей организации? Удерживается потенциальной ошибкой?* Все веские причины для того, чтобы приступить к работе с нами, отправив вопрос GitHub.
 
-## <a name="microsoft-docshttpsdocsmicrosoftcom"></a>[Документация Майкрософт](https://docs.microsoft.com/)
+## <a name="microsoft-docs"></a>[Документация Майкрософт](https://docs.microsoft.com/)
 [Документацию по сетям контейнеров](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) можно найти на [документация Майкрософт (Docs.Microsoft.com)](https://docs.microsoft.com/), которая содержит **встроенные функции комментирования**. Чтобы оставить или ответить на комментарий в Документация Майкрософт просто войти, прокрутите вниз до нижней части страницы Документация Майкрософт, на которую вы хотите создать ссылку, а затем внесите и отправьте комментарий.
 
 > [Документация Майкрософт](https://docs.microsoft.com/) — это новый унифицированный веб-сайт корпорации Майкрософт. Несмотря на то, что большая часть [документации по Sdn](https://technet.microsoft.com/windows-server-docs/networking/sdn/software-defined-networking) для нашей группы остается на TechNet, [Документация по сетям контейнера](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/container-networking) теперь находится на документация Майкрософт.
