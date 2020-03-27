@@ -6,15 +6,15 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: dfde2e21-f3d5-41e8-8492-cb3f0d028afb
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 05/25/2018
-ms.openlocfilehash: 0c154d4d4534f4c343107eecd158974b92903e39
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 26edf4d1ae4a30ccd9219392c7c4ee3604dcdad9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405564"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316367"
 ---
 # <a name="configure-network-policy-server-accounting"></a>Настройка учета сервера политики сети
 
@@ -90,7 +90,7 @@ ms.locfileid: "71405564"
 >[!NOTE]
 >NPS форматирует данные учета как XML-документ, который отправляется в **report_event** хранимую процедуру в базе данных SQL Server, назначенной в NPS. Чтобы SQL Server ведение журнала работало правильно, в базе данных SQL Server должна быть хранимая процедура с именем **report_event** , которая может принимать и анализировать XML-документы из NPS.
 
-Членство в группах "Администраторы домена" или "эквивалентное" является минимальным требованием для выполнения этой процедуры.
+Минимальные требования для выполнения этой процедуры: членство в группе Администраторы домена или эквивалентные права.
 
 ### <a name="to-configure-sql-server-logging-in-nps"></a>Настройка ведения журнала SQL Server в NPS
 
@@ -122,7 +122,7 @@ ms.locfileid: "71405564"
 **Имя пользователя ping** не установлено по умолчанию. В реестр необходимо добавить **имя пользователя ping** . Вы можете добавить запись в реестр с помощью редактора реестра.
 
 >[!CAUTION]
->Внесение в реестр неправильных изменений может привести к серьезным повреждениям системы. Перед внесением изменений следует сделать резервную копию всех ценных данных на компьютере.
+>Неправильное изменение реестра может вызвать серьезные проблемы. Перед внесением изменений следует создать резервные копии всех важных данных, имеющихся на компьютере.
 
 ### <a name="to-add-ping-user-name-to-the-registry"></a>Добавление ping user-name в реестр
 

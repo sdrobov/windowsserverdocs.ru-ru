@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6dfffd1e-f4f4-43b6-9e3c-49015ce34338
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 132db4811ee135d2ebff99efed6f53b5db1356ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: fd09c8e9c7a6f0ea7192ca20440c18f21ba65c93
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404432"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313753"
 ---
 # <a name="troubleshooting-web-probe-urls"></a>Диагностическая информация об URL-адресах веб-пробы
 
@@ -25,10 +25,10 @@ ms.locfileid: "71404432"
 
 Этот раздел содержит информацию по устранению проблем, связанных с командой `Set-DAEntryPointDC`. Чтобы убедиться, что полученное сообщение об ошибке относится к заданию контроллера домена для точки входа, проверьте наличие события с идентификатором 10065 в журнале событий Windows.  
   
-## <a name="SaveGPOSettings"></a>Сохранение параметров объекта групповой политики сервера  
+## <a name="saving-server-gpo-settings"></a><a name="SaveGPOSettings"></a>Сохранение параметров объекта групповой политики сервера  
 **Произошла ошибка**. Произошла ошибка при сохранении параметров удаленного доступа в GPO < GPO_name >.  
   
-Сведения об устранении этой ошибки см. в разделе Сохранение параметров объекта групповой политики сервера.  
+Чтобы устранить эту ошибку, см. раздел Сохранение параметров объекта групповой политики сервера.  
   
 ## <a name="remote-access-is-not-configured"></a>Удаленный доступ не настроен  
 **Произошла ошибка**. Удаленный доступ не настроен на < server_name >. Укажите имя сервера, включенного в многосайтовое развертывание.  

@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 68a94616-3c29-45bd-bd33-e4c578f119e1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 3225c42ab14e2ea1bc283f520b14c09ebc2254c4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 366e3e7eef6ac1e8682dd3064e0d133f21d1a8da
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396081"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315896"
 ---
 # <a name="unregister-an-nps-from-an-active-directory-domain"></a>Отмена регистрации сервера политики сети в домене Active Directory
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В процессе управления развертыванием NPS может оказаться полезным переместить сервер политики сети в другой домен, заменить NPS или снять с учета NPS. 
 

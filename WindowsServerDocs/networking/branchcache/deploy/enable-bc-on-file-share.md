@@ -10,18 +10,18 @@ ms.technology: networking-bc
 ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 9c465a9e-c504-44ec-9ebc-4e06ba54db30
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 37bab11a0914a3f6854314016bb59297aa6954f2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: d2b98e7ccd3604de60bfabf865404506569f8c82
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406355"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319130"
 ---
 # <a name="enable-branchcache-on-a-file-share-optional"></a>Включение BranchCache в общем файловом ресурсе (необязательно)
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Эту процедуру можно использовать для включения BranchCache в общей папке.  
   
@@ -32,9 +32,9 @@ ms.locfileid: "71406355"
   
 ### <a name="to-enable-branchcache-on-a-file-share"></a>Включение BranchCache в общей папке  
   
-1.  Откройте Windows PowerShell, введите **mmc**и затем нажмите клавишу "ВВОД". Отобразится консоль управления (MMC).  
+1.  Откройте Windows PowerShell, введите **mmc** и нажмите клавишу ВВОД. Отобразится консоль управления (MMC).  
   
-2.  В консоли MMC в меню **файл** выберите команду **Добавить или удалить оснастку**. Откроется диалоговое окно **Добавление или удаление оснасток** .  
+2.  В консоли MMC в меню **Консоль** выберите **Добавить или удалить оснастку**. Откроется диалоговое окно **Добавление или удаление оснасток** .  
   
 3.  В окне " **Установка и удаление оснасток**" в окне **Доступные оснастки**дважды щелкните **Общие папки**. Откроется Мастер общих папок с выбранным объектом локальный компьютер. Настройте предпочтительное представление, нажмите кнопку **Готово**, а затем нажмите кнопку **ОК**.  
   

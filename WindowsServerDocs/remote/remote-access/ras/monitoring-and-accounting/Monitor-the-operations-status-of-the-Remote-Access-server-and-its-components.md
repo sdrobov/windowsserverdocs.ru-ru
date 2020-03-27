@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 077a3a64-2fa3-4994-9711-ec1fbdc081ba
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: d0ad63ec88a428239a174a0217db94c44ab799bc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 64471ba81842fb91a7f6ef765e171949294102fa
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404547"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314181"
 ---
 # <a name="monitor-the-operations-status-of-the-remote-access-server-and-its-components"></a>Мониторинг статуса работы сервера удаленного доступа и его компонентов
 
@@ -42,7 +42,7 @@ ms.locfileid: "71404547"
   
 ![](../../../media/Monitor-the-operations-status-of-the-Remote-Access-server-and-its-components/PowerShellLogoSmall.gif)***<em>эквивалентных команд Windows PowerShell Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
   
 > [!NOTE]  
 > Команда для состояния операций кластера включена для справки.  

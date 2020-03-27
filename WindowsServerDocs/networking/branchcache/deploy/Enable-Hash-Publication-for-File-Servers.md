@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 5697aefe-1dd2-4ff9-82a9-da0afc182cb3
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 62ebddf85a2a86b9759d970f29b3c8edbeba63f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: f679a988baa99f853942a1357403ddfe2d60e4fc
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406469"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319269"
 ---
 # <a name="enable-hash-publication-for-file-servers"></a>Включение возможности публикации хэша для файловых серверов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Вы можете включить публикацию хэша BranchCache на одном файловом сервере или на нескольких файловых серверах.  
   

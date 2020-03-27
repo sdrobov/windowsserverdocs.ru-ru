@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: 2de954fd-a7d8-4cc6-85b1-b0c3c06f788f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6b72624f5817d2da5d2fb4e8622883e1ef4559cb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 63d630250b0b24937a3dfc01bcba7ec63faa3c3e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396178"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315962"
 ---
 # <a name="register-an-nps-in-an-active-directory-domain"></a>Регистрация сервера политики сети в домене Active Directory
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Этот раздел можно использовать для регистрации сервера, на котором выполняется сервер политики сети, в Windows Server 2016 в домене по умолчанию NPS или в другом домене.
 
@@ -61,7 +61,7 @@ ms.locfileid: "71396178"
 
 1. Откройте командную строку или Windows PowerShell. 
 
-2. В командной строке введите следующую команду: **netsh nps add registeredserver** &nbsp;*domain* &nbsp;*Server*, а затем нажмите клавишу ВВОД.
+2. В командной строке введите следующую команду: **netsh nps add registeredserver** &nbsp;*домен* &nbsp;*Server*, а затем нажмите клавишу ВВОД.
 
 >[!NOTE]
 >В предыдущей команде *domain* — это доменное имя DNS домена, в котором вы хотите зарегистрировать NPS, а *Server* — имя компьютера NPS.

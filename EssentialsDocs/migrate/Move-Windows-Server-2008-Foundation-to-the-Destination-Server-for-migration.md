@@ -1,9 +1,9 @@
 ---
 title: Перенос параметров и данных Windows Server 2008 Foundation на целевой сервер для миграции Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,28 +12,28 @@ ms.assetid: 3ff7d040-ebd1-421c-80db-765deacedd4c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3d9e662a6474823cae42d0a2abec60963273ca18
-ms.sourcegitcommit: 9a4ab3a0d00b06ff16173aed616624c857589459
+ms.openlocfilehash: 61a5caee1aba9de5f60bf0723ee0dadaf4871e5e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66828548"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318846"
 ---
 # <a name="move-windows-server-2008-foundation-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Перенос параметров и данных Windows Server 2008 Foundation на целевой сервер для миграции Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Перенесите параметры и данные на целевой сервер следующим образом:
 
 1. [Копирование данных на целевой сервер (необязательно)](#copy-data-to-the-destination-server)
 
-2. [Импорт учетных записей пользователей Active Directory для панели мониторинга Windows Server Essentials (необязательно)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
+2. [Импорт Active Directory учетных записей пользователей на панель мониторинга Windows Server Essentials (необязательно)](#import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard)
 
 3. [Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор](#move-the-dhcp-server-role-from-the-source-server-to-the-router)
 
 4. [Настройка сети](#configure-the-network) 
 
-5. [Сопоставить разрешенные компьютеры с учетных записей пользователей](#map-permitted-computers-to-user-accounts)
+5. [Сопоставьте разрешенные компьютеры учетным записям пользователей](#map-permitted-computers-to-user-accounts)
   
 ## <a name="copy-data-to-the-destination-server"></a>Копирование данных на целевой сервер
  Перед копированием данных с исходного сервера на целевой сервер выполните следующие действия.  
@@ -53,17 +53,17 @@ ms.locfileid: "66828548"
     `robocopy \\<SourceServerName> \<SharedSourceFolderName> \\<DestinationServerName> \<SharedDestinationFolderName> /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`  
   
      Где
-     - \<SourceServerName\> имя исходного сервера
-     - \<SharedSourceFolderName\> — имя общей папки на исходном сервере
-     - \<DestinationServerName\> — это имя конечного сервера
-     - \<SharedDestinationFolderName\> — общая папка на целевом сервере, в который будут копироваться данные.  
+     - \<SourceServerName\> — имя исходного сервера.
+     - \<Шаредсаурцефолдернаме\> — имя общей папки на исходном сервере.
+     - \<Дестинатионсервернаме\> — имя целевого сервера,
+     - \<Шареддестинатионфолдернаме\> — это общая папка на целевом сервере, куда будут копироваться данные.  
   
 3.  Повторите предыдущую операцию для каждой общей папки, которую вы перемещаете с исходного сервера.  
   
-## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Импорт учетных записей пользователей Active Directory на панель мониторинга Windows Server Essentials
- По умолчанию все учетные записи пользователей, созданные на исходном сервере, автоматически переносятся на панели мониторинга в Windows Server Essentials. Однако процесс автоматического переноса учетной записи пользователя Active Directory завершится сбоем, если все свойства не будут соответствовать требованиям миграции. Для импорта пользователей Active Directory можно использовать следующий командлет Windows PowerShell.  
+## <a name="import-active-directory-user-accounts-to-the-windows-server-essentials-dashboard"></a>Импорт Active Directory учетных записей пользователей на панель мониторинга Windows Server Essentials
+ По умолчанию все учетные записи пользователей, созданные на исходном сервере, автоматически переносятся на панель мониторинга в Windows Server Essentials. Однако процесс автоматического переноса учетной записи пользователя Active Directory завершится сбоем, если все свойства не будут соответствовать требованиям миграции. Для импорта пользователей Active Directory можно использовать следующий командлет Windows PowerShell.  
   
-#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Импорт учетной записи пользователя Active Directory на панель мониторинга Windows Server Essentials
+#### <a name="to-import-an-active-directory-user-account-to-the-windows-server-essentials-dashboard"></a>Импорт учетной записи Active Directory пользователя на панель мониторинга Windows Server Essentials
   
 1.  Войдите на целевой сервер как администратор домена.  
   
@@ -104,18 +104,18 @@ ms.locfileid: "66828548"
   
 1. На целевом сервере откройте панель мониторинга.  
   
-2. На панели мониторинга на **начальной** странице щелкните **Настройка**, затем **Настройка повсеместного доступа**и установите флажок **Щелкните, чтобы настроить повсеместный доступ** .  
+2. На панели мониторинга на **начальной** странице щелкните **Настройка**, затем **Настройка повсеместного доступа** и установите флажок **Щелкните, чтобы настроить повсеместный доступ**.  
   
 3. Выполните инструкции в мастере для настройки маршрутизатора и доменных имен.  
   
    Если ваш маршрутизатор не поддерживает инфраструктуру UPnP, или если инфраструктура UPnP отключена, то рядом с именем маршрутизатора может появиться желтый значок предупреждения. Убедитесь, что открыты следующие порты, и что они будут направляться на IP-адрес целевого сервера.  
   
--   Порт 80: Веб-трафик HTTP  
+-   Порт 80: веб-трафик HTTP  
   
--   Порт 443: Веб-трафик HTTPS  
+-   Порт 443: веб-трафик HTTPS  
   
 ## <a name="map-permitted-computers-to-user-accounts"></a>Сопоставление разрешенных компьютеров с учетными записями пользователей  
- В Windows Server Essentials пользователь должен быть явно назначен компьютеру, чтобы он отображался в удаленного веб-доступа. Каждая учетная запись пользователя, которая переносится с Windows Server 2008 Foundation, должна быть сопоставлена с одним или несколькими компьютерами.  
+ В Windows Server Essentials пользователь должен быть явно назначен компьютеру для отображения в удаленном Веб-доступ. Каждая учетная запись пользователя, которая переносится с Windows Server 2008 Foundation, должна быть сопоставлена с одним или несколькими компьютерами.  
   
 #### <a name="to-map-user-accounts-to-computers"></a>Сопоставление учетных записей и компьютеров  
   
@@ -125,9 +125,9 @@ ms.locfileid: "66828548"
   
 3.  В списке учетных записей пользователей щелкните правой кнопкой мыши учетную запись пользователя и нажмите кнопку **Просмотреть свойства учетной записи**.  
   
-4.  Перейдите на вкладку **Повсеместный доступ** , а затем установите флажок **Разрешить удаленный веб-доступ и доступ к веб-приложениям служб**.  
+4.  Перейдите на вкладку **Повсеместный доступ**, а затем установите флажок **Разрешить удаленный веб-доступ и доступ к веб-приложениям служб**.  
   
-5.  Выберите **Общие папки**, затем **Компьютеры**, затем **Ссылки главной страницы**и нажмите кнопку **Применить**.  
+5.  Выберите **Общие папки**, затем **Компьютеры**, затем **Ссылки главной страницы** и нажмите кнопку **Применить**.  
   
 6.  Перейдите на вкладку **Доступ к компьютеру**, а затем щелкните имя компьютера, доступ к которому вы хотите разрешить.  
   

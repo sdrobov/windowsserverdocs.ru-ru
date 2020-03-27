@@ -10,19 +10,19 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 08/26/2018
-ms.openlocfilehash: 854adf0e7bb2a8715e3d447c04e2f09c3470a781
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1faf0112953146959ce2ec587c083c9ae9fed9c5
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355833"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317615"
 ---
 # <a name="understand-the-usage-of-virtual-networks-and-vlans"></a>Общие сведения об использовании виртуальных сетей и виртуальных ЛС
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе вы узнаете о виртуальных сетях виртуализации сети Hyper-V и о том, чем они отличаются от виртуальных локальных сетей (VLAN). Виртуализация сети Hyper-V позволяет создавать виртуальные сети наложения, также называемые виртуальными сетями.
 

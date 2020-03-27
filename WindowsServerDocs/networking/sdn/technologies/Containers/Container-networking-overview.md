@@ -10,19 +10,19 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 318659e5-e4a5-4e46-99d6-211dfc46f6b8
-ms.author: pashort
+ms.author: lizross
 author: jmesser81
 ms.date: 09/04/2018
-ms.openlocfilehash: 352b4303b7cf08a0c53712e46a309b8365c10d08
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e8ec74ff0ebf0f0cb87db4d79ed5d37583f9beb9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71355675"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317266"
 ---
 # <a name="container-networking-overview"></a>Обзор сетевых подключений контейнеров
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе представлен обзор сетевого стека для контейнеров Windows, а также приведены ссылки на дополнительные рекомендации по созданию, настройке сетей контейнеров и управлению ими.
 
@@ -37,8 +37,8 @@ ms.locfileid: "71355675"
 
 Чтобы включить изоляцию между контейнерами на одном узле, необходимо создать сетевой сегмент для каждого контейнера Windows Server и Hyper-V. Для подключения к виртуальному коммутатору контейнеры Windows Server используют виртуальный сетевой адаптер узла. Для подключения к виртуальному коммутатору контейнеры Hyper-V используют сетевой адаптер синтетической виртуальной машины (не предоставляется служебной виртуальной машине). 
 
-## <a name="related-topics"></a>См. также 
+## <a name="related-topics"></a>Связанные разделы 
 
-- [Сетевые контейнеры Windows](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture): Узнайте, как создавать сети контейнеров и управлять ими для развертываний без наложения и SDN.
+- [Сетевые подключения контейнеров Windows](https://docs.microsoft.com/virtualization/windowscontainers/container-networking/architecture). Узнайте, как создавать сети контейнеров и управлять ими для развертываний без наложения и Sdn.
 
-- [Подключите конечные точки контейнера к виртуальной сети клиента](../../manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md): Узнайте, как создавать сети контейнеров для наложения виртуальных сетей и управлять ими с помощью SDN. 
+- [Подключение конечных точек контейнера к виртуальной сети клиента](../../manage/Connect-container-endpoints-to-a-Tenant-Virtual-Network.md). Узнайте, как создавать и администрировать сети контейнеров для наложения виртуальных сетей с помощью Sdn. 

@@ -6,15 +6,15 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 0cafb1cc-5798-42f5-89b6-3ffe7ac024ba
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 09/20/2018
-ms.openlocfilehash: 8c354d53db983d0437749de918b2d5f12ede0f5b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a83a36ce7a47f0ebde35bf93bdca20796dd37a28
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405694"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316884"
 ---
 # <a name="software-only-so-features-and-technologies"></a>Только программные функции и технологии
 Функции только программного обеспечения реализуются как часть операционной системы и не зависят от базовых сетевых адаптеров. Иногда для оптимальной работы эти функции нуждаются в некоторой настройке сетевой карты. К таким примерам относятся такие компоненты Hyper-v, как качество обслуживания виртуальной машины (Вмкос), списки управления доступом (ACL) и компоненты, отличные от Hyper-V, такие как объединение сетевых карт.
@@ -34,7 +34,7 @@ ms.locfileid: "71405694"
 
 Дополнительные сведения о расширенных списках управления доступом к портам в этой библиотеке см. в разделе [Создание политик безопасности с помощью расширенных списков управления доступом к портам](https://docs.microsoft.com/windows-server/virtualization/hyper-v-virtual-switch/Create-Security-Policies-with-Extended-Port-Access-Control-Lists).
 
-## <a name="nic-teaming"></a>Объединение сетевых карт
+## <a name="nic-teaming"></a>объединение сетевых карт.
 
 Объединение сетевых карт, также называемое резервированием сетевых карт, представляет собой совокупность нескольких портов сетевой карты в сущности, которую узел воспринимает как один порт NIC. Объединение сетевых карт защищает от сбоев одного порта NIC (или подключенного к нему кабеля). Он также объединяет сетевой трафик для повышения пропускной способности. Дополнительные сведения см. в разделе [Объединение сетевых карт](https://docs.microsoft.com/windows-server/networking/technologies/nic-teaming/nic-teaming).
 

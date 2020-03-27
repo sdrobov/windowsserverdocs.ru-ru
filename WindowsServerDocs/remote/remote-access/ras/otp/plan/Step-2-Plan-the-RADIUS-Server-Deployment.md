@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2d6ad863-02a5-49b0-9aff-d189e78b2b80
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: a991b312a0938a3809acd2b94c00aa678f5b41da
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 44f8514bd046d2c5f526e85309af430383bf1ec1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404392"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313571"
 ---
 # <a name="step-2-plan-the-radius-server-deployment"></a>Шаг 2. Планирование развертывания сервера RADIUS
 
@@ -29,7 +29,7 @@ ms.locfileid: "71404392"
 |----|--------|  
 |2,1. Планирование сервера RADIUS|Для сервера проверки подлинности OTP удаленный доступ в Windows Server 2016 и Windows Server 2012 поддерживает любой сервер OTP с поддержкой RADIUS, поддерживающий протокол проверки пароля (PAP).|  
   
-## <a name="BKMK_1.1"></a>2,1. Планирование сервера RADIUS  
+## <a name="21-plan-the-radius-server"></a><a name="BKMK_1.1"></a>2,1. Планирование сервера RADIUS  
 При планировании RADIUS-сервера для проверки подлинности OTP Обратите внимание на следующее:  
   
 -   Для большинства типов развертываний OTP необходимо настроить сервер удаленного доступа в качестве агента RADIUS. Дополнительные сведения см. в документации по поставщику OTP.  

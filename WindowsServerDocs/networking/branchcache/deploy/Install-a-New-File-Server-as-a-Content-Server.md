@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 1f49fc3c-28a6-4d3d-b787-1be9e61e792f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 489006c50ccbfa1f452d56b1a18217692d45cb1f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 5abe1520de24d366df43210219119ae9f806adc4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406460"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319237"
 ---
 # <a name="install-a-new-file-server-as-a-content-server"></a>Установка нового файлового сервера в качестве сервера содержимого
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Эту процедуру можно использовать для установки роли сервера файловых служб и службы роли **BranchCache для сетевых файлов** на компьютере под Windows Server 2016.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "71406460"
   
 ### <a name="to-install-file-services-and-the-branchcache-for-network-files-role-service"></a>Установка файловых служб и службы роли BranchCache для сетевых файлов  
   
-1.  Откройте диспетчер серверов, щелкните **Управление**, а затем нажмите кнопку **Добавить роли и компоненты**. Откроется мастер добавления ролей и компонентов. На странице **Прежде чем приступить к работе** нажмите кнопку **Далее**.  
+1.  Откройте диспетчер серверов, щелкните **Управление**, а затем нажмите кнопку **Добавить роли и компоненты**. Откроется мастер добавления ролей и компонентов. На странице **Перед началом работы** нажмите кнопку **Далее**.  
   
 2.  В списке **выберите тип установки**убедитесь, что установлен флажок установить на основе **ролей или компонентов** , а затем нажмите кнопку **Далее**.  
   

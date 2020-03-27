@@ -7,14 +7,14 @@ ms.technology: networking
 ms.topic: article
 ms.date: ''
 ms.assetid: 6de4232d-b0b3-4e43-8735-ebae35ae4f9f
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: f338ddf0a7d3a4fe41277ddbf49b0c3db34ae11b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e2e59b70b102e7ca942e2aafb8b216fecd62fc32
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395696"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315149"
 ---
 # <a name="windows-server-supported-networking-scenarios"></a>Поддерживаемые сценарии сетевого взаимодействия в Windows Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "71395696"
 >[!IMPORTANT]
 >Для всех производственных сценариев используйте последние подписанные драйверы оборудования от изготовителя оборудования \(OEM\) или независимого поставщика оборудования \(\)IHV.
   
-## <a name="bkmk_supp"></a>Поддерживаемые сценарии работы в сети
+## <a name="supported-networking-scenarios"></a><a name="bkmk_supp"></a>Поддерживаемые сценарии работы в сети
 
 Этот раздел содержит сведения о поддерживаемых сетевых сценариях для Windows Server 2016 и содержит следующие категории сценариев.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "71395696"
 
 - [Переключить встроенную объединение \(набор\) сценариев](#bkmk_set)
   
-### <a name="bkmk_sdn"></a>Сценарии программно-определяемой сети (SDN)
+### <a name="software-defined-networking-sdn-scenarios"></a><a name="bkmk_sdn"></a>Сценарии программно-определяемой сети (SDN)
  
 Для развертывания сценариев SDN в Windows Server 2016 можно использовать следующую документацию.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в разделе [программно &#40;определяемая сетевая Sdn&#41;](sdn/software-defined-networking.md).  
   
-#### <a name="bkmk_netc"></a>Сценарии сетевого контроллера
+#### <a name="network-controller-scenarios"></a><a name="bkmk_netc"></a>Сценарии сетевого контроллера
 
 Сценарии сетевого контроллера позволяют:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в разделе [Сетевой контроллер](sdn/technologies/network-controller/Network-Controller.md).  
   
-#### <a name="bkmk_netf"></a>Сценарии виртуализации сетевых функций (НФВ)  
+#### <a name="network-function-virtualization-nfv-scenarios"></a><a name="bkmk_netf"></a>Сценарии виртуализации сетевых функций (НФВ)  
 Сценарии НФВ позволяют:  
   
 -   Разверните и используйте программную подсистему балансировки нагрузки для распределения трафика обмена и подсистемамми.  
@@ -84,7 +84,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в статье [виртуализация сетевой функции](sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md).  
   
-### <a name="bkmk_netp"></a>Сценарии сетевой платформы
+### <a name="network-platform-scenarios"></a><a name="bkmk_netp"></a>Сценарии сетевой платформы
 
 В сценариях, описанных в этом разделе, Сетевая группа Windows Server поддерживает использование любого сертифицированного драйвера Windows Server 2016. Обратитесь к сетевой карте \(сетевому АДАПТЕРу\) производителю, чтобы убедиться в наличии последних обновлений драйверов.
   
@@ -98,7 +98,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в [ &#40;разделе RDMA&#41; с удаленным доступом к памяти и включение &#40;набора&#41;внедренных команд](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md).  
   
-#### <a name="bkmk_switch"></a>Сценарии виртуального коммутатора Hyper-V
+#### <a name="hyper-v-virtual-switch-scenarios"></a><a name="bkmk_switch"></a>Сценарии виртуального коммутатора Hyper-V
 
 Сценарии виртуального коммутатора Hyper-V позволяют выполнять следующие задачи:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в [ &#40;разделе RDMA&#41; с удаленным доступом к памяти и переключение &#40;набора&#41; включенных команд](../virtualization/hyper-v-virtual-switch/RDMA-and-Switch-Embedded-Teaming.md) .  
   
-### <a name="bkmk_dns"></a>Сценарии DNS-сервера
+### <a name="dns-server-scenarios"></a><a name="bkmk_dns"></a>Сценарии DNS-сервера
 
 Сценарии DNS-сервера позволяют:  
   
@@ -138,7 +138,7 @@ ms.locfileid: "71395696"
   
 Дополнительные сведения см. в разделах [новые возможности DNS-клиента в Windows server 2016](dns/What-s-New-in-DNS-Client.md) и новые возможности [DNS-сервера в Windows Server 2016](dns/What-s-New-in-DNS-Server.md).  
   
-### <a name="bkmk_ipam"></a>Сценарии IPAM с DHCP и DNS
+### <a name="ipam-scenarios-with-dhcp-and-dns"></a><a name="bkmk_ipam"></a>Сценарии IPAM с DHCP и DNS
 
 Сценарии IPAM позволяют выполнять следующие задачи:  
   
@@ -152,7 +152,7 @@ ms.locfileid: "71395696"
   
     Дополнительные сведения см. в статье [Управление IPAM](technologies/ipam/Manage-IPAM.md).  
   
-### <a name="bkmk_nicteam"></a>Сценарии объединения сетевых карт
+### <a name="nic-teaming-scenarios"></a><a name="bkmk_nicteam"></a>Сценарии объединения сетевых карт
 
 Сценарии объединения сетевых карт позволяют:  
   
@@ -169,7 +169,7 @@ ms.locfileid: "71395696"
 
 Дополнительные сведения см. в разделе [Объединение сетевых карт](technologies/nic-teaming/NIC-Teaming.md). 
 
-### <a name="bkmk_set"></a>Переключить встроенную объединение \(набор\) сценариев
+### <a name="switch-embedded-teaming-set-scenarios"></a><a name="bkmk_set"></a>Переключить встроенную объединение \(набор\) сценариев
 
 — Это альтернативное решение для объединения сетевых карт, которое можно использовать в средах, включающих Hyper-V и стек программно-определяемых сетей (SDN) в Windows Server 2016. Установите некоторые функции объединения сетевых карт в виртуальный коммутатор Hyper-V. 
 
@@ -177,7 +177,7 @@ ms.locfileid: "71395696"
   
  
   
-## <a name="bkmk_unsupp"></a>Неподдерживаемые сценарии сети  
+## <a name="unsupported-networking-scenarios"></a><a name="bkmk_unsupp"></a>Неподдерживаемые сценарии сети  
 В Windows Server 2016 не поддерживаются следующие сценарии работы с сетью.  
   
 -   Виртуальные сети клиента на основе виртуальной ЛС.  

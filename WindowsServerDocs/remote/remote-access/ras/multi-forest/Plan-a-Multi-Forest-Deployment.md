@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8acc260f-d6d1-4d32-9e3a-1fd0b2a71586
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2a0f04a3ff7797d18f7647416dc99319860c7030
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8e483f5986a5a23123495e3a13440ddc57a6c521
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404517"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314044"
 ---
 # <a name="plan-a-multi-forest-deployment"></a>Планирование многолесового развертывания
 
@@ -25,7 +25,7 @@ ms.locfileid: "71404517"
 
 В этом разделе описываются этапы планирования, необходимые при настройке удаленного доступа в многолесовом развертывании.  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
 Перед началом развертывания этого сценария ознакомьтесь со списком важных требований.  
   
 -   Необходимо двустороннее доверие.  
@@ -38,7 +38,7 @@ ms.locfileid: "71404517"
   
 В дополнение к этому администратор удаленного доступа должен быть локальным администратором на всех серверах удаленного доступа, включая серверы удаленного доступа в новом лесу, которые добавляются в качестве точек входа в оригинальное развертывание удаленного доступа.  
   
-## <a name="ClientSG"></a>Планирование групп безопасности клиентов  
+## <a name="plan-client-security-groups"></a><a name="ClientSG"></a>Планирование групп безопасности клиентов  
 В новом лесу необходимо настроить как минимум одну группу безопасности для клиентских машин DirectAccess нового леса. Это обусловлено тем, что одна группа безопасности не может содержать учетные записи из нескольких лесов.  
   
 > [!NOTE]  

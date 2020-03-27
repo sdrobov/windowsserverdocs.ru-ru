@@ -10,18 +10,18 @@ ms.technology: networking-sdn
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 30e843e40f903bc6415159bfce13b9bc95eb05ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a99fed5fb173ed2ef0698ab5c10bcf872e9abea8
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405879"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317245"
 ---
 # <a name="hyper-v-network-virtualization"></a>Виртуализация сети Hyper-V
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В Windows Server 2012 виртуализация сети Hyper-V (HNV) обеспечивает виртуализацию сетей клиентов поверх общей инфраструктуры физической сети. Благодаря минимальным изменениям, необходимым в структуре физической сети, HNV предоставляет поставщикам услуг гибкость для развертывания и переноса рабочих нагрузок клиента в любом месте в трех облаках: в облаке поставщика услуг, частном облаке или Microsoft Azure общедоступном облаке.  
   
@@ -33,4 +33,4 @@ ms.locfileid: "71405879"
   
 |||  
 |-|-|  
-|![Облако](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](https://aka.ms/f9bh7g).<br /><br />Создание гибридного решения виртуализации в Microsoft Azure:<br />- .[Подключите локальную сеть к Azure через VPN-подключение типа "сеть — сеть" и расширьте Active Directory на виртуальном контроллере домена IaaS в Azure](https://aka.ms/d1dinb) .|  
+|![облако](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](https://aka.ms/f9bh7g).<br /><br />Создание гибридного решения виртуализации в Microsoft Azure:<br />- [подключить локальную сеть к Azure через VPN-подключение типа "сеть — сеть" и расширить Active Directory на контроллер виртуальной машины IaaS в Azure](https://aka.ms/d1dinb)|  

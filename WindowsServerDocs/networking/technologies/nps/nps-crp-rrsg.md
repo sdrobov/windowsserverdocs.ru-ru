@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d81678a7-be21-48f2-9b3f-5a75d6aef013
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 63a6eb5f0f78ed8dbcc0144602f16274fd6ec213
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8275c3e8902ed78d77d01a2ff5d769d3e99abf97
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396315"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316173"
 ---
 # <a name="remote-radius-server-groups"></a>Группы удаленных RADIUS-серверов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 При настройке сервера политики сети (NPS) в качестве протокол RADIUS (RADIUS) вы используете NPS для перенаправления запросов на подключение к серверам RADIUS, которые способны обрабатывать запросы на подключение, так как они могут выполнять Проверка подлинности и авторизация в домене, где находится учетная запись пользователя или компьютера. Например, если требуется перенаправить запросы на подключение к одному или нескольким серверам RADIUS в недоверенных доменах, можно настроить NPS в качестве прокси-сервера RADIUS, чтобы перенаправить запросы на удаленные серверы RADIUS в домене, не являющемся доверенным.
 

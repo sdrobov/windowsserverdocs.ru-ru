@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cc9f02b9-8ddd-4cae-b397-a832996144dd
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 131520f567da6529e342229a0f6965d3223f928b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 39b6d0b924d4939361cb66109d049a6924e9be3e
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404580"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314234"
 ---
 # <a name="step-2-plan-the-remote-access-deployment"></a>Шаг 2. Планирование развертывания удаленного доступа
 
@@ -55,7 +55,7 @@ ms.locfileid: "71404580"
   
     -   **Средства, проверяющие подключение**  
   
-        Создается веб-проба по умолчанию, которую клиенты используют для проверки подключения к внутренней сети. Имя по умолчанию — `https://directaccess-WebProbeHost.<domain_name>`. Это имя следует вручную зарегистрировать в системе DNS. Можно создать другие средства проверки подключения, использующие другие веб-адреса по протоколу HTTP или PING. Для каждого средства проверки подключения должна существовать DNS-запись.  
+        Создается веб-проба по умолчанию, которую клиенты используют для проверки подключения к внутренней сети. Имя по умолчанию имеет значение `https://directaccess-WebProbeHost.<domain_name>`. Это имя следует вручную зарегистрировать в системе DNS. Можно создать другие средства проверки подключения, использующие другие веб-адреса по протоколу HTTP или PING. Для каждого средства проверки подключения должна существовать DNS-запись.  
   
     -   **Адрес электронной почты службы поддержки**  
   
@@ -118,7 +118,7 @@ ms.locfileid: "71404580"
   
 -   **Серверы управления** 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 -   [Шаг 1. Планирование инфраструктуры удаленного доступа](Step-1-Plan-the-Remote-Access-Infrastructure.md)  
   

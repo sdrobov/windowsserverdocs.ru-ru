@@ -7,14 +7,14 @@ ms.topic: article
 ms.assetid: 5ae1a40b-4f10-4ace-8aaf-13f7ab581f4f
 ms.localizationpriority: medium
 ms.date: 12/20/2018
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5eba89cf61354627b63bcdf2420c25e7a44e3d9a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: ca064f887a524c5f41b29837e8f8fec586a8d928
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388140"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80313267"
 ---
 # <a name="always-on-vpn-deployment-for-windows-server-and-windows-10"></a>Always On развертывание VPN для Windows Server и Windows 10
 
@@ -25,7 +25,7 @@ ms.locfileid: "71388140"
 
 Always On VPN предоставляет единое, единое решение для удаленного доступа и поддерживает присоединенные к домену, не присоединенные к домену (workgroup) или присоединенные к Azure AD устройства, даже персональные устройства. Благодаря Always On VPN соединение может предназначаться не только для пользователя или устройства, но и для них обоих. Например, можно включить аутентификацию устройств для управления удаленными устройствами, а затем включить аутентификацию пользователей для подключений к внутренним сайтам и службам компании.
 
-## <a name="prerequisites"></a>Предварительные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 Скорее всего, развернуты технологии, которые можно использовать для развертывания Always On VPN. Кроме серверов DC/DNS, для развертывания Always On VPN требуется сервер NPS (RADIUS), сервер центра сертификации (ЦС) и сервер удаленного доступа (маршрутизация/VPN). После настройки инфраструктуры необходимо зарегистрировать клиенты, а затем безопасно подключить клиенты к локальной сети с помощью нескольких сетевых изменений.
 
@@ -67,7 +67,7 @@ Always On VPN предоставляет единое, единое решени
 - Дополнительные сетевые ресурсы, например приложения и файловые серверы, к которым удаленные пользователи могут получить доступ через Always On VPN-подключение.
 - Подключение к Интернету или условный доступ для подключения к Интернету с помощью Azure AD. Дополнительные сведения см. [в разделе условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 - [Дополнительные сведения о функциях и функциях VPN Always On](../../vpn-map-da.md)
 

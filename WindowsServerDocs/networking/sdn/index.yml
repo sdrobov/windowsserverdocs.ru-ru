@@ -8,8 +8,8 @@ metadata:
   text: Программно-конфигурируемая сеть (SDN) позволяет динамически управлять сетью центра обработки данных в соответствии с требованиями рабочей нагрузки и приложения. Политики сети могут применяться согласованно и в соответствующем масштабе даже при развертывании новых рабочих нагрузок или перемещении рабочих нагрузок в виртуальных или физических сетях.
   keywords: 'Windows Server, Windows Server 2016, программно-конфигурируемая сеть, sdn'
   ms.localizationpriority: medium
-  author: shortpatti
-  ms.author: pashort
+  author: eross-msft
+  ms.author: lizross
   ms.date: 09/04/2018
   ms.topic: article
   ms.devlang: na

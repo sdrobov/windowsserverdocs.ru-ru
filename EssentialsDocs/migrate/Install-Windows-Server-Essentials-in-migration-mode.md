@@ -1,9 +1,9 @@
 ---
-title: Установка Windows Server Essentials в mode1 миграции
-description: Описывает способ использования Windows Server Essentials
+title: Установка Windows Server Essentials в Mode1 миграции
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,22 +12,22 @@ ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 74c40cc0f06d73a922a3d7fb819f7e71b47ac088
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: dbbd9f7303995e1547e48aa9701467b45e4bad34
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432963"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318990"
 ---
-# <a name="install-windows-server-essentials-in-migration-mode1"></a>Установка Windows Server Essentials в mode1 миграции
+# <a name="install-windows-server-essentials-in-migration-mode1"></a>Установка Windows Server Essentials в Mode1 миграции
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Может иметь только один сервер в сети, на котором работает Windows Server Essentials, и этот сервер должен быть контроллером домена для сети.  
+В сети может быть только один сервер, на котором работает Windows Server Essentials, и этот сервер должен быть контроллером домена для сети.  
   
  При установке Windows Server Essentials в режиме миграции мастер установки выполняет следующие задачи:  
   
-1.  Устанавливает и настраивает серверное программное обеспечение Windows Server Essentials на конечном сервере.  
+1.  Устанавливает и настраивает серверное программное обеспечение Windows Server Essentials на целевом сервере.  
   
 2.  Обновляет схему домена до самой последней версии.  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66432963"
   
 6.  Настраивает конечный сервер в качестве сервера лицензирования использования.  
   
-##  <a name="BKMK_Install"></a> Установка Windows Server Essentials на конечном сервере  
- Чтобы установить и настроить Windows Server Essentials на конечном сервере в режиме миграции, выполните следующую процедуру.  
+##  <a name="install-windows-server-essentials-on-the-destination-server"></a><a name="BKMK_Install"></a>Установка Windows Server Essentials на целевом сервере  
+ Чтобы установить и настроить Windows Server Essentials на целевом сервере в режиме миграции, выполните следующую процедуру.  
   
-#### <a name="to-install-windows-server-essentials-on-the-destination-server"></a>Чтобы установить Windows Server Essentials на конечном сервере  
+#### <a name="to-install-windows-server-essentials-on-the-destination-server"></a>Установка Windows Server Essentials на целевом сервере  
   
-1. Включите конечный сервер и вставьте диск Windows Server Essentials DVD1 в DVD-дисковод. Если отображается сообщение с запросом на загрузку с компакт-диска или DVD-диска, нажмите любую клавишу для выполнения этой операции.  
+1. Включите целевой сервер и вставьте Windows Server Essentials DVD1 в DVD-дисковод. Если отображается сообщение с запросом на загрузку с компакт-диска или DVD-диска, нажмите любую клавишу для выполнения этой операции.  
   
    > [!NOTE]
-   >  Если конечный сервер поддерживает загрузку с ФЛЭШ-накопитель USB, можно использовать **Windows 7 USB/DVD Download Tool** создать загрузочный флэш-накопитель из файла ISO-ОБРАЗА Windows Server Essentials. Применение накопителя USB позволяет существенно ускорить процесс установки, поскольку скорость чтения данных у флэш-памяти гораздо выше, чем у DVD-дисков. После создания загрузочного накопителя USB можно добавить на него файл ответов. Вы можете [загрузить средство Windows 7 USB/DVD Download Tool](https://go.microsoft.com/fwlink/p/?LinkId=248282) бесплатно на веб-сайте Microsoft Store.  
+   >  Если целевой сервер поддерживает загрузку с флэш-накопителя USB, можно использовать **средство загрузки USB-или DVD** -диска для Windows 7, чтобы создать загрузочный USB-накопитель из файла ISO Windows Server Essentials. Применение накопителя USB позволяет существенно ускорить процесс установки, поскольку скорость чтения данных у флэш-памяти гораздо выше, чем у DVD-дисков. После создания загрузочного накопителя USB можно добавить на него файл ответов. Вы можете [загрузить средство загрузки USB-или DVD для Windows 7](https://go.microsoft.com/fwlink/p/?LinkId=248282) бесплатно на веб-сайте Microsoft Store.  
   
    > [!NOTE]
    >  Если конечный сервер не загружается с DVD-диска, перезагрузите компьютер и проверьте настройку BIOS, чтобы убедиться, что **DVD-ROM** стоит первым в последовательности загрузки. Дополнительные сведения о способах изменения последовательности загрузки BIOS см. в документации изготовителя оборудования.  
@@ -68,14 +68,14 @@ ms.locfileid: "66432963"
    После завершения установки выполняется автоматический вход в систему с использованием учетной записи и пароля администратора, указанные в файле ответов для миграции.  
   
 > [!NOTE]
->  Чтобы разблокировать рабочий стол во время установки Windows Server Essentials, используйте учетную запись встроенной учетной записи администратора и оставьте пароль пустым.  
+>  Чтобы разблокировать рабочий стол во время установки Windows Server Essentials, используйте встроенную учетную запись администратора и оставьте поле пароля пустым.  
   
-##  <a name="BKMK_VerifyTheHealthOfDC"></a> Убедитесь в работоспособности контроллера домена  
- Перед выполнением миграции, следует убедиться, что контроллер домена и сети Windows Server Essentials находятся в работоспособном состоянии.  
+##  <a name="verify-the-health-of-the-domain-controller"></a><a name="BKMK_VerifyTheHealthOfDC"></a>Проверка работоспособности контроллера домена  
+ Прежде чем продолжить миграцию, убедитесь, что контроллер домена и сеть Windows Server Essentials работоспособны.  
   
  В следующей таблице перечислены средства, которые помогут выявить проблемы с конечным сервером, сетью и доменом:  
   
-|Инструмент|Описание|  
+|Средство|Описание|  
 |----------|-----------------|  
 |Netdiag|Помогает изолировать проблемы с сетью и подключением. Для получения дополнительных сведений и загрузки см. раздел [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388).|  
 |Dcdiag.exe|Анализирует состояние контроллеров домена в лесу или на предприятии и сообщает о проблемах, помогая в устранении неполадок. Для получения дополнительных сведений и загрузки см. раздел [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389).|  
@@ -84,4 +84,4 @@ ms.locfileid: "66432963"
  Перед продолжением миграции следует устранить все проблемы, обнаруженные этими средствами.  
   
 > [!NOTE]
->  Если вы планируете миграцию электронной почты на другой локальный сервер Exchange, см. в разделе [интеграции локального сервера Exchange с Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) сведения о настройке вашего локального сервера Exchange.
+>  Если вы планируете перенести электронную почту на другой локальный сервер Exchange Server, ознакомьтесь со статьей [Интеграция локального сервера Exchange Server с Windows Server Essentials](../manage/Integrate-an-On-Premises-Exchange-Server-with-Windows-Server-Essentials.md) для получения сведений о настройке локального сервера Exchange Server.

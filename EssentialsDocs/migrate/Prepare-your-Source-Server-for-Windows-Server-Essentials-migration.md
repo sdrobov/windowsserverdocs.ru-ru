@@ -3,7 +3,7 @@ title: Подготовка исходного сервера для Windows Ser
 description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d09ad4b66029c40c840ff5764fdaa2705b44bac2
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 503b8edc645b43da1dc5c5fb37547e8e0245d4a2
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947444"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318818"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Подготовка исходного сервера для Windows Server Essentials Migration1
 
@@ -49,7 +49,7 @@ ms.locfileid: "75947444"
 5.  [Создание плана для миграции бизнес-приложений](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
   
-###  <a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>Резервное копирование исходного сервера  
+###  <a name="back-up-your-source-server"></a><a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>Резервное копирование исходного сервера  
  Перед началом миграции создайте резервную копию исходного сервера. Это поможет защитить данные от случайной утраты, если во время миграции произойдут неустранимые ошибки.  
   
 ##### <a name="to-back-up-the-source-server"></a>Чтобы создать резервную копию исходного сервера  
@@ -58,10 +58,10 @@ ms.locfileid: "75947444"
   
 2.  Убедитесь, что резервное копирование выполнено успешно. Чтобы проверить целостность резервной копии, произвольно выберите несколько файлов из резервной копии, восстановите их в другом месте и убедитесь, что они совпадают с исходными.  
   
-###  <a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>Установка последних пакетов обновления  
+###  <a name="install-the-most-recent-service-packs"></a><a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>Установка последних пакетов обновления  
  Необходимо установить последние обновления и пакеты обновлений на исходный сервер перед миграцией.  
   
-###  <a name="BKMK_UseWindowsBestPracticeAnalyzer"></a>Оценка работоспособности исходного сервера  
+###  <a name="evaluate-the-health-of-the-source-server"></a><a name="BKMK_UseWindowsBestPracticeAnalyzer"></a>Оценка работоспособности исходного сервера  
  Важно оценить работоспособность исходного сервера перед началом миграции. Для проверки текущих обновлений, вывода отчета о работоспособности системы, а также запуска анализатора соответствия рекомендациям Windows Server используйте следующие процедуры.  
   
 #### <a name="download-and-install-critical-and-security-updates"></a>Загрузка и установка критически важных обновлений и обновлений для системы безопасности  
@@ -69,7 +69,7 @@ ms.locfileid: "75947444"
   
 ###### <a name="to-check-for-the-latest-updates"></a>Проверка наличия новых обновлений  
   
-1.  На исходном сервере щелкните **Пуск**, затем **Все программы**и **Центр обновления Windows**.  
+1.  На исходном сервере щелкните **Пуск**, затем **Все программы** и **Центр обновления Windows**.  
   
 2.  Щелкните ссылку **Проверка обновлений**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "75947444"
   
 -   инструментарий управления Windows (WMI) Active Directory®;  
   
--   реестр;  
+-   Реестр  
   
 -   метабаза служб IIS.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "75947444"
   
  Щелкните проблему в отчете, чтобы просмотреть ее описание и рекомендуемое решение. Не все проблемы, о которых сообщает анализатор соответствия рекомендациям Windows SBS 2011 Essentials, влияют на миграцию, но для обеспечения успешной миграции следует решить максимально возможное количество проблем.  
   
-####  <a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>Синхронизация времени исходного сервера с внешним источником времени  
+####  <a name="synchronize-the-source-server-time-with-an-external-time-source"></a><a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>Синхронизация времени исходного сервера с внешним источником времени  
  Показатели времени исходного сервера и конечного сервера должны различаться максимум на пять минут, дата и часовой пояс должны быть одинаковы на обоих серверах. Если исходный сервер запущен на виртуальном компьютере, дата, время и часовой пояс сервера узла должны совпадать с данными исходного и конечного серверов. Чтобы обеспечить успешную установку Windows Server Essentials, необходимо синхронизировать время исходного сервера с сервером NTP в Интернете.  
   
 ###### <a name="to-synchronize-the-source-server-time-with-the-ntp-server"></a>Синхронизация времени исходного сервера с NTP-сервером  
@@ -130,7 +130,7 @@ ms.locfileid: "75947444"
 > [!IMPORTANT]
 >  Во время установки Windows Server Essentials у вас есть возможность проверить время на целевом сервере и при необходимости изменить ее. Убедитесь, что это время отличается от времени на исходном сервере не более чем на пять минут. После завершения установки конечный сервер синхронизируется с NTP-сервером. Все компьютеры, присоединенные к домену, в том числе исходный сервер, синхронизируются с конечным сервером, который принимает роль хозяина эмулятора основного контроллера домена (PDC).  
   
-###  <a name="BKMK_MPT"></a>Запуск средства подготовки миграции на исходном сервере  
+###  <a name="run-the-migration-preparation-tool-on-the-source-server"></a><a name="BKMK_MPT"></a>Запуск средства подготовки миграции на исходном сервере  
  Вы не можете выполнить установку в режиме миграции без предварительного запуска средства подготовки миграции на исходном сервере. Это средство предназначено для подготовки исходного сервера и домена к переносу в Windows Server Essentials.  
   
 > [!IMPORTANT]
@@ -200,7 +200,7 @@ ms.locfileid: "75947444"
 > [!NOTE]
 >  Необходимо завершить успешное выполнение средства подготовки миграции на исходном сервере в течение двух недель с установки Windows Server Essentials на целевой сервер. В противном случае установка Windows Server Essentials на целевом сервере будет заблокирована. В этом случае запустите средство подготовки миграции на исходном сервере еще раз.  
   
-###  <a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a>Создание плана для миграции бизнес-приложений  
+###  <a name="create-a-plan-to-migrate-line-of-business-applications"></a><a name="BKMK_PlanToMigrateLineOfBusinessApplications"></a>Создание плана для миграции бизнес-приложений  
  Бизнес-приложения (LOB, line-of-business application) — это компьютерные приложения, жизненно необходимые для функционирования бизнеса. К ним относятся приложения в области бухгалтерского учета, управления логистическими цепочками и планирования ресурсов.  
   
  При планировании миграции бизнес-приложений необходимо проконсультироваться с поставщиком бизнес-приложения для определения подходящего метода миграции каждого из них. Также необходимо подготовить носители, используемые для установки бизнес-приложений на целевом сервере.  

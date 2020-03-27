@@ -8,14 +8,14 @@ ms.assetid: 61ae242e-82a8-430d-b07d-52b86c01e686
 ms.localizationpriority: medium
 manager: dougkim
 ms.date: 09/05/2018
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 5c7feb696c6ee9014032229543a4f43fb5884527
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 0ee9bf121d64eebe98798df907a2584747a00c7a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395850"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315360"
 ---
 # <a name="vrss-frequently-asked-questions"></a>Часто задаваемые вопросы по vRSS
 
@@ -27,19 +27,19 @@ ms.locfileid: "71395850"
 
 Дополнительные сведения см. [в разделе Планирование использования vRSS](vrss-plan.md).
 
-## <a name="does-vrss-work-with-hyper-threaded-processor-cores"></a>Работает ли vRSS с процессорными ядрами с Hyper\-Threading?
+## <a name="does-vrss-work-with-hyper-threaded-processor-cores"></a>Работает ли vRSS с потоковыми процессорами Hyper\-?
 
-Нет. И vRSS, и VMQ игнорируют\-процессорные ядра Hyper.
+Нет. Как vRSS, так и VMQ пропускают Hyper\-потоков процессорных ядер.
 
-## <a name="does-vrss-work-for-host-virtual-nics-vnics"></a>Работает ли vRSS для виртуальных сетевых \(адаптеров\)узла vNIC?
+## <a name="does-vrss-work-for-host-virtual-nics-vnics"></a>Работает ли vRSS для виртуальных сетевых адаптеров узла \(vNIC\)?
 
-Да. Используйте параметр **-манажементос** вместо \(имени ВМ\) виртуальной машины в команде **Set-VMNetworkAdapter** Windows PowerShell и **Enable-нетадаптеррсс** на узле vNIC.
+Да. Используйте параметр **-манажементос** вместо \(виртуальной машины\) имя виртуальной машины в команде **Set-VMNetworkAdapter** Windows PowerShell и **Enable-нетадаптеррсс** на узле vNIC.
 
 Дополнительные сведения см. в разделе [команды Windows PowerShell для RSS и vRSS](vrss-wps.md).
 
 ## <a name="how-many-logical-processors-does-a-vm-need-to-use-vrss"></a>Сколько логических процессоров виртуальным машинам требуется использовать vRSS?
 
-Виртуальным машинам требуются два или \(более\) логических процессора LPS, чтобы иметь возможность использовать vRSS.
+Виртуальным машинам требуется два или более логических процессора \(LPs\), чтобы иметь возможность использовать vRSS.
 
 Дополнительные сведения см. [в разделе Планирование использования vRSS](vrss-plan.md).
 

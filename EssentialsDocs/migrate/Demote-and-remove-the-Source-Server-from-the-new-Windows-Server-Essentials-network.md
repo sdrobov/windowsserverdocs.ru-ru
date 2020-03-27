@@ -1,9 +1,9 @@
 ---
-title: Понижение уровня и удаление исходного сервера из новой network1 Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+title: Понижение и удаление исходного сервера из новой системы Windows Server Essentials Network1
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,55 +12,55 @@ ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e5bcdd58f4d88f7a555151d755bf427ecc9b5108
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: 160c575386feaab5353c97edc1b00b71d1ad7adf
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66433001"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319010"
 ---
-# <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>Понижение уровня и удаление исходного сервера из новой network1 Windows Server Essentials
+# <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>Понижение и удаление исходного сервера из новой системы Windows Server Essentials Network1
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-После завершения установки Windows Server Essentials и выполнения задач в мастере миграции, необходимо выполнить следующие задачи:  
+После завершения установки Windows Server Essentials и выполнения задач в мастере миграции необходимо выполнить следующие задачи.  
   
 
-1.  [Удаление сервера Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
+1.  [Удалите Exchange Server 2003](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [Отключение принтеров, прямо подключенных к исходному серверу](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
   
 3.  [Понижение уровня исходного сервера](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
   
-4.  [Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
+4.  [Переместите роль DHCP-сервера с исходного сервера на маршрутизатор](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
   
 5.  [Удаление и переназначение исходного сервера](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
-1.  [Удаление сервера Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
+1.  [Удалите Exchange Server 2003](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_UninstallExchangeServer2003).  
   
 2.  [Отключение принтеров, прямо подключенных к исходному серверу](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect).  
   
 3.  [Понижение уровня исходного сервера](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer).  
   
-4.  [Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
+4.  [Переместите роль DHCP-сервера с исходного сервера на маршрутизатор](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_MoveTheDHCPRole).  
   
 5.  [Удаление и переназначение исходного сервера](../migrate/Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer).  
 
   
-###  <a name="BKMK_UninstallExchangeServer2003"></a> Удаление сервера Exchange Server 2003  
+###  <a name="uninstall-exchange-server-2003"></a><a name="BKMK_UninstallExchangeServer2003"></a>Удаление Exchange Server 2003  
   
 > [!IMPORTANT]
->  При добавлении учетных записей пользователей после перемещения почтовых ящиков на целевой сервер, то перед удалением сервера Exchange Server 2003 с исходного сервера почтовые ящики добавляются на исходном сервере. Это сделано намеренно. Почтовые ящики необходимо переместить на целевой сервер для всех учетных записей пользователей, которые добавляются в течение этого периода времени. Повторите инструкции по Exchange Server, перемещение почтовых ящиков и параметров для миграции Windows Server Essentials, перед удалением сервера Exchange Server 2003.  
+>  Если вы добавляете учетные записи пользователей после перемещения почтовых ящиков на целевой сервер и перед удалением Exchange Server 2003 с исходного сервера, почтовые ящики добавляются на исходном сервере. Это сделано намеренно. Почтовые ящики необходимо переместить на целевой сервер для всех учетных записей пользователей, которые добавляются в течение этого периода времени. Повторите инструкции из раздела перемещение почтовых ящиков и параметров Exchange Server для миграции Windows Server Essentials перед удалением Exchange Server 2003.  
   
- Перед понижением роли, необходимо удалить Exchange Server 2003 с исходного сервера. Это удаляет все ссылки в доменных службах Active Directory (AD DS) для Exchange Server на исходном сервере. Необходимо иметь мультимедиа Windows Small Business Server 2003 для удаления Exchange Server 2003.  
+ Перед понижением роли необходимо удалить Exchange Server 2003 с исходного сервера. При этом удаляются все ссылки в домен Active Directory Services (AD DS) на сервер Exchange Server на исходном сервере. Для удаления Exchange Server 2003 необходимо иметь носитель Windows Small Business Server 2003.  
   
-##### <a name="to-uninstall-exchange-server-2003-from-the-source-server"></a>Удаление сервера Exchange Server 2003 с исходного сервера  
+##### <a name="to-uninstall-exchange-server-2003-from-the-source-server"></a>Удаление Exchange Server 2003 с исходного сервера  
   
 1. Войдите на исходный сервер как администратор.  
   
 2. Щелкните **Пуск**, нажмите **Панель управления**, а затем **Установка и удаление программ**.  
   
-3. В списке программ выберите **Windows Small Business Server 2003**, а затем нажмите кнопку **заменить или удалить**.  
+3. В списке программ выберите **Windows Small Business Server 2003**, а затем нажмите кнопку **изменить или удалить**.  
   
 4. В мастере установки щелкайте **Далее** до тех пор, пока не появится страница **Выбор компонентов**.  
   
@@ -68,19 +68,19 @@ ms.locfileid: "66433001"
   
    > [!NOTE]
    > 
-   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что выполнены все процедуры, описанные в разделе [переместить SBS 2003 параметров и данных на целевом сервере](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
+   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что вы выполнили все процедуры, описанные в разделе [Перемещение параметров и данных SBS 2003 на целевой сервер](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
    > 
-   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что выполнены все процедуры, описанные в разделе [переместить SBS 2003 параметров и данных на целевом сервере](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
+   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что вы выполнили все процедуры, описанные в разделе [Перемещение параметров и данных SBS 2003 на целевой сервер](../migrate/Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
 
   
 6. Нажмите кнопку **Далее**.  
   
-7. Когда появится запрос, вставьте Windows Small Business Server 2003 CD #3 и следуйте инструкциям на экране.  
+7. При появлении запроса вставьте компакт-диск Windows Small Business Server 2003 и следуйте инструкциям на экране.  
   
-###  <a name="BKMK_PhysicallyDisconnect"></a> Отключение принтеров, которые подключены непосредственно к исходному серверу  
- Прежде чем понизить уровень исходного сервера, физически отключите все принтеры, которые подключены к напрямую к исходному серверу и предоставляются через него для общего доступа. Убедитесь, что не осталось никаких объектов Active Directory для принтеров, которые были подключены напрямую к исходному серверу. Принтеров можно напрямую подключен к серверу назначения и совместно использовать их из Windows Server Essentials.  
+###  <a name="disconnect-printers-that-are-directly-connected-to-the-source-server"></a><a name="BKMK_PhysicallyDisconnect"></a>Отключить принтеры, подключенные непосредственно к исходному серверу  
+ Прежде чем понизить уровень исходного сервера, физически отключите все принтеры, которые подключены к напрямую к исходному серверу и предоставляются через него для общего доступа. Убедитесь, что не осталось никаких объектов Active Directory для принтеров, которые были подключены напрямую к исходному серверу. Затем принтеры могут быть напрямую подключены к целевому серверу и доступны из Windows Server Essentials.  
   
-###  <a name="BKMK_DemoteTheSourceServer"></a> Понижение уровня исходного сервера  
+###  <a name="demote-the-source-server"></a><a name="BKMK_DemoteTheSourceServer"></a>Понижение уровня исходного сервера  
  Перед понижением уровня исходного сервера с роли контроллера домена AD DS до роли рядового сервера домена убедитесь, что параметры групповой политики применяются ко всем клиентским компьютерам, как описано в следующей процедуре.  
   
 > [!IMPORTANT]
@@ -100,14 +100,14 @@ ms.locfileid: "66433001"
   
 1. На исходном сервере щелкните **Пуск**, затем **Выполнить**, введите **dcpromo** и нажмите кнопку **ОК**.  
   
-2. Щелкните дважды **Далее** .  
+2. Щелкните **Далее** дважды.  
   
    > [!NOTE]
    >  Не устанавливайте флажок **Этот сервер — последний контроллер домена в данном домене**.  
   
 3. Введите пароль для новой учетной записи администратора на сервере и нажмите кнопку **Далее**.  
   
-4. В **Сводка** диалоговом окне будет сообщено, что AD DS будет удален с компьютера, и что сервер станет членом домена. Нажмите кнопку **Далее**.  
+4. В диалоговом окне **Сводка** вы получаете уведомление о том, что AD DS будет удалено с компьютера и что сервер станет членом домена. Нажмите кнопку **Далее**.  
   
 5. Нажмите кнопку **Готово**. Исходный сервер будет перезагружен.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "66433001"
   
 4.  Убедитесь, что исходный сервер отсутствует в списке, а затем закройте окно **Active Directory — пользователи и компьютеры**.  
   
-###  <a name="BKMK_MoveTheDHCPRole"></a> Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор  
+###  <a name="move-the-dhcp-server-role-from-the-source-server-to-the-router"></a><a name="BKMK_MoveTheDHCPRole"></a>Перемещение роли DHCP-сервера с исходного сервера на маршрутизатор  
   
 > [!NOTE]
 > 
@@ -157,7 +157,7 @@ ms.locfileid: "66433001"
     > [!IMPORTANT]
     >  Если статический IP-адрес или резервирования DHCP на маршрутизаторе для целевого сервера не заданы, и диапазон DHCP отличается от диапазона исходного сервера, то маршрутизатор может выдать новый IP-адрес для целевого сервера. В этом случае сбросьте правила перенаправления портов в маршрутизаторе для пересылки на новый IP-адрес целевого сервера.  
   
-###  <a name="BKMK_RemoveTheSourceServer"></a> Удаление и переназначение исходного сервера  
+###  <a name="remove-and-repurpose-the-source-server"></a><a name="BKMK_RemoveTheSourceServer"></a>Удаление и переназначение исходного сервера  
  Выключите исходный сервер и отключите его от сети. Рекомендуется хотя бы одну неделю не выполнять переформатирование исходного сервера, чтобы убедиться, что все необходимые данные перенесены на конечный сервер. После подтверждения переноса всех данных можно переустановить этот сервер в сети в качестве дополнительного сервера для других задач.  
   
 > [!NOTE]

@@ -1,5 +1,5 @@
 ---
-title: Возможности работы с сетями в
+title: Сеть
 description: В этом разделе представлен обзор технологий программно-конфигурируемой сети и сетевой платформы, которые доступны в Windows Server 2016.
 ms.prod: windows-server
 layout: LandingPage
@@ -7,17 +7,17 @@ ms.technology: networking
 ms.topic: landing-page
 ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
 manager: dougkim
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.localizationpriority: medium
-ms.openlocfilehash: f3b580b108677b391065ad83f61e52504fe9ac91
-ms.sourcegitcommit: 68483ee9284285f5643dd67dce06f5a102cb9469
+ms.openlocfilehash: e625bb537ef514ff68241669c3e75f482a61f068
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74823844"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318570"
 ---
-# <a name="networking"></a>Возможности работы с сетями в
+# <a name="networking"></a>Сеть
 
 >[!TIP]
 > Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
@@ -193,7 +193,7 @@ ms.locfileid: "74823844"
 
 <hr />
 
-## <a name="bkmk_networking"></a>Сетевые технологии
+## <a name="networking-technologies"></a><a name="bkmk_networking"></a>Сетевые технологии
 
 <ul class="cardsF panelContent">
     <li>

@@ -1,9 +1,9 @@
 ---
 title: Изменение цветовой схемы панели администрирования и панели запуска
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: b2913e51-7979-4d48-a431-d2ec5f1042be
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f7079c9e59c44907fa203db48ce366c2b5a1102b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: a3ffac0b89a62b04b73aada0a49cb755c7e7bd9a
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59879645"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80312286"
 ---
 # <a name="change-the-color-scheme-of-the-dashboard-and-launchpad"></a>Изменение цветовой схемы панели администрирования и панели запуска
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Цветовую схему панели администрирования и панели запуска можно изменить. Для этого необходимо задать требуемые цвета в XML-файле, установить этот файл в папку на сервере и указать имя файла в записи реестра.  
   
@@ -124,15 +124,15 @@ ms.locfileid: "59879645"
   
 1.  На сервере переместите указатель мыши в правый верхний угол экрана и нажмите кнопку **Поиск**.  
   
-2.  В поле поиска введите **regedit**, затем щелкните приложение **Regedit** .  
+2.  В поле поиска введите **regedit**, затем щелкните приложение **Regedit**.  
   
-3.  В левой области последовательно разверните узлы **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft**и **Windows Server**. Если раздел **OEM** не существует, необходимо создать его, выполнив следующие действия.  
+3.  В левой области последовательно разверните узлы **HKEY_LOCAL_MACHINE**, **SOFTWARE**, **Microsoft** и **Windows Server**. Если раздел **OEM** не существует, необходимо создать его, выполнив следующие действия.  
   
     1.  Щелкните правой кнопкой мыши узел **Windows Server**, выберите команду **Создать** и щелкните пункт **Раздел**.  
   
-    2.  В качестве имени раздела введите **OEM** .  
+    2.  В качестве имени раздела введите **OEM**.  
   
-4.  Щелкните правой кнопкой мыши раздел **OEM**, выберите команду **Создать**и щелкните пункт **Строковый параметр**.  
+4.  Щелкните правой кнопкой мыши раздел **OEM**, выберите команду **Создать** и щелкните пункт **Строковый параметр**.  
   
 5.  Введите **CustomColorScheme** в качестве имени строки и нажмите клавишу **Ввод**.  
   
@@ -142,37 +142,37 @@ ms.locfileid: "59879645"
   
 8.  Скопируйте файл в папку %programFiles%\Windows Server\Bin\OEM. Если каталог OEM не существует, создайте его.  
   
-##  <a name="BKMK_Dashboard"></a> Области панели мониторинга и панели запуска, которые могут быть изменены  
+##  <a name="dashboard-and-launchpad-areas-that-can-be-changed"></a><a name="BKMK_Dashboard"></a>Области панелей мониторинга и панели запуска, которые можно изменить  
  В этом разделе приведены примеры областей панели администрирования и панели запуска, которые можно настраивать.  
   
 ### <a name="examples"></a>Примеры  
   
-####  <a name="BKMK_Figure1"></a> Рис. 1. Страница входа в панель администрирования  
+####  <a name="figure-1-sign-in-page-of-the-dashboard"></a><a name="BKMK_Figure1"></a>Рис. 1. страница входа панели мониторинга  
  ![Панель мониторинга Windows Server Essentials](media/SBS8_ADK_Dashboard_Signin_RC.png "SBS8_ADK_Dashboard_Signin_RC")  
   
-####  <a name="BKMK_Figure2"></a> Рис. 2. Панель запуска  
- ![Знак панель запуска Windows SBS&#45;в](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
+####  <a name="figure-2-launchpad"></a><a name="BKMK_Figure2"></a>Рис. 2. Панель запуска  
+ ![Вход&#45;в панель запуска Windows SBS](media/SBS8_ADK_LaunchpadSignin2.png "SBS8_ADK_LaunchpadSignin2")  
   
-####  <a name="BKMK_Figure3"></a> Рис. 3. Страница входа в панель запуска  
+####  <a name="figure-3-sign-in-page-of-the-launchpad"></a><a name="BKMK_Figure3"></a>Рис. 3. страница входа в панель запуска  
  ![Панель запуска Windows Server Essentials](media/SBS8_ADK_Launchpad_Signin_RC.png "SBS8_ADK_Launchpad_Signin_RC")  
   
-####  <a name="BKMK_Figure4"></a> Рис. 4. Текст панели администрирования  
+####  <a name="figure-4-dashboard-text"></a><a name="BKMK_Figure4"></a>Рис. 4. текст панели мониторинга  
  ![Панель навигации Windows Server Essentials](media/SBS8_ADK_Navigation_RC.png "SBS8_ADK_Navigation_RC")  
   
-####  <a name="BKMK_Figure5"></a> Рис. 5. Граница подвкладки  
- ![Граница подвкладки панели мониторинга SBS Windows](media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")  
+####  <a name="figure-5-subtab-border"></a><a name="BKMK_Figure5"></a>Рис. 5. граница подчиненного  
+ ![Граница подвкладки панели мониторинга Windows SBS](media/SBS8_ADK_DashboardSubtabborder.png "SBS8_ADK_DashboardSubtabborder")  
   
-####  <a name="BKMK_Figure6"></a> Рис. 6. Область задач  
- ![Область задач панели мониторинга Windows SBS](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
+####  <a name="figure-6-task-pane"></a><a name="BKMK_Figure6"></a>Рис. 6. область задач  
+ ![Панель задач панели мониторинга Windows SBS](media/SBS8_ADK_DashboardTaskPane.png "SBS8_ADK_DashboardTaskPane")  
   
-####  <a name="BKMK_Figure9"></a> Рисунок 7a: Экран-заставка продукта  
+####  <a name="figure-7a-product-splash-screen"></a><a name="BKMK_Figure9"></a>Рисунок 7а. экран-заставка продукта  
  ![Экран-заставка Windows Server Essentials](media/SBS8_ADK_productspalshscreen_RC.png "SBS8_ADK_productspalshscreen_RC")  
   
-#### <a name="figure-7b-home-page"></a>Рисунок 7b: Домашняя страница  
- ![Windows Server Essentials Домашняя страница](media/SBS8_ADK_Dashboard_HomePage_RC.png "SBS8_ADK_Dashboard_HomePage_RC")  
+#### <a name="figure-7b-home-page"></a>Рис. 7b: Домашняя страница  
+ ![Домашняя страница Windows Server Essentials](media/SBS8_ADK_Dashboard_HomePage_RC.png "SBS8_ADK_Dashboard_HomePage_RC")  
   
 ## <a name="see-also"></a>См. также  
- [Создание и настройка образа](Creating-and-Customizing-the-Image.md)   
+ [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
- [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)   
+ [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)

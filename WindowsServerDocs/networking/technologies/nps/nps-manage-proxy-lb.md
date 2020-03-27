@@ -6,18 +6,18 @@ ms.technology: networking
 ms.topic: article
 ms.assetid: 528280e6-b47e-489f-b310-b257d434aa0d
 manager: brianlic
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 2d138b9891fb3cfa8e15060be312ff945942c660
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 10a33494365f5a10923dd9ce46c3575675099b27
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405428"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315975"
 ---
 # <a name="nps-proxy-server-load-balancing"></a>Балансировка нагрузки прокси-сервера NPS
 
-Область применения: Windows Server 2016
+Область применения: Windows Server 2016
 
 Клиенты протокол RADIUS (RADIUS), которые представляют собой серверы сетевого доступа, такие как серверы виртуальной частной сети (VPN) и точки беспроводного доступа, создают запросы на подключение и отправляют их на серверы RADIUS, такие как NPS. В некоторых случаях сервер политики сети может одновременно получить слишком много запросов на подключение, что приведет к снижению производительности или перегрузке. Если сервер политики сети перегружен, рекомендуется добавить дополнительные НПСС в сеть и настроить балансировку нагрузки. При равномерном распределении входящих запросов на подключение между несколькими НПСС, чтобы предотвратить перегрузку одного или нескольких НПСС, это называется балансировкой нагрузки.
 

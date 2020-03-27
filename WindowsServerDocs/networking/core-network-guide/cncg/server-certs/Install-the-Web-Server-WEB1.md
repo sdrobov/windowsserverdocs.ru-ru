@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: f51c9e38-98bb-49c1-9d39-427d07021499
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 6ad8106c9c8330dd1b8632b3672d6413c1a1faaf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8871b2b82b30bca5b4efd62a31b52e8dbd7284a9
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356221"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318287"
 ---
 # <a name="install-the-web-server-web1"></a>Установка веб-сервера WEB1
 
@@ -35,7 +35,7 @@ ms.locfileid: "71356221"
 `Install-WindowsFeature Web-Server -IncludeManagementTools`  
 
 1.  Откройте диспетчер серверов, щелкните **Управление**, а затем нажмите кнопку **Добавить роли и компоненты**. Откроется мастер добавления ролей и компонентов.  
-2.  На странице **Приступая к работе** нажмите кнопку **Далее**.  
+2.  На странице **Перед началом работы** нажмите кнопку **Далее**.  
 
 **Примечание.**    
 Страница **перед началом** работы мастера добавления ролей и компонентов не отображается, если ранее был запущен мастер добавления ролей и компонентов и в этот момент выбран параметр **пропустить эту страницу по умолчанию** .  

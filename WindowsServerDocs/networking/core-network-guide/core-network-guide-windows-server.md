@@ -7,14 +7,14 @@ ms.technology: networking
 ms.topic: article
 ms.date: ''
 ms.assetid: 9b3ef3eb-4246-4e0e-8bf1-53224ca5f2f9
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 52f8b9e1446b5b3f3b1e7060cc737204771d1eae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 62bac410d92e63f4f5cb759b04f7a51ef17d18b0
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356064"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318041"
 ---
 # <a name="core-network-guidance-for-windows-server"></a>Руководство по основной сети для Windows Server
 
@@ -26,7 +26,7 @@ ms.locfileid: "71356064"
   
 -   [Основное сетевое руководством для Windows Server](#bkmk_core)  
   
-## <a name="bkmk_intro"></a>Общие сведения о сети Windows Server Core
+## <a name="introduction-to-the-windows-server-core-network"></a><a name="bkmk_intro"></a>Общие сведения о сети Windows Server Core
 
 Основная сеть — это набор сетевого оборудования, устройств и программного обеспечения, который обеспечивает работу основных служб для удовлетворения ИТ-потребностей предприятия.
 
@@ -46,7 +46,7 @@ ms.locfileid: "71356064"
 
 Концепция основной сети предусматривает возможность масштабировать сеть по мере роста предприятия и изменения требований к ИТ. Например, в основной сети можно добавлять домены, IP-подсети, службы удаленного доступа, Беспроводные службы и другие функции и серверные роли, предоставляемые Windows Server 2016.
 
-## <a name="bkmk_core"></a>Основное сетевое руководством для Windows Server
+## <a name="core-network-guide-for-windows-server"></a><a name="bkmk_core"></a>Основное сетевое руководством для Windows Server
 
 Руководство по основным сетевым компонентам Windows Server 2016 содержит инструкции по планированию и развертыванию основных компонентов, необходимых для полностью работоспособной сети, а также нового домена Active Directory&reg; в новом лесу. Используя это руководство, можно развертывать компьютеры, на которых настроены следующие компоненты сервера Windows:
 

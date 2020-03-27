@@ -1,9 +1,9 @@
 ---
 title: Шаг 2. Установка Windows Server Essentials в качестве нового репликата контроллера домена
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,27 +12,27 @@ ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 757012b7d1a57a001e3b55cdc0604b63852a3d3c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 5968db77c091dbca1eb7d38f5e924e5f449052ce
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59816465"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318778"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>Шаг 2. Установка Windows Server Essentials в качестве нового репликата контроллера домена
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-В этом разделе описывается установка Windows Server Essentials и Windows Server 2012 R2 Standard (с включенной ролью Windows Server Essentials Experience) в качестве контроллера домена.  
+В этом разделе описывается установка Windows Server Essentials и Windows Server 2012 R2 Standard (с включенной ролью Windows Server Essentials) в качестве контроллера домена.  
   
- Для среды максимум с 25 пользователями и 50 устройств можно выполнить действия, описанные в этом руководстве для миграции Windows Server Essentials из предыдущих версий Windows SBS. Для среды до 100 пользователей и 200 устройств можно выполнить то же руководство для миграции на выпуски Standard и Datacenter, Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience. В этом документе рассматриваются оба сценария.  
+ Для сред, в которых до 25 пользователей и устройств 50, можно выполнить действия, описанные в этом руководстве, для перехода с предыдущих версий Windows SBS на Windows Server Essentials. Для сред, в которых 100 пользователей и 200 устройств, вы можете использовать те же рекомендации для перехода на стандартные и выпуски Datacenter в Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience. В этом документе рассматриваются оба сценария.  
   
 > [!IMPORTANT]
->  Если выполняется миграция на Windows Server Essentials, следующее сообщение об ошибке добавляется в журнал событий каждый день в течение 21-дневного льготного периода, пока вы не удалите исходный сервер из сети. По истечении 21-дневного льготного периода работа исходного сервера завершается. <br> **Проверка роли FSMO обнаружила в вашей среде, не соответствует требованиям политики лицензирования условие. Сервер управления должен выполнять роли Active Directory первичного контроллера домена и хозяина именования доменов. Перенесите роли Active Directory на сервер управления. Этот сервер будет автоматически завершена, если проблема не будет устранена в течение 21 дня с момента первого обнаружения этого условия**.   
+>  При переходе на Windows Server Essentials следующее сообщение об ошибке добавляется в журнал событий каждый день в течение 21-дневного льготного периода до тех пор, пока исходный сервер не будет удален из сети. По истечении 21-дневного льготного периода работа исходного сервера завершается. <br> **Проверка роли FSMO обнаружила в вашей среде условие, которое не соответствует политике лицензирования. Сервер управления должен содержать роли основного контроллера домена и хозяина именования доменов Active Directory ролей. Перенесите роли Active Directory на сервер управления сейчас. Этот сервер будет автоматически выключен, если проблема не была исправлена в течение 21 дня с момента первого обнаружения этого условия**.   
   
 #### <a name="install-windows-server-essentials-or-windows-server-2012-r2-standard-on-the-destination-server"></a>Установка Windows Server Essentials или Windows Server 2012 R2 Standard на целевом сервере  
   
-1.  Установка Windows Server Essentials или Windows Server 2012 R2 Standard с включенной, следуя инструкциям в ролью Windows Server Essentials Experience [Установка и настройка Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
+1.  Установите Windows Server Essentials или Windows Server 2012 R2 Standard с включенной ролью Windows Server Essentials Experience, следуя инструкциям в [статье Установка и настройка Windows Server Essentials](../install/Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
   
     > [!NOTE]
     >  Если будет запущен мастер настройки Windows Server Essentials, отмените его.  
@@ -40,7 +40,7 @@ ms.locfileid: "59816465"
 2.  Перенесите роли FSMO с исходного сервера.  
   
     > [!NOTE]
-    >  Если Windows Server Essentials является единственным контроллером домена в домене, то роль FSMO автоматически перемещается на сервер под управлением Windows Server Essentials при понижении уровня исходного сервера.  
+    >  Если Windows Server Essentials является единственным контроллером домена в домене, то роль FSMO автоматически перемещается на сервер под операционной системой Windows Server Essentials при понижении уровня исходного сервера.  
   
 3.  Откройте диспетчер серверов и запустите мастер добавления ролей и компонентов.  
   
@@ -52,36 +52,36 @@ ms.locfileid: "59816465"
   
     -   При необходимости, измените имя сервера, так как после завершения работы мастера настройки Essentials Windows Server изменить имя будет невозможно.  
   
-    -   Проверьте правильность времени и параметров сервера.  
+    -   Убедитесь, что время и параметры сервера указаны правильно.  
   
 7.  Проверьте установку следующим образом:  
   
-    1.  Откройте панель мониторинга.  
+    1.  Откройте Панель администрирования.  
   
     2.  Перейдите на вкладку **Пользователи** и убедитесь, что учетные записи пользователей указаны в Active Directory.  
   
 ### <a name="transfer-the-operations-master-roles"></a>Перенос ролей хозяина операций  
- Роли хозяев операций (также известные хозяином или FSMO) передаются с исходного сервера на конечный сервер в течение 21 дня после установки Windows Server Essentials на конечном сервере.  
+ Хозяин операций (также называемый гибкими одиночными главными операциями или FSMO) должен быть передан с исходного сервера на целевой сервер в течение 21 дня после установки Windows Server Essentials на целевом сервере.  
   
 ##### <a name="to-transfer-the-operations-master-roles"></a>Перенос ролей хозяина операций  
   
 1.  На целевом сервере откройте окно командной строки от имени администратора. См. раздел [Открытие окна командной строки от имени администратора](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx).  
   
-2.  В командной строке введите **NETDOM QUERY FSMO**и нажмите клавишу "ВВОД".  
+2.  В командной строке введите **NETDOM QUERY FSMO** и нажмите клавишу "ВВОД".  
   
-3.  В командной строке введите **ntdsutil**и нажмите клавишу "ВВОД".  
+3.  В командной строке введите **ntdsutil** и нажмите клавишу "ВВОД".  
   
 4.  В командной строке  **ntdsutil** введите следующие команды:  
   
-    1.  Введите **activate instance NTDS**и нажмите клавишу ВВОД.  
+    1.  Введите **activate instance NTDS** и нажмите клавишу ВВОД.  
   
-    2.  Введите **roles**и нажмите клавишу "ВВОД".  
+    2.  Введите **roles** и нажмите клавишу "ВВОД".  
   
     3.  Введите **connections** и нажмите клавишу "ВВОД".  
   
-    4.  Тип **соединиться с сервером** *< ServerName\>*  (где *< ServerName\>*  имя конечного сервера), и нажмите клавишу ВВОД.  
+    4.  Введите **Подключение к серверу** *< ServerName\>* (где *< ServerName\>* — имя целевого сервера), а затем нажмите клавишу ВВОД.  
   
-    5.  В окне командной строки введите **q**и нажмите клавишу "ВВОД".  
+    5.  В окне командной строки введите **q** и нажмите клавишу "ВВОД".  
   
         1.  Введите **transfer PDC**, нажмите клавишу ВВОД и щелкните **Да** в диалоговом окне **Подтверждение передачи роли**.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59816465"
   
         4.  Введите **transfer RID master**, нажмите клавишу "ВВОД" и щелкните **Да** в диалоговом окне **Подтверждение передачи роли**.  
   
-        5.  Введите **transfer schema master**, нажмите клавишу "ВВОД" и щелкните **Да** в диалоговом окне **Подтверждение передачи роли** .  
+        5.  Введите **transfer schema master**, нажмите клавишу "ВВОД" и щелкните **Да** в диалоговом окне **Подтверждение передачи роли**.  
   
-    6.  Введите **q**и нажимайте клавишу ВВОД до тех пор, пока не вернетесь в командную строку.  
+    6.  Введите **q** и нажимайте клавишу ВВОД до тех пор, пока не вернетесь в командную строку.  
   
 > [!NOTE]
->  На любом сервере в сети вы можете убедиться, что роли хозяина операций были перенесены на кольцевой сервер. Откройте окно командной строки от имени администратора (дополнительные сведения см. в разделе [Открыть окно командной строки от имени администратора](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)). Введите **netdom query fsmo**и нажмите клавишу "ВВОД".  
+>  На любом сервере в сети вы можете убедиться, что роли хозяина операций были перенесены на кольцевой сервер. Откройте окно командной строки от имени администратора (дополнительные сведения см. в разделе [Открыть окно командной строки от имени администратора](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)). Введите **netdom query fsmo** и нажмите клавишу "ВВОД".  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Вы установили Windows Server Essentials в качестве нового репликата контроллера домена. Теперь перейдите к [Step 3: Присоединение компьютеров к новому серверу Windows Server Essentials](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  
+ Вы установили Windows Server Essentials как новый контроллер домена реплики. Теперь перейдите к разделу [Шаг 3. Присоединение компьютеров к новому серверу Windows Server Essentials](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  
   
-Чтобы просмотреть все действия, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

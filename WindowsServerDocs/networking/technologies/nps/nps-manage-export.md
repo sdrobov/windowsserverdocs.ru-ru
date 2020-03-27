@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: d268dc57-78f8-47ba-9a7a-a607e8b9225c
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: cbebd0388ccd5dd2540a20f5d325d7f97c7e2bb3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 8c1aef88aec45ee63614b889658daceca3779e91
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405438"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80316003"
 ---
 # <a name="export-an-nps-configuration-for-import-on-another-server"></a>Экспорт конфигурации NPS для импорта на другом сервере
 
-Область применения: Windows Server 2016
+Область применения: Windows Server 2016
 
 Вы можете экспортировать всю конфигурацию NPS, включая клиенты и серверы RADIUS, политику сети, политику запросов на подключение, реестр и конфигурацию ведения журнала, из одного сервера политики сети для импорта на другой сервер политики сети. 
 
@@ -50,7 +50,7 @@ ms.locfileid: "71405438"
 
 **Учетные данные администратора**
 
-Для выполнения этой процедуры необходимо быть членом группы администраторов.
+Для выполнения этой процедуры необходимо быть членом группы Администраторы.
 
 ### <a name="export-example"></a>Пример экспорта 
 
@@ -85,7 +85,7 @@ ms.locfileid: "71405438"
 
 **Учетные данные администратора**
 
-Для выполнения этой процедуры необходимо быть членом группы администраторов.
+Для выполнения этой процедуры необходимо быть членом группы Администраторы.
 
 ### <a name="to-copy-an-nps-configuration-to-another-nps-using-netsh-commands"></a>Копирование конфигурации NPS в другой сервер политики сети с помощью команд Netsh
 

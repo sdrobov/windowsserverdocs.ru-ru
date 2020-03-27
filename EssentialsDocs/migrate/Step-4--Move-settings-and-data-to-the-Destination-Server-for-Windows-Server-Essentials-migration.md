@@ -1,9 +1,9 @@
 ---
-title: Шаг 4. Перенос параметров и данных на целевой сервер для миграции на Windows Server Essentials
-description: Описывает способ использования Windows Server Essentials
+title: Шаг 4. Перенос параметров и данных на целевой сервер для миграции Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,26 +12,26 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: fa6ab8e2108e569b7cef6bfbf0d20af4fa31016d
-ms.sourcegitcommit: eaf071249b6eb6b1a758b38579a2d87710abfb54
+ms.openlocfilehash: d9aea85513e2453c02f6c14fb3f4d708be211d3f
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66432576"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318754"
 ---
-# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Шаг 4. Перенос параметров и данных на целевой сервер для миграции на Windows Server Essentials
+# <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Шаг 4. Перенос параметров и данных на целевой сервер для миграции Windows Server Essentials
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Этот раздел содержит сведения о переносе данных и параметров с исходного сервера. Перенесите параметры и данные на целевой сервер следующим образом:  
   
--   [Копирование данных на конечный сервер](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
+-   [Копирование данных на целевой сервер](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
   
 -   [Настройка сети](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
--   [Сопоставить разрешенные компьютеры с учетных записей пользователей](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
+-   [Сопоставьте разрешенные компьютеры учетным записям пользователей](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
   
-##  <a name="BKMK_CopyData"></a> Копирование данных на конечный сервер  
+##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>Копирование данных на целевой сервер  
  Перед копированием данных с исходного сервера на целевой сервер выполните следующие действия.  
   
 -   Просмотрите список общих папок на исходном сервере, включая разрешения для каждой папки. Создайте или настройте папки на целевом сервере в соответствии со структурой папок, которую вы перемещаете с исходного сервера.  
@@ -42,7 +42,7 @@ ms.locfileid: "66432576"
   
 -   Папку **Архивация клиентских компьютеров** на целевой сервер перенести нельзя. Перед миграцией сервера убедитесь, что клиентские компьютеры находятся в работоспособном состоянии. После миграции сервера рекомендуется настроить и начать операции резервного копирования клиентских компьютеров, чтобы обеспечить резервное копирование данных для всех ваших важных клиентских компьютеров.  
   
--   **Резервные копии истории файлов** папки нельзя напрямую перенести на конечный сервер из-за изменения папки структуры и резервное копирование метаданных в Windows Server Essentials. Однако папку **Архивы журнала файлов** можно перенести для конкретного пользователя на определенном компьютере. Для этого необходимо найти папку **Данные** в папке **Архивы журнала файлов** для данного пользователя и компьютера, а затем скопировать эту папку **Данных** в папку **Архивы журнала файлов** на целевом сервере.  
+-   Папку **резервных копий журнала файлов** невозможно перенести непосредственно на целевой сервер из-за структуры папок и изменений метаданных резервных копий в Windows Server Essentials. Однако папку **Архивы журнала файлов** можно перенести для конкретного пользователя на определенном компьютере. Для этого необходимо найти папку **Данные** в папке **Архивы журнала файлов** для данного пользователя и компьютера, а затем скопировать эту папку **Данных** в папку **Архивы журнала файлов** на целевом сервере.  
   
 #### <a name="to-copy-data-from-the-source-server-to-the-destination-server"></a>Копирование данных с исходного сервера на целевой сервер  
   
@@ -54,13 +54,13 @@ ms.locfileid: "66432576"
   
     Где  
   
-   - \<SourceServerName\> имя исходного сервера  
+   - \<SourceServerName\> — имя исходного сервера.  
   
-   - \<SharedSourceFolderName\> — имя общей папки на исходном сервере  
+   - \<Шаредсаурцефолдернаме\> — имя общей папки на исходном сервере.  
   
-   - \<PathOfTheDestination\> — абсолютный путь, где вы хотите переместить папку  
+   - \<Пасофседестинатион\> — это абсолютный путь, по которому нужно переместить папку.  
   
-   - \<SharedDestinationFolderName\> — папка на целевом сервере, в который будут копироваться данные  
+   - \<Шареддестинатионфолдернаме\> — папка на целевом сервере, куда будут скопированы данные  
   
      Например,  `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
@@ -70,26 +70,26 @@ ms.locfileid: "66432576"
   
 4. Повторите эту процедуру для каждой общей папки, которую вы перемещаете с исходного сервера.  
   
-##  <a name="BKMK_Network"></a> Настройка сети  
+##  <a name="configure-the-network"></a><a name="BKMK_Network"></a>Настройка сети  
   
 #### <a name="to-configure-the-network"></a>Для настройки сети  
   
 1. На целевом сервере откройте панель мониторинга.  
   
-2. На панели мониторинга на **начальной** странице щелкните **Настройка**, затем **Настройка повсеместного доступа**и установите флажок **Щелкните, чтобы настроить повсеместный доступ** .  
+2. На панели мониторинга на **начальной** странице щелкните **Настройка**, затем **Настройка повсеместного доступа** и установите флажок **Щелкните, чтобы настроить повсеместный доступ**.  
   
 3. Появляется мастер настройки повсеместного доступа. Выполните инструкции в мастере для настройки маршрутизатора и доменных имен.  
   
    Если ваш маршрутизатор не поддерживает инфраструктуру UPnP, или если инфраструктура UPnP отключена, то рядом с именем маршрутизатора может появиться желтый значок предупреждения. Убедитесь, что открыты следующие порты, и что они будут направляться на IP-адрес целевого сервера.  
   
--   Порт 80: Веб-трафик HTTP  
+-   Порт 80: веб-трафик HTTP  
   
--   Порт 443: Веб-трафик HTTPS  
+-   Порт 443: веб-трафик HTTPS  
   
 > [!NOTE]
 >  Если вы хотите настроить имя общедоступного домена на целевом сервере, необходимо освободить доменное имя на исходном сервере, чтобы избежать конкуренции при динамическом обновлении DNS.  
   
-##  <a name="BKMK_MapPermittedComputers"></a> Сопоставить разрешенные компьютеры с учетных записей пользователей  
+##  <a name="map-permitted-computers-to-user-accounts"></a><a name="BKMK_MapPermittedComputers"></a>Сопоставьте разрешенные компьютеры учетным записям пользователей  
  Каждая учетная запись пользователя, которая переносится из предыдущих версий Windows Small Business Server или Windows Server Essentials, должна быть сопоставлена с одним или несколькими компьютерами.  
   
 #### <a name="to-map-user-accounts-to-computers"></a>Сопоставление учетных записей и компьютеров  
@@ -100,7 +100,7 @@ ms.locfileid: "66432576"
   
 3.  В списке учетных записей пользователей щелкните правой кнопкой мыши учетную запись пользователя и нажмите кнопку **Просмотреть свойства учетной записи**.  
   
-4.  Перейдите на вкладку **Повсеместный доступ** , а затем установите флажок **Разрешить удаленный веб-доступ и доступ к веб-приложениям служб**.  
+4.  Перейдите на вкладку **Повсеместный доступ**, а затем установите флажок **Разрешить удаленный веб-доступ и доступ к веб-приложениям служб**.  
   
 5.  Щелкните **Общие папки**, **Компьютеры**, затем **Ссылки главной страницы** и нажмите **Применить**.  
   
@@ -115,8 +115,8 @@ ms.locfileid: "66432576"
 >  По окончании процесса миграции, если при создании первой новой учетной записи пользователя на целевом сервере появится проблема, удалите добавленную учетную запись пользователя, а затем создайте ее снова.  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Вы переместили свои параметры и данные на целевой сервер. Теперь перейдите к [Step 5: Включение перенаправления папок на конечный сервер для миграции Windows Server Essentials](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
+ Вы переместили свои параметры и данные на целевой сервер. Теперь перейдите к [шагу 5. Включение перенаправления папок на целевом сервере для миграции Windows Server Essentials](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
   
 
-Чтобы просмотреть все действия, см. в разделе [миграции на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
+Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 

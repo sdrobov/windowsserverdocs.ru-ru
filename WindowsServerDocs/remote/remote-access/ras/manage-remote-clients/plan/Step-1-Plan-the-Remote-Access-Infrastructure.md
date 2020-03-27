@@ -10,14 +10,14 @@ ms.technology: networking-ras
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a1ce7af5-f3fe-4fc9-82e8-926800e37bc1
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 71a6d38b9c77b3b8c24b28f78114daa63f5bd527
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7c6b4e4d4975303aef6a2334bce164ce498f7254
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822537"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314288"
 ---
 # <a name="step-1-plan-the-remote-access-infrastructure"></a>Шаг 1. Планирование инфраструктуры удаленного доступа
 
@@ -227,7 +227,7 @@ ISATAP требуется для удаленного управления Ди�
   
 Можно создать дополнительные средства проверки подключения, используя другие веб-адреса по протоколу HTTP или PING. Для каждого средства проверки подключения должна существовать DNS-запись.  
   
-##### <a name="dns-server-requirements"></a>Требования к DNS-серверу  
+##### <a name="dns-server-requirements"></a>Требования к серверу DNS  
   
 -   Для клиентов DirectAccess необходимо использовать DNS-сервер под управлением Windows Server 2012, Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 или любой DNS-сервер, поддерживающий IPv6.  
   

@@ -3,7 +3,7 @@ title: Размещенный сервер Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,12 +12,12 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 84464c69d4b8576906e5fb0d0a7de7e382a59537
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 76319f87a246c6fabbe0befaf7dc4c74d1416ac4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947499"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311749"
 ---
 # <a name="hosted-windows-server-essentials"></a>Размещенный сервер Windows Server Essentials
 
@@ -57,10 +57,10 @@ ms.locfileid: "75947499"
   
    Если применяется диспетчер виртуальных машин, можно создать шаблон, используя запущенный экземпляр. При создании шаблона будет выполнена команда sysprep по отношению к запущенному экземпляру, и машина будет выключена. После сохранения в библиотеку можно загружать экземпляр в зависимости от конкретного случая.  
   
-##  <a name="BKMK_automatedeployment"></a>Разделы справки автоматизировать развертывание?  
+##  <a name="how-do-i-automate-the-deployment"></a><a name="BKMK_automatedeployment"></a>Разделы справки автоматизировать развертывание?  
  После получения настроенного образа пользователь может выполнить развертывание с помощью своего собственного образа. Для выполнения полуавтоматической установки необходимо предоставить / развернуть файл unattend.xml для установки WinPE. Для выполнения полностью автоматической установки необходимо также указать файл CFG. ini для начальной настройки Windows Server Essentials.  
   
-1. Выполнение только автоматической установки WinPE. Будет выполнена автоматическая установка только WinPE, которая будет остановлена перед начальной настройкой, чтобы пользователи смогли ввести информацию об организации, домене и администраторе после RDP в сеанс сервера. Для этого выполните следующие действия.  
+1. Выполнение только автоматической установки WinPE. Будет выполнена автоматическая установка только WinPE, которая будет остановлена перед начальной настройкой, чтобы пользователи смогли ввести информацию об организации, домене и администраторе после RDP в сеанс сервера. Для этого выполните следующее действие.  
   
    1.  Предоставьте файл Windows unattend.xml. Выполните [Windows 8.1 ADK](https://go.microsoft.com/fwlink/?LinkId=248694) , чтобы создать файл, и укажите все необходимые сведения, включая имя сервера, ключи продукта и пароль администратора. В разделе Microsoft-Windows-Setup файла Unattend. xml укажите приведенные ниже сведения.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "75947499"
   
    Если используется диспетчер виртуальных машин, можно задать пароль администратора в консоли при создании нового экземпляра из шаблона.  
   
-2. Выполнение полностью автоматической установки и автоматической начальной настройки. Для этого выполните следующие действия.  
+2. Выполнение полностью автоматической установки и автоматической начальной настройки. Для этого выполните следующее действие.  
   
    1.  Если развертывание начинается с установки WinPE, создайте файл unattend.xml, как описано выше.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "75947499"
 Enable-WssRemoteWebAccess [-SkipRouter] [-DenyAccessByDefault] [-ApplyToExistingUsers]  
 ```  
   
- Пример:  
+ Пример.  
   
 ```  
 $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers  
@@ -211,13 +211,13 @@ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
   
  Данная команда позволяет включить удаленный веб-доступ с помощью автоматически настроенного маршрутизатора и изменить установленные по умолчанию права доступа для всех существующих пользователей.  
   
- **Добавление пользователя**  
+ **Добавить пользователя**  
   
 ```  
 Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]   [<CommonParameters>]  
 ```  
   
- Пример:  
+ Пример.  
   
 ```  
 $password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce  
@@ -228,7 +228,7 @@ $Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -Fir
   
  **Включить или отключить пользователя**  
   
- Пример:  
+ Пример.  
   
 ```  
 $CurrentUser = get-wssuser  œname user2test  
@@ -244,7 +244,7 @@ $CurrentUser.Commit()
 Add-WssFolder [-Name] <string> [-Path] <string> [[-Description] <string>] [-KeepPermissions] [<CommonParameters>]  
 ```  
   
- Пример:  
+ Пример.  
   
 ```  
 $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"  
@@ -340,7 +340,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
   **Журнал файлов** — это Windows 8.1 функция для резервного копирования данных профиля (библиотек, рабочего стола, контактов, избранного) в общую сетевую папку. В Windows Server Essentials мы разрешают централизованное управление параметром журнала файлов для всех Windows 8.1 клиентов, присоединенных к Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Эту функцию можно отключить, выполнив действия, описанные в разделе Создание файла CFG. ini [документа ADK](https://technet.microsoft.com/library/jj200150).  
   
-### <a name="storage-management"></a>Управление хранением  
+### <a name="storage-management"></a>Управление хранилищами  
  [Новая функция управления дисковыми пространствами](https://technet.microsoft.com/library/hh831739.aspx) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Вы также можете подключить диск iSCSI к Windows Server Essentials, чтобы расширить его хранилище.  
   
 ## <a name="what-are-the-main-scenarios-i-should-test"></a>Основные сценарии, требующие проверки  
@@ -366,11 +366,11 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
   
 - (Если применимо) настройте параметры архивации сервера, оперативной архивации, архивации данных клиента, истории файлов.  
   
-- (Если применимо.) Настройте и управляйте дисковыми пространствами.  
+- (Если применимо) настройте и управляйте дисковыми пространствами.  
   
 - (Если применимо) настройте интеграцию служб электронной почты (Office 365, размещенная служба Exchange и пр.).  
   
-- (Если применимо.) Настройте сервер мультимедиа.  
+- (Если применимо) настройте сервер мультимедиа.  
   
   **Управление сервером**  
   
@@ -401,7 +401,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 ## <a name="where-can-i-get-more-support"></a>Дополнительная информация  
  С документами SDK и ADK можно ознакомиться, перейдя по следующим ссылкам:  
   
-- [Пакет SDK](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
+- [Tool](https://go.microsoft.com/fwlink/p/?LinkID=248648)  
   
 - [ADK](https://go.microsoft.com/fwlink/p/?LinkID=249124)  
   

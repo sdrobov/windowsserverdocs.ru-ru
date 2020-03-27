@@ -6,18 +6,18 @@ ms.prod: windows-server
 ms.technology: networking-bc
 ms.topic: get-started-article
 ms.assetid: 5a09d9f1-1049-447f-a9bf-74adf779af27
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 1a0694ebe30c5a927fb2f1152adc792f8b0c9157
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: 7fe43b3a7c8dc7906e678a219b67ed096aa951d4
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356388"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80319120"
 ---
 # <a name="prehashing-and-preloading-content-on-hosted-cache-servers-optional"></a>Предварительное хэширование и предварительная загрузка содержимого на серверах размещенного кэша (необязательно)
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Эту процедуру можно использовать для принудительного создания сведений о содержимом (также называемых хэшированием) на веб-и файловых серверах с поддержкой BranchCache. Данные на файловом и веб-серверах можно также собирать в пакеты, которые можно передать на удаленные серверы кэширования.  Это обеспечивает возможность предварительной загрузки содержимого на серверах удаленного размещенного кэша, чтобы данные были доступны для первого клиентского доступа.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "71356388"
   
 2.  Запустите Windows PowerShell от имени администратора. Для каждой папки и файла выполните команду `Publish-BCFileContent` или команду `Publish-BCWebContent` в зависимости от типа сервера содержимого, чтобы активировать создание хэша и добавить данные в пакет данных.  
   
-3.  После добавления всех данных в пакет данных экспортируйте их с помощью команды `Export-BCCachePackage`, чтобы создать файл пакета данных.  
+3.  После добавления всех данных в пакет данных экспортируйте их с помощью команды `Export-BCCachePackage` для создания файла пакета данных.  
   
 4.  Переместите файл пакета данных на серверы удаленного размещенного кэша, используя технологию передачи файлов.  FTP, SMB, HTTP, DVD и переносные жесткие диски являются допустимыми транспортами.  
   

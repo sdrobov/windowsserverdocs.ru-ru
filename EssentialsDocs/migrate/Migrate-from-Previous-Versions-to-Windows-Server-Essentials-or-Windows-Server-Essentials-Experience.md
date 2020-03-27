@@ -2,18 +2,18 @@
 title: Миграция с предыдущих версий на Windows Server Essentials или Windows Server Essentials Experience
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.topic: article
 ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f58a8f83fed4185ee51145b988cfef1074f889c7
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: 55b31785de6e17232a717d534fcb21a24d9052bd
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945139"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318896"
 ---
 # <a name="migrate-from-previous-versions-to-windows-server-essentials-or-windows-server-essentials-experience"></a>Миграция с предыдущих версий на Windows Server Essentials или Windows Server Essentials Experience
 
@@ -54,21 +54,21 @@ ms.locfileid: "74945139"
   
    Для выполнения некоторых процедур миграции нужно открыть окно командной строки от имени администратора. Ниже описано, как это сделать.  
   
-###  <a name="BKMK_OpenACommandPromptAsAdmin"></a>Открытие окна командной строки на исходном сервере с правами администратора  
+###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>Открытие окна командной строки на исходном сервере с правами администратора  
   
-1.  Нажмите **Начать**.  
+1.  Нажмите кнопку **Пуск**.  
   
 2.  В поле поиска введите **cmd**.  
   
-3.  В списке результатов правой кнопкой мыши щелкните команду **cmd**и выберите пункт **Запуск от имени администратора**.  
+3.  В списке результатов правой кнопкой мыши щелкните команду **cmd** и выберите пункт **Запуск от имени администратора**.  
   
 #### <a name="to-open-a-command-prompt-window-on-the-destination-server-as-an-administrator"></a>Открытие окна командной строки на конечном сервере от имени администратора  
   
 1.  На **начальном экране** в поле поиска введите **cmd**.  
   
-2.  В списке результатов правой кнопкой мыши щелкните команду **cmd**и выберите пункт **Запуск от имени администратора**.  
+2.  В списке результатов правой кнопкой мыши щелкните команду **cmd** и выберите пункт **Запуск от имени администратора**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 -   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

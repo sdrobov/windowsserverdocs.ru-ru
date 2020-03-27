@@ -6,14 +6,14 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 566bc270-81c7-48c3-a904-3cba942ad463
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: 613bb7f43b382389dc0db953a48668147cfaee88
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: a6fe98dea50dd194c2bb2303a663968f93818332
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356052"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317967"
 ---
 # <a name="dns-policies-overview"></a>Обзор политик DNS
 
@@ -84,7 +84,7 @@ ms.locfileid: "71356052"
 |IP-адрес интерфейса сервера|EQ, 10.0.0.3|  
 |FQDN|EQ, *. contoso. com|  
 |Тип запроса|NE, SRV|  
-|Время суток|EQ, 20:00-22:00|  
+|Время дня|EQ, 20:00-22:00|  
 
 Можно создать несколько политик разрешения запросов на одном уровне, если они имеют разное значение для порядка обработки. Если доступно несколько политик, DNS-сервер обрабатывает входящие запросы следующим образом:  
 

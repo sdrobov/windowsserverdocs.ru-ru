@@ -1,9 +1,9 @@
 ---
 title: Подготовка образа для развертывания
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,16 +12,16 @@ ms.assetid: 681c6cad-7fde-494f-86a5-f4c7c15d23f9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 16411ab073e9417c52592aa9a6b13707dd461537
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
-ms.translationtype: HT
+ms.openlocfilehash: aac776253c094c4a77269720bcc5762d6c41d720
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59838535"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311553"
 ---
 # <a name="preparing-the-image-for-deployment"></a>Подготовка образа для развертывания
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Обычное средство для подготовки образа – это sysprep.exe. Запуск этого средства позволяет подготовить к использованию образ и выключить сервер, чтобы выполнить начальную настройку после перезапуска сервера с образом. Перед запуском sysprep.exe все изменения образа должны быть завершены.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "59838535"
     ```  
   
     > [!IMPORTANT]
-    >  Кроме того, в качестве параметра sysprep можно добавить файл unattend.xml на %systemdrive%. Если файл расположен в папке c:\ он будет охваченных параметры пользователя s, но если используется в качестве параметра sysprep, он не будут рассмотрены в параметры пользователя s. Файл unattend.xml на %systemdrive% будет удаляться при каждом перезапуске сервера. Поэтому после создания файла unattend.xml в %systemdrive% следите, чтобы сервер не перезапускался.  
+    >  Кроме того, в качестве параметра sysprep можно добавить файл unattend.xml на %systemdrive%. Если файл находится в папке c:\ Он будет охватывать параметры пользователя, но если он используется в качестве параметра Sysprep, он не будет охватывать параметры пользователя. Файл unattend.xml на %systemdrive% будет удаляться при каждом перезапуске сервера. Поэтому после создания файла unattend.xml в %systemdrive% следите, чтобы сервер не перезапускался.  
   
 10. Выполните следующую команду, чтобы добавить раздел реестра и пропустить страницу ключа Windows OOBE.  
   
