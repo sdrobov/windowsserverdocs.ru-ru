@@ -6,19 +6,19 @@ ms.prod: windows-server
 ms.technology: networking-hv-switch
 ms.topic: get-started-article
 ms.assetid: ''
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 10/02/2018
-ms.openlocfilehash: e68a3889867b75152ea941ac1d8eb113b9acd3cb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5425a562264addd3b2fc416f659f8ba79d6d99d6
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406005"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317490"
 ---
 # <a name="egress-metering-in-a-virtual-network"></a>Измерение исходящего трафика в виртуальной сети
 
->Относится к: Windows Server 2019
+>Область применения: Windows Server 2019
 
 
 Фундаментальный аспект облачных сетей монетизацию позволяет выставлять счета за использование пропускной способности сети. Плата за исходящие данные взимается по общему объему данных, которые выходят за пределы центра обработки данных через Интернет в заданном цикле выставления счетов.

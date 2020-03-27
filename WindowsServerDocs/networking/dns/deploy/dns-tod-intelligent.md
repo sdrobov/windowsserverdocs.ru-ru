@@ -6,24 +6,24 @@ ms.prod: windows-server
 ms.technology: networking-dns
 ms.topic: article
 ms.assetid: 161446ff-a072-4cc4-b339-00a04857ff3a
-ms.author: pashort
-author: shortpatti
-ms.openlocfilehash: e497b0d73c816f0295588aa77a21c49d376c0dcf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.author: lizross
+author: eross-msft
+ms.openlocfilehash: e4bb075368bb3dfadaa8046b177dbbac637763e3
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406185"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80317826"
 ---
 # <a name="use-dns-policy-for-intelligent-dns-responses-based-on-the-time-of-day"></a>Получение интеллектуальных ответов DNS на основе времени дня с помощью политики DNS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела вы узнаете, как распределять трафик приложений между различными географически распределенными экземплярами приложения с помощью политик DNS, основанных на времени суток.  
   
 Этот сценарий полезен в ситуациях, когда требуется направить трафик в один часовой пояс на альтернативные серверы приложений, такие как веб-серверы, которые находятся в другом часовом поясе. Это позволяет распределять трафик между экземплярами приложения во время пиковых периодов, когда основные серверы перегружаются с трафиком.   
   
-### <a name="bkmk_example1"></a>Пример интеллектуальных ответов DNS на основе времени суток  
+### <a name="example-of-intelligent-dns-responses-based-on-the-time-of-day"></a><a name="bkmk_example1"></a>Пример интеллектуальных ответов DNS на основе времени суток  
 Ниже приведен пример того, как можно использовать политику DNS для балансировки трафика приложения в зависимости от времени суток.  
   
 В этом примере используется одна вымышленная компания, подарочные службы Contoso, которые предоставляют Интернет-решения для электронной коммерции по всему миру с помощью своего Web-узла, contosogiftservices.com.   
@@ -38,7 +38,7 @@ ms.locfileid: "71406185"
   
 ![Пример политики DNS для времени суток](../../media/DNS-Policy-Tod1/dns_policy_tod1.jpg)  
   
-### <a name="bkmk_works1"></a>Как интеллектуальные ответы DNS на основе времени суток  
+### <a name="how-intelligent-dns-responses-based-on-time-of-day-works"></a><a name="bkmk_works1"></a>Как интеллектуальные ответы DNS на основе времени суток  
   
 Если для DNS-сервера настроена политика DNS с временем суток, от 6 до 9 PM в каждом географическом расположении DNS-сервер выполняет следующие настройки.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "71406185"
   
 Дополнительные сведения о типах политик и критериях см. в разделе [Общие сведения о политиках DNS](../../dns/deploy/DNS-Policies-Overview.md).  
   
-### <a name="bkmk_how1"></a>Настройка политики DNS для интеллектуальных ответов DNS на основе времени суток  
+### <a name="how-to-configure-dns-policy-for-intelligent-dns-responses-based-on-time-of-day"></a><a name="bkmk_how1"></a>Настройка политики DNS для интеллектуальных ответов DNS на основе времени суток  
 Чтобы настроить политику DNS для времени суток с балансировкой нагрузки приложений на основе запросов, необходимо выполнить следующие действия.  
   
 - [Создание подсетей клиента DNS](#bkmk_subnets)  
@@ -69,7 +69,7 @@ ms.locfileid: "71406185"
 >[!IMPORTANT]
 >В следующих разделах приведены примеры команд Windows PowerShell, которые содержат примеры значений для многих параметров. Перед выполнением этих команд обязательно замените примеры значений в этих командах значениями, подходящими для вашего развертывания.  
   
-#### <a name="bkmk_subnets"></a>Создание подсетей клиента DNS  
+#### <a name="create-the-dns-client-subnets"></a><a name="bkmk_subnets"></a>Создание подсетей клиента DNS  
 Первым шагом является указание подсетей или пространства IP-адресов регионов, для которых необходимо перенаправить трафик. Например, если требуется перенаправить трафик для США и Европы, необходимо найти подсети или пространства IP-адресов этих регионов.  
   
 Эти сведения можно получить из карт географических IP-адресов. На основе этих дистрибутивов геоip-адресов необходимо создать "подсети клиента DNS". Подсеть клиента DNS — это логическая группа подсетей IPv4 или IPv6, из которой отправляются запросы на DNS-сервер.  
@@ -84,7 +84,7 @@ Add-DnsServerClientSubnet -Name "EuropeSubnet" -IPv4Subnet "141.1.0.0/24, 151.1.
 ```  
 Дополнительные сведения см. в разделе [Add-днссерверклиентсубнет](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverclientsubnet?view=win10-ps).  
   
-#### <a name="bkmk_zscopes"></a>Создание областей зоны  
+#### <a name="create-the-zone-scopes"></a><a name="bkmk_zscopes"></a>Создание областей зоны  
 После настройки подсетей клиента необходимо секционировать зону, трафик которой необходимо перенаправить на две разные области зоны, по одной области для каждой настроенной подсети клиента DNS.  
   
 Например, если вы хотите перенаправить трафик для DNS-имени www.contosogiftservices.com, необходимо создать две разные области зоны в зоне contosogiftservices.com, одну для США и одну для Европы.  
@@ -104,7 +104,7 @@ Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DublinZoneScop
 ```  
 Дополнительные сведения см. в разделе [Add-днссерверзонескопе](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps).  
   
-#### <a name="bkmk_records"></a>Добавление записей в области зоны  
+#### <a name="add-records-to-the-zone-scopes"></a><a name="bkmk_records"></a>Добавление записей в области зоны  
 Теперь необходимо добавить записи, представляющие узел веб-сервера, в две области зоны.  
   
 Например, в **сеаттлезонескопе**запись <strong>www.contosogiftservices.com</strong> добавляется с IP-адресом 192.0.0.1, который находится в Сиэтле. Аналогичным образом в **дублинзонескопе**запись <strong>www.contosogiftservices.com</strong> добавляется с IP-адресом 141.1.0.3 в центре обработки данных.  
@@ -121,7 +121,7 @@ Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -
   
 Дополнительные сведения см. в разделе [Add-днссерверресаурцерекорд](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).  
   
-#### <a name="bkmk_policies"></a>Создание политик DNS  
+#### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>Создание политик DNS  
 После создания подсетей, разделов (областей зоны) и добавления записей необходимо создать политики, соединяющие подсети и секции, чтобы при получении запроса из источника в одной из подсетей клиента DNS возвращался ответ запроса. правильная область действия зоны. Для сопоставления области зоны по умолчанию не требуются никакие политики.  
   
 После настройки этих политик DNS поведение DNS-сервера выглядит следующим образом:  

@@ -1,9 +1,9 @@
 ---
 title: Настройка образа
-description: Описывает способ использования Windows Server Essentials
+description: Описание использования Windows Server Essentials
 ms.custom: na
 ms.date: 10/03/2016
-ms.prod: windows-server-2016-essentials
+ms.prod: windows-server
 ms.reviewer: na
 ms.suite: na
 ms.tgt_pltfrm: na
@@ -12,30 +12,30 @@ ms.assetid: 9dc89e34-fd35-4fa9-8d2f-894bfb780a5f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 66c1b08653cccb5ecf7a0fd168906d1d0cd0184b
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 047be39a485c598c6d21bcf95ae4b3a825cacb21
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59814885"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80311850"
 ---
 # <a name="customize-the-image"></a>Настройка образа
 
->Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Сведения этого раздела можно использовать для настройки образа операционной системы.  
   
- Этот раздел содержит следующие темы:  
+ Этот раздел содержит следующие подразделы:  
   
--   [Добавление записи для установки, Надстройки, краткая информация о состоянии и ссылки на разделы справки](Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md)  
+-   [Добавление элементов в списки "УСТАНОВКА", "НАДСТРОЙКИ", "КРАТКАЯ ИНФОРМАЦИЯ О СОСТОЯНИИ" и "СПРАВКА"](Add-Entries-to-SETUP--ADD-INS--QUICK-STATUS--and-HELP-Links.md)  
   
 -   [Добавление оповещений о работоспособности](Add-Health-Alerts.md)  
   
--   [Настройка поддержки беспроводных сетей](Configure-Support-for-a-Wireless-Network.md)  
+-   [Настройка поддержки беспроводной сети](Configure-Support-for-a-Wireless-Network.md)  
   
 -   [Настройка разделов диска](Customize-Disk-Partitions.md)  
   
--   [Настройка архивации сервера](Customize-Server-Backup.md)  
+-   [Настройка резервного копирования сервера](Customize-Server-Backup.md)  
   
 -   [Настройка общих папок](Customize-Shared-Folders.md)  
   

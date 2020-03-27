@@ -6,19 +6,19 @@ ms.topic: article
 ms.assetid: a1b5fa23-9cb1-4c32-916f-2d75f48b42c7
 ms.prod: windows-server
 ms.technology: networking
-ms.author: pashort
-author: shortpatti
+ms.author: lizross
+author: eross-msft
 ms.date: 07/19/2018
-ms.openlocfilehash: 335efc4fae1f12f2af8443e91c67ff6ba936edb0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 275bec5c950ea20c3a7d5a933648cf7e068164d1
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71356209"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80318356"
 ---
 # <a name="copy-the-ca-certificate-and-crl-to-the-virtual-directory"></a>Копирование сертификата ЦС и списка отзыва сертификатов в виртуальный каталог
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этой процедуры можно скопировать список отзыва сертификатов и сертификат корневого ЦС предприятия из центра сертификации в виртуальный каталог на веб-сервере и убедиться, что службы AD CS настроены правильно. Перед выполнением приведенных ниже команд убедитесь, что имена каталогов и серверов заменены теми, которые подходят для развертывания.  
   
@@ -30,11 +30,11 @@ ms.locfileid: "71356209"
   
     - Введите `certutil -crl` и нажмите ВВОД.  
 
-    - Чтобы скопировать сертификат CA1 в общую папку на веб-сервере, введите `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`, а затем нажмите клавишу ВВОД.  
+    - Чтобы скопировать сертификат CA1 в общую папку на веб-сервере, введите `copy C:\Windows\system32\certsrv\certenroll\*.crt \\WEB1\pki`и нажмите клавишу ВВОД.  
     
-    - Чтобы скопировать списки отзыва сертификатов в общую папку на веб-сервере, введите `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`, а затем нажмите клавишу ВВОД.  
+    - Чтобы скопировать списки отзыва сертификатов в общую папку на веб-сервере, введите `copy C:\Windows\system32\certsrv\certenroll\*.crl \\WEB1\pki`и нажмите клавишу ВВОД.  
   
-2.  Чтобы убедиться, что расположения расширения CDP и AIA правильно настроены, введите `pkiview.msc` и нажмите клавишу ВВОД. Откроется консоль управления PKI предприятия PKIView.  
+2.  Чтобы убедиться, что расположения расширения CDP и AIA настроены правильно, введите `pkiview.msc`и нажмите клавишу ВВОД. Откроется консоль управления PKI предприятия PKIView.  
   
 3.  В левой области щелкните имя центра сертификации.<p>Например, если имя ЦС — Corp-CA1-CA, щелкните **Corp-CA1-CA**. 
 
