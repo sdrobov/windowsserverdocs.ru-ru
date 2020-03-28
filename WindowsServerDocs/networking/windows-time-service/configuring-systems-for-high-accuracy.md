@@ -2,18 +2,18 @@
 ms.assetid: ''
 title: Настройка высокой точности в системах
 description: Синхронизация времени в Windows 10 и Windows Server 2016 была значительно улучшена.  При разумных условиях работы можно настроить системы для поддержания точности до 1 мс (миллисекунды) или еще точнее (относительно UTC).
-author: shortpatti
+author: eross-msft
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: b7cd256fdbbdbe7432e5b5d5b16254314132560f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8cdded0eb0dc663d352011fb1a6765a2ed358764
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405194"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315037"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>Настройка высокой точности в системах
 >Применяется к: Windows Server 2016 и Windows 10 версии 1607 или более поздней.
@@ -106,7 +106,7 @@ ms.locfileid: "71405194"
 
 #### <a name="registry-settings"></a>Параметры реестра
 
-# <a name="minpollintervaltabminpollinterval"></a>[MinPollInterval](#tab/MinPollInterval)
+# <a name="minpollinterval"></a>[MinPollInterval](#tab/MinPollInterval)
 Настраивает наименьший интервал в log2 в секундах, разрешенный для системного опроса.
 
 |  |  | 
@@ -120,7 +120,7 @@ ms.locfileid: "71405194"
 `w32tm /config /update`
 
 
-# <a name="maxpollintervaltabmaxpollinterval"></a>[MaxPollInterval](#tab/MaxPollInterval)
+# <a name="maxpollinterval"></a>[MaxPollInterval](#tab/MaxPollInterval)
 Настраивает наибольший интервал в log2 в секундах, разрешенный для системного опроса.
 
 |  |  |  
@@ -133,7 +133,7 @@ ms.locfileid: "71405194"
 
 `w32tm /config /update`
 
-# <a name="updateintervaltabupdateinterval"></a>[UpdateInterval](#tab/UpdateInterval)
+# <a name="updateinterval"></a>[UpdateInterval](#tab/UpdateInterval)
 Количество тактов часов между настройками фазовой коррекции.
 
 |  |  |  
@@ -146,7 +146,7 @@ ms.locfileid: "71405194"
 
 `w32tm /config /update`
 
-# <a name="specialpollintervaltabspecialpollinterval"></a>[SpecialPollInterval](#tab/SpecialPollInterval)
+# <a name="specialpollinterval"></a>[SpecialPollInterval](#tab/SpecialPollInterval)
 Настраивает интервал опроса в секундах, когда включен флаг SpecialInterval 0x1.
 
 |  |  |  
@@ -159,7 +159,7 @@ ms.locfileid: "71405194"
 
 `net stop w32time && net start w32time`
 
-# <a name="frequencycorrectratetabfrequencycorrectrate"></a>[FrequencyCorrectRate](#tab/FrequencyCorrectRate)
+# <a name="frequencycorrectrate"></a>[FrequencyCorrectRate](#tab/FrequencyCorrectRate)
 
 |  |  |  
 |---------|---------|

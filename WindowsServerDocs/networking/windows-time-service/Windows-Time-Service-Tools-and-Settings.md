@@ -3,7 +3,7 @@ ms.assetid: 6086947f-f9ef-4e18-9f07-6c7c81d7002c
 title: Инструменты и параметры службы времени Windows
 description: ''
 author: Teresa-Motiv
-ms.author: pashort
+ms.author: lizross
 manager: dougkim
 ms.date: 02/24/2020
 ms.topic: article
@@ -13,12 +13,12 @@ ms.custom:
 - CI ID 113344
 - CSSTroubleshoot
 audience: Admin
-ms.openlocfilehash: e99c07428a1689e3c079ff2570759c849a61e945
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e9432aa11446cdd4f00efca3af28c24d757d6019
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323476"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80315133"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Инструменты и параметры службы времени Windows
 
@@ -256,7 +256,7 @@ ClockRate: 0.0156000s
 >  
 > Например, 5 минут будет иметь значение 5 &times; 60 &times; 1000 &times; 10000 = 3 000 000 000 тактов.  
 
-### <a id="config"></a>Записи в подразделе HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
+### <a name="hklmsystemcurrentcontrolsetservicesw32timeconfig-subkey-entries"></a><a id="config"></a>Записи в подразделе HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Config
 
 |Запись реестра |Версии |Описание |
 | --- | --- | --- |
@@ -289,7 +289,7 @@ ClockRate: 0.0156000s
 |**UpdateInterval** |Все версии |Указывает количество тактов часов между настройками фазовой коррекции. Значение по умолчанию для контроллеров домена **100**. Значение по умолчанию для членов домена равно **30 000**. Значение по умолчанию для автономных клиентов и серверов равно **360 000**.<br /><br />**Примечание**<br />0 — это недопустимое значение для записи реестра **UpdateInterval**. На компьютерах под управлением Windows Server 2003, Windows Server 2003 R2, Windows Server 2008 и Windows Server 2008 R2, если значение равно **0**, служба времени Windows автоматически изменяет его на **1**.|
 |**UtilizeSslTimeData** |Версии Windows более поздние, чем версия 1511 сборки Windows 10 |Значение **1** указывает на то, что W32Time будет использовать несколько временных меток SSL для присвоения начального значения часам, которые являются совершенно неточными. |
 
-### <a id="parameters"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
+### <a name="hklmsystemcurrentcontrolsetservicesw32timeparameters-subkey-entries"></a><a id="parameters"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters
 
 | Запись реестра | Версии | Описание |
 | --- | --- | --- |
@@ -299,7 +299,7 @@ ClockRate: 0.0156000s
 |**ServiceMain** |Все версии |Поддерживается службой W32Time. Она содержит зарезервированные данные, используемые операционной системой Windows, и любые изменения этого параметра могут привести к непредсказуемым результатам. Значение по умолчанию для членов домена — **SvchostEntry_W32Time**. Значение по умолчанию на автономных клиентах и серверах — **SvchostEntry_W32Time**. |
 |**Type** |Все версии |Указывает, от каких одноранговых узлов следует принимать синхронизацию:  <ul><li>**NoSync**. Служба времени не синхронизируется с другими источниками.</li><li>**NTP**. Служба времени синхронизируется с серверов, указанных в **NtpServer**. запись реестра.</li><li>**NT5DS**. Служба времени синхронизируется из иерархии доменов.  </li><li>**AllSync**. Служба времени использует все доступные механизмы синхронизации.  </li></ul>Значение по умолчанию для членов домена равно **NT5DS**. Значение по умолчанию на автономных клиентах и серверах равно **NTP**. |
 
-### <a id="ntpclient"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
+### <a name="hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpclient-subkey-entries"></a><a id="ntpclient"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient
 
 |Запись реестра |Версия |Описание |
 | --- | --- | --- |
@@ -316,7 +316,7 @@ ClockRate: 0.0156000s
 |**SpecialPollInterval** |Все версии |Указывает специальный интервал опроса в секундах для одноранговых узлов, настроенных вручную. Если включен флаг 0x1 **SpecialInterval**, служба W32Time использует этот интервал опроса вместо интервала опроса, определяемого операционной системой. Значение по умолчанию для членов домена равно **3 600**. Значение по умолчанию на автономных клиентах и серверах равно **604 800**.<br/><br/>Новые параметры (для сборки 1702) **SpecialPollInterval** содержатся в значениях конфигурации реестра **MinPollInterval** и **MaxPollInterval**.|
 |**SpecialPollTimeRemaining** |Все версии |Поддерживается службой W32Time. Она содержит зарезервированные данные, используемые операционной системой Windows. В ней указывается время в секундах, по истечении которого служба W32Time будет повторно синхронизироваться после перезагрузки компьютера. Любые изменения этого параметра могут привести к непредсказуемым результатам. Значение по умолчанию для обоих членов домена, а также для изолированных клиентов и серверов остается пустым. |
 
-### <a id="ntpserver"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
+### <a name="hklmsystemcurrentcontrolsetservicesw32timetimeprovidersntpserver-subkey-entries"></a><a id="ntpserver"></a>Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpServer
 
 |Запись реестра |Версии |Описание |
 | --- | --- | --- |

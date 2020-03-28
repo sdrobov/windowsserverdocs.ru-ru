@@ -2,18 +2,18 @@
 ms.assetid: e34622ff-b2d0-4f81-8d00-dacd5d6c215e
 title: Технический справочник по службе времени Windows
 description: Служба времени W32Time обеспечивает синхронизацию сетевых часов для компьютеров без необходимости в расширенной конфигурации. Служба W32Time необходима для успешной работы проверки подлинности Kerberos версии 5 и, следовательно, для проверки подлинности на основе AD DS.
-author: shortpatti
+author: eross-msft
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 04d39f222fbbc7943cc2074a857a76f38832935d
-ms.sourcegitcommit: 76469d1b7465800315eaca3e0c7f0438fc3939ed
+ms.openlocfilehash: b3d66f47bea99f6eed55aac15f2b54f3401a5755
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75919871"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314917"
 ---
 # <a name="windows-time-service-technical-reference"></a>Технический справочник по службе времени Windows
 >Применяется к: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10 или более поздних версий
@@ -21,7 +21,7 @@ ms.locfileid: "75919871"
 Служба времени W32Time обеспечивает синхронизацию сетевых часов для компьютеров без необходимости в расширенной конфигурации. Служба W32Time необходима для успешной работы проверки подлинности Kerberos версии 5 и, следовательно, для проверки подлинности на основе AD DS. Любое приложение, поддерживающее Kerberos, включая большинство служб безопасности, зависит от синхронизации времени между компьютерами, участвующими в запросе проверки подлинности. Контроллеры доменов AD DS также должны иметь синхронизированные часы, чтобы обеспечивать точную репликацию данных.
 
 > [!NOTE]  
-> В Windows Server 2003 и Microsoft Windows 2000 Server служба каталогов называется "служба каталогов Active Directory" В Windows Server 2008 и Windows Server 2008 R2 служба каталогов называется "Доменные службы Active Directory" (AD DS). Остальная часть этой статьи относится к AD DS, но эти сведения применимы также и к доменным службам Active Directory в Windows Server 2016.
+> В Windows Server 2003 и Microsoft Windows 2000 Server служба каталогов называется "служба каталогов Active Directory" В Windows Server 2008 и Windows Server 2008 R2 служба каталогов называется "доменные службы Active Directory" (AD DS). Остальная часть этой статьи относится к AD DS, но эти сведения применимы также и к доменным службам Active Directory в Windows Server 2016.
 
 Служба W32Time реализована в библиотеке динамической компоновки с именем W32Time.dll, которая по умолчанию устанавливается в папку **%Systemroot%\System32**. Служба W32Time.dll изначально разрабатывалась для Windows 2000 Server и поддержки спецификации протоколом проверки подлинности Kerberos версии 5, требующей синхронизации в сети. Начиная с Windows Server 2003, Служба W32Time.dll обеспечивает более высокую точность синхронизации часов в сети по сравнению с операционной системой Windows Server 2000. Кроме того, в Windows Server 2003 служба W32Time.dll поддерживала широкий набор аппаратных устройств и протоколов сетевого времени через поставщики времени.
 
@@ -39,7 +39,7 @@ ms.locfileid: "75919871"
   
     -   [Configuring a time source for the forest](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc794823%28v%3dws.10%29) (Настойка источника времени для леса); 
   
-    -   Статья 816042 базы знаний Майкрософт [Как настроить полномочный сервер времени в операционной системе Windows Server](https://go.microsoft.com/fwlink/?LinkID=60402), в которой описаны параметры конфигурации для компьютеров под управлением Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 и Windows Server 2003 R2.  
+    -   Статья 816042 базы знаний Майкрософт [Как настроить полномочный сервер времени в операционной системе Windows Server](https://go.microsoft.com/fwlink/?LinkID=60402), в которой описаны параметры конфигурации для компьютеров под управлением Windows Server 2008 R2, Windows Server 2008, Windows Server 2003 и Windows Server 2003 R2.  
   
 -   Сведения о настройке службы времени Windows на любом клиенте- или сервере-члене домена или даже на контроллерах домена, которые не настроены в качестве эмулятора основного контроллера в корне леса, см. в [этой статье](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc816884%28v%3dws.10%29).  
   

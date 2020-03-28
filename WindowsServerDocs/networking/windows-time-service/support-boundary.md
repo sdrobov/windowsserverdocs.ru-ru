@@ -2,19 +2,19 @@
 ms.assetid: ''
 title: Граница области поддержки для высокоточного времени
 description: В этой статье описывается граница области поддержки службы времени Windows (W32Time) в средах, требующих высокой точности и стабильного системного времени.
-author: shortpatti
+author: eross-msft
 ms.author: dacuo
 manager: dougkim
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 212b9c79bc2e43e966180b928c865a9053332c3f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5748d598272c8f096876bab0d24142d38c2fd64b
+ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405270"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80314965"
 ---
 # <a name="support-boundary-for-high-accuracy-time"></a>Граница области поддержки для высокоточного времени
 
