@@ -13,12 +13,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 436d4bbec0dbb31fd9cdfb4fc29057e32d87888a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0fc273bc84e0bc25a7409941af6dca02b6042640
+ms.sourcegitcommit: 479ad84a0d6c7c7b8308122b8bac8308cb36fe9b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374111"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391705"
 ---
 # <a name="manage-bde-changekey"></a>Manage-bde: чанжекэй
 
@@ -43,11 +43,11 @@ manage-bde -changekey [<Drive>] [<PathToExternalKeyDirectory>] [-computername <N
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_Examples"></a>Примеров
 
 В следующем примере показано использование команды **-чанжекэй** для создания нового ключа запуска на диске E для использования с шифрованием BitLocker на диске C.
 ```
-manage-bde –changekey C: E:\
+manage-bde -changekey C: E:\
 ```
 
 #### <a name="additional-references"></a>Дополнительная справка
