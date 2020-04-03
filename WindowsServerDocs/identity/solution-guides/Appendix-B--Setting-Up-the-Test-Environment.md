@@ -95,7 +95,7 @@ ms.locfileid: "71407146"
 
 6.  Нажмите кнопку **OK** , чтобы создать виртуальную сеть и закрыть диспетчер виртуальных сетей, или нажмите **Применить** , чтобы создать виртуальную сеть и продолжить работу с диспетчером виртуальных сетей.  
 
-### <a name="BKMK_Build"></a>Создание контроллера домена  
+### <a name="build-the-domain-controller"></a><a name="BKMK_Build"></a>Создание контроллера домена  
 Создайте виртуальную машину, которая будет использоваться как контроллер домена (DC1). Установите виртуальную машину с помощью Windows Server 2012 ISO и назовите ее DC1.  
 
 ##### <a name="to-install-active-directory-domain-services"></a>Установка доменных служб Active Directory  
@@ -199,7 +199,7 @@ ms.locfileid: "71407146"
     gpupdate /force  
     ```  
 
-### <a name="BKMK_FS1"></a>Создание файлового сервера и AD RMS Server (FILE1)  
+### <a name="build-the-file-server-and-ad-rms-server-file1"></a><a name="BKMK_FS1"></a>Создание файлового сервера и AD RMS Server (FILE1)  
 
 1. Создайте виртуальную машину с именем FILE1 из ISO-образа Windows Server 2012.  
 
@@ -282,7 +282,7 @@ ms.locfileid: "71407146"
 > [!NOTE]  
 > По умолчанию централизованные политики доступа не включены для системы или загрузочного тома C:.  
 
-#### <a name="BKMK_CS1"></a>Установка службы Active Directory Rights Management  
+#### <a name="install-active-directory-rights-management-services"></a><a name="BKMK_CS1"></a>Установка службы Active Directory Rights Management  
 Добавьте службы управления правами Active Directory (AD RMS) и все необходимые компоненты с помощью диспетчера серверов. Оставьте все параметры по умолчанию.  
 
 ###### <a name="to-install-active-directory-rights-management-services"></a>Установка служб управления правами Active Directory  
@@ -552,9 +552,9 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
     -   Значение: DWORD  
 
-## <a name="BKMK_CF"></a>Пример настройки лаборатории для развертывания утверждений в лесах  
+## <a name="lab-setup-for-deploying-claims-across-forests-scenario"></a><a name="BKMK_CF"></a>Пример настройки лаборатории для развертывания утверждений в лесах  
 
-### <a name="BKMK_2.1"></a>Создание виртуальной машины для DC2  
+### <a name="build-a-virtual-machine-for-dc2"></a><a name="BKMK_2.1"></a>Создание виртуальной машины для DC2  
 
 -   Создайте виртуальную машину на основе ISO-образа Windows Server 2012.  
 
@@ -567,7 +567,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 >   
 > Все образы виртуальных машин (серверы и клиенты) необходимо повторно настроить для использования статического IP-адреса версии 4 (IPv4) и параметров DNS клиента. Дополнительные сведения см. в разделе [Настройка DNS-клиента для статического IP-адреса](https://go.microsoft.com/fwlink/?LinkId=150952).  
 
-### <a name="BKMK_2.2"></a>Настройка нового леса с именем adatum.com  
+### <a name="set-up-a-new-forest-called-adatumcom"></a><a name="BKMK_2.2"></a>Настройка нового леса с именем adatum.com  
 
 ##### <a name="to-install-active-directory-domain-services"></a>Установка доменных служб Active Directory  
 
@@ -620,7 +620,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 >   
 > Если эти команды выполняются без ошибок, леса могут взаимодействовать друг с другом. Дополнительные сведения об ошибках nslookup см. в разделе об устранении неполадок статьи [Использование NSlookup.exe](https://support.microsoft.com/kb/200525).  
 
-### <a name="BKMK_2.22"></a>Задание contoso.com в качестве доверяющего леса для adatum.com  
+### <a name="set-contosocom-as-a-trusting-forest-to-adatumcom"></a><a name="BKMK_2.22"></a>Задание contoso.com в качестве доверяющего леса для adatum.com  
 На этом шаге вы создадите отношение доверия между сайтом корпорации Adatum и сайтом Contoso, Ltd.  
 
 ##### <a name="to-set-contoso-as-a-trusting-forest-to-adatum"></a>Настройка Contoso как доверяющего леса для Adatum  
@@ -641,7 +641,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
 8.  Следуйте указаниям мастера.  
 
-### <a name="BKMK_2.4"></a>Создание дополнительных пользователей в лесу adatum  
+### <a name="create-additional-users-in-the-adatum-forest"></a><a name="BKMK_2.4"></a>Создание дополнительных пользователей в лесу adatum  
 Создайте пользователя с паролем <strong>pass@word1</strong>и назначьте атрибут Company со значением **adatum**.  
 
 ##### <a name="to-create-a-user-with-the-company-attribute"></a>Создание пользователя с атрибутом "Компания"  
@@ -662,7 +662,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
     ```  
 
-### <a name="BKMK_2.5"></a>Создание типа заявки компании на adataum.com  
+### <a name="create-the-company-claim-type-on-adataumcom"></a><a name="BKMK_2.5"></a>Создание типа заявки компании на adataum.com  
 
 ##### <a name="to-create-a-claim-type-by-using-windows-powershell"></a>Создание типа утверждения с помощью Windows PowerShell  
 
@@ -683,7 +683,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
     ```  
 
-### <a name="BKMK_2.55"></a>Включение свойства ресурса компании в contoso.com  
+### <a name="enable-the-company-resource-property-on-contosocom"></a><a name="BKMK_2.55"></a>Включение свойства ресурса компании в contoso.com  
 
 ##### <a name="to-enable-the-company-resource-property-on-contosocom"></a>Включение свойства ресурса "Компания" для contoso.com  
 
@@ -697,7 +697,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
 5.  Выберите **Компания** из списка **Свойства ресурса**, щелкните правой кнопкой и выберите **Включить**.  
 
-### <a name="BKMK_2.6"></a>Включение динамического контроля доступа в adatum.com  
+### <a name="enable-dynamic-access-control-on-adatumcom"></a><a name="BKMK_2.6"></a>Включение динамического контроля доступа в adatum.com  
 
 ##### <a name="to-enable-dynamic-access-control-for-adatumcom"></a>Включение динамического контроля доступа для adatum.com  
 
@@ -717,7 +717,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
     gpupdate /force  
     ```  
 
-### <a name="BKMK_2.8"></a>Создание типа заявки компании на contoso.com  
+### <a name="create-the-company-claim-type-on-contosocom"></a><a name="BKMK_2.8"></a>Создание типа заявки компании на contoso.com  
 
 ##### <a name="to-create-a-claim-type-by-using-windows-powershell"></a>Создание типа утверждения с помощью Windows PowerShell  
 
@@ -734,7 +734,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
     ```  
 
-### <a name="BKMK_2.9"></a>Создание централизованного правила доступа  
+### <a name="create-the-central-access-rule"></a><a name="BKMK_2.9"></a>Создание централизованного правила доступа  
 
 ##### <a name="to-create-a-central-access-rule"></a>Создание правила централизованного доступа  
 
@@ -765,7 +765,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
    -Server:"contoso.com" `  
    ```  
 
-### <a name="BKMK_2.10"></a>Создание централизованной политики доступа  
+### <a name="create-the-central-access-policy"></a><a name="BKMK_2.10"></a>Создание централизованной политики доступа  
 
 ##### <a name="to-create-a-central-access-policy"></a>Создание централизованной политики доступа  
 
@@ -779,7 +779,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
     -Member "AdatumEmployeeAccessRule" `  
     ```  
 
-### <a name="BKMK_2.11"></a>Опубликуйте новую политику с помощью групповая политика  
+### <a name="publish-the-new-policy-through-group-policy"></a><a name="BKMK_2.11"></a>Опубликуйте новую политику с помощью групповая политика  
 
 ##### <a name="to-apply-the-central-access-policy-across-file-servers-through-group-policy"></a>Применение централизованной политики доступа на файловых серверах с помощью групповой политики  
 
@@ -811,13 +811,13 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 
 7.  Закройте редактор управления групповыми политиками. Централизованная политика доступа добавлена в групповую политику.  
 
-### <a name="BKMK_2.12"></a>Создание папки "прибыль" на файловом сервере  
+### <a name="create-the-earnings-folder-on-the-file-server"></a><a name="BKMK_2.12"></a>Создание папки "прибыль" на файловом сервере  
 Создайте новый том NTFS на сервере FILE1 и создайте следующую папку: D:\Earnings.  
 
 > [!NOTE]  
 > По умолчанию централизованные политики доступа не включены для системы или загрузочного тома C:.  
 
-### <a name="BKMK_2.13"></a>Настройка классификации и применение централизованной политики доступа к папке «прибыль»  
+### <a name="set-classification-and-apply-the-central-access-policy-on-the-earnings-folder"></a><a name="BKMK_2.13"></a>Настройка классификации и применение централизованной политики доступа к папке «прибыль»  
 
 ##### <a name="to-assign-the-central-access-policy-on-the-file-server"></a>Назначение централизованной политики доступа на файловом сервере  
 
