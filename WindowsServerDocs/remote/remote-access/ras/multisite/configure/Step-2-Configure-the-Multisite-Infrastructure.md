@@ -12,12 +12,12 @@ ms.topic: article
 ms.assetid: faec70ac-88c0-4b0a-85c7-f0fe21e28257
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6f020dc2bf5c0dc11d18e886346a98a4a40f3855
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 9434f3192da110c8ad61e999d2aecd02bfff3812
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314058"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639839"
 ---
 # <a name="step-2-configure-the-multisite-infrastructure"></a>Шаг 2. Настройка межсайтовой инфраструктуры
 
@@ -241,7 +241,7 @@ Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$
   
 #### <a name="to-change-the-domain-controller-that-manages-server-gpos"></a><a name="ChangeDC"></a>Изменение контроллера домена, управляющего объектами групповой политики сервера  
   
--   Запустите командлет Windows PowerShell `HYPERLINK "https://technet.microsoft.com/library/hh918412.aspx" Set-DAEntryPointDC` на сервере удаленного доступа и укажите недостижимое имя контроллера домена для параметра *ексистингдк* . Эта команда изменяет сопоставление контроллера домена для объектов групповой политики сервера точек входа, которые в настоящее время управляются этим контроллером домена.  
+-   Выполните командлет Windows PowerShell [Set-даентрипоинтдк](https://docs.microsoft.com/powershell/module/remoteaccess/set-daentrypointdc) на сервере удаленного доступа и укажите недостижимое имя контроллера домена для параметра *ексистингдк* . Эта команда изменяет сопоставление контроллера домена для объектов групповой политики сервера точек входа, которые в настоящее время управляются этим контроллером домена.
   
     -   Чтобы заменить недостижимый контроллер домена "dc1.corp.contoso.com" на контроллер домена "dc2.corp.contoso.com", выполните следующие действия.  
   
@@ -300,7 +300,7 @@ Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$
     ![Windows PowerShell](../../../../media/Step-2-Configure-the-Multisite-Infrastructure/DCAssocFinal.png)  
   
 ### <a name="optimization-of-configuration-distribution"></a><a name="ConfigDistOptimization"></a>Оптимизация распределения конфигурации  
-При внесении изменений в конфигурацию изменения применяются только после распространения объектов групповой политики сервера на серверы удаленного доступа. Чтобы сократить время распространения конфигурации, удаленный доступ автоматически выбирает доступный для записи контроллер домена с ГИПЕРССЫЛКой "<https://technet.microsoft.com/library/cc978016.aspx>", ближайший к серверу удаленного доступа при создании объекта групповой политики сервера.  
+При внесении изменений в конфигурацию изменения применяются только после распространения объектов групповой политики сервера на серверы удаленного доступа. Чтобы уменьшить время распространения конфигурации, удаленный доступ автоматически выбирает доступный для записи контроллер домена, [ближайший к серверу удаленного доступа](https://technet.microsoft.com/library/cc978016.aspx) при создании объекта групповой политики сервера.  
   
 В некоторых случаях может потребоваться вручную изменить контроллер домена, который управляет объектом групповой политики сервера, чтобы оптимизировать время распространения конфигурации:  
   
@@ -336,4 +336,3 @@ Add-ADGroupMember -Identity Win7_Clients_Entrypoint1 -Members CLIENT2$
   
 -   [Шаг 3. Настройка многосайтового развертывания](Step-3-Configure-the-Multisite-Deployment.md)  
 -   [Шаг 1. Реализация развертывания удаленного доступа на одном сервере](Step-1-Implement-a-Single-Server-Remote-Access-Deployment.md)  
-

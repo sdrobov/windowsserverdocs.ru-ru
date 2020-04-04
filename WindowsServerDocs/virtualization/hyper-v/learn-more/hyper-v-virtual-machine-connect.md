@@ -13,12 +13,12 @@ ms.assetid: deae35b9-7647-42b8-b6bf-45645a44c9c4
 author: KBDAzure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: fba83d22d9e5d9f31a5809781aa04943cc4cd3af
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6416a86b0f80861d0272581c8468fa7d5bb7f329
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364150"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639948"
 ---
 # <a name="hyper-v-virtual-machine-connection"></a>Подключение к виртуальной машине Hyper-V
 
@@ -47,7 +47,7 @@ ms.locfileid: "71364150"
 |Изменение параметров виртуальной машины|Выберите **Файл** > **Параметры**.|  
 |Подключение к \(ISO-файлу\) DVD-образа или к \(VFD-файлу виртуального гибкого диска\)|Выберите **Медиа**.<br /><br />Виртуальные гибкие диски не поддерживаются для виртуальных машин 2-го поколения. Дополнительные сведения см.в статье [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md) (Следует ли создавать виртуальные машины 1-го и 2-го поколения в Hyper-V?).|  
 |Использование локальных ресурсов узла на виртуальной машине Hyper\-V, например, USB-устройства флэш-памяти|На узле Hyper-V включите режим расширенного сеанса, с помощью VMConnect подключитесь к виртуальной машине и перед подключением выберите нужный локальный ресурс. Описание конкретных шагов см. в статье [Use local resources on Hyper\-V virtual machine with VMConnect](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md) (Использование локальных ресурсов на виртуальной машине Hyper-V с VMConnect).|  
-|Изменение сохраненных параметров VMConnect для виртуальной машины|Выполните следующую команду в Windows PowerShell или в командной строке:<br /><br />`VMConnect.exe <ServerName> <VMName> \/edit`|  
+|Изменение сохраненных параметров VMConnect для виртуальной машины|Выполните следующую команду в Windows PowerShell или в командной строке:<br /><br />`VMConnect.exe <ServerName> <VMName> /edit`|  
 |Запрещение пользователю VMConnect получать доступ к сеансу VMConnect другого пользователя|[Включение режима расширенного сеанса на узле Hyper-V](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#turn-on-enhanced-session-mode-on-a-hyper-v-host).<br /><br />Отсутствие включенного режима расширенного сеанса может привести к угрозе безопасности и конфиденциальности. Если пользователь подключился и вошел на виртуальную машину через VMConnect, а другой авторизированный пользователь подключается к той же виртуальной машине, то сеанс перехватывается вторым пользователем и будет прерван у первого. Второй пользователь сможет просматривать рабочий стол, документы и приложения первого пользователя.|
 |Управление службами интеграции или компонентами, которые позволяют виртуальной машине обмениваться данными с узлом Hyper-V| На узлах Hyper-V под управлением Windows 10 или Windows Server 2016 нельзя управлять службами интеграции с помощью VMConnect. Дополнительную информацию об этом см. в следующих разделах: <br />- [Turn an integration service on or off using Hyper-V Manager](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics) (Включение или отключение службы интеграции в диспетчере Hyper-V); <br />- [Start and stop an integration service from a Windows Guest](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-windows) (Запуск и остановка службы интеграции в гостевой учетной записи Windows);<br />- [Start and stop an integration service from a Linux guest](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#manage-integration-services-from-guest-os-linux) (Запуск и остановка службы интеграции в гостевой учетной записи Linux); <br />- [Keep integration services up to date](https://msdn.microsoft.com/virtualization/hyperv_on_windows/user_guide/managing_ics#integration-service-maintenance) (Своевременное обновление служб интеграции).  <br />Сведения об узлах под управлением Windows Server 2012 или Windows Server 2012 R2 см. в статье [Службы интеграции](https://technet.microsoft.com/library/dn798297(v=ws.11).aspx).|
 |Изменение размера окна VMConnect|Вы можете изменить размер окна VMConnect для виртуальных машин 2-го поколения, работающих под управлением операционной системы Windows. Для этого может потребоваться включить режим расширенного сеанса на узле Hyper-V. Дополнительные сведения см. в разделе [Включение режима расширенного сеанса на узле Hyper-V](Use-local-resources-on-Hyper-V-virtual-machine-with-VMConnect.md#turn-on-enhanced-session-mode-on-a-hyper-v-host). Сведения о виртуальных машинах под управлением Ubuntu см. в статье [Changing Ubuntu Screen Resolution in a Hyper-V VM](https://blogs.msdn.microsoft.com/virtual_pc_guy/2014/09/19/changing-ubuntu-screen-resolution-in-a-hyper-v-vm/) (Изменение разрешения экрана Ubuntu на виртуальной машине Hyper-V).|

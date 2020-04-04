@@ -8,12 +8,12 @@ ms.date: 02/10/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a9759f0ea8835c8e07bcd298b75024e3ee29c9ed
-ms.sourcegitcommit: b5c12007b4c8fdad56076d4827790a79686596af
+ms.openlocfilehash: f8a1e70bba740875e19660d5a729a952c9fae8f2
+ms.sourcegitcommit: d56c042c58833bdaa9a6fe54dd68f540af12fc6e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856348"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80661069"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -23,7 +23,7 @@ ms.locfileid: "78856348"
 
 Например, Windows Server версии 1903 включает новые функции и исправления для службы миграции хранилища, которые также доступны для Windows Server 2019 и Windows Server версии 1809 путем установки [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534).
 
-## <a name="collecting-logs"></a>Как получать файлы журналов при работе с служба поддержки Майкрософт
+## <a name="how-to-collect-log-files-when-working-with-microsoft-support"></a><a name="collecting-logs"></a>Как получать файлы журналов при работе с служба поддержки Майкрософт
 
 Служба миграции хранилища содержит журналы событий для службы Orchestrator и прокси-службы. Сервер Orchestrator всегда содержит оба журнала событий, а целевые серверы с установленной службой прокси содержат журналы прокси-сервера. Эти журналы находятся в папке:
 
@@ -343,7 +343,7 @@ ms.locfileid: "78856348"
        at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
        at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
 
-Эта проблема вызвана отсутствием API в более ранних версиях Windows Server. В настоящее время невозможно перенести кластеры Windows Server 2008 и Windows Server 2003. Вы можете выполнять инвентаризацию и перенос без проблем в кластерах Windows Server 2008 R2, а затем вручную выполнять прямую миграцию, вручную изменяя и IP-адрес исходного файлового сервера в кластере, а затем изменяя NetName и IP-адреса конечного кластера. адрес, соответствующий исходному источнику. 
+Эта проблема вызвана отсутствием API в более ранних версиях Windows Server. В настоящее время невозможно перенести кластеры Windows Server 2008 и Windows Server 2003. Вы можете выполнять инвентаризацию и перенос без проблем в кластерах Windows Server 2008 R2, а затем вручную выполнять прямую миграцию, вручную изменяя адрес NetName и IP-адреса исходного файлового сервера кластера, а затем изменяя NetName и IP-адрес конечного кластера в соответствии с исходным источником. 
 
 ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer-when-using-dhcp"></a>Прямую миграцию зависает на "38% сопоставлении сетевых интерфейсов на исходном компьютере..." При использовании DHCP 
 
@@ -421,7 +421,7 @@ ms.locfileid: "78856348"
     Get-ADObject -Filter 'Description -like "*storage migration service renamed*"' -SearchBase 'DC=<domain>,DC=<TLD>' | ft name,distinguishedname
     ```
    
- 2. Для всех пользователей, возвращенных с их исходным именем, измените их имя для входа в систему (пред-Windows 2000), чтобы удалить суффикс случайных символов, добавленный службой миграции хранилища, чтобы проигравший способ входа в систему.
+ 2. Для всех пользователей, возвращенных с их исходным именем, измените их "имя входа пользователя (пред-Windows 2000)", чтобы удалить суффикс случайных символов, добавленный службой миграции хранилища, чтобы он мог войти в систему.
  3. Для всех групп, возвращенных с их исходным именем, измените их имя группы (пред-Windows 2000), чтобы удалить суффикс случайных символов, добавленный службой миграции хранилища.
  4. Для всех отключенных пользователей или групп с именами, которые теперь содержат суффикс, добавленный службой миграции хранилища, эти учетные записи можно удалить. Вы можете подтвердить, что учетные записи пользователей были добавлены позже, так как они будут содержать только группу "Пользователи домена" и будут иметь созданную дату и время, соответствующие времени начала переноса службы миграции хранилища.
  
@@ -484,7 +484,7 @@ ms.locfileid: "78856348"
  - На исходном компьютере не запущена служба удаленного реестра.
  - брандмауэр не разрешает подключение удаленного реестра к исходному серверу из Orchestrator.
  - У учетной записи миграции источника отсутствуют разрешения на удаленный реестр для подключения к исходному компьютеру.
- - Исходная учетная запись миграции не имеет разрешений на чтение в реестре исходного компьютера, в разделе "HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Нт\куррентверсион" или в разделе "HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\ LanmanServer
+ - Учетная запись миграции источника не имеет разрешений на чтение в реестре исходного компьютера, в разделе "HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Нт\куррентверсион" или в разделе "HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\ланмансервер"
  
  ## <a name="cutover-hangs-on-38-mapping-network-interfaces-on-the-source-computer"></a>Прямую миграцию зависает на "38% сопоставлении сетевых интерфейсов на исходном компьютере..." 
 

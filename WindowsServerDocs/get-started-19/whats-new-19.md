@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 06/04/2019
-ms.openlocfilehash: dd8cd6700323075a380aa062bfa1d208b3e30f83
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 47269fbfac6aea3fe46513ad67d2cfa2f0c9b78e
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465498"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639921"
 ---
 # <a name="whats-new-in-windows-server-2019"></a>Новые возможности Windows Server 2019
 
@@ -63,7 +63,7 @@ Windows Admin Center представляет собой локально раз
 
 -   [Сокращение направлений атак (ASR)](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/attack-surface-reduction-exploit-guard?ocid=cx-blog-mmpc) — это набор элементов управления, которые предприятия могут использовать для предотвращения попадания вредоносных программ на компьютер путем блокировки подозрительных вредоносных файлов (например, файлов Office), скриптов, бокового смещения, программ-шантажистов и угроз на основе электронной почты.
 
--   Функция [Защита сети](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-exploit-guard/network-protection-exploit-guard?ocid=cx-blog-mmpc) защищает конечные точки от веб-угроз, блокируя любые процессы на устройстве, идущие к недоверенным узлам и IP-адресам, с помощью фильтра SmartScreen Защитника Windows.
+-   Функция [Защита сети](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/network-protection) защищает конечные точки от веб-угроз, блокируя любые процессы на устройстве, идущие к недоверенным узлам и IP-адресам, с помощью фильтра SmartScreen Защитника Windows.
 
 -   Функция [Контролируемый доступ к файлам](https://cloudblogs.microsoft.com/microsoftsecure/2017/10/23/stopping-ransomware-where-it-counts-protecting-your-data-with-controlled-folder-access/?ocid=cx-blog-mmpc?source=mmpc) защищает конфиденциальные данные от программ-шантажистов, блокируя доступ недоверенных процессов к защищенным папкам.
 

@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.date: 11/12/2019
 ms.topic: get-started-article
-ms.openlocfilehash: f2320b80fb372a227098f952dc8e7f0758420f34
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 1bbb8f06ab66ced50024f4ff17b73229d50ec5c6
+ms.sourcegitcommit: 479ad84a0d6c7c7b8308122b8bac8308cb36fe9b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947820"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391707"
 ---
 # <a name="kms-client-setup-keys"></a>Ключи установки клиента KMS
 
@@ -57,9 +57,9 @@ ms.locfileid: "75947820"
 ### <a name="windows-server-2019"></a>Windows Server 2019
 | Версия операционной системы       | Ключ установки клиента KMS          |
 |--------------------------------|-------------------------------|
-| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG  | 
-| Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C  |
-| Windows Server 2019 Essentials|WVDHN-86M7X-466P6-VHXV7-YY726|
+| Windows Server 2019 Datacenter | WMDGN-G9PQG-XVVXX-R3X43-63DFG | 
+| Windows Server 2019 Standard   | N69G4-B89J2-4G8F4-WWYCC-J464C |
+| Windows Server 2019 Essentials | WVDHN-86M7X-466P6-VHXV7-YY726 |
 
 ### <a name="windows-server-2016"></a>Windows Server 2016
 
@@ -75,34 +75,34 @@ ms.locfileid: "75947820"
 
 | Версия операционной системы          | Ключ установки клиента KMS          |
 |-----------------------------------|-------------------------------|
-|Windows 10 Pro|W269N-WFGWX-YVC9B-4J6C9-T83GX|
-|Windows 10 Pro N|MH37W-N47XK-V7XM9-C7227-GCQG9|
-|Windows 10 Pro для рабочих станций|NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J|
-|Windows 10 Pro для рабочих станций N|9FNHH-K3HBT-3W4TD-6383H-6XYWF|
-|Windows 10 Pro для образовательных учреждений|6TP4R-GNPTD-KYYHQ-7B7DP-J447Y|
-|Windows 10 Pro для образовательных учреждений N|YVWGF-BXNMC-HTQYQ-CPQ99-66QFC|
-|Windows 10 для образовательных учреждений|NW6C2-QMPVW-D7KKK-3GKT6-VCFB2|
-|Windows 10 для образовательных учреждений N |2WH4N-8QGBV-H22JP-CT43Q-MDWWJ|
-|Windows 10 Корпоративная  |NPPR9-FWDCX-D2C8J-H872K-2YT43|
-|Windows 10 Корпоративная N    |DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4|
-|Windows 10 Корпоративная G|YYVX9-NTFWV-6MDM3-9PT4T-4M68B|
-|Windows 10 Корпоративная G N|44RPN-FTY23-9VTTB-MP9BX-T84FV|
+| Windows 10 Pro                    | W269N-WFGWX-YVC9B-4J6C9-T83GX |
+| Windows 10 Pro N                  | MH37W-N47XK-V7XM9-C7227-GCQG9 |
+| Windows 10 Pro для рабочих станций   | NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J |
+| Windows 10 Pro для рабочих станций N | 9FNHH-K3HBT-3W4TD-6383H-6XYWF |
+| Windows 10 Pro для образовательных учреждений          | 6TP4R-GNPTD-KYYHQ-7B7DP-J447Y |
+| Windows 10 Pro для образовательных учреждений N        | YVWGF-BXNMC-HTQYQ-CPQ99-66QFC |
+| Windows 10 для образовательных учреждений              | NW6C2-QMPVW-D7KKK-3GKT6-VCFB2 |
+| Windows 10 для образовательных учреждений N            | 2WH4N-8QGBV-H22JP-CT43Q-MDWWJ |
+| Windows 10 Корпоративная             | NPPR9-FWDCX-D2C8J-H872K-2YT43 |
+| Windows 10 Корпоративная N           | DPH2V-TTNVB-4X9Q3-TJR4H-KHJW4 |
+| Windows 10 Корпоративная G           | YYVX9-NTFWV-6MDM3-9PT4T-4M68B |
+| Windows 10 Корпоративная G N         | 44RPN-FTY23-9VTTB-MP9BX-T84FV |
 
 ## <a name="windows-10-ltscltsb-versions"></a>Версии Windows 10 LTSC и LTSB
 
 ### <a name="windows-10-ltsc-2019"></a>Windows 10 LTSC 2019
 
-|Версия операционной системы|Ключ установки клиента KMS|
-|-|-|
-|Windows 10 Корпоративная LTSC 2019|M7XTQ-FN8P6-TTKYV-9D4CC-J462D|
-|Windows 10 Корпоративная N LTSC 2019|92NFX-8DJQP-P6BBQ-THF9C-7CG2H|
+| Версия операционной системы          | Ключ установки клиента KMS          |
+|-----------------------------------|-------------------------------|
+| Windows 10 Корпоративная LTSC 2019   | M7XTQ-FN8P6-TTKYV-9D4CC-J462D |
+| Windows 10 Корпоративная N LTSC 2019 | 92NFX-8DJQP-P6BBQ-THF9C-7CG2H |
 
 ### <a name="windows-10-ltsb-2016"></a>Windows 10 LTSB 2016
 
-|Версия операционной системы|Ключ установки клиента KMS|
-|-|-|
-|Windows 10 Корпоративная LTSB 2016|DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ|
-|Windows 10 Корпоративная N LTSB 2016|QFFDN-GRT3P-VKWWX-X7T3R-8B639|
+| Версия операционной системы          | Ключ установки клиента KMS          |
+|-----------------------------------|-------------------------------|
+| Windows 10 Корпоративная LTSB 2016   | DCPHK-NFMTC-H88MJ-PFHPY-QJ4BJ |
+| Windows 10 Корпоративная N LTSB 2016 | QFFDN-GRT3P-VKWWX-X7T3R-8B639 |
 
 ### <a name="windows-10-ltsb-2015"></a>Windows 10 LTSB 2015 
 
@@ -115,17 +115,17 @@ ms.locfileid: "75947820"
 
 ### <a name="windows-server-version-1803"></a>Windows Server версии 1803
 
-| Версия операционной системы       | Ключ установки клиента KMS          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG  | 
-| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR  |
+| Версия операционной системы  | Ключ установки клиента KMS          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 2HXDN-KRXHB-GPYC7-YCKFJ-7FVDG | 
+| Windows Server Standard   | PTXN8-JFHJM-4WC78-MPCBR-9W4KR |
 
 ### <a name="windows-server-version-1709"></a>Windows Server версии 1709
 
-| Версия операционной системы       | Ключ установки клиента KMS          |
-|--------------------------------|-------------------------------|
-| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6  | 
-| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4  |
+| Версия операционной системы  | Ключ установки клиента KMS          |
+|---------------------------|-------------------------------|
+| Windows Server Datacenter | 6Y6KB-N82V8-D8CQV-23MJW-BWTG6 | 
+| Windows Server Standard   | DPCNP-XQFKJ-BJF7R-FRC8D-GF6G4 |
 
 ### <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
@@ -178,33 +178,33 @@ ms.locfileid: "75947820"
 
 ### <a name="windows-81"></a>Windows 8.1
 
-| Версия операционной системы               | Ключ установки клиента KMS          |
-|----------------------------------------|-------------------------------|
-| Windows 8.1 Профессиональная               | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 |
-| Windows 8.1 Pro N             | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY |
-| Windows 8.1 Корпоративная                 | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
-| Windows 8.1 Корпоративная N               | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
+| Версия операционной системы | Ключ установки клиента KMS          |
+|--------------------------|-------------------------------|
+| Windows 8.1 Профессиональная          | GCRJD-8NW9H-F2CDX-CCM8D-9D6T9 |
+| Windows 8.1 Pro N        | HMCNV-VVBFX-7HMBH-CTY9B-B4FXY |
+| Windows 8.1 Корпоративная   | MHF9N-XY6XB-WVXMC-BTDCT-MKKG7 |
+| Windows 8.1 Корпоративная N | TT4HM-HN7YT-62K67-RGRQJ-JFFXW |
 
 ### <a name="windows-8"></a>Windows 8
 
-| Версия операционной системы                | Ключ установки клиента KMS          |
-|-----------------------------------------|-------------------------------|
-| Windows 8 Профессиональная                  | NG4HW-VH26C-733KW-K6F98-J8CK4 |
-| Windows 8 Pro N                | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
-| Windows 8 Корпоративная                    | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
-| Windows 8 Корпоративная N                  | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
+| Версия операционной системы | Ключ установки клиента KMS          |
+|--------------------------|-------------------------------|
+| Windows 8 Профессиональная            | NG4HW-VH26C-733KW-K6F98-J8CK4 |
+| Windows 8 Pro N          | XCVCF-2NXM9-723PB-MHCB7-2RYQQ |
+| Windows 8 Корпоративная     | 32JNW-9KQ84-P47T8-D8GGY-CWCK7 |
+| Windows 8 Корпоративная N   | JMNMF-RHW7P-DMY6X-RF3DR-X2BQT |
 
 
 ### <a name="windows-7"></a>Windows 7 
 
-| Версия операционной системы                         | Ключ установки клиента KMS          |
-|--------------------------------------------------|-------------------------------|
-| Windows 7 Профессиональная                           | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
-| Windows 7 Профессиональная N                         | MRPKT-YTG23-K7D7T-X2JMM-QY7MG |
-| Windows 7 Профессиональная E                         | W82YF-2Q76Y-63HXB-FGJG9-GF7QX |
-| Windows 7 Корпоративная                             | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
-| Windows 7 Корпоративная N                           | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
-| Windows 7 Корпоративная E                           | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
+| Версия операционной системы | Ключ установки клиента KMS          |
+|--------------------------|-------------------------------|
+| Windows 7 Профессиональная   | FJ82H-XT6CR-J8D7P-XQJJ2-GPDD4 |
+| Windows 7 Профессиональная N | MRPKT-YTG23-K7D7T-X2JMM-QY7MG |
+| Windows 7 Профессиональная E | W82YF-2Q76Y-63HXB-FGJG9-GF7QX |
+| Windows 7 Корпоративная     | 33PXH-7Y6KF-2VJC9-XBBR8-HVTHH |
+| Windows 7 Корпоративная N   | YDRBP-3D83W-TY26F-D46B2-XCKRJ |
+| Windows 7 Корпоративная E   | C29WB-22CC8-VJ326-GHFJW-H9DH4 |
 
 
 См. также статью

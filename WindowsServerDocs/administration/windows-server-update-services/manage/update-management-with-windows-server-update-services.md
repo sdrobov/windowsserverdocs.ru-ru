@@ -13,20 +13,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e80f6763d7b1aa11603cbd2bb8756a426d685092
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8454966af47be4775bb241523e50dd4968c4f92e
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361499"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639812"
 ---
 # <a name="update-management-with-windows-server-update-services"></a>Управление обновлениями с помощью служб Windows Server Update Services
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Для просмотра общих данных о соответствии обновлениям и состоянии работоспособности сети следует регулярно проверять домашнюю страницу консоли администрирования WSUS. Если вы допускаете возможность возникновения проблем, связанных со сбоями загрузок или клиентскими компьютерами, которые не могут отправлять данные на сервер WSUS, как можно чаще проверяйте журналы приложений. Это руководство содержит сведения по управлению службами Windows Server Update Services.  
   
-## <a name="in-this-guide"></a>В данном руководстве  
+## <a name="in-this-guide"></a>Содержание руководства  
 В этом руководстве вы найдете сведения по следующим темам.  
   
 -   [Настройка синхронизации обновлений](setting-up-update-synchronizations.md)  

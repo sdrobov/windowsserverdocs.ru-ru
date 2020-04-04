@@ -13,16 +13,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4559016388f9b0d765c8e4d76f76fa7ef0a7f0f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9c7bca5be7a8ec0e857cba65680fbc3b967af4f8
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361599"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639746"
 ---
 # <a name="setting-up-update-synchronizations"></a>Настройка синхронизации обновлений
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Во время синхронизации сервер WSUS скачивает обновления (метаданные и файлы) из источника обновления. Он также скачивает новые классификации продуктов и категории, если таковые имеются. При первой синхронизации сервера WSUS будут скачаны все обновления, указанные при настройке параметров синхронизации. После первой синхронизации сервер WSUS скачивает только обновления из источника обновления, а также исправления в метаданных для существующих обновлений и истечения срока действия обновлений.
 
