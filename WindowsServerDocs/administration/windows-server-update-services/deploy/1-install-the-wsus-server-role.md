@@ -10,16 +10,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 22554a9669c30cc827c509824f187fbaaedb1272
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5d71a26cbe889f5de11934b2af411ac407fc5e75
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361703"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639863"
 ---
 # <a name="step-1-install-the-wsus-server-role"></a>Шаг 1. Установка роли сервера WSUS
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2019, Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Следующий шаг в развертывании сервера WSUS — это установка роли сервера WSUS. Далее описано, как установить роль сервера WSUS с помощью диспетчера серверов.
 
@@ -38,7 +38,7 @@ ms.locfileid: "71361703"
 
 5.  На странице **Выбор целевого сервера** выберите расположение сервера (пул серверов или виртуальный жесткий диск). После выбора расположения укажите сервер, на котором требуется установить роль сервера WSUS, и нажмите кнопку **Далее**.
 
-6.  На странице **Выбор ролей сервера** щелкните **Службы Windows Server Update Service**.  Откроется диалоговое окно **добавления компонентов, необходимых для служб Windows Server Update Services** . Щелкните **Добавить компоненты**, а затем нажмите кнопку **Далее**.
+6.  На странице **Выбор ролей сервера** щелкните **Службы Windows Server Update Service**.  Откроется диалоговое окно**добавления компонентов, необходимых для служб Windows Server Update Services** . Щелкните **Добавить компоненты**, а затем нажмите кнопку **Далее**.
 
 7.  На странице **Выбор компонентов** оставьте настройки по умолчанию и щелкните **Далее**.
 
