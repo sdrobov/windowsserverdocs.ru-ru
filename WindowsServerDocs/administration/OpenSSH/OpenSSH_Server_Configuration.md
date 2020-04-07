@@ -6,18 +6,18 @@ contributor: maertendMSFT
 ms.product: w10
 author: maertendMSFT
 title: Конфигурация сервера OpenSSH для Windows
-ms.openlocfilehash: 61e6e24e6682802fd07e70dcb49aa0f382e1638e
-ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
+ms.openlocfilehash: 3d8e656981661f8263484437e90780a4e1463d94
+ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169594"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80639942"
 ---
 # <a name="openssh-server-configuration-for-windows-10-1809-and-server-2019"></a>Конфигурация сервера OpenSSH для Windows 10 версии 1809 и Windows Server 2019
 
 В этой статье описывается настройка сервера OpenSSH (sshd) для ОС Windows. 
 
-Для OpenSSH предоставляется подробная документация по параметрам конфигурации и на веб-сайте [OpenSSH.com](https://www.openssh.com/manual.html), и мы не намерены дублировать ее в этом пакете документации. 
+Для OpenSSH предоставляется подробная документация по параметрам конфигурации на веб-сайте [OpenSSH.com](https://www.openssh.com/manual.html), и мы не намерены дублировать ее в этом пакете документации. 
 
 ## <a name="configuring-the-default-shell-for-openssh-in-windows"></a>Настройка стандартной оболочки OpenSSH для Windows
 
