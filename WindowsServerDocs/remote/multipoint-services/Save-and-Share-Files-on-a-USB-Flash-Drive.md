@@ -1,24 +1,20 @@
 ---
 title: Сохранение файлов на USB-устройство флэш-памяти и общий доступ к ним
 description: Узнайте, как сохранить файл на флэш-накопителе USB в службах MultiPoint.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51f6564e-a07f-4b13-8567-a5f080cc2e0d
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: ddbee49ae80e65f29dcdb3c3c4ad43c17a451ccf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e5eb73bdc630d375a19da5c42ed6ceb265eab2e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389410"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855657"
 ---
 # <a name="save-and-share-files-on-a-usb-flash-drive"></a>Сохранение файлов на USB-устройство флэш-памяти и общий доступ к ним
 Помимо возможности совместного использования содержимого с помощью общих папок в проводнике Windows, можно также обмениваться содержимым с помощью USB-устройства хранения данных, такого как флэш-накопитель USB или запоминающее устройство. При подключении запоминающего устройства USB непосредственно к главному компьютеру или USB-концентратору, не являющемуся концентратором станции, оно становится доступным всем пользователям в системе MultiPoint Services: как *обычным пользователям*, так и *пользователям с правами администратора*.  

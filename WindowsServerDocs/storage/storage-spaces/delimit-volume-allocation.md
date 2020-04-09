@@ -1,17 +1,17 @@
 ---
 title: Разделение размещения томов в Локальные дисковые пространства
 ms.author: cosmosdarwin
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
-ms.openlocfilehash: 19e5a38ca406878b7dbc5a187b0057e97e4fe2d1
-ms.sourcegitcommit: 74107a32efe1e53b36c938166600739a79dd0f51
+ms.openlocfilehash: 26454881279e1d33392a827f794788370def2cab
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76918295"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858977"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>Разделение размещения томов в Локальные дисковые пространства
 > Область применения: Windows Server 2019
@@ -21,14 +21,14 @@ ms.locfileid: "76918295"
    > [!IMPORTANT]
    > Эта функция впервые реализована в Windows Server 2019. Она недоступна в Windows Server 2016. 
 
-## <a name="prerequisites"></a>Необходимые условия
+## <a name="prerequisites"></a>Предварительные требования
 
-### <a name="green-checkmark-iconmediadelimit-volume-allocationsupportedpng-consider-using-this-option-if"></a>![Зеленый значок галочки.](media/delimit-volume-allocation/supported.png) Рекомендуется использовать этот параметр, если:
+### <a name="green-checkmark-icon-consider-using-this-option-if"></a>![Зеленый значок галочки.](media/delimit-volume-allocation/supported.png) Рекомендуется использовать этот параметр, если:
 
 - Кластер содержит шесть или более серверов; перетаскивани
 - Кластер использует только [трехстороннее зеркальное отражение](storage-spaces-fault-tolerance.md#mirroring)
 
-### <a name="red-x-iconmediadelimit-volume-allocationunsupportedpng-do-not-use-this-option-if"></a>![Красный значок X.](media/delimit-volume-allocation/unsupported.png) Не используйте этот параметр, если:
+### <a name="red-x-icon-do-not-use-this-option-if"></a>![Красный значок X.](media/delimit-volume-allocation/unsupported.png) Не используйте этот параметр, если:
 
 - Кластер содержит менее шести серверов; ни
 - В кластере [используется устойчивость четности или](storage-spaces-fault-tolerance.md#parity) повышение [четности с ускорением отражения](storage-spaces-fault-tolerance.md#mirror-accelerated-parity)
@@ -190,7 +190,7 @@ MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 
 Если сразу происходит три или более ошибок, но по крайней мере половина серверов и дисков все еще остается, тома с выделением с разделителями могут оставаться в сети и доступны в зависимости от серверов, на которых возникают сбои.
 
-## <a name="frequently-asked-questions"></a>Вопросы и ответы
+## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
 ### <a name="can-i-delimit-some-volumes-but-not-others"></a>Можно ли разделять некоторые тома, но не другие?
 
@@ -200,7 +200,7 @@ MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 
 Нет, это то же самое, что и при обычном выделении.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Отказоустойчивость в Локальные дисковые пространства](storage-spaces-fault-tolerance.md)

@@ -2,37 +2,36 @@
 title: Скорость канала для всех сетей для трафика динамической миграции должна быть не менее 1 Гбит/с
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 89411b63-bec8-463d-b486-107548ed440e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 92ba74ec75d8e90979e1cc329415a52af0218f54
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: adb16b1c4618e0874f48f4715440a9d903f5bc9f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365302"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857847"
 ---
 # <a name="all-networks-for-live-migration-traffic-should-have-a-link-speed-of-at-least-1-gbps"></a>Скорость канала для всех сетей для трафика динамической миграции должна быть не менее 1 Гбит/с
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
 *Ни одна из сетей для трафика динамической миграции не имеет скорости связи не менее 1 Гбит/с.*  
   
 ## <a name="impact"></a>Влияние  

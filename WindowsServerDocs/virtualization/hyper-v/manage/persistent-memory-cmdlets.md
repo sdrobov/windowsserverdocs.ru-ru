@@ -2,24 +2,21 @@
 title: Командлеты для настройки устройств постоянной памяти для виртуальных машин Hyper-V
 description: Настройка устройств энергонезависимой памяти для виртуальных машин Hyper-V
 ms.prod: windows-server
-ms.service: na
-manager: jasgroce
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc08039ba1d
 author: coreyp-at-msft
 ms.author: coreyp
-ms.openlocfilehash: ecae1fe96bc5088fa840c6e2e24a75bb72a9e8f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b58e2a4e2f31c5bf3e49b89da912b77060e334ed
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392542"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860427"
 ---
 # <a name="cmdlets-for-configuring-persistent-memory-devices-for-hyper-v-vms"></a>Командлеты для настройки устройств постоянной памяти для виртуальных машин Hyper-V
 
->Область применения. Windows Server 2019
+>Область применения: Windows Server 2019
 
 Эта статья предоставляет системным администраторам и ИТ-специалистам сведения о настройке виртуальных машин Hyper-V с энергонезависимой памятью (память класса хранения или устройство NVDIMM). Устройства энергонезависимой памяти NVDIMM-N, совместимые с ЖДЕК, поддерживаются в Windows Server 2016 и Windows 10 и предоставляют доступ на уровне байт к очень низким временным устройствам без временных задержек. Устройства с постоянной памятью виртуальной машины поддерживаются в Windows Server 2019. 
 
@@ -35,7 +32,7 @@ ms.locfileid: "71392542"
 
 Используйте **командлет New-VM** , чтобы создать виртуальную машину поколения 2 с указанными размером памяти и путем к образу VHDX. Затем используйте **Add-вмпмемконтроллер** , чтобы добавить контроллер энергонезависимой памяти к виртуальной машине.
 
-**Например** 
+**Пример.** 
     
     New-VM -Name "ProductionVM1" -MemoryStartupBytes 1GB -VHDPath c:\vhd\BaseImage.vhdx
 

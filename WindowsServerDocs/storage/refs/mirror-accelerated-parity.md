@@ -2,18 +2,18 @@
 title: Четность с зеркальным ускорением
 ms.prod: windows-server
 ms.author: gawatu
-ms.manager: masriniv
+manager: masriniv
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
 ms.date: 10/17/2018
 ms.assetid: ''
-ms.openlocfilehash: 2721f1c744c5c03d8e4bce0508fd23fa5237f95f
-ms.sourcegitcommit: 9a6a692a7b2a93f52bb9e2de549753e81d758d28
+ms.openlocfilehash: 752073e4f12db3b994261a70a9306d45b9a00d77
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72591099"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861517"
 ---
 # <a name="mirror-accelerated-parity"></a>Четность с зеркальным ускорением
 
@@ -53,17 +53,17 @@ ReFS начинает ротацию целых областей с уровня
 
     - **SR1a.** Если входящая операция записи изменяет существующие данные на уровне с зеркалированием, ReFS внесет изменения в данные на месте.
     - **1b.** Если входящая операция записи представляет собой запись новых данных и ReFS удается найти достаточно свободного пространства на уровне с зеркалированием для обслуживания этой операции записи, ReFS запишет данные на уровень с зеркалированием.
-    ](media/mirror-accelerated-parity/Write-to-Mirror.png) ![Write на зеркало
+    ![](media/mirror-accelerated-parity/Write-to-Mirror.png) записи на зеркало
 
 2. **Выполняет запись в зеркало, повторно выделяется из четности:**
 
     Если входящая запись изменяет данные, которые находятся в четности, и ReFS может успешно обнаружить достаточно свободного места на зеркале для обслуживания входящей записи, ReFS сначала сделает предыдущие данные в четности недействительными, а затем записывает их на зеркало. Такое аннулирование данных представляет собой быструю и малозатратную операцию с метаданными, которая помогает существенно повысить производительность записи на уровень с контролем четности.
-    ](media/mirror-accelerated-parity/Reallocated-Write.png) ![Reallocated записи
+    ![перераспределенные записи](media/mirror-accelerated-parity/Reallocated-Write.png)
 
 3. **Запись в Четность:**
     
     Если ReFS не удается найти достаточно свободного пространства на уровне с зеркалированием, ReFS запишет новые данные на уровень с контролем четности или изменит существующие данные непосредственно на уровне с контролем четности. В разделе "Оптимизация производительности" ниже приведены рекомендации, которые помогут свести к минимуму запись на уровень с контролем четности.
-    ](media/mirror-accelerated-parity/Write-to-Parity.png) ![Write на контроль четности
+    ![](media/mirror-accelerated-parity/Write-to-Parity.png) записи на контроль четности
 
 **Операции чтения:** ReFS выполняет считывание непосредственно с уровня, содержащего соответствующие данные. Если уровень с контролем четности составлен из жестких дисков, кэш в локальных дисковых пространствах будет кэшировать эти данные для ускорения будущих операций чтения. 
 
@@ -153,7 +153,7 @@ Resize-StorageTier -InputObject (Get-StorageTier -FriendlyName “Performance”
 New-Volume – FriendlyName “TestVolume” -FileSystem CSVFS_ReFS -StoragePoolFriendlyName “StoragePoolName” -StorageTierFriendlyNames Performance, Capacity -StorageTierSizes 200GB, 800GB
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 -   [Обзор ReFS](refs-overview.md)
 -   [Клонирование блоков ReFS](block-cloning.md)

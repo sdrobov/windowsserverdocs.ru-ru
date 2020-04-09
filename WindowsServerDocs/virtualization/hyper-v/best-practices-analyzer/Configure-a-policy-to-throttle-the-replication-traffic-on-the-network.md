@@ -2,20 +2,19 @@
 title: Настройка политики для регулирования трафика репликации в сети
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 82cb1aef-cdc3-4d0a-88d4-ef497ab79606
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 5b3afd594f56973007a2f0f4318de8a8c7a98209
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2c358cd930f2b95412b40aa6c87b0bf9ebb5b741
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365110"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862177"
 ---
 # <a name="configure-a-policy-to-throttle-the-replication-traffic-on-the-network"></a>Настройка политики для регулирования трафика репликации в сети
 
@@ -25,9 +24,9 @@ ms.locfileid: "71365110"
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Тревожное|  
+|**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  

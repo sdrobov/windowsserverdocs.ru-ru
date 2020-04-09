@@ -2,19 +2,19 @@
 title: Использование Локальные дисковые пространства в виртуальной машине
 ms.prod: windows-server
 ms.author: eldenc
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/25/2017
 description: Развертывание Локальные дисковые пространства в гостевом кластере виртуальной машины, например в Microsoft Azure.
 ms.localizationpriority: medium
-ms.openlocfilehash: 34241183a56cdb9be4690e1edd68b56320cc01de
-ms.sourcegitcommit: a6ec589a39ef104ec2be958cd09d2f679816a5ab
+ms.openlocfilehash: 74b1b90a780a0b238a356e942f8348e2a483d94a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78261923"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856117"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>Использование Локальные дисковые пространства в кластерах гостевых виртуальных машин
 
@@ -33,9 +33,9 @@ ms.locfileid: "78261923"
 ## <a name="requirements"></a>Требования
 
 При развертывании Локальные дисковые пространства в виртуализованной среде следует учитывать следующие моменты.
-
-> [!TIP]
-> Шаблоны Azure автоматически настраивают указанные ниже рекомендации и являются рекомендуемым решением при развертывании на виртуальных машинах Azure IaaS.
+       
+>        !TIP]
+>        zure templates will automatically configure the below considerations for you and are the recommended solution when deploying in Azure IaaS VMs.
 
 -   Минимум 2 узла и максимум 3 узла
 
@@ -59,32 +59,33 @@ ms.locfileid: "78261923"
 
     Это число отличается от развертывания на компьютере без операционной системы, так как виртуальные диски могут быть реализованы как файлы, не подверженные физическим сбоям.
 
--   Отключите функции автоматического замены дисков в служба работоспособности, выполнив следующий командлет PowerShell:
+-   Отключите автоматическую замену диска "апаб" литиес в служба работоспособности, выполнив следующий командлет PowerShell:
 
     ```powershell
-    Get-storagesubsystem clus* | set-storagehealthsetting -name “System.Storage.PhysicalDisk.AutoReplace.Enabled” -value “False”
-    ```
+          Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
+          ```
 
--   Чтобы обеспечить повышенную устойчивость к возможным задержкам хранилища VHD/VHDX/VMDK в гостевых кластерах, увеличьте значение времени ожидания ввода-вывода для дисковых пространств:
+-   To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
 
     `dword: 00007530`
 
-    Десятичный эквивалент шестнадцатеричного 7530 равен 30000, что составляет 30 секунд. Обратите внимание, что значение по умолчанию — 1770 шестнадцатеричное или 6000 десятичное, то есть 6 секунд.
+    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
 
-## <a name="not-supported"></a>Не поддерживается.
+## Not supported
 
--   Моментальный снимок или восстановление виртуального диска на уровне узла
+-   Host level virtual disk snapshot/restore
 
-    Вместо этого используйте традиционные решения резервного копирования на гостевом уровне для резервного копирования и восстановления данных на Локальные дисковые пространства томах.
+    Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
 
--   Изменение размера виртуального диска на уровне узла
+-   Host level virtual disk size change
 
-    Виртуальные диски, предоставляемые через виртуальную машину, должны иметь одинаковый размер и характеристики. Добавление дополнительных ресурсов в пул носителей можно выполнить, добавив дополнительные виртуальные диски к каждой виртуальной машине и добавив их в пул. Настоятельно рекомендуется использовать виртуальные диски того же размера и характеристик, что и текущие виртуальные диски.
+    The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
 
-## <a name="see-also"></a>См. также:
+## See also
 
-[Дополнительные шаблоны виртуальных машин Azure IaaS для развертывания Локальные дисковые пространства, видеороликов и](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126)пошаговых руководств.
+[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-[Обзор дополнительных Локальные дисковые пространства](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+[Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+""""""''''                                                                                                                                                                        """"""''''                                                                                                                                                                        

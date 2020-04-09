@@ -1,24 +1,20 @@
 ---
 title: Kerberos Constrained Delegation Overview
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51923b0a-0c1a-47b2-93a0-d36f8e295589
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: e6e62effcb875c0e3a1cdd6c886f3d74923e1b94
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 07717743017c15a7bdabd3c3ce38d75a02980460
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403414"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858867"
 ---
 # <a name="kerberos-constrained-delegation-overview"></a>Kerberos Constrained Delegation Overview
 
@@ -42,11 +38,11 @@ ms.locfileid: "71403414"
 
 Ограниченное делегирование дает администраторам служб возможность указывать и обеспечивать границы доверия приложений, ограничивая область, в которой службы приложений могут действовать от имени пользователя. Администраторы служб могут указывать в настройках учетные записи служб интерфейса, которые будут делегированы во внутренние службы.
 
-Благодаря поддержке ограниченного делегирования между доменами в Windows Server 2012 R2 и Windows Server 2012, интерфейсных служб, таких как Microsoft Internet Security and Acceleration (ISA) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook Веб-доступ (OWA) и Microsoft SharePoint Server можно настроить для использования ограниченного делегирования для проверки подлинности на серверах в других доменах. Это обеспечивает поддержку передачи запросов между доменами с помощью существующей инфраструктуры Kerberos. Ограниченным делегированием Kerberos могут управлять администраторы домена или администраторы служб.
+Благодаря поддержке ограниченного делегирования между доменами в Windows Server 2012 R2 и Windows Server 2012, интерфейсных служб, таких как Microsoft Internet Security and Acceleration (ISA) Server, Microsoft Forefront Threat Management Gateway, Microsoft Exchange Outlook Веб-доступ (OWA) и Microsoft SharePoint Server можно настроить на использование ограниченного делегирования для проверки подлинности серверов в других доменах. Это обеспечивает поддержку передачи запросов между доменами с помощью существующей инфраструктуры Kerberos. Ограниченным делегированием Kerberos могут управлять администраторы домена или администраторы служб.
 
 ## <a name="resource-based-constrained-delegation-across-domains"></a>Основанное на ресурсах ограниченное делегирование в доменах
 
-Ограниченное делегирование Kerberos можно использовать для предоставления ограниченного делегирования, когда служба внешнего интерфейса и службы ресурсов находятся в разных доменах. Администраторы служб могут настроить новое делегирование, указав в домене учетные записи служб интерфейса, которые будут выполнять олицетворение пользователей в объектах учетных записей служб ресурсов.
+Ограниченное делегирование Kerberos можно использовать для предоставления ограниченного делегирования, когда служба интерфейса и службы ресурсов находятся в разных доменах. Администраторы служб могут настроить новое делегирование, указав в домене учетные записи служб интерфейса, которые будут выполнять олицетворение пользователей в объектах учетных записей служб ресурсов.
 
 **Какой эффект дает это изменение?**
 
@@ -83,7 +79,7 @@ ms.locfileid: "71403414"
 
 -   Чтобы настроить службу ресурсов, используйте командлеты **New-ADComputer**, **New-адсервицеаккаунт**, **New-ADUser**, **Set-ADComputer**, **Set-адсервицеаккаунт**и **Set-ADUser** с параметром **PrincipalsAllowedToDelegateToAccount** .
 
-## <a name="BKMK_SOFT"></a>Требования к программному обеспечению
+## <a name="software-requirements"></a><a name="BKMK_SOFT"></a>Требования к программному обеспечению
 Ограниченное делегирование на основе ресурсов можно настроить только на контроллере домена под управлением Windows Server 2012 R2 и Windows Server 2012, но можно применить в лесу в смешанном режиме.
 
 Необходимо применить следующее исправление ко всем контроллерам домена под управлением Windows Server 2012 в доменах учетных записей пользователей на пути ссылок между внешними и внутренними доменами, работающими под управлением операционных систем более ранней версии, чем Windows Server: ограниченное делегирование на основе ресурсов KDC_ERR_POLICY сбой в средах с контроллерами домена на базе Windows Server 2008 R2 (https://support.microsoft.com/en-gb/help/2665790/resource-based-constrained-delegation-kdc-err-policy-failure-in-enviro).

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6a852428-c1ec-4703-b3b3-a4bfdf8cbb9d
-title: Новые&#39;возможности домен Active Directory Services в Windows Server 2016
-description: ''
+title: Новые возможности служб домен Active Directory в Windows Server 2016
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,22 +8,22 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 1ef77613919ea6caf39a7cb41ba575652680466d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a82f45772e5e35afffc632de2b40c02c75b5e5e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950117"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856287"
 ---
-# <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Новые возможности служб домен Active Directory для Windows Server 2016
+# <a name="whats-new-in-active-directory-domain-services-for-windows-server-2016"></a>Новые возможности доменных служб Active Directory в Windows Server 2016
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
-Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить на облачные развертывания и гибридные развертывания, где некоторые приложения и службы размещается в облаке, а другие — локально. В них сочетаются все лучшие возможности веб-заданий, а также добавлены некоторые улучшения, среди которых:  
+Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить к облачным развертываниям и гибридным развертываниям, где некоторые приложения и службы размещаются в облаке, а другие — в локальной среде. К улучшениям относятся:  
   
 - [Управление привилегированным доступом](https://docs.microsoft.com/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
   
-- [Использование возможностей облачных служб на устройствах с Windows 10 с помощью присоединения к Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
+- [Расширение возможностей облака для устройств Windows 10 с помощью Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)
   
 - [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)
   
@@ -53,7 +52,7 @@ ms.locfileid: "75950117"
 
 ### <a name="requirements-for-privileged-access-management"></a>Требования к управлению привилегированным доступом
   
-- Диспетчер удостоверений (Майкрософт)  
+- Microsoft Identity Manager  
   
 - Функциональный уровень леса Active Directory Windows Server 2012 R2 или более поздней версии.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "75950117"
 
 Azure Active Directory Присоединяйтесь к расширению возможностей идентификации для корпоративных, коммерческих и образовательных клиентов с улучшенными возможностями для корпоративных и персональных устройств.  
   
-Преимущества:  
+Преимущества  
   
 - **Доступность современных параметров** на устройствах Windows, принадлежащих Corp. Службам кислорода больше не требуется личная учетная запись Майкрософт: теперь они работают с существующими рабочими учетными записями пользователей, чтобы обеспечить соответствие. Службы кислорода будут работать на компьютерах, которые присоединены к локальному домену Windows, а компьютеры и устройства, присоединенные к вашему клиенту Azure AD ("Облачный домен"). К ним относятся:  
 
@@ -80,7 +79,7 @@ Azure Active Directory Присоединяйтесь к расширению в
   
 Дополнительные сведения см. [в разделе Введение в Управление устройствами в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/devices/overview).  
   
-## <a name="windows-hello-for-business"></a>Windows Hello для бизнеса;
+## <a name="windows-hello-for-business"></a>Windows Hello для бизнеса
 
 Windows Hello для бизнеса — это проверка подлинности на основе ключей, которая используется организациями и потребителями, которая выходит за пределы паролей. Такая форма проверки подлинности зависит от нарушений, кражи и учетных данных, которые защищены от фишинга.  
   

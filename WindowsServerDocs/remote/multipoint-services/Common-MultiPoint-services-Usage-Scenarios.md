@@ -1,24 +1,20 @@
 ---
 title: Распространенные сценарии использования служб MultiPoint
 description: Дополнительные сведения об общих способах использования служб MultiPoint
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9aefaf1b-3ba2-4f41-9068-9629a28157ad
 author: evaseydl
 manager: scottman
 ms.author: evas
 ms.date: 08/04/2016
-ms.openlocfilehash: b6e1ce47be76d8df1d8c9079204106f51c9067b3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9429bb297ead933f461b563951a628b1514f28c7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395582"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859087"
 ---
 # <a name="common-usage-scenarios"></a>Основные сценарии использования
 Службы MultiPoint предоставляют отдельные пользовательские настольные компьютеры с самыми важными элементами интерфейса Windows 10 Desktop. Он также предлагает простое средство управления, диспетчер MultiPoint, который может использоваться системными администраторами для обнаружения и управления несколькими серверами MultiPoint и клиентами. Кроме того, службы MultiPoint включают панель мониторинга MultiPoint для обеспечения видимости в режиме реального времени. Ниже перечислены примеры того, что можно сделать с помощью служб MultiPoint.  

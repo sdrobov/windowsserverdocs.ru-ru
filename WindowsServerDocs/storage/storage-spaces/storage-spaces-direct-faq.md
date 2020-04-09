@@ -1,7 +1,6 @@
 ---
 title: Локальные дисковые пространства-часто задаваемые вопросы
 description: Узнайте, как насчет Локальные дисковые пространства
-keywords: Дисковые пространства
 ms.prod: windows-server
 ms.author: kaushik
 ms.technology: storage-spaces
@@ -9,12 +8,12 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 19dcc1c57fe7c7eea74b003553a0b0a6ab5508aa
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 18384ab3c9e520ace9237b68474a45c8ec349502
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950229"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856107"
 ---
 # <a name="storage-spaces-direct---frequently-asked-questions-faq"></a>Локальные дисковые пространства-часто задаваемые вопросы
 
@@ -36,7 +35,7 @@ ms.locfileid: "75950229"
 
 После добавления нового домена сбоя новые создаваемые виртуальные диски будут переходить на 3-сторонние зеркала. Однако существующий виртуальный диск останется 2-сторонним зеркальным диском. Вы можете скопировать данные на новые виртуальные диски из существующих томов, чтобы получить преимущества новой устойчивости.
  
-## <a name="the-storage-spaces-direct-was-created-using-the-autoconfig0-switch-and-the-pool-created-manually-when-i-try-to-query-the-storage-spaces-direct-pool-to-create-a-new-volume-i-get-a-message-that-says-enable-clusters2d-again-what-should-i-do"></a>Локальные дисковые пространства был создан с помощью автонастройки: 0 коммутатор и пул, созданные вручную. При попытке выполнить запрос к пулу Локальные дисковые пространства для создания нового тома появляется сообщение «Enable-ClusterS2D». Что мне делать?
+## <a name="the-storage-spaces-direct-was-created-using-the-autoconfig0-switch-and-the-pool-created-manually-when-i-try-to-query-the-storage-spaces-direct-pool-to-create-a-new-volume-i-get-a-message-that-says-enable-clusters2d-again-what-should-i-do"></a>Локальные дисковые пространства был создан с помощью автонастройки: 0 коммутатор и пул, созданные вручную. При попытке выполнить запрос к пулу Локальные дисковые пространства для создания нового тома появляется сообщение «Enable-ClusterS2D». Что нужно сделать?
 
 По умолчанию при настройке Локальные дисковые пространства с помощью командлета Enable-S2D командлет выполняет все необходимые действия. Он создает пул и уровни. При использовании автонастройки: 0 все должно выполняться вручную. Если вы создали только пул, уровень не обязательно будет создан. Вы получите сообщение об ошибке "Enable-ClusterS2D" (еще раз), если вы не создали уровни на всех уровнях или не создали уровни так, как они соответствуют подключенным устройствам. Не рекомендуется использовать параметр автоматической настройки в рабочей среде. 
  
@@ -87,5 +86,5 @@ Get-PhysicalDisk -SerialNumber <SerialNumber> | Enable-StorageMaintenanceMode
 Этот:
 
 ```powershell
-get-virtualdisk -friendlyname “xyz” | get-physicalextent
+get-virtualdisk -friendlyname "xyz" | get-physicalextent
 ```

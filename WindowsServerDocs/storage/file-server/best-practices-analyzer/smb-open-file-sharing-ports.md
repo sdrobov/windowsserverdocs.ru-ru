@@ -1,18 +1,17 @@
 ---
-title: 'SMB: необходимо открыть порты для совместного использования файлов и принтеров'
-TOCTitle: 'SMB: File and printer sharing ports should be open'
+title: Порты общего доступа к файлам и принтерам SMB должны быть открыты
 ms.date: 07/02/2012
 ms.prod: windows-server
 ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 80cc75f983d4593e4ee98309d1fa39c024b7b379
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: a7e98129c2fb4f2259364c547b426d46f0a24ef3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950296"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859467"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: необходимо открыть порты для совместного использования файлов и принтеров
 
@@ -36,15 +35,15 @@ ms.locfileid: "75950296"
 </tr>
 <tr class="even">
 <td><p><strong>Продукт или функция</strong></p></td>
-<td><p>Файловые службы</p></td>
+<td><p>Службы файлов</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Серьезность</strong></p></td>
-<td><p>Error</p></td>
+<td><p><strong>Серьезности</strong></p></td>
+<td><p>Ошибка</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>Категория</strong></p></td>
-<td><p>Настройка</p></td>
+<td><p>Конфигурация</p></td>
 </tr>
 </tbody>
 </table>
@@ -53,7 +52,7 @@ ms.locfileid: "75950296"
 
 > *Порты брандмауэра, необходимые для общего доступа к файлам и принтерам, не открыты (порты 445 и 139).*
 
-## <a name="impact"></a>Результат
+## <a name="impact"></a>Влияние
 
 > *Компьютеры не смогут получить доступ к общим папкам и другим сетевым службам на основе SMB на этом сервере.*
 
@@ -71,9 +70,9 @@ ms.locfileid: "75950296"
 
 3.  В разделе **правила для входящих подключений**выберите **файлы правил и общий доступ к принтерам (сеансы с расширением NetBIOS)** и **общий доступ к ФАЙЛАМ и принтерам (SMB-in)** .
 
-4.  Щелкните правой кнопкой мыши на каждом правиле и нажмите **Включить правило**.
+4.  Для каждого правила щелкните правой кнопкой мыши правило и выберите пункт **включить правило**.
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Общее представление об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
+Общие [сведения об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: f643099e-f9c6-476f-9378-5a9228c39b33
 title: Приложение E. обеспечение безопасности групп администраторов предприятия в Active Directory
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 51337e5d4940a490045e146d32408d4f709bb6ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5294be945ce4a93ffeb1c27cffa8a82470920e7b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408711"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821637"
 ---
 # <a name="appendix-e-securing-enterprise-admins-groups-in-active-directory"></a>Приложение Д. Защита групп корпоративных администраторов в Active Directory
 
@@ -182,7 +181,7 @@ ms.locfileid: "71408711"
 > [!IMPORTANT]  
 > Если для администрирования контроллеров домена и Active Directory используются серверы переходов, убедитесь, что серверы переходов расположены в подразделении, к которому не привязаны объекты GPO.  
 
-### <a name="verification-steps"></a>Шаги проверки  
+### <a name="verification-steps"></a>Этапы проверки  
 
 #### <a name="verify-deny-access-to-this-computer-from-the-network-gpo-settings"></a>Проверьте параметры объекта групповой политики "запретить доступ к этому компьютеру из сети"  
 С любого рядового сервера или рабочей станции, на который не влияют изменения объекта групповой политики (например, "сервер переходов"), попытайтесь получить доступ к рядовому серверу или рабочей станции по сети, на которую влияют изменения объекта групповой политики. Чтобы проверить параметры объекта групповой политики, попытайтесь выполнить сопоставление системного диска с помощью команды **net use** , выполнив следующие действия.  

@@ -2,29 +2,27 @@
 title: Поддерживаемые виртуальные машины SUSE в Hyper-V
 description: Список служб и компонентов интеграции Linux, входящих в каждую версию
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7ec0e14c-4498-4bd9-8fe6-b94260198efc
 author: shirgall
 ms.author: kathydav
 ms.date: 10/03/2016
-ms.openlocfilehash: 45517c1d381ba55c819b09b53ae563092e161b1e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c5daa73e2e0c59a262565237d979d2e1e544ae4f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71366734"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858007"
 ---
 # <a name="supported-suse-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины SUSE в Hyper-V
 
->Область применения. Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Область применения: Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Ниже приведена схема распределения компонентов, указывающая компоненты каждой версии. Известные проблемы и способы их решения для каждого распространения перечислены после таблицы.
 
-Встроенные драйверы SUSE Linux Enterprise Service для Hyper-V сертифицированы SUSE. Пример конфигурации можно просмотреть в этом бюллетене: [Бюллетень по сертификации SUSE Yes](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176).
+Встроенные драйверы SUSE Linux Enterprise Service для Hyper-V сертифицированы SUSE. Пример конфигурации можно просмотреть в этом бюллетене: [бюллетень по сертификации SUSE Yes](https://www.suse.com/nbswebapp/yesBulletin.jsp?bulletinNumber=144176).
 
 ## <a name="table-legend"></a>Условные обозначения таблицы
 
@@ -36,13 +34,13 @@ ms.locfileid: "71366734"
 
 SLES12 + является только 64-разрядным.
 
-|**Возможность**|**Версия операционной системы Windows Server**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
+|**Функциями**|**Версия операционной системы Windows Server**|**SLES 15**|**SLES 12 SP3/SP4**|**SLES 12 SP2**|**SLES 12 SP1**|**SLES 11 SP4**|**SLES 11 SP3**|
 |-|-|-|-|-|-|-|-|
 |**Доступность**||Встроенные методы|Встроенные методы|Встроенные методы|Встроенные методы|Встроенные методы|Встроенные методы|
 |**[Центральный](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Точное время Windows Server 2016|2019, 2016|&#10004;|&#10004;|&#10004;||||
 |**[Сети](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**||||||||
-|Кадры крупного размера|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Jumbo-кадры|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Добавление тегов и магистрали виртуальной ЛС|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Динамическая миграция|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Статическая Вставка IP-адресов|2019, 2016, 2012 R2, 2012|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|
@@ -74,7 +72,7 @@ SLES12 + является только 64-разрядным.
 |Загрузка с помощью UEFI|2019, 2016, 2012 R2|&#10004;Примечание 9.|&#10004;Примечание 9.|&#10004;Примечание 9.|&#10004;Примечание 9.|&#10004;Примечание 9.||
 |Безопасная загрузка|2019, 2016|&#10004;|&#10004;|&#10004;|&#10004;|||
 
-## <a name="BKMK_notes"></a>Заметки о
+## <a name="notes"></a><a name="BKMK_notes"></a>Заметки о
 
 1. Статическая Вставка IP-адресов может не работать, если **Диспетчер сети** настроен для конкретного сетевого адаптера Hyper-V на виртуальной машине. Чтобы обеспечить гладкую работу статического внедрения IP-адресов, убедитесь, что диспетчер сети полностью отключен или отключен для определенного сетевого адаптера через его файл **ifcfg-ЕСКС** .
 

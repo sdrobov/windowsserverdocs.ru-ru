@@ -2,18 +2,18 @@
 title: Обзор пространств имен DFS
 ms.prod: windows-server
 ms.author: jgerend
-ms.manager: daveba
+manager: daveba
 ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: В этом разделе описываются пространства имен DFS — служба роли в Windows Server, которая позволяет объединять общие папки, находящиеся на разных серверах, в одно или несколько логически структурированных пространств имен.
-ms.openlocfilehash: f4ff1bc394ddb57a290e5ffab1a89f596fc48d05
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 07f6ac857164257810b297f9e2b83db4e4bd42be
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949726"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858987"
 ---
 # <a name="dfs-namespaces-overview"></a>Обзор пространств имен DFS
 
@@ -43,8 +43,8 @@ ms.locfileid: "75949726"
 На серверах под управлением следующих операционных систем может размещаться по несколько доменных пространств имен в дополнение к одному изолированному пространству имен: 
 
 - Windows Server 2019
-- Windows Server 2016
-- Windows Server 2012 R2
+- Windows Server 2016
+- Windows Server 2012 R2
 - Windows Server 2012
 - Выпуски Windows Server 2008 R2 Datacenter и Enterprise
 - Windows Server (Semi-Annual Channel)
@@ -83,7 +83,7 @@ ms.locfileid: "75949726"
 
 ### <a name="to-install-dfs-by-using-windows-powershell"></a>Установка DFS с помощью Windows PowerShell
 
-Откройте сеанс Windows PowerShell с повышенными правами пользователя, а затем введите следующую команду, где < Name\> — это служба роли или компонент, который требуется установить (в следующей таблице перечислены соответствующие имена службы роли или компонента).
+Откройте сеанс Windows PowerShell с правами привилегированного пользователя, после чего введите указанную ниже команду, где <name\> обозначает службу роли или компонент, которые требуется установить (см. следующую таблицу со списком соответствующих имен служб ролей или компонентов).
 
 ```PowerShell
 Install-WindowsFeature <name>
@@ -116,11 +116,11 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 Дополнительные сведения о начале работы с виртуальными машинами Azure см. в [документации по виртуальным машинам Azure](https://docs.microsoft.com/azure/virtual-machines/).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 Дополнительные сведения по данной теме см. на следующих ресурсах.
 
-| Тип содержимого        | Ссылок |
+| Тип контента        | Ссылки |
 | ------------------  | ----------------|
 | **Оценка продукта** | [Новые возможности пространств имен DFS и репликация DFS в Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
 | **Развертывание**    | [Рекомендации по масштабируемости пространства имен DFS](https://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |

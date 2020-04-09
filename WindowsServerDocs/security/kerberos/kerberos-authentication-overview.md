@@ -1,24 +1,20 @@
 ---
 title: Kerberos Authentication Overview
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-kerberos
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 646c6309-e865-4be2-b415-44dd125af5c2
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 33712dc8502035bd9e47e1d2bdd4583eb8347dec
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6b5ec9bfa5c17a9ee9a5ad15af183d25bd533d7e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386314"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856327"
 ---
 # <a name="kerberos-authentication-overview"></a>Kerberos Authentication Overview
 
@@ -26,12 +22,12 @@ ms.locfileid: "71386314"
 
 Kerberos — это протокол проверки подлинности, используемый для проверки удостоверения пользователя или узла. В этом разделе содержатся сведения о проверке подлинности Kerberos в Windows Server 2012 и Windows 8.
 
-## <a name="BKMK_OVER"></a>Описание функции
+## <a name="feature-description"></a><a name="BKMK_OVER"></a> Описание функции
 Операционные системы Windows Server реализуют протокол проверки подлинности Kerberos версии 5 и расширения для проверки подлинности с помощью открытого ключа, переноса данных авторизации и делегирования. Клиент проверки подлинности Kerberos реализуется как поставщик поддержки безопасности \(SSP\), и доступ к нему можно получить через интерфейс поставщика поддержки безопасности \(SSPI\). Начальная проверка подлинности пользователя интегрирована с\-ом единого входа Winlogon в архитектуре.
 
 \) Kerberos центр распространения ключей \(KDC интегрирован с другими службами безопасности Windows Server, запущенными на контроллере домена. В качестве базы данных учетных записей безопасности в KDC используется база данных домен Active Directory Services домена. Доменные службы Active Directory необходимы для реализации Kerberos по умолчанию в рамках домена или леса.
 
-## <a name="kerb_tr_Kerb_Benefits"></a>Практические приложения
+## <a name="practical-applications"></a><a name="kerb_tr_Kerb_Benefits"></a>Практические приложения
 Преимущества использования Kerberos для проверки подлинности на основе домена\-:
 
 -   **Делегированная проверка подлинности.**

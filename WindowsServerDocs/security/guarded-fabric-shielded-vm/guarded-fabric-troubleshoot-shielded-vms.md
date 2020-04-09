@@ -1,22 +1,22 @@
 ---
 title: Устранение неполадок экранированных виртуальных машин
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 10/3/2018
-ms.openlocfilehash: b0d4338d20238eb528c19221151f380cc154a2db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c80663256a2e3404666b739c0a81cd06ec3caced
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386374"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856377"
 ---
 # <a name="troubleshoot-shielded-vms"></a>Устранение неполадок экранированных виртуальных машин
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 Начиная с Windows Server версии 1803, режим расширенного сеанса подключения к виртуальной машине (VMConnect) и PS Direct повторно включены для полностью экранированных виртуальных машин. Администратору виртуализации по-прежнему требуются гостевые учетные данные ВИРТУАЛЬНОЙ машины, чтобы получить доступ к виртуальной машине, но это упрощает устранение неполадок экранированной виртуальной машины при нарушении ее конфигурации сети.
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: de7e1e4a-f96d-4b59-ac9b-f65f5d37a96f
 title: Предоставление пользователям другой организации доступа к вашим приложениям и службам с поддержкой утверждений
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a0b2429599036f2893f23df7921a11c8232d9f67
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2e47197a980c9bcb576d6634a0031a8ae13afbfd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359066"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858607"
 ---
 # <a name="provide-users-in-another-organization-access-to-your-claims-aware-applications-and-services"></a>Предоставление пользователям другой организации доступа к вашим приложениям и службам с поддержкой утверждений
 
@@ -33,7 +32,7 @@ ms.locfileid: "71359066"
   
 -   **Домен Active Directory Services \(AD DS\):** Сервер федерации партнера по ресурсам должен быть присоединен к домену Active Directory.  
   
--   **DNS периметра:** Система доменных имен \(\) DNS должна содержать простой узел \(записи ресурса\), чтобы клиентские компьютеры могли наыскать сервер федерации партнера по ресурсам и веб-сервер. DNS-сервер может содержать другие записи DNS, которые также являются обязательными в сети периметра. Дополнительные сведения см. в разделе [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md).  
+-   **DNS периметра:** Система доменных имен \(\) DNS должна содержать простой узел \(записи ресурса\), чтобы клиентские компьютеры могли наыскать сервер федерации партнера по ресурсам и веб-сервер. DNS-сервер может содержать другие записи DNS, которые также являются обязательными в сети периметра. Дополнительные сведения см. в разделе [Требования к разрешению имен для серверов федерации](Name-Resolution-Requirements-for-Federation-Servers.md).  
   
 -   **Сервер федерации партнера по ресурсам:** Сервер федерации партнера по ресурсам проверяет маркеры AD FS, отправляемые партнерами по учетным записям. Обнаружение партнера по учетным записям выполняется через этот сервер федерации. Дополнительные сведения см. в разделе [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md).  
   

@@ -2,21 +2,21 @@
 title: Локальные дисковые пространства кэш чтения в памяти
 ms.prod: windows-server
 ms.author: eldenc
-ms.manager: siroy
+manager: siroy
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 02/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 83fc923f505531f955fc0131d7dcc1ce98974daa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d9ebc40b69373dafbebdb87f2abe624a5a7a4375
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394089"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858957"
 ---
 # <a name="using-storage-spaces-direct-with-the-csv-in-memory-read-cache"></a>Использование Локальные дисковые пространства с кэшем чтения в памяти CSV
-> Область применения. Windows Server 2016, Windows Server 2019
+> Область применения: Windows Server 2016, Windows Server 2019
 
 В этом разделе описывается использование системной памяти для повышения производительности [Локальные дисковые пространства](storage-spaces-direct-overview.md).
 
@@ -42,8 +42,8 @@ ms.locfileid: "71394089"
 
 | Версия ОС          | Размер кэша CSV по умолчанию |
 |---------------------|------------------------|
-| Windows Server 2016 | 0 (отключено)           |
-| Windows Server 2019 | 1 гиб                   |
+| Windows Server 2016 | 0 (отключено)           |
+| Windows Server 2019 | 1 гиб                   |
 
 Чтобы узнать, сколько памяти выделено с помощью PowerShell, выполните:
 
@@ -51,7 +51,7 @@ ms.locfileid: "71394089"
 (Get-Cluster).BlockCacheSize
 ```
 
-Возвращаемое значение находится в мебибитес (MiB) на сервер. Например, `1024` соответствует 1 гибибайт (гиб).
+Возвращаемое значение находится в мебибитес (MiB) на сервер. Например, `1024` представляет 1 гибибайт (гиб).
 
 Чтобы изменить объем выделяемой памяти, измените это значение с помощью PowerShell. Например, чтобы выделить 2 гиб для каждого сервера, выполните:
 
@@ -69,6 +69,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)

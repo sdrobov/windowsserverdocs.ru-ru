@@ -2,25 +2,23 @@
 title: Установка роли Hyper-V в Windows Server
 description: Содержит инструкции по установке Hyper-V с помощью диспетчер сервера или Windows PowerShell.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 8e871317-09d2-4314-a6ec-ced12b7aee89
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 12/02/2016
-ms.openlocfilehash: 2687a907852e2a81f03b147df1425cd01b34fb76
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d4d8f2343f0935ea7185890319a3e33564750572
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392811"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860827"
 ---
 # <a name="install-the-hyper-v-role-on-windows-server"></a>Установка роли Hyper-V в Windows Server
 
->Область применения. Windows Server 2016, Windows Server 2019
+>Область применения: Windows Server 2016, Windows Server 2019
   
 Чтобы создать и запустить виртуальные машины, установите роль Hyper-V в Windows Server с помощью диспетчер сервера или командлета **Install-WindowsFeature** в Windows PowerShell. Для Windows 10 см. статью [Установка Hyper-V в Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
@@ -44,7 +42,7 @@ ms.locfileid: "71392811"
   
 5. На странице **Выбор ролей сервера** выберите **Hyper-V**.  
   
-6. Чтобы добавить средства для создания виртуальных машин и управления ими, щелкните **Добавить компоненты**. На странице компонентов нажмите кнопку **Далее**.  
+6. Чтобы добавить средства для создания виртуальных машин и управления ими, щелкните **Добавить компоненты**. На странице "Компоненты" нажмите кнопку **Далее**.  
   
 7. Выберите нужные параметры на страницах **Создание виртуальных коммутаторов**, **Миграция виртуальной машины** и **Хранилища по умолчанию**.  
   
@@ -58,7 +56,7 @@ ms.locfileid: "71392811"
   
 2. Щелкните правой кнопкой мыши Windows PowerShell и выберите команду **Запуск от имени администратора**.  
   
-3. Чтобы установить Hyper-V на сервере, к которому вы подключены удаленно, выполните следующую команду и замените `<computer_name>` на имя сервера.  
+3. Чтобы установить Hyper-V на сервере, к которому вы подключены удаленно, выполните следующую команду и замените `<computer_name>` именем сервера.  
   
     ```powershell
     Install-WindowsFeature -Name Hyper-V -ComputerName <computer_name> -IncludeManagementTools -Restart  
@@ -75,8 +73,8 @@ ms.locfileid: "71392811"
     Если вы подключены локально к серверу, выполните команду без `-ComputerName <computer_name>`.  
   
 > [!NOTE]  
-> Если установить эту роль на сервере, на котором выполняется параметр установки Server Core в Windows Server 2016 и использовать параметр `-IncludeManagementTools`, то установлен только модуль Hyper-V для Windows PowerShell. Для удаленного управления узлом Hyper-V, работающим в установке Server Core, можно использовать средство управления графического интерфейса пользователя (диспетчер Hyper-V) на другом компьютере. Инструкции по удаленному подключению см. в статье [Удаленное управление узлами Hyper-v с помощью диспетчера Hyper-v](../Manage/Remotely-manage-Hyper-V-hosts.md).  
+> Если установить эту роль на сервере, на котором выполняется параметр установки Server Core в Windows Server 2016 и использовать параметр `-IncludeManagementTools`, устанавливается только модуль Hyper-V для Windows PowerShell. Для удаленного управления узлом Hyper-V, работающим в установке Server Core, можно использовать средство управления графического интерфейса пользователя (диспетчер Hyper-V) на другом компьютере. Инструкции по удаленному подключению см. в статье [Удаленное управление узлами Hyper-v с помощью диспетчера Hyper-v](../Manage/Remotely-manage-Hyper-V-hosts.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 - [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/Microsoft.Windows.ServerManager.Migration/Install-WindowsFeature)  

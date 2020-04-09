@@ -2,22 +2,18 @@
 title: Шаг 1. Настройка инфраструктуры DirectAccess
 description: Эта статья является частью инструкции по добавлению DirectAccess в существующее развертывание удаленного доступа (VPN) для Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5dc529f7-7bc3-48dd-b83d-92a09e4055c4
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 09cfde5bdd9e213e166345fb6844dcff08275b3f
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: d40a7bff2b726f1fa1ee768c677e0f9fa1658c6b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314760"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858027"
 ---
 # <a name="step-1-configure-the-directaccess-infrastructure"></a>Шаг 1. Настройка инфраструктуры DirectAccess
 

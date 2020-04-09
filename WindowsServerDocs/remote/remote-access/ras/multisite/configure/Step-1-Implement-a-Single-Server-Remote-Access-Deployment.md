@@ -2,22 +2,18 @@
 title: Шаг 1. Реализация развертывания удаленного доступа на одном сервере
 description: Эта статья является частью руководств по развертыванию нескольких серверов удаленного доступа в многосайтовом развертывании в Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-ras
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9086c4f-f950-44a9-93f1-7d03aecdaa60
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6b767a98a78aa73a1fc14ec229cb91a22a38bf81
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: adb4c544414ade99a82acec5a95abe8037a2d404
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314004"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858377"
 ---
 # <a name="step-1-implement-a-single-server-remote-access-deployment"></a>Шаг 1. Реализация развертывания удаленного доступа на одном сервере
 

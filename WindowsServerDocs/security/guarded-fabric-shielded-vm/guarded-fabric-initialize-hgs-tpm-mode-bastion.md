@@ -1,29 +1,29 @@
 ---
 title: Инициализация кластера HGS с помощью режима TPM в лесу бастиона
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: b360f0f5195bea3c61f9a181b4b75a681f7e29b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 09fa226b4e7189904d5baa54fb2b59c18a800948
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403607"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856637"
 ---
 # <a name="initialize-the-hgs-cluster-using-tpm-mode-in-an-existing-bastion-forest"></a>Инициализация кластера HGS с помощью режима TPM в существующем лесу бастиона
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 Домен Active Directory службы будут установлены на компьютере, но должны остаться ненастроенными.
 
 [!INCLUDE [Obtain certificates for HGS](../../../includes/guarded-fabric-initialize-hgs-default-step-two.md)]
 
 Прежде чем продолжить, убедитесь, что объекты кластера предварительно подготовлены для службы защиты узла и предоставил вошедшему в систему пользователю **полный контроль** над объектами VCO и CNO в Active Directory.
-Имя объекта виртуального компьютера должно быть передано параметру `-HgsServiceName`, а имя кластера — параметру `-ClusterName`.
+Имя объекта виртуального компьютера необходимо передать в параметр `-HgsServiceName`, а имя кластера — в параметр `-ClusterName`.
 
 > [!TIP]
 > Прежде чем продолжить, проверьте контроллеры доменов AD, чтобы убедиться, что объекты кластера реплицированы на все контроллеры домена.

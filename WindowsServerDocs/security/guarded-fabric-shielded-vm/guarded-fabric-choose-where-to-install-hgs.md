@@ -1,22 +1,22 @@
 ---
 title: Выберите, следует ли устанавливать HGS в новом лесу или в существующем лесу бастиона.
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 28c7eceefa4747a35d1b989df4a2c5e43a8d6a42
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 52376a4e193b8021dc58214003e9b7579b096a79
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386788"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856887"
 ---
 # <a name="choose-whether-to-install-hgs-in-its-own-dedicated-forest-or-in-an-existing-bastion-forest"></a>Выберите, следует ли устанавливать HGS в собственном выделенном лесу или в существующем лесу бастиона.
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 
 Лес Active Directory для HGS является конфиденциальным, так как его администраторы имеют доступ к ключам, которые управляют экранированными виртуальными машинами. При установке по умолчанию будет настроен новый лес, выделенный для HGS, и настроены другие зависимости. Этот вариант рекомендуется, так как среда самодостаточна и безопасна при ее создании. 

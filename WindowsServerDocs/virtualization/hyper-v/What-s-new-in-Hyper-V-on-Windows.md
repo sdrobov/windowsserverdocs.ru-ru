@@ -2,21 +2,19 @@
 title: Новые возможности Hyper-V в Windows Server 2016
 description: Содержит сводку новых возможностей Hyper-V.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a65a98e-54b6-4c41-9732-1e3d32fe3a5f
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 09/21/2017
-ms.openlocfilehash: 195d78ff8de75ca9e3a88d4300bb2f52cd45632f
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 5fc82d8eea78ad5605dceb6a21e8d543f9d9c88e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322306"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857967"
 ---
 # <a name="whats-new-in-hyper-v-on-windows-server"></a>Новые возможности Hyper-V в Windows Server
 
@@ -36,13 +34,13 @@ ms.locfileid: "79322306"
 
 Дополнительные сведения см. в статье [Пакет компонентов для обеспечения совместимости приложений основных серверных компонентов по требованию](../../get-started-19/install-fod-19.md).
 
-## <a name="windows-server-2019"></a>Windows Server 2019
+## <a name="windows-server-2019"></a>Windows Server 2019
 
 ### <a name="security-shielded-virtual-machines-improvements-new"></a>Безопасность: улучшения экранированных виртуальных машин (новые)
 
 - **Улучшения для филиалов**
 
-    Теперь экранированные виртуальные машины можно запускать на компьютерах с периодическими разрывами подключения к службе защиты узла, используя новый [резервный сервер HGS](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#fallback-configuration) и [автономный режим](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#offline-mode). Резервный сервер HGS позволяет настроить второй набор URL-адресов для Hyper-V, который будет использоваться в случае невозможности установить подключение к основному серверу HGS.
+    Теперь экранированные виртуальные машины можно запускать на компьютерах с периодическими разрывами подключения к службе защиты узла, используя новый [резервный сервер HGS](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#fallback-configuration) и [автономный режим](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office#offline-mode). Резервный сервер HGS позволяет настроить второй набор URL-адресов для Hyper-V, который будет использоваться в случае невозможности установления подключения к основному серверу HGS.
 
     Автономный режим дает возможность продолжить запуск экранированных виртуальных машин, даже если не удается установить подключение к HGS при условии, что виртуальная машина была успешно запущена хотя бы один раз и в конфигурацию системы безопасности узла не вносились изменения.
 

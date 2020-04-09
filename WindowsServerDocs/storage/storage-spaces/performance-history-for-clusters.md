@@ -1,36 +1,35 @@
 ---
 title: Журнал производительности для кластеров
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
-Keywords: Локальные дисковые пространства
 ms.localizationpriority: medium
-ms.openlocfilehash: 68596cbdcf8593cd3017c8ae5d0836891c78229c
-ms.sourcegitcommit: 0d0b32c8986ba7db9536e0b8648d4ddf9b03e452
+ms.openlocfilehash: 7a5eec986d6e7d633f1917c599ab6fcd244c7008
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59818775"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856207"
 ---
 # <a name="performance-history-for-clusters"></a>Журнал производительности для кластеров
 
-> Область применения. Сборка из программы предварительной оценки Windows Server
+> Область применения: Windows Server 2019
 
-Этот подраздел из [журнал производительности дисковых](performance-history.md) описывает журнал производительности, собранных для кластеров.
+Этот подраздел [журнала производительности для Локальные дисковые пространства](performance-history.md) описывает журнал производительности, собранный для кластеров.
 
-Существует ряд не, создаются на уровне кластера. Вместо этого серия server, такие как `clusternode.cpu.usage`, объединяются для всех серверов в кластере. Серия тома, такие как `volume.iops.total`, объединяются для всех томов в кластере. И диске рядов, например `physicaldisk.size.total`, объединяются для всех дисков в кластере.
+Нет рядов, исходящих на уровне кластера. Вместо этого ряды серверов, например `clusternode.cpu.usage`, объединяются для всех серверов в кластере. Ряды томов, например `volume.iops.total`, объединяются для всех томов в кластере. И серии дисков, например `physicaldisk.size.total`, объединяются для всех дисков в кластере.
 
 ## <a name="usage-in-powershell"></a>Использование в PowerShell
 
-Используйте [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster) командлета:
+Используйте командлет [Get-Cluster](https://docs.microsoft.com/powershell/module/failoverclusters/get-cluster) :
 
 ```PowerShell
 Get-Cluster | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
-- [Журнал производительности для дисковых пространств](performance-history.md)
+- [Журнал производительности для Локальные дисковые пространства](performance-history.md)

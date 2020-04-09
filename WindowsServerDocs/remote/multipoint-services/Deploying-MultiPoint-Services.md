@@ -1,27 +1,23 @@
 ---
 title: Развертывание служб MultiPoint
 description: Общие сведения о процессе развертывания служб MultiPoint
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 842b7b743624aa1e4b168b1be8e94f6d405d07e3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6dff10519a951e002facc200beeb987546f5ee2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395687"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859747"
 ---
 # <a name="deploying-multipoint-services"></a>Развертывание служб MultiPoint
-В этом руководство описано, как развернуть сервер с работающими службами MultiPoint и настроить станции MultiPoint, установить и настроить систему, настроить учетные записи пользователей и выполнить некоторые базовые задачи администрирования, такие как включение защиты диска и Настройка резервного копирования. Перед началом работы с системой.  
+В этом руководство описано, как развернуть сервер с запущенными службами MultiPoint и настроить станции MultiPoint, установить и настроить систему, настроить учетные записи пользователей и выполнить некоторые базовые задачи администрирования, такие как включение защиты диска и Настройка резервных копий, прежде чем приступать к использованию системы.  
   
 > [!NOTE]  
 > Дополнительные сведения о поддержке см. в справке служб MultiPoint, которую можно открыть, щелкнув значок справки или F1 на любом экране MultiPoint Manager или панели мониторинга MultiPoint.  
@@ -43,7 +39,7 @@ ms.locfileid: "71395687"
   
     Прежде чем приступить к работе с сервером, выполните некоторые основные задачи администрирования сервера. Включите защиту диска. Установка резервной копии сервера; чтобы сэкономить электроэнергию, настройте параметры спящего режима. Настройка групповых политик и реестра для развертывания домена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   
 - [Службы MultiPoint](MultiPoint-Services.md)
 -   [Форум по службам MultiPoint](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)  

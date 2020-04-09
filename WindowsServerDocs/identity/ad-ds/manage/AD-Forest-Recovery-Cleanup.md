@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD — очистка
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: c4e800f380cf75022c03e21b91f3b6f71cf79708
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 205c71930c14ef42596b0e08c27abae6646e4ddf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369240"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824157"
 ---
 # <a name="ad-forest-recovery---cleanup"></a>Восстановление леса AD — очистка
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
  При необходимости выполните следующие действия после восстановления:  
   

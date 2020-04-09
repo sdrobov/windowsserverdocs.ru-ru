@@ -1,6 +1,5 @@
 ---
 title: Введение в привязку токенов
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4623a48c-cefd-4a27-9173-2af58ac212f2
@@ -8,16 +7,16 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 11/09/2016
-ms.openlocfilehash: 52ba35808b34eb07ecd6ac92819e9dc7a693b15b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d067db04fe881193143104ce9f75a0c9932907e7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403329"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855897"
 ---
 # <a name="introducing-token-binding"></a>Введение в привязку токенов
 
->Область применения. Windows Server 2016 и Windows 10
+>Область применения: Windows Server 2016 и Windows 10
 
 Протокол привязки токенов позволяет приложениям и службам криптографически привязывать свои маркеры безопасности к уровню TLS для устранения атак с кражой и воспроизведением маркеров. Долгосрочные, однозначно идентифицируемые привязки TLS [RFC5246] могут охватывать несколько сеансов TLS и соединений.
 
@@ -30,7 +29,7 @@ ms.locfileid: "71403329"
     - Протокол привязки токена обновлен [[черновик-IETF-токбинд-Protocol-01]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/01/)
     - Расширение TLS для согласования привязки токена Добавлено [[черновик-Попов-токбинд-переговоры-00]](https://tools.ietf.org/html/draft-popov-tokbind-negotiation-00)
     - WinInet & HTTP. SYS поддержка привязки маркера по протоколу HTTP обновлена [[черновик-IETF-токбинд-HTTPS-02]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/02/)
-- Windows 10, версия 1507 с обслуживанием Update [KB4034668](https://support.microsoft.com/kb/KB4034668), Windows 10, версия 1511 с обслуживанием Update [KB4034660](https://support.microsoft.com/kb/KB4034660), windows 10, версия 1607 и Windows Server 2016 с обслуживанием обновление [KB4034658](https://support.microsoft.com/kb/KB4034658) протокол привязки маркеров Версия 0,10 — включено по умолчанию
+- Windows 10, версия 1507 с обслуживанием Update [KB4034668](https://support.microsoft.com/kb/KB4034668), Windows 10, версия 1511 с обслуживанием Update [KB4034660](https://support.microsoft.com/kb/KB4034660), windows 10, версия 1607 и Windows Server 2016 с обслуживанием Update [KB4034658](https://support.microsoft.com/kb/KB4034658) поддержка протокола привязки маркеров версия 0,10 — включено по умолчанию
     - Протокол привязки токена обновлен [[черновик — IETF-токбинд-Protocol-10]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-protocol/10/)
     - Добавлено расширение TLS для согласования привязки маркеров [[черновик-IETF-токбинд-переговоры-05]](https://tools.ietf.org/html/draft-ietf-tokbind-negotiation-05)
     - WinInet & HTTP. SYS поддержка привязки маркера по протоколу HTTP обновлена [[черновик-IETF-токбинд-HTTPS-06]](https://datatracker.ietf.org/doc/draft-ietf-tokbind-https/06/)

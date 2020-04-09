@@ -1,19 +1,18 @@
 ---
 title: Предотвращение изменения пароля Kerberos, в котором используются секретные ключи RC4
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: de207d55-aa3d-4c16-bd3b-496db43663a4
 manager: alanth
 author: justinha
-ms.technology: security-crdential-protection-and-management
+ms.technology: security-credential-protection-and-management
 ms.date: 11/09/2016
-ms.openlocfilehash: 21c2d3d79653bd02fea9d2ac0d09bd18690a388f
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 4b335ca4432f17acd60d9246de81081cf0441552
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949746"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858827"
 ---
 # <a name="preventing-kerberos-change-password-that-uses-rc4-secret-keys"></a>Предотвращение изменения пароля, в котором используются секретные ключи RC4, протоколом Kerberos
 
@@ -31,8 +30,8 @@ ms.locfileid: "75949746"
 
     [!NOTE]
     Существует известная неполадка при отключении RC4, которая может привести к перезагрузке системы. См. следующие исправления:
-    - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
-    - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
+    - [Windows Server 2012 R2](https://support.microsoft.com/kb/3038261)
+    - [Windows Server 2012](https://support.microsoft.com/kb/3086213)
     - Нет доступных исправлений для более ранних версий Windows Server
 
 - Разверните домены, для которых задан режим работы домена Windows Server 2012 R2 или более поздней версии, и настройте пользователей в качестве членов группы безопасности "защищенные пользователи". Так как эта функция нарушает использование в протоколе Kerberos более чем RC4, см. раздел ресурсы в следующих разделах. [также](#see-also)

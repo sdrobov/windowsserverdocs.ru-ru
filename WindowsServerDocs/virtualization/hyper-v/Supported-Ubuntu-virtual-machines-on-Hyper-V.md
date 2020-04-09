@@ -2,25 +2,23 @@
 title: Поддерживаемые виртуальные машины Ubuntu в Hyper-V
 description: Список служб и компонентов интеграции Linux, входящих в каждую версию
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95ea5f7c-25c6-494b-8ffd-2a77f631ee94
 author: shirgall
 ms.author: shirgall
 ms.date: 06/13/2019
-ms.openlocfilehash: ed1c1a9f678dd7cb68b59d2df239ca278b7a3688
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 06c836d9671547ea3d40e5582c2ed7b330777ac9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365478"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857997"
 ---
 # <a name="supported-ubuntu-virtual-machines-on-hyper-v"></a>Поддерживаемые виртуальные машины Ubuntu в Hyper-V
 
->Область применения. Windows Server 2019, 2016, Hyper-V Server 2019, 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Область применения: Windows Server 2019, 2016, Hyper-V Server 2019, 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Начиная с Ubuntu 12,04, при загрузке пакета "Linux-Virtual" устанавливается ядро, подходящее для использования в качестве гостевой виртуальной машины. Этот пакет всегда зависит от последнего минимально общего образа ядра и заголовков, используемых для виртуальных машин. Хотя его использование является необязательным, виртуальный ядро Linux загружает меньшее число драйверов и может ускорить загрузку и снизить нагрузку на память, чем универсальный образ.
 
@@ -36,13 +34,13 @@ ms.locfileid: "71365478"
 
 * (*пусто*) — функция недоступна
 
-|**Возможность**|**Версия операционной системы Windows Server**|**18,10/19,04**|**18,04 LTS**|**16,04 LTS**|**14,04 LTS**|**12,04 LTS**|
+|**Функциями**|**Версия операционной системы Windows Server**|**18,10/19,04**|**18,04 LTS**|**16,04 LTS**|**14,04 LTS**|**12,04 LTS**|
 |-|-|-|-|-|-|-|
 |**Доступность**||Встроенные методы|Встроенные методы|Встроенные методы|Встроенные методы|Встроенные методы|
 |**[Центральный](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#core)**|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Точное время Windows Server 2016|2019, 2016|&#10004;|&#10004;|&#10004;|||
 |**[Сети](Feature-Descriptions-for-Linux-and-FreeBSD-virtual-machines-on-Hyper-V.md#networking)**|||||||
-|Кадры крупного размера|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
+|Jumbo-кадры|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Добавление тегов и магистрали виртуальной ЛС|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Динамическая миграция|2019, 2016, 2012 R2, 2012, 2008 R2|&#10004;|&#10004;|&#10004;|&#10004;|&#10004;|
 |Статическая Вставка IP-адресов|2019, 2016, 2012 R2, 2012|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|&#10004;Примечание 1|

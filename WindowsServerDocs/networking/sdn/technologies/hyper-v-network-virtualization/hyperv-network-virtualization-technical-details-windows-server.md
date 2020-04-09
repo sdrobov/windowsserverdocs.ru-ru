@@ -1,24 +1,19 @@
 ---
 title: Технические сведения о виртуализации сети Hyper-V в Windows Server 2016
 description: В этом разделе содержатся технические сведения о виртуализации сети Hyper-V в Windows Server 2016.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: virtual-network
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9efe0231-94c1-4de7-be8e-becc2af84e69
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: a8628404de8a1b9caccc7f7f51b063cabb1caf27
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 54fb9eba99a4e6dc565111a3f34c8ccceeca2ff4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317206"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859707"
 ---
 # <a name="hyper-v-network-virtualization-technical-details-in-windows-server-2016"></a>Технические сведения о виртуализации сети Hyper-V в Windows Server 2016
 
@@ -41,7 +36,7 @@ ms.locfileid: "80317206"
 
     HNVv1 совместим с Windows Server 2012 R2 и System Center 2012 R2 Virtual Machine Manager (VMM). Конфигурация для HNVv1 зависит от управления WMI и командлетов Windows PowerShell (с помощью System Center VMM) для определения параметров изоляции и адреса клиента (CA) — сопоставления виртуальной сети с физическим адресом (PA) и маршрутизации. В HNVv1 в Windows Server 2016 не были добавлены дополнительные функции, и новые функции не планируется.  
 
-    • Настройка Teaming и HNV v1 несовместима платформой.
+    *   Установка Teaming и HNV v1 несовместима платформой.
 
     o чтобы использовать шлюзы HA NVGRE, пользователи должны либо использовать команду LBFO, либо не какую-либо команду. или
 

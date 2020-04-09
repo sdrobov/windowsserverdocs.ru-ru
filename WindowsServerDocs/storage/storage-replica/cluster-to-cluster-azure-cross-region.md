@@ -1,7 +1,6 @@
 ---
 title: Межрегиональная межкластерная репликация хранилища в Azure
 description: Репликация между кластером и хранилищем кластера в Azure
-keywords: Реплика хранилища, диспетчер сервера, Windows Server, Azure, кластер, перекрестный регион, другой регион
 author: arduppal
 ms.author: arduppal
 ms.date: 12/19/2018
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 806857d5de067c0f4640344ed80338b474dd758e
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: ee4f508cf0a65b59c3253d6865c649cc9652c569
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950063"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856307"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Межрегиональная межкластерная репликация хранилища в Azure
 
@@ -38,7 +37,7 @@ ms.locfileid: "75950063"
     - Группа доступности (**az2azAS1**) в (**SR-AZ2AZ**)
     - Группа доступности (**азкросс-AS**) в (**SR-азкросс**)
 
-3. создание двух виртуальных сетей;
+3. Создание двух виртуальных сетей
    - Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-vnet**) в первой группе ресурсов (**SR-az2az**) с одной подсетью и одной подсетью шлюза.
    - Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**азкросс-vnet**) во второй группе ресурсов (**SR-азкросс**) с одной подсетью и одной подсетью шлюза.
 
@@ -135,7 +134,7 @@ ms.locfileid: "75950063"
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
 12. Выполните следующую команду из одного узла **azcross1**/**azcross2**
@@ -144,7 +143,7 @@ ms.locfileid: "75950063"
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.0.0.10" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
     Убедитесь, что оба кластера могут подключаться и взаимодействовать друг с другом.

@@ -8,12 +8,12 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2a3cf6cd523f5cfd69785104fed7aa3938d79525
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6c2f9c8079eb2dfaf208c8835940351a925d0a16
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359387"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857507"
 ---
 # <a name="migrate-active-directory-federation-services-role-services-to-windows-server-2012-r2"></a>Перенос служб ролей для служб федерации Active Directory в Windows Server 2012 R2
  В этом документе приведены инструкции по переносу следующих служб ролей в службы федерации Active Directory (AD FS) (AD FS), устанавливаемый вместе с Windows Server 2012 R2.  
@@ -59,10 +59,10 @@ ms.locfileid: "71359387"
   
 |С|Установка AD FS с Windows Server 2012 R2|  
 |----------|----------------------------------------------------------------------------------------------|  
-|Сервер федерации AD FS 2,0, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере. Дополнительные сведения см. в следующих разделах:<br /><br /> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
-|AD FS сервер федерации, установленный в Windows Server 2012|Поддерживается миграция на том же сервере.  Подробную информацию см. в следующих разделах:<br /><br /> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<br /><br /> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
+|Сервер федерации AD FS 2,0, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере. Дополнительные сведения см. в следующих разделах:<p> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<p> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
+|AD FS сервер федерации, установленный в Windows Server 2012|Поддерживается миграция на том же сервере.  Дополнительные сведения см. в разделе:<p> [Подготовка к миграции сервера федерации AD FS](prepare-migrate-ad-fs-server-r2.md)<p> [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)|  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
  [Подготовка к миграции сервера AD FS федерации](prepare-migrate-ad-fs-server-r2.md)   
  [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)   
  [Перенос  прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)  

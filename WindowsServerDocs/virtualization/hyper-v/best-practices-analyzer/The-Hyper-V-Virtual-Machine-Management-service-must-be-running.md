@@ -2,37 +2,36 @@
 title: Должна быть запущена служба управления виртуальными машинами Hyper-V
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: f44d6887-6458-4438-9d93-574587e3f7d1
-author: KBDAzure
+author: kbdazure
 ms.date: 10/03/2016
-ms.openlocfilehash: de1e2ed9fc24afe7d1ccc12bc11eb94a846f0664
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 50f101f9dad824e13fa5827175cc1c944a96a91b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364676"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859327"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-must-be-running"></a>Должна быть запущена служба управления виртуальными машинами Hyper-V
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
   
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
 |**Категория**|Предварительные требования|  
 
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.
 
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
   
 *Служба, необходимая для управления виртуальными машинами, не запущена.*  
   
@@ -51,8 +50,8 @@ ms.locfileid: "71364676"
 
 Чтобы установить средства управления Hyper-V, выполните следующие действия.  
 >   
-> - В Windows Server откройте диспетчер сервера и используйте мастер добавления ролей и компонентов. Дополнительные сведения см. в [статье Установка роли Hyper-V в Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  Для установки средств можно также использовать PowerShell (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`). 
-> - В Windows на рабочем столе Начните вводить **программы**, выберите пункт **программы и компоненты** (панель управления), > **включить или отключить компоненты Windows** > **Hyper-v** > **средства управления Hyper-v**. Затем нажмите кнопку **ОК**.  
+> - В Windows Server откройте диспетчер сервера и используйте мастер добавления ролей и компонентов. Дополнительные сведения см. в [статье Установка роли Hyper-V в Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  Для установки средств можно также использовать PowerShell (`Install-WindowsFeature -Name Hyper-V-Tools, Hyper-V-PowerShell`) 
+> - В Windows на рабочем столе Начните вводить **программы**, щелкните **программы и компоненты** (панель управления), > **включить или отключить компоненты Windows** > **Hyper-v** > **средства управления Hyper-v**. Затем нажмите кнопку **ОК**.  
   
 ### <a name="to-reconfigure-the-service-to-start-automatically-using-the-services-desktop-app"></a>Повторная настройка службы для автоматического запуска с помощью классического приложения служб  
   
@@ -82,7 +81,7 @@ ms.locfileid: "71364676"
     sc start vmms  
     ```  
   
-Если служба уже настроена для автоматического запуска и требуется только перезапустить службу, это можно сделать из диспетчера Hyper-V или из команды "SC Start VMMS", показанной выше.  
+Если служба уже настроена для автоматического запуска и вам нужно просто перезапустить службу, это можно сделать из диспетчера Hyper-V или из команды SC Start VMMS, показанной выше.  
   
 #### <a name="to-restart-the-service-from-hyper-v-manager"></a>Перезапуск службы из диспетчера Hyper-V  
   

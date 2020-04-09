@@ -1,19 +1,18 @@
 ---
 title: Журнал производительности для серверов
 ms.author: cosdar
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 02/05/2018
-Keywords: Локальные дисковые пространства
 ms.localizationpriority: medium
-ms.openlocfilehash: bbfc92f7926b93f5f6716514e64672f4aa304c0f
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.openlocfilehash: cf4bdabb132c832370e5dffec215c24b54aebdd7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
-ms.locfileid: "74945251"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856197"
 ---
 # <a name="performance-history-for-servers"></a>Журнал производительности для серверов
 
@@ -28,22 +27,22 @@ ms.locfileid: "74945251"
 
 Эти серии собираются для каждого подходящего сервера:
 
-| Серия                           | Unit    |
+| Ряд                           | Единица измерения    |
 |----------------------------------|---------|
 | `clusternode.cpu.usage`          | percent |
 | `clusternode.cpu.usage.guest`    | percent |
 | `clusternode.cpu.usage.host`     | percent |
-| `clusternode.memory.total`       | байт   |
-| `clusternode.memory.available`   | байт   |
-| `clusternode.memory.usage`       | байт   |
-| `clusternode.memory.usage.guest` | байт   |
-| `clusternode.memory.usage.host`  | байт   |
+| `clusternode.memory.total`       | байты   |
+| `clusternode.memory.available`   | байты   |
+| `clusternode.memory.usage`       | байты   |
+| `clusternode.memory.usage.guest` | байты   |
+| `clusternode.memory.usage.host`  | байты   |
 
 Кроме того, ряды дисков, такие как `physicaldisk.size.total`, объединяются для всех подходящих дисков, подключенных к серверу, и серии сетевых адаптеров, например `networkadapter.bytes.total`, объединяются для всех подходящих сетевых адаптеров, подключенных к серверу.
 
 ## <a name="how-to-interpret"></a>Как интерпретировать
 
-| Серия                           | Как интерпретировать                                                      |
+| Ряд                           | Как интерпретировать                                                      |
 |----------------------------------|-----------------------------------------------------------------------|
 | `clusternode.cpu.usage`          | Процент времени процессора, который не находится в состоянии простоя.                        |
 | `clusternode.cpu.usage.guest`    | Процент времени процессора, используемого для гостевых (виртуальных машин) потребностей. |
@@ -60,7 +59,7 @@ ms.locfileid: "74945251"
 
 Если Hyper-V включен:
 
-| Серия                           | Счетчик источника |
+| Ряд                           | Счетчик источника |
 |----------------------------------|----------------|
 | `clusternode.cpu.usage`          | `Hyper-V Hypervisor Logical Processor` > `_Total` > `% Total Run Time`      |
 | `clusternode.cpu.usage.guest`    | `Hyper-V Hypervisor Virtual Processor` > `_Total` > `% Total Run Time`      |
@@ -70,7 +69,7 @@ ms.locfileid: "74945251"
 
 Если Hyper-V не включен:
 
-| Серия                           | Счетчик источника |
+| Ряд                           | Счетчик источника |
 |----------------------------------|----------------|
 | `clusternode.cpu.usage`          | `Processor` > `_Total` > `% Processor Time` |
 | `clusternode.cpu.usage.guest`    | *нуль* |
@@ -93,6 +92,6 @@ ms.locfileid: "74945251"
 Get-ClusterNode <Name> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Журнал производительности для Локальные дисковые пространства](performance-history.md)
