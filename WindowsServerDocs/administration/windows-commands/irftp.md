@@ -1,28 +1,24 @@
 ---
 title: irftp
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e15c60a7-546d-4e9f-9871-43aaa1b569d6 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ad8a0b9b49d90223f830081f5a99c40995d9e4ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 28cf722a5e630cb05b0348ebf2d4f582217b5497
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375363"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841987"
 ---
 # <a name="irftp"></a>irftp
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отправляет файлы по инфракрасной связи.    
 ## <a name="syntax"></a>Синтаксис  
@@ -30,10 +26,10 @@ ms.locfileid: "71375363"
 irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]  
 ```  
 
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|Диск: \|Specifies диск, содержащий файлы, которые требуется отправить через инфракрасную связь.|  
+|Диск:\|указывает диск, содержащий файлы, которые требуется отправить через инфракрасную связь.|  
 |путь Файлов|Указывает расположение и имя файла или набора файлов, которые требуется отправить через инфракрасную связь. Если указать набор файлов, необходимо указать полный путь для каждого файла.|  
 |/h|Указывает скрытый режим. Если используется скрытый режим, файлы отправляются без отображения диалогового окна беспроводная связь.|  
 |/s|Открывает диалоговое окно беспроводная связь, позволяющее выбрать файл или набор файлов, которые требуется отправить, без использования командной строки для указания диска, пути и имен файлов.|  
@@ -42,11 +38,11 @@ irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]
 -   Перед использованием этой команды убедитесь, что устройства, для которых требуется установить связь по инфракрасной связи, включены и работают правильно, и что связь между устройствами установлена по инфракрасной связи.  
 -   При использовании без параметров или с параметром **/s** **ирфтп** открывает диалоговое окно **беспроводная связь** , в котором можно выбрать файлы, которые требуется отправить без использования командной строки.  
 
-## <a name="BKMK_Examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
 Отправьте пример. txt по каналу инфракрасной связи.  
 ```  
 irftp c:\example.txt  
 ```  
 
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

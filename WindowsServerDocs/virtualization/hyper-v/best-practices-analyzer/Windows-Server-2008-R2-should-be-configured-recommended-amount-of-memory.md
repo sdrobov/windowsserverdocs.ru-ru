@@ -2,33 +2,32 @@
 title: Для Windows Server 2008 R2 следует настроить рекомендуемый объем памяти.
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 26872519-ccf0-4757-827f-8df2a7a2b9f9
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: e5b103ed5f41b3d63320a0d9be85c7e52781041d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4be2409c0acbe5a14d12163bf3dd2d5fea000f2b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393173"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860027"
 ---
 # <a name="windows-server-2008-r2-should-be-configured-with-the-recommended-amount-of-memory"></a>Для Windows Server 2008 R2 следует настроить рекомендуемый объем памяти.
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Warning|  
-|**Категория**|Настройка|  
+|**Серьезности**|Предупреждение|  
+|**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   

@@ -1,30 +1,26 @@
 ---
 title: Управление — BDE Випефриспаце
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b8d83a2a-c5c8-4019-9041-23d1d6abf282
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 35d5f5fe079485d35fa412502bec745a136fbce9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a9995c6872380af61bec5d3b200e733c034ea6b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373779"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839717"
 ---
 # <a name="manage-bde-wipefreespace"></a>Manage-bde: Випефриспаце
 
 
 
-Очищает свободное место на томе, удаляя все фрагменты данных, которые могли существовать в пространстве. Выполнение этой команды на томе, зашифрованном с помощью метода шифрования "только используемое пространство", обеспечивает тот же уровень защиты, что и метод шифрования полного шифрования тома. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Очищает свободное место на томе, удаляя все фрагменты данных, которые могли существовать в пространстве. Выполнение этой команды на томе, зашифрованном с помощью метода шифрования только используемое пространство, обеспечивает тот же уровень защиты, что и при полном шифровании шифрования тома. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +28,7 @@ ms.locfileid: "71373779"
 manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -43,7 +39,7 @@ manage-bde -WipeFreeSpace|-w [<Drive>] [-Cancel] [-computername <Name>] [{-?|/?}
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В следующем примере показано использование команды **-w** для создания очистки свободного места на диске C.
 ```
@@ -54,7 +50,7 @@ manage-bde -w C:
 manage-bde -w -Cancel C:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Управление — BDE](manage-bde.md)

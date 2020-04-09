@@ -1,7 +1,6 @@
 ---
 ms.assetid: 27e1e299-0beb-4e86-8143-1ba031dc3502
 title: Добавление сертификата расшифровки токенов
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 388414fff97705901bf52ee844b90508d62f8c83
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5714a41950b9c2f818ddc154a9af7a55fdb362d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408453"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814968"
 ---
 # <a name="add-a-token-decrypting-certificate"></a>Добавление сертификата расшифровки токенов
 
@@ -25,7 +24,7 @@ ms.locfileid: "71408453"
   
 Для добавления маркера\-расшифровки сертификата в оснастку управления AD FS\-в из экспортированного файла можно использовать следующую процедуру.  
   
-Для выполнения этой процедуры минимальным требованием является членство в группе **Администраторы** или эквивалентные права на локальном компьютере.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальной среде и группах домена по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.Microsoft.com\/fwlink\/? LinkId\=83477\).   
+Для выполнения этой процедуры требуется членство в группе **Администраторы** или в эквивалентной группе на локальном компьютере.  Просмотрите сведения об использовании соответствующих учетных записей и членства в группах в [локальной среде и группах домена по умолчанию](https://go.microsoft.com/fwlink/?LinkId=83477) \(http:\/\/go.Microsoft.com\/fwlink\/? LinkId\=83477\).   
   
 ### <a name="to-add-a-token-decrypting-certificate"></a>Добавление маркера\-расшифровки сертификата  
   

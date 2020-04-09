@@ -1,28 +1,22 @@
 ---
 title: битсадмин сетвалидатионстате
-description: Раздел команд Windows для **битсадмин сетвалидатионстате** — задает состояние проверки содержимого заданного файла в задании.
-ms.custom: na
+description: Раздел команд Windows для битсадмин сетвалидатионстате, который задает состояние проверки содержимого заданного файла в задании.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e8fc8e8c-171c-4681-8057-6986b018e576
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37d7fa3a8a91abf1e7b6ac5a51b6cebd78984a91
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: de6480596b55b3a483076297f32ce52a975915db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380396"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849117"
 ---
 # <a name="bitsadmin-setvalidationstate"></a>битсадмин сетвалидатионстате
-
-
 
 Задает состояние проверки содержимого заданного файла в задании.
 
@@ -32,21 +26,21 @@ ms.locfileid: "71380396"
 bitsadmin /SetValidationState <Job> <file index> <true|false> 
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр  |          Описание           |
 |------------|--------------------------------|
 |    Job     | Отображаемое имя задания или идентификатор GUID |
 | Индекс файла |         Начинается с 0          |
-|    True    |             False              |
+|    Истина    |             Ложь              |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере состояние проверки содержимого файла 2 устанавливается равным TRUE для задания с именем *myJob*.
 ```
 C:\>bitsadmin /SetValidationState myJob 2 TRUE 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

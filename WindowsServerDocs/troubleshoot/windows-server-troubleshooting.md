@@ -3,28 +3,22 @@ title: Устранение неполадок Windows Server
 description: Ссылки на статьи по устранению неполадок, связанных с Windows Server
 layout: LandingPage
 ms.prod: windows-server
-ms.custom:
-- CI 113175
-- CSSTroubleshooting
-audience: Admin
-ms.service: na
-manager: ''
 ms.technology: server-general
 ms.date: 1/24/2020
 ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: cd4e61a9fac5b1a1f6a1b66309e514ef75b1e4db
-ms.sourcegitcommit: f0fcfee992b76f1ad5dad460d4557f06ee425083
+ms.openlocfilehash: 0537f00a06b27f855fcd87e9b1caa9d2e5085685
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77125135"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820737"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Устранение неполадок компонентов Windows Server
 
 > [!TIP]
-> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com.  
+> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com.  
 >   
 > Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 

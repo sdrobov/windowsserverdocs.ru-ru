@@ -1,30 +1,26 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Раздел команд Windows для * * * *-битсадмин Сетнотификмдлинесетс команда командной строки, которая будет выполняться, когда задание завершает передачу данных или когда задание переходит в состояние.
-ms.custom: na
+description: Раздел команд Windows для битсадмин сетнотификмдлине, который задает команду командной строки, которая будет запускаться, когда задание завершает передачу данных или когда задание переходит в состояние.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 415ae6ef-8549-48b2-9693-2368a6e24075
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a307fe552e7d8ec5852de953a3a439cb02246ec
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 761a7003e44e8dc15cb2dd2f1ce5a1a23be53286
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380478"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849337"
 ---
 # <a name="bitsadmin-setnotifycmdline"></a>bitsadmin setnotifycmdline
 
 Задает команду командной строки, которая будет запускаться, когда задание завершает передачу данных или когда задание переходит в состояние.
 
-**BITS 1,2 и более ранних версий**: Не поддерживается.
+**BITS 1,2 и более ранних версий**: не поддерживается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +28,7 @@ ms.locfileid: "71380478"
 bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -47,16 +43,16 @@ bitsadmin /SetNotifyCmdLine <Job> <ProgramName> [ProgramParameters]
 > [!IMPORTANT]
 > Если *програмпараметерс* не равен null, то первый параметр в *Програмпараметерс* должен соответствовать *ProgramName*.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере задается команда командной строки, используемая службой для запуска программы «Блокнот» при завершении задания с именем *мидовнлоаджоб* .
 ```
 C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 ```
-C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe "notepad c:\eula.txt"
+C:\>bitsadmin /SetNotifyCmdLine myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: nslookup set vc
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e9232c92-cd8d-4eff-8ae5-0647bd03bdcb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d46e60d6c755a75928c801494c385578c3b5bc5d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b7429612ba25b2eab25ec29f01493aaee5de2c9d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372745"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838187"
 ---
 # <a name="nslookup-set-vc"></a>nslookup set vc
 
@@ -32,7 +28,7 @@ ms.locfileid: "71372745"
 set [no]vc
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр |                                              Описание                                               |
 |-----------|--------------------------------------------------------------------------------------------------------|
@@ -40,6 +36,6 @@ set [no]vc
 |  **виртуаль**   |             Задает постоянное использование виртуальной цепи при отправке запросов на сервер.             |
 |   {Справка   |                                                   ?}                                                   |
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

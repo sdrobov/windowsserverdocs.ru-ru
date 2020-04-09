@@ -1,24 +1,20 @@
 ---
 title: ver
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для ver, в котором отображается номер версии операционной системы.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5a9c6cd4-b67d-4b30-8c56-5f9798eafd2a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e48b3b1061edf793c88693b3353753c6a4cedcfc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d0d0676dcfa6546e4bbf74c4c58a24f51744d00f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362724"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830197"
 ---
 # <a name="ver"></a>ver
 
@@ -36,13 +32,13 @@ ms.locfileid: "71362724"
 ver
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы получить номер версии операционной системы из командной оболочки (cmd. exe), введите:
 
@@ -57,6 +53,6 @@ $PSVersionTable.BuildVersion
 ````
 
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

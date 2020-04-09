@@ -1,49 +1,45 @@
 ---
 title: bitsadmin getdisplayname
-description: Раздел команд Windows для **битсадмин-DisplayName** — извлекает отображаемое имя указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин. DisplayName**, который извлекает отображаемое имя указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e5c0e76c-4cc6-42d8-ac30-30bf3dc11b9b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 229bd245f9e810fc6aeb856bbfba253b9ab8a9f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6944dc2b7a63ca986fb285d26796f350c1052295
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381627"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850717"
 ---
 # <a name="bitsadmin-getdisplayname"></a>bitsadmin getdisplayname
-
-
 
 Извлекает отображаемое имя указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetDisplayName <Job>
+bitsadmin /getdisplayname <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается отображаемое имя для задания с именем *мидовнлоаджоб*.
-```
-C:\>bitsadmin /GetDisplayName myDownloadJob
-```
-Дополнительная справка
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+```
+C:\>bitsadmin /getdisplayname myDownloadJob
+```
+
+## <a name="additional-references"></a>Дополнительная справка
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

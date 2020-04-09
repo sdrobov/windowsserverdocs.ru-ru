@@ -2,33 +2,32 @@
 title: Для Windows Vista следует настроить по крайней мере минимальный объем памяти.
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 49f6f9b6-c290-4b1b-b6f3-cc9a0acd8fb2
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 6a5197af0577c411337194104a4fe97d06d41a01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5897b0e363e725b913c8d6492a84df0a957cabb6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393040"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860977"
 ---
 # <a name="windows-vista-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Для Windows Vista следует настроить по крайней мере минимальный объем памяти.
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
-|**Категория**|Настройка|  
+|**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   

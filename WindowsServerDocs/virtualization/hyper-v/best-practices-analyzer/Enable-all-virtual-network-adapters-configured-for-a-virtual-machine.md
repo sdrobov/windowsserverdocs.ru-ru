@@ -2,33 +2,32 @@
 title: Включить все виртуальные сетевые адаптеры, настроенные для виртуальной машины
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: fcd350b7-4240-4359-aadd-93e7ac4d314e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: bdca25be4af41d0f6ddfafe885f8c2b1301b71fb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 79971ff503afcc1a087aced579e30989233c2b4a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393646"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861967"
 ---
 # <a name="enable-all-virtual-network-adapters-configured-for-a-virtual-machine"></a>Включить все виртуальные сетевые адаптеры, настроенные для виртуальной машины
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Warning|  
-|**Категория**|Настройка|  
+|**Серьезности**|Предупреждение|  
+|**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   

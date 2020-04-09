@@ -1,28 +1,22 @@
 ---
-title: clip
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: клип
+description: Раздел команд Windows для Clip, который перенаправляет выходные данные команды из командной строки в буфер обмена Windows.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85322d85-3376-4806-845b-93ac77fe27bf
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82186869782c47f41930d46b4c33a710e6addedf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0d997154a382cf39aa2b877d7a2b84f4ff34157d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379351"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847647"
 ---
-# <a name="clip"></a>clip
-
-
+# <a name="clip"></a>клип
 
 Перенаправляет выходные данные команды из командной строки в буфер обмена Windows. Затем этот текстовый вывод можно вставить в другие программы.
 
@@ -35,19 +29,19 @@ ms.locfileid: "71379351"
 clip < <FileName>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |Команда \<>|Указывает команду, выходные данные которой нужно отправить в буфер обмена Windows.|
 |\<имя файла >|Указывает файл, содержимое которого необходимо отправить в буфер обмена Windows.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Можно использовать команду **Clip** для копирования данных непосредственно в любое приложение, которое может получить текст из буфера обмена.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы скопировать текущий список каталогов в буфер обмена Windows, введите:
 ```
@@ -62,6 +56,6 @@ awk -f generic.awk input.txt | clip
 clip < readme.txt
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,50 +1,45 @@
 ---
 title: bitsadmin getcompletiontime
-description: Раздел команд Windows для **битсадмин жеткомплетионтиме** — получает время, когда задание завершило передачу данных.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин жеткомплетионтиме**, который получает время завершения передачи данных заданием.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7a4b3c1c-9832-4724-86b2-cce3c01bfa28
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 190467d5f3a7b7244ed0d7ab3b75d4cbbf56c8d5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5408e7e8c35135601a4a0af0ab7e9c55cea4c8dd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381742"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850757"
 ---
 # <a name="bitsadmin-getcompletiontime"></a>bitsadmin getcompletiontime
-
-
 
 Возвращает время, когда задание завершило передачу данных.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetCompletionTime <Job>
+bitsadmin /getcompletiontime <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается время, когда задание с именем *мидовнлоаджоб* завершило передачу данных.
+
 ```
-C:\>bitsadmin /GetCompletionTime myDownloadJob
+C:\>bitsadmin /getcompletiontime myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

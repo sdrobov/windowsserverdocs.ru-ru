@@ -1,23 +1,19 @@
 ---
 title: Что нового в Windows Server 2016 Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: affff774-5fa6-4944-887a-9bfde05f6a3f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1d5176a69136e9bad36e22472b8fadbd6d0e9e79
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 420d3b043959b8b1201aad7a5b3210fd9bd6a0da
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310307"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817757"
 ---
 # <a name="whats-new-in-windows-server-2016-essentials"></a>Что нового в Windows Server 2016 Essentials
 
@@ -27,7 +23,7 @@ ms.locfileid: "80310307"
 
 ## <a name="integration-with-azure-site-recovery-services"></a>[Интеграция со службами Azure Site Recovery Services](azure-site-recovery-services-integration.md)
 
-**Что он делает** — Если виртуальная машина, которая защищена, завершается сбоем, или сервер узла, на котором выполняется Защищенная виртуальная машина, завершается сбоем, отработка отказа с Azure Site Recovery Services обеспечивает непрерывность бизнес-процессов до тех пор, пока локальная виртуальная машина или сервер узла не будут восстановлены и доступны. 
+**Что** происходит --&reg;в случае сбоя виртуальной машины или сервера узла, на котором выполняется Защищенная виртуальная машина, отработка отказа с помощью Azure Site Recovery Services обеспечивает непрерывность бизнес-процессов до тех пор, пока локальная виртуальная машина или сервер узла не будут восстановлены и доступны. 
 
 **Как это работает** , Azure Site Recovery служб, предлагаемых в Microsoft Azure, обеспечивает репликацию виртуальных машин (ВМ) в режиме реального времени в хранилище службы архивации в Azure. Если сервер или сайт выйдет из строя из-за оборудования или другого сбоя, можно выполнить отработку отказа с помощью служб Azure Site Recovery Services, чтобы образ виртуальной машины, хранящийся в хранилище резервных копий, был подготовлен как работающая виртуальная машина в Azure. В сочетании с виртуальной сетью Azure клиентские компьютеры, ранее подключенные к локальному серверу, будут прозрачно подключаться к серверу, работающему в Azure.     
                                                                                                                                                                                                                                                                                                                
@@ -52,4 +48,4 @@ ms.locfileid: "80310307"
 <a name="see-also"></a>См. также:
 --------
 
-[Начало работы с Windows Server Essentials](get-started.md)
+[Начало работы с Windows Server Essentials](get-started.md) &copy;&reg;

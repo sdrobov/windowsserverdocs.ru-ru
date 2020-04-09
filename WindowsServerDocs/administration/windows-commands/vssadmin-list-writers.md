@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: f62f44b3a47a0fe2d307c9d65d6cdc473f60db74
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9dfa0f70cd0790671869d76165c812a09661897a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362578"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830037"
 ---
 # <a name="vssadmin-list-writers"></a>Vssadmin list writers
 
->Относится к: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+>Область применения: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Перечисляются записи теневого копирования томов с подпиской.
 
@@ -27,7 +27,7 @@ ms.locfileid: "71362578"
 vssadmin list writers
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 Нет параметров.
 

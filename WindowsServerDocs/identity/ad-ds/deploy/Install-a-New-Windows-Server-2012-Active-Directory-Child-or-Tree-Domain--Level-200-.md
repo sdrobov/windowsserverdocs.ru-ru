@@ -1,7 +1,6 @@
 ---
 ms.assetid: e3d55565-ad45-4504-ad73-8103d1a92170
 title: Установка нового дочернего объекта Active Directory или домена дерева в Windows Server 2012 (уровень 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d0944377739f43ea5d9b8d0d9c94c13e9f18985f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f7244b76364c8e2ce7249af8e76825a08b2a75c8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390895"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825337"
 ---
 # <a name="install-a-new-windows-server-2012-active-directory-child-or-tree-domain-level-200"></a>Установка нового дочернего объекта Active Directory или домена дерева в Windows Server 2012 (уровень 200)
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описывается, как добавить дочерние домены и домены дерева в существующий лес Windows Server 2012 с помощью диспетчера сервера или Windows PowerShell.  
   
@@ -28,22 +27,22 @@ ms.locfileid: "71390895"
   
 -   [Развертывание](../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md#BKMK_Deployment)  
   
-## <a name="BKMK_Workflow"></a>Дочерний рабочий процесс и домен дерева  
+## <a name="child-and-tree-domain-workflow"></a><a name="BKMK_Workflow"></a>Дочерний рабочий процесс и домен дерева  
 На схеме ниже показан процесс настройки доменных служб Active Directory. Предполагается, что вы ранее установили роль доменных служб Active Directory и запустили мастер настройки доменных служб Active Directory с помощью диспетчера сервера, чтобы создать домен в существующем лесу.  
   
 ![Установка нового дочернего AD](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/adds_childtreedeploy_beta1.png)  
   
-## <a name="BKMK_PS"></a>Дочерние домены и Доменная структура Windows PowerShell  
+## <a name="child-and-tree-domain-windows-powershell"></a><a name="BKMK_PS"></a>Дочерние домены и Доменная структура Windows PowerShell  
   
 |||  
 |-|-|  
 |**Командлет ADDSDeployment**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|**Install-Аддсдомаин**|-SkipPreChecks<br /><br />***-NewDomainName***<br /><br />***-ParentDomainName***<br /><br />***-SafeModeAdministratorPassword***<br /><br />*-Адпрепкредентиал*<br /><br />-AllowDomainReinstall<br /><br />-Confirm<br /><br />*-Креатеднсделегатион*<br /><br />***-Credential***<br /><br />*-DatabasePath*<br /><br />*-Днсделегатионкредентиал*<br /><br />-NoDNSOnNetwork<br /><br />*-Домаинмоде*<br /><br />***-DomainType***<br /><br />-Force<br /><br />*-Инсталлднс*<br /><br />*-LogPath*<br /><br />*-Невдомаиннетбиоснаме*<br /><br />*-Ноглобалкаталог*<br /><br />-NoNorebootoncompletion<br /><br />*-Репликатионсаурцедк*<br /><br />*-SiteName*<br /><br />-SkipAutoConfigureDNS<br /><br />*-Сисволпас*<br /><br />*-WhatIf*|  
+|**Install-Аддсдомаин**|-SkipPreChecks<p>***-NewDomainName***<p>***-ParentDomainName***<p>***-SafeModeAdministratorPassword***<p>*-Адпрепкредентиал*<p>-AllowDomainReinstall<p>-Confirm<p>*-Креатеднсделегатион*<p>***-Credential***<p>*-DatabasePath*<p>*-Днсделегатионкредентиал*<p>-NoDNSOnNetwork<p>*-Домаинмоде*<p>***-DomainType***<p>-Force<p>*-Инсталлднс*<p>*-LogPath*<p>*-Невдомаиннетбиоснаме*<p>*-Ноглобалкаталог*<p>-NoNorebootoncompletion<p>*-Репликатионсаурцедк*<p>*-SiteName*<p>-SkipAutoConfigureDNS<p>*-Сисволпас*<p>*-WhatIf*|  
   
 > [!NOTE]  
 > Аргумент **-credential** требуется только в том случае, если текущий пользователь не является членом группы "Администраторы предприятия". Аргумент **-NewDomainNetBIOSName** требуется, если вы хотите изменить имя из 15 символов, автоматически создаваемое на основе префикса доменного имени DNS, или если длина имени превышает 15 символов.  
   
-## <a name="BKMK_Deployment"></a>Развертывания  
+## <a name="deployment"></a><a name="BKMK_Deployment"></a>Развертывания  
   
 ### <a name="deployment-configuration"></a>Deployment Configuration  
 На следующем снимке экрана показаны параметры добавления дочернего домена:  
@@ -135,7 +134,7 @@ Install-AddsDomain
   
 ```  
   
-Наконец, можно сохранить скрытый пароль в файле, а затем использовать его повторно, никогда не отображая пароль в виде открытого текста. Пример:  
+Наконец, можно сохранить скрытый пароль в файле, а затем использовать его повторно, никогда не отображая пароль в виде открытого текста. Например:  
   
 ```  
 $file = "c:\pw.txt"  
@@ -215,7 +214,7 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 Страница **Просмотреть параметры** позволяет проверить параметры перед установкой и убедиться, что они отвечают требованиям. Позднее установку также можно будет остановить с помощью диспетчера сервера. Эта страница позволяет подтвердить параметры перед продолжением настройки.  
   
-На странице **Просмотреть параметры** диспетчера сервера расположена дополнительная кнопка **Просмотреть скрипт** , предназначенная для создания текстового файла в кодировке Юникод, содержащего текущую конфигурацию развертывания ADDSDeployment в виде единого скрипта Windows PowerShell. Это позволяет использовать графический интерфейс диспетчера сервера в качестве студии развертывания Windows PowerShell. С помощью мастера настройки доменных служб Active Directory необходимо настроить параметры, экспортировать конфигурацию и затем отменить мастер.  Во время этого процесса создается допустимый и синтаксически верный образец для дальнейшего изменения или прямого использования. Пример:  
+На странице **Просмотреть параметры** диспетчера сервера расположена дополнительная кнопка **Просмотреть скрипт** , предназначенная для создания текстового файла в кодировке Юникод, содержащего текущую конфигурацию развертывания ADDSDeployment в виде единого скрипта Windows PowerShell. Это позволяет использовать графический интерфейс диспетчера сервера в качестве студии развертывания Windows PowerShell. С помощью мастера настройки доменных служб Active Directory необходимо настроить параметры, экспортировать конфигурацию и затем отменить мастер.  Во время этого процесса создается допустимый и синтаксически верный образец для дальнейшего изменения или прямого использования. Например:  
   
 ```  
 #  
@@ -249,7 +248,7 @@ Install-ADDSDomain `
   
 ![Установка нового дочернего AD](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildWhatIf.png)  
   
-### <a name="prerequisites-check"></a>Проверка готовности к установке  
+### <a name="prerequisites-check"></a>Проверка предварительных требований  
 ![Установка нового дочернего AD](media/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-/ADDS_SMI_TR_ChildPrereqCheck.png)  
   
 **Проверка предварительных требований** — это новая функция настройки доменных служб Active Directory. На этом новом этапе проверяется возможность поддержки нового домена доменных служб Active Directory конфигурацией сервера.  
@@ -258,7 +257,7 @@ Install-ADDSDomain `
   
 На странице **Проверка предварительных требований** также приводится важная информация, например сведения об изменениях в системе безопасности, затрагивающих предыдущие операционные системы.  
   
-Подробнее о проверках предварительных требований см. в разделе [Prerequisite Checking](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).  
+Подробнее о проверках предварительных требований см. в разделе [Проверка предварительных требований](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).  
   
 При использовании диспетчера сервера пропустить **проверку предварительных требований** нельзя, однако это можно сделать при использовании командлета развертывания доменных служб Active Directory с помощью следующего аргумента:  
   

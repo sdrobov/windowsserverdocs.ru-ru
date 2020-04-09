@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: делкдк'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7d6ec389-094c-4a7b-a78b-605497ddc289
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b918f8c2fa0ec09c2aae77517a0ee2c9e77ce2dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 63b264da227d51b6f47f982c66828536bd677920
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375137"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841697"
 ---
 # <a name="ksetupdelkdc"></a>ksetup: делкдк
 
@@ -32,14 +28,14 @@ ms.locfileid: "71375137"
 ksetup /delkdc <RealmName> <KDCName>
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM, и он указывается в качестве области по умолчанию при запуске **ksetup** . Это область, из которой вы пытаетесь удалить другой KDC.|
 |\<Кдкнаме >|Имя KDC указывается в виде полного доменного имени без учета регистра, например mitkdc.contoso.com.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Эти сопоставления хранятся в реестре в **HKEY_LOCAL_MACHINE \систем\куррентконтролсет\контрол\лса\керберос\домаинс**. Чтобы удалить данные конфигурации сферы с нескольких компьютеров, используйте оснастку "шаблон конфигурации безопасности" и распределение политик, а не **ksetup** явным образом на отдельных компьютерах.
 
@@ -47,7 +43,7 @@ ksetup /delkdc <RealmName> <KDCName>
 
 Чтобы проверить имя области по умолчанию для компьютера или убедиться, что эта команда работала правильно, запустите **ksetup** из командной строки и убедитесь, что удаленный центр распространения ключей не существует в списке.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Требования безопасности для этого компьютера изменились, поэтому необходимо удалить связь между областью Windows и областью, отличной от Windows. Сначала определите, какую связь следует удалить, и выводит выходные данные существующих ассоциаций:
 ```
@@ -58,7 +54,7 @@ ksetup
 Ksetup /delkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Ksetup](ksetup.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

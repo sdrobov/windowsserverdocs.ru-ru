@@ -1,28 +1,22 @@
 ---
 title: Параметр Set
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для параметра Set, который задает параметры создания теневой копии.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4d8d4921-9fdd-4a3c-bb0f-9df5458c4b84
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9b9174f219654e99eb9441abe3342c31b5089ef5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a956c74619f3a6c33dfcaa62ee4c810cd93b21f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384051"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834497"
 ---
 # <a name="set-option"></a>Параметр Set
-
-
 
 Задает параметры для создания теневой копии. Если используется без параметров, **параметр SET** отображает справку в командной строке.
 
@@ -32,7 +26,7 @@ ms.locfileid: "71384051"
 set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover] | [noautorecover]]}
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |     Параметр     |                                                                                                  Описание                                                                                                  |
 |-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,6 +36,6 @@ set option {[differential | plex] [transportable] [[rollbackrecover] [txfrecover
 |   [тксфрековер]    |                                                               Запрашивает VSS, чтобы сделать теневую копию транзакционно согласованной во время создания.                                                                |
 |  [ноауторековер]  | Останавливает выполнение любых изменений восстановления теневой копии в транзакционно согласованное состояние. **Ноауторековер** нельзя использовать с **тксфрековер** или **роллбаккрековер**. |
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

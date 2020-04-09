@@ -2,18 +2,17 @@
 title: Устранение неполадок системы доменных имен (DNS)
 description: В этой статье описывается, как выполнять получение данных при возникновении проблем с DNS.
 manager: dcscontentpm
-ms.prod: ''
 ms.technology: networking-dns
 ms.topic: article
 ms.author: delhan
 ms.date: 8/8/2019
 author: Deland-Han
-ms.openlocfilehash: 11c52b3beca3afcc0a6bfc8cecee2143dce0f023
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: 04bfbfbd2957aec21da966a48feca8d7f160a29c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265836"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860047"
 ---
 # <a name="troubleshooting-domain-name-system-dns-issues"></a>Устранение неполадок системы доменных имен (DNS)
  
@@ -41,7 +40,7 @@ ms.locfileid: "76265836"
    ipconfig /flushdns
    ```
 
-3. Воспроизведите ошибку.
+3. Воспроизведите неполадку.
 
 4. Останавливает и сохраняет трассировки:
 

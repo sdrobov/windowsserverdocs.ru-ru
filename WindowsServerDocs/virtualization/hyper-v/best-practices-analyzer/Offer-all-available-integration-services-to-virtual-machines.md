@@ -2,33 +2,32 @@
 title: Предлагать все доступные службы интеграции для виртуальных машин
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 2c4b2043-ad81-495e-aa7a-467f813bb3d2
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 5ec2dc73cea8b8356d832bf9fdb960985df2df6c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c7ddf53823a69e1bd66d4e0e43ee452a4614436e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393600"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861887"
 ---
 # <a name="offer-all-available-integration-services-to-virtual-machines"></a>Предлагать все доступные службы интеграции для виртуальных машин
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Warning|  
-|**Категория**|Настройка|  
+|**Серьезности**|Предупреждение|  
+|**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   

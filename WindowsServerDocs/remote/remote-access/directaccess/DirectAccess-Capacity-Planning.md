@@ -2,22 +2,18 @@
 title: Планирование мощности DirectAccess
 description: Этот раздел можно использовать для отчета о производительности сервера DirectAccess Windows Server 2012, чтобы помочь в планировании емкости для DirectAccess в Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 456e5971-3aa7-4a24-bc5d-0c21fec7687e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: e63b4c4f266d286b766c89b61676493328aa8652
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 413dc88ce9ec551a318b63f3df44ed256f289219
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310984"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815797"
 ---
 # <a name="directaccess-capacity-planning"></a>Планирование мощности DirectAccess
 
@@ -37,7 +33,7 @@ ms.locfileid: "80310984"
 ||||  
 |-|-|-|  
 |Конфигурация — оборудование|Оборудование с низким быстродействием (4 ГБ ОЗУ, 4 ядра)|Оборудование с высоким быстродействием (8 ГБ, 8 ядер)|  
-|Двойной туннель<br /><br />— PKI<br /><br />— Включение DNS64/NAT64|750 параллельных подключений при 50 % использовании ЦП, 50 % использовании памяти и пропускной способности сетевого адаптера сети предприятия 75 Мбит/с. Предельная цель — 1000 пользователей при 50 % использовании ЦП.|1500 параллельных подключений при 50 % использовании ЦП, 50 % использовании памяти и пропускной способности сетевого адаптера сети предприятия 150 Мбит/с.|  
+|Двойной туннель<p>— PKI<p>— Включение DNS64/NAT64|750 параллельных подключений при 50 % использовании ЦП, 50 % использовании памяти и пропускной способности сетевого адаптера сети предприятия 75 Мбит/с. Предельная цель — 1000 пользователей при 50 % использовании ЦП.|1500 параллельных подключений при 50 % использовании ЦП, 50 % использовании памяти и пропускной способности сетевого адаптера сети предприятия 150 Мбит/с.|  
 ## <a name="test-environment"></a>Тестовая среда
 
 **Топология Perf Bench**  

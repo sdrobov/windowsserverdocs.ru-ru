@@ -1,24 +1,20 @@
 ---
 title: Wbadmin start системстатебаккуп
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для Wbadmin start системстатебаккуп, который создает резервную копию состояния системы локального компьютера и сохраняет его в указанном расположении.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 998366c1-0a64-45e6-9ed3-4c3f5b8406f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0244f984d29c8a802475d2dc08f1cdfe4495f0b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9ecbf5a055684026413615a104b4c983ff51ca9e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362229"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829577"
 ---
 # <a name="wbadmin-start-systemstatebackup"></a>Wbadmin start системстатебаккуп
 
@@ -41,26 +37,26 @@ wbadmin start systemstatebackup
 [-quiet]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |   Параметр   |                                                                                                                                                                                                                      Описание                                                                                                                                                                                                                      |
 |---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | -backupTarget | Указывает расположение, в котором будет храниться резервная копия. Для расположения хранилища требуется буква диска или том на основе GUID в формате: \\\\? \Волуме{*GUID*}.</br>Резервное копирование состояния системы в общую сетевую папку не поддерживается на компьютере под Windows Server 2008. Если сервер работает под управлением Windows Server 2008 R2 или более поздней версии, можно использовать команду Command **-backupTarget:\\\\сервернаме\шаредфолдер\\** для хранения резервных копий состояния системы. |
 |    -quiet     |                                                                                                                                                                                                   Выполняет подкоманду без запросов пользователю.                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Сведения о сохранении резервной копии состояния системы на том, который, в свою очередь, содержит файлы состояния системы, см. в статье 944530 базы знаний Майкрософт ([https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439)).
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы создать резервную копию состояния системы и сохранить ее на томе f, введите:
 ```
 wbadmin start systemstatebackup -backupTarget:f:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Start-вббаккуп](https://technet.microsoft.com/library/jj902459.aspx)

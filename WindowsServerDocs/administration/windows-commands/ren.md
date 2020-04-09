@@ -1,24 +1,20 @@
 ---
 title: ren
 description: Узнайте, как переименовать файл или каталог с помощью команды REN.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 60398e12-a05d-4524-a73a-0a925943e21d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 2ba3f6a13dc03c0b6a5561be9f0f692546a25149
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 235497b09f44f9077b7f622f7f2b68a0bc49af86
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384581"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836047"
 ---
 # <a name="ren"></a>ren
 
@@ -33,15 +29,15 @@ ren [<Drive>:][<Path>]<FileName1> <FileName2>
 rename [<Drive>:][<Path>]<FileName1> <FileName2>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |[\<диска >:] [путь\<>]\<имя_файла1 >|Указывает расположение и имя файла или набора файлов, которые требуется переименовать. *Имя_файла1* может содержать подстановочные знаки **&#42;** (и **?** ).|
 |\<Имя_файла2 >|Указывает новое имя для файла. Для указания новых имен нескольких файлов можно использовать подстановочные знаки.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - При переименовании файлов нельзя указывать новый диск или путь.
 - Нельзя использовать команду **ren** для переименования файлов на дисках или для перемещения файлов в другой каталог.
@@ -51,7 +47,7 @@ rename [<Drive>:][<Path>]<FileName1> <FileName2>
   Duplicate file name or file not found
   ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 
 Чтобы изменить все расширения имени файла txt в текущем каталоге на расширения DOC, введите:
 ```
@@ -62,6 +58,6 @@ ren *.txt *.doc
 ren chap10 part10 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

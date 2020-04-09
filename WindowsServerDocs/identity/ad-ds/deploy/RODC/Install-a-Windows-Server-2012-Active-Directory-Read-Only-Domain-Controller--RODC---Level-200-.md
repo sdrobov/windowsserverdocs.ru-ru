@@ -9,12 +9,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 82b0035075c981d123ab3b90d56768940f65558e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dd3cc1c112560e77d0ab166ffb10a677b62f32e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391107"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825487"
 ---
 # <a name="install-a-windows-server-2012-active-directory-read-only-domain-controller-rodc-level-200"></a>Установка контроллера домена только для чтения (RODC) Active Directory в Windows Server 2012 (уровень 200)
 
@@ -33,12 +33,12 @@ ms.locfileid: "71391107"
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stagedcreation.png)  
   
-## <a name="BKMK_StagePS"></a>Этап Windows PowerShell для RODC  
+## <a name="stage-rodc-windows-powershell"></a><a name=BKMK_StagePS></a>Этап Windows PowerShell для RODC  
   
 |||  
 |-|-|  
 |**Командлет ADDSDeployment**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<br /><br />***-Домаинконтроллераккаунтнаме***<br /><br />***-Имя_домена***<br /><br />***-SiteName***<br /><br />*-Алловпассвордрепликатионаккаунтнаме*<br /><br />***-Credential***<br /><br />*-Делегатедадминистратораккаунтнаме*<br /><br />*-Денипассвордрепликатионаккаунтнаме*<br /><br />*-Ноглобалкаталог*<br /><br />*-Инсталлднс*<br /><br />-ReplicationSourceDC|  
+|Add-addsreadonlydomaincontrolleraccount|-SkipPreChecks<p>***-Домаинконтроллераккаунтнаме***<p>***-Имя_домена***<p>***-SiteName***<p>*-Алловпассвордрепликатионаккаунтнаме*<p>***-Credential***<p>*-Делегатедадминистратораккаунтнаме*<p>*-Денипассвордрепликатионаккаунтнаме*<p>*-Ноглобалкаталог*<p>*-Инсталлднс*<p>-ReplicationSourceDC|  
   
 > [!NOTE]  
 > Аргумент **-credential** является обязательным только в том случае, если вы на данный момент не вошли в систему как член группы администраторов домена.  
@@ -48,17 +48,17 @@ ms.locfileid: "71391107"
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/adds_stageddeploy_beta1.png)  
   
-## <a name="BKMK_AttachPS"></a>Подключение RODC Windows PowerShell  
+## <a name="attach-rodc-windows-powershell"></a><a name=BKMK_AttachPS></a>Подключение RODC Windows PowerShell  
   
 |||  
 |-|-|  
 |**Командлет ADDSDeployment**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Install-AddsDomaincontroller|-SkipPreChecks<br /><br />***-Имя_домена***<br /><br />*-SafeModeAdministratorPassword*<br /><br />*-Аппликатионпартитионсторепликате*<br /><br />*-Креатеднсделегатион*<br /><br />***-Credential***<br /><br />-CriticalReplicationOnly<br /><br />*-DatabasePath*<br /><br />*-Днсделегатионкредентиал*<br /><br />*-Инсталлатионмедиапас*<br /><br />*-LogPath*<br /><br />-Norebootoncompletion<br /><br />*-Репликатионсаурцедк*<br /><br />*-Системкэй*<br /><br />*-Сисволпас*<br /><br />***-Усиксистингаккаунт***|  
+|Install-AddsDomaincontroller|-SkipPreChecks<p>***-Имя_домена***<p>*-SafeModeAdministratorPassword*<p>*-Аппликатионпартитионсторепликате*<p>*-Креатеднсделегатион*<p>***-Credential***<p>-CriticalReplicationOnly<p>*-DatabasePath*<p>*-Днсделегатионкредентиал*<p>*-Инсталлатионмедиапас*<p>*-LogPath*<p>-Norebootoncompletion<p>*-Репликатионсаурцедк*<p>*-Системкэй*<p>*-Сисволпас*<p>***-Усиксистингаккаунт***|  
   
 > [!NOTE]  
 > Аргумент **-credential** является обязательным только в том случае, если вы на данный момент не вошли в систему как член группы администраторов домена.  
   
-## <a name="staging"></a>Поэтапное создание  
+## <a name="staging"></a>Промежуточный  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_PreCreateRODC.png)  
   
 Чтобы выполнить поэтапное создание учетной записи компьютера для контроллера домена только для чтения, откройте центр администрирования Active Directory (**Dsac.exe**). На панели навигации щелкните имя домена. В списке управления дважды щелкните элемент **Контроллеры домена**. На панели задач щелкните **Предварительное создание учетной записи контроллера домена только для чтения**.  
@@ -76,7 +76,7 @@ Add-addsreadonlydomaincontrolleraccount
   
 ```  
   
-### <a name="welcome"></a>Добро пожаловать  
+### <a name="welcome"></a>Приветствие  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_WelcomeStage1.png)  
   
 В диалоговом окне **Вас приветствует мастер установки доменных служб Active Directory** есть один параметр под названием **Использовать расширенный режим установки**. Выберите его и нажмите кнопку **Далее**, чтобы просмотреть параметры политики репликации паролей. Чтобы использовать значения по умолчанию для параметров политики репликации паролей (рассматриваются подробнее далее в этом разделе), отключите этот параметр.  
@@ -84,7 +84,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="network-credentials"></a>Сетевые учетные данные  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1Creds.png)  
   
-В диалоговом окне **Сетевые учетные данные** в поле доменного имени указан целевой домен по умолчанию для центра администрирования Active Directory. По умолчанию используются ваши текущие учетные данные. Если они не входят в группу администраторов домена, установите переключатель в положение **Альтернативные учетные данные**и нажмите кнопку **Задать** , чтобы предоставить мастеру имя пользователя и пароль члена группы "Администраторы домена".  
+В диалоговом окне **Сетевые учетные данные** в поле доменного имени указан целевой домен по умолчанию для центра администрирования Active Directory. По умолчанию используются ваши текущие учетные данные. Если они не входят в группу администраторов домена, установите переключатель в положение **Альтернативные учетные данные** и нажмите кнопку **Задать**, чтобы предоставить мастеру имя пользователя и пароль члена группы "Администраторы домена".  
   
 Эквивалентный аргумент Windows PowerShell ADDSDeployment:  
   
@@ -94,7 +94,7 @@ Add-addsreadonlydomaincontrolleraccount
   
 Имейте в виду, что система поэтапного создания была напрямую перенесена из Windows Server 2008 R2 и не предоставляет новых функциональных возможностей Adprep. Если вы планируете развертывать поэтапно создаваемые учетные записи RODC, необходимо предварительно развернуть в этом домене контроллер RODC без поэтапного создания, что позволит автоматически выполнять операцию rodcprep, или вручную выполнить команду adprep.exe /rodcprep.  
   
-В противном случае произойдет ошибка "Невозможно установить контроллер домена только для чтения в этом домене, поскольку команда adprep /rodcprep еще не была выполнена".  
+В противном случае появится сообщение об ошибке, в котором не удастся установить контроллер домена только для чтения в этом домене, так как программа Adprep/родкпреп еще не запущена.  
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCPrepNotRunError.png)  
   
@@ -109,7 +109,7 @@ Add-addsreadonlydomaincontrolleraccount
 -domaincontrolleraccountname <string>  
 ```  
   
-### <a name="select-a-site"></a>Выберите сайт  
+### <a name="select-a-site"></a>Выбор сайта  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1Site.png)  
   
 В диалоговом окне **Выберите сайт** приводится список сайтов Active Directory для текущего леса. Операция поэтапного создания контроллера домена только для чтения требует выбора одного сайта из списка. Контроллер RODC использует эту информацию для создания собственного объекта параметров NTDS в разделе конфигурации и подключения к соответствующему сайту при первом запуске после развертывания.  
@@ -142,7 +142,7 @@ Add-addsreadonlydomaincontrolleraccount
 Диалоговое окно **Задайте политику репликации паролей** позволяет изменить список учетных записей по умолчанию, которым разрешено кэшировать пароли в этом контроллере домена только для чтения. Учетные записи, для которых в списке задано значение **Запретить** или которые отсутствуют в списке (неявный запрет), не кэшируют свои пароли. Учетные записи, которым не разрешено кэшировать пароли в контроллере RODC и которые не могут подключиться к доступному для записи контроллеру домена для проверки подлинности, не имеют доступа к ресурсам и функциональным возможностям Active Directory.  
   
 > [!IMPORTANT]  
-> Это диалоговое окно мастера выводится только в том случае, если на экране приветствия был установлен флажок **Использовать расширенный режим установки** . Если этот флажок снят, то в мастере используются следующие группы и значения по умолчанию:  
+> Это диалоговое окно мастера выводится только в том случае, если на экране приветствия был установлен флажок **Использовать расширенный режим установки**. Если этот флажок снят, то в мастере используются следующие группы и значения по умолчанию:  
 >   
 > -   Администраторы — Запретить  
 > -   Операторы сервера — Запретить  
@@ -163,7 +163,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="delegation-of-rodc-installation-and-administration"></a>Делегирование установки и администрирования RODC  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1DelegateAdmin.png)  
   
-Диалоговое окно **Делегирование установки и администрирования RODC** позволяет настроить пользователя, которому разрешено подключать сервер к учетной записи компьютера RODC, или группу таких пользователей. Чтобы выбрать пользователя или группу в домене, нажмите кнопку **Задать** . Пользователь или группа, указанные в этом диалоговом окне, получают доступ к RODC с разрешениями локального администратора. Указанный пользователь или члены указанной группы могут выполнять операции на RODC с привилегиями, эквивалентными группе администраторов компьютера. Они *не* являются членами группы администраторов домена или встроенной группы "Администраторы" домена.  
+Диалоговое окно **Делегирование установки и администрирования RODC** позволяет настроить пользователя, которому разрешено подключать сервер к учетной записи компьютера RODC, или группу таких пользователей. Чтобы выбрать пользователя или группу в домене, нажмите кнопку **Задать**. Пользователь или группа, указанные в этом диалоговом окне, получают доступ к RODC с разрешениями локального администратора. Указанный пользователь или члены указанной группы могут выполнять операции на RODC с привилегиями, эквивалентными группе администраторов компьютера. Они *не* являются членами группы администраторов домена или встроенной группы "Администраторы" домена.  
   
 С помощью этого параметра можно делегировать права на администрирование филиала, не предоставляя администраторам филиала членство в группе администраторов домена. Делегировать администрирование RODC необязательно.  
   
@@ -176,7 +176,7 @@ Add-addsreadonlydomaincontrolleraccount
 ### <a name="summary"></a>Сводка  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1Summary.png)  
   
-Диалоговое окно **Сводка** позволяет подтвердить параметры. Это последняя возможность прервать установку, прежде чем мастер создаст промежуточную учетную запись. Когда вы будете готовы создать промежуточную учетную запись компьютера RODC, нажмите кнопку **Далее**.  Чтобы сохранить файл ответов в устаревшем формате файла автоматической установки dcpromo, нажмите кнопку **Экспорт параметров** .  
+Диалоговое окно **Сводка** позволяет подтвердить параметры. Это последняя возможность прервать установку, прежде чем мастер создаст промежуточную учетную запись. Когда вы будете готовы создать промежуточную учетную запись компьютера RODC, нажмите кнопку **Далее**.  Чтобы сохранить файл ответов в устаревшем формате файла автоматической установки dcpromo, нажмите кнопку **Экспорт параметров**.  
   
 ### <a name="creation"></a>Создание  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage1InstallProgress.png)  
@@ -207,7 +207,7 @@ Add-addsreadonlydomaincontrolleraccount
 > [!IMPORTANT]  
 > Центр администрирования Active Directory больше не нужен для подключения сервера к учетной записи контроллера домена только для чтения. Чтобы подключить контроллер RODC к промежуточной учетной записи, используйте диспетчер сервера и мастер настройки доменных служб Active Directory или командлет **Install-AddsDomainController** из модуля Windows PowerShell ADDSDeployment. Порядок действий при этом тот же, что и при добавлении нового доступного для чтения контроллера домена в существующий домен, за тем исключением, что предварительно подготовленная учетная запись RODC содержит параметры конфигурации, заданные при поэтапном создании учетной записи компьютера RODC.  
   
-## <a name="attaching"></a>Подключение  
+## <a name="attaching"></a>присоединения  
   
 ### <a name="deployment-configuration"></a>Deployment Configuration  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCDeployConfig.png)  
@@ -229,16 +229,16 @@ Install-AddsDomainController
 ### <a name="domain-controller-options"></a>Параметры контроллера домена  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2DCOptions.png)  
   
-На странице **Параметры контроллера домена** показаны параметры нового контроллера домена. При загрузке этой страницы мастер настройки доменных служб Active Directory отправляет существующему контроллеру домена запрос LDAP для проверки незанятых учетных записей. Если запрос находит незанятую учетную запись компьютера контроллера домена, имеющую то же имя, что и текущий компьютер, мастер выводит информационное сообщение в верхней части страницы, которое считывает «**предварительно созданную учетную запись RODC, совпадающую с именем целевого сервера в каталоге. Выберите, следует ли использовать существующую учетную запись RODC или переустановите этот контроллер домена**. " По умолчанию в мастере используется параметр **Использовать существующую учетную запись RODC**.  
+На странице **Параметры контроллера домена** показаны параметры нового контроллера домена. При загрузке этой страницы мастер настройки доменных служб Active Directory отправляет существующему контроллеру домена запрос LDAP для проверки незанятых учетных записей. Если запрос находит незанятую учетную запись компьютера контроллера домена, имеющую то же имя, что и текущий компьютер, мастер выводит информационное сообщение в верхней части страницы, которое считывает **предварительно созданную учетную запись RODC, совпадающую с именем целевого сервера, существует в каталоге. Выберите, следует ли использовать существующую учетную запись RODC или переустановите этот контроллер домена**. По умолчанию в мастере используется параметр **Использовать существующую учетную запись RODC**.  
   
 > [!IMPORTANT]  
-> Если в контроллере домена произошла физическая неполадка и он не может восстановить работоспособность, вы можете использовать параметр **Переустановить этот контроллер домена** . Это позволит сэкономить время при настройке контроллера домена для замены благодаря тому, что учетная запись компьютера контроллера домена и метаданные объекта остаются в Active Directory. Установите новый компьютер с *тем же именем*повысьте его роль до контроллера домена. Параметр **переустановить этот контроллер домена** недоступен, если метаданные объекта контроллера домена удалены из Active Directory (очистка метаданных).  
+> Если в контроллере домена произошла физическая неполадка и он не может восстановить работоспособность, вы можете использовать параметр **Переустановить этот контроллер домена**. Это позволит сэкономить время при настройке контроллера домена для замены благодаря тому, что учетная запись компьютера контроллера домена и метаданные объекта остаются в Active Directory. Установите новый компьютер с *тем же именем* повысьте его роль до контроллера домена. Параметр **переустановить этот контроллер домена** недоступен, если метаданные объекта контроллера домена удалены из Active Directory (очистка метаданных).  
   
 Настроить параметры контроллера домена при подключении сервера к учетной записи компьютера RODC нельзя. Параметры контроллера домена настраиваются при создании предварительно подготовленной учетной записи компьютера RODC.  
   
 Указанный **пароль для режима восстановления служб каталогов** должен соответствовать политике паролей, действующей для сервера. Необходимо всегда выбирать надежный и сложный пароль, предпочтительно парольную фразу.  
   
-Аргументы Windows PowerShell ADDSDeployment, эквивалентные параметрам на странице **Параметры контроллера домена** :  
+Аргументы Windows PowerShell ADDSDeployment, эквивалентные параметрам на странице **Параметры контроллера домена**:  
   
 ```  
 -UseExistingAccount <{$true | $false}>  
@@ -265,7 +265,7 @@ Install-AddsDomainController
 Например, можно вручную ввести запрос пароля с помощью командлета **Read-Host**, чтобы запрашивать у пользователя ввод защищенной строки.  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -275,14 +275,14 @@ Install-AddsDomainController
 Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется.  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
 Наконец, можно сохранить скрытый пароль в файле, а затем использовать его повторно, никогда не отображая пароль в виде открытого текста. Например:  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -299,8 +299,9 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 Также можно установить контроллер домена с помощью архивированных носителей, использовав параметр установки с носителя (IFM). При установке флажка **Установка с носителя** появляется возможность выбора носителя. Чтобы убедиться в том, что указанный путь является действительным путем к носителю, необходимо нажать кнопку **Проверить** .
 
-Рекомендации по источнику IFM: • носитель, используемый с помощью параметра IFM, создается с cистема архивации данных Windows Server или Ntdsutil. exe из другого существующего контроллера домена Windows Server с той же версией операционной системы. Например, нельзя использовать Windows Server 2008 R2 или предыдущую операционную систему для создания носителя для контроллера домена Windows Server 2012.
-• Исходные данные IFM должны быть из контроллера домена с возможностью записи. Хотя источник из RODC технически будет работать для создания нового RODC, возникают ложные срабатывания предупреждений репликации, которые не реплицируются источником IFM RODC.
+Рекомендации для источника IFM:
+*    Носитель, используемый параметром IFM, создается с cистема архивации данных Windows Server или Ntdsutil. exe из другого существующего контроллера домена Windows Server с той же версией операционной системы. Например, нельзя использовать Windows Server 2008 R2 или предыдущую операционную систему для создания носителя для контроллера домена Windows Server 2012.
+*    Исходные данные IFM должны быть из контроллера домена с возможностью записи. Хотя источник из RODC технически будет работать для создания нового RODC, возникают ложные срабатывания предупреждений репликации, которые не реплицируются источником IFM RODC.
 
 Подробнее об изменениях в IFM см. в разделе [Изменения, касающиеся установки с носителя с помощью Ntdsutil.exe](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). Если носители защищены SYSKEY, диспетчер сервера запрашивает пароль образа во время проверки. 
   
@@ -339,10 +340,10 @@ Import-Module ADDSDeployment
 Install-ADDSDomainController `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DomainName "corp.contoso.com" `  
--LogPath "C:\Windows\NTDS" `  
--SYSVOLPath "C:\Windows\SYSVOL" `  
+-DatabasePath C:\Windows\NTDS `  
+-DomainName corp.contoso.com `  
+-LogPath C:\Windows\NTDS `  
+-SYSVOLPath C:\Windows\SYSVOL `  
 -UseExistingAccount:$true `  
 -Norebootoncompletion:$false  
 -Force:$true  
@@ -356,14 +357,14 @@ Install-ADDSDomainController `
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2WhatIf.png)  
   
-### <a name="prerequisites-check"></a>Проверка готовности к установке  
+### <a name="prerequisites-check"></a>Проверка предварительных требований  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_Stage2PrereqCheck.png)  
   
 **Проверка предварительных требований** — это новая функция настройки доменных служб Active Directory. На этом новом этапе проверяется возможность поддержки нового леса доменных служб Active Directory конфигурацией сервера.  
   
 При установке нового корневого домена леса мастер настройки доменных служб Active Directory в диспетчере сервера последовательно выполняет серию модульных тестов. При этом предлагаются рекомендуемые способы восстановления. Тесты можно выполнять необходимое число раз. Установка контроллера домена не может продолжаться, пока все проверки предварительных требований не будут пройдены.  
   
-На странице **Проверка предварительных требований** также приводится важная информация, например сведения об изменениях в системе безопасности, затрагивающих предыдущие операционные системы. Дополнительные сведения о проверках соблюдения предварительных условий см. в разделе [Prerequisite Checking](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).  
+На странице **Проверка предварительных требований** также приводится важная информация, например сведения об изменениях в системе безопасности, затрагивающих предыдущие операционные системы. Подробнее о проверках предварительных требований см. в разделе [Проверка предварительных требований](../../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_PrereuisiteChecking).  
   
 При использовании диспетчера сервера пропустить **проверку предварительных требований** нельзя, однако это можно сделать при использовании командлета развертывания доменных служб Active Directory с помощью следующего аргумента:  
   
@@ -393,9 +394,9 @@ Install-addsdomaincontroller
   
 ```  
   
-См. информацию об обязательных и необязательных аргументах в разделе [Attach RODC Windows PowerShell](../../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md#BKMK_AttachPS) .  
+Список обязательных и необязательных аргументов см. в разделе [Подключение RODC с помощью Windows PowerShell](../../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md#BKMK_AttachPS).  
   
-Выполнение командлета **Install-addsdomaincontroller** включает только два этапа (проверка предварительных требований и установка). На двух иллюстрациях ниже показан этап установки с минимальным необходимым набором аргументов: **-domainname**, **-useexistingaccount**и **-credential**. Обратите внимание на то, что командлет **Install-ADDSDomainController**, как и диспетчер сервера, напоминает об автоматической перезагрузке сервера после повышения роли:  
+Выполнение командлета **Install-addsdomaincontroller** включает только два этапа (проверка предварительных требований и установка). На двух иллюстрациях ниже показан этап установки с минимальным необходимым набором аргументов: **-domainname**, **-useexistingaccount** и **-credential**. Обратите внимание на то, что командлет **Install-ADDSDomainController**, как и диспетчер сервера, напоминает об автоматической перезагрузке сервера после повышения роли:  
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSStage2.png)  
   
@@ -421,7 +422,7 @@ Install-addsdomaincontroller
 |||  
 |-|-|  
 |**Командлет ADDSDeployment**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Install-AddsDomainController|-SkipPreChecks<br /><br />***-Имя_домена***<br /><br />*-SafeModeAdministratorPassword*<br /><br />***-SiteName***<br /><br />*-Аппликатионпартитионсторепликате*<br /><br />*-Креатеднсделегатион*<br /><br />***-Credential***<br /><br />*-Критикалрепликатиононли*<br /><br />*-DatabasePath*<br /><br />*-Днсделегатионкредентиал*<br /><br />-DNSOnNetwork<br /><br />*-Инсталлатионмедиапас*<br /><br />*-Инсталлднс*<br /><br />*-LogPath*<br /><br />-MoveInfrastructureOperationMasterRoleIfNecessary<br /><br />*-Ноглобалкаталог*<br /><br />-Norebootoncompletion<br /><br />*-Репликатионсаурцедк*<br /><br />-SkipAutoConfigureDNS<br /><br />*-Системкэй*<br /><br />*-Сисволпас*<br /><br />*-Алловпассвордрепликатионаккаунтнаме*<br /><br />*-Делегатедадминистратораккаунтнаме*<br /><br />*-Денипассвордрепликатионаккаунтнаме*<br /><br />***-Реадонлиреплика***|  
+|Install-AddsDomainController|-SkipPreChecks<p>***-Имя_домена***<p>*-SafeModeAdministratorPassword*<p>***-SiteName***<p>*-Аппликатионпартитионсторепликате*<p>*-Креатеднсделегатион*<p>***-Credential***<p>*-Критикалрепликатиононли*<p>*-DatabasePath*<p>*-Днсделегатионкредентиал*<p>-DNSOnNetwork<p>*-Инсталлатионмедиапас*<p>*-Инсталлднс*<p>*-LogPath*<p>-MoveInfrastructureOperationMasterRoleIfNecessary<p>*-Ноглобалкаталог*<p>-Norebootoncompletion<p>*-Репликатионсаурцедк*<p>-SkipAutoConfigureDNS<p>*-Системкэй*<p>*-Сисволпас*<p>*-Алловпассвордрепликатионаккаунтнаме*<p>*-Делегатедадминистратораккаунтнаме*<p>*-Денипассвордрепликатионаккаунтнаме*<p>***-Реадонлиреплика***|  
   
 > [!NOTE]  
 > Аргумент **-credential** является обязательным только в том случае, если вы на данный момент не вошли в систему как член группы администраторов домена.  
@@ -455,7 +456,7 @@ Install-AddsDomainController
 > [!IMPORTANT]  
 > Если сервер не входит в подсеть Active Directory и имеется несколько сайтов Active Directory, выбор не производится и кнопка **Далее** останется неактивной до тех пор, пока не будет выбран сайт из списка.  
   
-Указанный **пароль для режима восстановления служб каталогов** должен соответствовать политике паролей, действующей для сервера. Всегда выбирайте надежный, сложный пароль или, что еще лучше, парольную фразу. Аргументы Windows PowerShell ADDSDeployment, эквивалентные параметрам на странице **Параметры контроллера домена** :  
+Указанный **пароль для режима восстановления служб каталогов** должен соответствовать политике паролей, действующей для сервера. Всегда выбирайте надежный, сложный пароль или, что еще лучше, парольную фразу. Аргументы Windows PowerShell ADDSDeployment, эквивалентные параметрам на странице **Параметры контроллера домена**:  
   
 ```  
 -UseExistingAccount <{$true | $false}>  
@@ -482,7 +483,7 @@ Install-AddsDomainController
 Например, можно вручную ввести запрос пароля с помощью командлета **Read-Host**, чтобы запрашивать у пользователя ввод защищенной строки.  
   
 ```  
--safemodeadministratorpassword (read-host -prompt "Password:" -assecurestring)  
+-safemodeadministratorpassword (read-host -prompt Password: -assecurestring)  
   
 ```  
   
@@ -492,14 +493,14 @@ Install-AddsDomainController
 Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется.  
   
 ```  
--safemodeadministratorpassword (convertto-securestring "Password1" -asplaintext -force)  
+-safemodeadministratorpassword (convertto-securestring Password1 -asplaintext -force)  
 ```  
   
 Наконец, можно сохранить скрытый пароль в файле, а затем использовать его повторно, никогда не отображая пароль в виде открытого текста. Например:  
   
 ```  
-$file = "c:\pw.txt"  
-$pw = read-host -prompt "Password:" -assecurestring  
+$file = c:\pw.txt  
+$pw = read-host -prompt Password: -assecurestring  
 $pw | ConvertFrom-SecureString | Set-Content $file  
   
 -safemodeadministratorpassword (Get-Content $File | ConvertTo-SecureString)  
@@ -556,8 +557,9 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 Также можно установить контроллер домена с помощью архивированных носителей, использовав параметр установки с носителя (IFM). При установке флажка **Установка с носителя** появляется возможность выбора носителя. Чтобы убедиться в том, что указанный путь является действительным путем к носителю, необходимо нажать кнопку **Проверить** .
 
-Рекомендации по источнику IFM: • носитель, используемый с помощью параметра IFM, создается с cистема архивации данных Windows Server или Ntdsutil. exe из другого существующего контроллера домена Windows Server с той же версией операционной системы. Например, нельзя использовать Windows Server 2008 R2 или предыдущую операционную систему для создания носителя для контроллера домена Windows Server 2012.
-• Исходные данные IFM должны быть из контроллера домена с возможностью записи. Хотя источник из RODC технически будет работать для создания нового RODC, возникают ложные срабатывания предупреждений репликации, которые не реплицируются источником IFM RODC.
+Рекомендации для источника IFM:
+*    Носитель, используемый параметром IFM, создается с cистема архивации данных Windows Server или Ntdsutil. exe из другого существующего контроллера домена Windows Server с той же версией операционной системы. Например, нельзя использовать Windows Server 2008 R2 или предыдущую операционную систему для создания носителя для контроллера домена Windows Server 2012.
+*    Исходные данные IFM должны быть из контроллера домена с возможностью записи. Хотя источник из RODC технически будет работать для создания нового RODC, возникают ложные срабатывания предупреждений репликации, которые не реплицируются источником IFM RODC.
 
 Подробнее об изменениях в IFM см. в разделе [Изменения, касающиеся установки с носителя с помощью Ntdsutil.exe](../../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM). Если носители защищены SYSKEY, диспетчер сервера запрашивает пароль образа во время проверки.
   
@@ -616,18 +618,18 @@ $pw | ConvertFrom-SecureString | Set-Content $file
   
 Import-Module ADDSDeployment  
 Install-ADDSDomainController `  
--AllowPasswordReplicationAccountName @("CORP\Allowed RODC Password Replication Group", "CORP\Chicago RODC Admins", "CORP\Chicago RODC Users and Computers") `  
+-AllowPasswordReplicationAccountName @(CORP\Allowed RODC Password Replication Group, CORP\Chicago RODC Admins, CORP\Chicago RODC Users and Computers) `  
 -Credential (Get-Credential) `  
 -CriticalReplicationOnly:$false `  
--DatabasePath "C:\Windows\NTDS" `  
--DelegatedAdministratorAccountName "CORP\Chicago RODC Admins" `  
--DenyPasswordReplicationAccountName @("BUILTIN\Administrators", "BUILTIN\Server Operators", "BUILTIN\Backup Operators", "BUILTIN\Account Operators", "CORP\Denied RODC Password Replication Group") `  
--DomainName "corp.contoso.com" `  
+-DatabasePath C:\Windows\NTDS `  
+-DelegatedAdministratorAccountName CORP\Chicago RODC Admins `  
+-DenyPasswordReplicationAccountName @(BUILTIN\Administrators, BUILTIN\Server Operators, BUILTIN\Backup Operators, BUILTIN\Account Operators, CORP\Denied RODC Password Replication Group) `  
+-DomainName corp.contoso.com `  
 -InstallDNS:$true `  
--LogPath "C:\Windows\NTDS" `  
+-LogPath C:\Windows\NTDS `  
 -ReadOnlyReplica:$true `  
--SiteName "Default-First-Site-Name" `  
--SYSVOLPath "C:\Windows\SYSVOL"  
+-SiteName Default-First-Site-Name `  
+-SYSVOLPath C:\Windows\SYSVOL  
 -Force:$true  
   
 ```  
@@ -639,7 +641,7 @@ Install-ADDSDomainController `
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCWhatIf.png)  
   
-### <a name="prerequisites-check"></a>Проверка готовности к установке  
+### <a name="prerequisites-check"></a>Проверка предварительных требований  
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_SMI_TR_RODCPrereqCheck.png)  
   
 **Проверка предварительных требований** — это новая функция настройки доменных служб Active Directory. На этом новом этапе проверяется возможность поддержки нового леса доменных служб Active Directory конфигурацией сервера.  
@@ -675,7 +677,7 @@ Install-addsdomaincontroller
   
 Список обязательных и необязательных аргументов см. в таблице **Командлет ADDSDeployment** в начале этого раздела.  
   
-Выполнение командлета **Install-addsdomaincontroller** включает только два этапа (проверка предварительных требований и установка). На двух иллюстрациях ниже показан этап установки с минимальным необходимым набором аргументов: **-domainname**, **-readonlyreplica**, **-sitename**и **-credential**. Обратите внимание на то, что командлет **Install-ADDSDomainController**, как и диспетчер сервера, напоминает об автоматической перезагрузке сервера после повышения роли:  
+Выполнение командлета **Install-addsdomaincontroller** включает только два этапа (проверка предварительных требований и установка). На двух иллюстрациях ниже показан этап установки с минимальным необходимым набором аргументов: **-domainname**, **-readonlyreplica**, **-sitename** и **-credential**. Обратите внимание на то, что командлет **Install-ADDSDomainController**, как и диспетчер сервера, напоминает об автоматической перезагрузке сервера после повышения роли:  
   
 ![Установить RODC](media/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-/ADDS_PSInstallRODC.png)  
   

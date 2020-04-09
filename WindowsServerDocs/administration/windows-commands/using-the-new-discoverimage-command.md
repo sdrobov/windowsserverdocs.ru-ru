@@ -1,28 +1,22 @@
 ---
-title: Использование команды New-Дисковеримаже
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: New-Дисковеримаже
+description: Раздел команд Windows для New-Дисковеримаже, который создает новый образ обнаружения из существующего образа загрузки.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ede9fbbb-0bba-4309-8c21-3cc13e1dc3cd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b17777eb4d8541ce5669ee6becbd51e2b9da236
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f184d420e689faa687378e6843c48babdbf67690
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362988"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830707"
 ---
-# <a name="using-the-new-discoverimage-command"></a>Использование команды New-Дисковеримаже
-
-
+# <a name="new-discoverimage"></a>New-Дисковеримаже
 
 Создает новый образ обнаружения из существующего образа загрузки. Образы обнаружения — это загрузочные образы, которые принудительно запускают программу Setup. exe в режиме служб развертывания Windows, а затем обнаруживают сервер служб развертывания Windows. Обычно эти образы используются для развертывания образов на компьютерах, которые не могут загружаться в PXE. Дополнительные сведения см. в разделе Создание образов ([https://go.microsoft.com/fwlink/?LinkId=115311](https://go.microsoft.com/fwlink/?LinkId=115311)).
 
@@ -41,7 +35,7 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
          [/Overwrite:{Yes | No | Append}]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |        Параметр         |                                                                                                                                                                                                                                                                                                                                                                                                                       Описание                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,19 +45,19 @@ WDSUTIL [Options] /New-DiscoverImage [/Server:<Server name>]
 | [/Филенаме:\<имя файла >] |                                                                                                                                                                                                                                                                                                                                                                         Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.                                                                                                                                                                                                                                                                                                                                                                          |
 |    /дестинатионимаже     | Задает параметры для конечного образа. Параметры можно указать с помощью следующих параметров.</br>-/FilePath.: < путь к файлу и имя > — задает полный путь к файлу для нового образа.</br>-[/Name:\<имя >] — задает отображаемое имя образа. Если отображаемое имя не указано, будет использоваться отображаемое имя исходного изображения.</br>-[/Description: \<Description >] — задает описание образа.</br>-[/Вдссервер: \<имя сервера >] — указывает имя сервера, к которому должны обращаться все клиенты, которые загружаются из указанного образа для скачивания образа установки. По умолчанию все клиенты, которые загружают этот образ, обнаруживают допустимый сервер служб развертывания Windows. При использовании этого параметра функция обнаружения обходится и принудительно загружается клиент, чтобы он связывался с указанным сервером.</br>-[/Overwrite: {Да |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы создать образ обнаружения из загрузочного образа и назовите его Винпедисковер. wim, введите:
 ```
-WDSUTIL /New-DiscoverImage /Image:"WinPE boot image" /Architecture:x86 /DestinationImage /FilePath:"C:\Temp\WinPEDiscover.wim"
+WDSUTIL /New-DiscoverImage /Image:WinPE boot image /Architecture:x86 /DestinationImage /FilePath:C:\Temp\WinPEDiscover.wim
 ```
 Чтобы создать образ обнаружения из загрузочного образа и назовите его Винпедисковер. wim с указанными параметрами, введите:
 ```
 WDSUTIL /Verbose /Progress /New-DiscoverImage /Server:MyWDSServer
-/Image:"WinPE boot image" /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:"\\Server\Share\WinPEDiscover.wim" 
-/Name:"New WinPE image" /Description:"WinPE image for WDS Client discovery" /Overwrite:No
+/Image:WinPE boot image /Architecture:x64 /Filename:boot.wim /DestinationImage /FilePath:\\Server\Share\WinPEDiscover.wim 
+/Name:New WinPE image /Description:WinPE image for WDS Client discovery /Overwrite:No
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

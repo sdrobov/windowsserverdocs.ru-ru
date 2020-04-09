@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: думпстате'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3ef2f7b8-97af-4f42-9542-cff324840637
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 625d05b2fea9ae58681648c64e309aa8b2a201ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 46f827d26d867392db4cbef92cf5be496aee8d74
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374995"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841517"
 ---
 # <a name="ksetupdumpstate"></a>ksetup: думпстате
 
@@ -32,7 +28,7 @@ ms.locfileid: "71374995"
 ksetup /dumpstate
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 Нет
 
@@ -49,14 +45,14 @@ ksetup /dumpstate
 
 **Ksetup** создает те же выходные данные, что и **Ksetup/думпстате**.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Поиск большинства конфигураций области Kerberos на компьютере:
 ```
 ksetup /dumpstate
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Ksetup](ksetup.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

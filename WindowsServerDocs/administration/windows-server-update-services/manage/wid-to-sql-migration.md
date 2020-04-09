@@ -2,22 +2,19 @@
 title: Миграция базы данных WSUS из (внутренняя база данных Windows) WID в SQL
 description: Раздел о службе Windows Server Update Service (WSUS). Перенос базы данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows в локальный или удаленный экземпляр SQL Server.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 ms.assetid: 90e3464c-49d8-4861-96db-ee6f8a09g7dr
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: 594c20cbfea521006de6d1ec69763669298376e6
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 8d38833170aae5e13f9d42b726d7cb0b3c12de56
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948524"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828457"
 ---
 >Область применения: Windows Server 2012, Windows Server 2012 R2, Windows Server 2016
 
@@ -25,7 +22,7 @@ ms.locfileid: "75948524"
 
 Выполните следующие действия, чтобы перенести базу данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows на локальный или удаленный экземпляр SQL Server.
 
-## <a name="prerequisites"></a>Необходимые условия
+## <a name="prerequisites"></a>Предварительные требования
 
 - Экземпляр SQL. Это может быть **MSSQLServer** или пользовательский экземпляр по умолчанию.
 - SQL Server Management Studio
@@ -49,7 +46,7 @@ ms.locfileid: "75948524"
 
 1. Щелкните правой кнопкой мыши **SUSDB** -&gt; **задачи** -&gt; щелкните **отсоединить**: ![Image1](images/image1.png)
 2. Установите флажок **Удалить существующие подключения** и нажмите кнопку **ОК** (необязательно, если существуют активные соединения).
-    ![image2](images/image2.png)
+    ![изображение 2](images/image2.png)
 
 #### <a name="using-command-prompt"></a>Использование командной строки
 
@@ -120,13 +117,13 @@ ms.locfileid: "75948524"
 2. На странице **Общие** введите **имя входа** (**NT Authority\Network Service**) и задайте для **базы данных по умолчанию** значение SUSDB.
     ![image7](images/image7.png)
 3. На странице **роли сервера** убедитесь, что выбраны **Общие** и **sysadmin** .
-    ![рисунок 8](images/image8.png)
+    ![image8](images/image8.png)
 4. На странице **Сопоставление пользователей** :
     - В разделе **Пользователи, сопоставленные с этим именем входа**выберите **SUSDB** .
     - В разделе **членство в роли базы данных для: SUSDB**убедитесь, что установлены следующие флажки:
-        - **public**
+        - **закрытый**
         - **webservice** ![image9](images/image9.png)
-5. Нажмите **ОК**
+5. Нажмите кнопку **ОК**
 
 Теперь в разделе имена входа будет отображаться **NT Authority\Network Service** .
 ![image10](images/image10.png)
@@ -149,8 +146,8 @@ ms.locfileid: "75948524"
     >
     > ![image11](images/image11.png)
 
-4. На странице **Сопоставление пользователей** выберите базу данных **SUSDB** в разделе **"Пользователи, сопоставленные с этим именем входа"** .
-5. Проверьте **WebService** в разделе **"членство в роли базы данных для: SUSDB"** : ![image12](images/image12.png)
+4. На странице **Сопоставление пользователей** выберите базу данных **SUSDB** в разделе **Пользователи, сопоставленные с этим именем входа** .
+5. Проверьте **службу WebService** в разделе **членство в роли базы данных для: SUSDB**: ![image12](images/image12.png)
 6. Нажмите кнопку **ОК** , чтобы сохранить параметры.
     > [!NOTE]
     > Чтобы изменения вступили в силу, может потребоваться перезапустить службу SQL.

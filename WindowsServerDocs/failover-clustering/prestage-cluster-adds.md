@@ -5,16 +5,16 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
-ms.manager: daveba
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 05/09/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 56bf122923525de6e0005dd6d866220221dc9ce1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b14561a05778ed30e71363a2cd3b3b6fdf24f78e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392071"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827477"
 ---
 # <a name="prestage-cluster-computer-objects-in-active-directory-domain-services"></a>Предварительная настройка объектов компьютеров кластера в домен Active Directory Services
 
@@ -65,7 +65,7 @@ ms.locfileid: "71392071"
 
 Необходимо настроить разрешения, чтобы учетная запись пользователя, которая будет использоваться для создания отказоустойчивого кластера, имела полный доступ к CNO.
 
-Минимальное требование для выполнения этого шага — членство в группе **Операторы учета** .
+Минимальное требование для выполнения этого шага — членство в группе **Операторы учета**.
 
 Вот как можно предоставить пользователю разрешения на создание кластера:
 
@@ -73,7 +73,7 @@ ms.locfileid: "71392071"
 2. Найдите и щелкните правой кнопкой мыши CNO и выберите пункт **Свойства**.
 3. На вкладке **Безопасность** нажмите кнопку **Добавить**.
 4. В диалоговом окне **Выбор пользователей, компьютеров или групп** укажите учетную запись пользователя или группу, которым требуется предоставить разрешения, а затем нажмите кнопку **ОК**.
-5. Выберите добавленную учетную запись пользователя или группу и около пункта **Полный доступ**установите флажок **Разрешить** .
+5. Выберите добавленную учетную запись пользователя или группу и около пункта **Полный доступ** установите флажок **Разрешить**.
   
    ![Предоставление полного доступа пользователю или группе, которые будут создавать кластер](media/prestage-cluster-adds/granting-full-control-to-the-user-create-the-cluster.png)
   

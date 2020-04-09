@@ -1,28 +1,24 @@
 ---
 title: оповещение об обновлении Logman
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ede94a76-931c-40ed-9fda-6766bed8ff72 britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dc32e3de6078489e59fe24c97f02fb440e86628d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 13bd7fbef96b75d9308b1e2c8475389d10bbb921
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374387"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840607"
 ---
 # <a name="logman-update-alert"></a>оповещение об обновлении Logman
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Обновление свойств существующего сборщика данных оповещений.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374387"
 ```  
 logman update alert <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                 Параметр                  |                                                                               Описание                                                                               |
 |--------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -38,7 +34,7 @@ logman update alert <[-n] <name>> [options]
 |             -s <computer name>             |                                                          Выполните команду на указанном удаленном компьютере.                                                          |
 |              -config <value>               |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
 |                [-n] <name>                 |                                                                       Имя целевого объекта.                                                                        |
-|          -[-] u < пользователь [пароль] >           | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
+|          -[-] u < пользователь [пароль] >           | Указывает пользователя для запуска от имени. При вводе \* пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 | -m < [начало] [завершение] [[начало] [завершение] [...]] > |                                                Вместо запланированного времени начала или окончания измените значение на запуск или завершение вручную.                                                 |
 |             -RF < [[чч:] мм:] SS >             |                                                        Запуск сборщика данных в течение указанного периода времени.                                                         |
 |     -b < M/d/гггг ч: СС [AM&#124;] >      |                                                              Начать сбор данных в указанное время.                                                               |
@@ -62,11 +58,11 @@ logman update alert <[-n] <name>> [options]
 
 ## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
-В следующем примере выполняется обновление существующего new_alert сборщика данных, Установка порогового значения счетчика "% загруженности процессора" в группе счетчиков "процессор (_Total)" в значение 40%.  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+В следующем примере выполняется обновление существующего new_alert сборщика данных, Установка порогового значения для счетчика "% загруженности процессора" в группе счетчиков "процессор (_Total)" в 40%.  
 ```  
-logman update alert new_alert -th "\Processor(_Total)\% Processor time>40"  
+logman update alert new_alert -th \Processor(_Total)\% Processor time>40  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  
 [создать оповещение Logman](logman-create-alert.md)  

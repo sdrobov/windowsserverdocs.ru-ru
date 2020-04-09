@@ -1,24 +1,20 @@
 ---
 title: bitsadmin setnotifyflags
-description: Раздел команд Windows для **битсадмин сетнотифифлагс** — устанавливает флаги уведомления о событиях для указанного задания.
-ms.custom: na
+description: Раздел команд Windows для битсадмин сетнотифифлагс, который задает флаги уведомления о событиях для указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d5763d95-94a6-45ca-9e03-891c20047e06
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d9cfabf05610cbbe8fa65fd16b0d33e161dcef9b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fd3001fa4ae7f51cab92556f4f2f498511cca5ae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380452"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849287"
 ---
 # <a name="bitsadmin-setnotifyflags"></a>bitsadmin setnotifyflags
 
@@ -30,7 +26,7 @@ ms.locfileid: "71380452"
 bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -43,13 +39,13 @@ bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
 
 |-----|-----| | 1 | Создавать событие при передаче всех файлов в задании. | | 2 | Создавать событие при возникновении ошибки. | | 4 | Отключить уведомления. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере задается задание notify flags для события "передано" и "ошибка" для задания с именем *мидовнлоаджоб*.
 ```
 C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

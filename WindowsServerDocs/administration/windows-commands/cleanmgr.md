@@ -1,6 +1,6 @@
 ---
 title: Cleanmgr
-description: Узнайте, как использовать параметры командной строки для настройки средства очистки диска (Cleanmgr. exe) для автоматической очистки определенных файлов.
+description: Узнайте, как использовать параметры командной строки для настройки средства очистки диска (Cleanmgr.exe), чтобы автоматически удалять определенные файлы.
 ms.prod: windows-server
 ms.reviewer: cosmosdarwin
 author: iangpgh
@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: daveba
 ms.technology: storage-spaces
 ms.date: 06/20/2019
-ms.openlocfilehash: 0646922f409d4ea8abb85c927a329013e32016de
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9abde0cb0db910cd500df94f98c76e6c370cba2a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947587"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847717"
 ---
 # <a name="cleanmgr"></a>Cleanmgr
 
@@ -29,7 +29,7 @@ ms.locfileid: "75947587"
 cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/VERYLOWDISK]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |      Параметр      |    Описание     |
 | ------------------- | ------------------ |
@@ -41,7 +41,7 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 | /вериловдиск | Запустите с параметрами по умолчанию без запросов пользователя. |
 | /?           | Отображение справки. |
 
-## <a name="options"></a>"Параметры"
+## <a name="options"></a>Параметры
 
 Параметры для файлов, которые можно указать для очистки диска с помощью команды/sageset и/сажерун, включают:
 
@@ -67,7 +67,7 @@ cleanmgr [/d <driveletter>] [/sageset:n]  [/sagerun:n] [/TUNEUP:n] [/LOWDISK] [/
 
 **Примечание** . При указании очистки диска, содержащего установку Windows, все эти параметры доступны на вкладке Очистка диска. Если указать любой другой диск, на вкладке Очистка диска будут доступны только Корзина и файлы каталога для параметров индекса содержимого. 
 
-## <a name="examples"></a>Примеры.
+## <a name="examples"></a>Примеры
 
 Чтобы запустить приложение "Очистка диска", чтобы можно было использовать его диалоговое окно для указания параметров для дальнейшего использования, сохраните параметры в набор **1**, введите следующую команду:
 
@@ -89,4 +89,4 @@ cleanmgr /tuneup:1
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Освободить место на диске в Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)
+[Освобождение места на диске в Windows 10](https://support.microsoft.com/help/12425/windows-10-free-up-drive-space)

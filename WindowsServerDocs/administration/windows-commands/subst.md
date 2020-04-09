@@ -1,24 +1,20 @@
 ---
 title: subst
 description: Сведения о связывании пути с буквой диска.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3e69234c-2312-4343-868b-afc1017c622a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f3010d1e58fbd360b8311512e6664873b020c12b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 43cbc57aba29ea0b9150dccdfc566a93017a09a5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383755"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833647"
 ---
 # <a name="subst"></a>subst
 
@@ -35,16 +31,16 @@ subst [<Drive1>: [<Drive2>:]<Path>]
 subst <Drive1>: /d
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |> \<диск1:|Указывает виртуальный диск, которому необходимо назначить путь.|
 |[\<диск2 >:]\<путь >|Указывает физический диск и путь, который вы хотите назначить виртуальному диску.|
 |/d|Удаляет подставляемый (виртуальный) диск.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Следующие команды не работают и не должны использоваться на дисках, указанных в команде **subst** :
 
@@ -63,9 +59,9 @@ subst <Drive1>: /d
 
     `Invalid parameter - drive1:`
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 
-Чтобы создать виртуальный диск Z для пути B:\user\betty\forms, введите:
+Чтобы создать виртуальный диск Z для пути Б:\усер\бетти\формс, введите:
 ```
 subst z: b:\user\betty\forms 
 ```
@@ -74,6 +70,6 @@ subst z: b:\user\betty\forms
 z: 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

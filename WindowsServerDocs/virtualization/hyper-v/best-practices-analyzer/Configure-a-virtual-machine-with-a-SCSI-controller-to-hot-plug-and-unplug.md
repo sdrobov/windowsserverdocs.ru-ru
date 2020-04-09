@@ -2,24 +2,23 @@
 title: Настройка виртуальной машины с контроллером SCSI для возможности горячего подключения и горячей замены хранилища
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 511e1172-aeef-463d-b5dd-2bffae411ff1
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 5b901ee8f11942b8ad50a3c34c53354a5998e105
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bd49a911d278a1f07fe9630f39798204d760dd88
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365071"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862157"
 ---
 # <a name="configure-a-virtual-machine-with-a-scsi-controller-to-be-able-to-hot-plug-and-hot-unplug-storage"></a>Настройка виртуальной машины с контроллером SCSI для возможности горячего подключения и горячей замены хранилища
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 
   
@@ -27,10 +26,10 @@ ms.locfileid: "71365071"
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Warning|  
-|**Категория**|Настройка|  
+|**Серьезности**|Предупреждение|  
+|**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  
   

@@ -1,35 +1,29 @@
 ---
 title: создать простой том
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для создания тома Simple, который создает простой том на указанном динамическом диске.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da0f208d-7fda-471a-9db2-5de5ba5207c6
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1afb97c5bdb167eaf6ecfcd34ca3607b7b5a4c71
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 45c707a92692c5531a0e33c9537705558f2ac309
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378877"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846897"
 ---
 # <a name="create-volume-simple"></a>создать простой том
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-создает простой том на указанном динамическом диске.  
+Создает простой том на указанном динамическом диске.  
   
 > [!IMPORTANT]  
-> для Windows Vista эта команда DiskPart доступна только в выпусках Windows Vista Ultimate, Windows Vista Корпоративная и Windows Vista Business.  
-  
-  
+> для Windows Vista эта команда DiskPart доступна только в выпусках Windows Vista Ultimate, Windows Vista Корпоративная и Windows Vista Business.
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,28 +31,28 @@ ms.locfileid: "71378877"
 create volume simple [size=<n>] [disk=<n>] [align=<n>] [noerr]  
 ```  
   
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
   
 | Параметр  |                                                                                                                            Описание                                                                                                                            |
 |------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Размер\=<n>  |                                                                  Размер тома в мегабайтах \(МБ\). Если размер не указан, новый том занимает оставшееся свободное пространство на диске.                                                                   |
 | \=диска <n>  |                                                                                Динамический диск, на котором создается том. Если диск не указан, используется текущий диск.                                                                                |
 | Выровняйте\=<n> | Выравнивает все экстенты томов по ближайшей границе выравнивания. Обычно используется с аппаратным номером логического устройства RAID \(LUN\) массивы для повышения производительности. *n* — это количество килобайтов \(КБ\) от начала диска до ближайшей границы выравнивания. |
-|   Noerr    |                               только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.                                |
+|   Noerr    |                               Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.                                |
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   После создания тома фокус автоматически переместится на новый том.  
   
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы создать том размером 1000 МБ, на диске 1 введите:  
   
 ```  
 create volume simple size=1000 disk=1  
 ```  
   
-#### <a name="additional-references"></a>Дополнительные ссылки  
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 
   

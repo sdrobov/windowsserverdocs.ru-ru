@@ -2,20 +2,19 @@
 title: Виртуальные машины должны создаваться по крайней мере раз в неделю.
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 7dbd3dfc-c873-4a77-89f7-3166e18d9531
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: ec11b067de2c9f8cbb3a17731caa0dc526bf54a0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6cb425f92926aa1823ed89cd26afccc2d962603d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393235"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855037"
 ---
 # <a name="virtual-machines-should-be-backed-up-at-least-once-every-week"></a>Виртуальные машины должны создаваться по крайней мере раз в неделю.
 
@@ -25,7 +24,7 @@ ms.locfileid: "71393235"
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
 |**Категория**|Конфигурация|  

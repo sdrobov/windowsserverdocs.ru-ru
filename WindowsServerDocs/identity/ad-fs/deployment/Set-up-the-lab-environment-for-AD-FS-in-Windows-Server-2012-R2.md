@@ -1,7 +1,6 @@
 ---
 ms.assetid: 6b38480e-5b1c-49f0-9d46-8cf22f70f0d2
 title: Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 52199ab8ca6f82443e78e72c6980746fa561363a
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 44de547b0a9c8636b07886d35c451bca6ec46341
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323126"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855177"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2
 
@@ -43,12 +42,12 @@ ms.locfileid: "79323126"
 
 4.  [Шаг 4. Настройка клиентского компьютера (CLIENT1)](../../ad-fs/deployment/../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_10)
 
-## <a name="BKMK_1"></a>Шаг 1. Настройка контроллера домена (DC1)
+## <a name="step-1-configure-the-domain-controller-dc1"></a><a name="BKMK_1"></a>Шаг 1. Настройка контроллера домена (DC1)
 Для целей этой тестовой среды можно вызвать корневой Active Directory домена **contoso.com** и указать <strong>pass@word1</strong> в качестве пароля администратора.
 
 -   Установите службу роли AD DS и установите службы домен Active Directory (AD DS), чтобы сделать компьютер контроллером домена в Windows Server 2012 R2. Это действие обновляет схему AD DS в процессе создания контроллера домена. Дополнительные сведения и пошаговые инструкции см. в разделе[https://technet.microsoft.com/library/hh472162.aspx](https://technet.microsoft.com/library/hh472162.aspx).
 
-### <a name="BKMK_2"></a>Создание учетных записей Active Directory тестирования
+### <a name="create-test-active-directory-accounts"></a><a name="BKMK_2"></a>Создание учетных записей Active Directory тестирования
 После того как контроллер домена станет функциональным, можно создать тестовую группу и тестовые учетные записи пользователей в этом домене и добавить учетную запись пользователя в учетную запись группы. Эти учетные записи используются для выполнения пошаговых инструкций в соответствующих руководствах, которые перечислены ранее в этой статье.
 
 Создайте следующие учетные записи.
@@ -74,7 +73,7 @@ ms.locfileid: "79323126"
 
     ```
 
-## <a name="BKMK_4"></a>Шаг 2. Настройка сервера федерации (ADFS1) с помощью службы регистрации устройств
+## <a name="step-2-configure-the-federation-server-adfs1-by-using-device-registration-service"></a><a name="BKMK_4"></a>Шаг 2. Настройка сервера федерации (ADFS1) с помощью службы регистрации устройств
 Чтобы настроить другую виртуальную машину, установите Windows Server 2012 R2 и подключите ее к домену **contoso.com**. Настройте компьютер после его присоединения к домену, а затем перейдите к установке и настройке роли AD FS.
 
 См. видео в статье [Серии видеороликов с практическими рекомендациями по работе со службами федерации Active Directory: установка фермы серверов AD FS Server Farm](https://technet.microsoft.com/video/dn469436).
@@ -202,7 +201,7 @@ ms.locfileid: "79323126"
     > [!IMPORTANT]
     > В реальном развертывании, если у компании несколько суффиксов имени участника-пользователя, необходимо создать несколько записей CNAME, по одной для каждого из этих суффиксов в DNS.
 
-## <a name="BKMK_5"></a>Шаг 3. Настройка веб-сервера (WebServ1) и примера приложения на основе утверждений
+## <a name="step-3-configure-the-web-server-webserv1-and-a-sample-claims-based-application"></a><a name="BKMK_5"></a>Шаг 3. Настройка веб-сервера (WebServ1) и примера приложения на основе утверждений
 Настройте виртуальную машину (WebServ1), установив операционную систему Windows Server 2012 R2 и подключая ее к домену **contoso.com**. После подключения к домену можно продолжить установку и настройку роли веб-сервера.
 
 Для завершения пошаговых руководств, перечисленных ранее в этом разделе, необходимо иметь пример приложения, безопасность которого обеспечивается вашим сервером федерации (ADFS1).
@@ -222,7 +221,7 @@ ms.locfileid: "79323126"
 
 4.  [Создание отношения доверия с проверяющей стороной на сервере федерации](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_11)
 
-### <a name="BKMK_15"></a>Установка роли веб-сервера и Windows Identity Foundation
+### <a name="install-the-web-server-role-and-windows-identity-foundation"></a><a name="BKMK_15"></a>Установка роли веб-сервера и Windows Identity Foundation
 
 1. > [!NOTE]
    > Необходимо иметь доступ к установочному носителю Windows Server 2012 R2.
@@ -247,11 +246,11 @@ ms.locfileid: "79323126"
 
 10. На странице **Подтверждение выбранных элементов для установки** щелкните **Указать альтернативный исходный путь**. Введите путь к каталогу SxS, который находится на установочном носителе Windows Server 2012 R2. Например, D:\Sources\Sxs. Нажмите кнопку **ОК**, а затем кнопку **Установить**.
 
-### <a name="BKMK_13"></a>Установка пакета SDK для Windows Identity Foundation
+### <a name="install-windows-identity-foundation-sdk"></a><a name="BKMK_13"></a>Установка пакета SDK для Windows Identity Foundation
 
 1.  Запустите Виндовсидентитифаундатион-СДК-3.5. msi, чтобы установить Windows Identity Foundation SDK 3,5 (https://www.microsoft.com/download/details.aspx?id=4451). Выберите все параметры по умолчанию.
 
-### <a name="BKMK_9"></a>Настройка простого приложения утверждений в службах IIS
+### <a name="configure-the-simple-claims-app-in-iis"></a><a name="BKMK_9"></a>Настройка простого приложения утверждений в службах IIS
 
 1.  Установите действующий SSL-сертификат из хранилища сертификатов компьютера. Сертификат должен содержать имя веб-сервера, **webserv1.contoso.com**.
 
@@ -322,7 +321,7 @@ ms.locfileid: "79323126"
 
 Теперь вы должны защитить пример приложения, которое выполняется на веб-сервере, с AD FS. Для этого достаточно добавить отношения доверия с проверяющей стороной на сервер федерации (ADFS1). См. видео в статье [Серии видеороликов с практическими рекомендациями по работе со службами федерации Active Directory: добавление отношения доверия с проверяющей стороной](https://technet.microsoft.com/video/adfs-how-to-add-a-relying-party-trust).
 
-### <a name="BKMK_11"></a>Создание отношения доверия с проверяющей стороной на сервере федерации
+### <a name="create-a-relying-party-trust-on-your-federation-server"></a><a name="BKMK_11"></a>Создание отношения доверия с проверяющей стороной на сервере федерации
 
 1.  На сервере федерации (ADFS1) в разделе **Консоль управления AD FS** перейдите в область **Отношения доверия с проверяющей стороной**, а затем щелкните **Добавить отношения доверия с проверяющей стороной**.
 
@@ -350,7 +349,7 @@ ms.locfileid: "79323126"
 
 10. Нажмите кнопку **Готово**, а затем — кнопку **ОК**.
 
-## <a name="BKMK_10"></a>Шаг 4. Настройка клиентского компьютера (CLIENT1)
+## <a name="step-4-configure-the-client-computer-client1"></a><a name="BKMK_10"></a>Шаг 4. Настройка клиентского компьютера (CLIENT1)
 Настройте другую виртуальную машину и установите Windows 8.1. Эта виртуальная машина должна быть в той же виртуальной сети, что и другие машины. Эта машина НЕ должна быть объединена в домен Contoso.
 
 Клиент ДОЛЖЕН доверять SSL-сертификату, используемому для сервера федерации (ADFS1), настроенного в разделе [Step 2: Configure the federation server (ADFS1) with Device Registration Service](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md#BKMK_4). Система также должна быть в состоянии проверить информацию об отзыве сертификата.

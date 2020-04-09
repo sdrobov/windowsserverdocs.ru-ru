@@ -1,24 +1,20 @@
 ---
 title: wevtutil
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для wevtutil, которые позволяют получить сведения о журналах событий и издателях.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d4c791e0-7e59-45c5-aa55-0223b77a4822 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21f3b721a2a08a7fa101ec09f1f11b5e984f0113
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 62be2b14373457a3b114e8d067e1c7aa32b2182d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829357"
 ---
 # <a name="wevtutil"></a>wevtutil
 
@@ -40,7 +36,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 [{cl | clear-log} <Logname> [/bu:<Backup>]] [/r:<Remote>] [/u:<Username>] [/p:<Password>] [/a:<Auth>] [/uni:<Unicode>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -87,19 +83,19 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
 |   /Бу:\<> резервного копирования    |                                                                                                                                                                                                      Указывает путь к файлу, в котором будут храниться удаленные события. Добавьте расширение. evtx в имя файла резервной копии.                                                                                                                                                                                                       |
 |    /r:\<удаленный >    |                                                                                                                                                                                            Выполняет команду на удаленном компьютере. \<Remote > — имя удаленного компьютера. Параметры **IM** и **UM** не поддерживают удаленную операцию.                                                                                                                                                                                            |
 |   /u:\<имя пользователя >   |                                                                                                                                                                          Указывает другого пользователя для входа на удаленный компьютер. \<username > — это имя пользователя в формате Domain\User или User. Этот параметр применим только в том случае, если указан параметр **/r** .                                                                                                                                                                          |
-|   /p:\<пароль >   |                                                                                                                                               Указывает пароль для пользователя. Если используется параметр **/u** и этот параметр не указан или \<пароль > " *", пользователю будет предложено ввести пароль. Этот параметр применим только в том случае, если указан параметр \*\*/u*\*.                                                                                                                                                |
+|   /p:\<пароль >   |                                                                                                                                               Указывает пароль для пользователя. Если используется параметр **/u** и этот параметр не указан или \<пароль > имеет значение *, пользователю будет предложено ввести пароль. Этот параметр применим только в том случае, если указан параметр \*\*/u*\*.                                                                                                                                                |
 |     /a:\<> проверки подлинности     |                                                                                                                                                                                             Определяет тип проверки подлинности для подключения к удаленному компьютеру. \<проверки подлинности > могут быть по умолчанию, Negotiate, Kerberos или NTLM. Значение по умолчанию — Negotiate.                                                                                                                                                                                              |
 |  /уни:\<> Юникод   |                                                                                                                                                                                                             Отображает выходные данные в Юникоде. \<> Юникод может иметь значение true или false. Если <Unicode> имеет значение true, выходные данные находятся в Юникоде.                                                                                                                                                                                                             |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Использование файла конфигурации с параметром SL
 
     Файл конфигурации представляет собой XML-файл того же формата, что и выходные данные wevtutil GL \<с именем >/f: XML. В следующем примере показан формат файла конфигурации, который включает хранение, включает авторезервное копирование и задает максимальный размер журнала в журнале приложений:  
     ```
-    <?xml version="1.0" encoding="UTF-8"?>
-    <channel name="Application" isolation="Application"
-    xmlns="https://schemas.microsoft.com/win/2004/08/events">
+    <?xml version=1.0 encoding=UTF-8?>
+    <channel name=Application isolation=Application
+    xmlns=https://schemas.microsoft.com/win/2004/08/events>
     <logging>
     <retention>true</retention>
     <autoBackup>true</autoBackup>
@@ -110,7 +106,7 @@ wevtutil [{el | enum-logs}] [{gl | get-log} <Logname> [/f:<Format>]]
     </channel>
     ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Список имен всех журналов:
 ```
@@ -153,6 +149,6 @@ wevtutil epl System C:\backup\system0506.evtx
 wevtutil cl Application /bu:C:\admin\backups\a10306.evtx
 ```
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+#### <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

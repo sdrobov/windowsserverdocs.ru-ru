@@ -2,20 +2,19 @@
 title: Настройка сервера с достаточным количеством динамических MAC-адресов
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: a2804519-9790-4006-80b6-e990a8f505fe
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: efd1999411187a592cd8d175eb6de25e11605623
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1fe7b34abc8be9777a491a08016627e7b2a66a2a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364938"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862047"
 ---
 # <a name="configure-the-server-with-a-sufficient-amount-of-dynamic-mac-addresses"></a>Настройка сервера с достаточным количеством динамических MAC-адресов
 
@@ -25,9 +24,9 @@ ms.locfileid: "71364938"
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Тревожное|  
+|**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  

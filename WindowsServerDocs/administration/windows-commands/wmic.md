@@ -1,24 +1,20 @@
 ---
 title: wmic
-description: 'Раздел команд Windows для * * * *- '
-ms.custom: na
+description: Раздел команд Windows для WMIC, который отображает сведения WMI в интерактивной командной оболочке.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 76397c72-d06f-4cea-88cf-c7603315a983
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f5096ab82ebbd01cb4f3a7dc0cf0b15e4b9fae8e
-ms.sourcegitcommit: effbc183bf4b370905d95c975626c1ccde057401
+ms.openlocfilehash: 03ba4ecb4b12b03e010318bf6ca260dec00f28f3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74781331"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829057"
 ---
 # <a name="wmic"></a>wmic
 
@@ -40,12 +36,12 @@ wmic </parameter>
 
 |Подкоманда|Описание|
 |-----------|-----------|
-|класс|Отменяет режим псевдонима по умолчанию WMIC для прямого доступа к классам в схеме WMI.|
-|путь|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
-|локального|Отображает текущие значения всех глобальных коммутаторов.|
+|class|Отменяет режим псевдонима по умолчанию WMIC для прямого доступа к классам в схеме WMI.|
+|path|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
+|context|Отображает текущие значения всех глобальных коммутаторов.|
 |[выйти \| exit]|Выход из командной оболочки WMIC.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы отобразить текущие значения всех глобальных коммутаторов, введите:
 ```
@@ -75,6 +71,6 @@ AGGREGATE    : ON
 wmic /locale:ms_409
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

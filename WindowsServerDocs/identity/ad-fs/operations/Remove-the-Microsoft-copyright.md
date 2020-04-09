@@ -1,7 +1,6 @@
 ---
 ms.assetid: c89a977c-b09f-44ec-be42-41e76a6cf3ad
 title: Удаление авторского права Майкрософт
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 0c24173dd03e03f9e8a19ef5981a6dc1259d62d7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9306950ab83ea94c1ff814ea9a404c0efeff0e40
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407512"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816217"
 ---
 # <a name="remove-the-microsoft-copyright"></a>Удаление авторского права Майкрософт 
 
@@ -38,7 +37,7 @@ ms.locfileid: "71407512"
    Export-AdfsWebTheme -Name custom -DirectoryPath C:\CustomWebTheme
    ```
 
-3. Найти файл `Style.css`, расположенный в папке выходных данных. Используя предыдущий пример, путь будет иметь вид `C:\CustomWebTheme\Css\Style.css.`.
+3. Найти файл `Style.css`, расположенный в выходной папке. Используя предыдущий пример, путь будет `C:\CustomWebTheme\Css\Style.css.`
   
 4. Откройте файл `Style.css` в редакторе, например в блокноте.  
   
@@ -48,7 +47,7 @@ ms.locfileid: "71407512"
    #copyright {color:#696969; display:none;}
    ```
 
-6. Создайте пользовательскую тему, основанную на новом файле `Style.css`.  
+6. Создайте пользовательскую тему на основе нового файла `Style.css`.  
 
    ```powershell
    Set-AdfsWebTheme -TargetName custom -StyleSheet @{locale="";path="C:\customWebTheme\css\style.css"}

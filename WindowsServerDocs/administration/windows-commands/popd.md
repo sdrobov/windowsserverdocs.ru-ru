@@ -1,28 +1,24 @@
 ---
 title: popd
 description: Узнайте, как изменить каталог на каталог, сохраненный в команде pushd.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8a4c52d5-9fd1-4eac-9c0c-5767b25728ed
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 8a9e0a301a5f8b46e1907a4f43c5ed9247b85f77
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b66b5edd2fa068923650f578d13f30631a8602ad
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372226"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837477"
 ---
 # <a name="popd"></a>popd
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет текущий каталог на каталог, который был последним сохранен командой **pushd** .
 Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
@@ -32,10 +28,10 @@ ms.locfileid: "71372226"
 popd
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 -   Каждый раз, когда вы используете команду **pushd** , хранится один каталог для использования. Однако можно хранить несколько каталогов с помощью команды **pushd** многократно.
@@ -43,7 +39,7 @@ popd
     Вы можете использовать команду **popd** , чтобы изменить текущий каталог на каталог, сохраненный с помощью команды **pushd** . При использовании команды **popd** каталог в верхней части стека удаляется из стека, а текущий каталог изменяется на этот каталог. При повторном использовании команды **popd** происходит удаление следующего каталога в стеке.
 -   Если расширения команд включены, команда **popd** удаляет все назначения букв дисков, созданные с помощью **pushd**.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 В следующем примере показано, как можно использовать команду **pushd** и команду **popd** в пакетной программе для изменения текущего каталога, в котором выполнялась программа пакетной службы, а затем изменить ее обратно:
 
 ```
@@ -56,7 +52,7 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-## <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительные материалы
 -   [pushd](pushd.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

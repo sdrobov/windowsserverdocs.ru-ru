@@ -1,23 +1,24 @@
 ---
 title: Миграция междоменного кластера в Windows Server 2016/2019
+description: В этой статье описывается перемещение кластера Windows Server 2019 из одного домена в другой.
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/18/2019
-description: В этой статье описывается перемещение кластера Windows Server 2019 из одного домена в другой.
 ms.localizationpriority: medium
-ms.openlocfilehash: 68f49795124dedf0655726853a4d865686f6d697
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ba556b5a00f3932e2049135b177a7ad8bbceec9c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361408"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828297"
 ---
 # <a name="failover-cluster-domain-migration"></a>Миграция домена отказоустойчивого кластера
 
-> Относится к: Windows Server 2019, Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server 2016
 
 В этом разделе приводятся общие сведения о перемещении отказоустойчивых кластеров Windows Server из одного домена в другой.
 
@@ -66,7 +67,7 @@ ms.locfileid: "71361408"
 
 В обоих вариантах в новом кластере должны быть установлены все [приложения, поддерживающие кластер](https://technet.microsoft.com/aa369082(v=vs.90)) , все драйверы и, возможно, тестирование, чтобы убедиться, что все будет работать правильно.  Этот процесс занимает много времени, если необходимо также переместить данные.
 
-## <a name="windows-server-2019"></a>Windows Server 2019
+## <a name="windows-server-2019"></a>Windows Server 2019
 
 В Windows Server 2019 мы предоставили возможности межкластерного переноса доменов.  Итак, приведенные выше сценарии можно легко выполнить, и необходимость в перестроении больше не требуется.  
 
@@ -122,7 +123,7 @@ ms.locfileid: "71361408"
    New-ClusterNameAccount -Name CLUSTERNAME -Domain NEWDOMAINNAME.com -UpgradeVCOs
    ```
 
-    ПРИМЕЧАНИЕ. Если у вас нет дополнительных групп с сетевыми именами (т. е. кластера Hyper-V с виртуальными машинами), параметр-Упградевкос не требуется.
+    Примечание. Если у вас нет дополнительных групп с сетевыми именами (т. е. кластера Hyper-V с виртуальными машинами), параметр-Упградевкос не требуется.
 
 9. Используйте Active Directory пользователи и компьютеры, чтобы проверить новый домен и убедиться, что связанные объекты компьютера созданы. Если они есть, перенесите остальные ресурсы в группы в оперативном режиме.
 

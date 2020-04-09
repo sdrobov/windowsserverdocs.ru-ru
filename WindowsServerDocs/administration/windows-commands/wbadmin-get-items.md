@@ -1,24 +1,20 @@
 ---
 title: Wbadmin get Items
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для команды Wbadmin get Items, в которой перечислены элементы, входящие в определенную резервную копию.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 27d08ce3-6e06-4260-b264-fc1bde132d09
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c3cc532381321655bbd3d5549b3c9b1896b9280
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 781057bb450ab4b692c793f67d807e008efcf5d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362411"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829757"
 ---
 # <a name="wbadmin-get-items"></a>Wbadmin get Items
 
@@ -39,7 +35,7 @@ wbadmin get items
 [-machine:<BackupMachineName>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -47,7 +43,7 @@ wbadmin get items
 |-backupTarget|Задает место хранения, в котором содержатся резервные копии, для которых необходимо получить сведения. Используется для перечисления резервных копий, хранящихся в этом целевом расположении. Целевыми расположениями резервного копирования может быть локальный подключенный диск или удаленная общая папка. Если программа **Wbadmin get Items**выполняется на том же компьютере, где была создана резервная копия, этот параметр не требуется. Однако этот параметр необходим для получения сведений о резервной копии, созданной с другого компьютера.|
 |-Machine|Указывает имя компьютера, для которого необходимо получить сведения о резервном копировании. Полезен, если резервное копирование нескольких компьютеров производится в одно и то же расположение. Следует использовать, если указан **-backupTarget** .|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы получить список элементов из резервной копии, которая была выполнена 31 марта 2013 в 9:00 утра, введите:
 ```
@@ -58,8 +54,8 @@ wbadmin get items -version:03/31/2013-09:00
 wbadmin get items -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Get-вббаккупсет](https://technet.microsoft.com/library/jj902473.aspx)

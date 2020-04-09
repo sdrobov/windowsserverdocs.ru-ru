@@ -1,24 +1,20 @@
 ---
 title: goto
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e0de1458-1f78-48ff-a746-c285a945a510
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1caf3da3e8b873150af5be7ed8316cfcb526db83
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 928a9031a7f86261789676257afe95ffc3be8a99
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375692"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842567"
 ---
 # <a name="goto"></a>goto
 
@@ -34,14 +30,14 @@ ms.locfileid: "71375692"
 goto <Label> 
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |Метка \<>|Задает текстовую строку, используемую в качестве метки в пакетной программе.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Работа с расширениями команд
 
@@ -62,7 +58,7 @@ goto <Label>
 
     Для выполнения условных операций можно использовать **goto** с другими командами. Дополнительные сведения об использовании команды **goto** для условных операций см. в справочнике по командам [If](if.md) .
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Следующая пакетная программа форматирует диск в дисководе A как системный диск. Если операция выполнена успешно, команда **goto** направляет обработку в **конечную** метку:
 ```
@@ -74,9 +70,9 @@ echo An error occurred during formatting.
 echo End of batch program. 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Cmd](cmd.md)
 

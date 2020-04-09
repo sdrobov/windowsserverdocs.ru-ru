@@ -5,15 +5,15 @@ ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
 ms.assetid: a6615411-83d9-495f-8a6a-1ebc8b12f164
-manager: brianlic
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 5e1ed095b3180f3aebd25381ec9086445bb141ec
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+manager: dcscontentpm
+ms.author: v-tea
+author: Teresa-Motiv
+ms.openlocfilehash: 2e902f3aea4025afe4f475c45193710a8b474dcd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80316625"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80862227"
 ---
 # <a name="choosing-a-network-adapter"></a>Выбор сетевого адаптера
 
@@ -100,27 +100,27 @@ RSS распределяет входящие сетевые операции в
 
 - **\* макспроцессорс**: задает максимальное число используемых обработчиков RSS. Это гарантирует, что трафик приложения будет привязан к максимальному количеству процессоров на данном интерфейсе. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessors <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessors <value>`
 
 - **\* басепроцессорграуп**: задает группу базовых процессоров узла NUMA. Это влияет на массив процессоров, используемый RSS. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorGroup <value>`
   
 - **\* макспроцессорграуп**: задает максимальную группу процессоров для узла NUMA. Это влияет на массив процессоров, используемый RSS. Установка этого параметра ограничивает максимальную группу процессоров, чтобы балансировка нагрузки была согласована в k-группе. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –MaxProcessorGroup <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –MaxProcessorGroup <value>`
 
 - **\* басепроцессорнумбер**: задает номер базового процессора узла NUMA. Это влияет на массив процессоров, используемый RSS. Это позволяет секционировать процессоры между сетевыми адаптерами. Это первый логический процессор в диапазоне процессоров RSS, назначенных каждому адаптеру. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –BaseProcessorNumber <Byte Value>`
+     `Set-NetAdapterRss –Name "Ethernet" –BaseProcessorNumber <Byte Value>`
 
 - **\* NumaNode**: узел NUMA, из которого каждый сетевой адаптер может выделить память. Это может быть в k-группе или из разных k-групп. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumaNodeID <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumaNodeID <value>`
 
 - **\* нумберофрецеивекуеуес**: Если логические процессоры кажутся недостаточными для приема трафика \(например, как видно в диспетчере задач\), можно попытаться увеличить число очередей RSS со значения по умолчанию 2 до максимального, поддерживаемого сетевым адаптером. Сетевой адаптер может иметь параметры для изменения числа очередей RSS в составе драйвера. Пример синтаксиса:
 
-     `Set-NetAdapterRss –Name “Ethernet” –NumberOfReceiveQueues <value>`
+     `Set-NetAdapterRss –Name "Ethernet" –NumberOfReceiveQueues <value>`
 
 Для получения дополнительных сведений щелкните следующую ссылку, чтобы скачать [масштабируемые сети: устранение узких мест обработки приема — RSS-канал](https://download.microsoft.com/download/5/D/6/5D6EAF2B-7DDF-476B-93DC-7CF0072878E6/NDIS_RSS.doc) в формате Word.
   
@@ -190,7 +190,7 @@ Ethernet                       True         False        True            False  
 Ниже приведен пример выходных данных при выполнении командлета Get-Нетадаптерстатистикс.
 
 ```  
-PS C:\Users\Administrator> $x = Get-NetAdapterStatistics “myAdapter”   
+PS C:\Users\Administrator> $x = Get-NetAdapterStatistics "myAdapter"   
 PS C:\Users\Administrator> $x.rscstatistics  
   
 CoalescedBytes       : 0  

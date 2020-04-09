@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8b900c2b-35b1-4c95-a73d-e5f2e9cf0adb
 title: Поиск дополнительных ресурсов для проектирования логической структуры
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 257e78b58962b5a91d1c3845efdd1452a93efdfb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 562f29bb36f5ff0cc0b2260e29cc31189a1dfa36
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402576"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822477"
 ---
 # <a name="finding-additional-resources-for-logical-structure-design"></a>Поиск дополнительных ресурсов для проектирования логической структуры
 

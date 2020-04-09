@@ -1,24 +1,20 @@
 ---
 title: gpfixup
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2b145410-fc75-4526-932d-f16b7ee3aaef
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e32427369f1664476c81a81353ae8869ec0c2ff3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e0f1ce2e050a3d741f9b2f7a5cce9d2988716106
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375669"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842557"
 ---
 # <a name="gpfixup"></a>gpfixup
 
@@ -36,7 +32,7 @@ Gpfixup [/v]
 [/user:<USERNAME> [/pwd:{<PASSWORD>|*}]] [/?]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |       Параметр       |                                                                                                                                                                                                                               Описание                                                                                                                                                                                                                               |
 |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,12 +47,12 @@ Gpfixup [/v]
 |   /PWD: {\<пароль >   |                                                                                                                                                                                                                                   \*}                                                                                                                                                                                                                                   |
 |          /?           |                                                                                                                                                                                                                  Отображает справку в командной строке.                                                                                                                                                                                                                   |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Команда **гпфиксуп** доступна в windows Server 2008 R2 и windows Server 2008, за исключением случаев установки Server Core.
 -   Несмотря на то, что консоль управления групповыми политиками (GPMC) распространяется с Windows Server 2008 R2 и Windows Server 2008, необходимо установить средство управления групповая политика как компонент с помощью диспетчер сервера.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В этом примере предполагается, что вы уже выполнили операцию переименования домена, в которой имя DNS изменено с **мйолдднснаме** на **Миневднснаме**, а NetBIOS-имя — с **мйолднетбиоснаме** на **миневнетбиоснаме**. В этом примере команда **гпфиксуп** используется для подключения к контроллеру домена с именем **Мидкднснаме** и восстановления объектов групповой политики и групповая политика ссылок путем обновления старого доменного имени, внедренного в объекты групповой политики и ссылки. Состояние и вывод ошибок сохраняются в файл с именем **гпфиксуп. log**.
 ```
@@ -67,8 +63,8 @@ gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /oldnb:MyOldNetBIOSName /newn
 gpfixup /olddns: MyOldDnsName /newdns:MyNewDnsName /dc:MyDcDnsName 2>&1 >gpfixup.log
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Администрирование домен Active Directory переименование](https://go.microsoft.com/fwlink/?LinkId=198385)
 -   [Технический центр групповая политика](https://go.microsoft.com/fwlink/?LinkID=145531)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

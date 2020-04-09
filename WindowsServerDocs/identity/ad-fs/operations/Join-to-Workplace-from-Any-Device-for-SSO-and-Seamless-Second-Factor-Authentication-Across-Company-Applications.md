@@ -1,7 +1,6 @@
 ---
 ms.assetid: e22d84a5-113d-4bec-b484-036ed29f0c28
 title: присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 12/05/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 05a8b8bb5685c31ece29ed8eb38d37a424e478b8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 82c94adadb9241e2b7cd8d75ea1693957aaffc61
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357938"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80816267"
 ---
 # <a name="join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications"></a>присоединение к рабочему месту с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании
 
@@ -31,7 +30,7 @@ ms.locfileid: "71357938"
 ### <a name="workplace-join"></a>Подключение к рабочему месту
 Используя функцию присоединения к рабочему месту, специалисты по работе с информацией могут соединить персональные устройства с рабочими компьютерами компании, чтобы осуществлять доступ к ресурсам и службам компании. После подключения личного устройства к вашему рабочему месту оно становится известным устройством и обеспечивает беспроблемную аутентификацию по второму фактору и единый вход для работы с ресурсами и приложениями на рабочем месте. Если устройство присоединено с помощью функции присоединения к рабочему месту, атрибуты устройства можно извлекать из каталога для получения условного доступа с целью авторизации выпуска маркеров безопасности для приложений. Возможность присоединения устройств Windows 8.1, iOS 6.0+ и Android 4.0+ с использованием функции присоединения к рабочему месту.
 
-### <a name="BKMK_DRS"></a>Служба Регистрация устройств Azure Active Directory
+### <a name="azure-active-directory-device-registration-service"></a><a name="BKMK_DRS"></a>Служба Регистрация устройств Azure Active Directory
 Присоединение к рабочему месту стало возможным благодаря службе регистрации устройств Azure Active Directory. Если устройство присоединено с помощью функции присоединения к рабочему месту, служба регистрации устройств предоставляет объект устройства в Active Directory и настраивает ключ на устройстве потребителя, который используется для представления удостоверения устройства. Затем это удостоверение устройства может использоваться с правилами контроля доступа для приложений, размещенных в облаке и локально.
 
 Дополнительные сведения см. [в разделе Введение в Управление устройствами в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/device-management-introduction).
@@ -54,11 +53,11 @@ ms.locfileid: "71357938"
 
 Эта статья научит вас выполнять следующие шаги пошагового руководства.
 
-1.  [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+1.  [Пошаговое руководство. Workplace Join с устройством Windows](../../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
 
-2.  [Пошаговое руководство: Присоединение к рабочему месту с устройства iOS](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+2.  [Пошаговое руководство. Workplace Join с устройством iOS](../../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
-3.  [Пошаговое руководство: Присоединение к рабочему месту с устройства Android](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
+3.  [Пошаговое руководство. Workplace Join с устройством Android](../../ad-fs/operations/walkthrough--workplace-join-to-an-android-device.md)
 
 ## <a name="see-also"></a>См. также
 [Настройка сервера федерации с помощью службы регистрации устройств](../deployment/configure-a-federation-server-with-device-registration-service.md)

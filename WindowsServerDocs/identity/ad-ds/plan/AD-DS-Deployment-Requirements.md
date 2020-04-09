@@ -1,7 +1,6 @@
 ---
 ms.assetid: e02bb152-d0db-40b0-9942-846dce75f6c7
 title: Требования к развертыванию доменных служб Active Directory
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: a23ba4ac8bbdb076381c8419e3a0821bee364acf
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dff95633b71d42e25aad33793abd609ac61adbdf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71409032"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822927"
 ---
 # <a name="ad-ds-deployment-requirements"></a>Требования к развертыванию доменных служб Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Структура существующей среды определяет стратегию развертывания служб домен Active Directory Windows Server 2008 Services (AD DS). Если вы создаете среду AD DS и у вас нет существующей структуры домена, завершите AD DS структуру, прежде чем приступать к созданию среды AD DS. Затем можно развернуть новый корневой домен леса и развернуть оставшуюся часть структуры домена в соответствии с вашими макетами.  
   

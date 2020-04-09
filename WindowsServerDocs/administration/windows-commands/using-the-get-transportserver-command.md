@@ -1,40 +1,37 @@
 ---
-title: Использование команды Get-Транспортсервер
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: Get-Транспортсервер
+description: Раздел команд Windows для Get-Транспортсервер, который отображает сведения о указанном транспортном сервере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de634123-0179-41b2-9c6f-726508130ff5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 282b69162cf3550c5bcba3282b60f15072c96ed6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 549eb32536bda201a81e5f40ef408359fae39f4b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363071"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80830817"
 ---
-# <a name="using-the-get-transportserver-command"></a>Использование команды Get-Транспортсервер
+# <a name="get-transportserver"></a>Get-Транспортсервер
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о указанном транспортном сервере.
+
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server: <Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |/Show: {config}|Возвращает сведения о конфигурации указанного транспортного сервера.|
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 Чтобы просмотреть сведения о сервере, введите:
 ```
 wdsutil /Get-TransportServer /Show:Config
@@ -43,10 +40,10 @@ wdsutil /Get-TransportServer /Show:Config
 ```
 wdsutil /Get-TransportServer /Server:MyWDSServer /Show:Config
 ```
-#### <a name="additional-references"></a>Дополнительные ссылки
-[Синтаксис командной строки](command-line-syntax-key.md)
-[с помощью команды disable-транспортсервер](using-the-disable-transportserver-command.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+[с помощью команды Disable-Транспортсервер](using-the-disable-transportserver-command.md) ,
 [с помощью команды Enable-транспортсервер](using-the-enable-transportserver-command.md)
- подкоманда[: Set-транспортсервер](subcommand-set-transportserver.md)
-[подкоманда: подкоманда Start-Транспортсервер](subcommand-start-transportserver.md)
-[: останавливается-транспортсервер](subcommand-stop-transportserver.md)
+подкоманде [: Set-транспортсервер](subcommand-set-transportserver.md)
+подкоманде: [Start-транспортсервер](subcommand-start-transportserver.md)
+[подкоманды:-транспортсервер](subcommand-stop-transportserver.md)

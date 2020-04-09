@@ -1,7 +1,6 @@
 ---
 ms.assetid: ac727bd1-a892-47ed-a7ba-439b34187d4e
 title: Описание страниц мастера установки и удаления доменных служб Active Directory
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3563c30e86c53435c10cafc840a71c7b8c526943
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 7370dfed68e22ca88030aec913db4eb52eef9ec3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323256"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825457"
 ---
 # <a name="ad-ds-installation-and-removal-wizard-page-descriptions"></a>Описание страниц мастера установки и удаления доменных служб Active Directory
 
@@ -50,7 +49,7 @@ ms.locfileid: "79323256"
   
 -   [Подтверждение выбора для удаления роли](../../ad-ds/deploy/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions.md#BKMK_ConfirmRoleRemovalPage)  
   
-## <a name="BKMK_DepConfigPage"></a>Конфигурация развертывания  
+## <a name="deployment-configuration"></a><a name="BKMK_DepConfigPage"></a>Конфигурация развертывания  
 Диспетчер серверов начинает установку всех контроллеров домена со страницы **Конфигурация развертывания**. Оставшиеся параметры и обязательные поля меняются на этой и последующих страницах в зависимости от того, какая операция развертывания выбрана. Например, при создании нового леса страница « **Параметры подготовки** » не отображается, но при установке первого контроллера домена под управлением Windows Server 2012 в существующем лесу или домене.  
   
 На этой странице выполняются проверочные тесты, а затем часть проверок предварительных требований. Например, при попытке установить первый контроллер домена Windows Server 2012 в лесу с функциональным уровнем Windows 2000 на этой странице появится ошибка.  
@@ -96,7 +95,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения о добавлении контроллера домена в существующий домен см. [в разделе Установка реплики контроллера домена Windows Server 2012 на существующем уровне домена &#40;200&#41;](../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).  
   
-## <a name="BKMK_DCOptionsPage"></a>Параметры контроллера домена  
+## <a name="domain-controller-options"></a><a name="BKMK_DCOptionsPage"></a>Параметры контроллера домена  
 При создании нового леса на странице параметров контроллера домена отображаются следующие параметры:  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DCOptions_Forest.gif)  
@@ -141,7 +140,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения о добавлении контроллера домена в существующий домен см. [в разделе Установка реплики контроллера домена Windows Server 2012 на существующем уровне домена &#40;200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).  
   
-## <a name="BKMK_DNSOptionsPage"></a>Параметры DNS  
+## <a name="dns-options"></a><a name="BKMK_DNSOptionsPage"></a>Параметры DNS  
 При установке DNS-сервера отображается следующая страница **Параметров DNS**:  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_DNSOptions_Replica.gif)  
@@ -168,7 +167,7 @@ ms.locfileid: "79323256"
   
 -   [Общие сведения о серверах пересылки](https://go.microsoft.com/fwlink/?LinkId=164778) (https://go.microsoft.com/fwlink/?LinkId=164778)  
   
-## <a name="BKMK_RODCOptionsPage"></a>Параметры RODC  
+## <a name="rodc-options"></a><a name="BKMK_RODCOptionsPage"></a>Параметры RODC  
 При установке контроллера домена только для чтения (RODC) отображаются следующие параметры.  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_RODCOptions.gif)  
@@ -183,7 +182,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения об установке RODC см. [в &#40;статье Установка Windows Server 2012 Active Directory контроллер домена только для чтения RODC&#41; &#40;уровня 200&#41;](../../ad-ds/deploy/RODC/Install-a-Windows-Server-2012-Active-Directory-Read-Only-Domain-Controller--RODC---Level-200-.md).  
   
-## <a name="BKMK_AdditionalOptionsPage"></a>Дополнительные параметры  
+## <a name="additional-options"></a><a name="BKMK_AdditionalOptionsPage"></a>Дополнительные параметры  
 При создании нового домена на странице **Дополнительные параметры** отображается следующий параметр:  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_AdditionalOptions_Child.gif)  
@@ -198,7 +197,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения о том, как создать домен, см. [в статье Установка нового Active Directory на 200 &#40;&#41;уровне домена, дочернего или иерархического с помощью Windows Server 2012](../../ad-ds/deploy/../../ad-ds/deploy/../../ad-ds/deploy/Install-a-New-Windows-Server-2012-Active-Directory-Child-or-Tree-Domain--Level-200-.md). Дополнительные сведения о добавлении контроллера домена в существующий домен см. [в разделе Установка реплики контроллера домена Windows Server 2012 на существующем уровне домена &#40;200&#41;](../../ad-ds/deploy/../../ad-ds/deploy/Install-a-Replica-Windows-Server-2012-Domain-Controller-in-an-Existing-Domain--Level-200-.md).  
   
-## <a name="BKMK_Paths"></a>Задания  
+## <a name="paths"></a><a name="BKMK_Paths"></a>Задания  
 На странице **Пути** отображаются следующие параметры.  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_Paths.gif)  
@@ -207,7 +206,7 @@ ms.locfileid: "79323256"
   
 Необходимо указать расположение базы данных AD DS (NTDS.DIT), файлов журнала и SYSVOL. При локальной установке можно перейти к расположению, в которое вы хотите сохранить файлы.  
   
-## <a name="BKMK_AdprepCreds"></a>Параметры подготовки  
+## <a name="preparation-options"></a><a name="BKMK_AdprepCreds"></a>Параметры подготовки  
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_PreparationOptions.gif)  
   
 Если вход с учетными данными, достаточными для запуска команд adprep.exe, не выполнен, а запуск adprep необходим для завершения установки, отображается приглашение ввести учетные данные для запуска adprep.exe. Для добавления первого контроллера домена под управлением Windows Server 2012 в существующий домен или лес требуется выполнение Adprep. Подробнее:  
@@ -220,14 +219,14 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения об Adprep. exe см. в разделе [Интеграция с Adprep](../../ad-ds/deploy/What-s-New-in-Active-Directory-Domain-Services-Installation-and-Removal.md#BKMK_NewAdprep) . exe и в разделе [Выполнение Adprep. exe](https://technet.microsoft.com/library/dd464018(WS.10).aspx).  
   
-## <a name="BKMK_ViewInstallOptionsPage"></a>Параметры проверки  
+## <a name="review-options"></a><a name="BKMK_ViewInstallOptionsPage"></a>Параметры проверки  
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_ReviewOptions.gif)  
   
 -   Страница **Просмотреть параметры** позволяет проверить параметры перед установкой и убедиться, что они отвечают требованиям. Позднее установку также можно будет остановить с помощью диспетчера сервера. Эта страница позволяет просмотреть и подтвердить параметры перед продолжением конфигурации.  
   
 -   На странице **Просмотреть параметры** диспетчера сервера расположена дополнительная кнопка **Просмотреть скрипт** , предназначенная для создания текстового файла в кодировке Юникод, содержащего текущую конфигурацию развертывания ADDSDeployment в виде единого скрипта Windows PowerShell. Это позволяет использовать графический интерфейс диспетчера сервера в качестве студии развертывания Windows PowerShell. С помощью мастера настройки доменных служб Active Directory необходимо настроить параметры, экспортировать конфигурацию и затем отменить мастер. Во время этого процесса создается допустимый и синтаксически верный образец для дальнейшего изменения или прямого использования.  
   
-## <a name="BKMK_PrerqCheckPage"></a>Проверка предварительных требований  
+## <a name="prerequisites-check"></a><a name="BKMK_PrerqCheckPage"></a>Проверка предварительных требований  
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_PrerequisitesCheck.gif)  
   
 Ниже приведены некоторые предупреждения, которые могут отображаться на этой странице:  
@@ -240,7 +239,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения о специальных проверках необходимых компонентов, которые выполняются для установки доменных служб Active Directory, см. в разделе [Проверки необходимых компонентов](../../ad-ds/manage/AD-DS-Simplified-Administration.md#BKMK_ADDSInstallPrerequisiteTests).  
   
-## <a name="BKMK_Results"></a>Результаты  
+## <a name="results"></a><a name="BKMK_Results"></a>Результаты  
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_SMI_SMResultsBeta.gif)  
   
 На этой странице можно просмотреть результаты установки.  
@@ -249,7 +248,7 @@ ms.locfileid: "79323256"
   
 Если в таком случае целевой сервер не перезагружается автоматически, необходимо перезагрузить его вручную. Перезагрузить сервер с помощью таких служебных программ, как shutdown.exe или Windows PowerShell, нельзя. Можно использовать службы удаленных рабочих столов для входа в систему и удаленного завершения работы целевого сервера.  
   
-## <a name="BKMK_RemovalCredsPage"></a>Учетные данные для удаления роли  
+## <a name="role-removal-credentials"></a><a name="BKMK_RemovalCredsPage"></a>Учетные данные для удаления роли  
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_Credentials.gif)  
   
 Параметры понижения уровня настраиваются на странице **Учетные данные** . Учетные данные, необходимые для понижения уровня, представлены в следующем списке:  
@@ -263,7 +262,7 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения об удалении AD DS см. в статье [удаление домен Active Directory служб (уровень 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) и [понижение роли контроллеров &#40;домена и&#41;доменов уровня 200](Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
-## <a name="BKMK_RemovalOptionsPage"></a>Параметры удаления и предупреждения AD DS  
+## <a name="ad-ds-removal-options-and-warnings"></a><a name="BKMK_RemovalOptionsPage"></a>Параметры удаления и предупреждения AD DS  
 Чтобы получить справку об использовании страницы "Просмотрь параметры", см. главу "Просмотрь параметры"  
   
 Если на контроллере домена размещены дополнительные роли, такие как роль DNS-сервера или сервера глобального каталога, появляется следующая страница с предупреждением:  
@@ -298,14 +297,14 @@ ms.locfileid: "79323256"
   
 Дополнительные сведения об удалении AD DS см. в статье [удаление домен Active Directory служб (уровень 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) и [понижение роли контроллеров &#40;домена и&#41;доменов уровня 200](Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
-## <a name="BKMK_NewAdminPwdPage"></a>Новый пароль администратора  
+## <a name="new-administrator-password"></a><a name="BKMK_NewAdminPwdPage"></a>Новый пароль администратора  
 На странице **новый пароль администратора** необходимо указать пароль для встроенной учетной записи администратора локального компьютера, после завершения понижения роли, когда компьютер станет рядовым сервером домена или рабочей группой.  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_NewAdminPwd.gif)  
   
 Дополнительные сведения об удалении AD DS см. в статье [удаление домен Active Directory служб (уровень 100)](assetId:///99b97af0-aa7e-41ed-8c81-4eee6c03eb4c) и [понижение роли контроллеров &#40;домена и&#41;доменов уровня 200](Demoting-Domain-Controllers-and-Domains--Level-200-.md).  
   
-## <a name="BKMK_ConfirmRoleRemovalPage"></a>Параметры проверки  
+## <a name="review-options"></a><a name="BKMK_ConfirmRoleRemovalPage"></a>Параметры проверки  
 На странице **Просмотреть параметры** можно экспортировать параметры конфигурации понижения уровня в сценарий Windows PowerShell для автоматизации дополнительных понижений. Чтобы удалить AD DS, нажмите кнопку **Понизить**.  
   
 ![AD DS установить](media/AD-DS-Installation-and-Removal-Wizard-Page-Descriptions/ADDS_RRW_ReviewOptions.gif)  

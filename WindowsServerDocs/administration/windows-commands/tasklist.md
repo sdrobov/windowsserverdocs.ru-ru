@@ -1,24 +1,20 @@
 ---
 title: tasklist
 description: Сведения о том, как отобразить список процессов, запущенных на локальном или удаленном компьютере.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8dbe30ee-1484-46be-917b-5ca3ff4fdc9c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f7ad61dfe8beb86c8299dd71bec1d862805e50e0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b43f4c9a89fa60f2244253d48d3dca646fe8e02d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383679"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833437"
 ---
 # <a name="tasklist"></a>tasklist
 
@@ -32,7 +28,7 @@ ms.locfileid: "71383679"
 tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module> | /svc | /v}] [/fo {table | list | csv}] [/nh] [/fi <Filter> [/fi <Filter> [ ... ]]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |          Параметр           |                                                                                                                                            Описание                                                                                                                                             |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,29 +41,29 @@ tasklist [/s <Computer> [/u [<Domain>\]<UserName> [/p <Password>]]] [{/m <Module
 |  /FO {Table \| List \| CSV}  |                                                                             Указывает формат, используемый для выходных данных. Допустимые значения: **Table**, **List**и **CSV**. Формат выходных данных по умолчанию — **Table**.                                                                             |
 |             использован              |                                                                                             Подавляет вывод заголовков столбцов в выходных данных. Допустим, если для параметра **/FO** задано значение **Table** или **CSV**.                                                                                              |
 |        /Fi \<фильтр >         |                                                                          Указывает типы процессов, включаемых в запрос или исключаемых из него. Допустимые имена фильтров, операторы и значения см. в следующей таблице.                                                                          |
-|              /?              |                                                                                                                                Отображение справки в командной строке.                                                                                                                                |
+|              /?              |                                                                                                                                Отображает справку в командной строке.                                                                                                                                |
 
 ### <a name="filter-names-operators-and-values"></a>Имена фильтров, операторы и значения
 
 | Имя фильтра |    Допустимые операторы     |                                                                 Допустимые значения                                                                 |
 |-------------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-|   СОСТОЯНИЕ    |         eq, ne         |                                                                   УСТАНОВЛЕН                                                                    |
+|   STATUS    |         eq, ne         |                                                                   РАБОТАЕТ                                                                    |
 |  IMAGENAME  |         eq, ne         |                                                                  Имя образа                                                                  |
 |     ИД процесса     | eq, ne, gt, lt, ge, le |                                                                  Значение PID                                                                   |
 |   СЕССИИ   | eq, ne, gt, lt, ge, le |                                                                Номер сеанса                                                                |
 | SESSIONNAME |         eq, ne         |                                                                 Имя сеанса                                                                 |
 |   CPUTIME   | eq, ne, gt, lt, ge, le | Время ЦП в формате <em>чч</em> **:** <em>мм</em> **:** <em>СС</em>, где *mm* и *SS* находятся в диапазоне от 0 до 59, а *чч* — любое число без знака |
 |  мемусаже   | eq, ne, gt, lt, ge, le |                                                              Использование памяти в КБ                                                              |
-|  ИМЕН   |         eq, ne         |                                                             Любое допустимое имя пользователя                                                              |
-|  Обслуживание   |         eq, ne         |                                                                 Название службы                                                                 |
+|  ИМЯ ПОЛЬЗОВАТЕЛЯ   |         eq, ne         |                                                             Любое допустимое имя пользователя                                                              |
+|  Обслуживание   |         eq, ne         |                                                                 Имя службы                                                                 |
 | WINDOWTITLE |         eq, ne         |                                                                 Заголовок окна                                                                 |
 |   МОДУЛЕ   |         eq, ne         |                                                                   Имя DLL                                                                   |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Фильтры WINDOWTITLE и STATUS не поддерживаются, если указана удаленная система.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 
 Чтобы получить список всех задач с ИДЕНТИФИКАТОРом процесса, превышающим 1000, и отобразить их в формате CSV, введите:
 ```
@@ -94,6 +90,6 @@ tasklist /s srvmain
 tasklist /s srvmain /u maindom\hiropln /p p@ssW23
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,6 +1,5 @@
 ---
 title: Необходимые условия для планирования восстановления Active Directory леса
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: c49b40b2-598d-49aa-85b4-766bce960e0d
 ms.technology: identity-adds
-ms.openlocfilehash: fddd5e236774c7f054ccd6332eb45d4f03afdf3f
-ms.sourcegitcommit: a33404f92867089bb9b0defcd50960ff231eef3f
+ms.openlocfilehash: 6dcd1185ba4d4c847cfe212f78ccc9661fd2aead
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77013009"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823787"
 ---
 # <a name="active-directory-forest-recovery-prerequisites"></a>Предварительные требования для восстановления Active Directory леса
 
@@ -51,7 +50,7 @@ ms.locfileid: "77013009"
 
 Кроме того, необходимо регулярно выполнять резервное копирование и восстановление AD DS и SYSVOL в лабораторной среде. Дополнительные сведения см. [в разделе Резервное копирование данных о состоянии системы](AD-Forest-Recovery-Procedures.md) и [выполнение неполномочного восстановления служб домен Active Directory](AD-Forest-Recovery-Procedures.md).
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
 > [Восстановление леса AD — необходимые условия](AD-Forest-Recovery-Prerequisties.md)

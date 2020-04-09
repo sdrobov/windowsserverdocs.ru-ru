@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD — процедуры
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 47a471fb-3b0b-4aa8-8525-1c92d0d51e93
 ms.technology: identity-adds
-ms.openlocfilehash: 0d427448c8d2a6616b87a524bcc941fc8555cbd4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 37422ce09d02615a6048142695820200388661a6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390313"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823768"
 ---
 # <a name="ad-forest-recovery---procedures"></a>Восстановление леса AD — процедуры
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 Этот раздел содержит процедуры, связанные с процессом восстановления леса. Процедуры применимы к Windows Server 2016, 2012 R2, 2012 и также применимы к Windows Server 2008 R2 и 2008 с некоторыми небольшими исключениями.
 

@@ -1,26 +1,22 @@
 ---
-title: средство
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: writer
+description: Раздел команд Windows для модуля записи, который проверяет, включен ли модуль записи или компонента из процедуры резервного копирования или восстановления или исключен из него.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7cf98295-411d-4705-8573-f898ff45c140
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6c00f6067cd5f6cf741cddbd6d62c5bcbb1f37a9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb13de162b8e5eb8150d145a4afacccf47bb25f0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361861"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828987"
 ---
-# <a name="writer"></a>средство
+# <a name="writer"></a>writer
 
 
 
@@ -33,25 +29,25 @@ writer verify [<Writer> | <Component>]
 writer exclude [<Writer> | <Component>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр  |                                                                                      Описание                                                                                      |
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|   проверить   | Проверяет, что указанный модуль записи или компонент включен в процедуру резервного копирования или восстановления. Процедура резервного копирования или восстановления завершится ошибкой, если модуль записи или компонент не включен. |
+|   проверка   | Проверяет, что указанный модуль записи или компонент включен в процедуру резервного копирования или восстановления. Процедура резервного копирования или восстановления завершится ошибкой, если модуль записи или компонент не включен. |
 |  exclude   |                                                   Исключает указанный модуль записи или компонент из процедуры резервного копирования или восстановления.                                                    |
 | [модуль записи\<> |                                                                                     <Component>]                                                                                      |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы проверить модуль записи, указав его идентификатор GUID (для этого примера — 4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f), введите:
 ```
 writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 ```
-Чтобы исключить модуль записи с именем "модуль записи системы", введите:
+Чтобы исключить модуль записи с модулем записи системы имен, введите:
 ```
-writer exclude "System Writer"
+writer exclude System Writer
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

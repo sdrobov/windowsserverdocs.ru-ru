@@ -1,24 +1,20 @@
 ---
 title: PowerShell_ise
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 32c41b5b-a210-47d9-bd8c-91eb9830b4f0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 65d8b9e7b7952ec64cd24e8106802cf66de693c6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6ae96dcd40c894e0a528c06b461173f626fb2d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372188"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837397"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
@@ -28,7 +24,7 @@ ms.locfileid: "71372188"
 
 Средство **PowerShell_ISE. exe** запускает сеанс интегрированной среды сценариев Windows PowerShell. При использовании **PowerShell_ISE. exe**можно использовать его необязательные параметры для открытия файлов в интегрированной среде сценариев Windows PowerShell или для запуска сеанса интегрированной среды сценариев Windows PowerShell без профиля или с многопоточным апартаментом.
 
-**PowerShell_ISE. exe** впервые появился в windows PowerShell 2,0 и значительно увеличился в windows PowerShell 3,0.
+**PowerShell_ISE. exe** был впервые появился в windows PowerShell 2,0 и значительно увеличился в windows PowerShell 3,0.
 
 ## <a name="using-powershell_iseexe"></a>Использование PowerShell_ISE. exe
 
@@ -68,4 +64,4 @@ Windows PowerShell выполняется в варианте установки
 [about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512)
 [about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439)
 [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
-[написание сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также
+[сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также

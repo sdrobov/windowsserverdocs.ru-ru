@@ -9,15 +9,15 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: f9fb3cf46afb7e96c13fb623bc8f4fe67c1f3694
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 70c881cc02f31614160920766d32d73a3a939315
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376814"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844067"
 ---
 # <a name="fsutil-sparse"></a>Fsutil sparse
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Управляет разреженными файлами.
 
@@ -32,7 +32,7 @@ fsutil sparse [setflag] <FileName>
 fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |     Параметр     |                                                    Описание                                                    |
 |-------------------|-------------------------------------------------------------------------------------------------------------------|
@@ -54,15 +54,15 @@ fsutil sparse [setrange] <FileName> <BeginningOffset> <Length>
 
 -   Если файл Разреженный или сжатый, NTFS может освободить место на диске в файле. Этот параметр задает для диапазона байтов нулевое значение без увеличения размера файла.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 Чтобы пометить файл с именем Sample. txt в каталоге C:\Temp как разреженный, введите:
 
 ```
 fsutil sparse setflag c:\temp\sample.txt 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
-[Условные обозначения синтаксиса команд командной строки](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

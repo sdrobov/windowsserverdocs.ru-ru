@@ -1,34 +1,29 @@
 ---
 ms.assetid: 9a06cd41-426f-4cb9-89cf-f5be730e0b79
-title: Новые&#39;возможности домен Active Directory Services
-ms.custom: na
+title: Новые возможности доменных служб Active Directory
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: ''
-ms.suite: na
 ms.technology: active-directory-domain-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: Femila
 ms.author: billmath
 ms.date: 05/31/2017
-ms.openlocfilehash: 064ccf80faf77bbf128351a78ea437730983bf06
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 5e58bb229aa8fe02fb20f870a0e922d1aa8c34b7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948196"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825647"
 ---
-# <a name="what39s-new-in-active-directory-domain-services"></a>Новые&#39;возможности домен Active Directory Services 
+# <a name="whats-new-in-active-directory-domain-services"></a>Новые возможности доменных служб Active Directory 
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
-Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить на облачные развертывания и гибридные развертывания, где некоторые приложения и службы размещается в облаке, а другие — локально. В них сочетаются все лучшие возможности веб-заданий, а также добавлены некоторые улучшения, среди которых:  
+Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить к облачным развертываниям и гибридным развертываниям, где некоторые приложения и службы размещаются в облаке, а другие — в локальной среде. К улучшениям относятся:  
   
 -   [Управление привилегированным доступом](https://technet.microsoft.com/library/mt150258.aspx   
 )  
   
-- [Использование возможностей облачных служб на устройствах с Windows 10 с помощью присоединения к Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)   
+- [Расширение возможностей облака для устройств Windows 10 с помощью Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)   
   
 - [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)   
   
@@ -37,7 +32,7 @@ ms.locfileid: "75948196"
 -  [Устаревшие функциональные уровни службы репликации файлов (FRS) и Windows Server 2003](ad-ds/active-directory-functional-levels.md)  
   
   
-## <a name="BKMK_PAM"></a>Управление привилегированным доступом  
+## <a name="privileged-access-management"></a><a name="BKMK_PAM"></a>Управление привилегированным доступом  
 Управление привилегированным доступом (PAM) помогает устранить проблемы безопасности в средах Active Directory, которые вызываются методами кражи учетных данных, такими как Pass-The-Hash, Спиар фишинг и аналогичные типы атак. Он предоставляет новое решение для административного доступа, настроенное с помощью Microsoft Identity Manager (MIM). PAM предоставляет следующие сведения:  
   
 -   Новый лес Active Directory бастиона, который подготавливается MIM. Лес бастиона имеет особое отношение доверия PAM с существующим лесом. Она предоставляет новую Active Directory среду, которая может быть свободна от вредоносных действий, и изоляция из существующего леса для использования привилегированных учетных записей.  
@@ -55,16 +50,16 @@ ms.locfileid: "75948196"
   
 -   Новые возможности мониторинга, позволяющие легко определить, кто запросил доступ, какой доступ был предоставлен и какие действия были выполнены.  
   
-**Requirements**  
+**Необходимость**  
   
--   Диспетчер удостоверений (Майкрософт)  
+-   Microsoft Identity Manager  
   
 -   Функциональный уровень леса Active Directory Windows Server 2012 R2 или более поздней версии.  
   
-## <a name="BKMK_AzureADJoin"></a>Присоединение к Azure AD  
+## <a name="azure-ad-join"></a><a name="BKMK_AzureADJoin"></a>Присоединение к Azure AD  
 Azure Active Directory Присоединяйтесь к расширению возможностей идентификации для корпоративных, коммерческих и образовательных клиентов с улучшенными возможностями для корпоративных и персональных устройств.  
   
-Преимущества:  
+Преимущества  
   
 -   **Доступность современных параметров** на устройствах Windows, принадлежащих Corp. Службам кислорода больше не требуется личная учетная запись Майкрософт: теперь они работают с существующими рабочими учетными записями пользователей, чтобы обеспечить соответствие. Службы кислорода будут работать на компьютерах, которые присоединены к локальному домену Windows, а компьютеры и устройства, присоединенные к вашему клиенту Azure AD ("Облачный домен"). К ним относятся:  
   
@@ -92,14 +87,14 @@ Azure Active Directory Присоединяйтесь к расширению в
   
 Дополнительные сведения см. в статье [Windows 10 для предприятий: способы использования устройств для работы](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1).  
   
-## <a name="BKMK_IDLocker"></a>Microsoft Passport  
+## <a name="microsoft-passport"></a><a name="BKMK_IDLocker"></a>Microsoft Passport  
 Microsoft Passport — это новый подход к проверке подлинности на основе ключей Организации и потребители, который выходит за пределы паролей. Такая форма проверки подлинности зависит от нарушений, кражи и учетных данных, которые защищены от фишинга.  
   
 Пользователь входит в систему на устройстве с помощью биометрического или ПИН-кода, который связан с сертификатом или парой асимметричных ключей. Поставщики удостоверений (поставщиков удостоверений) проверяют пользователя, сопоставляя открытый ключ пользователя с Идлоккер, и предоставляет сведения для входа в систему через один раз пароль (OTP), Phonefactor или другой механизм уведомления.  
   
 Дополнительные сведения см. в статье [Проверка подлинности удостоверений без паролей с помощью Microsoft Passport](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport/)  
   
-## <a name="BKMK_FRSDeprecation"></a>Устаревшие функциональные уровни службы репликации файлов (FRS) и Windows Server 2003  
+## <a name="deprecation-of-file-replication-service-frs-and-windows-server-2003-functional-levels"></a><a name="BKMK_FRSDeprecation"></a>Устаревшие функциональные уровни службы репликации файлов (FRS) и Windows Server 2003  
 Хотя служба репликации файлов (FRS) и функциональные уровни Windows Server 2003 стали устаревшими в предыдущих версиях Windows Server, она повторяет, что операционная система Windows Server 2003 больше не поддерживается. В результате все контроллеры домена, работающие под управлением Windows Server 2003, необходимо удалить из домена. Режим работы домена и леса должен быть повышен по крайней мере до Windows Server 2008, чтобы не допустить добавления в среду контроллера домена, на котором выполняется более ранняя версия Windows Server.  
   
 В режимах работы домена Windows Server 2008 и более новых версий для репликации содержимого папки SYSVOL между контроллерами домена используется репликация службы распределенных файловых систем (DFS). Если вы создаете домен в режиме работы домена Windows Server 2008 или более новых версий, для репликации SYSVOL автоматически используется репликация DFS. Если вы создаете домен в более низком режиме работы, необходимо перейти от репликации FRS к DFS для SYSVOL. Чтобы выполнить переход, можно следовать [инструкциям в TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) или ознакомиться с [упрощенным набором шагов в блоге Microsoft File Cabinet группы разработчиков хранилища](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).  

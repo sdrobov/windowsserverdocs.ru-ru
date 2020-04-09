@@ -1,24 +1,20 @@
 ---
 title: prompt
 description: Узнайте, как настроить командную строку.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3d98e965-02eb-46ad-9d0a-5dc44830373e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 2df80d3af6344644a68b1b2d01ba48fbf41f1581
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6662cb7fb00b7d21311fef2ca127ba89591a00b2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372018"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837137"
 ---
 # <a name="prompt"></a>prompt
 
@@ -34,14 +30,14 @@ ms.locfileid: "71372018"
 prompt [<Text>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<текста >|Задает текст и сведения, которые необходимо включить в командную строку.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 В командной строке можно настроить отображение любого текста, включая такие сведения, как имя текущего каталога, время и дата, а также номер версии Microsoft Windows.
 
@@ -65,7 +61,7 @@ prompt [<Text>]
 |    $a     |                                & (амперсанд)                                |
 |    $c     |                            ((левая круглая скобка)                             |
 |    $f     |                            ) (правая круглая скобка)                            |
-|    $s     |                                    место                                    |
+|    $s     |                                    на диске                                    |
 
 Если расширения команд включены (то есть по умолчанию), команда **Prompt** поддерживает следующие символы форматирования:  
 
@@ -76,7 +72,7 @@ prompt [<Text>]
 
 Если включить **$p** символ в текстовый параметр, диск считывается после ввода каждой команды (для определения текущего диска и пути). Это может занять некоторое время, особенно для дисководов гибких дисков.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 
 Чтобы установить в командной строке с двумя строками текущее время и дату в первой строке и знак "больше чем" на следующей строке, введите:
 ```
@@ -96,6 +92,6 @@ prompt --$g
 prompt $p$g
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

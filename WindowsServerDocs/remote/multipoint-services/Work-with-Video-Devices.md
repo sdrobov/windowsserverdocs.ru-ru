@@ -1,24 +1,20 @@
 ---
 title: Работа с видеоустройствами
 description: Узнайте, как видео мониторы и проекторы работают с станциями в службах MultiPoint.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f7f5a97-efd2-4184-8ad3-cf029d615eab
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: b7019000c99295204f196ee918129cded02e084f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6b967d4523058fe1dfcb086e5918f84257bd51bf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389250"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820447"
 ---
 # <a name="work-with-video-devices"></a>Работа с видеоустройствами
 Узнайте, как работают видеоустройства (такие как монитор или проектор), подключенные к компьютеру в системе MultiPoint Services или к *станции* MultiPoint Services.  
@@ -53,9 +49,9 @@ ms.locfileid: "71389250"
   
 -   Для передачи сигнала между разъемами DVI и VGA может потребоваться адаптер или переходник.  
   
--   Использование Y-образного разветвителя может ухудшить качество видео на обоих видеоустройствах.  
+-   Использование кабеля-разделителя "Y" может снизить качество видео на обоих видеоустройствах.  
   
--   При подключении проектора и монитора через Y-образный разветвитель в MultiPoint Services выбирается наименьшее максимальное разрешение экрана, поддерживаемое устройствами (обычно это разрешение проектора).  
+-   При использовании как проектора, так и монитора с помощью кабеля-разделителя "Y" службы MultiPoint настраивают разрешение экрана для обоих устройств до наименьшего максимального разрешения любого устройства — обычно это проектор.  
   
 -   Службы MultiPoint не поддерживают расширение экрана одной станции на нескольких мониторах.  
   

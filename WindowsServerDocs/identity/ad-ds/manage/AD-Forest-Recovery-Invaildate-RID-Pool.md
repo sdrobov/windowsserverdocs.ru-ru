@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD — непроверяемый пул RID
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 2f5f84df-bd85-4ca4-bdd3-835bd1d45c11
 ms.technology: identity-adds
-ms.openlocfilehash: c3c477e21a455e5e5777da00b064ca7a02672571
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9e693f6f30fb721897eaaac89b3d146c57e0e63f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390409"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823927"
 ---
 # <a name="ad-forest-recovery---invalidating-the-current-rid-pool"></a>Восстановление леса Active Directory — непроверка текущего пула RID  
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 Используйте следующую процедуру в Windows PowerShell, чтобы сделать недействительным текущий пул RID на контроллере домена. Windows PowerShell по умолчанию включен в Windows Server 2012 и Windows Server 2008 R2, но не в Windows Server 2008, где его необходимо установить с помощью **функции Добавить компоненты**. Его можно [загрузить](https://www.microsoft.com/download/details.aspx?id=20020) для запуска на Windows Server 2003.  
 

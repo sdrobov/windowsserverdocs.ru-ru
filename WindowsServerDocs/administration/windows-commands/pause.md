@@ -1,24 +1,20 @@
 ---
 title: pause
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cab3afc3-d046-432f-a0bf-6282f0099032
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6501859eacf30dd6c1e64f34eee29ff81bd78ec9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 135d074a71c7153cc1665ad7b543bdba56ed66e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372372"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837687"
 ---
 # <a name="pause"></a>pause
 
@@ -36,11 +32,11 @@ Press any key to continue . . .
 pause
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -55,7 +51,7 @@ pause
   Если нажать клавишу Y (да) в ответ на это сообщение, пакетная программа завершает работу и управление возвращается операционной системе.
 - Команду **Pause** можно вставить перед разделом пакетного файла, который, возможно, не будет обрабатываться. Когда **Pause** приостанавливает обработку пакетной программы, можно нажать клавиши CTRL + C, а затем нажать клавишу Y, чтобы остановить пакетную программу.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы создать пакетную программу, предлагающую пользователю изменить диски на одном из дисков, введите:
 ```
@@ -68,6 +64,6 @@ goto begin
 ```
 В этом примере все файлы на диске в диск A копируются в текущий каталог. После того как в сообщении появится запрос на добавление нового диска в дисковод а, команда **Pause** приостанавливает обработку, чтобы можно было изменить диски и нажать любую клавишу, чтобы возобновить обработку. Эта пакетная программа выполняется в бесконечном цикле — команда **goto Begin** отправляет интерпретатор команд в начальную метку пакетного файла. Чтобы прерывать выполнение этой пакетной программы, нажмите клавиши CTRL + C, а затем нажмите клавишу Y.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

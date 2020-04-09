@@ -1,30 +1,26 @@
 ---
 title: bitsadmin
-description: Раздел команд Windows для **битсадмин** -битсадмин — это программа командной строки, которую можно использовать для создания, загрузки и передачи заданий, а также для отслеживания хода их выполнения.
-ms.custom: na
+description: Раздел команд Windows для битсадмин, который представляет собой средство командной строки, используемое для создания, загрузки и передачи заданий и отслеживания хода выполнения.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4853036e-1df8-45ad-8be6-cfb097b8dd27
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b53293b28a83ecced34d248741996c958531d517
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ae6536b5c149f54bbfd37a5e0e814ffaa09a6bae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380105"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848747"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
 > Область **применения**: Windows Server (половина ежегодного канала), windows Server 2016, windows Server 2012 R2, windows Server 2012, Windows 10
 
-битсадмин — это программа командной строки, которую можно использовать для создания заданий скачивания или отправки и отслеживания хода их выполнения. Средство битсадмин использует параметры для указания выполняемой работы.  Чтобы получить список параметров, можно вызвать `bitsadmin /?` или `bitsadmin /HELP`.
+Битсадмин — это программа командной строки, которую можно использовать для создания заданий скачивания или отправки и отслеживания хода их выполнения. Средство битсадмин использует параметры для указания выполняемой работы.  Чтобы получить список параметров, можно вызвать `bitsadmin /?` или `bitsadmin /HELP`.
 
 Для большинства параметров требуется \<задание\> параметр, для которого задано отображаемое имя задания, или GUID. Обратите внимание, что отображаемое имя задания может быть неуникальным. Параметры **/CREATE** и **/List** возвращают идентификатор GUID задания.
 
@@ -34,7 +30,7 @@ ms.locfileid: "71380105"
 
 Используйте следующие параметры для создания задания, задания и получения свойств задания, а также для наблюдения за состоянием задания. Примеры, демонстрирующие использование некоторых из этих параметров для выполнения задач, см. в разделе [битсадмин examples](bitsadmin-examples.md).
 
-## <a name="switches"></a>Аргументы
+## <a name="switches"></a>Коммутаторы
 
 [bitsadmin addfile](bitsadmin-addfile.md)  
 [bitsadmin addfileset](bitsadmin-addfileset.md)  

@@ -1,28 +1,22 @@
 ---
 title: битсадмин util и енаблеаналитикчаннел
-description: Раздел команд Windows для **битсадмин util и енаблеаналитикчаннел** — включает или отключает канал АНАЛИТИКИ клиента BITS.
-ms.custom: na
+description: Команды Windows для битсадмин util и енаблеаналитикчаннел, которые включают или отключают канал аналитики клиента службы BITS.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0d7645aa-b91b-4ed7-b630-a1e1be6f6ae9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2c73c704e0c49c6f8309ce0a5c9646afb3392f79
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7302c9368649d47cd65110f4a515b527d3df2aac
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380259"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848987"
 ---
 # <a name="bitsadmin-util-and-enableanalyticchannel"></a>битсадмин util и енаблеаналитикчаннел
-
-
 
 Включает или отключает аналитический канал клиента BITS.
 
@@ -32,13 +26,13 @@ ms.locfileid: "71380259"
 bitsadmin /Util /EnableAnalyticChannel TRUE|FALSE
 ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере включается канал аналитики клиента BITS.
 ```
 C:\>bitsadmin /Util / EnableAnalyticChannel TRUE
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -2,24 +2,22 @@
 title: Планирование сетей Hyper-V в Windows Server
 description: Описывает, что необходимо для основных сетей в Hyper-V и содержит ссылки на инструкции
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f09bc82d0dd47d3393dd05dcf03913db11e4c335
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3127c9579493ad8b317667b61de88304fd14f6cf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392505"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860767"
 ---
 # <a name="plan-for-hyper-v-networking-in-windows-server"></a>Планирование сетей Hyper-V в Windows Server
 
->Область применения. Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
+>Область применения: Microsoft Hyper-V Server 2016, Windows Server 2016, Microsoft Hyper-V Server 2019, Windows Server 2019
   
 Основное представление о работе в сети в Hyper-V помогает спланировать сетевые подключения для виртуальных машин. В этой статье также рассматриваются некоторые рекомендации по работе с сетью при использовании динамической миграции и использовании Hyper-V с другими функциями и ролями сервера.  
   

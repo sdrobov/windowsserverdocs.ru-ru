@@ -1,35 +1,32 @@
 ---
 title: набор Telnet
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для Telnet Set, который задает параметры.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 67316b5f-9c6f-43e3-86d5-dcff9ae2ac3e vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e39e2812edc9cd5f169a046def26beebda1d007e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f8fefc18bde39713c3864361118ff4440ca12b0d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383623"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833167"
 ---
 # <a name="telnet-set"></a>Telnet: задать
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает параметры.   
+
 ## <a name="syntax"></a>Синтаксис  
 ```  
 set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] [logging] [mode {console | stream}] [ntlm] [term {ansi | vt100 | vt52 | vtnt}] [?]  
 ```  
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                                                                                              Описание                                                                                                                                              |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,19 +36,19 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |                Escape-<Character>                | Задает escape-символ, используемый для ввода запроса клиента Telnet. Escape-символ может быть одиночным символом или сочетанием клавиши **CTRL** и символа. Чтобы задать сочетание клавиш управления, удерживайте нажатой клавишу **CTRL** при вводе символа, который требуется назначить. |
 |                    локалечо                     |                                                                                                                                         Включает локальный вывод.                                                                                                                                          |
 |                файл журнала <FileName>                |                                                                                               Записывает текущий сеанс Telnet в локальный файл. Ведение журнала начинается автоматически при выборе этого параметра.                                                                                               |
-|                     logging                      |                                                                                                                  Включает ведение журнала. Если файл журнала не задан, выводится сообщение об ошибке.                                                                                                                   |
+|                     ведение журналов                      |                                                                                                                  Включает ведение журнала. Если файл журнала не задан, выводится сообщение об ошибке.                                                                                                                   |
 |           режим {экран &#124; консоли}           |                                                                                                                                       Задает режим работы.                                                                                                                                        |
 |                       NTLM                       |                                                                                                                                     Включает проверку подлинности NTLM.                                                                                                                                     |
 | термин {ANSI &#124; VT100 &#124; VT52 &#124; VTNT} |                                                                                                                                        Задает тип терминала.                                                                                                                                        |
 |                        ?                         |                                                                                                                                    Отображает справку для этой команды.                                                                                                                                    |
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 1. Для выключения ранее установленного параметра можно **использовать команду unset.**  
 2. В версиях Telnet, отличных от английской, доступен <option> **набора кода** . Набор **кодов** <option> задает для текущего кода значение, которое может быть любым из следующих: **SHIFT JIS**, **японский EUC**, **JIS кандзи**, **JIS кандзи (78)** , **кандзи**( **NEC**), кандзи. Необходимо задать тот же набор кодов на удаленном компьютере.  
-   ## <a name="BKMK_Examples"></a>Примеров  
+   ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
    Укажите файл журнала и начните запись в локальный файл тнлог. txt.  
    ```  
    set logfile tnlog.txt  
    ```  
-   ## <a name="additional-references"></a>Дополнительные ссылки  
-3. [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+   ## <a name="additional-references"></a>Дополнительные материалы  
+3. - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

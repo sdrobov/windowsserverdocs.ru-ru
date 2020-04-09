@@ -1,28 +1,22 @@
 ---
 title: set_2
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для set_2, который задает контекст, параметры, режим подробного протоколирования и файл метаданных для создания теневой копии.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: acf24663-1a50-4321-b48d-1717655e9476
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e91bee5f0d351e461d16ccd22478d67f26887728
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fa467625997824a11b2303572a063d591f59bdd6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370915"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834387"
 ---
 # <a name="set_2"></a>set_2
-
-
 
 Задает контекст, параметры, подробный режим и файл метаданных для создания теневой копии. Если используется без параметров, **установите** список всех текущих параметров.
 
@@ -40,12 +34,12 @@ set metadata <MetaData.cab>
 
 |Подкоманда|Описание|
 |-----------|-----------|
-|Локального|Задает контекст для создания теневой копии. Синтаксис и параметры см. в разделе [Set context](set-context.md) .|
-|варианты|Задает параметры для создания теневой копии. См. раздел [Set Option](set-option.md) для синтаксиса и параметров.|
+|context|Задает контекст для создания теневой копии. Синтаксис и параметры см. в разделе [Set context](set-context.md) .|
+|параметр|Задает параметры для создания теневой копии. См. раздел [Set Option](set-option.md) для синтаксиса и параметров.|
 |подробный|Включает или выключает режим подробных выходных данных. Синтаксис и параметры см. в разделе [Set verbose](set-verbose.md) .|
 |метаданные|Задает имя и расположение файла метаданных для создания теневой копии. См. раздел [Задание метаданных](set-metadata.md) для синтаксиса и параметров.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса Active Directory — очистка метаданных удаленных контроллеров домена
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
 ms.technology: identity-adds
-ms.openlocfilehash: cc41170051e55fbaeca048ac587ecd3351cd53ad
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b9ba00939ccb2ee747501733fb9654edb4c8132e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824257"
 ---
 # <a name="ad-forest-recovery---cleaning-metadata-of-removed-writable-domain-controllers"></a>Восстановление леса AD — очистка метаданных удаленных контроллеров домена с возможностью записи
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 Очистка метаданных удаляет Active Directory данные, которые идентифицируют контроллер домена в системе репликации.  
 
@@ -41,7 +40,7 @@ ms.locfileid: "71369274"
 1. На **начальном экране** выберите **Администрирование**, а затем выберите пункт **Пользователи и компьютеры Active Directory**.  
 2. В дереве консоли дважды щелкните контейнер домен, а затем дважды щелкните организационное подразделение **контроллеров домена** (OU).  
 3. В области сведений щелкните правой кнопкой мыши контроллер домена, который необходимо удалить, и выберите команду **Удалить**.
-   ![Удаление](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
+   ![Удалить](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
 4. Нажмите кнопку **Да** для подтверждения удаления. Установите флажок **этот контроллер домена постоянно отключен и не может быть понижен с помощью мастер установки доменных служб Active Directory (Dcpromo)** и нажмите кнопку **Удалить**.  
 5. Если контроллер домена был сервером глобального каталога, нажмите кнопку **Да** подтвердить удаление.  
 

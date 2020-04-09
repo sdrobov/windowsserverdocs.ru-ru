@@ -1,24 +1,20 @@
 ---
 title: Важные сведения о соответствии требованиям лицензионных соглашений
 description: Предоставляет сведения о лицензиях в службах MultiPoint.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cd42fbac-fa7b-484d-b97d-3911e9180e7b
 author: lizap
 manager: dongill
 ms.author: elizapo
-ms.openlocfilehash: 100566b5d27e4d142307b3043d341833b99c4e3b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dc1c070542369881566cc953a17b34c072882c39
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71388954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814627"
 ---
 # <a name="important-information-about-software-license-compliance"></a>Важные сведения о соответствии требованиям лицензионных соглашений
 Необходимо соблюдать условия лицензионного соглашения для программ, используемых в системе служб MultiPoint. Необходимо также иметь правильное количество лицензий для количества *станций* , добавляемых в систему служб MultiPoint, как описано в следующих разделах.  

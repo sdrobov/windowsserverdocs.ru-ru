@@ -1,54 +1,49 @@
 ---
 title: bitsadmin getreplyfilename
-description: Раздел команд Windows для **битсадмин жетреплифиленаме** . Получает путь к файлу, содержащему ответ сервера.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин жетреплифиленаме**, который получает путь к файлу, содержащему ответ на отправку сервера для задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85447184-1732-4816-a365-2e3599551bf8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96b77e9bd19cdc094e6b025e143b05aff7bc60d5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 541a6e60d641405b5da2e65fecbbbe87468c8702
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850497"
 ---
 # <a name="bitsadmin-getreplyfilename"></a>bitsadmin getreplyfilename
 
-Возвращает путь к файлу, содержащему ответ сервера.
+Возвращает путь к файлу, содержащему ответ на отправку сервера для задания.
 
-**BITS 1,2 и более ранних версий**: Не поддерживается.
+> [!NOTE]
+> Эта команда не поддерживается в БИТАХ 1,2 и более ранних версиях.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetReplyFileName <Job>
+bitsadmin /getreplyfilename <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
 
-Допустимо только для заданий отправки и ответа.
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
-## <a name="BKMK_examples"></a>Примеров
+В следующем примере извлекается имя файла ответа для отправки для задания с именем *мидовнлоаджоб*.
 
-В следующем примере извлекается имя файла ответа для задания с именем *мидовнлоаджоб*.
 ```
-C:\>bitsadmin /GetReplyFileName myDownloadJob
+C:\>bitsadmin /getreplyfilename myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

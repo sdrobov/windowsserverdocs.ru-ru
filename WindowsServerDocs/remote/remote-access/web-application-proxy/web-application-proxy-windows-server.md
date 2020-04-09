@@ -1,25 +1,25 @@
 ---
 ms.assetid: d8adcb68-18e0-41bf-a817-d57344bf2e7d
 title: Прокси-служба веб-приложения в Windows Server 2016
-description: ''
-author: kgremban
+ms.author: kgremban
+author: eross-msft
 manager: femila
 ms.date: 07/13/2016
 ms.topic: article
 ms.prod: windows-server
 ms.technology: web-app-proxy
-ms.openlocfilehash: 4f2827f02ec13d187cdf360637882c6c9d4b2441
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 660915a9fc704a01b59b4eeb1107ef56599ecac7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387969"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818577"
 ---
 # <a name="web-application-proxy-in-windows-server-2016"></a>Прокси-служба веб-приложения в Windows Server 2016
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
-содержимое **This относится к локальной версии прокси-службы веб приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
+**Это содержимое относится к локальной версии прокси веб-приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
   
 В этом разделе описано, что нового и изменено в прокси веб-приложения для Windows Server 2016. Новые функции и изменения, перечисленные здесь, скорее всего, оказывают наибольшее влияние на работу с предварительной версией.  
   

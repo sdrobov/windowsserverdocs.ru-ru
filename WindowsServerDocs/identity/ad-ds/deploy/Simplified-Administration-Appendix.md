@@ -1,7 +1,6 @@
 ---
 ms.assetid: c911d6c6-98c6-4532-b1db-5724e1ceb96c
 title: Приложение по упрощенному администрированию
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: ffc2849fa5e18f7984814d6187cf83d68566409b
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 545d0541d1f51da7d2df793b9961657e214c789c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323246"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825007"
 ---
 # <a name="simplified-administration-appendix"></a>Приложение по упрощенному администрированию
 
@@ -31,7 +30,7 @@ ms.locfileid: "79323246"
   
 -   [Установка программы Ntdsutil. exe из изменений носителя](../../ad-ds/deploy/Simplified-Administration-Appendix.md#BKMK_IFM)  
   
-## <a name="BKMK_AddServers"></a>Диалоговое окно "Добавление серверов диспетчер сервера" (Active Directory)  
+## <a name="server-manager-add-servers-dialog-active-directory"></a><a name="BKMK_AddServers"></a>Диалоговое окно "Добавление серверов диспетчер сервера" (Active Directory)  
 
 Диалоговое окно **Добавление серверов** позволяет выполнять поиск Active Directory для серверов, по операционной системе, с использованием подстановочных знаков и по расположению. Диалоговое окно также позволяет использовать DNS-запросы по полному доменному имени или имени префикса. Эти поисковые запросы используют собственные протоколы DNS и LDAP, реализованные с помощью .NET, а не AD Windows PowerShell для шлюза управления AD через протокол SOAP. Это означает, что контроллеры домена, на которые осуществляется обращение диспетчер сервера, могут даже работать под управлением Windows Server 2003. Кроме того, можно импортировать файл с именами серверов для целей подготовки.  
   
@@ -57,12 +56,12 @@ Active Directory поиска возвращает следующие атриб
   
 ```  
   
-## <a name="BKMK_ServerMgrStatus"></a>Состояние диспетчер сервера удаленного сервера  
+## <a name="server-manager-remote-server-status"></a><a name="BKMK_ServerMgrStatus"></a>Состояние диспетчер сервера удаленного сервера  
 Диспетчер сервера проверяет доступность удаленного сервера с помощью протокола маршрутизации адресов. Любые серверы, не отвечающие на запросы ARP, не перечисляются, даже если они находятся в пуле.  
   
 Если служба ARP отвечает, то для возврата сведений о состоянии серверу устанавливаются подключения DCOM и WMI. Если RPC, DCOM и WMI недостижимы, диспетчер сервера не сможет полностью управлять сервером.  
   
-## <a name="BKMK_PSLoadModule"></a>Загрузка модуля Windows PowerShell  
+## <a name="windows-powershell-module-loading"></a><a name="BKMK_PSLoadModule"></a>Загрузка модуля Windows PowerShell  
 Windows PowerShell 3,0 реализует динамическую загрузку модулей. Использование командлета **Import-Module** , как правило, больше не требуется; Вместо этого при простом вызове командлета, псевдонима или функции автоматически загружается модуль.  
   
 Чтобы просмотреть загруженные модули, используйте командлет **Get-Module** .  
@@ -90,10 +89,10 @@ dir
   
 ```  
   
-## <a name="BKMK_Rid"></a>Исправления выдачи RID для предыдущих операционных систем  
+## <a name="rid-issuance-hotfixes-for-previous-operating-systems"></a><a name="BKMK_Rid"></a>Исправления выдачи RID для предыдущих операционных систем  
 Ознакомьтесь с [обновлением, которое позволяет обнаруживать и предотвращать слишком большое потребление глобального пула RID на контроллере домена, работающем под Windows Server 2008 R2](https://support.microsoft.com/kb/2618669).  
   
-## <a name="BKMK_IFM"></a>Установка программы Ntdsutil. exe из изменений носителя  
+## <a name="ntdsutilexe-install-from-media-changes"></a><a name="BKMK_IFM"></a>Установка программы Ntdsutil. exe из изменений носителя  
 Windows Server 2012 добавляет два дополнительных параметра в программу командной строки Ntdsutil. exe для настройки **ifm (создание носителя IFM)** . Они позволяют создавать хранилища IFM без предварительного выполнения автономного дефрагментации экспортированного NTDS. Файл базы данных DIT. Если место на диске не является расширенным, это экономит время на создание IFM.  
   
 В следующей таблице описаны два новых пункта меню:  

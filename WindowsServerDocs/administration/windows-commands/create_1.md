@@ -1,30 +1,24 @@
 ---
-title: create
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: создание
+description: Раздел команд Windows для инструкции CREATE, запускающий процесс создания теневой копии с использованием текущего контекста и настроек параметров.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 837aa449-9b60-41ae-9ef1-ef67af6e5918
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2245efb6c3bce8aecf8edf730694804ffbdc3d80
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4d29285517ca678a15828079c95663fc4d501eaf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378774"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846837"
 ---
-# <a name="create"></a>create
+# <a name="create"></a>создание
 
-
-
-запускает процесс создания теневой копии с использованием текущего контекста и настроек параметров. Требуется по крайней мере один том в наборе теневых копий.
+Запускает процесс создания теневой копии с использованием текущего контекста и настроек параметров. Требуется по крайней мере один том в наборе теневых копий.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,6 +32,6 @@ create
 -   Чтобы указать полную резервную копию, а не резервную копию, можно использовать команду **начать резервное** копирование.
 -   После выполнения команды **CREATE** можно использовать команду **exec** , чтобы выполнить повторяющийся скрипт для резервного копирования из теневой копии.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

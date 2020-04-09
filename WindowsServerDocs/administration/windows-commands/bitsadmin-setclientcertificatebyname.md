@@ -1,28 +1,22 @@
 ---
 title: битсадмин сетклиентцертификатебинаме
-description: Раздел команд Windows для **битсадмин сетклиентцертификатебинаме** . указывает имя субъекта сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL).
-ms.custom: na
+description: Раздел команд Windows для битсадмин сетклиентцертификатебинаме, который указывает имя субъекта сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f308a6d9-d0da-48be-ae41-eced14b3cccb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de2e84401673848ecc8823bb6dd3f91224d9a87e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 08ec6fd8c941234de36f14cd71ffa51c3b428acb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380668"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849657"
 ---
 # <a name="bitsadmin-setclientcertificatebyname"></a>битсадмин сетклиентцертификатебинаме
-
-
 
 Указывает имя субъекта сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL).
 
@@ -32,7 +26,7 @@ ms.locfileid: "71380668"
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject_name>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -41,13 +35,13 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> <subject
 |Store_name|Имя хранилища сертификатов. Возможные значения:</br>ЦЕНТР сертификации (сертификаты центра сертификации)</br>MY (личные сертификаты)</br>Корневой каталог (корневые сертификаты)</br>SPC (сертификат издателя программного обеспечения)|
 |Subject_name|Имя сертификата|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере указывается имя сертификата клиента, *мойсертификат* для использования при проверке подлинности клиента в запросе HTTPS (SSL) для задания с именем *myJob*.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByName myJob 1 MY myCertificate 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

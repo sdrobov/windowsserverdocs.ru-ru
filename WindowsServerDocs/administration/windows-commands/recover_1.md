@@ -1,26 +1,22 @@
 ---
-title: восстановить
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: recover
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8cc3a73d-9456-41a0-b375-2b4cc37c3992
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a83bb7502145cc09116241ea255e31b5f9981791
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4c9b691b2f0cbad101f7caeb63011724dcf7594d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384736"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836577"
 ---
-# <a name="recover"></a>восстановить
+# <a name="recover"></a>recover
 
 
 
@@ -35,11 +31,11 @@ ms.locfileid: "71384736"
 recover [noerr]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|Noerr|только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
+|Noerr|Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -48,14 +44,14 @@ recover [noerr]
 -   Эта команда работает с дисками, на которых произошел сбой или сбой. Он также работает с томами, на которых произошел сбой, сбой или в состоянии избыточности.
 -   Для выполнения этой команды необходимо выбрать диск, который входит в состав группы дисков. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы восстановить группу дисков, содержащую диск с фокусом, введите:
 ```
 recover
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

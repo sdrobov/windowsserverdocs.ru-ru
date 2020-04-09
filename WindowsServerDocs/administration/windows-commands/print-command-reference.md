@@ -1,32 +1,28 @@
 ---
 title: Справочник по командам печати
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88d8fa87-6fa8-4774-9294-080b0157ea8d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 73850c35b6f228c49496a2bb4505fe8203cb52ba
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 009400fd2afe1e1e5cea6baa9abec1b89b59df7f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372170"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837387"
 ---
 # <a name="print-command-reference"></a>Справочник по командам печати
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ниже приведен список программ командной строки для печати.
 
-|                         Command                          |                                                                Описание                                                                 |
+|                         Команда                          |                                                                Описание                                                                 |
 |----------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 |                       [lpq](lpq.md)                       |                           Отображает состояние очереди печати на компьютере, на котором запущена управляющая программа LPR.                            |
 |                      [lpr](lpr.md)                       |      Отправляет файл на устройство общего доступа к компьютеру или принтеру, работающее со службой LPD, в процессе подготовки к печати.       |
@@ -35,7 +31,7 @@ ms.locfileid: "71372170"
 |                  [prncnfg](prncnfg.md)                   |                                     Настраивает или отображает сведения о конфигурации принтера.                                      |
 |                  [prndrvr](prndrvr.md)                   |                                                 добавляет, удаляет и перечисляет драйверы принтера.                                                  |
 |                  [prnjobs](prnjobs.md)                   |                                              приостанавливает, возобновляет, отменяет и перечисляет задания печати.                                               |
-|                  [prnmngr](prnmngr.md)                   |            Добавляет, удаляет и перечисляет принтеры или подключения принтеров в дополнение к настройке и отображению принтера по умолчанию.            |
+|                  [prnmngr](prnmngr.md)                   |            добавляет, удаляет и перечисляет принтеры или подключения принтеров в дополнение к настройке и отображению принтера по умолчанию.            |
 |                  [prnport](prnport.md)                   |           Создание, удаление и перечисление стандартных портов принтера TCP/IP, а также отображение и изменение конфигурации портов.            |
 |                  [prnqctl](prnqctl.md)                   |                                Печать тестовой страницы, приостановка или возобновление печати принтера и очистка очереди печати.                                |
 |                   [pubprn](pubprn.md)                    |                                       Публикует принтер в службе каталогов Active Directory.                                       |

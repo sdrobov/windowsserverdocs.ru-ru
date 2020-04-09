@@ -1,23 +1,19 @@
 ---
 title: Предварительная настройка маршрутизатора
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9153ac90-bb0c-4b8d-93b2-e2121ed13636
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bdfa3215b7a2426bcde807119971d99ccc229716
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: c39bf3ac260a23b7fc9cc9feec7f34786b1e8aae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311577"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819947"
 ---
 # <a name="preconfiguring-a-router"></a>Предварительная настройка маршрутизатора
 
@@ -43,7 +39,7 @@ ms.locfileid: "80311577"
   
 -   Если маршрутизатор поддерживает несколько подсетей, IP-адрес сервера должен обрабатываться в DHCP как один DNS-сервер.  
   
--   Если маршрутизатор имеет встроенную функцию контроля доступа для Active Directory® доменных служб, можно автоматизировать интеграцию Active Directory во время начальной настройки сервера. Эту функцию можно также предоставить с помощью надстройки управления маршрутизатором на панели администрирования.  
+-   Если маршрутизатор имеет встроенную функцию контроля доступа для Active Directory&reg; доменных служб, можно автоматизировать интеграцию Active Directory во время начальной настройки сервера. Эту функцию можно также предоставить с помощью надстройки управления маршрутизатором на панели администрирования.  
   
 > [!NOTE]
 >  Для получения дополнительных сведений о настройке беспроводных соединений см. раздел [Настройка поддержки беспроводных сетей](Configure-Support-for-a-Wireless-Network.md).  

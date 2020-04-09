@@ -1,24 +1,20 @@
 ---
 title: выбор Секции
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 25f70083-b8f7-4a8e-9b34-4b3ffbe06670
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a186e2678fde64396a8b4b57a2d14e4b0b7bf26
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 97145d73cbbe1bdc9b27e545b047b78fe89e4984
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371073"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834807"
 ---
 # <a name="select-partition"></a>выбор Секции
 
@@ -34,13 +30,13 @@ ms.locfileid: "71371073"
 select partition=<n>  
 ```  
   
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
   
 |   Параметр    |                                                                                    Описание                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <n>\=секционирования | Номер секции, получающей фокус. Числа для всех разделов на диске, выбранных в данный момент, можно просмотреть с помощью команды **list partition** в DiskPart. |
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   Перед тем как выбрать раздел, необходимо сначала выбрать диск с помощью команды **Выбор диска** .  
   
@@ -50,7 +46,7 @@ select partition=<n>
   
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.  
   
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы переместить фокус на раздел 3, введите:  
   
 ```  
@@ -63,8 +59,8 @@ select partitition=3
 select partition  
 ```  
   
-#### <a name="additional-references"></a>Дополнительные ссылки  
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 
   

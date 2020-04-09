@@ -1,24 +1,20 @@
 ---
 title: Управление — состояние BDE
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1444a360-fabf-4dd3-b67f-188e6ea3fa5b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 235db54ef2361c0e95c66b15a15be7f188fb74d9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1c8248333944b030dc8868ba4408024727a08c3a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373865"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839847"
 ---
 # <a name="manage-bde-status"></a>Manage-bde: Status
 
@@ -43,7 +39,7 @@ ms.locfileid: "71373865"
 manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -54,14 +50,14 @@ manage-bde -status [<Drive>] [-protectionaserrorlevel] [-computername <Name>] [{
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В следующем примере показано использование команды **-Status** для вывода состояния диска C.
 ```
 manage-bde –status C:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Управление — BDE](manage-bde.md)

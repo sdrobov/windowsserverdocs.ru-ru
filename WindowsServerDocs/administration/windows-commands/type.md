@@ -1,32 +1,25 @@
 ---
-title: type
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: тип
+description: Раздел команд Windows для типа, который отображает содержимое текстового файла.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: 37f66d54983c002d5d09db5cb255d01635a534de
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3163601d118df315edcae540917313703f677d52
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392329"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832417"
 ---
-# <a name="type"></a>type
-
+# <a name="type"></a>тип
 
 В командной оболочке Windows **введите** встроенную команду, которая отображает содержимое текстового файла. Используйте команду **Type** , чтобы просмотреть текстовый файл, не изменяя его.
 
-
 В PowerShell **введите** встроенный псевдоним для командлета **[Get-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content)** , который также отображает содержимое файла, но с другим синтаксисом.
-
 
 Примеры использования этой команды в командной оболочке Windows (cmd. exe) см. в разделе [примеры](#BKMK_examples).
 
@@ -36,19 +29,19 @@ ms.locfileid: "71392329"
 type [<Drive>:][<Path>]<FileName>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |[\<диска >:] [путь\<>]\<имя файла >|Указывает расположение и имя файла или файлов, которые требуется просмотреть. Несколько имен файлов следует разделять пробелами.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
--   Если *имя файла* содержит пробелы, заключите его в кавычки (например, "имя файла с пробелами. txt").
+-   Если *имя файла* содержит пробелы, заключите его в кавычки (например, имя файла, содержащее пробелы. txt).
 -   При отображении двоичного файла или файла, созданного программой, на экране могут отображаться необычные символы, включая перевода страницы символы и символы escape-последовательности. Эти символы представляют управляющие коды, используемые в двоичном файле. Как правило, Избегайте использования команды **Type** для вывода двоичных файлов.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы отобразить содержимое файла с именем праздников. Mar, введите:
 ```
@@ -59,6 +52,6 @@ type holiday.mar
 type holiday.mar | more 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

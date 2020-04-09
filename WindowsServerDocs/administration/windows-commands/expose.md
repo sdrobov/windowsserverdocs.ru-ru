@@ -1,30 +1,26 @@
 ---
 title: представлены
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b0a21cf-3bef-4ade-b8f1-ac42f9203947
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 819484364e8375c4d58e4d022681eedeaa7084ab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 55cc7a292b81977a346f3f078a3b5623243ea46c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377278"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844807"
 ---
 # <a name="expose"></a>представлены
 
 
 
-Предоставляет постоянную теневую копию в виде буквы диска, общего ресурса или точки подключения.
+предоставляет постоянную теневую копию в виде буквы диска, общего ресурса или точки подключения.
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
@@ -34,7 +30,7 @@ ms.locfileid: "71377278"
 expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -43,17 +39,17 @@ expose <ShadowID> {<Drive:> | <Share> | <MountPoint>}
 |\<общий доступ >|Предоставляет указанную теневую копию в общей папке (например, \\\\*MachineName*\).|
 |\<точка подключения >|Предоставляет указанную теневую копию точке подключения (например, К:\шадовкопи\).|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Вместо *шадовид*можно использовать существующий псевдоним или переменную среды. Чтобы просмотреть существующие псевдонимы, используйте параметр **Добавить** без параметров.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы предоставить устойчивую теневую копию, связанную с переменной среды VSS_SHADOW_1, в качестве диска X, введите:
 ```
 expose %vss_shadow_1% x:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 846c3680-b321-47da-8302-18472be42421
 title: Развертывание утверждений между лесами (обучающий пример)
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 6045c144a0da399e8279c781273235942316e538
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 05ca21f343d2ad3db4ce00b53a66b3cd6dd6de16
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407120"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861247"
 ---
 # <a name="deploy-claims-across-forests-demonstration-steps"></a>Развертывание утверждений между лесами (обучающий пример)
 
@@ -35,7 +34,7 @@ ms.locfileid: "71407120"
 
 4.  [Проверка сценария](Deploy-Claims-Across-Forests--Demonstration-Steps-.md#BKMK_5)  
 
-## <a name="BKMK_1.1"></a>Настройка предварительных требований и тестовой среды  
+## <a name="set-up-the-prerequisites-and-the-test-environment"></a><a name="BKMK_1.1"></a>Настройка предварительных требований и тестовой среды  
 Конфигурация теста включает в себя настройку двух лесов: Adatum Corporation и Contoso, Ltd, а также двустороннее доверие между Contoso и adatum. "adatum.com" — это доверенный лес, а "contoso.com" — доверяющий лес.  
 
 В сценарии преобразования утверждений показано преобразование утверждения в доверенном лесу в утверждение в доверяющем лесу. Для этого необходимо настроить новый лес с именем adatum.com и заполнить его тестовым пользователем со значением компании "adatum". Затем необходимо настроить двустороннее доверие между contoso.com и adatum.com.  
@@ -67,21 +66,21 @@ ms.locfileid: "71407120"
 
 |Объекты|Подробности|  
 |-----------|-----------|  
-|Пользователи|Иван Low, contoso|  
-|Утверждения пользователей в adatum и contoso|Идентификатор: ad://ext/Company:ContosoAdatum,<br /><br />Исходный атрибут: Company<br /><br />Предлагаемые значения: contoso, adatum **важно** ! для типа утверждения "Company" в Contoso и adatum необходимо задать одинаковый идентификатор для работы преобразования "утверждения".|  
+|Users|Иван Low, contoso|  
+|Утверждения пользователей в adatum и contoso|Идентификатор: ad://ext/Company:ContosoAdatum,<p>Исходный атрибут: Company<p>Предлагаемые значения: contoso, adatum **важно** ! для типа утверждения "Company" в Contoso и adatum необходимо задать одинаковый идентификатор для работы преобразования "утверждения".|  
 |Централизованное правило доступа в Contoso|адатумемплойиакцессруле|  
 |Централизованная политика доступа в Contoso|Политика доступа только для adatum|  
 |Политики преобразования утверждений в adatum и contoso|Компания Деняллексцепт|  
 |Папка с файлами в Contoso|д:\еарнингс|  
 
-## <a name="BKMK_3"></a>Настройка преобразования утверждений в доверенном лесу (adatum)  
+## <a name="set-up-claims-transformation-on-trusted-forest-adatum"></a><a name="BKMK_3"></a>Настройка преобразования утверждений в доверенном лесу (adatum)  
 На этом шаге вы создадите политику преобразования в adatum, чтобы запретить всем утверждениям, кроме компании, передавать в Contoso.  
 
 Модуль Active Directory для Windows PowerShell предоставляет аргумент **деняллексцепт** , который удаляет все, кроме указанных утверждений в политике преобразования.  
 
 Чтобы настроить преобразование утверждений, необходимо создать политику преобразования утверждений и связать ее между доверенным и доверяющим лесами.  
 
-### <a name="BKMK_2.2"></a>Создание политики преобразования утверждений в adatum  
+### <a name="create-a-claims-transformation-policy-in-adatum"></a><a name="BKMK_2.2"></a>Создание политики преобразования утверждений в adatum  
 
 ##### <a name="to-create-a-transformation-policy-adatum-to-deny-all-claims-except-company"></a>Создание политики преобразования adatum для запрета всех утверждений, кроме "Company"  
 
@@ -98,7 +97,7 @@ ms.locfileid: "71407120"
 
    ```  
 
-### <a name="BKMK_2.3"></a>Задание ссылки преобразования утверждений для объекта домена доверия adatum  
+### <a name="set-a-claims-transformation-link-on-adatums-trust-domain-object"></a><a name="BKMK_2.3"></a>Задание ссылки преобразования утверждений для объекта домена доверия adatum  
 На этом шаге вы примените созданную политику преобразования утверждений в объекте домена доверия adatum для contoso.  
 
 ##### <a name="to-apply-the-claims-transformation-policy"></a>Применение политики преобразования утверждений  
@@ -116,10 +115,10 @@ ms.locfileid: "71407120"
 
    ```  
 
-## <a name="BKMK_4"></a>Настройка преобразования утверждений в доверяющем лесу (Contoso)  
+## <a name="set-up-claims-transformation-in-the-trusting-forest-contoso"></a><a name="BKMK_4"></a>Настройка преобразования утверждений в доверяющем лесу (Contoso)  
 На этом шаге вы создадите политику преобразования утверждений в Contoso (доверяющем лесу), чтобы запретить все утверждения, кроме Company. Необходимо создать политику преобразования утверждений и связать ее с доверием леса.  
 
-### <a name="BKMK_4.1"></a>Создание политики преобразования утверждений в Contoso  
+### <a name="create-a-claims-transformation-policy-in-contoso"></a><a name="BKMK_4.1"></a>Создание политики преобразования утверждений в Contoso  
 
 ##### <a name="to-create-a-transformation-policy-adatum-to-deny-all-except-company"></a>Создание политики преобразования adatum для запрета всех, кроме "Company"  
 
@@ -136,7 +135,7 @@ ms.locfileid: "71407120"
 
    ```  
 
-### <a name="BKMK_4.2"></a>Задание ссылки преобразования утверждений для объекта домена доверия Contoso  
+### <a name="set-a-claims-transformation-link-on-contosos-trust-domain-object"></a><a name="BKMK_4.2"></a>Задание ссылки преобразования утверждений для объекта домена доверия Contoso  
 На этом шаге вы примените вновь созданную политику преобразования утверждений в объекте домена доверия contoso.com для adatum, чтобы разрешить передачу "компании" через contoso.com. Объект домена доверия называется adatum.com.  
 
 ##### <a name="to-set-the-claims-transformation-policy"></a>Настройка политики преобразования утверждений  
@@ -154,7 +153,7 @@ ms.locfileid: "71407120"
 
    ```  
 
-## <a name="BKMK_5"></a>Проверка сценария  
+## <a name="validate-the-scenario"></a><a name="BKMK_5"></a>Проверка сценария  
 На этом шаге вы пытаетесь получить доступ к папке Д:\ЕАРНИНГС, настроенной на файловом файле FILE1, чтобы убедиться, что у пользователя есть доступ к общей папке.  
 
 #### <a name="to-ensure-that-the-adatum-user-can-access-the-shared-folder"></a>Проверка того, что пользователь adatum может получить доступ к общей папке  
@@ -175,7 +174,7 @@ ms.locfileid: "71407120"
 |                  Отказ от всех утверждений, поступающих от adatum, к Contoso adatum                   |                                                            Приведен <br />New-Адклаимтрансформполици \`<br />-Description: "политика преобразования утверждений для запрета всех утверждений" \`<br />-Name: "Деняллклаимсполици" \`<br /> -Денялл \`<br />-Server:"Контосо. com" \`<br />Set-Адклаимтрансформлинк \`<br />-Identity:"адатум. com" \`<br />-Policy: "Деняллклаимсполици" \`<br />-Трустроле: доверие \`<br />-Server:"Контосо. com"\`                                                             |
 | Разрешите всем заявкам, поступающим от adatum, за исключением "компания" и "Отдел", чтобы пройти до Contoso adatum | Код <br />-New-Адклаимтрансформатионполици \`<br />-Description: "политика преобразования утверждений для разрешения всех утверждений, кроме Организации и отдела" \`<br /> -Name: "Алловаллклаимсексцепткомпанянддепартментполици" \`<br />-Алловаллексцепт: компания, Отдел \`<br />-Server:"Контосо. com" \`<br />Set-Адклаимтрансформлинк \`<br /> -Identity:"адатум. com" \`<br />-Policy: "Алловаллклаимсексцепткомпанянддепартментполици" \`<br /> -Трустроле: доверие \`<br />-Server:"Контосо. com" \` |
 
-## <a name="BKMK_Links"></a>См. также  
+## <a name="see-also"></a><a name="BKMK_Links"></a> См. также  
 
 -   Список всех командлетов Windows PowerShell, доступных для преобразования утверждений, см. в разделе [Справочник по командлетам powershell Active Directory](https://go.microsoft.com/fwlink/?LinkId=243150).  
 

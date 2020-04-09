@@ -1,24 +1,20 @@
 ---
 title: nslookup root
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9c29edc3-ec49-43f2-bc49-86bf0612d816
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3eb3375df3a109685fc8dc5d23f0c5008339d09e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d11179ff3cd22acd9df67261e7ab752aa159201a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373389"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838647"
 ---
 # <a name="nslookup-root"></a>nslookup root
 
@@ -29,14 +25,14 @@ ms.locfileid: "71373389"
 ```
 root 
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |    Параметр    |                      Описание                      |
 |-----------------|-------------------------------------------------------|
 | {Help &#124; ?} | Отображает краткую сводку подкоманд **nslookup** . |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 - В настоящее время используется сервер имен ns.nic.ddn.mil. Эта команда является синонимом для лсервер ns.nic.ddn.mil. Имя корневого сервера можно изменить с помощью команды **set root** .
-  ## <a name="additional-references"></a>Дополнительные ссылки
-  [Ключ синтаксиса командной строки
+  ## <a name="additional-references"></a>Дополнительные материалы
+  - [Ключ синтаксиса командной строки
   команду](command-line-syntax-key.md) [nslookup set root](nslookup-set-root.md)

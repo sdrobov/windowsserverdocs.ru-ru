@@ -1,28 +1,22 @@
 ---
 title: Использование подкоманды Add-Аллдриверпаккажес
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для Add-Аллдриверпаккажес, который добавляет все пакеты драйверов, которые хранятся в папке на сервере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ba6641c1-d7e9-43a9-9819-702dad5484ed
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d8290a95dd53718b200d10b6804d312abe95e257
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: dc8252339fcae04517c2074c24bbfab44228b779
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363886"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832267"
 ---
-# <a name="using-the-add-alldriverpackages-subcommand"></a>Использование подкоманды Add-Аллдриверпаккажес
-
-
+# <a name="add-alldriverpackages"></a>Add-Аллдриверпаккажес
 
 Добавляет все пакеты драйверов, хранящиеся в папке, на сервер.
 
@@ -32,7 +26,7 @@ ms.locfileid: "71363886"
 WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>] [/Architecture:{x86 | ia64 | x64}] [/DriverGroup:<Group Name>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |          Параметр           |                                                              Описание                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,18 +35,18 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:<Folder Path> [/Server:<Server name>]
 |     [/Арчитектуре: {x86      |                                                                 ia64                                                                  |
 | [/Дриверграуп: имя группы\<>] |                             Указывает имя группы драйверов, в которую должны быть добавлены пакеты.                             |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы добавить пакеты драйверов, введите один из следующих элементов:
 ```
-WDSUTIL /verbose /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers" /Architecture:x86
+WDSUTIL /verbose /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers /Architecture:x86
 ```
 ```
-WDSUTIL /Add-AllDriverPackages /FolderPath:"C:\Temp\Drivers\Printers" /DriverGroup:"Printer Drivers"
+WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup:Printer Drivers
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Add-Вдсдриверпаккаже](https://technet.microsoft.com/library/dn283440.aspx)

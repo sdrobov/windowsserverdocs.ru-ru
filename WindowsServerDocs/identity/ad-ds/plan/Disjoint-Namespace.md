@@ -1,7 +1,6 @@
 ---
 ms.assetid: d92731f1-e4d8-4223-9b07-ca1f40bb0e1f
 title: Несвязанное пространство имен
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5abe67c89ce4c2f4b5056f6197242b5db8db340e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b21e849bb69068f66b1b80c6b1a3afbdef91459f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408859"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822537"
 ---
 # <a name="disjoint-namespace"></a>Несвязанное пространство имен
 
@@ -94,7 +93,7 @@ ms.locfileid: "71408859"
   
     -   Если вы хотите делегировать разрешения на изменение имен участников-служб в подчиненных администраторах, см. раздел делегирование полномочий для изменения имен SPN ([https://go.microsoft.com/fwlink/?LinkId=106639](https://go.microsoft.com/fwlink/?LinkId=106639)).  
   
--   Если в развертывании с контроллерами домена, настроенными в несвязанном пространстве имен, используется протокол LDAP через SSL (SSL) (т. е. LDAPs), необходимо использовать соответствующее имя домена Active Directory и основной DNS-суффикс при настройке сертификатов LDAPs.  
+-   Если вы используете протокол LDAP по SSL (т. е. LDAPs) с центром сертификации в развертывании с контроллерами домена, настроенными в несвязанном пространстве имен, при настройке сертификатов LDAPs необходимо использовать соответствующие доменные имена Active Directory и основной DNS-суффикс.  
   
     Дополнительные сведения о требованиях к сертификатам контроллера домена см. в статье 321051 базы знаний Майкрософт ([https://go.microsoft.com/fwlink/?LinkId=102307](https://go.microsoft.com/fwlink/?LinkId=102307)).  
   
