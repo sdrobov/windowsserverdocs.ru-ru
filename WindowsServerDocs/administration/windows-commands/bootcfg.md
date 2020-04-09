@@ -1,35 +1,35 @@
 ---
 title: bootcfg
-description: Раздел команд Windows для **bootcfg** — настраивает, запрашивает или изменяет параметры файла Boot. ini.
-ms.custom: na
+description: Раздел команд Windows для bootcfg, который настраивает, запрашивает или изменяет параметры файла Boot. ini.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3deb354c-5717-4066-bc79-b9323d559e44
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d66296327a2221093e5434f69e15e7c55df1f6b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a977b857242c030515a09a67eb0d284ade7a0beb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379853"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848387"
 ---
 # <a name="bootcfg"></a>bootcfg
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Настраивает, запрашивает или изменяет параметры файла Boot. ini.  
-## <a name="syntax"></a>Синтаксис  
+Настраивает, запрашивает или изменяет параметры файла Boot. ini.
+
+## <a name="syntax"></a>Синтаксис
+
 ```  
 bootcfg <parameter> [arguments...]  
-```  
-## <a name="parameters"></a>Параметры  
+```
+
+### <a name="parameters"></a>Параметры
+
 |Параметр|Описание|  
 |-------|--------|  
 |[bootcfg addsw](bootcfg-addsw.md)|Добавляет параметры загрузки операционной системы для указанной записи операционной системы.|  

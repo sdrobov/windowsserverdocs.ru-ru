@@ -1,30 +1,26 @@
 ---
 title: подробные сведения VDISK
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для получения сведений о диске, в котором отображаются свойства выбранного виртуального жесткого диска (VHD).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: da0f350c-1ce3-4c3f-988c-15f83402e716
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e507c496aa053d6345a383b2867976fc1550e09
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ba4a13762da4039459c2fa422ecf83b277fcd4d6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378557"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846407"
 ---
 # <a name="detail-vdisk"></a>подробные сведения VDISK
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображение свойств выбранного виртуального жесткого диска \(\)VHD.  
+Отображает свойства выбранного виртуального жесткого диска (VHD).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,26 +28,24 @@ ms.locfileid: "71378557"
 detail vdisk  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   Для выполнения этой операции необходимо выбрать виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать виртуальный диск и переместить фокус на него.  
   
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы просмотреть сведения о выбранном виртуальном жестком диске, введите:  
   
 ```  
 detail vdisk  
 ```  
   
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
   
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 -   [подключить виртуальный диск](attach-vdisk.md)  
   
--   [Compact VDISK](compact-vdisk.md)  
-  
-  
+-   [Compact VDISK](compact-vdisk.md)
   
 -   [Отсоединить виртуальный диск](detach-vdisk.md)  
   

@@ -1,52 +1,45 @@
 ---
 title: битсадмин жетпроксилист — извлекает список прокси-серверов для указанного задания.
-description: Раздел команд Windows для **битсадмин жетпроксилист** — извлекает список прокси-серверов для указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин жетпроксилист**, который извлекает список прокси-серверов для указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eebfa727-d8f1-4ae3-9382-6d8ffe8c3df3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f176d268c816725b183da0a948afcb25272b2fb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0c0d26fb074bd1b792caa7fe2ce8fd31b64365e2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381310"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850527"
 ---
 # <a name="bitsadmin-getproxylist"></a>bitsadmin getproxylist
 
-Извлекает список прокси-серверов для указанного задания.
+Извлекает разделенный запятыми список прокси-серверов, используемых для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetProxyList <Job>
+bitsadmin /getproxylist <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
-
-Список прокси-серверов — это список прокси-сервера для использования. Список разделен разделителями-запятыми.
-
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается список прокси-серверов для задания с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /GetProxyList myDownloadJob
+C:\>bitsadmin /getproxylist myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

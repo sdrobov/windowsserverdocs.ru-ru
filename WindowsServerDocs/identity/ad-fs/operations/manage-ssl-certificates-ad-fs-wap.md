@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 230fdaac28f4766c33e62362ca4c7e4d20f22c8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b832756e123bee0223738ee804ac3a4db2371e84
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357740"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855297"
 ---
 # <a name="managing-ssl-certificates-in-ad-fs-and-wap-in-windows-server-2016"></a>Управление SSL-сертификатами в AD FS и WAP в Windows Server 2016
 
@@ -38,7 +38,7 @@ ms.locfileid: "71357740"
 
 ## <a name="replacing-the-ssl-certificate-for-ad-fs"></a>Замена SSL-сертификата для AD FS
 > [!NOTE]
-> AD FS SSL-сертификат не совпадает с сертификатом связи AD FS службы, найденным в оснастке управления AD FS. Чтобы изменить AD FS SSL-сертификат, потребуется использовать PowerShell.
+> Сертификат AD FS SSL не совпадает с сертификатом связи службы AD FS, найденным в оснастке управления AD FS. Чтобы изменить AD FS SSL-сертификат, потребуется использовать PowerShell.
 
 Сначала определите режим привязки сертификата, в котором выполняются серверы AD FS: привязка проверки подлинности сертификата по умолчанию или альтернативный режим привязки клиента TLS.
 

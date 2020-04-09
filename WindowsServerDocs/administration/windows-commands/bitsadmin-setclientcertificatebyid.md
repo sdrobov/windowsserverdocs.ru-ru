@@ -1,28 +1,22 @@
 ---
 title: битсадмин сетклиентцертификатебид
-description: Раздел команд Windows для **битсадмин сетклиентцертификатебид** указывает идентификатор сертификата клиента, который будет использоваться для проверки подлинности клиента в запросе HTTPS (SSL).
-ms.custom: na
+description: Раздел команд Windows для битсадмин сетклиентцертификатебид, который указывает идентификатор сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL)
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8585a7a1-7472-437b-b04a-a11925782a3a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 53b6fa4c65397cf710d0497fbae889afd31ec136
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 80c97b21194c773d1b21aab2ee31794624da671c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380726"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849667"
 ---
 # <a name="bitsadmin-setclientcertificatebyid"></a>битсадмин сетклиентцертификатебид
-
-
 
 Указывает идентификатор сертификата клиента, который будет использоваться для проверки подлинности клиента в запросе HTTPS (SSL).
 
@@ -32,7 +26,7 @@ ms.locfileid: "71380726"
 bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-decimal_cert_id>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -41,13 +35,13 @@ bitsadmin /SetClientCertificateByID <Job> <store_location> <store_name> hexa-dec
 |Store_name|Имя хранилища сертификатов. Возможные значения:</br>ЦЕНТР сертификации (сертификаты центра сертификации)</br>MY (личные сертификаты)</br>Корневой каталог (корневые сертификаты)</br>SPC (сертификат издателя программного обеспечения)|
 |Hexadecimal_cert_id|Шестнадцатеричное число, представляющее хэш сертификата|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере указывается идентификатор сертификата клиента, который будет использоваться для проверки подлинности клиента в запросе HTTPS (SSL) для задания с именем *myJob*.
 ```
 C:\>bitsadmin Bitsadmin /SetClientCertificateByID myJob BG_CERT_STORE_LOCATION_CURRENT_USER MY A106B52356D3FBCD1853A41B619358BD 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

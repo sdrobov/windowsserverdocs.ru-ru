@@ -1,24 +1,20 @@
 ---
 title: Общий доступ к файлам
 description: Сведения о совместном использовании файлов в службах MultiPoint с помощью общих папок и сети
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5e138e01-39e3-4d60-ad3c-5a33b1e0b076
 author: lizap
 manager: dongill
 ms.date: 08/04/2016
 ms.author: elizapo
-ms.openlocfilehash: f050691603ed0989ab3b0ea3aac34a5fd74e1fbd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: db2707803a6be2db83ac574e7b50c8698d6bd0b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394987"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855617"
 ---
 # <a name="share-files"></a>Общий доступ к файлам
 Предоставить общий доступ другим пользователям MultiPoint Services к содержимому можно, сохранив его в общей папке в проводнике. Все содержимое общих папок в проводнике в системе MultiPoint Services доступно всем ее пользователям.  

@@ -1,24 +1,20 @@
 ---
 title: Настройка синхронизации обновлений
 description: Раздел "Настройка и Настройка синхронизации обновлений" службы Windows Server Update Service (WSUS)
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ddd5c395-451b-44a0-8e08-a05db26d2282
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c7bca5be7a8ec0e857cba65680fbc3b967af4f8
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: f4da028b2100d824b55c00c185f8b90df7d787bf
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639746"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828546"
 ---
 # <a name="setting-up-update-synchronizations"></a>Настройка синхронизации обновлений
 
@@ -89,7 +85,7 @@ WSUS-сервер скачивает обновления на основе пр
 
 -   Для синхронизации можно указать пользовательский порт. Сведения о настройке портов см. в разделе [Шаг 3. Настройка WSUS](../deploy/2-configure-wsus.md) статьи Руководство по развертыванию WSUS.
 
--   Для защиты синхронизации сведений об обновлениях между серверами WSUS можно использовать протокол SSL. Дополнительные сведения об использовании SSL см. в разделе "3,5. Защитите службы WSUS с помощью протокола SSL "раздела [Шаг 3. Настройка WSUS](../deploy/2-configure-wsus.md) в разделе Руководство по развертыванию WSUS.
+-   Для защиты синхронизации сведений об обновлениях между серверами WSUS можно использовать протокол SSL. Дополнительные сведения об использовании SSL см. в разделе 3,5. Защита WSUS с помощью протокола SSL [Шаг 3. Настройка WSUS](../deploy/2-configure-wsus.md) в разделе Руководство по развертыванию WSUS.
 
 ## <a name="synchronizing-manually-or-automatically"></a>Синхронизация вручную или автоматически
 Можно либо синхронизировать сервер WSUS вручную, либо указать время для автоматического выполнения синхронизации.

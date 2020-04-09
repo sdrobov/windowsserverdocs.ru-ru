@@ -1,7 +1,6 @@
 ---
 ms.assetid: 9aaca9c5-ce44-495c-aad6-61aede87a83f
 title: Развертывание служб федерации Active Directory в партнерской организации по учетным записям
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 62d7549f124b96cd7addf7e54cc5d0c1d9897098
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 94446ddd8d33c18b6166870a34b65c997d1644ac
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408127"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853207"
 ---
 # <a name="deploying-ad-fs-in-the-account-partner-organization"></a>Развертывание служб федерации Active Directory в партнерской организации по учетным записям
 
@@ -24,7 +23,7 @@ ms.locfileid: "71408127"
   
 В сценариях, в которых необходимо предоставить пользователям доступ к нескольким федеративным приложениям или службам. Если каждое приложение или служба размещается в другой организации, можно настроить сервер федерации партнера по учетным записям, чтобы можно было развернуть несколько проверяющих сторон.  
   
-Дополнительные сведения о настройке и настройке организации партнера по учетным записям см. в разделе [Контрольный список: Настройка организации партнера по учетным](../../ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md)записям.  
+Подробнее об установке и настройке партнерской организации по учетным записям см. в разделе [Checklist: Configuring the Account Partner Organization](../../ad-fs/deployment/Checklist--Configuring-the-Account-Partner-Organization.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
   

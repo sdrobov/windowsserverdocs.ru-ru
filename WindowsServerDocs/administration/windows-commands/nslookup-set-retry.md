@@ -1,24 +1,20 @@
 ---
 title: nslookup set retry
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 615fdfa2-fa29-47a8-8c9e-a6c5b45b3b71
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 306bcc4f5e7ac98767c3c2e274100cf917874a8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2b95c4c8af2d7960270fd43f7a766b313ddbc07a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372861"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838347"
 ---
 # <a name="nslookup-set-retry"></a>nslookup set retry
 
@@ -29,15 +25,15 @@ ms.locfileid: "71372861"
 ```
 set retry=<Number>
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |    Параметр    |                                      Описание                                       |
 |-----------------|----------------------------------------------------------------------------------------|
 |    <Number>     | Указывает новое значение для числа повторных попыток. По умолчанию число повторных попыток равно 4. |
 | {Help &#124; ?} |                 Отображает краткую сводку подкоманд **nslookup** .                  |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 - Если ответ на запрос не получен в течение определенного промежутка времени, время ожидания удваивается и запрос отсылается повторно. Значение параметра Retry определяет количество повторных попыток отправки запроса перед предоставлением. Вы можете изменить интервал ожидания с помощью подкоманды **Set timeout** .
-  ## <a name="additional-references"></a>Дополнительные ссылки
-  [Синтаксис командной строки](command-line-syntax-key.md)
+  ## <a name="additional-references"></a>Дополнительные материалы
+  - [Синтаксис командной строки](command-line-syntax-key.md)
   параметру [nslookup set timeout](nslookup-set-timeout.md)

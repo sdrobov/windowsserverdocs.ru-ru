@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: ChangePassword'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 283078e7-a88f-4875-90e6-f8605e6b7ea7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 51be9e71c2b290e6346d23144543e0eec29f9d07
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 68b14388ff3c33458873b494c8d5a770b44f7545
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375178"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841787"
 ---
 # <a name="ksetupchangepassword"></a>ksetup: ChangePassword
 
@@ -32,14 +28,14 @@ ms.locfileid: "71375178"
 ksetup /changepassword <OldPasswd> <NewPasswd>
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<Олдпассвд >|Указывает существующий пароль пользователя, вошедшего в систему.|
 |\<Невпассвд >|Указывает на новый пароль пользователя, вошедшего в систему.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Эта команда использует пароль KDC (кпассвд) для изменения пароля вошедшего в систему пользователя. Кпассвд, если он задан, отобразится в выходных данных, выполнив команду **ksetup/думпстате** .
 
@@ -51,7 +47,7 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 Выходные данные команды уведомляют о состоянии успешного выполнения или сбоя.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Изменить пароль пользователя, который в данный момент вошел в систему на этом компьютере в этом домене:
 ```
@@ -66,6 +62,6 @@ ksetup /domain CONTOSO /changepassword Pas$w0rd Pa$$w0rd
 ksetup /changepassword Pas$w0rd *
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: Wbadmin start сисрековери
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для Wbadmin start сисрековери, которая выполняет восстановление системы (восстановление исходного состояния компьютера), используя указанные параметры.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 95b8232f-7c42-452b-838e-15b0cf6faebe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c653fa52a2a56267d6f0df169f8f9924f2aa94d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4e0f1f79f35678b5c4a50022adf3413f3de217a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829597"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>Wbadmin start сисрековери
 
@@ -47,7 +43,7 @@ wbadmin start sysrecovery
 [-quiet]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -60,7 +56,7 @@ wbadmin start sysrecovery
 |-Скипбадклустерчекк|Пропускает проверку дисков восстановления на наличие неверных данных кластера. При восстановлении на другом сервере или оборудовании рекомендуется не использовать этот параметр. Вы можете в любое время вручную запустить **команду chkdsk/b** на дисках восстановления, чтобы проверить их на наличие поврежденных кластеров, а затем обновить сведения о файловой системе соответствующим образом.</br>Предупреждение. до запуска **chkdsk** в соответствии с описанием поврежденные кластеры, сообщаемые в восстановленной системе, могут быть неточными.|
 |-quiet|Выполняет команду без запросов пользователя.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы начать восстановление данных из резервной копии, которая выполнялась 31 марта 2013 в 9:00 утра, расположенной на диске d:, введите:
 ```
@@ -71,8 +67,8 @@ wbadmin start sysrecovery -version:03/31/2013-09:00 -backupTarget:d:
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Get-вббареметалрековери](https://technet.microsoft.com/library/jj902461.aspx)

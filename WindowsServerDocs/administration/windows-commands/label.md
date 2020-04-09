@@ -1,24 +1,20 @@
 ---
 title: label
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bbae8bdd-97d4-4566-9118-7c95aa07645f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e66a2d9a7d28462b287084e3f8b129ffc03800bd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7ccb86e2167682e1048161f2d5f5386a8b5cf6ed
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374788"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841177"
 ---
 # <a name="label"></a>label
 
@@ -34,16 +30,16 @@ ms.locfileid: "71374788"
 label [/mp] [<Volume>] [<Label>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |/MP|Указывает, что том следует рассматривать как точку подключения или имя тома.|
 |\<> тома|Указывает букву диска (за которой следует двоеточие), точку подключения или имя тома. Если указано имя тома, параметр **/MP** не требуется.|
 |Метка \<>|Указывает метку для тома.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - Windows отображает метку тома и серийный номер (если они есть) в составе списка каталогов.
 - Длина метки тома NTFS может составлять до 32 символов, включая пробелы. Метки томов NTFS содержат и отображают вариант, который использовался при создании метки.
@@ -59,7 +55,7 @@ label [/mp] [<Volume>] [<Label>]
   ```  
   Нажмите клавишу Y, чтобы удалить метку, или клавишу N для сохранения метки.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы пометить диск в дисководе A, который содержит сведения о продажах за Июль, введите:
 ```
@@ -82,6 +78,6 @@ label a:sales-july
    ```  
 3. Нажмите клавишу Y, чтобы удалить текущую метку.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

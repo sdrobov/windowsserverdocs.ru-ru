@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD. Настройка службы DNS-сервера
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -8,12 +7,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 2c1f2f68509c9136735fb13e24c86a1da40660eb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 144a45f2a835d9cca60b5be5aac7569809c45b7c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369248"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824177"
 ---
 # <a name="ad-forest-recovery---configuring-the-dns-server-service"></a>Восстановление леса Active Directory. Настройка службы DNS-сервера
 
@@ -68,7 +67,7 @@ ms.locfileid: "71369248"
 
    ![DNS-сервер](media/AD-Forest-Recovery-Configure-DNS/dns3.png)  
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

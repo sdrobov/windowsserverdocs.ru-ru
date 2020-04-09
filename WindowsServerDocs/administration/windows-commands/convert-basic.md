@@ -1,32 +1,26 @@
 ---
 title: convert basic
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для преобразования Basic, который преобразует пустой динамический диск в базовый.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 61329896-3b56-4959-8d58-45cbe18ba860
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4b81126f4a623d841bb5868f786678d7b093581
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8e0f6f5f04373042956d83bc9136c884c268e591
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379129"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847317"
 ---
 # <a name="convert-basic"></a>convert basic
 
-
-
 Преобразует пустой динамический диск в базовый.
 
-Инструкции по использованию этой команды см. в статье [Переключение динамического диска обратно на базовый диск](https://go.microsoft.com/fwlink/?LinkId=207048) (https://go.microsoft.com/fwlink/?LinkId=207048) ).
+Инструкции по использованию этой команды см. в статье [Переключение динамического диска обратно на базовый диск](https://go.microsoft.com/fwlink/?LinkId=207048) (https://go.microsoft.com/fwlink/?LinkId=207048).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,26 +28,27 @@ ms.locfileid: "71379129"
 convert basic [noerr]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|Noerr|только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
+|Noerr|Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 
 ## <a name="remarks"></a>Примечания
 
 > [!IMPORTANT]
 > Диск должен быть пустым, чтобы преобразовать его в базовый диск. Создайте резервную копию данных, а затем удалите все разделы или тома перед преобразованием диска.
-> -   Для выполнения этой операции должен быть выбран динамический диск. Используйте команду **Выбор диска** , чтобы выбрать динамический диск и переместить фокус на него.
 
-## <a name="BKMK_examples"></a>Примеров
+-   Для выполнения этой операции должен быть выбран динамический диск. Используйте команду **Выбор диска** , чтобы выбрать динамический диск и переместить фокус на него.
+
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы преобразовать выбранный динамический диск в базовый, введите:
 ```
 convert basic
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

@@ -1,24 +1,20 @@
 ---
 title: gpresult
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dfaa3adf-2c83-486c-86d6-23f93c5c883c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bb61911450ea8c0c68af0cf1a35c2f571810504b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 480599a4040ab1fdcc3842cdb0eaa8c35afa873c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375664"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842467"
 ---
 # <a name="gpresult"></a>gpresult
 
@@ -33,7 +29,7 @@ ms.locfileid: "71375664"
 gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\]<TARGETUSER>] [/scope {user | computer}] {/r | /v | /z | [/x | /h] <FILENAME> [/f] | /?}
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 > [!NOTE]
 > За исключением случаев использования **/?** , необходимо включить параметр OUTPUT: **/r**, **/v**, **/z**, **/x**или **/h**.
@@ -50,14 +46,14 @@ gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\
 |                    /r                    |                                                                                             Отображает сводные данные RSoP.                                                                                              |
 |                    /v                    |                                                    Отображение подробных сведений о политике. Сюда входят подробные параметры, которые были применены с приоритетом 1.                                                    |
 |                    /z                    |                                     Отображает все доступные сведения о групповая политика. Сюда входят подробные параметры, которые были применены с приоритетом 1 и выше.                                      |
-|                    /?                    |                                                                                         Отображение справки в командной строке.                                                                                         |
+|                    /?                    |                                                                                         Отображает справку в командной строке.                                                                                         |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 - Групповая политика является основным средством администрирования для определения и контроля работы программ, сетевых ресурсов и операционной системы для пользователей и компьютеров в Организации. В среде Active Directory групповая политика применяется к пользователям или компьютерам на основе их членства в сайтах, доменах или подразделениях.
 - Поскольку перекрывающиеся параметры политики можно применять к любому компьютеру или пользователю, функция групповая политика создает результирующий набор параметров политики при входе пользователя в систему. **gpresult** отображает результирующий набор параметров политики, примененных к компьютеру для указанного пользователя при входе пользователя в систему.
 - Поскольку **/v** и **/z** создают много информации, полезно перенаправить вывод в текстовый файл (например, **gpresult/z > Policy. txt**).
 - Команда **gpresult** доступна в windows Server 2012, windows Server 2008 R2, Windows Server 2008, Windows 8, Windows 7 и Windows Vista.
-  ## <a name="examples"></a>Примеры.
+  ## <a name="examples"></a>Примеры
   В следующем примере данные RSoP извлекаются для удаленного пользователя **таржетусернаме** компьютера **срвмаин**и отображаются данные RSoP только для пользователя. Команда выполняется с учетными данными пользователя **маиндом\хироплн**, а <strong>p@ssW23</strong> указывается в качестве пароля для этого пользователя.
 
   ```
@@ -76,7 +72,7 @@ gpresult [/s <system> [/u <USERNAME> [/p [<PASSWOrd>]]]] [/user [<TARGETDOMAIN>\
   gpresult /s srvmain /u maindom\hiropln /p p@ssW23 /r
   ```
   
-## <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительные материалы
 - [Технический центр групповая политика](https://go.microsoft.com/fwlink/?LinkID=145531)
 
-- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

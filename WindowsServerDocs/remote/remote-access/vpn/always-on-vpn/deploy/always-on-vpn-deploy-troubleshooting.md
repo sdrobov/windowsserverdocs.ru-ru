@@ -1,5 +1,5 @@
 ---
-title: Устранение неполадок Always On VPN
+title: Устранение неполадок постоянно подключенного VPN-профиля
 description: В этом разделе приведены инструкции по проверке и устранению неполадок Always On развертывании VPN в Windows Server 2016.
 ms.prod: windows-server
 ms.technology: networking-ras
@@ -7,16 +7,16 @@ ms.topic: article
 ms.assetid: 4d08164e-3cc8-44e5-a319-9671e1ac294a
 ms.localizationpriority: medium
 ms.date: 06/11/2018
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: 6dc4f2f090d28f9fa25ce381f8cd981569da6a4a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: v-tea
+author: Teresa-MOTIV
+ms.openlocfilehash: 209567ccd88f4b20f98caecc2a13cc671ef09072
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313274"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854027"
 ---
-# <a name="troubleshoot-always-on-vpn"></a>Устранение неполадок Always On VPN 
+# <a name="troubleshoot-always-on-vpn"></a>Устранение неполадок постоянно подключенного VPN-профиля 
 
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 

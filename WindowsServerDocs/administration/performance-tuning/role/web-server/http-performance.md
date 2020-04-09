@@ -4,15 +4,15 @@ description: Рекомендации по настройке производи
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: IvanPash; GMonte
+ms.author: ivanpash; gmonte
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: f7d7bd5145a0804b9ec86438602dfed7c75a2b02
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e62f7428f015193896aba5c7d9c146bd11e7225
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384967"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851687"
 ---
 # <a name="performance-tuning-http-112"></a>Настройка производительности HTTP 1.1/2
 
@@ -20,6 +20,6 @@ ms.locfileid: "71384967"
 
 В некоторых ситуациях требуется откат HTTP/1.1 (сброс подключения HTTP/2, а вместо этого устанавливается новое соединение для использования HTTP/1.1). В частности, для повторного согласования TLS и проверки подлинности HTTP (кроме Basic и Digest) требуется резерв HTTP/1.1. Хотя это увеличивает нагрузку, эти операции уже подразумевают некоторую задержку, поэтому они не чувствительны к производительности.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [Настройка производительности веб-сервера](index.md) 
 - [Обеспечение высокой производительности IIS 10.0](tuning-iis-10.md)

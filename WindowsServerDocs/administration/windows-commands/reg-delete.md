@@ -1,24 +1,20 @@
 ---
 title: удалить reg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: cee05071-1607-4ab1-b8ab-65caebeb85c3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7156bf58b27da1602931f0dc1903de71d86764e7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 726a3c700a9278dbc7abb1873aae7ea3c957bbb5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384758"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836507"
 ---
 # <a name="reg-delete"></a>удалить reg
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384758"
 Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -45,16 +41,16 @@ Reg delete <KeyName> [{/v ValueName | /ve | /va}] [/f]
 |/f|Удаляет существующий подраздел реестра или запись без запроса подтверждения.|
 |/?|Отображает справку по **reg Delete** в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 В следующей таблице перечислены возвращаемые значения для операции **reg Delete** .
 
 |Значение|Описание|
 |-----|-----------|
 |0|Выполнено|
-|1|Сбой|
+|1|Отказ|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы удалить время ожидания раздела реестра и его все подразделы и значения, введите:
 ```
@@ -65,6 +61,6 @@ REG DELETE HKLM\Software\MyCo\MyApp\Timeout
 REG DELETE \\ZODIAC\HKLM\Software\MyCo /v MTU
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

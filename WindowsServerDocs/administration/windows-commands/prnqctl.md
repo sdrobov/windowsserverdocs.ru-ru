@@ -1,24 +1,20 @@
 ---
 title: prnqctl
 description: Печать тестовой страницы, приостановка или возобновление печати принтера.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8df9dfa7-984c-4276-bb7d-e7675e7c399e jpjofre
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 189b344dc0c4f587ba7a6382c481304242e22c74
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d07d8caa0568b26f5edc16258085a59ecdafcf4e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372039"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837207"
 ---
 # <a name="prnqctl"></a>prnqctl
 
@@ -31,7 +27,7 @@ ms.locfileid: "71372039"
 cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]   
 [-p <printerName>] [-u <UserName>] [-w <Password>]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |Параметр|Описание|  
 |-------|--------|  
@@ -40,18 +36,18 @@ cscript Prnqctl {-z | -m | -e | -x | -?} [-s <ServerName>]
 |-e|выводит тестовую страницу на принтере, указанном параметром **-p** .|  
 |-x|Отменяет все задания печати на принтере, указанном параметром **-p** .|  
 |-s \<ServerName >|Указывает имя удаленного компьютера, на котором размещен принтер, которым требуется управлять. Если компьютер не указан, используется локальный компьютер.|  
-|-p \<Принтернаме >|Указывает имя принтера, которым требуется управлять. Обязательный.|  
+|-p \<Принтернаме >|Указывает имя принтера, которым требуется управлять. Обязательное.|  
 |-u \<имя_пользователя >-w \<пароль >|Указывает учетную запись с разрешениями на подключение к компьютеру, на котором размещен принтер, которым требуется управлять. Все члены локальной группы администраторов целевого компьютера имеют эти разрешения, но разрешения также могут быть предоставлены другим пользователям. Если учетная запись не указана, необходимо войти в систему с учетной записью с этими разрешениями, чтобы команда работала.|  
-|/?|Отображение справки в командной строке.|  
+|/?|Отображает справку в командной строке.|  
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 - Команда **прнкктл** является сценарием Visual Basic, расположенным в каталоге%windir%\system32\ printing_Admin_Scripts\\<language>. Чтобы использовать эту команду, в командной строке введите **cscript** , а затем полный путь к файлу прнкктл или измените каталоги на соответствующую папку. Например:  
   ```  
   cscript %WINdir%\System32\printing_Admin_Scripts\en-US\prnqctl  
   ```  
 - Если предоставленные сведения содержат пробелы, заключите текст в кавычки (например, `"computer Name"`).  
 
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров  
 Чтобы напечатать тестовую страницу на принтере Laserprinter1, который совместно используется компьютером \\\Server1, введите:  
 ```  
 cscript Prnqctl -e -s Server1 -p Laserprinter1  
@@ -65,6 +61,6 @@ cscript Prnqctl -z -p Laserprinter1
 cscript Prnqctl -x -p Laserprinter1  
 ```  
 
-#### <a name="additional-references"></a>Дополнительные ссылки  
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 [Справочник по командам печати](print-command-reference.md)  

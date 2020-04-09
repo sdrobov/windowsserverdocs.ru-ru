@@ -1,24 +1,20 @@
 ---
 title: bootcfg copy
-description: Раздел команд Windows для **bootcfg Copy** — создает копию существующей загрузочной записи, в которую можно добавить параметры командной строки.
-ms.custom: na
+description: Раздел команд Windows для bootcfg Copy, который создает копию существующей загрузочной записи, в которую можно добавить параметры командной строки.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a236c2a-8675-444d-b695-9cbc9aff643b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 42a408443cbe6722c25780f7c27d70b05da7eb8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5194418a07aece4f15a84c3eccbc044431a865b9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380116"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848687"
 ---
 # <a name="bootcfg-copy"></a>bootcfg copy
 
@@ -30,7 +26,7 @@ ms.locfileid: "71380116"
 ```
 bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Description>] [/id <OSEntryLineNum>]
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |      Параметр       |                                                                                             Описание                                                                                             |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,12 +35,12 @@ bootcfg /copy [/s <computer> [/u <Domain>\<User> /p <Password>]] [/d <Descriptio
 |    /p <Password>     |                                                        Указывает пароль учетной записи пользователя, указанной в параметре **/u** .                                                        |
 |   /d <Description>   |                                                                    Указывает описание новой записи операционной системы.                                                                    |
 | /ID <OSEntryLineNum> |         Указывает номер строки записи операционной системы в разделе [Operating Systems] копируемого файла Boot. ini. Первая строка после заголовка раздела [Operating Systems] — 1.         |
-|          /?          |                                                                                Отображение справки в командной строке.                                                                                 |
+|          /?          |                                                                                Отображает справку в командной строке.                                                                                 |
 
-## <a name="BKMK_examples"></a>Примеров
-В следующих примерах показано, как можно использовать команду **bootcfg/Copy** для копирования загрузочной записи 1 и ввести в качестве описания "\абк Server\\".
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+В следующих примерах показано, как можно использовать команду **bootcfg/Copy** , чтобы скопировать загрузочную запись 1 и ввести \абк Server\\ в качестве описания:
 ```
-bootcfg /copy /d "\ABC Server\" /id 1
+bootcfg /copy /d \ABC Server\ /id 1
 ```
-#### <a name="additional-references"></a>Дополнительные ссылки
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

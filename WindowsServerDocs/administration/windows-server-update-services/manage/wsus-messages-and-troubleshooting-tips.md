@@ -2,22 +2,19 @@
 title: Сообщения служб WSUS и советы по диагностике
 description: Раздел по службам Windows Server Update Service (WSUS) — устранение неполадок с помощью сообщений WSUS
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-wsus
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9f6317f7-bfe0-42d9-87ce-d8f038c728ca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0c66e655ea6b6c44ee3ba375f75e6532fab74bfb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: e4fe14eeaba3fc82e125288f8c47fb445f6e00b0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948485"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828317"
 ---
 # <a name="wsus-messages-and-troubleshooting-tips"></a>Сообщения служб WSUS и советы по диагностике
 
@@ -25,13 +22,13 @@ ms.locfileid: "75948485"
 
 В этом разделе содержатся сведения о следующих сообщениях WSUS:
 
--   "Компьютер не сообщил о состоянии"
+-   Компьютер не сообщил о состоянии
 
--   "ИД сообщения 6703 — ошибка синхронизации WSUS"
+-   Идентификатор сообщения 6703 — сбой синхронизации WSUS
 
--   "Ошибка 0x80070643: Неустранимая ошибка во время установки"
+-   Ошибка 0x80070643: Неустранимая ошибка во время установки
 
--   "Некоторые службы не работают. Проверьте следующие службы [...] "
+-   Некоторые службы не работают. Проверьте следующие службы [...]
 
 ## <a name="computer-has-not-reported-status"></a>Компьютер не сообщил о состоянии
 Это сообщение создается в консоли WSUS, когда клиентский компьютер WSUS не отправляет сведения на сервер WSUS для указания его текущего состояния обновления. Эта проблема обычно вызвана клиентским компьютером WSUS, а не сервером WSUS.
@@ -90,6 +87,6 @@ ms.locfileid: "75948485"
     
   - **MSSQLSERver** (если используется WMSDE или MSDE или используется SQL Server и в качестве имени экземпляра используется имя экземпляра по умолчанию);
     
-  - **MSSQL $ WSUS** (если используется база данных SQL Server и имя экземпляра базы данных — "WSUS")
+  - **MSSQL $ WSUS** (если вы используете базу данных SQL Server и имеет имя экземпляра базы данных WSUS)
     
     Щелкните службу правой кнопкой мыши и выберите пункт **запустить** , если служба не запущена, или **перезапустите** , чтобы обновить службу, если она запущена.

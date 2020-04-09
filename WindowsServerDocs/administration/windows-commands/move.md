@@ -1,24 +1,20 @@
 ---
 title: move
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fde290a8-d385-450f-8987-ee837fed667d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4302a3403f73892500c3f9deb608e9489c7e91ae
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: efd0cd0716c564a9570647820056ab9c38e41274
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373529"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839377"
 ---
 # <a name="move"></a>move
 
@@ -34,7 +30,7 @@ ms.locfileid: "71373529"
 move [{/y | /-y}] [<Source>] [<Target>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -42,20 +38,20 @@ move [{/y | /-y}] [<Source>] [<Target>]
 |/-и|Вызывает запрос на подтверждение перезаписи существующего целевого файла.|
 |> источника \<|Указывает путь и имя файла или файлов для перемещения. Если вы хотите переместить или переименовать каталог, *источником* должен быть текущий путь к каталогу и его имя.|
 |Целевой > \<|Указывает путь и имя для перемещения файлов. Если вы хотите переместить или переименовать каталог, *целевым объектом* должен быть путь к каталогу и его имя.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Параметр командной строки **/y** может быть предустановлен в переменной среды копикмд. Это можно переопределить с помощью **/-и** в командной строке. Значение по умолчанию — выводить запрос перед перезаписью файлов, если команда **Copy** не выполняется в пакетном скрипте.
 -   Перемещение зашифрованных файлов на том, который не поддерживает шифрованная файловая система (EFS) (EFS), приведет к ошибке. Сначала расшифровать файлы или переместить их на том, который поддерживает EFS.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы переместить все файлы с расширением XLS из каталога \Data в каталог \ Second_Q \Репортс, введите:
 ```
 move \data\*.xls \second_q\reports\ 
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

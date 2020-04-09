@@ -1,24 +1,20 @@
 ---
 title: trace_1 FTP
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8740c1fb-a7bf-45c8-b2f9-61fae4f3506e vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 51f1f41a854a73bba8b56aebbc0cc8e2e98d89e2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a96bb33b457e073b8e4625f5269cd00facf39073
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375927"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842901"
 ---
 # <a name="ftp-trace_1"></a>FTP: trace_1
 
@@ -32,21 +28,21 @@ ms.locfileid: "71375927"
 trace
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-none
+нет
 
 ## <a name="remarks"></a>Примечания
 
 **Трассировка** отображает ряд внутренних вызовов функций FTP при выполнении команды **FTP** .
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Включение и отключение трассировки.
 ```
 trace
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

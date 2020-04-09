@@ -1,28 +1,22 @@
 ---
 title: chkntfs
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для chkntfs, который отображает или изменяет автоматическую проверку диска при запуске компьютера.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 93eca810-8699-4716-8e9d-aecd54f704be
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f940fe81f0e7e01495e071931059b2375b78bb22
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bb04022964b3c315c1003a9746f6551fc281dba3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379329"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847777"
 ---
 # <a name="chkntfs"></a>chkntfs
-
-
 
 Отображает или изменяет автоматическую проверку диска при запуске компьютера. Если параметр используется без параметров, средство **chkntfs** Отображает файловую систему указанного тома. Если запланирована автоматическая проверка файлов, средство **chkntfs** отображает, является ли указанный том грязным или запланированным для проверки при следующей загрузке компьютера.
 
@@ -41,7 +35,7 @@ chkntfs [/x <Volume> [...]]
 chkntfs [/c <Volume> [...]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -50,9 +44,9 @@ chkntfs [/c <Volume> [...]]
 |/t [:\<времени >]|Изменяет время обратного отсчета запуска Autochk. exe на количество времени, указанное в секундах. Если не вводить время, параметр **/t** отображает текущее время отсчета.|
 |/x \<том > [...]|Указывает один или несколько томов, исключаемых из проверки при запуске компьютера, даже если том помечен как обязательное для запуска **chkdsk**.|
 |/c \<> тома [...]|Планирует проверку одного или нескольких томов при запуске компьютера и запускает **программу chkdsk** на тех, которые являются "грязными".|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы отобразить тип файловой системы для диска C, введите:
 ```
@@ -95,6 +89,6 @@ chkntfs /x c: d: e:
 chkntfs /c d:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

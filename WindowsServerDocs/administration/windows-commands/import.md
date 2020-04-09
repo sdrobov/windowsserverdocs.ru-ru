@@ -1,24 +1,20 @@
 ---
 title: импорт
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7bd78d76-0560-4d47-944c-fe960be2c10b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 50a095c323806dd523994c36c5b427d4ecedf8ef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 07fdd03c73c454e92218a4c6983eac7f29b50883
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375502"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842177"
 ---
 # <a name="import"></a>импорт
 
@@ -39,7 +35,7 @@ import
 -   Переносимые теневые копии не сохраняются немедленно в системе. Их сведения хранятся в XML-файле документа компонентов резервного копирования, который DiskShadow автоматически запрашивает и сохраняет в файле метаданных. cab в рабочем каталоге. Путь и имя этого файла можно изменить с помощью команды **Set Metadata** .
 -   Прежде чем можно будет использовать **Импорт**, необходимо загрузить файл метаданных Diskshadow с помощью команды **загрузить метаданные** .
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Ниже приведен пример скрипта DiskShadow, демонстрирующий использование команды **Import** :
 ```
@@ -59,6 +55,6 @@ IMPORT
 #The shadow copy will now be loaded into the system.
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

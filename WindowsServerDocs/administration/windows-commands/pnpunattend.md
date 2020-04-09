@@ -1,24 +1,20 @@
 ---
 title: pnpunattend
 description: Узнайте, как проводить аудит драйверов устройств на компьютере, а также выполнять автоматическую установку драйверов.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4fa88932-cff0-4dfc-936c-98c0e3dfbeb8 britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 77a6ab1ea45322e3c53e8b095c412cf8838be60d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c4836665946b39acdacf4c204c6e79fc2d8507bd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372267"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837537"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -30,16 +26,16 @@ ms.locfileid: "71372267"
 PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|auditSystem|Указывает установку драйвера в сети.</br>Требуется, за исключением случаев, когда **пнпунаттенд** выполняется с параметром **/Help** или **/?** Вход.|
+|auditSystem|Указывает установку драйвера в сети.</br>Требуется, за исключением случаев, когда **пнпунаттенд** выполняется с параметром **/Help** или **/?** .|
 |/s|Необязательно. Задает поиск драйверов без установки.|
 |/L|Необязательно. Задает отображение сведений о журнале для этой команды в командной строке.|
 |/?|Необязательно. Отображает справку для этой команды в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Требуется предварительная подготовка. Перед использованием этой команды необходимо выполнить следующие задачи.
 
@@ -50,7 +46,7 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 5. Для Windows® 7 перейдите по пути реестра: **HKEY_LOCAL_Machine \Софтваре\микрософт\виндовс нт\куррентверсион\\** , а затем создайте ключи: **унаттендсеттингс\пнпунаттенд\дриверпасс\\**
 6. Для Windows Vista перейдите к пути реестра: **HK_LM \Софтваре\микрософт\виндовс нт\куррентверсион\\** , а затем создайте ключи = **\унаттендсеттингс\пнпунаттенд\дриверпасс**.
 
-## <a name="examples"></a>Примеры.
+## <a name="examples"></a>Примеры
 
 В приведенном ниже примере команды показано, как использовать **пнпунаттенд. exe** для проверки компьютера на наличие возможных обновлений драйверов, а затем передавать результаты в командную строку.
 
@@ -60,4 +56,4 @@ pnpunattend auditsystem /s /l
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

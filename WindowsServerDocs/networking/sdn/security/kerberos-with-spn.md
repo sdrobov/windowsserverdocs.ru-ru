@@ -1,20 +1,20 @@
 ---
 title: Kerberos с именем субъекта-службы (SPN)
 description: Сетевой контроллер поддерживает несколько методов проверки подлинности для взаимодействия с клиентами управления. Вы можете использовать проверку подлинности на основе Kerberos, аутентификацию X509 на основе сертификата. Вы также можете использовать проверку подлинности без аутентификации для тестовых развертываний.
-manager: dougkim
+manager: grcusanz
 ms.prod: windows-server
 ms.technology: networking-sdn
 ms.topic: article
 ms.assetid: bc625de9-ee31-40a4-9ad2-7448bfbfb6e6
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/23/2018
-ms.openlocfilehash: adf282222674130dcb16b0c7bfe0cf3ff05ed720
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 12ad2b27d275c074e0d8baacccd864e8926f405f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317394"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854378"
 ---
 # <a name="kerberos-with-service-principal-name-spn"></a>Kerberos с именем субъекта-службы (SPN)
 

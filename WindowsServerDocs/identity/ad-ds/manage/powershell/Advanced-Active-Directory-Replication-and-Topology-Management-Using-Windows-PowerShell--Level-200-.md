@@ -1,7 +1,6 @@
 ---
 ms.assetid: fe05e52c-cbf8-428b-8176-63407991042f
 title: Расширенное управление репликацией и топологией Active Directory с помощью Windows PowerShell (уровень 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: eeac84fb4e875ffe31b560bc72190895cd0527bc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a19e2fb043f6ad870c7f3af83497c2beb436c31
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402676"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823037"
 ---
 # <a name="advanced-active-directory-replication-and-topology-management-using-windows-powershell-level-200"></a>Расширенное управление репликацией и топологией Active Directory с помощью Windows PowerShell (уровень 200)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71402676"
   
 8.  [Topology](../../../ad-ds/manage/powershell/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-.md#BKMK_Topo)  
   
-## <a name="BKMK_Intro"></a>Общие  
+## <a name="introduction"></a><a name="BKMK_Intro"></a>Общие  
 В Windows Server 2012 модуль Active Directory для Windows PowerShell расширен двадцатью пятью новыми командлетами, предназначенными для управления репликацией и топологией леса. До этого были вынуждены использовать универсальные существительные **\*-адобжект** или вызывать функции .NET.  
   
 Как и все командлеты Windows PowerShell для Active Directory, эти новые командлеты требуют установки [службы шлюза управления Active Directory](https://www.microsoft.com/download/details.aspx?displaylang=en&id=2852) по крайней мере на одном контроллере домена (а лучше на всех).  
@@ -47,7 +46,7 @@ ms.locfileid: "71402676"
   
 |||  
 |-|-|  
-|Командлет|Объяснение|  
+|Командлет|Пояснение|  
 |Get-ADReplicationAttributeMetadata|Возвращает метаданные репликации атрибутов для объекта.|  
 |Get-ADReplicationConnection|Возвращает сведения об объекте подключения к контроллеру домена.|  
 |Get-ADReplicationFailure|Возвращает сведения о последнем сбое репликации для домена контроллера.|  
@@ -91,7 +90,7 @@ Get-help New-ADReplicationSite
   
 Загрузка и установка файлов справки с помощью командлета `Update-Help`  
   
-### <a name="BKMK_Repl"></a>Репликация и метаданные  
+### <a name="replication-and-metadata"></a><a name="BKMK_Repl"></a>Репликация и метаданные  
 Программа Repadmin.exe проверяет состояние и согласованность репликации Active Directory. Repadmin.exe обеспечивает простые средства для манипуляции с данными, например некоторые аргументы поддерживают вывод данных в формате CSV. Но для автоматизации, как правило, требуется разбор содержимого текстовых файлов. Модуль Active Directory для Windows PowerShell — это первая попытка обеспечить настоящий контроль над возвращаемыми данными. Раньше приходилось создавать сценарии или использовать сторонние средства.  
   
 Кроме того, в следующих командлетах реализован новый набор параметров, включающий параметры **Target**, **Scope** и **EnumerationServer**:  
@@ -106,7 +105,7 @@ Get-help New-ADReplicationSite
   
 Для знакомства с новыми командлетами ниже приведено несколько примеров сценариев, в которых показаны возможности, недоступные в repadmin.exe. Эти примеры наглядно демонстрируют возможности для администраторов. Конкретные требования для использования командлета можно найти в справке по нему.  
   
-### <a name="BKMK_ReplAttrMD"></a>Get-Адрепликатионаттрибутеметадата  
+### <a name="get-adreplicationattributemetadata"></a><a name="BKMK_ReplAttrMD"></a>Get-Адрепликатионаттрибутеметадата  
 Этот командлет аналогичен команде **repadmin.exe /showobjmeta**. Он позволяет возвращать метаданные репликации, например время изменения атрибута, исходный контроллер домена, версию и информацию USN, а также данные атрибута. Этот командлет полезен для отслеживания времени и места внесения изменения.  
   
 В отличие от программы Repadmin, среда Windows PowerShell предоставляет гибкий контроль над поиском и выходными данными. Например, метаданные объекта "Администраторы домена" могут выводиться в виде упорядоченного читаемого списка:  
@@ -160,7 +159,7 @@ get-adobject -filter 'objectclass -like "*"' | Get-ADReplicationAttributeMetadat
 get-adobject -filter 'objectclass -eq "user"' | Get-ADReplicationAttributeMetadata -server dc1.corp.contoso.com -showalllinkedvalues | export-csv allgroupmetadata.csv  
 ```  
   
-### <a name="BKMK_PartnerMD"></a>Get-Адрепликатионпартнерметадата  
+### <a name="get-adreplicationpartnermetadata"></a><a name="BKMK_PartnerMD"></a>Get-Адрепликатионпартнерметадата  
 Этот командлет возвращает сведения о конфигурации и состоянии репликации для контроллера домена, которые можно использовать для мониторинга, инвентаризации или устранения неполадок. В отличие от программы Repadmin.exe, среда Windows PowerShell позволяет просматривать только необходимые данные в удобном формате.  
   
 Например, так выглядит состояние репликации отдельного контроллера домена в удобном для восприятия формате:  
@@ -188,7 +187,7 @@ Get-ADReplicationPartnerMetadata -target * -scope server | where {$_.lastreplica
   
 ![Расширенное управление с помощью PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplPartnerMdFail.png)  
   
-### <a name="BKMK_ReplFail"></a>Get-Адрепликатионфаилуре  
+### <a name="get-adreplicationfailure"></a><a name="BKMK_ReplFail"></a>Get-Адрепликатионфаилуре  
 С помощью этого командлета можно получать информацию о последних ошибках репликации. Он аналогичен команде **Repadmin.exe /showreplsum**, но также обеспечивает более эффективный контроль благодаря среде Windows PowerShell.  
   
 Например, можно получить сведения о последних сбоях контроллера домена и партнерах, с которыми не удалось связаться:  
@@ -208,10 +207,10 @@ Get-ADReplicationFailure -scope site -target default-first-site-name | format-ta
   
 ![Расширенное управление с помощью PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSGetADReplFailScoped.png)  
   
-### <a name="BKMK_ReplQueue"></a>Get-Адрепликатионкуеуеоператион и Get-Адрепликатионуптодатенессвектортабле  
+### <a name="get-adreplicationqueueoperation-and-get-adreplicationuptodatenessvectortable"></a><a name="BKMK_ReplQueue"></a>Get-Адрепликатионкуеуеоператион и Get-Адрепликатионуптодатенессвектортабле  
 Оба эти командлета возвращают дополнительные сведения об актуальном состоянии контроллера домена, включая текущие сведения о репликации и векторе версии.  
   
-### <a name="BKMK_Sync"></a>Sync — Адобжект  
+### <a name="sync-adobject"></a><a name="BKMK_Sync"></a>Sync — Адобжект  
 Этот командлет аналогичен команде **Repadmin.exe /replsingleobject**. Он очень полезен при внесении изменений, требующих отдельной репликации, особенно при устранении неполадок.  
   
 Например, если кто-то удалил учетную запись генерального директора, а затем восстановил ее с помощью корзины Active Directory, возможно, ее необходимо немедленно реплицировать на все контроллеры домена. Кроме того, возможно, это следует сделать без принудительной репликации изменений, внесенных в другие объекты, ведь именно для этого служит расписание репликации, позволяющее не перегружать каналы глобальной сети.  
@@ -223,7 +222,7 @@ Get-ADDomainController -filter * | foreach {Sync-ADObject -object "cn=tony wang,
   
 ![Расширенное управление с помощью PowerShell](media/Advanced-Active-Directory-Replication-and-Topology-Management-Using-Windows-PowerShell--Level-200-/ADDS_PSSyncAD.png)  
   
-### <a name="BKMK_Topo"></a>Topology  
+### <a name="topology"></a><a name="BKMK_Topo"></a>Topology  
 Хотя программа Repadmin.exe — это эффективное средство для получения информации о топологии репликации, включая сайты, связи сайтов, мосты связей сайтов и подключения, она не предоставляет достаточно широкий набор аргументов для внесения изменений. По сути, в Windows до сих пор не было встроенной программы с поддержкой сценариев, предназначенной специально для создания и изменения топологии доменных служб Active Directory администраторами. С распространением служб Active Directory в средах миллионов клиентов потребность в массовом изменении логической информации Active Directory стала очевидной.  
   
 Например, после быстрого развертывания новых филиалов, сопровождающегося объединением существующих, может потребоваться внести сотни изменений в сайты в соответствии с их физическим расположением, характеристиками сети и новыми требованиями к емкости. Эти изменения можно внести не с помощью средств Dssites.msc и Adsiedit.msc, а автоматически. Это особенно удобно, если вам приходится действовать на основе таблиц с данными, предоставленными группами сетевой инфраструктуры и технического обслуживания.  

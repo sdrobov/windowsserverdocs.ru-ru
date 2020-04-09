@@ -1,6 +1,5 @@
 ---
 title: Обновление до AD FS в Windows Server 2016 с SQL Server
-description: ''
 author: billmath
 manager: mtillman
 ms.date: 04/11/2018
@@ -9,12 +8,12 @@ ms.prod: windows-server
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: dd843724faf1c7a8101def84091484a5e7f7900f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e9488357eecb4a2093d6989e4ebfcc195ce68567
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408234"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854007"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Обновление до AD FS в Windows Server 2016 с SQL Server
 
@@ -33,7 +32,7 @@ ms.locfileid: "71408234"
 
 -   Администраторы могут добавлять новые серверы федерации Windows Server 2016 в существующую ферму Windows Server 2012 R2.  В результате ферма находится в смешанном режиме и работает на уровне поведения фермы Windows Server 2012 R2.  Чтобы обеспечить согласованное поведение в ферме, новые функции Windows Server 2016 не могут быть настроены или использованы в этом режиме.  
 
--   После удаления всех серверов федерации Windows Server 2012 R2 из фермы в смешанном режиме и в случае фермы WID один из новых серверов федерации Windows обслуживает 2016 был повышен до роли основного узла, а администратор может вызвать ФБЛ из Win. Windows Server 2012 R2 до Windows Server 2016.  В результате все новые AD FS Windows Server 2016 могут быть настроены и использованы.  
+-   После удаления всех серверов федерации Windows Server 2012 R2 из фермы в смешанном режиме и в случае фермы WID один из новых серверов федерации Windows обслуживает 2016 был повышен до роли основного узла, а администратор может вызвать ФБЛ из Windows Server 2012 R2 в Windows Server 2016.  В результате все новые AD FS Windows Server 2016 могут быть настроены и использованы.  
 
 -   В результате возможности смешанной фермы AD FS Организации Windows Server 2012 R2, которые стремятся перейти на Windows Server 2016, не должны развертывать совершенно новую ферму, экспортировать и импортировать данные конфигурации.  Вместо этого они могут добавлять узлы Windows Server 2016 в существующую ферму, пока она находится в режиме «в сети», и при этом возникнет относительно короткое время простоя, вовлеченное в ФБЛ.  
 

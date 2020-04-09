@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: сетенктипеаттр'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 88fb913e-6b57-48d9-8c16-a035ab2977ac
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bcc268ecb591e3008d7274f6c9f6d6017c86f99d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 78450202b33f76ab7b0a374fe4559f0a25e709b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374930"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841347"
 ---
 # <a name="ksetupsetenctypeattr"></a>ksetup: сетенктипеаттр
 
@@ -32,14 +28,14 @@ ms.locfileid: "71374930"
 ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | AES128-CTS-HMAC-SHA1-96 | AES256-CTS-HMAC-SHA1-96}
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<имя_домена >|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
 |Тип шифрования|Должен быть одним из следующих поддерживаемых типов шифрования:</br>-DES-CBC-CRC</br>-DES-CBC-MD5</br>-RC4-HMAC-MD5</br>-AES128-CTS-HMAC-SHA1-96</br>-AES256-CTS-HMAC-SHA1-96|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Чтобы просмотреть тип шифрования билета предоставления билета Kerberos (TGT) и ключа сеанса, выполните команду **klist** и просмотрите выходные данные.
 
@@ -49,7 +45,7 @@ ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 |
 
 Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/domain \<имя_домена >** .
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Определите текущие типы шифрования, установленные на этом компьютере:
 ```
@@ -68,11 +64,11 @@ ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)
 -   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
 -   [Ksetup:getenctypeattr](ksetup-getenctypeattr.md)
 -   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

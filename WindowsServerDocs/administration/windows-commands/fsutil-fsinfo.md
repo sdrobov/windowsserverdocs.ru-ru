@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 472c3b91285810ac1ff528da24de50533bae526d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 56e27c386451c561de8f62e523e2d1e59a8ce84c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376945"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844307"
 ---
 # <a name="fsutil-fsinfo"></a>Fsutil fsinfo
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -33,20 +33,20 @@ fsutil fsinfo [statistics] <VolumePath>
 fsutil fsinfo [volumeinfo] <RootPath>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |-------------|---------------|
-|управляет|Список всех дисков компьютера.|
+|диски|Список всех дисков компьютера.|
 |DriveType|Запрашивает диск и перечисляет его тип, например дисковод компакт-дисков.|
 |NTFSInfo|Содержит сведения о томе NTFS для указанного тома, например число секторов, общее количество кластеров, свободные кластеры, а также начало и конец зоны MFT.|
 |секторинфо|Выводит сведения о размере сектора оборудования и его выравнивании.|
-|статистически|Отображает статистику файловой системы для указанного тома, например метаданные, файл журнала и операции чтения и записи MFT.|
+|статистика|Отображает статистику файловой системы для указанного тома, например метаданные, файл журнала и операции чтения и записи MFT.|
 |волумеинфо|Выводит сведения для указанного тома, например файловую систему, и указывает, поддерживает ли том имена файлов с учетом регистра, Юникод в именах файлов, квоты дисков или является томом DirectAccess (DAX).|
 |< "VolumePath" >|Указывает букву диска (с последующим двоеточием).|
 |< "Рутпаснаме" >|Указывает букву диска (с последующим двоеточием) корневого диска.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 Чтобы вывести список всех дисков компьютера, введите:
 
 ```
@@ -153,8 +153,8 @@ UserFileReadBytes :    1305244512
 LogFileWriteBytes :    180936704       
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
-[Ключ синтаксиса командной строки](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
 [fsutil](Fsutil.md)
 
 

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 0fd7b6aa-3e50-45a3-a3a6-56982844363e
 title: ИД события 2088 — Ошибка уточняющего запроса DNS при репликации
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d51cbcc93a8decbcb72a1e91854a09345507511d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f84fd7be45995e9e0b318b42c8b4152af244a9da
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71368912"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823057"
 ---
 # <a name="event-id-2088-dns-lookup-failure-occurred-with-replication-success"></a>Событие c идентификатором 2088: сбой поиска в DNS при успешной репликации
 
@@ -54,7 +53,7 @@ ms.locfileid: "71368912"
 
 Действие пользователя: 
 
-1) Если исходный контроллер домена больше не работает или его операционная система переустановлена с другим именем компьютера или GUID объекта НТДСДСА, удалите метаданные исходного контроллера домена с помощью Ntdsutil. exe, выполнив действия, описанные в статье МСКБ. 216498. 
+1) Если исходный контроллер домена больше не работает или его операционная система переустановлена с другим именем компьютера или GUID объекта НТДСДСА, удалите метаданные исходного контроллера домена с помощью Ntdsutil. exe, выполнив действия, описанные в статье МСКБ 216498. 
 
 2) Убедитесь, что исходный контроллер домена работает Active Directory и доступен в сети, введя команду "net view \\&lt;Source DC Name&gt;" или "ping &lt;Source DC Name&gt;". 
 

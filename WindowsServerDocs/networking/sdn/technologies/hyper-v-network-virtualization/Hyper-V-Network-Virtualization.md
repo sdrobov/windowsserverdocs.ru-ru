@@ -1,23 +1,19 @@
 ---
 title: Виртуализация сети Hyper-V
 description: Этот раздел содержит ссылки на материалы о виртуализации сети Hyper-V в Windows Server 2016.
-manager: brianlic
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 150976f0-ccd5-487a-a458-92261444a846
-ms.author: lizross
-author: eross-msft
-ms.openlocfilehash: a99fed5fb173ed2ef0698ab5c10bcf872e9abea8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.author: anpaul
+author: AnirbanPaul
+ms.openlocfilehash: 4bd2af103507610e1837f1e4f8e2b36678b14b55
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317245"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854307"
 ---
 # <a name="hyper-v-network-virtualization"></a>Виртуализация сети Hyper-V
 
@@ -33,4 +29,4 @@ ms.locfileid: "80317245"
   
 |||  
 |-|-|  
-|![облако](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](https://aka.ms/f9bh7g).<br /><br />Создание гибридного решения виртуализации в Microsoft Azure:<br />- [подключить локальную сеть к Azure через VPN-подключение типа "сеть — сеть" и расширить Active Directory на контроллер виртуальной машины IaaS в Azure](https://aka.ms/d1dinb)|  
+|![облако](../../../media/Hyper-V-Network-Virtualization/All_Symbols_Cloud.png)|Знали ли вы, что Microsoft Azure предоставляет аналогичные функциональные возможности в облаке? Дополнительные сведения о [решениях виртуализации Microsoft Azure](https://aka.ms/f9bh7g).<p>Создание гибридного решения виртуализации в Microsoft Azure:<br />- [подключить локальную сеть к Azure через VPN-подключение типа "сеть — сеть" и расширить Active Directory на контроллер виртуальной машины IaaS в Azure](https://aka.ms/d1dinb)|  

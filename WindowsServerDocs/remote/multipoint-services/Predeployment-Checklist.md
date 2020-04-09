@@ -1,29 +1,25 @@
 ---
 title: Контрольный список действий, выполняемых перед развертыванием
 description: Содержит контрольный список, который можно использовать для планирования развертывания служб MultiPoint
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 87ea20e4-46cf-49e9-86bf-70be9098c8db
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 38ff3832551024e3d6d89fe6d0f5eb3e136abca6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7f2a3b61e87abb285b3112dcad0fdfe2eceef6bb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405015"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853377"
 ---
 # <a name="predeployment-checklist"></a>Контрольный список действий, выполняемых перед развертыванием
 Используйте следующий контрольный список, чтобы спланировать развертывание служб MultiPoint.  
   
-|Шаг|Проблемы|Раздел справки|  
+|Шаг|Проблема|Раздел справки|  
 |--------|---------|--------------|  
 |1.|Убедитесь, что приложения совместимы со службами MultiPoint.|[Рекомендации по приложениям](Application-Considerations.md)|  
 |2.|Определите количество пользователей, которые, скорее всего, обращаются одновременно, на каждом компьютере, на котором выполняются службы MultiPoint, чтобы оценить количество необходимых компьютеров, на которых должны выполняться службы MultiPoint.|[Пользователи, станции и компьютеры](MultiPoint-services-Site-Planning.md#users-stations-and-computers)|  

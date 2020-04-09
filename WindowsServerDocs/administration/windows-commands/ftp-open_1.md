@@ -1,35 +1,31 @@
 ---
 title: open_1 FTP
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4b61926a-dc60-4b4c-96d3-64e5c91c18ba vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c5da1c73362c0396300f712b2e45b906d1652604
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8bd3063a52908d65f336afcda6b6982d5bc9bf94
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376191"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843187"
 ---
 # <a name="ftp-open_1"></a>FTP: open_1
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Подключается к указанному FTP-серверу.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 open <computer> [<Port>]  
 ```  
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 
 | Параметр  |                                           Описание                                            |
 |------------|--------------------------------------------------------------------------------------------------|
@@ -38,7 +34,7 @@ open <computer> [<Port>]
 
 ## <a name="remarks"></a>Примечания  
 Можно использовать IP-адрес или имя компьютера (в этом случае должен быть доступен DNS-сервер или файл Hosts) для указания **компьютера**.  
-## <a name="BKMK_Examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
 Подключитесь к FTP-серверу по адресу **FTP.Microsoft.com**.  
 ```  
 Open ftp.microsoft.com  
@@ -47,5 +43,5 @@ Open ftp.microsoft.com
 ```  
 open ftp.microsoft.com 755  
 ```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 20d183f0-ef94-44bb-9dfc-ed93799dd1a6
 title: Когда следует использовать настраиваемое правило для утверждений
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c784c4b6dbfee7034dd9302dc87fc74b896763f5
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 41e7ea7c2bc627f2fce198e5c7227148e8b03d88
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950145"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853827"
 ---
 # <a name="when-to-use-a-custom-claim-rule"></a>Когда следует использовать настраиваемое правило для утверждений
 Вы пишете настраиваемое правило утверждения в службы федерации Active Directory (AD FS) \(AD FS\) с помощью языка правил утверждений, который является платформой, используемой подсистемой выдачи утверждений для программного создания, преобразования, передачи и фильтрации утверждений. Используя настраиваемое правило, вы можете создавать правила с более сложной логикой, чем с помощью стандартного шаблона правил. Рассмотрите возможность использования настраиваемого правила, когда требуется выполнять следующее.  
@@ -70,12 +69,12 @@ ms.locfileid: "75950145"
 ## <a name="using-the-claim-rule-language"></a>С помощью языка правил утверждений  
   
 ### <a name="example-how-to-combine-first-and-last-names-based-on-a-users-name-attribute-values"></a>Пример. Объединение имен и фамилий в зависимости от значений атрибута имени пользователя  
-Следующий синтаксис правила объединяет имена и фамилии из значений атрибутов в указанном хранилище атрибутов. Обработчик политик формируют декартово произведение совпадений для каждого условия. Например, выходной результат для имен {«Михаил», «Алексей»} и фамилий {«Иванов», «Климов»} — {«Михаил Иванов», «Михаил Климов», «Алексей Иванов», «Алексей Климов»}.  
+Следующий синтаксис правила объединяет имена и фамилии из значений атрибутов в указанном хранилище атрибутов. Обработчик политик формируют декартово произведение совпадений для каждого условия. Например, результат для имени {"Федор", "Алан"} и фамилии {"Миллер", "Shen)"} — {"Федор Миллер", "Федор Shen)", "Алан Миллер", "Алан Shen)"}:  
   
 ```  
 c1:[type == "http://exampleschema/firstname" ]  
 &&  c2:[type == "http://exampleschema/lastname",]   
-=> issue(type = "http://exampleschema/name", value = c1.value + “  “ + c2.value);  
+=> issue(type = "http://exampleschema/name", value = c1.value + "  " + c2.value);  
 ```  
   
 ### <a name="example-how-to-issue-a-manager-claim-based-on-whether-users-have-direct-reports"></a>Пример. Выдача утверждения о руководителе на основе наличия у пользователей подчиненных  
@@ -83,7 +82,7 @@ c1:[type == "http://exampleschema/firstname" ]
   
 ```  
 c:[type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"] => add(store = "SQL Store", types = ("http://schemas.xmlsoap.org/claims/Reports"), query = "SELECT Reports FROM dbo.DirectReports WHERE UserName = {0}", param = c.value );  
-count([type == “http://schemas.xmlsoap.org/claims/Reports“] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
+count([type == "http://schemas.xmlsoap.org/claims/Reports"] ) > 0 => issue(= "http://schemas.xmlsoap.org/claims/ismanager", value = "true");  
 ```  
   
 ### <a name="example-how-to-issue-a-ppid-claim-based-on-an-ldap-attribute"></a>Пример. Выдача утверждения PPID на основе атрибута LDAP  

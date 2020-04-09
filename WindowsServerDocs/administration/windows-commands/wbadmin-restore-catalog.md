@@ -1,24 +1,20 @@
 ---
 title: Wbadmin Restore Catalog
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команда Windows для команды Wbadmin Recover Catalog, которая восстанавливает каталог резервных копий для локального компьютера из указанного места хранения.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce1e24a0-821d-4353-b09d-8f82c5c4ad56
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b0d646440ca9b30f9fa30fb1ac3ff08458b8e44d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0ce9182e4e405b1538277db25f06b6a49d7240f9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362330"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829707"
 ---
 # <a name="wbadmin-restore-catalog"></a>Wbadmin Restore Catalog
 
@@ -39,7 +35,7 @@ wbadmin restore catalog
 [-quiet]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -47,11 +43,11 @@ wbadmin restore catalog
 |-Machine|Указывает имя компьютера, для которого требуется восстановить каталог резервных копий. Используется при хранении резервных копий на нескольких компьютерах в одном и том же месте. Следует использовать, если указан **-backupTarget** .|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Если расположение (диск, DVD или удаленная общая папка), где хранятся резервные копии, повреждено или утеряно и не может использоваться для восстановления каталога резервного копирования, используйте **Wbadmin Delete Catalog** , чтобы удалить поврежденный каталог. В этом случае следует создать новую резервную копию после удаления каталога резервного копирования.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы восстановить каталог из резервной копии, хранящейся на диске d:, введите:
 ```
@@ -62,8 +58,8 @@ wbadmin restore catalog -backupTarget:d
 wbadmin restore catalog -backupTarget:\\servername\share -machine:server01
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [RESTORE-вбкаталог](https://technet.microsoft.com/library/jj902437.aspx)

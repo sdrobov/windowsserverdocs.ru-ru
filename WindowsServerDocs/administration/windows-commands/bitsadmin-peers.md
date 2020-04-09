@@ -1,41 +1,42 @@
 ---
 title: одноранговые узлы битсадмин
-description: Раздел команд Windows для **одноранговых узлов битсадмин** — Список коммутаторов **одноранговых узлов** .
-ms.custom: na
+description: Раздел команд Windows для **одноранговых узлов битсадмин**, в котором перечислены параметры/Пирс.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5effbd52-993a-4657-b331-596c64deb8fb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3611afa3abde89b5eeab99a59994b7feae227a54
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7b7dc04997ae914c259f93b0418c77aef2828e7e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380890"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849957"
 ---
 # <a name="bitsadmin-peers"></a>одноранговые узлы битсадмин
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Список доступных коммутаторов/Пирс.
 
 ```
-bitsadmin /Peers /help
-bitsadmin /Peers /Discover
-bitsadmin /Peers /Clear
-bitsadmin /Peers /list
+bitsadmin /peers /help
+bitsadmin /peers /discover
+bitsadmin /peers /clear
+bitsadmin /peers /list
 ```
-## <a name="parameters"></a>Параметры
-|Параметр|Описание|
-|-------|--------|
-|[bitsadmin peers и help](bitsadmin-peers-and-help.md)|Отображает сведения об использовании командной строки для параметров/Пирс.|
-|[bitsadmin peers и discover](bitsadmin-peers-and-discover.md)|Обнаружение одноранговых узлов еще раз.|
-|[bitsadmin peers и clear](bitsadmin-peers-and-clear.md)|Очищает список одноранговых узлов.|
-|[bitsadmin peers и list](bitsadmin-peers-and-list.md)|Список всех узлов.|
-## <a name="additional-references"></a>Дополнительные ссылки
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+### <a name="parameters"></a>Параметры
+| Параметр | Описание |
+| -------------- | -------------- |
+| [bitsadmin peers и help](bitsadmin-peers-and-help.md) | Отображает сведения об использовании командной строки для параметров/Пирс. |
+| [bitsadmin peers и discover](bitsadmin-peers-and-discover.md) | Обнаружение одноранговых узлов еще раз. |
+| [bitsadmin peers и clear](bitsadmin-peers-and-clear.md) | Очищает список одноранговых узлов. |
+| [bitsadmin peers и list](bitsadmin-peers-and-list.md) | Список всех узлов. |
+
+## <a name="additional-references"></a>Дополнительные материалы
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

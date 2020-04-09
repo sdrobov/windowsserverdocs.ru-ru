@@ -1,28 +1,22 @@
 ---
 title: cd
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для компакт-диска, который отображает имя или изменяет текущий каталог.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 932d9cc1-3dff-40da-835c-1cb0894874f1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed0942232eb205a8198d4b3d366ca9482af1f4b3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2d62f529ab6c45957f0fdea24358a2f13151adb6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379709"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848227"
 ---
 # <a name="cd"></a>cd
-
-
 
 Отображает имя или изменяет текущий каталог. Если используется только с буквой диска (например, `cd C:`), на **компакт-** диске отображаются имена текущего каталога на указанном диске. Если используется без параметров, на **компакт-диске** отображается текущий диск и каталог.
 
@@ -40,7 +34,7 @@ chdir [/d] [<Drive>:][<Path>]
 chdir [..]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -48,9 +42,9 @@ chdir [..]
 |> \<диска:|Указывает диск для вывода или изменения (если он отличается от текущего диска).|
 |\<путь >|Указывает путь к каталогу, который требуется отобразить или изменить.|
 |[..]|Указывает, что вы хотите перейти к родительской папке.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Если расширения команд включены, для команды **CD** применяются следующие условия.
 - Строка текущего каталога преобразуется в использование того же регистра, что и имена на диске. Например, `cd C:\TEMP` задаст текущий каталог C:\Temp, если это так на диске.
@@ -60,7 +54,7 @@ chdir [..]
   ```  
   то же самое, что:  
   ```
-  cd "username\programs\start menu"
+  cd username\programs\start menu
   ```  
   Однако если расширения отключены, необходимо учитывать кавычки.
 
@@ -69,7 +63,7 @@ chdir [..]
 cmd /e:off
 ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Корневой каталог является вершиной иерархии каталогов для диска. Чтобы вернуться к корневому каталогу, введите:
 ```
@@ -84,6 +78,6 @@ cd [<Drive>:\[<Directory>]]
 cd [<Drive>:]
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 509e58b85842826b71cb1bfed72ae4c7e5337e25
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e39b36a6c3126429bc47d5b89d104612cab5db96
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376831"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844287"
 ---
 # <a name="fsutil-objectid"></a>Fsutil ObjectID
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -35,13 +35,13 @@ fsutil objectid [query] <FileName>
 fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <FileName>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |-------------|---------------|
 |создание|Создает идентификатор объекта, если в указанном файле еще нет такого идентификатора. Если у файла уже есть идентификатор объекта, эта подкоманда эквивалентна подкоманде **Query** .|
-|"Удалить"|Удаляет идентификатор объекта.|
-|запрос|Запрашивает идентификатор объекта.|
+|удалить|Удаляет идентификатор объекта.|
+|query|Запрашивает идентификатор объекта.|
 |set|Задает идентификатор объекта.|
 |\<ObjectID >|Задает 16-байтовый шестнадцатеричный идентификатор файла, который гарантированно уникален в пределах тома. Идентификатор объекта используется службой клиента DLT и службой репликации файлов (FRS) для идентификации файлов.|
 |\<Бирсволумеид >|Указывает том, на котором был обнаружен файл при первом получении идентификатора объекта. Это значение представляет собой 16-байтовый шестнадцатеричный идентификатор, используемый службой клиента DLT.|
@@ -49,11 +49,11 @@ fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <Fil
 |\<Домаинид >|16 байт шестнадцатеричный идентификатор домена. Это значение в настоящее время не используется и должно быть установлено в значение все нули.|
 |\<имя файла >|Указывает полный путь к файлу, включая имя файла и расширение, например К:\документс\филенаме.ткст.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Любой файл с идентификатором объекта также имеет идентификатор «рождения», идентификатор объекта «рождение» и идентификатор домена. При перемещении файла идентификатор объекта может измениться, но идентификаторы объекта "том рождения" и "объект рождения" остаются неизменными. Такое поведение позволяет операционной системе Windows всегда находить файл независимо от того, где он был перемещен.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 Чтобы создать идентификатор объекта, введите:
 
 `fsutil objectid create c:\temp\sample.txt`
@@ -70,8 +70,8 @@ fsutil objectid [set] <ObjectID> <BirthVolumeID> <BirthObjectID> <DomainID> <Fil
 
 `fsutil objectid set 40dff02fc9b4d4118f120090273fa9fc f86ad6865fe8d21183910008c709d19e 40dff02fc9b4d4118f120090273fa9fc 00000000000000000000000000000000 c:\temp\sample.txt`
 
-#### <a name="additional-references"></a>Дополнительная справка
-[Условные обозначения синтаксиса команд командной строки](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

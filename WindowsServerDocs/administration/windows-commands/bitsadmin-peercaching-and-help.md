@@ -1,44 +1,39 @@
 ---
 title: кэширование и Справка битсадмин
-description: Разделы о командах Windows для **битсадмин кэшированных ключей и разделов справки** . отображает сведения об использовании командной строки для коммутаторов **однорангового кэширования** .
-ms.custom: na
+description: Команды Windows для **битсадминного кэширования** и **подсистемы**, которая отображает сведения об использовании командной строки для параметров/пиркачинг.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2cb0fcc0-5464-47c9-b44d-dd32a4f0d907
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d01d6cc50552320d99e668a6fc7292a2275b9db
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 29d530d721b9e82eff180abcbed8cf60bf8c9281
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381075"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850167"
 ---
 # <a name="bitsadmin-peercaching-and-help"></a>кэширование и Справка битсадмин
 
-
-
-Отображает сведения об использовании командной строки для коммутаторов **однорангового кэширования** .
+Отображает сведения об использовании командной строки для параметров **/пиркачинг** .
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Bitsadmin /PeerCaching /Help 
+bitsadmin /peercaching /help
 ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Следующая команда отображает справку командной строки для коммутаторов **однорангового** ключа.
+
 ```
-Bitsadmin /PeerCaching /Help
+C:\> bitsadmin /peercaching /help
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

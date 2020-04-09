@@ -1,24 +1,20 @@
 ---
 title: Создание групп серверов и управление ими
-description: Диспетчер серверов
-ms.custom: na
+description: Диспетчер сервера
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-server-manager
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9d5b1be8-49fd-4ff7-9580-e4ff21fe4b17
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 74075f091cd707f6faf73567c1dce6f22a2f6753
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2f4ad512c55bcd1391ad55bdbdeb9a2ba3bfd7f0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71383219"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851547"
 ---
 # <a name="create-and-manage-server-groups"></a>Создание групп серверов и управление ими
 
@@ -26,7 +22,7 @@ ms.locfileid: "71383219"
 
 В этом разделе описывается создание пользовательских групп серверов, определяемых пользователем, в диспетчер сервера в Windows Server.
 
-## <a name="BKMK_groups"></a>Группы серверов
+## <a name="server-groups"></a><a name=BKMK_groups></a>Группы серверов
 Серверы, добавленные в пул серверов, отображаются на странице **все серверы** в Диспетчер сервера. Вы можете создавать настраиваемые группы из уже добавленных серверов. Группы серверов позволяют просматривать и управлять меньшим подмножеством пула серверов в качестве логического устройства. Например, можно создать группу « **серверы учета** » для всех серверов в бухгалтерии организации или группу под названием « **Чикаго** » для всех серверов, географически расположенных в Чикаго. После создания группы серверов на домашней странице группы в диспетчер сервера отображаются сведения о событиях, службах, счетчиках производительности, анализатор соответствия рекомендациям результатах, а также об установленных ролях и функциях группы в целом.
 
 Серверы могут входить в несколько групп.

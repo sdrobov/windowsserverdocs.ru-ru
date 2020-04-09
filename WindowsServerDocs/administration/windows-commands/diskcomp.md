@@ -1,30 +1,26 @@
 ---
 title: diskcomp
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для работы с командами diskcomp, который сравнивает содержимое двух гибких дисков.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f56f534-a356-4daa-8b4f-38e089341e42
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca5ea0f4587b21b2a274c772aab239668b7868b4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e36e644616e25659c1a2a5ca684e975fd06fc19f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377868"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845557"
 ---
 # <a name="diskcomp"></a>diskcomp
 
+Сравнение содержимого двух гибких дисков. Если используется без параметров, **команда diskcomp** использует текущий диск для сравнения обоих дисков.
 
-
-Сравнение содержимого двух гибких дисков. Если используется без параметров, **команда diskcomp** использует текущий диск для сравнения обоих дисков. Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
+В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,15 +28,15 @@ ms.locfileid: "71377868"
 diskcomp [<Drive1>: [<Drive2>:]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<диск1 >|Указывает диск, содержащий один из гибких дисков.|
 |\<диск2 >|Указывает диск, содержащий другой гибкий диск.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - Использование дисков
 
@@ -107,7 +103,7 @@ diskcomp [<Drive1>: [<Drive2>:]]
 
   Для обработки кодов завершения, возвращаемых командой **diskcomp**, можно использовать переменную среды ERRORLEVEL в командной строке **If** в пакетной программе.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Если на компьютере имеется только один дисковод гибких дисков (например, диск A) и требуется сравнить два диска, введите:
 ```
@@ -131,7 +127,7 @@ goto exit
 echo ERROR: An irrecoverable error occurred 
 goto exit 
 :break 
-echo "You just pressed CTRL+C" to stop the comparison 
+echo You just pressed CTRL+C to stop the comparison 
 goto exit 
 :no_compare 
 echo Disks are not the same 
@@ -142,6 +138,6 @@ goto exit
 :exit
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 30657638-5709-48c5-87aa-98f688e07b4c
 title: Контрольный список — реализация разработки единого входа в Интернете
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: 8488e0c9195930374aacd959e72d0eff34142ca7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 298233eb20bd54e3e07eb87e029211502142b215
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408458"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855217"
 ---
 # <a name="checklist-implementing-a-web-sso-design"></a>Контрольный список: реализация проекта единого входа для интернет-решений
 
@@ -25,11 +24,11 @@ ms.locfileid: "71408458"
   
 Контрольный список веб-единого входа ![](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**. Реализация разработки единого входа в Интернете**  
   
-||Задача|Справочные материалы|  
+||Задача|Ссылки|  
 |-|--------|-------------|  
-|![единый вход в Интернете](media/icon_checkboxo.gif)|Ознакомьтесь с важными понятиями о разработке веб-единого входа и определите, какие AD FS цели развертывания можно использовать для настройки этого проекта в соответствии с потребностями Организации. **Примечание.**|веб-](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Разработка единого входа](https://technet.microsoft.com/library/dd807033.aspx) ![веб-единого входа<br /><br />![веб-единого входа,](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[определяющего цели развертывания AD FS](https://technet.microsoft.com/library/dd807053.aspx)|  
+|![единый вход в Интернете](media/icon_checkboxo.gif)|Ознакомьтесь с важными понятиями о разработке веб-единого входа и определите, какие AD FS цели развертывания можно использовать для настройки этого проекта в соответствии с потребностями Организации. **Примечание.**|веб-](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Разработка единого входа](https://technet.microsoft.com/library/dd807033.aspx) ![веб-единого входа<p>![веб-единого входа,](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[определяющего цели развертывания AD FS](https://technet.microsoft.com/library/dd807053.aspx)|  
 |![единый вход в Интернете](media/icon_checkboxo.gif)|Ознакомьтесь с оборудованием, программным обеспечением, сертификатом, системой доменных имен \(\)DNS, хранилищем атрибутов и требованиями клиента для развертывания AD FS в вашей организации.|веб-приложение ![SSO Web](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[A. проверка AD FSных требований](https://technet.microsoft.com/library/ff678034.aspx)|  
 |![единый вход в Интернете](media/icon_checkboxo.gif)|В соответствии с планом проектирования установите один или несколько серверов федерации в корпоративной сети или в сети периметра. **Примечание.** Для успешного функционирования разработки единого входа в Интернете требуется только один сервер федерации. Один сервер федерации действует как роль поставщика утверждений, так и роль проверяющей стороны.|Контрольный список веб-единого входа ![](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[. Настройка сервера федерации](Checklist--Setting-Up-a-Federation-Server.md)|  
 |![единый вход в Интернете](media/icon_checkboxo.gif)|\(необязательно\) определить, требуется ли вашей организации прокси-сервер федерации в сети периметра.|Контрольный список веб-единого входа ![](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[. Настройка прокси-сервера федерации](Checklist--Setting-Up-a-Federation-Server-Proxy.md)|  
 |![единый вход в Интернете](media/icon_checkboxo.gif)|В зависимости от разработанного плана системы единого входа в Интернете и предполагаемого способа использования добавьте соответствующее хранилище атрибутов, отношения доверия проверяющей стороны, утверждения и правила утверждений в службу федерации.|Контрольный список веб-единого входа ![](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[. Настройка организации партнера по учетным записям](Checklist--Configuring-the-Account-Partner-Organization.md)|  
-|![единый вход в Интернете](media/icon_checkboxo.gif)|Если вы являетесь администратором в организации партнера по ресурсам, утверждения\-включить приложение веб-браузера, приложение веб-службы или Microsoft® Office SharePoint® Server, используя WIF и пакет SDK для WIF. **Примечание.**|![веб-единого входа](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=122266)<br /><br />![веб-единого входа](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)| 
+|![единый вход в Интернете](media/icon_checkboxo.gif)|Если вы являетесь администратором в организации партнера по ресурсам, утверждения\-включить приложение веб-браузера, приложение веб-службы или Microsoft&reg; Office SharePoint&reg; Server, используя WIF и пакет SDK для WIF. **Примечание.**|![веб-единого входа](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=122266)<p>![веб-единого входа](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Windows Identity Foundation SDK](https://go.microsoft.com/fwlink/?LinkId=122266)| 

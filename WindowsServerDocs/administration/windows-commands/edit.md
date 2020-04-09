@@ -1,26 +1,22 @@
 ---
-title: изменить
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: правка
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4e0ff2e8-3518-47c1-8c69-5e93f895fa0e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a51a81a0ed2d28a30e8ec221d5719968dce48ac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4dfffefbe113bc5df242a00357c769aaa9c1c787
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377617"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80845227"
 ---
-# <a name="edit"></a>изменить
+# <a name="edit"></a>правка
 
 
 
@@ -34,24 +30,24 @@ ms.locfileid: "71377617"
 edit [/b] [/h] [/r] [/s] [/<NNN>] [[<Drive>:][<Path>]<FileName> [<FileName2> [...]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |[\<диска >:] [<Path>]<FileName> [<FileName2> [...]]|Указывает расположение и имя одного или нескольких текстовых файлов ASCII. Если файл не существует, редактор MS-DOS создаст его. Если файл существует, редактор MS-DOS открывает его и отображает его содержимое на экране. *Имя файла* может содержать подстановочные **&#42;** знаки (и **?** ). Несколько имен файлов следует разделять пробелами.|
-|b|Заставляет режим монохромной, чтобы редактор MS-DOS отображался в черно-белом режиме.|
+|/b|Заставляет режим монохромной, чтобы редактор MS-DOS отображался в черно-белом режиме.|
 |/h|Отображение максимального числа строк, возможных для текущего монитора.|
 |/r|Загружает файлы в режиме только для чтения.|
 |/s|Принудительное использование коротких имен файлов.|
 |\<NNN >|Загружает двоичные файлы, заключив строки в *nnn* символов в ширину.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Для получения дополнительной справки откройте редактор MS-DOS и нажмите клавишу F1.
 -   Некоторые мониторы не поддерживают отображение сочетаний клавиш по умолчанию. Если в мониторе не отображаются сочетания клавиш, используйте **/b**.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы открыть редактор MS-DOS, введите:
 ```

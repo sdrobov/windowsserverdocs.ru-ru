@@ -1,29 +1,25 @@
 ---
 title: Управление удаленным веб-доступом в Windows Server Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6f4277637ed0f721b0cae12c15086a59ac6190fc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 3457eb28c05bd79f0de3a982da77ca01ffe9b52d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311160"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852767"
 ---
 # <a name="manage-remote-web-access-in-windows-server-essentials"></a>Управление удаленным веб-доступом в Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
  
- Удаленное Веб-доступ в Windows Server Essentials или Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience предоставляет упрощенный, удобный для сенсорного просмотра интерфейс для доступа к приложениям и данным практически из любого места у вас есть подключение к Интернету и с помощью практически любого устройства. Для использования функции удаленного веб-доступа нужно сначала включить ее при помощи мастера настройки повсеместного доступа, а затем настроить маршрутизатор и имя домена.  
+ Удаленное Веб-доступ в Windows Server Essentials или Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience предоставляет упрощенный, удобный для сенсорного просмотра доступ к приложениям и данным практически из любого места, где имеется подключение к Интернету, и почти с любого устройства. Для использования функции удаленного веб-доступа нужно сначала включить ее при помощи мастера настройки повсеместного доступа, а затем настроить маршрутизатор и имя домена.  
   
 ## <a name="in-this-topic"></a>Содержание раздела  
   

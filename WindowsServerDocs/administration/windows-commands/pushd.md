@@ -1,24 +1,20 @@
 ---
 title: pushd
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 396bc545-0f41-473e-b0ac-76fbbb74d390
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 634dd6dee471751cc62b6899a3963e02e8e783a2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e7866a54e83bd57c8689512a1b75b151f74cb93c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371977"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837097"
 ---
 # <a name="pushd"></a>pushd
 
@@ -34,14 +30,14 @@ ms.locfileid: "71371977"
 pushd [<Path>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<путь >|Указывает каталог для создания текущего каталога. Эта команда поддерживает относительные пути.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Каждый раз, когда вы используете команду **pushd** , хранится один каталог для использования. Однако можно хранить несколько каталогов с помощью команды **pushd** многократно.
 
@@ -51,7 +47,7 @@ pushd [<Path>]
 -   Если расширения команд включены, команда **pushd** принимает либо сетевой путь, либо букву локального диска и путь.
 -   Если указан сетевой путь, команда **pushd** будет временно назначать наиболее неиспользуемую букву диска (начиная с Z:). к указанному сетевому ресурсу. Затем команда изменяет текущий диск и каталог на указанный каталог на вновь назначенном диске. При использовании команды **popd** с включенными расширениями команд Команда **popd** удаляет присвоение букв диска, созданное **принудительно**.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере показано, как можно использовать команду **pushd** и команду **popd** в пакетной программе для изменения текущего каталога, в котором выполнялась программа пакетной службы, а затем изменить ее обратно:
 ```
@@ -64,8 +60,8 @@ cls
 echo All text files deleted in the %1 directory
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Командой](popd.md)

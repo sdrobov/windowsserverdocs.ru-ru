@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса Active Directory — резервное копирование всего сервера
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 ms.technology: identity-adds
-ms.openlocfilehash: e9222685e8f6369e560a841990bc13ab8b0e4d37
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6466fbc1caed7dc6efcbcd925eba1bd4e01135b6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390265"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823697"
 ---
 # <a name="resetting-a-trust-password-on-one-side-of-the-trust"></a>Сброс пароля доверия с одной стороны доверия  
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
  Если восстановление леса связано с нарушением безопасности, используйте следующую процедуру, чтобы сбросить пароль доверия с одной стороны доверия. Сюда входят неявные отношения доверия между дочерними и родительскими доменами, а также явные отношения доверия между этим доменом (доверяющим доменом) и другим доменом (доверенный домен). 
   

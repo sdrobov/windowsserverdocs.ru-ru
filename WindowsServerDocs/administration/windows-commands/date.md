@@ -1,28 +1,22 @@
 ---
 title: date
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для даты — отображает или задает системную дату. Если используется без параметров,
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce6700fb-32f9-4350-a1af-5aee61d4448c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d7328b2b5d3c78fdfd741918d76e26195f0af4a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8f9e32240eb27d651e324becefd72e9b1a545215
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378825"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846747"
 ---
 # <a name="date"></a>date
-
-
 
 Отображает или задает системную дату. Если используется без параметров, **Дата** отображает текущий параметр системной даты и предлагает ввести новую дату.
 
@@ -34,13 +28,13 @@ ms.locfileid: "71378825"
 date [/t | <Month-Day-Year>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Month-Day-year >|Задает указанную дату, где *Month* — месяц (одна или две цифры), *день* — день (одна или две цифры), а в качестве *года* — год (две или четыре цифры).|
+|\<месяц-день >|Задает указанную дату, где *Month* — месяц (одна или две цифры), *день* — день (одна или две цифры), а в качестве *года* — год (две или четыре цифры).|
 |/t|Отображает текущую дату без запроса на ввод новой даты.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -50,7 +44,7 @@ date [/t | <Month-Day-Year>]
 -   Допустимые значения *дня* : от 1 до 31.
 -   Допустимые значения *года* : от 00 до 99 или от 1980 до 2099. Если используются две цифры, значения от 80 до 99 соответствуют годам с 1980 по 1999.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Если расширения команд включены, для вывода текущей системной даты введите:
 ```
@@ -69,6 +63,6 @@ Enter the new date: (mm-dd-yy)
 ```
 Для сохранения текущей даты и возврата в командную строку нажмите клавишу ВВОД. Чтобы изменить текущую дату, введите новую дату и нажмите клавишу ВВОД.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

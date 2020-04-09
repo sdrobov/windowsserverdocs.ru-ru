@@ -1,7 +1,6 @@
 ---
 ms.assetid: f67b0bc9-e5af-4891-9da0-d9be539af42d
 title: Определение топологии развертывания AD FS
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b9128dded44e83acc63cef6785a1949e614cf6a7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0336c54357745217c30e14afc0824f97d476b45d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408112"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855157"
 ---
 # <a name="determine-your-ad-fs-deployment-topology"></a>Определение топологии развертывания AD FS
 
@@ -22,7 +21,7 @@ ms.locfileid: "71408112"
   
 Прежде чем приступить к прочтению раздела о топологиях развертывания, рекомендуется выполнить задачи в последовательности. указанной в следующей таблице.  
   
-|Рекомендованная задача|Описание|Справочные материалы|  
+|Рекомендованная задача|Описание|Ссылки|  
 |--------------------|---------------|-------------|  
 |Узнайте, как AD FS данные хранятся и реплицируются на другие серверы федерации в ферме серверов федерации.|Установите назначение базовых данных, хранимых в базе данных конфигурации AD FS, и методы их репликации. В этом разделе рассматриваются основные понятия базы данных конфигурации и описываются два типа баз данных: Внутренняя база данных Windows \(WID\) и Microsoft SQL Server.|[Роль базы данных конфигурации AD FS](../../ad-fs/technical-reference/The-Role-of-the-AD-FS-Configuration-Database.md).|  
 |Выберите тип базы данных конфигурации AD FS, которая будет развернута в вашей организации.|Проанализируйте разные преимущества и ограничения, связанные с WID или SQL Server в качестве базы данных конфигурации AD FS, а также различные поддерживаемые ими сценарии применения.|[Некоторые аспекты топологии развертывания AD FS](AD-FS-Deployment-Topology-Considerations.md)|  
