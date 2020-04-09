@@ -1,28 +1,24 @@
 ---
 title: Протокол DTLS
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 57b8873a-ad9c-4f2c-93e0-a2af352c6965
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/16/2018
-ms.openlocfilehash: f603dc0c5616619088537ffcbd06f64baece0e23
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d0c066b063cbfc8def54c2e0d02cbb0eaf7f1d40
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852927"
 ---
 # <a name="datagram-transport-layer-security-protocol"></a>Протокол DTLS
 
-Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10
+Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 В этом справочном разделе по ИТ-специалисту описан протокол датаграммы Transport Layer Security (DTLS), который входит в состав поставщика поддержки безопасности SChannel (SSP).
 
@@ -33,8 +29,9 @@ Windows Server (половина ежегодного канала), Windows Ser
 
 Комплекты шифров, доступные для конфигурации, обрабатываются после того, как вы можете настроить TLS. RC4 не разрешен. SChannel использует шифрование следующего поколения (CNG). Это использует преимущества сертификации FIPS 140, которая появилась в Windows Vista.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 [Безопасность транспортного уровня в стандарте IETF RFC 4347](http://tools.ietf.org/html/rfc4347)
 
 
+                                        

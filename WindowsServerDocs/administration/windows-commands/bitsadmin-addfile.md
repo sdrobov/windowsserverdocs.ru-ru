@@ -1,24 +1,20 @@
 ---
 title: bitsadmin addfile
-description: Раздел команд Windows для **битсадмин AddFile** . добавляет файл в указанное задание.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин AddFile**, который добавляет файл к указанному заданию.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b31aa93-0364-465b-af36-754968825989
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8dfddda92e506dbfca2a47394a310edf16fe78aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 330e79eb2ba5a824cea54094f64ceb6f9cfd66b9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382042"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850967"
 ---
 # <a name="bitsadmin-addfile"></a>bitsadmin addfile
 
@@ -30,21 +26,22 @@ ms.locfileid: "71382042"
 bitsadmin /AddFile <Job> <RemoteURL> <LocalName>
 ```
 
-## <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|ремотеурл|URL-адрес файла на сервере.|
-|Локально|Имя файла на локальном компьютере. *LocalName* должно содержать абсолютный путь к файлу.|
+| Параметр | Описание |
+| --------- | ----------- |
+| Job | Отображаемое имя задания или идентификатор GUID. |
+| ремотеурл | URL-адрес файла на сервере. |
+| Локально | Имя файла на локальном компьютере. *LocalName* должно содержать абсолютный путь к файлу. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Добавьте файл в задание. Повторите этот вызов для каждого файла, который нужно добавить. Если несколько заданий используют *мидовнлоаджоб* в качестве имени, необходимо заменить *мидовнлоаджоб* на GUID задания для уникальной идентификации задания.
+
 ```
 C:\>bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Ключ синтаксиса командной строки](command-line-syntax-key.md)&copy;

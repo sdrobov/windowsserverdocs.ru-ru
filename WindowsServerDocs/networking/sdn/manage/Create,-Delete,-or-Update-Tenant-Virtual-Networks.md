@@ -1,24 +1,20 @@
 ---
 title: Создание, удаление или обновление виртуальной сети клиента
 description: В этом разделе вы узнаете, как создавать, удалять и обновлять виртуальные сети виртуализации сети Hyper-V после развертывания программно-определяемой сети (SDN). Виртуализация сети Hyper-V помогает изолировать сети клиентов, чтобы каждая сеть клиентов была отдельной сущностью. Каждая сущность не имеет возможности перекрестного подключения, если только не настроены рабочие нагрузки общего доступа.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6a820826-e829-4ef2-9a20-f74235f8c25b
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/24/2018
-ms.openlocfilehash: f85f593ec3dca33c5b35fb065c7d84ed12ea9af2
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: acb663cd33d015c1ce96241abffd4ca260cc5559
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309823"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854527"
 ---
 # <a name="create-delete-or-update-tenant-virtual-networks"></a>Создание, удаление или обновление виртуальных сетей клиентов
 
