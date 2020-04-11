@@ -1,6 +1,6 @@
 ---
 title: bitsadmin wrap
-description: Команды Windows для битсадмин Wrap, которая заключает в оболочку любую строку выходного текста, расположенную за крайней правой границей окна команд, до следующей строки.
+description: Команды Windows для **битсадмин Wrap**, которая заключает в оболочку любую строку выходного текста, расположенную за крайней правой границей окна команд, до следующей строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,41 +9,39 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 009a0452f44c4944ae110ca6b9e0570793c32a72
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e754a765d94661baf24190431b455584d29991ec
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848757"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122567"
 ---
 # <a name="bitsadmin-wrap"></a>bitsadmin wrap
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Заключает строку выходного текста, выходящего за пределы крайнего правого края окна команд, на следующую строку.
+Заключает строку выходного текста, выходящего за пределы крайнего правого края окна команд, на следующую строку. Этот параметр необходимо указать перед любыми другими параметрами.
+
+По умолчанию все коммутаторы, кроме коммутатора [монитора битсадмин](bitsadmin-monitor.md) , заключают выходной текст в оболочку.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /Wrap Job
+bitsadmin /wrap <job>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------|--------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| --------- | ---------- |
+| Job | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
-
-Укажите перед другими параметрами. По умолчанию все параметры, кроме коммутатора [монитора битсадмин](bitsadmin-monitor.md) , заключают выходные данные в оболочку.
-
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 В следующем примере извлекаются сведения о задании с именем *мидовнлоаджоб* и переносятся выходные данные.
 
 ```
-C:\>bitsadmin /Wrap /Info myDownloadJob /verbose
+C:\>bitsadmin /wrap /info myDownloadJob /verbose
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

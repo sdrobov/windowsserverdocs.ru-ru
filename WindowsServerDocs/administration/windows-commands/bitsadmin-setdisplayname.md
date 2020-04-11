@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdisplayname
-description: Раздел команд Windows для битсадмин сетдисплайнаме, который задает отображаемое имя указанного задания.
+description: Раздел команд Windows для **битсадмин сетдисплайнаме**, который задает отображаемое имя указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,35 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 601c5b406132e70fb7d4facb97329f7456002bb4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0b1086903dd130392800f325c451bb4750fbf8fa
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849547"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123005"
 ---
 # <a name="bitsadmin-setdisplayname"></a>bitsadmin setdisplayname
 
-Задает отображаемое имя указанного задания.
+Задает отображаемое имя для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetDisplayName <Job> <DisplayName>
+bitsadmin /setdisplayname <job> <display_name>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|DisplayName|Текст, используемый для отображаемого имени указанного задания.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| display_name | Текст, используемый в качестве отображаемого имени для конкретного задания. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере задается отображаемое имя для задания с именем *мидовнлоаджоб* в *myDownloadJob2*.
+В следующем примере задается отображаемое имя задания *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /SetDisplayName myDownloadJob Download Music Job
+C:\>bitsadmin /setdisplayname myDownloadJob
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

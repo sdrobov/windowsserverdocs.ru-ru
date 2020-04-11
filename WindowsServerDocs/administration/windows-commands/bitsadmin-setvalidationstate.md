@@ -1,6 +1,6 @@
 ---
 title: битсадмин сетвалидатионстате
-description: Раздел команд Windows для битсадмин сетвалидатионстате, который задает состояние проверки содержимого заданного файла в задании.
+description: Раздел команд Windows для **битсадмин сетвалидатионстате**, который задает состояние проверки содержимого заданного файла в задании.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: de6480596b55b3a483076297f32ce52a975915db
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6bec42ae926050cd21df594a38f1c441a40a527f
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849117"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122711"
 ---
 # <a name="bitsadmin-setvalidationstate"></a>битсадмин сетвалидатионстате
 
@@ -23,22 +23,23 @@ ms.locfileid: "80849117"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetValidationState <Job> <file index> <true|false> 
+bitsadmin /setvalidationstate <job> <file_index> <TRUE|FALSE>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр  |          Описание           |
-|------------|--------------------------------|
-|    Job     | Отображаемое имя задания или идентификатор GUID |
-| Индекс файла |         Начинается с 0          |
-|    Истина    |             Ложь              |
+| Параметр | Описание |
+| --------- | ---------- |
+| Job | Отображаемое имя задания или идентификатор GUID. |
+| file_index | Начинается с 0. |
+| TRUE или FALSE | **Значение true** включает проверку содержимого для указанного файла, а **значение false** отключает его. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере состояние проверки содержимого файла 2 устанавливается равным TRUE для задания с именем *myJob*.
+В следующем примере состояние проверки содержимого файла 2 устанавливается равным TRUE для задания с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /SetValidationState myJob 2 TRUE 
+C:\>bitsadmin /setvalidationstate myDownloadJob 2 TRUE
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

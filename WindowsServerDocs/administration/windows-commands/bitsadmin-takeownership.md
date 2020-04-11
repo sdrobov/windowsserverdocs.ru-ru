@@ -1,6 +1,6 @@
 ---
 title: bitsadmin takeownership
-description: Раздел команд Windows для битсадмин такеовнершип, позволяющий пользователю с правами администратора становиться владельцем указанного задания.
+description: Раздел команд Windows для **битсадмин такеовнершип**, позволяющий пользователю с правами администратора становиться владельцем указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a2c0bfc1fcb1606102aece76129c49aad701ead
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a04f54747e3e06aa61166c2c9f9cedfdfbc8d42a
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849027"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122696"
 ---
 # <a name="bitsadmin-takeownership"></a>bitsadmin takeownership
 
@@ -23,20 +23,21 @@ ms.locfileid: "80849027"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /TakeOwnership <Job>
+bitsadmin /takeownership <job>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| --------- | ---------- |
+| Job | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 В следующем примере выполняется владение заданием с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /TakeOwnership myDownloadJob
+C:\>bitsadmin /takeownership myDownloadJob
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

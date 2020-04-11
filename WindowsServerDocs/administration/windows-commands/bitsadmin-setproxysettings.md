@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setproxysettings
-description: Раздел команд Windows для битсадмин setproxysettings, который задает параметры прокси-сервера для указанного задания.
+description: Раздел команд Windows для **битсадмин setproxysettings**, который задает параметры прокси-сервера для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4dea72d956d12070b2638f953a7a00dcb1ed7a9c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0ea92383d9bd09372d21d3c1da84db060b0a9958
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849207"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122755"
 ---
 # <a name="bitsadmin-setproxysettings"></a>bitsadmin setproxysettings
 
@@ -23,31 +23,34 @@ ms.locfileid: "80849207"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetProxySettings <Job> <Usage> [List] [Bypass]
+bitsadmin /setproxysettings <job> <usage> [list] [bypass]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|Использование|Принимает одно из следующих значений:</br>— Предварительная настройка — используйте значения по умолчанию для свойства Owner в Internet Explorer.</br>-NO_PROXY — не использовать прокси-сервер.</br>-OVERRIDE — Используйте явный список прокси-серверов и список обхода. Должен следовать список обхода прокси-сервера и прокси-сервера.</br>— Автообнаружение — автоматическое определение параметров прокси-сервера.|
-|List|Используется, если параметр *использования* имеет значение override, содержит разделенный запятыми список прокси-серверов для использования.|
-|Пустите|Используется, если параметр *использования* имеет значение переопределение, содержит разделенный пробелами список имен узлов или IP-адресов, для которых передачи не направляются через прокси-сервер. Это может быть **\<локальным >** для ссылки на все серверы в одной локальной сети. Значения NULL или могут использоваться для пустого списка обхода прокси-сервера.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| usage | Задает использование прокси-сервера, в том числе:<ul><li>**PRECONFIG.** Используйте параметры по умолчанию для владельца Internet Explorer.</li><li>**NO_PROXY.** Не используйте прокси-сервер.</li><li>**Крывают.** Используйте явный список прокси-серверов и список обхода. Должны следовать список прокси-сервера и сведения для обхода прокси-сервера.</li><li>**Автообнаружение.** Автоматически определяет параметры прокси-сервера.</li></ul> |
+| list | Используется, если параметру *использования* задано значение override. Должен содержать разделенный запятыми список прокси-серверов для использования. |
+| Пустите | Используется, если параметру *использования* задано значение override. Должен содержать разделенный пробелами список имен узлов или IP-адресов, для которых передачи не направляются через прокси-сервер. Это может быть `<local>` для ссылки на все серверы в одной локальной сети. Значения NULL могут использоваться для пустого списка обхода прокси-сервера. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 В следующем примере задаются параметры прокси-сервера для задания с именем *мидовнлоаджоб*.
 
 ```
-C:\>bitsadmin /SetProxySettings myDownloadJob PRECONFIG
+C:\>bitsadmin /setproxysettings myDownloadJob PRECONFIG
 ```
-
-Ниже приведены некоторые другие примеры.
 
 ```
 bitsadmin /setproxysettings myDownloadJob NO_PROXY
-bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80 
+```
+```
+bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1:80
+```
+
+```
 bitsadmin /setproxysettings myDownloadJob OVERRIDE proxy1,proxy2,proxy3 NULL
 ```
 

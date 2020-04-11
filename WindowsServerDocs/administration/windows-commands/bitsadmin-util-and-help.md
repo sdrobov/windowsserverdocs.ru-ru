@@ -1,6 +1,6 @@
 ---
 title: битсадмин util и Справка
-description: Раздел команд Windows для битсадмин util и Help, который отображает сведения об использовании командной строки для переключателей util.
+description: Раздел команд Windows для **битсадмин util и Help**, который отображает сведения об использовании командной строки для переключателей util.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fac449fea329cf8f03985ab8bc036c4046a5dd24
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3cbfcb5a630d6670202551a433ca3acc4b9b7fa0
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848907"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122485"
 ---
 # <a name="bitsadmin-util-and-help"></a>битсадмин util и Справка
 
@@ -23,14 +23,15 @@ ms.locfileid: "80848907"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Bitsadmin /Util /Help 
+bitsadmin /util /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Следующая команда отображает справку командной строки для переключателей **util** .
+
 ```
-Bitsadmin /Util /Help
+C:\>bitsadmin /util /help
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

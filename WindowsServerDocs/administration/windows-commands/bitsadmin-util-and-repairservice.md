@@ -1,6 +1,6 @@
 ---
 title: битсадмин util и репаирсервице
-description: Команды Windows для битсадмин util и репаирсервице, которая устраняет известные проблемы в различных версиях службы BITS.
+description: Команды Windows для **битсадмин util и репаирсервице**, которая устраняет известные проблемы в различных версиях службы BITS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,46 +9,41 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aaaa6edab22031dc53d266984bb669634e3bb362
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 164a402e7cbfc0a9223a97f4246eac84f0797aed
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848897"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122517"
 ---
 # <a name="bitsadmin-util-and-repairservice"></a>битсадмин util и репаирсервице
 
-Если не удается запустить службу BITS, используйте этот параметр для устранения известных проблем в различных версиях BITS.
+Если не удается запустить службу BITS, этот параметр пытается устранить ошибки, связанные с неправильной конфигурацией службы и зависимостями в службах Windows (например, LANManworkstation) и в сетевом каталоге. Этот параметр также создает выходные данные, указывающие, разрешены ли проблемы.
 
-**Битсадмин 1,5 и более ранних версий:**  не поддерживается.
+> [!NOTE]
+> Эта команда не поддерживается в БИТАХ 1,5 и более ранних версиях.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /Util /RepairService [/Force]
+bitsadmin /util /repairservice [/force]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Force|Необязательно — удаляет и повторно создает службу.|
-
-## <a name="remarks"></a>Примечания
-
-Этот параметр разрешает ошибки, связанные с неправильной конфигурацией службы и зависимостями в службах Windows (например, LANManworkstation) и в сетевом каталоге. Этот параметр создает выходные данные, которые указывают, разрешены ли проблемы.
+| Параметр | Описание |
+| --------- | ----------- |
+| /Force | Необязательно. Удаляет и создает службу снова.|
 
 > [!NOTE]
-> Если служба BITS повторно создает службу, в локализованной системе в качестве строки описания службы может быть задан английский язык.
+> Если служба BITS вновь создает службу, строка описания службы может быть задана как английская даже в локализованной системе.
 
-> [!IMPORTANT]
-> Эта команда не поддерживается в Windows Vista.
-
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 В следующем примере восстанавливается конфигурация службы BITS.
+
 ```
-C:\>bitsadmin /Util /RepairService
+C:\>bitsadmin /util /repairservice
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы

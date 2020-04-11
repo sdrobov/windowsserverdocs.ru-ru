@@ -1,24 +1,22 @@
 ---
 title: Устранение неполадок Windows Server
 description: Ссылки на статьи по устранению неполадок, связанных с Windows Server
-layout: LandingPage
 ms.prod: windows-server
 ms.technology: server-general
 ms.date: 1/24/2020
-ms.topic: landing-page
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: 0537f00a06b27f855fcd87e9b1caa9d2e5085685
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e5fdae6e005adf6ea221fb3c2bf3ea09bfbfb03a
+ms.sourcegitcommit: 5c93c685dca3cafeea916cedcc0f915c528484ca
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820737"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "81119258"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Устранение неполадок компонентов Windows Server
 
 > [!TIP]
-> Ищете дополнительные сведения о старых версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com.  
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com.  
 >   
 > Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 

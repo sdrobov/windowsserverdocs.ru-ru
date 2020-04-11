@@ -1,6 +1,6 @@
 ---
 title: битсадмин сеселпертокен
-description: Раздел команд Windows для битсадмин сеселпертокен, который задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве вспомогательного токена задания передачи BITS.
+description: Раздел команд Windows для **битсадмин сеселпертокен**, который задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве вспомогательного токена задания передачи BITS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,31 +8,32 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: a1e8fd0054cadf3bf06b6e5b7bdf5010b18781e1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ba4b9a4ed1b59d1b1aeda30353317739b7fdfa9e
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849537"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122984"
 ---
 # <a name="bitsadmin-sethelpertoken"></a>битсадмин сеселпертокен
 
-Задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве [вспомогательного токена](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs)задания передачи BITS.
+Задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве [вспомогательного токена](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs)задания передачи BITS.
 
-**BITS 3,0 и более ранних версий**: не поддерживается.
+> [!NOTE]
+> Эта команда не поддерживается в БИТАХ 3,0 и более ранних версиях.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetHelperToken <Job> [\<username@domain\> \<password\>]
+bitsadmin /sethelpertoken <job> [<user_name@domain> <password>]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID.|
-|\<username@domain\> \<пароль\>|Необязательно&mdash;учетные данные локальной учетной записи пользователя, токен которой будет использоваться.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| `<username@domain>` `<password>` | Необязательно. Учетные данные локального пользователя, для которых используется токен. |
 
 ## <a name="additional-references"></a>Дополнительные материалы
 

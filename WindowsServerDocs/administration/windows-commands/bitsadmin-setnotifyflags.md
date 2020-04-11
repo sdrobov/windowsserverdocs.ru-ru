@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifyflags
-description: Раздел команд Windows для битсадмин сетнотифифлагс, который задает флаги уведомления о событиях для указанного задания.
+description: Раздел команд Windows для **битсадмин сетнотифифлагс**, который задает флаги уведомления о событиях для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fd3001fa4ae7f51cab92556f4f2f498511cca5ae
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 73c088ce2bae8d2ad99b313417c14449ddd822b5
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849287"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122790"
 ---
 # <a name="bitsadmin-setnotifyflags"></a>bitsadmin setnotifyflags
 
@@ -23,27 +23,22 @@ ms.locfileid: "80849287"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetNotifyFlags <Job> <NotifyFlags>
+bitsadmin /setnotifyflags <job> <notifyflags>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|нотифифлагс|См. примечания|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| нотифифлагс | Может включать один или несколько следующих флагов уведомлений, в том числе:<ul><li>**1.** создает событие, когда все файлы в задании были переданы.</li><li>**2.** создает событие при возникновении ошибки.</li><li>**3.** формирует событие, когда все файлы завершили перенос или при возникновении ошибки.</li><li>**4.** отключает уведомления.</li></ul> |
 
-## <a name="remarks"></a>Примечания
+## <a name="examples"></a>Примеры
 
-Параметр **нотифифлагс** может содержать один или несколько следующих флагов уведомления.
+В следующем примере устанавливаются флаги уведомления для создания события при возникновении ошибки для задания с именем *мидовнлоаджоб*.
 
-|-----|-----| | 1 | Создавать событие при передаче всех файлов в задании. | | 2 | Создавать событие при возникновении ошибки. | | 4 | Отключить уведомления. |
-
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
-
-В следующем примере задается задание notify flags для события "передано" и "ошибка" для задания с именем *мидовнлоаджоб*.
 ```
-C:\>bitsadmin /SetNotifyFlags myDownloadJob 3
+C:\>bitsadmin /setnotifyflags myDownloadJob 2
 ```
 
 ## <a name="additional-references"></a>Дополнительные материалы
