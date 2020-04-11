@@ -4,16 +4,15 @@ description: Узнайте, как устранять ошибки актива
 ms.topic: article
 ms.date: 9/18/2019
 ms.technology: server-general
-ms.assetid: ''
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e977dbf71eb4afd004a773d06933fd8646ce8eb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 50c50353316db4288f01893125ecd651db63cbb7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947669"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826357"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Устранение неполадок по коду ошибки активации Windows
 

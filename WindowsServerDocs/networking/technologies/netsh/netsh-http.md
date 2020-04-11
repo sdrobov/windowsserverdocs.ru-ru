@@ -4,16 +4,15 @@ description: netsh http можно использовать для запрос�
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: ''
 manager: dougkim
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 2c1032812f52eb32d9ae12310c8f2cff03f70aa5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 81053e71040d2a0cd125af9fb7f3802dfd535781
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309381"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853757"
 ---
 # <a name="netsh-http-commands"></a>Команды HTTP для Netsh
 

@@ -1,24 +1,19 @@
 ---
 title: Клиент удаленного рабочего стола отключается и не может повторно подключиться к тому же сеансу
 description: В этой статье описано, как устранить проблему, когда клиент удаленного рабочего стола отключается и не может повторно подключиться к тому же сеансу.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c54442a5ce1322f4157de5dbf82d1c662c6f91d
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: 0d116c99b7c8b1daffc4ec58bd93414781eea321
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465598"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857207"
 ---
 # <a name="remote-desktop-client-disconnects-and-cant-reconnect-to-the-same-session"></a>Клиент Удаленного рабочего стола отключается и не может повторно подключиться к тому же сеансу
 

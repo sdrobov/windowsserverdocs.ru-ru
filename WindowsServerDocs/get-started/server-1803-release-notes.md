@@ -1,28 +1,24 @@
 ---
 title: Примечания к выпуску — важные проблемы в Windows Server версии 1803
 description: Узнайте о любых известных проблемах, ограничениях или другой информации, необходимой перед установкой Windows Server версии 1803
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 05/07/2018
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: a250f83a4f46966666556ba3d078d2faf3ea8e06
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a511c9888f27fe97fdeaf65cde022e5c2aa999d4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391458"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826087"
 ---
-# <a name="release-notes-important-issues-in-windows-server-version-1803"></a>Заметки о выпуске: Важные проблемы в Windows Server версии 1803
+# <a name="release-notes-important-issues-in-windows-server-version-1803"></a>Заметки о выпуске. Важные проблемы в Windows Server версии 1803
 
->Область применения. Windows Server Semi-Annual Channel
+>Область применения. Windows Server, Semi-Annual Channel
 
 В этих примечаниях к выпуску кратко изложены наиболее важные проблемы в операционной системе Windows Server, включая способы устранения или обхода известных проблем. Подробные сведения о новых возможностях этого выпуска см. в статье [Новые возможности Windows Server версии 1803](whats-new-in-windows-server-1803.md). Ознакомьтесь со статьей [О контейнерах Windows](https://docs.microsoft.com/virtualization/windowscontainers/about/), если вас интересует запуск контейнера Windows Server версии 1803. 
 

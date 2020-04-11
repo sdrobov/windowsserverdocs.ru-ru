@@ -2,7 +2,6 @@
 title: Шаг 3. Утверждение и развертывание обновлений в службе WSUS
 description: Узнайте о службе Windows Server Update Service (WSUS), в т. ч. об утверждении и развертывании обновлений WSUS (шаг третий из четырех)
 ms.prod: windows-server
-ms.reviewer: na
 ms.technology: manage-wsus
 ms.topic: article
 ms.assetid: 8d728ff9-170f-47e6-aefe-52be93315a75
@@ -10,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7731cc84f946bfab7f53a3446ed90d1be92cae75
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: d8758c4f957d2d9abb156652a568b23634cb1bf0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639799"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80828857"
 ---
 # <a name="step-3-approve-and-deploy-updates-in-wsus"></a>Шаг 3. Утверждение и развертывание обновлений WSUS
 
@@ -29,7 +28,7 @@ ms.locfileid: "80639799"
 |[3.2. Настройка правил автоматического утверждения](3-approve-and-deploy-updates-in-wsus.md#BKM_3.2.a.)|Настройте службы WSUS для автоматического подтверждения установки обновлений для выбранных групп и утверждения изменения существующих обновлений.|
 |[3.3. Просмотр установленных обновлений с помощью отчетов WSUS](3-approve-and-deploy-updates-in-wsus.md#BKM_3.3.)|Просмотрите установленные обновления, компьютеры, получившие эти обновления, и прочие сведения, с помощью функции отчетов WSUS.|
 
-## <a name="31-approve-and-deploy-wsus-updates"></a><a name="BKM_3.1."></a>3.1. Утверждение и развертывание обновлений WSUS
+## <a name="31-approve-and-deploy-wsus-updates"></a><a name=BKM_3.1.></a>3.1. Утверждение и развертывание обновлений WSUS
 Для утверждения и развертывания обновлений следуйте приведенным ниже инструкциям.
 
 #### <a name="to-approve-and-deploy-wsus-updates"></a>Утверждение и развертывание обновлений WSUS
@@ -48,7 +47,7 @@ ms.locfileid: "80639799"
 
 7.  Откроется окно **Ход одобрения** , в котором будет отображаться процесс выполнения задач, связанных с одобрением обновлений. По завершении процесса утверждения нажмите кнопку **Закрыть**.
 
-## <a name="32-configure-auto-approval-rules"></a><a name="BKM_3.2.a."></a>3.2. Настройка правил автоматического утверждения
+## <a name="32-configure-auto-approval-rules"></a><a name=BKM_3.2.a.></a>3.2. Настройка правил автоматического утверждения
 Автоматические утверждения позволяют указать, как автоматически подтверждать установку обновлений для выбранных групп и как утверждать изменения существующих обновлений.
 
 #### <a name="to-configure-automatic-approvals"></a>Настройка автоматических утверждений
@@ -73,7 +72,7 @@ ms.locfileid: "80639799"
 
 7.  Нажмите **ОК** , чтобы закрыть диалоговое окно "Автоматические утверждения".
 
-## <a name="33-review-installed-updates-with-wsus-reports"></a><a name="BKM_3.3."></a>3.3. Просмотр установленных обновлений с помощью службы отчетов WSUS
+## <a name="33-review-installed-updates-with-wsus-reports"></a><a name=BKM_3.3.></a>3.3. Просмотр установленных обновлений с помощью службы отчетов WSUS
 Через 24 часа после утверждения обновлений с помощью функции отчетов WSUS вы можете определить, были ли обновления развернуты на компьютерах тестовой группы. Чтобы проверить состояние обновления, воспользуйтесь функцией отчетов WSUS следующим образом.
 
 #### <a name="to-review-updates"></a>Обзор обновлений

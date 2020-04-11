@@ -1,33 +1,29 @@
 ---
 title: Управление пользователями в коллекции RDS
 description: Узнайте, как управлять пользователями в службах удаленных рабочих столов.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2727e1ab-69b8-46f3-9f6d-2540324fe596
 author: christianmontoya
 ms.author: chrimo
 ms.date: 03/27/2018
 manager: scottman
-ms.openlocfilehash: 870a6360f685c2de31485135202b0f1415c90d85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 430c38f98dd9aec3034e023d737952e3015622eb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403854"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858687"
 ---
 # <a name="manage-users-in-your-rds-collection"></a>Управление пользователями в коллекции RDS
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Как администратор, вы можете напрямую управлять тем, какие пользователи имеют доступ к определенным коллекциям. Таким образом, вы можете создать одну коллекцию со стандартными приложениями для информационных работников, а затем создать отдельную коллекцию приложений с интенсивным использованием графики моделирования для инженеров. Существует два основных этапа управления доступом пользователей в развертывании служб удаленных рабочих столов (RDS):
 
-1.  [Создание пользователей и групп в Active Directory](#create-your-users-and-groups-in-active-directory)
-2.  [Назначение пользователей и групп в коллекции](#assign-users-and-groups-to-collections)
+1.    [Создание пользователей и групп в Active Directory](#create-your-users-and-groups-in-active-directory)
+2.    [Назначение пользователей и групп в коллекции](#assign-users-and-groups-to-collections)
 
 
 ## <a name="create-your-users-and-groups-in-active-directory"></a>Создание пользователей и групп в Active Directory

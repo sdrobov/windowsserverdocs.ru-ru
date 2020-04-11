@@ -1,24 +1,20 @@
 ---
 title: Рекомендуемая конфигурация для рабочих столов VDI
 description: Рекомендуемые параметры и конфигурация для снижения накладных расходов на рабочие столы Windows 10 версии 1607 (10.0.1393), используемые в качестве образов VDI
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 12/18/2018
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: ca6d82973ae8201cdb4021c205a580a11c599b2f
-ms.sourcegitcommit: d7045c56046dbfaefd59a8ba132bfd8444690a73
+ms.openlocfilehash: 2ab78ccbc4e49bd95a74fe1e17d5ea14891eb1b8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78256674"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857277"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>Рекомендуемые параметры для рабочих столов VDI
 

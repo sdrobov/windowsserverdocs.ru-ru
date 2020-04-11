@@ -1,18 +1,18 @@
 ---
 title: Обновление Windows Server 2012 до Windows Server 2016 | Документация Майкрософт
 description: Узнайте, как выполнить обновление на месте для перехода с Windows Server 2012 на Windows Server 2016.
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 09c5a95e2ccd065f3ebbe551404064c39f803f2a
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: c6cc52e24b7ba66b349b3715bacf3a0f671ff0d0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71124724"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854277"
 ---
 # <a name="upgrade-windows-server-2012-to-windows-server-2016"></a>Обновление Windows Server 2012 до Windows Server 2016
 

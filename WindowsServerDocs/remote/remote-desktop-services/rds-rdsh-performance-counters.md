@@ -5,17 +5,16 @@ ms.prod: windows-server
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 07/11/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 7b222104abd5b0b964bac748c3be15049075191d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: c33e5c6309c41e39aeda3a2bdff1a0caf72b2675
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950427"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860337"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>Диагностика проблем с производительностью приложений на узлах сеансов удаленных рабочих столов с помощью счетчиков производительности
 
@@ -84,13 +83,13 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 |Тип счетчика|Имя экземпляра|Сообщенная задержка (мс)|
 |---------------|-------------|-------------------|
-|Задержка ввода данных пользователем на процесс|1:4232 <Calculator.exe>|  200|
-|Задержка ввода данных пользователем на процесс|2:1000 <Calculator.exe>|  16|
-|Задержка ввода данных пользователем на процесс|1:2000 <Calculator.exe>|  32|
+|Задержка ввода данных пользователем на процесс|1:4232 <Calculator.exe>|    200|
+|Задержка ввода данных пользователем на процесс|2:1000 <Calculator.exe>|    16|
+|Задержка ввода данных пользователем на процесс|1:2000 <Calculator.exe>|    32|
 |Задержка ввода данных пользователем на сеанс|1|    200|
 |Задержка ввода данных пользователем на сеанс|2|    16|
-|Задержка ввода данных пользователем на сеанс|Среднее|  108|
-|Задержка ввода данных пользователем на сеанс|Макс.|  200|
+|Задержка ввода данных пользователем на сеанс|Среднее|     108|
+|Задержка ввода данных пользователем на сеанс|Макс.|     200|
 
 ## <a name="counters-used-in-an-overloaded-system"></a>Счетчики, используемые в перегруженной системе
 
