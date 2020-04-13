@@ -10,12 +10,12 @@ metadata:
   ms.topic: hub-page
   ms.date: 06/06/2019
   ms.author: lizross
-  ms.openlocfilehash: 7ea64a8b3b6d930c8105c57bb7d2a1537eb6780d
-  ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+  ms.openlocfilehash: 91a9a648c5b51f098a94300ffb1dd3f7ce76bdd8
+  ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 04/08/2020
-  ms.locfileid: "80856277"
+  ms.lasthandoff: 04/11/2020
+  ms.locfileid: "81123167"
 highlightedContent:
   items:
   - title: Что нового в Windows Server 2019?
@@ -190,12 +190,9 @@ conceptualContent:
 additionalContent:
   sections:
   - items:
-    - title: Windows Server 2012 R2 и Windows Server 2012
-      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2012 R2 и Windows Server 2012.
+    - title: Windows Server 2012 R2 и Windows Server 2012 (архив)
+      summary: Архив технической документации для ИТ-специалистов, администрирующих Windows Server 2012 R2 и Windows Server 2012.
       url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
-    - title: Windows Server 2008 R2 и Windows Server 2008
-      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2008 R2 и Windows Server 2008.
-      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
-    - title: История разработчика для Windows Server 2008
-      summary: Содержимое для разработчиков, а также других технических специалистов и руководителей, заинтересованных в изучении некоторых новых и расширенных функций в Windows Server 2008.
-      url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
+    - title: Windows Server Essentials
+      summary: Техническое содержимое для ИТ-специалистов, которые администрируют Windows Server Essentials. Это подключенный к облаку сервер, предназначенный для небольших предприятий, в которых не более 25 пользователей и 50 устройств.
+      url: https://docs.microsoft.com/en-us/windows-server-essentials/get-started/get-started
