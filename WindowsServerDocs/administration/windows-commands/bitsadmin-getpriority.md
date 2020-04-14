@@ -1,23 +1,19 @@
 ---
 title: битсадмин
-description: Раздел команд Windows для **битсадмин предшествовал** . получение приоритета указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин**, который получает приоритет указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 0b8914f27c690aa9bb9cbf30430b3edf55f2eb92
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b27829a0fb852abb88c88a65e61e8d7693ca2df2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381430"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850547"
 ---
 # <a name="bitsadmin-getpriority"></a>битсадмин
 
@@ -26,26 +22,37 @@ ms.locfileid: "71381430"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetPriority <Job>
+bitsadmin /getpriority <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
 ## <a name="remarks"></a>Примечания
 
-Приоритет имеет значение " **основной**", " **высокий**", " **нормальный**", " **низкий**" или " **неизвестный**".
+Приоритет этой команды может быть следующим:
 
-## <a name="BKMK_examples"></a>Примеров
+- **ПЕРЕДНЕГО плана**
+
+- **ВЫСОКОМ**
+
+- **ОБЫЧНО**
+
+- **НИЗШУЮ**
+
+- **Неизвестный**
+
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается приоритет задания с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /GetPriority myDownloadJob
+C:\>bitsadmin /getpriority myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

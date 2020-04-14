@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD. действия по восстановлению леса
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 5a291f65-794e-4fc3-996e-094c5845a383
 ms.technology: identity-adds
-ms.openlocfilehash: 07a043c4361f8eaae30b1dea665c604c0df42333
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 537543bedd68bff002054f637d96240a71f75793
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390288"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823407"
 ---
 # <a name="ad-forest-recovery---steps-for-restoring-the-forest"></a>Восстановление леса AD. действия по восстановлению леса
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 В этом разделе приводится обзор рекомендуемого пути восстановления леса. Действия по восстановлению леса подробно описаны далее.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "71390288"
   
 2. [Выбор способа восстановления леса](AD-Forest-Recovery-Determine-how-to-Recover.md)  
 
-   После определения необходимости восстановления леса выполните предварительные шаги для подготовки к работе: определение текущей структуры леса, определение функций, выполняемых каждым КОНТРОЛЛЕРом домена, выбор контроллера домена для восстановления для каждого домена и обеспечение всех контроллеров, поддерживающих запись. переводятся в автономный режим.  
+   После определения необходимости восстановления леса выполните предварительные действия по подготовке к нему: определение текущей структуры леса, определение функций, выполняемых каждым КОНТРОЛЛЕРом домена, выбор контроллера домена для восстановления для каждого домена и проверка того, что все доступные для записи контроллеры домена отключены.  
 
 3. [Выполнить начальное восстановление](AD-Forest-Recovery-Perform-initial-recovery.md)  
 

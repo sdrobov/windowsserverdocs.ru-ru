@@ -2,37 +2,36 @@
 title: Служба управления виртуальными машинами Hyper-V должна быть настроена для автоматического запуска
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 222bbe76-c514-4a3f-b61b-860a4dc2826a
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: f35f94a815e9f895f7f7690737b6b8fb2bed82e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 26122d40b3fbdbdc40a94801d5e3ff8fcf4fa646
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393415"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859317"
 ---
 # <a name="the-hyper-v-virtual-machine-management-service-should-be-configured-to-start-automatically"></a>Служба управления виртуальными машинами Hyper-V должна быть настроена для автоматического запуска
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
 
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.
 
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
   
 *Служба управления виртуальными машинами Hyper-V не настроена для автоматического запуска.*  
   
@@ -50,7 +49,7 @@ ms.locfileid: "71393415"
 > Если служба не найдена в классическом приложении или программа командной строки сообщает о том, что служба не существует, возможно, средства управления Hyper-V не установлены. Чтобы установить их:  
 >   
 > - В Windows Server откройте диспетчер сервера и используйте мастер добавления ролей и компонентов. Дополнительные сведения см. в [статье Установка роли Hyper-V в Windows Server 2016](../get-started/Install-the-Hyper-V-role-on-Windows-Server.md).  
-> - В Windows на рабочем столе Начните вводить **программы**, выберите пункт **программы и компоненты** (панель управления), > **включить или отключить компоненты Windows** > **Hyper-v** > **средства управления Hyper-v**. Затем нажмите кнопку **ОК**.  
+> - В Windows на рабочем столе Начните вводить **программы**, щелкните **программы и компоненты** (панель управления), > **включить или отключить компоненты Windows** > **Hyper-v** > **средства управления Hyper-v**. Затем нажмите кнопку **ОК**.  
   
 #### <a name="to-reconfigure-the-service-to-start-automatically-using-the-services-desktop-app"></a>Повторная настройка службы для автоматического запуска с помощью классического приложения служб  
   
@@ -64,7 +63,7 @@ ms.locfileid: "71393415"
   
 1.  Откройте Windows PowerShell.  
   
-2.  Введите команду:  
+2.  Тип.  
   
     ```  
     set-service  vmms -startuptype automatic  

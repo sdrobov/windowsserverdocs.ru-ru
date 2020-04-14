@@ -1,28 +1,24 @@
 ---
 title: select volume
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5d70d776-80ad-4f20-8288-a7997fb1df28
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cc981131c8de2dc4534e390645ef45c39a7b02ab
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b9337d7e4b37adcc22084249e53fb272335bf4f3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371061"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834707"
 ---
 # <a name="select-volume"></a>select volume
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 выбирает указанный том и перемещает фокус на него. Эта команда также может использоваться для показа тома, который в данный момент находится на выбранном диске.  
   
@@ -34,7 +30,7 @@ ms.locfileid: "71371061"
 select volume={<n>|<d>}  
 ```  
   
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
   
 | Параметр |                                                                               Описание                                                                                |
 |-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -51,7 +47,7 @@ select volume={<n>|<d>}
   
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.  
   
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы переместить фокус на том 2, введите:  
   
 ```  
@@ -64,7 +60,7 @@ select volume=2
 select volume=c  
 ```  
   
-Чтобы переместить фокус на том, подключенный к папке с именем "mountpath", введите:  
+Чтобы переместить фокус на том, подключенный к папке с именем mountpath, введите:  
   
 ```  
 select volume=c:\mountpath  
@@ -76,8 +72,8 @@ select volume=c:\mountpath
 select volume  
 ```  
   
-#### <a name="additional-references"></a>Дополнительные ссылки  
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 
   

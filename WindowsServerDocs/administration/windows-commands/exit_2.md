@@ -1,26 +1,22 @@
 ---
-title: выход
-description: 'Раздел команд Windows для * * * *- '
-ms.custom: na
+title: exit
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 23d1044b-f5c1-4180-ae6d-f553b48da4d9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d6d3a4d0bfc74644f6fda43abe57e0e4e7c1264a
-ms.sourcegitcommit: 4a03f263952c993dfdf339dd3491c73719854aba
+ms.openlocfilehash: 13cf7a7658394e59ce6cc7e66c3083cd3d359574
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74791227"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844887"
 ---
-# <a name="exit"></a>выход
+# <a name="exit"></a>exit
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -30,19 +26,19 @@ ms.locfileid: "74791227"
 ```  
 exit [/b] [<exitCode>]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 | Параметр  |                                                                                         Описание                                                                                          |
 |------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|     b     |                                      Выход из текущего пакетного скрипта вместо выхода из cmd. exe. Если выполняется из-за пределов пакетного скрипта, выполняет выход из cmd. exe.                                      |
+|     /b     |                                      Выход из текущего пакетного скрипта вместо выхода из cmd. exe. Если выполняется из-за пределов пакетного скрипта, выполняет выход из cmd. exe.                                      |
 | `<exitCode>` | Указывает числовое число. Если указан параметр **/b** , переменной среды ERRORLEVEL присваивается это число. При выходе из **cmd. exe**код завершения процесса устанавливается равным этому номеру. |
-|     /?     |                                                                             Отображение справки в командной строке.                                                                             |
+|     /?     |                                                                             Отображает справку в командной строке.                                                                             |
 
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы закрыть интерпретатор команд, cmd. exe введите:  
 ```  
 exit  
 ```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 

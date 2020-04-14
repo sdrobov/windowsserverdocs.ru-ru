@@ -1,24 +1,20 @@
 ---
 title: время
 description: Узнайте, как устанавливать и отображать системное время.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1276a257-7283-41da-ae80-fb4cfb311f9d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 484653ed65d5e5c16d74b2cb45b2c9da71aa62aa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5b6efff57a512a2e0519b3294c51c073f1f44d8d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369949"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832837"
 ---
 # <a name="time"></a>время
 
@@ -34,22 +30,22 @@ ms.locfileid: "71369949"
 time [/t | [<HH>[:<MM>[:<SS>]] [am|pm]]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<HH > [:\<MM > [:\<SS > [.\<NN >]]] [AM\|PM]|Устанавливает системное время на новое указанное время, где *чч* — в часах (обязательно), *mm* — в минутах, а *SS* — в секундах. *Nn* может использоваться для указания сотых долей секунды. Если параметр **AM** или **PM** не указан, по умолчанию используется 24 **-часовой формат** .|
 |/t|Отображает текущее время без запроса на новое время.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Чтобы изменить текущее время, необходимо иметь учетные данные администратора.
 -   Необходимо разделять значения *чч*, *mm*и *SS* с помощью двоеточий (:). *SS* и *nn* должны быть разделены точкой (.).
 -   Допустимые значения *чч* : от 0 до 24.
 -   Допустимые значения *mm* и *SS* : от 0 до 59.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 
 Если расширения команд включены, для вывода текущего системного времени введите:
 ```
@@ -67,6 +63,6 @@ Enter the new time:
 ```
 Для сохранения текущего времени и возврата в командную строку нажмите клавишу ВВОД. Чтобы изменить текущее время, введите новое время и нажмите клавишу ВВОД.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

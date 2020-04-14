@@ -1,24 +1,20 @@
 ---
 title: RDS. Запуск и настройка
 description: Предоставление информации управления для служб удаленных рабочих столов.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: spatnaik
 ms.date: 02/08/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 79909767-a4c3-4ecf-8d3f-77d37a663153
 author: spatnaik
 manager: scottman
-ms.openlocfilehash: 5a2aa5c166b41ed8bd04ccfb92911368c07a5459
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8ce006894376ad120d9d23b6c5f0f891615657fb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387164"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859067"
 ---
 # <a name="run-and-tune-your-remote-desktop-services-environment"></a>Запуск и настройка среды служб удаленных рабочих столов
 

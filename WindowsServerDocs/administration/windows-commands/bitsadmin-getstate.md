@@ -1,66 +1,61 @@
 ---
 title: bitsadmin getstate
-description: Раздел команд Windows для битсадминного состояния
-ms.custom: na
+description: Раздел команд Windows для **битсадминного состояния**, который получает состояние указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1252d6cf-14ca-44df-beb2-930ff011f297
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2cff790c8787b1514e8523a4583184d6f6a59efc
-ms.sourcegitcommit: 51e0b575ef43cd16b2dab2db31c1d416e66eebe8
+ms.openlocfilehash: 43cd8c8e614cce65f55b16fc5395b1d37de0cf95
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76259109"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850467"
 ---
 # <a name="bitsadmin-getstate"></a>bitsadmin getstate
-
 
 Возвращает состояние указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetState <Job>
+bitsadmin /getstate <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
-| --------- | ----------- |
-|    Job    | Отображаемое имя задания или идентификатор GUID |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания.
+## <a name="output"></a>Вывод
 
-Возможные состояния:
+К выходным значениям относятся:
 
-|      Штат или регион      | Описание |
+| Состояние | Описание |
 | --------------- | ----------- |
-| В очереди          | Задание ожидает запуска. |
-| ПОДКЛЮЧЕНИЕ      | Служба BITS свяжется с сервером. |
-| ПЕРЕДАЧА    | BITS передает данные. |
-| ПЕРЕДАЮТСЯ     | Служба BITS успешно передала все файлы в задании. |
-| ПРИОСТАНОВЛЕННЫЕ       | Задание приостановлено. |
-| ОШИБКА           | Произошла неустранимая ошибка; Повторная попытка перемещения не выполняется. |
-| TRANSIENT_ERROR | Произошла устранимая ошибка; Повторная попытка передачи после истечения минимальной задержки. |
-| ПОДТВЕРЖДЕНО    | Задание завершено. |
-| ОТМЕНЕНО        | Задание отменено. |
+| Поставлена в очередь | Задание ожидает запуска. |
+| Подключается | Служба BITS свяжется с сервером. |
+| Передача | BITS передает данные. |
+| Передаются | Служба BITS успешно передала все файлы в задании. |
+| Suspended | Задание приостановлено. |
+| Ошибка | Произошла неустранимая ошибка; Повторная попытка перемещения не выполняется. |
+| Transient_Error | Произошла устранимая ошибка; Повторная попытка передачи после истечения минимальной задержки. |
+| Подтверждения | Задание завершено. |
+| Canceled (Отменено) | Задание отменено. |
 
-## <a name="BKMK_examples"></a>Примеры
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается состояние для задания с именем *мидовнлоаджоб*.
 
 ```
-C:\>bitsadmin /GetState myDownloadJob
+C:\>bitsadmin /getstate myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

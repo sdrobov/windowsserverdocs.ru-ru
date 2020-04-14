@@ -1,18 +1,17 @@
 ---
 title: Настройка веб-служба регистрации сертификатов для продления на основе ключа сертификата на настраиваемом порту
-description: ''
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: 3d3d08d6abe9daa571dd7365815c1fc61f926501
-ms.sourcegitcommit: e5df3fd267352528eaab5546f817d64d648b297f
+ms.openlocfilehash: a21a34448248658d2ceffcad07d2a4e6e17b9348
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74163100"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856347"
 ---
 # <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Настройка веб-служба регистрации сертификатов для продления на основе ключа сертификата на настраиваемом порту
 
@@ -21,7 +20,7 @@ ms.locfileid: "74163100"
 
 ## <a name="summary"></a>Сводка
 
-Эта статья содержит пошаговые инструкции по реализации веб-служба политик регистрации сертификатов (CEP) и веб-служба регистрации сертификатов (CES) на настраиваемом порте, отличном от 443, для продления на основе ключей сертификатов, чтобы воспользоваться преимуществами автоматического возобновление функции CEP и CES.
+В этой статье приводятся пошаговые инструкции по реализации веб-служба политик регистрации сертификатов (CEP) и веб-служба регистрации сертификатов (CES) на настраиваемом порту, отличном от 443, для продления на основе ключа сертификата, чтобы воспользоваться функцией автоматического продления CEP и CES.
 
 В этой статье также объясняется, как работают методы CEP и CES и предоставляются рекомендации по установке.
 
@@ -61,7 +60,7 @@ ms.locfileid: "74163100"
 
 4.  Настройте параметры на стороне клиента.
 
-### <a name="configuration"></a>Настройка
+### <a name="configuration"></a>Конфигурация
 
 В этом разделе описаны шаги по настройке первоначальной регистрации.
 
@@ -224,7 +223,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
    
    CN = ЕНТКА, CN = службы регистрации, CN = открытые ключи Services, CN = Services, CN = Configuration, DC = contoso, DC = com
 
-3. Щелкните правой кнопкой мыши и измените объект CA. Измените атрибут **мспки-регистрации-Servers** , используя пользовательский порт с URI сервера CEP и CES, которые были найдены в параметрах приложения. Пример
+3. Щелкните правой кнопкой мыши и измените объект CA. Измените атрибут **мспки-регистрации-Servers** , используя пользовательский порт с URI сервера CEP и CES, которые были найдены в параметрах приложения. Например:
 
    ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
@@ -287,7 +286,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
+![команда](media/certificate-enrollment-certificate-key-based-renewal-14.png)
 
 ### <a name="method-2"></a>Метод 2
 
@@ -297,14 +296,14 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 Таким образом, если вы перейдете время на 8:10 P.M. на 19-часовом уровне, так как для нашего продленного периода в шаблоне задано значение 8, выполнение команды certutil-Pulse (для активации подсистемы AE) регистрирует сертификат автоматически.
 
-![.](media/certificate-enrollment-certificate-key-based-renewal-15.png)
+![команда](media/certificate-enrollment-certificate-key-based-renewal-15.png)
  
 После завершения теста верните параметр времени в исходное значение, а затем перезапустите клиентский компьютер.
 
 > [!Note]
 > На предыдущем снимке экрана приведен пример, демонстрирующий, что механизм автоматической регистрации работает должным образом, поскольку для даты ЦС по-прежнему устанавливается значение 18. Таким образом, он будет продолжать выдавать сертификаты. В реальной ситуации не произойдет такого большого количества продлений.
 
-## <a name="references"></a>Ссылок
+## <a name="references"></a>Ссылки
 
 [Руководство по тестовой лаборатории. Демонстрация продления на основе ключей сертификатов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3Dws.11))
 
@@ -314,7 +313,7 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 [Install-Адксенроллментвебсервице](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
 
-См. также
+См. также:
 
 [Форум по безопасности Windows Server](https://aka.ms/adcsforum)
 

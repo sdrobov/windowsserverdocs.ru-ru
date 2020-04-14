@@ -1,24 +1,20 @@
 ---
 title: Wbadmin get versions
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для Wbadmin get versions, в котором перечислены сведения о доступных резервных копиях, которые хранятся на локальном или другом компьютере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b986acc4-d083-4d32-9434-862314ed5e97
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b7ba0749c8ef347e27590bde4eed7bbcf25af7e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 61353d4d607f87878d8001a626279016274c8eff
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362358"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829737"
 ---
 # <a name="wbadmin-get-versions"></a>Wbadmin get versions
 
@@ -38,18 +34,18 @@ wbadmin get versions
 [-machine:BackupMachineName]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |-backupTarget|Задает место хранения, в котором содержатся резервные копии, для которых требуется получить сведения. Используется для перечисления резервных копий, хранящихся в этом целевом расположении. Целевыми расположениями резервного копирования могут быть локально подключенные диски, тома, удаленные общие папки, съемные носители, такие как DVD-дисководы или другие оптические носители. Если программа **Wbadmin get versions** запущена на том же компьютере, где была создана резервная копия, этот параметр не требуется. Однако этот параметр необходим для получения сведений о резервной копии, созданной с другого компьютера.|
 |-Machine|Указывает компьютер, для которого требуется получить сведения о резервном копировании. Используется при хранении резервных копий нескольких компьютеров в одном расположении. Следует использовать, если указан **-backupTarget** .|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Чтобы получить список элементов, доступных для восстановления из определенной резервной копии, используйте **Wbadmin get Items**.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы просмотреть список доступных резервных копий, хранящихся на томе ч, введите:
 ```
@@ -60,8 +56,8 @@ wbadmin get versions -backupTarget:h:
 wbadmin get versions -backupTarget:\\servername\share -machine:server01
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Get-вббаккуптаржет](https://technet.microsoft.com/library/jj902447.aspx)

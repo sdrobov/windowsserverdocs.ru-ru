@@ -1,35 +1,31 @@
 ---
 title: Добавление в FTP
-description: 'Раздел команд Windows для добавления по FTP '
-ms.custom: na
+description: Раздел команд Windows для добавления по FTP
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c1a133c-31dc-41a4-9eb9-258efd79804d vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52d16b878ff5fb165fd851b227dcc361c9da3a80
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 44ce1d6e7259dc8745da35ed462e6378f0fce8ba
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376645"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843827"
 ---
 # <a name="ftp-append"></a>FTP: Append
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 добавляет локальный файл в файл на удаленном компьютере, используя текущий параметр типа файла.   
 ## <a name="syntax"></a>Синтаксис  
 ```  
 append <LocalFile> [remoteFile]  
 ```  
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 
 |  Параметр   |                               Описание                                |
 |--------------|--------------------------------------------------------------------------|
@@ -38,7 +34,7 @@ append <LocalFile> [remoteFile]
 
 ## <a name="remarks"></a>Примечания  
 Если *ремотефиле* опущен, то вместо имени удаленного файла будет использоваться имя *локальный_файл* .  
-## <a name="BKMK_Examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
 Добавьте file1. txt в file2. txt на удаленном компьютере.  
 ```  
 append file1.txt file2.txt  
@@ -47,5 +43,5 @@ append file1.txt file2.txt
 ```  
 append file1.txt  
 ```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

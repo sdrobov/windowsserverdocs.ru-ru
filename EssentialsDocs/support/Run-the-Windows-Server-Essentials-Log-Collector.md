@@ -1,23 +1,19 @@
 ---
 title: Запуск сборщика журналов в Windows Server Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0d340223-fa24-4c75-ba8e-b654feb120ab
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a39c23ef4119e109372bad3455415f8d3862cf1b
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 6aac2ed382321349d39874c7db7617f6da845919
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318677"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852277"
 ---
 # <a name="run-the-windows-server-essentials-log-collector"></a>Запуск сборщика журналов в Windows Server Essentials
 Сборщик журналов Windows Server Essentials можно запустить с сервера или компьютера в сети. При запуске сборщика журналов на сервере можно будет собирать журналы только с сервера. При запуске сборщика журналов на сетевом компьютере можно собирать журналы с сервера, а также журналов с этого компьютера.  

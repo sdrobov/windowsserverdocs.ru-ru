@@ -1,7 +1,6 @@
 ---
 ms.assetid: 8a3cf2ae-2511-4eea-afd5-a43179a78613
 title: Обновления компонентов служб каталогов
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: d79f31572bc30d0f4fa3af45671c58b799e40f02
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cde839feda47d55415b2b6cc1026a7a3e6515a44
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390020"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823097"
 ---
 # <a name="directory-services-component-updates"></a>Обновления компонентов служб каталогов
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Автор**: Джастин Тернер, старший инженер по расширению поддержки с группой Windows  
   
@@ -42,7 +41,7 @@ ms.locfileid: "71390020"
   
     -   [Повышение пропускной способности репликации Active Directory](../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_ADRepl)  
   
-## <a name="BKMK_FL"></a>Режимы работы домена и леса  
+## <a name="domain-and-forest-functional-levels"></a><a name="BKMK_FL"></a>Режимы работы домена и леса  
   
 ### <a name="overview"></a>Обзор  
 В этом разделе приведены краткие сведения об изменениях в функциональном уровне домена и леса.  
@@ -50,9 +49,9 @@ ms.locfileid: "71390020"
 ### <a name="new-dfl-and-ffl"></a>Новые ДФЛ и FFL  
 В выпуске имеются новые режимы работы домена и леса:  
   
--   Режим работы леса: Windows Server 2012 R2  
+-   Функциональный уровень леса: Windows Server 2012 R2  
   
--   Функциональный уровень домена: Windows Server 2012 R2  
+-   Функциональный уровень домена: Windows Server 2012 R2  
   
 ### <a name="the-windows-server-2012-r2-domain-functional-level-enables-support-for-the-following"></a>Режим работы домена Windows Server 2012 R2 обеспечивает поддержку следующих возможностей:  
   
@@ -60,13 +59,13 @@ ms.locfileid: "71390020"
   
     *Защищенные пользователи* , выполняющие проверку подлинности в домене Windows Server 2012 R2, **больше не**могут:  
   
-    -   Аутентификация с помощью проверки подлинности NTLM  
+    -   проходить проверку подлинности с помощью проверки подлинности NTLM;  
   
-    -   Использование наборов шифров DES или RC4 в предварительной проверке подлинности Kerberos  
+    -   использовать наборы шифров DES и RC4 в предварительной проверке подлинности Kerberos;  
   
-    -   Делегировано с неограниченным или ограниченным делегированием  
+    -   делегироваться в рамках неограниченного или ограниченного делегирования;  
   
-    -   Продлите пользовательские билеты (TGT) за период времени жизни в 4 часа  
+    -   выполнять продление пользовательских билетов (TGT) и использовать их более 4 часов.  
   
 2.  Политики проверки подлинности  
   
@@ -145,7 +144,7 @@ Set-ADDomainMode -DomainMode Windows2008Domain -Identity contoso.com
   
 2.  Sch69  
   
-## <a name="BKMK_NTFRS"></a>Устаревшая версия NTFRS  
+## <a name="deprecation-of-ntfrs"></a><a name="BKMK_NTFRS"></a>Устаревшая версия NTFRS  
   
 ### <a name="overview"></a>Обзор  
 Служба FRS не является устаревшей в Windows Server 2012 R2.  Прекращение использования FRS достигается путем применения минимального режима работы домена (ДФЛ) Windows Server 2008.  Эта Принудительная защита доступна только в том случае, если новый домен создается с помощью диспетчер сервера или Windows PowerShell.  
@@ -156,7 +155,7 @@ Set-ADDomainMode -DomainMode Windows2008Domain -Identity contoso.com
   
 ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_PS_InstallDFL2.gif)  
   
-## <a name="BKMK_LDAPQuery"></a>Изменения оптимизатора запросов LDAP  
+## <a name="ldap-query-optimizer-changes"></a><a name="BKMK_LDAPQuery"></a>Изменения оптимизатора запросов LDAP  
   
 ### <a name="overview"></a>Обзор  
 Алгоритм оптимизатора запросов LDAP был повторно вычислен и оптимизирован.  Результатом является повышение производительности при поиске LDAP и время поиска LDAP сложных запросов.  
@@ -268,7 +267,7 @@ Log Record Bytes Generated: 0
   
         ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_Event1644.gif)  
   
-### <a name="BKMK_EnableStats"></a>Включение контроля статистики в LDP  
+### <a name="to-enable-the-stats-control-in-ldp"></a><a name="BKMK_EnableStats"></a>Включение контроля статистики в LDP  
   
 1.  Откройте LDP. exe и подключитесь к контроллеру домена и привяжите его к нему.  
   
@@ -286,7 +285,7 @@ Log Record Bytes Generated: 0
   
     ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_SearchOptions.gif)  
   
-### <a name="try-this-use-ldp-to-return-query-statistics"></a>Попробуйте следующее: Использование LDP для возврата статистики запросов  
+### <a name="try-this-use-ldp-to-return-query-statistics"></a>Попробуйте сделать это: Использование LDP для возврата статистики запросов  
 Выполните следующие действия на контроллере домена или в присоединенном к домену клиенте или сервере с установленными инструментами AD DS.  Повторите следующие действия, предназначенные для контроллера домена Windows Server 2012 и контроллера домена Windows Server 2012 R2.  
   
 1.  Просмотрите статью [«Создание более эффективных приложений с поддержкой Microsoft Active Directory»](https://msdn.microsoft.com/library/ms808539.aspx) и вернитесь к ней по мере необходимости.  
@@ -308,7 +307,7 @@ Log Record Bytes Generated: 0
   
 [951581](https://support.microsoft.com/kb/951581) . запросы LDAP выполняются медленнее, чем ожидалось в службе каталогов AD или LDS, и регистрируется событие с идентификатором 1644.  
   
-## <a name="BKMK_1644"></a>усовершенствования событий 1644  
+## <a name="1644-event-improvements"></a><a name="BKMK_1644"></a>усовершенствования событий 1644  
   
 ### <a name="overview"></a>Обзор  
 Это обновление добавляет дополнительную статистику результатов поиска LDAP к событию с ИДЕНТИФИКАТОРом 1644, чтобы помочь в устранении неполадок.  Кроме того, имеется новое значение реестра, которое можно использовать для включения ведения журнала в пороговое значение на основе времени.  Эти улучшения стали доступны в Windows Server 2012 и Windows Server 2008 R2 с пакетом обновления 1 (SP1) через KB [2800945](https://support.microsoft.com/kb/2800945) и будут доступны для Windows Server 2008 с пакетом обновления 2 (SP2).  
@@ -326,7 +325,7 @@ Log Record Bytes Generated: 0
   
 -   Начальный узел  
   
--   Filter  
+-   Фильтр  
   
 -   Область поиска  
   
@@ -372,11 +371,11 @@ Windows Registry Editor Version 5.00
   
 ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)  
   
-НОВИНКА  
+Создать  
   
 ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012R2.gif)  
   
-#### <a name="try-this-use-the-event-log-to-return-query-statistics"></a>Попробуйте следующее: Использование журнала событий для возврата статистики запросов  
+#### <a name="try-this-use-the-event-log-to-return-query-statistics"></a>Попробуйте следующее: использование журнала событий для возврата статистики запросов  
   
 1.  Повторите следующие действия, предназначенные для контроллера домена Windows Server 2012 и контроллера домена Windows Server 2012 R2. Обратите внимание на событие с ИДЕНТИФИКАТОРом 1644s на обоих контроллерах домена после каждого поиска.  
   
@@ -386,7 +385,7 @@ Windows Registry Editor Version 5.00
   
 4.  Выполните поиск LDAP, который оптимизатор запросов не сможет оптимизировать, так как один или несколько атрибутов не индексируются.  
   
-## <a name="BKMK_ADRepl"></a>Повышение пропускной способности репликации Active Directory  
+## <a name="active-directory-replication-throughput-improvement"></a><a name="BKMK_ADRepl"></a>Повышение пропускной способности репликации Active Directory  
   
 ### <a name="overview"></a>Обзор  
 Репликация Active Directory использует RPC для транспорта репликации. По умолчанию RPC использует буфер передачи 8 КБ и размер пакета 5 КБ. Это оказывает чистого влияния на то, что отправляющий экземпляр передает три пакета (приблизительно 15 000 данных), а затем приходится ждать приема сетевого пути перед отправкой. Учитывая время 3 мсного обмена данными, самая высокая пропускная способность составит около 40Mbps, даже для сетей с 1Gbps или 10 Гбит/с.  

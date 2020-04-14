@@ -1,28 +1,24 @@
 ---
 title: nslookup
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 41516932-7833-434a-aa92-b4cf0f9a7ef7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b47592be57d5999ac26465097490da266bd0aea
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 15062d81992ee1b6e55d47cb9e49822350e4f2bc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372705"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838097"
 ---
 # <a name="nslookup"></a>nslookup
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения, которые можно использовать для диагностики инфраструктуры системы доменных имен (DNS). Перед использованием этого средства необходимо ознакомиться с принципами работы DNS. Программа командной строки Nslookup доступна, только если установлен протокол TCP/IP.
 ## <a name="syntax"></a>Синтаксис
@@ -57,7 +53,7 @@ nslookup /set [no]vc
 nslookup /view <FileName>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |                       Параметр                       |                                                                                                         Описание                                                                                                         |
 |-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -106,15 +102,15 @@ nslookup /view <FileName>
   |`No response from server`|Сервер DNS-имен не работает на компьютере сервера.|
   |`No records`|Сервер DNS-имен не имеет записей ресурсов текущего типа запроса для компьютера, хотя имя компьютера является допустимым. Тип запроса указывается с помощью команды **Set QueryType** .|
   |`Nonexistent domain`|Имя компьютера или домена DNS не существует.|
-  |`Connection refused`<br /><br />-или-<br /><br />`Network is unreachable`|Не удалось установить подключение к серверу DNS-имен или серверу finger. Эта ошибка обычно возникает при запросах **Ls** и **finger** .|
+  |`Connection refused`<p>-или-<p>`Network is unreachable`|Не удалось установить подключение к серверу DNS-имен или серверу finger. Эта ошибка обычно возникает при запросах **Ls** и **finger** .|
   |`Server failure`|Сервер DNS-имен обнаружил внутреннюю несогласованность в своей базе данных и не смог вернуть допустимый ответ.|
   |`Refused`|Серверу DNS-имен отказано в обслуживании запроса.|
   |`format error`|Сервер DNS-имен обнаружил, что пакет запроса имеет неправильный формат. Это может указывать на ошибку в **nslookup**.|
 - Дополнительные сведения о команде **nslookup** и DNS см. в следующих ресурсах:
   - Иванов, T., Дэвиса, J. 2000. *Технический справочник по протоколам и службам TCP/IP Microsoft Windows 2000*. Redmond, штат Вашингтон: Microsoft Press.
-  - Албитз, P., Лаукидес, M. и C. Лю. 2001. *DNS и BIND, четвертый выпуск*. Себастопол, штат Калифорния: O'Reilly и Associates, Inc.
-  - Ларсон (, M. и C. Лю. 2001. *DNS в Windows 2000*. Себастопол, штат Калифорния: O'Reilly и Associates, Inc.
+  - Албитз, P., Лаукидес, M. и C. Лю. 2001. *DNS и BIND, четвертый выпуск*. Себастопол, Калифорния: O'Reilly и Associates, Inc.
+  - Ларсон (, M. и C. Лю. 2001. *DNS в Windows 2000*. Себастопол, Калифорния: O'Reilly и Associates, Inc.
     #### <a name="examples"></a>Примеры
     Каждый параметр командной строки состоит из дефиса (-), за которым следует имя команды, а в некоторых случаях — знак равенства (=) и значение. Например, чтобы изменить тип запроса по умолчанию на сведения о хосте (компьютере), а исходное время ожидания — на 10 секунд, введите команду **nslookup-QueryType = HINFO-timeout = 10** .
     ## <a name="see-also"></a>См. также
-    [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+    - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

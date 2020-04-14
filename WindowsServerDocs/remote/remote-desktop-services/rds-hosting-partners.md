@@ -1,24 +1,20 @@
 ---
 title: 'RDS: партнеры для размещения рабочих столов и приложений'
 description: Список партнеров, у которых можно размещать рабочие столы и приложения с помощью RDS.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 04/27/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a3cb426-fb39-40c5-ae07-26dbe9e3aed9
 author: lizap
 manager: dongill
-ms.openlocfilehash: 4d9a6d4885566204bf9fc29cd9513d25d1b39deb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 503a9917e271c69a78e5f26db6556d788254c823
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949856"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861367"
 ---
 # <a name="remote-desktop-services-hosting-partners-and-assessment"></a>Партнеры по размещению служб удаленных рабочих столов и их оценка
 
@@ -36,7 +32,7 @@ ms.locfileid: "75949856"
 
 ## <a name="partners-who-have-passed-the-learning-path-assessment"></a>Партнеры, которые прошли оценку по схеме обучения 
 
-Если вы являетесь клиентом, который ищет партнера для размещения рабочих столов и приложений Windows в Azure для пользователей, то можете ознакомиться с составленным нами списком партнеров, которые прошли оценку. Вот [этот список партнеров](https://github.com/MicrosoftDocs/windowsserverdocs/blob/master/WindowsServerDocs/remote/remote-desktop-services/RDS-Hosting-Partners.pdf) от 28 марта 2017 года, который можно скачать.
+Если вы являетесь клиентом, который ищет партнера для размещения рабочих столов и приложений Windows в Azure для пользователей, то можете ознакомиться с составленным нами списком партнеров, которые прошли оценку. Вот [этот список партнеров](rds-hosting-partners.md) от 28 марта 2017 года, который можно скачать.
 
 Можно найти дополнительные сведения о каждом партнере, выполнив следующие действия.
 

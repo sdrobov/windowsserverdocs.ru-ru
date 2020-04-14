@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4baefbd3-038f-44c0-85ba-f24e9722b757
 title: Приложение G. Защита групп администраторов в Active Directory
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cdea04e211b1873ff51c4bc3dc9ff24e746ead69
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f113dc7fc5b131a2c0ef10433125ef12a775707c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408642"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821527"
 ---
 # <a name="appendix-g-securing-administrators-groups-in-active-directory"></a>Приложение Ж. Защита групп администраторов в Active Directory
 
@@ -216,7 +215,7 @@ ms.locfileid: "71408642"
 
         ![Защита групп администраторов](media/Appendix-G--Securing-Administrators-Groups-in-Active-Directory/SAD_96.gif)  
 
-#### <a name="verification-steps"></a>Шаги проверки  
+#### <a name="verification-steps"></a>Этапы проверки  
 
 ##### <a name="verify-deny-access-to-this-computer-from-the-network-gpo-settings"></a>Проверьте параметры объекта групповой политики "запретить доступ к этому компьютеру из сети"  
 С любого рядового сервера или рабочей станции, на который не влияют изменения объекта групповой политики (например, "сервер переходов"), попытайтесь получить доступ к рядовому серверу или рабочей станции по сети, на которую влияют изменения объекта групповой политики. Чтобы проверить параметры объекта групповой политики, попытайтесь выполнить сопоставление системного диска с помощью команды **net use** .  

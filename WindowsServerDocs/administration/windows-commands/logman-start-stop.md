@@ -1,28 +1,24 @@
 ---
 title: Запуск Logman | позиции
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a40006a1-876e-474b-aaf1-f365c730deea
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 395d325b31ee596e1394e7ed796a444f159d15fc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2bd81a33779aa58e7528d0173a7a4b49489de8f9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374407"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840627"
 ---
 # <a name="logman-start--stop"></a>Запуск Logman | позиции
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 запустите сборщик данных и задайте время начала вручную или закройте группу сборщиков данных и задайте для параметра время окончания значение вручную.  
 
@@ -31,7 +27,7 @@ ms.locfileid: "71374407"
 logman start <[-n] <name>> [options]  
 logman stop <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |     Параметр      |                                 Описание                                  |
 |--------------------|------------------------------------------------------------------------------|
@@ -42,10 +38,10 @@ logman stop <[-n] <name>> [options]
 |        -ETS        | Отправка команд в сеансы трассировки событий напрямую без сохранения или планирования. |
 |        — как         |               Выполнение запрошенной операции в асинхронном режиме.                |
 
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда запускает сборщик данных perf_log на удаленном компьютере server_1.  
 ```  
 logman start perf_log -s server_1  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  

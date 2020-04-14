@@ -1,30 +1,27 @@
 ---
-title: Использование команды Add-Имажедриверпаккаже
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: Add-Имажедриверпаккаже
+description: Раздел команд Windows для Add-Имажедриверпаккаже, который добавляет пакет драйверов, который находится в хранилище драйверов, в существующий образ загрузки на сервере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6c2a4833-6427-47f8-9ffb-20b3786cb406
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1069b7c63e8b3bbc28fd900e8c869afc8abc03bc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9b61a5beabed655ae629ad5c1e43d681568d07db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363734"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80831927"
 ---
-# <a name="using-the-add-imagedriverpackage-command"></a>Использование команды Add-Имажедриверпаккаже
+# <a name="add-imagedriverpackage"></a>Add-Имажедриверпаккаже
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Добавляет пакет драйверов, который находится в хранилище драйверов, в существующий образ загрузки на сервере. Версия образа должна быть Windows 7 или Windows Server 2008 R2 или более поздней версии.
+
 ## <a name="syntax"></a>Синтаксис
 ```
 wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
@@ -32,7 +29,7 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 ```
 [/Filename:<File name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |                 Параметр                  |                                                                                                                                                                                                            Описание                                                                                                                                                                                                             |
 |--------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -44,14 +41,14 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 |           [/Дриверпаккаже:<Name>           |                                                                                                                                                                                   Указывает имя пакета драйверов, добавляемого к образу.                                                                                                                                                                                    |
 |             [/Паккажеид:<ID>]              | Указывает идентификатор служб развертывания Windows для пакета драйверов. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени. Чтобы найти идентификатор пакета, щелкните группу драйверов, в которой находится пакет (или узел **все пакеты** ), щелкните правой кнопкой мыши пакет и выберите пункт **свойства**. Идентификатор пакета указан на вкладке **Общие** . Например: {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 Чтобы добавить пакет драйверов в загрузочный образ, введите один из следующих элементов:
 ```
-wdsutil /add-ImageDriverPackagmedia:"WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
+wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /DriverPackage:XYZ
 ```
 ```
-wdsutil /verbose /add-ImageDriverPackagmedia:"WinPE Boot Image" /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
+wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
-#### <a name="additional-references"></a>Дополнительные ссылки
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
 [с помощью команды Add-имажедриверпаккажес](using-the-add-imagedriverpackages-command.md)

@@ -1,24 +1,20 @@
 ---
 title: Новые возможности защиты учетных данных
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1b0b5180-f65a-43ac-8ef3-66014116f297
 author: gitmichiko
 ms.author: michikos
 manager: dongill
 ms.date: 03/06/2017
-ms.openlocfilehash: 2351be82ad1d8b9af17715ce363836f57c71ea66
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 35097cee243239735995a00cec7a6fd3936c62a8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386920"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857047"
 ---
 # <a name="whats-new-in-credential-protection"></a>Новые возможности защиты учетных данных
 
@@ -47,7 +43,7 @@ ms.locfileid: "71386920"
 
 ### <a name="domain-joined-device-support-for-authentication-using-public-key"></a>Поддержка устройства, присоединенного к домену, для проверки подлинности с помощью открытого ключа
 
-Начиная с Windows 10 версии 1507 и Windows Server 2016, если присоединенное к домену устройство может зарегистрировать свой открытый ключ в контроллере домена Windows Server 2016, то устройство может пройти проверку подлинности с помощью открытого ключа, используя Kerberos PKINIT. Проверка подлинности на контроллере домена Windows Server 2016.
+Начиная с Windows 10 версии 1507 и Windows Server 2016, если устройство, присоединенное к домену, может зарегистрировать связанный открытый ключ с контроллером домена Windows Server 2016, устройство может пройти проверку подлинности с помощью открытого ключа, используя проверку подлинности Kerberos PKINIT на КОНТРОЛЛЕРе домена Windows Server 2016.
 
 Начиная с Windows Server 2016, Кдкс поддерживает проверку подлинности с использованием доверия Kerberos Key.  
 
@@ -68,7 +64,7 @@ ms.locfileid: "71386920"
 > [!WARNING] 
 > Добавление контроллера домена в домен с развернутыми секретами NTLM перед обновлением контроллера домена по крайней мере до 8 ноября обслуживание 2016 выполняет риск сбоя контроллера домена. 
 
-Конфигурация: Для новых доменов эта функция включена по умолчанию. Для существующих доменов его необходимо настроить в центре администрирования Active Directory: 
+Конфигурация. для новых доменов эта функция включена по умолчанию. Для существующих доменов его необходимо настроить в центре администрирования Active Directory: 
 
 1. В центре администрирования Active Directory щелкните правой кнопкой мыши домен на левой панели и выберите пункт **Свойства**.
 
@@ -84,6 +80,6 @@ ms.locfileid: "71386920"
 
 Начиная с Windows Server 2016 режим работы домена (ДФЛ), контроллеры домена могут поддерживать сетевую NTLM, если пользователь ограничен конкретными устройствами, присоединенными к домену. Эта функция недоступна в более низких Дфлс.
 
-Конфигурация: В политике проверки подлинности щелкните **Разрешить проверку подлинности сети NTLM, если пользователь ограничен выбранными устройствами**. 
+Конфигурация: в политике проверки подлинности щелкните **Разрешить проверку подлинности сети NTLM, если пользователь ограничен выбранными устройствами**. 
 
 Дополнительные [сведения о политиках проверки подлинности](https://technet.microsoft.com/windows-server-docs/security/credentials-protection-and-management/authentication-policies-and-authentication-policy-silos).

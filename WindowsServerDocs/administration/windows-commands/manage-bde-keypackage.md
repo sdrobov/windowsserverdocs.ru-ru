@@ -1,24 +1,20 @@
 ---
 title: Управление — BDE Кэйпаккаже
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c631ef10-2a2f-4541-8578-292f2d4e9e80
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a0a1b4fd0fff1153a0f778eca105ecfc618a4689
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3a53edd060cb8c7a7a52e86130b2136893a42150
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374054"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840107"
 ---
 # <a name="manage-bde-keypackage"></a>Manage-bde: Кэйпаккаже
 
@@ -32,7 +28,7 @@ ms.locfileid: "71374054"
 manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalKeyDirectory>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -44,17 +40,17 @@ manage-bde -KeyPackage [<Drive>] [-ID <KeyProtectoryID>] [-path <PathToExternalK
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В следующем примере показано использование команды **-кэйпаккаже** для создания ключевого пакета для диска C на основе предохранителя ключа, ОПРЕДЕЛЯЕМого идентификатором GUID, и сохранения пакета ключей в ф:\фолдер.
 ```
-manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path "f:\Folder"
+manage-bde -KeyPackage C: -id {84E151C1...7A62067A512} -path f:\Folder
 ```
 
 > [!TIP]
 > Используйте **Manage-bde-protectors** . для получения списка доступных идентификаторов GUID, используемых в качестве значения идентификатора, получите имя диска, для которого нужно создать пакет ключей.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Управление — BDE](manage-bde.md)

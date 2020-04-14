@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: делреалмфлагс'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 22053041-1eb4-47f5-bed9-3d5681bcde7d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e2e67d7af4fdd31b79ad633c9df844483bb1ea3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a082b2798ffafaca96c19590f02c94b380c3e779
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375100"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841607"
 ---
 # <a name="ksetupdelrealmflags"></a>ksetup: делреалмфлагс
 
@@ -32,15 +28,15 @@ ms.locfileid: "71375100"
 ksetup /delrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsupported] [rc4]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию при запуске **Ksetup** .|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
-Флаги сферы определяют дополнительные возможности области Kerberos, которые не основаны на операционной системе Windows Server. Компьютеры под управлением Windows Server 2003, Windows Server 2008 или Windows Server 2008 R2 могут использовать сервер Kerberos для администрирования проверки подлинности вместо использования домена под управлением операционной системы Windows Server, и эти системы участвуют в Область Kerberos. Эта запись устанавливает функции области. В следующей таблице описан каждый из них.
+Флаги сферы определяют дополнительные возможности области Kerberos, которые не основаны на операционной системе Windows Server. Компьютеры под управлением Windows Server 2003, Windows Server 2008 или Windows Server 2008 R2 могут использовать сервер Kerberos для администрирования проверки подлинности вместо использования домена под управлением операционной системы Windows Server, и эти системы участвуют в области Kerberos. Эта запись устанавливает функции области. В следующей таблице описан каждый из них.
 
 |Значение|Флаг области|Описание|
 |-----|----------|-----------|
@@ -48,7 +44,7 @@ ksetup /delrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |0x00|Нет|Флаги области не заданы, а дополнительные функции не включены.|
 |0x01|сендаддресс|IP-адрес будет включаться в билеты предоставления билетов.|
 |0x02|ткпсуппортед|В этой области поддерживаются протоколы TCP и UDP (User Datagram Protocol).|
-|0x04|Делегирование|Все пользователи в этой области являются доверенными для делегирования.|
+|0x04|Делегат|Все пользователи в этой области являются доверенными для делегирования.|
 |0x08|нксуппортед|Эта область поддерживает канонизации имен, что позволяет использовать стандарты именования DNS и областей.|
 |0x80|RC4|Эта область поддерживает шифрование RC4 для включения доверительных отношений между сферами, что позволяет использовать TLS.|
 
@@ -56,7 +52,7 @@ ksetup /delrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 
 Чтобы увидеть, какие флаги области доступны и задаются, просмотрите выходные данные **ksetup** или **ksetup/думпстате**.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Список доступных флагов области для области CONTOSO:
 ```
@@ -68,9 +64,9 @@ ksetup /delrealmflags CONTOSO ncsupported delegate
 ```
 Выполните команду **ksetup** , чтобы убедиться, что установлен флаг realm, просмотрев выходные данные и поиск **флагов области =** .
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)
 -   [Ksetup:addrealmflags](ksetup-addrealmflags.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

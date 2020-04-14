@@ -1,24 +1,20 @@
 ---
 title: импорт реестра
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0be103de-08fc-4f02-b590-361782680b3e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2e1c7920a64469717c30cfcddda7b8002db5ba10
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0816297e837bbce91ca069e3506405cbdb53c51a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384731"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836427"
 ---
 # <a name="reg-import"></a>импорт реестра
 
@@ -34,11 +30,11 @@ ms.locfileid: "71384731"
 Reg import FileName
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Имя файла >|Указывает имя и путь к файлу, который содержит содержимое, копируемое в реестр локального компьютера. Этот файл должен быть создан заранее с помощью команды **reg export**.|
+|\<имя файла >|Указывает имя и путь к файлу, который содержит содержимое, копируемое в реестр локального компьютера. Этот файл должен быть создан заранее с помощью команды **reg export**.|
 |/?|Отображает справку по **импорту реестра** в командной строке.|
 
 ## <a name="remarks"></a>Примечания
@@ -47,16 +43,16 @@ Reg import FileName
 
 |Значение|Описание|
 |-----|-----------|
-|0|Success|
+|0|Выполнено|
 |1|Отказ|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы импортировать записи реестра из файла с именем Аппбкуп. reg, введите:
 ```
 reg import AppBkUp.reg
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

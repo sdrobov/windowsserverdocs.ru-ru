@@ -1,29 +1,25 @@
 ---
 title: Управление оборудованием станции
 description: Общие сведения об управлении оборудованием для станций MultiPoint
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 429b8539-b17a-4e01-9576-860600466451
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 9ca65352a6f016d5d18bdd92b39b737cdddb9057
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8ffb6fd714293471a0e9aa020390943b201261c4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395240"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853527"
 ---
 # <a name="manage-station-hardware"></a>Управление оборудованием станции
-Система служб MultiPoint состоит из одного компьютера и по крайней мере одной станции. Оборудование станции обычно состоит из центра станции, мыши, клавиатуры и монитора видео. Как правило, станции подключены к компьютеру физически.  
+Система MultiPoint Services состоит из одного компьютера и по крайней мере одной станции. Оборудование станции обычно включает концентратор станции, мышь, клавиатуру и видеомонитор. Как правило, станции подключены к компьютеру физически.  
   
-На следующем рисунке показан пример структуры системы MultiPoint Services, в которую входят четыре станции. Каждая станция подключена к компьютеру служб MultiPoint с помощью концентратора USB и видеоадаптеров с несколькими мониторами. Эта иллюстрация не представляет станции, подключенные с помощью многофункциональных концентраторов.  
+На следующем рисунке показан пример структуры системы MultiPoint Services, в которую входят четыре станции. Каждая станция подключена к компьютеру служб MultiPoint с помощью концентратора USB и видеоадаптеров с несколькими мониторами. На этом рисунке отсутствуют станции, подключенные с помощью многофункциональных концентраторов.  
    
 ![Изображение макета системы на основе USB служб MultiPoint](./media/WMSMultiPointServerUSBSystemLayout.gif)  
   

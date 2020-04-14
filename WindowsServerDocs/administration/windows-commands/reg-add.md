@@ -1,24 +1,20 @@
 ---
 title: Добавление reg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d9ad143e-dc10-4e2e-a229-408393c40079
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b478ce0c98ec77f1387d8f894364f53cf8d2142
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: df59477c980169699dac897e36836e5226b6a0fa
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371762"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836597"
 ---
 # <a name="reg-add"></a>Добавление reg
 
@@ -32,7 +28,7 @@ reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] 
 ```
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |      Параметр      |                                                                                                                                                                                                                                                                   Описание                                                                                                                                                                                                                                                                   |
 |---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +41,7 @@ reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] 
 |         /f          |                                                                                                                                                                                                                                           Добавляет запись реестра без запроса подтверждения.                                                                                                                                                                                                                                           |
 |         /?          |                                                                                                                                                                                                                                              Отображает справку по **reg Add** в командной строке.                                                                                                                                                                                                                                               |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Невозможно добавить поддеревья с этой операцией. Эта версия **reg** не запрашивает подтверждение при добавлении подраздела.
 -   В следующей таблице перечислены возвращаемые значения для операции **reg Add** .
@@ -53,11 +49,11 @@ reg add <KeyName> [{/v ValueName | /ve}] [/t DataType] [/s Separator] [/d Data] 
 | Значение | Описание |
 |-------|-------------|
 |   0   |   Выполнено   |
-|   1   |   Сбой   |
+|   1   |   Отказ   |
 
--   Для REG_EXPAND_SZ типа ключа используйте символ курсора ( **^** ) с **%ом** "в параметре/d
+-   Для REG_EXPAND_SZ типа ключа используйте символ крышки ( **^** ) с **%** в параметре/d.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы добавить ключ Хклм\софтваре\мико на удаленном компьютере ABC, введите:
 ```
@@ -76,6 +72,6 @@ REG ADD HKLM\Software\MyCo /v MRU /t REG_MULTI_SZ /d fax\0mail\0\0
 REG ADD HKLM\Software\MyCo /v Path /t REG_EXPAND_SZ /d ^%systemroot^%
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

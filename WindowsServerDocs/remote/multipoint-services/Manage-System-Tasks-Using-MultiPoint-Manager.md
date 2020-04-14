@@ -1,24 +1,20 @@
 ---
 title: Управление системными задачами с помощью диспетчера MultiPoint
 description: Общие сведения о задачах управления в диспетчере MultiPoint
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: efb34298-391c-4435-afdf-1a749f1ce224
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 185f4c88286138af61f92f3f349efd8f584ed73c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a1f51d459634f9657a8623e52ed30b88158167ad
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405057"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853517"
 ---
 # <a name="manage-system-tasks-using-multipoint-manager"></a>Управление системными задачами с помощью диспетчера MultiPoint
 В диспетчере MultiPoint можно использовать вкладку **Главная** для выполнения задач служб MultiPoint и проверки состояния системы. На вкладке **Главная** доступны следующие задачи:  

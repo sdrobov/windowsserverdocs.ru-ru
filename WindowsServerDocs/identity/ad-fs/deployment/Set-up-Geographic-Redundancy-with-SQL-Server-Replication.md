@@ -1,6 +1,5 @@
 ---
 title: Настройка географической избыточности с помощью Репликация SQL Server
-description: ''
 author: billmath
 manager: femila
 ms.date: 05/31/2017
@@ -9,12 +8,12 @@ ms.prod: windows-server
 ms.technology: active-directory-federation-services
 ms.author: billmath
 ms.assetId: 7b9f9a4f-888c-4358-bacd-3237661b1935
-ms.openlocfilehash: 16cf1a237043aa546d4fc24164045aa9f9a1e6ac
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54106ae635d44368542986c7c469560981f9888a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359818"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855847"
 ---
 # <a name="setup-geographic-redundancy-with-sql-server-replication"></a>Настройка географической избыточности с помощью Репликация SQL Server
 
@@ -24,7 +23,7 @@ ms.locfileid: "71359818"
   
 При использовании SQL Server в качестве базы данных конфигурации AD FS можно настроить\-избыточность для фермы AD FS с помощью SQL Server репликации. Географическая\-ная избыточность реплицирует данные между двумя географически отдаленными сайтами, чтобы приложения могли переключаться с одного сайта на другой. Таким образом, в случае сбоя одного сайта все данные конфигурации можно будет получить на втором сайте. Дополнительные сведения см. в разделе "SQL Server географическая избыточность" в [ферме серверов федерации с помощью SQL Server](../design/Federation-Server-Farm-Using-SQL-Server.md).  
   
-## <a name="prerequisites"></a>Предварительные условия  
+## <a name="prerequisites"></a>Предварительные требования  
 Установите и настройте ферму SQL Server. Дополнительные сведения см. в разделе [https://technet.microsoft.com/evalcenter/hh225126.aspx](https://technet.microsoft.com/evalcenter/hh225126.aspx). На начальном SQL Server убедитесь, что служба агент SQL Server запущена и настроена на автоматический запуск.  
   
 ## <a name="create-the-second-replica-sql-server-for-geo-redundancy"></a>Создание второй реплики \(\) SQL Server для обеспечения избыточности гео\-  
@@ -156,7 +155,7 @@ ms.locfileid: "71359818"
   
 4.  Кроме того, можно просмотреть узел **задания агент SQL Server\\** , чтобы просмотреть задания\(s\) запланированные для выполнения операций\/подписки на публикацию.  Отображаются только локальные задания, поэтому не забудьте проверить издателя и подписчика на устранение неполадок.  \-щелкните задание правой кнопкой мыши и выберите **Просмотреть журнал** , чтобы просмотреть журнал выполнения и результаты.  
   
-## <a name="sqlagent"></a>Настройка имени входа SQL для учетной записи домена CONTOSO\\  
+## <a name="configure-sql-login-for-the-domain-account-contososqlagent"></a><a name="sqlagent"></a>Настройка имени входа SQL для учетной записи домена CONTOSO\\  
   
 1.  Создайте новое имя входа на первичной и репликовой SQL Server с именем CONTOSO\\, \(имя нового пользователя домена, созданного и настроенного на странице **Безопасность агента** в процедурах, описанных выше.\)  
   

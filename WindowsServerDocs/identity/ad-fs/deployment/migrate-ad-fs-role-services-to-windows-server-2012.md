@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cdb5523ade5c3c7572656d62d1b4f744683ec96e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 36d37eb2cc886d9831b995aa8cfdda16765994b8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408276"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857517"
 ---
 # <a name="migrate-active-directory-federation-services-role-services-to-windows-server-2012"></a>Перенос служб ролей для служб федерации Active Directory в Windows Server 2012
 
@@ -70,10 +70,10 @@ ms.locfileid: "71408276"
 |AD FS 1,0 агент с поддержкой утверждений, установленный с Windows Server 2003 R2)|миграция не поддерживается|  
 |Сервер федерации AD FS 1,1, установленный с Windows Server 2008 или Windows Server 2008 R2|миграция не поддерживается|  
 |AD FS 1,1 прокси-сервер федерации, установленный с Windows Server 2008 или Windows Server 2008 R2|миграция не поддерживается|  
-|AD FS 1,1 агент на основе маркеров Windows, установленный с Windows Server 2008 или Windows Server 2008 R2|Миграция на одном сервере поддерживается, но перенесенный AD FS агент на основе маркеров Windows будет работать только со службой федерации AD FS 1,1, установленной с Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. в следующих разделах:<br /><br /> [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)<br /><br /> [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)|  
-|AD FS 1,1 агент с поддержкой утверждений, установленный с Windows Server 2008 или Windows Server 2008 R2)|Поддерживается миграция на том же сервере. Перенесенный веб-агент AD FS 1,1 с поддержкой утверждений будет работать следующим образом:<br /><br /> Служба федерации AD FS 1,1, установленная с Windows Server 2008 или Windows Server 2008 R2<br /><br /> Служба федерации AD FS 2,0, установленная в Windows Server 2008 или Windows Server 2008 R2<br /><br /> AD FS Служба федерации, установленная с Windows Server 2012<br /><br /> Дополнительные сведения см. в следующих разделах:<br /><br /> [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)<br /><br /> [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)|  
-|Сервер федерации AD FS 2,0, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере. Дополнительные сведения см. в следующих разделах:<br /><br /> [Подготовка к переносу сервера федерации AD FS 2.0](prepare-to-migrate-ad-fs-fed-server.md)<br /><br /> [Перенос сервера федерации AD FS 2.0](migrate-the-ad-fs-fed-server.md)|  
-|Прокси-сервер AD FS 2,0 Федерации, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере.  Подробную информацию см. в следующих разделах:<br /><br /> [Подготовка к переносу прокси-сервера федерации AD FS 2.0](prepare-to-migrate-ad-fs-fed-proxy.md)<br /><br /> [Перенос прокси-сервера федерации AD FS 2.0](migrate-the-ad-fs-2-fed-server-proxy.md)|  
+|AD FS 1,1 агент на основе маркеров Windows, установленный с Windows Server 2008 или Windows Server 2008 R2|Миграция на одном сервере поддерживается, но перенесенный AD FS агент на основе маркеров Windows будет работать только со службой федерации AD FS 1,1, установленной с Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. в следующих разделах:<p> [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)<p> [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)|  
+|AD FS 1,1 агент с поддержкой утверждений, установленный с Windows Server 2008 или Windows Server 2008 R2)|Поддерживается миграция на том же сервере. Перенесенный веб-агент AD FS 1,1 с поддержкой утверждений будет работать следующим образом:<p> Служба федерации AD FS 1,1, установленная с Windows Server 2008 или Windows Server 2008 R2<p> Служба федерации AD FS 2,0, установленная в Windows Server 2008 или Windows Server 2008 R2<p> AD FS Служба федерации, установленная с Windows Server 2012<p> Дополнительные сведения см. в следующих разделах:<p> [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)<p> [Взаимодействие с AD FS 1.x](Interoperating-with-AD-FS-1.x.md)|  
+|Сервер федерации AD FS 2,0, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере. Дополнительные сведения см. в следующих разделах:<p> [Подготовка к переносу сервера федерации AD FS 2.0](prepare-to-migrate-ad-fs-fed-server.md)<p> [Перенос сервера федерации AD FS 2.0](migrate-the-ad-fs-fed-server.md)|  
+|Прокси-сервер AD FS 2,0 Федерации, установленный в Windows Server 2008 или Windows Server 2008 R2|Поддерживается миграция на том же сервере.  Дополнительные сведения см. в разделе:<p> [Подготовка к переносу прокси-сервера федерации AD FS 2.0](prepare-to-migrate-ad-fs-fed-proxy.md)<p> [Перенос прокси-сервера федерации AD FS 2.0](migrate-the-ad-fs-2-fed-server-proxy.md)|  
   
 ## <a name="see-also"></a>См. также  
  [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   

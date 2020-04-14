@@ -2,25 +2,23 @@
 title: Требования к системе для Hyper-V в Windows Server
 description: Список требований к оборудованию и микропрограммному обеспечению для Hyper-V в Windows Server
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc4a4971-f727-40cd-91f5-2ee6d24b54cb
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 9/30/2016
-ms.openlocfilehash: fabaa1933fef836bb6ce3fc01badf337b832d072
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9bb50448f1ee819b3b886536424ee1556775b78d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365442"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857987"
 ---
 # <a name="system-requirements-for-hyper-v-on-windows-server"></a>Требования к системе для Hyper-V в Windows Server
 
->Область применения. Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+>Область применения: Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 Hyper-V предъявляют определенные требования к оборудованию, а некоторые функции Hyper-V имеют дополнительные требования. Используйте сведения в этой статье, чтобы решить, какие требования должны соответствовать системам, чтобы можно было использовать Hyper-V в соответствии с планом. Затем просмотрите [каталог Windows Server](https://www.windowsservercatalog.com/). Помните, что требования для Hyper-V превышают общие минимальные требования для Windows Server 2016, поскольку для среды виртуализации требуются дополнительные вычислительные ресурсы.
 

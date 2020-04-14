@@ -1,28 +1,24 @@
 ---
 title: Scwcmd
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 188ae881-c7d4-4a7a-b967-8fdc79f5f345
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fae9476f94af5faa6e942239e7d91cf589bb1776
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 014bb8b26f6eebaefa3a9997a71fbaaf543a75dc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384256"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835047"
 ---
 # <a name="scwcmd"></a>Scwcmd
 
-> Область применения. Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server 2012 R2, Windows Server 2012
 
 Программу командной строки команду scwcmd. exe, входящую в состав мастера настройки безопасности (SCW), можно использовать для выполнения следующих задач.
 -   Настройте один или несколько серверов с помощью политики, созданной SCW.
@@ -40,7 +36,7 @@ ms.locfileid: "71384256"
 scwcmd <command> [<subcommand>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Подкоманда|Описание|
 |----------|-----------|
@@ -50,8 +46,8 @@ scwcmd <command> [<subcommand>]
 |/роллбакк|Применяет последнюю доступную политику отката, а затем удаляет эту политику отката.</br>Синтаксис и параметры см. в разделе [команду scwcmd: ROLLBACK](scwcmd-rollback.md) .|
 |/Transform|Преобразует файл политики безопасности, созданный с помощью SCW, в новый объект групповая политика (GPO) в службах домен Active Directory Services.</br>См. раздел [команду scwcmd:](scwcmd-transform.md) синтаксис и параметры преобразования.|
 |/виев|Визуализирует XML-файл с помощью указанного преобразования XSL.</br>Синтаксис и параметры см. в разделе [команду scwcmd: View](scwcmd-view.md) .|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

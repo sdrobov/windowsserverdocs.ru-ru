@@ -1,55 +1,48 @@
 ---
 title: bitsadmin suspend
-description: Раздел команд Windows для **битсадмин Suspend** — приостановка указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин Suspend**, который приостанавливает указанное задание.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f9d42500-7bea-4aa8-a9f0-c22f6ed3e73b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a3a484df2b50cdc8893512020b835f913793d2c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 42ed83d4dbf8c3d982c5c186b440cf17997903c9
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380378"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123156"
 ---
 # <a name="bitsadmin-suspend"></a>bitsadmin suspend
 
-> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Приостанавливает указанное задание.
+Приостанавливает указанное задание. Если вы приостановили задание по ошибке, можно использовать параметр [возобновления битсадмин](bitsadmin-resume.md) , чтобы перезапустить задание.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /Suspend <Job>
+bitsadmin /suspend <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------|--------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| --------- | ---------- |
+| Job | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
-
-Чтобы перезапустить задание, используйте параметр [возобновления битсадмин](bitsadmin-resume.md) .
-
-## <a name="BKMK_examples"></a>Примеров
+## <a name="example"></a>Пример
 
 В следующем примере приостанавливается задание с именем *мидовнлоаджоб*.
 
+
 ```
-C:\>bitsadmin /Suspend myDownloadJob
+C:\>bitsadmin /suspend myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

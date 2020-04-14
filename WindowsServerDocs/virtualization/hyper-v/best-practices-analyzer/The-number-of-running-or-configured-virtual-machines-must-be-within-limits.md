@@ -2,37 +2,36 @@
 title: Количество работы или настроенные виртуальные машины, должен быть в пределах поддерживаемых
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 9d3c4aa3-8416-46ec-a253-26dc98088d7b
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 56d7fd528d7fda20dbdbb16a6262bb072f053ef0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 49013d6a4c9dda6e79d6a803bae0f5641d826817
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364627"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854627"
 ---
 # <a name="the-number-of-running-or-configured-virtual-machines-must-be-within-supported-limits"></a>Количество работы или настроенные виртуальные машины, должен быть в пределах поддерживаемых
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и проверках см. в разделе [запуска наиболее проверок анализатором соответствия рекомендациям и Управление результатами проверок](https://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка  
 |**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст, отображаемый в анализатор соответствия рекомендациям для этой проблемы.  
   
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
 *Число работающих или настроенных виртуальных машин превышает поддерживаемое.*  
   
 ## <a name="impact"></a>Влияние  

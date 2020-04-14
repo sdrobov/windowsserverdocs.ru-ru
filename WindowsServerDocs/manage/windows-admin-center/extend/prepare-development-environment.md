@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 09/18/2018
 ms.prod: windows-server
-ms.openlocfilehash: 67bd2a476cedd6d522daeaae54081b02fd893fbd
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 136107210d2a8a4b336c9e4eb809e2ca096bfba2
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75949978"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269221"
 ---
 # <a name="prepare-your-development-environment"></a>Подготовка среды разработки
 
@@ -32,11 +32,12 @@ ms.locfileid: "75949978"
 
 * [Центр администрирования Windows](https://aka.ms/WACDownloadPage) (общедоступная или предварительная версия)
 * Visual Studio или [Visual Studio Code](https://code.visualstudio.com)
+* [Node. js](https://nodejs.org/en/download/releases/) (версия 10.3.0)
 * [Диспетчер пакетов node](https://npmjs.com/get-npm) (8.12.0 или более поздней версии)
 * [NuGet](https://www.nuget.org/downloads) (для публикации расширений)
 
 > [!NOTE]
-> Чтобы выполнить действия, описанные ниже, необходимо установить и запустить Windows Admin Center в режиме разработки. Режим разработки позволяет Windows Admin Center загружать неподписанные пакеты расширений.
+> Чтобы выполнить действия, описанные ниже, необходимо установить и запустить Windows Admin Center в режиме разработки. Режим разработки позволяет Windows Admin Center загружать неподписанные пакеты расширений. Центр администрирования Windows можно установить только в режиме разработки на компьютере с Windows 10. 
 >
 >  Чтобы включить режим разработки, установите Windows Admin Center из командной строки, используя параметр DEV_MODE=1. В приведенном ниже примере замените ```<version>``` на версию, которую вы устанавливаете, то есть ```WindowsAdminCenter1809.msi```.
 >
@@ -49,7 +50,7 @@ ms.locfileid: "75949978"
 ```
 npm install -g npm
 
-npm install -g @angular/cli@1.6.5
+npm install -g @angular/cli@7.1.2
 
 npm install -g gulp
 npm install -g typescript
@@ -58,9 +59,9 @@ npm install -g windows-admin-center-cli
 ```
 
 >[!NOTE]
->Вы можете установить более позднюю версию @angular/cli, но имейте в виду, что при установке версии выше 1.6.5 вы получите предупреждение на этапе сборки gulp о том, что локальная версия CLI не соответствует установленной версии.
+>Вы можете установить более позднюю версию @angular/cli, но имейте в виду, что при установке версии выше 7.1.2 вы получите предупреждение на этапе сборки gulp о том, что локальная версия CLI не соответствует установленной версии.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 Теперь, когда ваша среда подготовлена, можно приступать к созданию содержимого.
 

@@ -1,28 +1,24 @@
 ---
 title: logman
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 574a5203-5b3b-4759-a678-f26d00dde447
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 420c591a8a6c15d563a344d0450be5eb7da46191
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bb6654cce0e23ac08a2fa6334d6144b08c8b65f3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374261"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840407"
 ---
 # <a name="logman"></a>logman
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Logman** создает сеанс трассировки событий и журналы производительности и управляет ими, а также поддерживает многие функции системного монитора из командной строки.
 ## <a name="syntax"></a>Синтаксис
@@ -30,7 +26,7 @@ ms.locfileid: "71374261"
 logman [create | query | start | stop | delete| update | import | export | /?] [options]
 ```
 ## <a name="actions"></a>Действия
-|Action|Описание|
+|Действие|Описание|
 |-----|--------|
 |[logman create](logman-create.md)|Создание счетчика, трассировки, сборщика данных конфигурации или API.|
 |[logman query](logman-query.md)|запросите свойства сборщика данных.|

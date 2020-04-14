@@ -2,25 +2,23 @@
 title: Управление виртуальными машинами Windows с помощью PowerShell Direct
 description: Содержит инструкции по использованию PowerShell Direct для управления виртуальными машинами без полагаться на сетевое или удаленное подключение к ним.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b5715c02-a90f-4de9-a71e-0fc09093ba2d
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f42e221b073cf199117f85ea96beef4997bbbbc5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c4a051de2d8f62c38ae0c44b1a62d5bf9df339e8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392743"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859437"
 ---
 # <a name="manage-windows-virtual-machines-with-powershell-direct"></a>Управление виртуальными машинами Windows с помощью PowerShell Direct
 
->Область применения. Windows 10, Windows Server 2016, Windows Server 2019
+>Область применения: Windows 10, Windows Server 2016, Windows Server 2019
   
 PowerShell Direct можно использовать для удаленного управления виртуальной машиной Windows 10, Windows Server 2016 или Windows Server 2019 с узла Windows 10, Windows Server 2016 или Windows Server 2019 Hyper-V. PowerShell Direct позволяет управлять Windows PowerShell внутри виртуальной машины независимо от конфигурации сети или параметров удаленного управления на узле Hyper-V или виртуальной машине. Это позволяет администраторам Hyper-V автоматизировать управление и настройку виртуальных машин с помощью сценариев.  
   

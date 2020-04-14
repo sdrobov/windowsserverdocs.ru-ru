@@ -1,24 +1,20 @@
 ---
 title: Проецирование станции на другие станции
 description: Узнайте, как предоставить общий доступ к рабочему столу из одной системы в другую в службах MultiPoint.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2c0d0faf-ba5b-406d-bd89-b685ddf81e93
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 242214ba69fc3265c9984e218110a16242b1cff3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 24ca032d566e9dfb9c95d716344be43aafca5135
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71395141"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853337"
 ---
 # <a name="project-a-station-to-other-stations"></a>Проецирование станции на другие станции
 Как пользователь панели мониторинга MultiPoint вы можете проецировать свой рабочий стол на станцию одного пользователя или на всех пользователей (не являющихся администраторами). Эта возможность полезна для демонстрации задачи пользователям.  

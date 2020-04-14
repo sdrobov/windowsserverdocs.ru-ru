@@ -1,24 +1,20 @@
 ---
 title: freedisk
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 91c15166-5baa-4b80-9e0c-4cd815d00530
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e417a8f9768706fe391f705adde37c62ceaa818
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5d652aa89c689a97bf2ecc67383bc2fd464a3054
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377034"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844447"
 ---
 # <a name="freedisk"></a>freedisk
 
@@ -30,7 +26,7 @@ ms.locfileid: "71377034"
 ```
 freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [<Value>]
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |       Параметр       |                                                                                         Описание                                                                                          |
 |-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -40,11 +36,11 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
 |      /d <Drive>       |                              Указывает диск, для которого необходимо определить доступность свободного пространства. Для удаленного компьютера необходимо указать <Drive>.                               |
 |        <Value>        |                                     Проверяет наличие определенного объема свободного места на диске. Можно указать <Value>в байтах, КБ, МБ, ГБ, ТБ, PB, EB, ЗБ или ИБ.                                      |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 - Параметры командной строки **/s**, **/u**и **/p** доступны только при использовании параметра **/s**. Для предоставления пароля пользователя необходимо использовать **/p** и **/u**.
 - для автоматической установки можно использовать **фридиск** в пакетных файлах установки для проверки необходимого объема свободного места перед продолжением установки.
 - При использовании **фридиск** в пакетном файле он возвращает **0** , если в нем достаточно места, и **1** , если недостаточно места.
-  ## <a name="BKMK_examples"></a>Примеров
+  ## <a name="examples"></a><a name=BKMK_examples></a>Примеров
   Чтобы определить, доступно ли не менее 50 МБ свободного места на диске C:, введите:
   ```
   freedisk 50mb 
@@ -53,5 +49,5 @@ freedisk [/s <computer> [/u [<Domain>\]<User> [/p [<Password>]]]] [/d <Drive>] [
   ```
   INFO: The specified 52,428,800 byte(s) of free space is available on current drive.
   ```
-  ## <a name="additional-references"></a>Дополнительные ссылки
-  [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+  ## <a name="additional-references"></a>Дополнительные материалы
+  - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,32 +1,28 @@
 ---
 title: wdsutil
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для WDSUTIL, который является служебной программой командной строки, используемой для управления сервером служб развертывания Windows.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a1965a0-8677-40cc-9495-30ae806808d1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0072008c4af32f05c9924cf85c0559cd924cff7c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f57411c1b000355940772003c7ac5343c82838cd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362200"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829446"
 ---
 # <a name="wdsutil"></a>wdsutil
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WDSUTIL — это служебная программа командной строки, используемая для управления сервером служб развертывания Windows. Чтобы выполнить эти команды, нажмите кнопку **Пуск**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.  
 ## <a name="commands"></a>Команды  
-|Command|Описание|  
+|Команда|Описание|  
 |------|--------|  
 |[Использование команды Add](using-the-add-command.md)|Добавляет объекты или предварительно подготовленные компьютеры.|  
 |[Использование команды "утвердить-Аутоадддевицес"](using-the-approve-autoadddevices-command.md)|Утверждает компьютеры, ожидающие утверждения администратором.|  

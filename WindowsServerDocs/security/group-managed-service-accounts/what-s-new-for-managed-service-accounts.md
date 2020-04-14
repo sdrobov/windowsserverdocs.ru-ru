@@ -1,24 +1,20 @@
 ---
 title: What's New for Managed Service Accounts
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-gmsa
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f2a8b6b-c152-4c40-b712-bfabff0e408b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 82d0ce962dfab0f7c9e5180e4b471894f507fb26
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: facc816ef46ebeadb30ccabac9c0b3e6a896264d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950347"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856967"
 ---
 # <a name="what39s-new-for-managed-service-accounts"></a>Новые&#39;возможности управляемых учетных записей служб
 
@@ -28,10 +24,10 @@ ms.locfileid: "75950347"
 
 Управляемая учетная запись службы позволяет службам и задачам, таким как службы Windows и пулы приложений IIS, совместно использовать собственные учетные записи домена, тем самым устраняя необходимость администрирования паролей для данных учетных записей вручную. Автоматическое управление паролями обеспечивается управляемой учетной записью домена.
 
-## <a name="versions"></a>Новые возможности управляемых учетных записей служб в Windows Server 2012 и Windows 8
+## <a name="whats-new-for-managed-service-accounts-in-windows-server-2012-and-windows-8"></a><a name="versions"></a>Новые возможности управляемых учетных записей служб в Windows Server 2012 и Windows 8
 Ниже описано, какие изменения были внесены в функции MSA в Windows Server 2012 и Windows 8.
 
-### <a name="group-managed-service-accounts"></a>Group Managed Service Accounts
+### <a name="group-managed-service-accounts"></a>Групповые управляемые учетные записи служб
 При настройке учетной записи домена для определенного сервера в домене клиентский компьютер имеет возможность пройти аутентификацию и подключиться к данной службе. Ранее только два типа учетной записи обеспечивали удостоверение, не требующее управления паролями. Однако эти типы учетных записей имеют ряд ограничений:
 
 -   Учетная запись компьютера ограничена одним сервером в домене, при этом пароли управляются данным компьютером.
@@ -48,12 +44,12 @@ ms.locfileid: "75950347"
 
 На компьютерах под управлением Windows Server 2012 или Windows 8 можно создать группу MSA и управлять ими с помощью диспетчера управления службами, чтобы многочисленные экземпляры службы, например развернутые в ферме серверов, можно было управлять с одного сервера. Средства и служебные программы, использовавшиеся для администрирования управляемых учетных записей служб, такие как диспетчер пула приложений IIS, могут использоваться с групповыми управляемыми учетными записями служб. Администраторы доменов могут делегировать управление службами администраторам служб, способным управлять полным жизненным циклом управляемой учетной записи службы или групповой управляемой учетной записи службы. Существующие клиентские компьютеры получат возможность пройти аутентификацию для подключения к любой из таких служб без уточнения конкретного экземпляра данной службы.
 
-### <a name="interoperability"></a>Удаленная или устаревшая функциональность
+### <a name="removed-or-deprecated-functionality"></a><a name="interoperability"></a>Удаленная или устаревшая функциональность
 Для Windows Server 2012 командлеты Windows PowerShell по умолчанию управляют учетными записями групповых управляемых служб вместо управляемых серверных учетных записей служб.
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
--   [Общие сведения о групповых управляемых учетных записях служб](group-managed-service-accounts-overview.md)
+-   [Общие сведения о групповой управляемых учетных записях служб](group-managed-service-accounts-overview.md)
 
 -   [Обзор доменных служб Active Directory](active-directory-domain-services-overview.md)
 

@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD — выполнение полного восстановления сервера
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 1a1182a6-4462-4a13-806e-0e642a0d5db2
 ms.technology: identity-adds
-ms.openlocfilehash: 1ade1f2e316387fbe84209c1bc7a986fff6f2a71
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bf321ae769aa6f0da1cebce7700ea429161a0956
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71390540"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824017"
 ---
 # <a name="ad-forest-recovery---performing-a-full-server-recovery"></a>Восстановление леса AD — выполнение полного восстановления сервера 
 
@@ -52,7 +51,7 @@ ms.locfileid: "71390540"
    -  Отмените выбор **дополнительных** функций автоматического перезапуска и проверки на наличие ошибок диска. Они включены по умолчанию.
    ![восстановления сервера](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore6.png)
 8. Нажмите кнопку **Далее**.
-9. Нажмите кнопку **Готово**. Вам будет предложено подтвердить, что вы действительно хотите продолжить. нажмите кнопку **Да**. 
+9. Нажмите кнопку **Готово**. Вам будет предложено подтвердить, что вы действительно хотите продолжить. Нажмите кнопку **Да**. 
    ![восстановления сервера](media/AD-Forest-Recovery-Perform-a-Full-Recovery/restore11.png) 
 10. После этого выполните полномочное восстановление SYSVOL, как описано в статье [восстановление леса Active Directory. выполнение полномочной синхронизации SYSVOL, реплицированной](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)с помощью DFSR.
 
@@ -76,7 +75,7 @@ ms.locfileid: "71390540"
     - Установка драйверов
     - Отмените выбор **дополнительных** функций автоматического перезапуска и проверки на наличие ошибок диска. Они включены по умолчанию.
 12. Нажмите кнопку **Далее**.
-13. Нажмите кнопку **Готово**. Вам будет предложено подтвердить, что вы действительно хотите продолжить. нажмите кнопку **Да**.  
+13. Нажмите кнопку **Готово**. Вам будет предложено подтвердить, что вы действительно хотите продолжить. Нажмите кнопку **Да**.  
 14. После этого выполните полномочное восстановление SYSVOL, как описано в статье [восстановление леса Active Directory. выполнение полномочной синхронизации SYSVOL, реплицированной](AD-Forest-Recovery-Authoritative-Recovery-SYSVOL.md)с помощью DFSR.
 
 ## <a name="enabling-the-network-adapter-for-a-network-backup"></a>Включение сетевого адаптера для резервного копирования сети
@@ -130,7 +129,7 @@ ms.locfileid: "71390540"
 
 6. Теперь, когда сетевой адаптер работает, выберите действия, описанные выше, чтобы завершить восстановление.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

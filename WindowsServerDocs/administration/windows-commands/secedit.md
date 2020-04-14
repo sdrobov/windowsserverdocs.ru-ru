@@ -1,24 +1,20 @@
 ---
 title: secedit
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 58ed57ed-08e3-403d-a363-0620b358637a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5598f830ad4cef8d45c99594da12cbcdd84e7eef
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e80217c201cde4dc1df58c0e8976fbe1422511fe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371109"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834847"
 ---
 # <a name="secedit"></a>secedit
 
@@ -38,7 +34,7 @@ secedit
 [/validate <configuration file name>]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -49,7 +45,7 @@ secedit
 |[Secedit:import](secedit-import.md)|Позволяет импортировать шаблон безопасности в базу данных, чтобы параметры, заданные в шаблоне, можно было применять к системе или анализировать в системе.|
 |[Secedit:validate](secedit-validate.md)|Позволяет проверить синтаксис шаблона безопасности.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Для всех имен файлов используется текущий каталог, если путь не указан.
 
@@ -66,7 +62,7 @@ secedit
 > [!NOTE]
 > Консоль управления (MMC) и оснастка "Настройка и анализ безопасности" недоступны в Server Core.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 Примеры использования этой команды см. в разделе "примеры" в любом из файлов подкоманд.
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

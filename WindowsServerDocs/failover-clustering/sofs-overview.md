@@ -5,15 +5,16 @@ ms.prod: windows-server
 ms.topic: article
 author: JasonGerend
 ms.author: jgerend
+manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 04/26/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: dc083a15d0cd6a21b5512c1506bc9a461c4b886c
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 78f95f25d365b1b30a9e4e2d311128b8c7cb13b6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001769"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827417"
 ---
 # <a name="scale-out-file-server-for-application-data-overview"></a>Масштабируемый файловый сервер для обзора данных приложения
 
@@ -74,37 +75,37 @@ ms.locfileid: "77001769"
 <tr class="odd">
 <td>SMB</td>
 <td>Постоянная доступность SMB</td>
-<td>"Да",</td>
-<td>"Да",</td>
+<td>Да</td>
+<td>Да</td>
 </tr>
 <tr class="even">
 <td>SMB</td>
 <td>Технология SMB Multichannel</td>
-<td>"Да",</td>
-<td>"Да",</td>
+<td>Да</td>
+<td>Да</td>
 </tr>
 <tr class="odd">
 <td>SMB</td>
 <td>SMB Direct</td>
-<td>"Да",</td>
-<td>"Да",</td>
+<td>Да</td>
+<td>Да</td>
 </tr>
 <tr class="even">
 <td>SMB</td>
 <td>Шифрование SMB</td>
-<td>"Да",</td>
-<td>"Да",</td>
+<td>Да</td>
+<td>Да</td>
 </tr>
 <tr class="odd">
 <td>SMB</td>
 <td>Прозрачная отработка отказа SMB</td>
 <td>Да (если включена постоянная доступность)</td>
-<td>"Да",</td>
+<td>Да</td>
 </tr>
 <tr class="even">
 <td>Файловая система</td>
 <td>NTFS</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Н/Д</td>
 </tr>
 <tr class="odd">
@@ -117,109 +118,109 @@ ms.locfileid: "77001769"
 <td>Файловая система</td>
 <td>Файловая система общего тома кластера (CSV)</td>
 <td>Н/Д</td>
-<td>"Да",</td>
+<td>Да</td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>BranchCache</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Дедупликация данных (Windows Server 2012)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Дедупликация данных (Windows Server 2012 R2)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Да (только VDI)</td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Корень корневого сервера пространства имен DFS (DFSN)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Целевой сервер папки пространства имен DFS (DFSN)</td>
-<td>"Да",</td>
-<td>"Да",</td>
+<td>Да</td>
+<td>Да</td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Репликация DFS (DFSR)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Диспетчер ресурсов файлового сервера (экраны и квоты)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Инфраструктура классификации файлов</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Динамический контроль доступа (доступ на основе утверждений, CAP)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Перенаправление папок</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Не рекомендуется<em></td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Автономные файлы (кэширование на стороне клиента)</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Не рекомендуется</em></td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
 <td>Проверка перемещаемых профилей пользователей</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Не рекомендуется<em></td>
 </tr>
 <tr class="odd">
 <td>Управление файлами</td>
 <td>Домашние каталоги</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Не рекомендуется</em></td>
 </tr>
 <tr class="even">
 <td>Управление файлами</td>
-<td>Рабочие папки</td>
-<td>"Да",</td>
+<td>рабочие папки</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="odd">
 <td>NFS</td>
 <td>NFS-сервер</td>
-<td>"Да",</td>
+<td>Да</td>
 <td>Нет</td>
 </tr>
 <tr class="even">
 <td>Приложения</td>
 <td>Hyper-V</td>
 <td>Не рекомендуется</td>
-<td>"Да",</td>
+<td>Да</td>
 </tr>
 <tr class="odd">
 <td>Приложения</td>
 <td>Microsoft SQL Server</td>
 <td>Не рекомендуется</td>
-<td>"Да",</td>
+<td>Да</td>
 </tr>
 </tbody>
 </table>
@@ -231,7 +232,7 @@ ms.locfileid: "77001769"
 Масштабируемые файловые серверы идеально подходят для хранилища серверных приложений. Ниже перечислены некоторые примеры серверных приложений, которые могут хранить свои данные в масштабируемом файловом ресурсе.
 
 - Веб-сервер IIS может хранить конфигурацию и данные для веб-сайтов в масштабируемом файловом ресурсе. Дополнительные сведения см. в разделе [Общая конфигурация](https://www.iis.net/learn/manage/managing-your-configuration-settings/shared-configuration_264).
-- Hyper-V может хранить конфигурацию и динамические виртуальные диски в масштабируемом файловом ресурсе. Дополнительные сведения см. в разделе [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
+- Hyper-V может хранить конфигурацию и динамические виртуальные диски в масштабируемом файловом ресурсе. Дополнительные сведения см. в разделе [Развертывание Hyper-V через SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>).
 - SQL Server может хранить динамические файлы базы данных в масштабируемом файловом ресурсе. Дополнительные сведения см. в разделе [Установка SQL Server с файловым ресурсом SMB в качестве хранилища](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option).
 - Диспетчер виртуальных машин (VMM) может хранить общую папку библиотеки (содержащую шаблоны виртуальных машин и связанные файлы) в масштабируемом файловом ресурсе. Однако сам сервер библиотеки не может быть масштабируемый файловый сервер — он должен находиться на изолированном сервере или отказоустойчивом кластере, который не использует роль кластера масштабируемый файловый сервер.
 
@@ -259,7 +260,7 @@ ms.locfileid: "77001769"
 <td>Отказоустойчивые кластеры добавили следующие функции в Windows Server 2012 для поддержки масштабируемого файлового сервера: имя распределенной сети, масштабируемый файловый сервер тип ресурса, общие тома кластера (CSV) 2 и роль высокой доступности масштабируемый файловый сервер. Дополнительные сведения об этих функциях см. <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn265972(v%3dws.11)">в&#39;разделе новые возможности отказоустойчивой кластеризации в Windows Server 2012 [перенаправлено]</a>.</td>
 </tr>
 <tr class="even">
-<td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Блок сообщений сервера</a></td>
+<td><a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v%3dws.11)">Server Message Block Overview</a> (Общие сведения об SMB)</td>
 <td>SMB 3,0 добавила следующие функции в Windows Server 2012 для поддержки масштабируемого файлового сервера: прозрачная отработка отказа SMB, многоканальная и SMB Direct.<br />
 <br />
 Дополнительные сведения о новых и измененных возможностях SMB в Windows Server 2012 R2 см. в разделе <a href="https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)">&#39;новые возможности SMB в Windows</a>Server.</td>
@@ -271,7 +272,7 @@ ms.locfileid: "77001769"
 
 - [Руководство по проектированию хранилища, определяемое программным обеспечением](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/mt243829(v%3dws.11)>)
 - [Повышение доступности сервера, хранилища и сети](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831437(v%3dws.11)>)
-- [Развертывание Hyper-V по протоколу SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>)
-- [Развертывание быстрых и эффективных файловых серверов для серверных приложений](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>)
+- [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>) (Развертывание Hyper-V поверх SMB)
+- [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>) (Развертывание быстрых и производительных файловых серверов для серверных приложений)
 - [Масштабировать или нет, вот в чем вопрос](https://blogs.technet.com/b/filecab/archive/2013/12/05/to-scale-out-or-not-to-scale-out-that-is-the-question.aspx) (запись блога)
-- [Перенаправление папок, автономные файлы и перемещаемые профили пользователей](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>)
+- [Folder Redirection, Offline Files, and Roaming User Profiles](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh848267(v%3dws.11)>) (Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей)

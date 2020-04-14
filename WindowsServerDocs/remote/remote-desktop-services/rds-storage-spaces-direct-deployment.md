@@ -1,24 +1,20 @@
 ---
 title: Развертывание двухузлового масштабируемого файлового сервера (SOFS) Локальных дисковых пространств для хранения дисков UPD
 description: Узнайте, как использовать Локальные дисковые пространства с RDS.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1099f21d-5f07-475a-92dd-ad08bc155da1
 author: haley-rowland
 ms.author: harowl
 ms.date: 07/17/2018
 manager: scottman
-ms.openlocfilehash: e320f0eb04e81d80f7288d4d7b20b5369e209932
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 2386a231edf80fa611daf71c171bc0de3a7b497e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79319988"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855547"
 ---
 # <a name="deploy-a-two-node-storage-spaces-direct-scale-out-file-server-for-upd-storage-in-azure"></a>Развертывание масштабируемого файлового сервера Локальных дисковых пространств с двумя узлами для хранения дисков UPD в Azure
 

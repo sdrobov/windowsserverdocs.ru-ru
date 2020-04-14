@@ -2,20 +2,19 @@
 title: Управление Integration Services Hyper-V
 description: Описывает включение и отключение служб Integration Services и их установку при необходимости
 ms.technology: compute-hyper-v
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 manager: dongill
 ms.date: 12/20/2016
 ms.topic: article
 ms.prod: windows-server
-ms.service: na
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: bcf8109530043f5e0a6d141c484233c4364fb307
-ms.sourcegitcommit: 9687d3eb221b89061a48bf1e73fb3b25bee69f9a
+ms.openlocfilehash: 2c5e2d67b391cd53a6995957da5dab108a34e1a9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78169574"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820717"
 ---
 >Область применения: Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
@@ -233,18 +232,18 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 | Гость  | Механизм обновления | Примечания |
 |:---------|:---------|:---------|
-| Windows 10 | Windows Update | |
+| Windows 10 | Windows Update | |
 | Windows 8.1 | Windows Update | |
 | Windows 8 | Windows Update | Требуется служба обмена данными.* |
 | Windows 7 | Windows Update | Требуется служба обмена данными.* |
 | Windows Vista с пакетом обновления 2 (SP2) | Windows Update | Требуется служба обмена данными.* |
 | - | | |
-| Windows Server 2016 | Windows Update | |
+| Windows Server 2016 | Windows Update | |
 | Windows Server, Semi-Annual Channel | Windows Update | |
 | Windows Server 2012 R2 | Windows Update | |
 | Windows Server 2012 | Windows Update | Требуется служба обмена данными.* |
 | Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Windows Update | Требуется служба обмена данными.* |
-| Windows Server 2008 с пакетом обновления 2 (SP2) | Windows Update | Расширенная поддержка только в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=12925)). |
+| Windows Server 2008 с пакетом обновления 2 (SP 2) | Windows Update | Расширенная поддержка только в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=12925)). |
 | Windows Home Server 2011 | Windows Update | Не будет поддерживаться в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=15820)). |
 | Windows Small Business Server 2011 | Windows Update | Не в основной фазе поддержки ([подробности](https://support.microsoft.com/lifecycle?p1=15817)). |
 | - | | |
@@ -256,19 +255,19 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 | Гость  | Механизм обновления | Примечания |
 |:---------|:---------|:---------|
-| Windows 10 | Windows Update | |
+| Windows 10 | Windows Update | |
 | Windows 8.1 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows 8 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows 7 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Vista с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows XP с пакетами обновления 2 и 3 (SP2, SP3) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | - | | |
-| Windows Server 2016 | Windows Update | |
+| Windows Server 2016 | Windows Update | |
 | Windows Server, Semi-Annual Channel | Windows Update | |
 | Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 с пакетом обновления 2 (SP 2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Home Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Small Business Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2003 R2 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
@@ -289,8 +288,8 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 | - | | |
 | Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже.|
-| Windows Server 2008 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже.|
+| Windows Server 2008 с пакетом обновления 2 (SP 2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Home Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Small Business Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2003 R2 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |

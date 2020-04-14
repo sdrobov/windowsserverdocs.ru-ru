@@ -1,7 +1,6 @@
 ---
 ms.assetid: af76ddbe-83a2-4a62-9989-873e3bb1c772
 title: Роль владельца топологии сайта
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 7b010dcb7a150f4ebcfcc941aa9e5c016795e717
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1e90c88db6a40de48444e047628abcee6cc3673b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402501"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821827"
 ---
 # <a name="site-topology-owner-role"></a>Роль владельца топологии сайта
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Администратор, управляющий топологией сайта, называется владельцем топологии сайта. Владелец топологии сайта понимает условия сети между сайтами и имеет полномочия на изменение параметров в службах домен Active Directory Services (AD DS) для реализации изменений в топологии сайта. Изменения топологии сайта влияют на изменения в топологии репликации. В обязанности владельца топологии сайта входят следующие.  
   

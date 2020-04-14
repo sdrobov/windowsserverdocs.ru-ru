@@ -1,28 +1,24 @@
 ---
 title: ipxroute
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3a30304f-655e-43d2-a4ac-7568abf8975c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd5f33766ff9b33c9d6020b7284f2fbf9552d44d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f1e011835dbdbcf7be1daca2cdfbd47c39f9355c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375330"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842067"
 ---
 # <a name="ipxroute"></a>ipxroute
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает и изменяет сведения о таблицах маршрутизации, используемых протоколом IPX. При использовании без параметров параметр **ipxroute** отображает параметры по умолчанию для пакетов, отправляемых на неизвестные, широковещательные и многоадресные адреса.   
 ## <a name="syntax"></a>Синтаксис  
@@ -33,7 +29,7 @@ ipxroute resolve {guid | name} {GUID | <AdapterName>}
 ipxroute board= N [def] [gbr] [mbr] [remove=xxxxxxxxxxxx]  
 ipxroute config  
 ```  
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
 |серверы [/Type = X]|Отображает таблицу точек доступа службы (SAP) для указанного типа сервера.  Значение **X** должно быть целым числом. Например, **/Type = 4** отображает все файловые серверы. Если не указать **/Type**, **серверы ipxroute** будут отображать все типы серверов, перечисляя их по имени сервера.|  
@@ -44,12 +40,12 @@ ipxroute config
 |гбр|Отправляет пакеты широковещательной рассылке всех маршрутов. Если пакет передается в широковещательный адрес (ФФФФФФФФФФФФ), параметр **ipxroute** по умолчанию отправляет широковещательный пакет по одному маршруту.|  
 |MBR|Отправляет пакеты широковещательной рассылке всех маршрутов. Если пакет передается в адрес многоадресной рассылки (C000xxxxxxxx), параметр **ipxroute** по умолчанию отправляет широковещательный пакет по одному маршруту.|  
 |удалить = *XXXXXXXXXXXX*|Удаляет заданный адрес узла из исходной таблицы маршрутизации.|  
-|файле|Отображает сведения обо всех привязках, для которых настроен IPX.|  
-|/?|Отображение справки в командной строке.|  
-## <a name="BKMK_Examples"></a>Примеров  
+|config|Отображает сведения обо всех привязках, для которых настроен IPX.|  
+|/?|Отображает справку в командной строке.|  
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
 Чтобы отобразить сегменты сети, к которым подключена Рабочая станция, укажите адрес узла рабочей станции и используемый тип кадра:  
 ```  
 ipxroute config  
 ```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 87196b65-a356-409f-9af0-b5950797d668
 title: Приложение а. Проверка ключевых AD DS терминов
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 81beba874440f7a75c2d7932357fae70f046d996
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ad8c1cf769c0c2a22e2d55f7bd2d111095410afe
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71409014"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822867"
 ---
-# <a name="appendix-a-reviewing-key-ad-ds-terms"></a>Приложение A. Проверка ключевых AD DS терминов
+# <a name="appendix-a-reviewing-key-ad-ds-terms"></a>Приложение А. Общие сведения об основных понятиях доменных служб Active Directory
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Следующие термины относятся к процессу развертывания Windows Server 2008 домен Active Directory Services (AD DS).  
   
@@ -54,7 +53,7 @@ ms.locfileid: "71409014"
 Процесс обновления службы каталогов домена до более поздней версии службы каталогов. Сюда входит обновление операционной системы на всех контроллерах домена и создание функционального уровня AD DS там, где это применимо.  
   
 ## <a name="in-place-domain-upgrade"></a>Обновление домена на месте  
-Процесс обновления операционных систем всех контроллеров домена в данном домене, например обновление Windows Server 2003 до Windows Server 2008 и повышение функционального уровня домена, если это применимо, при сохранении объектов домена, таких как пользователи и группы на месте.  
+Процесс обновления операционных систем для всех контроллеров домена в данном домене, например обновление Windows Server 2003 до Windows Server 2008 и повышение функционального уровня домена (если применимо), при этом удаляются объекты домена, такие как пользователи и группы.  
   
 ## <a name="forest-root-domain"></a>Корневой домен леса  
 Первый домен, созданный в лесу Active Directory. Этот домен автоматически назначается в качестве корневого домена леса. Он предоставляет основу для инфраструктуры леса Active Directory.  

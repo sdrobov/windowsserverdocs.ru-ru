@@ -1,24 +1,20 @@
 ---
 title: Команду scwcmd регистр
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fe4d126a-9f27-4076-b7b1-fbefa45f378a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2e892f7c08461e88d12a072dfb171f9523558ef7
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5390b7d81efe8d807dd0b7d7a8c136a1d7092af3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371224"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835157"
 ---
 # <a name="scwcmd-register"></a>Scwcmd: register
 
@@ -32,7 +28,7 @@ ms.locfileid: "71371224"
 scwcmd register /kbname:<MyApp> [/kbfile:<kb.xml>] [/kb:<path>] [/d]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -40,13 +36,13 @@ scwcmd register /kbname:<MyApp> [/kbfile:<kb.xml>] [/kb:<path>] [/d]
 |/кбфиле:\<KB. XML >|Указывает путь и имя файла базы данных конфигурации безопасности, который будет использоваться для расширения или настройки базовой базы данных конфигурации безопасности. Чтобы проверить соответствие файла базы данных конфигурации безопасности схеме SCW, используйте файл определения схемы%Виндир%\секурити\кбрегистратионинфо.КССД. Этот параметр следует указывать, если не указан параметр **/d** .|
 |/КБ: путь к\<>|Указывает путь к каталогу, содержащему файлы базы данных конфигурации безопасности SCW для обновления. Если этот параметр не указан, используется%виндир%\секурити\мсскв\кбс.|
 |/d|Отменяет регистрацию расширения базы данных конфигурации безопасности в базе данных конфигурации безопасности. Расширение для отмены регистрации задается параметром/кбнаме. (Параметр **/кбфиле** указывать не следует.) База данных настройки безопасности для отмены регистрации расширения задается параметром **/КБ** .|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Чтобы зарегистрировать файл базы данных конфигурации безопасности с именем Сквкбформяпп. XML под именем MyApp в расположении \\\\кбсервер\кб, введите:
 ```
@@ -57,6 +53,6 @@ scwcmd register /kbfile:d:\SCWKBForMyApp.xml /kbname:MyApp /kb:\\kbserver\kb
 scwcmd register /d /kbname:MyApp /kb:\\kbserver\kb
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

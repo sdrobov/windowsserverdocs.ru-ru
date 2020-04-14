@@ -1,7 +1,6 @@
 ---
 ms.assetid: 73a4deba-7da6-4eae-8fdd-2a4d369f9cbb
 title: Приложение технического справочника по виртуализированным контроллерам домена
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e1018d5bbff5922df5a696e5c4fad12dc9f6ec3d
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: ee5a46781a61b8546fef113763c0d8ef9ca9f6cc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323136"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853987"
 ---
 # <a name="virtualized-domain-controller-technical-reference-appendix"></a>Приложение технического справочника по виртуализированным контроллерам домена
 
@@ -26,7 +25,7 @@ ms.locfileid: "79323136"
   
 -   [Фиксвдкпермиссионс. ps1](../../../ad-ds/reference/virtual-dc/../../../ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Technical-Reference-Appendix.md#BKMK_FixPDCPerms)  
   
-## <a name="BKMK_Terms"></a>Терминология  
+## <a name="terminology"></a><a name="BKMK_Terms"></a>Терминология  
   
 -   **Snapshot** — состояние виртуальной машины в определенный момент времени. Он зависит от цепочки предыдущих моментальных снимков на оборудовании и на платформе виртуализации.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "79323136"
   
 -   Функция **импорта и экспорта** — компонент Hyper-V, позволяющий пользователю сохранить всю виртуальную машину (файлы виртуальной машины, VHD и конфигурацию компьютера). Затем он позволяет пользователям использовать этот набор файлов, чтобы вернуть компьютер на тот же компьютер, что и ту же ВИРТУАЛЬную машину (восстановление), на другом компьютере, где находится та же ВИРТУАЛЬная машина (переместить), или новую виртуальную машину (копию).  
   
-## <a name="BKMK_FixPDCPerms"></a>Фиксвдкпермиссионс. ps1  
+## <a name="fixvdcpermissionsps1"></a><a name="BKMK_FixPDCPerms"></a>Фиксвдкпермиссионс. ps1  
   
 ```  
 # Unsigned script, requires use of set-executionpolicy remotesigned -force  

@@ -4,15 +4,15 @@ description: Требования к памяти при настройке пр
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 88827176e8a425e9bf68fdc170a4a114346562f0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5f683b85657b8dd263e93380b71c646ad677950c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385090"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851727"
 ---
 # <a name="hyper-v-memory-performance"></a>Производительность памяти Hyper-V
 
@@ -41,7 +41,7 @@ ms.locfileid: "71385090"
 
 Hyper-V в Windows Server 2016 отслеживает работоспособность среды выполнения операционной системы управления корневого раздела, чтобы определить, сколько памяти может быть безопасно выделено дочерним секциям, сохраняя при этом высокий уровень производительности и надежности корневого раздела.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 -   [Терминология Hyper-V](terminology.md)
 

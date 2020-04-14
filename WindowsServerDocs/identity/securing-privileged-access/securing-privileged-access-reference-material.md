@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 16d711a288843163b134b0226ed4b8513d7070eb
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 00335fb2ca7a54031430c6c606fb6ffa23a8f7a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950055"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855137"
 ---
 # <a name="active-directory-administrative-tier-model"></a>Модель разделения администрирования Active Directory
 
@@ -592,7 +592,7 @@ ms.locfileid: "75950055"
 
 |Способ подключения|Тип входа в систему|Повторное использование учетных данных на целевом компьютере|Комментарии|
 |-----------|-------|--------------------|------|
-|Обычная проверка подлинности IIS|NetworkClearText<br />(IIS 6.0 и более поздних версий)<br /><br />Interactive (Интерактивные)<br />(IIS 6.0 и предыдущих версий)|v||
+|Обычная проверка подлинности IIS|NetworkClearText<br />(IIS 6.0 и более поздних версий)<p>Interactive (Интерактивные)<br />(IIS 6.0 и предыдущих версий)|v||
 |Встроенная проверка подлинности Windows IIS|Network (Сеть)|-|Поставщики NTLM и Kerberos|
 
 Объяснение названий столбцов:

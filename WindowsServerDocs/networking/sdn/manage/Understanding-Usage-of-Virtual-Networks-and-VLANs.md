@@ -1,24 +1,20 @@
 ---
 title: Общие сведения об использовании виртуальных сетей и виртуальных ЛС
 description: В этом разделе вы узнаете о виртуальных сетях виртуализации сети Hyper-V и о том, чем они отличаются от виртуальных локальных сетей (VLAN). Виртуализация сети Hyper-V позволяет создавать виртуальные сети наложения, также называемые виртуальными сетями.
-manager: dougkim
-ms.custom: na
+manager: grcusanz
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-sdn
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84ac2458-3fcf-4c4f-acfe-6105443dd83f
-ms.author: lizross
-author: eross-msft
+ms.author: anpaul
+author: AnirbanPaul
 ms.date: 08/26/2018
-ms.openlocfilehash: 1faf0112953146959ce2ec587c083c9ae9fed9c5
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 56e90966d38b8a138dd8781863a4eaad1db639fb
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317615"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854487"
 ---
 # <a name="understand-the-usage-of-virtual-networks-and-vlans"></a>Общие сведения об использовании виртуальных сетей и виртуальных ЛС
 

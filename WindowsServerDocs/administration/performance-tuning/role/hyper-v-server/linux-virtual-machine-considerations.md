@@ -4,15 +4,15 @@ description: Виртуальная машина Linux и BSD
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: Asmahi; SandySp; JoPoulso
+ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5668629e7eded214525561d30fec496a4e91b8dc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7abc1ef5473365dd26dce1167bb685f116822a7d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385071"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851747"
 ---
 # <a name="linux-virtual-machine-considerations"></a>Рекомендации по виртуальным машинам Linux
 
@@ -26,7 +26,7 @@ ms.locfileid: "71385071"
 
 Linux по умолчанию включает аппаратное ускорение и разгрузки по умолчанию. Если функция vRSS включена в свойствах сетевой карты на узле, а гостевая ОС Linux имеет возможность использовать vRSS, эта возможность будет включена. В PowerShell этот же параметр можно изменить с помощью команды `EnableNetAdapterRSS`.
 
-Аналогично, функция ВММК (RSS-канал виртуального коммутатора) может быть включена на физическом сетевом адаптере, используемом гостевыми **свойствами** > **Configure...**  >  Вкладка**дополнительно** > задайте для **параметра RSS виртуального коммутатора** значение **включено** или включите вммк в PowerShell, используя следующую команду:
+Аналогично, функция ВММК (RSS-канал виртуального коммутатора) может быть включена на физическом сетевом адаптере, используемом в **свойствах** гостя > **настроить...**  > **Дополнительно** , > задать для **параметра RSS виртуального коммутатора** значение **включено** или включить вммк в PowerShell с помощью следующих средств:
 
 ```PowerShell
  Set-VMNetworkAdapter -VMName **$VMName** -VmmqEnabled $True
@@ -57,7 +57,7 @@ net.ipv4.tcp_abort_on_overflow = 1
 
 Как и в случае с сетями, производительность гостевых систем Linux с учетом преимуществ в хранилище выгодна из нескольких очередей с достаточной глубиной, чтобы узел был занят. Производительность хранилища микропроизводительности, вероятно, лучше всего подходит для fioного средства тестирования с помощью механизма либаио.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 -   [Терминология Hyper-V](terminology.md)
 

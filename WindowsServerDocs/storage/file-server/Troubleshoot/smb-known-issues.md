@@ -3,26 +3,25 @@ title: Известные проблемы с SMB
 description: Список известных проблем SMB.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 13e79dc5bd2d84bbcb9efd8f5548f65a9ecba47b
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: 9dac6468689c89aa565e6c675bb0b1005630e48d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654525"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815367"
 ---
 # <a name="smb-known-issues"></a>Известные проблемы с SMB
 
 В следующих разделах описаны некоторые распространенные проблемы, которые могут возникать при использовании блока сообщений сервера (SMB). Эти разделы также предоставляют возможные решения для этих проблем.
 
-- [Сбой TCP-соединения с тремя способами](tcp-three-way-handshake-fails.md)
+- [Сбой при трехэтапном подтверждении по TCP](tcp-three-way-handshake-fails.md)
 
-- [Согласование, Настройка сеанса и сбои при подключении к дереву](negotiate-session-setup-tree-connect-fails.md)
+- [Сбои при согласовании, настройке сеанса и подключении дерева](negotiate-session-setup-tree-connect-fails.md)
 
-- [Подключение TCP прервано во время проверки согласования](abort-during-validate-negotiate.md)
+- [TCP-подключение прервано при проверке согласования](abort-during-validate-negotiate.md)
 
 - [Медленная скорость передачи файлов](slow-file-transfer.md)
 

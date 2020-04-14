@@ -2,30 +2,29 @@
 title: Для Windows 10 следует настроить рекомендуемый объем памяти.
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 0c810b82-b06a-4382-b598-5c642e8534be
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: a2722f9ecdfbab037de67ef77af7cec2eed4f0b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e38ca9d00ad502fc2ae3f2784a9e3f1a159d13a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364568"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854987"
 ---
 # <a name="windows-10-should-be-configured-with-the-recommended-amount-of-memory"></a>Для Windows 10 следует настроить рекомендуемый объем памяти.
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и проверках см. в разделе [запуска наиболее проверок анализатором соответствия рекомендациям и Управление результатами проверок](https://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
@@ -36,7 +35,7 @@ ms.locfileid: "71364568"
 *Для виртуальной машины под Windows 10 настраивается меньше рекомендуемого объема ОЗУ, что составляет 1 ГБ.*  
   
 ## <a name="impact"></a>**Благоприятн**  
-*Theная гостевая операционная система и приложения могут работать не так хорошо. Возможно, недостаточно памяти для одновременного запуска нескольких приложений. Это влияет на следующие виртуальные машины:* .  
+*Операционная система и приложения на виртуальной машине могут работать не так хорошо. Возможно, недостаточно памяти для одновременного запуска нескольких приложений. Это влияет на следующие виртуальные машины:*  
 ```  
 <list of virtual machines>  
 ```  
@@ -61,7 +60,7 @@ ms.locfileid: "71364568"
   
 2.  Щелкните правой кнопкой мыши **Windows PowerShell** и выберите команду **Запуск от имени администратора**.  
   
-3.  Выполните эту команду после замены \<MyVM > именем своей виртуальной машины:  
+3.  Выполните эту команду после замены \<MyVM > именем виртуальной машины:  
   
 ```  
 Set-VMMemory <MyVM> -StartupBytes 1GB  

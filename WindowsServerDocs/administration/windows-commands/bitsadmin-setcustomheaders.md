@@ -1,55 +1,46 @@
 ---
 title: битсадмин сеткустомхеадерс
-description: Раздел команд Windows для **битсадмин сеткустомхеадерс** . Добавление настраиваемого заголовка HTTP к запросу Get.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин сеткустомхеадерс**, который добавляет пользовательский заголовок HTTP к запросу Get.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed926410-80d0-46ed-9a90-f752c164bb9a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 45e3a5178df69b84618966ca0fcd9cc1e6d0e449
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b5b1a28f03815a22a3f8d10b2c3d1d4a3a2ae635
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380642"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123029"
 ---
 # <a name="bitsadmin-setcustomheaders"></a>битсадмин сеткустомхеадерс
 
-
-
-Добавьте настраиваемый заголовок HTTP в запрос GET.
+Добавьте пользовательский заголовок HTTP в запрос GET, отправляемый на HTTP-сервер.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetCustomHeaders <Job> <Header1> <Header2> <. . .>
+bitsadmin /setcustomheaders <job> <header1> <header2> <...>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|Header1 Header2 . . .|Пользовательские заголовки для задания|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| `<header1> <header2>` и т. д. | Пользовательские заголовки для задания. |
 
-## <a name="remarks"></a>Примечания
+## <a name="examples"></a>Примеры
 
--   Этот параметр используется для добавления пользовательского заголовка HTTP к запросу GET, отправляемому на HTTP-сервер.
+В следующем примере добавляется пользовательский заголовок HTTP для задания с именем *мидовнлоаджоб*. Дополнительные сведения о запросах GET см. в разделе [определения методов](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) и [определения полей заголовка](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
 
-## <a name="BKMK_examples"></a>Примеров
-
-В следующем примере добавляется пользовательский заголовок HTTP для задания с именем *мидовнлоаджоб*.
 ```
-C:\>bitsadmin / SetCustomHeaders myDownloadJob "Accept-encoding:deflate/gzip"
+C:\>bitsadmin /setcustomheaders myDownloadJob accept-encoding:deflate/gzip
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

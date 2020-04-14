@@ -1,7 +1,6 @@
 ---
 ms.assetid: d254fca3-85a1-424d-ac22-d6687ec3798e
 title: Предоставление пользователям Active Directory вашей организации доступа к вашим приложениям и службам с поддержкой утверждений
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 48436f8e98af965f2bc2b38d296c4a15924e4db1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0cb530eacfa8239f3a2a135397e54becfadb602b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407956"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858577"
 ---
 # <a name="provide-your-active-directory-users-access-to-your-claims-aware-applications-and-services"></a>Предоставление пользователям Active Directory вашей организации доступа к вашим приложениям и службам с поддержкой утверждений
 
@@ -35,7 +34,7 @@ ms.locfileid: "71407956"
     > [!NOTE]  
     > Кроме того, можно использовать \(протокол LDAP\) или язык SQL \(SQL\) для хранения удостоверений для создания маркеров AD FS.  
   
--   **Корпоративная DNS:** Эта реализация системы доменных имен \(DNS\) содержит простой узел \(\) запись ресурса, чтобы клиенты интрасети могли наыскать сервер федерации учетной записи. Эта реализация DNS также может содержать другие DNS-записи, необходимые в корпоративной сети. Дополнительные сведения см. в разделе [Name Resolution Requirements for Federation Servers](Name-Resolution-Requirements-for-Federation-Servers.md).  
+-   **Корпоративная DNS:** Эта реализация системы доменных имен \(DNS\) содержит простой узел \(\) запись ресурса, чтобы клиенты интрасети могли наыскать сервер федерации учетной записи. Эта реализация DNS также может содержать другие DNS-записи, необходимые в корпоративной сети. Дополнительные сведения см. в разделе [Требования к разрешению имен для серверов федерации](Name-Resolution-Requirements-for-Federation-Servers.md).  
   
 -   **Сервер федерации партнера по учетным записям:** Этот сервер федерации присоединен к домену в лесу партнера по учетным записям. Он выполняет проверку подлинности учетных записей сотрудников и создает токены AD FS. Клиентский компьютер для сотрудника выполняет встроенную проверку подлинности Windows на этом сервере федерации для создания маркера AD FS. Дополнительные сведения см. в разделе [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md).  
   

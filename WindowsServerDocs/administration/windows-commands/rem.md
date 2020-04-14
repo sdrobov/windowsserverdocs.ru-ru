@@ -1,24 +1,20 @@
 ---
 title: rem
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1a45b585-a83c-4ff6-badd-ff40f34cec23
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2da0b6e42858582c1485659f3bf8f59e8e2ed97e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 94428e6d5ec6fdb482a5d0d15bd1120e45ffea80
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384575"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836117"
 ---
 # <a name="rem"></a>rem
 
@@ -34,20 +30,20 @@ ms.locfileid: "71384575"
 rem [<Comment>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<комментарий >|Указывает строку символов, включаемую в качестве комментария.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Команда **REM** не отображает комментарии на экране. Необходимо использовать команду **echo on** в пакете или конфигурации. SYS для отображения комментариев на экране.
 -   В комментариях пакетного файла нельзя использовать символ перенаправления ( **<** или **>** ) или канал ( **|** ).
 -   Несмотря на то, что можно использовать **REM** без комментариев для добавления вертикальных пробелов в пакетный файл, можно также использовать пустые строки. При обработке пакетной программы пустые строки игнорируются.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере показан пакетный файл, в котором используются примечания для комментариев и вертикального пробела:
 ```
@@ -65,6 +61,6 @@ rem Set prompt to indicate current directory
 prompt $p$g
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

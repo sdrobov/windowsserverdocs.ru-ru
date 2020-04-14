@@ -1,40 +1,36 @@
 ---
 title: битсадмин жесттпмесод
-description: Раздел команд Windows для **битсадмин жесттпмесод** — получает команду HTTP для использования.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин жесттпмесод**, который получает команду HTTP для использования с заданием.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 8b5b933d402ff5b621cc6073a54f34b5d3095533
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4b5f131c8502545e3c4ea4107167d6da56c68d8c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381558"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850657"
 ---
 # <a name="bitsadmin-gethttpmethod"></a>битсадмин жесттпмесод
 
-Возвращает команду HTTP для использования.
+Возвращает команду HTTP для использования с заданием.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetHttpMethod <Job>
+bitsadmin /gethttpmethod <Job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

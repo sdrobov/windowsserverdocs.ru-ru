@@ -1,19 +1,19 @@
 ---
 title: 'Экранированные виртуальные машины: поставщик услуг размещения настраивает Microsoft Azure Pack'
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: d528c689-58b0-425c-9740-25e2553ed689
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 7336637bd3186f885db6d94eeffd0d2311edf3ac
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: 1d759af575f98d305a67734d0e23680f701f6b72
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001843"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856717"
 ---
 # <a name="shielded-vms---hosting-service-provider-sets-up-windows-azure-pack"></a>Экранированные виртуальные машины: поставщик услуг размещения настраивает Microsoft Azure Pack
 
@@ -69,7 +69,7 @@ ms.locfileid: "77001843"
 
 3.  Подключите Windows Azure Pack к экземпляру Service Provider Foundation, щелкнув **зарегистрировать System Center Service Provider Foundation**. Вам потребуется указать URL-адрес для Service Provider Foundation, а также имя пользователя и пароль.
 
-    ![Регистрация Service Provider Foundation System Center](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
+    ![Регистрация System Center Service Provider Foundation](../media/Guarded-Fabric-Shielded-VM/guarded-host-azure-pack-01-register-spf.png)
 
 4.  После завершения вы увидите, что облака виртуальных машин настроены в среде VMM. Прежде чем продолжить, убедитесь, что у вас есть хотя бы одно облако виртуальных машин, которое поддерживает экранированные виртуальные машины, доступные для WAP.
 
@@ -113,7 +113,7 @@ ms.locfileid: "77001843"
 
     На этом этапе настраивается Windows Azure Pack, и клиенты смогут подписываться на только что созданном плане и развертывать экранированные виртуальные машины. Дополнительные действия, которые необходимо выполнить для клиентов, см. в статье [экранированные виртуальные машины для клиентов. Развертывание экранированных виртуальных машин с помощью Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 
 - [Этапы настройки поставщика услуг размещения для защищенных узлов и экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

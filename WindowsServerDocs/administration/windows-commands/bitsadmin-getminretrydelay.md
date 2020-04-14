@@ -1,50 +1,45 @@
 ---
 title: bitsadmin getminretrydelay
-description: Раздел команд Windows для **битсадмин жетминретриделай** . Получает время ожидания (в секундах), в течение которого служба останавливается после возникновения временной ошибки, прежде чем пытаться переместить файл.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин жетминретриделай**, который получает время ожидания службы в секундах после возникновения временной ошибки перед попыткой перемещения файла.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 54f0abab-c129-40ed-a603-50f464d26011
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a2bde6340034e48b97b4c86f48a3b2ef72560a5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d79ffdf1f45b0198b4af535ed83154c3c2ec24f4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381553"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850627"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 
-
-
-Возвращает продолжительность времени в секундах, в течение которого служба ожидает после возникновения временной ошибки, прежде чем пытаться переместить файл.
+Возвращает продолжительность времени в секундах, в течение которого служба будет ожидать после возникновения временной ошибки, прежде чем пытаться переместить файл.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetMinRetryDelay <Job>
+bitsadmin /getminretrydelay <job>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекается Минимальная задержка повторных попыток для задания с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /GetMinRetryDelay myDownloadJob
+C:\>bitsadmin /getminretrydelay myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

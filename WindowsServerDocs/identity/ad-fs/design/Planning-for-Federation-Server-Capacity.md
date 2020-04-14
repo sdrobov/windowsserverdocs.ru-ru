@@ -1,7 +1,6 @@
 ---
 ms.assetid: 7013fc21-9ced-4f9d-9588-cb04d6d60924
 title: Планирование емкости сервера федерации
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 418bc5d53a2bd11afa8563b07bbff76c89495715
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5801196921c1f7632725dfddb2a5c8c2bf4ae2b5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407970"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858627"
 ---
 # <a name="planning-for-federation-server-capacity"></a>Планирование емкости сервера федерации
 
@@ -47,7 +46,7 @@ ms.locfileid: "71407970"
 > [!NOTE]  
 > В тестах, выполненных командой AD FS разработчиков с использованием фермы серверов федерации, настроенной с выделенной SQL Server для хранения базы данных конфигурации AD FS, Общая нагрузка на SQL Server была вызвана низкой. В одном тесте, использующем четыре\-фермы серверов\-Федерации, настроенной на использование одного SQL Server, загрузка ЦП не превышала 10%, несмотря на тестирование, которое применяло серверы федерации к целевому использованию.  
   
-## <a name="bk_estimatefs"></a>Оценка количества серверов федерации для Организации  
+## <a name="estimate-the-number-of-federation-servers-for-your-organization"></a><a name="bk_estimatefs"></a>Оценка количества серверов федерации для Организации  
 Чтобы упростить процесс планирования оборудования для серверов федерации, Группа разработки AD FS разработчиков разработала электронную таблицу по планированию размера AD FSных ресурсов. Эта электронная таблица Excel включает калькулятор\-такие функции, которые принимают ожидаемые данные об использовании, предоставляемые пользователями организации, и возвращают рекомендованное оптимальное количество серверов федерации для рабочей среды AD FS.  
   
 > [!NOTE]  

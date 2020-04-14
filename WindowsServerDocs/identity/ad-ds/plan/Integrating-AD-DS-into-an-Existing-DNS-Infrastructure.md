@@ -1,7 +1,6 @@
 ---
 ms.assetid: 4981b32f-741e-4afc-8734-26a8533ac530
 title: Интеграция доменных служб Active Directory в имеющуюся инфраструктуру DNS
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: f4bb480be4696f15f0a63c20ab47042264584d2c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cf069102f409247832204546f3e1c15de7238bd3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402554"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822277"
 ---
 # <a name="integrating-ad-ds-into-an-existing-dns-infrastructure"></a>Интеграция доменных служб Active Directory в имеющуюся инфраструктуру DNS
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Если в вашей организации уже есть служба DNS-сервера, владелец DNS для домен Active Directory Services (AD DS) должен работать с владельцем DNS для Организации, чтобы интегрировать AD DS в существующую инфраструктуру. Это подразумевает создание DNS-сервера и конфигурации DNS-клиента.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "71402554"
   
 -   Настройте контроллеры домена для каждого регионального домена, в котором должны размещаться зоны DNS, соответствующие доменам Active Directory.  
   
--   Настройте зону, содержащую Active Directory записи локатора на уровне леса (то есть _msdcs. *форестнаме* Zone) для репликации на каждый DNS-сервер в лесу с помощью раздела каталога приложений DNS на уровне леса.  
+-   Настройте зону, содержащую Active Directory записи локатора в масштабе леса (то есть _msdcs. *форестнаме* Zone) для репликации на каждый DNS-сервер в лесу с помощью раздела каталога приложений DNS на уровне леса.  
   
     > [!NOTE]  
     > Если служба DNS-сервера установлена с мастер установки доменных служб Active Directory (этот параметр рекомендуется), все предыдущие задачи выполняются автоматически. Дополнительные сведения см. [в разделе Развертывание корневого домена леса Windows Server 2008](https://technet.microsoft.com/library/cc731174.aspx).  
@@ -46,7 +45,7 @@ ms.locfileid: "71402554"
   
 |Элемент Design|Конфигурация|  
 |------------------|-----------------|  
-|Именование компьютеров|Использовать именование по умолчанию. Когда компьютер под управлением Windows 2000, Windows XP, Windows Server 2003, Windows Server 2008 или Windows Vista присоединяется к домену, компьютер назначает себе полное доменное имя (FQDN), которое состоит из имени узла компьютера и имени активного Directory Domain.|  
+|Именование компьютеров|Использовать именование по умолчанию. Когда компьютер под управлением Windows 2000, Windows XP, Windows Server 2003, Windows Server 2008 или Windows Vista присоединяется к домену, компьютер назначает себе полное доменное имя (FQDN), которое состоит из имени узла компьютера и имени домена Active Directory.|  
 |Конфигурация сопоставителя клиентов|Настройте клиентские компьютеры так, чтобы они указывали на любой DNS-сервер в сети.|  
   
 > [!NOTE]  

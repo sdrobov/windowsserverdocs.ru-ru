@@ -1,28 +1,24 @@
 ---
 title: переlogman создать счетчик
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1e214c32-b704-43c1-b548-e1cf43b583c3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3245ce1c153ac0d5fe95ea0c85009e33f71a230c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 416a62331bccc9c646ce0a00ec71b9ef7bb4238d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374563"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840877"
 ---
 # <a name="logman-create-counter"></a>переlogman создать счетчик
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Создание сборщика данных счетчиков.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374563"
 ```  
 logman create counter <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                               Описание                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman create counter <[-n] <name>> [options]
 |                 -config <value>                  |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
 |                   [-n] <name>                    |                                                                       Имя целевого объекта.                                                                        |
 | -f < bin&#124;бинЦирк&#124;CSV&#124;&#124;SQL > |                                                            Указывает формат журнала для сборщика данных.                                                             |
-|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
+|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 |    -m < [начало] [завершение] [[начало] [завершение] [...]] >    |                                                Вместо запланированного времени начала или окончания измените значение на запуск или завершение вручную.                                                 |
 |                -RF < [[чч:] мм:] SS >                |                                                        Запуск сборщика данных в течение указанного периода времени.                                                         |
 |        -b < M/d/гггг ч: СС [AM&#124;] >         |                                                              Начать сбор данных в указанное время.                                                               |
@@ -60,14 +56,14 @@ logman create counter <[-n] <name>> [options]
 
 ## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда создает счетчик с именем perf_log, используя счетчик "% загруженности процессора" из категории счетчиков "процессор (_Total)".  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time"  
+logman create counter perf_log -c \Processor(_Total)\% Processor time  
 ```  
 Следующая команда создает счетчик с именем perf_log, используя счетчик "% загруженности процессора" из категории счетчиков "процессор (_Total)", создавая файл журнала с максимальным размером 10 МБ и собирая данные в течение 1 минуты и 0 секунд.  
 ```  
-logman create counter perf_log -c "\Processor(_Total)\% Processor time" -max 10 -rf 01:00  
+logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -rf 01:00  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  

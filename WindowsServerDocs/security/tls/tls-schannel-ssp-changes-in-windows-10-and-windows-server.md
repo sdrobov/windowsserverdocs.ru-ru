@@ -1,6 +1,5 @@
 ---
 title: TLS (поставщик общих служб Schannel)
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: ebd3c40c-b4c0-4f6d-a00c-f90eda4691df
@@ -8,16 +7,16 @@ manager: alanth
 author: justinha
 ms.technology: security-authentication
 ms.date: 05/16/2018
-ms.openlocfilehash: e103e985592e6aed150ccd3e1a87e56f19621dbe
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3547c77e8c58bcbb219a7b017c3186f198007805
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403390"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820167"
 ---
 # <a name="tls-schannel-ssp-changes-in-windows-10-and-windows-server-2016"></a>Изменения протокола TLS (Schannel SSP) в Windows 10 и Windows Server 2016
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016 и Windows 10
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016 и Windows 10
 
 ## <a name="cipher-suite-changes"></a>Изменения в наборе шифров
 
@@ -56,7 +55,7 @@ Windows 10, версия 1507 и Windows Server 2016 добавляют пара
 
 ### <a name="sch_use_strong_crypto-option-changes"></a>Изменения параметров SCH_USE_STRONG_CRYPTO
 
-В Windows 10 версии 1507 и Windows Server 2016 параметр [SCH_USE_STRONG_CRYPTO](https://msdn.microsoft.com/library/windows/desktop/aa379810.aspx) теперь отключает неопределенные шифры null, MD5, DES и Export.
+В Windows 10 версии 1507 и Windows Server 2016 [SCH_USE_STRONG_CRYPTO](https://msdn.microsoft.com/library/windows/desktop/aa379810.aspx) параметр теперь отключает неопределенные шифры null, MD5, DES и Export.
 
 ## <a name="elliptical-curve-changes"></a>Изменения эллиптической кривой
 
@@ -81,7 +80,7 @@ Windows 10, версия 1607 и Windows Server 2016 добавлена подд
 
 Windows 10, версия 1607 и Windows Server 2016 добавляют конфигурацию реестра для размера пула потоков, используемого для обработки подтверждений TLS для HTTP. Представления.
 
-Путь реестра: 
+Путь в реестре: 
 
 хклм\систем\куррентконтролсет\контрол\лса
 
@@ -110,9 +109,9 @@ Windows 10 версии 1507 и Windows Server 2016 обеспечивают 30%
 
 ## <a name="session-hash-and-extended-master-secret-extension"></a>Хэш сеанса и расширенное главное расширение секрета
 
-Windows 10, версия 1507 и Windows Server 2016 добавлена поддержка RFC 7627: Хэш сеанса протокола TLS и расширенное основное расширение секрета.
+Windows 10, версия 1507 и Windows Server 2016 добавить поддержку RFC 7627: хэш сеанса протокола TLS и расширенное основное расширение секрета.
 
-Из-за этого изменения в Windows 10 и Windows Server 2016 требуются сторонние обновления [поставщика SSL](https://msdn.microsoft.com/library/windows/desktop/ff468652.aspx) для поддержки NCRYPT_SSL_INTERFACE_VERSION_3, а для описания этого нового интерфейса.
+Из-за этого изменения в Windows 10 и Windows Server 2016 требуются сторонние обновления [поставщика SSL](https://msdn.microsoft.com/library/windows/desktop/ff468652.aspx) для поддержки NCRYPT_SSL_INTERFACE_VERSION_3 и описание этого нового интерфейса.
 
 
 ## <a name="ssl-support"></a>Поддержка SSL
@@ -127,7 +126,7 @@ Windows 10, версия 1507 и Windows Server 2016 добавлена подд
 
 "Если клиент предоставил расширение" signature_algorithms ", все сертификаты, предоставленные сервером, должны быть подписаны парой алгоритмов хэширования и подписи, которая отображается в этом расширении."
 
-На практике некоторые сторонние клиенты TLS не соответствуют стандарту RFC 1,2 и не включают в себя все пары сигнатур и хэш-алгоритма, которые они хотят принимать в расширении "signature_algorithms", или вообще опускать расширение (Последнее означает сервер, который клиент поддерживает только SHA1 с RSA, DSA или ECDSA.
+На практике некоторые сторонние клиенты TLS не соответствуют стандарту RFC 1,2 и не включают все пары сигнатур и хэш-алгоритма, которые они хотят принять в расширении "signature_algorithms", или вообще не указывайте расширение (Последнее указывает серверу, что клиент поддерживает только SHA1 с RSA, DSA или ECDSA).
 
 Сервер TLS часто имеет только один сертификат, настроенный на конечную точку. Это означает, что сервер не всегда может предоставить сертификат, соответствующий требованиям клиента.
 

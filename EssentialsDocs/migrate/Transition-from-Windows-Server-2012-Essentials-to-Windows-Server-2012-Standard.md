@@ -1,29 +1,25 @@
 ---
 title: Переход с Windows Server Essentials на Windows Server 2012 Standard
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0d7ed80f61dcfa313f867afda5689b2c64b1406a
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: aace7849244bb65ec0042971e6ec899f554a62d2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318707"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852307"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Переход с Windows Server Essentials на Windows Server 2012 Standard
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Windows Server® 2012 Essentials поддерживает до 25 пользователей и 50 устройств. Если потребности вашего бизнеса превышают ограничение, можно выполнить переход на промежуточную лицензию с Windows Server Essentials на Windows Server 2012 Standard, чтобы остаться в соответствии с лицензиями.  
+ Windows Server&reg; 2012 Essentials поддерживает до 25 пользователей и 50 устройств. Если потребности вашего бизнеса превышают ограничение, можно выполнить переход на промежуточную лицензию с Windows Server Essentials на Windows Server 2012 Standard, чтобы остаться в соответствии с лицензиями.  
   
 ## <a name="how-the-transition-affects-user-and-device-limits"></a>Влияние перехода на предельное число пользователей и устройств  
  После перехода на Windows Server 2012 Standard ограничения учетной записи пользователя и устройств удаляются, но функции, которые являются уникальными для Windows Server Essentials (такие как панель мониторинга, удаленный Веб-доступ и резервное копирование клиентских компьютеров), по-прежнему остаются доступными. Из-за технических особенностей данные компоненты поддерживают не более 75 учетных записей и 75 устройств. Если необходимо добавить более 75 учетных записей пользователей или устройств, следует отключить компоненты Windows Server Essentials и использовать встроенные средства Windows Server 2012 Standard для управления учетными записями пользователей и устройствами.  

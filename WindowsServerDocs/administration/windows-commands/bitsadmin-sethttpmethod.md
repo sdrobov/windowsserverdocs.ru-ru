@@ -1,23 +1,19 @@
 ---
 title: битсадмин сесттпмесод
-description: Раздел команд Windows для **битсадмин сесттпмесод** — ЗАДАЕТ команду HTTP для использования.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин сесттпмесод**, который задает используемую команду HTTP.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 0f23b3b06bb3da448bb4cf18344aecfa31dcecd9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d349dcad7bdf6a6fc566ed961c3160836d7f49da
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380608"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122969"
 ---
 # <a name="bitsadmin-sethttpmethod"></a>битсадмин сесттпмесод
 
@@ -26,16 +22,16 @@ ms.locfileid: "71380608"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /GetHttpMethod <Job> <HTTPMethod>
+bitsadmin /sethttpmethod <job> <httpmethod>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|HTTPMethod|Используемая команда HTTP|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| HttpMethod | Команда HTTP для использования. Дополнительные сведения о доступных командах см. в разделе [определения методов](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html). |
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

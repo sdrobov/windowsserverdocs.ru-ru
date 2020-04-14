@@ -1,7 +1,6 @@
 ---
 ms.assetid: 9ad81367-f3fe-4b2e-bd7c-5900b2b9f77f
 title: Проектирование логической структуры
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 8d72d7ed9617d18b42f1be10daeafbac994dad88
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: de56205c163abff1b05d57ea90954fa93606abce
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402641"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80822617"
 ---
 # <a name="designing-the-logical-structure"></a>Проектирование логической структуры
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Домен Active Directory Services (AD DS) позволяет организациям создавать масштабируемую, безопасную и управляемую инфраструктуру для управления пользователями и ресурсами. Он также позволяет им поддерживать приложения с поддержкой каталогов.  
   
@@ -42,7 +41,7 @@ ms.locfileid: "71402641"
   
 При проектировании Active Directory логической структуры перед развертыванием AD DS можно оптимизировать процесс развертывания, чтобы лучше воспользоваться преимуществами функций Active Directory. Чтобы разработать Active Directory логическую структуру, ваша группа разработки сначала определяет требования для вашей организации, и, основываясь на этих данных, решает, где разместить границы леса и домена. Затем группа проектирования решает, как настроить среду службы доменных имен (DNS) в соответствии с потребностями леса. Наконец, Группа разработки определяет структуру подразделений, необходимую для делегирования управления ресурсами в Организации.  
   
-## <a name="in-this-guide"></a>В данном руководстве  
+## <a name="in-this-guide"></a>Содержание руководства  
   
 -   [Основные сведения о Active Directory логической модели](../../ad-ds/plan/Understanding-the-Active-Directory-Logical-Model.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "71402641"
   
 -   [Создание проекта подразделения](../../ad-ds/plan/Creating-an-Organizational-Unit-Design.md)  
   
--   [Приложение А. Инвентаризация DNS](../../ad-ds/plan/Appendix-A--DNS-Inventory.md)  
+-   [Приложение а. Инвентаризация DNS](../../ad-ds/plan/Appendix-A--DNS-Inventory.md)  
   
 
 

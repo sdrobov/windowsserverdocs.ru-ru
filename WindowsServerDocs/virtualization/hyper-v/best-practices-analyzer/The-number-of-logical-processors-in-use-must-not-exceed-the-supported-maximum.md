@@ -2,37 +2,36 @@
 title: Количество логических процессоров используется не должна превышать максимально допустимого значения
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 66df8b02-91d1-424b-8934-a39c214d530e
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 380daf333c041c8702228a60c26ab6e76e4cf3e1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6cd948c47e58dec919cd946ad701f70403d6af3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393404"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859297"
 ---
 # <a name="the-number-of-logical-processors-in-use-must-not-exceed-the-supported-maximum"></a>Количество логических процессоров используется не должна превышать максимально допустимого значения
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
 |**Категория**|Политика|  
   
 В следующих разделах курсив указывает текст, отображаемый в анализатор соответствия рекомендациям для этой проблемы.  
   
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
   
 *На сервере настроено слишком много логических процессоров.*  
   

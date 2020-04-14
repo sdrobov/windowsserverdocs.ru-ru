@@ -1,23 +1,24 @@
 ---
 title: Развертывание файлового ресурса-свидетеля в Windows Server 2019
+description: Файловый ресурс следящих серверов позволяет использовать общую папку для голосования в кворуме кластера. В этом разделе описывается общая папка следящих серверов и новые функциональные возможности, включая использование USB-накопителя, подключенного к маршрутизатору, в качестве файлового ресурса следящего сервера.
 ms.prod: windows-server
-ms.manager: eldenc
+manager: eldenc
 ms.technology: failover-clustering
 ms.topic: article
 author: johnmarlin-msft
+ms.author: johnmar
 ms.date: 01/24/2019
-description: Файловый ресурс следящих серверов позволяет использовать общую папку для голосования в кворуме кластера. В этом разделе описывается общая папка следящих серверов и новые функциональные возможности, включая использование USB-накопителя, подключенного к маршрутизатору, в качестве файлового ресурса следящего сервера.
 ms.localizationpriority: medium
-ms.openlocfilehash: 9f0a0c5b48f7c382367e4b1100ff649fe73d3be9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 63e016b8e00482529e69aaa12727f854afd51e41
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369761"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827677"
 ---
 # <a name="deploy-a-file-share-witness"></a>Развертывание файлового ресурса-свидетеля
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Файловый ресурс-свидетель — это общая папка SMB, которую отказоустойчивый кластер использует в качестве голоса в кворуме кластера. В этом разделе приводятся общие сведения о технологии и новых функциях Windows Server 2019, включая использование USB-накопителя, подключенного к маршрутизатору, в качестве файлового ресурса следящего сервера.
 
@@ -32,7 +33,7 @@ ms.locfileid: "71369761"
 
 |Тип файлового сервера                 | Поддерживаемые кластеры |
 |---------------------------------|--------------------|
-|Любое устройство с общей папкой SMB 2 | Windows Server 2019|
+|Любое устройство с общей папкой SMB 2 | Windows Server 2019|
 |Присоединенный к домену сервер Windows Server     | Windows Server 2008 и более поздние версии|
 
 Если кластер работает под Windows Server 2019, необходимо выполнить следующие требования.

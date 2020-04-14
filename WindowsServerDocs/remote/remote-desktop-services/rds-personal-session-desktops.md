@@ -1,27 +1,23 @@
 ---
 title: Использование личных сеансовых рабочих столов с помощью служб удаленных рабочих столов
 description: Узнайте, как совместно использовать персонализированные назначенные рабочие столы с помощью RDS.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 10/22/2019
 manager: dongill
-ms.openlocfilehash: 9386733911ca81ad60d038854bd68e5603aae4cf
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: c0c36793d08391ad98fa797004ed6dec9883e9f1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812284"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857407"
 ---
 # <a name="use-personal-session-desktops-with-remote-desktop-services"></a>Использование личных сеансовых рабочих столов с помощью служб удаленных рабочих столов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Серверные личные рабочие столы можно развернуть в среде облачных вычислений с помощью личных сеансовых рабочих столов.  (В среде облачных вычислений разделяются серверы структуры Hyper-V и гостевые виртуальные машины, например облако Microsoft Azure и облачная платформа Майкрософт.) Применение личного сеансового рабочего стола расширяет возможности в сценарии развертывания сеансовых рабочих столов в службах удаленных рабочих столов. Это позволяет создать новый тип коллекции сеансов, где каждому пользователю назначается собственный личный узел сеансов с правами администратора. 
 
@@ -99,4 +95,4 @@ ms.locfileid: "72812284"
 -Path \<строка\>
 
 
-Все новые командлеты поддерживают общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. Дополнительные сведения см. в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).
+Все новые командлеты поддерживают общие параметры: -Verbose, -Debug, -ErrorAction, -ErrorVariable, -OutBuffer и -OutVariable. См. сведения в разделе [about_CommonParameters](https://go.microsoft.com/fwlink/p/?LinkID=113216).

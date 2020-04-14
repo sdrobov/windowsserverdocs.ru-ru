@@ -1,9 +1,7 @@
 ---
 title: Репозиторий программного обеспечения Linux для продуктов Майкрософт
 description: В этом документе описывается, как использовать и устанавливать программные пакеты Linux для продуктов Майкрософт.
-ms.custom: na
 ms.prod: windows-server
-ms.service: na
 manager: szark
 ms.technology: compute
 ms.topic: article
@@ -11,12 +9,12 @@ ms.assetid: b5387444-595f-4f38-abb7-163a70ea1895
 author: szarkos
 ms.author: szark
 ms.date: 10/16/2017
-ms.openlocfilehash: e32c11dac1d887ba0ae0192bb658f71ece77a42c
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: b57a1e7243f989a4529a666880572a9ceaa57644
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947248"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852067"
 ---
 # <a name="linux-software-repository-for-microsoft-products"></a>Репозиторий программного обеспечения Linux для продуктов Майкрософт
 
@@ -30,7 +28,7 @@ ms.locfileid: "75947248"
  - MSSQL-Server — эти репозитории содержат пакеты для Microsoft SQL Server на Linux — см. также [SQL Server на Linux](https://www.microsoft.com/sql-server/sql-server-vnext-including-Linux).
 
 > [!Note]
-> Пакеты в репозиториях программного обеспечения Linux подчиняются условиям лицензии, расположенным в пакетах. Прежде чем использовать пакет, ознакомьтесь с условиями лицензии. Установка и использование пакета означают, что вы принимаете эти условия. Если вы не согласны с условиями лицензии, не используйте пакет.
+> Пакеты в репозиториях программного обеспечения Linux подчиняются условиям лицензии, расположенным в пакетах. Ознакомьтесь с условиями лицензионного соглашения перед использованием пакета. Установка и использование пакета составляют принятие этих условий. Если вы не согласны с условиями лицензии, не используйте пакет.
 
 
 ## <a name="configuring-the-repositories"></a>Настройка репозиториев
@@ -63,19 +61,19 @@ ms.locfileid: "75947248"
 
  - Ubuntu 18,04 (Бионик)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.04/prod
         sudo apt-get update
 
  - Ubuntu 18,10 (космическими)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/18.10/prod
         sudo apt-get update
 
  - Ubuntu 19,04 (Disco)
 
-        curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+         curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
         sudo apt-add-repository https://packages.microsoft.com/ubuntu/19.04/prod
         sudo apt-get update
 
@@ -95,9 +93,9 @@ ms.locfileid: "75947248"
  - Идентификатор открытого ключа: Майкрософт (подписывание выпуска) <gpgsecurity@microsoft.com>
  - Отпечаток открытого ключа: `BC52 8686 B50D 79E3 39D3 721C EB3E 94AD BE12 29CF`
 
-### <a name="examples"></a>Примеры.
+### <a name="examples"></a>Примеры
 
- - RHEL или CentOS 7
+ - RHEL/CentOS 7
 
         # Install repository configuration
         curl https://packages.microsoft.com/config/rhel/7/prod.repo > ./microsoft-prod.repo

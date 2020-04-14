@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: мапусер'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 84113e6e-89ff-488a-9cd0-f14bbf23b543
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b80538999c364e9ed10ca0ed43387f603ac9ad3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f61c67fa21eccb77601b78aed51791259d609c5e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374976"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841487"
 ---
 # <a name="ksetupmapuser"></a>ksetup: мапусер
 
@@ -32,14 +28,14 @@ ms.locfileid: "71374976"
 ksetup /mapuser <Principal> <Account>
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |  Параметр   |                                                   Описание                                                   |
 |--------------|-----------------------------------------------------------------------------------------------------------------|
 | \<основной > |              Полное доменное имя любого участника; Например, mike@corp.CONTOSO.COM.              |
 |  Учетная запись \<>  | Любое имя учетной записи или группы безопасности, которое существует на этом компьютере, например гость, пользователи домена или администратор. |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Учетную запись можно определить отдельно, например Гости домена. Также можно использовать подстановочный знак (*) для включения всех учетных записей.
 
@@ -51,7 +47,7 @@ ksetup /mapuser <Principal> <Account>
 
 При каждом внесении изменений во внешний центр распространения ключей (KDC) и конфигурации сферы требуется перезагрузка компьютера, на котором был изменен параметр.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Сопоставьте учетную запись Mike Данселио в сфере Kerberos CONTOSO с учетной записью гостя на этом компьютере, предоставив ей все права члена встроенной гостевой учетной записи без проверки подлинности на этом компьютере:
 ```
@@ -70,7 +66,7 @@ ksetup /mapuser mike@corp.CONTOSO.COM *
 ksetup /mapuser * *
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Ksetup](ksetup.md)

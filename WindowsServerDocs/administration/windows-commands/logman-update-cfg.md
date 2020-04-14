@@ -1,24 +1,20 @@
 ---
 title: Logman Update cfg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9da4e8b4-3be5-42d3-b0b4-c429630c35c4 britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 880499048978f3a451f2ccb4e898155b49e33bcb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c74370432dbc21f244dd675bb62cc65a13fa2ec7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374361"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840537"
 ---
 # <a name="logman-update-cfg"></a>Logman Update cfg
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374361"
 ```  
 logman update cfg <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                               Описание                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,13 +55,13 @@ logman update cfg <[-n] <name>> [options]
 |            -упр < Query [запрос [...]] >            |                                                      Указывает WMI-объекты для собираются с помощью языка запросов SQL.                                                       |
 |             -ФТК < путь [путь [...]] >             |                                                           Указывает полный путь к файлам для собраний.                                                            |
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда обновляет существующий сборщик данных конфигурации cfg_log для сбора раздела реестра HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Нт\куррентверион\\.  
 ```  
-logman update cfg cfg_log -reg "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\"  
+logman update cfg cfg_log -reg HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\Currentverion\  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  
 [Logman Create cfg](logman-create-cfg.md)  

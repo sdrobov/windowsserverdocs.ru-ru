@@ -1,7 +1,5 @@
 ---
-ms.assetid: ''
 title: Типы утверждений клиентского доступа в AD FS
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +7,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: a689e68ae60268880fd28158820c1803ab35bc33
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d73995b118ec41ffc892700858d20798f637d83b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71358625"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857487"
 ---
 # <a name="client-access-policy-claim-types-in-ad-fs"></a>Типы утверждений политики клиентского доступа в AD FS
 
@@ -22,7 +20,7 @@ ms.locfileid: "71358625"
 
 ## <a name="x-ms-forwarded-client-ip"></a>X-MS-Forwarded-Client-IP
 
-Тип утверждения:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
+Тип утверждения: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-forwarded-client-ip`
 
 Это утверждение AD FS представляет собой "лучшую попытку" при поиске IP-адреса пользователя (например, клиента Outlook), выполняющего запрос. Это утверждение может содержать несколько IP-адресов, включая адрес каждого прокси-сервера, который перенаправлял запрос.  Это утверждение заполняется из заголовка HTTP, который в настоящее время задается Exchange Online, который заполняет заголовок при передаче запроса на проверку подлинности в AD FS. Значение утверждения может быть одним из следующих:
 
@@ -43,7 +41,7 @@ ms.locfileid: "71358625"
 
 ## <a name="x-ms-client-application"></a>X-MS-Client-Application
 
-Тип утверждения:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
+Тип утверждения: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-application`
 
 Это утверждение AD FS представляет протокол, используемый конечным клиентом, который неплотно соответствует используемому приложению.  Это утверждение заполняется из заголовка HTTP, который в настоящее время задается Exchange Online, который заполняет заголовок при передаче запроса на проверку подлинности в AD FS. В зависимости от приложения значение этого утверждения будет одним из следующих:
 
@@ -65,7 +63,7 @@ ms.locfileid: "71358625"
 
 ## <a name="x-ms-client-user-agent"></a>X-MS-Client-User-Agent
 
-Тип утверждения:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
+Тип утверждения: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-client-user-agent`
 
 Это утверждение AD FS предоставляет строку для представления типа устройства, который используется клиентом для доступа к службе. Это можно использовать, когда клиенты хотели бы запретить доступ к определенным устройствам (например, к определенным типам смартфонов).  Это утверждение заполняется из заголовка HTTP, который в настоящее время задается Exchange Online, который заполняет заголовок при передаче запроса на проверку подлинности в AD FS. Примеры значений для этого утверждения: (но не ограничиваются ими) значениями ниже.
 >! Метим Ниже приведены примеры того, что может содержать значение x-MS-User-Agent для клиента, x-MS-Client-Application — Microsoft. Exchange. ActiveSync.
@@ -83,7 +81,7 @@ ms.locfileid: "71358625"
 
 ## <a name="x-ms-proxy"></a>X-MS-Proxy
 
-Тип утверждения:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
+Тип утверждения: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-proxy`
 
 Это утверждение AD FS указывает на то, что запрос прошел через прокси-сервер федерации.  Это утверждение заполняется прокси-сервером федерации, который заполняет заголовок при передаче запроса проверки подлинности в служба федерации серверной части. AD FS преобразует его в утверждение. 
 
@@ -91,7 +89,7 @@ ms.locfileid: "71358625"
 
 ## <a name="x-ms-endpoint-absolute-path-active-vs-passive"></a>X-MS-Endpoint-абсолютный путь (Активный vs passive)
 
-Тип утверждения:`https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
+Тип утверждения: `https://schemas.microsoft.com/2012/01/requestcontext/claims/x-ms-endpoint-absolute-path`
 
 Этот тип утверждения можно использовать для определения запросов, исходящих от "активных" (насыщенных) клиентов, а также от "пассивных" (на основе веб-браузеров). Это позволяет выполнять внешние запросы из приложений на основе браузера, таких как Outlook Веб-доступ, SharePoint Online или портал Office 365, в то время как запросы, поступающие от многофункциональных клиентов, таких как Microsoft Outlook, блокируются.
 

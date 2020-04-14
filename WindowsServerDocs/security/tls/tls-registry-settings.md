@@ -1,29 +1,25 @@
 ---
 title: Параметры реестра протокола TLS
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 02/28/2019
-ms.openlocfilehash: 60202e537093bd21515043ba56f70f3895c91d42
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: d65b314d6896c886ce606d2b649fcfd7309c583b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322406"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820287"
 ---
 # <a name="transport-layer-security-tls-registry-settings"></a>Параметры реестра протокола TLS
 
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10
 
-В этом справочном разделе для ИТ-специалистов содержатся Поддерживаемые сведения о параметрах реестра для реализации протокола TLS и протокола SSL (SSL) через поддержку безопасности SChannel. Поставщик (SSP). Подразделы и записи реестра, описанные в этом разделе, помогут вам администрировать и устранять неполадки SSP, в частности протоколы TLS и SSL. 
+В этом справочном разделе для ИТ-специалистов содержатся Поддерживаемые сведения о параметрах реестра для реализации протокола TLS и протокола SSL (SSL) с помощью поставщика поддержки безопасности (SSP) SChannel. Подразделы и записи реестра, описанные в этом разделе, помогут вам администрировать и устранять неполадки SSP, в частности протоколы TLS и SSL. 
 
 > [!CAUTION]
 > Эти сведения предоставляются в виде справочника для использования при устранении неполадок или проверки правильности применения нужных параметров.

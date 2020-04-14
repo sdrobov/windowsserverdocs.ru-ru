@@ -3,16 +3,15 @@ title: Как обнаруживать, включать и отключать S
 description: Описание включения и отключения протокола SMB (SMBv1, SMB и SMBv3) в клиентских и серверных средах Windows.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 9da4d6f2b5616dc6f8aec3fefb1ae7141ed88b0b
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: d6c47843dedaf45842f70d1bb408b59d63c03eb4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654395"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815507"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Как обнаруживать, включать и отключать SMBv1, SMB и SMBv3 в Windows
 
@@ -54,7 +53,7 @@ ms.locfileid: "75654395"
 
 Дополнительные сведения о возможностях протоколов SMB 2.0 и SMBv3 см. в следующих статьях:
 
-[Общие сведения о блоке сообщений сервера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
+[Общие сведения о протоколе SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
 
 [Новые возможности SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
 
@@ -76,7 +75,7 @@ ms.locfileid: "75654395"
   Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-- Включите параметр 
+- Параметр 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
@@ -96,7 +95,7 @@ ms.locfileid: "75654395"
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- Включите параметр
+- Параметр
 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true 
@@ -124,7 +123,7 @@ ms.locfileid: "75654395"
   Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-- Включите параметр 
+- Параметр 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
@@ -144,7 +143,7 @@ ms.locfileid: "75654395"
   Set-SmbServerConfiguration –EnableSMB2Protocol $false
   ```
 
-- Включите параметр
+- Параметр
 
   ```PowerShell
   Set-SmbServerConfiguration –EnableSMB2Protocol $true
@@ -179,7 +178,7 @@ Windows 8 и Windows Server 2012 представляют новый коман�
   Set-SmbServerConfiguration -EnableSMB1Protocol $false
   ```
 
-- Включите параметр 
+- Параметр 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
   ```
@@ -199,7 +198,7 @@ Windows 8 и Windows Server 2012 представляют новый коман�
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- Включите параметр
+- Параметр
   
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
@@ -230,7 +229,7 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
 ```
 
-Включите параметр  
+Параметр  
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
@@ -251,7 +250,7 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force  
 ```
 
-Включите параметр
+Параметр
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force 
@@ -312,7 +311,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb10 start= disabled
   ```
 
-- Включите параметр
+- Параметр
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -335,7 +334,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb20 start= disabled 
   ```
 
-- Включите параметр
+- Параметр
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -358,7 +357,7 @@ Default: 1 = Enabled (No registry key is created)
 
 Чтобы настроить это с помощью групповая политика, выполните следующие действия.
  
-1. Откройте **Консоль управления групповыми политиками**. Щелкните правой кнопкой мыши объект групповой политики (GPO), который должен содержать новый элемент настройки, и выберите команду **Изменить**.
+1. Откройте **Консоль управления групповыми политиками**. Щелкните правой кнопкой мыши объект групповой политики (GPO), который должен содержать новый элемент настройки, а затем щелкните **Изменить**.
 
 2. В дереве консоли в разделе **Конфигурация компьютера** **разверните папку настройки** , а затем разверните папку **Параметры Windows** .
 
@@ -404,7 +403,7 @@ Default: 1 = Enabled (No registry key is created)
 
 Чтобы настроить это с помощью групповая политика, выполните следующие действия.
  
-1. Откройте **Консоль управления групповыми политиками**. Щелкните правой кнопкой мыши объект групповой политики (GPO), который должен содержать новый элемент настройки, и выберите команду **Изменить**.
+1. Откройте **Консоль управления групповыми политиками**. Щелкните правой кнопкой мыши объект групповой политики (GPO), который должен содержать новый элемент настройки, а затем щелкните **Изменить**.
 
 2. В дереве консоли в разделе **Конфигурация компьютера** **разверните папку настройки** , а затем разверните папку **Параметры Windows** .
 

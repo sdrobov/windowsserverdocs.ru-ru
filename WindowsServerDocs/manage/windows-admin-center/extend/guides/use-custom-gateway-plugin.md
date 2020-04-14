@@ -8,16 +8,16 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 829cbf6df8cc2738bf4066b36210b860595774ed
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5bcaaa452a2b42a54cbc3b1d8f9a296504054e34
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385227"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269231"
 ---
 # <a name="use-a-custom-gateway-plugin-in-your-tool-extension"></a>Использование пользовательского подключаемого модуля шлюза в расширении средства
 
->Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
+>Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
 
 В этой статье мы будем использовать пользовательский подключаемый модуль шлюза в новом, пустом расширении инструмента, созданном с помощью интерфейса командной строки центра администрирования Windows.
 
@@ -35,7 +35,7 @@ ms.locfileid: "71385227"
 
 ### <a name="create-pluginservicets"></a>Создание подключаемого модуля. Service. TS
 
-Перейдите в каталог нового созданного модуля инструментов (```\src\app\{!Module-Name}```) и создайте новый файл ```plugin.service.ts```.
+Перейдите в каталог нового модуля средства, созданного ранее (```\src\app\{!Module-Name}```), и создайте новый файл ```plugin.service.ts```.
 
 Добавьте следующий код в только что созданный файл:
 ``` ts
@@ -61,9 +61,9 @@ export class PluginService {
 }
 ```
 
-Измените ссылки на ```Sample Uno``` и ```Sample%20Uno``` на имя функции, как нужно.
+При необходимости измените ссылки на ```Sample Uno``` и ```Sample%20Uno``` на имя функции.
 
-[!WARNING]
+> [!WARNING]
 > Рекомендуется использовать встроенный ```this.appContextService.node``` для вызова любого API, который определен в подключаемом модуле пользовательского шлюза. Это гарантирует, что если в подключаемом модуле шлюза требуются учетные данные, которые будут обрабатываться должным образом.
 
 ### <a name="modify-modulets"></a>Изменение модуля. TS

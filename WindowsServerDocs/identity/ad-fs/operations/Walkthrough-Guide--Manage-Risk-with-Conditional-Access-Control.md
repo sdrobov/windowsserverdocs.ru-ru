@@ -1,7 +1,6 @@
 ---
 ms.assetid: 3a840b63-78b7-4e62-af7b-497026bfdb93
 title: Пошаговое руководство. Управление рисками с помощью управления условным доступом
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: aefcd597a580de526a758c6d026c6c91d02d10c8
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 2ce45d3952b6f848635ed601f7ff251fcda3982c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323046"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857647"
 ---
 # <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>Пошаговое руководство: управление рисками с использованием условного управления доступом
 
@@ -34,7 +33,7 @@ ms.locfileid: "79323046"
 
 -   [Шаг 4. Проверка механизма управления условным доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
-## <a name="BKMK_1"></a>Шаг 1. Настройка лабораторной среды
+## <a name="step-1-setting-up-the-lab-environment"></a><a name="BKMK_1"></a>Шаг 1. Настройка лабораторной среды
 Для выполнения этого пошагового руководства вам потребуется среда, состоящая из следующих компонентов:
 
 -   Домен Active Directory с тестовыми учетными записями пользователей и групп, работающими под Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012 со схемой, обновленной до Windows Server 2012 R2 или домена Active Directory, работающего под Windows Server 2012 R2
@@ -52,7 +51,7 @@ ms.locfileid: "79323046"
 
 Инструкции по настройке этой среды см. [в разделе Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
-## <a name="BKMK_2"></a>Шаг 2. Проверка механизма управления доступом по умолчанию AD FS
+## <a name="step-2-verify-the-default-ad-fs-access-control-mechanism"></a><a name="BKMK_2"></a>Шаг 2. Проверка механизма управления доступом по умолчанию AD FS
 В этом шаге вы проверите стандартный механизм управления доступом через службы AD FS, который перенаправляет пользователя на страницу входа AD FS, где ему нужно ввести действительные учетные данные, после чего пользователю будет предоставлен доступ к приложению. Вы можете использовать учетную запись **Роберт хатлэй** AD и пример приложения **клаимапп** , настроенного в [настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 #### <a name="to-verify-the-default-ad-fs-access-control-mechanism"></a>Проверка стандартного механизма управления доступом через службы AD FS
@@ -65,7 +64,7 @@ ms.locfileid: "79323046"
 
     После этого вам будет предоставлен доступ к приложению.
 
-## <a name="BKMK_3"></a>Шаг 3. Настройка политики управления условным доступом на основе данных пользователя
+## <a name="step-3-configure-conditional-access-control-policy-based-on-user-data"></a><a name="BKMK_3"></a>Шаг 3. Настройка политики управления условным доступом на основе данных пользователя
 В этом шаге вы настроите политику управления доступом на основе данных о членстве в группе пользователей. Иными словами, вы настроите **правило авторизации выдачи** на сервере федерации для отношения доверия с проверяющей стороной, которое представляет ваш пример приложения — **claimapp**. По логике этого правила **Роберт хатлэй** AD будет выдавать утверждения, необходимые для доступа к этому приложению, поскольку он принадлежит к группе **Финансы** . Вы добавили учетную запись **Роберт хатлэй** в группу **Финансы** в [настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 Эту задачу можно выполнить с помощью консоли управления AD FS или Windows PowerShell.
@@ -113,7 +112,7 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 > [!NOTE]
 > Замените <group_SID> значением идентификатора безопасности для вашей группы Active Directory **Finance**.
 
-## <a name="BKMK_4"></a>Шаг 4. Проверка механизма управления условным доступом
+## <a name="step-4-verify-conditional-access-control-mechanism"></a><a name="BKMK_4"></a>Шаг 4. Проверка механизма управления условным доступом
 В этом шаге вы проверите политику условного управления доступом, настроенную в предыдущем шаге. Чтобы убедиться, что пользователь с учетной записью Active Directory **Robert Hatley** может получать доступ к вашему примеру приложения, так как он входит в группу **Finance**, а пользователям Active Directory, не принадлежащим к группе **Finance**, такой доступ запрещен, можно использовать следующую процедуру.
 
 1.  На клиентском компьютере откройте окно браузера и перейдите к вашему примеру приложения: **https://webserv1.contoso.com/claimapp**

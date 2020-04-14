@@ -1,40 +1,37 @@
 ---
 title: tscon
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для тскон, который подключается к другому сеансу на сервере узла сеансов удаленный рабочий стол.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 315a9793-cd10-4987-bb68-89a9d13f7fce
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e53ea2888b66b9e4fbf026f752acf9803270fc2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1666e3fd47fab89b63efccef43489d15930cd6de
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392366"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832537"
 ---
 # <a name="tscon"></a>tscon
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Подключается к другому сеансу на сервере узла сеансов удаленный рабочий стол.  
-Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).  
+Подключается к другому сеансу на удаленный рабочий стол сервере узла сеансов.  
+
+В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.  
 
 > [!NOTE]  
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.  
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.  
 
 ## <a name="syntax"></a>Синтаксис  
 ```  
 tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /password:*] [/v]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |Параметр|Описание|  
 |-------|--------|  
@@ -44,15 +41,15 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
 |/Password:\<пароль >|Указывает пароль пользователя, который владеет сеансом, к которому необходимо подключиться. Этот пароль необходим, если подключающийся пользователь не владеет сеансом.|  
 |/Password: *|запрашивает пароль пользователя, владеющего сеансом, к которому необходимо подключиться.|  
 |/v|Отображает сведения о выполняемых действиях.|  
-|/?|Отображение справки в командной строке.|  
+|/?|Отображает справку в командной строке.|  
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
 -   Для подключения к другому сеансу необходимо иметь разрешение «Полный доступ» или «подключение специального доступа».  
 -   Параметр **/dest:** <*SessionName*> позволяет подключить сеанс другого пользователя к другому сеансу.  
 -   Если пароль не указан в параметре <*пароль*>, а целевой сеанс принадлежит пользователю, отличному от текущего, **тскон** завершается с ошибкой.  
 -   Невозможно подключиться к сеансу консоли.  
 
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 - Чтобы подключиться к сеансу 12 на текущем сервере узла сеансов удаленных рабочих столов и отключить текущий сеанс, введите:  
   ```  
   tscon 12  
@@ -65,6 +62,6 @@ tscon {<SessionID> | <SessionName>} [/dest:<SessionName>] [/password:<pw> | /pas
   ```  
   tscon TERM03 /v /dest:TERM05  
   ```  
-  #### <a name="additional-references"></a>Дополнительная справка  
-  [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
-  [Справочник &#40;по командам служб&#41; терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)  
+  ## <a name="additional-references"></a>Дополнительные материалы  
+  - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+  [Справочник по командам служб удаленных рабочих столов (служб терминалов)](remote-desktop-services-terminal-services-command-reference.md)  

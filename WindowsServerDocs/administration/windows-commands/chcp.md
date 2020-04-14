@@ -1,28 +1,22 @@
 ---
 title: chcp
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для команды chcp, которая изменяет текущую кодовую страницу консоли.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: dc7b1c71-7b80-443d-9cf1-9bcf305aa1fd
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d5784b052ff1d7084d68cca0589caf518b8e44a8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e644cf8544d135c5d21c344b0fd0a3364c7f89c1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71379530"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80847947"
 ---
 # <a name="chcp"></a>chcp
-
-
 
 Изменяет активную кодовую страницу консоли. Если используется без параметров, параметр **chcp** отображает номер активной кодовой страницы консоли.
 
@@ -34,18 +28,18 @@ ms.locfileid: "71379530"
 chcp [<NNN>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|@NO__T 0NNN >|Задает кодовую страницу.|
-|/?|Отображение справки в командной строке.|
+|\<NNN >|Задает кодовую страницу.|
+|/?|Отображает справку в командной строке.|
 
 В следующей таблице перечислены поддерживаемые кодовые страницы и их страны, регионы или языки.
 
 |Кодовая страница|Страна, регион или язык|
 |---------|--------------------------|
-|437|США|
+|437|Соединенные Штаты|
 |850|Многоязычная (латиница I)|
 |852|Славянские (латиница II)|
 |855|Кириллица (Русский)|
@@ -64,7 +58,7 @@ chcp [<NNN>]
 -   Вам не нужно подготавливать кодовые страницы (как в MS-DOS).
 -   Программы, запускаемые после назначения новой кодовой страницы, используют новую кодовую страницу. Однако программы (кроме cmd. exe), запускаемые до назначения новой кодовой страницы, используют исходную кодовую страницу.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы просмотреть текущую настройку кодовой страницы, введите:
 ```
@@ -82,6 +76,6 @@ chcp 850
 
 `Invalid code page`
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

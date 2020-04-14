@@ -1,19 +1,19 @@
 ---
 title: Сценарии вычислений для сети узла (ХКН)
-description: ''
 ms.author: jmesser
 author: jmesser81
+ms.prod: windows-server
 ms.date: 11/05/2018
-ms.openlocfilehash: 91cdafa9699cd213156d872090034dd4ea67108e
-ms.sourcegitcommit: 213989f29cc0c30a39a78573bd4396128a59e729
+ms.openlocfilehash: 2fdf0d13a0a362681a27106356fbe295532ed970
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70031534"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859837"
 ---
-# <a name="common-scenarios"></a>Распространенные сценарии
+# <a name="common-scenarios"></a>Распространенные ситуации
 
->Относится к: Windows Server (половина ежегодного канала), Windows Server 2019
+>Область применения: Windows Server (половина ежегодного канала), Windows Server 2019
 
 ## <a name="scenario-hcn"></a>Сценарий: ХКН 
 
@@ -96,9 +96,9 @@ void CreateHcnNetwork()
                     // UnMarshal  the result Json
      // ErrorSchema
         //   {
-        //  "ErrorCode" : <uint32>,
-        //  "Error" : <string>,
-        //  "Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network
@@ -189,7 +189,7 @@ void CreateHcnNetwork()
 ```
 
 
-## <a name="scenario-hcn-endpoint"></a>Сценарий: Конечная точка ХКН
+## <a name="scenario-hcn-endpoint"></a>Сценарий: конечная точка ХКН
 
 ### <a name="create-an-hcn-endpoint"></a>Создание конечной точки ХКН
 
@@ -222,7 +222,7 @@ void CreateAndHotAddEndpoint()
             "Suffix" : "net.home",
             "ServerList" : "10.0.0.10",
         }
-    })”;
+    })";
     GUID endpointGuid;  
     HRESULT result = CoCreateGuid(&endpointGuid);
 
@@ -266,7 +266,7 @@ void CreateAndHotAddEndpoint()
 ```
 
 
-### <a name="delete-an-endpoint"></a>Удаление конечной точки
+### <a name="delete-an-endpoint"></a>Удалить конечную точку
 
 В этом примере показано, как использовать API-интерфейс сетевой службы вычислений узла для удаления конечной точки вычислений для сети узла.
 
@@ -381,7 +381,7 @@ void CreateAndHotAddEndpoint()
 ```
 
 
-## <a name="scenario-hcn-namespace"></a>Сценарий: Пространство имен ХКН
+## <a name="scenario-hcn-namespace"></a>Сценарий: пространство имен ХКН
 
 ### <a name="create-an-hcn-namespace"></a>Создание пространства имен ХКН
 
@@ -424,9 +424,9 @@ void CreateHcnNamespace()
                     // UnMarshal  the result Json
      // ErrorSchema
         //   {
-        //  "ErrorCode" : <uint32>,
-        //  "Error" : <string>,
-        //  "Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network
@@ -564,7 +564,7 @@ void CreateHcnNamespace()
 ```
 
 
-## <a name="scenario-hcn-load-balancer"></a>Сценарий: Балансировщик нагрузки ХКН
+## <a name="scenario-hcn-load-balancer"></a>Сценарий: подсистема балансировки нагрузки ХКН
 
 ### <a name="create-an-hcn-load-balancer"></a>Создание балансировщика нагрузки ХКН
 
@@ -620,9 +620,9 @@ void CreateHcnLoadBalancer()
                     // UnMarshal  the result Json
      // ErrorSchema
         //   {
-        //  "ErrorCode" : <uint32>,
-        //  "Error" : <string>,
-        //  "Success" : <bool>,
+        //    "ErrorCode" : <uint32>,
+        //    "Error" : <string>,
+        //    "Success" : <bool>,
        //   }
 
         // Failed to create network
@@ -761,7 +761,7 @@ void CreateHcnLoadBalancer()
 ```
 
 
-## <a name="scenario-hcn-notifications"></a>Сценарий: Уведомления ХКН
+## <a name="scenario-hcn-notifications"></a>Сценарий: уведомления ХКН
 
 ### <a name="register-and-unregister-service-wide-notifications"></a>Регистрация и Отмена регистрации уведомлений на уровне службы
 

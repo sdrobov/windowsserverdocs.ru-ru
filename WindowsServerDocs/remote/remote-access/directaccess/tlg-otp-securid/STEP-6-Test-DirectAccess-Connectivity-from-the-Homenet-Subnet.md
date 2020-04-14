@@ -2,22 +2,18 @@
 title: Шаг 6. Тестирование подключения DirectAccess из подсети Хоменет
 description: 'Эта статья является частью руководства по тестовой лаборатории: демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID для Windows Server 2016.'
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b9b77cfd-8dd4-476b-a118-f3d6bf59e7b1
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: c9bc2b54927905346c980ef2b14d65310ca930b8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: dbbaae146a0101decfc62d950b98c1af10fb39b2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308584"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80814409"
 ---
 # <a name="step-6-test-directaccess-connectivity-from-the-homenet-subnet"></a>Шаг 6. Тестирование подключения DirectAccess из подсети Хоменет
 

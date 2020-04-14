@@ -1,7 +1,6 @@
 ---
 ms.assetid: 208928eb-bb17-4984-a312-23fff43133e3
 title: Усовершенствования аудита в AD FS под управлением Windows Server 2016
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,34 +8,34 @@ ms.date: 10/25/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 4eb93513d12b2bba2620ff16be24f62ace5dee85
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 191ecf5b3c7bf6c8c44d4d3553cd6e98b5543351
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407259"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853807"
 ---
 # <a name="auditing-enhancements-to-ad-fs-in-windows-server-2016"></a>Усовершенствования аудита в AD FS под управлением Windows Server 2016
 
 
-В настоящее время в AD FS для Windows Server 2012 R2 существует множество событий аудита, созданных для одного запроса, и соответствующие сведения о действиях входа или выдачи маркера либо отсутствуют (в некоторых версиях AD FS), либо распределены по нескольким событиям аудита. По умолчанию события аудита AD FS отключены из-за их подробной природы.  
+В настоящее время в AD FS для Windows Server 2012 R2 существует множество событий аудита, созданных для одного запроса, и соответствующие сведения о действиях входа или выдачи маркера либо отсутствуют (в некоторых версиях AD FS), либо распределены по нескольким событиям аудита. По умолчанию события аудита AD FS отключены, так как они создают большой объем информации.  
     В выпуске AD FS в Windows Server 2016 аудит стал более оптимизированным и менее подробным.  
   
 ## <a name="auditing-levels-in-ad-fs-for-windows-server-2016"></a>Уровни аудита в AD FS для Windows Server 2016  
-По умолчанию для AD FS в Windows Server 2016 включен базовый аудит.  При базовом аудите администраторы увидят 5 или менее событий для одного запроса.  Это означает значительное уменьшение количества событий, которые администраторы должны просматривать, чтобы увидеть один запрос.   Уровень аудита может быть повышен или снижен с помощью PowerShell командлет:  Set-AdfsProperties-AuditLevel.  В таблице ниже описываются доступные уровни аудита.  
+По умолчанию для AD FS в Windows Server 2016 включен базовый аудит.  При базовом аудите администраторы увидят 5 или менее событий для одного запроса.  Это означает значительное уменьшение количества событий, которые администраторы должны просматривать, чтобы увидеть один запрос.   Уровень аудита может быть повышен или снижен с помощью PowerShell командлет: Set-AdfsProperties-AuditLevel.  В таблице ниже описываются доступные уровни аудита.  
   
 ||||  
 |-|-|-|  
-|Уровень аудита|Синтаксис PowerShell|Описание|  
+|Audit Level|Синтаксис PowerShell|Описание|  
 |Нет|Set-AdfsProperties-AuditLevel None|Аудит отключен, и никакие события не регистрируются.|  
 |Базовый (по умолчанию)|Set-AdfsProperties-AuditLevel Basic|Для одного запроса будет зарегистрировано не более 5 событий.|  
 |Verbose|Set-AdfsProperties-AuditLevel verbose|Будут регистрироваться все события.  При этом будет записываться значительный объем информации по запросу.|  
   
-Чтобы просмотреть текущий уровень аудита, можно использовать командлет PowerShell:  Get-AdfsProperties.  
+Чтобы просмотреть текущий уровень аудита, можно использовать PowerShell командлет: Get-AdfsProperties.  
   
 ![усовершенствования аудита](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_1.PNG)  
   
-Уровень аудита может быть повышен или снижен с помощью PowerShell командлет:  Set-AdfsProperties-AuditLevel.  
+Уровень аудита может быть повышен или снижен с помощью PowerShell командлет: Set-AdfsProperties-AuditLevel.  
   
 ![усовершенствования аудита](media/Auditing-Enhancements-to-AD-FS-in-Windows-Server-2016/ADFS_Audit_2.png)  
   

@@ -1,33 +1,28 @@
 ---
 title: Обзор доменных служб Active Directory
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: na
-ms.suite: na
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6cfe9479-5d17-41d5-939a-891e5233fdca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: c0ee85358c5e39f1ebf8cd901298a6083a3ebb97
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 73272086b176fa8fb086063ff3d4249a02b016b2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403765"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857027"
 ---
 # <a name="active-directory-domain-services-overview"></a>Обзор доменных служб Active Directory
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
   
 Каталог — это иерархическая структура, в которой хранятся сведения об объектах в сети. Служба каталогов, например домен Active Directory Services (AD DS), предоставляет методы для хранения данных каталога и предоставления доступа к этим данным сетевым пользователям и администраторам. Например, AD DS хранит сведения об учетных записях пользователей, таких как имена, пароли, Номера телефонов и т. д., а также позволяет другим полномочным пользователям в той же сети получить доступ к этим сведениям.  
   
-Active Directory хранит сведения об объектах в сети и упрощает поиск и использование этих сведений для администраторов и пользователей. Active Directory использует структурированное хранилище данных в качестве базы для логической, иерархической организации сведений о каталоге.  
+Active Directory хранит сведения об объектах в сети и предоставляет эту информацию администраторам и пользователям, которые могут легко найти и использовать ее. Active Directory использует структурированное хранилище данных в качестве основы для логической иерархической организации сведений в каталоге.  
   
 Это хранилище данных, также называемое каталогом, содержит сведения об Active Directoryных объектах. Обычно эти объекты включают в себя общие ресурсы, такие как серверы, тома, принтеры, учетные записи пользователей и компьютеров сети. Дополнительные сведения о Active Directory хранилище данных см. в разделе [хранилище данных каталога](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx).  
   

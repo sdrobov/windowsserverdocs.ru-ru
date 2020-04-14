@@ -1,18 +1,18 @@
 ---
 title: Создание экранированной виртуальной машины с помощью PowerShell
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 6111b3fbff508c3c485f2a998bab8c0b16beaed6
-ms.sourcegitcommit: 471464a674a53c468a2f1e28575c91245ce9badf
+ms.openlocfilehash: 09e09fa30a38ef5f6046f623e24be0bc7b6ce87e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75548178"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856757"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>Создание экранированной виртуальной машины с помощью PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "75548178"
 
 В двух словах, вы создадите диск шаблона, файл данных экранирования, файл ответов автоматической установки и другие артефакты безопасности на любом компьютере, затем скопируйте эти файлы на защищенный узел и подготавливаете экранированную виртуальную машину.
 
-## <a name="create-a-signed-template-disk"></a>Создайте подписанный диск шаблона.
+## <a name="create-a-signed-template-disk"></a>Создание диска с подписанным шаблоном
 
 Чтобы создать экранированную виртуальную машину, сначала требуется предварительно зашифрованный диск шаблона виртуальной машины с томом операционной системы (или загрузочными и корневыми разделами в Linux).
 Чтобы получить дополнительные сведения о создании диска шаблона, перейдите по приведенным ниже ссылкам.
@@ -126,7 +126,7 @@ Add-ClusterVirtualMachineRole -VMName 'MyShieldedVM' -Cluster <Hyper-V cluster n
 
 Экранированная виртуальная машина теперь может быть перенесена в кластер.
 
-## <a name="next-step"></a>Далее
+## <a name="next-step"></a>Дальнейшие действия
 
 > [!div class="nextstepaction"]
 > [Развертывание экранированного с помощью VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

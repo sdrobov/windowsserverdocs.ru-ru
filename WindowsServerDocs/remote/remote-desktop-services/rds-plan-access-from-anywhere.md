@@ -1,28 +1,24 @@
 ---
 title: Службы удаленных рабочих столов — доступ из любого места
 description: Сведения о планировании развертывания шлюза удаленных рабочих столов
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c38fab1-3586-4b7a-8bf0-7d85a8d5361d
 author: lizap
 ms.author: elizapo
 ms.date: 11/03/2016
 manager: dongill
-ms.openlocfilehash: c79afeb38ce0b196c0f1edddd01a6166df53583b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fb0fddbe86c4c06280fdbe55f2f6a7f490a1340b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403917"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857397"
 ---
 # <a name="remote-desktop-services---access-from-anywhere"></a>Службы удаленных рабочих столов — доступ из любого места
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Конечные пользователи могут безопасно подключаться к ресурсам внутренней сети за пределами корпоративного брандмауэра через шлюз удаленных рабочих столов.
 

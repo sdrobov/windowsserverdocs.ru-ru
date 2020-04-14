@@ -1,24 +1,20 @@
 ---
 title: Требования к сети и учетные записи пользователей
 description: Предоставляет сведения о планировании для различных сетевых и пользовательских сценариев с помощью служб MultiPoint.
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ef4859fc-b7ae-4827-ab9c-b1dc07ab6c16
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: 5369776a0341bf1f4d4d1d13569cf0964fdf11f1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ed9770ff6e91e548dfc38a1de927646590a25165
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71405037"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853417"
 ---
 # <a name="network-considerations-and-user-accounts"></a>Требования к сети и учетные записи пользователей
 Службы MultiPoint могут быть развернуты в различных сетевых средах и могут поддерживать локальные учетные записи пользователей и учетные записи пользователей домена. Обычно учетные записи пользователей служб MultiPoint будут управляться в одной из следующих сетевых сред:  

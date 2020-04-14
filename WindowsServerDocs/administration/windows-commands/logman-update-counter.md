@@ -1,28 +1,24 @@
 ---
 title: Счетчик обновлений Logman
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 607df6d5-876c-428d-a0b3-f59cb244e2ce britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8c0696b6077a919d93106cb39329c986e91883fa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d93ea91fb1b5d105923457aeb8d5515e1ac5b9c5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374350"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840577"
 ---
 # <a name="logman-update-counter"></a>Счетчик обновлений Logman
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Обновление существующих свойств сборщика данных счетчиков.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374350"
 ```  
 logman update counter <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                               Описание                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman update counter <[-n] <name>> [options]
 |                 -config <value>                  |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
 |                   [-n] <name>                    |                                                                       Имя целевого объекта.                                                                        |
 | -f < bin&#124;бинЦирк&#124;CSV&#124;&#124;SQL > |                                                            Указывает формат журнала для сборщика данных.                                                             |
-|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
+|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 |    -m < [начало] [завершение] [[начало] [завершение] [...]] >    |                                                Вместо запланированного времени начала или окончания измените значение на запуск или завершение вручную.                                                 |
 |                -RF < [[чч:] мм:] SS >                |                                                        Запуск сборщика данных в течение указанного периода времени.                                                         |
 |        -b < M/d/гггг ч: СС [AM&#124;] >         |                                                              Начать сбор данных в указанное время.                                                               |
@@ -60,11 +56,11 @@ logman update counter <[-n] <name>> [options]
 
 ## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда обновляет perf_log сборщика данных, изменив интервал выборки на 10, а формат журнала — на CSV и добавив управление версиями в имя файла журнала в формате ммддххмм.  
 ```  
 logman update perf_log -si 10 -f csv -v mmddhhmm  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  
 [переlogman создать счетчик](logman-create-counter.md)  

@@ -1,28 +1,22 @@
 ---
 title: systeminfo
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для systeminfo, в котором отображаются подробные сведения о конфигурации компьютера и его операционной системы, включая конфигурацию операционной системы, сведения о безопасности, идентификатор продукта и свойства оборудования (например, ОЗУ, дисковое пространство и сетевые карты).
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 39954968-3c2e-4d3e-9d89-c9c43347461e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32a84a33c5339e9949648a4e40d71daf25c055d8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 41c2a499bc10f5b44f250958471b90f4b88dfede
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71370691"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80833577"
 ---
 # <a name="systeminfo"></a>systeminfo
-
-
 
 Отображаются подробные сведения о конфигурации компьютера и его операционной системы, включая конфигурацию операционной системы, сведения о безопасности, идентификатор продукта и свойства оборудования (например, ОЗУ, дисковое пространство и сетевые карты).
 
@@ -34,7 +28,7 @@ ms.locfileid: "71370691"
 Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE | LIST | CSV}] [/nh]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -43,9 +37,9 @@ Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 |/p \<пароль >|Указывает пароль учетной записи пользователя, указанной в параметре **/u** .|
 |/fo формат \<>|Задает формат вывода с одним из следующих значений:</br>Таблица: Отображает выходные данные в таблице.</br>LIST: Отображает выходные данные в списке.</br>CSV: выходные данные отображаются в формате значений с разделителями-запятыми.|
 |использован|Подавляет вывод заголовков столбцов в выходных данных. Допустим, если для параметра **/FO** задано значение TABLE или CSV.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы просмотреть сведения о конфигурации для компьютера с именем Срвмаин, введите:
 
@@ -59,6 +53,6 @@ Systeminfo [/s <Computer> [/u <Domain>\<UserName> [/p <Password>]]] [/fo {TABLE 
 
 **systeminfo/s Srvmain2/u маиндом\хироплн/p p@ssW23/FO List**
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,28 +1,24 @@
 ---
 title: API обновления Logman
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f322e52-0f9f-42b1-bd64-8b8f8fe086fc britw
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c8e5a45270ec0ed70928688728abceb5bcb8bb29
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7739098343f7b98b0812a9b7199dea2da044786e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374369"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840597"
 ---
 # <a name="logman-update-api"></a>API обновления Logman
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Обновление свойств существующего сборщика данных трассировки API.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374369"
 ```  
 logman update api <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                               Описание                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman update api <[-n] <name>> [options]
 |                 -config <value>                  |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
 |                   [-n] <name>                    |                                                                       Имя целевого объекта.                                                                        |
 | -f < bin&#124;бинЦирк&#124;CSV&#124;&#124;SQL > |                                                            Указывает формат журнала для сборщика данных.                                                             |
-|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
+|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 |    -m < [начало] [завершение] [[начало] [завершение] [...]] >    |                                                Вместо запланированного времени начала или окончания измените значение на запуск или завершение вручную.                                                 |
 |                -RF < [[чч:] мм:] SS >                |                                                        Запуск сборщика данных в течение указанного периода времени.                                                         |
 |        -b < M/d/гггг ч: СС [AM&#124;] >         |                                                              Начать сбор данных в указанное время.                                                               |
@@ -63,11 +59,11 @@ logman update api <[-n] <name>> [options]
 
 ## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда обновляет существующий счетчик трассировки API с именем trace_notepad для исполняемого файла к:\виндовс\нотепад.ЕКСЕ, исключая вызов API Тлсжетвалуе, созданный модулем kernel32. dll.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  
 [Создание API Logman](logman-create-api.md)  

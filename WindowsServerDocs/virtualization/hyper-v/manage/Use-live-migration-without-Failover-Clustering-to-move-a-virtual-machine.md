@@ -2,25 +2,23 @@
 title: Использование динамической миграции без отказоустойчивой кластеризации для перемещения виртуальной машины
 description: Предоставляет необходимые компоненты и инструкции для выполнения динамической миграции в автономной среде.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 75c32e42-97f7-48df-aac9-1d82d34825e1
-author: KBDAzure
+author: kbdazure
 ms.author: kathydav
 ms.date: 01/17/2017
-ms.openlocfilehash: 55c96ff4696871e4013c3abd6247209d0d4517c0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 41d5edb02d4384955e711024d4e4d68cee5d3937
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392555"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858927"
 ---
 # <a name="use-live-migration-without-failover-clustering-to-move-a-virtual-machine"></a>Использование динамической миграции без отказоустойчивой кластеризации для перемещения виртуальной машины
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 В этой статье показано, как переместить виртуальную машину, выполнив динамическую миграцию без использования отказоустойчивой кластеризации. Динамическая миграция перемещает запущенные виртуальные машины между узлами Hyper-V без заметного простоя.   
   
@@ -54,7 +52,7 @@ ms.locfileid: "71392555"
 PS C:\> Move-VM LMTest TestServer02 -IncludeStorage -DestinationStoragePath D:\LMTest  
 ```  
   
-## <a name="troubleshooting"></a>Поиск и устранение неисправностей
+## <a name="troubleshooting"></a>Диагностика
 
 ### <a name="failed-to-establish-a-connection"></a>Не удалось установить соединение 
 

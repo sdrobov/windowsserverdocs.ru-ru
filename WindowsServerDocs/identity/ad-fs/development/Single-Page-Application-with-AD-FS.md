@@ -8,12 +8,12 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: f4973da0d9e0c347cff8fc910f96277055b66dec
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: f7e68558945fcd26d5e8ab405f39e86266beeea8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465548"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853867"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL. JS с AD FS 2016 или более поздней версии
 
@@ -43,9 +43,9 @@ ms.locfileid: "77465548"
 ## <a name="setting-up-the-environment"></a>Настройка среды
 В этом пошаговом руководстве мы будем использовать базовую установку:
 
-1.  DC: контроллер домена для домена, в котором будет размещаться AD FS
-2.  AD FS Server — сервер AD FS для домена.
-3.  Компьютер для разработки: компьютер, на котором установлена Visual Studio и который будет разрабатывать наш пример
+1.    DC: контроллер домена для домена, в котором будет размещаться AD FS
+2.    AD FS Server — сервер AD FS для домена.
+3.    Компьютер для разработки: компьютер, на котором установлена Visual Studio и который будет разрабатывать наш пример
 
 При необходимости можно использовать только два компьютера. Один для DC/AD FS, а другой — для разработки образца.
 

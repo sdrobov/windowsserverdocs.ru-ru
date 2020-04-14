@@ -1,24 +1,20 @@
 ---
 title: mqbkup
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7bdd41c4-75ef-455f-b241-1d64a4c7acf5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 66783e0bbfe5c82971e14fd05e913d485485dc6f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5ff6fc2f483bceb99b970cd0c48f56985ecd485b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373513"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839357"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -31,14 +27,14 @@ ms.locfileid: "71373513"
 ```  
 mqbkup {/b | /r} <folder path_to_storage_device>  
 ```  
-### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Параметры  
 |Параметр|Описание|  
 |-------|--------|  
-|b|Указывает операцию резервного копирования|  
+|/b|Указывает операцию резервного копирования|  
 |/r|Указывает операцию восстановления|  
 |Папка < path_to_storage\_устройства >|Указывает путь, по которому хранятся файлы сообщений MSMQ и параметры реестра|  
-|/?|Отображение справки в командной строке.|  
-## <a name="BKMK_Examples"></a>Примеров  
+|/?|Отображает справку в командной строке.|  
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
 Чтобы создать резервную копию всех файлов сообщений MSMQ и параметров реестра и сохранить их в папке *мсмкбкуп* на диске C:.  
 ```  
 mqbkup /b c:\msmqbkup  
@@ -53,5 +49,5 @@ mqbkup /b /y c:\oldbkup
 mqbkup /r c:\msmqbkup  
 ```  
 Расположение папок, используемых для хранения файлов сообщений MSMQ, хранится в реестре. Таким же программа будет восстанавливать файлы сообщений MSMQ в папки, указанные в реестре, а не в папки хранилища, используемые перед операцией восстановления. Если папки, указанные в реестре, не существуют, операция восстановления автоматически создаст их. Если каталоги папок существуют и не пусты, программа предложит вам разрешение на удаление текущего содержимого этих папок.  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

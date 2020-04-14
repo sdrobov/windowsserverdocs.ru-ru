@@ -1,35 +1,29 @@
 ---
 title: вызов
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для вызова, который вызывает одну пакетную программу из другой без остановки родительской программы пакетной службы.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d34a41dc-e6c7-4467-bf6a-15cec704833e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/05/2018
-ms.openlocfilehash: 89097ec5d3711b3d8831f8c33b3778ed0752246f
-ms.sourcegitcommit: ee8fa8e1293f29229b5ce1b0f3d4a07ba99568f5
+ms.openlocfilehash: 58b2d03c76f53fa7bbf5c483c1a423cd4a011f94
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78280195"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80848237"
 ---
 # <a name="call"></a>вызов
 
-
-
-Вызывает одну пакетную программу из другой без остановки родительской пакетной программы. Команда **Call** принимает метки в качестве целевого объекта вызова.
-
-> [!NOTE]
-> **Вызов** не оказывает влияния на командную строку, если она используется вне скрипта или пакетного файла.
+Вызывает одну пакетную программу из другой без остановки родительской пакетной программы. Команда **Call** принимает метки в качестве целевого объекта вызова
 
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
+> [!NOTE]
+> Вызов не оказывает влияния на командную строку, если она используется вне скрипта или пакетного файла.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +31,7 @@ ms.locfileid: "78280195"
 call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |           Параметр           |                                                                         Описание                                                                          |
 |-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,7 +51,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
 |Параметр Batch|Описание|
 |---------------|-----------|
-|% ~ 1|Развертывает **%1** и удаляет окружающие кавычки ("").|
+|% ~ 1|Развертывает **%1** и удаляет окружающие кавычки ().|
 |% ~ F1|Расширение **%1** до полного пути.|
 |% ~ D1|Расширение **%1** до буквы диска.|
 |% ~ P1|Развертывает **%1** только для пути.|
@@ -100,7 +94,7 @@ call [Drive:][Path]<FileName> [<BatchParameters>] [:<Label> [<Arguments>]]
 
     `call :<Label> <Arguments>`
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы запустить программу Чеккнев. bat из другой программы пакетной службы, введите следующую команду в родительской пакетной программе:
 ```
@@ -111,6 +105,6 @@ call checknew
 call checknew %1 %2
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

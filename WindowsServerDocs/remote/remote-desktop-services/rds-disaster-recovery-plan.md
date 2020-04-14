@@ -1,27 +1,23 @@
 ---
 title: Создание плана аварийного восстановления
 description: Узнайте, как создать план аварийного восстановления для развертывания служб удаленных рабочих столов.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 05/05/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: e4e9a9ab05e672c72925e3699900218abdf1c682
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 18342bb7fd3ad26427ae1e1a051e20444fdff7c2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404028"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859027"
 ---
 # <a name="create-your-disaster-recovery-plan-for-rds"></a>Создание плана аварийного восстановления для служб удаленных рабочих столов
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Вы можете создать план аварийного восстановления в Azure Site Recovery для автоматизации процесса отработки отказа. Добавьте все виртуальные машины компонента служб удаленных рабочих столов в план восстановления.
 

@@ -1,31 +1,27 @@
 ---
 title: Переменные, влияющие на производительность системы служб MultiPoint
 description: Сведения о производительности для служб MultiPoint
-ms.custom: na
 ms.date: 07/22/2016
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0f3e8875-1b5e-4789-b16c-d06d6e31f38e
 author: evaseydl
 manager: scottman
 ms.author: evas
-ms.openlocfilehash: cba973e3b0a89c26f886a67154c27831adb2c8cc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 44f268c958ed32e527b66cebe1a10d33652eb9b0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394827"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858917"
 ---
 # <a name="variables-affecting-multipoint-services-system-performance"></a>Переменные, влияющие на производительность системы служб MultiPoint
 Существует множество переменных, которые могут повлиять на общую производительность системы служб MultiPoint. Их можно рассматривать при проектировании системы.  
   
 ## <a name="usage"></a>Использование  
   
--   **Приложения** Тип и количество приложений, выполняемых в одно и то же время,\-особенно интенсивно насыщенные графикой или приложения с большим объемом памяти, влияют на общую производительность системы. Дополнительные сведения см. в разделе [приложения и содержимое Интернета](hardware-and-performance-recommendations.md#applications-and-internet-content).  
+-   **Приложения** Тип и количество приложений, выполняемых в одно и то же время, особенно графические\-интенсивные или ресурсоемкие приложения, повлияют на общую производительность системы. Дополнительные сведения см. в разделе [приложения и содержимое Интернета](hardware-and-performance-recommendations.md#applications-and-internet-content).  
   
 -   **Использование Интернета** Проверьте, будут ли пользователи просматривать мультимедийное содержимое или веб-страницы, использующие видео в полноэкранном режиме. Этот тип содержимого может перегружать систему при одновременном просмотре слишком большого числа пользователей.  
   

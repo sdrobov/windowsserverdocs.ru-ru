@@ -1,6 +1,6 @@
 ---
 title: Каналы обслуживания
-description: 'Описание каналов обслуживания Windows Server: LTSC и SAC'
+description: 'Описание каналов обслуживания Windows Server 2019: канал долгосрочного обслуживания (LTSC) и канал полугодичного обслуживания (SAC)'
 ms.prod: windows-server
 ms.technology: server-general
 ms.topic: article
@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 06f92e0a2f74ed229b42e936583a7f75d4584234
-ms.sourcegitcommit: 07c9d4ea72528401314e2789e3bc2e688fc96001
+ms.openlocfilehash: a10cb3b27e3434ab818b41e051edb38ab77626db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76822117"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827137"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Каналы обслуживания Windows Server: LTSC и SAC
 
@@ -122,7 +122,7 @@ ms.locfileid: "76822117"
 **Пример выпуска Windows Server 2019 Datacenter Edition (LTSC) с возможностями рабочего стола:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
@@ -137,7 +137,7 @@ CurrentBuild              : 17763
 **Пример основных серверных компонентов Windows Server, версия 1809 (SAC), Standard Edition:**
 
 ````PowerShell
-Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````

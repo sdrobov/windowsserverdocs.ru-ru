@@ -1,28 +1,24 @@
 ---
 title: Управление — TPM BDE
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 11a8530d-edd7-4fe3-ae81-b943766760fe
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 577f5f2ecb85ac8c0c28fef2ca343635796454d2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b6495bfbfedea7219ae175145f72fc12314ce7ae
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373827"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839767"
 ---
 # <a name="manage-bde-tpm"></a>Manage-bde: TPM
 
-> Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 > 
 > [!IMPORTANT]
 > Эта команда не поддерживается для использования на компьютерах под управлением Windows 8, Windows Server 2012 или более поздних операционных систем. Для этих компьютеров можно использовать [командлеты управления TPM для Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/).
@@ -31,7 +27,7 @@ ms.locfileid: "71373827"
 > ```
 > manage-bde -tpm [-turnon] [-takeownership <OwnerPassword>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 > ```
-> ### <a name="parameters"></a>Параметры
+> #### <a name="parameters"></a>Параметры
 > 
 > |    Параметр    |                                                                              Описание                                                                               |
 > |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -43,15 +39,15 @@ ms.locfileid: "71373827"
 > |    -? или/?     |                                                               Отображает краткую справку в командной строке.                                                               |
 > |   -Help или-h   |                                                             Отображает полную справку в командной строке.                                                              |
 > 
-> ## <a name="BKMK_Examples"></a>Примеров
+> ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 > В следующем примере показано использование команды **-TPM** для включения доверенного платформенного модуля.
 > ```
 > manage-bde  tpm -turnon
 > ```
-> В следующем примере показано, как использовать команду **TPM** , чтобы стать владельцем TPM и установить пароль владельца 0wnerP@ss.
+> В следующем примере показано использование команды **TPM** для смены владельца TPM и присвоения пароля владельца 0wnerP@ss.
 > ```
 > manage-bde  tpm  takeownership 0wnerP@ss
 > ```
-> ## <a name="additional-references"></a>Дополнительные ссылки
-> -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+> ## <a name="additional-references"></a>Дополнительные материалы
+> -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 > -   [manage-bde](manage-bde.md)

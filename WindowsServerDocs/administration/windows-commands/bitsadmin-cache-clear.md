@@ -1,44 +1,39 @@
 ---
-title: очистить кэш битсадмин
-description: Раздел команд Windows для **кэша битсадмин Clear** — очищает локальный кэш.
-ms.custom: na
+title: кэш битсадмин и очистить
+description: Команды Windows для **кэша битсадмин и Clear**, который очищает локальный кэш.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 125426bc-5f90-4cdb-ba14-24be428c66c7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c91079c439c505a0e73e48cc5fbcb26679b150b6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2625268bf2bedc28e0ed5d1bda151c8802ef8d24
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381926"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850857"
 ---
 # <a name="bitsadmin-cache-and-clear"></a>кэш битсадмин и очистить
-
-
 
 Удаляет локальный кэш.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /Cache /Clear 
+bitsadmin /cache /clear
 ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере удаляется локальный кэш.
+
 ```
-C:\>bitsadmin /Cache /Clear 
+C:\>bitsadmin /cache /clear
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

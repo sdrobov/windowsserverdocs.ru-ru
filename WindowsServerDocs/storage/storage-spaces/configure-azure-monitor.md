@@ -1,20 +1,18 @@
 ---
 title: Изучение и настройка Azure Monitor
 description: Подробные сведения о настройке Azure Monitor и настройке оповещений электронной почты и SMS для кластера локальных дисковых пространств в Windows Server 2016 и 2019.
-keywords: Локальные дисковые пространства, Azure Monitor, уведомления, электронная почта, SMS
-ms.assetid: ''
 ms.prod: windows-server
 ms.author: adagashe
 ms.technology: storage-spaces
 ms.topic: article
 author: adagashe
 ms.date: 01/10/2020
-ms.openlocfilehash: 878bbce9543439cf78501e496c59e06e077c5ddc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: fa4d8793c07cabd39ee6cc0d54b5cddc84eac202
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308184"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859047"
 ---
 # <a name="use-azure-monitor-to-send-emails-for-health-service-faults"></a>Использование Azure Monitor для отправки сообщений электронной почты о сбоях служба работоспособности
 

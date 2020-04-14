@@ -3,20 +3,20 @@ ms.assetid: e5945bae-4a33-487c-a019-92a69db8cf6c
 title: Обновление встроенного ПО дисков
 ms.prod: windows-server
 ms.author: toklima
-ms.manager: dmoss
+manager: dmoss
 ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 2f0530101bb7d597d2d95c26648aad65d62b69ca
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 55a4fc94440b763c48735ffe44099da702857489
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365872"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80820877"
 ---
 # <a name="updating-drive-firmware"></a>Обновление встроенного ПО дисков
->Относится к: Windows Server 2019, Windows Server 2016, Windows 10
+>Область применения: Windows Server 2019, Windows Server 2016, Windows 10
 
 Обновление встроенного ПО для дисков всегда являлось трудоемкой задачей с высокой вероятностью простоя. Именно поэтому мы вносим усовершенствования для дисковых пространств, Windows Server, Windows 10 версии 1703 или более поздней версии. Если у вас есть диски, которые поддерживают новый механизм обновления встроенного ПО, включенный в состав Windows, встроенное ПО рабочих дисков можно обновить без простоев. Тем не менее, если вы собираетесь обновить встроенное ПО рабочего диска, обязательно ознакомьтесь с нашими советами о том, как свести к минимуму риск при использовании этой новой функциональности.
 
@@ -30,11 +30,11 @@ ms.locfileid: "71365872"
 Сведения о том, поддерживает ли оборудование обновление встроенного ПО диска Windows, можно получить у поставщика решения.
 Ниже приведены ссылки на различные требования:
 
--   КОНТРОЛЛЕРА [Device. Storage. HD. SATA.](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) в разделе **[if implementsd @ No__t-2 Download встроенного по & активации** .
+-   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
     
--   ЖЕСТКИХ [Device. Storage. HD. SAS](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) — в разделе **[if Implements @ No__t-2 Download встроенного по & активации** .
+-   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
 
--   NVMe [Device. Storage. контроллердриве. NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) — в разделах **5,7** и **5,8**.
+-   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) — в разделах **5.7** и **5.8**.
 
 ## <a name="powershell-cmdlets"></a>Командлеты PowerShell
 
@@ -43,7 +43,7 @@ ms.locfileid: "71365872"
 -   Get-StorageFirmwareInformation
 -   Update-StorageFirmware
 
-Первый командлет предоставляет подробные сведения о возможностях устройства, образах встроенного ПО и редакциях. В данном случае компьютер содержит всего один SATA SSD с 1 слотом встроенного ПО. Ниже приведен пример:
+Первый командлет предоставляет подробные сведения о возможностях устройства, образах встроенного ПО и редакциях. В данном случае компьютер содержит всего один SATA SSD с 1 слотом встроенного ПО. Пример:
 
    ```powershell
    Get-PhysicalDisk | Get-StorageFirmwareInformation
@@ -164,9 +164,9 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-Если вы хотите просмотреть служба работоспособности в действии и узнать больше о механизме развертывания, просмотрите это видео: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+Если вы хотите просмотреть служба работоспособности в действии и узнать больше о механизме развертывания, ознакомьтесь с этим видео: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
-## <a name="frequently-asked-questions"></a>Вопросы и ответы
+## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 
 См. также [Устранение неполадок обновления встроенного ПО диска](troubleshoot-firmware-update.md).
 
@@ -195,7 +195,7 @@ $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponen
 
 ### <a name="what-happens-if-the-update-fails"></a>Что произойдет в случае сбоя обновления?
 
-Обновление может завершиться ошибкой по различным причинам: 1. диск не поддерживает правильные команды для обновления встроенного по Windows. В этом случае новый образ встроенного ПО никогда не активируется, и диск продолжает работать со старым образом. 2) Не удается скачать образ или применить его к диску (несоответствие версий, повреждение образа и т. д). В этом случае диск выполняет команду активации с ошибкой. При этом старый образ по-прежнему продолжит работать.
+Обновление может завершиться ошибкой по разным причинам: 1) диск не поддерживает правильные команды для обновления встроенного по Windows. В этом случае новый образ встроенного ПО никогда не активируется, и диск продолжает работать со старым образом. 2) Не удается скачать образ или применить его к диску (несоответствие версий, повреждение образа и т. д). В этом случае диск выполняет команду активации с ошибкой. При этом старый образ по-прежнему продолжит работать.
 
 Если диск не отвечает после обновления встроенного ПО, скорее всего, вы столкнулись с ошибкой в самом встроенном ПО. Протестируйте все обновления встроенного ПО в лабораторной среде, прежде чем помещать их в рабочую среду. Единственный способ исправления может заключаться в замене диска.
 

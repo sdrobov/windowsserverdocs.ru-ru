@@ -1,24 +1,20 @@
 ---
 title: Приостановка и восстановление сеанса пользователя
 description: Узнайте, как приостановить пользователя из сеанса MultiPoint, не отключая его
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5263bce3-fe92-4398-8393-2e3a4e05d530
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 0ef9d98584df568438cc3c905a7c86cd58f53343
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2d2771fd60f4d8c11c602a4c5d55f3b5ae2d8b11
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394927"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861627"
 ---
 # <a name="suspend-and-leave-user-session-active"></a>Приостановка и восстановление сеанса пользователя
 Вы можете отключить или приостановить пользователей в системе служб MultiPoint, если не хотите завершать сеансы пользователей. Пользователь также может отключить сеанс самостоятельно. Пока сеанс пользователя приостановлен, сеанс остается активным в системной памяти компьютера служб MultiPoint, пока компьютер не будет выключен или перезагружен. В этот момент все приостановленные сеансы завершаются, а все несохраненные данные теряются.  

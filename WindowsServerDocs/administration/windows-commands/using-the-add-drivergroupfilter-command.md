@@ -1,28 +1,22 @@
 ---
-title: Использование команды Add-Дриверграупфилтер
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: Add-Дриверграупфилтер
+description: Раздел команд Windows для Add-Дриверграупфилтер, который добавляет фильтр в группу драйверов на сервере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a66c5e68-99ea-4e47-b68d-8109633ae336
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a332c804fd3c78598eb9b1a6ba8cb5bdae0b3f1c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a62baf85462d4340d61196bc154efd6d852f1f7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71363829"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832117"
 ---
-# <a name="using-the-add-drivergroupfilter-command"></a>Использование команды Add-Дриверграупфилтер
-
-
+# <a name="add-drivergroupfilter"></a>Add-Дриверграупфилтер
 
 Добавляет фильтр в группу драйверов на сервере.
 
@@ -32,7 +26,7 @@ ms.locfileid: "71363829"
 WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>] /FilterType:<Filter Type> /Policy:{Include | Exclude} /Value:<Value> [/Value:<Value> ...]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |         Параметр          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Описание                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -42,7 +36,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server name>]
 |     [/Полици: {include      |                                                                                                                                                                                                                                                                                                                                                                                                                                                                             Exclude}]                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |     [/Value:\<значение >]      | Указывает значение клиента, соответствующее **/филтертипе**. Можно указать несколько значений для одного типа. Допустимые значения для **чассистипе**см. в следующем списке. Сведения о получении значений для всех других типов фильтров см. в разделе [фильтры группы драйверов](https://go.microsoft.com/fwlink/?LinkID=155158) (<https://go.microsoft.com/fwlink/?LinkID=155158>).</br>**Иной**</br>**ункновнчассис**</br>**Настольный компьютер**</br>**ловпрофиледесктоп**</br>**пиззабокс**</br>**минитовер**</br>**Вертикаль**</br>**Устройств**</br>**Ноутбук**</br>**Занятий**</br>**Перенос**</br>**доккингстатион**</br>**аллиноне**</br>**Подзаписная книжка**</br>**спацесавинг**</br>**лунчбокс**</br>**маинсистемчассис**</br>**експансиончассис**</br>**Подшасси**</br>**бусекспансиончассис**</br>**перифералчассис**</br>**сторажечассис**</br>**раккмаунтчассис**</br>**сеаледкасекомпутер**</br>**мултисистемчассис**</br>**компактпЦи**</br>**адванцедтка** |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы добавить фильтр в группу драйверов, введите одно из следующих действий:
 ```
@@ -52,7 +46,7 @@ WDSUTIL /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufactu
 WDSUTIL /Add-DriverGroupFilter /DriverGroup:PrinterDrivers /FilterType:Manufacturer /Policy:Include /Value:Name1 /FilterType:ChassisType /Policy:Exclude /Value:Tower /Value:MiniTower
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

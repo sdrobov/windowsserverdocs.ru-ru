@@ -1,47 +1,43 @@
 ---
 title: flattemp
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 059a0960-1fd9-4382-87fe-a85d5dccdaea
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b1a458e8742ca354eeca821e93590386bca56dff
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2a291c102d70ff9166a7bb0261e506792a49dc18
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71377129"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80844577"
 ---
 # <a name="flattemp"></a>flattemp
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Включает или отключает плоские временные папки.
 Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
 ## <a name="syntax"></a>Синтаксис
 ```
 flattemp {/query | /enable | /disable}
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
 |/Query|Запрашивает текущий параметр.|
 |разрешение|Включает плоские временные папки. Пользователи будут совместно использовать временную папку, если только временная папка не находится в домашней папке User s.|
 |/Disable|Отключает плоские временные папки. Временная папка каждого пользователя будет находиться в отдельной папке (определяется ИДЕНТИФИКАТОРом сеанса пользователя).|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 -   Команда **флаттемп** доступна только в том случае, если служба роли сервера терминалов установлена на компьютере под windows Server 2008 или в службе роли узла сеансов удаленных рабочих столов на компьютере под windows Server 2008 R2.
@@ -51,7 +47,7 @@ flattemp {/query | /enable | /disable}
 -   Ошибки приложения могут возникать, если временная папка пользователя находится на сетевом диске. Это происходит, когда общий сетевой диск становится недоступным в сети. Поскольку временные файлы приложения либо недоступны, либо не синхронизированы, он отвечает, как если бы диск был остановлен. Переместить временную папку на сетевой диск не рекомендуется. По умолчанию временные папки хранятся на локальном жестком диске. При возникновении непредвиденного поведения или ошибок повреждения диска в некоторых приложениях следует стабилизировать сеть или переместить временные папки обратно на локальный жесткий диск.
 -   При отключении использования отдельных временных папок для каждого сеанса параметры **флаттемп** игнорируются. Этот параметр задается в средстве настройки службы удаленных рабочих столов.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 -   Чтобы отобразить текущее значение для плоских временных папок, введите:
     ```
     flattemp /query
@@ -65,7 +61,7 @@ flattemp {/query | /enable | /disable}
     flattemp /disable
     ```
 
-## <a name="additional-references"></a>Дополнительные ссылки
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-[Справочник &#40;по командам служб&#41; терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)
+[Справочник по командам служб удаленных рабочих столов (служб терминалов)](remote-desktop-services-terminal-services-command-reference.md)

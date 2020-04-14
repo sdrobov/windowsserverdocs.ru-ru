@@ -1,29 +1,25 @@
 ---
 title: Миграция с Windows Small Business Server 2003 на Windows Server Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b99a21d38011b40515fb322429b73f23ad5849cf
-ms.sourcegitcommit: 3c3dfee8ada0083f97a58997d22d218a5d73b9c4
+ms.openlocfilehash: f7dfa203f999e23b52c8fcf1f861a59f4f399d95
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80639903"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852527"
 ---
 # <a name="migrate-windows-small-business-server-2003-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2003 на Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-В этом руководство описано, как перенести существующий домен Windows SBS 2003 в Windows Server® 2012 Essentials на новом оборудовании, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
+В этом руководство описано, как перенести существующий домен Windows SBS 2003 в Windows Server&reg; 2012 Essentials на новом оборудовании, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
   
 > [!IMPORTANT]
 >   Для Windows Server Essentials требуется 64-разрядная среда.  Windows Server Essentials не поддерживает 32-разрядную среду.  

@@ -1,24 +1,20 @@
 ---
 title: оперативный диск
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bc44a783-eaa4-40ca-be01-5703b5bf4eb3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d798bf34ec2f9d2f01b5470c4ec52f936674135
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c61d852ba71329c3d7345d74fd352a6c19436cec
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372513"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837897"
 ---
 # <a name="online-disk"></a>оперативный диск
 
@@ -32,7 +28,7 @@ ms.locfileid: "71372513"
 > [!IMPORTANT]
 > Эта команда завершится ошибкой, если она используется на диске, доступном только для чтения.
 
-Инструкции по использованию этой команды см. в разделе Повторная [Активация отсутствующего или автономного динамического диска](https://go.microsoft.com/fwlink/?LinkId=207046) (https://go.microsoft.com/fwlink/?LinkId=207046) ).
+Инструкции по использованию этой команды см. в разделе [Повторная активация отсутствующего или неподключенного динамического диска](https://go.microsoft.com/fwlink/?LinkId=207046) (https://go.microsoft.com/fwlink/?LinkId=207046).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,11 +36,11 @@ ms.locfileid: "71372513"
 online disk [noerr]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|Noerr|только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
+|Noerr|Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -55,14 +51,14 @@ online disk [noerr]
 -   Если группа выбранного диска содержит зеркальные тома или диски RAID 5, эта команда также повторно синхронизирует эти тома.
 -   Для завершения этой команды необходимо выбрать диск. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы перевести диск с фокусом в режим «в сети», введите:
 ```
 online disk
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

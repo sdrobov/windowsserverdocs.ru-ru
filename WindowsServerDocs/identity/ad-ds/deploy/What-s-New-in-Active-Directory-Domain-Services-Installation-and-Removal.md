@@ -1,7 +1,6 @@
 ---
 ms.assetid: ba7f2b9f-7351-4680-b7d8-a5f270614f1c
 title: Что нового в установке и удалении доменных служб Active Directory
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 08/09/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 1f24615491391d932609d7f80549985818ced8c1
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: b290b11487ce84b0c7cd962b272f52fea538769a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323206"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824947"
 ---
 # <a name="whats-new-in-active-directory-domain-services-installation-and-removal"></a>Что нового в установке и удалении доменных служб Active Directory
 
@@ -36,7 +35,7 @@ ms.locfileid: "79323206"
 - **Можно экспортировать сценарий Windows PowerShell, содержащий все параметры, заданные во время установки через графический интерфейс.** По окончании установки или удаления можно экспортировать параметры в сценарий Windows PowerShell для использования при автоматическом выполнении той же операции.  
 - **Перед перезагрузкой выполняется репликация только критически важных данных.** Новый переключатель позволяет разрешить репликацию некритических данных перед перезагрузкой. Дополнительные сведения см. в статье [Аргументы командлета ADDSDeployment](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md#BKMK_Params).  
 
-## <a name="BKMK_ADConfigurationWizard"></a>Мастер настройки служб домен Active Directory Services
+## <a name="the-active-directory-domain-services-configuration-wizard"></a><a name="BKMK_ADConfigurationWizard"></a>Мастер настройки служб домен Active Directory Services
 
 Начиная с Windows Server 2012, мастер настройки служб домен Active Directory Services заменяет устаревшие мастер установки доменных служб Active Directory в качестве параметра пользовательского интерфейса для указания параметров при установке контроллера домена. Мастер настройки доменных служб Active Directory запускается после завершения работы мастера добавления ролей.  
 
@@ -45,7 +44,7 @@ ms.locfileid: "79323206"
 
 На странице [Install домен Active Directory &#40;Services Level&#41;100](../../ad-ds/deploy/Install-Active-Directory-Domain-Services--Level-100-.md)процедуры пользовательского интерфейса показывают, как запустить мастер добавления ролей, чтобы установить двоичные файлы роли сервера AD DS, а затем запустить мастер настройки служб домен Active Directory, чтобы завершить установку контроллера домена. В примерах Windows PowerShell показано, как выполнить оба этапа с помощью командлета развертывания AD DS.  
   
-## <a name="BKMK_NewAdprep"></a>Интеграция с Adprep. exe
+## <a name="adprepexe-integration"></a><a name="BKMK_NewAdprep"></a>Интеграция с Adprep. exe
 
 Начиная с Windows Server 2012, существует только одна версия средства Adprep. exe (нет 32-разрядной версии, Adprep32. exe). Команды adprep запускаются автоматически при необходимости при установке контроллера домена под управлением Windows Server 2012 в существующий домен или лес Active Directory.  
   
@@ -104,7 +103,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
 Контроллеры домена под управлением Windows Server 2012 можно безопасно добавить в существующий домен без запуска adprep/domainprep/гппреп, но режим планирования RSOP будет работать неправильно.  
 
-## <a name="BKMK_PrereqCheck"></a>Проверка готовности к установке AD DS
+## <a name="ad-ds-installation-prerequisite-validation"></a><a name="BKMK_PrereqCheck"></a>Проверка готовности к установке AD DS
 
 Мастер установки AD DS перед началом установки проверяет, выполняются ли следующие предварительные условия. Это позволяет исправить ошибки, которые могут воспрепятствовать установке.  
   
@@ -122,13 +121,13 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 - Проверка имени дочернего домена: проверка того, являются ли имена родительского и нового дочернего доменов допустимыми и не конфликтуют ли они с существующими доменами.  
 - Проверка имени домена дерева: проверка того, является ли указанное имя домена в дереве допустимым и не существует ли уже оно.  
 
-## <a name="BKMK_SystemReqs"></a>Требования к системе
+## <a name="system-requirements"></a><a name="BKMK_SystemReqs"></a>Требования к системе
 
 Требования к системе для Windows Server 2012 не изменились с Windows Server 2008 R2. Дополнительные сведения см. [в разделе Требования к системе для Windows Server 2008 R2 с пакетом обновления 1 (SP1)](https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx) (https://www.microsoft.com/windowsserver2008/en/us/system-requirements.aspx).  
 
 Для некоторых компонентов могут быть установлены дополнительные требования. Например, функция клонирования виртуального контроллера домена требует, чтобы эмулятор PDC выполнял Windows Server 2012 и компьютер под управлением Windows Server 2012 с установленной ролью Hyper-V.  
 
-## <a name="BKMK_KnownIssues"></a>Известные проблемы
+## <a name="known-issues"></a><a name="BKMK_KnownIssues"></a>Известные проблемы
 
 В этом разделе перечислены некоторые из известных проблем, влияющих на AD DS установки в Windows Server 2012. Дополнительные сведения об известных проблемах см. в разделе [Устранение проблем при развертывании контроллера домена](../../ad-ds/deploy/Troubleshooting-Domain-Controller-Deployment.md).  
 
@@ -172,7 +171,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
    Если вы присоедините целевой сервер к домену и затем проведете установку с использованием смарт-карты, то установка завершится успешно.  
   
-- **Модуль ADDSDeployment не поддерживает 32-разрядные процессы.** При автоматизации развертывания и настройки Windows Server 2012 с помощью скрипта, включающего командлет Аддсдеплоймент и любого другого командлета, который не поддерживает машинные 64-разрядные процессы, сценарий может завершиться ошибкой с ошибкой, указывающей на Аддсдеплоймент. не удается найти командлет.  
+- **Модуль ADDSDeployment не поддерживает 32-разрядные процессы.** При автоматизации развертывания и настройки Windows Server 2012 с помощью скрипта, включающего командлет Аддсдеплоймент и любого другого командлета, который не поддерживает машинные 64-разрядные процессы, сценарий может завершиться ошибкой с ошибкой, указывающей на то, что не удается найти командлет Аддсдеплоймент.  
 
    В этом случае нужно запустить командлет ADDSDeployment отдельно от командлета, который не поддерживает собственные 64-разрядные процессы.  
 
@@ -230,7 +229,7 @@ Adprep.exe /forestprep /forest <forest name> /userdomain <user domain name> /use
 
    Если причиной ошибки стало указание локальной учетной записи администратора и пароля, для восстановления необходимо повторно установить операционную систему, [выполнить очистку метаданных](https://technet.microsoft.com/library/cc816907(WS.10).aspx) учетной записи контроллера домена, установка которой завершилась с ошибками, а затем повторить попытку установки AD DS с использованием учетных данных администратора домена. Это ошибочное состояние не может быть исправлено перезапуском сервера, потому что сервер определит, что AD DS установлена, даже если установка не была успешна завершена.  
 
-### <a name="BKMK_nonnormalDNSNameWarning"></a>Мастер настройки домен Active Directory Services выдает предупреждение, если не указано нормализованное DNS-имя
+### <a name="active-directory-domain-services-configuration-wizard-warns-when-a-non-normalized-dns-name-is-specified"></a><a name="BKMK_nonnormalDNSNameWarning"></a>Мастер настройки домен Active Directory Services выдает предупреждение, если не указано нормализованное DNS-имя
 
 Если вы создаете новый домен или лес и указываете DNS-имя домена, содержащее ненормализованные международные символы, то мастер настройки доменных служб Active Directory отображает предупреждение о том, что DNS-запросы имени могут завершиться ошибкой. Хотя DNS-имя домена указывается на странице конфигурации развертывания, предупреждение позднее выводится на странице проверки предварительных требований в мастере.  
 

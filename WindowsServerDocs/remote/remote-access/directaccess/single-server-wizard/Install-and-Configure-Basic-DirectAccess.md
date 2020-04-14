@@ -2,22 +2,18 @@
 title: Установка и настройка базового DirectAccess
 description: Эта статья является частью руководств по развертыванию одного сервера DirectAccess с помощью мастера начало работы для Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8228d1ed-0efc-4858-89df-eb2c426440f9
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: be9748b5dde39ebbfcfbcf347066a0a5ccc7fbc8
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: dcf87feca2b3827b4bb912f10c5276c747b918bd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80308944"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80819497"
 ---
 # <a name="install-and-configure-basic-directaccess"></a>Установка и настройка базового DirectAccess
 

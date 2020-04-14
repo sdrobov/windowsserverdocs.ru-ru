@@ -1,24 +1,20 @@
 ---
 title: pnputil
 description: Узнайте, как управлять хранилищем драйверов с помощью служебной программы pnputil. exe.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fab686b8-09d3-4f6c-afa2-630e6036f44c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: f20c60bfd9ae33497dd356c7797b9fb1d2b51d18
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 134e6ce4b1fc44450047de3287b7daac67da4b6a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372290"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80837517"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -30,7 +26,7 @@ ms.locfileid: "71372290"
 pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -39,13 +35,13 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 |-e|Задает перечисление всех сторонних INF-файлов.|
 |-f|Указывает принудительное удаление идентифицированного INF-файла. Нельзя использовать в сочетании с параметром **– i** .|
 |-i|Задает установку идентифицированного INF-файла. Нельзя использовать в сочетании с параметром **-f** .|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
 
 ## <a name="examples"></a>Примеры
 
 -   PnPUtil. exe-a А:\усбкам\усбкам. INF добавляет INF-файл, указанный параметром УСБКАМ. ФАЙЛУ
--   PnPUtil. exe-a c:\ drivers\*.inf добавляет все INF-файлы в к:\дриверс\
+-   PnPUtil. exe — a к:\дриверс\*. inf добавляет все INF-файлы в к:\дриверс\
 -   PnPUtil. exe-i-a А:\усбкам\усбкам. INF добавляет и устанавливает указанный драйвер.
 -   средство PnPUtil. exe – e перечисляет драйверы сторонних производителей.
 -   средство PnPUtil. exe-d oem0. INF удаляет указанный объект.
@@ -53,6 +49,6 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 ## <a name="additional-references"></a>Дополнительная справка
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Командой](popd.md)

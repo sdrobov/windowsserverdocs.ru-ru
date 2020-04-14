@@ -1,24 +1,20 @@
 ---
 title: tsprof
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для тспроф, который копирует сведения о конфигурации пользователя службы удаленных рабочих столов из одного пользователя в другой.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 27047868-b706-4208-b7e0-1437a2325dd3
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 77d0752f74d2f6031f83f805273650747d24cfee
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3b1037b6daff467a71517917d423e4cbe87a97f2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392316"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832477"
 ---
 # <a name="tsprof"></a>tsprof
 
@@ -32,7 +28,7 @@ ms.locfileid: "71392316"
 В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -41,10 +37,10 @@ tsprof /copy {/domain:<DomainName> | /local} [/profile:<path>] <Src_usr> <Dest_u
 tsprof /q {/domain:<DomainName> | /local} <UserName>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|/Update|Обновляет сведения о пути к профилю для <*имени пользователя*> в домене <*имя_домена*>*в <.*|
+|/update|Обновляет сведения о пути к профилю для <*имени пользователя*> в домене <*имя_домена*>*в <.*|
 |/Domain:\<имя_домена >|Указывает имя домена, в котором применяется операция.|
 |/Local|Применяет операцию только к локальным учетным записям пользователей.|
 |/profile:\<путь >|Указывает путь к профилю, отображаемый в службы удаленных рабочих столов расширениях в оснастке "Локальные пользователи и группы" и "пользователи и компьютеры Active Directory".|
@@ -53,12 +49,12 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
 |\<Src_usr >|Указывает имя пользователя, от которого необходимо скопировать сведения о конфигурации пользователя.|
 |\<Dest_usr >|Указывает имя пользователя, которому необходимо скопировать сведения о конфигурации пользователя.|
 |/q|Отображает текущий путь к профилю пользователя, для которого требуется запросить путь к профилю сервера.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 -   Команда **тспроф** доступна только в том случае, если служба роли сервера терминалов установлена на компьютере с windows Server 2008 или службой роли узла сеансов удаленных рабочих столов на компьютере под windows Server 2008 R2.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 -   Чтобы скопировать сведения о конфигурации пользователя из LocalUser1 в LocalUser2, введите:
     ```
     tsprof /copy /local LocalUser1 LocalUser2
@@ -68,6 +64,6 @@ tsprof /q {/domain:<DomainName> | /local} <UserName>
     tsprof /update /local /profile:c:\profiles LocalUser1
     ```
 
-#### <a name="additional-references"></a>Дополнительная справка
-[Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[службы удаленных рабочих столов &#40;Справочник по&#41; командам служб терминалов](remote-desktop-services-terminal-services-command-reference.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Командная строка синтаксиса командной строки](command-line-syntax-key.md)
+[службы удаленных рабочих столов (службы терминалов) Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)

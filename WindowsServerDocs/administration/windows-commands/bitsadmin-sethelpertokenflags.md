@@ -1,43 +1,40 @@
 ---
 title: битсадмин сеселпертокенфлагс
-description: Раздел команд Windows для **битсадмин сеселпертокенфлагс** — задает флаги использования для вспомогательного токена, связанного с заданием передачи BITS.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин сеселпертокенфлагс**, который задает флаги использования для вспомогательного токена, связанного с заданием передачи BITS.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 6047c63677fac3311634ababb675be5301b7f3b5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 77fac03dba2bb0686a98206405622e2eb398953e
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380585"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122976"
 ---
 # <a name="bitsadmin-sethelpertokenflags"></a>битсадмин сеселпертокенфлагс
 
-Задает флаги использования для [вспомогательного токена](/windows/desktop/bits/helper-tokens-for-bits-transfer-jobs) , связанного с заданием передачи BITS.
+Задает флаги использования для [вспомогательного токена](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs) , связанного с заданием передачи BITS.
 
-**BITS 3,0 и более ранних версий**: не поддерживается.
+> [!NOTE]
+> Эта команда не поддерживается в БИТАХ 3,0 и более ранних версиях.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetHelperTokenFlags <Job> <Flags>
+bitsadmin /sethelpertokenflags <job> <flags>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID.|
-|Флажки|Возможны следующие значения: 0x0001&mdash;вспомогательный токен используется для открытия локального файла задания отправки, создания или переименования временного файла задания загрузки, а также для создания или переименования файла ответов для задания отправки и ответа. 0x0002&mdash;вспомогательный токен используется для открытия удаленного файла задания передачи или загрузки SMB или в ответ на HTTP-сервер или запрос прокси-сервера для неявных учетных данных NTLM или Kerberos. Чтобы разрешить отправку учетных данных по протоколу HTTP, необходимо вызвать   `/SetCredentialsJob TargetScheme NULL NULL`.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| flags | Возможные значения вспомогательных маркеров, включая:<ul><li>**0x0001.** Используется для открытия локального файла задания отправки, для создания или переименования временного файла задания загрузки, а также для создания или переименования файла ответов для задания отправки и ответа.</li><li>**0x0002.** Используется для открытия удаленного файла задания передачи или загрузки SMB, а также в ответ на HTTP-сервер или запрос прокси-сервера для неявных учетных данных NTLM или Kerberos.</li></ul>Для отправки учетных данных по протоколу HTTP необходимо вызвать   `/setcredentialsjob targetscheme null null`. |
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

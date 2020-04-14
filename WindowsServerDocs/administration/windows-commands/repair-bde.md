@@ -1,24 +1,20 @@
 ---
 title: repair-bde
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 534dca1a-05f7-4ea8-ac24-4fe5f14f988a
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 817e5fb5cf032376ddfddb3a54f73411ac175def
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2107e5b7ef0339fc4f682632f3ef5a593578680a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384550"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835967"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -41,7 +37,7 @@ ms.locfileid: "71384550"
 repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–lf] [-f] [{-?|/?}]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -51,15 +47,15 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 |-RP|Определяет числовой пароль восстановления, который следует использовать для разблокировки тома. Эта команда также может быть указана как **-рековерипассворд**.|
 |-пароль|Указывает пароль, который следует использовать для разблокировки тома. Эта команда также может быть указана в качестве **пароля**|
 |-ключевой|Определяет пакет ключа восстановления, который можно использовать для разблокировки тома. Эта команда также может быть указана как **-кэйпаккаже**.|
-|-LF|Указывает путь к файлу, в котором будут храниться ошибки Repair-bde, предупреждения и информационные сообщения. Эта команда также может быть указана как **-logfile**.|
+|-lf|Указывает путь к файлу, в котором будут храниться ошибки Repair-bde, предупреждения и информационные сообщения. Эта команда также может быть указана как **-logfile**.|
 |-f|Принудительное отключение тома, даже если он не может быть заблокирован. Эта команда также может быть указана как **-Force**.|
 |-? или/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Если путь к пакету ключей не указан, **Repair-bde** выполнит поиск ключевого пакета на диске. Однако если жесткий диск поврежден, то **Repair-bde** не сможет найти пакет и предложит указать путь.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В следующем примере производится попытка восстановить диск C и запись содержимого с диска C на диск D с помощью файла ключа восстановления (Рековерикэй. bek), хранящегося на диске F, и запись результатов этой попытки в файл журнала (log. txt) на диске Z.
 ```
@@ -78,6 +74,6 @@ repair-bde C: D: -kp F:\RecoveryKeyPackage -rk F:\RecoveryKey.bek -f
 repair-bde C: D: -pw
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

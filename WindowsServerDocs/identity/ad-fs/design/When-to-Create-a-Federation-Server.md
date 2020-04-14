@@ -1,7 +1,6 @@
 ---
 ms.assetid: 824005ae-c3c1-459b-9baa-1660158918ab
 title: Создание сервера федерации
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 91c260dad1bd260a7dad7320fecd15e6472c50a3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b1e58e8940d024b2fbca9ada5d5fa430aeab70a7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407881"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858477"
 ---
 # <a name="when-to-create-a-federation-server"></a>Создание сервера федерации
 
@@ -31,7 +30,7 @@ ms.locfileid: "71407881"
   
 Когда сервер федерации помещается в корпоративную сеть партнера по учетным записям, его роль заключается в проверке подлинности учетных данных пользователя браузера, веб-службы или клиентов селектора удостоверений и отправке маркеров безопасности клиентам. Дополнительные сведения см. в разделе [Review the Role of the Federation Server in the Account Partner](Review-the-Role-of-the-Federation-Server-in-the-Account-Partner.md).  
   
-Когда сервер федерации помещается в корпоративную сеть партнера по ресурсам, его роль состоит в проверке подлинности пользователей на основе маркера безопасности, выданного сервером федерации в организации партнера по ресурсам, или его роли — перенаправлять запросы маркера из настроенные веб-приложения или веб-службы для организации партнера по учетным записям, к которому принадлежит клиент. Дополнительные сведения см. в разделе [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md).  
+Когда сервер федерации помещается в корпоративную сеть партнера по ресурсам, его роль состоит в проверке подлинности пользователей на основе маркера безопасности, выданного сервером федерации в организации партнера по ресурсам, или его роли — перенаправлять запросы маркера из настроенных веб-приложений или веб-служб в организацию партнера по учетным записям, к которой принадлежит клиент. Дополнительные сведения см. в разделе [Review the Role of the Federation Server in the Resource Partner](Review-the-Role-of-the-Federation-Server-in-the-Resource-Partner.md).  
   
 ## <a name="determine-which-ad-fs-design-to-deploy"></a>Определение разработки AD FS для развертывания  
 Серверы федерации в организации создаются при каждом развертывании следующих AD FS.  

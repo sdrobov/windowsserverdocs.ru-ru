@@ -2,32 +2,31 @@
 title: Тестовые отработки отказа должны выполняться по крайней мере ежемесячно, чтобы убедиться, что отработка отказа будет выполнена, а рабочие нагрузки виртуальных машин будут работать так, как ожидалось
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 57a8aa50-e59e-4a4b-8571-1099d5a8eee4
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: c7f7c0e1076358ef417b4d98632bd65257989df3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f99ccfe065015d1731978ba5e7f31c766c343efc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393457"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858937"
 ---
 # <a name="test-failovers-should-be-carried-out-at-least-monthly-to-verify-that-failover-will-succeed-and-that-virtual-machine-workloads-will-operate-as-expected-after-failover"></a>Тестовые отработки отказа должны выполняться по крайней мере ежемесячно, чтобы убедиться, что отработка отказа будет выполнена, а рабочие нагрузки виртуальных машин будут работать так, как ожидалось
 
->Область применения: Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и проверках см. в разделе [запуска наиболее проверок анализатором соответствия рекомендациям и Управление результатами проверок](https://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016| 
+|**Операционная система**|Windows Server 2016| 
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Warning|  
+|**Серьезности**|Предупреждение|  
 |**Категория**|Операции|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  

@@ -1,52 +1,48 @@
 ---
 title: термсервер запросов
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3b89d3b4-236f-4376-90b6-939a0ec4b288
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 95a2e102a147bd7ebee24995d1e1fcd4147f8174
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d63bd158dad74203aa7ee3fd4e43dffb97c4c873
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371888"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836927"
 ---
 # <a name="query-termserver"></a>термсервер запросов
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображается список всех серверов узлов сеансов удаленный рабочий стол в сети.
 Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 > ## <a name="syntax"></a>Синтаксис
 > ```
 > query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 > ```
-> ## <a name="parameters"></a>Параметры
+> ### <a name="parameters"></a>Параметры
 > 
 > |    Параметр     |                                                                        Описание                                                                         |
 > |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |   <ServerName>   |                                               Указывает имя, идентифицирующее сервер узла сеансов удаленных рабочих столов.                                               |
-> | /Domain: <Domain> | Указывает домен для запроса серверов терминалов. Не нужно указывать домен, если выполняется запрос к домену, в котором в данный момент работает. |
+> | /Domain:<Domain> | Указывает домен для запроса серверов терминалов. Не нужно указывать домен, если выполняется запрос к домену, в котором в данный момент работает. |
 > |     /аддресс     |                                                  Отображает адреса сети и узла для каждого сервера.                                                  |
 > |    /континуе     |                                              Предотвращает приостановку после отображения каждого экрана информации.                                               |
-> |        /?        |                                                            Отображение справки в командной строке.                                                            |
+> |        /?        |                                                            Отображает справку в командной строке.                                                            |
 > 
 > ## <a name="remarks"></a>Примечания
 > - **запрос термсервер** ищет в сети все подключенные серверы узлов сеансов удаленных рабочих столов и возвращает следующие сведения:
 >   - Имя сервера
 >   - Сеть (и адрес узла, если используется параметр/Аддресс)
->     ## <a name="BKMK_examples"></a>Примеров
+>     ## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 > - Чтобы отобразить сведения обо всех серверах узлов сеансов удаленных рабочих столов в сети, введите:
 >   ```
 >   query termserver
@@ -63,7 +59,7 @@ ms.locfileid: "71371888"
 >   ```
 >   query termserver Server3 /address
 >   ```
->   #### <a name="additional-references"></a>Дополнительные ссылки
->   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+>   ## <a name="additional-references"></a>Дополнительные материалы
+>   - [Раздел синтаксиса командной строки](command-line-syntax-key.md)
 >   [запрос](query.md)
->   [службы удаленных рабочих столов &#40;Справочник по&#41; командам служб терминалов](remote-desktop-services-terminal-services-command-reference.md)
+>   [службы удаленных рабочих столов (службы терминалов) Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)

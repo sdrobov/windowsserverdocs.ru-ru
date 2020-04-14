@@ -1,24 +1,20 @@
 ---
 title: list
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 69b105a1-9710-4a06-8102-38cc9e475ca5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a9ac8b19ecae30c339138f61a13c21147d4bcf1b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b36600ff4de16bf35b1c2067efac9b13957cefaa
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374654"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841037"
 ---
 # <a name="list"></a>list
 
@@ -32,12 +28,12 @@ ms.locfileid: "71374654"
 list { disk | partition | volume | vdisk }
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |диск|Отображает список дисков и сведения о них, например размер, объем доступного свободного пространства, диск является базовым или динамическим, а также указывает, использует ли диск стиль разделов основной загрузочной записи (MBR) или таблицы разделов GUID (GPT).|
-|раздел|Отображает разделы, перечисленные в таблице разделов текущего диска.|
+|partition|Отображает разделы, перечисленные в таблице разделов текущего диска.|
 |том|Отображает список базовых и динамических томов на всех дисках.|
 |виртуальный|Отображает список подключенных и/или выбранных виртуальных жестких дисков. Эта команда выводит список отключенных виртуальных жестких дисков, если они выбраны в данный момент. Однако для типа диска задано значение неизвестно, пока не присоединен виртуальный жесткий диск. Виртуальный жесткий диск, помеченный звездочкой (*), имеет фокус.</br>Примечание. Эта команда доступна только для Windows 7 и Windows Server 2008 R2.|
 
@@ -47,7 +43,7 @@ list { disk | partition | volume | vdisk }
 -   Объект, помеченный звездочкой (*), имеет фокус.
 -   При перечислении дисков, если диск отсутствует, его номер диска добавляется с префиксом M. Например, первый отсутствующий диск имеет номер M0.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 ```
 list disk
@@ -56,7 +52,7 @@ list volume
 list vdisk
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

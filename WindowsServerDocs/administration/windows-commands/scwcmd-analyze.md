@@ -1,24 +1,20 @@
 ---
 title: Анализ команду scwcmd
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0259271b-be5b-48d7-a51d-8b9b6786efb4
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 14426ae33144ae9bdd8f8154b4be74a3f088606b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1b0657523b49f8db444b6a48a41e3078d6351a34
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371260"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835237"
 ---
 # <a name="scwcmd-analyze"></a>Scwcmd: analyze
 
@@ -33,7 +29,7 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 <ResultDir>] [/u:<UserName>] [/pw:<Password>] [/t:<Threads>] [/l] [/e]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -47,13 +43,13 @@ scwcmd analyze [[[/m:<ComputerName> | /ou:<Ou>] /p:<Policy>] | /i:<ComputerList>
 |/t:\<потоков >|Указывает количество одновременных операций анализа, которые должны поддерживаться во время анализа (DefaultValue = 40, MinValue = 1, MaxValue = 1000).|
 |/l|Приводит к записи в журнал процесса анализа. Для каждого анализируемого компьютера будет создан один файл журнала. Файлы журнала будут храниться в том же каталоге, что и файлы результатов. Используйте параметр **/o** , чтобы указать каталог для файлов результатов.|
 |/e|Регистрирует событие в журнале событий приложений, если обнаружено несоответствие.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Чтобы проанализировать политику безопасности для файла файл. XML, введите:
 ```
@@ -75,6 +71,6 @@ scwcmd analyze /i:webpolicy.xml /t:100 /o:\\resultserver\results
 scwcmd analyze /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.xml /u:DomainAdmin
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

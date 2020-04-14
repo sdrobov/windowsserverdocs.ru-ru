@@ -4,22 +4,23 @@ ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 11/21/2018
-ms.openlocfilehash: 621d4175894bb235475155507a896a251dec0f7e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 50e35939031a74173fb031cf963af97bf8bb6dba
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386341"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856357"
 ---
 # <a name="upgrade-a-guarded-fabric-to-windows-server-2019"></a>Обновление защищенной структуры до Windows Server 2019
 
-> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 В этой статье описываются действия, необходимые для обновления существующей защищенной структуры с Windows Server 2016, Windows Server версии 1709 или Windows Server версии 1803 до Windows Server 2019.
 
-## <a name="whats-new-in-windows-server-2019"></a>Новые возможности в Windows Server 2019
+## <a name="whats-new-in-windows-server-2019"></a>Новые возможности Windows Server 2019
 
 При запуске защищенной структуры на Windows Server 2019 можно воспользоваться преимуществами нескольких новых функций:
 
@@ -33,7 +34,7 @@ ms.locfileid: "71386341"
 
 **Привязка узла TPM** . для наиболее безопасных рабочих нагрузок, в которых требуется, чтобы ЭКРАНИРОВАНная виртуальная машина выполнялась только на первом узле, где она была создана, но без других, можно ПРИвязать виртуальную машину к этому узлу, используя доверенный платформенный модуль узла. Это лучше всего использовать для рабочих станций привилегированного доступа и филиалов, а не для общих рабочих нагрузок центра обработки данных, которые необходимо перенести между узлами.
 
-## <a name="compatibility-matrix"></a>Таблица совместимости
+## <a name="compatibility-matrix"></a>Матрица совместимости
 
 Перед обновлением защищенной структуры до Windows Server 2019 просмотрите следующую таблицу совместимости, чтобы узнать, поддерживается ли конфигурация.
 
@@ -54,7 +55,7 @@ ms.locfileid: "71386341"
 
 Чтобы обновить кластер HGS, выполните следующие действия на каждом узле кластера, по одному узлу за раз:
 
-1.  Удалите сервер HGS из кластера, выполнив `Clear-HgsServer` команду в командной строке PowerShell с повышенными привилегиями. Этот командлет удалит реплицированное хранилище HGS, веб-сайты HGS и узел из отказоустойчивого кластера.
+1.  Удалите сервер HGS из кластера, запустив `Clear-HgsServer` в командной строке PowerShell с повышенными привилегиями. Этот командлет удалит реплицированное хранилище HGS, веб-сайты HGS и узел из отказоустойчивого кластера.
 2.  Если сервер HGS является контроллером домена (конфигурацией по умолчанию), необходимо запустить `adprep /forestprep` и `adprep /domainprep` на первом обновляемом узле, чтобы подготовить домен для обновления ОС. Дополнительные сведения см. в [документации по обновлению домен Active Directory Services](https://docs.microsoft.com/windows-server/identity/ad-ds/deploy/upgrade-domain-controllers#supported-in-place-upgrade-paths) .
 3.  Выполните [обновление на месте](../../get-started-19/install-upgrade-migrate-19.md) до Windows Server 2019.
 4.  Выполните команду [Initialize-HgsServer](guarded-fabric-configure-additional-hgs-nodes.md) , чтобы присоединить узел к кластеру.
@@ -72,7 +73,7 @@ Set-HgsServerVersion  v2
 1.  Если вы используете политики целостности кода управления приложениями в Защитнике Windows на сервере (всегда при использовании аттестации TPM), перед попыткой обновления сервера убедитесь, что политика находится в режиме аудита или отключена. [Сведения об отключении политики WDAC](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/disable-windows-defender-application-control-policies)
 2.  Следуйте инструкциям в статье [Обновление Windows Server](../../upgrade/upgrade-overview.md) , чтобы обновить узел до Windows Server 2019. Если узел Hyper-V является частью отказоустойчивого кластера, можно использовать [последовательное обновление операционной системы кластера](../../failover-clustering/Cluster-Operating-System-Rolling-Upgrade.md).
 3.  [Протестируйте и повторно включите](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/audit-windows-defender-application-control-policies) политику управления приложениями в Защитнике Windows, если она была включена до обновления.
-4.  Выполните `Get-HgsClientConfiguration` команду, чтобы проверить, имеет ли **ишостгуардед = true**значение, означающее, что узел успешно передает аттестацию на сервер HGS.
+4.  Запустите `Get-HgsClientConfiguration`, чтобы проверить, что **ишостгуардед = true**, что означает, что узел успешно передает аттестацию на сервер HGS.
 5.  Если вы используете аттестацию доверенного платформенного модуля, может потребоваться [повторно записать базовые показатели доверенного платформенного модуля или политики целостности кода](guarded-fabric-add-host-information-for-tpm-trusted-attestation.md) после обновления для передачи аттестации.
 6.  Снова запустите запуск экранированных виртуальных машин на узле.
 

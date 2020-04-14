@@ -1,24 +1,20 @@
 ---
 title: Wbadmin Delete системстатебаккуп
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для Wbadmin Delete системстатебаккуп, которая удаляет указанные резервные копии состояния системы.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 707d37cb-448d-4542-b6ac-1fc89e749788
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f324cba3fcdae8639009395c4df734a2db6b814
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e184a40612024f81e1c6ab93de8cec4a63eee578
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362521"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829897"
 ---
 # <a name="wbadmin-delete-systemstatebackup"></a>Wbadmin Delete системстатебаккуп
 
@@ -27,7 +23,7 @@ ms.locfileid: "71362521"
 Удаление указанных резервных копий состояния системы. Если указанный том содержит резервные копии, отличные от резервных копий состояния системы локального сервера, эти резервные копии не будут удалены.
 
 > [!NOTE]
-> Cистема архивации данных Windows Server не выполняет резервное копирование или восстановление кустов пользователя реестра (HKEY_CURRENT_USER) в рамках резервного копирования состояния системы или восстановления состояния системы.
+> Cистема архивации данных Windows Server не выполняет резервное копирование и восстановление кустов пользователя реестра (HKEY_CURRENT_USER) в ходе резервного копирования состояния системы или восстановления состояния системы.
 
 Чтобы удалить резервную копию состояния системы с помощью этой подкоманды, необходимо быть членом группы " **Операторы архива** " или " **Администраторы** ", либо вам должны быть делегированы соответствующие разрешения. Кроме того, необходимо запустить программу **Wbadmin** из командной строки с повышенными привилегиями. (Чтобы открыть командную строку с повышенными привилегиями, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.)
 
@@ -46,7 +42,7 @@ wbadmin delete systemstatebackup
 > [!IMPORTANT]
 > Необходимо указать только один из этих параметров: **-кипверсионс**, **-Version**или **-делетеолдест**.
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -57,7 +53,7 @@ wbadmin delete systemstatebackup
 |-Machine|Указывает компьютер, резервную копию состояния системы которого необходимо удалить. Полезен, если резервное копирование нескольких компьютеров выполнялось в одном и том же месте. Следует использовать, если указан параметр **-backupTarget** .|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы удалить резервную копию состояния системы, созданную 31 марта 2013 в 10:00 AM, введите:
 ```
@@ -72,7 +68,7 @@ wbadmin delete systemstatebackup -keepVersions:3
 wbadmin delete systemstatebackup -backupTarget:f -deleteOldest
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

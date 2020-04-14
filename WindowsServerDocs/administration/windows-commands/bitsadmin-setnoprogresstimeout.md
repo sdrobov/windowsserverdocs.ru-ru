@@ -1,24 +1,20 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: Раздел команд Windows для **битсадмин сетнопрогресстимеаут** . задает время в секундах, в течение которого служба пытается переместить файл после возникновения временной ошибки.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин сетнопрогресстимеаут**, который задает время в секундах, в течение которого служба пытается переместить файл после возникновения временной ошибки.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7fac50d9-cc6b-46a4-a96f-fab751ee1756
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 761d0d76a2c70af9d4ad68aa564c1a9816691d0d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8adff95b0dbae68634db2e248d4493549c5ac85d
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380496"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122886"
 ---
 # <a name="bitsadmin-setnoprogresstimeout"></a>bitsadmin setnoprogresstimeout
 
@@ -27,29 +23,32 @@ ms.locfileid: "71380496"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetNoProgressTimeout <Job> <TimeOutvalue>
+bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|тимеаутвалуе|Число, представленное в секундах.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| тимеаутвалуе | Продолжительность времени, в течение которого служба BITS ожидает передачи файла после первой ошибки в секундах. |
 
 ## <a name="remarks"></a>Примечания
 
--   Интервал времени ожидания не выполняется, когда задание встречает временную ошибку.
--   Интервал времени ожидания останавливается или сбрасывается при успешном передаче байта данных.
--   Если интервал времени ожидания выполнения превышает *тимеаутвалуе*, задание помещается в неустранимую ошибку.
+- Интервал времени ожидания "не выполняется" начинается, когда задание сталкивается с первой временной ошибкой.
 
-## <a name="BKMK_examples"></a>Примеров
+- Интервал времени ожидания останавливается или сбрасывается при успешном передаче байта данных.
 
-В следующем примере устанавливается значение времени ожидания "нет выполнения" для задания с именем *мидовнлоаджоб* равным 20 секундам.
+- Если интервал времени ожидания "не выполнено" превышает значение *тимеаутвалуе*, задание помещается в неустранимую ошибку.
+
+## <a name="examples"></a>Примеры
+
+В следующем примере для задания с именем *мидовнлоаджоб*устанавливается значение времени ожидания "не выполняется", равное 20 секундам.
+
 ```
-C:\>bitsadmin /SetNoProgressTimeout myDownloadJob 20
+C:\>bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

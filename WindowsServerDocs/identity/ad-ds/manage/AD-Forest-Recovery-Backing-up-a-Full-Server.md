@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса Active Directory — резервное копирование всего сервера
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 ms.technology: identity-adds
-ms.openlocfilehash: 4377c1d993b4f6d30cf8ca8a7d149b741d7f8d2f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1579f8e88ea852ddf3f973b51b1b6ceed7c50a00
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71369358"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80824281"
 ---
 # <a name="ad-forest-recovery---backing-up-a-full-server"></a>Восстановление леса Active Directory — резервное копирование всего сервера  
 
@@ -22,7 +21,7 @@ ms.locfileid: "71369358"
 
 Для подготовки к восстановлению леса рекомендуется выполнить полное резервное копирование сервера, так как оно может быть восстановлено на другом оборудовании или на другом экземпляре операционной системы.  С помощью cистема архивации данных Windows Server можно выполнить полное резервное копирование сервера. 
 
-## <a name="windows-server-backup"></a>Система архивации данных Windows Server
+## <a name="windows-server-backup"></a>Cистема архивации данных Windows Server
 
 Cистема архивации данных Windows Server не устанавливается по умолчанию. В Windows Server 2016 и Windows Server 2012 R2 установите его, выполнив следующие действия.
 
@@ -85,7 +84,7 @@ Wbadmin. exe — это служебная программа командной
 
    ![Установка резервной копии](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup5.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 24c4b9bb-928a-4118-acf1-5eb06c6b08e5
-title: Настройка AD FS 2016 и Azure MFA
-description: ''
+title: Настройка AD FS 2016 и Azure MFA
 ms.author: billmath
 author: billmath
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 01/28/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b658644d1ba7cec1b02a2a51331cd7b7152efc77
-ms.sourcegitcommit: 75e611fd5de8b8aa03fc26c2a3d5dbf8211b8ce3
+ms.openlocfilehash: d519b47d048068ad53e4f11a6b64621ab5f232b1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77145493"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855317"
 ---
 # <a name="configure-azure-mfa-as-authentication-provider-with-ad-fs"></a>Настройка Azure MFA в качестве поставщика проверки подлинности с помощью AD FS
 
@@ -56,7 +55,7 @@ Set-AdfsClaimsProviderTrust -AnchorClaimType "http://schemas.xmlsoap.org/ws/2005
 
 ### <a name="azure-mfa-as-additional-authentication-to-office-365"></a>Azure MFA в качестве дополнительной проверки подлинности для Office 365
 
-Ранее, если вы хотели использовать Azure MFA в качестве дополнительного метода проверки подлинности в AD FS для Office 365 или других проверяющих сторон, лучшим вариантом было Настройка Azure AD для выполнения составного MFA, в котором основная проверка подлинности выполняется локально в AD FS и MFA является tr игжеред по Azure AD. Теперь можно использовать Azure MFA в качестве дополнительной проверки подлинности в AD FS если параметру Domain SupportsMfa присвоено значение $True.  
+Ранее, если вы хотели использовать Azure MFA в качестве дополнительного метода проверки подлинности в AD FS для Office 365 или других проверяющих сторон, лучшим вариантом было Настройка Azure AD для выполнения составного многофакторного MFA, в котором основная проверка подлинности выполняется в локальной среде AD FS и MFA активируется Azure AD. Теперь можно использовать Azure MFA в качестве дополнительной проверки подлинности в AD FS если параметру Domain SupportsMfa присвоено значение $True.  
 
 Как описано выше, любой пользователь AD FS, который еще не зарегистрировался (настроенные сведения о проверке MFA), должен получить запрос на странице с настроенной AD FS ошибкой, чтобы посетить [https://aka.ms/mfasetup](https://aka.ms/mfasetup) для настройки сведений о проверке, а затем повторить попытку AD FS входа.  
 

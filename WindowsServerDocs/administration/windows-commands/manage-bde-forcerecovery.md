@@ -1,24 +1,20 @@
 ---
 title: Управление — BDE форцерековери
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eecae37c-c9a3-46c5-b615-a0ace1f1d778
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a17d6f276e2ee1ddde82a207a7097928720a3ed8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fc22e4eddca19344340af0f36b2f8b200c1950ff
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374077"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840117"
 ---
 # <a name="manage-bde-forcerecovery"></a>Manage-bde: форцерековери
 
@@ -32,7 +28,7 @@ ms.locfileid: "71374077"
 manage-bde –forcerecovery <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -42,14 +38,14 @@ manage-bde –forcerecovery <Drive> [-computername <Name>] [{-?|/?}] [{-help|-h}
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 В следующем примере показано использование команды **-форцерековери** для запуска BitLocker в режиме восстановления на диске C.
 ```
 manage-bde –forcerecovery C:
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Управление — BDE](manage-bde.md)

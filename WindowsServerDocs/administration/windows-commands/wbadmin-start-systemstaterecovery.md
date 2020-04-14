@@ -1,24 +1,20 @@
 ---
 title: Wbadmin start systemstaterecovery
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для Wbadmin start systemstaterecovery, которая выполняет восстановление состояния системы в указанном расположении и из резервной копии.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 208b1be9-3452-4aba-bb49-46bc587fca96
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ae534eed26629be264b698869edc57232e2b571
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 581ad6fe3591e549c3f89e4c95d2f8ab0cde059c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362221"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829497"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>Wbadmin start systemstaterecovery
 
@@ -59,7 +55,7 @@ wbadmin start systemstaterecovery
 [-quiet]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -72,7 +68,7 @@ wbadmin start systemstaterecovery
 |— перезагрузка|Указывает перезагрузить систему в конце операции восстановления состояния системы. Этот параметр допустим только для восстановления в исходное расположение. Мы не рекомендуем использовать этот параметр, если необходимо выполнить шаги после операции восстановления.|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 - Чтобы выполнить восстановление состояния системы резервной копии с 03/31/2013 в 9:00 утра, введите:  
   ```
@@ -83,8 +79,8 @@ wbadmin start systemstaterecovery
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Start-вбсистемстатерековери](https://technet.microsoft.com/library/jj902449.aspx)

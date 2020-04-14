@@ -1,23 +1,19 @@
 ---
 title: Требования к оборудованию для целевого компьютера
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2ab2608095ffe6c0f2006f9f52cce106ff68cffc
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: a566a8f342ba076ee402d1f19e35f99c58b931e4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313253"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80817877"
 ---
 # <a name="hardware-requirements-for-the-target-computer"></a>Требования к оборудованию для целевого компьютера
 
@@ -44,7 +40,7 @@ ms.locfileid: "80313253"
 |Component|Описание|  
 |---------------|-----------------|  
 |Сетевой адаптер|Адаптер Gigabit Ethernet (10/100/1000baseT PHY/MAC)|  
-|Интернет|Для использования некоторых возможностей может потребоваться доступ к Интернету (может быть платным) и учетная запись Windows Live® ID.|  
+|Интернет|Для некоторых функций может потребоваться доступ к Интернету (может взиматься плата) или учетная запись Windows Live&reg; ID.|  
 |Поддерживаемые операционные системы на клиентских компьютерах|— Windows 7<br />— Windows 8<br />— Macintosh OS X 10,5 – 10,8.<br /><br /> **Примечание.** Для некоторых функций требуются профессиональные или более поздние версии.<br /><br /> 1 ГБ свободного места на жестком диске (часть этого пространства будет освобождена после установки)|  
 |Маршрутизатор|Маршрутизатор или брандмауэр, поддерживающий преобразование сетевых адресов (NAT) для IPv4-адресов|  
 |Дополнительные требования|Устройство чтения DVD-дисков|  

@@ -1,24 +1,20 @@
 ---
 title: Настройка команду scwcmd
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6528b9dc-3d82-4228-b734-ed717458d74c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43bd70c33294b09f63b9718e4c0f2cdc6cace156
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ac4333628c33b60daabbb6cff55575d6ec8cd5f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384290"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835187"
 ---
 # <a name="scwcmd-configure"></a>Scwcmd: configure
 
@@ -32,7 +28,7 @@ ms.locfileid: "71384290"
 scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<ComputerList>] [/u:<UserName>] [/pw:<Password>] [/t:<Threads>]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -43,13 +39,13 @@ scwcmd configure [[[/m:<ComputerName> | /ou:<OuName>] /p:<Policy>] | /i:<Compute
 |/u:\<имя пользователя >|Указывает альтернативные учетные данные пользователя для использования при настройке удаленного компьютера. Значение по умолчанию — вошедший в систему пользователь.|
 |/ПВ:\<пароль >|Указывает альтернативные учетные данные пользователя для использования при настройке удаленного компьютера. По умолчанию используется пароль пользователя, выполнившего вход.|
 |/t:\<потоков >|Указывает количество одновременных операций настройки, которые должны поддерживаться в процессе настройки (DefaultValue = 40, MinValue = 1, MaxValue = 1000).|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Чтобы настроить политику безопасности для файла файл. XML, введите:
 ```
@@ -68,6 +64,6 @@ scwcmd configure /i:campusmachines.xml /t:100
 scwcmd configure /ou:OU=WebServers,DC=Marketing,DC=ABCCompany,DC=com /p:webpolicy.xml /u:DomainAdmin
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,24 +1,20 @@
 ---
 title: Запрос SC
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ac365f89-4b20-4de6-a582-b204c5e7d0eb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d2f3f603ad173b5ab90bc56a9a4e589c0fe9d8a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 38d83fa07e9f85f3a5a4b86388bbed41fcf326d1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384345"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835287"
 ---
 # <a name="sc-query"></a>Запрос SC
 
@@ -34,21 +30,21 @@ ms.locfileid: "71384345"
 sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |       Параметр        |                                                                                                                          Описание                                                                                                                          |
 |------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |     \<ServerName >      |                       Указывает имя удаленного сервера, на котором расположена служба. Имя должно использовать формат UNC (например, \\\\MyServer). Чтобы запустить SC. exe локально, опустите этот параметр.                        |
 |     \<ServiceName >     |                                      Указывает имя службы, возвращенное операцией **жеткэйнаме** . Этот параметр **запроса** не используется совместно с другими параметрами **запроса** (кроме *ServerName*).                                      |
 |     Type = {драйвер      |                                                                                                                            служба                                                                                                                            |
-|       Введите = {владеет       |                                                                                                                             "Предоставить общий доступ"                                                                                                                             |
-|     состояние = {Active     |                                                                                                                           Активный                                                                                                                            |
+|       Введите = {владеет       |                                                                                                                             общий доступ                                                                                                                             |
+|     состояние = {Active     |                                                                                                                           inactive                                                                                                                            |
 | буфсизе = \<BufferSize > |                     Задает размер (в байтах) буфера перечисления. Размер буфера по умолчанию составляет 1 024 байт. Необходимо увеличить размер буфера перечисления, когда отображение, полученное от запроса, превышает 1 024 байт.                      |
 |   RI = \<Ресумеиндекс >   | Указывает номер индекса, с которого начинается или возобновляется перечисление. Значение по умолчанию — **0** (ноль). Используйте этот параметр вместе с параметром **буфсизе =** , если запрос возвращает больше данных, чем может отобразить буфер по умолчанию. |
-|  Group = \<GroupName >   |                                                                             Указывает группу служб для перечисления. По умолчанию все группы перечислены (**Group = ""** ).                                                                              |
-|           /?           |                                                                                                             Отображение справки в командной строке.                                                                                                              |
+|  Group = \<GroupName >   |                                                                             Указывает группу служб для перечисления. По умолчанию перечисляются все группы (* * Group = * *).                                                                              |
+|           /?           |                                                                                                             Отображает справку в командной строке.                                                                                                              |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 - Без пробела между параметром и его значением (то есть **Type = владеет**, а не **типом = владеет**) операция завершится ошибкой.
 - Операция **запроса** отображает следующие сведения о службе: service_name (имя подраздела реестра службы), тип, состояние (а также недоступные состояния), WIN32_EXIT_B, SERVICE_EXIT_B, контрольная точка и WAIT_HINT.
@@ -62,7 +58,7 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   sc query bufsize= 1822 ri= 79
   ```
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы отобразить сведения только для активных служб, введите одну из следующих команд:
 ```
@@ -98,6 +94,6 @@ sc query type= driver
 sc query type= driver group= ndis
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

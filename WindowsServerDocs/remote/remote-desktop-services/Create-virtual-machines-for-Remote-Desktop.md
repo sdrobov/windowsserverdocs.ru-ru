@@ -1,28 +1,24 @@
 ---
 title: Создание виртуальных машин для удаленного рабочего стола
 description: Создайте виртуальные машины, чтобы разместить компоненты удаленного рабочего стола в облаке.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 08/01/2016
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b0f62d6f-0915-44ca-afef-be44a922e20e
 author: lizap
 manager: dongill
-ms.openlocfilehash: 6db9973402578736b2e1283dcfa405642591eccc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fa17c472e3311e4e34ac7b2176d0045886463274
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387980"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818467"
 ---
 # <a name="create-virtual-machines-for-remote-desktop"></a>Создание виртуальных машин для удаленного рабочего стола
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Следуйте инструкциям ниже, чтобы создать виртуальные машины в среде клиента, которые будут использоваться для выполнения ролей, служб и компонентов Windows Server 2016, необходимых для развертывания по размещению рабочих столов.   
   
@@ -60,7 +56,7 @@ ms.locfileid: "71387980"
    1. На портале Azure щелкните **Обзор > Группы ресурсов**, выберите группу ресурсов для развертывания, а затем — подсистему балансировки нагрузки, созданную для развертывания.
    2. Добавьте серверный пул для подсистемы балансировки нагрузки, чтобы отправить трафик в:
        1. Нажмите **Серверный пул** и **Добавить**.
-       2. Введите **имя** и выберите  **\+ Добавить виртуальную машину**.
+       2. Введите **имя** и выберите **\+ Добавить виртуальную машину**.
        3. Нажмите **Группа доступности** и **WebGwAvSet**.
        4. Нажмите **Виртуальные машины**, **Contoso WebGw1**, **Выбрать**, **ОК**, и **ОК**.
    3. Добавьте пробу, чтобы подсистеме балансировки нагрузки было известно, какие машины активны:

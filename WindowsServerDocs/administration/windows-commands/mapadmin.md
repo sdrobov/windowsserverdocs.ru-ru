@@ -1,24 +1,20 @@
 ---
 title: mapadmin
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b17332c7-8622-4223-9c43-2fb9cf4d992d
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fc4b76c1989298ea83c480b9c838ce0fc18fef5f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5ea60f4d9753ed90c0d13ee48289b011aeafe6b0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71373760"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80839677"
 ---
 # <a name="mapadmin"></a>mapadmin
 
@@ -57,14 +53,14 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 -p &lt;пароль&gt; указывает пароль пользователя. Если указать параметр **-u** , но опустить параметр **-p** , будет предложено ввести пароль пользователя.
 Конкретное действие, выполняемое **мападмин** , зависит от указанного аргумента команды:
 
-## <a name="parameters"></a>Параметры
-### <a name="start"></a>start
+### <a name="parameters"></a>Параметры
+### <a name="start"></a>начало
 запускает службу сопоставление имен пользователей.
 
 ### <a name="stop"></a>stop
 Останавливает службу сопоставление имен пользователей.
 
-### <a name="config"></a>файле
+### <a name="config"></a>config
 Задает общие параметры для сопоставление имен пользователей. С этим аргументом команды доступны следующие параметры: **-r &lt;dddd&gt;:&lt;hh&gt;:&lt;mm&gt;** — указывает интервал обновления для баз данных Windows и NIS в днях, часах и минутах. Минимальный интервал — 5 минут.
 **-i {да | нет}** — включает простое сопоставление (**Да**) или выключено (**нет**). По умолчанию используется простое сопоставление.
 **Добавить** — создает новое сопоставление для пользователя или группы. С этим аргументом команды доступны следующие параметры:
@@ -127,7 +123,7 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 
 **листдомаинмапс** — список доменов Windows, сопоставленных с NIS-доменами или файлами паролей и групп.
 
-## <a name="notes"></a>Заметки
+## <a name="notes"></a>Примечания
 -   Если не указать аргумент команды, **мападмин** отображает текущие параметры для сопоставление имен пользователей.
 -   для всех параметров, в которых указывается имя пользователя или группы, можно использовать следующие форматы:
 -   для пользователей Windows используйте форму &lt;домен&gt;\\&lt;имя пользователя&gt;, \\\\&lt;компьютер&gt;\\&lt;имя пользователя&gt;, \\&lt;компьютер&gt;\\&lt;имя пользователя&gt;или &lt;компьютер&gt;\\&lt;имя пользователя&gt;
@@ -135,5 +131,5 @@ mapadmin [<computer>] [-u <user> [-p <password>]] listdomainmaps
 -   для пользователей UNIX используйте форму &lt;Нисдомаин&gt;\\&lt;имя пользователя&gt;, &lt;имя пользователя&gt;@&lt;Нисдомаин&gt;, имя пользователя &lt;&gt;@PCNFSили ПКНФС\\&lt;имя пользователя&gt;
 -   для групп UNIX используйте форму &lt;Нисдомаин&gt;\\&lt;GroupName&gt;, &lt;GroupName&gt;@&lt;Нисдомаин&gt;, &lt;GroupName&gt;@PCNFSили ПКНФС\\&lt;GroupName&gt;
 
-## <a name="additional-references"></a>Дополнительные ссылки
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

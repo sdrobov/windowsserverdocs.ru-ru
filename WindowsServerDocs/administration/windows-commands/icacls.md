@@ -1,24 +1,20 @@
 ---
 title: icacls
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 403edfcc-328a-479d-b641-80c290ccf73e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: 494c87073cfd78c7f5e17c72d4c65bec33a49b98
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 59d10b9ed681b7e0af120798dde9f200182d67d3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375487"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842267"
 ---
 # <a name="icacls"></a>icacls
 
@@ -33,7 +29,7 @@ icacls <FileName> [/grant[:r] <Sid>:<Perm>[...]] [/deny <Sid>:<Perm>[...]] [/rem
 icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c] [/l] [/q]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -56,7 +52,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 |/Restore \<Аклфиле > [/c] [/l] [/q]|Применяет сохраненные списки DACL из *аклфиле* к файлам в указанном каталоге. Требуется параметр *каталога* .|
 |/инхеританцелевел: [e\|d\|r]|Задает уровень наследования: <br>  **e** — включает енхеританце <br>**d** — отключение наследования и копирование записей ACE <br>**r** — удаляет все унаследованные ACE
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Идентификаторы SID могут быть в виде числовых или понятных имен. Если используется числовая форма, прикреплять символ **&#42;** -шаблон к началу идентификатора SID.
 -   **icacls** сохраняет канонический порядок записей ACE следующим образом:  
@@ -127,7 +123,7 @@ icacls <Directory> [/substitute <SidOld> <SidNew> [...]] [/restore <ACLfile> [/c
 
     **(NP)** : не распространять наследование
 
-## <a name="examples"></a>Примеры.
+## <a name="examples"></a>Примеры
 
 Чтобы сохранить списки DACL для всех файлов в каталоге C:\Windows и его подкаталогах в файле Аклфиле, введите:
 
@@ -141,7 +137,7 @@ icacls c:\windows\* /save aclfile /t
 icacls c:\windows\ /restore aclfile
 ```
 
-Чтобы предоставить пользователю User1 разрешения на удаление и запись DAC в файл с именем "test1", введите:
+Чтобы предоставить пользователю User1 разрешения на удаление и запись DAC в файл с именем Test1, введите:
 
 ```
 icacls test1 /grant User1:(d,wdac)
@@ -153,6 +149,6 @@ icacls test1 /grant User1:(d,wdac)
 icacls test2 /grant *S-1-1-0:(d,wdac)
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

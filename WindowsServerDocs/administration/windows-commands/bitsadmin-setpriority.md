@@ -1,51 +1,46 @@
 ---
 title: bitsadmin setpriority
-description: Раздел команд Windows для **битсадмин SetPriority** — задает приоритет указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин SetPriority**, который задает приоритет указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 90788363-01a2-4d7c-a560-a3eba45b5e9e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 60564350928f917ca1861684e042304d5d380426
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9348680a61649b938267b3277de9aa5aa521361f
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380438"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81122769"
 ---
 # <a name="bitsadmin-setpriority"></a>bitsadmin setpriority
-
-
 
 Задает приоритет указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetPriority <Job> <Priority>
+bitsadmin /setpriority <job> <priority>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|Priority|Принимает одно из следующих значений:</br>— ПЕРЕДНИЙ ПЛАН</br>-ВЫСОКИЙ</br>— ОБЫЧНАЯ</br>-НИЗКИЙ УРОВЕНЬ|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| приоритет | Задает приоритет задания, включая:<ul><li>FOREGROUND</li><li>HIGH</li><li>NORMAL</li><li>LOW</li></ul> |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a>Примеры
 
 В следующем примере задается приоритет для задания с именем *мидовнлоаджоб* в значение Обычная.
+
 ```
-C:\>bitsadmin /SetPriority myDownloadJob NORMAL
+C:\>bitsadmin /setpriority myDownloadJob NORMAL
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

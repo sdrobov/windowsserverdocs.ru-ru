@@ -1,27 +1,23 @@
 ---
 title: Создание учетной записи пользователя панели мониторинга MultiPoint
-ms.custom: na
 description: Создание учетной записи для использования с панелью мониторинга
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: eb9d7da1-eb5e-42c0-8d59-bb6d7b007ea9
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: b4e5fb85ae1dcaf7bd698f052e990e6ac1ac8dbc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b94c02fe514b4f7a694b908600127eda7c664c09
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389768"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859797"
 ---
 # <a name="create-a-multipoint-dashboard-user-account"></a>Создание учетной записи пользователя панели мониторинга MultiPoint
-Создайте учетные записи пользователей панели мониторинга MultiPoint для тех пользователей, которые будут регулярно получать доступ к станциям, но не будут управлять системой служб MultiPoint. Пользователи с учетными записями пользователей панели мониторинга MultiPoint могут запускать большинство приложений и сохранять файлы, но не могут запускать диспетчер MultiPoint. Чтобы узнать, кто имеет доступ к панели мониторинга MultiPoint, выберите вкладку **Пользователи** в диспетчере MultiPoint. Учетные записи MultiPoint Dashboard отображаются в столбце Тип учетной записи как **Пользователь MultiPoint Dashboard**.  
+Учетные записи пользователей панелей мониторинга MultiPoint создаются для тех пользователей, которым необходим регулярный доступ к станциям без возможности управления системой служб MultiPoint. Пользователи с учетными записями пользователей панели мониторинга MultiPoint могут запускать большинство приложений и сохранять файлы, но не могут запускать диспетчер MultiPoint. Чтобы узнать, кто имеет доступ к панели мониторинга MultiPoint, в диспетчере MultiPoint перейдите на вкладку **Пользователи** . учетные записи панели мониторинга MultiPoint отображаются в столбце **тип учетной записи** как **пользователь панели мониторинга MultiPoint**.  
   
 Если предполагается, что ваши пользователи MultiPoint Services будут хранить частные документы в Windows, каждый из них должен входить в систему MultiPoint Services, используя уникальное имя пользователя и пароль.  
   

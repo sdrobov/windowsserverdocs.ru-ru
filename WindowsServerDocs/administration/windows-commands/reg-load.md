@@ -1,24 +1,20 @@
 ---
 title: Загрузить reg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 3b0b2b1b-f510-4108-9e9d-7057e924aa6e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: db661e311e3fe8c393750716de5dab375e7817f4
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 140c6b51b9f88081a8686ebebbc9400f241b5ef6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384698"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836387"
 ---
 # <a name="reg-load"></a>Загрузить reg
 
@@ -34,7 +30,7 @@ ms.locfileid: "71384698"
 reg load KeyName FileName
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -42,22 +38,22 @@ reg load KeyName FileName
 |\<имя файла >|Указывает имя и путь к загружаемому файлу. Этот файл должен быть создан заранее с помощью операции **reg save** и расширения ВИЧ.|
 |/?|Отображает справку по **загрузке reg** в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 В следующей таблице перечислены возвращаемые значения для операции **загрузки reg** .
 
 |Значение|Описание|
 |-----|-----------|
 |0|Выполнено|
-|1|Сбой|
+|1|Отказ|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы загрузить файл с именем Темфиве. ВИЧ в ключ Хклм\темфиве, введите:
 ```
 REG LOAD HKLM\TempHive TempHive.hiv
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

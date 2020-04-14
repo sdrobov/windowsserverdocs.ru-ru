@@ -1,51 +1,47 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Раздел команд Windows для **битсадмин реплацеремотепрефикс** . все файлы в задании, для которых удаленный URL-адрес начинается с *олдпрефикс* , изменены для использования *невпрефикс*.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин реплацеремотепрефикс**, при необходимости изменяется удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d0e0abb1-bdb4-4c74-abbc-16c809f5fd81
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ee896a337b571487797967d3ce0bf1f1b17e7507
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0cea0108a292815e31e893e91dc4079305c1da9a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380801"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80849817"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
-Все файлы в задании с удаленным URL-адресом, начинающимся с *олдпрефикс* , изменяются для использования *невпрефикс*.
+При необходимости изменяет удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /ReplaceRemotePrefix <Job> <OldPrefix> <NewPrefix
+bitsadmin /replaceremoteprefix <job> <oldprefix> <newprefix>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|олдпрефикс|Существующий префикс URL-адреса|
-|невпрефикс|Новый префикс URL-адреса|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| олдпрефикс | Существующий префикс URL-адреса. |
+| невпрефикс | Новый префикс URL-адреса. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере изменяются все файлы в задании с именем *мидовнлоаджоб* , для которых удаленный URL-адрес начинается с *http://stageserver* до *http://prodserver* .
+В следующем примере изменяется удаленный URL-адрес для всех файлов в задании с именем *мидовнлоаджоб*, от *http://stageserver* до *http://prodserver* .
 
 ```
-C:\>bitsadmin /ReplaceRemotePrefix myDownloadJob http://stageserver http://prodserver
+C:\>bitsadmin /replaceremoteprefix myDownloadJob http://stageserver http://prodserver
 ```
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

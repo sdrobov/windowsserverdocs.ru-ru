@@ -6,16 +6,16 @@ ms.prod: windows-server
 ms.technology: networking-ras
 ms.topic: article
 ms.date: 07/24/2019
-ms.author: lizross, v-tea
-author: eross-msft
+ms.author: v-tea
+author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 30a8e3053f263ffad3be940a52e845fb7159dde1
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 74cda6a899d69a951c34a9a88e2f51ef1590b621
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80313295"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859497"
 ---
 # <a name="advanced-features-of-always-on-vpn"></a>Дополнительные возможности Always On VPN
 
@@ -32,7 +32,7 @@ ms.locfileid: "80313295"
 
 |Параметр  |Описание  |
 |---------|---------|
-|Устойчивость сервера и балансировка нагрузки     |В средах, требующих высокой доступности или поддерживающих большое количество запросов, можно повысить производительность и устойчивость удаленного доступа, используя балансировку нагрузки между несколькими серверами, на которых выполняется сервер политики сети (NPS), и включить Кластеризация сервера удаленного доступа.<p>Связанные документы:<ul><li>[Балансировка нагрузки прокси-сервера NPS](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[Развертывание удаленного доступа в кластере](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
+|Устойчивость сервера и балансировка нагрузки     |В средах, требующих высокой доступности или поддерживающих большое количество запросов, можно повысить производительность и устойчивость удаленного доступа, используя балансировку нагрузки между несколькими серверами, на которых выполняется сервер политики сети (NPS), и включить кластеризацию сервера удаленного доступа.<p>Связанные документы:<ul><li>[Балансировка нагрузки прокси-сервера NPS](../../../../../networking/technologies/nps/nps-manage-proxy-lb.md)</li><li>[Развертывание удаленного доступа в кластере](https://docs.microsoft.com/windows-server/remote/remote-access/ras/cluster/deploy-remote-access-in-cluster)</li></ul>        |
 |Устойчивость географических сайтов     |Для географического расположения на основе IP-адреса можно использовать глобальный диспетчер трафика с DNS в Windows Server 2016. Для более надежной географической балансировки нагрузки можно использовать решения для глобальной серверной балансировки нагрузки, например диспетчер трафика Microsoft Azure.<p>Связанные документы:<ul><li>[Общие сведения о диспетчере трафика](https://docs.microsoft.com/azure/traffic-manager/traffic-manager-overview)</li><li>[диспетчер трафика Microsoft Azure](https://azure.microsoft.com/services/traffic-manager)</li></ul>         |
 
 ## <a name="advanced-authentication"></a>Расширенная проверка подлинности
@@ -67,7 +67,7 @@ ms.locfileid: "80313295"
 |Версия операционной системы |Release  |
 |---------|---------|
 |Windows Server версии 1903  |[KB4501375](https://support.microsoft.com/help/4501375/windows-10-update-kb4501375) |
-|Windows Server 2019<br />Windows Server, версия 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
+|Windows Server 2019<br />Windows Server, версия 1809  |[KB4505658](https://support.microsoft.com/help/4505658/windows-10-update-kb4505658)  |
 |Windows Server версии 1803  |[KB4507466](https://support.microsoft.com/help/4507466/windows-10-update-kb4507466)  |
 |Windows Server версии 1709  |[KB4507465](https://support.microsoft.com/help/4507465/windows-10-update-kb4507465)  |
 |Windows Server 2016, версия 1607  |[KB4503294](https://support.microsoft.com/help/4503294/windows-10-update-kb4503294) |
@@ -76,7 +76,7 @@ ms.locfileid: "80313295"
 
 1. Установите обновления Windows по мере их появления.
 1. Убедитесь, что все используемые сертификаты VPN-клиента и сервера RRAS имеют записи CDP и что сервер RRAS может связаться с соответствующими списками отзыва сертификатов.
-1. На сервере RRAS используйте командлет PowerShell **Set-впнауспротокол** , чтобы настроить параметр **рутцертификатенаметоакцепт** .<br /><br />
+1. На сервере RRAS используйте командлет PowerShell **Set-впнауспротокол** , чтобы настроить параметр **рутцертификатенаметоакцепт** .<p>
    В следующем примере перечисляются команды для этого. В примере **CN = корневой центр сертификации Contoso** представляет различающееся имя корневого центра сертификации. 
    ``` powershell
    $cert1 = ( Get-ChildItem -Path cert:LocalMachine\root | Where-Object -FilterScript { $_.Subject -Like "*CN=Contoso Root Certification Authority*" } )

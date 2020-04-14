@@ -1,28 +1,24 @@
 ---
 title: bitsadmin create
-description: Раздел команд Windows для **битсадмин Create** — создает задание перемещения с заданным отображаемым именем.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин Create**, который создает задание перемещения с заданным отображаемым именем.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9a8c53af-900b-4c24-9265-5b8b08213fac
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f6d641d44c56ea4ff11f48a725367de7dcf472a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 4a922d9f15aff0a9bd064a7e987920adf3a9107d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381806"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850817"
 ---
 # <a name="bitsadmin-create"></a>bitsadmin create
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Создает задание перемещения с заданным отображаемым именем. Загрузка заданий передавать данные с сервера в локальный файл. Отправка заданий передача данных из локального файла на сервер. Задания отправки и ответа передают данные из локального файла на сервер и получают файл ответов с сервера.
 
@@ -31,19 +27,17 @@ ms.locfileid: "71381806"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /create [type] DisplayName
+bitsadmin /create [type] displayname
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------|--------|
-|type|-    **/download** передает данные с сервера в локальный файл.<br />-    **/upload** передает данные из локального файла на сервер.<br />-    **/уплоад-репли** передает данные из локального файла на сервер и получает ответный файл с сервера.<br />— Этот параметр по умолчанию имеет значение **/download** , если не указано в командной строке.|
-|DisplayName|Отображаемое имя, назначенное только что созданному заданию.|
+| Параметр | Описание |
+| ------- | -------- |
+| тип | -  **/download** передает данные с сервера в локальный файл.<p>-  **/upload** передает данные из локального файла на сервер.<p>-  **/уплоад-репли** передает данные из локального файла на сервер и получает ответный файл с сервера.<p>По умолчанию этот параметр имеет значение **/download** , если не указано в командной строке. Кроме того, типы  **/Upload** и **/УПЛОАД-РЕПЛИ** недоступны в битах 1,2 и более ранних версиях. |
+| displayName | Отображаемое имя, назначенное только что созданному заданию. |
 
-**BITS 1,2 и более ранних версий**: Типы/upload и/Уплоад-репли недоступны.
-
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Создает задание скачивания с именем *мидовнлоаджоб*.
 
@@ -51,6 +45,6 @@ bitsadmin /create [type] DisplayName
 C:\>bitsadmin /create myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные ссылки
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

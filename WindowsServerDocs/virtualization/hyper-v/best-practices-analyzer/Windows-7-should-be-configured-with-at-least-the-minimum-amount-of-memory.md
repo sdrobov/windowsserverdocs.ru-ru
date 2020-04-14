@@ -2,37 +2,36 @@
 title: Для Windows 7 следует настроить по крайней мере минимальный объем памяти.
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям ".
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 1b81ec0b-ceca-4fba-83ea-90d5f1d9bda8
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: fee0fb772ff0f3c2344ed3ef4ef2b9786480ff8e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 9f29ff11b601bf3fe841e2634be6096e59d78cd5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393225"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854977"
 ---
 # <a name="windows-7-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Для Windows 7 следует настроить по крайней мере минимальный объем памяти.
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и сканировании см. в разделе [Анализатор соответствия рекомендациям](https://go.microsoft.com/fwlink/?LinkId=122786).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
 |**Категория**|Конфигурация|  
 
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.
 
-## <a name="issue"></a>Проблемы  
+## <a name="issue"></a>Проблема  
   
 *Для виртуальной машины под Windows 7 настраивается меньше минимального объема ОЗУ (512 МБ).*  
   
@@ -64,7 +63,7 @@ ms.locfileid: "71393225"
   
 2.  Щелкните правой кнопкой мыши **Windows PowerShell** и выберите команду **Запуск от имени администратора**.  
   
-3.  Выполните эту команду после замены \<MyVM > именем своей виртуальной машины:  
+3.  Выполните эту команду после замены \<MyVM > именем виртуальной машины:  
   
 ```  
 Set-VMMemory <MyVM> -StartupBytes 512MB  

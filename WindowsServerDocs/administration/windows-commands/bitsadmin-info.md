@@ -1,54 +1,48 @@
 ---
 title: bitsadmin info
-description: Раздел команд Windows для **отображает сводную информацию об указанном задании.** -битсадмин сведения
-ms.custom: na
+description: Раздел команд Windows для **битсадмин info**, в котором отображаются сводные сведения об указанном задании.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5c306677-0d64-41c0-8276-5bba7750cecb
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3b6710d73860315fcd13670669871cd310ffb41c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 20b8358caba3e0c07b0c985cb24e8f7bde43b06c
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381078"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123119"
 ---
 # <a name="bitsadmin-info"></a>bitsadmin info
-
-
 
 Отображает сводную информацию об указанном задании.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /Info <Job> [/verbose]
+bitsadmin /info <job> [/verbose]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
+| Параметр | Описание |
+| -------------- | -------------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| /verbose | Необязательно. Предоставляет подробные сведения о каждом задании. |
 
-## <a name="remarks"></a>Примечания
-
-Используйте параметр/Verbose для предоставления подробных сведений о задании.
-
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекаются сведения о задании с именем *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /Info myDownloadJob
+C:\>bitsadmin /info myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [bitsadmin info](bitsadmin-info.md)

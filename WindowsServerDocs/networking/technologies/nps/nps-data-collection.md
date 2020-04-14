@@ -9,21 +9,20 @@ ms.custom: it-pro
 ms.prod: windows-server
 ms.technology: networking
 ms.topic: article
-ms.assetid: ''
 ms.date: 05/01/2018
-ms.openlocfilehash: d393ad4af81ee1c24fa5f28b8a3b05217e7b34dd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: def65c174ff608301f8d4f35ef1ce19818103e61
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71396299"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859377"
 ---
 # <a name="network-policy-server-user-data-collection"></a>Сбор данных пользователя сервера политики сети
 
 В этом документе объясняется, как найти сведения о пользователе, собираемые сервером политики сети (NPS) в случае, если вы хотите удалить его.
 
 >[!Note]
->Если вы заинтересованы в просмотре или удалении персональных данных, ознакомьтесь с рекомендациями Майкрософт по запросам на [тему данных для сайта GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-windows) . Если вы ищете общие сведения о GDPR, см. [раздел GDPR на портале доверия службы](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
+>Если вы заинтересованы в просмотре или удалении персональных данных, ознакомьтесь с рекомендациями Майкрософт по [запросам на тему данных для сайта GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-dsr-windows) . Если вы ищете общие сведения о GDPR, см. [раздел GDPR на портале доверия службы](https://servicetrust.microsoft.com/ViewPage/GDPRGetStarted).
 
 ## <a name="information-collected-by-nps"></a>Сведения, собираемые NPS
 
@@ -43,8 +42,8 @@ ms.locfileid: "71396299"
 
 Если данные учета настроены для SQL Server, запросите все записи, где User_Name = `'<username>'`.
 
-Если данные учета настроены для файла журнала, выполните поиск в `<username>` файле журнала, чтобы найти все записи журнала.
+Если данные учета настроены для файла журнала, найдите в файле журнала `<username>`, чтобы найти все записи журнала.
 
 Записи журнала событий служб политики сети и доступа считаются дубликатами данных учета, и их не нужно собирать.
 
-Если данные учета не включены, то записи попыток проверки подлинности пользователя NPS можно получить из журнала событий политики сети и службы доступа, выполнив поиск `<username>`.
+Если данные учета не включены, то записи попыток проверки подлинности пользователя NPS можно получить из журнала событий политики сети и службы доступа, выполнив поиск по `<username>`.

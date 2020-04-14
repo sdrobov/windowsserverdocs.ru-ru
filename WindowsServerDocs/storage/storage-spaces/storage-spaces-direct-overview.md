@@ -2,7 +2,7 @@
 title: Обзор локальных дисковых пространств
 ms.prod: windows-server
 ms.author: cosdar
-ms.manager: dongill
+manager: dongill
 ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
@@ -10,18 +10,18 @@ ms.date: 06/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: Общие сведения о Локальные дисковые пространства, компоненте Windows Server, который позволяет выполнять кластерные серверы с внутренним хранилищем в аппаратно-определенном решении для хранения.
 ms.localizationpriority: medium
-ms.openlocfilehash: 4e47adcebf7da87e9d3c96812f5d7d90ca00601b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b032d286398b3c1719d290ca83da8bbc9c6b9f85
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402839"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859137"
 ---
 # <a name="storage-spaces-direct-overview"></a>Обзор локальных дисковых пространств
 
->Относится к: Windows Server 2019, Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server 2016
 
-Локальные дисковые пространства используют стандартные серверы с локально подключенными дисками для создания программно-определяемого хранилища с высоким уровнем доступности и масштабируемости, причем стоимость такого хранилища значительно ниже стоимости традиционных массивов SAN или NAS. Ее конвергенция или архитектура с поддержкой технологии Hyper-in значительно упрощает закупку и развертывание, в то же время такие функции, как кэширование, уровни хранилища и очисткиное кодирование, а также новейшие нововведения оборудования, такие как сетевые подключения RDMA и накопители NVMe, доставляют Непревзойденная эффективность и производительность.
+Локальные дисковые пространства используют стандартные серверы с локально подключенными дисками для создания программно-определяемого хранилища с высоким уровнем доступности и масштабируемости, причем стоимость такого хранилища значительно ниже стоимости традиционных массивов SAN или NAS. Ее конвергенция или архитектура с поддержкой технологии Hyper-in значительно упрощает закупку и развертывание, в то время как такие функции, как кэширование, уровни хранилища и очисткиное кодирование, а также новейшие нововведения оборудования, такие как сетевые подключения RDMA и накопители NVMe, обеспечивают непревзойденную эффективность и производительность.
 
 Локальные дисковые пространства входит в сборки Windows Server 2019 Datacenter, Windows Server 2016 Datacenter и [Windows Server Insider Preview](https://insider.windows.com/for-business-getting-started-server/). 
 
@@ -29,7 +29,7 @@ ms.locfileid: "71402839"
 
 |       |       |
 |   -   |   -   |
-| **Общие сведения**<br><ul><li>Обзор (вы здесь)</li><li>[Общие сведения о кэше](understand-the-cache.md)</li><li>[Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)<li>[Рекомендации по симметрии диска](drive-symmetry-considerations.md)</li><li>[Принцип работы и отслеживание повторной синхронизации хранилища](understand-storage-resync.md)</li><li>[Общие сведения о кворуме кластеров и пулов](understand-quorum.md)</li><li>[Наборы кластеров](cluster-sets.md)</li> | **План**<br><ul><li>[Требования к оборудованию](storage-spaces-direct-hardware-requirements.md)</li><li>[Использование кэша чтения в памяти CSV](csv-cache.md)</li><li>[Выбор дисков](choosing-drives.md)</li><li>[Планирование томов](plan-volumes.md)</li><li>[Использование кластеров гостевых виртуальных машин](storage-spaces-direct-in-vm.md)</li><li>[Аварийное восстановление](storage-spaces-direct-disaster-recovery.md)</li> |
+| **Общие сведения**<br><ul><li>Обзор (вы здесь)</li><li>[Общие сведения о кэше](understand-the-cache.md)</li><li>[Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)<li>[Рекомендации по симметрии диска](drive-symmetry-considerations.md)</li><li>[Принцип работы и отслеживание повторной синхронизации хранилища](understand-storage-resync.md)</li><li>[Общие сведения о кворуме кластеров и пулов](understand-quorum.md)</li><li>[Наборы кластеров](cluster-sets.md)</li> | **Планирование**<br><ul><li>[Требования к оборудованию](storage-spaces-direct-hardware-requirements.md)</li><li>[Использование кэша чтения в памяти CSV](csv-cache.md)</li><li>[Выбор дисков](choosing-drives.md)</li><li>[Планирование томов](plan-volumes.md)</li><li>[Использование кластеров гостевых виртуальных машин](storage-spaces-direct-in-vm.md)</li><li>[Аварийное восстановление](storage-spaces-direct-disaster-recovery.md)</li> |
 | **Развертывание**<br><ul><li>[Развертывание локальных дисковых пространств](deploy-storage-spaces-direct.md)</li><li>[Создание томов](create-volumes.md)</li><li>[Вложенная устойчивость](nested-resiliency.md)</li><li>[Настройка кворума](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Обновление кластера Локальных дисковых пространств в Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[Общие сведения о постоянной памяти и ее развертывании](deploy-pmem.md)</li> | **Управление**<br><ul><li>[Управление с помощью Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Добавление серверов или дисков](add-nodes.md)</li><li>[Перевод сервера в автономный режим для обслуживания](maintain-servers.md)</li><li>[Удаление серверов](remove-servers.md)</li><li>[Увеличение размеров томов](resize-volumes.md)</li><li>[Удаление томов](delete-volumes.md)</li><li>[Обновление встроенного ПО дисков](../update-firmware.md)</li><li>[Журнал производительности](performance-history.md)</li><li>[Разграничение выделения томов](delimit-volume-allocation.md)</li><li>[Использование Azure Monitor в кластере с поддержкой технологии Hyper-in](configure-azure-monitor.md)</li> |
 | **Устранение неполадок**<br><ul><li>[Сценарии устранения неполадок](troubleshooting-storage-spaces.md)</li><li>[Устранение неполадок работоспособности и рабочих состояний](storage-spaces-states.md)</li><li>[Сбор диагностических данных с помощью Локальные дисковые пространства](data-collection.md)</li><li>[Управление работоспособностью памяти класса хранилища](Storage-class-memory-health.md)</li> | **Последние записи в блоге**<br><ul><li>[13 700 000 операций ввода-вывода с Локальные дисковые пространства: Новая запись отрасли для инфраструктуры с технологией Hyper-in](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Инфраструктура с технологией Hyper-in в Windows Server 2019 — отсчет времени отсчета начинается прямо сейчас!](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Пять извещений от конференции Windows Server](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10 000 Локальные дисковые пространства кластеры и подсчет...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
 
@@ -66,7 +66,7 @@ ms.locfileid: "71402839"
 
 Локальные дисковые пространства предусматривают два разных варианта развертывания:
 
-### <a name="converged"></a>конвергентное;
+### <a name="converged"></a>Схождение выполнено
 
 **Хранение и вычисление в отдельных кластерах.** При конвергентном развертывании, также известном как дезагрегированное, масштабируемый файловый сервер (SoFS) размещается поверх локальных дисковых пространств для предоставления подключенного к сети хранилища посредством общих папок SMB3. Это позволяет масштабировать вычислительные ресурсы и рабочие нагрузки независимо от кластера хранилища, особенно в масштабных развертываниях, например Hyper-V IaaS (инфраструктура как услуга), для поставщиков услуг и крупных предприятий.
 
@@ -104,7 +104,7 @@ ms.locfileid: "71402839"
 
 **Общие тома кластера.** Файловая система CSV объединяет все тома ReFS в единое пространство имен, доступное с любого сервера, так что для каждого сервера все тома представляются как локально подключенные.
 
-**Масштабируемый файловый сервер.** Этот последний уровень необходим только в конвергентных развертываниях. Он обеспечивает удаленный доступ к файлам со стороны клиентов, например другого кластера Hyper-V, через сеть по протоколу SMB3. Таким образом локальные дисковые пространства по сути превращаются в подключенное к сети хранилище (NAS).
+**масштабируемый файловый сервер.** Этот последний уровень необходим только в конвергентных развертываниях. Он обеспечивает удаленный доступ к файлам со стороны клиентов, например другого кластера Hyper-V, через сеть по протоколу SMB3. Таким образом локальные дисковые пространства по сути превращаются в подключенное к сети хранилище (NAS).
 
 ## <a name="customer-stories"></a>Истории клиентов
 
@@ -112,7 +112,7 @@ ms.locfileid: "71402839"
 
 Посетите [Microsoft.com/HCI](https://www.microsoft.com/hci) , чтобы прочитать свои истории:
 
-[![Grid из логотипов клиента](media/storage-spaces-direct-in-windows-server-2016/customer-stories.png)](https://www.microsoft.com/hci)
+[![ная сетка логотипов клиента](media/storage-spaces-direct-in-windows-server-2016/customer-stories.png)](https://www.microsoft.com/hci)
 
 ## <a name="management-tools"></a>Средства управления
 
@@ -120,16 +120,16 @@ ms.locfileid: "71402839"
 
 | Имя | Графический или Командная строка? | Оплачивается или включается? |
 |-----------------|----------------------------|-------------------|
-| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Графической    | Включено |
-| Диспетчер сервера & диспетчер отказоустойчивости кластеров                                 | Графической    | Включено |
-| Windows PowerShell                                                        | Командная строка | Включено |
-| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Графической    | Платная     |
+| [Windows Admin Center](../../manage/windows-admin-center/overview.md)     | Графической    | Включена. |
+| Диспетчер сервера & диспетчер отказоустойчивости кластеров                                 | Графической    | Включена. |
+| Windows PowerShell                                                        | Командная строка | Включена. |
+| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) <br>[Operations Manager & (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Графической    | Платная     |
 
 ## <a name="get-started"></a>Начало работы
 
 Попробуйте локальные дисковые пространства [в Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/) или скачайте [ознакомительную версию Windows Server](https://go.microsoft.com/fwlink/?linkid=842602) с лицензией на 180 дней.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)
 - [Реплика хранилища](../storage-replica/storage-replica-overview.md)

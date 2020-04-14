@@ -1,28 +1,22 @@
 ---
-title: Начать восстановление
-description: Раздел команд Windows для **Begin Restore** — запускает сеанс восстановления и выдает событие предварительного **восстановления** для задействованных модулей записи.
-ms.custom: na
+title: начать восстановление
+description: Раздел команд Windows для **Begin Restore**, который запускает сеанс восстановления и выдает событие предварительного восстановления для задействованных модулей записи.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f629bbd5-315d-4cbb-9cb0-9d75cf617092
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4170300b2ab797a5a95a4884f59435e873bdd89e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a42d79abe26265d223ac5c51b0979612a036384f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71382002"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850987"
 ---
-# <a name="begin-restore"></a>Начать восстановление
-
-
+# <a name="begin-restore"></a>начать восстановление
 
 Запускает сеанс восстановления и выдает событие, выполняемое перед **восстановлением** , в вовлеченные модули записи.
 
@@ -32,6 +26,6 @@ ms.locfileid: "71382002"
 begin restore
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

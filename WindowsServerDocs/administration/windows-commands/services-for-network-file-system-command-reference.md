@@ -1,34 +1,25 @@
 ---
 title: Справочник по командам службы для NFS
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 06c81f88-a672-4405-9b73-085f8933114c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 247adb10411970129303c04b7d8790ad06e8c583
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c0a231d5ae5de91a27a077e930d9fcd95cfdbdc8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384058"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834577"
 ---
 # <a name="services-for-network-file-system-command-reference"></a>Справочник по командам службы для NFS
-
-
-
 Службы для NFS предоставляют решение для совместного использования файлов, позволяющее передавать файлы между компьютерами с операционными системами Windows Server 2008 и UNIX по протоколу NFS.
-
 Ниже приведен список программ командной строки NFS.
-
-|Command|Описание|
+|Команда|Описание|
 |-------|-----------|
 |[mapadmin](mapadmin.md)|Управление сопоставление имен пользователей для служб Майкрософт для сетевой файловой системы.|
 |[Подключение](mount.md)|Подключите сетевые общие папки NFS.|

@@ -1,7 +1,6 @@
 ---
 ms.assetid: 65ed5956-6140-4e06-8d99-8771553637d1
 title: Понижение уровня контроллеров домена и доменов (уровень 200)
-description: ''
 author: MicrosoftGuyJFlo
 ms.author: joflore
 manager: mtillman
@@ -9,12 +8,12 @@ ms.date: 11/14/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e3f320b67196a2400ebedbaeaf0a5b59969400e8
-ms.sourcegitcommit: b7f55949f166554614f581c9ddcef5a82fa00625
+ms.openlocfilehash: b8c5502f50b065e8c75d0167328868ac129dfad1
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72588096"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825434"
 ---
 # <a name="demoting-domain-controllers-and-domains"></a>Понижение роли контроллеров домена и доменов
 
@@ -36,15 +35,15 @@ ms.locfileid: "72588096"
 |||  
 |-|-|  
 |**Командлеты Аддсдеплоймент и ServerManager**|Аргументы (аргументы, выделенные**жирным шрифтом** , являются обязательными. Аргументы, выделенные*курсивом* , можно указать с помощью Windows PowerShell или мастера настройки доменных служб Active Directory).|  
-|Uninstall-Аддсдомаинконтроллер|-SkipPreChecks<br /><br />*-Локаладминистраторпассворд*<br /><br />-Confirm<br /><br />***-Credential***<br /><br />-DemoteOperationMasterRole<br /><br />*-Днсделегатионремовалкредентиал*<br /><br />-Force<br /><br />*-Форцеремовал*<br /><br />*-ИгнореластдЦиндомаинмисматч*<br /><br />*-Игнореластднссерверфорзоне*<br /><br />*-Ластдомаинконтроллериндомаин*<br /><br />-Norebootoncompletion<br /><br />*-Ремовеаппликатионпартитионс*<br /><br />*-Ремоведнсделегатион*<br /><br />-RetainDCMetadata|  
-|Uninstall-WindowsFeature/Remove-WindowsFeature|***-Имя***<br /><br />***-IncludeManagementTools***<br /><br />*-Restart*<br /><br />-Remove<br /><br />-Force<br /><br />-ComputerName<br /><br />-Credential<br /><br />-LogPath<br /><br />-Vhd|  
+|Uninstall-Аддсдомаинконтроллер|-SkipPreChecks<p>*-Локаладминистраторпассворд*<p>-Confirm<p>***-Credential***<p>-DemoteOperationMasterRole<p>*-Днсделегатионремовалкредентиал*<p>-Force<p>*-Форцеремовал*<p>*-ИгнореластдЦиндомаинмисматч*<p>*-Игнореластднссерверфорзоне*<p>*-Ластдомаинконтроллериндомаин*<p>-Norebootoncompletion<p>*-Ремовеаппликатионпартитионс*<p>*-Ремоведнсделегатион*<p>-RetainDCMetadata|  
+|Uninstall-WindowsFeature/Remove-WindowsFeature|***-Имя***<p>***-IncludeManagementTools***<p>*-Restart*<p>-Remove<p>-Force<p>-ComputerName<p>-Credential<p>-LogPath<p>-Vhd|  
   
 > [!NOTE]  
 > Аргумент **-credential** требуется только в том случае, если вы еще не выполнили вход в качестве члена группы "Администраторы предприятия" (при понижении роли последнего контроллера домена в домене) или группы "Администраторы домена" (при понижении роли реплики контроллера домена). Аргумент **-includemanagementtools** необходим, только если вы хотите удалить все служебные программы управления доменными службами Active Directory.  
   
 ## <a name="demote"></a>Понижение роли  
   
-### <a name="remove-roles-and-features"></a>Удалить роли и компоненты
+### <a name="remove-roles-and-features"></a>Удалить роли и функции
 
 В диспетчере сервера имеется два интерфейса для удаления роли доменных служб Active Directory.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "72588096"
 
 Командлеты ServerManager **uninstall-WindowsFeature** и **Remove-WindowsFeature** не позволяют удалить роль AD DS, пока контроллер домена не будет понижен.
   
-### <a name="server-selection"></a>Server Selection
+### <a name="server-selection"></a>Выбор сервера
 
 ![Мастер удаления ролей и компонентов Выбор целевого сервера](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_ServerSelection2.png)  
 
@@ -118,7 +117,7 @@ Uninstall-windowsfeature
 -lastdomaincontrollerindomain <{ $true | false }>  
 ```
 
-### <a name="warnings"></a>предупреждения;
+### <a name="warnings"></a>Warnings
 
 ![Мастер настройки домен Active Directory Services — влияние ролей FSMO учетных данных](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Warnings.png)  
 
@@ -170,7 +169,7 @@ Uninstall-windowsfeature
 > [!WARNING]
 > Поскольку два предыдущих варианта не подтверждают пароль, будьте предельно осторожны: пароль не отображается.
 
-Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется. Пример
+Можно также ввести защищенную строку в качестве переменной с преобразованным открытым текстом, хотя использовать такой вариант настоятельно не рекомендуется. Например:
 
 ```
 -localadministratorpassword (convertto-securestring "Password1" -asplaintext -force)
@@ -179,7 +178,7 @@ Uninstall-windowsfeature
 > [!WARNING]
 > Ввод или хранение пароля в виде открытого текста не рекомендуется. Любой пользователь, выполняющий эту команду в сценарии или заглядывающий через ваше плечо, сможет узнать пароль локального администратора этого компьютера. Зная пароль, он получит доступ ко всем данным на нем и сможет персонифицировать сам сервер.
 
-### <a name="confirmation"></a>Подтверждение операций
+### <a name="confirmation"></a>Подтверждение
 
 ![Мастер настройки служб домен Active Directory. параметры проверки](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_RRW_TR_Confirmation.png)
 
@@ -193,7 +192,7 @@ Uninstall-ADDSDomainController
 
 Для просмотра информации о конфигурации используйте необязательный аргумент **Whatif** с командлетом **Uninstall-ADDSDomainController**. Это позволит просмотреть явные и неявные значения аргументов командлета.
 
-Пример
+Например:
 
 ![Пример удаления PowerShell — Аддсдомаинконтроллер](media/Demoting-Domain-Controllers-and-Domains--Level-200-/ADDS_PSUninstall.png)
 

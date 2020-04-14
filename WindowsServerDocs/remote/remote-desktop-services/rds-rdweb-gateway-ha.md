@@ -1,27 +1,23 @@
 ---
 title: Реализация высокой доступности в веб-интерфейсе шлюза и веб-доступа к удаленным рабочим столам
 description: Содержит пошаговые инструкции по установке серверов веб-доступа к удаленным рабочим столам и шлюза в развертывании служб удаленных рабочих столов (RDS).
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 author: lizap
 ms.author: elizapo
 ms.date: 11/08/2016
 manager: dongill
-ms.openlocfilehash: 5838480847e5f86a03f264a0ece1f8d4097597cc
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e98bbda5460311dd379eab6f5a5bde0ec3845d5c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71387235"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860287"
 ---
 # <a name="add-high-availability-to-the-rd-web-and-gateway-web-front"></a>Реализация высокой доступности в веб-интерфейсе шлюза и веб-доступа к удаленным рабочим столам
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 
 Можно развернуть ферму с веб-доступом к удаленным рабочим столам и шлюзом удаленных рабочих столов, чтобы повысить доступность и масштаб развертывания служб удаленных рабочих столов (RDS) под управлением Windows Server. 
@@ -99,7 +95,7 @@ ms.locfileid: "71387235"
     3.  Для параметра **Схема** выберите **Общедоступный**.
     4.  В разделе **Общедоступный IP -адрес** щелкните **Выберите общедоступный IP-адрес**, а затем выберите существующий общедоступный IP-адрес или создайте новый.
     5.  Выберите соответствующие **подписку**, **группу ресурсов** и **расположение**.
-    6.  Нажмите кнопку **Создать**.  
+    6.  Нажмите кнопку **Create** (Создать).  
 2. Создайте [пробу](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/) для отслеживания активности серверов.  
     1.  На портале Azure выберите **Обзор** > **Подсистемы балансировки нагрузки**, а затем выберите подсистему балансировки нагрузки, созданную на предыдущем шаге.
     2.  Выберите **Все параметры** > **Пробы** > **Добавить**.  

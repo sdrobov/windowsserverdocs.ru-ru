@@ -2,25 +2,23 @@
 title: Рекомендации по запуску Linux в Hyper-V
 description: Содержит рекомендации по запуску Linux на виртуальной машине.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a08648eb-eea0-4e2b-87fb-52bfe8953491
 author: shirgall
 ms.author: kathydav
 ms.date: 3/1/2019
-ms.openlocfilehash: 3488bbc1e295a68befc7044b83379bd65a5f28df
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 7baf71af401b8318ccd136fe12d6eb810cf9434e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365569"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853307"
 ---
 # <a name="best-practices-for-running-linux-on-hyper-v"></a>Рекомендации по запуску Linux в Hyper-V
 
->Область применения. Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
+>Область применения: Windows Server 2019, Windows Server 2016, Hyper-V Server 2016, Windows Server 2012 R2, Hyper-V Server 2012 R2, Windows Server 2012, Hyper-V Server 2012, Windows Server 2008 R2, Windows 10, Windows 8.1, Windows 8, Windows 7,1, Windows 7
 
 Этот раздел содержит список рекомендаций по запуску виртуальной машины Linux в Hyper-V.
 
@@ -82,7 +80,7 @@ Set-VMComPort -VMName <Name> -Number 2 -Path \\.\pipe\dbg1
 
 ## <a name="numa"></a>NUMA
 
-Версии ядра Linux, предшествующие 2.6.37, не поддерживают NUMA в Hyper-V с более крупными размерами виртуальных машин. Эта проблема в основном влияет на старые дистрибутивы с использованием вышестоящего ядра Red Hat 2.6.32 и была исправлена в Red Hat Enterprise Linux (RHEL) 6,6 (kernel-2.6.32-504). В системах, где выполняются пользовательские ядра, отличные от 2.6.37, или ядра на основе RHEL, более ранние, чем 2.6.32-504, должен задать параметр Boot `numa=off` в командной строке ядра в GRUB. conf. Дополнительные сведения см. в статье [Red Hat KB 436883](https://access.redhat.com/solutions/436883).
+Версии ядра Linux, предшествующие 2.6.37, не поддерживают NUMA в Hyper-V с более крупными размерами виртуальных машин. Эта проблема в основном влияет на старые дистрибутивы с использованием вышестоящего ядра Red Hat 2.6.32 и была исправлена в Red Hat Enterprise Linux (RHEL) 6,6 (kernel-2.6.32-504). Системам, на которых выполняются пользовательские ядра, более ранние, чем 2.6.37, или ядра на основе RHEL, которые старше 2.6.32-504, должны задать параметр Boot `numa=off` в командной строке ядра в GRUB. conf. Дополнительные сведения см. в статье [Red Hat KB 436883](https://access.redhat.com/solutions/436883).
 
 ## <a name="reserve-more-memory-for-kdump"></a>Зарезервируйте больше памяти для кдумп
 
@@ -94,7 +92,7 @@ Hyper-V позволяет сжимать файлы виртуального д
 
 После изменения размера VHD или VHDX администраторы должны использовать служебную программу, например fdisk, или частично обновить структуру разделов, томов и файловой системы, чтобы отразить изменение размера диска. Сжатие или увеличение размера VHD или VHDX с таблицей разделов GUID (GPT) вызовет предупреждение, если для проверки макета раздела используется средство управления секциями, и администратору будет выведено предупреждение об исправлении первого и дополнительного заголовков GPT. Этот ручной этап можно выполнить без потери данных.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 * [Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)
 

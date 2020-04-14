@@ -1,24 +1,20 @@
 ---
 title: getmac
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a749a348-7cd1-4336-9f33-bb42dd0e31e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c770f5da5159e0037af479f90fadb4cd83464c77
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6b593bf61bb08d2c1c7868b1bbb175ed64a8bcf7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375807"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842617"
 ---
 # <a name="getmac"></a>getmac
 
@@ -29,7 +25,7 @@ ms.locfileid: "71375807"
 ```
 getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | list | CSV}][/nh][/v]
 ```
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |             Параметр              |                                                                                          Описание                                                                                          |
 |------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -41,9 +37,9 @@ getmac[.exe][/s <computer> [/u <Domain\<User> [/p <Password>]]][/fo {TABLE | lis
 |                 /v                 |                                                                    Указывает, что выходные данные отображают подробные сведения.                                                                     |
 |                 /?                 |                                                                                                                                                                                               |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 **жетмак** может быть полезен либо при необходимости ввода Mac-адреса в анализатор сети, либо при необходимости узнать, какие протоколы используются на каждом сетевом адаптере компьютера.
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 В следующих примерах показано, как можно использовать команду **жетмак** :
 ```
 getmac /fo table /nh /v
@@ -63,5 +59,5 @@ getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo list /v
 ```
 getmac /s srvmain /u maindom\hiropln /p p@ssW23 /fo table /nh
 ```
-## <a name="additional-references"></a>Дополнительные ссылки
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

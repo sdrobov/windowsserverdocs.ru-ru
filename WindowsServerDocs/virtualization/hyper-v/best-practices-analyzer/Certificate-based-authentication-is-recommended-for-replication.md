@@ -2,20 +2,19 @@
 title: Для репликации рекомендуется использовать проверку подлинности на основе сертификатов
 description: Интернет-версия текста для этого правила анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: d931cc57-414f-4bdf-9ebd-08fd5e22b19d
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 0eac99fddd8bbc6dc585931cd25f2a440be16c76
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c5e356792ba93d21d9ce130a46e1d60336c99844
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71365177"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857677"
 ---
 # <a name="certificate-based-authentication-is-recommended-for-replication"></a>Для репликации рекомендуется использовать проверку подлинности на основе сертификатов
 
@@ -25,9 +24,9 @@ ms.locfileid: "71365177"
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
-|**Серьезности**|Тревожное|  
+|**Серьезности**|Предупреждение|  
 |**Категория**|Конфигурация|  
   
 В следующих разделах курсив указывает текст пользовательского Интерфейса, который отображается в анализатор соответствия рекомендациям для этой проблемы.  

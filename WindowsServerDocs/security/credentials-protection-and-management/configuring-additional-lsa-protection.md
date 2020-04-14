@@ -1,24 +1,20 @@
 ---
 title: Настройка дополнительной защиты LSA
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-credential-protection
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 038e7c2b-c032-491f-8727-6f3f01116ef9
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 40e489089fc0c15c3e6ebf7b654377f4d6f7e482
-ms.sourcegitcommit: 3d76683718ec6f38613f552f518ebfc6a5db5401
+ms.openlocfilehash: 1c923cfe39892ba105c437cf73843c2f6d07e49b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74829627"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857077"
 ---
 # <a name="configuring-additional-lsa-protection"></a>Настройка дополнительной защиты LSA
 
@@ -134,7 +130,7 @@ ms.locfileid: "74829627"
 
 Общие сеансы обычно образуются, когда применяются приемы программирования, позволяющие данным экземпляра взаимодействовать с другими процессами, использующими тот же контекст безопасности. Это может представлять уязвимость.
 
-## <a name="BKMK_HowToConfigure"></a>Настройка дополнительной защиты учетных данных LSA
+## <a name="how-to-configure-additional-lsa-protection-of-credentials"></a><a name="BKMK_HowToConfigure"></a>Настройка дополнительной защиты учетных данных LSA
 На устройствах, на которых выполняется Windows 8.1 (с безопасной загрузкой или без нее), можно настроить, выполнив процедуры, описанные в этом разделе. Для устройств, использующих Windows RT 8,1, защита LSASS. exe всегда включена и не может быть выключена.
 
 ### <a name="on-x86-based-or-x64-based-devices-using-secure-boot-and-uefi-or-not"></a>Устройства с архитектурой x86 или x64, использующие или не использующие безопасную загрузку и UEFI

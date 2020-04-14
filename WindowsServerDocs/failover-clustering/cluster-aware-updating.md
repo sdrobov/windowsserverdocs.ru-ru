@@ -1,20 +1,20 @@
 ---
 title: Общие сведения о кластерном обновлении
+description: Обновление с поддержкой кластера (CAU) автоматизирует установку обновлений программного обеспечения в кластерах под управлением Windows Server.
 ms.topic: article
 ms.prod: windows-server
-ms.manager: dongill
+manager: lizross
 author: JasonGerend
 ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 08/06/2018
-description: Обновление с поддержкой кластера (CAU) автоматизирует установку обновлений программного обеспечения в кластерах под управлением Windows Server.
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
-ms.openlocfilehash: e96223e0b4b44e87ade9dc8eb875f9aa7104f451
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 6a2b6ad06b8a003f9cbf020956994b08cb8cf194
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361255"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827997"
 ---
 # <a name="cluster-aware-updating-overview"></a>Общие сведения о кластерном обновлении
 
@@ -25,7 +25,7 @@ ms.locfileid: "71361255"
 > [!NOTE]
 > При обновлении кластеров [Локальные дисковые пространства](../storage/storage-spaces/storage-spaces-direct-overview.md) рекомендуется использовать обновление с поддержкой кластера.
   
-## <a name="BKMK_OVER"></a>Описание функции  
+## <a name="feature-description"></a><a name="BKMK_OVER"></a> Описание функции  
 Кластерное обновление — это автоматизированная функция, которая позволяет обновлять серверы в [отказоустойчивом кластере](failover-clustering-overview.md) с незначительной потерей доступности в процессе обновления. Во время прогона обновления кластерное обновление прозрачно выполняет следующие задачи:  
 
 1. Помещает каждый узел кластера в режим обслуживания узла.
@@ -123,10 +123,10 @@ CAU можно использовать во всех выпусках Windows S
   
     -   Если один или несколько узлов кластера или кластер добавляются в диспетчер сервера, на странице **все серверы**\-щелкните правой кнопкой мыши имя узла \(или имя\)кластера, а затем выберите команду **обновить кластер**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 Дополнительные сведения об использовании кластерного обновления см. по следующим ссылкам.  
   
--   [Требования и рекомендации по обновлению с учетом\-кластера](cluster-aware-updating.md)  
+-   [Требования кластерного обновления и рекомендации по нему\-  
   
 -   [Обновление с поддержкой\-кластера: часто задаваемые вопросы](cluster-aware-updating-faq.md)  
   

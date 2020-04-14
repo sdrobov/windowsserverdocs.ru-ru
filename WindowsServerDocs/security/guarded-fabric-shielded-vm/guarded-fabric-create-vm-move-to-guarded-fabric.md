@@ -1,20 +1,20 @@
 ---
 redirect_url: guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md
 title: Экранированные виртуальные машины для клиентов — создание экранированной виртуальной машины в локальной среде и перемещение ее в защищенную структуру.
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0ca1efa0-01f9-4b6f-87d4-c66db00d7d70
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: a4b5ff2942c8485a4c10770a4374d56734f7f3c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a5ca3ab29b83d0cb6cb2d55507471790f65800a2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402390"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856727"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-new-shielded-vm-on-premises-and-moving-it-to-a-guarded-fabric"></a>Экранированные виртуальные машины для клиентов — создание экранированной виртуальной машины в локальной среде и перемещение ее в защищенную структуру.
 
@@ -28,7 +28,7 @@ ms.locfileid: "71402390"
 
 1.  Перед началом процедуры убедитесь, что на узле Hyper-V под управлением Windows Server 2016 установлены следующие роли и компоненты:
 
-    - Роль
+    - Role
 
         - Hyper-V
 
@@ -130,7 +130,7 @@ ms.locfileid: "71402390"
 
     Импортируйте экранированную виртуальную машину с помощью диспетчера Hyper-V или Windows PowerShell. Чтобы запустить ВИРТУАЛЬную машину, необходимо импортировать файл конфигурации ВИРТУАЛЬНОЙ машины из владельца виртуальной машины. Это связано с тем, что предохранитель ключа и виртуальный доверенный платформенный модуль виртуальной машины хранятся в файле конфигурации. Если виртуальная машина настроена для работы в защищенной структуре, ее можно запустить успешно.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Этапы настройки поставщика услуг размещения для защищенных узлов и экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

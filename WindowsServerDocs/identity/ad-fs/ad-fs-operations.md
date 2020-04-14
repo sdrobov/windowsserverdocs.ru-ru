@@ -1,7 +1,6 @@
 ---
 ms.assetid: eefcc989-8763-45ee-8a64-3a97b4397160
 title: Операции AD FS
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2db9cd83ed08673835a38e443e90c5eb092f43ac
-ms.sourcegitcommit: b649047f161cb605df084f18b573f796a584753b
+ms.openlocfilehash: cdedcbd5b9491b57ee31170b781dc821853d058f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76162485"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815138"
 ---
 # <a name="ad-fs-operations"></a>Операции AD FS
 
@@ -78,7 +77,7 @@ ms.locfileid: "76162485"
 - [Настройка AD FS для отправки утверждений об истечении срока действия пароля](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 - [Настройка аутентификации в интрасети на основе форм для устройств, не поддерживающих WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
 
-## <a name="other"></a>Другое
+## <a name="other"></a>Прочее
 - [Присоединение к рабочей области с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Управление рисками для уязвимых приложений с помощью дополнительной многофакторной аутентификации](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Управление рисками с использованием условного управления доступом](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)

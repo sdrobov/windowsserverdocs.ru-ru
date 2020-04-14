@@ -1,7 +1,6 @@
 ---
 ms.assetid: ef4ef4a9-8969-4ad0-bd17-b2bb24f36ef6
 title: Выбор корневого домена леса
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 80d39a5910d06559b98211eaf55a4cd0c82442a1
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3fddf5179e2944800d57568f0b8e52262c04cd43
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402510"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80821907"
 ---
 # <a name="selecting-the-forest-root-domain"></a>Выбор корневого домена леса
 
->Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Первый домен, развертываемый в Active Directory лесу, называется корневым доменом леса. Этот домен остается корневым доменом леса для жизненного цикла развертывания AD DS.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "71402510"
   
 В следующей таблице перечислены правила выбора префикса для зарегистрированного DNS-имени.  
   
-|Правило|Объяснение|  
+|Правило|Пояснение|  
 |--------|---------------|  
 |Выберите префикс, который, скорее всего, станет устаревшим.|Избегайте таких имен, как линейка продуктов или операционная система, которые могут измениться в будущем. Рекомендуется использовать универсальные имена, например Corp или DS.|  
 |Выберите префикс, включающий только стандартные символы Интернета.|A – Z, a – z, 0-9 и (-), но не полностью числовое.|  
@@ -89,4 +88,4 @@ ms.locfileid: "71402510"
   
 ## <a name="documenting-the-forest-root-domain-name"></a>Документирование имени корневого домена леса
 
-Задокументируйте префикс DNS и суффикс, выбранный для корневого домена леса. На этом этапе укажите, какой домен будет корнем леса. Вы можете добавить сведения об имени корневого домена леса в созданный лист "Планирование домена" для документирования плана для новых и обновленных доменов и доменных имен. Чтобы открыть его, скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip из [комплекта вспомогательных заданий для пакета развертывания Windows Server 2003](https://go.microsoft.com/fwlink/?LinkID=102558) и откройте «планирование домена» (DSSLOGI_5. doc).
+Задокументируйте префикс DNS и суффикс, выбранный для корневого домена леса. На этом этапе укажите, какой домен будет корнем леса. Вы можете добавить сведения об имени корневого домена леса в созданный лист "Планирование домена" для документирования плана для новых и обновленных доменов и доменных имен. Чтобы открыть его, скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip из [комплекта вспомогательных заданий для пакета развертывания Windows Server 2003](https://go.microsoft.com/fwlink/?LinkID=102558) и откройте "Планирование домена" (DSSLOGI_5. doc).

@@ -6,16 +6,16 @@ metadata:
   description: 'Windows Server является платформой для создания инфраструктуры подключенных приложений, сетей и веб-служб: от рабочей группы до центра обработки данных.'
   author: eross-msft
   manager: daveba
-  ms.service: windows-server-threshold
+  ms.service: windows-server
   ms.topic: hub-page
   ms.date: 06/06/2019
   ms.author: lizross
-  ms.openlocfilehash: 77f017388af44a0365113e890b2ae04a9185a2c8
-  ms.sourcegitcommit: bfe9c5f7141f4f2343a4edf432856f07db1410aa
+  ms.openlocfilehash: 91a9a648c5b51f098a94300ffb1dd3f7ce76bdd8
+  ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/25/2019
-  ms.locfileid: "75351574"
+  ms.lasthandoff: 04/11/2020
+  ms.locfileid: "81123167"
 highlightedContent:
   items:
   - title: Что нового в Windows Server 2019?
@@ -103,7 +103,7 @@ conceptualContent:
     footerLink:
       url: /windows-server/administration/manage-windows-server
       text: Дополнительные сведения
-  - title: Сетевое взаимодействие
+  - title: сеть;
     links:
     - url: /windows-server/networking/what-s-new-in-networking
       itemType: whats-new
@@ -190,12 +190,9 @@ conceptualContent:
 additionalContent:
   sections:
   - items:
-    - title: Windows Server 2012 R2 и Windows Server 2012
-      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2012 R2 и Windows Server 2012.
+    - title: Windows Server 2012 R2 и Windows Server 2012 (архив)
+      summary: Архив технической документации для ИТ-специалистов, администрирующих Windows Server 2012 R2 и Windows Server 2012.
       url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)
-    - title: Windows Server 2008 R2 и Windows Server 2008
-      summary: Техническая документация для ИТ-специалистов, администрирующих Windows Server 2008 R2 и Windows Server 2008.
-      url: https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd349801(v=ws.10)
-    - title: История разработчика для Windows Server 2008
-      summary: Содержимое для разработчиков, а также других технических специалистов и руководителей, заинтересованных в изучении некоторых новых и расширенных функций в Windows Server 2008.
-      url: https://docs.microsoft.com/previous-versions/windows/server-2008/bb852234(v=msdn.10)
+    - title: Windows Server Essentials
+      summary: Техническое содержимое для ИТ-специалистов, которые администрируют Windows Server Essentials. Это подключенный к облаку сервер, предназначенный для небольших предприятий, в которых не более 25 пользователей и 50 устройств.
+      url: https://docs.microsoft.com/en-us/windows-server-essentials/get-started/get-started

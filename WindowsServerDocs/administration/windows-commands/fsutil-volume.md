@@ -9,12 +9,12 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: c4496cfec94823ae177bc6de4fac83dc977fb61d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 587ff48bd0af80667f9a336323641b87be808b1d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71376704"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80843937"
 ---
 # <a name="fsutil-volume"></a>Том fsutil
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
@@ -34,7 +34,7 @@ fsutil volume [list]
 fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |-------------|---------------|
@@ -45,10 +45,10 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |филелайаут|Отображает метаданные NTFS для заданного файла.|
 |\<ИД >|Указывает идентификатор файла.|
 |list|Список всех томов в системе.|
-|куериклустер|Определяет, какой файл использует указанный кластер. Можно указать несколько кластеров с помощью параметра **куериклустер** .<br /><br />Этот параметр применяется к: Windows Server 2008 R2 и Windows 7.|
+|куериклустер|Определяет, какой файл использует указанный кластер. Можно указать несколько кластеров с помощью параметра **куериклустер** .<p>Этот параметр применяется к: Windows Server 2008 R2 и Windows 7.|
 |> кластера \<|Указывает номер логического кластера (LCN).|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
 Чтобы отобразить отчет о распределенных кластерах, введите:
 
 ```
@@ -87,8 +87,8 @@ fsutil volume list
 fsutil volume querycluster C: 50 0x2000
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
-[Условные обозначения синтаксиса команд командной строки](Command-Line-Syntax-Key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)
 

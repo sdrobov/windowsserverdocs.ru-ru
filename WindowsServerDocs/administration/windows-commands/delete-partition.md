@@ -1,28 +1,22 @@
 ---
 title: удалить секцию
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для удаления раздела, который удаляет раздел с фокусом.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 65752312-cb16-46f6-870f-1b95c507b101
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 46a214f26e7c21f6ae08eb16d95fd898bd949b0f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a24c18cf98f2899fbb57f1f5f2d2776824d637b7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378664"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846577"
 ---
 # <a name="delete-partition"></a>удалить секцию
-
-
 
 Удаляет раздел с фокусом.
 
@@ -32,12 +26,12 @@ ms.locfileid: "71378664"
 delete partition [noerr] [override]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|крывают|Позволяет программе DiskPart удалять любые разделы независимо от типа. Как правило, DiskPart позволяет удалять только известные разделы данных.|
-|Noerr|только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
+|override|Позволяет программе DiskPart удалять любые разделы независимо от типа. Как правило, DiskPart позволяет удалять только известные разделы данных.|
+|Noerr|Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -46,14 +40,14 @@ delete partition [noerr] [override]
 > -   Нельзя удалить системный раздел, загрузочный раздел или любой раздел, содержащий активный файл подкачки или данные аварийного дампа.
 > -   Для выполнения этой операции необходимо выбрать секцию. Используйте команду **Выбор секции** , чтобы выбрать секцию и переместить фокус на нее.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы удалить раздел с фокусом, введите:
 ```
 delete partition
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

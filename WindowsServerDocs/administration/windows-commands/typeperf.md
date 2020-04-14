@@ -1,28 +1,22 @@
 ---
 title: typeperf
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел команд Windows для типеперф, который записывает данные о производительности в командное окно или в файл журнала.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c7ca89a-03b3-4626-afcf-ef8565e90043
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 087b201c51d5aec8e6f61c7469c59307d3ed8b4d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ac5f7def37939a472eb8f47cf65edf184a2fe2fc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392294"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832367"
 ---
 # <a name="typeperf"></a>typeperf
-
-
 
 Команда **типеперф** записывает данные о производительности в командное окно или в файл журнала. Чтобы отключить **типеперф**, нажмите клавиши CTRL + C.
 
@@ -37,7 +31,7 @@ typeperf -q [object] [options]
 typeperf -qx [object] [options]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -62,11 +56,11 @@ typeperf -qx [object] [options]
 |            -s \<computer_name >             |                   Указывает удаленный компьютер для мониторинга, если в пути счетчика не указан компьютер.                    |
 |                     -y                     |                                        Ответьте Да на все вопросы без запроса.                                        |
 
-## <a name="BKMK_EXAMPLES"></a>Примеров
+## <a name="examples"></a><a name=BKMK_EXAMPLES></a>Примеров
 
 - В следующем примере значения счетчика производительности локального компьютера записываются **\\\\процессора (_Total)\% процессорного времени** в командное окно с интервалом выборки по умолчанию в 1 секунду до нажатия CTRL + C.  
   ```
-  typeperf "\Processor(_Total)\% Processor Time"
+  typeperf \Processor(_Total)\% Processor Time
   ```  
 - В следующем примере значения для списка счетчиков в файле **Counters. txt** записываются в файл **Домен2. tsv** с разделителями табуляции с интервалом в 5 секунд до тех пор, пока не будут собраны образцы 50.  
   ```

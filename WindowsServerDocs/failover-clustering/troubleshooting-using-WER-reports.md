@@ -1,20 +1,17 @@
 ---
 title: Устранение неполадок отказоустойчивого кластера с помощью отчеты об ошибках Windows
 description: Устранение неполадок отказоустойчивого кластера с помощью отчетов WER с подробными сведениями о сборе отчетов и диагностике распространенных проблем.
-keywords: Отказоустойчивый кластер, отчеты WER, диагностика, кластер, отчеты об ошибках Windows
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
 ms.author: vpetter
-ms.topic: article
-author: vpetter
+author: dcuomo
 ms.date: 03/27/2018
-ms.localizationpriority: ''
-ms.openlocfilehash: 46c633af8cf82ac43d2a787a7193685d88ad0ecc
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: e8db88dc4fe3ad9176299c5b423a7aac6093f254
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79322156"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827357"
 ---
 # <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Устранение неполадок отказоустойчивого кластера с помощью отчеты об ошибках Windows 
 

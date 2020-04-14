@@ -1,24 +1,20 @@
 ---
 title: сохранить reg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b326482b-c8af-467d-a20c-0481eeda3d5c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6ae07cd3c90c51e7bd494bc6c35919680cde912a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5b1f7829aedc42c0b75bda951572a4c944798ec6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371705"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836357"
 ---
 # <a name="reg-save"></a>сохранить reg
 
@@ -34,7 +30,7 @@ ms.locfileid: "71371705"
 reg save <KeyName> <FileName> [/y]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -50,16 +46,16 @@ reg save <KeyName> <FileName> [/y]
 |Значение|Описание|
 |-----|-----------|
 |0|Выполнено|
-|1|Сбой|
+|1|Отказ|
 -   Перед тем как вносить изменения в записи реестра, сохраните родительский подраздел с операцией **reg save** . Если операция изменения не удалась, восстановите исходный подраздел с операцией **восстановления reg** .
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы сохранить Hive MyApp в текущей папке в виде файла с именем Аппбкуп. ВИЧ, введите:
 ```
 REG SAVE HKLM\Software\MyCo\MyApp AppBkUp.hiv
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

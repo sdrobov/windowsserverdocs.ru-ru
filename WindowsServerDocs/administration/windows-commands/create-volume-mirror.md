@@ -1,43 +1,37 @@
 ---
 title: создать зеркало тома
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для создания зеркального отображения тома, который создает зеркальное отображение тома с использованием двух указанных динамических дисков.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 48776917-783a-47ff-8da4-1cab77cea34b
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 72ecc4e0ede163857c47c5b7013aacdd49719ac8
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: fa5ea72eb0edacb841f32126f31a257b0573dd6d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71378869"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80846977"
 ---
 # <a name="create-volume-mirror"></a>создать зеркало тома
 
 >Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-создает зеркало тома с использованием двух указанных динамических дисков.  
+Создает зеркало тома с использованием двух указанных динамических дисков.  
   
 > [!NOTE]  
-> Эта команда доступна только в Windows 7 и Windows Server 2008 R2.  
-  
-  
-  
+> Эта команда доступна только в Windows 7 и Windows Server 2008 R2.
+
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
 create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noerr]  
 ```  
   
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
   
 |         Параметр         |                                                                                                                                     Описание                                                                                                                                     |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -46,19 +40,19 @@ create volume mirror [size=<n>] disk=<n>,<n>[,<n>,...] [align=<n>] [noerr] [noer
 |        Выровняйте\=<n>         | Выравнивает все экстенты томов по ближайшей границе выравнивания. Этот параметр обычно используется с логическим числом устройств RAID, \(LUN\) для повышения производительности. *n* — это количество килобайтов \(КБ\) от начала диска до ближайшей границы выравнивания. |
 |           Noerr           |                                        Используется только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с ошибкой.                                         |
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Примечания  
   
 -   После создания тома фокус автоматически переместится на новый том.  
   
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Чтобы создать зеркальный том размером 1000 МБ, на дисках 1 и 2 введите:  
   
 ```  
 create volume mirror size=1000 disk=1,2  
 ```  
   
-#### <a name="additional-references"></a>Дополнительные ссылки  
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+## <a name="additional-references"></a>Дополнительные материалы  
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 
   

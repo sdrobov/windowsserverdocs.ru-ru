@@ -1,28 +1,24 @@
 ---
 title: Создание коллекции служб удаленных рабочих столов
 description: Узнайте, как добавить удаленные рабочие столы и приложения RemoteApp для развертывания служб удаленных рабочих столов.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: elizapo
 ms.date: 10/22/2019
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ae9767e3-864a-4eb2-96c0-626759ce6d60
 author: lizap
 manager: dongill
-ms.openlocfilehash: 92af2b4e9fb174f1aa815256148ee8d5c7c7181a
-ms.sourcegitcommit: 3262c5c7cece9f2adf2b56f06b7ead38754a451c
+ms.openlocfilehash: 6a842c7984dc63fe40c05300f6cfbb6718846525
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72812253"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852957"
 ---
 # <a name="create-a-remote-desktop-services-collection-for-desktops-and-apps-to-run"></a>Создание коллекции служб удаленных рабочих столов для запуска рабочих столов и приложений
 
->Относится к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016
 
 Чтобы создать коллекцию сеансов служб удаленных рабочих столов, выполните следующие действия. Коллекция сеансов хранит приложения и рабочие столы, которые вы хотите сделать доступными для пользователей. После создания коллекции опубликуйте ее, чтобы пользователи могли открыть ее.
 
@@ -45,7 +41,7 @@ ms.locfileid: "72812253"
 3.  Выберите сервер узла сеансов удаленных рабочих столов, который вы создали (например, Contoso-Shr1).  
 4.  Примите **Группы пользователей** по умолчанию.  
 5.  Введите расположение общей папки, созданной для дисков профилей пользователей этой коллекции (например, **\Contoso-Cb1\UserDisksr**).   
-6.  Нажмите кнопку **Создать**. После завершения создания коллекции нажмите кнопку **Закрыть**.  
+6.  Нажмите кнопку **Create** (Создать). После завершения создания коллекции нажмите кнопку **Закрыть**.  
 
 
 ## <a name="create-a-personal-desktop-session-collection"></a>Создание коллекции сеансов личных рабочих столов

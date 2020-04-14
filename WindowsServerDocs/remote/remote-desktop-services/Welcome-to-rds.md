@@ -1,25 +1,21 @@
 ---
 title: Добро пожаловать в службы удаленных рабочих столов в Windows Server 2016
 description: Общие сведения о службах удаленных рабочих столов
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
 ms.author: chrimo
 ms.date: 02/22/2017
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 52b9e09f-39e0-41a9-9d3b-4d5f4eacf3e0
 author: christianmontoya
 manager: scottman
 ms.localizationpriority: medium
-ms.openlocfilehash: 46a04905d5247ae940ca900297171d1112cf936b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 70979eae2ad9f54ab895572f97d9b5968cff31d9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71404211"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854687"
 ---
 # <a name="welcome-to-remote-desktop-services"></a>Введение в службы удаленных рабочих столов 
 
@@ -46,7 +42,7 @@ ms.locfileid: "71404211"
 ## <a name="next-steps"></a>Дальнейшие действия
 
 Ниже приведены некоторые шаги, которые помогут вам лучше понять службы удаленных рабочих столов и даже начать развертывание собственной среды:
--   Ознакомьтесь с [поддерживаемыми настройками](rds-supported-config.md) службы удаленных рабочих столов для различных версий Windows и Windows Server
--   [Планируйте и проектируйте](rds-plan-and-design.md) среду служб удаленных рабочих столов для удовлетворения различных требований, таких как высокая доступность и многофакторная аутентификация.
--   Просмотрите статью [Модели архитектуры службы удаленных рабочих столов](desktop-hosting-logical-architecture.md), чтобы выбрать модели, которые лучше всего подходят для вашей среды.
--   Начните [Развертывание своей среды службы удаленных рабочих столов с помощью ARM и Azure Marketplace](rds-in-azure.md).
+-    Ознакомьтесь с [поддерживаемыми настройками](rds-supported-config.md) службы удаленных рабочих столов для различных версий Windows и Windows Server
+-    [Планируйте и проектируйте](rds-plan-and-design.md) среду служб удаленных рабочих столов для удовлетворения различных требований, таких как высокая доступность и многофакторная аутентификация.
+-    Просмотрите статью [Модели архитектуры службы удаленных рабочих столов](desktop-hosting-logical-architecture.md), чтобы выбрать модели, которые лучше всего подходят для вашей среды.
+-    Начните [Развертывание своей среды службы удаленных рабочих столов с помощью ARM и Azure Marketplace](rds-in-azure.md).

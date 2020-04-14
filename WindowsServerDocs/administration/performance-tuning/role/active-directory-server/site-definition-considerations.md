@@ -4,15 +4,15 @@ description: Рекомендации по настройке производи
 ms.prod: windows-server
 ms.technology: performance-tuning-guide
 ms.topic: article
-ms.author: TimWi; ChrisRob; HerbertM; KenBrumf;  MLeary; ShawnRab
+ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 66c6f94f1f3fee924ba0d9a3bfa0c712d62bb095
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: aac7b8f37de2132778bd681d2f2e29ad0ad0810d
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947107"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80851877"
 ---
 # <a name="proper-placement-of-domain-controllers-and-site-considerations"></a>Правильное размещение контроллеров домена и рекомендации по сайтам
 
@@ -76,7 +76,7 @@ ms.locfileid: "75947107"
 
 -   Отключите передачу запросов проверки подлинности с пустым доменом, указанным для всех доступных доверий. [Процесс Lsass. exe может перестать отвечать на запросы при наличии большого количества внешних доверий на контроллере домена Active Directory](https://support.microsoft.com/kb/923241/EN-US)
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также:
 - [Настройка производительности Active Directory серверов](index.md)
 - [Рекомендации по оборудованию](hardware-considerations.md)
 - [Рекомендации по протоколу LDAP](ldap-considerations.md)

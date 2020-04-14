@@ -2,22 +2,18 @@
 title: Развертывание отдельного сервера DirectAccess с расширенными параметрами
 description: Эта статья является частью руководств по развертыванию одного сервера DirectAccess с дополнительными параметрами для Windows Server 2016.
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 4e6c8379f225dbeefd7c97ac96b9a0047dfd4a0b
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 7f6a6724a2ab7bb6da48a11d31fb04461912e388
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80309209"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80859527"
 ---
 # <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>Развертывание отдельного сервера DirectAccess с расширенными параметрами
 
@@ -85,8 +81,8 @@ ms.locfileid: "80309209"
   
 |Роль/компонент|Способ поддержки сценария|  
 |---------|-----------------|  
-|Роль удаленного доступа|Роль можно установить и удалить с помощью консоли диспетчера серверов или Windows PowerShell. В эту роль входят и DirectAccess, и службы маршрутизации и удаленного доступа (RRAS). Роль удаленного доступа включает два компонента.<br/><br/>1. DirectAccess и VPN-подключение к RRAS. Управление DirectAccess и VPN осуществляется вместе в консоли управления удаленным доступом.<br/>2. Маршрутизация RRAS. Управление функциями маршрутизации RRAS осуществляется с помощью устаревшей консоли маршрутизации и удаленного доступа.<br /><br />Роль сервера удаленного доступа зависит от следующих ролей и компонентов сервера:<br/><br/> -Службы IIS (IIS). Эта функция необходима для настройки сервера сетевых расположений на сервере DirectAccess и веб-проверки по умолчанию.<br/> — Внутренняя база данных Windows. Используется для локального учета на сервере DirectAccess.|  
-|Средства управления удаленным доступом|Этот компонент устанавливается описанным ниже образом.<br /><br />— Он устанавливается по умолчанию на сервере DirectAccess при установке роли удаленного доступа и поддерживает пользовательский интерфейс консоли удаленного управления и командлеты Windows PowerShell.<br />— Его можно дополнительно установить на сервере, на котором не запущена роль сервера DirectAccess. В этом случае компонент используется для удаленного управления компьютером с возможностью удаленного доступа, на котором установлены DirectAccess и VPN.<br /><br />Средства управления удаленным доступом включают следующие элементы:<br /><br />— Графический пользовательский интерфейс для удаленного доступа (GUI)<br />— Модуль удаленного доступа для Windows PowerShell<br /><br />Зависимости включают следующее:<br /><br />— Консоль управления групповыми политиками<br />— Пакет администрирования диспетчера подключений RAS (CMAK)<br />— Windows PowerShell 3,0<br />-Графические средства управления и инфраструктура|  
+|Роль удаленного доступа|Роль можно установить и удалить с помощью консоли диспетчера серверов или Windows PowerShell. В эту роль входят и DirectAccess, и службы маршрутизации и удаленного доступа (RRAS). Роль удаленного доступа включает два компонента.<br/><br/>1. DirectAccess и VPN-подключение к RRAS. Управление DirectAccess и VPN осуществляется вместе в консоли управления удаленным доступом.<br/>2. Маршрутизация RRAS. Управление функциями маршрутизации RRAS осуществляется с помощью устаревшей консоли маршрутизации и удаленного доступа.<p>Роль сервера удаленного доступа зависит от следующих ролей и компонентов сервера:<br/><br/> -Службы IIS (IIS). Эта функция необходима для настройки сервера сетевых расположений на сервере DirectAccess и веб-проверки по умолчанию.<br/> — Внутренняя база данных Windows. Используется для локального учета на сервере DirectAccess.|  
+|Средства управления удаленным доступом|Этот компонент устанавливается описанным ниже образом.<p>— Он устанавливается по умолчанию на сервере DirectAccess при установке роли удаленного доступа и поддерживает пользовательский интерфейс консоли удаленного управления и командлеты Windows PowerShell.<br />— Его можно дополнительно установить на сервере, на котором не запущена роль сервера DirectAccess. В этом случае компонент используется для удаленного управления компьютером с возможностью удаленного доступа, на котором установлены DirectAccess и VPN.<p>Средства управления удаленным доступом включают следующие элементы:<p>— Графический пользовательский интерфейс для удаленного доступа (GUI)<br />— Модуль удаленного доступа для Windows PowerShell<p>Зависимости включают следующее:<p>— Консоль управления групповыми политиками<br />— Пакет администрирования диспетчера подключений RAS (CMAK)<br />— Windows PowerShell 3,0<br />-Графические средства управления и инфраструктура|  
   
 ## <a name="hardware-requirements"></a><a name="BKMK_HARD"></a>Требования к оборудованию  
 Для этого сценария действуют следующие требования к оборудованию.  
@@ -148,9 +144,9 @@ ms.locfileid: "80309209"
   
 |Тип контента|Ссылки|  
 |--------|-------|  
-|**Развертывание**|[Пути развертывания DirectAccess в Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<br /><br />[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
+|**Развертывание**|[Пути развертывания DirectAccess в Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
 |**Средства и параметры**|[Командлеты PowerShell для удаленного доступа](https://technet.microsoft.com/library/hh918399.aspx)|  
-|**Ресурсы сообщества**|[Практические советы по DirectAccess](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<br /><br />[Записи вики-сайта DirectAccess](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**Ресурсы сообщества**|[Практические советы по DirectAccess](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<p>[Записи вики-сайта DirectAccess](https://go.microsoft.com/fwlink/?LinkId=236871)|  
 |**Связанные технологии**|[Принцип работы IPv6](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
   
 

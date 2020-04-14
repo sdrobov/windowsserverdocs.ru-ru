@@ -1,7 +1,6 @@
 ---
 ms.assetid: e2c940f5-4b1f-457a-bc71-dcced0c752f7
 title: Технический справочник по службам федерации Active Directory
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 29c52b21e5bb30fc54c2f561015c64ae93447836
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 54d97a0dc9e4c752f4b5141fba015edc4ed4d8b4
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408568"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854147"
 ---
 # <a name="ad-fs-technical-reference"></a>Технический справочник по службам федерации Active Directory
 
@@ -30,7 +29,7 @@ ms.locfileid: "71408568"
 > Дополнительные AD FS 2,0 разработки можно найти на странице " [Схема содержимого AD FS 2,0](https://social.technet.microsoft.com/wiki/contents/articles/2735.ad-fs-2-0-content-map.aspx) " на вики-сайте Microsoft TechNet. Эту страницу ведут участники сообщества AD FS 2.0 и регулярно проверяют сотрудники рабочей группы продукта AD FS.
 
 ## <a name="see-also"></a>См. также
-[Обзор службы федерации Active Directory (AD FS)](AD-FS-2016-Overview.md)
+[Обзор служб федерации Active Directory](AD-FS-2016-Overview.md)
 
 
 

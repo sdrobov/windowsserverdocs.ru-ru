@@ -2,24 +2,23 @@
 title: Перевод сервера локальных дисковых пространств в автономный режим для обслуживания
 ms.prod: windows-server
 ms.author: eldenc
-ms.manager: eldenc
+manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/08/2018
-Keywords: Локальные дисковые пространства, S2D, обслуживание
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
-ms.openlocfilehash: 20439a06c255a73f20a297f765e6ed11abfde6f2
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2ccf8d809354f96277701cd365966ba5e914f64b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402824"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857537"
 ---
 # <a name="taking-a-storage-spaces-direct-server-offline-for-maintenance"></a>Перевод сервера локальных дисковых пространств в автономный режим для обслуживания
 
-> Относится к: Windows Server 2019, Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server 2016
 
 В этом разделе приведены рекомендации для корректного перезапуска или завершения работы серверов с [локальными дисковыми пространствами](storage-spaces-direct-overview.md).
 
@@ -83,7 +82,7 @@ Suspend-ClusterNode -Drain
 
 После завершения очистки сервера в диспетчере отказоустойчивого кластера и PowerShell он будет показан с состоянием **Приостановлено**.
 
-![Приостановлена](media/maintain-servers/paused.png)
+![Приостановлено](media/maintain-servers/paused.png)
 
 Теперь вы можете безопасно перезапустить или завершить работу сервера обычным способом (например, с помощью командлетов PowerShell Stop-Computer или Restart-Computer).
 
@@ -184,7 +183,7 @@ MyVolume3    Mirror                OK                Healthy      True          
 10. Отслеживайте состояние виртуальных дисков, выполнив командлеты **Get-Volume** и **Get-VirtualDisk** .
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Обновление с поддержкой кластера (CAU)](https://technet.microsoft.com/library/hh831694.aspx)

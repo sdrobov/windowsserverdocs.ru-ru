@@ -1,55 +1,46 @@
 ---
 title: bitsadmin list
-description: Раздел команд Windows для **битсадмин List** — список заданий перемещения, принадлежащих текущему пользователю.
-ms.custom: na
+description: Раздел команд Windows для **списка битсадмин**, в котором перечислены задания перемещения, принадлежащие текущему пользователю.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 1416965e-e0e6-49cf-b1d4-b286d3cf8716
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bd4787f51dc2a7843ff6cf5c4f786658e530ad8f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1883da7bfa71a41952f6f67e25eca4dbbdd3353c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381096"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850327"
 ---
 # <a name="bitsadmin-list"></a>bitsadmin list
-
-
 
 Список заданий перемещения, принадлежащих текущему пользователю.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /List [/allusers][/verbose]
+bitsadmin /list [/allusers][/verbose]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|/аллусерс|(Необязательно) список заданий для всех пользователей|
-|/Verbose|(Необязательно) предоставляет подробные сведения для каждого задания.|
+| Параметр | Описание |
+| -------------- | -------------- |
+| /аллусерс | Необязательно. Выводит список заданий для всех пользователей. Для использования этого параметра необходимо иметь права администратора. |
+| /verbose | Необязательно. Предоставляет подробные сведения о каждом задании. |
 
-## <a name="remarks"></a>Примечания
-
-Для использования параметра/аллусерс необходимо иметь права администратора.
-
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 В следующем примере извлекаются сведения о заданиях, принадлежащих текущему пользователю.
+
 ```
-C:\>bitsadmin /List 
+C:\>bitsadmin /list
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

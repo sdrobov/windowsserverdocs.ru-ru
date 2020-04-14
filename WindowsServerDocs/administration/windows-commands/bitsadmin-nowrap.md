@@ -1,46 +1,39 @@
 ---
 title: bitsadmin nowrap
-description: Раздел команд Windows для **битсадминing** — усекает любую строку выходного текста, выходящего за пределы крайнего правого края окна командной строки.
-ms.custom: na
+description: Команды Windows для **битсадминing**, которые обрезают любую строку выходного текста, выходящего за пределы крайнего правого края окна командной строки.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 85a47b90-783a-41e4-96f2-81f26ae8ca93
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3806ec51161eeae498e3c9b367b2aacf0bd32c99
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f9f1db370d8a8917aa03a414a27623a1024df192
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71381050"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80850187"
 ---
 # <a name="bitsadmin-nowrap"></a>bitsadmin nowrap
 
-Усекает любую строку выходного текста, выходящего за пределы крайнего правого края окна командной строки.
+Усекает любую строку выходного текста, выходящую за пределы крайнего правого края окна командной строки. По умолчанию все параметры, кроме коммутатора **монитора** , заключают выходные данные в оболочку. Укажите параметр "не **переносить** " перед другими параметрами.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /NoWrap
+bitsadmin /nowrap
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
-По умолчанию все параметры, кроме коммутатора **монитора** , заключают выходные данные в оболочку. Укажите параметр "не **переносить** " перед другими параметрами.
+В следующем примере извлекается состояние для задания с именем *мидовнлоаджоб* , а выходные данные не заносятся в оболочку.
 
-## <a name="BKMK_examples"></a>Примеров
-
-В следующем примере извлекается состояние для задания с именем *мидовнлоаджоб* и не выполняется заключение в оболочку выходных данных.
 ```
-C:\>bitsadmin /NoWrap /GetState myDownloadJob
+C:\>bitsadmin /nowrap /getstate myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

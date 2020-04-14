@@ -1,23 +1,19 @@
 ---
 title: Настройка общих папок
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 47bc4986-14eb-4a29-9930-83a25704a3a0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 387f9570e87bd2bd65266489b0f3eac6c945e3be
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 861107035408fc39d0dc5e4d94a4d82d8dfba74e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80311916"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80818077"
 ---
 # <a name="customize-shared-folders"></a>Настройка общих папок
 
@@ -57,7 +53,7 @@ ms.locfileid: "80311916"
   
 1.  Создайте файл PostIC.cmd для выполнения задач после завершения начальной настройки, как описано в разделе [Создание файла PostIC.cmd для выполнения задач после завершения начальной настройки](Create-the-PostIC.cmd-File-for-Running-Post-Initial-Configuration-Tasks.md).  
   
-2.  С помощью Блокнота создайте файл с именем **customizefolders.ps1** в папке C:\Windows\Setup\Scripts, а затем вставьте в этот файл следующие команды Windows PowerShell® (снимите пометки для соответствующих строк в зависимости от требуемого поведения).  
+2.  С помощью блокнота создайте файл с именем **кустомизефолдерс. ps1** в папке к:\виндовс\сетуп\скриптс, а затем вставьте следующие команды Windows PowerShell&reg; в файл (отметьте соответствующие строки в зависимости от требуемого поведения).  
   
     ```  
     # Move the Documents folder to D:\ServerFolders  

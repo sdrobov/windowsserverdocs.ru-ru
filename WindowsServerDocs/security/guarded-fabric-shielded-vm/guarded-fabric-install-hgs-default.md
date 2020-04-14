@@ -1,22 +1,22 @@
 ---
 title: Установка HGS в новом лесу
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 manager: dongill
 author: rpsqrd
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 6dfbe24fb4d9011b48f366d7e5df92fdb80685d5
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 8f896b0cea49f9dd26a828a2580b59a78348763a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386590"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856607"
 ---
 # <a name="install-hgs-in-a-new-forest"></a>Установка HGS в новом лесу 
 
->Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
+>Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 ## <a name="add-the-hgs-server-role"></a>Добавление роли сервера HGS
 

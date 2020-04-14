@@ -1,23 +1,19 @@
 ---
 title: Обзор Launchpad в Windows Server Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 63a161057f7068dcb9e02faa353270f0150200b4
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: ffff090e360282933723465bb3bbde6c0285a97b
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80310667"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852667"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Обзор Launchpad в Windows Server Essentials
 
@@ -77,7 +73,7 @@ ms.locfileid: "80310667"
  Оповещения, отображаемые на панели запуска, содержат краткую информацию о текущем состоянии работоспособности компьютера. Чтобы просмотреть информацию оповещения о работоспособности, щелкните индикатор оповещения для открытия средства просмотра оповещений. Оповещения о работоспособности отображаются в средстве просмотра в зависимости от уровня серьезности. Наиболее серьезные предупреждения находятся в начале списка, а наименее серьезные — в конце. Дополнительные сведения об оповещениях о работоспособности компьютера см. в разделе [Управление работоспособностью системы](Manage-System-Health-in-Windows-Server-Essentials.md).  
   
 ##  <a name="use-the-launchpad-with-a-mac-computer"></a><a name="BKMK_Mac"></a>Использование панели запуска с компьютером Mac  
- Можно подключить компьютер Mac® с Mac OS X® 10,5 или более поздней версии к Windows Server Essentials, Windows Server Essentials или Windows Server 2012 R2 либо путем скачивания и установки программного обеспечения соединителя. После завершения установки программного обеспечения соединителя можно автоматически запускать панель запуска во время запуска системы.  
+ Можно подключить компьютер Mac&reg; с Mac OS X&reg; 10,5 или более поздней версии к Windows Server Essentials, Windows Server Essentials или Windows Server 2012 R2 либо путем скачивания и установки программного обеспечения соединителя. После завершения установки программного обеспечения соединителя можно автоматически запускать панель запуска во время запуска системы.  
   
  Панель запуска представляет собой небольшое приложение, которое предоставляет прошедшим проверку пользователям доступ к основные возможностям сервера, включая общие файлы и мультимедиа, надстройки и удаленный веб-доступ. Кроме того, панель запуска предоставляет в реальном времени информацию и уведомления о работоспособности компьютера.  
   

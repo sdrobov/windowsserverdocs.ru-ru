@@ -3,16 +3,15 @@ title: Медленная скорость передачи файлов SMB
 description: Сведения об устранении проблем с производительностью при переносе файлов SMB.
 author: Deland-Han
 manager: dcscontentpm
-audience: ITPro
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: 0e6c049404f464eba872075a8ef5060b303920c8
-ms.sourcegitcommit: 8cf04db0bc44fd98f4321dca334e38c6573fae6c
+ms.openlocfilehash: af05daa164b5b2c5eca73eff51d97d4c25ba1ca3
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75654565"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80815397"
 ---
 # <a name="slow-smb-files-transfer-speed"></a>Медленная скорость передачи файлов SMB
 

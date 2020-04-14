@@ -1,26 +1,22 @@
 ---
-title: отключения
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+title: select
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9eeb40c0-4258-46e2-8dbc-94f63497e771
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7dc3bc8775f971968f096ba4344348e77c112cfa
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f9ad7051978f4b509f54bf783f71943b65617bc7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384108"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80834657"
 ---
-# <a name="select"></a>отключения
+# <a name="select"></a>select
 
 
 
@@ -35,7 +31,7 @@ select volume
 select vdisk
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -49,7 +45,7 @@ select vdisk
 -   Если выбран том с соответствующим разделом, раздел будет выбран автоматически.
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

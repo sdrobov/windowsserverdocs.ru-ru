@@ -1,24 +1,20 @@
 ---
 title: ftype
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6fb53cee-9bed-44dd-af5d-bc7cec1dd114
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ce3f4c360269eb9cabd2cbef8abb89935923a595
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f982f68f25a4decbc9c572b533fa1ecc5e893a8c
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375824"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842707"
 ---
 # <a name="ftype"></a>ftype
 
@@ -34,15 +30,15 @@ ms.locfileid: "71375824"
 ftype [<FileType>[=[<OpenCommandString>]]]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<Тип_файла >|Указывает тип файла для просмотра или изменения.|
 |\<Опенкоммандстринг >|Указывает командную строку открытия, используемую при открытии файлов указанного типа.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 В следующей таблице описано, как команда **ftype** заменяет переменные в строке открытой команды:
 
@@ -53,7 +49,7 @@ ftype [<FileType>[=[<OpenCommandString>]]]
 |%2, %3,...|Получает первый параметр (%2), второй параметр (%3) и т. д.|
 |%~\<N >|Возвращает все оставшиеся параметры, начиная с *n*-го параметра, где *N* может быть любым числом от 2 до 9.|
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы отобразить текущие типы файлов с определенными командными строками открытия, введите:
 ```
@@ -81,6 +77,6 @@ ftype PerlScript=perl.exe %1 %*
 set PATHEXT=.pl;%PATHEXT%
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

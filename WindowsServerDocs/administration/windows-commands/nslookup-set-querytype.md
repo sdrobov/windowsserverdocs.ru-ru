@@ -1,24 +1,20 @@
 ---
 title: nslookup set querytype
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 5af54ac5-fc1a-4af6-977b-f8e97c8eba90
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bc0eb19fd66e738b4bfc110a2bbc172153a12d98
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1c066277a22325e5db8383f58cda31038aa656e0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71372900"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838437"
 ---
 # <a name="nslookup-set-querytype"></a>nslookup set querytype
 
@@ -29,14 +25,14 @@ ms.locfileid: "71372900"
 ```
 set querytype=<ResourceRecordtype>
 ```
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 <ResourceRecordtype> указывает тип записи ресурса DNS. Тип записи ресурса по умолчанию —. В следующей таблице перечислены допустимые значения для этой команды.
 
 | Значение |                                                   Описание                                                   |
 |-------|-----------------------------------------------------------------------------------------------------------------|
-|   A   |                                      Указывает IP-&#39;адрес компьютера                                      |
+|   А   |                                      Указывает IP-&#39;адрес компьютера                                      |
 |  ВСЕМИ  |                                     Указывает IP-&#39;адрес компьютера.                                      |
-| ПСЕВДОНИМ |                                    Задает каноническое имя для псевдонима.                                     |
+| CNAME |                                    Задает каноническое имя для псевдонима.                                     |
 |  ОПЕРАЦИОННОЙ  |                                  Задает идентификатор группы для имени группы.                                  |
 | HINFO |                          Указывает процессор компьютера&#39;и тип операционной системы.                           |
 |  МБ   |                                        Указывает доменное имя почтового ящика.                                         |
@@ -54,9 +50,8 @@ set querytype=<ResourceRecordtype>
 | {Справка |                                                       ?}                                                        |
 
 Отображает краткую сводку подкоманд <strong>nslookup</strong>
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 - Команда <strong>Set Type</strong> выполняет ту же функцию, что и команда <strong>Set QueryType</strong> .
 - Дополнительные сведения о типах записей ресурсов см. в статье запрос комментария (RFC) 1035.
-  ## <a name="additional-references"></a>Дополнительные ссылки
-  <a href="command-line-syntax-key.md" data-raw-source="[Command-Line Syntax Key](command-line-syntax-key.md)">Ключ синтаксиса командной строки</a>
-  <a href="nslookup-set-type.md" data-raw-source="[nslookup set type](nslookup-set-type.md)">Тип набора nslookup</a>
+  ## <a name="additional-references"></a>Дополнительные материалы
+  < параметр href = Command-Line-синтаксис-key.md Data-RAW-source =- [Командная строка](command-line-syntax-key.md), > синтаксис командной строки</a> < a href = nslookup-set-Type.md Data-RAW-source =[nslookup set](nslookup-set-type.md)Type > тип набора команд nslookup</a>

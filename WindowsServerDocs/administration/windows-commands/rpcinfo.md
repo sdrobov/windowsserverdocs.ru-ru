@@ -1,24 +1,20 @@
 ---
 title: rpcinfo
 description: Узнайте, как составить список программ на удаленном компьютере.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7c342232-a8f0-42ff-8f11-d18c4981f5ca
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 3931dceea48c0e995a15f4966529fed4d5e85e34
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 03450a370c84eb4659b9ebfde0729fee52e6c1f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384475"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80835557"
 ---
 # <a name="rpcinfo"></a>rpcinfo
 
@@ -31,16 +27,16 @@ ms.locfileid: "71384475"
 rpcinfo [/p [<Node>]] [/b <Program version>] [/t <Node Program> [<version>]] [/u <Node Program> [<version>]]
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
 |/p [\<узла >]|Список всех программ, зарегистрированных с помощью сопоставителя портов на указанном узле. Если имя узла (компьютера) не указано, программа запрашивает сопоставитель портов на локальном узле.|
 |/b \<версия программы >|Запрашивает ответ от всех сетевых узлов, имеющих указанную программу и версию, зарегистрированные с помощью сопоставителя портов. Необходимо указать как имя программы, так и номер версии.|
 |/t \<node > [\<версии >]|Использует транспортный протокол TCP для вызова указанной программы. Необходимо указать имя узла (компьютера) и имя программы. Если версия не указана, программа вызывает все версии.|
 |/u \<node > [\<версии >]|Использует транспортный протокол UDP для вызова указанной программы. Необходимо указать имя узла (компьютера) и имя программы. Если версия не указана, программа вызывает все версии.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_Examples"></a>Примеров
 Чтобы получить список всех программ, зарегистрированных с помощью сопоставителя портов, введите:
 ```
 rpcinfo /p [<Node>]
@@ -59,4 +55,4 @@ rpcinfo /u <Node Program> [<version>]
 ```
 
 ## <a name="additional-references"></a>Дополнительная справка
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

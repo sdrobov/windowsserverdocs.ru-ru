@@ -1,7 +1,6 @@
 ---
 title: Кластер в реплику хранилища кластера в том же регионе Azure
 description: Репликация кластера в хранилище кластера в том же регионе Azure
-keywords: Реплика хранилища, диспетчер сервера, Windows Server, Azure, кластер, один и тот же регион
 author: arduppal
 ms.author: arduppal
 ms.date: 04/26/2019
@@ -9,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 3e620b5597a2d25a7bb02daf80c5812d25f6a987
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 00dbf709139ef245b94a3f083ab83a12503131c2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950038"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856297"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Кластер в реплику хранилища кластера в том же регионе Azure
 
@@ -36,7 +35,7 @@ ms.locfileid: "75950038"
 
 1. Создайте [группу ресурсов](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) в портал Azure в регионе (**SR-AZ2AZ** в **западной части США 2**). 
 2. Создайте две группы [доступности](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) в группе ресурсов (**SR-AZ2AZ**), созданной выше, по одной для каждого кластера. 
-    А. Группа доступности (**az2azAS1**) b. Группа доступности (**az2azAS2**)
+    а) Группа доступности (**az2azAS1**) b. Группа доступности (**az2azAS2**)
 3. Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-vnet**) в ранее созданной группе ресурсов (**SR-az2az**), имеющую по крайней мере одну подсеть. 
 4. Создайте [группу безопасности сети](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) и добавьте одно правило безопасности для входящего трафика для RDP: 3389. Вы можете удалить это правило после завершения установки. 
 5. Создайте [виртуальные машины](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) Windows Server в ранее созданной группе ресурсов (**SR-AZ2AZ**). Используйте ранее созданную виртуальную сеть (**az2az-vnet**) и группу безопасности сети (**az2az-NSG**). 
@@ -103,7 +102,7 @@ ms.locfileid: "75950038"
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
      $ILBIP = "10.3.0.100" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
      [int]$ProbePort = 59999
-     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}
+     Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
 14. Выполните следующую команду из одного узла **az2az3**/**az2az4**. 
@@ -113,7 +112,7 @@ ms.locfileid: "75950038"
     $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
     $ILBIP = "10.3.0.101" # IP Address in Internal Load Balancer (ILB) - The static IP address for the load balancer configured in the Azure portal.
     [int]$ProbePort = 59999
-    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";”ProbeFailureThreshold”=5;"EnableDhcp"=0}  
+    Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```   
     Убедитесь, что оба кластера могут подключаться и взаимодействовать друг с другом. 
 
@@ -139,7 +138,7 @@ ms.locfileid: "75950038"
    
     Предоставление доступа из одного кластера в другой в обоих направлениях:
 
-    Пример.
+    В нашем примере:
 
     ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2

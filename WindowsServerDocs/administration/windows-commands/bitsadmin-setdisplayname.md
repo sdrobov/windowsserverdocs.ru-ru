@@ -1,51 +1,46 @@
 ---
 title: bitsadmin setdisplayname
-description: Раздел команд Windows для **битсадмин сетдисплайнаме** — задает отображаемое имя указанного задания.
-ms.custom: na
+description: Раздел команд Windows для **битсадмин сетдисплайнаме**, который задает отображаемое имя указанного задания.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 13706c53-fb5f-4879-b5ca-82531361d6e1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 10a5607eb26f8199ec415a4cec17d03015a26bcd
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 0b1086903dd130392800f325c451bb4750fbf8fa
+ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71380632"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81123005"
 ---
 # <a name="bitsadmin-setdisplayname"></a>bitsadmin setdisplayname
 
-
-
-Задает отображаемое имя указанного задания.
+Задает отображаемое имя для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /SetDisplayName <Job> <DisplayName>
+bitsadmin /setdisplayname <job> <display_name>
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|Job|Отображаемое имя задания или идентификатор GUID|
-|DisplayName|Текст, используемый для отображаемого имени указанного задания.|
+| Параметр | Описание |
+| --------- | ----------- |
+| задания | Отображаемое имя задания или идентификатор GUID. |
+| display_name | Текст, используемый в качестве отображаемого имени для конкретного задания. |
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере задается отображаемое имя для задания с именем *мидовнлоаджоб* в *myDownloadJob2*.
+В следующем примере задается отображаемое имя задания *мидовнлоаджоб*.
+
 ```
-C:\>bitsadmin /SetDisplayName myDownloadJob "Download Music Job"
+C:\>bitsadmin /setdisplayname myDownloadJob
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

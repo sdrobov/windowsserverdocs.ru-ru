@@ -1,24 +1,20 @@
 ---
 title: Wbadmin Удаление каталога
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команда Windows для команды Wbadmin Delete Catalog, которая удаляет каталог резервных копий, хранящийся на локальном компьютере.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3041407-4577-4716-a39f-2c8ab48818d1
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 58b8bc6043437755675af28c084257ba0d8b176d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5cf069163cb18c1763de2842b518f269b9fa57dd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71362529"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80829907"
 ---
 # <a name="wbadmin-delete-catalog"></a>Wbadmin Удаление каталога
 
@@ -35,7 +31,7 @@ wbadmin delete catalog
 [-quiet]
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
@@ -45,8 +41,8 @@ wbadmin delete catalog
 
 Если вы удалите каталог резервного копирования для компьютера, вы не сможете получить доступ к резервным копиям, созданным на этом компьютере, с помощью оснастки cистема архивации данных Windows Server. В этом случае, если вы можете получить доступ к другому расположению резервной копии, воспользуйтесь **командой Wbadmin Restore Catalog** , чтобы восстановить каталог резервных копий из этого расположения. После удаления каталога резервного копирования следует создать новую резервную копию.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Remove-Вбкаталог](https://technet.microsoft.com/library/jj902445.aspx)

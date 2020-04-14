@@ -1,26 +1,25 @@
 ---
 title: Защищенная структура и экранированные виртуальные машины
-ms.custom: na
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 5c7ada81-2d97-41d4-87cf-1a7ccf06cd20
 manager: dongill
 author: rpsqrd
-ms.author: justinha
+ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: f23d0be0d860695b014f57fd55d8e321e81a70ca
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 9e76b3081438ae38c6b83b7cdd179d47b1e21a70
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950329"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856917"
 ---
 # <a name="guarded-fabric-and-shielded-vms"></a>Защищенная структура и экранированные виртуальные машины
 
 >Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
-Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), являющейся, как правило, кластером из трех узлов, одного или нескольких защищенных узлов и набора экранированных виртуальных машин.
+Одной из наиболее важных целей предоставления размещенной среды является обеспечение безопасности виртуальных машин, работающих в среде. Поставщики облачных служб и администраторы корпоративного частного облака могут использовать защищенную структуру для создания более безопасной среды для виртуальных машин. Защищенная структура состоит из одной службы защиты узла (HGS), которая обычно представлена кластером из трех узлов, одним или несколькими защищенными узлами и набором экранированных виртуальных машин.
 
 > [!IMPORTANT]
 > Перед развертыванием экранированных виртуальных машин в рабочей среде убедитесь, что установлено последнее накопительное обновление.
@@ -34,14 +33,14 @@ ms.locfileid: "75950329"
 - Блог: [блог по безопасности центра обработки данных и частного облака](https://blogs.technet.microsoft.com/datacentersecurity/)
 - Обзор: [Обзор защищенной структуры и экранированных виртуальных машин](Guarded-Fabric-and-Shielded-VMs.md)
 
-## <a name="planning-topics"></a>Разделы, посвященные планированию
+## <a name="planning-topics"></a>Темы по планированию
 
 - [Структура планирования для поставщиков услуг размещения](guarded-fabric-planning-for-hosters.md)
 - [Структура планирования для клиентов](guarded-fabric-shielded-vm-planning-for-tenants.md)
 
-## <a name="deployment-topics"></a>Разделы, посвященные развертыванию
+## <a name="deployment-topics"></a>Разделы по развертыванию
 
-- [Руководство по развертыванию](guarded-fabric-deploying-hgs-overview.md)
+- [Рекомендации по развертыванию](guarded-fabric-deploying-hgs-overview.md)
     - [Быстрый запуск](guarded-fabric-deployment-overview.md)
     - [Развертывание HGS](guarded-fabric-setting-up-the-host-guardian-service-hgs.md)
     - [Развертывание защищенных узлов](guarded-fabric-configure-hgs-with-authorized-hyper-v-hosts.md)

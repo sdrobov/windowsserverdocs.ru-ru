@@ -2,22 +2,18 @@
 title: Обзор сценария лаборатории тестирования
 description: 'Эта статья является частью руководства по тестовой лаборатории: демонстрация DirectAccess с проверкой подлинности OTP и RSA SecurID для Windows Server 2016.'
 manager: brianlic
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: networking-da
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ce584811-b209-48fe-ab2b-4c399bd0bd79
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: cd47f9866859f6d57fab8dcf76b1bcb475420d97
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 39b6212714ebf868b91c1b28f35cc6a5149828ca
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80314478"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860327"
 ---
 # <a name="overview-of-the-test-lab-scenario"></a>Обзор сценария лаборатории тестирования
 

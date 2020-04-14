@@ -1,24 +1,20 @@
 ---
 title: 'ksetup: ремовереалм'
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 39f0c6f0-4c50-4781-941e-0893495405e8
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 11858d8a24d4f125c83b3e4092ac48f336a9ef0b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1465ce08c0cf45de828683324b29fb2df8d0e893
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374954"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80841457"
 ---
 # <a name="ksetupremoverealm"></a>ksetup: ремовереалм
 
@@ -32,21 +28,21 @@ ms.locfileid: "71374954"
 ksetup /removerealm <RealmName>
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM, и он указывается в качестве области по умолчанию при запуске **ksetup** .|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 Имя области хранится в двух местах реестра: **HKEY_LOCAL_MACHINE \system\controlset001** и **\куррентконтролсет\контрол\лса\керберос**.
 
 Невозможно удалить имя сферы по умолчанию из контроллера домена, так как это приведет к сбросу данных DNS, и удаление может привести к невозможности использования контроллера домена.
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
-По ошибке задается имя области с ошибкой ". COM" на локальном компьютере в CORP. Компанией. ПАРАЛЛЕЛЬ
+По ошибке задается имя области с ошибкой. COM на локальном компьютере в CORP. Компанией. ПАРАЛЛЕЛЬ
 ```
 ksetup /setrealm CORP.CONTOSO.CON
 ```
@@ -56,8 +52,8 @@ ksetup /removerealm CORP.CONTOSO.CON
 ```
 Проверьте удаление, выполнив **ksetup** , и проверьте выходные данные.
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setrealm](ksetup-setrealm.md)
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

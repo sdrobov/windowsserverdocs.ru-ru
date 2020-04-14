@@ -2,23 +2,21 @@
 title: Развертывание устройств хранения NVMe с помощью дискретного назначения устройств
 description: Узнайте, как использовать ДДА для развертывания устройств хранения данных
 ms.prod: windows-server
-ms.service: na
 ms.technology: hyper-v
-ms.tgt_pltfrm: na
 ms.topic: article
 author: chrishuybregts
 ms.author: chrihu
 ms.assetid: 1c36107e-78c9-4ec0-a313-6ed557ac0ffc
-ms.openlocfilehash: eb76b25e8ff1428b2c03b37dde1f76562751d3bb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2b92b175a6e914b62b069f76f92255cb99d55d74
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71364325"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80860907"
 ---
 # <a name="deploy-nvme-storage-devices-using-discrete-device-assignment"></a>Развертывание устройств хранения NVMe с помощью дискретного назначения устройств
 
->Область применения. Microsoft Hyper-V Server 2016, Windows Server 2016
+>Область применения: Microsoft Hyper-V Server 2016, Windows Server 2016
 
 Начиная с Windows Server 2016 можно использовать дискретное назначение устройств или ДДА для передачи целого устройства PCIe в виртуальную машину.  Это обеспечит высокопроизводительный доступ к устройствам, например к хранилищу NVMe или графическим картам, из виртуальной машины, в то время как они смогут использовать собственные драйверы устройств.  Дополнительные сведения о том, какие устройства работают, каковы возможные последствия для безопасности и т. д., см. в [плане развертывания устройств с помощью дискретного назначения устройств](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md) . Использование устройства с ДДА состоит из трех этапов.
 -   Настройка виртуальной машины для ДДА
@@ -39,7 +37,7 @@ Set-VM -Name VMName -AutomaticStopAction TurnOff
 ## <a name="dismount-the-device-from-the-host-partition"></a>Отключение устройства от раздела узла
 
 ### <a name="locating-the-devices-location-path"></a>Поиск пути к расположению устройства
-Для отключения и подключения устройства к узлу требуется указать путь к расположению PCI.  Пример пути к расположению выглядит следующим образом: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   Дополнительные сведения о расположении пути расположения можно найти здесь: [Планирование развертывания устройств с помощью дискретного назначения устройств](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
+Для отключения и подключения устройства к узлу требуется указать путь к расположению PCI.  Пример пути к расположению выглядит следующим образом: `"PCIROOT(20)#PCI(0300)#PCI(0000)#PCI(0800)#PCI(0000)"`.   Дополнительные сведения о расположении пути расположения см. в статье [Планирование развертывания устройств с помощью дискретного назначения устройств](../plan/Plan-for-Deploying-Devices-using-Discrete-Device-Assignment.md).
 
 ### <a name="disable-the-device"></a>Отключение устройства
 С помощью Device Manager или PowerShell убедитесь, что устройство отключено.  
@@ -56,7 +54,7 @@ Dismount-VMHostAssignableDevice -LocationPath $locationPath
 Add-VMAssignableDevice -LocationPath $locationPath -VMName VMName
 ```
 
-## <a name="whats-next"></a>Что дальше
+## <a name="whats-next"></a>Дальнейшая работа
 После успешной установки устройства в виртуальной машине теперь можно запустить эту виртуальную машину и взаимодействовать с устройством, как обычно при работе в системе без операционной системы.  Это можно проверить, открыв диспетчер устройств на гостевой виртуальной машине и просмотрев, что оборудование теперь отображается.
 
 ## <a name="removing-a-device-and-returning-it-to-the-host"></a>Удаление устройства и его возврат на узел

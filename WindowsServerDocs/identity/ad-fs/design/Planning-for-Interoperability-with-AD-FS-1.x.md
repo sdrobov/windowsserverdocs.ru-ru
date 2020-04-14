@@ -1,7 +1,6 @@
 ---
 ms.assetid: 04b63d9f-e924-4146-9b1d-785ed8b4239c
 title: Планирование взаимодействия со службами федерации Active Directory 1.x
-description: ''
 author: billmath
 ms.author: billmath
 manager: femila
@@ -9,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e9f72bd83c90a804749329521a72e3232589c735
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a0bbf64a7bf110e3d73084dd047c84b2b83be8d9
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71407960"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80858617"
 ---
 # <a name="planning-for-interoperability-with-ad-fs-1x"></a>Планирование взаимодействия со службами федерации Active Directory 1.x
 
-Службы федерации Active Directory (AD FS) \(AD FS\) серверы федерации под Windows Server® 2012 могут взаимодействовать с AD FS 1,0 \(, установленным с Windows Server 2003 R2\) служба Федерации и AD FS 1,1 \(, установленным с Windows Server 2008 или Windows Server 2008 R2\) служба Федерации. Поддерживаются любые из указанных ниже сочетаний.  
+Службы федерации Active Directory (AD FS) \(AD FS\) серверы федерации под Windows Server&reg; 2012 могут взаимодействовать с AD FS 1,0 \(, установленным с Windows Server 2003 R2\) служба Федерации и AD FS 1,1 \(, установленным с Windows Server 2008 или Windows Server 2008 R2\) служба Федерации. Поддерживаются любые из указанных ниже сочетаний.  
 
 -   Любой AD FS 1. *x* служба федерации может отправить утверждение, которое может использоваться AD FS Служба федерации в Windows Server 2012. Дополнительные сведения см. [в разделе Контрольный список: настройка AD FS для использования утверждений от AD FS 1. x](../../ad-fs/deployment/Checklist--Configuring-AD-FS--to-Consume-Claims-from-AD-FS-1.x.md).  
 

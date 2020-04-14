@@ -1,6 +1,5 @@
 ---
 title: Восстановление леса AD — восстановление отдельного домена в лесу с несколькими доменами
-description: ''
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -9,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 267541be-2ea7-4af6-ab34-8b5a3fedee2d
 ms.technology: identity-adds
-ms.openlocfilehash: 2582ffacb169b59692c0510469131b58be09d5f3
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 13153358f50302de722109bfe101911e3bac4708
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71368932"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80823447"
 ---
 # <a name="ad-forest-recovery---recovering-a-single-domain-in-a-multidomain-forest"></a>Восстановление леса AD — восстановление отдельного домена в лесу с несколькими доменами
 
->Область применения. Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
+>Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
 Возможны случаи, когда необходимо восстановить только один домен в лесу, который имеет несколько доменов, а не полное восстановление леса. В этом разделе приводятся рекомендации по восстановлению отдельного домена и возможных стратегий восстановления.  
   

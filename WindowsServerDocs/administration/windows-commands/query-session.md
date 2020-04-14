@@ -1,39 +1,35 @@
 ---
 title: сеанс запроса
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: abc0ace8-0b74-4b6e-a937-a78bb4b61a1f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bde9a246f2c46eaa466f2863c2cfc3c28a3a04eb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 173b6e53bbd5cd42f3172582a46277dccff7dcbd
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71384911"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836947"
 ---
 # <a name="query-session"></a>сеанс запроса
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о сеансах на сервере узла сеансов удаленный рабочий стол.
 Список включает сведения не только об активных сеансах, но и о других сеансах, которые выполняет сервер.
 Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 > ## <a name="syntax"></a>Синтаксис
 > ```
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
-> ## <a name="parameters"></a>Параметры
+> ### <a name="parameters"></a>Параметры
 > 
 > |      Параметр       |                                                      Описание                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|
@@ -45,7 +41,7 @@ ms.locfileid: "71384911"
 > |        /флов         |                                        Отображает текущие параметры управления потоком.                                        |
 > |       /коннект       |                                          Отображает текущие параметры подключения.                                           |
 > |       /Counter       | Отображает сведения о текущих счетчиках, включая общее число созданных, отключенных и повторно подключенных сеансов. |
-> |          /?          |                                         Отображение справки в командной строке.                                          |
+> |          /?          |                                         Отображает справку в командной строке.                                          |
 > 
 > ## <a name="remarks"></a>Примечания
 > - Пользователь всегда может запрашивать сеанс, в который в данный момент вошел пользователь. Чтобы запросить другие сеансы, пользователь должен иметь специальное разрешение на доступ к сведениям о запросе.
@@ -61,7 +57,7 @@ ms.locfileid: "71384911"
 >                                   5 idle
 >   ```
 >   Символ «больше» (>) обозначает текущий сеанс. SESSIONNAME указывает имя, назначенное сеансу. USERNAME указывает имя пользователя, подключенного к сеансу. STATE предоставляет сведения о текущем состоянии сеанса. ТИП указывает тип сеанса. УСТРОЙСТВО, которое отсутствует для сеансов, подключенных к консоли или к сети, — это имя устройства, назначенное сеансу. Комментарий, приведенный после сведений о сеансе, относится к профилю сеанса. Все сеансы, в которых исходное состояние настроено как ОТКЛЮЧЕНное, не отображаются в списке **сеансов запросов** , пока они не будут включены.
->   ## <a name="BKMK_examples"></a>Примеров
+>   ## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 > - Чтобы отобразить сведения обо всех активных сеансах на сервере SERver2, введите:
 >   ```
 >   query session /server:SERver2
@@ -70,7 +66,7 @@ ms.locfileid: "71384911"
 >   ```
 >   query session modeM02
 >   ```
->   #### <a name="additional-references"></a>Дополнительные ссылки
->   [Ключ синтаксиса командной строки](command-line-syntax-key.md)
+>   ## <a name="additional-references"></a>Дополнительные материалы
+>   - [Раздел синтаксиса командной строки](command-line-syntax-key.md)
 >   [запрос](query.md)
->   [службы удаленных рабочих столов &#40;Справочник по&#41; командам служб терминалов](remote-desktop-services-terminal-services-command-reference.md)
+>   [службы удаленных рабочих столов (службы терминалов) Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)

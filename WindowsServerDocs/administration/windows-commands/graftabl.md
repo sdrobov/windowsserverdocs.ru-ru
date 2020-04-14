@@ -1,24 +1,20 @@
 ---
 title: graftabl
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: b08351d4-3d24-490c-86f6-1252da11d923
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ac7748b43eb8859a17a2c61ef9ef4444019ad51b
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d55df814cb962e82775a86e154a024c579987cf2
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71375628"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80842417"
 ---
 # <a name="graftabl"></a>graftabl
 
@@ -35,15 +31,15 @@ graftabl <CodePage>
 graftabl /status
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |\<> кодовой страницы|Задает кодовую страницу для определения внешнего вида расширенных символов в графическом режиме.</br>Допустимые идентификационные номера кодовых страниц:</br>437: США</br>850: Многоязычная (латиница I)</br>852: славянские (латиница II)</br>855: кириллица (Русский)</br>857: Турецкий</br>860: Португальский</br>861: Исландский</br>863: канадский французский</br>865: Скандинавский</br>866: Русский</br>869: современный греческий|
 |/status|Отображает текущую кодовую страницу, используемую командой **graftabl** .|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   **Graftabl** влияет только на отображение расширенных символов указанной кодовой страницы. Она не изменяет фактическую кодовую страницу ввода консоли. Чтобы изменить кодовую страницу ввода консоли, используйте команду **mode** или **chcp** .
 -   В следующей таблице перечислены все коды выхода и их краткое описание.  
@@ -54,7 +50,7 @@ graftabl /status
     |2|Произошла ошибка в файле.|
 -   Переменную среды ERRORLEVEL можно использовать в пакетной программе для обработки кодов завершения, возвращаемых методом **graftabl**.
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы просмотреть текущую кодовую страницу, используемую методом **graftabl**, введите:
 ```
@@ -69,9 +65,9 @@ graftabl 437
 graftabl 850
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [фридиск](freedisk.md)
 

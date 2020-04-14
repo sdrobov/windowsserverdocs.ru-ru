@@ -1,24 +1,19 @@
 ---
 title: Автоматический вход при перезапуске с помощью Winlogon (ARSO)
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.service: na
-ms.suite: na
 ms.technology: security-auditing
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 15cddcfa-8a8e-45e4-bb76-b8e1a14ceac0
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: f085cf78a01148f97a450577131213ce977a432a
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3dd66cc799ee23f77c9c60e23e49d3088a27b2fc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402323"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855107"
 ---
 # <a name="winlogon-automatic-restart-sign-on-arso"></a>Автоматический вход при перезапуске с помощью Winlogon (ARSO)
 
@@ -95,7 +90,7 @@ ms.locfileid: "71402323"
   
 |Имя значения|Тип|Данные|  
 |-------|----|----|  
-|дисаблеаутоматикрестартсигнон|DWORD|0<br /><br />**Пример.**<br /><br />0 (включено)<br /><br />1 (отключено)|  
+|дисаблеаутоматикрестартсигнон|DWORD|0<p>**Пример.**<p>0 (включено)<p>1 (отключено)|  
   
 **Расположение реестра политики:** хклм\софтваре\микрософт\виндовс\куррентверсион\полиЦиес\систем  
   
@@ -111,7 +106,7 @@ ms.locfileid: "71402323"
   
 ![Снимок экрана, показывающий параметры политики. в пользовательском интерфейсе можно указать, будет ли устройство автоматически входить в систему последнего интерактивного пользователя после Центр обновления Windows перезагрузки системы.](../media/winlogon-automatic-restart-sign-on-arso/GTR_ADDS_SignInPolicy.gif)  
   
-## <a name="troubleshooting"></a>Поиск и устранение неисправностей  
+## <a name="troubleshooting"></a>Диагностика  
 При автоматической блокировке WinLogon трассировка состояния WinLogon будет храниться в журнале событий WinLogon.  
   
 Регистрируется состояние попытки настройки автоматического входа в систему  
@@ -147,6 +142,6 @@ ms.locfileid: "71402323"
   
 |Термин|Определение|  
 |----|-------|  
-|Автоматического входа|Автоматический вход в систему — это функция, которая присутствовала в Windows для нескольких выпусков.  Это документированная функция Windows, которая даже имеет такие средства, как автоматический вход в Windows версии 3.01  *[http:/TechNet. Microsoft. com/Sysinternals/bb963905. aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<br /><br />Это позволяет одному пользователю устройства автоматически выполнять вход без ввода учетных данных. Учетные данные настраиваются и хранятся в реестре как зашифрованный секрет LSA.|  
+|Автоматического входа|Автоматический вход в систему — это функция, которая присутствовала в Windows для нескольких выпусков.  Это документированная функция Windows, которая даже имеет такие средства, как автоматический вход в Windows версии 3.01  *[http:/TechNet. Microsoft. com/Sysinternals/bb963905. aspx](https://technet.microsoft.com/sysinternals/bb963905.aspx)*<p>Это позволяет одному пользователю устройства автоматически выполнять вход без ввода учетных данных. Учетные данные настраиваются и хранятся в реестре как зашифрованный секрет LSA.|  
   
 

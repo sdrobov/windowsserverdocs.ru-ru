@@ -1,6 +1,5 @@
 ---
 title: Потоки целостности ReFS
-description: ''
 author: gawatu
 ms.author: jgerend
 manager: dmoss
@@ -9,15 +8,15 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
 ms.assetid: 1f1215cd-404f-42f2-b55f-3888294d8a1f
-ms.openlocfilehash: 0e41d7ae577bf7e9227ff0c02689d916f1008a3d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 5e4ce1870d8aea01de0ab621d7efe197026643db
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403035"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861337"
 ---
 # <a name="refs-integrity-streams"></a>Потоки целостности ReFS
->Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (половина ежегодного канала), Windows 10
+>Область применения: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server (половина ежегодного канала), Windows 10
 
 Потоки целостности — это дополнительная функция ReFS, которая проверяет и поддерживает целостность данных с помощью контрольных сумм. Хотя ReFS всегда применяет контрольные суммы для метаданных, по умолчанию ReFS не создает и не проверяет контрольные суммы для данных файлов. Потоки целостности — это необязательный компонент, который позволяет пользователям использовать контрольные суммы для данных файлов. Когда потоки целостности включены, ReFS может точно определить, являются ли данные допустимыми или они повреждены. Кроме того, ReFS и дисковые пространства могут совместно исправлять поврежденные метаданные и данные.
 
@@ -93,7 +92,7 @@ PS C:\> Set-FileIntegrity H:\ -Enable $True
 PS C:\> Set-FileIntegrity H:\Docs -Enable $True
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 -   [Обзор ReFS](refs-overview.md)
 -   [Клонирование блоков ReFS](block-cloning.md)

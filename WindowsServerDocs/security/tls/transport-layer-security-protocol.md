@@ -1,28 +1,24 @@
 ---
 title: Протокол TLS
 description: Безопасность Windows Server
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: security-tls-ssl
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: de510bb0-a9f6-4bbe-8f8a-8dd7473bbae8
 author: justinha
 ms.author: justinha
-manager: brianlic-msft
+manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: aca2db3ae5bf424dd0f855d24c1ef771039c8b14
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3884d80d1d2f5465e5f3daf708af57b35fab6bd8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403378"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80853607"
 ---
 # <a name="transport-layer-security-protocol"></a>Протокол TLS
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 В этой статье для ИТ-специалистов описывается принцип работы протокола TLS и приводятся ссылки на RFC-документы IETF по протоколу TLS 1,0, TLS 1,1 и TLS 1,2.
 
@@ -45,7 +41,7 @@ ms.locfileid: "71403378"
 
 -   Протокол записи TLS
 
--   Протоколы подтверждения TLS: \-. изменение протокола шифра \- протокол оповещений
+-   Протоколы подтверждения TLS: \- изменение протокола шифра \- протокол предупреждений
 
 -   Криптографические вычисления
 
@@ -59,7 +55,7 @@ ms.locfileid: "71403378"
 
 [RFC 2246 — протокол TLS версии 1,0](http://tools.ietf.org/html/rfc2246)
 
-## <a name="BKMK_SessionResumption"></a>Возобновление сеанса TLS
+## <a name="tls-session-resumption"></a><a name="BKMK_SessionResumption"></a>Возобновление сеанса TLS
 Представленный в Windows Server 2012 R2, поставщик общих служб SChannel реализовал серверную часть возобновления сеанса TLS. Реализация RFC 5077 на стороне клиента была добавлена в Windows 8.
 
 Устройства, подключающие TLS к серверам, часто требуют переподключения. Возобновление сеанса TLS снижает затраты на установку TLS-подключений, так как возобновление включает в себя сокращенное подтверждение TLS. Это упрощает несколько попыток возобновления работы, позволяя группе TLS-серверов возобновить сеансы TLS друг друга. Это изменение обеспечивает следующие возможности для любого клиента TLS, поддерживающего RFC 5077, включая Windows Phone и устройства Windows RT:
@@ -72,12 +68,12 @@ ms.locfileid: "71403378"
 
 Сведения о возобновлении сеанса TLS без отслеживания состояния см. в документе IETF [RFC 5077.](http://www.ietf.org/rfc/rfc5077)
 
-## <a name="BKMK_AppProtocolNego"></a>Согласование протокола приложения
+## <a name="application-protocol-negotiation"></a><a name="BKMK_AppProtocolNego"></a>Согласование протокола приложения
  В Windows Server 2012 R2 и Windows 8.1 появилась поддержка, позволяющая согласование протокола приложения TLS на стороне клиента. Приложения могут использовать протоколы в рамках стандартной разработки HTTP 2,0, а пользователи могут получать доступ к веб-службы, таким как Google и Twitter, с помощью приложений, использующих протокол SPDY.
 
 Сведения о том, как работает согласование протокола приложения, см. в разделе [транспортное расширение протокола прикладного уровня (TLS)](http://tools.ietf.org/search/draft-ietf-tls-applayerprotoneg-05).
 
-## <a name="BKMK_SNI"></a>Поддержка TLS для расширений указание имени сервера
+## <a name="tls-support-for-server-name-indication-extensions"></a><a name="BKMK_SNI"></a>Поддержка TLS для расширений указание имени сервера
 Компонент указания имени сервера (SNI) расширяет возможности протоколов SSL и TLS для правильной идентификации сервера в случае, когда на одном сервере запущено несколько виртуальных образов. В сценарии размещения виртуальной среды несколько доменов (каждый с собственным потенциально отличающимся сертификатом) размещаются на одном сервере. В этом случае сервер не может заранее узнать, какой сертификат следует отправить клиенту. SNI позволяет клиенту сообщать целевой домен ранее по протоколу, что позволяет серверу правильно выбирать нужный сертификат.
 
 Дополнительные функциональные возможности:

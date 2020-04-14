@@ -1,28 +1,22 @@
 ---
 title: timeout
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Команды Windows для времени ожидания, при котором обработчик команд приостанавливается на указанное количество секунд.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e26b4a84-0e30-46e1-aa10-0667b7d3cb4c
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09f294eb78a8868b4e3962557a36199b69fae0c9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: bd0a43e49e8a7567ac975333b04a9e6f549a0fd8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71385770"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80832817"
 ---
 # <a name="timeout"></a>timeout
-
-
 
 Приостанавливает работу обработчика команд в течение указанного числа секунд.
 
@@ -34,21 +28,21 @@ ms.locfileid: "71385770"
 timeout /t <TimeoutInSeconds> [/nobreak] 
 ```
 
-## <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
 |/t \<TimeoutInSeconds >|Указывает десятичное число секунд (от-1 до 99999), по истечении которого обработчик команд продолжит обработку. Значение-1 заставляет компьютер бесконечно ждать нажатия клавиши.|
 |/нобреак|Задает игнорирование пользовательских клавиш.|
-|/?|Отображение справки в командной строке.|
+|/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Примечания
 
 -   Команда **timeout** обычно используется в пакетных файлах.
 -   Нажатие клавиши пользователя возобновляет выполнение командного процессора немедленно, даже если истек период ожидания.
 -   При использовании в сочетании с командой **Sleep** **время ожидания** аналогично команде **Pause** .
 
-## <a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров
 
 Чтобы приостановить обработчик команд в течение десяти секунд, введите:
 ```
@@ -63,6 +57,6 @@ timeout /t 100 /nobreak
 timeout /t -1
 ```
 
-#### <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные материалы
 
-[Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

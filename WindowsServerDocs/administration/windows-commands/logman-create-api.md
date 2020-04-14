@@ -1,28 +1,24 @@
 ---
 title: Создание API Logman
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2ecc0a75-2613-464a-8616-c5dc404bb736
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 512602213fcfd95770af0e27b721a589ed489771
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 3beca5ddafcb1d4fbfc6fbe179e219553f7acaf8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71374597"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80840917"
 ---
 # <a name="logman-create-api"></a>Создание API Logman
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Создание сборщика данных трассировки API.  
 
@@ -30,7 +26,7 @@ ms.locfileid: "71374597"
 ```  
 logman create api <[-n] <name>> [options]  
 ```  
-## <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
 
 |                    Параметр                     |                                                                               Описание                                                                               |
 |--------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -39,7 +35,7 @@ logman create api <[-n] <name>> [options]
 |                 -config <value>                  |                                                         Указывает файл параметров, содержащий параметры команды.                                                         |
 |                   [-n] <name>                    |                                                                       Имя целевого объекта.                                                                        |
 | -f < bin&#124;бинЦирк&#124;CSV&#124;&#124;SQL > |                                                            Указывает формат журнала для сборщика данных.                                                             |
-|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* для пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
+|             -[-] u < пользователь [пароль] >              | Указывает пользователя для запуска от имени. При вводе \* пароля выводится запрос на ввод пароля. Пароль не отображается при вводе пароля в командной строке. |
 |    -m < [начало] [завершение] [[начало] [завершение] [...]] >    |                                                Вместо запланированного времени начала или окончания измените значение на запуск или завершение вручную.                                                 |
 |                -RF < [[чч:] мм:] SS >                |                                                        Запуск сборщика данных в течение указанного периода времени.                                                         |
 |        -b < M/d/гггг ч: СС [AM&#124;] >         |                                                              Начать сбор данных в указанное время.                                                               |
@@ -63,18 +59,18 @@ logman create api <[-n] <name>> [options]
 
 ## <a name="remarks"></a>Примечания  
 Где [-] присутствует, дополнительный — инвертирует параметр.  
-## <a name="BKMK_examples"></a>Примеров  
+## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
 Следующая команда создает счетчик трассировки API с именем trace_notepad для исполняемого файла к:\виндовс\нотепад.ЕКСЕ и выводит результаты в файл к:\нотепад.ЕТЛ.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl  
 ```  
-Следующая команда создает счетчик трассировки API с именем trace_notepad для исполняемого файла к:\виндовс\нотепад.ЕКСЕ, собирающий значения, созданные модулем c:\windows\system32\advapi32.dll.  
+Следующая команда создает счетчик трассировки API с именем trace_notepad для исполняемого файла, к:\виндовс\нотепад.ЕКСЕ сбор значений, созданных модулем c:\windows\system32\advapi32.dll.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -mods c:\windows\system32\advapi32.dll  
 ```  
-Следующая команда создает счетчик трассировки API с именем trace_notepad для исполняемого файла к:\виндовс\нотепад.ЕКСЕ, исключая вызов API Тлсжетвалуе, созданный модулем kernel32. dll.  
+Следующая команда создает счетчик трассировки API с именем trace_notepad для исполняемого файла к:\виндовс\нотепад.ЕКСЕ за исключением вызова API Тлсжетвалуе, созданного модулем kernel32. dll.  
 ```  
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue  
 ```  
-#### <a name="additional-references"></a>Дополнительные ссылки  
+## <a name="additional-references"></a>Дополнительные материалы  
 [logman](logman.md)  

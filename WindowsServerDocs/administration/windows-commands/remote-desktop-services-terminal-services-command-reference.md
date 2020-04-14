@@ -1,34 +1,30 @@
 ---
 title: Справочник по командам служб удаленных рабочих столов (служб терминалов)
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 2f371848-5c48-470c-908c-afbc95d3a805
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d13d6ac2e423c5a07a2a84af5e17fe9081cd70f
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b2e188be84c657688a971a75788942d4acf598d7
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71371613"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80836067"
 ---
 # <a name="remote-desktop-services-terminal-services-command-reference"></a>Справочник по командам служб удаленных рабочих столов (служб терминалов)
 
->Область применения. Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Ниже приведен список программ командной строки службы удаленных рабочих столов.
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 > 
-> |                 Command                 |                                                      Описание                                                       |
+> |                 Команда                 |                                                      Описание                                                       |
 > |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 > |           [change](change.md)           | изменения параметров сервера для входа в систему, сопоставления COM-портов и режима установки для серверов удаленный рабочий стол узла сеансов |
 > |     [change logon](change-logon.md)     |    Включает или отключает вход из сеансов клиента на сервере узла сеансов удаленных рабочих столов или отображает текущее состояние входа.     |

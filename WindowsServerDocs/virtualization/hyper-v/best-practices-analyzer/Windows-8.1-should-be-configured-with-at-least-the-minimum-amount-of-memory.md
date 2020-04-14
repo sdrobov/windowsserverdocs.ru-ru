@@ -2,30 +2,29 @@
 title: Для Windows 8.1 следует настроить по крайней мере минимальный объем памяти.
 description: Содержит инструкции по устранению проблемы, о которой сообщило это правило анализатор соответствия рекомендациям.
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: compute-hyper-v
 ms.author: kathydav
 ms.topic: article
 ms.assetid: 84d7edab-610e-4265-87d0-9869f64b0039
-author: KBDAzure
+author: kbdazure
 ms.date: 8/16/2016
-ms.openlocfilehash: 0004432dc9fbfd0d294f3f7d96dcb1ea80334801
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d8524039d23b0f5df523218177ba21568be27b54
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71393326"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855537"
 ---
 # <a name="windows-81-should-be-configured-with-at-least-the-minimum-amount-of-memory"></a>Для Windows 8.1 следует настроить по крайней мере минимальный объем памяти.
 
->Область применения. Windows Server 2016
+>Область применения: Windows Server 2016
 
 Дополнительные сведения о рекомендациях и проверках см. в разделе [запуска наиболее проверок анализатором соответствия рекомендациям и Управление результатами проверок](https://go.microsoft.com/fwlink/p/?LinkID=223177).  
   
 |Свойство|Подробности|  
 |-|-|  
-|**Операционная система**|Windows Server 2016|  
+|**Операционная система**|Windows Server 2016|  
 |**Продукт или функция**|Hyper-V|  
 |**Серьезности**|Ошибка|  
 |**Категория**|Конфигурация|  
@@ -61,7 +60,7 @@ ms.locfileid: "71393326"
   
 2.  Щелкните правой кнопкой мыши **Windows PowerShell** и выберите команду **Запуск от имени администратора**.  
   
-3.  Выполните эту команду после замены \<MyVM > именем своей виртуальной машины:  
+3.  Выполните эту команду после замены \<MyVM > именем виртуальной машины:  
   
 ```  
 Set-VMMemory <MyVM> -StartupBytes 512MB  

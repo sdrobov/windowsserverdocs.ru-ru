@@ -5,19 +5,18 @@ manager: eldenc
 ms.author: cosdar
 ms.technology: storage-health-service
 ms.topic: article
-ms.assetid: ''
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 519f0321f36fb7afc86962950aeab729d7a38adb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: a4ef08a4ca552211b64d11677153775d6b18b4fa
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71361098"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80827627"
 ---
 # <a name="health-service-actions"></a>служба работоспособности действия
 
-> Относится к: Windows Server 2019, Windows Server 2016
+> Область применения: Windows Server 2019, Windows Server 2016
 
 Служба работоспособности — это новая функция Windows Server 2016, которая улучшает повседневный мониторинг и рабочую среду для кластеров под управлением Локальные дисковые пространства.
 
@@ -45,7 +44,7 @@ Get-StorageHealthAction
 
 -   перераспределения пула носителей.  
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [служба работоспособности в Windows Server 2016](health-service-overview.md)
 - [Документация для разработчиков, пример кода и Справочник по API на сайте MSDN](https://msdn.microsoft.com/windowshealthservice)

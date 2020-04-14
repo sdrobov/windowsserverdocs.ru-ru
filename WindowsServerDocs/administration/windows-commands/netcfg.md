@@ -1,24 +1,20 @@
 ---
 title: netcfg
-description: 'Раздел Windows команды для ****- '
-ms.custom: na
+description: Раздел Windows команды для ****-
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: manage-windows-commands
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: e2daaab7-12db-4e36-b70c-db8906d084f7 vhorne
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfbe8cd757f78bfa3e808a9126af7d1698579885
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 4895928ffdd5d923d370f82e699d69f42c0f81a5
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79320008"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80838937"
 ---
 # <a name="netcfg"></a>netcfg
 
@@ -29,7 +25,7 @@ ms.locfileid: "79320008"
 ```
 netcfg [/v] [/e] [/winpe] [/l ] /c /i
 ```
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
 |/v|Выполнение в **подробном** режиме (подробный)|
@@ -38,11 +34,11 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/l|Предоставляет **Расположение** INF-файла|
 |/c|Предоставляет **класс** устанавливаемого компонента. Протокол, служба или клиент|
 |/i|Предоставляет **идентификатор** компонента|
-|/s|Предоставляет тип **отображаемых**компонентов.<br /><br />\та = адаптеры, n = компоненты сети|
+|/s|Предоставляет тип **отображаемых**компонентов.<p>\та = адаптеры, n = компоненты сети|
 |/b|Отображает **пути привязки**, за которым следует строка, содержащая имя пути.|
 |/?|Отображает **справку** в командной строке.|
 
-## <a name="BKMK_Examples"></a>Примеров
+## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
 
 Чтобы установить *Пример* протокола с помощью к:\оемдир\ексампле.инф, выполните следующие действия.
 ```
@@ -72,5 +68,5 @@ netcfg /s n
 ```
 netcfg /b ms_tcpip
 ```
-## <a name="additional-references"></a>Дополнительные ссылки
--   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## <a name="additional-references"></a>Дополнительные материалы
+-   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

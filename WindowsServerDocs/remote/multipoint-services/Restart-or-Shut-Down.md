@@ -1,24 +1,20 @@
 ---
 title: Перезагрузка и завершение работы
 description: Узнайте, как перезапустить или полностью завершить работу системы в службах MultiPoint.
-ms.custom: na
 ms.prod: windows-server
 ms.technology: multipoint-services
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fc9ce813-6ecb-4422-8f4b-5226386823f3
 author: lizap
 manager: dongill
 ms.author: elizapo
 ms.date: 08/04/2016
-ms.openlocfilehash: 76155fa5f8baf877999bdc3eb0753d7805087a72
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d6c09f6b7809bdcae19afbb6babc75887e1b57d8
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71389418"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80855677"
 ---
 # <a name="restart-or-shut-down"></a>Перезагрузка и завершение работы
 После установки оборудования либо установки или обновления программного обеспечения может потребоваться перезагрузка главного компьютера или всех *станций* в системе MultiPoint Services. При добавлении на станцию нового устройства может потребоваться связь устройств с этой станцией. Дополнительные сведения о том, как *связывать станции*, см. в статье [Переключение между режимами](Switch-Between-Modes.md).  
@@ -28,7 +24,7 @@ ms.locfileid: "71389418"
 > [!NOTE]  
 > Прежде чем перезагружать или выключать компьютер, на котором работают службы MultiPoint, необходимо завершить *сеансы* всех пользователей.  
   
-## <a name="restart-the-computer"></a>Перезагрузите компьютер  
+## <a name="restart-the-computer"></a>Перезагрузите компьютер.  
   
 1.  Завершите сеансы всех пользователей. Дополнительные сведения о завершении сеансов пользователей см. в статье [Завершение сеанса пользователя](End-a-User-Session.md).  
   
