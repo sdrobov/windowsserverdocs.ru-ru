@@ -268,6 +268,7 @@
 #### [Рекомендации по защите AD FS](ad-fs/deployment/Best-Practices-Securing-AD-FS.md)
 #### [Планирование локального условного доступа на основе устройств](ad-fs/deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 #### [Обязательные обновления для AD FS и WAP](ad-fs/deployment/Updates-for-Active-Directory-Federation-Services-AD-FS.md)
+#### [Создание фермы AD FS без прав администратора домена](ad-fs/deployment/Install-AD-FS-Delegated-Admin.md)
 #### [Настройка географической избыточности с помощью репликации SQL Server](ad-fs/deployment/Set-up-Geographic-Redundancy-with-SQL-Server-Replication.md)
 #### [Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2](ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
 #### [Обновление до AD FS в Windows Server 2016 с помощью базы данных WID](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server.md)
