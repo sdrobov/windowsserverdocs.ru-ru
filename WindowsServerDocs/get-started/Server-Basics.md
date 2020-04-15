@@ -1,8 +1,7 @@
 ---
-title: Get Started
-description: 'Basics for Server: system requirements, release notes, upgrade options'
+title: Приступая к работе
+description: 'Основные сведения о Windows Server 2016: требования к системе, заметки о выпуске и варианты обновления'
 ms.prod: windows-server
-ms.service: na
 manager: dongill
 ms.technology: get-started
 ms.date: 03/16/2018
@@ -10,48 +9,48 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 4b8d346ceafb81b02ebbffc62e558800b77f0086
-ms.sourcegitcommit: 8fbd2d877612a9feb02d7d91ed0372d7cd441d5c
+ms.openlocfilehash: 094e4ffdee8480886700a4967ef2281008aad965
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71678812"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826547"
 ---
-# <a name="get-started-with-windows-server-2016"></a>Get Started with Windows Server 2016
+# <a name="get-started-with-windows-server-2016"></a>Начало работы с Windows Server 2016
 
->Applies To: Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!TIP]
-> Looking for information about older versions of Windows Server? Check out our other [Windows Server libraries](/previous-versions/windows/) on docs.microsoft.com. You can also [search this site](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions) for specific information.
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
 
-![Icon showing a box with a checkmark](../media/landing-icons/getstarted.png) This collection contains detailed information to help you determine if you're ready to move to Windows Server 2016. Once you've checked the system requirements, upgrade options, and other information about moving to Windows Server 2016, you're ready to go back to the main [Windows Server 2016](Windows-Server-2016.md) hub and start down the path to installing the best edition and installation option for your needs. 
+![Значок с установленным флажком](../media/landing-icons/getstarted.png) Эта коллекция содержит подробные сведения, помогающие определить готовность к переходу на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server 2016, вы можете вернуться в главный центр [Windows Server 2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
 
 > [!Note]
-> To download Windows Server 2016, see [Windows Server Evaluations](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
+> Чтобы скачать Windows Server 2016, см. статью [Ознакомительные версии Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).
 
 
-## <a name="system-requirementssystem-requirementsmd"></a>[System Requirements](system-requirements.md)
-Find out the minimum hardware requirements to install and run Windows Server 2016.
+## <a name="system-requirements"></a>[Требования к системе](system-requirements.md)
+Вы можете узнать требования к аппаратному обеспечению для установки и запуска Windows Server 2016.
 
-## <a name="release-notes-important-issues-in-windows-serverwindows-server-2016-ga-release-notesmd"></a>[Release Notes: Important Issues in Windows Server](Windows-Server-2016-GA-Release-Notes.md)
-Issues that could cause serious problems if you don't avoid or work around them.
+## <a name="release-notes-important-issues-in-windows-server"></a>[Заметки о выпуске. Неполадки в Windows Server](Windows-Server-2016-GA-Release-Notes.md)
+Проблемы, которые могут вызвать серьезные неполадки, если их не устранить или не обойти.
 
-## <a name="recommendations-for-moving-to-windows-server-2016recommendations-moving-to-server2016md"></a>[Recommendations for moving to Windows Server 2016](Recommendations-moving-to-Server2016.md)
-Comprehensive table of available approaches for getting to Windows Server 2016 in various scenarios.
+## <a name="recommendations-for-moving-to-windows-server-2016"></a>[Рекомендации по переходу на Windows Server 2016](Recommendations-moving-to-Server2016.md)
+Полный список доступных вариантов перехода к использованию Windows Server 2016 в различных сценариях.
 
-## <a name="features-removed-or-deprecated-in--windows-server-2016deprecated-featuresmd"></a>[Features Removed or Deprecated in  Windows Server 2016](deprecated-features.md)
-Features that have already been removed from Windows Server 2016 or designated for potential future removal.
+## <a name="features-removed-or-deprecated-in--windows-server-2016"></a>[Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016](deprecated-features.md)
+Компоненты, которые уже удалены из Windows Server 2016 или отмечены как потенциальные для дальнейшего удаления.
 
-## <a name="upgrade-and-conversion-optionssupported-upgrade-pathsmd"></a>[Upgrade and Conversion Options](Supported-Upgrade-Paths.md)
-Description of all the ways to move to Windows Server 2016 from whatever you're running today.
+## <a name="upgrade-and-conversion-options"></a>[Варианты обновления и преобразования](Supported-Upgrade-Paths.md)
+Описание всех способов перехода на Windows Server 2016 с любой используемой вами версии.
 
-## <a name="server-role-upgrade-and-migration-matrixserver-role-upgradeability-tablemd"></a>[Server Role Upgrade and Migration Matrix](Server-Role-Upgradeability-Table.md)
-Information about additional steps needed to bring particular server roles to Windows Server 2016.
+## <a name="server-role-upgrade-and-migration-matrix"></a>[Матрица обновления и миграции роли сервера](Server-Role-Upgradeability-Table.md)
+Сведения о дополнительных шагах, необходимых для переноса отдельных ролей сервера на Windows Server 2016
 
-## <a name="server-application-compatibility-tableserver-application-compatibilitymd"></a>[Server Application Compatibility Table](Server-Application-Compatibility.md)
-Does SQL work on Windows Server 2016? What steps are needed to get Exchange running? This topic explains what you'll need to do.
+## <a name="server-application-compatibility-table"></a>[Таблица совместимости серверных приложений](Server-Application-Compatibility.md)
+Работает ли SQL в Windows Server 2016? Какие действия необходимы для запуска Exchange? Необходимые действия описаны в этом разделе.
 
-## <a name="server-activation-guideserver-2016-activationmd"></a>[Server Activation Guide](Server-2016-activation.md)
-Basic information on activation of Windows Server 2016 itself and other operating systems by using Windows Server 2016.
+## <a name="server-activation-guide"></a>[Руководство по активации сервера](Server-2016-activation.md)
+Основные сведения об активации Windows Server 2016 и других операционных систем с помощью Windows Server 2016.
 
 

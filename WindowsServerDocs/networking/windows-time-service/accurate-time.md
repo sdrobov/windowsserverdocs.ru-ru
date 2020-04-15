@@ -2,18 +2,18 @@
 ms.assetid: 72a90d00-56ee-48a9-9fae-64cbad29556c
 title: Точное время в Windows Server 2016
 description: Теперь точность синхронизации времени в Windows Server 2016 значительно увеличена, при этом обеспечивается полная обратная совместимость NTP с более ранними версиями Windows.
-author: eross-msft
+author: dcuomo
 ms.author: dacuo
 ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 3320c67d52978f0e9abaae7d5bec9b4fcb727fd6
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 0486033ee52432191cb35f2ce38c44d5b7728a2e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80315083"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80861687"
 ---
 # <a name="accurate-time-for-windows-server-2016"></a>Точное время в Windows Server 2016
 
@@ -46,7 +46,7 @@ ms.locfileid: "80315083"
 При работе в гостевом компьютере вы можете столкнуться с различным поведением домена или автономной среды, так как у гостевых машин Hyper-V будут по крайней мере два поставщика времени Windows на выбор — время узла и NTP.
 
 > [!NOTE] 
-> Дополнительные сведения об иерархии доменов и системе оценки см. в записи блога [What is Windows Time Service?](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/) (Что такое служба времени Windows?) .
+> Дополнительные сведения об иерархии доменов и системе оценки см. в записи блога, посвященной [службе времени Windows](https://blogs.msdn.microsoft.com/w32time/2007/07/07/what-is-windows-time-service/). .
 
 > [!NOTE]
 > Страта — это концепция, используемая в поставщиках NTP и Hyper-V, и ее значение указывает расположение часов в иерархии.  Страта 1 резервируется для часов самого высокого уровня, а Страта 0 — для оборудования, время которого считается точным с минимальной или отсутствующей задержкой, связанной с ним.  Страта 2 обращается к серверам страты 1, страта 3 — к страте 2 и т. д.  Хотя страты более низкого уровня часто указывают более точное время, случаются несоответствия.  Кроме того, служба W32Time принимает только время из страты 15 или ниже.  Чтобы просмотреть страту клиента, используйте *w32tm /query /status*.

@@ -2,21 +2,19 @@
 title: PowerShell на сервере Nano Server
 description: Различия в сокращенном наборе возможностей PowerShell на сервере Nano Server
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 9b25b939-1e2c-4bed-a8d3-2a8e8e46b53d
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 1105ba9f4415061b25d0655d3f2d56929dbbdfec
-ms.sourcegitcommit: 5b055fc1d73375f68149c214152f1d63396dd6ca
+ms.openlocfilehash: 4879ae58c24596d64d24b6bece54d4c35837f00f
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76248394"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826767"
 ---
 # <a name="powershell-on-nano-server"></a>PowerShell на сервере Nano Server
 
@@ -67,7 +65,7 @@ CompatiblePSEditions Property   System.Collections.Generic.IEnumerable[string] C
 ```
 При получении списка доступных модулей можно отфильтровать его по выпуску PowerShell.
 ```powershell
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Desktop"
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Desktop
 
     Directory: C:\Program Files\WindowsPowerShell\Modules
 
@@ -76,21 +74,21 @@ ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   1.0        ModuleWithPSEditions
 
-Get-Module -ListAvailable | ? CompatiblePSEditions -Contains "Core" | % CompatiblePSEditions
+Get-Module -ListAvailable | ? CompatiblePSEditions -Contains Core | % CompatiblePSEditions
 Desktop
 Core
 
 ```
 Авторы сценариев могут запретить их выполнение, когда они запускаются в несовместимом выпуске PowerShell, с помощью параметра PSEdition инструкции #requires.
 ```powershell
-Set-Content C:\script.ps1 -Value "#requires -PSEdition Core
-Get-Process -Name PowerShell"
+Set-Content C:\script.ps1 -Value #requires -PSEdition Core
+Get-Process -Name PowerShell
 Get-Content C:\script.ps1
 #requires -PSEdition Core
 Get-Process -Name PowerShell
 
 C:\script.ps1
-C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a "#requires" statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
+C:\script.ps1 : The script 'script.ps1' cannot be run because it contained a #requires statement for PowerShell editions 'Core'. The edition of PowerShell that is required by the script does not match the currently running PowerShell Desktop edition.
 At line:1 char:1
 + C:\script.ps1
 + ~~~~~~~~~~~~~

@@ -1,25 +1,21 @@
 ---
 title: Системные требования
 description: В этом разделе описываются минимальные требования к хранилищу, ЦП, сети, памяти и ОЗУ при выполнении каждого из вариантов чистой установки.
-ms.custom: na
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.date: 10/17/2017
 ms.technology: server-general
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4a8b42d7-9fe5-4efe-9ea1-ace2131fe068
 author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e8b0c04137ff3b11cdaa7aba3c7899ca6300848
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: cd4666f9ac0677ce8893041ae4e937cca41e8164
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75947741"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826497"
 ---
 # <a name="system-requirements"></a>Системные требования
 
@@ -35,7 +31,7 @@ ms.locfileid: "75947741"
 
 
 ## <a name="review-system-requirements"></a>Обзор требований к системе  
-Далее приводятся примерные требования к системе для Windows Server 2016. Если компьютер не удовлетворяет минимальным требованиям, то правильно установить продукт будет невозможно. Фактические требования зависят от конфигурации системы и устанавливаемых приложений и компонентов.
+Далее приводятся примерные требования к системе для Windows Server 2016. Если компьютер не удовлетворяет минимальным требованиям, вы не сможете правильно установить этот продукт. Фактические требования зависят от конфигурации системы и устанавливаемых приложений и компонентов.
 
 Если не указано иное, эти минимальные системные требования применяются ко всем вариантам установки (основные серверные компоненты, сервер с рабочим столом и сервер Nano Server), а также к выпускам Standard и Datacenter.  
 

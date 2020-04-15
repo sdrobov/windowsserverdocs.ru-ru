@@ -1,30 +1,25 @@
 ---
 title: При подключении пользователь получает сообщение "Служба удаленных рабочих столов сейчас занята"
 description: Узнайте, как устранить ошибку "Служба удаленных рабочих столов сейчас занята" при подключении к удаленному рабочему столу.
-audience: itpro
-ms.custom: na
 ms.reviewer: rklemen
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: troubleshooting
-ms.assetid: ''
 author: kaushika-msft
 manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 989591f1d312446b680d708b2be7bea9b26ab8f9
-ms.sourcegitcommit: c5709021aa98abd075d7a8f912d4fd2263db8803
+ms.openlocfilehash: c345833ee63a1286a5615998649e8aa9d25896a6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2020
-ms.locfileid: "76265886"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857167"
 ---
 # <a name="on-connecting-user-receives-remote-desktop-service-is-currently-busy-message"></a>При подключении пользователь получает сообщение "Служба удаленных рабочих столов сейчас занята"
 
 Чтобы определить соответствующее решение этой проблемы, выполните следующие действия:
 
-- Перестает ли служба удаленных рабочих столов отвечать на запросы (например, клиент удаленного рабочего стола зависает на экране приветствия)?  
+- Прекращает ли служба удаленных рабочих столов отвечать на запросы (например, клиент удаленного рабочего стола зависает на экране приветствия)?  
    - Если служба перестает отвечать, см. раздел [Проблемы с памятью на сервере RDSH](#rdsh-server-memory-issue).
    - Если клиент взаимодействует со службой без проблем, перейдите к следующему шагу.
 - Могут ли пользователи отключиться от сеансов удаленного рабочего стола и снова подключиться к ним?  

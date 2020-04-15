@@ -2,29 +2,27 @@
 title: Управление сервером Nano Server
 description: обновления, пакеты обслуживания, сетевые трассировки, мониторинг производительности
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
 ms.date: 09/06/2017
-ms.tgt_pltfrm: na
 ms.topic: get-started-article
 ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 132f4e1966b332cd6bb6e21402984db7ceed4497
-ms.sourcegitcommit: d599eea5203f95609fb21801196252d5dd9f2669
+ms.openlocfilehash: 0b41113f302dad1c9917001bf137da28ef431d38
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005222"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826787"
 ---
 # <a name="manage-nano-server"></a>Управление сервером Nano Server
 
->Область применения. Windows Server 2016
+>Область применения. Windows Server 2016
 
 > [!IMPORTANT]
-> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Ознакомьтесь с разделом [Изменения сервера Nano Server](nano-in-semi-annual-channel.md), чтобы узнать, что это означает.   
+> Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md).   
 
 Управление Nano Server осуществляется удаленно. Эта ОС не поддерживает возможность локального входа и службы удаленных терминалов. Однако вам доступен обширный спектр возможностей для удаленного управления Nano Server, включая Windows PowerShell, инструментарий управления Windows (WMI) и удаленное управление Windows и службы аварийного управления (EMS).  
 
@@ -45,14 +43,14 @@ ms.locfileid: "72005222"
   
 Чтобы добавить сервер Nano Server в список доверенных узлов, выполните следующую команду в командной строке Windows PowerShell с повышенными привилегиями:  
   
-`Set-Item WSMan:\localhost\Client\TrustedHosts "<IP address of Nano Server>"`  
+`Set-Item WSMan:\localhost\Client\TrustedHosts <IP address of Nano Server>`  
   
 Чтобы запустить удаленный сеанс Windows PowerShell, запустите локальный сеанс Windows PowerShell с повышенными привилегиями и выполните следующие команды:  
   
   
 ```  
-$ip = "<IP address of Nano Server>"  
-$user = "$ip\Administrator"  
+$ip = <IP address of Nano Server>  
+$user = $ip\Administrator  
 Enter-PSSession -ComputerName $ip -Credential $user  
 ```  
   
@@ -71,7 +69,7 @@ Enter-PSSession -ComputerName $ip -Credential $user
   
   
 ```  
-$ip = "<IP address of the Nano Server\>"  
+$ip = <IP address of the Nano Server\>  
 $user = $ip\Administrator  
 $cim = New-CimSession -Credential $user -ComputerName $ip  
 ```  
@@ -82,7 +80,7 @@ $cim = New-CimSession -Credential $user -ComputerName $ip
   
 ```  
 Get-CimInstance -CimSession $cim -ClassName Win32_ComputerSystem | Format-List *  
-Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name LIKE 'p%'"  
+Get-CimInstance -CimSession $Cim -Query SELECT * from Win32_Process WHERE name LIKE 'p%'  
 ```  
   
   
@@ -91,7 +89,7 @@ Get-CimInstance -CimSession $Cim -Query "SELECT * from Win32_Process WHERE name 
   
 ```
 winrm quickconfig
-winrm set winrm/config/client @{TrustedHosts="<ip address of Nano Server>"}
+winrm set winrm/config/client @{TrustedHosts=<ip address of Nano Server>}
 chcp 65001
 ```
   
@@ -126,7 +124,7 @@ Stop-NetEventSession [-Name]
   
 1.  Скачайте служебный пакет (из соответствующей статье базы знаний или [каталога Центра обновления Майкрософт](https://catalog.update.microsoft.com/v7/site/home.aspx). Сохраните его в локальном каталоге или сетевой папке, например C:\ServicingPackages.  
 2.  Создайте папку, в которой будет сохранен извлеченный служебный пакет.  Например, c:\KB3157663_expanded  
-3.  Откройте консоль Windows PowerShell и используйте команду `Expand`, указав путь к MSU-файлу служебного пакета, включая параметр `-f:*` и путь, куда требуется извлечь служебный пакет.  Например: `Expand "C:\ServicingPackages\Windows10.0-KB3157663-x64.msu" -f:* "C:\KB3157663_expanded"`  
+3.  Откройте консоль Windows PowerShell и используйте команду `Expand`, указав путь к MSU-файлу служебного пакета, включая параметр `-f:*` и путь, куда требуется извлечь служебный пакет.  Например: `Expand C:\ServicingPackages\Windows10.0-KB3157663-x64.msu -f:* C:\KB3157663_expanded`  
   
     Извлеченные файлы должны выглядеть примерно следующим образом:  
 C:>dir C:\KB3157663_expanded   
@@ -158,9 +156,9 @@ Volume Serial Number is B05B-CC3D
 ```  
 $sess = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession  
 
-$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=0";OnlineScan=$true}  
+$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria=IsInstalled=0;OnlineScan=$true}  
 ```  
-**Примечание.**  
+**Примечание**.  
 Если доступные обновления отсутствуют, эта команда возвращает следующую ошибку:  
 ```  
 Invoke-CimMethod : A general error occurred that is not covered by a more specific error code.  
@@ -171,7 +169,7 @@ At line:1 char:16
 
 +                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
 
-    + CategoryInfo          : NotSpecified: (MSFT_WUOperatio...-5b842a3dd45d")  
+    + CategoryInfo          : NotSpecified: (MSFT_WUOperatio...-5b842a3dd45d)  
 
    :CimInstance) [Invoke-CimMethod], CimException  
 
@@ -191,7 +189,7 @@ $scanResults = Invoke-CimMethod -InputObject $sess -MethodName ApplyApplicableUp
 
 Restart-Computer  
 ```  
-**Примечание.**  
+**Примечание**.  
 Защитник Windows будет препятствовать установке обновлений. Чтобы обойти эту проблему, удалите Защитник Windows, установите обновления и снова установите Защитник Windows. Кроме того, можно скачать обновления на другом компьютере, скопировать их на сервер Nano Server и затем применить с помощью DISM.exe.  
 
 
@@ -201,11 +199,11 @@ Restart-Computer
 ```  
 $sess = New-CimInstance -Namespace root/Microsoft/Windows/WindowsUpdate -ClassName MSFT_WUOperationsSession  
 
-$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria="IsInstalled=1";OnlineScan=$true}  
+$scanResults = Invoke-CimMethod -InputObject $sess -MethodName ScanForUpdates -Arguments @{SearchCriteria=IsInstalled=1;OnlineScan=$true}  
 ```  
 
-**Примечание.**  
-Эти команды перечисляют установленные компоненты, однако в их выходных данных нет непосредственного слова "установленные". Если вам требуются подобные выходные данные, например, для отчета, можно запустить  
+**Примечание**.  
+Эти команды перечисляют установленные компоненты, но в их выходных данных нет непосредственного указания на установку. Если вам требуются подобные выходные данные, например, для отчета, можно запустить  
 ```PowerShell
 Get-WindowsPackage -Online
 ```
@@ -214,7 +212,7 @@ Get-WindowsPackage -Online
 ---  
 Перечисленные выше команды отправляют в Центр обновления Windows и Центр обновления Майкрософт в сети запрос на поиск и скачивание обновлений. При использовании служб WSUS можно задать разделы реестра на сервере Nano Server, чтобы использовать вместо этого сервер WSUS.  
   
-См. таблицу "Разделы реестра для параметров среды агента обновления Windows" в статье [Настройка автоматических обновлений в среде, отличной от Active Directory](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
+См. таблицу "Разделы реестра для параметров среды агента обновления Windows" в статье [Настройка автоматических обновлений в среде, отличной от Active Director](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
   
 Следует задать по меньшей мере разделы реестра **WUServer** и **WUStatusServer**, но в зависимости от реализации служб WSUS могут потребоваться и другие значения. Эти параметры всегда можно уточнить, изучив другой экземпляр Windows Server в той же среде.  
 
@@ -244,7 +242,7 @@ wpr.exe -providers
 
 Вы можете отфильтровать выходные данные по типу событий, которые представляют определенный интерес. Например:
 ```
-PS C:\> wpr.exe -providers | select-string "Storage"
+PS C:\> wpr.exe -providers | select-string Storage
 
        595f33ea-d4af-4f4d-b4dd-9dacdd17fc6e                              : Microsoft-Windows-StorageManagement-WSP-Host
        595f7f52-c90a-4026-a125-8eb5e083f15e                              : Microsoft-Windows-StorageSpaces-Driver
@@ -258,21 +256,21 @@ PS C:\> wpr.exe -providers | select-string "Storage"
 
 Создайте и запустите трассировку, указав имя файла для хранения событий.
 ```
-PS C:\> New-EtwTraceSession -Name "ExampleTrace" -LocalFilePath c:\etrace.etl
+PS C:\> New-EtwTraceSession -Name ExampleTrace -LocalFilePath c:\etrace.etl
 ```
 
 Добавьте в трассировку GUID поставщика. Используйте ```wpr.exe -providers``` для преобразования имени поставщика в GUID. 
 ```
-PS C:\> wpr.exe -providers | select-string "Kernel-Memory"
+PS C:\> wpr.exe -providers | select-string Kernel-Memory
 
        d1d93ef7-e1f2-4f45-9943-03d245fe6c00                              : Microsoft-Windows-Kernel-Memory
 
-PS C:\> Add-EtwTraceProvider -Guid "{d1d93ef7-e1f2-4f45-9943-03d245fe6c00}" -SessionName "ExampleTrace"
+PS C:\> Add-EtwTraceProvider -Guid {d1d93ef7-e1f2-4f45-9943-03d245fe6c00} -SessionName ExampleTrace
 ```
 
 Удалите трассировку — при этом сеанс трассировки останавливается, а события записываются в соответствующий файл журнала.
 ```
-PS C:\> Remove-EtwTraceSession -Name "ExampleTrace"
+PS C:\> Remove-EtwTraceSession -Name ExampleTrace
 
 PS C:\> dir .\etrace.etl
 
@@ -286,7 +284,7 @@ Mode                LastWriteTime         Length Name
 > В этом примере показано добавление одного поставщика трассировки в сеанс, однако командлет ```Add-EtwTraceProvider``` можно использовать для сеанса несколько раз с разными GUID поставщика, чтобы включить трассировку из нескольких источников. Альтернативой является использование описанных ниже профилей ```wpr.exe```.
 
 ### <a name="record-traces-from-multiple-etw-providers"></a>Запись трассировки из нескольких поставщиков трассировки событий Windows
-Параметр ```-profiles``` [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
+Параметр ```-profiles```[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
 ```
 PS C:\Users\Administrator\Documents> wpr.exe -profiles 
 
@@ -330,12 +328,12 @@ Copyright (c) 2015 Microsoft Corporation. All rights reserved.
 
 Сначала создайте новую конфигурацию авторегистратора.
 ```
-PS C:\> New-AutologgerConfig -Name "BootPnpLog" -LocalFilePath c:\bootpnp.etl 
+PS C:\> New-AutologgerConfig -Name BootPnpLog -LocalFilePath c:\bootpnp.etl 
 ```
 
 Добавьте в нее поставщик трассировки событий Windows. В этом примере используется поставщик PnP ядра. Снова вызовите ```Add-EtwTraceProvider```, указав то же имя авторегистратора, но другой GUID, чтобы обеспечить сбор данных трассировки загрузки из нескольких источников.
 ```
-Add-EtwTraceProvider -Guid "{9c205a39-1250-487d-abd7-e831c6290539}" -AutologgerName BootPnpLog
+Add-EtwTraceProvider -Guid {9c205a39-1250-487d-abd7-e831c6290539} -AutologgerName BootPnpLog
 ```
 
 При этом сеанс трассировки событий Windows не запускается немедленно, а настраивается для запуска при следующей загрузке. После перезагрузки автоматически запускается новый сеанс трассировки событий Windows с именем конфигурации авторегистратора, при этом добавленные поставщики трассировки включены. Когда сервера Nano Server загрузился, следующая команда остановит сеанс трассировки после записи зарегистрированных событий в соответствующий файл трассировки:
@@ -355,7 +353,7 @@ PS C:\> Remove-AutologgerConfig -Name BootPnpLog
 
 Запрос доступных счетчиков — можно отфильтровать выходные данные, чтобы легче находить нужные.
 ```
-PS C:\> typeperf.exe -q | Select-String "UDPv6"
+PS C:\> typeperf.exe -q | Select-String UDPv6
 
 \UDPv6\Datagrams/sec
 \UDPv6\Datagrams Received/sec
@@ -366,14 +364,14 @@ PS C:\> typeperf.exe -q | Select-String "UDPv6"
 
 Параметры позволяют указать число попыток и интервал для сбора данных из счетчиков. В приведенном ниже примере показатель времени простоя процессора собирается 5 раз каждые 3 секунды.
 ```
-PS C:\> typeperf.exe "\Processor Information(0,0)\% Idle Time" -si 3 -sc 5
+PS C:\> typeperf.exe \Processor Information(0,0)\% Idle Time -si 3 -sc 5
 
-"(PDH-CSV 4.0)","\\ns-g2\Processor Information(0,0)\% Idle Time"
-"09/15/2016 09:20:56.002","99.982990"
-"09/15/2016 09:20:59.002","99.469634"
-"09/15/2016 09:21:02.003","99.990081"
-"09/15/2016 09:21:05.003","99.990454"
-"09/15/2016 09:21:08.003","99.998577"
+(PDH-CSV 4.0),\\ns-g2\Processor Information(0,0)\% Idle Time
+09/15/2016 09:20:56.002,99.982990
+09/15/2016 09:20:59.002,99.469634
+09/15/2016 09:21:02.003,99.990081
+09/15/2016 09:21:05.003,99.990454
+09/15/2016 09:21:08.003,99.998577
 Exiting, please wait...
 The command completed successfully.
 ```

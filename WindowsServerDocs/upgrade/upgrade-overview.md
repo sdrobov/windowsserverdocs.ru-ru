@@ -1,18 +1,18 @@
 ---
 title: Общие сведения об обновлениях Windows Server | Документация Майкрософт
 description: Общие сведения об обновлениях Windows Server и некоторых аспектах, которые нужно обдумать перед выполнением фактического обновления.
-ms.prod: windows server
+ms.prod: windows-server
 ms.technology: server-general
 ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/10/2019
-ms.openlocfilehash: 6f57e52657ca3c80c92d56c54ea87e43aabd1e99
-ms.sourcegitcommit: 27f0caf74e88781054250455c3c1adf06deb6234
+ms.openlocfilehash: 1ac4cbe8b9bda4ac2de2c7ad7ec27b1534c0de72
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71124794"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80854237"
 ---
 # <a name="overview-about-windows-server-upgrades"></a>Общие сведения об обновлениях Windows Server
 
@@ -42,3 +42,4 @@ ms.locfileid: "71124794"
 При обновлении Windows Server обычно можно пропустить одну, а иногда даже две версии. Например, Windows Server 2012 R2 и Windows Server 2016 можно обновить на месте до Windows Server 2019.
 
 Вы также можете провести обновление с ознакомительной версии операционной системы на розничную, с более старой розничной версии на более новую или, в некоторых случаях, с корпоративного выпуска ОС на обычный. Дополнительные сведения о поддерживаемых способах, отличных от обновления на месте, см. в [этой статье](../get-started/supported-upgrade-paths.md).
+""'

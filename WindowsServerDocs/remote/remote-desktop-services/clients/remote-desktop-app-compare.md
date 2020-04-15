@@ -1,25 +1,21 @@
 ---
-title: Удаленный рабочий стол — сравнение клиентов
-description: Сравните различные клиенты удаленных рабочих столов по поддерживаемым возможностям и функциям.
-ms.custom: na
+title: Удаленный рабочий стол — сравнение клиентских приложений
+description: Сравните различные приложения удаленных рабочих столов по поддерживаемым возможностям и функциям.
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: remote-desktop-services
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 12efe858-6b76-4e08-9f72-b9603aceb0fc
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 03/28/2020
+ms.date: 04/06/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 11c91ac951db27915d9313f7f98e5e2cfc56b726
-ms.sourcegitcommit: 78c00944b6990702d28bdcc4a9215927ca901bfb
+ms.openlocfilehash: 8c41d2691f22e7feb89518a02736f3607940a2f6
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/31/2020
-ms.locfileid: "80440374"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80856227"
 ---
 # <a name="compare-the-clients"></a>Сравнение клиентов
 
@@ -57,11 +53,11 @@ ms.locfileid: "80440374"
 
 | Перенаправление         | Установленные приложения для Windows</br>(MSTSC) | Настольный компьютер с Windows</br>(MSRDC) | Магазин Windows Store | Android | iOS         | macOS                           | Веб-клиент    |
 |---------------------|---------------------------|-----------------------------|---------------|---------|-------------|---------------------------------|---------------|
-| Камеры             | X                         | X                           |               |         |             | X                               |               |
-| Буфер обмена           | X                         | X                           | X             | текст    | текст, изображения | X                               | текст          |
-| Локальный диск /служба хранилища | X                         | X                           |               | X       |             | X                               |               |
+| Камеры             | X                         | X                           |               |         |   X         | X                               |               |
+| Буфер обмена           | X                         | X                           | X             | Текст    | Текст, изображения | X                               | текст          |
+| Локальный диск /служба хранилища | X                         | X                           |               | X       |   X        | X                               |               |
 | Расположение            | X                         | X                           |               |         |             |                                 |               |
-| Микрофоны         | X                         | X                           | X             |         |             | X                               |               |
+| Микрофоны         | X                         | X                           | X             |         |  X          | X                               |               |
 | принтеры;            | X                         | X                           |               |         |             | X (только для CUPS)                   | Печать в PDF     |
 | Сканеры            | X                         | X                           |               |         |             |                                 |               |
 | Smart Cards         | X                         | X                           |               |         |             | X (вход в Windows не поддерживается) |               |

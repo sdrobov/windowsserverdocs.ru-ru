@@ -8,18 +8,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 ms.localizationpriority: medium
 ms.date: 06/03/2019
-ms.openlocfilehash: 5dbbdc19707f2eadfa3b2c919af95b58645de441
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 07479bc5bd2fdf661db8a30e3a9f20c7cce0513e
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71391374"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80825997"
 ---
 # <a name="whats-new-in-windows-server-version-1709"></a>Новые возможности Windows Server версии 1709
 
 >Область применения. Windows Server (Semi-Annual Channel)
 
-<img src="../media/landing-icons/new.png" style='float:left; padding:.5em;' alt="Icon showing a newspaper">&nbsp;Подробные сведения о новых возможностях Windows приведены в статье[Новые возможности Windows Server](whats-new-in-windows-server.md). В этом разделе рассказывается о новых и измененных возможностях в Windows Server версии 1709. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском. См. также раздел [Windows Server версии 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
+<img src=../media/landing-icons/new.png style='float:left; padding:.5em;' alt=Icon showing a newspaper>&nbsp;Подробные сведения о новых возможностях Windows приведены в статье[Новые возможности Windows Server](whats-new-in-windows-server.md). В этом разделе рассказывается о новых и измененных возможностях в Windows Server версии 1709. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском. См. также раздел [Windows Server версии 1709](https://blogs.technet.microsoft.com/windowsserver/2017/08/24/sneak-peek-1-windows-server-version-1709/).
 
 > [!IMPORTANT]
 > Windows Server версии 1709 не поддерживается с 9 апреля 2019 года.
@@ -33,11 +33,11 @@ ms.locfileid: "71391374"
 
 Каналы выпуска представлены в следующей таблице.
 
-|   | Semi-Annual Channel | Long-Term Servicing Channel |
+|   | Полугодовой канал | Long-Term Servicing Channel |
 | ------------- | ------------- | ------------ |
 | Частота выпусков  | Дважды в год (весной и осенью)  | Каждые 2-3 года |
 | График поддержки  | Основная фаза поддержки в производстве в течение 18 месяцев  | 5 лет основной фазы поддержки + 5 лет расширенной поддержки |
-| Доступность  | Software Assurance или Azure (с размещением в облаке)  | Все каналы |
+| доступность;  | Software Assurance или Azure (с размещением в облаке)  | Все каналы |
 | Соглашение об именовании  | Windows Server версии YYMM  | Windows Server YYYY |
 
 Подробные сведения см. в статье [Каналы обслуживания Windows Server: LTSC и SAC](https://docs.microsoft.com/windows-server/get-started/semi-annual-channel-overview) (Каналы обслуживания Windows Server: LTSC и SAC).
@@ -88,7 +88,7 @@ ms.locfileid: "71391374"
 
 **Уязвимость SMBLoris** Проблема, которую называют "SMBLoris" и которая могла бы привести к отказу в обслуживании, была устранена.
 
-## <a name="storage"></a>Хранилище
+## <a name="storage"></a>Хранение
 
 **Реплика хранилища**: Защита посредством аварийного восстановления, добавленная через реплику хранилища в Windows Server 2016, была расширена и теперь включает следующие возможности:
 - **Тестовая отработка отказа**. Появилась возможность подключить целевое хранилище посредством функции тестовой отработки отказа. Можно временно подключить моментальный снимок реплицированного хранилища на целевых узлах для тестирования или резервного копирования.  Подробные сведения см. в статье [Часто задаваемые вопросы о реплике хранилища](https://aka.ms/srfaq). 
@@ -110,7 +110,7 @@ ms.locfileid: "71391374"
 >[!TIP]
 >Предварительный обзор других предстоящих полезных изменений в RDS см. в разделе [Службы удаленных рабочих столов: обновления и предстоящие изменения](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/20/first-look-at-updates-coming-to-remote-desktop-services/)
 
-## <a name="networking"></a>Сеть
+## <a name="networking"></a>сеть;
 
 Поддерживается **сетка маршрутизации Docker**. Входная сетка маршрутизации входит в состав [режима мелких объектов](https://docs.docker.com/engine/swarm/), встроенного в решения Docker для оркестрации контейнеров. Дополнительные сведения см. в разделе [Сетка маршрутизации Docker, доступна в Windows Server версии 1709](https://blogs.technet.microsoft.com/virtualization/2017/09/26/dockers-ingress-routing-mesh-available-with-windows-server-version-1709/).
 
@@ -149,7 +149,7 @@ ms.locfileid: "71391374"
 
 **Программно-конфигурируемая сеть**
 
-- **Шифрование виртуальной сети** — новая возможность, позволяющая шифровать трафик виртуальной сети между виртуальными машинами, которые обмениваются данными между собой в подсетях с пометкой "Шифрование включено". Для шифрования пакетов с помощью этой возможности используется протокол уровня безопасности датаграммы транспортировки (DTLS) в виртуальной подсети.  Протокол DTLS обеспечивает защиту от прослушивания, мошенничества и подделки со стороны любых лиц, имеющих доступ к физической сети.
+- **Шифрование виртуальной сети** — новая возможность, позволяющая шифровать трафик виртуальной сети между Виртуальными машинами, которые обмениваются данными в подсетях с пометкой "Шифрование включено". Для шифрования пакетов с помощью этой возможности используется протокол уровня безопасности датаграммы транспортировки (DTLS) в виртуальной подсети.  Протокол DTLS обеспечивает защиту от прослушивания, мошенничества и подделки со стороны любых лиц, имеющих доступ к физической сети.
  
 **VPN в Windows 10**
 
