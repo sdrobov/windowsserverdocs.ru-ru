@@ -1,27 +1,23 @@
 ---
 title: Устранение неполадок подключения к системе удаленного веб-доступа в Windows Server Essentials
 description: Описание использования Windows Server Essentials
-ms.custom: na
 ms.date: 10/03/2016
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d3642575-b3ee-4488-b654-5bf9d3b8c935
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6db623308184c5be2968fa1d8991de2b48eef5b7
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 62f3bf875b03328b0016261bf6aff7a39c4b65bc
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318635"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80852247"
 ---
 # <a name="troubleshoot-remote-web-access-connectivity-in-windows-server-essentials"></a>Устранение неполадок подключения к системе удаленного веб-доступа в Windows Server Essentials
  
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения. Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
   
  Как правило, Windows Server Essentials может автоматически настроить маршрутизатор широкополосной связи, если этот маршрутизатор является сертифицированным устройством UPnP и на нем включен параметр UPnP.  
   
@@ -57,9 +53,9 @@ ms.locfileid: "80318635"
   
   - Настройте перенаправление портов на маршрутизаторе для следующих портов.  
   
-    |Служба или протокол|Порт|  
+    |Служба или протокол|Port|  
     |-------------------------|----------|  
-    |HTTP|TCP 80|  
+    |HTTP|TCP 80|  
     |HTTPS|TCP 443|  
   
     Сведения о настройке перенаправления портов на маршрутизаторе вручную см. в документации производителя.  
@@ -71,7 +67,7 @@ ms.locfileid: "80318635"
   
   |IP-адрес|Протокол (TCP/UDP)|Расписание|Входящий фильтр|  
   |----------------|---------------------------|--------------|--------------------|  
-  |192.168.0.100|TCP 80|Всегда|Разрешить все|  
+  |192.168.0.100|TCP 80|Всегда|Разрешить все|  
   |192.168.0.100|TCP 443|Всегда|Разрешить все|  
   
    После ручной настройки маршрутизатора запустите мастер включения удаленного Веб-доступ, убедившись, что на странице **Приступая к работе** установлен флажок **пропустить установку маршрутизатора** .  
@@ -81,7 +77,7 @@ ms.locfileid: "80318635"
 > [!TIP]
 >  Убедитесь, что на маршрутизаторе установлена последняя версия встроенного ПО BIOS. Обновить встроенное ПО BIOS для маршрутизатора можно с веб-страницы настройки маршрутизатора. Дополнительные сведения см. в документации к маршрутизатору. После обновления маршрутизатора запустите мастер настройки повсеместного доступа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также статью  
   
 -   [Использовать удаленный Веб-доступ](../use/Use-Remote-Web-Access-in-Windows-Server-Essentials.md)  
   
