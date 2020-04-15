@@ -1,23 +1,20 @@
 ---
 title: Программный ЦОД Windows Server
-description: Обзор программного ЦОД Windows Server
+Description: Обзор программного ЦОД Windows Server
 ms.prod: windows-server
-ms.reviewer: na
-ms.suite: na
 ms.technology: SDDC
-ms.tgt_pltfrm: na
 ms.topic: get-started article
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 06/04/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 6490bd9a6cb7b305ba9746a357a8c909c7b84555
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 5a90ad13a51a540c6c76adacb7df0225d642573a
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950465"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80857197"
 ---
 # <a name="windows-server-software-defined-datacenter"></a>Программно-определяемый ЦОД Windows Server
 
@@ -255,7 +252,7 @@ Windows PowerShell Desired State Configuration — это встроенная 
 
 ![](media/sddc/spacer1.png)![](media/sddc/dsc.png)
 
-DSC поддерживает "непрерывные развертывания", поэтому можно многократно развертывать конфигурации, ничего не нарушая.
+DSC поддерживает непрерывные развертывания, поэтому можно многократно развертывать конфигурации, ничего не нарушая.
 
 -  Для ускорения развертывания в конфигурациях DSC применяются лишь те параметры, которые изменились по сравнению с исходным значением.
 -  DSC можно использовать в локальной, общедоступной или частной облачной среде.
