@@ -2,22 +2,20 @@
 title: IIS на сервере Nano Server
 description: Сведения о настройке IIS на сервере Nano Server
 ms.prod: windows-server
-ms.service: na
 manager: DonGill
 ms.technology: server-nano
-ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 09/06/2017
 ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 96a5e5f23ad3cdfc829fd141c3c90f6c200f06c9
-ms.sourcegitcommit: 3f9bcd188dda12dc5803defb47b2c3a907504255
+ms.openlocfilehash: d2522dc94c0d3b68c75e14fec19466529256aad0
+ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "77001809"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80826867"
 ---
 # <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
 
@@ -100,18 +98,18 @@ ms.locfileid: "77001809"
 
 ```  
 
-    <unattend xmlns="urn:schemas-microsoft-com:unattend">  
+    <unattend xmlns=urn:schemas-microsoft-com:unattend>  
     <servicing>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" />  
-            <source location="c:\packages\Microsoft-NanoServer-IIS-Package.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=neutral />  
+            <source location=c:\packages\Microsoft-NanoServer-IIS-Package.cab />  
         </package>  
-        <package action="install">  
-            <assemblyIdentity name="Microsoft-NanoServer-IIS-Package" version="10.0.14393.0" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="en-US" />  
-            <source location="c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab" />  
+        <package action=install>  
+            <assemblyIdentity name=Microsoft-NanoServer-IIS-Package version=10.0.14393.0 processorArchitecture=amd64 publicKeyToken=31bf3856ad364e35 language=en-US />  
+            <source location=c:\packages\en-us\Microsoft-NanoServer-IIS-Package_en-us.cab />  
         </package>  
     </servicing>  
-    <cpi:offlineImage cpi:source="" xmlns:cpi="urn:schemas-microsoft-com:cpi" />  
+    <cpi:offlineImage cpi:source= xmlns:cpi=urn:schemas-microsoft-com:cpi />  
 </unattend>  
 ```  
 
@@ -129,7 +127,7 @@ ms.locfileid: "77001809"
 
    **dism /online /get-packages**  
 
-   Вы должны увидеть две записи "Package Identity : Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000" — для элементов "Тип выпуска: Языковый пакет" и "Тип выпуска: Пакет функций".  
+   Вы должны увидеть идентификатор пакета: Microsoft-NanoServer-IIS-Package~31bf3856ad364e35~amd64~~10.0.14393.1000, указанный дважды (для элементов "Тип выпуска: Языковый пакет" и "Тип выпуска: Пакет функций".  
 
 6. Запустите службу W3SVC либо с помощью команды **net start w3svc**, либо перезапустив Nano Server.  
 
@@ -147,9 +145,9 @@ ms.locfileid: "77001809"
 
 |Раздел|Элементы конфигурации|  
 |-----------|--------------------------|  
-|`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" \/>`|  
-|`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><providers><add value="Negotiate" /><add value="NTLM" /><br /></providers><br /></windowsAuthentication>`|  
+|`<globalModules>`|`<add name=WindowsAuthenticationModule image=%windir%\System32\inetsrv\authsspi.dll`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true \/>`|  
+|`<windowsAuthentication>`|`<windowsAuthentication enabled=false authPersistNonNTLM\=true><providers><add value=Negotiate /><add value=NTLM /><br /></providers><br /></windowsAuthentication>`|  
 
 Полный набор вложенных функций IIS приведен в приложении 1 этой статьи, а соответствующие элементы конфигурации указаны в приложении 2.  
 
@@ -181,7 +179,7 @@ ms.locfileid: "77001809"
 
 Используйте следующий командлет:  
 
-`PS D:\> New-IISSite -Name TestSite -BindingInformation "*:80:TestSite" -PhysicalPath c:\test`  
+`PS D:\> New-IISSite -Name TestSite -BindingInformation *:80:TestSite -PhysicalPath c:\test`  
 
 Затем можно запустить `Get-IISSite` для проверки состояния сайта (возвращает имя веб-сайта, идентификатор, состояние, физический путь и привязки).  
 
@@ -191,12 +189,12 @@ ms.locfileid: "77001809"
 
 **Создание виртуальных каталогов**  
 
-Можно создать виртуальные каталоги с помощью объекта IISServerManager, возвращенного Get-IISServerManager, который предоставляет API .NET Microsoft.Web.Administration.ServerManager. В этом примере указанные команды обращаются к элементу "Веб-сайт по умолчанию" коллекции сайтов и корневому элементу приложения ("/") раздела приложений. Затем они вызывают метод Add() коллекции VirtualDirectories для этого элемента приложения, чтобы создать новый каталог:  
+Можно создать виртуальные каталоги с помощью объекта IISServerManager, возвращенного Get-IISServerManager, который предоставляет API .NET Microsoft.Web.Administration.ServerManager. В этом примере указанные команды обращаются к элементу "Веб-сайт по умолчанию" коллекции сайтов и корневому элементу приложения (/) раздела приложений. Затем они вызывают метод Add() коллекции VirtualDirectories для этого элемента приложения, чтобы создать новый каталог:  
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
-PS C:\> $sm.Sites["Default Web Site"].Applications["/"].VirtualDirectories.Add("/DemoVirtualDir1", "c:\test\virtualDirectory1")  
-PS C:\> $sm.Sites["Default Web Site"].Applications["/"].VirtualDirectories.Add("/DemoVirtualDir2", "c:\test\virtualDirectory2")  
+PS C:\> $sm.Sites[Default Web Site].Applications[/].VirtualDirectories.Add(/DemoVirtualDir1, c:\test\virtualDirectory1)  
+PS C:\> $sm.Sites[Default Web Site].Applications[/].VirtualDirectories.Add(/DemoVirtualDir2, c:\test\virtualDirectory2)  
 PS C:\> $sm.CommitChanges()  
 ```  
 
@@ -206,7 +204,7 @@ PS C:\> $sm.CommitChanges()
 
 ```  
 PS C:\> $sm = Get-IISServerManager  
-PS C:\> $sm.ApplicationPools.Add("DemoAppPool")  
+PS C:\> $sm.ApplicationPools.Add(DemoAppPool)  
 ```  
 
 **Настройка HTTPS и сертификатов**  
@@ -215,15 +213,15 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 1.  На другом компьютере, где не выполняется Nano Server, создайте сертификат (с использованием собственного имени сертификата и пароля) и экспортируйте его в c:\temp\test.pfx.  
 
-    `$newCert = New-SelfSignedCertificate -DnsName "www.foo.bar.com" -CertStoreLocation cert:\LocalMachine\my`  
+    `$newCert = New-SelfSignedCertificate -DnsName www.foo.bar.com -CertStoreLocation cert:\LocalMachine\my`  
 
-    `$mypwd = ConvertTo-SecureString -String "YOUR_PFX_PASSWD" -Force -AsPlainText`  
+    `$mypwd = ConvertTo-SecureString -String YOUR_PFX_PASSWD -Force -AsPlainText`  
 
     `Export-PfxCertificate -FilePath c:\temp\test.pfx -Cert $newCert -Password $mypwd`  
 
 2.  Скопируйте файл test.pfx на компьютер Nano Server.  
 
-3.  На сервере Nano Server импортируйте сертификат в хранилище "My" с помощью следующей команды:  
+3.  На сервере Nano Server импортируйте сертификат в хранилище MY с помощью следующей команды:  
 
     **certoc.exe -ImportPFX -p YOUR_PFX_PASSWD My c:\temp\test.pfx**  
 
@@ -238,11 +236,11 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
     Import-Module IISAdministration  
     $sm = Get-IISServerManager  
-    $sm.Sites["Default Web Site"].Bindings.Add("*:443:", $hash, "My", "0")    # My is the certificate store name  
+    $sm.Sites[Default Web Site].Bindings.Add(*:443:, $hash, My, 0)    # My is the certificate store name  
     $sm.CommitChanges()  
     ```  
 
-    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites["Default Web Site"].Bindings.Add("*:443: www.foo.bar.com", $hash, "My", "Sni".`  
+    Можно также использовать указание имени сервера (SNI) с именем конкретного узла, применив следующий синтаксис: `$sm.Sites[Default Web Site].Bindings.Add(*:443: www.foo.bar.com, $hash, My, Sni.`  
 
 ## <a name="appendix-1-list-of-iis-sub-features"></a>Приложение 1. Список вложенных функций IIS
 
@@ -288,95 +286,95 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="DefaultDocumentModule" image="%windir%\System32\inetsrv\defdoc.dll" />`|  
-|`<modules>`|`<add name="DefaultDocumentModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DefaultDocumentModule" resourceType="EiSecther" requireAccess="Read" />`|  
-|`<defaultDocument>`|`<defaultDocument enabled="true"><br /><files><br /> <add value="Default.htm" /><br />        <add value="Default.asp" /><br />        <add value="index.htm" /><br />        <add value="index.html" /><br />        <add value="iisstart.htm" /><br />    </files><br /></defaultDocument>`|  
+|`<globalModules>`|`<add name=DefaultDocumentModule image=%windir%\System32\inetsrv\defdoc.dll />`|  
+|`<modules>`|`<add name=DefaultDocumentModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=DefaultDocumentModule resourceType=EiSecther requireAccess=Read />`|  
+|`<defaultDocument>`|`<defaultDocument enabled=true><br /><files><br /> <add value=Default.htm /><br />        <add value=Default.asp /><br />        <add value=index.htm /><br />        <add value=index.html /><br />        <add value=iisstart.htm /><br />    </files><br /></defaultDocument>`|  
 
-Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте "DefaultDocumentModule" в атрибут \<modules>, отделив значение запятой.  
+Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте DefaultDocumentModule в атрибут \<modules>, отделив значение запятой.  
 
 **Просмотр каталогов**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="DirectoryListingModule" image="%windir%\System32\inetsrv\dirlist.dll" />`|  
-|`<modules>`|`<add name="DirectoryListingModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="DirectoryListingModule" resourceType="Either" requireAccess="Read" />`|  
+|`<globalModules>`|`<add name=DirectoryListingModule image=%windir%\System32\inetsrv\dirlist.dll />`|  
+|`<modules>`|`<add name=DirectoryListingModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=DirectoryListingModule resourceType=Either requireAccess=Read />`|  
 
-Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте "DirectoryListingModule" в атрибут \<modules>, отделив значение запятой.  
+Запись `StaticFile <handlers>` может уже присутствовать. В этом случае просто добавьте DirectoryListingModule в атрибут \<modules>, отделив значение запятой.  
 
 **Ошибки HTTP**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="CustomErrorModule" image="%windir%\System32\inetsrv\custerr.dll" />`|  
-|`<modules>`|`<add name="CustomErrorModule" lockItem="true" />`|  
-|`<httpErrors>`|`<httpErrors lockAttributes="allowAbsolutePathsWhenDelegated,defaultPath"><br />    <error statusCode="401"    prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="401.htm" ><br />    <error statusCode="403" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="403.htm" /><br />    <error statusCode="404" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="404.htm" /><br />    <error statusCode="405" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="405.htm" /><br />    <error statusCode="406" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="406.htm" /><br />    <error statusCode="412" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="412.htm" /><br />    <error statusCode="500" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="500.htm" /><br />    <error statusCode="501" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="501.htm" /><br />    <error statusCode="502" prefixLanguageFilePath="%SystemDrive%\inetpub\custerr" path="502.htm" /><br /></httpErrors>`|  
+|`<globalModules>`|`<add name=CustomErrorModule image=%windir%\System32\inetsrv\custerr.dll />`|  
+|`<modules>`|`<add name=CustomErrorModule lockItem=true />`|  
+|`<httpErrors>`|`<httpErrors lockAttributes=allowAbsolutePathsWhenDelegated,defaultPath><br />    <error statusCode=401    prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=401.htm ><br />    <error statusCode=403 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=403.htm /><br />    <error statusCode=404 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=404.htm /><br />    <error statusCode=405 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=405.htm /><br />    <error statusCode=406 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=406.htm /><br />    <error statusCode=412 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=412.htm /><br />    <error statusCode=500 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=500.htm /><br />    <error statusCode=501 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=501.htm /><br />    <error statusCode=502 prefixLanguageFilePath=%SystemDrive%\inetpub\custerr path=502.htm /><br /></httpErrors>`|  
 
 **Статическое содержимое**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="StaticFileModule" image="%windir%\System32\inetsrv\static.dll" />`|  
-|`<modules>`|`<add name="StaticFileModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="StaticFile" path="*" verb="*" modules="StaticFileModule" resourceType="Either" requireAccess="Read" />`|  
+|`<globalModules>`|`<add name=StaticFileModule image=%windir%\System32\inetsrv\static.dll />`|  
+|`<modules>`|`<add name=StaticFileModule lockItem=true />`|  
+|`<handlers>`|`<add name=StaticFile path=* verb=* modules=StaticFileModule resourceType=Either requireAccess=Read />`|  
 
-Запись `StaticFile \<handlers>` может уже присутствовать. В этом случае просто добавьте "StaticFileModule" в атрибут \<modules>, отделив значение запятой.  
+Запись `StaticFile \<handlers>` может уже присутствовать. В этом случае просто добавьте StaticFileModule в атрибут \<modules>, отделив значение запятой.  
 
 **Перенаправление HTTP**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="HttpRedirectionModule" image="%windir%\System32\inetsrv\redirect.dll" />`|  
-|`<modules>`|`<add name="HttpRedirectionModule" lockItem="true" />`|  
-|`<httpRedirect>`|`<httpRedirect enabled="false" />`|  
+|`<globalModules>`|`<add name=HttpRedirectionModule image=%windir%\System32\inetsrv\redirect.dll />`|  
+|`<modules>`|`<add name=HttpRedirectionModule lockItem=true />`|  
+|`<httpRedirect>`|`<httpRedirect enabled=false />`|  
 
 ### <a name="health-and-diagnostics"></a>Работоспособность и диагностика  
 **Ведение журнала HTTP**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="HttpLoggingModule" image="%windir%\System32\inetsrv\loghttp.dll" />`|  
-|`<modules>`|`<add name="HttpLoggingModule" lockItem="true" />`|  
-|`<httpLogging>`|`<httpLogging dontLog="false" />`|  
+|`<globalModules>`|`<add name=HttpLoggingModule image=%windir%\System32\inetsrv\loghttp.dll />`|  
+|`<modules>`|`<add name=HttpLoggingModule lockItem=true />`|  
+|`<httpLogging>`|`<httpLogging dontLog=false />`|  
 
 **Настраиваемое ведение журнала**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CustomLoggingModule" image="%windir%\System32\inetsrv\logcust.dll" />`|  
-|`<modules>`|`<add name="CustomLoggingModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=CustomLoggingModule image=%windir%\System32\inetsrv\logcust.dll />`|  
+|`<modules>`|`<add name=CustomLoggingModule lockItem=true />`|  
 
 **Монитор запросов**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="RequestMonitorModule" image="%windir%\System32\inetsrv\iisreqs.dll" />`|  
+|`<globalModules>`|`<add name=RequestMonitorModule image=%windir%\System32\inetsrv\iisreqs.dll />`|  
 
 **Трассировка**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="TracingModule" image="%windir%\System32\inetsrv\iisetw.dll" \/><br /><add name="FailedRequestsTracingModule" image="%windir%\System32\inetsrv\iisfreb.dll" />`|  
-|`<modules>`|`<add name="FailedRequestsTracingModule" lockItem="true" />`|  
-|`<traceProviderDefinitions>`|`<traceProviderDefinitions><br />    <add name="WWW Server" guid\="{3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}"><br />        <areas><br />            <clear /><br />            <add name="Authentication" value="2" /><br />            <add name="Security" value="4" /><br />            <add name="Filter" value="8" /><br />            <add name="StaticFile" value="16" /><br />            <add name="CGI" value="32" /><br />            <add name="Compression" value="64" /><br />            <add name="Cache" value="128" /><br />            <add name="RequestNotifications" value="256" /><br />            <add name="Module" value="512" /><br />            <add name="FastCGI" value="4096" /><br />            <add name="WebSocket" value="16384" /><br />        </areas><br />    </add><br />    <add name="ISAPI Extension" guid="{a1c2040e-8840-4c31-ba11-9871031a19ea}"><br />        <areas><br />            <clear /><br />        </areas><br />    </add><br /></traceProviderDefinitions>`|  
+|`<globalModules>`|`<add name=TracingModule image=%windir%\System32\inetsrv\iisetw.dll \/><br /><add name=FailedRequestsTracingModule image=%windir%\System32\inetsrv\iisfreb.dll />`|  
+|`<modules>`|`<add name=FailedRequestsTracingModule lockItem=true />`|  
+|`<traceProviderDefinitions>`|`<traceProviderDefinitions><br />    <add name=WWW Server guid\={3a2a4e84-4c21-4981-ae10-3fda0d9b0f83}><br />        <areas><br />            <clear /><br />            <add name=Authentication value=2 /><br />            <add name=Security value=4 /><br />            <add name=Filter value=8 /><br />            <add name=StaticFile value=16 /><br />            <add name=CGI value=32 /><br />            <add name=Compression value=64 /><br />            <add name=Cache value=128 /><br />            <add name=RequestNotifications value=256 /><br />            <add name=Module value=512 /><br />            <add name=FastCGI value=4096 /><br />            <add name=WebSocket value=16384 /><br />        </areas><br />    </add><br />    <add name=ISAPI Extension guid={a1c2040e-8840-4c31-ba11-9871031a19ea}><br />        <areas><br />            <clear /><br />        </areas><br />    </add><br /></traceProviderDefinitions>`|  
 
 ### <a name="performance"></a>Производительность  
 **Сжатие статического содержимого**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="StaticCompressionModule" image="%windir%\System32\inetsrv\compstat.dll" />`|  
-|`<modules>`|`<add name="StaticCompressionModule" lockItem="true" />`|  
-|`<httpCompression>`|`<httpCompression directory="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" /><br />   <staticTypes><br />        <add mimeType="text/*" enabled="true" /><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" \/><br />        <add mimeType="application/atom+xml" enabled="true" /><br />        <add mimeType="application/xaml+xml" enabled="true" /><br />        <add mimeType="\*\*" enabled="false" /><br />    </staticTypes><br /></httpCompression>`|  
+|`<globalModules>`|`<add name=StaticCompressionModule image=%windir%\System32\inetsrv\compstat.dll />`|  
+|`<modules>`|`<add name=StaticCompressionModule lockItem=true />`|  
+|`<httpCompression>`|`<httpCompression directory=%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files><br />    <scheme name=gzip dll=%Windir%\system32\inetsrv\gzip.dll /><br />   <staticTypes><br />        <add mimeType=text/* enabled=true /><br />        <add mimeType=message/* enabled=true /><br />        <add mimeType=application/javascript enabled=true \/><br />        <add mimeType=application/atom+xml enabled=true /><br />        <add mimeType=application/xaml+xml enabled=true /><br />        <add mimeType=\*\* enabled=false /><br />    </staticTypes><br /></httpCompression>`|  
 
 **Сжатие динамического содержимого**  
 
 |Раздел|Элементы конфигурации|  
 |-----------|--------------------------|  
-|`<globalModules>`|`<add name="DynamicCompressionModule" image="%windir%\System32\inetsrv\compdyn.dll" />`|  
-|`<modules>`|`<add name="DynamicCompressionModule" lockItem="true" />`|  
-|`<httpCompression>`|`<httpCompression directory\="%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files"><br />    <scheme name="gzip" dll="%Windir%\system32\inetsrv\gzip.dll" \/><br />    \<dynamicTypes><br />        <add mimeType="text/*" enabled="true" \/><br />        <add mimeType="message/*" enabled="true" /><br />        <add mimeType="application/x-javascript" enabled="true" /><br />        <add mimeType="application/javascript" enabled="true" /><br />        <add mimeType="*/*" enabled="false" /><br />    <\/dynamicTypes><br /></httpCompression>`|  
+|`<globalModules>`|`<add name=DynamicCompressionModule image=%windir%\System32\inetsrv\compdyn.dll />`|  
+|`<modules>`|`<add name=DynamicCompressionModule lockItem=true />`|  
+|`<httpCompression>`|`<httpCompression directory\=%SystemDrive%\inetpub\temp\IIS Temporary Compressed Files><br />    <scheme name=gzip dll=%Windir%\system32\inetsrv\gzip.dll \/><br />    \<dynamicTypes><br />        <add mimeType=text/* enabled=true \/><br />        <add mimeType=message/* enabled=true /><br />        <add mimeType=application/x-javascript enabled=true /><br />        <add mimeType=application/javascript enabled=true /><br />        <add mimeType=*/* enabled=false /><br />    <\/dynamicTypes><br /></httpCompression>`|  
 
 ### <a name="security"></a>Безопасность  
 **Фильтрация запросов**  
@@ -384,110 +382,110 @@ PS C:\> $sm.ApplicationPools.Add("DemoAppPool")
 
 |       Раздел        |                                                                                                                                        Элементы конфигурации                                                                                                                                        |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  `<globalModules>`   |                                                                                                        `<add name="RequestFilteringModule" image="%windir%\System32\inetsrv\modrqflt.dll" />`                                                                                                        |
-|     `<modules>`      |                                                                                                                       `<add name="RequestFilteringModule" lockItem="true" />`                                                                                                                        |
-| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted="true" applyToWebDAV="true" /><br />    <verbs allowUnlisted="true" applyToWebDAV="true" /><br />    <hiddenSegments applyToWebDAV="true"><br />        <add segment="web.config" /><br />    </hiddenSegments><br /></requestFiltering>` |
+|  `<globalModules>`   |                                                                                                        `<add name=RequestFilteringModule image=%windir%\System32\inetsrv\modrqflt.dll />`                                                                                                        |
+|     `<modules>`      |                                                                                                                       `<add name=RequestFilteringModule lockItem=true />`                                                                                                                        |
+| \`<requestFiltering> | `<requestFiltering><br />    <fileExtensions allowUnlisted=true applyToWebDAV=true /><br />    <verbs allowUnlisted=true applyToWebDAV=true /><br />    <hiddenSegments applyToWebDAV=true><br />        <add segment=web.config /><br />    </hiddenSegments><br /></requestFiltering>` |
 
 **Обычная проверка подлинности**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|   
-|`<globalModules>`|`<add name="BasicAuthenticationModule" image="%windir%\System32\inetsrv\authbas.dll" />`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
-|`<basicAuthentication>`|`<basicAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=BasicAuthenticationModule image=%windir%\System32\inetsrv\authbas.dll />`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true />`|  
+|`<basicAuthentication>`|`<basicAuthentication enabled=false />`|  
 
 **Аутентификация с сопоставлением сертификата клиента**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CertificateMappingAuthentication" image="%windir%\System32\inetsrv\authcert.dll" />`|  
-|`<modules>`|`<add name="CertificateMappingAuthenticationModule" lockItem="true" />`|  
-|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=CertificateMappingAuthentication image=%windir%\System32\inetsrv\authcert.dll />`|  
+|`<modules>`|`<add name=CertificateMappingAuthenticationModule lockItem=true />`|  
+|`<clientCertificateMappingAuthentication>`|`<clientCertificateMappingAuthentication enabled=false />`|  
 
 **Дайджест-аутентификация**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="DigestAuthenticationModule" image="%windir%\System32\inetsrv\authmd5.dll" />`|  
-|`<modules>`|`<add name="DigestAuthenticationModule" lockItem="true" />`|  
-|`<other>`|`<digestAuthentication enabled="false" />`|  
+|`<globalModules>`|`<add name=DigestAuthenticationModule image=%windir%\System32\inetsrv\authmd5.dll />`|  
+|`<modules>`|`<add name=DigestAuthenticationModule lockItem=true />`|  
+|`<other>`|`<digestAuthentication enabled=false />`|  
 
 **Аутентификация с сопоставлением сертификата клиента IIS**  
 
 
 |                  Раздел                   |                                         Элементы конфигурации                                         |
 |--------------------------------------------|--------------------------------------------------------------------------------------------------------|
-|             `<globalModules>`              | `<add name="CertificateMappingAuthenticationModule" image="%windir%\System32\inetsrv\authcert.dll" />` |
-|                `<modules>`                 |               `<add name="CertificateMappingAuthenticationModule" lockItem="true" `/>\`                |
-| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled="false" />`                      |
+|             `<globalModules>`              | `<add name=CertificateMappingAuthenticationModule image=%windir%\System32\inetsrv\authcert.dll />` |
+|                `<modules>`                 |               `<add name=CertificateMappingAuthenticationModule lockItem=true `/>\`                |
+| `<clientCertificateMappingAuthentication>` |                      `<clientCertificateMappingAuthentication enabled=false />`                      |
 
 **Ограничения IP-адресов и доменов**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|```<add name="IpRestrictionModule" image="%windir%\System32\inetsrv\iprestr.dll" /><br /><add name="DynamicIpRestrictionModule" image="%windir%\System32\inetsrv\diprestr.dll" />```|  
-|`<modules>`|`<add name="IpRestrictionModule" lockItem="true" \/><br /><add name="DynamicIpRestrictionModule" lockItem="true" \/>`|  
-|`<ipSecurity>`|`<ipSecurity allowUnlisted="true" />`|  
+|`<globalModules>`|```<add name=IpRestrictionModule image=%windir%\System32\inetsrv\iprestr.dll /><br /><add name=DynamicIpRestrictionModule image=%windir%\System32\inetsrv\diprestr.dll />```|  
+|`<modules>`|`<add name=IpRestrictionModule lockItem=true \/><br /><add name=DynamicIpRestrictionModule lockItem=true \/>`|  
+|`<ipSecurity>`|`<ipSecurity allowUnlisted=true />`|  
 
 **Авторизация URL-адреса**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="UrlAuthorizationModule" image="%windir%\System32\inetsrv\urlauthz.dll" />`|  
-|`<modules>`|`<add name="UrlAuthorizationModule" lockItem="true" />`|  
-|`<authorization>`|`<authorization><br />    <add accessType="Allow" users="*" /><br /></authorization>`|  
+|`<globalModules>`|`<add name=UrlAuthorizationModule image=%windir%\System32\inetsrv\urlauthz.dll />`|  
+|`<modules>`|`<add name=UrlAuthorizationModule lockItem=true />`|  
+|`<authorization>`|`<authorization><br />    <add accessType=Allow users=* /><br /></authorization>`|  
 
 **Проверка подлинности Windows**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="WindowsAuthenticationModule" image="%windir%\System32\inetsrv\authsspi.dll" />`|  
-|`<modules>`|`<add name="WindowsAuthenticationModule" lockItem="true" />`|  
-|`<windowsAuthentication>`|`<windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled="false" authPersistNonNTLM\="true"><br />    <providers><br />        <add value="Negotiate" /><br />        <add value="NTLM" /><br />    <\/providers><br /><\/windowsAuthentication>`|  
+|`<globalModules>`|`<add name=WindowsAuthenticationModule image=%windir%\System32\inetsrv\authsspi.dll />`|  
+|`<modules>`|`<add name=WindowsAuthenticationModule lockItem=true />`|  
+|`<windowsAuthentication>`|`<windowsAuthentication enabled=false authPersistNonNTLM\=true><br />    <providers><br />        <add value=Negotiate /><br />        <add value=NTLM /><br />    <\providers><br /><\windowsAuthentication><windowsAuthentication enabled=false authPersistNonNTLM\=true><br />    <providers><br />        <add value=Negotiate /><br />        <add value=NTLM /><br />    <\/providers><br /><\/windowsAuthentication>`|  
 
 ### <a name="application-development"></a>Разработка приложений  
 **Инициализация приложения**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="ApplicationInitializationModule" image="%windir%\System32\inetsrv\warmup.dll" />`|  
-|`<modules>`|`<add name="ApplicationInitializationModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=ApplicationInitializationModule image=%windir%\System32\inetsrv\warmup.dll />`|  
+|`<modules>`|`<add name=ApplicationInitializationModule lockItem=true />`|  
 
 **CGI**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|`<add name="CgiModule" image="%windir%\System32\inetsrv\cgi.dll" /><br /><add name="FastCgiModule" image="%windir%\System32\inetsrv\iisfcgi.dll" />`|  
-|`<modules>`|`<add name="CgiModule" lockItem="true" /><br /><add name="FastCgiModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="CGI-exe" path="*.exe" verb="\*" modules="CgiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
+|`<globalModules>`|`<add name=CgiModule image=%windir%\System32\inetsrv\cgi.dll /><br /><add name=FastCgiModule image=%windir%\System32\inetsrv\iisfcgi.dll />`|  
+|`<modules>`|`<add name=CgiModule lockItem=true /><br /><add name=FastCgiModule lockItem=true />`|  
+|`<handlers>`|`<add name=CGI-exe path=*.exe verb=\* modules=CgiModule resourceType=File requireAccess=Execute allowPathInfo=true />`|  
 
 **Расширения ISAPI**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="IsapiModule" image="%windir%\System32\inetsrv\isapi.dll" />`|  
-|`<modules>`|`<add name="IsapiModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="ISAPI-dll" path="*.dll" verb="*" modules="IsapiModule" resourceType="File" requireAccess="Execute" allowPathInfo="true" />`|  
+|`<globalModules>`|`<add name=IsapiModule image=%windir%\System32\inetsrv\isapi.dll />`|  
+|`<modules>`|`<add name=IsapiModule lockItem=true />`|  
+|`<handlers>`|`<add name=ISAPI-dll path=*.dll verb=* modules=IsapiModule resourceType=File requireAccess=Execute allowPathInfo=true />`|  
 
 **Фильтры ISAPI**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="IsapiFilterModule" image="%windir%\System32\inetsrv\filter.dll" />`|  
-|`<modules>`|`<add name="IsapiFilterModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=IsapiFilterModule image=%windir%\System32\inetsrv\filter.dll />`|  
+|`<modules>`|`<add name=IsapiFilterModule lockItem=true />`|  
 
 **Серверные включаемые модули**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|  
-|`<globalModules>`|<`add name="ServerSideIncludeModule" image="%windir%\System32\inetsrv\iis_ssi.dll" />`|  
-|`<modules>`|`<add name="ServerSideIncludeModule" lockItem="true" />`|  
-|`<handlers>`|`<add name="SSINC-stm" path="*.stm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" \/><br /><add name="SSINC-shtm" path="*.shtm" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" /><br /><add name="SSINC-shtml" path="*.shtml" verb="GET,HEAD,POST" modules="ServerSideIncludeModule" resourceType="File" />`|  
-|`<serverSideInclude>`|`<serverSideInclude ssiExecDisable="false" />`|  
+|`<globalModules>`|<`add name=ServerSideIncludeModule image=%windir%\System32\inetsrv\iis_ssi.dll />`|  
+|`<modules>`|`<add name=ServerSideIncludeModule lockItem=true />`|  
+|`<handlers>`|`<add name=SSINC-stm path=*.stm verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File \/><br /><add name=SSINC-shtm path=*.shtm verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File /><br /><add name=SSINC-shtml path=*.shtml verb=GET,HEAD,POST modules=ServerSideIncludeModule resourceType=File />`|  
+|`<serverSideInclude>`|`<serverSideInclude ssiExecDisable=false />`|  
 
 **Протокол WebSocket**  
 
 |Раздел|Элементы конфигурации|  
 |----------------|--------------------------|    
-|`<globalModules>`|`<add name="WebSocketModule" image="%windir%\System32\inetsrv\iiswsock.dll" />`|  
-|`<modules>`|`<add name="WebSocketModule" lockItem="true" />`|  
+|`<globalModules>`|`<add name=WebSocketModule image=%windir%\System32\inetsrv\iiswsock.dll />`|  
+|`<modules>`|`<add name=WebSocketModule lockItem=true />`|  
