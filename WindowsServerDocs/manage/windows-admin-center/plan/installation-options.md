@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 12/02/2019
-ms.openlocfilehash: 503cd64cac0673829fe21bc15e8ad9d6a83bbb15
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: bd7ec8a5a072cbda99b036718d24ec1908fb8b53
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950515"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269251"
 ---
 # <a name="what-type-of-installation-is-right-for-you"></a>Как правильно выбрать тип установки
 
@@ -64,10 +64,9 @@ Windows Admin Center можно **установить** в следующих �
 | Windows Server 2012 R2 | Да | Да |
 | Microsoft Hyper-V Server 2012 R2 | Да | Да |
 | Windows Server 2012 | Да | Да |
-| Windows Server 2008 R2 | Да, с ограниченной функциональностью | Н/Д |
 
 > [!NOTE]
-> Для Windows Admin Center требуются функции PowerShell, которые не входят в состав Windows Server 2008 R2, 2012 и 2012 R2. Если вы намерены применить Windows Admin Center для управления этими ОС, вам придется установить на этих серверах Windows Management Framework (WMF) 5.1 или более поздней версии.
+> Для Windows Admin Center требуются функции PowerShell, которые отсутствуют в Windows Server 2012 и 2012 R2. Если вы намерены применить Windows Admin Center для управления этими ОС, вам придется установить на этих серверах Windows Management Framework (WMF) 5.1 или более поздней версии.
 > 
 > Введите `$PSVersiontable` в PowerShell, чтобы проверить, что платформа WMF установлена, и что используется версия 5.1 или более поздняя версия. 
 > 

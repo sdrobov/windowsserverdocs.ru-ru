@@ -6,12 +6,12 @@ ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 6cd94e997deaaf358c72793e6ff35d51a9ab3df6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 76665d91cc1e2997a837721ffbc51b0513dd7c1a
+ms.sourcegitcommit: af1cf89632d62a94943d3ad9f6b5234b88499278
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80826188"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81524939"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>Рекомендации по устранению проблем с активацией, связанных с DNS.
 
@@ -241,7 +241,7 @@ allow-update { any; };
 - для компьютеров, присоединенных к домену, — домену компьютера, назначенному системой DNS (например, DNS AD DS);
 - для компьютеров, входящих в рабочую группу — домену компьютера, назначенному протоколом DHCP. Это доменное имя определяется параметром с кодом, имеющим значение 15, как определено в RFC 2132.
 
-По умолчанию узел KMS регистрирует свои записи SRV в зоне DNS, которая соответствует домену главного компьютера KMS. Например, предположим, что узел KMS присоединяется к домену contoso.com. В этом сценарии узел KMS регистрирует свою запись SRV _vmlcs в зоне DNS contoso.com. Таким образом, запись идентифицирует службу как VLMCS._TCP.CONTOSO.COM.
+По умолчанию узел KMS регистрирует свои записи SRV в зоне DNS, которая соответствует домену главного компьютера KMS. Например, предположим, что узел KMS присоединяется к домену contoso.com. В этом сценарии узел KMS регистрирует свою запись SRV _vmlcs в зоне DNS contoso.com. Таким образом, запись идентифицирует службу как _VLMCS._TCP.CONTOSO.COM.
 
 Если узел и клиенты KMS используют разные зоны DNS, вам нужно включить для узла KMS автоматическую публикацию записей SRV в нескольких доменах DNS. Для этого выполните следующие действия:
 

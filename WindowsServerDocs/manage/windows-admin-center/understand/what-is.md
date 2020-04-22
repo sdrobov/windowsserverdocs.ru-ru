@@ -8,16 +8,16 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 110e1442b6660c24dc1e3fd9649138390117ffd6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: cb4e3ab2bf98a0c2d51483642fe5388e468dbbb4
+ms.sourcegitcommit: 20d07170c7f3094c2fb4455f54b13ec4b102f2d7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71406813"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81269271"
 ---
 # <a name="what-is-windows-admin-center"></a>Что такое Windows Admin Center?
 
-> Относится к: Windows Admin Center, ознакомительная версия Windows Admin Center
+> Применяется к: Windows Admin Center, ознакомительная версия Windows Admin Center
 
 Windows Admin Center представляет собой новый развернутый локально набор средств управления на основе браузера, который позволяет управлять серверами под управлением Windows независимо от Azure и облака. Windows Admin Center предоставляет полный контроль над всеми аспектами серверной инфраструктуры и особенно полезен для управления серверами в частных сетях, которые не подключены к Интернету.
 
@@ -27,7 +27,7 @@ Windows Admin Center — это продукт эволюции встроенн
 
 ## <a name="how-does-windows-admin-center-work"></a>Как работает Windows Admin Center?
 
-Windows Admin Center запускается в браузере и управляет Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10 и другими версиями через **шлюз Windows Admin Center**, установленный в Windows Server или Windows 10. Шлюз управляет серверами с помощью удаленной оболочки PowerShell и WMI через WinRM. Шлюз входит в состав Windows Admin Center в одном облегченном MSI-пакете, который можно [загрузить](https://aka.ms/windowsadmincenter).
+Windows Admin Center запускается в браузере и управляет Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10 и другими версиями через **шлюз Windows Admin Center**, установленный в Windows Server или присоединенной к домену Windows 10. Шлюз управляет серверами с помощью удаленной оболочки PowerShell и WMI через WinRM. Шлюз входит в состав Windows Admin Center в одном облегченном MSI-пакете, который можно [загрузить](https://aka.ms/windowsadmincenter).
 
 При публикации в DNS и предоставлении доступа через соответствующие корпоративные брандмауэры шлюз Windows Admin Center позволяет безопасно подключиться к серверам и управлять ими из любого места с помощью Microsoft Edge или Google Chrome.
 
