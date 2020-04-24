@@ -66,13 +66,11 @@
 #### [Использование пользовательского подключаемого модуля шлюза в расширении инструмента](extend/guides/use-custom-gateway-plugin.md)
 #### [Создание поставщика подключений](extend/guides/create-connection-provider.md)
 #### [Изменение поведения корневой навигации](extend/guides/modify-root-navigation.md)
-#### [Изменение типов подключения к кластерам в Windows Admin Center версии 1909](extend/guides/cluster-connection-change-wac-1909.md)
 #### [Управление отображением вашего инструмента](extend/guides/dynamic-tool-display.md)
 #### [Строки и локализация](extend/guides/strings-localization.md)
 #### [Руководство по стилю для текста и оформления пользовательского интерфейса](extend/guides/ui-text-style-guide.md)
 #### [Использование PowerShell в расширении](extend/guides/powershell.md)
 #### [Руководство по значку CSS](extend/guides/cssicons.md)
-#### [Переход на последнюю версию пакета SDK](extend/guides/migration-guide-0_1-1_0.md)
 #### [Включение баннера обнаружения расширений](extend/guides/extension-discovery-banner.md)
 ### [Публикация расширений](extend/publish-extensions.md)
 ### Практические примеры

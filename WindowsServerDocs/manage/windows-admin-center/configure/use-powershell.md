@@ -9,10 +9,10 @@ ms.date: 11/21/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: 58b6f5dd064eb315ac2d4518283a870d137f837a
-ms.sourcegitcommit: 7c7fc443ecd0a81bff6ed6dbeeaf4f24582ba339
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "74908308"
 ---
 # <a name="use-powershell-to-manage-windows-admin-center-settings"></a>Управление параметрами Windows Admin Center с помощью PowerShell
@@ -27,7 +27,7 @@ ms.locfileid: "74908308"
 
 [!INCLUDE [ps-extensions](../includes/ps-extensions.md)]
 
-### <a name="see-also"></a>См. также
+### <a name="see-also"></a>См. также статью
 
 * [Развертывание высокодоступного шлюза Windows Admin Center в кластере](../deploy/high-availability.md)
 * [Развертывание шлюза Windows Admin Center в Azure с помощью Cloud Shell](../azure/deploy-wac-in-azure.md)

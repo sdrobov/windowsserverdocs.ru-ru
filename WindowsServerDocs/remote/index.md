@@ -1,5 +1,5 @@
 ---
-title: Пульт ДУ
+title: Удаленный доступ
 description: Инструкции по использованию возможностей удаленного доступа и управления серверами.
 ms.prod: windows-server
 layout: LandingPage
@@ -10,13 +10,13 @@ ms.author: coreyp
 manager: dougkim
 ms.localizationpriority: high
 ms.openlocfilehash: 659f40f2e6e33378ef9828a746f72c43edaf0859
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71395866"
 ---
-# <a name="remote"></a>Пульт ДУ
+# <a name="remote"></a>Удаленный доступ
 
 >[!TIP]
 > Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).

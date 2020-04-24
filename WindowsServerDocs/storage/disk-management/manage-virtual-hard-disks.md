@@ -9,10 +9,10 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 6ffa7e9dc769b8d8c892d0af1ceae5246df62d3e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71385807"
 ---
 # <a name="manage-virtual-hard-disks-vhd"></a>Управление виртуальными жесткими дисками
@@ -48,7 +48,7 @@ ms.locfileid: "71385807"
 
 Чтобы отключить виртуальный жесткий диск, сделав его недоступным: Щелкните диск правой кнопкой мыши, выберите команду **Отключить виртуальный жесткий диск**, а затем нажмите кнопку **ОК**. При отключении ни виртуальный жесткий диск, ни хранящиеся на нем данные не удаляются.
 
-## <a name="additional-considerations"></a>Дополнительные рекомендации
+## <a name="additional-considerations"></a>Дополнительные сведения
 
 -   Расположение виртуального жесткого диска должно быть указано с использованием полного пути, не ведущего в каталог \\Windows.
 -   Минимальный размер виртуального жесткого диска составляет 3 мегабайта (МБ).

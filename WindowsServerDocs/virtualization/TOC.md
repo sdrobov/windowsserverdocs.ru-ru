@@ -24,7 +24,7 @@
 #### [Создание виртуальной машины](hyper-v/get-started/create-a-virtual-machine-in-Hyper-V.md)
 ### [Планирование](hyper-v/plan/Plan-Hyper-V-on-Windows-Server.md)
 #### [Поколение виртуальной машины](hyper-v/plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md)
-#### [Сеть](hyper-v/plan/plan-hyper-v-networking-in-windows-server.md)
+#### [Сетевое взаимодействие](hyper-v/plan/plan-hyper-v-networking-in-windows-server.md)
 #### [Масштабируемость](hyper-v/plan/plan-hyper-v-scalability-in-windows-server.md)
 #### [Безопасность](hyper-v/plan/plan-hyper-v-security-in-windows-server.md)
 #### [Ускорение с помощью GPU](hyper-v/plan/plan-for-gpu-acceleration-in-windows-server.md)

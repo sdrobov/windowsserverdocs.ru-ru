@@ -9,10 +9,10 @@ ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
 ms.openlocfilehash: fc673d2c3e1404dbd750d4c0ef05ec6db50017aa
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71963080"
 ---
 # <a name="guidelines-for-troubleshooting-the-key-management-service-kms"></a>Рекомендации по устранению неполадок службы управления ключами (KMS)
@@ -133,7 +133,7 @@ ms.locfileid: "71963080"
 - Выходные данные команды **Slmgr.vbs /dlv**, выполненной на узле KMS и клиентских системах KMS. Если вы используете Wscript или Cscript для выполнения команды, можно нажать клавиши CTRL+C, чтобы скопировать выходные данные, а затем вставить их в Блокнот, чтобы отправить их сотруднику службы поддержки.
 - Журналы событий с узла KMS (журнал службы управления ключами) и из клиентских систем KMS (журнал приложений).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 - [Ask the Core Team: #Activation](https://blogs.technet.microsoft.com/askcore/tag/Activation/) (Вопрос группе разработчиков основных компонентов: #Activation)
 
 

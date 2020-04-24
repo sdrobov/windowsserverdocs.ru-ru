@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
 ms.openlocfilehash: 2723868251f90429fb0ad5e966c9222a6a22ab0c
-ms.sourcegitcommit: 1c75e4b3f5895f9fa33efffd06822dca301d4835
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "77520716"
 ---
 # <a name="windows-server-2016-improvements"></a>Улучшения в Windows Server 2016
@@ -321,7 +321,7 @@ MaxAllowedPhaseOffset| 1, если больше чем на секунду, ус
 ### <a name="event-logging"></a>Ведение журналов событий
 Для получения полной истории потребуется также информация журнала событий. Благодаря сбору журнала системных событий и выполнению фильтрации на сервере Time-Server, Microsoft-Windows-Kernel-Boot, Microsoft-Windows-Kernel General, вы сможете обнаружить, есть ли другие влияния, которые изменили время, например, сторонние организации. Эти журналы могут потребоваться для того, чтобы исключить внешние помехи. Групповая политика может влиять на то, какие журналы событий записываются в журнал. Дополнительные сведения см. в разделе, посвященном использованию групповой политики.
 
-### <a name="W32Logging"></a>Ведение журнала отладки W32time
+### <a name="w32time-debug-logging"></a><a name="W32Logging"></a>Ведение журнала отладки W32time
 Следующая команда включает ведение журнала, который показывает периодические обновления часов и указывает на исходные часы, чтобы включить функцию w32tm для аудита. Перезапустите службу, чтобы включить новое ведение журнала. 
 
 Дополнительные сведения см. в статье [Как включить отладку входа в службу времени Windows](https://support.microsoft.com/kb/816043).

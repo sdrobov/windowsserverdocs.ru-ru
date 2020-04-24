@@ -9,10 +9,10 @@ ms.date: 06/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.openlocfilehash: b0707f8aa7a09fdd18c2107e375ad06d3909955e
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71356896"
 ---
 # <a name="windows-admin-center-case-studies"></a>Примеры использования Windows Admin Center
@@ -138,7 +138,7 @@ GVC Group повысила эффективность своей работы з
 
 Inside Technologies использует платформу Windows Admin Center для удаленного управления ресурсами своих клиентов. Платформа интегрирована с Azure Activity Directory для повышения защиты с помощью многофакторной идентификации.  Информационные панели Windows Admin Center обеспечивают улучшенный мониторинг состояния каждой роли на каждом сервере, а также удобство управления на любом уровне с помощью PowerShell.  Компания Inside Technologies сократила время, затрачиваемое на управление серверами, когда для работы с каждой ролью сервера использовались разные консоли.
 
-## <a id="secureguard-copa-data"></a>SecureGUARD/COPA-DATA
+## <a name="secureguard--copa-data"></a><a id="secureguard-copa-data"></a>SecureGUARD/COPA-DATA
 
 [SecureGUARD GmbH](http://www.secureguard.at/) помогает компаниям решать сложные ИТ-проблемы в области безопасности и облачной инфраструктуры с помощью ряда продуктов и специализированных технических услуг. SecureGUARD создает устройства для обеспечения безопасности ИТ-среды и устройства на основе Microsoft Windows Server. В последнее время компания сосредоточена на создании объединенных в стойке устройств для облачных инфраструктур. SecureGUARD — партнер корпорации Майкрософт уровня Gold по разработке приложений и работе с центрами обработки данных.
  

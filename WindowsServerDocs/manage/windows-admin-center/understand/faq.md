@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.date: 12/02/2019
 ms.prod: windows-server
-ms.openlocfilehash: 4ce42420430e9a12dd6123ec18c9ded25abc97bb
-ms.sourcegitcommit: 0a0a45bec6583162ba5e4b17979f0b5a0c179ab2
+ms.openlocfilehash: 185902d332e2036eace5b0b332eabd2803b5eb00
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/13/2020
-ms.locfileid: "79323546"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "81650115"
 ---
 # <a name="windows-admin-center-frequently-asked-questions"></a>Вопросы и ответы: Windows Admin Center
 
@@ -150,7 +150,7 @@ Windows Admin Center и SCVMM являются дополнительными р
 ### <a name="windows-admin-center-preview"></a>Ознакомительная версия Windows Admin Center
 
 * Эта версия подойдет для ИТ-администраторов, которые хотят на регулярной основе использовать самые последние и интересные возможности. Мы намерены предоставлять последующие обновленные выпуски примерно каждый месяц. Базовая платформа продолжает оставаться готовой для применения в рабочей среде, а лицензия предоставляет права на использование в коммерческих целях. Тем не менее, обратите внимание, что новые средства и возможности будут отмечены как "ДЛЯ ОЗНАКОМЛЕНИЯ", и ими можно будет пользоваться для оценки их работы.
-* Для получения последнего ознакомительного выпуска зарегистрированные участники программы предварительной оценки могут скачать ознакомительную версию Windows Admin Center непосредственно на [странице загрузки предварительных сборок Windows Server для участников программы предварительной оценки Windows](https://www.microsoft.com/software-download/windowsinsiderpreviewserver) в раскрывающемся списке "Дополнительные файлы для загрузки". Если вы еще не зарегистрированы как участник программы предварительной оценки, обратитесь к разделу по [началу работы с Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) на портале Программы предварительной оценки Windows для бизнеса.
+* Для получения последнего ознакомительного выпуска зарегистрированные участники программы предварительной оценки могут скачать ознакомительную версию Windows Admin Center непосредственно на [странице загрузки предварительных сборок Windows Server для участников программы предварительной оценки Windows](https://microsoft.com/en-us/software-download/windowsinsiderpreviewserver) в раскрывающемся списке "Дополнительные файлы для загрузки". Если вы еще не зарегистрированы как участник программы предварительной оценки, обратитесь к разделу по [началу работы с Windows Server](https://insider.windows.com/en-us/for-business-getting-started-server/) на портале Программы предварительной оценки Windows для бизнеса.
 
 ## <a name="why-was-windows-admin-center-chosen-as-the-final-name-for-project-honolulu"></a>Почему в качестве конечного названия для "Project Honolulu" было выбрано название "Windows Admin Center"?
 

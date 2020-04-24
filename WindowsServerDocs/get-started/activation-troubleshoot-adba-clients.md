@@ -9,13 +9,13 @@ ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
 ms.openlocfilehash: b4e31cfa892019e4f3bbcd3b67dbb42751cc58dd
-ms.sourcegitcommit: 9855d6b59b1f8722f39ae74ad373ce1530da0ccf
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71963040"
 ---
-# <a name="example-troubleshooting-active-directory-based-activation-adba-clients-that-do-not-activate"></a>Пример. Устранение неполадок клиентов активации на основе Active Directory (ADBA), которые не активируются
+# <a name="example-troubleshooting-active-directory-based-activation-adba-clients-that-do-not-activate"></a>Пример: Устранение неполадок клиентов активации на основе Active Directory (ADBA), которые не активируются
 
 > [!NOTE]
 > Эта статья была первоначально опубликована в блоге TechNet 26 марта 2018 года.

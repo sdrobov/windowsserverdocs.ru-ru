@@ -11,15 +11,15 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 5e13886395040619a7509c3cf896112288c48115
-ms.sourcegitcommit: e817a130c2ed9caaddd1def1b2edac0c798a6aa2
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "74945209"
 ---
-# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Компоненты, удаленные или не рекомендуемые к использованию в Windows Server2016
+# <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016
 
->Относится к: Windows Server 2016
+>Применяется к: Windows Server 2016
 
 В этой статье приведен список компонентов и функций в Windows Server 2016, которые уже удалены в текущем выпуске или будут удалены в следующих (и не рекомендуются к использованию). Он предназначен для ИТ-специалистов, выполняющих обновление операционных систем в коммерческих средах. Данный список не является исчерпывающим и может быть изменен с выходом следующих версий ОС. Дополнительные сведения о конкретных компонентах и функциях и их замене см. в соответствующей документации.
 

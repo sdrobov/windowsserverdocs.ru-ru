@@ -5,10 +5,10 @@ contributor: maertendMSFT
 author: maertendmsft
 title: Установка OpenSSH для Windows
 ms.openlocfilehash: b9889a9057a1ddd5181f4ea4aab35680d524eabf
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "80852057"
 ---
 # <a name="installation-of-openssh-for-windows-server-2019-and-windows-10"></a>Установка OpenSSH для Windows Server 2019 и Windows 10 #

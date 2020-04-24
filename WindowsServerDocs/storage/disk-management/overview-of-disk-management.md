@@ -9,10 +9,10 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 46ed1256ed9039311939f9de12ea46416443be9c
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71402151"
 ---
 # <a name="overview-of-disk-management"></a>Обзор средства управления дисками
@@ -49,7 +49,7 @@ ms.locfileid: "71402151"
 
 Несмотря на то что управление дисками может показывать системный раздел EFI и раздел восстановления как свободные на 100 %, это не точно. Эти разделы обычно заполнены действительно важными файлами, которые нужны для правильной работы компьютера. Лучше всего оставить их в покое, чтобы вы могли запускать ПК и восстановить его в случае проблем.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также статью
 
 - [Как управлять дисками](manage-disks.md)
 - [Управление базовыми томами](manage-basic-volumes.md)

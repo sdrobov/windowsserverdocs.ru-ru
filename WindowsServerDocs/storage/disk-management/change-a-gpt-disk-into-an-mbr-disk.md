@@ -9,10 +9,10 @@ author: JasonGerend
 manager: brianlic
 ms.author: jgerend
 ms.openlocfilehash: 5c6efb0697af663b32ce6f0e27634c3962eca492
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "71402106"
 ---
 # <a name="convert-a-gpt-disk-into-an-mbr-disk"></a>Изменение схемы разделов диска с GPT на MBR
@@ -56,7 +56,7 @@ ms.locfileid: "71402106"
 
 7.  В командной строке **DISKPART** введите `convert mbr`.
 
-|                Значение                  |      Описание   |
+|                Применение                  |      Описание   |
 | ------------------------------------- | -----------------  |
 |  <strong>list disk</strong>  | Отображает список дисков и сведения о них, такие как размер, объем свободного места, является ли диск базовым или динамическим, а также используемый стиль раздела — основная загрузочная запись (MBR) или таблица разделов GUID (GPT). Фокус находится на диске, отмеченном звездочкой (\*). |
 | <strong>select disk</strong> |                                                                                                          Выбирает указанный диск, где <em>disknumber</em> — номер диска, и переводит на него фокус.                                                                                                           |

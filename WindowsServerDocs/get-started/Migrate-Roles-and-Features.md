@@ -11,15 +11,15 @@ ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
 ms.openlocfilehash: 33c1aa654e4c660b4fe2f3305bfaf78b5191220a
-ms.sourcegitcommit: e58e1646ffd75d4a89576d967b2dbbbb84764303
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "70119202"
 ---
 # <a name="migrating-roles-and-features-in-windows-server"></a>Миграция ролей и компонентов в Windows Server
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Применяется к: Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Эта страница содержит ссылки на информацию и инструменты, которые помогут вам в процессе переноса ролей и компонентов в более новую версию Windows Server. Вы можете перенести файловые серверы и хранилище с помощью [службы миграции хранилища](../storage/storage-migration-service/overview.md), в то время как многие другие роли и компоненты можно перенести с помощью средств миграции Windows Server. Это набор командлетов PowerShell, которые были введены в Windows Server 2008 R2 для переноса ролей и компонентов.
 
@@ -36,7 +36,7 @@ ms.locfileid: "70119202"
 
 Для переноса файловых серверов и хранилища на Windows Server 2019 или Windows Server 2016 рекомендуется использовать [службу миграции хранилища](../storage/storage-migration-service/overview.md). Сведения о переносе других ролей приведены в руководстве по Windows Server 2016 и Windows Server 2012 R2.
 
-## <a name="windows-server-2016"></a>Windows Server 2016
+## <a name="windows-server-2016"></a>Windows Server 2016
 
 Ниже приведены руководства по миграции для Windows Server 2016. Обратите внимание на то, что во многих случаях можно также использовать руководства по миграции для Windows Server 2012 R2.
 
@@ -47,7 +47,7 @@ ms.locfileid: "70119202"
 
 Для переноса файловых серверов в Windows Server 2019 или Windows Server 2016 рекомендуется использовать [службу миграции хранилища](../storage/storage-migration-service/overview.md).
 
-## <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
+## <a name="windows-server-2012-r2"></a>Windows Server 2012 R2
 
 Следуйте инструкциям в этих руководствах для переноса ролей и компонентов с серверов под управлением Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012 или Windows Server 2012 R2 на Windows Server 2012 R2. Средства миграции Windows Server в Windows Server 2012 R2 поддерживают перенос между различными подсетями.
 
@@ -84,7 +84,7 @@ ms.locfileid: "70119202"
 
 Для получения дополнительных материалов по миграции ознакомьтесь с разделом [Перенос ролей и компонентов на Windows Server](https://technet.microsoft.com/library/jj134039).
 
-## <a name="windows-server-2008-r2"></a>Windows Server 2008 R2
+## <a name="windows-server-2008-r2"></a>Windows Server 2008 R2
 
 Следуйте инструкциям в этих руководствах для переноса ролей и компонентов с серверов под управлением Windows Server 2003, Windows Server 2008 или Windows Server 2008 R2 на Windows Server 2008 R2. Средства миграции Windows Server в Windows Server 2008 R2 не поддерживают перенос между различными подсетями.
 

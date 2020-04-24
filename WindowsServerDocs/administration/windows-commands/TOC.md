@@ -1,5 +1,5 @@
 # [Команды Windows](windows-commands.md)
-## - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+## [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 ## [Команды, упорядоченные по роли сервера](commands-by-server-role.md)
 ### [Справочник по командам системы печати](print-command-reference.md)
 ### [Справочник по командам служб для NFS](services-for-network-file-system-command-reference.md)
