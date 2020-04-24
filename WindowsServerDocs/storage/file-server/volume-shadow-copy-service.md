@@ -7,10 +7,10 @@ author: JasonGerend
 manager: elizapo
 ms.author: jgerend
 ms.openlocfilehash: 1ab941e25da7171349bb24762940af3bf886c165
-ms.sourcegitcommit: a4b489d0597b6a73c905d3448d5bc332efd6191b
+ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/23/2020
 ms.locfileid: "77675365"
 ---
 # <a name="volume-shadow-copy-service"></a>Служба теневого копирования томов
