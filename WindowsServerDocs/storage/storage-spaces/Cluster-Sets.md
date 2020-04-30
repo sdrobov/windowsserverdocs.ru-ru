@@ -9,16 +9,16 @@ ms.author: johnmar
 ms.date: 01/30/2019
 description: В этой статье описывается сценарий наборов кластеров.
 ms.localizationpriority: medium
-ms.openlocfilehash: 3c7ddef1831a82f7fc068ec4241bb1a72bd888bd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 484b6a1e658cd5c0583747194fa42494e54c3301
+ms.sourcegitcommit: 4824f3b307e5b8b9bf5be7bc948f7aba9cf7063f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861047"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82579931"
 ---
 # <a name="cluster-sets"></a>Наборы кластеров
 
-> Область применения: Windows Server 2019
+> Применяется к: Windows Server 2019
 
 Наборы кластеров — это новая облачная технология масштабирования в выпуске Windows Server 2019, увеличивающая число узлов кластера в одном программно определенном облаке центра обработки данных (SDDC) в соответствии с порядком. Набор кластеров — это слабо связанное Группирование нескольких отказоустойчивых кластеров: вычислений, хранения или Hyper-схождения. Технология наборов кластеров обеспечивает возможность объединения виртуальных машин между кластерами членов в наборе кластеров и единым пространством имен хранилища в пределах набора для поддержки жидкости виртуальных машин.
 
@@ -101,13 +101,15 @@ ms.locfileid: "80861047"
 
 Следующие рекомендации относятся к роли SOFS инфраструктуры.
 
-1.    В отказоустойчивом кластере может быть только одна роль кластера SOFS инфраструктуры. Роль SOFS инфраструктуры создается путем указания параметра **-Infrastructure**в командлете **Add-клустерскалеаутфилесерверроле** .  Например:
+1. В отказоустойчивом кластере может быть только одна роль кластера SOFS инфраструктуры. Роль SOFS инфраструктуры создается путем указания параметра **-Infrastructure**в командлете **Add-клустерскалеаутфилесерверроле** .  Пример:
 
-        Add-Клустерскалеаутфилесерверроле-Name "my_infra_sofs_name" — инфраструктура
+    ```PowerShell
+    Add-ClusterScaleoutFileServerRole -Name "my_infra_sofs_name" -Infrastructure
+    ```
 
-2.    Каждый том CSV, созданный при отработке отказа, автоматически активирует создание общего ресурса SMB с автоматически созданным именем на основе имени тома CSV. Администратор не может напрямую создавать или изменять общие ресурсы SMB в роли SOFS, кроме операций создания и изменения томов CSV.
+2. Каждый том CSV, созданный при отработке отказа, автоматически активирует создание общего ресурса SMB с автоматически созданным именем на основе имени тома CSV. Администратор не может напрямую создавать или изменять общие ресурсы SMB в роли SOFS, кроме операций создания и изменения томов CSV.
 
-3.    В конфигурациях с согласованием в технологии Hyper-SOFS инфраструктура позволяет клиенту SMB (узлу Hyper-V) взаимодействовать с гарантированной непрерывной доступностью (CA) с сервером SMB инфраструктуры SOFS. Этот ЦС с согласованием по протоколу SMB использует виртуальные машины, обращающиеся к своим файлам виртуального диска (VHDx), в которые пересылается удостоверение виртуальной машины-владельца между клиентом и сервером. Эта переадресация удостоверений разрешает VHDx-файлы с помощью ACL так же, как и в стандартных конфигурациях кластера с поддержкой Hyper-in.
+3. В конфигурациях с согласованием в технологии Hyper-SOFS инфраструктура позволяет клиенту SMB (узлу Hyper-V) взаимодействовать с гарантированной непрерывной доступностью (CA) с сервером SMB инфраструктуры SOFS. Этот ЦС с согласованием по протоколу SMB использует виртуальные машины, обращающиеся к своим файлам виртуального диска (VHDx), в которые пересылается удостоверение виртуальной машины-владельца между клиентом и сервером. Эта переадресация удостоверений разрешает VHDx-файлы с помощью ACL так же, как и в стандартных конфигурациях кластера с поддержкой Hyper-in.
 
 После создания кластера пространство имен набора кластеров основывается на инфраструктуре, SOFS на каждом из кластеров членов, а также в SOFS инфраструктуры в кластере управления.
 
@@ -126,11 +128,11 @@ ms.locfileid: "80861047"
 3. Создание элементов кластера (по крайней мере два кластера с общими томами кластера по меньшей мере на каждом кластере)
 4. Создайте кластер управления (физический или гостевой), на котором находятся кластеры членов.  Такой подход гарантирует, что уровень управления кластера будет доступен, несмотря на возможные сбои в работе кластера.
 
-### <a name="steps"></a>Действия
+### <a name="steps"></a>Шаги
 
 1. Создайте новый набор кластеров из трех кластеров, как определено в предварительных требованиях.  На приведенной ниже диаграмме приведен пример создаваемых кластеров.  В этом примере в качестве имени кластера будет использоваться **ксмастер**.
 
-   | Имя кластера               | Имя SOFS инфраструктуры, которое будет использоваться позже | 
+   | Имя кластера,               | Имя SOFS инфраструктуры, которое будет использоваться позже | 
    |----------------------------|-------------------------------------------|
    | SET-CLUSTER                | SOFS-CLUSTERING                           |
    | CLUSTER1                   | SOFS — CLUSTER1                             |
@@ -138,49 +140,69 @@ ms.locfileid: "80861047"
 
 2. После создания кластера используйте следующие команды для создания главного набора кластеров.
 
-        New-ClusterSet -Name CSMASTER -NamespaceRoot SOFS-CLUSTERSET -CimSession SET-CLUSTER
+    ```PowerShell
+    New-ClusterSet -Name CSMASTER -NamespaceRoot SOFS-CLUSTERSET -CimSession SET-CLUSTER
+    ```
 
 3. Чтобы добавить сервер кластера в набор кластеров, используется приведенный ниже объект.
 
-        Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
-        Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
+    ```PowerShell
+    Add-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER1
+    Add-ClusterSetMember -ClusterName CLUSTER2 -CimSession CSMASTER -InfraSOFSName SOFS-CLUSTER2
+    ```
 
    > [!NOTE]
    > При использовании схемы статических IP-адресов необходимо включить параметр *-статикаддресс x. x. x. x* в команде **New-Clustering** .
 
 4. После создания кластера, установленного для членов кластера, можно вывести список узлов и его свойства.  Чтобы перечислить все кластеры элементов в наборе кластеров, выполните следующие действия.
 
-        Get-ClusterSetMember -CimSession CSMASTER
+    ```PowerShell
+    Get-ClusterSetMember -CimSession CSMASTER
+    ```
 
 5. Для перечисления всех кластеров элементов в наборе кластеров, включая узлы кластера управления, выполните следующие действия.
 
-        Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterNode
+    ```PowerShell
+    Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterNode
+    ```
 
 6. Чтобы получить список всех узлов из кластеров участников, выполните следующие действия.
 
-        Get-ClusterSetNode -CimSession CSMASTER
+    ```PowerShell
+    Get-ClusterSetNode -CimSession CSMASTER
+    ```
 
 7. Чтобы получить список всех групп ресурсов в наборе кластеров, выполните следующие действия.
 
-        Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterGroup 
+    ```PowerShell
+    Get-ClusterSet -CimSession CSMASTER | Get-Cluster | Get-ClusterGroup 
+    ```
 
 8. Чтобы убедиться в том, что процесс создания набора кластеров создал один общий ресурс SMB (определенный как Volume1, или что-либо папка CSV с меткой ScopeName является именем файлового сервера инфраструктуры, а также путь как и то, и другое) в SOFS инфраструктуры для тома CSV каждого из этих членов кластера:
 
-        Get-SmbShare -CimSession CSMASTER
+    ```PowerShell
+    Get-SmbShare -CimSession CSMASTER
+    ```
 
 8. Наборы кластеров содержат журналы отладки, которые можно собирать для проверки.  Кластерный набор и журналы отладки кластера можно собирать для всех участников и кластера управления.
 
-        Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
+    ```PowerShell
+    Get-ClusterSetLog -ClusterSetCimSession CSMASTER -IncludeClusterLog -IncludeManagementClusterLog -DestinationFolderPath <path>
+    ```
 
 9. Настройте [ограниченное делегирование](https://techcommunity.microsoft.com/t5/virtualization/live-migration-via-constrained-delegation-with-kerberos-in/ba-p/382334) Kerberos между всеми членами набора кластеров.
 
 10. Настройте для типа проверки подлинности динамической миграции виртуальной машины между кластерами протокол Kerberos на каждом узле в наборе кластеров.
 
-        foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+    ```PowerShell
+    foreach($h in $hosts){ Set-VMHost -VirtualMachineMigrationAuthenticationType Kerberos -ComputerName $h }
+    ```
 
 11. Добавьте кластер управления в локальную группу администраторов на каждом узле в наборе кластеров.
 
-        foreach($h in $hosts){ Invoke-Command -ComputerName $h -ScriptBlock {Net localgroup administrators /add <management_cluster_name>$} }
+    ```PowerShell
+    foreach($h in $hosts){ Invoke-Command -ComputerName $h -ScriptBlock {Net localgroup administrators /add <management_cluster_name>$} }
+    ```
 
 ## <a name="creating-new-virtual-machines-and-adding-to-cluster-sets"></a>Создание новых виртуальных машин и добавление их в наборы кластеров
 
@@ -198,43 +220,53 @@ ms.locfileid: "80861047"
 - Задайте виртуальный процессор, используемый в 1
 - Убедитесь, что для виртуальной машины доступно по меньшей мере 10% ресурсов ЦП.
 
-   ```PowerShell
-   # Identify the optimal node to create a new virtual machine
-   $memoryinMB=4096
-   $vpcount = 1
-   $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
-   $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-   $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```PowerShell
+# Identify the optimal node to create a new virtual machine
+$memoryinMB=4096
+$vpcount = 1
+$targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10
+$secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+$cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
 
-   # Deploy the virtual machine on the optimal node
-   Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
-   
-   Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
-   Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
-   ```
+# Deploy the virtual machine on the optimal node
+Invoke-Command -ComputerName $targetnode.name -scriptblock { param([String]$storagepath); New-VM CSVM1 -MemoryStartupBytes 3072MB -path $storagepath -NewVHDPath CSVM.vhdx -NewVHDSizeBytes 4194304 } -ArgumentList @("\\SOFS-CLUSTER1\VOLUME1") -Credential $cred | Out-Null
+
+Start-VM CSVM1 -ComputerName $targetnode.name | Out-Null
+Get-VM CSVM1 -ComputerName $targetnode.name | fl State, ComputerName
+```
 
 По завершении вы получите сведения о виртуальной машине и месте ее размещения.  В приведенном выше примере будет показано следующее:
 
-        State         : Running
-        ComputerName  : 1-S2D2
+```
+State         : Running
+ComputerName  : 1-S2D2
+```
 
 Если вам не хватает памяти, ЦП или дискового пространства для добавления виртуальной машины, появится сообщение об ошибке:
 
-      Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
+```
+Get-ClusterSetOptimalNodeForVM : A cluster node is not available for this operation.  
+```
 
 После создания виртуальной машины она будет отображаться в диспетчере Hyper-V на указанном узле.  Чтобы добавить его в качестве виртуальной машины для набора кластеров и в кластер, команда ниже.  
 
-        Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
+```PowerShell
+Register-ClusterSetVM -CimSession CSMASTER -MemberName $targetnode.Member -VMName CSVM1
+```
 
 После завершения будет выведен результат:
 
-         Id  VMName  State  MemberName  PSComputerName
-         --  ------  -----  ----------  --------------
-          1  CSVM1      On  CLUSTER1    CSMASTER
+```
+Id  VMName  State  MemberName  PSComputerName
+--  ------  -----  ----------  --------------
+1  CSVM1      On  CLUSTER1    CSMASTER
+```
 
 Если вы добавили кластер с существующими виртуальными машинами, виртуальные машины также должны быть зарегистрированы в наборах кластеров, чтобы зарегистрировать все виртуальные машины одновременно, используемая команда:
 
-        Get-ClusterSetMember -name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
+```PowerShell
+Get-ClusterSetMember -Name CLUSTER3 -CimSession CSMASTER | Register-ClusterSetVM -RegisterAll -CimSession CSMASTER
+```
 
 Однако процесс не завершен, так как путь к виртуальной машине необходимо добавить в пространство имен набора кластеров.
 
@@ -242,12 +274,16 @@ ms.locfileid: "80861047"
 
 В этом примере CLUSTER3 был добавлен в набор кластеров с помощью Add-Клустерсетмембер с инфраструктурой масштабируемый файловый сервер как SOFS-CLUSTER3.  Чтобы переместить конфигурацию и хранилище виртуальной машины, выполните команду:
 
-        Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
+```PowerShell
+Move-VMStorage -DestinationStoragePath \\SOFS-CLUSTER3\Volume1 -Name MYVM
+```
 
 По завершении вы получите предупреждение:
 
-        WARNING: There were issues updating the virtual machine configuration that may prevent the virtual machine from running.  For more information view the report file below.
-        WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualMachineConfiguration '' on date at time.htm.
+```
+WARNING: There were issues updating the virtual machine configuration that may prevent the virtual machine from running.  For more information view the report file below.
+WARNING: Report file location: C:\Windows\Cluster\Reports\Update-ClusterVirtualMachineConfiguration '' on date at time.htm.
+```
 
 Это предупреждение можно проигнорировать, так как предупреждение "не обнаружено изменений в конфигурации хранилища ролей виртуальной машины".  Причина предупреждения в том, что фактическое физическое расположение не изменяется; только пути конфигурации. 
 
@@ -261,13 +297,17 @@ ms.locfileid: "80861047"
 
 В кластере эти действия не требуются, и требуется только одна команда.  Сначала следует настроить все сети для миграции с помощью команды:
 
-    Set-VMHost -UseAnyNetworkForMigration $true
+```PowerShell
+Set-VMHost -UseAnyNetworkForMigration $true
+```
 
 Например, я хочу переместить виртуальную машину с набором кластеров из CLUSTER1 в NODE2-CL3 на CLUSTER3.  Единственная команда:
 
-        Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
+```PowerShell
+Move-ClusterSetVM -CimSession CSMASTER -VMName CSVM1 -Node NODE2-CL3
+```
 
-Обратите внимание, что это не приводит к перемещению файлов конфигурации и хранилища виртуальных машин.  Это не обязательно, так как путь к виртуальной машине остается \\SOFS-CLUSTER1\VOLUME1.  После регистрации виртуальной машины в наборах кластеров путь к общей папке серверного сервера инфраструктуры, диски и виртуальная машина не должны находиться на том же компьютере, что и виртуальная машина.
+Обратите внимание, что это не приводит к перемещению файлов конфигурации и хранилища виртуальных машин.  Это не обязательно, так как путь к виртуальной машине остается \\ \\SOFS-CLUSTER1\VOLUME1.  После регистрации виртуальной машины в наборах кластеров путь к общей папке серверного сервера инфраструктуры, диски и виртуальная машина не должны находиться на том же компьютере, что и виртуальная машина.
 
 ## <a name="creating-availability-sets-fault-domains"></a>Создание доменов сбоя для групп доступности
 
@@ -279,39 +319,49 @@ ms.locfileid: "80861047"
 
 Чтобы создать домены сбоя, выполните следующие команды:
 
-        New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER1,CLUSTER2 -Description "This is my first fault domain"
+```PowerShell
+New-ClusterSetFaultDomain -Name FD1 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER1,CLUSTER2 -Description "This is my first fault domain"
 
-        New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "This is my second fault domain"
+New-ClusterSetFaultDomain -Name FD2 -FdType Logical -CimSession CSMASTER -MemberCluster CLUSTER3,CLUSTER4 -Description "This is my second fault domain"
+```
 
 Чтобы убедиться, что они были успешно созданы, можно запустить Get-Клустерсетфаултдомаин с отображаемыми выходными данными.
 
-        PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
+```PowerShell
+PS C:\> Get-ClusterSetFaultDomain -CimSession CSMASTER -FdName FD1 | fl *
 
-        PSShowComputerName    : True
-        FaultDomainType       : Logical
-        ClusterName           : {CLUSTER1, CLUSTER2}
-        Description           : This is my first fault domain
-        FDName                : FD1
-        Id                    : 1
-        PSComputerName        : CSMASTER
+PSShowComputerName    : True
+FaultDomainType       : Logical
+ClusterName           : {CLUSTER1, CLUSTER2}
+Description           : This is my first fault domain
+FDName                : FD1
+Id                    : 1
+PSComputerName        : CSMASTER
+```
 
 Теперь, когда домены сбоя созданы, необходимо создать группу доступности.
 
-        New-ClusterSetAvailabilitySet -Name CSMASTER-AS -FdType Logical -CimSession CSMASTER -ParticipantName FD1,FD2
+```PowerShell
+New-ClusterSetAvailabilitySet -Name CSMASTER-AS -FdType Logical -CimSession CSMASTER -ParticipantName FD1,FD2
+```
 
 Чтобы проверить, что он создан, используйте:
 
-        Get-ClusterSetAvailabilitySet -AvailabilitySetName CSMASTER-AS -CimSession CSMASTER
+```PowerShell
+Get-ClusterSetAvailabilitySet -AvailabilitySetName CSMASTER-AS -CimSession CSMASTER
+```
 
 При создании новых виртуальных машин необходимо использовать параметр-Availability в процессе определения оптимального узла.  Поэтому он будет выглядеть примерно так:
 
-        # Identify the optimal node to create a new virtual machine
-        $memoryinMB=4096
-        $vpcount = 1
-        $av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
-        $targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
-        $secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
-        $cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```PowerShell
+# Identify the optimal node to create a new virtual machine
+$memoryinMB=4096
+$vpcount = 1
+$av = Get-ClusterSetAvailabilitySet -Name CSMASTER-AS -CimSession CSMASTER
+$targetnode = Get-ClusterSetOptimalNodeForVM -CimSession CSMASTER -VMMemory $memoryinMB -VMVirtualCoreCount $vpcount -VMCpuReservation 10 -AvailabilitySet $av
+$secure_string_pwd = convertto-securestring "<password>" -asplaintext -force
+$cred = new-object -typename System.Management.Automation.PSCredential ("<domain\account>",$secure_string_pwd)
+```
 
 Удаление кластера из наборов кластеров из-за различных жизненных циклов. Иногда требуется удалить кластер из набора кластеров. Рекомендуется переместить все виртуальные машины из кластера в кластер. Это можно сделать с помощью команд **Move-клустерсетвм** и **Move-вмстораже** .
 
@@ -322,7 +372,9 @@ ms.locfileid: "80861047"
 
 Например, команда для удаления кластера CLUSTER1 из наборов кластеров будет выглядеть так:
 
-        Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
+```PowerShell
+Remove-ClusterSetMember -ClusterName CLUSTER1 -CimSession CSMASTER
+```
 
 ## <a name="frequently-asked-questions-faq"></a>Часто задаваемые вопросы
 
@@ -356,7 +408,7 @@ ms.locfileid: "80861047"
 **Ответ.** Нет, обратите внимание, что отработка отказа между кластерами в логическом домене сбоя пока не поддерживается. 
 
 **Вопрос:** Может ли мой кластер занимать кластеры на нескольких сайтах (или доменах DNS)? <br> 
-**ответ.** это нетестовый сценарий, который не планируется немедленно для поддержки в рабочей среде. Сообщите корпорации Майкрософт о том, является ли этот сценарий критически важным для вас и как вы планируете его использовать.
+**Ответ.** Это нетестовый сценарий, который не планируется немедленно для поддержки в рабочей среде. Сообщите корпорации Майкрософт о том, является ли этот сценарий критически важным для вас и как вы планируете его использовать.
 
 **Вопрос:** Работает ли набор кластеров с IPv6? <br>
 **Ответ.** Как IPv4, так и IPv6 поддерживаются с наборами кластеров в качестве отказоустойчивых кластеров.
