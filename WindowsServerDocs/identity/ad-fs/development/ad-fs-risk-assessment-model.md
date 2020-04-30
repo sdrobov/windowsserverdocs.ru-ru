@@ -1,5 +1,5 @@
 ---
-title: Подключаемые модули сборки с моделью оценки рисков AD FS 2019
+title: Создание подключаемых модулей с помощью модели оценки риска AD FS за 2019 г.
 author: billmath
 ms.author: billmath
 manager: mtillman
@@ -7,14 +7,14 @@ ms.date: 04/16/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: af7a565fb5b3745531497ed9119976418eb6dcd7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6433513f525572254e4aaef65e2bfc992a7c5280
+ms.sourcegitcommit: 41dc7f487d282895a242e788049285363dd19eeb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857527"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169179"
 ---
-# <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Подключаемые модули сборки с моделью оценки рисков AD FS 2019
+# <a name="build-plug-ins-with-ad-fs-2019-risk-assessment-model"></a>Создание подключаемых модулей с помощью модели оценки риска AD FS за 2019 г.
 
 Теперь вы можете создавать собственные подключаемые модули для блокировки или назначения оценки риска запросам проверки подлинности в течение различных этапов — полученных запросов, предварительной проверки подлинности и после проверки подлинности. Это можно сделать с помощью новой модели оценки рисков, представленной в AD FS 2019. 
 
@@ -24,7 +24,7 @@ ms.locfileid: "80857527"
 
 Модель позволяет выполнять код подключаемого модуля на любом из трех этапов AD FS конвейера проверки подлинности, как показано ниже.
 
-![model](media/ad-fs-risk-assessment-model/risk1.png)
+![для базы данных модели](media/ad-fs-risk-assessment-model/risk1.png)
 
 1.    **Стадия получения запроса** — позволяет создавать подключаемые модули, разрешающие или блокирующие запрос, когда AD FS получает запрос на проверку подлинности, т. е. до ввода учетных данных пользователем. Вы можете использовать контекст запроса (например, клиентский IP-адрес, метод HTTP, DNS-сервер и т. д.), доступный на этом этапе, для выполнения оценки рисков. Например, можно создать подключаемый модуль для считывания IP-адреса из контекста запроса и блокировать запрос проверки подлинности, если IP-адрес находится в предварительно определенном списке рискованных адресов. 
 
@@ -63,43 +63,43 @@ ms.locfileid: "80857527"
 
 3. Открытие проекта `ThreatDetectionModule.sln` с помощью Visual Studio
 
-4. Удалите `Microsoft.IdentityServer.dll` из обозревателя решений, как показано ниже.</br>
-   ](media/ad-fs-risk-assessment-model/risk2.png) модели ![
+4. Удалите из `Microsoft.IdentityServer.dll` обозревателя решений, как показано ниже.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk2.png)
 
-5. Добавьте ссылку на `Microsoft.IdentityServer.dll` AD FS, как показано ниже.
+5. Добавьте ссылку `Microsoft.IdentityServer.dll` на AD FS, как показано ниже.
 
-   а)    Щелкните правой кнопкой мыши **ссылку** в **обозревателе решений** и выберите команду **Добавить ссылку...**</br>модель ![ 
-   ](media/ad-fs-risk-assessment-model/risk3.png)
+   а.    Щелкните правой кнопкой мыши **ссылку** в **обозревателе решений** и выберите команду **Добавить ссылку...**</br> 
+   ![моделировать](media/ad-fs-risk-assessment-model/risk3.png)
    
-   б.    В окне **Диспетчер ссылок** выберите **Обзор**. В списке **выберите файлы для ссылки...** Выберите `Microsoft.IdentityServer.dll` из папки установки AD FS (в моем случае **к:\виндовс\адфс**) и нажмите кнопку **Добавить**.
+   b.    В окне **Диспетчер ссылок** выберите **Обзор**. В списке **выберите файлы для ссылки...** Выберите `Microsoft.IdentityServer.dll` из папки установки AD FS (в моем случае **к:\виндовс\адфс**) и нажмите кнопку **добавить**.
    
    >[!NOTE]
-   >В моем случае я создам подключаемый модуль на самом сервере AD FS. Если среда разработки находится на другом сервере, скопируйте `Microsoft.IdentityServer.dll` из папки установки AD FS на AD FS сервере в поле разработки.</br> 
+   >В моем случае я создам подключаемый модуль на самом сервере AD FS. Если среда разработки находится на другом сервере, скопируйте `Microsoft.IdentityServer.dll` из папки установки AD FS на AD FS Server в окно разработки.</br> 
    
-   ![model](media/ad-fs-risk-assessment-model/risk4.png)
+   ![для базы данных модели](media/ad-fs-risk-assessment-model/risk4.png)
    
-   в.    Нажмите кнопку **ОК** в окне " **Диспетчер ссылок** ", убедившись, что установлен флажок `Microsoft.IdentityServer.dll`</br>
-   ](media/ad-fs-risk-assessment-model/risk5.png) модели ![
+   c.    Нажмите кнопку **ОК** в окне " **Диспетчер ссылок** ", `Microsoft.IdentityServer.dll` убедившись в том, что флажок установлен.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk5.png)
  
 6. Все классы и ссылки теперь используются для создания сборки.   Однако, поскольку выходные данные этого проекта являются библиотекой DLL, ее необходимо установить в **глобальный кэш сборок**или глобальном кэше сборок (GAC) сервера AD FS, а библиотека DLL должна быть подписана первой. Это можно сделать следующим образом.
 
-   а)    Щелкните **правой кнопкой мыши** имя проекта среатдетектионмодуле. В меню выберите пункт **Свойства**.</br>
-   ](media/ad-fs-risk-assessment-model/risk6.png) модели ![
+   а.    Щелкните **правой кнопкой мыши** имя проекта среатдетектионмодуле. В меню выберите пункт **Свойства**.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk6.png)
    
-   б.    На странице **Свойства** щелкните **подпись**слева и установите флажок **подписать сборку**. В раскрывающемся меню **выберите файл ключа строгого имени**: выберите **< создать... >**</br>
-   ](media/ad-fs-risk-assessment-model/risk7.png) модели ![
+   b.    На странице **Свойства** щелкните **подпись**слева и установите флажок **подписать сборку**. В раскрывающемся меню **выберите файл ключа строгого имени**: выберите **<создать... >**</br>
+   ![model](media/ad-fs-risk-assessment-model/risk7.png)
 
-   в.    В **диалоговом окне Создание ключа строгого имени**введите имя для ключа (можно выбрать любое имя), снимите флажок **защитить файл ключа паролем**. Затем нажмите кнопку **ОК**.
-   ](media/ad-fs-risk-assessment-model/risk8.png) модели ![</br>
+   c.    В **диалоговом окне Создание ключа строгого имени**введите имя для ключа (можно выбрать любое имя), снимите флажок **защитить файл ключа паролем**. Затем нажмите кнопку **ОК**.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk8.png)
  
-   .    Сохраните проект, как показано ниже.</br>
-   ](media/ad-fs-risk-assessment-model/risk9.png) модели ![
+   d.    Сохраните проект, как показано ниже.</br>
+   ![model](media/ad-fs-risk-assessment-model/risk9.png)
 
 7. Выполните сборку проекта, щелкнув **Сборка** , а затем **Перестроить решение** , как показано ниже.</br>
-   ](media/ad-fs-risk-assessment-model/risk10.png) модели ![
+   ![model](media/ad-fs-risk-assessment-model/risk10.png)
  
    Проверьте **окно вывода**в нижней части экрана, чтобы узнать, произошли ли ошибки.</br>
-   ](media/ad-fs-risk-assessment-model/risk11.png) модели ![
+   ![model](media/ad-fs-risk-assessment-model/risk11.png)
 
 
 Теперь подключаемый модуль (DLL) готов к использованию и находится в папке **\bin\Debug** папки проекта (в моем случае это **к:\екстенсионс\среатдетектионмодуле\бин\дебуг\среатдетектионмодуле.длл**). 
@@ -108,20 +108,20 @@ ms.locfileid: "80857527"
 
 ### <a name="register-the-plug-in-dll-with-ad-fs"></a>Зарегистрируйте библиотеку DLL подключаемого модуля с помощью AD FS
 
-Необходимо зарегистрировать библиотеку DLL в AD FS с помощью команды `Register-AdfsThreatDetectionModule` PowerShell на AD FS сервере, однако перед регистрацией необходимо получить маркер открытого ключа. Этот маркер открытого ключа был создан при создании ключа и подписании библиотеки DLL с помощью этого ключа. Чтобы узнать, что такое маркер открытого ключа для библиотеки DLL, можно использовать **файл Sn. exe** , как показано ниже.
+Необходимо зарегистрировать библиотеку DLL в AD FS с помощью команды `Register-AdfsThreatDetectionModule` PowerShell на сервере AD FS, однако перед регистрацией необходимо получить маркер открытого ключа. Этот маркер открытого ключа был создан при создании ключа и подписании библиотеки DLL с помощью этого ключа. Чтобы узнать, что такое маркер открытого ключа для библиотеки DLL, можно использовать **файл Sn. exe** , как показано ниже.
 
 1. Скопируйте DLL-файл из папки **\bin\Debug** в другое место (в моем случае, скопировав его в **к:\екстенсионс**).
 
-2. Запустите **Командная строка разработчика** для Visual Studio и перейдите в каталог, содержащий файл **Sn. exe** (в моем случае каталог — **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 tools**) ![Model](media/ad-fs-risk-assessment-model/risk12.png)
+2. Запустите **Командная строка разработчика** для Visual Studio и перейдите в каталог, содержащий **файл Sn. exe** (в моем случае каталог — **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**) ![.](media/ad-fs-risk-assessment-model/risk12.png)
 
-3. Выполните команду **SN** с параметром **-T** и расположением файла (в моем случае `SN -T "C:\extensions\ThreatDetectionModule.dll"`) ![модели](media/ad-fs-risk-assessment-model/risk13.png)</br>
+3. Выполните команду **SN** с параметром **-T** и расположением файла (в моем случае `SN -T "C:\extensions\ThreatDetectionModule.dll"`). ![](media/ad-fs-risk-assessment-model/risk13.png)</br>
    Команда предоставит маркер открытого ключа (для меня **маркером открытого ключа является 714697626ef96b35**)
 
 4. Добавьте библиотеку DLL в **глобальный кэш сборок** AD FS Server. Мы рекомендуем создать правильный установщик для проекта и добавить этот файл в GAC с помощью установщика. Другое решение — использовать **gacutil. exe** (Дополнительные сведения о **gacutil. exe** доступны [здесь](https://docs.microsoft.com/dotnet/framework/tools/gacutil-exe-gac-tool)) на компьютере разработчика.  Так как я использую Visual Studio на том же сервере, что и AD FS, я буду использовать **gacutil. exe** следующим образом.
 
-   а)    В Командная строка разработчика для Visual Studio и перейдите в каталог, содержащий **gacutil. exe** (в моем случае каталог **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
+   а.    В Командная строка разработчика для Visual Studio и перейдите в каталог, содержащий **gacutil. exe** (в моем случае каталог **C:\Program Files (x86) \Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.7.2 Tools**)
 
-   б.    Выполните команду **gacutil** (в моем случае `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`) ![модель](media/ad-fs-risk-assessment-model/risk14.png)
+   b.    Выполнение команды **gacutil** (в моем случае `Gacutil /IF C:\extensions\ThreatDetectionModule.dll`) ![](media/ad-fs-risk-assessment-model/risk14.png)
  
    >[!NOTE]
    >Если у вас есть ферма AD FS, необходимо выполнить описанные выше шаги на каждом сервере AD FS в ферме. 
@@ -154,9 +154,9 @@ ms.locfileid: "80857527"
 ### <a name="testing-the-plug-in"></a>Тестирование подключаемого модуля
 
 1. Откройте файл **аусконфиг. csv** , созданный ранее (в моем случае в расположении **к:\екстенсионс**), и добавьте **IP-адреса экстрасети** , которые нужно заблокировать. Каждый IP-адрес должен находиться в отдельной строке, и в конце не должно быть пробелов.</br>
-   ](media/ad-fs-risk-assessment-model/risk18.png) модели ![
+   ![model](media/ad-fs-risk-assessment-model/risk18.png)
  
-2. Сохраните файл и закройте его.
+2. Сохраните и закройте файл.
 
 3. Импортируйте обновленный файл в AD FS, выполнив следующую команду PowerShell: 
 
@@ -173,18 +173,18 @@ ms.locfileid: "80857527"
 
    Для этой демонстрации я буду использовать для инициации запроса [инструмент AD FS Help Claims X-Ray](https://adfshelp.microsoft.com/ClaimsXray/TokenRequest) . Если вы хотите использовать средство X-Ray, следуйте инструкциям. 
 
-   Введите экземпляр сервера федерации и нажмите кнопку **Проверка подлинности** проверки нажатия.</br>модель ![ 
-   ](media/ad-fs-risk-assessment-model/risk15.png) 
+   Введите экземпляр сервера федерации и нажмите кнопку **Проверка подлинности** проверки нажатия.</br> 
+   ![моделировать](media/ad-fs-risk-assessment-model/risk15.png) 
 
 5. Проверка подлинности блокируется, как показано ниже.</br>
-   ](media/ad-fs-risk-assessment-model/risk16.png) модели ![
+   ![model](media/ad-fs-risk-assessment-model/risk16.png)
  
 Теперь, когда мы осведомлены о том, как создать и зарегистрировать подключаемый модуль, давайте пошаговым кодом подключаемого модуля, чтобы понять реализацию с помощью новых интерфейсов и классов, представленных в модели. 
 
 ## <a name="plug-in-code-walkthrough"></a>Пошаговое руководство по коду подключаемого модуля
 
 Откройте проект `ThreatDetectionModule.sln` с помощью Visual Studio, а затем откройте основной файл **UserRiskAnalyzer.CS** в **обозревателе решений** в правой части экрана.</br>
-](media/ad-fs-risk-assessment-model/risk17.png) модели ![
+![model](media/ad-fs-risk-assessment-model/risk17.png)
  
 Файл содержит класс main Усеррисканализер, который реализует абстрактный класс [среатдетектионмодуле](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) и интерфейс [ирекуестрецеиведсреатдетектионмодуле](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.irequestreceivedthreatdetectionmodule?view=adfs-2019) для считывания IP-адреса из контекста запроса, сравнения полученного IP-адреса с IP-адресами, загруженными из AD FS DB, и блокировки запроса при совпадении IP-адресов. Давайте рассмотрим эти типы более подробно.
 
@@ -212,11 +212,11 @@ public abstract class ThreatDetectionModule
 |[онаусентикатионпипелинелоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) |Void|Вызывается с помощью AD FS при загрузке подключаемого модуля в конвейер| 
 |[онаусентикатионпипелинеунлоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineunload?view=adfs-2019) |Void|Вызывается AD FS при выгрузке подключаемого модуля из конвейера| 
 |[онконфигуратионупдате](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019)| Void|Вызывается с помощью AD FS при обновлении конфигурации |
-|**Свойства** |**Type** |**Определение**|
+|**Свойство** |**Тип** |**Определение**|
 |[ИмяПоставщика](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.vendorname?view=adfs-2019)|Строка |Возвращает имя поставщика, владеющего подключаемым модулем.|
 |[модулеидентифиер](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.moduleidentifier?view=adfs-2019)|Строка |Возвращает идентификатор подключаемого модуля.|
 
-В нашем примере подключаемого модуля мы используем методы [онаусентикатионпипелинелоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) и [онконфигуратионупдате](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) для чтения предварительно определенных ip-адресов из AD FS DB. [Онаусентикатионпипелинелоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) вызывается, когда подключаемый модуль регистрируется в AD FS во время вызова [онконфигуратионупдате](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) при импорте CSV-файла с помощью командлета `Import-AdfsThreatDetectionModuleConfiguration`. 
+В нашем примере подключаемого модуля мы используем методы [онаусентикатионпипелинелоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) и [онконфигуратионупдате](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) для чтения предварительно определенных ip-адресов из AD FS DB. [Онаусентикатионпипелинелоад](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onauthenticationpipelineload?view=adfs-2019) вызывается, когда подключаемый модуль регистрируется в AD FS во время вызова [онконфигуратионупдате](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule.onconfigurationupdate?view=adfs-2019) при импорте CSV-файла с `Import-AdfsThreatDetectionModuleConfiguration` помощью командлета. 
 
 #### <a name="irequestreceivedthreatdetectionmodule-interface"></a>Интерфейс Ирекуестрецеиведсреатдетектионмодуле
 
@@ -258,7 +258,7 @@ IList<Claim> additionalClams
 );
 }
 ```
-Интерфейс включает метод [евалуатепреаусентикатион](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) , который позволяет использовать сведения, передаваемые в входных параметрах [RequestContext RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [протоколконтекст протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)и [IList<Claim> аддитионалкламс](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) , для написания логики оценки риска перед проверкой подлинности. 
+Интерфейс включает метод [евалуатепреаусентикатион](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipreauthenticationthreatdetectionmodule.evaluatepreauthentication?view=adfs-2019) , который позволяет использовать данные, передаваемые в входных параметрах [RequestContext RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [протоколконтекст протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)и [IList<Claim> аддитионалкламс](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) , для написания логики оценки риска предварительной проверки подлинности. 
 
 >[!NOTE]
 >Список свойств, переданных с каждым типом контекста, см. в определениях классов [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019)и [протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) . 
@@ -285,7 +285,7 @@ IList<Claim> additionalClams
 }
 ```
 
-Интерфейс включает метод [евалуатепостаусентикатион](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) , который позволяет использовать сведения, передаваемые в входных параметрах [RequestContext RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [протоколконтекст протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)и [IList<Claim> аддитионалкламс](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) , для написания логики оценки риска после проверки подлинности. 
+Интерфейс включает метод [евалуатепостаусентикатион](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.ipostauthenticationthreatdetectionmodule.evaluatepostauthentication?view=adfs-2019) , который позволяет использовать данные, передаваемые в входных параметрах [RequestContext RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019), [протоколконтекст протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019)и [IList<Claim> аддитионалкламс](https://docs.microsoft.com/dotnet/api/system.collections.generic.ilist-1?view=netframework-4.7.2) , для написания логики оценки риска после проверки подлинности. 
 
 >[!NOTE]
 > Полный список свойств, передаваемых с каждым типом контекста, см. в разделе определения классов [RequestContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.requestcontext?view=adfs-2019), [SecurityContext](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.securitycontext?view=adfs-2019)и [протоколконтекст](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.protocolcontext?view=adfs-2019) . 
@@ -297,7 +297,7 @@ IList<Claim> additionalClams
 >[!NOTE]
 >Для работы подключаемого модуля в основном классе (в данном случае Усеррисканализер) должен быть производный абстрактный класс [среатдетектионмодуле](https://docs.microsoft.com/dotnet/api/microsoft.identityserver.public.threatdetectionframework.threatdetectionmodule?view=adfs-2019) , который должен реализовывать по крайней мере один из трех описанных выше интерфейсов. После регистрации библиотеки DLL AD FS проверяет, какие интерфейсы реализуются и вызывают их на соответствующем этапе в конвейере.
 
-### <a name="faqs"></a>ЧЗВ
+### <a name="faqs"></a>Часто задаваемые вопросы
 
 **Зачем создавать эти подключаемые модули?**</br>
 Ответ **.** Эти подключаемые модули не только предоставляют дополнительную возможность защитить среду от атак, таких как атаки типа «распыление паролей», но также предоставляют гибкие возможности создания собственной логики оценки рисков на основе ваших требований. 
@@ -310,3 +310,9 @@ IList<Claim> additionalClams
 
 **Почему не может AD FS предложить список рискованных IP-адресов, пользователей и т. д.**</br>
 Ответ **.** В настоящее время мы работаем над созданием аналитической аналитики для предложения рискованных IP-адресов, пользователей и т. д. в модели оценки подключаемых рисков. Вскоре мы будем предоставлять вам даты запуска. 
+
+**Какие другие примеры подключаемых модулей доступны?**</br>
+Ответ **.** Доступны следующие примеры подключаемых модулей:
+|Имя|Описание| 
+|-----|-----|
+|[Подключаемый модуль рискованных пользователей](https://github.com/microsoft/adfs-sample-block-user-on-adfs-marked-risky-by-AzureAD-IdentityProtection)|Пример подключаемого модуля, который блокирует проверку подлинности или применяет MFA на основе уровня риска пользователя, определенного защита идентификации Azure AD.| 

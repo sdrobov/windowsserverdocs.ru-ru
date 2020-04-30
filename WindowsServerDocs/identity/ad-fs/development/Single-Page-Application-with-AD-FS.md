@@ -8,18 +8,18 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: f7e68558945fcd26d5e8ab405f39e86266beeea8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f62b6ad288e2733083d535260f0b3f5ffb5b50bf
+ms.sourcegitcommit: f829a48b9b0c7b9ed6e181b37be828230c80fb8a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80853867"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82173629"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL. JS с AD FS 2016 или более поздней версии
 
 В этом пошаговом руководстве приведена инструкция по проверке подлинности в AD FS с помощью ADAL для JavaScript защита одностраничного приложения на базе AngularJS, реализованного с помощью веб-API ASP.NET серверной части.
 
-В этом сценарии при входе пользователя в систему внешний интерфейс JavaScript использует [Библиотека проверки подлинности Active Directory для JavaScript (ADAL. JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) и неявное предоставление авторизации для получения маркера идентификации (id_token) из Azure AD. Маркер кэшируется, и клиент прикрепляет его к запросу в качестве токена носителя при вызове его серверной части веб-API, который защищен с помощью по промежуточного слоя OWIN.
+В этом сценарии при входе пользователя в систему интерфейсная часть JavaScript использует [библиотеку проверки подлинности Active Directory для JavaScript (ADAL.JS)](https://github.com/AzureAD/azure-activedirectory-library-for-js) и неявное предоставление авторизации для получения маркера идентификатора (id_token) из Azure AD. Маркер кэшируется, а клиент присоединяет его к запросу как маркер носителя при отправке вызовов в свою серверную часть веб-API, для защиты которого применяется ПО промежуточного слоя OWIN.
 
 >[!IMPORTANT]
 >Пример, который можно создать здесь, предназначен только для образовательных целей. Эти инструкции предназначены для самой простой и минимальной реализации, которая может предоставить необходимые элементы модели. Пример может не включать все аспекты обработки ошибок и другие функции связывания.
@@ -56,7 +56,7 @@ ms.locfileid: "80853867"
 
 
 
-## <a name="clone-or-download-this-repository"></a>Клонировать или скачать этот репозиторий
+## <a name="clone-or-download-this-repository"></a>Клонирование или скачивание этого репозитория
 Мы будем использовать пример приложения, созданного для интеграции Azure AD, в одностраничное приложение AngularJS и изменив его, чтобы защитить серверный ресурс с помощью AD FS.
 
 Из оболочки или командной строки:
@@ -77,7 +77,7 @@ ms.locfileid: "80853867"
 **Startup.auth.CS** — содержит конфигурацию WebAPI для использования Active Directory служба федерации для проверки подлинности носителя.
 
 ## <a name="registering-the-public-client-in-ad-fs"></a>Регистрация общедоступного клиента в AD FS
-В примере WebAPI настроен для прослушивания на https://localhost:44326/. **Веб-браузер группы приложений, обращающийся к веб-приложению,** можно использовать для настройки неявного приложения потока предоставления.
+В примере WebAPI настроен для прослушивания в https://localhost:44326/. **Веб-браузер группы приложений, обращающийся к веб-приложению,** можно использовать для настройки неявного приложения потока предоставления.
 
 1. Откройте консоль управления AD FS и щелкните **Добавить группу приложений**. В **мастере добавления группы приложений** введите имя приложения, описание и выберите **веб-браузер, обращающийся к** шаблону веб-приложения из раздела **клиент-сервер приложения** , как показано ниже.
 
@@ -108,11 +108,11 @@ ms.locfileid: "80853867"
             //cacheLocation: 'localStorage', // enable this for IE, as sessionStorage does not work for localhost.
         },
         $httpProvider
-        );
+    );
 
 |Конфигурация|Описание|
 |--------|--------|
-|instance|URL-адрес STS, например https://fs.contoso.com/|
+|экземпляр|URL-адрес STS, напримерhttps://fs.contoso.com/|
 |tenant|Не заключайте его в "ADFS"|
 |clientID|Это идентификатор клиента, указанный при настройке общедоступного клиента для приложения с одной страницей|
 
@@ -123,28 +123,29 @@ ms.locfileid: "80853867"
 
 отменит
 
-                app.UseWindowsAzureActiveDirectoryBearerAuthentication(
-    new WindowsAzureActiveDirectoryBearerAuthenticationOptions
-    {
-    Audience = ConfigurationManager.AppSettings["ida:Audience"],
-    Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
-    });
+    app.UseWindowsAzureActiveDirectoryBearerAuthentication(
+        new WindowsAzureActiveDirectoryBearerAuthenticationOptions
+        {
+            Audience = ConfigurationManager.AppSettings["ida:Audience"],
+            Tenant = ConfigurationManager.AppSettings["ida:Tenant"]
+        }
+    );
 
 и добавьте:
 
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
-    new ActiveDirectoryFederationServicesBearerAuthenticationOptions
-    {
-    MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
-    TokenValidationParameters = new TokenValidationParameters()
-    {
-    ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
-    ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
-    }
-    }
+        new ActiveDirectoryFederationServicesBearerAuthenticationOptions
+        {
+            MetadataEndpoint = ConfigurationManager.AppSettings["ida:AdfsMetadataEndpoint"],
+            TokenValidationParameters = new TokenValidationParameters()
+            {
+                ValidAudience = ConfigurationManager.AppSettings["ida:Audience"],
+                ValidIssuer = ConfigurationManager.AppSettings["ida:Issuer"]
+            }
+        }
     );
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |--------|--------|
 |валидаудиенце|При этом настраивается значение "аудитория", которое будет проверяться в токене.|
 |валидиссуер|При этом настраивается значение Issuer, для которого будет выполнена проверка в токене|
@@ -152,31 +153,32 @@ ms.locfileid: "80853867"
 
 ## <a name="add-application-configuration-for-ad-fs"></a>Добавление конфигурации приложения для AD FS
 Измените параметр appSettings следующим образом:
-
+```xml
     <appSettings>
-    <add key="ida:Audience" value="https://localhost:44326/" />
-    <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
-    <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-      </appSettings>
+        <add key="ida:Audience" value="https://localhost:44326/" />
+        <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
+        <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
+    </appSettings>
+    ```
 
-## <a name="running-the-solution"></a>Запуск решения
-Очистите решение, перестройте решение и запустите его. Если вы хотите просмотреть подробные трассировки, запустите Fiddler и включите расшифровку HTTPS.
+## Running the solution
+Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
 
-В браузере (используйте браузер Chrome) будет загружено SPA, а появится следующий экран:
+The browser (use Chrome browser) will load the SPA and you will be presented with the following screen:
 
-![Регистрация клиента](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
+![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 
-Щелкните имя входа.  Список ToDo будет активировать поток проверки подлинности, а ADAL JS будет направлять проверку подлинности на AD FS
+Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
 
-![Войти](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
+![Login](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
-В Fiddler можно увидеть маркер, возвращаемый как часть URL-адреса в фрагменте #.
+In Fiddler you can see the token being returned as part of the URL in the # fragment.
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
 
-Теперь вы можете вызвать API серверной части, чтобы добавить элементы списка ToDo для вошедшего в систему пользователя:
+You will be able to now call the backend API to add ToDo List items for the logged-in user:
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
-## <a name="next-steps"></a>Следующие шаги
-[Разработка AD FS](../../ad-fs/AD-FS-Development.md)  
+## Next Steps
+[AD FS Development](../../ad-fs/AD-FS-Development.md)  

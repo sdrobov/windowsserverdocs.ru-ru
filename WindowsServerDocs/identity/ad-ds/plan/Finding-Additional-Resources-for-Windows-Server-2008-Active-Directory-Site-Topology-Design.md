@@ -7,52 +7,49 @@ manager: mtillman
 ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: 49709ca40c515c8fdb7df62598e9a9dc766029c8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b328bfcb5977e5c7117590b173dbb967214bf10d
+ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80822457"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81624222"
 ---
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 # <a name="finding-additional-resources-for-windows-server-2008-active-directory-site-topology-design"></a>Поиск дополнительных результат # рцес для Windows Server 2008 Active Directory проектирование топологии сайта
 
-Следующая документация по службам домен Active Directory Services (AD DS) на веб-сайтах технического центра Windows Server 2003 и Windows Server 2008:  
-  
--   Дополнительные сведения о процессе поиска контроллера домена см. в разделе Active Directory Collection ([https://go.microsoft.com/fwlink/?LinkID=88626](https://go.microsoft.com/fwlink/?LinkID=88626)).  
-  
--   Дополнительные сведения о проектировании и развертывании серверов печати см. в разделе Разработка и развертывание серверов печати ([https://go.microsoft.com/fwlink/?LinkId=107041](https://go.microsoft.com/fwlink/?LinkId=107041)).  
-  
--   Дополнительные сведения о охвате деревьев и Active Directory топологии репликации см. в статье Технический справочник по топологии репликации Active Directory ([https://go.microsoft.com/fwlink/?LinkId=44137](https://go.microsoft.com/fwlink/?LinkId=44137)).  
-  
--   Дополнительные сведения об использовании Адлб. exe и управлении средами с 100 или более сайтами филиалов см. в разделе Планирование и развертывание служб домен Active Directory для филиалов ([https://go.microsoft.com/fwlink/?LinkId=107114](https://go.microsoft.com/fwlink/?LinkId=107114)).  
-  
--   Сведения об установке сетевой монитор см. в разделе Наблюдение за сетевым трафиком ([https://go.microsoft.com/fwlink/?LinkId=107058](https://go.microsoft.com/fwlink/?LinkId=107058)).  
-  
--   Сведения о том, как задокументировать структуру топологии сайта Windows Server 2008 AD DS, см. в разделе Вспомогательные материалы для пакета развертывания Windows Server 2003 ([https://go.microsoft.com/fwlink/?LinkID=102558](https://go.microsoft.com/fwlink/?LinkID=102558)).  
-  
--   Дополнительные сведения об отношениях доверия между доменами см. в разделе Основные сведения о создании междоменного доверия ([https://go.microsoft.com/fwlink/?LinkId=107061](https://go.microsoft.com/fwlink/?LinkId=107061)).  
-  
--   Дополнительные сведения о развертывании корневого домена леса см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://technet.microsoft.com/library/cc731174.aspx).  
-  
--   Дополнительные сведения о защите контроллеров домена см. в статье рекомендации по обеспечению безопасности при установке Windows Server Active Directory ([https://go.microsoft.com/fwlink/?LinkId=28521](https://go.microsoft.com/fwlink/?LinkId=28521)).  
-  
--   Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](https://technet.microsoft.com/library/cc755118.aspx).  
-  
--   Дополнительные сведения о работе кэширования универсальных групп см. в статье как работает Глобальный каталог ([https://go.microsoft.com/fwlink/?LinkId=107063](https://go.microsoft.com/fwlink/?LinkId=107063)).  
-  
--   Дополнительные сведения о создании объектов сайта см. в разделе Создание сайта ([https://go.microsoft.com/fwlink/?LinkId=107067](https://go.microsoft.com/fwlink/?LinkId=107067)).  
-  
--   Дополнительные сведения о создании объектов подсети см. в разделе Создание подсети ([https://go.microsoft.com/fwlink/?LinkId=107068](https://go.microsoft.com/fwlink/?LinkId=107068)).  
-  
--   Дополнительные сведения об использовании оснастки "Active Directory сайтов и служб" для отключения параметра **моста все связи сайтов** см. в разделе Включение или отключение мостов связей сайтов ([https://go.microsoft.com/fwlink/?LinkId=107073](https://go.microsoft.com/fwlink/?LinkId=107073)).  
-  
--   Сведения об управлении репликацией с помощью брандмауэров см. в разделе Active Directory в сетях, сегментированных брандмауэрами ([https://go.microsoft.com/fwlink/?LinkId=37928](https://go.microsoft.com/fwlink/?LinkId=37928)).  
-  
--   Дополнительные сведения о возможностях контроллера домена только для чтения (RODC) см. в разделе AD DS: контроллеры домена только для чтения ([https://go.microsoft.com/fwlink/?LinkID=106616](https://go.microsoft.com/fwlink/?LinkID=106616)).  
-  
--   Сведения о развертывании RODC см. в разделе Пошаговое руководство по контроллерам домена только для чтения ([https://go.microsoft.com/fwlink/?LinkID=92728](https://go.microsoft.com/fwlink/?LinkID=92728)).  
-  
+Следующую документацию по домен Active Directory службам (AD DS) можно найти на веб-сайтах технического центра Windows Server 2003 и Windows Server 2008:
 
+- Дополнительные сведения о процессе поиска контроллера домена см. в разделе [Active Directory Collection](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780036(v=ws.10)).
 
+- Дополнительные сведения о проектировании и развертывании серверов печати см. в разделе [проектирование и развертывание серверов печати](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785842(v=ws.10)).
+
+- Дополнительные сведения о охвате деревьев и Active Directory топологии репликации см. в статье [Технический справочник по топологии репликации Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc755326(v=ws.10)).
+
+- Дополнительные сведения об использовании Адлб. exe и управлении средами с 100 или более сайтами филиалов см. [в статье улучшения балансировки нагрузки сервера-плацдарма с Windows Server 2008 RODC](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd735927(v%3dws.10)).
+
+- Сведения об установке сетевой монитор см. в разделе [наблюдение за сетевым трафиком](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc783075(v=ws.10)).
+
+- Сведения о том, как задокументировать структуру топологии сайта Windows Server 2008 AD DS, см. в разделе [вспомогательные материалы для пакета развертывания Windows server 2003](https://microsoft.com/download/details.aspx?id=9608).
+
+- Дополнительные сведения об отношениях доверия между доменами см. [в разделе Основные](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754538(v=ws.11))сведения о создании междоменного доверия.
+
+- Дополнительные сведения о развертывании корневого домена леса см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)).
+
+- Дополнительные сведения о защите контроллеров домена см. в разделе [Active Directory: рекомендации по проектированию и](https://social.technet.microsoft.com/wiki/contents/articles/52587.active-directory-design-considerations-and-best-practices.aspx)рекомендации.
+
+- Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)).
+
+- Дополнительные сведения о работе кэширования универсальных групп см. [в статье как работает Глобальный каталог](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737410(v=ws.10)).
+
+- Дополнительные сведения о создании объектов сайта см. в разделе [Создание сайта](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772304(v=ws.11)).
+
+- Дополнительные сведения о создании объектов подсети см. в разделе [Создание подсети](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770372(v=ws.11)).
+
+- Дополнительные сведения об использовании оснастки "Active Directory сайтов и служб" для отключения параметра **моста все связи сайтов** см. в разделе [Включение или отключение мостов связей сайтов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
+
+- Сведения об управлении репликацией с помощью брандмауэров см. [в разделе Active Directory в сетях, сегментированных брандмауэрами](https://microsoft.com/download/details.aspx?familyid=c2ef3846-43f0-4caf-9767-a9166368434e).
+
+- Дополнительные сведения о возможностях контроллера домена только для чтения (RODC) см. в разделе [AD DS: контроллеры домена только для чтения](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732801(v=ws.10)).
+
+- Дополнительные сведения о развертывании RODC см. в статье Пошаговое [руководство по контроллерам домена только для чтения](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772234(v=ws.10)).
