@@ -8,12 +8,12 @@ ms.author: jeffrew
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 5c9e8b7e1e11deaa82fbec6f451b4f194609c299
-ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
+ms.openlocfilehash: d7dc3455c5d7c6b00940008ceea646436b40bed0
+ms.sourcegitcommit: e51dd9dabec82c59e805e7a04c27e56c83773857
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605554"
+ms.locfileid: "82613736"
 ---
 # <a name="windows-admin-center-known-issues"></a>Windows Admin Center — известные проблемы
 
@@ -28,6 +28,8 @@ ms.locfileid: "82605554"
 - Использование порта, приведенного ниже 1024, не поддерживается. В режиме обслуживания при необходимости можно настроить порт 80 для перенаправления на указанный порт.
 
 ## <a name="general"></a>Общие сведения
+
+- В выпуске центра администрирования Windows 1910,2 может отсутствовать возможность подключения к серверам Hyper-V на определенном оборудовании. Если вы блокируете эту ошибку, [Скачайте предыдущую сборку](https://aka.ms/wacprevious). 
 
 - Если центр администрирования Windows установлен в качестве шлюза в **Windows Server 2016** при интенсивном использовании, то служба может аварийно завершить работу из-за ошибки в журнале событий ```Faulting application name: sme.exe``` , ```Faulting module name: WsmSvc.dll```который содержит и. Это вызвано ошибкой, которая была исправлена в Windows Server 2019. Исправление для Windows Server 2016 включало накопительное обновление за Февраль 2019, [KB4480977](https://www.catalog.update.microsoft.com/Search.aspx?q=4480977).
 
