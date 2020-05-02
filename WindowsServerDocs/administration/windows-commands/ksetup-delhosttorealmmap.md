@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: делхосттореалммап'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 85e9f6b4a9f1c9050ed843f3837a2bd87aaf6eae
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2b6b14785f254a63f0e16fcd16f1cd464a2d69c8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841737"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724695"
 ---
 # <a name="ksetupdelhosttorealmmap"></a>ksetup: делхосттореалммап
 
 
 
-Удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,8 +32,8 @@ ksetup /delhosttorealmmap <HostName> <RealmName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<имя узла >|Имя узла — это имя компьютера, оно может быть указано в качестве полного доменного имени компьютера.|
-|\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM.|
+|\<Имя узла>|Имя узла — это имя компьютера, оно может быть указано в качестве полного доменного имени компьютера.|
+|\<Реалмнаме>|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -41,7 +41,7 @@ ksetup /delhosttorealmmap <HostName> <RealmName>
 
 Сопоставление записывается в реестр в **HKEY_LOCAL_MACHINE \систем\куррентконтолсет\лса\керберос\хосттореалм**. При использовании этой команды следует проверить сопоставление в реестре.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 При изменении конфигурации сферы CONTOSO удалите сопоставление главного компьютера IPops897 с областью:
 ```
@@ -49,7 +49,7 @@ ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
 После выполнения этой команды можно проверить в реестре, что сопоставление выполняется правильно.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
 -   [Ksetup](ksetup.md)

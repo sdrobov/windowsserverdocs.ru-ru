@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: аддреалмфлагс'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21ab18620f0ed25cfb0d50bb1ab1a5d92caa9c54
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 26f06e23f40216fe31403280d8946c56825967d6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841818"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724710"
 ---
 # <a name="ksetupaddrealmflags"></a>ksetup: аддреалмфлагс
 
 
 
-Добавляет дополнительные флаги сферы в указанную область. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Добавляет дополнительные флаги сферы в указанную область.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,18 +41,18 @@ ksetup /addrealmflags <RealmName> [sendaddress] [tcpsupported] [delegate] [ncsup
 |Значение|Флаг области|Описание|
 |-----|----------|-----------|
 |0xF|Все|Заданы все флаги сферы.|
-|0x00|Нет|Флаги области не заданы, а дополнительные функции не включены.|
+|0x00|None|Флаги области не заданы, а дополнительные функции не включены.|
 |0x01|сендаддресс|IP-адрес будет включаться в билеты предоставления билетов.|
 |0x02|ткпсуппортед|В этой области поддерживаются протоколы TCP и UDP (User Datagram Protocol).|
 |0x04|Делегат|Все пользователи в этой области являются доверенными для делегирования.|
 |0x08|нксуппортед|Эта область поддерживает канонизации имен, что позволяет использовать стандарты именования DNS и областей.|
-|0x80|RC4|Эта область поддерживает шифрование RC4 для включения доверительных отношений между сферами, что позволяет использовать TLS.|
+|0x80|RC4;|Эта область поддерживает шифрование RC4 для включения доверительных отношений между сферами, что позволяет использовать TLS.|
 
-Флаги сферы хранятся в реестре в разделе **HKEY_LOCAL_MACHINE \систем\куррентконтролсет\контрол\лса\керберос\домаинс\\** <em>realm-Name</em>. Эта запись не существует в реестре по умолчанию. Для заполнения реестра можно использовать команду [Ksetup: аддреалмфлагс](ksetup-addrealmflags.md) .
+Флаги сферы хранятся в реестре в разделе **HKEY_LOCAL_MACHINE\\\систем\куррентконтролсет\контрол\лса\керберос\домаинс**<em>realm-Name</em>. Эта запись не существует в реестре по умолчанию. Для заполнения реестра можно использовать команду [Ksetup: аддреалмфлагс](ksetup-addrealmflags.md) .
 
 Чтобы увидеть, какие флаги области доступны и установлены, просмотрите выходные данные ksetup или ksetup/думпстате.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Список доступных флагов области для области CONTOSO:
 ```
@@ -66,9 +66,9 @@ ksetup /setrealmflags CONTOSO ncsupported delegate
 ```
 ksetup /addrealmflags CONTOSO SendAddress
 ```
-Выполните команду **ksetup** , чтобы убедиться, что установлен флаг realm, просмотрев выходные данные и поиск **флагов области =** .
+Выполните команду **ksetup** , чтобы убедиться, что установлен флаг realm, просмотрев выходные данные и поиск **флагов области =**.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup:listrealmflags](ksetup-listrealmflags.md)
 -   [Ksetup:setrealmflags](ksetup-setrealmflags.md)

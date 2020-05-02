@@ -1,6 +1,6 @@
 ---
 title: jetpack
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 008e9dd4d41fe270d775b1c44d799dd16429046f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ec29a1fd48fdba72f07fe5d00de7730d93434105
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841977"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724788"
 ---
 # <a name="jetpack"></a>jetpack
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 сжимает службу Windows Internet Name Service (WINS) или базу данных протокола DHCP. Корпорация Майкрософт рекомендует сжимать базу данных WINS при каждом приближении 30 МБ. 
 
@@ -32,9 +32,9 @@ jetpack.EXE <database name> <temp database name>
 |-------|--------|
 |<database name>|Указывает исходный файл базы данных.|
 |<temp database name>|Указывает временный файл базы данных.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы сжать базу данных WINS, выполните следующие действия.
 ```
 cd %SYSTEMROOT%\SYSTEM32\WINS
@@ -58,5 +58,5 @@ NET start DHCPSERver
 > [!NOTE]
 > В процессе сжатия программа Jetpack. exe создает временный файл с именем, указанным в параметре *имени временной базы данных* . Временный файл удаляется по завершении сжатия. Убедитесь, что у вас нет файла, существующего в папке WINS или DHCP, имя которой совпадает с именем, указанным в параметре *имени временной базы данных* .
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

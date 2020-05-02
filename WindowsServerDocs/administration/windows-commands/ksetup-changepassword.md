@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: ChangePassword'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68b14388ff3c33458873b494c8d5a770b44f7545
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 32c48e896b77043820eea42159e20c089bd69fb8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724726"
 ---
 # <a name="ksetupchangepassword"></a>ksetup: ChangePassword
 
 
 
-Использует значение пароля центр распространения ключей (KDC) (кпассвд) для изменения пароля вошедшего в систему пользователя. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Использует значение пароля центр распространения ключей (KDC) (кпассвд) для изменения пароля вошедшего в систему пользователя.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,8 +32,8 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Олдпассвд >|Указывает существующий пароль пользователя, вошедшего в систему.|
-|\<Невпассвд >|Указывает на новый пароль пользователя, вошедшего в систему.|
+|\<Олдпассвд>|Указывает существующий пароль пользователя, вошедшего в систему.|
+|\<Невпассвд>|Указывает на новый пароль пользователя, вошедшего в систему.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -47,7 +47,7 @@ ksetup /changepassword <OldPasswd> <NewPasswd>
 
 Выходные данные команды уведомляют о состоянии успешного выполнения или сбоя.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Изменить пароль пользователя, который в данный момент вошел в систему на этом компьютере в этом домене:
 ```
@@ -62,6 +62,6 @@ ksetup /domain CONTOSO /changepassword Pas$w0rd Pa$$w0rd
 ksetup /changepassword Pas$w0rd *
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

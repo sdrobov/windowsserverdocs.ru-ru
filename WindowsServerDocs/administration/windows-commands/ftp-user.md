@@ -1,6 +1,6 @@
 ---
 title: пользователь FTP
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29081bd8c5d537e1f060e4c848b720a60b4c8aea
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cb4f0f47f23bec312c57266479c261c96535e8cc
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842857"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725064"
 ---
 # <a name="ftp-user"></a>FTP: пользователь
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Указывает пользователя для удаленного компьютера.   
 ## <a name="syntax"></a>Синтаксис  
@@ -33,10 +33,10 @@ user <UserName> [<Password>] [<Account>]
 | [<Password>] |               Указывает пароль для *имени пользователя*. Если пароль не указан, но является обязательным, **FTP** запрашивает пароль.               |
 | [<Account>]  | Указывает учетную запись для входа на удаленный компьютер. Если *учетная запись* не указана, но является обязательной, **FTP** запрашивает учетную запись. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Укажите Пользователь1 с паролем password1.  
 ```  
 user User1 Password1  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

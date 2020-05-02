@@ -1,6 +1,6 @@
 ---
 title: MGET FTP
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 72b45f84622fcd6abf7a743f606fb514def584cd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4a71fbfb60ae012b5e65af04e6f3e21ec796996a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843357"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725236"
 ---
 # <a name="ftp-mget"></a>FTP: mget
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Копирует удаленные файлы на локальный компьютер, используя текущий тип перемещения файлов.   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,12 +31,12 @@ mget <remoteFile>[ ]
 |--------------|-----------------------------------------------------------|
 | <remoteFile> | Указывает удаленные файлы, которые необходимо скопировать на локальный компьютер. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Скопируйте удаленные файлы **a. exe** и **b. exe** на локальный компьютер, используя текущий тип перемещения файлов.  
 ```  
 mget a.exe b.exe  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 -   [FTP: ASCII](ftp-ascii.md)  
 -   [FTP: двоичный формат](ftp-binary.md)  
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

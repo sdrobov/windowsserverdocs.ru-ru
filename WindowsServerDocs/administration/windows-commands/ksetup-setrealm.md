@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: сетреалм'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: acdbfaabe341c8efb19c6e9d183022375f679de7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 453977ac39dd3a52b4f5a3104995f944e4a48392
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841317"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724550"
 ---
 # <a name="ksetupsetrealm"></a>ksetup: сетреалм
 
 
 
-Задает имя области Kerberos. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Задает имя области Kerberos.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ ksetup /setrealm <DNSDomainName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Днсдомаиннаме >|Доменное имя DNS может иметь форму полного доменного имени или простого доменного имени.|
+|\<Днсдомаиннаме>|Доменное имя DNS может иметь форму полного доменного имени или простого доменного имени.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -40,14 +40,14 @@ ksetup /setrealm <DNSDomainName>
 
 Установка области Kerberos на контроллере домена не поддерживается. Попытка сделать это вызовет предупреждение и сбой команды.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Задайте для области этого компьютера определенное доменное имя, чтобы ограничить доступ неконтроллером домена только с областью Kerberos CONTOSO:
 ```
 ksetup /setrealm CONTOSO
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Ksetup](ksetup.md)

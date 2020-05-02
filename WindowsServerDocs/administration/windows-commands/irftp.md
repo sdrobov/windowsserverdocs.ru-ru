@@ -1,6 +1,6 @@
 ---
 title: irftp
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 28cf722a5e630cb05b0348ebf2d4f582217b5497
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 34f912878b97bd00fb1c4ea539c7ea4c1423ea59
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841987"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724815"
 ---
 # <a name="irftp"></a>irftp
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отправляет файлы по инфракрасной связи.    
 ## <a name="syntax"></a>Синтаксис  
@@ -38,11 +38,11 @@ irftp [<Drive>:\] [[<path>] <FileName>] [/h][/s]
 -   Перед использованием этой команды убедитесь, что устройства, для которых требуется установить связь по инфракрасной связи, включены и работают правильно, и что связь между устройствами установлена по инфракрасной связи.  
 -   При использовании без параметров или с параметром **/s** **ирфтп** открывает диалоговое окно **беспроводная связь** , в котором можно выбрать файлы, которые требуется отправить без использования командной строки.  
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Отправьте пример. txt по каналу инфракрасной связи.  
 ```  
 irftp c:\example.txt  
 ```  
 
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

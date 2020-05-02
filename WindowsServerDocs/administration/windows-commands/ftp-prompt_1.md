@@ -1,6 +1,6 @@
 ---
 title: prompt_1 FTP
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d16f70226e91e2e845480be8d83481fd76af173
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1abb697316a1072a9185a5132dfd22a1d8fd67dd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843157"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725187"
 ---
 # <a name="ftp-prompt_1"></a>FTP: prompt_1
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Включает и выключает режим **запроса** .   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,14 +26,14 @@ ms.locfileid: "80843157"
 prompt  
 ```  
 #### <a name="parameters"></a>Параметры  
-нет  
+none  
 ## <a name="remarks"></a>Примечания  
 - По умолчанию **запрос** включен.  
 - запросы **FTP** при передаче нескольких файлов, позволяющие выборочно получать или хранить файлы.  **Mget** и **мпут** переносят все файлы, если **запрос** отключен.  
-  ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+  ## <a name="examples"></a>Примеры  
   Включение и отключение режима подсказки.  
   ```  
   prompt  
   ```  
-  ## <a name="additional-references"></a>Дополнительные материалы  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
 - - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

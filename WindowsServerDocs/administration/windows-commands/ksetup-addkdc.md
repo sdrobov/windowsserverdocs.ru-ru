@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: аддкдк'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3bb31cbc8ba7920c4ba609f86202e2e62a705078
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 76d592e4f1c32305d6f939a66a6ad42cd582b032
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841837"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724768"
 ---
 # <a name="ksetupaddkdc"></a>ksetup: аддкдк
 
 
 
-Добавляет адрес центр распространения ключей (KDC) для данной области Kerberos. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Добавляет адрес центр распространения ключей (KDC) для данной области Kerberos.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,8 +32,8 @@ ksetup /addkdc <RealmName> [<KDCName>]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM, и он указывается в качестве области по умолчанию при запуске **ksetup** . Это область, в которую вы пытаетесь добавить другой KDC.|
-|\<Кдкнаме >|Имя KDC указывается как полное доменное имя без учета регистра, например mitkdc.microsoft.com. Если имя KDC не указано, DNS обнаружит Кдкс.|
+|\<Реалмнаме>|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM, и он указывается в качестве области по умолчанию при запуске **ksetup** . Это область, в которую вы пытаетесь добавить другой KDC.|
+|\<Кдкнаме>|Имя KDC указывается как полное доменное имя без учета регистра, например mitkdc.microsoft.com. Если имя KDC не указано, DNS обнаружит Кдкс.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -43,18 +43,18 @@ ksetup /addkdc <RealmName> [<KDCName>]
 
 Чтобы проверить имя области по умолчанию для компьютера или убедиться, что эта команда работала правильно, запустите **ksetup** из командной строки и проверьте выходные данные для добавленного KDC.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Настройте сервер KDC, отличный от Windows, и область, которую должна использовать Рабочая станция:
 ```
 ksetup /addkdc CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Запустите средство Ksetup из командной строки того же компьютера, что и в предыдущей команде, чтобы задать для пароля учетной записи локального компьютера значение p@sswrd1%. Затем перезагрузите компьютер.
+Запустите средство Ksetup из командной строки того же компьютера, что и в предыдущей команде, чтобы задать для пароля учетной записи локального компьютера p@sswrd1значение%. Затем перезагрузите компьютер.
 ```
 Ksetup /setcomputerpassword p@sswrd1%
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)

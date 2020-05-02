@@ -1,6 +1,6 @@
 ---
 title: remotehelp_1 FTP
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3c4a4ffec01fce5cde8b2aa9dd1fa0704f3a85ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dc4affb3f04eadaa4e0005e5edce0f564156f64a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843057"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725133"
 ---
 # <a name="ftp-remotehelp_1"></a>FTP: remotehelp_1
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает справку по удаленным командам.   
 ## <a name="syntax"></a>Синтаксис  
@@ -31,7 +31,7 @@ remotehelp [<Command>]
 |[<Command>]|Указывает имя команды, для которой требуется справка. Если *команда* не указана, **протокол FTP** отображает список всех удаленных команд.|  
 ## <a name="remarks"></a>Примечания  
 Удаленные команды можно выполнять с помощью **кавычек** или **Literal**.  
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Отображение списка удаленных команд.  
 ```  
 remotehelp  
@@ -40,6 +40,6 @@ remotehelp
 ```  
 remotehelp feat  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 -   [FTP: кавычка](ftp-quote.md)  
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

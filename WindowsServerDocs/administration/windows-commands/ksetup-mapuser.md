@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: мапусер'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f61c67fa21eccb77601b78aed51791259d609c5e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: daa1b8d2c6d0ce2801191b953a533a63bcd8f4ab
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841487"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724617"
 ---
 # <a name="ksetupmapuser"></a>ksetup: мапусер
 
 
 
-Сопоставляет имя участника Kerberos с учетной записью. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Сопоставляет имя участника Kerberos с учетной записью.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,8 +32,8 @@ ksetup /mapuser <Principal> <Account>
 
 |  Параметр   |                                                   Описание                                                   |
 |--------------|-----------------------------------------------------------------------------------------------------------------|
-| \<основной > |              Полное доменное имя любого участника; Например, mike@corp.CONTOSO.COM.              |
-|  Учетная запись \<>  | Любое имя учетной записи или группы безопасности, которое существует на этом компьютере, например гость, пользователи домена или администратор. |
+| \<Основной> |              Полное доменное имя любого участника; Например, mike@corp.CONTOSO.COM.              |
+|  \<> учетной записи  | Любое имя учетной записи или группы безопасности, которое существует на этом компьютере, например гость, пользователи домена или администратор. |
 
 ## <a name="remarks"></a>Примечания
 
@@ -47,7 +47,7 @@ ksetup /mapuser <Principal> <Account>
 
 При каждом внесении изменений во внешний центр распространения ключей (KDC) и конфигурации сферы требуется перезагрузка компьютера, на котором был изменен параметр.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Сопоставьте учетную запись Mike Данселио в сфере Kerberos CONTOSO с учетной записью гостя на этом компьютере, предоставив ей все права члена встроенной гостевой учетной записи без проверки подлинности на этом компьютере:
 ```
@@ -66,7 +66,7 @@ ksetup /mapuser mike@corp.CONTOSO.COM *
 ksetup /mapuser * *
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Ksetup](ksetup.md)

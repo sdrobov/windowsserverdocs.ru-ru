@@ -1,6 +1,6 @@
 ---
 title: logman update
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 77eb7232bde12076903ab9da3bd379a6968cca45
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cc226d4b9044eaa966725f3bf1329ed6a1eecd62
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80840427"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724285"
 ---
 # <a name="logman-update"></a>logman update
 
@@ -38,6 +38,6 @@ logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 |[Logman Update cfg](logman-update-cfg.md)|Обновление сборщика данных конфигурации.|
 |[API обновления Logman](logman-update-api.md)|Обновление сборщика данных трассировки API.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 [Logman](logman.md)

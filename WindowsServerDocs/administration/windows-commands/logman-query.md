@@ -1,6 +1,6 @@
 ---
 title: logman query
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e7b7cc202266a568108c7cbf0eac89260721014a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 05448a4f129a59145813dd0da7199d4adf845c5c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80840667"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724354"
 ---
 # <a name="logman-query"></a>logman query
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 запросите свойства группы сборщиков данных или сбора данных.  
 
@@ -31,12 +31,12 @@ logman query [providers|Data Collector Set name] [options]
 |     Параметр      |                                 Описание                                  |
 |--------------------|------------------------------------------------------------------------------|
 |         /?         |                       Отображает контекстную справку.                       |
-| -s <computer name> |            Выполните команду на указанном удаленном компьютере.             |
+| -s<computer name> |            Выполните команду на указанном удаленном компьютере.             |
 |  -config <value>   |           Указывает файл параметров, содержащий параметры команды.            |
-|    [-n] <name>     |                          Имя целевого объекта.                          |
+|    [-n]<name>     |                          Имя целевого объекта.                          |
 |        -ETS        | Отправка команд в сеансы трассировки событий напрямую без сохранения или планирования. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Следующая команда выводит список всех наборов сборщиков данных, настроенных в целевой системе.  
 ```  
 logman query  
@@ -49,5 +49,5 @@ logman query perf_log
 ```  
 logman query providers  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 [logman](logman.md)  

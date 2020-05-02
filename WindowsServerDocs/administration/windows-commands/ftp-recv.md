@@ -1,6 +1,6 @@
 ---
 title: FTP recv
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7fec409741e00bb3e6f61808630e5141ce4ec78f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5ece259f2d48e18f6a789d51b1df7089490f2fa1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842967"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725120"
 ---
 # <a name="ftp-recv"></a>FTP: recv
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Копирует удаленный файл на локальный компьютер, используя текущий тип перемещения файлов.   
 ## <a name="syntax"></a>Синтаксис  
@@ -35,7 +35,7 @@ recv <remoteFile> [<LocalFile>]
 ## <a name="remarks"></a>Примечания  
 - Команда **recv** идентична команде **Get** .  
 - Если параметр *локальный_файл* не указан, файлу присваивается имя *ремотефиле* .  
-  ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+  ## <a name="examples"></a>Примеры  
   Скопируйте файл **Test. txt** на локальный компьютер, используя текущий тип перемещения файлов.  
   ```  
   recv test.txt  
@@ -44,7 +44,7 @@ recv <remoteFile> [<LocalFile>]
   ```  
   recv test.txt test1.txt  
   ```  
-  ## <a name="additional-references"></a>Дополнительные материалы  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
 - [FTP: ASCII](ftp-ascii.md)  
 - [FTP: двоичный формат](ftp-binary.md)  
 - [FTP: Get](ftp-get.md)  

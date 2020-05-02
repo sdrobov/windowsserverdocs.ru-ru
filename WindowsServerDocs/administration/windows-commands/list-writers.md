@@ -1,6 +1,6 @@
 ---
 title: модули записи списка
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e12c4f36c3fd840b7b37b12d9f4171429e5a52d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ef7fa0bd6e9857e22994178849e49afeb3305a2a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841117"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724488"
 ---
 # <a name="list-writers"></a>модули записи списка
 
@@ -22,7 +22,7 @@ ms.locfileid: "80841117"
 
 Выводит список модулей записи, наявляющихся в системе. Если используется без параметров, в **списке** отображаются выходные данные для **метаданных списка** по умолчанию.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,9 +36,9 @@ list writers [metadata | detailed | status]
 |---------|-----------|
 |метаданные|Перечисляет удостоверение и состояние модулей записи, а также отображает метаданные, такие как сведения о компонентах и исключенные файлы. Это параметр по умолчанию.|
 |подробные сведения|Выводит те же сведения, что и **метаданные**, но **подробно** включает полный список файлов для всех компонентов.|
-|состояние|Выводит только удостоверение и состояние зарегистрированных модулей записи.|
+|status|Выводит только удостоверение и состояние зарегистрированных модулей записи.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы вывести только удостоверение и состояние модулей записи, введите:
 ```
@@ -68,6 +68,6 @@ Listing writer status ...
 8 writers listed. 
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

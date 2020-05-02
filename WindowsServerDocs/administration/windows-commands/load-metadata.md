@@ -1,6 +1,6 @@
 ---
 title: Загрузить метаданные
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b8db98611fd78c6e30070901effafddd6e678c16
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3d3132bca86533ec3f2d0a27247bd3c116cf55b6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841027"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724468"
 ---
 # <a name="load-metadata"></a>Загрузить метаданные
 
@@ -22,7 +22,7 @@ ms.locfileid: "80841027"
 
 Загружает файл metadata. cab перед импортом транспортной теневой копии или загружает метаданные модуля записи в случае восстановления. Если используется без параметров, при **загрузке метаданных** в командной строке отображается справка.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ load metadata [<Drive>:][<Path>]<MetaData.cab>
 
 |Параметр|Описание|
 |---------|-----------|
-|[\<диска >:] [<Path>]|Указывает расположение файла метаданных.|
+|[\<Диск>:] [<Path>]|Указывает расположение файла метаданных.|
 |MetaData. cab|Указывает файл metadata. cab для загрузки.|
 
 ## <a name="remarks"></a>Примечания
@@ -42,13 +42,13 @@ load metadata [<Drive>:][<Path>]<MetaData.cab>
 -   С помощью команды **Import** можно импортировать транспортную теневую копию на основе метаданных, указанных в параметре **загрузить метаданные**.
 -   Эта команда необходима перед командой **Begin Restore** , чтобы загрузить выбранные модули записи и компоненты для восстановления.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы загрузить файл метаданных с именем Metafile. cab из расположения по умолчанию, введите:
 ```
 load metadata metafile.cab
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

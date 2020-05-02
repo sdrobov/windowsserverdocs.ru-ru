@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: сервер'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7889e1a03d3c0eec1958bf1d6356c67e9371a80f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 91549eb78f825264016ec0e03b7035f79132f260
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841447"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724595"
 ---
 # <a name="ksetupserver"></a>ksetup: сервер
 
 
 
-Позволяет указать имя компьютера под управлением операционной системы Windows, чтобы изменения, вносимые с помощью **ksetup** , приводят к обновлению целевого компьютера. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Позволяет указать имя компьютера под управлением операционной системы Windows, чтобы изменения, вносимые с помощью **ksetup** , приводят к обновлению целевого компьютера.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ ksetup /server <ServerName>
 
 |Параметр|Описание|
 |---------|-----------|
-|\<ServerName >|Полное имя компьютера, на котором будет действовать конфигурация, например IPops897.corp.contoso.com.</br>Если указано неполное полное доменное имя компьютера, команда завершится ошибкой.|
+|\<Имя сервера>|Полное имя компьютера, на котором будет действовать конфигурация, например IPops897.corp.contoso.com.</br>Если указано неполное полное доменное имя компьютера, команда завершится ошибкой.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -40,14 +40,14 @@ ksetup /server <ServerName>
 
 Имя целевого сервера хранится в реестре в **HKEY_LOCAL_MACHINE \system\controlset001\control\lsa\kerberos**. Он не сообщается с помощью **ksetup**.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Сделайте конфигурацию **ksetup** эффективной на компьютере IPops897, подключенном к домену contoso:
 ```
 ksetup /server IPops897.corp.contoso.com
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup](ksetup.md)
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: сетенктипеаттр'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 78450202b33f76ab7b0a374fe4559f0a25e709b5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4cb7380a5fc65734902c6eed0b4b941eda6f6f5a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841347"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724561"
 ---
 # <a name="ksetupsetenctypeattr"></a>ksetup: сетенктипеаттр
 
 
 
-Задает атрибут типа шифрования для домена. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Задает атрибут типа шифрования для домена.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,7 +32,7 @@ ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 |
 
 |Параметр|Описание|
 |---------|-----------|
-|\<имя_домена >|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
+|\<Имя_домена>|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
 |Тип шифрования|Должен быть одним из следующих поддерживаемых типов шифрования:</br>-DES-CBC-CRC</br>-DES-CBC-MD5</br>-RC4-HMAC-MD5</br>-AES128-CTS-HMAC-SHA1-96</br>-AES256-CTS-HMAC-SHA1-96|
 
 ## <a name="remarks"></a>Примечания
@@ -43,9 +43,9 @@ ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 |
 
 Если команда завершается успешно или неудачно, отображается сообщение о состоянии.
 
-Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/domain \<имя_домена >** .
+Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/Domain \<имя_домена>** .
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Определите текущие типы шифрования, установленные на этом компьютере:
 ```
@@ -64,7 +64,7 @@ ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ksetup /getenctypeattr corp.contoso.com
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Klist](klist.md)
 -   [Ksetup:domain](ksetup-domain.md)

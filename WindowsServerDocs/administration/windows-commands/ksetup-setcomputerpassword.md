@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: сеткомпутерпассворд'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3e65ea6e935d9fde9c23842755c36e418928dec7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9cb0c2ee36ed85ddfb015a80e86198fe788f8474
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841377"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724582"
 ---
 # <a name="ksetupsetcomputerpassword"></a>ksetup: сеткомпутерпассворд
 
 
 
-Задает пароль для локального компьютера. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Задает пароль для локального компьютера.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,14 +42,14 @@ ksetup /setcomputerpassword <Password>
 
 Пароль учетной записи компьютера не отображается в реестре или в качестве выходных данных команды **ksetup** .
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Измените пароль учетной записи компьютера на локальном компьютере с IPops897 на ИПОП $897!.
 ```
 ksetup /setcomputerpassword IPop$897!
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup](ksetup.md)
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

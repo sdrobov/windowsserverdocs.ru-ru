@@ -1,6 +1,6 @@
 ---
-title: help
-description: Раздел Windows команды для ****-
+title: справка
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f7b6f3a563c59a55ff92b38f0854437b96478f6c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9d3a16c2534934a7bc8126b0a775ec7aa08462b3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842347"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724916"
 ---
-# <a name="help"></a>help
+# <a name="help"></a>справка
 
 
 
 Предоставляет оперативную информацию о системных командах (то есть командах, отличных от сетевых). Если используется без параметров, **Справочные** списки и краткое описание каждой системной команды.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,9 +35,9 @@ help [<Command>]
 
 |Параметр|Описание|
 |---------|-----------|
-|Команда \<>|Указывает имя команды, сведения о которой требуется получить.|
+|\<Командная>|Указывает имя команды, сведения о которой требуется получить.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы просмотреть сведения о команде **Robocopy** , введите одно из следующих действий:
 ```
@@ -45,6 +45,6 @@ help robocopy
 robocopy /? 
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

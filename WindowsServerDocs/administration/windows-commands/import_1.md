@@ -1,6 +1,6 @@
 ---
 title: импорт
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e098e7133bca18e1a6ba683e525783af17c3958
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 569d986c57ae8b3d7253c050146ac0583c7c92df
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842137"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724847"
 ---
 # <a name="import"></a>импорт
 
@@ -39,14 +39,14 @@ import [noerr]
 -   Команда import импортирует каждый диск, наявляющийся в той же группе, что и диск с фокусом.
 -   Для выполнения этой операции необходимо выбрать динамический диск в группе внешних дисков. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы импортировать каждый диск, расположенный в той же группе дисков, что и диск, на котором находится фокус в группе дисков локального компьютера, введите:
 ```
 import
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

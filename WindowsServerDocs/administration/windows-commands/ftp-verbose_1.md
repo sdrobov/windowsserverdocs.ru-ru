@@ -1,6 +1,6 @@
 ---
 title: verbose_1 FTP
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b7e2c3f259b93cb09a5ea93e9aa2548cb32f93f6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a6f66e14a03aab1d208dc0dfad84b9274c18480f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80842787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725049"
 ---
 # <a name="ftp-verbose_1"></a>FTP: verbose_1
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Переключает режим **подробного вывода** .   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,13 +26,13 @@ ms.locfileid: "80842787"
 verbose  
 ```  
 #### <a name="parameters"></a>Параметры  
-нет  
+none  
 ## <a name="remarks"></a>Примечания  
 По умолчанию параметр **verbose** имеет значение ON.  Если указан режим **verbose** , отображаются все **FTP-** ответы.  После завершения перемещения файла также отображаются статистические данные, касающиеся эффективности перемещения.  
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Включение и отключение режима **подробной информации** .  
 ```  
 verbose  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

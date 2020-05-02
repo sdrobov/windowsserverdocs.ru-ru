@@ -1,6 +1,6 @@
 ---
 title: ksetup
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b3c61fd81691f9db44330eddbf40d4212d1786ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2f3fde0ada4ab8bcbe52eccf22b959f99f91319f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841257"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724540"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -64,7 +64,7 @@ ksetup
 |[Ksetup:server](ksetup-server.md)|Позволяет указать имя компьютера Windows, на котором будут применяться изменения.|
 |[Ksetup:setcomputerpassword](ksetup-setcomputerpassword.md)|Задает пароль для учетной записи домена компьютера (или субъекта-узла).|
 |[Ksetup:removerealm](ksetup-removerealm.md)|Удаляет из реестра все сведения для указанной области.|
-|[Ksetup:domain](ksetup-domain.md)|Позволяет указать домен (если \<имя_домена > не был задан с помощью **/domain**).|
+|[Ksetup:domain](ksetup-domain.md)|Позволяет указать домен (если \<параметр имя_домена> не был установлен с помощью **/domain**).|
 |[Ksetup:changepassword](ksetup-changepassword.md)|Позволяет использовать Кпассвд для изменения пароля пользователя, вошедшего в систему.|
 |[Ksetup:listrealmflags](ksetup-listrealmflags.md)|Список доступных флагов области, которые **ksetup** может обнаружить.|
 |[Ksetup:setrealmflags](ksetup-setrealmflags.md)|Задает флаги области для определенной области.|
@@ -87,6 +87,6 @@ ksetup
 
 Протокол Kerberos версии 5 используется по умолчанию для проверки подлинности сети на компьютерах под управлением Windows XP Professional, Windows Vista и Windows 7. ПОСТАВЩИК удостоверений Kerberos ищет в реестре доменное имя области пользователя, а затем разрешает имя в IP-адрес, запрашивая DNS-сервер. Протокол Kerberos может использовать DNS для определения Кдкс только с именем области, но для этого он должен быть специально настроен.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

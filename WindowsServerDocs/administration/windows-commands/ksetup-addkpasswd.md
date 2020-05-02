@@ -1,6 +1,6 @@
 ---
 title: 'ksetup: аддкпассвд'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 73abfff54ecfcd31ebbd7469c12228fff850fbf1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c260c711ae87f88be8b9466e73afaf3fe1c83a1e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80841827"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724738"
 ---
 # <a name="ksetupaddkpasswd"></a>ksetup: аддкпассвд
 
 
 
-Добавляет адрес сервера пароля Kerberos (Кпассвд) для области. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Добавляет адрес сервера пароля Kerberos (Кпассвд) для области.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,8 +34,8 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<Реалмнаме >|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или области = при запуске **ksetup** .|
-|\<Кпассвднаме >|Имя KDC, которое будет использоваться в качестве сервера паролей Kerberos, указывается как полное доменное имя без учета регистра, например mitkdc.microsoft.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS.|
+|\<Реалмнаме>|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или области = при запуске **ksetup** .|
+|\<Кпассвднаме>|Имя KDC, которое будет использоваться в качестве сервера паролей Kerberos, указывается как полное доменное имя без учета регистра, например mitkdc.microsoft.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -45,7 +45,7 @@ ksetup /addkpasswd <RealmName> [<KpasswdName>]
 
 Можно добавить дополнительные имена KDC по одному.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Настройте область, CORP. CONTOSO.COM, чтобы в качестве сервера паролей использовался сервер, отличный от Windows KDC, mitkdc.contoso.com:
 ```
@@ -53,7 +53,7 @@ ksetup /addkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
 Это приводит к подлинности сервера паролей Kerberos, отличного от Windows, который управляет всеми паролями для аутентификации между ним и областью.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Ksetup](ksetup.md)
 -   [Ksetup:delkpasswd](ksetup-delkpasswd.md)
