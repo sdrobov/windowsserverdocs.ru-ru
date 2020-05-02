@@ -1,6 +1,6 @@
 ---
 title: Get-Image
-description: Раздел команд Windows для Get-Image, который извлекает сведения об образе.
+description: Справочный раздел по Get-Image, который получает сведения о изображении.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cfebb8948d21d4f09855683bbf6c42d725d877e8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 04cc7b8d90415e32be4103ef6c7f7b709c3550c3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831007"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719924"
 ---
 # <a name="get-image"></a>Get-Image
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Извлекает сведения о изображении.
 
@@ -34,13 +34,13 @@ wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:In
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-носитель:<Image name>|Указывает имя образа.|
+носител<Image name>|Указывает имя образа.|
 |[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
-mediaType: {Установка &#124; загрузки}|Указывает тип изображения.|
+mediaType: {Загрузка &#124; установка}|Указывает тип изображения.|
 |/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру образа. Так как для образов загрузки в разных архитектурах можно использовать одно и то же имя образа, задание значения архитектуры гарантирует, что будет возвращен правильный образ.|
 |[/Филенаме:<File name>]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
 |\Медиаграуп:<Image group name>]|Указывает группу образов, содержащую образ. Если группа образов не указана и на сервере существует только одна группа образов, будет использоваться эта группа. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы получить сведения о загрузочном образе, введите один из следующих элементов:
 ```
 wdsutil /Get-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86
@@ -51,11 +51,11 @@ wdsutil /verbose /Get-Imagmedia:WinPE boot image /Server:MyWDSServemediatype:Boo
 wdsutil /Get-Imagmedia:Windows Vista with Officemediatype:Install
 wdsutil /verbose /Get-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[Использование команды add-Image](using-the-add-image-command.md)
-[помощью команды Copy-](using-the-copy-image-command.md) Image
-с помощью команды [reexport-](using-the-export-image-command.md) Image
-[помощью команды Remove](using-the-remove-image-command.md) -image,
-[с помощью команды replace-](using-the-replace-image-command.md) Image
-[подкоманде: Set-Image.](subcommand-set-image.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Ключ](command-line-syntax-key.md)
+синтаксиса командной строки[с помощью команды Add-](using-the-add-image-command.md)
+Image с помощью команды "[Копировать](using-the-copy-image-command.md)
+изображение" с помощью команды "[Export](using-the-export-image-command.md)
+-Image" с помощью команды[Remove](using-the-remove-image-command.md)
+-Image с помощью команды[Replace](using-the-replace-image-command.md)
+-Image[: Set-Image](subcommand-set-image.md)

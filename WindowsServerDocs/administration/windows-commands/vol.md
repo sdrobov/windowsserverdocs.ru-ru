@@ -1,6 +1,6 @@
 ---
 title: vol
-description: Раздел команд Windows для громкости, который отображает метку тома диска и серийный номер, если они существуют.
+description: Справочный раздел для Vol, который отображает метку тома диска и серийный номер, если они существуют.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fbf55bad619379005d7ed8044277d3a2759dde10
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: aa900ade6f434a53ac940d097407aa90509e9141
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830107"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720279"
 ---
 # <a name="vol"></a>vol
 
@@ -32,9 +32,9 @@ vol [<Drive>:]
 
 |Параметр|Описание|
 |---------|-----------|
-|> \<диска:|Указывает диск, содержащий диск, для которого требуется отобразить метку тома и серийный номер.|
-|/?|Отображает справку в командной строке.|
+|\<> диска:|Указывает диск, содержащий диск, для которого требуется отобразить метку тома и серийный номер.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

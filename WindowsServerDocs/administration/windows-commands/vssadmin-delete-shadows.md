@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 9807efa2c570b8ed63c2d776327b8e3311846488
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e18823c5c030aa1a7b8f032f820e415f36fd7827
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830117"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720267"
 ---
 # <a name="vssadmin-delete-shadows"></a>Vssadmin удаление теней
 
->Область применения: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Область применения: Windows 10, Windows 8.1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Удаляет теневые копии указанного тома.
 
@@ -31,10 +31,10 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 
 |Параметр|Описание|
 |---|---|
-|/фор =\<ForVolumeSpec >|Указывает, какой из теневых копий тома будет удален.|
+|/фор =\<ForVolumeSpec>|Указывает, какой из теневых копий тома будет удален.|
 |/олдест|Удаляет только самую старую теневую копию.|
 |/all|Удаляет все заданные теневые копии тома.|
-|/Шадов =\<Шадовид >|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/Шадов =\<шадовид>|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
 |/quiet|Указывает, что команда не будет отображать сообщения во время выполнения.|
 
 ## <a name="remarks"></a>Примечания

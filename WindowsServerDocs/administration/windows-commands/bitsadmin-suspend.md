@@ -1,6 +1,6 @@
 ---
 title: bitsadmin suspend
-description: Раздел команд Windows для **битсадмин Suspend**, который приостанавливает указанное задание.
+description: Справочный раздел для команды битсадмин Suspend, которая приостанавливает указанное задание.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 42ed83d4dbf8c3d982c5c186b440cf17997903c9
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 8117cf9f4286994847e53dca8065da6821d47c5d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123156"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720451"
 ---
 # <a name="bitsadmin-suspend"></a>bitsadmin suspend
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Приостанавливает указанное задание. Если вы приостановили задание по ошибке, можно использовать параметр [возобновления битсадмин](bitsadmin-resume.md) , чтобы перезапустить задание.
 
@@ -32,17 +32,21 @@ bitsadmin /suspend <job>
 
 | Параметр | Описание |
 | --------- | ---------- |
-| Job | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
 ## <a name="example"></a>Пример
 
-В следующем примере приостанавливается задание с именем *мидовнлоаджоб*.
+Чтобы приостановить задание с именем *мидовнлоаджоб*:
 
 
 ```
-C:\>bitsadmin /suspend myDownloadJob
+bitsadmin /suspend myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда возобновления битсадмин](bitsadmin-resume.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: writer
-description: Раздел команд Windows для модуля записи, который проверяет, включен ли модуль записи или компонента из процедуры резервного копирования или восстановления или исключен из него.
+description: Справочный раздел, посвященный модулю записи, который проверяет, включен ли модуль записи или компонента из процедуры резервного копирования или восстановления, или исключает его.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fb13de162b8e5eb8150d145a4afacccf47bb25f0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: aed202ac774b17041f48df24333565727b110c53
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80828987"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720645"
 ---
 # <a name="writer"></a>writer
 
@@ -35,9 +35,9 @@ writer exclude [<Writer> | <Component>]
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |   проверка   | Проверяет, что указанный модуль записи или компонент включен в процедуру резервного копирования или восстановления. Процедура резервного копирования или восстановления завершится ошибкой, если модуль записи или компонент не включен. |
 |  exclude   |                                                   Исключает указанный модуль записи или компонент из процедуры резервного копирования или восстановления.                                                    |
-| [модуль записи\<> |                                                                                     <Component>]                                                                                      |
+| [\<Модуль записи> |                                                                                     <Component>]                                                                                      |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы проверить модуль записи, указав его идентификатор GUID (для этого примера — 4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f), введите:
 ```
@@ -48,6 +48,6 @@ writer verify {4dc3bdd4-ab48-4d07-adb0-3bee2926fd7f}
 writer exclude System Writer
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

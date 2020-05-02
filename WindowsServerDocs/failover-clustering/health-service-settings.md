@@ -7,15 +7,16 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 08/14/2017
-ms.openlocfilehash: 7ae78137bbd4e39291cc2e307f62697876c98135
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a8262567abdd18847e99026c43d722351a00d3f2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827527"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720542"
 ---
 # <a name="health-service-settings"></a>Параметры служба работоспособности
-> Область применения: Windows Server 2019, Windows Server 2016
+
+> Применяется к: Windows Server 2019, Windows Server 2016
 
 Служба работоспособности — это новая функция Windows Server 2016, которая улучшает повседневный мониторинг и рабочую среду для кластеров под управлением Локальные дисковые пространства.
 
@@ -98,7 +99,7 @@ Get-StorageSubSystem Cluster* | Set-StorageHealthSetting -Name "System.Storage.V
 "System.LogLevel" = 4
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-- [служба работоспособности в Windows Server 2016](health-service-overview.md)
+- [Служба работоспособности в Windows Server 2016](health-service-overview.md)
 - [Локальные дисковые пространства в Windows Server 2016](../storage/storage-spaces/storage-spaces-direct-overview.md)

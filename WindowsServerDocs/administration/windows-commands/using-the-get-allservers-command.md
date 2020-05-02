@@ -1,6 +1,6 @@
 ---
 title: Get-Аллсерверс
-description: Раздел команд Windows для Get-Аллсерверс, который извлекает сведения обо всех серверах служб развертывания Windows.
+description: Справочный раздел по Get-Аллсерверс, который извлекает сведения обо всех серверах служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b400d5a2be69e8e89a05b233cc2e8f29bec848f6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b623b5e95e2a57147b7d9d191d42556191dd8e4d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831217"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719981"
 ---
 # <a name="get-allservers"></a>Get-Аллсерверс
 
@@ -33,11 +33,11 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 |   Параметр   |                                                                                                                 Описание                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Show: {config |                                                                                                                    Изображения                                                                                                                    |
+| /Show: {config |                                                                                                                    Образы                                                                                                                    |
 |  [/Детаилед]  | При использовании в сочетании с параметром **/Show: Images** или **/Show: ALL**возвращает все метаданные образа из каждого изображения. Если параметр **/детаилед** не указан, по умолчанию возвращается имя образа, описание и имя файла. |
 | [/Forest: {Да |                                                                                                                     Нет}]                                                                                                                     |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы просмотреть сведения обо всех серверах, введите:
 ```
@@ -48,6 +48,6 @@ WDSUTIL /Get-AllServers /Show:Config
 WDSUTIL /Verbose /Get-AllServers /Show:All /Detailed /Forest:Yes
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnoprogresstimeout
-description: Раздел команд Windows для **битсадмин сетнопрогресстимеаут**, который задает время в секундах, в течение которого служба пытается переместить файл после возникновения временной ошибки.
+description: Справочный раздел по команде битсадмин сетнопрогресстимеаут, который задает время в секундах, в течение которого служба пытается переместить файл после возникновения временной ошибки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8adff95b0dbae68634db2e248d4493549c5ac85d
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 398882cf795e98dc0bbc0fb81006d3406fded707
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122886"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720106"
 ---
 # <a name="bitsadmin-setnoprogresstimeout"></a>bitsadmin setnoprogresstimeout
 
@@ -30,10 +30,10 @@ bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | тимеаутвалуе | Продолжительность времени, в течение которого служба BITS ожидает передачи файла после первой ошибки в секундах. |
 
-## <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Примечания
 
 - Интервал времени ожидания "не выполняется" начинается, когда задание сталкивается с первой временной ошибкой.
 
@@ -43,12 +43,14 @@ bitsadmin /setnoprogresstimeout <job> <timeoutvalue>
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере для задания с именем *мидовнлоаджоб*устанавливается значение времени ожидания "не выполняется", равное 20 секундам.
+Чтобы установить значение времени ожидания "не выполняется" равным 20 секундам, для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /setnoprogresstimeout myDownloadJob 20
+bitsadmin /setnoprogresstimeout myDownloadJob 20
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

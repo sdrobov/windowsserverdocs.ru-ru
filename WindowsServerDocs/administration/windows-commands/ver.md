@@ -1,6 +1,6 @@
 ---
 title: ver
-description: Раздел команд Windows для ver, в котором отображается номер версии операционной системы.
+description: Справочный раздел по версии ver, в котором отображается номер операционной системы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d0d0676dcfa6546e4bbf74c4c58a24f51744d00f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7050dddda6cc27c50980f2e44f40e1f682c1d375
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830197"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720312"
 ---
 # <a name="ver"></a>ver
 
@@ -24,7 +24,7 @@ ms.locfileid: "80830197"
 
 Эта команда поддерживается в командной строке Windows (cmd. exe), но не в PowerShell.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,9 +36,9 @@ ver
 
 |Параметр|Описание|
 |---------|-----------|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы получить номер версии операционной системы из командной оболочки (cmd. exe), введите:
 
@@ -53,6 +53,6 @@ $PSVersionTable.BuildVersion
 ````
 
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

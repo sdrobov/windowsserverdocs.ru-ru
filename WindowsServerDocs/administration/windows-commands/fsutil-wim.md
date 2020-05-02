@@ -9,15 +9,15 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: d4a8f2c008c1a28e498edb7726a8c209e91f41af
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 12a9965515ef26e0cbccb2d20d25f66b54b23b8a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843927"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720063"
 ---
 # <a name="fsutil-wim"></a>Fsutil WIM
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+> Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows 10
 
 Предоставляет функции для обнаружения и управления файлами, поддерживающими образ Windows (WIM).
 
@@ -35,11 +35,11 @@ fsutil wim [removewim] <drive name> <data source>
 |Параметр|Описание|
 |-------------|---------------|
 |енумфилес|Перечисляет файлы с резервным копированием WIM.|
-|\<имя диска >|Указывает имя диска.|
+|\<имя диска>|Указывает имя диска.|
 |\<> источника данных|Указывает источник данных.|
 |енумвимс|Перечисляет резервные WIM-файлы.|
 |куерифиле|Запросы, если файл поддерживается WIM, и, если это так, отображает сведения о WIM-файле.|
-|\<имя файла >|Указывает имя файла.|
+|\<имя файла>|Указывает имя файла.|
 |ремовевим|Удаляет WIM из резервных файлов.|
 
 

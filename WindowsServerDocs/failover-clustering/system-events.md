@@ -8,16 +8,16 @@ ms.author: jgerend
 manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: 5d382807adcfd771215d1f87332a47842d25eda3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: eea98579a66f1db7f7ec873bda6a2c934841736f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827387"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720507"
 ---
 # <a name="failover-clustering-system-log-events"></a>События системного журнала отказоустойчивой кластеризации
 
->Область применения: Windows Server 2019, Windows Server 2016
+> Применяется к: Windows Server 2019, Windows Server 2016
 
 В этом разделе перечислены события отказоустойчивой кластеризации из системного журнала Windows Server (отображается в Просмотр событий). Все эти события совместно используют источник событий **фаиловерклустеринг** и могут быть полезны при устранении неполадок в кластере.
 
@@ -600,7 +600,7 @@ SeBackupPrivilege/SeRestorePrivilege/SeIncreaseQuotaPrivilege/SeIncreaseBasePrio
 
 ### <a name="event-1567-service_failed_to_change_log_size"></a>Событие 1567: SERVICE_FAILED_TO_CHANGE_LOG_SIZE
 
-Служба кластеров не удалось изменить размер журнала трассировки. Проверьте параметр Клустерлогсизе с помощью командлета PowerShell "Get-Cluster \| Format-List \*". Кроме того, используйте оснастку "системный монитор", чтобы проверить параметры сеанса трассировки событий для Фаиловерклустеринг.
+Служба кластеров не удалось изменить размер журнала трассировки. Проверьте параметр Клустерлогсизе с помощью командлета PowerShell "Get- \| Cluster Format- \*List". Кроме того, используйте оснастку "системный монитор", чтобы проверить параметры сеанса трассировки событий для Фаиловерклустеринг.
 
 ### <a name="event-1567-res_vipaddr_address_interface_failed"></a>Событие 1567: RES_VIPADDR_ADDRESS_INTERFACE_FAILED
 
@@ -668,7 +668,7 @@ SeBackupPrivilege/SeRestorePrivilege/SeIncreaseQuotaPrivilege/SeIncreaseBasePrio
 
 ### <a name="event-1607-res_disk_cno_unlock_failed"></a>Событие 1607: RES_DISK_CNO_UNLOCK_FAILED
 
-Дисковый ресурс кластера "%1" не смог разблокировать защищенный BitLocker том "%2". Объект имени кластера (CNO) не задан как допустимый предохранитель BitLocker для этого тома. Чтобы исправить это, удалите диск из кластера. Затем с помощью программы командной строки Manage-bde. exe добавьте имя кластера в качестве предохранителя Адаккаунторграуп, используя формат domain\\имя_кластера\$и добавьте диск обратно в кластер. Дополнительные сведения см. в документации по Manage-bde. exe.
+Дисковый ресурс кластера "%1" не смог разблокировать защищенный BitLocker том "%2". Объект имени кластера (CNO) не задан как допустимый предохранитель BitLocker для этого тома. Чтобы исправить это, удалите диск из кластера. Затем с помощью программы командной строки Manage-bde. exe добавьте имя кластера в качестве предохранителя Адаккаунторграуп, используя формат domain\\имя_кластера\$, и добавьте диск обратно в кластер. Дополнительные сведения см. в документации по Manage-bde. exe.
 
 ### <a name="event-1608-res_fileserver_leader_failed"></a>Событие 1608: RES_FILESERVER_LEADER_FAILED
 
@@ -780,7 +780,7 @@ SeBackupPrivilege/SeRestorePrivilege/SeIncreaseQuotaPrivilege/SeIncreaseBasePrio
 
 ### <a name="event-4613-nodecleanup_clear_clusdisk_database_failed"></a>Событие 4613: NODECLEANUP_CLEAR_CLUSDISK_DATABASE_FAILED
 
-Службе кластеров не удалось правильно очистить кластерный диск с ИДЕНТИФИКАТОРом "%2" при уничтожении кластера. Код ошибки: "%1". Доступ к этому диску может быть невозможен, пока очистка не будет успешно завершена. Для очистки вручную удалите значение "Аттачеддискс" в разделе "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\ClusDisk\\параметры" в реестре Windows.
+Службе кластеров не удалось правильно очистить кластерный диск с ИДЕНТИФИКАТОРом "%2" при уничтожении кластера. Код ошибки: "%1". Доступ к этому диску может быть невозможен, пока очистка не будет успешно завершена. Для очистки вручную удалите значение Аттачеддискс в разделе\\"HKEY_LOCAL_MACHINE System\\CurrentControlSet\\Services\\Clusdisk\\параметры" в реестре Windows.
 
 ### <a name="event-4615-nodecleanup_disable_cluster_service_failed"></a>Событие 4615: NODECLEANUP_DISABLE_CLUSTER_SERVICE_FAILED
 
@@ -1251,6 +1251,6 @@ DNS-записи узла (A) и указателя (PTR), связанные с
 Ресурс физического диска кластера "%1" удалил моментальный снимок программного обеспечения. Моментальный снимок программного обеспечения на общий том кластера "%2" был удален, так как он старше "%3" дн. Идентификатор моментального снимка был "%4" и создан из узла "%5" в "%6".
 Ожидается, что после завершения задания резервного копирования моментальные снимки удаляются из приложения резервного копирования. Этот снимок превысил ожидаемое время существования моментального снимка. Проверьте с помощью приложения резервного копирования, что задания резервного копирования успешно завершены.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 -   [Подробные сведения о событии для компонентов отказоустойчивой кластеризации в Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

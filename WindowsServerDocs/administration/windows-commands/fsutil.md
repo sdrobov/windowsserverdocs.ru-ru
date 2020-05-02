@@ -9,20 +9,20 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 08/21/2018
-ms.openlocfilehash: 717c287995be2ab56bd49f2f24d46001f77e0e68
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a12647908811066293772ab1e9354a0d67874d88
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843907"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720050"
 ---
 # <a name="fsutil"></a>Fsutil
 
->Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Выполняет задачи, связанные с файловыми системами FAT и NTFS, такими как управление точками повторного анализа, управление разреженными файлами или отключение тома. Если он используется без параметров, то команда **fsutil** отображает список поддерживаемых подкоманд. 
 
-> [!Note] 
+> [!NOTE] 
 > Для использования fsutil необходимо войти в систему с учетной записью администратора или члена группы "Администраторы". Команда fsutil является весьма мощной и должна использоваться только опытными пользователями, обладающими глубокими знаниями о операционных системах Windows.
 >
 >Перед запуском **fsutil**можно включить подсистему Windows для Linux. Чтобы включить этот дополнительный компонент, выполните следующую команду от имени администратора в PowerShell:
@@ -54,5 +54,5 @@ ms.locfileid: "80843907"
 |[Том fsutil](fsutil-volume.md)|Управляет томом. Отключает том, выдает запросы, чтобы узнать, сколько свободного места доступно на диске, или находит файл, который использует указанный кластер.|
 |[Fsutil WIM](fsutil-wim.md)|Предоставляет функции для обнаружения файлов с поддержкой WIM и управления ими.|
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

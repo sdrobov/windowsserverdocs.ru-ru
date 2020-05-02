@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Раздел команд Windows для WMIC, который отображает сведения WMI в интерактивной командной оболочке.
+description: Справочный раздел по WMIC, который отображает сведения WMI в интерактивной командной оболочке.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03ba4ecb4b12b03e010318bf6ca260dec00f28f3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 252ba6b59c29378dd1f5e437de21a2ec4f5ec5c8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829057"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720646"
 ---
 # <a name="wmic"></a>wmic
 
@@ -22,7 +22,7 @@ ms.locfileid: "80829057"
 
 Отображает сведения WMI в интерактивной командной оболочке.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,10 +38,10 @@ wmic </parameter>
 |-----------|-----------|
 |class|Отменяет режим псевдонима по умолчанию WMIC для прямого доступа к классам в схеме WMI.|
 |path|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
-|context|Отображает текущие значения всех глобальных коммутаторов.|
-|[выйти \| exit]|Выход из командной оболочки WMIC.|
+|контекст|Отображает текущие значения всех глобальных коммутаторов.|
+|[выход \| из программы]|Выход из командной оболочки WMIC.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы отобразить текущие значения всех глобальных коммутаторов, введите:
 ```
@@ -71,6 +71,6 @@ AGGREGATE    : ON
 wmic /locale:ms_409
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

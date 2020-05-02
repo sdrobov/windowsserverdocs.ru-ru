@@ -1,6 +1,6 @@
 ---
 title: Get-Имажеграуп
-description: Раздел команд Windows для Get-Имажеграуп, который извлекает сведения о группе образов и изображениях в ней.
+description: Справочный раздел по Get-Имажеграуп, который извлекает сведения о группе образов и изображениях в ней.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0066e5d52c1d10b1f78ea627ee7a476bfd98f19d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 30a87085cb935f95a209ffdd78ecf2b9fb45dc15
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830957"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719901"
 ---
 # <a name="get-imagegroup"></a>Get-Имажеграуп
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Извлекает сведения о группе образов и содержащихся в ней изображениях.
 
@@ -32,7 +32,7 @@ wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 Медиаграуп:<Image group name>|Указывает имя группы образов.|
 |[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |[/детаилед]|Возвращает метаданные изображения для каждого изображения. Если этот параметр не используется, поведение по умолчанию — возврат только имени, описания и имени файла изображения.|
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы просмотреть сведения о группе образов, введите:
 ```
 wdsutil /Get-ImageGroumediaGroup:ImageGroup1
@@ -41,9 +41,9 @@ wdsutil /Get-ImageGroumediaGroup:ImageGroup1
 ```
 wdsutil /verbose /Get-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /detailed
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[помощью команды Add-Имажеграуп](using-the-add-imagegroup-command.md) ,
-[помощью команды Get-аллимажеграупс](using-the-get-allimagegroups-command.md) ,
-[с помощью команды Remove-имажеграуп,](using-the-remove-imagegroup-command.md)
-[подкоманде: Set-имажеграуп](subcommand-set-imagegroup.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Ключ](command-line-syntax-key.md)
+синтаксиса командной строки[с помощью команды Add-имажеграуп](using-the-add-imagegroup-command.md)
+с помощью команды[Get-аллимажеграупс](using-the-get-allimagegroups-command.md)
+с командой[Remove-имажеграуп](using-the-remove-imagegroup-command.md)
+[: Set-имажеграуп](subcommand-set-imagegroup.md)

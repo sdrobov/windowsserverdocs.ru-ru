@@ -7,15 +7,16 @@ ms.technology: storage-health-service
 ms.topic: article
 author: cosmosdarwin
 ms.date: 10/05/2017
-ms.openlocfilehash: 3b47e1abf3805b7e6e3dc180d5d937ddb2723fa4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0a03dc5d646d24c9f24f979df36fb3fe1eafe631
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827547"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720552"
 ---
 # <a name="health-service-reports"></a>Отчеты служба работоспособности
-> Область применения: Windows Server 2019, Windows Server 2016
+
+> Применяется к: Windows Server 2019, Windows Server 2016
 
 ## <a name="what-are-reports"></a>Что такое отчеты  
 
@@ -43,14 +44,13 @@ Get-Volume -FileSystemLabel <Label> | Get-StorageHealthReport -Count <Count>
 Get-StorageNode -Name <Name> | Get-StorageHealthReport -Count <Count>
 ```
 
-## <a name="usage-in-net-and-c"></a>Использование в .NET иC#
+## <a name="usage-in-net-and-c"></a>Использование в .NET и C #
 
-### <a name="connect"></a>Подключить
+### <a name="connect"></a>Подключение
 
-Чтобы запросить служба работоспособности, необходимо будет установить **CimSession** с кластером. Для этого вам потребуются некоторые вещи, которые доступны только в полной среде .NET. Это означает, что вы не можете сделать это непосредственно из веб-приложения или с мобильных приложений. В этих примерах кода будет использоваться\#C, самый простой выбор для этого уровня доступа к данным.
+Чтобы запросить служба работоспособности, необходимо будет установить **CimSession** с кластером. Для этого вам потребуются некоторые вещи, которые доступны только в полной среде .NET. Это означает, что вы не можете сделать это непосредственно из веб-приложения или с мобильных приложений. В этих примерах кода будет\#использоваться язык C, самый простой выбор для этого уровня доступа к данным.
 
-``` 
-...
+```
 using System.Security;
 using Microsoft.Management.Infrastructure;
 
@@ -79,7 +79,7 @@ public CimSession Connect(string Domain = "...", string Computer = "...", string
 
 После установки **CimSession** можно запросить инструментарий управления Windows (WMI) (WMI) в кластере.
 
-Прежде чем можно будет получить ошибки или метрики, необходимо получить экземпляры нескольких соответствующих объектов. Сначала **MSFT\_сторажесубсистем** , который представляет локальные дисковые пространства в кластере. Используя это, вы можете получить все **msft\_стораженоде** в кластере, а также каждый **\_ный том MSFT**, тома данных. Наконец, вам понадобится **MSFT\_сторажехеалс**, сам служба работоспособности.
+Прежде чем можно будет получить ошибки или метрики, необходимо получить экземпляры нескольких соответствующих объектов. Во первых, **MSFT\_сторажесубсистем** , представляющий Локальные дисковые пространства в кластере. Используя это, вы можете получить все **стораженодеы MSFT\_** в кластере и каждый **том\_MSFT**, тома данных. Наконец, вам потребуется **Сторажехеалс MSFT\_**, а также сам служба работоспособности.
 
 ```
 CimInstance Cluster;
@@ -112,7 +112,6 @@ public void DiscoverObjects(CimSession Session)
 Вы можете получить доступ ко всем тем же свойствам, описанным в статье [классы API управления хранением](https://msdn.microsoft.com/library/windows/desktop/hh830612(v=vs.85).aspx).
 
 ```
-...
 using System.Diagnostics;
 
 foreach (CimInstance Node in Nodes)
@@ -208,15 +207,15 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 Каждый пример метрик — один «отчет», который содержит много записей, соответствующих отдельным метрикам.
 
-Для получения полной схемы изучите классы **msft\_сторажехеалсрепорт** и **MSFT\_хеалсрекорд** в *сторажевми. mof*.
+Для полной схемы изучите классы **MSFT\_сторажехеалсрепорт** и **MSFT\_хеалсрекорд** в *сторажевми. mof*.
 
 Каждая метрика имеет только три свойства в каждой таблице.
 
-| **Свойства** | **Пример**       |
+| **Свойство** | **Пример**       |
 | -------------|-------------------|
 | Имя         | иолатенциавераже  |
 | Значение        | 0,00021           |
-| Единицы        | 3                 |
+| Единицы измерения        | 3                 |
 
 Единицы измерения = {0, 1, 2, 3, 4}, где 0 = "bytes", 1 = "BytesPerSecond", 2 = "CountPerSecond", 3 = "секунды" или 4 = "процент".
 
@@ -226,7 +225,7 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 
 ### <a name="msft_storagesubsystem"></a>MSFT_StorageSubSystem
 
-| **Название**                        | **Комплект** |
+| **Имя**                        | **Единицы измерения** |
 |---------------------------------|-----------|
 | CPUUsage                        | 4         |
 | капаЦитифисикалпуледаваилабле | 0         |
@@ -245,12 +244,12 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 | иосраугхпуттотал               | 1         |
 | иосраугхпутврите               | 1         |
 | меморяваилабле                 | 0         |
-| меморитотал                     | 0         |
+| MemoryTotal                     | 0         |
 
 
 ### <a name="msft_storagenode"></a>MSFT_StorageNode
 
-| **Название**            | **Комплект** |
+| **Имя**            | **Единицы измерения** |
 |---------------------|-----------|
 | CPUUsage            | 4         |
 | иолатенциавераже    | 3         |
@@ -263,11 +262,11 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 | иосраугхпуттотал   | 1         |
 | иосраугхпутврите   | 1         |
 | меморяваилабле     | 0         |
-| меморитотал         | 0         |
+| MemoryTotal         | 0         |
 
 ### <a name="msft_volume"></a>MSFT_Volume
 
-| **Название**            | **Комплект** |
+| **Имя**            | **Единицы измерения** |
 |---------------------|-----------|
 | капаЦитяваилабле   | 0         |
 | капаЦититотал       | 0         |
@@ -281,6 +280,6 @@ public void BeginStreamingMetrics(CimSession Session, CimInstance HealthService,
 | иосраугхпуттотал   | 1         |
 | иосраугхпутврите   | 1         |
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
-- [служба работоспособности в Windows Server 2016](health-service-overview.md)
+- [Служба работоспособности в Windows Server 2016](health-service-overview.md)

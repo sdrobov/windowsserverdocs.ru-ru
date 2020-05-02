@@ -1,6 +1,6 @@
 ---
 title: get
-description: Раздел команд Windows для Get, который извлекает свойства или атрибуты указанного объекта.
+description: Справочный раздел для Get, который получает свойства или атрибуты указанного объекта.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: be532dcb57faf4ec2a86a34c3ab59c921c5b8d0c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 981ed8978df3d53505e6da5296dbb25cce38bb71
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831147"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719974"
 ---
 # <a name="get"></a>get
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Извлекает свойства или атрибуты указанного объекта.
 

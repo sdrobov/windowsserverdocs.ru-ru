@@ -1,6 +1,6 @@
 ---
 title: Команды Windows
-description: Команды Windows
+description: Справочник
 ms.technology: manage-windows-commands
 ms.topic: article
 ms.assetid: c703d07c-8227-4e86-94a6-8ef390f94cdc
@@ -9,12 +9,12 @@ ms.author: jgerend
 manager: dongill
 ms.date: 06/26/2019
 ms.prod: windows-server
-ms.openlocfilehash: 9d68e2becbf9c6522be7e1ff6e6742d44f3a8247
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7baec3bbe532bbcedb8c17628fd88d2c8eac34c6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829237"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720733"
 ---
 # <a name="windows-commands"></a>Команды Windows
 
@@ -24,43 +24,43 @@ ms.locfileid: "80829237"
 
 Чтобы найти сведения о конкретной команде, в следующем меню A-Z щелкните букву, с которой начинается команда, а затем щелкните имя команды.
 
-[ |
-](#a) [B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[I](#i) |
-[J](#j) | 
+[A](#a) |
+[B](#b) | 
+[I](#i) | 
+[T](#t)[C](#c) | 
+[Q](#q)[J](#j) | 
+[U](#u)[L](#l) | 
+[X](#x) [D](#d) | 
 [K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[t](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | Y | Гармошкой
+[W](#w)[P](#p)[F](#f) | 
+[R](#r)[H](#h) | 
+[S](#s)[E](#e) | 
+[M](#m)[G](#g) | 
+[N](#n)[V](#v)[O](#o)C D E F G р |
+. J | 
+K L | 
+M N | 
+O P Q R S T U V W X | | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ Y | Гармошкой
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Сведения, содержащиеся в этом разделе, применимы к:
 
--   Windows Server 2019
+-   Windows Server 2019
 -   Windows Server (Semi-Annual Channel)
--   Windows Server 2016
--   Windows Server 2012 R2
--   Windows Server 2012 
--   Windows Server 2008 R2
--   Windows Server 2008
--   Windows 10
+-   Windows Server 2016
+-   Windows Server 2012 R2
+-   Windows Server 2012 
+-   Windows Server 2008 R2
+-   Windows Server 2008
+-   Windows 10
 -   Windows 8.1
 
 ### <a name="command-shell-overview"></a>Общие сведения о командной оболочке
@@ -76,7 +76,7 @@ PowerShell был разработан для расширения возмож�
 >Вы также можете скачать и установить [PowerShell Core](https://docs.microsoft.com/powershell/scripting/whats-new/what-s-new-in-powershell-core-60?view=powershell-6), версию PowerShell с открытым исходным кодом. 
 
 > [!CAUTION]
-> Внесение неправильных изменений в реестр может нанести серьезный вред системе. Перед внесением следующих изменений в реестр следует создать резервную копию всех ценных данных на компьютере.
+> Неправильное изменение реестра может серьезно повредить систему. Перед внесением следующих изменений в реестр следует создать резервную копию всех ценных данных на компьютере.
 
 > [!NOTE]
 > Чтобы включить или отключить завершение имен файлов и каталогов в командной оболочке на компьютере или в сеансе входа пользователя, запустите **программу regedit. exe** и задайте следующее **значение reg_DWOrd**:
@@ -89,32 +89,32 @@ PowerShell был разработан для расширения возмож�
 
 Чтобы найти сведения об определенной команде Windows, в следующем меню A-Z щелкните букву, с которой начинается команда, а затем щелкните имя команды.
 
-[ |
-](#a) [B](#b) | 
-[C](#c) | 
-[D](#d) | 
-[E](#e) | 
-[F](#f) | 
-[G](#g) | 
-[H](#h) | 
-[I](#i) |
-[J](#j) | 
+[A](#a) |
+[B](#b) | 
+[I](#i) | 
+[T](#t)[C](#c) | 
+[Q](#q)[J](#j) | 
+[U](#u)[L](#l) | 
+[X](#x) [D](#d) | 
 [K](#k) | 
-[L](#l) | 
-[M](#m) | 
-[N](#n) | 
-[O](#o) | 
-[P](#p) | 
-[Q](#q) | 
-[R](#r) | 
-[S](#s) | 
-[t](#t) | 
-[U](#u) | 
-[V](#v) | 
-[W](#w) | 
-[X](#x) | Y | Гармошкой
+[W](#w)[P](#p)[F](#f) | 
+[R](#r)[H](#h) | 
+[S](#s)[E](#e) | 
+[M](#m)[G](#g) | 
+[N](#n)[V](#v)[O](#o)C D E F G р |
+. J | 
+K L | 
+M N | 
+O P Q R S T U V W X | | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ | 
+ Y | Гармошкой
 
-### <a name="a"></a>А
+### <a name="a"></a>Объект
 -   [append](append.md)
 -   [arp](arp.md)
 -   [assoc](assoc.md)
@@ -155,7 +155,7 @@ PowerShell был разработан для расширения возмож�
   -   [bitsadmin getnotifyflags](bitsadmin-getnotifyflags.md)
   -   [bitsadmin getnotifyinterface](bitsadmin-getnotifyinterface.md)
   -   [bitsadmin getowner](bitsadmin-getowner.md)
-  -   [битсадмин получить приоритет](bitsadmin-getpriority.md)
+  -   [bitsadmin getpriority](bitsadmin-getpriority.md)
   -   [bitsadmin getproxybypasslist](bitsadmin-getproxybypasslist.md)
   -   [bitsadmin getproxylist](bitsadmin-getproxylist.md)
   -   [bitsadmin getproxyusage](bitsadmin-getproxyusage.md)
@@ -238,7 +238,7 @@ PowerShell был разработан для расширения возмож�
 - [cprofile](cprofile.md)
 - [cscript](cscript.md)
 
-### <a name="d"></a>Г
+### <a name="d"></a>D
 -   [date](date.md)
 -   [dcgpofix](dcgpofix.md)
 -   [defrag](defrag.md)
@@ -257,7 +257,7 @@ PowerShell был разработан для расширения возмож�
 -   [doskey](doskey.md)
 -   [driverquery](driverquery.md)
 
-### <a name="e"></a>Д
+### <a name="e"></a>E
 -   [echo](echo.md)
 -   [edit](edit.md)
 -   [endlocal](endlocal.md)
@@ -270,7 +270,7 @@ PowerShell был разработан для расширения возмож�
 -   [expand](expand.md)
 -   [extract](extract.md)
 
-### <a name="f"></a>C
+### <a name="f"></a>F
 - [fc](fc.md)
 - [find](find.md)
 - [findstr](findstr.md)
@@ -302,7 +302,7 @@ PowerShell был разработан для расширения возмож�
 - [ftype](ftype.md)
 - [fveupdate](fveupdate.md)
 
-### <a name="g"></a>G
+### <a name="g"></a>G.
 -   [getmac](getmac.md)
 -   [gettype](gettype.md)
 -   [goto](goto.md)
@@ -361,10 +361,10 @@ PowerShell был разработан для расширения возмож�
 - [logman](logman.md)
   -   [logman create](logman-create.md)
   -   [logman query](logman-query.md)
-  -   [Запуск Logman & 124; позиции](logman-start-stop.md)
+  -   [Logman Start &124; позиции](logman-start-stop.md)
   -   [logman delete](logman-delete.md)
   -   [logman update](logman-update.md)
-  -   [Импорт & 124; программе](logman-import-export.md)
+  -   [Logman Import &124; программе](logman-import-export.md)
 - [logoff](logoff.md)
 - [lpq](lpq.md)
 - [lpr](lpr.md)
@@ -410,7 +410,7 @@ PowerShell был разработан для расширения возмож�
 - [msinfo32](msinfo32.md)
 - [mstsc](mstsc.md)
 
-### <a name="n"></a>В
+### <a name="n"></a>Нет
 - [nbtstat](nbtstat.md)
 - [netcfg](netcfg.md)
 - [netsh](netsh.md)
@@ -514,7 +514,7 @@ PowerShell был разработан для расширения возмож�
 - [rexec](rexec.md)
 - [risetup](risetup.md)
 - [rmdir](rmdir.md)
-- [Robocopy](robocopy.md)
+- [robocopy](robocopy.md)
 - [route_ws2008](route_ws2008.md)
 - [rpcinfo](rpcinfo.md)
 - [rpcping](rpcping.md)
@@ -522,7 +522,7 @@ PowerShell был разработан для расширения возмож�
 - [rundll32](rundll32.md)
 - [rwinsta](rwinsta.md)
 
-### <a name="s"></a>С
+### <a name="s"></a>S
 - [schtasks](schtasks.md)
 - [команду scwcmd](Scwcmd.md)
   -   [команду scwcmd: анализ](scwcmd-analyze.md)
@@ -589,7 +589,7 @@ PowerShell был разработан для расширения возмож�
 -   [verifier](verifier.md)
 -   [verify](verify_1.md)
 -   [vol](vol.md)
--   [vssadmin](vssadmin.md)- 
+-   [List](vssadmin.md)- 
 
 ### <a name="w"></a>W
 - [waitfor](waitfor.md)

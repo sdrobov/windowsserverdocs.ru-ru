@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 587ff48bd0af80667f9a336323641b87be808b1d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7e332db921eeb64f890149d143fc13b6e27fe4aa
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843937"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720075"
 ---
 # <a name="fsutil-volume"></a>Том fsutil
->Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Отключает том или запрашивает жесткий диск, чтобы определить, какой объем свободного места в настоящее время доступен на жестком диске или какой файл используется в конкретном кластере.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -39,16 +39,16 @@ fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
 |Параметр|Описание|
 |-------------|---------------|
 |аллокатионрепорт|Отображает сведения о том, как хранилище используется на заданном томе.|
-|\<VolumePath >|Указывает букву диска (с последующим двоеточием).|
+|\<VolumePath>|Указывает букву диска (с последующим двоеточием).|
 |дискфри|Запрашивает жесткий диск, чтобы определить объем свободного места на нем.|
 |отключить|Отключает том.|
 |филелайаут|Отображает метаданные NTFS для заданного файла.|
-|\<ИД >|Указывает идентификатор файла.|
+|\<ИД>|Указывает идентификатор файла.|
 |list|Список всех томов в системе.|
 |куериклустер|Определяет, какой файл использует указанный кластер. Можно указать несколько кластеров с помощью параметра **куериклустер** .<p>Этот параметр применяется к: Windows Server 2008 R2 и Windows 7.|
-|> кластера \<|Указывает номер логического кластера (LCN).|
+|\<> кластера|Указывает номер логического кластера (LCN).|
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 Чтобы отобразить отчет о распределенных кластерах, введите:
 
 ```
@@ -87,7 +87,7 @@ fsutil volume list
 fsutil volume querycluster C: 50 0x2000
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

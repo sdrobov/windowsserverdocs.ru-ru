@@ -1,6 +1,6 @@
 ---
 title: проверка
-description: Раздел команд Windows для проверки, который указывает **cmd** , следует ли проверять правильность записанных файлов на диск.
+description: Справочный раздел для проверки **, указывающий, следует ли убедиться** , что файлы правильно записаны на диск.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 91a0777999a604a23e2de83eda6b89c926cb241c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f7fc35b37d5e0a429e1ecc2ebefc117804a0c645
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830057"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720292"
 ---
 # <a name="verify"></a>проверка
 
@@ -22,7 +22,7 @@ ms.locfileid: "80830057"
 
 Указывает **cmd** , следует ли проверять правильность записанных файлов на диск. При использовании без параметров **Убедитесь** , что отображается текущее значение.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,10 +34,10 @@ verify [on | off]
 
 |Параметр|Описание|
 |---------|-----------|
-|[вкл \| Off]|Переключает параметр **проверки** на значение ON или OFF.|
-|/?|Отображает справку в командной строке.|
+|[вкл \| . откл.]|Переключает параметр **проверки** на значение ON или OFF.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы отобразить текущую настройку **проверки** , введите:
 ```
@@ -48,6 +48,6 @@ verify
 Verify on
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

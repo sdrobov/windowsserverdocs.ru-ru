@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: aa6692dbb8af1ec832650971c6723c060fc2cd56
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 18088bcedd077d5c8052bca91c648e2719304a78
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844017"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720090"
 ---
 # <a name="fsutil-transaction"></a>Транзакция fsutil
->Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 Управляет транзакциями NTFS.
 
-Примеры использования этой команды см. в разделе [примеры](#BKMK_examples) .
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -49,7 +49,7 @@ fsutil transaction [rollback] <GUID>
 
 -   Транзакционная NTFS появилась в Windows Server 2008.
 
-### <a name="examples"></a><a name="BKMK_examples"></a>Примеров
+### <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 Чтобы отобразить сведения о транзакциях для файла к:\тест.ткст, введите:
 
 ```
@@ -61,6 +61,6 @@ fsutil transaction fileinfo c:\test.txt
 
 [Fsutil](Fsutil.md)
 
-[Транзакционная NTFS](https://go.microsoft.com/fwlink/?LinkID=165402)
+[Поддержка транзакций в NTFS](https://go.microsoft.com/fwlink/?LinkID=165402)
 
 
