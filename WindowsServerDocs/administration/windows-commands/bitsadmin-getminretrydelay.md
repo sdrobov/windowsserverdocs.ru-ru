@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getminretrydelay
-description: Раздел команд Windows для **битсадмин жетминретриделай**, который получает время ожидания службы в секундах после возникновения временной ошибки перед попыткой перемещения файла.
+description: Справочный раздел по команде битсадмин жетминретриделай, который получает время ожидания (в секундах), в течение которого служба будет ожидать временной ошибки, прежде чем пытаться переместить файл.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d79ffdf1f45b0198b4af535ed83154c3c2ec24f4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a50b9d98fe0b873dc58b8e86dc672a8f4157208a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850627"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717849"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 
@@ -30,16 +30,18 @@ bitsadmin /getminretrydelay <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается Минимальная задержка повторных попыток для задания с именем *мидовнлоаджоб*.
+Для получения минимальной задержки повтора для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getminretrydelay myDownloadJob
+bitsadmin /getminretrydelay myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

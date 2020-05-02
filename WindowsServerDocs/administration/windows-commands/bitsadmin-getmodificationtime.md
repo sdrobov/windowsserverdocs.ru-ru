@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getmodificationtime
-description: Раздел команд Windows для **битсадмин жетмодификатионтиме**, который извлекает время последнего изменения задания или передачи данных.
+description: Справочный раздел по команде битсадмин жетмодификатионтиме, который получает время последнего изменения задания или передачи данных.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ace0f64b1fbe7ba72174bb3df2bd4dd65e929769
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6bab8c317917894a351c03df1efefb17842ecb7d
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850617"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717839"
 ---
 # <a name="bitsadmin-getmodificationtime"></a>bitsadmin getmodificationtime
 
@@ -30,16 +30,18 @@ bitsadmin /getmodificationtime <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается время последнего изменения для задания с именем *мидовнлоаджоб*.
+Чтобы получить время последнего изменения для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getmodificationtime myDownloadJob
+bitsadmin /getmodificationtime myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
