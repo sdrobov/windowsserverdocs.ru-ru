@@ -1,6 +1,6 @@
 ---
 title: Update-Серверфилес
-description: Команды Windows для Update-Серверфилес, которые обновляют файлы в общей папке REMINST с помощью последних файлов, хранящихся в папке%Windir%\System32\RemInst на сервере.
+description: Справочный раздел по Update-Серверфилес, который обновляет файлы в общей папке REMINST с помощью последних файлов, хранящихся в папке%Windir%\System32\RemInst сервера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 37cbb880246cf5e5ff6a9e007dbe720de8dd1cbe
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0005d8e198300c4aad9fdfc772957b460d6fee74
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832957"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721384"
 ---
 # <a name="update-serverfiles"></a>Update-Серверфилес
 
@@ -30,9 +30,9 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 
 |Параметр|Описание|
 |---------|-----------|
-|[/Server:\<имя сервера >]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы обновить файлы, введите одно из следующих действий.
 ```
@@ -40,6 +40,6 @@ WDSUTIL /Update-ServerFiles
 WDSUTIL /Verbose /Progress /Update-ServerFiles /Server:MyWDSServer
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

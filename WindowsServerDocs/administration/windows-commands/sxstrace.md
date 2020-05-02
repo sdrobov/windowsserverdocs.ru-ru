@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ece727b68eb620e839cbfb8efe02dbe775666498
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 212e2d45b77f09b9460555733de15488a4420842
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833617"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721599"
 ---
 # <a name="sxstrace"></a>sxstrace
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Диагностика проблем с параллельным управлением.    
 
@@ -32,17 +32,17 @@ sxstrace [{[trace -logfile:<FileName> [-nostop]|[parse -logfile:<FileName> -outf
 |-------|--------|  
 |трассировка|Включает трассировку для SxS (параллельно)|  
 |-файл_журнала|Указывает необработанный файл журнала.|  
-|\<имя файла >|Сохраняет журнал трассировки в файле *filename*.|  
+|\<Имя файла>|Сохраняет журнал трассировки в файле *filename*.|  
 |-не останавливаться|Указывает отсутствие запроса на прекращение трассировки.|  
-|проанализировать|Преобразует необработанный файл трассировки.|  
+|parse|Преобразует необработанный файл трассировки.|  
 |-файл|Указывает имя выходного файла.|  
-|\<Парседфиле >|Указывает имя файла проанализированного файла.|  
-|-Filter|Позволяет фильтровать выходные данные.|  
-|\<AppName >|Указывает имя приложения.|  
+|\<Парседфиле>|Указывает имя файла проанализированного файла.|  
+|-filter|Позволяет фильтровать выходные данные.|  
+|\<AppName>|Указывает имя приложения.|  
 |стоптраце|Остановите трассировку, если она не была остановлена ранее.|  
-|-?|Отображает справку в командной строке.|  
+|-?|Отображение справки в командной строке.|  
 
-## <a name="examples"></a><a name="BKMK_Examples"></a>Примеров  
+## <a name="examples"></a>Примеры  
 Включите трассировку и сохраните файл трассировки в **сксстраце. ETL**:  
 ```  
 sxstrace trace -logfile:sxstrace.etl  

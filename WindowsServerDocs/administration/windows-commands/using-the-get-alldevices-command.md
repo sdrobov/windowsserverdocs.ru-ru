@@ -1,6 +1,6 @@
 ---
 title: Get-Аллдевицес
-description: Раздел команд Windows для Get-Аллдевицес, в котором отображаются свойства служб развертывания Windows для всех предварительно подготовленных компьютеров.
+description: Справочный раздел по Get-Аллдевицес, в котором отображаются свойства служб развертывания Windows для всех предварительно подготовленных компьютеров.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 929a74b6cccaed6e85015648538c1ca875b62208
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 26e114be7ecf104687da237636b54b79e4114591
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831417"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720903"
 ---
 # <a name="get-alldevices"></a>Get-Аллдевицес
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает свойства служб развертывания Windows для всех предварительно подготовленных компьютеров. Предварительно подготовленный компьютер — это физический компьютер, связанный с учетной записью компьютера в доменных службах Active Directory.
 
@@ -29,16 +29,16 @@ wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server 
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Forest: {Да &#124; нет}]|Указывает, должны ли службы развертывания Windows возвращать компьютеры во всем лесу или в локальном домене. Значение по умолчанию — « **нет**». Это означает, что возвращаются только компьютеры в локальном домене.|
+|[/Forest: {Да &#124; No}]|Указывает, должны ли службы развертывания Windows возвращать компьютеры во всем лесу или в локальном домене. Значение по умолчанию — « **нет**». Это означает, что возвращаются только компьютеры в локальном домене.|
 |[/Реферралсервер:<Server name>]|Возвращает только те компьютеры, которые предварительно подготовлены для указанного сервера.|
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы просмотреть все компьютеры, введите одно из следующих действий:
 ```
 wdsutil /Get-AllDevices
 wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[подкоманды: set-Device](subcommand-set-device.md)
-[с помощью команды Add-Device](using-the-add-device-command.md)
-[с помощью команды Get-Device](using-the-get-device-command.md) .
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Command-Line Syntax Key](command-line-syntax-key.md)
+Подкоманда для синтаксиса командной строки[: Set-Device](subcommand-set-device.md)
+[с помощью команды](using-the-add-device-command.md)
+Add-Device[с помощью команды Get-Device](using-the-get-device-command.md) .

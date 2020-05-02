@@ -1,6 +1,6 @@
 ---
 title: sysocmgr
-description: Команды Windows для sysocmgr, которые устарели и не гарантны поддерживать в будущих выпусках Windows.
+description: Справочный раздел для sysocmgr, который является устаревшим и не гарантируется в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8f410d99fa1296cdf2577d57368fda58cbdfd04
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 513bcab45b16f82e7f3dac0d77587a8db9d1c327
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833597"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721587"
 ---
 # <a name="sysocmgr"></a>sysocmgr
 

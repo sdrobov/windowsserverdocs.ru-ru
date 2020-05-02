@@ -1,6 +1,6 @@
 ---
 title: tsdiscon
-description: Раздел команд Windows для тсдискон, который отключает сеанс от сервера узла сеансов удаленных рабочих столов.
+description: Справочный раздел по тсдискон, который отключает сеанс от сервера узла сеансов удаленных рабочих столов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,23 +9,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b008fa920290043b64e7421e91a545123634f1e7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e2a97d1b157445fd43acce5a80f3d793ed5ae5af
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832517"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721262"
 ---
 # <a name="tsdiscon"></a>tsdiscon
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отключает сеанс от сервера узла сеансов удаленный рабочий стол.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -36,11 +36,11 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 
 |Параметр|Описание|
 |-------|--------|
-|\<SessionId >|Указывает идентификатор сеанса для отключения.|
-|\<SessionName >|Указывает имя сеанса для отключения.|
-|/Server:\<ServerName >|Указывает сервер терминалов, содержащий сеанс, который необходимо отключить. В противном случае используется текущий сервер узла сеансов удаленных рабочих столов.|
+|\<SessionId>|Указывает идентификатор сеанса для отключения.|
+|\<SessionName>|Указывает имя сеанса для отключения.|
+|/Server:\<ServerName>|Указывает сервер терминалов, содержащий сеанс, который необходимо отключить. В противном случае используется текущий сервер узла сеансов удаленных рабочих столов.|
 |/v|Отображает сведения о выполняемых действиях.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 -   Для отключения другого пользователя от сеанса необходимо иметь разрешение "полный доступ" или "отключить специальное разрешение".
@@ -49,7 +49,7 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
 -   Параметр **/Server** требуется только при использовании **тсдискон** с удаленного сервера.
 -   Не удается отключить сеанс консоли.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 - Чтобы отключить текущий сеанс, введите:
   ```
   tsdiscon
@@ -62,6 +62,6 @@ tsdiscon [<SessionID> | <SessionName>] [/server:<ServerName>] [/v]
   ```
   tsdiscon TERM04
   ```
-  ## <a name="additional-references"></a>Дополнительные материалы
-  - [Командная строка синтаксиса командной строки](command-line-syntax-key.md)
-  [службы удаленных рабочих столов (службы терминалов) Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)
+  ## <a name="additional-references"></a>Дополнительные ссылки
+  - [Справочник по параметрам](command-line-syntax-key.md)
+  синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)

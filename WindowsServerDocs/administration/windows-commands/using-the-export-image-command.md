@@ -1,6 +1,6 @@
 ---
 title: Export-Image
-description: Раздел команд Windows для Export-Image, который экспортирует существующий образ из хранилища образов в другой файл образа Windows (WIM).
+description: Справочный раздел по Export-Image, который экспортирует существующий образ из хранилища образов в другой файл образа Windows (WIM).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f3e45c254cc6782a61828fa12e479110836e5de5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 477859687732fa2cccdc782edb81fdd348f313c5
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80831427"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82720915"
 ---
 # <a name="export-image"></a>Export-Image
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Экспортирует существующий образ из хранилища образов в другой файл образа Windows (WIM).
 
@@ -47,15 +47,15 @@ wdsutil [Options] /Export-Imagmedia:<Image name> [/Server:<Server name>]
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-носитель:<Image name>|Указывает имя экспортируемого образа.|
+носител<Image name>|Указывает имя экспортируемого образа.|
 |[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
-mediaType: {Установка &#124; загрузки}|Указывает тип экспортируемого изображения.|
+mediaType: {Загрузка &#124; установка}|Указывает тип экспортируемого изображения.|
 |\Медиаграуп:<Image group name>]|Указывает группу образов, содержащую экспортируемый образ. Если имя группы образов не указано и на сервере существует только одна группа образов, то эта группа образов будет использоваться по умолчанию. Если на сервере существует более одной группы образов, необходимо указать группу образов.|
 |/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Определяет архитектуру экспортируемого образа. Так как для образов загрузки в разных архитектурах можно использовать одно и то же имя образа, задание значения архитектуры гарантирует, что будет возвращен правильный образ.|
 |[/Филенаме:<Filename>]|Если образ не может быть однозначно определен по имени, необходимо указать имя файла.|
 |/дестинатионимаже|Задает параметры для конечного образа. Эти параметры можно указать с помощью следующих параметров.<p>-/FilePath.:<File path and name> — указывает полный путь к файлу для нового образа.<br />-[/Name:<Name>] — задает отображаемое имя образа. Если имя не указано, будет использоваться отображаемое имя исходного изображения.<br />-[/Description: <Description>] — Задает описание образа.|
-|[/Overwrite: {Да &#124; без &#124; добавления}]|Определяет, будет ли перезаписан файл, указанный в параметре **/дестинатионимаже** , если существующий файл с таким именем уже существует в/филепас.<p>-   **Да** приводит к перезаписанию существующего файла.<br />-   **No** (параметр по умолчанию) приводит к возникновению ошибки, если файл с таким именем уже существует.<br />-   **append** создает добавленный образ в виде нового образа в существующем WIM-файле.|
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+|[/Overwrite: {Да &#124; нет &#124; Append}]|Определяет, будет ли перезаписан файл, указанный в параметре **/дестинатионимаже** , если существующий файл с таким именем уже существует в/филепас.<p>-   **Да** , приводит к перезаписанию существующего файла.<br />-   **Нет** (параметр по умолчанию) приводит к возникновению ошибки, если файл с таким именем уже существует.<br />-   **append** приводит к добавлению созданного образа в качестве нового образа в существующий WIM-файл.|
+## <a name="examples"></a>Примеры
 Чтобы экспортировать загрузочный образ, введите один из следующих элементов:
 ```
 wdsutil /Export-Imagmedia:WinPE boot imagemediatype:Boot /Architecture:x86 /DestinationImage /Filepath:C:\temp\boot.wim
@@ -68,11 +68,11 @@ wdsutil /Export-Imagmedia:Windows Vista with Officemediatype:Install /Destinatio
 wdsutil /verbose /Progress /Export-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
 /Filename:install.wim /DestinationImage /Filepath:\\server\share\export.wim /Name:Exported Windows image /Description:Windows Vista image from WDS server /Overwrite:append
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[Использование команды add-Image](using-the-add-image-command.md)
-[помощью команды Copy-](using-the-copy-image-command.md) Image
-помощью команды [Get-](using-the-get-image-command.md) Image
-[помощью команды Remove](using-the-remove-image-command.md) -image,
-[с помощью команды replace-](using-the-replace-image-command.md) Image
-[подкоманде: Set-Image.](subcommand-set-image.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Синтаксис](command-line-syntax-key.md)
+командной строки[с помощью команды Add-](using-the-add-image-command.md)
+Image с помощью команды[Copy-](using-the-copy-image-command.md)
+Image с командой[Get](using-the-get-image-command.md)
+-Image с помощью команды[Remove](using-the-remove-image-command.md)
+-Image с помощью команды[Replace](using-the-replace-image-command.md)
+-Image[: Set-Image](subcommand-set-image.md)

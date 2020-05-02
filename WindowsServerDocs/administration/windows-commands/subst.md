@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43cbc57aba29ea0b9150dccdfc566a93017a09a5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 62ba0de33e69998e7d3e343b1e53c1de7e630e10
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80833647"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721611"
 ---
 # <a name="subst"></a>subst
 
@@ -22,7 +22,7 @@ ms.locfileid: "80833647"
 
 Связывает путь с буквой диска. При использовании без параметров **subst** отображает имена используемых виртуальных дисков.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,10 +35,10 @@ subst <Drive1>: /d
 
 |Параметр|Описание|
 |---------|-----------|
-|> \<диск1:|Указывает виртуальный диск, которому необходимо назначить путь.|
-|[\<диск2 >:]\<путь >|Указывает физический диск и путь, который вы хотите назначить виртуальному диску.|
+|\<> диск1:|Указывает виртуальный диск, которому необходимо назначить путь.|
+|[\<Диск2>:] \<> пути|Указывает физический диск и путь, который вы хотите назначить виртуальному диску.|
 |/d|Удаляет подставляемый (виртуальный) диск.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -59,7 +59,7 @@ subst <Drive1>: /d
 
     `Invalid parameter - drive1:`
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 
 Чтобы создать виртуальный диск Z для пути Б:\усер\бетти\формс, введите:
 ```
@@ -70,6 +70,6 @@ subst z: b:\user\betty\forms
 z: 
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -1,6 +1,6 @@
 ---
 title: UniqueID
-description: Раздел команд Windows для UniqueId, который отображает или задает идентификатор таблицы разделов GUID (GPT) или подпись основной загрузочной записи (MBR) для диска с фокусом.
+description: Справочный раздел по UniqueId, который отображает или задает идентификатор таблицы разделов GUID (GPT) или подпись основной загрузочной записи (MBR) для диска с фокусом.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29d7bf0498e76d5192e986aadabb77d575a8102b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: efaafe889f04511ceef7441b0a42b73259aadedf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832317"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721183"
 ---
 # <a name="uniqueid"></a>UniqueID
 
@@ -33,7 +33,7 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 
 |  Параметр   |                                                                                             Описание                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID = {\<DWORD > |                                                                                               <GUID>}                                                                                                |
+| ID = {\<DWORD> |                                                                                               <GUID>}                                                                                                |
 |    Noerr     | Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 
 ## <a name="remarks"></a>Примечания
@@ -41,7 +41,7 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 -   Эта команда работает на базовых и динамических дисках.
 -   Для завершения этой команды необходимо выбрать диск. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы отобразить подпись диска MBR с фокусом, введите:
 ```
@@ -56,5 +56,5 @@ uniqueid disk id=5f1b2c36
 uniqueid disk id=baf784e7-6bbd-4cfb-aaac-e86c96e166ee
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 

@@ -1,6 +1,6 @@
 ---
 title: Start-Server
-description: Раздел команд Windows для Start-Server, который запускает многоадресную передачу, пространство имен, транспортный сервер или все службы на сервере служб развертывания Windows.
+description: Справочный раздел по Start-Server, который запускает многоадресную передачу, пространство имен, транспортный сервер или все службы на сервере служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 05a7df2ed9f1276588808434d6b963e470ee1a73
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 199f84f4ca75f45ff9d1964bfe06b9f643663efb
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832987"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721410"
 ---
 # <a name="start-server"></a>Start-Server
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Запускает многоадресную передачу, пространство имен, транспортный сервер или все службы на сервере служб развертывания Windows.
 

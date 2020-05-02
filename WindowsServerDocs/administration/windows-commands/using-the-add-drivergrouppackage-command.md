@@ -1,6 +1,6 @@
 ---
 title: Add-Дриверграуппаккаже
-description: Раздел команд Windows для Add-Дриверграуппаккаже, который добавляет пакет драйверов в группу драйверов.
+description: Справочный раздел по Add-Дриверграуппаккаже, который добавляет пакет драйверов в группу драйверов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6753baeb03b99ee149250d41844469a5008f5ecd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4baf4f16740e65c432cc09ca24270ab479346ac2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80832077"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721111"
 ---
 # <a name="add-drivergrouppackage"></a>Add-Дриверграуппаккаже
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Добавляет пакет драйверов в группу драйверов.
 
@@ -31,11 +31,11 @@ wdsutil /add-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Name>
 |         Параметр         |                                                                                                                                               Описание                                                                                                                                               |
 |---------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | /Дриверграуп:<Group Name> |                                                                                                                                 Указывает имя группы драйверов.                                                                                                                                 |
-|   /Server:<Server name>   |                                                                                  Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.                                                                                  |
+|   Сервером<Server name>   |                                                                                  Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.                                                                                  |
 |   /Дриверпаккаже:<Name>   |                                                                      Указывает имя пакета драйверов, добавляемого в группу. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени.                                                                       |
-|      /Паккажеид:<ID>      | Указывает идентификатор пакета. Чтобы найти идентификатор пакета, щелкните группу драйверов, в которой находится пакет (или узел **все пакеты** ), щелкните правой кнопкой мыши пакет и выберите пункт **свойства**. Идентификатор пакета указан на вкладке **Общие** , например: **{DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}** . |
+|      PackageId<ID>      | Указывает идентификатор пакета. Чтобы найти идентификатор пакета, щелкните группу драйверов, в которой находится пакет (или узел **все пакеты** ), щелкните правой кнопкой мыши пакет и выберите пункт **свойства**. Идентификатор пакета указан на вкладке **Общие** , например: **{DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}**. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы добавить пакет драйвера, введите один из следующих элементов:
 ```
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
@@ -43,8 +43,8 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972
 ```
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[помощью команды Add-Дриверграуппаккажес](using-the-add-drivergrouppackages-command.md) ,
-[помощью](using-the-add-driverpackage-command.md) команды Add-дриверпаккаже,
-[с помощью подкоманды Add-аллдриверпаккажес](using-the-add-alldriverpackages-subcommand.md) .
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Ключ](command-line-syntax-key.md)
+синтаксиса командной строки[с помощью команды](using-the-add-drivergrouppackages-command.md)
+Add-дриверграуппаккажес с помощью команды Add-[дриверпаккаже](using-the-add-driverpackage-command.md)
+[с использованием подкоманды Add-аллдриверпаккажес](using-the-add-alldriverpackages-subcommand.md) .

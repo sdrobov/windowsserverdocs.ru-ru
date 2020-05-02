@@ -1,6 +1,6 @@
 ---
-title: Имитировать восстановление
-description: Раздел команд Windows для имитации восстановления, который проверяет участие модуля записи в сеансах восстановления на компьютере без выдачи событий предварительного восстановления или восстановления в модули записи.
+title: имитировать восстановление
+description: Справочный раздел по моделированию средства записи, который проверяет участие в сеансах восстановления на компьютере без выдачи событий предварительного восстановления или восстановления в модули записи.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 024d654864c000e44bccb9ddb167c6147444cc00
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1bab6c56cddc1d2ac95dc70205b0990b82fbfd12
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834107"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721777"
 ---
 # <a name="simulate-restore"></a>Имитировать восстановление
 
@@ -31,6 +31,6 @@ simulate restore
 -   **Имитация восстановления** используется для проверки успешности восстановления с помощью модулей записи.
 -   Прежде чем можно будет использовать **имитацию восстановления**, необходимо загрузить файл метаданных Diskshadow с помощью команды **загрузить метаданные** . При этом загружаются выбранные модули записи и компоненты для восстановления.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
