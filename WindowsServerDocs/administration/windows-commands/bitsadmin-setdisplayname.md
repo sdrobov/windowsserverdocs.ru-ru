@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdisplayname
-description: Раздел команд Windows для **битсадмин сетдисплайнаме**, который задает отображаемое имя указанного задания.
+description: Справочный раздел по команде битсадмин сетдисплайнаме, который задает отображаемое имя указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b1086903dd130392800f325c451bb4750fbf8fa
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 382cb2f20f0374c2d2787c4c3d88670b4f7260cd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123005"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719390"
 ---
 # <a name="bitsadmin-setdisplayname"></a>bitsadmin setdisplayname
 
@@ -30,17 +30,19 @@ bitsadmin /setdisplayname <job> <display_name>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | display_name | Текст, используемый в качестве отображаемого имени для конкретного задания. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере задается отображаемое имя задания *мидовнлоаджоб*.
+Чтобы задать отображаемое имя для задания *мидовнлоаджоб*, сделайте следующее:
 
 ```
-C:\>bitsadmin /setdisplayname myDownloadJob
+bitsadmin /setdisplayname myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

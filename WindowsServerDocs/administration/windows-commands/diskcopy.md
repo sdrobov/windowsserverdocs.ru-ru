@@ -1,6 +1,6 @@
 ---
 title: diskcopy
-description: Команда Windows для команды diskcopy, которая копирует содержимое гибкого диска с исходного диска на форматированный или неформатированный гибкий диск на целевом диске.
+description: Справочный раздел по diskcopy, который копирует содержимое гибкого диска с исходного диска на форматированный или неформатированный гибкий диск на целевом диске.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/07/2018
-ms.openlocfilehash: 675694503cab207f05fd6b48e0d17c23196f85d0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b5c9186a539a58ed0d3362ba83d7a3bcedcaabad
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845547"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719469"
 ---
 # <a name="diskcopy"></a>diskcopy
 
 Копирует содержимое гибкого диска с исходного диска на форматированный или неформатированный гибкий диск на целевом диске. Если используется без параметров, **команда diskcopy** использует текущий диск для исходного и целевого дисков.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 > [!NOTE]
 > Эта команда не включена в Windows 10.
@@ -35,10 +35,10 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<диск1 >|Указывает диск, содержащий исходный диск.|
-|\<диск2 >|Указывает диск, на котором находится целевой диск.|
+|\<Диск1>|Указывает диск, содержащий исходный диск.|
+|\<Диск2>|Указывает диск, на котором находится целевой диск.|
 |/v|Проверяет, правильно ли скопированы данные. Этот параметр замедляет процесс копирования.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -83,7 +83,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     The following table explains each exit code.
     
-    |Код завершения|Описание|
+    |Код выхода|Описание|
     |---------|-----------|
     |0|Операция копирования выполнена успешно|
     |1|Произошла некритическая ошибка чтения или записи|
@@ -92,7 +92,7 @@ diskcopy [<Drive1>: [<Drive2>:]] [/v]
 
     To process the exit codes that are returned by **diskcomp**, you can use the *ERRORLEVEL* environment variable on the **if** command line in a batch program.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы скопировать диск в дисководе B на диск в дисководе A, введите:
 ```
@@ -102,6 +102,6 @@ diskcopy b: a:
 
 diskcopy a. a:
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

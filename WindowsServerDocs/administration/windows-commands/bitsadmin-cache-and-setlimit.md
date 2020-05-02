@@ -1,6 +1,6 @@
 ---
-title: кэш битсадмин и сетлимит
-description: Команды Windows для **кэша битсадмин и сетлимит**, устанавливающие предельный размер кэша.
+title: bitsadmin cache и setlimit
+description: Справочный раздел по битсадмин кэшу и команде сетлимит, который устанавливает предельный размер кэша.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 746ee0b69da8f5bd22fec2ccbd432126cc25d94d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a4c41102bfb87ff6d48113c4e85a821b821b5b01
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850877"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718291"
 ---
-# <a name="bitsadmin-cache-and-setlimit"></a>кэш битсадмин и сетлимит
+# <a name="bitsadmin-cache-and-setlimit"></a>bitsadmin cache и setlimit
 
 Задает предельный размер кэша.
 
@@ -32,14 +32,16 @@ bitsadmin /cache /setlimit percent
 | -------------- | -------------- |
 | percent | Предельный размер кэша, определенный в процентах от общего пространства на жестком диске. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере размер кэша ограничивается 50%.
+Чтобы установить предельный размер кэша 50%:
 
 ```
-C:\>bitsadmin /cache /setlimit 50
+bitsadmin /cache /setlimit 50
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда кэша битсадмин](bitsadmin-cache.md)

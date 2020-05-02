@@ -1,6 +1,6 @@
 ---
 title: BdeHdCfg дривеинфо
-description: Раздел команд Windows для **BdeHdCfg дривеинфо**, который отображает букву диска, общий размер, максимальный объем свободного пространства и характеристики секции.
+description: Справочный раздел по команде BdeHdCfg дривеинфо, который отображает букву диска, общий размер, максимальный объем свободного пространства и характеристики секции.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,46 +9,43 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9c598ea2d1d140090d623b3b48dbcc1be51ee66c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b18b4c3e128cd17353d369b418a049d0208cb654
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851067"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718691"
 ---
 # <a name="bdehdcfg-driveinfo"></a>BdeHdCfg: дривеинфо
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает букву диска, общий размер, максимальный объем свободного пространства и характеристики секции. В списке перечислены только допустимые секции. Нераспределенное место отсутствует в списке, если уже существуют четыре первичных или расширенных раздела.
 
-Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+>[!NOTE]
+> Эта команда предназначена только для информационных целей и не вносит изменения на диск.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bdehdcfg -driveinfo <DriveLetter>
+bdehdcfg -driveinfo <drive_letter>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | --------- | ----------- |
-| <DriveLetter> | Указывает букву диска, за которой следует двоеточие. |
+| <drive_letter> | Указывает букву диска, за которой следует двоеточие. |
 
-## <a name="remarks"></a>Примечания
+## <a name="example"></a>Пример
 
-Команда предназначена только для информационных целей и не вносит изменения в диск.
-
-## <a name="example"></a><a name=BKMK_Examples></a>Например
-
-В следующем примере отображаются сведения о диске для диска C.
+Чтобы отобразить сведения о диске диска C:
 
 ```
 bdehdcfg  driveinfo C:
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

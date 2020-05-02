@@ -1,6 +1,6 @@
 ---
-title: detail
-description: Раздел команд Windows для подробностей, в котором отображаются сведения о выбранном диске, разделе, томе или виртуальном жестком диске (VHD).
+title: Описание
+description: Справочный раздел для подробностей, в котором отображаются сведения о выбранном диске, разделе, томе или виртуальном жестком диске (VHD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 71f4f72b5a11e7af9c245b0491902687cb352b66
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4601e637f9e087dfa9647d633cee6a1dbc80638f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846377"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719609"
 ---
-# <a name="detail"></a>detail
+# <a name="detail"></a>Описание
 
 Отображает сведения о выбранном диске, разделе, томе или виртуальном жестком диске (VHD).
 
@@ -38,7 +38,7 @@ detail vdisk
 |[Подробный том](detail-volume.md)|Отображает диски, на которых находится текущий том.|
 |[Подробные сведения VDISK](detail-vdisk.md)|Отображает свойства выбранного виртуального жесткого диска.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

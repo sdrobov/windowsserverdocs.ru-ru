@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdescription
-description: Раздел команд Windows для **битсадмин SetDescription**, который задает описание указанного задания.
+description: Справочный раздел по команде битсадмин SetDescription, который задает описание указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b62e6b030c23c475418cd6f2c63f04edba1acff
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: dc76da7cbe348461a79984b8061767711e090da7
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123017"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719309"
 ---
 # <a name="bitsadmin-setdescription"></a>bitsadmin setdescription
 
@@ -30,17 +30,19 @@ bitsadmin /setdescription <job> <description>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | description | Текст, используемый для описания задания. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере извлекается описание задания с именем *мидовнлоаджоб*.
+Чтобы получить описание задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /setdescription myDownloadJob music_downloads
+bitsadmin /setdescription myDownloadJob music_downloads
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

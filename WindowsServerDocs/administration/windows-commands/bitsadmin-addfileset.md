@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfileset
-description: Раздел команд Windows для **битсадмин аддфилесет**, который добавляет один или несколько файлов в указанное задание.
+description: Справочный раздел по команде битсадмин аддфилесет, который добавляет один или несколько файлов в указанное задание.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c4cff7dc8439fe8e1c54d1f5d231d1b487dc70c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d610c1330818cf820923b6d4f2e3555dc477444b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850977"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718481"
 ---
 # <a name="bitsadmin-addfileset"></a>bitsadmin addfileset
 
@@ -23,22 +23,24 @@ ms.locfileid: "80850977"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /addfileset <Job> <TextFile>
+bitsadmin /addfileset <job> <textfile>
 ```
 
 ### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | --------- | ----------- |
-| Job | Отображаемое имя задания или идентификатор GUID. |
-| TextFile | Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла. **Примечание.** Имена разделяются пробелами. Строки, начинающиеся с `#` символа, обрабатываются как комментарии. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
+| textfile | Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла. **Примечание.** Имена должны быть разделены пробелами. Строки, начинающиеся `#` с символа, обрабатываются как комментарии. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 ```
-C:\>bitsadmin /addfileset files.txt
+bitsadmin /addfileset files.txt
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

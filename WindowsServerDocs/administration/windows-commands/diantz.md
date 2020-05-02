@@ -1,6 +1,6 @@
 ---
 title: diantz
-description: Раздел команд Windows для диантз, который совпадает с командой makecab.
+description: Справочный раздел для диантз, который совпадает с командой makecab.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,21 +9,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d512e6a6bbb12775fc86bb3a21b20d9ed8d28356
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2ce0094e1f1c24f8f1287ab680b9f4e9c7a8590c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845577"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719510"
 ---
 # <a name="diantz"></a>diantz
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Эта команда аналогична команде **makecab** .
 
 Синтаксис и параметры см. в разделе [makecab](makecab.md) .
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

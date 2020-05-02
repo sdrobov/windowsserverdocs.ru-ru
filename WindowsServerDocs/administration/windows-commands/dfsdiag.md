@@ -1,6 +1,6 @@
 ---
 title: дфсдиаг
-description: Раздел команд Windows для дфсдиаг, который предоставляет диагностические сведения для пространств имен DFS.
+description: Справочный раздел по дфсдиаг, который предоставляет диагностические сведения для пространств имен DFS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2c895dabbbafbe8ea253920d3bc6de17f42918e6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2d5a9b147994628ccad6a723311decbccbe82ec6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846197"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719542"
 ---
 # <a name="dfsdiag"></a>дфсдиаг
 
@@ -36,8 +36,8 @@ dfsdiag [ /TestDCs [/Domain:<Domain name>]| /TestSites </Machine:<server name>| 
 |[Дфсдиаг Тестдфсконфиг](dfsdiag-testdfsconfig.md)|Проверяет конфигурацию пространства имен DFS.|
 |[Дфсдиаг Тестдфсинтегрити](dfsdiag-testdfsintegrity.md)|Проверяет целостность пространства имен DFS.|
 |[Дфсдиаг Тестреферрал](dfsdiag-testreferral.md)|Проверяет ответы на ссылки.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

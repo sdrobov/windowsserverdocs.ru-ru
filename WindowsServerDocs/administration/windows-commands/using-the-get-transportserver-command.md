@@ -1,6 +1,6 @@
 ---
 title: Get-Транспортсервер
-description: Раздел команд Windows для Get-Транспортсервер, который отображает сведения о указанном транспортном сервере.
+description: Справочный раздел по Get-Транспортсервер, в котором отображаются сведения о указанном транспортном сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 549eb32536bda201a81e5f40ef408359fae39f4b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 82ab5f901240f964bd22e7fb8053ed95b1c6fe51
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80830817"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719725"
 ---
 # <a name="get-transportserver"></a>Get-Транспортсервер
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о указанном транспортном сервере.
 
@@ -31,7 +31,7 @@ wdsutil [Options] /Get-TransportServer [/Server:<Server name>] /Show:{Config}
 |-------|--------|
 |[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |/Show: {config}|Возвращает сведения о конфигурации указанного транспортного сервера.|
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы просмотреть сведения о сервере, введите:
 ```
 wdsutil /Get-TransportServer /Show:Config
@@ -40,10 +40,10 @@ wdsutil /Get-TransportServer /Show:Config
 ```
 wdsutil /Get-TransportServer /Server:MyWDSServer /Show:Config
 ```
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды Disable-Транспортсервер](using-the-disable-transportserver-command.md) ,
-[с помощью команды Enable-транспортсервер](using-the-enable-transportserver-command.md)
-подкоманде [: Set-транспортсервер](subcommand-set-transportserver.md)
-подкоманде: [Start-транспортсервер](subcommand-start-transportserver.md)
-[подкоманды:-транспортсервер](subcommand-stop-transportserver.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Ключ](command-line-syntax-key.md)
+синтаксиса командной строки[с помощью команды](using-the-disable-transportserver-command.md)
+Disable-транспортсервер[с командой Enable-транспортсервер](using-the-enable-transportserver-command.md)
+[: Set-транспортсервер](subcommand-set-transportserver.md)
+подкоманда:[Start-транспортсервер](subcommand-start-transportserver.md)
+[подкоманда:-транспортсервер](subcommand-stop-transportserver.md)

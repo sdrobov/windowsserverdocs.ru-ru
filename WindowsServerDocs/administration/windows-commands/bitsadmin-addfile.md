@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfile
-description: Раздел команд Windows для **битсадмин AddFile**, который добавляет файл к указанному заданию.
+description: Справочный раздел по команде битсадмин AddFile, который добавляет файл к указанному заданию.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 330e79eb2ba5a824cea54094f64ceb6f9cfd66b9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: eaa7d77c9d6160bbd2bdf6a1431232af22bc3e37
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850967"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718499"
 ---
 # <a name="bitsadmin-addfile"></a>bitsadmin addfile
 
@@ -23,25 +23,29 @@ ms.locfileid: "80850967"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bitsadmin /AddFile <Job> <RemoteURL> <LocalName>
+bitsadmin /addfile <job> <remoteURL> <localname>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | --------- | ----------- |
-| Job | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | ремотеурл | URL-адрес файла на сервере. |
-| Локально | Имя файла на локальном компьютере. *LocalName* должно содержать абсолютный путь к файлу. |
+| localname | Имя файла на локальном компьютере. *LocalName* должно содержать абсолютный путь к файлу. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-Добавьте файл в задание. Повторите этот вызов для каждого файла, который нужно добавить. Если несколько заданий используют *мидовнлоаджоб* в качестве имени, необходимо заменить *мидовнлоаджоб* на GUID задания для уникальной идентификации задания.
+Чтобы добавить файл в задание, выполните следующие действия.
 
 ```
-C:\>bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
+bitsadmin /addfile myDownloadJob http://downloadsrv/10mb.zip c:\10mb.zip
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+Повторите этот вызов для каждого добавляемого файла. Если несколько заданий используют *мидовнлоаджоб* в качестве имени, необходимо заменить *мидовнлоаджоб* на GUID задания для уникальной идентификации задания.
 
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)&copy;
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: подробное секционирование
-description: Раздел команд Windows для подробной секции, в которой отображаются свойства выбранной секции.
+description: Справочный раздел по подробному разделу, в котором отображаются свойства выбранной секции.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ac4c5886dc24a2cf36fcbe0d7a4744bad6f5aa68
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9ac71e27f5008d6eda0f4c67a7a8129a3bea6365
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846447"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719639"
 ---
 # <a name="detail-partition"></a>подробное секционирование
 
@@ -30,14 +30,14 @@ detail partition
 
 -   Для выполнения этой операции необходимо выбрать секцию. Используйте команду **Выбор секции** , чтобы выбрать секцию и переместить фокус на нее.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы просмотреть свойства выбранной секции, введите:
 ```
 detail partition
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

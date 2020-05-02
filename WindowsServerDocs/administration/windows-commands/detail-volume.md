@@ -1,6 +1,6 @@
 ---
 title: подробный том
-description: Раздел команд Windows для подробного тома, в котором отображаются диски, на которых находится текущий том.
+description: Справочный раздел для подробного тома, в котором отображаются диски, на которых находится текущий том.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f0441beba769066c593e77b55b9266918e5f778
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2958c82b1dfc3b99d0e15690ef9857e7d83b244f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846328"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719618"
 ---
 # <a name="detail-volume"></a>подробный том
 
@@ -31,14 +31,14 @@ detail volume
 -   Для выполнения этой операции необходимо выбрать том. Используйте команду **выбрать том** , чтобы выбрать том и переместить фокус на него.
 -   Сведения о томе неприменимы к томам только для чтения, например DVD-дискам или дисководам компакт-дисков.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы просмотреть все диски, в которых находится текущий том, введите:
 ```
 detail volume
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

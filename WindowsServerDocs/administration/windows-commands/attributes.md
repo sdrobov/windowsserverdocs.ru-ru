@@ -1,6 +1,6 @@
 ---
-title: атрибуты
-description: Раздел команд Windows для **атрибутов**, который отображает, устанавливает или очищает атрибуты диска или тома.
+title: attributes
+description: Справочный раздел по команде Attributes, которая отображает, устанавливает или очищает атрибуты диска или тома.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,31 +9,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e8faed6c0336315bf584f7f05e523b3adc05bdb0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cbee357c791f0f02e2d4d069e9e2886087119db1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851227"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719159"
 ---
-# <a name="attributes"></a>атрибуты
+# <a name="attributes"></a>attributes
 
 Отображает, устанавливает или очищает атрибуты диска или тома.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Attributes disk
-Attributes volume
+attributes disk
+attributes volume
 ```
 
 ### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | --------- | ----------- |
-| [Диск с атрибутами](attributes-disk.md) | Отображает, устанавливает или очищает атрибуты диска. |
+| [диск с атрибутами](attributes-disk.md) | Отображает, устанавливает или очищает атрибуты диска. |
 | [Атрибуты тома](attributes-volume.md) | Отображает, устанавливает или очищает атрибуты тома. |
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

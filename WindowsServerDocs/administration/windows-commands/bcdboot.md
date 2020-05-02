@@ -1,6 +1,6 @@
 ---
 title: bcdboot
-description: Раздел команд Windows для **BCDboot**, который быстро настраивает системный раздел или восстанавливает среду загрузки, расположенную в системном разделе.
+description: Справочный раздел по команде BCDboot, который быстро настраивает системный раздел или восстановление среды загрузки, расположенной в системном разделе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 637170cbd8ee4f3c11ee1dc77a0cd49b5dfa3038
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cde91738f524350f72f0278495e4bd46a3960e6f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851087"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718702"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -30,14 +30,14 @@ bcdboot <source> [/l] [/s]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| источник | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
+| source | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
 | /l | Задает языковой стандарт. Язык по умолчанию — английский (США). |
 | /s | Указывает букву тома системного раздела. По умолчанию используется системный раздел, определяемый встроенным по. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Сведения о том, где найти BCDboot и примеры использования этой команды, см. в разделе [Параметры командной строки BCDboot](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)x) .
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

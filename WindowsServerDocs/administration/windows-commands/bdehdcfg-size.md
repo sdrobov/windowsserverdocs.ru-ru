@@ -1,6 +1,6 @@
 ---
 title: Размер BdeHdCfg
-description: Раздел команд Windows для **BdeHdCfg size**, который указывает размер системного раздела при создании нового системного диска.
+description: Справочный раздел по команде размера BdeHdCfg, который указывает размер системного раздела при создании нового системного диска.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,48 +9,42 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c72bdfd0b8bf4dfd0aa36885ceb7fd249a18c332
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 27662a46045a8701b40697198cddf1dcb1b51c1e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851027"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718613"
 ---
 # <a name="bdehdcfg-size"></a>BdeHdCfg: размер
 
-Указывает размер системного раздела при создании нового системного диска.
+Указывает размер системного раздела при создании нового системного диска. Если размер не указан, средство будет использовать значение по умолчанию 300 МБ. Минимальный размер системного диска составляет 100 МБ. Если вы будете хранить в системном разделе Восстановление системы или другие системные средства, следует соответственно увеличить размер.
 
-Пример того, как можно использовать эту команду, см. в разделе [примеры](#BKMK_Examples).
+> [!NOTE]
+> Команда **size** не может быть объединена с `target <drive_letter> merge` командой.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bdehdcfg -target {default|unallocated|<DriveLetter> shrink} -size <SizeinMB>
+bdehdcfg -target {default|unallocated|<drive_letter> shrink} -size <size_in_mb>
 ```
 
 #### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | --------- | ----------- |
-| `<SizeinMB>` | Указывает количество мегабайтов (МБ), используемых для новой секции. |
+| `<size_in_mb>` | Указывает количество мегабайтов (МБ), используемых для новой секции. |
 
-## <a name="remarks"></a>Примечания
+## <a name="examples"></a>Примеры
 
-Если размер не указан, средство будет использовать значение по умолчанию 300 МБ. Минимальный размер системного диска составляет 100 МБ. Если вы будете хранить в системном разделе Восстановление системы или другие системные средства, следует соответственно увеличить размер.
-
-> [!NOTE]
-> Команду **size** нельзя сочетать с **целевой** командой `<DriveLetter>` **Merge** .
-
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
-
-В следующем примере показано использование команды **size** для выделения 500 МБ на системном диске по умолчанию.
+Чтобы выделить 500 МБ на системный диск по умолчанию:
 
 ```
 bdehdcfg -target default -size 500
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [BdeHdCfg](bdehdcfg.md)
+- [bdehdcfg](bdehdcfg.md)

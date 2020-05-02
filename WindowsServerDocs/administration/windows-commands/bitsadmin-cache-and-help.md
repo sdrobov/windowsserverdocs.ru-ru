@@ -1,6 +1,6 @@
 ---
-title: кэш битсадмин и Справка
-description: Раздел команд Windows для **кэша битсадмин и справки**, в котором отображаются сведения об использовании командной строки для коммутаторов **кэша** .
+title: bitsadmin cache и help
+description: Справочный раздел по битсадмин кэшу и команде Help, который отображает сведения об использовании командной строки для коммутаторов **кэша** .
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c636210d9c4631bd82028e681274e67d16a81931
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 79d8dd2ce5af1e1160692f13974c56842fb163cd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850917"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718356"
 ---
-# <a name="bitsadmin-cache-and-help"></a>кэш битсадмин и Справка
+# <a name="bitsadmin-cache-and-help"></a>bitsadmin cache и help
 
 Отображает сведения об использовании командной строки для коммутаторов **кэша** .
 
@@ -26,14 +26,16 @@ ms.locfileid: "80850917"
 bitsadmin /cache /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-Следующая команда отображает справку командной строки для параметров **кэша** .
+Отображение справки командной строки для параметров **кэша** .
 
 ```
 bitsadmin /cache /help
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда кэша битсадмин](bitsadmin-cache.md)

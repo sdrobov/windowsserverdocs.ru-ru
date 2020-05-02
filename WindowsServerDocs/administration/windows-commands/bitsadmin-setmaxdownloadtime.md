@@ -1,6 +1,6 @@
 ---
-title: битсадмин сетмаксдовнлоадтиме
-description: Раздел команд Windows для **битсадмин сетмаксдовнлоадтиме**, который задает время ожидания загрузки в секундах.
+title: bitsadmin setmaxdownloadtime
+description: Справочный раздел по команде битсадмин сетмаксдовнлоадтиме, который задает время ожидания загрузки в секундах.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f07931dfb9fabaec272384dced6d60f1335b6a94
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 8192826570c9dae6aa9d286596336c3e589c9cbd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122915"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719688"
 ---
-# <a name="bitsadmin-setmaxdownloadtime"></a>битсадмин сетмаксдовнлоадтиме
+# <a name="bitsadmin-setmaxdownloadtime"></a>bitsadmin setmaxdownloadtime
 
 Задает время ожидания загрузки в секундах.
 
@@ -30,17 +30,19 @@ bitsadmin /setmaxdownloadtime <job> <timeout>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | timeout | Длина времени ожидания скачивания в секундах. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере задается время ожидания для задания с именем *мидовнлоаджоб* равным 10 секундам.
+Чтобы задать время ожидания для задания с именем *мидовнлоаджоб* , равное 10 секундам.
 
 ```
-C:\>bitsadmin /setmaxdownloadtime myDownloadJob 10
+bitsadmin /setmaxdownloadtime myDownloadJob 10
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

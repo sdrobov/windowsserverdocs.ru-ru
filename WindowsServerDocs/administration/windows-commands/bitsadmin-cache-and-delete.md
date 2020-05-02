@@ -1,6 +1,6 @@
 ---
-title: кэш битсадмин и удаление
-description: Команды Windows для **кэша битсадмин и удаления**, удаляющие определенную запись кэша.
+title: bitsadmin cache и delete
+description: Справочный раздел по команде битсадмин Cache и DELETE, который удаляет определенную запись кэша.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0fd7f1db83a62dd9c1085d6afdcf509c1c3ac8cf
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 62c0c3d5b2cc188e8a8987c7ca502cdeaf932410
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850947"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718461"
 ---
-# <a name="bitsadmin-cache-and-delete"></a>кэш битсадмин и удаление
+# <a name="bitsadmin-cache-and-delete"></a>bitsadmin cache и delete
 
 Удаляет определенную запись кэша.
 
@@ -32,14 +32,16 @@ bitsadmin /cache /delete recordID
 | -------------- | -------------- |
 | recordID | Идентификатор GUID, связанный с записью кэша. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере удаляется запись кэша с RecordID {6511FB02-E195-40A2-B595-E8E2F8F47702}.
+Чтобы удалить запись кэша с RecordID {6511FB02-E195-40A2-B595-E8E2F8F47702}, сделайте следующее:
 
 ```
-C:\>bitsadmin /cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702}
+bitsadmin /cache /delete {6511FB02-E195-40A2-B595-E8E2F8F47702}
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда кэша битсадмин](bitsadmin-cache.md)

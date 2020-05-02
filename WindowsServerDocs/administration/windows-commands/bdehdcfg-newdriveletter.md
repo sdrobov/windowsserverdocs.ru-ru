@@ -1,6 +1,6 @@
 ---
 title: BdeHdCfg невдривелеттер
-description: Раздел команд Windows для **BdeHdCfg невдривелеттер**, который назначает новую букву диска части диска, используемой в качестве системного диска.
+description: Справочный раздел по команде BdeHdCfg невдривелеттер, который назначает новую букву диска части диска, используемой в качестве системного диска.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,43 +9,39 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a8757e7d0684912525817708fbe34953b049582
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: da09ae1469c6fc8370e6bd0f2f7a8f3efd8dc4f0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851057"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718666"
 ---
 # <a name="bdehdcfg-newdriveletter"></a>BdeHdCfg: невдривелеттер
 
-Назначает новую букву диска части диска, используемой в качестве системного диска. Пример того, как можно использовать эту команду, см. в разделе [примеры](#BKMK_Examples).
+Назначает новую букву диска части диска, используемой в качестве системного диска. Рекомендуется не назначать букву диска системному диску.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bdehdcfg -target {default|unallocated|<DriveLetter> shrink|<DriveLetter> merge} -newdriveletter <DriveLetter>
+bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge} -newdriveletter <drive_letter>
 ```
 
 #### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
 | ---------| ----------- |
-|`<DriveLetter>`|Определяет букву диска, которая будет назначена указанному целевому диску.|
+| `<drive_letter>` | Определяет букву диска, которая будет назначена указанному целевому диску. |
 
-## <a name="remarks"></a>Примечания
+## <a name="examples"></a>Примеры
 
-Рекомендуется не назначать диску букву диска системному накопителю.
-
-## <a name="examples"></a><a name="BKMK_Examples"></a>Примеров
-
-В следующем примере показано, что диску по умолчанию назначается буква P.
+Чтобы назначить диску по умолчанию букву `P`диска, сделайте следующее:
 
 ```
 bdehdcfg -target default -newdriveletter P:
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [BdeHdCfg](bdehdcfg.md)
+- [bdehdcfg](bdehdcfg.md)

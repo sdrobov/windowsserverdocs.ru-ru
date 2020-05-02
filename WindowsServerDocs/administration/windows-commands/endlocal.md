@@ -1,6 +1,6 @@
 ---
 title: endlocal
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4958c5419ed4f6374f7c6ecf09bdf67f61134d93
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f007a9ec1e86093192630011c5197740dfefe922
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80845117"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719381"
 ---
 # <a name="endlocal"></a>endlocal
 
@@ -22,7 +22,7 @@ ms.locfileid: "80845117"
 
 Завершает локализацию изменений среды в пакетном файле и восстанавливает значения переменных среды перед выполнением соответствующей команды **setlocal** .
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,7 +34,7 @@ endlocal
 
 |Параметр|Описание|
 |---------|-----------|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -45,7 +45,7 @@ endlocal
 > [!NOTE]
 > Дополнительные сведения о включении и отключении расширений команд см. в разделе [cmd](cmd.md).
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Можно локализовать переменные среды в пакетном файле. Например, следующая программа запускает пакетную программу суперапп в сети, направляет выходные данные в файл и отображает его в блокноте:
 ```
@@ -57,6 +57,6 @@ endlocal
 start notepad c:\superapp.out
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

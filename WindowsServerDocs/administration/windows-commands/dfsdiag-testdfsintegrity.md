@@ -1,6 +1,6 @@
 ---
 title: дфсдиаг Тестдфсинтегрити
-description: Раздел команд Windows для **Дфсдиаг тестдфсинтегрити**, который проверяет целостность пространства имен распределенная ФАЙЛОВАЯ система (DFS).
+description: Справочный раздел по **Дфсдиаг тестдфсинтегрити**, который проверяет целостность пространства имен распределенная ФАЙЛОВАЯ система (DFS).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 714b79369898338a4e4a6e4fad8487709ab4fc60
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 21aa6ef3d7d4a7b4a9c64fc51aec77f49f1e0a0c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846277"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719580"
 ---
 # <a name="dfsdiag-testdfsintegrity"></a>дфсдиаг Тестдфсинтегрити
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Проверяет целостность пространства имен распределенная файловая система (DFS), выполняя следующие тесты:
 
@@ -38,17 +38,17 @@ dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
 
 | Параметр | Описание |
 |-------|--------|
-| /Дфсрут: `<DFS root path>`| Пространство имен DFS для диагностики. |
+| /Дфсрут:`<DFS root path>`| Пространство имен DFS для диагностики. |
 | /Recurse | Выполняет тестирование, включая взаимосвязи пространств имен. |
 | /Full | Проверяет согласованность общего ресурса и ACL NTFS и конфигурации клиента для всех целевых объектов папки. Он также проверяет, задано ли свойство Online. |
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 ```
 dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

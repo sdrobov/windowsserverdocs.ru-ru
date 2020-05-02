@@ -1,6 +1,6 @@
 ---
-title: кэш битсадмин и сетекспиратионтиме
-description: Команды Windows для **кэша битсадмин и сетекспиратионтиме**, которые задают время истечения срока действия кэша.
+title: bitsadmin cache и setexpirationtime
+description: Справочный раздел по битсадмин кэшу и команде сетекспиратионтиме, который задает срок действия кэша.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf283a0a8b94fd55c591609e3dcd1d127a2be81a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 84679eadc750637fb720a458d9663219dc1492a4
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850887"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718310"
 ---
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-# <a name="bitsadmin-cache-and-setexpirationtime"></a>кэш битсадмин и сетекспиратионтиме
+# <a name="bitsadmin-cache-and-setexpirationtime"></a>bitsadmin cache и setexpirationtime
 
 Задает срок действия кэша.
 
@@ -34,14 +34,16 @@ bitsadmin /cache /setexpirationtime secs
 | -------------- | -------------- |
 | сек | Количество секунд до истечения срока действия кэша. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере срок действия кэша истекает через 60 секунд.
+Чтобы задать срок действия кэша через 60 секунд:
 
 ```
-C:\>bitsadmin /cache / setexpirationtime 60
+bitsadmin /cache / setexpirationtime 60
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда кэша битсадмин](bitsadmin-cache.md)

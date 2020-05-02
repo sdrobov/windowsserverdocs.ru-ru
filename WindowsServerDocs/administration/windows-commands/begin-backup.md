@@ -1,6 +1,6 @@
 ---
 title: Начало резервного копирования
-description: Команды Windows для **начала резервного копирования**, при котором запускается полный сеанс резервного копирования.
+description: Справочный раздел, посвященный команде Begin Backup, которая запускает полный сеанс резервного копирования.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8ed942dfac0851e2750722f639babb9329b162ab
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ecb5d83170d248089e5293ebb8557e7ae0854fac
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850997"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718526"
 ---
 # <a name="begin-backup"></a>Начало резервного копирования
 
-Запускает полный сеанс резервного копирования.
+> Область применения: Windows Server 2012 R2, Windows Server 2012
+
+Запускает полный сеанс резервного копирования. Эта команда переопределяет параметр копирования резервной копии по умолчанию.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,10 +28,8 @@ ms.locfileid: "80850997"
 begin backup
 ```
 
-## <a name="remarks"></a>Примечания
-
-Эта команда переопределяет параметр копирования резервной копии по умолчанию.
-
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+  
+- [Команда Begin Restore](begin-restore.md)

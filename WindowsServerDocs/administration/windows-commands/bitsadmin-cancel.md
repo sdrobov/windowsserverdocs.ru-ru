@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cancel
-description: Раздел команд Windows для **битсадмин Cancel**, который удаляет задание из очереди на перемещение и удаляет все временные файлы, связанные с заданием.
+description: Справочный раздел по команде битсадмин Cancel, который удаляет задание из очереди на перемещение и удаляет все временные файлы, связанные с заданием.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c2bdeef824bc269671cc5ae926fb77cd5726c58
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 95fefbc4a9731c2ccbac22adc27f8231a7f36138
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850837"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718257"
 ---
 # <a name="bitsadmin-cancel"></a>bitsadmin cancel
 
@@ -30,16 +30,18 @@ bitsadmin /cancel <job>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере из очереди обмена удаляется задание *мидовнлоаджоб* .
+Чтобы удалить задание *мидовнлоаджоб* из очереди обмена:
 
 ```
-C:\>bitsadmin /cancel myDownloadJob
+bitsadmin /cancel myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
