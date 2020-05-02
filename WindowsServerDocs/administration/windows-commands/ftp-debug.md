@@ -1,6 +1,6 @@
 ---
 title: 'FTP: Отладка'
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 16a7a19b61099b036947cf133d8ad3ce6a54faea
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 32b079f54969a6a4286af1a98e779b997f48eae3
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843677"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725354"
 ---
 # <a name="ftpdebug"></a>FTP: Отладка
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Переключает режим отладки.   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,14 +26,14 @@ ms.locfileid: "80843677"
 debug  
 ```  
 #### <a name="parameters"></a>Параметры  
-нет  
+none  
 ## <a name="remarks"></a>Примечания  
 - По умолчанию отладка отключена.  
 - Если отладка включена, то отображается каждая команда, отправленная на удаленный компьютер, с которой предшествует символ "больше (>)".  
-  ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+  ## <a name="examples"></a>Примеры  
   Включение и отключение режима отладки.  
   ```  
   debug  
   ```  
-  ## <a name="additional-references"></a>Дополнительные материалы  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
 - - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

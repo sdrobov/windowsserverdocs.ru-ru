@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 0b819f15e473738996484283bceac439f482a13d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 05c203ef610dda0443ddc845245a4072e617f7a6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844157"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725429"
 ---
 # <a name="fsutil-reparsepoint"></a>Fsutil репарсепоинт
->Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows 2008, Windows Vista
 
 Запрашивает или удаляет точки повторного анализа.  Команда **fsutil репарсепоинт** обычно используется специалистами службы поддержки.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +46,7 @@ fsutil reparsepoint [delete] <FileName>
 
 -   Когда программа задает точку повторного анализа, она сохраняет эти данные, а также тег повторного анализа, который однозначно определяет хранящиеся в нем данные. Когда файловая система открывает файл с точкой повторного анализа, он пытается найти связанный фильтр файловой системы. Если фильтр файловой системы найден, фильтр обрабатывает файл в соответствии с назначением данных повторного анализа. Если фильтр файловой системы не найден, операция открытия файла завершается ошибкой.
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 Чтобы получить данные точки повторного анализа, связанные с К:\сервер, введите:
 
 ```
@@ -59,7 +59,7 @@ fsutil reparsepoint query c:\server
 fsutil reparsepoint delete c:\server
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

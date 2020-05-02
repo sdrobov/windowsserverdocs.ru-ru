@@ -1,6 +1,6 @@
 ---
 title: wbadmin
-description: Раздел команд Windows для Wbadmin, который позволяет выполнять резервное копирование и восстановление операционной системы, томов, файлов, папок и приложений из командной строки.
+description: Справочный раздел Wbadmin, который позволяет выполнять резервное копирование и восстановление операционной системы, томов, файлов, папок и приложений из командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ca9bdc54cd77f11239d0a61cf052e7b12b02b22
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 94f07d17d46dad4e5301ba3ea6be94b10f26a3af
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829477"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725837"
 ---
 # <a name="wbadmin"></a>wbadmin
 
@@ -46,7 +46,7 @@ ms.locfileid: "80829477"
 |[Wbadmin restore catalog](wbadmin-restore-catalog.md)|Восстанавливает каталог резервных копий из указанного места хранения в случае повреждения каталога резервного копирования на локальном компьютере.|
 |[Wbadmin delete catalog](wbadmin-delete-catalog.md)|Удаляет каталог резервных копий на локальном компьютере. Используйте эту подкоманду только в том случае, если каталог резервного копирования на этом компьютере поврежден и резервные копии не хранятся в другом расположении, которое можно использовать для восстановления каталога.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Резервное копирование и восстановление](https://go.microsoft.com/fwlink/?LinkID=195054)
 -   [cистема архивации данных Windows Server командлетов в Windows PowerShell](https://technet.microsoft.com/library/jj902428.aspx)

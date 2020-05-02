@@ -1,6 +1,6 @@
 ---
 title: wdsutil
-description: Раздел команд Windows для WDSUTIL, который является служебной программой командной строки, используемой для управления сервером служб развертывания Windows.
+description: Справочный раздел по WDSUTIL, который является служебной программой командной строки, используемой для управления сервером служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f57411c1b000355940772003c7ac5343c82838cd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d2acd720b21346836cfdd6a5eb24e9f8cae2dbef
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829446"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725856"
 ---
 # <a name="wdsutil"></a>wdsutil
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 WDSUTIL — это служебная программа командной строки, используемая для управления сервером служб развертывания Windows. Чтобы выполнить эти команды, нажмите кнопку **Пуск**, щелкните правой кнопкой мыши пункт **Командная строка**и выберите команду **Запуск от имени администратора**.  
 ## <a name="commands"></a>Команды  

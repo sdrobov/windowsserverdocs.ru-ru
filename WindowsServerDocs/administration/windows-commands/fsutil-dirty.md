@@ -9,19 +9,19 @@ ms.technology: storage
 audience: IT Pro
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: cf3685bae9ed76ede4da6df244139437d92250c0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3b35938c21180199aabb74431d20a31167aea706
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844337"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725530"
 ---
 # <a name="fsutil-dirty"></a>Fsutil dirty
->Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
 
 Запрашивает или устанавливает «грязный» бит тома. Если задан «грязный» бит тома, то **Autochk** автоматически проверяет том на наличие ошибок при следующем перезапуске компьютера.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,7 +35,7 @@ fsutil dirty {query | set} <VolumePath>
 |---------------|--------------------------------------------------------------------------------------------------------------|
 |     query     |                                  Запрашивает «грязный» бит указанного тома.                                   |
 |      set      |                                    Задает "грязный" бит указанного тома.                                    |
-| \<VolumePath > | Указывает имя диска, за которым следует двоеточие или GUID в следующем формате: **том {** <em>GUID</em> **}** . |
+| \<VolumePath> | Указывает имя диска, за которым следует двоеточие или GUID в следующем формате: **том {**<em>GUID</em>**}**. |
 
 ## <a name="remarks"></a>Примечания
 
@@ -49,7 +49,7 @@ fsutil dirty {query | set} <VolumePath>
 
 -   Если «грязный» бит задан при перезапуске компьютера, **chkdsk** запускается для проверки целостности файловой системы и попыток устранения любых проблем с томом.
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеров
+## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 Чтобы запросить "грязный" бит на диске C, введите:
 
 ```
@@ -70,7 +70,7 @@ fsutil dirty query c:
 fsutil dirty set C:
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
 [Fsutil](Fsutil.md)

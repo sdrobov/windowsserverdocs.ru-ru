@@ -1,6 +1,6 @@
 ---
 title: развернуть виртуальный диск
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 272714372a35f7f205b5a2e70cb2f2669b3a0634
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c2380045de45397888777f58e3420c75bb6915ae
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844897"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725695"
 ---
 # <a name="expand-vdisk"></a>развернуть виртуальный диск
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Расширение виртуального жесткого диска (VHD) до указанного размера.
 > [!NOTE]
@@ -35,12 +35,12 @@ ms.locfileid: "80844897"
 > 
 > ## <a name="remarks"></a>Примечания
 > - Для выполнения этой операции необходимо выбрать и отсоединить виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать том и переместить фокус на него.
->   ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+>   ## <a name="examples"></a>Примеры
 >   Чтобы расширить выбранный виртуальный жесткий диск до 20 ГБ, введите:
 >   ```
 >   expand vdisk maximum=20000
 >   ```
->   ## <a name="additional-references"></a>Дополнительные материалы
+>   ## <a name="additional-references"></a>Дополнительные ссылки
 > - - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 > - [подключить виртуальный диск](attach-vdisk.md)
 > - [Compact VDISK](compact-vdisk.md)

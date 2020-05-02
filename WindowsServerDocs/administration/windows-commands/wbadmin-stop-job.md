@@ -1,6 +1,6 @@
 ---
 title: Wbadmin останавливает задание
-description: Команды Windows для задания Wbadmin остановить задание, которое отменяет операцию резервного копирования или восстановления, выполняемую в данный момент. Отмененные операции не могут быть перезапущены — необходимо повторно выполнить отмененную операцию резервного копирования или восстановления с начала.
+description: Справочный раздел по параметру Wbadmin остановить задание, который отменяет операцию резервного копирования или восстановления, которая выполняется в данный момент. Отмененные операции не могут быть перезапущены — необходимо повторно выполнить отмененную операцию резервного копирования или восстановления с начала.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a00b4a93e0aaa954f8f07adae825a4f582c5581
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3133688ac0d60d97d80192611c9b561c53a74c35
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80829487"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725839"
 ---
 # <a name="wbadmin-stop-job"></a>Wbadmin останавливает задание
 
@@ -37,7 +37,7 @@ wbadmin stop job
 |---------|-----------|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)

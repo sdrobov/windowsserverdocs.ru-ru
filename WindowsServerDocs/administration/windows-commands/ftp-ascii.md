@@ -1,6 +1,6 @@
 ---
 title: FTP ASCII
-description: Раздел команд Windows для FTP ASCII
+description: Справочный раздел по FTP ASCII
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4930d0d726acaa222f802d7aaef59578030db5f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: aa33637f43ef8d26635f36b40dbd21cfe2bff42e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80843787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725396"
 ---
 # <a name="ftp-ascii"></a>FTP: ASCII
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает тип перемещения файла ASCII.   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,16 +26,16 @@ ms.locfileid: "80843787"
 ascii  
 ```  
 #### <a name="parameters"></a>Параметры  
-нет  
+none  
 ## <a name="remarks"></a>Примечания  
 - Тип перемещения файла по умолчанию — ASCII.  
 - В режиме ASCII выполняется преобразование символов в стандартную сетевую кодировку и из нее. Например, символы конца строки при необходимости преобразуются в зависимости от целевой операционной системы.  
 - **протокол FTP** поддерживает как ASCII, так и двоичные файлы изображений. При передаче текстовых файлов используйте ASCII. Дополнительные сведения о переносе двоичных файлов см. в разделе **FTP: двоичные** файлы в дополнительных ссылках.  
-  ## <a name="examples"></a><a name=BKMK_Examples></a>Примеров  
+  ## <a name="examples"></a>Примеры  
   Задайте для параметра тип перемещения файла значение ASCII.  
   ```  
   ascii  
   ```  
-  ## <a name="additional-references"></a>Дополнительные материалы  
+  ## <a name="additional-references"></a>Дополнительные ссылки  
 - [FTP: двоичный формат](ftp-binary.md)  
 - - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  

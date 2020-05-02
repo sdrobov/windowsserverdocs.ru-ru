@@ -1,6 +1,6 @@
 ---
 title: finger
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 78313fc4980b32e3aeb6d1611ef80d7eb6831fc1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ec8040480a7cb75a5a42e051393e3db4a47f8e2f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844607"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725618"
 ---
 # <a name="finger"></a>finger
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о пользователе или пользователях на указанном удаленном компьютере (обычно это компьютер под управлением UNIX), на котором работает служба или управляющая программа Finger. Удаленный компьютер указывает формат и выходные данные для вывода сведений о пользователе. При использовании без параметров **палец** выводит справку. 
 ## <a name="syntax"></a>Синтаксис
@@ -32,14 +32,14 @@ finger [-l] [<User>] [@<Host>] [...]
 |    -l     |                                                          Отображает сведения о пользователе в длинном формате списка.                                                           |
 |  <User>   | Указывает пользователя, сведения о котором требуется получить. Если параметр *User* не задан, **палец** отображает сведения обо всех пользователях на указанном компьютере. |
 |  @<Host>  |        Указывает удаленный компьютер, на котором запущена служба Finger, где вы ищете сведения о пользователе. Можно указать имя или IP-адрес компьютера.        |
-|    /?     |                                                               Отображает справку в командной строке.                                                                |
+|    /?     |                                                               Отображение справки в командной строке.                                                                |
 
 ## <a name="remarks"></a>Примечания
-Можно указать несколько параметров User@Host.
+Можно User@Host указать несколько параметров.
 Необходимо **Добавить префиксные** параметры с дефисом (-), а не косой чертой (/).
 Эта команда доступна, только если протокол Internet Protocol (TCP/IP) установлен в качестве компонента в свойствах сетевого адаптера в окне Сетевые подключения.
 В Windows Server 2003 не предусмотрена служба Finger.
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы отобразить сведения для пользователя User1 на компьютере users.microsoft.com, введите:
 ```
 finger user1@users.microsoft.com
@@ -48,5 +48,5 @@ finger user1@users.microsoft.com
 ```
 finger @users.microsoft.com
 ```
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

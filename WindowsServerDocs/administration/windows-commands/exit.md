@@ -1,6 +1,6 @@
 ---
 title: exit
-description: Команды Windows, посвященные выходу, который выходит из интерпретатора команд DiskPart.
+description: Справочный раздел по выходу, который выходит из интерпретатора команд DiskPart.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bfeab25017617ea425c2211c0b310c11aade3bf1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c36d0f7f6770ead39a6b31919fc1ae34a8af205b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80844927"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82725718"
 ---
 # <a name="exit"></a>exit
 
@@ -26,7 +26,7 @@ ms.locfileid: "80844927"
 exit
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
