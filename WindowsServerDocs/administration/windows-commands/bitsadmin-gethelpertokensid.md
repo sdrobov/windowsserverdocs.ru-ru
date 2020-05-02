@@ -1,6 +1,6 @@
 ---
-title: битсадмин жеселпертокенсид
-description: Раздел команд Windows для **битсадмин жеселпертокенсид**, который возвращает идентификатор безопасности вспомогательного токена задания передачи BITS, если он задан.
+title: bitsadmin gethelpertokensid
+description: Справочный раздел по команде битсадмин жеселпертокенсид, который возвращает идентификатор безопасности маркера вспомогательного метода задания передачи BITS, если он задан.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,14 +8,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: a2e26ff459b068595529fbd24e6165c130660570
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c45bf86d8a7364289db41fa390f319270a2a8386
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850647"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717893"
 ---
-# <a name="bitsadmin-gethelpertokensid"></a>битсадмин жеселпертокенсид
+# <a name="bitsadmin-gethelpertokensid"></a>bitsadmin gethelpertokensid
 
 Возвращает идентификатор безопасности [вспомогательного токена](https://docs.microsoft.com/windows/win32/bits/helper-tokens-for-bits-transfer-jobs)задания передачи BITS, если он задан.
 
@@ -32,8 +32,18 @@ bitsadmin /gethelpertokensid <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="examples"></a>Примеры
+
+Чтобы получить идентификатор безопасности для задания передачи BITS с именем *мидовнлоаджоб*, сделайте следующее:
+
+```
+bitsadmin /gethelpertokensid myDownloadJob
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

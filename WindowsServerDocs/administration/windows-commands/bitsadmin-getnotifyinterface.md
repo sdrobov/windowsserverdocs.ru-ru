@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyinterface
-description: Раздел команд Windows для **битсадмин жетнотифинтерфаце**, который определяет, зарегистрировал ли другая программа интерфейс обратного вызова com для указанного задания.
+description: Справочный раздел по команде битсадмин жетнотифинтерфаце, который определяет, зарегистрировал ли другая программа интерфейс обратного вызова COM для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5eb5aee42446c70f16fd6785a3645f42c1987e4d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2158759067010292ca213f97014857354247b9c7
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850577"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717739"
 ---
 # <a name="bitsadmin-getnotifyinterface"></a>bitsadmin getnotifyinterface
 
@@ -30,7 +30,7 @@ bitsadmin /getnotifyinterface <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
 #### <a name="output"></a>Вывод
 
@@ -39,14 +39,16 @@ bitsadmin /getnotifyinterface <job>
 > [!NOTE]
 > Невозможно определить программу, которая зарегистрировала интерфейс обратного вызова.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается интерфейс notify для задания с именем *мидовнлоаджоб*.
+Чтобы получить интерфейс уведомления для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getnotifyinterface myDownloadJob
+bitsadmin /getnotifyinterface myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

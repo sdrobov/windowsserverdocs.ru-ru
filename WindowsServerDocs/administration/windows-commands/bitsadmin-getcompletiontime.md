@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcompletiontime
-description: Раздел команд Windows для **битсадмин жеткомплетионтиме**, который получает время завершения передачи данных заданием.
+description: Справочный раздел по команде битсадмин жеткомплетионтиме, который получает время завершения передачи данных заданием.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5408e7e8c35135601a4a0af0ab7e9c55cea4c8dd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9b3721401e450ae60fb77534f8eb845ff5ac3443
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850757"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718119"
 ---
 # <a name="bitsadmin-getcompletiontime"></a>bitsadmin getcompletiontime
 
@@ -30,16 +30,18 @@ bitsadmin /getcompletiontime <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается время, когда задание с именем *мидовнлоаджоб* завершило передачу данных.
+Чтобы получить время, когда задание с именем *мидовнлоаджоб* завершило передачу данных, сделайте следующее:
 
 ```
-C:\>bitsadmin /getcompletiontime myDownloadJob
+bitsadmin /getcompletiontime myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyfilename
-description: Раздел команд Windows для **битсадмин жетреплифиленаме**, который получает путь к файлу, содержащему ответ на отправку сервера для задания.
+description: Справочный раздел по команде битсадмин жетреплифиленаме, который получает путь к файлу, содержащему сервер, который содержит ответ на отправку для задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 541a6e60d641405b5da2e65fecbbbe87468c8702
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: daed755e0ddc045174b98a8d4f9ee84da155cba6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850497"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717595"
 ---
 # <a name="bitsadmin-getreplyfilename"></a>bitsadmin getreplyfilename
 
-Возвращает путь к файлу, содержащему ответ на отправку сервера для задания.
+Возвращает путь к файлу, содержащему сервер-ответ для задания.
 
 > [!NOTE]
 > Эта команда не поддерживается в БИТАХ 1,2 и более ранних версиях.
@@ -33,17 +33,18 @@ bitsadmin /getreplyfilename <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
+## <a name="examples"></a>Примеры
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
-
-В следующем примере извлекается имя файла ответа для отправки для задания с именем *мидовнлоаджоб*.
+Чтобы получить имя файла для отправки и ответа для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getreplyfilename myDownloadJob
+bitsadmin /getreplyfilename myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

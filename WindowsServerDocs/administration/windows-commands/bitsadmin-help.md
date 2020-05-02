@@ -1,6 +1,6 @@
 ---
 title: bitsadmin help
-description: Раздел команд Windows для **битсадмин Help**, который отображает сведения об использовании командной строки.
+description: Справочный раздел по команде битсадмин Help, который отображает сведения об использовании командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 95bc71c058ee1b20f86202198b1c176744ee403d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d899ab94101505b69ac5cc4d86a612a4bbb91348
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850427"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717449"
 ---
 # <a name="bitsadmin-help"></a>bitsadmin help
 
@@ -26,14 +26,16 @@ ms.locfileid: "80850427"
 bitsadmin /help | /?
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается Справка по командной строке.
+Для получения справки по командной строке.
 
 ```
-C:\>bitsadmin /help
+bitsadmin /help
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

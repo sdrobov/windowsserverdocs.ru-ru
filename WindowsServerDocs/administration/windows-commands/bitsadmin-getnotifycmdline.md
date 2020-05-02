@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifycmdline
-description: Раздел команд Windows для **битсадмин жетнотификмдлине**, который получает команду командной строки, которая выполняется, когда задание завершает передачу данных.
+description: Справочный раздел по команде битсадмин жетнотификмдлине, который получает команду командной строки, которая выполняется, когда задание завершает передачу данных.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 24b49b3fa0c2dafb999d8cb9c6e0c13ae68bf6f4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4d4c47c4a1b9ea06fd804c8f2c48e9ac0ce1b319
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850597"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717801"
 ---
 # <a name="bitsadmin-getnotifycmdline"></a>bitsadmin getnotifycmdline
 
-Получает команду командной строки, которая будет выполнена, когда задание завершает передачу данных.
+Получает команду командной строки, которая будет запускаться после завершения передачи данных указанным заданием.
 
 > [!NOTE]
 > Эта команда не поддерживается в БИТАХ 1,2 и более ранних версиях.
@@ -33,16 +33,18 @@ bitsadmin /getnotifycmdline <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается команда командной строки, используемая службой при завершении задания с именем *мидовнлоаджоб* .
+Для получения команды командной строки, используемой службой при завершении задания с именем *мидовнлоаджоб* .
 
 ```
-C:\>bitsadmin /getnotifycmdline myDownloadJob
+bitsadmin /getnotifycmdline myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

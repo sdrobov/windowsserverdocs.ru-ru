@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestotal
-description: Раздел команд Windows для **битсадмин жетфилестотал**, который извлекает количество файлов в указанном задании.
+description: Справочный раздел по команде битсадмин жетфилестотал, который получает количество файлов в указанном задании.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bad42a8bef57ca4c4a1411a12f20979e4a95d178
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5cf3b33c15bb18c8a141408f82fdd72a6e710817
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717976"
 ---
 # <a name="bitsadmin-getfilestotal"></a>bitsadmin getfilestotal
 
@@ -30,16 +30,18 @@ bitsadmin /getfilestotal <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается число файлов, включаемых в задание с именем *мидовнлоаджоб*.
+Чтобы получить количество файлов, включаемых в задание с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /getfilestotal myDownloadJob
+bitsadmin /getfilestotal myDownloadJob
 ```
 
 ## <a name="see-also"></a>См. также
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

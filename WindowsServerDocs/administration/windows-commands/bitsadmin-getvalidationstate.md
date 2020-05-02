@@ -1,6 +1,6 @@
 ---
-title: битсадмин жетвалидатионстате
-description: Раздел команд Windows для **битсадмин жетвалидатионстате**, который сообщает состояние проверки содержимого заданного файла в задании.
+title: bitsadmin getvalidationstate
+description: Справочный раздел по команде битсадмин жетвалидатионстате, который сообщает состояние проверки содержимого заданного файла в задании.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 52d7d983cc7858607c350483ed81223d107cee25
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ca753b20a1b7834d2e05d4ff8729a08332256f8c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850437"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717453"
 ---
-# <a name="bitsadmin-getvalidationstate"></a>битсадмин жетвалидатионстате
+# <a name="bitsadmin-getvalidationstate"></a>bitsadmin getvalidationstate
 
 Сообщает состояние проверки содержимого заданного файла в задании.
 
@@ -30,17 +30,19 @@ bitsadmin /getvalidationstate <job> <file_index>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | file_index | Начинается с 0. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере возвращается состояние проверки содержимого файла 2 в задании с именем *мидовнлоаджоб*.
+Чтобы получить состояние проверки содержимого файла 2 в задании с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getvalidationstate myDownloadJob 1
+bitsadmin /getvalidationstate myDownloadJob 1
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

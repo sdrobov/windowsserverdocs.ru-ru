@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getdisplayname
-description: Раздел команд Windows для **битсадмин. DisplayName**, который извлекает отображаемое имя указанного задания.
+description: Справочный раздел для команды битсадминического DisplayName, которая получает отображаемое имя указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6944dc2b7a63ca986fb285d26796f350c1052295
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f7c92fdb7c743c1a4c71f076764f5d1da2d95a6f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850717"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718029"
 ---
 # <a name="bitsadmin-getdisplayname"></a>bitsadmin getdisplayname
 
@@ -30,16 +30,18 @@ bitsadmin /getdisplayname <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается отображаемое имя для задания с именем *мидовнлоаджоб*.
+Чтобы получить отображаемое имя для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getdisplayname myDownloadJob
+bitsadmin /getdisplayname myDownloadJob
 ```
 
 ## <a name="additional-references"></a>Дополнительная справка
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestotal
-description: Раздел команд Windows для **битсадмин жетбитестотал**, который получает размер указанного задания.
+description: Справочный раздел по команде битсадмин жетбитестотал, который получает размер указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 84e3e0311ead0eb79f9247d4f06844ece5f20fa2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f844e1d3689c42a2c533921797d15dbb946b551e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718154"
 ---
 # <a name="bitsadmin-getbytestotal"></a>bitsadmin getbytestotal
 
@@ -30,16 +30,18 @@ bitsadmin /getbytestotal <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается размер задания с именем *мидовнлоаджоб*.
+Чтобы получить размер задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /getbytestotal myDownloadJob
+bitsadmin /getbytestotal myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

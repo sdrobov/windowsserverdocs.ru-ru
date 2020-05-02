@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: Раздел команд Windows для **битсадмин жетпроксюсаже**, который получает параметр использования прокси-сервера для указанного задания.
+description: Справочный раздел по команде битсадмин жетпроксюсаже, который получает параметр использования прокси-сервера для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 01c9bb9a1d413fa847482f652e18eed30ad76109
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 13a3f216b1ed3c77dbbefee37d73a657525daa36
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850517"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717651"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
@@ -30,11 +30,11 @@ bitsadmin /getproxyusage <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
+#### <a name="output"></a>Вывод
 
-Ниже приведены значения использования прокси-сервера.
+Возвращаемые значения использования прокси-сервера могут быть:
 
 - Предварительная **Настройка** — используйте значения по умолчанию для свойства Owner в Internet Explorer.
 
@@ -44,14 +44,16 @@ bitsadmin /getproxyusage <job>
 
 - **Автообнаружение** — автоматическое определение параметров прокси-сервера.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается использование прокси-сервера для задания с именем *мидовнлоаджоб*.
+Чтобы получить сведения об использовании прокси-сервера для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getproxyusage myDownloadJob
+bitsadmin /getproxyusage myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

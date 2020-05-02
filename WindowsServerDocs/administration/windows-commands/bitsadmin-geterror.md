@@ -1,6 +1,6 @@
 ---
 title: bitsadmin geterror
-description: Раздел команд Windows для **битсадмин Error**, который получает подробные сведения об ошибке для указанного задания.
+description: Справочный раздел для команды битсадмин Error, которая получает подробные сведения об ошибке для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c65b072bb190e3e516b917c310942146bb3f3d2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e7275bb813ef65f304cf8111c5a1ee387b7528e5
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850707"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718020"
 ---
 # <a name="bitsadmin-geterror"></a>bitsadmin geterror
 
@@ -30,16 +30,18 @@ bitsadmin /geterror <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекаются сведения об ошибке для задания с именем *мидовнлоаджоб*.
+Чтобы получить сведения об ошибке для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /geterror myDownloadJob
+bitsadmin /geterror myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

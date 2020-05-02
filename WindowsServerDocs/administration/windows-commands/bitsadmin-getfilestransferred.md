@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getfilestransferred
-description: Раздел команд Windows для **битсадмин жетфилестрансферред**, который извлекает количество файлов, переданных для указанного задания.
+description: Справочный раздел по команде битсадмин жетфилестрансферред, который получает количество файлов, переданных для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 053b67f5f85066d202b446b31eb1b1698fd735b9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ed11739029338ecce5fc4efbe1918873a7f37f62
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850677"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717918"
 ---
 # <a name="bitsadmin-getfilestransferred"></a>bitsadmin getfilestransferred
 
@@ -30,16 +30,18 @@ bitsadmin /getfilestransferred <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается число файлов, передаваемых в задании с именем *мидовнлоаджоб*.
+Чтобы получить количество файлов, переданных в задании с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /getfilestransferred myDownloadJob
+bitsadmin /getfilestransferred myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

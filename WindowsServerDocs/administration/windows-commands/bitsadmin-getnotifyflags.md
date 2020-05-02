@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyflags
-description: Раздел команд Windows для **битсадмин жетнотифифлагс**, который получает флаги уведомления для указанного задания.
+description: Справочный раздел по команде битсадмин жетнотифифлагс, который получает флаги уведомления для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3138baea05f793cfb587d3f8fb669d446daea6b5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 36e4c3584b2e3be9c9985756aeaec08b40e74b0c
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850587"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717766"
 ---
 # <a name="bitsadmin-getnotifyflags"></a>bitsadmin getnotifyflags
 
-Возвращает флаги уведомления для указанного задания.
+Получает флаги уведомления для указанного задания.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,27 +30,29 @@ bitsadmin /getnotifyflags <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
 ## <a name="remarks"></a>Примечания
 
 Задание может содержать один или несколько следующих флагов уведомления:
 
-| Flag | Описание |
+| Флаг | Описание |
 | ----- | ----- |
 | 0x001 | Создавать событие, когда все файлы в задании были переданы. |
 | 0x002 | Создавать событие при возникновении ошибки. |
 | 0x004 | Отключение уведомлений. |
 | 0x008 | Создание события при изменении или переносе задания. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекаются флаги уведомления для задания с именем *мидовнлоаджоб*.
+Чтобы получить флаги уведомления для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getnotifyflags myDownloadJob
+bitsadmin /getnotifyflags myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
-title: битсадмин жеткустомхеадерс
-description: Раздел команд Windows для **битсадмин жеткустомхеадерс**, который извлекает из задания пользовательские заголовки HTTP.
+title: bitsadmin getcustomheaders
+description: Справочный раздел по команде битсадмин жеткустомхеадерс, который получает пользовательские заголовки HTTP из задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 80a3d1230fd541f0b986434ce373da4c8bb0c761
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7fe839cd0e629af88b3ee3642abcce339442d03a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850737"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718100"
 ---
-# <a name="bitsadmin-getcustomheaders"></a>битсадмин жеткустомхеадерс
+# <a name="bitsadmin-getcustomheaders"></a>bitsadmin getcustomheaders
 
 Извлекает из задания пользовательские заголовки HTTP.
 
@@ -30,16 +30,18 @@ bitsadmin /getcustomheaders <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере показано получение пользовательских заголовков для задания с именем *мидовнлоаджоб*.
+Для получения пользовательских заголовков для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getcustomheaders myDownloadJob
+bitsadmin /getcustomheaders myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

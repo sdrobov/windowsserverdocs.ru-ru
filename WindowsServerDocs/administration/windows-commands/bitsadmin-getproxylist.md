@@ -1,6 +1,6 @@
 ---
 title: битсадмин жетпроксилист — извлекает список прокси-серверов для указанного задания.
-description: Раздел команд Windows для **битсадмин жетпроксилист**, который извлекает список прокси-серверов для указанного задания.
+description: Справочный раздел по команде битсадмин жетпроксилист, который получает список прокси-серверов для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0c0d26fb074bd1b792caa7fe2ce8fd31b64365e2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a92703d83cc872204d3dc488c15d703dfd50a780
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850527"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717657"
 ---
 # <a name="bitsadmin-getproxylist"></a>bitsadmin getproxylist
 
@@ -30,16 +30,18 @@ bitsadmin /getproxylist <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается список прокси-серверов для задания с именем *мидовнлоаджоб*.
+Чтобы получить список прокси-серверов для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getproxylist myDownloadJob
+bitsadmin /getproxylist myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin info
-description: Раздел команд Windows для **битсадмин info**, в котором отображаются сводные сведения об указанном задании.
+description: Справочный раздел по команде битсадмин info, в котором отображаются сводные данные об указанном задании.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 20b8358caba3e0c07b0c985cb24e8f7bde43b06c
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 904f70c82ab4bcc4fb25f759898674cc719b1954
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123119"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717438"
 ---
 # <a name="bitsadmin-info"></a>bitsadmin info
 
@@ -30,18 +30,18 @@ bitsadmin /info <job> [/verbose]
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
-| /verbose | Необязательно. Предоставляет подробные сведения о каждом задании. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
+| /verbose | Необязательный элемент. Предоставляет подробные сведения о каждом задании. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекаются сведения о задании с именем *мидовнлоаджоб*.
+Для получения сведений о задании с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /info myDownloadJob
+bitsadmin /info myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

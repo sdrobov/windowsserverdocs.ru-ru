@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyprogress
-description: Раздел команд Windows для **битсадмин жетреплипрогресс**, который извлекает размер и ход отправки ответа сервера.
+description: Справочный раздел по команде битсадмин жетреплипрогресс, который получает размер и ход выполнения отправки и ответа сервера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 195ed669817bc0aca7ebc432e7f3c66ab1548162
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7c355c796d480e9deb444b8fd9ee7570136cade6
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850487"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717590"
 ---
 # <a name="bitsadmin-getreplyprogress"></a>bitsadmin getreplyprogress
 
-Возвращает размер и ход ответа отправки сервера.
+Возвращает размер и ход выполнения отправки и ответа сервера.
 
 > [!NOTE]
 > Эта команда не поддерживается в БИТАХ 1,2 и более ранних версиях.
@@ -33,17 +33,18 @@ bitsadmin /getreplyprogress <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
+## <a name="examples"></a>Примеры
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
-
-В следующем примере извлекается ход выполнения отправки ответа для задания с именем *мидовнлоаджоб*.
+Чтобы получить сведения о ходе отправки и ответа для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getreplyprogress myDownloadJob
+bitsadmin /getreplyprogress myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

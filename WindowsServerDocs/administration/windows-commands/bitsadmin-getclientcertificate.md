@@ -1,6 +1,6 @@
 ---
-title: битсадмин жетклиентцертификате
-description: Раздел команд Windows для **битсадмин жетклиентцертификате**, который получает сертификат клиента из задания.
+title: bitsadmin getclientcertificate
+description: Справочный раздел по команде битсадмин жетклиентцертификате, который получает сертификат клиента из задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c29d5c64fd172cfdd2d5d93c5ed22d519077806
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d2582950dd02ca1880e4765fb974c83c423b22bb
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850767"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718126"
 ---
-# <a name="bitsadmin-getclientcertificate"></a>битсадмин жетклиентцертификате
+# <a name="bitsadmin-getclientcertificate"></a>bitsadmin getclientcertificate
 
 Получает сертификат клиента из задания.
 
@@ -30,16 +30,18 @@ bitsadmin /getclientcertificate <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается сертификат клиента для задания с именем *мидовнлоаджоб*.
+Чтобы получить сертификат клиента для задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /getclientcertificate myDownloadJob
+bitsadmin /getclientcertificate myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

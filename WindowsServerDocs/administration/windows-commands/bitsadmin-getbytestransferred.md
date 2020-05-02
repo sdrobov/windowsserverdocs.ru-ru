@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getbytestransferred
-description: Раздел команд Windows для **битсадмин жетбитестрансферред**, который извлекает число байтов, переданных для указанного задания.
+description: Справочный раздел по команде битсадмин жетбитестрансферред, который извлекает число байтов, переданных для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 957b3e60bf8a5e41b3964f4d762633472606654d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7c333926ed46dd2e66e0e2507f838f721a73c192
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850777"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718147"
 ---
 # <a name="bitsadmin-getbytestransferred"></a>bitsadmin getbytestransferred
 
@@ -30,16 +30,18 @@ bitsadmin /getbytestransferred <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается число байтов, передаваемых для задания с именем *мидовнлоаджоб*.
+Чтобы получить число байтов, передаваемых для задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /getbytestransferred myDownloadJob
+bitsadmin /getbytestransferred myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

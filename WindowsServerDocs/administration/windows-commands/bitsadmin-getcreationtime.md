@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getcreationtime
-description: Раздел команд Windows для **битсадмин жеткреатионтиме**, который получает время создания для указанного задания.
+description: Справочный раздел по команде битсадмин жеткреатионтиме, который получает время создания для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cd8f718e53cc44dc5f4c6f5ff09c9a5c201e0564
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dc6ca5ad23730e9f57d58e069e0a2daf961930e8
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850747"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718106"
 ---
 # <a name="bitsadmin-getcreationtime"></a>bitsadmin getcreationtime
 
@@ -30,16 +30,18 @@ bitsadmin /getcreationtime <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается время создания задания с именем *мидовнлоаджоб*.
+Чтобы получить время создания для задания с именем *мидовнлоаджоб*:
 
 ```
-C:\>bitsadmin /getcreationtime myDownloadJob
+bitsadmin /getcreationtime myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

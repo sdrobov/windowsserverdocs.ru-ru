@@ -1,6 +1,6 @@
 ---
 title: bitsadmin gettype
-description: Раздел команд Windows для **битсадмин GetType**, который получает тип задания для указанного задания.
+description: Справочный раздел для команды битсадмин GetType, который получает тип задания для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 66a1fc5b0478e1eec26557dc9a7f76d50abcb8b6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 151f9b8e81229a666111ebcd20f060d84160445a
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850447"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717479"
 ---
 # <a name="bitsadmin-gettype"></a>bitsadmin gettype
 
@@ -30,27 +30,29 @@ bitsadmin /gettype <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="output"></a>Вывод
+#### <a name="output"></a>Вывод
 
-К выходным значениям относятся:
+Возвращаемые выходные значения могут быть:
 
-| Тип | Описание |
+| Type | Описание |
 | --------------- | ----------- |
-| Загрузить | Задание является загружаемым. |
-| Отправка | Задание — это отправка. |
+| Скачать | Задание является загружаемым. |
+| Передать | Задание — это отправка. |
 | Отправка и ответ | Задание представляет собой отправку и ответ. |
 | Неизвестно | Задание имеет неизвестный тип. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере извлекается тип задания для задания с именем *мидовнлоаджоб*.
+Чтобы получить тип задания для задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /gettype myDownloadJob
+bitsadmin /gettype myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
