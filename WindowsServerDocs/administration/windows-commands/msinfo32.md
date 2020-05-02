@@ -1,6 +1,6 @@
 ---
 title: msinfo32
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a77cf9ae4c5f054e66839ff5b5b057e031b36ff
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0db8a4549ac26ef61d4aa8f435a01d3224501a77
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839117"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723845"
 ---
 # <a name="msinfo32"></a>msinfo32
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Открывает средство «сведения о системе» для отображения полного представления об оборудовании, системных компонентах и программной среде на локальном компьютере. 
 ## <a name="syntax"></a>Синтаксис
@@ -39,11 +39,11 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 | /шовкатегориес |                         запускает средство системных сведений со всеми доступными идентификаторами категорий, а не отображает понятные или локализованные имена. Например, Категория программная среда отображается как категория **свенв** .                         |
 |    /category    |                                                                     запускает сведения о системе с выбранной категорией. Используйте **/шовкатегориес** для вывода списка доступных идентификаторов категорий.                                                                     |
 |   /категориес   |                          Запуск системных сведений с отображением только указанных категорий или категорий. Кроме того, выходные данные ограничиваются выбранной категорией или категориями. Используйте **/шовкатегориес** для вывода списка доступных идентификаторов категорий.                          |
-|       /?        |                                                                                                                     Отображает справку в командной строке.                                                                                                                     |
+|       /?        |                                                                                                                     Отображение справки в командной строке.                                                                                                                     |
 
 ## <a name="remarks"></a>Примечания
 Некоторые категории сведений о системе содержат большие объемы данных. Для оптимизации производительности отчетов по этим категориям можно использовать команду **start/wait** . Дополнительные сведения см. в разделе [сведения о системе](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 Чтобы получить список доступных идентификаторов категорий, введите:
 ```
 msinfo32 /showcategories
@@ -60,6 +60,6 @@ msinfo32 /nfo syssum.nfo /categories +systemsummary
 ```
 msinfo32 /nfo conflicts.nfo /categories    +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

@@ -1,6 +1,6 @@
 ---
 title: Md
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2fad89fe4b7e8425064301f6020fefaa5705b25
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a605571fb74af99d0f365a100dd33fd4db0d3f22
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839587"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724008"
 ---
 # <a name="md"></a>Md
 
@@ -25,7 +25,7 @@ ms.locfileid: "80839587"
 > [!NOTE]
 > Эта команда аналогична команде **mkdir** .
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,15 +38,15 @@ mkdir [<Drive>:]<Path>
 
 |Параметр|Описание|
 |---------|-----------|
-|> \<диска:|Указывает диск, на котором нужно создать новый каталог.|
-|\<путь >|Обязательное. Указывает имя и расположение нового каталога. Максимальная длина любого отдельного пути определяется файловой системой.|
-|/?|Отображает справку в командной строке.|
+|\<> диска:|Указывает диск, на котором нужно создать новый каталог.|
+|\<> пути|Обязательный. Указывает имя и расположение нового каталога. Максимальная длина любого отдельного пути определяется файловой системой.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
 Расширения команд, включенные по умолчанию, позволяют использовать одну команду **MD** для создания промежуточных каталогов по указанному пути.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы создать каталог с именем Directory1 в текущем каталоге, введите:
 ```
@@ -63,7 +63,7 @@ md \Taxes\Property
 md \Taxes\Property\Current
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

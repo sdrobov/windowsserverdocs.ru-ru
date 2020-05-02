@@ -1,6 +1,6 @@
 ---
 title: logoff
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,22 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1661a9dd6cc89ea05980fd9085aa8fa67b8fe2c0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 86acf174bfdebdeab6db7476713dd2d91f21b1a0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80840417"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724266"
 ---
 # <a name="logoff"></a>logoff
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Выполнит выход пользователя из сеанса на сервере узла сеансов удаленный рабочий стол (узел сеанса удаленных рабочих столов) и удалит сеанс с сервера.
-Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
+
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
 ## <a name="syntax"></a>Синтаксис
 ```
@@ -38,7 +38,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 |     <SessionID>      |                                                 Указывает числовой идентификатор, определяющий сеанс на сервере.                                                 |
 | /server:<ServerName> | Указывает сервер узла сеансов удаленных рабочих столов, содержащий сеанс, для которого пользователь должен выйти из системы. Если не указано, используется сервер, на котором активна в данный момент. |
 |          /v          |                                                       Отображает сведения о выполняемых действиях.                                                        |
-|          /?          |                                                                 Отображает справку в командной строке.                                                                 |
+|          /?          |                                                                 Отображение справки в командной строке.                                                                 |
 
 ## <a name="remarks"></a>Примечания
 - Вы всегда можете выйти из сеанса, в котором в данный момент выполнен вход. Однако необходимо иметь разрешение «Полный доступ» для выхода пользователей из других сеансов.
@@ -46,7 +46,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 - Если не указано <*SessionID*> или <*SessionName*>, **выйдите** из текущего сеанса. Если указать <*SessionName*>, он должен быть активным.
 - При выходе пользователя из системы все процессы завершаются, а сеанс удаляется с сервера.
 - Нельзя выйти из сеанса консоли.
-  ## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+  ## <a name="examples"></a>Примеры
 - Для выхода пользователя из текущего сеанса введите:
   ```
   logoff
@@ -60,6 +60,6 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
   logoff TERM04 /server:Server1
   ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Справочник по командам служб удаленных рабочих столов (служб терминалов)](remote-desktop-services-terminal-services-command-reference.md)

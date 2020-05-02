@@ -1,6 +1,6 @@
 ---
 title: nslookup set root
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ea2c34bbf7c9323c948d57ac2a838c22aea1008e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d913669fd4fede06c9983756df1bbf626ca430ac
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838317"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723570"
 ---
 # <a name="nslookup-set-root"></a>nslookup set root
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет имя корневого сервера, используемого для запросов.
 ## <a name="syntax"></a>Синтаксис
@@ -30,10 +30,10 @@ set root=<RootServer>
 |    Параметр    |                                   Описание                                    |
 |-----------------|----------------------------------------------------------------------------------|
 |  <RootServer>   | Указывает новое имя для корневого сервера. Значение по умолчанию — ns.nic.ddn.mil. |
-| {Help &#124; ?} |              Отображает краткую сводку подкоманд **nslookup** .               |
+| {Help &#124;?} |              Отображает краткую сводку подкоманд **nslookup** .               |
 
 ## <a name="remarks"></a>Примечания
 - Подкоманда **set root** влияет на **корневую** подкоманду.
-  ## <a name="additional-references"></a>Дополнительные материалы
-  - [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-  [корневой элемент nslookup](nslookup-root.md)
+  ## <a name="additional-references"></a>Дополнительные ссылки
+  - [Command-Line Syntax Key](command-line-syntax-key.md)
+  [Корневой раздел nslookup](nslookup-root.md) синтаксиса командной строки

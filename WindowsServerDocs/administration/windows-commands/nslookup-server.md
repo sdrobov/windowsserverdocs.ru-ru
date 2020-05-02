@@ -1,6 +1,6 @@
 ---
 title: nslookup server
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8de2d8a801d57a9197d5e8ec7d3b6adb2d00dd04
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c9a3f4c7bdbcf8122bb532fafe83b400400d8d6b
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838687"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723687"
 ---
 # <a name="nslookup-server"></a>nslookup server
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет сервер по умолчанию на указанный домен службы доменных имен (DNS).
 ## <a name="syntax"></a>Синтаксис
@@ -29,11 +29,11 @@ server <DNSDomain>
 
 |    Параметр    |                          Описание                           |
 |-----------------|----------------------------------------------------------------|
-|   <DNSDomain>   | Обязательное. Указывает новый домен DNS для сервера по умолчанию. |
-| {Help &#124; ?} |     Отображает краткую сводку подкоманд **nslookup** .      |
+|   <DNSDomain>   | Обязательный. Указывает новый домен DNS для сервера по умолчанию. |
+| {Help &#124;?} |     Отображает краткую сводку подкоманд **nslookup** .      |
 
 ## <a name="remarks"></a>Примечания
 - Команда **сервера** использует текущий сервер по умолчанию для поиска сведений об указанном домене DNS. Это отличается от команды **лсервер** , которая использует первоначальный сервер.
-  ## <a name="additional-references"></a>Дополнительные материалы
+  ## <a name="additional-references"></a>Дополнительные ссылки
   - [Ключ синтаксиса командной строки](command-line-syntax-key.md)
   [nslookup лсервер](nslookup-lserver.md)

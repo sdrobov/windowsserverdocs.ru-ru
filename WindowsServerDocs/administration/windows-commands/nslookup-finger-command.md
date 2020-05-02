@@ -1,6 +1,6 @@
 ---
 title: nslookup finger Command
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9cfdf60478ca917fb373d07a72f018cf09056b49
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 428c9e7e775c85992f861e30ae9628ea27f7ee70
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723723"
 ---
 # <a name="nslookup-finger-command"></a>nslookup finger Command
 
@@ -32,10 +32,10 @@ finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
 
 |  Параметр  |                                                                               Описание                                                                               |
 |-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<имя пользователя > |                                                               Указывает имя пользователя для поиска.                                                                |
-| \<имя файла > | Указывает имя файла, в котором следует сохранить выходные данные. Для перенаправления выходных данных в обычном режиме можно использовать символы "больше" (>) и "больше" (> >). |
+| \<Имя пользователя> |                                                               Указывает имя пользователя для поиска.                                                                |
+| \<Имя файла> | Указывает имя файла, в котором следует сохранить выходные данные. Чтобы перенаправить выходные данные обычным способом, можно использовать символы больше (>) и Double больше (>>). |
 |    {Справка    |                                                                                   ?}                                                                                    |
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

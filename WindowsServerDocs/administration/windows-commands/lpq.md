@@ -1,6 +1,6 @@
 ---
 title: lpq
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 051b1983fcc0fddd7b69e561c0a27a120f78d998
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f2d7a013ad9481780873cd57be4fa15732fc6196
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80840397"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724256"
 ---
 # <a name="lpq"></a>lpq
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает состояние очереди печати на компьютере, на котором запущена управляющая программа LPR.  
 
@@ -30,18 +30,18 @@ lpq -S <ServerName> -P <printerName> [-l]
 
 |    Параметр     |                                                                        Описание                                                                        |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| -S <ServerName>  | Указывает (по имени или IP-адресу) устройство общего доступа к компьютеру или принтеру, на котором размещена очередь печати LPD, с состоянием, которое необходимо отобразить. Обязательное. |
-| -P <printerName> |                           Указывает (по имени) принтер для очереди печати с состоянием, которое необходимо отобразить. Обязательное.                           |
+| -S<ServerName>  | Указывает (по имени или IP-адресу) устройство общего доступа к компьютеру или принтеру, на котором размещена очередь печати LPD, с состоянием, которое необходимо отобразить. Обязательный. |
+| -P<printerName> |                           Указывает (по имени) принтер для очереди печати с состоянием, которое необходимо отобразить. Обязательный.                           |
 |        -l        |                                      Указывает, что необходимо отобразить сведения о состоянии очереди печати.                                      |
-|        /?        |                                                           Отображает справку в командной строке.                                                            |
+|        /?        |                                                           Отображение справки в командной строке.                                                            |
 
 ## <a name="remarks"></a>Примечания  
 Параметры **-S** и **-P** чувствительны к регистру и должны вводиться в верхнем регистре.  
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 В этом примере показано, как отобразить состояние очереди принтера Laserprinter1 на узле LPD в 10.0.0.45:  
 ```  
 lpq -S 10.0.0.45 -P Laserprinter1  
 ```  
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
 [Справочник по командам печати](print-command-reference.md)  

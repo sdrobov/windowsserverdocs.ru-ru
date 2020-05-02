@@ -1,6 +1,6 @@
 ---
 title: mklink
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,17 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3d6328d972b07b1bebd272788b896fd491e47380
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 83a607711f0abe51810aa5abf4eb731206d810c2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839557"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723974"
 ---
 # <a name="mklink"></a>mklink
 Создает символьную ссылку.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -34,13 +34,13 @@ mklink [[/d] | [/h] | [/j]] <Link> <Target>
 |/d|Создает символьную ссылку каталога. По умолчанию **Mklink** создает символьную ссылку на файл.|
 |/h|Создает жесткую связь вместо символьной ссылки.|
 |/j|Создает соединение с каталогом.|
-|> ссылки \<|Указывает имя создаваемой символьной ссылки.|
-|Целевой > \<|Указывает путь (относительный или абсолютный), на который ссылается Новая символьная ссылка.|
-|/?|Отображает справку в командной строке.|
+|\<Ссылка>|Указывает имя создаваемой символьной ссылки.|
+|\<Target>|Указывает путь (относительный или абсолютный), на который ссылается Новая символьная ссылка.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере демонстрируется создание и удаление символьной ссылки с именем MyFolder и MyFile. file из корневого каталога в каталог \Users\User1\Documents и файл example. File, находящийся в каталоге:
+Для демонстрации создания и удаления символьной ссылки с именем MyFolder и MyFile. file из корневого каталога в каталог \Users\User1\Documents и файл example. File, находящийся в каталоге:
 ```
 mklink /d \MyFolder \Users\User1\Documents
 mklink /h \MyFile.file \User1\Documents\example.file

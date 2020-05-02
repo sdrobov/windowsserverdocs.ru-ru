@@ -1,6 +1,6 @@
 ---
-title: виде
-description: Раздел Windows команды для ****-
+title: маска
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,20 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a1cb92caacb955449c1baaad411fdbe4cdf05b73
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 816bcd932091b33ed897add5a13603e3a1eea925
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839647"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724009"
 ---
-# <a name="mask"></a>виде
+# <a name="mask"></a>маска
 
 
 
 Удаляет аппаратные теневые копии, импортированные с помощью команды **Import** .
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -40,13 +40,13 @@ mask <ShadowSetID>
 
 -   Вместо *шадовсетид*можно использовать существующий псевдоним или переменную среды. Чтобы просмотреть существующие псевдонимы, используйте параметр **Добавить** без параметров.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы удалить импортированную теневую копию% Import_1%, введите:
 ```
 mask %Import_1%
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

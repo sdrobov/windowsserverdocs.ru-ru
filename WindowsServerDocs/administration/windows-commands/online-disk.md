@@ -1,6 +1,6 @@
 ---
 title: оперативный диск
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c61d852ba71329c3d7345d74fd352a6c19436cec
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 110a73a46712e3cbe5b5ff22b7e4343afb103966
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837897"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723415"
 ---
 # <a name="online-disk"></a>оперативный диск
 
@@ -51,14 +51,14 @@ online disk [noerr]
 -   Если группа выбранного диска содержит зеркальные тома или диски RAID 5, эта команда также повторно синхронизирует эти тома.
 -   Для завершения этой команды необходимо выбрать диск. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы перевести диск с фокусом в режим «в сети», введите:
 ```
 online disk
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

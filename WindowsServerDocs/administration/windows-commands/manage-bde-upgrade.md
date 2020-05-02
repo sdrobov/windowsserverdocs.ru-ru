@@ -1,6 +1,6 @@
 ---
 title: Управление обновлением BDE
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0bca75e78ac5b6fec432fa93eadfd9bde795ee9a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ce7d1805a98a3029ce9b83a1b475ecd8bdb0a4ab
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80839787"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82724054"
 ---
 # <a name="manage-bde-upgrade"></a>Manage-bde: обновление
 
 
 
-Обновляет версию BitLocker. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Обновляет версию BitLocker.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,20 +32,20 @@ manage-bde -upgrade [<Drive>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 
 |Параметр|Описание|
 |---------|-----------|
-|> \<диска|Представляет букву диска, за которой следует двоеточие.|
+|\<> диска|Представляет букву диска, за которой следует двоеточие.|
 |-ComputerName|Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды.|
-|Имя \<>|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
+|\<Name>|Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера.|
 |-? или/?|Отображает краткую справку в командной строке.|
 |-Help или-h|Отображает полную справку в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере показано использование команды **-Upgrade** для обновления шифрования BitLocker на диске C.
+Чтобы проиллюстрировано использование команды **-Upgrade** для обновления шифрования BitLocker на диске C.
 ```
 manage-bde –upgrade C:
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Управление — BDE](manage-bde.md)

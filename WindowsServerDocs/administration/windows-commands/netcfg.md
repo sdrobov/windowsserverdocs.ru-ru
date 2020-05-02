@@ -1,6 +1,6 @@
 ---
 title: netcfg
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4895928ffdd5d923d370f82e699d69f42c0f81a5
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a5945da45ee01fd5bf5f89a7835c4bae0b5534c4
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80838937"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82723808"
 ---
 # <a name="netcfg"></a>netcfg
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Устанавливает среда предустановки Windows (WinPE), облегченную версию Windows, используемую для развертывания рабочих станций.
 ## <a name="syntax"></a>Синтаксис
@@ -32,13 +32,13 @@ netcfg [/v] [/e] [/winpe] [/l ] /c /i
 |/e|Использование переменных **среды** обслуживания во время установки и удаления|
 |/винпе|Устанавливает среду предустановки TCP/IP, NetBIOS и Microsoft Client для Windows (WinPE)|
 |/l|Предоставляет **Расположение** INF-файла|
-|/c|Предоставляет **класс** устанавливаемого компонента. Протокол, служба или клиент|
+|/C|Предоставляет **класс** устанавливаемого компонента. Протокол, служба или клиент|
 |/i|Предоставляет **идентификатор** компонента|
 |/s|Предоставляет тип **отображаемых**компонентов.<p>\та = адаптеры, n = компоненты сети|
 |/b|Отображает **пути привязки**, за которым следует строка, содержащая имя пути.|
 |/?|Отображает **справку** в командной строке.|
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы установить *Пример* протокола с помощью к:\оемдир\ексампле.инф, выполните следующие действия.
 ```
@@ -68,5 +68,5 @@ netcfg /s n
 ```
 netcfg /b ms_tcpip
 ```
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
