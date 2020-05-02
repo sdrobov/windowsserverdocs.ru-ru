@@ -1,6 +1,6 @@
 ---
 title: delete volume
-description: Раздел команд Windows для удаления тома, который удаляет выбранный том.
+description: Справочный раздел по удалению тома, который удаляет выбранный том.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f2e958785c278306563999b09c1fecc0fdfa7ecb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b9a8ae0fc863cec5c1a3f6debccf8201e96badd0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846557"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716683"
 ---
 # <a name="delete-volume"></a>delete volume
 
@@ -37,14 +37,14 @@ delete volume [noerr]
 -   Невозможно удалить системный том, загрузочный том, а также любой том, содержащий активный файл подкачки или аварийный дамп (дамп памяти).
 -   Для выполнения этой операции необходимо выбрать том. Используйте команду **выбрать том** , чтобы выбрать том и переместить фокус на него.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы удалить том с фокусом, введите:
 ```
 delete volume
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

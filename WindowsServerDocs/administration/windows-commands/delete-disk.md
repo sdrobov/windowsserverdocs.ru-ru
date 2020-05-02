@@ -1,6 +1,6 @@
 ---
 title: удалить диск
-description: Команды Windows для удаления диска, в результате чего в списке дисков удаляется отсутствующий динамический диск.
+description: Справочный раздел по удалению диска, который удаляет отсутствующий динамический диск из списка дисков.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1a767e0689d5fbabb193df37528a0909ab63a1ab
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ad4888835c0bb1862344f104099b8b59027d1de9
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846657"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716756"
 ---
 # <a name="delete-disk"></a>удалить диск
 
@@ -35,14 +35,14 @@ delete disk [noerr] [override]
 |Noerr|Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|
 |override|Позволяет программе DiskPart удалять все простые тома на диске. Если диск содержит половину зеркального тома, половина зеркала на диске удаляется. Команда удалить переопределение диска завершается сбоем, если диск входит в том RAID-5.|
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы удалить отсутствующий динамический диск из списка дисков, введите:
 ```
 delete disk
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

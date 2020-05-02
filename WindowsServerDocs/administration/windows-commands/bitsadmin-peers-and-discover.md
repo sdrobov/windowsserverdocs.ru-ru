@@ -1,6 +1,6 @@
 ---
-title: битсадминные узлы и обнаружение
-description: Команды Windows для **одноранговых узлов битсадмин** и **обнаружения**, которые снова обнаруживают одноранговые узлы.
+title: bitsadmin peers и discover
+description: Справочный раздел по команде битсадмин Peers и Discover, который снова обнаруживает одноранговые узлы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f6f25ed65f58c12374c43953a0f6276c20b1a06
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 094580bcf27b0968ebfab2d064a4a74dc8358a74
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850017"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717168"
 ---
-# <a name="bitsadmin-peers-and-discover"></a>битсадминные узлы и обнаружение
+# <a name="bitsadmin-peers-and-discover"></a>bitsadmin peers и discover
 
 Обнаружение одноранговых узлов еще раз.
 
@@ -26,14 +26,18 @@ ms.locfileid: "80850017"
 bitsadmin /peers /discover
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере обнаруживаются одноранговые узлы.
+Чтобы снова обнаружить одноранговые узлы, сделайте следующее:
 
 ```
-C:\>bitsadmin /peers /discover
+bitsadmin /peers /discover
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
+
+- [Команда одноранговых узлов битсадмин](bitsadmin-peers.md)

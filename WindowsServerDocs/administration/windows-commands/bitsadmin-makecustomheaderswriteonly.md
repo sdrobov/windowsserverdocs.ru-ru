@@ -1,6 +1,6 @@
 ---
-title: битсадмин макекустомхеадерсвритеонли
-description: Раздел команд Windows для **битсадмин макекустомхеадерсвритеонли**, который делает НАСТРАИВАЕМЫЕ заголовки HTTP задания только для записи.
+title: bitsadmin makecustomheaderswriteonly
+description: Справочный раздел по команде битсадмин макекустомхеадерсвритеонли, который делает пользовательские заголовки HTTP для задания только для записи.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,18 +8,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: 9183b1b5de51020c5c6d2efad2c0a788d158a183
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2aeab7e0ee7797b3e0be7be1156920f3bafc84dc
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850247"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717403"
 ---
-# <a name="bitsadmin-makecustomheaderswriteonly"></a>битсадмин макекустомхеадерсвритеонли
+# <a name="bitsadmin-makecustomheaderswriteonly"></a>bitsadmin makecustomheaderswriteonly
 
 Сделайте пользовательские HTTP-заголовки задания только для записи.
 
-> [!Important]
+> [!IMPORTANT]
 > Это действие нельзя отменить.
 
 ## <a name="syntax"></a>Синтаксис
@@ -32,16 +32,18 @@ bitsadmin /makecustomheaderswriteonly <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере пользовательские заголовки HTTP записываются только для записи для задания с именем *мидовнлоаджоб*.
+Чтобы сделать пользовательские заголовки HTTP только для записи для задания с именем *мидовнлоаджоб*, сделайте следующее:
 
 ```
-C:\>bitsadmin /makecustomheaderswriteonly myDownloadJob
+bitsadmin /makecustomheaderswriteonly myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

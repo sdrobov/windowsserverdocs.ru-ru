@@ -1,6 +1,6 @@
 ---
-title: битсадмин util и жетиепрокси
-description: Раздел команд Windows для **битсадмин util и жетиепрокси**, который получает сведения об использовании прокси-сервера для данной учетной записи службы.
+title: bitsadmin util и getieproxy
+description: Справочный раздел по команде битсадмин util and жетиепрокси, которая получает сведения об использовании прокси-сервера для данной учетной записи службы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 22b24c4f9c0941c88c70b488a82de47c7901bd8b
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 576f308bc7fb9a4e448638d06621f95eebef0cd0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122468"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707663"
 ---
-# <a name="bitsadmin-util-and-getieproxy"></a>битсадмин util и жетиепрокси
+# <a name="bitsadmin-util-and-getieproxy"></a>bitsadmin util и getieproxy
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Возвращает сведения об использовании прокси-сервера для данной учетной записи службы. Эта команда показывает значение для каждого использования прокси-сервера, а не только использование прокси-сервера, указанного для учетной записи службы. Дополнительные сведения о настройке использования прокси-сервера для конкретных учетных записей служб см. в описании команды [битсадмин util и сетиепрокси](bitsadmin-util-and-setieproxy.md) .
 
@@ -32,17 +32,21 @@ bitsadmin /util /getieproxy <account> [/conn <connectionname>]
 
 | Параметр | Описание |
 | --------- | ---------- |
-| учетная запись | Указывает учетную запись службы, параметры прокси которой необходимо получить. Возможные значения:<ul><li>ЛОКАЛЬ</li><li>   NETWORKSERVICE</li><li>LocalService.</li></ul> |
-| connectionName | Необязательно. Используется с параметром **/conn** для указания используемого подключения модема. Если параметр **/conn** не указан, служба BITS использует подключение по локальной сети. |
+| account | Указывает учетную запись службы, параметры прокси которой необходимо получить. Ниже перечислены возможные значения.<ul><li>ЛОКАЛЬ</li><li>   NETWORKSERVICE</li><li>LocalService.</li></ul> |
+| connectionName | Необязательный элемент. Используется с параметром **/conn** для указания используемого подключения модема. Если параметр **/conn** не указан, служба BITS использует подключение по локальной сети. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере показано использование прокси-сервера для учетной записи сетевой службы.
+Чтобы отобразить сведения об использовании прокси-сервера для учетной записи сетевой службы, выполните следующие действия.
 
 ```
-C:\>bitsadmin /util /getieproxy NETWORKSERVICE
+bitsadmin /util /getieproxy NETWORKSERVICE
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [битсадмин util, команда](bitsadmin-util.md)
+
+- [Команда битсадмин](bitsadmin.md)

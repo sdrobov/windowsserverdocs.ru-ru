@@ -1,6 +1,6 @@
 ---
 title: dcgpofix
-description: Раздел команд Windows для Dcgpofix, который повторно создает объекты групповая политика по умолчанию для домена.
+description: Справочный раздел по Dcgpofix, который повторно создает объекты групповая политика по умолчанию (GPO) для домена.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1532d4c8c0266c92b4efce57a6744552a54e51b0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7b30190f06e5e38031c8d205d8ccee9c573a8d84
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846707"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716790"
 ---
 # <a name="dcgpofix"></a>dcgpofix
 
-Повторное создание объектов групповая политика по умолчанию (GPO) для домена. Примеры использования этой команды см. в разделе [примеры](#BKMK_Examples).
+Повторное создание объектов групповая политика по умолчанию (GPO) для домена.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,7 +31,7 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 |    Параметр    |                                                                                                 Описание                                                                                                 |
 |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  /игноресчема  | Игнорирует версию Active Directory® схемы MC</br>При выполнении этой команды. В противном случае команда работает только в той же версии схемы, что и версия Windows, в которой была отправлена команда. |
-| /target {domain |                                                                                                     Контроллер домена                                                                                                      |
+| /target {domain |                                                                                                     DC                                                                                                      |
 |       /?        |                                                                                    Отображает справку в командной строке.                                                                                     |
 
 ## <a name="remarks"></a>Примечания
@@ -39,7 +39,7 @@ DCGPOFix [/ignoreschema] [/target: {Domain | DC | Both}] [/?]
 -   Команда **Dcgpofix** доступна в windows Server 2008 R2 и windows Server 2008, за исключением случаев установки Server Core.
 -   Несмотря на то, что консоль управления групповыми политиками (GPMC) распространяется с Windows Server 2008 R2 и Windows Server 2008, необходимо установить средство управления групповая политика как компонент с помощью диспетчер сервера.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Восстановите объект групповой политики домена по умолчанию в исходном состоянии. Все изменения, внесенные в этот объект групповой политики, будут потеряны. Рекомендуется настраивать объект групповой политики домена по умолчанию только для управления параметрами политик учетных записей по умолчанию, политики паролей, политики блокировки учетных записей и политики Kerberos. В этом примере вы пропускаете версию схемы Active Directory, чтобы команда **Dcgpofix** не ограничивалась той же схемой, что и версия Windows, в которой была выполнена поставка команды.
 ```
@@ -50,7 +50,7 @@ dcgpofix /ignoreschema /target:Domain
 dcgpofix /ignoreschema /target:DC
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Технический центр групповая политика](https://go.microsoft.com/fwlink/?LinkID=145531)
+-   [Статья "Групповая политика" в TechCenter](https://go.microsoft.com/fwlink/?LinkID=145531)
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

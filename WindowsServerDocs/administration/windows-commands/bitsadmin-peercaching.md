@@ -1,6 +1,6 @@
 ---
-title: битсадмин (одноранговый)
-description: Команды Windows для **битсадмин однорангового кэширования**, в котором перечислены коммутаторы/пиркачинг.
+title: bitsadmin peercaching
+description: Справочный раздел по команде битсадмин кэширования, в которой перечислены параметры/пиркачинг.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,19 +9,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c8bb2a5a56c6a25b12cb6d015f1958a02923fa51
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a70ad9927a77c07fa4fd638d359cfcfda53d4005
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850097"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717217"
 ---
-# <a name="bitsadmin-peercaching"></a>битсадмин (одноранговый)
+# <a name="bitsadmin-peercaching"></a>bitsadmin peercaching
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Выводит список параметров/пиркачинг.
-g
+
+Выводит список параметров/пиркачинг.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -38,6 +40,8 @@ bitsadmin /peercaching /getconfigurationflags
 | [bitsadmin peercaching и getconfigurationflags](bitsadmin-peercaching-and-setconfigurationflags.md) | Задает флаги конфигурации, которые определяют, может ли компьютер передавать содержимое одноранговым узлам, а также может ли он скачивать содержимое с одноранговых узлов. |
 | [bitsadmin peercaching и getconfigurationflags](bitsadmin-peercaching-and-getconfigurationflags.md) | Получает флаги конфигурации, которые определяют, обслуживает ли компьютер содержимое одноранговым узлам, и может ли он скачивать содержимое с одноранговых узлов. |
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

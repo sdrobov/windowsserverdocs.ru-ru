@@ -1,6 +1,6 @@
 ---
-title: битсадмин util и версия
-description: Команды Windows для **битсадмин util и Version**, в которых отображается версия службы BITS.
+title: bitsadmin util и version
+description: Справочный раздел по команде битсадмин util and Version, которая отображает версию службы BITS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2c2518eb7a8f15d9a592ed9a77dd67a6f8d8afac
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 20c3db6e6fcd5ef3d00287f36c9f9624ab5224dd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122469"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707594"
 ---
-# <a name="bitsadmin-util-and-version"></a>битсадмин util и версия
+# <a name="bitsadmin-util-and-version"></a>bitsadmin util и version
 
 Отображает версию службы BITS (например, 2,0).
 
@@ -37,12 +37,16 @@ bitsadmin /util /version [/verbose]
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере показана версия службы BITS.
+Для вывода версии службы BITS.
 
 ```
-C:\>bitsadmin /util /version
+bitsadmin /util /version
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [битсадмин util, команда](bitsadmin-util.md)
+
+- [Команда битсадмин](bitsadmin.md)

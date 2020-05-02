@@ -1,6 +1,6 @@
 ---
 title: bitsadmin
-description: Раздел команд Windows для **битсадмин**, который представляет собой средство командной строки, используемое для создания, загрузки и передачи заданий и отслеживания хода выполнения.
+description: Справочный раздел о команде битсадмин, которая представляет собой средство командной строки, используемое для создания, загрузки и передачи заданий, а также отслеживания хода выполнения.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a9cbf715474621b7102d0baf0c448e0ee578bf9
-ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
+ms.openlocfilehash: 94a829ce21c4571188fb5ffeb9a0a1d991637d07
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605564"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82710044"
 ---
 # <a name="bitsadmin"></a>bitsadmin
 
-> Область **применения**: Windows Server (половина ежегодного канала), windows Server 2016, windows Server 2012 R2, windows Server 2012, Windows 10
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10
 
 Битсадмин — это средство командной строки, используемое для создания, загрузки и передачи заданий, а также для отслеживания хода выполнения. Средство битсадмин использует параметры для указания выполняемой работы. Для получения списка `bitsadmin /?` параметров `bitsadmin /help` можно вызвать метод или.
 

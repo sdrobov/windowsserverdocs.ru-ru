@@ -1,6 +1,6 @@
 ---
 title: bitsadmin monitor
-description: Раздел команд Windows для **монитора битсадмин**, который отслеживает задания в очереди на перемещение, принадлежащие текущему пользователю.
+description: Справочный раздел по команде монитора битсадмин, который отслеживает задания в очереди на перемещение, принадлежащие текущему пользователю.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bda268afd5fda24bba2afb04b32bac9cda9a05bb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4c8fa52f9fcf30a66b41c9cdbf7b7e1fab69f06e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850217"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717375"
 ---
 # <a name="bitsadmin-monitor"></a>bitsadmin monitor
 
@@ -30,17 +30,19 @@ bitsadmin /monitor [/allusers] [/refresh <seconds>]
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| /аллусерс | Необязательно. Отслеживает задания для всех пользователей. Для использования этого параметра необходимо иметь права администратора. |
-| /Refresh | Необязательно. Обновляет данные с интервалом, заданным параметром `<seconds>`. Интервал обновления по умолчанию составляет 5 секунд. Чтобы прервать обновление, нажмите клавиши CTRL + C. |
+| /аллусерс | Необязательный элемент. Отслеживает задания для всех пользователей. Для использования этого параметра необходимо иметь права администратора. |
+| /Refresh | Необязательный элемент. Обновляет данные через интервал, заданный параметром `<seconds>`. Интервал обновления по умолчанию составляет 5 секунд. Чтобы прервать обновление, нажмите клавиши CTRL + C. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере производится мониторинг очереди на перемещение заданий, принадлежащих текущему пользователю, и обновление данных каждые 60 секунд.
+Для отслеживания очереди на перемещение заданий, принадлежащих текущему пользователю, и обновляет данные каждые 60 секунд.
 
 ```
-C:\>bitsadmin /monitor /refresh 60
+bitsadmin /monitor /refresh 60
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

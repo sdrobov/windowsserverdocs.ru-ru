@@ -1,6 +1,6 @@
 ---
 title: cls
-description: Раздел команд Windows для CLS, который очищает окно командной строки.
+description: Справочный раздел по команде CLS, который очищает окно командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c00c97ff8d703f30c17c9d3f126a1711d951da1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a30c48bb95f2a8f95acd10c9cdea1a90d324e674
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80847637"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712646"
 ---
 # <a name="cls"></a>cls
 
 Очищает окно командной строки.
-
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,17 +28,18 @@ cls
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|/?|Отображает справку в командной строке.|
+| Параметр | Описание |
+| --------- | ----------- |
+| /? | Отображение справки в командной строке. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы очистить все сведения, отображаемые в окне командной строки, и вернуться к пустому окну, введите:
+
 ```
-cls 
+cls
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

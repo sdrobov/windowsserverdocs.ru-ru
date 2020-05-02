@@ -1,6 +1,6 @@
 ---
-title: одноранговые узлы и список битсадмин
-description: Раздел команд Windows для **одноранговых узлов** и **списков**битсадмин, в которых перечислены все узлы.
+title: bitsadmin peers и list
+description: Справочный раздел для битсадминных узлов и команд List, в котором перечислены все узлы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a38f3ed825f6629c196d5ebac1e967f4fa06a940
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a6c1f8fbcb6ca40c86a1d589ba7217392b9875cf
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849937"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717143"
 ---
-# <a name="bitsadmin-peers-and-list"></a>одноранговые узлы и список битсадмин
+# <a name="bitsadmin-peers-and-list"></a>bitsadmin peers и list
 
 Список всех узлов.
 
@@ -26,14 +26,18 @@ ms.locfileid: "80849937"
 bitsadmin /peers /list
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-В следующем примере перечисляются все узлы.
+Чтобы получить список всех узлов, выполните следующие действия.
 
 ```
-C:\>bitsadmin /peers /list
+bitsadmin /peers /list
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
+
+- [Команда одноранговых узлов битсадмин](bitsadmin-peers.md)

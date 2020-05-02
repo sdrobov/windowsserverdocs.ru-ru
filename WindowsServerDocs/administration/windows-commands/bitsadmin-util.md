@@ -1,6 +1,6 @@
 ---
 title: bitsadmin util
-description: Раздел команд Windows для **битсадмин util**, в котором перечислены параметры util.
+description: Справочный раздел по команде битсадмин util, в которой перечислены переключатели util.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0982bd02001bc6168f13255a7e785905f617db3f
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 0fa7e8f67dd1c7c77ac489b38aa967e55f0e3506
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122570"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707578"
 ---
 # <a name="bitsadmin-util"></a>bitsadmin util
 
-> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Выводит список параметров **/утил** .
 
 Список параметров **util** .
 
@@ -42,6 +44,8 @@ bitsadmin /util /version
 | [bitsadmin util и setieproxy](bitsadmin-util-and-setieproxy.md) | Указывает параметры прокси-сервера, используемые при передаче файлов с помощью учетной записи службы. |
 | [bitsadmin util и version](bitsadmin-util-and-version.md) | Отображает версию службы BITS. |
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

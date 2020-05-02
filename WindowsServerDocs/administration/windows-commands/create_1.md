@@ -1,6 +1,6 @@
 ---
-title: создание
-description: Раздел команд Windows для инструкции CREATE, запускающий процесс создания теневой копии с использованием текущего контекста и настроек параметров.
+title: create
+description: Справочный раздел по созданию, который запускает процесс создания теневой копии с использованием текущего контекста и настроек параметров.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4d29285517ca678a15828079c95663fc4d501eaf
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cfddbebd5744d8cd222d67e46690ce8b5d2e0fde
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80846837"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716836"
 ---
-# <a name="create"></a>создание
+# <a name="create"></a>create
 
 Запускает процесс создания теневой копии с использованием текущего контекста и настроек параметров. Требуется по крайней мере один том в наборе теневых копий.
 
@@ -32,6 +32,6 @@ create
 -   Чтобы указать полную резервную копию, а не резервную копию, можно использовать команду **начать резервное** копирование.
 -   После выполнения команды **CREATE** можно использовать команду **exec** , чтобы выполнить повторяющийся скрипт для резервного копирования из теневой копии.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

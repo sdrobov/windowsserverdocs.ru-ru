@@ -1,6 +1,6 @@
 ---
-title: кэширование и Справка битсадмин
-description: Команды Windows для **битсадминного кэширования** и **подсистемы**, которая отображает сведения об использовании командной строки для параметров/пиркачинг.
+title: bitsadmin peercaching и help
+description: Справочный раздел по **битсадмин кэшированным** локальным и локальным уровням, который **отображает сведения об**использовании командной строки для параметров/пиркачинг.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 29d530d721b9e82eff180abcbed8cf60bf8c9281
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 08cb792989470d7492ff2da4b63ddd686b35b232
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850167"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717251"
 ---
-# <a name="bitsadmin-peercaching-and-help"></a>кэширование и Справка битсадмин
+# <a name="bitsadmin-peercaching-and-help"></a>bitsadmin peercaching и help
 
 Отображает сведения об использовании командной строки для параметров **/пиркачинг** .
 
@@ -26,14 +26,18 @@ ms.locfileid: "80850167"
 bitsadmin /peercaching /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-Следующая команда отображает справку командной строки для коммутаторов **однорангового** ключа.
+Чтобы отобразить справку командной строки для параметров **/пиркачинг** , выполните следующие действия.
 
 ```
-C:\> bitsadmin /peercaching /help
+bitsadmin /peercaching /help
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
+
+- [Команда кэширования битсадмин](bitsadmin-peercaching.md)

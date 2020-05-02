@@ -1,6 +1,6 @@
 ---
-title: битсадминные узлы и Справка
-description: Команды Windows для **битсадминных узлов** и **справки**, которые показывают использование командной строки для параметров/Пирс.
+title: bitsadmin peers и help
+description: Справочный раздел для битсадминных узлов и команд справки, который отображает сведения об использовании командной строки для параметров/Пирс.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9f1eee039830fce2fc311afaf782b97ddd641c70
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 405bf6d0641d46a9e7d365bbd9742633df403020
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80850087"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717160"
 ---
-# <a name="bitsadmin-peers-and-help"></a>битсадминные узлы и Справка
+# <a name="bitsadmin-peers-and-help"></a>bitsadmin peers и help
 
 Отображает сведения об использовании командной строки для параметров **/Пирс** .
 
@@ -26,14 +26,18 @@ ms.locfileid: "80850087"
 bitsadmin /peers /help
 ```
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
-Следующая команда отображает справку командной строки для параметров **/Пирс** .
+Чтобы отобразить сведения об использовании командной строки для параметров **/Пирс** , выполните следующие действия.
 
 ```
-C:\>bitsadmin /peers /help
+bitsadmin /peers /help
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)
+
+- [Команда одноранговых узлов битсадмин](bitsadmin-peers.md)

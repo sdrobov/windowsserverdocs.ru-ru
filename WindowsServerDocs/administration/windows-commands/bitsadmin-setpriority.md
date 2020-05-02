@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setpriority
-description: Раздел команд Windows для **битсадмин SetPriority**, который задает приоритет указанного задания.
+description: Справочный раздел по команде битсадмин SetPriority, который задает приоритет указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9348680a61649b938267b3277de9aa5aa521361f
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 556a1d94700780ea22acc1e4c2f32961c0e43342
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81122769"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717256"
 ---
 # <a name="bitsadmin-setpriority"></a>bitsadmin setpriority
 
@@ -30,17 +30,19 @@ bitsadmin /setpriority <job> <priority>
 
 | Параметр | Описание |
 | --------- | ----------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
-| приоритет | Задает приоритет задания, включая:<ul><li>FOREGROUND</li><li>HIGH</li><li>NORMAL</li><li>LOW</li></ul> |
+| задание | Отображаемое имя задания или идентификатор GUID. |
+| priority | Задает приоритет задания, включая:<ul><li>FOREGROUND</li><li>HIGH.</li><li>NORMAL</li><li>LOW</li></ul> |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере задается приоритет для задания с именем *мидовнлоаджоб* в значение Обычная.
+Чтобы задать приоритет для задания с именем *мидовнлоаджоб* , выполните следующие действия.
 
 ```
-C:\>bitsadmin /setpriority myDownloadJob NORMAL
+bitsadmin /setpriority myDownloadJob NORMAL
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

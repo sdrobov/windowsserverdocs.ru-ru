@@ -1,6 +1,6 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Раздел команд Windows для **битсадмин реплацеремотепрефикс**, при необходимости изменяется удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
+description: Справочный раздел по команде битсадмин реплацеремотепрефикс, при необходимости который изменяет удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0cea0108a292815e31e893e91dc4079305c1da9a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 745d026513413db799e86df3422d5ee19c89274f
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80849817"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717039"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
@@ -30,18 +30,20 @@ bitsadmin /replaceremoteprefix <job> <oldprefix> <newprefix>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 | олдпрефикс | Существующий префикс URL-адреса. |
 | невпрефикс | Новый префикс URL-адреса. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере изменяется удаленный URL-адрес для всех файлов в задании с именем *мидовнлоаджоб*, от *http://stageserver* до *http://prodserver* .
+Чтобы изменить удаленный URL-адрес для всех файлов в задании с именем *http://stageserver* мидовнлоаджоб *http://prodserver*, с на. *myDownloadJob*
 
 ```
-C:\>bitsadmin /replaceremoteprefix myDownloadJob http://stageserver http://prodserver
+bitsadmin /replaceremoteprefix myDownloadJob http://stageserver http://prodserver
 ```
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

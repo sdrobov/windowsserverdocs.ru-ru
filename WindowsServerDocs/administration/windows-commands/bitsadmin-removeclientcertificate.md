@@ -1,6 +1,6 @@
 ---
-title: битсадмин ремовеклиентцертификате
-description: Раздел команд Windows для **битсадмин ремовеклиентцертификате**, который удаляет сертификат клиента из задания.
+title: bitsadmin removeclientcertificate
+description: Справочный раздел по команде битсадмин ремовеклиентцертификате, который удаляет сертификат клиента из задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 312226b73b91385436e15c4afbb49df161258768
-ms.sourcegitcommit: 141f2d83f70cb467eee59191197cdb9446d8ef31
+ms.openlocfilehash: 513830f6048f78aa528fa22cb590571e718452c2
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81123106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717066"
 ---
-# <a name="bitsadmin-removeclientcertificate"></a>битсадмин ремовеклиентцертификате
+# <a name="bitsadmin-removeclientcertificate"></a>bitsadmin removeclientcertificate
 
 Удаляет сертификат клиента из задания.
 
@@ -30,16 +30,18 @@ bitsadmin /removeclientcertificate <job>
 
 | Параметр | Описание |
 | -------------- | -------------- |
-| задания | Отображаемое имя задания или идентификатор GUID. |
+| задание | Отображаемое имя задания или идентификатор GUID. |
 
 ## <a name="examples"></a>Примеры
 
-В следующем примере удаляется сертификат клиента из задания с именем *мидовнлоаджоб*.
+Чтобы удалить сертификат клиента из задания с именем *мидовнлоаджоб*, выполните следующие действия.
 
 ```
-C:\>bitsadmin /removeclientcertificate myDownloadJob 
+bitsadmin /removeclientcertificate myDownloadJob
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда битсадмин](bitsadmin.md)

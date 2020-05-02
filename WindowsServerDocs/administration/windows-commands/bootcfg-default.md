@@ -1,6 +1,6 @@
 ---
 title: bootcfg default
-description: Раздел команд Windows для bootcfg default, который указывает запись операционной системы, которую следует назначить по умолчанию.
+description: Справочный раздел по команде bootcfg по умолчанию, который указывает запись операционной системы для обозначения по умолчанию.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,38 +9,46 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 517cf444a5517b3d612266b57b428e47ac60d4ef
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 43a1c2b4bcbb4062a24d4c72f5856898afecd349
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80848568"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709692"
 ---
 # <a name="bootcfg-default"></a>bootcfg default
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Указывает запись операционной системы, которую следует назначить по умолчанию.
 
 ## <a name="syntax"></a>Синтаксис
+
 ```
-bootcfg /default [/s <computer> [/u <Domain>\<User> /p <Password>]] [/id <OSEntryLineNum>]
+bootcfg /default [/s <computer> [/u <domain>\<user> /p <password>]] [/id <osentrylinenum>]
 ```
+
 ### <a name="parameters"></a>Параметры
 
-|      Параметр       |                                                                                             Описание                                                                                              |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    /s <computer>     |                                          Указывает имя или IP-адрес удаленного компьютера (не используйте символы обратной косой черты). По умолчанию используется локальный компьютер.                                          |
-| /u <Domain>\\<User>  | Выполняет команду с разрешениями учетной записи пользователя, указанного в <User> или <Domain>\\<User>. По умолчанию заданы разрешения текущего вошедшего в систему пользователя на компьютере, выполняющем команду. |
-|    /p <Password>     |                                                        Указывает пароль учетной записи пользователя, указанной в параметре **/u** .                                                         |
-| /ID <OSEntryLineNum> | Указывает номер строки записи операционной системы в разделе [Operating Systems] файла Boot. ini для обозначения по умолчанию. Первая строка после заголовка раздела [Operating Systems] — 1.  |
-|          /?          |                                                                                 Отображает справку в командной строке.                                                                                 |
+| Параметр | Описание |
+| --------- | ----------- |
+| `/s <computer>` | Указывает имя или IP-адрес удаленного компьютера (не используйте обратную косую черту). По умолчанию используется локальный компьютер. |
+| `/u <domain>\<user>`  | Выполняет команду с разрешениями учетной записи пользователя, указанного `<user>` в `<domain>\<user>`параметре или. По умолчанию заданы разрешения текущего вошедшего в систему пользователя на компьютере, выполняющем команду. |
+| `/p <password>` | Указывает пароль учетной записи пользователя, указанной в параметре **/u** . |
+| `/id <osentrylinenum>` | Указывает номер строки записи операционной системы в разделе [Operating Systems] файла Boot. ini, в который добавляются параметры загрузки операционной системы. Первая строка после заголовка раздела [Operating Systems] — 1. |
+| /? | Отображение справки в командной строке. |
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
-В следующих примерах показано, как можно использовать команду **bootcfg/default**:
+## <a name="examples"></a>Примеры
+
+Для использования команды **bootcfg/default** :
+
 ```
 bootcfg /default /id 2
 bootcfg /default /s srvmain /u maindom\hiropln /p p@ssW23 /id 2
 ```
-## <a name="additional-references"></a>Дополнительные материалы
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда bootcfg](bootcfg.md)
