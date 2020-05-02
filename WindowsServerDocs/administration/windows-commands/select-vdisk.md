@@ -1,6 +1,6 @@
 ---
 title: выбрать виртуальный диск
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 65e186413bebbf467cd4c2033d274badd1fbea80
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 68f60f8f43a33d498c40daa3b9994887f12037bb
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834747"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722003"
 ---
 # <a name="select-vdisk"></a>выбрать виртуальный диск
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-выбирает указанный виртуальный жесткий диск \(VHD\) и перемещает фокус на него.  
+выбирает указанный виртуальный жесткий диск виртуального \(жесткого\) диска и перемещает фокус на него.  
   
 > [!NOTE]  
 > Эта команда применима только к Windows 7 и Windows Server 2008 R2.  
@@ -35,17 +35,17 @@ select vdisk file=<full path> [noerr]
   
 |Параметр|Описание|  
 |-------|--------|  
-|<full path>\=файлов|Указывает полный путь и имя существующего файла виртуального жесткого диска.|  
+|File\=<full path>|Указывает полный путь и имя существующего файла виртуального жесткого диска.|  
 |Noerr|Используется только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки.|  
   
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Чтобы переместить фокус на виртуальный жесткий диск с именем Test. VHD, введите:  
   
 ```  
 select vdisk file=c:\test\test.vhd  
 ```  
   
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
   
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   

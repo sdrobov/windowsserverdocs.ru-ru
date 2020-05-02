@@ -1,6 +1,6 @@
 ---
 title: Задание метаданных
-description: Раздел команд Windows для Set metadata, который задает имя и расположение файла метаданных теневого копирования, используемого для перемещения теневых копий с одного компьютера на другой.
+description: Справочный раздел по набору метаданных, который задает имя и расположение файла метаданных теневого копирования, используемого для перемещения теневых копий с одного компьютера на другой.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b5bd728650cf163f98a82ff1e6f88755c4cc1aea
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 683e54a7efc072d8709d6257771ba6bc5bde206e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834527"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721915"
 ---
 # <a name="set-metadata"></a>Задание метаданных
 
@@ -30,9 +30,9 @@ set metadata [<Drive>:][<Path>]<MetaData.cab>
 
 |Параметр|Описание|
 |---------|-----------|
-|[\<диска >:] [<Path>]|Указывает расположение для создания файла метаданных.|
+|[\<Диск>:] [<Path>]|Указывает расположение для создания файла метаданных.|
 |\<> MetaData. cab|Указывает имя CAB-файла для хранения метаданных создания теневой копии.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

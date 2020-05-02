@@ -1,6 +1,6 @@
 ---
 title: выбор Секции
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 97145d73cbbe1bdc9b27e545b047b78fe89e4984
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 55b06f247c8e9f183a2971278a8f16ac237e9cfe
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834807"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722015"
 ---
 # <a name="select-partition"></a>выбор Секции
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 выбирает указанную секцию и перемещает фокус на нее. Эта команда также может использоваться для вывода раздела, который в данный момент находится на выбранном диске.  
   
@@ -34,7 +34,7 @@ select partition=<n>
   
 |   Параметр    |                                                                                    Описание                                                                                    |
 |----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <n>\=секционирования | Номер секции, получающей фокус. Числа для всех разделов на диске, выбранных в данный момент, можно просмотреть с помощью команды **list partition** в DiskPart. |
+| диска\=<n> | Номер секции, получающей фокус. Числа для всех разделов на диске, выбранных в данный момент, можно просмотреть с помощью команды **list partition** в DiskPart. |
   
 ## <a name="remarks"></a>Примечания  
   
@@ -46,7 +46,7 @@ select partition=<n>
   
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.  
   
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Чтобы переместить фокус на раздел 3, введите:  
   
 ```  
@@ -59,7 +59,7 @@ select partitition=3
 select partition  
 ```  
   
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 

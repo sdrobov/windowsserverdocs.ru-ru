@@ -1,6 +1,6 @@
 ---
 title: Откат команду scwcmd
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9679f8a8ef2e62f451d7ee01c3c5718825b5cbeb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0cd4eeec1113717a40dca43f0320f2db3c4c414e
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835147"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722135"
 ---
 # <a name="scwcmd-rollback"></a>Scwcmd: rollback
 
-> Область применения: Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server 2012 R2, Windows Server 2012
 
 Применяет последнюю доступную политику отката, а затем удаляет эту политику отката.
 
@@ -32,22 +32,22 @@ scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/m:\<ComputerName >|Указывает имя NetBIOS, DNS-имя или IP-адрес компьютера, на котором должна быть выполнена операция отката.|
-|/u:\<имя пользователя >|Указывает альтернативную учетную запись пользователя, используемую при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
-|/ПВ:\<пароль >|Указывает альтернативные учетные данные пользователя для использования при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
-|/?|Отображает справку в командной строке.|
+|/m:\<имя_компьютера>|Указывает имя NetBIOS, DNS-имя или IP-адрес компьютера, на котором должна быть выполнена операция отката.|
+|/u:\<имя_пользователя>|Указывает альтернативную учетную запись пользователя, используемую при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
+|/ПВ:\<пароль>|Указывает альтернативные учетные данные пользователя для использования при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
 Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
-## <a name="examples"></a><a name=BKMK_Examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы выполнить откат политики безопасности на компьютере с IP-адресом 172.16.0.0, введите:
 ```
 scwcmd rollback /m:172.16.0.0
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

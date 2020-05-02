@@ -1,6 +1,6 @@
 ---
 title: Задать verbose
-description: Команды Windows для Set Verbose, указывающие, следует ли предоставлять подробный вывод при создании теневой копии.
+description: Справочный раздел по параметру SET Verbose, который указывает, следует ли предоставлять подробный вывод при создании теневой копии.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f06400259004095fcc4ec81b2ed3cb25678a4b7d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: db31192037e57ee471d04480e0c9333b39e44980
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834467"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721892"
 ---
 # <a name="set-verbose"></a>Задать verbose
 
@@ -36,6 +36,6 @@ set verbose {on | off}
 
 -   Если параметр verbose имеет значение ON, **параметр SET** предоставляет сведения о включении или исключении модуля записи, а также сведения о сжатии и извлечении метаданных.
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

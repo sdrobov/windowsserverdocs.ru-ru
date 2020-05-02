@@ -1,6 +1,6 @@
 ---
 title: recover
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c9b691b2f0cbad101f7caeb63011724dcf7594d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3a77e83f1a7143a82fd626390c7373dc87afdb17
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80836577"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722611"
 ---
 # <a name="recover"></a>recover
 
@@ -44,14 +44,14 @@ recover [noerr]
 -   Эта команда работает с дисками, на которых произошел сбой или сбой. Он также работает с томами, на которых произошел сбой, сбой или в состоянии избыточности.
 -   Для выполнения этой команды необходимо выбрать диск, который входит в состав группы дисков. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы восстановить группу дисков, содержащую диск с фокусом, введите:
 ```
 recover
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

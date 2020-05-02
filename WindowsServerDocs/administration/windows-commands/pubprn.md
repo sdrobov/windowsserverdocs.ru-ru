@@ -1,6 +1,6 @@
 ---
 title: pubprn
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8696a372902f36f703670cf514bddf75cf4cc7e3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 17ca9e98ef9e3423521b03c5c21be4b3f1538b62
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837107"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722780"
 ---
 # <a name="pubprn"></a>pubprn
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Публикует принтер в доменных службах Active Directory.
 
@@ -31,28 +31,28 @@ LDAP://CN=<Container>,DC=<Container>
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|\<ServerName >|Указывает имя сервера Windows, на котором размещен принтер, который требуется опубликовать. Если компьютер не указан, используется локальный компьютер.|
-|\<Ункпринтерпас >|UNC-путь к общему принтеру, который требуется опубликовать.|
+|\<Имя сервера>|Указывает имя сервера Windows, на котором размещен принтер, который требуется опубликовать. Если компьютер не указан, используется локальный компьютер.|
+|\<Ункпринтерпас>|UNC-путь к общему принтеру, который требуется опубликовать.|
 |LDAP://CN =<Container>, DC =<Container>|Указывает путь к контейнеру в доменных службах Active Directory, в котором требуется опубликовать принтер.|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
--   Команда **Pubprn** — это Visual Basic сценарий, расположенный в каталоге%windir%\system32\ printing_Admin_Scripts\\<language>. Чтобы использовать эту команду, в командной строке введите **cscript** , а затем полный путь к файлу Pubprn или измените каталоги на соответствующую папку. Например:
+-   Команда **Pubprn** является сценарием Visual Basic, расположенным в каталоге%WINDIR%\system32\\\ <language> printing_Admin_Scripts. Чтобы использовать эту команду, в командной строке введите **cscript** , а затем полный путь к файлу Pubprn или измените каталоги на соответствующую папку. Пример:
     ```
     cscript %WINdir%\System32\printing_Admin_Scripts\en-US\pubprn
     ```
 -   Если предоставленные сведения содержат пробелы, заключите текст в кавычки (например, `computer Name`).
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
-Чтобы опубликовать все принтеры на компьютере \\\Server1 в контейнере MyContainer в домене MyDomain.company.Com, введите:
+## <a name="examples"></a>Примеры
+Чтобы опубликовать все принтеры на \\компьютере \Server1 в контейнере MyContainer в домене mydomain.Company.com, введите:
 ```
 cscript Ppubprn Server1 LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com
 ```
-Чтобы опубликовать принтер Laserprinter1 на сервере \\\Server1 в контейнер MyContainer в домене MyDomain.company.Com, введите:
+Чтобы опубликовать принтер Laserprinter1 на сервере \\\Server1 в контейнер MyContainer в домене mydomain.Company.com, введите:
 ```
 cscript Ppubprn \\Server1\Laserprinter1 LDAP://CN=MyContainer,DC=MyDomain,DC=company,DC=Com
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[Печать справочника по командам](print-command-reference.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Справочник по синтаксису](command-line-syntax-key.md)
+[командной](print-command-reference.md) строки для команды Print

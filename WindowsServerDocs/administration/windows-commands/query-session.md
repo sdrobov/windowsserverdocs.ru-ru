@@ -1,6 +1,6 @@
 ---
 title: сеанс запроса
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,22 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 173b6e53bbd5cd42f3172582a46277dccff7dcbd
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a7a119cda5fad594638211bfcdbdc269fff13d20
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80836947"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722706"
 ---
 # <a name="query-session"></a>сеанс запроса
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения о сеансах на сервере узла сеансов удаленный рабочий стол.
 Список включает сведения не только об активных сеансах, но и о других сеансах, которые выполняет сервер.
-Примеры использования этой команды см. в разделе [примеры](#BKMK_examples).
+
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов называются службами удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 > ## <a name="syntax"></a>Синтаксис
 > ```
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
@@ -41,7 +41,7 @@ ms.locfileid: "80836947"
 > |        /флов         |                                        Отображает текущие параметры управления потоком.                                        |
 > |       /коннект       |                                          Отображает текущие параметры подключения.                                           |
 > |       /Counter       | Отображает сведения о текущих счетчиках, включая общее число созданных, отключенных и повторно подключенных сеансов. |
-> |          /?          |                                         Отображает справку в командной строке.                                          |
+> |          /?          |                                         Отображение справки в командной строке.                                          |
 > 
 > ## <a name="remarks"></a>Примечания
 > - Пользователь всегда может запрашивать сеанс, в который в данный момент вошел пользователь. Чтобы запросить другие сеансы, пользователь должен иметь специальное разрешение на доступ к сведениям о запросе.
@@ -57,7 +57,7 @@ ms.locfileid: "80836947"
 >                                   5 idle
 >   ```
 >   Символ «больше» (>) обозначает текущий сеанс. SESSIONNAME указывает имя, назначенное сеансу. USERNAME указывает имя пользователя, подключенного к сеансу. STATE предоставляет сведения о текущем состоянии сеанса. ТИП указывает тип сеанса. УСТРОЙСТВО, которое отсутствует для сеансов, подключенных к консоли или к сети, — это имя устройства, назначенное сеансу. Комментарий, приведенный после сведений о сеансе, относится к профилю сеанса. Все сеансы, в которых исходное состояние настроено как ОТКЛЮЧЕНное, не отображаются в списке **сеансов запросов** , пока они не будут включены.
->   ## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+>   ## <a name="examples"></a>Примеры
 > - Чтобы отобразить сведения обо всех активных сеансах на сервере SERver2, введите:
 >   ```
 >   query session /server:SERver2
@@ -66,7 +66,7 @@ ms.locfileid: "80836947"
 >   ```
 >   query session modeM02
 >   ```
->   ## <a name="additional-references"></a>Дополнительные материалы
->   - [Раздел синтаксиса командной строки](command-line-syntax-key.md)
->   [запрос](query.md)
->   [службы удаленных рабочих столов (службы терминалов) Справочник по командам](remote-desktop-services-terminal-services-command-reference.md)
+>   ## <a name="additional-references"></a>Дополнительные ссылки
+>   - [Command-Line Syntax Key](command-line-syntax-key.md)
+>   Справочник по[запросам](query.md)
+>   синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)

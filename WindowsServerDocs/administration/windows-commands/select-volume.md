@@ -1,6 +1,6 @@
 ---
 title: select volume
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b9337d7e4b37adcc22084249e53fb272335bf4f3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a3885d5d40e35e975ebe1cc28ddc26d4c1e78e24
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834707"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721991"
 ---
 # <a name="select-volume"></a>select volume
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 выбирает указанный том и перемещает фокус на него. Эта команда также может использоваться для показа тома, который в данный момент находится на выбранном диске.  
   
@@ -47,7 +47,7 @@ select volume={<n>|<d>}
   
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.  
   
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров  
+## <a name="examples"></a>Примеры  
 Чтобы переместить фокус на том 2, введите:  
   
 ```  
@@ -72,7 +72,7 @@ select volume=c:\mountpath
 select volume  
 ```  
   
-## <a name="additional-references"></a>Дополнительные материалы  
+## <a name="additional-references"></a>Дополнительные ссылки  
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
   
 

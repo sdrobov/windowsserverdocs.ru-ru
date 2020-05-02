@@ -1,6 +1,6 @@
 ---
 title: Задать контекст
-description: Раздел команд Windows для Set Context, который задает контекст для создания теневой копии.
+description: Справочный раздел по контексту Set, который задает контекст для создания теневой копии.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 162fefc46bc3b8ae39dcb41a387e50ed98fefa70
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 9494cb8a0a6b0e320240d74980049a4e49843ecd
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80834567"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82721934"
 ---
 # <a name="set-contex"></a>Задать контекста
 
 Задает контекст для создания теневой копии. Если используется без параметров, **контекст Set** отображает справку в командной строке.
 
-В разделе [Примеры](#BKMK_examples) показан принцип использования этой команды.
+
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -41,13 +41,13 @@ set context {clientaccessible | persistent [nowriters] | volatile [nowriters]}
 
 -   По умолчанию контекст *клиентакцессибле* является постоянным.
 
-## <a name="examples"></a><a name=BKMK_examples></a>Примеров
+## <a name="examples"></a>Примеры
 
 Чтобы предотвратить удаление теневых копий при выходе из сценария DiskShadow, введите:
 ```
 set context persistent
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

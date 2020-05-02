@@ -1,6 +1,6 @@
 ---
 title: SC Delete
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 05b276de04d4250cc03e4b2976bf8c1330ef82ce
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dd40b5eb82def3b3c437cbdb5b60d279529d25a0
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835387"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722193"
 ---
 # <a name="sc-delete"></a>SC Delete
 
@@ -34,9 +34,9 @@ sc [<ServerName>] delete [<ServiceName>]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<ServerName >|Указывает имя удаленного сервера, на котором расположена служба. Имя должно использовать формат UNC (например, \\\\MyServer). Чтобы запустить SC. exe локально, опустите этот параметр.|
-|\<ServiceName >|Указывает имя службы, возвращенное операцией **жеткэйнаме** .|
-|?|Отображает справку в командной строке.|
+|\<Имя сервера>|Указывает имя удаленного сервера, на котором расположена служба. Имя должно использовать формат UNC (например, \\ \\MyServer). Чтобы запустить SC. exe локально, опустите этот параметр.|
+|\<> ServiceName|Указывает имя службы, возвращенное операцией **жеткэйнаме** .|
+|?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -49,6 +49,6 @@ sc [<ServerName>] delete [<ServiceName>]
 sc delete newserv
 ```
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

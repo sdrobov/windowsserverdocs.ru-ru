@@ -1,6 +1,6 @@
 ---
 title: Scwcmd
-description: Раздел Windows команды для ****-
+description: Справочный раздел по * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 014bb8b26f6eebaefa3a9997a71fbaaf543a75dc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f08a8396219924ac6660828464e035c7744729b1
+ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80835047"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82722099"
 ---
 # <a name="scwcmd"></a>Scwcmd
 
-> Область применения: Windows Server 2012 R2, Windows Server 2012
+> Область применения: Windows Server 2012 R2, Windows Server 2012
 
 Программу командной строки команду scwcmd. exe, входящую в состав мастера настройки безопасности (SCW), можно использовать для выполнения следующих задач.
 -   Настройте один или несколько серверов с помощью политики, созданной SCW.
@@ -40,14 +40,14 @@ scwcmd <command> [<subcommand>]
 
 |Подкоманда|Описание|
 |----------|-----------|
-|/Analyze|Определяет, соответствует ли компьютер политике.</br>Синтаксис и параметры см. в разделе [команду scwcmd: Analyze](scwcmd-analyze.md) .|
+|/analyze|Определяет, соответствует ли компьютер политике.</br>Синтаксис и параметры см. в разделе [команду scwcmd: Analyze](scwcmd-analyze.md) .|
 |/configure|Применяет политику безопасности, созданную SCW, к компьютеру.</br>Синтаксис и параметры см. в разделе [команду scwcmd: Configure](scwcmd-configure.md) .|
 |/Register|Расширяет или настраивает базу данных конфигурации безопасности SCW путем регистрации файла базы данных конфигурации безопасности, содержащего определения ролей, задач, служб или портов.</br>Синтаксис и параметры см. в разделе [команду scwcmd: Register](scwcmd-register.md) .|
 |/роллбакк|Применяет последнюю доступную политику отката, а затем удаляет эту политику отката.</br>Синтаксис и параметры см. в разделе [команду scwcmd: ROLLBACK](scwcmd-rollback.md) .|
 |/Transform|Преобразует файл политики безопасности, созданный с помощью SCW, в новый объект групповая политика (GPO) в службах домен Active Directory Services.</br>См. раздел [команду scwcmd:](scwcmd-transform.md) синтаксис и параметры преобразования.|
 |/виев|Визуализирует XML-файл с помощью указанного преобразования XSL.</br>Синтаксис и параметры см. в разделе [команду scwcmd: View](scwcmd-view.md) .|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
-## <a name="additional-references"></a>Дополнительные материалы
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
