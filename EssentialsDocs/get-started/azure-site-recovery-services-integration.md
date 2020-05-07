@@ -8,14 +8,14 @@ ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 29db78fdf38a6fab23d9a5ec5539c0606e2fbbaa
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b947ca49a82c18fd7a6c1da71b1e4b43ea741b41
+ms.sourcegitcommit: f247065941508b913c31828944978d3e721e2110
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80814487"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82876419"
 ---
-# <a name="azure-site-recovery-services-integration"></a>Интеграция служб Azure Site Recovery
+# <a name="azure-site-recovery-services-integration"></a>Интеграция служб Azure Site Recovery 
 
 >Область применения: Windows Server 2016 Essentials
 
@@ -39,7 +39,7 @@ ms.locfileid: "80814487"
 
 ### <a name="enabling-guest-virtual-machines-for-protection"></a>Включение защиты гостевых виртуальных машин
 
-После выбора виртуальной машины в окне восстановления Azure можно нажать кнопку **включить репликацию в Azure** в правой части панели мониторинга, чтобы подготовить и скопировать образ виртуальной машины &trade;s в Azure.
+После выбора виртуальной машины в окне восстановления Azure можно нажать кнопку **включить репликацию в Azure** в правой части панели мониторинга, чтобы подготовить и скопировать образ виртуальной машины &trade;в Azure.
 
 ![Снимок экрана, показывающий диалоговое окно включения репликации в Azure. Индикатор выполнения отображается при добавлении узла.](media/azure-site-recovery-5.PNG)
 
@@ -63,6 +63,6 @@ ms.locfileid: "80814487"
 
 ![Снимок экрана, показывающий страницу восстановления Azure панели мониторинга Windows Server Essentials. Репликация в Azure включена для узла Essentials, а виртуальная машина с именем Essentials-Test, выполняемая в Azure, указывает, что узел отработка отказа в Azure.](media/azure-site-recovery-8.PNG)
 
-<a name="see-also"></a>См. также:
+<a name="see-also"></a>См. также раздел
 --------
 [Начало работы с Windows Server Essentials](get-started.md)

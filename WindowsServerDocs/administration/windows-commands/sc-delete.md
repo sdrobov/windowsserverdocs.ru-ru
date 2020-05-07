@@ -1,6 +1,6 @@
 ---
-title: SC Delete
-description: Справочный раздел по * * * *-
+title: SC. exe Delete
+description: Узнайте, как отменить регистрацию служб с помощью служебной программы SC. exe
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dd40b5eb82def3b3c437cbdb5b60d279529d25a0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 284012cf6799df52832e62c3eea1b2f0fcd84805
+ms.sourcegitcommit: 95b60384b0b070263465eaffb27b8e3bb052a4de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722193"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82850115"
 ---
-# <a name="sc-delete"></a>SC Delete
-
-
+# <a name="scexe-delete"></a>SC. exe Delete
 
 Удаляет подраздел службы из реестра. Если служба запущена или другой процесс имеет открытый обработчик, служба помечается для удаления.
 
@@ -27,7 +25,7 @@ ms.locfileid: "82722193"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-sc [<ServerName>] delete [<ServiceName>]
+sc.exe [<ServerName>] delete [<ServiceName>]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -40,13 +38,13 @@ sc [<ServerName>] delete [<ServiceName>]
 
 ## <a name="remarks"></a>Примечания
 
-Используйте оснастку " **Установка и удаление программ** " на **панели управления** для удаления DHCP, DNS или любых других встроенных служб операционной системы. Обратите внимание, что компонент " **Установка и удаление программ** " не только удаляет подраздел реестра для службы, но также удаляет службу и все ярлыки.
+Не рекомендуется использовать SC. exe для удаления встроенных служб операционной системы, таких как DHCP, DNS или службы IIS. Сведения об установке, удалении и перенастройке ролей операционной системы, служб и компонентов см. в разделе [Установка и удаление ролей, служб ролей или компонентов](/WindowsServerDocs/administration/server-manager/install-or-uninstall-roles-role-services-or-features.md) .
 
 ## <a name="examples"></a>Примеры
 
 Чтобы удалить подраздел Service **невсерв** из реестра на локальном компьютере, введите:
 ```
-sc delete newserv
+sc.exe delete newserv
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки

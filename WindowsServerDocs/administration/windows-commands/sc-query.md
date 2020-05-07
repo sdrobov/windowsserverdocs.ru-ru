@@ -1,6 +1,6 @@
 ---
-title: Запрос SC
-description: Справочный раздел по * * * *-
+title: Запрос SC. exe
+description: Узнайте, как получить сведения о службах, драйверах, типах служб или типах драйверов с помощью служебной программы SC. exe.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,25 +9,21 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a6b4555790a8f9bb1149531251e724189177975
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 86aabbbc42c965b72f317a3bfaa99acc99c46f3b
+ms.sourcegitcommit: 95b60384b0b070263465eaffb27b8e3bb052a4de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722185"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82850045"
 ---
-# <a name="sc-query"></a>Запрос SC
-
-
+# <a name="scexe-query"></a>Запрос SC. exe
 
 Получение и отображение сведений о указанной службе, драйвере, типе службы или типе драйвера.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
+sc.exe [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= {own | share | interact | kernel | filesys | rec | adapt}] [state= {active | inactive | all}] [bufsize= <BufferSize>] [ri= <ResumeIndex>] [group= <GroupName>]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -55,43 +51,43 @@ sc [<ServerName>] query [<ServiceName>] [type= {driver | service | all}] [type= 
   ```  
   Чтобы отобразить оставшуюся информацию о **запросах** , перезапустите **Query**, установив **буфсизе =** равным количеству байтов и установив параметр **RI =** для указанного индекса. Например, для отображения оставшихся выходных данных введите в командной строке следующую команду:  
   ```
-  sc query bufsize= 1822 ri= 79
+  sc.exe query bufsize= 1822 ri= 79
   ```
 
 ## <a name="examples"></a>Примеры
 
 Чтобы отобразить сведения только для активных служб, введите одну из следующих команд:
 ```
-sc query
-sc query type= service
+sc.exe query
+sc.exe query type= service
 ```
 Чтобы отобразить сведения об активных службах и указать размер буфера 2 000 байт, введите:
 ```
-sc query type= all bufsize= 2000
+sc.exe query type= all bufsize= 2000
 ```
 Чтобы отобразить сведения о службе WUAUSERV, введите:
 ```
-sc query wuauserv
+sc.exe query wuauserv
 ```
 Чтобы отобразить сведения для всех служб (активных и неактивных), введите:
 ```
-sc query state= all
+sc.exe query state= all
 ```
 Чтобы отобразить сведения для всех служб (активных и неактивных), начиная со строки 56, введите:
 ```
-sc query state= all ri= 56
+sc.exe query state= all ri= 56
 ```
 Чтобы отобразить сведения о интерактивных службах, введите:
 ```
-sc query type= service type= interact
+sc.exe query type= service type= interact
 ```
 Чтобы отобразить сведения только для драйверов, введите:
 ```
-sc query type= driver
+sc.exe query type= driver
 ```
 Чтобы отобразить сведения о драйверах в группе NDIS, введите:
 ```
-sc query type= driver group= ndis
+sc.exe query type= driver group= ndis
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
