@@ -1,6 +1,6 @@
 ---
 ms.assetid: 1a443181-7ded-4912-8e40-5aa447faf00c
-title: Параметры единого входа AD FS 2016
+title: Параметры единого входа AD FS 2016
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,12 +8,12 @@ ms.date: 08/17/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: bad6ad9a95618239825366187c8083c1fe77ae94
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cdd35ccc7800616f7803937738c942e68bf04c00
+ms.sourcegitcommit: 67116322915066b85decb4261d47cedec2cfe12f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860087"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82903440"
 ---
 # <a name="ad-fs-single-sign-on-settings"></a>Параметры единого входа AD FS
 
@@ -102,7 +102,7 @@ Set-AdfsProperties –KmsiLifetimeMins <Int32\>
 ## <a name="psso-revocation"></a>Отзыв ПССО  
  Чтобы защитить систему безопасности, AD FS будет отклонять все постоянные файлы cookie единого входа, ранее выданные при выполнении следующих условий. Для этого пользователю потребуется предоставить свои учетные данные для повторной проверки подлинности в AD FS. 
   
-- Пользователь изменяет пароль  
+- Изменения пароля пользователя  
   
 - Параметр постоянного единого входа отключен в AD FS  
   
@@ -153,13 +153,13 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
 
   <tr align="center">
     <th></th>
-    <th>НЕТ</th>
+    <th>NO</th>
     <th>НЕТ, но функции "оставаться</th>
-    <th>ДА</th>
+    <th>YES</th>
     <th></th>
-    <th>НЕТ</th>
+    <th>NO</th>
     <th>НЕТ, но функции "оставаться</th>
-    <th>ДА</th>
+    <th>YES</th>
   </tr>
  <tr align="center">
     <td>SSO =&gt;задать токен обновления =&gt;</td>
@@ -173,7 +173,7 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
   </tr>
 
  <tr align="center">
-    <td>ПССО =&gt;задать маркер обновления =&gt;</td>
+    <td>ПССО =&gt;задать токен обновления =&gt;</td>
     <td>Н/Д</td>
     <td>24 часа</td>
     <td>7 дней</td>
@@ -184,7 +184,7 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
   </tr>
 
  <tr align="center">
-    <td>Время существования токена</td>
+    <td>Token Lifetime</td>
     <td>1 час</td>
     <td>1 час</td>
     <td>1 час</td>
@@ -201,6 +201,10 @@ c:[Type == "https://schemas.microsoft.com/2014/03/psso"]
 НАЛИЧИИ
  - [x] администратор включил функцию функции "оставаться [и]
  - [x] пользователь щелкает флажок функции "оставаться на странице входа в формы
+ 
+  
+ADFS выдает новый маркер обновления только в том случае, если срок действия более нового маркера обновления превышает предыдущий токен. Максимальное время существования маркера составляет 84 дней, но AD FS сохраняет маркер в течение 14-дневного скользящего окна. Если маркер обновления действителен в течение 8 часов, что является обычным временем единого входа, новый маркер обновления не будет выдаваться. 
+ 
  
 **Хорошая информация:** <br>
 Федеративные пользователи, у которых нет синхронизированного атрибута **LastPasswordChangeTimestamp** , выдают файлы cookie сеанса и маркеры обновления с **максимальным сроком хранения 12 часов**.<br>
