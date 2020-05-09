@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8fa956124e0c227d048d4c6eec844154187d5861
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4878377225f9c58e40256a3d151d0d8f3761afca
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725055"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993341"
 ---
 # <a name="ftp"></a>ftp
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Передает файлы на компьютер, на котором запущена служба протокол FTP (FTP), и с него. **FTP** можно использовать интерактивно или в пакетном режиме, обрабатывая текстовые файлы ASCII. 
+Передает файлы на компьютер, на котором запущена служба протокол FTP (FTP), и с него. **FTP** можно использовать интерактивно или в пакетном режиме, обрабатывая текстовые файлы ASCII.
 ## <a name="syntax"></a>Синтаксис
 ```
 ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<RecvBuffer>] [-b:<AsyncBuffers>][-w:<WindowsSize>]  [-?] [<Host>]
@@ -44,7 +44,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<FileName>] [-a] [-A] [-x:<SendBuffer>] [-r:<Re
 |        -?         |                                                                                                                                         Отображение справки в командной строке.                                                                                                                                          |
 |      <host>       |                                                                    Указывает имя компьютера, IP-адрес или IPv6-адрес сервера FTP, к которому осуществляется подключение. Имя узла или адрес, если он указан, должен быть последним параметром в строке.                                                                    |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Remarks
 - Дополнительные сведения о командах **FTP** в Windows Server 2003 см. в разделе [FTP](https://technet.microsoft.com/library/cc756013(v=ws.10).aspx).
 - параметры командной строки **FTP** чувствительны к регистру.
 - Эта команда доступна, только если протокол **Internet Protocol (TCP/IP)** установлен в качестве компонента в свойствах сетевого адаптера в окне Сетевые подключения.

@@ -1,6 +1,6 @@
 ---
 title: удалить тени
-description: Справочный раздел по удалению теней, который удаляет теневые копии.
+description: Справочный раздел по команде delete Shadows, который удаляет теневые копии.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1dd367d76ad1699321af9caf47a0ddc351088a05
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6b757314c96024741795c6770a98d10ac23b5bd0
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720797"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993112"
 ---
 # <a name="delete-shadows"></a>удалить тени
 
@@ -23,7 +23,7 @@ ms.locfileid: "82720797"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <ShadowID> | exposed {<Drive> | <MountPoint>}]
+delete shadows [all | volume <volume> | oldest <volume> | set <setID> | id <shadowID> | exposed {<drive> | <mountpoint>}]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -31,12 +31,14 @@ delete shadows [all | volume <Volume> | oldest <Volume> | set <SetID> | id <Shad
 | Параметр | Описание |
 | ---- | ---- |
 | all | Удаляет все теневые копии. |
-| > \<тома тома | Удаляет все теневые копии данного тома. |
-| самый \<старый> тома | Удаляет самую старую теневую копию заданного тома. |
-| задать \<> сетид | Удаляет теневые копии в наборе теневых копий заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
-| Идентификатор \<шадовид> | Удаляет теневую копию заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
-| предоставлено\<{Drive> | <MountPoint>} |
+| тома`<volume>` | Удаляет все теневые копии данного тома. |
+| Ранняя`<volume>` | Удаляет самую старую теневую копию заданного тома. |
+| параметр`<setID>` | Удаляет теневые копии в наборе теневых копий заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
+| удостоверения`<shadowID>` | Удаляет теневую копию заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
+| предоставлено {'<drive> | <mountpoint>} |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [удалить команду](delete.md)

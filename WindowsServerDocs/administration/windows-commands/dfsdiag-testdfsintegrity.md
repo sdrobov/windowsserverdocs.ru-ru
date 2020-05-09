@@ -1,6 +1,6 @@
 ---
-title: дфсдиаг Тестдфсинтегрити
-description: Справочный раздел по **Дфсдиаг тестдфсинтегрити**, который проверяет целостность пространства имен распределенная ФАЙЛОВАЯ система (DFS).
+title: дфсдиаг тестдфсинтегрити
+description: Справочный раздел по команде дфсдиаг тестдфсинтегрити, который проверяет целостность пространства имен распределенная файловая система (DFS).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 21aa6ef3d7d4a7b4a9c64fc51aec77f49f1e0a0c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b54c7f597926abc91bb9201dfec1a04f44e04ecb
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719580"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82992962"
 ---
-# <a name="dfsdiag-testdfsintegrity"></a>дфсдиаг Тестдфсинтегрити
+# <a name="dfsdiag-testdfsintegrity"></a>дфсдиаг тестдфсинтегрити
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -31,27 +31,27 @@ ms.locfileid: "82719580"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-dfsdiag /TestDFSIntegrity /DFSRoot: <DFS root path> [/Recurse] [/Full]
+dfsdiag /testdfsintegrity /DFSroot: <DFS root path> [/recurse] [/full]
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
-|-------|--------|
-| /Дфсрут:`<DFS root path>`| Пространство имен DFS для диагностики. |
+| --------- | ----------- |
+| /Дфсрут:`<DFS root path>` | Пространство имен DFS для диагностики. |
 | /Recurse | Выполняет тестирование, включая взаимосвязи пространств имен. |
-| /Full | Проверяет согласованность общего ресурса и ACL NTFS и конфигурации клиента для всех целевых объектов папки. Он также проверяет, задано ли свойство Online. |
+| /Full | Проверяет согласованность общего ресурса и списков ACL NTFS вместе с конфигурацией на стороне клиента для всех целевых объектов папки. Он также проверяет, задано ли свойство Online. |
 
 ## <a name="examples"></a>Примеры
 
+Чтобы проверить целостность и согласованность пространств имен распределенная файловая система (DFS) в *contoso. ком\минамеспаце*, включая связи, введите:
+
 ```
-dfsdiag /TestDFSIntegrity /DFSRoot:\\Contoso.com\MyNamespace /Recurse /Full
+dfsdiag /testdfsintegrity /DFSRoot:\contoso.com\MyNamespace /recurse /full
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
--   [дфсдиаг](dfsdiag.md)
-
-
+- [Команда дфсдиаг](dfsdiag.md)

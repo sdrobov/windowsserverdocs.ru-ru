@@ -1,6 +1,6 @@
 ---
 title: подробные сведения VDISK
-description: Справочный раздел, содержащий сведения о диске, в котором отображаются свойства выбранного виртуального жесткого диска (VHD).
+description: Справочный раздел по команде Detail vdisk, отображающей свойства выбранного виртуального жесткого диска (VHD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,52 +9,49 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed07639132fcf770036d5955a4e6cc54415b71e1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fe754b5f089900ac97f288bc2cc8c72327a1bc82
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719623"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993025"
 ---
 # <a name="detail-vdisk"></a>подробные сведения VDISK
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Отображает свойства выбранного виртуального жесткого диска (VHD).  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-detail vdisk  
-```  
-  
-## <a name="remarks"></a>Примечания  
-  
--   Для выполнения этой операции необходимо выбрать виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать виртуальный диск и переместить фокус на него.  
-  
-## <a name="examples"></a>Примеры  
-Чтобы просмотреть сведения о выбранном виртуальном жестком диске, введите:  
-  
-```  
-detail vdisk  
-```  
-  
-## <a name="additional-references"></a>Дополнительные ссылки  
-  
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
-  
--   [подключить виртуальный диск](attach-vdisk.md)  
-  
--   [Compact VDISK](compact-vdisk.md)
-  
--   [Отсоединить виртуальный диск](detach-vdisk.md)  
-  
--   [развернуть виртуальный диск](expand-vdisk.md)  
-  
--   [Слияние VDISK](merge-vdisk.md)  
-  
--   [выбрать виртуальный диск](select-vdisk.md)  
-  
--   [list_1](list_1.md)  
-  
+Отображает свойства выбранного виртуального жесткого диска (VHD). Прежде чем начать, необходимо выбрать виртуальный жесткий диск для выполнения этой операции. Используйте команду [SELECT VDISK](select-vdisk.md) , чтобы выбрать виртуальный жесткий диск и переместить фокус на него.
 
+## <a name="syntax"></a>Синтаксис
+
+```
+detail vdisk
+```
+
+## <a name="examples"></a>Примеры
+
+Чтобы просмотреть сведения о выбранном виртуальном жестком диске, введите:
+
+```
+detail vdisk
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Detail, команда](detail.md)
+
+- [Команда Attach vdisk](attach-vdisk.md)
+
+- [Команда Compact VDISK](compact-vdisk.md)
+
+- [Команда отсоединения VDISK](detach-vdisk.md)
+
+- [Команда Expand VDISK](expand-vdisk.md)
+
+- [Команда merge VDISK](merge-vdisk.md)
+
+- [выбрать виртуальный диск](select-vdisk.md)
+
+- [Команда list](list.md)

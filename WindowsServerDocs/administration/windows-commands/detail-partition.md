@@ -1,6 +1,6 @@
 ---
 title: подробное секционирование
-description: Справочный раздел по подробному разделу, в котором отображаются свойства выбранной секции.
+description: Справочный раздел по команде "подробные секции", отображающей свойства выбранной секции.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9ac71e27f5008d6eda0f4c67a7a8129a3bea6365
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 28a5730fc035dab86c4f0f6b28ea2fca47e37d04
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719639"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993061"
 ---
 # <a name="detail-partition"></a>подробное секционирование
 
-Отображает свойства выбранной секции.
+Отображает свойства выбранной секции. Прежде чем начать, необходимо выбрать секцию для выполнения этой операции. Используйте команду [Выбор секции](select-partition.md) , чтобы выбрать секцию и переместить фокус на нее.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,13 +26,10 @@ ms.locfileid: "82719639"
 detail partition
 ```
 
-## <a name="remarks"></a>Примечания
-
--   Для выполнения этой операции необходимо выбрать секцию. Используйте команду **Выбор секции** , чтобы выбрать секцию и переместить фокус на нее.
-
 ## <a name="examples"></a>Примеры
 
 Чтобы просмотреть свойства выбранной секции, введите:
+
 ```
 detail partition
 ```
@@ -41,3 +38,4 @@ detail partition
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
+- [Detail, команда](detail.md)

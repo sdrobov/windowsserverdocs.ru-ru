@@ -1,6 +1,6 @@
 ---
 title: delete volume
-description: Справочный раздел по удалению тома, который удаляет выбранный том.
+description: Справочный раздел по команде удаления тома, который удаляет выбранный том.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b9a8ae0fc863cec5c1a3f6debccf8201e96badd0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 59856e89ff96d2881040365d157540dc62c1aeb0
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716683"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82993099"
 ---
 # <a name="delete-volume"></a>delete volume
 
-Удаляет выбранный том.
+Удаляет выбранный том. Прежде чем начать, необходимо выбрать том для выполнения этой операции. Используйте команду [выбрать том](select-volume.md) , чтобы выбрать том и переместить фокус на него.
+
+> [!IMPORTANT]
+> Нельзя удалить системный том, загрузочный том или любой том, содержащий активный файл подкачки или аварийный дамп (дамп памяти).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,14 +35,10 @@ delete volume [noerr]
 | --------- | ----------- |
 | Noerr | Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 
-## <a name="remarks"></a>Примечания
-
--   Невозможно удалить системный том, загрузочный том, а также любой том, содержащий активный файл подкачки или аварийный дамп (дамп памяти).
--   Для выполнения этой операции необходимо выбрать том. Используйте команду **выбрать том** , чтобы выбрать том и переместить фокус на него.
-
 ## <a name="examples"></a>Примеры
 
 Чтобы удалить том с фокусом, введите:
+
 ```
 delete volume
 ```
@@ -48,3 +47,6 @@ delete volume
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
+- [select volume](select-volume.md)
+
+- [удалить команду](delete.md)

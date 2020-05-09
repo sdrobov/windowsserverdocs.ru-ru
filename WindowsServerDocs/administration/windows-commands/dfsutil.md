@@ -1,6 +1,6 @@
 ---
 title: Dfsutil
-description: Справочный раздел по Dfsutil, который управляет пространствами имен, серверами и клиентами DFS. команды Dfsutil используют исходную терминологию распределенная файловая система с обновленными терминологиями пространств имен DFS, предоставленными в качестве объяснения для большинства команд.
+description: Справочный раздел команды Dfsutil, которая управляет пространствами имен, серверами и клиентами DFS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,25 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 999eef79227d4531ba724c9cac40127297ea38a0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d6905d90ee42958e47dfed4869520000a4fd3ddf
+ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719517"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82992621"
 ---
 # <a name="dfsutil"></a>Dfsutil
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Команда Dfsutil управляет пространствами имен DFS, серверами и клиентами.
+Команда Dfsutil управляет пространствами имен, серверами и клиентами DFS.
 
->[!NOTE]
->**Модуль PowerShell пространства имен DFS** предоставляет замену для некоторых параметров Dfsutil, в то время как другим по-прежнему требуется использовать Dfsutil. Дополнительные сведения об обновленных эквивалентах PowerShell см. в разделе [дфсн](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps).
+## <a name="functionality-available-in-powershell"></a>Функциональные возможности, доступные в PowerShell
 
-## <a name="parameters-available-in-powershell"></a>Параметры, доступные в PowerShell
-
-С помощью PowerShell можно использовать следующие параметры:
+Модуль PowerShell [дфсн](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps) предоставляет эквивалентные функции для следующих параметров Dfsutil.
 
 | Параметр | Описание |
 | --------- | ----------- |
@@ -38,9 +35,9 @@ ms.locfileid: "82719517"
 | server | Отображает или изменяет конфигурацию пространства имен. |
 | домен | Отображает все пространства имен на основе домена в домене. |
 
-## <a name="parameters-only-available-in-dfsutil"></a>Параметры, доступные только в Dfsutil
+## <a name="functionality-available-only-in-dfsutil"></a>Функциональные возможности, доступные только в Dfsutil
 
-Следующие параметры можно использовать только в Dfsutil.
+Следующие функциональные возможности доступны только в качестве параметров Dfsutil:
 
 | Параметр | Описание |
 | --------- | ----------- |
