@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 84679eadc750637fb720a458d9663219dc1492a4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: eeb1dbd0439a1a39711e2a074ada4c772b9ca016
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718310"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235040"
 ---
-> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
 # <a name="bitsadmin-cache-and-setexpirationtime"></a>bitsadmin cache и setexpirationtime
+
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Задает срок действия кэша.
 

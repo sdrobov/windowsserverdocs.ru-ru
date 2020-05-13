@@ -9,16 +9,16 @@ ms.technology: compute-hyper-v
 ms.date: 12/13/2016
 ms.topic: article
 ms.assetid: 7fd996f5-1ea9-4b16-9776-85fb39a3aa34
-ms.openlocfilehash: 1e9cd8710a53c1e5d9d97e464c32dbf7f17d29a7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f1b321c04ad0b7541f21b444499b13fd2b4e4a6d
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860897"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203554"
 ---
->Область применения: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
-
 # <a name="export-and-import-virtual-machines"></a>Экспорт и импорт виртуальных машин
+
+> Область применения: Windows 10, Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
 
 В этой статье показано, как экспортировать и импортировать виртуальную машину, что является быстрым способом их перемещения или копирования. В этой статье также обсуждаются некоторые варианты, которые необходимо выполнить при экспорте или импорте.
 
@@ -38,7 +38,7 @@ ms.locfileid: "80860897"
 
 ### <a name="using-powershell"></a>Использование PowerShell
 
-Откройте сеанс от имени администратора и выполните команду, подобную следующей, после замены имени \<виртуальной машины\> и пути \<\>:
+Откройте сеанс от имени администратора и выполните команду, как показано ниже, после замены \< имени \> и пути виртуальной машины \< \> :
 
 ```powershell
 Export-VM -Name \<vm name\> -Path \<path\>
@@ -46,7 +46,7 @@ Export-VM -Name \<vm name\> -Path \<path\>
 
 Дополнительные сведения см. в разделе [Export-VM](https://docs.microsoft.com/powershell/module/hyper-v/export-vm).
 
-## <a name="import-a-virtual-machine"></a>Импорт виртуальной машины 
+## <a name="import-a-virtual-machine"></a>Импорт виртуальной машины
 
 При импорте виртуальной машины она регистрируется на узле Hyper-V. Вы можете выполнить импорт в узел или на новый узел. При импорте в тот же узел вам не нужно сначала экспортировать виртуальную машину, так как Hyper-V пытается повторно создать виртуальную машину из доступных файлов. Импорт виртуальной машины регистрирует ее, чтобы ее можно было использовать на узле Hyper-V.
 
@@ -70,17 +70,17 @@ Export-VM -Name \<vm name\> -Path \<path\>
 
 ### <a name="import-using-powershell"></a>Импорт с помощью PowerShell
 
-Используйте командлет **Import-VM** , следуя примеру для требуемого типа импорта. Описание типов см. в разделе [типы импорта](#import-types)ниже. 
+Используйте командлет **Import-VM** , следуя примеру для требуемого типа импорта. Описание типов см. в разделе [типы импорта](#import-types)ниже.
 
 #### <a name="register-in-place"></a>Регистрация на месте
 
 Этот тип импорта использует файлы, где они хранятся во время импорта, и хранит идентификатор виртуальной машины. Следующая команда показывает пример файла импорта. Выполните аналогичную команду со своими собственными значениями.
 
 ```powershell
-Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx' 
+Import-VM -Path 'C:\<vm export path>\2B91FEB3-F1E0-4FFF-B8BE-29CED892A95A.vmcx'
 ```
 
-#### <a name="restore"></a>Восстановление
+#### <a name="restore"></a>Восстановить
 
 Чтобы импортировать виртуальную машину, указав собственный путь к файлам виртуальной машины, выполните команду, подобную следующей, заменив примеры значениями.
 

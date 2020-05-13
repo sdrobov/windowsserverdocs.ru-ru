@@ -1,6 +1,6 @@
 ---
 title: exit
-description: Справочный раздел по выходу, который выходит из интерпретатора команд DiskPart.
+description: Справочный раздел по выходу, который завершает интерпретатор команд.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,36 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c36d0f7f6770ead39a6b31919fc1ae34a8af205b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 97068232a7ffa82e59ba486b449af96638e3d8f0
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725718"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235078"
 ---
 # <a name="exit"></a>exit
 
-Выход из интерпретатора команд DiskPart.
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+
+Выполняет выход из интерпретатора команд или текущего пакетного скрипта.
 
 ## <a name="syntax"></a>Синтаксис
+
+```
+exit [/b] [<exitcode>]
+```
+
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+| --------- | ----------- |
+| /b | Выход из текущего пакетного скрипта вместо выхода из cmd. exe. Если выполняется из-за пределов пакетного скрипта, выполняет выход из cmd. exe. |
+| `<exitcode>` | Указывает числовое число. Если указан параметр **/b** , переменной среды ERRORLEVEL присваивается это число. Если интерпретатор команд закрывается, код завершения процесса устанавливается в это число. |
+| /? | Отображение справки в командной строке. |
+
+## <a name="examples"></a>Примеры
+
+Чтобы закрыть интерпретатор команд, введите:
 
 ```
 exit
@@ -29,4 +47,3 @@ exit
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
-

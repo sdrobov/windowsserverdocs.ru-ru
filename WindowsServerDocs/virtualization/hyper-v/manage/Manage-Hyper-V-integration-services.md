@@ -9,16 +9,16 @@ ms.date: 12/20/2016
 ms.topic: article
 ms.prod: windows-server
 ms.assetid: 9cafd6cb-dbbe-4b91-b26c-dee1c18fd8c2
-ms.openlocfilehash: 2c5e2d67b391cd53a6995957da5dab108a34e1a9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4237da8ee393953a8eb2a2b577c2df201f96a7be
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820717"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235062"
 ---
->Область применения: Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
-
 # <a name="manage-hyper-v-integration-services"></a>Управление Integration Services Hyper-V
+
+> Область применения: Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
 
 Hyper-V Integration Services повысить производительность виртуальной машины и предоставить удобные возможности, используя двустороннюю связь с узлом Hyper-V. Многие из этих служб являются удобством, например копированием гостевых файлов, а другие важны для функционирования виртуальной машины, например синтетических драйверов устройств. Этот набор служб и драйверов иногда называют "интеграционными компонентами". Вы можете управлять тем, работают ли отдельные удобные службы для каждой заданной виртуальной машины. Компоненты драйверов не предназначены для обслуживания вручную.
 
@@ -30,9 +30,9 @@ Hyper-V Integration Services повысить производительност
 ## <a name="turn-an-integration-service-on-or-off-using-hyper-v-manager"></a>Включение или отключение службы интеграции с помощью диспетчера Hyper-V
 
 1. В центральной области щелкните правой кнопкой мыши виртуальную машину и выберите пункт **Параметры**.
-  
+
 2. В левой области окна **Параметры** в разделе **Управление**щелкните **Integration Services**.
-  
+
 В области Integration Services перечислены все службы Integration Services, доступные на узле Hyper-V, а также указано, разрешено ли для них использование виртуальной машины на узле.
 
 ### <a name="turn-an-integration-service-on-or-off-using-powershell"></a>Включение или отключение службы интеграции с помощью PowerShell
@@ -42,12 +42,12 @@ Hyper-V Integration Services повысить производительност
 В следующих примерах показано, как включить и отключить гостевую службу копирования файлов для виртуальной машины с именем "demovm".
 
 1. Получить список работающих служб Integration Services:
-  
+
     ``` PowerShell
     Get-VMIntegrationService -VMName "DemoVM"
     ```
 
-1. Результат должен выглядеть так:
+1. Выходные данные должны выглядеть так:
 
     ``` PowerShell
    VMName      Name                    Enabled PrimaryStatusDescription SecondaryStatusDescription
@@ -69,15 +69,15 @@ Hyper-V Integration Services повысить производительност
 1. Убедитесь, что интерфейс гостевой службы включен:
 
    ```
-   Get-VMIntegrationService -VMName "DemoVM" 
-   ``` 
+   Get-VMIntegrationService -VMName "DemoVM"
+   ```
 
 1. Отключите интерфейс гостевой службы:
 
     ```
     Disable-VMIntegrationService -VMName "DemoVM" -Name "Guest Service Interface"
     ```
-   
+
 ## <a name="checking-the-guests-integration-services-version"></a>Проверка версии служб интеграции гостя
 Некоторые функции могут работать неправильно или вообще, если службы интеграции гостевого компьютера не являются актуальными. Чтобы получить сведения о версии для Windows, выполните вход в операционную систему на виртуальной машине, откройте командную строку и выполните следующую команду:
 
@@ -97,11 +97,11 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 ### <a name="use-windows-services-to-start-or-stop-an-integration-service-within-a-windows-guest"></a>Использование служб Windows для запуска или завершения работы службы интеграции в гостевой системе Windows
 
-1. Откройте диспетчер служб, запустив ```services.msc``` от имени администратора или дважды щелкнув значок службы на панели управления.
+1. Откройте диспетчер служб, выполнив ```services.msc``` команду от имени администратора или дважды щелкнув значок службы на панели управления.
 
-    ![Снимок экрана, на котором отображается панель "службы Windows"](media/HVServices.png) 
+    ![Снимок экрана, на котором отображается панель "службы Windows"](media/HVServices.png)
 
-1. Найдите службы, которые начинаются с Hyper-V. 
+1. Найдите службы, которые начинаются с Hyper-V.
 
 1. Щелкните правой кнопкой мыши службу, которую нужно запустить или прерывать. Щелкните нужное действие.
 
@@ -134,7 +134,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     Stop-Service -Name vmicvmsession
     ```
 
-## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Запуск и завершение службы интеграции из гостевой ОС Linux 
+## <a name="start-and-stop-an-integration-service-from-a-linux-guest"></a>Запуск и завершение службы интеграции из гостевой ОС Linux
 
 Службы интеграции Linux обычно предоставляются через ядро Linux. Драйвер служб интеграции Linux называется **hv_utils**.
 
@@ -142,10 +142,10 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
    ``` BASH
    lsmod | grep hv_utils
-   ``` 
-  
-2. Результат должен выглядеть следующим образом:  
-  
+   ```
+
+2. Результат должен выглядеть следующим образом:
+
     ``` BASH
     Module                  Size   Used by
     hv_utils               20480   0
@@ -153,13 +153,13 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     ```
 
 3. Чтобы узнать, работают ли необходимые управляющие программы, используйте эту команду.
-  
+
     ``` BASH
     ps -ef | grep hv
     ```
-  
-4. Результат должен выглядеть следующим образом: 
-  
+
+4. Результат должен выглядеть следующим образом:
+
     ```BASH
     root       236     2  0 Jul11 ?        00:00:00 [hv_vmbus_con]
     root       237     2  0 Jul11 ?        00:00:00 [hv_vmbus_ctl]
@@ -168,7 +168,7 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     root      1286     1  0 Jul11 ?        00:01:11 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9333     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_kvp_daemon
     root      9365     1  0 Oct12 ?        00:00:00 /usr/lib/linux-tools/3.13.0-32-generic/hv_vss_daemon
-    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv          
+    scooley  43774 43755  0 21:20 pts/0    00:00:00 grep --color=auto hv
     ```
 
 5. Чтобы отобразить все доступные управляющие программы, выполните следующую команду:
@@ -176,34 +176,34 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
     ``` BASH
     compgen -c hv_
     ```
-  
+
 6. Результат должен выглядеть следующим образом:
-  
+
     ``` BASH
     hv_vss_daemon
     hv_get_dhcp_info
     hv_get_dns_info
     hv_set_ifconfig
     hv_kvp_daemon
-    hv_fcopy_daemon     
+    hv_fcopy_daemon
     ```
-  
-   Ниже перечислены управляющие программы интеграции, которые могут быть включены в список. Если таковые отсутствуют, они могут не поддерживаться в вашей системе или быть не установлены. Дополнительные сведения см. [в статье Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows](https://technet.microsoft.com/library/dn531030.aspx).  
+
+   Ниже перечислены управляющие программы интеграции, которые могут быть включены в список. Если таковые отсутствуют, они могут не поддерживаться в вашей системе или быть не установлены. Дополнительные сведения см. [в статье Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows](https://technet.microsoft.com/library/dn531030.aspx).
    - **hv_vss_daemon**. Эта управляющая программа необходима для создания динамических резервных копий виртуальных машин Linux.
    - **hv_kvp_daemon**: Эта управляющая программа позволяет задавать и запрашивать внутренние и внешние пары значений ключа.
-   - **hv_fcopy_daemon**. Эта управляющая программа реализует службу копирования файлов между узлом и гостем.  
+   - **hv_fcopy_daemon**. Эта управляющая программа реализует службу копирования файлов между узлом и гостем.
 
 ### <a name="examples"></a>Примеры
 
-В этих примерах демонстрируется остановка и запуск управляющей программы KVP с именем `hv_kvp_daemon`.
+В этих примерах демонстрируется остановка и запуск управляющей программы KVP с именем `hv_kvp_daemon` .
 
-1. Чтобы предотвратить процесс управляющей программы, используйте идентификатор процесса \(\) PID. Чтобы найти PID, просмотрите второй столбец выходных данных или используйте `pidof`. Управляющие программы Hyper-V выполняются от имени привилегированного пользователя, поэтому требуются корневые разрешения.
+1. \( \) Чтобы предотвратить процесс управляющей программы, используйте идентификатор процесса ID PID. Чтобы найти PID, просмотрите второй столбец выходных данных или используйте `pidof` . Управляющие программы Hyper-V выполняются от имени привилегированного пользователя, поэтому требуются корневые разрешения.
 
     ``` BASH
     sudo kill -15 `pidof hv_kvp_daemon`
     ```
 
-1. Чтобы убедиться, что весь процесс `hv_kvp_daemon` пропала, выполните:
+1. Чтобы убедиться, что все `hv_kvp_daemon` процессы исчезли, выполните:
 
     ```
     ps -ef | hv
@@ -213,9 +213,9 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
     ``` BASH
     sudo hv_kvp_daemon
-    ``` 
+    ```
 
-1. Чтобы убедиться, что `hv_kvp_daemon` процесс указан с новым ИДЕНТИФИКАТОРом процесса, выполните:
+1. Чтобы убедиться, что `hv_kvp_daemon` процесс указан с новым идентификатором процесса, выполните команду:
 
     ```
     ps -ef | hv
@@ -232,42 +232,42 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 | Гость  | Механизм обновления | Примечания |
 |:---------|:---------|:---------|
-| Windows 10 | Windows Update | |
-| Windows 8.1 | Windows Update | |
-| Windows 8 | Windows Update | Требуется служба обмена данными.* |
-| Windows 7 | Windows Update | Требуется служба обмена данными.* |
-| Windows Vista с пакетом обновления 2 (SP2) | Windows Update | Требуется служба обмена данными.* |
+| Windows 10 | Центра обновления Windows; | |
+| Windows 8.1 | Центра обновления Windows; | |
+| Windows 8 | Центра обновления Windows; | Требуется служба интеграции для обмена данными.* |
+| Windows 7 | Центра обновления Windows; | Требуется служба интеграции для обмена данными.* |
+| Windows Vista с пакетом обновления 2 (SP2) | Центра обновления Windows; | Требуется служба интеграции для обмена данными.* |
 | - | | |
-| Windows Server 2016 | Windows Update | |
-| Windows Server, Semi-Annual Channel | Windows Update | |
-| Windows Server 2012 R2 | Windows Update | |
-| Windows Server 2012 | Windows Update | Требуется служба обмена данными.* |
-| Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Windows Update | Требуется служба обмена данными.* |
-| Windows Server 2008 с пакетом обновления 2 (SP 2) | Windows Update | Расширенная поддержка только в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=12925)). |
-| Windows Home Server 2011 | Windows Update | Не будет поддерживаться в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=15820)). |
-| Windows Small Business Server 2011 | Windows Update | Не в основной фазе поддержки ([подробности](https://support.microsoft.com/lifecycle?p1=15817)). |
+| Windows Server 2016 | Центра обновления Windows; | |
+| Windows Server, Semi-Annual Channel | Центра обновления Windows; | |
+| Windows Server 2012 R2 | Центра обновления Windows; | |
+| Windows Server 2012 | Центра обновления Windows; | Требуется служба интеграции для обмена данными.* |
+| Windows Server 2008 R2 с пакетом обновления 1 (SP1) | Центра обновления Windows; | Требуется служба интеграции для обмена данными.* |
+| Windows Server 2008 с пакетом обновления 2 (SP2) | Центра обновления Windows; | Расширенная поддержка только в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=12925)). |
+| Windows Home Server 2011 | Центра обновления Windows; | Не будет поддерживаться в Windows Server 2016 ([Дополнительные сведения](https://support.microsoft.com/lifecycle?p1=15820)). |
+| Windows Small Business Server 2011 | Центра обновления Windows; | Не в основной фазе поддержки ([подробности](https://support.microsoft.com/lifecycle?p1=15817)). |
 | - | | |
 | Гостевые ОС Linux | диспетчер пакетов | Службы Integration Services для Linux встроены в дистрибутив, но могут быть доступны необязательные обновления. ******** |
 
-\* если служба интеграции обмена данными не может быть включена, службы Integration Services для этих гостей доступны в [центре загрузки](https://support.microsoft.com/kb/3071740) в виде CAB-файла. Инструкции по применению CAB-файла доступны в этой [записи блога](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247).
+\*Если служба интеграции обмена данными не может быть включена, службы Integration Services для этих гостей доступны в [центре загрузки](https://support.microsoft.com/kb/3071740) в виде CAB-файла. Инструкции по применению CAB-файла доступны в этой [записи блога](https://techcommunity.microsoft.com/t5/virtualization/integration-components-available-for-virtual-machines-not/ba-p/382247).
 
 **Для виртуальных машин, запущенных на узлах Windows 8.1 или Windows Server 2012 R2:**
 
 | Гость  | Механизм обновления | Примечания |
 |:---------|:---------|:---------|
-| Windows 10 | Windows Update | |
-| Windows 8.1 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows 10 | Центра обновления Windows; | |
+| Windows 8.1 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows 8 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows 7 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows 7 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Vista с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows XP с пакетами обновления 2 и 3 (SP2, SP3) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | - | | |
-| Windows Server 2016 | Windows Update | |
-| Windows Server, Semi-Annual Channel | Windows Update | |
-| Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 с пакетом обновления 2 (SP 2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2016 | Центра обновления Windows; | |
+| Windows Server, Semi-Annual Channel | Центра обновления Windows; | |
+| Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Home Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Small Business Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2003 R2 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
@@ -280,16 +280,16 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 
 | Гость  | Механизм обновления | Примечания |
 |:---------|:---------|:---------|
-| Windows 8.1 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows 8.1 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows 8 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows 7 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows 7 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Vista с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows XP с пакетами обновления 2 и 3 (SP2, SP3) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | - | | |
-| Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
-| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже.|
-| Windows Server 2008 с пакетом обновления 2 (SP 2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2012 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2012 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
+| Windows Server 2008 R2 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже.|
+| Windows Server 2008 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Home Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Small Business Server 2011 | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
 | Windows Server 2003 R2 с пакетом обновления 2 (SP2) | Диск со службами интеграции | См. [инструкции](#install-or-update-integration-services)ниже. |
@@ -302,16 +302,16 @@ REG QUERY "HKLM\Software\Microsoft\Virtual Machine\Auto" /v IntegrationServicesV
 ## <a name="install-or-update-integration-services"></a>Установка или обновление служб Integration Services
 
 > [!NOTE]
-> Для узлов, предшествующих Windows Server 2016 и Windows 10, необходимо **вручную установить или обновить** службы Integration Services в операционных системах на виртуальной машине. 
+> Для узлов, предшествующих Windows Server 2016 и Windows 10, необходимо **вручную установить или обновить** службы Integration Services в операционных системах на виртуальной машине.
 
 Процедура установки или обновления служб Integration Services вручную:
 
-1.  Откройте диспетчер Hyper-V. В меню Сервис диспетчер сервера выберите пункт **Диспетчер Hyper-V**.  
-  
-2.  Подключитесь к виртуальной машине. Щелкните виртуальную машину правой кнопкой мыши и нажмите кнопку **подключить**.  
-  
-3.  В меню "Действие" подключения к виртуальной машине выберите команду **Вставьте установочный диск служб интеграции**. Это действие загружает установочный диск в виртуальный DVD-дисковод. В зависимости от операционной системы на виртуальной машине может потребоваться запустить установку вручную.  
-  
+1.  Откройте диспетчер Hyper-V. В меню Сервис диспетчер сервера выберите пункт **Диспетчер Hyper-V**.
+
+2.  Подключитесь к виртуальной машине. Щелкните виртуальную машину правой кнопкой мыши и нажмите кнопку **подключить**.
+
+3.  В меню "Действие" подключения к виртуальной машине выберите команду **Вставьте установочный диск служб интеграции**. Это действие загружает установочный диск в виртуальный DVD-дисковод. В зависимости от операционной системы на виртуальной машине может потребоваться запустить установку вручную.
+
 4.  По завершении установки все службы интеграции станут доступны для использования.
 
 > [!NOTE]

@@ -1,6 +1,6 @@
 # <a name="windows-server-documentation"></a>Документация по Windows Server
 
-Добро пожаловать в документацию по Open Source для Microsoft Windows Server. Внесение дополнений в проекты с открытым исходным кодом заключается не только в публикации обновлений. Это также подразумевает информирование об актуальных проблемах.
+Добро пожаловать в документацию по Open Source для Microsoft Windows Server. Внесение дополнений в проекты с открытым исходным кодом заключается не только в публикации обновлений. Это также подразумевает информирование нас о существующих проблемах.
 
 ## <a name="public-vs-private-repo-contributions"></a>Общедоступные и частные вклады в репозитории
 
@@ -27,12 +27,12 @@
 
 ## <a name="markdown-info"></a>Сведения о Markdown
 
-Сведения о том, как использовать Markdown в разделах Docs.microsoft.com, см. в разделе [Документация Markdown Reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master). Общедоступная версия этого содержимого приведена здесь: [Public документация Markdown Reference](https://docs.microsoft.com/contribute/how-to-write-use-markdown).
+Сведения о том, как использовать Markdown в разделах Docs.microsoft.com, см. в разделе [Документация Markdown Reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=master). Общедоступная версия этого содержимого приведена здесь: [Public документация Markdown Reference](https://docs.microsoft.com/contribute/markdown-reference).
 
-## <a name="license"></a>лицензия
+## <a name="license"></a>Лицензия
 
 Сведения о лицензировании см. здесь: [LICENSE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE), [LICENSE-CODE](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/LICENSE-CODE) и [ThirdPartyNotices](https://github.com/MicrosoftDocs/windowsserverdocs-pr/blob/master/ThirdPartyNotices).
 
 ## <a name="code-of-conduct"></a>Правила поведения
 
-В этом проекте применяются [правила поведения для Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/). Дополнительные сведения см. в разделе [часто задаваемых вопросов о правилах поведения](https://opensource.microsoft.com/codeofconduct/faq/) или обратитесь к [opencode@microsoft.com](mailto:opencode@microsoft.com) с любыми дополнительными вопросами или комментариями.
+В рамках этого проекта действуют [правила поведения в отношении продуктов с открытым исходным кодом Майкрософт](https://opensource.microsoft.com/codeofconduct/). Дополнительные сведения:[вопросы и ответы по правилам поведения](https://opensource.microsoft.com/codeofconduct/faq/). С любыми другими вопросами или комментариями обращайтесь по адресу[opencode@microsoft.com](mailto:opencode@microsoft.com).
