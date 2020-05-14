@@ -9,22 +9,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c0aa26478fe816bff12e9bf83db44db29a2f1a4a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a5a5e68bfd455fae9aa1e6fcb2c9cf1bd8005ea5
+ms.sourcegitcommit: d1fc59d53055952f8e55aacebeb29547eef0bca7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721936"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375221"
 ---
 # <a name="services-for-network-file-system-command-reference"></a>Справочник по командам службы для NFS
+
 Службы для NFS предоставляют решение для совместного использования файлов, позволяющее передавать файлы между компьютерами с операционными системами Windows Server 2008 и UNIX по протоколу NFS.
 Ниже приведен список программ командной строки NFS.
-|Get-Help|Описание|
-|-------|-----------|
-|[mapadmin](mapadmin.md)|Управление сопоставление имен пользователей для служб Майкрософт для сетевой файловой системы.|
-|[Подключение](mount.md)|Подключите сетевые общие папки NFS.|
-|[Nfsadmin](nfsadmin.md)|Управление сервером для NFS и клиентом для NFS.|
-|[нфсшаре](nfsshare.md)|Управление общими сетевыми ресурсами файловой системы (NFS).|
-|[нфсстат](nfsstat.md)|Отображение или Сброс счетчиков вызовов, сделанных для сервера для NFS.|
-|[Rpcinfo](rpcinfo.md)|Список программ на удаленных компьютерах.|
-|[шовмаунт](showmount.md)|Отображение подключенных каталогов.|
+
+
+| Get-Help | Описание |
+| ------- | ----------- |
+| [mapadmin](mapadmin.md) | Управление сопоставление имен пользователей для служб Майкрософт для сетевой файловой системы. |
+| [Подключение](mount.md) | Подключите сетевые общие папки NFS. |
+| [Nfsadmin](nfsadmin.md) | Управление сервером для NFS и клиентом для NFS. |
+| [нфсшаре](nfsshare.md) | Управление общими сетевыми ресурсами файловой системы (NFS). |
+| [нфсстат](nfsstat.md) | Отображение или Сброс счетчиков вызовов, сделанных для сервера для NFS. |
+| [Rpcinfo](rpcinfo.md) | Список программ на удаленных компьютерах. |
+| [шовмаунт](showmount.md)|Отображение подключенных каталогов. |
