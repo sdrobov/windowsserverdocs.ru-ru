@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
-ms.openlocfilehash: b646890ebc8b8e64d84e6d448ce4acb393422009
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 5b0193f18fe94f391f1bbbc41280c16e4a1bcd0c
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80827717"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203495"
 ---
 # <a name="failover-clustering-in-windows-server"></a>Отказоустойчивая кластеризация в Windows Server
 
@@ -32,7 +32,7 @@ ms.locfileid: "80827717"
 | **Общие сведения**                                                               |  **Планирование**                          |  **Развертывание**       |
 | -------------                                                                |  --------------                        | --------------------- |
 | [Что нового в отказоустойчивой кластеризации?](whats-new-in-failover-clustering.md)    | [Планирование требований к оборудованию для отказоустойчивой кластеризации и варианты хранилища](clustering-requirements.md)  | [Создание отказоустойчивого кластера](create-failover-cluster.md) |
-| [Масштабируемый файловый сервер для данных приложений](sofs-overview.md)               | [Использование общих томов кластера (CSV)](failover-cluster-csvs.md) | [Развертывание двухузлового файлового сервера](../storage/storage-spaces/storage-spaces-direct-in-vm.md) |
+| [Масштабируемый файловый сервер для данных приложений](sofs-overview.md)               | [Использование общих томов кластера (CSV)](failover-cluster-csvs.md) | [Развертывание двухузлового файлового сервера](deploy-two-node-clustered-file-server.md) |
 |  [Кворум кластеров и пулов](../storage/storage-spaces/understand-quorum.md)   |  [Использование кластеров гостевых виртуальных машин с локальными дисковыми пространствами](../storage/storage-spaces/storage-spaces-direct-in-vm.md)       | [Подготовка кластерных объектов-компьютеров в доменных службах Active Directory](prestage-cluster-adds.md) |
 | [Служба сведений о домене сбоя](fault-domains.md)                                 |                                 | [Настройка учетных записей кластеров в Active Directory](configure-ad-accounts.md) |
 | [Упрощенные сети кластера SMB Multichannel и Multi-NIC](smb-multichannel.md) |                       | [Управление кворумом и свидетелями](manage-cluster-quorum.md) |
