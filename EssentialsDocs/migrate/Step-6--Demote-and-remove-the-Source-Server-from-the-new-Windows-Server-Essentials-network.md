@@ -8,26 +8,26 @@ ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b1b7836e976ef35aec66e206ec8b1de0e2150d62
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 406010234528a094bfb36a606072f98c043c397a
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852337"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404515"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>Шаг 6. Понижение уровня и удаление исходного сервера из новой сети Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 После завершения установки Windows Server Essentials и завершения миграции необходимо выполнить следующие задачи.  
   
-1.  [Удаление Active Directory служб сертификатов](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_ADCS)  
+1.  [Удаление служб сертификатов Active Directory](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_ADCS)  
   
-2.  [Отключить принтеры, подключенные непосредственно к исходному серверу](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect)  
+2.  [Отключение принтеров, подключенных непосредственно к исходному серверу](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_PhysicallyDisconnect)  
   
 3.  [Понижение уровня исходного сервера](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_DemoteTheSourceServer)  
   
-4.  [Удаление и переназначение исходного сервера](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer)  
+4.  [Удаление и перепрофилирование исходного сервера](Step-6--Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md#BKMK_RemoveTheSourceServer)  
   
 ##  <a name="remove-active-directory-certificate-services"></a><a name="BKMK_ADCS"></a>Удаление Active Directory служб сертификатов  
  Процедура немного отличается при установке на одном сервере нескольких служб ролей служб сертификатов Active Directory (AD CS). Следующая процедура позволяет вам удалить одну службу роли AD CS, сохранив остальные.  
@@ -74,11 +74,11 @@ ms.locfileid: "80852337"
   
 1. Войдите на клиентский компьютер как администратор.  
   
-2. Откройте окно командной строки от имени администратора.  
+2. Откройте окно командной строки с правами администратора.  
   
 3. В командной строке введите команду **gpupdate /force** и нажмите клавишу ВВОД.  
   
-4. Для завершения процесса вам может потребоваться выйти из системы и снова войти в нее. Щелкните **Да** для подтверждения.  
+4. Для завершения процесса вам может потребоваться выйти из системы и снова войти в нее. Нажмите кнопку **Да**, чтобы подтвердить действие.  
   
    Если выполняется миграция с Windows Server Essentials или предыдущих версий, чтобы понизить уровень сервера, см. раздел [удаление домен Active Directory Services](https://technet.microsoft.com/library/hh472163.aspx). После добавления исходного сервера в качестве члена рабочей группы и отключения его от сети этот сервер необходимо удалить из доменных служб Active Directory на конечном сервере.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "80852337"
   
  После понижения уровня исходного сервера он находится в неработоспособном состоянии. Если требуется перепрофилировать исходный сервер, проще всего отформатировать его, установить серверную операционную систему и затем настроить для использования в качестве дополнительного сервера.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  Исходный сервер был понижен и удален из новой сети Windows Server Essentials. Теперь перейдите к [шагу 7. выполнение задач, выполняемых после миграции Windows Server Essentials](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md).  
   
 

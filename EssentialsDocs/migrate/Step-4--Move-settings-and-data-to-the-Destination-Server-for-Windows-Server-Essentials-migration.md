@@ -8,24 +8,24 @@ ms.assetid: e143df43-e227-4629-a4ab-9f70d9bf6e84
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e19f3a8333cc08568f8d437da2e35a6c64920df1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dd3ba0b54e24a5fcafb72c970f05224c3606ff3a
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852357"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404528"
 ---
 # <a name="step-4-move-settings-and-data-to-the-destination-server-for-windows-server-essentials-migration"></a>Шаг 4. Перенос параметров и данных на целевой сервер для миграции Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 Этот раздел содержит сведения о переносе данных и параметров с исходного сервера. Перенесите параметры и данные на целевой сервер следующим образом:  
   
 -   [Копирование данных на целевой сервер](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_CopyData)  
   
--   [Настройка сети](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
+-   [настроить сеть.](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_Network)  
   
--   [Сопоставьте разрешенные компьютеры учетным записям пользователей](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
+-   [Сопоставление разрешенных компьютеров с учетными записями пользователей](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md#BKMK_MapPermittedComputers)  
   
 ##  <a name="copy-data-to-the-destination-server"></a><a name="BKMK_CopyData"></a>Копирование данных на целевой сервер  
  Перед копированием данных с исходного сервера на целевой сервер выполните следующие действия.  
@@ -48,17 +48,17 @@ ms.locfileid: "80852357"
   
    `robocopy \\<SourceServerName>\<SharedSourceFolderName> "<PathOfTheDestination>\<SharedDestinationFolderName>" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`
   
-    Где  
+    Где:  
   
-   - \<SourceServerName\> — имя исходного сервера.  
+   - \<SourceServerName \> — имя исходного сервера.  
   
-   - \<Шаредсаурцефолдернаме\> — имя общей папки на исходном сервере.  
+   - \<Шаредсаурцефолдернаме \> — имя общей папки на исходном сервере.  
   
-   - \<Пасофседестинатион\> — это абсолютный путь, по которому нужно переместить папку.  
+   - \<Пасофседестинатион \> — это абсолютный путь, по которому нужно переместить папку.  
   
-   - \<Шареддестинатионфолдернаме\> — папка на целевом сервере, куда будут скопированы данные  
+   - \<Шареддестинатионфолдернаме \> — Папка на целевом сервере, куда будут скопированы данные  
   
-     Например,  `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
+     Например, `robocopy \\sourceserver\MyData "d:\ServerFolders\MyData" /E /B /COPY:DATSOU /LOG:C:\Copyresults.txt`.  
   
 3. Если вы используете Windows PowerShell, введите следующую команду и нажмите клавишу ВВОД.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "80852357"
 > [!NOTE]
 >  По окончании процесса миграции, если при создании первой новой учетной записи пользователя на целевом сервере появится проблема, удалите добавленную учетную запись пользователя, а затем создайте ее снова.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  Вы переместили свои параметры и данные на целевой сервер. Теперь перейдите к [шагу 5. Включение перенаправления папок на целевом сервере для миграции Windows Server Essentials](Step-5--Enable-folder-redirection-on-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
   
 

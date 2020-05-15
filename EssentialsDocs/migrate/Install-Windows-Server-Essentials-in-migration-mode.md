@@ -8,16 +8,16 @@ ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d253a550763f34409f25223e6319607b9abcd8e6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 977922d8f2af23afc058162e7455ac5099e4325b
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852587"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404575"
 ---
 # <a name="install-windows-server-essentials-in-migration-mode1"></a>Установка Windows Server Essentials в Mode1 миграции
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2012 Essentials
 
 В сети может быть только один сервер, на котором работает Windows Server Essentials, и этот сервер должен быть контроллером домена для сети.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "80852587"
   
  В следующей таблице перечислены средства, которые помогут выявить проблемы с конечным сервером, сетью и доменом:  
   
-|Средство|Описание|  
+|Инструмент|Описание|  
 |----------|-----------------|  
 |Netdiag|Помогает изолировать проблемы с сетью и подключением. Для получения дополнительных сведений и загрузки см. раздел [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388).|  
 |Dcdiag.exe|Анализирует состояние контроллеров домена в лесу или на предприятии и сообщает о проблемах, помогая в устранении неполадок. Для получения дополнительных сведений и загрузки см. раздел [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389).|  

@@ -8,18 +8,18 @@ ms.assetid: 2974fb3a-5150-43fd-a73f-3e5074eb5d03
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 55b31785de6e17232a717d534fcb21a24d9052bd
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 5c73714dff2d89201ac93704105038c604f12e06
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80318896"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404564"
 ---
 # <a name="migrate-from-previous-versions-to-windows-server-essentials-or-windows-server-essentials-experience"></a>Миграция с предыдущих версий на Windows Server Essentials или Windows Server Essentials Experience
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2012 R2 Essentials
 
-В этом руководство описано, как выполнить миграцию с предыдущих версий Windows Small Business Server и Windows Server Essentials (включая Windows Server Essentials, Windows Small Business Server 2011 Standard, Windows Small Business Server 2011 Essentials, Windows Small Business Server 2008 и Windows Small Business Server 2003) до Windows Server Essentials или Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience.  
+В этом руководство описано, как выполнить миграцию с предыдущих версий Windows Small Business Server и Windows Server Essentials (включая Windows Server Essentials, Windows Small Business Server 2011 Standard, Windows Small Business Server 2011 Essentials, Windows Small Business Server 2008 и Windows Small Business Server 2003) в Windows Server Essentials или на Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience.  
   
  **Для сред, в которых до 25 пользователей и устройств 50**, можно выполнить действия, описанные в этом руководстве, для перехода с предыдущих версий Windows SBS на Windows Server Essentials.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "80318896"
   
 ###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>Открытие окна командной строки на исходном сервере с правами администратора  
   
-1.  Нажмите кнопку **Пуск**.  
+1.  Нажмите **Запуск**.  
   
 2.  В поле поиска введите **cmd**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "80318896"
   
 2.  В списке результатов правой кнопкой мыши щелкните команду **cmd** и выберите пункт **Запуск от имени администратора**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
   
 -   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

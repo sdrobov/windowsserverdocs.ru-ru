@@ -8,16 +8,16 @@ ms.assetid: c7ccfc34-63fd-436b-a1cd-e05810f60bfe
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 932ff1010ebe0be3b560375ac46b0372f86e3dc2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d5d86f5ae25c67ffb9e0f00fc5d373e6a095df98
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852377"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404559"
 ---
 # <a name="step-2-install-windows-server-essentials-as-a-new-replica-domain-controller"></a>Шаг 2. Установка Windows Server Essentials в качестве нового репликата контроллера домена
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 В этом разделе описывается установка Windows Server Essentials и Windows Server 2012 R2 Standard (с включенной ролью Windows Server Essentials) в качестве контроллера домена.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "80852377"
   
 7.  Проверьте установку следующим образом:  
   
-    1.  Откройте Панель администрирования.  
+    1.  Откройте панель мониторинга.  
   
     2.  Перейдите на вкладку **Пользователи** и убедитесь, что учетные записи пользователей указаны в Active Directory.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "80852377"
   
     3.  Введите **connections** и нажмите клавишу "ВВОД".  
   
-    4.  Введите **Подключение к серверу** *< ServerName\>* (где *< ServerName\>* — имя целевого сервера), а затем нажмите клавишу ВВОД.  
+    4.  Введите **Подключение к серверу** *<ServerName \> * (где *<ServerName \> * — имя целевого сервера) и нажмите клавишу ВВОД.  
   
     5.  В окне командной строки введите **q** и нажмите клавишу "ВВОД".  
   
@@ -94,7 +94,7 @@ ms.locfileid: "80852377"
 > [!NOTE]
 >  На любом сервере в сети вы можете убедиться, что роли хозяина операций были перенесены на кольцевой сервер. Откройте окно командной строки от имени администратора (дополнительные сведения см. в разделе [Открыть окно командной строки от имени администратора](https://technet.microsoft.com/library/cc947813\(v=WS.10\).aspx)). Введите **netdom query fsmo** и нажмите клавишу "ВВОД".  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  Вы установили Windows Server Essentials как новый контроллер домена реплики. Теперь перейдите к разделу [Шаг 3. Присоединение компьютеров к новому серверу Windows Server Essentials](Step-3--Join-computers-to-the-new-Windows-Server-Essentials-server.md).  
   
 Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).

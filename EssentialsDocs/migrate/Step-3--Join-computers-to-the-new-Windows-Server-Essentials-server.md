@@ -8,16 +8,16 @@ ms.assetid: a0e07d1a-8409-429b-87d7-0f4a7e14d668
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3d004d89f6606c8b38360c9139f882f087b7c554
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8efb8251bd85638b8ad4b760a5292a2b6d6681fd
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852367"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404543"
 ---
 # <a name="step-3-join-computers-to-the-new-windows-server-essentials-server"></a>Шаг 3. Присоединение компьютеров к новому серверу Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 Следующим шагом процесса миграции является подключение клиентских компьютеров к новому серверу под управлением Windows Server Essentials.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "80852367"
   
 2.  Откройте браузер, например Internet Explorer.  
   
-3.  В адресной строке введите **http://< servername\>/Коннект**и нажмите клавишу ВВОД.  
+3.  В адресной строке введите **http://<ServerName \> /Коннект**и нажмите клавишу ВВОД.  
   
 4.  Следуйте инструкциям на экране, чтобы присоединить клиентский компьютер к новому серверу Windows Server Essentials.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  Вы присоединяете клиентские компьютеры к новому серверу под управлением Windows Server Essentials. Теперь перейдите к [шагу 4. Перемещение параметров и данных на целевой сервер для миграции Windows Server Essentials](Step-4--Move-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  
   
 

@@ -8,22 +8,22 @@ ms.assetid: d382e3fd-d393-4bd0-883f-db50104a969f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 579be2c36ca01a4b8ab2a34157e13e298e34c48c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3101a7bdc42ef754e5aafa87a8758172c42824bb
+ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852327"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83404500"
 ---
 # <a name="step-7-perform-post-migration-tasks-for-the-windows-server-essentials-migration"></a>Шаг 7. Задачи, выполняемые после миграции Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+>Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials
 
 Следующие задачи помогут вам завершить настройку конечного сервера с теми же параметрами, которые были на исходном сервере. Возможно, вы отключили некоторые из этих параметров на исходном сервере во время процесса миграции, поэтому они не были перенесены на конечный сервер.  
   
 1.  [Удаление записей DNS для исходного сервера](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
-2.  [Совместное использование бизнес-и других папок данных приложений](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+2.  [Общий доступ к папкам с данными бизнес-приложений и прочих приложений](Step-7--Perform-post-migration-tasks-for-the-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
 ##  <a name="delete-dns-entries-for-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>Удаление записей DNS для исходного сервера  
  После списания исходного сервера, сервера сервер службы доменных имен (DNS) может все еще содержать элементы, указывающие на этот исходный сервер. Удалите эти записи DNS.  
@@ -55,7 +55,7 @@ ms.locfileid: "80852327"
   
  Если для сопоставления дисков с общими папками вы используете сценарий входа, для сопоставления с дисками на конечном сервере сценарий необходимо обновить.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Дальнейшие действия  
  Вы выполнили задачи, выполняемые после миграции для Windows Server Essentials. Теперь перейдите к [шагу 8--запустите анализатор соответствия рекомендациям Windows Server Essentials](Step-8--Run-the-Windows-Server-Essentials-Best-Practices-Analyzer.md).  
   
 
