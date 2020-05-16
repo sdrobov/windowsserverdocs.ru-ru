@@ -8,16 +8,16 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: a10cb3b27e3434ab818b41e051edb38ab77626db
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 0190fc05a7bf82e35339d93accae3a998babe166
+ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80827137"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83433138"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Каналы обслуживания Windows Server: LTSC и SAC
 
->Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Пользователям Windows Server доступны два основных канала выпусков: Long-Term Servicing Channel и Semi-Annual Channel.
 
@@ -27,7 +27,7 @@ ms.locfileid: "80827137"
 
 Это уже известная вам модель выпуска (ранее она носила название Long-Term Servicing *Branch*), в рамках которой выпуск новой версии Windows Server происходит каждые 2–3 года. Пользователи имеют право на 5 лет основной поддержки и 5 лет расширенной поддержки. Этот канал подходит для систем, которым требуются более продолжительный период обслуживания и стабильность работы. Новые выпуски Semi-Annual Channel никак не затронут уже развернутые среды Windows Server 2016 и более ранние версии Windows Server. Канал Long-Term Servicing Channel продолжит получать обновления системы безопасности и не связанные с безопасностью обновления, но не получит новые функции и возможности.
 
-> [!Note]  
+> [!Note]
 > **Текущий продукт LTSC — Windows Server 2019**. Чтобы остаться в этом канале, необходимо установить (или продолжить использовать) ОС Windows Server 2019, которую можно установить в режиме основных серверных компонентов или в режиме сервера с возможностями рабочего стола.
 
 ## <a name="semi-annual-channel"></a>Полугодовой канал
@@ -38,7 +38,7 @@ ms.locfileid: "80827137"
 
 Канал Semi-Annual Channel доступен корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), а также через Azure Marketplace или другого поставщика облачных услуг / услуг хостинга, а также в рамках программ лояльности, таких как подписки на Visual Studio.
 
-> [!Note]  
+> [!Note]
 > **Текущим выпуском канала Semi-Annual Channel является Windows Server версии 1903**. Чтобы присоединиться к этому каналу, необходимо установить ОС Windows Server версии 1903, которую можно установить в режиме основных серверных компонентов или в виде сервера Nano Server, запущенного в контейнере. Обновления на месте выпуска Long-Term Servicing Channel не поддерживаются, так как они находятся в **разных каналах выпуска**. Выпуски канала Semi-Annual Channel не являются обновлениями — это следующий выпуск Windows Server на канале Semi-Annual Channel.
 
 В этой модели выпуски Windows Server идентифицируются по году и месяцу выпуска, например выпуск от 9-го месяца (сентября) 2017 года будет обозначаться как **версия 1709**. Новые выпуски Windows Server в канале Semi-Annual Channel появляются два раза в год. Срок поддержки для каждого выпуска составляет 18 месяцев.
@@ -48,7 +48,7 @@ ms.locfileid: "80827137"
 Ниже перечислены основные различия, которые следует принять во внимание.
 
 - Вам необходимы быстрые инновации? Вам требуется ранний доступ к новейшим возможностям Windows Server? Вам необходимо поддерживать быстро меняющиеся гибридные приложения, интеграцию процессов эксплуатации и разработки, а также структуры Hyper-V? Если это так, вам следует **присоединиться к каналу Semi-Annual Channel**, установив **Windows Server версии 1903**. Как описано в этом разделе, вы будете получать новые версии два раза в год с 18-месячной основной поддержкой в рабочей среде для каждого выпуска. Вы можете получать их по программе корпоративного лицензирования, в виде служб по подписке Azure и Visual Studio. В настоящее время для выпусков в канале Semi-Annual Channel требуются корпоративное лицензирование и программа Software Assurance, если вы планируете запускать продукт в рабочей среде.
-- Вам требуются стабильность и предсказуемость? Вам требуется запускать виртуальные машины и традиционные рабочие нагрузки на физических серверах? Если это так, вам следует **сохранить эти серверы в канале Long-Term Servicing Channel**. Текущий выпуск LTSC — **Windows Server 2019**. Как описано в этом разделе, вы будете получать доступ к новым версиям каждые 2–3 года с 5-летней основной поддержкой и последующей 5-летней расширенной поддержкой для каждого выпуска. Выпуски LTSC доступны с помощью всех методов выпуска. Выпуски в канале LTSC доступны всем пользователям, независимо от применяемой модели лицензирования. 
+- Вам требуются стабильность и предсказуемость? Вам требуется запускать виртуальные машины и традиционные рабочие нагрузки на физических серверах? Если это так, вам следует **сохранить эти серверы в канале Long-Term Servicing Channel**. Текущий выпуск LTSC — **Windows Server 2019**. Как описано в этом разделе, вы будете получать доступ к новым версиям каждые 2–3 года с 5-летней основной поддержкой и последующей 5-летней расширенной поддержкой для каждого выпуска. Выпуски LTSC доступны с помощью всех методов выпуска. Выпуски в канале LTSC доступны всем пользователям, независимо от применяемой модели лицензирования.
 
 В следующей таблице приведены основные различия между каналами.
 
@@ -84,13 +84,13 @@ ms.locfileid: "80827137"
 
 Для выпусков Semi-Annual Channel следует применять чистую установку.
 
-- Volume Licensing Service Center (VLSC). Корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), для получения этого выпуска следует перейти на веб-сайт [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажать кнопку **Вход**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск. 
+- Volume Licensing Service Center (VLSC). Корпоративным клиентам, участвующим в программе [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx), для получения этого выпуска следует перейти на веб-сайт [Volume Licensing Service Center](https://www.microsoft.com/Licensing/servicecenter/default.aspx) и нажать кнопку **Вход**. Затем необходимо щелкнуть **Загрузки и ключи** и найти этот выпуск.
 
 - Выпуски каналов Semi-Annual Channel также доступны в [Microsoft Azure](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.WindowsServer?tab=Overview).
 
 - Подписки Visual Studio. Подписчики Visual Studio могут получить выпуски Semi-Annual Channel, скачав их [на странице загрузки для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347). Если вы еще не являетесь подписчиком, перейдите на страницу [Подписки на Visual Studio](https://www.visualstudio.com/subscriptions/), зарегистрируйтесь, а затем перейдите на [страницу скачивания для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347), как указано выше. Выпуски, полученные с помощью подписок на Visual Studio, используются только для разработки и тестирования.
 
-- Получение предварительных выпусков через Программу предварительной оценки Windows. Тестирование предварительных сборок Windows Server помогает корпорации Майкрософт и ее клиентам выявлять потенциальные проблемы до выпуска. Это также предоставляет клиентам уникальную возможность напрямую влиять на возможности продукта.   
+- Получение предварительных выпусков через Программу предварительной оценки Windows. Тестирование предварительных сборок Windows Server помогает корпорации Майкрософт и ее клиентам выявлять потенциальные проблемы до выпуска. Это также предоставляет клиентам уникальную возможность напрямую влиять на возможности продукта.
 Процесс разработки сборок и внесение в них изменений зависят от отзывов пользователей, получаемых корпорацией Майкрософт. Раннее тестирование и отзывы являются важным аспектом быстрого выпуска сборок. Чтобы зарегистрироваться в Программе предварительной оценки Windows, ознакомьтесь с [документаций к Программе предварительной оценки Windows для Windows Server](https://docs.microsoft.com/windows-insider/at-work/).
 
 ## <a name="activating-semi-annual-channel-releases"></a>Активация выпусков Semi-Annual Channel
@@ -114,15 +114,15 @@ ms.locfileid: "80827137"
 
 В целом выпуски канала Long-Term Servicing Channel, такие как Windows Server 2019, выпускаются одновременно с новой версией канала Semi-Annual Channel, например Windows Server версии 1809. Из-за этого сложнее определить, работает ли на сервере выпуск канала Semi-Annual Channel. Вместо того, чтобы смотреть на номер сборки, следует посмотреть на название продукта. Выпуски канала Semi-Annual Channel используют имя продукта Windows Server Standard или Windows Server Datacenter без номера версии, в то время как выпуски канала Long-Term Servicing Channel содержат номер версии, например Windows Server 2019 Datacenter.
 
->[!Note]  
+> [!Note]
 > Приведенные ниже инструкции помогут идентифицировать LTSC и SAC и выявить различия между ними в целях управления жизненным циклом и общей инвентаризации.  Они не предназначены для определения совместимости приложений или представления поверхности определенного API.  Для обеспечения совместимости разработчикам приложений следует использовать другие инструкции, так как в течение срока эксплуатации системы могут добавляться компоненты, API и функции, либо они могут быть еще недоступны. [Версия операционной системы](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) — оптимальная отправная точка для разработчиков приложений.
 
-Откройте Powershell и используйте командлет Get-ItemProperty или командлет Get-ComputerInfo, чтобы проверить соответствующие свойства в реестре.  Вместе с номером сборки вы сможете найти информацию о наличии или отсутствии LTSC или SAC по году выпуска, например 2019.  Это свойственно LTSC и не свойственно SAC.  Вы также узнаете время выпуска по идентификатору ReleaseId или WindowsVersion, например 1809, а также тип установки: основные серверные компоненты или сервер с возможностями рабочего стола. 
+Откройте Powershell и используйте командлет Get-ItemProperty или командлет Get-ComputerInfo, чтобы проверить соответствующие свойства в реестре.  Вместе с номером сборки вы сможете найти информацию о наличии или отсутствии LTSC или SAC по году выпуска, например 2019.  Это свойственно LTSC и не свойственно SAC.  Вы также узнаете время выпуска по идентификатору ReleaseId или WindowsVersion, например 1809, а также тип установки: основные серверные компоненты или сервер с возможностями рабочего стола.
 
 **Пример выпуска Windows Server 2019 Datacenter Edition (LTSC) с возможностями рабочего стола:**
 
 ````PowerShell
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
@@ -137,7 +137,7 @@ CurrentBuild              : 17763
 **Пример основных серверных компонентов Windows Server, версия 1809 (SAC), Standard Edition:**
 
 ````PowerShell
-Get-ItemProperty -Path HKLM:\Software\Microsoft\Windows NT\CurrentVersion | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
+Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows NT\CurrentVersion" | Select ProductName, ReleaseId, InstallationType, CurrentMajorVersionNumber,CurrentMinorVersionNumber,CurrentBuild
 ````
 
 ````
