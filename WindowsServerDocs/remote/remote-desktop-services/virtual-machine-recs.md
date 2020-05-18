@@ -8,14 +8,14 @@ ms.date: 12/02/2019
 ms.topic: article
 author: Heidilohr
 manager: lizross
-ms.openlocfilehash: 1d6a7daa3966488c951117b083411587d13be56b
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: beacd246639b5586c071a24bdd7b09c6aceeadab
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857107"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203386"
 ---
-# <a name="virtual-machine-sizing-guidance"></a>Руководство по определению размеров виртуальной машины
+# <a name="virtual-machine-sizing-guidelines"></a>Рекомендации по выбору размера виртуальной машины
 
 Независимо от того, используете ли вы виртуальную машину в службах удаленных рабочих столов или Виртуальном рабочем столе Windows, для разных типов рабочих нагрузок требуются разные конфигурации виртуальных машин узла сеансов. Масштабируйте развертывание в зависимости от потребностей пользователей, чтобы получить наилучшие результаты.
 

@@ -12,12 +12,12 @@ appliesto:
 - Windows Server 2012 R2
 - Windows 10
 - Windows 8.1
-ms.openlocfilehash: e3e4b4d236672ce310c8a0eb038d0e19f936a5d2
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 25c12322ef648655a301931c9273e8d941ebe62e
+ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826347"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235232"
 ---
 # <a name="slmgrvbs-options-for-obtaining-volume-activation-information"></a>Параметры slmgr.vbs для получения сведений об активации корпоративных лицензий
 

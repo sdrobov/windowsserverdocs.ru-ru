@@ -1,5 +1,5 @@
 ---
-title: Руководство по настройке сети
+title: Рекомендации по сетевому подключению
 description: Рекомендации по настройке пропускной способности для развертываний удаленного рабочего стола.
 ms.prod: windows-server
 ms.technology: remote-desktop-services
@@ -8,14 +8,14 @@ ms.date: 12/12/2019
 ms.topic: article
 author: Heidilohr
 manager: lizross
-ms.openlocfilehash: 79db56d467ae0913446faebffc5a9598aae0b767
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: ba084c58e725627e838c07b5b5b9849d131b2038
+ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80852997"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83203551"
 ---
-# <a name="network-guidance"></a>Руководство по настройке сети
+# <a name="network-guidelines"></a>Рекомендации по сетевому подключению
 
 При использовании удаленного сеанса Windows на качество работы значительно влияет доступная пропускная способность сети. Для работы разных приложений на устройствах с разным разрешением экрана требуются разные конфигурации сети. Поэтому важно убедиться, что сеть настроена в соответствии с вашими потребностями.
 
