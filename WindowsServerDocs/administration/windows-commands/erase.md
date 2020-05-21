@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ec812e9a455cc0060a3f0a6be4d0e7227821a0b
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 96e0f97e27de8933de44c437508ef59803765771
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992380"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83437129"
 ---
 # <a name="erase"></a>erase
 
@@ -42,7 +42,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /a [:]`<attributes>` | Удаляет файлы на основе следующих атрибутов файлов:<ul><li>файлы **r** только для чтения</li><li>**h** скрытые файлы</li><li>**я** не проиндексированные файлы содержимого</li><li>**системные файлы**</li><li>файлы **,** готовые к архивации</li><li>**l** точки повторного анализа</li><li>**-** Используется в качестве префикса, означающего "not"</li></ul>. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
 - При использовании `erase /p` команды вы увидите следующее сообщение:
 
@@ -73,7 +73,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
   > [!NOTE]
   > Прежде чем использовать подстановочные знаки с командой **Erase** , используйте те же подстановочные знаки с командой **dir** , чтобы получить список всех файлов, которые будут удалены.
 
-## <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры
 
 Чтобы удалить все файлы в папке с именем Test на диске C, введите следующую команду:
 

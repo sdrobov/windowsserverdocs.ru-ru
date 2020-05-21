@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 134e6ce4b1fc44450047de3287b7daac67da4b6a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4c6bcb138e8bd7308c01c2c53fba83b69362298a
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837517"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436369"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -32,22 +32,22 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 |---------|-----------|
 |-a|Указывает, что добавляет определенный INF-файл.|
 |-d|Указывает, следует удалить указанный INF-файл.|
-|-e|Задает перечисление всех сторонних INF-файлов.|
+|-E|Задает перечисление всех сторонних INF-файлов.|
 |-f|Указывает принудительное удаление идентифицированного INF-файла. Нельзя использовать в сочетании с параметром **– i** .|
 |-i|Задает установку идентифицированного INF-файла. Нельзя использовать в сочетании с параметром **-f** .|
-|/?|Отображает справку в командной строке.|
+|/?|Отображение справки в командной строке.|
 
 
 ## <a name="examples"></a>Примеры
 
 -   PnPUtil. exe-a А:\усбкам\усбкам. INF добавляет INF-файл, указанный параметром УСБКАМ. ФАЙЛУ
--   PnPUtil. exe — a к:\дриверс\*. inf добавляет все INF-файлы в к:\дриверс\
+-   PnPUtil. exe-a к:\дриверс \* . inf добавляет все файлы INF в к:\дриверс\
 -   PnPUtil. exe-i-a А:\усбкам\усбкам. INF добавляет и устанавливает указанный драйвер.
 -   средство PnPUtil. exe – e перечисляет драйверы сторонних производителей.
 -   средство PnPUtil. exe-d oem0. INF удаляет указанный объект.
 -   средство PnPUtil. exe-f-d oem0. INF вызывает принудительное удаление указанного INF-файла.
 
-## <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

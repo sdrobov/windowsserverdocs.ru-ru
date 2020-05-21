@@ -1,54 +1,54 @@
 ---
-ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
-title: Том fsutil
+title: fsutil volume
+description: Справочные сведения о команде fsutil volume, которая отключает том или запрашивает жесткий диск, чтобы определить, какой объем свободного места в данный момент доступен на жестком диске или какой файл используется в конкретном кластере.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
 ms.technology: storage
-audience: IT Pro
+ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e332db921eeb64f890149d143fc13b6e27fe4aa
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 18671447664c47af48b4ca074aab823fd2b78625
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720075"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436839"
 ---
-# <a name="fsutil-volume"></a>Том fsutil
-> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+# <a name="fsutil-volume"></a>fsutil volume
+
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Отключает том или запрашивает жесткий диск, чтобы определить, какой объем свободного места в настоящее время доступен на жестком диске или какой файл используется в конкретном кластере.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-fsutil volume [allocationreport] <VolumePath>
-fsutil volume [diskfree] <VolumePath>
-fsutil volume [dismount] <VolumePath>
-fsutil volume [filelayout] <VolumePath> <fileid>
+fsutil volume [allocationreport] <volumepath>
+fsutil volume [diskfree] <volumepath>
+fsutil volume [dismount] <volumepath>
+fsutil volume [filelayout] <volumepath> <fileID>
 fsutil volume [list]
-fsutil volume [querycluster] <VolumePath> <Cluster> [<Cluster>] … …
+fsutil volume [querycluster] <volumepath> <cluster> [<cluster>] … …
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------------|---------------|
-|аллокатионрепорт|Отображает сведения о том, как хранилище используется на заданном томе.|
-|\<VolumePath>|Указывает букву диска (с последующим двоеточием).|
-|дискфри|Запрашивает жесткий диск, чтобы определить объем свободного места на нем.|
-|отключить|Отключает том.|
-|филелайаут|Отображает метаданные NTFS для заданного файла.|
-|\<ИД>|Указывает идентификатор файла.|
-|list|Список всех томов в системе.|
-|куериклустер|Определяет, какой файл использует указанный кластер. Можно указать несколько кластеров с помощью параметра **куериклустер** .<p>Этот параметр применяется к: Windows Server 2008 R2 и Windows 7.|
-|\<> кластера|Указывает номер логического кластера (LCN).|
+| Параметр | Описание |
+| --------- | ----------- |
+| аллокатионрепорт | Отображает сведения о том, как хранилище используется на заданном томе. |
+| `<volumepath>` | Указывает букву диска (с последующим двоеточием). |
+| дискфри | Запрашивает жесткий диск, чтобы определить объем свободного места на нем. |
+| отключить | Отключает том. |
+| филелайаут | Отображает метаданные NTFS для заданного файла. |
+| `<fileID>` | Указывает идентификатор файла. |
+| list | Список всех томов в системе. |
+| куериклустер | Определяет, какой файл использует указанный кластер. Можно указать несколько кластеров с помощью параметра **куериклустер** . |
+| `<cluster>` | Указывает номер логического кластера (LCN). |
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
+### <a name="examples"></a>Примеры
+
 Чтобы отобразить отчет о распределенных кластерах, введите:
 
 ```
@@ -88,10 +88,9 @@ fsutil volume querycluster C: 50 0x2000
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
+
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-[Fsutil](Fsutil.md)
+- [fsutil](fsutil.md)
 
-[Как работает NTFS](https://go.microsoft.com/fwlink/?LinkId=183396)
-
-
+- [Как работает NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10))

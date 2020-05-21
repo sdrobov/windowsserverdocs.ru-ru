@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 327ac844bec0e4c89ee1443c193aa628de038dea
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b733a187017293e8a33ff307b485380ef8f9b472
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80837407"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436569"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -26,7 +26,7 @@ Windows PowerShell — это оболочка командной строки �
 
 Можно использовать программу командной строки **PowerShell. exe** для запуска сеанса Windows PowerShell в командной строке.
 
-- Чтобы запустить сеанс Windows PowerShell в окне командной строки, введите `PowerShell`. В командную строку добавляется префикс **PS** , указывающий, что вы используете сеанс Windows PowerShell.
+- Чтобы запустить сеанс Windows PowerShell в окне командной строки, введите команду `PowerShell` . В командную строку добавляется префикс **PS** , указывающий, что вы используете сеанс Windows PowerShell.
 
 - Чтобы запустить сеанс с определенной политикой выполнения, используйте параметр **ExecutionPolicy** .
 
@@ -39,20 +39,20 @@ Windows PowerShell — это оболочка командной строки �
     ```
     PowerShell.exe -NoProfile
     ```
-  
+
 - Чтобы начать сеанс, используйте параметр **ExecutionPolicy** .
 
     ```
     PowerShell.exe -ExecutionPolicy Restricted
     ```
-  
-- Чтобы просмотреть файл справки PowerShell. exe, используйте следующий формат команды:  
-    
+
+- Чтобы просмотреть файл справки PowerShell. exe, используйте следующий формат команды:
+
     ```
     PowerShell.exe -help, -?, /?
     ```
 
-- Чтобы завершить сеанс Windows PowerShell в окне командной строки, введите `exit`. Типичная Командная строка возвращает.
+- Чтобы завершить сеанс Windows PowerShell в окне командной строки, введите команду `exit` . Типичная Командная строка возвращает.
 
 Полный список параметров командной строки **PowerShell. exe** см. в разделе [about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439).
 
@@ -60,13 +60,13 @@ Windows PowerShell — это оболочка командной строки �
 
 Дополнительные сведения о других способах запуска Windows PowerShell см. в разделе [Запуск Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Windows PowerShell выполняется в варианте установки Server Core в операционных системах Windows Server. Тем не менее функции, требующие графического пользовательского интерфейса, такие как [Интегрированная среда сценариев Windows PowerShell (ISE)](https://technet.microsoft.com/library/hh849182), и командлеты [Out-GridView](https://go.microsoft.com/fwlink/?LinkID=113364) и [Показывать-Command](https://go.microsoft.com/fwlink/?LinkID=217448) , не выполняются в установках Server Core.
 
-## <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные ссылки
 
-[about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439)
-[about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512)
-[Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
-[сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также
+[about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439) 
+ [about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512) 
+ [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116) 
+ [Создание сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) См. также

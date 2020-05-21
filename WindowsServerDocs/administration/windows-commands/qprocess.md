@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 094416a0d7b3adf5c99579ea51b7f343a6dec4f7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4e0ebf422019d6e8023a2a3cc5da2085635c8422
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722731"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436349"
 ---
 # <a name="qprocess"></a>qprocess
 
@@ -25,10 +25,10 @@ ms.locfileid: "82722731"
 > [!NOTE]
 > В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 Эта команда аналогична команде **запроса Process** .
 
-## <a name="additional-references"></a>Дополнительная справка
-[обработка запросов](query-process.md)  
-- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
-[Справочник по командам служб удаленных рабочих столов (служб терминалов)](remote-desktop-services-terminal-services-command-reference.md)  
+## <a name="additional-references"></a>Дополнительные ссылки
+[обработка запросов](query-process.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Справочник по командам служб терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)

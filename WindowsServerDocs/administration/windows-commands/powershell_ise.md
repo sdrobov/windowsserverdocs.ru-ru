@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5fb143c3d365b47f66aee5c64bfdc7dc26e5794f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8529e19e30b72c9b9c8f8c30e1ca39c5e8f1f40e
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723284"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436529"
 ---
 # <a name="powershell_ise"></a>PowerShell_ise
 
@@ -29,39 +29,39 @@ ms.locfileid: "82723284"
 ## <a name="using-powershell_iseexe"></a>Использование PowerShell_ISE. exe
 
 **PowerShell_ISE. exe** можно использовать для запуска и завершения сеанса Windows PowerShell следующим образом:
-- Чтобы запустить сеанс интегрированной среды сценариев Windows PowerShell, в окне командной строки в Windows PowerShell или в меню "Пуск" введите:  
+- Чтобы запустить сеанс интегрированной среды сценариев Windows PowerShell, в окне командной строки в Windows PowerShell или в меню "Пуск" введите:
   ```
   PowerShell_Ise
-  ```  
-- Чтобы открыть скрипт (PS1), модуль скрипта (PSM1), манифест модуля (. PSD1), XML-файл или любой другой поддерживаемый файл в интегрированной среде сценариев Windows PowerShell, используйте следующий формат команды:  
+  ```
+- Чтобы открыть скрипт (PS1), модуль скрипта (PSM1), манифест модуля (. PSD1), XML-файл или любой другой поддерживаемый файл в интегрированной среде сценариев Windows PowerShell, используйте следующий формат команды:
   ```
   PowerShell_Ise <FilePath>
-  ```  
-  В Windows PowerShell 3,0 можно использовать необязательный параметр **File** , как показано ниже.  
+  ```
+  В Windows PowerShell 3,0 можно использовать необязательный параметр **File** , как показано ниже.
   ```
   PowerShell_Ise -File <FilePath>
-  ```  
-- Чтобы запустить сеанс интегрированной среды сценариев Windows PowerShell без профилей Windows PowerShell, используйте параметр- **Profile** . (Параметр- **Profile** появился в Windows PowerShell 3,0.)  
+  ```
+- Чтобы запустить сеанс интегрированной среды сценариев Windows PowerShell без профилей Windows PowerShell, используйте параметр- **Profile** . (Параметр- **Profile** появился в Windows PowerShell 3,0.)
   ```
   PowerShell_Ise -NoProfile
-  ```  
-- Чтобы просмотреть файл справки **PowerShell_ISE. exe** в окне командной строки, используйте следующий формат команды:  
+  ```
+- Чтобы просмотреть файл справки **PowerShell_ISE. exe** в окне командной строки, используйте следующий формат команды:
   ```
   PowerShell_Ise -help, -?, /?
-  ```  
+  ```
   Полный список параметров командной строки **PowerShell_ISE. exe** см. в разделе [about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512).
 
 ## <a name="start-windows-powershell-ise-in-other-ways"></a>Запуск интегрированной среды сценариев Windows PowerShell другими способами
 
 Дополнительные сведения о других способах запуска интегрированной среды сценариев Windows PowerShell см. в разделе [Запуск Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=135259).
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Windows PowerShell выполняется в варианте установки Server Core в операционных системах Windows Server. Однако, поскольку интегрированная среда сценариев Windows PowerShell требует графического пользовательского интерфейса, она не выполняется в установках Server Core.
 
-## <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные ссылки
 
-[about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512)
-[about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439)
-создание сценариев[Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116)
-[с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) см. также
+[about_PowerShell_Ise. exe](https://go.microsoft.com/fwlink/?LinkId=256512) 
+ [about_PowerShell. exe](https://go.microsoft.com/fwlink/?LinkID=113439) 
+ [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=107116) 
+ [Создание сценариев с помощью Windows PowerShell](https://technet.microsoft.com/scriptcenter/dd742419) См. также

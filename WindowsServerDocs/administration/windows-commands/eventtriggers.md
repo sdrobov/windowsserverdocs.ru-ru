@@ -1,6 +1,6 @@
 ---
 title: eventtriggers
-description: Справочный раздел по * * * *-
+description: Справочный раздел о команде EventTrigger, которая устарела и не гарантируется в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,13 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f0e504974c1e8db5477f9c198e875ec4dc8db6f
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 64120df16d92484bfee8cfc1645c102fc325e400
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992365"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436859"
 ---
 # <a name="eventtriggers"></a>eventtriggers
 
-
-
-EventTrigger является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
-
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [EventTrigger](https://technet.microsoft.com/library/cc773308(v=ws.10).aspx).
+Команда EventTrigger устарела и не гарантируется в будущих выпусках Windows.

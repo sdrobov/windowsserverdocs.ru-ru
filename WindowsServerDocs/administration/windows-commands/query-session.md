@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a7a119cda5fad594638211bfcdbdc269fff13d20
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6b0d122beac43abfd826cb406adac4aa277fc72e
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722706"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436279"
 ---
 # <a name="query-session"></a>сеанс запроса
 
@@ -30,7 +30,7 @@ ms.locfileid: "82722706"
 > query session [<SessionName> | <UserName> | <SessionID>] [/server:<ServerName>] [/mode] [/flow] [/connect] [/counter]
 > ```
 > ### <a name="parameters"></a>Параметры
-> 
+>
 > |      Параметр       |                                                      Описание                                                      |
 > |----------------------|-----------------------------------------------------------------------------------------------------------------------|
 > |    <SessionName>     |                               Указывает имя сеанса, с которым необходимо выполнить запрос.                               |
@@ -42,8 +42,8 @@ ms.locfileid: "82722706"
 > |       /коннект       |                                          Отображает текущие параметры подключения.                                           |
 > |       /Counter       | Отображает сведения о текущих счетчиках, включая общее число созданных, отключенных и повторно подключенных сеансов. |
 > |          /?          |                                         Отображение справки в командной строке.                                          |
-> 
-> ## <a name="remarks"></a>Примечания
+>
+>#### <a name="remarks"></a>Комментарии
 > - Пользователь всегда может запрашивать сеанс, в который в данный момент вошел пользователь. Чтобы запросить другие сеансы, пользователь должен иметь специальное разрешение на доступ к сведениям о запросе.
 > - Если сеанс не задан с помощью <*SessionName*>, <*UserName*> или <*SessionID*>, **сеанс запроса** отображает сведения обо всех активных сеансах в системе.
 > - Когда **сеанс запроса** возвращает сведения, перед текущим сеансом отображается символ "больше чем" (>). Ниже приведен пример выходных данных для **сеанса запроса**.
@@ -67,6 +67,6 @@ ms.locfileid: "82722706"
 >   query session modeM02
 >   ```
 >   ## <a name="additional-references"></a>Дополнительные ссылки
->   - [Command-Line Syntax Key](command-line-syntax-key.md)
->   Справочник по[запросам](query.md)
->   синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)
+>   - Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+>    [запрос](query.md) 
+>    [Справочник по командам служб терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)

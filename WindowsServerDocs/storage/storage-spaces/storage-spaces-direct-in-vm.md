@@ -1,5 +1,6 @@
 ---
 title: Использование Локальные дисковые пространства в виртуальной машине
+description: Развертывание Локальные дисковые пространства в гостевом кластере виртуальной машины, например в Microsoft Azure.
 ms.prod: windows-server
 ms.author: eldenc
 manager: eldenc
@@ -7,20 +8,19 @@ ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
 ms.date: 10/25/2017
-description: Развертывание Локальные дисковые пространства в гостевом кластере виртуальной машины, например в Microsoft Azure.
 ms.localizationpriority: medium
-ms.openlocfilehash: 74b1b90a780a0b238a356e942f8348e2a483d94a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 816e589cbb7ed4196411b8f5bab740c7ee5f7595
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856117"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436769"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>Использование Локальные дисковые пространства в кластерах гостевых виртуальных машин
 
-> Область применения: Windows Server 2019, Windows Server 2016
+> Применяется к: Windows Server 2019, Windows Server 2016
 
-Локальные дисковые пространства можно развернуть в кластере физических серверов или в гостевых кластерах виртуальных машин, как описано в этом разделе. Этот тип развертывания обеспечивает виртуальное общее хранилище на множестве виртуальных машин на основе частного или общедоступного облака, чтобы можно было использовать решения высокого уровня доступности приложения для повышения доступности приложений.
+Вы можете развернуть Локальные дисковые пространства в кластере физических серверов или в гостевых кластерах виртуальных машин, как описано в этом разделе. Этот тип развертывания обеспечивает виртуальное общее хранилище на множестве виртуальных машин на основе частного или общедоступного облака, чтобы можно было использовать решения высокого уровня доступности приложения для повышения доступности приложений.
 
 ![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
@@ -33,39 +33,39 @@ ms.locfileid: "80856117"
 ## <a name="requirements"></a>Требования
 
 При развертывании Локальные дисковые пространства в виртуализованной среде следует учитывать следующие моменты.
-       
->        !TIP]
->        zure templates will automatically configure the below considerations for you and are the recommended solution when deploying in Azure IaaS VMs.
 
--   Минимум 2 узла и максимум 3 узла
+> [!TIP]
+> Шаблоны Azure автоматически настраивают указанные ниже рекомендации и являются рекомендуемым решением при развертывании на виртуальных машинах Azure IaaS.
 
--   развертывания с двумя узлами должны настроить следящий сервер (облако-свидетель или файловый ресурс-свидетель)
+- Минимум 2 узла и максимум 3 узла
 
--   Развертывание из трех узлов может допускать 1 узел и потерять 1 или более дисков на другом узле.  При завершении 2 узлов виртуальные диски находятся в автономном режиме до тех пор, пока один из узлов не вернет значение.  
+- развертывания с двумя узлами должны настроить следящий сервер (облако-свидетель или файловый ресурс-свидетель)
 
--   Настройка виртуальных машин для развертывания в доменах сбоя
+- Развертывание из трех узлов может допускать 1 узел и потерять 1 или более дисков на другом узле.  При завершении 2 узлов виртуальные диски находятся в автономном режиме до тех пор, пока один из узлов не вернет значение.
 
-    -   Azure — Настройка группы доступности
+- Настройка виртуальных машин для развертывания в доменах сбоя
 
-    -   Hyper-V — Настройка AntiAffinityClassNames на виртуальных машинах для разделения виртуальных машин между узлами
+    - Azure — Настройка группы доступности
 
-    -   VMware — настройте правило защиты виртуальных машин виртуальной машины, создав правило DRS типа "отдельные виртуальные машины" для разделения виртуальных машин между узлами ESX. Диски, представленные для использования с Локальные дисковые пространства, должны использовать адаптер Virtual SCSI (PVSCSI). Сведения о поддержке PVSCSI в Windows Server см. в https://kb.vmware.com/s/article/1010398.
+    - Hyper-V — Настройка AntiAffinityClassNames на виртуальных машинах для разделения виртуальных машин между узлами
 
--   Используйте хранилище с низкой задержкой или высокой производительностью. требуются управляемые диски Azure класса Premium.
+    - VMware — настройте правило защиты виртуальных машин виртуальной машины, создав правило DRS типа "отдельные виртуальные машины" для разделения виртуальных машин между узлами ESX. Диски, представленные для использования с Локальные дисковые пространства, должны использовать адаптер Virtual SCSI (PVSCSI). Сведения о поддержке PVSCSI в Windows Server см https://kb.vmware.com/s/article/1010398 . в.
 
--   Развертывание плоской структуры хранилища без настроенных устройств кэширования
+- Используйте хранилище с низкой задержкой или высокой производительностью. требуются управляемые диски Azure класса Premium.
 
--   Не менее 2 виртуальных дисков данных, представленных для каждой виртуальной машины (VHD/VHDX/VMDK)
+- Развертывание плоской структуры хранилища без настроенных устройств кэширования
+
+- Не менее 2 виртуальных дисков данных, представленных для каждой виртуальной машины (VHD/VHDX/VMDK)
 
     Это число отличается от развертывания на компьютере без операционной системы, так как виртуальные диски могут быть реализованы как файлы, не подверженные физическим сбоям.
 
--   Отключите автоматическую замену диска "апаб" литиес в служба работоспособности, выполнив следующий командлет PowerShell:
+- Отключите функции автоматического замены дисков в служба работоспособности, выполнив следующий командлет PowerShell:
 
     ```powershell
           Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
           ```
 
--   To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
+- To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
 
@@ -75,17 +75,16 @@ ms.locfileid: "80856117"
 
 ## Not supported
 
--   Host level virtual disk snapshot/restore
+- Host level virtual disk snapshot/restore
 
     Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
 
--   Host level virtual disk size change
+- Host level virtual disk size change
 
     The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
 
 ## See also
 
-[Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
+- [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
 
-[Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
-""""""''''                                                                                                                                                                        """"""''''                                                                                                                                                                        
+- [Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)

@@ -1,52 +1,52 @@
 ---
-ms.assetid: 7787a72e-a26b-415f-b700-a32806803478
 title: Fsutil fsinfo
+description: Справочный раздел по команде fsutil fsinfo, в котором перечислены все диски, запросы к типу диска, сведения о томе, запросы, сведения о томе NTFS, а также запросы к статистике файловой системы.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
 author: toklima
 ms.technology: storage
-audience: IT Pro
+ms.assetid: 7787a72e-a26b-415f-b700-a32806803478
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: b7af3859cd16b89587a86e3436d5c832620c4e22
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 04d64bf0d7d29290cfc5e1ca88a013432322dbc1
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725498"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83435829"
 ---
-# <a name="fsutil-fsinfo"></a>Fsutil fsinfo
-> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7
+# <a name="fsutil-fsinfo"></a>fsutil fsinfo
+
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
 Выводит список всех дисков, запрашивает тип диска, сведения о томе, запрашивает информацию о томе, связанную с NTFS, или запрашивает статистику файловой системы.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
 fsutil fsinfo [drives]
-fsutil fsinfo [drivetype] <VolumePath>
-fsutil fsinfo [ntfsinfo] <RootPath>
-fsutil fsinfo [statistics] <VolumePath>
-fsutil fsinfo [volumeinfo] <RootPath>
+fsutil fsinfo [drivetype] <volumepath>
+fsutil fsinfo [ntfsinfo] <rootpath>
+fsutil fsinfo [statistics] <volumepath>
+fsutil fsinfo [volumeinfo] <rootpath>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-------------|---------------|
-|диски|Список всех дисков компьютера.|
-|DriveType|Запрашивает диск и перечисляет его тип, например дисковод компакт-дисков.|
-|NTFSInfo|Содержит сведения о томе NTFS для указанного тома, например число секторов, общее количество кластеров, свободные кластеры, а также начало и конец зоны MFT.|
-|секторинфо|Выводит сведения о размере сектора оборудования и его выравнивании.|
-|статистика|Отображает статистику файловой системы для указанного тома, например метаданные, файл журнала и операции чтения и записи MFT.|
-|волумеинфо|Выводит сведения для указанного тома, например файловую систему, и указывает, поддерживает ли том имена файлов с учетом регистра, Юникод в именах файлов, квоты дисков или является томом DirectAccess (DAX).|
-|< "VolumePath" >|Указывает букву диска (с последующим двоеточием).|
-|< "Рутпаснаме" >|Указывает букву диска (с последующим двоеточием) корневого диска.|
+| Параметр | Описание |
+| --------- |------------ |
+| диски | Список всех дисков компьютера. |
+| DriveType | Запрашивает диск и перечисляет его тип, например дисковод компакт-дисков. |
+| NTFSInfo | Содержит сведения о томе NTFS для указанного тома, например число секторов, общее количество кластеров, свободные кластеры, а также начало и конец зоны MFT. |
+| секторинфо | Выводит сведения о размере сектора оборудования и его выравнивании. |
+| статистика | Отображает статистику файловой системы для указанного тома, например метаданные, файл журнала и операции чтения и записи MFT. |
+| волумеинфо | Выводит сведения для указанного тома, например файловую систему, и указывает, поддерживает ли том имена файлов с учетом регистра, Юникод в именах файлов, квоты дисков или является томом DirectAccess (DAX). |
+| `<volumepath>:` | Указывает букву диска (с последующим двоеточием). |
+| `<rootpath>:` | Указывает букву диска (с последующим двоеточием) корневого диска. |
 
-## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
+### <a name="examples"></a>Примеры
+
 Чтобы вывести список всех дисков компьютера, введите:
 
 ```
@@ -56,7 +56,7 @@ fsutil fsinfo drives
 Выходные данные, аналогичные приведенным ниже, отображаются:
 
 ```
-Drives: A:\ C:\ D:\ E:\       
+Drives: A:\ C:\ D:\ E:\
 ```
 
 Чтобы запросить тип диска C, введите:
@@ -86,13 +86,10 @@ fsinfo volumeinfo e:\
 Выходные данные, аналогичные приведенным ниже, отображаются:
 
 ```
-Volume Name :Volume
+Volume Name : Volume
 Serial Number : 0xd0b634d9
 Max Component Length : 255
 File System Name : NTFS
-.
-.
-.
 Supports Named Streams
 Is DAX Volume
 ```
@@ -107,12 +104,9 @@ fsutil fsinfo ntfsinfo f:
 
 ```
 NTFS Volume Serial Number : 0xe660d46a60d442cb
-Number Sectors :            0x00000000010ea04f
-Total Clusters :            0x000000000021d409
-.
-.
-.
-Mft Zone End   :            0x0000000000004700       
+Number Sectors : 0x00000000010ea04f
+Total Clusters : 0x000000000021d409
+Mft Zone End : 0x0000000000004700
 ```
 
 Чтобы запросить базовое оборудование файловой системы для сведений о секторе, введите:
@@ -125,11 +119,8 @@ fsinfo sectorinfo d:
 
 ```
 D:\>fsutil fsinfo sectorinfo d:
-LogicalBytesPerSector :                                 4096
-PhysicalBytesPerSectorForAtomicity :                    4096
-.
-.
-.
+LogicalBytesPerSector : 4096
+PhysicalBytesPerSectorForAtomicity : 4096
 Trim Not Supported
 DAX capable
 ```
@@ -143,18 +134,15 @@ fsinfo statistics e:
 Выходные данные, аналогичные приведенным ниже, отображаются:
 
 ```
-File System Type :     NTFS
-Version :              1
-UserFileReads :        75021
-UserFileReadBytes :    1305244512
-.
-.
-.
-LogFileWriteBytes :    180936704       
+File System Type : NTFS
+Version : 1
+UserFileReads : 75021
+UserFileReadBytes : 1305244512
+LogFileWriteBytes : 180936704
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[fsutil](Fsutil.md)
 
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
+- [fsutil](fsutil.md)

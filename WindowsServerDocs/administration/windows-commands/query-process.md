@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 81132ebf6b75115086ed7cc2ab9f73d9d06e65e4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9ac3e5a458d88d945e857cd1922783e5b0ff5cf0
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722722"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436289"
 ---
 # <a name="query-process"></a>обработка запросов
 
@@ -30,7 +30,7 @@ ms.locfileid: "82722722"
 > query process [* | <ProcessID> | <UserName> | <SessionName> | /id:<nn> | <ProgramName>] [/server:<ServerName>]
 > ```
 > ### <a name="parameters"></a>Параметры
-> 
+>
 > |      Параметр       |                                                                 Описание                                                                  |
 > |----------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 > |          \*          |                                                    список процессов для всех сеансов.                                                     |
@@ -41,10 +41,10 @@ ms.locfileid: "82722722"
 > |    <ProgramName>     |                     Указывает имя программы, процессы которой необходимо запросить. Требуется расширение EXE.                     |
 > | /server:<ServerName> | Указывает сервер узла сеансов удаленных рабочих столов, для которого необходимо выполнить перечисление процессов. Если не указано, используется сервер, на котором вы выполнили вход в систему. |
 > |          /?          |                                                     Отображение справки в командной строке.                                                     |
-> 
-> ## <a name="remarks"></a>Примечания
+>
+>#### <a name="remarks"></a>Комментарии
 > - Администраторы имеют полный доступ ко всем функциям **обработки запросов** .
-> - Если не указать <*username*>, <*SessionName*>, **/ID:**<*nn*>, <*ProgramName*> или **\\*** Parameters, в **процессе запроса** отображаются только процессы, принадлежащие текущему пользователю.
+> - Если не указать <*username*>, <*SessionName*>, **/ID:** < *nn*>, <*ProgramName*> или **\\** * Parameters, в **процессе запроса** отображаются только процессы, принадлежащие текущему пользователю.
 > - Если сеанс указан, он должен указать активный сеанс.
 > - **процесс запроса** возвращает следующие сведения:
 >   -   Пользователь, владеющий процессом
@@ -63,6 +63,6 @@ ms.locfileid: "82722722"
 >   query process /ID:2
 >   ```
 >   ## <a name="additional-references"></a>Дополнительные ссылки
->   - [Command-Line Syntax Key](command-line-syntax-key.md)
->   Справочник по[запросам](query.md)
->   синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)
+>   - Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+>    [запрос](query.md) 
+>    [Справочник по командам служб терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)

@@ -1,6 +1,6 @@
 ---
 title: exec
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды EXEC, которая запускает файл скрипта на локальном компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,36 +9,33 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f10e28a8da96bc7228af4561fb36824899f2d7a4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 956f3d4a7c5992980aea0fc0f5933ee7def48381
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725745"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436110"
 ---
 # <a name="exec"></a>exec
 
+Запускает файл скрипта на локальном компьютере. Эта команда также дублирует или восстанавливает данные в рамках последовательности резервного копирования или восстановления. В случае сбоя скрипта возвращается ошибка, и сценарий DiskShadow завершает работу.
 
-
-Выполняет файл на локальном компьютере. Файл может быть сценарием **cmd** .
+Файл может быть сценарием **cmd** .
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-exec <ScriptFile.cmd>
+exec <scriptfile.cmd>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<ScriptFile. cmd>|Указывает файл скрипта для выполнения.|
-
-## <a name="remarks"></a>Примечания
-
--   Эта команда используется для дублирования или восстановления данных в рамках последовательности резервного копирования или восстановления.
--   В случае сбоя скрипта возвращается ошибка, и сценарий DiskShadow завершает работу.
+| Параметр | Описание |
+| --------- | ----------- |
+| `<scriptfile.cmd>` | Указывает запускаемый файл скрипта. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Diskshadow, команда](diskshadow.md)

@@ -1,6 +1,6 @@
 ---
 title: развернуть виртуальный диск
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде Expand vdisk, который расширяет виртуальный жесткий диск (VHD) до указанного размера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,44 +9,55 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c2380045de45397888777f58e3420c75bb6915ae
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 48973178f35f792b52fa81e5ed59449ca5db2559
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725695"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436189"
 ---
 # <a name="expand-vdisk"></a>развернуть виртуальный диск
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Расширение виртуального жесткого диска (VHD) до указанного размера.
-> [!NOTE]
-> Эта команда применима только к Windows 7 и Windows Server 2008 R2.
-> ## <a name="syntax"></a>Синтаксис
-> ```
-> expand vdisk maximum=<n>
-> ```
-> ### <a name="parameters"></a>Параметры
-> 
-> |  Параметр  |                      Описание                      |
-> |-------------|-------------------------------------------------------|
-> | максимум =<n> | Указывает новый размер виртуального жесткого диска в мегабайтах (МБ). |
-> 
-> ## <a name="remarks"></a>Примечания
-> - Для выполнения этой операции необходимо выбрать и отсоединить виртуальный жесткий диск. Используйте команду **SELECT VDISK** , чтобы выбрать том и переместить фокус на него.
->   ## <a name="examples"></a>Примеры
->   Чтобы расширить выбранный виртуальный жесткий диск до 20 ГБ, введите:
->   ```
->   expand vdisk maximum=20000
->   ```
->   ## <a name="additional-references"></a>Дополнительные ссылки
-> - - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
-> - [подключить виртуальный диск](attach-vdisk.md)
-> - [Compact VDISK](compact-vdisk.md)
 
--   [Отсоединить виртуальный диск](detach-vdisk.md)
--   [подробные сведения VDISK](detail-vdisk.md)
--   [Слияние VDISK](merge-vdisk.md)
--   [выбрать виртуальный диск](select-vdisk.md)
--   [list_1](list_1.md)
+Для выполнения этой операции необходимо выбрать и отсоединить виртуальный жесткий диск. Используйте [команду SELECT VDISK](select-vdisk.md) , чтобы выбрать том и переместить фокус на него.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+expand vdisk maximum=<n>
+```
+
+### <a name="parameters"></a>Параметры
+
+ | Параметр | Описание |
+ |---------- | ----------- |
+ | максимум =`<n>` | Указывает новый размер виртуального жесткого диска в мегабайтах (МБ). |
+
+### <a name="examples"></a>Примеры
+
+Чтобы расширить выбранный виртуальный жесткий диск до 20 ГБ, введите:
+
+```
+expand vdisk maximum=20000
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [команда SELECT VDISK](select-vdisk.md)
+
+- [Команда Attach vdisk](attach-vdisk.md)
+
+- [Команда Compact VDISK](compact-vdisk.md)
+
+- [Команда отсоединения VDISK](detach-vdisk.md)
+
+- [Команда Detail VDISK](detail-vdisk.md)
+
+- [Команда merge VDISK](merge-vdisk.md)
+
+- [Команда list](list.md)

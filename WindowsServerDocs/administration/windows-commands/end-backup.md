@@ -1,6 +1,6 @@
 ---
 title: Завершение резервного копирования
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде завершения резервного копирования, который завершает сеанс полного резервного копирования и выдает событие **баккупкомплете** с соответствующим состоянием модуля записи, если это необходимо.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 941ab648c4811facd284d49a4797e50ba5241ee6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6d9cb3cbf474b5306a1cac7df4516f0492740591
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720850"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436909"
 ---
 # <a name="end-backup"></a>Завершение резервного копирования
-
-
-
 
 Завершает сеанс полного резервного копирования и при необходимости создает событие **баккупкомплете** с соответствующим состоянием модуля записи.
 
@@ -28,10 +25,6 @@ ms.locfileid: "82720850"
 ```
 end backup
 ```
-
-## <a name="remarks"></a>Примечания
-
--   Эту команду следует использовать для всех полных резервных копий.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

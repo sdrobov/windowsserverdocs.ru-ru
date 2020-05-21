@@ -8,23 +8,23 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3c11e4a925eae89355da301d0b0facb62a53a942
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 13d32a4fc11611f030006ad9628d2e84a045e511
+ms.sourcegitcommit: c710fea2c0591febfc1bc9a705d59979be6f699b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80824567"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83705568"
 ---
 # <a name="active-directory-domain-services-overview"></a>Обзор доменных служб Active Directory
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 
 Каталог — это иерархическая структура, в которой хранятся сведения об объектах в сети. Служба каталогов, например домен Active Directory Services (AD DS), предоставляет методы для хранения данных каталога и предоставления доступа к этим данным сетевым пользователям и администраторам. Например, AD DS хранит сведения об учетных записях пользователей, таких как имена, пароли, Номера телефонов и т. д., а также позволяет другим полномочным пользователям в той же сети получить доступ к этим сведениям.
 
 Active Directory хранит сведения об объектах в сети и предоставляет эту информацию администраторам и пользователям, которые могут легко найти и использовать ее. Active Directory использует структурированное хранилище данных в качестве основы для логической иерархической организации сведений в каталоге.
 
-Это хранилище данных, также называемое каталогом, содержит сведения об Active Directoryных объектах. Обычно эти объекты включают в себя общие ресурсы, такие как серверы, тома, принтеры, учетные записи пользователей и компьютеров сети. Дополнительные сведения о Active Directory хранилище данных см. в разделе [хранилище данных каталога](https://technet.microsoft.com/library/cc736627(v=ws.10).aspx).
+Это хранилище данных, также называемое каталогом, содержит сведения об Active Directoryных объектах. Обычно эти объекты включают в себя общие ресурсы, такие как серверы, тома, принтеры, учетные записи пользователей и компьютеров сети. Дополнительные сведения о Active Directory хранилище данных см. в разделе [хранилище данных каталога](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736627(v=ws.10)).
 
 Безопасность интегрирована с Active Directory путем проверки подлинности входа и управления доступом к объектам в каталоге. С одним сетевым входом администраторы могут управлять данными каталога и Организацией по всей сети, а полномочные пользователи сети могут получать доступ к ресурсам в любой точке сети. Администрирование на основе политики облегчает управление даже очень сложной сетью. Дополнительные сведения о Active Directory безопасности см. в разделе [Общие сведения о безопасности](../../plan/security-best-practices/best-practices-for-securing-active-directory.md).
 
@@ -43,15 +43,15 @@ Active Directory также включает:
 ## <a name="understanding-active-directory"></a>Основные сведения о Active Directory
  В этом разделе приводятся ссылки на основные понятия Active Directory:
  
-* [Технологии структуры и хранения Active Directory](https://technet.microsoft.com/library/cc759186(v=ws.10).aspx)
-* [Роли контроллера домена](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
+* [Технологии структуры и хранения Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759186(v=ws.10))
+* [Роли контроллера домена](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786438(v=ws.10)) 
 * [Схема Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771796(v=ws.10))
-* [Общие сведения о доверии](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
-* [Технологии репликации Active Directory](https://technet.microsoft.com/library/cc786438(v=ws.10).aspx) 
-* [Технологии поиска и публикации Active Directory](https://technet.microsoft.com/library/cc775686(v=ws.10).aspx) 
+* [Представление о довериях](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771568(v=ws.10)) 
+* [Технологии репликации Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc776877(v=ws.10)) 
+* [Технологии поиска и публикации Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc775686(v=ws.10)) 
 * [Взаимодействие с DNS и групповая политика](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd197486(v=ws.10))
-* [Основные сведения о схеме](https://technet.microsoft.com/library/cc759402(v=ws.10).aspx) 
+* [Основные сведения о схеме](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759402(v=ws.10)) 
 
-Подробный список концепций Active Directory см. в разделе [Общие сведения о Active Directory](https://technet.microsoft.com/library/cc781408(v=ws.10).aspx). 
+Подробный список концепций Active Directory см. в разделе [Общие сведения о Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781408(v=ws.10)). 
 
 

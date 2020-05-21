@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e18823c5c030aa1a7b8f032f820e415f36fd7827
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b52701f831502c16487dbbaf0cd61d839c046c68
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720267"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436709"
 ---
 # <a name="vssadmin-delete-shadows"></a>Vssadmin удаление теней
 
@@ -31,13 +31,13 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 
 |Параметр|Описание|
 |---|---|
-|/фор =\<ForVolumeSpec>|Указывает, какой из теневых копий тома будет удален.|
+|/фор = \< ForVolumeSpec>|Указывает, какой из теневых копий тома будет удален.|
 |/олдест|Удаляет только самую старую теневую копию.|
 |/all|Удаляет все заданные теневые копии тома.|
-|/Шадов =\<шадовид>|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/Шадов = \< шадовид>|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
 |/quiet|Указывает, что команда не будет отображать сообщения во время выполнения.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Удалять можно только теневые копии с типом, доступным для клиента.
 
@@ -49,7 +49,7 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 vssadmin delete shadows /for=c: /oldest
 ```
 
-## <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные ссылки
 
 * [Ключ синтаксиса командной строки](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
 * [List](vssadmin.md)

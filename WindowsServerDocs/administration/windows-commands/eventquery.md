@@ -1,6 +1,6 @@
 ---
 title: eventquery
-description: Справочный раздел по * * * *-
+description: Справочный раздел о команде евенткуери, которая устарела и не гарантируется в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,13 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3f0e4294354470dcfb3a33191cc36edfa556bb02
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 5031d18311c177c7f745bc771c212727ce700ee3
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992393"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436869"
 ---
 # <a name="eventquery"></a>eventquery
 
-> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
-
-евенткуери является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [евенткуери](https://technet.microsoft.com/library/cc772995(v=ws.10).aspx).
+Команда евенткуери устарела и не гарантируется в будущих выпусках Windows.

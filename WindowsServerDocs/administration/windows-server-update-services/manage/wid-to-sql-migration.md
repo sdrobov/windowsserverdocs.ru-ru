@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dougkim
 ms.date: 07/25/2018
-ms.openlocfilehash: 7238d71ed35b5c9645e6b4061717011cc2a02820
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: facd846dd0c20ee2e5001b0592651ce310e19097
+ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203566"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83716889"
 ---
 # <a name="migrating-the-wsus-database-from-wid-to-sql"></a>Миграция базы данных WSUS из WID в SQL
 
@@ -22,7 +22,7 @@ ms.locfileid: "83203566"
 
 Выполните следующие действия, чтобы перенести базу данных WSUS (SUSDB) из экземпляра внутренней базы данных Windows на локальный или удаленный экземпляр SQL Server.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Предварительные условия
 
 - Экземпляр SQL. Это может быть **MSSQLServer** или пользовательский экземпляр по умолчанию.
 - SQL Server Management Studio
@@ -67,7 +67,7 @@ ms.locfileid: "83203566"
 
 ### <a name="copy-the-susdb-files-to-the-sql-server"></a>Скопируйте файлы SUSDB в SQL Server
 
-1. Скопируйте **SUSDB. mdf** и **SUSDB \_ log. ldf** из папки данных WID (**% systemdrive%** \* * ВИНДОВС\ВИД\ДАТА * *) в папку данных экземпляра SQL.
+1. Скопируйте **SUSDB. mdf** и **SUSDB \_ log. ldf** из папки данных WID (**% systemdrive%** \\ **данных Windows \\ WID \\ **) в папку данных экземпляра SQL.
 
 > [!TIP]
 > Например, если папка экземпляра SQL — **C:\Program FILES\MICROSOFT SQL Server\MSSQL12. МССКЛСЕРВЕР\МССКЛ**, а папка данных WID — **к:\виндовс\вид\дата,** скопируйте файлы SUSDB из **К:\виндовс\вид\дата** в папку **C:\Program Files\Microsoft SQL Server\MSSQL12. Мссклсервер\мсскл\дата**

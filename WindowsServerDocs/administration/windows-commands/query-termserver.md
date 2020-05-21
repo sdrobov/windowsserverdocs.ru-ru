@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c8a0a4608a16df0336b90ea5df281278ae47a503
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9b3ae6858a70d22b3ad928474648a3b2ee156235
+ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722699"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83436239"
 ---
 # <a name="query-termserver"></a>термсервер запросов
 
@@ -29,7 +29,7 @@ ms.locfileid: "82722699"
 > query termserver [<ServerName>] [/domain:<Domain>] [/address] [/continue]
 > ```
 > ### <a name="parameters"></a>Параметры
-> 
+>
 > |    Параметр     |                                                                        Описание                                                                         |
 > |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 > |   <ServerName>   |                                               Указывает имя, идентифицирующее сервер узла сеансов удаленных рабочих столов.                                               |
@@ -37,8 +37,8 @@ ms.locfileid: "82722699"
 > |     /аддресс     |                                                  Отображает адреса сети и узла для каждого сервера.                                                  |
 > |    /континуе     |                                              Предотвращает приостановку после отображения каждого экрана информации.                                               |
 > |        /?        |                                                            Отображение справки в командной строке.                                                            |
-> 
-> ## <a name="remarks"></a>Примечания
+>
+>#### <a name="remarks"></a>Комментарии
 > - **запрос термсервер** ищет в сети все подключенные серверы узлов сеансов удаленных рабочих столов и возвращает следующие сведения:
 >   - имя сервера;
 >   - Сеть (и адрес узла, если используется параметр/Аддресс)
@@ -60,6 +60,6 @@ ms.locfileid: "82722699"
 >   query termserver Server3 /address
 >   ```
 >   ## <a name="additional-references"></a>Дополнительные ссылки
->   - [Command-Line Syntax Key](command-line-syntax-key.md)
->   Справочник по[запросам](query.md)
->   синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)
+>   - Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+>    [запрос](query.md) 
+>    [Справочник по командам служб терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)
