@@ -1,5 +1,5 @@
 ---
-title: Начало работы с групповыми управляемыми учетными записями служб
+title: Getting Started with Group Managed Service Accounts
 description: Безопасность Windows Server
 ms.prod: windows-server
 ms.technology: security-gmsa
@@ -9,42 +9,42 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 52456b8027196f20c4ca52a08bcd7f7bba92eb82
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 70bdbc49bc1e173b488d5934bae0a5b4837c76f5
+ms.sourcegitcommit: 599162b515c50106fd910f5c180e1a30bbc389b9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856997"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83775294"
 ---
-# <a name="getting-started-with-group-managed-service-accounts"></a>Начало работы с групповыми управляемыми учетными записями служб
+# <a name="getting-started-with-group-managed-service-accounts"></a>Getting Started with Group Managed Service Accounts
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 
 Это краткое описание содержит пошаговые инструкции и общие сведения о включении и использовании групповых управляемых учетных записей служб в Windows Server 2012.
 
-**В этом документе**
+**Содержание документа**
 
--   [Предварительные условия](#BKMK_Prereqs)
+-   [Предварительные требования](#BKMK_Prereqs)
 
 -   [Введение](#BKMK_Intro)
 
--   [Развертывание новой фермы серверов](#BKMK_DeployNewFarm)
+-   [Развертывание фермы серверов федерации](#BKMK_DeployNewFarm)
 
--   [Добавление узлов участников в существующую ферму серверов](#BKMK_AddMemberHosts)
+-   [Добавление узлов в существующую ферму серверов](#BKMK_AddMemberHosts)
 
 -   [Обновление свойств групповой управляемой учетной записи службы](#BKMK_Update_gMSA)
 
--   [Списание узлов членов из существующей фермы серверов](#BKMK_DecommMemberHosts)
+-   [Списание узлов из существующей фермы серверов](#BKMK_DecommMemberHosts)
 
 
 > [!NOTE]
-> В этом разделе приведены примеры командлетов Windows PowerShell, которые могут быть использованы для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).
+> В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Использование командлетов](https://go.microsoft.com/fwlink/p/?linkid=230693).
 
-## <a name="prerequisites"></a><a name="BKMK_Prereqs"></a>Требований
+## <a name="prerequisites"></a><a name="BKMK_Prereqs"></a>Предварительные требования
 См. раздел на эту тему в статье [Требования к групповым учетным записям служб](#BKMK_gMSA_Req).
 
-## <a name="introduction"></a><a name="BKMK_Intro"></a>Общие
+## <a name="introduction"></a><a name="BKMK_Intro"></a>Введение
 Когда клиентский компьютер подключается к службе, размещенной на ферме серверов с использованием балансировки сетевой нагрузки (NLB) или какого-либо другого метода, при котором клиенту, проходящему проверку подлинности, все службы кажутся одной, протоколы проверки подлинности, поддерживающие взаимную проверку подлинности (такие как Kerberos), можно использовать, только если на всех экземплярах служб используется один и тот же субъект. Это означает, что удостоверение каждой службы должно подтверждаться одинаковым паролем или ключом.
 
 > [!NOTE]
@@ -52,13 +52,13 @@ ms.locfileid: "80856997"
 
 Службы могут выбирать следующие разрешенные субъекты, каждый из которых обладает определенными свойствами:
 
-|Участники|Область видимости|Поддерживаемые службы|Управление паролями|
+|Субъекты|Область|Поддерживаемые службы|Управление паролями|
 |-------|-----|-----------|------------|
 |Учетная запись компьютера в системе Windows|Домен|Ограничена одним сервером в домене|Управляется компьютером|
-|Учетная запись компьютера без системы Windows|Домен|Любой сервер в домене|Нет|
-|Виртуальная учетная запись|Local|Ограничена одним сервером|Управляется компьютером|
+|Учетная запись компьютера без системы Windows|Домен|Любой сервер в домене|None|
+|Виртуальная учетная запись|Локальная|Ограничена одним сервером|Управляется компьютером|
 |Автономная управляемая учетная запись Windows 7|Домен|Ограничена одним сервером в домене|Управляется компьютером|
-|Учетная запись пользователя|Домен|Любой сервер в домене|Нет|
+|Учетная запись пользователя|Домен|Любой сервер в домене|None|
 |Групповая управляемая учетная запись службы|Домен|Любой сервер, присоединенный к домену Windows Server 2012|Управляется контроллером домена и извлекается узлом|
 
 Учетные записи компьютеров Windows, автономные управляемые учетные записи Windows 7 и виртуальные учетные записи могут использоваться только в одной системе. Если вы настраиваете учетную запись, которая будет использоваться различными службами на фермах серверов, выберите учетную запись пользователя или учетную запись не в системе Windows. Такие учетные записи не имеют функции централизованного управления паролями, а значит, каждой организации придется создавать дорогое решение для обновления ключей для служб в каталоге Active Directory и их передачи во все экземпляры этих служб.
@@ -74,7 +74,7 @@ ms.locfileid: "80856997"
 -   задачи, использующие планировщик заданий.
 
 ### <a name="requirements-for-group-managed-service-accounts"></a><a name="BKMK_gMSA_Req"></a>Требования для групповых управляемых учетных записей служб
-В приведенной ниже таблице указаны требования к операционной системе, которые должны выполняться для работы проверки подлинности Kerberos со службами, использующими групповые управляемые учетные записи служб. Требования  Active Directory перечислены под таблицей.
+В приведенной ниже таблице указаны требования к операционной системе, которые должны выполняться для работы проверки подлинности Kerberos со службами, использующими групповые управляемые учетные записи служб. Требования Active Directory перечислены под таблицей.
 
 Для выполнения команд Windows PowerShell, которые используются для администрирования групповых управляемых учетных записей служб, необходима 64-разрядная архитектура.
 
@@ -84,14 +84,14 @@ ms.locfileid: "80856997"
 |------|--------|----------|
 |Узел клиентского приложения|RFC-совместимый клиент Kerberos|Не ниже Windows XP|
 |Доменные контроллеры домена учетной записи пользователя|RFC-совместимый KDC|Не ниже Windows Server 2003|
-|Узлы, входящие в службу общего доступа|| Windows Server 2012 |
+|Узлы, входящие в службу общего доступа|| Windows Server 2012 |
 |Доменные контроллеры домена узла участника|RFC-совместимый KDC|Не ниже Windows Server 2003|
 |Доменные контроллеры домена учетной записи gMSA| Контроллеры домена Windows Server 2012, доступные для получения пароля узлом|Домен с Windows Server 2012, на котором могут быть установлены системы, предшествующие Windows Server 2012 |
 |Узел внутренней службы|RFC-совместимый сервер приложений Kerberos|Не ниже Windows Server 2003|
 |Доменные контроллеры домена учетной записи внутренней службы|RFC-совместимый KDC|Не ниже Windows Server 2003|
-|Windows PowerShell для Active Directory|Windows PowerShell для Active Directory, установленный на компьютере с поддержкой 64-разрядной архитектуры или на компьютере удаленного управления (например, с помощью средств удаленного администрирования сервера).| Windows Server 2012 |
+|Windows PowerShell для Active Directory|Windows PowerShell для Active Directory, установленный на компьютере с поддержкой 64-разрядной архитектуры или на компьютере удаленного управления (например, с помощью средств удаленного администрирования сервера).| Windows Server 2012 |
 
-**Требования к службам домен Active Directory**
+**Требования доменных служб Active Directory**
 
 -   Для создания gMSA схему Active Directory в лесу домена gMSA необходимо обновить до Windows Server 2012.
 
@@ -107,7 +107,7 @@ ms.locfileid: "80856997"
 
 Инструкции по созданию ключа см. в разделе [Создание корневого ключа KDS служб распространения ключей](create-the-key-distribution-services-kds-root-key.md). Корневым ключом для Active Directory является ключ службы распространения ключей (Майкрософт) — kdssvc.dll.
 
-**Файлу**
+**Жизненный цикл**
 
 Жизненный цикл фермы серверов с использованием функции групповых управляемых учетных записей служб включает следующие задачи:
 
@@ -121,7 +121,7 @@ ms.locfileid: "80856997"
 
 -   Удаление скомпрометированного узла из фермы серверов при необходимости
 
-## <a name="deploying-a-new-server-farm"></a><a name="BKMK_DeployNewFarm"></a>Развертывание новой фермы серверов
+## <a name="deploying-a-new-server-farm"></a><a name="BKMK_DeployNewFarm"></a>Развертывание фермы серверов федерации
 При развертывании новой фермы серверов администратору службы необходимо определить:
 
 -   поддерживает ли служба использование групповых управляемых учетных записей служб;
@@ -138,7 +138,7 @@ ms.locfileid: "80856997"
 
 -   периодичность смены пароля (по умолчанию 30 дней).
 
-### <a name="step-1-provisioning-group-managed-service-accounts"></a><a name="BKMK_Step1"></a>Шаг 1. подготовка групп управляемых учетных записей служб
+### <a name="step-1-provisioning-group-managed-service-accounts"></a><a name="BKMK_Step1"></a>Шаг 1. Создание групповых управляемых учетных записей служб
 Вы можете создать gMSA, только если схема леса была обновлена до Windows Server 2012, был развернут главный корневой ключ для Active Directory, а в домене, в котором будет создана gMSA, существует по крайней мере один контроллер домена Windows Server 2012.
 
 Минимальным требованием для выполнения этих процедур является членство в группе **Администраторы домена** либо **Операторы учета** или наличие права на создание объектов msDS-GroupManagedServiceAccount.
@@ -147,17 +147,17 @@ ms.locfileid: "80856997"
 > Значение параметра-Name всегда является обязательным (если вы указали-Name или NOT), где-DNSHostName,-Рестрикттосинглекомпутер и-Рестрикттуутбаундаусентикатион являются вторичными требованиями для трех сценариев развертывания.    
 
 
-#### <a name="to-create-a-gmsa-using-the-new-adserviceaccount-cmdlet"></a><a name="BKMK_CreateGMSA"></a>Создание gMSA с помощью командлета New-Адсервицеаккаунт
+#### <a name="to-create-a-gmsa-using-the-new-adserviceaccount-cmdlet"></a><a name="BKMK_CreateGMSA"></a>Для создания групповой управляемой учетной записи службы используйте командлет New-ADServiceAccount.
 
 1.  На контроллере домена Windows Server 2012 запустите Windows PowerShell на панели задач.
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД (модуль Active Directory загрузится автоматически):
 
-    **New-Адсервицеаккаунт [-name] &lt;строка&gt;-DNSHostName &lt;строка&gt; [-Керберосенкриптионтипе &lt;Адкерберосенкриптионтипе&gt;] [-Манажедпассвординтервалиндайс < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < строка >] [-ADPrincipal &lt;String []&gt;]**
+    **New-Адсервицеаккаунт [-name] &lt; строка &gt; -dNSHostName &lt; строка &gt; [-керберосенкриптионтипе &lt; адкерберосенкриптионтипе &gt; ] [-манажедпассвординтервалиндайс <Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal [] >] [-SamAccountName &lt; строка &gt; ] [-ServicePrincipalNames <String [] >]**
 
     |Параметр|Строка|Пример|
     |-------|-----|------|
-    |Имя|Имя учетной записи|ITFarm1|
+    |Название|Имя учетной записи|ITFarm1|
     |DNSHostName|Имя DNS-узла службы|ITFarm1.contoso.com|
     |KerberosEncryptionType|Любые виды шифрования, поддерживаемые серверами узлов|None, RC4, AES128, AES256|
     |ManagedPasswordIntervalInDays|Периодичность смены пароля в днях (если не указано, используется значение по умолчанию 30)|90|
@@ -176,7 +176,7 @@ ms.locfileid: "80856997"
     New-ADServiceAccount ITFarm1 -DNSHostName ITFarm1.contoso.com -PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$ -KerberosEncryptionType RC4, AES128, AES256 -ServicePrincipalNames http/ITFarm1.contoso.com/contoso.com, http/ITFarm1.contoso.com/contoso, http/ITFarm1/contoso.com, http/ITFarm1/contoso
     ```
 
-Минимальным требованием для выполнения этих процедур является членство в группе **Администраторы домена** либо **Операторы учета** или наличие права на создание объектов msDS-GroupManagedServiceAccount. Дополнительные сведения об использовании подходящих учетных записей и членства в группах см. в разделе [Локальные группы и группы домена по умолчанию](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
+Минимальным требованием для выполнения этих процедур является членство в группе **Администраторы домена** либо **Операторы учета** или наличие права на создание объектов msDS-GroupManagedServiceAccount. Дополнительные сведения об использовании подходящих учетных записей и участия в группах см. в разделе [Локальные группы и группы домена по умолчанию](https://technet.microsoft.com/library/dd728026(WS.10).aspx).
 
 ##### <a name="to-create-a-gmsa-for-outbound-authentication-only-using-the-new-adserviceaccount-cmdlet"></a>Чтобы создать групповую управляемую учетную запись службы для исходящей проверки подлинности, используйте командлет New-ADServiceAccount.
 
@@ -184,11 +184,11 @@ ms.locfileid: "80856997"
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **New-Адсервицеаккаунт [-name] &lt;строка&gt;-Рестрикттуутбаундаусентикатиононли [-Манажедпассвординтервалиндайс < Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword < ADPrincipal [] >]**
+    **New-Адсервицеаккаунт [-name] &lt; строка &gt; -рестрикттуутбаундаусентикатиононли [-Манажедпассвординтервалиндайс <Nullable [Int32] >] [-PrincipalsAllowedToRetrieveManagedPassword <ADPrincipal [] >]**
 
     |Параметр|Строка|Пример|
     |-------|-----|------|
-    |Имя|Имя учетной записи|ITFarm1|
+    |Название|Имя учетной записи|ITFarm1|
     |ManagedPasswordIntervalInDays|Периодичность смены пароля в днях (если не указано, используется значение по умолчанию 30)|75|
     |PrincipalsAllowedToRetrieveManagedPassword|Имена учетных записей компьютеров для входящих в службу узлов или групп безопасности, в которые входят эти узлы|ITFarmHosts|
 
@@ -201,14 +201,14 @@ ms.locfileid: "80856997"
 New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsAllowedToRetrieveManagedPassword ITFarmHosts$
 ```
 
-### <a name="step-2-configuring-service-identity-application-service"></a><a name="BKMK_ConfigureServiceIdentity"></a>Шаг 2. Настройка службы приложений для идентификации служб
+### <a name="step-2-configuring-service-identity-application-service"></a><a name="BKMK_ConfigureServiceIdentity"></a>Шаг 2. Настройка службы для приложения удостоверения служб
 Сведения о настройке служб в Windows Server 2012 см. в следующей документации по функциям:
 
 -   Пул приложений IIS
 
     Дополнительные сведения см. в разделе [Указание удостоверения для пула приложений (IIS 7)](https://technet.microsoft.com/library/cc771170(WS.10).aspx).
 
--   Службы Windows
+-   службы Windows
 
     Дополнительные сведения см. в разделе [Службы](https://technet.microsoft.com/library/cc772408.aspx).
 
@@ -218,7 +218,7 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 
 Групповые управляемые учетные записи могут поддерживать и другие службы. Информацию о настройки таких служб см. в документации к соответствующим продуктам.
 
-## <a name="adding-member-hosts-to-an-existing-server-farm"></a><a name="BKMK_AddMemberHosts"></a>Добавление узлов участников в существующую ферму серверов
+## <a name="adding-member-hosts-to-an-existing-server-farm"></a><a name="BKMK_AddMemberHosts"></a>Добавление узлов в существующую ферму серверов
 Если для управления узлами-членами используются группы безопасности, добавьте учетную запись компьютера для нового узла члена в группу безопасности (членом которой являются узлы gMSA), используя один из следующих методов.
 
 Минимальным требованием для выполнения этих процедур является членство в группе **Администраторы домена** или наличие права на добавление объектов в группу безопасности.
@@ -245,15 +245,15 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Get-Адсервицеаккаунт [-name] &lt;строка&gt;-ПринЦипалсалловедторетриевеманажедпассворд**
+    **Get-Адсервицеаккаунт [-Identity] &lt; строка &gt; — Свойства принЦипалсалловедторетриевеманажедпассворд**
 
 3.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Set-Адсервицеаккаунт [-name] &lt;String&gt;-ПринЦипалсалловедторетриевеманажедпассворд < АдпринЦипал [] >**
+    **Set-Адсервицеаккаунт [-Identity] &lt; строка &gt; -ПринЦипалсалловедторетриевеманажедпассворд <адпринЦипал [] >**
 
 |Параметр|Строка|Пример|
 |-------|-----|------|
-|Имя|Имя учетной записи|ITFarm1|
+|Название|Имя учетной записи|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|Имена учетных записей компьютеров для входящих в службу узлов или групп безопасности, в которые входят эти узлы|Host1, Host2, Host3|
 
 **Пример**
@@ -261,21 +261,21 @@ New-ADServiceAccount ITFarm1 -RestrictToOutboundAuthenticationOnly - PrincipalsA
 Например, чтобы добавить входящие в службу узлы, введите следующие команды и нажмите клавишу ВВОД:
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host2$,Host3$
 ```
 
-## <a name="updating-the-group-managed-service-account-properties"></a><a name="BKMK_Update_gMSA"></a>Обновление свойств групповой управляемой учетной записи службы
+## <a name="updating-the-group-managed-service-account-properties"></a><a name="BKMK_Update_gMSA"></a>Обновление свойств групповой учетной записи службы
 Минимальным требованием для выполнения этой процедуры является членство в группе **Администраторы домена** либо **Операторы учета** или наличие права на запись в объекты msDS-GroupManagedServiceAccount.
 
 Откройте модуль Active Directory для Windows PowerShell и настройте желаемые свойства с помощью командлета Set-ADServiceAccount.
 
 Подробную информацию об установке этих свойств см. в статье [Set-ADServiceAccount](https://technet.microsoft.com/library/ee617252.aspx) в библиотеке TechNet или введите **Get-Help Set-ADServiceAccount** в командной строке модуля Active Directory для Windows PowerShell и нажмите клавишу ВВОД.
 
-## <a name="decommissioning-member-hosts-from-an-existing-server-farm"></a><a name="BKMK_DecommMemberHosts"></a>Списание узлов членов из существующей фермы серверов
+## <a name="decommissioning-member-hosts-from-an-existing-server-farm"></a><a name="BKMK_DecommMemberHosts"></a>Списание узлов из существующей фермы серверов
 Минимальным требованием для выполнения этих процедур является членство в группе **Администраторы домена** или наличие права на удаление объектов из группы безопасности.
 
 ### <a name="step-1-remove-member-host-from-gmsa"></a>Шаг 1. Удаление узла из групповой управляемой учетной записи службы
@@ -303,15 +303,15 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Get-Адсервицеаккаунт [-name] &lt;строка&gt;-ПринЦипалсалловедторетриевеманажедпассворд**
+    **Get-Адсервицеаккаунт [-Identity] &lt; строка &gt; — Свойства принЦипалсалловедторетриевеманажедпассворд**
 
 3.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Set-Адсервицеаккаунт [-name] &lt;String&gt;-ПринЦипалсалловедторетриевеманажедпассворд < АдпринЦипал [] >**
+    **Set-Адсервицеаккаунт [-Identity] &lt; строка &gt; -ПринЦипалсалловедторетриевеманажедпассворд <адпринЦипал [] >**
 
 |Параметр|Строка|Пример|
 |-------|-----|------|
-|Имя|Имя учетной записи|ITFarm1|
+|Название|Имя учетной записи|ITFarm1|
 |PrincipalsAllowedToRetrieveManagedPassword|Имена учетных записей компьютеров для входящих в службу узлов или групп безопасности, в которые входят эти узлы|Host1,  Host3|
 
 **Пример**
@@ -319,11 +319,11 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 Например, чтобы удалить входящие в службу узлы, введите следующую команду и нажмите клавишу ВВОД:
 
 ```PowerShell
-Get-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
+Get-ADServiceAccount [-Identity] ITFarm1 -Properties PrincipalsAllowedToRetrieveManagedPassword
 ```
 
 ```PowerShell
-Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
+Set-ADServiceAccount [-Identity] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword Host1$,Host3$
 ```
 
 ### <a name="step-2-removing-a-group-managed-service-account-from-the-system"></a><a name="BKMK_RemoveGMSA"></a>Шаг 2. Удаление групповой управляемой учетной записи службы из системы
@@ -337,7 +337,7 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
 2.  Введите следующие команды в командной строке Windows PowerShell и нажмите клавишу ВВОД:
 
-    **Uninstall-Адсервицеаккаунт &lt;Адсервицеаккаунт&gt;**
+    **Uninstall-Адсервицеаккаунт &lt; адсервицеаккаунт&gt;**
 
     **Пример**
 
@@ -353,4 +353,4 @@ Set-ADServiceAccount [-Name] ITFarm1 -PrincipalsAllowedToRetrieveManagedPassword
 
 ## <a name="see-also"></a><a name="BKMK_Links"></a> См. также
 
--   [Общие сведения о групповой управляемых учетных записях служб](group-managed-service-accounts-overview.md)
+-   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md) (Обзор групповых управляемых учетных записей служб);
