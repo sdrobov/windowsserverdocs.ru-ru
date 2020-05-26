@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba3d826b0312091f00ef01d2efe9ee63572fade1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a7c32818461c46a7d582029ec127c574d6a8f3e3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725896"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819114"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>Wbadmin start сисрековери
 
@@ -60,13 +60,13 @@ wbadmin start sysrecovery
 ```
 wbadmin start sysrecovery -version:03/31/2013-09:00 -backupTarget:d:
 ```
-Чтобы начать восстановление данных из резервной копии, которая выполнялась 30 апреля 2013 в 9:00 утра, расположенной в общей папке \\ \\сервернаме\шаред: для Server01, введите:
+Чтобы начать восстановление данных из резервной копии, которая выполнялась 30 апреля 2013 в 9:00 утра, расположенной в общей папке \\ \\ сервернаме\шаред: для Server01, введите:
 ```
 wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Get-вббареметалрековери](https://technet.microsoft.com/library/jj902461.aspx)

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 30655cae3ef737b10d266a894b0bfb6d76ffe87e
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: fb9977d0bc4f45b610d8bf3409c6beeadfaf7ee5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436681"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821024"
 ---
 # <a name="tftp"></a>tftp
 
@@ -37,7 +37,7 @@ tftp [-i] [<Host>] [{get | put}] <Source> [<Destination>]
 |\<Source\>|Указывает файл для перемещения.|
 |\<Назначение\>|Указывает, куда передавать файл.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 -   Клиент TFTP можно установить с помощью мастера добавления компонентов.
 -   Протокол TFTP не поддерживает ни проверку подлинности, ни механизм шифрования, поэтому при наличии может возникнуть угроза безопасности. Установка клиента TFTP не рекомендуется для систем, подключенных к Интернету.
 -   Клиент TFTP является необязательным программным обеспечением и помечен как устаревший в Windows Vista и более поздних версиях операционной системы Windows. Служба сервера TFTP больше не предоставляется корпорацией Майкрософт в целях безопасности.
@@ -49,4 +49,4 @@ tftp  -i Host1 get boot.img
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

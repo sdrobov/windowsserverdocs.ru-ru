@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: сетреалм'
-description: Справочный раздел по * * * *-
+title: ksetup сетреалм
+description: Справочный раздел по команде ksetup сетреалм, который задает имя области Kerberos.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,46 +9,44 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 453977ac39dd3a52b4f5a3104995f944e4a48392
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 03b33977f57e187a8bea69be78c1e9c094b9a73e
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724550"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817284"
 ---
-# <a name="ksetupsetrealm"></a>ksetup: сетреалм
-
-
+# <a name="ksetup-setrealm"></a>ksetup сетреалм
 
 Задает имя области Kerberos.
+
+> [!IMPORTANT]
+> Установка области Kerberos на контроллере домена не поддерживается. Попытка сделать это вызовет предупреждение и сбой команды.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /setrealm <DNSDomainName>
+ksetup /setrealm <DNSdomainname>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Днсдомаиннаме>|Доменное имя DNS может иметь форму полного доменного имени или простого доменного имени.|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<DNSdomainname>` | Указывает DNS-имя в верхнем регистре, например CORP. CONTOSO.COM. Можно использовать полное доменное имя или простую форму имени. Если вы не используете прописные буквы в качестве DNS-имени, вам будет предложено выполнить проверку, чтобы продолжить. |
 
-## <a name="remarks"></a>Примечания
+### <a name="examples"></a>Примеры
 
-Параметр доменного имени DNS следует вводить прописными буквами. В противном случае команда **ksetup** запросит подтверждение для продолжения.
+Чтобы задать для области этого компьютера определенное доменное имя и ограничить доступ неконтроллером домена только к сфере CONTOSO Kerberos, введите:
 
-Установка области Kerberos на контроллере домена не поддерживается. Попытка сделать это вызовет предупреждение и сбой команды.
-
-## <a name="examples"></a>Примеры
-
-Задайте для области этого компьютера определенное доменное имя, чтобы ограничить доступ неконтроллером домена только с областью Kerberos CONTOSO:
 ```
 ksetup /setrealm CONTOSO
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
--   [Ksetup](ksetup.md)
--   [Ksetup:removerealm](ksetup-removerealm.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [ksetup ремовереалм](ksetup-removerealm.md)

@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: делхосттореалммап'
-description: Справочный раздел по * * * *-
+title: ksetup делхосттореалммап
+description: Справочный раздел по команде ksetup делхосттореалммап, который удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,48 +9,44 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2b6b14785f254a63f0e16fcd16f1cd464a2d69c8
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 17fc30e76247c570c653d5ec38501a2199435c7f
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724695"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817864"
 ---
-# <a name="ksetupdelhosttorealmmap"></a>ksetup: делхосттореалммап
+# <a name="ksetup-delhosttorealmmap"></a>ksetup делхосттореалммап
 
+Удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью. Эта команда также удаляет все сопоставления между узлом и областью (или несколькими узлами в сфере).
 
-
-Удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
+Сопоставление сохраняется в реестре в разделе `HKEY_LOCAL_MACHINE\SYSTEM\CurrentContolSet\Lsa\Kerberos\HostToRealm` . После выполнения этой команды рекомендуется убедиться, что сопоставление отображается в реестре.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /delhosttorealmmap <HostName> <RealmName>
+ksetup /delhosttorealmmap <hostname> <realmname>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя узла>|Имя узла — это имя компьютера, оно может быть указано в качестве полного доменного имени компьютера.|
-|\<Реалмнаме>|Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM.|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<hostname>` | Указывает полное доменное имя компьютера. |
+| `<realmname>` | Указывает DNS-имя в верхнем регистре, например CORP. CONTOSO.COM. |
 
-## <a name="remarks"></a>Примечания
+### <a name="examples"></a>Примеры
 
-При наличии сопоставления между узлами (или несколькими узлами для области) Эта команда удаляет это сопоставление.
+Чтобы изменить конфигурацию сферы CONTOSO и удалить сопоставление главного компьютера IPops897 с областью, введите:
 
-Сопоставление записывается в реестр в **HKEY_LOCAL_MACHINE \систем\куррентконтолсет\лса\керберос\хосттореалм**. При использовании этой команды следует проверить сопоставление в реестре.
-
-## <a name="examples"></a>Примеры
-
-При изменении конфигурации сферы CONTOSO удалите сопоставление главного компьютера IPops897 с областью:
 ```
 ksetup /delhosttorealmmap IPops897 CONTOSO
 ```
-После выполнения этой команды можно проверить в реестре, что сопоставление выполняется правильно.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Ksetup:addhosttorealmmap](ksetup-addhosttorealmmap.md)
--   [Ksetup](ksetup.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [ksetup аддхосттореалммап, команда](ksetup-addhosttorealmmap.md)

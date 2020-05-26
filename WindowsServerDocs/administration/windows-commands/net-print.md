@@ -1,6 +1,6 @@
 ---
-title: Net print
-description: Справочный раздел по * * * *-
+title: NET Print
+description: Справочный раздел команды net print, в которой отображаются сведения об указанной очереди печати или задании печати.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,21 +9,23 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f2febdb79f4d0429cfb1cd423188ed9fafc198c
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 44b781cb0c3b9fb7def5ee72bcc1242ac83ba4b2
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437259"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820884"
 ---
-# <a name="net-print"></a>Net print
+# <a name="net-print"></a>NET Print
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Отображает сведения об указанной очереди печати или указанном задании печати или управляет указанным заданием печати.
+
 > [!NOTE]
 > Эта команда является устаревшей в Windows 7 и Windows Server 2008 R2. Однако многие из тех же задач можно выполнять с помощью прнжобс, инструментарий управления Windows (WMI) (WMI) или командлетов Windows PowerShell. Дополнительные сведения см. в разделе [прнжобс](prnjobs.md), [инструментарий управления Windows (WMI)](https://go.microsoft.com/fwlink/?LinkID=29991) ( https://go.microsoft.com/fwlink/?LinkID=29991) , [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkID=128426) ( https://go.microsoft.com/fwlink/?LinkID=128426) и [коллекция центра сценариев TechNet](https://go.microsoft.com/fwlink/?LinkId=164635) () https://go.microsoft.com/fwlink/?LinkId=164635) .
-> ## <a name="syntax"></a>Синтаксис
+
+## <a name="syntax"></a>Синтаксис
 > ```
 > Net print {\\<computerName>\<Sharename> |
 > \\<computerName> <JobNumber> [/hold | /release | /delete]} [help]
@@ -38,7 +40,7 @@ ms.locfileid: "83437259"
 > | [/холд &#124;/Release &#124;/Delete] | Указывает действие, выполняемое с заданием печати.<p>— Параметр **/холд** задерживает задание, позволяя другим заданиям печати обходить его до тех пор, пока оно не будет освобождено.<br />— Параметр **/Release** освобождает задание печати, которое было отложено.<br />— Параметр **/Delete** удаляет задание печати из очереди печати.<p>Если указать номер задания, но не указывать никаких действий, будут отображены сведения о задании печати. |
 > |                  help                  |                                                                                                                                                                                                     Отображает справку для команды **net print** .                                                                                                                                                                                                     |
 >
->#### <a name="remarks"></a>Комментарии
+>#### <a name="remarks"></a>Замечания
 > - **Net** \\ \\ Print <computerName> Отображает сведения о заданиях печати в общей очереди принтера. Ниже приведен пример отчета для всех заданий печати в очереди для общего принтера с именем LASER:
 >   ```
 >   printers at \\PRODUCTION

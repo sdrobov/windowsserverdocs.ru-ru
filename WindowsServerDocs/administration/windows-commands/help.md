@@ -1,6 +1,6 @@
 ---
-title: справка
-description: Справочный раздел по * * * *-
+title: help
+description: Справочный раздел для команды Help, в которой отображается список доступных команд или подробные справочные сведения об указанной команде.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,40 +9,49 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9d3a16c2534934a7bc8126b0a775ec7aa08462b3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9b73ef32b49b834a91f24e943749eb21398c8588
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724916"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818664"
 ---
-# <a name="help"></a>справка
+# <a name="help"></a>help
 
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-
-Предоставляет оперативную информацию о системных командах (то есть командах, отличных от сетевых). Если используется без параметров, **Справочные** списки и краткое описание каждой системной команды.
-
-
+Отображает список доступных команд или подробные справочные сведения об указанной команде. Если используется без параметров, **Справочные** списки и краткое описание каждой системной команды.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-help [<Command>] 
-[<Command>] /?
+help [<command>]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Командная>|Указывает имя команды, сведения о которой требуется получить.|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<command>` | Указывает команду, для которой отображаются подробные справочные сведения. |
 
-## <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры
 
-Чтобы просмотреть сведения о команде **Robocopy** , введите одно из следующих действий:
+Чтобы просмотреть сведения о команде **Robocopy** , введите:
+
 ```
 help robocopy
-robocopy /? 
+```
+
+Чтобы отобразить список всех команд, доступных в DiskPart, введите:
+
+```
+help
+```
+
+Чтобы просмотреть подробные справочные сведения о том, как использовать команду **создать секцию** в DiskPart, введите:
+
+```
+help create partition primary
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки

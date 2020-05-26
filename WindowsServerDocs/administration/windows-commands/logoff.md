@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 86acf174bfdebdeab6db7476713dd2d91f21b1a0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3daecbc2f4034070a5b805c75a6b647ba168e2c5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724266"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820544"
 ---
 # <a name="logoff"></a>logoff
 
@@ -40,7 +40,7 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
 |          /v          |                                                       Отображает сведения о выполняемых действиях.                                                        |
 |          /?          |                                                                 Отображение справки в командной строке.                                                                 |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 - Вы всегда можете выйти из сеанса, в котором в данный момент выполнен вход. Однако необходимо иметь разрешение «Полный доступ» для выхода пользователей из других сеансов.
 - Выход пользователя из сеанса без предупреждения может привести к утрате данных в сеансе пользователя. Необходимо отправить пользователю сообщение с помощью команды **MSG** , чтобы предупредить пользователя перед выполнением этого действия.
 - Если не указано <*SessionID*> или <*SessionName*>, **выйдите** из текущего сеанса. Если указать <*SessionName*>, он должен быть активным.
@@ -61,5 +61,5 @@ logoff [<SessionName> | <SessionID>] [/server:<ServerName>] [/v]
   ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Справочник по командам служб удаленных рабочих столов (служб терминалов)](remote-desktop-services-terminal-services-command-reference.md)

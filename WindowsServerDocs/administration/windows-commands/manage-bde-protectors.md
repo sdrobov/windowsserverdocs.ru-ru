@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/06/2018
-ms.openlocfilehash: e01049a5fb3dc419e219fe4ec8b11dcdc790f919
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c248a5d7c6a25ccb6fa2917358223fd255a3c600
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724109"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820634"
 ---
 # <a name="manage-bde-protectors"></a>Manage-bde: protectors
 
@@ -45,8 +45,8 @@ manage-bde -protectors [{-get|-add|-delete|-disable|-enable|-adbackup|-aadbackup
 ### <a name="-add-syntax-and-parameters"></a><a name=BKMK_addprotectors></a>-Добавить синтаксис и параметры
 ```
 manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <NumericalPassword>] [-recoverykey <pathToExternalKeydirectory>]
-[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin] 
-[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>] 
+[-startupkey <pathToExternalKeydirectory>] [-certificate {-cf <pathToCertificateFile>|-ct <CertificateThumbprint>}] [-tpm] [-tpmandpin]
+[-tpmandstartupkey <pathToExternalKeydirectory>] [-tpmandpinandstartupkey <pathToExternalKeydirectory>] [-password][-adaccountorgroup <securityidentifier> [-computername <Name>]
 [{-?|/?}] [{-help|-h}]
 ```
 
@@ -74,7 +74,7 @@ manage-bde  -protectors  -add [<Drive>] [-forceupgrade] [-recoverypassword <Nume
 
 ### <a name="-delete-syntax-and-parameters"></a><a name=BKMK_deleteprotectors></a>-удалить синтаксис и параметры
 ```
-manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}] 
+manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|certificate|tpm|tpmandstartupkey|tpmandpin|tpmandpinandstartupkey|Password|Identity}]
 [-id <KeyProtectorID>] [-computername <Name>] [{-?|/?}] [{-help|-h}]
 ```
 
@@ -90,7 +90,7 @@ manage-bde  -protectors  -delete <Drive> [-type {recoverypassword|externalkey|ce
 |       тпмандпин        |                                    Указывает, что необходимо удалить предохранители ключей на основе ПИН-кода и TPM, связанные с диском.                                    |
 | тпмандпинандстартупкэй |                             Указывает, что необходимо удалить все предохранители ключей TPM, ПИН-кода и ключа запуска, связанные с диском.                             |
 |        пароль        |                                        Указывает, что необходимо удалить все предохранители ключа паролей, связанные с диском.                                         |
-|        identity        |                                        Указывает, что все предохранители ключей удостоверений, связанные с диском, должны быть удалены.                                         |
+|        удостоверение        |                                        Указывает, что все предохранители ключей удостоверений, связанные с диском, должны быть удалены.                                         |
 |          — Идентификатор           |                Определяет предохранитель ключа для удаления с помощью идентификатора ключа. Этот параметр является альтернативным параметром параметра **-Type** .                 |
 |    <KeyProtectorID>    |        Определяет отдельный предохранитель ключа на диске для удаления. Идентификаторы предохранителя ключей можно отобразить с помощью команды **Manage-bde-protectors-Get** .         |
 |     -ComputerName      | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
@@ -134,5 +134,5 @@ manage-bde  -protectors -delete C: -type tpmandstartupkey
 manage-bde  -protectors  -adbackup C:
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [manage-bde](manage-bde.md)

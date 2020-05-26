@@ -1,6 +1,6 @@
 ---
 title: перечислить тени
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды List Shadows, в которой перечислены постоянные и существующие непостоянные теневые копии, которые находятся в системе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,32 +9,30 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d22fc3bbe644983eaf072a430e565a0d34d1c4dd
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9e0261a25c7a70a0c8690d578cadc9e73ff9a62e
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724473"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817174"
 ---
 # <a name="list-shadows"></a>перечислить тени
-
-
 
 Список постоянных и существующих непостоянных теневых копий, имеющихся в системе.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-list shadows {all | set <SetID> | id <ShadowID>}
+list shadows {all | set <setID> | id <shadowID>}
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|all|Список всех теневых копий.|
-|задать \<> сетид|Выводит список теневых копий, принадлежащих указанному ИДЕНТИФИКАТОРу набора теневых копий.|
-|Идентификатор \<шадовид>|Отображает все теневые копии с указанным ИДЕНТИФИКАТОРом теневой копии.|
+| Параметр | Описание |
+| ---------- | ---------- |
+| all | Список всех теневых копий. |
+| параметр`<setID>` | Выводит список теневых копий, принадлежащих указанному ИДЕНТИФИКАТОРу набора теневых копий. |
+| удостоверения`<shadowID>` | Отображает все теневые копии с указанным ИДЕНТИФИКАТОРом теневой копии. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

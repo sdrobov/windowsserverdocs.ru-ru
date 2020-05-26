@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 8cff76e1897c5e5791107bbaf5b7a254a6cd4bb4
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 0b958cbceff8657a35f080c704bb13b29ef55d78
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437109"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820144"
 ---
 # <a name="relog"></a>relog
 
@@ -45,7 +45,7 @@ relog [<FileName> [<FileName> ...]] [/a] [/c <path> [<path> ...]] [/cf <FileName
 |                                             -y                                             |                                                                                                                                            Обходит запрос, отвечая на все вопросы, ответив на "Да".                                                                                                                                             |
 |                                             /?                                             |                                                                                                                                                      Отображение справки в командной строке.                                                                                                                                                      |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 Формат пути счетчика:
 - Общий формат для путей счетчиков выглядит следующим образом: [ \\ \< Computer>] \\ \< объект> [ \< родительский>\\<экземпляр # индекс>] \\ \< Counter>], где родительские, экземпляр, индекс и компоненты счетчика формата могут содержать либо допустимое имя, либо подстановочный знак. Компоненты "компьютер", "родительский объект", "экземпляр" и "индекс" не нужны для всех счетчиков.
 - Вы определяете пути к счетчикам, которые будут использоваться на основе самого счетчика. Например, объект LogicalDisk имеет экземпляр <Index> , поэтому необходимо указать < # index> или подстановочный знак. Поэтому можно использовать следующий формат: **\ логический диск ( \* / \* # \* ) \\ \\ ** .*
@@ -85,4 +85,4 @@ relog "c:\perflogs\daily_trace_log.blg" -f sql -o "SQL:sql2016x64odbc!counter_lo
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

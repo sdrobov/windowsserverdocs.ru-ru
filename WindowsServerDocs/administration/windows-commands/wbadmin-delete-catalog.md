@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 73f6f44fb343d3347d18cf2c86913aea59613e07
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4903c7ad2996a9f69d20f4711364669b87366527
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720213"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821444"
 ---
 # <a name="wbadmin-delete-catalog"></a>Wbadmin Удаление каталога
 
@@ -37,12 +37,12 @@ wbadmin delete catalog
 |---------|-----------|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Если вы удалите каталог резервного копирования для компьютера, вы не сможете получить доступ к резервным копиям, созданным на этом компьютере, с помощью оснастки cистема архивации данных Windows Server. В этом случае, если вы можете получить доступ к другому расположению резервной копии, воспользуйтесь **командой Wbadmin Restore Catalog** , чтобы восстановить каталог резервных копий из этого расположения. После удаления каталога резервного копирования следует создать новую резервную копию.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   [Remove-Вбкаталог](https://technet.microsoft.com/library/jj902445.aspx)

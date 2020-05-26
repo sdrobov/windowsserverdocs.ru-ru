@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0db8a4549ac26ef61d4aa8f435a01d3224501a77
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 09767502585754bec690b40dd71fabd78540ab50
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723845"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820824"
 ---
 # <a name="msinfo32"></a>msinfo32
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Открывает средство «сведения о системе» для отображения полного представления об оборудовании, системных компонентах и программной среде на локальном компьютере. 
+Открывает средство «сведения о системе» для отображения полного представления об оборудовании, системных компонентах и программной среде на локальном компьютере.
 ## <a name="syntax"></a>Синтаксис
 ```
 msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/showcategories] [/category <CategoryID>] [/categories {+<CategoryID>(+<CategoryID>)|+all(-<CategoryID>)}]
@@ -41,7 +41,7 @@ msinfo32 [/pch] [/nfo <path>] [/report <path>] [/computer <computerName>] [/show
 |   /категориес   |                          Запуск системных сведений с отображением только указанных категорий или категорий. Кроме того, выходные данные ограничиваются выбранной категорией или категориями. Используйте **/шовкатегориес** для вывода списка доступных идентификаторов категорий.                          |
 |       /?        |                                                                                                                     Отображение справки в командной строке.                                                                                                                     |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 Некоторые категории сведений о системе содержат большие объемы данных. Для оптимизации производительности отчетов по этим категориям можно использовать команду **start/wait** . Дополнительные сведения см. в разделе [сведения о системе](https://technet.microsoft.com/library/cc783305(v=ws.10).aspx).
 ## <a name="examples"></a>Примеры
 Чтобы получить список доступных идентификаторов категорий, введите:
@@ -61,5 +61,5 @@ msinfo32 /nfo syssum.nfo /categories +systemsummary
 msinfo32 /nfo conflicts.nfo /categories    +componentsproblemdevices+resourcesconflicts+resourcesforcedhardware
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

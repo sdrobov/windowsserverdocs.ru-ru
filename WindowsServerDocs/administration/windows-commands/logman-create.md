@@ -1,6 +1,6 @@
 ---
 title: logman create
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде Logman Create, который создает счетчик, трассировку, сборщик данных конфигурации или API.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e584e6f4a5632967a6e62408afe971b1681d8493
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1d4bffd68d5b74d1d6f36750967911dfec3f299a
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724400"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820594"
 ---
 # <a name="logman-create"></a>logman create
 
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
+Создает счетчик, трассировку, сборщик данных конфигурации или API.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,12 +30,14 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|[переlogman создать счетчик](logman-create-counter.md)|Создание сборщика данных счетчиков.|
-|[создать трассировку Logman](logman-create-trace.md)|Создание сборщика данных трассировки.|
-|[создать оповещение Logman](logman-create-alert.md)|Создание сборщика данных предупреждений.|
-|[Logman Create cfg](logman-create-cfg.md)|Создание сборщика данных конфигурации.|
-|[Создание API Logman](logman-create-api.md)|Создание сборщика данных трассировки API.|
+| Параметр | Описание |
+| --------- | ----------- |
+| [переlogman создать счетчик](logman-create-counter.md) | Создает сборщик данных счетчика. |
+| [создать трассировку Logman](logman-create-trace.md) | Создает сборщик данных трассировки. |
+| [создать оповещение Logman](logman-create-alert.md) | Создает сборщик данных предупреждений. |
+| [Logman Create cfg](logman-create-cfg.md) | Создает сборщик данных конфигурации. |
+| [Создание API Logman](logman-create-api.md) | Создает сборщик данных трассировки API. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

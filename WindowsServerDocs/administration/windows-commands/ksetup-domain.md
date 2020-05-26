@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: домен'
-description: Справочный раздел по * * * *-
+title: домен ksetup
+description: Справочный раздел для команды домена ksetup, которая задает доменное имя для всех операций Kerberos.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,44 +9,43 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f127eaf33e9ef6d597851c31a4167ceaa3516abb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1d497f2bc76bae8a95b077658c661e0fdc1e93f3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724688"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817804"
 ---
-# <a name="ksetupdomain"></a>ksetup: домен
-
-
+# <a name="ksetup-domain"></a>домен ksetup
 
 Задает доменное имя для всех операций Kerberos.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /domain <DomainName>
+ksetup /domain <domainname>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя_домена>|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например contoso.com или contoso.|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<domainname>` | Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например contoso.com или contoso.|
 
-## <a name="remarks"></a>Примечания
+### <a name="examples"></a>Примеры
 
-Отсутствует.
+Чтобы установить подключение к допустимому домену, такому как Microsoft, с помощью `ksetup /mapuser` подкоманды, введите:
 
-## <a name="examples"></a>Примеры
-
-Установите подключение к допустимому домену, например Microsoft, с помощью подкоманды/мапусер:
 ```
 ksetup /mapuser principal@realm domain-user /domain domain-name
 ```
+
 После успешного подключения вы получите новый TGT или обновите существующий TGT.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Ksetup](ksetup.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [ksetup мапусер, команда](ksetup-mapuser.md)

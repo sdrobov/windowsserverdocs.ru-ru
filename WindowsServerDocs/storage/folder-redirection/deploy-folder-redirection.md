@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: e8e6e5a29c75c117f6faa3c1d1b3f288582d81a2
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4a53f28867904c163346fb7943790ff0659ab006
+ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80855887"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83716879"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>Развертывание перенаправления папок с помощью автономных файлов
 
@@ -199,6 +199,6 @@ ms.locfileid: "80855887"
 * [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md) (Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей)
 * [Развертывание основных компьютеров для перенаправления папок и использования перемещаемых профилей пользователей](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md) (Включение расширенных функциональных возможностей автономных файлов)
-* [Microsoft's Support Statement Around Replicated User Profile Data](https://blogs.technet.microsoft.com/askds/2010/09/01/microsofts-support-statement-around-replicated-user-profile-data/) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
+* [Microsoft's Support Statement Around Replicated User Profile Data](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>) (Загрузка неопубликованных приложений с помощью DISM)
 * [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)

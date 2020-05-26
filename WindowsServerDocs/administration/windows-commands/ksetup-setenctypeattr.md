@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: сетенктипеаттр'
-description: Справочный раздел по * * * *-
+title: ksetup сетенктипеаттр
+description: Справочный раздел по команде ksetup сетенктипеаттр, который задает атрибут типа шифрования для домена.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,66 +9,74 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4cb7380a5fc65734902c6eed0b4b941eda6f6f5a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e76ad3d08505208346ff2a3e100194239187953d
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724561"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817364"
 ---
-# <a name="ksetupsetenctypeattr"></a>ksetup: сетенктипеаттр
+# <a name="ksetup-setenctypeattr"></a>ksetup сетенктипеаттр
 
+Задает атрибут типа шифрования для домена. Сообщение о состоянии отображается при успешном или неудачном завершении.
 
-
-Задает атрибут типа шифрования для домена.
+Вы можете просмотреть тип шифрования для билета предоставления билета Kerberos (TGT) и ключ сеанса, выполнив команду **klist** и просмотрев выходные данные. Вы можете задать домен для подключения и использования, выполнив `ksetup /domain <domainname>` команду.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /setenctypeattr <Domain name> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | AES128-CTS-HMAC-SHA1-96 | AES256-CTS-HMAC-SHA1-96}
+ksetup /setenctypeattr <domainname> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | AES128-CTS-HMAC-SHA1-96 | AES256-CTS-HMAC-SHA1-96}
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя_домена>|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
-|Тип шифрования|Должен быть одним из следующих поддерживаемых типов шифрования:</br>-DES-CBC-CRC</br>-DES-CBC-MD5</br>-RC4-HMAC-MD5</br>-AES128-CTS-HMAC-SHA1-96</br>-AES256-CTS-HMAC-SHA1-96|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<domainname>` | Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso. |
+| тип шифрования | Должен быть одним из следующих поддерживаемых типов шифрования:<ul><li>DES-CBC-CRC</li><li>DES-CBC-MD5</li><li>RC4-HMAC-MD5</li><li>AES128-CTS-HMAC-SHA1-96</li><li>AES256-CTS-HMAC-SHA1-96</li></ul> |
 
-## <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Замечания
 
-Чтобы просмотреть тип шифрования билета предоставления билета Kerberos (TGT) и ключа сеанса, выполните команду **klist** и просмотрите выходные данные.
+- Можно задать или добавить несколько типов шифрования, разделяя типы шифрования в команде пробелами. Однако это можно сделать только для одного домена за раз.
 
-Можно задать или добавить несколько типов шифрования, разделяя типы шифрования в команде пробелами. Однако это можно сделать только для одного домена за раз.
+### <a name="examples"></a>Примеры
 
-Если команда завершается успешно или неудачно, отображается сообщение о состоянии.
+Чтобы просмотреть тип шифрования билета предоставления билета Kerberos (TGT) и ключа сеанса, введите:
 
-Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/Domain \<имя_домена>** .
-
-## <a name="examples"></a>Примеры
-
-Определите текущие типы шифрования, установленные на этом компьютере:
 ```
 klist
 ```
-Задайте для домена значение corp.contoso.com:
+
+Чтобы задать для домена значение corp.contoso.com, введите:
+
 ```
 ksetup /domain corp.contoso.com
 ```
-Задайте для атрибута типа шифрования значение AES-256-CTS-HMAC-SHA1-96 для домена corp.contoso.com:
+
+Чтобы задать для атрибута типа шифрования значение AES-256-CTS-HMAC-SHA1-96 для домена corp.contoso.com, введите:
+
 ```
 ksetup /setenctypeattr corp.contoso.com AES-256-CTS-HMAC-SHA1-96
 ```
-Убедитесь, что атрибут типа шифрования был установлен в соответствии с целью домена:
+
+Чтобы убедиться, что атрибут типа шифрования был задан в качестве назначения для домена, введите:
+
 ```
 ksetup /getenctypeattr corp.contoso.com
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Klist](klist.md)
--   [Ksetup:domain](ksetup-domain.md)
--   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
--   [Ksetup:getenctypeattr](ksetup-getenctypeattr.md)
--   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда klist](klist.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [Команда домена ksetup](ksetup-domain.md)
+
+- [ksetup адденктипеаттр, команда](ksetup-addenctypeattr.md)
+
+- [ksetup жетенктипеаттр, команда](ksetup-getenctypeattr.md)
+
+- [ksetup деленктипеаттр, команда](ksetup-delenctypeattr.md)
