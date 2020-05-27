@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c87a6cb5e3fb52af9a13a7be35218e35b24d7ddc
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: ca2a10a5d52c9d175d453a164f3ab4f47ca0841d
+ms.sourcegitcommit: 430c6564c18f89eecb5bbc39cfee1a6f1d8ff85b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436929"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83855668"
 ---
 # <a name="echo"></a>echo (вывод на экран)
 
@@ -31,11 +31,11 @@ echo [on | off]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| on | автоном | Включает или выключает функцию вывода команд. Команда по умолчанию включена. |
+| [вкл. \| Откл.] | Включает или выключает функцию вывода команд. Команда по умолчанию включена. |
 | `<message>` | Задает текст, отображаемый на экране. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Комментарии
+#### <a name="remarks"></a>Примечания
 
 - `echo <message>`Команда особенно полезна при отключенном **эхо** . Чтобы отобразить сообщение, которое содержит несколько строк без отображения команд, можно включить несколько `echo <message>` команд после команды **echo off** в пакетной программе.
 
