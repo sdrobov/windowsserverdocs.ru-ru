@@ -1,26 +1,26 @@
 ---
-title: trace_1 FTP
-description: Справочный раздел по * * * *-
+title: Трассировка FTP
+description: Справочный раздел по команде FTP Trace, который переключает трассировку пакетов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 8740c1fb-a7bf-45c8-b2f9-61fae4f3506e vhorne
+ms.assetid: 8740c1fb-a7bf-45c8-b2f9-61fae4f3506e
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 50eb401540549387c78718b930b31f1f465d3e1e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 985f860f4a080fed9d6a0c6e2c8950bac8c4b143
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725067"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820294"
 ---
-# <a name="ftp-trace_1"></a>FTP: trace_1
+# <a name="ftp-trace"></a>Трассировка FTP
 
+> Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-
-Переключает трассировку пакетов.
+Переключает трассировку пакетов. Эта команда также отображает ряд внутренних вызовов функций FTP при выполнении команды **FTP** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,21 +28,16 @@ ms.locfileid: "82725067"
 trace
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="examples"></a>Примеры
 
-none
+Включить или отключить трассировку, введите:
 
-## <a name="remarks"></a>Примечания
-
-**Трассировка** отображает ряд внутренних вызовов функций FTP при выполнении команды **FTP** .
-
-## <a name="examples"></a>Примеры
-
-Включение и отключение трассировки.
 ```
 trace
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Дополнительные рекомендации по FTP](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

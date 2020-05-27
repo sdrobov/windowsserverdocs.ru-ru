@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: d62edde425a00db23f150246df65166234604cef
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 5feafc4d99d4fdea2a7da888c8e818088dd7f6e0
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436469"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821214"
 ---
 # <a name="pnpunattend"></a>pnpunattend
 
@@ -35,7 +35,7 @@ PnPUnattend.exe auditSystem [/help] [/?] [/h] [/s] [/L]
 |/L|Необязательный параметр. Задает отображение сведений о журнале для этой команды в командной строке.|
 |/?|Необязательный параметр. Отображает справку для этой команды в командной строке.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 
 Требуется предварительная подготовка. Перед использованием этой команды необходимо выполнить следующие задачи.
 

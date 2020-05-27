@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d4d81acd98a280ce110c5677f627fee8a9394e1a
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8551b6fc76984b06f28bdda92dcd63791721ec90
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436959"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821294"
 ---
 # <a name="unlodctr"></a>unlodctr
 
@@ -32,7 +32,7 @@ Unlodctr <DriverName>
 |\<> Имя_драйвера|Удаляет параметры имени счетчика производительности и поясняющий текст для драйвера или службы <DriverName> из реестра Windows Server 2003.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 > [!WARNING]
 > Неправильное изменение реестра может серьезно повредить систему. Перед внесением изменений следует сделать резервную копию всех ценных данных на компьютере.
 
@@ -44,5 +44,5 @@ Unlodctr <DriverName>
 unlodctr SMTPSVC
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

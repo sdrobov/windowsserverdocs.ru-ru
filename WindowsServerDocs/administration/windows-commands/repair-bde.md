@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 501ab801e76980f7e94e88213dd3aa42ee04d4d7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 235640cacc6c0cca5ee9e820606082afe5d39d41
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722400"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820114"
 ---
 # <a name="repair-bde"></a>repair-bde
 
@@ -51,7 +51,7 @@ repair-bde <InputVolume> <OutputVolumeorImage> [-rk] [–rp] [-pw] [–kp] [–l
 |-f|Принудительное отключение тома, даже если он не может быть заблокирован. Эта команда также может быть указана как **-Force**.|
 |-? или/?|Отображает справку в командной строке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Если путь к пакету ключей не указан, **Repair-bde** выполнит поиск ключевого пакета на диске. Однако если жесткий диск поврежден, то **Repair-bde** не сможет найти пакет и предложит указать путь.
 
@@ -76,4 +76,4 @@ repair-bde C: D: -pw
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

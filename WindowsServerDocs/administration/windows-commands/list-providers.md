@@ -1,6 +1,6 @@
 ---
 title: список поставщиков
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды list providers, в которой перечислены поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 761099e3b399aeb9e6a3fe1ddd53ed1a667a4ccb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 98615dfa92c24b91babb55ae3545065834887e5d
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724501"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817244"
 ---
 # <a name="list-providers"></a>список поставщиков
 
-
-
 Перечисляет поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,13 +26,16 @@ ms.locfileid: "82724501"
 list providers
 ```
 
-## <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры
 
 Чтобы получить список зарегистрированных в данный момент поставщиков теневых копий, введите:
+
 ```
 list providers
 ```
+
 Выходные данные, аналогичные показанным ниже.
+
 ```
 * ProviderID: {b5946137-7b9f-4925-af80-51abd60b20d5}
         Type: [1] VSS_PROV_SYSTEM

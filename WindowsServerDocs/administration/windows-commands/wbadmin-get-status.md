@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1e8e5194cd49770f72ce810f4652d9bc98af75e2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0e41c54b9f916f0032a4976cdfa6d3ca101fb744
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720159"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821194"
 ---
 # <a name="wbadmin-get-status"></a>Wbadmin get Status
 
@@ -34,13 +34,13 @@ wbadmin get status
 
 Эта подкоманда не имеет параметров.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 -   Эта подкоманда не будет прерываться до завершения текущей операции резервного копирования или восстановления — подкоманда продолжит работу, даже если закрыть командное окно.
 -   Если вы хотите прерывать текущую операцию резервного копирования или восстановления, используйте подкоманду **Wbadmin останавливают задание** .
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Get-вбжоб](https://technet.microsoft.com/library/jj902426.aspx)

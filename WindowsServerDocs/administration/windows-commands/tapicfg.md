@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: a10d36c92da9fb27281a0137fbfd01e4098f51d5
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: c9b73a7b5d3a24e4fda34b772239fb987b671d06
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437089"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821314"
 ---
 # <a name="tapicfg"></a>tapicfg
 
@@ -112,7 +112,7 @@ tapicfg makedefault /directory:<PartitionName> [/domain:<DomainName>]
 |македефаулт/Directory: \<> PartitionName|Обязательный элемент. Указывает DNS-имя раздела каталога приложений TAPI, заданное в качестве раздела по умолчанию для домена. Обратите внимание, что это имя должно быть полным доменным именем. Указывает DNS-имя домена, для которого в качестве раздела каталога приложений TAPI задано значение по умолчанию. Если имя домена не указано, используется имя локального домена.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 Чтобы выполнить команду **Tapicfg Install** (для создания раздела каталога приложений TAPI) или команду **Tapicfg Remove** (удалить раздел каталога приложений TAPI), необходимо быть членом группы "Администраторы предприятия" в Active Directory.
 
 Это средство командной строки можно запустить на любом компьютере, входящем в домен.
@@ -133,4 +133,4 @@ tapicfg install /directory:tapifiction.testdom.microsoft.com /server:testdc.test
 tapicfg show /defaultonly
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

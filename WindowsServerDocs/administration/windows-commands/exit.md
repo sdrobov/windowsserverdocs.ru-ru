@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 97068232a7ffa82e59ba486b449af96638e3d8f0
-ms.sourcegitcommit: aed942d11f1a361fc1d17553a4cf190a864d1268
+ms.openlocfilehash: fdfec9861e63f7484a9c45c45a22d19873cabbe9
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235078"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819504"
 ---
 # <a name="exit"></a>exit
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Выполняет выход из интерпретатора команд или текущего пакетного скрипта.
+Выход из интерпретатора команд или текущего пакетного скрипта.
 
 ## <a name="syntax"></a>Синтаксис
 

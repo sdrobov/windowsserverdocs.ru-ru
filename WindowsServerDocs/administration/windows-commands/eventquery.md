@@ -1,6 +1,6 @@
 ---
 title: eventquery
-description: Справочный раздел о команде евенткуери, которая устарела и не гарантируется в будущих выпусках Windows.
+description: Справочный раздел по команде евенткуери. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5031d18311c177c7f745bc771c212727ce700ee3
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8de367329a089df7e1a179f982929de447910220
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436869"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819554"
 ---
 # <a name="eventquery"></a>eventquery
 

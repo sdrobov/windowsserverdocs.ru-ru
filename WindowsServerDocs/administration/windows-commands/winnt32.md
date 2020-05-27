@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 00a45890f9b579c0261a074dace707a9e5c769bb
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 81068055a23147ad6fafa1c9fa27a63174d52574
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436809"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820932"
 ---
 # <a name="winnt32"></a>winnt32
 
@@ -61,7 +61,7 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 |   \<> ответов   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Обеспечивает установку с использованием пользовательских спецификаций.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 |        /?         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Отображение справки в командной строке.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 При развертывании Windows XP на клиентских компьютерах можно использовать версию программы Winnt32. exe, поставляемую вместе с Windows XP. Другим способом развертывания Windows XP является использование Winnt32. msi, который работает с помощью установщик Windows, входит в набор технологий IntelliMirror. Дополнительные сведения о развертывании клиентов см. в пакете Windows Server 2003 Deployment Kit, который описан в разделе [Использование развертывания и ресурсов Windows](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
 
 На компьютере на базе процессоров Itanium **winnt32** можно запустить из интерфейса EFI или windows Server 2003 Enterprise, windows Server 2003 R2 Enterprise, windows Server 2003 R2 Datacenter или windows Server 2003 Datacenter. Кроме того, на компьютере, основанном на архитектуре Itanium, **/cmdcons** и **/syspart** недоступны, а параметры, относящиеся к обновлениям, недоступны.
@@ -71,5 +71,5 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 Использование параметра командной строки **/Unattend** для автоматизации установки подтверждает, что вы прочитали и приняли лицензионное соглашение Майкрософт для Windows Server 2003. Перед использованием этого параметра командной строки для установки Windows Server 2003 от имени другой организации необходимо убедиться, что конечный пользователь (отдельная или отдельная сущность) получил, прочитал и принял условия лицензионного соглашения Майкрософт для этого продукта.  Изготовители оборудования могут не указывать этот ключ на компьютерах, продаваемых конечным пользователям.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c1361cded9ebf26eeaea7abcaba1b1f3ca1428ac
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 1d3be185c49ce9f20964005cd9074e4f51fee3d4
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436799"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820914"
 ---
 # <a name="winrs"></a>winrs
 
@@ -43,7 +43,7 @@ winrs [/<parameter>[:<value>]] <command>
 |            /усессл             |                                                                                                               Используйте SSL-соединение при использовании удаленной конечной точки.  Указание этого параметра вместо транспорта **https:** будет использовать порт по умолчанию для **WinRM** по умолчанию.                                                                                                                |
 |               /?               |                                                                                                                                                                        Отображение справки в командной строке.                                                                                                                                                                        |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 -   Все параметры командной строки принимают либо краткую форму, либо длинную форму. Например, допустимыми являются **/r** и **/ремоте** .
 -   Чтобы завершить команду **/ремоте** , пользователь может ввести **сочетание клавиш CTRL-C** или **Ctrl-Break**, которое будет отправлено удаленной оболочке. Вторая **клавиша CTRL-C** принудительно завершает выполнение **WinRS. exe**.
 -   Для управления активными удаленными оболочками или конфигурацией WinRS используйте средство WinRM.  Псевдоним универсального кода ресурса (URI) для управления активными оболочками — **Shell/cmd**.  Псевдоним URI для конфигурации WinRS — **WinRM/config/WinRS**.
@@ -84,5 +84,5 @@ winrs /r:myserver /ad /u:administrator /p:$%fgh7 dir \\anotherserver\share
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

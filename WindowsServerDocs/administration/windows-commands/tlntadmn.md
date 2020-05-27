@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ee6caac0002cecb9eaecd00f6d3d4a2d23456d72
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 273381fa62f42e9cf084c2b7dbf30ed7211295fb
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436969"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821014"
 ---
 # <a name="tlntadmn"></a>tlntadmn
 
@@ -50,7 +50,7 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |     режим конфигурации = {поток &#124; консоли}      |                                                                                                                                             Указывает режим работы.                                                                                                                                             |
 |                       -?                       |                                                                                                                                           Отображение справки в командной строке.                                                                                                                                           |
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 -   Чтобы отобразить параметры сервера, введите **tlntadmn** без параметров.
 -   Чтобы использовать команду **tlntadmn** , необходимо войти на локальный компьютер с учетными данными администратора. Для администрирования удаленного компьютера необходимо также указать учетные данные администратора для удаленного компьютера. Это можно сделать, войдя на локальный компьютер с учетной записью, имеющей административные учетные данные как для локального компьютера, так и для удаленного компьютера. Если этот метод использовать нельзя, можно использовать параметры **-u** и **-p** для предоставления учетных данных администратора удаленного компьютера.
 
@@ -66,4 +66,4 @@ tlntadmn -s
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 -   [Руководство по операциям Telnet](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

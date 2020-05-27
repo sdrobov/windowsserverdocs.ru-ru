@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: деленктипеаттр'
-description: Справочный раздел по * * * *-
+title: ksetup деленктипеаттр
+description: Справочный раздел по ksetup деленктипеаттр, который удаляет атрибут типа шифрования для домена.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,63 +9,67 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2908cc0a095a6985c11f7885766926b7f0354ab0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b3076a25b619615402a599bd8aaa6ce9d10d4fe0
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724704"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817944"
 ---
-# <a name="ksetupdelenctypeattr"></a>ksetup: деленктипеаттр
+# <a name="ksetup-delenctypeattr"></a>ksetup деленктипеаттр
 
+Удаляет атрибут типа шифрования для домена. Сообщение о состоянии отображается при успешном или неудачном завершении.
 
-
-Удаляет атрибут типа шифрования для домена.
+Вы можете просмотреть тип шифрования для билета предоставления билета Kerberos (TGT) и ключ сеанса, выполнив команду **klist** и просмотрев выходные данные. Вы можете задать домен для подключения и использования, выполнив `ksetup /domain <domainname>` команду.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /delenctypeattr <DomainName> 
+ksetup /delenctypeattr <domainname>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя_домена>|Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso.|
+| Параметр | Описание |
+| ----------| ----------- |
+| `<domainname>` | Имя домена, для которого требуется установить соединение. Можно использовать либо полное доменное имя, либо простую форму имени, например corp.contoso.com или contoso. |
 
-## <a name="remarks"></a>Примечания
+### <a name="examples"></a>Примеры
 
-Чтобы просмотреть тип шифрования билета предоставления билета Kerberos (TGT) и ключа сеанса, выполните команду **klist** и просмотрите выходные данные.
+Чтобы определить текущие типы шифрования, установленные на этом компьютере, введите:
 
-Сообщение о состоянии отображается при успешном или неудачном завершении.
-
-Чтобы задать домен, к которому необходимо подключиться и использовать, выполните команду **ksetup/Domain \<имя_домена>** .
-
-## <a name="examples"></a>Примеры
-
-Определите текущие типы шифрования, установленные на этом компьютере:
 ```
 klist
 ```
-Задайте для домена значение mit.contoso.com:
+
+Чтобы задать для домена значение mit.contoso.com, введите:
+
 ```
 ksetup /domain mit.contoso.com
 ```
-Проверьте атрибут типа шифрования для домена:
+
+Чтобы проверить, какой тип шифрования имеет атрибут для домена, введите:
+
 ```
 ksetup /getenctypeattr mit.contoso.com
 ```
-Удалите атрибут SET ENCRYPTION Type для домена mit.contoso.com:
+
+Чтобы удалить атрибут SET ENCRYPTION Type для домена mit.contoso.com, введите:
+
 ```
 ksetup /delenctypeattr mit.contoso.com
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Klist](klist.md)
--   [Ksetup:domain](ksetup-domain.md)
--   [Ksetup:addenctypeattr](ksetup-addenctypeattr.md)
--   [Ksetup:setenctypeattr](ksetup-setenctypeattr.md)
--   [Ksetup:delenctypeattr](ksetup-delenctypeattr.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда klist](klist.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [Команда домена ksetup](ksetup-domain.md)
+
+- [ksetup адденктипеаттр, команда](ksetup-addenctypeattr.md)
+
+- [ksetup сетенктипеаттр, команда](ksetup-setenctypeattr.md)

@@ -1,6 +1,6 @@
 ---
 title: helpctr
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде helpctr. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,15 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2fa3c1210aaa903ffecda28604353cede2311060
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: b2dc9d0f5dfbd9ae61e0e4279596f68ccfae0055
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993318"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818584"
 ---
 # <a name="helpctr"></a>helpctr
 
+Команда helpctr устарела и не гарантируется в будущих выпусках Windows.
 
-
-Helpctr является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
-
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [helpctr](https://technet.microsoft.com/library/cc755821(v=ws.10).aspx).
+Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [helpctr](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc755821(v=ws.10)).

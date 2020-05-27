@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: делкпассвд'
-description: Справочный раздел по * * * *-
+title: ksetup делкпассвд
+description: Справочный раздел по команде ksetup делкпассвд, который удаляет сервер паролей Kerberos (кпассвд) для области.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,38 +9,46 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2de1546b112041f7035a711852140e9bb34babe3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a84a70158ad707fb36d1ca8a4879a93fe0b7df06
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724657"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817844"
 ---
-# <a name="ksetupdelkpasswd"></a>ksetup: делкпассвд
+# <a name="ksetup-delkpasswd"></a>ksetup делкпассвд
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-удаляет сервер паролей Kerberos (Кпассвд) для области.
+Удаляет сервер паролей Kerberos (кпассвд) для области.
+
 ## <a name="syntax"></a>Синтаксис
-```
-ksetup /delkpasswd <RealmName> <KpasswdName>
-```
-#### <a name="parameters"></a>Параметры
 
-|   Параметр   |                                                                                                   Описание                                                                                                   |
-|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|  <RealmName>  |                                Имя области указывается как DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или области = при запуске **ksetup** .                                |
-| <KpasswdName> | Имя KDC, используемое в качестве сервера паролей Kerberos, называется без учета регистра, полное доменное имя, например mitkdc.contoso.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS. |
+```
+ksetup /delkpasswd <realmname> <kpasswdname>
+```
 
-## <a name="remarks"></a>Примечания
-Выполните команду **ksetup** , чтобы проверить имя KDC. Если **кпассвд =** не отображается в выходных данных, сопоставление не было настроено. Если задано значение, будут перечислены несколько сопоставлений.
-## <a name="examples"></a>Примеры
-Проверьте КОРПОРАТИВную область. CONTOSO.COM использует в качестве сервера паролей не Windows Server KDC mitkdc.contoso.com:
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+| --------- | ----------- |
+| `<realmname>` |  Указывает DNS-имя в верхнем регистре, например CORP. CONTOSO.COM и указывается в качестве области по умолчанию или **области =** при запуске **ksetup** . |
+| `<kpasswdname>` | Указывает сервер паролей Kerberos. Оно называется без учета регистра, полное доменное имя, например mitkdc.contoso.com. Если имя KDC пропущено, для размещения Кдкс может использоваться DNS. |
+
+### <a name="examples"></a>Примеры
+
+Чтобы убедиться в наличии сферы CORP. CONTOSO.COM использует сервер Windows Server KDC, отличный от mitkdc.contoso.com, в качестве сервера паролей введите:
+
 ```
 ksetup /delkpasswd CORP.CONTOSO.COM mitkdc.contoso.com
 ```
-Чтобы убедиться в том, что команда работала правильно, запустите **ksetup** на компьютере Windows, чтобы убедиться в наличии сферы Corp. CONTOSO.COM не сопоставляется с сервером паролей Kerberos (имя KDC).
+
+Чтобы убедиться в наличии сферы CORP. CONTOSO.COM не сопоставляется с сервером паролей Kerberos (имя KDC), введите `ksetup` на компьютере Windows и просмотрите выходные данные.
+
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [ksetup](ksetup.md)
--   [ksetup: делкпассвд](ksetup-delkpasswd.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда ksetup](ksetup.md)
+
+- [ksetup делкпассвд, команда](ksetup-delkpasswd.md)

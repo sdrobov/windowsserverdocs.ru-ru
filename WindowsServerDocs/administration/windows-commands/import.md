@@ -1,6 +1,6 @@
 ---
-title: импорт
-description: Справочный раздел по * * * *-
+title: Импорт сценария DiskShadow
+description: Справочный раздел по команде Import, который импортирует переносимую теневую копию из загруженного файла метаданных в систему.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,20 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 72cbd6195de64a6a0a7f2c258e19b2d5eb1378b1
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f4eaf4afcbe2485a893a3e5335c595b3d9b256b5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724858"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818514"
 ---
-# <a name="import"></a>импорт
-
-
+# <a name="import-diskshadow"></a>Импорт (Diskshadow)
 
 Импортирует переносимую теневую копию из загруженного файла метаданных в систему.
 
-
+> СУЩЕСТВЕННО Перед использованием этой команды необходимо загрузить файл метаданных DiskShadow с помощью [команды загрузить метаданные](load-metadata.md) .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,14 +28,14 @@ ms.locfileid: "82724858"
 import
 ```
 
-## <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Remarks
 
--   Переносимые теневые копии не сохраняются немедленно в системе. Их сведения хранятся в XML-файле документа компонентов резервного копирования, который DiskShadow автоматически запрашивает и сохраняет в файле метаданных. cab в рабочем каталоге. Путь и имя этого файла можно изменить с помощью команды **Set Metadata** .
--   Прежде чем можно будет использовать **Импорт**, необходимо загрузить файл метаданных Diskshadow с помощью команды **загрузить метаданные** .
+- Перепереносимые теневые копии не сохраняются немедленно в системе. Их сведения хранятся в XML-файле документа компонентов резервного копирования, который DiskShadow автоматически запрашивает и сохраняет в файле метаданных. cab в рабочем каталоге. Используйте [команду Set Metadata](set-metadata.md) , чтобы изменить путь и имя этого XML-файла.
 
 ## <a name="examples"></a>Примеры
 
 Ниже приведен пример скрипта DiskShadow, демонстрирующий использование команды **Import** :
+
 ```
 #Sample DiskShadow script demonstrating IMPORT
 SET CONTEXT PERSISTENT
@@ -58,3 +56,5 @@ IMPORT
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Diskshadow, команда](diskshadow.md)

@@ -1,6 +1,6 @@
 ---
 title: inuse
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде inuse. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6413fe21f4b7da464347e49910fbf6cd649b319d
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: b25750c8ad57c3b1a795830b743f679e7fce88b5
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993313"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83818434"
 ---
 # <a name="inuse"></a>inuse
 
+Команда Inuse устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 
+Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [inuse](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)).
 
-Inuse является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
+## <a name="additional-references"></a>Дополнительные ссылки
 
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [inuse](https://technet.microsoft.com/library/dd996699(v=ws.10).aspx).
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

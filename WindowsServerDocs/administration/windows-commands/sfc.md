@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8e0b6fc2563566485a15ba7168b864a8abc888f3
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: af2167e1e23b0698c17159b1ae6b1970a06219d4
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436729"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821266"
 ---
 # <a name="sfc"></a>sfc
 
@@ -40,7 +40,7 @@ sfc [/scannow] [/verifyonly] [/scanfile=<file>] [/verifyfile=<file>] [/offwindir
 |/оффбутдир|Указывает расположение автономного каталога загрузки для автономной работы|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Замечания
 -   Для запуска **sfc. exe**необходимо войти в систему в качестве члена группы "Администраторы".
 -   Если **sfc** обнаруживает, что защищенный файл был перезаписан, он извлекает правильную версию файла из папки **systemroot\system32\dllcache** , а затем заменяет неверный файл.
 -   Между **sfc** в windows Server 2003, windows Server 2008 и windows Server 2008 R2 существуют функциональные различия:
@@ -58,5 +58,5 @@ sfc /scanfile=d:\windows\system32\kernel32.dll /offbootdir=d:\ /offwindir=d:\win
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

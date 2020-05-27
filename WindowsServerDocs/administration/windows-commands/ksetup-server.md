@@ -1,6 +1,6 @@
 ---
-title: 'ksetup: сервер'
-description: Справочный раздел по * * * *-
+title: сервер ksetup
+description: Справочный раздел по команде сервера ksetup, который позволяет указать имя компьютера под управлением операционной системы Windows, поэтому изменения, внесенные командой ksetup, обновляют конечный компьютер.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,45 +9,44 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 91549eb78f825264016ec0e03b7035f79132f260
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e39a3fbef4b99848d2a90c81007c526597c77275
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724595"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83817524"
 ---
-# <a name="ksetupserver"></a>ksetup: сервер
+# <a name="ksetup-server"></a>сервер ksetup
 
+Позволяет указать имя компьютера под управлением операционной системы Windows, поэтому изменения, внесенные командой **ksetup** , обновляют целевой компьютер.
 
+Имя целевого сервера хранится в реестре в разделе `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\LSA\Kerberos` . Эта запись не отображается при выполнении команды **ksetup** .
 
-Позволяет указать имя компьютера под управлением операционной системы Windows, чтобы изменения, вносимые с помощью **ksetup** , приводят к обновлению целевого компьютера.
+> [!IMPORTANT]
+> Удалить имя целевого сервера невозможно. Вместо этого можно вернуться к локальному имени компьютера, используемому по умолчанию.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-ksetup /server <ServerName>
+ksetup /server <servername>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя сервера>|Полное имя компьютера, на котором будет действовать конфигурация, например IPops897.corp.contoso.com.</br>Если указано неполное полное доменное имя компьютера, команда завершится ошибкой.|
+| Параметр | Описание |
+| --------- | ----------- |
+| `<servername>` | Указывает полное имя компьютера, на котором будет действовать конфигурация, например *IPops897.Corp.contoso.com*.<p>Если указано неполное полное доменное имя компьютера, команда завершится ошибкой. |
 
-## <a name="remarks"></a>Примечания
+### <a name="examples"></a>Примеры
 
-Удалить имя целевого сервера невозможно. Вы можете изменить его обратно на локальное имя компьютера, которое является значением по умолчанию.
+Чтобы обеспечить эффективную настройку **ksetup** на компьютере *IPops897* , подключенном к домену contoso, введите:
 
-Имя целевого сервера хранится в реестре в **HKEY_LOCAL_MACHINE \system\controlset001\control\lsa\kerberos**. Он не сообщается с помощью **ksetup**.
-
-## <a name="examples"></a>Примеры
-
-Сделайте конфигурацию **ksetup** эффективной на компьютере IPops897, подключенном к домену contoso:
 ```
 ksetup /server IPops897.corp.contoso.com
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Ksetup](ksetup.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда ksetup](ksetup.md)

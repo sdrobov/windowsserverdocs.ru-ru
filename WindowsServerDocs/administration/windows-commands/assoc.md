@@ -9,19 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f637e1f744ec412899320cfbb368633b222da8d3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 58735201a1a0711db4d0cee9c292363acf5121f3
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718955"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819644"
 ---
 # <a name="assoc"></a>assoc
 
 Отображает или изменяет сопоставления расширений имен файлов. Если используется без параметров, команда **Assoc** отображает список всех сопоставлений расширений имен текущих файлов.
 
 > [!NOTE]
-> Эта команда поддерживается только в CMD. EXE и недоступна в PowerShell.
+> Эта команда поддерживается только в cmd. exe и недоступна в PowerShell.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ assoc [<.ext>[=[<filetype>]]]
 | `<filetype>` | Указывает тип файла, связываемого с указанным расширением имени файла. |
 | /? | Отображение справки в командной строке. |
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Замечания
 
 - Чтобы удалить сопоставление типа файла для расширения имени файла, добавьте пробел после знака равенства, нажав клавишу пробел.
 
@@ -56,7 +56,7 @@ assoc .txt
 Чтобы удалить сопоставление типа файла для расширения bak, введите:
 
 ```
-assoc .bak= 
+assoc .bak=
 ```
 
 > [!NOTE]

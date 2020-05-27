@@ -1,40 +1,48 @@
 ---
-title: mdelete_1 FTP
-description: Справочный раздел по * * * *-
+title: мделете FTP
+description: Справочный раздел по команде FTP мделете, который удаляет файлы на удаленном компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f vhorne
+ms.assetid: 8a80a8f5-e880-40a8-abc9-29a41836844f
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f578a50207439f9bfb21c2607f0aa60a20fad292
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8ee1882878ce06a16bd6ff6f0dcaa512d6d8b56a
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725029"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820234"
 ---
-# <a name="ftp-mdelete_1"></a>FTP: mdelete_1
+# <a name="ftp-mdelete"></a>мделете FTP
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Удаляет файлы на удаленном компьютере.   
-## <a name="syntax"></a>Синтаксис  
-```  
-mdelete <remoteFile>[ ]  
-```  
-#### <a name="parameters"></a>Параметры  
+Удаляет файлы на удаленном компьютере.
 
-|  Параметр   |             Описание              |
-|--------------|--------------------------------------|
-| <remoteFile> | Указывает удаленный файл для удаления. |
+## <a name="syntax"></a>Синтаксис
+```
+mdelete <remotefile>[...]
+```
 
-## <a name="examples"></a>Примеры  
-Удаление удаленных файлов **a. exe** и **b. exe**.  
-```  
-mdelete a.exe b.exe  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)  
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+| --------- | ----------- |
+| `<remotefile>` | Указывает удаленный файл для удаления. |
+
+### <a name="examples"></a>Примеры
+
+Чтобы удалить удаленные файлы *a. exe* и *b. exe*, введите:
+
+```
+mdelete a.exe b.exe
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Дополнительные рекомендации по FTP](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

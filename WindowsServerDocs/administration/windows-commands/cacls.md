@@ -1,6 +1,6 @@
 ---
 title: cacls
-description: Справочный раздел команды cacls, которая отображает или изменяет избирательные списки управления доступом (DACL) для указанных файлов.
+description: Справочный раздел по команде cacls. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,24 +9,24 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d827199ea319bd41511f9abadfde8c6e8949976e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8602157bf87e523d6d842d5636031c61b52e8ef4
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82726026"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83819254"
 ---
 # <a name="cacls"></a>cacls
 
 >[!IMPORTANT]
-> Эта команда устарела. Взамен рекомендуется использовать [icacls](icacls.md) .  
+> Эта команда устарела. Взамен рекомендуется использовать [icacls](icacls.md) .
 
-Отображает или изменяет избирательные списки управления доступом (DACL) для указанных файлов.  
+Отображает или изменяет избирательные списки управления доступом (DACL) для указанных файлов.
 
 ## <a name="syntax"></a>Синтаксис
 
-```  
-cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]  
+```
+cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user [...]] [/p user:<perm> [...]] [/d user [...]]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -48,7 +48,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 
 #### <a name="sample-output"></a>Пример выходных данных
 
-| Вывод | Запись управления доступом (ACE) применяется к |
+| Выходные данные | Запись управления доступом (ACE) применяется к |
 -------- | ------------------------------------- |
 | OI | Объект наследует. Эту папку и файлы. |
 | CI | Контейнер наследует. Эта папка и вложенные папки. |
@@ -59,11 +59,11 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | ЭЛЕМЕНТ IO | Только во вложенных папках. |
 | Oi IO | Только файлы. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Замечания
 
 - Можно использовать подстановочные знаки (**?** и **&#42;**) для указания нескольких файлов.
 
-- Можно указать более одного пользователя.  
+- Можно указать более одного пользователя.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

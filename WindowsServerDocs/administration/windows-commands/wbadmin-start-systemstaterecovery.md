@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fa111934f93bf7fea5aade1f39b4fc6a014d6c9e
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: edbd6acefe2ef921b9325de4808753d5929efd1e
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725878"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821384"
 ---
 # <a name="wbadmin-start-systemstaterecovery"></a>Wbadmin start systemstaterecovery
 
@@ -70,17 +70,17 @@ wbadmin start systemstaterecovery
 
 ## <a name="examples"></a>Примеры
 
-- Чтобы выполнить восстановление состояния системы резервной копии с 03/31/2013 в 9:00 утра, введите:  
+- Чтобы выполнить восстановление состояния системы резервной копии с 03/31/2013 в 9:00 утра, введите:
   ```
   wbadmin start systemstaterecovery -version:03/31/2013-09:00
-  ```  
-- Выполнение восстановления состояния системы резервного копирования с 04/30/2013 в 9:00 утра , хранящийся на общем ресурсе \\ \\сервернаме\шаре для Server01, введите:  
+  ```
+- Выполнение восстановления состояния системы резервного копирования с 04/30/2013 в 9:00 утра , хранящийся на общем ресурсе \\ \\ сервернаме\шаре для Server01, введите:
   ```
   wbadmin start systemstaterecovery -version:04/30/2013-09:00 -backupTarget:\\servername\share -machine:server01
   ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
 -   Командлет [Start-вбсистемстатерековери](https://technet.microsoft.com/library/jj902449.aspx)

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3043a4af6c2ac4a6c58b973cca5abd066109eac5
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b93ad6ceadb08f6df8390edc3fc454d951519aad
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722041"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83821104"
 ---
 # <a name="seceditvalidate"></a>Secedit: Проверка
 
@@ -25,7 +25,7 @@ ms.locfileid: "82722041"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Secedit /validate <configuration file name>  
+Secedit /validate <configuration file name>
 
 ```
 
@@ -33,9 +33,9 @@ Secedit /validate <configuration file name>
 
 |Параметр|Описание|
 |---------|-----------|
-|Имя файла конфигурации|Обязательный.</br>Указывает путь и имя файла для шаблона безопасности, который будет проверен.|
+|Имя файла конфигурации|Обязательный элемент.</br>Указывает путь и имя файла для шаблона безопасности, который будет проверен.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Проверка шаблонов безопасности может помочь в том, что один из них поврежден или настроен неправильно.
 
@@ -43,7 +43,7 @@ Secedit /validate <configuration file name>
 
 Файл журнала не будет обновлен.
 
-В Windows Server 2008 `Secedit /refreshpolicy` был заменен на. `gpupdate` Сведения о том, как обновить параметры безопасности, см. в разделе [gpupdate](gpupdate.md).
+В Windows Server 2008 был `Secedit /refreshpolicy` заменен на `gpupdate` . Сведения о том, как обновить параметры безопасности, см. в разделе [gpupdate](gpupdate.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -56,4 +56,4 @@ Secedit /validate secRBKcontoso.inf
 
 -   [Secedit:generaterollback](secedit-generaterollback.md)
 -   [Программу Secedit](secedit.md)
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

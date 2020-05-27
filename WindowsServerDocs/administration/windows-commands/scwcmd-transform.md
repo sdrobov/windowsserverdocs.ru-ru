@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1f1116b42d356cc36f478089cdf487a38e792e87
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 86c88f0207a53da813f5d4eaed399375bfc5bc02
+ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722125"
+ms.lasthandoff: 05/24/2020
+ms.locfileid: "83820954"
 ---
 # <a name="scwcmd-transform"></a>Scwcmd: transform
 
@@ -39,11 +39,11 @@ scwcmd transform /p:<Policyfile.xml> /g:<GPODisplayName>
 
 |Параметр|Описание|
 |---------|-----------|
-|/p:\<полицифиле. XML>|Указывает путь и имя файла политики XML, который следует применить. Этот параметр должен быть указан.|
-|/g:\<гподисплайнаме>|Указывает отображаемое имя объекта групповой политики. Этот параметр должен быть указан.|
+|/p: \< полицифиле. xml>|Указывает путь и имя файла политики XML, который следует применить. Этот параметр должен быть указан.|
+|/g: \< гподисплайнаме>|Указывает отображаемое имя объекта групповой политики. Этот параметр должен быть указан.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Замечания
 
 Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
@@ -56,4 +56,4 @@ scwcmd transform /p:FileServerPolicy.xml /g:FileServerSecurity
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

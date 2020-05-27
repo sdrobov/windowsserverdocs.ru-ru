@@ -1,39 +1,45 @@
 ---
-title: FTP-Звонок
-description: Справочный раздел по команде FTP Bell, который переключает звуковой сигнал на выполнение после каждой команды по переносу файлов.
+title: FTP rmdir
+description: Справочный раздел по команде FTP rmdir, который удаляет корневой каталог.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
-ms.assetid: bfc00fb6-b3d0-42a1-ac6d-df46f89dc152
+ms.assetid: cf4778a4-9534-49c7-a061-850dc3504a67
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c445e929c9d3adad2bfa620b522e4befbb7c1cff
+ms.openlocfilehash: 1abbc66ee470d7939f45e7e961c502a3b4689f7b
 ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820024"
+ms.locfileid: "83821454"
 ---
-# <a name="ftp-bell"></a>FTP-Звонок
+# <a name="ftp-rmdir"></a>FTP rmdir
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Переключает звуковой сигнал на выполнение после завершения каждой команды по переносу файлов. По умолчанию эта команда отключена.
+Удаляет удаленный каталог.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-bell
+rmdir <directory>
 ```
+
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+| --------- | ----------- |
+| `<directory>` | Задает имя каталога для удаления. |
 
 ### <a name="examples"></a>Примеры
 
-Чтобы переключить звуковой сигнал после завершения каждой команды, введите:
+Чтобы удалить удаленный каталог " *рисунки* ", введите:
 
 ```
-bell
+rmdir pictures
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
