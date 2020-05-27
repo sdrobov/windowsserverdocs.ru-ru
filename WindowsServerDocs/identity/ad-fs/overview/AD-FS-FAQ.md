@@ -9,12 +9,12 @@ ms.date: 04/29/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b1b6f7d38c4474ba3f69c4eac0c4569375185eb8
-ms.sourcegitcommit: 6d3f8780b67aa7865a9372cf2c1e10c79ebea8b1
+ms.openlocfilehash: 947c34e6c3a3b9a26a225221bbf29e46343b25df
+ms.sourcegitcommit: f22e4d67dd2a153816acf8355e50319dbffc5acf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587664"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83546568"
 ---
 # <a name="ad-fs-frequently-asked-questions-faq"></a>Часто задаваемые вопросы по AD FS (FAQ)
 
@@ -85,7 +85,7 @@ AD FS предоставляет расширяемый механизм для
 Список поставщиков, которые получили уведомления от корпорации Майкрософт, публикуются в списке [поставщиков MFA для AD FS](../operations/Configure-Additional-Authentication-Methods-for-AD-FS.md).  Всегда могут быть доступными поставщики, о которых мы не знаем, и мы будем обновлять список по мере того, как узнаем о них.
 
 ### <a name="are-third-party-proxies-supported-with-ad-fs"></a>Поддерживаются ли сторонние прокси-серверы AD FS?
-Да, сторонние прокси могут быть размещены перед прокси веб-приложений, но любой сторонний прокси должен поддерживать протокол [MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx), который будет использоваться вместо прокси веб-приложений.
+Да, сторонние прокси-серверы могут быть размещены перед AD FS, но любой сторонний прокси-сервер должен поддерживать протокол [MS-ADFSPIP](https://msdn.microsoft.com/library/dn392811.aspx), который будет использоваться вместо прокси-службы веб-приложения.
 
 Ниже приведен список поставщиков третьих лиц, о которых мы осведомлены.  Всегда могут быть доступными поставщики, о которых мы не знаем, и мы будем обновлять список по мере того, как узнаем о них.
 

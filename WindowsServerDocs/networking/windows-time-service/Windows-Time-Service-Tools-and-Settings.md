@@ -7,12 +7,12 @@ ms.date: 02/24/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 2f6ba34381e813247d0838853f688abf13fbd2fa
-ms.sourcegitcommit: 1d83ca198c50eef83d105151551c6be6f308ab94
+ms.openlocfilehash: 76ec8a817f0c500380c9bef6fc1ee7eb8dddc105
+ms.sourcegitcommit: 319796ec327530c9656ac103b89bd48cc8d373f6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82605544"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83790563"
 ---
 # <a name="windows-time-service-tools-and-settings"></a>Инструменты и параметры службы времени Windows
 
@@ -87,6 +87,15 @@ W32tm /query /computer:contosoW1 /configuration
 ```
 
 Выходные данные этой команды представляют собой список параметров конфигурации, заданных для клиента службы времени Windows.
+
+> [!IMPORTANT]  
+> [В Windows Server 2016 улучшены алгоритмы синхронизации времени](https://aka.ms/WS2016Time) для соответствия спецификациям RFC. Поэтому если вы хотите настроить локальный клиент службы времени Windows так, чтобы он указывал на несколько одноранговых узлов, настоятельно рекомендуется подготовить три или более разных сервера времени.
+>  
+> При наличии только двух серверов времени укажите флаг **UseAsFallbackOnly** (0x2), чтобы отменить назначение приоритета одному из них. Например, если необходимо назначить приоритет ntpserver.contoso.com над clock.adatum.com, выполните следующую команду.
+> ```cmd
+> w32tm /config /manualpeerlist:"ntpserver.contoso.com,0x8 clock.adatum.com,0xa" /syncfromflags:manual /update
+> ```
+> Значение указанного флага см. в разделе [Записи подраздела HKLM\SYSTEM\CurrentControlSet\Services\W32Time\Parameters](#parameters).
 
 ## <a name="using-group-policy-to-configure-the-windows-time-service"></a>Использование групповой политики для настройки службы времени Windows
 
