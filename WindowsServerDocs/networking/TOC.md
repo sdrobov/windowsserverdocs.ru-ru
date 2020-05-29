@@ -93,6 +93,12 @@
 #### [Параметры выбора подсети DHCP](technologies/dhcp/dhcp-subnet-options.md)
 #### [Ведение журнала событий DHCP для регистраций записей DNS](technologies/dhcp/dhcp-dns-events.md)
 ### [Развертывание DHCP с помощью Windows PowerShell](technologies/dhcp/dhcp-deploy-wps.md)
+### [Устранение неполадок с DHCP](../troubleshoot/troubleshoot-dhcp-issue.md)
+#### [Сведения о протоколе DHCP](../troubleshoot/dynamic-host-configuration-protocol-basics.md)
+#### [Общие рекомендации по устранению неполадок с DHCP](../troubleshoot/general-guidance-to-troubleshoot-dhcp.md)
+##### [Использование автоматической адресации TCP/IP без DHCP-сервера](../troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh.md)
+#### [Устранение неполадок на клиенте DHCP](../troubleshoot/troubleshoot-problems-on-dhcp-client.md)
+#### [Устранение неполадок на сервере DHCP](../troubleshoot/troubleshoot-problems-on-dhcp-server.md)
 
 ## [Высокопроизводительные сети](technologies/hpn/hpn-top.md)
 ### [Разгрузка сети и технологии оптимизации](technologies/hpn/network-offload-and-optimization.md)
