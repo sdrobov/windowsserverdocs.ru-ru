@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cde91738f524350f72f0278495e4bd46a3960e6f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 67aacb3a575e0cdd08af5372b403916961d223c6
+ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718702"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84149777"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -28,15 +28,15 @@ bcdboot <source> [/l] [/s]
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание |
+| Параметр | Описание: |
 | --------- | ----------- |
-| source | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
+| источник | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
 | /l | Задает языковой стандарт. Язык по умолчанию — английский (США). |
 | /s | Указывает букву тома системного раздела. По умолчанию используется системный раздел, определяемый встроенным по. |
 
 ## <a name="examples"></a>Примеры
 
-Сведения о том, где найти BCDboot и примеры использования этой команды, см. в разделе [Параметры командной строки BCDboot](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)x) .
+Сведения о том, где найти BCDboot и примеры использования этой команды, см. в разделе [Параметры командной строки BCDboot](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh824874(v=win.10)) .
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
