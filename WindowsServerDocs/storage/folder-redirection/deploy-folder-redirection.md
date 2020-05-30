@@ -8,16 +8,16 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 4a53f28867904c163346fb7943790ff0659ab006
-ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
+ms.openlocfilehash: fbdef69f62a76fcc8d01aa0319b2b0859fc4f7cd
+ms.sourcegitcommit: 6973690a8705b24d09eb98f1713743d5e6079161
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83716879"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84211913"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>Развертывание перенаправления папок с помощью автономных файлов
 
->Применяется к: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server (Semi-annual Channel).
+> Применяется к: Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Vista, Windows Server 2019, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2, Windows Server 2008 R2, Windows Server (Semi-annual Channel).
 
 В этой статье описывается, как использовать Windows Server для развертывания перенаправления папок с помощью автономных файлов на клиентских компьютерах Windows.
 
@@ -83,9 +83,9 @@ ms.locfileid: "83716879"
 7. На странице **Разрешения** щелкните элемент **Настройка разрешений доступа…** . Отобразится диалоговое окно с расширенными параметрами безопасности.
 8. Нажмите кнопку **Отключение наследования**, а затем щелкните элемент **Convert inherited permissions into explicit permission on this object** (Преобразовать наследуемые разрешения для объекта в явные).
 9. Установите разрешения, как описано в таблице 1 и показано на рисунке 1: удалите разрешения для неуказанных групп и учетных записей, а также добавьте специальные разрешения для группы пользователей перенаправления папок, созданной на шаге 1.
-    
+
     ![Установка разрешений для общих перенаправленных папок](media/deploy-folder-redirection/setting-the-permissions-for-the-redirected-folders-share.png)
-    
+
     **Рисунок 1.** Установка разрешений для общих перенаправленных папок
 10. Если вы выбрали профиль **Общий ресурс SMB — дополнительные** , на странице **Свойства управления** установите для параметра "Использование папки" значение **Файлы пользователя** .
 11. Если вы выбрали профиль **Общий ресурс SMB — дополнительные** , на странице **Квота** вы можете при необходимости выбрать квоту, которая будет распространяться на пользователей общего ресурса.
@@ -95,7 +95,6 @@ ms.locfileid: "83716879"
 
 | Учетная запись пользователя  | Доступ  | Область применения  |
 | --------- | --------- | --------- |
-| Учетная запись пользователя | Доступ | Область применения |
 | Система     | Полный доступ        |    Данная папка, вложенные папки и файлы     |
 | Администраторы     | Полный доступ       | Только эта папка        |
 | Создатель/владелец     |   Полный доступ      |   Только вложенные папки и файлы      |
@@ -117,11 +116,11 @@ ms.locfileid: "83716879"
 7. В разделе **Фильтрация ограничений безопасности** щелкните элемент **Добавить**.
 8. В диалоговом окне **Select User, Computer, or Group** (Выбор пользователей, компьютеров или групп) укажите имя группы безопасности, которую вы создали на шаге 1 (например, **Пользователи перенаправления папок**), а затем нажмите кнопку **OК**.
 9. Перейдите на вкладку **Делегирование**, намите кнопку **Добавить**, введите **Прошедшие проверку**, нажмите кнопку **ОК**, а затем снова нажмите **ОК**, чтобы применить разрешения на чтение по умолчанию.
-    
+
     Этот шаг необходим из-за изменений в системе безопасности, внесенных в [MS16-072](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016).
 
 > [!IMPORTANT]
-> В связи с этим необходимо предоставить группе [Прошедшие проверку](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016) делегированные разрешения на чтение GPO перенаправления папок. В противном случае GPO не будет применен к пользователям или, если уже применен, GPO будет удален, а перенаправленные папки вернутся на локальный компьютер. Дополнительные сведения об изменениях в развертывании GPO, внесенных в MS16-072, см. [здесь](https://blogs.technet.microsoft.com/askds/2016/06/22/deploying-group-policy-security-update-ms16-072-kb3163622/).
+> В связи с этим необходимо предоставить группе [Прошедшие проверку](https://support.microsoft.com/help/3163622/ms16-072-security-update-for-group-policy-june-14-2016) делегированные разрешения на чтение GPO перенаправления папок. В противном случае GPO не будет применен к пользователям или, если уже применен, GPO будет удален, а перенаправленные папки вернутся на локальный компьютер. Дополнительные сведения об изменениях в развертывании GPO, внесенных в MS16-072, см. [здесь](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/deploying-group-policy-security-update-ms16-072-kb3163622/ba-p/400434).
 
 ## <a name="step-4-configure-folder-redirection-with-offline-files"></a>Шаг 4. Настройка перенаправления папок с помощью автономных файлов
 
@@ -165,7 +164,7 @@ ms.locfileid: "83716879"
 
 1. Войдите в систему на основном компьютере (если вы включили поддержку основного компьютера) при помощи учетной записи пользователя, для которого вы настроили перенаправление папок.
 2. Если пользователь уже вошел в систему, откройте командную строку с повышенными привилегиями и введите нижеприведенную команду, чтобы убедиться, что на компьютере используются последние настройки групповой политики.
-    
+
     ```PowerShell
     gpupdate /force
     ```
@@ -201,4 +200,4 @@ ms.locfileid: "83716879"
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md) (Включение расширенных функциональных возможностей автономных файлов)
 * [Microsoft's Support Statement Around Replicated User Profile Data](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>) (Загрузка неопубликованных приложений с помощью DISM)
-* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://msdn.microsoft.com/library/windows/desktop/hh973484.aspx) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)
+* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)
