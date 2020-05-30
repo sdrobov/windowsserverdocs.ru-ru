@@ -1,6 +1,6 @@
 ---
-title: Запуск Logman | позиции
-description: Справочный раздел по * * * *-
+title: останавливаются запуск и Logman
+description: Справочный раздел по командам Logman Start и Logman Stop, который запускает сборщик данных и устанавливает время начала вручную или останавливает группу сборщиков данных и устанавливает для времени окончания значение вручную.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,39 +9,47 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 68f570d99d4b3eaa818c9fbdcce76c42d1cb12d4
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: db0111c4f58f0a28ad76affd3e4d8e24d4a927c2
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82724346"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222919"
 ---
-# <a name="logman-start--stop"></a>Запуск Logman | позиции
+# <a name="logman-start-and-logman-stop"></a>останавливаются запуск и Logman
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-запустите сборщик данных и задайте время начала вручную или закройте группу сборщиков данных и задайте для параметра время окончания значение вручную.  
+Команда **Logman Start** запускает сборщик данных и устанавливает время начала вручную. Команда **Logman Stop** останавливает группу сборщиков данных и устанавливает время окончания вручную.
 
-## <a name="syntax"></a>Синтаксис  
-```  
-logman start <[-n] <name>> [options]  
-logman stop <[-n] <name>> [options]  
-```  
-### <a name="parameters"></a>Параметры  
+## <a name="syntax"></a>Синтаксис
 
-|     Параметр      |                                 Описание                                  |
-|--------------------|------------------------------------------------------------------------------|
-|         -?         |                       Отображает контекстную справку.                       |
-| -s<computer name> |            Выполните команду на указанном удаленном компьютере.             |
-|  -config <value>   |           Указывает файл параметров, содержащий параметры команды.            |
-|    [-n]<name>     |                          Имя целевого объекта.                          |
-|        -ETS        | Отправка команд в сеансы трассировки событий напрямую без сохранения или планирования. |
-|        — как         |               Выполнение запрошенной операции в асинхронном режиме.                |
+```
+logman start <[-n] <name>> [options]
+logman stop <[-n] <name>> [options]
+```
 
-## <a name="examples"></a>Примеры  
-Следующая команда запускает сборщик данных perf_log на удаленном компьютере server_1.  
-```  
-logman start perf_log -s server_1  
-```  
-## <a name="additional-references"></a>Дополнительные ссылки  
-[logman](logman.md)  
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+| --------- | ----------- |
+| -s`<computer name>` | Выполните команду на указанном удаленном компьютере. |
+| -config`<value>` | Указывает файл параметров, содержащий параметры команды. |
+| [-n]`<name>` | Задает имя целевого объекта. |
+| -ETS | Отправляет команды в сеансы трассировки событий напрямую, без сохранения или планирования. |
+| — как | Выполняет запрошенную операцию асинхронно. |
+| -? | Отображает контекстную справку. |
+
+### <a name="examples"></a>Примеры
+
+Чтобы запустить сборщик данных *perf_log*, на удаленном компьютере *server_1*введите:
+
+```
+logman start perf_log -s server_1
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [команда logman](logman.md)

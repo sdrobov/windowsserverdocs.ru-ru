@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d84dd52dd9d2d8ca45dc42df88a59cd4c16b54c
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 10d19f6c86d09c698a6871ae0f0e530c5189c0ca
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820484"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222828"
 ---
 # <a name="logman-create-alert"></a>создать оповещение Logman
 
@@ -58,7 +58,7 @@ logman create alert <[-n] <name>> [options]
 | -[-] коне`<argument>` | Указывает аргументы задачи, которые будут использоваться с задачей, заданной с помощью-тн. |
 | /? | Отображает контекстную справку. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Где [-] присутствует, Добавление дополнительного дефиса (-) инвертирует параметр.
 
@@ -77,4 +77,6 @@ logman create alert new_alert -th \Processor(_Total)\% Processor time>50
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [команда logman Update Alert](logman-update-alert.md)
+
+- [команда logman](logman.md)

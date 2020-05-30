@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 60700190146a3a8b84e1121f01d9168196dad888
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 63fd94fb32fe27b48460922818d1a7220f7f5d7a
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820444"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222968"
 ---
 # <a name="logman-create-counter"></a>переlogman создать счетчик
 
@@ -56,7 +56,7 @@ logman create counter <[-n] <name>> [options]
 | -SC`<value>` | Указывает максимальное число выборок, которые должны быть собраны с помощью сборщика данных счетчика производительности. |
 | /? | Отображает контекстную справку. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Где [-] присутствует, Добавление дополнительного дефиса (-) инвертирует параметр.
 
@@ -78,4 +78,6 @@ logman create counter perf_log -c \Processor(_Total)\% Processor time -max 10 -r
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [команда logman Update Counter](logman-update-counter.md)
+
+- [команда logman](logman.md)

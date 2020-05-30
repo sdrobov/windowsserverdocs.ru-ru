@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf9154d2d81f9524e3a168770cd2ed0703703884
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: f479fcdf3db4bb5a61b0cd0724220d27c934872f
+ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820474"
+ms.lasthandoff: 05/30/2020
+ms.locfileid: "84222809"
 ---
 # <a name="logman-create-api"></a>Создание API Logman
 
@@ -59,7 +59,7 @@ logman create api <[-n] <name>> [options]
 | -exe`<value>` | Указывает полный путь к исполняемому файлу для трассировки API. |
 | /? | Отображает контекстную справку. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Где [-] присутствует, Добавление дополнительного дефиса (-) инвертирует параметр.
 
@@ -86,4 +86,6 @@ logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [logman](logman.md)
+- [Команда API обновления Logman](logman-update-api.md)
+
+- [команда logman](logman.md)
