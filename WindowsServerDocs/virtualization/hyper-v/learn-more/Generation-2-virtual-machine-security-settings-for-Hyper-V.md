@@ -47,7 +47,7 @@ ms.locfileid: "80860807"
 
 - [Mitigate threats by using Windows 10 security features](https://docs.microsoft.com/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10) (Устранение рисков с помощью функций безопасности Windows 10).  
 - [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md) (Следует ли создавать виртуальные машины 1-го и 2-го поколения в Hyper-V?).  
-- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) (Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windos).  
+- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) (Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows).  
 
 ## <a name="encryption-support-settings-in-hyper-v-manager"></a>Параметры поддержки шифрования в диспетчере Hyper-V
 
