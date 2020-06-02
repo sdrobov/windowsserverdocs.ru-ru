@@ -1,23 +1,26 @@
 ---
-title: Установка Windows Server Essentials в Mode1 миграции
+title: Установка Windows Server Essentials в режиме миграции
 description: Описание использования Windows Server Essentials
-ms.date: 10/03/2016
+ms.date: 04/29/2020
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: fd7196ac-cfa6-46a5-ba77-6962b47a825e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 977922d8f2af23afc058162e7455ac5099e4325b
-ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
+ms.custom:
+- CI ID 117135
+- CSSTroubleshoot
+ms.openlocfilehash: e1a5efc373b884051b538f3f6cd09fecd34c7e09
+ms.sourcegitcommit: 4894649cc47dfa535306cc334871f81155198f76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404575"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84254707"
 ---
-# <a name="install-windows-server-essentials-in-migration-mode1"></a>Установка Windows Server Essentials в Mode1 миграции
+# <a name="install-windows-server-essentials-in-migration-mode"></a>Установка Windows Server Essentials в режиме миграции
 
->Область применения: Windows Server 2012 Essentials
+> Область применения: Windows Server 2012 Essentials
 
 В сети может быть только один сервер, на котором работает Windows Server Essentials, и этот сервер должен быть контроллером домена для сети.  
   
@@ -71,7 +74,7 @@ ms.locfileid: "83404575"
   
  В следующей таблице перечислены средства, которые помогут выявить проблемы с конечным сервером, сетью и доменом:  
   
-|Инструмент|Описание|  
+|Средство|Описание|  
 |----------|-----------------|  
 |Netdiag|Помогает изолировать проблемы с сетью и подключением. Для получения дополнительных сведений и загрузки см. раздел [Netdiag](https://go.microsoft.com/fwlink/?LinkId=217388).|  
 |Dcdiag.exe|Анализирует состояние контроллеров домена в лесу или на предприятии и сообщает о проблемах, помогая в устранении неполадок. Для получения дополнительных сведений и загрузки см. раздел [Dcdiag](https://go.microsoft.com/fwlink/?LinkId=217389).|  
