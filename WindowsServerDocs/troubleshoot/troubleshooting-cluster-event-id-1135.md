@@ -2,18 +2,16 @@
 title: Устранение проблем с кластером с ИД события 1135
 description: В этой статье описывается, как устранять неполадки при запуске службы кластеров с событием с ИДЕНТИФИКАТОРом 1135.
 ms.date: 05/28/2020
-ms.openlocfilehash: 73357cc5b696a969de82123d3ca2a6fbb36fdc40
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: d59f8b89e89ea7ff42aecd79670465aee8d63524
+ms.sourcegitcommit: 5fac756c2c9920757e33ef0a68528cda0c85dd04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84150462"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306533"
 ---
 # <a name="troubleshooting-cluster-issue-with-event-id-1135"></a>Устранение проблем с кластером с ИД события 1135
 
 Эта статья поможет вам диагностировать и разрешать события с ИДЕНТИФИКАТОРом 1135, которые могут регистрироваться во время запуска служба кластеров в среде отказоустойчивой кластеризации.
-
-В этой статье содержатся сведения о разрешении
 
 ## <a name="start-page"></a>Начальная страница
 
