@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cb5fd0ff432e441900e379d3fe798dbe6aef855f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f43b3052d64c7a5766e014aa47063c7e17a7d2ab
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80816107"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333945"
 ---
 # <a name="update-password-customization"></a>Изменение настройки пароля 
 
@@ -22,9 +22,9 @@ ms.locfileid: "80816107"
   
 Можно настроить страницу обновления пароля, предоставив собственное описание страницы.  
   
-> Для включения страницы обновления паролей перейдите в раздел "Управление AD FS" в области "Конечные точки". Конечная точка для обновления пароля расположена внизу, под заголовком "Прочие" — /adfs/portal/updatepassword/. Включив конечную точку, необходимо перезапустить службу AD FS. Это делается вручную. Затем можно перейти по ссылке https://<fqdn>/adfs/portal/updatepassword/ с присоединенного к рабочему месту устройства, отобразится страница обновления пароля.  
+> Для включения страницы обновления паролей перейдите в раздел "Управление AD FS" в области "Конечные точки". Конечная точка для обновления пароля расположена внизу, под заголовком "Прочие" — /adfs/portal/updatepassword/. Включив конечную точку, необходимо перезапустить службу AD FS. Это делается вручную. Если вы предполагаете использовать внешнюю веб-страницу с паролем для обновления, а при использовании прокси приложения — в том же режиме, его необходимо включить на прокси-сервере (включить на прокси-сервере). Затем можно перейти по ссылке https://<fqdn>/adfs/portal/updatepassword/ с присоединенного к рабочему месту устройства, отобразится страница обновления пароля.  
   
-![update](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
+![обновление](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom5.png)  
   
 ## <a name="customize-the-update-password-page-description"></a>Настройка описания страницы обновления пароля  
 Чтобы настроить описание страницы обновления пароля, используйте следующий командлет и синтаксис Windows PowerShell.  

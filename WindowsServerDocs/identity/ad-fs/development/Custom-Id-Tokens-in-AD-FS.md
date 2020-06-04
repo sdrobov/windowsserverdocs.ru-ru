@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: b9b4e598ae02f8796c61247b8a11ce510ecd9bba
-ms.sourcegitcommit: f829a48b9b0c7b9ed6e181b37be828230c80fb8a
+ms.openlocfilehash: 331e5ff2dbe7f172488543d1d1f5ed0f757cd584
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82173624"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333955"
 ---
 # <a name="customize-claims-to-be-emitted-in-id_token-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Настройте утверждения, которые будут выдаваться в id_token при использовании OpenID Connect Connect или OAuth с AD FS 2016 или более поздней версии.
 
@@ -63,11 +63,11 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
 3. Скопируйте значение **идентификатора клиента** .  Он будет использоваться позже в качестве значения для Ida: ClientId в файле Web. config приложения.
-4. Введите следующую команду для **URI перенаправления:** - **https://localhost:44320/**.  Нажмите кнопку **Добавить**. Щелкните **Далее**.
+4. Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44320/** .  Нажмите кнопку **Добавить**. Щелкните **Далее**.
 
    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
-5. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор** - **https://contoso.com/WebApp**.  Нажмите кнопку **Добавить**. Щелкните **Далее**.  Это значение будет использоваться позже для **Ida: ResourceId** в файле Web. config приложения.
+5. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор**  -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Щелкните **Далее**.  Это значение будет использоваться позже для **Ida: ResourceId** в файле Web. config приложения.
 
    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
@@ -77,42 +77,40 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 
 7. На экране **Настройка разрешений приложения** убедитесь, что выбраны **OpenID Connect** и **Аллатклаимс** , и нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.png)
+   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.PNG)
 
 8. На экране **Сводка** нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.png)
+   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.PNG)
 
 9. На экране **Завершение** нажмите кнопку **Закрыть**.
 10. В AD FS Управление щелкните группы приложений, чтобы получить список всех групп приложений. Щелкните правой кнопкой мыши **адфсссо** и выберите пункт **свойства**. Выберите **адфсссо-Web API** и нажмите кнопку **изменить...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.png)
+    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
 
 11. На экране **Свойства веб-API на адфсссо** выберите вкладку **правила преобразования выдачи** и нажмите кнопку **Добавить правило...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.png)
+    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
 
 12. На странице **мастера добавления правила преобразования утверждений** выберите **Отправить утверждения с помощью настраиваемого правила** из раскрывающегося списка и нажмите кнопку **Далее** .
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.png)
+    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.PNG)
 
 13. На экране **Добавление правила преобразования утверждений** введите **форкустомидтокен** в поле **имя правила утверждения** и следующее правило утверждения в **настраиваемом правиле**. Нажмите кнопку **Готово** .
 
-```
-x:[]
-=> issue(claim=x);
-```
+    ```
+    x:[]
+    => issue(claim=x);
+    ```
 
+    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.PNG)
 
-    ![Client](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.png)
+    > [!NOTE]
+    > Можно также использовать PowerShell для назначения `allatclaims` `openid` областей и.
 
-
-> [!NOTE]
-> Можно также использовать PowerShell для назначения областей `allatclaims` и. `openid`
-
-``` powershell
-Grant-AdfsApplicationPermission -ClientRoleIdentifier "[Client ID from #3 above]" -ServerRoleIdentifier "[Identifier from #5 above]" -ScopeNames "allatclaims","openid"
-```
+    ``` powershell
+    Grant-AdfsApplicationPermission -ClientRoleIdentifier "[Client ID from #3 above]" -ServerRoleIdentifier "[Identifier from #5 above]" -ScopeNames "allatclaims","openid"
+    ```
 
 ### <a name="download-and-modify-the-sample-application-to-emit-custom-claims-in-id_token"></a>Скачайте и измените пример приложения, чтобы выдать пользовательские утверждения в id_token
 
@@ -132,76 +130,76 @@ git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-op
 2. Перестройте приложение, чтобы восстановить все отсутствующие NuGet.
 3. Откройте файл Web. config.  Измените следующие значения, чтобы они выглядели следующим образом:
 
-```xml
-<add key="ida:ClientId" value="[Replace this Client Id from #3 above under section Create and configure an Application Group in AD FS 2016 or later]" />
-<add key="ida:ResourceID" value="[Replace this with the Web API Identifier from #5 above]"  />
-<add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />
-<!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />
-<add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->
-<add key="ida:PostLogoutRedirectUri" value="[Replace this with the Redirect URI from #4 above]" />
-```
+   ```xml
+   <add key="ida:ClientId" value="[Replace this Client Id from #3 above under section Create and configure an Application Group in AD FS 2016 or later]" />
+   <add key="ida:ResourceID" value="[Replace this with the Web API Identifier from #5 above]"  />
+   <add key="ida:ADFSDiscoveryDoc" value="https://[Your ADFS hostname]/adfs/.well-known/openid-configuration" />
+   <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />
+   <add key="ida:AADInstance" value="https://login.microsoftonline.com/{0}" />-->
+   <add key="ida:PostLogoutRedirectUri" value="[Replace this with the Redirect URI from #4 above]" />
+   ```
 
-    ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_2.PNG)
+   ![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_2.png)
 
 4. Откройте файл Startup.Auth.cs и внесите следующие изменения:
 
-- Настройте логику инициализации по промежуточного слоя OpenID Connect Connect со следующими изменениями:
+   - Настройте логику инициализации по промежуточного слоя OpenID Connect Connect со следующими изменениями:
 
-```cs
-private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
-//private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
-//private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
-private static string metadataAddress = ConfigurationManager.AppSettings["ida:ADFSDiscoveryDoc"];
-private static string resourceId = ConfigurationManager.AppSettings["ida:ResourceID"];
-private static string postLogoutRedirectUri = ConfigurationManager.AppSettings["ida:PostLogoutRedirectUri"];
-```
+      ```cs
+      private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
+      //private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
+      //private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
+      private static string metadataAddress = ConfigurationManager.AppSettings["ida:ADFSDiscoveryDoc"];
+      private static string resourceId = ConfigurationManager.AppSettings["ida:ResourceID"];
+      private static string postLogoutRedirectUri = ConfigurationManager.AppSettings["ida:PostLogoutRedirectUri"];
+      ```
 
-- Закомментируйте следующее:
+   - Закомментируйте следующее:
 
-```cs
-//string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
-```
+      ```cs
+      //string Authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
+      ```
 
-    ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_3.PNG)
+      ![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_3.png)
 
-- Далее измените параметры по промежуточного слоя OpenID Connect Connect следующим образом:
+   - Далее измените параметры по промежуточного слоя OpenID Connect Connect следующим образом:
 
-```cs
-app.UseOpenIdConnectAuthentication(
-    new OpenIdConnectAuthenticationOptions
-    {
-        ClientId = clientId,
-        //Authority = authority,
-        Resource = resourceId,
-        MetadataAddress = metadataAddress,
-        PostLogoutRedirectUri = postLogoutRedirectUri,
-        RedirectUri = postLogoutRedirectUri
-```
+      ```cs
+      app.UseOpenIdConnectAuthentication(
+          new OpenIdConnectAuthenticationOptions
+          {
+              ClientId = clientId,
+              //Authority = authority,
+              Resource = resourceId,
+              MetadataAddress = metadataAddress,
+              PostLogoutRedirectUri = postLogoutRedirectUri,
+              RedirectUri = postLogoutRedirectUri
+      ```
 
-    ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_4.PNG)
+      ![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_4.png)
 
 5. Откройте файл HomeController.cs и внесите следующие изменения:
 
-- Добавьте следующий код:
+   - Добавьте следующий код:
 
-```cs
-using System.Security.Claims;
-```
+      ```cs
+      using System.Security.Claims;
+      ```
 
-- Обновите `About()` метод, как показано ниже.
+   - Обновите `About()` метод, как показано ниже.
 
-```cs
-[Authorize]
-public ActionResult About()
-{
-    ClaimsPrincipal cp = ClaimsPrincipal.Current;
-    string userName = cp.FindFirst(ClaimTypes.WindowsAccountName).Value;
-    ViewBag.Message = String.Format("Hello {0}!", userName);
-    return View();
-}
-```
+      ```cs
+      [Authorize]
+      public ActionResult About()
+      {
+          ClaimsPrincipal cp = ClaimsPrincipal.Current;
+          string userName = cp.FindFirst(ClaimTypes.WindowsAccountName).Value;
+          ViewBag.Message = String.Format("Hello {0}!", userName);
+          return View();
+      }
+      ```
 
-    ![AD FS OpenID](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_5.PNG)
+      ![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_5.png)
 
 ### <a name="test-the-custom-claims-in-id-token"></a>Тестирование пользовательских утверждений в маркере идентификации
 
@@ -215,11 +213,11 @@ public ActionResult About()
 
 После успешного выполнения этой операции вы увидите, что вы вошли в.
 
-![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_8.PNG)
+![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_8.png)
 
 Щелкните ссылку О программе . Вы увидите "Hello [username]", полученный из утверждения имени пользователя в маркере идентификации
 
-![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_9.PNG)
+![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_9.png)
 
 ## <a name="next-steps"></a>Next Steps
 

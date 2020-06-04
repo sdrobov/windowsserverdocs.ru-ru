@@ -8,12 +8,12 @@ ms.prod: windows-server
 ms.assetid: 70f279bf-aea1-4f4f-9ab3-e9157233e267
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: e9488357eecb4a2093d6989e4ebfcc195ce68567
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 090e5c9ffbbaaa6720eb8e938019c08baff681cf
+ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80854007"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84333935"
 ---
 # <a name="upgrading-to-ad-fs-in-windows-server-2016-with-sql-server"></a>Обновление до AD FS в Windows Server 2016 с SQL Server
 
@@ -45,7 +45,7 @@ ms.locfileid: "80854007"
 
 На схеме архитектуры показана программа установки, которая использовалась для проверки и записи описанных ниже действий.
 
-![Архитектура](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png)
+![Architecture](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/arch.png)
 
 
 #### <a name="join-the-windows-2016-ad-fs-server-to-the-ad-fs-farm"></a>Присоединение сервера AD FS Windows 2016 к ферме AD FS
@@ -53,12 +53,12 @@ ms.locfileid: "80854007"
 1.  С помощью диспетчер сервера установите роль службы федерации Active Directory (AD FS) на Windows Server 2016  
 
 2.  С помощью мастера настройки AD FS присоедините новый сервер Windows Server 2016 к существующей ферме AD FS.  На экране **приветствия** нажмите кнопку **Далее**.
- ![присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)  
+ ![Присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure1.png)  
 3.  На экране **Подключение к домен Active Directory службам** **адайте учетную запись администратора** с разрешениями на выполнение настройки служб федерации и нажмите кнопку **Далее**.
 4.  На экране **Укажите ферму** введите имя сервера и экземпляра SQL Server, а затем нажмите кнопку **Далее**.
-![присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
+![Присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure3.png)
 5.  На экране **Указание SSL-сертификата** укажите сертификат и нажмите кнопку **Далее**.
-![присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
+![Присоединение к ферме](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/configure4.png)
 6.  На экране **Укажите учетную запись службы** укажите учетную запись службы и нажмите кнопку **Далее**.
 7.  На экране **Параметры проверки** проверьте параметры и нажмите кнопку **Далее**.
 8.  На экране **проверки предварительных требований** убедитесь, что все проверки готовности пройдены, и нажмите кнопку **настроить**.
@@ -71,11 +71,11 @@ ms.locfileid: "80854007"
 >При использовании SQL в качестве базы данных не нужно задавать основной сервер AD FS с помощью инструкции SET-Адфссинкпропертиес-Role.  Это связано с тем, что все узлы считаются первичными в этой конфигурации.
 
 1.  На AD FS сервере Windows Server 2012 R2 в диспетчер сервера используйте команду **Удалить роли и компоненты** в разделе **Управление**.
-![удалить](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png) сервера
+![Удалить сервер](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove1.png)
 2.  На странице **Приступая к работе** нажмите кнопку **Далее**.
 3.  На экране **выбора сервера** нажмите кнопку **Далее**.
 4.  На экране **роли сервера** удалите флажок рядом с **службы федерации Active Directory (AD FS)** и нажмите кнопку **Далее**.
-![удалить](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove2.png) сервера
+![Удалить сервер](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/remove2.png)
 5.  На экране **компонентов** нажмите кнопку **Далее**.
 6.  На экране **подтверждения** нажмите кнопку **Удалить**.
 7.  После завершения этой работы перезапустите сервер.
@@ -84,13 +84,13 @@ ms.locfileid: "80854007"
 Перед этим шагом необходимо убедиться в том, что forestprep и domainprep были запущены в среде Active Directory и что Active Directory имеет схему Windows Server 2016.  Этот документ запущен с контроллером домена Windows 2016 и не требует запуска, поскольку они были запущены при установке AD.
 
 >[!NOTE]
->Прежде чем начать процесс, убедитесь, что Windows Server 2016 является актуальным, запустив Центр обновления Windows из параметров.  Продолжайте этот процесс, пока не перестанут требоваться обновления.
+>Прежде чем начать процесс, убедитесь, что Windows Server 2016 является актуальным, запустив Центр обновления Windows из параметров.  Продолжайте этот процесс, пока не перестанут требоваться обновления. Кроме того, убедитесь, что учетная запись учетной записи службы ADFS имеет административные разрешения на сервере SQL Server и на каждом сервере в ферме ADFS.
 
 1. Теперь на сервере Windows Server 2016 откройте PowerShell и выполните следующую команду: **$cred = Get-Credential** и нажмите клавишу ВВОД.
 2. Введите учетные данные, имеющие права администратора на SQL Server.
 3. Теперь в PowerShell введите следующую команду: **Invoke-адфсфармбехавиорлевелраисе-Credential $CRED**
 2. При появлении запроса введите **Y**.  Это начнет повышать уровень.  После завершения этого процесса вы успешно вызвали ФБЛ.  
-![завершить обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
+![Завершить обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish1.png)
 3. Теперь, если вы переходите к AD FS управления, вы увидите новые узлы, добавленные для AD FS в Windows Server 2016.  
 4. Аналогичным образом можно использовать PowerShell командлет: Get-Адфсфарминформатион, чтобы отобразить текущую ФБЛ.  
 ![Завершить обновление](media/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL/finish2.png)
