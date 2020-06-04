@@ -1,6 +1,6 @@
 ---
 title: mqtgsvc
-description: Справочный раздел по * * * *-
+description: Справочный раздел о команде мктгсвк, которая наблюдает за очередью входящих сообщений и выполняет действие в виде исполняемого файла или компонента COM, когда правила триггера оцениваются как истинные.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,29 +9,25 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca75ea9fca34a5803db8f05b37e5aef226b2fb33
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 70937c4918b2b01425417368bfa347bd02e5bf22
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820804"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354415"
 ---
 # <a name="mqtgsvc"></a>mqtgsvc
 
-
-
-Наблюдает за очередью входящих сообщений и выполняет действие в виде исполняемого файла или COM-компонента, когда правила триггера оцениваются как истинные. Примеры использования службы триггеров очереди сообщений см. в статье [Триггеры очереди сообщений](https://go.microsoft.com/fwlink/?LinkId=248725)на сайте MSDN.
+Наблюдает за очередью входящих сообщений и выполняет действие в виде исполняемого файла или COM-компонента, когда правила триггера оцениваются как истинные. Примеры использования службы триггеров очереди сообщений см. в разделе [Триггеры очереди сообщений](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms703197(v=vs.85)).
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Mqtgsvc.exe
+mqtgsvc.exe
 ```
-
-#### <a name="parameters"></a>Параметры
-
-None
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Справочник по MSMQ PowerShell](https://docs.microsoft.com/powershell/module/msmq/?view=win10-ps)

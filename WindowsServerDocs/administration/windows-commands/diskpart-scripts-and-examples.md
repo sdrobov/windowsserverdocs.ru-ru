@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f3e781e49aa978288de45da90224a3f1c2b247b1
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 546f867b2cde199f54975a127b0faf11130996d2
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992491"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354674"
 ---
 # <a name="diskpart-scripts-and-examples"></a>сценарии и примеры для DiskPart
 
@@ -22,7 +22,7 @@ ms.locfileid: "82992491"
 
 Используется `diskpart /s` для выполнения сценариев, автоматизирующих задачи, связанные с дисками, например для создания томов или преобразования дисков в динамические диски. Написание сценариев этих задач полезно при развертывании Windows с помощью автоматической установки или средства Sysprep, которые не поддерживают создание томов, отличных от загрузочного тома.
 
-Чтобы создать сценарий DiskPart, создайте текстовый файл, содержащий команды DiskPart, которые необходимо выполнить, с одной командой в строке и без пустых строк. Чтобы сделать строку комментарием, `rem` можно начать с строки. Например, Вот сценарий, который очищает диск, а затем создает раздел 300 МБ для среды восстановления Windows:
+Чтобы создать сценарий DiskPart, создайте текстовый файл, содержащий команды DiskPart, которые необходимо выполнить, с одной командой в строке и без пустых строк. `rem`Чтобы сделать строку комментарием, можно начать с строки. Например, Вот сценарий, который очищает диск, а затем создает раздел 300 МБ для среды восстановления Windows:
 
     ```
     select disk 0
@@ -57,8 +57,8 @@ ms.locfileid: "82992491"
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Пример. Настройка разделов\/жесткого\-диска на основе UEFI с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
+- [Пример. Настройка разделов жесткого диска на основе UEFI и GPT с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
 
-- [Пример. Настройка разделов\/жесткого\-диска на основе MBR BIOS с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
+- [Пример. Настройка разделов жесткого диска на основе BIOS/MBR с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
 - [Командлеты хранилищ в Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/?view=win10-ps)

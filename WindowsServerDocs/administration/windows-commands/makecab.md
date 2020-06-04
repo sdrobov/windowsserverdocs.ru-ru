@@ -9,18 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f3d5e778ee78d812a3ec8c3683b01e0b304a127e
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 192471e6045a530e9deedec70cc957b9362b3ae7
+ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992342"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84354664"
 ---
 # <a name="makecab"></a>makecab
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Упакуйте существующие файлы в CAB-файл. Эта команда выполняет те же действия, что и команда **диантз** .
+Упакуйте существующие файлы в CAB-файл.
+
+
+> [!NOTE]
+> Эта команда аналогична [команде диантз](diantz.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,11 +42,13 @@ makecab [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 | /f `<directives_file>` | Файл с директивами **makecab** (может повторяться). |
 | /d var =`<value>` | Определяет переменную с указанным значением. |
 | /l`<dir>` | Расположение для размещения назначения (по умолчанию текущий каталог). |
-| /v [`<n>`] | Задать уровень детализации отладки (0 = нет,..., 3 = полный). |
+| /v [ `<n>` ] | Задать уровень детализации отладки (0 = нет,..., 3 = полный). |
 | /? | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда диантз](diantz.md)
 
 - [Формат CAB-файла Microsoft](https://docs.microsoft.com/previous-versions/bb417343(v=msdn.10))
