@@ -7,17 +7,21 @@ ms.technology: server-general
 author: kaushika-msft
 ms.author: kaushika-msft; v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a550ddd72dcdf8c1967fe4740dc0fe5f2ad93e7
-ms.sourcegitcommit: df94dac422d13566c32e1cdb8c6e7a4e82747947
+ms.custom:
+- CI ID 116803
+- CSSTroubleshoot
+manager: dcscontentpm
+ms.openlocfilehash: fe07636908dffc6bb59c544d512b132e7640bf51
+ms.sourcegitcommit: 75b4cf49dd918ff98258dcae6e6e8d7825c9adec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84205635"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84269225"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Устранение неполадок по коду ошибки активации Windows
 
-> **Пользователям домашних ПК**  
-> Эта статья предназначена для агентов службы поддержки и ИТ-специалистов. Если вам нужны дополнительные сведения о сообщениях об ошибках активации Windows, см. статью [Справка по ошибкам активации Windows](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  
+> [!NOTE]  
+> Эта статья предназначена для агентов технической поддержки и ИТ-специалистов. Если вам нужны дополнительные сведения о сообщениях об ошибках активации Windows, см. статью [Справка по ошибкам активации Windows](https://support.microsoft.com/help/10738/windows-10-get-help-with-activation-errors).  
 
 В этой статье приводятся сведения по устранению ошибок, которые могут возникнуть при попытке использовать ключ многократной активации (MAK) или службы управления ключами (KMS) для активации корпоративных лицензий на компьютерах с Windows. Найдите код ошибки в таблице ниже, а затем щелкните ссылку, чтобы просмотреть подробные сведения об ошибке с таким кодом и способах ее устранения.
 
@@ -28,6 +32,10 @@ ms.locfileid: "84205635"
 Дополнительные сведения об активации корпоративных лицензий для более ранних версий Windows (Windows Vista, Windows Server 2008, Windows Server 2008 R2 и Windows 7) см. в  [статье базы знаний № 929712](https://support.microsoft.com/help/929712/volume-activation-information-for-windows-vista-windows-server-2008-wi).
 
 ## <a name="diagnostic-tool"></a>Средство диагностики
+
+> [!NOTE]  
+> Этот инструмент предназначен для устранения проблем с активацией Windows на компьютерах под управлением операционной системы Windows Корпоративная, Windows Профессиональная или Windows Server.
+
 
 Служба поддержки Майкрософт и помощник по восстановлению (SaRA) упрощают устранение неполадок при активации Windows KMS. [Скачайте средство диагностики](https://aka.ms/SaRA-WindowsActivation).
 
