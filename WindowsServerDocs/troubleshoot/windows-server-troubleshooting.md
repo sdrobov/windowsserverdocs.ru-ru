@@ -6,12 +6,12 @@ ms.technology: server-general
 ms.date: 1/24/2020
 author: kaushika-msft
 ms.author: kaushika
-ms.openlocfilehash: e5fdae6e005adf6ea221fb3c2bf3ea09bfbfb03a
-ms.sourcegitcommit: 5c93c685dca3cafeea916cedcc0f915c528484ca
+ms.openlocfilehash: f3012f499e67f73ec9e8ab20b24df122492ea0ea
+ms.sourcegitcommit: fa9a8badf4eb366aeeca7d2905e2cad711ee8dae
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "81119258"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84714906"
 ---
 # <a name="troubleshooting-windows-server-components"></a>Устранение неполадок компонентов Windows Server
 
@@ -34,19 +34,19 @@ ms.locfileid: "81119258"
 - [Известные проблемы с активацией MAK](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-mak-issues)
 - [Рекомендации по устранению проблем с активацией, связанных с DNS](https://docs.microsoft.com/windows-server/get-started/common-troubleshooting-procedures-kms-dns)
 - [Перестроение файла Tokens.dat](https://docs.microsoft.com/windows-server/get-started/activation-rebuild-tokens-dat-file)
-- [Устранение неполадок клиентов АДБА](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-adba-clients)
+- [Устранение неполадок клиентов ADBA](https://docs.microsoft.com/windows-server/get-started/activation-troubleshoot-adba-clients)
 
 ## <a name="troubleshoot-startup-and-restart"></a>Устранение неполадок при запуске и перезапуске
 
-- [Расширенное устранение неполадок при запуске Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
-- [Как определить соответствующий размер файла подкачки для 64-разрядных версий Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
+- [Дополнительные способы устранения неполадок загрузки Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-startup)
+- [Как определить размер файла подкачки для 64-разрядных версий Windows](https://docs.microsoft.com/windows/client-management/determine-appropriate-page-file-size)
 - [Создание ядра или завершение аварийного дампа](https://docs.microsoft.com/windows/client-management/generate-kernel-or-complete-crash-dump)
 - [Общие сведения о файле подкачки](https://docs.microsoft.com/windows/client-management/introduction-page-file)
 - [Настройка параметров системного сбоя и восстановления в Windows](https://docs.microsoft.com/windows/client-management/system-failure-recovery-options)
-- [Расширенное устранение неполадок при загрузке Windows](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
-- [Расширенное устранение неполадок при замораживании компьютера под управлением Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
-- [Расширенное устранение неполадок при фатальной ошибке или на синем экране](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
-- [Расширенное устранение неполадок для ошибки "ошибка" 7B или Inaccessible_Boot_Device](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
+- [Дополнительные способы устранения неполадок при загрузке Windows](https://docs.microsoft.com/windows/client-management/advanced-troubleshooting-boot-problems)
+- [Дополнительные способы устранения проблем с зависанием компьютера с Windows](https://docs.microsoft.com/windows/client-management/troubleshoot-windows-freeze)
+- [Дополнительные способы устранения STOP-ошибок или ошибок типа "синий экран"](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-errors)
+- [Дополнительные способы устранения STOP-ошибки 7B или ошибки типа "Inaccessible_Boot_Device"](https://docs.microsoft.com/windows/client-management/troubleshoot-inaccessible-boot-device)
 - [Расширенное устранение неполадок для события с ИДЕНТИФИКАТОРом 41 "система была перезагружена без аккуратного завершения работы"](https://docs.microsoft.com/windows/client-management/troubleshoot-event-id-41-restart)
 - [При обновлении драйвера сетевого адаптера Broadcom появляется сообщение о фатальной ошибке](https://docs.microsoft.com/windows/client-management/troubleshoot-stop-error-on-broadcom-driver-update)
 
@@ -63,7 +63,7 @@ ms.locfileid: "81119258"
 
 ## <a name="troubleshoot-ad-fs"></a>Устранение неполадок AD FS
 
-- [Устранение неполадок AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview)
+- [Устранение неполадок в службах федерации Active Directory](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-overview)
 - [AD FS устранение неполадок — аудит событий и ведение журнала](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-logging)
 - [Устранение неполадок AD FS. Подключение SQL](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-sql)
 - [Устранение неполадок AD FS — выдача утверждений](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-issuance)
@@ -74,7 +74,7 @@ ms.locfileid: "81119258"
 - [AD FS устранение неполадок — правила утверждений](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-claims-rules)
 - [Устранение неполадок AD FS — встроенная проверка подлинности Windows](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-iwa)
 - [Устранение неполадок AD FS в Azure AD](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-tshoot-azure)
-- [ВОПРОСЫ И ОТВЕТЫ ПО AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/overview/ad-fs-faq)
+- [Вопросы и ответы по AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/overview/ad-fs-faq)
 - [Анализатор данных диагностики справки AD FS](https://docs.microsoft.com/windows-server/identity/ad-fs/troubleshooting/ad-fs-diagnostics-analyzer)
 
 ## <a name="troubleshoot-aovpn"></a>Устранение неполадок Аовпн
@@ -87,7 +87,7 @@ ms.locfileid: "81119258"
 
 ## <a name="troubleshoot-dfsr"></a>Устранение неполадок DFSR
 
-- [Репликация DFS: часто задаваемые вопросы](https://docs.microsoft.com/windows-server/storage/dfs-replication/dfsr-faq)
+- [Репликация DFS. Вопросы и ответы](https://docs.microsoft.com/windows-server/storage/dfs-replication/dfsr-faq)
 
 ## <a name="troubleshoot-directaccess"></a>Устранение неполадок DirectAccess
 
@@ -108,6 +108,19 @@ ms.locfileid: "81119258"
 
 - [Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows](https://docs.microsoft.com/windows-server/failover-clustering/troubleshooting-using-wer-reports)
 - [Часто задаваемые вопросы об обновлении с поддержкой кластера](https://docs.microsoft.com/windows-server/failover-clustering/cluster-aware-updating-faq)
+- [Устранение проблем с кластером с ИД события 1135](https://docs.microsoft.com/windows-server/troubleshoot/troubleshooting-cluster-event-id-1135)
+- [Возникла проблема с узлами, удаляемыми из активного членства отказоустойчивого кластера](https://docs.microsoft.com/windows-server/troubleshoot/problem-nodes-failover-cluster)
+- [Узлы, удаляемые из состава отказоустойчивого кластера в VMWare ESX](https://docs.microsoft.com/windows-server/troubleshoot/nodes-failover-cluster-vmware)
+- [IaaS with SQL AlwaysOn - Tuning Failover Cluster Network Thresholds](https://docs.microsoft.com/windows-server/troubleshoot/iaas-sql-failover-cluster) (IaaS с SQL AlwaysOn — настройка пороговых значений сети отказоустойчивого кластера)
+
+## <a name="troubleshoot-dhcp"></a>Устранение неполадок DHCP
+
+- [Руководство по устранению неполадок для протокола DHCP](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-dhcp-issue)
+- [Основы DHCP (протокол динамического конфигурирования узлов)](https://docs.microsoft.com/windows-server/troubleshoot/dynamic-host-configuration-protocol-basics)
+- [Общие рекомендации по устранению неполадок с DHCP](https://docs.microsoft.com/windows-server/troubleshoot/general-guidance-to-troubleshoot-dhcp)
+- [Использование автоматической адресации TCP/IP без DHCP-сервера](https://docs.microsoft.com/windows-server/troubleshoot/how-to-use-automatic-tcpip-addressing-without-a-dh)
+- [Устранение неполадок на клиенте DHCP](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-client)
+- [Устранение неполадок на сервере DHCP](https://docs.microsoft.com/windows-server/troubleshoot/troubleshoot-problems-on-dhcp-server)
 
 ## <a name="troubleshoot-fsrm"></a>Устранение неполадок в FSRM
 
@@ -149,7 +162,7 @@ ms.locfileid: "81119258"
 - [Локальные дисковые пространства-часто задаваемые вопросы](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-faq)
 - [Локальные дисковые пространства работоспособности и операционные состояния](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-states)
 - [Сбор диагностических данных с помощью Локальные дисковые пространства](https://docs.microsoft.com/windows-server/storage/storage-spaces/data-collection)
-- [Управление работоспособностью памяти класса хранилища (NVDIMM-N) в Windows](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-class-memory-health)
+- [Управление работоспособностью памяти хранилища (NVDIMM-N) в Windows](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-class-memory-health)
 
 ## <a name="troubleshoot-sdn"></a>Устранение неполадок SDN
 
@@ -187,7 +200,7 @@ ms.locfileid: "81119258"
 
 ## <a name="troubleshoot-user-profiles"></a>Устранение неполадок профилей пользователей
 
-- [Устранение неполадок профилей пользователей с событиями](https://docs.microsoft.com/windows-server/storage/folder-redirection/troubleshoot-user-profiles-events)
+- [Устранение проблем с профилями пользователей с помощью событий](https://docs.microsoft.com/windows-server/storage/folder-redirection/troubleshoot-user-profiles-events)
 
 ## <a name="troubleshoot-vrss"></a>Устранение неполадок vRSS
 
@@ -199,6 +212,6 @@ ms.locfileid: "81119258"
 
 ## <a name="troubleshoot-windows-admin-center"></a>Устранение неполадок в Windows Admin Center
 
-- [Общие инструкции по устранению неполадок в центре администрирования Windows](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/troubleshooting)
-- [Известные проблемы центра администрирования Windows](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/known-issues)
-- [Центр администрирования Windows — часто задаваемые вопросы](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/faq)
+- [Windows Admin Center: общие действия по устранению неполадок](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/troubleshooting)
+- [Windows Admin Center — известные проблемы](https://docs.microsoft.com/windows-server/manage/windows-admin-center/support/known-issues)
+- [Вопросы и ответы: Windows Admin Center](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/faq)
