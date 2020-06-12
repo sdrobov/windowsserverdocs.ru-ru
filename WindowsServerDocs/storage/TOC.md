@@ -31,6 +31,8 @@
 ### [Перенос репликации SYSVOL в репликацию DFS](dfs-replication/migrate-sysvol-to-dfsr.md)
 ### [Использование robocopy с целью предварительного заполнения файлов для репликации DFS](dfs-replication/preseed-dfsr-with-robocopy.md)
 ### [Репликация DFS. Вопросы и ответы](dfs-replication/dfsr-faq.md)
+### [Как определить минимальную область промежуточного хранения, которая требуется службе репликации DFS (DFSR) для реплицированной папки](../troubleshoot/how-to-determine-the-minimum-staging-area-dfsr-needs-for-a-replicated-folder.md)
+### [Основные сведения об отсутствии механизма блокировки файлов, распределенных по серверам, в DFSR](../troubleshoot/understanding-the-lack-of-distributed-file-locking-in-dfsr.md)
 ## [Управление дисками](disk-management/overview-of-disk-management.md)
 ## [Файловый сервер и SMB](file-server/file-server-smb-overview.md)
 ### [SMB Direct](file-server/smb-direct.md)
