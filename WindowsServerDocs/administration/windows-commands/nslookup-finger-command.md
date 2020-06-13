@@ -1,6 +1,6 @@
 ---
-title: nslookup finger Command
-description: Справочный раздел по * * * *-
+title: nslookup Finger
+description: Справочный раздел по команде nslookup Finger, который подключается к серверу finger на текущем устройстве.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,32 +9,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 428c9e7e775c85992f861e30ae9628ea27f7ee70
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6341e7297ea661fd9afd4f4b0bb5048d82099b94
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723723"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721497"
 ---
-# <a name="nslookup-finger-command"></a>nslookup finger Command
+# <a name="nslookup-finger"></a>nslookup/финжер
 
-
-
-Подключается к серверу finger на текущем компьютере.
+Подключается к серверу finger на текущем устройстве.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-finger [<UserName>] [{[>] <FileName>|[>>] <FileName>}]
+finger [<username>] [{[>] <filename> | [>>] <filename>}]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|  Параметр  |                                                                               Описание                                                                               |
-|-------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<Имя пользователя> |                                                               Указывает имя пользователя для поиска.                                                                |
-| \<Имя файла> | Указывает имя файла, в котором следует сохранить выходные данные. Чтобы перенаправить выходные данные обычным способом, можно использовать символы больше (>) и Double больше (>>). |
-|    {Справка    |                                                                                   ?}                                                                                    |
+| Параметр | Описание |
+| --------- | ----------- |
+| `<username>` | Указывает имя пользователя для поиска. |
+| `<filename>` | Указывает имя файла, в котором следует сохранить выходные данные. `>` `>>` Чтобы перенаправить выходные данные обычным способом, можно использовать символы больше () и Double больше (). |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

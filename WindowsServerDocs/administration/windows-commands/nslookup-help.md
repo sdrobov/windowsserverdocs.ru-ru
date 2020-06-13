@@ -1,6 +1,6 @@
 ---
 title: nslookup help
-description: Справочный раздел по * * * *-
+description: Справочный раздел команды nslookup Help, в которой отображается содержимое справки по подкомандам.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,33 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5a967d29486d01ddcd44a9316aa3dbecdd7c95d2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1d9cab0becb33993cd6c517e2aa0f1e26b3839e8
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723717"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721477"
 ---
 # <a name="nslookup-help"></a>nslookup help
 
-
-
-Отображает краткую сводку подкоманд **nslookup** .
+Отображает текст справки по подкомандам.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-{help | ?}
+help
+```
+
+```
+?
 ```
 
 ### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
-|-----------|-------------|
-|   {Справка   |     ?}      |
+| --------- | ----------- |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ce18c615d45d4922c8819d30ff47d54328111170
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 3ad664548dce51d7631a6d1a02d628af91e1921f
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222937"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721146"
 ---
 # <a name="logman-import-and-logman-export"></a>Программа Logman Import и Logman Export
 
@@ -25,8 +25,8 @@ ms.locfileid: "84222937"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-logman import <[-n] <name>> <-xml <name>> [options]
-logman export <[-n] <name>> <-xml <name>> [options]
+logman import <[-n] <name> <-xml <name> [options]
+logman export <[-n] <name> <-xml <name> [options]
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -44,7 +44,7 @@ logman export <[-n] <name>> <-xml <name>> [options]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы импортировать XML-файл *к:\виндовс\ perf_log. XML* с компьютера *server_1* как набор сборщиков данных с именем *perf_log*, введите:
+Чтобы импортировать XML-файл *c:\windows\perf_log.xml* с компьютера *server_1* как набор сборщиков данных с именем *perf_log*, введите:
 
 ```
 logman import perf_log -s server_1 -xml c:\windows\perf_log.xml

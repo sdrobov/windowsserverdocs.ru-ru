@@ -1,6 +1,6 @@
 ---
 title: nslookup set root
-description: Справочный раздел по * * * *-
+description: Справочный раздел команды nslookup set root, которая изменяет имя корневого сервера, используемого для запросов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,31 +9,38 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d913669fd4fede06c9983756df1bbf626ca430ac
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1271dbeb0381d01e70380bded82a94ba20163853
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723570"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721457"
 ---
 # <a name="nslookup-set-root"></a>nslookup set root
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Изменяет имя корневого сервера, используемого для запросов.
+
+> [!NOTE]
+> Эта команда поддерживает команду [nslookup root](nslookup-root.md) .
+
 ## <a name="syntax"></a>Синтаксис
+
 ```
-set root=<RootServer>
+set root=<rootserver>
 ```
+
 ### <a name="parameters"></a>Параметры
 
-|    Параметр    |                                   Описание                                    |
-|-----------------|----------------------------------------------------------------------------------|
-|  <RootServer>   | Указывает новое имя для корневого сервера. Значение по умолчанию — ns.nic.ddn.mil. |
-| {Help &#124;?} |              Отображает краткую сводку подкоманд **nslookup** .               |
+| Параметр | Описание |
+| ---------- | ---------- |
+| `<rootserver>` | Указывает новое имя для корневого сервера. Значение по умолчанию — **ns.NIC.DDN.MIL**. |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
-## <a name="remarks"></a>Примечания
-- Подкоманда **set root** влияет на **корневую** подкоманду.
-  ## <a name="additional-references"></a>Дополнительные ссылки
-  - [Command-Line Syntax Key](command-line-syntax-key.md)
-  [Корневой раздел nslookup](nslookup-root.md) синтаксиса командной строки
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [nslookup root](nslookup-root.md)

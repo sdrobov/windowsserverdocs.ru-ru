@@ -1,6 +1,6 @@
 ---
-title: nslookup exit Command
-description: Справочный раздел по * * * *-
+title: выход из nslookup
+description: Справочный раздел команды nslookup Exit, которая выходит из программы командной строки Nslookup.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,30 +9,29 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 25696b5889d4b430586285de1f4d6471f9e28b27
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c233e39d711c37540c30bc64296c6b24b57689c8
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723737"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721487"
 ---
-# <a name="nslookup-exit-command"></a>nslookup exit Command
+# <a name="nslookup-exit"></a>nslookup/Ексит
 
-
-
-Выход из программы **nslookup**.
+Выход из программы командной строки Nslookup.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Nslookup /exit
+nslookup /exit
 ```
 
 ### <a name="parameters"></a>Параметры
 
 | Параметр | Описание |
-|-----------|-------------|
-|   {Справка   |     ?}      |
+| --------- | ----------- |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

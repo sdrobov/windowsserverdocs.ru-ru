@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: d6c47843dedaf45842f70d1bb408b59d63c03eb4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dd2f4c6b6bb17231ac04b3344e9a39df2cad79d0
+ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80815507"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740647"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Как обнаруживать, включать и отключать SMBv1, SMB и SMBv3 в Windows
 
@@ -35,7 +35,7 @@ ms.locfileid: "80815507"
 - Поддержка большого MTU — для полного использования 10-гигабе (ГБ) Ethernet    
 - Повышение эффективности энергопотребления — клиенты, которые имеют открытые файлы на сервере, могут перейти в спящий режим    
 
-В Windows 8, Windows 8.1, Windows 10, Windows Server 2012 и Windows Server 2016 отключение SMBv3 деактивирует следующие функции (а также функции 2.0, описанные в предыдущем списке): 
+В Windows 8, Windows 8.1, Windows 10, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019, отключение SMBv3 деактивирует следующие функции (а также функции 2.0, описанные в предыдущем списке): 
  
 - Прозрачная отработка отказа — клиенты повторно подключаются без прерывания узлов кластера во время обслуживания или отработки отказа    
 - Scale Out — одновременный доступ к общим данным на всех узлах кластеров файлов     
@@ -57,11 +57,11 @@ ms.locfileid: "80815507"
 
 [Новые возможности SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
 
-## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-and-windows-server-2016"></a>Как правильно удалить SMB v1 в Windows 8.1, Windows 10, Windows 2012 R2 и Windows Server 2016
+## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-windows-server-2016-and-windows-server-2019"></a>Как правильно удалить SMB v1 в Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016 и Windows Server 2019
 
-#### <a name="windows-server-2012-r2--2016-powershell-methods"></a>Windows Server 2012 R2 & 2016: методы PowerShell
+#### <a name="powershell-methods"></a>Методы PowerShell
 
-##### <a name="smb-v1"></a>SMB v1
+##### <a name="smb-v1-client-and-server"></a>SMB v1 (клиент и сервер)
 
 - Автоматическое 
 
@@ -75,33 +75,13 @@ ms.locfileid: "80815507"
   Disable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-- Параметр 
+- Включите параметр 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName smb1protocol
   ```
 
-##### <a name="smb-v2v3"></a>SMB V2/V3
-
-- Автоматическое
-  
-  ```PowerShell
-  Get-SmbServerConfiguration | Select EnableSMB2Protocol
-  ```
-
-- Включен
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $false
-  ```
-
-- Параметр
-
-  ```PowerShell
-  Set-SmbServerConfiguration -EnableSMB2Protocol $true 
-  ```
-
-#### <a name="windows-server-2012-r2-and-windows-server-2016-server-manager-method-for-disabling-smb"></a>Windows Server 2012 R2 и Windows Server 2016: диспетчер сервера метод отключения SMB
+#### <a name="windows-server-2012-r2-windows-server-2016-windows-server-2019-server-manager-method-for-disabling-smb"></a>Windows Server 2012 R2, Windows Server 2016, Windows Server 2019: диспетчер сервера метод отключения SMB
 
 ##### <a name="smb-v1"></a>SMB v1
 
@@ -123,13 +103,13 @@ ms.locfileid: "80815507"
   Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-- Параметр 
+- Включите параметр 
 
   ```PowerShell
   Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol
   ```
 
-##### <a name="smb-v2v3protocol"></a>Протокол SMB V2/V3
+##### <a name="smb-v2v3protocol-only-disables-smb-v2v3-server"></a>Протокол SMB V2/V3 (отключается только сервер SMB V2/V3)
 
 - Автоматическое 
   
@@ -143,7 +123,7 @@ ms.locfileid: "80815507"
   Set-SmbServerConfiguration –EnableSMB2Protocol $false
   ```
 
-- Параметр
+- Включите параметр
 
   ```PowerShell
   Set-SmbServerConfiguration –EnableSMB2Protocol $true
@@ -178,7 +158,7 @@ Windows 8 и Windows Server 2012 представляют новый коман�
   Set-SmbServerConfiguration -EnableSMB1Protocol $false
   ```
 
-- Параметр 
+- Включите параметр 
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB1Protocol $true
   ```
@@ -198,7 +178,7 @@ Windows 8 и Windows Server 2012 представляют новый коман�
   Set-SmbServerConfiguration -EnableSMB2Protocol $false
   ```
 
-- Параметр
+- Включите параметр
   
   ```PowerShell
   Set-SmbServerConfiguration -EnableSMB2Protocol $true
@@ -206,7 +186,7 @@ Windows 8 и Windows Server 2012 представляют новый коман�
 
 ### <a name="for-windows-7-windows-server-2008-r2-windows-vista-and-windows-server-2008"></a>Для Windows 7, Windows Server 2008 R2, Windows Vista и Windows Server 2008
 
-Чтобы включить или отключить протоколы SMB на сервере SMB с Руннингвиндовс 7, Windows Server 2008 R2, Windows Vista или Windows Server 2008, используйте Windows PowerShell или редактор реестра. 
+Чтобы включить или отключить протоколы SMB на сервере SMB под управлением Windows 7, Windows Server 2008 R2, Windows Vista или Windows Server 2008, используйте Windows PowerShell или редактор реестра. 
 
 #### <a name="powershell-methods"></a>Методы PowerShell
 
@@ -229,7 +209,7 @@ Get-Item HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters | ForEa
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 0 –Force
 ```
 
-Параметр  
+Включите параметр  
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
@@ -250,7 +230,7 @@ Get-ItemProperty HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 0 –Force  
 ```
 
-Параметр
+Включите параметр
 
 ```PowerShell
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB2 -Type DWORD -Value 1 –Force 
@@ -266,7 +246,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
  
 Чтобы включить или отключить SMBv1 на сервере SMB, настройте следующий раздел реестра:
 
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+**HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\ланмансервер\параметерс**
 
 ```
 Registry entry: SMB1
@@ -277,7 +257,7 @@ Default: 1 = Enabled (No registry key is created)
 
 Чтобы включить или отключить протокол SMB 2.0 на сервере SMB, настройте следующий раздел реестра: 
 
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters**
+**HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\ланмансервер\параметерс**
 
 ```
 Registry entry: SMB2
@@ -287,7 +267,7 @@ Default: 1 = Enabled (No registry key is created)
 ```
 
 > [!NOTE]
-> необходимо перезагрузить компьютер после внесения этих изменений. 
+> После внесения этих изменений необходимо перезагрузить компьютер. 
 
 ## <a name="how-to-detect-status-enable-and-disable-smb-protocols-on-the-smb-client"></a>Как определить состояние, включить и отключить протоколы SMB на клиенте SMB
 
@@ -298,7 +278,7 @@ Default: 1 = Enabled (No registry key is created)
 
 ##### <a name="smb-v1-on-smb-client"></a>SMB v1 на клиенте SMB
 
-- Обнаружение
+- Определение
   
   ```cmd
   sc.exe qc lanmanworkstation
@@ -311,7 +291,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb10 start= disabled
   ```
 
-- Параметр
+- Включите параметр
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -334,7 +314,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb20 start= disabled 
   ```
 
-- Параметр
+- Включите параметр
 
   ```cmd
   sc.exe config lanmanworkstation depend= bowser/mrxsmb10/mrxsmb20/nsi
@@ -350,7 +330,7 @@ Default: 1 = Enabled (No registry key is created)
 
 Эта процедура настраивает следующий новый элемент в реестре:
 
-**HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters** 
+**HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\сервицес\ланмансервер\параметерс** 
 
 - Запись реестра: **SMB1** 
 - REG_DWORD: **0** = отключено   
@@ -399,7 +379,7 @@ Default: 1 = Enabled (No registry key is created)
 Запись реестра: **депендонсервице** REG_MULTI_SZ: **"Бовсер", "MRxSmb20", "NSI"**   
 
 > [!NOTE]
-> включенной по умолчанию MRxSMB10, которая теперь удалена в качестве зависимости.
+> Включенная по умолчанию MRxSMB10, которая теперь удалена как зависимость.
 
 Чтобы настроить это с помощью групповая политика, выполните следующие действия.
  

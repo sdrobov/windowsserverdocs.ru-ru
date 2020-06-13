@@ -1,6 +1,6 @@
 ---
 title: nslookup set debug
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды nslookup set DEBUG, которая включает и выключает режим отладки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,16 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 92a6f53105c682500d68fa7bf07fdcbacea75f34
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 910dd197fe756e733b61318243130e85b4410eb1
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723629"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721177"
 ---
 # <a name="nslookup-set-debug"></a>nslookup set debug
-
-
 
 Включает или выключает режим отладки.
 
@@ -30,15 +28,12 @@ set [no]debug
 
 ### <a name="parameters"></a>Параметры
 
-|  Параметр  |                         Описание                          |
-|-------------|--------------------------------------------------------------|
-| **Отладка** | Отключает режим отладки. По умолчанию используется синтаксис " **Debug**". |
-|  **см**  |                   Включает режим отладки.                   |
-|  \*\*{Справка  |                            ?}\*\*                            |
-
-## <a name="remarks"></a>Примечания
-
--   При включенном режиме отладки выводятся дополнительные сведения о пакете, отправленном на сервер, и полученном ответе.
+| Параметр | Описание |
+| ---------- | ---------- |
+| Отладка | Отключает режим отладки. Это значение по умолчанию. |
+| debug | Включает режим отладки. Включив режим отладки в, можно просмотреть дополнительные сведения о пакете, отправленном на сервер, и полученный ответ. |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

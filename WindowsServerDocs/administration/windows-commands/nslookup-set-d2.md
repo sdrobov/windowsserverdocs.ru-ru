@@ -1,6 +1,6 @@
 ---
 title: nslookup set d2
-description: Справочный раздел по * * * *-
+description: Справочный раздел команды nslookup set D2, которая включает или выключает режим подробной отладки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 462c96e2144f4139ee9267358b8d8c8d5370c070
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8179d91dfbc50ecd60740ad13db66c80a45af6c1
+ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723647"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84721577"
 ---
 # <a name="nslookup-set-d2"></a>nslookup set d2
 
-
-
-Включает или выключает режим полной отладки. Выводятся все поля каждого пакета.
+Включает или выключает режим подробной отладки. Выводятся все поля каждого пакета.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,11 +28,12 @@ set [no]d2
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр |                             Описание                              |
-|-----------|----------------------------------------------------------------------|
-| **nod2**  | Отключает режим полной отладки. Синтаксис по умолчанию — **nod2**. |
-|  **d2**   |                 Включает режим углубленной отладки.                  |
-|   {Справка   |                                  ?}                                  |
+| Параметр | Описание |
+| ---------- | ---------- |
+| nod2 | Отключает режим подробной отладки. Это значение по умолчанию. |
+| d2 | Включает режим подробной отладки. |
+| /? | Отображение справки в командной строке. |
+| /help | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
