@@ -7,12 +7,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: 09e09fa30a38ef5f6046f623e24be0bc7b6ce87e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: abc1a2af7353bd85e0ae7ac55debc36d63d1782f
+ms.sourcegitcommit: fe89b8001ad664b3618708b013490de93501db05
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942293"
 ---
 # <a name="create-a-shielded-vm-using-powershell"></a>Создание экранированной виртуальной машины с помощью PowerShell
 
@@ -22,7 +22,7 @@ ms.locfileid: "80856757"
 
 В двух словах, вы создадите диск шаблона, файл данных экранирования, файл ответов автоматической установки и другие артефакты безопасности на любом компьютере, затем скопируйте эти файлы на защищенный узел и подготавливаете экранированную виртуальную машину.
 
-## <a name="create-a-signed-template-disk"></a>Создание диска с подписанным шаблоном
+## <a name="create-a-signed-template-disk"></a>Создайте подписанный диск шаблона.
 
 Чтобы создать экранированную виртуальную машину, сначала требуется предварительно зашифрованный диск шаблона виртуальной машины с томом операционной системы (или загрузочными и корневыми разделами в Linux).
 Чтобы получить дополнительные сведения о создании диска шаблона, перейдите по приведенным ниже ссылкам.
@@ -42,7 +42,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 Для каждой структуры виртуализации, в которой вы хотите запустить экранированную виртуальную машину, необходимо получить метаданные защитника для кластеров HGS.
 Поставщик услуг размещения должен иметь возможность предоставлять вам эти сведения.
 
-Если вы используете корпоративную среду и можете взаимодействовать с сервером HGS, метаданные защитника можно найти по адресу *http://\<хгсклустернаме\>/KeyProtection/Service/Metadata/2014-07/Metadata.XML*
+Если вы используете корпоративную среду и можете взаимодействовать с сервером HGS, метаданные защитника доступны по адресу *http:// \<HGSCLUSTERNAME\> /KeyProtection/Service/Metadata/2014-07/metadata.xml*
 
 ## <a name="create-shielding-data-pdk-file"></a>Создание файла данных экранирования (PDK)
 
@@ -51,7 +51,7 @@ Save-VolumeSignatureCatalog -TemplateDiskPath "C:\temp\MyTemplateDisk.vhdx" -Vol
 После создания владельцем клиента или виртуальной машины полученный PDK-файл должен быть скопирован в защищенную структуру.
 Дополнительные сведения см. в разделе [что такое данные экранирования и зачем это необходимо?](guarded-fabric-and-shielded-vms.md#what-is-shielding-data-and-why-is-it-necessary).
 
-Кроме того, потребуется файл ответов автоматической установки (Unattend. XML для Windows, который отличается для Linux). Инструкции по включению в файл ответов см. в разделе [Создание файла ответов](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file) .
+Кроме того, вам потребуется файл ответов автоматической установки (unattend.xml для Windows, который будет различным для Linux). Инструкции по включению в файл ответов см. в разделе [Создание файла ответов](guarded-fabric-tenant-creates-shielding-data.md#create-an-answer-file) .
 
 Выполните следующие командлеты на компьютере, на котором установлена средства удаленного администрирования сервера для экранированных виртуальных машин.
 Если вы создаете PDK для виртуальной машины Linux, это необходимо сделать на сервере под управлением Windows Server версии 1709 или более поздней.
@@ -72,6 +72,10 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 ```
     
 ## <a name="provision-shielded-vm-on-a-guarded-host"></a>Подготавливает экранированную виртуальную машину на защищенном узле
+На узле, работающем под управлением Windows Server 2016, можно отслеживать завершение задачи подготовки виртуальной машины и обращаться к журналам событий Hyper-V для получения сведений об ошибке, если подготовка завершается неудачно.
+
+Можно также создать новый диск шаблона каждый раз, прежде чем создавать экранированную виртуальную машину.
+
 Скопируйте файл шаблона диска (Серверос. VHDX) и PDK-файл (contoso. PDK) на защищенный узел, чтобы подготовиться к развертыванию.
 
 На защищенном узле установите модуль PowerShell для средств защищенной структуры, который содержит командлет New-Шиелдедвм, чтобы упростить процесс подготовки. Если защищенный узел имеет доступ к Интернету, выполните следующую команду:
@@ -80,7 +84,7 @@ New-ShieldingDataFile -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Owner $Owner
 Install-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0
 ```
 
-Кроме того, можно загрузить модуль на другой компьютер, имеющий доступ к Интернету, и скопировать полученный модуль в `C:\Program Files\WindowsPowerShell\Modules` на защищенном узле.
+Можно также загрузить модуль на другой компьютер с доступом к Интернету и скопировать полученный модуль на `C:\Program Files\WindowsPowerShell\Modules` защищенный узел.
 
 ```powershell
 Save-Module GuardedFabricTools -Repository PSGallery -MinimumVersion 1.0.0 -Path C:\temp\
@@ -105,13 +109,13 @@ New-ShieldedVM -Name 'MyStaticIPVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vh
 
 ```
 
-Если диск шаблона содержит ОС под управлением Linux, включите флаг `-Linux` при выполнении команды:
+Если диск шаблона содержит ОС под управлением Linux, включите `-Linux` флаг при выполнении команды:
 
 ```powershell
 New-ShieldedVM -Name 'MyLinuxVM' -TemplateDiskPath 'C:\temp\MyTemplateDisk.vhdx' -ShieldingDataFilePath 'C:\temp\Contoso.pdk' -Wait -Linux
 ```
 
-Дополнительные сведения о других параметрах, которые можно передать в командлет, см. в содержимом справки с помощью `Get-Help New-ShieldedVM -Full`.
+`Get-Help New-ShieldedVM -Full`Дополнительные сведения о других параметрах, которые можно передать командлету, см. в содержимом справки по.
 
 После завершения подготовки виртуальной машины будет выполнен этап специализации конкретной ОС, после чего он будет готов к использованию.
 Не забудьте подключить виртуальную машину к допустимой сети, чтобы можно было подключиться к ней после ее запуска (с помощью RDP, PowerShell, SSH или предпочтительного средства управления).
@@ -126,7 +130,7 @@ Add-ClusterVirtualMachineRole -VMName 'MyShieldedVM' -Cluster <Hyper-V cluster n
 
 Экранированная виртуальная машина теперь может быть перенесена в кластер.
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Следующий шаг
 
 > [!div class="nextstepaction"]
 > [Развертывание экранированного с помощью VMM](guarded-fabric-tenant-deploys-shielded-vm-using-vmm.md)

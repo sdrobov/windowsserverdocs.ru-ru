@@ -1,4 +1,4 @@
-# [Хранилище](storage.md)
+# [Хранилище](storage.yml)
 ## [Что нового в хранилище?](whats-new-in-storage.md)
 ## [Дедупликация данных](data-deduplication/overview.md)
 ### [Что нового в дедупликации данных?](data-deduplication/whats-new.md)

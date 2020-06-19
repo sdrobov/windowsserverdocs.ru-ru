@@ -1,4 +1,4 @@
-# [Удостоверения и доступ](Identity-and-Access.md)
+# [Удостоверения и доступ](Identity-and-Access.yml)
 
 ## [Руководства по решениям и сценариям](solution-guides/Solutions-and-Scenario-Guides.md)
 ### [Динамический контроль доступа. Обзор сценария](solution-guides/Dynamic-Access-Control--Scenario-Overview.md)

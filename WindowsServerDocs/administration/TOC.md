@@ -1,4 +1,4 @@
-# [Управление](manage-windows-server.md)
+# [Управление](manage-windows-server.yml)
 ## [Использование Windows Admin Center для управления средой (новинка!)](../manage/windows-admin-center/overview.md)
 ## Управление системами и средами Windows Server
 ### [Управление функцией Hybrid Cloud Print в Windows Server](hybrid-cloud-print/hybrid-cloud-print-overview.md)
