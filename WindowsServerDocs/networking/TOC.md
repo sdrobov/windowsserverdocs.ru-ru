@@ -1,4 +1,4 @@
-# [Сетевое взаимодействие](Networking.md)
+# [Документация по сетевому взаимодействию](index.yml)
 ## [Поддерживаемые сценарии сетевого взаимодействия в Windows Server](windows-server-supported-networking-scenarios.md)
 
 ## [Новые возможности работы с сетями](What-s-New-in-Networking.md)

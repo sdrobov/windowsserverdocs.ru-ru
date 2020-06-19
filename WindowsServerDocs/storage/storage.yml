@@ -1,0 +1,89 @@
+### YamlMime:Landing
+title: Документация по хранилищу Windows Server
+summary: 'Хранилище в Windows Server предоставляет новые и улучшенные возможности для клиентов программно-определяемых центров обработки данных, использующих виртуализированные рабочие нагрузки. Windows Server также обеспечивает расширенную поддержку для корпоративных клиентов, использующих файловые серверы с существующими рабочими нагрузками. Область применения: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала).'
+metadata:
+  title: Документация по хранилищу Windows Server
+  description: Хранилище в Windows Server предоставляет новые и улучшенные возможности для клиентов программно-определяемых центров обработки данных, использующих виртуализированные рабочие нагрузки.
+  ms.topic: landing-page
+  author: JasonGerend
+  ms.author: jgerend
+  ms.date: 06/09/2020
+  ms.openlocfilehash: 288c6da7afdd2b218227af0db83c487053a11d58
+  ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/18/2020
+  ms.locfileid: "85070988"
+landingContent:
+- title: О хранилище Windows Server
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности
+      url: whats-new-in-storage.md
+- title: Программно-определяемое хранилище для виртуализированных рабочих нагрузок
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Дисковые пространства прямого подключения
+      url: storage-spaces/overview.md
+    - text: Реплика хранилища
+      url: storage-replica/storage-replica-overview.md
+    - text: Качество обслуживания хранилища
+      url: storage-qos/storage-qos-overview.md
+    - text: Дедупликация данных
+      url: data-deduplication/overview.md
+- title: Файловые серверы общего назначения
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Служба миграции хранилища
+      url: storage-migration-service/overview.md
+    - text: рабочие папки
+      url: work-folders/work-folders-overview.md
+    - text: Автономные файлы и перенаправление папок
+      url: folder-redirection/folder-redirection-rup-overview.md
+    - text: Проверка перемещаемых профилей пользователей
+      url: folder-redirection/deploy-roaming-user-profiles.md
+    - text: Пространства имен DFS
+      url: dfs-namespaces/dfs-overview.md
+    - text: Репликация DFS
+      url: dfs-replication/dfsr-overview.md
+    - text: File Server Resource Manager
+      url: fsrm/fsrm-overview.md
+    - text: Целевой сервер iSCSI
+      url: iscsi/iscsi-target-server.md
+    - text: Загрузка целевого объекта iSCSI
+      url: iscsi/iscsi-boot-overview.md
+- title: Файловые системы, протоколы и т. д.
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ReFS
+      url: refs/refs-overview.md
+    - text: Протокол SMB (Server Message Block)
+      url: file-server/file-server-smb-overview.md
+    - text: Память класса хранилища
+      url: storage-spaces/Storage-class-memory-health.md
+    - text: Шифрование диска BitLocker
+      url: https://technet.microsoft.com/library/cc766295(v=ws.10).aspx
+    - text: NTFS
+      url: https://technet.microsoft.com/library/dn466522(v=ws.11).aspx
+    - text: Файловая система NFS
+      url: https://technet.microsoft.com/library/jj592688(v=ws.11).aspx
+- title: В Azure
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Хранилище Azure
+      url: https://azure.microsoft.com/documentation/services/storage/
+    - text: StorSimple Azure
+      url: https://www.microsoft.com/cloud-platform/azure-storsimple
+- title: Более старые версии Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Документация по предыдущим версиям Windows
+      url: https://docs.microsoft.com/previous-versions/windows/
+    - text: Поиск конкретных сведений
+      url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions

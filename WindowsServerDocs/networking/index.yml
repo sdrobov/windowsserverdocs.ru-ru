@@ -1,0 +1,120 @@
+### YamlMime:Landing
+title: Документация по сетевому взаимодействию
+summary: Сетевое взаимодействие — это основополагающая часть платформы программно-определяемого центра обработки данных (SDDC), и Windows Server 2016 предоставляет новые и улучшенные технологии программно-конфигурируемой сети (SDN), помогающие вашей организации перейти на полнофункциональное решение SDDC.
+metadata:
+  title: Документация по сетевому взаимодействию
+  description: В этом разделе представлен обзор технологий программно-конфигурируемой сети и сетевой платформы, которые доступны в Windows Server 2016.
+  layout: LandingPage
+  ms.technology: networking
+  ms.topic: landing-page
+  manager: dougkim
+  author: AnirbanPaul
+  ms.author: anpaul
+  ms.date: 06/11/2020
+  ms.assetid: daaf6b61-5953-4c2d-b6b8-7c885b552646
+  ms.localizationpriority: medium
+  ms.openlocfilehash: 9b419210689e0ca11bfc2c285cd6669d3a883679
+  ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/18/2020
+  ms.locfileid: "85071009"
+landingContent:
+- title: О сетевом взаимодействии
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Поддерживаемые сценарии сетевого взаимодействия в Windows Server
+      url: windows-server-supported-networking-scenarios.md
+  - linkListType: whats-new
+    links:
+    - text: Новые возможности работы с сетями
+      url: What-s-New-in-Networking.md
+  - linkListType: reference
+    links:
+    - text: Библиотеки Windows Server
+      url: /previous-versions/windows/
+    - text: Устаревший контент Windows Server 2003/2003 R2
+      url: https://www.microsoft.com/download/details.aspx?id=53314
+- title: Программно-конфигурируемая сеть
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Программно-конфигурируемая сеть (SDN)
+      url: sdn/index.yml
+    - text: Сетевой контроллер
+      url: sdn/technologies/network-controller/Network-Controller.md
+    - text: Программная балансировка нагрузки для SDN
+      url: sdn/technologies/network-function-virtualization/software-load-balancing-for-sdn.md
+    - text: Шлюз RAS-сервера для SDN
+      url: sdn/technologies/network-function-virtualization/RAS-Gateway-for-SDN.md
+    - text: Виртуализация сетевых функций
+      url: sdn/technologies/network-function-virtualization/Network-Function-Virtualization.md
+    - text: Обзор брандмауэра центра обработки данных
+      url: sdn/technologies/network-function-virtualization/Datacenter-Firewall-Overview.md
+  - linkListType: deploy
+    links:
+    - text: Развертывание инфраструктуры SDN с помощью скриптов
+      url: sdn/deploy/Deploy-a-Software-Defined-Network-infrastructure-using-scripts.md
+- title: Технологии сетевого взаимодействия
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: BranchCache
+      url: branchcache/BranchCache.md
+    - text: Руководство по основной сети
+      url: core-network-guide/core-network-guide-windows-server.md
+    - text: DirectAccess
+      url: ../remote/remote-access/da-stub.md
+    - text: Служба доменных имен (DNS)
+      url: dns/dns-top.md
+    - text: Протокол DHCP
+      url: technologies/dhcp/dhcp-top.md
+    - text: Виртуализация сети Hyper-V
+      url: sdn/technologies/hyper-v-network-virtualization/Hyper-V-Network-Virtualization.md
+    - text: Виртуальный коммутатор Hyper-V
+      url: ../virtualization/hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+    - text: Управление IP-адресами (IPAM)
+      url: technologies/ipam/ipam-top.md
+    - text: Балансировка сетевой нагрузки
+      url: technologies/Network-Load-Balancing.md
+- title: Технологии сетевого взаимодействия
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Сервер политики сети
+      url: technologies/nps/nps-top.md
+    - text: Сетевая оболочка (Netsh)
+      url: technologies/netsh/netsh.md
+    - text: Настройка производительности сетевой подсистемы
+      url: technologies/network-subsystem/net-sub-performance-top.md
+    - text: Объединение сетевых карт
+      url: technologies/nic-teaming/NIC-Teaming.md
+    - text: Политика качества обслуживания (QoS)
+      url: technologies/qos/qos-policy-top.md
+    - text: Служба WINS
+      url: technologies/wins/wins-top.md
+    - text: Удаленный доступ
+      url: ../remote/remote-access/remote-access.md
+    - text: Сетевые подключения контейнеров Windows
+      url: /virtualization/windowscontainers/container-networking/architecture
+    - text: Виртуальная частная сеть (VPN)
+      url: ../remote/remote-access/vpn/vpn-top.md
+  - linkListType: reference
+    links:
+    - text: Прокси-служба веб-приложения в Windows Server 2016
+      url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+    - text: Руководство по развертыванию постоянно подключенного VPN-профиля для удаленного доступа
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+- title: Высокопроизводительные сети
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Высокопроизводительные сети
+      url: technologies/hpn/hpn-top.md
+    - text: Конвергентный сетевой адаптер (NIC)
+      url: technologies/conv-nic/cnic-top.md
+    - text: Мост для центра обработки данных
+      url: technologies/dcb/dcb-top.md
+    - text: Виртуальное масштабирование на стороне приема (vRSS)
+      url: technologies/vrss/vrss-top.md

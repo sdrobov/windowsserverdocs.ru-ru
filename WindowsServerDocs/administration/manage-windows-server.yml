@@ -1,0 +1,71 @@
+### YamlMime:Landing
+title: Документация по управлению Windows Server
+summary: После развертывания Windows Server в вашей среде, в том числе ролей для необходимых компонентов и функций, вам нужно обеспечить управление этими серверами. Windows Server предоставляет несколько средств, которые помогут вам ознакомиться со средой Windows Server, методами управления определенными серверами, точной настройки производительности и автоматизации многих задач управления.
+metadata:
+  title: Документация по управлению Windows Server
+  description: Ознакомьтесь с инструментами, рекомендациями и рекомендациями по управлению Windows Server.
+  ms.topic: landing-page
+  author: lizap
+  ms.author: elizapo
+  ms.date: 06/09/2020
+  ms.openlocfilehash: a115a703071b52e7a27d925578d7703f270b925b
+  ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/18/2020
+  ms.locfileid: "85070984"
+landingContent:
+- title: Управление системами и средами Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Управление локальными системами, удаленными системами и системами без пользовательского интерфейса с помощью Windows Admin Center
+      url: ../manage/windows-admin-center/overview.md
+    - text: Управление локальными системами с помощью диспетчера серверов
+      url: server-manager/server-manager.md
+    - text: Управление удаленными системами и системами без пользовательского интерфейса с помощью средств администрирования удаленного сервера (RSAT)
+      url: ../remote/remote-server-administration-tools.md
+    - text: Управление системами Windows Server
+      url: windows-server-update-services/get-started/windows-server-update-services-wsus.md
+- title: Сбор сведений о среде
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Коллекция событий установки и загрузки
+      url: get-started-with-setup-and-boot-event-collection.md
+    - text: Инвентаризация программного обеспечения (SIL)
+      url: software-inventory-logging/get-started-with-software-inventory-logging.md
+    - text: Ведение журнала доступа пользователей
+      url: user-access-logging/get-started-with-user-access-logging.md
+- title: Настройка среды Windows Server для обеспечения высокой производительности
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Руководство по обеспечению высокой производительности
+      url: performance-tuning/index.md
+    - text: Microsoft Server Performance Advisor
+      url: server-performance-advisor/microsoft-server-performance-advisor.md
+- title: Автоматизация управления Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Windows PowerShell
+      url: https://docs.microsoft.com/powershell/scripting/overview
+    - text: Команды Windows
+      url: windows-commands/windows-commands.md
+    - text: Системная аналитика
+      url: ..\manage\system-insights\overview.md
+- title: Доступ к локальным, удаленным и виртуальным серверам
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Службы удаленных рабочих столов
+      url: ../remote/remote-desktop-services/welcome-to-rds.md
+- title: Более старые версии Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Документация по предыдущим версиям Windows
+      url: https://docs.microsoft.com/previous-versions/windows/
+    - text: Поиск конкретных сведений
+      url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions

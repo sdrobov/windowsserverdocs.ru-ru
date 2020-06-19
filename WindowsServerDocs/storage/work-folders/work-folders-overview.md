@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/15/2020
 description: Обзор рабочих папок — роли сервера в Windows Server, которая предоставляет пользователям согласованный способ доступа к рабочим файлам с компьютеров и других устройств.
-ms.openlocfilehash: 8bd60cc0ab57935a7ce2da0ca33bd0d4c840fa2b
-ms.sourcegitcommit: cb266c8ea42b9800babbbe96b17885e82b55787d
+ms.openlocfilehash: 4e670d61729d35ee9569b09e91ef5a953961241e
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84795731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070097"
 ---
 # <a name="work-folders-overview"></a>Обзор рабочих папок
 
@@ -60,7 +60,7 @@ ms.locfileid: "84795731"
 | ------------------- | ------------------ | ----------------- |  
 | Служба роли рабочих папок в диспетчере серверов | Windows Server 2019, Windows Server 2016 или Windows Server 2012 R2 | Службы файлов и хранилищ позволяют настроить общие ресурсы синхронизации (папки, в которых хранятся рабочие файлы пользователей), отслеживают рабочие папки и общими ресурсами синхронизации и доступом пользователей |
 | Командлеты рабочих папок | Windows Server 2019, Windows Server 2016 или Windows Server 2012 R2 | Модуль Windows PowerShell, который содержит полный набор командлетов для управления серверами рабочих папок |  
-| Интеграция рабочих папок с Windows | быть под управлением ОС Windows 10;<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (требуется скачивание) | Рабочие папки предоставляет следующие функции на компьютерах с Windows:<p> - элемент панели управления для настройки и мониторинга рабочих папок;<br />- интеграция проводника для удобного доступа к файлам в рабочих папках;<br />- механизм синхронизации, который передает файлы на центрального файловый сервер и с него, а также повышает время работы от батареи и производительность системы. |
+| Интеграция рабочих папок с Windows | Windows 10<p> Windows 8.1<p> Windows RT 8.1<p> Windows 7 (требуется скачивание) | Рабочие папки предоставляет следующие функции на компьютерах с Windows:<p> - элемент панели управления для настройки и мониторинга рабочих папок;<br />- интеграция проводника для удобного доступа к файлам в рабочих папках;<br />- механизм синхронизации, который передает файлы на центрального файловый сервер и с него, а также повышает время работы от батареи и производительность системы. |
 | Приложение «Рабочие папки» для устройств | Android<p> Apple iPhone и iPad® | Приложение, которое предоставляет доступ к файлам в рабочих папках на популярных устройствах |  
   
 ## <a name="new-and-changed-functionality"></a>Новые и измененные функции
@@ -103,9 +103,9 @@ ms.locfileid: "84795731"
   
 -   Компьютеры и устройства должны работать под управлением одной из следующих ОС:  
   
-    -   быть под управлением ОС Windows 10;  
+    -   Windows 10  
   
-    -   Windows 8.1  
+    -   Windows 8.1  
   
     -   Windows RT 8.1  
   
@@ -141,8 +141,8 @@ ms.locfileid: "84795731"
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **Сводная информация о технологии** | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами и устройствами | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами с доступом к корпоративной сети (можно заменить на рабочие папки) | Синхронизирует файлы, которые хранятся в Office 365 или SharePoint, с компьютерами и устройствами внутри корпоративной сети и за ее пределами, а также предоставляет возможности для совместной работы с документами | Синхронизирует личные файлы, сохраненные в OneDrive, с ПК, Mac и другими устройствами |
 | **Предназначено для предоставления пользователям доступа к рабочим файлам** | Да | Да | Да | Нет |
-| **облачная служба** | Отсутствуют | Отсутствуют | Office 365 | Microsoft OneDrive |
-| **Внутренние сетевые серверы** | Файловые серверы под управлением Windows Server 2012 R2 или Windows Server 2016 | Файловые серверы | Сервер SharePoint (необязательно) | Отсутствуют |
+| **облачная служба** | None | None | Office 365 | Microsoft OneDrive |
+| **Внутренние сетевые серверы** | Файловые серверы под управлением Windows Server 2012 R2 или Windows Server 2016 | Файловые серверы | Сервер SharePoint (необязательно) | None |
 | **Поддерживаемые клиенты** | ПК, iOS, Android | ПК в корпоративной сети или ПК, подключенные через DirectAccess, VPN и другие технологии удаленного доступа | ПК, iOS, Android, Windows Phone | ПК, Mac, Windows Phone, iOS, Android |
   
 > [!NOTE]
@@ -164,7 +164,7 @@ ms.locfileid: "84795731"
   
 Дополнительные сведения о начале работы с виртуальными машинами Microsoft Azure см. на [веб-сайте Microsoft Azure](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также раздел
 
  Дополнительные сведения по данной теме см. на следующих ресурсах.  
   
@@ -175,4 +175,4 @@ ms.locfileid: "84795731"
 | **Операции** | -   [Приложение для работы с рабочими папками для iPad: вопросы и ответы](https://windows.microsoft.com/windows/work-folders-ipad-faq) (для пользователей)<br />-   [Управление сертификатами рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (запись блога)<br />-   [Мониторинг развертываний рабочих папок Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (запись блога)<br />-   [Командлеты Синкшаре (рабочие папки) в Windows PowerShell](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [Краткий справочник по командлетам службы хранилища и файловых служб PowerShell для Windows Server 2012 R2 Preview Edition](https://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
 | **Устранение неполадок** | -   [Windows Server 2012 R2 — устранение конфликтов портов с веб-сайтами IIS и рабочими папками](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (запись в блоге)<br />-   [Распространенные ошибки в рабочих папках](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
 | **Ресурсы сообщества** | -   [Форум по файловым службам и хранилищам](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [Рабочая группа по хранению данных Майкрософт — блог File Cabinet](https://blogs.technet.com/b/filecab/)<br />-   [Обратитесь к блогу группы по службам каталогов](https://blogs.technet.com/b/askds/) |  
-| **Связанные технологии** | -   [Хранилище в Windows Server 2016](../storage.md)<br>-   [Службы файлов и хранилища](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [диспетчер ресурсов файлового сервера](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [Перенаправление папок, автономные файлы и перемещаемые профили пользователей](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [Пространства имен и репликация DFS DFS](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
+| **Связанные технологии** | -   [Хранилище в Windows Server 2016](../storage.yml)<br>-   [Службы файлов и хранилища](https://technet.microsoft.com/library/hh831487(v=ws.11).aspx)<br />-   [диспетчер ресурсов файлового сервера](https://technet.microsoft.com/library/hh831701(v=ws.11).aspx)<br />-   [Перенаправление папок, автономные файлы и перемещаемые профили пользователей](https://technet.microsoft.com/library/hh848267(v=ws.11).aspx)<br />-   [BranchCache](https://technet.microsoft.com/library/hh831696(v=ws.11).aspx)<br />-   [Пространства имен и репликация DFS DFS](https://technet.microsoft.com/library/jj127250(v=ws.11).aspx) |
