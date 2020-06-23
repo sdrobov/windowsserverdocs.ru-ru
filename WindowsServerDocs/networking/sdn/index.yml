@@ -1,89 +1,60 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: Программно-конфигурируемая сеть (SDN)
+summary: Узнайте о функциях, технологиях и развертывании программно-конфигурируемой сети (SDN).
 metadata:
-  document_id: null
   title: Программно-конфигурируемая сеть (SDN)
-  description: 'Узнайте о функциях, технологиях и развертывании программно-конфигурируемой сети (SDN).'
-  text: Программно-конфигурируемая сеть (SDN) позволяет динамически управлять сетью центра обработки данных в соответствии с требованиями рабочей нагрузки и приложения. Политики сети могут применяться согласованно и в соответствующем масштабе даже при развертывании новых рабочих нагрузок или перемещении рабочих нагрузок в виртуальных или физических сетях.
-  keywords: 'Windows Server, Windows Server 2016, программно-конфигурируемая сеть, sdn'
-  ms.localizationpriority: medium
+  description: Узнайте о функциях, технологиях и развертывании программно-конфигурируемой сети (SDN).
+  ms.service: help
+  ms.topic: landing-page
   author: AnirbanPaul
   ms.author: anpaul
-  ms.date: 09/04/2018
-  ms.topic: article
-  ms.devlang: na
-sections:
-  - title: Сведения о…
-  - items:
-      - type: markdown
-        text: 'Подготовьтесь к внедрению программно-конфигурируемой сети (SDN), которая виртуализирует сеть и позволяет абстрагироваться от физического оборудования сети, такого как коммутаторы и маршрутизаторы.'
-  - items:
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\networking\sdn\sdn-whats-new
-            html: <p>Узнайте о новых и обновленных функциях программно-конфигурируемой сети (SDN).</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Что нового в программно-конфигурируемой сети (SDN) для Windows Server 2019?
-          - href: \windows-server\networking\sdn\software-defined-networking
-            html: '<p>Узнайте, как централизованно настраивать физические и виртуальные сетевые устройства и управлять ими.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: Общие сведения о программно-конфигурируемой сети (SDN)
-          - href: \windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies
-            html: <p>Узнайте о технологиях SDN в Windows Server 2016.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_tools.svg'
-            title: Ключевые компоненты архитектуры SDN
-          - href: \windows-server\networking\sdn\security\sdn-security-top
-            html: '<p>Узнайте о том, как внедрить программно-конфигурируемую сеть (SDN) и управлять ее безопасностью, включая аутентификацию и виртуальное шифрование.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_security-management.svg'
-            title: Безопасность в SDN
-          - href: 'https://youtu.be/f501zUUcXD0'
-            html: '<p>Посмотрите, как инженеры SDN для Windows Server Грег Кусанза и Мэтт Макспирит демонстрируют возможности программно-конфигурируемой сети в Windows Server 2016.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_video.svg'
-            title: Механика SDN (Майкрософт)
-  - title: Начало работы…
-    items:
-      - type: paragraph
-        text: 'Планируйте, настраивайте и контролируйте физические и виртуальные сетевые устройства, например маршрутизаторы, коммутаторы и шлюзы, в центре обработки данных.'
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure
-            html: '<p>Узнайте, что необходимо для развертывания инфраструктуры SDN.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_design.svg'
-            title: Планирование инфраструктуры SDN
-          - href: \windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure
-            html: '<p>Разверните все технологии, необходимые для полнофункциональной инфраструктуры. </p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_deploy.svg'
-            title: Развертывание инфраструктуры SDN
-          - href: \windows-server\networking\sdn\manage\manage-sdn
-            html: <p> </p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_management.svg'
-            title: Управление инфраструктурой SDN
-          - href: \windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack
-            html: <p> </p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_debug.svg'
-            title: Диагностика и устранение неполадок инфраструктуры SDN
-  - items:
-      - type: list
-        style: cards
-        className: cardsL
-        items:
-          - title: Учебные материалы по SDN
-            html: |-
-              <p><a class="barLink" href="https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/">Устранение неполадок настройки параметров пропускной способности VPN для шлюза RAS сети SDN в VMM</a></p></div>
-              <p><a class="barLink" href="https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf/">Таблица данных программно-конфигурируемой сети (Майкрософт)</a></p></div>
+  ms.date: 06/12/2020
+  ms.openlocfilehash: 4314579da8e247f6b013e68faa3bb2d193ff2cea
+  ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/23/2020
+  ms.locfileid: "85217624"
+landingContent:
+- title: Сведения о программно-конфигурируемой сети
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Общие сведения о программно-конфигурируемой сети (SDN)
+      url: '\windows-server\networking\sdn\software-defined-networking'
+    - text: Безопасность в SDN
+      url: '\windows-server\networking\sdn\security\sdn-security-top'
+  - linkListType: whats-new
+    links:
+    - text: Что нового в программно-конфигурируемой сети (SDN) для Windows Server 2019?
+      url: '\windows-server\networking\sdn\sdn-whats-new'
+  - linkListType: concept
+    links:
+    - text: Ключевые компоненты архитектуры SDN
+      url: '\windows-server\networking\sdn\technologies\Software-Defined-Networking-Technologies'
+  - linkListType: video
+    links:
+    - text: Механика SDN (Майкрософт)
+      url: https://youtu.be/f501zUUcXD0
+- title: Приступая к работе
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Планирование инфраструктуры SDN
+      url: '\windows-server\networking\sdn\plan\Plan-a-Software-Defined-Network-Infrastructure'
+    - text: Развертывание инфраструктуры SDN
+      url: '\windows-server\networking\sdn\deploy\Deploy-a-Software-Defined-Network-Infrastructure'
+    - text: Управление инфраструктурой SDN
+      url: '\windows-server\networking\sdn\manage\manage-sdn'
+  - linkListType: overview
+    links:
+    - text: Диагностика и устранение неполадок инфраструктуры SDN
+      url: '\windows-server\networking\sdn\troubleshoot\troubleshoot-windows-server-software-defined-networking-stack'
+- title: Учебные материалы по SDN
+  linkLists:
+  - linkListType: learn
+    links:
+    - text: Устранение неполадок с настройкой параметров пропускной способности VPN для шлюза RAS сети SDN в VMM
+      url: https://blogs.technet.microsoft.com/networking/2017/03/06/troubleshoot-configuring-sdn-ras-gateway-vpn-bandwidth-settings-in-virtual-machine-manager/
+    - text: Таблица программно-конфигурируемой сети (Майкрософт)
+      url: https://download.microsoft.com/download/1/5/A/15AC87E7-E99C-4E98-B6AF-9346790AD2DF/Software_Defined_Networking_is_built_in_with_Windows_Server_2016_solution_brief_EN_US.pdf
