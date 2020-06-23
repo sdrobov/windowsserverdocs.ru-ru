@@ -8,49 +8,35 @@ ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ad75f815173c53ca40fdc5146f6f27fbc1e2740b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3f2cd1a9746b03ba7642e78c468dafd718f84959
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852147"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217614"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Воспроизведение мультимедиа в Windows Server Essentials
 
 >Область применения: Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Под мультимедиа понимается аудио, видео и фотографии, которое было сжато цифровыми методами.  Windows Server Essentials позволяет компьютерам, подключенным к сети, и некоторым цифровым мультимедийным устройствам воспроизводить цифровые файлы мультимедиа, хранящиеся на сервере.  
+Под мультимедиа понимается аудио, видео и фотографии, сжатые цифровыми методами.  Windows Server Essentials позволяет компьютерам, подключенным к сети, и некоторым цифровым мультимедийным устройствам воспроизводить цифровые файлы мультимедиа, хранящиеся на сервере.  
   
  Следующие разделы содержат сведения о доступе и воспроизведении файлов мультимедиа, которые хранятся в Windows Server Essentials.  
   
 
--   [Общие сведения о цифровом мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)  
+-   [Обзор цифрового мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)  
   
--   [Воспроизведение и совместное использование цифрового мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)  
+-   [Воспроизведение мультимедиа и общий доступ](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)  
   
--   [Воспроизводить общие цифровые файлы мультимедиа из удаленного расположения](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
+-   [Воспроизведение общих файлов мультимедиа из удаленного расположения](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
   
--   [Добавление цифровых файлов мультимедиа на сервер](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)  
+-   [Добавление файлов цифрового мультимедиа на сервер](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)  
   
 -   [Параметры формата загрузки](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_5)  
   
 -   [Средство быстрого отправки файлов](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6)  
   
--   [Просмотр и обзор общих цифровых носителей](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)  
-
--   [Общие сведения о цифровом мультимедиа](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_1)  
-  
--   [Воспроизведение и совместное использование цифрового мультимедиа](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2)  
-  
--   [Воспроизводить общие цифровые файлы мультимедиа из удаленного расположения](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_3)  
-  
--   [Добавление цифровых файлов мультимедиа на сервер](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_4)  
-  
--   [Параметры формата загрузки](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_5)  
-  
--   [Средство быстрого отправки файлов](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_6)  
-  
--   [Просмотр и обзор общих цифровых носителей](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)  
+-   [Просмотр общего мультимедийного содержимого](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_7)  
 
   
 ##  <a name="digital-media-overview"></a><a name="BKMK_1"></a>Общие сведения о цифровом мультимедиа  
@@ -85,38 +71,24 @@ ms.locfileid: "80852147"
   
 -   [Отправка файлов мультимедиа в Windows Server Essentials в проигрыватель Windows Media, Xbox 360 или в сетевой проигрыватель Digital Media Player в сети](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)  
 
--   [Поиск и воспроизведение файлов мультимедиа в Windows Server Essentials с компьютера или цифрового проигрывателя в сети](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)  
-  
--   [Отправка файлов мультимедиа в Windows Server Essentials в проигрыватель Windows Media, Xbox 360 или в сетевой проигрыватель Digital Media Player в сети](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)  
 
   
 ###  <a name="search-for-and-play-media-files-on-windows-server-essentials-from-a-computer-or-digital-media-player-on-the-network"></a><a name="BKMK_2.1"></a>Поиск и воспроизведение файлов мультимедиа в Windows Server Essentials с компьютера или цифрового проигрывателя в сети  
  Если устройство присоединено к сети Windows Server Essentials, можно искать и воспроизводить цифровые файлы мультимедиа одним из следующих способов:  
   
 
--   [Поиск и воспроизведение файлов мультимедиа с компьютера, на котором работает Windows Media Center](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
+-   [Поиск и воспроизведение файлов мультимедиа с компьютера, где запущен Windows Media Center](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
   
--   [Поиск и воспроизведение файлов мультимедиа с компьютера под управлением Windows с помощью проигрывателя Windows Media](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
+-   [Поиск и воспроизведение файлов мультимедиа с компьютера под управлением Windows, с помощью проигрывателя Windows Media](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
   
 -   [Поиск и воспроизведение файлов мультимедиа с помощью Xbox 360](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)  
   
 -   [Поиск и воспроизведение файлов мультимедиа с помощью других проигрывателей или получателей цифровых мультимедиа, совместимых с Windows Server Essentials](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Other)  
   
--   [Поиск и воспроизведение файлов мультимедиа с помощью функции "Общие папки" панели запуска](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
+-   [Поиск и воспроизведение файлов мультимедиа с помощью функции общих папок панели запуска](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
   
--   [Поиск и воспроизведение общих носителей с помощью удаленного Веб-доступ](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
+-   [Поиск и воспроизведение общего мультимедийного содержимого с помощью удаленного веб-доступа](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
 
--   [Поиск и воспроизведение файлов мультимедиа с компьютера, на котором работает Windows Media Center](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_WMC)  
-  
--   [Поиск и воспроизведение файлов мультимедиа с компьютера под управлением Windows с помощью проигрывателя Windows Media](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_MWP)  
-  
--   [Поиск и воспроизведение файлов мультимедиа с помощью Xbox 360](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Xbox)  
-  
--   [Поиск и воспроизведение файлов мультимедиа с помощью других проигрывателей или получателей цифровых мультимедиа, совместимых с Windows Server Essentials](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_Other)  
-  
--   [Поиск и воспроизведение файлов мультимедиа с помощью функции "Общие папки" панели запуска](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)  
-  
--   [Поиск и воспроизведение общих носителей с помощью удаленного Веб-доступ](../use/Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)  
 
   
 ####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-media-center"></a><a name="BKMK_WMC"></a>Поиск и воспроизведение файлов мультимедиа с компьютера, на котором работает Windows Media Center  
@@ -188,10 +160,10 @@ ms.locfileid: "80852147"
   
 1. Откройте веб-браузер.  
   
-2. Перейдите на веб-сайт удаленного веб-доступа. Введите **https://< йоурдомаиннаме\>/ремоте** в адресной строке Интернет-браузера и нажмите клавишу ВВОД.  
+2. Перейдите на веб-сайт удаленного веб-доступа. Введите **https://<йоурдомаиннаме \> /ремоте** в адресной строке Интернет браузера, а затем нажмите клавишу ВВОД.  
   
    > [!NOTE]
-   >  *< йоурдомаиннаме\>* является заполнителем. Это имя будет уникальным для сервера, поэтому введенный адрес будет выглядеть как **https://contoso.com/remote** . Если вы не знаете имя вашего домена, обратитесь к администратору, который выбирал имя домена во время настройки функциональности удаленного доступа на сервере. Дополнительные сведения см. в разделе [Включение удаленного веб-доступа](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
+   >  *<йоурдомаиннаме \> * заполнитель. Это имя будет уникальным для сервера, поэтому введенный адрес будет выглядеть так: **https://contoso.com/remote** . Если вы не знаете имя вашего домена, обратитесь к администратору, который выбирал имя домена во время настройки функциональности удаленного доступа на сервере. Дополнительные сведения см. в разделе [Включение удаленного веб-доступа](../manage/Manage-Remote-Web-Access-in-Windows-Server-Essentials.md#BKMK_TurnOnRWA).  
   
 3. На странице входа в удаленный веб-доступ введите имя учетной записи пользователя и пароль, а затем щелкните стрелку.  
   
@@ -244,7 +216,7 @@ ms.locfileid: "80852147"
   > [!NOTE]
   >  Этот параметр обеспечивает ограниченную поддержку международных имен.  
   
-- **Самораспаковывающийся исполняемый файл (. exe)**  
+- **Самораспаковывающийся исполняемый файл (EXE)**  
   
    Самораспаковывающийся исполняемый файл — это загружаемый файл, который объединяет в себе (исполняемую) программу распаковки и сжатые файлы. При запуске исполняемой программы она автоматически распаковывает сжатые файлы. Этот способ часто применяется для распространения сжатых данных, так как позволяет не задумываться о том, есть ли у получателя подходящая программа распаковки.  
   
@@ -285,9 +257,9 @@ ms.locfileid: "80852147"
   
 3.  Дважды щелкните папку, чтобы просмотреть ее содержимое.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
--   [Управление цифровыми носителями](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)  
+-   [Управление цифровыми мультимедиа](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)  
   
 
 -   [Подключиться](Get-Connected-in-Windows-Server-Essentials.md)  
@@ -295,10 +267,4 @@ ms.locfileid: "80852147"
 -   [Использование общих папок](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
   
 -   [Удаленная работа](Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Подключиться](../use/Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [Использование общих папок](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)  
-  
--   [Удаленная работа](../use/Work-Remotely-in-Windows-Server-Essentials.md)
 

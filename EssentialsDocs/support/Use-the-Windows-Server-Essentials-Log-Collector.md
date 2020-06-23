@@ -8,12 +8,12 @@ ms.assetid: c6985518-b42d-4cfb-9761-eaa75306b6d7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: fa7ad24eec7c2732ee1c840aae678e3b0bff768c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 16fc2c8b6029a4793eafd5ca7c51e66d6bc36d80
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852167"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217434"
 ---
 # <a name="use-the-windows-server-essentials-log-collector"></a>Использование сборщика журналов Windows Server Essentials
 
@@ -30,15 +30,10 @@ ms.locfileid: "80852167"
 >[Скачайте пакет установки сборщика журнала Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=34821).  
   
  Чтобы установить и запустить сборщик журналов, выполните шаги, описанные в следующих разделах.  
-  
 
-1. [Установка сборщика данных журнала](Install-the-Windows-Server-Essentials-Log-Collector.md)  
+1. [Установка сборщика журналов](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
   
-2. [Запуск сборщика данных журнала](Run-the-Windows-Server-Essentials-Log-Collector.md)  
-
-3. [Установка сборщика данных журнала](../support/Install-the-Windows-Server-Essentials-Log-Collector.md)  
-  
-4. [Запуск сборщика данных журнала](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
+2. [Запуск сборщика журналов](../support/Run-the-Windows-Server-Essentials-Log-Collector.md)  
 
 
 ## <a name="environment-information-collected"></a>Сбор сведений о среде  
@@ -52,7 +47,7 @@ ms.locfileid: "80852167"
   
 -   Сетевые адаптеры, связанные с TCP/IP  
   
--   Locale  
+-   Локаль  
   
 -   Процессы  
   
@@ -109,7 +104,7 @@ ms.locfileid: "80852167"
   
 ### <a name="server-logs-and-registry-information"></a>Сведения из журналов и реестра сервера  
   
--   Журналы серверных продуктов, из < папка ProgramData\>\Микрософт\виндовс Сервер\логс  
+-   Журналы серверных продуктов, с <папка ProgramData \> \Микрософт\виндовс сервер\логс  
   
 -   Запланированные задачи  
   
@@ -137,9 +132,9 @@ ms.locfileid: "80852167"
   
 ### <a name="network-computer-logs-and-registry-information"></a>Сведения из журналов и реестра компьютеров сети  
   
--   Журналы продуктов для сетевого компьютера в < папка ProgramData\>\Микрософт\виндовс Сервер\логс  
+-   Журналы продуктов для сетевого компьютера в <папка ProgramData \> \Микрософт\виндовс сервер\логс  
   
--   Файл оповещений о работоспособности в < папка ProgramData\>\Микрософт\виндовс Сервер\дата  
+-   Файл оповещений о работоспособности в <папка ProgramData \> \Микрософт\виндовс сервер\дата  
   
 -   Журналы центра обновления Windows  
   
@@ -147,7 +142,7 @@ ms.locfileid: "80852167"
   
 -   Сведения о запланированных задачах  
   
--   Разделы реестра из \\\ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Server \  
+-   Разделы реестра от \\ \ HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс Server \  
   
 ## <a name="logs-for-computers-that-do-not-run-a-version-of-the-windows-operating-system"></a>Журналы компьютеров, которые работают не под управлением ОС Windows  
  Сборщик журналов не собирает файлы журналов с компьютеров, которые работают не под управлением ОС Windows. При использовании компьютеров, работающих под управлением ОС, отличной от Windows, вручную скопируйте следующие файлы журналов в ту же папку, где хранятся файлы сборщика журналов:  
@@ -156,14 +151,11 @@ ms.locfileid: "80852167"
   
 -   Library/Logs/Windows Server.log  
   
--   Библиотека/журналы/Крашрепортер/панель запуска — < nnn\> (копирование всех файлов "Панель запуска-< nnn\>. сбой")  
+-   Библиотека/журналы/Крашрепортер/панель запуска — <nnn \> (копирование всех файлов панели запуска-<nnn \> . Crash)  
   
--   Библиотека/журналы/Диагностикрепортс/панель запуска — < nnn\> (копирование всех файлов "Панель запуска-< nnn\>. сбой")  
+-   Библиотека/журналы/Диагностикрепортс/панель запуска — <nnn \> (копирование всех файлов панели запуска-<nnn \> . Crash)  
   
-## <a name="see-also"></a>См. также:  
-  
+## <a name="see-also"></a>См. также  
 
--   [Устранение ошибок сборщика журналов](Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
-
--   [Устранение ошибок сборщика журналов](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
+-   [Устранение неполадок сборщика журналов](../support/Troubleshoot-Windows-Server-Essentials-Log-Collector-Errors.md)
 

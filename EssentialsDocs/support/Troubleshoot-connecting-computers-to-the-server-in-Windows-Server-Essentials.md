@@ -8,12 +8,12 @@ ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2d98d4cc561a3c29ce73455f38f787709149d056
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6e3c6d58744f24e3027dedc41ad94ee133786a54
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852197"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217504"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
 
@@ -48,28 +48,6 @@ ms.locfileid: "80852197"
 -   Выпуск 10: [выпуск 10](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
   
 -   Выпуск 11. [выпуск 11](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
-
--   Выпуск 1. [выпуск 1](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BMRK_Package)  
-  
--   Выпуск 2. [выпуск 2](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2)  
-  
--   Вопрос 3. [выпуск 3](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssue2a)  
-  
--   Выпуск 4. [выпуск 4](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueNetFramework)  
-  
--   Причина 5: [Выпуск 5](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_Time)  
-  
--   Вопрос 6. [Выпуск 6](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ServiceStopped)  
-  
--   Выпуск 7. [Выпуск 7](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueReconnect)  
-  
--   Ошибка 8. [Ошибка 8](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_JoinWin7)  
-  
--   Выпуск 9. [Выпуск 9](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueAutologon)  
-  
--   Выпуск 10: [выпуск 10](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_ConnectorIssueOldLogs)  
-  
--   Выпуск 11. [выпуск 11](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md#BKMK_UpgradeClientOS)  
 
   
 ##  <a name="issue-1"></a><a name="BMRK_Package"></a>Выпуск 1  
@@ -123,7 +101,7 @@ ms.locfileid: "80852197"
   
 5.  Щелкните правой кнопкой мыши папку сервера, а затем выберите пункт **Свойства**.  
   
-6.  Перейдите на вкладку **Безопасность**.  
+6.  Откройте вкладку **Безопасность**.  
   
 7.  Если для системной учетной записи разрешение **Полный доступ** запрещено, нажмите кнопку **Изменить**, а затем — **СИСТЕМА**. В разделе **Разрешения для системы** установите флажок **Разрешить** рядом с вариантом **Полный доступ**.  
   
@@ -136,7 +114,7 @@ ms.locfileid: "80852197"
   
  **Описание**  
   
- При подключении компьютера к серверу под управлением Windows Server Essentials или Windows Server Essentials мастер пытается установить .NET Framework версии 4.5.50709 на компьютере. Однако при наличии более ранней версии .NET Framework версии 4,5 невозможно установить обновленный выпуск, и попытка подключения завершится ошибкой: для запуска этого приложения необходимо установить одну из следующих версий .NET Framework: V 4.5.50709. Обратитесь к издателю выделения, чтобы получить инструкции по получению соответствующей версии .NET Framework.  
+ При подключении компьютера к серверу под управлением Windows Server Essentials или Windows Server Essentials мастер пытается установить .NET Framework версии 4.5.50709 на компьютере. Однако при наличии более ранней версии .NET Framework версии 4,5 невозможно установить обновленный выпуск, и попытка подключения завершится ошибкой: чтобы запустить это приложение, необходимо установить одну из следующих версий .NET Framework: V 4.5.50709. Обратитесь к издателю выделения, чтобы получить инструкции по получению соответствующей версии .NET Framework.  
   
  **Решение**  
   
@@ -260,7 +238,7 @@ ms.locfileid: "80852197"
   
  Если для учетной записи пользователя задан автоматический вход во время подключения компьютера к Windows Server Essentials, этот параметр перезаписывается при установке программного обеспечения соединителя на компьютере.  
   
- **Решение** . Чтобы устранить эту проблему, при подключении компьютера к серверу запишите пароль, который используется для учетной записи пользователя. После установки ПО Connector настройте автоматический вход для этой учетной записи.  
+ **Решение**. Чтобы устранить эту проблему, при подключении компьютера к серверу запишите пароль, который используется для учетной записи пользователя. После установки ПО Connector настройте автоматический вход для этой учетной записи.  
   
 > [!NOTE]
 >  Для учетной записи домена Windows Server Essentials требуется пароль, соответствующий требованиям политики паролей по умолчанию.  
@@ -272,7 +250,7 @@ ms.locfileid: "80852197"
   
  **Описание**  
   
- После обновления предварительной версии (бета-версия или RC) Windows Server Essentials до выпущенной версии необходимо удалить программное обеспечение соединителя с каждого компьютера, подключенного к серверу, а затем снова подключиться к компьютеру, чтобы установить выпущенную версию. версия программного обеспечения соединителя.  
+ После обновления предварительной версии (бета-версия или RC) Windows Server Essentials до выпущенной версии необходимо удалить программное обеспечение соединителя с каждого компьютера, подключенного к серверу, а затем снова подключить компьютер, чтобы установить выпущенную версию программного обеспечения соединителя.  
   
  Однако при удалении ПО Connector с сетевого компьютера существующие файлы журнала в папке %ProgramData%\Microsoft\Windows Server\Logs\ на этом компьютере не удаляются. Если не удалить папку Logs, файлы журнала могут быть повреждены при подключении компьютера к выпущенной версии Windows Server Essentials.  
   
@@ -297,12 +275,12 @@ ms.locfileid: "80852197"
   
  **Решение**  
   
- Перед обновлением клиентской операционной системы до другой версии (например, обновление Windows XP до Windows Vista или Windows Vista до Windows 7) следует удалить ПО Connector. Используйте компонент **Установка и удаление программ** на панели управления. После завершения обновления клиентской операционной системы можно переустановить соединитель клиента, открыв http://<*server*>/Коннект в веб-браузере, где <*сервер*> является именем сервера Windows Server Essentials.  
+ Перед обновлением клиентской операционной системы до другой версии (например, обновление Windows XP до Windows Vista или Windows Vista до Windows 7) следует удалить ПО Connector. Используйте компонент **Установка и удаление программ** на панели управления. После завершения обновления клиентской операционной системы можно переустановить соединитель клиента, открыв http://<*server*>/Коннект в веб-браузере, где <*Server*> — это имя сервера Windows Server Essentials.  
   
  Если клиент уже был обновлен путем установки программного обеспечения Connector, воспользуйтесь компонентом **Установка и удаление программ** или **Программы и компоненты**, чтобы удалить программное обеспечение Connector. Затем установите программное обеспечение Connector еще раз.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)  
   
--   [Устранение неполадок в Windows 2012 Server Essentials Коннекткомпутер (вики-сайт TechNet)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+-   [Устранение неполадок подключения компьютера с Windows Server 2012 Essentials (вики-сайт TechNet)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)

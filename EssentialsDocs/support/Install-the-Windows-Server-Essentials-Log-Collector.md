@@ -8,12 +8,12 @@ ms.assetid: d271c54f-1ffa-464e-afa5-27b8df61854e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 4ea922142b43e35d6f17207d448c48b2da52ebc8
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ecffbfd3157720ad2762ba77d528af05e5abf53f
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852287"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217544"
 ---
 # <a name="install-the-windows-server-essentials-log-collector"></a>Установка сборщика журналов Windows Server Essentials
 
@@ -43,15 +43,11 @@ ms.locfileid: "80852287"
   
 ##### <a name="to-uninstall-and-reinstall-the-log-collector"></a>Удаление и переустановка сборщика журналов  
   
-1.  Откройте Панель администрирования.  
+1.  Откройте панель мониторинга.  
   
-2.  Откройте вкладку **Надстройки**, выберите **Сборщик журналов** в списке и нажмите кнопку **Удаление**.  
-  
+2.  Откройте вкладку **Надстройки**, выберите **Сборщик журналов** в списке и нажмите кнопку **Удаление**.
 
-3.  Скачайте и установите сборщик журналов, выполнив действия, описанные в предыдущей процедуре [Установка сборщика журналов](Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall).  
-
-3.  Скачайте и установите сборщик журналов, выполнив действия, описанные в предыдущей процедуре [Установка сборщика журналов](../support/Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall).  
-
+3.  Скачайте и установите сборщик журналов, выполнив действия, описанные в предыдущей процедуре [Установка сборщика журналов](Install-the-Windows-Server-Essentials-Log-Collector.md#BKMK_ToInstall).   
   
 ### <a name="manually-install-the-log-collector"></a>Установка сборщика журналов вручную  
  Если мастеру установки не удалось установить сборщик журналов, вы можете самостоятельно установить сборщик журналов на выбранный компьютер, выполнив следующие шаги.  

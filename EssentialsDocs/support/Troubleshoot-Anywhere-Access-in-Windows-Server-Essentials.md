@@ -8,12 +8,12 @@ ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9ebb4f27201e7cdb8e412bc35b217185616df3cb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 313b4fae48a5b70cb16cae0cfb3a7bc048ef97a3
+ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852257"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85217564"
 ---
 # <a name="troubleshoot-anywhere-access-in-windows-server-essentials"></a>Устранение неполадок повсеместного доступа в Windows Server Essentials
 
@@ -34,7 +34,7 @@ ms.locfileid: "80852257"
   
 3.  Щелкните **Восстановить**. Запускается мастер исправления повсеместного доступа.  
   
-4.  Нажмите кнопку **Далее**. Мастер анализирует работу повсеместного доступа, определяет проблему и пытается устранить неполадку.  
+4.  Щелкните **Далее**. Мастер анализирует работу повсеместного доступа, определяет проблему и пытается устранить неполадку.  
   
 5.  Если вы получите предупреждение по окончании работы мастера, можно щелкнуть **Повторить**, чтобы попытаться устранить проблему еще раз. Если вы продолжите получать предупреждение, ознакомьтесь с дополнительными сведениями о проблеме и рекомендациями по ее устранению в составе предупреждения.  
   
@@ -48,13 +48,8 @@ ms.locfileid: "80852257"
  Если мастеру исправления повсеместного доступа не удается восстановить повсеместный доступ, ознакомьтесь со следующими разделами, посвященными устранению неполадок удаленного веб-доступа, VPN и DirectAccess:  
   
 
--   [Устранение неполадок подключения удаленного Веб-доступ](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
+-   [Устранение неполадок подключения к системе удаленного веб-доступа](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
   
--   [Устранение неполадок брандмауэра](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
--   [Устранение неполадок подключения удаленного Веб-доступ](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)  
-  
--   [Устранение неполадок брандмауэра](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)  
-
+-   [Раздел об устранении неполадок брандмауэра](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
   
 -   Последние проблемы, о которых сообщает сообщество Windows Server Essentials, см. на [форуме Windows Server Essentials](https://social.technet.microsoft.com/Forums/winserveressentials/threads) .
