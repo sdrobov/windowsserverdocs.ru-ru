@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/15/2020
 description: Обзор рабочих папок — роли сервера в Windows Server, которая предоставляет пользователям согласованный способ доступа к рабочим файлам с компьютеров и других устройств.
-ms.openlocfilehash: 4e670d61729d35ee9569b09e91ef5a953961241e
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: f48c03d97cab94f836ef6fafa77fccf07a04331b
+ms.sourcegitcommit: 44a96d505b5c96da62937f5dd2d724342ee9d835
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070097"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141033"
 ---
 # <a name="work-folders-overview"></a>Обзор рабочих папок
 
@@ -141,8 +141,8 @@ ms.locfileid: "85070097"
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **Сводная информация о технологии** | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами и устройствами | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами с доступом к корпоративной сети (можно заменить на рабочие папки) | Синхронизирует файлы, которые хранятся в Office 365 или SharePoint, с компьютерами и устройствами внутри корпоративной сети и за ее пределами, а также предоставляет возможности для совместной работы с документами | Синхронизирует личные файлы, сохраненные в OneDrive, с ПК, Mac и другими устройствами |
 | **Предназначено для предоставления пользователям доступа к рабочим файлам** | Да | Да | Да | Нет |
-| **облачная служба** | None | None | Office 365 | Microsoft OneDrive |
-| **Внутренние сетевые серверы** | Файловые серверы под управлением Windows Server 2012 R2 или Windows Server 2016 | Файловые серверы | Сервер SharePoint (необязательно) | None |
+| **облачная служба** | Отсутствуют | Отсутствуют | Office 365 | Microsoft OneDrive |
+| **Внутренние сетевые серверы** | Файловые серверы под Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019 | Файловые серверы | Сервер SharePoint (необязательно) | Отсутствуют |
 | **Поддерживаемые клиенты** | ПК, iOS, Android | ПК в корпоративной сети или ПК, подключенные через DirectAccess, VPN и другие технологии удаленного доступа | ПК, iOS, Android, Windows Phone | ПК, Mac, Windows Phone, iOS, Android |
   
 > [!NOTE]
@@ -160,18 +160,18 @@ ms.locfileid: "85070097"
   
 ## <a name="interoperability-with-windows-azure-virtual-machines"></a>Взаимодействие с виртуальными машинами Microsoft Azure
 
- Можно запустить эту службу роли Windows Server на виртуальной машине в Microsoft Azure. Этот сценарий был протестирован с использованием Windows Server 2012 R2 и Windows Server 2016.  
+ Можно запустить эту службу роли Windows Server на виртуальной машине в Microsoft Azure. Этот сценарий был протестирован с Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019.  
   
 Дополнительные сведения о начале работы с виртуальными машинами Microsoft Azure см. на [веб-сайте Microsoft Azure](http://www.windowsazure.com/documentation/services/virtual-machines).  
   
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
  Дополнительные сведения по данной теме см. на следующих ресурсах.  
   
 | Тип содержимого | Ссылки |
 | ------------------ | ---------------- |
 | **Оценка продукта** | -   [Рабочие папки для Android — выпущено](https://blogs.technet.microsoft.com/filecab/2016/03/16/work-folders-for-android-released) (запись в блоге)<br />-   [Рабочие папки для iOS — выпуск приложений iPad](https://blogs.technet.com/b/filecab/archive/2015/01/16/work-folders-for-ios-ipad-app-release.aspx) (запись блога)<br />-   [Знакомство с рабочими папками в Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/07/09/introducing-work-folders-on-windows-server-2012-r2.aspx) (запись блога)<br />-   [Введение в рабочие папки](https://channel9.msdn.com/posts/Introduction-to-Work-Folders) (видео Channel 9)<br />-   [Развертывание тестовой лаборатории рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (запись блога)<br />-   [Рабочие папки для Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (запись блога) |
-| **Развертывание** | -   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [Использование автономные файлы (CSC) с руководством по миграции рабочих папок](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [Рекомендации по производительности при развертывании рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559) |
+| **Deployment** | -   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />- [Использование автономные файлы (CSC) с руководством по миграции рабочих папок](https://blogs.technet.microsoft.com/filecab/2016/08/12/offline-files-csc-to-work-folders-migration-guide/)<br />-   [Рекомендации по производительности при развертывании рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559) |
 | **Операции** | -   [Приложение для работы с рабочими папками для iPad: вопросы и ответы](https://windows.microsoft.com/windows/work-folders-ipad-faq) (для пользователей)<br />-   [Управление сертификатами рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/08/09/work-folders-certificate-management.aspx) (запись блога)<br />-   [Мониторинг развертываний рабочих папок Windows Server 2012 R2](https://blogs.technet.com/b/filecab/archive/2013/10/15/monitoring-windows-server-2012-r2-work-folders-deployments.aspx) (запись блога)<br />-   [Командлеты Синкшаре (рабочие папки) в Windows PowerShell](https://docs.microsoft.com/powershell/module/syncshare/?view=win10-ps)<br />-   [Краткий справочник по командлетам службы хранилища и файловых служб PowerShell для Windows Server 2012 R2 Preview Edition](https://blogs.technet.com/b/filecab/archive/2013/07/30/storage-and-file-services-powershell-cmdlets-quick-reference-card-for-windows-server-2012-r2-preview-edition.aspx) |
 | **Устранение неполадок** | -   [Windows Server 2012 R2 — устранение конфликтов портов с веб-сайтами IIS и рабочими папками](https://blogs.technet.com/b/filecab/archive/2013/10/15/windows-server-2012-r2-resolving-port-conflict-with-iis-websites-and-work-folders.aspx) (запись в блоге)<br />-   [Распространенные ошибки в рабочих папках](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
 | **Ресурсы сообщества** | -   [Форум по файловым службам и хранилищам](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [Рабочая группа по хранению данных Майкрософт — блог File Cabinet](https://blogs.technet.com/b/filecab/)<br />-   [Обратитесь к блогу группы по службам каталогов](https://blogs.technet.com/b/askds/) |  
