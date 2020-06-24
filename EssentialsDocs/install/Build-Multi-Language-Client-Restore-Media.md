@@ -8,12 +8,12 @@ ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c47b77e30aafdf6d882bb0d6af4777c7417acba9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 57bf1d35e817be57b8d23e520568961aef3ee557
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817347"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267445"
 ---
 # <a name="build-multi-language-client-restore-media"></a>Создание многоязычного носителя для восстановления клиентов
 
@@ -91,9 +91,4 @@ ms.locfileid: "80817347"
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

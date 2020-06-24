@@ -8,18 +8,18 @@ ms.assetid: ef3a7934-e36f-40d8-9e0b-7ed59089f85e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: daa8f75671c4dc663cca12dd0618a593c2010103
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f8ef3af7fecf5fe07f5a88758fc6636a846f8e08
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817447"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267364"
 ---
 # <a name="assessment-and-deployment-kit-for-windows-server-essentials"></a>Комплект средств для развертывания и оценки для Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Комплект Windows Server&reg; 2012 Essentials для оценки и развертывания (ADK) — это набор средств, двоичных файлов и языковых пакетов операционной системы, которые можно использовать для настройки, оценки и развертывания Windows Server Essentials на новых компьютерах. Данный документ включает информацию, которая относится только к партнерам, намеревающимся предустанавливать операционную систему на оборудование своих клиентов, и включает следующие разделы:  
+&reg;Комплект средств для развертывания и оценки Windows server 2012 Essentials (ADK) — это набор инструментов, двоичных файлов и языковых пакетов операционной системы, которые можно использовать для настройки, оценки и развертывания Windows Server Essentials на новых компьютерах. Данный документ включает информацию, которая относится только к партнерам, намеревающимся предустанавливать операционную систему на оборудование своих клиентов, и включает следующие разделы:  
   
 
 -   [Начало работы с ADK Windows Server Essentials](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)  
@@ -80,72 +80,12 @@ ms.locfileid: "80817447"
   
 -   [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md)  
   
--   [Тестирование работы пользователей](Testing-the-Customer-Experience.md)  
-
--   [Начало работы с ADK Windows Server Essentials](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)  
-  
-    -   [Важная информация об использовании ADK Windows Server Essentials](../install/Important-Information-for-Using-the-Windows-Server-Essentials-ADK.md)  
-  
-    -   [Требования к оборудованию для целевого компьютера](../install/Hardware-Requirements-for-the-Target-Computer.md)  
-  
-    -   [Предварительная настройка маршрутизатора](../install/Preconfiguring-a-Router.md)  
-  
-    -   [Подготовка обслуживающего компьютера](../install/Prepare-the-Technician-Computer.md)  
-  
-    -   [Настройка хранилища сервера](../install/Configure-Server-Storage.md)  
-  
--   [Создание и настройка образа](../install/Creating-and-Customizing-the-Image.md)  
-  
-    -   [Создание простого настроенного образа](../install/Create-a-Simple-Customized-Image.md)  
-  
-    -   [Создание загрузочного USB-устройства флэш-памяти](../install/Create-a-Bootable-USB-Flash-Drive.md)  
-  
-    -   [Создание образа с помощью файлов ответов](../install/Create-an-Image-By-Using-Answer-Files.md)  
-  
-    -   [Настройка образа](../install/Customize-the-Image.md)  
-  
--   [Дополнительные настройки](../install/Additional-Customizations.md)  
-  
-    -   [Добавление фирменной символики на панели мониторинга, удаленного доступа и запуска](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
-  
-    -   [Добавление вкладки в меню "Параметры"](../install/Add-a-Tab-to-Settings.md)  
-  
-    -   [Добавление категорий верхнего уровня на панель запуска (операционная система Macintosh)](../install/Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-.md)  
-  
-    -   [Изменение параметров потоковой передачи мультимедиа](../install/Change-Media-Streaming-Settings.md)  
-  
-    -   [Изменение цветовой схемы панели мониторинга и панели запуска](../install/Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md)  
-  
-    -   [Изменение порядка и группировки вкладок](../install/Change-the-Order-and-Grouping-of-Tabs.md)  
-  
-    -   [Установка и удаление языковых пакетов](../install/Install-or-Remove-Language-Packs.md)  
-  
-    -   [Управление доменными именами и поставщиками доменных имен](../install/Manage-Domain-Names-and-Domain-Name-Providers.md)  
-  
-    -   [Настройка задачи "Зарегистрироваться в Microsoft Online Backup Service"](../install/Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
-  
-    -   [Настройка дисковых пространств](../install/Customize-Storage-Spaces.md)  
-  
-    -   [Создание многоязычного носителя для восстановления клиентов](../install/Build-Multi-Language-Client-Restore-Media.md)  
-  
-    -   [Автоматизация установки дополнительных компонентов во время установки](../install/Automate-Installation-of-Add-Ins-During-Setup.md)  
-  
-    -   [Добавление информации о зарегистрированном партнере, заключившем партнерское соглашение об интерактивных службах Майкрософт](../install/Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
-  
-    -   [Замена URL-адресов конечных точек при покупке или ознакомлении для модуля интеграции O365 в рамках поддержки по соглашению с торговым посредником интернет-служб Майкрософт](../install/Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
-  
-    -   [Создание DVD-диска восстановления сервера для удаленно администрируемых серверов](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
-  
-    -   [Создание DVD-диска восстановления сервера с многоязычной поддержкой](../install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)  
-  
--   [Подготовка образа для развертывания](../install/Preparing-the-Image-for-Deployment.md)  
-  
--   [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)  
+-   [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
 
   
-## <a name="copyright-information"></a>Сведения об авторских правах  
- Этот документ предоставляется "как есть". Сведения и идеи, изложенные в этом документе, включая URL-адреса и прочие ссылки на веб-сайты в Интернете, могут быть изменены без предварительного уведомления. Некоторые из приведенных здесь примеров предназначены исключительно для иллюстрации и являются вымышленными. Они не связаны с реальными ситуациями и событиями. Настоящий документ не предоставляет никаких законных прав на интеллектуальную собственность в любом продукте Майкрософт. Документ можно копировать и использовать для внутренних целей или для справки.  
+## <a name="copyright-information"></a>сведения об авторских правах;  
+ Этот документ предоставляется как есть. Сведения и мнения, содержащиеся в данном документе, включая URL-адреса и другие ссылки на веб-сайты в Интернете, могут быть изменены без уведомления. Некоторые приведенные в книге примеры служат только для иллюстрации и являются вымышленными. Все совпадения с реальными наименованиями, людьми и любыми другими предметами являются непреднамеренными и случайными. Настоящий документ не предоставляет никаких законных прав на интеллектуальную собственность в любом продукте Майкрософт. Вы можете копировать и использовать настоящий документ для внутреннего использования и в справочных целях.  
   
- Active Directory, Microsoft, Windows Live, Windows PowerShell, Windows и Windows Server являются товарными знаками группы компаний Майкрософт. Все другие товарные знаки являются собственностью соответствующих владельцев.  
+ Active Directory, Microsoft, Windows Live, Windows PowerShell, Windows и Windows Server являются товарными знаками группы компаний Майкрософт. Все прочие охраняемые товарные знаки являются собственностью их владельцев.  
   
- &copy; 2012 Майкрософт. Все права защищены.
+ &copy;2012 Корпорация Майкрософт. Все права защищены.

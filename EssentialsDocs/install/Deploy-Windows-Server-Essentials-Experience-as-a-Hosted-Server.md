@@ -8,63 +8,39 @@ ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 9ddeaedb09346216585b2eb1237ed9340da59756
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4066e003e2b32ddf746b9a37a10ebecfa3c50851
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817977"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267625"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Развертывание режима Windows Server Essentials в качестве размещенного сервера
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-Этот документ содержит сведения, относящиеся к поставщикам услуг размещения, которые планирует развертывать Microsoft Windows Server 16 с ролью Windows Server Essentials (Windows Server Essentials в оставшейся части документа), установленной в лаборатории и Предложите пользователям Windows Server Essentials работать как услуга для своих клиентов. Данный документ содержит следующие разделы:  
+Этот документ содержит сведения, относящиеся к поставщикам услуг размещения, которые планирует развернуть Microsoft Windows Server 16 с помощью роли Windows Server Essentials (Windows Server Essentials в оставшейся части документа), установленной в своей лаборатории, и предложит предложить Windows Server Essentials в качестве услуги своим клиентам. Данный документ содержит следующие разделы:  
   
 
 -   [Обзор возможностей Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
   
--   [Преимущества размещения Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
+-   [Преимущества размещения Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
   
 -   [Поддерживаемые варианты развертывания](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
   
--   [Поддерживаемые сетевые топологии](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
+-   [Поддерживаемые топологии сети](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
   
--   [Настройка образа роли Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
+-   [Настройка образа Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
   
--   [Автоматизируйте развертывание интерфейса Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
+-   [Автоматизация развертывания Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
   
--   [Перенос данных из Windows Small Business Server в интерфейс Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
+-   [Миграция данных с Windows Small Business Server на Windows Server Essentials Experience](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
   
 -   [Выполнение общих задач с помощью Windows PowerShell](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
   
 -   [Интеграция электронной почты с Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
   
--   [Мониторинг и управление с помощью собственных средств](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
-  
--   [Сценарии тестирования](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
-  
--   [Сведения о поддержке](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Support)  
-
--   [Обзор возможностей Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_WSEEOverview)  
-  
--   [Преимущества размещения Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Benefits)  
-  
--   [Поддерживаемые варианты развертывания](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedDeployment)  
-  
--   [Поддерживаемые сетевые топологии](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_SupportedToplogy)  
-  
--   [Настройка образа роли Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_CustomizeImage)  
-  
--   [Автоматизируйте развертывание интерфейса Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_AutomateDeployment)  
-  
--   [Перенос данных из Windows Small Business Server в интерфейс Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Migrate)  
-  
--   [Выполнение общих задач с помощью Windows PowerShell](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_PowerShell)  
-  
--   [Интеграция электронной почты с Windows Server Essentials](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_EmailIntegration)  
-  
--   [Мониторинг и управление с помощью собственных средств](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
+-   [Контроль и управление с помощью стандартных средств](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Monitoring)  
   
 -   [Сценарии тестирования](Deploy-Windows-Server-Essentials-Experience-as-a-Hosted-Server.md#BKMK_Scenarios)  
   
@@ -93,7 +69,7 @@ ms.locfileid: "80817977"
   
 -   **Упрощенная панель мониторинга**. Панель мониторинга Windows Server Essentials упрощает выполнение общих задач, таких как управление серверными папками и их хранение, резервное копирование и восстановление, управление учетными записями пользователей или групп пользователей, удаленным доступом и электронной почтой. Это дает возможность клиентам малого и среднего бизнеса выполнять повседневные задачи без необходимости обращения в службу технической поддержки.  
   
--   **Расширяемость** . Панель мониторинга Windows Server Essentials и программное обеспечение Windows Server Essentials Connector расширяемы. Вы можете добавить свою собственную фирменную интеграцию, чтобы все клиенты имели одну точку входа для серверов и служб.  
+-   **Расширяемость**. Панель мониторинга Windows Server Essentials и программное обеспечение Windows Server Essentials Connector расширяемы. Вы можете добавить свою собственную фирменную интеграцию, чтобы все клиенты имели одну точку входа для серверов и служб.  
   
 -   **Мониторинг**. Новая версия пакета мониторинга системного центра позволяет управлять несколькими серверами под управлением Windows Server Essentials. Сведения о загрузке пакета управления см. в разделе [пакет управления System Center для Windows Server Essentials](https://www.microsoft.com/download/details.aspx?id=40809).  
   
@@ -126,7 +102,7 @@ ms.locfileid: "80817977"
   
   -   Назначение вторичным серверам статического IP-адреса в том же диапазоне подсети, но вне пула VPN-адресов.  
   
-- **Топология 2**.  
+- **Топология 2**:  
   
   -   Назначение серверу частного IP-адреса.  
   
@@ -173,13 +149,13 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
   
  Если этот раздел имеет значение 0x1, некоторые локальные компоненты изменят поведение системы. Такие изменения включают в себя следующее:  
   
-- **Архивация данных клиента** . По умолчанию архивация данных клиента отключена для вновь присоединившихся клиентских компьютеров.  
+- **Архивация данных клиента**. По умолчанию архивация данных клиента отключена для вновь присоединившихся клиентских компьютеров.  
   
-- **Служба восстановления клиентских данных** Служба восстановления клиентских данных will be disabled, and the UI will be hidden from the Dashboard.  
+- **Служба восстановления клиентских данных**. Служба восстановления клиентских данных будет отключена, а пользовательский интерфейс службы скрыт из панели мониторинга.  
   
 - **История файлов**. Настройки истории файлов для учетных записей новых пользователей не будут автоматически управляться сервером.  
   
-- **Архивация данных сервера** Архивация данных сервера service will be disabled, and the Архивация данных сервера UI will be hidden from the Dashboard.  
+- **Архивация данных сервера**. Архивация данных сервера будет отключена, а пользовательский интерфейс службы будет скрыт из панели мониторинга.  
   
 - **Дисковые пространства**. Пользовательский интерфейс службы управления дисковыми пространствами будет скрыт из панели мониторинга.  
   
@@ -195,7 +171,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 -   Сведения об установке роли Windows Server Essentials с помощью Windows PowerShell см. в статье [Установка и настройка Windows Server Essentials](https://technet.microsoft.com/library/dn281793.aspx).  
   
 > [!NOTE]
->  Убедитесь, что параметры часового пояса для виртуальной машины узла и интерфейса Windows Server Essentials совпадают. В противном случае могут возникнуть ошибки, К ним относятся: Начальная конфигурация сервера может не быть успешной в задачах, связанных с сертификатом, поэтому сертификат может не работать в течение нескольких часов после установки роли Windows Server Essentials, а сведения об устройстве не будут обновлены. работает.  
+>  Убедитесь, что параметры часового пояса для виртуальной машины узла и интерфейса Windows Server Essentials совпадают. В противном случае могут возникнуть ошибки, К ним относятся: Начальная конфигурация сервера может не быть успешной в задачах, связанных с сертификатом. После установки роли Windows Server Essentials может не работать этот сертификат в течение нескольких часов, а сведения об устройстве будут обновлены неправильно.  
   
  После развертывания необходимо использовать Windows PowerShell cmdlet **Get-WssConfigurationStatus**, чтобы проверить успешность начальной настройки. Должен вернуться один из следующих статусов: **Notstarted**, **FinishedWithWarning**, **Running**, **Finished**, **Failed**либо **PendingReboot**.  
   
@@ -223,7 +199,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  В данном разделе описаны некоторые общие задачи, которые можно выполнять с помощью Windows PowerShell.  
   
 ### <a name="enable-remote-web-access"></a>Подключение удаленного веб-доступа  
- **Синтаксис**:  
+ **Синтаксис**  
   
  Enable-WssRemoteWebAccess [-SkipRouter] [-DenyAccessByDefault] [-ApplyToExistingUsers]  
   
@@ -234,9 +210,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  Данная команда позволяет включить удаленный веб-доступ с помощью автоматически настроенного маршрутизатора и изменить установленные по умолчанию права доступа для всех существующих пользователей.  
   
 ### <a name="add-user"></a>Добавление пользователя  
- **Синтаксис**:  
+ **Синтаксис**  
   
- Add-Вссусер [-name] < строка\> [-password] < SecureString\> [-AccessLevel < строка\> {пользователь &#124; Администратор}] [-FirstName < строка\>] [-LastName < строка\>] [-алловремотеакцесс] [-алловвпнакцесс] [< общиепараметры\>]  
+ Add-Вссусер [-name] <строка \> [-password] <SecureString \> [-AccessLevel <строка \> {пользователь &#124; Администратор}] [-FirstName <строка \> ] [-LastName <строка \> ] [-алловремотеакцесс] [-алловвпнакцесс] [<общиепараметры \> ]  
   
  **Пример**:  
   
@@ -245,9 +221,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  Эта команда добавит администратора с именем User2Test с Password Passw0rd!.  
   
 ### <a name="add-server-folder"></a>Добавление папки сервера  
- **Синтаксис**:  
+ **Синтаксис**  
   
- Add-Вссфолдер [-name] < строка\> [-path] < строка\> [[-Description] < строка\>] [-Киппермиссионс] [< Общиепараметры\>]  
+ Add-Вссфолдер [-name] <строка \> [-path] <строка \> [[-Description] <строка \> ] [-киппермиссионс] [<общиепараметры \> ]  
   
  **Пример**:  
   
@@ -302,20 +278,20 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
  Ниже представлена некоторая важная информация касательно полной архивации данных клиентского компьютера:  
   
--   **Производительность** . Первоначальная архивация данных клиента может занять продолжительное время в связи с большим объемом данных для загрузки.  
+-   **Производительность** Начальная Архивация клиента может занять много времени из-за объема отправляемых данных.  
   
--   **Стабильность** . Иногда подключение к Интернету со стороны клиента может быть нестабильным. Резервное копирование клиента разработано для автоматического возобновления, а резервная копия базы данных клиента создает контрольную точку при каждом резервном копировании 40 ГБ данных. Это значение можно уменьшить, если подключение к Интернету нестабильно.  
+-   **Стабильность работы** Иногда подключение к Интернету не является стабильным на стороне клиента. Резервное копирование клиента разработано для автоматического возобновления, а резервная копия базы данных клиента создает контрольную точку при каждом резервном копировании 40 ГБ данных. Это значение можно уменьшить, если подключение к Интернету нестабильно.  
   
-    -   Включение процесса создания контрольной точки На сервере в разделе реестра **HKLM\Software\Microsoft\Windows Server\Backup\GetCheckPointJobs** задайте значение 1.  
+    -   Чтобы включить задание контрольной точки: на сервере задайте для раздела реестра **HKLM\Software\Microsoft\Windows сервер\баккуп\жетчеккпоинтжобс** значение 1.  
   
     -   Изменение порогового значения контрольной точки На клиентском компьютере измените значение **HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold** со значения по умолчанию в 40 ГБ.  
   
--   **Восстановление исходного состояния клиентского компьютера** . Поскольку среда предустановки Windows не поддерживает VPN-подключение, восстановление исходного состояния клиентского компьютера невозможно. Для скрытия задачи службы восстановления данных клиента необходимо выполнить действия, описанные в разделе [Настройка и развертывание Windows Server Essentials на Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
+-   **Восстановление исходного состояния клиентского компьютера** . Поскольку среда предустановки Windows не поддерживает VPN-подключение, восстановление исходного состояния клиентского компьютера невозможно. Чтобы скрыть задачу "Служба восстановления клиента", выполните действия, описанные в разделе [Настройка и развертывание Windows Server Essentials в Windows server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
 ##### <a name="file-history"></a>История файлов  
  История файлов — это функция ОС Windows 8.1 и Windows 8, позволяющая архивировать данные профиля (библиотеки, рабочий стол, контакты, избранное) в общую сетевую папку. Можно централизованно управлять параметрами истории файлов всех компьютеров под управлением Windows 8.1 или Windows 8, подключенных к сети Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Для скрытия задачи службы восстановления данных клиента необходимо выполнить действия, описанные в разделе [Настройка и развертывание Windows Server Essentials на Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
-### <a name="storage-management"></a>Управление хранилищами  
+### <a name="storage-management"></a>Управление хранением  
  Дисковые пространства позволяют объединить физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Можно выполнять это на ведущем узле или на виртуальной машине. Если вы хотите скрыть этот компонент в виртуальной машине под управлением Windows Server Essentials, следуйте инструкциям в разделе [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).  
   
 ##  <a name="test-scenarios"></a><a name="BKMK_Scenarios"></a>Сценарии тестирования  
@@ -355,9 +331,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 -   (Если применимо.) Настройте параметры архивации сервера, веб-архивации, архивации данных клиента и истории файлов.  
   
--   (Если применимо) настройте и управляйте дисковыми пространствами.  
+-   (Если применимо.) Настройте и управляйте дисковыми пространствами.  
   
--   (Если применимо) Настройте интеграцию служб электронной почты (Office 365 и размещенного сервера Exchange).  
+-   (Если применимо.) Настройте интеграцию служб электронной почты (Office 365 и размещенного сервера Exchange).  
   
 -   (Если применимо.) Настройте интеграции с другими интернет-службами Майкрософт.  
   
@@ -398,9 +374,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
   
 -   [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
--   [Новые возможности Windows Server Essentials](../get-started/what-s-new.md)  
+-   [Что нового в Windows Server Essentials](../get-started/what-s-new.md)  
 
 -   [Установка Windows Server Essentials](Install-Windows-Server-Essentials.md)  
 

@@ -8,12 +8,12 @@ ms.assetid: 2fe8e35c-69f9-40b3-a270-22e2402510d8
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ddcdb9576072af6b7014f6dc9b0c38e9f5bdd25d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 69a57333990a225663d2cd3cc61c75947d07cdab
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818367"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267375"
 ---
 # <a name="create-a-bootable-usb-flash-drive"></a>Создание загрузочного USB-устройства флэш-памяти
 
@@ -36,7 +36,7 @@ ms.locfileid: "80818367"
   
 1.  Вставьте USB-устройство флэш-памяти в работающий компьютер.  
   
-2.  Откройте окно командной строки от имени администратора.  
+2.  Откройте окно командной строки с правами администратора.  
   
 3.  Введите `diskpart`.  
   
@@ -63,16 +63,10 @@ ms.locfileid: "80818367"
   
 ## <a name="see-also"></a>См. также  
 
- [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [начало работы с Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](Testing-the-Customer-Experience.md)   
+ [Тестирование работы пользователей](Testing-the-Customer-Experience.md)     
 
- [Начало работы с Windows Server ESSENTIALS ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)   
-
- [Как мы можем помочь вам?](https://windows.microsoft.com/windows/support)
+ [Чем мы можем вам помочь?](https://windows.microsoft.com/windows/support)

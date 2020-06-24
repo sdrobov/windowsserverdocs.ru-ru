@@ -8,18 +8,18 @@ ms.assetid: 32fc90d8-31c5-4c7e-9fe3-483cf3c35f78
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 190d49fe3a33c5391f199cb013d661cc519b1ca3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 19a3039b01b70937241ece767f5d4971af26f5f4
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852507"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256564"
 ---
 # <a name="migrate-windows-small-business-server-2011-essentials-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2011 Essentials на Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-В этом руководство описано, как перенести существующий домен Windows Small Business Server 2011 Essentials на Windows Server&reg; 2012 Essentials, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
+В этом руководство описано, как перенести существующий домен Windows Small Business Server 2011 Essentials на Windows Server &reg; 2012 Essentials, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
   
 > [!NOTE]
 >  Чтобы избежать проблем во время миграции, Группа разработки продукта Windows Server Essentials настоятельно рекомендует ознакомиться с этим документом перед началом миграции.  
@@ -27,12 +27,10 @@ ms.locfileid: "80852507"
 > [!NOTE]
 > 
 >  Сведения о переносе данных сервера в последнюю версию Windows Server Essentials см. в статье [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
-> 
->  Сведения о переносе данных сервера в последнюю версию Windows Server Essentials см. в статье [Переход на Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
 
   
 ## <a name="additional-resources"></a>Дополнительные ресурсы  
- Ссылки на дополнительные сведения, средства и ресурсы сообщества, помогающие выполнить процесс миграции, см. в разделе [миграция Windows Small Business Server](https://go.microsoft.com/fwlink/?LinkId=217520).  
+ Ссылки на полезные при миграции дополнительные сведения, инструменты и ресурсы сообщества можно найти в разделе [Миграция Windows Small Business Server](https://go.microsoft.com/fwlink/?LinkId=217520).  
   
 ## <a name="terms-and-definitions"></a>Термины и определения  
  **Исходный сервер:** Существующий сервер, с которого переносятся параметры и данные.  
@@ -63,7 +61,7 @@ ms.locfileid: "80852507"
   
 ###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>Открытие окна командной строки на исходном сервере с правами администратора  
   
-1.  Нажмите кнопку **Пуск**.  
+1.  Нажмите **Запуск**.  
   
 2.  В поле поиска введите **cmd**.  
   

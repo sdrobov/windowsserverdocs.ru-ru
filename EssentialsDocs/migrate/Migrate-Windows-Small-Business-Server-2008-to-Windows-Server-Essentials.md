@@ -8,31 +8,29 @@ ms.assetid: 71e3243e-2da9-409a-ae1f-813d4c9062e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6a8c8a142cb40b8211450d16753ec9796987d208
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3a64bbb83f416d6791abbb51f3fc000b418bc0e4
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852517"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256552"
 ---
 # <a name="migrate-windows-small-business-server-2008-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2008 на Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
-В этом руководство описано, как перенести существующий домен Windows SBS 2008 в Windows Server&reg; 2012 Essentials на новом оборудовании, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
+В этом руководство описано, как перенести существующий домен Windows SBS 2008 в Windows Server &reg; 2012 Essentials на новом оборудовании, а затем перенести параметры и данные. В этом руководство также описано, как удалить существующий сервер из сети Windows Server Essentials после завершения миграции.  
   
 > [!NOTE]
 >  Чтобы избежать проблем во время миграции, Группа разработки продукта Windows Server Essentials настоятельно рекомендует ознакомиться с этим документом перед началом миграции.  
 > 
 > [!NOTE]
 > 
->  Сведения о переносе данных сервера в последнюю версию Windows Server Essentials см. в статье [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
-> 
->  Сведения о переносе данных сервера в последнюю версию Windows Server Essentials см. в статье [Переход на Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).  
+>  Сведения о переносе данных сервера в последнюю версию Windows Server Essentials см. в статье [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
 
   
 ## <a name="additional-resources"></a>Дополнительные ресурсы  
- Ссылки на дополнительные сведения, средства и ресурсы сообщества, которые помогут вам выполнить процесс миграции, см. на веб-сайте [Перенос Windows Small Business Server](https://go.microsoft.com/fwlink/?LinkId=217520) .  
+ Ссылки на полезные при миграции дополнительные сведения, инструменты и ресурсы сообщества можно найти на веб-сайте о [миграции Windows Small Business Server](https://go.microsoft.com/fwlink/?LinkId=217520).  
   
 ## <a name="terms-and-definitions"></a>Термины и определения  
  **Исходный сервер:** Существующий сервер, с которого переносятся параметры и данные.  
@@ -64,11 +62,11 @@ ms.locfileid: "80852517"
   
 ###  <a name="to-open-a-command-prompt-window-on-the-source-server-as-an-administrator"></a><a name="BKMK_OpenACommandPromptAsAdmin"></a>Открытие окна командной строки на исходном сервере с правами администратора  
   
-1.  Щелкните Пуск.  
+1.  Нажмите кнопку "Пуск".  
   
-2.  В поле поиска введите cmd.  
+2.  В поле поиска введите "cmd".  
   
-3.  В списке результатов правой кнопкой мыши щелкните команду cmd и выберите пункт Запуск от имени администратора.  
+3.  В списке результатов щелкните правой кнопкой мыши команду cmd и выберите пункт "Запуск от имени администратора".  
   
 #### <a name="to-open-a-command-prompt-window-on-the-destination-server-as-an-administrator"></a>Открытие окна командной строки на конечном сервере от имени администратора  
   

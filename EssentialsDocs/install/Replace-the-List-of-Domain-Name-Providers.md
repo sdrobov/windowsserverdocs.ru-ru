@@ -8,12 +8,12 @@ ms.assetid: 104d0412-2d77-4cd4-99f7-65a885522850
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e55dc757b93c7e11b29ed4fd579362900e54f909
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d5281afa423360779924ff212ff300195fac5695
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819847"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267505"
 ---
 # <a name="replace-the-list-of-domain-name-providers"></a>Замена списка поставщиков доменных имен
 
@@ -24,11 +24,11 @@ ms.locfileid: "80819847"
 
 -   [Создание файлов справочной службы](Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
 
--   [Добавление записи в реестр на компьютере образца](Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+-   [Добавление записи в реестр на компьютере-образце](Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
 
 -   [Создание файлов справочной службы](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_ReferralFiles)  
 
--   [Добавление записи в реестр на компьютере образца](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
+-   [Добавление записи в реестр на компьютере-образце](../install/Replace-the-List-of-Domain-Name-Providers.md#BKMK_AddRegistry)  
 
 
 ###  <a name="create-the-referral-service-files"></a><a name="BKMK_ReferralFiles"></a>Создание файлов справочной службы  
@@ -50,7 +50,7 @@ ms.locfileid: "80819847"
 
 7.  Если у поставщика доменных имен имеется эмблема, добавьте ее, щелкнув **Change Logo** (Изменить эмблему).  
 
-8.  Нажмите кнопку **Сохранить**.  
+8.  Выберите команду **Сохранить**.  
 
 9. Повторите шаги 2-8 для каждого поставщика доменных имен, отображаемого в списке мастера.  
 
@@ -85,11 +85,11 @@ ms.locfileid: "80819847"
 ~~~
 
 ###  <a name="domain-name-status-issues"></a><a name="BKMK_ReplaceDomainNameProviders"></a>Проблемы состояния доменного имени  
- Если партнер добавляет поставщики доменных имен и использует прикладной программный интерфейс (API) в Windows Server Essentials SDK для установки неизвестных, неудачных и Цертификатерекуестнотсубмиттед состояний сертификата, клиент получает неверный результат сообщения и конфигурации. Это происходит потому, что эти случаи обрабатываются исключениями и состояние не возвращается.  
+ Если партнер добавляет поставщики доменных имен и использует прикладной программный интерфейс (API) в Windows Server Essentials SDK для установки неизвестных, неудачных и Цертификатерекуестнотсубмиттед состояний сертификата, клиент получает неправильное сообщение и результат конфигурации. Это происходит потому, что эти случаи обрабатываются исключениями и состояние не возвращается.  
 
  Следующие состояния домена являются ошибками и должны сопровождаться соответствующими сообщениями:  
 
-- Failed  
+- Ошибка  
 
 - PendingCustomerInterventionRequired  
 
@@ -103,9 +103,9 @@ ms.locfileid: "80819847"
 
   Следующие состояния домена являются успешными и должны сопровождаться соответствующими сообщениями:  
 
-- Готово  
+- Ready  
 
-- Ожидающие  
+- Ожидает  
 
 - InRenewal  
 
@@ -115,9 +115,4 @@ ms.locfileid: "80819847"
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

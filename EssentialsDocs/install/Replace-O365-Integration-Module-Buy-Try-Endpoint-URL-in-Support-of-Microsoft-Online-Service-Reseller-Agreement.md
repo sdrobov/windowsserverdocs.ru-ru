@@ -8,12 +8,12 @@ ms.assetid: 9860a6b9-baea-4bf0-9a9f-6f1a288f996e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a517fd56c16860b0c3bfeeaf5cac0d4049b9041e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 10f7e58aad26f85455388654c65b73fd72f9ae13
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819877"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256654"
 ---
 # <a name="replace-o365-integration-module-buy-try-endpoint-url-in-support-of-microsoft-online-service-reseller-agreement"></a>Замена URL-адресов конечных точек при покупке или ознакомлении для модуля интеграции O365 в рамках поддержки по соглашению с торговым посредником интернет-служб Майкрософт
 
@@ -32,7 +32,7 @@ ms.locfileid: "80819877"
   
     -   Имя раздела = MOSRASTDBUY  
   
-    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, value = http://syndicatepartner.office365.com/enterprisebuy.html  
+    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, значение =http://syndicatepartner.office365.com/enterprisebuy.html  
   
 2.  Конечная точка ознакомительной подписки Office 365 Enterprise.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "80819877"
   
     -   Имя раздела = MOSRASTDTRY  
   
-    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, value = http://syndicatepartner.office365.com/enterprisetry.html  
+    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, значение =http://syndicatepartner.office365.com/enterprisetry.html  
   
 3.  Конечная точка покупки по подписке Office 365 для малого бизнеса Premium.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "80819877"
   
     -   Имя раздела = MOSRALITEBUY  
   
-    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, value = http://syndicatepartner.office365.com/smallbizbuy.html  
+    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, значение =http://syndicatepartner.office365.com/smallbizbuy.html  
   
 4.  Конечная точка пробной версии Office 365 для малого бизнеса Premium.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "80819877"
   
     -   Имя раздела = MOSRALITETRY  
   
-    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, value = http://syndicatepartner.office365.com/smallbiztry.html  
+    -   Значение = *xxxxx*, где xxxxx - URL-адрес покупки подписки Enterprise. Например, значение =http://syndicatepartner.office365.com/smallbiztry.html  
   
 #### <a name="to-add-an-endpoint-url-key-to-the-registry"></a>Добавление раздела реестра со значением URL-адреса конечной точки  
   
@@ -93,8 +93,5 @@ ms.locfileid: "80819877"
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
- [Тестирование пользовательского интерфейса](Testing-the-Customer-Experience.md) [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
-
+ [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
+ 

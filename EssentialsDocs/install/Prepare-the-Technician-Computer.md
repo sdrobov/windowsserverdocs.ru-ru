@@ -8,12 +8,12 @@ ms.assetid: 8841c3aa-7aaa-4cc0-b1e1-ab0643f29586
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 0976028d743b70fe3e8c527903bbbe3d1197e13f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8c6e72be42672cff246beec54f7a47865da146f0
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80819917"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267545"
 ---
 # <a name="prepare-the-technician-computer"></a>Подготовка обслуживающего компьютера
 
@@ -27,15 +27,9 @@ ms.locfileid: "80819917"
   
 ## <a name="see-also"></a>См. также  
 
- [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [начало работы с Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Начало работы с Windows Server ESSENTIALS ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

@@ -8,12 +8,12 @@ ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2605483de447e78fc1bd091d911867656c8ab8b6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 46fd1ec7f76c6381ed9d725f5628a9a8fc760e9d
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820057"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267585"
 ---
 # <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Установка и настройка Windows Server Essentials или режима Windows Server Essentials
 
@@ -21,7 +21,7 @@ ms.locfileid: "80820057"
 
 Windows Server Essentials — это идеальный первый сервер для малых предприятий, где до 25 пользователей и 50 устройств. Для организаций, имеющих до 100 пользователей и 200 устройств, теперь можно использовать Windows Server 2012 R2 с установленной ролью Windows Server Essentials Experience. В данном разделе рассматриваются оба варианта.  
   
-Windows Server Essentials — это роль в Windows Server 2016, которая позволяет воспользоваться всеми функциями (например, удаленными Веб-доступ и резервным копированием ПК), которые доступны в Windows Server Essentials без блокировки и ограничений, применяемых в  Windows Server Essentials. Эта роль сервера также доступна в Windows Server Essentials и включена по умолчанию.
+Windows Server Essentials — это роль в Windows Server 2016, которая позволяет воспользоваться всеми функциями (например, удаленными Веб-доступ и резервным копированием ПК), которые доступны в Windows Server Essentials без блокировки и ограничений, применяемых в Windows Server Essentials. Эта роль сервера также доступна в Windows Server Essentials и включена по умолчанию.
   
 Перед установкой Windows Server Essentials или роли опыта Essentials Обратите внимание на следующие ограничения.  
   
@@ -38,7 +38,7 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
 >   
 >  [Загрузка Windows Server Essentials](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016-essentials)
   
-## <a name="installation-options"></a>Параметры установки  
+## <a name="installation-options"></a>Варианты установки  
  Этот документ содержит пошаговые инструкции по установке и настройке Windows Server Essentials. В зависимости от сетевой среды имеются следующие доступные параметры установки:  
   
 -    Windows Server Essentials (с ролью Windows Server Essentials, включенной по умолчанию)  
@@ -50,12 +50,12 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
 |Новая среда Active Directory|Для создания новой среды Active Directory можно установить Windows Server Essentials.|[Развертывание Windows Server Essentials для настройки новой среды Active Directory](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|  
 |Существующая среда Active Directory|Можно установить Windows Server Essentials в существующую среду Active Directory.|[Развертывание Windows Server Essentials в существующей среде Active Directory](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|  
 |Виртуальная среда|Можно развернуть Windows Server Essentials в качестве виртуальной машины.|[Виртуализация среды](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|  
-|Автоматическое развертывание|Автоматизация развертывания Windows Server Essentials с помощью Windows PowerShell.|[Установка и настройка Windows Server Essentials с помощью Windows PowerShell](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
+|Автоматизированное развертывание|Автоматизация развертывания Windows Server Essentials с помощью Windows PowerShell.|[Установка и настройка Windows Server Essentials с помощью Windows PowerShell](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|  
   
-## <a name="before-you-begin"></a>Перед началом работы  
+## <a name="before-you-begin"></a>Перед началом  
  Перед началом установки необходимо ознакомиться со следующей документацией:  
   
--   [Обзор продукта Windows Server Essentials](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)  
+-   [Общие сведения о Windows Server Essentials](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)  
   
 
 -   [Системные требования к Windows Server Essentials](../get-started/system-requirements.md)   
@@ -77,14 +77,14 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
   
    2.  На странице **Параметры времени** проверьте правильность указанной даты, времени и часового пояса и нажмите кнопку **Далее**.  
   
-   3.  На странице **Сведения о компании** введите название вашей компании, например **Contoso,Ltd.** , и нажмите кнопку **Далее**. При необходимости можно изменить внутреннее имя домена и имя сервера.  
+   3.  На странице **Сведения о компании** введите название вашей компании, например **Contoso,Ltd.**, и нажмите кнопку **Далее**. При необходимости можно изменить внутреннее имя домена и имя сервера.  
   
    4.  На странице **Создание учетной записи администратора сети** введите новое имя и пароль учетной записи администратора.  
   
        > [!NOTE]
        >  Не используйте имя и пароль учетной записи **Администратора** по умолчанию.  
   
-   5.  Нажмите кнопку **Настройка**.  
+   5.  Щелкните **Настройка**.  
   
 3. В процессе настройки сервер несколько раз перезагрузится, при этом вход в систему будет производиться автоматически до завершения настройки. Этот процесс занимает примерно 20 минут.  
   
@@ -170,10 +170,7 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
   
 1.  После страницы приветствия Windows (в зависимости от конфигурации с s поставщика системы) на странице **перед началом работы можно** настроить Windows Server Essentials в качестве виртуального экземпляра или физического оборудования. Наличие данных параметров определяется поставщиком вашей системы, поэтому оба этих параметра могут быть не всегда доступны. Чтобы установить Windows Server Essentials как виртуальную машину, в окне **Установка Windows Server Essentials**выберите пункт **установить как виртуальный экземпляр**, а затем нажмите кнопку **настроить**.  
   
-2.  Мастер настройки начнет приводить в действие виртуальную машину, что занимает около пяти минут.  
-  
-
-3.  Затем настройте Windows Server Essentials, как описано выше в разделе [развертывание Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) .  
+2.  Мастер настройки начнет приводить в действие виртуальную машину, что занимает около пяти минут.
 
 3.  Затем настройте Windows Server Essentials, как описано выше в разделе [развертывание Windows Server Essentials](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_WSEDeploy) .  
 
@@ -191,7 +188,7 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
     Add-WindowsFeature ServerEssentialsRole  
     ```  
   
-3.  Выполните команду `Get-Help Start-WssConfigurationService`.  
+3.  Выполните `Get-Help Start-WssConfigurationService`.  
   
     1.  Выполните следующую команду, чтобы начать настройку Windows Server Essentials в качестве контроллера домена:  
   
@@ -212,9 +209,9 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
   
     -   Для получения немедленных сведений о процессе установки без индикатора выполнения выполните команду `Get-WssConfigurationStatus`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
--   [Новые возможности Windows Server Essentials](../get-started/what-s-new.md)  
+-   [Что нового в Windows Server Essentials](../get-started/what-s-new.md)  
   
 -   [Установка Windows Server Essentials](Install-Windows-Server-Essentials.md)  
   

@@ -8,12 +8,12 @@ ms.assetid: ef7ddcdd-3a74-40ca-9487-c3a6fc5155a5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b543e473c545f9446ab33b8f81d5b2e5fa4ed877
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cc76e39e84e78d210287f96353e4e4b68178f63e
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817227"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267435"
 ---
 # <a name="configure-server-storage"></a>Настройка хранилища сервера
 
@@ -27,7 +27,7 @@ ms.locfileid: "80817227"
   
 |Уровень сервера|Конфигурация дисков|  
 |------------------|------------------------|  
-|Элемент|— Два физических диска;<br /><br /> — Настроен в качестве зеркального набора RAID 1, который содержит следующее:<br /><br /> -C: том? 60 ГБ<br /><br /> -D: том? 1000 ГБ|  
+|Ввод|— Два физических диска;<br /><br /> — Настроен в качестве зеркального набора RAID 1, который содержит следующее:<br /><br /> -C: том? 60 ГБ<br /><br /> -D: том? 1000 ГБ|  
 |Средний|-Три физических диска<br /><br /> — Настроен как набор RAID 5, содержащий следующие данные:<br /><br /> -C: том? 60 ГБ<br /><br /> -D: том? 1500 ГБ|  
 |Высокий|-Пять или более общих физических дисков<br /><br /> — Два диска в наборе с зеркальным отображением RAID 1, который содержит том C:? 100 ГБ<br /><br /> — Все остальные диски в наборе RAID 5, который содержит следующее:<br /><br /> -D: том? 1500 ГБ<br /><br /> -E: том? 1500 ГБ|  
   
@@ -41,15 +41,9 @@ ms.locfileid: "80817227"
   
 ## <a name="see-also"></a>См. также  
 
- [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [начало работы с Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Начало работы с Windows Server ESSENTIALS ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

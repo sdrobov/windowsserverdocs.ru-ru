@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: c7da0f6c-9732-4784-9c28-7dad72c4071d
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: b71fc748f7cc8d82420b7a62fe502135036db727
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 9cafaf25a18ffe17894e11ff0676e492656e5831
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80312115"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256673"
 ---
 # <a name="create-a-server-recovery-dvd-for-multi-language-support"></a>Создание DVD-диска восстановления сервера с многоязычной поддержкой
 
@@ -66,7 +66,7 @@ ms.locfileid: "80312115"
 > [!NOTE]
 >  Убедитесь, что установлены языковые пакеты для Windows Server 2012. Это обеспечит использование надлежащей фирменной символики. Языковые пакеты многоязыкового пользовательского интерфейса для Windows Server 2012 доступны на [Microsoft.com](https://www.microsoft.com/OEM/en/installation/downloads/Pages/technical-downloads.aspx). Следуйте инструкциям, описанным в разделе [Пошаговое руководство. Создание многоязыкового образа Windows для](https://technet.microsoft.com/library/jj126995.aspx) создания многоязычного образа Windows перед добавлением языкового пакета Windows Server Essentials в install. wim.  
 >   
->  Языковые пакеты Windows Server Essentials доступны на носителе языкового пакета в \Лангуаже Packs\\< CultureName\>.  
+>  Языковые пакеты Windows Server Essentials доступны на носителе языкового пакета в \Лангуаже Packs \\<cultureName \> .  
   
 > [!NOTE]
 >  Не все языковые пакеты могут быть недоступны до выпуска Windows Server 2012.  
@@ -108,9 +108,4 @@ ms.locfileid: "80312115"
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

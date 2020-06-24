@@ -8,12 +8,12 @@ ms.assetid: 65a195d5-0098-4c3c-b4ba-07f7319c8f1e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5dc163a4535f31753ead1d936513fe5c7a69764e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b7e62ef5ae1ce9392c1354f09bb17638a80cec7a
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817477"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267363"
 ---
 # <a name="additional-customizations"></a>Дополнительные настройки
 
@@ -21,39 +21,6 @@ ms.locfileid: "80817477"
 
 Для создания и настройки образа Windows Server Essentials можно выполнить следующие дополнительные настройки:  
   
-
--   [Добавление фирменной символики на панели мониторинга, удаленного доступа и запуска](Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
-  
--   [Добавление вкладки в меню "Параметры"](Add-a-Tab-to-Settings.md)  
-  
--   [Добавление категорий верхнего уровня на панель запуска (операционная система Macintosh)](Add-Top-Level-Categories-to-the-Launchpad--Macintosh-Operating-System-.md)  
-  
--   [Изменение параметров потоковой передачи мультимедиа](Change-Media-Streaming-Settings.md)  
-  
--   [Изменение цветовой схемы панели мониторинга и панели запуска](Change-the-Color-Scheme-of-the-Dashboard-and-Launchpad.md)  
-  
--   [Изменение порядка и группировки вкладок](Change-the-Order-and-Grouping-of-Tabs.md)  
-  
--   [Установка и удаление языковых пакетов](Install-or-Remove-Language-Packs.md)  
-  
--   [Управление доменными именами и поставщиками доменных имен](Manage-Domain-Names-and-Domain-Name-Providers.md)  
-  
--   [Настройка задачи "Зарегистрироваться в Microsoft Online Backup Service"](Customize-Sign-Up-for-Microsoft-Online-Backup-Service-task.md)  
-  
--   [Настройка дисковых пространств](Customize-Storage-Spaces.md)  
-  
--   [Создание многоязычного носителя для восстановления клиентов](Build-Multi-Language-Client-Restore-Media.md)  
-  
--   [Автоматизация установки дополнительных компонентов во время установки](Automate-Installation-of-Add-Ins-During-Setup.md)  
-  
--   [Добавление информации о зарегистрированном партнере, заключившем партнерское соглашение об интерактивных службах Майкрософт](Add-Microsoft-Online-Service-Partner-Agreement-Partner-of-Record-Information.md)  
-  
--   [Замена URL-адресов конечных точек при покупке или ознакомлении для модуля интеграции O365 в рамках поддержки по соглашению с торговым посредником интернет-служб Майкрософт](Replace-O365-Integration-Module-Buy-Try-Endpoint-URL-in-Support-of-Microsoft-Online-Service-Reseller-Agreement.md)  
-  
--   [Создание DVD-диска восстановления сервера для удаленно администрируемых серверов](Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
-  
--   [Создание DVD-диска восстановления сервера с многоязычной поддержкой](Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
-
 -   [Добавление фирменной символики на панели мониторинга, удаленного доступа и запуска](../install/Add-Branding-to-the-Dashboard--Remote-Web-Access--and-Launchpad.md)  
   
 -   [Добавление вкладки в меню "Параметры"](../install/Add-a-Tab-to-Settings.md)  
@@ -85,4 +52,3 @@ ms.locfileid: "80817477"
 -   [Создание DVD-диска восстановления сервера для удаленно администрируемых серверов](../install/Create-a-Server-Recovery-DVD-for-Remotely-Administered-Servers.md)  
   
 -   [Создание DVD-диска восстановления сервера с многоязычной поддержкой](../install/Create-a-Server-Recovery-DVD-for-Multi-Language-Support.md)
-

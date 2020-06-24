@@ -8,12 +8,12 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d7a718e9e84866b6a1f626499b7e2bec58de498f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1af895dd6711446408b063f5715ba2a5a73857c3
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852407"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267396"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Подготовка исходного сервера для Windows Server Essentials Migration1
 
@@ -22,35 +22,25 @@ ms.locfileid: "80852407"
 Чтобы обеспечить успешную миграцию параметров и данных с исходного сервера на конечный сервер, выполните следующие подготовительные действия.  
   
 #### <a name="to-prepare-for-migration"></a>Подготовка к миграции  
-  
+
 
 1.  [Резервное копирование исходного сервера](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
   
-2.  [Установка последних пакетов обновления](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
+2.  [Установка последних версий пакетов обновления](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
   
 3.  [Оценка работоспособности исходного сервера](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
   
-4.  [Запуск средства подготовки миграции на исходном сервере](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
+4.  [Запустите средство подготовки миграции на исходном сервере](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
   
-5.  [Создание плана для миграции бизнес-приложений](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
+5.  [Создание плана для миграции производственных приложений](Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
 
-1.  [Резервное копирование исходного сервера](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_BackUpYourSourceServerToPrepareForMigration)  
-  
-2.  [Установка последних пакетов обновления](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_InstallTheMostRecentServicePacksToPrepareForMigration)  
-  
-3.  [Оценка работоспособности исходного сервера](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_UseWindowsBestPracticeAnalyzer)  
-  
-4.  [Запуск средства подготовки миграции на исходном сервере](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_MPT)  
-  
-5.  [Создание плана для миграции бизнес-приложений](../migrate/Prepare-your-Source-Server-for-Windows-Server-Essentials-migration.md#BKMK_PlanToMigrateLineOfBusinessApplications)  
-
-  
 ###  <a name="back-up-your-source-server"></a><a name="BKMK_BackUpYourSourceServerToPrepareForMigration"></a>Резервное копирование исходного сервера  
  Перед началом миграции создайте резервную копию исходного сервера. Это поможет защитить данные от случайной утраты, если во время миграции произойдут неустранимые ошибки.  
+ 
   
 ##### <a name="to-back-up-the-source-server"></a>Чтобы создать резервную копию исходного сервера  
   
-1.  Выполните полное резервное копирование исходного сервера. Дополнительные сведения о резервном копировании основных компонентов для Windows Small Business Server 2011 см. в разделе [Подробнее о настройке резервного копирования сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx).  
+1.  Выполните полное резервное копирование исходного сервера. Дополнительные сведения о резервном копировании Windows Small Business Server 2011 Essentials см. в разделе [Получение дополнительных сведений о настройке резервного копирования сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx).  
   
 2.  Убедитесь, что резервное копирование выполнено успешно. Чтобы проверить целостность резервной копии, произвольно выберите несколько файлов из резервной копии, восстановите их в другом месте и убедитесь, что они совпадают с исходными.  
   
@@ -77,9 +67,9 @@ ms.locfileid: "80852407"
 #### <a name="run-the-windows-server-solutions-best-practices-analyzer"></a>Запуск анализатора соответствия рекомендациям Windows Server  
  Чтобы убедиться в отсутствии проблем с сервером, сетью и доменом перед началом миграции, можно запустить анализатор соответствия рекомендациям Windows Server. Анализатор соответствия рекомендациям собирает сведения о конфигурации из следующих источников:  
   
--   Инструментарий управления Windows (WMI)&reg; Active Directory (WMI)  
+-   &reg;Инструментарий управления Windows (WMI) Active Directory (WMI)  
   
--   Реестр  
+-   реестр;  
   
 -   метабаза служб IIS.  
   
@@ -106,7 +96,7 @@ ms.locfileid: "80852407"
 |Древовидные отчеты|Отчеты, представляемые в виде иерархического списка.|  
 |Прочие отчеты|Журнал времени выполнения и другие отчеты.|  
   
- Щелкните проблему в отчете, чтобы просмотреть ее описание и рекомендуемое решение. Не все проблемы, о которых сообщает анализатор соответствия рекомендациям Windows SBS 2011 Essentials, влияют на миграцию, но для обеспечения успешной миграции следует решить максимально возможное количество проблем.  
+ Щелкните проблему в отчете, чтобы просмотреть ее описание и рекомендуемое решение. Не все проблемы, о которых сообщает анализатор соответствия рекомендациям Windows Server, влияют на миграцию, но чтобы обеспечить успешную миграцию, следует устранить все проблемы, если это возможно.  
   
 ####  <a name="synchronize-the-source-server-time-with-an-external-time-source"></a><a name="BKMK_SynchronizeTheSourceServerTimeWithAnExternalTimeSource"></a>Синхронизация времени исходного сервера с внешним источником времени  
  Показатели времени исходного сервера и конечного сервера должны различаться максимум на пять минут, дата и часовой пояс должны быть одинаковы на обоих серверах. Если исходный сервер запущен на виртуальном компьютере, дата, время и часовой пояс сервера узла должны совпадать с данными исходного и конечного серверов. Чтобы обеспечить успешную установку Windows Server Essentials, необходимо синхронизировать время исходного сервера с сервером NTP в Интернете.  
@@ -154,13 +144,13 @@ ms.locfileid: "80852407"
   
    Вы можете использовать последнюю версию агента обновления Windows, чтобы обеспечить правильную работу процесса обновления сервера.  
   
-   Прежде чем можно будет установить агент Центр обновления Windows на исходном сервере, сначала необходимо установить Windows PowerShell 2,0 и Microsoft Baseline Configuration Analyzer 2,0.  
+   Перед установкой агента обновления Windows на исходном сервере сначала необходимо установить Microsoft PowerShell 2.0 и Microsoft Baseline Configuration Analyzer 2.0.  
   
--   Чтобы скачать и установить Windows PowerShell 2,0, см. [статью 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) в базе знаний Майкрософт.  
+-   Дополнительные сведения о загрузке и установке PowerShell 2.0 см. в [статье 968929](https://go.microsoft.com/fwlink/p/?LinkId=241483) базы знаний Майкрософт.  
   
--   Чтобы скачать и установить анализатор Microsoft Baseline Configuration Analyzer 2,0, см. статью [Microsoft Baseline Configuration analyzer 2,0](https://go.microsoft.com/fwlink/p/?LinkId=241484) в центре загрузки Майкрософт.  
+-   Сведения о загрузке и установке Microsoft Baseline Configuration Analyzer 2.0 см. в разделе [Microsoft Baseline Configuration Analyzer 2.0](https://go.microsoft.com/fwlink/p/?LinkId=241484) в Центре загрузки Майкрософт.  
   
--   Чтобы скачать и установить последнюю версию Центр обновления Windows Agent, см. [статью 949104](https://go.microsoft.com/fwlink/p/?LinkId=237493) в базе знаний Майкрософт.  
+-   Сведения о загрузке и установке последней версии агента обновления Windows см. в [статье 949104 ](https://go.microsoft.com/fwlink/p/?LinkId=237493) базы знаний Майкрософт.  
   
 ##### <a name="to-install-and-run-the-migration-preparation-tool-on-the-source-server"></a>Установка и запуск средства подготовки миграции на исходном сервере  
   

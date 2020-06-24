@@ -8,12 +8,12 @@ ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d2c4d21012b8b5710b3a7c7f05d60a8a6ba79d49
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 40d86cf54f269c843f8dfc70c57e88a404498f91
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852557"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256604"
 ---
 # <a name="migrate-server-data-to-windows-server-essentials"></a>Миграция данных сервера в Windows Server Essentials
 
@@ -29,10 +29,6 @@ ms.locfileid: "80852557"
   
 -   [Переход на Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
 
--   [Переход на Windows Server Essentials](../migrate/Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md)  
-  
--   [Переход на Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
-
   
 ## <a name="migrate-to-windows-server-essentials"></a>Переход на Windows Server Essentials  
  Чтобы избежать проблем при переносе существующего сервера на Windows Server Essentials, ознакомьтесь с руководством по миграции, которое относится к бизнес-сценарию перед началом миграции.  
@@ -40,7 +36,7 @@ ms.locfileid: "80852557"
 
 -   [Переход на Windows Server 2012 Standard](Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
   
--   [Миграция из Windows SBS 2011 Essentials](Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
+-   [Миграция с Windows SBS 2011 Essentials](Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
   
 -   [Миграция с Windows SBS 2011 Standard](Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
   
@@ -54,32 +50,16 @@ ms.locfileid: "80852557"
   
 -   [Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials](Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
 
--   [Переход на Windows Server 2012 Standard](../migrate/Transition-from-Windows-Server-2012-Essentials-to-Windows-Server-2012-Standard.md)  
-  
--   [Миграция из Windows SBS 2011 Essentials](../migrate/Migrate-Windows-Small-Business-Server-2011-Essentials-to-Windows-Server-Essentials.md)  
-  
--   [Миграция с Windows SBS 2011 Standard](../migrate/Migrate-Windows-Small-Business-Server-2011-Standard-to-Windows-Server-Essentials.md)  
-  
--   [Миграция с Windows SBS 2008](../migrate/Migrate-Windows-Small-Business-Server-2008-to-Windows-Server-Essentials.md)  
-  
--   [Миграция с Windows Server 2008 Foundation](../migrate/Migrate-Windows-Server-2008-Foundation-to-Windows-Server-Essentials.md)  
-  
--   [Миграция с Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-  
--   [Миграция на новое оборудование](../migrate/Migrate-Windows-Server-Essentials-to-New-Hardware.md)  
-  
--   [Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)  
-
   
 ## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям  
   
--    Сведения об централизованном хранении данных, ограничении разрешений на доступ к данным и резервном копировании данных как локально, так и в облаке см. в статье [обеспечение защиты данных в малых и средних предприятиях](https://technet.microsoft.com/library/dn582043.aspx).  
+-    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](https://technet.microsoft.com/library/dn582043.aspx).  
   
 -    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](https://technet.microsoft.com/library/dn629457.aspx).  
   
--    Дополнительные сведения о безопасной совместной работе с партнерами и поставщиками см. в статье [улучшение совместной работы с компаниями малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).  
+-    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 -   [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)  
   

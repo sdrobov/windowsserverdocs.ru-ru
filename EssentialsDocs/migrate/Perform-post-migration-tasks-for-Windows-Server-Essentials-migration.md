@@ -8,12 +8,12 @@ ms.assetid: f2d236a4-0d62-4961-9d1f-332054e06f6d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b5093772e22fc95a19e800db5c83dec261e7b63a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b421ab7b234c9ae2ffb7d0765fe0937c4376996a
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852429"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267525"
 ---
 # <a name="perform-post-migration-tasks-for-windows-server-essentials-migration1"></a>Задачи, выполняемые после миграции для Windows Server Essentials Migration1
 
@@ -22,21 +22,13 @@ ms.locfileid: "80852429"
 Следующие задачи помогут вам завершить настройку конечного сервера с теми же параметрами, которые были на исходном сервере. Возможно, вы отключили некоторые из этих параметров на исходном сервере во время процесса миграции, поэтому они не были перенесены на конечный сервер. Либо они относятся к необязательным операциям, которые требуется выполнить.  
   
 
--   [Удаление записей DNS исходного сервера](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
+-   [Удаление DNS-записей исходного сервера](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
   
--   [Совместное использование бизнес-и других папок данных приложений](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
+-   [Общий доступ к папкам с данными бизнес-приложений и прочих приложений](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
   
--   [Устранение проблем с клиентскими компьютерами после миграции](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
+-   [Устранение проблем на клиентских компьютерах после миграции](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
   
--   [Предоставьте встроенной группе администраторов право на вход в систему в качестве пакетного задания.](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
-
--   [Удаление записей DNS исходного сервера](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_DeleteDNSEntries)  
-  
--   [Совместное использование бизнес-и других папок данных приложений](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_ShareLineOfBusinessAndOtherApplications)  
-  
--   [Устранение проблем с клиентскими компьютерами после миграции](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_FixClientComputerIssuesAfterMigrating)  
-  
--   [Предоставьте встроенной группе администраторов право на вход в систему в качестве пакетного задания.](../migrate/Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
+-   [Предоставление права на вход в качестве пакетного задания встроенной группе администраторов](Perform-post-migration-tasks-for-Windows-Server-Essentials-migration.md#BKMK_AdminGroup)  
 
   
 ##  <a name="delete-dns-entries-of-the-source-server"></a><a name="BKMK_DeleteDNSEntries"></a>Удаление записей DNS исходного сервера  
@@ -70,9 +62,9 @@ ms.locfileid: "80852429"
  Если для сопоставления дисков с общими папками вы используете сценарий входа, для сопоставления с дисками на конечном сервере сценарий необходимо обновить.  
   
 ##  <a name="fix-client-computer-issues-after-migrating"></a><a name="BKMK_FixClientComputerIssuesAfterMigrating"></a>Устранение проблем с клиентскими компьютерами после миграции  
- Если вы переноситесь на Windows Server Essentials с Windows Small Business Server 2003 Premium Edition с установленным сервером Microsoft Internet Security and Acceleration (ISA) Server, клиентские компьютеры по-прежнему имеют брандмауэр Майкрософт и Интернет. Обозреватель настроен для использования прокси-сервера.  
+ Если вы переноситесь на Windows Server Essentials с Windows Small Business Server 2003 Premium Edition с установленным сервером Microsoft Internet Security and Acceleration (ISA), клиентские компьютеры по-прежнему будут иметь клиент брандмауэра Microsoft и Internet Explorer, настроенный для использования прокси-сервера.  
   
- Это приводит к проблемам со связью на клиентских компьютерах, так как прокси-сервер больше не существует. Если настроен другой прокси-сервер, клиентские компьютеры продолжают использовать сервер под управлением Windows SBS 2003 для прокси-сервера. Для устранения этой проблемы необходимо перенастроить Internet Explorer, чтобы он не использовал прокси-сервер или использовал новый прокси-сервер.  
+ Это приводит к проблемам со связью на клиентских компьютерах, так как прокси-сервер больше не существует. Если имеется другой настроенный прокси-сервер, клиентские компьютеры будут продолжать использовать сервер под управлением Windows SBS 2003 для прокси-сервера. Для устранения этой проблемы необходимо перенастроить Internet Explorer, чтобы он не использовал прокси-сервер или использовал новый прокси-сервер.  
   
 #### <a name="to-reconfigure-internet-explorer"></a>Перенастройка Internet Explorer  
   
@@ -80,7 +72,7 @@ ms.locfileid: "80852429"
   
 2.  Перейдите на вкладку **Подключения**, затем **Параметры сети** и выполните одно из следующих действий:  
   
-    -   Если вы не используете прокси-сервер в своей сети, снимите все флажки в диалоговом окне **Параметры локальной сети (LAN)** .  
+    -   Если вы не используете прокси-сервер в своей сети, снимите все флажки в диалоговом окне **Параметры локальной сети (LAN)**.  
   
     -   Если вы хотите использовать новый прокси-сервер в своей сети:  
   
@@ -92,7 +84,7 @@ ms.locfileid: "80852429"
   
         4.  В поле **Порт** введите **80**.  
   
-3.  Щелкните дважды **ОК** .  
+3.  Щелкните дважды **ОК**.  
   
 4.  Перейдите на веб-сайт и убедитесь в правильности параметров подключения.  
   
@@ -103,11 +95,11 @@ ms.locfileid: "80852429"
   
 1. На конечном сервере откройте средство администрирования **Управление групповой политикой**.  
   
-2. В дереве консоли **управления групповая политика** разверните узел **лес:** *< ServerName\>* , разверните узел Домены, а затем разверните свой сервер.  
+2. В дереве консоли **управления групповая политика** разверните узел **лес:** *<ServerName \> *, разверните узел Домены, а затем разверните свой сервер.  
   
 3. Разверните **Контроллеры домена**, щелкните правой кнопкой мыши **Политика контроллеров домена по умолчанию**, а затем нажмите **Изменить**.  
   
-4. В **редактор "Управление групповыми политиками"** щелкните **Политика контроллеры домена по умолчанию**<em>< имя_сервера\></em> **Политика**, а затем разверните узел **Конфигурация компьютера**.  
+4. В **редактор "Управление групповыми политиками"** щелкните **по умолчанию политика контроллеров домена** <em><ServerName \> </em>**, а**затем разверните узел **Конфигурация компьютера**.  
   
 5. Разверните **Политики**, разверните **Параметры Windows**, а затем разверните **Параметры безопасности**.  
   
@@ -123,14 +115,10 @@ ms.locfileid: "80852429"
   
 11. Щелкните **Проверить имена**, чтобы убедиться, что появляется встроенная группа администраторов, и нажмите три раза кнопку **ОК** для сохранения параметра.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 
 -   [Миграция с Windows SBS 2003](Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
   
 -   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-
--   [Миграция с Windows SBS 2003](../migrate/Migrate-Windows-Small-Business-Server-2003-to-Windows-Server-Essentials.md)  
-  
--   [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 

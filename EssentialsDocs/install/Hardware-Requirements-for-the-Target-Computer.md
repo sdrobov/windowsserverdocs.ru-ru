@@ -8,12 +8,12 @@ ms.assetid: c20b06b9-ce0d-4c20-bf49-257c3f5dc01b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a566a8f342ba076ee402d1f19e35f99c58b931e4
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c4a2a6f0c19425103c96a3eb69fd8531ec7a122b
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80817877"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267605"
 ---
 # <a name="hardware-requirements-for-the-target-computer"></a>Требования к оборудованию для целевого компьютера
 
@@ -26,21 +26,21 @@ ms.locfileid: "80817877"
   
 ### <a name="table-1--system-requirements-for-windows-server-essentials"></a>Таблица 1. требования к системе для Windows Server Essentials  
   
-|Component|Минимум|Рекомендуемые требования*|Максимальное значение|  
+|Компонент|Минимум|Рекомендуемые требования*|Максимальная|  
 |---------------|-------------|-------------------|-------------|  
 |Центральный процессор|1,4 ГГц (64-разрядный процессор) или быстрее для одноядерных процессоров<br /><br /> 1,3 ГГц (64-разрядный процессор) или быстрее для многоядерных процессоров|3,1 ГГц (64-разрядный процессор) или быстрее для многоядерных процессоров|2 ЦП|  
 |Память (ОЗУ)|2 ГБ|16 ГБ|64 ГБ|  
-|Жесткие диски и свободное дисковое пространство|Жесткий диск объемом 160 ГБ, системный раздел 60 ГБ||Не ограничен|  
+|Жесткие диски и свободное дисковое пространство|Жесткий диск объемом 160 ГБ, системный раздел 60 ГБ||Без ограничений|  
   
- \* Рекомендуемые требования к оборудованию для поддержки максимального числа пользователей и устройств в Windows Server Essentials.  
+ * Рекомендуемые требования к оборудованию для поддержки максимального числа пользователей и устройств в Windows Server Essentials.  
   
 ## <a name="additional-hardware-and-software-requirements"></a>Дополнительные требования к оборудованию и программному обеспечению  
  В следующей таблице перечислены дополнительные требования к оборудованию и программному обеспечению.  
   
-|Component|Описание|  
+|Компонент|Описание|  
 |---------------|-----------------|  
 |Сетевой адаптер|Адаптер Gigabit Ethernet (10/100/1000baseT PHY/MAC)|  
-|Интернет|Для некоторых функций может потребоваться доступ к Интернету (может взиматься плата) или учетная запись Windows Live&reg; ID.|  
+|Интернет|Для некоторых функций может потребоваться доступ к Интернету (может взиматься плата) или &reg; учетная запись Windows Live ID.|  
 |Поддерживаемые операционные системы на клиентских компьютерах|— Windows 7<br />— Windows 8<br />— Macintosh OS X 10,5 – 10,8.<br /><br /> **Примечание.** Для некоторых функций требуются профессиональные или более поздние версии.<br /><br /> 1 ГБ свободного места на жестком диске (часть этого пространства будет освобождена после установки)|  
 |Маршрутизатор|Маршрутизатор или брандмауэр, поддерживающий преобразование сетевых адресов (NAT) для IPv4-адресов|  
 |Дополнительные требования|Устройство чтения DVD-дисков|  
@@ -53,15 +53,9 @@ ms.locfileid: "80817877"
   
 ## <a name="see-also"></a>См. также  
 
- [Начало работы с Windows Server ESSENTIALS ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
+ [начало работы с Windows Server Essentials ADK](Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md)   
  [Дополнительные настройки](Additional-Customizations.md)   
  [Подготовка образа к развертыванию](Preparing-the-Image-for-Deployment.md)   
  [Тестирование работы пользователей](Testing-the-Customer-Experience.md)
-
- [Начало работы с Windows Server ESSENTIALS ADK](../install/Getting-Started-with-the-Windows-Server-Essentials-ADK.md)   
- [Создание и Настройка образа](../install/Creating-and-Customizing-the-Image.md)   
- [Дополнительные настройки](../install/Additional-Customizations.md)   
- [Подготовка образа к развертыванию](../install/Preparing-the-Image-for-Deployment.md)   
- [Тестирование работы пользователей](../install/Testing-the-Customer-Experience.md)
 

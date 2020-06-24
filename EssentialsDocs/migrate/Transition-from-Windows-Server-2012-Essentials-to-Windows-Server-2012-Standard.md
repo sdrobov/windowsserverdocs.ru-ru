@@ -8,18 +8,18 @@ ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: aace7849244bb65ec0042971e6ec899f554a62d2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 20b38be01d091f5dfeb819712c57c1f87eaf770f
+ms.sourcegitcommit: fdc3ce1992f4dd6ea1771479d525126abbbcfa72
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80852307"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85256633"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Переход с Windows Server Essentials на Windows Server 2012 Standard
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
- Windows Server&reg; 2012 Essentials поддерживает до 25 пользователей и 50 устройств. Если потребности вашего бизнеса превышают ограничение, можно выполнить переход на промежуточную лицензию с Windows Server Essentials на Windows Server 2012 Standard, чтобы остаться в соответствии с лицензиями.  
+ Windows Server &reg; 2012 Essentials поддерживает до 25 пользователей и 50 устройств. Если потребности вашего бизнеса превышают ограничение, можно выполнить переход на промежуточную лицензию с Windows Server Essentials на Windows Server 2012 Standard, чтобы остаться в соответствии с лицензиями.  
   
 ## <a name="how-the-transition-affects-user-and-device-limits"></a>Влияние перехода на предельное число пользователей и устройств  
  После перехода на Windows Server 2012 Standard ограничения учетной записи пользователя и устройств удаляются, но функции, которые являются уникальными для Windows Server Essentials (такие как панель мониторинга, удаленный Веб-доступ и резервное копирование клиентских компьютеров), по-прежнему остаются доступными. Из-за технических особенностей данные компоненты поддерживают не более 75 учетных записей и 75 устройств. Если необходимо добавить более 75 учетных записей пользователей или устройств, следует отключить компоненты Windows Server Essentials и использовать встроенные средства Windows Server 2012 Standard для управления учетными записями пользователей и устройствами.  
@@ -38,7 +38,7 @@ ms.locfileid: "80852307"
   
     1.  Откройте окно командной строки от имени администратора.  
   
-    2.  Выполните следующую команду.  
+    2.  Выполните следующую команду:  
   
          **DISM/Online/Set-Edition: Серверстандард/жетеула: путь EULA**  
   
@@ -62,7 +62,7 @@ ms.locfileid: "80852307"
   
 2. Откройте Windows PowerShell от имени администратора и выполните следующую команду:  
   
-    **DISM/Online/Set-Edition: серверстандард/акцептеула/ProductKey:** *ключ продукта*  
+    **dism /online /set-edition:ServerStandard /accepteula /productkey:** *ключ продукта*  
   
     Где *ключ продукта* — это ключ продукта для вашей копии Windows Server 2012 Standard.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "80852307"
   
 #### <a name="from-the-alert"></a>Из предупреждения  
   
-1.  Откройте Средство просмотра оповещений в области Панель мониторинга.  
+1.  Откройте представление "Предупреждения" на информационной панели.  
   
 2.  В списке Упорядочить выберите оповещение, которое сообщает сведения об отключении компонентов Windows Server Essentials после перехода.  
   
@@ -99,16 +99,12 @@ ms.locfileid: "80852307"
   
    Возможно, некоторые задачи, выполняемые **мастером выключения компонентов Windows Server Essentials** , не будут выполнены успешно. В некоторых случаях это может препятствовать запуску информационной панели. Тогда можно запустить мастер вручную, выполнив следующий файл:  
   
-   **%systemdrive%\Program Files\Windows Сервер\бин\турнофффеатуресвизард.ЕКСЕ**  
+   **%systemdrive%\Program Files\Windows Server\Bin\TurnOffFeaturesWizard.exe**  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   
 
 -   [Переход на Windows Server 2012 R2 Standard](Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
   
 -   [Перенос данных сервера в Windows Server Essentials](Migrate-Server-Data-to-Windows-Server-Essentials.md)
-
--   [Переход на Windows Server 2012 R2 Standard](../migrate/Transition-from-Windows-Server-2012-R2-Essentials-to-Windows-Server-2012-R2-Standard.md)  
-  
--   [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 
