@@ -8,18 +8,18 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3036176127cbb5401c582d81ddb2704d790a209a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 18a293f4ec7d96516bd89396c13562ba68dc471f
+ms.sourcegitcommit: a1641b80c88205c0253f354f2d427d77bb879643
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80821687"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85345438"
 ---
-# <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
+# <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
+## <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
 
 В Active Directory набор по умолчанию учетных записей и групп с высоким уровнем привилегий считается защищенными учетными записями и группами. При использовании большинства объектов в Active Directory полномочные администраторы (пользователи, которым были делегированы разрешения на управление объектами Active Directory) могут изменять разрешения для объектов, включая изменение разрешений, чтобы разрешить им изменять членство в группах, например.  
 
@@ -31,7 +31,7 @@ ms.locfileid: "80821687"
 
 #### <a name="protected-accounts-and-groups-in-active-directory-by-operating-system"></a>Защищенные учетные записи и группы в Active Directory операционной системой
 
-| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012, <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
+| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012. <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
 | --- | --- | --- | --- |
 |Операторы учета|Операторы учета|Операторы учета|Операторы учета|
 |Администратор|Администратор|Администратор|Администратор|
@@ -39,10 +39,8 @@ ms.locfileid: "80821687"
 |Операторы архива|Операторы архива|Операторы архива|Операторы архива|
 |Издатели сертификатов|||
 |Администраторы домена|Администраторы домена|Администраторы домена|Администраторы домена|
-|Контроллеры домена|Контроллеры домена|Контроллеры домена|Контроллеры домена|
+|.|.|.|.|
 |Администраторы предприятия|Администраторы предприятия|Администраторы предприятия|Администраторы предприятия|
-||||Администраторы корпоративных ключей|
-||||Администраторы ключей|
 |KRBTGT|KRBTGT|KRBTGT|KRBTGT|
 |Операторы печати|Операторы печати|Операторы печати|Операторы печати|
 |||Контроллеры домена только для чтения|Контроллеры домена только для чтения|
@@ -52,7 +50,7 @@ ms.locfileid: "80821687"
 
 #### <a name="adminsdholder"></a>AdminSDHolder
 
-Объект AdminSDHolder предназначен для предоставления разрешений "Template" для защищенных учетных записей и групп в домене. AdminSDHolder создается автоматически как объект в системном контейнере каждого Active Directory домена. Его путь: **CN = adminSDHolder, CN = System, DC = < domain_component >, DC = < domain_component >?.**  
+Объект AdminSDHolder предназначен для предоставления разрешений "Template" для защищенных учетных записей и групп в домене. AdminSDHolder создается автоматически как объект в системном контейнере каждого Active Directory домена. Его путь: **CN = adminSDHolder, CN = System, DC =<domain_component>, DC =<domain_component>?.**  
 
 В отличие от большинства объектов в домене Active Directory, владельцем которых являются группы "Администраторы", объект AdminSDHolder принадлежит группе "Администраторы домена". По умолчанию EAs может вносить изменения в объект AdminSDHolder любого домена, как и Администраторы домена домена и группы администраторов. Кроме того, несмотря на то, что владелец по умолчанию AdminSDHolder является группой администраторов домена, члены группы Администраторы или Администраторы предприятия могут становиться владельцами объекта.  
 
@@ -76,9 +74,9 @@ SDProp — это процесс, который выполняется кажд
 
 ###### <a name="running-sdprop-manually-in-windows-server-2008-or-earlier"></a>Запуск SDProp вручную в Windows Server 2008 или более ранней версии
 
-Можно принудительно запустить SDProp с помощью Ldp. exe или путем запуска скрипта изменения LDAP. Чтобы запустить SDProp с помощью Ldp. exe, выполните следующие действия после внесения изменений в объект AdminSDHolder в домене:  
+Можно принудительно запустить SDProp с помощью Ldp.exe или сценария изменения LDAP. Чтобы запустить SDProp с помощью Ldp.exe, выполните следующие действия после внесения изменений в объект AdminSDHolder в домене:  
 
-1. Запустите **LDP. exe**.  
+1. Запустите **Ldp.exe**.  
 2. Щелкните **Подключение** в диалоговом окне LDP и нажмите кнопку **подключить**.  
 
    ![защищенные учетные записи и группы](media/Appendix-C--Protected-Accounts-and-Groups-in-Active-Directory/SAD_9.gif)  
@@ -114,9 +112,9 @@ SDProp — это процесс, который выполняется кажд
 
 ###### <a name="running-sdprop-manually-in-windows-server-2012-or-windows-server-2008-r2"></a>Запуск SDProp вручную в Windows Server 2012 или Windows Server 2008 R2
 
-Можно также принудительно запустить SDProp с помощью Ldp. exe или путем запуска скрипта изменения LDAP. Чтобы запустить SDProp с помощью Ldp. exe, выполните следующие действия после внесения изменений в объект AdminSDHolder в домене:  
+Можно также принудительно запустить SDProp с помощью Ldp.exe или сценария изменения LDAP. Чтобы запустить SDProp с помощью Ldp.exe, выполните следующие действия после внесения изменений в объект AdminSDHolder в домене:  
 
-1. Запустите **LDP. exe**.  
+1. Запустите **Ldp.exe**.  
 
 2. В диалоговом окне **LDP** щелкните **Подключение**и нажмите кнопку **подключить**.  
 
