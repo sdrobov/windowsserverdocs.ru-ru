@@ -1,100 +1,76 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: 'Always On VPN: удаленный доступ'
+### YamlMime:Landing
+title: Документация по Always On VPN
+summary: Узнайте о функциях, технологиях и развертывании Always On VPN.
 metadata:
-  document_id: null
-  title: 'Always On VPN: удаленный доступ'
-  description: 'Узнайте о функциях, технологиях и развертывании Always On VPN.'
-  text: 'Always On VPN предоставляет единое решение для удаленного доступа для всех подключенных устройств, в том числе личных устройств. Благодаря Always On VPN соединение может предназначаться не только для пользователя или устройства, но и для них обоих. Например, можно включить аутентификацию устройств для управления удаленными устройствами, а затем включить аутентификацию пользователей для подключений к внутренним сайтам и службам компании.'
-  keywords: 'Windows 10, Windows Server, Windows Server 2016, удаленный доступ, VPN'
-  ms.localizationpriority: high
+  title: Документация по Always On VPN
+  description: Узнайте о функциях, технологиях и развертывании Always On VPN.
+  ms.service: help
+  ms.topic: landing-page
   author: eross-msft
   ms.author: lizross
-  ms.date: 11/05/2018
-  ms.topic: article
-  ms.devlang: na
-sections:
-  - title: Сведения о…
-  - items:
-      - type: markdown
-        text: 'Подготовьтесь к развертыванию удаленного доступа в качестве VPN-шлюза RAS в режиме одного клиента для VPN-подключений типа "точка — сеть" с помощью любого из четырех сценариев, приведенных ниже, для удаленных клиентских компьютеров, работающих под управлением Windows 10.  Если вы используете DirectAccess, мы рекомендуем внимательно ознакомиться с возможностями Always On VPN, чтобы выяснить, соответствуют ли они всем требованиям к удаленному доступу, прежде чем переходить с DirectAccess на Always On VPN.'
-  - items:
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy
-            html: '<p>Узнайте о развертывании Always On VPN и о том, с чего следует начать работу.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
-            title: Начало путешествия
-          - href: \windows-server\remote\remote-access\vpn\vpn-map-da
-            html: <p>Узнайте о функциях и возможностях Always On VPN.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_quick-start.svg'
-            title: Функции и возможности AlwaysOn VPN
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-enhancements
-            html: '<p>Узнайте о ключевых улучшениях интеграции, безопасности, возможностей подключения, управления сетью и совместимости.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_whats-new.svg'
-            title: Усовершенствования в Always On VPN
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\always-on-vpn-technology-overview
-            html: '<p>Узнайте о технологиях, используемых в развертывании Always On VPN.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_overview.svg'
-            title: Обзор технологий
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-adv-options
-            html: '<p>Узнайте о дополнительных возможностях VPN, которые вы можете добавить для повышения безопасности и доступности VPN-подключения.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
-            title: Расширение возможностей Always On VPN с помощью дополнительных функций
-  - title: Начало работы…
-    items:
-      - type: paragraph
-        text: 'Развертывайте подключения Always On VPN для клиентских компьютеров Windows 10, присоединенных к домену. Также можно перейти с DirectAccess на Always On VPN и настроить условный доступ с помощью Azure AD.'
-      - type: list
-        style: cards
-        className: cardsE
-        columns: 3
-        items:
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-deployment
-            html: '<p>Узнайте, что необходимо для развертывания VPN-подключений.</p>'
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_architecture.svg'
-            title: Рабочий процесс и сценарии развертывания
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\always-on-vpn-deploy-planning
-            html: <p>Начните планирование и подготовку развертывания Always On VPN.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_guidelines.svg'
-            title: Планирование развертывания Always On VPN
-          - href: \windows-server\remote\remote-access\vpn\always-on-vpn\deploy\vpn-deploy-server-infrastructure
-            html: <p>Начните установку и настройку инфраструктуры VPN и VPN-подключений для клиентов Windows 10.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Развертывание инфраструктуры VPN
-          - href: \windows-server\remote\remote-access\vpn\ad-ca-vpn-connectivity-windows10
-            html: <p>Точно настройте доступ пользователей VPN к ресурсам с помощью условного доступа Azure AD.</p>
-            image:
-              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
-            title: Настройка условного доступа
-  - items:
-      - type: list
-        style: cards
-        className: cardsL
-        items:
-          - title: Устранение неполадок Always On VPN
-            html: |-
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues">Проблемы в работе сценария VPN_Profile.ps1</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues">Проблемы с подключением клиента Always On VPN</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues">Проблемы подключения при использовании условного доступа Azure AD</a></p>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes">Коды ошибок</a></p><br>
-              <p><a class="barLink" href="/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs">Файлы журналов</a></p></div>
-          - title: Дополнительные ресурсы
-            html: |-
-              <p><a class="barLink" href="https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide">Технический справочник по VPN в Windows 10</a></p>
-              <p><a class="barLink" href="https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp">Поставщик служб конфигурации VPNv2</a></p>
-              <p><a class="barLink" href="https://technet.microsoft.com/library/hh831740.aspx">Обзор службы сертификации Active Directory</a></p>
-              <p><a class="barLink" href="https://technet.microsoft.com/library/cc730705.aspx">Шаблоны сертификатов</a></p>
-              <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx">Рекомендации по проектированию инфраструктуры открытых ключей (PKI)</a></p><p></p>
-              <p><a class="barLink" href="https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx">Служба сертификации Active Directory: пошаговое руководство по развертыванию двухуровневой иерархии PKI</a></p>
+  ms.date: 06/10/2020
+  ms.openlocfilehash: 2196c278e66adbf910646ab1c080efe39e2a4fe7
+  ms.sourcegitcommit: 1c9cb4be74d92afb938cad870c0b4bf506b89e98
+  ms.translationtype: HT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/24/2020
+  ms.locfileid: "85332624"
+landingContent:
+- title: Сведения об Always On VPN
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Функции и возможности AlwaysOn VPN
+      url: /windows-server/remote/remote-access/vpn/vpn-map-da
+    - text: Обзор технологий
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview
+    - text: Усовершенствования в Always On VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/always-on-vpn-technology-overview
+    - text: Расширенные функции Always On VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-adv-options
+    - text: Развертывание Always On VPN для Windows Server и Windows 10
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy
+- title: Развертывание Always On VPN
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Рабочий процесс и сценарии развертывания
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment
+    - text: Планирование развертывания Always On VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-planning
+    - text: Развертывание инфраструктуры VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-server-infrastructure
+    - text: Настройка условного доступа
+      url: /windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10
+- title: Устранение неполадок
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Проблемы в работе скрипта VPN_Profile.ps1
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#vpnprofileps1-script-issues
+    - text: Проблемы с подключением клиента Always On VPN
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#always-on-vpn-client-connection-issues
+    - text: Проблемы подключения при использовании условного доступа Azure AD
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#azure-ad-conditional-access-connection-issues
+  - linkListType: reference
+    links:
+    - text: Коды ошибок
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#error-codes
+    - text: Файлы журнала
+      url: /windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-troubleshooting#logs
+- title: Дополнительные ресурсы
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Технический справочник по VPN в Windows 10
+      url: https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide
+    - text: Поставщик служб конфигурации VPNv2
+      url: https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp
+    - text: Службы сертификатов Active Directory
+      url: https://technet.microsoft.com/library/hh831740.aspx
+    - text: Шаблоны сертификатов
+      url: https://technet.microsoft.com/library/cc730705.aspx
+    - text: Руководство по проектированию инфраструктуры открытых ключей (PKI)
+      url: https://social.technet.microsoft.com/wiki/contents/articles/2901.public-key-infrastructure-design-guidance.aspx
+    - text: 'Служба сертификации Active Directory: пошаговое руководство по развертыванию двухуровневой иерархии PKI'
+      url: https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx
