@@ -8,12 +8,12 @@ ms.topic: get-started-article
 ms.date: 10/28/2018
 ms.subservice: hybrid
 ms.author: billmath
-ms.openlocfilehash: 16bf61ae4601848f12d7ecd56d751837dd153408
-ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
+ms.openlocfilehash: 1786b7c9a10e11e95f736d1db20bdc12eb4844b7
+ms.sourcegitcommit: fea590c092d7abcb55be2b424458faa413795f5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84333965"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85372221"
 ---
 # <a name="deploying-active-directory-federation-services-in-azure"></a>Развертывание служб федерации Active Directory в Azure
 В службах федерации Active Directory (AD FS) представлены возможности упрощенной безопасной федерации удостоверений и единого входа. Федерация с Azure AD или O365 дает пользователям возможность выполнять проверку подлинности с использованием локальных учетных данных и получать доступ ко всем ресурсам в облаке. В связи с этим требуется высокодоступная инфраструктура AD FS, обеспечивающая доступ к ресурсам как в локальной, так и в облачной средах. С помощью развертывания AD FS в Azure можно достичь необходимого уровня доступности с минимальными усилиями.
@@ -155,7 +155,7 @@ ms.locfileid: "84333965"
 * **Схема**: так как подсистема балансировки нагрузки будет размещена перед серверами AD FS и предназначена только для внутренних сетевых подключений, выберите "внутренний".
 * **Виртуальная сеть**. Выберите виртуальную сеть, где развертывается AD FS.
 * **Подсеть**. Выберите внутреннюю подсеть.
-* **Назначение IP-адресов**: статический
+* **Назначение IP-адресов**: статическое
 
 ![внутреннему балансировщику нагрузки;](./media/how-to-connect-fed-azure-adfs/ilbdeployment1.png)
 
@@ -198,8 +198,13 @@ ms.locfileid: "84333965"
 
 **6.5. Указание внутреннего балансировщика нагрузки для DNS**
 
-Перейдите на DNS-сервер и создайте запись CNAME для внутреннего балансировщика нагрузки. Эта запись должна быть предназначена для службы федерации и содержать IP-адрес, указывающий на IP-адрес внутреннего балансировщика нагрузки. Например, если выделенный IP-адрес внутреннего балансировщика нагрузки — 10.3.0.8, а установленная служба федерации — fs.contoso.com, создайте запись CNAME, содержащую fs.contoso.com и указывающую на 10.3.0.8.
-После этого весь обмен данными, касающийся fs.contoso.com, будет осуществляться через внутренний балансировщик нагрузки, который будет направлять его соответствующим образом.
+С помощью внутреннего DNS-сервера создайте запись A для ILB. Запись A должна относиться к службе Федерации с IP-адресом, указывающим на IP-адрес ILB. Например, если IP-адрес ILB — 10.3.0.8, а установленная служба федерации — fs.contoso.com, то создайте запись A для fs.contoso.com, указывающую на 10.3.0.8.
+Это обеспечит, чтобы все трасмиттед данных fs.contoso.com в ILB и направлялись соответствующим образом. 
+
+> [!NOTE]
+>Если в развертывании также используется IPv6, обязательно создайте соответствующую запись AAAA.
+>
+>
 
 ### <a name="7-configuring-the-web-application-proxy-server"></a>7. Настройка сервера прокси веб-приложения
 **7.1. Настройка прокси-серверов веб-приложений для получения доступа к серверам AD FS**
@@ -333,7 +338,7 @@ ms.locfileid: "84333965"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 * [Группы доступности](https://aka.ms/Azure/Availability) 
-* [Подсистема балансировщика нагрузки Azure](https://aka.ms/Azure/ILB)
+* [Azure Load Balancer](https://aka.ms/Azure/ILB)
 * [Внутренний балансировщик нагрузки](https://aka.ms/Azure/ILB/Internal)
 * [Приступая к созданию балансировщика нагрузки для Интернета в диспетчере ресурсов с помощью PowerShell](https://aka.ms/Azure/ILB/Internet)
 * [Учетные записи хранения](https://aka.ms/Azure/Storage)
@@ -341,6 +346,6 @@ ms.locfileid: "84333965"
 * [AD FS and Web Application Proxy Links (Ссылки на ресурсы по AD FS и прокси веб-приложений)](https://aka.ms/ADFSLinks) 
 
 ## <a name="next-steps"></a>Дальнейшие действия
-* [Интеграция локальных удостоверений с Azure Active Directory.](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
+* [Интеграция локальных удостоверений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/hybrid/whatis-hybrid-identity)
 * [Настройка служб AD FS и управление ими с использованием Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-fed-whatis)
 * [Развертывание AD FS высокого уровня доступности в нескольких регионах Azure с помощью диспетчера трафика Azure](active-directory-adfs-in-azure-with-azure-traffic-manager.md)

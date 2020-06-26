@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.reviewer: anandy
 ms.technology: identity-adfs
-ms.openlocfilehash: 331e5ff2dbe7f172488543d1d1f5ed0f757cd584
-ms.sourcegitcommit: 2cc251eb5bc3069bf09bc08e06c3478fcbe1f321
+ms.openlocfilehash: 9ffc8351c2c5033346f04e3cd4dc6f8ba4914149
+ms.sourcegitcommit: fea590c092d7abcb55be2b424458faa413795f5c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84333955"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "85372211"
 ---
 # <a name="customize-claims-to-be-emitted-in-id_token-when-using-openid-connect-or-oauth-with-ad-fs-2016-or-later"></a>Настройте утверждения, которые будут выдаваться в id_token при использовании OpenID Connect Connect или OAuth с AD FS 2016 или более поздней версии.
 
@@ -40,7 +40,7 @@ ms.locfileid: "84333955"
 
 ![Ограничение](media/Custom-Id-Tokens-in-AD-FS/restrict2.png)
 
-Установка [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) на серверах AD FS
+С [KB4019472](https://support.microsoft.com/help/4019472/windows-10-update-kb4019472) или более поздними обновлениями системы безопасности на серверах AD FS
 1. `response_mode`задается как form_post
 2. Как общедоступные, так и конфиденциальные клиенты могут получать настраиваемые утверждения в маркере идентификации.
 3. Назначьте область `allatclaims` для пары "клиент — RP".
@@ -58,52 +58,52 @@ Grant-AdfsApplicationPermission -ClientRoleIdentifier "https://my/privateclient"
 ### <a name="create-and-configure-an-application-group-in-ad-fs-2016-or-later"></a>Создание и настройка группы приложений в AD FS 2016 или более поздней версии
 
 1. В AD FS управления щелкните правой кнопкой мыши группы приложений и выберите команду **Добавить группу приложений**.
-2. В мастере группы приложений в поле Имя введите **адфсссо** и в разделе клиент-сервер приложения выберите **собственное приложение, обращающееся к шаблону веб-приложения** . Щелкните **Далее**.
+2. В мастере группы приложений в поле Имя введите **адфсссо** и в разделе клиент-сервер приложения выберите **собственное приложение, обращающееся к шаблону веб-приложения** . Нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap1.png)
 
-3. Скопируйте значение **идентификатора клиента** .  Он будет использоваться позже в качестве значения для Ida: ClientId в файле Web. config приложения.
-4. Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44320/** .  Нажмите кнопку **Добавить**. Щелкните **Далее**.
+3. Скопируйте значение **идентификатора клиента** .  Он будет использоваться позже в качестве значения для Ida: ClientId в файле web.config приложений.
+4. Введите следующую команду для **URI перенаправления:**  -  **https://localhost:44320/** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap2.png)
 
-5. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор**  -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Щелкните **Далее**.  Это значение будет использоваться позже для **Ida: ResourceId** в файле Web. config приложения.
+5. На экране **Настройка веб-API** введите следующую команду в поле **идентификатор**  -  **https://contoso.com/WebApp** .  Нажмите кнопку **Добавить**. Нажмите кнопку **Далее**.  Это значение будет использоваться позже для **Ida: ResourceId** в файле web.config приложений.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap3.png)
 
 6. На экране **Выбор политики управления доступом** выберите **разрешение все** и нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap4.png)
 
 7. На экране **Настройка разрешений приложения** убедитесь, что выбраны **OpenID Connect** и **Аллатклаимс** , и нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.PNG)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap5.PNG)
 
 8. На экране **Сводка** нажмите кнопку **Далее**.
 
-   ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.PNG)
+   ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap6.PNG)
 
 9. На экране **Завершение** нажмите кнопку **Закрыть**.
 10. В AD FS Управление щелкните группы приложений, чтобы получить список всех групп приложений. Щелкните правой кнопкой мыши **адфсссо** и выберите пункт **свойства**. Выберите **адфсссо-Web API** и нажмите кнопку **изменить...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap7.PNG)
 
 11. На экране **Свойства веб-API на адфсссо** выберите вкладку **правила преобразования выдачи** и нажмите кнопку **Добавить правило...**
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap8.PNG)
 
 12. На странице **мастера добавления правила преобразования утверждений** выберите **Отправить утверждения с помощью настраиваемого правила** из раскрывающегося списка и нажмите кнопку **Далее** .
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.PNG)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap9.PNG)
 
-13. На экране **Добавление правила преобразования утверждений** введите **форкустомидтокен** в поле **имя правила утверждения** и следующее правило утверждения в **настраиваемом правиле**. Нажмите кнопку **Готово** .
+13. На экране **Добавление правила преобразования утверждений** введите **форкустомидтокен** в поле **имя правила утверждения** и следующее правило утверждения в **настраиваемом правиле**. Нажмите кнопку **Готово**.
 
     ```
     x:[]
     => issue(claim=x);
     ```
 
-    ![Клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.PNG)
+    ![клиент](media/Custom-Id-Tokens-in-AD-FS/clientsnap10.PNG)
 
     > [!NOTE]
     > Можно также использовать PowerShell для назначения `allatclaims` `openid` областей и.
@@ -128,7 +128,7 @@ git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-op
 
 1. Откройте пример с помощью Visual Studio.
 2. Перестройте приложение, чтобы восстановить все отсутствующие NuGet.
-3. Откройте файл Web. config.  Измените следующие значения, чтобы они выглядели следующим образом:
+3. Откройте файл web.config.  Измените следующие значения, чтобы они выглядели следующим образом:
 
    ```xml
    <add key="ida:ClientId" value="[Replace this Client Id from #3 above under section Create and configure an Application Group in AD FS 2016 or later]" />
@@ -219,6 +219,6 @@ git clone https://github.com/Azure-Samples/active-directory-aspnetcore-webapp-op
 
 ![AD FS OpenID Connect](media/Custom-Id-Tokens-in-AD-FS/AD_FS_OpenID_9.png)
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Следующие шаги
 
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)
