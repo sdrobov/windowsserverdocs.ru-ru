@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 6b199d8cc520021fcbbe32397997cc483f9c68cb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: b3513510ef00eec7ea78a3193cf44c25ddb17c7e
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403138"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475221"
 ---
 # <a name="create-a-quota"></a>Создание квоты
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Квоты можно создать на основе шаблона или с помощью пользовательских свойств. Далее приведено описание процесса создания квоты на основе шаблона (рекомендуется). Если вам необходимо создать квоту с настраиваемыми свойствами, эти свойства можно сохранить в качестве шаблона для повторного использования в будущем.
 
@@ -49,7 +49,7 @@ ms.locfileid: "71403138"
 
 7.  Нажмите кнопку **Создать**.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление квотами](quota-management.md)
 -   [Создание автоматически применяемой квоты](create-auto-apply-quota.md)

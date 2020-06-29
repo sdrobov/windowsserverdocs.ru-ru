@@ -8,29 +8,29 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c6fcf64dc15404ca59e3ce5552b258f782441cfb
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d421a14c2a6021d45cd16f30c526ff1670ae62e3
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402276"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475201"
 ---
 # <a name="change-the-amount-of-time-that-clients-cache-referrals"></a>Изменение периода кэширования ссылок клиентами
 
-> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Ссылка — это упорядоченный список конечных объектов, которые клиентский компьютер получает от контроллера домена или сервера пространства имен, когда пользователь обращается к корню пространства имен или папке с конечными объектами в пространстве имен. Можно указать, в течение какого времени клиенты будут кэшировать ссылку, прежде чем запрашивать новую.
 
 ## <a name="to-change-the-amount-of-time-that-clients-cache-namespace-root-referrals"></a>Чтобы изменить время, в течение которого клиенты кэшируют ссылки на корень пространства имен, выполните приведенные ниже действия.
 
-1.  Нажмите кнопку **Пуск**, наведите курсор на **Администрирование** и щелкните **Управление DFS**.
+1.  Нажмите кнопку **Пуск**, укажите пункт **Администрирование**, а затем щелкните **Управление DFS**.
 
 2.  В узле **Пространства имен** дерева консоли щелкните правой кнопкой мыши пространство имен и выберите команду **Свойства**.
 
 3.  На вкладке **Ссылки** в текстовом поле **Продолжительность кэширования (в секундах)** введите время (в секундах), в течение которого клиенты кэшируют ссылки на корень пространства имен. Значение по умолчанию — 300 секунд (5 минут).
 
 > [!TIP]
-> Чтобы изменить период времени, в течение которого клиенты кэшируют ссылки корня пространства имен, с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot TimeToLiveSec](https://technet.microsoft.com/library/jj884281.aspx). Эти командлеты появились в Windows Server 2012.
+> Чтобы изменить период времени, в течение которого клиенты кэшируют ссылки корня пространства имен, с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot TimeToLiveSec](https://technet.microsoft.com/library/jj884281.aspx). Эти командлеты были введены в Windows Server 2012.
 
 ## <a name="to-change-the-amount-of-time-that-clients-cache-folder-referrals"></a>Чтобы изменить время, в течение которого клиенты кэшируют ссылки на папки, выполните приведенные ниже действия.
 
@@ -40,7 +40,7 @@ ms.locfileid: "71402276"
 
 3.  На вкладке **Ссылки** в текстовом поле **Продолжительность кэширования (в секундах)** введите время (в секундах), в течение которого клиенты кэшируют ссылки на папки. Значение по умолчанию — 1800 секунд (30 минут).
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Настройка пространств имен DFS](tuning-dfs-namespaces.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)

@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 68967ff920f25c05affc206ed45bad9275e781b6
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 38354a6c6e39f58574a64c752bb86800f3fc3039
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394237"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474071"
 ---
 # <a name="create-an-auto-apply-quota"></a>Создание автоматически применяемой квоты
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 С помощью автоматически применяемых квот можно назначать шаблон квоты родительскому тому или папке. Затем диспетчер ресурсов файлового сервера автоматически создает квоты на основе этого шаблона. Квоты создаются для каждой из существующих вложенных папок, а также для вложенных папок, которые будут созданы в будущем.
 
@@ -40,7 +40,7 @@ ms.locfileid: "71394237"
 > [!Note]
 > Можно проверить все автоматически созданные квоты, выбрав узел **Квоты**, а затем выбрав пункт **Обновить**. В родительском томе или папке отобразятся отдельные квоты для каждой вложенной папки и профили автоматически применяемых квот.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление квотами](quota-management.md)
 -   [Редактирование свойств автоматически применяемой квоты](edit-auto-apply-quota-properties.md)

@@ -6,16 +6,16 @@ ms.author: cosdar
 ms.prod: windows-server
 ms.technology: manage
 ms.date: 11/04/2019
-ms.openlocfilehash: 62bf21dd0afcb99aa77cff8a733e80fc4cffe2fb
-ms.sourcegitcommit: 1da993bbb7d578a542e224dde07f93adfcd2f489
+ms.openlocfilehash: 088fb7b8f03ab7e575b562572f2e29e1b5774760
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73587234"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474491"
 ---
 # <a name="deploy-hyperconverged-infrastructure-with-windows-admin-center"></a>Развертывание инфраструктуры гиперконвергентном с помощью центра администрирования Windows
 
-> Область применения: центр администрирования Windows, предварительная версия Windows Admin Center
+> Применяется к: Windows Admin Center, ознакомительная версия Windows Admin Center
 
 Для развертывания инфраструктуры гиперконвергентном с использованием двух или более подходящих серверов Windows можно использовать центр администрирования Windows [версии 1910](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) или более поздней. Эта новая функция имеет вид многоэтапного рабочего процесса, который поможет вам установить компоненты, настроить сеть, создать кластер и развернуть Локальные дисковые пространства и (или) программно-определяемую сеть (SDN), если они выбраны.
 
@@ -31,7 +31,7 @@ ms.locfileid: "73587234"
 Рабочий процесс создания кластера в центре администрирования Windows не выполняет установку операционных систем без операционной системы, поэтому необходимо сначала установить Windows Server на каждом сервере. Поддерживаемые версии: Windows Server 2016, Windows Server 2019 и Windows Server Insider Preview. Кроме того, перед запуском рабочего процесса необходимо присоединить каждый сервер к тому же домену Active Directory, в котором работает центр администрирования Windows.
 
 ### <a name="2-install-windows-admin-center"></a>2. Установка центра администрирования Windows
- 
+
 Следуйте инструкциям, чтобы [скачать и установить](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center) последнюю версию центра администрирования Windows.
 
 ### <a name="3-install-the-cluster-creation-extension"></a>3. Установка расширения создания кластера
@@ -68,7 +68,7 @@ ms.locfileid: "73587234"
 
 Используйте эти командлеты Windows PowerShell для отслеживания и просмотра действий, выполняемых рабочим процессом.
 
-Чтобы узнать, какие компоненты Windows установлены, используйте командлет `Get-WindowsFeature`. Пример
+Чтобы узнать, какие компоненты Windows установлены, используйте `Get-WindowsFeature` командлет. Пример:
 
 ```PowerShell
 Get-WindowsFeature "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "BitLocker"
@@ -79,7 +79,7 @@ Get-WindowsFeature "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "Bi
   > [!Note]
   > Устанавливаемые компоненты зависят от выбранного типа кластера.
 
-Для просмотра сетевых адаптеров и их свойств, таких как имя, IPv4-адреса и идентификатор виртуальной ЛС:
+Для просмотра сетевых адаптеров и их свойств, например имени, IPv4-адресов и идентификатор виртуальной локальной сети воспользуйтесь следующей командой:
 
 ```PowerShell
 Get-NetAdapter | Where Status -Eq "Up" | Sort InterfaceAlias | Format-Table Name, InterfaceDescription, Status, LinkSpeed, VLANID, MacAddress
@@ -88,7 +88,7 @@ Get-NetAdapter | Where Status -Eq "Up" | Get-NetIPAddress -AddressFamily IPv4 -E
 
 ![Снимок экрана: выходные данные PowerShell](../media/deploy-hyperconverged-infrastructure/script-out-2.png)
 
-Чтобы увидеть виртуальные коммутаторы Hyper-V и объединение физических сетевых адаптеров, выполните следующие действия.
+Чтобы просмотреть виртуальные коммутаторы Hyper-V и определить, как объединены физические сетевые адаптеры, воспользуйтесь следующей командой:
 
 ```PowerShell
 Get-VMSwitch
@@ -176,7 +176,7 @@ Get-VMSwitch | Remove-VMSwitch
 ```
 
 > [!Note]
-> Командлет `Remove-VMSwitch` автоматически удаляет все виртуальные адаптеры и отменяет объединение физических адаптеров, внедренных в коммутаторы.
+> `Remove-VMSwitch`Командлет автоматически удаляет все виртуальные адаптеры и отменяет объединение физических адаптеров, внедренных в коммутаторы.
 
 Если вы изменили свойства сетевого адаптера, такие как имя, IPv4-адрес и идентификатор виртуальной ЛС, выполните следующие действия.
 
@@ -191,28 +191,28 @@ Get-NetAdapter | Where Name -Ne "Management" | Set-NetAdapter -VlanID 0
 
 Теперь все готово для запуска рабочего процесса.
 
-## <a name="feedback"></a>Feedback
+## <a name="feedback"></a>Обратная связь
 
 Эта предварительная версия предназначена для вашего отзыва. Вот несколько способов достижения нашей команды:
 
 - [Отправка и голосование запросов на функции в UserVoice](https://windowsserver.uservoice.com/forums/295071/category/319162?query=%5Bhci%5D)
 - [Присоединяйтесь к форуму центра администрирования Windows в центре технического сообщества Майкрософт](https://techcommunity.microsoft.com/t5/Windows-Server-Management/bd-p/WindowsServerManagement)
 - Электронная почта хЦи — развертывание [at] microsoft.com
-- Твит в [@servermgmt](https://twitter.com/servermgmt)
+- Твит в[@servermgmt](https://twitter.com/servermgmt)
 
-## <a name="report-an-issue"></a>Сообщить о вопросе
+## <a name="report-an-issue"></a>Сообщить о проблеме
 
 Используйте приведенные выше каналы, чтобы сообщить о возникшей ошибке в рабочем процессе создания кластера.
 
 Если возможно, включите следующие сведения, чтобы помочь нам быстро воспроизвести и устранить проблему:
 
-- Тип выбранного кластера (например: *"гиперконвергентном"* )
-- Шаг, на котором возникла ошибка (например, *"3,2 Создание кластера"* )
-- Версия расширения создания кластера. Последовательно выберите **параметры** > **расширения** > **установленные расширения** и просмотрите столбец **Version** (пример: *"1.0.30"* ).
+- Тип выбранного кластера (например: *"гиперконвергентном"*)
+- Шаг, на котором возникла ошибка (например, *"3,2 Создание кластера"*)
+- Версия расширения создания кластера. Последовательно выберите **Параметры**  >  **расширения**  >  **установленные расширения** и просмотрите столбец **версия** (пример: *"1.0.30"*).
 - Сообщения об ошибках (на экране или в консоли браузера), которые можно открыть, нажав клавишу **F12**.
-- Любые другие важные сведения о вашей среде 
+- Любые другие важные сведения о вашей среде
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Привет, центр администрирования Windows](https://docs.microsoft.com/windows-server/manage/windows-admin-center/understand/windows-admin-center)
 - [Развертывание локальных дисковых пространств](https://docs.microsoft.com/windows-server/storage/storage-spaces/deploy-storage-spaces-direct)

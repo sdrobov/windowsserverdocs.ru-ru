@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 6a0fa660db6b03104b585c8ee78a4f20aafe5c88
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: c496151ed1f38cd1f2c604bd227627a586e582c6
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403146"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473701"
 ---
 # <a name="create-a-file-screen-exception"></a>Создание исключения для фильтра блокировки файлов
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 В некоторых случаях вам будет требоваться создавать исключения для фильтра блокировки файлов. Например, вам может потребоваться заблокировать видеофайлы на файловом сервере, однако при этом вам также нужно будет разрешить проходящей обучение группе пользователей сохранять эти видеофайлы для прохождения обучения на их компьютерах. Чтобы предоставить доступ к файлам, которые блокируют другие фильтры блокировки файлов, создайте *исключение для фильтра блокировки файлов*.
 
@@ -45,7 +45,7 @@ ms.locfileid: "71403146"
 
 5.  Нажмите кнопку **ОК**.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление блокировкой файлов](file-screening-management.md)
 -   [Определение групп файлов для блокировки](define-file-groups-for-screening.md)

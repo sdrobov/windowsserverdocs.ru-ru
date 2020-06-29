@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 8ad14225592d627b6ff88b9e2286b686aa549392
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f8ad7ca8fedfa3493a7f5369f8f603913879b50d
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75351945"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475431"
 ---
 # <a name="change-a-dynamic-disk-back-to-a-basic-disk"></a>Преобразование динамического диска в базовый
 
@@ -68,6 +68,6 @@ ms.locfileid: "75351945"
 -   Перед преобразованием диска из динамического в базовый необходимо удалить с него все тома и данные. Чтобы сохранить данные, создайте их резервную копию или переместите их на другой том, прежде чем преобразовать диск из динамического в базовый.
 -   После преобразования динамического диска в базовый на нем можно создавать только разделы и логические диски.
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Представление синтаксиса команд](https://technet.microsoft.com/library/cc742449(v=ws.11).aspx)

@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 37719656e107869b97045af98c1a63744e4f6b38
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: f4793616caf9ba4a8f9db09cd1902432323c081b
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71403026"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474041"
 ---
 # <a name="edit-quota-template-properties"></a>Редактирование свойств шаблона квоты
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 При внесении изменений в шаблон квоты вы можете распространить эти изменения на квоты, созданные на основе исходного шаблона квоты. Можно изменить только те квоты, которые по-прежнему соответствуют исходному шаблону, или все квоты, созданные на основе исходного шаблона, независимо от любых изменений, которые были внесены в квоты с момента их создания. Данная функция упрощает процесс обновления свойств квот за счет возможности централизованного изменения.
 
@@ -42,7 +42,7 @@ ms.locfileid: "71403026"
 
 6.  Нажмите кнопку **ОК**.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление квотами](quota-management.md)
 -   [Создание шаблона квоты](create-quota-template.md)

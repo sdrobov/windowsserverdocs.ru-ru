@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: b56d7b0439e3dc6f1a2e0a1c96f761dbb77cb0a0
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e38dee0381b33bb9d11b038de715a4420906e131
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394386"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474331"
 ---
 # <a name="define-file-groups-for-screening"></a>Определение групп файлов для блокировки
 
@@ -41,11 +41,11 @@ ms.locfileid: "71394386"
 
     -   Для каждого набора файлов, которые вы хотите включить в группу файлов, в окне **Файлы для включения** введите шаблон имени файла и нажмите кнопку **Добавить**.
     -   Для каждого набора файлов, которые вы хотите исключить из группы файлов, в окне **Файлы для исключения** введите шаблон имени файла и нажмите кнопку **Добавить**.
-        Обратите внимание, что применяются стандартные правила с подстановочными знаками, например **\*. exe** выбирает все исполняемые файлы.
+        Обратите внимание, что применяются стандартные правила с подстановочными знаками, например ** \* . exe** выбирает все исполняемые файлы.
 
 5.  Нажмите кнопку **ОК**.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление блокировкой файлов](file-screening-management.md)
 -   [Создание фильтра блокировки файлов](create-file-screen.md)

@@ -8,15 +8,15 @@ ms.author: cosdar
 manager: eldenc
 ms.technology: storage-spaces
 ms.date: 03/10/2020
-ms.openlocfilehash: 4ce41da1da3dc90f698008902170d7cc1541619c
-ms.sourcegitcommit: bb2eb0b12f2a32113899a59aa5644bc6e8cab3d2
+ms.openlocfilehash: 4526bdc87bfbb8cdaf6cc3b0e8f3cd1cd80f4a9d
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2020
-ms.locfileid: "79089349"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474611"
 ---
 # <a name="extending-volumes-in-storage-spaces-direct"></a>Расширение томов в локальных дисковых пространствах
-> Область применения: Windows Server 2019, Windows Server 2016
+> Применяется к: Windows Server 2019, Windows Server 2016
 
 В этом разделе приводятся инструкции по изменению размера томов в кластере [Локальные дисковые пространства](storage-spaces-direct-overview.md) с помощью центра администрирования Windows.
 
@@ -32,7 +32,7 @@ ms.locfileid: "79089349"
 1. В центре администрирования Windows подключитесь к кластеру Локальные дисковые пространства, а затем выберите **тома** в области **инструменты** .
 2. На странице тома выберите вкладку **Инвентаризация** , а затем выберите том, размер которого необходимо изменить.
 
-    На странице сведения о томе указывается емкость хранилища для тома. Страницу сведений о томах также можно открыть непосредственно из панели мониторинга. На панели мониторинга на панели "оповещения" выберите оповещение, уведомляющее о нехватке объема хранилища для тома, а затем выберите команду **"переход к тому"** .
+    На странице сведения о томе указывается емкость хранилища для тома. Страницу сведений о томах также можно открыть непосредственно из панели мониторинга. На панели мониторинга на панели "оповещения" выберите оповещение, уведомляющее о нехватке объема хранилища для тома, а затем выберите команду **"переход к тому"**.
 
 4. В верхней части страницы сведений о томах выберите **изменить размер**.
 5. Введите новый больший размер, а затем выберите **изменить размер**.
@@ -53,7 +53,7 @@ ms.locfileid: "79089349"
 
 Чтобы ознакомиться с ними, выполните командлет **Get-** с соответствующим существительным в PowerShell.
 
-Например:
+Пример:
 
 ```PowerShell
 Get-VirtualDisk
@@ -64,7 +64,7 @@ Get-VirtualDisk
 Например, вот как перейти от виртуального диска к его тому:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume 
+Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume
 ```
 
 ### <a name="step-1--resize-the-virtual-disk"></a>Шаг 1. Изменение размера виртуального диска
@@ -74,7 +74,7 @@ Get-VirtualDisk <FriendlyName> | Get-Disk | Get-Partition | Get-Volume
 Чтобы проверить, выполните следующий командлет:
 
 ```PowerShell
-Get-VirtualDisk <FriendlyName> | Get-StorageTier 
+Get-VirtualDisk <FriendlyName> | Get-StorageTier
 ```
 
 Если командлет ничего не возвращает, у виртуального диска нет уровней хранилища.
@@ -129,7 +129,7 @@ $VirtualDisk = Get-VirtualDisk <FriendlyName>
 # Get its partition
 $Partition = $VirtualDisk | Get-Disk | Get-Partition | Where PartitionNumber -Eq 2
 
-# Resize to its maximum supported size 
+# Resize to its maximum supported size
 $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).SizeMax
 ```
 
@@ -142,9 +142,9 @@ $Partition | Resize-Partition -Size ($Partition | Get-PartitionSupportedSize).Si
 > [!TIP]
 > Чтобы убедиться, что размер тома изменился, выполните командлет **Get-Volume**.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Локальные дисковые пространства в Windows Server 2016](storage-spaces-direct-overview.md)
-- [Планирование томов в Локальные дисковые пространства](plan-volumes.md)
-- [Создание томов в Локальные дисковые пространства](create-volumes.md)
+- [Планирование томов в локальных дисковых пространствах](plan-volumes.md)
+- [Создание томов в локальных дисковых пространствах](create-volumes.md)
 - [Удаление томов в Локальные дисковые пространства](delete-volumes.md)

@@ -8,15 +8,15 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 02/20/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: d9ebc40b69373dafbebdb87f2abe624a5a7a4375
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: fff78ddc831ae9f6cba103d7630da3afec2c87d7
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858957"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474241"
 ---
 # <a name="using-storage-spaces-direct-with-the-csv-in-memory-read-cache"></a>Использование Локальные дисковые пространства с кэшем чтения в памяти CSV
-> Область применения: Windows Server 2016, Windows Server 2019
+> Область применения. Windows Server 2016, Windows Server 2019
 
 В этом разделе описывается использование системной памяти для повышения производительности [Локальные дисковые пространства](storage-spaces-direct-overview.md).
 
@@ -24,7 +24,7 @@ ms.locfileid: "80858957"
 
 Так как кэш в памяти является локальным сервером, он повышает локальность данных для Локальные дисковые пространства развертываний с помощью Hyper-in. последние операции чтения кэшируются в памяти на том же узле, где работает виртуальная машина, уменьшая частоту считывания по сети. Это приводит к снижению задержки и повышению производительности хранилища.
 
-## <a name="planning-considerations"></a>Факторы, которые следует учесть при планировании
+## <a name="planning-considerations"></a>Рекомендации относительно планирования
 
 Кэш чтения в памяти наиболее эффективен для рабочих нагрузок с интенсивным чтением, таких как инфраструктура виртуальных рабочих столов (VDI). И наоборот, если Рабочая нагрузка очень интенсивно записывается, кэш может ввести больше ресурсов, чем значение, и его следует отключить.
 
@@ -42,8 +42,8 @@ ms.locfileid: "80858957"
 
 | Версия ОС          | Размер кэша CSV по умолчанию |
 |---------------------|------------------------|
-| Windows Server 2016 | 0 (отключено)           |
-| Windows Server 2019 | 1 гиб                   |
+| Windows Server 2016 | 0 (отключено)           |
+| Windows Server 2019 | 1 гиб                   |
 
 Чтобы узнать, сколько памяти выделено с помощью PowerShell, выполните:
 
@@ -69,6 +69,6 @@ Get-ClusterSharedVolume | ForEach {
 }
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)

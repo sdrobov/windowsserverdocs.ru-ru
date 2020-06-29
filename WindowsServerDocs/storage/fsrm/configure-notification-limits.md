@@ -8,23 +8,23 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 4a33b7f125479da1e7b701f5427a0f15903caf66
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 32728fc9b19fca458b7ac4b86f3b550d9ff29490
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71401949"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474171"
 ---
 # <a name="configure-notification-limits"></a>Настройка пределов уведомлений
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Чтобы уменьшить количество уведомлений, которые накапливаются при постоянном превышении порога квоты или при попытке сохранить запрещенный файл, диспетчер ресурсов файлового сервера применяет ограничения по времени к следующим типам уведомлений.
 
--   электронная почта
+-   электронная почта;
 -   Журнал событий
--   Command
--   Отчет
+-   Команда
+-   Report
 
 Каждое ограничение определяет период времени, который должен пройти, прежде чем для одной и той же проблемы будет сформировано еще одно уведомление того же типа.
 
@@ -32,7 +32,7 @@ ms.locfileid: "71401949"
 
 ## <a name="to-specify-a-standard-notification-limit-for-each-notification-type"></a>Чтобы указать стандартное ограничение для каждого типа уведомления, выполните следующие действия.
 
-1.  В древе консоли выберите **Диспетчер ресурсов файлового сервера** и выберите команду **Настроить параметры**. Откроется диалоговое окно **Параметры диспетчера ресурсов файлового сервера** .
+1.  В древе консоли выберите **Диспетчер ресурсов файлового сервера** и выберите команду **Настроить параметры**. Откроется диалоговое окно **Параметры диспетчера ресурсов файлового сервера**.
 
 2.  На вкладке **Пределы уведомлений** введите значение в минутах для каждого отображающегося типа уведомлений.
 
@@ -41,7 +41,7 @@ ms.locfileid: "71401949"
 > [!Note]
 > Чтобы настроить ограничения по времени, связанные с уведомлениями для конкретной квоты или фильтра блокировки файлов, можно использовать средства командной строки диспетчера ресурсов файлового сервера **Dirquota.exe** и **Filescrn.exe** или использовать командлеты [диспетчера ресурсов файлового сервера](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager).
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 -   [Программы командной строки](command-line-tools.md)

@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: facc816ef46ebeadb30ccabac9c0b3e6a896264d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 1411f312def0da79de4c18d6d652e0223ea27b48
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856967"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474451"
 ---
-# <a name="what39s-new-for-managed-service-accounts"></a>Новые&#39;возможности управляемых учетных записей служб
+# <a name="what39s-new-for-managed-service-accounts"></a>Новые&#39;для управляемых учетных записей служб
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе для ИТ-специалистов описываются изменения функциональности управляемых учетных записей служб с введением групповой управляемой учетной записи службы (gMSA) в Windows Server 2012 и Windows 8.
 
@@ -44,15 +44,15 @@ ms.locfileid: "80856967"
 
 На компьютерах под управлением Windows Server 2012 или Windows 8 можно создать группу MSA и управлять ими с помощью диспетчера управления службами, чтобы многочисленные экземпляры службы, например развернутые в ферме серверов, можно было управлять с одного сервера. Средства и служебные программы, использовавшиеся для администрирования управляемых учетных записей служб, такие как диспетчер пула приложений IIS, могут использоваться с групповыми управляемыми учетными записями служб. Администраторы доменов могут делегировать управление службами администраторам служб, способным управлять полным жизненным циклом управляемой учетной записи службы или групповой управляемой учетной записи службы. Существующие клиентские компьютеры получат возможность пройти аутентификацию для подключения к любой из таких служб без уточнения конкретного экземпляра данной службы.
 
-### <a name="removed-or-deprecated-functionality"></a><a name="interoperability"></a>Удаленная или устаревшая функциональность
+### <a name="removed-or-deprecated-functionality"></a><a name="interoperability"></a>Удаленные или устаревшие функциональные возможности
 Для Windows Server 2012 командлеты Windows PowerShell по умолчанию управляют учетными записями групповых управляемых служб вместо управляемых серверных учетных записей служб.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Общие сведения о групповой управляемых учетных записях служб](group-managed-service-accounts-overview.md)
+-   [Group Managed Service Accounts Overview](group-managed-service-accounts-overview.md) (Обзор групповых управляемых учетных записей служб);
 
 -   [Обзор доменных служб Active Directory](active-directory-domain-services-overview.md)
 
--   [Управляемые учетные записи служб: основные сведения, реализация, рекомендации и устранение неполадок](https://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
+-   [Управляемые учетные записи служб: общие сведения, реализация, рекомендации и устранение неполадок](https://blogs.technet.com/b/askds/archive/20../managed-service-accounts-understanding-implementing-best-practices-and-troubleshooting.aspx)
 
 

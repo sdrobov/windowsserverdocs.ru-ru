@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 4d813933ec3073ecb3348468ca4b8f2e124c403d
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 562164b461b4cd5db939b116feeb1bf21f78bad4
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402012"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474131"
 ---
-# <a name="connect-to-a-remote-computer"></a>Подключение к удаленному компьютеру 
+# <a name="connect-to-a-remote-computer"></a>Подключение к удаленному компьютеру
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Чтобы управлять ресурсами хранилища на удаленном компьютере, можно подключиться к компьютеру из диспетчера ресурсов файлового сервера. При установленном подключении диспетчер ресурсов файлового сервера позволяет управлять квотами, файлами фильтра блокировки файлов, управлять категориями, планировать создание задач по управлению файлами и создавать отчеты по этим удаленным ресурсам.
 
@@ -37,7 +37,7 @@ ms.locfileid: "71402012"
 > [!Important]
 > Команда **Подключение к другому компьютеру** доступна только при открытии диспетчера ресурсов файлового сервера в разделе **Администрирование**. При осуществлении доступа к диспетчеру ресурсов файлового сервера из диспетчера серверов эта команда недоступна.
 
-## <a name="additional-considerations"></a>Дополнительные рекомендации
+## <a name="additional-considerations"></a>Дополнительные сведения
 
 Для управления удаленными ресурсам с помощью диспетчера ресурсов файлового сервера:
 
@@ -45,6 +45,6 @@ ms.locfileid: "71402012"
 -   Удаленный компьютер должен работать под управлением Windows Server, и должен быть установлен диспетчер ресурсов файлового сервера.
 -   На удаленном компьютере должно быть включено исключение **Управление удаленным диспетчером ресурсов файлового сервера**. Включите это исключение, используя брандмауэр Windows на панели управления.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление ресурсами удаленного хранилища](managing-remote-storage-resources.md)

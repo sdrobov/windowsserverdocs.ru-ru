@@ -8,19 +8,19 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 9972ec77b78c6c4efa2d52fffd44d27d71a1afe0
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 85cfdbe5e95c9177194a2b6ac7b5d22e1fd9fc0e
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856367"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475017"
 ---
 # <a name="shielded-vms---preparing-a-vm-shielding-helper-vhd"></a>Экранированные виртуальные машины. Подготовка виртуального жесткого диска экранирования виртуальной машины
 
 >Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
 > [!IMPORTANT]
-> Перед выполнением этих процедур убедитесь, что установлено последнее накопительное обновление для Windows Server 2016 или используется последняя версия Windows 10 [средства удаленного администрирования сервера](https://www.microsoft.com/download/details.aspx?id=45520). В противном случае процедуры не будут работать. 
+> Перед выполнением этих процедур убедитесь, что установлено последнее накопительное обновление для Windows Server 2016 или используется последняя версия Windows 10 [средства удаленного администрирования сервера](https://www.microsoft.com/download/details.aspx?id=45520). В противном случае процедуры не будут работать.
 
 В этом разделе описаны действия, выполняемые поставщиком услуг хостинга, чтобы обеспечить поддержку преобразования существующих виртуальных машин в экранированные.
 
@@ -59,7 +59,7 @@ ms.locfileid: "80856367"
 
 ![VMM — параметры службы защиты узла](../media/Guarded-Fabric-Shielded-VM/guarded-host-vmm-hgs-settings-01.png)
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Этапы настройки поставщика услуг размещения для защищенных узлов и экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
+- [Пошаговая настройка поставщика служб размещения для защищенных узлов и экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 - [Защищенная структура и экранированные виртуальные машины](guarded-fabric-and-shielded-vms-top-node.md)

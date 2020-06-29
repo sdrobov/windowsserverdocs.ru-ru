@@ -7,16 +7,16 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 02/02/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: e2379ce540cb26c02bc79f591d2a597874ab287c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 597abd8e389421eb6875ff3cc94b457f341be3b7
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856217"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474751"
 ---
 # <a name="performance-history-for-network-adapters"></a>Журнал производительности для сетевых адаптеров
 
-> Область применения: Windows Server 2019
+> Область применения: Windows Server 2019
 
 Этот подраздел [журнала производительности для Локальные дисковые пространства](performance-history.md) подробно описывает журнал производительности, собранный для сетевых адаптеров. Журнал производительности сетевого адаптера доступен для каждого физического сетевого адаптера на каждом сервере в кластере. Журнал производительности удаленного доступа к памяти (RDMA) доступен для каждого физического сетевого адаптера с включенным RDMA.
 
@@ -27,7 +27,7 @@ ms.locfileid: "80856217"
 
 Эти серии собираются для каждого подходящего сетевого адаптера:
 
-| Ряд                               | Единица измерения            |
+| Series                               | Единицы            |
 |--------------------------------------|-----------------|
 | `netadapter.bandwidth.inbound`       | бит в секунду |
 | `netadapter.bandwidth.outbound`      | бит в секунду |
@@ -41,7 +41,7 @@ ms.locfileid: "80856217"
 
 ## <a name="how-to-interpret"></a>Как интерпретировать
 
-| Ряд                               | Как интерпретировать                                                      |
+| Series                               | Как интерпретировать                                                      |
 |--------------------------------------|-----------------------------------------------------------------------|
 | `netadapter.bandwidth.inbound`       | Интенсивность получения данных сетевым адаптером.                         |
 | `netadapter.bandwidth.outbound`      | Интенсивность передачи данных сетевым адаптером.                             |
@@ -52,24 +52,24 @@ ms.locfileid: "80856217"
 
 ## <a name="where-they-come-from"></a>Откуда они приходят
 
-`bytes.*` серии собираются из счетчика производительности `Network Adapter`, установленного на сервере, где установлен сетевой адаптер, по одному экземпляру на сетевой адаптер.
+`bytes.*`Ряды собираются из `Network Adapter` набора счетчиков производительности на сервере, где установлен сетевой адаптер, по одному экземпляру на сетевой адаптер.
 
-| Ряд                           | Счетчик источника           |
+| Series                           | Счетчик источника           |
 |----------------------------------|--------------------------|
-| `netadapter.bandwidth.inbound`   | 8 × `Bytes Received/sec` |
-| `netadapter.bandwidth.outbound`  | 8 × `Bytes Sent/sec`     |
-| `netadapter.bandwidth.total`     | 8 × `Bytes Total/sec`    |
+| `netadapter.bandwidth.inbound`   | 8 ×`Bytes Received/sec` |
+| `netadapter.bandwidth.outbound`  | 8 ×`Bytes Sent/sec`     |
+| `netadapter.bandwidth.total`     | 8 ×`Bytes Total/sec`    |
 
-`rdma.*` серии собираются из счетчика производительности `RDMA Activity`, установленного на сервере, где установлен сетевой адаптер, по одному экземпляру на сетевой адаптер с включенным RDMA.
+`rdma.*`Ряды собираются из `RDMA Activity` набора счетчиков производительности на сервере, где установлен сетевой адаптер, по одному экземпляру на сетевой адаптер с включенным RDMA.
 
-| Ряд                               | Счетчик источника           |
+| Series                               | Счетчик источника           |
 |--------------------------------------|--------------------------|
-| `netadapter.bandwidth.rdma.inbound`  | 8 × `Inbound bytes/sec`  |
-| `netadapter.bandwidth.rdma.outbound` | 8 × `Outbound bytes/sec` |
+| `netadapter.bandwidth.rdma.inbound`  | 8 ×`Inbound bytes/sec`  |
+| `netadapter.bandwidth.rdma.outbound` | 8 ×`Outbound bytes/sec` |
 | `netadapter.bandwidth.rdma.total`    | 8 × *Сумма приведенного выше*   |
 
    > [!NOTE]
-   > Счетчики измеряются для всего интервала, а не для выборки. Например, если сетевой адаптер бездействует в течение 9 секунд, но передает 200 бит в десятую секунду, его `netadapter.bandwidth.total` записываются в среднем на 20 бит в секунду в течение этого 10-секундного интервала. Это гарантирует, что журнал производительности захватывает все действия и является надежным для шума.
+   > Счетчики измеряются для всего интервала, а не для выборки. Например, если сетевой адаптер бездействует 9 секунд, но передает 200 бит в десятую секунду, он `netadapter.bandwidth.total` будет записан в среднем 20 бит в секунду в течение этого 10-секундного интервала. Это гарантирует, что журнал производительности захватывает все действия и является надежным для шума.
 
 ## <a name="usage-in-powershell"></a>Использование в PowerShell
 
@@ -79,6 +79,6 @@ ms.locfileid: "80856217"
 Get-NetAdapter <Name> | Get-ClusterPerf
 ```
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Журнал производительности для Локальные дисковые пространства](performance-history.md)
+- [Журнал производительности для Локальных дисковых пространств](performance-history.md)

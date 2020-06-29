@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 09/25/2019
-ms.openlocfilehash: aa2075bda71c6713fa76577b685315118199e63b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 69ff4bcfb407d01e184abd039be8aa0117372b4a
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856787"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475341"
 ---
 # <a name="confirm-guarded-hosts-can-attest"></a>Подтверждение аттестации защищенных узлов
 
@@ -31,7 +31,7 @@ ms.locfileid: "80856787"
 
 3. Настройте URL-адреса защиты ключа и аттестации узла:
 
-    - С **помощью Windows PowerShell**: можно настроить URL-адреса защиты ключа и аттестации, выполнив следующую команду в консоли Windows PowerShell с повышенными привилегиями. Для &lt;полного доменного имени&gt;используйте полное доменное имя кластера HGS (например, HGS. бастиона. local) или попросите администратора HGS запустить командлет **Get-HgsServer** на сервере HGS для получения URL-адресов.
+    - С **помощью Windows PowerShell**: можно настроить URL-адреса защиты ключа и аттестации, выполнив следующую команду в консоли Windows PowerShell с повышенными привилегиями. Для &lt; полного доменного имени &gt; используйте полное доменное имя (FQDN) кластера HGS (например, HGS. бастиона. local) или попросите администратора HGS запустить командлет **Get-HGSSERVER** на сервере HGS для получения URL-адресов.
 
         ```PowerShell
         Set-HgsClientConfiguration -AttestationServerUrl 'http://<FQDN>/Attestation' -KeyProtectionServerUrl 'http://<FQDN>/KeyProtection'
@@ -41,8 +41,8 @@ ms.locfileid: "80856787"
 
     - С **помощью VMM**. Если вы используете System Center 2016-Virtual Machine Manager (VMM), вы можете настроить URL-адреса аттестации и защиты ключей в VMM. Дополнительные сведения см. в статье [Настройка глобальных параметров HGS](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-hosts#configure-global-hgs-settings) в разделе **подготавливать защищенные узлы в VMM**.
 
-    >**Заметки о**
-    > - Если администратор HGS [включил протокол HTTPS на сервере HGS](guarded-fabric-configure-hgs-https.md), начните использовать URL-адреса с `https://`.
+    >**Примечания**
+    > - Если администратор HGS [включил протокол HTTPS на сервере HGS](guarded-fabric-configure-hgs-https.md), начните использовать URL-адреса с `https://` .
     > - Если администратор HGS включил протокол HTTPS на сервере HGS и использовал самозаверяющий сертификат, необходимо импортировать сертификат в хранилище доверенных корневых центров сертификации на каждом узле. Для этого выполните следующую команду на каждом узле:
        ```PowerShell
        Import-Certificate -FilePath "C:\temp\HttpsCertificate.cer" -CertStoreLocation Cert:\LocalMachine\Root
@@ -55,22 +55,22 @@ ms.locfileid: "80856787"
     Get-HgsClientConfiguration
     ```
 
-    Выходные данные команды указывают, прошел ли узел аттестацию, и теперь он защищен. Если `IsHostGuarded` не возвращает **значение true**, для изучения можно запустить средство диагностики HGS с помощью [Get-хгстраце](https://technet.microsoft.com/library/mt718831.aspx). Чтобы запустить диагностику, введите следующую команду в командной строке Windows PowerShell с повышенными привилегиями на узле:
+    Выходные данные команды указывают, прошел ли узел аттестацию, и теперь он защищен. Если не `IsHostGuarded` возвращает **значение true**, для изучения можно запустить средство диагностики HGS с помощью [Get-хгстраце](https://technet.microsoft.com/library/mt718831.aspx). Чтобы запустить диагностику, введите следующую команду в командной строке Windows PowerShell с повышенными привилегиями на узле:
 
     ```powershell
     Get-HgsTrace -RunDiagnostics -Detailed
     ```
 
     > [!IMPORTANT]
-    > Если вы используете Windows Server 2019 или Windows 10 версии 1809 и используете политики целостности кода, `Get-HgsTrace` возвращать ошибку для **активной диагностики политики целостности кода** .
+    > Если вы используете Windows Server 2019 или Windows 10 версии 1809 и используете политики целостности кода, `Get-HgsTrace` возвращайте ошибку для **активной диагностики политики целостности кода** .
     > Вы можете спокойно проигнорировать этот результат, если это единственный сбой диагностики.
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Следующий шаг
 
 > [!div class="nextstepaction"]
 > [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Развертывание службы защиты узла (HGS)](guarded-fabric-deploying-hgs-overview.md)
+- [Deploy the Host Guardian Service (HGS)](guarded-fabric-deploying-hgs-overview.md) (Развертывание службы защиты узла (HGS))
 - [Развертывание экранированных виртуальных машин](guarded-fabric-configuration-scenarios-for-shielded-vms-overview.md)

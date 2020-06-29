@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 1ab941e25da7171349bb24762940af3bf886c165
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: d90030fe183e5cfcb94866e87793c0419b636433
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "77675365"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475451"
 ---
 # <a name="volume-shadow-copy-service"></a>Служба теневого копирования томов
 
@@ -620,6 +620,6 @@ VssAdmin доступен в версиях операционной систе�
 </tbody>
 </table>
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 [Volume Shadow Copy Service Overview](https://docs.microsoft.com/windows/desktop/vss/volume-shadow-copy-service-overview) (Обзор службы теневого копирования томов)

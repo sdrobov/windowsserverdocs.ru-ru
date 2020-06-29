@@ -8,20 +8,20 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 257ee2955c4f521d14f01ec197fd45e5194eef02
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 402af4bd7c00bedfc3d01d43071af4fcd374d428
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394100"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85474001"
 ---
 # <a name="file-management-tasks"></a>Задачи управления файлами
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Задачи управления файлами автоматизируют процессы поиска наборов файлов на сервере и применения простых команд. Можно запланировать периодическое выполнение этих задач с целью сокращения повторяющихся расходов. Файлы, которые будут обрабатываться задачей управления файлами, можно определять с помощью любого из следующих свойств:
 
--   Location
+-   Расположение
 -   Classification properties (свойства классификации)
 -   Creation time (время создания)
 -   Modification time (время изменения)
@@ -33,7 +33,7 @@ ms.locfileid: "71394100"
 > Отдельные задачи управления файлами выполняются в соответствии с независимыми расписаниями.
 
 <br />
-Этот раздел содержит следующие темы:
+Этот раздел содержит следующие подразделы:
 
 -   [Создание задачи срока окончания действия файла](create-file-expiration-task.md)
 -   [Создание задачи управления пользовательскими файлами](create-custom-file-management-task.md)
@@ -41,7 +41,7 @@ ms.locfileid: "71394100"
 > [!Note]
 > Чтобы настроить уведомления по электронной почте и определенные возможности создания отчетов, необходимо сначала настроить общие параметры диспетчера ресурсов файлового сервера.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)
 
