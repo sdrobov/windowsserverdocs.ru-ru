@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: aafcfcd4d0f2f14836c5b7dee2bdbccbf99fa887
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 2c64914e840c4e8a84603144fd499e091f0cb46c
+ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "78169624"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85070542"
 ---
 # <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Общие сведения о совместном использовании файлов с помощью протокола SMB 3 в Windows Server
 
@@ -119,7 +119,7 @@ ms.locfileid: "78169624"
 
 Следующий список содержит дополнительные ресурсы со сведениями о работе в сети по протоколу SMB и связанным технологиям в Windows Server 2012 R2, Windows Server 2012 и Windows Server 2016.
 
-* [Хранилище в Windows Server](../storage.md)
+* [Хранилище в Windows Server](../storage.yml)
 * [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md) (Масштабируемый файловый сервер для данных приложений)
 * [Увеличение производительности файлового сервера с помощью SMB Direct](smb-direct.md)
 * [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>) (Развертывание Hyper-V поверх SMB)

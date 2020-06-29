@@ -8,87 +8,87 @@ ms.assetid: 8b183f8f-1279-4fdf-a495-c7c801563cb0
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 8ba2cca1e346a99cc62d84ede885663fe81dfbd2
-ms.sourcegitcommit: 56ac7cf3f4bbcc5175f140d2df5f37cc42ba76d1
+ms.openlocfilehash: 0530833b8006302791cbe62f0156c1efb51cbc2f
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85217534"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469839"
 ---
 # <a name="work-remotely-in-windows-server-essentials"></a>Удаленная работа в Windows Server Essentials
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
-  
- Существует несколько способов осуществления доступа к размещенным на сервере ресурсам, если на этом сервере настроены функции повсеместного доступа (удаленный веб-доступ, частная виртуальная сеть и DirectAccess), а пользователь находится вдали от сети.  
-  
- Следующие разделы посвящены удаленному доступу к ресурсам сервера.  
-  
 
--   [Использование удаленного веб-доступа в Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)  
-     
--   [Использование виртуальной частной сети для подключения к Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)  
-  
--   [Подключение к Windows Server Essentials с помощью моего серверного приложения](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)  
-  
--   [Использование приложения "Мой сервер" для Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)  
-  
--   [Использование Microsoft Office 365 с Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)  
-  
+ Существует несколько способов осуществления доступа к размещенным на сервере ресурсам, если на этом сервере настроены функции повсеместного доступа (удаленный веб-доступ, частная виртуальная сеть и DirectAccess), а пользователь находится вдали от сети.
+
+ Следующие разделы посвящены удаленному доступу к ресурсам сервера.
+
+
+-   [Использование удаленного веб-доступа в Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMA_RWA)
+
+-   [Использование виртуальной частной сети для подключения к Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_3)
+
+-   [Подключение к Windows Server Essentials с помощью моего серверного приложения](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_App)
+
+-   [Использование приложения "Мой сервер" для Windows Phone](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_2)
+
+-   [Использование Microsoft Office 365 с Windows Server Essentials](Work-Remotely-in-Windows-Server-Essentials.md#BKMK_O365)
+
 > [!NOTE]
->  Сведения о настройке повсеместного доступа на сервере см. в разделе [Управление повсеместным доступом](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).  
-  
-##  <a name="use-remote-web-access-in-windows-server-essentials"></a><a name="BKMA_RWA"></a>Использование удаленного Веб-доступ в Windows Server Essentials  
+>  Сведения о настройке повсеместного доступа на сервере см. в разделе [Управление повсеместным доступом](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md).
 
- Удаленный веб-доступ позволяет сохранять подключение к сети Windows Server Essentials, находясь за пределами офиса. Дополнительные сведения см. в разделе [Использование удаленного веб-доступ](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).  
+##  <a name="use-remote-web-access-in-windows-server-essentials"></a><a name="BKMA_RWA"></a>Использование удаленного Веб-доступ в Windows Server Essentials
 
-  
-##  <a name="use-vpn-to-connect-to-windows-server-essentials"></a><a name="BKMK_3"></a>Использование VPN для подключения к Windows Server Essentials  
- При наличии клиентского компьютера, на котором настроены сетевые учетные записи, которые можно использовать для подключения к размещенному серверу, работающему под управлением Windows Server Essentials через VPN-подключение, все вновь создаваемые пользовательские учетные записи на размещенном сервере должны использовать для первого входа на клиентский компьютер VPN-подключение. Выполните следующие действия с клиентского компьютера, подключенного к серверу.  
-  
-#### <a name="to-use-vpn-to-remotely-access-server-resources"></a>Использование виртуальной частной сети для удаленного доступа к серверным ресурсам  
-  
-1.  На клиентском компьютере нажмите клавиши CTRL+ALT+DELETE.  
-  
-2.  На экране входа в систему щелкните **Сменить пользователя**.  
-  
-3.  Щелкните значок входа в сеть в нижнем правом углу экрана.  
-  
-4.  Выполните вход в сеть Windows Server Essentials, указав сетевые имя пользователя и пароль.  
-  
-##  <a name="use-the-my-server-app-to-connect-to-windows-server-essentials"></a><a name="BKMK_App"></a>Подключение к Windows Server Essentials с помощью моего серверного приложения  
- Мое серверное приложение позволяет подключаться к ресурсам и выполнять облегченные задачи администрирования на сервере Windows Server Essentials с компьютера под управлением Windows, ноутбука или Surface Device. Если сервер работает под Windows Server 2012, скачайте исходное серверное приложение из [приложений для Windows](https://windows.microsoft.com/windows-8/apps). Если сервер работает под Windows Server Essentials, вместо него необходимо загрузить приложение сервера 2012 R2.  
-  
- С расширенным приложением My Server 2012 R2 можно подключаться к серверным или клиентским компьютерам с использованием удаленного рабочего стола. Если сервер Windows Server Essentials интегрирован с Office 365, а подписка включает SharePoint Online, вы также можете работать с документами в библиотеках SharePoint Online и открывать сайты групп SharePoint с сервера 2012 R2.  
-  
+ Удаленный веб-доступ позволяет сохранять подключение к сети Windows Server Essentials, находясь за пределами офиса. Дополнительные сведения см. в разделе [Использование удаленного веб-доступ](Use-Remote-Web-Access-in-Windows-Server-Essentials.md).
 
- Сведения об установке и использовании этих приложений см. [в разделе Использование приложения My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
 
- Сведения об установке и использовании этих приложений см. [в разделе Использование приложения My Server](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).  
+##  <a name="use-vpn-to-connect-to-windows-server-essentials"></a><a name="BKMK_3"></a>Использование VPN для подключения к Windows Server Essentials
+ При наличии клиентского компьютера, на котором настроены сетевые учетные записи, которые можно использовать для подключения к размещенному серверу, работающему под управлением Windows Server Essentials через VPN-подключение, все вновь создаваемые пользовательские учетные записи на размещенном сервере должны использовать для первого входа на клиентский компьютер VPN-подключение. Выполните следующие действия с клиентского компьютера, подключенного к серверу.
 
-  
-##  <a name="use-the-my-server-app-for-windows-phone"></a><a name="BKMK_2"></a>Использование серверного приложения для Windows Phone  
- Приложение моего сервера Windows для Windows Phone (для Windows Server 2012) и приложение My Server 2012 R2 для Windows Phone (для Windows Server Essentials) предназначены для обеспечения беспрепятственного подключения к серверам через смарт-телефоны при работе в удаленных точках. Это один из различных способов доступа к Windows Server Essentials после настройки сервера для удаленного доступа.  
-  
- Можно загрузить любое из нижеперечисленных приложений из Магазина Windows Phone:  
-  
-- [Установка приложения My Server для Windows Phone.](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)  
-  
-- [Установка приложения My Server 2012 R2 для Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)  
-  
-  Дополнительные сведения о приложении "мой сервер Phone" см. в записи блога [мое приложение Server Phone для Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). Сведения о приложении My Server 2012 R2 для телефона см. в записи блога [Приложения My Server 2012 R2 для Windows и Windows Phone](https://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).  
-  
-##  <a name="use-microsoft-office-365-with-windows-server-essentials"></a><a name="BKMK_O365"></a>Использование Microsoft Office 365 с Windows Server Essentials  
+#### <a name="to-use-vpn-to-remotely-access-server-resources"></a>Использование виртуальной частной сети для удаленного доступа к серверным ресурсам
 
- Office 365 — это простой в использовании набор веб-инструментов для доступа к электронной почте, важным документам, контактам и календарю практически отовсюду и с любого устройства. Дополнительные сведения см. в [Краткое руководство по началу работы с использованием Microsoft Office 365](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).  
+1.  На клиентском компьютере нажмите клавиши CTRL+ALT+DELETE.
 
-  
-## <a name="see-also"></a>См. также  
-  
--   [Управление повсеместным доступом](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)  
+2.  На экране входа в систему щелкните **Сменить пользователя**.
 
--   [Подключиться](Get-Connected-in-Windows-Server-Essentials.md)  
-  
--   [Использование общих папок](Use-Shared-Folders-in-Windows-Server-Essentials.md)  
-  
+3.  Щелкните значок входа в сеть в нижнем правом углу экрана.
+
+4.  Выполните вход в сеть Windows Server Essentials, указав сетевые имя пользователя и пароль.
+
+##  <a name="use-the-my-server-app-to-connect-to-windows-server-essentials"></a><a name="BKMK_App"></a>Подключение к Windows Server Essentials с помощью моего серверного приложения
+ Мое серверное приложение позволяет подключаться к ресурсам и выполнять облегченные задачи администрирования на сервере Windows Server Essentials с компьютера под управлением Windows, ноутбука или Surface Device. Если сервер работает под Windows Server 2012, скачайте исходное серверное приложение из [приложений для Windows](https://windows.microsoft.com/windows-8/apps). Если сервер работает под Windows Server Essentials, вместо него необходимо загрузить приложение сервера 2012 R2.
+
+ С расширенным приложением My Server 2012 R2 можно подключаться к серверным или клиентским компьютерам с использованием удаленного рабочего стола. Если сервер Windows Server Essentials интегрирован с Office 365, а подписка включает SharePoint Online, вы также можете работать с документами в библиотеках SharePoint Online и открывать сайты групп SharePoint с сервера 2012 R2.
+
+
+ Сведения об установке и использовании этих приложений см. [в разделе Использование приложения My Server](Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).
+
+ Сведения об установке и использовании этих приложений см. [в разделе Использование приложения My Server](../use/Use-the-My-Server-App-to-Connect-to-Windows-Server-Essentials.md).
+
+
+##  <a name="use-the-my-server-app-for-windows-phone"></a><a name="BKMK_2"></a>Использование серверного приложения для Windows Phone
+ Приложение моего сервера Windows для Windows Phone (для Windows Server 2012) и приложение My Server 2012 R2 для Windows Phone (для Windows Server Essentials) предназначены для обеспечения беспрепятственного подключения к серверам через смарт-телефоны при работе в удаленных точках. Это один из различных способов доступа к Windows Server Essentials после настройки сервера для удаленного доступа.
+
+ Можно загрузить любое из нижеперечисленных приложений из Магазина Windows Phone:
+
+- [Установка приложения My Server для Windows Phone.](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a)
+
+- [Установка приложения My Server 2012 R2 для Windows Phone](http://www.windowsphone.com/store/app/my-server-2012-r2/44f596b5-0477-4096-b96e-ddd6ef64ad6b)
+
+  Дополнительные сведения о приложении "мой сервер Phone" см. в записи блога [мое приложение Server Phone для Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx). Сведения о приложении My Server 2012 R2 для телефона см. в записи блога [Приложения My Server 2012 R2 для Windows и Windows Phone](https://blogs.technet.com/b/sbs/archive/2013/11/19/my-server-2012-r2-windows-and-windows-phone-apps.aspx).
+
+##  <a name="use-microsoft-office-365-with-windows-server-essentials"></a><a name="BKMK_O365"></a>Использование Microsoft Office 365 с Windows Server Essentials
+
+ Office 365 — это простой в использовании набор веб-инструментов для доступа к электронной почте, важным документам, контактам и календарю практически отовсюду и с любого устройства. Дополнительные сведения см. в [Краткое руководство по началу работы с использованием Microsoft Office 365](Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
+
+
+## <a name="see-also"></a>См. также
+
+-   [Управление повсеместным доступом](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)
+
+-   [Подключиться](Get-Connected-in-Windows-Server-Essentials.md)
+
+-   [Использование общих папок](Use-Shared-Folders-in-Windows-Server-Essentials.md)
+
 -   [Воспроизведение цифрового мультимедиа](Play-Digital-Media-in-Windows-Server-Essentials.md)
 

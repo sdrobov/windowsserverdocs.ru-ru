@@ -8,112 +8,112 @@ ms.topic: get-started-article
 author: nedpyle
 ms.date: 06/25/2019
 ms.assetid: ceddb0fa-e800-42b6-b4c6-c06eb1d4bc55
-ms.openlocfilehash: 32020dba2ccca04e8d0bdc29d47dc9fef1f05a01
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 1ab4c0946c1081019747420448a0217359282bf1
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402927"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469729"
 ---
 # <a name="known-issues-with-storage-replica"></a>Известные проблемы с репликой хранилища
 
->Относится к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+>Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 В этом разделе обсуждаются известные проблемы с репликой хранилища в Windows Server.
 
 ## <a name="after-removing-replication-disks-are-offline-and-you-cannot-configure-replication-again"></a>После удаления репликации диски отключаются и для них невозможно снова настроить репликацию
 
-В Windows Server2016 может сложиться так, что вы не сможете подготовить репликацию для тома, который ранее реплицировался, или подключить некоторые тома. Такое происходит, если удаление репликации не было выполнено из-за ошибок, а также при повторной установке операционной системы на компьютер, который ранее реплицировал данные.  
+В Windows Server 2016 может сложиться так, что вы не сможете подготовить репликацию для тома, который ранее реплицировался, или подключить некоторые тома. Такое происходит, если удаление репликации не было выполнено из-за ошибок, а также при повторной установке операционной системы на компьютер, который ранее реплицировал данные.
 
-Чтобы устранить эту проблему, необходимо очистить скрытый раздел реплики хранилища на всех дисках, вернув их в состояние пригодных для записи, с помощью командлета `Clear-SRMetadata`.  
+Чтобы устранить эту проблему, необходимо очистить скрытый раздел реплики хранилища на всех дисках, вернув их в состояние пригодных для записи, с помощью командлета `Clear-SRMetadata`.
 
--   Чтобы удалить все потерянные слоты баз данных реплики хранилища и снова подключить все разделы, используйте параметр `-AllPartitions`, вот так:  
-
-    ```PowerShell
-    Clear-SRMetadata -AllPartitions  
-    ```  
-
--   Чтобы удалить данные журнала для всех потерянных реплик хранилища, используйте параметр `-AllLogs`, вот так:  
+-   Чтобы удалить все потерянные слоты баз данных реплики хранилища и снова подключить все разделы, используйте параметр `-AllPartitions`, вот так:
 
     ```PowerShell
-    Clear-SRMetadata -AllLogs  
-    ```  
+    Clear-SRMetadata -AllPartitions
+    ```
 
--   Чтобы удалить потерянные данные настройки кластеров отработки отказа, используйте параметр `-AllConfiguration`, вот так:  
-
-    ```PowerShell
-    Clear-SRMetadata -AllConfiguration  
-    ```  
-
--   Чтобы удалить отдельные метаданные групп репликации, используйте параметр `-Name` и укажите группу репликации, вот так:  
+-   Чтобы удалить данные журнала для всех потерянных реплик хранилища, используйте параметр `-AllLogs`, вот так:
 
     ```PowerShell
-    Clear-SRMetadata -Name RG01 -Logs -Partition  
-    ```  
+    Clear-SRMetadata -AllLogs
+    ```
 
-После очистки базы данных разделов может потребоваться перезагрузка сервера. Ее можно временно отложить, используя `-NoRestart`, но мы не рекомендуем пропускать перезапуск сервера, если ее предлагает командлет. Этот командлет не удаляет тома данных или данные в этих томах.  
+-   Чтобы удалить потерянные данные настройки кластеров отработки отказа, используйте параметр `-AllConfiguration`, вот так:
 
-## <a name="during-initial-sync-see-event-log-4004-warnings"></a>Во время начальной синхронизации вы видите предупреждения журнала событий4004
+    ```PowerShell
+    Clear-SRMetadata -AllConfiguration
+    ```
 
-В Windows Server 2016 при настройке репликации для исходного и конечного серверов во время начальной синхронизации может отображаться множество предупреждений журнала событий 4004 от **StorageReplica\Admin** с текстом состояния "Недостаточно системных ресурсов для завершения вызова API". Также вы можете увидеть несколько ошибок5014. Это означает, что у серверов недостаточный объем доступной памяти (ОЗУ) для одновременного выполнения начальной синхронизации и обычных рабочих нагрузок. Следует увеличить объем оперативной памяти либо уменьшить объем используемой памяти для всех компонентов и приложений, кроме реплики хранилища.  
+-   Чтобы удалить отдельные метаданные групп репликации, используйте параметр `-Name` и укажите группу репликации, вот так:
+
+    ```PowerShell
+    Clear-SRMetadata -Name RG01 -Logs -Partition
+    ```
+
+После очистки базы данных разделов может потребоваться перезагрузка сервера. Ее можно временно отложить, используя `-NoRestart`, но мы не рекомендуем пропускать перезапуск сервера, если ее предлагает командлет. Этот командлет не удаляет тома данных или данные в этих томах.
+
+## <a name="during-initial-sync-see-event-log-4004-warnings"></a>Во время начальной синхронизации вы видите предупреждения журнала событий 4004
+
+В Windows Server 2016 при настройке репликации для исходного и конечного серверов во время начальной синхронизации может отображаться множество предупреждений журнала событий 4004 от **StorageReplica\Admin** с текстом состояния "Недостаточно системных ресурсов для завершения вызова API". Также вы можете увидеть несколько ошибок 5014. Это означает, что у серверов недостаточный объем доступной памяти (ОЗУ) для одновременного выполнения начальной синхронизации и обычных рабочих нагрузок. Следует увеличить объем оперативной памяти либо уменьшить объем используемой памяти для всех компонентов и приложений, кроме реплики хранилища.
 
 ## <a name="when-using-guest-clusters-with-shared-vhdx-and-a-host-without-a-csv-virtual-machines-stop-responding-after-configuring-replication"></a>При использовании гостевых кластеров с общим диском VHDX и узлом без CSV-файла виртуальные машины перестают отвечать после настройки репликации
 
-Если в Windows Server2016 для тестирования или демонстрации реплики хранилища используются гостевые кластеры Hyper-V, а в качестве хранилища гостевого кластера указан общий диск VHDX, виртуальные машины перестают отвечать после завершения настройки репликации. При перезапуске узла Hyper-V виртуальные машины начинают работать, но настройка на считается завершенной и репликация не выполняется.  
+Если в Windows Server 2016 для тестирования или демонстрации реплики хранилища используются гостевые кластеры Hyper-V, а в качестве хранилища гостевого кластера указан общий диск VHDX, виртуальные машины перестают отвечать после завершения настройки репликации. При перезапуске узла Hyper-V виртуальные машины начинают работать, но настройка на считается завершенной и репликация не выполняется.
 
-Такое происходит, если использовать **fltmc.exe присоединить svhdxflt** для обхода требования наличия CSV на узле Hyper-V. Использование этой команды не поддерживается. Она предназначена только для тестирования или демонстрации.  
+Такое происходит, если использовать **fltmc.exe присоединить svhdxflt** для обхода требования наличия CSV на узле Hyper-V. Использование этой команды не поддерживается. Она предназначена только для тестирования или демонстрации.
 
-Причиной замедления работы является естественная несогласованность взаимодействия между функцией качества обслуживания хранилища, появившейся в Windows Server2016, и добавленным вручную фильтром общих дисков VHDX. Чтобы устранить эту проблему, отключите драйвер фильтра качества обслуживания хранилища и перезапустите узел Hyper-V:  
+Причиной замедления работы является естественная несогласованность взаимодействия между функцией качества обслуживания хранилища, появившейся в Windows Server 2016, и добавленным вручную фильтром общих дисков VHDX. Чтобы устранить эту проблему, отключите драйвер фильтра качества обслуживания хранилища и перезапустите узел Hyper-V:
 
-```  
-SC config storqosflt start= disabled  
-```  
+```
+SC config storqosflt start= disabled
+```
 
 ## <a name="cannot-configure-replication-when-using-new-volume-and-differing-storage"></a>Невозможно настроить репликацию для нового тома и другого хранилища
 
-Если при использовании командлета `New-Volume` указать разные наборы хранилищ для серверов источника и назначения, например два различных SAN или два JBOD с различными дисками, вы не сможете позднее настроить репликацию с помощью `New-SRPartnership`. Возможны разные сообщения об ошибках, например:  
+Если при использовании командлета `New-Volume` указать разные наборы хранилищ для серверов источника и назначения, например два различных SAN или два JBOD с различными дисками, вы не сможете позднее настроить репликацию с помощью `New-SRPartnership`. Возможны разные сообщения об ошибках, например:
 
-    Data partition sizes are different in those two groups  
+    Data partition sizes are different in those two groups
 
-Для создания тома вместо `New-Volume` используйте командлет `New-Partition**`, а затем отформатируйте его. Первый из этих командлетов может округлять размера тома в разных массивах хранения данных. Если вы уже создали том NTFS, можно с помощью `Resize-Partition` увеличить или уменьшить размер одного тома, чтобы он в точности соответствовал другому (это невозможно для томов ReFS). При использовании **Diskmgmt** или **диспетчера сервера** округления не происходит.  
+Для создания тома вместо `New-Volume` используйте командлет `New-Partition**`, а затем отформатируйте его. Первый из этих командлетов может округлять размера тома в разных массивах хранения данных. Если вы уже создали том NTFS, можно с помощью `Resize-Partition` увеличить или уменьшить размер одного тома, чтобы он в точности соответствовал другому (это невозможно для томов ReFS). При использовании **Diskmgmt** или **диспетчера сервера** округления не происходит.
 
 ## <a name="running-test-srtopology-fails-with-name-related-errors"></a>Выполнение Test-SRTopology завершается ошибками, связанными с именами
 
-При попытке использовать `Test-SRTopology` вы получите одну из следующих ошибок.  
+При попытке использовать `Test-SRTopology` вы получите одну из следующих ошибок.
 
-**ОШИБКА, ПРИМЕР 1:**
+**ПРИМЕР ОШИБКИ 1:**
 
-    WARNING: Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP address as  
-    input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable inputs  
-    WARNING: System.Exception  
-    WARNING:    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()  
-    Test-SRTopology : Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP  
-    address as input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable  
-    inputs  
-    At line:1 char:1  
-    + Test-SRTopology -SourceComputerName sr-srv01 -SourceVolumeName d: -So ...  
-    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  
-        + CategoryInfo          : InvalidArgument: (:) [Test-SRTopology], Exception  
-        + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand  
+    WARNING: Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP address as
+    input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable inputs
+    WARNING: System.Exception
+    WARNING:    at Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand.BeginProcessing()
+    Test-SRTopology : Invalid value entered for target computer name: sr-srv03. Test-SrTopology cmdlet does not accept IP
+    address as input for target computer name parameter. NetBIOS names and fully qualified domain names are acceptable
+    inputs
+    At line:1 char:1
+    + Test-SRTopology -SourceComputerName sr-srv01 -SourceVolumeName d: -So ...
+    + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        + CategoryInfo          : InvalidArgument: (:) [Test-SRTopology], Exception
+        + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
-**ОШИБКА, ПРИМЕР 2:**
+**ПРИМЕР ОШИБКИ 2:**
 
     WARNING: Invalid value entered for source computer name
 
-**ОШИБКА, ПРИМЕР 3:**
+**ПРИМЕР ОШИБКИ 3:**
 
     The specified volume cannot be found G: cannot be found on computer SRCLUSTERNODE1
 
-Этот командлет использует ограниченные функции отчетов об ошибках в Windows Server2016 и поэтому возвращает одинаковые выходные данные для многих распространенных проблем. Такая ошибка может возникнуть по следующим причинам:  
+Этот командлет использует ограниченные функции отчетов об ошибках в Windows Server 2016 и поэтому возвращает одинаковые выходные данные для многих распространенных проблем. Такая ошибка может возникнуть по следующим причинам:
 
-* вы вошли на исходный компьютер как локальный пользователь, а не как пользователь домена;  
-* конечный компьютер не работает или не доступен по сети;  
-* указано неправильное имя конечного компьютера;  
-* указан IP-адрес вместо имени конечного компьютера;  
-* брандмауэр на конечном компьютере блокирует доступ для вызовов PowerShell или CIM;  
-* на конечном компьютере не работает служба WMI;   
+* вы вошли на исходный компьютер как локальный пользователь, а не как пользователь домена;
+* конечный компьютер не работает или не доступен по сети;
+* указано неправильное имя конечного компьютера;
+* указан IP-адрес вместо имени конечного компьютера;
+* брандмауэр на конечном компьютере блокирует доступ для вызовов PowerShell или CIM;
+* на конечном компьютере не работает служба WMI;
 * при выполнении командлета `Test-SRTopology` с удаленного компьютера управления вы не применили CREDSSP.
-* Указанные тома источника или назначения являются локальными дисками на узле кластера, а не кластерными дисками.  
+* Указанные тома источника или назначения являются локальными дисками на узле кластера, а не кластерными дисками.
 
 ## <a name="configuring-new-storage-replica-partnership-returns-an-error---failed-to-provision-partition"></a>При настройке нового партнерства реплики хранилища возвращается сообщение об ошибке "Не удалось подготовить к работе раздел"
 
@@ -125,7 +125,7 @@ SC config storqosflt start= disabled
     + Categorylnfo : ObjectNotFound: (MSFT_WvrAdminTasks : root/ Microsoft/. . s) CNew-SRPartnership], CimException
     + FullyQua1ifiedErrorId : Windows System Error 1168 ,New-SRPartnership
 
-Это происходит, если выбран том данных на том же разделе, где расположен системный диск (диск **C:** и папка Windows). Например, если один диск содержит оба тома **C:** и **D:** , созданные в одном разделе. Реплика хранилища не поддерживает такую возможность. Необходимо выбрать другой том для репликации.
+Это происходит, если выбран том данных на том же разделе, где расположен системный диск (диск **C:** и папка Windows). Например, если один диск содержит оба тома **C:** и **D:**, созданные в одном разделе. Реплика хранилища не поддерживает такую возможность. Необходимо выбрать другой том для репликации.
 
 ## <a name="attempting-to-grow-a-replicated-volume-fails-due-to-missing-update"></a>Не удается увеличить размер реплицированного тома из-за отсутствующего обновления
 
@@ -144,9 +144,9 @@ SC config storqosflt start= disabled
 
     Element not found
 
-Она появляется, даже если вы правильно включили изменение размера тома на исходном сервере с помощью параметра `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`. 
+Она появляется, даже если вы правильно включили изменение размера тома на исходном сервере с помощью параметра `Set-SRGroup -Name rg01 -AllowVolumeResize $TRUE`.
 
-Эта проблема была исправлена в накопительном обновлении для Windows 10, версии 1607 (годовщина обновления) и Windows Server 2016: 9 декабря 2016 г. (KB3201845). 
+Эта проблема была исправлена в накопительном обновлении для Windows 10, версии 1607 (годовщина обновления) и Windows Server 2016:9 декабря 2016 (KB3201845).
 
 ## <a name="attempting-to-grow-a-replicated-volume-fails-due-to-missing-step"></a>Не удается увеличить размер реплицированного тома из-за пропущенного действия
 
@@ -176,11 +176,11 @@ SC config storqosflt start= disabled
 
     Before you grow the source data partition, ensure that the destination data partition has enough space to grow to an equal size. Shrinking of data partition protected by Storage Replica is blocked.
 
-Ошибка оснастки "Управление дисками": 
+Ошибка оснастки "Управление дисками":
 
-    An unexpected error has occurred 
+    An unexpected error has occurred
 
-После изменения размера тома не забудьте отключить изменение размера с помощью параметра `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`. После этого администраторы не смогут изменить размеры томов, не убедившись, что на целевом томе достаточно места, обычно они не знают о реплике хранилища. 
+После изменения размера тома не забудьте отключить изменение размера с помощью параметра `Set-SRGroup -Name rg01 -AllowVolumeResize $FALSE`. После этого администраторы не смогут изменить размеры томов, не убедившись, что на целевом томе достаточно места, обычно они не знают о реплике хранилища.
 
 ## <a name="attempting-to-move-a-pdr-resource-between-sites-on-an-asynchronous-stretch-cluster-fails"></a>Происходит сбой при попытке переместить ресурс PDR между сайтами в асинхронном растянутом кластере
 
@@ -206,23 +206,23 @@ SC config storqosflt start= disabled
     + CategoryInfo          : NotSpecified: (:) [Move-ClusterGroup], ClusterCmdletException
     + FullyQualifiedErrorId : Move-ClusterGroup,Microsoft.FailoverClusters.PowerShell.MoveClusterGroupCommand
 
-Это происходит из-за ожидаемого поведения Windows Server 2016. Используйте `Set-SRPartnership` для перемещения этих дисков PDR в асинхронный растянутый кластер.  
+Это происходит из-за ожидаемого поведения Windows Server 2016. Используйте `Set-SRPartnership` для перемещения этих дисков PDR в асинхронный растянутый кластер.
 
 Это поведение было изменено в Windows Server версии 1709, чтобы разрешить ручные и автоматические отработки отказа с асинхронной репликацией на основе отзывов пользователей.
 
 ## <a name="attempting-to-add-disks-to-a-two-node-asymmetric-cluster-returns-no-disks-suitable-for-cluster-disks-found"></a>При попытке добавить диски в асимметричный кластер с двумя узлами отображается сообщение "Не найдены диски, подходящие для дисков кластера"
 
-При попытке подготовить кластер только с двумя узлами перед добавлением растянутой репликации для реплики хранилища предпринимается попытка добавить диски в раздел "Доступные диски" на втором сайте. Появится следующая ошибка:
+При попытке подготовить кластер только с двумя узлами перед добавлением растянутой репликации для реплики хранилища предпринимается попытка добавить диски в раздел "Доступные диски" на втором сайте. Вы получили следующую ошибку:
 
-    "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests." 
+    "No disks suitable for cluster disks found. For diagnostic information about disks available to the cluster, use the Validate a Configuration Wizard to run Storage tests."
 
-Этого не происходит, если в кластере не менее трех узлов. Ошибка возникает из-за намеренного изменения кода вWindows Server2016 на случай асимметричной кластеризации хранилища. 
+Этого не происходит, если в кластере не менее трех узлов. Ошибка возникает из-за намеренного изменения кода в Windows Server 2016 на случай асимметричной кластеризации хранилища.
 
 Чтобы добавить хранилище, необходимо выполнить следующую команду на узле второго сайта:
 
 `Get-ClusterAvailableDisk -All | Add-ClusterDisk`
 
-Это не будет работать с локальным хранилищем узла. Можно использовать реплику хранилища, чтобы реплицировать растянутый кластер между двумя узлами, **на каждом из которых используется свой собственный набор общих хранилищ.** 
+Это не будет работать с локальным хранилищем узла. Можно использовать реплику хранилища, чтобы реплицировать растянутый кластер между двумя узлами, **на каждом из которых используется свой собственный набор общих хранилищ.**
 
 ## <a name="the-smb-bandwidth-limiter-fails-to-throttle-storage-replica-bandwidth"></a>Механизму ограничения пропускной способности в протоколе SMB не удается регулировать пропускную способность реплики хранилища
 
@@ -257,7 +257,7 @@ SC config storqosflt start= disabled
     RemoteReplicationGroupId: {7f18e5ea-53ca-4b50-989c-9ac6afb3cc81}
     TargetRPO: 30
 
-    Guidance: This is typically due to one of the following reasons: 
+    Guidance: This is typically due to one of the following reasons:
 
 В настоящее время асинхронный получатель отсоединен. RPO может стать доступной после восстановления подключения.
 
@@ -293,7 +293,7 @@ SC config storqosflt start= disabled
 
     Guidance: Possible causes include network failures, share creation failures for the remote replication group, or firewall settings. Make sure SMB traffic is allowed and there are no connectivity issues between the local computer and the remote computer. You should expect this event when suspending replication or removing a replication partnership.
 
-Обратите `Status: "{Access Denied}"` внимание, что `A process has requested access to an object, but has not been granted those access rights.` и сообщение это известная проблема в реплике хранилища и исправлена в обновлении с 12 сентября 2017 г. — KB4038782 (сборка ОС 14393,1715) https://support.microsoft.com/help/4038782/windows-10-update-kb4038782 
+Обратите внимание, что `Status: "{Access Denied}"` и сообщение `A process has requested access to an object, but has not been granted those access rights.` это известная проблема в реплике хранилища и исправлена в обновлении с 12 сентября 2017 г. — KB4038782 (сборка ОС 14393,1715)https://support.microsoft.com/help/4038782/windows-10-update-kb4038782
 
 ## <a name="error-failed-to-bring-the-resource-cluster-disk-x-online-with-a-stretch-cluster"></a>Ошибка «Не удалось подключить ресурс "Диск кластера x" к сети». для растянутого кластера
 
@@ -335,7 +335,7 @@ SC config storqosflt start= disabled
 
 В графическом интерфейсе диспетчера отказоустойчивого кластера нет параметра для настройки репликации диска.
 
-При выполнении командлета Test-SRTopology возникает ошибка: 
+При выполнении командлета Test-SRTopology возникает ошибка:
 
     WARNING: Object reference not set to an instance of an object.
     WARNING: System.NullReferenceException
@@ -347,7 +347,7 @@ SC config storqosflt start= disabled
     + Test-SRTopology -SourceComputerName nodesrc01 -SourceVolumeName U: - ...
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo : InvalidArgument: (:) [Test-SRTopology], NullReferenceException
-    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
 Это вызвано тем, что функциональный уровень кластера по-прежнему настроен как Windows Server 2012 R2 (т. е. FL 8). Хранилище реплики должно возвращать определенную ошибку, но вместо этого возвращает неверное сопоставление ошибки.
 
@@ -356,15 +356,15 @@ SC config storqosflt start= disabled
 Если ClusterFunctionalLevel = 9, для реализации реплики хранилища на узле требуется версия Windows ClusterFunctionalLevel 2016.
 Если значение ClusterFunctionalLevel отличается от 9, свойство ClusterFunctionalLevel необходимо обновить для реализации реплики хранилища на этом узле.
 
-Чтобы устранить эту проблему, увеличьте функциональный уровень кластера, выполнив командлет PowerShell: [Update-Клустерфунктионаллевел](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel)
+Чтобы устранить эту проблему, увеличьте функциональный уровень кластера, выполнив командлет PowerShell: [Update-клустерфунктионаллевел](https://docs.microsoft.com/powershell/module/failoverclusters/update-clusterfunctionallevel) .
 
 ## <a name="small-unknown-partition-listed-in-diskmgmt-for-each-replicated-volume"></a>Небольшой неизвестный раздел, указанный в DISKMGMT для реплицированного тома
 
 При запуске оснастки "Управление дисками" (DISKMGMT.MSC) вы заметите один или несколько томов, указанных без ярлыка или буквы диска и с размером 1 МБ. Вы сможете удалить неизвестный том или вы можете получить:
 
-    "An Unexpected Error has Occurred"  
+    "An Unexpected Error has Occurred"
 
-Это поведение реализовано намеренно. Это не том, а раздел. Реплика хранилища создает раздел размером 512 КБ как слот базы данных для операций репликации (устаревшее средство DiskMgmt.msc округляется до ближайшего размера в МБ). Наличие раздела, подобного этому, для каждого реплицированного тома является нормальным и желательным. Если этот раздел размером 512 КБ больше не используется, его можно удалить. Разделы, которые используются, удалять нельзя. Раздел никогда не увеличится и не уменьшится. Если вы повторно создаете репликацию, мы рекомендуем оставить раздел, так как реплика хранилища будет требовать неиспользуемые разделы.
+В этом весь замысел. Это не том, а раздел. Реплика хранилища создает раздел размером 512 КБ как слот базы данных для операций репликации (устаревшее средство DiskMgmt.msc округляется до ближайшего размера в МБ). Наличие раздела, подобного этому, для каждого реплицированного тома является нормальным и желательным. Если этот раздел размером 512 КБ больше не используется, его можно удалить. Разделы, которые используются, удалять нельзя. Раздел никогда не увеличится и не уменьшится. Если вы повторно создаете репликацию, мы рекомендуем оставить раздел, так как реплика хранилища будет требовать неиспользуемые разделы.
 
 Для просмотра сведений используйте средство DISKPART или командлет Get-Partition. Эти разделы будут иметь тип GPT `558d43c5-a1ac-43c0-aac8-d1472b2923d1`.
 
@@ -380,7 +380,7 @@ SC config storqosflt start= disabled
 
 При использовании Локальные дисковые пространства с кэшем NVME или SSD вы видите больше ожидаемого увеличения задержки при настройке репликации реплики хранилища между кластерами Локальные дисковые пространства. Изменение задержки пропорционально значительно выше, чем вы видите при использовании NVME и SSD в конфигурации производительности и емкости, а также при отсутствии уровня жесткого диска и уровня емкости.
 
-Эта проблема возникает из-за ограничений архитектуры в механизме журнала реплики хранилища в сочетании с чрезвычайно низкой задержкой NVME по сравнению с медленным носителем. При использовании кэша Локальные дисковые пространства все операции ввода-вывода журналов реплики хранилища, а также все последние операции чтения и записи в приложениях выполняются в кэше и никогда не на уровнях производительности или емкости. Это означает, что все действия реплики хранилища выполняются на одном носителе с одинаковой скоростью. Эта конфигурация поддерживается, но https://aka.ms/srfaq не рекомендуется (см. рекомендации по журналам). 
+Эта проблема возникает из-за ограничений архитектуры в механизме журнала реплики хранилища в сочетании с чрезвычайно низкой задержкой NVME по сравнению с медленным носителем. При использовании кэша Локальные дисковые пространства все операции ввода-вывода журналов реплики хранилища, а также все последние операции чтения и записи в приложениях выполняются в кэше и никогда не на уровнях производительности или емкости. Это означает, что все действия реплики хранилища выполняются на одном носителе с одинаковой скоростью. Эта конфигурация поддерживается, но не рекомендуется (см https://aka.ms/srfaq . рекомендации по журналам).
 
 При использовании Локальные дисковые пространства с дисковыми ключами нельзя отключить или исключить кэш. В качестве обходного решения при использовании только SSD и NVME можно настроить только уровни производительности и емкости. Если вы используете эту конфигурацию и разместите журналы SR на уровне производительности только с томами данных, которые они обслуживают только на уровне емкости, вы не сможете избежать проблем с высокой задержкой, описанных выше. То же самое можно сделать с помощью сочетания быстрых и медленных твердотельных накопителей, а также без NVME.
 
@@ -388,7 +388,7 @@ SC config storqosflt start= disabled
 
 ## <a name="error-could-not-find-file-when-running-test-srtopology-between-two-clusters"></a>Ошибка "не удается найти файл" при выполнении Test-SRTopology между двумя кластерами
 
-При выполнении Test-SRTopology между двумя кластерами и их путями CSV происходит сбой с ошибкой: 
+При выполнении Test-SRTopology между двумя кластерами и их путями CSV происходит сбой с ошибкой:
 
     PS C:\Windows\system32> Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName C:\ClusterStorage\Volume1 -SourceLogVolumeName L: -DestinationComputerName NedClusterB -DestinationVolumeName C:\ClusterStorage\Volume1 -DestinationLogVolumeName L: -DurationInMinutes 1 -ResultPath C:\Temp
 
@@ -409,7 +409,7 @@ SC config storqosflt start= disabled
     + Test-SRTopology -SourceComputerName NedClusterA -SourceVolumeName  ...
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], FileNotFoundException
-    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand 
+    + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
 Это вызвано известным дефектом кода в Windows Server 2016. Эта проблема была впервые исправлена в Windows Server, версии 1709 и связанных средствах RSAT. Для разрешения предыдущей версии обратитесь в служба поддержки Майкрософт и запросите обновление порта. Способа решения этой проблемы не существует.
 
@@ -426,7 +426,7 @@ SC config storqosflt start= disabled
         + CategoryInfo          : ObjectNotFound: (:) [Test-SRTopology], Exception
         + FullyQualifiedErrorId : TestSRTopologyFailure,Microsoft.FileServices.SR.Powershell.TestSRTopologyCommand
 
-При указании CSV-файла исходного узла в качестве исходного тома необходимо выбрать узел, которому принадлежит этот CSV-файл. Можно либо переместить CSV-файл в указанный узел, либо изменить имя узла, указанное в `-SourceComputerName`. Эта ошибка получила улучшенное сообщение в Windows Server 2019.
+При указании CSV-файла исходного узла в качестве исходного тома необходимо выбрать узел, которому принадлежит этот CSV-файл. Можно либо переместить CSV-файл в указанный узел, либо изменить имя узла, указанное в `-SourceComputerName` . Эта ошибка получила улучшенное сообщение в Windows Server 2019.
 
 ## <a name="unable-to-access-the-data-drive-in-storage-replica-after-unexpected-reboot-when-bitlocker-is-enabled"></a>Не удается получить доступ к диску данных в реплике хранилища после непредвиденной перезагрузки, когда BitLocker включен
 
@@ -436,7 +436,7 @@ SC config storqosflt start= disabled
 
 ## <a name="issue-unlocking-the-data-drive-on-secondary-server-after-breaking-the-storage-replica-partnership"></a>Выдача блокировки диска данных на сервере-получателе после прерывания партнерства реплики хранилища
 
-После отключения связи SR и удаления реплики хранилища она ожидает, если не удается разблокировать диск данных сервера-получателя с помощью соответствующего пароля или ключа. 
+После отключения связи SR и удаления реплики хранилища она ожидает, если не удается разблокировать диск данных сервера-получателя с помощью соответствующего пароля или ключа.
 
 Для разблокировки диска данных сервера-получателя необходимо использовать ключ или пароль диска данных сервера-источника.
 
@@ -449,17 +449,17 @@ SC config storqosflt start= disabled
     + Mount-SRDestination -ComputerName SRV1 -Name TEST -TemporaryP . . .
     + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         + CategoryInfo          : NotSpecified: (MSFT WvrAdminTasks : root/Microsoft/...(MSFT WvrAdminTasks : root/Microsoft/. T_WvrAdminTasks) (Mount-SRDestination], CimException
-        + FullyQua1ifiedErrorId : Windows System Error 5823, Mount-SRDestination.  
+        + FullyQua1ifiedErrorId : Windows System Error 5823, Mount-SRDestination.
 
 При использовании синхронного типа партнерства тестовая отработка отказа работает нормально.
 
 Это вызвано известным дефектом кода в Windows Server версии 1709. Чтобы устранить эту проблему, установите [обновление 18 октября 2018 г](https://support.microsoft.com/help/4462932/windows-10-update-kb4462932). Эта проблема отсутствует в Windows Server 2019 и Windows Server версии 1809 и более поздних версиях.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Реплика хранилища](storage-replica-overview.md)  
-- [Растяжение репликации кластера с помощью общего хранилища](stretch-cluster-replication-using-shared-storage.md)  
-- [Репликация сервера на серверное хранилище](server-to-server-storage-replication.md)  
-- [Репликация кластера в кластерное хранилище](cluster-to-cluster-storage-replication.md)  
-- [Реплика хранилища: вопросы и ответы](storage-replica-frequently-asked-questions.md)  
-- [Локальные дисковые пространства](../storage-spaces/storage-spaces-direct-overview.md)  
+- [Реплика хранилища](storage-replica-overview.md)
+- [Растяжение репликации кластера с помощью общего хранилища](stretch-cluster-replication-using-shared-storage.md)
+- [Репликация сервера на серверное хранилище](server-to-server-storage-replication.md)
+- [Репликация кластера в кластерное хранилище](cluster-to-cluster-storage-replication.md)
+- [Реплика хранилища: вопросы и ответы](storage-replica-frequently-asked-questions.md)
+- [Локальные дисковые пространства](../storage-spaces/storage-spaces-direct-overview.md)

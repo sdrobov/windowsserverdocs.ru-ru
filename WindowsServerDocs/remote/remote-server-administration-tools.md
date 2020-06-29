@@ -8,12 +8,12 @@ ms.assetid: d54a1f5e-af68-497e-99be-97775769a7a7
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: 307da083db2e5cc76c4eda825f0e080d7f026821
-ms.sourcegitcommit: 7288aca86fc76b9ff6177a17027118d1f21707a9
+ms.openlocfilehash: 69b31c8ef0ce093604ee9fd8fe382d75f7f88595
+ms.sourcegitcommit: aeefdf7814a4672b2dcd7537204205bb7ee5f9a0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380697"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84514914"
 ---
 # <a name="remote-server-administration-tools"></a>Средства удаленного администрирования сервера
 
@@ -56,7 +56,7 @@ ms.locfileid: "83380697"
 
 Начиная с обновления Windows 10 за октябрь 2018 г., средства удаленного администрирования сервера входят в состав набора **компонентов по запросу** непосредственно в Windows 10. Теперь, вместо скачивания пакета средств удаленного администрирования сервера, можно перейти на страницу **Управление дополнительными компонентами** в разделе **Параметры** и щелкнуть **Добавить компонент**, чтобы просмотреть список доступных средств. Выберите и установите нужные средства удаленного администрирования сервера. Чтобы просмотреть ход установки, нажмите кнопку **Назад** и просмотрите состояние на странице **Управление дополнительными компонентами**.
         
-См. список [средств удаленного администрирования сервера, доступных с помощью **компонентов по запросу**](https://docs.microsoft.co    /wi    dows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). Помимо установки с помощью графического приложения **Параметры**, можно также установить определенные средства удаленного администрирования сервера с помощью командной строки или службы автоматизации, используя командлет [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
+См. список [средств удаленного администрирования сервера, доступных с помощью **компонентов по запросу**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-non-language-fod#remote-server-administration-tools-rsat). Помимо установки с помощью графического приложения **Параметры**, можно также установить определенные средства удаленного администрирования сервера с помощью командной строки или службы автоматизации, используя командлет [**DISM /Add-Capability**](https://docs.microsoft.com/windows-hardware/manufacture/desktop/features-on-demand-v2--capabilities#using-dism-add-capability-to-add-or-remove-fods).
 
 Одно из преимуществ использования компонентов по запросу заключается в том, что установленные компоненты сохраняются в обновлениях Windows 10.        
         

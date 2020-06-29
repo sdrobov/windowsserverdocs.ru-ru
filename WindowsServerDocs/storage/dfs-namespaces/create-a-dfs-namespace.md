@@ -8,26 +8,26 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f4d4b86dd1a105576ac4d1749213696b319ba528
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 90a6c0f72fc1a11d9070fa7866c0b64044131a07
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402210"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85469719"
 ---
 # <a name="create-a-dfs-namespace"></a>Создание пространства имен DFS
 
-> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-Чтобы создать новое пространство имен, можно использовать диспетчер сервера для создания пространства имен при установке службы роли "Пространства имен DFS". Также можно использовать [командлет New-DfsnRoot](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) из сеанса Windows PowerShell. 
+Чтобы создать новое пространство имен, можно использовать диспетчер сервера для создания пространства имен при установке службы роли "Пространства имен DFS". Также можно использовать [командлет New-DfsnRoot](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) из сеанса Windows PowerShell.
 
-Модуль DFSN Windows PowerShell был введен в Windows Server 2012. 
+Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
 
 Другой вариант — использовать следующую процедуру для создания пространства имен после установки службы роли.
 
 ## <a name="to-create-a-namespace"></a>Создание пространства имен
 
-1.  Нажмите кнопку **Пуск**, наведите курсор на **Администрирование** и щелкните **Управление DFS**.
+1.  Нажмите кнопку **Пуск**, укажите пункт **Администрирование**, а затем щелкните **Управление DFS**.
 
 2.  В дереве консоли щелкните правой кнопкой мыши узел **Пространства имен** и выберите **Новое пространство имен**.
 
@@ -36,13 +36,13 @@ ms.locfileid: "71402210"
     Чтобы создать изолированное пространство имен в отказоустойчивом кластере, укажите имя экземпляра кластерного файлового сервера на странице **Сервер пространства имен** в **Мастере создания нового пространства имен**.
 
 > [!IMPORTANT]
-> Не пытайтесь создать пространство имен на основе домена, используя режим Windows Server 2008, если режим работы леса не равен Windows Server 2003 или более поздней версии. Это может привести к созданию пространства имен, для которого нельзя удалить папки DFS, при этом выдается следующее сообщение об ошибке: "Не удается удалить папку. Не удается завершить выполнение функции".
+> Не пытайтесь создавать доменное пространство имен с использованием режима Windows Server 2008, если режим работы леса — Windows Server 2003 или выше. В противном случае вы получите пространство имен, в котором не сможете удалять папки DFS. Будет появляться следующее сообщение об ошибке: "Невозможно удалить папку. Не удается завершить выполнение функции".
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
 -   [Выбор типа пространства имен](choose-a-namespace-type.md)
 -   [Добавление серверов пространств имен в доменное пространство имен DFS](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
--   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md).
+-   [Делегирование разрешений на управление для пространств имен DFS](delegate-management-permissions-for-dfs-namespaces.md).
 
 

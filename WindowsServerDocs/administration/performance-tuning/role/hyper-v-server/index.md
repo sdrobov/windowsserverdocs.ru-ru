@@ -7,19 +7,19 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 112ec7ed18f75fed802f687ee98eeaa635568aa2
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 983481bb1f77e07df5fadd25ecb713d243cebd85
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80851786"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471399"
 ---
 # <a name="performance-tuning-hyper-v-servers"></a>Обеспечение высокой производительности серверов Hyper-V
 
 
 Hyper-V выполняет роль сервера виртуализации в Windows Server 2016. На серверах виртуализации можно размещать несколько виртуальных машин, которые изолированы друг от друга, но совместно используют базовые ресурсы оборудования благодаря виртуализации процессоров, памяти и устройств ввода-вывода. За счет объединения серверов на одном компьютере виртуализация может повысить эффективность использования ресурсов и электроэнергии, а также снизить расходы на эксплуатацию и обслуживанию серверов. Кроме того, виртуальные машины и интерфейсы API управления обеспечивают большую гибкость для управления ресурсами, балансировки нагрузки и подготовки систем к работе.
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Терминология Hyper-V](terminology.md)
 

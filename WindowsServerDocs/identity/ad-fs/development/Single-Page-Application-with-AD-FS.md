@@ -1,5 +1,5 @@
 ---
-title: Создание веб-приложения с одной страницей с помощью OAuth и ADAL. JS с AD FS 2016 или более поздней версии
+title: Создание веб-приложения с одной страницей с помощью OAuth и ADAL.JS с AD FS 2016 или более поздней версии
 description: Пошаговое руководство, содержащее инструкции по проверке подлинности в AD FS с помощью ADAL для JavaScript защита одностраничного приложения на базе AngularJS
 author: billmath
 ms.author: billmath
@@ -8,14 +8,14 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: f62b6ad288e2733083d535260f0b3f5ffb5b50bf
-ms.sourcegitcommit: f829a48b9b0c7b9ed6e181b37be828230c80fb8a
+ms.openlocfilehash: 09b789937c9ff1dad90c3533616a4ed800204267
+ms.sourcegitcommit: 046123d4f2d24dc00b35ea99adee6f8d322c76bf
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82173629"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85416297"
 ---
-# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL. JS с AD FS 2016 или более поздней версии
+# <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL.JS с AD FS 2016 или более поздней версии
 
 В этом пошаговом руководстве приведена инструкция по проверке подлинности в AD FS с помощью ADAL для JavaScript защита одностраничного приложения на базе AngularJS, реализованного с помощью веб-API ASP.NET серверной части.
 
@@ -66,18 +66,18 @@ ms.locfileid: "82173629"
 ## <a name="about-the-code"></a>О коде
 Ниже приведены основные файлы, содержащие логику проверки подлинности.
 
-**App. js** — внедряет зависимость модуля ADAL, предоставляет значения конфигурации приложения, используемые ADAL для взаимодействия протоколов с AAD, и указывает, какие маршруты не должны быть доступны без предыдущей проверки подлинности.
+**App.js** — внедряет зависимость модуля ADAL, предоставляет значения конфигурации приложения, используемые ADAL для взаимодействия протокола с AAD, и указывает, какие маршруты не должны быть доступны без предыдущей проверки подлинности.
 
-**index. HTML** — содержит ссылку на ADAL. js
+**index.html** — содержит ссылку на adal.js
 
-**HomeController. js**— показывает, как использовать преимущества методов Login () и logOut () в ADAL.
+**HomeController.js**— показывает, как использовать преимущества методов Login () и logOut () в ADAL.
 
-**Усердатаконтроллер. js** — показывает, как извлечь сведения о пользователе из кэшированной id_token.
+**UserDataController.js** — показано, как извлечь сведения о пользователе из кэшированной id_token.
 
 **Startup.auth.CS** — содержит конфигурацию WebAPI для использования Active Directory служба федерации для проверки подлинности носителя.
 
 ## <a name="registering-the-public-client-in-ad-fs"></a>Регистрация общедоступного клиента в AD FS
-В примере WebAPI настроен для прослушивания в https://localhost:44326/. **Веб-браузер группы приложений, обращающийся к веб-приложению,** можно использовать для настройки неявного приложения потока предоставления.
+В примере WebAPI настроен для прослушивания в https://localhost:44326/ . **Веб-браузер группы приложений, обращающийся к веб-приложению,** можно использовать для настройки неявного приложения потока предоставления.
 
 1. Откройте консоль управления AD FS и щелкните **Добавить группу приложений**. В **мастере добавления группы приложений** введите имя приложения, описание и выберите **веб-браузер, обращающийся к** шаблону веб-приложения из раздела **клиент-сервер приложения** , как показано ниже.
 
@@ -98,7 +98,7 @@ ms.locfileid: "82173629"
 ## <a name="modifying-the-sample"></a>Изменение образца
 Настройка ADAL JS
 
-Откройте файл **app. js** и измените определение **адалпровидер. init** на:
+Откройте файл **app.js** и измените определение **adalProvider.init** на:
 
     adalProvider.init(
         {
@@ -112,7 +112,7 @@ ms.locfileid: "82173629"
 
 |Конфигурация|Описание|
 |--------|--------|
-|экземпляр|URL-адрес STS, напримерhttps://fs.contoso.com/|
+|instance|URL-адрес STS, напримерhttps://fs.contoso.com/|
 |tenant|Не заключайте его в "ADFS"|
 |clientID|Это идентификатор клиента, указанный при настройке общедоступного клиента для приложения с одной страницей|
 
@@ -154,31 +154,31 @@ ms.locfileid: "82173629"
 ## <a name="add-application-configuration-for-ad-fs"></a>Добавление конфигурации приложения для AD FS
 Измените параметр appSettings следующим образом:
 ```xml
-    <appSettings>
-        <add key="ida:Audience" value="https://localhost:44326/" />
-        <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
-        <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
-    </appSettings>
-    ```
+<appSettings>
+    <add key="ida:Audience" value="https://localhost:44326/" />
+    <add key="ida:AdfsMetadataEndpoint" value="https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml" />
+    <add key="ida:Issuer" value="https://fs.contoso.com/adfs" />
+</appSettings>
+```
 
-## Running the solution
-Clean the solution, rebuild the solution and run it. If you want to see detailed traces, launch Fiddler and enable HTTPS decryption.
+## <a name="running-the-solution"></a>Запуск решения
+Очистите решение, перестройте решение и запустите его. Если вы хотите просмотреть подробные трассировки, запустите Fiddler и включите расшифровку HTTPS.
 
-The browser (use Chrome browser) will load the SPA and you will be presented with the following screen:
+В браузере (используйте браузер Chrome) будет загружено SPA, а появится следующий экран:
 
-![Register the client](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
+![Регистрация клиента](media/Single-Page-Application-with-AD-FS/singleapp3.PNG)
 
-Click on Login.  The ToDo List will trigger the authentication flow and ADAL JS will direct the authentication to AD FS
+Щелкните имя входа.  Список ToDo будет активировать поток проверки подлинности, а ADAL JS будет направлять проверку подлинности на AD FS
 
-![Login](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
+![Вход](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
-In Fiddler you can see the token being returned as part of the URL in the # fragment.
+В Fiddler можно увидеть маркер, возвращаемый как часть URL-адреса в фрагменте #.
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp5a.PNG)
 
-You will be able to now call the backend API to add ToDo List items for the logged-in user:
+Теперь вы можете вызвать API серверной части, чтобы добавить элементы списка ToDo для вошедшего в систему пользователя:
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
-## Next Steps
-[AD FS Development](../../ad-fs/AD-FS-Development.md)  
+## <a name="next-steps"></a>Дальнейшие действия
+[Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

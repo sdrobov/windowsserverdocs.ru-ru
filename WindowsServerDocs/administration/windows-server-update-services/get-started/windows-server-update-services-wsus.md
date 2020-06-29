@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 5/22/2017
-ms.openlocfilehash: 3bb365c627840d4152b0dc450e24dd83d82103ca
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 07095fbbe16464645564f07434285c76b8cfd4a1
+ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80828637"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84740637"
 ---
 # <a name="windows-server-update-services-wsus"></a>Службы Windows Server Update Services (WSUS)
 
->Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 Службы Windows Server Update Services (WSUS) позволяют ИТ-администраторам развертывать новейшие обновления продуктов Майкрософт. Службы WSUS позволяют в полной мере управлять процессом распределения обновлений, выпущенных через Центр обновления Майкрософт, среди компьютеров в сети. В данном разделе представлен обзор этой роли сервера и дополнительные сведения о том, как развертывать и обслуживать WSUS.
 

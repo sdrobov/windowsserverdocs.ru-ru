@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 88aaebaac9161849fefe8116a1115eb628bcbf9e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bba2ef96be812c930fbf0c93d3c3c612fa9c9c5a
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851767"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471269"
 ---
 # <a name="hyper-v-terminology"></a>Терминология Hyper-V
 В этом разделе обобщены основные термины, относящиеся к технологиям виртуальных машин, используемым в рамках этой статьи по настройке производительности.
@@ -37,7 +37,7 @@ ms.locfileid: "80851767"
 | *стек виртуализации*|Коллекция программных компонентов в корневом разделе, которые работают вместе для поддержки виртуальных машин. Стек виртуализации работает с и располагается над гипервизором. Он также предоставляет возможности управления.|
 |*VMBus*|Механизм связи на основе канала, используемый для обмена данными между секциями и перечисление устройств в системах с несколькими активными виртуальными секциями. VMBus устанавливается со службами интеграции Hyper-V.|
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Архитектура Hyper-V](architecture.md)
 

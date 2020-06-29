@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5f683b85657b8dd263e93380b71c646ad677950c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b513dd3346d593ec4c823808f540bce68dd472ce
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851727"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471369"
 ---
 # <a name="hyper-v-memory-performance"></a>Производительность памяти Hyper-V
 
@@ -41,7 +41,7 @@ ms.locfileid: "80851727"
 
 Hyper-V в Windows Server 2016 отслеживает работоспособность среды выполнения операционной системы управления корневого раздела, чтобы определить, сколько памяти может быть безопасно выделено дочерним секциям, сохраняя при этом высокий уровень производительности и надежности корневого раздела.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Терминология Hyper-V](terminology.md)
 

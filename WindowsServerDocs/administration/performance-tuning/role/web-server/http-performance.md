@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: ivanpash; gmonte
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 5e62f7428f015193896aba5c7d9c146bd11e7225
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a0a4464d7a13911ec9cc7d104b6fe9292a64586e
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851687"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471249"
 ---
 # <a name="performance-tuning-http-112"></a>Настройка производительности HTTP 1.1/2
 
@@ -20,6 +20,6 @@ ms.locfileid: "80851687"
 
 В некоторых ситуациях требуется откат HTTP/1.1 (сброс подключения HTTP/2, а вместо этого устанавливается новое соединение для использования HTTP/1.1). В частности, для повторного согласования TLS и проверки подлинности HTTP (кроме Basic и Digest) требуется резерв HTTP/1.1. Хотя это увеличивает нагрузку, эти операции уже подразумевают некоторую задержку, поэтому они не чувствительны к производительности.
 
-## <a name="see-also"></a>См. также:
-- [Настройка производительности веб-сервера](index.md) 
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Настройка производительности веб-сервера](index.md)
 - [Обеспечение высокой производительности IIS 10.0](tuning-iis-10.md)

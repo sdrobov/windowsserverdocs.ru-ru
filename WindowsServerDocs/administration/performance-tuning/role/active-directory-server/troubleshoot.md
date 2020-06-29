@@ -7,19 +7,19 @@ ms.topic: article
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 1c41c6cc14f9a35a808eebfe025252090247f8a2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 7da3e421dd129e54cb013b91a0fa931cb874e815
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851867"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471479"
 ---
 # <a name="troubleshooting-active-directory-domain-services-performance"></a>Устранение неполадок производительности служб домен Active Directory
 
 Дополнительные сведения о добавлении устранения неполадок производительности см. в статье [мониторинг среды офиса филиала](https://technet.microsoft.com/library/dd736504.aspx).
 
-## <a name="see-also"></a>См. также:
-- [Настройка производительности Active Directory серверов](index.md)
+## <a name="additional-references"></a>Дополнительные ссылки
+- [Обеспечение высокой производительности серверов Active Directory](index.md)
 - [Рекомендации по оборудованию](hardware-considerations.md)
 - [Рекомендации по протоколу LDAP](ldap-considerations.md)
 - [Правильное размещение контроллеров домена и рекомендации по сайту](site-definition-considerations.md)

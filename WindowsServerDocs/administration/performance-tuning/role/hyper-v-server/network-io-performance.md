@@ -7,12 +7,12 @@ ms.topic: article
 ms.author: asmahi; sandysp; jopoulso
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 17551da6cd270f05cf2d6b1a8147958f82b2c9b3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: dcf43bf41edada0a2e3df6fde825ff128a119a8f
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80851807"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471359"
 ---
 # <a name="hyper-v-network-io-performance"></a>Производительность операций ввода-вывода в сети Hyper-V
 
@@ -35,7 +35,7 @@ ms.locfileid: "80851807"
 
 В Windows Server 2012 R2 появился параметр ускорения динамическая миграция путем сжатия памяти перед передачей по сети или использования удаленного прямого доступа к памяти (RDMA), если оборудование поддерживает его.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Терминология Hyper-V](terminology.md)
 
