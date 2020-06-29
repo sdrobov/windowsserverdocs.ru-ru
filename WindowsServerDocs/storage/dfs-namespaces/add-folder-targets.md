@@ -8,12 +8,12 @@ ms.technology: storage
 ms.topic: article
 author: jasongerend
 ms-date: 06/05/2017
-ms.openlocfilehash: d2f3845a612556a51692aaf51d256bbedd518e7a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2f4e0deb82f16c905f580c13115a5214556d4f5f
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80854107"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475561"
 ---
 # <a name="add-folder-targets"></a>Добавление конечных объектов папок
 
@@ -39,7 +39,7 @@ ms.locfileid: "80854107"
 > [!NOTE]
 > Папки могут содержать конечные объекты папок или другие папки DFS, но не и те и другие на одном и том же уровне в иерархии папок.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)

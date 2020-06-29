@@ -9,12 +9,12 @@ ms.assetid: f8f8c569-8b74-4c19-876e-1c7d00cce308
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: f86c4fe9222f08b3ef3719080deeb4fbda6edd33
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f745ccd9e5a82aa79fb58798f233bf2662b00a70
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80860817"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475641"
 ---
 # <a name="generation-1-virtual-machine-security-settings"></a>Параметры безопасности виртуальных машин 1-го поколения
 
@@ -43,7 +43,7 @@ ms.locfileid: "80860817"
 
 Диск хранилища ключей можно добавить в пустой слот на любом из контроллеров IDE виртуальной машины. Для этого выберите действие **Добавить диск хранилища ключей** для первого свободного слота контроллера IDE на нужной виртуальной машине.
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Параметры безопасности виртуальных машин 2-го поколения в диспетчере Hyper-V](Generation-2-virtual-machine-security-settings-for-hyper-v.md)
 - [Безопасность и контроль](../../../security/Security-and-Assurance.md)

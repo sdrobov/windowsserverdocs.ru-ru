@@ -8,16 +8,16 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 664b3cfc1e529fe3591f6477ae0eb0b64e32441a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 24714e7af844116629fa4c0eebf5050f9c150c50
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856737"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85475541"
 ---
 # <a name="create-a-host-key-and-add-it-to-hgs"></a>Создание ключа узла и добавление его в HGS
 
->Область применения: Windows Server 2019
+>Область применения: Windows Server 2019
 
 
 В этом разделе описывается подготовка узлов Hyper-V к защищенным узлам с помощью аттестации ключа узла (режим ключей). Вы создадите пару ключей узла (или используйте существующий сертификат) и добавите открытую половину ключа в HGS.
@@ -29,7 +29,7 @@ ms.locfileid: "80856737"
 
     ```powershell
     Install-WindowsFeature Hyper-V, HostGuardian -IncludeManagementTools -Restart
-    ``` 
+    ```
 
 3.    Автоматическое создание ключа узла или выбор существующего сертификата. Если вы используете пользовательский сертификат, он должен иметь по крайней мере 2048-разрядный ключ RSA, EKU проверки подлинности клиента и использование ключа цифровой подписи.
 
@@ -37,7 +37,7 @@ ms.locfileid: "80856737"
     Set-HgsClientHostKey
     ```
 
-    Кроме того, можно указать отпечаток, если вы хотите использовать собственный сертификат. 
+    Кроме того, можно указать отпечаток, если вы хотите использовать собственный сертификат.
     Это может быть полезно, если требуется предоставить общий доступ к сертификату на нескольких компьютерах или использовать сертификат, привязанный к доверенному платформенному модулю или HSM. Ниже приведен пример создания сертификата, привязанного к доверенному платформенному модулю (который предотвращает кражу и использование закрытого ключа на другом компьютере и требует только доверенного платформенного модуля 1,2):
 
     ```powershell
@@ -59,13 +59,13 @@ ms.locfileid: "80856737"
 
 ```powershell
 Add-HgsAttestationHostKey -Name MyHost01 -Path "C:\temp\MyHost01-HostKey.cer"
-``` 
+```
 
-## <a name="next-step"></a>Дальнейшие действия
+## <a name="next-step"></a>Следующий шаг
 
 > [!div class="nextstepaction"]
-> [Подтверждение успешной аттестации узлов](guarded-fabric-confirm-hosts-can-attest-successfully.md)
+> [Подтверждение возможности успешной аттестации узлов](guarded-fabric-confirm-hosts-can-attest-successfully.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Развертывание службы защиты узла для защищенных узлов и экранированных виртуальных машин](guarded-fabric-deploying-hgs-overview.md)
