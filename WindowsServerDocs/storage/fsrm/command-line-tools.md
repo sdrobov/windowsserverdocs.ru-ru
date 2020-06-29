@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 78c054c5b0c3de19d1f3acd825335eab2f140541
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 2acce64aa14d60503a5b443b831a03338c204be2
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71394295"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472820"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>Программы командной строки диспетчера ресурсов файлового сервера
 
-> Относится к: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Диспетчер ресурсов файлового сервера устанавливает командлеты PowerShell [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager), а также следующие программы командной строки:
 
@@ -27,13 +27,13 @@ ms.locfileid: "71394295"
 
 Эти средства можно использовать для управления ресурсами хранилища на локальном или удаленном компьютере. Дополнительные сведения об этих инструментах командной строки см. в следующих источниках.
 
--   **Диркуота**: <https://go.microsoft.com/fwlink/?LinkId=92741>
--   **Филескрн**: <https://go.microsoft.com/fwlink/?LinkId=92742>
--   **Сторрепт**: <https://go.microsoft.com/fwlink/?LinkId=92743>
+-   **Диркуота**:<https://go.microsoft.com/fwlink/?LinkId=92741>
+-   **Филескрн**:<https://go.microsoft.com/fwlink/?LinkId=92742>
+-   **Сторрепт**:<https://go.microsoft.com/fwlink/?LinkId=92743>
 
 
 > [!Note]
-> Чтобы просмотреть синтаксис команды и параметры, доступные для команды, запустите команду с параметром <strong>/?</strong> PhysicalDisks.
+> Чтобы просмотреть синтаксис команды и параметры, доступные для команды, запустите команду с параметром <strong>/?</strong> параметров).
 
 
 ## <a name="remote-management-using-the-command-line-tools"></a>Удаленное управление с помощью средства командной строки
@@ -47,7 +47,7 @@ ms.locfileid: "71394295"
 
 <br />
 
-## <a name="additional-considerations"></a>Дополнительные рекомендации 
+## <a name="additional-considerations"></a>Дополнительные сведения
 
 Для управления удаленными ресурсами с помощью средств командной строки необходимо обеспечить выполнение следующих условий.
 
@@ -57,6 +57,6 @@ ms.locfileid: "71394295"
 -   На удаленном компьютере должно быть включено исключение **Управление удаленным диспетчером ресурсов файлового сервера**. Включите это исключение, используя брандмауэр Windows на панели управления.
 
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Управление ресурсами удаленного хранилища](managing-remote-storage-resources.md)

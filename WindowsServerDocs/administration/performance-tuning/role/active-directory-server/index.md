@@ -7,12 +7,12 @@ ms.topic: landing-page
 ms.author: timwi; chrisrob; herbertm; kenbrumf;  mleary; shawnrab; v-tea
 author: phstee
 ms.date: 10/16/2017
-ms.openlocfilehash: 643a603e89adeb0c1f3c70b0b0cabbf6bcb54731
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 33dad41e01cab4c36ea55bcb84e8033bd358d617
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80851907"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471569"
 ---
 # <a name="performance-tuning-active-directory-servers"></a>Обеспечение высокой производительности серверов Active Directory
 
@@ -44,12 +44,12 @@ ms.locfileid: "80851907"
 
 Мы рекомендуем вам следить за выпуском новостей, руководств и рекомендаций по управлению доменными службами Active Directory в блоге нашей группы [Ask the Directory Services Team](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/bg-p/AskDS) (Задайте вопрос команде разработчиков служб каталогов).
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Планирование ресурсов для доменных служб Active Directory](capacity-planning-for-active-directory-domain-services.md)
 - [Рекомендации по оборудованию](hardware-considerations.md)
 - [Рекомендации по использованию памяти](memory-usage-considerations.md)
 - [Рекомендации по протоколу LDAP](ldap-considerations.md)
 - [Правильное размещение контроллеров домена и рекомендации по сайту](site-definition-considerations.md)
-- [Устранение проблем с производительностью доменных служб Active Directory](troubleshoot.md)  
-  
+- [Устранение проблем с производительностью доменных служб Active Directory](troubleshoot.md)
+

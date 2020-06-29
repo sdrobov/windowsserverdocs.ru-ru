@@ -8,18 +8,18 @@ ms.topic: article
 author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: medium
-ms.openlocfilehash: 6c424d19c006cfae6343d577dc08ff3553a5616b
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 46b4502bb0408b3fb7afe51234c81695ec54e48b
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80825877"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473141"
 ---
 # <a name="whats-new-in-windows-server"></a>Новые возможности Windows Server
 
 > Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
-Вы можете ознакомиться с новыми возможностями, реализованными в каждом из выпусков Windows Server.  
+Вы можете ознакомиться с новыми возможностями, реализованными в каждом из выпусков Windows Server.
 
 Выпуски Long-Term Servicing Channel (LTSC)
 
@@ -35,7 +35,7 @@ ms.locfileid: "80825877"
 
 В выпусках Windows Server Semi-Annual Channel новые функциональные возможности операционной системы появляются быстрее. Новый выпуск выходит каждые шесть месяцев и поддерживается в течение 18 месяцев. Сведения о сроках поддержки см. в статье [Информация о выпуске Windows Server](windows-server-release-info.md) и разделе [Политика жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle). По возможности всегда используйте последний доступный выпуск.
 
-## <a name="see-also"></a>См. также статью
+## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Заметки о выпуске. Важные проблемы в Windows Server 2019](../get-started-19/rel-notes-19.md)
 - [Заметки о выпуске. Важные проблемы в Windows Server 2016](Windows-Server-2016-GA-Release-Notes.md)

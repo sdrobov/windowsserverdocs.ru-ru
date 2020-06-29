@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: f2a2b9db60842ba7889116cf35163c579d9131d1
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: da4f173a5d91f73c73d3f537f58228890f90b136
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861727"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85471679"
 ---
 # <a name="windows-authentication-architecture"></a>Архитектура проверки подлинности Windows
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этой обзорной статье для ИТ — специалиста объясняется базовая схема для проверки подлинности Windows.
 
@@ -40,7 +40,7 @@ ms.locfileid: "80861727"
 
 SSPI — это реализация универсального API-интерфейса службы безопасности (GSSAPI). SSPI предоставляет механизм, с помощью которого распределенное приложение может вызывать одного из нескольких поставщиков безопасности для получения проверенного подключения без знания сведений о протоколе безопасности.
 
-## <a name="see-also"></a>См. также:
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Архитектура интерфейса поставщика поддержки безопасности](security-support-provider-interface-architecture.md)
 

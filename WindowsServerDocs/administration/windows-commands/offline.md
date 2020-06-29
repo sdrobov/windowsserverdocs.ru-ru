@@ -1,6 +1,6 @@
 ---
 title: автономно
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды offline, которая переводит сетевой диск или том в состояние "вне сети".
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,32 +9,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0be67fbdb84cf2e48e67a617a73e0fb24cc74b67
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f189ba1208e9e9a6769321170d2a9289b10189e8
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723429"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472684"
 ---
 # <a name="offline"></a>автономно
-
-
 
 Переводит сетевой диск или том в состояние "вне сети".
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Offline disk
-Offline volume
+offline disk
+offline volume
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|[Автономный диск](offline-disk.md)|Переводит сетевой диск в состояние "вне сети".|
-|[Отключенный том](offline-volume.md)|Перевод сетевого тома в состояние "вне сети".|
+| Параметр | Описание: |
+| --------- | ----------- |
+| [offline disk](offline-disk.md) | Переводит сетевой диск в состояние "вне сети". |
+| [offline volume](offline-volume.md) | Перевод сетевого тома в состояние "вне сети". |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

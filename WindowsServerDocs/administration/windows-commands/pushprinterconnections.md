@@ -1,6 +1,6 @@
 ---
 title: pushprinterconnections
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде PushPrinterConnections, который считывает развернутые параметры подключения принтера из групповая политика и развертывает и удаляет подключения принтеров по мере необходимости.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1ed83b51da5ad7ad0a6b4dc0afd1d6bc30803a98
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 701089f2597b1d4e7bc05f7949dbc80dee3535bb
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222048"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472129"
 ---
 # <a name="pushprinterconnections"></a>pushprinterconnections
 
-
-
 Считывает развернутые параметры подключения принтера из групповая политика и развертывает и удаляет подключения принтеров по мере необходимости.
+
+> [!IMPORTANT]
+> Эта служебная программа предназначена для использования при запуске компьютера или в сценариях входа пользователя, и не должна запускаться из командной строки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,18 +29,17 @@ ms.locfileid: "84222048"
 pushprinterconnections <-log> <-?>
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|> < журнала|Записывает файл журнала отладки на пользователя в% TEMP или записывает журнал отладки на компьютер в%виндир%\темп.|
-|<-? >|Отображает справку в командной строке.|
-
-## <a name="remarks"></a>Комментарии
-
-Эта служебная программа предназначена для использования при запуске компьютера или в сценариях входа пользователя в систему и не должна запускаться из командной строки.
+| Параметр | Описание: |
+|--|--|
+| > < журнала | Записывает файл журнала отладки на пользователя в *% TEMP*или записывает журнал отладки на компьютер в *%виндир%\темп*. |
+| <-? > | Отображает справку в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
--   [Развертывание принтеров с помощью групповая политика](https://go.microsoft.com/fwlink/?LinkId=230627)
+
+- [Справочник по командам системы печати](print-command-reference.md)
+
+- [Развертывание принтеров с помощью групповая политика](https://go.microsoft.com/fwlink/?LinkId=230627)

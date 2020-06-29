@@ -8,22 +8,22 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: f87614d5884d25c4e462cdccd8de72a7980368ec
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: e742b5f9f94da06d43127c437f6ce693d4bcfc16
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71402009"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472890"
 ---
 # <a name="classification-management"></a>Управление классификациями
 
-> Относится к: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
+> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (половина ежегодного канала), Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
 Свойства классификации используются для категоризации файлов и выбора файлов для запланированных задач управления файлами.
 
 Существует много способов классификации файла. Один из способов — создание свойства классификации, которое присваивает значение всем файлам в определенном каталоге. Другим способом является создание правил, которые определяют, какое значение следует задавать конкретному свойству.
 
-Этот раздел содержит следующие темы:
+Этот раздел содержит следующие подразделы:
 
 -   [Создание свойства классификации](create-classification-property.md)
 -   [Создание правила автоматической классификации](create-automatic-classification-rule.md)
@@ -33,6 +33,6 @@ ms.locfileid: "71402009"
 > Чтобы настроить уведомления по электронной почте и определенные возможности создания отчетов, необходимо сначала настроить общие параметры диспетчера ресурсов файлового сервера.
 
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 [Настройка параметров диспетчера ресурсов файлового сервера](setting-file-server-resource-manager-options.md)

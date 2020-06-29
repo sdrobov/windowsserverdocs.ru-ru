@@ -1,6 +1,6 @@
 ---
 title: в сети
-description: Справочный раздел по * * * *-
+description: Справочный раздел для команды Online, которая принимает автономный диск или том в состояние "в сети".
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,32 +9,31 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a0e7582bdaebb5f3e5180d1baace980d3006b2e9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b5983e033755cdc9cd28b2b149fea657a06bd164
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82723406"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472610"
 ---
 # <a name="online"></a>в сети
-
-
 
 Принимает автономный диск или том в состояние "в сети".
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Offline disk
-Offline volume
+online disk
+online volume
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|[Автономный диск](offline-disk.md)|Переключается на автономный диск, находящиеся в состоянии "в сети".|
-|[Отключенный том](offline-volume.md)|Переключается на автономный том, чтобы перейти в состояние "в сети".|
+| Параметр | Описание: |
+|--|--|
+| [online disk](online-disk.md) | Переключается на автономный диск, находящиеся в состоянии "в сети". |
+| [online volume](online-volume.md) | Переключается на автономный том, чтобы перейти в состояние "в сети". |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

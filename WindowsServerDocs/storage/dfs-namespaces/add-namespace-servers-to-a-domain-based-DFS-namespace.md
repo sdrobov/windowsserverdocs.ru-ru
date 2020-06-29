@@ -8,16 +8,16 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: fa28ec06448b67724ce8e3f29894fc70f6a6dae9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: ee2ae5ddf40c6d8b49b9fbd40505f4e8c70fd92c
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71386255"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473501"
 ---
 # <a name="add-namespace-servers-to-a-domain-based-dfs-namespace"></a>Добавление серверов пространств имен в доменное пространство имен DFS
 
-> Относится к: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
+> Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
 Доступность доменного пространства имен можно повысить, указав дополнительные сервера пространства имен для размещения пространства имен.
 
@@ -25,7 +25,7 @@ ms.locfileid: "71386255"
 
 Чтобы добавить сервер пространства имен в доменное пространство имен с помощью оснастки "Управление DFS", выполните следующие действия:
 
-1.  Нажмите кнопку **Пуск**, наведите курсор на **Администрирование** и щелкните **Управление DFS**.
+1.  Нажмите кнопку **Пуск**, укажите пункт **Администрирование**, а затем щелкните **Управление DFS**.
 
 2.  В узле **Пространства имен** дерева консоли щелкните правой кнопкой мыши доменное пространство имен и выберите **Добавить сервер пространства имен**.
 
@@ -38,10 +38,10 @@ ms.locfileid: "71386255"
 > [!TIP]
 > Чтобы добавить сервер пространства имен с помощью Windows PowerShell, используйте командлет [New-DfsnRootTarget](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroottarget). Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
 
-## <a name="see-also"></a>См. также
+## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
--   [Ознакомьтесь с требованиями к серверу пространств имен DFS](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
+-   [Обзор требований к серверу пространств имен DFS](https://technet.microsoft.com/library/cc753448(v=ws.11).aspx)
 -   [Создание пространства имен DFS](create-a-dfs-namespace.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
 

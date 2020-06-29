@@ -1,6 +1,6 @@
 ---
 title: pbadmin
-description: Справочный раздел по * * * *-
+description: Справочный раздел по команде пбадмин. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,17 +9,22 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 95308b6098c44cdab7aaae3d8550717e8269fcfc
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 68535895386910a358ee0515dc7f09edb2122be8
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993371"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85472500"
 ---
 # <a name="pbadmin"></a>pbadmin
 
+> Область применения: Windows Server 2003, Windows Server 2003 R2, Windows Server 2003 с пакетом обновления 1 (SP1), Windows Server 2003 с пакетом обновления 2 (SP2)
 
+>[!IMPORTANT]
+> Эта команда устарела.
 
-Пбадмин является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
+Администрирование телефонных книг. При использовании без параметров пбадмин запускает администратора телефонной книги. Описание и сведения об использовании см. в разделе [пбадмин](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
 
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [пбадмин](https://technet.microsoft.com/library/cc755767(v=ws.10).aspx).
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

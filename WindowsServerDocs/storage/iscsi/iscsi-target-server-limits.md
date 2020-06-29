@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 31853f1adaed6794138861da0991aa47e79602bc
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: 6799e0e3b47d6cc98cbb42407ffbed1a9578675a
+ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070574"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85473441"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>Ограничения масштабируемости для сервера цели iSCSI
 
@@ -32,7 +32,7 @@ ms.locfileid: "85070574"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
 <th><p>Комментарий</p></th>
@@ -42,13 +42,13 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>экземпляры цели iSCSI на сервер цели iSCSI</p></td>
 <td><p>256</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>логические устройства iSCSI (них) или виртуальные диски на сервер цели iSCSI</p></td>
 <td><p>512</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td><p>Тестирование конфигураций: 8 них на целевой экземпляр с средним количеством более 64 целевых объектов и 256 целевых экземпляров с одним LU на целевой объект.</p></td>
 </tr>
 <tr class="odd">
@@ -89,7 +89,7 @@ ms.locfileid: "85070574"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
 <th><p>Комментарий</p></th>
@@ -99,13 +99,13 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>Узлы отказоустойчивого кластера</p></td>
 <td><p>8 (5 на Windows Server 2012)</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Несколько активных узлов кластера</p></td>
 <td><p>Поддерживается</p></td>
-<td> 
+<td>
 <p>Недоступно</p></td>
 <td><p>Каждый активный узел в отказоустойчивом кластере владеет другим кластеризованным экземпляром сервера цели iSCSI с другими узлами, работающими как возможные узлы-владельцы.</p></td>
 </tr>
@@ -124,7 +124,7 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>Сеансы, которые могут одновременно подключаться к экземпляру цели iSCSI</p></td>
 <td><p>544 (512 на Windows Server 2012)</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -142,7 +142,7 @@ ms.locfileid: "85070574"
 <tr class="even">
 <td><p>Преобразование автономного целевого сервера iSCSI в кластеризованный целевой сервер iSCSI или наоборот</p></td>
 <td><p>Не поддерживается</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td><p>Данные конфигурации экземпляра iSCSI и виртуального диска, включая метаданные моментального снимка, теряются во время преобразования.</p></td>
 </tr>
 </tbody>
@@ -159,7 +159,7 @@ ms.locfileid: "85070574"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
 <th><p>Комментарий</p></th>
@@ -169,7 +169,7 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>Максимальное число активных сетевых адаптеров</p></td>
 <td><p>8</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td><p>Применяется к сетевым адаптерам, выделенным для трафика iSCSI, а не к общему числу сетевых адаптеров в устройстве.</p></td>
 </tr>
 <tr class="even">
@@ -181,7 +181,7 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>Скорость сетевого порта</p></td>
 <td><p>1Gbps, 10 Гбит/с, 40Gbps, 56 Гбит/с (только для Windows Server 2012 R2 и более поздние версии)</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -240,7 +240,7 @@ ms.locfileid: "85070574"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
 <th><p>Комментарий</p></th>
@@ -250,7 +250,7 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>От инициатора iSCSI, который преобразует виртуальный диск из базового диска в динамический </p></td>
 <td><p>Да</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -291,13 +291,13 @@ ms.locfileid: "85070574"
 <tr class="odd">
 <td><p>Фиксированный формат VHD</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Разностный формат VHD</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td><p>Моментальные снимки не могут быть созданы с разностными виртуальными дисками iSCSI на основе VHD.</p></td>
 </tr>
 <tr class="odd">
@@ -345,7 +345,7 @@ ms.locfileid: "85070574"
 </tr>
 <tr class="even">
 <td><p>Тонкая подготовка</p></td>
-<td><p>нет</p></td>
+<td><p>Нет</p></td>
 <td><p>Недоступно</p></td>
 <td><p>Динамические виртуальные жесткие диски поддерживаются, но сопоставление не поддерживается&#39;t.</p></td>
 </tr>
@@ -374,7 +374,7 @@ ms.locfileid: "85070574"
 </colgroup>
 <thead>
 <tr class="header">
-<th><p>Item</p></th>
+<th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Комментарий</p></th>
 </tr>
@@ -436,7 +436,7 @@ ms.locfileid: "85070574"
 
   - Windows Storage Server 2008 R2
 
-  - Windows Server 2008 R2
+  - Windows Server 2008 R2
 
   - Windows HPC Server 2008 R2
 
@@ -465,7 +465,7 @@ ms.locfileid: "85070574"
 <td><p>Комментарии</p></td>
 </tr>
 <tr class="even">
-<td><p>Windows Server 2012 R2</p></td>
+<td><p>Windows Server 2012 R2</p></td>
 <td><p>Проверено</p></td>
 <td></td>
 <td></td>
@@ -537,7 +537,7 @@ ms.locfileid: "85070574"
 
   - CD или USB-диск с Ипксе
 
-## <a name="see-also"></a>См. также раздел
+## <a name="additional-references"></a>Дополнительные ссылки
 
 Ниже перечислены дополнительные ресурсы с информацией о сервере цели iSCSI и связанных технологиях.
 
