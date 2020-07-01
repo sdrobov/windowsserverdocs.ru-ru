@@ -1,4 +1,4 @@
-# [Безопасность и контроль](security-and-assurance.md)
+# [Безопасность и контроль](security-and-assurance.yml)
 ## [Обеспечение соответствия новым требованиям Генерального регламента о защите данных (GDPR) — Windows Server 2016](gdpr/gdpr-winserver-whitepaper.md)
 ## [Настройка защищенной структуры и экранированных виртуальных машин для HGS](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 ### [Обзор](guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md)

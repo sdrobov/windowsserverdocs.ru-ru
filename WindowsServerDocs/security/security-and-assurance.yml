@@ -1,0 +1,139 @@
+### YamlMime:Landing
+title: Документация по безопасности Windows Server
+summary: Система безопасности Windows Server предоставляет уровни защиты, встроенные в операционную систему, для защиты от нарушений безопасности, предотвращения вредоносных атак и повышения безопасности виртуальных машин, приложений и данных.
+metadata:
+  title: Документация по безопасности Windows Server
+  description: Общие сведения о безопасности в Windows Server.
+  ms.topic: landing-page
+  author: coreyp-at-msft
+  ms.author: coreyp
+  ms.date: 5/19/2020
+  ms.openlocfilehash: 5e20d4eabc7a9630e6a0eb880ddeabff3735f1ab
+  ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/30/2020
+  ms.locfileid: "85549182"
+landingContent:
+- title: Обзор обеспечения безопасности в Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Запись в блоге о службе безопасности Windows Server
+      url: https://blogs.technet.microsoft.com/windowsserver/2016/04/25/ten-reasons-youll-love-windows-server-2016-8-security/
+    - text: Datacenter and Private Cloud Security Blog (Блог о безопасности центров обработки данных и частных облаков)
+      url: https://blogs.technet.microsoft.com/datacentersecurity/
+    - text: Addressing emerging threats and landscape shifts (Реагирование на возникающие угрозы и изменение условий)
+      url: https://www.youtube.com/watch?v=B5JMYxYWx1k&feature=youtu.be
+    - text: Protecting Your Datacenter and Cloud from Emerging Threats blog post (Запись блога. Защита центра обработки данных и облака от возникающих угроз)
+      url: https://blogs.technet.com/b/windowsserver/archive/2015/11/18/protecting-your-datacenter-and-cloud-november-update.aspx
+    - text: Обзорный семинар по безопасности и контролю на конференции Ignite
+      url: https://channel9.msdn.com/events/ignite/2015/brk2482
+- title: Безопасная виртуализация с использованием экранированных виртуальных машин
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Экранированная виртуальная машина в Channel 9
+      url: https://channel9.msdn.com/Shows/Mechanics/Introduction-to-Shielded-Virtual-Machines-in-Windows-Server-2016
+    - text: Shielded VM Demo (Демонстрация экранированной виртуальной машины)
+      url: https://www.youtube.com/watch?v=xip5Qtk-7d8
+    - text: Shielded Virtual Machines in Windows Server video walkthrough (Видеоруководство по использованию экранированных виртуальных машин в Windows Server)
+      url: http://microsoft-cloud.cloudguides.com/Guides/Shielded%Virtual%Machines%in%Windows%Server.htm
+    - text: 'Harden the Fabric: Protecting Tenant Secrets in Hyper-V (Видео с конференции Microsoft Ignite. Усиление защиты структуры: защита секретных данных клиента в Hyper-V)'
+      url: https://channel9.msdn.com/events/ignite/2015/brk3457
+  - linkListType: how-to-guide
+    links:
+    - text: Guarded Fabric Deployment Guide (Руководство по развертыванию защищенной структуры)
+      url: guarded-fabric-shielded-vm/guarded-fabric-deploying-hgs-overview.md
+    - text: Экранированная виртуальная машина и защищенная структура в филиалах
+      url: guarded-fabric-shielded-vm/guarded-fabric-manage-branch-office.md
+    - text: Shielded VM and Guarded Fabric Troubleshooting Guide (Руководство по поиску и устранению неисправностей при использовании экранированной виртуальной машины и защищенной структуры)
+      url: guarded-fabric-shielded-vm/guarded-fabric-troubleshoot-overview.md
+- title: Усиление защиты ОС и приложений
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Руководство по развертыванию компонента "Управление приложениями в Защитнике Windows" (WDAC)
+      url: https://docs.microsoft.com/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-contro
+    - text: Параметры реестра безопасности транспортного уровня (протокол TLS)
+      url: https://docs.microsoft.com/windows-server/security/tls/tls-registry-settings
+    - text: Защита потока управления
+      url: https://docs.microsoft.com/windows/desktop/SecBP/control-flow-guard
+    - text: Защитник Windows
+      url: https://technet.microsoft.com/windows-server-docs/security/windows-defender/windows-defender-overview-windows-server
+  - linkListType: video
+    links:
+    - text: Демонстрационное видео по Device Guard
+      url: https://www.youtube.com/watch?v=F-pTkesjkhI
+- title: Privileged Access Management (Защита Windows и Microsoft Azure Active Directory с помощью управления привилегированным доступом)
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обеспечение безопасности привилегированного доступа
+      url: https://technet.microsoft.com/windows-server-docs/security/securing-privileged-access/securing-privileged-access
+    - text: Just in Time Administration with Microsoft Identity Manager (JIT-администрирование с помощью Microsoft Identity Manager)
+      url: https://technet.microsoft.com/library/mt150258.aspx
+    - text: Just Enough Administration Article (Статья о технологии Just Enough Administration)
+      url: https://aka.ms/JEA
+  - linkListType: video
+    links:
+    - text: Защита Windows и Microsoft Azure Active Directory с помощью Privileged Access Management
+      url: https://channel9.msdn.com/events/ignite/2015/brk3873
+    - text: Демонстрационное видео по Just Enough Administration
+      url: https://www.youtube.com/watch?v=xnBrbkY9P20
+- title: Защита учетных данных
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Защита извлеченных учетных данных домена с помощью Credential Guard
+      url: https://docs.microsoft.com/windows/security/identity-protection/credential-guard/credential-guard
+    - text: Protect Remote Desktop credentials with Remote Credential Guard (Защита учетных данных удаленного рабочего стола с помощью Remote Credential Guard)
+      url: https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard
+  - linkListType: video
+    links:
+    - text: Демонстрационное видео по Credential Guard
+      url: https://www.youtube.com/watch?v=eUpKOGSl7yk
+- title: Обнаружение угроз и реагирование на них
+  linkLists:
+  - linkListType: video
+    links:
+    - text: Security Threat Analysis Using Microsoft Operations Management Suite (Анализ угроз безопасности с помощью Microsoft Operations Management Suite)
+      url: https://channel9.msdn.com/events/ignite/2015/brk3464
+    - text: Microsoft Operations Management Suite (OMS)
+      url: https://www.youtube.com/watch?v=_SaDw1dRy2k
+    - text: OMS и Windows Server
+      url: https://www.youtube.com/watch?v=_SaDw1dRy2k
+  - linkListType: overview
+    links:
+    - text: Microsoft Advanced Threat Analytics.
+      url: https://blogs.technet.com/b/ad/archive/2015/07/22/microsoft-advanced-threat-analytics-coming-next-month.aspx
+- title: Безопасность сети
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор брандмауэра центра обработки данных
+      url: https://technet.microsoft.com/library/dn920240.aspx
+    - text: Новые возможности управления IP-адресами (DNS) в Windows Server
+      url: https://technet.microsoft.com/windows-server-docs/networking/dns/what-s-new-in-dns-server
+- title: Сопоставление функций безопасности с требованиями по обеспечению соответствия
+  linkLists:
+  - linkListType: download
+    links:
+    - text: Технический документ по сопоставлению соответствия для экранированных виртуальных машин Hyper-V
+      url: https://download.microsoft.com/download/6/D/0/6D06E149-B4C1-4EED-ACD5-DF6066E93CC0/Coalfire_Branded_Hyper_V_Shielded_VMs_Whitepaper_EN_US.pdf
+    - text: Технический документ по сопоставлению соответствия для JEA и JIT
+      url: https://download.microsoft.com/download/2/7/A/27A2B5BB-6B52-4482-87C1-DA9D6B6D8C8D/Coalfire_Branded_Privileged_Identity_Manager_Whitepaper_EN_US.pdf
+    - text: Технический документ по сопоставлению соответствия для Credential Guard
+      url: https://download.microsoft.com/download/6/9/D/69D9E610-D23C-4F7E-A8CC-D65B87CEB4F8/Coalfire_Branded_Device_Guard_Whitepaper_EN_US.pdf
+    - text: Технический документ по сопоставлению соответствия для Credential Guard
+      url: https://download.microsoft.com/download/8/1/2/812009C9-E4B8-4D4B-AADD-FDC373D0A076/Coalfire_Branded_Credential_Guard_Whitepaper_EN_US.pdf
+    - text: Технический документ по сопоставлению соответствия для Защитника Windows
+      url: https://download.microsoft.com/download/C/7/7/C778B7BB-0783-42D7-93A9-B86DFB5A7BAD/Coalfire_Branded_Windows_Defender_Whitepaper_EN_US.pdf
+- title: Более старые версии Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Документация по предыдущим версиям Windows
+      url: https://docs.microsoft.com/previous-versions/windows/
+    - text: Поиск конкретных сведений
+      url: https://docs.microsoft.com/search/?search=Windows+Server&dataSource=previousVersions

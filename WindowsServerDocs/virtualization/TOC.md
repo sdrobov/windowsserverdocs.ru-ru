@@ -1,4 +1,4 @@
-# [Виртуализация](virtualization.md)
+# [Виртуализация](virtualization.yml)
 
 ## [Защищенная структура и экранированные виртуальные машины](../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms-top-node.md)
 

@@ -6,13 +6,13 @@ manager: mchad
 ms.technology: storage-file-systems
 ms.topic: article
 author: gawatu
-ms.date: 06/17/2019
-ms.openlocfilehash: 7d33f15aafa432cb3f3174087c3b27855b4f35b2
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.date: 06/29/2019
+ms.openlocfilehash: 5bcdbc76259d1dfecaaa5266bb952a21bcbc7825
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475141"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548899"
 ---
 # <a name="resilient-file-system-refs-overview"></a>Обзор файловой системы ReFS
 
@@ -106,18 +106,18 @@ ReFS представляет новые функции, которые позв
 
 ### <a name="limits"></a>Ограничения
 
-| Функция       | ReFS                                        | NTFS |
+| Компонент       | ReFS                                        | NTFS |
 |----------------|------------------------------------------------|-----------------------|
 | Максимальная длина имени файла | 255 символов Юникода  | 255 символов Юникода               |
 | Максимальная длина имени пути |32 КБ символов Юникода | 32 КБ символов Юникода                |
 | Максимальный размер файла | 35 PB (петабайтов)  | 256 ТБ               |
 | Максимальный размер тома | 35 ПБ                           | 256 ТБ                |
 
-### <a name="functionality"></a>Функциональность
+### <a name="functionality"></a>функциональное назначение;
 
 #### <a name="the-following-features-are-available-on-refs-and-ntfs"></a>В ReFS и NTFS доступны следующие функции:
 
-| Функциональность       | ReFS                                        | NTFS |
+| функциональное назначение;       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | шифрование BitLocker; | Да | Да |
 | Дедупликация данных | Да<sup>1</sup> | Да |
@@ -143,7 +143,7 @@ ReFS представляет новые функции, которые позв
 
 #### <a name="the-following-features-are-only-available-on-refs"></a>Следующие функции доступны только в ReFS:
 
-| Функциональность       | ReFS                                        | NTFS |
+| функциональное назначение;       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | Клонирование блоков | Да | Нет |
 | Разреженный метод VDL | Да | Нет |
@@ -151,7 +151,7 @@ ReFS представляет новые функции, которые позв
 
 #### <a name="the-following-features-are-unavailable-on-refs-at-this-time"></a>Следующие функции недоступны в ReFS в настоящее время:
 
-| Функциональность       | ReFS                                        | NTFS |
+| функциональное назначение;       | ReFS                                        | NTFS |
 |---------------------------|------------------|-----------------------|
 | Сжатие файловой системы | Нет | Да |
 | Шифрование файловой системы | Нет | Да |
@@ -172,3 +172,4 @@ ReFS представляет новые функции, которые позв
 - [Обзор Локальные дисковые пространства](../storage-spaces/storage-spaces-direct-overview.md)
 - [Клонирование блоков ReFS](block-cloning.md)
 - [Потоки целостности ReFS](integrity-streams.md)
+- [Устранение неполадок ReFS с помощью Рефсутил](../../administration/windows-commands/refsutil.md)

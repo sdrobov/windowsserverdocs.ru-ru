@@ -1,0 +1,75 @@
+### YamlMime:Landing
+title: Документация по виртуализации
+summary: Виртуализация в Windows Server — это одна из базовых технологий, необходимых для создания программно-определяемой инфраструктуры. Вместе с сетью и хранилищем функции виртуализации предоставляют гибкость, необходимую для поддержки рабочих нагрузок ваших клиентов.
+metadata:
+  title: Документация по виртуализации
+  description: Виртуализация в Windows Server — это одна из базовых технологий, необходимых для создания программно-определяемой инфраструктуры.
+  ms.topic: landing-page
+  author: eross-msft
+  ms.author: lizross
+  ms.prod: windows-server
+  manager: brianlic
+  ms.technology: compute
+  ms.assetid: c248b41f-0de3-7136-9a25-b4b07e41ebf0
+  ms.localizationpriority: high
+  ms.openlocfilehash: 65230ad9d35239a86f5c213807c5f8eed9edfa68
+  ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+  ms.translationtype: MT
+  ms.contentlocale: ru-RU
+  ms.lasthandoff: 06/30/2020
+  ms.locfileid: "85549179"
+landingContent:
+- title: Контейнеры Windows
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Контейнеры Windows
+      url: /virtualization/windowscontainers
+    - text: О контейнерах окон
+      url: /virtualization/windowscontainers/about/
+    - text: Контейнеры и виртуальные машины
+      url: /virtualization/windowscontainers/about/containers-vs-vm
+- title: Hyper-V в Windows 10
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Обзор Hyper-V в Windows 10
+      url: /virtualization/hyper-v-on-windows
+    - text: О Hyper-V в Windows 10
+      url: /virtualization/hyper-v-on-windows/about/
+  - linkListType: get-started
+    links:
+    - text: Установка Hyper-V
+      url: /virtualization/hyper-v-on-windows/quick-start/enable-hyper-v
+    - text: Создание виртуальной машины
+      url: /virtualization/hyper-v-on-windows/quick-start/create-virtual-machine
+- title: Hyper-V в Windows Server
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Hyper-V в Windows Server
+      url: hyper-v/Hyper-V-on-Windows-Server.md
+    - text: Обзор технологии Hyper-V
+      url: hyper-v/Hyper-V-Technology-Overview.md
+  - linkListType: reference
+    links:
+    - text: Microsoft Hyper-V Server 2016
+      url: /windows-server/virtualization/hyper-v/hyper-v-server-2016
+    - text: Требования к системе для Hyper-V в Windows Server
+      url: hyper-v/System-requirements-for-Hyper-V-on-Windows.md
+- title: Виртуальный коммутатор Hyper-V
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Виртуальный коммутатор Hyper-V
+      url: hyper-v-virtual-switch/Hyper-V-Virtual-Switch.md
+  - linkListType: how-to-guide
+    links:
+    - text: Управление виртуальным коммутатором Hyper-V
+      url: hyper-v-virtual-switch/Manage-Hyper-V-Virtual-Switch.md
+- title: Использование защищенной структуры для обеспечения безопасной среды для виртуальных машин
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Защищенная структура и экранированные виртуальные машины
+      url: ../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md
