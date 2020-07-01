@@ -7,14 +7,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 05/27/2020
+ms.date: 06/23/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d49c49def8b110f42a6d56354c73e5a75b04b7e
-ms.sourcegitcommit: 4fec7d82f0772d03a9e8cac20092a4309b0f796e
+ms.openlocfilehash: 5c3fc20ea42deaa9dd96fd9f7bfabfcb85462bdd
+ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84025515"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85267665"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -26,8 +26,21 @@ ms.locfileid: "84025515"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Общие     |1.2.1026 |
-|Предварительная оценка    |1.2.1026 |
+|Общие     |1.2.1104 |
+|Предварительная оценка    |1.2.1104 |
+
+## <a name="updates-for-version-121104"></a>Обновления для версии 1.2.1104
+
+*Дата публикации: 23.06.2020*
+
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHS), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zrAd), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4zeHR)
+
+- Обновлена логика автоматического обнаружения для параметра **подписки**. Теперь поддерживается обновление виртуального рабочего стола Windows за весну 2020 года. Клиентам, у которых есть только ресурсы обновлений за весну, больше не нужно предоставлять согласие для выпуска за осень 2019 года.
+- Улучшена поддержка устройств с высоким разрешением и коэффициентом масштабирования до 400 %.
+- Устранена проблема, из-за которой не отображалось диалоговое окно отключения.
+- Устранена проблема, из-за которой подсказки в панели команд оставались видимыми дольше, чем ожидалось.
+- Исправлена ошибка, происходившая при попытке подписаться сразу после обновления.
+- Исправлена ошибка неправильного анализа даты и времени на некоторых языках.
 
 ## <a name="updates-for-version-121026"></a>Обновления для версии 1.2.1026
 
@@ -76,8 +89,6 @@ ms.locfileid: "84025515"
 
 *Дата публикации: 24.03.2020*
 
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSh), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4siSi), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4sllb)
-
 - Действие Update (Обновить) для рабочих областей переименовано на Refresh (Обновить) для согласованности с другими клиентами удаленного рабочего стола.
 - Теперь рабочую область можно обновить прямо из контекстного меню.
 - Обновление рабочей области вручную гарантирует обновление всего локального содержимого.
@@ -90,8 +101,6 @@ ms.locfileid: "84025515"
 
 *Дата публикации: 25.02.2020*
 
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qeak), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7h), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4qm7g)
-
 - Подключения к Виртуальному рабочему столу Windows теперь блокируются, если в RDP-файле отсутствует подпись или одно из свойств signscope изменено.
 - Центр соединений больше не отображается как пустой, если рабочая область пуста или удалена.
 - Чтобы оптимизировать устранение неполадок, добавлен идентификатор действия и код ошибки в сообщениях об отключении. Вы можете скопировать сообщение в диалоговом окне, нажав клавиши **CTRL+C**.
@@ -102,8 +111,6 @@ ms.locfileid: "84025515"
 ## <a name="updates-for-version-12605"></a>Обновления для версии 1.2.605
 
 *Дата публикации: 29.01.2020*
-
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oHrD), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oJZs), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4oXhD)
 
 - Теперь можно выбрать, какие рабочие столы будут использоваться для подключений к рабочему столу. Чтобы изменить этот параметр, щелкните правой кнопкой мыши значок подключения к рабочему столу и выберите **Параметры**.
 - Исправлена проблема, из-за которой параметры подключения не отображали правильные коэффициенты масштабирования.
@@ -116,8 +123,6 @@ ms.locfileid: "84025515"
 
 *Дата публикации: 04.12.2019*
 
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jH), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k7jL), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4k27O)
-
 - Теперь вы можете получать доступ к сведениям об обновлениях непосредственно с помощью кнопки "Дополнительные параметры" на панели команд в верхней части клиента.
 - Теперь вы можете отправлять отчеты об обратной связи с панели команд клиента.
 - Параметр обратной связи теперь отображается, только если доступен Центр отзывов.
@@ -128,8 +133,6 @@ ms.locfileid: "84025515"
 ## <a name="updates-for-version-12431"></a>Обновления для версии 1.2.431
 
 *Дата публикации: 12.11.2019*
-
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48kow), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48koA), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE48zYj)
 
 - Теперь доступны версии клиента для 32-разрядной платформы и платформы ARM64.
 - Теперь клиент сохраняет любые изменения панели подключения (например, ее расположение, размер и закрепленное состояние) и применяет их в сеансах.
@@ -148,8 +151,6 @@ ms.locfileid: "84025515"
 ## <a name="updates-for-version-12247"></a>Обновления для версии 1.2.247
 
 *Дата публикации: 17.09.2019*
-
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE3LkSa)
 
 - Улучшены резервные языки для локализованной версии. (Например, FR-CA будет правильно отображаться на французском, а не на английском языке.)
 - Теперь при удалении подписки клиент правильно удаляет сохраненные учетные данные из диспетчера учетных данных.

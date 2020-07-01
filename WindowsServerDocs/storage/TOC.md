@@ -104,6 +104,7 @@
 ### [Четность с зеркальным ускорением](refs/mirror-accelerated-parity.md)
 ### [Клонирование блоков](refs/block-cloning.md)
 ### [Потоки целостности](refs/integrity-streams.md)
+### [ReFSUtil](../administration/windows-commands/refsutil.md)
 
 ## Служба миграции хранилища
 ### [Обзор](storage-migration-service/overview.md)

@@ -7,12 +7,12 @@ author: daniellee-msft
 ms.author: jol
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 2b8a9f5ebab22891b8b97c9c56bba3837cbb9371
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4ba2e760d57f1c3f59e40b78b449a8831b8093d2
+ms.sourcegitcommit: fe89b8001ad664b3618708b013490de93501db05
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81269301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942313"
 ---
 # <a name="install-and-manage-extensions"></a>Установка расширений и управление ими
 
@@ -56,12 +56,12 @@ Windows Admin Center поддерживает несколько веб-кана
 
 ### <a name="manually-downloading-extension-packages"></a>Загрузка пакетов расширений вручную
 
-1. Откройте веб-браузер на компьютере, подключенном к Интернету, и перейдите по следующему URL-адресу: [https://msft-sme.myget.org/gallery/windows-admin-center-feed](https://msft-sme.myget.org/gallery/windows-admin-center-feed) 
+1. Откройте веб-браузер на компьютере, подключенном к Интернету, и перейдите по следующему URL-адресу: [https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC](https://dev.azure.com/WindowsAdminCenter/Windows%20Admin%20Center%20Feed/_packaging?_a=feed&feed=WAC) 
 
-   * Возможно, чтобы просмотреть пакеты расширений, вам потребуется создать учетную запись на msft-sme.myget.org и выполнить вход.
+   * Возможно, чтобы просмотреть пакеты расширений, вам потребуется создать учетную запись Майкрософт и выполнить вход.
 
 2. Щелкните имя пакета, который необходимо установить, чтобы просмотреть страницу сведений о пакете.
-3. Нажмите на ссылку **Скачать** в правой панели страницы сведений о пакете и загрузите для расширения файл NUPKG.
+3. Нажмите ссылку **Скачать** сверху на панели навигации страницы сведений о пакете и загрузите для расширения файл NUPKG.
 4. Повторите шаги 2 и 3 для всех пакетов, которые необходимо загрузить.
 5. Скопируйте файлы пакета в общую папку, доступ к которой можно получить с компьютера, на котором установлен Windows Admin Center, или на локальный диск компьютера.
 6. Следуйте инструкциям раздела [Installing extensions from a different feed](#installing-extensions-from-a-different-feed) (Установка расширений из другого веб-канала).
