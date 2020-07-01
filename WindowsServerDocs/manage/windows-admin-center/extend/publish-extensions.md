@@ -8,20 +8,20 @@ ms.author: jol
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 0182c4097ec3bc4432e2ba408d701a72d82a7c8d
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 357c37ec395e5c51f3c3f946414f38ea5f95e9e4
+ms.sourcegitcommit: eaf3fb57517b9110082edad356b12daf3345bb2c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950085"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85593995"
 ---
 # <a name="publishing-extensions"></a>Публикация расширений
 
->Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
 После разработки расширения необходимо опубликовать его и сделать доступным для тестирования или использования другими пользователями. В зависимости от аудитории и целей публикации существует несколько вариантов, которые будут представлены ниже вместе с действиями и требованиями для публикации.
 
-## <a name="publishing-options"></a>Параметры публикации
+## <a name="publishing-options"></a>Варианты публикации
 
 Существует три основных варианта для настраиваемых источников пакетов, поддерживаемых центром администрирования Windows.
 * Общедоступный веб-канал NuGet центра администрирования Windows для Microsoft
@@ -77,15 +77,12 @@ ms.locfileid: "75950085"
 Ниже приведен пример файла. nuspec и список обязательных или рекомендуемых свойств. Полную схему см. в [справочнике по nuspec](https://docs.microsoft.com/nuget/reference/nuspec). Сохраните nuspec-файл в корневую папку проекта с именем выбранного файла.
 
 > [!IMPORTANT]
-> Значение ```<id>``` в файле nuspec должно совпадать со значением ```"name"``` в ```manifest.json``` файле проекта, иначе опубликованное расширение не будет успешно загружено в центре администрирования Windows.
+> ```<id>```Значение в файле nuspec должно совпадать со ```"name"``` значением в ```manifest.json``` файле проекта, иначе Ваше опубликованное расширение не будет успешно загружено в центр администрирования Windows.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="https://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <packageTypes>
-      <packageType name="WindowsAdminCenterExtension" />
-    </packageTypes>  
     <id>contoso.project.extension</id>
     <version>1.0.0</version>
     <title>Contoso Hello Extension</title>
@@ -110,23 +107,23 @@ ms.locfileid: "75950085"
 
 | Имя свойства | Обязательно/рекомендуется | Описание |
 | ---- | ---- | ---- |
-| packageType | Обязательный | Используйте "Виндовсадминцентерекстенсион", который является типом пакета NuGet, определенным для расширений центра администрирования Windows. |
-| id | Обязательный | Уникальный идентификатор пакета в веб-канале. Это значение должно соответствовать значению "Name" в файле manifest. JSON вашего проекта.  Инструкции см. в разделе [Выбор уникального идентификатора пакета](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
+| packageType | Обязательно | Используйте "Виндовсадминцентерекстенсион", который является типом пакета NuGet, определенным для расширений центра администрирования Windows. |
+| идентификатор | Обязательно | Уникальный идентификатор пакета в веб-канале. Это значение должно соответствовать значению "Name" в manifest.jsфайла проекта.  Инструкции см. в разделе [Выбор уникального идентификатора пакета](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number). |
 | title | Требуется для публикации в веб-канале центра администрирования Windows | Понятное имя пакета, отображаемое в диспетчере расширений центра администрирования Windows. |
-| Версия | Обязательный | Версия расширения. Рекомендуется использовать [семантическое управление версиями (соглашение SemVer)](http://semver.org/spec/v1.0.0.html) , но не является обязательным. |
-| authors | Обязательный | При публикации от имени компании используйте название вашей компании. |
-| Описание | Обязательный | Введите описание функциональных возможностей расширения. |
+| version | Обязательно | Версия расширения. Рекомендуется использовать [семантическое управление версиями (соглашение SemVer)](http://semver.org/spec/v1.0.0.html) , но не является обязательным. |
+| authors | Обязательно | При публикации от имени компании используйте название вашей компании. |
+| description | Обязательно | Введите описание функциональных возможностей расширения. |
 | iconUrl | Рекомендуется при публикации в веб-канале центра администрирования Windows | URL-адрес для значка, отображаемого в диспетчере расширений. |
 | projectUrl | Требуется для публикации в веб-канале центра администрирования Windows | URL-адрес веб-сайта расширения. Если у вас нет отдельного веб-сайта, используйте URL-адрес веб-страницы пакета в канале NuGet. |
 | licenseUrl | Требуется для публикации в веб-канале центра администрирования Windows | URL-адрес лицензионного соглашения для вашего расширения. |
-| файлы | Обязательный | Эти два параметра задают структуру папок, которую Центр администрирования Windows ожидает для расширений пользовательского интерфейса и подключаемых модулей шлюза. |
+| files | Обязательно | Эти два параметра задают структуру папок, которую Центр администрирования Windows ожидает для расширений пользовательского интерфейса и подключаемых модулей шлюза. |
 
 ### <a name="3-build-the-extension-nuget-package"></a>3. Создание пакета NuGet для расширения
 
 Используя созданный ранее файл. nuspec, вы создадите файл NuGet Package. nupkg, который можно передать и опубликовать в веб-канале NuGet.
 
-1. Скачайте средство NuGet. exe CLI с [веб-сайта средств клиента NuGet](https://docs.microsoft.com/nuget/install-nuget-client-tools).
-2. Выполните команду "NuGet. exe Pack [. nuspec File name]", чтобы создать файл nupkg.
+1. Скачайте средство nuget.exe CLI с [веб-сайта средств клиента NuGet](https://docs.microsoft.com/nuget/install-nuget-client-tools).
+2. Выполните команду "пакет nuget.exe [. nuspec]", чтобы создать файл nupkg.
 
 ### <a name="4-signing-your-extension-nuget-package"></a>4. Подписывание пакета NuGet для расширения
 
@@ -148,7 +145,7 @@ ms.locfileid: "75950085"
 
 ### <a name="submit-an-extension-review-request-to-microsoft"></a>Отправка запроса на проверку расширения в корпорацию Майкрософт
 
-Чтобы отправить запрос на проверку расширения, введите следующие сведения и отправьте сообщение электронной почты по адресу [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request). Мы ответим на ваш адрес электронной почты в течение недели.
+Чтобы отправить запрос на проверку расширения, введите следующие сведения и отправьте их по электронной почте в [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Review%20Request) . Мы ответим на ваш адрес электронной почты в течение недели.
 
 ```
 Windows Admin Center Extension Review Request
@@ -167,4 +164,4 @@ Windows Admin Center Extension Review Request
 - Подробное описание расширения, включая снимки экрана или видео
 - Адрес электронной почты или компонент веб-сайта для получения отзывов или вопросов
 
-Когда вы будете готовы опубликовать расширение, отправьте сообщение электронной почты по адресу [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Package%20Review) и получите инструкции по отправке вашего пакета расширения. После получения пакета мы рассмотрим и, если он утвержден, опубликуйте его в веб-канале центра администрирования Windows.
+Когда вы будете готовы опубликовать расширение, отправьте электронное письмо по адресу, [wacextensionrequest@microsoft.com](mailto:wacextensionrequest@microsoft.com?subject=Windows%20Admin%20Center%20Extension%20Package%20Review) и мы предложим вам инструкции по отправке вашего пакета расширения. После получения пакета мы рассмотрим и, если он утвержден, опубликуйте его в веб-канале центра администрирования Windows.
