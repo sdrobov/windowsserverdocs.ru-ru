@@ -1,4 +1,4 @@
-# [Удаленный](index.md)
+# [Удаленный](index.yml)
 ## [Службы MultiPoint](multipoint-services/MultiPoint-Services.md)
 ### [Планирование развертывания служб MultiPoint](multipoint-services/Planning-a-MultiPoint-Services-Deployment.md)
 #### [Основные сведения о службах MultiPoint](multipoint-services/Introducing-MultiPoint-services.md)
@@ -278,7 +278,7 @@
 ####### [Шаг 1. Планирование инфраструктуры DirectAccess](remote-access/directaccess/add-to-existing-vpn/step-1-plan-da-inf-davpn.md)
 ####### [Шаг 2. Планирование развертывания DirectAccess](remote-access/directaccess/add-to-existing-vpn/step-2-plan-da-davpn.md)
 ###### [Включение DirectAccess](remote-access/directaccess/add-to-existing-vpn/Enable-directAccess.md)
-####### [Шаг 1. Настройка инфраструктуры DirectAccess](remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md).
+####### [Шаг 1. Настройка инфраструктуры DirectAccess](remote-access/directaccess/add-to-existing-vpn/step-1-configure-da-inf-davpn.md)
 ####### [Шаг 2. Настройка сервера DirectAccess-VPN](remote-access/directaccess/add-to-existing-vpn/step-2-configure-server-davpn.md)
 ####### [Шаг 3. Проверка развертывания](remote-access/directaccess/add-to-existing-vpn/step-3-verify-davpn.md)
 
