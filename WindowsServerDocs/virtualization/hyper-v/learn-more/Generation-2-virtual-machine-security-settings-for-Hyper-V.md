@@ -9,12 +9,12 @@ ms.assetid: 06ab4f5f-6b8e-4058-8108-76785aa93d4c
 author: larsiwer
 ms.author: kathydav
 ms.date: 10/04/2016
-ms.openlocfilehash: 7eb867529d38ab21ee21c19f92c89ed4128b0ea4
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 1b3c7b636d9c93ff0392f266d1e6e18d36dfd15f
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80860807"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548919"
 ---
 # <a name="generation-2-virtual-machine-security-settings-for-hyper-v"></a>Параметры безопасности виртуальных машин 2-го поколения для Hyper-V
 
@@ -47,7 +47,7 @@ ms.locfileid: "80860807"
 
 - [Mitigate threats by using Windows 10 security features](https://docs.microsoft.com/windows/security/threat-protection/overview-of-threat-mitigations-in-windows-10) (Устранение рисков с помощью функций безопасности Windows 10).  
 - [Should I create a generation 1 or 2 virtual machine in Hyper-V?](../plan/Should-I-create-a-generation-1-or-2-virtual-machine-in-Hyper-V.md) (Следует ли создавать виртуальные машины 1-го и 2-го поколения в Hyper-V?).  
-- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) (Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windows).  
+- [Supported Linux and FreeBSD virtual machines for Hyper-V on Windows](../Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md) (Поддерживаемые виртуальные машины Linux и FreeBSD для Hyper-V в Windos).  
 
 ## <a name="encryption-support-settings-in-hyper-v-manager"></a>Параметры поддержки шифрования в диспетчере Hyper-V
 
@@ -83,4 +83,4 @@ ms.locfileid: "80860807"
 
 Вы можете создать экранированную виртуальную машину для локального запуска без настройки службы защиты узла. Но если перенести ее на другой узел, вы не сможете ее запустить. Необходимо обновить предохранитель ключа для этой виртуальной машины, чтобы авторизовать новый узел для запуска виртуальной машины. Дополнительные сведения см. в статье [Защищенная структура и экранированные виртуальные машины](https://go.microsoft.com/fwlink/?LinkId=746381).  
 
-Дополнительные сведения о безопасности в Windows Server см. в [этой статье](../../../security/Security-and-Assurance.md).  
+Дополнительные сведения о безопасности в Windows Server см. в [этой статье](../../../security/Security-and-Assurance.yml).  

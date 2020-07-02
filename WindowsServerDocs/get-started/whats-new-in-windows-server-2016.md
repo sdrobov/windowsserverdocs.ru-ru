@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: c3eb62d53ef11d5531590e1a6d46cd6cacaf2e4a
-ms.sourcegitcommit: 5bc5aaf341c711113ca03d1482f933b05b146007
+ms.openlocfilehash: 01b06c2869469ee65e23df2b1f5ca35fb266d234
+ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2020
-ms.locfileid: "85094537"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85548737"
 ---
 # <a name="whats-new-in-windows-server-2016"></a>Новые возможности Windows Server 2016
 
@@ -23,7 +23,7 @@ ms.locfileid: "85094537"
 
 ![Значок, показывающий газету](media/whats-new.png) Дополнительные сведения о новых возможностях Windows Server см. в [этой статье](whats-new-in-windows-server.md). В этом разделе рассказывается о новых и измененных возможностях в Windows Server&reg; 2016. Приведенные здесь новые возможности и изменения, скорее всего, окажут наибольшее влияние во время работы с этим выпуском.
 
-## <a name="compute"></a>[Compute](../virtualization/virtualization.md)
+## <a name="compute"></a>[Compute](../virtualization/virtualization.yml)
 
 Область виртуализации охватывает продукты для виртуализации и средства разработки, развертывания и поддержки Windows Server для ИТ-специалистов.  
 
@@ -109,8 +109,8 @@ Windows Server 2016 и Windows 10 включает новую функцию P
 
 Для улучшения поведения TCP при восстановлении после потери пакетов мы реализовали функции Tail Loss Probe (TLP) и Recent Acknowledgement (RACK). TLP позволяет преобразовать время ожидания повторной передачи в быстрое восстановление, а RACK сокращает время, необходимое быстрому восстановлению для повторной передачи потерянного пакета. 
 
-## <a name="security-and-assurance"></a>[Безопасность и контроль](../security/Security-and-Assurance.md)  
-Включает решения и компоненты в области безопасности, которые ИТ-специалисты могут развертывать в центре обработки данных и облачной среде. Общие сведения о безопасности в Windows Server 2016 см. в статье [Безопасность и контроль](../security/Security-and-Assurance.md).  
+## <a name="security-and-assurance"></a>[Безопасность и контроль](../security/Security-and-Assurance.yml)  
+Включает решения и компоненты в области безопасности, которые ИТ-специалисты могут развертывать в центре обработки данных и облачной среде. Общие сведения о безопасности в Windows Server 2016 см. в статье [Безопасность и контроль](../security/Security-and-Assurance.yml).  
 
 ### <a name="just-enough-administration"></a>Just Enough Administration  
 Just Enough Administration в Windows Server 2016 — это технология безопасности, позволяющая делегировать администрирование всех компонентов, которыми можно управлять через Windows PowerShell. Возможности включают в себя поддержку выполнения с сетевым удостоверением, подключения через PowerShell Direct, безопасное копирование файлов из конечных точек JEA или в них, а также настройку консоли PowerShell для запуска в контексте JEA по умолчанию. Дополнительные сведения см. в статье о [JEA на GitHub](https://aka.ms/JEA).
