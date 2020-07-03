@@ -1,6 +1,6 @@
 ---
 title: изменение;
-description: Справочный раздел по команде Edit, который запускает редактор MS-DOS, что позволяет создавать и изменять текстовые файлы ASCII.
+description: Справочная статья по команде Edit, запускающей редактор MS-DOS, что позволяет создавать и изменять текстовые файлы ASCII.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a9f6c78889f466015d60149c27a87dcefe840133
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: a28af13c5f627010dce1321027b8a246560829f1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436919"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930490"
 ---
 # <a name="edit"></a>изменение;
 
@@ -52,7 +52,7 @@ edit [/b] [/h] [/r] [/s] [/<nnn>] [[<drive>:][<path>]<filename> [<filename2> [..
 edit
 ```
 
-Чтобы создать и изменить файл с именем *невтекстфиле. txt* в текущем каталоге, введите:
+Чтобы создать и изменить файл с именем *newtextfile.txt* в текущем каталоге, введите:
 
 ```
 edit newtextfile.txt

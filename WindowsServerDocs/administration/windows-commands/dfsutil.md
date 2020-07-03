@@ -1,6 +1,6 @@
 ---
 title: Dfsutil
-description: Справочный раздел команды Dfsutil, которая управляет пространствами имен, серверами и клиентами DFS.
+description: Справочная статья по команде Dfsutil, которая управляет пространствами имен, серверами и клиентами DFS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d6905d90ee42958e47dfed4869520000a4fd3ddf
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: c741635b2566a7bec7775de691105c15591caa62
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992621"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930616"
 ---
 # <a name="dfsutil"></a>Dfsutil
 
@@ -45,7 +45,7 @@ ms.locfileid: "82992621"
 | диагностик | Выполните диагностику или просмотрите дфсдирс/дфспас. |
 | cache | Отображает или очищает кэш клиента. |
 
-Чтобы получить дополнительные сведения о каждой из этих команд, откройте командную строку на сервере с установленными средствами управления пространствами имен DFS и введите `dfsutil client /?`, `dfsutil diag /?`или. `dfsutil cache /?`
+Чтобы получить дополнительные сведения о каждой из этих команд, откройте командную строку на сервере с установленными средствами управления пространствами имен DFS и введите `dfsutil client /?` , `dfsutil diag /?` или `dfsutil cache /?` .
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

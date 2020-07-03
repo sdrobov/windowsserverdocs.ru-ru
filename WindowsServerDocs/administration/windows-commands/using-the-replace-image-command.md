@@ -1,6 +1,6 @@
 ---
 title: Replace-Image
-description: Справочный раздел по Replace-Image, который заменяет существующий образ новой версией этого образа.
+description: Справочная статья для Replace-Image, которая заменяет существующий образ новой версией этого образа.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9dad35e54f064e02b863059ae6da9378403ee4f9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b98bf14b944ce75a21efbbb38a211e60ca952d39
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720322"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931352"
 ---
 # <a name="using-the-replace-image-command"></a>Использование команды replace-Image
 
@@ -49,29 +49,29 @@ wdsutil [Options] /replace-Imagmedia:<Image name> [/Server:<Server name>]
 |Параметр|Описание|
 |-------|--------|
 носител<Image name>|Указывает имя заменяемого образа.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 mediaType: {Загрузка &#124; установка}|Указывает тип заменяемого образа.|
 |/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру заменяемого образа. Так как в разных архитектурах можно использовать одинаковое имя образа для разных образов загрузки, указание архитектуры гарантирует замену нужного образа.|
-|[/Филенаме:<File name>]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-|/реплацементимаже|Задает параметры для замещающего изображения. Эти параметры задаются с помощью следующих параметров.<p>-mediaFile: <file path> — указывает имя и расположение (полный путь) для нового файла WIM.<br />-[/Саурцеимаже: <image name>] — указывает образ, используемый, если WIM-файл содержит несколько образов. Этот параметр применяется только к образам установки.<br />-[/Name:<Image name>] задает отображаемое имя образа.<br />-[/Description:<Image description>] — задает описание образа.|
+|[/Филенаме: <File name> ]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+|/реплацементимаже|Задает параметры для замещающего изображения. Эти параметры задаются с помощью следующих параметров.<p>-mediaFile: <file path> — указывает имя и расположение (полный путь) для нового файла WIM.<br />-[/Саурцеимаже: <image name> ] — указывает образ, используемый, если WIM-файл содержит несколько образов. Этот параметр применяется только к образам установки.<br />-[/Name: <Image name> ] задает отображаемое имя образа.<br />-[/Description: <Image description> ] — задает описание образа.|
 ## <a name="examples"></a>Примеры
 Чтобы заменить загрузочный образ, введите одно из следующих действий:
 ```
 wdsutil /replace-Imagmedia:WinPE Boot Imagemediatype:Boot /Architecture:x86 /replacementImagmediaFile:C:\MyFolder\Boot.wim
-wdsutil /verbose /Progress /replace-Imagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim 
+wdsutil /verbose /Progress /replace-Imagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /Filename:boot.wim
 /replacementImagmediaFile:\\MyServer\Share\Boot.wim /Name:My WinPE Image /Description:WinPE Image with drivers
 ```
 Чтобы заменить образ установки, введите одно из следующих действий:
 ```
 wdsutil /replace-Imagmedia:Windows Vista Homemediatype:Install /replacementImagmediaFile:C:\MyFolder\Install.wim
-wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 
+wdsutil /verbose /Progress /replace-Imagmedia:Windows Vista Pro /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1
 /Filename:Install.wim /replacementImagmediaFile:\\MyServer\Share \Install.wim /SourceImage:Windows Vista Ultimate /Name:Windows Vista Desktop /Description:Windows Vista Ultimate with standard business applications.
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки[с помощью команды Add-](using-the-add-image-command.md)
-Image с помощью команды "[Копировать](using-the-copy-image-command.md)
-изображение" с помощью команды "[Export](using-the-export-image-command.md)
-
--Image" с[помощью команды "](using-the-get-image-command.md)[Replace](using-the-replace-image-command.md)
-/Image" с командой "заменить на изображение[": Set-Image](subcommand-set-image.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-add-image-command.md) 
+ Add-Image [Использование команды](using-the-copy-image-command.md) 
+ Copy-Image [Использование команды](using-the-export-image-command.md) 
+ Export-Image [Использование команды](using-the-get-image-command.md) 
+ Get-Image [Использование команды](using-the-replace-image-command.md) 
+ Replace-Image [Подкоманда: Set-Image](subcommand-set-image.md)

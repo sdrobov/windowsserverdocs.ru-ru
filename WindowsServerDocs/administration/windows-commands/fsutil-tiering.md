@@ -1,6 +1,6 @@
 ---
 title: fsutil tiering
-description: Справочный раздел по многоуровневой команде fsutil, который обеспечивает управление функциями уровня хранилища, например установку и отключение флагов и списков уровней.
+description: Справочная статья для команды fsutil tiering, которая позволяет управлять функциями уровня хранилища, например устанавливать и отключать флаги и списки уровней.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: e5f55f3e-8d2a-4526-8d67-36a539126c22
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 4fad2f5a7d868a38e187f49598235c40590e8eeb
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: 1463a6c50d2f735456e0675bdeef235cb5484b3e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149767"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932093"
 ---
 # <a name="fsutil-tiering"></a>fsutil tiering
 
@@ -34,7 +34,7 @@ fsutil tiering [tierlist] <volume>
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 | --------- | ----------- |
 | клеарфлагс | Отключает флаги поведения уровней для тома. |
 | `<volume>` | Указывает том. |

@@ -1,6 +1,6 @@
 ---
 title: vol
-description: Справочный раздел для Vol, который отображает метку тома диска и серийный номер, если они существуют.
+description: Справочная статья для Vol, которая отображает метку тома диска и серийный номер, если они существуют.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: aa900ade6f434a53ac940d097407aa90509e9141
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: acc2f3ee16604d7b980fa0ddf6e2f42bd1e47435
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720279"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931322"
 ---
 # <a name="vol"></a>vol
 
@@ -32,7 +32,7 @@ vol [<Drive>:]
 
 |Параметр|Описание|
 |---------|-----------|
-|\<> диска:|Указывает диск, содержащий диск, для которого требуется отобразить метку тома и серийный номер.|
+|\<Drive>:|Указывает диск, содержащий диск, для которого требуется отобразить метку тома и серийный номер.|
 |/?|Отображение справки в командной строке.|
 
 ## <a name="additional-references"></a>Дополнительные ссылки

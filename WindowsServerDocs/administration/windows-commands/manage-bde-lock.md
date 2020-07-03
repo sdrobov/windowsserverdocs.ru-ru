@@ -1,6 +1,6 @@
 ---
 title: Управление — блокировка BDE
-description: Справочный раздел по команде Manage-bde Lock, который блокирует диск, защищенный BitLocker, чтобы предотвратить доступ к нему, если не указан ключ Unlock.
+description: Справочная статья по команде Manage-bde Lock, которая блокирует диск, защищенный BitLocker, чтобы предотвратить доступ к нему, если не указан ключ блокировки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 340dc7eb07eaab2583e8b325042803fd8fc82184
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: b67342579c827ad195ddf506e529fbfb370a6d94
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222876"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931622"
 ---
 # <a name="manage-bde-lock"></a>Управление — блокировка BDE
 
@@ -31,7 +31,7 @@ manage-bde -lock [<drive>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 | Параметр | Описание |
 | --------- | ----------- |
 | `<drive>` | Представляет букву диска, за которой следует двоеточие. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

@@ -1,6 +1,6 @@
 ---
 title: diantz
-description: Справочный раздел по команде диантз, которая упаковывает существующие файлы в CAB-файл.
+description: Справочная статья по команде диантз, которая упаковывает существующие файлы в CAB-файл.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e45c0c4f71bc7faf6d5de0fa198ac872f6ff2597
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 61a10c2fb67225de1060d64db6fda4e4ff703a7b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992500"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930607"
 ---
 # <a name="diantz"></a>diantz
 
@@ -38,7 +38,7 @@ diantz [/v[<n>]] [/d var=<value> ...] /f <directives_file> [...]
 | /f `<directives_file>` | Файл с директивами **диантз** (может повторяться). |
 | /d var =`<value>` | Определяет переменную с указанным значением. |
 | /l`<dir>` | Расположение для размещения назначения (по умолчанию текущий каталог). |
-| /v [`<n>`] | Задать уровень детализации отладки (0 = нет,..., 3 = полный). |
+| /v [ `<n>` ] | Задать уровень детализации отладки (0 = нет,..., 3 = полный). |
 | /? | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки

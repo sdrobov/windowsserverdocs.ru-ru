@@ -1,6 +1,6 @@
 ---
-title: Wbadmin start системстатебаккуп
-description: Справочный раздел по Wbadmin start системстатебаккуп, который создает резервную копию состояния системы локального компьютера и сохраняет его в указанном расположении.
+title: wbadmin start systemstatebackup
+description: Справочная статья по Wbadmin start системстатебаккуп, которая создает резервную копию состояния системы на локальном компьютере и сохраняет ее в указанном расположении.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5de3531f19312b9d0d7969a63639db6388487bc2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1e92c508d2c9ca9ae759d81292ec3d511144dbd7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930917"
 ---
-# <a name="wbadmin-start-systemstatebackup"></a>Wbadmin start системстатебаккуп
+# <a name="wbadmin-start-systemstatebackup"></a>wbadmin start systemstatebackup
 
 
 
@@ -42,7 +42,7 @@ wbadmin start systemstatebackup
 | -backupTarget | Указывает расположение, в котором будет храниться резервная копия. Для расположения хранилища требуется буква диска или том на основе GUID в формате: \\ \\ ? \волуме{*GUID*}.</br>Резервное копирование состояния системы в общую сетевую папку не поддерживается на компьютере под Windows Server 2008. Если сервер работает под управлением Windows Server 2008 R2 или более поздней версии, можно использовать команду Command **-backupTarget: \\ \\ сервернаме\шаредфолдер \\ ** для хранения резервных копий состояния системы. |
 |    -quiet     |                                                                                                                                                                                                   Выполняет подкоманду без запросов пользователю.                                                                                                                                                                                                    |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 Сведения о сохранении резервной копии состояния системы на том, который, в свою очередь, содержит файлы состояния системы, см. в статье 944530 базы знаний Майкрософт ( [https://go.microsoft.com/fwlink/?LinkId=110439](https://go.microsoft.com/fwlink/?LinkId=110439) ).
 

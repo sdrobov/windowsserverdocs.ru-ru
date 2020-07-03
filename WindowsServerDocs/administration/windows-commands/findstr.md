@@ -1,6 +1,6 @@
 ---
 title: findstr
-description: Справочный раздел для команды findstr, которая выполняет поиск шаблонов текста в файлах.
+description: Справочная статья по команде findstr, которая выполняет поиск шаблонов текста в файлах.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7f8d353b6d3aee77960b208d89372aee5dca07e3
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: f0cf30f19ef23c1b3275b6b7632b03f0dd8e433a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436120"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931437"
 ---
 # <a name="findstr"></a>findstr
 
@@ -48,7 +48,7 @@ findstr [/b] [/e] [/l | /r] [/s] [/i] [/x] [/v] [/n] [/m] [/o] [/p] [/f:<file>] 
 | /g`<file>` | Возвращает строки поиска из указанного файла. |
 | /d`<dirlist>` | Выполняет поиск в указанном списке каталогов. Каждый каталог должен быть отделен точкой с запятой (например,;) `dir1;dir2;dir3` . |
 | /`<colorattribute>` | Задает атрибуты цвета с двумя шестнадцатеричными цифрами. Введите дополнительные `color /?` сведения. |
-| `<strings>` | Задает текст для поиска в файле *filename*. Обязательный элемент. |
+| `<strings>` | Задает текст для поиска в файле *filename*. Обязательный. |
 | `[\<drive>:][<path>]<filename>[ ...]` | Указывает расположение и файл или файлы для поиска. Требуется по крайней мере одно имя файла. |
 | /? | Отображает справку в командной строке. |
 
@@ -99,7 +99,7 @@ findstr hello there x.y
 findstr /c:hello there x.y
 ```
 
-Чтобы найти все вхождения слова « *Windows* » (с заглавной прописной буквой W) в файле « *предложение. txt*», введите:
+Чтобы найти все вхождения слова *Windows* (с заглавной буквой W) в файле *proposal.txt*, введите:
 
 ```
 findstr Windows proposal.txt
@@ -117,7 +117,7 @@ findstr /s /i Windows *.*
 findstr /b /n /r /c:^ *FOR *.bas
 ```
 
-Чтобы получить список точных файлов, которые необходимо найти в текстовом файле, используйте условия поиска в файле *стринглист. txt*, чтобы найти файлы, перечисленные в списке *FileList. txt*, а затем сохранить результаты в файле *Results. out*, введите:
+Чтобы получить список точных файлов, которые необходимо найти в текстовом файле, используйте условия поиска в файле *stringlist.txt*, чтобы найти файлы, перечисленные в *filelist.txt*, а затем сохраните результаты в файле *Results. out*, введите:
 
 ```
 findstr /g:stringlist.txt /f:filelist.txt > results.out

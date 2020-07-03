@@ -1,6 +1,6 @@
 ---
 title: Подкоманда Start — пространство имен
-description: Справочный раздел для подкоманды Start-Namespace, который запускает пространство имен, запланированное для приведения.
+description: Справочная статья для подкоманды Start-Namespace, которая запускает пространство имен, запланированное для приведения.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1562fcb6c61533fcc9994e9011bf7d61154c06f7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d2d9bcd58a0a99d98d8679b84c223cfa42a67778
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721661"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931521"
 ---
 # <a name="subcommand-start-namespace"></a>Подкоманда: Start-Namespace
 
@@ -30,8 +30,8 @@ wdsutil /start-Namespace /Namespace:<Namespace name[/Server:<Server name>]
 
 |          Параметр          |                                                                                                                                                                                             Описание                                                                                                                                                                                             |
 |-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Namespace: <имя пространства имен| Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-   **Сервер развертывания**. синтаксис имени пространства имен —/НАМСПАЦЕ: WDS:<Image group>/<Image name>/<Index>. Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Транспортный сервер**. это имя должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
-|   [/Server:<Server name>]   |                                                                                                           Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.                                                                                                           |
+| /Namespace: <имя пространства имен| Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-   **Сервер развертывания**. синтаксис имени пространства имен —/НАМСПАЦЕ: WDS: <Image group> / <Image name> / <Index> . Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Транспортный сервер**. это имя должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
+|   [/Server: <Server name> ]   |                                                                                                           Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.                                                                                                           |
 
 ## <a name="examples"></a>Примеры
 Чтобы запустить пространство имен, введите одно из следующих действий:
@@ -40,7 +40,7 @@ wdsutil /start-Namespace /Namespace:Custom Auto 1
 wdsutil /start-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки[с помощью команды](using-the-get-allnamespaces-command.md)
-[Using the new-Namespace Command](using-the-new-namespace-command.md)
-Get-аллнамеспацес с помощью команды[Remove-](using-the-remove-namespace-command.md) Namespace
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-get-allnamespaces-command.md) 
+ Get-аллнамеспацес [Использование команды](using-the-new-namespace-command.md) 
+ New-Namespace [Использование команды Remove-Namespace](using-the-remove-namespace-command.md)

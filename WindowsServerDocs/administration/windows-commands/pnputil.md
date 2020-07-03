@@ -1,6 +1,6 @@
 ---
 title: pnputil
-description: Справочный раздел по команде pnputil, который добавляет пакеты драйверов, удаляет пакеты драйверов и перечисляет пакеты драйверов, которые находятся в хранилище драйверов, с помощью служебной программы pnputil.exe.
+description: Справочная статья по команде pnputil, которая добавляет пакеты драйверов, удаляет пакеты драйверов и перечисляет пакеты драйверов, которые находятся в хранилище драйверов, с помощью служебной программы pnputil.exe.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6484a3e55c6e5f3b4cb51119ead5cb488dca0721
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 01b8aee1aa4dfb85b590c9d4abbec471fc437da8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472404"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930235"
 ---
 # <a name="pnputil"></a>pnputil
 
@@ -28,7 +28,7 @@ pnputil.exe [-f | -i] [ -? | -a | -d | -e ] <INF name>
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | -a | Указывает, что добавляет определенный INF-файл. |
 | -d | Указывает, следует удалить указанный INF-файл. |

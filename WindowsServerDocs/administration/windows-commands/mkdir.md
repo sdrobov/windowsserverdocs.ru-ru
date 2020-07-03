@@ -1,6 +1,6 @@
 ---
 title: mkdir
-description: Справочный раздел по команде mkdir, который создает каталог или подкаталог.
+description: Справочная статья по команде mkdir, которая создает каталог или подкаталог.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 921e369cb1550bca8e26cc0beada4c1f5c1c3d5b
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: c7c1569e82143443de861216e40b904de4481a03
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354604"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931287"
 ---
 # <a name="mkdir"></a>mkdir
 

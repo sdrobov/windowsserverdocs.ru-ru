@@ -1,6 +1,6 @@
 ---
-title: Logman Create cfg
-description: Справочный раздел по команде Logman Create cfg, который создает сборщик данных конфигурации.
+title: logman create cfg
+description: Справочная статья по команде Logman Create cfg, которая создает сборщик данных конфигурации.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 518b0c7bddf1d74522a376aafb7da85abb849ac4
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: f4ae073561ddfc26f4a6a1af834113cff0cc9e29
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222980"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932081"
 ---
-# <a name="logman-create-cfg"></a>Logman Create cfg
+# <a name="logman-create-cfg"></a>logman create cfg
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

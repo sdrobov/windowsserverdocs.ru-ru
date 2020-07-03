@@ -1,6 +1,6 @@
 ---
 title: echo (вывод на экран)
-description: Справочный раздел по команде Echo, которая отображает сообщения или включает или отключает функцию вывода команд.
+description: Справочная статья по команде Echo, которая отображает сообщения или включает или отключает функцию вывода команд.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ca2a10a5d52c9d175d453a164f3ab4f47ca0841d
-ms.sourcegitcommit: 430c6564c18f89eecb5bbc39cfee1a6f1d8ff85b
+ms.openlocfilehash: bc463efef38e07c1ce8b9ebee1ddd7bdfd7d3066
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83855668"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930525"
 ---
 # <a name="echo"></a>echo (вывод на экран)
 
@@ -35,7 +35,7 @@ echo [on | off]
 | `<message>` | Задает текст, отображаемый на экране. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - `echo <message>`Команда особенно полезна при отключенном **эхо** . Чтобы отобразить сообщение, которое содержит несколько строк без отображения команд, можно включить несколько `echo <message>` команд после команды **echo off** в пакетной программе.
 
@@ -104,7 +104,7 @@ echo This directory contains no text files.
 This directory contains no text files.
 ```
 
-Если TXT-файлы найдены при запуске пакетного файла, отображаются следующие выходные данные (в этом примере предполагается, что файлы file1. txt, file2. txt и Файл3. txt существуют):
+Если TXT-файлы найдены при запуске пакетного файла, отображаются следующие выходные данные (в этом примере предполагается, что файлы File1.txt, File2.txt и File3.txt существуют):
 
 ```
 This directory contains the following text files:

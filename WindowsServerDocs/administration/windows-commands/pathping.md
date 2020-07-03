@@ -1,6 +1,6 @@
 ---
 title: pathping
-description: Справочный раздел по команде Pathping, которая получает сведения о задержке сети и сетевой утрате в промежуточных прыжках между источником и назначением.
+description: Справочная статья по команде Pathping, которая получает сведения о задержке сети и сетевой утрате в промежуточных прыжках между источником и назначением.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 6f3f90be7be29f1c50e70fa8ec49685ee1843c45
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 887a819c28d546f8c73d07fedbefbe27b65e7a5a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472560"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931390"
 ---
 # <a name="pathping"></a>pathping
 
@@ -35,7 +35,7 @@ pathping [/n] [/h <maximumhops>] [/g <hostlist>] [/p <Period>] [/q <numqueries> 
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | /n | Предотвращает попытки **pathping** разрешить IP-адреса промежуточных маршрутизаторов к их именам. Это может ускорить отображение результатов **pathping** . |
 | /h`<maximumhops>` | Указывает максимальное число прыжков в пути для поиска целевого объекта (назначение). Значение по умолчанию — 30 прыжков. |
@@ -49,7 +49,7 @@ pathping [/n] [/h <maximumhops>] [/g <hostlist>] [/p <Period>] [/q <numqueries> 
 | `<targetname>` | Указывает назначение, которое определяется по IP-адресу или имени узла. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Все параметры учитывают регистр.
 

@@ -1,6 +1,6 @@
 ---
-title: список поставщиков
-description: Справочный раздел для команды list providers, в которой перечислены поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
+title: list providers
+description: Справочная статья по команде list providers, в которой перечислены поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98615dfa92c24b91babb55ae3545065834887e5d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 64996c7a85fa7ad20a5ffbb1c22ae3396820b676
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817244"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931800"
 ---
-# <a name="list-providers"></a>список поставщиков
+# <a name="list-providers"></a>list providers
 
 Перечисляет поставщики теневого копирования, которые в настоящее время зарегистрированы в системе.
 

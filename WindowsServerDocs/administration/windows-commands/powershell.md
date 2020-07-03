@@ -1,6 +1,6 @@
 ---
 title: PowerShell
-description: Справочный раздел по команде PowerShell, который открывает консоль PowerShell из командной строки.
+description: Справочная статья по команде PowerShell, которая открывает консоль PowerShell из командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: e38684943c6c0c9a4371803d7e473c14cbef7a91
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 8a252efe57cec1e77bd4d814ced75decb1f2ceb7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472349"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931372"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -54,7 +54,7 @@ Windows PowerShell — это оболочка командной строки �
 
 - Чтобы завершить сеанс Windows PowerShell в окне командной строки, введите команду `exit` . Типичная Командная строка возвращает.
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Комментарии
 
 - Полный список параметров командной строки **PowerShell.exe** см. в разделе [about_PowerShell.Exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe).
 

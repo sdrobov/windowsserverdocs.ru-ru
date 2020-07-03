@@ -1,6 +1,6 @@
 ---
-title: Wbadmin останавливает задание
-description: Справочный раздел по параметру Wbadmin остановить задание, который отменяет операцию резервного копирования или восстановления, которая выполняется в данный момент. Отмененные операции не могут быть перезапущены — необходимо повторно выполнить отмененную операцию резервного копирования или восстановления с начала.
+title: wbadmin stop job
+description: Справочная статья по заданию Wbadmin остановить задание, которая отменяет операцию резервного копирования или восстановления, которая выполняется в данный момент. Отмененные операции не могут быть перезапущены — необходимо повторно выполнить отмененную операцию резервного копирования или восстановления с начала.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e6d2be62468102060aad502d47efbb6eae4fca8
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2c6961b1fae425d06577fce3a93dca6262dd7127
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930884"
 ---
-# <a name="wbadmin-stop-job"></a>Wbadmin останавливает задание
+# <a name="wbadmin-stop-job"></a>wbadmin stop job
 
 
 

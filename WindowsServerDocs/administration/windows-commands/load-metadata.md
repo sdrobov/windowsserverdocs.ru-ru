@@ -1,6 +1,6 @@
 ---
-title: загрузить метаданные
-description: Справочный раздел по команде Load metadata, который загружает файл metadata. cab перед импортом транспортной теневой копии или загружает метаданные модуля записи в случае восстановления.
+title: load metadata
+description: Справочная статья по команде Load metadata, которая загружает файл metadata. cab перед импортом транспортной теневой копии или загружает метаданные модуля записи в случае восстановления.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c7dc967476412261e7afc228088566f74ec4208c
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 01e782d0214da70f831b81120aff3c5097895036
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931683"
 ---
 # <a name="load-metadata"></a>Загрузить метаданные
 
@@ -31,9 +31,9 @@ load metadata [<drive>:][<path>]<metadata.cab>
 | Параметр | Описание |
 | --------- | ----------- |
 | `[<drive>:][<path>]` | Указывает расположение файла метаданных. |
-| Metadata. cab | Указывает файл metadata. cab для загрузки. |
+| metadata.cab | Указывает файл metadata. cab для загрузки. |
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 - С помощью команды **Import** можно импортировать транспортную теневую копию на основе метаданных, указанных в параметре **загрузить метаданные**.
 
@@ -41,7 +41,7 @@ load metadata [<drive>:][<path>]<metadata.cab>
 
 ## <a name="examples"></a>Примеры
 
-Чтобы загрузить файл метаданных с именем Metafile. cab из расположения по умолчанию, введите:
+Чтобы загрузить файл метаданных с именем metafile.cab из расположения по умолчанию, введите:
 
 ```
 load metadata metafile.cab

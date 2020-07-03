@@ -1,6 +1,6 @@
 ---
 title: nslookup view
-description: Справочный раздел по команде nslookup View, который сортирует и перечисляет выходные данные предыдущих команд **Ls** или подкоманд.
+description: Справочная статья по команде nslookup View, которая сортирует и перечисляет выходные данные предыдущих команд **Ls** или подкоманд.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 74ee505a2a84eab23c218c145606d9e58fcd4b5f
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: ef16b03fbf5e109e580d243dfffc3b8f1d5712da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721167"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930230"
 ---
 # <a name="nslookup-view"></a>nslookup view
 

@@ -1,6 +1,6 @@
 ---
 title: dnscmd
-description: Справочный раздел по команде dnscmd, который является интерфейсом командной строки для управления DNS-серверами.
+description: Справочная статья по команде dnscmd, которая является интерфейсом командной строки для управления DNS-серверами.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c279513549ba149974933c33044fa861fa89a62
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 47be29e55c4626f5c05498074f10418730c6a6f3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931299"
 ---
 # <a name="dnscmd"></a>Dnscmd
 
@@ -30,7 +30,7 @@ dnscmd <servername> <command> [<command parameters>]
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание |
+| Параметр | Описание: |
 | --------- | ----------- |
 | `<servername>` | IP-адрес или имя узла удаленного или локального DNS-сервера. |
 
@@ -46,7 +46,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 #### <a name="parameters"></a>Параметры
 
-| Параметр | Описание |
+| Параметр | Описание: |
 | ---------- | ----------- |
 | `<servername>` | Указывает DNS-сервер, которым администратор планирует управлять, представленный IP-адресом, полным доменным именем или именем узла. Если этот параметр пропущен, используется локальный сервер. |
 | `<zonename>` | Указывает полное доменное имя зоны. |
@@ -355,7 +355,7 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 ## <a name="dnscmd-exportsettings-command"></a>dnscmd/експортсеттингс, команда
 
-Создает текстовый файл со списком сведений о конфигурации DNS-сервера. Текстовый файл называется *DnsSettings. txt*. Он находится в `%systemroot%\system32\dns` каталоге сервера. Сведения в файле, создаваемом **dnscmd/експортсеттингс** , можно использовать для устранения неполадок конфигурации или для проверки того, что несколько серверов настроены одинаково.
+Создает текстовый файл со списком сведений о конфигурации DNS-сервера. Текстовый файл называется *DnsSettings.txt*. Он находится в `%systemroot%\system32\dns` каталоге сервера. Сведения в файле, создаваемом **dnscmd/експортсеттингс** , можно использовать для устранения неполадок конфигурации или для проверки того, что несколько серверов настроены одинаково.
 
 ### <a name="syntax"></a>Синтаксис
 

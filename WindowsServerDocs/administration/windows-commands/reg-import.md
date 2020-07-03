@@ -1,6 +1,6 @@
 ---
-title: импорт реестра
-description: Справочный раздел по * * * *-
+title: reg import
+description: Справочная статья по команде reg import, которая копирует содержимое файла, содержащего экспортированные подразделы, записи и значения реестра, в реестр локального компьютера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,46 +9,43 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3e7e033091752f97086fd27fcb94e62469f0cced
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 77c8284dd2341f37292afdfd810b2182686aad68
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722555"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931867"
 ---
-# <a name="reg-import"></a>импорт реестра
-
-
+# <a name="reg-import"></a>reg import
 
 Копирует содержимое файла, содержащего экспортированные подразделы, записи и значения реестра, в реестр локального компьютера.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-Reg import FileName
+reg import <filename>
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Имя файла>|Указывает имя и путь к файлу, который содержит содержимое, копируемое в реестр локального компьютера. Этот файл должен быть создан заранее с помощью команды **reg export**.|
-|/?|Отображает справку по **импорту реестра** в командной строке.|
+| Параметр | Описание |
+|--|--|
+| `<filename>` | Указывает имя и путь к файлу, который содержит содержимое, копируемое в реестр локального компьютера. Этот файл должен быть создан заранее с помощью команды **reg export**. |
+| /? | Отображение справки в командной строке. |
 
-## <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
-В следующей таблице перечислены возвращаемые значения для операции **reg import** .
+- Возвращаемые значения для операции **reg import** :
 
-|Значение|Описание|
-|-----|-----------|
-|0|Успех|
-|1|Сбой|
+    | Значение | Описание: |
+    |--|--|
+    | 0 | Успех |
+    | 1 | Failure |
 
-## <a name="examples"></a>Примеры
+### <a name="examples"></a>Примеры
 
 Чтобы импортировать записи реестра из файла с именем Аппбкуп. reg, введите:
+
 ```
 reg import AppBkUp.reg
 ```
@@ -56,3 +53,5 @@ reg import AppBkUp.reg
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда Reg Export](reg-export.md)

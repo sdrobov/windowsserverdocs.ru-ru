@@ -1,6 +1,6 @@
 ---
 title: query
-description: Справочный раздел по команде запроса, в котором отображаются сведения о процессах, сеансах и удаленный рабочий стол серверах узлов сеансов.
+description: Справочная статья по команде запроса, в которой отображаются сведения о процессах, сеансах и удаленный рабочий стол серверах узлов сеансов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ba5785fb37821848f98383da5b972333dfc8a9cc
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: a00ef08f72108643a045e5b48ec1c69155dd0fd8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471939"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931135"
 ---
 # <a name="query"></a>query
 
@@ -33,7 +33,7 @@ query user
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | [query process](query-process.md) | Отображает сведения о процессах, запущенных на сервере узла сеансов удаленный рабочий стол. |
 | [query session](query-session.md) | Отображает сведения о сеансах на сервере узла сеансов удаленный рабочий стол. |

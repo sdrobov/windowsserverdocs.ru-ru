@@ -1,6 +1,6 @@
 ---
 title: lodctr
-description: Справочный раздел о команде lodctr, которая позволяет зарегистрировать или сохранить имя счетчика производительности и параметры реестра в файле и назначить Доверенные службы.
+description: Справочная статья по команде lodctr, которая позволяет зарегистрировать или сохранить имя счетчика производительности и параметры реестра в файле и назначить Доверенные службы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 221737d68280dabf34c270fccff02071ebf9b5a2
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e8b1cae87818d3f77474e4193b03836bf1c84990
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820184"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931650"
 ---
 # <a name="lodctr"></a>lodctr
 
@@ -39,13 +39,13 @@ lodctr <filename> [/s:<filename>] [/r:<filename>] [/t:<servicename>]
 | /t:`<servicename>` | Указывает, что служба `<servicename>` является доверенной. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Если предоставленные сведения содержат пробелы, заключите его в кавычки (например, "имя файла 1").
 
 ### <a name="examples"></a>Примеры
 
-Чтобы сохранить текущие параметры реестра производительности и пояснительный текст к файлу *perf backup1. txt*, введите:
+Чтобы сохранить текущие параметры реестра производительности и пояснительный текст к *backup1.txtу производительности *файлов, введите:
 
 ```
 lodctr /s:perf backup1.txt

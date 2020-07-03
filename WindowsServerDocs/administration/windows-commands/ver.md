@@ -1,6 +1,6 @@
 ---
 title: ver
-description: Справочный раздел по версии ver, в котором отображается номер операционной системы.
+description: Справочная статья по версии ver, в которой отображается номер операционной системы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7050dddda6cc27c50980f2e44f40e1f682c1d375
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bd9b40fa526c2917b6cdcbc8d54da510eb40bc53
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720312"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931339"
 ---
 # <a name="ver"></a>ver
 
@@ -22,7 +22,7 @@ ms.locfileid: "82720312"
 
 Отображает номер версии операционной системы.
 
-Эта команда поддерживается в командной строке Windows (cmd. exe), но не в PowerShell.
+Эта команда поддерживается в командной строке Windows (Cmd.exe), но не в PowerShell.
 
 
 
@@ -40,7 +40,7 @@ ver
 
 ## <a name="examples"></a>Примеры
 
-Чтобы получить номер версии операционной системы из командной оболочки (cmd. exe), введите:
+Чтобы получить номер версии операционной системы из командной оболочки (cmd.exe), введите:
 
 ```
 ver

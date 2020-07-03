@@ -1,6 +1,6 @@
 ---
-title: Тип FTP
-description: Справочный раздел по команде типа FTP, который задает или отображает тип перемещения файла.
+title: ftp type
+description: Справочная статья по команде типа FTP, которая задает или отображает тип перемещения файла.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 02b6d5b4bd7944c9f4126ba4877360de02586cfb
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: ea0b2a319dae65104db8a215e17fa4b579ee6ffa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820274"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931189"
 ---
-# <a name="ftp-type"></a>Тип FTP
+# <a name="ftp-type"></a>ftp type
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

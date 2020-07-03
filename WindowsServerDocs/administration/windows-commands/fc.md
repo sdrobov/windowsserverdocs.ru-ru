@@ -1,6 +1,6 @@
 ---
 title: fc
-description: Справочный раздел по команде FC, который сравнивает два файла или набора файлов и отображает различия между ними.
+description: Справочная статья по команде FC, в которой сравниваются два файла или набора файлов и отображаются различия между ними.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 146ae51334f40284e15c2a4564de8dd04660bf25
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 6d9e12853d2634f7e7bcbd976b6c301f8e02c0dc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930478"
 ---
 # <a name="fc"></a>fc
 
@@ -48,7 +48,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 
 #### <a name="remarks"></a>Комментарии
 
-- Эта команда имплеметед by К:\виндовс\фк.ЕКСЕ. Эту команду можно использовать в PowerShell, но не забудьте запустить полный исполняемый файл (FC. exe), так как "FC" также является псевдонимом для формата "пользовательский".
+- Эта команда имплеметед by c:\WINDOWS\fc.exe. Эту команду можно использовать в PowerShell, но не забудьте проделать полный исполняемый файл (fc.exe), так как "FC" также является псевдонимом для формата Custom.
 
 - При использовании **FC** для сравнения в ASCII, **FC** отображает различия между двумя файлами в следующем порядке:
 
@@ -86,7 +86,7 @@ fc /b [<drive1:>][<path1>]<filename1> [<drive2:>][<path2>]<filename2>
 fc /a monthly.rpt sales.rpt
 ```
 
-Чтобы создать двоичное сравнение двух пакетных файлов, *Profits. bat* и *доход. bat*, введите:
+Чтобы создать двоичное сравнение двух пакетных файлов, *profits.bat* и *earnings.bat*, введите:
 
 ```
 fc /b profits.bat earnings.bat
@@ -102,20 +102,20 @@ fc /b profits.bat earnings.bat
 FC: earnings.bat longer than profits.bat
 ```
 
-Если файлы Profits. bat и доход. bat идентичны, **FC** отображает следующее сообщение:
+Если файлы profits.bat и earnings.bat идентичны, **FC** отображает следующее сообщение:
 
 ```
 Comparing files profits.bat and earnings.bat
 FC: no differences encountered
 ```
 
-Чтобы сравнить каждый файл BAT в текущем каталоге с файлом *New. bat*, введите:
+Чтобы сравнить каждый файл BAT в текущем каталоге с файлом *new.bat*, введите:
 
 ```
 fc *.bat new.bat
 ```
 
-Чтобы сравнить файл *New. bat* на диске C с файлом *New. bat* на диске D, введите:
+Чтобы сравнить файловый *new.bat* на диске C с файлом *new.bat* на диске D, введите:
 
 ```
 fc c:new.bat d:*.bat

@@ -1,6 +1,6 @@
 ---
 title: fsutil reparsepoint
-description: Справочный раздел команды fsutil репарсепоинт, которая запрашивает или удаляет точки повторного анализа.
+description: Справочная статья по команде fsutil репарсепоинт, которая запрашивает или удаляет точки повторного анализа.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: fb95c8ee-a418-4520-a12a-7754ae947c3c
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 56ca18cc4f3b4cdfd9021eb8361d980bb855bdc3
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: edbbc578b6a84ebd4e342493e29cbe2bd5c5a2cd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435729"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931215"
 ---
 # <a name="fsutil-reparsepoint"></a>fsutil reparsepoint
 
@@ -43,7 +43,7 @@ fsutil reparsepoint [delete] <filename>
 | --------- | ----------- |
 | query | Извлекает данные точки повторного анализа, связанные с файлом или каталогом, который определяется указанным маркером. |
 | удалить | Удаляет точку повторного анализа из файла или каталога, идентифицируемого указанным обработчиком, но не удаляет файл или каталог. |
-| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *к:\документс\филенаме.ткст*. |
+| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *C:\documents\filename.txt*. |
 
 #### <a name="remarks"></a>Комментарии
 

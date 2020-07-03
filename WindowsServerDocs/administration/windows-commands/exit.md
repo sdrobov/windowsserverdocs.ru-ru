@@ -1,6 +1,6 @@
 ---
 title: exit
-description: Справочный раздел по выходу, который завершает интерпретатор команд.
+description: Справочная статья для выхода, которая выходит из интерпретатора команд.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fdfec9861e63f7484a9c45c45a22d19873cabbe9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d28f15ba1453b32d8e464fd768a3b7895819d11c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819504"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931456"
 ---
 # <a name="exit"></a>exit
 
@@ -32,7 +32,7 @@ exit [/b] [<exitcode>]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| /b | Выход из текущего пакетного скрипта вместо выхода из cmd. exe. Если выполняется из-за пределов пакетного скрипта, выполняет выход из cmd. exe. |
+| /b | Выход из текущего пакетного скрипта вместо выхода из Cmd.exe. Если выполняется из-за пределов пакетного скрипта, выполняет выход из Cmd.exe. |
 | `<exitcode>` | Указывает числовое число. Если указан параметр **/b** , переменной среды ERRORLEVEL присваивается это число. Если интерпретатор команд закрывается, код завершения процесса устанавливается в это число. |
 | /? | Отображение справки в командной строке. |
 

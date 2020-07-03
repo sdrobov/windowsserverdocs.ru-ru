@@ -1,6 +1,6 @@
 ---
-title: модули записи списка
-description: Справочный раздел по команде модуля записи списка, в котором перечислены модули записи в системе.
+title: list writers
+description: Справочная статья по команде модуля записи списка, в которой перечислены модули записи в системе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 85f351ca20332ad67f24c7d66142f7209c0ec425
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a3b4334d9f1f1a76b390a29a1b9cfd877da91185
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931770"
 ---
-# <a name="list-writers"></a>модули записи списка
+# <a name="list-writers"></a>list writers
 
 Выводит список модулей записи, наявляющихся в системе. Если используется без параметров, в **списке** отображаются выходные данные для **метаданных списка** по умолчанию.
 

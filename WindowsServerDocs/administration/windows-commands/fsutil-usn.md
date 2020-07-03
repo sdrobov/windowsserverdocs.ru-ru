@@ -1,6 +1,6 @@
 ---
 title: fsutil usn
-description: Справочный раздел по команде fsutil USN, который управляет журналом изменений в последовательном номере обновления (USN).
+description: Справочная статья по команде fsutil USN, которая управляет журналом изменений с порядковыми номерами обновлений (USN).
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: faad34aa-4ba1-4129-bc1f-08088399e2fa
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: d21de9ecb1d63116ee2d186965f7f47fc3a7235e
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: b3f71588c7221f0ba8e3659d9a1a1dd133971ce9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930477"
 ---
 # <a name="fsutil-usn"></a>fsutil usn
 
@@ -54,7 +54,7 @@ fsutil usn [readjournal] [c= <chunk-size> s=<file-size-threshold>] <volumepath>
 | `<highUSN>` | Задает верхнюю границу диапазона значений USN, используемых для фильтрации возвращаемых файлов. |
 | куерижаурнал | Запрашивает данные USN тома, чтобы собрать сведения о текущем журнале изменений, его записях и его емкости. |
 | ReadData | Считывает данные USN для файла. |
-| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например: *к:\документс\филенаме.ткст*. |
+| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например: *C:\documents\filename.txt*. |
 | реаджаурнал | Считывает записи USN в журнале USN. |
 | минвер =`<number>` | Минимальная основная версия USN_RECORD, которую необходимо вернуть. Значение по умолчанию — 2. |
 | максвер =`<number>` | Максимальная основная версия USN_RECORD, которую необходимо вернуть. Значение по умолчанию — 4. |

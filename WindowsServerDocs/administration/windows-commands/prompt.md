@@ -1,6 +1,6 @@
 ---
 title: prompt
-description: Справочный раздел для команды prompt, которая настраивает Cmd.exe командной строки.
+description: Справочная статья по команде Prompt, которая настраивает Cmd.exe командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 91146bd075097e54f6aff2fb204feae6a387848a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 72ed82c316faddba9486649497c8c48f88e6da81
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472159"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85931145"
 ---
 # <a name="prompt"></a>prompt
 
@@ -33,7 +33,7 @@ prompt [<text>]
 | `<text>` | Задает текст и сведения, которые необходимо включить в командную строку. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Сочетания символов, которые можно включить вместо или в дополнение к одной или нескольким символьным строкам в *текстовом* параметре:
 
