@@ -1,6 +1,6 @@
 ---
 title: bitsadmin reset
-description: Справочный раздел по команде битсадмин Reset, который отменяет все задания в очереди на перемещение, принадлежащие текущему пользователю.
+description: Справочная статья по команде битсадмин Reset, которая отменяет все задания в очереди на перемещение, принадлежащие текущему пользователю.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a6aea1d3cb0a89def1e23f42272bf0503022ac54
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: bc8faf10f991f06609d653c8cb7a1dc89de2fa8a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926392"
 ---
 # <a name="bitsadmin-reset"></a>bitsadmin reset
 

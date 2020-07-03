@@ -1,6 +1,6 @@
 ---
 title: bitsadmin sethelpertoken
-description: Справочный раздел по команде битсадмин сеселпертокен, который задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве вспомогательного токена задания передачи BITS.
+description: Справочная статья по команде битсадмин сеселпертокен, которая задает основной маркер текущей командной строки (или маркер произвольной учетной записи локального пользователя, если он указан) в качестве вспомогательного токена задания передачи BITS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/01/2019
-ms.openlocfilehash: b125f95e262c2fd78f20266e3e2b6c80cea5a789
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 21dee45610823cd70e8b7209ec99e080746316f9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719393"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927783"
 ---
 # <a name="bitsadmin-sethelpertoken"></a>bitsadmin sethelpertoken
 

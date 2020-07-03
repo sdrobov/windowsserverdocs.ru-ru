@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setclientcertificatebyname
-description: Справочный раздел по команде битсадмин сетклиентцертификатебинаме, который указывает имя субъекта сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL).
+description: Справочная статья по команде битсадмин сетклиентцертификатебинаме, которая указывает имя субъекта сертификата клиента, используемого для проверки подлинности клиента в запросе HTTPS (SSL).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ef7111d462cd0509e8959855e9bc950dc15f3bfe
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 86f314137b6ebc3e866fa91d1c86c1c5e8294f86
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719349"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927871"
 ---
 # <a name="bitsadmin-setclientcertificatebyname"></a>bitsadmin setclientcertificatebyname
 

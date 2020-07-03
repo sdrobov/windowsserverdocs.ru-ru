@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getreplyfilename
-description: Справочный раздел по команде битсадмин жетреплифиленаме, который получает путь к файлу, содержащему сервер, который содержит ответ на отправку для задания.
+description: Справочная статья по команде битсадмин жетреплифиленаме, которая возвращает путь к файлу, содержащему сервер-ответ для задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: daed755e0ddc045174b98a8d4f9ee84da155cba6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: fce592b52b9efe9d3d67c893dd6b2441446c0938
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717595"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926734"
 ---
 # <a name="bitsadmin-getreplyfilename"></a>bitsadmin getreplyfilename
 

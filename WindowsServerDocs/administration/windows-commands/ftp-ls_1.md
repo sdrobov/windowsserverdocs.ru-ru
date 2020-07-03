@@ -1,6 +1,6 @@
 ---
-title: FTP Ls
-description: Справочный раздел по команде FTP Ls, который отображает сокращенный список файлов и подкаталогов с удаленного компьютера.
+title: ftp ls
+description: Справочная статья по команде FTP Ls, которая отображает сокращенный список файлов и подкаталогов с удаленного компьютера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9ae913f001c3ddffce9ff81c9c5c5fd32f436da5
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 1e4bd476f87487e400751b7173f0c670867de54c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820174"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927197"
 ---
-# <a name="ftp-ls"></a>FTP Ls
+# <a name="ftp-ls"></a>ftp ls
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -43,7 +43,7 @@ ls [<remotedirectory>] [<localfile>]
 ls
 ```
 
-Чтобы получить сокращенный список каталогов *Dir1* на удаленном компьютере и сохранить его в локальном файле с именем *дирлист. txt*, введите:
+Чтобы получить сокращенный список каталогов *Dir1* на удаленном компьютере и сохранить его в локальном файле с именем *dirlist.txt*, введите:
 
 ```
 ls dir1 dirlist.txt

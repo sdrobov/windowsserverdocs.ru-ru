@@ -1,6 +1,6 @@
 ---
-title: переlogman создать счетчик
-description: Справочный раздел по команде Logman Create Counter, который создает сборщик данных счетчиков.
+title: logman create counter
+description: Справочная статья по команде Logman Create Counter, которая создает сборщик данных счетчиков.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 63fd94fb32fe27b48460922818d1a7220f7f5d7a
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 80ea79eb8c286a8dbe7c020b4c23ae1483d2cb9b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222968"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927204"
 ---
-# <a name="logman-create-counter"></a>переlogman создать счетчик
+# <a name="logman-create-counter"></a>logman create counter
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

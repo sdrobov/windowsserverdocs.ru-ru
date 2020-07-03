@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getnotifyflags
-description: Справочный раздел по команде битсадмин жетнотифифлагс, который получает флаги уведомления для указанного задания.
+description: Справочная статья по команде битсадмин жетнотифифлагс, которая получает флаги уведомления для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 36e4c3584b2e3be9c9985756aeaec08b40e74b0c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0ea97c039f372a2211b1e2a6c640c4499a38dfe4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717766"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926926"
 ---
 # <a name="bitsadmin-getnotifyflags"></a>bitsadmin getnotifyflags
 
@@ -32,11 +32,11 @@ bitsadmin /getnotifyflags <job>
 | -------------- | -------------- |
 | задание | Отображаемое имя задания или идентификатор GUID. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Задание может содержать один или несколько следующих флагов уведомления:
 
-| Флаг | Описание |
+| Flag | Описание |
 | ----- | ----- |
 | 0x001 | Создавать событие, когда все файлы в задании были переданы. |
 | 0x002 | Создавать событие при возникновении ошибки. |

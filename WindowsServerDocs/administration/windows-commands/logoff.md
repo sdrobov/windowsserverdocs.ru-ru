@@ -1,6 +1,6 @@
 ---
 title: logoff
-description: Справочный раздел о команде logoff, которая выполнит выход пользователя из сеанса на удаленный рабочий стол сервере узла сеансов и удалит сеанс.
+description: Справочная статья по команде logoff, которая выполнит выход пользователя из сеанса на удаленный рабочий стол сервере узла сеансов и удалит сеанс.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 636591843ce878bc85c5cccf6faece6652e25424
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: d154b767302f5c536e0a7efb30d99ac0a8e087d5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222739"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927164"
 ---
 # <a name="logoff"></a>logoff
 

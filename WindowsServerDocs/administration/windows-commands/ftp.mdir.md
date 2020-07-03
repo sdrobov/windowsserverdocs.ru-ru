@@ -1,6 +1,6 @@
 ---
-title: мдир FTP
-description: Справочный раздел по команде FTP мдир, который отображает список каталогов файлов и подкаталогов в удаленном каталоге.
+title: ftp mdir
+description: Справочная статья по команде FTP мдир, которая отображает список каталогов файлов и подкаталогов в удаленном каталоге.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b192e6de23105fcc696d8369ce0280167a201e20
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 5a4d1b00941d350776fd953607a5cc5da433993c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820224"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926157"
 ---
-# <a name="ftp-mdir"></a>мдир FTP
+# <a name="ftp-mdir"></a>ftp mdir
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -43,7 +43,7 @@ mdir <remotefile>[...] <localfile>
 mdir dir1 dir2 -
 ```
 
-Чтобы сохранить Объединенный каталог со списком *Dir1* и *Dir2* в локальном файле с именем *дирлист. txt*, введите:
+Чтобы сохранить Объединенный каталог со списком *Dir1* и *Dir2* в локальном файле с именем *dirlist.txt*, введите:
 
 ```
 mdir dir1 dir2 dirlist.txt

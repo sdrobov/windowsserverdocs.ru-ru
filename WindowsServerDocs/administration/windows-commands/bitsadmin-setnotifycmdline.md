@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setnotifycmdline
-description: Справочный раздел по команде битсадмин сетнотификмдлине, который задает команду командной строки, которая будет запускаться, когда задание завершает передачу данных или когда задание переходит в состояние.
+description: Справочная статья по команде битсадмин сетнотификмдлине, которая задает команду командной строки, которая будет выполняться, когда задание завершает передачу данных или когда задание переходит в состояние.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b21d7151a5b646a4fe07d073220614f5e3c99539
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c4466a0011f7bb1648cb7e2a51113f0a3d21c7e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720132"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927653"
 ---
 # <a name="bitsadmin-setnotifycmdline"></a>bitsadmin setnotifycmdline
 
@@ -39,13 +39,13 @@ bitsadmin /setnotifycmdline <job> <program_name> [program_parameters]
 
 ## <a name="examples"></a>Примеры
 
-Чтобы запустить Notepad. exe по завершении задания с именем *мидовнлоаджоб*:
+Для запуска Notepad.exe по завершении задания с именем *мидовнлоаджоб*:
 
 ```
 bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe NULL
 ```
 
-Чтобы отобразить текст лицензионного соглашения в Notepad. exe по завершении задания с именем Мидовнлоаджоб:
+Чтобы отобразить текст лицензионного соглашения в Notepad.exe, по завершении задания с именем Мидовнлоаджоб:
 
 ```
 bitsadmin /setnotifycmdline myDownloadJob c:\winnt\system32\notepad.exe notepad c:\eula.txt

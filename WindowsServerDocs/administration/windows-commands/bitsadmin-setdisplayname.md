@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setdisplayname
-description: Справочный раздел по команде битсадмин сетдисплайнаме, который задает отображаемое имя указанного задания.
+description: Справочная статья по команде битсадмин сетдисплайнаме, которая задает отображаемое имя указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 382cb2f20f0374c2d2787c4c3d88670b4f7260cd
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b7cd1ce068e1e2a89b27ee88653fdd014d2da178
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927793"
 ---
 # <a name="bitsadmin-setdisplayname"></a>bitsadmin setdisplayname
 

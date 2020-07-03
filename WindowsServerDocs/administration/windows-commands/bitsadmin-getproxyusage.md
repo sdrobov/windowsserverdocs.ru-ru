@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getproxyusage
-description: Справочный раздел по команде битсадмин жетпроксюсаже, который получает параметр использования прокси-сервера для указанного задания.
+description: Справочная статья по команде битсадмин жетпроксюсаже, которая получает параметр использования прокси-сервера для указанного задания.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13a3f216b1ed3c77dbbefee37d73a657525daa36
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: ad1ffe5786202d6fecc0d65a719c9d6be0f5609e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717651"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85926790"
 ---
 # <a name="bitsadmin-getproxyusage"></a>bitsadmin getproxyusage
 
@@ -32,7 +32,7 @@ bitsadmin /getproxyusage <job>
 | -------------- | -------------- |
 | задание | Отображаемое имя задания или идентификатор GUID. |
 
-#### <a name="output"></a>Вывод
+#### <a name="output"></a>Выходные данные
 
 Возвращаемые значения использования прокси-сервера могут быть:
 

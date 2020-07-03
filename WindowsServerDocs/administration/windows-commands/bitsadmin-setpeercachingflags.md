@@ -1,6 +1,6 @@
 ---
 title: bitsadmin setpeercachingflags
-description: Справочный раздел по команде битсадмин сетпиркачингфлагс, который устанавливает флаги, определяющие, могут ли файлы задания кэшироваться и обслуживаться одноранговым узлам, а также может ли задание скачивать содержимое с одноранговых узлов.
+description: Справочная статья по команде битсадмин сетпиркачингфлагс, которая устанавливает флаги, определяющие, могут ли файлы задания кэшироваться и обслуживаться одноранговым узлам, а также может ли задание скачивать содержимое с одноранговых узлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8b66b169c38ac050ecaaf6546365547148faa9cf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3340c14bfaaaa4f904ac9cf7918588e45c8bdc57
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927602"
 ---
 # <a name="bitsadmin-setpeercachingflags"></a>bitsadmin setpeercachingflags
 
@@ -31,7 +31,7 @@ bitsadmin /setpeercachingflags <job> <value>
 | Параметр | Описание |
 | --------- | ----------- |
 | задание | Отображаемое имя задания или идентификатор GUID. |
-| значение | Целое число без знака, включая:<ul><li>**1.** задание может скачивать содержимое с одноранговых узлов.</li><li>**2.** файлы задания могут кэшироваться и обслуживаться одноранговыми узлами.</li></ul> |
+| value | Целое число без знака, включая:<ul><li>**1.** задание может скачивать содержимое с одноранговых узлов.</li><li>**2.** файлы задания могут кэшироваться и обслуживаться одноранговыми узлами.</li></ul> |
 
 ## <a name="examples"></a>Примеры
 

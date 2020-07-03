@@ -1,6 +1,6 @@
 ---
 title: bitsadmin getminretrydelay
-description: Справочный раздел по команде битсадмин жетминретриделай, который получает время ожидания (в секундах), в течение которого служба будет ожидать временной ошибки, прежде чем пытаться переместить файл.
+description: Справочная статья по команде битсадмин жетминретриделай, которая получает время ожидания (в секундах), в течение которого служба будет ожидать временной ошибки, прежде чем пытаться переместить файл.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a50b9d98fe0b873dc58b8e86dc672a8f4157208a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 066eb9a2c967d9d5e92aa8dbad2001a65a682796
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927017"
 ---
 # <a name="bitsadmin-getminretrydelay"></a>bitsadmin getminretrydelay
 

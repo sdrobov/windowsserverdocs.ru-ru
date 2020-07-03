@@ -1,6 +1,6 @@
 ---
 title: bitsadmin replaceremoteprefix
-description: Справочный раздел по команде битсадмин реплацеремотепрефикс, при необходимости который изменяет удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
+description: Справочная статья по команде битсадмин реплацеремотепрефикс, при необходимости которая изменяет удаленный URL-адрес для всех файлов в задании с *олдпрефикс* на *невпрефикс*.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 745d026513413db799e86df3422d5ee19c89274f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: e2453ac4c223baa049980578c81d9bc6539baac7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717039"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927975"
 ---
 # <a name="bitsadmin-replaceremoteprefix"></a>bitsadmin replaceremoteprefix
 
@@ -36,7 +36,7 @@ bitsadmin /replaceremoteprefix <job> <oldprefix> <newprefix>
 
 ## <a name="examples"></a>Примеры
 
-Чтобы изменить удаленный URL-адрес для всех файлов в задании с именем *http://stageserver* мидовнлоаджоб *http://prodserver*, с на. *myDownloadJob*
+Чтобы изменить удаленный URL-адрес для всех файлов в задании с именем *мидовнлоаджоб*, с *http://stageserver* на *http://prodserver* .
 
 ```
 bitsadmin /replaceremoteprefix myDownloadJob http://stageserver http://prodserver

@@ -1,6 +1,6 @@
 ---
 title: bitsadmin addfileset
-description: Справочный раздел по команде битсадмин аддфилесет, который добавляет один или несколько файлов в указанное задание.
+description: Справочная статья по команде битсадмин аддфилесет, которая добавляет один или несколько файлов к указанному заданию.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d610c1330818cf820923b6d4f2e3555dc477444b
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 861186dfc7ba1a230e1df05c98378d27bfff26b1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718481"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85927088"
 ---
 # <a name="bitsadmin-addfileset"></a>bitsadmin addfileset
 
@@ -31,7 +31,7 @@ bitsadmin /addfileset <job> <textfile>
 | Параметр | Описание |
 | --------- | ----------- |
 | задание | Отображаемое имя задания или идентификатор GUID. |
-| textfile | Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла. **Примечание.** Имена должны быть разделены пробелами. Строки, начинающиеся `#` с символа, обрабатываются как комментарии. |
+| textfile | Текстовый файл, каждая строка которого содержит удаленное и локальное имя файла. **Примечание.** Имена должны быть разделены пробелами. Строки, начинающиеся с `#` символа, обрабатываются как комментарии. |
 
 ## <a name="examples"></a>Примеры
 
