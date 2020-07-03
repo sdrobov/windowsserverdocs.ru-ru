@@ -1,6 +1,6 @@
 ---
 title: Add-Дриверграуппаккаже
-description: Справочный раздел по Add-Дриверграуппаккаже, который добавляет пакет драйверов в группу драйверов.
+description: Справочная статья по Add-Дриверграуппаккаже, которая добавляет пакет драйверов в группу драйверов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4baf4f16740e65c432cc09ca24270ab479346ac2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5782fe849669619bf46426ad698866c05007e426
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721111"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937209"
 ---
 # <a name="add-drivergrouppackage"></a>Add-Дриверграуппаккаже
 
@@ -44,7 +44,7 @@ wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /PackageId:{4D36E972
 wdsutil /add-DriverGroupPackage /DriverGroup:printerdrivers /DriverPackage:XYZ
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды](using-the-add-drivergrouppackages-command.md)
-Add-дриверграуппаккажес с помощью команды Add-[дриверпаккаже](using-the-add-driverpackage-command.md)
-[с использованием подкоманды Add-аллдриверпаккажес](using-the-add-alldriverpackages-subcommand.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-add-drivergrouppackages-command.md) 
+ Add-дриверграуппаккажес [Использование команды](using-the-add-driverpackage-command.md) 
+ Add-дриверпаккаже [Использование подкоманды Add-аллдриверпаккажес](using-the-add-alldriverpackages-subcommand.md)

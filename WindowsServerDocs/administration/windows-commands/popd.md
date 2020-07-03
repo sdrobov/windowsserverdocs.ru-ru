@@ -1,6 +1,6 @@
 ---
 title: popd
-description: Справочный раздел по команде pnputil, который изменяет текущий каталог на каталог, который был последним сохранен командой pushd.
+description: Справочная статья по команде pnputil, которая изменяет текущий каталог на каталог, который был последним сохранен командой pushd.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 0784d925eedb1202bf94fbd2951081efcc0c496b
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 002a0d84770738db2b00bedcd1e01df3b1b61b76
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472390"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937007"
 ---
 # <a name="popd"></a>popd
 
@@ -34,7 +34,7 @@ popd
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | /? | Отображение справки в командной строке. |
 

@@ -1,6 +1,6 @@
 ---
 title: Remove-Дриверграупфилтер
-description: Справочный раздел по Remove-Дриверграупфилтер, который удаляет правило фильтра из группы драйверов на сервере.
+description: Справочная статья по Remove-Дриверграупфилтер, которая удаляет правило фильтрации из группы драйверов на сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dd6fcbc8f87539ac687927b9e58ed15edb524ef6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 98d2253cc5148ba4581399d688b74cd426a649fb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720412"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936331"
 ---
 # <a name="remove-drivergroupfilter"></a>Remove-Дриверграупфилтер
 
@@ -32,9 +32,9 @@ WDSUTIL /Remove-DriverGroupFilter /DriverGroup:<Group Name> [/Server:<Server nam
 
 |Параметр|Описание|
 |---------|-----------|
-|/Дриверграуп:\<имя группы>|Указывает имя группы драйверов.|
-|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
-|[/Филтертипе:\<FilterType>]|Указывает тип фильтра, удаляемого из группы. \<FilterType> может быть одним из следующих:</br>**биосвендор**</br>**биосверсион**</br>**ChassisType**</br>**Изготовитель**</br>**UUID**</br>**OsVersion**</br>**оседитион**</br>**ослангуаже**|
+|/Дриверграуп:\<Group Name>|Указывает имя группы драйверов.|
+|[/Server: \<Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Филтертипе: \<FilterType> ]|Указывает тип фильтра, удаляемого из группы. \<FilterType>может быть одним из следующих:</br>**биосвендор**</br>**биосверсион**</br>**ChassisType**</br>**Изготовитель**</br>**UUID**</br>**OsVersion**</br>**оседитион**</br>**ослангуаже**|
 
 ## <a name="examples"></a>Примеры
 

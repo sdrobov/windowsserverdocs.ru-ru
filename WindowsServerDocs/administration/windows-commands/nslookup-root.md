@@ -1,6 +1,6 @@
 ---
 title: nslookup root
-description: Справочный раздел команды nslookup root, которая изменяет сервер по умолчанию на сервер для корня пространства имен домена службы доменных имен (DNS).
+description: Справочная статья по команде nslookup root, которая изменяет сервер по умолчанию на сервер для корневого каталога пространства имен домена системы доменных имен (DNS).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0f1f2bbe3b71660d079a0b7c87f5be487e0ff437
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 07dbfcf401314145cb0e7553d71480072da4b574
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721657"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936287"
 ---
 # <a name="nslookup-root"></a>nslookup root
 

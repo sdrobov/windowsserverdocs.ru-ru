@@ -1,6 +1,6 @@
 ---
-title: набор Telnet
-description: Справочный раздел по Telnet Set, который задает параметры.
+title: telnet set
+description: Справочная статья по Telnet Set, в которой задаются параметры.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 477c2ee259301af26870339a2c329c2c3502963b
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7415f084e73d87eb767ed0b487f42e103b998c23
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222678"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937360"
 ---
 # <a name="telnet-set"></a>Telnet: задать
 
@@ -36,7 +36,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 |                выполняет<Character>                | Задает escape-символ, используемый для ввода запроса клиента Telnet. Escape-символ может быть одиночным символом или сочетанием клавиши **CTRL** и символа. Чтобы задать сочетание клавиш управления, удерживайте нажатой клавишу **CTRL** при вводе символа, который требуется назначить. |
 |                    локалечо                     |                                                                                                                                         Включает локальный вывод.                                                                                                                                          |
 |                logfile<FileName>                |                                                                                               Записывает текущий сеанс Telnet в локальный файл. Ведение журнала начинается автоматически при выборе этого параметра.                                                                                               |
-|                     Ведение журналов                      |                                                                                                                  Включает ведение журнала. Если файл журнала не задан, выводится сообщение об ошибке.                                                                                                                   |
+|                     Ведение журнала                      |                                                                                                                  Включает ведение журнала. Если файл журнала не задан, выводится сообщение об ошибке.                                                                                                                   |
 |           режим {экран &#124; консоли}           |                                                                                                                                       Задает режим работы.                                                                                                                                        |
 |                       NTLM                       |                                                                                                                                     Включает проверку подлинности NTLM.                                                                                                                                     |
 | термин {ANSI &#124; VT100 &#124; VT52 &#124; VTNT} |                                                                                                                                        Задает тип терминала.                                                                                                                                        |
@@ -46,7 +46,7 @@ set [bsasdel] [crlf] [delasbs] [escape <Char>] [localecho] [logfile <FileName>] 
 1. Для выключения ранее установленного параметра можно **использовать команду unset.**
 2. В версиях Telnet, отличных от английской, набор **кодов** <option> доступен. **Исходный код** <option> устанавливает для текущего кода значение, которое может быть любым из следующих: **SHIFT JIS**, **японская EUC**, **JIS**, кандзи, **JIS (78)**, **кандзи**( **NEC**), кандзи. Необходимо задать тот же набор кодов на удаленном компьютере.
    ## <a name="examples"></a>Примеры
-   Укажите файл журнала и начните запись в локальный файл тнлог. txt.
+   Укажите файл журнала и начните запись в локальный файл tnlog.txt
    ```
    set logfile tnlog.txt
    ```

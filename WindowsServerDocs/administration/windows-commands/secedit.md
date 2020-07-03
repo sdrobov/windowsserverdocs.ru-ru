@@ -1,6 +1,6 @@
 ---
 title: secedit
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 56c9cdecfe2a5553230f1c8120c827e7f05d0ba9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8e5918265feb7dc72759ea22d2f582e4754df96c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821100"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936489"
 ---
 # <a name="secedit"></a>secedit
 
@@ -36,7 +36,7 @@ secedit
 
 #### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------|-----------|
 |[Secedit:analyze](secedit-analyze.md)|Позволяет анализировать текущие системные параметры по базовым параметрам, хранящимся в базе данных.  Результаты анализа хранятся в отдельной области базы данных, и их можно просмотреть в оснастке "Настройка и анализ безопасности".|
 |[Secedit:configure](secedit-configure.md)|Позволяет настроить систему с параметрами безопасности, хранящимися в базе данных.|
@@ -45,7 +45,7 @@ secedit
 |[Secedit:import](secedit-import.md)|Позволяет импортировать шаблон безопасности в базу данных, чтобы параметры, заданные в шаблоне, можно было применять к системе или анализировать в системе.|
 |[Secedit:validate](secedit-validate.md)|Позволяет проверить синтаксис шаблона безопасности.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 Для всех имен файлов используется текущий каталог, если путь не указан.
 

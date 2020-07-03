@@ -1,6 +1,6 @@
 ---
 title: wevtutil
-description: Справочный раздел по команде wevtutil, который позволяет получать сведения о журналах событий и издателях.
+description: Справочная статья по программе wevtutil, которая позволяет получать сведения о журналах событий и издателях.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 22195f3a163e1a4123b51d005b0367cc61411651
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: f87ab51c0e24f9df421d7540e85d05a534635947
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222612"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936640"
 ---
 # <a name="wevtutil"></a>wevtutil
 
@@ -124,11 +124,11 @@ wevtutil sl /c:config.xml
 ```
 wevtutil gp Microsoft-Windows-Eventlog /ge:true
 ```
-Установите издателей и журналы из файла манифеста Миманифест. XML:
+Установите издатели и журналы из файла манифеста myManifest.xml:
 ```
 wevtutil im myManifest.xml
 ```
-Удалите издатели и журналы из файла манифеста Миманифест. XML:
+Удалите издатели и журналы из файла манифеста myManifest.xml:
 ```
 wevtutil um myManifest.xml
 ```

@@ -1,6 +1,6 @@
 ---
 title: Подкоманда Start-Server
-description: Справочный раздел для команды Start-Server, запускающей все службы для сервера служб развертывания Windows.
+description: Справочная статья для команды Start-Server, запускающей все службы для сервера служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e2a6de007e62bf3be5544f97b53a4fcc13118985
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 112f60897d96479d627fc61eb70f79de84d1514a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721651"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936951"
 ---
 # <a name="subcommand-start-server"></a>Подкоманда: Start-Server
 
@@ -29,7 +29,7 @@ wdsutil [Options] /start-Server [/Server:<Server name>]
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя сервера для запуска. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера для запуска. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 ## <a name="examples"></a>Примеры
 Чтобы запустить сервер, введите одно из следующих действий:
 ```
@@ -37,11 +37,11 @@ wdsutil /start-Server
 wdsutil /verbose /start-Server /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки[с помощью](using-the-disable-server-command.md)
-команды "Disable-Server" с помощью команды "Enable-Server" с помощью команды "[включить](using-the-enable-server-command.md)
-[Using the get-Server Command](using-the-get-server-command.md)
-сервер" с командой "инициализировать-Server" с помощью подкоманды "выполнить[инициализацию](using-the-initialize-server-command.md)
-сервера": "команда[Set-Server](subcommand-set-server.md)
-[Subcommand: stop-Server](subcommand-stop-server.md)
-["](the-uninitialize-server-option.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды «Disable-Server»](using-the-disable-server-command.md) 
+ [Использование команды](using-the-enable-server-command.md) 
+ Enable-Server [Использование команды](using-the-get-server-command.md) 
+ Get-Server [Использование команды](using-the-initialize-server-command.md) 
+ Initialize-Server [Подкоманда: Set-Server](subcommand-set-server.md) 
+ [Подкоманда:-сервер](subcommand-stop-server.md) 
+ [Параметр Uninitialize-Server](the-uninitialize-server-option.md)

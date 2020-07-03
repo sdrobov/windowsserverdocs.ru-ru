@@ -1,6 +1,6 @@
 ---
-title: UniqueID
-description: Справочный раздел по UniqueId, который отображает или задает идентификатор таблицы разделов GUID (GPT) или подпись основной загрузочной записи (MBR) для диска с фокусом.
+title: uniqueid
+description: Справочная статья по UniqueId, которая отображает или задает идентификатор таблицы разделов GUID (GPT) или подпись основной загрузочной записи (MBR) для диска с фокусом.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: efaafe889f04511ceef7441b0a42b73259aadedf
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5acf29d9a7dfd505a5ecdad2a08dfdb1a9f4d975
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721183"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937283"
 ---
-# <a name="uniqueid"></a>UniqueID
+# <a name="uniqueid"></a>uniqueid
 
 Отображает или задает идентификатор таблицы разделов GUID (GPT) или подпись основной загрузочной записи (MBR) для диска, на котором находится фокус.
 
@@ -33,10 +33,10 @@ uniqueid disk [id={<dword> | <GUID>}] [noerr]
 
 |  Параметр   |                                                                                             Описание                                                                                              |
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ID = {\<DWORD> |                                                                                               <GUID>}                                                                                                |
+| ИД = {\<dword> |                                                                                               <GUID>}                                                                                                |
 |    Noerr     | Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 -   Эта команда работает на базовых и динамических дисках.
 -   Для завершения этой команды необходимо выбрать диск. Используйте команду **Выбор диска** , чтобы выбрать диск и переместить фокус на него.

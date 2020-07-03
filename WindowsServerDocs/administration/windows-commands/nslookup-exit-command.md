@@ -1,6 +1,6 @@
 ---
 title: выход из nslookup
-description: Справочный раздел команды nslookup Exit, которая выходит из программы командной строки Nslookup.
+description: Справочная статья по команде nslookup Exit, которая выходит из программы командной строки Nslookup.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c233e39d711c37540c30bc64296c6b24b57689c8
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: f265379c8692d24fff3ad6c0be25295f656c756d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721487"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936524"
 ---
 # <a name="nslookup-exit"></a>nslookup/Ексит
 

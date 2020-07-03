@@ -1,6 +1,6 @@
 ---
 title: Набор подкоманд — устройство
-description: Справочный раздел по набору подкоманд set-Device, который изменяет атрибуты предварительно подготовленного компьютера.
+description: Справочная статья по подкоманде Set-Device, которая изменяет атрибуты предварительно подготовленного компьютера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a587b809b02da775594e795730799bf9af578bc2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2e75e0a2a4011e171fa548954bce2bbe942379c0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721751"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937203"
 ---
 # <a name="subcommand-set-device"></a>Подкоманда: Set-Device
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721751"
 
 ## <a name="syntax"></a>Синтаксис
 ```
-wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>] 
+wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [/ReferralServer:<Server name>] [/BootProgram:<Relative path>]
 [/WdsClientUnattend:<Relative path>] [/User:<Domain\User | User@Domain>] [/JoinRights:{JoinOnly | Full}] [/JoinDomain:{Yes | No}] [/BootImagepath:<Relative path>] [/Domain:<Domain>] [/resetAccount]
 ```
 ### <a name="parameters"></a>Параметры
@@ -32,14 +32,14 @@ wdsutil [Options] /Set-Device /Device:<Device name> [/ID:<UUID | MAC address>] [
 |-------|--------|
 |Модем<computer name>|Указывает имя компьютера (SAM-Account-Name).|
 |[/ID: <UUID &#124; MAC-адрес>]|Указывает идентификатор GUID/UUID или MAC-адрес компьютера. Это значение должно быть в одном из следующих трех форматов:<p>-Двоичная строка: **/ID: ACEFA3E81F20694E953EB2DAA1E8B1B6**<br />-GUID/UUID строка:/ID:**E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<br />— MAC-адрес: **00B056882FDC** (без дефисов) или **00-B0-56-88-2F-DC** (с тире)|
-|[/Реферралсервер:<Server name>]|Указывает имя сервера для связи, чтобы загрузить программу сетевой загрузки и загрузочный образ с помощью тривиальных протокол FTP (TFTP).|
-|[/Бутпрограм:<Relative path>]|Указывает относительный путь от папки remoteInstall к программе сетевой загрузки, которую будет получить указанный компьютер. Например: **boot\x86\pxeboot.com**|
-|[/Вдсклиентунаттенд:<Relative path>]|Указывает относительный путь от папки remoteInstall к файлу Unattend, который автоматизирует экраны установки для клиента служб развертывания Windows.|
-|[/User: <домен \ User@Domain пользователь &#124;>]|Задает разрешения для объекта учетной записи компьютера, чтобы предоставить указанному пользователю необходимые права для приподключения компьютера к домену.|
+|[/Реферралсервер: <Server name> ]|Указывает имя сервера для связи, чтобы загрузить программу сетевой загрузки и загрузочный образ с помощью тривиальных протокол FTP (TFTP).|
+|[/Бутпрограм: <Relative path> ]|Указывает относительный путь от папки remoteInstall к программе сетевой загрузки, которую будет получить указанный компьютер. Например: **boot\x86\pxeboot.com**|
+|[/Вдсклиентунаттенд: <Relative path> ]|Указывает относительный путь от папки remoteInstall к файлу Unattend, который автоматизирует экраны установки для клиента служб развертывания Windows.|
+|[/User: <домен \ пользователь &#124; User@Domain>]|Задает разрешения для объекта учетной записи компьютера, чтобы предоставить указанному пользователю необходимые права для приподключения компьютера к домену.|
 |[/Жоинригхтс: {Жоинонли &#124; Full}]|Указывает тип прав, назначаемых пользователю.<p>-   **Жоинонли** требует от администратора сброса учетной записи компьютера, прежде чем пользователь сможет присоединить компьютер к домену.<br />-   **Full** предоставляет полный доступ пользователю, включая право присоединить компьютер к домену.|
-|[/Жоиндомаин: {Yes &#124; No}]|Указывает, должен ли компьютер быть присоединен к домену как учетная запись компьютера в ходе установки служб развертывания Windows. Значение по умолчанию — **Да**.|
-|[/Бутимажепас:<Relative path>]|Указывает относительный путь от папки remoteInstall к загрузочному образу, который будет использоваться компьютером.|
-|[/Domain:<Domain>]|Указывает домен для поиска предварительно подготовленного компьютера. Значение по умолчанию — локальный домен.|
+|[/Жоиндомаин: {Yes &#124; No}]|Указывает, должен ли компьютер быть присоединен к домену как учетная запись компьютера в ходе установки служб развертывания Windows. Значение по умолчанию — **Да**.|
+|[/Бутимажепас: <Relative path> ]|Указывает относительный путь от папки remoteInstall к загрузочному образу, который будет использоваться компьютером.|
+|[/Domain: <Domain> ]|Указывает домен для поиска предварительно подготовленного компьютера. Значение по умолчанию — локальный домен.|
 |[/Ресетаккаунт]|Сбрасывает разрешения на указанном компьютере, чтобы любой пользователь с соответствующими разрешениями мог присоединиться к домену с помощью этой учетной записи.|
 ## <a name="examples"></a>Примеры
 Чтобы задать программу сетевой загрузки и сервер ссылок для компьютера, введите:
@@ -49,11 +49,11 @@ wdsutil /Set-Device /Device:computer1 /ReferralServer:MyWDSServer
 ```
 Чтобы задать различные параметры для компьютера, введите:
 ```
-wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml 
+wdsutil /verbose /Set-Device /Device:computer2 /ID:00-B0-56-88-2F-DC /WdsClientUnattend:WDSClientUnattend\unattend.xml
 /User:Domain\user /JoinRights:JoinOnly /JoinDomain:No /BootImagepath:boot\x86\images\boot.wim /Domain:NorthAmerica /resetAccount
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки[с помощью команды Add-Device](using-the-add-device-command.md)
-с помощью команды[Get-аллдевицес](using-the-get-alldevices-command.md)
-[с помощью команды Get-Device](using-the-get-device-command.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-add-device-command.md) 
+ Add-Device [Использование команды](using-the-get-alldevices-command.md) 
+ Get-аллдевицес [Использование команды Get-Device](using-the-get-device-command.md)

@@ -1,6 +1,6 @@
 ---
-title: выбрать виртуальный диск
-description: Справочный раздел по * * * *-
+title: select vdisk
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 23741d9211ebdf98ac198af2ae1c562724a1955b
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 734b31d9c9bcf174bf4617418978935bc49ad6da
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821084"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936437"
 ---
-# <a name="select-vdisk"></a>выбрать виртуальный диск
+# <a name="select-vdisk"></a>select vdisk
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -51,15 +51,15 @@ select vdisk file=c:\test\test.vhd
 
 -   [подключить виртуальный диск](attach-vdisk.md)
 
--   [Compact VDISK](compact-vdisk.md)
+-   [compact vdisk](compact-vdisk.md)
 
 
 
 -   [Отсоединить виртуальный диск](detach-vdisk.md)
 
--   [подробные сведения VDISK](detail-vdisk.md)
+-   [detail vdisk](detail-vdisk.md)
 
--   [развернуть виртуальный диск](expand-vdisk.md)
+-   [expand vdisk](expand-vdisk.md)
 
 -   [Слияние VDISK](merge-vdisk.md)
 

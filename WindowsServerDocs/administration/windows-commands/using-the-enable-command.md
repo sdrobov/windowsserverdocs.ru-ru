@@ -1,6 +1,6 @@
 ---
 title: Включить
-description: Справочный раздел по включению, который включает все службы для служб развертывания Windows.
+description: Справочная статья по включению, которая включает все службы для служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d27f55e92779edc5f3388374a422c957b85e51f9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8808849e58c8f2a359b9f8d25c1ece2bb82d2dfe
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720943"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936831"
 ---
 # <a name="enable"></a>Включить
 

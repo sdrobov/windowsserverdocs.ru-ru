@@ -1,6 +1,6 @@
 ---
 title: обработка запросов
-description: Справочный раздел по команде запроса Process, в котором отображаются сведения о процессах, выполняемых на сервере узла удаленный рабочий стол сеансов.
+description: Справочная статья по команде запроса Process, в которой отображаются сведения о процессах, выполняемых на сервере узла удаленный рабочий стол сеансов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 32f755fe3e275f2f1adccffacaf2a6999d46298a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: a11177ad62e83efd9dbe5da844b159b40266837d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472029"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936995"
 ---
 # <a name="query-process"></a>обработка запросов
 
@@ -43,7 +43,7 @@ query process [*|<processID>|<username>|<sessionname>|/id:<nn>|<programname>] [/
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | * | Список процессов для всех сеансов. |
 | `<processID>` | Указывает числовой идентификатор, определяющий процесс, который необходимо запросить. |
@@ -54,7 +54,7 @@ query process [*|<processID>|<username>|<sessionname>|/id:<nn>|<programname>] [/
 | /server:`<servername>` | Указывает удаленный рабочий стол сервер узла сеансов, процессы которого необходимо перечислить. Если не указано, используется сервер, на котором вы выполнили вход в систему. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Администраторы имеют полный доступ ко всем функциям **обработки запросов** .
 

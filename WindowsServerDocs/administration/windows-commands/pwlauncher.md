@@ -1,6 +1,6 @@
 ---
 title: pwlauncher
-description: Справочный раздел по команде пвлаунчер, который включает или отключает параметры запуска Windows To Go (пвлаунчер).
+description: Справочная статья по команде пвлаунчер, которая включает или отключает параметры запуска Windows To Go (пвлаунчер).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4b6793dead3a41abb82bc3940d0314bcd7610418
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 29e7434731bc89dff9bddbaedb8a6179f266fa28
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472119"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936698"
 ---
 # <a name="pwlauncher"></a>pwlauncher
 
@@ -30,7 +30,7 @@ pwlauncher {/enable | /disable}
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | разрешение | Включает параметры запуска Windows To Go, поэтому компьютер будет автоматически загружаться с USB-устройства при его наличии. |
 | /Disable | Отключает параметры запуска Windows To Go, поэтому компьютер не может быть загружен с устройства USB, если оно не настроено вручную в микропрограмме. |

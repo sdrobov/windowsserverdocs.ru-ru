@@ -1,6 +1,6 @@
 ---
-title: имитировать восстановление
-description: Справочный раздел по моделированию средства записи, который проверяет участие в сеансах восстановления на компьютере без выдачи событий предварительного восстановления или восстановления в модули записи.
+title: simulate restore
+description: Справочная статья по моделированию Restore, которая проверяет участие модуля записи в сеансах восстановления на компьютере без выдачи событий предварительного восстановления или восстановления в модули записи.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1bab6c56cddc1d2ac95dc70205b0990b82fbfd12
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7cc247848ef4fac1e3a6537247f640f3533c2bcd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936351"
 ---
 # <a name="simulate-restore"></a>Имитировать восстановление
 

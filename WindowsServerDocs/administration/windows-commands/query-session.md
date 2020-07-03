@@ -1,6 +1,6 @@
 ---
 title: query session
-description: Справочный раздел о команде запроса Session, в котором отображаются сведения о сеансах на удаленный рабочий стол сервере узла сеансов.
+description: Справочная статья по команде запроса Session, в которой отображаются сведения о сеансах на удаленный рабочий стол сервере узла сеансов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 57b8587c0a02067a3472561e08fbfa461c1448b9
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 440830af55763fbb3ebee7cdbdca97ca11cde30c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85937044"
 ---
 # <a name="query-session"></a>query session
 
@@ -33,7 +33,7 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | `<sessionname>` | Указывает имя сеанса, с которым необходимо выполнить запрос. |
 | `<username>` | Указывает имя пользователя, сеансы которого необходимо запросить. |
@@ -45,7 +45,7 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 | /Counter | Отображает сведения о текущих счетчиках, включая общее число созданных, отключенных и повторно подключенных сеансов. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Пользователь всегда может запрашивать сеанс, в который в данный момент вошел пользователь. Чтобы запросить другие сеансы, пользователь должен иметь специальное разрешение на доступ.
 

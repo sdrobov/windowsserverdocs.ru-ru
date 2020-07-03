@@ -1,6 +1,6 @@
 ---
 title: перенос
-description: Справочный раздел по команде Move, который перемещает один или несколько файлов из одного каталога в другой.
+description: Справочная статья по команде Move, которая перемещает один или несколько файлов из одного каталога в другой.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 283ee793769d991c1932eb2271c5117354bdf6a4
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 4cc1f7c04a54b78da7b24dbedad225a7326766cd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354505"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936308"
 ---
 # <a name="move"></a>перенос
 
