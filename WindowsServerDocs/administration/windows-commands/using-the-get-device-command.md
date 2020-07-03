@@ -1,6 +1,6 @@
 ---
 title: Get-Device
-description: Справочный раздел по Get-Device, который получает сведения о предварительно подготовленном компьютере (т. е. физическом компьютере, который был подключен к учетной записи компьютера в доменных службах Active Directory).
+description: Справочная статья по Get-Device, которая получает сведения о предварительно подготовленном компьютере (т. е. физическом компьютере, который был подключен к учетной записи компьютера в доменных службах Active Directory).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f89266a2f70523ec332ed7cfb6a976f87a8e4f2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0367af83ffb826b9bf3a3b94102d02e4d7ee7205
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719957"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935012"
 ---
 # <a name="get-device"></a>Get-Device
 
@@ -31,7 +31,7 @@ wdsutil /Get-Device {/Device:<Device name> | /ID:<MAC or UUID>} [/Domain:<Domain
 |-------|--------|
 |Модем<Device name>|Указывает имя компьютера (SAMAccountName).|
 |Удостоверения<MAC or UUID>|Указывает MAC-адрес или UUID (GUID) компьютера, как показано в следующих примерах. Обратите внимание, что допустимый GUID должен быть в одном из двух форматов двоичная строка или строка GUID<p>-   **Двоичная строка**:/ID: ACEFA3E81F20694E953EB2DAA1E8B1B6<br />-   **MAC-адрес**: 00B056882FDC (без дефисов) или 00-B0-56-88-2F-DC (с тире)<br />-   **Строка GUID**:/ID: E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6|
-|[/Domain:<Domain>]|Указывает домен для поиска предварительно подготовленного компьютера. Значение этого параметра по умолчанию — локальный домен.|
+|[/Domain: <Domain> ]|Указывает домен для поиска предварительно подготовленного компьютера. Значение этого параметра по умолчанию — локальный домен.|
 |[/Forest: {Да &#124; No}]|Указывает, должны ли службы развертывания Windows выполнять поиск по всему лесу или локальному домену. Значение по умолчанию — « **нет**». Это означает, что поиск выполняется только в локальном домене.|
 ## <a name="examples"></a>Примеры
 Чтобы получить сведения, используя имя компьютера, введите:
@@ -47,7 +47,7 @@ wdsutil /verbose /Get-Device /ID:00-B0-56-88-2F-DC /Domain:MyDomain
 wdsutil /verbose /Get-Device /ID:E8A3EFAC-201F-4E69-953-B2DAA1E8B1B6 /forest:Yes
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Command-Line Syntax Key](command-line-syntax-key.md)
-Подкоманда для синтаксиса командной строки[: Set-Device](subcommand-set-device.md)
-
-[с помощью команды Add-Device](using-the-add-device-command.md)[с помощью команды Get-аллдевицес](using-the-get-alldevices-command.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Подкоманда: Set-Device](subcommand-set-device.md) 
+ [Использование команды](using-the-add-device-command.md) 
+ Add-Device [Использование команды Get-аллдевицес](using-the-get-alldevices-command.md)

@@ -1,6 +1,6 @@
 ---
-title: Программа Logman Import и Logman Export
-description: Справочный раздел по программе Logman Import и Logman Export, который импортирует набор сборщиков данных из XML-файла или экспортирует набор сборщиков данных в XML-файл.
+title: logman import and logman export
+description: Справочная статья по программе Logman Import и Logman Export, которая импортирует набор сборщиков данных из XML-файла или экспортирует набор сборщиков данных в XML-файл.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3ad664548dce51d7631a6d1a02d628af91e1921f
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: d5fbe0139a1c320056e4ba80a845b43755fc0026
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721146"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934393"
 ---
-# <a name="logman-import-and-logman-export"></a>Программа Logman Import и Logman Export
+# <a name="logman-import-and-logman-export"></a>logman import and logman export
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

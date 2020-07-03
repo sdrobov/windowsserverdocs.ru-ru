@@ -1,6 +1,6 @@
 ---
 title: nslookup set search
-description: Справочный раздел по команде nslookup set Search, который добавляет доменные имена DNS в список поиска доменов DNS, пока не будет получен ответ.
+description: Справочная статья по команде nslookup set Search, которая добавляет имена доменов службы доменных имен (DNS) в список поиска доменов DNS для запроса, пока не будет получен ответ.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c3219434f768a573c9e433c44b6b38bc9dc75f14
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 7b1740dd9bb3eb35c4cd1ef4890fcb977b2dc1ff
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721429"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935506"
 ---
 # <a name="nslookup-set-search"></a>nslookup set search
 
@@ -31,7 +31,7 @@ set [no]search
 | Параметр | Описание |
 | --------- | ----------- |
 | не искать | Прекращает добавление доменных имен службы доменных имен (DNS) в списке поиска доменов DNS для запроса. |
-| search | Добавляет доменные имена системы доменных имен (DNS) в список поиска доменов DNS для запроса, пока не будет получен ответ. Это значение по умолчанию. |
+| поиск | Добавляет доменные имена системы доменных имен (DNS) в список поиска доменов DNS для запроса, пока не будет получен ответ. Это значение по умолчанию. |
 | /? | Отображение справки в командной строке. |
 | /help | Отображение справки в командной строке. |
 

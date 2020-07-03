@@ -1,6 +1,6 @@
 ---
 title: Get-Аллмултикасттрансмиссионс
-description: Справочный раздел по Get-Аллмултикасттрансмиссионс, в котором отображаются сведения обо всех многоадресных передачах на сервере.
+description: Справочная статья по Get-Аллмултикасттрансмиссионс, в которой отображаются сведения обо всех многоадресных передачах на сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5303618d1021a0c585a2bd6f958f73e145028a09
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0b220f8b3ffb0dd90092329b4d42bb320706263e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720007"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935069"
 ---
 # <a name="get-allmulticasttransmissions"></a>Get-Аллмултикасттрансмиссионс
 
@@ -35,7 +35,7 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 
 |        Параметр        |                                                                                                                                                                                                                                                                   Объяснение                                                                                                                                                                                                                                                                    |
 |-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [/Server:<Server name>] |                                                                                                                                                                                 Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.                                                                                                                                                                                  |
+| [/Server: <Server name> ] |                                                                                                                                                                                 Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.                                                                                                                                                                                  |
 |         /Show         | **Windows Server 2008**<p>/Show: Clients — отображает сведения о клиентских компьютерах, подключенных к многоадресным передачам.<p>**Windows Server 2008 R2**<p>Показывать: {Boot &#124; установить &#124; все} — тип возвращаемого образа.                                Функция **загрузки** возвращает только передачи загрузочных образов.                                  **Установка** возвращает только передачи образов. **ALL** возвращает оба типа изображений. |
 |                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |    /детаилс: клиенты     |                                                                                                                                                                                              Поддерживается только для Windows Server 2008 R2. При наличии клиенты, подключенные к передаче, будут отображаться.                                                                                                                                                                                               |
@@ -48,8 +48,8 @@ wdsutil /Get-AllMulticastTransmissions [/Server:<Server name>] [/Show:{Boot | In
 - Windows Server 2008:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:Clients /ExcludedeletePending`
 - Windows Server 2008 R2:`wdsutil /Get-AllMulticastTransmissions /Server:MyWDSServer /Show:All /details:Clients /ExcludedeletePending`
   ## <a name="additional-references"></a>Дополнительные ссылки
-  - [Ключ](command-line-syntax-key.md)
-  синтаксиса командной строки[с помощью команды](using-the-get-multicasttransmission-command.md)
-  Get-мултикасттрансмиссион с помощью команды[New-мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)
-  [с командой Remove-мултикасттрансмиссион](using-the-remove-multicasttransmission-command.md)
-  [: Start-мултикасттрансмиссион](subcommand-start-multicasttransmission.md)
+  - Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+   [Использование команды](using-the-get-multicasttransmission-command.md) 
+   Get-мултикасттрансмиссион [Использование команды](using-the-new-multicasttransmission-command.md) 
+   New-мултикасттрансмиссион [Использование команды](using-the-remove-multicasttransmission-command.md) 
+   Remove-мултикасттрансмиссион [Подкоманда: Start-мултикасттрансмиссион](subcommand-start-multicasttransmission.md)

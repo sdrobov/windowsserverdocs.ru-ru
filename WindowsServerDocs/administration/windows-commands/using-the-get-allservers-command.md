@@ -1,6 +1,6 @@
 ---
 title: Get-Аллсерверс
-description: Справочный раздел по Get-Аллсерверс, который извлекает сведения обо всех серверах служб развертывания Windows.
+description: Справочная статья по Get-Аллсерверс, которая извлекает сведения обо всех серверах служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b623b5e95e2a57147b7d9d191d42556191dd8e4d
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a02515b138c9db6a1d320a4ad466700c15b84749
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719981"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935060"
 ---
 # <a name="get-allservers"></a>Get-Аллсерверс
 
@@ -33,7 +33,7 @@ WDSUTIL [Options] /Get-AllServers /Show:{Config | Images | All} [/Detailed] [/Fo
 
 |   Параметр   |                                                                                                                 Описание                                                                                                                  |
 |---------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| /Show: {config |                                                                                                                    Образы                                                                                                                    |
+| /Show: {config |                                                                                                                    Изображения                                                                                                                    |
 |  [/Детаилед]  | При использовании в сочетании с параметром **/Show: Images** или **/Show: ALL**возвращает все метаданные образа из каждого изображения. Если параметр **/детаилед** не указан, по умолчанию возвращается имя образа, описание и имя файла. |
 | [/Forest: {Да |                                                                                                                     Нет}]                                                                                                                     |
 

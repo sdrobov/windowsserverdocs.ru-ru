@@ -1,6 +1,6 @@
 ---
 title: Get-Аллдриверграупс
-description: Справочный раздел по Get-Аллдриверграупс, в котором отображаются сведения обо всех группах драйверов на сервере.
+description: Справочная статья по команде Get-Аллдриверграупс, в которой отображаются сведения обо всех группах драйверов на сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4ac3e0c7b05c96383714c3a702cffd6aa8df18a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 4c254ee19cb7f447d0fb071469c50107205de98b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720892"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935217"
 ---
 # <a name="get-alldrivergroups"></a>Get-Аллдриверграупс
 
@@ -29,7 +29,7 @@ wdsutil /Get-AllDriverGroups [/Server:<Server name>] [/Show:{PackageMetaData | F
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
 |[/Show: {Паккажеметадата &#124; фильтры &#124; все}]|Отображает метаданные для всех пакетов драйверов в указанной группе. **Паккажеметадата** отображает сведения обо всех фильтрах для группы драйверов. **Фильтры** отображает метаданные для всех пакетов драйверов и фильтров для группы.|
 ## <a name="examples"></a>Примеры
 Чтобы просмотреть сведения о файле драйвера, введите:
@@ -40,5 +40,5 @@ wdsutil /Get-AllDriverGroups /Server:MyWdsServer /Show:All
 wdsutil /Get-AllDriverGroups [/Show:PackageMetaData]
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды Get-дриверграуп](using-the-get-drivergroup-command.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды Get-дриверграуп](using-the-get-drivergroup-command.md)

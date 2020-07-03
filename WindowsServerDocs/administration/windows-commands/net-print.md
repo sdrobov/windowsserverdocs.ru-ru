@@ -1,6 +1,6 @@
 ---
-title: NET Print
-description: Справочный раздел для команды net print. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
+title: net print
+description: Справочная статья по команде net print. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2d8744c3ef4540652b495aea0037e97f433238f2
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: af02ca14156c8a85ee54700983e2af6807752f91
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934823"
 ---
-# <a name="net-print"></a>NET Print
+# <a name="net-print"></a>net print
 
 > [!IMPORTANT]
 > Эта команда устарела. Однако многие из этих задач можно выполнять с помощью [команды прнжобс](prnjobs.md), [инструментарий управления Windows (WMI) (WMI)](https://docs.microsoft.com/windows/win32/wmisdk/wmi-start-page), [Принтманажемент в PowerShell](https://docs.microsoft.com/powershell/module/printmanagement)или [ресурсов скриптов для](https://gallery.technet.microsoft.com/ScriptCenter/site/search?f%5B0%5D.Type=RootCategory&f%5B0%5D.Value=printing&f%5B0%5D.Text=Printing)ИТ-специалистов.
@@ -39,7 +39,7 @@ net print {\\<computername>\<sharename> | \\<computername> <jobnumber> [/hold | 
 | `[/hold | /release | /delete]` | Указывает действие, выполняемое с заданием печати. Если указать номер задания, но не указывать никаких действий, будут отображены сведения о задании печати.<ul><li>**/холд** — задерживает задание, позволяя другим заданиям печати обходить его до выпуска.</li><li>**/Release** — освобождает Отложенное задание печати.</li><li>**/Delete** — удаляет задание печати из очереди печати.</li></ul> |
 | help | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
 - `net print\\<computername>`Команда отображает сведения о заданиях печати в общей очереди принтера. Ниже приведен пример отчета для всех заданий печати в очереди для общего принтера с именем *Laser*:
 

@@ -1,6 +1,6 @@
 ---
 title: nlbmgr
-description: Справочный раздел по команде Nlbmgr, который помогает настраивать и администрировать кластеры балансировки сетевой нагрузки и все узлы кластера с одного компьютера с помощью диспетчера балансировки сетевой нагрузки.
+description: Справочная статья по команде Nlbmgr, которая позволяет настраивать и администрировать кластеры балансировки сетевой нагрузки и все узлы кластера с одного компьютера с помощью диспетчера балансировки сетевой нагрузки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2eb7f802944260f7274e7ace30b7b55e9c4b27ad
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 882d3540897214db2f3fa9d04a6f11fc76a76502
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721507"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935530"
 ---
 # <a name="nlbmgr"></a>nlbmgr
 

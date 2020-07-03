@@ -1,6 +1,6 @@
 ---
 title: wmic
-description: Справочный раздел по WMIC, который отображает сведения WMI в интерактивной командной оболочке.
+description: Справочная статья по WMIC, которая отображает сведения WMI в интерактивной командной оболочке.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 252ba6b59c29378dd1f5e437de21a2ec4f5ec5c8
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c14f877c226bdd376da39cfa6e8f11116d59fe56
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720646"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936116"
 ---
 # <a name="wmic"></a>wmic
 
@@ -37,7 +37,7 @@ wmic </parameter>
 |Подкоманда|Описание|
 |-----------|-----------|
 |class|Отменяет режим псевдонима по умолчанию WMIC для прямого доступа к классам в схеме WMI.|
-|path|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
+|путь|Отменяет режим псевдонима по умолчанию WMIC для доступа к экземплярам в схеме WMI напрямую.|
 |контекст|Отображает текущие значения всех глобальных коммутаторов.|
 |[выход \| из программы]|Выход из командной оболочки WMIC.|
 

@@ -1,6 +1,6 @@
 ---
 title: xcopy
-description: Справочный раздел по Xcopy, который копирует файлы и каталоги, включая подкаталоги.
+description: Справочная статья по Xcopy, в которой копируются файлы и каталоги, включая подкаталоги.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 01/05/2019
-ms.openlocfilehash: c55d6ae5ff701555eb9bfb7135ffa28692bd4391
-ms.sourcegitcommit: 4894649cc47dfa535306cc334871f81155198f76
+ms.openlocfilehash: e33450cd330ac962c111b145d71c2595f926da2c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/01/2020
-ms.locfileid: "84254727"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85936059"
 ---
 # <a name="xcopy"></a>xcopy
 
@@ -208,7 +208,7 @@ rem  3 File(s) copied
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Копирование](copy.md)
+- [Копировать](copy.md)
 - [Перемещение](move.md)
 - [Команды](dir.md)
 - [Атрибуты](attrib.md)

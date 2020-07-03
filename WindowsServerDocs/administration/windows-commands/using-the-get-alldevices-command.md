@@ -1,6 +1,6 @@
 ---
 title: Get-Аллдевицес
-description: Справочный раздел по Get-Аллдевицес, в котором отображаются свойства служб развертывания Windows для всех предварительно подготовленных компьютеров.
+description: Справочная статья по Get-Аллдевицес, в которой отображаются свойства служб развертывания Windows для всех предварительно подготовленных компьютеров.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 26e114be7ecf104687da237636b54b79e4114591
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: b5eae53c2dcd39a7f3587f4c3c6bf96d4782ea05
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720903"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935227"
 ---
 # <a name="get-alldevices"></a>Get-Аллдевицес
 
@@ -30,7 +30,7 @@ wdsutil [Options] /Get-AllDevices [/forest:{Yes | No}] [/ReferralServer:<Server 
 |Параметр|Описание|
 |-------|--------|
 |[/Forest: {Да &#124; No}]|Указывает, должны ли службы развертывания Windows возвращать компьютеры во всем лесу или в локальном домене. Значение по умолчанию — « **нет**». Это означает, что возвращаются только компьютеры в локальном домене.|
-|[/Реферралсервер:<Server name>]|Возвращает только те компьютеры, которые предварительно подготовлены для указанного сервера.|
+|[/Реферралсервер: <Server name> ]|Возвращает только те компьютеры, которые предварительно подготовлены для указанного сервера.|
 ## <a name="examples"></a>Примеры
 Чтобы просмотреть все компьютеры, введите одно из следующих действий:
 ```
@@ -38,7 +38,7 @@ wdsutil /Get-AllDevices
 wdsutil /verbose /Get-AllDevices /forest:Yes /ReferralServer:MyWDSServer
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Command-Line Syntax Key](command-line-syntax-key.md)
-Подкоманда для синтаксиса командной строки[: Set-Device](subcommand-set-device.md)
-[с помощью команды](using-the-add-device-command.md)
-Add-Device[с помощью команды Get-Device](using-the-get-device-command.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Подкоманда: Set-Device](subcommand-set-device.md) 
+ [Использование команды](using-the-add-device-command.md) 
+ Add-Device [Использование команды Get-Device](using-the-get-device-command.md)

@@ -1,6 +1,6 @@
 ---
 title: query termserver
-description: Справочный раздел по команде Query термсервер, в котором отображается список всех удаленный рабочий стол серверов узлов сеансов в сети.
+description: Справочная статья по команде Query термсервер, в которой отображается список всех удаленный рабочий стол серверов узлов сеансов в сети.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c41ed824ee0b1e9dc2672646ef0af03e2593ec07
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c7f4ca42cc053e943d89f40a71eb24372c0399e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471979"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934233"
 ---
 # <a name="query-termserver"></a>query termserver
 
@@ -37,7 +37,7 @@ query termserver [<servername>] [/domain:<domain>] [/address] [/continue]
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | `<servername>` | Указывает имя, идентифицирующее сервер узла сеансов удаленный рабочий стол. |
 | /Domain`<domain>` | Указывает домен для запроса серверов терминалов. Не нужно указывать домен, если выполняется запрос к домену, в котором вы работаете в данный момент. |

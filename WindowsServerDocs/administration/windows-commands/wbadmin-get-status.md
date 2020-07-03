@@ -1,6 +1,6 @@
 ---
-title: Wbadmin get Status
-description: Справочный раздел, посвященный параметру Wbadmin get status, который сообщает о состоянии выполняемой в данный момент операции резервного копирования или восстановления.
+title: wbadmin get status
+description: Справочная статья для Wbadmin get status, которая сообщает о состоянии операции резервного копирования или восстановления, выполняемой в данный момент.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0e41c54b9f916f0032a4976cdfa6d3ca101fb744
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a5f073941fa0d336e513c8de7502a601f1de5711
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821194"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934334"
 ---
-# <a name="wbadmin-get-status"></a>Wbadmin get Status
+# <a name="wbadmin-get-status"></a>wbadmin get status
 
 
 
@@ -34,7 +34,7 @@ wbadmin get status
 
 Эта подкоманда не имеет параметров.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 -   Эта подкоманда не будет прерываться до завершения текущей операции резервного копирования или восстановления — подкоманда продолжит работу, даже если закрыть командное окно.
 -   Если вы хотите прерывать текущую операцию резервного копирования или восстановления, используйте подкоманду **Wbadmin останавливают задание** .

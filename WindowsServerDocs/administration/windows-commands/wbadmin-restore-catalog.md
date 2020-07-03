@@ -1,6 +1,6 @@
 ---
-title: Wbadmin Restore Catalog
-description: Справочный раздел по Wbadmin Recover Catalog, который восстанавливает каталог резервных копий для локального компьютера из указанного места хранения.
+title: wbadmin restore catalog
+description: Справочная статья по Wbadmin Recover Catalog, которая восстанавливает каталог резервных копий для локального компьютера из указанного места хранения.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82a399284862ef59f417efa0b6f17ab6e8c4cb71
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2584dde27560b5b8f28fb51b8fb5c2cf92a2d805
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820494"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934317"
 ---
-# <a name="wbadmin-restore-catalog"></a>Wbadmin Restore Catalog
+# <a name="wbadmin-restore-catalog"></a>wbadmin restore catalog
 
 Восстанавливает каталог резервных копий для локального компьютера из указанного места хранения.
 
@@ -39,7 +39,7 @@ wbadmin restore catalog
 |-Machine|Указывает имя компьютера, для которого требуется восстановить каталог резервных копий. Используется при хранении резервных копий на нескольких компьютерах в одном и том же месте. Следует использовать, если указан **-backupTarget** .|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 Если расположение (диск, DVD или удаленная общая папка), где хранятся резервные копии, повреждено или утеряно и не может использоваться для восстановления каталога резервного копирования, используйте **Wbadmin Delete Catalog** , чтобы удалить поврежденный каталог. В этом случае следует создать новую резервную копию после удаления каталога резервного копирования.
 

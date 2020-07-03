@@ -1,6 +1,6 @@
 ---
 title: Add-Дриверпаккаже
-description: Справочный раздел по Add-Дриверпаккаже, который добавляет пакет драйверов на сервер.
+description: Справочная статья по Add-Дриверпаккаже, которая добавляет пакет драйверов на сервер.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 12d7f7078cf3dde10f834a4d4c7784ecc1d9bdf2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2cc253785c0a869ebf1e3f820429564eacdb2dcb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721095"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935837"
 ---
 # <a name="add-driverpackage"></a>Add-Дриверпаккаже
 
@@ -30,11 +30,11 @@ WDSUTIL /Add-DriverPackage /InfFile:<Inf File path> [/Server:<Server name>] [/Ar
 
 |          Параметр           |                                                              Описание                                                              |
 |------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-|   Инффиле:\<путь к INF-файлу>   |                                           Указывает полный путь к добавляемому INF-файлу.                                            |
-|    /Server:\<имя сервера>    | Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер. |
+|   Инффиле:\<Inf File path>   |                                           Указывает полный путь к добавляемому INF-файлу.                                            |
+|    Сервером\<Server name>    | Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер. |
 |      /Арчитектуре: {x86      |                                                                 ia64                                                                  |
-| [/Дриверграуп:\<имя группы>] |                             Указывает имя группы драйверов, в которую должен быть добавлен пакет.                              |
-|   [/Name:\<понятное имя>]   |                                           Указывает понятное имя для пакета драйверов.                                            |
+| [/Дриверграуп: \<Group Name> ] |                             Указывает имя группы драйверов, в которую должен быть добавлен пакет.                              |
+|   [/Name: \<Friendly Name> ]   |                                           Указывает понятное имя для пакета драйверов.                                            |
 
 ## <a name="examples"></a>Примеры
 

@@ -1,6 +1,6 @@
 ---
 title: msiexec
-description: Справочный раздел по команде msiexec, который предоставляет средства для установки, изменения и выполнения операций с установщик Windows из командной строки.
+description: Справочная статья по команде msiexec, которая предоставляет средства для установки, изменения и выполнения операций с установщик Windows из командной строки.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f84df28104f581873fe1fd86a3abd6a51532b020
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: aacdc55ac3895efad7dd9499ea1402b538fb8a9b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354344"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934958"
 ---
 # <a name="msiexec"></a>msiexec
 
@@ -45,7 +45,7 @@ msiexec.exe [/i][/a][/j{u|m|/g|/t}][/x] <path_to_package>
 
 #### <a name="examples"></a>Примеры
 
-Чтобы установить пакет с именем *example. msi* с диска C: с помощью обычного процесса установки, введите:
+Чтобы установить пакет с именем *example.msi* с диска C: с помощью обычного процесса установки, введите:
 
 ```
 msiexec.exe /i "C:\example.msi"
@@ -75,13 +75,13 @@ msiexec.exe /i <path_to_package> [/quiet][/passive][/q{n|b|r|f}]
 | /кр | Указывает сокращенный интерфейс пользователя во время процесса установки. |
 | /кф | Указывает полный интерфейс интерфейса пользователя во время установки. |
 
-##### <a name="remarks"></a>Remarks
+##### <a name="remarks"></a>Комментарии
 
 - Модальное окно не отображается, если установка отменена пользователем. Вы можете использовать **QB +!** или **QB! +** , чтобы скрыть кнопку **Отмена** .
 
 #### <a name="examples"></a>Примеры
 
-Чтобы установить пакет *к:\ексампле.МСИ*с обычным процессом установки без пользовательского интерфейса, введите:
+Чтобы установить пакетную *C:\example.msi*с обычным процессом установки без пользовательского интерфейса, введите:
 
 ```
 msiexec.exe /i "C:\example.msi" /qn
@@ -108,7 +108,7 @@ msiexec.exe /i <path_to_package> [/norestart][/promptrestart][/forcerestart]
 
 #### <a name="examples"></a>Примеры
 
-Чтобы установить пакет *к:\ексампле.МСИ*, используя нормальный процесс установки без перезагрузки в конце, введите:
+Чтобы установить пакет *C:\example.msi*, используя нормальный процесс установки без перезагрузки в конце, введите:
 
 ```
 msiexec.exe /i "C:\example.msi" /norestart
@@ -152,7 +152,7 @@ msiexec.exe [/i][/x] <path_to_package> [/L{i|w|e|a|r|u|c|m|o|p|v|x+|!|*}] <path_
 
 #### <a name="examples"></a>Примеры
 
-Чтобы установить пакет *к:\ексампле.МСИ*, используя стандартный процесс установки со всеми предоставленными сведениями о ведении журнала, включая подробные выходные данные и сохранив выходной файл журнала по адресу *к:\паккаже.лог*, введите:
+Чтобы установить пакетную *C:\example.msi*, в обычном процессе установки со всеми предоставленными сведениями о ведении журнала, включая подробные выходные данные, и сохранения выходного файла журнала по адресу *к:\паккаже.лог*, введите:
 
 ```
 msiexec.exe /i "C:\example.msi" /L*V "C:\package.log"
@@ -231,6 +231,6 @@ msiexec.exe /fa {AAD3D77A-7476-469F-ADF4-04424124E91D}
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Параметры командной строки Msiexec. exe](https://docs.microsoft.com/windows/win32/msi/command-line-options)
+- [Параметры командной строкиMsiexec.exe](https://docs.microsoft.com/windows/win32/msi/command-line-options)
 
 - [Стандартные параметры командной строки установщика](https://docs.microsoft.com/windows/win32/msi/standard-installer-command-line-options)

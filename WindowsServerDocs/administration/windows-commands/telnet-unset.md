@@ -1,6 +1,6 @@
 ---
-title: Telnet не определено
-description: Справочный раздел по Telnet unset, который отключает ранее установленные параметры.
+title: telnet unset
+description: Справочная статья для Telnet без параметров, которая отключает ранее установленные параметры.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1d2ae8c3e96e0416a8b9f5f477778e5e89339842
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 3efbf7d4f2507d16dbe0beb704ab0c80467a56d3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935289"
 ---
 # <a name="telnet-unset"></a>Telnet: не задано
 
@@ -34,7 +34,7 @@ u[nset] {bsasdel | crlf | delasbs | escape | localecho | logging | ntlm} [?]
 |деласбс|Отправляет **Удаление** как **Удаление**.|
 |escape-знак|Удаляет параметр escape-символа.|
 |локалечо|Отключает локалечо.|
-|Ведение журналов|Отключает ведение журнала.|
+|Ведение журнала|Отключает ведение журнала.|
 |NTLM|Отключает проверку подлинности NTLM.|
 |?|Отображает справку для этой команды.|
 ## <a name="examples"></a>Примеры

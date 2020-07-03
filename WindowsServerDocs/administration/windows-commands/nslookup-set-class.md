@@ -1,6 +1,6 @@
 ---
 title: nslookup set class
-description: Справочный раздел для команды nslookup set Class, которая изменяет класс запроса.
+description: Справочная статья по команде nslookup set Class, которая изменяет класс запроса.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e939be13eedcab557dc6dcbe16f2e83f810c20d5
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 073f27f6f10721b11e6d0889d1cb8c16f15db283
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721567"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934427"
 ---
 # <a name="nslookup-set-class"></a>nslookup set class
 

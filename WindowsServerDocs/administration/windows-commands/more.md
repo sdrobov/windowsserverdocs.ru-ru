@@ -1,6 +1,6 @@
 ---
 title: многом другом
-description: Справочный раздел, посвященный команде more, которая отображает один экран вывода за раз.
+description: Справочная статья, посвященная команде more, которая отображает один экран вывода за раз.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/26/2019
-ms.openlocfilehash: 042669aa638990375157d08d9e12840ade486165
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: fec0ffbd7f2ce5d1efe1953cb4ab283d33f06ec8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354574"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935729"
 ---
 # <a name="more"></a>многом другом
 
@@ -45,7 +45,7 @@ more [/c] [/p] [/s] [/t<n>] [+<n>] [<files>]
 | `<files>` | Указывает список отображаемых файлов. Файлы должны быть разделены пробелами. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
 - Следующие подкоманды принимаются в командной строке **More** ( `-- More --` ), включая:
 

@@ -1,6 +1,6 @@
 ---
-title: открыть Telnet
-description: Справочный раздел по Telnet Open, который подключается к серверу Telnet.
+title: telnet open
+description: Справочная статья по Telnet Open, которая подключается к серверу Telnet.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 s.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0be8aca4cb061df55674a405eb1cf2a5e643cb4f
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: f3b27088d464e62b24479eaa87f44b91f7d95d12
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222719"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935334"
 ---
 # <a name="telnet-open"></a>Telnet: открыть
 

@@ -1,6 +1,6 @@
 ---
 title: Управление — BDE форцерековери
-description: Справочный раздел по команде Manage-bde форцерековери, которая обеспечивает принудительную перезагрузку диска, защищенного с помощью BitLocker, в режим восстановления.
+description: Справочная статья по команде Manage-bde форцерековери, которая обеспечивает принудительную перезагрузку диска, защищенного с помощью BitLocker, в режим восстановления.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e152a18137925bd197e672531ccef47e7b2a7119
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 3d6c9cc9f851d2147cd23e8cc2e6baf3021fdd4c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222894"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935379"
 ---
 # <a name="manage-bde-forcerecovery"></a>Управление — BDE форцерековери
 
@@ -31,7 +31,7 @@ manage-bde –forcerecovery <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 | Параметр | Описание |
 | --------- | ----------- |
 | `<drive>` | Представляет букву диска, за которой следует двоеточие. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

@@ -1,6 +1,6 @@
 ---
-title: ход выполнения
-description: Справочный раздел о ходе выполнения, который отображает ход выполнения команды.
+title: progress
+description: Справочная статья о ходе выполнения, которая отображает ход выполнения команды.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3fcb06304df22208cef013d73a4ebf0af1991f88
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 9e9650a980d74f15bc0ec5c88d8df2dc93a3d8b0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721434"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934589"
 ---
-# <a name="progress"></a>ход выполнения
+# <a name="progress"></a>progress
 
 Отображает ход выполнения команды. **/Прогресс** можно использовать с любыми другими выполняемыми командами WDSUTIL. Обратите внимание, что необходимо указать **/verbose** и **/прогресс** непосредственно после **WDSUTIL**.
 

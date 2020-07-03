@@ -1,6 +1,6 @@
 ---
 title: Manage-bde выкл.
-description: Справочный раздел по команде Manage-bde Off, который расшифровывает диск и отключает BitLocker.
+description: Справочная статья по команде Manage-bde Off, которая расшифровывает диск и отключает BitLocker.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: cbcec0cadba870a5f416af50f12e0b2c5eed6d95
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 65749f31750b1f7467539b25b09061ea267636df
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222867"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935527"
 ---
 # <a name="manage-bde-off"></a>Manage-bde выкл.
 
@@ -31,7 +31,7 @@ manage-bde -off [<volume>] [-computername <name>] [{-?|/?}] [{-help|-h}]
 | Параметр | Описание |
 | --------- | ----------- |
 | `<volume>` | Указывает букву диска, за которой следует двоеточие, путь GUID тома или подключенный том. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

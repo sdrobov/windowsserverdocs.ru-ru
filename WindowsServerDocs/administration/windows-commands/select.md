@@ -1,6 +1,6 @@
 ---
 title: select
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9615918bb7fab45018f40b409427ab12fc3eddb7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 6004d39e225b1ac4acd96b4108accff2ccfc485c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721978"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935932"
 ---
 # <a name="select"></a>select
 
@@ -40,7 +40,7 @@ select vdisk
 |[Выбор тома](select-volume.md)|Перемещает фокус на том.|
 |[Выбрать виртуальный диск](select-vdisk.md)|Перемещает фокус на виртуальный жесткий диск.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 -   Если выбран том с соответствующим разделом, раздел будет выбран автоматически.
 -   Если секция выбрана с соответствующим томом, том будет выбран автоматически.

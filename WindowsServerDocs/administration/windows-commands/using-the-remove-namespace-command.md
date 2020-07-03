@@ -1,6 +1,6 @@
 ---
 title: Remove-Namespace
-description: Справочный раздел по Remove-Namespace, который удаляет пользовательское пространство имен.
+description: Справочная статья по Remove-Namespace, которая удаляет пользовательское пространство имен.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2ef329a53a7f212c1810af2e4ced11a2abf76840
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a4b0920e5f42f40b1f0cdce0ffcc3a09bf19b0d2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720327"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85935400"
 ---
 # <a name="using-the-remove-namespace-command"></a>Использование команды Remove-Namespace
 
@@ -29,8 +29,8 @@ wdsutil /remove-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|Имен<Namespace name>|Указывает имя пространства имен. Это не понятное имя, оно должно быть уникальным.<p>-   **Служба роли сервера развертывания**: синтаксис имени пространства имен —/namespace: WDS:<ImageGroup>/<ImageName>/<Index>. Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Служба роли транспортного сервера**: это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+|Имен<Namespace name>|Указывает имя пространства имен. Это не понятное имя, оно должно быть уникальным.<p>-   **Служба роли сервера развертывания**: синтаксис имени пространства имен —/namespace: WDS: <ImageGroup> / <ImageName> / <Index> . Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Служба роли транспортного сервера**: это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
 |/Force|немедленно удаляет пространство имен и завершает работу всех клиентов. Обратите внимание, что если не указать **/Force**, существующие клиенты могут завершить перенос, но новые клиенты не смогут присоединиться.|
 ## <a name="examples"></a>Примеры
 Чтобы присвоить пространство имен (текущие клиенты могут завершить процесс перемещения, но новые клиенты не смогут присоединиться), введите:
@@ -42,7 +42,7 @@ wdsutil /remove-Namespace /Namespace:Custom Auto 1
 wdsutil /remove-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /force
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки
-[с помощью команды Get-аллнамеспацес](using-the-get-allnamespaces-command.md)[с использованием подкоманды New-пространство_имен](using-the-new-namespace-command.md)
-[: Start-Namespace.](subcommand-start-namespace.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-get-allnamespaces-command.md) 
+ Get-аллнамеспацес [Использование команды](using-the-new-namespace-command.md) 
+ New-Namespace [Подкоманда: Start-Namespace](subcommand-start-namespace.md)
