@@ -1,6 +1,6 @@
 ---
-title: ksetup сетреалм
-description: Справочный раздел по команде ksetup сетреалм, который задает имя области Kerberos.
+title: ksetup setrealm
+description: Справочная статья по команде ksetup сетреалм, которая задает имя области Kerberos.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 03b33977f57e187a8bea69be78c1e9c094b9a73e
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c6fa5573322237dfee5909d9afc2e99696ac82b3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817284"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933134"
 ---
-# <a name="ksetup-setrealm"></a>ksetup сетреалм
+# <a name="ksetup-setrealm"></a>ksetup setrealm
 
 Задает имя области Kerberos.
 
@@ -49,4 +49,4 @@ ksetup /setrealm CONTOSO
 
 - [Команда ksetup](ksetup.md)
 
-- [ksetup ремовереалм](ksetup-removerealm.md)
+- [ksetup removerealm](ksetup-removerealm.md)

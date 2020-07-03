@@ -1,6 +1,6 @@
 ---
 title: extract
-description: Справочный раздел по команде Extract, который извлекает файлы из исходного расположения.
+description: Справочная статья по команде Extract, которая извлекает файлы из исходного расположения.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: dbadcc555fc9bb0b02e568b1126a317a9d59d336
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 1de26d444f8c8fdc838fc2fe0c662afefe8c172c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437189"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932387"
 ---
 # <a name="extract"></a>extract
 
@@ -34,7 +34,7 @@ extract [/y] /c source destination
 | --------- | ----------- |
 | файле | Используйте, если требуется извлечь два или более файлов. |
 | filename | Имя файла, извлекаемого из CAB-архива. Можно использовать подстановочные знаки и несколько имен файлов (разделенные пробелами). |
-| источник | Сжатый файл (CAB-файл с одним файлом). |
+| source | Сжатый файл (CAB-файл с одним файлом). |
 | newname | Новое имя файла, чтобы получить извлеченный файл. Если значение не указано, используется исходное имя. |
 | /a | Обработка всех ящиков. Ниже приведена цепочка CAB-файлов, начиная с первого указанного CAB-файла. |
 | /C | Копировать исходный файл в место назначения (для копирования с дисков DMF). |

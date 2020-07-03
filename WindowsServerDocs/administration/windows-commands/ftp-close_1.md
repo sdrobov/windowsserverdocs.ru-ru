@@ -1,6 +1,6 @@
 ---
-title: FTP Close
-description: Справочный раздел по команде FTP Close, который завершает сеанс FTP с удаленным сервером и остается в строке FTP.
+title: ftp close
+description: Справочная статья по команде FTP Close, которая завершает сеанс FTP с удаленным сервером и остается в строке FTP.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 12b8ef1dd750da0f40279088be66b8249c0d78f4
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7123a0aaa26d9b7cc046f0b045e5d1219827d7c9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819994"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933287"
 ---
-# <a name="ftp-close"></a>FTP Close
+# <a name="ftp-close"></a>ftp close
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

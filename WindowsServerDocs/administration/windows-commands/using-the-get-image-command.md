@@ -1,6 +1,6 @@
 ---
 title: Get-Image
-description: Справочный раздел по Get-Image, который получает сведения о изображении.
+description: Справочная статья по Get-Image, которая получает сведения о изображении.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 04cc7b8d90415e32be4103ef6c7f7b709c3550c3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d37989fa681e5694b0c15b77aa1baddcfebbeecf
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719924"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932230"
 ---
 # <a name="get-image"></a>Get-Image
 
@@ -35,11 +35,11 @@ wdsutil [Options] /Get-Imagmedia:<Image name> [/Server:<Server name>mediatype:In
 |Параметр|Описание|
 |-------|--------|
 носител<Image name>|Указывает имя образа.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 mediaType: {Загрузка &#124; установка}|Указывает тип изображения.|
 |/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру образа. Так как для образов загрузки в разных архитектурах можно использовать одно и то же имя образа, задание значения архитектуры гарантирует, что будет возвращен правильный образ.|
-|[/Филенаме:<File name>]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-|\Медиаграуп:<Image group name>]|Указывает группу образов, содержащую образ. Если группа образов не указана и на сервере существует только одна группа образов, будет использоваться эта группа. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
+|[/Филенаме: <File name> ]|Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+|\Медиаграуп: <Image group name> ]|Указывает группу образов, содержащую образ. Если группа образов не указана и на сервере существует только одна группа образов, будет использоваться эта группа. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
 ## <a name="examples"></a>Примеры
 Чтобы получить сведения о загрузочном образе, введите один из следующих элементов:
 ```
@@ -52,10 +52,10 @@ wdsutil /Get-Imagmedia:Windows Vista with Officemediatype:Install
 wdsutil /verbose /Get-Imagmedia:Windows Vista with Office /Server:MyWDSServemediatype:InstalmediaGroup:ImageGroup1 /Filename:install.wim
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды Add-](using-the-add-image-command.md)
-Image с помощью команды "[Копировать](using-the-copy-image-command.md)
-изображение" с помощью команды "[Export](using-the-export-image-command.md)
--Image" с помощью команды[Remove](using-the-remove-image-command.md)
--Image с помощью команды[Replace](using-the-replace-image-command.md)
--Image[: Set-Image](subcommand-set-image.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-add-image-command.md) 
+ Add-Image [Использование команды](using-the-copy-image-command.md) 
+ Copy-Image [Использование команды](using-the-export-image-command.md) 
+ Export-Image [Использование команды](using-the-remove-image-command.md) 
+ Remove-Image [Использование команды](using-the-replace-image-command.md) 
+ Replace-Image [Подкоманда: Set-Image](subcommand-set-image.md)

@@ -1,6 +1,6 @@
 ---
 title: Get — Namespace
-description: Справочный раздел по Get-Namespace, который отображает сведения о пользовательском пространстве имен.
+description: Справочная статья по Get-Namespace, в которой отображаются сведения о пользовательском пространстве имен.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 76980d2add9ee9b7584812c9d366408f8770b681
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a029d56b2aea0a05bb12121cde89a1a731f3e4c5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719743"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932189"
 ---
 # <a name="get-namespace"></a>Get — Namespace
 
@@ -35,8 +35,8 @@ wdsutil /Get-Namespace /Namespace:<Namespace name> [/Server:<Server name>] [/det
 
 |               Параметр               |                                                                                                                                                                                         Описание                                                                                                                                                                                          |
 |---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      Имен<Namespace name>      | Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-Сервер развертывания. синтаксис имени пространства имен —/Намспаце: WDS<ImageGroup>/<ImageName>/<Index>:. Например: **WDS: ImageGroup1/install. wim/1**<br />— Транспортный сервер. это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
-|        [/Server:<Server name>]        |                                                                                                             Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.                                                                                                              |
+|      Имен<Namespace name>      | Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-Сервер развертывания. синтаксис имени пространства имен —/Намспаце: WDS: <ImageGroup> / <ImageName> / <Index> . Например: **WDS: ImageGroup1/install. wim/1**<br />— Транспортный сервер. это значение должно совпадать с именем, присвоенным пространству имен при его создании на сервере. |
+|        [/Server: <Server name> ]        |                                                                                                             Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.                                                                                                              |
 | [/Show: Clients] или [/детаилс: Clients] |                                                                                                                                                  Отображает сведения о клиентских компьютерах, подключенных к указанному пространству имен.                                                                                                                                                  |
 
 ## <a name="examples"></a>Примеры
@@ -48,8 +48,8 @@ wdsutil /Get-Namespace /Namespace:Custom Auto 1
 - Windows Server 2008:`wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /Show:Clients`
 - Windows Server 2008 R2:`wdsutil /Get-Namespace /Server:MyWDSServer /Namespace:Custom Auto 1 /details:Clients`
   ## <a name="additional-references"></a>Дополнительные ссылки
-  - [Ключ](command-line-syntax-key.md)
-  
-  синтаксиса командной строки[с помощью команды Get-аллнамеспацес](using-the-get-allnamespaces-command.md)с помощью команды[New-Namespace](using-the-new-namespace-command.md)
-  с использованием[подкоманды](subcommand-start-namespace.md) [Remove-Namespace](using-the-remove-namespace-command.md)
-  .
+  - Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+   [Использование команды](using-the-get-allnamespaces-command.md) 
+   Get-аллнамеспацес [Использование команды](using-the-new-namespace-command.md) 
+   New-Namespace [Использование команды](using-the-remove-namespace-command.md) 
+   Remove-Namespace [Подкоманда: Start-Namespace](subcommand-start-namespace.md)

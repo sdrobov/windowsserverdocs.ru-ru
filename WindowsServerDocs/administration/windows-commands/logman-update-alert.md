@@ -1,6 +1,6 @@
 ---
-title: оповещение об обновлении Logman
-description: Справочный раздел по команде Logman Update Alert, который обновляет свойства существующего сборщика данных оповещений.
+title: logman update alert
+description: Справочная статья по команде Logman Update Alert, которая обновляет свойства существующего сборщика данных оповещений.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 49d07744df911b054c9c9235b297090e8c39019b
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 84e198ef528d1f9192662ed89ad39b6884fab742
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222798"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932270"
 ---
-# <a name="logman-update-alert"></a>оповещение об обновлении Logman
+# <a name="logman-update-alert"></a>logman update alert
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

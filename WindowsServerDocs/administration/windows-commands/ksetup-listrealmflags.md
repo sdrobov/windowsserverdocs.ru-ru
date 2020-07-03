@@ -1,6 +1,6 @@
 ---
-title: ksetup листреалмфлагс
-description: Справочный раздел для команды ksetup листреалмфлагс, в которой перечислены доступные флаги области, которые можно сообщить по ksetup.
+title: ksetup listrealmflags
+description: Справочная статья по команде ksetup листреалмфлагс, в которой перечислены доступные флаги области, которые можно сообщить по ksetup.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c5ebbee7f937733286e0354eca1cf5524459e86
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: d094b7d627885d25313b73bb51a1bbeeec2832d6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817724"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933686"
 ---
-# <a name="ksetup-listrealmflags"></a>ksetup листреалмфлагс
+# <a name="ksetup-listrealmflags"></a>ksetup listrealmflags
 
 Список доступных флагов области, которые могут быть переданы по **ksetup**.
 
@@ -26,7 +26,7 @@ ms.locfileid: "83817724"
 ksetup /listrealmflags
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 - Флаги сферы задают дополнительные возможности области Kerberos, которые не основаны на операционной системе Windows Server. Компьютеры под управлением Windows Server могут использовать сервер Kerberos для администрирования проверки подлинности в области Kerberos вместо использования домена под управлением операционной системы Windows Server. Эта запись устанавливает функции области и имеет следующие значения:
 

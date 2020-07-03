@@ -1,6 +1,6 @@
 ---
 title: shift
-description: Справочный раздел по смене, который изменяет расположение пакетных параметров в пакетном файле.
+description: Справочная статья для смены, которая изменяет расположение пакетных параметров в пакетном файле.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 870bda19de3426fd7007020efb2f3db39bf654c8
-ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
+ms.openlocfilehash: c72f1f2390a1adaa993be2caa7954d72dede51e9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433168"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932580"
 ---
 # <a name="shift"></a>shift
 
@@ -32,7 +32,7 @@ shift [/n <N>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/n \< n>|Задает начало сдвига с помощью *n*-го аргумента, где *n* — любое значение от 0 до 8. Требуются расширения команд, которые включены по умолчанию.|
+|параметра\<N>|Задает начало сдвига с помощью *n*-го аргумента, где *n* — любое значение от 0 до 8. Требуются расширения команд, которые включены по умолчанию.|
 |/?|Отображение справки в командной строке.|
 
 ## <a name="remarks"></a>Комментарии
@@ -45,13 +45,13 @@ shift [/n <N>]
 
 ## <a name="examples"></a>Примеры
 
-Следующие строки из примера пакетного файла с именем Микопи. bat демонстрируют, как использовать **SHIFT** с любым количеством пакетных параметров. В этом примере Микопи. BAT копирует список файлов в указанный каталог. Параметры пакета представлены аргументами каталога и имени файла.
+Следующие строки из примера пакетного файла с именем Mycopy.bat демонстрируют, как использовать **SHIFT** с любым количеством пакетных параметров. В этом примере Mycopy.bat копирует список файлов в указанный каталог. Параметры пакета представлены аргументами каталога и имени файла.
 ```
-@echo off 
+@echo off
 rem MYCOPY.BAT copies any number of files
 rem to a directory.
 rem The command uses the following syntax:
-rem mycopy dir file1 file2 ... 
+rem mycopy dir file1 file2 ...
 set todir=%1
 :getfile
 shift

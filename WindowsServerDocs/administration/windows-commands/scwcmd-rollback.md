@@ -1,6 +1,6 @@
 ---
 title: Откат команду scwcmd
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 288c5bb14602e895648cfdc1535b734a823b7233
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b329791b16e333e38669258eeeedfa8d65f334db
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820964"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932655"
 ---
 # <a name="scwcmd-rollback"></a>Scwcmd: rollback
 
@@ -32,14 +32,14 @@ scwcmd rollback /m:<ComputerName> [/u:<UserName>] [/pw:<Password>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/m: \< имя_компьютера>|Указывает имя NetBIOS, DNS-имя или IP-адрес компьютера, на котором должна быть выполнена операция отката.|
-|/u: \< имя_пользователя>|Указывает альтернативную учетную запись пользователя, используемую при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
-|/ПВ: \< пароль>|Указывает альтернативные учетные данные пользователя для использования при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
+|/m\<ComputerName>|Указывает имя NetBIOS, DNS-имя или IP-адрес компьютера, на котором должна быть выполнена операция отката.|
+|/u\<UserName>|Указывает альтернативную учетную запись пользователя, используемую при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
+|пароль\<Password>|Указывает альтернативные учетные данные пользователя для использования при удаленном откате. Значение по умолчанию — вошедший в систему пользователь.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
-Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
+Scwcmd.exe доступны только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
 ## <a name="examples"></a>Примеры
 

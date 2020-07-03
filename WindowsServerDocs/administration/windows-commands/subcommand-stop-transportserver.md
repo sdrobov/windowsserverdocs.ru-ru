@@ -1,6 +1,6 @@
 ---
 title: Подкоманда-Транспортсервер
-description: Справочный раздел по ошибке Транспортсервер
+description: Справочная статья для Транспортсервер
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4321ec991b2c20911f992e4c3c38e5c9cfa5f165
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: ea749b9ff2f19b4b7c9e70e0a58024d4dd9e37f9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721623"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933740"
 ---
 # <a name="subcommand-stop-transportserver"></a>Подкоманда: Транспортсервер
 
@@ -28,7 +28,7 @@ wdsutil [Options] /Stop-TransportServer [/Server:<Server name>]
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя транспортного сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если транспортный сервер не указан, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя транспортного сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если транспортный сервер не указан, будет использоваться локальный сервер.|
 ## <a name="examples"></a><a name="BKMK_examples"></a>Примеры
 Чтобы отключить службы, введите одно из следующих действий.
 ```
@@ -36,9 +36,9 @@ wdsutil /Stop-TransportServer
 wdsutil /verbose /Stop-TransportServer /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды Disable-транспортсервер](using-the-disable-transportserver-command.md)
-с помощью команды[Enable-транспортсервер](using-the-enable-transportserver-command.md)
-[с командой Get-транспортсервер](using-the-get-transportserver-command.md)
-[: Set-транспортсервер](subcommand-set-transportserver.md)
-[подкоманда: Start-транспортсервер](subcommand-start-transportserver.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-disable-transportserver-command.md) 
+ Disable-транспортсервер [Использование команды](using-the-enable-transportserver-command.md) 
+ Enable-транспортсервер [Использование команды](using-the-get-transportserver-command.md) 
+ Get-транспортсервер [Подкоманда: Set-транспортсервер](subcommand-set-transportserver.md) 
+ [Подкоманда: Start-транспортсервер](subcommand-start-transportserver.md)

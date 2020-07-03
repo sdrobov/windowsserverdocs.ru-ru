@@ -1,6 +1,6 @@
 ---
 title: logman update
-description: Справочный раздел по команде Logman Update, который обновляет существующий сборщик данных.
+description: Справочная статья по команде Logman Update, которая обновляет существующий сборщик данных.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0302607f3d2efd9c20f8629e73199567a459d7c8
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: d13dffc6ced3ebf011f8854ab27bbc9f18c41070
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222747"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933078"
 ---
 # <a name="logman-update"></a>logman update
 
@@ -30,10 +30,10 @@ logman update <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 
 | Параметр | Описание |
 | ---------| ----------- |
-| [Счетчик обновлений Logman](logman-update-counter.md) | Обновляет сборщик данных счетчика. |
-| [оповещение об обновлении Logman](logman-update-alert.md) | Обновляет сборщик данных предупреждений. |
-| [Logman Update cfg](logman-update-cfg.md) | Обновляет сборщик данных конфигурации. |
-| [API обновления Logman](logman-update-api.md) | Обновляет сборщик данных трассировки API. |
+| [logman update counter](logman-update-counter.md) | Обновляет сборщик данных счетчика. |
+| [logman update alert](logman-update-alert.md) | Обновляет сборщик данных предупреждений. |
+| [logman update cfg](logman-update-cfg.md) | Обновляет сборщик данных конфигурации. |
+| [logman update api](logman-update-api.md) | Обновляет сборщик данных трассировки API. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

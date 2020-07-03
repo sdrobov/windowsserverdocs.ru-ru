@@ -1,6 +1,6 @@
 ---
-title: Удаление FTP
-description: Справочный раздел по команде FTP DELETE, который удаляет файлы на удаленных компьютерах.
+title: ftp delete
+description: Справочная статья по команде FTP DELETE, которая удаляет файлы на удаленных компьютерах.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 43ea2ef90f29970a42b0196717ce4d2d3552a32c
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 5e59abdb18104ad23e5e46ffa01b9bfcf015768c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819955"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933265"
 ---
-# <a name="ftp-delete"></a>Удаление FTP
+# <a name="ftp-delete"></a>ftp delete
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -36,7 +36,7 @@ delete <remotefile>
 
 ### <a name="examples"></a>Примеры
 
-Чтобы удалить файл *Test. txt* на удаленном компьютере, введите:
+Чтобы удалить файл *test.txt* на удаленном компьютере, введите:
 
 ```
 delete test.txt

@@ -1,6 +1,6 @@
 ---
-title: FTP dir
-description: Справочный раздел для команды FTP dir, которая отображает список файлов каталога и подкаталогов на удаленном компьютере.
+title: ftp dir
+description: Справочная статья по команде FTP dir, которая отображает список файлов каталога и подкаталогов на удаленном компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6a120691964b7303cf3241ffef2f11d81573ba4d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b1234b11beb61027a8e56f713f76d2c2bdcc4618
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819864"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933155"
 ---
-# <a name="ftp-dir"></a>FTP dir
+# <a name="ftp-dir"></a>ftp dir
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -43,7 +43,7 @@ dir [<remotedirectory>] [<localfile>]
 dir dir1
 ```
 
-Чтобы сохранить список текущего каталога на удаленном компьютере в локальном файле *дирлист. txt*, введите:
+Чтобы сохранить список текущего каталога на удаленном компьютере в *dirlist.txt*локального файла, введите:
 
 ```
 dir . dirlist.txt

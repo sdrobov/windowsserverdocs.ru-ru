@@ -1,6 +1,6 @@
 ---
 title: сброс
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0701324ad1ee94cc645c7519d81fef7357b6a34a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8a412eff7bdf432608a999edb4531074ed5e8f26
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722346"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933091"
 ---
 # <a name="reset"></a>сброс
 
 
 
-Сбрасывает файл DiskShadow. exe в состояние по умолчанию. **Reset** особенно полезен при разделении составных операций DiskShadow, таких как **Создание**, **Импорт**, **резервное копирование**или **Восстановление**.
+Сбрасывает DiskShadow.exe в состояние по умолчанию. **Reset** особенно полезен при разделении составных операций DiskShadow, таких как **Создание**, **Импорт**, **резервное копирование**или **Восстановление**.
 
 ## <a name="syntax"></a>Синтаксис
 

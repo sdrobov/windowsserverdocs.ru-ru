@@ -1,6 +1,6 @@
 ---
 title: Отклонить — Аутоадддевицес
-description: Справочный раздел по отклону Аутоадддевицес, который отклоняет компьютеры, ожидающие административного утверждения.
+description: Справочная статья по отклону Аутоадддевицес, которая отклоняет компьютеры, ожидающие административного утверждения.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e377d4e2d4aecea2e0ba3af023af39ab7695c0a
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 2b678f7a9fc875dfeebf735475db3adfb7ad9ae7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82725924"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932420"
 ---
 # <a name="reject-autoadddevices"></a>Отклонить — Аутоадддевицес
 
@@ -28,7 +28,7 @@ wdsutil [Options] /Reject-AutoaddDevices [/Server:<Server name>] /RequestId:<Req
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |/Рекуестид: идентификатор запроса <&#124; все>|Указывает идентификатор запроса, назначенный ожидающему компьютеру. Чтобы отклонить все ожидающие компьютеры, укажите **все**.|
 ## <a name="examples"></a>Примеры
 Чтобы отклонить отдельный компьютер, введите:
@@ -40,7 +40,7 @@ wdsutil /Reject-AutoaddDevices /RequestId:12
 wdsutil /verbose /Reject-AutoaddDevices /Server:MyWDSServer /RequestId:ALL
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки
-[с использованием команды "утвердить-аутоадддевицес](using-the-approve-autoadddevices-command.md)" с помощью команды "[Удалить-аутоадддевицес](using-the-delete-autoadddevices-command.md)
-"[с помощью команды Get-аутоадддевицес](using-the-get-autoadddevices-command.md) .
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-approve-autoadddevices-command.md) 
+ "утвердить-аутоадддевицес" [Использование команды](using-the-delete-autoadddevices-command.md) 
+ Delete-аутоадддевицес [Использование команды Get-аутоадддевицес](using-the-get-autoadddevices-command.md)

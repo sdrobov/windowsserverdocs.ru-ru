@@ -1,6 +1,6 @@
 ---
 title: macfile
-description: Справочный раздел по команде macfile, которая управляет серверами, томами, каталогами и файлами файлового сервера для Macintosh.
+description: Справочная статья по команде macfile, которая управляет серверами, томами, каталогами и файлами файлового сервера для Macintosh.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 740044088bef1537b5b41493f46be9275be84874
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 6937e8bbf40ec9ce908be095e5de0e04f793f40e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84223011"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933652"
 ---
 # <a name="macfile"></a>macfile
 
@@ -113,7 +113,7 @@ macfile forkize[/server:\\<computername>] [/creator:<creatorname>] [/type:<typen
 macfile forkize /resourcefork:c:\cross\mac\appcode /type:APPL /creator:MAGNOLIA /targetfile:D:\Release\tree_app
 ```
 
-Чтобы изменить автор файла на *Microsoft word 5,1*, для файла *Word. txt* в каталоге *д:\ворд документс\грауп Files* * \\ на сервере Server*a введите:
+Чтобы изменить автор файла на *Microsoft Word 5,1*, для файла *Word.txt* в каталоге *д:\ворд Документс\грауп Files*на сервере * \\ Server*a введите:
 
 ```
 macfile forkize /server:\\ServerA /creator:MSWD /type:TEXT /targetfile:d:\Word documents\Group files\Word.txt

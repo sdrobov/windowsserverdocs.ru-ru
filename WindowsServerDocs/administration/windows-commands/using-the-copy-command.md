@@ -1,6 +1,6 @@
 ---
 title: copy
-description: Справочный раздел по копированию, при котором копируется изображение или группа драйверов.
+description: Справочная статья по Copy, в которой копируется образ или группа драйверов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7c6e5d28f4af5f3e5e4d8496f5abba1b441e9ec3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3ab26daa41ab1378105fb1787988093f8114ade2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721023"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934105"
 ---
 # <a name="copy"></a>copy
 

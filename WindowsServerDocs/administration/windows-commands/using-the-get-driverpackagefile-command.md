@@ -1,6 +1,6 @@
 ---
 title: Get-Дриверпаккажефиле
-description: Справочный раздел по Get-Дриверпаккажефиле, в котором отображаются сведения о пакете драйверов, включая драйверы и файлы, которые он содержит.
+description: Справочная статья по Get-Дриверпаккажефиле, в которой отображаются сведения о пакете драйверов, включая драйверы и файлы, которые он содержит.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 71fc38e31471a1deb9d6be29b04d3cd911be1bd6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1daa93cb8976229c4c847390416f9332769c5ff5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719934"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932240"
 ---
 # <a name="get-driverpackagefile"></a>Get-Дриверпаккажефиле
 
@@ -30,7 +30,7 @@ WDSUTIL /Get-DriverPackageFile /InfFile:<Inf File path> [/Architecture:{x86 | ia
 
 |         Параметр         |                              Описание                               |
 |---------------------------|------------------------------------------------------------------------|
-| /Инффиле:\<путь к INF-файлу> | Указывает полный путь и имя файла INF-файла пакета драйвера. |
+| /Инффиле:\<Inf File path> | Указывает полный путь и имя файла INF-файла пакета драйвера. |
 |    [/Арчитектуре: {x86    |                                  ia64                                  |
 |     [/Show: {Drivers      |                                 Файлы                                  |
 

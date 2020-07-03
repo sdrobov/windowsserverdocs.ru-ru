@@ -1,6 +1,6 @@
 ---
-title: запрос FTP
-description: Справочный раздел для команды FTP Prompt, которая переключает режим запроса и включает его.
+title: ftp prompt
+description: Справочная статья по команде FTP Prompt, которая включает и выключает режим запроса.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 57f0e1eead36665c19845944bf22325b1aecebbb
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e0859d3989a054d03421f08f5df7823a690dc85c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933116"
 ---
-# <a name="ftp-prompt"></a>запрос FTP
+# <a name="ftp-prompt"></a>ftp prompt
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

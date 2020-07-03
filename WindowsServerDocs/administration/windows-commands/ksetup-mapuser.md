@@ -1,6 +1,6 @@
 ---
-title: ksetup мапусер
-description: Справочный раздел по команде ksetup мапусер, который сопоставляет имя участника Kerberos с учетной записью.
+title: ksetup mapuser
+description: Справочная статья по команде ksetup мапусер, которая сопоставляет имя участника Kerberos с учетной записью.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ac2f3e30b3057ceea4376d7ffe8286875d5301d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: f387b8c3ff7cf7515a4f2ed9b8ea62d379332ec7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817674"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933696"
 ---
-# <a name="ksetup-mapuser"></a>ksetup мапусер
+# <a name="ksetup-mapuser"></a>ksetup mapuser
 
 Сопоставляет имя участника Kerberos с учетной записью.
 
@@ -33,7 +33,7 @@ ksetup /mapuser <principal> <account>
 | `<principal>` | Указывает полное доменное имя любого основного пользователя. Например, mike@corp.CONTOSO.COM. Если параметр учетной записи не указан, сопоставление удаляется для указанного участника. |
 | `<account>` | Указывает любую учетную запись или имя группы безопасности, которая существует на этом компьютере, например **гость**, **Пользователи домена**или **Администратор**. Если этот параметр пропущен, сопоставление удаляется для указанного участника. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Учетную запись можно определить отдельно, например, в качестве **гостей домена**, или можно использовать подстановочный знак (*) для включения всех учетных записей.
 

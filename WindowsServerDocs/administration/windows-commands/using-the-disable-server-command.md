@@ -1,6 +1,6 @@
 ---
 title: Disable-Server
-description: Справочный раздел по параметру Disable-Server, который отключает все службы для сервера служб развертывания Windows.
+description: Справочная статья по параметру Disable-Server, который отключает все службы для сервера служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5df5c7e2f18cdda2aeeea22c209881077c681f03
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 30b2593a9d2f83c70467fb58766e14b040931d5f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720972"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933951"
 ---
 # <a name="disable-server"></a>Disable-Server
 
@@ -30,7 +30,7 @@ WDSUTIL [Options] /Disable-Server [/Server:<Server name>]
 
 |Параметр|Описание|
 |---------|-----------|
-|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: \<Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 
 ## <a name="examples"></a>Примеры
 

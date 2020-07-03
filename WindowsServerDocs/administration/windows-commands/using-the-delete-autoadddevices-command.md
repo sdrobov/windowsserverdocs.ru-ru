@@ -1,6 +1,6 @@
 ---
 title: Delete — Аутоадддевицес
-description: Справочный раздел по Delete-Аутоадддевицес, который удаляет компьютеры, которые ожидают, отклонены или утверждены из базы данных автоматического добавления.
+description: Справочная статья по Delete-Аутоадддевицес, которая удаляет компьютеры, которые ожидают, отклонены или утверждены из базы данных автоматического добавления.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 90b5b24b68b2cfe3d387cb02b3715b70edba4300
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 60acfbb5ec1bc3f9268044eb0dbcc9ea19ff8ab9
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720993"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933970"
 ---
 # <a name="delete-autoadddevices"></a>Delete — Аутоадддевицес
 
@@ -29,7 +29,7 @@ wdsutil /delete-AutoaddDevices [/Server:<Server name>] /Devicetype:{PendingDevic
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |/Девицетипе: {Пендингдевицес &#124; Режектеддевицес &#124;Аппроведдевицес}|Указывает тип компьютера, удаляемого из базы данных. Это может быть любой из следующих трех типов:<p>-   **Пендингдевицес** возвращает все компьютеры в базе данных с состоянием "ожидание".<br />-   **Режектеддевицес** возвращает все компьютеры в базе данных, состояние которых было отклонено.<br />-   **Аппроведдевицес** возвращает все компьютеры с состоянием "утверждено".|
 ## <a name="examples"></a>Примеры
 Чтобы удалить все отклоненные компьютеры, введите:
@@ -41,7 +41,7 @@ wdsutil /delete-AutoaddDevices /Devicetype:RejectedDevices
 wdsutil /verbose /delete-AutoaddDevices /Server:MyWDSServer /Devicetype:ApprovedDevices
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Синтаксис](command-line-syntax-key.md)
-командной строки[с использованием команды "утвердить-аутоадддевицес](using-the-approve-autoadddevices-command.md)
-[Using the get-AutoaddDevices Command](using-the-get-autoadddevices-command.md)
-" с помощью команды "[rereject-аутоадддевицес](using-the-reject-autoadddevices-command.md) "
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-approve-autoadddevices-command.md) 
+ "утвердить-аутоадддевицес" [Использование команды](using-the-get-autoadddevices-command.md) 
+ Get-аутоадддевицес [Использование команды REJECT-аутоадддевицес](using-the-reject-autoadddevices-command.md)

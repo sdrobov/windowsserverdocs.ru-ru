@@ -1,6 +1,6 @@
 ---
-title: ksetup сетенктипеаттр
-description: Справочный раздел по команде ksetup сетенктипеаттр, который задает атрибут типа шифрования для домена.
+title: ksetup setenctypeattr
+description: Справочная статья по команде ksetup сетенктипеаттр, которая задает атрибут типа шифрования для домена.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e76ad3d08505208346ff2a3e100194239187953d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 8bb8411a795d0167af1fc921fdf1c19febcb8527
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933914"
 ---
-# <a name="ksetup-setenctypeattr"></a>ksetup сетенктипеаттр
+# <a name="ksetup-setenctypeattr"></a>ksetup setenctypeattr
 
 Задает атрибут типа шифрования для домена. Сообщение о состоянии отображается при успешном или неудачном завершении.
 
@@ -35,7 +35,7 @@ ksetup /setenctypeattr <domainname> {DES-CBC-CRC | DES-CBC-MD5 | RC4-HMAC-MD5 | 
 | `<domainname>` | Имя домена, для которого требуется установить соединение. Используйте полное доменное имя или простую форму имени, например corp.contoso.com или contoso. |
 | тип шифрования | Должен быть одним из следующих поддерживаемых типов шифрования:<ul><li>DES-CBC-CRC</li><li>DES-CBC-MD5</li><li>RC4-HMAC-MD5</li><li>AES128-CTS-HMAC-SHA1-96</li><li>AES256-CTS-HMAC-SHA1-96</li></ul> |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Можно задать или добавить несколько типов шифрования, разделяя типы шифрования в команде пробелами. Однако это можно сделать только для одного домена за раз.
 

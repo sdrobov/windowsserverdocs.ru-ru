@@ -1,6 +1,6 @@
 ---
 title: Remove-Дриверграуппаккаже
-description: Справочный раздел по Remove-Дриверграуппаккаже, который удаляет пакет драйверов из группы драйверов на сервере.
+description: Справочная статья по Remove-Дриверграуппаккаже, которая удаляет пакет драйверов из группы драйверов на сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c63c6ef0ed9af49506d80a715f23111bfd62070f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a8f4177a9e4a3abfa41eb3db094dc5d6e481678f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720404"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933480"
 ---
 # <a name="remove-drivergrouppackage"></a>Remove-Дриверграуппаккаже
 
@@ -32,9 +32,9 @@ WDSUTIL /Remove-DriverGroupPackage /DriverGroup:<Group Name> [/Server:<Server Na
 
 |Параметр|Описание|
 |---------|-----------|
-|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
-|[/Дриверпаккаже:\<Name>]|Указывает имя удаляемого пакета драйверов.|
-|[/Паккажеид:\<ID>]|Указывает идентификатор служб развертывания Windows для удаляемого пакета драйверов. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени.|
+|[/Server: \<Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|[/Дриверпаккаже: \<Name> ]|Указывает имя удаляемого пакета драйверов.|
+|[/Паккажеид: \<ID> ]|Указывает идентификатор служб развертывания Windows для удаляемого пакета драйверов. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени.|
 
 ## <a name="examples"></a>Примеры
 

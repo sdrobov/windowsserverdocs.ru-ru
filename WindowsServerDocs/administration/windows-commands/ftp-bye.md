@@ -1,6 +1,6 @@
 ---
-title: Bye FTP
-description: Справочный раздел по команде FTP Bye, который завершает сеанс FTP на удаленном компьютере, а затем завершает работу.
+title: ftp bye
+description: Справочная статья по команде FTP Bye, которая завершает сеанс FTP на удаленном компьютере, а затем завершает работу.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a2e7f45cca68a34de521dbd94cdf6122af31363d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 430a343c4ae8bd06975a77b2818a8c3bc4d26d19
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933316"
 ---
-# <a name="ftp-bye"></a>Bye FTP
+# <a name="ftp-bye"></a>ftp bye
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

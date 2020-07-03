@@ -1,6 +1,6 @@
 ---
 title: Get-Имажеграуп
-description: Справочный раздел по Get-Имажеграуп, который извлекает сведения о группе образов и изображениях в ней.
+description: Справочная статья по Get-Имажеграуп, которая извлекает сведения о группе образов и изображениях в ней.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 30a87085cb935f95a209ffdd78ecf2b9fb45dc15
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 32ca965981b02bd951a0cc84160a2c5ea0643ae0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719901"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932209"
 ---
 # <a name="get-imagegroup"></a>Get-Имажеграуп
 
@@ -30,7 +30,7 @@ wdsutil [Options] /Get-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 |Параметр|Описание|
 |-------|--------|
 Медиаграуп:<Image group name>|Указывает имя группы образов.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 |[/детаилед]|Возвращает метаданные изображения для каждого изображения. Если этот параметр не используется, поведение по умолчанию — возврат только имени, описания и имени файла изображения.|
 ## <a name="examples"></a>Примеры
 Чтобы просмотреть сведения о группе образов, введите:
@@ -42,8 +42,8 @@ wdsutil /Get-ImageGroumediaGroup:ImageGroup1
 wdsutil /verbose /Get-ImageGroumediaGroup:ImageGroup1 /Server:MyWDSServer /detailed
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды Add-имажеграуп](using-the-add-imagegroup-command.md)
-с помощью команды[Get-аллимажеграупс](using-the-get-allimagegroups-command.md)
-с командой[Remove-имажеграуп](using-the-remove-imagegroup-command.md)
-[: Set-имажеграуп](subcommand-set-imagegroup.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-add-imagegroup-command.md) 
+ Add-имажеграуп [Использование команды](using-the-get-allimagegroups-command.md) 
+ Get-аллимажеграупс [Использование команды](using-the-remove-imagegroup-command.md) 
+ Remove-имажеграуп [Подкоманда: Set-имажеграуп](subcommand-set-imagegroup.md)

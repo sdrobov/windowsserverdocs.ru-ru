@@ -1,6 +1,6 @@
 ---
-title: Wbadmin Удаление каталога
-description: Справочный раздел по каталогу Wbadmin Delete Catalog, который удаляет каталог резервных копий, хранящийся на локальном компьютере.
+title: wbadmin delete catalog
+description: Справочная статья по каталогу Wbadmin Delete Catalog, которая удаляет каталог резервных копий, хранящийся на локальном компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4903c7ad2996a9f69d20f4711364669b87366527
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: ec2c35fc8a279c604f76c71dc6ed9aeb50a0ffd7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821444"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933724"
 ---
-# <a name="wbadmin-delete-catalog"></a>Wbadmin Удаление каталога
+# <a name="wbadmin-delete-catalog"></a>wbadmin delete catalog
 
 
 
@@ -37,7 +37,7 @@ wbadmin delete catalog
 |---------|-----------|
 |-quiet|Выполняет подкоманду без запросов пользователю.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
 Если вы удалите каталог резервного копирования для компьютера, вы не сможете получить доступ к резервным копиям, созданным на этом компьютере, с помощью оснастки cистема архивации данных Windows Server. В этом случае, если вы можете получить доступ к другому расположению резервной копии, воспользуйтесь **командой Wbadmin Restore Catalog** , чтобы восстановить каталог резервных копий из этого расположения. После удаления каталога резервного копирования следует создать новую резервную копию.
 

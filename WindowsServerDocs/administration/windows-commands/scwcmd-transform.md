@@ -1,6 +1,6 @@
 ---
 title: Преобразование команду scwcmd
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 86c88f0207a53da813f5d4eaed399375bfc5bc02
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b70557b64a4cb68a0435bee9db033c893186dc0c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820954"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932629"
 ---
 # <a name="scwcmd-transform"></a>Scwcmd: transform
 
@@ -39,17 +39,17 @@ scwcmd transform /p:<Policyfile.xml> /g:<GPODisplayName>
 
 |Параметр|Описание|
 |---------|-----------|
-|/p: \< полицифиле. xml>|Указывает путь и имя файла политики XML, который следует применить. Этот параметр должен быть указан.|
-|/g: \< гподисплайнаме>|Указывает отображаемое имя объекта групповой политики. Этот параметр должен быть указан.|
+|/p\<Policyfile.xml>|Указывает путь и имя файла политики XML, который следует применить. Этот параметр должен быть указан.|
+|/g\<GPODisplayName>|Указывает отображаемое имя объекта групповой политики. Этот параметр должен быть указан.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Комментарии
 
-Команду scwcmd. exe доступен только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
+Scwcmd.exe доступны только на компьютерах под управлением Windows Server 2008 R2, Windows Server 2008 или Windows Server 2003.
 
 ## <a name="examples"></a>Примеры
 
-Чтобы создать объект групповой политики с именем Филесерверсекурити из файла с именем Филесерверполици. XML, введите:
+Чтобы создать объект групповой политики с именем Филесерверсекурити из файла с именем FileServerPolicy.xml, введите:
 ```
 scwcmd transform /p:FileServerPolicy.xml /g:FileServerSecurity
 ```

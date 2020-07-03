@@ -1,6 +1,6 @@
 ---
 title: создать-пространство имен
-description: Справочный раздел для New-Namespace, который создает и настраивает новое пространство имен.
+description: Справочная статья по новому пространству имен, которая создает и настраивает новое пространство имен.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e7bc6b365da274fc62df3bb24375c07b97c8e4bc
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3afbdd195f21450508bfa6992fc73c7d360092c6
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710536"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932411"
 ---
 # <a name="new-namespace"></a>создать-пространство имен
 
@@ -36,13 +36,13 @@ wdsutil [Options] /New-Namespace [/Server:<Server name>]
 ### <a name="parameters"></a>Параметры
 |Параметр|Описание|
 |-------|--------|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
 |FriendlyName<Friendly name>|Указывает понятное имя пространства имен.|
 |/Description<Description>]|Задает описание пространства имен.|
-|Имен<Namespace name>|Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-   **Служба роли сервера развертывания**. для этого параметра используется следующий синтаксис:/namespace: WDS<Image group>/<Image name>/<Index>:. Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Служба роли транспортного сервера**: это значение должно совпадать с именем, заданным при создании пространства имен на сервере.|
-|/Контентпровидер:<Name>]|Указывает имя поставщика содержимого, который предоставит содержимое для пространства имен.|
-|[/Конфигстринг:<Configuration string>]|Задает строку конфигурации для поставщика содержимого.|
-|/Намеспацетипе: {автотрансляция &#124; Счедуледкаст}|Задает параметры передачи. Параметры задаются с помощью следующих параметров.<p>-[/Тиме: <time>] — задает время начала передачи с использованием следующего формата: гггг/мм/дд: чч: мм. Этот параметр применяется только к передачам по расписанию.<br />-[/Клиентс: <Number of clients>] — задает минимальное число клиентов для ожидания перед началом передачи. Этот параметр применяется только к передачам по расписанию.|
+|Имен<Namespace name>|Указывает имя пространства имен. Обратите внимание, что это не понятное имя, оно должно быть уникальным.<p>-   **Служба роли сервера развертывания**. для этого параметра используется следующий синтаксис:/namespace: WDS: <Image group> / <Image name> / <Index> . Например: **WDS: ImageGroup1/install. wim/1**<br />-   **Служба роли транспортного сервера**: это значение должно совпадать с именем, заданным при создании пространства имен на сервере.|
+|/Контентпровидер: <Name> ]|Указывает имя поставщика содержимого, который предоставит содержимое для пространства имен.|
+|[/Конфигстринг: <Configuration string> ]|Задает строку конфигурации для поставщика содержимого.|
+|/Намеспацетипе: {автотрансляция &#124; Счедуледкаст}|Задает параметры передачи. Параметры задаются с помощью следующих параметров.<p>-[/Тиме: <time> ] — задает время начала передачи с использованием следующего формата: гггг/мм/дд: чч: мм. Этот параметр применяется только к передачам по расписанию.<br />-[/Клиентс: <Number of clients> ] — задает минимальное число клиентов для ожидания перед началом передачи. Этот параметр применяется только к передачам по расписанию.|
 ## <a name="examples"></a>Примеры
 Чтобы создать пространство имен автоматического приведения, введите:
 ```
@@ -50,11 +50,11 @@ wdsutil /New-Namespace /FriendlyName:Custom AutoCast Namespace /Namespace:Custom
 ```
 Чтобы создать пространство имен с расписанием, введите:
 ```
-wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider 
+wdsutil /New-Namespace /Server:MyWDSServer /FriendlyName:Custom Scheduled Namespace /Namespace:Custom Auto 1 /ContentProvider:MyContentProvider
 /Namespacetype:ScheduledCast /time:2006/11/20:17:00 /Clients:20
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки
-[с помощью команды Get-аллнамеспацес](using-the-get-allnamespaces-command.md)[с помощью подкоманды Remove-Namespace](using-the-remove-namespace-command.md)
-[. Start-Namespace.](subcommand-start-namespace.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-get-allnamespaces-command.md) 
+ Get-аллнамеспацес [Использование команды](using-the-remove-namespace-command.md) 
+ Remove-Namespace [Подкоманда: Start-Namespace](subcommand-start-namespace.md)

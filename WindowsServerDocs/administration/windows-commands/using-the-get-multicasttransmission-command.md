@@ -1,6 +1,6 @@
 ---
 title: Get-Мултикасттрансмиссион
-description: Справочный раздел по Get-Мултикасттрансмиссион, который отображает сведения об многоадресной передаче для указанного образа.
+description: Справочная статья по команде Get-Мултикасттрансмиссион, которая отображает сведения об многоадресной передаче для указанного образа.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a848a4aceb41b4da679d9182459df29c89008fea
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a764aa0a975fe29daed54e50b7ab0284a12a399f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719759"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932206"
 ---
 # <a name="get-multicasttransmission"></a>Get-Мултикасттрансмиссион
 
@@ -25,7 +25,7 @@ ms.locfileid: "82719759"
 ## <a name="syntax"></a>Синтаксис
 **Windows Server 2008**
 ```
-wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>] 
+wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name> [/Server:<Server name>mediatype:InstallmediaGroup:<Image group name>]
 [/Filename:<File name>] [/Show:Clients]
 ```
 **Windows Server 2008 R2** для передачи загрузочных образов:
@@ -50,12 +50,12 @@ wdsutil [Options] /Get-MulticastTransmissiomedia:<Image name>
 |Параметр|Описание|
 |-------|--------|
 носител<Image name>|Отображает многоадресную передачу, связанную с этим образом.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или полное доменное имя (FQDN). Если имя сервера не указано, используется локальный сервер.|
 mediaType: Установка|Указывает тип изображения. Обратите внимание, что этот параметр должен быть установлен в значение **Install**.|
-|\Медиаграуп:<Image group name>]|Указывает группу образов, содержащую образ. Если имя группы образов не указано и на сервере существует только одна группа образов, используется эта группа образов. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
+|\Медиаграуп: <Image group name> ]|Указывает группу образов, содержащую образ. Если имя группы образов не указано и на сервере существует только одна группа образов, используется эта группа образов. Если на сервере существует несколько групп образов, необходимо использовать этот параметр, чтобы указать группу образов.|
 |/Арчитектуре: {x86 &#124; ia64 &#124; x64}|Указывает архитектуру загрузочного образа, связанного с передачей. Так как для образов загрузки можно использовать одно и то же имя образа в разных архитектурах, следует указать архитектуру, чтобы гарантировать использование правильного образа.|
-|[/Филенаме:<File name>]|Указывает файл, содержащий изображение. Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
-|[/Show: Clients]<p>or<p>[/детаилс: клиенты]|Отображает сведения о клиентских компьютерах, подключенных к многоадресной передаче.|
+|[/Филенаме: <File name> ]|Указывает файл, содержащий изображение. Если образ не может быть однозначно идентифицирован по имени, необходимо использовать этот параметр, чтобы указать имя файла.|
+|[/Show: Clients]<p>или<p>[/детаилс: клиенты]|Отображает сведения о клиентских компьютерах, подключенных к многоадресной передаче.|
 ## <a name="examples"></a>Примеры
 **Windows Server 2008** Чтобы просмотреть сведения о передаче образа под названием Vista с Office, введите одно из следующих действий:
 ```
@@ -74,8 +74,8 @@ wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:Vista with Officemedi
 wdsutil /Get-MulticastTransmission /Server:MyWDSServemedia:X64 Boot Imagemediatype:Boot /Architecture:x64 /Filename:boot.wim /details:Clients
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды](using-the-get-allmulticasttransmissions-command.md)
-Get-аллмултикасттрансмиссионс с помощью команды[New-мултикасттрансмиссион](using-the-new-multicasttransmission-command.md)
-[с командой Remove-мултикасттрансмиссион](using-the-remove-multicasttransmission-command.md)
-[: Start-мултикасттрансмиссион](subcommand-start-multicasttransmission.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-get-allmulticasttransmissions-command.md) 
+ Get-аллмултикасттрансмиссионс [Использование команды](using-the-new-multicasttransmission-command.md) 
+ New-мултикасттрансмиссион [Использование команды](using-the-remove-multicasttransmission-command.md) 
+ Remove-мултикасттрансмиссион [Подкоманда: Start-мултикасттрансмиссион](subcommand-start-multicasttransmission.md)

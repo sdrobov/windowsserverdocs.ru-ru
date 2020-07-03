@@ -1,6 +1,6 @@
 ---
 title: Remove-Дриверграуп
-description: Справочный раздел по Remove-Дриверграуп, который удаляет группу драйверов с сервера.
+description: Справочная статья по Remove-Дриверграуп, которая удаляет группу драйверов с сервера.
 ms.prod: windows-server
 ms.topic: article
 ms.assetid: 1fefe9df-9782-433c-8abe-3f1a35e50da2
@@ -8,12 +8,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 314c7a73c7aeb49bc6bb96de23ca5bf4387bd932
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: baeeac57c04113e1e9dfc8e9d02fc40518a6689b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82720418"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932436"
 ---
 # <a name="remove-drivergroup"></a>Remove-Дриверграуп
 
@@ -29,8 +29,8 @@ WDSUTIL /Remove-DriverGroup /DriverGroup:<Group Name> [/Server:<Server name>]
 
 |Параметр|Описание|
 |---------|-----------|
-|/Дриверграуп:\<имя группы>|Указывает имя удаляемой группы драйверов.|
-|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
+|/Дриверграуп:\<Group Name>|Указывает имя удаляемой группы драйверов.|
+|[/Server: \<Server name> ]|Указывает имя сервера. Это может быть NetBIOS-имя или FQDN. Если имя сервера не указано, используется локальный сервер.|
 
 ## <a name="examples"></a>Примеры
 

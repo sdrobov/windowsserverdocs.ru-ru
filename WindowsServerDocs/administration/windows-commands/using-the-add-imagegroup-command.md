@@ -1,6 +1,6 @@
 ---
 title: Add-Имажеграуп
-description: Справочный раздел по Add-Имажеграуп, который добавляет группу образов на сервер служб развертывания Windows.
+description: Справочная статья по Add-Имажеграуп, которая добавляет группу образов на сервер служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b08042ac6b33c0ccfe0b66bb0fec70805d55d75f
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 5898b9bccb9ab0581cadd1ed51f4059a4c7c2dcc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721053"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85934125"
 ---
 # <a name="add-imagegroup"></a>Add-Имажеграуп
 
@@ -30,7 +30,7 @@ wdsutil [Options] /add-ImageGroumediaGroup:<Image group name> [/Server:<Server n
 |Параметр|Описание|
 |-------|--------|
 Медиаграуп:<Image group name>|Указывает имя добавляемой группы образов.|
-|[/Server:<Server name>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: <Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 ## <a name="examples"></a>Примеры
 Чтобы добавить группу образов, введите одно из следующих действий.
 ```
@@ -38,8 +38,8 @@ wdsutil /add-ImageGroumediaGroup:ImageGroup2
 wdsutil /verbose /add-ImageGroumediaGroup:My Image Group /Server:MyWDSServer
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ](command-line-syntax-key.md)
-синтаксиса командной строки[с помощью команды](using-the-get-allimagegroups-command.md)
-Get-аллимажеграупс с помощью команды[Get-имажеграуп](using-the-get-imagegroup-command.md)
-[с командой Remove-имажеграуп](using-the-remove-imagegroup-command.md)
-[: Set-имажеграуп](subcommand-set-imagegroup.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды](using-the-get-allimagegroups-command.md) 
+ Get-аллимажеграупс [Использование команды](using-the-get-imagegroup-command.md) 
+ Get-имажеграуп [Использование команды](using-the-remove-imagegroup-command.md) 
+ Remove-имажеграуп [Подкоманда: Set-имажеграуп](subcommand-set-imagegroup.md)

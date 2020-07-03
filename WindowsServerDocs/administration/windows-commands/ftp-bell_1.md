@@ -1,6 +1,6 @@
 ---
-title: FTP-Звонок
-description: Справочный раздел по команде FTP Bell, который переключает звуковой сигнал на выполнение после каждой команды по переносу файлов.
+title: ftp bell
+description: Справочная статья по команде FTP Bell, которая переключает звуковой звук после завершения каждой команды по переносу файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c445e929c9d3adad2bfa620b522e4befbb7c1cff
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 9481911f9de9eb62baea492964987908daa94ce1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820024"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933299"
 ---
-# <a name="ftp-bell"></a>FTP-Звонок
+# <a name="ftp-bell"></a>ftp bell
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

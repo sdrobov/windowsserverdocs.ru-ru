@@ -1,6 +1,6 @@
 ---
 title: Scwcmd
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9a8c002aa735b188fdd9ad75b0db7dbe06053516
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: bb651c2b527d332f70cd0686a7d57f089bc987ac
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821164"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932627"
 ---
 # <a name="scwcmd"></a>Scwcmd
 
 > Область применения: Windows Server 2012 R2, Windows Server 2012
 
-Программу командной строки команду scwcmd. exe, входящую в состав мастера настройки безопасности (SCW), можно использовать для выполнения следующих задач.
+Программу командной строки Scwcmd.exe, входящую в состав мастера настройки безопасности (SCW), можно использовать для выполнения следующих задач.
 -   Настройте один или несколько серверов с помощью политики, созданной SCW.
 -   Проанализируйте один или несколько серверов с помощью политики, созданной SCW.
 -   Просмотр результатов анализа в формате HTML.

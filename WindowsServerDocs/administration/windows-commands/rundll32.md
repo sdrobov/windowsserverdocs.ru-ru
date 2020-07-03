@@ -1,6 +1,6 @@
 ---
 title: rundll32
-description: Справочный раздел по * * * *-
+description: Справочная статья для * * * *-
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b0639206b26ea58c4ec8473c0a736fda3c435021
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: c9a0dca06bb3077ec308ae3a9792deb1f72e023b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722236"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932801"
 ---
 # <a name="rundll32"></a>rundll32
 
@@ -34,9 +34,9 @@ Rundll32 <DLLname>
 
 |Параметр|Описание|
 |---------|-----------|
-|[Rundll32 PRINTUI. dll, Принтуиентри](rundll32-printui.md)|Отображает пользовательский интерфейс принтера|
+|[Rundll32 printui.dll, Принтуиентри](rundll32-printui.md)|Отображает пользовательский интерфейс принтера|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 Rundll32 может вызывать только функции из библиотеки DLL, которые были явно написаны для вызова с помощью rundll32.
 

@@ -1,6 +1,6 @@
 ---
 title: fsutil file
-description: Справочный раздел команды fsutil File, который находит файл по имени пользователя, запрашивает выделенные диапазоны для файла, задает короткое имя файла, задает допустимую длину данных файла, устанавливает нулевые данные для файла или создает новый файл.
+description: Справочная статья по команде fsutil File, которая находит файл по имени пользователя, запрашивает выделенные диапазоны для файла, задает короткое имя файла, задает допустимую длину данных файла, задает нулевые данные для файла или создает новый файл.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 9f3dc104-dd69-4b03-b824-a29896780164
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: e9be8f6d21b89d1017371b9697e1227122826a7d
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 6909d381ef5dfebb343e70ad117a1a5b400481fa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435879"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932294"
 ---
 # <a name="fsutil-file"></a>fsutil file
 
@@ -116,13 +116,13 @@ fsutil file queryextents C:\Temp\sample.txt
 fsutil file seteof C:\testfile.txt 1000
 ```
 
-Чтобы задать короткое имя для файла, *лонгфиленаме. txt* на диске C в *лонгфиле. txt*введите:
+Чтобы задать короткое имя для файла, *longfilename.txt* на диске C в *longfile.txt*, введите:
 
 ```
 fsutil file setshortname c:\longfilename.txt longfile.txt
 ```
 
-Чтобы задать допустимую длину данных в *4096 байт* для файла с именем *TestFile. txt* на томе NTFS, введите:
+Чтобы задать допустимую длину данных в *4096 байт* для файла с именем *testfile.txt* на томе NTFS, введите:
 
 ```
 fsutil file setvaliddata c:\testfile.txt 4096

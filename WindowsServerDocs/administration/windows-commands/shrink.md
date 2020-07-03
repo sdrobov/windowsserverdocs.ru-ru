@@ -1,6 +1,6 @@
 ---
 title: shrink
-description: Справочный раздел по сжатию файла DiskPart, который уменьшает размер выбранного тома на указанный вами объем.
+description: Справочная статья по программе DiskPart Shrink, которая уменьшает размер выбранного тома на указанный вами объем.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 357a2320bf8b26130c9aa148d513edff6f1e85db
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 69405e7eda6b7565e9c8effe6639b6ba4dc9e4c2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721803"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85932593"
 ---
 # <a name="shrink"></a>shrink
 
@@ -37,7 +37,7 @@ shrink querymax [noerr]
 |   nowait    |                                                       принудительно Возвращает команду, пока процесс сжатия все еще выполняется.                                                        |
 |    Noerr    | только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 - Размер тома можно уменьшить только в том случае, если он отформатирован с помощью файловой системы NTFS или если у него нет файловой системы.
 - Эта команда работает с базовыми томами, а также с простыми или составными динамическими томами.
 - Если требуемая величина не указана, объем тома будет уменьшен на минимальный (если он указан).

@@ -1,6 +1,6 @@
 ---
-title: Wbadmin отключить архивацию
-description: Справочный раздел по параметру wbadmin disable backup, который прекращает выполнение запланированных ежедневных резервных копий.
+title: wbadmin disable backup
+description: Справочная статья по программе wbadmin disable backup, которая прекращает выполнение запланированных ежедневных резервных копий.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6bc211946c908b44b196995a9e5000d6ff3b7f82
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 88383975aa3ae8d6821698159e6ee445198301c5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83821424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933677"
 ---
-# <a name="wbadmin-disable-backup"></a>Wbadmin отключить архивацию
+# <a name="wbadmin-disable-backup"></a>wbadmin disable backup
 
 
 

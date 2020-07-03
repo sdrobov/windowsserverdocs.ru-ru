@@ -1,6 +1,6 @@
 ---
-title: Трассировка обновления Logman
-description: Справочный раздел по команде Logman Update Trace, который обновляет свойства существующего сборщика данных трассировки событий.
+title: logman update trace
+description: Справочная статья по команде Logman Update Trace, которая обновляет свойства существующего сборщика данных трассировки событий.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9edb8df5d5d7e2f3c3f1ccf17fbd817efe4faa10
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7eb8b034958e14009101848d0aca381cb915a579
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222753"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933122"
 ---
-# <a name="logman-update-trace"></a>Трассировка обновления Logman
+# <a name="logman-update-trace"></a>logman update trace
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

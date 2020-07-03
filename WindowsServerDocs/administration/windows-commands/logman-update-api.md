@@ -1,6 +1,6 @@
 ---
-title: API обновления Logman
-description: Справочный раздел по команде Logman Update API, который обновляет свойства существующего сборщика данных отслеживания API.
+title: logman update api
+description: Справочная статья по команде Logman Update API, которая обновляет свойства существующего сборщика данных отслеживания API.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0087edc7cd96bf2bf7611d9a3975d97384c02949
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 40575772e5f82474c4afbd4809773f47d7e4e075
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222781"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85933870"
 ---
-# <a name="logman-update-api"></a>API обновления Logman
+# <a name="logman-update-api"></a>logman update api
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -65,7 +65,7 @@ logman update api <[-n] <name>> [options]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы обновить существующий счетчик трассировки API, именуемый *trace_notepad*, для исполняемого файла к:\виндовс\нотепад.ЕКСЕ, исключив вызов API тлсжетвалуе, созданный модулем kernel32. dll, введите:
+Чтобы обновить существующий счетчик трассировки API, именуемый *trace_notepad*, для исполняемого файла c:\windows\notepad.exe, исключив вызов API тлсжетвалуе, созданный модулем kernel32.dll, введите:
 
 ```
 logman update api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
