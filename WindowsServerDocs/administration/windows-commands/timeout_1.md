@@ -1,6 +1,6 @@
 ---
 title: timeout
-description: Справочный раздел по времени ожидания, который приостанавливает работу обработчика команд в течение указанного числа секунд.
+description: Справочная статья по времени ожидания, в течение которого процессор команд приостанавливается на указанное количество секунд.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ed66342c4f0bbe22e9d2dc6440d291941c769cd7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 62ead9473a9034c02fab18f2318ecb5162511922
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721350"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930092"
 ---
 # <a name="timeout"></a>timeout
 
@@ -25,18 +25,18 @@ ms.locfileid: "82721350"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-timeout /t <TimeoutInSeconds> [/nobreak] 
+timeout /t <TimeoutInSeconds> [/nobreak]
 ```
 
 ### <a name="parameters"></a>Параметры
 
 |Параметр|Описание|
 |---------|-----------|
-|/t \<TimeoutInSeconds>|Указывает десятичное число секунд (от-1 до 99999), по истечении которого обработчик команд продолжит обработку. Значение-1 заставляет компьютер бесконечно ждать нажатия клавиши.|
+|/t\<TimeoutInSeconds>|Указывает десятичное число секунд (от-1 до 99999), по истечении которого обработчик команд продолжит обработку. Значение-1 заставляет компьютер бесконечно ждать нажатия клавиши.|
 |/нобреак|Задает игнорирование пользовательских клавиш.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 -   Команда **timeout** обычно используется в пакетных файлах.
 -   Нажатие клавиши пользователя возобновляет выполнение командного процессора немедленно, даже если истек период ожидания.

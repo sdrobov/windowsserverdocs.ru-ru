@@ -1,6 +1,6 @@
 ---
-title: Счетчик обновлений Logman
-description: Справочный раздел по команде Logman Update Counter, который обновляет существующие свойства сборщика данных счетчика.
+title: logman update counter
+description: Справочная статья по команде Logman Update Counter, которая обновляет существующие свойства сборщика данных счетчиков.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f482e58417e5e3246989169bbb01917fcb6503b0
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 4bfeb3bf8e0bc88bdefcee308d5c77121477b095
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222769"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928589"
 ---
-# <a name="logman-update-counter"></a>Счетчик обновлений Logman
+# <a name="logman-update-counter"></a>logman update counter
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

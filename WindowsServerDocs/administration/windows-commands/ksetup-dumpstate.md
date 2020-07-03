@@ -1,6 +1,6 @@
 ---
-title: ksetup думпстате
-description: Справочный раздел по ksetup думпстате коммнанд, который отображает текущее состояние параметров области для всех областей, определенных на компьютере.
+title: ksetup dumpstate
+description: Справочная статья по ksetup думпстате коммнанд, в которой отображается текущее состояние параметров области для всех областей, определенных на компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4ccb75ac143239d97b823fb7030f9a8020b4b4f6
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 86e3761af14da9e1b8f52f4ce6859128fcda7bb7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929161"
 ---
-# <a name="ksetup-dumpstate"></a>ksetup думпстате
+# <a name="ksetup-dumpstate"></a>ksetup dumpstate
 
 Отображает текущее состояние параметров области для всех областей, определенных на компьютере. Эта команда отображает те же выходные данные, что и команда **ksetup** .
 
@@ -26,7 +26,7 @@ ms.locfileid: "83817744"
 ksetup /dumpstate
 ```
 
-### <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Примечания
 
 - Выходные данные этой команды включают область по умолчанию (домен, членом которого является компьютер) и все сферы, определенные на этом компьютере. Для каждой области предусмотрено следующее:
 

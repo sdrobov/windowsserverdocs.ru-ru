@@ -1,6 +1,6 @@
 ---
 title: mqsvc
-description: Справочный раздел по команде мксвк, которая позволяет приложениям, работающим в разное время, взаимодействовать с разнородными сетями и системами, которые могут быть временно автономными.
+description: Справочная статья по команде мксвк, которая позволяет приложениям, работающим в разное время, взаимодействовать с разнородными сетями и системами, которые могут быть временно автономными.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0ae02867c5dba942ac919edadf0d6ab63becf4f0
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: caf2cc4cd67795789ae61c0e8e958f605bb88523
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354334"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928546"
 ---
 # <a name="mqsvc"></a>mqsvc
 

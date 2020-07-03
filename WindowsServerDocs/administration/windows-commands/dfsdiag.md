@@ -1,6 +1,6 @@
 ---
-title: дфсдиаг
-description: Справочный раздел по команде дфсдиаг, который предоставляет диагностические сведения для пространств имен DFS.
+title: dfsdiag
+description: Справочная статья по команде дфсдиаг, которая предоставляет диагностические сведения для пространств имен DFS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e9e0de18b48a4233b950ad6aa8f1e450a99da62
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 97f39d740bc321ebcece69ff0690dfac7aab6567
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992829"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928669"
 ---
-# <a name="dfsdiag"></a>дфсдиаг
+# <a name="dfsdiag"></a>dfsdiag
 
 Предоставляет диагностические сведения для пространств имен DFS.
 
@@ -34,11 +34,11 @@ dfsdiag /testreferral /DFSpath:<DFS path to get referrals> [/full]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| [дфсдиаг тестдкс](dfsdiag-testdcs.md) | Проверяет конфигурацию контроллера домена. |
-| [дфсдиаг тестситес](dfsdiag-testsites.md) | Проверяет связи сайтов. |
-| [дфсдиаг тестдфсконфиг](dfsdiag-testdfsconfig.md) | Проверяет конфигурацию пространства имен DFS. |
-| [дфсдиаг тестдфсинтегрити](dfsdiag-testdfsintegrity.md) | Проверяет целостность пространства имен DFS. |
-| [дфсдиаг тестреферрал](dfsdiag-testreferral.md) | Проверяет ответы на ссылки. |
+| [dfsdiag testdcs](dfsdiag-testdcs.md) | Проверяет конфигурацию контроллера домена. |
+| [dfsdiag testsites](dfsdiag-testsites.md) | Проверяет связи сайтов. |
+| [dfsdiag testdfsconfig](dfsdiag-testdfsconfig.md) | Проверяет конфигурацию пространства имен DFS. |
+| [dfsdiag testdfsintegrity](dfsdiag-testdfsintegrity.md) | Проверяет целостность пространства имен DFS. |
+| [dfsdiag testreferral](dfsdiag-testreferral.md) | Проверяет ответы на ссылки. |
 | /? | Отображение справки в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки

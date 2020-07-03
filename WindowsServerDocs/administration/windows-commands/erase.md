@@ -1,6 +1,6 @@
 ---
 title: erase
-description: Справочный раздел по команде erase, который удаляет один или несколько файлов.
+description: Справочная статья по команде erase, которая удаляет один или несколько файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 1525f20549b6571975cb622534f8504eb4fa1f79
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 0a22c738215671096373a7077fc89ac87fe03597
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354684"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929312"
 ---
 # <a name="erase"></a>erase
 
@@ -43,7 +43,7 @@ del [/p] [/f] [/s] [/q] [/a[:]<attributes>] <names>
 | /a [:]`<attributes>` | Удаляет файлы на основе следующих атрибутов файлов:<ul><li>файлы **r** только для чтения</li><li>**h** скрытые файлы</li><li>**я** не проиндексированные файлы содержимого</li><li>**системные файлы**</li><li>файлы **,** готовые к архивации</li><li>**l** точки повторного анализа</li><li>**-** Используется в качестве префикса, означающего "not"</li></ul>. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
 - При использовании `erase /p` команды вы увидите следующее сообщение:
 

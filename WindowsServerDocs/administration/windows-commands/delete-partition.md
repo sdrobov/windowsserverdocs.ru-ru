@@ -1,6 +1,6 @@
 ---
-title: удалить секцию
-description: Справочный раздел по команде удаления секции, который удаляет раздел с фокусом.
+title: delete partition
+description: Справочная статья по команде удаления секции, которая удаляет раздел с фокусом.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 13c79b826480171af578334942af8f73b77d796b
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: b45cb060a5d82e254fe371269dbdbcb9d46fee92
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993116"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928721"
 ---
-# <a name="delete-partition"></a>удалить секцию
+# <a name="delete-partition"></a>delete partition
 
 Удаляет раздел с фокусом. Прежде чем начать, необходимо выбрать секцию для выполнения этой операции. Используйте команду [Выбор секции](select-partition.md) , чтобы выбрать секцию и переместить фокус на нее.
 
@@ -38,7 +38,7 @@ delete partition [noerr] [override]
 | Noerr | Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 | override | Позволяет программе DiskPart удалять любые разделы независимо от типа. Как правило, DiskPart позволяет удалять только известные разделы данных. |
 
-#### <a name="remarks"></a>Remarks
+#### <a name="remarks"></a>Комментарии
 
 - Чтобы удалить динамический том, вместо него следует использовать команду [Удалить том](delete-volume.md) .
 
@@ -56,7 +56,7 @@ delete partition
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [выбор Секции](select-partition.md)
+- [select partition](select-partition.md)
 
 - [удалить команду](delete.md)
 

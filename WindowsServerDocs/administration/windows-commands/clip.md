@@ -1,6 +1,6 @@
 ---
 title: clip
-description: Справочный раздел для команды Clip, который перенаправляет выходные данные команды из командной строки в буфер обмена Windows.
+description: Справочная статья для команды Clip, которая перенаправляет выходные данные команды из командной строки в буфер обмена Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 61c905e3dcce52f3a3d35adeac55fc5df574f664
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3c0e23c18d356740a639af760fc7433db59d012a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712793"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929891"
 ---
 # <a name="clip"></a>clip
 
@@ -49,7 +49,7 @@ dir | clip
 awk -f generic.awk input.txt | clip
 ```
 
-Чтобы скопировать содержимое файла с именем *readme. txt* в буфер обмена Windows, введите:
+Чтобы скопировать содержимое файла с именем *readme.txt* в буфер обмена Windows, введите:
 
 ```
 clip < readme.txt

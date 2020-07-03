@@ -1,6 +1,6 @@
 ---
-title: подробные сведения VDISK
-description: Справочный раздел по команде Detail vdisk, отображающей свойства выбранного виртуального жесткого диска (VHD).
+title: detail vdisk
+description: Справочная статья по команде Detail vdisk, в которой отображаются свойства выбранного виртуального жесткого диска (VHD).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fe754b5f089900ac97f288bc2cc8c72327a1bc82
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 5d3f061706bef2d4636e9f18ba428e7ddfb90bdd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993025"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929361"
 ---
-# <a name="detail-vdisk"></a>подробные сведения VDISK
+# <a name="detail-vdisk"></a>detail vdisk
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -52,6 +52,6 @@ detail vdisk
 
 - [Команда merge VDISK](merge-vdisk.md)
 
-- [выбрать виртуальный диск](select-vdisk.md)
+- [select vdisk](select-vdisk.md)
 
 - [Команда list](list.md)

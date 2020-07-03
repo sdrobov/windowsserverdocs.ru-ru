@@ -1,6 +1,6 @@
 ---
 title: bitsadmin cache
-description: Справочный раздел по команде кэша битсадмин, содержащей список коммутаторов кэша битсадмин.
+description: Справочная статья по команде кэша битсадмин, содержащей список коммутаторов кэша битсадмин.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bf54225263b238cc7b6ba04d9881f4bc224d29b9
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 57b3897e89c70658d5b4015668d7b966222ce15d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718269"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928412"
 ---
 # <a name="bitsadmin-cache"></a>bitsadmin cache
 

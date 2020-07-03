@@ -1,6 +1,6 @@
 ---
 title: cmstp
-description: Справочный раздел для cmstp, который устанавливает или удаляет профиль службы диспетчера подключений.
+description: Справочная статья для cmstp, который устанавливает или удаляет профиль службы диспетчера подключений.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 11d2ec5b09cfd9440eb22d66578061ddfb157539
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8f7bc7bc4b90dced8074fa685ad79c65747e0ded
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712088"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929813"
 ---
 # <a name="cmstp"></a>cmstp
 

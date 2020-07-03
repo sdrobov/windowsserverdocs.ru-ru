@@ -1,6 +1,6 @@
 ---
-title: диск сведений
-description: Справочный раздел для команды "сведения о диске", отображающей свойства выбранного диска и томов на этом диске.
+title: detail disk
+description: Справочная статья по команде "сведения о диске", которая отображает свойства выбранного диска и томов на этом диске.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 358d6762f382dc8461c73cbd557a906eb5189c6f
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 5bb5ec5a51f16aecf1b8ee35c78736f1791d3106
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993066"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929468"
 ---
-# <a name="detail-disk"></a>диск сведений
+# <a name="detail-disk"></a>detail disk
 
 Отображает свойства выбранного диска и тома на этом диске. Прежде чем начать, необходимо выбрать диск для выполнения этой операции. Используйте команду [Выбор диска](select-disk.md) , чтобы выбрать диск и переместить фокус на него. Если выбрать виртуальный жесткий диск (VHD), эта команда будет отображать тип шины диска как *виртуальный*.
 

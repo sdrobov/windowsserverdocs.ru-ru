@@ -1,6 +1,6 @@
 ---
-title: удалить тени
-description: Справочный раздел по команде delete Shadows, который удаляет теневые копии.
+title: delete shadows
+description: Справочная статья по команде delete Shadows, которая удаляет теневые копии.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6b757314c96024741795c6770a98d10ac23b5bd0
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 6d541b50a78d738034204d14441352fff6c5d9fc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82993112"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929509"
 ---
-# <a name="delete-shadows"></a>удалить тени
+# <a name="delete-shadows"></a>delete shadows
 
 Удаляет теневые копии.
 
@@ -30,11 +30,11 @@ delete shadows [all | volume <volume> | oldest <volume> | set <setID> | id <shad
 
 | Параметр | Описание |
 | ---- | ---- |
-| all | Удаляет все теневые копии. |
+| все | Удаляет все теневые копии. |
 | тома`<volume>` | Удаляет все теневые копии данного тома. |
 | Ранняя`<volume>` | Удаляет самую старую теневую копию заданного тома. |
-| параметр`<setID>` | Удаляет теневые копии в наборе теневых копий заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
-| удостоверения`<shadowID>` | Удаляет теневую копию заданного идентификатора. Псевдоним можно указать с помощью символа, **%** если он существует в текущей среде. |
+| параметр`<setID>` | Удаляет теневые копии в наборе теневых копий заданного идентификатора. Псевдоним можно указать с помощью **%** символа, если он существует в текущей среде. |
+| удостоверения`<shadowID>` | Удаляет теневую копию заданного идентификатора. Псевдоним можно указать с помощью **%** символа, если он существует в текущей среде. |
 | предоставлено {'<drive> | <mountpoint>} |
 
 ## <a name="additional-references"></a>Дополнительные ссылки

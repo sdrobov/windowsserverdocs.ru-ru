@@ -1,6 +1,6 @@
 ---
 title: change logon
-description: Справочный раздел по команде change logon, который включает или отключает вход из сеансов клиента или отображает текущее состояние входа в систему.
+description: Справочная статья по команде change logon, которая включает или отключает вход из сеансов клиентов или отображает текущее состояние входа в систему.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4a2ebe75f6efa8c3bcfc0018d1f4e6051bb9ebb7
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 1561434347bc6a56e628f185e0984e33587bd999
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716124"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929123"
 ---
 # <a name="change-logon"></a>change logon
 
@@ -42,7 +42,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 | /драинунтилрестарт | Отключает вход из новых клиентских сеансов, пока компьютер не будет перезагружен, но допускает повторное подключение к существующим сеансам. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - При перезагрузке системы снова включаются входы в систему.
 
@@ -51,7 +51,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
 ### <a name="examples"></a>Примеры
 
 - Чтобы отобразить текущее состояние входа в систему, введите:
-  
+
   ```
   change logon /query
   ```
@@ -67,7 +67,7 @@ change logon {/query | /enable | /disable | /drain | /drainuntilrestart}
   ```
   change logon /disable
   ```
-  
+
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

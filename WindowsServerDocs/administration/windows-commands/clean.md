@@ -1,6 +1,6 @@
 ---
 title: clean
-description: Справочный раздел по команде DiskPart Clean, который удаляет все разделы или форматирование тома с диска, на котором находится фокус.
+description: Справочная статья по команде DiskPart Clean, которая удаляет все разделы или форматирование тома с диска, на котором находится фокус.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 45a23919dc07c8c1525808859471fdcb9f9e9403
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7a30e1f765959ed60efa662301f95defc21d6587
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712880"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929907"
 ---
 # <a name="clean"></a>clean
 
@@ -35,9 +35,9 @@ clean [all]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| all | Указывает, что каждый сектор диска имеет значение 0, что полностью удаляет все данные, содержащиеся на диске. |
+| все | Указывает, что каждый сектор диска имеет значение 0, что полностью удаляет все данные, содержащиеся на диске. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - На дисках основной загрузочной записи (MBR) перезаписываются только сведения о разделах MBR и скрытых секторах.
 

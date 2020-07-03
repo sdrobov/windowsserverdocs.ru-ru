@@ -1,6 +1,6 @@
 ---
 title: fsutil volume
-description: Справочные сведения о команде fsutil volume, которая отключает том или запрашивает жесткий диск, чтобы определить, какой объем свободного места в данный момент доступен на жестком диске или какой файл используется в конкретном кластере.
+description: Справочная статья по команде fsutil volume, которая отключает том или запрашивает жесткий диск, чтобы определить, какой объем свободного места в данный момент доступен на жестком диске или какой файл используется в конкретном кластере.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 0397c204-b3f8-4fd8-b71d-b7efb117766d
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 18671447664c47af48b4ca074aab823fd2b78625
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: aef1012cef33aeb2718dac4681b9119ea1a16590
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436839"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929242"
 ---
 # <a name="fsutil-volume"></a>fsutil volume
 

@@ -1,6 +1,6 @@
 ---
 title: comp
-description: Справочный раздел по команде Comp, который сравнивает содержимое двух файлов или наборов файлов по байтам.
+description: Справочная статья по команде Comp, которая сравнивает содержимое двух файлов или наборов файлов по байтам.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c2939ee2166d961cae8ae0699c130e91117dd8a6
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 65008945e2994b9040fcac663185d0526910b8bc
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82711467"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85929711"
 ---
 # <a name="comp"></a>comp
 
@@ -40,7 +40,7 @@ comp [<data1>] [<data2>] [/d] [/a] [/l] [/n=<number>] [/c]
 | "/OFF" [строка] | Обрабатывает файлы с заданным атрибутом offline. |
 | /? | Отображает справку в командной строке. |
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 
 - Во время сравнения **comp** отображает сообщения, которые указывают расположение неодинаковых данных между файлами. Каждое сообщение указывает адрес смещения памяти для неравного байта и содержимое байтов (в шестнадцатеричной нотации, если не указан параметр командной строки **/a** или **/d** ). Сообщения отображаются в следующем формате:
 
@@ -81,7 +81,7 @@ comp [<data1>] [<data2>] [/d] [/a] [/l] [/n=<number>] [/c]
 
 ## <a name="examples"></a>Примеры
 
-Чтобы сравнить содержимое каталога *к:\репортс* с каталогом `\\sales\backup\april`резервной копии, введите:
+Чтобы сравнить содержимое каталога *к:\репортс* с каталогом резервной копии `\\sales\backup\april` , введите:
 
 ```
 comp c:\reports \\sales\backup\april

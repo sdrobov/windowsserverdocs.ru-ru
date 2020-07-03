@@ -1,6 +1,6 @@
 ---
-title: дфсдиаг тестситес
-description: Справочный раздел по дфсдиаг тестситес, который проверяет конфигурацию сайтов доменных служб Active Directory (AD DS) путем проверки того, что серверы, действующие в качестве целевых объектов сервера пространства имен или папки (ссылки), имеют одинаковые связи сайтов на всех контроллерах домена.
+title: dfsdiag testsites
+description: Справочная статья по дфсдиаг тестситес, которая проверяет конфигурацию сайтов доменных служб Active Directory (AD DS) путем проверки того, что серверы, выполняющие роль серверов пространства имен или целевых объектов (ссылок), имеют одинаковые связи сайтов на всех контроллерах домена.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 54eb7c7ec44d7cd4872960ca29cd3146b710f472
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: 7942b1535957366af9485580d75c9eec17120f4d
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992854"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85928684"
 ---
-# <a name="dfsdiag-testsites"></a>дфсдиаг тестситес
+# <a name="dfsdiag-testsites"></a>dfsdiag testsites
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

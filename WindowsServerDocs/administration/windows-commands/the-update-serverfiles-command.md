@@ -1,6 +1,6 @@
 ---
 title: Update-Серверфилес
-description: Справочный раздел по Update-Серверфилес, который обновляет файлы в общей папке REMINST с помощью последних файлов, хранящихся в папке%Windir%\System32\RemInst сервера.
+description: Справочная статья по Update-Серверфилес, которая обновляет файлы в общей папке REMINST с использованием последних файлов, которые хранятся в папке%Windir%\System32\RemInst сервера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0005d8e198300c4aad9fdfc772957b460d6fee74
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 79b9332d5962c7e3c50ea3d7c71f33111a0e74b8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721384"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85930130"
 ---
 # <a name="update-serverfiles"></a>Update-Серверфилес
 
@@ -30,7 +30,7 @@ WDSUTIL [Options] /Update-ServerFiles [/Server:<Server name>]
 
 |Параметр|Описание|
 |---------|-----------|
-|[/Server:\<имя сервера>]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
+|[/Server: \<Server name> ]|Указывает имя сервера. Это может быть либо NetBIOS-имя, либо полное доменное имя (FQDN). Если имя сервера не указано, будет использоваться локальный сервер.|
 
 ## <a name="examples"></a>Примеры
 
