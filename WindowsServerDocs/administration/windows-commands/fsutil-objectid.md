@@ -1,6 +1,6 @@
 ---
 title: fsutil objectid
-description: Справочный раздел по команде fsutil ObjectID, который управляет идентификаторами объектов для трассировки других объектов, таких как файлы, каталоги и ссылки.
+description: Справочная статья по команде fsutil ObjectID, которая управляет идентификаторами объектов для трассировки других объектов, таких как файлы, каталоги и ссылки.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 693ab895-9d0c-47c1-9f52-df5cd287842a
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: cdaa3fb0a8a439e568e4b181890db49923e109e7
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 5ab0b95bdcde8bce51e1d5a2c14888229621fcaa
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435812"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925247"
 ---
 # <a name="fsutil-objectid"></a>fsutil objectid
 
@@ -46,7 +46,7 @@ fsutil objectid [set] <objectID> <birthvolumeID> <birthobjectID> <domainID> <fil
 | `<birthvolumeID>` | Указывает том, на котором был обнаружен файл при первом получении идентификатора объекта. Это значение представляет собой 16-байтовый шестнадцатеричный идентификатор, используемый службой клиента DLT. |
 | `<birthobjectID>` | Указывает идентификатор исходного объекта файла ( *ObjectID* может изменяться при перемещении файла). Это значение представляет собой 16-байтовый шестнадцатеричный идентификатор, используемый службой клиента DLT. |
 | `<domainID>` | 16-байтовый идентификатор домена в шестнадцатеричном формате. Это значение в настоящее время не используется и должно быть установлено в значение все нули. |
-| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *к:\документс\филенаме.ткст*. |
+| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *C:\documents\filename.txt*. |
 
 #### <a name="remarks"></a>Комментарии
 

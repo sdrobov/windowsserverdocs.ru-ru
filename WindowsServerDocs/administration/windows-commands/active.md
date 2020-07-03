@@ -1,6 +1,6 @@
 ---
 title: active
-description: Справочный раздел об активной команде, которая на базовых дисках помечает раздел фокусом как активный.
+description: Справочная статья по активной команде, которая на базовых дисках помечает раздел фокусом как активный.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 997c57b93434738c87396812c9b5e5b12d7a8e89
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a5df2f67c087be31190c512be0f6b20d8a1d72cb
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719015"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924143"
 ---
 # <a name="active"></a>active
 

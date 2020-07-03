@@ -1,6 +1,6 @@
 ---
-title: MGET FTP
-description: Справочный раздел по команде FTP mget, который копирует удаленные файлы на локальный компьютер, используя текущий тип перемещения файлов.
+title: ftp mget
+description: Справочная статья по команде FTP mget, которая копирует удаленные файлы на локальный компьютер, используя текущий тип перемещения файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 93d562fcdaec0d6609e7be8b3543cd55bb910238
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7239f31fa0a9b40d9bba4db0c3e1e29df5c03108
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820434"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925897"
 ---
-# <a name="ftp-mget"></a>MGET FTP
+# <a name="ftp-mget"></a>ftp mget
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -36,7 +36,7 @@ mget <remotefile>[ ]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы скопировать удаленные файлы *a. exe* и *b. exe* на локальный компьютер, используя текущий тип перемещения файлов, введите:
+Чтобы скопировать удаленные файлы *a.exe* и *b.exe* на локальный компьютер, используя текущий тип перемещения файлов, введите:
 
 ```
 mget a.exe b.exe

@@ -1,6 +1,6 @@
 ---
 title: cacls
-description: Справочный раздел по команде cacls. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
+description: Справочная статья по команде cacls. Эта команда устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8602157bf87e523d6d842d5636031c61b52e8ef4
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7719728f2c1cb7ce629e199a51ee211ea5781401
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819254"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924840"
 ---
 # <a name="cacls"></a>cacls
 
@@ -59,7 +59,7 @@ cacls <filename> [/t] [/m] [/l] [/s[:sddl]] [/e] [/c] [/g user:<perm>] [/r user 
 | ЭЛЕМЕНТ IO | Только во вложенных папках. |
 | Oi IO | Только файлы. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Можно использовать подстановочные знаки (**?** и **&#42;**) для указания нескольких файлов.
 

@@ -1,6 +1,6 @@
 ---
-title: ksetup ChangePassword
-description: Справочный раздел, посвященный команде ChangePassword ksetup, которая использует значение пароля центр распространения ключей (KDC) для изменения пароля вошедшего в систему пользователя.
+title: ksetup changepassword
+description: Справочная статья по команде ksetup ChangePassword, которая использует центр распространения ключей (KDC) Password (кпассвд) для изменения пароля вошедшего в систему пользователя.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5c1ed9d9b611a7911c4a22c7ca803b480f52f323
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e49a9c0a796357c89efd3c86373c77468670176c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817984"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925504"
 ---
-# <a name="ksetup-changepassword"></a>ksetup ChangePassword
+# <a name="ksetup-changepassword"></a>ksetup changepassword
 
 Использует значение пароля центр распространения ключей (KDC) (кпассвд) для изменения пароля вошедшего в систему пользователя. Выходные данные команды уведомляют о состоянии успешного выполнения или сбоя.
 
@@ -36,7 +36,7 @@ ksetup /changepassword <oldpassword> <newpassword>
 | `<oldpassword>` | Указывает существующий пароль пользователя, вошедшего в систему. |
 | `<newpassword>` | Указывает новый пароль пользователя, вошедшего в систему. Этот пароль должен соответствовать всем требованиям к паролю, установленным на этом компьютере. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Если учетная запись пользователя не найдена в текущем домене, система предложит указать имя домена, в котором находится учетная запись пользователя.
 

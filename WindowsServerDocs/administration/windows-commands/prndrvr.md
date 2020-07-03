@@ -1,6 +1,6 @@
 ---
 title: prndrvr
-description: Справочный раздел по команде прндрвр, которая добавляет, удаляет и перечисляет драйверы принтера.
+description: Справочная статья по команде прндрвр, которая добавляет, удаляет и перечисляет драйверы принтера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 62c63819c175f4b3f3770d90da0bd560443ccb77
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 4f256d003ac0884b100aedb24bbb55e663444911
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472299"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924201"
 ---
 # <a name="prndrvr"></a>prndrvr
 
@@ -32,7 +32,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}] [-e <enviro
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | -a | Устанавливает драйвер. |
 | -d | Удаляет драйвер. |
@@ -47,7 +47,7 @@ cscript prndrvr {-a | -d | -l | -x | -?} [-m <model>] [-v {0|1|2|3}] [-e <enviro
 | -i`<filename.inf>` | Указывает полный путь и имя файла драйвера, который вы хотите установить. Если не указать имя файла, сценарий использует один из файлов входящих INF-файла принтера в подкаталоге INF каталога Windows.<p>Если путь к драйверу не указан, сценарий выполняет поиск файлов драйверов в файле driver.cab. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Если предоставленные сведения содержат пробелы, заключите его в кавычки (например, "имя компьютера").
 

@@ -1,6 +1,6 @@
 ---
-title: Слияние VDISK
-description: Справочный раздел по команде merge vdisk, который объединяет разностный виртуальный жесткий диск (VHD) с соответствующим родительским VHD.
+title: merge vdisk
+description: Справочная статья по команде merge vdisk, которая объединяет разностный виртуальный жесткий диск (VHD) с соответствующим родительским VHD.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ccd288baff691576c15c3e9c686b6708d1c45ee8
-ms.sourcegitcommit: 5e313a004663adb54c90962cfdad9ae889246151
+ms.openlocfilehash: 41201885861b7084fa7b49be8b5bf5a0e7394981
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84354624"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925032"
 ---
-# <a name="merge-vdisk"></a>Слияние VDISK
+# <a name="merge-vdisk"></a>merge vdisk
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

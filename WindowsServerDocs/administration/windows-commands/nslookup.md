@@ -1,6 +1,6 @@
 ---
 title: nslookup
-description: Справочный раздел команды nslookup, в которой отображаются сведения, которые можно использовать для диагностики инфраструктуры службы доменных имен (DNS).
+description: Справочная статья по команде nslookup, которая отображает сведения, которые можно использовать для диагностики инфраструктуры системы доменных имен (DNS).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 589b8dd5e1244a5aeb27f33b4985f07b776bc7bd
-ms.sourcegitcommit: 99d548141428c964facf666c10b6709d80fbb215
+ms.openlocfilehash: 87f973349426016b6d62bd1f018f268d4e873c51
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84721157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925381"
 ---
 # <a name="nslookup"></a>nslookup
 
@@ -69,7 +69,7 @@ nslookup [exit | finger | help | ls | lserver | root | server | set | view] [opt
 | [nslookup set vc](nslookup-set-vc.md) | Указывает, следует ли использовать виртуальный канал при отправке запросов на сервер. |
 | [nslookup view](nslookup-view.md) | Сортирует и перечисляет выходные данные предыдущей подкоманды **Ls** или команд. |
 
-### <a name="remarks"></a>Примечания
+### <a name="remarks"></a>Комментарии
 
 - Если *компутертофинд* является IP-адресом и запрос предназначен для типа записи ресурса **A** или **ptr** , возвращается имя компьютера.
 

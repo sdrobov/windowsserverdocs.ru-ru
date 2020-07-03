@@ -1,6 +1,6 @@
 ---
-title: Отправка по FTP
-description: Справочный раздел по команде FTP Send, который копирует локальный файл на удаленный компьютер с использованием текущего типа передачи файлов.
+title: ftp send
+description: Справочная статья по команде FTP Send, которая копирует локальный файл на удаленный компьютер с использованием текущего типа передачи файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 12ce45a0eb26e1aa4a0d7daace831751e1b67f4a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 4d261db79483800507d62e9d4253a58b2b9359fe
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820304"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925697"
 ---
-# <a name="ftp-send"></a>Отправка по FTP
+# <a name="ftp-send"></a>ftp send
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -40,13 +40,13 @@ send <localfile> [<remotefile>]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы скопировать локальный файл *Test. txt* и присвоить ему имя *test1. txt* на удаленном компьютере, введите:
+Чтобы скопировать локальный файл *test.txt* и присвоить ему имя *test1.txt* на удаленном компьютере, введите:
 
 ```
 send test.txt test1.txt
 ```
 
-Чтобы скопировать локальный файл *Program. exe* на удаленный компьютер, введите:
+Чтобы скопировать локальный файл *program.exe* на удаленный компьютер, введите:
 
 ```
 send program.exe

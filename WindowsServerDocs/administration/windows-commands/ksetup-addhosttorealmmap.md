@@ -1,6 +1,6 @@
 ---
-title: ksetup аддхосттореалммап
-description: Справочный раздел по команде ksetup аддхосттореалммап, который добавляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
+title: ksetup addhosttorealmmap
+description: Справочная статья по команде ksetup аддхосттореалммап, которая добавляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ee2639a5bb071bdd3d6ac3f6373e881c18f3bf9a
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 830db84e210b94088e74fd08909f7c47ff84df98
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818114"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925576"
 ---
-# <a name="ksetup-addhosttorealmmap"></a>ksetup аддхосттореалммап
+# <a name="ksetup-addhosttorealmmap"></a>ksetup addhosttorealmmap
 
 Добавляет сопоставление имени участника-службы (SPN) между указанным узлом и областью. Эта команда также позволяет сопоставлять узел или несколько узлов, совместно использующих один и тот же DNS-суффикс к области.
 

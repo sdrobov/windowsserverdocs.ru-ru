@@ -1,6 +1,6 @@
 ---
 title: ping
-description: Справочный раздел для команды ping, которая проверяет сетевое подключение.
+description: Справочная статья по команде ping, которая проверяет сетевое подключение.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 1c1bd15d6536c73feb00decb9ad306f327a6464d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b995edf4943cfbaac8bd96cf098d62687c32396f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472450"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924275"
 ---
 # <a name="ping"></a>ping
 
@@ -35,7 +35,7 @@ ping [/t] [/a] [/n <count>] [/l <size>] [/f] [/I <TTL>] [/v <TOS>] [/r <count>] 
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | /t | Указывает, что проверка связи продолжит отправлять сообщения эхо-запросов в место назначения, пока не будет прервано. Чтобы прервать и отобразить статистику, нажмите клавиши CTRL + ВВОД. Чтобы прервать выполнение и выйти из этой команды, нажмите клавиши CTRL + C. |
 | /a | Указывает, что разрешение обратных имен выполняется на IP-адрес назначения. В случае успешного выполнения команды Ping отображает соответствующее имя узла. |

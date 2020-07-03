@@ -1,6 +1,6 @@
 ---
 title: fsutil sparse
-description: Справочный раздел, посвященный команде fsutil sparse, которая управляет разреженными файлами.
+description: Справочная статья по команде fsutil sparse, которая управляет разреженными файлами.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 77545920-2d13-4f35-a4d1-14dbec8340dc
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: e68ac844bb7aa7e22a9df0ddb0c982b3701231d7
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: c765b096f1b41b211d3a779d8f838aa56f31aeb8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435719"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925211"
 ---
 # <a name="fsutil-sparse"></a>fsutil sparse
 
@@ -41,7 +41,7 @@ fsutil sparse [setrange] <filename> <beginningoffset> <length>
 | куериранже | Сканирует файл и ищет диапазоны, которые могут содержать ненулевые данные. |
 | setflag | Помечает указанный файл как разреженный. |
 | SetRange | Заполняет указанный диапазон файла нулями. |
-| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *к:\документс\филенаме.ткст*. |
+| `<filename>` | Указывает полный путь к файлу, включая имя файла и расширение, например *C:\documents\filename.txt*. |
 | `<beginningoffset>` | Задает смещение в файле для пометки как разреженного. |
 | `<length>` | Указывает длину области в файле, которая будет помечена как разреженная (в байтах). |
 
@@ -57,7 +57,7 @@ fsutil sparse [setrange] <filename> <beginningoffset> <length>
 
 ### <a name="examples"></a>Примеры
 
-Чтобы пометить файл с именем *Sample. txt* в каталоге *c:\temp* как разреженный, введите:
+Чтобы пометить файл с именем *sample.txt* в каталоге *c:\temp* как разреженный, введите:
 
 ```
 fsutil sparse setflag c:\temp\sample.txt

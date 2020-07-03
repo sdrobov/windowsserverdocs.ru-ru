@@ -1,6 +1,6 @@
 ---
 title: fsutil quota
-description: Справочный раздел по команде fsutil Quota, который управляет квотами дисков на томах NTFS для обеспечения более точного управления сетевыми хранилищами.
+description: Справочная статья по команде fsutil Quota, которая управляет квотами дисков на томах NTFS для обеспечения более точного управления сетевыми хранилищами.
 ms.prod: windows-server
 manager: dmoss
 ms.author: toklima
@@ -9,12 +9,12 @@ ms.technology: storage
 ms.assetid: 21225c11-7c72-4ea2-96bd-e63d4beb3be5
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 54c4f6fe5fd5ae7a43d5057cd5837374f1b94ecd
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: f757f822a903f6b5c6d221e17f87cf1e73d1555f
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83435820"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925221"
 ---
 # <a name="fsutil-quota"></a>fsutil quota
 
@@ -43,7 +43,7 @@ fsutil quota [violations]
 | query | Выводит список имеющихся дисковых квот. |
 | track | Отслеживает использование диска на указанном томе. |
 | числа | Выполняет поиск в журналах системы и приложений и отображает сообщение о том, что обнаружены нарушения квоты или пользователь достиг предельного значения квоты или квоты. |
-| `<volumepath>` | Обязательный элемент. Указывает имя диска, за которым следует двоеточие или идентификатор GUID в формате `volume{GUID}` . |
+| `<volumepath>` | Обязательный. Указывает имя диска, за которым следует двоеточие или идентификатор GUID в формате `volume{GUID}` . |
 | `<threshold>`  | Задает предельный размер (в байтах), по истечение которого выдаются предупреждения. Этот параметр является обязательным для `fsutil quota modify` команды. |
 | `<limit>` | Задает максимально допустимое использование места на диске (в байтах). Этот параметр является обязательным для `fsutil quota modify` команды. |
 | `<username>` | Указывает домен или имя пользователя. Этот параметр является обязательным для `fsutil quota modify` команды. |

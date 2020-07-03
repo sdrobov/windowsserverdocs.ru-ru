@@ -1,6 +1,6 @@
 ---
 title: jetpack
-description: Справочный раздел по команде Jetpack, в котором сжимается служба WINS или база данных протокола DHCP.
+description: Справочная статья по команде Jetpack, которая сжимает службу Windows Internet Name Service (WINS) или базу данных протокола DHCP.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6d77f9c964f5820fc7a44b803bb765e94cb35637
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: b0aa52bad06865641da5fabf25c27ceb8c7a0bbd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818254"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924326"
 ---
 # <a name="jetpack"></a>jetpack
 
@@ -22,7 +22,7 @@ ms.locfileid: "83818254"
 
 Сжимает службу Windows Internet Name Service (WINS) или базу данных протокола DHCP. Рекомендуется сжимать базу данных WINS при приближении 30 МБ.
 
-Программа Jetpack. exe сжимает базу данных следующим образом.
+Jetpack.exe сжимает базу данных следующим образом:
 
 1. Копирование сведений о базе данных во временный файл базы данных.
 
@@ -41,7 +41,7 @@ jetpack.exe <database_name> <temp_database_name>
 | Параметр | Описание |
 | ------- | -------- |
 | `<database_name>` | Задает имя исходного файла базы данных. |
-| `<temp_database_name>` | Задает имя файла временной базы данных, создаваемого программой Jetpack. exe.<p>Примечание. Этот временный файл удаляется по завершении процесса сжатия. Чтобы эта команда работала правильно, необходимо убедиться, что имя временного файла уникально и файл с таким именем еще не существует. |
+| `<temp_database_name>` | Задает имя временного файла базы данных, создаваемого jetpack.exe.<p>Примечание. Этот временный файл удаляется по завершении процесса сжатия. Чтобы эта команда работала правильно, необходимо убедиться, что имя временного файла уникально и файл с таким именем еще не существует. |
 | /? | Отображение справки в командной строке. |
 
 ### <a name="examples"></a>Примеры

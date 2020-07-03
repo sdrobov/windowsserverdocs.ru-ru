@@ -1,6 +1,6 @@
 ---
-title: выход из FTP
-description: Справочный раздел по команде FTP quit, который завершает сеанс FTP с удаленным компьютером, а затем завершает работу.
+title: ftp quit
+description: Справочная статья по команде FTP quit, которая завершает сеанс FTP с удаленным компьютером, а затем завершает работу.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bbe72d02029e50a64eb2c9892ea4d487d6e1c938
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c63df8c34bca410b9b9e2b77db1cf185cdfe20c8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820354"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925113"
 ---
-# <a name="ftp-quit"></a>выход из FTP
+# <a name="ftp-quit"></a>ftp quit
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

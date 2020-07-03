@@ -1,6 +1,6 @@
 ---
-title: Переименование FTP
-description: Справочный раздел для команды FTP Rename, которая переименовывает удаленные файлы.
+title: ftp rename
+description: Справочная статья по команде FTP Rename, которая переименовывает удаленные файлы.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8d3ea25e48266db6a4a282f2ea395bd8b8d5fd9
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: f46caa4394be9edc80da018d88809a0dd6e91862
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925737"
 ---
-# <a name="ftp-rename"></a>Переименование FTP
+# <a name="ftp-rename"></a>ftp rename
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -37,7 +37,7 @@ rename <filename> <newfilename>
 
 ### <a name="examples"></a>Примеры
 
-Чтобы переименовать удаленный файл *example. txt* в *example1. txt*, введите:
+Чтобы переименовать удаленный файл *example.txt* в *example1.txt*, введите:
 
 ```
 rename example.txt example1.txt

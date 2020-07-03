@@ -1,6 +1,6 @@
 ---
-title: двоичный файл FTP
-description: Справочные сведения о команде FTP binary, которая задает тип перемещения файла binary.
+title: ftp binary
+description: Справочная статья по команде FTP binary, которая задает тип перемещения файла binary.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 93b5bcdf473997b10eda86af4a865aed4bcaac0d
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: daf300598f8a31fc35d5702b5bd42507dd9e8211
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820014"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925956"
 ---
-# <a name="ftp-binary"></a>двоичный файл FTP
+# <a name="ftp-binary"></a>ftp binary
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

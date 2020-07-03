@@ -1,6 +1,6 @@
 ---
-title: Создание API Logman
-description: Справочный раздел по команде Logman Create API, который создает сборщик данных трассировки API.
+title: logman create api
+description: Справочная статья по команде Logman Create API, которая создает сборщик данных трассировки API.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f479fcdf3db4bb5a61b0cd0724220d27c934872f
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 2294cb7ba7ab962dbba33b0e2612b8dee2d72004
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222809"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925430"
 ---
-# <a name="logman-create-api"></a>Создание API Logman
+# <a name="logman-create-api"></a>logman create api
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -65,19 +65,19 @@ logman create api <[-n] <name>> [options]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы создать счетчик трассировки API с именем trace_notepad, для исполняемого файла к:\виндовс\нотепад.ЕКСЕ и поместив результаты в файл к:\нотепад.ЕТЛ, введите:
+Чтобы создать счетчик трассировки API с именем trace_notepad, для исполняемого файла c:\windows\notepad.exe и помещения результатов в файл к:\нотепад.ЕТЛ, введите:
 
 ```
 logman create api trace_notepad -exe c:\windows\notepad.exe -o c:\notepad.etl
 ```
 
-Чтобы создать счетчик трассировки API с именем trace_notepad, для исполняемого файла к:\виндовс\нотепад.ЕКСЕ сбор значений, созданных модулем по адресу c:\windows\system32\advapi32.dll, введите:
+Чтобы создать счетчик трассировки API с именем trace_notepad, для c:\windows\notepad.exe исполняемого файла, собирающего значения, созданные модулем в c:\windows\system32\advapi32.dll, введите:
 
 ```
 logman create api trace_notepad -exe c:\windows\notepad.exe -mods c:\windows\system32\advapi32.dll
 ```
 
-Чтобы создать счетчик трассировки API с именем trace_notepad, для исполняемого файла к:\виндовс\нотепад.ЕКСЕ, за исключением вызова API Тлсжетвалуе, созданного модулем kernel32. dll, введите:
+Чтобы создать счетчик трассировки API с именем trace_notepad, для c:\windows\notepad.exe исполняемого файла, за исключением вызова API Тлсжетвалуе, созданного модулем kernel32.dll, введите:
 ```
 logman create api trace_notepad -exe c:\windows\notepad.exe -exapis kernel32.dll!TlsGetValue
 ```

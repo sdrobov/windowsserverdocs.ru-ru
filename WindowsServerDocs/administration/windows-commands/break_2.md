@@ -1,6 +1,6 @@
 ---
 title: break
-description: Справочный раздел по команде Break, который отменяет связь тома теневых копий с VSS и делает его доступным как обычный том.
+description: Справочная статья по команде Break, которая отменяет связь тома теневых копий с VSS и делает его доступным как обычный том.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7e8789ab68ecb98d190a79c3f1088aad05b83562
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 7f3974f183215a42920f7406a62ab335eb101f56
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707785"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924897"
 ---
 # <a name="break"></a>break
 
@@ -36,7 +36,7 @@ break [writable] <setid>
 | Параметр | Описание |
 | --------- | ----------- |
 | записывать | Включает доступ на чтение и запись для тома. |
-| \<сетид> | Указывает идентификатор набора теневых копий. Псевдоним идентификатора теневой копии, который хранится в виде переменной среды с помощью команды **загрузить метаданные** , можно использовать в параметре *сетид* . |
+| \<setid> | Указывает идентификатор набора теневых копий. Псевдоним идентификатора теневой копии, который хранится в виде переменной среды с помощью команды **загрузить метаданные** , можно использовать в параметре *сетид* . |
 
 ## <a name="examples"></a>Примеры
 

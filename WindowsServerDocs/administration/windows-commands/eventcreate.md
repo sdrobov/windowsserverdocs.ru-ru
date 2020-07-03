@@ -1,6 +1,6 @@
 ---
 title: eventcreate
-description: Справочный раздел по команде eventcreate, который позволяет администратору создать пользовательское событие в указанном журнале событий.
+description: Справочная статья по команде eventcreate, которая позволяет администратору создать пользовательское событие в указанном журнале событий.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8348e61f6cd94c9b660d0ad9cac4cb1f96920cad
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 60ed97eeffc8ae2410fdd8f296a0e8348f376652
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436879"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925319"
 ---
 # <a name="eventcreate"></a>eventcreate
 
@@ -33,7 +33,7 @@ eventcreate [/s <computer> [/u <domain\user> [/p <password>]] {[/l {APPLICATION|
 
 | Параметр | Описание |
 | --------- |------------ |
-| ключ`<computer>` | Указывает имя или IP-адрес удаленного компьютера (не используйте символы обратной косой черты). По умолчанию используется локальный компьютер. |
+| ключ`<computer>` | Указывает имя или IP-адрес удаленного компьютера (не используйте символы обратной косой черты). По умолчанию это локальный компьютер. |
 | /u`<domain\user>` | Выполняет команду с разрешениями учетной записи пользователя, указанного в параметре `<user>` или `<domain\user>` . По умолчанию заданы разрешения текущего вошедшего в систему пользователя на компьютере, выполняющем команду. |
 | /p`<password>` | Указывает пароль учетной записи пользователя, указанной в параметре **/u** . |
 | /l`{APPLICATION | SYSTEM}` | Указывает имя журнала событий, в котором будет создано событие. Допустимые имена журналов — **Application** или **System**. |

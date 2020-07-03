@@ -1,6 +1,6 @@
 ---
 title: irftp
-description: Справочный раздел по команде ирфтп, который отправляет файлы по инфракрасной связи.
+description: Справочная статья по команде ирфтп, которая отправляет файлы по инфракрасной связи.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0d19e4f0c325baf46c0a92bf04e39bc63863fe90
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 92bb484650245555597121c8b6f6378d3c09209c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818314"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924342"
 ---
 # <a name="irftp"></a>irftp
 
@@ -42,7 +42,7 @@ irftp [<drive>:\] [[<path>] <filename>] [/h][/s]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы отправить *к:\ексампле.ткст* через инфракрасную связь, введите:
+Чтобы отправить *c:\example.txt* по инфракрасной связи, введите:
 
 ```
 irftp c:\example.txt

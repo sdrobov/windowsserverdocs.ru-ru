@@ -8,12 +8,12 @@ ms.date: 11/26/2018
 ms.assetid: b886b2fd-3567-4f0a-8aa3-4ba7923d2d21
 author: nirb
 ms.author: nirb
-ms.openlocfilehash: 314b53d41fde81936b70154feeee407e89d2cca3
-ms.sourcegitcommit: c710fea2c0591febfc1bc9a705d59979be6f699b
+ms.openlocfilehash: 71687bc7090eabfaf690dc526cce013798413fdb
+ms.sourcegitcommit: 643a9916efb95ad0bb5cc0a9b115ac29af4cb076
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83705596"
+ms.lasthandoff: 06/30/2020
+ms.locfileid: "85586723"
 ---
 # <a name="guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience"></a>Руководство по отключению системных служб в Windows Server 2016 с возможностями рабочего стола
 
@@ -42,7 +42,7 @@ ms.locfileid: "83705596"
 1. \Microsoft\XblGameSave\XblGameSaveTask.
 2. \Microsoft\XblGameSave\XblGameSaveTaskLogon.
 
-(Вы также можете получить доступ к сведениям обо всех службах, описанных в этой статье, просмотрев прилагаемую электронную таблицу Microsoft Excel: [Руководство по отключению системных служб в Windows Server 2016 с возможностями рабочего стола](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx).)
+(Вы также можете узнать обо всех службах, описанных в этой статье, просмотрев прилагаемую электронную таблицу Microsoft Excel: [Руководство по отключению системных служб в Windows Server 2016 с возможностями рабочего стола](https://msdnshared.blob.core.windows.net/media/2017/05/Service-management-WS2016.xlsx).)
 
 
 ### <a name="disabling-services-not-installed-by-default"></a>Отключение служб, не установленных по умолчанию
@@ -244,7 +244,7 @@ ms.locfileid: "83705596"
 | **Установка**   | Только с возможностями рабочего стола
 | **Тип запуска**   | Вручную
 | **Рекомендации** | Можно отключить
-| **Комментарии**       | Можно отключить, если не используется. Еще один механизм отключения: https://technet.microsoft.com/library/dd252791.aspx
+| **Комментарии**       | Можно отключить, если не используется. Еще один механизм отключения: [Отключение Bluetooth и инфракрасной передачи](https://docs.microsoft.com/previous-versions/tn-archive/dd252791(v=technet.10))
 |||
 
 
@@ -1321,7 +1321,7 @@ ms.locfileid: "83705596"
 | **Установка**   | Всегда устанавливается
 | **Тип запуска**   | Автоматически
 | **Рекомендации** | Можно отключить, если не используется на сервере печати или на контроллере домена
-| **Комментарии**       | На контроллере домена установка роли контроллера домена добавляет в службу диспетчера очереди печати поток, который отвечает за удаление устаревших объектов очереди печати из Active Directory.  Если служба диспетчера очереди печати не работает хотя бы на одном контроллере домена в каждом сайте, то у AD нет средств для удаления старых очередей, которые больше не существуют. [https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/](https://blogs.technet.microsoft.com/askperf/2008/11/18/disabling-unnecessary-services-a-word-to-the-wise/ )
+| **Комментарии**       | На контроллере домена установка роли контроллера домена добавляет в службу диспетчера очереди печати поток, который отвечает за удаление устаревших объектов очереди печати из Active Directory.  Если служба диспетчера очереди печати не работает хотя бы на одном контроллере домена в каждом сайте, то у AD нет средств для удаления старых очередей, которые больше не существуют. [См. блог команды по обеспечению производительности.](https://techcommunity.microsoft.com/t5/ask-the-performance-team/bg-p/AskPerf)
 |||
 
 

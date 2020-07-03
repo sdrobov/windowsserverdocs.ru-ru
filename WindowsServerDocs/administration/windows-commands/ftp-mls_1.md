@@ -1,6 +1,6 @@
 ---
-title: MLS FTP
-description: Справочный раздел по команде FTP MLS, который отображает сокращенный список файлов и подкаталогов в удаленном каталоге.
+title: ftp mls
+description: Справочная статья по команде FTP MLS, которая отображает сокращенный список файлов и подкаталогов в удаленном каталоге.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 372c0b9a42fdfb8600083a301b71c37ada43c014
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6c2e87cbf0455fccb99435e0a8b67fd30164e35b
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820397"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925854"
 ---
-# <a name="ftp-mls"></a>MLS FTP
+# <a name="ftp-mls"></a>ftp mls
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -43,7 +43,7 @@ mls <remotefile>[ ] <localfile>
 mls dir1 dir2 -
 ```
 
-Чтобы сохранить сокращенный список файлов и подкаталогов для *Dir1* и *Dir2* в локальном файле *дирлист. txt*, введите:
+Чтобы сохранить сокращенный список файлов и подкаталогов для *Dir1* и *Dir2* в локальном файле *dirlist.txt*, введите:
 
 ```
 mls dir1 dir2 dirlist.txt

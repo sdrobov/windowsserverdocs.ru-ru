@@ -1,6 +1,6 @@
 ---
 title: ftp
-description: Справочный раздел по команде FTP, который передает файлы на компьютер, на котором запущена служба протокол FTP (FTP), и с него.
+description: Справочная статья по команде FTP, которая передает файлы на компьютер, на котором запущена служба протокол FTP (FTP), и с него.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 3920306ce05aeb1b1e364c8146c461ea187f6560
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: e78148e1e7dc4f402d80bb4ebfbcbdac52249407
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820244"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925610"
 ---
 # <a name="ftp"></a>ftp
 
@@ -47,7 +47,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 | `<host>` | Указывает имя компьютера, IP-адрес или IPv6-адрес сервера FTP, к которому осуществляется подключение. Имя узла или адрес, если он указан, должен быть последним параметром в строке. |
 | -? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Параметры командной строки **FTP** чувствительны к регистру.
 
@@ -65,7 +65,7 @@ ftp [-v] [-d] [-i] [-n] [-g] [-s:<filename>] [-a] [-A] [-x:<sendbuffer>] [-r:<re
 ftp ftp.example.microsoft.com
 ```
 
-Чтобы войти на FTP-сервер с именем `ftp.example.microsoft.com` и выполнить команды **FTP** , содержащиеся в файле с именем *Resync. txt*, введите:
+Чтобы войти на FTP-сервер с именем `ftp.example.microsoft.com` и выполнить команды **FTP** , содержащиеся в файле с именем *resync.txt*, введите:
 
 ```
 ftp -s:resync.txt ftp.example.microsoft.com

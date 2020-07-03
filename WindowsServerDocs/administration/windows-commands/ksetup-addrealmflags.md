@@ -1,6 +1,6 @@
 ---
-title: ksetup аддреалмфлагс
-description: Справочный раздел по команде ksetup аддреалмфлагс, который добавляет дополнительные флаги сферы в указанную область.
+title: ksetup addrealmflags
+description: Справочная статья по команде ksetup аддреалмфлагс, которая добавляет дополнительные флаги сферы в указанную область.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c0862462f47189f4904421943e4d3de55c856ace
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 0206d56563544e48fec5e714febdd3c3be52ab40
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818034"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925522"
 ---
-# <a name="ksetup-addrealmflags"></a>ksetup аддреалмфлагс
+# <a name="ksetup-addrealmflags"></a>ksetup addrealmflags
 
 Добавляет дополнительные флаги сферы в указанную область.
 
@@ -32,7 +32,7 @@ ksetup /addrealmflags <realmname> [sendaddress] [tcpsupported] [delegate] [ncsup
 | --------- | ----------- |
 | `<realmname>` | Указывает DNS-имя в верхнем регистре, например CORP. CONTOSO.COM. |
 
-#### <a name="remarks"></a>Замечания
+#### <a name="remarks"></a>Комментарии
 
 - Флаги сферы задают дополнительные возможности области Kerberos, которые не основаны на операционной системе Windows Server. Компьютеры под управлением Windows Server могут использовать сервер Kerberos для администрирования проверки подлинности в области Kerberos вместо использования домена под управлением операционной системы Windows Server. Эта запись устанавливает функции области и имеет следующие значения:
 

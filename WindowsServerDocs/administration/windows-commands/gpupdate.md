@@ -1,6 +1,6 @@
 ---
 title: gpupdate
-description: Справочный раздел по команде gpupdate, которая обновляет параметры групповая политика.
+description: Справочная статья по команде gpupdate, которая обновляет параметры групповая политика.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a2047d6beb515350a534343ca484bc2deeb50daa
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 78ff3f50a53cfa8f2dd2e1050e6b904896b51cfd
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83818744"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924601"
 ---
 # <a name="gpupdate"></a>gpupdate
 

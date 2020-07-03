@@ -1,6 +1,6 @@
 ---
-title: PWD FTP
-description: Справочный раздел по команде FTP PWD, которая отображает текущий каталог удаленного компьютера.
+title: ftp pwd
+description: Справочная статья по команде FTP PWD, которая отображает текущий каталог удаленного компьютера.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d250dcca53308b99d3d629a8e60e60519a0525de
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 3437dd0c808a9c97db40cbde2d5404c2b0f8186e
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820364"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925137"
 ---
-# <a name="ftp-pwd"></a>PWD FTP
+# <a name="ftp-pwd"></a>ftp pwd
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

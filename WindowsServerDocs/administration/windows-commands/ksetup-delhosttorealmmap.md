@@ -1,6 +1,6 @@
 ---
-title: ksetup делхосттореалммап
-description: Справочный раздел по команде ksetup делхосттореалммап, который удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
+title: ksetup delhosttorealmmap
+description: Справочная статья по команде ksetup делхосттореалммап, которая удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 17fc30e76247c570c653d5ec38501a2199435c7f
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: c55fe25a147c23026ddf97900d6da856f04314a3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817864"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925496"
 ---
-# <a name="ksetup-delhosttorealmmap"></a>ksetup делхосттореалммап
+# <a name="ksetup-delhosttorealmmap"></a>ksetup delhosttorealmmap
 
 Удаляет сопоставление имени участника-службы (SPN) между указанным узлом и областью. Эта команда также удаляет все сопоставления между узлом и областью (или несколькими узлами в сфере).
 

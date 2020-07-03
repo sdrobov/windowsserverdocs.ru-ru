@@ -1,6 +1,6 @@
 ---
-title: получение по FTP
-description: Справочный раздел по команде FTP Get, который копирует удаленный файл на локальный компьютер, используя текущий тип перемещения файлов.
+title: ftp get
+description: Справочная статья по команде FTP Get, которая копирует удаленный файл на локальный компьютер, используя текущий тип перемещения файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b7254cac15afc446695f22ee1a63f2f4573d3565
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: de084813ee837ecea2f0871589218d3262b40bba
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819714"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925926"
 ---
-# <a name="ftp-get"></a>получение по FTP
+# <a name="ftp-get"></a>ftp get
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -40,13 +40,13 @@ get <remotefile> [<localfile>]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы скопировать файл *Test. txt* на локальный компьютер, используя текущий перенос файлов, введите:
+Чтобы скопировать *test.txt* на локальный компьютер, используя текущий перенос файлов, введите:
 
 ```
 get test.txt
 ```
 
-Чтобы скопировать файл *Test. txt* на локальный компьютер в файле *test1. txt* , используя текущий перенос файлов, введите:
+Чтобы скопировать *test.txt* на локальный компьютер как *test1.txt* с использованием текущей пересылки файлов, введите:
 
 ```
 get test.txt test1.txt

@@ -1,6 +1,6 @@
 ---
-title: FTP mkdir
-description: Справочный раздел по команде FTP mkdir, который создает каталог на удаленном компьютере.
+title: ftp mkdir
+description: Справочная статья по команде FTP mkdir, которая создает каталог на удаленном компьютере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 98559664b2288ccf495a039e83e92fb7ba555717
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 2741733191b76547d8639d925cf4288efb35a530
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820424"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925887"
 ---
-# <a name="ftp-mkdir"></a>FTP mkdir
+# <a name="ftp-mkdir"></a>ftp mkdir
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

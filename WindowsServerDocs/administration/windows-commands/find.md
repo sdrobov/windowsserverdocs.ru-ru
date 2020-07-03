@@ -1,6 +1,6 @@
 ---
 title: поиск
-description: Справочный раздел по команде Find, который выполняет поиск строки текста в файлах, отображая указанную текстовую строку в файле.
+description: Справочная статья по команде Find, которая выполняет поиск строки текста в файлах, отображая указанную текстовую строку в файле.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0273405ce5e5b4958a347cd1eaddee0a38897f0c
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8ebebcd29faad50aec84dd464ff0f745d2ddf52c
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83437009"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925258"
 ---
 # <a name="find"></a>поиск
 
@@ -35,7 +35,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 | /n | Предшествует каждой строке с номером строки файла. |
 | /i | Указывает, что при поиске регистр не учитывается. |
 | ["/OFF" [строка]] | Не пропускает файлы с установленным атрибутом "вне сети". |
-| `<string>` | Обязательный элемент. Задает группу символов (заключенных в кавычки), которые требуется найти. |
+| `<string>` | Обязательный. Задает группу символов (заключенных в кавычки), которые требуется найти. |
 | `[<drive>:][<path>]<filename>` | Указывает расположение и имя файла, в котором выполняется поиск указанной строки. |
 | /? | Отображение справки в командной строке. |
 
@@ -63,7 +63,7 @@ find [/v] [/c] [/n] [/i] [/off[line]] <string> [[<drive>:][<path>]<filename>[...
 find pencil sharpener pencil.ad
 ```
 
-Чтобы найти текст, «специалисты, обозначенные в документе только для обсуждения. Это не окончательный отчет ". в файле *Report. doc* введите:
+Чтобы найти текст, «специалисты, обозначенные в документе только для обсуждения. Это не окончательный отчет ". в файле *report.doc* введите:
 
 ```
 find ""The scientists labeled their paper for discussion only. It is not a final report."" report.doc

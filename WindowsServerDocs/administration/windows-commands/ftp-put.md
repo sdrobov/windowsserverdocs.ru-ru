@@ -1,6 +1,6 @@
 ---
-title: FTP-размещение
-description: Справочный раздел для команды FTP-вставки, который копирует локальный файл на удаленный компьютер с использованием текущего типа перемещения файлов.
+title: ftp put
+description: Справочная статья по команде FTP-размещения, которая копирует локальный файл на удаленный компьютер, используя текущий тип перемещения файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 03/30/2020
-ms.openlocfilehash: aee76b95ac538868122d5137958723326575eb18
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 7b382673be838af739c29ffa294e3d853f0507c2
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83820374"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85925152"
 ---
-# <a name="ftp-put"></a>FTP-размещение
+# <a name="ftp-put"></a>ftp put
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -40,13 +40,13 @@ put <localfile> [<remotefile>]
 
 ### <a name="examples"></a>Примеры
 
-Чтобы скопировать локальный файл *Test. txt* и присвоить ему имя *test1. txt* на удаленном компьютере, введите:
+Чтобы скопировать локальный файл *test.txt* и присвоить ему имя *test1.txt* на удаленном компьютере, введите:
 
 ```
 put test.txt test1.txt
 ```
 
-Чтобы скопировать локальный файл *Program. exe* на удаленный компьютер, введите:
+Чтобы скопировать локальный файл *program.exe* на удаленный компьютер, введите:
 
 ```
 put program.exe
