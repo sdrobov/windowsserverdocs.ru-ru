@@ -1,6 +1,6 @@
 ---
 title: в сети
-description: Справочный раздел для команды Online, которая принимает автономный диск или том в состояние "в сети".
+description: Справочная статья для команды Online, которая принимает автономный диск или том в состояние "в сети".
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b5983e033755cdc9cd28b2b149fea657a06bd164
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: d18ba172af7ab003368b36daa89ef0d7ac88a7a3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472610"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922599"
 ---
 # <a name="online"></a>в сети
 
@@ -29,7 +29,7 @@ online volume
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 |--|--|
 | [online disk](online-disk.md) | Переключается на автономный диск, находящиеся в состоянии "в сети". |
 | [online volume](online-volume.md) | Переключается на автономный том, чтобы перейти в состояние "в сети". |

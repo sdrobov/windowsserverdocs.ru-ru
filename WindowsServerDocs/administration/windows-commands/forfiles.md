@@ -1,6 +1,6 @@
 ---
 title: forfiles
-description: Справочный раздел по команде forfiles, который выбирает и выполняет команду для файла или набора файлов.
+description: Справочная статья по команде forfiles, которая выбирает и выполняет команду для файла или набора файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 05/20/2020
-ms.openlocfilehash: 96ef7d016bd13961a4814ba4cd09095aed4f0e97
-ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
+ms.openlocfilehash: 26c443aa05d081fc257dc49d2f2c7f6a9adae865
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83716849"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922394"
 ---
 # <a name="forfiles"></a>forfiles
 
@@ -28,7 +28,7 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание |
+| Параметр | Описание: |
 | --------- | ----------- |
 | /P`<pathname>` | Указывает путь, с которого следует начать поиск. По умолчанию поиск начинается в текущем рабочем каталоге. |
 | /M`<searchmask>` | Выполняет поиск в файлах в соответствии с заданной маской поиска. По умолчанию сеарчмаск имеет значение `*` . |
@@ -55,7 +55,7 @@ forfiles [/P pathname] [/M searchmask] [/S] [/C command] [/D [+ | -] [{<date> | 
     | @FDATE | Метка даты последнего изменения файла. |
     | @FTIME | Отметка времени последнего изменения файла. |
 
-- Команда **forfiles** позволяет выполнять команду или передавать аргументы в несколько файлов. Например, можно выполнить команду **Type** для всех файлов в дереве с расширением txt. Или можно выполнить каждый пакетный файл (*. bat) на диске C с именем файла MyInput. txt в качестве первого аргумента.
+- Команда **forfiles** позволяет выполнять команду или передавать аргументы в несколько файлов. Например, можно выполнить команду **Type** для всех файлов в дереве с расширением txt. Или же можно выполнить каждый пакетный файл (*. bat) на диске C с именем файла Myinput.txt в качестве первого аргумента.
 
 - Эта команда может:
 

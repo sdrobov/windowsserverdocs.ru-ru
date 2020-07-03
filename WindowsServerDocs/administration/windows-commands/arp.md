@@ -1,6 +1,6 @@
 ---
 title: arp
-description: Справочный раздел по команде ARP, которая отображает и изменяет записи в кэше ARP, который используется для хранения IP-адресов и их разрешенных физических адресов.
+description: Справочная статья по команде ARP, которая отображает и изменяет записи в кэше протокола ARP, который используется для хранения IP-адресов и их разрешенных физических адресов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: fdbb9fe636bb30be90164d9a2163c495a9c2e704
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 41f9ebde5faa3eda99402aa86a0aef5e55b42eba
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819654"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924004"
 ---
 # <a name="arp"></a>arp
 
@@ -38,7 +38,7 @@ arp [/a [<inetaddr>] [/n <ifaceaddr>]] [/g [<inetaddr>] [-n <ifaceaddr>]] [/d <i
 | `[/s <inetaddr> <etheraddr> [<ifaceaddr>]` | Добавляет статическую запись в кэш ARP, которая разрешает IP-адрес **инетаддр** с физическим адресом **есераддр**. Чтобы добавить статическую запись кэша ARP в таблицу для определенного интерфейса, используйте параметр **ифацеаддр** , где **ифацеаддр** — это IP-адрес, назначенный интерфейсу. |
 | /? | Отображение справки в командной строке. |
 
-### <a name="remarks"></a>Замечания
+### <a name="remarks"></a>Комментарии
 
 - IP-адреса для **инетаддр** и **ифацеаддр** выражаются в десятичной нотации.
 

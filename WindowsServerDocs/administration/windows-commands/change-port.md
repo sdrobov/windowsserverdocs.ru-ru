@@ -1,6 +1,6 @@
 ---
 title: change port
-description: Справочный раздел по команде изменения порта, который перечисляет или изменяет сопоставления COM-портов для совместимости с приложениями MS-DOS.
+description: Справочная статья по команде изменения порта, которая перечисляет или изменяет сопоставления COM-портов для совместимости с приложениями MS-DOS.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8dcf1097ea037aff9269edafea6e640054a697e3
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 0735c4c21ae8e321da1cfe31c2874f3dcfc540c7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716080"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922503"
 ---
 # <a name="change-port"></a>change port
 
@@ -40,7 +40,7 @@ change port [<portX>=<portY| /d <portX | /query]
 | /Query | Отображает текущие сопоставления портов. |
 | /? | Отображение справки в командной строке. |
 
-#### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Комментарии
 
 - Большинство приложений MS-DOS поддерживают только последовательные порты с COM1 до COM4. Команда **изменить порт** сопоставляет последовательный порт с другим номером порта, что позволяет приложениям, которые не поддерживают порты COM с большим числом номеров, обращаться к последовательному порту. Повторное сопоставление работает только для текущего сеанса и не сохраняется при выходе из сеанса и последующем входе в систему.
 
@@ -49,13 +49,13 @@ change port [<portX>=<portY| /d <portX | /query]
 ## <a name="examples"></a>Примеры
 
 - Чтобы преобразовать COM12 в порт COM1 для использования приложением на основе MS-DOS, введите:
-  
+
   ```
   change port com12=com1
   ```
 
 - Чтобы отобразить текущие сопоставления портов, введите:
-  
+
   ```
   change port /query
   ```

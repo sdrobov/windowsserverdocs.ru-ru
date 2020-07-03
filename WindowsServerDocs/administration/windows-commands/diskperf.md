@@ -1,6 +1,6 @@
 ---
 title: diskperf
-description: Справочный раздел по команде diskperf, который можно использовать для удаленного включения или отключения счетчиков производительности физических или логических дисков на компьютерах под управлением Windows.
+description: Справочная статья по команде diskperf, которую можно использовать для удаленного включения или отключения счетчиков производительности физических или логических дисков на компьютерах под управлением Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 092518f414d6e27436c46ffd6f9f15b6e6c0407e
-ms.sourcegitcommit: fad2ba64bbc13763772e21ed3eabd010f6a5da34
+ms.openlocfilehash: e1e33844849993c6d5a9f9330264f31e52af3b29
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "82992430"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922815"
 ---
 # <a name="diskperf"></a>diskperf
 

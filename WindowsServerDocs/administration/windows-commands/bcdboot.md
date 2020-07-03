@@ -1,6 +1,6 @@
 ---
 title: bcdboot
-description: Справочный раздел по команде BCDboot, который быстро настраивает системный раздел или восстановление среды загрузки, расположенной в системном разделе.
+description: Справочная статья по команде BCDboot, которая быстро настраивает системный раздел или восстановление среды загрузки, расположенной в системном разделе.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 67aacb3a575e0cdd08af5372b403916961d223c6
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: def4052e8aaa4f1e32216b5de837706b5cde3d04
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84149777"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923502"
 ---
 # <a name="bcdboot"></a>bcdboot
 
@@ -28,9 +28,9 @@ bcdboot <source> [/l] [/s]
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 | --------- | ----------- |
-| источник | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
+| source | Указывает расположение каталога Windows, используемого в качестве источника для копирования файлов среды загрузки. |
 | /l | Задает языковой стандарт. Язык по умолчанию — английский (США). |
 | /s | Указывает букву тома системного раздела. По умолчанию используется системный раздел, определяемый встроенным по. |
 

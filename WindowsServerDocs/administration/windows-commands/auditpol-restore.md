@@ -1,6 +1,6 @@
 ---
-title: Восстановление Auditpol
-description: Справочный раздел по команде auditpol restore, который восстанавливает параметры политики аудита системы, параметры политики аудита на уровне пользователя для всех пользователей и все параметры аудита из файла, который синтаксически согласуется с форматом файла данных с разделителями-запятыми (CSV), который используется параметром/баккуп.
+title: auditpol restore
+description: Справочная статья по команде auditpol restore, которая восстанавливает параметры политики аудита системы, параметры политики аудита на уровне пользователя для всех пользователей и все параметры аудита из файла, который синтаксически согласуется с форматом файла данных с разделителями-запятыми (CSV), который используется параметром/баккуп.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 64605a985c1cff13b842a99ae4ea52485bfc8220
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: d7cd9f26189e9237910cfcbe5399c490ddf0c3c0
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719057"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923675"
 ---
-# <a name="auditpol-restore"></a>Восстановление Auditpol
+# <a name="auditpol-restore"></a>auditpol restore
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -39,7 +39,7 @@ auditpol /restore /file:<filename>
 
 ## <a name="examples"></a>Примеры
 
-Чтобы восстановить параметры политики аудита системы, параметры политики аудита для каждого пользователя для всех пользователей и все параметры аудита из файла с именем аудитполици. csv, созданного с помощью команды/баккуп, введите:
+Чтобы восстановить параметры политики аудита системы, параметры политики аудита для каждого пользователя для всех пользователей и все параметры аудита из файла с именем auditpolicy.csv, созданного с помощью команды/баккуп, введите:
 
 ```
 auditpol /restore /file:c:\auditpolicy.csv
@@ -49,6 +49,6 @@ auditpol /restore /file:c:\auditpolicy.csv
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Резервное копирование Auditpol](auditpol-backup.md)
+- [auditpol backup](auditpol-backup.md)
 
 - [команды auditpol](auditpol.md)

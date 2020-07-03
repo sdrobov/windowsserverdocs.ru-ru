@@ -1,6 +1,6 @@
 ---
 title: Add-Имажедриверпаккаже
-description: Справочный раздел по Add-Имажедриверпаккаже, который добавляет пакет драйверов, который находится в хранилище драйверов, в существующий образ загрузки на сервере.
+description: Справочная статья по Add-Имажедриверпаккаже, которая добавляет пакет драйверов, который находится в хранилище драйверов, в существующий образ загрузки на сервере.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 4c221d77f80cefdcf6e6214cdd7441ecde5cb693
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 450b06c2c935f83a0851fb887f34d7403061fea8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82721070"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922062"
 ---
 # <a name="add-imagedriverpackage"></a>Add-Имажедриверпаккаже
 
@@ -24,7 +24,7 @@ ms.locfileid: "82721070"
 
 ## <a name="syntax"></a>Синтаксис
 ```
-wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64} 
+wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype:Boot /Architecture:{x86 | ia64 | x64}
 ```
 ```
 [/Filename:<File name>] {/DriverPackage:<Package Name> | /PackageId:<ID>}
@@ -37,9 +37,9 @@ wdsutil /add-ImageDriverPackage [/Server:<Server name>media:<Image namemediatype
 |             носител<Image name>             |                                                                                                                                                                                       Указывает имя образа, в который добавляется драйвер.                                                                                                                                                                                        |
 |               mediaType: Загрузка               |                                                                                                                                                                Указывает тип образа, в который добавляется драйвер. Пакеты драйверов можно добавлять только в загрузочные образы.                                                                                                                                                                 |
 | /Арчитектуре: {x86 &#124; ia64 &#124; x64} |                                                                                                       Указывает архитектуру загрузочного образа. Так как для образов загрузки в разных архитектурах можно использовать одно и то же имя образа, необходимо указать архитектуру для обеспечения правильного использования образа.                                                                                                        |
-|           /Филенаме:<File name>]           |                                                                                                                                                        Указывает имя файла. Если образ не может быть однозначно определен по имени, необходимо указать имя файла.                                                                                                                                                        |
+|           /Филенаме: <File name> ]           |                                                                                                                                                        Указывает имя файла. Если образ не может быть однозначно определен по имени, необходимо указать имя файла.                                                                                                                                                        |
 |           [/Дриверпаккаже:<Name>           |                                                                                                                                                                                   Указывает имя пакета драйверов, добавляемого к образу.                                                                                                                                                                                    |
-|             [/Паккажеид:<ID>]              | Указывает идентификатор служб развертывания Windows для пакета драйверов. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени. Чтобы найти идентификатор пакета, щелкните группу драйверов, в которой находится пакет (или узел **все пакеты** ), щелкните правой кнопкой мыши пакет и выберите пункт **свойства**. Идентификатор пакета указан на вкладке **Общие** . Например: {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
+|             [/Паккажеид: <ID> ]              | Указывает идентификатор служб развертывания Windows для пакета драйверов. Этот параметр необходимо указать, если пакет драйверов не может быть однозначно идентифицирован по имени. Чтобы найти идентификатор пакета, щелкните группу драйверов, в которой находится пакет (или узел **все пакеты** ), щелкните правой кнопкой мыши пакет и выберите пункт **свойства**. Идентификатор пакета указан на вкладке **Общие** . Например: {DD098D20-1850-4fc8-8E35-EA24A1BEFF5E}. |
 
 ## <a name="examples"></a>Примеры
 Чтобы добавить пакет драйверов в загрузочный образ, введите один из следующих элементов:
@@ -50,5 +50,5 @@ wdsutil /add-ImageDriverPackagmedia:WinPE Boot Imagemediatype:Boot /Architecture
 wdsutil /verbose /add-ImageDriverPackagmedia:WinPE Boot Image /Server:MyWDSServemediatype:Boot /Architecture:x64 /PackageId:{4D36E972-E325-11CE-Bfc1-08002BE10318}
 ```
 ## <a name="additional-references"></a>Дополнительные ссылки
-- [Ключ синтаксиса командной строки](command-line-syntax-key.md)
-[с помощью команды Add-имажедриверпаккажес](using-the-add-imagedriverpackages-command.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Использование команды Add-имажедриверпаккажес](using-the-add-imagedriverpackages-command.md)

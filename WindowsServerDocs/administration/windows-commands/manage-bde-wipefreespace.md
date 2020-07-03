@@ -1,6 +1,6 @@
 ---
 title: Управление — BDE випефриспаце
-description: Справочный раздел по команде Manage-bde випефриспаце, который очищает свободное место на томе, удаляя фрагменты данных, которые могли существовать в пространстве.
+description: Справочная статья по команде Manage-bde випефриспаце, которая очищает свободное место на томе, удаляя фрагменты данных, которые могли существовать в пространстве.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 09bc59ab631dd1fa2177b50aa4187b30239571bd
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 872c3722028af1612fb80e3b98650ee0a39261ce
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222126"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922179"
 ---
 # <a name="manage-bde-wipefreespace"></a>Управление — BDE випефриспаце
 
@@ -32,7 +32,7 @@ manage-bde -wipefreespace|-w [<drive>] [-cancel] [-computername <name>] [{-?|/?}
 | --------- | ----------- |
 | `<drive>` | Представляет букву диска, за которой следует двоеточие. |
 | -Отмена | Отменяет очистку свободного пространства, которое находится в процессе. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

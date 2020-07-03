@@ -1,6 +1,6 @@
 ---
-title: удалить Auditpol
-description: Справочный раздел по команде auditpol Remove, который удаляет политику аудита для каждого пользователя для указанной учетной записи или для всех учетных записей.
+title: auditpol remove
+description: Справочная статья по команде auditpol Remove, которая удаляет политику аудита для каждого пользователя для указанной учетной записи или всех учетных записей.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 9aedde39d44c7640e6aa2516465e1c8ec7d022c2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: aada45bdc128c3122f459813d6f015f58532de18
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719089"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923725"
 ---
-# <a name="auditpol-remove"></a>удалить Auditpol
+# <a name="auditpol-remove"></a>auditpol remove
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

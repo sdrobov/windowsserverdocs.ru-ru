@@ -1,6 +1,6 @@
 ---
 title: assoc
-description: Справочный раздел для команды Assoc, которая отображает или изменяет сопоставления расширений имен файлов.
+description: Справочная статья по команде Assoc, которая отображает или изменяет сопоставления расширений имен файлов.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,19 +9,19 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 58735201a1a0711db4d0cee9c292363acf5121f3
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: 6e6d72dce2a3e820b52a33bf11dbf38890278fb8
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83819644"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924042"
 ---
 # <a name="assoc"></a>assoc
 
 Отображает или изменяет сопоставления расширений имен файлов. Если используется без параметров, команда **Assoc** отображает список всех сопоставлений расширений имен текущих файлов.
 
 > [!NOTE]
-> Эта команда поддерживается только в cmd. exe и недоступна в PowerShell.
+> Эта команда поддерживается только в cmd.exe и недоступна в PowerShell.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ assoc [<.ext>[=[<filetype>]]]
 | `<filetype>` | Указывает тип файла, связываемого с указанным расширением имени файла. |
 | /? | Отображение справки в командной строке. |
 
-### <a name="remarks"></a>Замечания
+### <a name="remarks"></a>Комментарии
 
 - Чтобы удалить сопоставление типа файла для расширения имени файла, добавьте пробел после знака равенства, нажав клавишу пробел.
 
@@ -68,7 +68,7 @@ assoc .bak=
 assoc | more
 ```
 
-Чтобы отправить выходные данные команды **Assoc** в файл Assoc. txt, введите:
+Чтобы отправить выходные данные команды **Assoc** в файл assoc.txt, введите:
 
 ```
 assoc>assoc.txt

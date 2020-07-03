@@ -1,6 +1,6 @@
 ---
-title: BdeHdCfg невдривелеттер
-description: Справочный раздел по команде BdeHdCfg невдривелеттер, который назначает новую букву диска части диска, используемой в качестве системного диска.
+title: bdehdcfg newdriveletter
+description: Справочная статья по команде BdeHdCfg невдривелеттер, которая назначает новую букву диска части диска, используемой в качестве системного диска.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da09ae1469c6fc8370e6bd0f2f7a8f3efd8dc4f0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: f210056f74e930ad39361c9fc0cbf05d6e1894f4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718666"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923491"
 ---
 # <a name="bdehdcfg-newdriveletter"></a>BdeHdCfg: невдривелеттер
 
@@ -34,7 +34,7 @@ bdehdcfg -target {default|unallocated|<drive_letter> shrink|<drive_letter> merge
 
 ## <a name="examples"></a>Примеры
 
-Чтобы назначить диску по умолчанию букву `P`диска, сделайте следующее:
+Чтобы назначить диску по умолчанию букву диска, `P` сделайте следующее:
 
 ```
 bdehdcfg -target default -newdriveletter P:

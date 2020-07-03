@@ -1,6 +1,6 @@
 ---
 title: Управление-BDE Unlock
-description: Справочный раздел по команде Manage-bde Unlock, который разблокирует диск, защищенный BitLocker, с помощью пароля восстановления или ключа восстановления.
+description: Справочная статья по команде Manage-bde Unlock, которая разблокирует диск, защищенный BitLocker, с помощью пароля восстановления или ключа восстановления.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 67d4c0ec78870af45f0b98f2ab04d85b19e92af9
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 1be2bf029a378015cd20f21c236c0d519f2e072a
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222157"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922214"
 ---
 # <a name="manage-bde-unlock"></a>Управление-BDE Unlock
 
@@ -39,7 +39,7 @@ manage-bde -unlock {-recoverypassword <password>|-recoverykey <pathtoexternalkey
 | -CF`<pathtocertificatefile>` | Путь к файлу сертификата. |
 | -CT`<certificatethumbprint>` | Отпечаток сертификата, который при необходимости может содержать ПИН-код (-PIN). |
 | -password | Представляет запрос на ввод пароля для разблокировки тома. Можно также использовать параметр **-пароль** в качестве сокращенной версии этой команды. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

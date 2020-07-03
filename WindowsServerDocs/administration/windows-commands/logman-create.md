@@ -1,6 +1,6 @@
 ---
 title: logman create
-description: Справочный раздел по команде Logman Create, который создает счетчик, трассировку, сборщик данных конфигурации или API.
+description: Справочная статья по команде Logman Create, которая создает счетчик, трассировку, сборщик данных конфигурации или API.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c4a68be098f868cdd9cd48c1e7c68fc183fa1fab
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 695a101a0aa6a720b64ffee6617085d13b6e83d1
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222955"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922324"
 ---
 # <a name="logman-create"></a>logman create
 
@@ -32,11 +32,11 @@ logman create <counter | trace | alert | cfg | api> <[-n] <name>> [options]
 
 | Параметр | Описание |
 | --------- | ----------- |
-| [переlogman создать счетчик](logman-create-counter.md) | Создает сборщик данных счетчика. |
-| [создать трассировку Logman](logman-create-trace.md) | Создает сборщик данных трассировки. |
-| [создать оповещение Logman](logman-create-alert.md) | Создает сборщик данных предупреждений. |
-| [Logman Create cfg](logman-create-cfg.md) | Создает сборщик данных конфигурации. |
-| [Создание API Logman](logman-create-api.md) | Создает сборщик данных трассировки API. |
+| [logman create counter](logman-create-counter.md) | Создает сборщик данных счетчика. |
+| [logman create trace](logman-create-trace.md) | Создает сборщик данных трассировки. |
+| [logman create alert](logman-create-alert.md) | Создает сборщик данных предупреждений. |
+| [logman create cfg](logman-create-cfg.md) | Создает сборщик данных конфигурации. |
+| [logman create api](logman-create-api.md) | Создает сборщик данных трассировки API. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

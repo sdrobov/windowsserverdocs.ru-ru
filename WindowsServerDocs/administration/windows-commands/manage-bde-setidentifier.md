@@ -1,6 +1,6 @@
 ---
 title: Управление — BDE сетидентифиер
-description: Справочный раздел по команде Manage-bde сетидентифиер, который задает в поле "идентификатор диска" значение, указанное в параметре "укажите уникальные идентификаторы для вашей организации групповая политика".
+description: Справочная статья по команде Manage-bde сетидентифиер, которая задает в поле идентификатор диска значение, указанное в поле укажите уникальные идентификаторы для вашей организации групповая политика параметр.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5b4a21df9d177d7bf6813abb0d418d7355d5e59a
-ms.sourcegitcommit: 29bc8740e5a8b1ba8f73b10ba4d08afdf07438b0
+ms.openlocfilehash: 7d20120bf4c6ec76fa6ba040141afadea2a748d5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84222610"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922259"
 ---
 # <a name="manage-bde-setidentifier"></a>Управление — BDE сетидентифиер
 
@@ -31,7 +31,7 @@ manage-bde –setidentifier <drive> [-computername <name>] [{-?|/?}] [{-help|-h}
 | Параметр | Описание |
 | --------- | ----------- |
 | `<drive>` | Представляет букву диска, за которой следует двоеточие. |
-| -ComputerName | Указывает, что Manage-bde. exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
+| -ComputerName | Указывает, что manage-bde.exe будет использоваться для изменения защиты BitLocker на другом компьютере. Можно также использовать параметр **-CN** в качестве сокращенной версии этой команды. |
 | `<name>` | Представляет имя компьютера, на котором необходимо изменить защиту BitLocker. Допустимые значения включают имя NetBIOS компьютера и IP-адрес компьютера. |
 | -? или/? | Отображает краткую справку в командной строке. |
 | -Help или-h | Отображает полную справку в командной строке. |

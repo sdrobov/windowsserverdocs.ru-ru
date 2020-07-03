@@ -1,6 +1,6 @@
 ---
-title: Резервное копирование Auditpol
-description: Справочные сведения о команде auditpol backup, которая выполняет резервное копирование параметров политики аудита системы, параметров политики аудита на пользователя для всех пользователей и всех параметров аудита в текстовом файле с разделителями-запятыми (CSV).
+title: auditpol backup
+description: Справочная статья по команде auditpol backup, которая выполняет резервное копирование параметров политики аудита системы, параметров политики аудита на пользователя для всех пользователей и всех параметров аудита в текстовом файле с разделителями-запятыми (CSV).
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: ddc6bbbc379453c86df27674b57f29f7c0960772
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 8678dbc80b664e3ab667f197f708fbbdbbe40dc7
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719162"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923818"
 ---
-# <a name="auditpol-backup"></a>Резервное копирование Auditpol
+# <a name="auditpol-backup"></a>auditpol backup
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
@@ -39,7 +39,7 @@ auditpol /backup /file:<filename>
 
 ## <a name="examples"></a>Примеры
 
-Для резервного копирования параметров политики аудита для каждого пользователя для всех пользователей, параметров политики аудита системы и всех параметров аудита в текстовый файл в формате CSV с именем аудитполици. csv введите:
+Для резервного копирования параметров политики аудита для каждого пользователя для всех пользователей, параметров политики аудита системы и всех параметров аудита в текстовый файл в формате CSV с именем auditpolicy.csv введите:
 
 ```
 auditpol /backup /file:C:\auditpolicy.csv
@@ -52,6 +52,6 @@ auditpol /backup /file:C:\auditpolicy.csv
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Восстановление Auditpol](auditpol-restore.md)
+- [auditpol restore](auditpol-restore.md)
 
 - [команды auditpol](auditpol.md)

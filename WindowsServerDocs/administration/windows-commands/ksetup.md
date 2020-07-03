@@ -1,6 +1,6 @@
 ---
 title: ksetup
-description: Справочный раздел по команде ksetup, который выполняет задачи, связанные с настройкой и обслуживанием протокола Kerberos и центр распространения ключей (KDC) для поддержки сфер Kerberos.
+description: Справочная статья по команде ksetup, которая выполняет задачи, связанные с настройкой и обслуживанием протокола Kerberos и центр распространения ключей (KDC) для поддержки сфер Kerberos.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 82b1627a8ddbc9e51ac32825c5a42c3df9effbf7
-ms.sourcegitcommit: 4f407b82435afe3111c215510b0ef797863f9cb4
+ms.openlocfilehash: a0398d53516f81de68a7de5854ed2c996a78d1e5
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2020
-ms.locfileid: "83817354"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922633"
 ---
 # <a name="ksetup"></a>ksetup
 
@@ -58,27 +58,27 @@ ksetup
 
 | Параметр | Описание |
 | --------- | ----------- |
-| [ksetup сетреалм](ksetup-setrealm.md) | Делает этот компьютер членом области Kerberos. |
-| [ksetup аддкдк](ksetup-addkdc.md) | Определяет запись KDC для данной области. |
-| [ksetup делкдк](ksetup-delkdc.md) | Удаляет запись KDC для области. |
-| [ksetup аддкпассвд](ksetup-addkpasswd.md) | Добавляет адрес сервера кпассвд для области. |
-| [ksetup делкпассвд](ksetup-delkpasswd.md) | Удаляет адрес сервера кпассвд для области. |
-| [сервер ksetup](ksetup-server.md) | Позволяет указать имя компьютера Windows, на котором будут применяться изменения. |
-| [ksetup сеткомпутерпассворд](ksetup-setcomputerpassword.md) | Задает пароль для учетной записи домена компьютера (или субъекта-узла). |
-| [ksetup ремовереалм](ksetup-removerealm.md) | Удаляет из реестра все сведения для указанной области. |
-| [домен ksetup](ksetup-domain.md) | Позволяет указать домен (если он еще `<domainname>` не был задан параметром **/domain** ). |
-| [ksetup ChangePassword](ksetup-changepassword.md) | Позволяет использовать кпассвд для изменения пароля пользователя, вошедшего в систему. |
-| [ksetup листреалмфлагс](ksetup-listrealmflags.md) | Список доступных флагов области, которые **ksetup** может обнаружить. |
-| [ksetup сетреалмфлагс](ksetup-setrealmflags.md) | Задает флаги области для определенной области. |
-| [ksetup аддреалмфлагс](ksetup-addrealmflags.md) | Добавляет дополнительные флаги сферы в область. |
-| [ksetup делреалмфлагс](ksetup-delrealmflags.md) | Удаляет флаги сферы из области. |
-| [ksetup думпстате](ksetup-dumpstate.md) | Анализирует конфигурацию Kerberos на данном компьютере. Добавляет в реестр сопоставление узла с областью. |
-| [ksetup аддхосттореалммап](ksetup-addhosttorealmmap.md) | Добавляет значение реестра для отображения узла в области Kerberos. |
-| [ksetup делхосттореалммап](ksetup-delhosttorealmmap.md) | Удаляет значение реестра, которое сопоставляет главный компьютер с областью Kerberos. |
-| [ksetup сетенктипеаттр](ksetup-setenctypeattr.md) | Задает один или несколько типов шифрования для атрибутов доверия для домена. |
-| [ksetup жетенктипеаттр](ksetup-getenctypeattr.md) | Возвращает атрибут доверия типов шифрования для домена. |
-| [ksetup адденктипеаттр](ksetup-addenctypeattr.md) | Добавляет типы шифрования в атрибут Trust типов шифрования для домена. |
-| [ksetup деленктипеаттр](ksetup-delenctypeattr.md) | Удаляет атрибут доверия типов шифрования для домена. |
+| [ksetup setrealm](ksetup-setrealm.md) | Делает этот компьютер членом области Kerberos. |
+| [ksetup addkdc](ksetup-addkdc.md) | Определяет запись KDC для данной области. |
+| [ksetup delkdc](ksetup-delkdc.md) | Удаляет запись KDC для области. |
+| [ksetup addkpasswd](ksetup-addkpasswd.md) | Добавляет адрес сервера кпассвд для области. |
+| [ksetup delkpasswd](ksetup-delkpasswd.md) | Удаляет адрес сервера кпассвд для области. |
+| [ksetup server](ksetup-server.md) | Позволяет указать имя компьютера Windows, на котором будут применяться изменения. |
+| [ksetup setcomputerpassword](ksetup-setcomputerpassword.md) | Задает пароль для учетной записи домена компьютера (или субъекта-узла). |
+| [ksetup removerealm](ksetup-removerealm.md) | Удаляет из реестра все сведения для указанной области. |
+| [ksetup domain](ksetup-domain.md) | Позволяет указать домен (если он еще `<domainname>` не был задан параметром **/domain** ). |
+| [ksetup changepassword](ksetup-changepassword.md) | Позволяет использовать кпассвд для изменения пароля пользователя, вошедшего в систему. |
+| [ksetup listrealmflags](ksetup-listrealmflags.md) | Список доступных флагов области, которые **ksetup** может обнаружить. |
+| [ksetup setrealmflags](ksetup-setrealmflags.md) | Задает флаги области для определенной области. |
+| [ksetup addrealmflags](ksetup-addrealmflags.md) | Добавляет дополнительные флаги сферы в область. |
+| [ksetup delrealmflags](ksetup-delrealmflags.md) | Удаляет флаги сферы из области. |
+| [ksetup dumpstate](ksetup-dumpstate.md) | Анализирует конфигурацию Kerberos на данном компьютере. Добавляет в реестр сопоставление узла с областью. |
+| [ksetup addhosttorealmmap](ksetup-addhosttorealmmap.md) | Добавляет значение реестра для отображения узла в области Kerberos. |
+| [ksetup delhosttorealmmap](ksetup-delhosttorealmmap.md) | Удаляет значение реестра, которое сопоставляет главный компьютер с областью Kerberos. |
+| [ksetup setenctypeattr](ksetup-setenctypeattr.md) | Задает один или несколько типов шифрования для атрибутов доверия для домена. |
+| [ksetup getenctypeattr](ksetup-getenctypeattr.md) | Возвращает атрибут доверия типов шифрования для домена. |
+| [ksetup addenctypeattr](ksetup-addenctypeattr.md) | Добавляет типы шифрования в атрибут Trust типов шифрования для домена. |
+| [ksetup delenctypeattr](ksetup-delenctypeattr.md) | Удаляет атрибут доверия типов шифрования для домена. |
 | /? | Отображает справку в командной строке. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки

@@ -1,6 +1,6 @@
 ---
-title: очистить Auditpol
-description: Справочный раздел по команде auditpol Clear, который удаляет политику аудита для каждого пользователя для всех пользователей, сбрасывает (отключает) политику аудита системы для всех подкатегорий и устанавливает для всех параметров аудита значение отключено.
+title: auditpol clear
+description: Справочная статья по команде auditpol Clear, которая удаляет политику аудита "на пользователя" для всех пользователей, сбрасывает (отключает) политику аудита системы для всех подкатегорий и устанавливает для всех параметров аудита значение "отключено".
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a3d4765907f1dd614f5d0a61585ea09069652ecb
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 797f26ab9e191176808bbce917ca5ac0fa3d73a3
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719150"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923791"
 ---
-# <a name="auditpol-clear"></a>очистить Auditpol
+# <a name="auditpol-clear"></a>auditpol clear
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

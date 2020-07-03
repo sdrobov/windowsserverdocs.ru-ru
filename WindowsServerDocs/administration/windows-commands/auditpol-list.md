@@ -1,6 +1,6 @@
 ---
-title: Список Auditpol
-description: Справочный раздел для команды auditpol list, в которой перечислены категории и подкатегории политики аудита, а также указаны пользователи, для которых определена политика аудита на пользователя.
+title: auditpol list
+description: Справочная статья для команды auditpol list, в которой перечислены категории и подкатегории политики аудита, а также перечислены пользователи, для которых определена политика аудита на пользователя.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 96ee4388c716c066a2e9b55b57dd2e70b4b4f69c
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: a0ce67b9907fa4c5207d75422dc972d70f5e6eea
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719098"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85923719"
 ---
-# <a name="auditpol-list"></a>Список Auditpol
+# <a name="auditpol-list"></a>auditpol list
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

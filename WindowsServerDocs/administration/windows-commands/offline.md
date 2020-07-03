@@ -1,6 +1,6 @@
 ---
 title: автономно
-description: Справочный раздел для команды offline, которая переводит сетевой диск или том в состояние "вне сети".
+description: Справочная статья по команде offline, которая переводит сетевой диск или том в состояние "вне сети".
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f189ba1208e9e9a6769321170d2a9289b10189e8
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: d1f8f5b7aaab32bcc99cc2b74c8f0e3baf152d80
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472684"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85922608"
 ---
 # <a name="offline"></a>автономно
 
@@ -29,7 +29,7 @@ offline volume
 
 ### <a name="parameters"></a>Параметры
 
-| Параметр | Описание: |
+| Параметр | Описание |
 | --------- | ----------- |
 | [offline disk](offline-disk.md) | Переводит сетевой диск в состояние "вне сети". |
 | [offline volume](offline-volume.md) | Перевод сетевого тома в состояние "вне сети". |

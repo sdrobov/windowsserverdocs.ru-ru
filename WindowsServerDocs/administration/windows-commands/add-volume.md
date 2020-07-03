@@ -1,6 +1,6 @@
 ---
-title: Добавить том
-description: Справочный раздел по команде "добавить том", который добавляет тома в набор теневых копий, который представляет собой набор томов для теневого копирования.
+title: add volume
+description: Справочная статья по команде "добавить том", которая добавляет тома в набор теневых копий, который представляет собой набор томов для теневого копирования.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a8cfd3d8f7d9f008e3136d8f694dc00370b8b0f2
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 3cd80a60fd3215a2234d4eb5be8a62da91e2cba4
+ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719209"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85924081"
 ---
-# <a name="add-volume"></a>Добавить том
+# <a name="add-volume"></a>add volume
 
 Добавляет тома в набор теневых копий, который представляет собой набор томов для теневого копирования. При создании теневой копии переменная среды связывает псевдоним с идентификатором теневого номера, поэтому псевдоним можно использовать для создания скриптов.
 
