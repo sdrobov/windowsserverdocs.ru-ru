@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: 1094072935d463aa57eb6d44d14d008067745f03
-ms.sourcegitcommit: 599162b515c50106fd910f5c180e1a30bbc389b9
+ms.openlocfilehash: cb91b884edfbd105bc9e88a9d11b3b96055247c9
+ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83775321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85833337"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -25,7 +25,7 @@ Windows Admin Center представляет собой локально раз
 
 ## <a name="download-now"></a>Скачать сейчас
 
-**Скачайте [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** из Центра оценки Майкрософт. Несмотря на то что там отображается надпись Start your evaluation (Начните оценку), это общедоступная версия для производственного использования, включенная в состав лицензии Windows или Windows Server.
+**Скачайте [Windows Admin Center](https://www.microsoft.com/evalcenter/evaluate-windows-admin-center)** из Центра оценки Майкрософт. Хотя там отображается надпись Start your evaluation (Начните оценку), это общедоступная версия для производственного использования.
 
 Сведения об установке см. в [этой статье](deploy/install.md). Советы по началу работы с Windows Admin Center см. в [этой статье](use/get-started.md).
 
