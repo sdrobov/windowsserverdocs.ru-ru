@@ -7,20 +7,22 @@ manager: eldenc
 ms.technology: storage-spaces
 ms.topic: article
 author: eldenchristensen
-ms.date: 10/25/2017
+ms.date: 07/15/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 77f82023b8ed5db6f329530bebc3162cb8565856
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 581b80fe07043314e573261a6735f121bc30e2e3
+ms.sourcegitcommit: a5badf6b08ec0b25ec73df4b827c4e40b5ccd974
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474551"
+ms.lasthandoff: 07/16/2020
+ms.locfileid: "86410368"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>Использование Локальные дисковые пространства в кластерах гостевых виртуальных машин
 
 > Применяется к: Windows Server 2019, Windows Server 2016
 
-Вы можете развернуть Локальные дисковые пространства в кластере физических серверов или в гостевых кластерах виртуальных машин, как описано в этом разделе. Этот тип развертывания обеспечивает виртуальное общее хранилище на множестве виртуальных машин на основе частного или общедоступного облака, чтобы можно было использовать решения высокого уровня доступности приложения для повышения доступности приложений.
+Локальные дисковые пространства (иногда называемые S2D) можно развернуть в кластере физических серверов или в гостевых кластерах виртуальных машин, как описано в этом разделе. Этот тип развертывания обеспечивает виртуальное общее хранилище на множестве виртуальных машин на основе частного или общедоступного облака, чтобы можно было использовать решения высокого уровня доступности приложения для повышения доступности приложений.
+
+Чтобы вместо этого использовать общие диски Azure для гостевых виртуальных машин, см. статью [Общие диски Azure](/azure/virtual-machines/windows/disks-shared).
 
 ![](media/storage-spaces-direct-in-vm/storage-spaces-direct-in-vm.png)
 
@@ -30,7 +32,7 @@ ms.locfileid: "85474551"
 
 <iframe src="https://channel9.msdn.com/Series/Microsoft-Hybrid-Cloud-Best-Practices-for-IT-Pros/Step-by-Step-Deploy-Windows-Server-2016-Storage-Spaces-Direct-S2D-Cluster-in-Microsoft-Azure/player" width="960" height="540" allowfullscreen></iframe>
 
-## <a name="requirements"></a>Требования
+## <a name="requirements-for-guest-clusters"></a>Требования к гостевым кластерам
 
 При развертывании Локальные дисковые пространства в виртуализованной среде следует учитывать следующие моменты.
 
@@ -62,29 +64,29 @@ ms.locfileid: "85474551"
 - Отключите функции автоматического замены дисков в служба работоспособности, выполнив следующий командлет PowerShell:
 
     ```powershell
-          Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
-          ```
+    Get-storagesubsystem clus* | set-storagehealthsetting -name "System.Storage.PhysicalDisk.AutoReplace.Enabled" -value "False"
+    ```
 
-- To give greater resiliency to possible VHD / VHDX / VMDK storage latency in guest clusters, increase the Storage Spaces I/O timeout value:
+- Чтобы обеспечить повышенную устойчивость к возможным задержкам хранилища VHD/VHDX/VMDK в гостевых кластерах, увеличьте значение времени ожидания ввода-вывода для дисковых пространств:
 
     `HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\spaceport\\Parameters\\HwTimeout`
 
     `dword: 00007530`
 
-    The decimal equivalent of Hexadecimal 7530 is 30000, which is 30 seconds. Note that the default value is 1770 Hexadecimal, or 6000 Decimal, which is 6 seconds.
+    Десятичный эквивалент шестнадцатеричного 7530 равен 30000, что составляет 30 секунд. Обратите внимание, что значение по умолчанию — 1770 шестнадцатеричное или 6000 десятичное, то есть 6 секунд.
 
-## Not supported
+## <a name="not-supported"></a>Не поддерживается
 
-- Host level virtual disk snapshot/restore
+- Моментальный снимок или восстановление виртуального диска на уровне узла
 
-    Instead use traditional guest level backup solutions to backup and restore the data on the Storage Spaces Direct volumes.
+    Вместо этого используйте традиционные решения резервного копирования на гостевом уровне для резервного копирования и восстановления данных на Локальные дисковые пространства томах.
 
-- Host level virtual disk size change
+- Изменение размера виртуального диска на уровне узла
 
-    The virtual disks exposed through the virtual machine must retain the same size and characteristics. Adding more capacity to the storage pool can be accomplished by adding more virtual disks to each of the virtual machines and adding them to the pool. It's highly recommended to use virtual disks of the same size and characteristics as the current virtual disks.
+    Виртуальные диски, предоставляемые через виртуальную машину, должны иметь одинаковый размер и характеристики. Добавление дополнительных ресурсов в пул носителей можно выполнить, добавив дополнительные виртуальные диски к каждой виртуальной машине и добавив их в пул. Настоятельно рекомендуется использовать виртуальные диски того же размера и характеристик, что и текущие виртуальные диски.
 
-## Additional References
+## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Additional Azure Iaas VM templates for deploying Storage Spaces Direct, videos, and step-by-step guides](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126).
+- [Дополнительные шаблоны виртуальных машин Azure IaaS для развертывания Локальные дисковые пространства, видеороликов и](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126)пошаговых руководств.
 
-- [Additional Storage Spaces Direct Overview](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [Обзор дополнительных Локальные дисковые пространства](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
