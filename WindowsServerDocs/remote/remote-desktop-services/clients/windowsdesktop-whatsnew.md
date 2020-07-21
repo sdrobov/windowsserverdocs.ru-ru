@@ -7,14 +7,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 06/23/2020
+ms.date: 07/14/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 5c3fc20ea42deaa9dd96fd9f7bfabfcb85462bdd
-ms.sourcegitcommit: 6d6a0225b1f83b71fcb494b94d666cd5e54c7566
+ms.openlocfilehash: e9449da93e52471d1f21c2b7079a8fed0415a03a
+ms.sourcegitcommit: e6becfd2266fd434b7994455c7782de36af4ff80
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85267665"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86377008"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -27,7 +27,18 @@ ms.locfileid: "85267665"
 |Группа пользователей |Версия  |
 |-----------|---------|
 |Общие     |1.2.1104 |
-|Предварительная оценка    |1.2.1104 |
+|Предварительная оценка    |1.2.1185 |
+
+## <a name="updates-for-version-121185"></a>Обновления для версии 1.2.1185
+
+*Дата публикации: 14.07.2020*
+
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hr), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hs), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hq)
+
+- Теперь вы можете подписываться на рабочие области с несколькими учетными записями пользователей, используя меню переполнения ( **...** ) на панели команд в верхней части клиента. Чтобы вы могли различать рабочие области, их имена теперь включают имя пользователя, как и все ярлыки приложений.
+- В сообщения об ошибках, связанных с подпиской, добавлены дополнительные сведения, чтобы оптимизировать процесс устранения неполадок.
+- Свернутое или развернутое состояние рабочих областей теперь сохраняется во время обновления.
+- В диалоговом окне **Сведения о подключении** добавлена кнопка **Send Diagnostics and Close** (Отправить диагностику и закрыть).
 
 ## <a name="updates-for-version-121104"></a>Обновления для версии 1.2.1104
 
