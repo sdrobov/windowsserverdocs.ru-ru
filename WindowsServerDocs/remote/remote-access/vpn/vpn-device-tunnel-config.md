@@ -9,12 +9,12 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
-ms.openlocfilehash: 855eb8d45297f15afceedf6cc11c2175c899ae45
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3cb02bf2ca6aa254a0f1895367abdb90c5c34e6a
+ms.sourcegitcommit: c1a5e46f64f25e1a0e658721130d87661b1d59a3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818797"
+ms.lasthandoff: 07/20/2020
+ms.locfileid: "86543388"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Настройка туннелей VPN-устройств в Windows 10
 
@@ -30,7 +30,7 @@ Always On VPN предоставляет возможность создания
 
 Пользовательский туннель поддерживается на устройствах, присоединенных к домену, не присоединенных к домену (Рабочей группе) или в составе устройств, присоединенных к Azure AD, чтобы разрешить сценарии как для предприятия, так и для BYOD. Он доступен во всех выпусках Windows, а функции платформы доступны третьим сторонам посредством поддержки подключаемого модуля VPN UWP.
 
-Туннель устройства можно настроить только на устройствах, присоединенных к домену, под управлением Windows 10 Корпоративная или для образовательных версий 1709 или более поздней версии. Сторонние средства управления туннелем устройства не поддерживаются.
+Туннель устройства можно настроить только на устройствах, присоединенных к домену, под управлением Windows 10 Корпоративная или для образовательных версий 1709 или более поздней версии. Сторонние средства управления туннелем устройства не поддерживаются. Туннель устройства не поддерживает использование таблицы политики разрешения имен (NRPT). Туннель устройства не поддерживает принудительный туннель. Его необходимо настроить как разделенный туннель.
 
 
 ## <a name="device-tunnel-requirements-and-features"></a>Требования и функции туннеля для устройства
@@ -100,7 +100,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 Туннели устройств можно настроить с помощью сценария Windows PowerShell и моста инструментарий управления Windows (WMI) (WMI). Туннель VPN-устройства Always On должен быть настроен в контексте **локальной системной** учетной записи. Для этого потребуется использовать [PsExec](https://docs.microsoft.com/sysinternals/downloads/psexec), один из комплекта [PsTools](https://docs.microsoft.com/sysinternals/downloads/pstools) , входящий в комплект служебных программ [Sysinternals](https://docs.microsoft.com/sysinternals/) Suite.
 
-Рекомендации по развертыванию для каждого устройства `(.\Device)` и для каждого пользователя `(.\User)` профиле см. в статье [Использование сценариев PowerShell с поставщиком моста WMI](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
+Рекомендации по развертыванию для каждого устройства `(.\Device)` и профиля каждого пользователя `(.\User)` см. в статье [Использование сценариев PowerShell с поставщиком моста WMI](https://docs.microsoft.com/windows/client-management/mdm/using-powershell-scripting-with-the-wmi-bridge-provider).
 
 Выполните следующую команду Windows PowerShell, чтобы убедиться, что профиль устройства успешно развернут.
 
@@ -108,7 +108,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
   Get-VpnConnection -AllUserConnection
   ```
 
-В выходных данных отображается список профилей устройств,\-широкие VPN-профили, развернутые на устройстве.
+В выходных данных отображается список \- профилей VPN для всех устройств, развернутых на устройстве.
 
 ### <a name="example-windows-powershell-script"></a>Пример сценария Windows PowerShell
 
@@ -173,7 +173,7 @@ Write-Host "$Message"
 
 Ниже приведены ресурсы конфигурации VPN-клиента.
 
-- [Создание профилей VPN в Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
+- [Создание профилей VPN в Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles)
 - [Настройка клиента Windows 10 Always On VPN-подключений](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [Параметры профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options)
 
@@ -187,4 +187,3 @@ Write-Host "$Message"
 
 >[!IMPORTANT]
 >При использовании туннеля устройства с шлюзом Microsoft RAS необходимо настроить сервер RRAS для поддержки проверки подлинности сертификата компьютера по протоколу IKEv2, включив параметр Разрешить проверку подлинности на основе **сертификата компьютера для** проверки подлинности IKEv2, как описано [здесь](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee922682%28v=ws.10%29). После включения этого параметра настоятельно рекомендуется использовать командлет PowerShell **Set-впнауспротокол** вместе с необязательным параметром **рутцертификатенаметоакцепт** , чтобы убедиться, что подключения RRAS по протоколу IKEv2 разрешены только для сертификатов VPN-клиентов, которые связаны с явно определенным внутренним или частным корневым центром сертификации. Кроме того, необходимо внести изменения в хранилище **доверенных корневых центров сертификации** на сервере RRAS, чтобы убедиться, что он не содержит общедоступных центров сертификации, как описано [здесь](https://blogs.technet.microsoft.com/rrasblog/2009/06/10/what-type-of-certificate-to-install-on-the-vpn-server/). Аналогичные методы также могут быть рассмотрены для других VPN-шлюзов.
-
