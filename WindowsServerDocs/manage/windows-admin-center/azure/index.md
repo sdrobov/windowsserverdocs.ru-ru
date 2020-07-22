@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 05/31/2019
-ms.openlocfilehash: ec01431b320c710eddedc2f9c5e174bea1355b1c
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 49b07845003208dc9c0bd3aaab4082a3e7d6a83a
+ms.sourcegitcommit: b35fbd2a67d7a3395b50b2a3acd0817ba4e36b26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475701"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891359"
 ---
 # <a name="connecting-windows-server-to-azure-hybrid-services"></a>Подключение Windows Server к гибридным службам Azure
 
@@ -33,11 +33,11 @@ ms.locfileid: "85475701"
 
 Средство для работы с гибридными службами Azure в [Windows Admin Center](../overview.md) объединяет все интегрированные службы Azure в единый центр, в котором можно легко определить все доступные службы Azure, которые повышают эффективность вашей локальной или гибридной среды.
 
-![Снимок экрана Windows Admin Center, на котором показано средство для работы с гибридными службами Azure](../media/azure-services/ahs-discover.png)
+![Снимок экрана Windows Admin Center, на котором показано средство для работы с гибридными службами Azure](../media/azure-services/Azure-Hybrid-Services-Discover.png)
 
 Если вы подключаетесь к серверу, на котором уже включены службы Azure, средство для работы с гибридными службами Azure выполняет роль единой консоли для просмотра всех включенных служб на этом сервере. Вы можете легко получить доступ к соответствующему инструменту в Windows Admin Center, перейти на портал Azure для более детального управления этими службами Azure или ознакомиться с дополнительной документацией.
 
-![Снимок экрана Windows Admin Center, на котором показаны службы Azure, уже установленные на сервере](../media/azure-services/ahs-dayN.png)
+![Снимок экрана Windows Admin Center, на котором показаны службы Azure, уже установленные на сервере](../media/azure-services/Azure-Hybrid-Services-DayN.png)
 
 Средство для работы с гибридными службами Azure предоставляет следующие возможности:
 
