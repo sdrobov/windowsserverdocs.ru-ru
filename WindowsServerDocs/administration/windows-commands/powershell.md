@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 8a252efe57cec1e77bd4d814ced75decb1f2ceb7
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 765504ef9e21aedc367c55629a96501d8e8bd810
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931372"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956586"
 ---
 # <a name="powershell"></a>PowerShell
 
@@ -56,16 +56,16 @@ Windows PowerShell — это оболочка командной строки �
 
 ### <a name="remarks"></a>Комментарии
 
-- Полный список параметров командной строки **PowerShell.exe** см. в разделе [about_PowerShell.Exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe).
+- Полный список параметров командной строки **PowerShell.exe** см. в разделе [about_PowerShell.Exe](/powershell/module/microsoft.powershell.core/about/about_powershell_exe).
 
-- Дополнительные сведения о других способах запуска Windows PowerShell см. в разделе [Запуск Windows PowerShell](https://docs.microsoft.com/powershell/scripting/windows-powershell/starting-windows-powershell).
+- Дополнительные сведения о других способах запуска Windows PowerShell см. в разделе [Запуск Windows PowerShell](/powershell/scripting/windows-powershell/starting-windows-powershell).
 
-- Windows PowerShell выполняется в варианте установки Server Core в операционных системах Windows Server. Тем не менее функции, требующие графического пользовательского интерфейса, такие как [Интегрированная среда сценариев Windows PowerShell (ISE)](https://docs.microsoft.com/previous-versions//hh849182(v=technet.10)), и командлеты [Out-GridView](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/out-gridview) и for [-Command](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Utility/Show-Command) , не выполняются в установках Server Core.
+- Windows PowerShell выполняется в варианте установки Server Core в операционных системах Windows Server. Тем не менее функции, требующие графического пользовательского интерфейса, такие как [Интегрированная среда сценариев Windows PowerShell (ISE)](/previous-versions//hh849182(v=technet.10)), и командлеты [Out-GridView](/powershell/module/microsoft.powershell.utility/out-gridview) и for [-Command](/powershell/module/microsoft.powershell.utility/show-command) , не выполняются в установках Server Core.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-- [about_PowerShell.Exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_exe)
+- [about_PowerShell.Exe](/powershell/module/microsoft.powershell.core/about/about_powershell_exe)
 
-- [about_PowerShell_Ise.exe](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe)
+- [about_PowerShell_Ise.exe](/powershell/module/microsoft.powershell.core/about/about_powershell_ise_exe)
 
-- [Windows PowerShell](https://docs.microsoft.com/powershell/)
+- [Windows PowerShell](/powershell/)
