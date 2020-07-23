@@ -201,9 +201,9 @@
 
 ### [Виртуальная частная сеть (VPN)](remote-access/vpn/vpn-top.md)
 #### [VPN-туннели устройств в Windows 10](remote-access/vpn/vpn-device-tunnel-config.md)
-#### [Технический справочник по VPN в Windows 10](https://docs.microsoft.com/windows/security/identity-protection/vpn/vpn-guide)
-#### [Настройка протокола Диффи-Хелмана для VPN-подключений IKEv2](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
-#### [Использование единого входа (SSO) через VPN-подключения и Wi-Fi](https://docs.microsoft.com/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
+#### [Технический справочник по VPN в Windows 10](/windows/security/identity-protection/vpn/vpn-guide)
+#### [Настройка протокола Диффи-Хелмана для VPN-подключений IKEv2](/windows/security/identity-protection/vpn/how-to-configure-diffie-hellman-protocol-over-ikev2-vpn-connections)
+#### [Использование единого входа (SSO) через VPN-подключения и Wi-Fi](/windows/security/identity-protection/vpn/how-to-use-single-sign-on-sso-over-vpn-and-wi-fi-connections)
 
 
 #### [DirectAccess](remote-access/directaccess/directAccess.md)
@@ -286,4 +286,3 @@
 ### [Публикация приложений с использованием предварительной проверки подлинности AD FS](remote-access//web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)
 ### [Публикация приложений с помощью SharePoint, Exchange и RDG](remote-access//web-application-proxy/Publishing-Applications-with-SharePoint,-Exchange-and-RDG.md)
 ### [Диагностика прокси-службы веб-приложения](remote-access//web-application-proxy/Troubleshooting-Web-Application-Proxy.md)
-

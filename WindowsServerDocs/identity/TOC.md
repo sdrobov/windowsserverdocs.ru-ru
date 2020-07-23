@@ -275,7 +275,7 @@
 #### [Развертывание AD FS в Azure](ad-fs/deployment/how-to-connect-fed-azure-adfs.md)
 #### [Работа с AD FS в Azure с помощью диспетчера трафика Azure](ad-fs/deployment/active-directory-adfs-in-azure-with-azure-traffic-manager.md)  
 #### [Обновление до AD FS в Windows Server 2016 с помощью базы данных SQL](ad-fs/deployment/Upgrading-to-AD-FS-in-Windows-Server-SQL.md)
-#### [Развертывание Azure AD Connect Health для мониторинга локальной инфраструктуры удостоверений в облаке](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+#### [Развертывание Azure AD Connect Health для мониторинга локальной инфраструктуры удостоверений в облаке](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
 
 #### [Руководство по развертыванию служб федерации Active Directory в Windows Server 2016 и Windows Server 2012 R2](ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
@@ -330,8 +330,8 @@
 ##### [Развертывание прокси-серверов федерации](ad-fs/deployment/Deploying-Federation-Server-Proxies.md)
 ###### [Контрольный список. Настройка прокси-сервера федерации](ad-fs/deployment/Checklist--Setting-Up-a-Federation-Server-Proxy.md)
 ###### [Присоединение компьютера к домену](ad-fs/deployment/Join-a-computer-to-a-Domain.md)
-###### [Настройка разрешения имен для прокси-сервера федерации в зоне DNS, которая обслуживает только сеть периметра](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Only-the-Perimeter-Network.md)
-###### [Настройка разрешения имен для прокси-сервера федерации в зоне DNS, которая обслуживает как сеть периметра, так и интернет-клиенты](ad-fs/deployment/Configure-Name-Resolution-for-a-Federation-Server-Proxy-in-a-DNS-Zone-That-Serves-Both-the-Perimeter-Network-and-Internet-Clients.md)
+###### [Настройка разрешения имен для прокси-сервера федерации в зоне DNS, которая обслуживает только сеть периметра](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
+###### [Настройка разрешения имен для прокси-сервера федерации в зоне DNS, которая обслуживает как сеть периметра, так и интернет-клиенты](./ad-fs/deployment/configure-name-resolution-for-federation-server-proxy-in-dns-zone-serving-only-perimeter-network.md)
 ###### [Экспорт части сертификата аутентификации сервера с закрытым ключом](ad-fs/deployment/Export-the-Private-Key-Portion-of-a-Server-Authentication-Certificate.md)
 ###### [Импорт сертификата аутентификации сервера на веб-сайт по умолчанию](ad-fs/deployment/import-a-Server-Authentication-Certificate-to-the-Default-Web-Site.md)
 ###### [Установка службы роли прокси-сервера службы федерации](ad-fs/deployment/Install-the-Federation-Service-Proxy-Role-Service.md)
@@ -345,7 +345,7 @@
 ###### [Создание отношений доверия с проверяющей стороной вручную](ad-fs/operations/create-a-Relying-Party-Trust.md)
 ###### [Создание отношения доверия с поставщиком утверждений вручную](ad-fs/operations/create-a-Claims-Provider-Trust.md)
 ###### [Создание правила для отправки утверждения, совместимого с AD FS 1.x](ad-fs/operations/create-a-Rule-to-Send-an-AD-FS-1x-compatible-Claim.md)
-#### [Развертывание Azure AD Connect Health](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health/)
+#### [Развертывание Azure AD Connect Health](/azure/active-directory/hybrid/whatis-hybrid-identity)
 #### [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
 ##### [Подготовка к переносу сервера федерации AD FS](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
 #####[Перенос сервера федерации AD FS](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)

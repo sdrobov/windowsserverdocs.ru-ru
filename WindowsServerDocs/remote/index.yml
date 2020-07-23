@@ -13,74 +13,74 @@ metadata:
   ms.localizationpriority: high
   ms.topic: landing-page
   ms.date: 06/29/2020
-  ms.openlocfilehash: e9b87bf12add79075d1999f2b8f048314aad57ed
-  ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+  ms.openlocfilehash: f57b5b034ac669b96a241f0913147b0af4fcca0b
+  ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 06/30/2020
-  ms.locfileid: "85549211"
+  ms.lasthandoff: 07/23/2020
+  ms.locfileid: "86964806"
 landingContent:
 - title: Службы MultiPoint
   linkLists:
   - linkListType: overview
     links:
     - text: Планирование развертывания служб MultiPoint
-      url: /windows-server/remote/multipoint-services/planning-a-multipoint-services-deployment
+      url: ./multipoint-services/planning-a-multipoint-services-deployment.md
     - text: Перенос служб MultiPoint
-      url: /windows-server/remote/multipoint-services/multipoint-services-migrate
+      url: ./multipoint-services/multipoint-services-migrate.md
     - text: Развертывание служб MultiPoint
-      url: /windows-server/remote/multipoint-services/deploying-multipoint-services
+      url: ./multipoint-services/deploying-multipoint-services.md
     - text: Управление системой MultiPoint Services
-      url: /windows-server/remote/multipoint-services/managing-multipoint-services
+      url: ./multipoint-services/managing-multipoint-services.md
 - title: Службы удаленных рабочих столов
   linkLists:
   - linkListType: get-started
     links:
     - text: Приступая к работе
-      url: /windows-server/remote/remote-desktop-services/rds-get-started
+      url: ./remote-desktop-services/rds-get-started.md
   - linkListType: how-to-guide
     links:
     - text: Планирование и проектирование
-      url: /windows-server/remote/remote-desktop-services/rds-plan-and-design
+      url: ./remote-desktop-services/rds-plan-and-design.md
     - text: Сборка и развертывание
-      url: /windows-server/remote/remote-desktop-services/rds-build-and-deploy
+      url: ./remote-desktop-services/rds-build-and-deploy.md
     - text: Запуск и настройка
-      url: /windows-server/remote/remote-desktop-services/rds-run-and-tune
+      url: ./remote-desktop-services/rds-run-and-tune.md
     - text: Доступ к материалам по Удаленному рабочему столу
-      url: /windows-server/remote/remote-desktop-services/clients/remote-desktop-clients
+      url: ./remote-desktop-services/clients/remote-desktop-clients.md
 - title: Удаленный доступ
   linkLists:
   - linkListType: overview
     links:
     - text: VPN-подключение Always On
-      url: /windows-server/remote/remote-access/vpn/always-on-vpn
+      url: ./remote-access/vpn/always-on-vpn/index.yml
     - text: Протокол пограничного шлюза (BGP)
-      url: /windows-server/remote/remote-access/bgp/border-gateway-protocol-bgp
+      url: ./remote-access/bgp/border-gateway-protocol-bgp.md
     - text: Шлюз RAS-сервера
-      url: /windows-server/remote/remote-access/ras-gateway/ras-gateway
+      url: ./remote-access/ras-gateway/ras-gateway.md
     - text: Роль сервера удаленного доступа
-      url: /windows-server/remote/remote-access/ras/remote-access-server-role-documentation
+      url: ./remote-access/ras/remote-access-server-role-documentation.md
     - text: Виртуальная частная сеть (VPN)
-      url: /windows-server/remote/remote-access/vpn/vpn-top
+      url: ./remote-access/vpn/vpn-top.md
 - title: Прокси-сервер веб-приложения
   linkLists:
   - linkListType: overview
     links:
     - text: Прокси-служба веб-приложения в Windows Server 2016
-      url: /windows-server/remote/remote-access/web-application-proxy/web-application-proxy-windows-server
+      url: ./remote-access/web-application-proxy/web-application-proxy-windows-server.md
   - linkListType: how-to-guide
     links:
     - text: Публикация приложений с использованием предварительной проверки подлинности AD FS
-      url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication
+      url: ./remote-access/web-application-proxy/publishing-applications-using-ad-fs-preauthentication.md
     - text: Публикация приложений с помощью SharePoint, Exchange и RDG
-      url: /windows-server/remote/remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg
+      url: ./remote-access/web-application-proxy/publishing-applications-with-sharepoint,-exchange-and-rdg.md
     - text: Диагностика прокси-службы веб-приложения
-      url: /windows-server/remote/remote-access/web-application-proxy/troubleshooting-web-application-proxy
+      url: ./remote-access/web-application-proxy/troubleshooting-web-application-proxy.md
 - title: Инструменты
   linkLists:
   - linkListType: overview
     links:
     - text: Средства удаленного администрирования сервера
-      url: /windows-server/remote/remote-server-administration-tools
+      url: ./remote-server-administration-tools.md
     - text: OpenSSH в среде Windows
-      url: /windows-server/administration/openssh/openssh_overview
+      url: ../administration/openssh/openssh_overview.md
