@@ -8,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: e6142d3facb32a81d8d7c54afe9c2f60fc9eb674
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: ad4e89be7eeb6190d27ee0e15e370bcaa1806cb8
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81623812"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959376"
 ---
 # <a name="planning-operations-master-role-placement"></a>Планирование размещения роли хозяина операций
 
@@ -55,9 +55,9 @@ ms.locfileid: "81623812"
 
 Поместите эмулятор основного контроллера домена в расположение, которое содержит большое количество пользователей из этого домена для операций перенаправления паролей, если это необходимо. Кроме того, убедитесь, что расположение хорошо подключено к другим расположениям для снижения задержки репликации.
 
-Сведения о том, где вы планируете разместить эмуляторы основного контроллера домена и число пользователей для каждого из этих расположений, см. в статье [вспомогательные материалы для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip и откройте размещение контроллера домена (DSSTOPO_4. doc).
+Сведения о том, где вы планируете разместить эмуляторы основного контроллера домена и число пользователей для каждого из этих расположений, см. в статье [вспомогательные материалы для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip и откройте размещение контроллера домена (DSSTOPO_4.doc).
 
-Необходимо обратиться к сведениям о расположениях, в которых необходимо разместить эмуляторы основного контроллера домена при развертывании региональных доменов. Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](https://technet.microsoft.com/library/cc755118.aspx).
+Необходимо обратиться к сведениям о расположениях, в которых необходимо разместить эмуляторы основного контроллера домена при развертывании региональных доменов. Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)).
 
 ## <a name="requirements-for-infrastructure-master-placement"></a>Требования к размещению хозяина инфраструктуры
 
@@ -82,9 +82,9 @@ ms.locfileid: "81623812"
 - Контроллеры домена на сайтах C и D не могут добавлять или удалять разделы каталога, DNS или пользовательских приложений.
 - Контроллеры домена на сайтах C и D не могут вносить изменения в схему.
 
-Для листа, помогающего в планировании размещения ролей хозяина операций, см. раздел [вспомогательные материалы для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip и откройте размещение контроллера домена (DSSTOPO_4. doc).
+Для листа, помогающего в планировании размещения ролей хозяина операций, см. статью [вспомогательные материалы для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608), скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip и откройте размещение контроллера домена (DSSTOPO_4.doc).
 
-Эти сведения понадобятся при создании корневого домена леса и региональных доменов. Дополнительные сведения о развертывании корневого домена леса см. в статье Развертывание и [Развертывание корневого домена леса Windows Server 2008](https://technet.microsoft.com/library/cc731174.aspx). Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](https://technet.microsoft.com/library/cc755118.aspx).
+Эти сведения понадобятся при создании корневого домена леса и региональных доменов. Дополнительные сведения о развертывании корневого домена леса см. в статье Развертывание и [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)). Дополнительные сведения о развертывании региональных доменов см. в статье [развертывание региональных доменов Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)).
 
 ## <a name="next-steps"></a>Следующие шаги
 

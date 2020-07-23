@@ -8,26 +8,26 @@ ms.date: 07/10/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 149e3d3fc4d4eee22fa9330475f0eed9d945f8b9
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 785a2a7c425e80b8f41e2c567826c34471cce9e9
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71359307"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959816"
 ---
 # <a name="prepare-to-migrate-the-ad-fs-20-federation-server-to-ad-fs-on-windows-server-2012-r2"></a>Подготовка к миграции сервера федерации AD FS 2,0 в AD FS в Windows Server 2012 R2
 
 В этом документе описано, как перенести ферму сервера AD FS 2,0 или Windows Server 2012 в ферму AD FS Windows Server 2012 R2.  Эти действия можно использовать с фермами AD FS, в которых используется WID или SQL Server в качестве базовой базы данных.  
   
--   [Структура процесса миграции](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
+-   [Схема процесса миграции](prepare-migrate-ad-fs-server-r2.md#migration-process-outline)  
   
--   [Новые функции AD FS в Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
+-   [Новые возможности AD FS в Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#new-ad-fs-functionality-in-windows-server-2012-r2)  
   
--   [Требования к AD FS в Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#ad-fs-requirements-in-windows-server-2012-r2)  
+-   [Требования AD FS в Windows Server 2012 R2](prepare-migrate-ad-fs-server-r2.md#ad-fs-requirements-in-windows-server-2012-r2)  
   
--   [Увеличение ограничений Windows PowerShell](prepare-migrate-ad-fs-server-r2.md#increasing-your-windows-powershell-limits)  
+-   [Увеличение предельных значений для Windows PowerShell](prepare-migrate-ad-fs-server-r2.md#increasing-your-windows-powershell-limits)  
   
--   [Другие задачи и рекомендации по миграции](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
+-   [Другие задачи и вопросы миграции](prepare-migrate-ad-fs-server-r2.md#other-migration-tasks-and-considerations)  
   
 ##  <a name="migration-process-outline"></a>Схема процесса миграции
 
@@ -55,7 +55,7 @@ ms.locfileid: "71359307"
   
     -   Нестандартные значения свойств службы федерации, таких как AutoCertificateRollover или время существования единого входа.  
   
-    -   Параметры конечной точки AD FS и описания утверждений не по умолчанию.  
+    -   Нестандартные параметры конечных точек AD FS и описания утверждений.  
   
 -   Пользовательские правила утверждений в отношении доверия поставщика утверждений Active Directory.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "71359307"
 ##  <a name="new-ad-fs-functionality-in-windows-server-2012-r2"></a>Новые возможности AD FS в Windows Server 2012 R2  
  Следующие AD FS изменения функциональных возможностей в Windows Server 2012 R2 влияют на миграцию с AD FS 2,0 или AD FS в Windows Server 2012:  
   
-**Зависимость IIS**  
+**Зависимость от IIS**  
    - Службы AD FS в Windows Server 2012 R2 являются саморазмещаемыми, и им не требуется наличие IIS. В связи с этим изменением обратите внимание на следующее.  
    -   Управление SSL-сертификатами для серверов федерации и прокси-компьютеров в ферме AD FS должно выполняться через Windows PowerShell.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "71359307"
         -   Отключение обнаружения домашней области для интрасетей.  
         -   Создание пользовательских веб-тем.  
   
-Подробные инструкции по настройке внешнего вида AD FS страниц входа см. в разделе [настройка AD FS страниц входа в систему](../operations/AD-FS-Customization-in-Windows-Server-2016.md).  
+Подробные инструкции по настройке внешнего вида AD FS страниц входа см. в разделе [настройка AD FS страниц входа в систему](../operations/ad-fs-customization-in-windows-server.md).  
   
 При наличии настройки веб-страницы в существующей ферме AD FS, которую вы хотите перенести на Windows Server 2012 R2, можно воссоздать их в рамках процесса миграции, используя новые функции настройки в Windows Server 2012 R2.  
   
@@ -109,13 +109,13 @@ ms.locfileid: "71359307"
   
  Для работы AD FS, работающей в Windows Server 2012 R2, домен Active Directory должен выполнять одно из следующих действий:  
   
-- Windows Server 2012 R2  
+- Windows Server 2012 R2  
   
-- Windows Server 2012  
+- Windows Server 2012  
   
-- Windows Server 2008 R2  
+- Windows Server 2008 R2  
   
-- Windows Server 2008  
+- Windows Server 2008  
   
   Если вы планируете использовать групповую управляемую учетную запись службы (gMSA) в качестве учетной записи службы для AD FS, необходимо иметь по крайней мере один контроллер домена в среде, работающей под управлением операционной системы Windows Server 2012 или Windows Server 2012 R2.  
   
@@ -146,12 +146,12 @@ ms.locfileid: "71359307"
 ## <a name="other-migration-tasks-and-considerations"></a>Другие задачи и вопросы миграции  
  Для успешного выполнения переноса фермы AD FS в Windows Server 2012 R2 необходимо учитывать следующее.  
   
--   Для сценариев миграции, расположенных в папке \суппорт\адфс на установочном компакт-диске Windows Server 2012 R2, необходимо, чтобы вы сохранили одно и то же имя фермы серверов федерации и имя удостоверения учетной записи службы, которые использовались в устаревшей AD FS ферме при переносе в Windows. Сервер 2012 R2.  
+-   Для сценариев миграции, расположенных в папке \суппорт\адфс на установочном компакт-диске Windows Server 2012 R2, необходимо, чтобы вы сохранили одно и то же имя фермы серверов федерации и имя удостоверения учетной записи службы, которые использовались в устаревшей AD FS ферме при переносе в Windows Server 2012 R2.  
   
 -   Если нужно выполнить перенос фермы AD FS SQL Server, то следует знать, что в процессе миграции создается новый экземпляр базы данных SQL, в который необходимо импортировать исходные данные конфигурации.  
   
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
  [Миграция служб ролей службы федерации Active Directory (AD FS) на Windows Server 2012 R2](migrate-ad-fs-service-role-to-windows-server-r2.md)   
- [Миграция AD FS сервера федерации](migrate-ad-fs-fed-server-r2.md)   
- [Перенос  прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)  
- [Проверка AD FS миграции на Windows Server 2012 R2](verify-ad-fs-migration.md)
+ [Перенос сервера федерации AD FS](migrate-ad-fs-fed-server-r2.md)   
+ [Перенос прокси-сервера AD FS Федерации](migrate-fed-server-proxy-r2.md)   
+ [Проверка переноса AD FS на Windows Server 2012 R2](verify-ad-fs-migration.md)

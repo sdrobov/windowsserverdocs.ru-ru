@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: bed203c5de5351162f4c465e43631a4869f0e9a1
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 4eacf664a372d178a6391c8fa2359d2301484c36
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85922191"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86957036"
 ---
 # <a name="manage-bde-tpm"></a>Управление — TPM BDE
 
@@ -58,6 +58,6 @@ manage-bde  tpm  takeownership 0wnerP@ss
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Командлеты управления TPM для Windows PowerShell](https://docs.microsoft.com/powershell/module/trustedplatformmodule/)
+- [Командлеты управления TPM для Windows PowerShell](/powershell/module/trustedplatformmodule/)
 
 - [Команда Manage-bde](manage-bde.md)

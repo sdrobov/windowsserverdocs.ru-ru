@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 02620fdce6132fa3868207ffe2afbf6c95e6a37b
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: a67c1f5e0c144cecf1c66aaba8b16aa612270ad3
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624202"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959856"
 ---
 # <a name="identifying-your-functional-level-upgrade"></a>Определение обновления режимов работы
 
@@ -54,7 +54,7 @@ ms.locfileid: "81624202"
 
 - В лес появятся только что установленные контроллеры домена на базе Windows Server 2008 или Windows Server 2008 R2, а затем выменяются все контроллеры домена под управлением Windows 2000.
 
-- Выполните обновление на месте всех существующих контроллеров домена под управлением Windows 2000 в лесу до контроллеров домена под управлением Windows Server 2003. Затем выполните обновление на месте этих контроллеров домена до Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+- Выполните обновление на месте всех существующих контроллеров домена под управлением Windows 2000 в лесу до контроллеров домена под управлением Windows Server 2003. Затем выполните обновление на месте этих контроллеров домена до Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
     > [!IMPORTANT]
     >  Windows Server 2008 R2 — это операционная система на базе x64. Если сервер работает под управлением 64-разрядной версии Windows Server 2003, можно успешно выполнить обновление на месте операционной системы этого компьютера до Windows Server 2008 R2. Если сервер работает под управлением x86-версии Windows Server 2003, нельзя обновить этот компьютер до Windows Server 2008 R2.
@@ -66,7 +66,7 @@ ms.locfileid: "81624202"
 
 После замены всех контроллеров домена под управлением Windows 2000 в лесу контроллерами домена под управлением Windows Server 2008 или Windows Server 2008 R2 можно повысить функциональный уровень леса до Windows Server 2008 или Windows Server 2008 R2. Это автоматически порождает функциональный уровень всех доменов в лесу, для которых установлено значение Windows 2000 Native или выше, для Windows Server 2008 или Windows Server 2008 R2.
 
-Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## <a name="upgrading-functional-levels-in-a-windows-server-2003-active-directory-forest"></a>Обновление функциональных уровней в лесу Active Directory Windows Server 2003
 В среде Windows Server 2003, состоящей только из контроллеров домена на базе Windows Server 2003, режим работы по умолчанию установлен на следующие уровни, и они остаются на этих уровнях до тех пор, пока они не будут вызваны вручную:
@@ -79,7 +79,7 @@ ms.locfileid: "81624202"
 
 - Познакомьтесь с новым установленным контроллером домена на базе Windows Server 2008 или Windows Server 2008 R2 в лесу, а затем удалите все контроллеры домена под управлением Windows Server 2003 или обновите их до Windows Server 2008 или Windows Server 2008 R2.
 
-- Выполните обновление на месте всех существующих контроллеров домена под управлением Windows Server 2003 до контроллеров домена под управлением Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+- Выполните обновление на месте всех существующих контроллеров домена под управлением Windows Server 2003 до контроллеров домена под управлением Windows Server 2008 или Windows Server 2008 R2. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
 > [!IMPORTANT]
 > Windows Server 2008 R2 — это операционная система на базе x64. Если сервер работает под управлением 64-разрядной версии Windows Server 2003, можно успешно выполнить обновление на месте операционной системы этого компьютера до Windows Server 2008 R2. Если на сервере установлена версия Windows Server 2003 на базе x86, то невозможно обновить этот компьютер для запуска Windows Server 2008 R2.
@@ -91,7 +91,7 @@ ms.locfileid: "81624202"
 
 После обновления всех контроллеров домена под управлением Windows Server 2003 в лесу до Windows Server 2008 или Windows Server 2008 R2 можно повысить функциональный уровень леса до Windows Server 2008 или Windows Server 2008 R2. Это автоматически порождает функциональный уровень всех доменов леса, для которых задано значение Windows Server 2003 для Windows Server 2008 или Windows Server 2008 R2.
 
-Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## <a name="upgrading-functional-levels-in-a-new-windows-server-2008-forest"></a>Обновление функциональных уровней в новом лесу Windows Server 2008
 При установке первого контроллера домена в новом лесу Windows Server 2008 функциональные уровни по умолчанию устанавливаются на следующие уровни, и они остаются на этих уровнях до тех пор, пока они не будут вызваны вручную.
@@ -105,7 +105,7 @@ ms.locfileid: "81624202"
 > [!IMPORTANT]
 > Если лес работает на функциональном уровне Windows Server 2008 и пытается установить Active Directory на рядовом сервере Windows Server 2003 или на рядовом сервере Windows 2000, установка завершается сбоем.
 
-Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## <a name="upgrading-functional-levels-in-a-new-windows-server-2008-r2-forest"></a>Обновление функциональных уровней в новом лесу Windows Server 2008 R2
 При установке первого контроллера домена в новом лесу Windows Server 2008 R2 функциональные уровни по умолчанию задаются на следующих уровнях, и они остаются на этих уровнях до тех пор, пока они не будут вызваны вручную.
@@ -119,7 +119,7 @@ ms.locfileid: "81624202"
 > [!IMPORTANT]
 > Если лес работает на функциональном уровне Windows Server 2008 R2 и пытается установить Active Directory на рядовом сервере под управлением Windows Server 2008 или Windows Server 2003 или на рядовом сервере под управлением Windows 2000, установка завершается сбоем.
 
-Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
+Дополнительные сведения о создании функциональных уровней леса и домена, а также о процедурах выполнения этих задач см. в разделе [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 > [!NOTE]
 > Хотя ADMT версии 3.1 должна быть установлена на Windows Server 2008, можно использовать ADMT версии 3.1 для переноса объектов в домен, размещенный на одном или нескольких контроллерах домена Windows Server 2008 R2. Дополнительные сведения см. в статье 976659 базы знаний Майкрософт. [Известные проблемы, которые могут возникнуть при использовании ADMT 3,1 для миграции в домен, содержащий контроллеры домена Windows Server 2008 R2](https://support.microsoft.com/help/976659/).

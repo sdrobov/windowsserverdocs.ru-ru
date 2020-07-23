@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a61c3d9fd8d708a41347f0bcf46aa627e960153c
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: b169a2ed759d74042ba7ffb77d4da2c5b9b8c234
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85928988"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958556"
 ---
 # <a name="convert-basic"></a>convert basic
 
@@ -24,7 +24,7 @@ ms.locfileid: "85928988"
 > Диск должен быть пустым, чтобы преобразовать его в базовый диск. Создайте резервную копию данных, а затем удалите все разделы или тома перед преобразованием диска.
 
 > [!NOTE]
-> Инструкции по использованию этой команды см. в разделе [Переключение динамического диска обратно на базовый диск](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755238(v=ws.11)).
+> Инструкции по использованию этой команды см. в разделе [Переключение динамического диска обратно на базовый диск](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755238(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 

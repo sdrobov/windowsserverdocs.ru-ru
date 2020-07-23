@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 131d80f32a3c3324dad08b876dd4f4f8610b93e2
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 00518ab36f1886ccb3a1221a065715668fb02f47
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936305"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956926"
 ---
 # <a name="mqbkup"></a>mqbkup
 
@@ -73,4 +73,4 @@ mqbkup /r c:\msmqbkup
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Справочник по MSMQ PowerShell](https://docs.microsoft.com/powershell/module/msmq/?view=win10-ps)
+- [Справочник по MSMQ PowerShell](/powershell/module/msmq/?view=win10-ps)

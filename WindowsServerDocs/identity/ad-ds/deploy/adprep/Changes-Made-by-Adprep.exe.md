@@ -8,18 +8,18 @@ ms.prod: windows-server
 ms.technology: active-directory-domain-services
 ms.topic: article
 author: Femila
-ms.openlocfilehash: 034404a50b6943230e1438eae0c28cd3a11b7a7a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3fa4be3acda6ba27d806311dc96552d5ccad4887
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80824797"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960596"
 ---
 # <a name="changes-made-by-adprepexe"></a>Changes Made by Adprep.exe
 
 >Область применения: Windows Server Technical Preview
 
-В этом разделе описаны изменения, вносимые в средство Adprep. exe в Windows Server 2012 R2 и Windows Server 2012.  
+В этом разделе описаны изменения, которые Adprep.exe делают в Windows Server 2012 R2 и Windows Server 2012.  
   
 -   [Обновления на уровне леса](../../../ad-ds/deploy/RODC/Forest-Wide-Updates.md)  
   
@@ -29,9 +29,7 @@ ms.locfileid: "80824797"
   
 -   [Обновления схемы](../../../ad-ds/deploy/Schema-Updates.md)  
   
-## <a name="see-also"></a>См. также  
-[Windows Server 2008 R2: приложение изменений в Adprep. exe для поддержки AD DS](https://technet.microsoft.com/library/dd378876(v=ws.10).aspx)  
-[Windows Server 2008: приложение изменений в Adprep. exe для поддержки AD DS](https://technet.microsoft.com/library/cc770703(v=ws.10).aspx)  
+## <a name="see-also"></a>См. также:  
+[Приложение. Изменения в Adprep.exe для поддержки доменных служб Active Directory в Windows Server 2008 R2](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd378876(v=ws.10))  
+[Приложение. Изменения в Adprep.exe для поддержки доменных служб Active Directory в Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770703(v=ws.10))  
   
-
-

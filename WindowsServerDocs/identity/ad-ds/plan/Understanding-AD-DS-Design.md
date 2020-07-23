@@ -8,12 +8,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 734d5eaef97b23b774eb286134d07a17dc380da1
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: 72abc2b5b45ec1eefbff3ca82b619649ffd0fda9
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81623912"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959766"
 ---
 # <a name="understanding-ad-ds-design"></a>Общее представление о схеме доменных служб Active Directory
 
@@ -25,6 +25,6 @@ ms.locfileid: "81623912"
 
 Несмотря на то, что стратегии проектирования и развертывания Windows Server AD DS, представленные в этом руководство, основаны на расширенной лабораторной работе и тестировании пилотной программы и успешной реализации в клиентских средах, может потребоваться настройка AD DS проектирования и развертывания для лучшего соответствия конкретным и сложным средам.
 
-- Дополнительные сведения о развертывании AD DS в среде филиала см. в разделе [контроллер домена только для чтения (RODC) в статье Планирование филиала](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd734758(v=ws.10)).
-- Дополнительные сведения о развертывании AD DS в среде Exchange см. в статье [Active Directory в организациях Exchange Server](https://docs.microsoft.com/Exchange/plan-and-deploy/active-directory/active-directory).
-- Дополнительные сведения о развертывании AD DS в среде с несколькими лесами см. в статье [рекомендации по нескольким лесам в windows 2000 и Windows Server 2003](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc739395(v=ws.10)).
+- Дополнительные сведения о развертывании AD DS в среде филиала см. в разделе [контроллер домена только для чтения (RODC) в статье Планирование филиала](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd734758(v=ws.10)).
+- Дополнительные сведения о развертывании AD DS в среде Exchange см. в статье [Active Directory в организациях Exchange Server](/exchange/plan-and-deploy/active-directory/active-directory).
+- Дополнительные сведения о развертывании AD DS в среде с несколькими лесами см. в статье [рекомендации по нескольким лесам в windows 2000 и Windows Server 2003](/previous-versions/windows/it-pro/windows-server-2003/cc739395(v=ws.10)).

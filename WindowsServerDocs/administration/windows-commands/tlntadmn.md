@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 602f3aa99f9d0e47fbbde1ab5c09b193446d8a7c
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 995b2332f98906a1a5b9cb53f504a87fb831c3e0
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936909"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958806"
 ---
 # <a name="tlntadmn"></a>tlntadmn
 
@@ -32,7 +32,7 @@ tlntadmn [<computerName>] [-u <UserName>] [-p <Password>] [{start | stop | pause
 |------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                \<computerName>                 |                                                                                                                    Указывает имя сервера для подключения. По умолчанию это локальный компьютер.                                                                                                                    |
 |         -u \<UserName> -p\<Password>          |                                                Указывает учетные данные администратора для удаленного сервера, который требуется администрировать. Этот параметр является обязательным, если требуется администрировать удаленный сервер, к которому вы не выполнили вход с учетными данными администратора.                                                |
-|                     start                      |                                                                                                                                            запускает службу Telnet Server.                                                                                                                                             |
+|                     запуск                      |                                                                                                                                            запускает службу Telnet Server.                                                                                                                                             |
 |                      stop                      |                                                                                                                                             Останавливает службу сервера Telnet                                                                                                                                              |
 |                     pause                      |                                                                                                                          приостанавливает работу службы Telnet Server. Новые подключения приниматься не будут.                                                                                                                          |
 |                    continue                    |                                                                                                                                            Возобновляет работу службы Telnet Server.                                                                                                                                            |
@@ -65,5 +65,5 @@ tlntadmn -s
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [Руководство по операциям Telnet](https://technet.microsoft.com/library/cc753164(v=ws.10).aspx)
+-   [Руководство по операциям Telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753164(v=ws.10))
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

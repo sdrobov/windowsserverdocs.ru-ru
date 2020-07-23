@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7d20120bf4c6ec76fa6ba040141afadea2a748d5
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: c6a04b4f7c04174158a165cf0d41493078af0056
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85922259"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86957046"
 ---
 # <a name="manage-bde-setidentifier"></a>Управление — BDE сетидентифиер
 
@@ -50,4 +50,4 @@ manage-bde –setidentifier C:
 
 - [Команда Manage-bde](manage-bde.md)
 
-- [Руководство по восстановлению BitLocker](https://docs.microsoft.com/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)
+- [Руководство по восстановлению BitLocker](/windows/security/information-protection/bitlocker/bitlocker-recovery-guide-plan)

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7df52ea8d2b30d9e365d6dc79d53aad9bd0782f9
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 372622de4e94debcff019f2ab5b7cc793381aedf
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931117"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956406"
 ---
 # <a name="quser"></a>quser
 
@@ -35,7 +35,7 @@ ms.locfileid: "85931117"
 - Дата и время входа пользователя
 
 > [!NOTE]
-> Эта команда совпадает с [командой запроса пользователя](query-user.md). Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> Эта команда совпадает с [командой запроса пользователя](query-user.md). Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 

@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 9c5293dc6070c9483054ce1dd827a20ec377573b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a022ec618c7255021cd424120330671e007a658a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859717"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962706"
 ---
 # <a name="add-a-claim-description"></a>Добавление описания утверждения
 
@@ -28,7 +28,7 @@ ms.locfileid: "80859717"
 
 ## <a name="to-add-a-claim-description"></a>Добавление описания утверждения
 
-1. В диспетчер сервера щелкните **Сервис**, а затем выберите **AD FS управление**. 
+1. В диспетчере сервера щелкните **Средства** и выберите **Управление AD FS**. 
 
 2. Разверните узел **Служба** и справа щелкните **Добавить заявку описание**.
    ![добавить описание утверждения](media/Add-a-Claim-Description/claimdesc1.png)
@@ -54,5 +54,5 @@ ms.locfileid: "80859717"
 ![добавить описание утверждения](media/Add-a-Claim-Description/claimdesc2.png)
 
 
-## <a name="see-also"></a>См. также  
-[Операции AD FS](../../ad-fs/AD-FS-2016-Operations.md) 
+## <a name="see-also"></a>См. также:  
+[Операции AD FS](../ad-fs-operations.md) 

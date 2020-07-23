@@ -8,16 +8,16 @@ author: ashleytqy
 ms.author: ashleytqy
 manager: ronaldai
 ms.date: 05/07/2019
-ms.openlocfilehash: a6b092f9242f76092cb45e484ef59d8bb29147dc
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 843361a9b3844ecb29e2f9ac723d22e3fc14730f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936898"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955026"
 ---
 # <a name="tpmtool"></a>tpmtool
 
-Эту служебную программу можно использовать для получения сведений о [доверенный платформенный модуль (TPM) (TPM)](https://docs.microsoft.com/windows/security/information-protection/tpm/trusted-platform-module-overview).
+Эту служебную программу можно использовать для получения сведений о [доверенный платформенный модуль (TPM) (TPM)](/windows/security/information-protection/tpm/trusted-platform-module-overview).
 
 >[!IMPORTANT]
 >Некоторые сведения относятся к предварительным версиям продуктов, в которые перед коммерческим выпуском могут быть внесены существенные изменения. Корпорация Майкрософт не предоставляет никаких гарантий, явных или подразумеваемых, относительно предоставленной здесь информации.
@@ -33,7 +33,7 @@ tpmtool /parameter [<arguments>]
 
 |Параметр|Описание|
 |---------|-----------|
-|жетдевицеинформатион|Отображает основные сведения о доверенном платформенном модуле. Значение флагов сведений можно найти [здесь](https://docs.microsoft.com/windows/desktop/SecProv/win32-tpm-isreadyinformation#parameters).|
+|жетдевицеинформатион|Отображает основные сведения о доверенном платформенном модуле. Значение флагов сведений можно найти [здесь](/windows/desktop/secprov/win32-tpm-isreadyinformation#parameters).|
 |гасерлогс [путь к выходному каталогу]|Собирает журналы TPM и помещает их в указанный каталог. Если этот каталог не существует, он будет создан. По умолчанию они помещаются в текущий каталог. Ниже перечислены возможные создаваемые файлы. </br>-Тпмевентс. evtx</br>— TpmInformation.txt</br>-Сртмбут. dat</br>-Сртмресуме. dat</br>-Дртмбут. dat</br>-Дртмресуме. dat</br>|
 |дривертраЦинг [запуск/завершение]|Запуск и завершение сбора трассировок драйверов TPM. Журнал трассировки ТПМТРАЦЕ. ETL будет создан и помещен в текущий каталог.|
 |/?|Отображение справки в командной строке.|
@@ -61,4 +61,4 @@ tpmtool drivertracing stop
 
 ## <a name="decoding-error-codes"></a>Коды ошибок декодирования
 
-Коды ошибок, специфичные для TPM, описаны [здесь](https://docs.microsoft.com/windows/desktop/com/com-error-codes-6).
+Коды ошибок, специфичные для TPM, описаны [здесь](/windows/desktop/com/com-error-codes-6).

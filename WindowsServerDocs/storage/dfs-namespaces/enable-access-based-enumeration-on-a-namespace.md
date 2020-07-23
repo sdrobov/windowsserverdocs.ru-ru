@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 7f011bc12c26567ed3a0e912dca3c3a8de9bfff9
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 04b023a931f8d66205a07f05bb8d3e955f8b83ca
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474931"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964076"
 ---
 # <a name="enable-access-based-enumeration-on-a-namespace"></a>Включение перечисления на основе доступа для пространства имен
 
@@ -36,7 +36,7 @@ ms.locfileid: "85474931"
 
 
 > [!WARNING]
-> Перечисление на основе доступа не мешает пользователям переходить по ссылке на конечный объект папки, если они уже знают путь DFS. Помешать доступу пользователя к конечному объекту папки могут только разрешения для общего ресурса или разрешения файловой системы NTFS, относящиеся к самому конечному объекту папки (общей папке). Разрешения для папок DFS используются только для отображения или скрытия папок DFS, а не для управления доступом, что делает доступ на чтение единственным применимым разрешением на уровне папки DFS. Дополнительные сведения см. в разделе [Использование унаследованных разрешений с перечислением на основе доступа](https://technet.microsoft.com/library/dd834874(v=ws.11).aspx)
+> Перечисление на основе доступа не мешает пользователям переходить по ссылке на конечный объект папки, если они уже знают путь DFS. Помешать доступу пользователя к конечному объекту папки могут только разрешения для общего ресурса или разрешения файловой системы NTFS, относящиеся к самому конечному объекту папки (общей папке). Разрешения для папок DFS используются только для отображения или скрытия папок DFS, а не для управления доступом, что делает доступ на чтение единственным применимым разрешением на уровне папки DFS. Дополнительные сведения см. в разделе [Использование унаследованных разрешений с перечислением на основе доступа](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11))
 
 <br />
 Включить перечисление на основе доступа для пространства имен можно с помощью интерфейса Windows или с помощью командной строки.
@@ -58,7 +58,7 @@ ms.locfileid: "85474931"
     ```
 
 > [!TIP]
-> Для управления перечислением на основе доступа для пространства имен с помощью Windows PowerShell используйте командлеты [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx), [Grant-DfsnAccess](https://technet.microsoft.com/library/jj884272.aspx) и [Revoke-DfsnAccess](https://technet.microsoft.com/library/jj884273.aspx). Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
+> Для управления перечислением на основе доступа для пространства имен с помощью Windows PowerShell используйте командлеты [Set-DfsnRoot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)), [Grant-DfsnAccess](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)) и [Revoke-DfsnAccess](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd834874(v=ws.11)). Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
 
 Управлять тем, какие пользователи и группы могут просматривать отдельные папки DFS, можно с помощью интерфейса Windows или с помощью командной строки.
 
@@ -97,13 +97,13 @@ ms.locfileid: "85474931"
 
 | Команда | Описание |
 |---|---|
-|[Dfsutil property sd deny](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)|Запрещает группе или пользователю просмотр папки.|
-|[Dfsutil property sd reset](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx) |Удаляет с папки все разрешения.|
-|[Dfsutil property sd revoke](https://msdn.microsoft.com/library/dd759150(v=ws.11).aspx)| Удаляет с папки элемент управления доступом группы или пользователя. |
+|[Dfsutil property sd deny](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11))|Запрещает группе или пользователю просмотр папки.|
+|[Dfsutil property sd reset](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11)) |Удаляет с папки все разрешения.|
+|[Dfsutil property sd revoke](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd759150(v=ws.11))| Удаляет с папки элемент управления доступом группы или пользователя. |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Создание пространства имен DFS](create-a-dfs-namespace.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
--   [Установка DFS](https://technet.microsoft.com/library/cc731089(v=ws.11).aspx)
+-   [Установка DFS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11))
 -   [Использование наследуемых разрешений с перечислением на основе доступа](using-inherited-permissions-with-access-based-enumeration.md)

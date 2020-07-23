@@ -8,27 +8,27 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: c81fa11b8f2fdc534b427f85452ca29c5b37487d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e42e82c444202065e9c90cee2ba6fbb98103260d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80823027"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966376"
 ---
 # <a name="identity-component-updates"></a>Обновление компонентов удостоверений
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
   
 ## <a name="lesson-1-identity-component-updates"></a>Занятие 1. обновления компонента удостоверений  
 На этом занятии объясняются обновления компонента удостоверений в Windows Server 2012 R2.  
   
-### <a name="what-you-will-learn"></a>Тема обучения  
+### <a name="what-you-will-learn"></a>Обзор учебника  
 После завершения этого занятия вы сможете:  
   
 -   Опишите следующие изменения:  
   
-    -   [Уникальность имен участников-служб и участников-пользователей](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)  
+    -   [Уникальность имен субъектов-служб и участников-пользователей](../../../ad-ds/manage/component-updates/SPN-and-UPN-uniqueness.md)  
   
     -   [Вход автоматического перезапуска Winlogon &#40;АРСО&#41;](../../../ad-ds/manage/component-updates/Winlogon-Automatic-Restart-Sign-On--ARSO-.md)  
   
@@ -36,14 +36,12 @@ ms.locfileid: "80823027"
   
     -   [Командлеты Windows PowerShell для резервного копирования и восстановления ЦС](../../../ad-ds/manage/component-updates/CA-Backup-and-Restore-Windows-PowerShell-cmdlets.md)  
   
-    -   [Аудит процесса командной строки](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
+    -   [Аудит процессов командной строки](../../../ad-ds/manage/component-updates/Command-line-process-auditing.md)  
   
-    -   [Защита учетных данных и управление ими](https://technet.microsoft.com/library/dn408190.aspx)  
+    -   [Защита учетных данных и управление ими](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn408190(v=ws.11))  
   
 **Автор**: Джастин Тернер, старший инженер по расширению поддержки с группой Windows  
   
 > [!NOTE]  
 > Этот материал создан инженером службы поддержки клиентов Майкрософт и предназначен для опытных администраторов и архитекторов систем, которым нужны более глубокие технические сведения о функциях и решениях в Windows Server 2012 R2, а не обычная информация, доступная в статьях на сайте TechNet. Однако он не был отредактирован согласно требованиям сайта, поэтому некоторые формулировки могут быть не такими выверенными, как на станицах TechNet.  
   
-
-

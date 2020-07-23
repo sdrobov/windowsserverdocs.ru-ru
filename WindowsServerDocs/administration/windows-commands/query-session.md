@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 440830af55763fbb3ebee7cdbdca97ca11cde30c
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 75cb8deb61ebfe3a4b0db665da4353339ee8d314
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85937044"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956506"
 ---
 # <a name="query-session"></a>query session
 
@@ -23,7 +23,7 @@ ms.locfileid: "85937044"
 Отображает сведения о сеансах на сервере узла сеансов удаленный рабочий стол. Список включает сведения не только об активных сеансах, но и о других сеансах, которые выполняет сервер.
 
 > [!NOTE]
-> Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,7 +51,7 @@ query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] 
 
 - Если вы не укажете сеанс, используя параметры <*username*>, <*Sessionname*> или *SessionID* , в этом запросе будут отображаться сведения обо всех активных сеансах в системе.
 
-- Когда **сеанс запроса** возвращает сведения, `(>)` перед текущим сеансом отображается символ "больше чем". Пример:
+- Когда **сеанс запроса** возвращает сведения, `(>)` перед текущим сеансом отображается символ "больше чем". Например:
 
     ```
     C:\>query session

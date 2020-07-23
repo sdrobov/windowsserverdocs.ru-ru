@@ -8,18 +8,18 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 2acce64aa14d60503a5b443b831a03338c204be2
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 793c9d705cc225de2372d65bf92ce924b498032a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472820"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961546"
 ---
 # <a name="file-server-resource-manager-command-line-tools"></a>Программы командной строки диспетчера ресурсов файлового сервера
 
 > Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2
 
-Диспетчер ресурсов файлового сервера устанавливает командлеты PowerShell [FileServerResourceManager](https://technet.microsoft.com/itpro/powershell/windows/fileserverresourcemanager/fileserverresourcemanager), а также следующие программы командной строки:
+Диспетчер ресурсов файлового сервера устанавливает командлеты PowerShell [FileServerResourceManager](/powershell/module/fileserverresourcemanager/?view=win10-ps), а также следующие программы командной строки:
 
 -   **Dirquota.exe**. Используется для создания и администрирования квот, автоматически применяемых квот и шаблонов квот.
 -   **Filescrn.exe**. Используется для создания и администрирования фильтров блокировки файлов, шаблонов фильтров блокировки файлов, исключений фильтров блокировки файлов и групп файлов.

@@ -8,12 +8,12 @@ ms.topic: article
 author: jasongerend
 ms.date: 06/07/2019
 description: В этом разделе описываются пространства имен DFS — служба роли в Windows Server, которая позволяет объединять общие папки, находящиеся на разных серверах, в одно или несколько логически структурированных пространств имен.
-ms.openlocfilehash: fd02f0b65cc57300c673d72c7879a80d48747fa2
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 57d2d8bb7565677afcd2a031807061ab50b6ff16
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471888"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964096"
 ---
 # <a name="dfs-namespaces-overview"></a>Обзор пространств имен DFS
 
@@ -32,7 +32,7 @@ ms.locfileid: "85471888"
 
 В этом разделе описано, как установить DFS, новые возможности и где найти сведения об оценке и развертывании.
 
-Пространства имен можно администрировать с помощью управления DFS [командлетов пространства имен DFS (DFSN) в Windows PowerShell](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps), команды **DfsUtil** или сценариев под названием WMI.
+Пространства имен можно администрировать с помощью управления DFS [командлетов пространства имен DFS (DFSN) в Windows PowerShell](/powershell/module/dfsn/?view=win10-ps), команды **DfsUtil** или сценариев под названием WMI.
 
 ## <a name="server-requirements-and-limits"></a>Требования к серверу и ограничения
 
@@ -45,7 +45,7 @@ ms.locfileid: "85471888"
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012
+- Windows Server 2012
 - Выпуски Windows Server 2008 R2 Datacenter и Enterprise
 - Windows Server (Semi-Annual Channel)
 
@@ -65,7 +65,7 @@ ms.locfileid: "85471888"
 
 Пространства имен DFS и репликация DFS являются частью роли "Файловые службы и службы хранения". Средства управления для DFS ("Управление DFS", модуль пространств имен DFS для Windows PowerShell, а также средства командной строки) устанавливаются отдельно в рамках средств администрирования удаленного сервера.
 
-Установите пространства имен DFS с помощью [центра администрирования Windows](../../manage/windows-admin-center/understand/windows-admin-center.md), диспетчер сервера или PowerShell, как описано в следующих разделах.
+Установите пространства имен DFS с помощью [центра администрирования Windows](../../manage/windows-admin-center/overview.md), диспетчер сервера или PowerShell, как описано в следующих разделах.
 
 ### <a name="to-install-dfs-by-using-server-manager"></a>Чтобы установить DFS с помощью диспетчера серверов
 
@@ -114,7 +114,7 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 - Пространства имен на основе домена можно размещать на виртуальных машинах Azure, включая среды с Azure Active Directory.
 
-Дополнительные сведения о начале работы с виртуальными машинами Azure см. в [документации по виртуальным машинам Azure](https://docs.microsoft.com/azure/virtual-machines/).
+Дополнительные сведения о начале работы с виртуальными машинами Azure см. в [документации по виртуальным машинам Azure](/azure/virtual-machines/).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
@@ -122,10 +122,10 @@ Install-WindowsFeature "FS-DFS-Namespace", "RSAT-DFS-Mgmt-Con"
 
 | Тип содержимого        | Ссылки |
 | ------------------  | ----------------|
-| **Оценка продукта** | [Новые возможности репликации DFS и пространств имен DFS в Windows Server](https://technet.microsoft.com/library/dn281957(v=ws.11).aspx) |
-| **Развертывание**    | [Аспекты масштабируемости пространства имен DFS](https://blogs.technet.com/b/filecab/archive/2012/08/26/dfs-namespace-scalability-considerations.aspx) |
-| **Операции**    | [Пространства имен распределенной файловой системы: вопросы и ответы](https://technet.microsoft.com/library/ee404780.aspx) |
+| **Оценка продукта** | [Новые возможности репликации DFS и пространств имен DFS в Windows Server](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn281957(v=ws.11)) |
+| **Deployment**    | [Аспекты масштабируемости пространства имен DFS](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
+| **Операции**    | [Пространства имен распределенной файловой системы: вопросы и ответы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee404780(v=ws.10)) |
 | **Ресурсы сообщества** | [Форум TechNet по файловым службам и хранению данных](https://social.technet.microsoft.com/forums/winserverfiles/threads/) |
-| **Протоколы**        | [Протоколы файловых служб в Windows Server](https://msdn.microsoft.com/library/cc239318.aspx) (устарело) |
+| **Протоколы**        | [Протоколы файловых служб в Windows Server](/openspecs/windows_protocols/MS-WINPROTLP/df36f95e-6a6b-48d6-a3ae-35a17674f546) (устарело) |
 | **Связанные технологии** | [Отказоустойчивая кластеризация](../../failover-clustering/failover-clustering-overview.md)|
 | **Поддержка** | [Поддержка Windows для ИТ-специалистов](https://www.microsoft.com/itpro/windows/support)|

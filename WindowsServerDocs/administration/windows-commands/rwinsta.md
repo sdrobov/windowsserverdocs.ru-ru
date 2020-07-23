@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d2c85bd48adafb7e171754aad9682e89020b95d0
-ms.sourcegitcommit: ab64dc83fca28039416c26226815502d0193500c
+ms.openlocfilehash: 99fabb870fecb0957968d2a0e1fd30512b6d0013
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82722233"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956176"
 ---
 # <a name="rwinsta"></a>rwinsta
 
@@ -23,12 +23,12 @@ ms.locfileid: "82722233"
 Позволяет сбросить (удалить) сеанс на сервере узла сеансов удаленный рабочий стол (на узле сеансов удаленных рабочих столов).
 
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) в библиотеке TechNet по Windows Server.
 
-## <a name="remarks"></a>Примечания
+## <a name="remarks"></a>Комментарии
 Эта команда совпадает с командой **сброса сеанса** .
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 [reset session](reset-session.md)
-- [Справочник по параметрам](command-line-syntax-key.md)
-синтаксиса командной строки[службы удаленных рабочих столов (службы терминалов) Справка по командам](remote-desktop-services-terminal-services-command-reference.md)
+- Ключ синтаксиса [командной строки](command-line-syntax-key.md) 
+ [Справочник по командам служб терминалов службы удаленных рабочих столов](remote-desktop-services-terminal-services-command-reference.md)

@@ -8,18 +8,18 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 90a6c0f72fc1a11d9070fa7866c0b64044131a07
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 60b31b90ed54137898043e79c3c6504afb3f4b7f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469719"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953366"
 ---
 # <a name="create-a-dfs-namespace"></a>Создание пространства имен DFS
 
 > Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows Server 2008
 
-Чтобы создать новое пространство имен, можно использовать диспетчер сервера для создания пространства имен при установке службы роли "Пространства имен DFS". Также можно использовать [командлет New-DfsnRoot](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnroot) из сеанса Windows PowerShell.
+Чтобы создать новое пространство имен, можно использовать диспетчер сервера для создания пространства имен при установке службы роли "Пространства имен DFS". Также можно использовать [командлет New-DfsnRoot](/powershell/module/dfsn/new-dfsnroot) из сеанса Windows PowerShell.
 
 Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
 
@@ -44,5 +44,3 @@ ms.locfileid: "85469719"
 -   [Выбор типа пространства имен](choose-a-namespace-type.md)
 -   [Добавление серверов пространств имен в доменное пространство имен DFS](add-namespace-servers-to-a-domain-based-dfs-namespace.md)
 -   [Делегирование разрешений на управление для пространств имен DFS](delegate-management-permissions-for-dfs-namespaces.md).
-
-

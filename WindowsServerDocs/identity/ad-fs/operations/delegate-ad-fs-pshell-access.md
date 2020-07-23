@@ -1,5 +1,5 @@
 ---
-title: Делегирование AD FS доступ к командлет PowerShell для пользователей без прав администратора
+title: Делегирование доступа к командлету Powershell AD FS пользователям без прав администратора
 description: В этом документе десЦирбес, как делегировать разрешения не являющимся администраторами для AD FS PowerShell котором описана.
 author: billmath
 ms.author: billmath
@@ -9,14 +9,14 @@ ms.date: 01/31/2019
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 334bb96c77b0bc1e76a54ed1e0871f53753ded87
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: 485b36299727b25787b1ac46f77ef1222e01ad68
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71357753"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960426"
 ---
-# <a name="delegate-ad-fs-powershell-commandlet-access-to-non-admin-users"></a>Делегирование AD FS доступ к командлет PowerShell для пользователей без прав администратора 
+# <a name="delegate-ad-fs-powershell-commandlet-access-to-non-admin-users"></a>Делегирование доступа к командлету Powershell AD FS пользователям без прав администратора 
 По умолчанию AD FS администрирование с помощью PowerShell может быть выполнено только администратором AD FS. Во многих крупных организациях это может не быть реальной рабочей моделью при работе с другими персонажами, такими как персонал службы поддержки.  
 
 Благодаря достаточному администрированию (JEA) клиенты теперь могут делегировать определенные командлеты различным группам персонала.  
@@ -29,11 +29,11 @@ ms.locfileid: "71357753"
 
 
 ##  <a name="create-the-required-groups-necessary-to-grant-users-permissions"></a>Создание необходимых групп, необходимых для предоставления пользователям разрешений 
-1. Создайте [групповую управляемую учетную запись службы](https://docs.microsoft.com/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview). Учетная запись gMSA используется для предоставления пользователю JEA доступа к сетевым ресурсам в качестве других компьютеров или веб-служб. Он предоставляет удостоверение домена, которое можно использовать для проверки подлинности ресурсов на любом компьютере в домене. Учетная запись gMSA предоставляет необходимые административные права позже в программе установки. В этом примере мы вызываем учетную запись **гмсаконтосо**. 
+1. Создайте [групповую управляемую учетную запись службы](../../../security/group-managed-service-accounts/group-managed-service-accounts-overview.md). Учетная запись gMSA используется для предоставления пользователю JEA доступа к сетевым ресурсам в качестве других компьютеров или веб-служб. Он предоставляет удостоверение домена, которое можно использовать для проверки подлинности ресурсов на любом компьютере в домене. Учетная запись gMSA предоставляет необходимые административные права позже в программе установки. В этом примере мы вызываем учетную запись **гмсаконтосо**. 
 2. Создание группы Active Directory может быть заполнено пользователями, которым должны быть предоставлены права на делегированные команды. В этом примере сотрудникам службы поддержки предоставляются разрешения на чтение, обновление и сброс состояния блокировки ADFS. Мы будем называть эту группу по всему примеру как **жеаконтосо**. 
 
 ### <a name="install-the-gmsa-account-on-the-adfs-server"></a>Установите учетную запись gMSA на сервере ADFS: 
-Создайте учетную запись службы с правами администратора на серверах ADFS. Это может быть выполнено на контроллере домена или удаленно при условии, что пакет AD RSAT установлен.  Учетная запись службы должна быть создана в том же лесу, что и сервер ADFS. Измените примеры значений в конфигурации фермы. 
+Создайте учетную запись службы с правами администратора на серверах ADFS. Это может быть выполнено на контроллере домена или удаленно при условии, что пакет AD RSAT установлен.Учетная запись службы должна быть создана в том же лесу, что и сервер ADFS. Измените примеры значений в конфигурации фермы. 
 
 ```powershell
  # This command should only be run if this is the first time gMSA accounts are enabled in the forest 
@@ -49,7 +49,7 @@ $serviceaccount = New-ADServiceAccount gMSAcontoso -DNSHostName <FQDN of the dom
 Add-ADComputerServiceAccount -Identity server01.contoso.com -ServiceAccount $ServiceAccount 
 ```
 
-Установите учетную запись gMSA на сервере ADFS.  Это необходимо выполнить на каждом узле ADFS в ферме. 
+Установите учетную запись gMSA на сервере ADFS.Это необходимо выполнить на каждом узле ADFS в ферме. 
  
 ```powershell
 Install-ADServiceAccount gMSAcontoso 
@@ -63,9 +63,9 @@ Install-ADServiceAccount gMSAcontoso
  
 ### <a name="create-the-jea-role-file"></a>Создание файла роли JEA 
  
-На AD FS сервере создайте роль JEA в файле блокнота. Инструкции по созданию роли предоставляются в разделе [возможности роли JEA](https://docs.microsoft.com/powershell/jea/role-capabilities). 
+На AD FS сервере создайте роль JEA в файле блокнота. Инструкции по созданию роли предоставляются в разделе [возможности роли JEA](/powershell/jea/role-capabilities). 
  
-Командлеты, делегированный в этом примере, `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity`— это. 
+Командлеты, делегированный в этом примере, — это `Reset-AdfsAccountLockout, Get-ADFSAccountActivity, and Set-ADFSAccountActivity` . 
 
 Пример роли JEA, делегирующий доступ к параметрам "Reset-Адфсаккаунтлоккаут", "Get-Адфсаккаунтактивити" и "Set-Адфсаккаунтактивити" командлеты:
 
@@ -79,11 +79,11 @@ VisibleCmdlets = 'Reset-AdfsAccountLockout', 'Get-ADFSAccountActivity', 'Set-ADF
 
 
 ### <a name="create-the-jea-session-configuration-file"></a>Создание файла конфигурации сеанса JEA 
-Следуйте инструкциям по созданию файла [конфигурации сеанса JEA](https://docs.microsoft.com/powershell/jea/session-configurations) . Файл конфигурации определяет, кто может использовать конечную точку JEA, и какие возможности они имеют к ним доступ. 
+Следуйте инструкциям по созданию файла [конфигурации сеанса JEA](/powershell/jea/session-configurations) . Файл конфигурации определяет, кто может использовать конечную точку JEA, и какие возможности они имеют к ним доступ. 
 
 На возможности роли ссылается неструктурированное имя (имя файла без расширения) файла возможностей роли. Если в системе доступно несколько возможностей роли с одинаковыми неструктурированными именами, PowerShell использует неявный порядок поиска, чтобы выбрать эффективный файл возможностей роли. Он не предоставляет доступ ко всем файлам возможностей роли с тем же именем. 
 
-Чтобы указать файл возможностей роли с путем, используйте `RoleCapabilityFiles` аргумент. Для вложенной папки JEA ищет допустимые модули PowerShell, содержащие `RoleCapabilities` вложенную папку, `RoleCapabilityFiles` где аргумент `RoleCapabilities`должен быть изменен на. 
+Чтобы указать файл возможностей роли с путем, используйте `RoleCapabilityFiles` аргумент. Для вложенной папки JEA ищет допустимые модули PowerShell, содержащие `RoleCapabilities` вложенную папку, где `RoleCapabilityFiles` аргумент должен быть изменен на `RoleCapabilities` . 
 
 Пример файла конфигурации сеанса: 
 
@@ -99,7 +99,7 @@ RoleDefinitions = @{ JEAcontoso = @{ RoleCapabilityFiles = 'C:\Program Files\Win
 
 Сохраните файл конфигурации сеанса. 
  
-Настоятельно рекомендуется [протестировать файл конфигурации сеанса](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Core/Test-PSSessionConfigurationFile?view=powershell-5.1) , если вы редактировали файл pssc вручную с помощью текстового редактора, чтобы убедиться в правильности синтаксиса. Если файл конфигурации сеанса не прошел проверку, он не будет успешно зарегистрирован в системе.  
+Настоятельно рекомендуется [протестировать файл конфигурации сеанса](/powershell/module/microsoft.powershell.core/test-pssessionconfigurationfile?view=powershell-5.1) , если вы редактировали файл pssc вручную с помощью текстового редактора, чтобы убедиться в правильности синтаксиса. Если файл конфигурации сеанса не прошел проверку, он не будет успешно зарегистрирован в системе.  
  
 ### <a name="install-the-jea-session-configuration-on-the-ad-fs-server"></a>Установка конфигурации сеанса JEA на сервере AD FS 
 

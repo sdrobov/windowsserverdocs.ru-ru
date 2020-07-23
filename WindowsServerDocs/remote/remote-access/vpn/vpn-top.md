@@ -9,16 +9,16 @@ ms.date: 11/05/2018
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
-ms.openlocfilehash: 2f8362b5581dbd6c08f3f708f435e8625784e8fe
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 35293f98dd36fc48750a811981dafe37a06af7c9
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818727"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959176"
 ---
 # <a name="virtual-private-networking-vpn"></a>Виртуальная частная сеть (VPN)
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016, Windows 10
 
 ## <a name="ras-gateway-as-a-single-tenant-vpn-server"></a>Шлюз RAS в качестве VPN-сервера одного клиента
 
@@ -26,28 +26,28 @@ ms.locfileid: "80818727"
 
 - Служба удаленного доступа (RAS)
 - Маршрутизация
-- Прокси-служба веб-приложения
+- Прокси-сервер веб-приложения
 
-Эти технологии являются службами роли сервера удаленного доступа.
+Эти технологии являются службами ролей роли сервера удаленного доступа.
 
 При установке роли сервера удаленного доступа с помощью мастера добавления ролей и компонентов или Windows PowerShell можно установить одну или несколько из этих трех служб ролей.
 
 При установке службы роли **DirectAccess и VPN** развертывается шлюз службы удаленного доступа (**шлюз RAS**). Шлюз RAS можно развернуть как отдельный сервер виртуальной частной сети (VPN) шлюза RAS, который предоставляет множество дополнительных функций и улучшенные функциональные возможности.
 
 >[!NOTE]
->Вы также можете развернуть шлюз RAS в качестве VPN-сервера с многопользовательским интерфейсом для использования с программно заданной сетью (SDN) или как сервер DirectAccess. Дополнительные сведения см. в статье [шлюз RAS](https://docs.microsoft.com/windows-server/remote/remote-access/ras-gateway/ras-gateway), [программно-определяемая сеть (SDN)](https://docs.microsoft.com/windows-server/networking/sdn/software-defined-networking)и [DirectAccess](https://docs.microsoft.com/windows-server/remote/remote-access/directaccess/directaccess).
+>Вы также можете развернуть шлюз RAS в качестве VPN-сервера с многопользовательским интерфейсом для использования с программно заданной сетью (SDN) или как сервер DirectAccess. Дополнительные сведения см. в статье [шлюз RAS](../ras-gateway/ras-gateway.md), [программно-определяемая сеть (SDN)](../../../networking/sdn/software-defined-networking.md)и [DirectAccess](../directaccess/directaccess.md).
 
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a>Связанные темы
 - [Always on функции и функции VPN](vpn-map-da.md). в этом разделе вы узнаете о функциях и функциях Always on VPN. 
 
 - [Настройка туннелей VPN-устройств в Windows 10](vpn-device-tunnel-config.md): Always on VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: _туннель устройства_ и _туннель пользователя_. Туннель устройства используется для сценариев подключения предварительного входа и управления устройствами. Пользовательский туннель позволяет пользователям получать доступ к ресурсам Организации через VPN-серверы.
 
 - [Always on развертывание VPN для Windows Server 2016 и Windows 10](always-on-vpn/deploy/always-on-vpn-deploy.md): содержит инструкции по развертыванию удаленного доступа в качестве одного VPN-шлюза RAS для VPN-подключений типа "точка — сеть", которые позволяют удаленным сотрудникам подключаться к сети организации с Always on VPN-подключениями. Рекомендуется ознакомиться с руководством по проектированию и развертыванию для каждой из технологий, используемых в этом развертывании.
 
-- [Техническое руководство по VPN Windows 10](https://docs.microsoft.com/windows/access-protection/vpn/vpn-guide). пошаговые инструкции по принятию решений для клиентов Windows 10 в корпоративном VPN-решении и настройке развертывания. Можно найти ссылки на поставщика службы настройки поддержка vpnv2 (CSP) и предоставить инструкции по настройке управления мобильными устройствами (MDM) с помощью Microsoft Intune и шаблона профиля VPN для Windows 10.
+- [Техническое руководство по VPN Windows 10](/windows/access-protection/vpn/vpn-guide). пошаговые инструкции по принятию решений для клиентов Windows 10 в корпоративном VPN-решении и настройке развертывания. Можно найти ссылки на поставщика службы настройки поддержка vpnv2 (CSP) и предоставить инструкции по настройке управления мобильными устройствами (MDM) с помощью Microsoft Intune и шаблона профиля VPN для Windows 10.
 
-- [Создание профилей VPN в Configuration Manager](https://docs.microsoft.com/configmgr/protect/deploy-use/create-vpn-profiles). в этом разделе вы узнаете, как создавать профили vpn в Configuration Manager.
+- [Создание профилей VPN в Configuration Manager](/configmgr/protect/deploy-use/create-vpn-profiles). в этом разделе вы узнаете, как создавать профили vpn в Configuration Manager.
 
-- [Настройка клиента Windows 10 Always on VPN-подключениях](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections). в этом разделе описываются параметры и схема профилексмл, а также создание VPN профилексмл. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения.
+- [Настройка клиента Windows 10 Always on VPN-подключениях](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md). в этом разделе описываются параметры и схема профилексмл, а также создание VPN профилексмл. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения.
 
-- [Параметры профиля VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-profile-options). в этом разделе описываются параметры профиля VPN в Windows 10 и настраиваются профили VPN с помощью Intune или Configuration Manager. Вы можете настроить все параметры VPN в Windows 10 с помощью узла Профилексмл в поставщике служб шифрования поддержка vpnv2.
+- [Параметры профиля VPN](/windows/access-protection/vpn/vpn-profile-options). в этом разделе описываются параметры профиля VPN в Windows 10 и настраиваются профили VPN с помощью Intune или Configuration Manager. Вы можете настроить все параметры VPN в Windows 10 с помощью узла Профилексмл в поставщике служб шифрования поддержка vpnv2.

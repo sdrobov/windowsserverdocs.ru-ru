@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 08/21/2018
-ms.openlocfilehash: bfa92f7e80bbf89fac615a3cd6ddf7057c0d6a4c
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: a07ad9b33000b17f5c6f41835a1a36531b3945af
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936071"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958886"
 ---
 # <a name="wscript"></a>wscript
 
@@ -56,7 +56,7 @@ wscript [<scriptname>] [/b] [/d] [/e:<engine>] [{/h:cscript|/h:wscript}] [/i] [/
 -   Параметр **/t** предотвращает чрезмерное выполнение скриптов путем установки таймера. Когда время превышает указанное значение, **Wscript** прерывает работу обработчика скриптов и завершает процесс.
 -   Файлы сценариев Windows обычно имеют одно из следующих расширений имен файлов: **. WSF**, **. vbs**, **. js**.
 -   Если дважды щелкнуть файл сценария с расширением, которое не имеет связи, откроется диалоговое окно **Открыть с помощью** . Выберите **Wscript** или **cscript**, а затем выберите **всегда использовать эту программу, чтобы открыть этот тип файлов**. Он регистрирует **wscript.exe** или **cscript.exe** в качестве сервера сценариев по умолчанию для файлов этого типа файлов.
--   Можно задать свойства для отдельных скриптов. Дополнительные сведения см. в разделе [Обзор сервера сценариев Windows](https://technet.microsoft.com/library/cc738350(v=ws.10).aspx) .
+-   Можно задать свойства для отдельных скриптов. Дополнительные сведения см. в разделе [Обзор сервера сценариев Windows](/previous-versions/windows/it-pro/windows-server-2003/cc738350(v=ws.10)) .
 -   Сервер сценариев Windows может использовать файлы скриптов **. WSF** . Каждый файл **. WSF** может использовать несколько обработчиков скриптов и выполнять несколько заданий.
 
 ## <a name="additional-references"></a>Дополнительные ссылки

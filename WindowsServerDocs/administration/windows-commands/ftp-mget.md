@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7239f31fa0a9b40d9bba4db0c3e1e29df5c03108
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: d9b0cfe0b55074f94941dfde7b864a643e7eadd9
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85925897"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86957736"
 ---
 # <a name="ftp-mget"></a>ftp mget
 
@@ -50,4 +50,4 @@ mget a.exe b.exe
 
 - [Двоичная команда FTP](ftp-binary.md)
 
-- [Дополнительные рекомендации по FTP](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))
+- [Дополнительные рекомендации по FTP](/previous-versions/orphan-topics/ws.10/cc756013(v=ws.10))

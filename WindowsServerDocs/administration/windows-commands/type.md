@@ -8,18 +8,18 @@ ms.assetid: c44fe905-a865-4c97-8cc5-fb95fec7d4d5
 author: coreyp-at-msft
 ms.author: coreyp
 manager: dansimp
-ms.openlocfilehash: f3cf9c784c35f04f9232bb05e79acdbd8ed7a09a
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 4b79cf89c1363ba35ba6567139e119e0afeec905
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85937327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954861"
 ---
 # <a name="type"></a>тип
 
 В командной оболочке Windows **введите** встроенную команду, которая отображает содержимое текстового файла. Используйте команду **Type** , чтобы просмотреть текстовый файл, не изменяя его.
 
-В PowerShell **введите** встроенный псевдоним для командлета **[Get-Content](https://docs.microsoft.com/powershell/module/microsoft.powershell.management/get-content)** , который также отображает содержимое файла, но с другим синтаксисом.
+В PowerShell **введите** встроенный псевдоним для командлета **[Get-Content](/powershell/module/microsoft.powershell.management/get-content)** , который также отображает содержимое файла, но с другим синтаксисом.
 
 ## <a name="syntax"></a>Синтаксис
 

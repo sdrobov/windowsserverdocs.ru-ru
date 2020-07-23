@@ -9,18 +9,18 @@ ms.technology: storage
 ms.assetid: 62d77150-1d9e-4069-ab4a-299f33024912
 ms.topic: article
 ms.date: 10/16/2017
-ms.openlocfilehash: 700e1f713d503565321ab29f5384d74382c64f21
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 664415f7952add6ae4a52f6550d78c11fa2a2978
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931204"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958196"
 ---
 # <a name="fsutil-repair"></a>fsutil repair
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows 10, Windows Server 2012 R2, Windows 8.1, Windows Server 2012, Windows 8
 
-Администрирование и мониторинг операций восстановления с самостоятельным восстановлением NTFS. Самовосстанавливающаяся система NTFS пытается исправить повреждения файловой системы NTFS в режиме «в сети» без необходимости запуска **Chkdsk.exe** . Дополнительные сведения см. в разделе [Самостоятельное восстановление NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10)).
+Администрирование и мониторинг операций восстановления с самостоятельным восстановлением NTFS. Самовосстанавливающаяся система NTFS пытается исправить повреждения файловой системы NTFS в режиме «в сети» без необходимости запуска **Chkdsk.exe** . Дополнительные сведения см. в разделе [Самостоятельное восстановление NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10)).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,4 +74,4 @@ fsutil repair set c: 0
 
 - [fsutil](fsutil.md)
 
-- [Самостоятельное Восстановление NTFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771388(v=ws.10))
+- [Самостоятельное Восстановление NTFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc771388(v=ws.10))

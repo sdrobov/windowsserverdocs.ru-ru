@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: d8025e897a8ce7083b938e984f9a11b6c32ed312
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 2384ea5a94de64051dc45caecd88e08960b567b0
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85928951"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958536"
 ---
 # <a name="convert-gpt"></a>convert gpt
 
@@ -24,7 +24,7 @@ ms.locfileid: "85928951"
 > Диск должен быть пустым, чтобы преобразовать его в базовый диск. Создайте резервную копию данных, а затем удалите все разделы или тома перед преобразованием диска. Необходимый минимальный размер диска для преобразования в GPT составляет 128 МБ.
 
 > [!NOTE]
-> Инструкции по использованию этой команды см. [в разделе Изменение диска основной загрузочной записи на диск с таблицей разделов GUID](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725671(v=ws.11)).
+> Инструкции по использованию этой команды см. [в разделе Изменение диска основной загрузочной записи на диск с таблицей разделов GUID](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc725671(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 

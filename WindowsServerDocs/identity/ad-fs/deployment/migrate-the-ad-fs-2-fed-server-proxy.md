@@ -8,12 +8,12 @@ ms.date: 06/28/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e97a1b3b66d7c12c96570022b7e69caaf0e92f65
-ms.sourcegitcommit: 6aff3d88ff22ea141a6ea6572a5ad8dd6321f199
+ms.openlocfilehash: d7b08b28f33bbab5d3e573b10195528c47f6cc6c
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71408220"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966236"
 ---
 # <a name="migrate-the-ad-fs-20-federation-server-proxy"></a>Перенос прокси-сервера AD FS 2,0 Федерации
 В этом документе содержатся подробные сведения о миграции прокси-сервера AD FS 2,0 Федерации в Windows Server 2012.
@@ -26,7 +26,7 @@ ms.locfileid: "71408220"
   
 2.  Удалите прокси-сервер федерации из подсистемы балансировки нагрузки.  
   
-3.  Выполните обновление на месте операционной системы на этом сервере с Windows Server 2008 R2 или Windows Server 2008 до Windows Server 2012. Дополнительные сведения см. в разделе [Установка Windows Server 2012](https://technet.microsoft.com/library/jj134246.aspx).  
+3.  Выполните обновление на месте операционной системы на этом сервере с Windows Server 2008 R2 или Windows Server 2008 до Windows Server 2012. Дополнительные сведения см. в разделе [Установка Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj134246(v=ws.11)).  
   
 > [!IMPORTANT]
 >  В результате обновления ОС конфигурация прокси AD FS на этом сервере утрачивается, а роль сервера AD FS 2.0 — удаляется. Вместо этого устанавливается роль сервера AD FS Windows Server 2012, но она не настроена. Вы должны вручную создать исходную конфигурацию прокси AD FS и восстановить остальные параметры прокси AD FS, чтобы завершить миграцию прокси-сервера федерации.  
@@ -34,11 +34,11 @@ ms.locfileid: "71408220"
 4. Создайте исходную конфигурацию прокси AD FS с помощью **мастера конфигурации прокси-сервера федерации AD FS**. Дополнительные сведения см. в разделе [Configure a Computer for the Federation Server Proxy Role](configure-a-computer-for-the-federation-server-proxy-role.md). При выполнении мастера используйте сведения, собранные в разделе «Подготовка к миграции прокси-сервера федерации AD FS 2.0» следующим образом.  
   
  
-|**Параметр input мастера прокси-сервера федерации**|**Используйте следующее значение**|
+|**Параметр в мастера конфигурации прокси-сервера федерации**|**Используйте следующее значение**|
 |-----|-----|  
-|**Имя служба федерации**|Введите значение BaseHostName из файла proxyproperties.txt|  
+|**Имя службы федерации**|Введите значение BaseHostName из файла proxyproperties.txt|  
 |Флажок **Использовать прокси-сервер HTTP при отправке запросов в эту службу федерации**|Установите этот флажок, если файл proxyproperties.txt содержит значение для свойства ForwardProxyUrl|  
-|**Адрес прокси-сервера HTTP**|Введите значение ForwardProxyUrl из файла proxyproperties.txt|  
+|**Адрес прокси-сервера HTTP.**|Введите значение ForwardProxyUrl из файла proxyproperties.txt|  
 |Запрос учетных данных|Введите учетные данные учетной записи администратора сервера федерации AD FS или учетной записи службы, от имени которой выполняется служба федерации AD FS.|  
   
 5. Обновите веб-страницы AD FS на этом сервере. Если вы создали резервную копию настроенных веб-страниц AD FS прокси при подготовке прокси-сервера федерации к миграции, используйте данные резервного копирования для перезаписи AD FS веб-страниц по умолчанию, которые были созданы по умолчанию в каталоге **%системдриве%\инетпуб\адфс\лс** в результате настройки прокси-сервера AD FS в Windows Server 2012.  
@@ -48,9 +48,9 @@ ms.locfileid: "71408220"
 7. Если нужно выполнить миграцию и других прокси-серверов федерации AD FS 2.0, повторите шаги 2 – 6 для остальных компьютеров прокси-сервера федерации.  
   
   
-## <a name="next-steps"></a>Дальнейшие действия
- [Подготовка к переносу сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
- [Подготовка к миграции прокси-сервера AD FS 2,0 федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
- [Перенесите сервер федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
- [Перенесите прокси-сервер AD FS 2,0 федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
+## <a name="next-steps"></a>Дальнейшие шаги
+ [Подготовка к миграции сервера федерации AD FS 2,0](prepare-to-migrate-ad-fs-fed-server.md)   
+ [Подготовка к миграции прокси-сервера AD FS 2,0 Федерации](prepare-to-migrate-ad-fs-fed-proxy.md)   
+ [Перенос сервера федерации AD FS 2,0](migrate-the-ad-fs-fed-server.md)   
+ [Перенос прокси-сервера AD FS 2,0 Федерации](migrate-the-ad-fs-2-fed-server-proxy.md)   
  [Перенос веб-агентов AD FS 1.1](migrate-the-ad-fs-web-agent.md)

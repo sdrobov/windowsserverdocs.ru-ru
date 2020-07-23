@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 07/15/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 581b80fe07043314e573261a6735f121bc30e2e3
-ms.sourcegitcommit: a5badf6b08ec0b25ec73df4b827c4e40b5ccd974
+ms.openlocfilehash: 50aba2d8edfe74bf6ca51d7c390f2cfc4ead0048
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2020
-ms.locfileid: "86410368"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961226"
 ---
 # <a name="using-storage-spaces-direct-in-guest-virtual-machine-clusters"></a>Использование Локальные дисковые пространства в кластерах гостевых виртуальных машин
 
@@ -89,4 +89,4 @@ ms.locfileid: "86410368"
 
 - [Дополнительные шаблоны виртуальных машин Azure IaaS для развертывания Локальные дисковые пространства, видеороликов и](https://techcommunity.microsoft.com/t5/Failover-Clustering/Deploying-IaaS-VM-Guest-Clusters-in-Microsoft-Azure/ba-p/372126)пошаговых руководств.
 
-- [Обзор дополнительных Локальные дисковые пространства](https://docs.microsoft.com/windows-server/storage/storage-spaces/storage-spaces-direct-overview)
+- [Обзор дополнительных Локальные дисковые пространства](./storage-spaces-direct-overview.md)

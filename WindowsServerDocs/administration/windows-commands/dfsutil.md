@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c741635b2566a7bec7775de691105c15591caa62
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: cfb3d221e275a688f5c18a960681257077fb4f7f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85930616"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958376"
 ---
 # <a name="dfsutil"></a>Dfsutil
 
@@ -24,7 +24,7 @@ ms.locfileid: "85930616"
 
 ## <a name="functionality-available-in-powershell"></a>Функциональные возможности, доступные в PowerShell
 
-Модуль PowerShell [дфсн](https://docs.microsoft.com/powershell/module/dfsn/?view=win10-ps) предоставляет эквивалентные функции для следующих параметров Dfsutil.
+Модуль PowerShell [дфсн](/powershell/module/dfsn/?view=win10-ps) предоставляет эквивалентные функции для следующих параметров Dfsutil.
 
 | Параметр | Описание |
 | --------- | ----------- |

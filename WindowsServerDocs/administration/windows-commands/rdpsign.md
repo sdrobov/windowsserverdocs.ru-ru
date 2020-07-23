@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 07/11/2018
-ms.openlocfilehash: 2aefbc144820d0132bd4993d150dec955e22e01d
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 5769e568d6cee062b354b4d8c7284808968a2b02
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931974"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956316"
 ---
 # <a name="rdpsign"></a>rdpsign
 
@@ -23,7 +23,7 @@ ms.locfileid: "85931974"
 Позволяет подписать файл протокол удаленного рабочего стола (. RDP).
 
 > [!NOTE]
-> Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -77,7 +77,7 @@ rdpsign /sha1 hash /l file1.rdp
 rdpsign /sha1 hash file1.rdp file2.rdp file3.rdp
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 

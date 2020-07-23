@@ -8,12 +8,12 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: 27a99696f575afa61d3e39aff13fb58cc955936b
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: cc3e96ff0ea98acbfafef5aba37f4e20a103f029
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818787"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959666"
 ---
 # <a name="step-74-deploy-conditional-access-root-certificates-to-on-premises-ad"></a>Шаг 7.4. Развертывание корневых сертификатов условного доступа в локальную службу AD
 
@@ -56,4 +56,4 @@ ms.locfileid: "80818787"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Шаг 7,5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md). на этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Microsoft Endpoint Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры CSP поддержка vpnv2](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) .
+[Шаг 7,5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md). на этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Microsoft Endpoint Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры CSP поддержка vpnv2](/windows/client-management/mdm/vpnv2-csp) .

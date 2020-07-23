@@ -8,20 +8,20 @@ ms.topic: article
 ms.assetid: 8387eabe-7363-4367-b5b1-03c67baa2933
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 507dae03ca13f4d485d6d1db0676f9d3c7b057bc
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6a0679ba548aabd9ea83f886e5e8db79480c819e
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858337"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958716"
 ---
 # <a name="plan-a-multisite-deployment"></a>Планирование многосайтового развертывания
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
  Windows Server 2016, Windows Server 2012 объединяют VPN DirectAccess и службы маршрутизации и удаленного доступа (RRAS) в одну роль удаленного доступа. Этот обзор содержит вводные сведения о шагах планирования, необходимых для развертывания удаленного доступа Windows Server 2016 или Windows Server 2012 в многосайтовой конфигурации.  
   
-1.  [Разверните один сервер DirectAccess с дополнительными параметрами](https://technet.microsoft.com/library/hh831436(v=ws.11).aspx). Этот шаг включает планирование инфраструктуры, необходимой для развертывания одного сервера. Он включает в себя планирование параметров сети и сервера, требования к сертификатам, параметры DNS, развертывание сервера сетевого расположения, серверы управления DirectAccess, параметры Active Directory и объекты групповая политика (GPO).  
+1.  [Разверните один сервер DirectAccess с дополнительными параметрами](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831436(v=ws.11)). Этот шаг включает планирование инфраструктуры, необходимой для развертывания одного сервера. Он включает в себя планирование параметров сети и сервера, требования к сертификатам, параметры DNS, развертывание сервера сетевого расположения, серверы управления DirectAccess, параметры Active Directory и объекты групповая политика (GPO).  
   
 2.  [Шаг 2. Планирование многосайтовой инфраструктуры](Step-2-Plan-the-Multisite-Infrastructure.md). Этот шаг включает в себя Active Directory и планирование объектов групповой политики, а также конфигурацию DNS.  
   
@@ -32,5 +32,3 @@ ms.locfileid: "80858337"
   
 После завершения этих этапов планирования см. раздел [Настройка многосайтового развертывания](../configure/Configure-a-Multisite-Deployment.md).  
   
-
-

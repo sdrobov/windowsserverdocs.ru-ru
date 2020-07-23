@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 57f0026aebd7ff2119c7de49a03679792c3e5f0c
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: fe1ae558da0a4cb19159c68c67e1e72970e3b502
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85928776"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958416"
 ---
 # <a name="del"></a>del
 
 Удаляет один или несколько файлов. Эта команда выполняет те же действия, что и команда **Erase** .
 
-Команда **Del** также может запускаться из консоли восстановления Windows с использованием различных параметров. Дополнительные сведения см. в разделе [Среда восстановления Windows (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
+Команда **Del** также может запускаться из консоли восстановления Windows с использованием различных параметров. Дополнительные сведения см. в разделе [Среда восстановления Windows (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference).
 
 > [!WARNING]
 > Если удалить файл с диска с помощью **Del** , вы не сможете получить его.
@@ -100,4 +100,4 @@ del /a:r *.*
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Среда восстановления Windows (WinRE)](https://docs.microsoft.com/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)
+- [Среда восстановления Windows (WinRE)](/windows-hardware/manufacture/desktop/windows-recovery-environment--windows-re--technical-reference)

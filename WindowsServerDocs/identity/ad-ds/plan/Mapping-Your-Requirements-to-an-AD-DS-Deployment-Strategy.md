@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 4862116253f51b7072f112c5f6ece72605b63ddb
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: e04f82094128dac3e00d28014541da480e56999d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624102"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959786"
 ---
 # <a name="mapping-your-requirements-to-an-ad-ds-deployment-strategy"></a>Сопоставление требований и стратегии развертывания доменных служб Active Directory
 
@@ -35,12 +35,12 @@ ms.locfileid: "81624102"
 
 | Требования к проектированию и развертыванию AD DS | Развертывание доменных служб Active Directory в новой организации | Развертывание доменных служб Active Directory в организации Windows Server 2003 | Развертывание доменных служб Active Directory в организации Windows 2000 |
 | ---------------------------------------- | ------------------------------------- | ----------------------------------------------------- |----------------------------------------------- |
-| [Проектирование логической структуры для Windows Server 2008 AD DS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770806(v=ws.10)) | Да | Да | Да |
+| [Проектирование логической структуры для Windows Server 2008 AD DS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770806(v=ws.10)) | Да | Да | Да |
 | [Проектирование топологии сайтов для Windows Server 2008 AD DS](Designing-the-Site-Topology.md) | Да | Да | Да |
 | Планирование мощности контроллеров доменов | Да | Да | Да |
-| [Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)) | Да | нет | нет |
-| [Развертывание региональных доменов Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)) | Да | Да | Да |
+| [Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)) | Да | Нет | Нет |
+| [Развертывание региональных доменов Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755118(v=ws.10)) | Да | Да | Да |
 | [Включение дополнительных возможностей для доменных служб Active Directory](../../ad-ds/plan/Enabling-Advanced-Features-for-AD-DS.md) | Да |Да, но все контроллеры домена в среде должны работать под управлением Windows Server 2008, прежде чем присвоить функциональному уровню домена или леса значение Windows Server 2008. | Да, но все контроллеры домена в среде должны работать под управлением Windows Server 2008, прежде чем присвоить функциональному уровню домена или леса значение Windows Server 2008. |
-| [Обновление доменов Active Directory до Windows Server 2008 и Windows Server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)) | нет | Да | Да |
-| [Руководство по ADMT: миграция и реструктуризация Active Directory доменов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc974332(v=ws.10)) | Да, если вы хотите перенести пилотный домен в рабочую среду, объедините его с другой организацией и объедините две инфраструктуры информационных технологий (IT) или объедините домены ресурсов и учетных записей, которые были обновлены в среде Windows 2000 или Windows Server 2003. | Да, если вы хотите выполнить слияние с другой организацией и консолидировать две ИТ – инфраструктуры или объединить домены ресурсов и учетных записей, обновленные с Windows 2000 или Windows Server 2003. | Да, если вы хотите выполнить слияние с другой организацией и консолидировать две ИТ – инфраструктуры или объединить домены ресурсов и учетных записей, обновленные с Windows 2000 или Windows Server 2003. |
-| [Руководство по ADMT: миграция и реструктуризация Active Directory доменов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc974332(v=ws.10)) | нет | Да, если необходимо сократить количество доменов, сократить трафик репликации и количество требуемых пользователей и групп или упростить администрирование групповая политика. | Да, если необходимо сократить количество доменов, сократить трафик репликации и количество требуемых пользователей и групп или упростить администрирование групповая политика. |
+| [Обновление доменов Active Directory до Windows Server 2008 и Windows Server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)) | Нет | Да | Да |
+| [Руководство по ADMT: миграция и реструктуризация Active Directory доменов](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc974332(v=ws.10)) | Да, если вы хотите перенести пилотный домен в рабочую среду, объедините его с другой организацией и объедините две инфраструктуры информационных технологий (IT) или объедините домены ресурсов и учетных записей, которые были обновлены в среде Windows 2000 или Windows Server 2003. | Да, если вы хотите выполнить слияние с другой организацией и консолидировать две ИТ – инфраструктуры или объединить домены ресурсов и учетных записей, обновленные с Windows 2000 или Windows Server 2003. | Да, если вы хотите выполнить слияние с другой организацией и консолидировать две ИТ – инфраструктуры или объединить домены ресурсов и учетных записей, обновленные с Windows 2000 или Windows Server 2003. |
+| [Руководство по ADMT: миграция и реструктуризация Active Directory доменов](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc974332(v=ws.10)) | Нет | Да, если необходимо сократить количество доменов, сократить трафик репликации и количество требуемых пользователей и групп или упростить администрирование групповая политика. | Да, если необходимо сократить количество доменов, сократить трафик репликации и количество требуемых пользователей и групп или упростить администрирование групповая политика. |

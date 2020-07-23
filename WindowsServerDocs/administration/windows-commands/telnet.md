@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a5f588328deb51109ee9139b6e7dfaad8f0166dc
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 70c4eb44a654094410432dd9d37d0ad0082f5874
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85934223"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958816"
 ---
 # <a name="telnet"></a>telnet
 
@@ -38,7 +38,7 @@ telnet [/a] [/e <EscapeChar>] [/f <FileName>] [/l <UserName>] [/t {vt100 | vt52 
 |/?|Отображение справки в командной строке. Кроме того, можно ввести/х.|
 
 ## <a name="remarks"></a>Комментарии
--   Для выполнения этой команды необходимо установить клиентское программное обеспечение Telnet. Дополнительные сведения см. в разделе [Установка Telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx).
+-   Для выполнения этой команды необходимо установить клиентское программное обеспечение Telnet. Дополнительные сведения см. в разделе [Установка Telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10)).
 -   Можно запустить Telnet без параметров, чтобы ввести контекст Telnet, указанный в командной строке Telnet (**Microsoft telnet>**). В командной строке Telnet можно использовать команды Telnet для управления компьютером, на котором выполняется клиент Telnet.
 
 ## <a name="examples"></a>Примеры
@@ -52,6 +52,6 @@ telnet /f telnetlog.txt telnet.microsoft.com 44
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [Установка Telnet](https://technet.microsoft.com/library/cc754293(v=ws.10).aspx)
--   [Технический справочник по Telnet](https://technet.microsoft.com/library/cc754987(v=ws.10).aspx)
+-   [Установка Telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754293(v=ws.10))
+-   [Технический справочник по Telnet](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754987(v=ws.10))
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

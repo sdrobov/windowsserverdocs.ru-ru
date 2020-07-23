@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: f2715332a8a6adff29f31a4dbd7d3e7a27a4a6f2
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 64355bd452934909d0600fa791e7a4c2d2066b6f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85929329"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958296"
 ---
 # <a name="diskpart-scripts-and-examples"></a>сценарии и примеры для DiskPart
 
@@ -57,8 +57,8 @@ ms.locfileid: "85929329"
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [Пример. Настройка разделов жесткого диска на основе UEFI и GPT с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
+- [Пример. Настройка разделов жесткого диска на основе UEFI и GPT с помощью Windows PE и программы DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825686(v=win.10))
 
-- [Пример. Настройка разделов жесткого диска на основе BIOS/MBR с помощью Windows PE и программы DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
+- [Пример. Настройка разделов жесткого диска на основе BIOS/MBR с помощью Windows PE и программы DiskPart](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825677(v=win.10))
 
-- [Командлеты хранилищ в Windows PowerShell](https://docs.microsoft.com/powershell/module/storage/?view=win10-ps)
+- [Командлеты хранилищ в Windows PowerShell](/powershell/module/storage/?view=win10-ps)

@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 55466409517b63c52f88a7acec3a8f4aba7d258d
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: dd054e59c7245eddfb66725bd5d95333f602b2c6
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85933468"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956306"
 ---
 # <a name="remote-desktop-services-terminal-services-command-reference"></a>Справочник по командам служб удаленных рабочих столов (служб терминалов)
 
@@ -22,7 +22,7 @@ ms.locfileid: "85933468"
 
 Ниже приведен список программ командной строки службы удаленных рабочих столов.
 > [!NOTE]
-> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](https://technet.microsoft.com/library/hh831527) в библиотеке TechNet по Windows Server.
+> В Windows Server 2008 R2 службы терминалов были переименованы на службы удаленных рабочих столов. Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows server 2012](/previous-versions/orphan-topics/ws.11/hh831527(v=ws.11)) в библиотеке TechNet по Windows Server.
 >
 > |                 Команда                 |                                                      Описание                                                       |
 > |-----------------------------------------|------------------------------------------------------------------------------------------------------------------------|

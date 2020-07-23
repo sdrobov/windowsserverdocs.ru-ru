@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: c9b79495d3fa142fd343b9c521563e093d20fc68
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 45590cf9b6fdb5de40e4ab25bd444f847d203670
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85932004"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956376"
 ---
 # <a name="qwinsta"></a>qwinsta
 
@@ -23,7 +23,7 @@ ms.locfileid: "85932004"
 Отображает сведения о сеансах на сервере узла сеансов удаленный рабочий стол. Список включает сведения не только об активных сеансах, но и о других сеансах, которые выполняет сервер.
 
 > [!NOTE]
-> Эта команда аналогична [команде запроса Session](query-session.md). Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn283323(v=ws.11)).
+> Эта команда аналогична [команде запроса Session](query-session.md). Чтобы узнать о новых возможностях последней версии, см. статью [новые возможности службы удаленных рабочих столов в Windows Server](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn283323(v=ws.11)).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,7 +51,7 @@ qwinsta [<sessionname> | <username> | <sessionID>] [/server:<servername>] [/mode
 
 - Если вы не укажете сеанс, используя параметры <*username*>, <*Sessionname*> или *SessionID* , в этом запросе будут отображаться сведения обо всех активных сеансах в системе.
 
-- Когда **квинста** возвращает сведения, `(>)` перед текущим сеансом отображается символ "больше чем". Пример:
+- Когда **квинста** возвращает сведения, `(>)` перед текущим сеансом отображается символ "больше чем". Например:
 
     ```
     C:\>qwinsta

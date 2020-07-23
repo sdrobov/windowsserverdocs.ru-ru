@@ -8,14 +8,14 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 2ce45d3952b6f848635ed601f7ff251fcda3982c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 670c853cb1c41fbbc799eca4cc6ac54588c55761
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960506"
 ---
-# <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>Пошаговое руководство: управление рисками с использованием условного управления доступом
+# <a name="walkthrough-guide-manage-risk-with-conditional-access-control"></a>Пошаговое руководство: Управление рисками с использованием условного управления доступом
 
 
 
@@ -27,11 +27,11 @@ ms.locfileid: "80857647"
 
 -   [Шаг 1. Настройка лабораторной среды](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Шаг 2. Проверка механизма управления доступом по умолчанию AD FS](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
+-   [Шаг 2. Проверка стандартного механизма контроля доступа через службы AD FS](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_2)
 
--   [Шаг 3. Настройка политики управления условным доступом на основе данных пользователя](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
+-   [Шаг 3. Настройка политики условного управления доступом на основе данных пользователя](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_3)
 
--   [Шаг 4. Проверка механизма управления условным доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
+-   [Шаг 4. Проверка механизма условного управления доступом](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_4)
 
 ## <a name="step-1-setting-up-the-lab-environment"></a><a name="BKMK_1"></a>Шаг 1. Настройка лабораторной среды
 Для выполнения этого пошагового руководства вам потребуется среда, состоящая из следующих компонентов:
@@ -51,7 +51,7 @@ ms.locfileid: "80857647"
 
 Инструкции по настройке этой среды см. [в разделе Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
-## <a name="step-2-verify-the-default-ad-fs-access-control-mechanism"></a><a name="BKMK_2"></a>Шаг 2. Проверка механизма управления доступом по умолчанию AD FS
+## <a name="step-2-verify-the-default-ad-fs-access-control-mechanism"></a><a name="BKMK_2"></a>Шаг 2. Проверка стандартного механизма контроля доступа через службы AD FS
 В этом шаге вы проверите стандартный механизм управления доступом через службы AD FS, который перенаправляет пользователя на страницу входа AD FS, где ему нужно ввести действительные учетные данные, после чего пользователю будет предоставлен доступ к приложению. Вы можете использовать учетную запись **Роберт хатлэй** AD и пример приложения **клаимапп** , настроенного в [настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 #### <a name="to-verify-the-default-ad-fs-access-control-mechanism"></a>Проверка стандартного механизма управления доступом через службы AD FS
@@ -64,7 +64,7 @@ ms.locfileid: "80857647"
 
     После этого вам будет предоставлен доступ к приложению.
 
-## <a name="step-3-configure-conditional-access-control-policy-based-on-user-data"></a><a name="BKMK_3"></a>Шаг 3. Настройка политики управления условным доступом на основе данных пользователя
+## <a name="step-3-configure-conditional-access-control-policy-based-on-user-data"></a><a name="BKMK_3"></a>Шаг 3. Настройка политики условного управления доступом на основе данных пользователя
 В этом шаге вы настроите политику управления доступом на основе данных о членстве в группе пользователей. Иными словами, вы настроите **правило авторизации выдачи** на сервере федерации для отношения доверия с проверяющей стороной, которое представляет ваш пример приложения — **claimapp**. По логике этого правила **Роберт хатлэй** AD будет выдавать утверждения, необходимые для доступа к этому приложению, поскольку он принадлежит к группе **Финансы** . Вы добавили учетную запись **Роберт хатлэй** в группу **Финансы** в [настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 Эту задачу можно выполнить с помощью консоли управления AD FS или Windows PowerShell.
@@ -73,7 +73,7 @@ ms.locfileid: "80857647"
 
 1.  В консоли управления AD FS перейдите в раздел **Отношения доверия**, а затем в раздел **Отношения доверия проверяющей стороны**.
 
-2.  Выберите отношение доверия с проверяющей стороной, которое представляет ваш пример приложения (**claimapp**), а затем перейдите на панель **Действия** либо щелкните это отношение доверия правой кнопкой мыши и выберите пункт **Изменить правила утверждений**.
+2.  Выберите отношение доверия с проверяющей стороной, которое представляет ваш пример приложения (**claimapp**), а затем перейдите в область **Действия** либо щелкните это отношение доверия правой кнопкой мыши и выберите пункт **Изменить правила утверждений**.
 
 3.  В окне **Изменение правил для утверждений для claimapp** перейдите на вкладку **Правила авторизации выдачи** и нажмите кнопку **Добавить правило**.
 
@@ -101,7 +101,7 @@ ms.locfileid: "80857647"
 ~~~
 
 
-2. В той же командной строке Windows PowerShell выполните следующую команду:
+2. В том же окне команд Windows PowerShell выполните следующую команду:
 
 
 ~~~
@@ -112,10 +112,10 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 > [!NOTE]
 > Замените <group_SID> значением идентификатора безопасности для вашей группы Active Directory **Finance**.
 
-## <a name="step-4-verify-conditional-access-control-mechanism"></a><a name="BKMK_4"></a>Шаг 4. Проверка механизма управления условным доступом
+## <a name="step-4-verify-conditional-access-control-mechanism"></a><a name="BKMK_4"></a>Шаг 4. Проверка механизма условного управления доступом
 В этом шаге вы проверите политику условного управления доступом, настроенную в предыдущем шаге. Чтобы убедиться, что пользователь с учетной записью Active Directory **Robert Hatley** может получать доступ к вашему примеру приложения, так как он входит в группу **Finance**, а пользователям Active Directory, не принадлежащим к группе **Finance**, такой доступ запрещен, можно использовать следующую процедуру.
 
-1.  На клиентском компьютере откройте окно браузера и перейдите к вашему примеру приложения: **https://webserv1.contoso.com/claimapp**
+1.  На клиентском компьютере откройте окно браузера и перейдите к вашему примеру приложения:**https://webserv1.contoso.com/claimapp**
 
     В результате запрос будет автоматически перенаправлен серверу федерации и вам будет предложено ввести имя пользователя и пароль.
 
@@ -123,13 +123,10 @@ Set-AdfsRelyingPartyTrust -TargetRelyingParty $rp -IssuanceAuthorizationRules $G
 
     После этого вам будет предоставлен доступ к приложению.
 
-3.  Введите учетные данные другого пользователя Active Directory, который НЕ входит в группу **Finance**. (Дополнительные сведения о создании учетных записей пользователей в AD см. в разделе [https://technet.microsoft.com/library/cc7833232.aspx](https://technet.microsoft.com/library/cc783323%28v=ws.10%29.aspx).
+3.  Введите учетные данные другого пользователя Active Directory, который НЕ входит в группу **Finance**. (Дополнительные сведения о создании учетных записей пользователей в AD см. в разделе [https://technet.microsoft.com/library/cc7833232.aspx](/previous-versions/windows/it-pro/windows-server-2003/cc783323(v=ws.10)) .
 
-    На этом этапе из-за политики контроля доступа, настроенной на предыдущем шаге, для этого пользователя AD отображается сообщение "отказано в доступе", которое не принадлежит к группе **Финансы** . Текст сообщения по умолчанию — у **вас нет прав доступа к этому сайту. Щелкните здесь, чтобы выйти и снова войти в систему, или обратитесь к администратору за разрешениями.** Этот текст можно полностью изменить по своему усмотрению. Дополнительную информацию о настройке взаимодействия при входе см. в разделе [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
+    На этом этапе из-за политики контроля доступа, настроенной на предыдущем шаге, для этого пользователя AD отображается сообщение "отказано в доступе", которое не принадлежит к группе **Финансы** . Текст сообщения по умолчанию — у **вас нет прав доступа к этому сайту. Щелкните здесь, чтобы выйти и снова войти в систему, или обратитесь к администратору за разрешениями.** Этот текст можно полностью изменить по своему усмотрению. Дополнительную информацию о настройке взаимодействия при входе см. в разделе [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
-## <a name="see-also"></a>См. также
-[Управление рисками с помощью контроля условного доступа](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
-[настройке лабораторной среды для AD FS в Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-
-
-
+## <a name="see-also"></a>См. также:
+[Управление рисками с помощью контроля](../../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md) 
+ условного доступа [Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)

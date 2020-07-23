@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 9b420e311c98477d369c81f10eca274e665dae3a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: a993d53611382dcd0007bfecae95da6221cf6016
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475161"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966806"
 ---
 # <a name="set-the-ordering-method-for-targets-in-referrals"></a>Задание метода сортировки конечных объектов в ссылках
 
@@ -35,7 +35,7 @@ ms.locfileid: "85475161"
 3.  На вкладке **Ссылки** выберите метод сортировки.
 
 > [!NOTE]
-> Чтобы использовать для задания метода сортировки конечных объектов в ссылках корня пространства имен Windows PowerShell, используйте командлет [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) с одним из следующих параметров:
+> Чтобы использовать для задания метода сортировки конечных объектов в ссылках корня пространства имен Windows PowerShell, используйте командлет [Set-DfsnRoot](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps) с одним из следующих параметров:
 >    -   **EnableSiteCosting** для задания метода сортировки **Минимальные затраты**
 >    -   **EnableInsiteReferrals** для задания метода **Исключить конечные объекты вне сайта клиента**
 >    -   Если опустить параметр, задается метод сортировки **Случайный порядок**.
@@ -53,7 +53,7 @@ ms.locfileid: "85475161"
 3.  На вкладке **Ссылки** установите флажок **Исключить конечные объекты вне сайта клиента**.
 
 > [!NOTE]
-> Чтобы исключить конечные объекты папок вне сайта клиента с помощью Windows PowerShell, используйте командлет [Set-DfsnFolder –EnableInsiteReferrals](https://technet.microsoft.com/library/jj884283.aspx).
+> Чтобы исключить конечные объекты папок вне сайта клиента с помощью Windows PowerShell, используйте командлет [Set-DfsnFolder –EnableInsiteReferrals](/powershell/module/dfsr/update-dfsrconfigurationfromad?view=win10-ps).
 
 ## <a name="target-referral-ordering-methods"></a>Способы сортировки ссылок для конечных объектов
 

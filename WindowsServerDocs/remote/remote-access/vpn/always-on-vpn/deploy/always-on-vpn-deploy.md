@@ -9,14 +9,14 @@ ms.localizationpriority: medium
 ms.date: 12/20/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.openlocfilehash: e107ba0d36a1b59d4bc1bb365fb98aa9285677ba
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bab89611932316d165e805e96f0a6d2d357c0780
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860127"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959186"
 ---
-# <a name="always-on-vpn-deployment-for-windows-server-and-windows-10"></a>Always On развертывание VPN для Windows Server и Windows 10
+# <a name="always-on-vpn-deployment-for-windows-server-and-windows-10"></a>Развертывание Always On VPN для Windows Server и Windows 10
 
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
@@ -25,7 +25,7 @@ ms.locfileid: "80860127"
 
 Always On VPN предоставляет единое, единое решение для удаленного доступа и поддерживает присоединенные к домену, не присоединенные к домену (workgroup) или присоединенные к Azure AD устройства, даже персональные устройства. Благодаря Always On VPN соединение может предназначаться не только для пользователя или устройства, но и для них обоих. Например, можно включить аутентификацию устройств для управления удаленными устройствами, а затем включить аутентификацию пользователей для подключений к внутренним сайтам и службам компании.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 Скорее всего, развернуты технологии, которые можно использовать для развертывания Always On VPN. Кроме серверов DC/DNS, для развертывания Always On VPN требуется сервер NPS (RADIUS), сервер центра сертификации (ЦС) и сервер удаленного доступа (маршрутизация/VPN). После настройки инфраструктуры необходимо зарегистрировать клиенты, а затем безопасно подключить клиенты к локальной сети с помощью нескольких сетевых изменений.
 
@@ -65,7 +65,7 @@ Always On VPN предоставляет единое, единое решени
 - Протокол DHCP.
 - Сетевое оборудование, например кабель Ethernet, брандмауэры, коммутаторы и концентраторы.
 - Дополнительные сетевые ресурсы, например приложения и файловые серверы, к которым удаленные пользователи могут получить доступ через Always On VPN-подключение.
-- Подключение к Интернету или условный доступ для подключения к Интернету с помощью Azure AD. Дополнительные сведения см. [в разделе условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+- Подключение к Интернету или условный доступ для подключения к Интернету с помощью Azure AD. Дополнительные сведения см. [в разделе условный доступ в Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## <a name="next-steps"></a>Следующие шаги
 

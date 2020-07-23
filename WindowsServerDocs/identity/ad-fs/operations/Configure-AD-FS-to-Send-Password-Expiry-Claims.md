@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 84014df358726cd3d2d90bb68c18f9a051bc6308
-ms.sourcegitcommit: c857cb5eb487a0050352af86c96bbbacfe66962e
+ms.openlocfilehash: 2fd2e86e43b6d230a2c8b873ce8267a4e68ca4ed
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83865465"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962556"
 ---
 # <a name="configure-ad-fs-to-send-password-expiry-claims"></a>Настройка AD FS для отправки утверждений об истечении срока действия пароля
 
@@ -35,4 +35,4 @@ c1:[Type == "http://schemas.microsoft.com/ws/2012/01/passwordexpirationtime"]
 > Если срок действия пароля истекает через 14 дней, то в течение 14 дней будет заполнено поправку утверждений.
 
 ## <a name="see-also"></a>См. также:
-[Операции AD FS](../../ad-fs/AD-FS-2016-Operations.md)
+[Операции AD FS](../ad-fs-operations.md)

@@ -8,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: 00dbf709139ef245b94a3f083ab83a12503131c2
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ad806577c1daa46ba77895b6a422c6fdace23c98
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856297"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966816"
 ---
 # <a name="cluster-to-cluster-storage-replica-within-the-same-region-in-azure"></a>Кластер в реплику хранилища кластера в том же регионе Azure
 
-> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Вы можете настроить репликацию кластера для репликации хранилища кластера в том же регионе Azure. В приведенных ниже примерах мы используем кластер из двух узлов, но Реплика хранилища кластера не ограничена кластером из двух узлов. На рисунке ниже представлен кластер прямого дискового пространства с двумя узлами, который может взаимодействовать друг с другом, находиться в одном домене и в одном регионе.
 
@@ -35,7 +35,7 @@ ms.locfileid: "80856297"
 
 1. Создайте [группу ресурсов](https://ms.portal.azure.com/#create/Microsoft.ResourceGroup) в портал Azure в регионе (**SR-AZ2AZ** в **западной части США 2**). 
 2. Создайте две группы [доступности](https://ms.portal.azure.com/#create/Microsoft.AvailabilitySet-ARM) в группе ресурсов (**SR-AZ2AZ**), созданной выше, по одной для каждого кластера. 
-    а) Группа доступности (**az2azAS1**) b. Группа доступности (**az2azAS2**)
+    a. Группа доступности (**az2azAS1**) b. Группа доступности (**az2azAS2**)
 3. Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-vnet**) в ранее созданной группе ресурсов (**SR-az2az**), имеющую по крайней мере одну подсеть. 
 4. Создайте [группу безопасности сети](https://ms.portal.azure.com/#create/Microsoft.NetworkSecurityGroup-ARM) (**az2az-NSG**) и добавьте одно правило безопасности для входящего трафика для RDP: 3389. Вы можете удалить это правило после завершения установки. 
 5. Создайте [виртуальные машины](https://ms.portal.azure.com/#create/Microsoft.WindowsServer2016Datacenter-ARM) Windows Server в ранее созданной группе ресурсов (**SR-AZ2AZ**). Используйте ранее созданную виртуальную сеть (**az2az-vnet**) и группу безопасности сети (**az2az-NSG**). 
@@ -75,13 +75,13 @@ ms.locfileid: "80856297"
 11. Создайте внутренний [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) SKU "Стандартный" для каждого кластера (**azlbr1**,**azlbr2**). 
    
     Укажите IP-адрес кластера в виде статического частного IP-адреса для балансировщика нагрузки.
-    - azlbr1 = > интерфейсный IP-адрес: 10.3.0.100 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
+    - azlbr1 => интерфейсный IP-адрес: 10.3.0.100 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
     - Создайте серверный пул для каждой подсистемы балансировки нагрузки. Добавьте связанные узлы кластера.
     - Создание проверки работоспособности: порт 59999
     - Создать правило балансировки нагрузки: разрешить порты с высоким уровнем доступности с включенным плавающим IP-адресом. 
    
     Укажите IP-адрес кластера в виде статического частного IP-адреса для балансировщика нагрузки.
-    - azlbr2 = > интерфейсный IP-адрес: 10.3.0.101 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
+    - azlbr2 => интерфейсный IP-адрес: 10.3.0.101 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
     - Создайте серверный пул для каждой подсистемы балансировки нагрузки. Добавьте связанные узлы кластера.
     - Создание проверки работоспособности: порт 59999
     - Создать правило балансировки нагрузки: разрешить порты с высоким уровнем доступности с включенным плавающим IP-адресом. 
@@ -95,7 +95,7 @@ ms.locfileid: "80856297"
 13. Предложите кластеру прослушивать сообщения проверки работоспособности через порт 59999 и отвечать с узла, который в данный момент владеет этим ресурсом. 
     Запустите его один раз с любого узла кластера для каждого кластера. 
     
-    В нашем примере необходимо изменить "ИЛБИП" в соответствии со значениями конфигурации. Выполните следующую команду из одного узла **az2az1**/**az2az2**:
+    В нашем примере необходимо изменить "ИЛБИП" в соответствии со значениями конфигурации. Выполните следующую команду из одного узла **az2az1** / **az2az2**:
 
     ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -105,7 +105,7 @@ ms.locfileid: "80856297"
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}
     ```
 
-14. Выполните следующую команду из одного узла **az2az3**/**az2az4**. 
+14. Выполните следующую команду из одного узла **az2az3** / **az2az4**. 
 
     ```PowerShell
     $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -132,13 +132,13 @@ ms.locfileid: "80856297"
 
 16. Выполните [проверочные тесты кластера](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) , прежде чем переходить к следующему шагу.
 
-17. Запустите Windows PowerShell и используйте командлет [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps), чтобы определить, все ли требования для реплики хранилища выполнены. Командлет можно использовать в режиме "только требования" для быстрой проверки, а также для длительного режима оценки производительности.
+17. Запустите Windows PowerShell и используйте командлет [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps), чтобы определить, все ли требования для реплики хранилища выполнены. Командлет можно использовать в режиме "только требования" для быстрой проверки, а также для длительного режима оценки производительности.
 
 18. Настройка реплики хранилища кластера в кластер.
    
     Предоставление доступа из одного кластера в другой в обоих направлениях:
 
-    В нашем примере:
+    Пример.
 
     ```PowerShell
       Grant-SRAccess -ComputerName az2az1 -Cluster SRAZC2
@@ -158,7 +158,7 @@ ms.locfileid: "80856297"
     - Расположение тома:-c:\ClusterStorage\DataDisk2
     - Расположение журнала:-g:
 
-Выполните следующую команду.
+Выполните следующую команду:
 
 ```PowerShell
 

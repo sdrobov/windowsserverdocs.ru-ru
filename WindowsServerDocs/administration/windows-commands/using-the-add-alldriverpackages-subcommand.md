@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a505175b1b2efc56c9be6d77384c71f8c1db7392
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 277053d48ce8ed853ccd41659af0a8f2418400cf
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85937259"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954826"
 ---
 # <a name="add-alldriverpackages"></a>Add-Аллдриверпаккажес
 
@@ -49,4 +49,4 @@ WDSUTIL /Add-AllDriverPackages /FolderPath:C:\Temp\Drivers\Printers /DriverGroup
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-[Add-Вдсдриверпаккаже](https://technet.microsoft.com/library/dn283440.aspx)
+[Add-Вдсдриверпаккаже](/previous-versions/windows/powershell-scripting/dn283440(v=wps.630))

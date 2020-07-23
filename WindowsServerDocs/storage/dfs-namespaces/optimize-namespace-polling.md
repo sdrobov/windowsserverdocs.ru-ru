@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: ea867cbb36286297ff3c5274d11c36b5815ab9ac
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 4ffcf974bd809d1692e16d632153c213081041c4
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475461"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961236"
 ---
 # <a name="optimize-namespace-polling"></a>Оптимизация опроса пространства имен
 
@@ -35,7 +35,7 @@ ms.locfileid: "85475461"
     -   Выбирайте вариант **Оптимизировать для масштабируемости**, если пространство имен размещено на более чем 16 серверах пространства имен. При этом уменьшается нагрузка на эмулятор основного контроллера домена (PDC), но увеличивается время, затрачиваемое на репликацию изменений пространства имен на все серверы пространства имен. Пока изменения не будут реплицированы на все серверы, пользователи могут получать несогласованное представление пространства имен.
 
 > [!NOTE]
-> Чтобы задать режим опроса пространства имен с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot EnableRootScalability](https://technet.microsoft.com/library/jj884281.aspx), который был введен в Windows Server 2012.
+> Чтобы задать режим опроса пространства имен с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot EnableRootScalability](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)), который был введен в Windows Server 2012.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
