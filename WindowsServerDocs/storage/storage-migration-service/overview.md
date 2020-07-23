@@ -8,12 +8,12 @@ ms.date: 03/26/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 6ec1093a77b036cada9e54c82234d653362ce4d3
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 1403e0ecd12c4c15924781d75bd9127874018451
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85930106"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953896"
 ---
 # <a name="storage-migration-service-overview"></a>Обзор службы миграции хранилища
 
@@ -58,7 +58,7 @@ ms.locfileid: "85930106"
 - **Исходный сервер** или **отказоустойчивый кластер** для переноса файлов и данных из
 - **Целевой сервер** под Windows Server 2019 (кластеризованный или автономный), на который выполняется миграция. Windows Server 2016 и Windows Server 2012 R2 работают так же, как и более чем на 50%
 - **Сервер Orchestrator** под управлением Windows Server 2019 для управления миграцией  <br>Если выполняется миграция только нескольких серверов и один из серверов работает под Windows Server 2019, его можно использовать в качестве Orchestrator. При переносе дополнительных серверов рекомендуется использовать отдельный сервер Orchestrator.
-- **Компьютер или сервер с запущенным [центром администрирования Windows](../../manage/windows-admin-center/understand/windows-admin-center.md) ** для запуска пользовательского интерфейса службы миграции хранилища, если вы не предпочитаете использовать PowerShell для управления миграцией. Центр администрирования Windows и версия Windows Server 2019 должны иметь версию не ниже 1809.
+- **Компьютер или сервер с запущенным [центром администрирования Windows](../../manage/windows-admin-center/overview.md) ** для запуска пользовательского интерфейса службы миграции хранилища, если вы не предпочитаете использовать PowerShell для управления миграцией. Центр администрирования Windows и версия Windows Server 2019 должны иметь версию не ниже 1809.
 
 Настоятельно рекомендуется, чтобы в Orchestrator и на конечных компьютерах имелось по крайней мере два ядра или два виртуальных ЦП и не менее 2 ГБ памяти. Операции инвентаризации и перемещения выполняются значительно быстрее с увеличением количества процессоров и памяти.
 
@@ -87,7 +87,7 @@ ms.locfileid: "85930106"
 - Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012
+- Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
 - Windows Server 2003 R2
