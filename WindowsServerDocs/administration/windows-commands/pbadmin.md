@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: da114c6b6501e9a8c305cd416d58ca0396745f27
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: eb0e70826175ebabe9d1a2c058104c0e7113e9df
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85922867"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86956696"
 ---
 # <a name="pbadmin"></a>pbadmin
 
@@ -23,7 +23,7 @@ ms.locfileid: "85922867"
 >[!IMPORTANT]
 > Эта команда устарела.
 
-Администрирование телефонных книг. При использовании без параметров пбадмин запускает администратора телефонной книги. Описание и сведения об использовании см. в разделе [пбадмин](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
+Администрирование телефонных книг. При использовании без параметров пбадмин запускает администратора телефонной книги. Описание и сведения об использовании см. в разделе [пбадмин](/previous-versions/orphan-topics/ws.10/cc755767(v=ws.10)).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

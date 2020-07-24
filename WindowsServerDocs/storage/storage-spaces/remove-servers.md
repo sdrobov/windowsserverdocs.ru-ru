@@ -10,12 +10,12 @@ author: cosmosdarwin
 description: Сведения о том, как удалить серверы из кластера локальных дисковых пространств в Windows Server.
 ms.date: 2/5/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 0dd888048edc96d6001492e92ba6d519c751bdaa
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 4fa3fe64cb5d7448a7e71eb344309ecb9990ebcd
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474571"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960026"
 ---
 # <a name="removing-servers-in-storage-spaces-direct"></a>Удаление серверов в локальных дисковых пространствах
 
@@ -27,7 +27,7 @@ ms.locfileid: "85474571"
 
 Если вы планируете вскоре вернуть сервер в кластер или переместить его диски на другой сервер, вы можете удалить сервер из кластера, *не* удаляя его диски из пула носителей (вариант по умолчанию при удалении сервера с помощью диспетчера отказоустойчивости кластеров).
 
-Используйте командлет [Remove-ClusterNode](https://technet.microsoft.com/library/hh847251.aspx) в PowerShell:
+Используйте командлет [Remove-ClusterNode](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11)) в PowerShell:
 
 ```PowerShell
 Remove-ClusterNode <Name>

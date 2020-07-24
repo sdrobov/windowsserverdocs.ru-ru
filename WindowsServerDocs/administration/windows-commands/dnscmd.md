@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 47be29e55c4626f5c05498074f10418730c6a6f3
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 8c8d865643c12377a3f4b14250f9d3dbead1e2ac
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931299"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958246"
 ---
 # <a name="dnscmd"></a>Dnscmd
 
@@ -68,7 +68,7 @@ dnscmd [<servername>] /ageallrecords <zonename>[<nodename>] | [/tree]|[/f]
 
 ### <a name="examples"></a>Примеры
 
-[Пример 1. Установка текущего времени в отметке времени для записей ресурсов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
+[Пример 1. Установка текущего времени в отметке времени для записей ресурсов](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-1-set-the-current-time-on-a-time-stamp-to-resource-records)
 
 ## <a name="dnscmd-clearcache-command"></a>dnscmd/ClearCache, команда
 
@@ -349,9 +349,9 @@ dnscmd [<servername>] /enumzones [/primary | /secondary | /forwarder | /stub | /
 
 #### <a name="examples"></a>Примеры
 
-- [Пример 2. Отображение полного списка зон на DNS-сервере](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-2-display-a-complete-list-of-zones-on-a-dns-server))
+- [Пример 2. Отображение полного списка зон на DNS-сервере](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-2-display-a-complete-list-of-zones-on-a-dns-server))
 
-- [Пример 3. Отображение списка автосозданных зон на DNS-сервере](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-3-display-a-list-of-autocreated-zones-on-a-dns-server)
+- [Пример 3. Отображение списка автосозданных зон на DNS-сервере](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-3-display-a-list-of-autocreated-zones-on-a-dns-server)
 
 ## <a name="dnscmd-exportsettings-command"></a>dnscmd/експортсеттингс, команда
 
@@ -388,9 +388,9 @@ dnscmd [<servername>] /info [<settings>]
 
 #### <a name="example"></a>Пример
 
-- [Пример 4. Отображение параметра Slave с DNS-сервера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-4-display-the-isslave-setting-from-a-dns-server)
+- [Пример 4. Отображение параметра Slave с DNS-сервера](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-4-display-the-isslave-setting-from-a-dns-server)
 
-- [Пример 5. Отображение параметра Рекурсионтимеаут с DNS-сервера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-5-display-the-recursiontimeout-setting-from-a-dns-server)
+- [Пример 5. Отображение параметра Рекурсионтимеаут с DNS-сервера](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-5-display-the-recursiontimeout-setting-from-a-dns-server)
 
 ## <a name="dnscmd-ipvalidate-command"></a>dnscmd/ипвалидате, команда
 
@@ -440,7 +440,7 @@ dnscmd [<servername>] /nodedelete <zonename> <nodename> [/tree] [/f]
 
 #### <a name="example"></a>Пример
 
-[Пример 6. Удаление записей из узла](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
+[Пример 6. Удаление записей из узла](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-6-delete-the-records-from-a-node)
 
 ## <a name="dnscmd-recordadd-command"></a>dnscmd/рекордадд, команда
 
@@ -463,7 +463,7 @@ dnscmd [<servername>] /recordadd <zonename> <nodename> <rrtype> <rrdata>
 | `<rrdata>` | Указывает ожидаемый тип данных. |
 
 > [!NOTE]
-> После добавления записи убедитесь, что используется правильный тип данных и формат данных. Список типов записей ресурсов и соответствующих типов данных см. в разделе [примеры dnscmd](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
+> После добавления записи убедитесь, что используется правильный тип данных и формат данных. Список типов записей ресурсов и соответствующих типов данных см. в разделе [примеры dnscmd](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)).
 
 #### <a name="examples"></a>Примеры
 
@@ -621,9 +621,9 @@ dnscmd [<servername>] /statistics [<statid>] [/clear]
 
 #### <a name="examples"></a>Примеры
 
-- [Пример 7.](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-7-display-time-statistics-for-a-dns-server)
+- [Пример 7.](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-7-display-time-statistics-for-a-dns-server)
 
-- [Пример 8. Отображение статистики Нбстатмем для DNS-сервера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-8-display-nbstatmem-statistics-for-a-dns-server)
+- [Пример 8. Отображение статистики Нбстатмем для DNS-сервера](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-8-display-nbstatmem-statistics-for-a-dns-server)
 
 ## <a name="dnscmd-unenlistdirectorypartition-command"></a>dnscmd/уненлистдиректорипартитион, команда
 
@@ -737,7 +737,7 @@ dnscmd [<servername>] /zonedelete <zonename> [/dsdel] [/f]
 
 #### <a name="examples"></a>Примеры
 
-- [Пример 9. Удаление зоны с DNS-сервера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-9-delete-a-zone-from-a-dns-server)
+- [Пример 9. Удаление зоны с DNS-сервера](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-9-delete-a-zone-from-a-dns-server)
 
 ## <a name="dnscmd-zoneexport-command"></a>dnscmd/зоникспорт, команда
 
@@ -759,7 +759,7 @@ dnscmd [<servername>] /zoneexport <zonename> <zoneexportfile>
 
 #### <a name="examples"></a>Примеры
 
-- [Пример 10. Экспорт записей ресурсов зоны в файл](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-10-export-zone-resource-records-list-to-a-file)
+- [Пример 10. Экспорт записей ресурсов зоны в файл](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-10-export-zone-resource-records-list-to-a-file)
 
 ## <a name="dnscmd-zoneinfo"></a>dnscmd/зонеинфо
 
@@ -787,9 +787,9 @@ dnscmd [<servername>] /zoneinfo <zonename> [<setting>]
 
 #### <a name="examples"></a>Примеры
 
-- [Пример 11. Отображение параметра RefreshInterval из реестра](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-11-display-refreshinterval-setting-from-the-registry)
+- [Пример 11. Отображение параметра RefreshInterval из реестра](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-11-display-refreshinterval-setting-from-the-registry)
 
-- [Пример 12. Отображение параметра старения из реестра](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-12-display-aging-setting-from-the-registry)
+- [Пример 12. Отображение параметра старения из реестра](/previous-versions/windows/it-pro/windows-server-2003/cc784399(v=ws.10)#example-12-display-aging-setting-from-the-registry)
 
 ## <a name="dnscmd-zonepause-command"></a>dnscmd/зонепаусе, команда
 

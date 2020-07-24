@@ -9,12 +9,12 @@ manager: dongill
 ms.author: jgerend
 ms.date: 4/5/2017
 description: 'Как спланировать развертывание рабочих папок: требования к системе и подготовка сетевой среды.'
-ms.openlocfilehash: 1453ff54c2213445f6f443d34d21747eb875412b
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 603711676aa5f35047b0623694f3a16922a2b240
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475601"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960006"
 ---
 # <a name="planning-a-work-folders-deployment"></a>Планирование развертывания рабочих папок
 
@@ -139,9 +139,9 @@ ms.locfileid: "85475601"
 
 Рабочие папки поддерживают использование прокси-сервера веб-приложения, прокси-сервера приложения Azure AD или обратных прокси-серверов сторонних производителей:
 
--  Прокси-сервер веб-приложения — это обратный прокси-сервер для локальной среды. Дополнительные сведения см. в статье, посвященной [Прокси-серверу веб-приложения в Windows Server 2016](https://technet.microsoft.com/windows-server-docs/identity/web-application-proxy/web-application-proxy-windows-server).
+-  Прокси-сервер веб-приложения — это обратный прокси-сервер для локальной среды. Дополнительные сведения см. в статье, посвященной [Прокси-серверу веб-приложения в Windows Server 2016](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
--  Прокси-сервер приложения Azure AD — это обратный прокси-сервер для облачной среды. Дополнительные сведения см. в разделе [Предоставление безопасного удаленного доступа для локальных приложений](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started)
+-  Прокси-сервер приложения Azure AD — это обратный прокси-сервер для облачной среды. Дополнительные сведения см. в разделе [Предоставление безопасного удаленного доступа для локальных приложений](/azure/active-directory/active-directory-application-proxy-get-started)
 
 ## <a name="additional-design-considerations"></a>Дополнительные аспекты проектирования
  В процессе проектирования клиенты должны не только разобраться в каждом из перечисленных выше компонентов, но и обдумать число серверов синхронизации и общих ресурсов, а также решить, следует ли использовать отказоустойчивую кластеризацию для обеспечения отказоустойчивости серверов синхронизации.
@@ -155,7 +155,7 @@ ms.locfileid: "85475601"
 
 - Балансировка нагрузки — в крупных средах хранение пользовательских данных на нескольких серверах может повысить производительность и время безотказной работы серверов.
 
-  Информацию о масштабировании и производительности серверов рабочих папок см. в статье о [факторах производительности при развертывании рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx).
+  Информацию о масштабировании и производительности серверов рабочих папок см. в статье о [факторах производительности при развертывании рабочих папок](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md).
 
 > [!NOTE]
 >  При использовании нескольких серверов синхронизации рекомендуется настроить автоматическое обнаружение серверов для пользователей. Этот процесс зависит от конфигурации атрибута для каждой учетной записи пользователя в AD DS. Атрибут имеет имя **msDS-SyncServerURL** и становится доступным для учетных записей пользователей после того, как контроллер домена Windows Server 2012 R2 будет добавлен в домен, или после применения обновлений схемы Active Directory. Этот атрибут следует задать для каждого пользователя, чтобы пользователи подключались к надлежащему серверу синхронизации. С помощью автоматического обнаружения серверов организации могут публиковать рабочие папки за "понятным" URL-адресом *https://workfolders.contoso.com* , таким как, независимо от числа серверов синхронизации в операции.
@@ -247,7 +247,7 @@ ms.locfileid: "85475601"
 
     -   Потребуется ли регистрация устройств, чтобы они могли подключаться к сети?
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
  Следующий шаг после проектирования реализации рабочих папок — их развертывание. Дополнительную информацию см. в статье о [развертывании рабочих папок](deploy-work-folders.md).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
@@ -255,5 +255,5 @@ ms.locfileid: "85475601"
 
 |Тип содержимого|Ссылки|
 |------------------|----------------|
-|**Оценка продукта**|-   [Рабочие папки](work-folders-overview.md)<br />-   [Рабочие папки для Windows 7](https://blogs.technet.com/b/filecab/archive/2014/04/24/work-folders-for-windows-7.aspx) (запись блога)|
-|**Развертывание**|-   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://blogs.technet.microsoft.com/filecab/2017/05/31/enable-remote-access-to-work-folders-using-azure-active-directory-application-proxy/)<br />-   [Рекомендации по производительности при развертывании рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/11/01/performance-considerations-for-large-scale-work-folders-deployments.aspx)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Развертывание тестовой лаборатории рабочих папок](https://blogs.technet.com/b/filecab/archive/2013/07/10/work-folders-test-lab-deployment.aspx) (запись блога)|
+|**Оценка продукта**|-   [Рабочие папки](work-folders-overview.md)<br />-   [Рабочие папки для Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)|
+|**Deployment**|-   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />- [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Рекомендации по производительности при развертывании рабочих папок](../../remote/remote-access/web-application-proxy/web-application-proxy-windows-server.md)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559)<br />-   [Развертывание тестовой лаборатории рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)|

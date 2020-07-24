@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: b5cf20abc8322f610106d65c76c3431b9332444a
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: e1b5844ee9cbdb11629e488e6506ef85b23b537b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936152"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958946"
 ---
 # <a name="winnt32"></a>winnt32
 
@@ -62,14 +62,13 @@ winnt32 [/checkupgradeonly] [/cmd: <CommandLine>] [/cmdcons] [/copydir:{i386|ia6
 |        /?         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Отображение справки в командной строке.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 
 ## <a name="remarks"></a>Комментарии
-При развертывании Windows XP на клиентских компьютерах можно использовать версию winnt32.exe, поставляемую вместе с Windows XP. Другим способом развертывания Windows XP является использование winnt32.msi, который работает с установщик Windows, входит в набор технологий IntelliMirror. Дополнительные сведения о развертывании клиентов см. в пакете Windows Server 2003 Deployment Kit, который описан в разделе [Использование развертывания и ресурсов Windows](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
+При развертывании Windows XP на клиентских компьютерах можно использовать версию winnt32.exe, поставляемую вместе с Windows XP. Другим способом развертывания Windows XP является использование winnt32.msi, который работает с установщик Windows, входит в набор технологий IntelliMirror. Дополнительные сведения о развертывании клиентов см. в пакете Windows Server 2003 Deployment Kit, который описан в разделе [Использование развертывания и ресурсов Windows](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 
 На компьютере на базе процессоров Itanium **winnt32** можно запустить из интерфейса EFI или windows Server 2003 Enterprise, windows Server 2003 R2 Enterprise, windows Server 2003 R2 Datacenter или windows Server 2003 Datacenter. Кроме того, на компьютере, основанном на архитектуре Itanium, **/cmdcons** и **/syspart** недоступны, а параметры, относящиеся к обновлениям, недоступны.
-Дополнительные сведения о совместимости оборудования см. в разделе [Совместимость оборудования](https://technet.microsoft.com/library/cc757927(v=ws.10).aspx).
-более подробные сведения об использовании динамического обновления и установки нескольких клиентов см. в комплекте Windows Server 2003 Deployment Kit, который описан в разделе [Использование развертывания и ресурсов Windows](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
-сведения об изменении параметров загрузки см. в разделе Развертывание Windows и ресурсы для Windows Server 2003. Дополнительные сведения см. [в разделе Использование развертывания Windows и наборов ресурсов](https://technet.microsoft.com/library/cc779317(v=ws.10).aspx).
+Дополнительные сведения о совместимости оборудования см. в разделе [Совместимость оборудования](/previous-versions/windows/it-pro/windows-server-2003/cc757927(v=ws.10)).
+более подробные сведения об использовании динамического обновления и установки нескольких клиентов см. в комплекте Windows Server 2003 Deployment Kit, который описан в разделе [Использование развертывания и ресурсов Windows](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
+сведения об изменении параметров загрузки см. в разделе Развертывание Windows и ресурсы для Windows Server 2003. Дополнительные сведения см. [в разделе Использование развертывания Windows и наборов ресурсов](/previous-versions/windows/it-pro/windows-server-2003/cc779317(v=ws.10)).
 Использование параметра командной строки **/Unattend** для автоматизации установки подтверждает, что вы прочитали и приняли лицензионное соглашение Майкрософт для Windows Server 2003. Перед использованием этого параметра командной строки для установки Windows Server 2003 от имени другой организации необходимо убедиться, что конечный пользователь (отдельная или отдельная сущность) получил, прочитал и принял условия лицензионного соглашения Майкрософт для этого продукта.  Изготовители оборудования могут не указывать этот ключ на компьютерах, продаваемых конечным пользователям.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
-

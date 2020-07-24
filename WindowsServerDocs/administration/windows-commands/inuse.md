@@ -9,18 +9,18 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 97fb8205c05952326de5e66ff6972e30279930cd
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 2399b2ef7dbbab37bd6c869490f6e446ae640a25
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85924379"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86957106"
 ---
 # <a name="inuse"></a>inuse
 
 Команда Inuse устарела и не гарантируется, что она будет поддерживаться в будущих выпусках Windows.
 
-Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [inuse](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)).
+Это средство входит в Windows Server 2003. Дополнительные сведения см. в разделе [inuse](/previous-versions/orphan-topics/ws.10/dd996699(v=ws.10)).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

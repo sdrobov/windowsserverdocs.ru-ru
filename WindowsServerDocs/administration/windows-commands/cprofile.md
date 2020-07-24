@@ -9,15 +9,15 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: eb2637a750c85648189842c240fd8c16062a8ba5
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: ae4bf757e49dde88948812e6d97bc4c8b338c990
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85929705"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86958426"
 ---
 # <a name="cprofile"></a>cprofile
 
 Кпрофиле является устаревшим и не гарантируется поддержка в будущих выпусках Windows.
 
-Службы терминалов были обновлены для службы удаленных рабочих столов. Дополнительные сведения см. [в разделе Добро пожаловать в службы удаленных рабочих столов](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/welcome-to-rds).
+Службы терминалов были обновлены для службы удаленных рабочих столов. Дополнительные сведения см. [в разделе Добро пожаловать в службы удаленных рабочих столов](../../remote/remote-desktop-services/welcome-to-rds.md).
