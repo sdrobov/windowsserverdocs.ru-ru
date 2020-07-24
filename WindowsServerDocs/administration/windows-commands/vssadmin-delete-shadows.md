@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 05/18/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: b52701f831502c16487dbbaf0cd61d839c046c68
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 84135624377f589417c7524c40375ed8470d3269
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436709"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954797"
 ---
 # <a name="vssadmin-delete-shadows"></a>Vssadmin удаление теней
 
@@ -31,10 +31,10 @@ vssadmin delete shadows /for=<ForVolumeSpec> [/oldest | /all | /shadow=<ShadowID
 
 |Параметр|Описание|
 |---|---|
-|/фор = \< ForVolumeSpec>|Указывает, какой из теневых копий тома будет удален.|
+|/фор =\<ForVolumeSpec>|Указывает, какой из теневых копий тома будет удален.|
 |/олдест|Удаляет только самую старую теневую копию.|
 |/all|Удаляет все заданные теневые копии тома.|
-|/Шадов = \< шадовид>|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
+|/Шадов =\<ShadowID>|Удаляет теневую копию, указанную параметром Шадовид. Чтобы получить идентификатор теневой копии, используйте команду **vssadmin List Shadows** . При вводе идентификатора теневой копии используйте следующий формат, где каждый *X* представляет шестнадцатеричный символ:<br><br>XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX|
 |/quiet|Указывает, что команда не будет отображать сообщения во время выполнения.|
 
 ## <a name="remarks"></a>Комментарии
@@ -51,6 +51,6 @@ vssadmin delete shadows /for=c: /oldest
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-* [Ключ синтаксиса командной строки](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
+* [Ключ синтаксиса командной строки](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc771080(v%3dws.11))
 * [List](vssadmin.md)
 * [Vssadmin List Shadows](vssadmin-list-shadows.md)

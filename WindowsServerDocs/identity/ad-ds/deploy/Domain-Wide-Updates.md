@@ -9,22 +9,22 @@ ms.date: 10/29/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 3b82958471e5292f202aa338aee7f4f5863459af
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d32656963e52ab0f3a505c172aff3c2ebc8ce53d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80825217"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954096"
 ---
 # <a name="domain-wide-schema-updates"></a>Обновления схемы на уровне домена
 
->Область применения: Windows Server
+>Область применения. Windows Server
 
 Вы можете ознакомиться с приведенным ниже набором изменений, которые помогут понять и подготовить обновления схемы, выполняемые adprep/domainprep в Windows Server.
 
-Начиная с Windows Server 2012, команды adprep запускаются автоматически по мере необходимости во время установки AD DS. Их также можно выполнять отдельно, заранее AD DS установки. Дополнительные сведения см. в разделе [Выполнение Adprep.exe](https://technet.microsoft.com/library/dd464018(v=ws.10).aspx).
+Начиная с Windows Server 2012, команды adprep запускаются автоматически по мере необходимости во время установки AD DS. Их также можно выполнять отдельно, заранее AD DS установки. Дополнительные сведения см. в разделе [Выполнение Adprep.exe](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)).
 
-Дополнительные сведения о том, как интерпретировать строки записи управления доступом (ACE), см. в разделе [строки ACE](https://msdn.microsoft.com/library/aa374928(VS.85).aspx). Дополнительные сведения о том, как интерпретировать строки идентификатора безопасности (SID), см. в разделе [строки SID](https://msdn.microsoft.com/library/aa379602(VS.85).aspx).
+Дополнительные сведения о том, как интерпретировать строки записи управления доступом (ACE), см. в разделе [строки ACE](/windows/win32/secauthz/ace-strings). Дополнительные сведения о том, как интерпретировать строки идентификатора безопасности (SID), см. в разделе [строки SID](/windows/win32/secauthz/sid-strings).
 
 ## <a name="windows-server-semi-annual-channel-domain-wide-updates"></a>Windows Server (половина ежегодного канала): обновления в масштабе домена
 

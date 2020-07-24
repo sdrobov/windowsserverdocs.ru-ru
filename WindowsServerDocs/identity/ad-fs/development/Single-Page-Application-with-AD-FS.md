@@ -8,12 +8,12 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 09b789937c9ff1dad90c3533616a4ed800204267
-ms.sourcegitcommit: 046123d4f2d24dc00b35ea99adee6f8d322c76bf
+ms.openlocfilehash: 1bd5d95739bc1c975f5f0c4d7efb8dc6f91e0412
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85416297"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954406"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL.JS с AD FS 2016 или более поздней версии
 
@@ -38,7 +38,7 @@ ms.locfileid: "85416297"
 Если ADAL видит триггер для проверки подлинности, он использует сведения, предоставленные приложением, и направляет проверку подлинности AD FS STS.  Одностраничное приложение, зарегистрированное как общедоступный клиент в AD FS, автоматически настраивается на неявный поток предоставления. Запрос авторизации приводит к возвращению маркера идентификации, возвращаемого приложению через #fragment. Последующие вызовы серверной части WebAPI будут содержать этот маркер идентификации в качестве токена носителя в заголовке для получения доступа к WebAPI.
 
 ## <a name="setting-up-the-development-box"></a>Настройка поля разработки
-В этом пошаговом руководстве используется Visual Studio 2015. В проекте используется библиотека ADAL JS. Дополнительные сведения о ADAL см. в статье [Библиотека проверки подлинности Active Directory .NET.](https://msdn.microsoft.com/library/azure/mt417579.aspx)
+В этом пошаговом руководстве используется Visual Studio 2015. В проекте используется библиотека ADAL JS. Дополнительные сведения о ADAL см. в статье [Библиотека проверки подлинности Active Directory .NET.](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
 
 ## <a name="setting-up-the-environment"></a>Настройка среды
 В этом пошаговом руководстве мы будем использовать базовую установку:
@@ -112,7 +112,7 @@ ms.locfileid: "85416297"
 
 |Конфигурация|Описание|
 |--------|--------|
-|instance|URL-адрес STS, напримерhttps://fs.contoso.com/|
+|экземпляр|URL-адрес STS, напримерhttps://fs.contoso.com/|
 |tenant|Не заключайте его в "ADFS"|
 |clientID|Это идентификатор клиента, указанный при настройке общедоступного клиента для приложения с одной страницей|
 
@@ -145,7 +145,7 @@ ms.locfileid: "85416297"
         }
     );
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |--------|--------|
 |валидаудиенце|При этом настраивается значение "аудитория", которое будет проверяться в токене.|
 |валидиссуер|При этом настраивается значение Issuer, для которого будет выполнена проверка в токене|
@@ -180,5 +180,5 @@ ms.locfileid: "85416297"
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Дальнейшие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

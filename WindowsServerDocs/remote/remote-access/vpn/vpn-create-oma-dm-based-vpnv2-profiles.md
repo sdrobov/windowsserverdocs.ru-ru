@@ -9,21 +9,21 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: b1316fe2feba674beb915b6ea22b1c0361ae1243
-ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
+ms.openlocfilehash: a98ed0d8436b057c63b08c1f1476b4392f7911fc
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433158"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953936"
 ---
 # <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>Шаг 7.5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10
 
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Назад:** Шаг 7,4. Развертывание корневых сертификатов условного доступа в локальную службу AD](vpn-deploy-cond-access-root-cert-to-on-premise-ad.md)
-- [**Далее:** Узнайте, как работает условный доступ для VPN](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+- [**Далее:** Узнайте, как работает условный доступ для VPN](/windows/access-protection/vpn/vpn-conditional-access)
 
-На этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Microsoft Endpoint Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры CSP поддержка vpnv2](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) . 
+На этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Microsoft Endpoint Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры CSP поддержка vpnv2](/windows/client-management/mdm/vpnv2-csp) . 
 
 ## <a name="managed-deployment-using-intune"></a>Управляемое развертывание с помощью Intune
 
@@ -45,7 +45,7 @@ ms.locfileid: "83433158"
 
     ![Портал Intune](../../media/Always-On-Vpn/intune-eap-xml.png)
 
-3. Перейдите к разделу, который заканчивается на ** \< /Акцептсервернаме>\< /еаптипе>** и вставьте следующую строку между этими двумя значениями, чтобы предоставить VPN-клиенту логику для выбора сертификата условного доступа AAD:
+3. Перейдите к разделу, который заканчивается на, **\</AcceptServerName>\</EapType>** и вставьте следующую строку между этими двумя значениями, чтобы предоставить VPN-клиенту логику для выбора сертификата условного доступа AAD:
 
     ```XML
     <TLSExtensions xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV2"><FilteringInfo xmlns="http://www.microsoft.com/provisioning/EapTlsConnectionPropertiesV3"><EKUMapping><EKUMap><EKUName>AAD Conditional Access</EKUName><EKUOID>1.3.6.1.4.1.311.87</EKUOID></EKUMap></EKUMapping><ClientAuthEKUList Enabled="true"><EKUMapInList><EKUName>AAD Conditional Access</EKUName></EKUMapInList></ClientAuthEKUList></FilteringInfo></TLSExtensions>
@@ -53,7 +53,7 @@ ms.locfileid: "83433158"
 
 4. Выберите колонку **Условный доступ** и тугле **Условный доступ для этого VPN-подключения** , чтобы **включить**его.
    
-   При включении этого параметра изменяется параметр ** \< девицекомплианце>\< Enabled>true \< /Enabled>** в XML-файле профиля поддержка vpnv2.
+   При включении этого параметра в XML-файле профиля поддержка vpnv2 изменяется ** \<DeviceCompliance> \<Enabled> значение true \</Enabled> ** .
 
     ![Условный доступ для Always On VPN — свойства](../../media/Always-On-Vpn/vpn-conditional-access-azure-ad.png)
 
@@ -86,14 +86,14 @@ ms.locfileid: "83433158"
 
 |Цель...  |Затем см...  |
 |---------|---------|
-|Дополнительные сведения о том, как условный доступ работает с VPN  |[VPN и условный доступ](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access). на этой странице содержатся дополнительные сведения о том, как условный доступ работает с VPN.      |
+|Дополнительные сведения о том, как условный доступ работает с VPN  |[VPN и условный доступ](/windows/access-protection/vpn/vpn-conditional-access). на этой странице содержатся дополнительные сведения о том, как условный доступ работает с VPN.      |
 |Дополнительные сведения о дополнительных возможностях VPN  |[Дополнительные функции VPN](always-on-vpn/deploy/always-on-vpn-adv-options.md#advanced-vpn-features). на этой странице приводятся рекомендации по включению фильтров трафика VPN, настройке АВТОМАТИЧЕСКИх VPN-подключений с помощью триггеров приложений и настройке NPS для разрешения VPN-подключений только от клиентов, использующих сертификаты, выданные Azure AD.        |
 
 
 ## <a name="related-topics"></a>Связанные темы
 
-- [Поддержка VPNV2 CSP](https://msdn.microsoft.com/windows/hardware/commercialize/customize/mdm/vpnv2-csp). в этом разделе содержится обзор службы CSP поддержка vpnv2. Поставщик службы настройки поддержка vpnv2 позволяет серверу управления мобильными устройствами (MDM) настраивать профиль VPN устройства.
+- [Поддержка VPNV2 CSP](/windows/client-management/mdm/vpnv2-csp). в этом разделе содержится обзор службы CSP поддержка vpnv2. Поставщик службы настройки поддержка vpnv2 позволяет серверу управления мобильными устройствами (MDM) настраивать профиль VPN устройства.
 
-- [Настройка клиента Windows 10 Always on VPN-подключениях](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections). в этом разделе содержатся сведения о параметрах и схеме профилексмл, а также о создании VPN профилексмл. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения. 
+- [Настройка клиента Windows 10 Always on VPN-подключениях](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md). в этом разделе содержатся сведения о параметрах и схеме профилексмл, а также о создании VPN профилексмл. После настройки серверной инфраструктуры необходимо настроить клиентские компьютеры Windows 10 для связи с этой инфраструктурой с помощью VPN-подключения. 
 
-- [Настройка VPN-клиента с помощью Intune](https://docs.microsoft.com/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/vpn-deploy-client-vpn-connections#configure-the-vpn-client-by-using-intune). в этом разделе содержатся сведения о развертывании профилей VPN для удаленного доступа Windows 10 Always on. Теперь Intune использует группы Azure AD. Если Azure AD Connect синхронизирует группу "пользователи VPN" из локальной среды в Azure AD, нет необходимости настраивать VPN-клиент с помощью Intune.
+- [Настройка VPN-клиента с помощью Intune](./always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md#configure-the-vpn-client-by-using-intune). в этом разделе содержатся сведения о развертывании профилей VPN для удаленного доступа Windows 10 Always on. Теперь Intune использует группы Azure AD. Если Azure AD Connect синхронизирует группу "пользователи VPN" из локальной среды в Azure AD, нет необходимости настраивать VPN-клиент с помощью Intune.

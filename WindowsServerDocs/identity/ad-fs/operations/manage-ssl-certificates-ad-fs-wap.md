@@ -9,12 +9,12 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: b832756e123bee0223738ee804ac3a4db2371e84
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a982df8ce7d1f335a1c2242f277b1983573c9ee1
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80855297"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954207"
 ---
 # <a name="managing-ssl-certificates-in-ad-fs-and-wap-in-windows-server-2016"></a>Управление SSL-сертификатами в AD FS и WAP в Windows Server 2016
 
@@ -23,18 +23,18 @@ ms.locfileid: "80855297"
 В этой статье описывается, как развернуть новый SSL-сертификат на серверах AD FS и WAP.
 
 >[!NOTE]
->Рекомендуемый способ замены SSL-сертификата, пересылаемого в AD FS ферму, — использование Azure AD Connect.  Дополнительные сведения см. [в статье обновление SSL-сертификата для фермы службы федерации Active Directory (AD FS) (AD FS)](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update) .
+>Рекомендуемый способ замены SSL-сертификата, пересылаемого в AD FS ферму, — использование Azure AD Connect.  Дополнительные сведения см. [в статье обновление SSL-сертификата для фермы службы федерации Active Directory (AD FS) (AD FS)](/azure/active-directory/connect/active-directory-aadconnectfed-ssl-update) .
 
 ## <a name="obtaining-your-ssl-certificates"></a>Получение SSL-сертификатов
 Для производственных AD FS ферм рекомендуется использовать общедоступный доверенный SSL-сертификат. Обычно это достигается путем отправки запроса подписи сертификата (CSR) стороннему поставщику сертификатов. Существует множество способов создания CSR, в том числе с компьютера под управлением Windows 7 или более поздней версии. Поставщик должен иметь документацию для этого.
 
-- Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1) .
+- Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](../overview/ad-fs-requirements.md#BKMK_1) .
 
 ### <a name="how-many-certificates-are-needed"></a>Сколько сертификатов требуется
-Мы рекомендуем использовать общий SSL-сертификат для всех AD FS и прокси серверов. Подробные требования см. в документе [AD FS и требования SSL-сертификата для прокси](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1)
+Мы рекомендуем использовать общий SSL-сертификат для всех AD FS и прокси серверов. Подробные требования см. в документе [AD FS и требования SSL-сертификата для прокси](../overview/ad-fs-requirements.md#BKMK_1)
 
-### <a name="ssl-certificate-requirements"></a>Требования сертификатов SSL
-Требования, включая именование, корневой уровень доверия и расширений, см. в документе [AD FS и требования SSL к сертификатам прокси веб-приложения](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1) .
+### <a name="ssl-certificate-requirements"></a>Требования к сертификатам SSL
+Требования, включая именование, корневой уровень доверия и расширений, см. в документе [AD FS и требования SSL к сертификатам прокси веб-приложения](../overview/ad-fs-requirements.md#BKMK_1) .
 
 ## <a name="replacing-the-ssl-certificate-for-ad-fs"></a>Замена SSL-сертификата для AD FS
 > [!NOTE]
@@ -46,11 +46,11 @@ ms.locfileid: "80855297"
 AD FS по умолчанию выполняет проверку подлинности сертификата устройства через порт 443 и проверку подлинности сертификата пользователя через порт 49443 (или настраиваемый порт, не 443).
 В этом режиме используйте командлет PowerShell Set-AdfsSslCertificate для управления SSL-сертификатом.
 
-Выполните инструкции ниже.
+Выполните инструкции, описанные ниже.
 
 1. Сначала необходимо получить новый сертификат. Обычно это делается путем отправки запроса подписи сертификата (CSR) сторонним поставщикам сертификатов. Существует множество способов создания CSR, в том числе с компьютера под управлением Windows 7 или более поздней версии. Поставщик должен иметь документацию для этого.
 
-    * Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1) .
+    * Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](../overview/ad-fs-requirements.md#BKMK_1) .
 
 1. После получения ответа от поставщика сертификатов импортируйте его в хранилище локального компьютера на каждом AD FS и на прокси-сервере.
 
@@ -66,7 +66,7 @@ Set-AdfsSslCertificate -Thumbprint '<thumbprint of new cert>'
 dir Cert:\LocalMachine\My\
 ```
 
-#### <a name="additional-notes"></a>Дополнительные примечания
+#### <a name="additional-notes"></a>Дополнительные замечания
 
 * Командлет Set-AdfsSslCertificate является командлетом с несколькими узлами. Это означает, что будет выполнено обновление только с первичного узла и всех узлов фермы. Это новое в сервере 2016. На сервере 2012 R2 необходимо было выполнить Set-AdfsSslCertificate на каждом сервере.
 * Командлет Set-AdfsSslCertificate должен выполняться только на сервере-источнике. Сервер первичного сервера должен работать под сервером 2016, и уровень поведения фермы должен быть повышен до 2016.
@@ -77,11 +77,11 @@ dir Cert:\LocalMachine\My\
 При настройке в альтернативном режиме клиентской привязки TLS AD FS выполняет проверку подлинности сертификата устройства в порте 443 и проверку подлинности сертификата пользователя на порте 443, а также на другом имени узла. Имя узла сертификата пользователя — это AD FS имя узла, предварительно заданное с помощью "цертаус", например "certauth.fs.contoso.com".
 В этом режиме используйте командлет PowerShell Set-Адфсалтернатетлсклиентбиндинг для управления SSL-сертификатом. Это позволит управлять не только альтернативной привязкой клиента TLS, но и всеми другими привязками, для которых AD FS задает SSL-сертификат.
 
-Выполните инструкции ниже.
+Выполните инструкции, описанные ниже.
 
 1. Сначала необходимо получить новый сертификат. Обычно это делается путем отправки запроса подписи сертификата (CSR) сторонним поставщикам сертификатов. Существует множество способов создания CSR, в том числе с компьютера под управлением Windows 7 или более поздней версии. Поставщик должен иметь документацию для этого.
 
-    * Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](https://technet.microsoft.com/windows-server-docs/identity/ad-fs/overview/AD-FS-2016-Requirements#BKMK_1) .
+    * Убедитесь, что сертификат соответствует [требованиям к сертификатам SSL для AD FS и прокси-приложения](../overview/ad-fs-requirements.md#BKMK_1) .
 
 1. После получения ответа от поставщика сертификатов импортируйте его в хранилище локального компьютера на каждом AD FS и на прокси-сервере.
 
@@ -97,7 +97,7 @@ Set-AdfsAlternateTlsClientBinding -Thumbprint '<thumbprint of new cert>'
 dir Cert:\LocalMachine\My\
 ```
 
-#### <a name="additional-notes"></a>Дополнительные примечания
+#### <a name="additional-notes"></a>Дополнительные замечания
 
 * Командлет Set-Адфсалтернатетлсклиентбиндинг является командлетом с несколькими узлами. Это означает, что будет выполнено обновление только с первичного узла и всех узлов фермы.
 * Командлет Set-Адфсалтернатетлсклиентбиндинг должен выполняться только на сервере-источнике. Сервер первичного сервера должен работать под сервером 2016, и уровень поведения фермы должен быть повышен до 2016.
@@ -124,6 +124,6 @@ $cred = Get-Credential
 Install-WebApplicationProxy -FederationServiceTrustCredential $cred -CertificateThumbprint '<thumbprint of new cert>' -FederationServiceName 'fs.contoso.com'
 ```
 
-## <a name="additional-references"></a>Дополнительная справка  
+## <a name="additional-references"></a>Дополнительные ссылки  
 * [Поддержка привязки альтернативного имени узла для аутентификации сертификата в AD FS](../operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 * [Сведения о свойствах AD FS и KeySpec сертификата](../technical-reference/AD-FS-and-KeySpec-Property.md)

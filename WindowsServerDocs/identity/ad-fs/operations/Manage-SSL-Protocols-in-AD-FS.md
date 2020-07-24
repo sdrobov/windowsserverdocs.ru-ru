@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: e0c581a29db92cfb73e4225c72e7e1c2bad4ca68
-ms.sourcegitcommit: 2a15de216edde8b8e240a4aa679dc6d470e4159e
+ms.openlocfilehash: b97a9cb50743972a85826d10aba89f9e6fffb5a6
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77465283"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954466"
 ---
 # <a name="managing-ssltls-protocols-and-cipher-suites-for-ad-fs"></a>Управление протоколами SSL/TLS и комплектами шифров для AD FS
 В следующей документации содержатся сведения о том, как отключить и включить определенные протоколы TLS/SSL и комплекты шифров, используемые AD FS
@@ -26,15 +26,15 @@ Schannel — это поставщик поддержки безопасност
 
 Комплект шифров — это набор алгоритмов шифрования. Реализация протокола TLS/SSL в ПОСТАВЩИКе SChannel использует алгоритмы из набора шифров для создания ключей и шифрования информации. Комплект шифров указывает один алгоритм для каждой из следующих задач:
 
-- Обмен ключами
+- обмена ключами;
 - массового шифрования;
 - проверки подлинности сообщений.
 
-AD FS использует SChannel. dll для выполнения взаимодействия с безопасной связью.  В настоящее время AD FS поддерживает все протоколы и комплекты шифров, поддерживаемые SChannel. dll.
+AD FS использует Schannel.dll для выполнения взаимодействия с безопасной связью.  В настоящее время AD FS поддерживает все протоколы и комплекты шифров, поддерживаемые Schannel.dll.
 
-## <a name="managing-the-tlsssl-protocols-and-cipher-suites"></a>Управление протоколами TLS/SSL и комплектами шифров
+## <a name="managing-the-tlsssl-protocols-and-cipher-suites"></a>Управление протоколами TLS и SSL, а также комплектами шифров
 > [!IMPORTANT]
-> В этом разделе содержатся инструкции по изменению реестра. Но при неправильном изменении реестра могут возникнуть серьезные проблемы. Поэтому при выполнении этих шагов соблюдайте осторожность. 
+> В этом разделе содержатся инструкции по изменению реестра. При неправильном изменении реестра могут возникнуть серьезные проблемы. Поэтому будьте внимательны и в точности следуйте инструкциям. 
 > 
 > Имейте в виду, что изменение параметров безопасности по умолчанию для канала SCHANNEL может привести к нарушению или предотвращению обмена данными между определенными клиентами и серверами.  Это происходит, если требуется безопасная связь и у них нет протокола для согласования связи с.
 > 
@@ -87,7 +87,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\ссл 3.0 \ клиент] "Enabled" = DWORD: 00000001
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\ссл 3.0 \ клиент] "DisabledByDefault" = DWORD: 00000000 
 
-### <a name="disable-ssl-30"></a>Отключение SSL 3,0
+### <a name="disable-ssl-30"></a>Отключение SSL 3.0
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\ссл 3.0 \ сервер] "Enabled" = DWORD: 00000000
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\ссл 3.0 \ сервер] "DisabledByDefault" = DWORD: 00000001
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\ссл 3.0 \ клиент] "Enabled" = DWORD: 00000000
@@ -124,7 +124,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.0 \ клиент] "Enabled" = DWORD: 00000001
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.0 \ клиент] "DisabledByDefault" = DWORD: 00000000 
 
-### <a name="disable-tls-10"></a>Отключение TLS 1,0
+### <a name="disable-tls-10"></a>Отключение TLS 1.0
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.0 \ Server] "Enabled" = DWORD: 00000000
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.0 \ Server] "DisabledByDefault" = DWORD: 00000001
 - [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.0 \ клиент] "Enabled" = DWORD: 00000000
@@ -184,17 +184,17 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 Используйте следующие разделы реестра и их значения для включения и отключения TLS 1,2.
 
-### <a name="enable-tls-12"></a>Включение TLS 1,2
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ сервер] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ сервер] "DisabledByDefault" = DWORD: 00000000 
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ клиент] "Enabled" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ клиент] "DisabledByDefault" = DWORD: 00000000
+### <a name="enable-tls-12"></a>Включите протокол TLS 1.2.
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "Enabled"=dword:00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000000 
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "Enabled"=dword:00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000000
 
-### <a name="disable-tls-12"></a>Отключение TLS 1,2
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ сервер] "Enabled" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ сервер] "DisabledByDefault" = DWORD: 00000001
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ клиент] "Enabled" = DWORD: 00000000
-- [HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел\протоколс\тлс 1.2 \ клиент] "DisabledByDefault" = DWORD: 00000001
+### <a name="disable-tls-12"></a>Отключение протокола TLS 1.2
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "Enabled"=dword:00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server] "DisabledByDefault"=dword:00000001
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "Enabled"=dword:00000000
+- [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client] "DisabledByDefault"=dword:00000001
 
 ### <a name="using-powershell-to-disable-tls-12"></a>Отключение TLS 1,2 с помощью PowerShell
 
@@ -229,7 +229,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 - [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000001
 - [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 56/128] "Enabled" = DWORD: 00000001 
 
-### <a name="disable-rc4"></a>Отключение RC4
+### <a name="disable-rc4"></a>Отключение версии-кандидата 4
 
 - [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 128/128] "Enabled" = DWORD: 00000000
 - [HKEY_LOCAL_MACHINE \SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Ciphers\RC4 40/128] "Enabled" = DWORD: 00000000
@@ -256,20 +256,20 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 Чтобы включить комплект шифров, добавьте его строковое значение в ключ многострочного значения функций.  Например, если нужно включить TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384_P521 то мы бы добавили его в строку.
 
-Полный список поддерживаемых комплектов шифров см. в разделе комплекты [шифров в TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx).  Этот документ содержит таблицу наборов, включенных по умолчанию и поддерживаемых, но не включенных по умолчанию.  Чтобы определить приоритеты для комплектов шифров, см. раздел [Определение приоритетов для комплектов шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx).
+Полный список поддерживаемых комплектов шифров см. в разделе комплекты [шифров в TLS/SSL (Schannel SSP)](/windows/win32/secauthn/cipher-suites-in-schannel).  Этот документ содержит таблицу наборов, включенных по умолчанию и поддерживаемых, но не включенных по умолчанию.  Чтобы определить приоритеты для комплектов шифров, см. раздел [Определение приоритетов для комплектов шифров SChannel](/windows/win32/secauthn/prioritizing-schannel-cipher-suites).
 
 ## <a name="enabling-strong-authentication-for-net-applications"></a>Включение строгой проверки подлинности для приложений .NET
 Приложения .NET Framework 3.5/4.0/4.5. x могут переключить протокол по умолчанию на TLS 1,2, включив раздел реестра SchUseStrongCrypto.  Этот раздел реестра принудительно заставит приложения .NET использовать TLS 1,2.
 
 > [!IMPORTANT]
-> Для AD FS в Windows Server 2016 и Windows Server 2012 R2 необходимо использовать ключ .NET Framework 4.0/4.5. x: HKEY_LOCAL_MACHINE \Софтваре\микрософт\\. NETFramework\v4.0.30319
+> Для AD FS в Windows Server 2016 и Windows Server 2012 R2 необходимо использовать ключ .NET Framework 4.0/4.5. x: HKEY_LOCAL_MACHINE \Софтваре\микрософт \\ . NETFramework\v4.0.30319
 
 
 Для .NET Framework 3,5 Используйте следующий раздел реестра:
 
-[HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft\\. NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
+[HKEY_LOCAL_MACHINE \SOFTWARE\Wow6432Node\Microsoft \\ . NETFramework\v2.0.50727] "SchUseStrongCrypto" = DWORD: 00000001
 
-Для .NET Framework 4.0/4.5. x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE \Софтваре\микрософт\\. NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
+Для .NET Framework 4.0/4.5. x используйте следующий раздел реестра: HKEY_LOCAL_MACHINE \Софтваре\микрософт \\ . NETFramework\v4.0.30319 "SchUseStrongCrypto" = DWORD: 00000001
 
 ![Строгая проверка подлинности](media/Managing-SSL-Protocols-in-AD-FS/strongauth.png)
 
@@ -280,7 +280,7 @@ Write-Host 'SSL 2.0 has been disabled.'
 
 ## <a name="additional-information"></a>Дополнительные сведения
 
-- [Комплекты шифров в TLS/SSL (общедоступный поставщик услуг Schannel)](https://msdn.microsoft.com/library/windows/desktop/aa374757.aspx)
-- [Комплекты шифров TLS в Windows 8.1](https://msdn.microsoft.com/library/windows/desktop/mt767781.aspx)
-- [Определение приоритетов для комплектов шифров SChannel](https://msdn.microsoft.com/library/windows/desktop/bb870930.aspx)
-- [Говорить в шифрах и других загадочными тонгуес](https://blogs.technet.microsoft.com/askds/2015/12/08/speaking-in-ciphers-and-other-enigmatic-tonguesupdate/)
+- [Комплекты шифров в TLS/SSL (общедоступный поставщик услуг Schannel)](/windows/win32/secauthn/cipher-suites-in-schannel)
+- [Комплекты шифров TLS в Windows 8.1](/windows/win32/secauthn/tls-cipher-suites-in-windows-8-1)
+- [Определение приоритетов для комплектов шифров SChannel](/windows/win32/secauthn/prioritizing-schannel-cipher-suites)
+- [Говорить в шифрах и других загадочными тонгуес](/archive/blogs/askds/speaking-in-ciphers-and-other-enigmatic-tonguesupdate)

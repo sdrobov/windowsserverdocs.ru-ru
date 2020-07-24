@@ -7,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 418ab095f5f0af35f3aa176614ad73f48d727a35
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 6077e72ba36c0ef2d0d34da4768aaf9fa5137fbe
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474691"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955226"
 ---
 # <a name="performance-history-for-virtual-machines"></a>Журнал производительности для виртуальных машин
 
@@ -27,7 +27,7 @@ ms.locfileid: "85474691"
 
 Эти серии собираются для каждой подходящей виртуальной машины.
 
-| Series                            | Единицы             |
+| Series                            | Единица измерения             |
 |-----------------------------------|------------------|
 | `vm.cpu.usage`                    | percent          |
 | `vm.memory.assigned`              | Байты            |
@@ -46,7 +46,7 @@ ms.locfileid: "85474691"
 ## <a name="how-to-interpret"></a>Как интерпретировать
 
 
-| Series                            | Описание:                                                                                                  |
+| Series                            | Описание                                                                                                  |
 |-----------------------------------|--------------------------------------------------------------------------------------------------------------|
 | `vm.cpu.usage`                    | Процент использования виртуальными машинами процессоров сервера узла.                                   |
 | `vm.memory.assigned`              | Объем памяти, назначенной виртуальной машине.                                                      |
@@ -65,7 +65,7 @@ ms.locfileid: "85474691"
 
 ## <a name="usage-in-powershell"></a>Использование в PowerShell
 
-Используйте командлет [Get-VM](https://docs.microsoft.com/powershell/module/hyper-v/get-vm) :
+Используйте командлет [Get-VM](/powershell/module/hyper-v/get-vm) :
 
 ```PowerShell
 Get-VM <Name> | Get-ClusterPerf

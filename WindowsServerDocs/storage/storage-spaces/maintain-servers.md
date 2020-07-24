@@ -9,12 +9,12 @@ author: eldenchristensen
 ms.date: 10/08/2018
 ms.assetid: 73dd8f9c-dcdb-4b25-8540-1d8707e9a148
 ms.localizationpriority: medium
-ms.openlocfilehash: a317f358c37f607475890efe773b57ee8efaeb14
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 8dba155f8b8d7312a823dedc72d23268d7d13fbf
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473481"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955916"
 ---
 # <a name="taking-a-storage-spaces-direct-server-offline-for-maintenance"></a>Перевод сервера локальных дисковых пространств в автономный режим для обслуживания
 
@@ -27,7 +27,7 @@ ms.locfileid: "85473481"
 Используйте следующие процедуры для корректной приостановки сервера в кластере локальных дисковых пространств перед его переводом в автономный режим.
 
    > [!IMPORTANT]
-   > Для установки обновлений в кластере локальных дисковых пространств используйте кластерное обновление (CAU), которое автоматически выполняет процедуры, описанные в этом разделе. Дополнительные сведения см. в статье [Кластерное обновление (CAU)](https://technet.microsoft.com/library/hh831694.aspx).
+   > Для установки обновлений в кластере локальных дисковых пространств используйте кластерное обновление (CAU), которое автоматически выполняет процедуры, описанные в этом разделе. Дополнительные сведения см. в статье [Кластерное обновление (CAU)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11)).
 
 ## <a name="verifying-its-safe-to-take-the-server-offline"></a>Проверка безопасности перевода сервера в автономный режим
 
@@ -186,4 +186,4 @@ MyVolume3    Mirror                OK                Healthy      True          
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
-- [Кластерное обновление (CAU)](https://technet.microsoft.com/library/hh831694.aspx)
+- [Кластерное обновление (CAU)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831694(v=ws.11))

@@ -6,12 +6,12 @@ ms.technology: storage-spaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/29/2018
-ms.openlocfilehash: ce3b32bdb0dfb51237f934f23207167a215a0024
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: ccce763b437b461d33dd72cb3d656b825746e6da
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475611"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953847"
 ---
 # <a name="delimit-the-allocation-of-volumes-in-storage-spaces-direct"></a>Разделение размещения томов в Локальные дисковые пространства
 > Область применения: Windows Server 2019
@@ -21,7 +21,7 @@ ms.locfileid: "85475611"
    > [!IMPORTANT]
    > Эта функция впервые реализована в Windows Server 2019. Она недоступна в Windows Server 2016.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 ### <a name="green-checkmark-icon-consider-using-this-option-if"></a>![Зеленый значок галочки.](media/delimit-volume-allocation/supported.png) Рекомендуется использовать этот параметр, если:
 
@@ -37,7 +37,7 @@ ms.locfileid: "85475611"
 
 ### <a name="review-regular-allocation"></a>Проверка: обычное выделение
 
-При использовании регулярного зеркального отображения том делится на несколько небольших "слоев", которые копируются три раза и равномерно распределяются по каждому диску на каждом сервере в кластере. Дополнительные сведения см. в [этом блоге глубокого](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/)ознакомления.
+При использовании регулярного зеркального отображения том делится на несколько небольших "слоев", которые копируются три раза и равномерно распределяются по каждому диску на каждом сервере в кластере. Дополнительные сведения см. в [этом блоге глубокого](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959)ознакомления.
 
 ![Схема, на которой показан объем данных, разделенный на три стопки слоев и равномерно распределенный по всем серверам.](media/delimit-volume-allocation/regular-allocation.png)
 
@@ -205,7 +205,7 @@ MyVolume                300 GB         0       100 GB  100 GB  100 GB  100 GB  0
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Отказоустойчивость в Локальные дисковые пространства](storage-spaces-fault-tolerance.md)
 
-## <a name="appendix"></a>Приложение
+## <a name="appendix"></a>Приложения
 
 Этот сценарий поможет вам увидеть, как распределяются тома.
 

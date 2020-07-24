@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6f97c35eb8a98aedecfd2f5a8dc87d4ddc3a3cd6
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 1edfb61880e03399da0c8eae34903789ca230057
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85928528"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955776"
 ---
 # <a name="begin-restore"></a>begin restore
 
@@ -34,4 +34,4 @@ begin restore
 
 - [команда начала резервного копирования](begin-backup.md)
 
-- [Подготовка к восстановлению](https://docs.microsoft.com/windows/win32/vss/overview-of-preparing-for-restore)
+- [Подготовка к восстановлению](/windows/win32/vss/overview-of-preparing-for-restore)

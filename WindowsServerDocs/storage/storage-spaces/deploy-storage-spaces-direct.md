@@ -10,12 +10,12 @@ author: stevenek
 ms.date: 06/07/2019
 description: Пошаговые инструкции по развертыванию программного хранилища с Локальные дисковые пространства в Windows Server в качестве инфраструктуры с технологией Hyper-in или конвергенции (также известной как агрегированная).
 ms.localizationpriority: medium
-ms.openlocfilehash: 50bcdc175610d6e5c5264f9cb62c7d99d2990ac0
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c18d3edc57ab04c9f9487bc39b52325fa1eb0ba9
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472831"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955116"
 ---
 # <a name="deploy-storage-spaces-direct"></a>Развертывание локальных дисковых пространств
 
@@ -29,7 +29,7 @@ ms.locfileid: "85472831"
 > [!Tip]
 > Виртуальные машины Hyper-V, в том числе Microsoft Azure, можно использовать для [вычисления Локальные дисковые пространства без оборудования](storage-spaces-direct-in-vm.md). Вам также может потребоваться ознакомиться с удобными [сценариями развертывания Windows Server Rapid Lab](https://aka.ms/wslab), которые мы используем в целях обучения.
 
-## <a name="before-you-start"></a>Перед началом работы
+## <a name="before-you-start"></a>Прежде чем начать
 
 Ознакомьтесь с [Локальные дисковые пространства требованиями к оборудованию](Storage-Spaces-Direct-Hardware-Requirements.md) и считывает этот документ, чтобы ознакомиться с общим подходом и важными примечаниями, связанными с некоторыми шагами.
 
@@ -102,7 +102,7 @@ ms.locfileid: "85472831"
 Add-Computer -NewName "Server01" -DomainName "contoso.com" -Credential "CONTOSO\User" -Restart -Force
 ```
 
-Если ваша учетная запись администратора хранилища не является членом группы "Администраторы домена", добавьте учетную запись администратора хранилища в локальную группу администраторов на каждом узле или еще лучше, добавьте группу, используемую для администраторов хранилища. Для этого можно использовать следующую команду (или написать функцию Windows PowerShell. Дополнительные сведения см. в статье [Использование PowerShell для добавления пользователей домена в локальную группу](https://blogs.technet.com/b/heyscriptingguy/archive/2010/08/19/use-powershell-to-add-domain-users-to-a-local-group.aspx) ):
+Если ваша учетная запись администратора хранилища не является членом группы "Администраторы домена", добавьте учетную запись администратора хранилища в локальную группу администраторов на каждом узле или еще лучше, добавьте группу, используемую для администраторов хранилища. Для этого можно использовать следующую команду (или написать функцию Windows PowerShell. Дополнительные сведения см. в статье [Использование PowerShell для добавления пользователей домена в локальную группу](https://devblogs.microsoft.com/scripting/use-powershell-to-add-domain-users-to-a-local-group/) ):
 
 ```
 Net localgroup Administrators <Domain\Account> /add
@@ -119,7 +119,7 @@ Net localgroup Administrators <Domain\Account> /add
 - PowerShell для кластеризации RSAT
 - PowerShell для Hyper-V
 
-Чтобы установить с помощью PowerShell, используйте командлет [Install-WindowsFeature](https://docs.microsoft.com/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) . Его можно использовать на одном сервере следующим образом:
+Чтобы установить с помощью PowerShell, используйте командлет [Install-WindowsFeature](/powershell/module/microsoft.windows.servermanager.migration/install-windowsfeature) . Его можно использовать на одном сервере следующим образом:
 
 ```PowerShell
 Install-WindowsFeature -Name "Hyper-V", "Failover-Clustering", "Data-Center-Bridging", "RSAT-Clustering-PowerShell", "Hyper-V-PowerShell", "FS-FileServer"
@@ -382,9 +382,9 @@ CD $ScriptFolder
 .\KCDSetup.ps1 -HyperVClusterName $HyperVClusterName -ScaleOutFSName $ScaleOutFSName -EnableLM
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
-После развертывания кластеризованного файлового сервера рекомендуется протестировать производительность решения с помощью искусственных рабочих нагрузок, прежде чем приступать к реальным рабочим нагрузкам. Это позволяет убедиться, что решение работает правильно, и устранить все возможные проблемы, прежде чем добавлять сложность рабочих нагрузок. Дополнительные сведения см. в статье [Проверка производительности дисковых пространств с помощью искусственных рабочих нагрузок](https://technet.microsoft.com/library/dn894707.aspx).
+После развертывания кластеризованного файлового сервера рекомендуется протестировать производительность решения с помощью искусственных рабочих нагрузок, прежде чем приступать к реальным рабочим нагрузкам. Это позволяет убедиться, что решение работает правильно, и устранить все возможные проблемы, прежде чем добавлять сложность рабочих нагрузок. Дополнительные сведения см. в статье [Проверка производительности дисковых пространств с помощью искусственных рабочих нагрузок](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
@@ -393,4 +393,4 @@ CD $ScriptFolder
 -   [Планирование томов в локальных дисковых пространствах](plan-volumes.md)
 -   [Отказоустойчивость дисковых пространств](storage-spaces-fault-tolerance.md)
 -   [Требования к оборудованию для локальных дисковых пространств](Storage-Spaces-Direct-Hardware-Requirements.md)
--   [В RDMA или не в RDMA — вот в чем вопрос](https://blogs.technet.microsoft.com/filecab/2017/03/27/to-rdma-or-not-to-rdma-that-is-the-question/) (блог TechNet)
+-   [В RDMA или не в RDMA — вот в чем вопрос](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (блог TechNet)

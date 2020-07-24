@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: e410132ea3d7ce151c47d4708f284a8e44448aaf
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 486cd3a567fe8742d680a77378d8f5a933b876ae
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85937245"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954807"
 ---
 # <a name="add-device"></a>Добавление устройства
 
@@ -31,7 +31,7 @@ wdsutil /add-Device /Device:<Device name> /ID:<UUID | MAC address> [/ReferralSer
 |Параметр|Описание|
 |-------|--------|
 |Модем<computer name>|Указывает имя добавляемого компьютера.|
-|/ID: <UUID &#124; MAC-адрес>|Указывает идентификатор GUID/UUID или MAC-адрес компьютера. GUID/UUID должны быть в одном из двух форматов: двоичная строка или строка GUID. Пример:<p>Двоичная строка: **/ID: ACEFA3E81F20694E953EB2DAA1E8B1B6**<p>Строка GUID: **/ID: E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<p>MAC-адрес должен иметь следующий формат: **00B056882FDC** (без дефисов) или **00-B0-56-88-2F-DC** (с тире)|
+|/ID: <UUID &#124; MAC-адрес>|Указывает идентификатор GUID/UUID или MAC-адрес компьютера. GUID/UUID должны быть в одном из двух форматов: двоичная строка или строка GUID. Например.<p>Двоичная строка: **/ID: ACEFA3E81F20694E953EB2DAA1E8B1B6**<p>Строка GUID: **/ID: E8A3EFAC-201F-4E69-953E-B2DAA1E8B1B6**<p>MAC-адрес должен иметь следующий формат: **00B056882FDC** (без дефисов) или **00-B0-56-88-2F-DC** (с тире)|
 |[/Реферралсервер: <Server name> ]|Указывает имя сервера, к которому нужно подключиться для загрузки программы сетевой загрузки и загрузочного образа с помощью тривиальных протокол FTP (TFTP).|
 |[/Бутпрограм: <Relative path> ]|Указывает относительный путь от папки remoteInstall к программе сетевой загрузки, которую должен получить этот компьютер. Например: boot\x86\pxeboot.com|
 |[/Вдсклиентунаттенд: <Relative path> ]|Указывает относительный путь от папки remoteInstall к файлу автоматической установки, который автоматизирует экраны установки клиента служб развертывания Windows.|
@@ -56,4 +56,4 @@ wdsutil /add-Device /Device:computer1 /ID:{E8A3EFAC-201F-4E69-953F-B2DAA1E8B1B6}
  [Использование команды](using-the-get-alldevices-command.md) 
  Get-аллдевицес [Использование команды](using-the-get-device-command.md) 
  Get-Device [Подкоманда: Set-Device](subcommand-set-device.md) 
- [New-WdsClient](https://technet.microsoft.com/library/dn283430.aspx)
+ [New-WdsClient](/previous-versions/windows/powershell-scripting/dn283430(v=wps.630))

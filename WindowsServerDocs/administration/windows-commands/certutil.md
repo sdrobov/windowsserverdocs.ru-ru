@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 0a2cea23d96c4cb438a2acac6d14c1bd37c67b56
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 159a3d2eb54d6a3040c4a22864a1c90e16bf2247
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85922644"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955336"
 ---
 # <a name="certutil"></a>certutil
 
@@ -767,7 +767,7 @@ certutil [options] -store [certificatestorename [certID [outputfile]]]
 
 Где:
 
-- **цертификатесторенаме** — это имя хранилища сертификатов. Пример:
+- **цертификатесторенаме** — это имя хранилища сертификатов. Например.
 
   - `My, CA (default), Root,`
 
@@ -801,7 +801,7 @@ certutil [options] -store [certificatestorename [certID [outputfile]]]
 
 - `-grouppolicy`Параметр позволяет получить доступ к хранилищу групповой политики компьютера.
 
-Пример:
+Например.
 
 - `-enterprise NTAuth`
 
@@ -938,7 +938,7 @@ certutil [options] -viewstore [certificatestorename [certID [outputfile]]]
 
 - `-grouppolicy`Параметр позволяет получить доступ к хранилищу групповой политики компьютера.
 
-Пример:
+Например.
 
 - `-enterprise NTAuth`
 
@@ -978,7 +978,7 @@ certutil [options] -viewdelstore [certificatestorename [certID [outputfile]]]
 
 - `-grouppolicy`Параметр позволяет получить доступ к хранилищу групповой политики компьютера.
 
-Пример:
+Например.
 
 - `-enterprise NTAuth`
 
@@ -1476,7 +1476,7 @@ certutil [options] -sign infilelist | serialnumber | CRL outfilelist [#hashalgor
 
 - **обжектидлист** — список имен ObjectID с разделителями-запятыми удаляемых файлов.
 
-- ** \@ екстенсионфиле** — это INF-файл, содержащий расширения для обновления или удаления. Пример:
+- ** \@ екстенсионфиле** — это INF-файл, содержащий расширения для обновления или удаления. Например.
 
   ```
   [Extensions]
@@ -2005,7 +2005,7 @@ certutil -? -v
 
 - [Примеры Certutil для управления службами сертификатов Active Directory (AD CS) из командной строки](https://social.technet.microsoft.com/wiki/contents/articles/3063.certutil-examples-for-managing-active-directory-certificate-services-ad-cs-from-the-command-line.aspx)
 
-- [Задачи Certutil для управления сертификатами](https://docs.microsoft.com/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
+- [Задачи Certutil для управления сертификатами](/previous-versions/orphan-topics/ws.10/cc772898(v=ws.10))
 
 - [Экспорт двоичных запросов с помощью программы командной строки certutil.exe пошаговое руководство](https://social.technet.microsoft.com/wiki/contents/articles/7573.active-directory-certificate-services-pki-key-archival-and-management.aspx)
 

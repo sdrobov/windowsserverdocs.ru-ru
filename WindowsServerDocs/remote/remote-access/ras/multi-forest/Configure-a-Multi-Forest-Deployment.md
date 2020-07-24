@@ -8,20 +8,20 @@ ms.topic: article
 ms.assetid: 3c8feff2-cae1-4376-9dfa-21ad3e4d5d99
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: f4675e8f465cc44597e16b0312911cae28bd7a1a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 226277b1247a365e3d46190b8ff3ae361f295204
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860497"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954177"
 ---
 # <a name="configure-a-multi-forest-deployment"></a>Configure a Multi-Forest Deployment
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Данный раздел содержит описание возможных сценариев настройки развертывания удаленного доступа в конфигурации с несколькими лесами. Во всех сценариях предполагается, что DirectAccess развернут в единственном лесу Forest1 и что планируется настроить DirectAccess для работы в новом лесу Forest2.  
   
-## <a name="access-resources-from-forest2"></a><a name="AccessForest2"></a>Доступ к ресурсам из Forest2  
+## <a name="access-resources-from-forest2"></a><a name="AccessForest2"></a>Доступ к ресурсам из леса Forest2  
 В данном сценарии DirectAccess уже развернут в лесу Forest1 и настроен таким образом, чтобы предоставлять клиентам из леса Forest1 доступ к корпоративной сети. По умолчанию клиентам, подключенным через DirectAccess, доступны только ресурсы в лесу Forest1 и недоступны никакие серверы в лесу Forest2.  
   
 #### <a name="to-enable-directaccess-clients-to-access-resources-from-forest2"></a>Предоставление клиентам DirectAccess доступа к ресурсам из леса Forest2  
@@ -30,20 +30,20 @@ ms.locfileid: "80860497"
   
 2.  Добавьте соответствующие внутренние префиксы IPv6 в лесу Forest2, если IPv6 развертывается во внутренней сети.  
   
-## <a name="enable-clients-from-forest2-to-connect-via-directaccess"></a><a name="EnableForest2DA"></a>Разрешить клиентам подключаться через DirectAccess с помощью Forest2  
+## <a name="enable-clients-from-forest2-to-connect-via-directaccess"></a><a name="EnableForest2DA"></a>Обеспечение клиентов из леса Forest2 возможностью подключения через DirectAccess  
 В этом сценарии выполняется настройка развертывания удаленного доступа для предоставления клиентам из леса Forest2 доступа к корпоративной сети. Предполагается, что уже созданы необходимые группы безопасности для клиентских компьютеров в лесу Forest2.   
   
 #### <a name="to-allow-clients-from-forest2-to-access-the-corporate-network"></a>Предоставление клиентам из леса Forest2 доступа к корпоративной сети  
   
 1.  Добавьте группу безопасности клиентов из леса Forest2.  
   
-2.  Если DNS-суффикс Forest2 не является частью DNS-суффикса Forest1, добавьте правила NRPT с суффиксами домена клиентов в Forest2, чтобы разрешить доступ к контроллерам домена для проверки подлинности, и при необходимости добавьте суффиксы доменов в Forest2 в DNS. список поиска суффиксов. 
+2.  Если DNS-суффикс Forest2 не является частью DNS-суффикса Forest1, добавьте правила NRPT с суффиксами домена клиентов в Forest2, чтобы разрешить доступ к контроллерам домена для проверки подлинности, и при необходимости добавьте суффиксы доменов в Forest2 в список поиска DNS-суффикса. 
   
 3.  Добавьте внутренние префиксы IPv6 в лесу Forest2, чтобы DirectAccess мог создать туннель IPsec к контроллерам домена для проверки подлинности.  
   
 4.  Обновите список серверов управления.  
   
-## <a name="add-entry-points-from-forest2"></a><a name="AddEPForest2"></a>Добавление точек входа из Forest2  
+## <a name="add-entry-points-from-forest2"></a><a name="AddEPForest2"></a>Добавление точек входа из леса Forest2  
 В этом сценарии DirectAccess развертывается в многосайтовой конфигурации в лесу Forest1 и планируется добавить сервер удаленного доступа с именем DA2 из леса Forest2 в качестве точки входа для существующего многосайтового развертывания DirectAccess.  
   
 #### <a name="to-add-a-remote-access-server-from-forest2-as-an-entry-point"></a>Добавление сервера удаленного доступа из леса Forest2 в качестве точки доступа  
@@ -69,12 +69,12 @@ ms.locfileid: "80860497"
   
 -   Лес учетных записей — все остальные леса в топологии.  
   
-Для этой процедуры требуется сценарий PowerShell, PKISync.ps1. См. раздел [AD CS: сценарий PKISync.ps1 для регистрации сертификатов между лесами](https://technet.microsoft.com/library/ff961506.aspx).  
+Для этой процедуры требуется сценарий PowerShell, PKISync.ps1. См. раздел [AD CS: сценарий PKISync.ps1 для регистрации сертификатов между лесами](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff961506(v=ws.10)).  
   
 > [!NOTE]  
-> В этом разделе приведены примеры командлетов Windows PowerShell, которые могут быть использованы для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
+> В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Использование командлетов](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
-### <a name="configure-cas-as-certificate-publishers"></a><a name="BKMK_CertPub"></a>Настройка центров сертификации в качестве издателей сертификатов  
+### <a name="configure-cas-as-certificate-publishers"></a><a name="BKMK_CertPub"></a>Настройка ЦС в качестве издателей сертификатов  
   
 1.  Для обеспечения поддержки ссылок LDAP во всех ЦС предприятия во всех лесах выполните следующую команду из командной строки с повышенными привилегиями:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "80860497"
     certutil -config <Computer-Name>\<Root-CA-Name> -ca.cert <root-ca-cert-filename.cer>  
     ```  
   
-    (Если выполнить команду в корневом ЦС, можно опустить сведения о подключении,-config < Computer-name >\\< Root-CA-name >)  
+    (Если выполнить команду в корневом ЦС, можно опустить сведения о подключении,-config <Computer-Name>\\<Root-CA-name>)  
   
     1.  Импортируйте сертификат корневого ЦС из предыдущего шага в ЦС леса учетных записей, выполнив следующую команду из командной строки с повышенными привилегиями:  
   
@@ -104,7 +104,7 @@ ms.locfileid: "80860497"
         certutil -dspublish -f <root-ca-cert-filename.cer> RootCA  
         ```  
   
-    2.  Предоставьте шаблонам сертификатов леса ресурсов разрешения на чтение и запись в лесу учетной записи \<\>\\< учетной записи администратора\>.  
+    2.  Предоставьте шаблонам сертификатов леса ресурсов разрешения на чтение и запись для \<Account Forest\> \\ учетной записи администратора<\> .  
   
     3.  Извлеките все сертификаты ЦС предприятия в лесу ресурсов, выполнив следующую команду из командной строки с повышенными привилегиями:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "80860497"
         certutil -config <Computer-Name>\<Enterprise-CA-Name> -ca.cert <enterprise-ca-cert-filename.cer>  
         ```  
   
-        (Если выполнить команду в корневом ЦС, можно опустить сведения о подключении,-config < Computer-name >\\< Root-CA-name >)  
+        (Если выполнить команду в корневом ЦС, можно опустить сведения о подключении,-config <Computer-Name>\\<Root-CA-name>)  
   
     4.  Импортируйте сертификаты ЦС предприятия из предыдущего шага в ЦС леса учетных записей, выполнив следующие команды из командной строки с повышенными привилегиями:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "80860497"
   
     5.  Удалите шаблоны сертификатов для OTP леса учетных записей из списка выданных шаблонов сертификатов.  
   
-### <a name="delete-and-import-otp-certificate-templates"></a><a name="BKMK_DelImp"></a>Удаление и импорт шаблонов сертификатов OTP  
+### <a name="delete-and-import-otp-certificate-templates"></a><a name="BKMK_DelImp"></a>Удаление и импорт шаблонов сертификатов для OTP  
   
 1.  Удалите шаблоны сертификатов для OTP из леса учетных записей, то есть Forest2.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "80860497"
     .\PKISync.ps1 -sourceforest <resource forest DNS> -targetforest <account forest DNS> -type Oid -f  
     ```  
   
-### <a name="publish-otp-certificate-templates"></a><a name="BKMK_Publish"></a>Публикация шаблонов сертификатов OTP  
+### <a name="publish-otp-certificate-templates"></a><a name="BKMK_Publish"></a>Публикация шаблонов сертификатов для OTP  
   
 -   Выдайте импортированные шаблоны сертификатов всем ЦС лесов учетных записей.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "80860497"
   
 8.  В диалоговом окне **Применение параметров мастера настройки удаленного доступа** нажмите кнопку **Закрыть**.  
   
-### <a name="add-internal-ipv6-prefix"></a><a name="IPv6Prefix"></a>Добавить внутренний префикс IPv6  
+### <a name="add-internal-ipv6-prefix"></a><a name="IPv6Prefix"></a>Добавление внутреннего префикса IPv6  
   
 > [!NOTE]  
 > Добавление внутреннего префикса IPv6 имеет смысл только при развертывании IPv6 во внутренней сети.  
@@ -208,7 +208,7 @@ ms.locfileid: "80860497"
   
 7.  В диалоговом окне **Применение параметров мастера настройки удаленного доступа** нажмите кнопку **Закрыть**.  
   
-### <a name="add-client-security-groups"></a><a name="SGs"></a>Добавление групп безопасности клиента  
+### <a name="add-client-security-groups"></a><a name="SGs"></a>Добавление клиентских групп безопасности  
 Чтобы разрешить клиентским компьютерам под управлением Windows 8 Forest2 доступ к ресурсам через DirectAccess, необходимо добавить группу безопасности из Forest2 в развертывание удаленного доступа.  
   
 ##### <a name="to-add-windows-8-client-security-groups"></a>Добавление клиентских групп безопасности Windows 8  
@@ -240,5 +240,3 @@ ms.locfileid: "80860497"
   
 2.  В диалоговом окне **Обновление серверов управления** нажмите кнопку **Закрыть**.  
   
-
-

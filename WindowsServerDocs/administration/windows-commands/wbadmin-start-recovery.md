@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2a8934d9177d81cd05124175e64746ecdb4a1bc1
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 684e768979f54b772bffcb997b6ad44291dde8af
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85930949"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954576"
 ---
 # <a name="wbadmin-start-recovery"></a>wbadmin start recovery
 
@@ -93,7 +93,7 @@ wbadmin start recovery -version:04/30/2013-09:00 -backupTarget:\\servername\shar
 
 -   [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   Командлет [Start-вбфилерековери](https://technet.microsoft.com/library/jj902457.aspx)
--   Командлет [Start-вбхиперврековери](https://technet.microsoft.com/library/jj902463.aspx)
--   Командлет [Start-вбсистемстатерековери](https://technet.microsoft.com/library/jj902449.aspx)
--   Командлет [Start-вбволумерековери](https://technet.microsoft.com/library/jj902470.aspx)
+-   Командлет [Start-вбфилерековери](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)
+-   Командлет [Start-вбхиперврековери](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)
+-   Командлет [Start-вбсистемстатерековери](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)
+-   Командлет [Start-вбволумерековери](/powershell/module/windowserverbackup/?view=winserver2012r2-ps)

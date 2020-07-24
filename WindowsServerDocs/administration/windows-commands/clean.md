@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 7a30e1f765959ed60efa662301f95defc21d6587
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 39029c82dffe004d65b1279e5baafc14fbcc8257
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85929907"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955676"
 ---
 # <a name="clean"></a>clean
 
@@ -23,7 +23,7 @@ ms.locfileid: "85929907"
 Удаляет все разделы или форматирование тома с диска, на котором находится фокус.
 
 >[!NOTE]
-> Версию этой команды для PowerShell см. в разделе [Команда Clear-Disk](https://docs.microsoft.com/powershell/module/storage/clear-disk).
+> Версию этой команды для PowerShell см. в разделе [Команда Clear-Disk](/powershell/module/storage/clear-disk).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,6 +55,6 @@ clean
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Команда Clear-Disk](https://docs.microsoft.com/powershell/module/storage/clear-disk)
+- [Команда Clear-Disk](/powershell/module/storage/clear-disk)
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)

@@ -8,16 +8,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.technology: storage-replica
 manager: mchad
-ms.openlocfilehash: ee4f508cf0a65b59c3253d6865c649cc9652c569
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 8a1d98fd6c36876aebaf2f9abe4bed29f5485e8a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856307"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955546"
 ---
 # <a name="cluster-to-cluster-storage-replica-cross-region-in-azure"></a>Межрегиональная межкластерная репликация хранилища в Azure
 
-> Область применения: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
+> Применяется к: Windows Server 2019, Windows Server 2016, Windows Server (Semi-Annual Channel)
 
 Вы можете настроить кластеры на реплики хранилища кластера для приложений в разных регионах в Azure. В приведенных ниже примерах мы используем кластер из двух узлов, но Реплика хранилища кластера не ограничена кластером из двух узлов. На рисунке ниже показан распределенный кластер с двумя узлами, который может взаимодействовать друг с другом, находится в одном домене и находится в разных регионах.
 
@@ -37,7 +37,7 @@ ms.locfileid: "80856307"
     - Группа доступности (**az2azAS1**) в (**SR-AZ2AZ**)
     - Группа доступности (**азкросс-AS**) в (**SR-азкросс**)
 
-3. Создание двух виртуальных сетей
+3. создание двух виртуальных сетей;
    - Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**az2az-vnet**) в первой группе ресурсов (**SR-az2az**) с одной подсетью и одной подсетью шлюза.
    - Создайте [виртуальную сеть](https://ms.portal.azure.com/#create/Microsoft.VirtualNetwork-ARM) (**азкросс-vnet**) во второй группе ресурсов (**SR-азкросс**) с одной подсетью и одной подсетью шлюза.
 
@@ -92,13 +92,13 @@ ms.locfileid: "80856307"
 8. Создайте внутренний [Load Balancer](https://ms.portal.azure.com/#create/Microsoft.LoadBalancer-ARM) SKU "Стандартный" для каждого кластера (**azlbr1**, **азлбазкросс**).
 
    Укажите IP-адрес кластера в виде статического частного IP-адреса для балансировщика нагрузки.
-      - azlbr1 = > интерфейсный IP-адрес: 10.3.0.100 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
+      - azlbr1 => интерфейсный IP-адрес: 10.3.0.100 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**az2az-vnet**))
       - Создайте серверный пул для каждой подсистемы балансировки нагрузки. Добавьте связанные узлы кластера.
       - Создание проверки работоспособности: порт 59999
       - Создать правило балансировки нагрузки: разрешить порты с высоким уровнем доступности с включенным плавающим IP-адресом.
 
    Укажите IP-адрес кластера в виде статического частного IP-адреса для балансировщика нагрузки. 
-      - азлбазкросс = > интерфейсный IP-адрес: 10.0.0.10 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**азкросс-vnet**))
+      - азлбазкросс => интерфейсный IP-адрес: 10.0.0.10 (выбор неиспользуемого IP-адреса из подсети виртуальной сети (**азкросс-vnet**))
       - Создайте серверный пул для каждой подсистемы балансировки нагрузки. Добавьте связанные узлы кластера.
       - Создание проверки работоспособности: порт 59999
       - Создать правило балансировки нагрузки: разрешить порты с высоким уровнем доступности с включенным плавающим IP-адресом. 
@@ -127,7 +127,7 @@ ms.locfileid: "80856307"
 
     Запустите его один раз с любого узла кластера для каждого кластера. 
     
-    В нашем примере необходимо изменить "ИЛБИП" в соответствии со значениями конфигурации. Выполните следующую команду из одного узла **az2az1**/**az2az2**
+    В нашем примере необходимо изменить "ИЛБИП" в соответствии со значениями конфигурации. Выполните следующую команду из одного узла **az2az1** / **az2az2**
 
     ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
@@ -137,7 +137,7 @@ ms.locfileid: "80856307"
      Get-ClusterResource $IPResourceName | Set-ClusterParameter -Multiple @{"Address"="$ILBIP";"ProbePort"=$ProbePort;"SubnetMask"="255.255.255.255";"Network"="$ClusterNetworkName";"ProbeFailureThreshold"=5;"EnableDhcp"=0}  
     ```
 
-12. Выполните следующую команду из одного узла **azcross1**/**azcross2**
+12. Выполните следующую команду из одного узла **azcross1** / **azcross2**
     ```PowerShell
      $ClusterNetworkName = "Cluster Network 1" # Cluster network name (Use Get-ClusterNetwork on Windows Server 2012 or higher to find the name. And use Get-ClusterResource to find the IPResourceName).
      $IPResourceName = "Cluster IP Address" # IP Address cluster resource name.
@@ -165,7 +165,7 @@ ms.locfileid: "80856307"
 
 14. Выполнение [тестов проверки кластера](../../failover-clustering/create-failover-cluster.md#validate-the-configuration) перед переходом к следующему шагу
 
-15. Запустите Windows PowerShell и используйте командлет [Test-SRTopology](https://docs.microsoft.com/powershell/module/storagereplica/test-srtopology?view=win10-ps), чтобы определить, все ли требования для реплики хранилища выполнены. Этот командлет можно запустить в режиме быстрой проверки требований или в режиме длительной оценки производительности.
+15. Запустите Windows PowerShell и используйте командлет [Test-SRTopology](/powershell/module/storagereplica/test-srtopology?view=win10-ps), чтобы определить, все ли требования для реплики хранилища выполнены. Этот командлет можно запустить в режиме быстрой проверки требований или в режиме длительной оценки производительности.
  
 16. Настройка реплики хранилища кластера в кластер.
     Предоставление доступа из одного кластера в другой в обоих направлениях:
@@ -189,7 +189,7 @@ ms.locfileid: "80856307"
       - Расположение тома:-К:\клустерстораже\датадисккросс
       - Расположение журнала:-g:
 
-Выполните следующую команду:
+Выполните приведенную ниже команду.
 
 ```powershell
 PowerShell

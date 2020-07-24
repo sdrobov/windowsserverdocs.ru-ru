@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 2f7e23a82afba85ea8a670c636e0f700cb7def2e
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: a3d7be286e124af9e31c8607827a97f967b907ae
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85930921"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954506"
 ---
 # <a name="wbadmin-start-sysrecovery"></a>wbadmin start sysrecovery
 
@@ -23,7 +23,7 @@ ms.locfileid: "85930921"
 Выполняет восстановление системы (восстановление исходного состояния компьютера), используя указанные параметры.
 
 > [!NOTE]
-> Эта подкоманда может быть запущена только из среды восстановления Windows и не указана по умолчанию в тексте использования **Wbadmin**. Дополнительные сведения см. в статье [Обзор среды восстановления Windows (Windows RE)](https://technet.microsoft.com/library/hh825173.aspx).
+> Эта подкоманда может быть запущена только из среды восстановления Windows и не указана по умолчанию в тексте использования **Wbadmin**. Дополнительные сведения см. в статье [Обзор среды восстановления Windows (Windows RE)](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10)).
 
 Чтобы выполнить восстановление системы с помощью этой подкоманды, необходимо быть членом группы " **Операторы архива** " или " **Администраторы** ", либо вам должны быть делегированы соответствующие разрешения.
 
@@ -69,4 +69,4 @@ wbadmin start sysrecovery -version:04/30/2013-09:00 -backupTarget:\\servername\s
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 -   [Wbadmin](wbadmin.md)
--   Командлет [Get-вббареметалрековери](https://technet.microsoft.com/library/jj902461.aspx)
+-   Командлет [Get-вббареметалрековери](/previous-versions/windows/it-pro/windows-8.1-and-8/hh825173(v=win.10))

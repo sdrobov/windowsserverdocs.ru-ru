@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 897927c48a1ba2c2023e35ff1f4c93e6c33fb291
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 297a6592dad6a70aae218b5f1e8426fe0c855e63
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85923543"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955866"
 ---
 # <a name="automount"></a>automount
 
@@ -62,4 +62,4 @@ automount disable
 
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
-- [команды DiskPart](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))
+- [команды DiskPart](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/cc770877(v%3dws.11))

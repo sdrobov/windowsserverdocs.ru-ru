@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8bfcb43b2e42ca65d767f0683bf13dc971073c27
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 41c6194b68414be65fcf6b93b662e25ae80e0309
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85923994"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86955506"
 ---
 # <a name="assign"></a>assign
 
@@ -38,7 +38,7 @@ assign [{letter=<d> | mount=<path>}] [noerr]
 | Параметр | Описание |
 | --------- | ----------- |
 | `letter=<d>` | Буква диска, которую вы хотите назначить тому. |
-| `mount=<path>` | Путь к точке подключения, который необходимо назначить тому. Инструкции по использованию этой команды см. [в разделе Назначение пути к папке точки подключения диску](https://docs.microsoft.com/windows-server/storage/disk-management/assign-a-mount-point-folder-path-to-a-drive). |
+| `mount=<path>` | Путь к точке подключения, который необходимо назначить тому. Инструкции по использованию этой команды см. [в разделе Назначение пути к папке точки подключения диску](../../storage/disk-management/assign-a-mount-point-folder-path-to-a-drive.md). |
 | Noerr | Только для сценариев. При возникновении ошибки DiskPart продолжит обрабатывать команды, как если бы ошибка не возникала. Без этого параметра ошибка приводит к выходу из программы DiskPart с кодом ошибки. |
 
 ## <a name="examples"></a>Примеры

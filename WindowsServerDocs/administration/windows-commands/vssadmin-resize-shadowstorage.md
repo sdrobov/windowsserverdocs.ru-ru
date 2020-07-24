@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 03/05/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e32fe419899c0f553f36976ecee95fb3a922f1a6
-ms.sourcegitcommit: bf887504703337f8ad685d778124f65fe8c3dc13
+ms.openlocfilehash: 8b723fd3768561da7d636dd1724bd0c75ee2ee85
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83436629"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86954706"
 ---
 # <a name="vssadmin-resize-shadowstorage"></a>Vssadmin изменение размера шадовстораже
 
@@ -21,7 +21,7 @@ ms.locfileid: "83436629"
 
 Изменяет максимальный объем дискового пространства, который можно использовать для хранения теневых копий.
 
-Минимальный объем дискового пространства, который можно использовать для хранения теневых копий, можно указать с помощью значения реестра **миндиффареафилесизе** . Дополнительные сведения см. в разделе [миндиффареафилесизе](https://docs.microsoft.com/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize).
+Минимальный объем дискового пространства, который можно использовать для хранения теневых копий, можно указать с помощью значения реестра **миндиффареафилесизе** . Дополнительные сведения см. в разделе [миндиффареафилесизе](/windows/win32/backup/registry-keys-for-backup-and-restore#mindiffareafilesize).
 
 > [!WARNING]
 > Изменение размера связи хранилища может привести к исчезновению теневых копий.
@@ -50,5 +50,5 @@ vssadmin Resize ShadowStorage /For=C: /On=C: /MaxSize=20%
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-* [Ключ синтаксиса командной строки](https://docs.microsoft.com/windows-server/administration/windows-commands/command-line-syntax-key)
+* [Ключ синтаксиса командной строки](./command-line-syntax-key.md)
 * [List](vssadmin.md)
