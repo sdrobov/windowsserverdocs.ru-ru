@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 680d0435d77164e101f045b439be6ccb6601dfef
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3b9f727107ac9d392b52ab683aca510849fc534a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80855737"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964696"
 ---
 # <a name="use-software-restriction-policies-to-help-protect-your-computer-against-an-email-virus"></a>Использование политик ограниченного использования программ для защиты компьютера от вирусов, распространяемых по электронной почте
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе содержатся сведения о том, как настроить политики управления приложениями с помощью политик ограниченного использования программ (SRP) для защиты компьютера от вирусов, начиная с Windows Server 2008 и Windows Vista.
 
@@ -33,13 +33,13 @@ ms.locfileid: "80855737"
 
     -   [Рекомендации](software-restriction-policies-technical-overview.md#BKMK_Best_Practices)
 
-    -   [Принципы работы политик ограниченного использования программ](https://technet.microsoft.com/library/cc786941(v=WS.10).aspx)
+    -   [Принципы работы политик ограниченного использования программ](/previous-versions/windows/it-pro/windows-server-2003/cc786941(v=ws.10))
 
 2.  Откройте окно "Политики ограниченного использования программ".
 
     -   [Для локального компьютера](administer-software-restriction-policies.md#BKMK_1)
 
-    -   [Для домена, сайта или подразделения, а также на рядовом сервере или на рабочей станции, присоединенной к домену.](administer-software-restriction-policies.md#BKMK_2)
+    -   [Для домена, сайта или подразделения: вы находитесь на рядовом сервере или на рабочей станции, присоединенной к домену.](administer-software-restriction-policies.md#BKMK_2)
 
 3.  Если вы ранее не определили политики ограниченного использования программ, создайте новые политики ограниченного использования программ.
 
@@ -47,7 +47,7 @@ ms.locfileid: "80855737"
 
 4.  Создайте правило для пути к папке, используемой программой электронной почты для запуска вложений электронной почты, а затем установите для уровня безопасности значение **запрещено**.
 
-    -   [Работа с правилами пути](work-with-software-restriction-policies-rules.md#BKMK_Path_Rules)
+    -   [Работа с правилами для путей](work-with-software-restriction-policies-rules.md#BKMK_Path_Rules)
 
 5.  Укажите типы файлов, к которым применяется правило.
 
@@ -59,8 +59,6 @@ ms.locfileid: "80855737"
 
     -   Исключите локальных администраторов из политик ограниченного использования программ для определенного параметра политики в групповая политика и по-прежнему примените остальные групповая политика к администраторам.
 
-        -   [Предотвращение применения политик ограниченного использования программ к локальным администраторам](administer-software-restriction-policies.md#BKMK_Prevent_Admin)
+        -   [Запрет применения политик ограниченного использования программ к локальным администраторам](administer-software-restriction-policies.md#BKMK_Prevent_Admin)
 
 7.  Проверьте политику.
-
-

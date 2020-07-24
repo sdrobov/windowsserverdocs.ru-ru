@@ -8,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cde839feda47d55415b2b6cc1026a7a3e6515a44
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 54a2ef82d5eccabaf8be0971ca0324498e75bb78
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80823097"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966416"
 ---
 # <a name="directory-services-component-updates"></a>Обновления компонентов служб каталогов
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 **Автор**: Джастин Тернер, старший инженер по расширению поддержки с группой Windows  
   
@@ -26,7 +26,7 @@ ms.locfileid: "80823097"
   
 На этом занятии объясняются обновления компонентов служб каталогов в Windows Server 2012 R2.  
   
-## <a name="what-you-will-learn"></a>Тема обучения  
+## <a name="what-you-will-learn"></a>Обзор учебника  
 Объясните следующие новые обновления компонентов служб каталогов:  
   
 -   Объясните следующие новые обновления компонентов служб каталогов:  
@@ -138,7 +138,7 @@ Set-ADDomainMode -DomainMode Windows2008Domain -Identity contoso.com
   
 1.  Sch60  
   
-**Политики аутентификации и приемники команд**  
+**Политики проверки подлинности и приемники команд**  
   
 1.  Sch68  
   
@@ -269,7 +269,7 @@ Log Record Bytes Generated: 0
   
 ### <a name="to-enable-the-stats-control-in-ldp"></a><a name="BKMK_EnableStats"></a>Включение контроля статистики в LDP  
   
-1.  Откройте LDP. exe и подключитесь к контроллеру домена и привяжите его к нему.  
+1.  Откройте LDP.exe, подключитесь к контроллеру домена и привяжите его к нему.  
   
 2.  В меню **Параметры** выберите пункт **элементы управления**.  
   
@@ -288,7 +288,7 @@ Log Record Bytes Generated: 0
 ### <a name="try-this-use-ldp-to-return-query-statistics"></a>Попробуйте сделать это: Использование LDP для возврата статистики запросов  
 Выполните следующие действия на контроллере домена или в присоединенном к домену клиенте или сервере с установленными инструментами AD DS.  Повторите следующие действия, предназначенные для контроллера домена Windows Server 2012 и контроллера домена Windows Server 2012 R2.  
   
-1.  Просмотрите статью [«Создание более эффективных приложений с поддержкой Microsoft Active Directory»](https://msdn.microsoft.com/library/ms808539.aspx) и вернитесь к ней по мере необходимости.  
+1.  Просмотрите статью [«Создание более эффективных приложений с поддержкой Microsoft Active Directory»](/previous-versions/ms808539(v=msdn.10)) и вернитесь к ней по мере необходимости.  
   
 2.  С помощью LDP включите статистику поиска (см. раздел [Включение контроля статистики в LDP](../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/../../../ad-ds/manage/component-updates/Directory-Services-component-updates.md#BKMK_EnableStats)).  
   
@@ -299,15 +299,15 @@ Log Record Bytes Generated: 0
 5.  Попытка создать поиск, который занимает много времени (возможно, потребуется увеличить **предельное время** , чтобы поиск не выполнялся в течение времени ожидания).  
   
 ### <a name="additional-resources"></a>Дополнительные ресурсы  
-[Что такое Active Directory Поиск?](https://technet.microsoft.com/library/cc783845(v=ws.10).aspx)  
+[Что такое Active Directory Поиск?](/previous-versions/windows/it-pro/windows-server-2003/cc783845(v=ws.10))  
   
-[Как работает поиск Active Directory](https://technet.microsoft.com/library/cc755809(v=WS.10).aspx)  
+[Как работает поиск Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc755809(v=ws.10))  
   
-[Создание более эффективных приложений с поддержкой Active Directory Майкрософт](https://msdn.microsoft.com/library/ms808539.aspx)  
+[Создание более эффективных приложений с поддержкой Active Directory Майкрософт](/previous-versions/ms808539(v=msdn.10))  
   
 [951581](https://support.microsoft.com/kb/951581) . запросы LDAP выполняются медленнее, чем ожидалось в службе каталогов AD или LDS, и регистрируется событие с идентификатором 1644.  
   
-## <a name="1644-event-improvements"></a><a name="BKMK_1644"></a>усовершенствования событий 1644  
+## <a name="1644-event-improvements"></a><a name="BKMK_1644"></a>Улучшения, связанные с событием 1644  
   
 ### <a name="overview"></a>Обзор  
 Это обновление добавляет дополнительную статистику результатов поиска LDAP к событию с ИДЕНТИФИКАТОРом 1644, чтобы помочь в устранении неполадок.  Кроме того, имеется новое значение реестра, которое можно использовать для включения ведения журнала в пороговое значение на основе времени.  Эти улучшения стали доступны в Windows Server 2012 и Windows Server 2008 R2 с пакетом обновления 1 (SP1) через KB [2800945](https://support.microsoft.com/kb/2800945) и будут доступны для Windows Server 2008 с пакетом обновления 2 (SP2).  
@@ -367,11 +367,11 @@ Windows Registry Editor Version 5.00
 ```  
   
 #### <a name="comparison-of-the-old-and-new-event-id-1644"></a>Сравнение старого и нового событий с ИДЕНТИФИКАТОРом 1644  
-ИСХОДНОГО  
+OLD  
   
 ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012.gif)  
   
-Создать  
+NEW  
   
 ![обновления служб каталогов](media/Directory-Services-component-updates/GTR_ADDS_Event1644_2012R2.gif)  
   
@@ -402,7 +402,5 @@ Windows Registry Editor Version 5.00
 > Нет настраиваемых параметров для изменения этого поведения.  
   
 ### <a name="additional-resources"></a>Дополнительные ресурсы  
-[Как работает модель репликации Active Directory](https://technet.microsoft.com/library/cc772726(v=WS.10).aspx)  
+[Как работает модель репликации Active Directory](/previous-versions/windows/it-pro/windows-server-2003/cc772726(v=ws.10))  
   
-
-

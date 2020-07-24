@@ -1,5 +1,5 @@
 ---
-title: Развертывание постоянно подключенного VPN-профиля
+title: Развертывание Always On VPN
 description: В этом разделе содержатся подробные инструкции по развертыванию Always On VPN в Windows Server 2016.
 ms.prod: windows-server
 ms.technology: networking-ras
@@ -9,34 +9,34 @@ ms.localizationpriority: medium
 ms.date: 11/05/2018
 ms.author: v-tea
 author: Teresa-MOTIV
-ms.openlocfilehash: 0889c8a3472509ec3e3a9d013ba649df7ac63d24
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a8f4549b4c2755788366ecf3ff477ae9bbc85010
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860057"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965556"
 ---
-# <a name="deploy-always-on-vpn"></a>Развертывание постоянно подключенного VPN-профиля
+# <a name="deploy-always-on-vpn"></a>Развертывание Always On VPN
 
 >Область применения: Windows Server (половина ежегодного канала), Windows Server 2016, Windows Server 2012 R2, Windows 10
 
 - [**Назад:** Дополнительные сведения о дополнительных возможностях Always On VPN](always-on-vpn-adv-options.md)
 - [**Далее:** Шаг 1. Начало планирования развертывания Always On VPN](always-on-vpn-deploy-planning.md)
 
-В этом разделе вы узнаете о рабочем процессе развертывания Always On VPN-подключений для удаленных клиентских компьютеров Windows 10, присоединенных к домену. Если вы хотите **настроить условный доступ** для точной настройки доступа VPN-пользователей к ресурсам, см. раздел [Условный доступ для VPN-подключений с помощью Azure AD](../../ad-ca-vpn-connectivity-windows10.md). Дополнительные сведения о условном доступе к VPN-подключениям с помощью Azure AD см. [в разделе условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). 
+В этом разделе вы узнаете о рабочем процессе развертывания Always On VPN-подключений для удаленных клиентских компьютеров Windows 10, присоединенных к домену. Если вы хотите **настроить условный доступ** для точной настройки доступа VPN-пользователей к ресурсам, см. раздел [Условный доступ для VPN-подключений с помощью Azure AD](../../ad-ca-vpn-connectivity-windows10.md). Дополнительные сведения о условном доступе к VPN-подключениям с помощью Azure AD см. [в разделе условный доступ в Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal). 
 
 На следующей схеме показан процесс рабочего процесса для различных сценариев при развертывании Always On VPN.
 
-[Блок-схема ![Always On рабочего процесса развертывания VPN](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
+[![Блок-схема Always On рабочего процесса развертывания VPN](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow-sm.png)](../../../../media/Always-On-Vpn/always-on-vpn-deployment-workflow.png)
 
 > [!IMPORTANT]
 > Для этого развертывания не требуется, чтобы серверы инфраструктуры, например компьютеры под управлением домен Active Directory Services, Active Directory службы сертификатов и сервер политики сети, выполнялись под управлением Windows Server 2016. Можно использовать более ранние версии Windows Server, такие как Windows Server 2012 R2, для серверов инфраструктуры и для сервера, на котором выполняется удаленный доступ.
 
-## <a name="step-1-plan-the-always-on-vpn-deployment"></a>[Шаг 1. Планирование развертывания Always On VPN](always-on-vpn-deploy-planning.md)
+## <a name="step-1-plan-the-always-on-vpn-deployment"></a>[Шаг 1. Планирование развертывания постоянно подключенного VPN-профиля](always-on-vpn-deploy-planning.md)
 
 На этом шаге вы начинаете планировать и подготавливать развертывание Always On VPN. Перед установкой роли сервера удаленного доступа на компьютере, который планируется использовать в качестве VPN-сервера. После надлежащего планирования можно развернуть Always On VPN и при необходимости настроить условный доступ для VPN-подключения с помощью Azure AD.
 
-## <a name="step-2-configure-the-always-on-vpn-server-infrastructure"></a>[Шаг 2. Настройка инфраструктуры VPN-сервера Always On](vpn-deploy-server-infrastructure.md)
+## <a name="step-2-configure-the-always-on-vpn-server-infrastructure"></a>[Шаг 2. Настройка серверной инфраструктуры постоянно подключенного VPN-профиля](vpn-deploy-server-infrastructure.md)
 
 На этом шаге вы установите и настроите компоненты на стороне сервера, необходимые для поддержки VPN. Серверные компоненты включают настройку PKI для распространения сертификатов, используемых пользователями, VPN-сервером и сервером NPS.  Вы также настроите RRAS для поддержки подключений по протоколу IKEv2 и сервера NPS для выполнения авторизации подключений VPN.
 
@@ -46,7 +46,7 @@ ms.locfileid: "80860057"
 - **В ЦС сервера сертификатов Active Directory:** Создайте шаблоны сертификатов проверки подлинности пользователя, VPN-сервера и сервера NPS.
 - **В присоединенных к домену клиентах Windows 10:** Регистрация и проверка сертификатов пользователей.
 
-## <a name="step-3-configure-the-remote-access-server-for-always-on-vpn"></a>[Шаг 3. Настройка сервера удаленного доступа для Always On VPN](vpn-deploy-ras.md)
+## <a name="step-3-configure-the-remote-access-server-for-always-on-vpn"></a>[Шаг 3. Настройка сервера удаленного доступа для постоянно подключенного VPN-профиля](vpn-deploy-ras.md)
 
 На этом шаге вы настраиваете VPN-подключение удаленного доступа, разрешающее подключения по протоколу IKEv2, запрещайте подключения от других протокола VPN и назначаете пул статических IP-адресов для выдачи IP-адресов для подключения разрешенных VPN-клиентов.
 
@@ -55,7 +55,7 @@ ms.locfileid: "80860057"
 - Регистрация и проверка сертификата VPN-сервера
 - Установка и настройка VPN удаленного доступа
 
-## <a name="step-4-install-and-configure-the-nps-server"></a>[Шаг 4. Установка и настройка сервера NPS](vpn-deploy-nps.md)
+## <a name="step-4-install-and-configure-the-nps-server"></a>[Шаг 4. Установка и настройка сервера политики сети](vpn-deploy-nps.md)
 
 На этом шаге вы установите сервер политики сети (NPS) с помощью Windows PowerShell или мастера добавления ролей и компонентов диспетчер сервера. Вы также настроите NPS для выполнения всех операций проверки подлинности, авторизации и учета для запроса на подключение, полученного от VPN-сервера.
 
@@ -71,13 +71,13 @@ ms.locfileid: "80860057"
 
 На этом шаге вы настроите параметры DNS и брандмауэра. При подключении удаленных VPN-клиентов они используют те же DNS-серверы, что используются внутренними клиентами, что позволяет им разрешать имена так же, как и остальные внутренние рабочие станции. 
 
-## <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>[Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](vpn-deploy-client-vpn-connections.md)
+## <a name="step-6-configure-windows-10-client-always-on-vpn-connections"></a>[Шаг 6. Настройка подключений постоянно подключенного VPN-профиля клиента Windows 10](vpn-deploy-client-vpn-connections.md)
 
 На этом шаге вы настроите клиентские компьютеры Windows 10 для взаимодействия с этой инфраструктурой с помощью VPN-подключения. Для настройки VPN-клиентов Windows 10 можно использовать несколько технологий, в том числе Windows PowerShell, Microsoft Endpoint Configuration Manager и Intune. Для всех трех требуется профиль VPN в формате XML, чтобы настроить соответствующие параметры VPN.
 
 ## <a name="step-7-optional-configure-conditional-access-for-vpn-connectivity"></a>[Шаг 7. Используемых Настройка условного доступа для VPN-подключения](../../ad-ca-vpn-connectivity-windows10.md)
 
-На этом необязательном шаге можно точно настроить, как разрешенные VPN-пользователи получают доступ к ресурсам. Условный доступ Azure AD для VPN-подключения позволяет защитить VPN-подключения. Условный доступ — это механизм оценки на основе политик, позволяющий создавать правила доступа для любого приложения, подключенного к Azure AD. Дополнительные сведения см. в разделе [Azure Active Directory (Azure AD) условный доступ](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal).
+На этом необязательном шаге можно точно настроить, как разрешенные VPN-пользователи получают доступ к ресурсам. Условный доступ Azure AD для VPN-подключения позволяет защитить VPN-подключения. Условный доступ — это механизм оценки на основе политик, позволяющий создавать правила доступа для любого приложения, подключенного к Azure AD. Дополнительные сведения см. в разделе [Azure Active Directory (Azure AD) условный доступ](/azure/active-directory/active-directory-conditional-access-azure-portal).
 
 ## <a name="next-step"></a>Дальнейшие действия
 

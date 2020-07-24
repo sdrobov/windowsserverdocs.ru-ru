@@ -8,16 +8,16 @@ ms.topic: article
 ms.assetid: 4781df0a-158b-4562-b8f5-32b27615a4f8
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 6d0a9248865dca4afb3db9609b284048155f9eef
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0cf216cb785d01ed08bb3a4490b25d4c4549b1c4
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857437"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965596"
 ---
 # <a name="deploy-remote-access-in-an-enterprise"></a>Развертывание удаленного доступа на предприятии
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе содержатся вводные сведения о реализации сценария DirectAccess на предприятии.  
   
@@ -27,17 +27,17 @@ ms.locfileid: "80857437"
   
 ## <a name="before-you-begin-deploying-see-the-list-of-unsupported-configurations-known-issues-and-prerequisites"></a>Перед началом развертывания ознакомьтесь со списком неподдерживаемых конфигураций, известных проблем и предварительных условий.  
   
--   [Неподдерживаемые конфигурации DirectAccess](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-unsupported-configurations)  
+-   [Неподдерживаемые конфигурации DirectAccess](../directaccess/directaccess-unsupported-configurations.md)  
   
--   [DirectAccess — известные проблемы](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/directaccess-known-issues)  
+-   [DirectAccess — известные проблемы](../directaccess/directaccess-known-issues.md)  
   
--   [Предварительные требования для развертывания DirectAccess)](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/prerequisites-for-deploying-directaccess)  
+-   [Предварительные требования для развертывания DirectAccess)](../directaccess/prerequisites-for-deploying-directaccess.md)  
   
 ## <a name="scenario-description"></a><a name="BKMK_OVER"></a>Описание сценария  
 Компонент удаленного доступа включает несколько функций для предприятий, в том числе: развертывание нескольких серверов удаленного доступа в кластере с балансировкой нагрузки при помощи компонента балансировки сетевой нагрузки Windows (NLB) или внешней подсистемы балансировки нагрузки; настройка мультисайтовых развертываний с серверами удаленного доступа, которые находятся в различных географических расположениях; развертывание DirectAccess с двухфакторной аутентификацией клиента с использованием одноразовых паролей (OTP).  
   
 ## <a name="in-this-scenario"></a>Содержание сценария  
-Каждый корпоративный сценарий описывается в документе, который содержит инструкции по планированию и развертыванию. Дополнительные сведения см. в следующих разделах:  
+Каждый корпоративный сценарий описывается в документе, который содержит инструкции по планированию и развертыванию. Дополнительные сведения можно найти в разделе  
   
 -   [Развертывание удаленного доступа в кластере](cluster/Deploy-Remote-Access-In-Cluster.md)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "80857437"
   
 -   [Развертывание удаленного доступа в среде с несколькими лесами](multi-forest/Deploy-Remote-Access-in-a-Multi-Forest-Environment.md)  
   
-## <a name="practical-applications"></a><a name="BKMK_APP"></a>Практические приложения  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>Практическое применение  
 Корпоративные сценарии удаленного доступа предоставляют следующие преимущества.  
   
 -   **Повышенная доступность**. Развертывание нескольких серверов удаленного доступа в кластере обеспечивает масштабируемость и увеличивает емкость для пропускной способности и количества пользователей. Балансировка нагрузки кластера обеспечивает высокую доступность. Если происходит отказ одного из серверов в кластере, то удаленные пользователи могут сохранить доступ к внутренней корпоративной сети через другой сервер в кластере. Обработка отказа происходит прозрачно для пользователей, поскольку клиенты подключаются к кластеру при помощи виртуальных IP-адресов.  
@@ -56,7 +56,7 @@ ms.locfileid: "80857437"
   
 -   **Экономичность**. Многосайтовое развертывание с удаленным доступом позволяет предприятиям развертывать серверы удаленного доступа на нескольких сайтах, соответствующих расположениям клиентов. Благодаря этому удаленным клиентам предоставляется предсказуемый механизм взаимодействия независимо от их расположения, снижаются затраты и степень использования пропускной способности интрасети за счет маршрутизации трафика клиента через Интернет на ближайший сервер удаленного доступа.  
   
--   **Безопасность.** Развертывание надежной проверки подлинности клиента с одноразовым паролем (OTP) вместо стандартного Active Directory пароля повышает безопасность.  
+-   **Безопасность**. Развертывание надежной проверки подлинности клиента с одноразовым паролем (OTP) вместо стандартного Active Directory пароля повышает безопасность.  
   
 ## <a name="roles-and-features-included-in-this-scenario"></a><a name="BKMK_NEW"></a>Роли и компоненты, входящие в этот сценарий  
 В следующей таблице перечислены роли и компоненты, необходимые для корпоративного сценария.  
@@ -69,5 +69,3 @@ ms.locfileid: "80857437"
   
 
   
-
-

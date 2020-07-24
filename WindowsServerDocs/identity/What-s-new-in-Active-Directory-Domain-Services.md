@@ -7,27 +7,26 @@ ms.topic: article
 author: Femila
 ms.author: billmath
 ms.date: 05/31/2017
-ms.openlocfilehash: 5e58bb229aa8fe02fb20f870a0e922d1aa8c34b7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 179064fdc958537190ddf5ce62475ac5d56fee07
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80825647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965676"
 ---
 # <a name="whats-new-in-active-directory-domain-services"></a>Новые возможности доменных служб Active Directory 
 
->Область применения: Windows Server 2016
+>Область применения. Windows Server 2016
 
-Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить к облачным развертываниям и гибридным развертываниям, где некоторые приложения и службы размещаются в облаке, а другие — в локальной среде. К улучшениям относятся:  
+Следующие новые возможности служб домен Active Directory Services (AD DS) улучшают возможности Организации в обеспечении безопасности сред Active Directory и помогают им переходить к облачным развертываниям и гибридным развертываниям, где некоторые приложения и службы размещаются в облаке, а другие — в локальной среде. В них сочетаются все лучшие возможности веб-заданий, а также добавлены некоторые улучшения, среди которых:  
   
--   [Управление привилегированным доступом](https://technet.microsoft.com/library/mt150258.aspx   
-)  
+-   [Управление привилегированным доступом](/microsoft-identity-manager/pam/privileged-identity-management-for-active-directory-domain-services)  
   
-- [Расширение возможностей облака для устройств Windows 10 с помощью Azure Active Directory Join](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-overview/)   
+- [Расширение возможностей облака для устройств Windows 10 с помощью Azure Active Directory Join](/azure/active-directory/devices/overview)   
   
-- [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-devices-group-policy/)   
+- [Подключение присоединенных к домену устройств к Azure AD для взаимодействия с Windows 10](/azure/active-directory/devices/hybrid-azuread-join-plan)   
   
-- [Включение Microsoft Passport for Work в Организации](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/)    
+- [Включение Microsoft Passport для работы в организации](/windows/security/identity-protection/hello-for-business/hello-identity-verification)    
   
 -  [Устаревшие функциональные уровни службы репликации файлов (FRS) и Windows Server 2003](ad-ds/active-directory-functional-levels.md)  
   
@@ -50,22 +49,22 @@ ms.locfileid: "80825647"
   
 -   Новые возможности мониторинга, позволяющие легко определить, кто запросил доступ, какой доступ был предоставлен и какие действия были выполнены.  
   
-**Необходимость**  
+**Requirements**  
   
--   Microsoft Identity Manager  
+-   Диспетчер удостоверений (Майкрософт)  
   
 -   Функциональный уровень леса Active Directory Windows Server 2012 R2 или более поздней версии.  
   
 ## <a name="azure-ad-join"></a><a name="BKMK_AzureADJoin"></a>Присоединение к Azure AD  
 Azure Active Directory Присоединяйтесь к расширению возможностей идентификации для корпоративных, коммерческих и образовательных клиентов с улучшенными возможностями для корпоративных и персональных устройств.  
   
-Преимущества  
+Преимущества:  
   
--   **Доступность современных параметров** на устройствах Windows, принадлежащих Corp. Службам кислорода больше не требуется личная учетная запись Майкрософт: теперь они работают с существующими рабочими учетными записями пользователей, чтобы обеспечить соответствие. Службы кислорода будут работать на компьютерах, которые присоединены к локальному домену Windows, а компьютеры и устройства, присоединенные к вашему клиенту Azure AD ("Облачный домен"). К ним относятся:  
+-   **Доступность современных параметров** на устройствах Windows, принадлежащих Corp. Службам кислорода больше не требуется личная учетная запись Майкрософт: теперь они работают с существующими рабочими учетными записями пользователей, чтобы обеспечить соответствие. Службы кислорода будут работать на компьютерах, которые присоединены к локальному домену Windows, а компьютеры и устройства, присоединенные к вашему клиенту Azure AD ("Облачный домен"). Эти параметры приведены ниже:  
   
     -   Роуминг или Персонализация, параметры специальных возможностей и учетные данные  
   
-    -   Архивация и восстановление  
+    -   Резервное копирование и восстановление  
   
     -   Доступ к Microsoft Store с рабочей учетной записью  
   
@@ -85,25 +84,25 @@ Azure Active Directory Присоединяйтесь к расширению в
   
 -   Параметр **создания образов** позволяет выбрать между образами и разрешить пользователям настраивать корпоративные устройства непосредственно во время первого запуска.  
   
-Дополнительные сведения см. в статье [Windows 10 для предприятий: способы использования устройств для работы](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices-overview/?rnd=1).  
+Дополнительные сведения см. в статье [Windows 10 для предприятий: способы использования устройств для работы](/azure/active-directory/devices/overview).  
   
 ## <a name="microsoft-passport"></a><a name="BKMK_IDLocker"></a>Microsoft Passport  
 Microsoft Passport — это новый подход к проверке подлинности на основе ключей Организации и потребители, который выходит за пределы паролей. Такая форма проверки подлинности зависит от нарушений, кражи и учетных данных, которые защищены от фишинга.  
   
 Пользователь входит в систему на устройстве с помощью биометрического или ПИН-кода, который связан с сертификатом или парой асимметричных ключей. Поставщики удостоверений (поставщиков удостоверений) проверяют пользователя, сопоставляя открытый ключ пользователя с Идлоккер, и предоставляет сведения для входа в систему через один раз пароль (OTP), Phonefactor или другой механизм уведомления.  
   
-Дополнительные сведения см. в статье [Проверка подлинности удостоверений без паролей с помощью Microsoft Passport](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport/)  
+Дополнительные сведения см. в статье [Проверка подлинности удостоверений без паролей с помощью Microsoft Passport](/windows/security/identity-protection/hello-for-business/hello-identity-verification)  
   
 ## <a name="deprecation-of-file-replication-service-frs-and-windows-server-2003-functional-levels"></a><a name="BKMK_FRSDeprecation"></a>Устаревшие функциональные уровни службы репликации файлов (FRS) и Windows Server 2003  
 Хотя служба репликации файлов (FRS) и функциональные уровни Windows Server 2003 стали устаревшими в предыдущих версиях Windows Server, она повторяет, что операционная система Windows Server 2003 больше не поддерживается. В результате все контроллеры домена, работающие под управлением Windows Server 2003, необходимо удалить из домена. Режим работы домена и леса должен быть повышен по крайней мере до Windows Server 2008, чтобы не допустить добавления в среду контроллера домена, на котором выполняется более ранняя версия Windows Server.  
   
-В режимах работы домена Windows Server 2008 и более новых версий для репликации содержимого папки SYSVOL между контроллерами домена используется репликация службы распределенных файловых систем (DFS). Если вы создаете домен в режиме работы домена Windows Server 2008 или более новых версий, для репликации SYSVOL автоматически используется репликация DFS. Если вы создаете домен в более низком режиме работы, необходимо перейти от репликации FRS к DFS для SYSVOL. Чтобы выполнить переход, можно следовать [инструкциям в TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) или ознакомиться с [упрощенным набором шагов в блоге Microsoft File Cabinet группы разработчиков хранилища](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).  
+В режимах работы домена Windows Server 2008 и более новых версий для репликации содержимого папки SYSVOL между контроллерами домена используется репликация службы распределенных файловых систем (DFS). Если вы создаете домен в режиме работы домена Windows Server 2008 или более новых версий, для репликации SYSVOL автоматически используется репликация DFS. Если вы создаете домен в более низком режиме работы, необходимо перейти от репликации FRS к DFS для SYSVOL. Чтобы выполнить переход, можно следовать [инструкциям в TechNet](../storage/dfs-replication/migrate-sysvol-to-dfsr.md) или ознакомиться с [упрощенным набором шагов в блоге Microsoft File Cabinet группы разработчиков хранилища](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).  
   
 Функциональные уровни домена и леса Windows Server 2003 по-прежнему поддерживаются, но организации должны повысить функциональный уровень до Windows Server 2008 (или более высокий, если возможно), чтобы обеспечить совместимость репликации SYSVOL и поддержку в будущем. Кроме того, существует множество других преимуществ и функций, доступных на более высоких функциональных уровнях выше. Дополнительную информацию можно найти в следующих ресурсах:  
   
--   [Основные сведения об функциональных уровнях домен Active Directory Services (AD DS)](ad-ds/active-directory-functional-levels.md)  
+-   [Представление о режимах работы доменных служб Active Directory (AD DS)](ad-ds/active-directory-functional-levels.md)  
   
--   [Raise the Domain Functional Level](https://technet.microsoft.com/library/cc753104.aspx) (Повышение режима работы домена)  
+-   [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11)) (Повышение режима работы домена)  
   
--   [Raise the Forest Functional Level](https://technet.microsoft.com/library/cc730985.aspx) (Повышение режима работы леса)  
+-   [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11)) (Повышение режима работы леса)  
   

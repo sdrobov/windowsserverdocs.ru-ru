@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 15c02897df0710653a6a3663ce6f8e87bfa416b6
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 3896b411ee8b02a0efde6b46484e043b27ffea77
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85471809"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966516"
 ---
 # <a name="enable-or-disable-referrals-and-client-failback"></a>Включение и отключение ссылок и переключение клиента на основной ресурс
 
@@ -39,15 +39,15 @@ ms.locfileid: "85471809"
 
 
 > [!TIP]
-> Чтобы включить или отключить ссылки с помощью Windows PowerShell, используйте командлеты [Set-DfsnRootTarget –State](https://technet.microsoft.com/library/jj884266.aspx) или [Set-DfsnServerConfiguration](https://technet.microsoft.com/library/jj884277.aspx), которые были введены в Windows Server 2012.
+> Чтобы включить или отключить ссылки с помощью Windows PowerShell, используйте командлеты [Set-DfsnRootTarget –State](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11)) или [Set-DfsnServerConfiguration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731089(v=ws.11)), которые были введены в Windows Server 2012.
 
 ## <a name="enable-client-failback"></a>Включение переключения клиента на основной ресурс
 
-Если целевой объект становится недоступным, можно настроить на клиентах восстановление размещения на целевой объект после его восстановления. Чтобы переключение на основной ресурс работало, клиентские компьютеры должны соответствовать требованиям, перечисленным в следующем разделе: [Обзор требований для клиента пространств имен распределенной файловой системы (DFS)](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx).
+Если целевой объект становится недоступным, можно настроить на клиентах восстановление размещения на целевой объект после его восстановления. Чтобы переключение на основной ресурс работало, клиентские компьютеры должны соответствовать требованиям, перечисленным в следующем разделе: [Обзор требований для клиента пространств имен распределенной файловой системы (DFS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)).
 
 
 > [!NOTE]
-> Чтобы включить переключение клиента на основной ресурс для корня пространства имен с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot](https://technet.microsoft.com/library/jj884281.aspx) cmdlet. Чтобы включить переключение клиента на основной ресурс для папки DFS, используйте командлет [Set-DfsnFolder](https://technet.microsoft.com/library/jj884283.aspx).
+> Чтобы включить переключение клиента на основной ресурс для корня пространства имен с помощью Windows PowerShell, используйте командлет [Set-DfsnRoot](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)) cmdlet. Чтобы включить переключение клиента на основной ресурс для папки DFS, используйте командлет [Set-DfsnFolder](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11)).
 
 
 ## <a name="to-enable-client-failback-for-a-namespace-root"></a>Чтобы включить функцию переключения клиента на основной ресурс для корня пространства имен, выполните приведенные ниже действия.
@@ -71,5 +71,5 @@ ms.locfileid: "85471809"
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Настройка пространств имен DFS](tuning-dfs-namespaces.md)
--   [Обзор требований для клиента пространств имен распределенной файловой системы (DFS)](https://technet.microsoft.com/library/cc771913(v=ws.11).aspx)
+-   [Обзор требований для клиента пространств имен распределенной файловой системы (DFS)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771913(v=ws.11))
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)

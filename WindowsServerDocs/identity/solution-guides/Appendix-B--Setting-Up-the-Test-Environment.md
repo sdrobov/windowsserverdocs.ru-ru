@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5f529e6b0176b7ad416a728163b4ae9671040bf8
-ms.sourcegitcommit: d1fc59d53055952f8e55aacebeb29547eef0bca7
+ms.openlocfilehash: 30667f68b25bda9ae86212be34466762d825ec0b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "80861287"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966176"
 ---
 # <a name="appendix-b-setting-up-the-test-environment"></a>Приложение Б. Настройка тестовой среды
 
@@ -21,7 +21,7 @@ ms.locfileid: "80861287"
 
 В этом разделе описано, как создать лабораторию для тестирования динамического контроля доступа. Данные инструкции предназначены для последовательного применения, так как для многих компонентов существуют зависимости.  
 
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>Обязательные условия  
 **Требования к оборудованию и программному обеспечению**  
 
 Требования к настройке лаборатории тестирования:  
@@ -163,16 +163,16 @@ ms.locfileid: "80861287"
 4. Создайте следующих пользователей с указанными атрибутами:  
 
 
-   |       Пользователь       |  Имя пользователя  |     Адрес электронной почты      | отдел; |      Группа       | Страна/регион |
+   |       Пользователь       |  Имя пользователя  |     Адрес электронной почты      | Отдел |      Группа       | Страна или регион |
    |------------------|------------|------------------------|------------|------------------|----------------|
-   | Myriam Delesalle | MDelesalle | MDelesalle@contoso.com |  Finance.   |                  |       США       |
-   |    Miles Reid    |   MReid    |   MReid@contoso.com    |  Finance.   |   FinanceAdmin   |       США       |
-   |   Esther Valle   |   EValle   |   EValle@contoso.com   | Операции | FinanceException |       США       |
+   | Myriam Delesalle | MDelesalle | MDelesalle@contoso.com |  Finance   |                  |       США       |
+   |    Miles Reid    |   MReid    |   MReid@contoso.com    |  Finance   |   FinanceAdmin   |       США       |
+   |   Esther Valle   |   EValle   |   EValle@contoso.com   | Operations | FinanceException |       США       |
    |   Maira Wenzel   |  MWenzel   |  MWenzel@contoso.com   |     HR     |                  |       США       |
    |     Jeff Low     |    JLow    |    JLow@contoso.com    |     HR     |                  |       США       |
    |    RMS Server    |    rms     |    rms@contoso.com     |            |                  |                |
 
-   Дополнительные сведения о создании групп безопасности см. в разделе [Создание группы](https://technet.microsoft.com/library/dd861305.aspx) на веб-сайте Windows Server.  
+   Дополнительные сведения о создании групп безопасности см. в разделе [Создание группы](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd861305(v=ws.11)) на веб-сайте Windows Server.  
 
 ##### <a name="to-create-a-group-policy-object"></a>Создание объекта групповой политики  
 
@@ -381,7 +381,7 @@ ms.locfileid: "80861287"
 >     -   NLTEST /SC_RESET:contoso.com  
 > 2.  На контроллере домена DC1 выполните репликацию Active Directory.  
 >   
->     Дополнительные сведения о том, как принудительно реплицировать Active Directory, см. в разделе [Репликация Active Directory](https://technet.microsoft.com/library/cc794809(WS.10).aspx).  
+>     Дополнительные сведения о том, как принудительно реплицировать Active Directory, см. в разделе [Репликация Active Directory](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794809(v=ws.10)).  
 
 При необходимости вместо мастера добавления ролей и компонентов в диспетчере серверов можно использовать Windows PowerShell для установки и настройки роли сервера AD RMS, как показано в следующей процедуре.  
 
@@ -562,7 +562,7 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 -   Подключите виртуальную машину к сети ID_AD_Network.  
 
 > [!IMPORTANT]  
-> Для присоединения виртуальных машин к домену и развертывания типов утверждений в разных лесах виртуальные машины должны разрешать полные доменные имена соответствующих доменов. Для этого вам может понадобиться вручную настроить параметры DNS на виртуальных машинах. Подробнее см. в разделе [Настройка виртуальной сети](https://technet.microsoft.com/library/cc732470%28v=ws.10%29.aspx).  
+> Для присоединения виртуальных машин к домену и развертывания типов утверждений в разных лесах виртуальные машины должны разрешать полные доменные имена соответствующих доменов. Для этого вам может понадобиться вручную настроить параметры DNS на виртуальных машинах. Подробнее см. в разделе [Настройка виртуальной сети](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732470(v=ws.10)).  
 >   
 > Все образы виртуальных машин (серверы и клиенты) необходимо повторно настроить для использования статического IP-адреса версии 4 (IPv4) и параметров DNS клиента. Дополнительные сведения см. в разделе [Настройка DNS-клиента для статического IP-адреса](https://go.microsoft.com/fwlink/?LinkId=150952).  
 
@@ -835,6 +835,3 @@ SRV1 — это почтовый SMTP- и POP3-сервер. Его необхо
 7. Перейдите на вкладку **Безопасность** , нажмите кнопку **Дополнительно**, а затем перейдите на вкладку **Центральная политика** . Вы должны увидеть **адатумемплойиакцессруле** в списке. Вы можете развернуть его, чтобы просмотреть все разрешения, заданные при создании правила в Active Directory.  
 
 8. Нажмите кнопку **ОК**, чтобы вернуться в проводник.  
-
-
-

@@ -9,12 +9,12 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
 ms.reviewer: deverette
-ms.openlocfilehash: db85d71ed1b7d8d5b3c14ac8ea603789422ea2cb
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: e97556ab35471c1745c01b6ebd047cd1451ffb27
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818887"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966756"
 ---
 # <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>Шаг 7.1. Настройка игнорирования проверки списка отзыва сертификатов (CRL) в EAP-TLS
 
@@ -35,9 +35,9 @@ ms.locfileid: "80818887"
 
 Так как методом проверки подлинности является EAP-TLS, это значение реестра требуется только в разделе EAP\13. Если используются другие методы проверки подлинности EAP, то в него также должно быть добавлено значение реестра. 
 
-**PROCEDURE**
+**Процедура**
 
-1. Откройте **файл Regedit. exe** на сервере NPS.
+1. Откройте **regedit.exe** на сервере NPS.
 
 2. Перейдите к **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\rasman\ppp\eap\13**.
 
@@ -47,15 +47,15 @@ ms.locfileid: "80818887"
 
 5. Нажмите кнопку **ОК** и перезагрузите сервер. Перезапуск служб RRAS и NPS недостаточен.
 
-Дополнительные сведения см. [в разделе Включение или отключение проверки отзыва сертификатов (CRL) на клиентах](https://technet.microsoft.com/library/bb680540.aspx).
+Дополнительные сведения см. [в разделе Включение или отключение проверки отзыва сертификатов (CRL) на клиентах](/previous-versions/system-center/configuration-manager-2007/bb680540(v=technet.10)).
 
 
 |Путь реестра  |Расширение EAP  |
 |---------|---------|
-|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |EAP-TLS         |
+|HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\13     |Протокол EAP-TLS         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\25     |PEAP         |
 |HKLM\SYSTEM\CurrentControlSet\Services\RasMan\PPP\EAP\26     |EAP-MSCHAP v2         |
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Шаг 7,2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md). на этом шаге вы настроите корневые сертификаты условного доступа для проверки подлинности VPN с помощью Azure AD, которая автоматически создает облачное приложение VPN-сервера в клиенте.

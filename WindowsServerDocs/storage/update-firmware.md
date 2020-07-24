@@ -8,12 +8,12 @@ ms.technology: storage-spaces
 ms.topic: article
 author: toklima
 ms.date: 10/04/2016
-ms.openlocfilehash: 55a4fc94440b763c48735ffe44099da702857489
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0e117b486fd628397bfe36aa897ff64cdd26f98b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820877"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965836"
 ---
 # <a name="updating-drive-firmware"></a>Обновление встроенного ПО дисков
 >Область применения: Windows Server 2019, Windows Server 2016, Windows 10
@@ -30,11 +30,11 @@ ms.locfileid: "80820877"
 Сведения о том, поддерживает ли оборудование обновление встроенного ПО диска Windows, можно получить у поставщика решения.
 Ниже приведены ссылки на различные требования:
 
--   SATA: [Device.Storage.Hd.Sata](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsata) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
+-   SATA: [Device.Storage.Hd.Sata](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsata) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
     
--   SAS: [Device.Storage.Hd.Sas](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragehdsas) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
+-   SAS: [Device.Storage.Hd.Sas](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragehdsas) — в разделе **[If Implemented\] Firmware Download & Activate** (Если реализовано — скачивание и активация встроенного ПО).
 
--   NVMe: [Device.Storage.ControllerDrive.NVMe](https://msdn.microsoft.com/windows/hardware/commercialize/design/compatibility/device-storage#devicestoragecontrollerdrivenvme) — в разделах **5.7** и **5.8**.
+-   NVMe: [Device.Storage.ControllerDrive.NVMe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)#devicestoragecontrollerdrivenvme) — в разделах **5.7** и **5.8**.
 
 ## <a name="powershell-cmdlets"></a>Командлеты PowerShell
 
@@ -43,7 +43,7 @@ ms.locfileid: "80820877"
 -   Get-StorageFirmwareInformation
 -   Update-StorageFirmware
 
-Первый командлет предоставляет подробные сведения о возможностях устройства, образах встроенного ПО и редакциях. В данном случае компьютер содержит всего один SATA SSD с 1 слотом встроенного ПО. Пример:
+Первый командлет предоставляет подробные сведения о возможностях устройства, образах встроенного ПО и редакциях. В данном случае компьютер содержит всего один SATA SSD с 1 слотом встроенного ПО. Ниже приведен пример.
 
    ```powershell
    Get-PhysicalDisk | Get-StorageFirmwareInformation
@@ -105,7 +105,7 @@ Measure-Command {$pd | Update-StorageFirmware -ImagePath C:\\Firmware\\J3E16101.
 
 1. Просмотрите заметки о выпуске встроенного ПО и убедитесь, что обновление устраняет проблемы, которые могут повлиять на вашу среду, а само встроенное ПО не содержит известных проблем, которые могут отрицательно повлиять на работу среды.
 
-2. Установите встроенное ПО на сервере в лабораторных условиях, содержащем идентичные диски (включая редакцию диска, когда доступно несколько таких редакций), и протестируйте диск под нагрузкой с новым встроенным ПО. Сведения об этом искусственном нагрузочном тестировании см. в разделе [Тестирование производительности дисковых пространств с помощью искусственных рабочих нагрузок](https://technet.microsoft.com/library/dn894707.aspx).
+2. Установите встроенное ПО на сервере в лабораторных условиях, содержащем идентичные диски (включая редакцию диска, когда доступно несколько таких редакций), и протестируйте диск под нагрузкой с новым встроенным ПО. Сведения об этом искусственном нагрузочном тестировании см. в разделе [Тестирование производительности дисковых пространств с помощью искусственных рабочих нагрузок](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn894707(v=ws.11)).
 
 ## <a name="automated-firmware-updates-with-storage-spaces-direct"></a>Автоматические обновления встроенного ПО с локальными дисковыми пространствами
 
@@ -164,7 +164,7 @@ $NewDoc = Get-Content <Path> | Out-String
 $SpacesDirect | Set-StorageHealthSetting -Name "System.Storage.SupportedComponents.Document" -Value $NewDoc
 ```
 
-Если вы хотите просмотреть служба работоспособности в действии и узнать больше о механизме развертывания, ознакомьтесь с этим видео: https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
+Если вы хотите просмотреть служба работоспособности в действии и узнать больше о механизме развертывания, ознакомьтесь с этим видео:https://channel9.msdn.com/Blogs/windowsserver/Update-Drive-Firmware-Without-Downtime-in-Storage-Spaces-Direct
 
 ## <a name="frequently-asked-questions"></a>Часто задаваемые вопросы
 

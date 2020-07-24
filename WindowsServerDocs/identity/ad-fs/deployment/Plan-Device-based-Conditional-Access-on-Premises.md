@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: d22897111588393efc148e6f24affeb243ee9e88
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f3850454f9e2e426ce2d00112adf90f0d2530d8f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80855337"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964746"
 ---
 # <a name="plan-device-based-conditional-access-on-premises"></a>Планирование локального условного доступа на основе устройств
 
@@ -24,33 +24,33 @@ ms.locfileid: "80855337"
 
 AD FS реализует локальный компонент политик условного доступа в гибридном сценарии.  Когда вы регистрируете устройства в Azure AD для условного доступа к облачным ресурсам, функция обратной записи Azure AD Connect устройства делает сведения о регистрации устройства доступными локально для использования и применения политик AD FS.  Таким образом, у вас есть единообразный подход к политикам управления доступом как к локальным, так и к облачным ресурсам.  
 
-![Условный доступ](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
+![условный доступ](media/Plan-Device-based-Conditional-Access-on-Premises/ADFS_ITPRO4.png)  
 
 ### <a name="types-of-registered-devices"></a>Типы зарегистрированных устройств  
 Существует три типа зарегистрированных устройств, которые представляются как объекты устройств в Azure AD и могут использоваться для условного доступа с AD FS локально.  
 
-| |Добавить рабочую или учебную учетную запись  |Присоединение к Azure AD  |Присоединение к домену Windows 10    
+| |Добавить рабочую или учебную учетную запись  |Присоединение к Azure AD  |Присоединение к домену Windows 10    
 | --- | --- |--- | --- |
 |Описание    |  Пользователи могут интерактивно добавлять свою рабочую или учебную учетную запись на устройство BYOD.  **Примечание.** Добавление рабочей или учебной учетной записи — это замена Workplace Join в Windows 8 или 8.1       | Пользователи присоединяются к Azure AD с рабочего устройства Windows 10.|Устройства, присоединенные к домену Windows 10, автоматически регистрируются в Azure AD.|           
 |Как пользователи входят на устройство     |  Нет имени входа в систему Windows в качестве рабочей или учебной учетной записи.  Вход с помощью учетная запись Майкрософт.       |   Войдите в Windows как учетную запись (рабочую или учебную), которая зарегистрировала устройство.      |     Вход с использованием учетной записи AD.|      
 |Управление устройствами    |      Политики MDM (с дополнительной регистрацией в Intune)   | Политики MDM (с дополнительной регистрацией в Intune)        |   Групповая политика, Configuration Manager |
-|Тип доверия Azure AD|Присоединено к рабочему месту|Присоединение к Azure AD|присоединено к домену  |     
+|Тип доверия Azure AD|Присоединено к рабочему месту|присоединение к Azure AD;|Присоединен к домену  |     
 |Расположение параметров W10    | Параметры > учетные записи > учетной записи > Добавление рабочей или учебной учетной записи        | Параметры > системе > об > присоединиться к Azure AD       |   Параметры > системе > о > присоединиться к домену |       
 |Также доступно для устройств iOS и Android?   |    Да     |       Нет  |   Нет   |   
 
   
 
 Дополнительные сведения о различных способах регистрации устройств см. также в следующих статьях:  
-* [Использование устройств Windows 10 в рабочей области](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-windows10-devices/)  
+* [Устройства под управлением Windows 10 в вашей рабочей области](/azure/active-directory/devices/overview)  
 * [Настройка устройств Windows 10 для работы](https://jairocadena.com/2016/01/18/setting-up-windows-10-devices-for-work-domain-join-azure-ad-join-and-add-work-or-school-account/)  
-[Присоединение Windows 10 Mobile к Azure Active Directory](https://technet.microsoft.com/itpro/windows/manage/join-windows-10-mobile-to-azure-active-directory)  
+[Присоединение Windows 10 Mobile к Azure Active Directory](/windows/client-management/join-windows-10-mobile-to-azure-active-directory)  
 
 ### <a name="how-windows-10-user-and-device-sign-on-is-different-from-previous-versions"></a>Как вход пользователя и устройства Windows 10 отличается от предыдущих версий  
 Для Windows 10 и AD FS 2016 есть некоторые новые аспекты регистрации устройств и проверки подлинности, о которых следует знать (особенно если вы хорошо знакомы с регистрацией устройств и "присоединение к рабочей области" в предыдущих выпусках).  
 
 Во-первых, в Windows 10 и AD FS в Windows Server 2016 регистрация устройств и проверка подлинности больше не основываются исключительно на сертификате пользователя X509.  Существует новый и более надежный протокол, обеспечивающий более высокую безопасность и удобство работы пользователей.  Основное различие заключается в том, что для присоединение к домену Windows 10 и присоединение к Azure AD существует сертификат компьютера X509 и новые учетные данные, называемые PRT.  Сведения о нем можно прочитать [здесь](https://jairocadena.com/2016/01/18/how-domain-join-is-different-in-windows-10-with-azure-ad/) и [здесь](https://jairocadena.com/2016/02/01/azure-ad-join-what-happens-behind-the-scenes/).  
 
-Во вторых, Windows 10 и AD FS 2016 поддерживают проверку подлинности пользователей с помощью Microsoft Passport for Work, которую можно прочитать [здесь](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) и [здесь](https://azure.microsoft.com/documentation/articles/active-directory-azureadjoin-passport-deployment/).  
+Во вторых, Windows 10 и AD FS 2016 поддерживают проверку подлинности пользователей с помощью Microsoft Passport for Work, которую можно прочитать [здесь](https://jairocadena.com/2016/03/09/azure-ad-and-microsoft-passport-for-work-in-windows-10/) и [здесь](/windows/security/identity-protection/hello-for-business/hello-identity-verification).  
 
 AD FS 2016 обеспечивает эффективное единый вход устройств и пользователей на основе учетных данных PRT и Passport.  С помощью действий, описанных в этом документе, можно включить эти возможности и увидеть их работу.  
 
@@ -88,7 +88,7 @@ AD FS 2016 обеспечивает эффективное единый вход
 Полный список утверждений для устройств AD FS 2016 и условного доступа см. в [справочнике](#reference).  
 
 
-## <a name="reference"></a>Ссылки  
+## <a name="reference"></a>Справочник  
 #### <a name="complete-list-of-new-ad-fs-2016-and-device-claims"></a>Полный список новых AD FS 2016 и утверждений устройств  
 
 * https://schemas.microsoft.com/ws/2014/01/identity/claims/anchorclaimtype  

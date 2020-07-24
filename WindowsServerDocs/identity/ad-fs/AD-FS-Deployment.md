@@ -8,21 +8,21 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 1b54052397df275ee04bfce320d9b1e9908628a9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: a6c2cbed1be7e1667caee2f0be116ecd0122a992
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80853977"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965076"
 ---
 # <a name="ad-fs-deployment"></a>Развертывание AD FS
 
 
-Этот документ содержит список всех документации по развертыванию AD FS для Windows Server 2016. Это следующие атрибуты:
+Этот документ содержит список всех документации по развертыванию AD FS для Windows Server 2016. Это включает следующие действия.
   
 * [Рекомендации по защите AD FS](deployment/Best-Practices-Securing-AD-FS.md)
 
-* [Развертывание Azure AD Connect Health для мониторинга локальной инфраструктуры удостоверений в облаке](https://azure.microsoft.com/documentation/articles/active-directory-aadconnect-health)
+* [Развертывание Azure AD Connect Health для мониторинга локальной инфраструктуры удостоверений в облаке](/azure/active-directory/hybrid/whatis-hybrid-identity)
 
 * [Планирование локального условного доступа на основе устройств](deployment/Plan-Device-based-Conditional-Access-on-Premises.md)
 
@@ -33,9 +33,9 @@ ms.locfileid: "80853977"
 * [Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2](deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
   
 
-* [Обновление до AD FS в Windows Server 2016 с помощью базы данных WID](deployment/Upgrading-to-AD-FS-in-Windows-Server-2016.md)  
+* [Обновление до AD FS в Windows Server 2016 с помощью базы данных WID](./deployment/upgrading-to-ad-fs-in-windows-server.md)  
 
-* [Обновление до AD FS в Windows Server 2016 с помощью базы данных SQL](deployment/Upgrading-to-AD-FS-in-Windows-Server-2016-SQL.md)  
+* [Обновление до AD FS в Windows Server 2016 с помощью базы данных SQL](./deployment/upgrading-to-ad-fs-in-windows-server-sql.md)  
 
 * [Развертывание AD FS в Azure](deployment/how-to-connect-fed-azure-adfs.md)
 
@@ -44,9 +44,3 @@ ms.locfileid: "80853977"
 * [Рекомендации по развертыванию Windows Server 2016 и 2012 R2](deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
 
 * [Рекомендации по развертыванию Windows Server 2012](deployment/Windows-Server-2012-AD-FS-Deployment-Guide.md)
-
-
-
-
-
-

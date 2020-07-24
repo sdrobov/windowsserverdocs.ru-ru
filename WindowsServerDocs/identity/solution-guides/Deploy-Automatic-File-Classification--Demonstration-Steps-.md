@@ -1,6 +1,6 @@
 ---
 ms.assetid: 01988844-df02-4952-8535-c87aefd8a38a
-title: Развертывание автоматической классификации данных (поэтапная демонстрация)
+title: Deploy Automatic File Classification (Demonstration Steps)
 author: billmath
 ms.author: billmath
 manager: femila
@@ -8,16 +8,16 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: cc89e97aacab3b764df7314beeab701df846048a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 67229659540b6d9fddcbcfc993205bee34973427
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861257"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964716"
 ---
-# <a name="deploy-automatic-file-classification-demonstration-steps"></a>Развертывание автоматической классификации данных (поэтапная демонстрация)
+# <a name="deploy-automatic-file-classification-demonstration-steps"></a>Deploy Automatic File Classification (Demonstration Steps)
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
 В этом разделе описывается, как включить свойства ресурсов в Active Directory, создать правила классификации на файловом сервере и назначить значения свойствам ресурсов для файлов на сервере. Для этого примера создаются следующие правила классификации:  
   
@@ -25,23 +25,23 @@ ms.locfileid: "80861257"
   
 -   Правило классификации содержимого, которое ищет в наборе файлов регулярное выражение, соответствующее номеру социального страхования по крайней мере 10 раз в одном файле. Если данное условие выполняется, файл классифицируется как содержащий личные сведения, а для свойства ресурса "Личные сведения" задается значение "Высокий".  
   
-**В этом документе**  
+**Содержание документа**  
   
 -   [Шаг 1. Создание определений свойств ресурсов](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step1)  
   
--   [Шаг 2. Создание правила классификации содержимого строки](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
+-   [Шаг 2. Создание правила классификации строкового содержимого](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step2)  
   
 -   [Шаг 3. Создание правила классификации содержимого регулярного выражения](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_Step3)  
   
 -   [Шаг 4. Проверка того, что файлы классифицированы](Deploy-Automatic-File-Classification--Demonstration-Steps-.md#BKMK_Step4)  
   
 > [!NOTE]  
-> В этом разделе приведены примеры командлетов Windows PowerShell, которые могут быть использованы для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Командлеты](https://go.microsoft.com/fwlink/p/?linkid=230693).  
+> В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Использование командлетов](https://go.microsoft.com/fwlink/p/?linkid=230693).  
   
 ## <a name="step-1-create-resource-property-definitions"></a><a name="BKMK_Step1"></a>Шаг 1. Создание определений свойств ресурсов  
 Свойства ресурса "Личные сведения" и "Влияние" включены, поэтому инфраструктура классификации файлов может их использовать для маркировки файлов, которые проверяются в общей сетевой папке.  
   
-[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
+[Выполните этот шаг с помощью Windows PowerShell.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep1)  
   
 #### <a name="to-create-resource-property-definitions"></a>Создание определений свойств ресурсов  
   
@@ -55,19 +55,19 @@ ms.locfileid: "80861257"
   
 5.  Щелкните правой кнопкой мыши **Личные сведения** и выберите команду **Включить**.  
   
-![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
+![Руководство по решению.](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=Impact_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'   
 Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Properties,CN=Claims Configuration,CN=Services,CN=Configuration,DC=contoso,DC=com'  
 ```  
   
-## <a name="step-2-create-a-string-content-classification-rule"></a><a name="BKMK_Step2"></a>Шаг 2. Создание правила классификации содержимого строки  
+## <a name="step-2-create-a-string-content-classification-rule"></a><a name="BKMK_Step2"></a>Шаг 2. Создание правила классификации строкового содержимого  
 Правило классификации строкового содержимого ищет в файле определенную строку. Если она найдена, значение свойства ресурса можно настроить. В этом примере выполняется сканирование каждого файла в общей сетевой папке и поиск строки "Contoso Confidential". Если строка найдена, связанный файл классифицируется как особо важный для бизнеса.  
   
-[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
+[Выполните этот шаг с помощью Windows PowerShell.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep2)  
   
 #### <a name="to-create-a-string-content-classification-rule"></a>Создание правила классификации строкового содержимого  
   
@@ -88,7 +88,7 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
 8.  На вкладке **Область действия** нажмите кнопку **Добавить** и выберите папки, которые необходимо включить в это правило, например D:\Finance Documents.  
   
     > [!NOTE]  
-    > Также можно выбрать динамическое пространство имен для этой области действия. Дополнительные сведения о динамических пространствах имен для правил классификации см. [в разделе новые возможности файлового сервера диспетчер ресурсов в Windows Server 2012 \[перенаправлен\]](assetId:///d53c603e-6217-4b98-8508-e8e492d16083).  
+    > Также можно выбрать динамическое пространство имен для этой области действия. Дополнительные сведения о динамических пространствах имен для правил классификации см. [в разделе новые возможности файлового сервера диспетчер ресурсов в \[ перенаправленном \] выпуске Windows Server 2012](assetId:///d53c603e-6217-4b98-8508-e8e492d16083).  
   
 9. На вкладке **Классификация** выполните следующие действия.  
   
@@ -106,9 +106,9 @@ Set-ADResourceProperty '"Enabled:$true '"Identity:'CN=PII_MS,CN=Resource Propert
   
 13. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
+![Руководство по решению.](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 $date = Get-Date  
@@ -120,7 +120,7 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
 ## <a name="step-3-create-a-regular-expression-content-classification-rule"></a><a name="BKMK_Step3"></a>Шаг 3. Создание правила классификации содержимого регулярного выражения  
 Правило классификации регулярного выражения проверяет файл на наличие шаблона, соответствующего регулярному выражению. Если найдена строка, соответствующая регулярному выражению, значение свойства ресурса можно настроить. В этом примере мы проверим каждый файл в общей сетевой папке на наличие строки, соответствующей номеру социального страхования (XXX-XX-XXXX). Если шаблон найден, связанный файл классифицируется как содержащий личные сведения.  
   
-[Выполните этот шаг с помощью Windows PowerShell](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
+[Выполните этот шаг с помощью Windows PowerShell.](assetId:///4a96cdaf-0081-4824-aab8-f0d51be501ac#BKMK_PSstep3)  
   
 #### <a name="to-create-a-regular-expression-content-classification-rule"></a>Создание правила классификации содержимого регулярного выражения  
   
@@ -148,21 +148,21 @@ New-FSRMClassificationRule -Name 'Contoso Confidential' -Property "Impact_MS" -P
   
 9. В столбце **Тип выражения** выберите элемент **Регулярное выражение**.  
   
-10. В столбце **выражение** введите **^ (?! 000) ([0-7] \d{2}| 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d{4}$**  
+10. В столбце **выражение** введите **^ (?! 000) ([0-7] \d {2} | 7 ([0-7] \d | 7 [012])) ([-]?) (?! 00) \d\d\3 (?! 0000) \d {4} $**  
   
 11. В столбце **Минимальное число повторений** введите **10** и нажмите кнопку **ОК**.  
   
 12. На вкладке **Тип оценки** установите флажок **Заново определить существующие значения свойств**, щелкните **Перезаписать существующее значение** и нажмите кнопку **ОК**.  
   
-![решения,](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные командам Windows PowerShell</em>***  
+![Руководство по решению.](media/Deploy-Automatic-File-Classification--Demonstration-Steps-/PowerShellLogoSmall.gif)***<em>эквивалентные команды Windows PowerShell</em>***  
   
-Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Введите каждый командлет на отдельной строке. Они могут отображаться с переносом на несколько строк из-за ограничений форматирования.  
+Следующие командлеты Windows PowerShell выполняют ту же функцию, что и предыдущая процедура. Вводите каждый командлет в одной строке, несмотря на то, что здесь они могут отображаться разбитыми на несколько строк из-за ограничений форматирования.  
   
 ```  
 New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5000" -Namespace @('D:\Finance Documents') -ClassificationMechanism "Content Classifier" -Parameters @("RegularExpressionEx=Min=10;Expr=^(?!000)([0-7]\d{2}|7([0-7]\d|7[012]))([ -]?)(?!00)\d\d\3(?!0000)\d{4}$") -ReevaluateProperty Overwrite  
 ```  
   
-## <a name="step-4-verify-that-the-files-are-classified-correctly"></a><a name="BKMK_Step4"></a>Шаг 4. Убедитесь, что файлы классифицированы правильно  
+## <a name="step-4-verify-that-the-files-are-classified-correctly"></a><a name="BKMK_Step4"></a>Шаг 4. Проверка классификации файлов  
 Вы можете убедиться, что файлы классифицируются правильно, просмотрев свойства файла, созданного в папке, указанной в правилах классификации.  
   
 #### <a name="to-verify-that-the-files-are-classified-correctly"></a>Проверка классификации файлов  
@@ -185,11 +185,10 @@ New-FSRMClassificationRule -Name "PII Rule" -Property "PII_MS" -PropertyValue "5
   
 ## <a name="see-also"></a><a name="BKMK_Links"></a> См. также  
   
--   [Сценарий: получение сведений о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
+-   [Сценарий. Получение четкого представления о данных с помощью классификации](Scenario--Get-Insight-into-Your-Data-by-Using-Classification.md)  
   
--   [Планирование автоматической классификации файлов](https://docs.microsoft.com/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
+-   [План автоматической классификации файлов](/previous-versions/orphan-topics/ws.11/jj574209(v%3dws.11))  
 
   
--   [Динамический контроль доступа: обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
+-   [Динамический контроль доступа. Обзор сценария](Dynamic-Access-Control--Scenario-Overview.md)  
   
-

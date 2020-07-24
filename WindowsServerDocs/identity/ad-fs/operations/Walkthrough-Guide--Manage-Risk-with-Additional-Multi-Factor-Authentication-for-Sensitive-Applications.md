@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 99d1ac21953091cb69a85efa1795412a2c43493c
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: be9eaa7b742f554539fa5bbd08f46d47a347c1ad
+ms.sourcegitcommit: f305bc5f1c5a44dac62f4288450af19f351f9576
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80815957"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87118572"
 ---
 # <a name="walkthrough-guide-manage-risk-with-additional-multi-factor-authentication-for-sensitive-applications"></a>Пошаговое руководство: управление рисками для уязвимых приложений с помощью дополнительной многофакторной проверки подлинности
 
@@ -29,11 +29,11 @@ ms.locfileid: "80815957"
 
 -   [Шаг 1. Настройка лабораторной среды](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md#BKMK_1)
 
--   [Шаг 2. Проверка механизма проверки подлинности AD FS по умолчанию](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
+-   [Шаг 2. Проверка стандартного механизма проверки подлинности через службы AD FS](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_2)
 
--   [Шаг 3. Настройка MFA на сервере федерации](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
+-   [Шаг 3. Настройка многофакторной проверки подлинности на сервере федерации](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_3)
 
--   [Шаг 4. Проверка механизма MFA](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
+-   [Шаг 4. Проверка механизма многофакторной проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_4)
 
 ## <a name="step-1-setting-up-the-lab-environment"></a><a name="BKMK_1"></a>Шаг 1. Настройка лабораторной среды
 Для выполнения этого пошагового руководства вам потребуется среда, состоящая из следующих компонентов:
@@ -53,7 +53,7 @@ ms.locfileid: "80815957"
 
 Инструкции по настройке этой среды см. [в разделе Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
-## <a name="step-2-verify-the-default-ad-fs-authentication-mechanism"></a><a name="BKMK_2"></a>Шаг 2. Проверка механизма проверки подлинности AD FS по умолчанию
+## <a name="step-2-verify-the-default-ad-fs-authentication-mechanism"></a><a name="BKMK_2"></a>Шаг 2. Проверка стандартного механизма проверки подлинности через службы AD FS
 В этом шаге вы проверите стандартный механизм управления доступом через службы AD FS (**проверка подлинности с помощью форм** для экстрасети и **проверка подлинности Windows** для интрасети), который перенаправляет пользователя на страницу входа AD FS, где ему нужно ввести действительные учетные данные, после чего пользователю будет предоставлен доступ к приложению. Вы можете использовать учетную запись **Роберт хатлэй** AD и пример приложения **клаимапп** , настроенного в [настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 1.  На клиентском компьютере откройте окно браузера и перейдите к вашему примеру приложения: **https://webserv1.contoso.com/claimapp** .
@@ -64,21 +64,21 @@ ms.locfileid: "80815957"
 
     После этого вам будет предоставлен доступ к приложению.
 
-## <a name="step-3-configure-mfa-on-your-federation-server"></a><a name="BKMK_3"></a>Шаг 3. Настройка MFA на сервере федерации
+## <a name="step-3-configure-mfa-on-your-federation-server"></a><a name="BKMK_3"></a>Шаг 3. Настройка многофакторной проверки подлинности на сервере федерации
 Настроить MFA в AD FS в Windows Server 2012 R2 можно двумя частями:
 
--   [Выберите дополнительный метод проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
+-   [Выбор дополнительного метода проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_5)
 
--   [Настройка политики MFA](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
+-   [Настройка политики многофакторной проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_6)
 
-### <a name="select-an-additional-authentication-method"></a><a name="BKMK_5"></a>Выберите дополнительный метод проверки подлинности
+### <a name="select-an-additional-authentication-method"></a><a name="BKMK_5"></a>Выбор дополнительного метода проверки подлинности
 Чтобы настроить многофакторную проверку подлинности, вы должны выбрать дополнительный метод проверки подлинности. В этом руководстве для выбора дополнительного метода проверки подлинности вам предлагаются следующие варианты:
 
 -   Выберите метод [проверки подлинности сертификата](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_7) , доступный в AD FS в Windows Server 2012 R2 по умолчанию
 
--   Настройте и выберите [Windows Azure Multi-Factor Authentication](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8).
+-   Настроить и выбрать метод [Многофакторная идентификация Windows Azure](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_8).
 
-#### <a name="certificate-authentication"></a><a name="BKMK_7"></a>Проверка подлинности сертификата
+#### <a name="certificate-authentication"></a><a name="BKMK_7"></a>Аутентификация на основе сертификата
 Выполните любую из описанных ниже процедур для выбора проверки подлинности сертификата в качестве дополнительного метода проверки подлинности.
 
 ###### <a name="to-configure-certificate-authentication-as-an-additional-authentication-method-via-the-ad-fs-management-console"></a>Настройка проверки подлинности сертификата в качестве дополнительного метода проверки подлинности через консоль управления AD FS
@@ -99,22 +99,22 @@ ms.locfileid: "80815957"
     > [!WARNING]
     > Чтобы убедиться в успешном выполнении этой команды, можно выполнить команду `Get-AdfsGlobalAuthenticationPolicy` .
 
-#### <a name="windows-azure-multi-factor-authentication"></a><a name="BKMK_8"></a>Многофакторная идентификация Windows Azure
-Выполните описанные ниже действия, чтобы загрузить и настроить, а затем выбрать **Windows Azure Multi-Factor Authentication** в качестве дополнительной проверки подлинности на сервере федерации.
+#### <a name="windows-azure-multi-factor-authentication"></a><a name="BKMK_8"></a>Многофакторная проверка подлинности Windows Azure
+Выполните описанные ниже действия, чтобы загрузить и настроить, а затем выбрать **Многофакторная идентификация Windows Azure** в качестве дополнительной проверки подлинности на сервере федерации.
 
-1.  [Создание поставщика многофакторной идентификации с помощью портала Windows Azure](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
+1.  [Создание поставщика многофакторной проверки подлинности через портал Windows Azure](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_a)
 
-2.  [Загрузка сервер Многофакторной идентификации Windows Azure](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
+2.  [Загрузка сервера Windows Azure Multi-Factor Authentication](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_b)
 
-3.  [Установка сервер Многофакторной идентификации Windows Azure на сервере федерации](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
+3.  [Установка сервера Windows Azure Multi-Factor Authentication на сервере федерации](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_c)
 
-4.  [Настройка многофакторной идентификации Windows Azure в качестве дополнительного метода проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
+4.  [Настройка Windows Azure Multi-Factor Authentication в качестве дополнительного метода проверки подлинности](../../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md#BKMK_d)
 
-##### <a name="create-a-multi-factor-authentication-provider-via-the-windows-azure-portal"></a><a name="BKMK_a"></a>Создание поставщика многофакторной идентификации с помощью портала Windows Azure
+##### <a name="create-a-multi-factor-authentication-provider-via-the-windows-azure-portal"></a><a name="BKMK_a"></a>Создание поставщика многофакторной проверки подлинности через портал Windows Azure
 
-1.  Войдите на портал Azure как администратор.
+1.  Войдите на портал Windows Azure с правами администратора.
 
-2.  В левой части окна выберите Active Directory.
+2.  Выберите слева элемент Active Directory.
 
 3.  В верхней части страницы Active Directory выберите пункт **Поставщики многофакторной проверки подлинности**.  Затем, внизу страницы нажмите кнопку **Нажать**.
 
@@ -128,31 +128,31 @@ ms.locfileid: "80815957"
 
     2.  **Модель использования** — модель использования поставщика многофакторной идентификации.
 
-        -   **Для проверки подлинности** — модель приобретения, которая взимается за проверку подлинности. Обычно используется в сценариях применения Windows Azure Multi-Factor Authentication в потребительском приложении.
+        -   **Для проверки подлинности** — модель приобретения, которая взимается за проверку подлинности. Обычно используется в сценариях применения Многофакторной идентификации Windows Azure в потребительском приложении.
 
         -   **На включенную** модель приобретения пользователей, которая оплачивается для каждого включенного пользователя.  Обычно используется в сценариях приложений для сотрудников, например Office 365.
 
-        Дополнительную информацию о моделях использования см. в разделе, содержащем [данные о ценах на Windows Azure](http://www.windowsazure.com/pricing/details/active-directory/).
+        Дополнительную информацию о моделях использования см. в разделе, содержащем [данные о ценах на Windows Azure](https://www.windowsazure.com/pricing/details/active-directory/).
 
     3.  **Каталог** — клиент Windows Azure Active Directory, с которым связан поставщик многофакторной идентификации. Этот параметр является необязательным, так как не требуется, чтобы поставщик был связан с Windows Azure Active Directory при обеспечении безопасности локальных приложений.
 
-7.  При нажатии кнопки "Создать" будет создан поставщик Многофакторной идентификации и появится сообщение: "Поставщик Многофакторной идентификации успешно создан".  Нажмите кнопку **ОК**.
+7.  При нажатии кнопки "Создать" будет создан поставщик многофакторной проверки подлинности и появится сообщение:  "Поставщик многофакторной проверки подлинности успешно создан".  Нажмите кнопку **Ок**.
 
 Затем вы должны загрузить сервер Windows Azure Multi-Factor Authentication. Для этого можно открыть портал Windows Azure Multi-Factor Authentication через портал Windows Azure.
 
-##### <a name="download-the-windows-azure-multi-factor-authentication-server"></a><a name="BKMK_b"></a>Загрузка сервер Многофакторной идентификации Windows Azure
+##### <a name="download-the-windows-azure-multi-factor-authentication-server"></a><a name="BKMK_b"></a>Загрузка сервера Windows Azure Multi-Factor Authentication
 
 1.  Войдите на портал Windows Azure с правами администратора и выберите поставщика многофакторной проверки подлинности, которого вы создали ранее. Затем нажмите кнопку **Управление**.
 
-    Откроется портал **Windows Azure Multi-Factor Authentication** .
+    Откроется портал **Многофакторной идентификации Windows Azure**.
 
-2.  На портале **Windows Azure Multi-Factor Authentication** перейдите в раздел **Загрузки**и нажмите кнопку **Загрузить** для загрузки копии сервера Windows Azure Multi-Factor Authentication.
+2.  На портале **Многофакторной идентификации Windows Azure** перейдите в раздел **Загрузки** и нажмите кнопку **Загрузить** для загрузки копии сервера Многофакторной идентификации Windows Azure.
 
 Загрузив исполняемый файл для сервера Windows Azure Multi-Factor Authentication, вы должны установить его на сервере федерации.
 
-##### <a name="install-the-windows-azure-multi-factor-authentication-server-on-your-federation-server"></a><a name="BKMK_c"></a>Установка сервер Многофакторной идентификации Windows Azure на сервере федерации
+##### <a name="install-the-windows-azure-multi-factor-authentication-server-on-your-federation-server"></a><a name="BKMK_c"></a>Установка сервера Windows Azure Multi-Factor Authentication на сервере федерации
 
-1.  Загрузите и дважды щелкните исполняемый файл для сервера Windows Azure Multi-Factor Authentication.  Начнется установка.
+1.  Загрузите и дважды щелкните исполняемый файл для сервера Многофакторной идентификации Windows Azure.  чтобы начать установку.
 
 2.  На экране "Лицензионное соглашение" прочитайте текст соглашения, установите флажок **Принимаю** и нажмите кнопку **Далее**.
 
@@ -160,26 +160,26 @@ ms.locfileid: "80815957"
 
 4.  По завершении установки нажмите кнопку **Готово**.
 
-Теперь вы можете запустить сервер Windows Azure Multi-Factor Authentication, установленный на сервере федерации, и настроить его в качестве дополнительного метода проверки подлинности.
+Теперь вы можете запустить сервер Многофакторной идентификации Windows Azure, установленный на сервере федерации, и настроить его в качестве дополнительного метода проверки подлинности.
 
-##### <a name="configure-windows-azure-multi-factor-authentication-as-an-additional-authentication-method"></a><a name="BKMK_d"></a>Настройка многофакторной идентификации Windows Azure в качестве дополнительного метода проверки подлинности
+##### <a name="configure-windows-azure-multi-factor-authentication-as-an-additional-authentication-method"></a><a name="BKMK_d"></a>Настройка Windows Azure Multi-Factor Authentication в качестве дополнительного метода проверки подлинности
 
 1.  Запустите сервер **Windows Azure Multi-Factor Authentication** из его расположения на сервере федерации, на странице приветствия установите флажок **Пропустить мастер настройки проверки подлинности** и нажмите кнопку **Далее**.
 
-2.  Чтобы активировать сервер Multi-Factor Authentication, вернитесь на страницу портала управления Multi-Factor Authentication, откуда вы загрузили сервер Multi-Factor Authentication, и нажмите кнопку **Создать учетные данные для активации** . В пользовательском интерфейсе сервера Multi-Factor Authentication введите созданные учетные данные и нажмите кнопку **Активировать**.
+2.  Чтобы активировать сервер Многофакторной идентификации, вернитесь на страницу портала управления Многофакторной идентификации, откуда вы загрузили сервер Многофакторной идентификации, и нажмите кнопку **Создать учетные данные для активации**. В пользовательском интерфейсе сервера Многофакторной идентификации введите созданные учетные данные и нажмите кнопку **Активировать**.
 
-3.  Затем в пользовательском интерфейсе **сервера Multi-Factor Authentication** вам будет предложено запустить **мастер настройки многосерверной среды**.  Выберите вариант **Нет**.
+3.  Затем в пользовательском интерфейсе **сервера Многофакторной идентификации** вам будет предложено запустить **мастер настройки многосерверной среды**.  Выберите вариант **Нет**.
 
     > [!IMPORTANT]
-    > Вы можете пропустить **мастер настройки многосерверной среды**, если для выполнения этого пошагового руководства используется лабораторная среда только с одним сервером федерации. Но если в вашей среде имеется несколько серверов федерации, вы должны установить сервер Multi-Factor Authentication и запустить **мастер настройки многосерверной среды** на каждом сервере федерации, чтобы обеспечить репликацию между серверами Multi-Factor Authentication, работающими на серверах федерации.
+    > Вы можете пропустить **мастер настройки многосерверной среды**, если для выполнения этого пошагового руководства используется лабораторная среда только с одним сервером федерации. Но если в вашей среде имеется несколько серверов федерации, вы должны установить сервер Многофакторной идентификации и запустить **мастер настройки многосерверной среды** на каждом сервере федерации, чтобы обеспечить репликацию между серверами Многофакторной идентификации, работающими на серверах федерации.
 
-4.  В пользовательском интерфейсе **сервера Multi-Factor Authentication** щелкните значок **Пользователи** , выберите команду **Импорт из Active Directory**, выберите учетную запись **Robert Hatley** для ее подготовки в Windows Azure Multi-Factor Authentication и нажмите кнопку **Импорт**.
+4.  В пользовательском интерфейсе **сервера Многофакторной идентификации** щелкните значок **Пользователи**, выберите команду **Импорт из Active Directory**, выберите учетную запись **Robert Hatley** для ее подготовки в Многофакторной идентификации Windows Azure и нажмите кнопку **Импорт**.
 
 5.  В списке **Пользователи** выберите учетную запись **Robert Hatley**, нажмите **Изменить**, в окне **Изменение пользователя** укажите номер мобильного телефона этой учетной записи, убедитесь, что флажок **Включено** установлен и нажмите кнопку **Применить**.
 
 6.  В списке **Пользователи** выберите учетную запись **Robert Hatley** и нажмите кнопку **Проверка**. В окне **Тестовый пользователь** предоставьте учетные данные для учетной записи **Robert Hatley**. Чтобы завершить проверку учетной записи, нажмите клавишу "#" в ячейке телефонного звонка.
 
-7.  В пользовательском интерфейсе **сервера Multi-Factor Authentication** щелкните значок **AD FS** , установите флажки **Разрешить регистрацию пользователей**, **Разрешить пользователям выбрать метод** (включая **Телефонный звонок** и **Текстовое сообщение**), **Использовать секретные вопросы в качестве запасного варианта** и **Включить ведение журнала** , выберите элемент **Установить адаптер AD FS**и выполните инструкции мастера установки **адаптера AD FS для Multi-Factor Authentication** .
+7.  В пользовательском интерфейсе **сервера Многофакторной идентификации** щелкните значок **AD FS**, установите флажки **Разрешить регистрацию пользователей**, **Разрешить пользователям выбрать метод** (включая **Телефонный звонок** и **Текстовое сообщение**), **Использовать секретные вопросы в качестве запасного варианта** и **Включить ведение журнала**, выберите элемент **Установить адаптер AD FS** и выполните инструкции мастера установки **адаптера AD FS для Многофакторной идентификации**.
 
     > [!NOTE]
     > Мастер установки **адаптера AD FS для Многофакторной идентификации** создает группу безопасности под названием **Администраторы PhoneFactor** в Active Directory и добавляет учетную запись службы AD FS для вашей службы федерации в эту группу.
@@ -188,23 +188,23 @@ ms.locfileid: "80815957"
     > 
     > При необходимости добавьте учетную запись службы AD FS в группу **Администраторы PhoneFactor** на контроллере домена вручную.
 
-    Для получения дополнительной информации об установке адаптера AD FS перейдите по ссылке справки в правом верхнем углу интерфейса сервера Многофакторной идентификации.
+    Для получения дополнительной информации об установке адаптера AD FS перейдите по ссылке справки в правом верхнем углу интерфейса сервера Multi-Factor Authentication.
 
 8.  Чтобы зарегистрировать адаптер в службе федерации, на сервере федерации откройте окно команд Windows PowerShell и выполните следующую команду: `\Program Files\Multi-Factor Authentication Server\Register-MultiFactorAuthenticationAdfsAdapter.ps1`. Теперь адаптер зарегистрирован под именем **WindowsAzureMultiFactorAuthentication**.  Чтобы регистрация вступила в силу, перезапустите службу AD FS.
 
-9. Чтобы настроить Многофакторную идентификацию Windows Azure в качестве дополнительного метода проверки подлинности, в консоли управления AD FS перейдите к узлу **Политики проверки подлинности** и в разделе **Многофакторной идентификации** щелкните ссылку **Изменить** рядом с подразделом **Глобальные параметры**. В окне **изменения глобальной политики проверки подлинности** выберите **Multi-Factor Authentication** в качестве дополнительного метода проверки подлинности и нажмите кнопку **ОК**.
+9. Чтобы настроить Многофакторную идентификацию Windows Azure в качестве дополнительного метода проверки подлинности, в консоли управления AD FS перейдите к узлу **Политики проверки подлинности** и в разделе **Многофакторной идентификации** щелкните ссылку **Изменить** рядом с подразделом **Глобальные параметры**. В окне **Изменить глобальную политику проверки подлинности** выберите **Многофакторная идентификация** в качестве дополнительного метода проверки подлинности и нажмите кнопку **ОК**.
 
     > [!NOTE]
-    > Вы можете настроить имя и описание метода Windows Azure Multi-Factor Authentication (как и любого другого стороннего метода проверки подлинности), отображающиеся в пользовательском интерфейсе AD FS, при помощи командлета **Set-AdfsAuthenticationProviderWebContent** . Дополнительные сведения см. в разделе [https://technet.microsoft.com/library/dn479401.aspx](https://technet.microsoft.com/library/dn479401.aspx)
+    > Можно настроить имя и описание метода Многофакторной идентификации Windows Azure (как и любого другого стороннего метода проверки подлинности), отображающиеся в пользовательском интерфейсе AD FS, при помощи командлета **Set-AdfsAuthenticationProviderWebContent**. Дополнительные сведения см. в разделе.[https://technet.microsoft.com/library/dn479401.aspx](/powershell/module/adfs/set-adfsauthenticationproviderwebcontent?view=win10-ps)
 
-### <a name="set-up-mfa-policy"></a><a name="BKMK_6"></a>Настройка политики MFA
+### <a name="set-up-mfa-policy"></a><a name="BKMK_6"></a>Настройка политики многофакторной проверки подлинности
 Чтобы активировать многофакторную проверку подлинности, вы должны настроить ее политику на сервере федерации. Для этого пошагового руководства в соответствии с политикой MFA необходимо, чтобы учетная запись **Роберт хатлэй** была подвергнута ВЫПОЛНЕНию MFA, поскольку она принадлежит к группе **Финансы** , настроенной в разделе [настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md).
 
 Политику многофакторной проверки подлинности можно настроить через консоль управления AD FS или при помощи Windows PowerShell.
 
 ##### <a name="to-configure-the-mfa-policy-based-on-users-group-membership-data-for-claimapp--via-the-ad-fs-management-console"></a>Настройка политики MFA на основе данных членства пользователя в группах для "клаимапп" с помощью консоли управления AD FS
 
-1.  На сервере федерации в консоли управления AD FS перейдите к узлу **Политики проверки подлинности**\\**Для отдельного отношения доверия с проверяющей стороной** и выберите отношение доверия с проверяющей стороной, которое представляет ваш пример приложения (**claimapp**).
+1.  На сервере федерации в консоли управления AD FS перейдите к разделу **политики проверки подлинности** \\ **на узел отношения доверия с проверяющей** стороной и выберите отношение доверия с проверяющей стороной, которое представляет пример приложения (**клаимапп**).
 
 2.  Перейдите на страницу **Действия** или щелкните правой кнопкой мыши **claimapp** и выберите пункт **Изменить настраиваемую многофакторную проверку подлинности**.
 
@@ -220,7 +220,7 @@ ms.locfileid: "80815957"
     $rp = Get-AdfsRelyingPartyTrust -Name claimapp
     ```
 
-2.  В той же командной строке Windows PowerShell выполните следующую команду:
+2.  В том же окне команд Windows PowerShell выполните следующую команду:
 
     ```
     $GroupMfaClaimTriggerRule = 'c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/groupsid", Value =~ "^(?i) <group_SID>$"] => issue(Type = "https://schemas.microsoft.com/ws/2008/06/identity/claims/authenticationmethod", Value = "https://schemas.microsoft.com/claims/multipleauthn");'
@@ -229,9 +229,9 @@ ms.locfileid: "80815957"
     ```
 
     > [!NOTE]
-    > Не забудьте заменить < group_SID > значением SID группы **AD.**
+    > Не забудьте заменить <group_SID> значением SID группы **AD.**
 
-## <a name="step-4-verify-mfa-mechanism"></a><a name="BKMK_4"></a>Шаг 4. Проверка механизма MFA
+## <a name="step-4-verify-mfa-mechanism"></a><a name="BKMK_4"></a>Шаг 4. Проверка механизма многофакторной проверки подлинности
 В этом шаге вы проверите функции многофакторной проверки подлинности, настроенные в предыдущем шаге. Чтобы убедиться, что пользователь с учетной записью Active Directory **Robert Hatley** может получать доступ к вашему примеру приложения и в этот раз ему нужно пройти многофакторную проверку подлинности, поскольку он входит в группу **Finance**, можно использовать следующую процедуру.
 
 1.  На клиентском компьютере откройте окно браузера и перейдите к вашему примеру приложения: **https://webserv1.contoso.com/claimapp** .
@@ -240,15 +240,12 @@ ms.locfileid: "80815957"
 
 2.  Введите учетные данные для учетной записи Active Directory **Robert Hatley**.
 
-    Согласно настроенной вами политике многофакторной проверки подлинности, пользователю будет предложено пройти дополнительную проверку подлинности. Текст сообщения по умолчанию: **В целях безопасности необходимо указать дополнительные данные для проверки учетной записи.** Этот текст можно полностью изменить по своему усмотрению. Дополнительную информацию о настройке взаимодействия при входе см. в разделе [Customizing the AD FS Sign-in Pages](https://technet.microsoft.com/library/dn280950.aspx).
+    Согласно настроенной вами политике многофакторной проверки подлинности, пользователю будет предложено пройти дополнительную проверку подлинности. Текст сообщения по умолчанию: **В целях безопасности необходимо указать дополнительные данные для проверки учетной записи.** Этот текст можно полностью изменить по своему усмотрению. Дополнительную информацию о настройке взаимодействия при входе см. в разделе [Customizing the AD FS Sign-in Pages](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
     Если в качестве дополнительного метода проверки подлинности вы настроили проверку подлинности сертификата, то текст сообщения по умолчанию будет следующим: **Выберите сертификат, который будет использоваться для проверки подлинности. В случае отмены операции закройте веб-браузер и повторите попытку.**
 
-    Если в качестве дополнительного метода проверки подлинности вы настроили Windows Azure Multi-Factor Authentication, текст сообщения по умолчанию будет следующим: **Для завершения проверки подлинности на ваш телефон будет отправлен вызов.** Дополнительную информацию о входе с использованием Windows Azure Multi-Factor Authentication и об использовании различных вариантов для предпочтительного метода проверки см. в разделе [Обзор Windows Azure Multi-Factor Authentication](https://technet.microsoft.com/library/dn249479.aspx).
+    Если в качестве дополнительного метода проверки подлинности была настроена Многофакторной идентификация Microsoft Azure, то текст сообщения по умолчанию будет следующим:**Для завершения проверки подлинности на ваш телефон будет произведен звонок.** Дополнительную информацию о входе с использованием Windows Azure Multi-Factor Authentication и об использовании различных вариантов для предпочтительного метода проверки см. в разделе [Обзор Windows Azure Multi-Factor Authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn280950(v=ws.11)).
 
 ## <a name="see-also"></a>См. также
-[Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-[настройке лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)
-
-
-
+[Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений](../../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md) 
+ [Настройка лабораторной среды для AD FS в Windows Server 2012 R2](../../ad-fs/deployment/Set-up-the-lab-environment-for-AD-FS-in-Windows-Server-2012-R2.md)

@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: cdedcbd5b9491b57ee31170b781dc821853d058f
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 3442ada27e8e01b72561850f724d7e28d740f43b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80815138"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964966"
 ---
 # <a name="ad-fs-operations"></a>Операции AD FS
 
@@ -21,8 +21,8 @@ ms.locfileid: "80815138"
 
 Этот документ содержит список всех операций с документацией для AD FS. 
 
-## <a name="service-configuration"></a>Настройка службы
-- [Обновление SSL-сертификатов в AD FS и WAP 2016](../ad-fs/operations/Manage-SSL-Certificates-AD-FS-WAP-2016.md)
+## <a name="service-configuration"></a>Конфигурация службы
+- [Обновление SSL-сертификатов в AD FS и WAP 2016](./operations/manage-ssl-certificates-ad-fs-wap.md)
 - [Средство ускоренного восстановления AD FS](../ad-fs/operations/AD-FS-Rapid-Restore-Tool.md)
 - [Настройка альтернативной привязки имени узла для проверки подлинности сертификата в AD FS](../ad-fs/operations/AD-FS-support-for-alternate-hostname-binding-for-certificate-authentication.md)
 - [Добавление хранилища атрибутов](../ad-fs/operations/Add-an-Attribute-Store.md)
@@ -32,10 +32,10 @@ ms.locfileid: "80815138"
 - [Группы доступности AlwaysOn](../ad-fs/operations/ad-fs-always-on.md) 
 
 
-## <a name="authentication-configuration"></a>Настройка аутентификации
+## <a name="authentication-configuration"></a>Настройка проверки подлинности
 ### <a name="strong-authentication-mfa--password-less"></a>Строгая проверка подлинности (MFA) & без пароля
 - [Настройка внешних поставщиков проверки подлинности в качестве первичного в AD FS (2019 или более поздней версии)](../ad-fs/operations/Additional-Authentication-Methods-AD-FS.md)
-- [Настройка AD FS (2016 или более поздней версии) и Azure MFA](../ad-fs/operations/Configure-AD-FS-2016-and-Azure-MFA.md)
+- [Настройка AD FS (2016 или более поздней версии) и Azure MFA](./operations/configure-ad-fs-and-azure-mfa.md)
 - [Настройка дополнительных методов проверки подлинности для AD FS](../ad-fs/operations/Configure-Additional-Authentication-Methods-for-AD-FS.md)
 
 ### <a name="lockout-protection"></a>Защита от блокировки
@@ -71,22 +71,20 @@ ms.locfileid: "80815138"
 - [Настройка AD FS для работы с агрегированным поставщиком Федерации (например, редкими)](../ad-fs/operations/Improved-interoperability-with-SAML-2.0.md)
 
 ## <a name="sign-in-experience-configuration"></a>Конфигурация интерфейса входа
-- [Настройка параметров единого входа AD FS 2016](../ad-fs/operations/AD-FS-2016-Single-Sign-On-Settings.md)
+- [Настройка параметров единого входа AD FS 2016](./operations/ad-fs-single-sign-on-settings.md)
 - [Настройка AD FS страничного входа в систему](../ad-fs/operations/AD-FS-paginated-sign-in.md)
 - [Настройка AD FS пользовательской настройки входа](../ad-fs/operations/AD-FS-user-sign-in-customization.md)
 - [Настройка AD FS для отправки утверждений об истечении срока действия пароля](../ad-fs/operations/Configure-AD-FS-to-Send-Password-Expiry-Claims.md)
 - [Настройка аутентификации в интрасети на основе форм для устройств, не поддерживающих WIA](../ad-fs/operations/Configure-intranet-forms-based-authentication-for-devices-that-do-not-support-WIA.md)
 
-## <a name="other"></a>Прочее
+## <a name="other"></a>Другое
 - [Присоединение к рабочей области с любого устройства для единого входа и эффективная двухфакторная аутентификация в приложениях компании](../ad-fs/operations/Join-to-Workplace-from-Any-Device-for-SSO-and-Seamless-Second-Factor-Authentication-Across-Company-Applications.md)
 - [Управление рисками для уязвимых приложений с помощью дополнительной многофакторной аутентификации](../ad-fs/operations/Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
 - [Управление рисками с использованием условного управления доступом](../ad-fs/operations/Manage-Risk-with-Conditional-Access-Control.md)
 - [Настройка среды лаборатории AD FS](../ad-fs/operations/Set-up-an-AD-FS-lab-environment.md)
 - [Пошаговое руководство. Управление рисками с помощью дополнительной многофакторной проверки подлинности для конфиденциальных приложений](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Additional-Multi-Factor-Authentication-for-Sensitive-Applications.md)
-- [Пошаговое руководство. Управление рисками с помощью контроля условного доступа](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
-- [Пошаговое руководство. Workplace Join с устройством Windows](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
-- [Пошаговое руководство. Workplace Join с устройством iOS](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
+- [Пошаговое руководство. Управление рисками с использованием условного управления доступом](../ad-fs/operations/Walkthrough-Guide--Manage-Risk-with-Conditional-Access-Control.md)
+- [Пошаговое руководство: Присоединение к рабочему месту с устройства Windows](../ad-fs/operations/Walkthrough--Workplace-Join-with-a-Windows-Device.md)
+- [Пошаговое руководство: Присоединение к рабочему месту с устройства iOS](../ad-fs/operations/Walkthrough--Workplace-Join-with-an-iOS-Device.md)
 
   
-
-

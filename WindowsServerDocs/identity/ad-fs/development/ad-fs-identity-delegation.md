@@ -8,12 +8,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: c36de1c3565be7f0f0e6c6203a21345f3d227e96
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 2162937498a5c16ce33b67ba5e478d2a6bb1a687
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964986"
 ---
 # <a name="identity-delegation-scenario-with-ad-fs"></a>Сценарий делегирования удостоверений с AD FS
 
@@ -26,7 +26,7 @@ ms.locfileid: "80857327"
 
 На следующей схеме показан типичный сценарий делегирования удостоверений, в котором сотрудник Fabrikam получает доступ к ресурсам, предоставляемым приложением Contoso.com.
 
-![Тождество](media/ad-fs-identity-delegation/id1.png)
+![Идентификация](media/ad-fs-identity-delegation/id1.png)
 
 Вымышленные пользователи, участвующие в этом сценарии:
 
@@ -57,7 +57,7 @@ ms.locfileid: "80857327"
 Для администратора Fabrikam.com доступны три варианта, Федор:
 
 
-1. Приобретите и установите продукт STS, например Active Directory&reg; служб федерации (AD FS).
+1. Приобретите и установите продукт STS, например &reg; службы Active Directory Federation Services (AD FS).
 2. Подпишитесь на облачный продукт STS, например LiveID STS.
 3. Создайте настраиваемую STS с помощью WIF.
 
@@ -99,9 +99,9 @@ if ( claimsPrincipal != null )
     bootstrapToken = claimsIdentity.BootstrapToken;
 }
 ```
-WIF предоставляет метод [креатечаннелактингас](https://msdn.microsoft.com/library/ee733863.aspx), который создает канал указанного типа, который дополняет запросы на выдачу маркера с указанным маркером безопасности в качестве элемента ActAs. Вы можете передать маркер начальной загрузки этому методу, а затем вызвать необходимый метод службы для возвращенного канала. В этом образце сценария удостоверение Федор имеет свойство [Actor](https://msdn.microsoft.com/library/microsoft.identitymodel.claims.iclaimsidentity.actor.aspx) со значением web1's Identity.
+WIF предоставляет метод [креатечаннелактингас](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)), который создает канал указанного типа, который дополняет запросы на выдачу маркера с указанным маркером безопасности в качестве элемента ActAs. Вы можете передать маркер начальной загрузки этому методу, а затем вызвать необходимый метод службы для возвращенного канала. В этом образце сценария удостоверение Федор имеет свойство [Actor](/previous-versions/windows-identity-foundation/ee766706(v=msdn.10)) со значением web1's Identity.
 
-В следующем фрагменте кода показано, как вызвать веб-службу с помощью [креатечаннелактингас](https://msdn.microsoft.com/library/ee733863.aspx) , а затем вызвать один из методов службы компутереспонсе на возвращенном канале:
+В следующем фрагменте кода показано, как вызвать веб-службу с помощью [креатечаннелактингас](/previous-versions/windows-identity-foundation/ee733863(v=msdn.10)) , а затем вызвать один из методов службы компутереспонсе на возвращенном канале:
 
 ```
 // Get the channel factory to the backend service from the application state
@@ -182,5 +182,5 @@ using ( ServiceHost host = new ServiceHost( typeof( Service2 ), new Uri( "http:/
 }
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

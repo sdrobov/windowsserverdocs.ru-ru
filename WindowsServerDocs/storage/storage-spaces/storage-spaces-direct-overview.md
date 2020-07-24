@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.assetid: 8bd0d09a-0421-40a4-b752-40ecb5350ffd
 description: Общие сведения о Локальные дисковые пространства, компоненте Windows Server, который позволяет выполнять кластерные серверы с внутренним хранилищем в аппаратно-определенном решении для хранения.
 ms.localizationpriority: medium
-ms.openlocfilehash: f3af42e2dde5b137ab2d49c1385dfa178f224ed8
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: d2568f068495ec56936c7f14bd286daf77b57bd4
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474481"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966506"
 ---
 # <a name="storage-spaces-direct-overview"></a>Обзор локальных дисковых пространств
 
@@ -29,11 +29,11 @@ ms.locfileid: "85474481"
 
 |       |       |
 |   -   |   -   |
-| **Общие сведения**<br><ul><li>Обзор (вы здесь)</li><li>[Общие сведения о кэше](understand-the-cache.md)</li><li>[Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)<li>[Рекомендации по симметрии диска](drive-symmetry-considerations.md)</li><li>[Принцип работы и отслеживание повторной синхронизации хранилища](understand-storage-resync.md)</li><li>[Общие сведения о кворуме кластеров и пулов](understand-quorum.md)</li><li>[Наборы кластеров](cluster-sets.md)</li> | **План**<br><ul><li>[Требования к оборудованию](storage-spaces-direct-hardware-requirements.md)</li><li>[Использование кэша чтения в памяти CSV](csv-cache.md)</li><li>[Выбор дисков](choosing-drives.md)</li><li>[Планирование томов](plan-volumes.md)</li><li>[Использование кластеров гостевых виртуальных машин](storage-spaces-direct-in-vm.md)</li><li>[Аварийное восстановление](storage-spaces-direct-disaster-recovery.md)</li> |
+| **Общие сведения**<br><ul><li>Обзор (вы здесь)</li><li>[Общие сведения о кэше](understand-the-cache.md)</li><li>[Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)<li>[Рекомендации по симметрии диска](drive-symmetry-considerations.md)</li><li>[Принцип работы и отслеживание повторной синхронизации хранилища](understand-storage-resync.md)</li><li>[Общие сведения о кворуме кластеров и пулов](understand-quorum.md)</li><li>[Наборы кластеров](cluster-sets.md)</li> | **Планирование**<br><ul><li>[Требования к оборудованию](storage-spaces-direct-hardware-requirements.md)</li><li>[Использование кэша чтения в памяти CSV](csv-cache.md)</li><li>[Выбор дисков](choosing-drives.md)</li><li>[Планирование томов](plan-volumes.md)</li><li>[Использование кластеров гостевых виртуальных машин](storage-spaces-direct-in-vm.md)</li><li>[Аварийное восстановление](storage-spaces-direct-disaster-recovery.md)</li> |
 | **Развертывание**<br><ul><li>[Развертывание локальных дисковых пространств](deploy-storage-spaces-direct.md)</li><li>[Создание томов](create-volumes.md)</li><li>[Вложенная устойчивость](nested-resiliency.md)</li><li>[Настройка кворума](../../failover-clustering/manage-cluster-quorum.md)</li><li>[Обновление кластера Локальных дисковых пространств в Windows Server 2019](upgrade-storage-spaces-direct-to-windows-server-2019.md)</li><li>[Общие сведения о постоянной памяти и ее развертывании](deploy-pmem.md)</li> | **Управление**<br><ul><li>[Управление с помощью Windows Admin Center](../../manage/windows-admin-center/use/manage-hyper-converged.md)</li><li>[Добавление серверов или дисков](add-nodes.md)</li><li>[Перевод сервера в автономный режим для обслуживания](maintain-servers.md)</li><li>[Удаление серверов](remove-servers.md)</li><li>[Увеличение размеров томов](resize-volumes.md)</li><li>[Удаление томов](delete-volumes.md)</li><li>[Обновление встроенного ПО дисков](../update-firmware.md)</li><li>[Журнал производительности](performance-history.md)</li><li>[Разграничение выделения томов](delimit-volume-allocation.md)</li><li>[Использование Azure Monitor в кластере с поддержкой технологии Hyper-in](configure-azure-monitor.md)</li> |
-| **Устранение неполадок**<br><ul><li>[Сценарии устранения неполадок](troubleshooting-storage-spaces.md)</li><li>[Устранение неполадок работоспособности и рабочих состояний](storage-spaces-states.md)</li><li>[Сбор диагностических данных с помощью Локальные дисковые пространства](data-collection.md)</li><li>[Управление работоспособностью памяти класса хранилища](Storage-class-memory-health.md)</li> | **Последние записи в блоге**<br><ul><li>[13 700 000 операций ввода-вывода с Локальные дисковые пространства: Новая запись отрасли для инфраструктуры с технологией Hyper-in](https://blogs.technet.microsoft.com/filecab/2018/10/30/windows-server-2019-and-intel-optane-dc-persistent-memory/)</li><li>[Инфраструктура с технологией Hyper-in в Windows Server 2019 — отсчет времени отсчета начинается прямо сейчас!](https://blogs.technet.microsoft.com/filecab/2018/10/02/hci-the-countdown-clock-starts-now/)</li><li>[Пять извещений от конференции Windows Server](https://blogs.technet.microsoft.com/filecab/2018/06/27/windows-server-summit-recap)</li><li>[10 000 Локальные дисковые пространства кластеры и подсчет...](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/)</li> |
+| **Устранение неполадок**<br><ul><li>[Сценарии устранения неполадок](troubleshooting-storage-spaces.md)</li><li>[Устранение неполадок работоспособности и рабочих состояний](storage-spaces-states.md)</li><li>[Сбор диагностических данных с помощью Локальные дисковые пространства](data-collection.md)</li><li>[Управление работоспособностью памяти класса хранилища](Storage-class-memory-health.md)</li> | **Последние записи в блоге**<br><ul><li>[13 700 000 операций ввода-вывода с Локальные дисковые пространства: Новая запись отрасли для инфраструктуры с технологией Hyper-in](https://techcommunity.microsoft.com/t5/storage-at-microsoft/the-new-hci-industry-record-13-7-million-iops-with-windows/ba-p/428314)</li><li>[Инфраструктура с технологией Hyper-in в Windows Server 2019 — отсчет времени отсчета начинается прямо сейчас!](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)</li><li>[Пять извещений от конференции Windows Server](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)</li><li>[10 000 Локальные дисковые пространства кластеры и подсчет...](https://techcommunity.microsoft.com/t5/storage-at-microsoft/storage-spaces-direct-10-000-clusters-and-counting/ba-p/428185)</li> |
 
-## <a name="videos"></a>Видео
+## <a name="videos"></a>Видеоролики
 
 **Краткий обзор видео (5 минут)**
 
@@ -56,13 +56,13 @@ ms.locfileid: "85474481"
 |       |       |
 |   -   |   -   |
 | ![Простота](media/storage-spaces-direct-in-windows-server-2016/simplicity-icon.png)   | **Простоты.** Создать кластер локальных дисковых пространств на основе стандартных серверов с ОС Windows Server 2016 можно меньше чем за 15 минут. Пользователи System Center могут выполнить развертывание, установив один флажок.       |
-| ![Непревзойденная производительность](media/storage-spaces-direct-in-windows-server-2016/performance-icon.png)   | **Непревзойденная производительность.** Как при использовании только флэш-памяти, так и при использовании гибридных носителей локальные дисковые пространства позволяют обеспечить [скорость ввода-вывода более 150 000 операций в секунду в смешанном режиме и более 4000 операций в секунду в произвольном режиме на сервер](https://blogs.technet.microsoft.com/filecab/2016/07/26/storage-iops-update-with-storage-spaces-direct/) со стабильно низкой задержкой. Это достигается благодаря архитектуре со встроенной низкоуровневой оболочкой, встроенному кэшу чтения и записи и поддержке передовых дисков NVMe, подключаемых непосредственно к шине PCIe.      |
+| ![Непревзойденная производительность](media/storage-spaces-direct-in-windows-server-2016/performance-icon.png)   | **Непревзойденная производительность.** Как при использовании только флэш-памяти, так и при использовании гибридных носителей локальные дисковые пространства позволяют обеспечить [скорость ввода-вывода более 150 000 операций в секунду в смешанном режиме и более 4000 операций в секунду в произвольном режиме на сервер](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) со стабильно низкой задержкой. Это достигается благодаря архитектуре со встроенной низкоуровневой оболочкой, встроенному кэшу чтения и записи и поддержке передовых дисков NVMe, подключаемых непосредственно к шине PCIe.      |
 | ![Отказоустойчивость](media/storage-spaces-direct-in-windows-server-2016/fault-tolerance-icon.png)   | **Отказоустойчивость.** Встроенные средства отказоустойчивости обрабатывают сбои дисков, серверов или компонентов, обеспечивая непрерывную доступность. В более масштабных развертываниях можно также настроить [отказоустойчивость шасси и стоек](../../failover-clustering/fault-domains.md). При сбое оборудования просто отключите его: программное обеспечение восстановит работоспособность самостоятельно, без выполнения сложных действий по управлению.       |
 | ![Эффективность ресурсов](media/storage-spaces-direct-in-windows-server-2016/efficiency-icon.png)   | **Эффективность ресурсов.** Помехоустойчивое кодирование повышает экономичность хранения в 2,4 раза, а уникальные инновации, такие как локальные коды реконструкции и уровни ReFS в режиме реального времени, позволяют распространить эти преимущества на жесткие диски и смешанные (холодные и горячие) рабочие нагрузки. При этом снижается загрузка ЦП, и ресурсы высвобождаются для наиболее важной задачи — выполнения виртуальных машин.       |
 | ![Управляемость](media/storage-spaces-direct-in-windows-server-2016/manageability-icon.png)   | **Управляемость**. Используйте [средства управления качеством обслуживания хранилища](../storage-qos/storage-qos-overview.md), чтобы контролировать работу наиболее загруженных виртуальных машин с помощью минимальных и максимальных значений скорости ввода-вывода на виртуальную машину. [Служба работоспособности](../../failover-clustering/health-service-overview.md) предоставляет встроенные возможности непрерывного мониторинга и оповещения, а новые интерфейсы API позволяют легко собирать расширенные метрики производительности и емкости в масштабе всего кластера.      |
 | ![Масштабируемость](media/storage-spaces-direct-in-windows-server-2016/scalability-icon.png)   | **Масштабируемость**. Поддерживается масштабирование до 16 серверов и более чем 400 дисков, что позволяет получать объем хранилища в 1 петабайт (1000 терабайт) на кластер. Чтобы осуществить масштабирование, просто добавьте диски или серверы. Локальные дисковые пространства автоматически подключат новые диски и начнут использовать их. Эффективность и производительность хранилища повышают предсказуемость при масштабировании.       |
 
-## <a name="deployment-options"></a>Параметры развертывания
+## <a name="deployment-options"></a>Варианты развертывания
 
 Локальные дисковые пространства предусматривают два разных варианта развертывания.
 
@@ -78,7 +78,7 @@ ms.locfileid: "85474481"
 
 ![Дисковые пространства прямого подключения обслуживают хранилище в виртуальных машинах Hyper-V на одном и том же кластере](media/storage-spaces-direct-in-windows-server-2016/hyper-converged-minimal.png)
 
-## <a name="how-it-works"></a>Принцип работы
+## <a name="how-it-works"></a>Принципы работы
 
 Локальные дисковые пространства являются развитием дисковых пространств, впервые представленных в Windows Server 2012. В них используется множество существующих возможностей Windows Server, таких как отказоустойчивая кластеризация, файловая система CSV, протокол SMB3 и, конечно, дисковые пространства. В них также были реализованы новые технологии, в первую очередь шина Software Storage Bus.
 
@@ -96,7 +96,7 @@ ms.locfileid: "85474481"
 
 **Кэш уровня шины хранилища.** Шина Software Storage Bus динамически связывает самые быстрые диски (например, SSD) с более медленными дисками (например, жесткими дисками) для обеспечения кэширования при чтении и записи на стороне сервера с целью ускорить ввод-вывод и повысить пропускную способность.
 
-**Пул носителей.** Набор дисков, которые образуют основу для дисковых пространств, называется пулом носителей. Он создается автоматически, и все подходящие диски обнаруживаются и добавляются в него также автоматически. Мы настоятельно рекомендуем использовать один пул носителей в каждом кластере с параметрами по умолчанию. Прочитайте раздел [Глубокое погружение в пул носителей](https://blogs.technet.microsoft.com/filecab/2016/11/21/deep-dive-pool-in-spaces-direct/), чтобы узнать больше.
+**Пул носителей.** Набор дисков, которые образуют основу для дисковых пространств, называется пулом носителей. Он создается автоматически, и все подходящие диски обнаруживаются и добавляются в него также автоматически. Мы настоятельно рекомендуем использовать один пул носителей в каждом кластере с параметрами по умолчанию. Прочитайте раздел [Глубокое погружение в пул носителей](https://techcommunity.microsoft.com/t5/storage-at-microsoft/deep-dive-the-storage-pool-in-storage-spaces-direct/ba-p/425959), чтобы узнать больше.
 
 **Дисковые пространства.** Дисковые пространства обеспечивают отказоустойчивость виртуальных дисков с помощью [зеркального отображения, очистки кодирования или и того и другого](storage-spaces-fault-tolerance.md). Их можно представить как распределенный программно-определяемый массив RAID на основе дисков в пуле. В локальных дисковых пространствах виртуальные диски обычно устойчивы к одновременному сбою двух дисков или серверов (то есть применяется трехстороннее зеркалирование, при котором каждая копия данных размещается на отдельном сервере), хотя также доступна отказоустойчивость на уровне шасси или стоек.
 
@@ -108,7 +108,7 @@ ms.locfileid: "85474481"
 
 ## <a name="customer-stories"></a>Истории клиентов
 
-Существует [более 10 000 кластеров по](https://blogs.technet.microsoft.com/filecab/2018/03/27/storage-spaces-direct-momentum/) всему миру, где работают Локальные дисковые пространства. Организации всех размеров, от малых предприятий, развертывающих всего два узла, до крупных предприятий и правительственных учреждений, развертывающих сотни узлов, зависят от Локальные дисковые пространства для критически важных приложений и инфраструктуры.
+Существует [более 10 000 кластеров по](https://techcommunity.microsoft.com/t5/storage-at-microsoft/storage-spaces-direct-10-000-clusters-and-counting/ba-p/428185) всему миру, где работают Локальные дисковые пространства. Организации всех размеров, от малых предприятий, развертывающих всего два узла, до крупных предприятий и правительственных учреждений, развертывающих сотни узлов, зависят от Локальные дисковые пространства для критически важных приложений и инфраструктуры.
 
 Посетите [Microsoft.com/HCI](https://www.microsoft.com/hci) , чтобы прочитать свои истории:
 
@@ -123,18 +123,18 @@ ms.locfileid: "85474481"
 | [Windows Admin Center](../../manage/windows-admin-center/overview.md);     | Графический    | Включено |
 | Диспетчер сервера & диспетчер отказоустойчивости кластеров                                 | Графический    | Включено |
 | Windows PowerShell                                                        | Командная строка | Включено |
-| [System Center Virtual Machine Manager (SCVMM)](https://technet.microsoft.com/system-center-docs/vmm/manage/manage-storage-spaces-direct-vmm) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Графический    | Платный     |
+| [System Center Virtual Machine Manager (SCVMM)](/system-center/vmm/s2d?view=sc-vmm-2019) <br>& [Operations Manager (SCOM)](https://www.microsoft.com/download/details.aspx?id=54700) | Графический    | Платный     |
 
-## <a name="get-started"></a>Приступая к работе
+## <a name="get-started"></a>Начало работы
 
-Попробуйте локальные дисковые пространства [в Microsoft Azure](https://blogs.technet.microsoft.com/filecab/2016/05/05/s2dazuretp5/) или скачайте [ознакомительную версию Windows Server](https://go.microsoft.com/fwlink/?linkid=842602) с лицензией на 180 дней.
+Попробуйте локальные дисковые пространства [в Microsoft Azure](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) или скачайте [ознакомительную версию Windows Server](https://go.microsoft.com/fwlink/?linkid=842602) с лицензией на 180 дней.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Отказоустойчивость и эффективность хранения](storage-spaces-fault-tolerance.md)
 - [Реплика хранилища](../storage-replica/storage-replica-overview.md)
-- [Блог о хранилище в блоге Майкрософт](https://blogs.technet.microsoft.com/filecab/)
-- [Пропускная способность дисковых пространств прямого подключения с iWARP](https://blogs.technet.microsoft.com/filecab/2017/03/13/storage-spaces-direct-throughput-with-iwarp) (блог TechNet)
+- [Блог о хранилище в блоге Майкрософт](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)
+- [Пропускная способность дисковых пространств прямого подключения с iWARP](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (блог TechNet)
 - [Новые возможности отказоустойчивой кластеризации в Windows Server 2016](../../failover-clustering/whats-new-in-failover-clustering.md)
 - [Качество обслуживания хранилища](../storage-qos/storage-qos-overview.md)
 - [Поддержка Windows для ИТ-специалистов](https://www.microsoft.com/itpro/windows/support)
