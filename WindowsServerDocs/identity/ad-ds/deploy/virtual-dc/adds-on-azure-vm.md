@@ -8,12 +8,12 @@ ms.date: 04/11/2019
 ms.technology: identity-adds
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: 536c35077d402370eab7758b8b31cf1916f8ae6f
-ms.sourcegitcommit: 96db7769c3be9d7534bfed942697122ce907a28a
+ms.openlocfilehash: a429ae3fed8694b5d9f05722b9f9d580b6b27ae6
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2020
-ms.locfileid: "85448476"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962986"
 ---
 # <a name="install-a-new-active-directory-forest-using-azure-cli"></a>Установка нового леса Active Directory с помощью Azure CLI
 
@@ -22,21 +22,21 @@ AD DS могут выполняться на виртуальной машине
 ## <a name="components"></a>Компоненты
 
 * Группа ресурсов для размещения всех элементов.
-* [Виртуальная сеть Azure](https://docs.microsoft.com/azure/virtual-network/virtual-networks-overview.md), подсеть, группа безопасности сети и правило, разрешающие доступ к виртуальным машинам по протоколу RDP.
-* [Группа доступности](https://docs.microsoft.com/azure/virtual-machines/windows/regions-and-availability#availability-sets) виртуальных машин Azure для размещения двух контроллеров домена домен Active Directory служб (AD DS) в.
+* [Виртуальная сеть Azure](/azure/virtual-network/virtual-networks-overview.md), подсеть, группа безопасности сети и правило, разрешающие доступ к виртуальным машинам по протоколу RDP.
+* [Группа доступности](/azure/virtual-machines/windows/regions-and-availability#availability-sets) виртуальных машин Azure для размещения двух контроллеров домена домен Active Directory служб (AD DS) в.
 * Для запуска AD DS и DNS на двух виртуальных машинах Azure.
 
 ### <a name="items-that-are-not-covered"></a>Неохваченные элементы
 
-* [Создание VPN-подключения типа "сеть — сеть](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) " из локального расположения
-* [Защита сетевого трафика в Azure](https://docs.microsoft.com/azure/security/azure-security-network-security-best-practices.md)
-* [Проектирование топологии сайта](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/designing-the-site-topology)
-* [Размещение роли хозяина операций планирования](https://docs.microsoft.com/windows-server/identity/ad-ds/plan/planning-operations-master-role-placement)
-* [Развертывание Azure AD Connect для синхронизации удостоверений в Azure AD](https://docs.microsoft.com/azure/active-directory/hybrid/how-to-connect-install-express)
+* [Создание VPN-подключения типа "сеть — сеть](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal.md) " из локального расположения
+* [Защита сетевого трафика в Azure](/azure/security/azure-security-network-security-best-practices.md)
+* [Проектирование топологии сайта](../../plan/designing-the-site-topology.md)
+* [Размещение роли хозяина операций планирования](../../plan/planning-operations-master-role-placement.md)
+* [Развертывание Azure AD Connect для синхронизации удостоверений в Azure AD](/azure/active-directory/hybrid/how-to-connect-install-express)
 
 ## <a name="build-the-test-environment"></a>Создание тестовой среды
 
-Для создания среды используется [портал Azure](https://portal.azure.com) и [Azure CLI](https://docs.microsoft.com/cli/azure/overview?view=azure-cli-latest) .
+Для создания среды используется [портал Azure](https://portal.azure.com) и [Azure CLI](/cli/azure/overview?view=azure-cli-latest) .
 
 Azure CLI используется для создания ресурсов Azure и управления ими из командной строки или с помощью скриптов. В этом руководстве содержатся сведения об использовании Azure CLI для развертывания виртуальных машин под Windows Server 2019. После завершения развертывания подключитесь к серверам и установите AD DS.
 
@@ -46,9 +46,9 @@ Azure CLI используется для создания ресурсов Azur
 
 Следующий сценарий автоматизирует процесс создания двух виртуальных машин Windows Server 2019 с целью создания контроллеров домена для нового Active Directory леса в Azure. Администратор может изменить приведенные ниже переменные в соответствии со своими потребностями, а затем завершить их как одну операцию. Скрипт создает необходимую группу ресурсов, группу безопасности сети и правило трафика для удаленный рабочий стол, виртуальной сети и подсети, а также группы доступности. Затем все виртуальные машины создаются с использованием диска данных объемом 20 ГБ с отключенным кэшированием для AD DS для установки.
 
-Приведенный ниже скрипт можно запустить непосредственно из портал Azure. Если вы решили установить и использовать CLI локально, для выполнения инструкций в этом руководстве вам понадобится Azure CLI 2.0.4 или более поздней версии. Чтобы узнать версию, выполните команду `az --version`. Если вам необходимо выполнить установку или обновление, см. статью [Установка Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+Приведенный ниже скрипт можно запустить непосредственно из портал Azure. Если вы решили установить и использовать CLI локально, для выполнения инструкций в этом руководстве вам понадобится Azure CLI 2.0.4 или более поздней версии. Чтобы узнать версию, выполните команду `az --version`. Если вам необходимо выполнить установку или обновление, см. статью [Установка Azure CLI 2.0](/cli/azure/install-azure-cli?view=azure-cli-latest).
 
-| Имя переменной | Цель |
+| Имя переменной | Назначение |
 | :---: | :--- |
 | AdminUsername | Имя пользователя, которое должно быть настроено на каждой виртуальной машине в качестве локального администратора. |
 | AdminPassword | Пароль с открытым текстом, настроенный для каждой виртуальной машины в качестве пароля локального администратора. |
@@ -155,12 +155,11 @@ az vm create \
 
 ## <a name="dns-and-active-directory"></a>DNS и Active Directory
 
-Если виртуальные машины Azure, созданные в рамках этого процесса, будут расширением существующей локальной инфраструктуры Active Directory, перед развертыванием необходимо изменить параметры DNS в виртуальной сети, чтобы они включали локальные DNS-серверы. Этот шаг важен, чтобы позволить вновь созданным контроллерам домена в Azure Разрешать локальные ресурсы и выполнять репликацию. Дополнительные сведения о DNS, Azure и настройке параметров можно найти в разделе [разрешение имен разделов, использующих собственный DNS-сервер](https://docs.microsoft.com/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
+Если виртуальные машины Azure, созданные в рамках этого процесса, будут расширением существующей локальной инфраструктуры Active Directory, перед развертыванием необходимо изменить параметры DNS в виртуальной сети, чтобы они включали локальные DNS-серверы. Этот шаг важен, чтобы позволить вновь созданным контроллерам домена в Azure Разрешать локальные ресурсы и выполнять репликацию. Дополнительные сведения о DNS, Azure и настройке параметров можно найти в разделе [разрешение имен разделов, использующих собственный DNS-сервер](/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances#name-resolution-that-uses-your-own-dns-server).
 
-После повышения уровня новых контроллеров домена в Azure им необходимо назначить основной и дополнительный DNS-серверы для виртуальной сети, а все локальные DNS-серверы будут понижены до третьего и более поздних. Дополнительные сведения об изменении DNS-серверов можно найти в статье [Создание, изменение и удаление виртуальной сети](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers).
+После повышения уровня новых контроллеров домена в Azure им необходимо назначить основной и дополнительный DNS-серверы для виртуальной сети, а все локальные DNS-серверы будут понижены до третьего и более поздних. Дополнительные сведения об изменении DNS-серверов можно найти в статье [Создание, изменение и удаление виртуальной сети](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
-Сведения о расширении локальной сети в Azure можно найти в статье [Создание VPN-подключения типа "сеть — сеть](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal
-)".
+Сведения о расширении локальной сети в Azure можно найти в статье [Создание VPN-подключения типа "сеть — сеть](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)".
 
 ## <a name="configure-the-vms-and-install-active-directory-domain-services"></a>Настройка виртуальных машин и установка служб домен Active Directory
 
@@ -194,7 +193,7 @@ az vm create \
    > [!NOTE]
    > Первый вход в систему после повышения роли контроллера домена может занять больше времени, чем обычная, и это нормально. Возьмите кружки в чай, кафе, воды или другие напитки по своему усмотрению.
 
-[Виртуальные сети Azure теперь поддерживают IPv6](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , но если вы хотите установить для виртуальных машин предпочитаемый протокол IPv4 по протоколу IPv6, сведения о том, как выполнить эту задачу, можно найти в статье базы знаний [руководство по настройке IPv6 в Windows для опытных пользователей](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
+[Виртуальные сети Azure теперь поддерживают IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , но если вы хотите установить для виртуальных машин предпочитаемый протокол IPv4 по протоколу IPv6, сведения о том, как выполнить эту задачу, можно найти в статье базы знаний [руководство по настройке IPv6 в Windows для опытных пользователей](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### <a name="configure-the-second-domain-controller"></a>Настройка второго контроллера домена
 
@@ -223,11 +222,11 @@ az vm create \
 
 После завершения перезагрузки виртуальной машины Войдите в систему с использованием учетных данных, которые использовались ранее, но на этот раз как член домена CONTOSO.com.
 
-[Виртуальные сети Azure теперь поддерживают IPv6](https://docs.microsoft.com/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , но если вы хотите установить для виртуальных машин предпочитаемый протокол IPv4 по протоколу IPv6, сведения о том, как выполнить эту задачу, можно найти в статье базы знаний [руководство по настройке IPv6 в Windows для опытных пользователей](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
+[Виртуальные сети Azure теперь поддерживают IPv6](/azure/virtual-network/virtual-networks-faq#do-vnets-support-ipv6) , но если вы хотите установить для виртуальных машин предпочитаемый протокол IPv4 по протоколу IPv6, сведения о том, как выполнить эту задачу, можно найти в статье базы знаний [руководство по настройке IPv6 в Windows для опытных пользователей](https://support.microsoft.com/help/929852/guidance-for-configuring-ipv6-in-windows-for-advanced-users).
 
 ### <a name="configure-dns"></a>Настройка DNS
 
-После повышения уровня новых контроллеров домена в Azure им необходимо назначить основной и дополнительный DNS-серверы для виртуальной сети, а все локальные DNS-серверы будут понижены до третьего и более поздних. Дополнительные сведения об изменении DNS-серверов можно найти в статье [Создание, изменение и удаление виртуальной сети](https://docs.microsoft.com/azure/virtual-network/manage-virtual-network#change-dns-servers).
+После повышения уровня новых контроллеров домена в Azure им необходимо назначить основной и дополнительный DNS-серверы для виртуальной сети, а все локальные DNS-серверы будут понижены до третьего и более поздних. Дополнительные сведения об изменении DNS-серверов можно найти в статье [Создание, изменение и удаление виртуальной сети](/azure/virtual-network/manage-virtual-network#change-dns-servers).
 
 ### <a name="wrap-up"></a>Заключение
 
@@ -249,12 +248,12 @@ az vm create \
 az group delete --name ADonAzureVMs
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 * [Безопасная виртуализация доменных служб Active Directory (AD DS)](../../Introduction-to-Active-Directory-Domain-Services-AD-DS-Virtualization-Level-100.md)
-* [Azure AD Connect](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
-* [Резервное копирование и восстановление](https://docs.microsoft.com/azure/virtual-machines/windows/backup-recovery)
-* [VPN-подключение типа "сеть — сеть"](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Мониторинг](https://docs.microsoft.com/azure/virtual-machines/windows/monitor)
-* [Безопасность и политика](https://docs.microsoft.com/azure/virtual-machines/windows/security-policy)
-* [Обслуживание и обновления](https://docs.microsoft.com/azure/virtual-machines/windows/maintenance-and-updates)
+* [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect-get-started-express)
+* [Резервное копирование и восстановление](/azure/virtual-machines/windows/backup-recovery)
+* [VPN-подключение типа "сеть — сеть"](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Мониторинг](/azure/virtual-machines/windows/monitor)
+* [Безопасность и политика](/azure/virtual-machines/windows/security-policy)
+* [Обслуживание и обновления](/azure/virtual-machines/windows/maintenance-and-updates)

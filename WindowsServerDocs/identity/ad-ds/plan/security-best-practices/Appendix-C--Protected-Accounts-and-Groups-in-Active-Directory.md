@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 18a293f4ec7d96516bd89396c13562ba68dc471f
-ms.sourcegitcommit: a1641b80c88205c0253f354f2d427d77bb879643
+ms.openlocfilehash: cfee6eedd1582c3df960cca1c32fce27c74f82cb
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85345438"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963236"
 ---
 # <a name="appendix-c-protected-accounts-and-groups-in-active-directory"></a>Приложение В. Защищенные учетные записи и группы в Active Directory
 
@@ -31,7 +31,7 @@ ms.locfileid: "85345438"
 
 #### <a name="protected-accounts-and-groups-in-active-directory-by-operating-system"></a>Защищенные учетные записи и группы в Active Directory операционной системой
 
-| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012. <br> Windows Server 2008 R2, <br> Windows Server 2008 | Windows Server 2016 |
+| Windows Server 2003 RTM | Windows Server 2003 SP1 + | Windows Server 2012. <br> Windows Server 2008 R2 <br> Windows Server 2008 | Windows Server 2016 |
 | --- | --- | --- | --- |
 |Операторы учета|Операторы учета|Операторы учета|Операторы учета|
 |Администратор|Администратор|Администратор|Администратор|
@@ -70,7 +70,7 @@ SDProp — это процесс, который выполняется кажд
 
 Лучшим подходом к тестированию изменений в AdminSDHolder является запуск SDProp вручную, что приводит к немедленному запуску задачи, но не влияет на запланированное выполнение. Выполнение SDProp вручную выполняется несколько иначе на контроллерах домена под Windows Server 2008 и более ранних версиях, чем на контроллерах домена под Windows Server 2012 или Windows Server 2008 R2.  
 
-Процедуры для запуска SDProp вручную в старых операционных системах приведены в [Служба поддержки Майкрософт статье 251343](https://support.microsoft.com/kb/251343), а ниже приведены пошаговые инструкции для более ранних и новых операционных систем. В любом случае необходимо подключиться к объекту rootDSE в Active Directory и выполнить операцию изменения с DN, равным null, для объекта rootDSE, указав имя операции в качестве изменяемого атрибута. Дополнительные сведения об изменяемых операциях с объектом rootDSE см. в разделе [RootDSE Modify Operations](https://msdn.microsoft.com/library/cc223297.aspx) на веб-сайте MSDN.  
+Процедуры для запуска SDProp вручную в старых операционных системах приведены в [Служба поддержки Майкрософт статье 251343](https://support.microsoft.com/kb/251343), а ниже приведены пошаговые инструкции для более ранних и новых операционных систем. В любом случае необходимо подключиться к объекту rootDSE в Active Directory и выполнить операцию изменения с DN, равным null, для объекта rootDSE, указав имя операции в качестве изменяемого атрибута. Дополнительные сведения об изменяемых операциях с объектом rootDSE см. в разделе [RootDSE Modify Operations](/openspecs/windows_protocols/ms-adts/fc74972f-b267-4c1a-8716-0f5b48cf52b9) на веб-сайте MSDN.  
 
 ###### <a name="running-sdprop-manually-in-windows-server-2008-or-earlier"></a>Запуск SDProp вручную в Windows Server 2008 или более ранней версии
 

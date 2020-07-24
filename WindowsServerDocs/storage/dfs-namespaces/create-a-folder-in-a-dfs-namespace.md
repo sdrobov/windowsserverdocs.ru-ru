@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: 18e0f1ad19e8c6ce2b6dbffe0d25c940c4f8f985
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 4034c3b40a6b409f295875e424668e68bce24cdb
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474281"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962866"
 ---
 # <a name="create-a-folder-in-a-dfs-namespace"></a>Создание папки в пространстве имен DFS
 
@@ -35,12 +35,10 @@ ms.locfileid: "85474281"
 
 
 > [!TIP]
-> Чтобы создать папку в пространстве имен с помощью Windows PowerShell, используйте командлет [New-DfsnFolder](https://docs.microsoft.com/powershell/module/dfsn/new-dfsnfolder). Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
+> Чтобы создать папку в пространстве имен с помощью Windows PowerShell, используйте командлет [New-DfsnFolder](/powershell/module/dfsn/new-dfsnfolder). Модуль DFSN Windows PowerShell был введен в Windows Server 2012.
 
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 -   [Развертывание пространств имен DFS](deploying-dfs-namespaces.md)
 -   [Делегирование прав управления пространствами имен DFS](delegate-management-permissions-for-dfs-namespaces.md)
-
-

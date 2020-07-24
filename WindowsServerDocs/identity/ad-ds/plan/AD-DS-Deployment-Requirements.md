@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 4ab00fe1fa3a40511ba60234025202e9303455f0
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: 228d4d1644c3bae60dcf293540ad764fb511922a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624432"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962506"
 ---
 # <a name="ad-ds-deployment-requirements"></a>Требования к развертыванию доменных служб Active Directory
 
@@ -28,21 +28,21 @@ ms.locfileid: "81624432"
 
 ![Требования служб AD DS](media/AD-DS-Deployment-Requirements/033aad0b-25ff-4793-8825-88a6daa01a55.gif)
 
-Дополнительные сведения см. [в разделе Развертывание корневого домена леса Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731174(v=ws.10)).
+Дополнительные сведения см. [в разделе Развертывание корневого домена леса Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731174(v=ws.10)).
 
 ## <a name="deploying-windows-server-2008-regional-domains"></a>Развертывание региональных доменов Windows Server 2008
 После завершения развертывания корневого домена леса вы можете развернуть все новые региональные домены Windows Server 2008, указанные в проекте. Для этого необходимо развернуть контроллеры домена для каждого регионального домена. На следующем рисунке показан процесс развертывания региональных доменов.
 
 ![Требования служб AD DS](media/AD-DS-Deployment-Requirements/89a878c8-9a94-4180-ad43-ca75316a6318.gif)
 
-Дополнительные сведения см. в разделе [развертывание региональных доменов Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755118(v=ws.10)).
+Дополнительные сведения см. в разделе [развертывание региональных доменов Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755118(v=ws.10)).
 
 ## <a name="upgrading-active-directory-domains-to-windows-server-2008"></a>Обновление доменов Active Directory до Windows Server 2008
-Обновление доменов Windows 2000 или Windows Server 2003 до доменов Windows Server 2008 является эффективным и простым способом воспользоваться преимуществами дополнительных функций и функций Windows Server 2008. Вы можете обновить домены, чтобы поддерживать текущую конфигурацию сети и домена, одновременно повышая безопасность, масштабируемость и управляемость сетевой инфраструктуры. Для обновления с Windows 2000 или Windows Server 2003 до Windows Server 2008 требуется минимальная конфигурация сети. Обновление также оказывает незначительное влияние на операции пользователя. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731188(v=ws.10)).
+Обновление доменов Windows 2000 или Windows Server 2003 до доменов Windows Server 2008 является эффективным и простым способом воспользоваться преимуществами дополнительных функций и функций Windows Server 2008. Вы можете обновить домены, чтобы поддерживать текущую конфигурацию сети и домена, одновременно повышая безопасность, масштабируемость и управляемость сетевой инфраструктуры. Для обновления с Windows 2000 или Windows Server 2003 до Windows Server 2008 требуется минимальная конфигурация сети. Обновление также оказывает незначительное влияние на операции пользователя. Дополнительные сведения см. [в разделе Обновление доменов Active Directory до Windows server 2008 и Windows server 2008 R2 AD DS Domains](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731188(v=ws.10)).
 
 ## <a name="restructuring-ad-ds-domains"></a>Реструктуризация AD DS доменов
 При реструктуризации доменов между лесами Windows Server 2008 (реструктуризация между лесами) можно сократить количество доменов в среде и, таким образом, снизить сложность администрирования и издержки. При переносе объектов между лесами в рамках этого процесса реструктуризации одновременно существуют и исходный домен, и конечные среды домена. Это позволяет при необходимости выполнять откат к исходной среде во время миграции.
 
 При реструктуризации доменов Windows Server 2008 в лесу Windows Server 2008 (реструктуризация в пределах леса) можно консолидировать структуру доменов и, таким образом, снизить сложность и нагрузку администратора. При реструктуризации доменов в лесу перенесенные учетные записи больше не существуют в исходном домене.
 
-Дополнительные сведения об использовании средства миграции Active Directory (ADMT) версии 3,1 (ADMT v 3.1) для реструктуризации доменов см. в разделе [руководство по ADMT: миграция и реструктуризация Active Directory доменов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc974332(v=ws.10)).
+Дополнительные сведения об использовании средства миграции Active Directory (ADMT) версии 3,1 (ADMT v 3.1) для реструктуризации доменов см. в разделе [руководство по ADMT: миграция и реструктуризация Active Directory доменов](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc974332(v=ws.10)).

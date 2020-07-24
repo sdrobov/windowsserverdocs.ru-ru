@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: e7543381-4081-407f-adad-a9de792c6616
 ms.technology: identity-adds
-ms.openlocfilehash: b9ba00939ccb2ee747501733fb9654edb4c8132e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 4bf3ec5cb9495e3603c3a5a385f0ff7b65e9d8b7
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80824257"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962947"
 ---
 # <a name="ad-forest-recovery---cleaning-metadata-of-removed-writable-domain-controllers"></a>Восстановление леса AD — очистка метаданных удаленных контроллеров домена с возможностью записи
 
@@ -31,7 +31,7 @@ ms.locfileid: "80824257"
 
 В качестве альтернативы можно также использовать Active Directory сайты и службы в RSAT для удаления объекта контроллера домена. При использовании Active Directory сайтов и служб необходимо удалить связанный объект сервера и объект параметров NTDS, прежде чем можно будет удалить объект контроллера домена.  
 
-Дополнительные сведения об установке RSAT см. в статье [средства удаленного администрирования сервера](https://docs.microsoft.com/windows-server/remote/remote-server-administration-tools).
+Дополнительные сведения об установке RSAT см. в статье [средства удаленного администрирования сервера](../../../remote/remote-server-administration-tools.md).
   
 Следующая процедура используется для контроллеров домена под управлением Windows Server 2016, 2012, 2008 R2 или 2008. Целевой контроллер домена для операции очистки метаданных может работать под управлением любой версии Windows Server.  
   
@@ -40,11 +40,11 @@ ms.locfileid: "80824257"
 1. На **начальном экране** выберите **Администрирование**, а затем выберите пункт **Пользователи и компьютеры Active Directory**.  
 2. В дереве консоли дважды щелкните контейнер домен, а затем дважды щелкните организационное подразделение **контроллеров домена** (OU).  
 3. В области сведений щелкните правой кнопкой мыши контроллер домена, который необходимо удалить, и выберите команду **Удалить**.
-   ![Удалить](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
+   ![Удаление](media/AD-Forest-Recovery-Cleaning-Metadata/delete1.png) 
 4. Нажмите кнопку **Да** для подтверждения удаления. Установите флажок **этот контроллер домена постоянно отключен и не может быть понижен с помощью мастер установки доменных служб Active Directory (Dcpromo)** и нажмите кнопку **Удалить**.  
 5. Если контроллер домена был сервером глобального каталога, нажмите кнопку **Да** подтвердить удаление.  
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

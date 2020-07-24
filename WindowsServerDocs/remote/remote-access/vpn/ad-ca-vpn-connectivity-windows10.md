@@ -9,26 +9,26 @@ ms.author: v-tea
 author: Teresa-MOTIV
 ms.date: 06/28/2019
 ms.reviewer: deverette
-ms.openlocfilehash: b524e2040706c7e4b2a897d213e28d6b4c91c8f7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: da32df185cb0c0c2370e60119dd9c2fbd510bd08
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856067"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964266"
 ---
 # <a name="step-7-optional-conditional-access-for-vpn-connectivity-using-azure-ad"></a>Шаг 7. Используемых Условный доступ для VPN-подключений с помощью Azure AD
 
 - [**Назад:** Шаг 6. Настройка клиента Windows 10 Always On VPN-подключений](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 - [**Далее:** Шаг 7,1. Настройка EAP-TLS для пропуска проверки списка отзыва сертификатов (CRL)](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
-На этом необязательном шаге можно точно настроить способ доступа VPN-пользователей к ресурсам с помощью [условного доступа Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal). Условный доступ Azure AD для подключения к виртуальной частной сети (VPN) поможет защитить VPN-подключения. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD).
+На этом необязательном шаге можно точно настроить способ доступа VPN-пользователей к ресурсам с помощью [условного доступа Azure Active Directory (Azure AD)](/azure/active-directory/active-directory-conditional-access-azure-portal). Условный доступ Azure AD для подключения к виртуальной частной сети (VPN) поможет защитить VPN-подключения. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 Вы знакомы со следующими разделами:
 
-- [Условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal)
-- [VPN и условный доступ](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access)
+- [Условный доступ в Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal)
+- [VPN и условный доступ](/windows/access-protection/vpn/vpn-conditional-access)
 
 Чтобы настроить условный доступ к VPN-подключениям Azure Active Directory, необходимо настроить следующие параметры.
 
@@ -38,26 +38,26 @@ ms.locfileid: "80856067"
 - [Параметры DNS и брандмауэра](always-on-vpn/deploy/vpn-deploy-dns-firewall.md)
 - [Клиент Windows 10 Always On VPN-подключения](always-on-vpn/deploy/vpn-deploy-client-vpn-connections.md)
 
-## <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>[Шаг 7,1. Настройка EAP-TLS для пропуска проверки списка отзыва сертификатов (CRL)](vpn-config-eap-tls-to-ignore-crl-checking.md)
+## <a name="step-71-configure-eap-tls-to-ignore-certificate-revocation-list-crl-checking"></a>[Шаг 7.1. Настройка игнорирования проверки списка отзыва сертификатов (CRL) в EAP-TLS](vpn-config-eap-tls-to-ignore-crl-checking.md)
 
 На этом шаге можно добавить **игнореноревокатиончекк** и настроить его, чтобы разрешить проверку подлинности клиентов, если сертификат не содержит точки распространения списка отзыва сертификатов. По умолчанию Игнореноревокатиончекк имеет значение 0 (отключено).
 
 Клиент EAP-TLS не может подключиться, если сервер политики сети не выполняет проверку отзыва цепочки сертификатов (включая корневой сертификат). Облачные сертификаты, выданные пользователю Azure AD, не имеют списка отзыва сертификатов, так как они имеют краткосрочные сертификаты со временем существования один час. Для протокола EAP на NPS необходимо настроить игнорирование отсутствия списка отзыва сертификатов. Так как методом проверки подлинности является EAP-TLS, это значение реестра требуется только в разделе **EAP\13**. Если используются другие методы проверки подлинности EAP, то в него также должно быть добавлено значение реестра.
 
-## <a name="step-72-create-root-certificates-for-vpn-authentication-with-azure-ad"></a>[Шаг 7,2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
+## <a name="step-72-create-root-certificates-for-vpn-authentication-with-azure-ad"></a>[Шаг 7.2. Создание корневых сертификатов для проверки подлинности VPN с помощью Azure AD](vpn-create-root-cert-for-vpn-auth-azure-ad.md)
 
 На этом шаге вы настроите корневые сертификаты для проверки подлинности VPN с помощью Azure AD, которая автоматически создает облачное приложение VPN-сервера в клиенте.  
 
-Чтобы настроить условный доступ для VPN-подключений, необходимо выполнить следующие действия.
+Чтобы настроить условный доступ для VPN-подключения, выполните следующие действия:
 
-1. Создайте VPN-сертификат в портал Azure.
-2. Скачайте VPN-сертификат.
+1. Создайте VPN-сертификат на портале Azure.
+2. Скачайте этот VPN-сертификат.
 3. Разверните сертификат на VPN-сервере.
 
 > [!IMPORTANT]
 > После создания сертификата VPN в портал Azure Azure AD сразу же начнет использовать его для выдаче коротких сертификатов VPN-клиенту. Крайне важно, чтобы VPN-сертификат был немедленно развернут на VPN-сервере во избежание проблем с проверкой учетных данных VPN-клиента.
 
-## <a name="step-73-configure-the-conditional-access-policy"></a>[Шаг 7,3. Настройка политики условного доступа](vpn-config-conditional-access-policy.md)
+## <a name="step-73-configure-the-conditional-access-policy"></a>[Шаг 7.3. Настройка политики условного доступа](vpn-config-conditional-access-policy.md)
 
 На этом шаге вы настроите политику условного доступа для VPN-подключения.
 
@@ -77,20 +77,20 @@ ms.locfileid: "80856067"
 2. Импортируйте корневой сертификат на VPN-сервер и VPN-клиент.
 3. Убедитесь, что сертификаты существуют и отображаются как доверенные.
 
-## <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>[Шаг 7,5. Создание профилей поддержка vpnv2 на основе OMA-DM на устройствах Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md)
+## <a name="step-75-create-oma-dm-based-vpnv2-profiles-to-windows-10-devices"></a>[Шаг 7.5. Создание профилей VPNv2 на основе OMA-DM на устройствах с Windows 10](vpn-create-oma-dm-based-vpnv2-profiles.md)
 
-На этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры поддержка VPNV2 CSP](https://docs.microsoft.com/windows/client-management/mdm/vpnv2-csp) .
+На этом шаге можно создать профили поддержка vpnv2 на основе OMA-DM с помощью Intune, чтобы развернуть политику конфигурации VPN-устройства. Если вы хотите использовать Configuration Manager или скрипт PowerShell для создания профилей поддержка vpnv2, см. Дополнительные сведения в разделе [Параметры поддержка VPNV2 CSP](/windows/client-management/mdm/vpnv2-csp) .
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 [Шаг 7,1. Настройка EAP-TLS для игнорирования проверки списка отзыва сертификатов (CRL)](vpn-config-eap-tls-to-ignore-crl-checking.md). на этом шаге необходимо добавить **игнореноревокатиончекк** и настроить его таким образом, чтобы разрешить проверку подлинности клиентов, если сертификат не содержит точки распространения списка отзыва сертификатов. По умолчанию Игнореноревокатиончекк имеет значение 0 (отключено).
 
-## <a name="related-topics"></a>Связанные разделы
+## <a name="related-topics"></a>Связанные темы
 
-- [Настройка профилей поддержка vpnv2](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access). Теперь VPN-клиент может интегрироваться с облачной платформой условного доступа, чтобы предоставить параметр соответствия устройства для удаленных клиентов. На этом шаге вы настроите профили поддержка vpnv2 с помощью **\<девицекомплианце > \<Enabled > true\</Enabled >** .
+- [Настройка профилей поддержка vpnv2](/windows/access-protection/vpn/vpn-conditional-access). Теперь VPN-клиент может интегрироваться с облачной платформой условного доступа, чтобы предоставить параметр соответствия устройства для удаленных клиентов. На этом шаге вы настроите профили поддержка vpnv2 со значением ** \<DeviceCompliance> \<Enabled> true \</Enabled> **.
 
 - [Улучшение удаленного доступа в Windows 10 с помощью автоматического профиля VPN](https://www.microsoft.com/itshowcase/Article/Content/894/Enhancing-remote-access-in-Windows-10-with-an-automatic-VPN-profile): Узнайте, как корпорация Майкрософт реализует условный доступ для VPN-подключения. Профили VPN содержат все сведения, необходимые устройству для подключения к корпоративной сети, включая поддерживаемые методы проверки подлинности и VPN-сервер, к которому должно подключаться устройство. Изменения в юбилейном обновлении Windows 10, включая условный доступ и единый вход, позволяют нам создавать профиль VPN-подключения Always-on.
 
-- [Условный доступ в Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal): безопасность является важнейшим вопросом для организаций, использующих облако. Ключевым аспектом безопасности в облаке является идентификация и доступ, когда дело доходит до управления облачными ресурсами. В мире, ориентированном на мобильные и облачные технологии, пользователи могут получать доступ к ресурсам Организации, используя разнообразные устройства и приложения из любого места. В результате, просто сосредоточиться на том, кто имеет доступ к ресурсу, больше не хватает. Чтобы обеспечить баланс между безопасностью и производительностью, ИТ-специалистам также необходимо учитывать, как доступ к ресурсу осуществляется при принятии решения об управлении доступом.
+- [Условный доступ в Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal): безопасность является важнейшим вопросом для организаций, использующих облако. Ключевым аспектом облачной безопасности является идентификация и доступ при управлении облачными ресурсами. В мире мобильных и облачных технологий пользователи могут откуда угодно обращаться к ресурсам организации с помощью различных устройств и приложений. Поэтому уже недостаточно просто указать, кто имеет доступ к ресурсу. Чтобы управлять балансом между безопасностью и производительностью, в решении по управлению доступом ИТ-специалисты также должны учитывать способ доступа к ресурсам.
 
-- [VPN и условный доступ](https://docs.microsoft.com/windows/access-protection/vpn/vpn-conditional-access). VPN-клиент теперь может интегрироваться с облачной платформой условного доступа, чтобы предоставить параметр соответствия устройства для удаленных клиентов. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD).
+- [VPN и условный доступ](/windows/access-protection/vpn/vpn-conditional-access). VPN-клиент теперь может интегрироваться с облачной платформой условного доступа, чтобы предоставить параметр соответствия устройства для удаленных клиентов. Условный доступ — это модуль оценки на основе политик, который позволяет создавать правила доступа для любого приложения, подключенного к Azure Active Directory (Azure AD).

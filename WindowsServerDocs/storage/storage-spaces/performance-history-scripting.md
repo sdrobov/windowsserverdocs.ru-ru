@@ -7,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 05/15/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 53a5f2aa403c83d24acde1fc57e793141175d9b6
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7f3274210ea6c08d63862551570096ab10aa878e
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474721"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961816"
 ---
 # <a name="scripting-with-powershell-and-storage-spaces-direct-performance-history"></a>Создание сценариев с помощью PowerShell и Локальные дисковые пространства журнала производительности
 
@@ -44,11 +44,11 @@ ms.locfileid: "85474721"
 
 ![Снимок экрана PowerShell](media/performance-history/Show-CpuMinMaxAvg.png)
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 Выходные данные `Get-ClusterPerf` каналов, хорошо выходящие во встроенном `Measure-Object` командлете, просто указывают `Value` свойство. С помощью `-Maximum` его `-Minimum` `-Average` флагов, и `Measure-Object` предоставляет нам первые три столбца почти бесплатно. Чтобы выполнить анализ квартиль, можно передать по конвейеру `Where-Object` и подсчитать количество значений `-Gt` (больше) 25, 50 или 75. Последним шагом является беаутифи с `Format-Hours` `Format-Percent` вспомогательными функциями и, безусловно, необязательными.
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -103,7 +103,7 @@ $Output | Sort-Object ClusterNode | Format-Table
 
 ![Снимок экрана PowerShell](media/performance-history/Show-LatencyOutlierHDD.png)
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 Во-первых, мы исключим бездействующие и почти бездействующие диски, проверяя `PhysicalDisk.Iops.Total` согласованность `-Gt 1` . Для каждого активного жесткого диска мы `LastHour` параллельно используем его период, состоящий из 360 измерений с интервалом в 10 секунд, чтобы `Measure-Object -Average` получить среднюю задержку за последний час. Это настраивает наше заполнение.
 
@@ -111,7 +111,7 @@ $Output | Sort-Object ClusterNode | Format-Table
 
 Если какой-либо диск больше, чем +3 σ, мы имеем `Write-Host` красный цвет; в противном случае — зеленым.
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -210,7 +210,7 @@ Else {
 
 ![Снимок экрана PowerShell](media/performance-history/Show-TopIopsVMs.png)
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 В отличие от этого `Get-PhysicalDisk` `Get-VM` командлет не поддерживает кластеризацию — он возвращает только виртуальные машины на локальном сервере. Чтобы выполнить запрос с каждого сервера параллельно, мы обернут наш вызов в `Invoke-Command (Get-ClusterNode).Name { ... }` . Для каждой виртуальной машины мы получаем `VHD.Iops.Total` измерения, `VHD.Iops.Read` и `VHD.Iops.Write` . Не указывая `-TimeFrame` параметр, мы получаем `MostRecent` одну точку данных для каждого из них.
 
@@ -219,7 +219,7 @@ Else {
 
 Результаты с каждого сервера поступают вместе с `$Output` , что можно `Sort-Object` и затем `Select-Object -First 10` . Обратите внимание, что `Invoke-Command` Оформление результатов имеет `PsComputerName` свойство, указывающее, откуда они поступили, что можно распечатать, чтобы понять, где работает виртуальная машина.
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -262,14 +262,14 @@ $Output | Sort-Object RawIopsTotal -Descending | Select-Object -First 10 | Forma
 
 ![Снимок экрана PowerShell](media/performance-history/Show-NetworkSaturation.png)
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 Мы повторяем нашу `Invoke-Command` хитрость выше, чтобы `Get-NetAdapter` на каждом сервере и передать в `Get-ClusterPerf` . Кстати, мы получаем два соответствующих свойства: `LinkSpeed` строку, например "10 Гбит/с", и ее необработанное `Speed` целое число, например 10000000000. Мы используем `Measure-Object` для получения среднего и пикового значения за последний день (напоминание: каждое измерение в `LastDay` интервале представляет 5 минут) и умножается на 8 бит на байт, чтобы получить сравнение яблока и яблока.
 
    > [!NOTE]
    > Некоторые поставщики, например Chelsio, включают действие "удаленный доступ к памяти" (RDMA) в счетчиках производительности *сетевого адаптера* , поэтому они включены в `NetAdapter.Bandwidth.Total` серию. Другие, как и Mellanox, могут не иметь. Если поставщик не имеет, просто добавьте `NetAdapter.Bandwidth.RDMA.Total` ряд в свою версию этого сценария.
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -336,7 +336,7 @@ $Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComp
 
 По этой ставке его емкость будет достигнута в течение еще 42 дней.
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 `LastYear`Период времени имеет одну точку данных в день. Хотя для каждой линии тренда достаточно двух точек, на практике лучше потребовать больше, например 14 дней. Мы используем `Select-Object -Last 14` для настройки массива точек *(x, y)* , для *x* в диапазоне [1, 14]. С этими точками мы реализуем простой [алгоритм линейной аппроксимации по крайней мере](http://mathworld.wolfram.com/LeastSquaresFitting.html) , чтобы найти `$A` и `$B` параметризовать строку, которая лучше всего соответствует *y = ax + b*. Добро пожаловать в верхнюю школу снова.
 
@@ -345,7 +345,7 @@ $Output | Sort-Object PsComputerName, InterfaceDescription | Format-Table PsComp
    > [!IMPORTANT]
    > Эта оценка линейная и основана только на последних 14 ежедневных измерениях. Существуют более сложные и точные методики. Примите все усилия и не полагайтесь на этот сценарий, чтобы определить, следует ли вкладывать в хранилище расширение. Он представлен здесь только для образовательных целей.
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -449,11 +449,11 @@ $Output | Format-Table
 
 ![Снимок экрана PowerShell](media/performance-history/Show-TopMemoryVMs.png)
 
-### <a name="how-it-works"></a>Принцип работы
+### <a name="how-it-works"></a>Принципы работы
 
 Мы повторяем наш `Invoke-Command` прием, представленный выше, `Get-VM` на каждом сервере. Мы используем `Measure-Object -Average` для получения ежемесячного среднего значения для каждой виртуальной машины, а затем, `Sort-Object` `Select-Object -First 10` чтобы получить наш список лидеров. (Или, возможно, это *самый самый желаемый* список?)
 
-### <a name="script"></a>Сценарий
+### <a name="script"></a>Скрипт
 
 Вот сценарий:
 
@@ -489,6 +489,6 @@ $Output | Sort-Object RawAvgMemoryUsage -Descending | Select-Object -First 10 | 
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Начало работы с Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/getting-started-with-windows-powershell)
+- [Начало работы с Windows PowerShell](/powershell/scripting/getting-started/getting-started-with-windows-powershell)
 - [Обзор Локальные дисковые пространства](storage-spaces-direct-overview.md)
 - [Журнал производительности](performance-history.md)

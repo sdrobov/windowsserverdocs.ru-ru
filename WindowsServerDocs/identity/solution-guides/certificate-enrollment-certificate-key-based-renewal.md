@@ -1,19 +1,19 @@
 ---
-title: Настройка веб-служба регистрации сертификатов для продления на основе ключа сертификата на настраиваемом порту
+title: Настройка веб-службы регистрации сертификатов для продления на основе ключей сертификата через настраиваемый порт
 author: Deland-Han
 ms.author: delhan
 manager: dcscontentpm
 ms.date: 11/12/2019
 ms.topic: article
 ms.prod: windows-server
-ms.openlocfilehash: a21a34448248658d2ceffcad07d2a4e6e17b9348
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 5b2da1858a7f0a3669accfdb2dda88a23f64edc0
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856347"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964256"
 ---
-# <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Настройка веб-служба регистрации сертификатов для продления на основе ключа сертификата на настраиваемом порту
+# <a name="configuring-certificate-enrollment-web-service-for-certificate-key-based-renewal-on-a-custom-port"></a>Настройка веб-службы регистрации сертификатов для продления на основе ключей сертификата через настраиваемый порт
 
 > Авторы: Житеш сакур, мира Мохидин, технические рекомендации с группой Windows.
 Инженер службы поддержки Анкит тяги с группой Windows
@@ -74,10 +74,10 @@ ms.locfileid: "80856347"
 Можно создать дубликат существующего шаблона компьютера и настроить следующие параметры шаблона:
 
 1. На вкладке Имя субъекта шаблона сертификата убедитесь, что выбрано **предложение в запросе** и **использование сведений о субъекте из существующих сертификатов для параметров запросов на продление автоматической регистрации** .
-   ![новых шаблонов](media/certificate-enrollment-certificate-key-based-renewal-2.png) 
+   ![Новые шаблоны](media/certificate-enrollment-certificate-key-based-renewal-2.png) 
 
 2. Перейдите на вкладку " **требования к выдаче** " и установите флажок " **утверждение диспетчером сертификатов ЦС** ".
-   Требования к выдаче ![](media/certificate-enrollment-certificate-key-based-renewal-3.png) 
+   ![Требования к выдаче](media/certificate-enrollment-certificate-key-based-renewal-3.png) 
 
 3. Назначьте разрешение **Чтение** и **Регистрация** учетной записи службы **цепцессвк** для этого шаблона.
 
@@ -97,14 +97,14 @@ ms.locfileid: "80856347"
 
 Пошаговые инструкции по включению CEP и CES для проверки подлинности имени пользователя и пароля см. в следующих статьях.
 
-[Руководство по веб-служба политик регистрации сертификатов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
+[Руководство по веб-служба политик регистрации сертификатов](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831625(v=ws.11))
 
-[Руководство по веб-служба регистрации сертификатов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
+[Руководство по веб-служба регистрации сертификатов](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)#configure-a-ca-for-the-certificate-enrollment-web-service)
 
 > [!Note]
 > Убедитесь, что не установлен флажок "включить обновление на основе ключей", если вы настроили экземпляры CEP и CES с проверкой подлинности имени пользователя и пароля.
 
-**Метод 2**
+**Метод 2.**
 
 Для установки экземпляров CEP и CES можно использовать следующие командлеты PowerShell:
 
@@ -121,7 +121,7 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Username -SSLCertThum
 Эта команда устанавливает веб-служба политик регистрации сертификатов (CEP), указывая, что для проверки подлинности используется имя пользователя и пароль. 
 
 > [!Note]
-> В этой команде \<**сслцертсумбпринт**\> — это отпечаток сертификата, который будет использоваться для привязки служб IIS.
+> В этой команде \<**SSLCertThumbPrint**\> — это отпечаток сертификата, который будет использоваться для привязки служб IIS.
 
 ```PowerShell
 Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSLCertThumbprint "sslCertThumbPrint" -AuthenticationType Username
@@ -132,7 +132,7 @@ Install-AdcsEnrollmentWebService -ApplicationPoolIdentity -CAConfig "CA1.contoso
 ##### <a name="step-2-check-the-internet-information-services-iis-manager-console"></a>Шаг 2. Проверка консоли диспетчера службы IIS (IIS)
 
 После успешной установки вы увидите, что в консоли диспетчера службы IIS (IIS) отображается следующее.
-![диспетчера IIS](media/certificate-enrollment-certificate-key-based-renewal-4.png) 
+![Диспетчер служб IIS](media/certificate-enrollment-certificate-key-based-renewal-4.png) 
 
 В разделе **веб-сайт по умолчанию**выберите **ADPolicyProvider_CEP_UsernamePassword**, а затем откройте **Параметры приложения**. Запишите **идентификатор** и **URI**.
 
@@ -151,7 +151,7 @@ Install-AdcsEnrollmentPolicyWebService -AuthenticationType Certificate -SSLCertT
 Эта команда устанавливает веб-служба политик регистрации сертификатов (CEP) и указывает, что для проверки подлинности используется сертификат. 
 
 > [!Note]
-> В этой команде \<Сслцертсумбпринт\> — это отпечаток сертификата, который будет использоваться для привязки служб IIS. 
+> В этой команде \<SSLCertThumbPrint\> — это отпечаток сертификата, который будет использоваться для привязки служб IIS. 
 
 Продление на основе ключей позволяет клиентам сертификатов обновлять свои сертификаты, используя ключ существующего сертификата для проверки подлинности. При использовании режима обновления на основе ключей служба возвращает только шаблоны сертификатов, настроенные для продления на основе ключей.
 
@@ -171,7 +171,7 @@ Install-AdcsEnrollmentWebService -CAConfig "CA1.contoso.com\contoso-CA1-CA" -SSL
 ##### <a name="step-2-check-the-iis-manager-console"></a>Шаг 2. Проверка консоли диспетчера IIS
 
 После успешной установки вы увидите, что в консоли диспетчера IIS отображается следующее.
-![диспетчера IIS](media/certificate-enrollment-certificate-key-based-renewal-5.png) 
+![Диспетчер служб IIS](media/certificate-enrollment-certificate-key-based-renewal-5.png) 
 
 Выберите **KeyBasedRenewal_ADPolicyProvider_CEP_Certificate** в разделе **веб-сайт по умолчанию** и откройте **Параметры приложения**. Запишите **идентификатор** и **URI**. Можно добавить **понятное имя** для управления.
 
@@ -201,7 +201,7 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 ```
 
 > [!Note]
-> В этой команде \<цепцессвк\> является учетной записью службы, а < CA1. contoso. com > — центром сертификации.
+> В этой команде \<cepcessvc\> используется учетная запись службы, а <CA1.contoso.com >является центром сертификации.
 
 > [!Important]
 > В этой конфигурации не включен флаг РЕНЕВАЛОНБЕХАЛОФ в ЦС, так как мы используем ограниченное делегирование для того же задания. Это позволяет избежать добавления разрешения для учетной записи службы в систему безопасности ЦС.
@@ -213,17 +213,17 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 2. В области Действие выберите Изменить привязку сайта. 
 
 3. Измените значение параметра порта по умолчанию с 443 на пользовательский порт. На снимке экрана примера показан параметр порта 49999.
-   ![изменить порт](media/certificate-enrollment-certificate-key-based-renewal-7.png) 
+   ![Изменить порт](media/certificate-enrollment-certificate-key-based-renewal-7.png) 
 
 ##### <a name="step-4-edit-the-ca-enrollment-services-object-on-active-directory"></a>Шаг 4. изменение объекта служб регистрации ЦС на Active Directory
 
 1. На контроллере домена откройте ADSIEdit. msc.
 
-2. [Подключитесь к разделу конфигурации](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10))и перейдите к объекту службы регистрации ЦС:
+2. [Подключитесь к разделу конфигурации](/previous-versions/windows/it-pro/windows-server-2003/ff730188(v=ws.10))и перейдите к объекту службы регистрации ЦС:
    
    CN = ЕНТКА, CN = службы регистрации, CN = открытые ключи Services, CN = Services, CN = Configuration, DC = contoso, DC = com
 
-3. Щелкните правой кнопкой мыши и измените объект CA. Измените атрибут **мспки-регистрации-Servers** , используя пользовательский порт с URI сервера CEP и CES, которые были найдены в параметрах приложения. Например:
+3. Щелкните правой кнопкой мыши и измените объект CA. Измените атрибут **мспки-регистрации-Servers** , используя пользовательский порт с URI сервера CEP и CES, которые были найдены в параметрах приложения. Например.
 
    ```
    140https://cepces.contoso.com:49999/ENTCA_CES_UsernamePassword/service.svc/CES0   
@@ -232,40 +232,40 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
    
    ![Редактирование ADSI](media/certificate-enrollment-certificate-key-based-renewal-8.png) 
 
-#### <a name="configure-the-client-computer"></a>Настройка клиентского компьютера
+#### <a name="configure-the-client-computer"></a>Настройте клиентский компьютер.
 
-На клиентском компьютере настройте политики регистрации и политику автоматической регистрации. Для этого выполните следующие действия:
+На клиентском компьютере настройте политики регистрации и политику автоматической регистрации. Для этого выполните следующие действия.
 
-1. Выберите **пуск** > **выполнить**, а затем введите **gpedit. msc**.
+1. Выберите **Пуск**  >  **выполнить**и введите **gpedit. msc**.
 
-2. Последовательно выберите **Конфигурация компьютера** > **Параметры Windows** > **Параметры безопасности**, а затем щелкните **политики открытого ключа**.
+2. Последовательно выберите **Конфигурация компьютера**настройки  >  **Windows**параметры  >  **безопасности**, а затем **политики открытого ключа**.
 
 3. Включите **политику автоматической регистрации клиента служб сертификатов** для соответствия параметрам на следующем снимке экрана.
-   ](media/certificate-enrollment-certificate-key-based-renewal-9.png) групповой политики ![сертификатов
+   ![Политика группы сертификатов](media/certificate-enrollment-certificate-key-based-renewal-9.png)
  
 4. Включите **политику регистрации сертификатов клиента служб сертификатов**.
 
-   а) Нажмите кнопку **Добавить** , чтобы добавить политику регистрации и ввести идентификатор URI CEP с **UserNamePassword** , который мы редактировали в ADSI.
+   А. Нажмите кнопку **Добавить** , чтобы добавить политику регистрации и ввести идентификатор URI CEP с **UserNamePassword** , который мы редактировали в ADSI.
    
-   б. В качестве **типа проверки подлинности**выберите **имя пользователя и пароль**.
+   Б. В качестве **типа проверки подлинности**выберите **имя пользователя и пароль**.
    
-   в. Задайте приоритет **10**, а затем проверьте сервер политики.
-      ](media/certificate-enrollment-certificate-key-based-renewal-10.png) политики регистрации ![
+   c. Задайте приоритет **10**, а затем проверьте сервер политики.
+      ![Политика регистрации](media/certificate-enrollment-certificate-key-based-renewal-10.png)
 
    > [!Note]
    > Убедитесь, что номер порта добавлен в URI и разрешен в брандмауэре.
 
 5. Зарегистрируйте первый сертификат для компьютера с помощью certlm. msc.
-   ](media/certificate-enrollment-certificate-key-based-renewal-11.png) политики регистрации ![
+   ![Политика регистрации](media/certificate-enrollment-certificate-key-based-renewal-11.png)
 
    Выберите шаблон КБР и зарегистрируйте сертификат.
-   ](media/certificate-enrollment-certificate-key-based-renewal-12.png) политики регистрации ![
+   ![Политика регистрации](media/certificate-enrollment-certificate-key-based-renewal-12.png)
 
 6. Снова откройте **gpedit. msc** . Измените **политику регистрации сертификатов клиента служб сертификатов**, а затем добавьте политику регистрации продления на основе ключей.
 
-   а) Нажмите кнопку **Добавить**, введите URI CEP с **сертификатом** , измененным в ADSI. 
+   А. Нажмите кнопку **Добавить**, введите URI CEP с **сертификатом** , измененным в ADSI. 
    
-   б. Задайте приоритет **1**, а затем проверьте сервер политики. Вам будет предложено выполнить аутентификацию и выбрать сертификат, который был зарегистрирован изначально.
+   Б. Задайте приоритет **1**, а затем проверьте сервер политики. Вам будет предложено выполнить аутентификацию и выбрать сертификат, который был зарегистрирован изначально.
 
    ![Политика регистрации](media/certificate-enrollment-certificate-key-based-renewal-13.png) 
 
@@ -276,17 +276,17 @@ Set-ADUser -Identity cepcessvc -Add @{'msDS-AllowedToDelegateTo'=@('HOST/CA1.con
 
 Чтобы обеспечить работоспособность автоматического продления, убедитесь, что обновление вручную выполняется путем продления сертификата с тем же ключом с помощью MMC. Кроме того, во время обновления вам будет предложено выбрать сертификат. Вы можете выбрать сертификат, который мы зарегистрировали ранее. Ожидается запрос.
 
-Откройте личное хранилище сертификатов компьютера и добавьте представление "архивные сертификаты". Для этого добавьте оснастку учетной записи локального компьютера в MMC. exe, выделите **Сертификаты (локальный компьютер)** , щелкнув его, щелкните **Просмотр** на **вкладке действие** справа или в верхней части консоли MMC, щелкните **Просмотр параметров**, выберите **архивные сертификаты**, а затем нажмите кнопку **ОК**.
+Откройте личное хранилище сертификатов компьютера и добавьте представление "архивные сертификаты". Для этого добавьте оснастку учетной записи локального компьютера в mmc.exe, выделите **Сертификаты (локальный компьютер)** , щелкнув его, щелкните **Просмотр** на **вкладке действие** справа или в верхней части консоли MMC, щелкните **Просмотр параметров**, выберите **архивные сертификаты**, а затем нажмите кнопку **ОК**.
 
 ### <a name="method-1"></a>Метод 1 
 
-Выполните следующую команду.
+Выполните следующую команду:
 
 ```PowerShell
 certreq -machine -q -enroll -cert <thumbprint> renew
 ```
 
-![команда](media/certificate-enrollment-certificate-key-based-renewal-14.png)
+![.](media/certificate-enrollment-certificate-key-based-renewal-14.png)
 
 ### <a name="method-2"></a>Метод 2
 
@@ -296,7 +296,7 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 Таким образом, если вы перейдете время на 8:10 P.M. на 19-часовом уровне, так как для нашего продленного периода в шаблоне задано значение 8, выполнение команды certutil-Pulse (для активации подсистемы AE) регистрирует сертификат автоматически.
 
-![команда](media/certificate-enrollment-certificate-key-based-renewal-15.png)
+![.](media/certificate-enrollment-certificate-key-based-renewal-15.png)
  
 После завершения теста верните параметр времени в исходное значение, а затем перезапустите клиентский компьютер.
 
@@ -305,22 +305,22 @@ certreq -machine -q -enroll -cert <thumbprint> renew
 
 ## <a name="references"></a>Ссылки
 
-[Руководство по тестовой лаборатории. Демонстрация продления на основе ключей сертификатов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3Dws.11))
+[Test Lab Guide: Demonstrating Certificate Key-Based Renewal](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj590165(v%3dws.11))
 
 [Веб-службы регистрации сертификатов](https://techcommunity.microsoft.com/t5/Ask-the-Directory-Services-Team/Certificate-Enrollment-Web-Services/ba-p/397385)
 
-[Install-Адксенроллментполицивебсервице](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
+[Install-Адксенроллментполицивебсервице](/powershell/module/adcsdeployment/install-adcsenrollmentpolicywebservice?view=win10-ps)
 
-[Install-Адксенроллментвебсервице](https://docs.microsoft.com/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
+[Install-Адксенроллментвебсервице](/powershell/module/adcsdeployment/install-adcsenrollmentwebservice?view=win10-ps)
 
-См. также:
+См. также статью
 
-[Форум по безопасности Windows Server](https://aka.ms/adcsforum)
+[Форум по обеспечению безопасности Windows Server](https://aka.ms/adcsforum)
 
-[Часто задаваемые вопросы об инфраструктуре открытых ключей (PKI) Active Directory служб сертификации (AD CS)](https://aka.ms/adcsfaq)
+[Инфраструктура открытых ключей (PKI) служб сертификатов Active Directory: вопросы и ответы](https://aka.ms/adcsfaq)
 
-[Справочные материалы и Библиотека документации по PKI Windows](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
+[Справочная документация и библиотека по Windows PKI](https://social.technet.microsoft.com/wiki/contents/articles/987.windows-pki-documentation-reference-and-library.aspx)
 
-[Блог PKI Windows](https://blogs.technet.com/b/pki/)
+[Блог о Windows PKI](/archive/blogs/pki/)
 
 [Настройка ограниченного делегирования Kerberos (только S4U2Proxy или Kerberos) в пользовательской учетной записи службы для прокси-страниц регистрации в Интернете](https://support.microsoft.com/help/4494313/configuring-web-enrollment-proxy-for-s4u2proxy-constrained-delegation)

@@ -6,12 +6,12 @@ manager: dcscontentpm
 ms.topic: article
 ms.author: delhan
 ms.date: 12/25/2019
-ms.openlocfilehash: dd2f4c6b6bb17231ac04b3344e9a39df2cad79d0
-ms.sourcegitcommit: fb808a6fc851a3e5c47e6a7654366145d2f19554
+ms.openlocfilehash: 40ab29a115735e6c37bb7c7449980b94090565f3
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/12/2020
-ms.locfileid: "84740647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961076"
 ---
 # <a name="how-to-detect-enable-and-disable-smbv1-smbv2-and-smbv3-in-windows"></a>Как обнаруживать, включать и отключать SMBv1, SMB и SMBv3 в Windows
 
@@ -53,9 +53,9 @@ ms.locfileid: "84740647"
 
 Дополнительные сведения о возможностях протоколов SMB 2.0 и SMBv3 см. в следующих статьях:
 
-[Общие сведения о протоколе SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831795(v=ws.11))
+[Общие сведения о протоколе SMB](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831795(v=ws.11))
 
-[Новые возможности SMB](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff625695(v=ws.10))  
+[Новые возможности SMB](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff625695(v=ws.10))  
 
 ## <a name="how-to-gracefully-remove-smb-v1-in-windows-81-windows-10-windows-2012-r2-windows-server-2016-and-windows-server-2019"></a>Как правильно удалить SMB v1 в Windows 8.1, Windows 10, Windows 2012 R2, Windows Server 2016 и Windows Server 2019
 
@@ -215,7 +215,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Par
 Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters" SMB1 -Type DWORD -Value 1 –Force
 ```  
 
-**Примечание** . После внесения этих изменений необходимо перезагрузить компьютер. Дополнительные сведения см. [в статье хранилище сервера в корпорации Майкрософт](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/). 
+**Примечание** . После внесения этих изменений необходимо перезагрузить компьютер. Дополнительные сведения см. [в статье хранилище сервера в корпорации Майкрософт](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858). 
 ##### <a name="smb-v2v3-on-smb-server"></a>SMB V2/V3 на SMB-сервере
 
 Автоматическое  
@@ -298,7 +298,7 @@ Default: 1 = Enabled (No registry key is created)
   sc.exe config mrxsmb10 start= auto
   ```
 
-Дополнительные сведения см. [в статье хранилище сервера в корпорации Майкрософт](https://blogs.technet.microsoft.com/filecab/2016/09/16/stop-using-smb1/) . 
+Дополнительные сведения см. [в статье хранилище сервера в корпорации Майкрософт](https://techcommunity.microsoft.com/t5/storage-at-microsoft/stop-using-smb1/ba-p/425858) . 
 ##### <a name="smb-v2v3-on-smb-client"></a>SMB V2/V3 на клиенте SMB
 
 - Автоматическое
@@ -359,7 +359,7 @@ Default: 1 = Enabled (No registry key is created)
 Это отключает серверные компоненты SMBv1. Этот групповая политика должен применяться ко всем необходимым рабочим станциям, серверам и контроллерам домена в домене.
 
 > [!NOTE]
-> [Фильтры WMI](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc947846(v=ws.10)) также можно настроить таким образом, чтобы исключить Неподдерживаемые операционные системы или выбранные исключения, например Windows XP.
+> [Фильтры WMI](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc947846(v=ws.10)) также можно настроить таким образом, чтобы исключить Неподдерживаемые операционные системы или выбранные исключения, например Windows XP.
 
 > [!IMPORTANT]
 > Будьте внимательны при внесении этих изменений на контроллерах домена, на которых устаревшие ОС Windows XP или Linux и сторонние системы (которые не поддерживают протоколы SMB или SMBv3) не нуждаются в доступе к SYSVOL или другим общим папкам, в которых отключен SMB v1.     

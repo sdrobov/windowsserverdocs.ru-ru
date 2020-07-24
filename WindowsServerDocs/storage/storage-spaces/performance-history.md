@@ -7,12 +7,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 09/07/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c8adf5f5586bd9f86ed3c4cd42b6172ff3f91e7
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: ce984d3a88f46b77773c524e5b75135930e1bb03
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474701"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961796"
 ---
 # <a name="performance-history-for-storage-spaces-direct"></a>Журнал производительности для Локальных дисковых пространств
 
@@ -23,11 +23,11 @@ ms.locfileid: "85474701"
    > [!IMPORTANT]
    > Эта функция впервые реализована в Windows Server 2019. Она недоступна в Windows Server 2016.
 
-## <a name="get-started"></a>Приступая к работе
+## <a name="get-started"></a>Начало работы
 
 Журнал производительности собирается по умолчанию с Локальные дисковые пространства в Windows Server 2019. Нет необходимости в установке, настройке или запуске каких-либо действий. Подключение к Интернету не требуется, System Center не требуется, а внешняя база данных не требуется.
 
-Чтобы просмотреть журнал производительности кластера в графическом виде, используйте [центр администрирования Windows](../../manage/windows-admin-center/understand/windows-admin-center.md).
+Чтобы просмотреть журнал производительности кластера в графическом виде, используйте [центр администрирования Windows](../../manage/windows-admin-center/overview.md).
 
 ![Журнал производительности в центре администрирования Windows](media/performance-history/perf-history-in-wac.png)
 
@@ -142,7 +142,7 @@ Get-VM "MyVM" | Get-ClusterPerf -VMSeriesName "VM.Cpu.Usage" -TimeFrame LastHour
 
 Если не указать, будет `MostRecent` возвращено измерение.
 
-## <a name="how-it-works"></a>Принцип работы
+## <a name="how-it-works"></a>Принципы работы
 
 ### <a name="performance-history-storage"></a>Хранилище журнала производительности
 
@@ -201,7 +201,7 @@ Stop-ClusterPerformanceHistory -DeleteHistory
    > [!TIP]
    > Во время первоначального развертывания можно предотвратить запуск журнала производительности, присвоив `-CollectPerformanceHistory` параметру значение `Enable-ClusterStorageSpacesDirect` `$False` .
 
-## <a name="troubleshooting"></a>Устранение неполадок
+## <a name="troubleshooting"></a>Диагностика
 
 ### <a name="the-cmdlet-doesnt-work"></a>Командлет не работает
 

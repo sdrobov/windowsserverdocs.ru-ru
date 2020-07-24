@@ -9,12 +9,12 @@ ms.assetid: 834e8542-a67a-4ba0-9841-8a57727ef876
 author: nedpyle
 ms.date: 04/26/2019
 description: Использование реплики хранилища для репликации томов в одном кластере в другой кластер под Windows Server.
-ms.openlocfilehash: 21e054d42d0264bb22fbd0e02382ee429958a597
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: d99a7ebf933427e8e065f72261816610e62a433d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475671"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961246"
 ---
 # <a name="cluster-to-cluster-storage-replication"></a>Межкластерная репликация хранилища
 
@@ -41,7 +41,7 @@ ms.locfileid: "85475671"
 
 **РИС 1. Межкластерная репликация**
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>Обязательные условия
 
 * Лес доменных служб Active Directory (не обязательно под управлением Windows Server 2016).
 * 4-128 серверы (два кластера серверов 2-64) под Windows Server 2019 или Windows Server 2016, Datacenter Edition. Если вы используете Windows Server 2019, вы можете использовать выпуск Standard Edition, если вы нормально реплицируете только один том размером до 2 ТБ.
@@ -140,7 +140,7 @@ ms.locfileid: "85475671"
 2. Убедитесь, что тома журналов SR всегда будут находиться на самых быстрых флэш-накопителях, а тома данных — на более медленных накопителях высокой емкости.
 
 3. Запустите Windows PowerShell и используйте командлет `Test-SRTopology`, чтобы определить, все ли требования для реплики хранилища выполнены. Этот командлет можно запустить в режиме быстрой проверки требований или в режиме длительной оценки производительности.
-   Например,
+   например следующие.
 
    ```PowerShell
    MD c:\temp
@@ -172,11 +172,11 @@ ms.locfileid: "85475671"
     > WIndows Server теперь включает параметр для следящего сервера, основанного на облаке (Azure). Можно выбрать этот вариант кворума вместо файлового ресурса-свидетеля.
 
     > [!WARNING]
-    > Дополнительные сведения о конфигурации кворума см. в разделе **Конфигурация следящего сервера** статьи [Настройка кворума и управление им](../../failover-clustering/manage-cluster-quorum.md). Дополнительные сведения о командлете `Set-ClusterQuorum` см. в статье [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).
+    > Дополнительные сведения о конфигурации кворума см. в разделе **Конфигурация следящего сервера** статьи [Настройка кворума и управление им](../../failover-clustering/manage-cluster-quorum.md). Дополнительные сведения о командлете `Set-ClusterQuorum` см. в статье [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
 5.  Добавьте один диск сайта **Redmond** в кластер CSV. Для этого щелкните правой кнопкой мыши исходный диск в узле **Disks** (Диски) раздела **Storage** (Хранилище) и нажмите кнопку **Add to Cluster Shared Volumes** (Добавить к общим томам кластера).
 
-6.  Создайте масштабируемые файловые серверы в обоих кластерах, следуя инструкциям в разделе [Настройка масштабируемого файлового сервера](https://technet.microsoft.com/library/hh831718.aspx)
+6.  Создайте масштабируемые файловые серверы в обоих кластерах, следуя инструкциям в разделе [Настройка масштабируемого файлового сервера](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831718(v=ws.11))
 
 ### <a name="windows-powershell-method"></a>Метод с Windows PowerShell
 
@@ -194,7 +194,7 @@ ms.locfileid: "85475671"
     New-Cluster -Name SR-SRVCLUSB -Node SR-SRV03,SR-SRV04 -StaticAddress <your IP here>
     ```
 
-3.  Настройте файловый ресурс-свидетель или облачный свидетель (Azure) в каждом кластере, который указывает на общий ресурс, размещенный на контроллере домена или другом независимом сервере. Пример:
+3.  Настройте файловый ресурс-свидетель или облачный свидетель (Azure) в каждом кластере, который указывает на общий ресурс, размещенный на контроллере домена или другом независимом сервере. Например.
 
     ```PowerShell
     Set-ClusterQuorum -FileShareWitness \\someserver\someshare
@@ -204,9 +204,9 @@ ms.locfileid: "85475671"
     > WIndows Server теперь включает параметр для следящего сервера, основанного на облаке (Azure). Можно выбрать этот вариант кворума вместо файлового ресурса-свидетеля.
 
     > [!WARNING]
-    > Дополнительные сведения о конфигурации кворума см. в разделе **Конфигурация следящего сервера** статьи [Настройка кворума и управление им](../../failover-clustering/manage-cluster-quorum.md). Дополнительные сведения о командлете `Set-ClusterQuorum` см. в статье [Set-ClusterQuorum](https://docs.microsoft.com/powershell/module/failoverclusters/set-clusterquorum).
+    > Дополнительные сведения о конфигурации кворума см. в разделе **Конфигурация следящего сервера** статьи [Настройка кворума и управление им](../../failover-clustering/manage-cluster-quorum.md). Дополнительные сведения о командлете `Set-ClusterQuorum` см. в статье [Set-ClusterQuorum](/powershell/module/failoverclusters/set-clusterquorum).
 
-4.  Создайте масштабируемые файловые серверы в обоих кластерах, следуя инструкциям в разделе [Настройка масштабируемого файлового сервера](https://technet.microsoft.com/library/hh831718.aspx)
+4.  Создайте масштабируемые файловые серверы в обоих кластерах, следуя инструкциям в разделе [Настройка масштабируемого файлового сервера](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831718(v=ws.11))
 
 ## <a name="step-3-set-up-cluster-to-cluster-replication-using-windows-powershell"></a>Шаг 3. Настройка межкластерной репликации с помощью Windows PowerShell
 Теперь перейдем к настройке межкластерной репликации с помощью PowerShell. Вы можете выполнить все приведенные ниже действия на узлах непосредственно или на удаленном компьютере управления, содержащем Windows Server средства удаленного администрирования сервера
@@ -271,7 +271,7 @@ ms.locfileid: "85475671"
            Number of Bytes Recovered: 68583161856
            Elapsed Time (seconds): 117
        ```
-   3. Кроме того, группа конечных серверов для реплики постоянно сообщает количество оставшихся байтов для копирования, и эти сведения можно запрашивать через PowerShell. Пример:
+   3. Кроме того, группа конечных серверов для реплики постоянно сообщает количество оставшихся байтов для копирования, и эти сведения можно запрашивать через PowerShell. Например.
 
       ```PowerShell
       (Get-SRGroup).Replicas | Select-Object numofbytesremaining
@@ -355,7 +355,7 @@ ms.locfileid: "85475671"
 
     -   \Статистика реплики хранилища(*)\Количество отправленных сообщений
 
-    Дополнительные сведения о счетчиках производительности, доступных в Windows PowerShell, см. в статье [Get-Counter](https://docs.microsoft.com/powershell/module/Microsoft.PowerShell.Diagnostics/Get-Counter).
+    Дополнительные сведения о счетчиках производительности, доступных в Windows PowerShell, см. в статье [Get-Counter](/powershell/module/microsoft.powershell.diagnostics/get-counter).
 
 3.  Чтобы изменить направление репликации с одного сайта, используйте командлет **Set-SRPartnership**.
 

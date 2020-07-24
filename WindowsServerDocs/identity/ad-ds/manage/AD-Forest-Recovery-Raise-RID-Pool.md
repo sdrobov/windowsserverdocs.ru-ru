@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: c37bc129-a5e0-4219-9ba7-b4cf3a9fc9a4
 ms.technology: identity-adds
-ms.openlocfilehash: 308dce9be53194eb7db91944964ae5de03345ab6
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d3f05774881f7ea475fd811aa9c8801c15f9ca81
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80823857"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962996"
 ---
 # <a name="ad-forest-recovery---raising-the-value-of-available-rid-pools"></a>Восстановление леса AD — повышение значения доступных пулов RID 
 
@@ -23,10 +23,10 @@ ms.locfileid: "80823857"
 
 ## <a name="about-active-directory-rid-pools-and-ridavailablepool"></a>О Active Directory пулах RID и Ридаваилаблепул
 
-Каждый домен имеет объект **CN = RID Manager $, CN = System, DC**=<*domain_name*>. Этот объект имеет атрибут с именем **ридаваилаблепул**. Это значение атрибута хранит глобальное пространство RID для всего домена. Значение представляет собой большое целое число с верхними и нижними частями. Верхняя часть определяет количество субъектов безопасности, которые могут быть выделены для каждого домена (0x3FFFFFFF или только свыше 1 000 000 000). Нижняя часть — это число RID, выделенных в домене. 
+Каждый домен имеет объект **CN = RID Manager $, CN = System, DC** =< *domain_name*>. Этот объект имеет атрибут с именем **ридаваилаблепул**. Это значение атрибута хранит глобальное пространство RID для всего домена. Значение представляет собой большое целое число с верхними и нижними частями. Верхняя часть определяет количество субъектов безопасности, которые могут быть выделены для каждого домена (0x3FFFFFFF или только свыше 1 000 000 000). Нижняя часть — это число RID, выделенных в домене. 
   
 > [!NOTE]
-> В Windows Server 2016 и 2012 число субъектов безопасности, которые могут быть выделены, увеличивается до 2 000 000 000. Дополнительные сведения см. в разделе [Управление выдачей RID](https://technet.microsoft.com/library/jj574229.aspx). 
+> В Windows Server 2016 и 2012 число субъектов безопасности, которые могут быть выделены, увеличивается до 2 000 000 000. Дополнительные сведения см. в разделе [Управление выдачей RID](./managing-rid-issuance.md). 
   
 - Пример значения: 4611686014132422708  
 - Нижняя часть: 2100 (начало следующего пула RID для выделения)  
@@ -38,18 +38,18 @@ ms.locfileid: "80823857"
 
 1. Откройте диспетчер сервера, щелкните **Сервис** и выберите **ADSI Edit**.
 2. Щелкните правой кнопкой мыши, выберите **подключиться к** и подключиться выполните контекст именования по умолчанию и нажмите кнопку **ОК**.
-   ](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png) ![ADSI Edit 
-3. Перейдите к следующему пути с различающимся именем: **CN = RID Manager $, CN = System, DC =<domain name>** .
-   ](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png) ![ADSI Edit 
+   ![Редактирование ADSI](media/AD-Forest-Recovery-Raise-RID-Pool/adsi1.png) 
+3. Перейдите к следующему пути с различающимся именем: **CN = RID Manager $, CN = System, DC = <domain name> **.
+   ![Редактирование ADSI](media/AD-Forest-Recovery-Raise-RID-Pool/adsi2.png) 
 3. Щелкните правой кнопкой мыши и выберите свойства CN = RID Manager $. 
 4. Выберите атрибут **ридаваилаблепул**, нажмите кнопку **изменить**, а затем скопируйте значение большого целого числа в буфер обмена.
-   ](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png) ![ADSI Edit  
+   ![Редактирование ADSI](media/AD-Forest-Recovery-Raise-RID-Pool/adsi3.png)  
 5. Запустите калькулятор и в меню **вид** выберите **режим "Инженерный**". 
 6. Добавьте 100 000 к текущему значению.
-   ](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png) ![ADSI Edit 
+   ![Редактирование ADSI](media/AD-Forest-Recovery-Raise-RID-Pool/adsi4.png) 
 7. С помощью сочетания клавиш Ctrl + c или команды **Копировать** в меню **Правка** скопируйте значение в буфер обмена. 
 8. В диалоговом окне "изменение" ADSIEdit вставьте это новое значение. 
-   ](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png) ![ADSI Edit 
+   ![Редактирование ADSI](media/AD-Forest-Recovery-Raise-RID-Pool/adsi5.png) 
 9. Нажмите кнопку **ОК** в диалоговом окне и **Примените** его на странице свойств, чтобы обновить атрибут **ридаваилаблепул** . 
   
 ### <a name="to-raise-the-value-of-available-rid-pools-using-ldp"></a>Повышение значения доступных пулов RID с помощью LDP  
@@ -57,22 +57,22 @@ ms.locfileid: "80823857"
 1. В командной строке введите следующую команду и нажмите клавишу ВВОД:  
    **средство**  
 2. Щелкните **Подключение**, щелкните **подключить**, введите имя диспетчера RID и нажмите кнопку **ОК**. 
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
+   ![СРЕДСТВО](media/AD-Forest-Recovery-Raise-RID-Pool/ldp1.png)
 3. Щелкните **Подключение**, нажмите кнопку **привязать**, выберите **BIND with Credentials (связать с учетными данными** ) и введите учетные данные администратора и нажмите кнопку **ОК**. 
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
+   ![СРЕДСТВО](media/AD-Forest-Recovery-Raise-RID-Pool/ldp2.png)
 4. В меню **вид**выберите пункт **дерево** , а затем введите следующий путь к различающемся имени: CN = RID Manager $, CN = System, DC =*доменное имя*  
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
+   ![СРЕДСТВО](media/AD-Forest-Recovery-Raise-RID-Pool/ldp3.png)
 5. Нажмите кнопку **Обзор**, а затем — **изменить**. 
 6. Добавьте 100 000 к текущему значению **ридаваилаблепул** , а затем введите Sum в **значения**. 
-7. В области **DN**введите `cn=RID Manager$,cn=System,dc=` *< доменное имя\>* . 
-8. В поле " **изменить атрибут записи**" введите `rIDAvailablePool`. 
+7. В области **DN**введите `cn=RID Manager$,cn=System,dc=` *<доменное \> имя*. 
+8. В поле **изменить атрибут записи**введите `rIDAvailablePool` . 
 9. Выберите **заменить** в качестве операции, а затем нажмите клавишу **Ввод**.
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png) 
-10. Нажмите кнопку **выполнить** , чтобы выполнить операцию. Нажмите кнопку **Закрыть**.
+   ![СРЕДСТВО](media/AD-Forest-Recovery-Raise-RID-Pool/ldp4.png) 
+10. Нажмите кнопку **выполнить** , чтобы выполнить операцию. Щелкните **Закрыть**.
 11. Чтобы проверить изменение, в меню **вид**выберите пункт **дерево**, а затем введите следующий путь к различающемся имени: CN = RID Manager $, CN = System, DC =*доменное имя*.   Проверьте атрибут **ридаваилаблепул** . 
-   ![LDP](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)
+   ![СРЕДСТВО](media/AD-Forest-Recovery-Raise-RID-Pool/ldp5.png)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

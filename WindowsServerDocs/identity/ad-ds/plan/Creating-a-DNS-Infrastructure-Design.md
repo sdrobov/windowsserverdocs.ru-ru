@@ -8,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: f3a9fbb36b1146dca49d62ae05bbf2c9f5d81ab1
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: c48996945e648a8ad698b1746e722702371521f1
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624372"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962356"
 ---
 # <a name="creating-a-dns-infrastructure-design"></a>Создание проекта инфраструктуры DNS
 
@@ -24,16 +24,16 @@ ms.locfileid: "81624372"
 Процесс проектирования DNS для поддержки AD DS зависит от того, имеет ли ваша организация уже существующую службу DNS-сервера или вы развертываете новую службу DNS-сервера:
 
 - Если у вас уже есть инфраструктура DNS, необходимо интегрировать пространство имен Active Directory в эту среду. Дополнительные сведения см. [в статье интеграция AD DS в существующую инфраструктуру DNS](../../ad-ds/plan/Integrating-AD-DS-into-an-Existing-DNS-Infrastructure.md).
-- Если у вас нет инфраструктуры DNS, необходимо разработать и развернуть новую инфраструктуру DNS для поддержки AD DS. Дополнительные сведения см. в разделе [развертывание службы доменных имен (DNS)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc780661(v=ws.10)).
+- Если у вас нет инфраструктуры DNS, необходимо разработать и развернуть новую инфраструктуру DNS для поддержки AD DS. Дополнительные сведения см. в разделе [развертывание службы доменных имен (DNS)](/previous-versions/windows/it-pro/windows-server-2003/cc780661(v=ws.10)).
 
-Если ваша организация имеет существующую инфраструктуру DNS, необходимо убедиться, что вы понимаете, как инфраструктура DNS будет взаимодействовать с пространством имен Active Directory. Чтобы получить помощь в документировании структуры существующей инфраструктуры DNS, скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services. zip из [комплекта вспомогательных средств для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608) и откройте оснастку "Инвентаризация DNS" (DSSLOGI_8. doc).
+Если ваша организация имеет существующую инфраструктуру DNS, необходимо убедиться, что вы понимаете, как инфраструктура DNS будет взаимодействовать с пространством имен Active Directory. Для листа, который поможет вам документировать существующую структуру инфраструктуры DNS, скачайте Job_Aids_Designing_and_Deploying_Directory_and_Security_Services.zip из [комплекта вспомогательных средств для Windows Server 2003 Deployment Kit](https://microsoft.com/download/details.aspx?id=9608) и откройте оснастку "Инвентаризация DNS" (DSSLOGI_8.doc).
 
 > [!NOTE]
 > Кроме адресов IP версии 4 (IPv4), Windows Server также поддерживает адреса IP версии 6 (IPv6). Сведения о том, как получить список IPv6-адресов, в которых описывается метод рекурсивного разрешения имен в текущей структуре DNS, см. [в приложении a. Инвентаризация DNS](../../ad-ds/plan/Appendix-A--DNS-Inventory.md).
 
-Прежде чем приступить к проектированию инфраструктуры DNS для поддержки AD DS, можно прочитать сведения об иерархии DNS, процессе разрешения имен DNS и о том, как DNS поддерживает AD DS. Дополнительные сведения об иерархии DNS и процессе разрешения имен см. в [техническом справочнике по DNS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc779926(v=ws.10)). Дополнительные сведения о том, как DNS поддерживает AD DS, см. в статье [поддержка DNS для Active Directory технического справочника](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc781627(v=ws.10)).
+Прежде чем приступить к проектированию инфраструктуры DNS для поддержки AD DS, можно прочитать сведения об иерархии DNS, процессе разрешения имен DNS и о том, как DNS поддерживает AD DS. Дополнительные сведения об иерархии DNS и процессе разрешения имен см. в [техническом справочнике по DNS](/previous-versions/windows/it-pro/windows-server-2003/cc779926(v=ws.10)). Дополнительные сведения о том, как DNS поддерживает AD DS, см. в статье [поддержка DNS для Active Directory технического справочника](/previous-versions/windows/it-pro/windows-server-2003/cc781627(v=ws.10)).
 
-## <a name="in-this-section"></a>Содержание раздела
+## <a name="in-this-section"></a>В этом разделе
 
 - [Общие сведения о понятиях DNS](../../ad-ds/plan/Reviewing-DNS-Concepts.md)
 - [DNS и доменные службы Active Directory](../../ad-ds/plan/DNS-and-AD-DS.md)

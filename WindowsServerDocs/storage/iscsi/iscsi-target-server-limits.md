@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: 6799e0e3b47d6cc98cbb42407ffbed1a9578675a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7a6d23ebd82afc192a9c306420811860d74cf469
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473441"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961366"
 ---
 # <a name="iscsi-target-server-scalability-limits"></a>Ограничения масштабируемости для сервера цели iSCSI
 
@@ -35,7 +35,7 @@ ms.locfileid: "85473441"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Комментарий</p></th>
+<th><p>Комментировать</p></th>
 </tr>
 </thead>
 <tbody>
@@ -92,7 +92,7 @@ ms.locfileid: "85473441"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Комментарий</p></th>
+<th><p>Комментировать</p></th>
 </tr>
 </thead>
 <tbody>
@@ -106,7 +106,7 @@ ms.locfileid: "85473441"
 <td><p>Несколько активных узлов кластера</p></td>
 <td><p>Поддерживается</p></td>
 <td>
-<p>Недоступно</p></td>
+<p>Н/Д</p></td>
 <td><p>Каждый активный узел в отказоустойчивом кластере владеет другим кластеризованным экземпляром сервера цели iSCSI с другими узлами, работающими как возможные узлы-владельцы.</p></td>
 </tr>
 <tr class="odd">
@@ -130,7 +130,7 @@ ms.locfileid: "85473441"
 <tr class="even">
 <td><p>Многопутевой ввод-вывод (MPIO)</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -162,7 +162,7 @@ ms.locfileid: "85473441"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Комментарий</p></th>
+<th><p>Комментировать</p></th>
 </tr>
 </thead>
 <tbody>
@@ -187,43 +187,43 @@ ms.locfileid: "85473441"
 <tr class="even">
 <td><p>IPv4</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><p>IPv6</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Разгрузка TCP</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Использование большой отправки (сегментации), контрольной суммы, контроля прерываний и разгрузки RSS</p></td>
 </tr>
 <tr class="odd">
 <td><p>разгрузка iSCSI</p></td>
 <td><p>Не поддерживается</p></td>
-<td><br/><p>Недоступно</p></td>
+<td><br/><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Кадры крупного размера</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
-<td><p>IPsec</p></td>
+<td><p>IPsec;</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>Разгрузка CRC</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 </tbody>
@@ -243,7 +243,7 @@ ms.locfileid: "85473441"
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
 <th><p>Применяются?</p></th>
-<th><p>Комментарий</p></th>
+<th><p>Комментировать</p></th>
 </tr>
 </thead>
 <tbody>
@@ -328,13 +328,13 @@ ms.locfileid: "85473441"
 <tr class="odd">
 <td><p>ReFS</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><p>NTFS</p></td>
 <td><p>Поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -352,13 +352,13 @@ ms.locfileid: "85473441"
 <tr class="odd">
 <td><p>Сжатие логического устройства</p></td>
 <td><p>Да (только для Windows Server 2012 R2 и более поздних версий)</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Чтобы сжать LUN, используйте <a href="https://docs.microsoft.com/powershell/module/iscsitarget/resize-iscsivirtualdisk">resize-исксивиртуалдиск</a> .</p></td>
 </tr>
 <tr class="even">
 <td><p>Клонирование логических устройств</p></td>
 <td><p>Не поддерживается</p></td>
-<td><p>Недоступно</p></td>
+<td><p>Н/Д</p></td>
 <td><p>Вы можете быстро клонировать данные диска с помощью разностных виртуальных жестких дисков.</p></td>
 </tr>
 </tbody>
@@ -376,7 +376,7 @@ ms.locfileid: "85473441"
 <tr class="header">
 <th><p>Элемент</p></th>
 <th><p>Ограничение поддержки</p></th>
-<th><p>Комментарий</p></th>
+<th><p>Комментировать</p></th>
 </tr>
 </thead>
 <tbody>
@@ -436,7 +436,7 @@ ms.locfileid: "85473441"
 
   - Windows Storage Server 2008 R2
 
-  - Windows Server 2008 R2
+  - Windows Server 2008 R2
 
   - Windows HPC Server 2008 R2
 
@@ -444,7 +444,7 @@ ms.locfileid: "85473441"
 
 Обратите внимание, что если сервер цели iSCSI размещен на сервере под управлением Windows Server 2012 R2 или более поздней версии и вы хотите использовать VSS или VDS с удаленного сервера, на удаленном сервере также должна быть установлена та же версия Windows Server и служба роли поставщика хранилища цели iSCSI. Также обратите внимание, что во всех версиях Windows необходимо установить только одну версию службы роли поставщика хранилища цели iSCSI.
 
-Дополнительные сведения о поставщике хранилища цели iSCSI см. в статье [поставщик целевого хранилища iSCSI (VDS/VSS)](https://blogs.technet.com/b/filecab/archive/2012/10/08/iscsi-target-storage-vds-vss-provider.aspx).
+Дополнительные сведения о поставщике хранилища цели iSCSI см. в статье [поставщик целевого хранилища iSCSI (VDS/VSS)](/powershell/module/iscsi/?view=win10-ps).
 
 ## <a name="tested-compatibility-with-iscsi-initiators"></a>Протестированы совместимость с инициаторами iSCSI
 
@@ -461,11 +461,11 @@ ms.locfileid: "85473441"
 <tr class="odd">
 <td><p>Инициатор</p></td>
 <td><p>Windows Server 2012 R2</p></td>
-<td><p>Windows Server 2012</p></td>
+<td><p>Windows Server 2012</p></td>
 <td><p>Комментарии</p></td>
 </tr>
 <tr class="even">
-<td><p>Windows Server 2012 R2</p></td>
+<td><p>Windows Server 2012 R2</p></td>
 <td><p>Проверено</p></td>
 <td></td>
 <td></td>
@@ -531,7 +531,7 @@ ms.locfileid: "85473441"
 
   - Windows Server 2012 R2
 
-  - Windows Server 2012
+  - Windows Server 2012
 
   - Сетевой адаптер PCIe с Ипксе
 
@@ -546,4 +546,3 @@ ms.locfileid: "85473441"
 - [Обзор загрузки цели iSCSI](iscsi-boot-overview.md)
 
 - [Хранилище в Windows Server](../storage.yml)
-

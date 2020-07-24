@@ -8,12 +8,12 @@ author: JasonGerend
 manager: dougkim
 ms.author: jgerend
 ms.date: 09/11/2018
-ms.openlocfilehash: e0d92448774b277cff60d9b494cf388458ea32d3
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 68f5af7f8fc4cd0214b872d96602cabe1aa32628
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475111"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961376"
 ---
 # <a name="iscsi-target-boot-overview"></a>Общие сведения о загрузке цели iSCSI
 
@@ -48,6 +48,6 @@ ms.locfileid: "85475111"
 > Загрузка сервера Nano из iSCSI (с сервера цели iSCSI под управлением Windows или из реализации цели стороннего поставщика) не поддерживается.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
-* [Целевой сервер iSCSI](https://technet.microsoft.com/library/hh848272(v=ws.11).aspx)
-* [Командлеты инициатора iSCSI](https://technet.microsoft.com/library/hh826099(v=wps.640).aspx)
-* [Командлеты сервера цели iSCSI](https://technet.microsoft.com/library/jj612803(v=wps.630).aspx)
+* [Целевой сервер iSCSI](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848272(v=ws.11))
+* [Командлеты инициатора iSCSI](/powershell/module/iscsi/?view=win10-ps)
+* [Командлеты сервера цели iSCSI](/powershell/module/iscsi/?view=win10-ps)

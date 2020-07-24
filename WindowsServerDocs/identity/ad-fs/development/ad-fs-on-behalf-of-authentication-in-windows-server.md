@@ -8,12 +8,12 @@ ms.date: 02/22/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: ed8bb6300360553e0809f4a30cec38bc37777ae9
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: febd79ea6feb0ef3d4e6f6d5659f2eb13e403a4b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858847"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962196"
 ---
 # <a name="build-a-multi-tiered-application-using-on-behalf-of-obo-using-oauth-with-ad-fs-2016-or-later"></a>Создание многоуровневого приложения с использованием от имени (OBO) с помощью OAuth с AD FS 2016 или более поздней версии
 
@@ -54,7 +54,7 @@ ms.locfileid: "80858847"
 
 ## <a name="setting-up-the-development-box"></a>Настройка поля разработки
 
-В этом пошаговом руководстве используется Visual Studio 2015. Проект сильно использует Библиотека проверки подлинности Active Directory (ADAL). Дополнительные сведения о ADAL см. в статье [Библиотека проверки подлинности Active Directory .NET](https://msdn.microsoft.com/library/azure/mt417579.aspx)
+В этом пошаговом руководстве используется Visual Studio 2015. Проект сильно использует Библиотека проверки подлинности Active Directory (ADAL). Дополнительные сведения о ADAL см. в статье [Библиотека проверки подлинности Active Directory .NET](/dotnet/api/microsoft.identitymodel.clients.activedirectory?view=azure-dotnet)
 
 В примере также используется SQL LocalDB v 11.0. Прежде чем приступать к работе с примером, установите SQL LocalDB.
 
@@ -74,7 +74,7 @@ ms.locfileid: "80858847"
 
 Пример основан на существующем образце OBO в Azure, созданном с помощью Витторио Берточчи и доступен [здесь](https://github.com/Azure-Samples/active-directory-dotnet-webapi-onbehalfof). Выполните инструкции по клонированию проекта на компьютере разработки и создайте копию примера, чтобы начать работу с.
 
-## <a name="clone-or-download-this-repository"></a>Клонировать или скачать этот репозиторий
+## <a name="clone-or-download-this-repository"></a>Клонирование или скачивание этого репозитория
 
 Из оболочки или командной строки:
 
@@ -157,7 +157,7 @@ ms.locfileid: "80858847"
 
 #### <a name="modify-the-application-config"></a>Изменение конфигурации приложения
 
-Перейдите в проект ToDoListClient в решении WebAPI-OnBehalfOf-DotNet. Откройте файл App. config и внесите следующие изменения.
+Перейдите в проект ToDoListClient в решении WebAPI-OnBehalfOf-DotNet. Откройте файл App.config и внесите следующие изменения.
 
 * Закомментируйте запись ключа клиента Ida:
 * Для Ida: RedirectURI введите произвольный URI, указанный при настройке MySampleGroup_ClientApplication в AD FS.
@@ -167,7 +167,7 @@ ms.locfileid: "80858847"
 * Для Ida: Тодолистбасеаддресс введите идентификатор ресурса Тодолистсервицевебапи. Он будет использоваться при вызове ToDoList WebAPI.
 * Добавьте ключ Ida: Authority и укажите значение в качестве URI для AD FS.
 
-Файл **appSettings** в файле App. config должен выглядеть следующим образом:
+Представление **appSettings** в App.Config должно выглядеть следующим образом:
 
     <appSettings>
     <!--<add key="ida:Tenant" value="[Enter tenant name, e.g. contoso.onmicrosoft.com]" />-->
@@ -212,11 +212,11 @@ ms.locfileid: "80858847"
 
 * В следующем запросе щелкните "изменить проверку подлинности".
 * Выберите "рабочие и учебные учетные записи", а затем в раскрывающемся списке справа выберите "локальный".
-* Введите путь FederationMetadata. XML для развертывания AD FS и укажите универсальный код ресурса (URI) приложения, который будет изменен позже, и нажмите кнопку ОК, чтобы добавить проект в решение.
+* Введите путь federationmetadata.xml для развертывания AD FS и укажите универсальный код ресурса (URI) приложения (в дальнейшем укажите универсальный код ресурса) и нажмите кнопку ОК, чтобы добавить проект в решение.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO9.PNG)
 
-* Щелкните правой кнопкой мыши контроллеры в обозревателе решений в созданном новом проекте. Выберите "Добавить-> контроллер"
+* Щелкните правой кнопкой мыши контроллеры в обозревателе решений в созданном новом проекте. Выберите "добавить-> контроллер"
 * В области выбора шаблона выберите "контроллер веб-API 2-Empty" и нажмите кнопку ОК.
 
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO3.PNG)
@@ -270,24 +270,24 @@ ms.locfileid: "80858847"
 
 #### <a name="modifying-the-application-config"></a>Изменение конфигурации приложения
 
-* Открытие файла Web. config
+* Открытие файла Web.config
 * Измените следующие ключи:
 
 | Ключ                      | Значение                                                                                                                                                                                                                   |
 |:-------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например https://localhost:44321/                                                                                         |
-| IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например <https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
-| IDA: ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
-| IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, например https://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
-| IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, например https://localhost:44300                                                                                                                     |
-| IDA: центр сертификации            | Это URL-адрес службы AD FS, например https://fs.anandmsft.com/adfs/                                                                                                                                          |
+| IDA: аудитория             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, напримерhttps://localhost:44321/                                                                                         |
+| IDA: ClientID             | Идентификатор ToDoListService, заданный для AD FS при настройке ToDoListService WebAPI, например<https://localhost:44321/> </br>**Очень важно, чтобы Ida: аудитория и Ida: ClientID совпадали друг с другом.** |
+| ida:ClientSecret         | Это секрет, который AD FS создан при настройке клиента ToDoListService в AD FS                                                                                                                   |
+| IDA: Адфсметадатаендпоинт | Это URL-адрес метаданных AD FS, напримерhttps://fs.anandmsft.com/federationmetadata/2007-06/federationmetadata.xml                                                                                             |
+| IDA: Обовебапибасе        | Это базовый адрес, который будет использоваться для вызова API серверной части, напримерhttps://localhost:44300                                                                                                                     |
+| ida:Authority            | Это URL-адрес службы AD FS, напримерhttps://fs.anandmsft.com/adfs/                                                                                                                                          |
 
 Все остальные ключи Ida: XXXXXXX в узле **appSettings** можно закомментировать или удалить.
 
 #### <a name="change-authentication-from-azure-ad-to-ad-fs"></a>Изменение проверки подлинности Azure AD на AD FS
 
 * Откройте файл Startup.Auth.cs
-* Удалите приведенный ниже код.
+* Удалите следующий код
 
         app.UseWindowsAzureActiveDirectoryBearerAuthentication(
             new WindowsAzureActiveDirectoryBearerAuthenticationOptions
@@ -493,10 +493,10 @@ ms.locfileid: "80858847"
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO27.PNG)
 
 Вы также можете просмотреть подробные трассировки на Fiddler. Запустите Fiddler и включите расшифровку по протоколу HTTPS. Вы видите, что мы делаем два запроса к конечной точке/адфс/оаутинклудес.
-В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
+В первом взаимодействии мы представим код доступа к конечной точке маркера и получаем маркер доступа для https://localhost:44321/ ![ AD FS OBO.](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO22.PNG)
 
-Во втором взаимодействии с конечной точкой маркера можно увидеть, что у нас есть **requested_token_use** в качестве **on_behalf_of** и мы используем маркер доступа, полученный для веб-службы среднего уровня, т. е. https://localhost:44321/ в качестве утверждения для получения маркера от имени.
+Во втором взаимодействии с конечной точкой маркера можно увидеть, что у нас есть **requested_token_use** в качестве **on_behalf_of** и мы используем маркер доступа, полученный для веб-службы среднего уровня, т. е. https://localhost:44321/ утверждение для получения маркера "от имени".
 ![AD FS OBO](media/AD-FS-On-behalf-of-Authentication-in-Windows-Server-2016/ADFS_OBO23.PNG)
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие шаги
 [Разработка AD FS](../../ad-fs/AD-FS-Development.md)  

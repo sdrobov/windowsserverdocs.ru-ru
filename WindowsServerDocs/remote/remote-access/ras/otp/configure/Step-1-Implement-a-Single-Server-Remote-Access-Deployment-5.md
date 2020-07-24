@@ -8,25 +8,23 @@ ms.topic: article
 ms.assetid: c0f4d665-d44e-4348-a89f-5f9191bd96fd
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: b5142902d89887d12a1a200b797dcf2c5fe02353
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 98b25098e5af5612a288c3f6a7ad6dacd359ba9c
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80858237"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961176"
 ---
 # <a name="step-1-implement-a-single-server-remote-access-deployment"></a>Шаг 1. Реализация развертывания удаленного доступа на одном сервере
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 Первый этап настройки для развертывания удаленного доступа с использованием OTP заключается в реализации расширенного развертывания с одним сервером и последующем планировании добавления сервера RADIUS.  
   
 ## <a name="implement-a-single-server-deployment"></a>Реализация развертывания на одном сервере  
-Прежде чем можно будет настроить удаленный доступ с помощью OTP, необходимо настроить развертывание с помощью расширенного удаленного доступа, как описано в разделе [развертывание одного сервера DirectAccess с дополнительными параметрами](https://technet.microsoft.com/windows-server-docs/networking/remote-access/directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings).  
+Прежде чем можно будет настроить удаленный доступ с помощью OTP, необходимо настроить развертывание с помощью расширенного удаленного доступа, как описано в разделе [развертывание одного сервера DirectAccess с дополнительными параметрами](../../../directaccess/single-server-advanced/deploy-a-single-directaccess-server-with-advanced-settings.md).  
   
 ## <a name="see-also"></a><a name="BKMK_Links"></a> См. также  
   
 -   [Шаг 2. Настройка сервера RADIUS](Step-2-Configure-the-RADIUS-Server.md)  
   
-
-

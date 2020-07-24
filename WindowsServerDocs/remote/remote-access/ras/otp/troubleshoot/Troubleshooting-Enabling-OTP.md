@@ -8,21 +8,21 @@ ms.topic: article
 ms.assetid: b58252ca-4c1d-4664-a3c4-7301e2121517
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 9be7ef4c4d07b522f683a403e46a11e109dbd226
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0ee3e30699c920a252646de67005675bdaeb849d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80853647"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964296"
 ---
 # <a name="troubleshooting-enabling-otp"></a>Диагностика включения OTP
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе содержатся сведения об устранении неполадок, связанных с включением проверки подлинности DirectAccess методом OTP с помощью командлета PowerShell **Enable-даотпаусентикатион** или консоли управления удаленным доступом.
   
 ## <a name="failed-to-enroll-the-otp-signing-certificate"></a>Не удалось зарегистрировать сертификат для подписи OTP  
-**Получена ошибка** (журнал событий сервера). Не удается зарегистрировать сертификат подписи OTP с помощью < шаблона сертификата OTP_signing_template_name >  
+**Получена ошибка** (журнал событий сервера). Не удается зарегистрировать сертификат подписи OTP с помощью <шаблона сертификата OTP_signing_template_name>  
   
 **Причина**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "80853647"
 2.  Если шаблон не существует, создайте его, как описано в 3,3. в разделе Планирование сертификата центра регистрации или в случае существования другого совпадающего шаблона перенастройте OTP DirectAccess с новым именем шаблона.  
   
 ## <a name="failed-to-enable-directaccess-otp-when-webdav-is-installed"></a>Не удалось включить OTP DirectAccess при установке WebDAV  
-**Сценарий**. При попытке применить конфигурацию OTP DirectAccess в консоли управления удаленным доступом или с помощью командлета `Enable-DAOtpAuthentication` PowerShell операция завершается ошибкой.  
+**Сценарий**. При попытке применить конфигурацию OTP DirectAccess в консоли управления удаленным доступом или с помощью `Enable-DAOtpAuthentication` командлета PowerShell операция завершается ошибкой.  
   
 **Получена ошибка** (журнал событий сервера). Параметры OTP DirectAccess не могут быть применены, так как расширение WebDAV IIS запущено на сервере. Удалите WebDAV и снова примените параметры.  
   
@@ -99,7 +99,5 @@ ms.locfileid: "80853647"
   
 **Решение**  
   
-Установить оснастку "Шаблоны сертификатов" на сервере после Windows Server 2003 и использовать его для настройки шаблона входа OTP см. в разделе [Установка оснастки "Шаблоны сертификатов](https://technet.microsoft.com/library/cc732445.aspx)".  
+Установить оснастку "Шаблоны сертификатов" на сервере после Windows Server 2003 и использовать его для настройки шаблона входа OTP см. в разделе [Установка оснастки "Шаблоны сертификатов](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732445(v=ws.11))".  
   
-
-

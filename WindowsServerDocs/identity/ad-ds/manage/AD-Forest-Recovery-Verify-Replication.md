@@ -8,12 +8,12 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 302e522a-fb40-43bc-bc63-83dcc87ebde5
 ms.technology: identity-adds
-ms.openlocfilehash: af0946674d9185651c7b22a822dcc3a2dd5a1c5d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: c44f7abd14a65178b84194f43dad829df81fa77b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80823397"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960836"
 ---
 # <a name="resources-to-verify-replication-is-working"></a>Ресурсы для проверки работы репликации 
 
@@ -28,14 +28,14 @@ ms.locfileid: "80823397"
 
 Если первый восстановленный контроллер домена регистрирует событие с кодом 4614 ("контроллер домена ожидает выполнения начальной репликации. Реплицированная папка останется в состоянии начальной синхронизации до тех пор, пока она не будет реплицирована с партнером "") в журнал репликация DFS, а событие с ИДЕНТИФИКАТОРом 4602 не отображается, и необходимо выполнить следующие действия по восстановлению SYSVOL, если он реплицируется с помощью DFSR:  
 
-1. Когда событие DFSR 4612 появляется на первом восстановленном контроллере домена, выполните принудительное восстановление вручную, как описано в [2218556: как принудительно выполнить полномочное и неполномочное синхронизацию для реплицированного SYSVOL (например, "D4/D2" для FRS)](https://support.microsoft.com/kb/2218556) (https://support.microsoft.com/kb/2218556).  
+1. Когда событие DFSR 4612 появляется на первом восстановленном контроллере домена, выполните принудительное восстановление вручную, как описано в [2218556: как принудительно выполнить полномочное и неполномочное синхронизацию для реплицированного SYSVOL DFSR (например, D4/D2 для FRS)](https://support.microsoft.com/kb/2218556) ( https://support.microsoft.com/kb/2218556) .  
 2. Установите для **флага сисволреади** значение 1 вручную, как описано в [947022. общий ресурс NETLOGON отсутствует после установки домен Active Directory Services на новом полном или доступном только для чтения контроллере домена на базе Windows Server 2008](https://support.microsoft.com/kb/947022).  
 
-Можно также создать диагностический отчет репликация DFS. Дополнительные сведения см. [в разделе Создание диагностического отчета для репликация DFS](https://technet.microsoft.com/library/cc754227.aspx) и пошагового [руководств по DFS для Windows Server 2008](https://technet.microsoft.com/library/cc732863\(WS.10\).aspx). Если сервер работает под Windows Server 2008 R2, можно использовать [параметр командной строки Dfsrdiag. exe ReplicationState](https://blogs.technet.com/b/filecab/archive/2009/05/28/dfsrdiag-exe-replicationstate-what-s-dfsr-up-to.aspx).  
+Можно также создать диагностический отчет репликация DFS. Дополнительные сведения см. [в разделе Создание диагностического отчета для репликация DFS](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)) и пошагового [руководств по DFS для Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)). Если сервер работает под Windows Server 2008 R2, можно использовать [параметр командной строкиdfsrdiag.exe ReplicationState](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754227(v=ws.11)).  
 
-Можно также запустить тест репликации с помощью программы Dcdiag. exe, чтобы проверить наличие ошибок репликации. Дополнительные сведения см. в статье базы знаний [249256](https://support.microsoft.com/kb/249256).
+Можно также запустить тест репликации с помощью dcdiag.exe, чтобы проверить наличие ошибок репликации. Дополнительные сведения см. в статье базы знаний [249256](https://support.microsoft.com/kb/249256).
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие шаги
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

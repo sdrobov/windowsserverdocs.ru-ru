@@ -8,12 +8,12 @@ ms.date: 08/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 37115e79044c9ddfd55e646fcde868ad6ac7048f
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: 244444cc773e3b69ba09a2050ebaefa11ea9edef
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624342"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962286"
 ---
 # <a name="creating-a-site-link-bridge-design"></a>Создание проекта моста связей сайтов
 
@@ -26,7 +26,7 @@ ms.locfileid: "81624342"
 - Ваша IP-сеть не была полностью направляться. При отключении **моста всех связей**сайтов все связи сайтов считаются нетранзитивными, и вы можете создавать и настраивать объекты моста связей сайтов для моделирования фактического поведения маршрутизации в сети.
 - Необходимо управлять потоком репликации изменений, внесенных в домен Active Directory Services (AD DS). Отключив **мост все связи сайтов** для IP-транспорта связи сайтов и настроив мост связей сайтов, мост связей сайтов станет эквивалентом несвязной сети. Все связи сайтов в рамках моста связей сайтов могут маршрутизироваться транзитно, но они не направляются за пределы моста связей сайтов.
 
-Дополнительные сведения об использовании оснастки "Active Directory сайтов и служб" для отключения параметра **моста все связи сайтов** см. в статье [Включение или отключение мостов связей сайтов](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
+Дополнительные сведения об использовании оснастки "Active Directory сайтов и служб" для отключения параметра **моста все связи сайтов** см. в статье [Включение или отключение мостов связей сайтов](/previous-versions/windows/it-pro/windows-server-2003/cc738789(v=ws.10)).
 
 ## <a name="controlling-ad-ds-replication-flow"></a>Управление потоком репликации AD DS
 

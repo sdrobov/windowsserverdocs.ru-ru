@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: a7e98129c2fb4f2259364c547b426d46f0a24ef3
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: d9d24f1ce66ca691bfa31479a00b9ecf719abe1e
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859467"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961306"
 ---
 # <a name="smb-file-and-printer-sharing-ports-should-be-open"></a>SMB: необходимо открыть порты для совместного использования файлов и принтеров
 
@@ -34,11 +34,11 @@ ms.locfileid: "80859467"
 <td><p>Windows Server</p></td>
 </tr>
 <tr class="even">
-<td><p><strong>Продукт или функция</strong></p></td>
-<td><p>Службы файлов</p></td>
+<td><p><strong>Продукт или компонент</strong></p></td>
+<td><p>Файловые службы</p></td>
 </tr>
 <tr class="odd">
-<td><p><strong>Серьезности</strong></p></td>
+<td><p><strong>Уровень серьезности</strong></p></td>
 <td><p>Ошибка</p></td>
 </tr>
 <tr class="even">
@@ -56,7 +56,7 @@ ms.locfileid: "80859467"
 
 > *Компьютеры не смогут получить доступ к общим папкам и другим сетевым службам на основе SMB на этом сервере.*
 
-## <a name="resolution"></a>Разрешение
+## <a name="resolution"></a>Решение
 
 > *Включите общий доступ к файлам и принтерам для обмена данными через брандмауэр компьютера.*
 
@@ -68,11 +68,10 @@ ms.locfileid: "80859467"
 
 2.  В левой области щелкните **Дополнительные параметры**, а затем в дереве консоли щелкните **правила для входящих подключений**.
 
-3.  В разделе **правила для входящих подключений**выберите **файлы правил и общий доступ к принтерам (сеансы с расширением NetBIOS)** и **общий доступ к ФАЙЛАМ и принтерам (SMB-in)** .
+3.  В разделе **правила для входящих подключений**выберите **файлы правил и общий доступ к принтерам (сеансы с расширением NetBIOS)** и **общий доступ к ФАЙЛАМ и принтерам (SMB-in)**.
 
-4.  Для каждого правила щелкните правой кнопкой мыши правило и выберите пункт **включить правило**.
+4.  Щелкните правой кнопкой мыши на каждом правиле и нажмите **Включить правило**.
 
-## <a name="additional-references"></a>Дополнительная справка
+## <a name="additional-references"></a>Дополнительные ссылки
 
-Общие [сведения об общих папках и брандмауэре Windows](https://technet.microsoft.com/library/cc731402.aspx)(https://technet.microsoft.com/library/cc731402.aspx)
-
+Общие [сведения об общих папках и брандмауэре Windows](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731402(v=ws.11))(https://technet.microsoft.com/library/cc731402.aspx)

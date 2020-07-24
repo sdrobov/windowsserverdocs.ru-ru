@@ -9,12 +9,12 @@ ms.topic: article
 author: eldenchristensen
 ms.date: 06/24/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 0e34f74226edb56e8db0290fd5dc83f0c6e54221
-ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
+ms.openlocfilehash: 108e5a65b78370c40ba02da677e953eb2b122288
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85833327"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964586"
 ---
 # <a name="storage-spaces-direct-hardware-requirements"></a>Требования к оборудованию для локальных дисковых пространств
 
@@ -33,7 +33,7 @@ ms.locfileid: "85833327"
 
 ![снимок экрана каталога Windows Server, в котором отображается АКС SDDC](media/hardware-requirements/sddc-aqs.png)
 
-Полностью настроенный кластер (серверы, сеть и хранилище) должен пройти все [проверочные тесты](https://technet.microsoft.com/library/cc732035(v=ws.10).aspx) в мастере в Диспетчер отказоустойчивости кластеров или с помощью `Test-Cluster` [командлета](https://docs.microsoft.com/powershell/module/failoverclusters/test-cluster?view=win10-ps) в PowerShell.
+Полностью настроенный кластер (серверы, сеть и хранилище) должен пройти все [проверочные тесты](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732035(v=ws.10)) в мастере в Диспетчер отказоустойчивости кластеров или с помощью `Test-Cluster` [командлета](/powershell/module/failoverclusters/test-cluster?view=win10-ps) в PowerShell.
 
 Кроме того, применяются следующие требования.
 
@@ -82,14 +82,14 @@ ms.locfileid: "85833327"
 
 - Поддерживаются диски SATA, SAS, энергонезависимой памяти и NVMe (M. 2, U. 2 и Add-on-Card).
 - поддерживаются собственные диски 512N, 512e и 4 КБ.
-- Твердотельные накопители должны обеспечивать [защиту от потери питания](https://blogs.technet.microsoft.com/filecab/2016/11/18/dont-do-it-consumer-ssd/)
+- Твердотельные накопители должны обеспечивать [защиту от потери питания](https://techcommunity.microsoft.com/t5/storage-at-microsoft/don-t-do-it-consumer-grade-solid-state-drives-ssd-in-storage/ba-p/425914)
 - Одинаковое число и типы дисков на каждом сервере — см. раздел [требования к симметрии](drive-symmetry-considerations.md)
 - Размер устройств кэша должен составлять 32 ГБ или больше.
 - Устройства энергонезависимой памяти используются в блочном режиме хранения
 - При использовании постоянных устройств памяти в качестве устройств кэширования необходимо использовать устройства с устройствами NVMe или SSD (жесткие диски не используются).
 - Драйвер NVMe, предоставленный корпорацией Майкрософт, входит в состав Windows (stornvme.sys)
 - Рекомендуется: количество дисков емкости является целым числом, кратным числу дисков кэша.
-- Рекомендуется: диски кэша должны иметь высокую ендуранце записи: не менее 3 дисков — операций записи в день (ДВПД) или не менее 4 терабайт (ТБВ) в день. см. раздел [Общие сведения о записи диска в день (двпд), терабайты (ТБВ) и Минимальное рекомендуемое значение для Локальные дисковые пространства](https://blogs.technet.microsoft.com/filecab/2017/08/11/understanding-dwpd-tbw/)
+- Рекомендуется: диски кэша должны иметь высокую ендуранце записи: не менее 3 дисков — операций записи в день (ДВПД) или не менее 4 терабайт (ТБВ) в день. см. раздел [Общие сведения о записи диска в день (двпд), терабайты (ТБВ) и Минимальное рекомендуемое значение для Локальные дисковые пространства](https://techcommunity.microsoft.com/t5/storage-at-microsoft/understanding-ssd-endurance-drive-writes-per-day-dwpd-terabytes/ba-p/426024)
 
 Вот как можно подключить диски для Локальные дисковые пространства:
 

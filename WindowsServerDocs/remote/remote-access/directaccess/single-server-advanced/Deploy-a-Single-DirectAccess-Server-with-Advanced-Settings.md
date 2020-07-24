@@ -1,5 +1,5 @@
 ---
-title: Развертывание отдельного сервера DirectAccess с расширенными параметрами
+title: Deploy a Single DirectAccess Server with Advanced Settings
 description: Эта статья является частью руководств по развертыванию одного сервера DirectAccess с дополнительными параметрами для Windows Server 2016.
 manager: brianlic
 ms.prod: windows-server
@@ -8,16 +8,16 @@ ms.topic: article
 ms.assetid: b211a9ca-1208-4e1f-a0fe-26a610936c30
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 7f6a6724a2ab7bb6da48a11d31fb04461912e388
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 199d4ce3ebb3c9cbc6ec1b8574133104b8129312
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859527"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964626"
 ---
-# <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>Развертывание отдельного сервера DirectAccess с расширенными параметрами
+# <a name="deploy-a-single-directaccess-server-with-advanced-settings"></a>Deploy a Single DirectAccess Server with Advanced Settings
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе приводятся общие сведения о сценарии DirectAccess, использующем один сервер DirectAccess, и разрешается развертывание DirectAccess с дополнительными параметрами.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "80859527"
 ## <a name="in-this-scenario"></a>Содержание сценария  
 Чтобы настроить один сервер DirectAccess с расширенными параметрами, необходимо выполнить несколько этапов планирования и развертывания.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>Обязательные условия  
 Прежде чем начать, изучите следующие требования.  
   
 -   Брандмауэр Windows должен быть включен для всех профилей.  
@@ -51,14 +51,14 @@ ms.locfileid: "80859527"
 >   
 > -   Протокол ISATAP не поддерживается для корпоративных сетей. Если вы используете ISATAP, необходимо удалить его и использовать IPv6.  
   
-### <a name="planning-steps"></a>Шаги по планированию  
+### <a name="planning-steps"></a>Шаги планирования  
 Планирование разделено на два этапа.  
   
 1.  **Планирование инфраструктуры DirectAccess**. На этом этапе описывается планирование до начала развертывания DirectAccess, необходимое для настройки сетевой инфраструктуры. На этом этапе планируются топология сети и серверов, сертификаты, DNS, конфигурация Active Directory и объектов групповой политики (GPO), а также сервер сетевых расположений DirectAccess.  
   
 2.  **Планирование развертывания DirectAccess**. На этом этапе описывается планирование для подготовки к развертыванию DirectAccess. Он включает в себя планирование требований при проверке подлинности серверов, клиентов и компьютеров клиентов DirectAccess, параметров VPN, инфраструктуры серверов, серверов управления и серверов приложений.  
   
-### <a name="deployment-steps"></a>Шаги развертывания  
+### <a name="deployment-steps"></a>Шаги по развертыванию  
 Развертывание разделено на три этапа.  
   
 1.  **Настройка инфраструктуры DirectAccess**. Этот этап включает в себя настройку сети и маршрутизации, при необходимости — настройку параметров брандмауэра, настройку сертификатов, DNS-серверов, параметров Active Directory и объектов групповой политики, сервера сетевых расположений DirectAccess.  
@@ -69,14 +69,14 @@ ms.locfileid: "80859527"
   
 Подробные сведения о шагах развертывания см. в разделе [Установка и настройка DirectAcces с расширенными параметрами](../../../remote-access/directaccess/single-server-advanced/Install-and-Configure-Advanced-DirectAccess.md).  
   
-## <a name="practical-applications"></a><a name="BKMK_APP"></a>Практические приложения  
+## <a name="practical-applications"></a><a name="BKMK_APP"></a>Практическое применение  
 Ниже описываются преимущества, предоставляемые развертыванием единого сервера DirectAccess.  
   
 -   **Упрощенный доступ**. Управляемые клиентские компьютеры под управлением Windows 10, Windows 8.1, Windows 8 и Windows 7 можно настроить в качестве клиентских компьютеров DirectAccess. Эти клиенты могут получать доступ к ресурсам внутренней сети через DirectAccess в любое время, когда они находятся в Интернете, без необходимости входа в VPN-подключение. Клиентские компьютеры под управлением других операционных систем могут подключаться к внутренней сети через VPN.  
   
 -   **Упрощенное управление**. Администраторы могут управлять клиентскими компьютерами DirectAccess, расположенными в Интернете, через DirectAccess с помощью удаленного доступа, даже если эти компьютеры не находятся во внутренней корпоративной сети. Серверы управления могут автоматически исправить клиентские компьютеры, которые не отвечают корпоративным требованиям. Управление DirectAccess и VPN осуществляется с помощью одной консоли и одного набора мастеров. Кроме того, при помощи одной консоли управления DirectAccess можно администрировать один или более серверов удаленного доступа.  
   
-## <a name="roles-and-features-required-for-this-scenario"></a><a name="BKMK_NEW"></a>Роли и функции, необходимые для этого сценария  
+## <a name="roles-and-features-required-for-this-scenario"></a><a name="BKMK_NEW"></a>Роли и компоненты, необходимые для данного сценария  
 В следующей таблице перечислены роли и компоненты, необходимые для данного сценария.  
   
 |Роль/компонент|Способ поддержки сценария|  
@@ -142,12 +142,10 @@ ms.locfileid: "80859527"
 ## <a name="see-also"></a><a name="BKMK_LINKS"></a> См. также  
 В следующей таблице перечислены ссылки на дополнительные ресурсы.  
   
-|Тип контента|Ссылки|  
+|Тип содержимого|Ссылки|  
 |--------|-------|  
-|**Развертывание**|[Пути развертывания DirectAccess в Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
-|**Средства и параметры**|[Командлеты PowerShell для удаленного доступа](https://technet.microsoft.com/library/hh918399.aspx)|  
-|**Ресурсы сообщества**|[Практические советы по DirectAccess](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<p>[Записи вики-сайта DirectAccess](https://go.microsoft.com/fwlink/?LinkId=236871)|  
-|**Связанные технологии**|[Принцип работы IPv6](https://technet.microsoft.com/library/cc781672(v=WS.10).aspx)|  
+|**Deployment**|[Пути развертывания DirectAccess в Windows Server](../../../remote-access/directaccess/DirectAccess-Deployment-Paths-in-Windows-Server.md)<p>[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|  
+|**Средства и параметры**|[Командлеты PowerShell удаленного доступа](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831379(v=ws.11))|  
+|**Ресурсы сообщества**|[Руководство по DirectAccess](https://social.technet.microsoft.com/wiki/contents/articles/23210.directaccess-survival-guide.aspx)<p>[Статьи о DirectAccess в Википедии](https://go.microsoft.com/fwlink/?LinkId=236871)|  
+|**Связанные технологии**|[Принцип работы IPv6](/previous-versions/windows/it-pro/windows-server-2003/cc781672(v=ws.10))|  
   
-
-

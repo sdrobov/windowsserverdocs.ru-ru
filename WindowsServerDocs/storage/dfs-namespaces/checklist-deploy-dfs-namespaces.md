@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: adae586c67a34912ea34dca5749d8c69856033d0
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 389d02ae7269ef48ef77d066db3064759d9253c1
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473511"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961966"
 ---
 # <a name="checklist-deploy-dfs-namespaces"></a>Контрольный список: развертывание пространств имен DFS
 
@@ -38,8 +38,6 @@ ms.locfileid: "85473511"
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Пространства имен](https://technet.microsoft.com/library/cc771914(v=ws.11).aspx)
+-   [Пространства имен](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771914(v=ws.11))
 -   [Контрольный список. Настройка пространства имен DFS](checklist-tune-a-dfs-namespace.md)
--   [Репликация](https://technet.microsoft.com/library/cc770278(v=ws.11).aspx)
-
-
+-   [Репликация](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770278(v=ws.11))

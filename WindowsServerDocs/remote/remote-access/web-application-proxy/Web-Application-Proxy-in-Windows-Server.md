@@ -6,18 +6,18 @@ ms.technology: web-app-proxy
 ms.topic: article
 ms.author: kgremban
 author: eross-msft
-ms.openlocfilehash: 2fef89dc999166a7dcbb0479c28160b14b95340e
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 84c2c735ee3e6b19816acaa8810c297c487f5250
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80818637"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961456"
 ---
 # <a name="web-application-proxy-in-windows-server"></a>Прокси-служба веб-приложения в Windows Server
 
 >Область применения: Windows Server&reg; 2016
 
-**Это содержимое относится к локальной версии прокси веб-приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-get-started/).**  
+**Это содержимое относится к локальной версии прокси веб-приложения. Чтобы обеспечить безопасный доступ к локальным приложениям в облаке, ознакомьтесь с [содержимым AD application proxy Azure](/azure/active-directory/manage-apps/application-proxy).**  
   
 В этом разделе описано, что нового и изменено в прокси веб-приложения для Windows Server 2016. Новые функции и изменения, перечисленные здесь, скорее всего, оказывают наибольшее влияние на работу с предварительной версией.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "80818637"
   
   Для поддержки таких сценариев, как SharePoint 2013, внешний URL-адрес приложения теперь может содержать подстановочный знак, позволяющий публиковать несколько приложений в определенном домене, например https://*. SP-Apps. contoso. com. Это упростит публикацию приложений SharePoint.  
   
-- Перенаправление HTTP в HTTPS  
+- Перенаправление трафика HTTP в HTTPS  
   
   Чтобы пользователи могли получить доступ к приложению, даже если в URL-адресе не введено значение HTTPS, прокси веб-приложения теперь поддерживает перенаправление HTTP в HTTPS.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "80818637"
   
 - Новый журнал отладки для улучшения устранения неполадок и Улучшенный журнал службы для полного аудита и улучшенной обработки ошибок  
   
-  Дополнительные сведения об устранении неполадок см. в разделе [Устранение неполадок прокси веб-приложения](https://technet.microsoft.com/library/dn770156.aspx) .  
+  Дополнительные сведения об устранении неполадок см. в разделе [Устранение неполадок прокси веб-приложения](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11)) .  
   
 - Улучшения пользовательского интерфейса консоль администратора  
   
@@ -55,11 +55,9 @@ ms.locfileid: "80818637"
   
 ## <a name="see-also"></a>См. также  
   
--   [Что нового в Windows Server 2016?](https://technet.microsoft.com/library/dn765472.aspx)  
+-   [Что нового в Windows Server 2016?](../../../get-started/whats-new-in-windows-server-2016.md)  
   
 -   [Публикация приложений с использованием предварительной проверки подлинности AD FS](../web-application-proxy/Publishing-Applications-using-AD-FS-Preauthentication.md)  
   
--   [Диагностика прокси-службы веб-приложения](https://technet.microsoft.com/library/dn770156.aspx)  
+-   [Диагностика прокси-службы веб-приложения](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn770156(v=ws.11))  
   
-
-

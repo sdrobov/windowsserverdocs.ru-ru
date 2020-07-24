@@ -8,12 +8,12 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 5f88458c8e3f50853229f6f8f9c74fa4b8feba40
-ms.sourcegitcommit: 11421f4005f9f3a3f6c0db95b1836d0f765a9fa3
+ms.openlocfilehash: 929530b8ee7dbb7b0486f3eb80a642cc5fdab20e
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81624422"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962466"
 ---
 # <a name="ad-ds-design-and-planning"></a>Планирование и проектирование доменных служб Active Directory
 
@@ -29,7 +29,7 @@ ms.locfileid: "81624422"
 
 Хотя стратегии, представленные в этом руководств, подходят для практически всех развертываний серверных операционных систем, они были протестированы и проверены для сред, содержащих менее 100 000 пользователей и менее 1 000 узлов, с сетевыми подключениями не менее 28,8 килобит в секунду (кбит/с). Если ваша среда не соответствует этим критериям, рассмотрите возможность использования консалтинговой фирмы, имеющей опыт развертывания AD DS в более сложных средах.
 
-Дополнительные сведения о тестировании процесса развертывания AD DS см. в статье [тестирование и проверка процесса развертывания](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10)).
+Дополнительные сведения о тестировании процесса развертывания AD DS см. в статье [тестирование и проверка процесса развертывания](/previous-versions/windows/it-pro/windows-server-2003/cc772722(v=ws.10)).
 
 ## <a name="in-this-guide"></a>В данном руководстве
 

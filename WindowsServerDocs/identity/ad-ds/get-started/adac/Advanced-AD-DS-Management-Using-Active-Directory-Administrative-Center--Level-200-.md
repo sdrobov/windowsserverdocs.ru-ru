@@ -1,6 +1,6 @@
 ---
 ms.assetid: 4d21d27d-5523-4993-ad4f-fbaa43df7576
-title: Расширенная настройка управления AD DS при помощи центра администрирования Active Directory (уровень 200)
+title: Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: mtillman
@@ -8,30 +8,30 @@ ms.date: 08/07/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adds
-ms.openlocfilehash: 197f994bdd5dedced24aa390dc562530c41e951d
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 63764ff94c10376c76eec493c618214a183bf528
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80824917"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961106"
 ---
-# <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Расширенная настройка управления AD DS при помощи центра администрирования Active Directory (уровень 200)
+# <a name="advanced-ad-ds-management-using-active-directory-administrative-center-level-200"></a>Advanced AD DS Management Using Active Directory Administrative Center (Level 200)
 
->Область применения: Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
+>Область применения. Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-В этой статье рассматривается обновленный Центр администрирования Active Directory и приводится более подробное описание новой корзины Active Directory, детальной политики паролей и средства просмотра журнала Windows PowerShell, включая их архитектуру, примеры задач и информацию об устранении неполадок. Общие сведения см. [в статье Введение в центр администрирования Active Directory улучшения &#40;уровня 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
+В этой статье рассматривается обновленный Центр администрирования Active Directory и приводится более подробное описание новой корзины Active Directory, детальной политики паролей и средства просмотра журнала Windows PowerShell, включая их архитектуру, примеры задач и информацию об устранении неполадок. Общие сведения см. [в статье Введение в центр администрирования Active Directory улучшения &#40;уровня 100&#41;](../../../ad-ds/get-started/adac/Introduction-to-Active-Directory-Administrative-Center-Enhancements--Level-100-.md).  
   
-- [Архитектура центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
-- [Включение и управление корзиной Active Directory с помощью центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
-- [Настройка детальных политик паролей и управление ими с помощью центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
-- [Использование центр администрирования Active Directory средства просмотра журнала Windows PowerShell](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
-- [Устранение неполадок управления AD DS](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Tshoot)  
+- [Архитектура центра администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Arch)  
+- [Активация и администрирование новой корзины Active Directory через Центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_EnableRecycleBin)  
+- [Настройка и администрирование детальной политики паролей через Центр администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_FGPP)  
+- [Использование средства просмотра журнала Windows PowerShell в Центре администрирования Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_HistoryViewer)  
+- [Устранение неполадок в управлении доменными службами Active Directory](../../../ad-ds/get-started/adac/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-.md#BKMK_Tshoot)  
   
-## <a name="active-directory-administrative-center-architecture"></a><a name="BKMK_Arch"></a>Архитектура центр администрирования Active Directory  
+## <a name="active-directory-administrative-center-architecture"></a><a name="BKMK_Arch"></a>Архитектура центра администрирования Active Directory  
   
 ### <a name="active-directory-administrative-center-executables-dlls"></a>Центр администрирования Active Directory исполняемых файлов, DLL  
 
-Модуль и базовая архитектура Центра администрирования Active Directory с появлением новой корзины Active Directory, детальной политики паролей и средства просмотра журнала не изменились,  
+Модуль и базовая архитектура Центра администрирования Active Directory с появлением новой корзины Active Directory, детальной политики паролей и средства просмотра журнала не изменились,  
   
 - Microsoft.ActiveDirectory.Management.UI.dll  
 - Microsoft.ActiveDirectory.Management.UI.resources.dll  
@@ -43,16 +43,16 @@ ms.locfileid: "80824917"
   
 ![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/adds_adrestore.png)  
   
-## <a name="enabling-and-managing-the-active-directory-recycle-bin-using-active-directory-administrative-center"></a><a name="BKMK_EnableRecycleBin"></a>Включение и управление корзиной Active Directory с помощью центр администрирования Active Directory  
+## <a name="enabling-and-managing-the-active-directory-recycle-bin-using-active-directory-administrative-center"></a><a name="BKMK_EnableRecycleBin"></a>Активация и администрирование новой корзины Active Directory через Центр администрирования Active Directory  
   
-### <a name="capabilities"></a>Возможности  
+### <a name="capabilities"></a>Характеристики  
   
 - Центр администрирования Active Directory Windows Server 2012 или более поздней версии позволяет настраивать корзину Active Directory и управлять ею для любого раздела домена в лесу. Для активации корзины Active Directory или восстановления объектов в разделы доменов больше не нужно использовать Windows PowerShell или Ldp.exe.
 - В Центре администрирования Active Directory есть расширенные условия фильтрации, упрощающие адресное восстановление в крупных средах с большим количеством удаленных объектов.
   
 ### <a name="limitations"></a>Ограничения  
   
-- Поскольку Центр администрирования Active Directory позволяет управлять только разделами доменов, он не может восстанавливать удаленные объекты из разделов "Конфигурация", "DNS-домен" и "DNS-лес" (удалять объекты из раздела "Схема" нельзя). Для восстановления объектов из разделов, не принадлежащих к домену, используйте командлет [Restore-ADObject](https://technet.microsoft.com/library/ee617262.aspx).  
+- Поскольку Центр администрирования Active Directory позволяет управлять только разделами доменов, он не может восстанавливать удаленные объекты из разделов "Конфигурация", "DNS-домен" и "DNS-лес" (удалять объекты из раздела "Схема" нельзя). Для восстановления объектов из разделов, не принадлежащих к домену, используйте командлет [Restore-ADObject](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ee617262(v=technet.10)).  
 
 - Центр администрирования Active Directory не позволяет восстанавливать поддеревья объектов за одно действие. Например, если вы удалите организационное подразделение с вложенными подразделениями, пользователями, группами и компьютерами, то при восстановлении этого организационного подразделения дочерние объекты восстановлены не будут.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "80824917"
 Enable-ADOptionalFeature  
 ```
 
-Дополнительные сведения об использовании Windows PowerShell для включения корзины Active Directory см. в статье [Пошаговое руководство по использованию корзины Active Directory](https://docs.microsoft.com/windows-server/identity/ad-ds/get-started/adac/introduction-to-active-directory-administrative-center-enhancements--level-100-#active-directory-recycle-bin-step-by-step).  
+Дополнительные сведения об использовании Windows PowerShell для включения корзины Active Directory см. в статье [Пошаговое руководство по использованию корзины Active Directory](./introduction-to-active-directory-administrative-center-enhancements--level-100-.md#active-directory-recycle-bin-step-by-step).  
   
 ### <a name="managing-active-directory-recycle-bin-using-active-directory-administrative-center"></a>Управление корзиной Active Directory через Центр администрирования Active Directory
 
@@ -97,7 +97,7 @@ Enable-ADOptionalFeature
   
 Контейнер **Удаленные объекты** содержит список всех доступных для восстановления объектов в этом разделе домена. Удаленные объекты с превышенным значением атрибута **msDS-deletedObjectLifetime** называются утилизированными. Центр администрирования Active Directory не показывает утилизированные объекты и не позволяет их восстановить.  
   
-Более подробно архитектура и принципы работы корзины описываются в статье [Корзина Active Directory: общие сведения, реализация, рекомендации и устранение неполадок](https://blogs.technet.com/b/askds/archive/2009/08/27/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting.aspx).  
+Более подробно архитектура и принципы работы корзины описываются в статье [Корзина Active Directory: общие сведения, реализация, рекомендации и устранение неполадок](/archive/blogs/askds/the-ad-recycle-bin-understanding-implementing-best-practices-and-troubleshooting).  
   
 Центр администрирования Active Directory искусственно ограничивает количество отображаемых в контейнере объектов до 20 000 штук. Чтобы увеличить этот лимит до 100 000 объектов, откройте меню **Управление** и выберите пункт **Параметры списка управления**.  
   
@@ -121,7 +121,7 @@ Enable-ADOptionalFeature
 - Имя  
 - Дата удаления  
 - Последний известный родительский объект  
-- Тип  
+- Type  
 - Описание  
 - Город  
 - Страна или регион  
@@ -131,10 +131,10 @@ Enable-ADOptionalFeature
 - Должность  
 - Фамилия  
 - SAMaccountname  
-- Штат или провинция  
+- Область, республика, край, округ  
 - Номер телефона  
-- имя участника-пользователя  
-- Почтовый индекс  
+- UPN  
+- почтовый индекс  
 
 Можно добавить несколько критериев. Например, можно найти все объекты-пользователи, удаленные 24 сентября 2012 из Чикаго, Иллинойс с заголовком должности менеджер.
   
@@ -142,7 +142,7 @@ Enable-ADOptionalFeature
   
 ![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_ColumnHeaders.png)  
   
-Дополнительные сведения о разрешении неоднозначных имен см. в разделе [Атрибуты ANR](https://msdn.microsoft.com/library/ms675092(VS.85).aspx).  
+Дополнительные сведения о разрешении неоднозначных имен см. в разделе [Атрибуты ANR](/windows/win32/adschema/attributes-anr).  
   
 ##### <a name="single-object"></a>Один объект
 
@@ -168,7 +168,7 @@ Enable-ADOptionalFeature
   
 ##### <a name="multiple-parent-and-child-objects"></a>Несколько дочерних и родительских объектов
 
-Центр администрирования Active Directory не позволяет восстанавливать вложенные деревья удаленных объектов за одно действие, поэтому восстанавливать объекты нужно в определенном порядке.  
+Центр администрирования Active Directory не позволяет восстанавливать вложенные деревья удаленных объектов за одно действие, поэтому восстанавливать объекты нужно в определенном порядке.  
   
 1. Восстановите верхний удаленный объект в дереве.  
 2. Восстановите дочерние элементы этого родительского объекта.  
@@ -183,7 +183,7 @@ Enable-ADOptionalFeature
   
 Предположим, что администратор случайно удалил организационное подразделение Sales, содержащее дочерние подразделения и пользователей.  
   
-Сначала обратите внимание на значение **последнего известного родительского** атрибута для всех удаленных пользователей и как он считывает **OU = Sales\0ADEL:* < GUID + Deleted Objects различающееся имя контейнера > * * *:  
+Сначала обратите внимание на значение **последнего известного родительского** атрибута для всех удаленных пользователей и как он считывает **OU = Sales\0ADEL:*<GUID + Deleted Objects различающееся имя контейнера> * * *:  
   
 ![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_LastKnownParent.gif)  
   
@@ -201,7 +201,7 @@ Enable-ADOptionalFeature
   
 Если организационное подразделение **Sales** включало дочерние подразделения, восстановите сначала эти подразделения, а затем их дочерние объекты и т. д.  
   
-Порядок восстановления всех вложенных удаленных объектов путем указания удаленного родительского контейнера см. в [Приложении Б. Восстановление сразу нескольких удаленных объектов Active Directory (образец сценария)](https://technet.microsoft.com/library/dd379504(WS.10).aspx).  
+Порядок восстановления всех вложенных удаленных объектов путем указания удаленного родительского контейнера см. в [Приложении Б. Восстановление сразу нескольких удаленных объектов Active Directory (образец сценария)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379504(v=ws.10)).  
   
 Командлет Active Directory в Windows PowerShell, предназначенный для восстановления удаленных объектов, выглядит следующим образом:  
 
@@ -219,13 +219,13 @@ Restore-adobject
 2. Щелкните шеврон, чтобы открыть меню **Добавить условия**, а затем выберите и добавьте параметр **Последнее изменение между заданными датами**. Последнее изменение между заданными датами (атрибут **whenChanged**) будет приближено к времени удаления, а в некоторых средах эти значения будут идентичны. Этот запрос запускает поиск на стороне сервера.  
 3. Выберите удаленные объекты для восстановления с помощью дополнительной фильтрации, сортировки и других действий с результатами поиска, а затем восстановите объекты как обычно.  
   
-## <a name="configuring-and-managing-fine-grained-password-policies-using-active-directory-administrative-center"></a><a name="BKMK_FGPP"></a>Настройка детальных политик паролей и управление ими с помощью центр администрирования Active Directory  
+## <a name="configuring-and-managing-fine-grained-password-policies-using-active-directory-administrative-center"></a><a name="BKMK_FGPP"></a>Настройка и администрирование детальной политики паролей через Центр администрирования Active Directory  
   
 ### <a name="configuring-fine-grained-password-policies"></a>Настройка детальной политики паролей
 
 Центр администрирования Active Directory позволяет создавать объекты детальной политики паролей (FGPP) и управлять такими объектами. Функция FGPP была представлена в Windows Server 2008, но первый графический интерфейс для управления этой функцией появился только в Windows Server 2012. Детальная политика паролей настраивается на уровне домена и позволяет перезаписывать единый пароль домена, предусмотренный в Windows Server 2003. При создании различных FGPP с различными параметрами отдельные пользователи или группы получают различные политики паролей в домене.  
   
-Информацию о детальной политике паролей см. в [пошаговом руководстве по детальной настройке политик блокировки учетных записей и паролей доменных служб Active Directory (Windows Server 2008 R2)](https://technet.microsoft.com/library/cc770842(WS.10).aspx).  
+Информацию о детальной политике паролей см. в [пошаговом руководстве по детальной настройке политик блокировки учетных записей и паролей доменных служб Active Directory (Windows Server 2008 R2)](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770842(v=ws.10)).  
   
 На панели навигации выберите представление в виде дерева, щелкните свой домен, **Система**, **Контейнер параметров паролей**, а затем на панели "Задачи" щелкните **Создать** и **Параметры пароля**.  
   
@@ -269,13 +269,13 @@ Set-ADFineGrainedPasswordPolicy
   
 Неявное назначение ФГПП здесь не отображается; для этого необходимо использовать параметр **просмотреть результирующие параметры пароля...** .  
   
-## <a name="using-the-active-directory-administrative-center-windows-powershell-history-viewer"></a><a name="BKMK_HistoryViewer"></a>Использование центр администрирования Active Directory средства просмотра журнала Windows PowerShell
+## <a name="using-the-active-directory-administrative-center-windows-powershell-history-viewer"></a><a name="BKMK_HistoryViewer"></a>Использование средства просмотра журнала Windows PowerShell в Центре администрирования Active Directory
 
 Будущее управления Windows связано с Windows PowerShell. Благодаря размещению графических средств поверх платформы автоматизации задач управление сложнейшими распределенными системами стало последовательным и эффективным. Зная принципы работы Windows PowerShell, вы сможете полностью раскрыть свой потенциал и извлечь максимальную пользу из своих инвестиций в компьютерное оборудование.  
   
 Теперь Центр администрирования Active Directory позволяет просматривать историю выполнения всех командлетов Windows PowerShell, включая их аргументы и значения. При этом историю командлетов можно скопировать для дальнейшего изучения или изменения и повторного использования. Вы можете создавать примечания к задачам и описывать, какой результат команды Центра администрирования Active Directory дали в Windows PowerShell. Также можно фильтровать историю на предмет интересных моментов.  
   
-Средство просмотра журнала Windows PowerShell в Центре администрирования Active Directory позволяет учиться на основе практического опыта.  
+Средство просмотра журнала Windows PowerShell в Центре администрирования Active Directory позволяет учиться на основе практического опыта.  
   
 ![Расширенное управление AD DS](media/Advanced-AD-DS-Management-Using-Active-Directory-Administrative-Center--Level-200-/ADDS_ADAC_TR_HistoryViewer.gif)  
   
@@ -315,7 +315,7 @@ set-aduser
 
 Структура Центра администрирования Active Directory предусматривает минимальное использование кодов и модулей. Таким образом, вместо отдельных наборов функций для создания новых пользователей и изменения уже существующих он выполняет каждую задачу по минимуму, а затем соединяет их воедино с помощью командлетов. Помните об этом при изучении модуля Active Directory в Windows PowerShell. Эту особенность можно также использовать как способ изучения, показывающий, как просто выполнять отдельные задачи с помощью Windows PowerShell.  
   
-## <a name="troubleshooting-ad-ds-management"></a><a name="BKMK_Tshoot"></a>Устранение неполадок управления AD DS  
+## <a name="troubleshooting-ad-ds-management"></a><a name="BKMK_Tshoot"></a>Устранение неполадок в управлении доменными службами Active Directory  
   
 ### <a name="introduction-to-troubleshooting"></a>Общие сведения об устранении неполадок
 
@@ -323,11 +323,11 @@ set-aduser
   
 ### <a name="troubleshooting-options"></a>Способы устранения неполадок  
   
-#### <a name="logging-options"></a>Варианты ведения журнала
+#### <a name="logging-options"></a>Параметры ведения журнала
 
 Центр администрирования Active Directory теперь содержит встроенное ведение журнала в составе файла конфигурации трассировки. Создайте или измените следующий файл, расположенный в той же папке, что и файл dsac.exe:  
   
-**дсак. exe. config**
+**dsac.exe.config**
   
 Создайте следующее содержимое:  
   
@@ -347,7 +347,7 @@ set-aduser
 </system.diagnostics>
 ```
 
-Уровни детализации для параметра **DsacLogLevel** — это **None** (Нет), **Error** (Ошибки), **Warning** (Предупреждения), **Info** (Информация) и **Verbose** (Подробно). Выходной файл записывается в папку с файлом dsac.exe, и его можно переименовать. Выходные данные позволяют узнать больше о том, как работает ADAC, с какими контроллерами доменов устанавливается связь, что делают команды Windows PowerShell, какие ответы были получены и другие данные.  
+Уровни детализации для параметра **DsacLogLevel** — это **None **(Нет), **Error **(Ошибки), **Warning** (Предупреждения), **Info** (Информация) и **Verbose** (Подробно). Выходной файл записывается в папку с файлом dsac.exe, и его можно переименовать. Выходные данные позволяют узнать больше о том, как работает ADAC, с какими контроллерами доменов устанавливается связь, что делают команды Windows PowerShell, какие ответы были получены и другие данные.  
 
 Например, при использовании уровня детализации INFO (Информация) выдаются все результаты, кроме данных на уровне трассировки:  
   
@@ -449,19 +449,19 @@ set-aduser
 |Ошибка|Операция|
 | --- | --- |  
 |"Не удается подключиться к какому-либо домену. Обновите состояние или попробуйте еще раз, когда подключение станет доступным".|Отображается при запуске приложения "Центр администрирования Active Directory".|
-|"Не удается найти доступный сервер в домене *<NetBIOS domain name>* , на котором выполняется Active Directory веб-службы (ADWS)"|Отображается при попытке выбора узла домена в приложении "Центр администрирования Active Directory"|
+|"Не удается найти доступный сервер в *<NetBIOS domain name>* домене, на котором выполняется веб-служба Active Directory (ADWS)"|Отображается при попытке выбора узла домена в приложении "Центр администрирования Active Directory"|
   
 Для решения этой проблемы выполните указанные ниже действия.  
   
 1. Убедитесь в том, что веб-служба Active Directory запущена хотя бы на одном контроллере домена (а лучше на всех контроллерах доменов в лесу). Убедитесь в том, что на всех контроллерах доменов настроен автоматический запуск веб-службы.
-2. С компьютера, на котором запущено приложение "Центр администрирования Active Directory", проверьте возможность связи с сервером, на котором выполняется веб-служба Active Directory, выполнив команды NLTest.exe:  
+2. С компьютера, на котором запущено приложение "Центр администрирования Active Directory", проверьте возможность связи с сервером, на котором выполняется веб-служба Active Directory, выполнив команды NLTest.exe:  
 
    ```
    nltest /dsgetdc:<domain NetBIOS name> /ws /force
    nltest /dsgetdc:<domain fully qualified DNS name> /ws /force
    ```
 
-   Если связь не устанавливается несмотря на то, что веб-служба Active Directory запущена, то проблема связана с разрешением имен или LDAP, а не с Центром администрирования Active Directory. Если веб-служба Active Directory не запущена ни на одном контроллере домена, выдается ошибка "1355 0x54B ERROR_NO_SUCH_DOMAIN", тем не менее прежде чем делать какие-то выводы, проверьте все еще раз.  
+   Если связь не устанавливается несмотря на то, что веб-служба Active Directory запущена, то проблема связана с разрешением имен или LDAP, а не с Центром администрирования Active Directory. Если веб-служба Active Directory не запущена ни на одном контроллере домена, выдается ошибка "1355 0x54B ERROR_NO_SUCH_DOMAIN", тем не менее прежде чем делать какие-то выводы, проверьте все еще раз.  
   
 3. На контроллере домена, полученном после выполнения команды NLTest, введите дамп списка портов прослушивания с помощью следующей команды:  
 
