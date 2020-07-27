@@ -10,12 +10,12 @@ author: jaimeo
 ms.author: jaimeo
 ms.date: 09/06/2017
 ms.localizationpriority: medium
-ms.openlocfilehash: 3965e453483b3515e4957ecfaba39cf9a0b8104f
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: b792b6734da2fe643862529c0de41e8763117c83
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80827077"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961986"
 ---
 # <a name="developing-powershell-cmdlets-for-nano-server"></a>Разработка командлетов PowerShell для сервера Nano Server
 
@@ -123,7 +123,7 @@ PowerShell поддерживает несколько типов реализа
 * %windir%\system32\WindowsPowerShell\v1.0\Modules   
 * %ProgramFiles%\WindowsPowerShell\Modules   
 * %UserProfile%\Documents\WindowsPowerShell\Modules   
-* \<расположение установки продукта>   
+* \<your product installation location>   
     
   Проверьте эти расположения на соответствие следующим условиям:  
   * Командлеты CIM имеют расширения файла CDXML.  
@@ -136,7 +136,7 @@ PowerShell поддерживает несколько типов реализа
 ### <a name="building-c-for-nano-server"></a>Создание кода C++ для Nano Server  
 Чтобы получить библиотеки DLL на языке C++, работающие на Nano Server, скомпилируйте их для Nano Server, а не для конкретного выпуска.  
   
-Необходимые условия и пошаговое руководство по разработке на C++ для Nano Server см. в статье [Разработка собственных приложений на базе сервера Nano Server](https://blogs.technet.com/b/nanoserver/archive/2016/04/27/developing-native-apps-on-nano-server.aspx).  
+Необходимые условия и пошаговое руководство по разработке на C++ для Nano Server см. в статье [Разработка собственных приложений на базе сервера Nano Server](/archive/blogs/nanoserver/developing-native-apps-on-nano-server).  
   
   
 ## <a name="porting-net-cmdlets"></a>Перенос командлетов .NET  
@@ -176,7 +176,7 @@ PowerShell поддерживает несколько типов реализа
 ### <a name="pinvoke"></a>PInvoke  
 В среде CLR Core, используемой Nano Server, некоторые основополагающие библиотеки DLL, такие как kernel32.dll и advapi32.dll, были разделены на множество наборов API, поэтому вам потребуется убедиться, что вызовы PInvoke ссылаются на правильный API. Любая несовместимость проявится как ошибка во время выполнения.  
   
-Список собственных API, поддерживаемых на сервере Nano Server, см. в статье [API сервера Nano Server](https://msdn.microsoft.com/library/mt588480(v=vs.85).aspx).  
+Список собственных API, поддерживаемых на сервере Nano Server, см. в статье [API сервера Nano Server](/previous-versions/windows/desktop/legacy/mt588480(v=vs.85)).  
   
 ### <a name="building-c-for-nano-server"></a>Создание кода C# для Nano Server  
   
@@ -240,7 +240,7 @@ $result.RemoteAddress = 1.1.1.1
   
 ### <a name="migrating-from-wmi-net-to-mi-net"></a>Переход с WMI .NET на MI .NET  
   
-[WMI .NET](https://msdn.microsoft.com/library/mt481551(v=vs.110).aspx) не поддерживается, поэтому все командлеты, использующие старый API, необходимо перенести на поддерживаемый API WMI: [MI. NET](https://msdn.microsoft.com/library/dn387184(v=vs.85).aspx). Доступ к MI .NET осуществляется напрямую из C# или с помощью командлетов в модуле CimCmdlets.   
+[WMI .NET](/dotnet/api/?view=netframework-4.7.1) не поддерживается, поэтому все командлеты, использующие старый API, необходимо перенести на поддерживаемый API WMI: [MI. NET](/previous-versions//dn387184(v=vs.85)). Доступ к MI .NET осуществляется напрямую из C# или с помощью командлетов в модуле CimCmdlets.   
   
 ### <a name="cimcmdlets-module"></a>Модуль CimCmdlets  
   
@@ -251,5 +251,3 @@ $result.RemoteAddress = 1.1.1.1
 WMI .NET упаковывает интерфейс WMI версии 1, хотя MI .NET упаковывает интерфейс WMI версии 2 (CIM). Предоставляемые классы могут отличаться, но базовые операции очень похожи. Вы перечисляете или возвращаете экземпляры объектов и вызываете операции для них, чтобы выполнить поставленные задачи.   
   
   
-
-

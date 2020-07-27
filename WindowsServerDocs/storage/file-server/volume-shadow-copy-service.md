@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: d90030fe183e5cfcb94866e87793c0419b636433
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 9948fab77ab4869c27fd63e623315bd1b3e9ff47
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475451"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966696"
 ---
 # <a name="volume-shadow-copy-service"></a>Служба теневого копирования томов
 
@@ -247,7 +247,7 @@ VSS координирует действия, необходимые для с�
 
 См. сведения об этих модулях записи на следующей странице веб-документации Майкрософт:
 
-- [In-Box VSS Writers](https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers)(https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers) (Встроенные модули записи VSS)
+- [In-Box VSS Writers](/windows/win32/vss/in-box-vss-writers)(https://docs.microsoft.com/windows/win32/vss/in-box-vss-writers) (Встроенные модули записи VSS)
 
 
 ## <a name="how-shadow-copies-are-used"></a>Использование теневых копий
@@ -375,7 +375,7 @@ VSS впервые появилась в Windows XP. Поддерживаетс
 > <UL>
 > <LI>Он не может удалять файлы из теневой копии, созданной на Windows Server, с помощью функции "Предыдущие версии".<BR><BR>
 > <LI>Он не может удалить файлы из теневых копий общих папок.<BR><BR>
-> <LI>Он может удалять файлы из теневой копии, созданной с помощью служебной программы <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow)">Diskshadow</a>, но удаление файлов с помощью служебной программы <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin)">vssadmin</a> будет невозможным.<BR><BR>
+> <LI>Он может удалять файлы из теневой копии, созданной с помощью служебной программы <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/diskshadow" data-raw-source="[Diskshadow](../../administration/windows-commands/diskshadow.md)">Diskshadow</a>, но удаление файлов с помощью служебной программы <a href="https://docs.microsoft.com/windows-server/administration/windows-commands/vssadmin" data-raw-source="[Vssadmin](../../administration/windows-commands/vssadmin.md)">vssadmin</a> будет невозможным.<BR><BR>
 > <LI>Файлы удаляются из теневой копии при наличии соответствующих ресурсов и возможностей. Это означает, что их удаление не гарантируется.<BR><BR></LI></UL>
 
 
@@ -622,4 +622,4 @@ VssAdmin доступен в версиях операционной систе�
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-[Volume Shadow Copy Service Overview](https://docs.microsoft.com/windows/desktop/vss/volume-shadow-copy-service-overview) (Обзор службы теневого копирования томов)
+[Volume Shadow Copy Service Overview](/windows/desktop/vss/volume-shadow-copy-service-overview) (Обзор службы теневого копирования томов)

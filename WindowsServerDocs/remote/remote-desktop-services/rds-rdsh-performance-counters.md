@@ -9,12 +9,12 @@ ms.topic: article
 author: lizap
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: a424a28be835fa2a941187b110907fff76e6f220
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 7e08e4aa0cd1298502c59a1a8275293910345d6a
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81650058"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966196"
 ---
 # <a name="use-performance-counters-to-diagnose-app-performance-problems-on-remote-desktop-session-hosts"></a>Диагностика проблем с производительностью приложений на узлах сеансов удаленных рабочих столов с помощью счетчиков производительности
 
@@ -33,7 +33,7 @@ ms.locfileid: "81650058"
 
 ![Удаленный рабочий стол. Ввод данных пользователем поступает от пользовательского клиента удаленного рабочего стола к приложению](./media/rds-user-input.png)
 
-Счетчик задержки ввода данных пользователем измеряет максимальную разницу (в пределах интервала времени) между тем, когда ввод помещается в очередь и когда приложение получает его в [традиционном цикле обработки сообщений](https://docs.microsoft.com/windows/win32/winmsg/about-messages-and-message-queues#message-loop), как показано на следующей блок-схеме.
+Счетчик задержки ввода данных пользователем измеряет максимальную разницу (в пределах интервала времени) между тем, когда ввод помещается в очередь и когда приложение получает его в [традиционном цикле обработки сообщений](/windows/win32/winmsg/about-messages-and-message-queues#message-loop), как показано на следующей блок-схеме.
 
 ![Удаленный рабочий стол. Поток счетчика производительности — счетчик задержки ввода данных пользователем](./media/rds-user-input-delay.png)
 
@@ -68,7 +68,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 После того как вы выберете вариант **User Input Delay per Process** (Задержка ввода данных пользователем на процесс), в одноименном разделе отобразятся **экземпляры выбранного объекта** (другими словами, процессы) в формате ```SessionID:ProcessID <Process Image>```.
 
-Например, если Калькулятор выполняется в [сеансе с идентификатором 1](https://docs.microsoft.com/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), вы увидите ```1:4232 <Calculator.exe>```.
+Например, если Калькулятор выполняется в [сеансе с идентификатором 1](/previous-versions/iis/6.0-sdk/ms524326(v=vs.90)), вы увидите ```1:4232 <Calculator.exe>```.
 
 > [!NOTE]
 > Учитываются не все процессы. Вы не увидите процессы, запущенные как системные.
@@ -135,7 +135,7 @@ reg add "HKLM\System\CurrentControlSet\Control\Terminal Server" /v "EnableLagCou
 
 ## <a name="using-the-new-counters-with-non-microsoft-tools"></a>Использование новых счетчиков со сторонними инструментами
 
-Инструменты мониторинга могут использовать этот счетчик, как описано в руководстве [Использование счетчиков производительности](https://docs.microsoft.com/windows/win32/perfctrs/using-performance-counters).
+Инструменты мониторинга могут использовать этот счетчик, как описано в руководстве [Использование счетчиков производительности](/windows/win32/perfctrs/using-performance-counters).
 
 ## <a name="download-windows-server-insider-software"></a>Скачивание программного обеспечения Windows Server для предварительной оценки
 

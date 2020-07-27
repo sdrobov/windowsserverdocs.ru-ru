@@ -9,12 +9,12 @@ ms.author: mikeblodge
 ms.date: 07/12/2018
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: 3d2c55430a78eaabfe55b764275c6e61fa80368a
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 271c571229f18d596a67616a1b0dd93743928002
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826217"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961340"
 ---
 # <a name="upgrade-windows-server-2008-and-windows-server-2008-r2"></a>Обновление Windows Server 2008 и Windows Server 2008 R2
 
@@ -28,7 +28,7 @@ ms.locfileid: "80826217"
 
 Подробные сведения о вариантах локального обновления см. в разделе [Upgrading from Windows Server 2008 R2 or Windows Server 2008](installation-and-upgrade.md#upgrading-from-windows-server-2008-r2-or-windows-server-2008) (Обновление с Windows Server 2008 R2 или Windows Server 2008).
 
-Если вы используете Windows Server 2003, необходимо выполнить [обновление до Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff972408(v%3dws.10)). Подробные сведения о вариантах локального обновления см. в статье [Windows Server 2008 R2 Upgrade Paths](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd979563(v=ws.10)) (Пути обновления для Windows Server 2008 R2).
+Если вы используете Windows Server 2003, необходимо выполнить [обновление до Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/ff972408(v%3dws.10)). Подробные сведения о вариантах локального обновления см. в статье [Windows Server 2008 R2 Upgrade Paths](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/dd979563(v=ws.10)) (Пути обновления для Windows Server 2008 R2).
 
 
 ## <a name="migrate-to-azure"></a>Перенос в Azure
@@ -51,8 +51,8 @@ ms.locfileid: "80826217"
 
 ![Логотип SQL Server](media/sqlr2.jpg)
 
-Если вы используете SQL Server 2008 или 2008 R2, вы можете выполнить обновление до SQL Server [2016](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016) или [2017](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017).
+Если вы используете SQL Server 2008 или 2008 R2, вы можете выполнить обновление до SQL Server [2016](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016) или [2017](/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017).
 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-[Microsoft Azure](https://docs.microsoft.com/azure/#pivot=products)
+[Microsoft Azure](/azure/#pivot=products)

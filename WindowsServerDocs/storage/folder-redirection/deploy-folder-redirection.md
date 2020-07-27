@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: fbdef69f62a76fcc8d01aa0319b2b0859fc4f7cd
-ms.sourcegitcommit: 6973690a8705b24d09eb98f1713743d5e6079161
+ms.openlocfilehash: 55421cb1f01d654c4c424e8534f4c678ac38e6f5
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84211913"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86959336"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>Развертывание перенаправления папок с помощью автономных файлов
 
@@ -198,6 +198,6 @@ ms.locfileid: "84211913"
 * [Folder Redirection, Offline Files, and Roaming User Profiles](folder-redirection-rup-overview.md) (Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей)
 * [Развертывание основных компьютеров для перенаправления папок и использования перемещаемых профилей пользователей](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md) (Включение расширенных функциональных возможностей автономных файлов)
-* [Microsoft's Support Statement Around Replicated User Profile Data](https://docs.microsoft.com/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
+* [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
 * [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>) (Загрузка неопубликованных приложений с помощью DISM)
-* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](https://docs.microsoft.com/windows/win32/appxpkg/troubleshooting) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)
+* [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)

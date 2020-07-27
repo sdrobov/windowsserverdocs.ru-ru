@@ -8,12 +8,12 @@ ms.date: 08/01/2016
 ms.topic: article
 author: lizap
 manager: dongill
-ms.openlocfilehash: 8fdebcad1370e06c19752944e85363c714f1fbcd
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 29d7417ff82be77efeb02d16093c88c53777d1fa
+ms.sourcegitcommit: f305bc5f1c5a44dac62f4288450af19f351f9576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80854697"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87118640"
 ---
 # <a name="understanding-the-desktop-hosting-environment"></a>Общие сведения о среде размещения рабочих столов
 
@@ -46,20 +46,20 @@ ms.locfileid: "80854697"
     
 Дополнительные сведения:  
 [Документация по доменным службам Active Directory](https://azure.microsoft.com/documentation/services/active-directory-ds/)  
-[Установка нового леса Active Directory в виртуальной сети Azure](https://azure.microsoft.com/documentation/articles/active-directory-new-forest-virtual-machine/)  
-[Создание виртуальной сети диспетчера ресурсов с VPN-подключением типа "сеть — сеть" с помощью портала Azure](https://azure.microsoft.com/documentation/articles/vpn-gateway-howto-site-to-site-resource-manager-portal/)  
+[Установка нового леса Active Directory в виртуальной сети Azure](../../identity/ad-ds/introduction-to-active-directory-domain-services-ad-ds-virtualization-level-100.md)  
+[Создание виртуальной сети диспетчера ресурсов с VPN-подключением типа "сеть — сеть" с помощью портала Azure](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)  
   
 ## <a name="azure-sql-database"></a>База данных Azure SQL  
 База данных SQL Azure позволяет поставщикам услуг размещения расширить развертывание служб удаленных рабочих столов без необходимости развертывать и обслуживать полноценный кластер SQL Server AlwaysOn. База данных SQL используется посредником подключений к удаленному рабочему столу, чтобы хранить сведения о развертывании, такие как сопоставление текущих подключений пользователей к серверам конечного узла. Аналогично другим службам Azure база данных SQL Azure следует модели потребления, что идеально подходит для любого размера развертывания.   
   
 Дополнительные сведения:  
-[Что такое база данных SQL?](https://azure.microsoft.com/documentation/articles/sql-database-technical-overview/)  
+[Что такое база данных SQL?](/azure/azure-sql/database/sql-database-paas-overview)  
   
 ## <a name="azure-active-directory-application-proxy"></a>Прокси приложения Azure Active Directory  
 Прокси приложения Azure Active Directory — это служба, предоставляемая в платных номерах SKU Azure Active Directory, которая позволяет пользователям подключаться к внутренним приложениям через собственный обратный прокси-сервер службы Azure. Это позволяет скрыть конечные точки веб-доступа к удаленным рабочим столам и шлюза удаленных рабочих столов внутри виртуальной сети, что устраняет необходимость делать их доступными в Интернете через общедоступный IP-адрес. Чтобы уменьшить количество виртуальных машин в среде клиента, сохраняя при этом полное развертывание, поставщики услуг размещения могут использовать прокси приложения.
   
 Дополнительные сведения:  
-[Включение прокси приложения Azure AD](https://azure.microsoft.com/documentation/articles/active-directory-application-proxy-enable/)  
+[Включение прокси приложения Azure AD](/azure/active-directory/manage-apps/application-proxy-add-on-premises-application)  
     
 ## <a name="file-server"></a>Файловый сервер  
 Файловый сервер использует протокол Server Message Block (SMB) 3.0 для поддержки общих папок. Эти общие папки позволяют создать и сохранить файлы диска профиля пользователя (.vhdx) для резервного копирования данных и дают пользователям возможность обмениваться данными друг с другом в пределах виртуальной сети клиента.
@@ -69,11 +69,9 @@ ms.locfileid: "80854697"
 Для небольших клиентов можно сократить затраты путем объединения файлового сервера с виртуальной машиной, где работают роли посредника подключений к удаленному рабочему столу и лицензирования удаленных рабочих столов, на одной виртуальной машине в среде клиента.  
   
 Дополнительные сведения  
-[Обзор служб файлов и хранилищ](https://technet.microsoft.com/library/hh831487.aspx)  
-[Подключение диска данных к виртуальной машине](http://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
+[Обзор служб файлов и хранилищ](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))  
+[Подключение диска данных к виртуальной машине](https://www.windowsazure.com/manage/windows/how-to-guides/attach-a-disk/)  
   
 ### <a name="user-profile-disks"></a>Диски профилей пользователей  
 Диски профилей пользователей позволяют пользователям сохранять личные настройки и файлы, если они входят в сеанс на одном сервере узла сеансов удаленных рабочих столов в коллекции, а затем обращаются к параметрам и файлам при входе на другой сервер узла сеансов удаленных рабочих столов в той же коллекции. При первом входе пользователя файловый сервер клиента создает диск профиля пользователя, подключаемый к серверу узла сеансов удаленных рабочих столов, к которому в данный момент подключен пользователь. Для каждого последующего входа диск профиля пользователя подключается к соответствующему серверу узла сеансов удаленных рабочих столов; при выходе он отключается. Содержимое диска профиля доступно только этому пользователю.  
   
-
-

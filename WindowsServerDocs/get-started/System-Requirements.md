@@ -10,12 +10,12 @@ author: jaimeo
 ms.author: jaimeo
 manager: dongill
 ms.localizationpriority: medium
-ms.openlocfilehash: cd4666f9ac0677ce8893041ae4e937cca41e8164
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: fe2d47622d776b722f0d2d91d027e5f3fd0163c5
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826497"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964226"
 ---
 # <a name="system-requirements"></a>Системные требования
 
@@ -49,7 +49,7 @@ ms.locfileid: "80826497"
 - Поддержка CMPXCHG16b, LAHF/SAHF и PrefetchW  
 - Поддержка преобразования адресов второго уровня (EPT или NPT)  
 
-[Coreinfo](https://technet.microsoft.com/sysinternals/cc835722.aspx) — инструменты, который можно использовать, чтобы проверить, которой из этих возможностей обладает ваш ЦП.
+[Coreinfo](/sysinternals/downloads/coreinfo) — инструменты, который можно использовать, чтобы проверить, которой из этих возможностей обладает ваш ЦП.
 
 ## <a name="ram"></a>ОЗУ  
 Ниже указаны примерные требования к ОЗУ для данного продукта.  
@@ -121,7 +121,7 @@ ms.locfileid: "80826497"
 Подробные инструкции по установке Windows Server 2016 в качестве системы Nano Server см. в разделе [Установка сервера Nano Server](Getting-Started-with-Nano-Server.md).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-- [Требования к процессору Windows](https://docs.microsoft.com/windows-hardware/design/minimum/windows-processor-requirements)
-- [Сравнение выпусков Windows Server 2016 Standard и Datacenter](https://docs.microsoft.com/windows-server/get-started/2016-edition-comparison)
+- [Требования к процессору Windows](/windows-hardware/design/minimum/windows-processor-requirements)
+- [Сравнение выпусков Windows Server 2016 Standard и Datacenter](./2016-edition-comparison.md)
 - [Системные требования Windows 10](https://www.microsoft.com/windows/windows-10-specifications#system-specifications)
 - [Скачать таблицу лицензирования Windows Server 2016](https://download.microsoft.com/download/7/2/9/7290EA05-DC56-4BED-9400-138C5701F174/WS2016LicensingDatasheet.pdf)

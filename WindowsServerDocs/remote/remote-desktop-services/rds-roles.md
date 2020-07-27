@@ -8,12 +8,12 @@ ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: 44b98b485b69720a1459f052b68d15617954bffe
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 42116323dce36b071b2af20ff46330a8d39c13ed
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75949826"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963066"
 ---
 # <a name="remote-desktop-services-roles"></a>Роли служб удаленных рабочих столов
 
@@ -38,7 +38,7 @@ ms.locfileid: "75949826"
 См. сведения в следующих статьях:
 
 * [Службы удаленных рабочих столов — безопасное хранилище данных](rds-plan-secure-data-storage.md)
-* [Отправка универсального VHD-диска и его использование для создания новых виртуальных машин в Azure](https://docs.microsoft.com/azure/virtual-machines/windows/upload-generalized-managed?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json)
+* [Отправка универсального VHD-диска и его использование для создания новых виртуальных машин в Azure](/azure/virtual-machines/windows/upload-generalized-managed?toc=/azure/virtual-machines/windows/toc.json)
 * [Обновление коллекции узла (шаблон ARM)](https://azure.microsoft.com/resources/templates/rds-update-rdsh-collection/)
 
 ## <a name="remote-desktop-connection-broker"></a>Посредник подключений к удаленному рабочему столу

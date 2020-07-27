@@ -8,12 +8,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 11/08/2016
 manager: dongill
-ms.openlocfilehash: e98bbda5460311dd379eab6f5a5bde0ec3845d5c
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: c34d0bd2654d36e447053348392b4b9a6957e60f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80860287"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960196"
 ---
 # <a name="add-high-availability-to-the-rd-web-and-gateway-web-front"></a>Реализация высокой доступности в веб-интерфейсе шлюза и веб-доступа к удаленным рабочим столам
 
@@ -96,7 +96,7 @@ ms.locfileid: "80860287"
     4.  В разделе **Общедоступный IP -адрес** щелкните **Выберите общедоступный IP-адрес**, а затем выберите существующий общедоступный IP-адрес или создайте новый.
     5.  Выберите соответствующие **подписку**, **группу ресурсов** и **расположение**.
     6.  Нажмите кнопку **Create** (Создать).  
-2. Создайте [пробу](https://azure.microsoft.com/documentation/articles/load-balancer-custom-probe-overview/) для отслеживания активности серверов.  
+2. Создайте [пробу](/azure/load-balancer/load-balancer-custom-probe-overview) для отслеживания активности серверов.  
     1.  На портале Azure выберите **Обзор** > **Подсистемы балансировки нагрузки**, а затем выберите подсистему балансировки нагрузки, созданную на предыдущем шаге.
     2.  Выберите **Все параметры** > **Пробы** > **Добавить**.  
     3.  Введите имя пробы, например **HTTPS**. Выберите **протокол** **TCP** и введите номер **порта** **443**, затем нажмите кнопку **ОК**.   

@@ -10,12 +10,12 @@ ms.prod: windows-server
 ms.custom: it-pro
 ms.reviewer: maheshu
 ms.technology: identity-adds
-ms.openlocfilehash: 5f7a8f08ff10102fbc04b6f8272320bd3b77785d
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: b6a9a5c08e24f5c7bb7ac50ac1c72386ef8a6d0f
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80825497"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963056"
 ---
 # <a name="forest-and-domain-functional-levels"></a>Режимы работы леса и домена
 
@@ -27,7 +27,7 @@ ms.locfileid: "80825497"
 
 После завершения срока службы Windows 2003 контроллеры домена Windows 2003 необходимо обновить до версий Windows Server 2008, 2008 R2, 2012, 2012 R2, 2016 или 2019. В результате все контроллеры домена, работающие под управлением Windows Server 2003, необходимо удалить из домена.
 
-В режимах работы домена Windows Server 2008 и более новых версий для репликации содержимого папки SYSVOL между контроллерами домена используется репликация службы распределенных файловых систем (DFS). Если вы создаете домен в режиме работы домена Windows Server 2008 или более новых версий, для репликации SYSVOL автоматически используется репликация DFS. Если вы создаете домен в более низком режиме работы, необходимо перейти от репликации FRS к DFS для SYSVOL. Чтобы выполнить переход, можно следовать [инструкциям в TechNet](https://technet.microsoft.com/library/dd640019(v=WS.10).aspx) или ознакомиться с [упрощенным набором шагов в блоге Microsoft File Cabinet группы разработчиков хранилища](https://blogs.technet.com/b/filecab/archive/2014/06/25/streamlined-migration-of-frs-to-dfsr-sysvol.aspx).
+В режимах работы домена Windows Server 2008 и более новых версий для репликации содержимого папки SYSVOL между контроллерами домена используется репликация службы распределенных файловых систем (DFS). Если вы создаете домен в режиме работы домена Windows Server 2008 или более новых версий, для репликации SYSVOL автоматически используется репликация DFS. Если вы создаете домен в более низком режиме работы, необходимо перейти от репликации FRS к DFS для SYSVOL. Чтобы выполнить переход, можно следовать [инструкциям в TechNet](../../storage/dfs-replication/migrate-sysvol-to-dfsr.md) или ознакомиться с [упрощенным набором шагов в блоге Microsoft File Cabinet группы разработчиков хранилища](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB).
 
 ## <a name="windows-server-2019"></a>Windows Server 2019
 
@@ -45,7 +45,7 @@ ms.locfileid: "80825497"
 ### <a name="windows-server-2016-forest-functional-level-features"></a>Функции режима работы леса Windows Server 2016
 
 * Доступны все функции, доступные в режиме работы леса Windows Server 2012 R2, а также:
-   * [Privileged Access Management (PAM) с использованием Microsoft Identity Manager (MIM)](https://docs.microsoft.com/windows-server/identity/whats-new-active-directory-domain-services#a-namebkmkpamaprivileged-access-management)
+   * [Privileged Access Management (PAM) с использованием Microsoft Identity Manager (MIM)](../whats-new-active-directory-domain-services.md#privileged-access-management)
 
 ### <a name="windows-server-2016-domain-functional-level-features"></a>Функции режима работы домена Windows Server 2016
 
@@ -54,7 +54,7 @@ ms.locfileid: "80825497"
    * Контроллеры домена могут поддерживать проверку сети по протоколу NTLM, если пользователю разрешен доступ только с определенных устройств, присоединенных к домену.
    * После успешной проверки подлинности с помощью расширения PKInit Freshness клиенты Kerberos получат свежий идентификатор безопасности для удостоверения открытого ключа.
 
-    Дополнительные сведения см. в статьях [What's New in Kerberos Authentication](https://docs.microsoft.com/windows-server/security/kerberos/whats-new-in-kerberos-authentication) (Новые возможности проверки подлинности Kerberos) и [What's new in Credential Protection](https://docs.microsoft.com/windows-server/security/credentials-protection-and-management/whats-new-in-credential-protection) (Новые возможности защиты учетных данных).
+    Дополнительные сведения см. в статьях [What's New in Kerberos Authentication](../../security/kerberos/whats-new-in-kerberos-authentication.md) (Новые возможности проверки подлинности Kerberos) и [What's new in Credential Protection](../../security/credentials-protection-and-management/whats-new-in-credential-protection.md) (Новые возможности защиты учетных данных).
 
 ## <a name="windows-server-2012r2"></a>Windows Server 2012 R2
 
@@ -97,7 +97,7 @@ ms.locfileid: "80825497"
 ### <a name="windows-server-2012-domain-functional-level-features"></a>Функции режима работы домена Windows Server 2012
 
 * Все функции Active Directory по умолчанию, все функции из режима работы домена Windows Server 2008 R2, а также:
-   * Поддержка KDC-утверждений, комплексной проверки подлинности и политика административных шаблонов KDC защиты Kerberos имеет два параметра ("Всегда предоставлять утверждения" и "Отклонять запросы проверки подлинности без защиты"), требующие режима работы домена Windows Server 2012. Дополнительную информацию см. в статье [What's New in Kerberos Authentication](https://technet.microsoft.com/library/hh831747.aspx) (Новые возможности проверки подлинности Kerberos).
+   * Поддержка KDC-утверждений, комплексной проверки подлинности и политика административных шаблонов KDC защиты Kerberos имеет два параметра ("Всегда предоставлять утверждения" и "Отклонять запросы проверки подлинности без защиты"), требующие режима работы домена Windows Server 2012. Дополнительную информацию см. в статье [What's New in Kerberos Authentication](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831747(v=ws.11)) (Новые возможности проверки подлинности Kerberos).
 
 ## <a name="windows-server-2008r2"></a>Windows Server 2008 R2
 
@@ -146,7 +146,7 @@ ms.locfileid: "80825497"
 
   * Пространства имен DFS на основе домена, работающие в режиме Windows Server 2008, включая поддержку перечисления на основе доступа и повышенную масштабируемость. Для пространств имен на основе домена в режиме Windows Server 2008 также требуется, чтобы лес использовал режим работы леса Windows Server 2003. Дополнительные сведения см. в статье [Choose a Namespace Type](https://go.microsoft.com/fwlink/?LinkId=180400) (Выбор типа пространства имен).
   * Поддержка алгоритма AES (AES 128 и AES 256) для протокола Kerberos. Чтобы TGT выдавался с помощью AES, режим работы домена должен быть Windows Server 2008 или выше, а пароль домена необходимо изменить. 
-    * Дополнительные сведения см. в статье [Kerberos Enhancements](https://technet.microsoft.com/library/cc749438(ws.10).aspx) (Дополнительные возможности Kerberos).
+    * Дополнительные сведения см. в статье [Kerberos Enhancements](/previous-versions/windows/it-pro/windows-vista/cc749438(v=ws.10)) (Дополнительные возможности Kerberos).
 
       > [!NOTE]
       >При повышении режима работы домена до Windows Server 2008 или выше на контроллере домена могут возникать ошибки проверки подлинности, если он уже выполнил репликацию изменения DFL, но еще не обновил пароль KRBTGT. В данном случае при перезапуске службы KDC на контроллере домена будет запущено обновление нового пароля KRBTGT в памяти и устранены связанные ошибки проверки подлинности.
@@ -226,5 +226,5 @@ ms.locfileid: "80825497"
 
 ## <a name="next-steps"></a>Дальнейшие действия
 
-* [Raise the Domain Functional Level](https://technet.microsoft.com/library/cc753104.aspx) (Повышение режима работы домена)  
-* [Raise the Forest Functional Level](https://technet.microsoft.com/library/cc730985.aspx) (Повышение режима работы леса)
+* [Raise the Domain Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753104(v=ws.11)) (Повышение режима работы домена)  
+* [Raise the Forest Functional Level](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730985(v=ws.11)) (Повышение режима работы леса)

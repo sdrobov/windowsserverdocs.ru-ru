@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 09/10/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: c2614c0180b32a0215454f2d725d6a962986ef1f
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 0219c669a52d961cc98d6b0ee16bcbcfbbb78417
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "71394403"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961576"
 ---
 # <a name="disable-offline-files-on-individual-redirected-folders"></a>Отключение функции "Автономные файлы" для отдельных перенаправленных папок
 
@@ -22,7 +22,7 @@ ms.locfileid: "71394403"
 В этой статье описано, как отключить функцию кэширования "Автономные файлы" для отдельных папок, которые перенаправляются в общие сетевые папки с помощью функции "Перенаправление папок". Вы можете локально исключить из кэширования определенные папки, уменьшая размер кэша автономных файлов и время, затрачиваемое на синхронизацию автономных файлов.
 
 >[!NOTE]
->В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Основы Windows PowerShell](https://docs.microsoft.com/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
+>В этом разделе приводятся примеры командлетов Windows PowerShell, которые можно использовать для автоматизации некоторых описанных процедур. Дополнительные сведения см. в разделе [Основы Windows PowerShell](/powershell/scripting/getting-started/fundamental/windows-powershell-basics?view=powershell-6).
 
 ## <a name="prerequisites"></a>Предварительные условия
 

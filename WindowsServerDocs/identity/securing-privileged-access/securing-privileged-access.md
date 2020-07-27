@@ -9,12 +9,12 @@ ms.author: joflore
 author: MicrosoftGuyJFlo
 manager: daveba
 ms.reviewer: mas
-ms.openlocfilehash: 806a2aced95421bd469ba885d4a81c219ae1b651
-ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+ms.openlocfilehash: 4165561524dcb8572dbafc3904638fcb4513d06d
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85548838"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964727"
 ---
 # <a name="securing-privileged-access"></a>Обеспечение безопасности привилегированного доступа
 
@@ -62,11 +62,11 @@ ms.locfileid: "85548838"
 
 Стратегия, рекомендуемая корпорацией Майкрософт, разбита на три этапа:
 
-* [Этап 1. Первые 30 дней](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-1-quick-wins-with-minimal-operational-complexity)
+* [Этап 1. Первые 30 дней](#phase-1-quick-wins-with-minimal-operational-complexity)
    * Быстрые результаты со значительным положительным эффектом.
-* [Этап 2. 90 дней](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-2-significant-incremental-improvements)
+* [Этап 2. 90 дней](#phase-2-significant-incremental-improvements)
    * Существенные добавочные улучшения.
-* [Этап 3. Продолжение](https://docs.microsoft.com/windows-server/identity/securing-privileged-access/securing-privileged-access#phase-3-security-improvement-and-sustainment)
+* [Этап 3. Продолжение](#phase-3-security-improvement-and-sustainment)
    * Повышение безопасности и устойчивость.
 
 В рамках стратегии в первую очередь необходимо запланировать реализацию самых быстрых и эффективных методов. Мы выбрали их, исходя из нашего опыта защиты от подобных атак и внедрения соответствующих решений. 

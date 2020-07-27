@@ -6,12 +6,12 @@ ms.technology: server-general
 author: Teresa-Motiv
 ms.author: v-tea
 ms.localizationpriority: medium
-ms.openlocfilehash: f6e600b41e4a485084bd0622c2be0753d0b11c0c
-ms.sourcegitcommit: 6d7a394edefba684f7b6983c65026679c1b7a485
+ms.openlocfilehash: 0ab2a0eb7c9d29f8d42bd004aad27f9084e38641
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84776716"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962486"
 ---
 # <a name="guidelines-for-troubleshooting-dns-related-activation-issues"></a>Рекомендации по устранению проблем с активацией, связанных с DNS.
 
@@ -64,7 +64,7 @@ ms.locfileid: "84776716"
 
 Для активации клиентов KMS нужно настроить узел KMS. Если в вашей среде нет узлов KMS, установите и активируйте их с помощью соответствующего ключа узла KMS. Настроив компьютер в сети для размещения программного обеспечения KMS, опубликуйте параметры DNS.
 
-Сведения о настройке узла KMS см. в разделах [Активация с помощью службы управления ключами](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt) и [Установка и настройка средства управления активацией корпоративных лицензий](https://docs.microsoft.com/windows/deployment/volume-activation/install-configure-vamt).
+Сведения о настройке узла KMS см. в разделах [Активация с помощью службы управления ключами](/windows/deployment/volume-activation/activate-using-key-management-service-vamt) и [Установка и настройка средства управления активацией корпоративных лицензий](/windows/deployment/volume-activation/install-configure-vamt).
 
 [Вернитесь к списку инструкций](#list).
 
@@ -78,7 +78,7 @@ ms.locfileid: "84776716"
    ping <DNS_Server_IP_address>
    ```
    > [!NOTE]
-   > Если выходные данные этой команды не содержат фразу Reply from, это указывает на проблему с сетью или DNS, которую необходимо устранить, прежде чем можно будет переходить к другим инструкциям, описанным в этой статье. Узнайте больше об устранении неполадок TCP/IP при сбое проверки связи с DNS-сервером в [расширенном руководстве по устранению неполадок с TCP/IP](https://docs.microsoft.com/windows/client-management/troubleshoot-tcpip).
+   > Если выходные данные этой команды не содержат фразу Reply from, это указывает на проблему с сетью или DNS, которую необходимо устранить, прежде чем можно будет переходить к другим инструкциям, описанным в этой статье. Узнайте больше об устранении неполадок TCP/IP при сбое проверки связи с DNS-сервером в [расширенном руководстве по устранению неполадок с TCP/IP](/windows/client-management/troubleshoot-tcpip).
 
 [Вернитесь к списку инструкций](#list).
 
@@ -159,7 +159,7 @@ ms.locfileid: "84776716"
       1. Проверьте IP-адрес, имя узла, порт и домен узла KMS.
       1. Если эти записи **_vlmcs** существуют и содержат ожидаемые имена узла KMS, перейдите к инструкциям по [назначению узла KMS клиенту KMS вручную](#manually-assign-a-kms-host-to-a-kms-client).
       > [!NOTE]
-      > Если команда [**nslookup**](https://docs.microsoft.com/windows-server/administration/windows-commands/nslookup) находит узел KMS, это не значит, что клиент DNS может найти узел KMS. Если команда **nslookup** находит узел KMS, но активация с помощью узла KMS по-прежнему не удается, проверьте другие параметры DNS, включая основной суффикс DNS и список суффиксов DNS.
+      > Если команда [**nslookup**](../administration/windows-commands/nslookup.md) находит узел KMS, это не значит, что клиент DNS может найти узел KMS. Если команда **nslookup** находит узел KMS, но активация с помощью узла KMS по-прежнему не удается, проверьте другие параметры DNS, включая основной суффикс DNS и список суффиксов DNS.
 1. Убедитесь, что список включает суффикс домена DNS, связанный с узлом KMS. В противном случае перейдите к инструкциям по [настройке узла KMS для публикации в нескольких доменах DNS](#configure-the-kms-host-to-publish-in-multiple-dns-domains).
 
 [Вернитесь к списку инструкций](#list).

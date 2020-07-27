@@ -8,12 +8,12 @@ ms.date: 12/02/2019
 ms.topic: article
 author: Heidilohr
 manager: lizross
-ms.openlocfilehash: beacd246639b5586c071a24bdd7b09c6aceeadab
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: 644799ba9c6ebde4943b678199c678da376e05ae
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203386"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963146"
 ---
 # <a name="virtual-machine-sizing-guidelines"></a>Рекомендации по выбору размера виртуальной машины
 
@@ -40,9 +40,9 @@ ms.locfileid: "83203386"
 
 Для производственных рабочих нагрузок, для которых требуется соглашение об уровне обслуживания (SLA) рекомендуется использовать хранилище SSD (цен. категория "Премиум") на диске ОС. Дополнительные сведения см. в разделе [Соглашение об уровне обслуживания для Виртуальных машин](https://azure.microsoft.com/support/legal/sla/virtual-machines/v1_8/).
 
-Графические процессоры хорошо подходят пользователям, которые регулярно используют ресурсоемкие графические программы для отрисовки видео, трехмерного проектирования и моделирования. Чтобы узнать больше об ускорении обработки графики, ознакомьтесь с разделом [Выбор технологии отрисовки графики](rds-graphics-virtualization.md). В Azure есть несколько вариантов развертывания средств ускорения обработки графики и доступно несколько размеров виртуальных машин с поддержкой GPU. Узнайте больше об этих [размерах виртуальных машин, оптимизированных для GPU](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-gpu).
+Графические процессоры хорошо подходят пользователям, которые регулярно используют ресурсоемкие графические программы для отрисовки видео, трехмерного проектирования и моделирования. Чтобы узнать больше об ускорении обработки графики, ознакомьтесь с разделом [Выбор технологии отрисовки графики](rds-graphics-virtualization.md). В Azure есть несколько вариантов развертывания средств ускорения обработки графики и доступно несколько размеров виртуальных машин с поддержкой GPU. Узнайте больше об этих [размерах виртуальных машин, оптимизированных для GPU](/azure/virtual-machines/windows/sizes-gpu).
 
-[B-series burstable VMs](https://docs.microsoft.com/azure/virtual-machines/windows/b-series-burstable) (Виртуальные машины с разбивкой серии B) являются хорошим выбором для пользователей, которым не всегда требуется максимальная производительность ЦП. Дополнительные сведения о типах и размерах ВМ см. в [Sizes for Windows virtual machines in Azure](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) (Размеры для виртуальных машин Windows в Azure) и раздел сведений о ценах на странице [Серия виртуальных машин](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
+[B-series burstable VMs](/azure/virtual-machines/windows/b-series-burstable) (Виртуальные машины с разбивкой серии B) являются хорошим выбором для пользователей, которым не всегда требуется максимальная производительность ЦП. Дополнительные сведения о типах и размерах ВМ см. в [Sizes for Windows virtual machines in Azure](/azure/virtual-machines/windows/sizes) (Размеры для виртуальных машин Windows в Azure) и раздел сведений о ценах на странице [Серия виртуальных машин](https://azure.microsoft.com/pricing/details/virtual-machines/series/).
 
 ## <a name="test-your-workload"></a>Тестирование рабочей нагрузки
 

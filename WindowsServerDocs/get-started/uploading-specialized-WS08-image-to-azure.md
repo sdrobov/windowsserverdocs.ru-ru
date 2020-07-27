@@ -9,12 +9,12 @@ ms.author: mikeblodge
 ms.date: 07/11/2018
 ms.topic: get-started-article
 ms.localizationpriority: high
-ms.openlocfilehash: de9233e31c5530abd207a1bbba0e1e16a07d1561
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f8f8cc63740c6823a01e0c86b387d57b54a06419
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826127"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960296"
 ---
 # <a name="upload-a-windows-server-20082008-r2-specialized-image-to-azure"></a>Отправка специализированного образа Windows Server 2008 или 2008 R2 в Azure 
 
@@ -85,12 +85,12 @@ Login-AzureRmAccount
 > [!IMPORTANT]
 > В Azure не следует использовать предварительно настроенные пользовательские образы.
 
-1.    Создайте новую [группу ресурсов](https://docs.microsoft.com/rest/api/resources/resourcegroups/createorupdate). 
-2.    Создайте новое [хранилище больших двоичных объектов](https://docs.microsoft.com/rest/api/storageservices/put-blob) в группе ресурсов.
-3.    Создайте [контейнер](https://docs.microsoft.com/rest/api/storageservices/create-container) внутри хранилища больших двоичных объектов.
+1.    Создайте новую [группу ресурсов](/rest/api/resources/resourcegroups/createorupdate). 
+2.    Создайте новое [хранилище больших двоичных объектов](/rest/api/storageservices/put-blob) в группе ресурсов.
+3.    Создайте [контейнер](/rest/api/storageservices/create-container) внутри хранилища больших двоичных объектов.
 4.    Скопируйте URL-адрес хранилища больших двоичных объектов из свойств.
 5.    Используйте приведенный выше скрипт для отправки образа в новое хранилище больших двоичных объектов.
-6.    Создайте [диск](https://docs.microsoft.com/azure/virtual-machines/windows/prepare-for-upload-vhd-image) для вашего виртуального жесткого диска.   
+6.    Создайте [диск](/azure/virtual-machines/windows/prepare-for-upload-vhd-image) для вашего виртуального жесткого диска.   
      a.    Перейдите в раздел "Диски" и нажмите кнопку **Добавить**.  
      b.    Задайте диску имя. Выберите подписку, которую требуется использовать, задайте регион и выберите тип учетной записи.   
      c. В качестве типа источника выберите "Хранилище". Откройте расположение виртуального жесткого диска с большими двоичными объектами, созданного с помощью скрипта.  
@@ -105,7 +105,3 @@ Login-AzureRmAccount
  
         PORT:3389 Протокол: TCP Действие: Разрешить Приоритет: 1000 Имя: "RDP-Rule".   
      e.    Нажмите кнопку **Create** (Создать).
-
-
-
-

@@ -8,12 +8,12 @@ ms.topic: article
 author: JasonGerend
 manager: brianlic
 ms.author: jgerend
-ms.openlocfilehash: c2cb88d5b30be28a8ab7709e3a3908ce82ae8408
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 68e51cff5b70ed0b11488e44cebba057e7432d99
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "75352357"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86965276"
 ---
 # <a name="initialize-new-disks"></a>Инициализация новых дисков
 
@@ -26,7 +26,7 @@ ms.locfileid: "75352357"
 
 ## <a name="to-initialize-new-disks"></a>Процедура инициализации новых дисков
 
-Вот как инициализировать новый диск с помощью модуля управления дисками. Если вы предпочитаете использовать PowerShell, используйте вместо этого командлет [initialize-disk](https://docs.microsoft.com/powershell/module/storage/initialize-disk).
+Вот как инициализировать новый диск с помощью модуля управления дисками. Если вы предпочитаете использовать PowerShell, используйте вместо этого командлет [initialize-disk](/powershell/module/storage/initialize-disk).
 
 1. Откройте модуль управления дисками с правами администратора.
  

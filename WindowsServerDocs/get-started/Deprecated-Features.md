@@ -10,12 +10,12 @@ author: jasongerend
 ms.author: jgerend
 manager: dougkim
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e13886395040619a7509c3cf896112288c48115
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: d2a1627a0a941f12da4731291a032e4b2e1ad887
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "74945209"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962026"
 ---
 # <a name="features-removed-or-deprecated-in--windows-server-2016"></a>Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2016
 
@@ -31,7 +31,7 @@ ms.locfileid: "74945209"
 Из этого выпуска Windows Server 2016 были удалены следующие компоненты и функции. Приложения, код и режимы, зависящие от этих компонентов, если не использовать альтернативные методы, в данном выпуске работать не будут.  
 
 > [!NOTE]  
-> При переходе на Windows Server 2016 с более раннего выпуска, чем Windows Server 2012 R2 или Windows Server 2012, рекомендуется также ознакомиться со статьями [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012 R2](https://technet.microsoft.com/library/dn303411.aspx) и [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012](https://technet.microsoft.com/library/hh831568.aspx).  
+> При переходе на Windows Server 2016 с более раннего выпуска, чем Windows Server 2012 R2 или Windows Server 2012, рекомендуется также ознакомиться со статьями [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303411(v=ws.11)) и [Компоненты, удаленные или не рекомендуемые к использованию в Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831568(v=ws.11)).  
 
 ### <a name="share-and-storage-management"></a>Управление общими ресурсами и хранилищами
 
@@ -49,7 +49,7 @@ ms.locfileid: "74945209"
 
 ### <a name="security-configuration-wizard"></a>Мастер настройки безопасности
 
-Мастер настройки безопасности удален. Вместо этого функции являются защищенными по умолчанию. Если вам необходимо управлять определенными параметрами безопасности, можно использовать групповую политику или [Microsoft Security Compliance Manager](https://technet.microsoft.com/solutionaccelerators/cc835245.aspx).  
+Мастер настройки безопасности удален. Вместо этого функции являются защищенными по умолчанию. Если вам необходимо управлять определенными параметрами безопасности, можно использовать групповую политику или [Microsoft Security Compliance Manager](/previous-versions/tn-archive/cc936627(v=technet.10)).  
 
 ### <a name="sqm"></a>SQM
 
@@ -79,7 +79,7 @@ ms.locfileid: "74945209"
 
 -   **Scregedit.exe** не рекомендуется к использованию. Если у вас есть сценарии, зависящие от Scregedit.exe, измените их для использования методов Reg.exe или Windows PowerShell.  
 
--   **Sconfig.exe** не рекомендуется к использованию. Вместо этого используйте [Sconfig.cmd](https://docs.microsoft.com/windows-server/get-started/sconfig-on-ws2016). 
+-   **Sconfig.exe** не рекомендуется к использованию. Вместо этого используйте [Sconfig.cmd](./sconfig-on-ws2016.md). 
 
 ### <a name="netcfg-custom-apis"></a>Настраиваемые API-интерфейсы NetCfg
 

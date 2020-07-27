@@ -8,12 +8,12 @@ author: Teresa-Motiv
 ms.author: v-tea
 manager: dcscontentpm
 ms.localizationpriority: medium
-ms.openlocfilehash: 09206b90dc8b829aaa70d0cca34bd05a9e0eb693
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: cdd597e77d35b154385cf9de35f3d51a3d9c4e8b
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "71963050"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961345"
 ---
 # <a name="troubleshooting-windows-volume-activation"></a>Устранение неполадок с активацией корпоративных лицензий Windows
 
@@ -29,30 +29,30 @@ ms.locfileid: "71963050"
 
 ### <a name="key-management-service-kms"></a>Служба управления ключами (KMS).
 
-- [Планирование активации корпоративных лицензий](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client)
-- [Общие сведения о KMS](https://docs.microsoft.com/previous-versions/tn-archive/ff793434(v=technet.10))
-- [Развертывание активации KMS](https://docs.microsoft.com/previous-versions/tn-archive/ff793409%28v=technet.10%29)
-- [Настройка узлов KMS](https://docs.microsoft.com/previous-versions/tn-archive/ff793407%28v%3dtechnet.10%29)
-- [Настройка DNS](https://docs.microsoft.com/previous-versions/tn-archive/ff793405%28v%3dtechnet.10%29)
-- [Активация с помощью службы управления ключами](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-key-management-service-vamt)
+- [Планирование активации корпоративных лицензий](/windows/deployment/volume-activation/plan-for-volume-activation-client)
+- [Общие сведения о KMS](/previous-versions/tn-archive/ff793434(v=technet.10))
+- [Развертывание активации KMS](/previous-versions/tn-archive/ff793409%28v=technet.10%29)
+- [Настройка узлов KMS](/previous-versions/tn-archive/ff793407%28v%3dtechnet.10%29)
+- [Настройка DNS](/previous-versions/tn-archive/ff793405%28v%3dtechnet.10%29)
+- [Активация с помощью службы управления ключами](/windows/deployment/volume-activation/activate-using-key-management-service-vamt)
 
 ### <a name="active-directory-based-activation-adba"></a>Активация с помощью Active Directory (ADBA)
 
-- [Развертывание активации с помощью Active Directory](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502534%28v%3Dws.11%29)
-- [Активация с помощью Active Directory](https://docs.microsoft.com/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
-- [Общие сведения об активации с помощью Active Directory](https://docs.microsoft.com/windows/deployment/volume-activation/active-directory-based-activation-overview)
+- [Развертывание активации с помощью Active Directory](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn502534%28v%3dws.11%29)
+- [Активация с помощью Active Directory](/windows/deployment/volume-activation/activate-using-active-directory-based-activation-client)
+- [Общие сведения об активации с помощью Active Directory](/windows/deployment/volume-activation/active-directory-based-activation-overview)
 
 ### <a name="multiple-activation-key-mak-activation"></a>Активация с помощью ключей многократной активации (MAK)
 
-- [Активация с помощью MAK](https://docs.microsoft.com/previous-versions/tn-archive/ff793438%28v=technet.10%29)
-- [Общие сведения об активации с помощью MAK](https://docs.microsoft.com/previous-versions/tn-archive/ff793435%28v%3dtechnet.10%29)
-- [Активация клиентов MAK](https://docs.microsoft.com/previous-versions/tn-archive/ff793398%28v%3dtechnet.10%29)
+- [Активация с помощью MAK](/previous-versions/tn-archive/ff793438%28v=technet.10%29)
+- [Общие сведения об активации с помощью MAK](/previous-versions/tn-archive/ff793435%28v%3dtechnet.10%29)
+- [Активация клиентов MAK](/previous-versions/tn-archive/ff793398%28v%3dtechnet.10%29)
 
 ### <a name="subscription-activation"></a>Активация подписки
 
-- [Активация подписки Windows 10](https://docs.microsoft.com/windows/deployment/windows-10-subscription-activation)
-- [Развертывание лицензий Windows 10 Корпоративная](https://docs.microsoft.com/windows/deployment/deploy-enterprise-licenses)
-- [Windows 10 Корпоративная E3 в CSP](https://docs.microsoft.com/windows/deployment/windows-10-enterprise-e3-overview)
+- [Активация подписки Windows 10](/windows/deployment/windows-10-subscription-activation)
+- [Развертывание лицензий Windows 10 Корпоративная](/windows/deployment/deploy-enterprise-licenses)
+- [Windows 10 Корпоративная E3 в CSP](/windows/deployment/windows-10-enterprise-e3-overview)
 
 ## <a name="resources-for-troubleshooting-activation-issues"></a>Материалы по устранению проблем с активацией
 

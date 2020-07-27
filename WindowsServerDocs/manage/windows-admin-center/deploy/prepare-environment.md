@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 06/07/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 7b42db8c0be5e1a447ad0a3b794b07672c164514
-ms.sourcegitcommit: 7116460855701eed4e09d615693efa4fffc40006
+ms.openlocfilehash: a37c7e8765ba6f83fc1ebe20aaba3dfb8bc29a3d
+ms.sourcegitcommit: b35fbd2a67d7a3395b50b2a3acd0817ba4e36b26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83433148"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891349"
 ---
 # <a name="prepare-your-environment-for-windows-admin-center"></a>Подготовка среды для Windows Admin Center
 
@@ -63,7 +63,7 @@ ms.locfileid: "83433148"
 1. В меню **Сервис** выберите пункт **Роли и компоненты**.
 2. В разделе **Роли и компоненты** найдите пункт **Файловые службы и службы хранилища** и установите флажки **Файловые службы и службы iSCSI** и **Файловый сервер**:
 
-![Снимок экрана с оснасткой "Роли и компоненты", где отображается выбранный файл и роль служб iSCSI](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![Снимок экрана с оснасткой "Роли и компоненты", где отображается выбранный файл и роль служб iSCSI](../media/prepare-environment/prepare-your-environment-image-1.png)
 
 ### <a name="step-3-enable-hyper-v-module-for-powershell"></a>**Шаг 3.** Включение модуля Hyper-V для PowerShell
 
@@ -72,7 +72,7 @@ ms.locfileid: "83433148"
 1. В меню **Сервис** выберите пункт **Роли и компоненты**.
 2. В разделе **Роли и компоненты** найдите пункт **Средства удаленного администрирования сервера** и установите флажки **Средства администрирования ролей** и **Модуль Hyper-V для PowerShell**.
 
-![Снимок экрана с оснасткой "Роли и компоненты", где выбраны роли Hyper-V](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
+![Снимок экрана с оснасткой "Роли и компоненты", где выбраны роли Hyper-V](../media/prepare-environment/prepare-your-environment-image-2.png)
 
 Теперь сервер Microsoft Hyper-V Server 2016 готов к управлению через Windows Admin Center.
 
@@ -111,7 +111,7 @@ ms.locfileid: "83433148"
 1. В меню **Сервис** выберите пункт **Роли и компоненты**.
 2. В разделе **Роли и компоненты** найдите пункт **Файловые службы и службы хранилища** и установите флажки **Файловые службы и службы iSCSI** и **Файловый сервер**:
 
-![Снимок экрана с оснасткой "Роли и компоненты", где отображается выбранный файл и роль служб iSCSI](../media/prepare-environment/c6c30b812d96afcc1edcdb6f52f0e13c.png)
+![Снимок экрана с оснасткой "Роли и компоненты", где отображается выбранный файл и роль служб iSCSI](../media/prepare-environment/prepare-your-environment-image-1.png)
 
 ### <a name="step-4-enable-hyper-v-module-for-powershell"></a>Шаг 4. Включение модуля Hyper-V для PowerShell
 
@@ -120,7 +120,7 @@ ms.locfileid: "83433148"
 1. В меню **Сервис** выберите пункт **Роли и компоненты**.
 2. В разделе **Роли и компоненты** найдите пункт **Средства удаленного администрирования сервера** и установите флажки **Средства администрирования ролей** и **Модуль Hyper-V для PowerShell**.
 
-![Снимок экрана с оснасткой "Роли и компоненты", где выбраны средства удаленного администрирования сервера](../media/prepare-environment/7ab0999602b7083733525bd0c1ba2747.png)
+![Снимок экрана с оснасткой "Роли и компоненты", где выбраны средства удаленного администрирования сервера](../media/prepare-environment/prepare-your-environment-image-2.png)
 
 Теперь сервером Microsoft Hyper-V Server 2012 R2 можно управлять с помощью Windows Admin Center.
 

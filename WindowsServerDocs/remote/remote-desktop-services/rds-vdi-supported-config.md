@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 8f164f5d-a498-4f91-a12f-3e01d554f810
 author: lizap
 manager: dongill
-ms.openlocfilehash: 914e6f4507e0fd997a31866b10e3c48e0cd4cbd7
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4ecd290a910ddbb1aba85b26764fb86e30731172
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857267"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963356"
 ---
 # <a name="supported-windows-10-security-configurations-for-remote-desktop-services-vdi"></a>Поддерживаемые конфигурации безопасности Windows Server 10 для среды VDI на основе служб удаленных рабочих столов
 
@@ -29,9 +29,9 @@ ms.locfileid: "80857267"
 
 |  Тип коллекции VDI               |  Управляемая среда в составе пула |  Управляемая личная среда |  Неуправляемая среда в составе пула                                     |  Неуправляемая личная среда                                    |
 |-------------------------------------|------------------|--------------------|--------------------------------------------------------|--------------------------------------------------------|
-| [Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard)                    | Да              | Да                | Да                                                    | Да                                                    |
-| [Device Guard](https://technet.microsoft.com/itpro/windows/keep-secure/device-guard-deployment-guide)                        | Да              | Да                | Да                                                    | Да                                                    |
-| [Удаленный Credential Guard](https://technet.microsoft.com/itpro/windows/keep-secure/remote-credential-guard)             | Нет               | Нет                 | Нет                                                     | Нет                                                     |
+| [Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard)                    | Да              | Да                | Да                                                    | Да                                                    |
+| [Device Guard](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)                        | Да              | Да                | Да                                                    | Да                                                    |
+| [Удаленный Credential Guard](/windows/security/identity-protection/remote-credential-guard)             | Нет               | Нет                 | Нет                                                     | Нет                                                     |
 | [Виртуальные машины с поддержкой экранирования и шифрования](../../security/guarded-fabric-shielded-vm/guarded-fabric-and-shielded-vms.md) | Нет               | Нет                 | Виртуальные машины, поддерживающие шифрование при дополнительной настройке | Виртуальные машины, поддерживающие шифрование при дополнительной настройке |
 
 ## <a name="remote-credential-guard"></a>Удаленный Credential Guard
@@ -47,4 +47,3 @@ ms.locfileid: "80857267"
 Чтобы использовать виртуальные машины с поддержкой шифрования, необходимо выполнить следующее.
 - Используйте неуправляемую коллекцию и технологию подготовки вне процесса создания коллекции служб удаленных рабочих столов для подготовки виртуальных машин. 
 - Диски профилей пользователей не поддерживаются, так как они используют разностные диски. 
-

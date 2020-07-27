@@ -10,12 +10,12 @@ ms.assetid: 2c2fa45b-6f3b-4663-b421-2da6ecc463bf
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 68de1697c8655075041cd9e598ccd2bbc2e6237b
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4002126ee6d9919c0a7fbfb3c068587c9acbecef
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826987"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86953686"
 ---
 # <a name="install-nano-server"></a>Установка сервера Nano Server
 
@@ -45,18 +45,18 @@ Nano Server оптимально подходит для различных сц
 - Сервер Nano Server работает без монитора и он не поддерживает локальный вход в систему или запуск графического пользовательского интерфейса.
 - Поддерживаются только 64-разрядные приложения, средства и агенты.
 - Сервер Nano Server невозможно использовать в качестве контроллера домена Active Directory.
-- Групповая политика не поддерживается. Тем не менее можно использовать [настройку требуемого состояния](https://msdn.microsoft.com/powershell/dsc/nanoDsc) для масштабного применения параметров.
+- Групповая политика не поддерживается. Тем не менее можно использовать [настройку требуемого состояния](/previous-versions//dn387184(v=vs.85)) для масштабного применения параметров.
 - Сервер Nano Server не может использовать прокси-сервер для доступа к Интернету.
 - Объединение сетевых карт (в частности, балансировка нагрузки и отработка отказа или LBFO) не поддерживается. Вместо этого поддерживается объединение внедренных коммутаторов (SET).
 - Microsoft Endpoint Configuration Manager и System Center Data Protection Manager не поддерживаются.
 - Использование командлетов анализатора соответствия рекомендациям (BPA) и интеграция BPA с диспетчером сервера не поддерживаются.
 - Сервер Nano Server не поддерживает виртуальные адаптеры шины (HBA).
-- Сервер Nano Server ненужно активировать с помощью ключа продукта. Функционируя как узел Hyper-V, Nano Server не поддерживает [автоматическую активацию виртуальной машины](https://technet.microsoft.com/library/dn303421%28v=ws.11%29.aspx) (AVMA). Виртуальные машины, которые работают на узле Nano Server, можно активировать при помощи [сервера управления ключами](https://technet.microsoft.com/library/jj612867(v=ws.11).aspx) (KMS) с лицензионным ключом универсального тома или воспользовавшись [активацией с помощью Active Directory](https://technet.microsoft.com/library/dn502534(v=ws.11).aspx).
+- Сервер Nano Server ненужно активировать с помощью ключа продукта. Функционируя как узел Hyper-V, Nano Server не поддерживает [автоматическую активацию виртуальной машины](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn303421(v=ws.11)) (AVMA). Виртуальные машины, которые работают на узле Nano Server, можно активировать при помощи [сервера управления ключами](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj612867(v=ws.11)) (KMS) с лицензионным ключом универсального тома или воспользовавшись [активацией с помощью Active Directory](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn502534(v=ws.11)).
 - Версия Windows PowerShell в составе сервера Nano Server имеет важные отличия. Сведения о них см. в разделе [PowerShell для Nano Server](PowerShell-on-Nano-Server.md).
 - Сервер Nano Server поддерживается только в модели Current Branch for Business (CBB), выпуск Long-Term Servicing Branch (LTSB) для сервера Nano Server сейчас отсутствует. Дополнительные сведения см. в следующих подразделах.
 
 ### <a name="current-branch-for-business"></a>Current Branch for Business
-Сервер Nano обслуживается с использованием более активной модели, Current Branch for Business (CBB), чтобы предоставлять поддержку пользователям, которые работают в "облачном темпе", используя циклы быстрой разработки. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год. В этой модели необходимо, чтобы программа [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) для серверов Nano Server была развернута и использовалась в рабочей среде. Чтобы сохранить поддержку, администраторы должны использовать один из двух последних выпусков CBB. Но эти выпуски не обновляют существующие развертывания автоматически; администраторы должны при первой возможности вручную установить новый выпуск CBB. Некоторые дополнительные сведения см. в разделе [Новый вариант обслуживания Current Branch for Business для Windows Server 2016](https://blogs.technet.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Новый вариант обслуживания Current Branch for Business для Windows Server 2016).
+Сервер Nano обслуживается с использованием более активной модели, Current Branch for Business (CBB), чтобы предоставлять поддержку пользователям, которые работают в "облачном темпе", используя циклы быстрой разработки. В этой модели обновления компонентов сервера Nano Server выходят два-три раза в год. В этой модели необходимо, чтобы программа [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default.aspx) для серверов Nano Server была развернута и использовалась в рабочей среде. Чтобы сохранить поддержку, администраторы должны использовать один из двух последних выпусков CBB. Но эти выпуски не обновляют существующие развертывания автоматически; администраторы должны при первой возможности вручную установить новый выпуск CBB. Некоторые дополнительные сведения см. в разделе [Новый вариант обслуживания Current Branch for Business для Windows Server 2016](https://cloudblogs.microsoft.com/windowsserver/2016/07/12/windows-server-2016-new-current-branch-for-business-servicing-option/) (Новый вариант обслуживания Current Branch for Business для Windows Server 2016).
 
 Варианты установки основных серверных компонентов или сервера с возможностями рабочего стола обслуживаются по [модели Long-Term Servicing Branch (LTSB)](https://support.microsoft.com/lifecycle#gp%2Fgp_msl_policy), которая подразумевает пять лет основной и пять лет расширенной поддержки.
 

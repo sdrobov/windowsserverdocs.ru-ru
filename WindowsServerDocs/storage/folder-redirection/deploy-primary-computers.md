@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: be2b41cf32e2020422c32415e2d8f4273eb09859
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 935d3ccf7de777a71d7c75179629b448dbb73a08
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "71394436"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966286"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>Развертывание основных компьютеров для перенаправления папок и использования перемещаемых профилей пользователей
 
@@ -118,4 +118,4 @@ ms.locfileid: "71394436"
 - [Развертывание перенаправления папок с помощью автономных файлов](deploy-folder-redirection.md)
 - [Развертывание перемещаемых профилей пользователя](deploy-roaming-user-profiles.md)
 - [Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей](folder-redirection-rup-overview.md).
-- [Подробности работы с основными компьютерами Windows 8](https://blogs.technet.com/b/askds/archive/2012/10/23/digging-a-little-deeper-into-windows-8-primary-computer.aspx)
+- [Подробности работы с основными компьютерами Windows 8](/archive/blogs/askds/digging-a-little-deeper-into-windows-8-primary-computer)

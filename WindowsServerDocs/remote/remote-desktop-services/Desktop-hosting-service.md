@@ -8,12 +8,12 @@ ms.date: 07/06/2018
 ms.topic: article
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: 2ee11e40d5fb69141ad5dd5342f8574b22232bbd
-ms.sourcegitcommit: 568b924d32421256f64abfee171304f1daf320d2
+ms.openlocfilehash: 57e9e25881d948ec705dc51d8e61377e0beb78a8
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "85070479"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86960396"
 ---
 # <a name="desktop-hosting-service"></a>Служба размещения рабочих столов
 
@@ -41,9 +41,9 @@ ms.locfileid: "85070479"
 
 См. сведения в следующих статьях:
 
-* [Документация по доменным службам Active Directory](https://docs.microsoft.com/azure/active-directory-domain-services/)
-* [Руководство по эталонной архитектуре размещения рабочих столов для Windows Server 2012 R2](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
-* [Создание подключения "сеть — сеть" на портале Azure](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Документация по доменным службам Active Directory](/azure/active-directory-domain-services/)
+* [Руководство по эталонной архитектуре размещения рабочих столов для Windows Server 2012 R2](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
+* [Создание подключения "сеть — сеть" на портале Azure](/azure/vpn-gateway/vpn-gateway-howto-site-to-site-resource-manager-portal)
 
 ## <a name="sql-database"></a>База данных SQL
 
@@ -56,8 +56,8 @@ ms.locfileid: "85070479"
 
 Дополнительные сведения о настройке инфраструктуры высокой доступности для базы данных SQL см. в следующих статьях:
 
-* [Что такое служба базы данных SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-* [Создание и настройка групп доступности (SQL Server)](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
+* [Что такое служба базы данных SQL Azure?](/azure/sql-database/sql-database-technical-overview)
+* [Создание и настройка групп доступности (SQL Server)](/sql/database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server?view=sql-server-2017).
 * [Добавление сервера посредника подключений к удаленному рабочему столу в развертывание и настройка высокого уровня доступности](rds-connection-broker-cluster.md)
 
 ## <a name="file-server"></a>Файловый сервер
@@ -71,7 +71,7 @@ ms.locfileid: "85070479"
 См. сведения в следующих статьях:
 
 * [Хранилище в Windows Server](../../storage/storage.yml)
-* [Как подключить управляемый диск данных к виртуальной машине Windows на портале Azure](https://docs.microsoft.com/azure/virtual-machines/windows/attach-managed-disk-portal?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Fclassic%2Ftoc.json)
+* [Как подключить управляемый диск данных к виртуальной машине Windows на портале Azure](/azure/virtual-machines/windows/attach-managed-disk-portal?toc=/azure/virtual-machines/windows/classic/toc.json)
 
 ### <a name="user-profile-disks"></a>Диски профилей пользователей
 

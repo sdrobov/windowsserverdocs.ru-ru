@@ -9,12 +9,12 @@ author: lizap
 ms.author: elizapo
 ms.date: 09/07/2016
 manager: dongill
-ms.openlocfilehash: c46ad24c62510b4a100a89b5c10a8f52c1a66151
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 179feca4870e62f81ed71fabb7b8fd1cb418d391
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857357"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86962186"
 ---
 # <a name="remote-desktop-services---multi-factor-authentication"></a>Службы удаленных рабочих столов: Многофакторная идентификация
 
@@ -27,4 +27,4 @@ ms.locfileid: "80857357"
 - При подключении к шлюзу удаленных рабочих столов для защиты удаленного доступа вы получите SMS или запрос защиты в мобильном приложении MFA.
 - Правильно пройдите аутентификацию и подключитесь к ресурсу!
 
-Дополнительные сведения о процессе настройки можно найти в разделе [Интеграция инфраструктуры шлюза удаленных рабочих столов с помощью расширения сервера политики сети (NPS) и Azure AD](https://docs.microsoft.com/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).
+Дополнительные сведения о процессе настройки можно найти в разделе [Интеграция инфраструктуры шлюза удаленных рабочих столов с помощью расширения сервера политики сети (NPS) и Azure AD](/azure/multi-factor-authentication/nps-extension-remote-desktop-gateway).

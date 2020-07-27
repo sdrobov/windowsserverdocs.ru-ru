@@ -9,19 +9,19 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 094e4ffdee8480886700a4967ef2281008aad965
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: bc38c21435ba3340f5ffb1aab9d274ec9da1620c
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826547"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86964066"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Начало работы с Windows Server 2016
 
 >Область применения. Windows Server 2016
 
 > [!TIP]
-> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](https://docs.microsoft.com/search/index?search=Windows+Server&dataSource=previousVersions).
+> Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](/search/index?dataSource=previousVersions&search=Windows Server).
 
 ![Значок с установленным флажком](../media/landing-icons/getstarted.png) Эта коллекция содержит подробные сведения, помогающие определить готовность к переходу на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server 2016, вы можете вернуться в главный центр [Windows Server 2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
 
@@ -52,5 +52,3 @@ ms.locfileid: "80826547"
 
 ## <a name="server-activation-guide"></a>[Руководство по активации сервера](Server-2016-activation.md)
 Основные сведения об активации Windows Server 2016 и других операционных систем с помощью Windows Server 2016.
-
-

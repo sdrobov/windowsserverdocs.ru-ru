@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 0f402ae3-5391-4c7d-afea-2c5c9044de46
 author: heidilohr
 manager: lizross
-ms.openlocfilehash: f73f28500c136ec8bdd32084cc5949f5e9804699
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 434d4910e8718747c07fc7378eb37d9ff4e85710
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80818527"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86966706"
 ---
 # <a name="azure-services-and-considerations-for-desktop-hosting"></a>Службы и рекомендации Azure для размещения рабочих столов
 
@@ -32,7 +32,7 @@ ms.locfileid: "80818527"
 
 Компоненты клиента запускаются на виртуальных машинах, которые взаимодействуют друг с другом в изолированной сети. Во время развертывания эти виртуальные машины доступны извне через подсистему балансировки нагрузки Azure с помощью конечных точек протокола удаленного рабочего стола или конечной точки удаленного PowerShell. После завершения развертывания эти конечные точки обычно удаляются, чтобы уменьшить контактную зону для атак. Остаются только конечные точки HTTPS и UDP, созданные для виртуальной машины, где работают веб-доступ к удаленным рабочим столам и шлюз удаленных рабочих столов. Это позволяет клиентам в Интернете подключаться к сеансам, работающим в службе размещения рабочих столов клиента. Если пользователь откроет приложение, которое подключается к Интернету, такое как веб-браузер, соединения будут переданы через подсистему балансировки нагрузки Azure.  
   
-Дополнительные сведения см. в статье [Что такое подсистема балансировки нагрузки Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-linux-load-balance/).
+Дополнительные сведения см. в статье [Что такое подсистема балансировки нагрузки Azure](/azure/load-balancer/load-balancer-overview).
   
 ## <a name="security-considerations"></a>Вопросы безопасности
 
@@ -45,9 +45,9 @@ ms.locfileid: "80818527"
   
 См. сведения в следующих статьях:
 
-- [Безопасность и защита](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831778(v=ws.11))  
-- [Рекомендации по безопасности для служб IIS 8](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj635855(v=ws.11))  
-- [Безопасность Windows Server 2012 R2](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831360(v=ws.11))  
+- [Безопасность и защита](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831778(v=ws.11))  
+- [Рекомендации по безопасности для служб IIS 8](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj635855(v=ws.11))  
+- [Безопасность Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831360(v=ws.11))  
   
 ## <a name="design-considerations"></a>Рекомендации по проектированию
 
@@ -61,13 +61,13 @@ ms.locfileid: "80818527"
   
 См. сведения в следующих статьях:
 
-- [Размеры и облачные службы](https://docs.microsoft.com/azure/cloud-services/cloud-services-sizes-specs)  
+- [Размеры и облачные службы](/azure/cloud-services/cloud-services-sizes-specs)  
 - [Сведения о ценах на виртуальные машины Microsoft Azure](https://azure.microsoft.com/pricing/details/virtual-machines/)  
-- [Обзор Hyper-V](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831531(v=ws.11))  
-- [Целевые показатели масштабируемости и производительности хранилища Azure](https://docs.microsoft.com/azure/storage/common/storage-scalability-targets)  
+- [Обзор Hyper-V](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831531(v=ws.11))  
+- [Целевые показатели масштабируемости и производительности хранилища Azure](/azure/storage/common/storage-scalability-targets)  
 
 ## <a name="azure-active-directory-application-proxy"></a>Прокси приложения Azure Active Directory
 
 Прокси приложения Azure Active Directory — это служба, предоставляемая в платных номерах SKU Azure AD, которая позволяет пользователям подключаться к внутренним приложениям через собственный обратный прокси-сервер службы Azure. Это позволяет скрыть конечные точки веб-доступа к удаленным рабочим столам и шлюза удаленных рабочих столов внутри виртуальной сети, что устраняет необходимость делать их доступными в Интернете через общедоступный IP-адрес. Чтобы уменьшить количество виртуальных машин в среде клиента, сохраняя при этом полное развертывание, поставщики услуг размещения могут использовать прокси приложения Azure AD. Прокси приложения Azure AD также включает многие из преимуществ, предоставляемых Azure AD, такие как условный доступ и многофакторная проверка подлинности.
 
-Дополнительные сведения см. в разделе [Начало работы с прокси приложения и установка соединителя](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-enable).
+Дополнительные сведения см. в разделе [Начало работы с прокси приложения и установка соединителя](/azure/active-directory/manage-apps/application-proxy-enable).

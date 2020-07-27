@@ -10,12 +10,12 @@ ms.assetid: fbef4d91-e18c-4f1b-952f-a9a7ad46cd74
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: fb38976ca6b2297562e74d9ea29510308ad23ff6
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 97a255935b052b0fc2b67863bdb1066ed4e654dc
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826837"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963706"
 ---
 # <a name="mpio-on-nano-server"></a>MPIO на сервере Nano Server
 
@@ -24,7 +24,7 @@ ms.locfileid: "80826837"
 > [!IMPORTANT]
 > Начиная с Windows Server версии 1709, сервер Nano Server будет доступен только в качестве [базового образа ОС контейнера](/virtualization/windowscontainers/quick-start/using-insider-container-images#install-base-container-image). Его описание см. в статье об [изменениях сервера Nano Server](nano-in-semi-annual-channel.md). 
 
-Этот раздел описывает использование MPIO в установках сервера Nano Server для Windows Server 2016. Общие сведения о MPIO в Windows Server см. в статье [Обзор многоканального ввода-вывода](https://technet.microsoft.com/library/cc725907.aspx).  
+Этот раздел описывает использование MPIO в установках сервера Nano Server для Windows Server 2016. Общие сведения о MPIO в Windows Server см. в статье [Обзор многоканального ввода-вывода](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc725907(v=ws.11)).  
 
 ## <a name="using-mpio-on-nano-server"></a>Использование MPIO на сервере Nano Server  
 MPIO можно использовать на сервере Nano Server, но при этом имеются следующие отличия:  
@@ -371,5 +371,3 @@ if ($changed -eq 'true')
 }  
 ```  
   
-
-

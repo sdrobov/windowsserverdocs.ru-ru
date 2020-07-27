@@ -11,12 +11,12 @@ ms.custom:
 - CI ID 116803
 - CSSTroubleshoot
 manager: dcscontentpm
-ms.openlocfilehash: fe07636908dffc6bb59c544d512b132e7640bf51
-ms.sourcegitcommit: 75b4cf49dd918ff98258dcae6e6e8d7825c9adec
+ms.openlocfilehash: 6a38dad3362b2fa6c95c48cf613577941ffcc82c
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84269225"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963584"
 ---
 # <a name="resolve-windows-activation-error-codes"></a>Устранение неполадок по коду ошибки активации Windows
 
@@ -25,7 +25,7 @@ ms.locfileid: "84269225"
 
 В этой статье приводятся сведения по устранению ошибок, которые могут возникнуть при попытке использовать ключ многократной активации (MAK) или службы управления ключами (KMS) для активации корпоративных лицензий на компьютерах с Windows. Найдите код ошибки в таблице ниже, а затем щелкните ссылку, чтобы просмотреть подробные сведения об ошибке с таким кодом и способах ее устранения.
 
-Дополнительные сведения об активации корпоративных лицензий см. в статье [Plan for volume activation](https://docs.microsoft.com/windows/deployment/volume-activation/plan-for-volume-activation-client) (Планирование активации корпоративных лицензий).
+Дополнительные сведения об активации корпоративных лицензий см. в статье [Plan for volume activation](/windows/deployment/volume-activation/plan-for-volume-activation-client) (Планирование активации корпоративных лицензий).
 
 Дополнительные сведения об активации корпоративных лицензий для текущих и последних версий Windows см. в [этой статье](https://docs.microsoft.com/windows/deployment/volume-activation/volume-activation-windows-10).
 

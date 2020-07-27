@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 04/05/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 8a2a76c0cdd4433ecdf445bcde01f8af5bae66a7
-ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+ms.openlocfilehash: 74a181e53e5aea0a3c146b38c0b73f257baa45ef
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85548879"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961556"
 ---
 # <a name="folder-redirection-offline-files-and-roaming-user-profiles-overview"></a>Общие сведения о перенаправлении папок, автономных файлах и перемещаемых профилях пользователей
 
@@ -88,7 +88,7 @@ ms.locfileid: "85548879"
 
 При использовании экономной синхронизации Windows автоматически отслеживает пределы перемещения и использования пропускной способности на лимитных подключениях. Когда пользователь перемещается, приближается к пределу пропускной способности или превышает его, Windows переключается в автономный режим и препятствует любой синхронизации. Тем не менее синхронизация по-прежнему запускается вручную, а администраторы могут переопределить экономную синхронизацию для конкретных пользователей, например руководителей организации.
 
-Дополнительные сведения см. в разделе [Enable Background File Synchronization on Metered Networks](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)).
+Дополнительные сведения см. в разделе [Enable Background File Synchronization on Metered Networks](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127408(v%3dws.11)).
 
 ## <a name="primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>Основные компьютеры для перемещаемых профилей пользователей и перенаправления папок
 
@@ -133,6 +133,6 @@ ms.locfileid: "85548879"
 | --- | --- |
 | Оценка продукта | [Обеспечение информационных работников надежными файловыми службами и хранилищами](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831495(v%3dws.11)>)<br>[Новые возможности автономных файлов](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff183315(v=ws.10)>) (Windows Server 7 и Windows Server 2008 R2)<br>[Новые возможности автономных файлов в Windows Vista](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc749449(v=ws.10)>)<br>[Изменения в автономных файлах в Windows Vista](<https://technet.microsoft.com/library/2007.11.offline.aspx>) (журнал TechNet Magazine) |
 | Развертывание | [Развертывание перенаправления папок, автономных файлов и перемещаемых профилей пользователей](deploy-folder-redirection.md)<br>[Реализация решения централизации пользовательских данных. Проверка и развертывание технологий автономных файлов и перенаправления папок](https://download.microsoft.com/download/3/0/1/3019A3DA-2F41-4F2D-BBC9-A6D24C4C68C4/Implementing%20an%20End-User%20Data%20Centralization%20Solution.docx)<br>[Руководство по управлению развертыванием с перемещаемыми пользовательскими данными](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-vista/cc766489(v=ws.10)>)<br>[Пошаговое руководство по настройке новых функций автономных файлов для компьютеров под управлением Windows 7](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff633429(v=ws.10)>)<br>[Использование перенаправления папок](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753996(v=ws.11)>)<br>[Реализация перенаправления папок](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc737434(v=ws.10)>) (Windows Server 2003) |
-| Средства и параметры | [Автономные файлы в MSDN](https://msdn.microsoft.com/library/cc296092.aspx)<br>[Справочник по групповой политике для автономных файлов](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
+| Средства и параметры | [Автономные файлы в MSDN](/previous-versions/windows/desktop/offlinefiles/offline-files-portal)<br>[Справочник по групповой политике для автономных файлов](https://msdn.microsoft.com/library/ms878937.aspx) (Windows 2000) |
 | Ресурсы сообщества | [Форум по файловым службам и хранению](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winserverfiles)<br>[Блог "Hey, Scripting Guy!" (Эй, сценарист!). Как работать с функцией автономных файлов в Windows?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>)<br>[Блог "Hey, Scripting Guy!" (Эй, сценарист!). Как включить и отключить технологию автономных файлов?](<https://blogs.technet.microsoft.com/heyscriptingguy/2009/06/02/hey-scripting-guy-how-can-i-enable-and-disable-offline-files/>) |
 | Связанные технологии|[Удостоверения и доступ в Windows Server](../../identity/identity-and-access.yml)<br>[Хранилище в Windows Server](../storage.yml)<br>[Удаленный доступ и управление серверами](../../remote/index.yml) |

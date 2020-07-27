@@ -8,12 +8,12 @@ author: jasongerend
 ms.author: jgerend
 ms.localizationpriority: high
 ms.date: 05/21/2019
-ms.openlocfilehash: 2bf56e69d1a28007c35c320d1d5cc73c2ba9fa53
-ms.sourcegitcommit: 643a9916efb95ad0bb5cc0a9b115ac29af4cb076
+ms.openlocfilehash: 1823816d2218c09c84e5eb61bf8af6bd3411a0d7
+ms.sourcegitcommit: 78b59522234825c43b00c271a04c35f3fd9d65e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85586686"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86946598"
 ---
 # <a name="windows-server-servicing-channels-ltsc-and-sac"></a>Каналы обслуживания Windows Server: LTSC и SAC
 
@@ -91,7 +91,7 @@ ms.locfileid: "85586686"
 - Подписки Visual Studio. Подписчики Visual Studio могут получить выпуски Semi-Annual Channel, скачав их [на странице загрузки для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347). Если вы еще не являетесь подписчиком, перейдите на страницу [Подписки на Visual Studio](https://www.visualstudio.com/subscriptions/), зарегистрируйтесь, а затем перейдите на [страницу скачивания для подписчиков Visual Studio](https://my.visualstudio.com/downloads?pid=2347), как указано выше. Выпуски, полученные с помощью подписок на Visual Studio, используются только для разработки и тестирования.
 
 - Получение предварительных выпусков через Программу предварительной оценки Windows. Тестирование предварительных сборок Windows Server помогает корпорации Майкрософт и ее клиентам выявлять потенциальные проблемы до выпуска. Это также предоставляет клиентам уникальную возможность напрямую влиять на возможности продукта.
-Процесс разработки сборок и внесение в них изменений зависят от отзывов пользователей, получаемых корпорацией Майкрософт. Раннее тестирование и отзывы являются важным аспектом быстрого выпуска сборок. Чтобы зарегистрироваться в Программе предварительной оценки Windows, ознакомьтесь с [документаций к Программе предварительной оценки Windows для Windows Server](https://docs.microsoft.com/windows-insider/at-work/).
+Процесс разработки сборок и внесение в них изменений зависят от отзывов пользователей, получаемых корпорацией Майкрософт. Раннее тестирование и отзывы являются важным аспектом быстрого выпуска сборок. Чтобы зарегистрироваться в Программе предварительной оценки Windows, ознакомьтесь с [документаций к Программе предварительной оценки Windows для Windows Server](/windows-insider/at-work/).
 
 ## <a name="activating-semi-annual-channel-releases"></a>Активация выпусков Semi-Annual Channel
 
@@ -115,7 +115,7 @@ ms.locfileid: "85586686"
 В целом выпуски канала Long-Term Servicing Channel, такие как Windows Server 2019, выпускаются одновременно с новой версией канала Semi-Annual Channel, например Windows Server версии 1809. Из-за этого сложнее определить, работает ли на сервере выпуск канала Semi-Annual Channel. Вместо того, чтобы смотреть на номер сборки, следует посмотреть на название продукта. Выпуски канала Semi-Annual Channel используют имя продукта Windows Server Standard или Windows Server Datacenter без номера версии, в то время как выпуски канала Long-Term Servicing Channel содержат номер версии, например Windows Server 2019 Datacenter.
 
 > [!Note]
-> Приведенные ниже инструкции помогут идентифицировать LTSC и SAC и выявить различия между ними в целях управления жизненным циклом и общей инвентаризации.  Они не предназначены для определения совместимости приложений или представления поверхности определенного API.  Для обеспечения совместимости разработчикам приложений следует использовать другие инструкции, так как в течение срока эксплуатации системы могут добавляться компоненты, API и функции, либо они могут быть еще недоступны. [Версия операционной системы](https://docs.microsoft.com/windows/desktop/SysInfo/operating-system-version) — оптимальная отправная точка для разработчиков приложений.
+> Приведенные ниже инструкции помогут идентифицировать LTSC и SAC и выявить различия между ними в целях управления жизненным циклом и общей инвентаризации.  Они не предназначены для определения совместимости приложений или представления поверхности определенного API.  Для обеспечения совместимости разработчикам приложений следует использовать другие инструкции, так как в течение срока эксплуатации системы могут добавляться компоненты, API и функции, либо они могут быть еще недоступны. [Версия операционной системы](/windows/desktop/sysinfo/operating-system-version) — оптимальная отправная точка для разработчиков приложений.
 
 Откройте Powershell и используйте командлет Get-ItemProperty или командлет Get-ComputerInfo, чтобы проверить соответствующие свойства в реестре.  Вместе с номером сборки вы сможете найти информацию о наличии или отсутствии LTSC или SAC по году выпуска, например 2019.  Это свойственно LTSC и не свойственно SAC.  Вы также узнаете время выпуска по идентификатору ReleaseId или WindowsVersion, например 1809, а также тип установки: основные серверные компоненты или сервер с возможностями рабочего стола.
 
@@ -165,7 +165,7 @@ OsVersion                     : 10.0.17763
 OsHardwareAbstractionLayer    : 10.0.17763.107
 ````
 
-Чтобы уточнить наличие на сервере новой [функции совместимости приложений основных серверных компонентов по требованию](https://docs.microsoft.com/windows-server/get-started-19/install-fod-19), воспользуйтесь командлетом [Get-WindowsCapability](https://docs.microsoft.com/powershell/module/dism/get-windowscapability?view=win10-ps) и найдите:
+Чтобы уточнить наличие на сервере новой [функции совместимости приложений основных серверных компонентов по требованию](./install-fod-19.md), воспользуйтесь командлетом [Get-WindowsCapability](/powershell/module/dism/get-windowscapability?view=win10-ps) и найдите:
 ````
 Name    :     ServerCore.AppCompatibility~~~~0.0.1.0
 State   :     Installed
@@ -177,8 +177,8 @@ State   :     Installed
 
 [Политика жизненного цикла поддержки Майкрософт](https://support.microsoft.com/lifecycle)
 
-[Determining whether Server Core is running](https://msdn.microsoft.com/library/hh846315%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) (Определение того, запущены ли основные серверные компоненты)
+[Determining whether Server Core is running](/previous-versions/windows/desktop/legacy/hh846315(v=vs.85)?f=255&MSPPError=-2147217396) (Определение того, запущены ли основные серверные компоненты)
 
-[GetProductInfo function](https://docs.microsoft.com/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo) (Функция GetProductInfo)
+[GetProductInfo function](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getproductinfo) (Функция GetProductInfo)
 
-[SoftwareInventoryLogging](https://docs.microsoft.com/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps) (Командлеты ведения журнала инвентаризации программного обеспечения)
+[SoftwareInventoryLogging](/powershell/module/softwareinventorylogging/?view=winserver2012R2-ps) (Командлеты ведения журнала инвентаризации программного обеспечения)

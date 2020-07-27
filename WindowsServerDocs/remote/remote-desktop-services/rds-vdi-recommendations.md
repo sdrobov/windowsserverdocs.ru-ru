@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 2a44dc9f-c221-4bf7-89c3-fb4c86a90f8c
 author: jaimeo
 manager: dougkim
-ms.openlocfilehash: 2ab78ccbc4e49bd95a74fe1e17d5ea14891eb1b8
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 4d666abea6ab79ee29bd5bf93255426289c8deee
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857277"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963366"
 ---
 # <a name="recommended-settings-for-vdi-desktops"></a>Рекомендуемые параметры для рабочих столов VDI
 
@@ -31,7 +31,7 @@ ms.locfileid: "80857277"
 > [!NOTE]
 > Для параметров, специально не упомянутых в этой статье, можно оставить значения по умолчанию (или установить значения в соответствии с вашими требованиями и политиками) без заметного влияния на функциональность VDI.
 
-При создании образа для развертывания VDI обязательно используйте вариант **Current Branch**. Дополнительные сведения о Current Branch см. в статье [Информация о выпуске Windows 10](https://technet.microsoft.com/windows/release-info.aspx).
+При создании образа для развертывания VDI обязательно используйте вариант **Current Branch**. Дополнительные сведения о Current Branch см. в статье [Информация о выпуске Windows 10](/archive/blogs/mniehaus/windows-10-1607-keeping-apps-from-coming-back-when-deploying-the-feature-update).
 
 ## <a name="creating-the-windows-10-image"></a>Создание образа Windows 10
 Сначала установите эталонный образ Windows 10 версии 1607 (версия 10.0.1393) на физической или виртуальной машине. Установка на виртуальную машину выполняется просто и позволяет вам сохранять версии файла виртуального жесткого диска (VHD) на тот случай, если вы захотите вернуться к более ранней версии.

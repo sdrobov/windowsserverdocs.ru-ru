@@ -9,12 +9,12 @@ ms.topic: article
 ms.assetid: 176ae424-96e9-4c78-88f5-da418e76c3d7
 author: lizap
 manager: dongill
-ms.openlocfilehash: ce8c6e2089c3130d078513287b661a42e5754690
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: c0a2676cc5e7043cd1f96d6c1d393d7b0e443fe8
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857607"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961216"
 ---
 # <a name="build-and-deploy-your-remote-desktop-services-deployment"></a>Создание и развертывание развертывания служб удаленных рабочих столов
 
@@ -27,7 +27,7 @@ ms.locfileid: "80857607"
 У вас есть существующее развертывание удаленного рабочего стола на предыдущую версию Windows Server? Ознакомьтесь с вариантами для перехода на WIndows Server 2016, где вы сможете воспользоваться новыми и лучшими функциями в плане производительности и масштабирования.
 
 - [Перенести развертывание служб удаленных рабочих столов в Windows Server 2016](migrate-rds-role-services.md)
-- [Обновить развертывание служб удаленных рабочих столов до Windows Server 2016](upgrade-to-rds-2016.md)
+- [Обновить развертывание служб удаленных рабочих столов до Windows Server 2016](./upgrade-to-rds.md)
 
 Хотите создать новое развертывание удаленного рабочего стола? Используйте следующие сведения для развертывания удаленного рабочего стола в Windows Server 2016.
 

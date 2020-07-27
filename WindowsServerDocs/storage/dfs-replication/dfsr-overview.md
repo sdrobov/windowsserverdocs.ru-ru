@@ -6,12 +6,12 @@ ms.technology: storage
 author: JasonGerend
 manager: elizapo
 ms.author: jgerend
-ms.openlocfilehash: 8164032ff4071facb33c1df0edf44dcc86a6d918
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 380c8ba0e91db47c3313542b2d294a516f7a9466
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475421"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961186"
 ---
 # <a name="dfs-replication-overview"></a>Обзор репликации DFS
 
@@ -50,18 +50,18 @@ ms.locfileid: "85475421"
 
 Использование репликации DFS на виртуальной машине в Azure протестировано для Windows Server. Однако существуют некоторые ограничения и требования, которые необходимо соблюдать.
 
-- Использование снимков или сохраненных состояний для восстановления сервера, выполняющего репликацию DFS с целью реплицирования любых данных, кроме папки SYSVOL, приводит к отказу репликации DFS, что требует особых действий по восстановлению базы данных. Точно так же нельзя экспортировать, клонировать или копировать виртуальные машины. Дополнительные сведения см. в статье [2517913](https://support.microsoft.com/kb/2517913) базы знаний Майкрософт и в разделе [Безопасная виртуализация DFSR](https://blogs.technet.microsoft.com/filecab/2013/04/05/safely-virtualizing-dfsr/).
+- Использование снимков или сохраненных состояний для восстановления сервера, выполняющего репликацию DFS с целью реплицирования любых данных, кроме папки SYSVOL, приводит к отказу репликации DFS, что требует особых действий по восстановлению базы данных. Точно так же нельзя экспортировать, клонировать или копировать виртуальные машины. Дополнительные сведения см. в статье [2517913](https://support.microsoft.com/kb/2517913) базы знаний Майкрософт и в разделе [Безопасная виртуализация DFSR](https://techcommunity.microsoft.com/t5/storage-at-microsoft/safely-virtualizing-dfsr/ba-p/424671).
 - При резервном копировании данных в реплицированной папке, размещенной на виртуальной машине, необходимо использовать программы резервного копирования из гостевой виртуальной машины.
 - Службе репликации DFS требуется доступ к физическим или виртуализованным контроллерам домена, так как она не может взаимодействовать непосредственно с AAD.
-- Для репликации DFS требуется VPN-подключение между локальными членами группы репликации и другими элементами, размещенными на виртуальных машинах Azure. Необходимо также настроить локальный маршрутизатор (например, Forefront Threat Management Gateway), чтобы разрешить сопоставителю конечных точек RPC (порт 135) и случайным образом назначенному порту в диапазоне между 49152 и 65535 передачу через VPN-подключение. Лучше использовать статический, а не случайный порт, указав его с помощью командлета Set-DfsrMachineConfiguration или средства командной строки Dfsrdiag. Дополнительные сведения о способах указания статического порта для репликации DFS см. в разделе [Set-DfsrMachineConfiguration](https://docs.microsoft.com/powershell/module/dfsr/set-dfsrserviceconfiguration). Сведения о связанных портах, используемых для управления Windows Server, см. в статье [832017](https://support.microsoft.com/kb/832017) в базе знаний Майкрософт.
+- Для репликации DFS требуется VPN-подключение между локальными членами группы репликации и другими элементами, размещенными на виртуальных машинах Azure. Необходимо также настроить локальный маршрутизатор (например, Forefront Threat Management Gateway), чтобы разрешить сопоставителю конечных точек RPC (порт 135) и случайным образом назначенному порту в диапазоне между 49152 и 65535 передачу через VPN-подключение. Лучше использовать статический, а не случайный порт, указав его с помощью командлета Set-DfsrMachineConfiguration или средства командной строки Dfsrdiag. Дополнительные сведения о способах указания статического порта для репликации DFS см. в разделе [Set-DfsrMachineConfiguration](/powershell/module/dfsr/set-dfsrserviceconfiguration). Сведения о связанных портах, используемых для управления Windows Server, см. в статье [832017](https://support.microsoft.com/kb/832017) в базе знаний Майкрософт.
 
-Дополнительные сведения о начале работы с виртуальными машинами Azure см. на [веб-сайте Microsoft Azure](https://docs.microsoft.com/azure/virtual-machines/).
+Дополнительные сведения о начале работы с виртуальными машинами Azure см. на [веб-сайте Microsoft Azure](/azure/virtual-machines/).
 
 ## <a name="installing-dfs-replication"></a>Установка репликации DFS
 
 Репликация DFS входит в роль "Файловые службы и службы хранилища". Средства управления для DFS ("Управление DFS", модуль репликации DFS для Windows PowerShell, а также средства командной строки) устанавливаются отдельно в составе средств администрирования удаленного сервера.
 
-Репликацию DFS можно установить с помощью [Windows Admin Center](../../manage/windows-admin-center/understand/windows-admin-center.md), диспетчера сервера или PowerShell, как описано в следующих разделах.
+Репликацию DFS можно установить с помощью [Windows Admin Center](../../manage/windows-admin-center/overview.md), диспетчера сервера или PowerShell, как описано в следующих разделах.
 
 ### <a name="to-install-dfs-by-using-server-manager"></a>Чтобы установить DFS с помощью диспетчера серверов
 
@@ -104,9 +104,9 @@ Install-WindowsFeature "FS-DFS-Replication", "RSAT-DFS-Mgmt-Con"
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
-- [Общие сведения о пространствах имен DFS и репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v%3dws.11))
-- [Контрольный список. Развертывание репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772201(v%3dws.11))
-- [Контрольный список. Управление репликацией DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc755035(v%3dws.11))
-- [Развертывание репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
-- [Управление репликацией DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc770925(v%3dws.11))
-- [Устранение неполадок при репликации DFS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732802(v%3dws.11))
+- [Общие сведения о пространствах имен DFS и репликации DFS](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj127250(v%3dws.11))
+- [Контрольный список. Развертывание репликации DFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc772201(v%3dws.11))
+- [Контрольный список. Управление репликацией DFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc755035(v%3dws.11))
+- [Развертывание репликации DFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
+- [Управление репликацией DFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc770925(v%3dws.11))
+- [Устранение неполадок при репликации DFS](/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc732802(v%3dws.11))
