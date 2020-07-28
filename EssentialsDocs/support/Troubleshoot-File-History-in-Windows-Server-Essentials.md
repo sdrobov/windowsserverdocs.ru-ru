@@ -2,18 +2,17 @@
 title: Устранение неполадок с историей файлов в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: ed062945-27e9-4572-b1bb-6c8cf1b9c2f4
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 51043013320a3fc6faeb9342ac93c010c859bae5
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 031f407b392e02e9867640975520475acd5f8cbb
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470179"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180330"
 ---
 # <a name="troubleshoot-file-history-in-windows-server-essentials"></a>Устранение неполадок с историей файлов в Windows Server Essentials
 
@@ -74,7 +73,7 @@ ms.locfileid: "85470179"
  В некоторых случаях сетевой администратор может удалить пользователя или компьютер с сервера, но оставить резервную копию истории файлов для использования в будущем. Если история файлов больше не нужна, удалите папку резервных копий истории файлов для пользователя или компьютера из общих папок на сервере. Для этого см. [To manually delete File History backups for a user or a computer](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md#BKMK_manuallyDelete).
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 -   [Управление архивацией клиента](../manage/Manage-Client-Computer-Backup-in-Windows-Server-Essentials.md)
 

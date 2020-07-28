@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 01/10/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: 9e9aecc439235d9396d764420711109552d89f32
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 055538bc52e11b7fb24f15db51af52e5cf8376d1
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86965166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182090"
 ---
 # <a name="overview-of-file-sharing-using-the-smb-3-protocol-in-windows-server"></a>Общие сведения о совместном использовании файлов с помощью протокола SMB 3 в Windows Server
 
@@ -47,7 +47,7 @@ ms.locfileid: "86965166"
 
 | Компонент или функция  | Новинка или обновление  | Сводка  |
 | --------- | --------- | --------- |
-| Гостевой доступ к общим папкам отключен | Создать | Клиент SMB больше не разрешает следующие действия: доступ учетной записи гостя к удаленному серверу; откат к учетной записи гостя после ввода недопустимых учетных данных. Дополнительные сведения см. в статье [Гостевой доступ в SMB2 отключен по умолчанию в Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). | 
+| Гостевой доступ к общим папкам отключен | Создать | Клиент SMB больше не разрешает следующие действия: доступ учетной записи гостя к удаленному серверу; откат к учетной записи гостя после ввода недопустимых учетных данных. Дополнительные сведения см. в статье [Гостевой доступ в SMB2 отключен по умолчанию в Windows](https://support.microsoft.com/help/4046019/guest-access-in-smb2-disabled-by-default-in-windows-10-and-windows-ser). |
 | Глобальное сопоставление SMB | Создать | Сопоставляет удаленную общую папку SMB с буквой диска, доступного всем пользователям на локальном узле, включая контейнеры. Это необходимо, чтобы включить операции ввода-вывода для контейнера в томе данных для прохода через удаленную точку подключения. Учтите, что при использовании глобального сопоставления SMB для контейнеров всем пользователям на узле контейнера предоставляется доступ к удаленной общей папке. Все приложения, работающие на узле контейнера, также получат доступ к сопоставленной удаленной общей папке. Дополнительные сведения см. в статье [Container Storage Support with Cluster Shared Volumes (CSV), Storage Spaces Direct, SMB Global Mapping](https://techcommunity.microsoft.com/t5/failover-clustering/container-storage-support-with-cluster-shared-volumes-csv/ba-p/372140) (Поддержка контейнера хранилища с общими томами кластера (CSV), Локальными дисковыми пространствами и глобальным сопоставлением SMB). |
 | Управление диалектом SMB | Создать | Теперь можно задать значения реестра, чтобы управлять минимальной (диалектом) и максимальной версией SMB. Дополнительные сведения см. в статье [Controlling SMB Dialects](https://techcommunity.microsoft.com/t5/storage-at-microsoft/controlling-smb-dialects/ba-p/860024) (Управление диалектами SMB). |
 
@@ -74,7 +74,7 @@ ms.locfileid: "86965166"
 | SMB Direct     |   Обновлено      | Улучшает производительность нагрузок малого ввода-вывода, повышая эффективность при размещении нагрузок с малыми вводами-выводами (например, база данных оперативной обработки транзакций (OLTP) в виртуальной машине). Эти улучшения заметны при использовании более быстрых сетевых интерфейсов, таких как Ethernet 40 Гбит/с и InfiniBand 56 Гбит/с.  |
 | Ограничения пропускной способности SMB | Создать | Теперь можно использовать [Set-SmbBandwidthLimit](/powershell/module/smbshare/set-smbbandwidthlimit), чтобы задать ограничения пропускной способности в трех категориях: VirtualMachine (трафик Hyper-V по протоколу SMB), LiveMigration (трафик динамической миграции Hyper-V по протоколу SMB) или по умолчанию (все остальные типы трафика SMB).
 
-Дополнительные сведения о новых и измененных функциях SMB в Windows Server 2012 R2 см. в статье [What's New in SMB in Windows Server](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>) (Новые возможности SMB в Windows Server).
+Дополнительные сведения о новых и измененных функциях SMB в Windows Server 2012 R2 см. в статье [What's New in SMB in Windows Server](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831474(v%3dws.11)>) (Новые возможности SMB в Windows Server).
 
 ## <a name="features-added-in-smb-30-with-windows-server-2012-and-windows-8"></a>Функции, добавленные в SMB 3.0 с Windows Server 2012 и Windows 8
 
@@ -122,7 +122,7 @@ ms.locfileid: "86965166"
 * [Хранилище в Windows Server](../storage.yml)
 * [Scale-Out File Server for Application Data](../../failover-clustering/sofs-overview.md) (Масштабируемый файловый сервер для данных приложений)
 * [Увеличение производительности файлового сервера с помощью SMB Direct](smb-direct.md)
-* [Deploy Hyper-V over SMB](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>) (Развертывание Hyper-V поверх SMB)
-* [Deploy SMB Multichannel](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>) (Развертывание SMB Multichannel)
-* [Deploying Fast and Efficient File Servers for Server Applications](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>) (Развертывание быстрых и производительных файловых серверов для серверных приложений)
-* [SMB: Troubleshooting Guide](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>) (Руководство по устранению проблем: SMB)
+* [Deploy Hyper-V over SMB](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134187(v%3dws.11)>) (Развертывание Hyper-V поверх SMB)
+* [Deploy SMB Multichannel](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn610980(v%3dws.11)>) (Развертывание SMB Multichannel)
+* [Deploying Fast and Efficient File Servers for Server Applications](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831723(v%3dws.11)>) (Развертывание быстрых и производительных файловых серверов для серверных приложений)
+* [SMB: Troubleshooting Guide](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn659439(v%3dws.11)>) (Руководство по устранению проблем: SMB)

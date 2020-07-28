@@ -7,12 +7,12 @@ ms.topic: upgrade
 author: RobHindman
 ms.author: robhind
 ms.date: 09/16/2019
-ms.openlocfilehash: 5e4436bb6e4db19e015056b67730619a93396f9e
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 7598826bee4abd869dff82c3891fdbe126db35fb
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80854267"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182180"
 ---
 # <a name="upgrade-windows-server-2008-r2-to-windows-server-2012-r2"></a>Обновление Windows Server 2008 R2 до Windows Server 2012 R2
 
@@ -94,4 +94,4 @@ ms.locfileid: "80854267"
 
 ## <a name="related-articles"></a>Похожие статьи
 
-- Дополнительные сведения о Windows Server 2012 R2 и Windows Server 2012 см. [этой статье](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)).
+- Дополнительные сведения о Windows Server 2012 R2 и Windows Server 2012 см. [этой статье](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh801901(v=ws.11)).

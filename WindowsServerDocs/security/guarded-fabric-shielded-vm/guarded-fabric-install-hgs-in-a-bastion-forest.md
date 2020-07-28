@@ -7,14 +7,14 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: 20e0d5e73713c0d6280e95d51ec8de8fde612350
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 331fc5a4e825dc4e7faf6f0a65605d7aaebf8314
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80856587"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181700"
 ---
-# <a name="install-hgs-in-an-existing-bastion-forest"></a>Установка HGS в существующем лесу бастиона 
+# <a name="install-hgs-in-an-existing-bastion-forest"></a>Установка HGS в существующем лесу бастиона
 
 >Область применения: Windows Server 2019, Windows Server (половина ежегодного канала), Windows Server 2016
 
@@ -27,7 +27,7 @@ ms.locfileid: "80856587"
 
 Выполните все команды в этом разделе в сеансе PowerShell с повышенными привилегиями.
 
-[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)] 
+[!INCLUDE [Install the HGS server role](../../../includes/guarded-fabric-install-hgs-server-role.md)]
 
 Если в центре обработки данных есть защищенный лес бастиона, в котором нужно присоединить узлы HGS, выполните следующие действия.
 Эти действия также можно использовать для настройки 2 или более независимых кластеров HGS, присоединенных к одному и тому же домену.
@@ -70,7 +70,7 @@ New-ADServiceAccount -Name 'HGSgMSA' -DnsHostName 'HGSgMSA.yourdomain.com' -Prin
 ```
 
 Для gMSA потребуется право на создание событий в журнале безопасности на каждом сервере HGS.
-Если для настройки назначения прав пользователя используется групповая политика, убедитесь, что учетной записи gMSA предоставлено разрешение на [Создание событий аудита](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) на серверах HGS.
+Если для настройки назначения прав пользователя используется групповая политика, убедитесь, что учетной записи gMSA предоставлено разрешение на [Создание событий аудита](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn221956%28v=ws.11%29) на серверах HGS.
 
 > [!NOTE]
 > Групповые управляемые учетные записи служб доступны начиная с схемы Active Directory Windows Server 2012.
@@ -100,7 +100,7 @@ CNO представляет имя кластера и используется
 Объект VCO представляет службу HGS, которая находится на вершине кластера и будет являться именем, зарегистрированным на DNS-сервере.
 
 > [!IMPORTANT]
-> Пользователь, который будет выполнять `Initialize-HgsServer`, должен иметь **полный контроль** над объектами CNO и VCO в Active Directory.
+> Пользователь, который будет запускаться, `Initialize-HgsServer` должен иметь **полный контроль** над объектами CNO и VCO в Active Directory.
 
 Чтобы быстро подготовить CNO и VCO, у администратора Active Directory выполните следующие команды PowerShell:
 
@@ -142,11 +142,11 @@ Set-Acl -Path $vcoPath -AclObject $acl
 
 **Имя политики:** Сетевая безопасность: Настройка типов шифрования, разрешенных для Kerberos
 
-**Действие**. Если эта политика настроена, необходимо обновить учетную запись gMSA с помощью [Set-адсервицеаккаунт](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) , чтобы использовать в этой политике только поддерживаемые типы шифрования. Например, если политика допускает только AES128\_HMAC\_SHA1 и AES256\_HMAC\_SHA1, следует выполнить `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256`.
+**Действие**. Если эта политика настроена, необходимо обновить учетную запись gMSA с помощью [Set-адсервицеаккаунт](https://docs.microsoft.com/powershell/module/addsadministration/set-adserviceaccount?view=win10-ps) , чтобы использовать в этой политике только поддерживаемые типы шифрования. Например, если политика допускает только AES128 \_ HMAC \_ SHA1 и AES256 \_ HMAC \_ SHA1, следует запустить `Set-ADServiceAccount -Identity HGSgMSA -KerberosEncryptionType AES128,AES256` .
 
 
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Дальнейшие действия по настройке аттестации на основе TPM см. в статье [Инициализация кластера HGS с помощью режима TPM в существующем лесу бастиона](guarded-fabric-initialize-hgs-tpm-mode-bastion.md).
 - Дальнейшие действия по настройке аттестации ключа узла см. в статье [Инициализация кластера HGS с помощью режима ключей в существующем лесу бастиона](guarded-fabric-initialize-hgs-key-mode-bastion.md).

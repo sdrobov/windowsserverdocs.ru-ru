@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 935d3ccf7de777a71d7c75179629b448dbb73a08
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 7af3d5c64216f60cca41aa9fb0c3d2c38c74e6c4
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86966286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182250"
 ---
 # <a name="deploy-primary-computers-for-folder-redirection-and-roaming-user-profiles"></a>Развертывание основных компьютеров для перенаправления папок и использования перемещаемых профилей пользователей
 
@@ -30,7 +30,7 @@ ms.locfileid: "86966286"
 
 К поддержке основного компьютера предъявляются следующие требования:
 
-- Схема доменных служб Active Directory (AD DS) должна включать дополнения схемы Windows Server 2012 (схема обновляется автоматически при установке контроллера домена Windows Server 2012). Дополнительные сведения об обновлении схемы AD DS см. в разделе [Adprep.exe integration](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) (Интеграция Аdprep.exe) и статье [Running Adprep.exe](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>) (Работа Adprep.exe).
+- Схема доменных служб Active Directory (AD DS) должна включать дополнения схемы Windows Server 2012 (схема обновляется автоматически при установке контроллера домена Windows Server 2012). Дополнительные сведения об обновлении схемы AD DS см. в разделе [Adprep.exe integration](</previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472161(v=ws.11)#adprepexe-integration>) (Интеграция Аdprep.exe) и статье [Running Adprep.exe](</previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd464018(v=ws.10)>) (Работа Adprep.exe).
 - Клиентские компьютеры должны работать под управлением: Windows 10, Windows 8.1, Windows 8, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012.
 
 > [!TIP]

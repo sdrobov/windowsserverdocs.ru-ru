@@ -9,18 +9,18 @@ ms.assetid: 158b7a62-2c52-448b-9467-c00d5018f65b
 ms.author: v-tea
 author: Teresa-MOTIV
 ms.localizationpriority: medium
-ms.openlocfilehash: 095e40528d27be4509e3235a0ab4c03e59759f99
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 636c0c56c52f501a54679a569213bcd4e4646b72
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86966766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181990"
 ---
 # <a name="configure-vpn-device-tunnels-in-windows-10"></a>Настройка туннелей VPN-устройств в Windows 10
 
 >Область применения: Windows 10 версии 1709
 
-Always On VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей: 
+Always On VPN предоставляет возможность создания выделенного профиля VPN для устройства или компьютера. Always On VPN-подключения включают два типа туннелей:
 
 - _Туннель устройства_ подключается к указанным VPN-серверам, прежде чем пользователи смогут войти на устройство. Сценарии подключения до входа в систему и в целях управления устройствами используют туннель устройства.
 
@@ -34,7 +34,7 @@ Always On VPN предоставляет возможность создания
 
 
 ## <a name="device-tunnel-requirements-and-features"></a>Требования и функции туннеля для устройства
-Необходимо включить проверку подлинности сертификата компьютера для VPN-подключений и определить корневой центр сертификации для проверки подлинности входящих VPN-подключений. 
+Необходимо включить проверку подлинности сертификата компьютера для VPN-подключений и определить корневой центр сертификации для проверки подлинности входящих VPN-подключений.
 
 ```PowerShell
 $VPNRootCertAuthority = "Common Name of trusted root certification authority"
@@ -46,7 +46,7 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 
 ## <a name="vpn-device-tunnel-configuration"></a>Конфигурация туннеля VPN-устройства
 
-Приведенный ниже пример XML-кода профиля предоставляет хорошее руководство для сценариев, в которых для туннеля устройства требуются только инициированные клиентом опросы.  Фильтры трафика используются, чтобы ограничить туннель устройства только трафиком управления.  Эта конфигурация хорошо подходит для Центр обновления Windows, типичных групповая политика (GP) и Microsoft Endpoint Configuration Manager обновления, а также VPN-подключения для первого входа без кэшированных учетных данных или сценариев сброса пароля. 
+Приведенный ниже пример XML-кода профиля предоставляет хорошее руководство для сценариев, в которых для туннеля устройства требуются только инициированные клиентом опросы.  Фильтры трафика используются, чтобы ограничить туннель устройства только трафиком управления.  Эта конфигурация хорошо подходит для Центр обновления Windows, типичных групповая политика (GP) и Microsoft Endpoint Configuration Manager обновления, а также VPN-подключения для первого входа без кэшированных учетных данных или сценариев сброса пароля.
 
 Для инициированных сервером вариантов push-уведомлений, таких как служба удаленного управления Windows (WinRM), Remote GPUpdate и Remote Configuration Manager Update, необходимо разрешить входящий трафик в туннеле устройства, чтобы не использовать фильтры трафика.  Если в профиле туннеля устройства вы включите фильтры трафика, то туннель устройства отклоняет входящий трафик.  Это ограничение будет удалено в будущих выпусках.
 
@@ -56,40 +56,40 @@ Set-VpnAuthProtocol -UserAuthProtocolAccepted Certificate, EAP -RootCertificateN
 Ниже приведен пример VPN-Профилексмл.
 
 ``` xml
-<VPNProfile>  
-  <NativeProfile>  
-<Servers>vpn.contoso.com</Servers>  
-<NativeProtocolType>IKEv2</NativeProtocolType>  
-<Authentication>  
-  <MachineMethod>Certificate</MachineMethod>  
-</Authentication>  
-<RoutingPolicyType>SplitTunnel</RoutingPolicyType>  
+<VPNProfile>
+  <NativeProfile>
+<Servers>vpn.contoso.com</Servers>
+<NativeProtocolType>IKEv2</NativeProtocolType>
+<Authentication>
+  <MachineMethod>Certificate</MachineMethod>
+</Authentication>
+<RoutingPolicyType>SplitTunnel</RoutingPolicyType>
  <!-- disable the addition of a class based route for the assigned IP address on the VPN interface -->
-<DisableClassBasedDefaultRoute>true</DisableClassBasedDefaultRoute>  
-  </NativeProfile> 
-  <!-- use host routes(/32) to prevent routing conflicts -->  
-  <Route>  
-<Address>10.10.0.2</Address>  
-<PrefixSize>32</PrefixSize>  
-  </Route>  
-  <Route>  
-<Address>10.10.0.3</Address>  
-<PrefixSize>32</PrefixSize>  
-  </Route>  
-<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel --> 
-  <TrafficFilter>  
-<RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>  
+<DisableClassBasedDefaultRoute>true</DisableClassBasedDefaultRoute>
+  </NativeProfile>
+  <!-- use host routes(/32) to prevent routing conflicts -->
+  <Route>
+<Address>10.10.0.2</Address>
+<PrefixSize>32</PrefixSize>
+  </Route>
+  <Route>
+<Address>10.10.0.3</Address>
+<PrefixSize>32</PrefixSize>
+  </Route>
+<!-- traffic filters for the routes specified above so that only this traffic can go over the device tunnel -->
+  <TrafficFilter>
+<RemoteAddressRanges>10.10.0.2, 10.10.0.3</RemoteAddressRanges>
   </TrafficFilter>
-<!-- need to specify always on = true --> 
-  <AlwaysOn>true</AlwaysOn> 
-<!-- new node to specify that this is a device tunnel -->  
+<!-- need to specify always on = true -->
+  <AlwaysOn>true</AlwaysOn>
+<!-- new node to specify that this is a device tunnel -->
  <DeviceTunnel>true</DeviceTunnel>
 <!--new node to register client IP address in DNS to enable manage out -->
 <RegisterDNS>true</RegisterDNS>
 </VPNProfile>
 ```
 
-В зависимости от потребностей каждого конкретного сценария развертывания другой компонент VPN, который можно настроить с помощью туннеля устройства, — это [Обнаружение доверенных сетей](https://social.technet.microsoft.com/wiki/contents/articles/38546.new-features-for-vpn-in-windows-10-and-windows-server-2016.aspx#Trusted_Network_Detection).
+В зависимости от потребностей каждого конкретного сценария развертывания другой компонент VPN, который можно настроить с помощью туннеля устройства, — это [Обнаружение доверенных сетей](https://docs.microsoft.com/answers/topics/windows-server-infrastructure.html).
 
 ```
  <!-- inside/outside detection -->

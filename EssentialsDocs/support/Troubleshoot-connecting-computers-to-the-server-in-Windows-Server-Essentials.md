@@ -2,18 +2,17 @@
 title: Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 7b679ae9d3a3d5f4526edced78d720ca83d3e008
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c05888f52f3fe60d0dde22a70ceb5a3eee94e0ef
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470048"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180240"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
 
@@ -22,7 +21,7 @@ ms.locfileid: "85470048"
  В этом разделе содержатся рекомендации по устранению неполадок, которые могут возникнуть при подключении компьютера к серверу под Windows Server Essentials или Windows Server Essentials.
 
 > [!NOTE]
->  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials и Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
+>  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials и Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
 
  В этом разделе представлены решения следующих проблем.
 
@@ -101,7 +100,7 @@ ms.locfileid: "85470048"
 
 5.  Щелкните правой кнопкой мыши папку сервера, а затем выберите пункт **Свойства**.
 
-6.  Откройте вкладку **Безопасность**.
+6.  Перейдите на вкладку **Безопасность** .
 
 7.  Если для системной учетной записи разрешение **Полный доступ** запрещено, нажмите кнопку **Изменить**, а затем — **СИСТЕМА**. В разделе **Разрешения для системы** установите флажок **Разрешить** рядом с вариантом **Полный доступ**.
 
@@ -281,6 +280,6 @@ ms.locfileid: "85470048"
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
+- [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
 
--   [Устранение неполадок подключения компьютера с Windows Server 2012 Essentials (вики-сайт TechNet)](https://social.technet.microsoft.com/wiki/contents/articles/14370.windows-2012-server-essentials-connectcomputer-troubleshooting.aspx)
+- [Устранение неполадок в Windows 2012 Server Essentials Коннекткомпутер](https://docs.microsoft.com/windows-server-essentials/support/troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials)

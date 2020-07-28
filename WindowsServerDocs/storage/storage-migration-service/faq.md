@@ -8,12 +8,12 @@ ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: d7f1b5387d82d487e50b217b28367e82617a66ea
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: efe16dd9bdc971b97bc401cf10e14439c46069de
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86966256"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181740"
 ---
 # <a name="storage-migration-service-frequently-asked-questions-faq"></a>Служба миграции хранилища: часто задаваемые вопросы
 
@@ -67,7 +67,7 @@ ms.locfileid: "86966256"
     - Удаленное взаимодействие удостоверений
     - Инфраструктура
     - Имя
-    - Путь
+    - путь
     - Область действия
     - Имя области
     - Дескриптор безопасности
@@ -182,7 +182,7 @@ ms.locfileid: "86966256"
 Для получения поддержки:
 
  - Публикация вопроса в техническом [сообществе Windows Server](https://techcommunity.microsoft.com/t5/Windows-Server/ct-p/Windows-Server)
- - Публикация на [форуме TechNet по Windows Server 2019](https://social.technet.microsoft.com/Forums/en-US/home?forum=ws2019&filter=alltypes&sort=lastpostdesc)
+ - Публикация на [форуме по Windows Server 2019](https://docs.microsoft.com/answers/topics/windows-server-2019.html)
  - Откройте обращение в службу поддержки через [Служба поддержки Майкрософт](https://support.microsoft.com)
 
 ## <a name="additional-references"></a>Дополнительные ссылки

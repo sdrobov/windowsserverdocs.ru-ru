@@ -3,12 +3,12 @@ title: Настройка Kerberos для IP-адреса
 description: Поддержка Kerberos для имен участников-служб на основе IP
 author: daveba
 ms.author: daveba
-ms.openlocfilehash: 1061364528100fe005e80f64c6315f9fca69ad98
-ms.sourcegitcommit: 2082335e1260826fcbc3dccc208870d2d9be9306
+ms.openlocfilehash: 16feb7045508a854657834fcbb4ab850f9b8ac3b
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69980301"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181920"
 ---
 # <a name="kerberos-clients-allow-ipv4-and-ipv6-address-hostnames-in-service-principal-names-spns"></a>Клиенты Kerberos разрешают адреса узлов IPv4 и IPv6 в именах субъектов-служб (SPN).
 
@@ -28,17 +28,17 @@ reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Kerberos
 
 ## <a name="configuring-a-service-principal-name-as-ip-address"></a>Настройка имени субъекта-службы в качестве адреса IP
 
-Имя субъекта-службы — это уникальный идентификатор, используемый при проверке подлинности Kerberos для идентификации службы в сети. SPN состоит из службы, имени узла и, при необходимости, порта в виде `service/hostname[:port]` , `host/fs.contoso.com`например. Windows будет регистрировать несколько имен участников-служб в объекте компьютера при присоединении компьютера к Active Directory.
+Имя субъекта-службы — это уникальный идентификатор, используемый при проверке подлинности Kerberos для идентификации службы в сети. SPN состоит из службы, имени узла и, при необходимости, порта в виде, `service/hostname[:port]` например `host/fs.contoso.com` . Windows будет регистрировать несколько имен участников-служб в объекте компьютера при присоединении компьютера к Active Directory.
 
 IP-адреса обычно не используются вместо имен узлов, так как IP-адреса часто являются временными. Это может привести к конфликтам и ошибкам проверки подлинности в случае истечения срока действия аренды адресов и продления сроков. Поэтому регистрация SPN на основе IP-адреса выполняется вручную и должна использоваться, только если невозможно переключиться на имя узла на основе DNS.
 
-Рекомендуемый подход заключается в использовании средства [setspn. exe](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) . Обратите внимание, что имя участника-службы может быть зарегистрировано только в одной учетной записи в Active Directory за раз, поэтому при использовании DHCP рекомендуется использовать статические аренды для IP адресов.
+Рекомендуемый подход заключается в использовании средства [Setspn.exe](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc731241(v=ws.11)) . Обратите внимание, что имя участника-службы может быть зарегистрировано только в одной учетной записи в Active Directory за раз, поэтому при использовании DHCP рекомендуется использовать статические аренды для IP адресов.
 
 ```
-Setspn -s <service>/ip.address> <domain-user-account>  
+Setspn -s <service>/ip.address> <domain-user-account>
 ```
 
-Пример.
+Пример
 
 ```
 Setspn -s host/192.168.1.1 server01

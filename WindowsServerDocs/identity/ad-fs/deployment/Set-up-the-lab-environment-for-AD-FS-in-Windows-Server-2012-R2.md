@@ -8,12 +8,12 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 09adec98f4db1e5354d00cf6ebfd9e9ef17f8575
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: b9ba6ca7900f33880fda6d77398ffa819cf1038c
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86963666"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177800"
 ---
 # <a name="set-up-the-lab-environment-for-ad-fs-in-windows-server-2012-r2"></a>Настройка лабораторной среды для служб федерации Active Directory в Windows Server 2012 R2
 
@@ -87,7 +87,7 @@ ms.locfileid: "86963666"
 
 -   Альтернативное имя субъекта (DNS): enterpriseregistration.contoso.com
 
-Дополнительные сведения о настройке SSL-сертификатов см. в разделе [Настройка SSL и TLS на веб-сайте в домене с помощью ЦС предприятия](https://social.technet.microsoft.com/wiki/contents/articles/12485.configure-ssltls-on-a-web-site-in-the-domain-with-an-enterprise-ca.aspx).
+Дополнительные сведения о настройке SSL-сертификатов см. в разделе [Настройка SSL и TLS на веб-сайте в домене с помощью ЦС предприятия](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831822(v=ws.11)).
 
 [Серии видеороликов с практическими рекомендациями по работе со службами федерации Active Directory: обновление сертификатов](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search).
 
@@ -173,7 +173,7 @@ ms.locfileid: "86963666"
 ### <a name="add-host-a-and-alias-cname-resource-records-to-dns"></a>Добавление записей ресурсов узла (А) и псевдонима (CNAME) в DNS
 В DC1 необходимо убедиться, что для службы регистрации устройств созданы следующие записи доменной службы имен (DNS).
 
-|Ввод|Type|Адрес|
+|Ввод|Тип|Адрес|
 |---------|--------|-----------|
 |adfs1|Узел (A)|IP-адрес сервера AD FS|
 |enterpriseregistration|Псевдоним (CNAME)|adfs1.contoso.com|
@@ -256,7 +256,7 @@ ms.locfileid: "86963666"
 
 2.  Копируйте содержимое из папки C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5\Samples\Quick Start\Web Application\PassiveRedirectBasedClaimsAwareWebApp в папку C:\Inetpub\Claimapp.
 
-3.  Редактируйте файл **Default.aspx.cs**, чтобы фильтрация утверждений не осуществлялась. Этот шаг нужен для того, чтобы в примере приложения отображались все утверждения, изданные сервером федерации. Выполните следующие действия.
+3.  Редактируйте файл **Default.aspx.cs**, чтобы фильтрация утверждений не осуществлялась. Этот шаг нужен для того, чтобы в примере приложения отображались все утверждения, изданные сервером федерации. Выполните следующие действия:
 
     1.  Откройте **Default.aspx.cs** в текстовом редакторе.
 
@@ -307,9 +307,9 @@ ms.locfileid: "86963666"
 
     1.  Запустите FedUtil.exe, расположенный в **C:\Program Files (x86)\Windows Identity Foundation SDK\v3.5**.
 
-    2.  Задайте для расположения конфигурации приложения значение **C:\inetput\claimapp\web.config** и задайте для URI приложения URL-адрес сайта ** https://webserv1.contoso.com /клаимапп/**. Щелкните **Далее**.
+    2.  Задайте для расположения конфигурации приложения значение **C:\inetput\claimapp\web.config** и задайте для URI приложения URL-адрес сайта ** https://webserv1.contoso.com /клаимапп/**. Нажмите кнопку **Далее**.
 
-    3.  Выберите **использовать СУЩЕСТВУЮЩУЮ STS** и перейдите к URL-адресу метаданных сервера AD FS **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Щелкните **Далее**.
+    3.  Выберите **использовать СУЩЕСТВУЮЩУЮ STS** и перейдите к URL-адресу метаданных сервера AD FS **https://adfs1.contoso.com/federationmetadata/2007-06/federationmetadata.xml** . Нажмите кнопку **Далее**.
 
     4.  Выберите **Отключить проверку цепочки сертификатов**, а затем нажмите кнопку **Далее**.
 
@@ -356,7 +356,7 @@ ms.locfileid: "86963666"
 
 Необходимо также настроить и использовать учетную запись Microsoft для входа на Клиент1.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 
 - [Серии видеороликов с практическими рекомендациями по работе со службами федерации Active Directory: установка фермы серверов AD FS Server Farm](https://channel9.msdn.com/Search?term=Active%20Directory%20Federation%20Services#pubDate=year&ch9Search)

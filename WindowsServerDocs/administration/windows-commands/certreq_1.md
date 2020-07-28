@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5d51cc178ee5b689071336b0dabd1e8d3565bcd2
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 4610db6755f5177306dfcf4feec005eab6efabfd
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86955366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87178680"
 ---
 # <a name="certreq"></a>certreq
 
@@ -65,7 +65,7 @@ certreq –enroll –cert certId [options] renew [reusekeys]
 certreq –submit certrequest.req certnew.cer certnew.pfx
 ```
 
-#### <a name="remarks"></a>Комментарии
+#### <a name="remarks"></a>Remarks
 
 - Это параметр certreq.exe по умолчанию. Если в командной строке не указан параметр, certreq.exe пытается отправить запрос на сертификат в центр сертификации. При использовании параметра **– Submit** необходимо указать файл запроса сертификата. Если этот параметр пропущен, отображается общее окно **открытия файла** , позволяющее выбрать соответствующий файл запроса сертификата.
 
@@ -79,7 +79,7 @@ certreq –submit certrequest.req certnew.cer certnew.pfx
 certreq -retrieve 20 MyCertificate.cer
 ```
 
-#### <a name="remarks"></a>Комментарии
+#### <a name="remarks"></a>Remarks
 
 - Используйте certreq — получение *RequestId* для получения сертификата после его выдачи центром сертификации. Идентификатор *RequestId* ПКК может быть десятичным или шестнадцатеричным с префиксом 0x. он может быть серийным номером сертификата без префикса 0x. Его также можно использовать для получения сертификата, который когда-либо был выдан центром сертификации, включая отозванные или просроченные сертификаты, независимо от того, находится ли запрос сертификата в состоянии ожидания.
 
@@ -103,7 +103,7 @@ subject = CN=W2K8-BO-DC.contoso2.com
 
 | Ключ<sup>1</sup> | Описание | Значение<sup>2</sup> | Пример |
 | --- | ---------- | ----- | ------- |
-| Тема | Несколько приложений используют сведения о субъекте в сертификате. Рекомендуется указывать значение для этого ключа. Если тема не задана, мы рекомендуем включить имя субъекта как часть расширения сертификата альтернативного имени субъекта. | Строковые значения относительного различающегося имени | Subject = CN = COMPUTER1. contoso. com subject = CN = John Smith, CN = Users, DC = contoso, DC = com |
+| Субъект | Несколько приложений используют сведения о субъекте в сертификате. Рекомендуется указывать значение для этого ключа. Если тема не задана, мы рекомендуем включить имя субъекта как часть расширения сертификата альтернативного имени субъекта. | Строковые значения относительного различающегося имени | Subject = CN = COMPUTER1. contoso. com subject = CN = John Smith, CN = Users, DC = contoso, DC = com |
 | Exportable | Если задано значение TRUE, закрытый ключ можно экспортировать вместе с сертификатом. Чтобы обеспечить высокий уровень безопасности, закрытые ключи не должны быть экспортированы. Однако в некоторых случаях это может потребоваться, если несколько компьютеров или пользователей должны совместно использовать один закрытый ключ. | `true | false` | `Exportable = TRUE`. Ключи CNG могут различать этот и экспортируемый текст. Ключи CAPI1 не могут быть. |
 | експортаблинкриптед | Указывает, должен ли закрытый ключ быть настроен для экспорта. | `true | false` | `ExportableEncrypted = true`<p>**Совет.** Не все размеры открытых ключей и алгоритмы будут работать со всеми алгоритмами хэширования. Указанный CSP также должен поддерживать указанный хэш-алгоритм. Чтобы просмотреть список поддерживаемых хэш-алгоритмов, можно выполнить команду:`certutil -oid 1 | findstr pwszCNGAlgid | findstr /v CryptOIDInfo` |
 | HashAlgorithm | Хэш-алгоритм, используемый для этого запроса. | `Sha256, sha384, sha512, sha1, md5, md4, md2` | `HashAlgorithm = sha1`. Чтобы просмотреть список поддерживаемых хэш-алгоритмов, используйте команду certutil-OID 1. | Findstr Пвсзкнгалгид | Findstr/v Криптоидинфо|
@@ -260,7 +260,7 @@ certreq -sign myrequest.req myrequest.req
 certreq -submit myrequest_sign.req myrequest_cert.cer
 ```
 
-#### <a name="remarks"></a>Комментарии
+#### <a name="remarks"></a>Remarks
 
 - `certreq -sign`При использовании без каких-либо дополнительных параметров откроется диалоговое окно, в котором можно выбрать запрошенный файл (req, CMC, txt, Der, CER или CRT).
 
@@ -292,7 +292,7 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 
 Можно обновить только действительные сертификаты. Сертификаты с истекшим сроком действия не могут быть обновлены. их необходимо заменить новым сертификатом.
 
-## <a name="options"></a>Варианты
+## <a name="options"></a>Параметры
 
 | Параметры | Описание |
 | ------- | ----------- |
@@ -341,10 +341,8 @@ certreq –enroll -machine –cert 61 2d 3c fe 00 00 00 00 00 05 renew
 
 - [Как создать сертификат SSL веб-сервера вручную](https://techcommunity.microsoft.com/t5/core-infrastructure-and-security/how-to-create-a-web-server-ssl-certificate-manually/ba-p/1128529)
 
-- [Запрос сертификата инициализации AMT с помощью центра сертификации Windows Server 2008](https://social.technet.microsoft.com/wiki/contents/articles/548.request-an-amt-provisioning-certificate-using-a-windows-server-2008-ca.aspx)
+- [Регистрация сертификата для агента System Center Operations Manager](https://docs.microsoft.com/system-center/scom/plan-planning-agent-deployment?view=sc-om-2019)
 
-- [Регистрация сертификата для агента System Center Operations Manager](https://social.technet.microsoft.com/wiki/contents/articles/2017.certificate-enrollment-for-system-center-operations-manager-agent.aspx)
-
-- [Пошаговое руководство по службам AD CS: развертывание иерархии PKI на двух уровнях](https://social.technet.microsoft.com/wiki/contents/articles/15037.ad-cs-step-by-step-guide-two-tier-pki-hierarchy-deployment.aspx)
+- [Обзор службы сертификации Active Directory](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740(v=ws.11))
 
 - [Включение LDAP по протоколу SSL с помощью стороннего центра сертификации](https://support.microsoft.com/help/321051/how-to-enable-ldap-over-ssl-with-a-third-party-certification-authority)

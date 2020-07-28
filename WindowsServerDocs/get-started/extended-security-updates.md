@@ -9,12 +9,12 @@ ms.author: iainfou
 ms.topic: get-started-article
 ms.localizationpriority: high
 ms.date: 02/21/2020
-ms.openlocfilehash: 6c9d732b6ec3d8ceb65c691ab143f09dd8f10f23
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 19a65f2a254fe14f7cddfbda2a84e9d00f47da56
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "77552538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181850"
 ---
 # <a name="how-to-use-windows-server-2008-and-2008-r2-extended-security-updates-esu"></a>Использование дополнительных обновлений для системы безопасности Windows Server 2008 и 2008 R2
 
@@ -87,7 +87,7 @@ ms.locfileid: "77552538"
 5. Если отображается страница с сообщением "Register to get a Multiple Activation Key" (Зарегистрируйтесь для получения ключа многократной активации), для использования дополнительных обновлений для системы безопасности, необходимо сначала запросить доступ к закрытой предварительной версии. Если эта страница не отображается, перейдите к шагу 6.
 
    Чтобы запросить доступ, выберите **join the private preview** (Присоединиться к закрытой предварительной версии). Откроется окно сообщения электронной почты. Этот адрес электронной почты является вашим запросом на доступ к команде разработчиков.
-  
+
     Включите в запрос следующие сведения:
 
     * имя пользователя;
@@ -101,7 +101,7 @@ ms.locfileid: "77552538"
 
     Если команда не утвердит ваш запрос, вы увидите следующую ошибку:
 
-    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://social.msdn.microsoft.com/Forums/office/94b16a89-3149-43da-865d-abf7dba7b977/the-resource-type-could-not-be-found-in-the-namespace-microsoftwindowsesu-for-api-version) (Не удалось найти тип ресурса в пространстве имен Microsoft.WindowsESU).
+    [The resource type could not be found in the namespace 'Microsoft.WindowsESU'](https://docs.microsoft.com/windows-server/get-started/extended-security-updates) (Не удалось найти тип ресурса в пространстве имен Microsoft.WindowsESU).
 
 6. В разделе **Сведения об Azure** выберите подписку Azure, группу ресурсов и расположение для своего ключа.
 

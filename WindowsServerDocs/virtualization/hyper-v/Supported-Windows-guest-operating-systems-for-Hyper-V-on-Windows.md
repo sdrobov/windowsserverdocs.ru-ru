@@ -9,12 +9,12 @@ ms.assetid: 06b35897-2192-48b7-8c2d-125c520b0786
 author: lizap
 ms.author: elizapo
 ms.date: 01/08/2019
-ms.openlocfilehash: 514f43447f808aabfe2a20ea01b2d8fd65d628ea
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: ddcb4f080183b6a1c8ae0ed0d705597c1a0dd4a5
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474371"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181800"
 ---
 # <a name="supported-windows-guest-operating-systems-for-hyper-v-on-windows-server"></a>Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server
 
@@ -36,8 +36,8 @@ Hyper-V поддерживает несколько версий дистриб�
 |Windows Server 2019 |240 для поколения 2;<br>64 для поколения 1|Встроено||
 |Windows Server, версия 1803 |240 для поколения 2;<br>64 для поколения 1|Встроено||
 |Windows Server 2016 |240 для поколения 2;<br>64 для поколения 1|Встроено||
-|Windows Server 2012 R2 |64|Встроено||
-|Windows Server 2012 |64|Встроено||
+|Windows Server 2012 R2 |64|Встроено||
+|Windows Server 2012 |64|Встроено||
 |Windows Server 2008 R2 с пакетом обновления 1 (SP1)|64|Установите все критические обновления Windows после настройки операционной системы на виртуальной машине.|Выпуски Datacenter, Enterprise, Standard и Web.|
 |Windows Server 2008 с пакетом обновления 2 (SP2)|8|Установите все критические обновления Windows после настройки операционной системы на виртуальной машине.|Выпуски Datacenter, Enterprise, Standard и Web (32-разрядные и 64-разрядные).|
 
@@ -58,9 +58,9 @@ Hyper-V поддерживает несколько версий дистриб�
 |Главная операционная система|Раздел|
 |-------------------------|---------|
 |Windows 10|[Поддерживаемые гостевые операционные системы для клиента Hyper-V в Windows 10](https://docs.microsoft.com/virtualization/hyper-v-on-windows/about/supported-guest-os)|
-|Windows Server 2012 R2 и Windows 8.1|-   [Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server 2012 R2 и Windows 8.1](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Виртуальные машины Linux и FreeBSD в Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
-|Windows Server 2012 и Windows 8|[Поддерживаемые операционные системы Windows на виртуальных машинах для Hyper-V в Windows Server 2012 и Windows 8](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
-|Windows Server 2008 и Windows Server 2008 R2|[О виртуальных машинах и гостевых операционных системах](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
+|Windows Server 2012 R2 и Windows 8.1|-   [Поддерживаемые гостевые операционные системы Windows для Hyper-V в Windows Server 2012 R2 и Windows 8.1](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792027(v=ws.11))<br />-   [Виртуальные машины Linux и FreeBSD в Hyper-V](Supported-Linux-and-FreeBSD-virtual-machines-for-Hyper-V-on-Windows.md)|
+|Windows Server 2012 и Windows 8|[Поддерживаемые операционные системы Windows на виртуальных машинах для Hyper-V в Windows Server 2012 и Windows 8](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn792028(v=ws.11))|
+|Windows Server 2008 и Windows Server 2008 R2|[О виртуальных машинах и гостевых операционных системах](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc794868(v=ws.10))|
 
 ## <a name="how-microsoft-provides-support-for-guest-operating-systems"></a>Как корпорация Майкрософт обеспечивает поддержку гостевых операционных систем
 

@@ -9,12 +9,12 @@ author: justinha
 ms.author: justinha
 manager: brianlic
 ms.date: 05/16/2018
-ms.openlocfilehash: fac7e780fc584f0ce4dde8bb87ce37035840a40a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b70a8fefc05723b78dbf5e652bf35f7b8b5cff4d
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474881"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182320"
 ---
 # <a name="overview-of-tls---ssl-schannel-ssp"></a>Обзор TLS-SSL (поставщик общих служб Schannel)
 
@@ -104,7 +104,7 @@ Schannel — это поставщик поддержки безопасност
 
 Существует три режима доверия при проверке подлинности клиента, поддерживаемых поставщиком Schannel. Режим доверия определяет, как выполняется проверка цепочки сертификатов клиента и является параметром на уровне системы, управляемым REG_DWORD "Клиентауструстмоде" в разделе HKEY_LOCAL_MACHINE \Систем\куррентконтролсет\контрол\секуритипровидерс\счаннел.
 
-|Значение|Режим доверия|Описание:|
+|Значение|Режим доверия|Описание|
 |-----|-------|--------|
 |0|Доверие компьютера (по умолчанию)|Требует, чтобы сертификат клиента выдавался сертификатом из списка доверенных издателей.|
 |1|Монопольное корневое доверие|Требует, чтобы клиентский сертификат связывался с корневым сертификатом, содержащимся в определенном вызывающей стороной хранилище доверенного издателя. Сертификат также должен быть выдан издателем из списка доверенных издателей.|
@@ -148,6 +148,4 @@ Schannel — это поставщик поддержки безопасност
 В поставщике общих служб SChannel для Windows Server 2012 и Windows 8 не поддерживаются устаревшие функции или функции.
 
 ## <a name="additional-references"></a>Дополнительные ссылки
--   [Модель безопасности частного облака — функциональные возможности программы-оболочки](https://social.technet.microsoft.com/wiki/contents/articles/6756.private-cloud-security-model-wrapper-functionality.aspx)
-
-
+-   [Модель безопасности частного облака — функциональные возможности программы-оболочки](https://docs.microsoft.com/archive/blogs/cloudsolutions/cloud-services-foundation-reference-architecture-overview)

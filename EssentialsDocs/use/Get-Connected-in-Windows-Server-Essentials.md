@@ -2,18 +2,17 @@
 title: Установка подключения в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 05/07/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 149a5d34-43b7-4b9e-99e7-9f2294ab9ddb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3e8c50b94b441f75a5b80d3a46f42a87450496a1
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c1dafb9fb89109a16f2f28662464494691a2f2f0
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470068"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87179950"
 ---
 # <a name="get-connected-in-windows-server-essentials"></a>Установка подключения в Windows Server Essentials
 
@@ -192,7 +191,7 @@ ms.locfileid: "85470068"
 
 - Windows 10 Pro
 
-- Windows 10 Корпоративная
+- Windows 10 Корпоративная
 
 - Windows 10 для образовательных учреждений
 
@@ -240,7 +239,7 @@ ms.locfileid: "85470068"
 
 - Windows 10 Pro
 
-- Windows 10 Корпоративная
+- Windows 10 Корпоративная
 
 - Windows 10 для образовательных учреждений
 
@@ -395,7 +394,7 @@ ms.locfileid: "85470068"
     > [!NOTE]
     >  Если компьютер находится в удаленном расположении за пределами сети Windows Server Essentials, для запуска мастера подключения компьютера к серверу введите **http://<имя_домена \> /Коннект** в адресной строке веб-браузера (где <домен \> является доменным именем вашей организации). Информацию об имени домена можно получить у администратора сети.
 
-4.  Откроется страница **Подключение компьютера к серверу**. Выполните одно из следующих действий.
+4.  Откроется страница **Подключение компьютера к серверу**. Используйте один из следующих вариантов:
 
     -   Если компьютер работает под управлением ОС Windows, щелкните ссылку **Загрузить программное обеспечение для Windows**.
 

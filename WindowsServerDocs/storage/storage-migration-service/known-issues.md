@@ -8,12 +8,12 @@ ms.date: 06/02/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: a6ee550a0652f5b357a966e4074afdf499fcea34
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: d7c76413fbc64ce200ca4c442a30e6f804927f68
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86953916"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182060"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -534,14 +534,26 @@ ms.locfileid: "86953916"
 
 ## <a name="inventory-or-transfer-fail-when-using-credentials-from-a-different-domain"></a>Сбой инвентаризации или перемещения при использовании учетных данных из другого домена
 
-При попытке запуска инвентаризации или переноса с помощью службы миграции хранилища и нацеливания на Windows Server с использованием учетных данных миграции из домена, не являющегося целевым сервером, появляются следующие ошибки.
+При попытке запуска инвентаризации или переноса с помощью службы миграции хранилища и нацеливания на Windows Server с использованием учетных данных миграции из домена, который не является целевым сервером, вы получаете одну или несколько следующих ошибок.
+
+    Exception from HRESULT:0x80131505
 
     The server was unable to process the request due to an internal error
 
-    04/28/2020-11:31:01.169 [Erro] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+    04/28/2020-11:31:01.169 [Error] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+
+Анализ журналов дополнительно показывает, что учетная запись миграции и сервер, на котором выполняется миграция, находятся в разных доменах:
+
+    ```
+    06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned    
+    [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
+    ```
+    
+    GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66]
+06/25/2020-10:20:45.368 [info] Computer ' fileserver75.corp.contoso.com ': версия ОС 
 
 Эта проблема вызвана дефектом кода в службе миграции хранилища. Чтобы обойти эту ошибку, используйте учетные данные миграции из того же домена, к которому принадлежат исходный и конечный компьютеры. Например, если исходный и конечный компьютеры принадлежат домену "corp.contoso.com" в лесу "contoso.com", используйте "корп\мяккаунт", чтобы выполнить миграцию, а не учетные данные "контосо\мяккаунт".
 
-## <a name="see-also"></a>Дополнительно
+## <a name="see-also"></a>См. также раздел
 
 - [Обзор службы миграции хранилища](overview.md)

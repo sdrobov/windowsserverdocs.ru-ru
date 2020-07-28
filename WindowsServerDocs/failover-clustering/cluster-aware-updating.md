@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 08/06/2018
 ms.assetid: 3c2993b4-aa81-452b-a5c3-3724ad95d892
-ms.openlocfilehash: bd3c15d08b0d4b6f174fd9c790f0dacb2457472e
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: fbe523043b905e80559dfb9df799426761709b4e
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177920"
 ---
 # <a name="cluster-aware-updating-overview"></a>Общие сведения о кластерном обновлении
 
@@ -71,7 +71,7 @@ ms.locfileid: "85473291"
 
 -   ** \- Режим удаленного обновления** для этого режима — удаленный компьютер, который называется координатором обновлений, настраивается с помощью средств Cau. Координатор обновлений не является членом кластера, обновление которого проводится во время прогона обновления. С удаленного компьютера администратор активирует \- Запуск обновления по запросу с помощью стандартного или пользовательского профиля прогона обновления. \-Режим удаленного обновления полезен для мониторинга хода выполнения процесса обновления в реальном \- времени и для кластеров, работающих в установках Server Core.
 
-## <a name="hardware-and-software-requirements"></a>Требования к аппаратному и программному обеспечению
+## <a name="hardware-and-software-requirements"></a>Требования к оборудованию и программному обеспечению
 
 CAU можно использовать во всех выпусках Windows Server, включая установки Server Core. Подробные сведения о требованиях см. в статье [требования к кластерному обновлению и](cluster-aware-updating-requirements.md)рекомендации.
 
@@ -117,7 +117,7 @@ CAU можно использовать во всех выпусках Windows S
 
 1.  Запустите диспетчер серверов.
 
-2.  Выполните одно из следующих действий.
+2.  Используйте один из следующих вариантов:
 
     -   В меню **Сервис** выберите пункт **обновление с \- поддержкой кластера**.
 
@@ -136,6 +136,6 @@ CAU можно использовать во всех выпусках Windows S
 
 -   [\-Командлеты обновления с поддержкой кластера в Windows PowerShell](https://docs.microsoft.com/powershell/module/clusterawareupdating/?view=win10-ps&viewFallbackFrom=winserverr2-ps)
 
--   [\-Справочник по подключаемому модулю обновления с поддержкой кластера \-](https://docs.microsoft.com/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)
+-   [\-Справочник по подключаемому модулю обновления с поддержкой кластера \-](/previous-versions/windows/desktop/mscs/cluster-aware-update-plug-in-interfaces-and-classes)
 
 

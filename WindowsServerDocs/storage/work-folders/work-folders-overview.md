@@ -9,12 +9,12 @@ manager: dougkim
 ms.author: jgerend
 ms.date: 06/15/2020
 description: Обзор рабочих папок — роли сервера в Windows Server, которая предоставляет пользователям согласованный способ доступа к рабочим файлам с компьютеров и других устройств.
-ms.openlocfilehash: a6c1f8a30e3e83a0e7a6bac622982f4f43c44258
-ms.sourcegitcommit: f305bc5f1c5a44dac62f4288450af19f351f9576
+ms.openlocfilehash: 4759584773698dded934d435e601da4e05ff9ee6
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "87118601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181910"
 ---
 # <a name="work-folders-overview"></a>Обзор рабочих папок
 
@@ -56,7 +56,7 @@ ms.locfileid: "87118601"
 
  Ниже перечислены некоторые важные функции рабочих папок.
 
-| Функциональность | Доступность | Описание |
+| функциональное назначение; | Доступность | Описание |
 | ------------------- | ------------------ | ----------------- |
 | Служба роли рабочих папок в диспетчере серверов | Windows Server 2019, Windows Server 2016 или Windows Server 2012 R2 | Службы файлов и хранилищ позволяют настроить общие ресурсы синхронизации (папки, в которых хранятся рабочие файлы пользователей), отслеживают рабочие папки и общими ресурсами синхронизации и доступом пользователей |
 | Командлеты рабочих папок | Windows Server 2019, Windows Server 2016 или Windows Server 2012 R2 | Модуль Windows PowerShell, который содержит полный набор командлетов для управления серверами рабочих папок |
@@ -140,9 +140,9 @@ ms.locfileid: "87118601"
 | | рабочие папки | Автономные файлы | OneDrive для бизнеса | OneDrive |
 | - | ------------------ | ------------------- | -------------------------- | -------------- |
 | **Сводная информация о технологии** | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами и устройствами | Синхронизирует файлы, которые хранятся на файловом сервере, с компьютерами с доступом к корпоративной сети (можно заменить на рабочие папки) | Синхронизирует файлы, которые хранятся в Office 365 или SharePoint, с компьютерами и устройствами внутри корпоративной сети и за ее пределами, а также предоставляет возможности для совместной работы с документами | Синхронизирует личные файлы, сохраненные в OneDrive, с ПК, Mac и другими устройствами |
-| **Предназначено для предоставления пользователям доступа к рабочим файлам** | Да | Да | Да | Нет |
-| **облачная служба** | Отсутствуют | Отсутствуют | Office 365 | Microsoft OneDrive |
-| **Внутренние сетевые серверы** | Файловые серверы под Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019 | Файловые серверы | Сервер SharePoint (необязательно) | Отсутствуют |
+| **Предназначено для предоставления пользователям доступа к рабочим файлам** | да | да | Да | Нет |
+| **облачная служба** | Отсутствуют | Отсутствуют | Office 365 | Microsoft OneDrive |
+| **Внутренние сетевые серверы** | Файловые серверы под Windows Server 2012 R2, Windows Server 2016 и Windows Server 2019 | Файловые серверы | Сервер SharePoint (необязательно) | Нет |
 | **Поддерживаемые клиенты** | ПК, iOS, Android | ПК в корпоративной сети или ПК, подключенные через DirectAccess, VPN и другие технологии удаленного доступа | ПК, iOS, Android, Windows Phone | ПК, Mac, Windows Phone, iOS, Android |
 
 > [!NOTE]
@@ -164,13 +164,13 @@ ms.locfileid: "87118601"
 
 Дополнительные сведения о начале работы с виртуальными машинами Microsoft Azure см. на [веб-сайте Microsoft Azure](https://www.windowsazure.com/documentation/services/virtual-machines).
 
-## <a name="see-also"></a>См. также статью
+## <a name="see-also"></a>См. также раздел
 
 | Тип содержимого | Ссылки |
 | ------------------ | ---------------- |
 | **Оценка продукта** | -   [Рабочие папки для Android — выпущено](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись в блоге)<br />-   [Рабочие папки для iOS — выпуск приложений iPad](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)<br />-   [Знакомство с рабочими папками в Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)<br />-   [Введение в рабочие папки](https://channel9.msdn.com/posts/Introduction-to-Work-Folders) (видео Channel 9)<br />-   [Развертывание тестовой лаборатории рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)<br />-   [Рабочие папки для Windows 7](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога) |
-| **Deployment** | -   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />- [Использование автономные файлы (CSC) с руководством по миграции рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Рекомендации по производительности при развертывании рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559) |
+| **Развертывание** | -   [Разработка реализации рабочих папок](plan-work-folders.md)<br />-   [Развертывание рабочих папок](deploy-work-folders.md)<br />-   [Развертывание рабочих папок с помощью AD FS и прокси веб-приложения (WAP)](deploy-work-folders-adfs-overview.md)<br />-   [Развертывание рабочих папок с помощью прокси-сервера приложения Azure AD](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />- [Использование автономные файлы (CSC) с руководством по миграции рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Рекомендации по производительности при развертывании рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Рабочие папки для Windows 7 (Загрузка 64-бит)](https://www.microsoft.com/download/details.aspx?id=42558)<br />-   [Рабочие папки для Windows 7 (Загрузка 32-бит)](https://www.microsoft.com/download/details.aspx?id=42559) |
 | **Операции** | -   [Приложение для работы с рабочими папками для iPad: вопросы и ответы](https://windows.microsoft.com/windows/work-folders-ipad-faq) (для пользователей)<br />-   [Управление сертификатами рабочих папок](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)<br />-   [Мониторинг развертываний рабочих папок Windows Server 2012 R2](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись блога)<br />-   [Командлеты Синкшаре (рабочие папки) в Windows PowerShell](/powershell/module/syncshare/?view=win10-ps)<br />-   [Краткий справочник по командлетам службы хранилища и файловых служб PowerShell для Windows Server 2012 R2 Preview Edition](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) |
-| **Устранение неполадок** | -   [Windows Server 2012 R2 — устранение конфликтов портов с веб-сайтами IIS и рабочими папками](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись в блоге)<br />-   [Распространенные ошибки в рабочих папках](https://social.technet.microsoft.com/wiki/contents/articles/30578.common-errors-in-work-folders.aspx) |
-| **Ресурсы сообщества** | -   [Форум по файловым службам и хранилищам](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverfiles)<br />-   [Рабочая группа по хранению данных Майкрософт — блог File Cabinet](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Обратитесь к блогу группы по службам каталогов](/archive/blogs/askds/) |
+| **Устранение неполадок** | -   [Windows Server 2012 R2 — устранение конфликтов портов с веб-сайтами IIS и рабочими папками](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB) (запись в блоге)<br />-   [Распространенные ошибки в рабочих папках](https://techcommunity.microsoft.com/t5/storage-at-microsoft/troubleshooting-work-folders-on-windows-client/ba-p/425627) |
+| **Ресурсы сообщества** | -   [Форум по файловым службам и хранилищам](https://docs.microsoft.com/answers/topics/windows-server-storage.html)<br />-   [Рабочая группа по хранению данных Майкрософт — блог File Cabinet](https://techcommunity.microsoft.com/t5/storage-at-microsoft/bg-p/FileCAB)<br />-   [Обратитесь к блогу группы по службам каталогов](/archive/blogs/askds/) |
 | **Связанные технологии** | -   [Хранилище в Windows Server 2016](../storage.yml)<br>-   [Службы файлов и хранилища](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831487(v=ws.11))<br />-   [диспетчер ресурсов файлового сервера](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831701(v=ws.11))<br />-   [Перенаправление папок, автономные файлы и перемещаемые профили пользователей](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh848267(v=ws.11))<br />-   [BranchCache](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831696(v=ws.11))<br />-   [Пространства имен и репликация DFS DFS](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj127250(v=ws.11)) |

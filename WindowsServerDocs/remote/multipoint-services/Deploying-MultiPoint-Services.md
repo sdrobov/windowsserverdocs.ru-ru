@@ -9,14 +9,15 @@ ms.assetid: 594bc09e-5d2d-4984-a9de-79d40b1308d6
 author: evaseydl
 ms.author: evas
 manager: scottman
-ms.openlocfilehash: 94a7a199bf19179217fff00453ac5542e133bba0
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 0e24fadf1914c43bf6270e1d84c5a5535518d9bd
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473651"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182040"
 ---
 # <a name="deploying-multipoint-services"></a>Развертывание служб MultiPoint
+
 В этом руководство описано, как развернуть сервер с запущенными службами MultiPoint и настроить станции MultiPoint, установить и настроить систему, настроить учетные записи пользователей и выполнить некоторые базовые задачи администрирования, такие как включение защиты диска и Настройка резервных копий, прежде чем приступать к использованию системы.
 
 > [!NOTE]
@@ -42,5 +43,3 @@ ms.locfileid: "85473651"
 ## <a name="additional-references"></a>Дополнительные ссылки
 
 - [Службы MultiPoint](MultiPoint-Services.md)
--   [Форум по службам MultiPoint](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=windowsmultipointserver&filter=alltypes&sort=lastpostdesc)
-

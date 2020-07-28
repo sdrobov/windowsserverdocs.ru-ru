@@ -9,12 +9,12 @@ ms.author: jgerend
 ms.technology: storage-failover-clustering
 ms.date: 06/06/2019
 ms.localizationpriority: high
-ms.openlocfilehash: 5b0193f18fe94f391f1bbbc41280c16e4a1bcd0c
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: 657cf161086047ca87ca7dbd2adcd2b8e6bde892
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203495"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87177890"
 ---
 # <a name="failover-clustering-in-windows-server"></a>Отказоустойчивая кластеризация в Windows Server
 
@@ -40,7 +40,7 @@ ms.locfileid: "83203495"
 | [Наборы кластеров](../storage/storage-spaces/cluster-sets.md)                  |                             |[Развертывание файлового ресурса-свидетеля](file-share-witness.md) |
 | [Сходство кластеров](cluster-affinity.md)                                     |                            | [Последовательное обновление ОС кластера](cluster-operating-system-rolling-upgrade.md) |
 |                                                                             |                            | [Обновление отказоустойчивого кластера на одном оборудовании](upgrade-option-same-hardware.md) |
-|                                                                            |                             | [Развертывание отсоединенного от Active Directory кластера](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
+|                                                                            |                             | [Развертывание отсоединенного от Active Directory кластера](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265970\(v%3dws.11\))
 
 |**Управление**  |  **Средства и параметры**  |  **Ресурсы сообщества**       |
 | ------------- |  -------------- | --------------------- |

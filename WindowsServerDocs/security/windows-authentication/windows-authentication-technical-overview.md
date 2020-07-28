@@ -9,16 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 7a19230e0fc1fb96700785fd83e70d501d59b76a
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bd4aa60c977b09958aebc0087c981efd02f36fed
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80861697"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182300"
 ---
 # <a name="windows-authentication-technical-overview"></a>Технический обзор проверки подлинности Windows
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В этом разделе для ИТ Professional содержатся ссылки на статьи, посвященные техническим обзору проверки подлинности Windows. Проверка подлинности Windows — это процесс, подтверждающий подлинность пользователя или службы, пытающейся получить доступ к Windows.
 
@@ -54,14 +54,14 @@ ms.locfileid: "80861697"
 
     Описывает использование и влияние групповых политик в процессе проверки подлинности.
 
-## <a name="what-is-not-covered"></a>Что не охватывается
+## <a name="what-is-not-covered"></a>Не рассматриваемые темы
 В этой коллекции разделов не рассматриваются процедуры проектирования, реализации и мониторинга технологий проверки подлинности в среде Windows.
 
 -   Сведения о стратегиях авторизации Windows см. в статье [Разработка стратегии авторизации ресурсов](https://technet.microsoft.com/library/cc783368.aspx).
 
 -   Сведения о проектировании стратегии проверки подлинности Windows см. в разделе [Разработка стратегии проверки подлинности](https://technet.microsoft.com/library/cc758124.aspx).
 
--   Сведения о стратегиях реализации инфраструктуры открытых ключей Windows см. в разделе [Разработка инфраструктуры открытых ключей](https://technet.microsoft.com/library/cc773138.aspx).
+-   Сведения о стратегиях реализации инфраструктуры открытых ключей Windows см. в разделе [Разработка инфраструктуры открытых ключей](/previous-versions/windows/it-pro/windows-server-2003/cc773138(v=ws.10)).
 
 -   Сведения о настройке и мониторинге безопасности, включая проверку подлинности, в среде Windows см. в следующих статьях:
 
@@ -71,7 +71,7 @@ ms.locfileid: "80861697"
 
     -   [Базовые показатели безопасности Windows Server 2003](https://technet.microsoft.com/library/cc163140.aspx) и [рекомендации по угрозам и контрмерам](https://technet.microsoft.com/library/dd162275.aspx)
 
-    -   [Рекомендации по безопасности Windows Server 2008](https://www.microsoft.com/download/details.aspx?id=17606)
+    -   [Руководство по безопасности Windows Server 2008](https://www.microsoft.com/download/details.aspx?id=17606)
 
     -   [Базовые показатели безопасности Windows Server 2008 R2](https://technet.microsoft.com/library/gg236605.aspx)
 

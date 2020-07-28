@@ -2,18 +2,17 @@
 title: Переход с Windows Server Essentials на Windows Server 2012 Standard
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 51bcf124-c215-4e9d-9fa8-a90fa2c2fa22
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 2477cac206af4e70d10e28d7b1da637b7b7accff
-ms.sourcegitcommit: 457e88e5aa6be13a2bffdb8e434a8efc3698678f
+ms.openlocfilehash: 4cc616c0e23c58ab1298526784574f6bc8f65f23
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/30/2020
-ms.locfileid: "85548818"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180390"
 ---
 # <a name="transition-from-windows-server-essentials-to-windows-server-2012-standard"></a>Переход с Windows Server Essentials на Windows Server 2012 Standard
 
@@ -76,7 +75,7 @@ ms.locfileid: "85548818"
  Если вам больше не нужна панель мониторинга Windows Server Essentials или другие компоненты для управления сервером, можно отключить эти компоненты и удалить их с сервера.
 
  **Мастер отключения компонентов Windows Server Essentials:**
- 
+
 - помогает удалить компоненты. Он также очищает серверные файлы, созданные программным обеспечением сервера Windows Server Essentials.  Некоторые операции удаления выполняются сразу, а другие запускаются после перезагрузки сервера.
 
 - перед завершением работы мастера необходимо вручную удалить все надстройки. Чтобы просмотреть список установленных надстроек, откройте страницу "Приложение" на информационной панели. Если мастер обнаружит установленные надстройки, появится предупреждение с предложением удалить их.

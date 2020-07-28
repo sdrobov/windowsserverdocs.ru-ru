@@ -2,132 +2,130 @@
 title: Поддержка Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 880f36980955d173d629aaecb705124f1b5b0684
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b1d684b594d7ad0361c2859db4cf30bbb4239a30
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470199"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180350"
 ---
 # <a name="support-windows-server-essentials"></a>Поддержка Windows Server Essentials
 
->Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
+> Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 Этот раздел содержит сведения о возможностях поддержки и устранения неполадок Windows Server Essentials.
 
-##  <a name="top-support-solutions-and-updates"></a><a name="BKMK_Top"></a>Лучшие решения и обновления поддержки
+## <a name="top-support-solutions-and-updates"></a>Основные решения и обновления
 
--   [Основные решения поддержки для Windows Server 2012 R2 и Windows Server 2012](https://blogs.technet.com/b/topsupportsolutions/archive/2014/02/04/top-support-solutions-for-microsoft-windows-server-2012.aspx)
+- [Основные решения поддержки для Windows Server 2012 R2 и Windows Server 2012](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831490(v=ws.11))
 
--   [Обновление для средства подготовки миграции Windows Server Essentials](https://support.microsoft.com/kb/2908176) (Декабрь 2013)
+- [Обновление для средства подготовки миграции Windows Server Essentials](https://support.microsoft.com/kb/2908176) (Декабрь 2013)
 
--   [Накопительный пакет обновления 1 для Windows Server Essentials](https://support.microsoft.com/kb/2887595) (Ноябрь 2013)
+- [Накопительный пакет обновления 1 для Windows Server Essentials](https://support.microsoft.com/kb/2887595) (Ноябрь 2013)
 
--   [Накопительный пакет обновления 3 для Windows Server Essentials](https://support.microsoft.com/kb/2862551) (Октябрь 2013)
+- [Накопительный пакет обновления 3 для Windows Server Essentials](https://support.microsoft.com/kb/2862551) (Октябрь 2013)
 
--   [Накопительный пакет обновления 2 для Windows Server Essentials](https://support.microsoft.com/kb/2824160) (Июнь 2013)
+- [Накопительный пакет обновления 2 для Windows Server Essentials](https://support.microsoft.com/kb/2824160) (Июнь 2013)
 
--   [Накопительный пакет обновления 1 для Windows Server Essentials](https://support.microsoft.com/kb/2781267) (Февраль 2013)
+- [Накопительный пакет обновления 1 для Windows Server Essentials](https://support.microsoft.com/kb/2781267) (Февраль 2013)
 
--   [Исправление. невозможно включить роль Windows Server Update Services в Windows Server Essentials](https://support.microsoft.com/kb/2762663) (Февраль 2013)
+- [Исправление. невозможно включить роль Windows Server Update Services в Windows Server Essentials](https://support.microsoft.com/kb/2762663) (Февраль 2013)
 
-## <a name="troubleshoot"></a>Устранение неполадок
- В этом разделе вы найдете информацию, которая поможет вам справиться с распространенными проблемами, возникающими при использовании Windows Server Essentials. Сведения об устранении неполадок организованы в логические области, которые соответствуют ключевым возможностям продукта.
+## <a name="troubleshoot"></a>Диагностика
 
--   [Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)
+В этом разделе вы найдете информацию, которая поможет вам справиться с распространенными проблемами, возникающими при использовании Windows Server Essentials. Сведения об устранении неполадок организованы в логические области, которые соответствуют ключевым возможностям продукта.
 
+- [Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials](../migrate/Rules-used-by-the-Windows-Server-Essentials-Best-Practices-Analyzer--BPA--Tool.md)
 
--   [Устранение неполадок повсеместного доступа](Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)
+- [Устранение неполадок повсеместного доступа](Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок архивации и восстановления данных](Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)
+- [Устранение неполадок архивации и восстановления данных](Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок мониторинга компьютеров](Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md)
+- [Устранение неполадок мониторинга компьютеров](Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок при подключении компьютеров к серверу](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)
+- [Устранение неполадок при подключении компьютеров к серверу](Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок с историей файлов](Troubleshoot-File-History-in-Windows-Server-Essentials.md)
+- [Устранение неполадок с историей файлов](Troubleshoot-File-History-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок при установке](Troubleshoot-Windows-Server-Essentials-installation.md)
+- [Устранение неполадок при установке](Troubleshoot-Windows-Server-Essentials-installation.md)
 
--   [Устранение неполадок подключения к системе удаленного веб-доступа](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
+- [Устранение неполадок подключения к системе удаленного веб-доступа](Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
 
--   [Раздел об устранении неполадок брандмауэра](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
+- [Раздел об устранении неполадок брандмауэра](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
 
--   [Использование сборщика журналов Windows Server Essentials](Use-the-Windows-Server-Essentials-Log-Collector.md)
+- [Использование сборщика журналов Windows Server Essentials](Use-the-Windows-Server-Essentials-Log-Collector.md)
 
--   [Устранение неполадок повсеместного доступа](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)
+- [Устранение неполадок повсеместного доступа](../support/Troubleshoot-Anywhere-Access-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок архивации и восстановления данных](../support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)
+- [Устранение неполадок архивации и восстановления данных](../support/Troubleshoot-computer-backup-and-restore-errors-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок мониторинга компьютеров](../support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md)
+- [Устранение неполадок мониторинга компьютеров](../support/Troubleshoot-computer-monitoring-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок при подключении компьютеров к серверу](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)
+- [Устранение неполадок при подключении компьютеров к серверу](../support/Troubleshoot-connecting-computers-to-the-server-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок с историей файлов](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md)
+- [Устранение неполадок с историей файлов](../support/Troubleshoot-File-History-in-Windows-Server-Essentials.md)
 
--   [Устранение неполадок при установке](../support/Troubleshoot-Windows-Server-Essentials-installation.md)
+- [Устранение неполадок при установке](../support/Troubleshoot-Windows-Server-Essentials-installation.md)
 
--   [Устранение неполадок подключения к системе удаленного веб-доступа](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
+- [Устранение неполадок подключения к системе удаленного веб-доступа](../support/Troubleshoot-Remote-Web-Access-connectivity-in-Windows-Server-Essentials.md)
 
--   [Раздел об устранении неполадок брандмауэра](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
+- [Раздел об устранении неполадок брандмауэра](../support/Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
 
--   [Использование сборщика журналов Windows Server Essentials](../support/Use-the-Windows-Server-Essentials-Log-Collector.md)
-
+- [Использование сборщика журналов Windows Server Essentials](../support/Use-the-Windows-Server-Essentials-Log-Collector.md)
 
 ## <a name="ask-a-question-in-the-forums"></a>Задайте вопрос на форумах
 
--   [Общие сведения о Windows Server Essentials](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserveressentials)
+- [Общие сведения о Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html)
 
--   [Windows SBS 2011 Essentials](https://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver2011essentials)
+- [Windows SBS 2011 Essentials](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
 
--   [Small Business Server](https://social.technet.microsoft.com/Forums/home?forum=smallbusinessserver)
+- [Small Business Server](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
 
--   [Форумы по Windows Server](https://social.technet.microsoft.com/Forums/windowsserver/home?category=windowsserver)
+- [Форумы по Windows Server](https://docs.microsoft.com/answers/topics/windows-server.html)
 
 ## <a name="get-additional-help"></a>Получите дополнительную справку
 
--   [Поддержка Windows Small Business Server](https://support.microsoft.com/oas/default.aspx?gprid=1167&st=1&wfxredirect=1&sd=gn)
+- [Поддержка Windows Small Business Server](https://support.microsoft.com/oas/default.aspx?gprid=1167&st=1&wfxredirect=1&sd=gn)
 
--   [Планы обучения партнера корпорации Майкрософт](https://mspartnerlp.mspartner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=559&rowId=1078&trackPathId=6605)
+- [Планы обучения партнера корпорации Майкрософт](https://mspartnerlp.mspartner.microsoft.com/LearningPath/LearningPath/DLPaths?trackId=559&rowId=1078&trackPathId=6605)
 
--   [Поддержка сети партнеров корпорации Майкрософт](https://mspartner.microsoft.com/en/us/Pages/Support/get-support.aspx)
+- [Поддержка сети партнеров корпорации Майкрософт](https://mspartner.microsoft.com/en/us/Pages/Support/get-support.aspx)
 
--   [Microsoft Business Hub](http://www.microsoftbusinesshub.com/Gigya/Insider)
+- [Microsoft Business Hub](http://www.microsoftbusinesshub.com/Gigya/Insider)
 
--   [Службы поддержки Microsoft Premier](https://www.microsoft.com/microsoftservices/support.aspx)
+- [Службы поддержки Microsoft Premier](https://www.microsoft.com/microsoftservices/support.aspx)
 
--   [Для пользователей за пределами США](https://support.microsoft.com/common/international.aspx?&sd=tech)
+- [Для пользователей за пределами США](https://support.microsoft.com/common/international.aspx?&sd=tech)
 
--   [Политика поддержки жизненного цикла продуктов Майкрософт](https://support.microsoft.com/lifecycle/)
+- [Политика поддержки жизненного цикла продуктов Майкрософт](https://support.microsoft.com/lifecycle/)
 
--   [Поддержка Software Assurance](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)
+- [Поддержка Software Assurance](https://support.microsoft.com/default.aspx?scid=fh;%5Bln%5D;SoftAssurance)
 
--   [Центр технологий Майкрософт](https://www.microsoft.com/mtc/default.aspx)
+- [Центр технологий Майкрософт](https://www.microsoft.com/mtc/default.aspx)
 
--   [Поддержка для малого бизнеса](https://smallbusiness.support.microsoft.com/contact)
+- [Поддержка для малого бизнеса](https://smallbusiness.support.microsoft.com/contact)
 
--   [Блог по Windows Server Essentials и Small Business Server](https://blogs.technet.com/b/sbs/)
+- [Блог по Windows Server Essentials и Small Business Server](https://blogs.technet.com/b/sbs/)
 
 ## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям
 
--    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](https://technet.microsoft.com/library/dn582043.aspx).
+- Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](https://technet.microsoft.com/library/dn629457.aspx).
+- Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).
+- Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
+- [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
 
--   [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
+- [Перенос данных сервера в Windows Server Essentials](../migrate/Migrate-Server-Data-to-Windows-Server-Essentials.md)
 
--   [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
+- [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
 
--   [Использование Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
+- [Использование Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)

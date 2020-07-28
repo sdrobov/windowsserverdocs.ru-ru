@@ -8,12 +8,12 @@ ms.author: jgerend
 manager: lizross
 ms.technology: storage-failover-clustering
 ms.date: 01/14/2020
-ms.openlocfilehash: 24be2b39c8130b97d22ee182c0064986b3378549
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 5988842ef2a88687bca95781b996babb4e4f3faa
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472981"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181710"
 ---
 # <a name="failover-clustering-system-log-events"></a>События системного журнала отказоустойчивой кластеризации
 
@@ -1253,4 +1253,4 @@ DNS-записи узла (A) и указателя (PTR), связанные с
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Подробные сведения о событии для компонентов отказоустойчивой кластеризации в Windows Server 2008](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))
+-   [Подробные сведения о событии для компонентов отказоустойчивой кластеризации в Windows Server 2008](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753362(v%3dws.10))

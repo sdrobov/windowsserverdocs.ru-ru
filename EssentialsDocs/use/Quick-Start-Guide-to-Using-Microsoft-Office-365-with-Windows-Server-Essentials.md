@@ -2,18 +2,17 @@
 title: Краткое руководство по использованию Microsoft Office 365 с Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 51a7f1f1-088b-4487-b2c6-4f97aad3004d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b3b41a4dbdcacd9d16f922db6fb5d4140fd23fcc
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 0956023d70d99927fcb5b765ff3615782d63f2c5
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469989"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87179680"
 ---
 # <a name="quick-start-guide-to-using-microsoft-office-365-with-windows-server-essentials"></a>Краткое руководство по использованию Microsoft Office 365 с Windows Server Essentials
 
@@ -28,7 +27,7 @@ ms.locfileid: "85469989"
 > [!IMPORTANT]
 >  Если вы потеряли мобильное устройство, которое используется для подключения к Exchange Online, обратитесь к администратору, чтобы он мог удалить конфиденциальные данные с устройства при следующем включении.
 
-### <a name="before-you-begin"></a>Перед началом работы
+### <a name="before-you-begin"></a>Перед началом
 
 1.  Необходимо иметь учетную запись Microsoft Online Services (в Windows Server Essentials она называется *учетной записью Office 365*), назначенной вашей учетной записи пользователя. Если у вас еще нет учетной записи в Интернете для Office 365, попросите пользователя, который обслуживает сеть, создать его.
 

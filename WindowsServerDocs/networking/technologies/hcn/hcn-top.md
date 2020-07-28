@@ -5,12 +5,12 @@ ms.author: jmesser
 author: jmesser81
 ms.prod: windows-server
 ms.date: 11/05/2018
-ms.openlocfilehash: 4afde574802bd63db8ea8ca8db9f5daf1a53dc93
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 6e4d665ba431331fbf1f41a0ac4774e58693a5e2
+ms.sourcegitcommit: 717222e9efceb5964872dbf97034cad60f3c48df
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80859847"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87295038"
 ---
 # <a name="host-compute-network-hcn-service-api-for-vms-and-containers"></a>API службы вычислений для сети (ХКН) для виртуальных машин и контейнеров
 
@@ -59,8 +59,6 @@ API службы вычислений с помощью сети (ХКН) — э
 ### <a name="example"></a>Пример 
 
 Ниже приведен пример этого рабочего процесса для объекта, представляющего контроллер SCSI в документе конфигурации виртуальной машины. 
-
-В исходном коде Windows мы определяем схемы с помощью файлов. Mars: onecore/VM/DV/NET/HNS/Schema/Mars/Schema/ХКН. Schema. Network. MARS.
 
 ```
 enum IpamType
@@ -224,9 +222,9 @@ class Route
 } 
 ```
 
-С помощью таких средств, как [Swagger](https://swagger.io/), можно создавать представления языка программирования схемы, используемого клиентом, для конкретного языка. Swagger поддерживает различные языки, такие как C#Go, JavaScript и Python.
+С помощью таких средств, как [Swagger](https://swagger.io/), можно создавать представления языка программирования схемы, используемого клиентом, для конкретного языка. Swagger поддерживает различные языки, такие как C#, Go, JavaScript и Python.
 
-- [Пример созданного C# кода](example-c-sharp.md) для объекта подсети IPAM верхнего уровня &.
+- [Пример созданного кода C#](example-c-sharp.md) для объекта подсети IPAM верхнего уровня &.
 
 - [Пример созданного кода Go](example-go.md) для объекта подсети IPAM верхнего уровня &. Go используется DOCKER и Kubernetes, которые являются двумя потребителями API-интерфейсов сетевой службы вычислений. Go имеет встроенную поддержку упаковки типов Go в документы JSON и обратно.
 
@@ -278,7 +276,7 @@ class HostComputeLoadBalancer : HCN.Schema.Common.Base
 };
 ```
 
-## <a name="next-steps"></a>Следующие шаги
+## <a name="next-steps"></a>Дальнейшие действия
 
 - Дополнительные сведения об [общих сценариях хкн](hcn-scenarios.md).
 

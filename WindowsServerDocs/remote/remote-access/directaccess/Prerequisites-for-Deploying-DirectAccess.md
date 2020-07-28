@@ -8,24 +8,24 @@ ms.topic: article
 ms.assetid: 57c7e039-42ef-4909-867a-b5f669c9e74e
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 5916c5bb87d7bdb10bcc32e24647923d434de2e7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: b31d60e170febcde55dd36adcd56fa5abb57c900
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80857454"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182390"
 ---
 # <a name="prerequisites-for-deploying-directaccess"></a>Предварительные требования для развертывания DirectAccess
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Область применения. Windows Server (Semi-Annual Channel), Windows Server 2016
 
-В следующей таблице перечислены предварительные требования, необходимые для использования мастеров настройки для развертывания DirectAccess.  
-  
-|||  
-|-|-|  
-|Сценарий|Предварительные требования|  
-|[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|— Брандмауэр Windows должен быть включен для всех профилей.<p>— Поддерживается только для клиентов под управлением Windows 10&reg;, <br />              Windows&reg; 8 и Windows&reg; 8,1 Enterprise.<p>— Инфраструктура открытых ключей не требуется.<p>— Не поддерживается для развертывания двухфакторной проверки подлинности. Для проверки подлинности требуются учетные данные домена.<p>— Автоматически развертывает DirectAccess на всех мобильных компьютерах в текущем домене.<p>— Трафик к Интернету не проходит через DirectAccess. Конфигурация принудительного туннелирования не поддерживается.<p>— Сервер DirectAccess — это сервер сетевых расположений.<p>— Защита доступа к сети (NAP) не поддерживается.<p>-Изменение политик с помощью компонента, отличного от консоли управления DirectAccess или командлетов Windows PowerShell, не поддерживается.<p>— Для многосайтовой конфигурации, сейчас или в будущем, сначала следуйте указаниям в статье [развертывание одного сервера DirectAccess с дополнительными параметрами](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).|  
-|[Развертывание одного сервера DirectAccess с расширенными параметрами](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)|— Инфраструктура открытых ключей должна быть развернута.<br />    Дополнительные сведения см. в разделе [тест лабораторного руководства мини-модуль: базовый PKI для Windows Server 2012](https://social.technet.microsoft.com/wiki/contents/articles/7862.test-lab-guide-mini-module-basic-pki-for-windows-server-2012.aspx).<p>— Брандмауэр Windows должен быть включен для всех профилей.<p>Следующие серверные операционные системы поддерживают DirectAccess.<p>— Можно развернуть все версии Windows Server 2016 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2012 R2 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2012 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2008 R2 в качестве клиента DirectAccess или сервера DirectAccess.<p>Следующие клиентские операционные системы поддерживают DirectAccess.<p>— Windows 10&reg; Enterprise<br />— Windows 10&reg; Enterprise 2015 Long Term Servicing Branch (LTSB)<br />— Windows&reg; 8 и 8,1 Enterprise<br />— Windows&reg; 7 Максимальная<br />— Windows&reg; 7 Корпоративная<p>— Конфигурация принудительного туннелирования не поддерживается при проверке подлинности Кербпрокси.<p>-Изменение политик с помощью компонента, отличного от консоли управления DirectAccess или командлетов Windows PowerShell, не поддерживается.<p>-Разделение ролей NAT64, DNS64 и IPHTTPS сервера на другом сервере не поддерживается.|  
-  
+В следующей таблице перечислены предварительные требования, необходимые для использования мастеров настройки для развертывания DirectAccess.
+
+|||
+|-|-|
+|Сценарий|Предварительные требования|
+|[Развертывание одного сервера DirectAccess с помощью мастера начало работы](../../remote-access/directaccess/single-server-wizard/Deploy-a-Single-DirectAccess-Server-Using-the-Getting-Started-Wizard.md)|— Брандмауэр Windows должен быть включен для всех профилей.<p>— Поддерживается только для клиентов под управлением Windows 10 &reg; , <br />              Windows &reg; 8 и windows &reg; 8,1 Enterprise.<p>— Инфраструктура открытых ключей не требуется.<p>— Не поддерживается для развертывания двухфакторной проверки подлинности. Для проверки подлинности требуются учетные данные домена.<p>— Автоматически развертывает DirectAccess на всех мобильных компьютерах в текущем домене.<p>— Трафик к Интернету не проходит через DirectAccess. Конфигурация принудительного туннелирования не поддерживается.<p>— Сервер DirectAccess — это сервер сетевых расположений.<p>— Защита доступа к сети (NAP) не поддерживается.<p>-Изменение политик с помощью компонента, отличного от консоли управления DirectAccess или командлетов Windows PowerShell, не поддерживается.<p>— Для многосайтовой конфигурации, сейчас или в будущем, сначала следуйте указаниям в статье [развертывание одного сервера DirectAccess с дополнительными параметрами](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md).|
+|[Развертывание одного сервера DirectAccess с расширенными параметрами](../../remote-access/directaccess/single-server-advanced/Deploy-a-Single-DirectAccess-Server-with-Advanced-Settings.md)|— Инфраструктура открытых ключей должна быть развернута.<br /> Дополнительные сведения см. в разделе [тест лабораторного руководства мини-модуль: базовый PKI для Windows Server 2012](https://docs.microsoft.com/answers/topics/windows-server-2012.html).<p>— Брандмауэр Windows должен быть включен для всех профилей.<p>Следующие серверные операционные системы поддерживают DirectAccess.<p>— Можно развернуть все версии Windows Server 2016 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2012 R2 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2012 в качестве клиента DirectAccess или сервера DirectAccess.<br />— Можно развернуть все версии Windows Server 2008 R2 в качестве клиента DirectAccess или сервера DirectAccess.<p>Следующие клиентские операционные системы поддерживают DirectAccess.<p>— Windows 10 &reg; Корпоративная<br />— Windows 10 &reg; корпоративная 2015 Long Term Servicing Branch (LTSB)<br />— Windows &reg; 8 и 8,1 Enterprise<br />— Windows &reg; 7 Максимальная<br />— Windows &reg; 7 Корпоративная<p>— Конфигурация принудительного туннелирования не поддерживается при проверке подлинности Кербпрокси.<p>-Изменение политик с помощью компонента, отличного от консоли управления DirectAccess или командлетов Windows PowerShell, не поддерживается.<p>-Разделение ролей NAT64, DNS64 и IPHTTPS сервера на другом сервере не поддерживается.|
+
 
 

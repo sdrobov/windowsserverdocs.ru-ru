@@ -8,12 +8,12 @@ ms.author: jgerend
 ms.technology: storage
 ms.date: 06/06/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 55421cb1f01d654c4c424e8534f4c678ac38e6f5
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 21af2aae837b7a570638c2eb3f3c96cb8997fa84
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86959336"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182070"
 ---
 # <a name="deploy-folder-redirection-with-offline-files"></a>Развертывание перенаправления папок с помощью автономных файлов
 
@@ -128,7 +128,7 @@ ms.locfileid: "86959336"
 
 > [!NOTE]
 > Функция "Автономные файлы" включена по умолчанию для перенаправленных папок на клиентских компьютерах Windows и отключена на компьютерах под управлением Windows Server, если пользователь не вносил изменения. Чтобы использовать групповую политику для управления включением функции "Автономные файлы", задействуйте параметр политики **Разрешить или запретить использование автономных файлов**.
-> Дополнительные сведения о некоторых других параметрах групповой политики для автономных файлов см. в статьях [Enable Advanced Offline Files Functionality](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>) (Включение расширенных функциональных возможностей автономных файлов) и [Configuring Group Policy for Offline Files](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>) (Настройка групповой политики для автономных файлов).
+> Дополнительные сведения о некоторых других параметрах групповой политики для автономных файлов см. в статьях [Enable Advanced Offline Files Functionality](</previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn270369(v%3dws.11)>) (Включение расширенных функциональных возможностей автономных файлов) и [Configuring Group Policy for Offline Files](</previous-versions/windows/it-pro/windows-server-2003/cc759721(v%3dws.10)>) (Настройка групповой политики для автономных файлов).
 
 Вот как настроить перенаправление папок в групповой политике.
 
@@ -199,5 +199,5 @@ ms.locfileid: "86959336"
 * [Развертывание основных компьютеров для перенаправления папок и использования перемещаемых профилей пользователей](deploy-primary-computers.md)
 * [Enable Advanced Offline Files Functionality](enable-always-offline.md) (Включение расширенных функциональных возможностей автономных файлов)
 * [Microsoft's Support Statement Around Replicated User Profile Data](/archive/blogs/askds/microsofts-support-statement-around-replicated-user-profile-data) (Заявление корпорации Майкрософт о поддержке реплицированных данных профилей пользователей)
-* [Sideload Apps with DISM](<https://docs.microsoft.com/previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>) (Загрузка неопубликованных приложений с помощью DISM)
+* [Sideload Apps with DISM](</previous-versions/windows/it-pro/windows-8.1-and-8/hh852635(v=win.10)>) (Загрузка неопубликованных приложений с помощью DISM)
 * [Troubleshooting packaging, deployment, and query of Windows Runtime-based apps](/windows/win32/appxpkg/troubleshooting) (Устранение проблем с упаковкой, развертыванием и запросами приложений среды выполнения Windows)

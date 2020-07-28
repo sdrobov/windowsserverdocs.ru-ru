@@ -10,12 +10,12 @@ manager: lizross
 ms.author: helohr
 ms.date: 07/16/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e421795fd3be9e11ddff4cf6b557ebb211e51c53
-ms.sourcegitcommit: b363d8ceed863c8fd5a464bc8afdc4ef1af9a6f8
+ms.openlocfilehash: 8f51a60e66a3e1452ed66c94c409c5e4e5cb191f
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "86445718"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181970"
 ---
 # <a name="get-started-with-the-ios-client"></a>Приступая к работе с клиентом iOS
 
@@ -174,7 +174,7 @@ ms.locfileid: "86445718"
 
 ## <a name="supported-input-devices"></a>Поддерживаемые устройства ввода
 
-Для клиента в качестве специальной возможности доступна [поддержка Bluetooth-мыши](https://support.apple.com/HT210546) в iOS 13 и iPadOS. Для более глубокой интеграции можно использовать мышь Swiftpoint GT или ProPoint. Клиент также поддерживает внешние клавиатуры, совместимые с iOS и iPadOS. 
+Для клиента в качестве специальной возможности доступна [поддержка Bluetooth-мыши](https://support.apple.com/HT210546) в iOS 13 и iPadOS. Для более глубокой интеграции можно использовать мышь Swiftpoint GT или ProPoint. Клиент также поддерживает внешние клавиатуры, совместимые с iOS и iPadOS.
 
 Дополнительные сведения о поддержке устройств см. в статье [Что нового в клиенте iOS](ios-whatsnew.md) и в [iOS App Store](https://aka.ms/rdios).
 
@@ -192,4 +192,4 @@ ms.locfileid: "86445718"
 Хотя определенные сочетания клавиш могут не работать должным образом в удаленном сеансе, многие из стандартных сочетаний клавиш Windows, такие как CTRL+C, CTRL+V и ALT+TAB, будут работать.
 
 > [!TIP]
-> Мы всегда приветствуем вопросы и комментарии. Но если вы опубликуете запрос для службы поддержки или отзыв о продукте в разделе комментариев к этой статье, мы не сможем вам ответить. Если вам нужна помощь или вы хотите устранить неполадки, связанные с клиентом, рекомендуем перейти на страницу [форума о клиенте удаленного рабочего стола](https://social.technet.microsoft.com/forums/windowsserver/home?forum=winrdc) и начать новое обсуждение. Если у вас есть предложение по функционалу клиента, вы можете сообщить нам об этом [в соответствующем форуме UserVoice](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).
+> Мы всегда приветствуем вопросы и комментарии. Но если вы опубликуете запрос для службы поддержки или отзыв о продукте в разделе комментариев к этой статье, мы не сможем вам ответить. Если вам нужна помощь или вы хотите устранить неполадки, связанные с клиентом, рекомендуем перейти на страницу [форума о клиенте удаленного рабочего стола](https://docs.microsoft.com/answers/topics/windows-remote-desktop-client.html) и начать новое обсуждение. Если у вас есть предложение по функционалу клиента, вы можете сообщить нам об этом [в соответствующем форуме UserVoice](https://remotedesktop.uservoice.com/forums/272085-remote-desktop-for-android).

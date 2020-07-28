@@ -2,17 +2,16 @@
 title: Использование приложения My Server для подключения к Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: da125fec78a609aff0d7572cbe448115f03fe501
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 6b1e6d46013d98970e694176426be2ac1f57195d
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469889"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87179360"
 ---
 # <a name="use-the-my-server-app-to-connect-to-windows-server-essentials"></a>Использование приложения My Server для подключения к Windows Server Essentials
 
@@ -60,7 +59,7 @@ ms.locfileid: "85469889"
 
 1.  Установите соответствующее приложение My Server из раздела [Приложения для Windows](https://windows.microsoft.com/windows-8/apps) на ноутбук или ПК с Windows либо на устройство Surface.
 
-    |Серверная операционная система|Скачать|
+    |Серверная операционная система|Скачивание|
     |-----------------------------|--------------|
     | Windows Server Essentials|[My Server](https://apps.microsoft.com/webpdp/app/19d94f81-db21-4234-8b49-806694dbbaea)|
     | Windows Server Essentials|[My Server 2012 R2](https://apps.microsoft.com/webpdp/app/67e86695-bda3-4f32-96c4-2e20e56f1cf3)|
@@ -107,7 +106,7 @@ ms.locfileid: "85469889"
 
 ### <a name="features-of-the-my-server-and-my-server-2012-r2-apps-for-windows-server-essentials"></a>Возможности приложений My Server и My Server 2012 R2 для Windows Server Essentials
 
-|Набор возможностей|Описание:|
+|Набор возможностей|Описание|
 |-----------------|-----------------|
 |Управление оповещениями|— (Только администраторы) разрешать предупреждения на сервере или игнорировать предупреждения, не требующие вмешательства. Включение и отключение уведомлений (параметры **Разрешения**, параметр **Уведомления**).<br />-(Стандартные учетные записи пользователей) Просмотр оповещений о работоспособности сети.<br />     **Примечание.** Чтобы пользователь мог просматривать оповещения на моем сервере, в **общих** параметрах учетной записи пользователя необходимо выбрать параметр **оповещения о работоспособности сети** . Дополнительные сведения см. в разделе [Manage user accounts using the Dashboard](../manage/Manage-User-Accounts-in-Windows-Server-Essentials.md#BKMK_Manage8).|
 |Управление устройствами|(Только администраторы.)<br /><br /> — При подключении к серверу Windows Server Essentials просмотрите сведения о каждом подключенном компьютере в представлении **устройства** . Автономные устройства затенены.<br />— Запуск и завершение резервного копирования подключенных компьютеров.<br />— Включение или отключение уведомлений на сервере. (Параметры **Разрешения**, параметр **Уведомления**.)<br /><br /> Все пользователи.<br /><br /> — Просмотр клиентских компьютеров, к которым у учетной записи пользователя есть доступ. (Окно **Устройства**.)<br />— Мониторинг предупреждений для этих компьютеров. (Окно **Оповещения**.)<br />-(Только в моем сервере 2012 R2) подключитесь к этим компьютерам с помощью удаленного Веб-доступ. (Окно **Устройство**, кнопка **Удаленное подключение**.)|
@@ -176,7 +175,7 @@ ms.locfileid: "85469889"
 =======
     >  After the installation of the certificate is complete, you can sign in to the My Server app for Windows 8 or Windows 8.1 by using your server name and your network credentials.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 -   [Обзор интеграции служб для Windows Server Essentials — часть 1](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)
 
