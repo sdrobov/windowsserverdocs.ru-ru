@@ -2,18 +2,17 @@
 title: Управление учетными записями пользователей в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 0d115697-532b-48c2-a659-9f889e235326
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 350c9aa4cf4a2e71f3a3b7600ec2acd9016fe50e
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 433e49f76ba941058a3cd63526f4c640fd0b5ece
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470509"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180880"
 ---
 # <a name="manage-user-accounts-in-windows-server-essentials"></a>Управление учетными записями пользователей в Windows Server Essentials
 
@@ -234,7 +233,7 @@ ms.locfileid: "85470509"
 
 ### <a name="user-account-tasks-in-the-dashboard"></a>Задачи учетной записи пользователя на панели мониторинга
 
-|Имя задачи|Описание:|
+|Имя задачи|Описание|
 |---------------|-----------------|
 |Просмотреть свойства учетной записи|Позволяет просматривать и изменять свойства выбранной учетной записи, а также задавать права доступа к папкам для учетной записи.|
 |Отключить учетную запись пользователя|Отключенная учетная запись пользователя не может войти в сеть или получить доступ к сетевым ресурсам, например к общим папкам или принтерам.|
