@@ -10,12 +10,12 @@ ms.assetid: 16984724-2d77-4d7b-9738-3dff375ed68c
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 3bcb669f64845aaa7a3b0498cd7f793891f6c274
-ms.sourcegitcommit: 9889f20270e8eb7508d06cbf844cba9159e39697
+ms.openlocfilehash: a64896a1efcafec878ea8fd5dda8077a1fdc9c42
+ms.sourcegitcommit: f305bc5f1c5a44dac62f4288450af19f351f9576
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2020
-ms.locfileid: "83551127"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "87118579"
 ---
 # <a name="iis-on-nano-server"></a>IIS на сервере Nano Server
 
@@ -63,7 +63,7 @@ ms.locfileid: "83551127"
 |**Инструменты управления**||
 |Модуль IISAdministration для Windows PowerShell|x|
 
-Цикл статей о других конфигурациях служб IIS (например, с использованием ASP.NET, PHP и Java), а также другие материалы по этой теме опубликованы здесь: [http://iis.net/learn](https://iis.net/learn).
+Цикл статей о других конфигурациях служб IIS (например, с использованием ASP.NET, PHP и Java), а также другие материалы по этой теме опубликованы здесь: [https://iis.net/learn](https://iis.net/learn).
 
 ## <a name="installing-iis-on-nano-server"></a>Установка служб IIS на сервере Nano Server
 Эту роль сервера можно установить либо в автономном режиме (при отключенном Nano Server), либо в сети (с использованием Nano Server). Рекомендуется установка в автономном режиме.
@@ -130,7 +130,7 @@ New-NanoServerImage -Edition Standard -DeploymentType Guest -MediaPath f:\ -Base
 6. Запустите службу W3SVC либо с помощью команды **net start w3svc**, либо перезапустив Nano Server.
 
 ## <a name="starting-iis"></a>Запуск служб IIS
-После установки и запуска служб IIS все готово к обработке веб-запросов. Убедитесь, что службы IIS запущены, перейдя на веб-страницу служб IIS по умолчанию по адресу http://\<IP-адрес Nano Server>. На физическом компьютере IP-адрес можно определить с помощью агента восстановления. На виртуальной машине IP-адрес можно получить, используя командную строку Windows PowerShell и выполнив следующую команду:
+После установки и запуска служб IIS все готово к обработке веб-запросов. Убедитесь, что службы IIS запущены, перейдя на веб-страницу служб IIS по умолчанию по адресу http://\<IP address of Nano Server>. На физическом компьютере IP-адрес можно определить с помощью агента восстановления. На виртуальной машине IP-адрес можно получить, используя командную строку Windows PowerShell и выполнив следующую команду:
 
 ```PowerShell
 Get-VM -name <VM name> | Select -ExpandProperty networkadapters | select IPAddresses

@@ -8,12 +8,12 @@ manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 8fd7cfda8814347f8bab9dc7b3f7632e3b992ecb
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 65bf81d80d5cfd5566d66005728cd3677f131085
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857237"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963226"
 ---
 # <a name="user-cant-authenticate-or-must-authenticate-twice"></a>Пользователь не может выполнить аутентификацию или должен выполнить ее дважды
 
@@ -59,7 +59,7 @@ ms.locfileid: "80857237"
 
 Чтобы разрешить прежнее поведение RCM на сервере узла сеансов удаленных рабочих столов, настройте следующие записи реестра и перезапустите службу **Службы удаленных рабочих столов**:  
   - **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Terminal Services**.
-  - **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\\<Winstation name\>\\** .  
+  - **HKEY\_LOCAL\_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\\<Winstation name\>\\**  
       - Имя: **fQueryUserConfigFromDC**.
       - Введите команду: **Reg\_DWORD**.
       - Значение: **1** (десятичное число).
@@ -168,4 +168,4 @@ This could be due to CredSSP encryption oracle remediation
 
 Эта проблема связана с тем, что Remote Credential Guard использует Kerberos для проверки подлинности, а также запрещает использовать NTLM. Но в конфигурации с высоким уровнем доступности и балансировкой нагрузки брокеры подключений к удаленному рабочему столу не могут поддерживать операции Kerberos.
 
-Если нужно использовать конфигурации с высоким уровнем доступности и балансировкой нагрузки брокеров подключений к удаленному рабочему столу, эту проблему можно устранить, отключив Remote Credential Guard. Дополнительные сведения об управлении Remote Credential Guard в Защитнике Windows см. в статье [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](https://docs.microsoft.com/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard) (Защита учетных данных удаленного рабочего стола с помощью Remote Credential Guard в Защитнике Windows).
+Если нужно использовать конфигурации с высоким уровнем доступности и балансировкой нагрузки брокеров подключений к удаленному рабочему столу, эту проблему можно устранить, отключив Remote Credential Guard. Дополнительные сведения об управлении Remote Credential Guard в Защитнике Windows см. в статье [Protect Remote Desktop credentials with Windows Defender Remote Credential Guard](/windows/security/identity-protection/remote-credential-guard#enable-windows-defender-remote-credential-guard) (Защита учетных данных удаленного рабочего стола с помощью Remote Credential Guard в Защитнике Windows).

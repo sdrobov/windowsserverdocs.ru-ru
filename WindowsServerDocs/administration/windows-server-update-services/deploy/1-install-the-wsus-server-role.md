@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 664e0233d10cbbc526635f1868ea1977c59fea63
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: a923b2da4583c32010e7e3104315957f3f05acaf
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80828907"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87178570"
 ---
 # <a name="step-1-install-the-wsus-server-role"></a>Шаг 1. Установка роли сервера WSUS
 
@@ -23,7 +23,7 @@ ms.locfileid: "80828907"
 Следующий шаг в развертывании сервера WSUS — это установка роли сервера WSUS. Далее описано, как установить роль сервера WSUS с помощью диспетчера серверов.
 
 > [!IMPORTANT]
-> Эта процедура охватывает установку WSUS только с использованием внутренней базы данных Windows (WID). Процедуры установки WSUS с помощью Microsoft SQL Server задокументированы в [этой статье](https://social.technet.microsoft.com/wiki/contents/articles/10020.installing-wsus-server-role-on-windows-server-2012-with-microsoft-sql-database.aspx).
+> Эта процедура охватывает установку WSUS только с использованием внутренней базы данных Windows (WID). Процедуры установки WSUS с помощью Microsoft SQL Server описаны на [форуме WSUS](https://docs.microsoft.com/answers/topics/windows-server-update-services.html).
 
 ### <a name="to-install-the-wsus-server-role"></a>Установка роли сервера WSUS
 

@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: cb4e3ab2bf98a0c2d51483642fe5388e468dbbb4
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 92d8a47c4ac214faeac83ba8ff5a1a746bc8bdb3
+ms.sourcegitcommit: b35fbd2a67d7a3395b50b2a3acd0817ba4e36b26
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "81269271"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86891389"
 ---
 # <a name="what-is-windows-admin-center"></a>Что такое Windows Admin Center?
 
@@ -27,7 +27,7 @@ Windows Admin Center — это продукт эволюции встроенн
 
 ## <a name="how-does-windows-admin-center-work"></a>Как работает Windows Admin Center?
 
-Windows Admin Center запускается в браузере и управляет Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2, Windows 10 и другими версиями через **шлюз Windows Admin Center**, установленный в Windows Server или присоединенной к домену Windows 10. Шлюз управляет серверами с помощью удаленной оболочки PowerShell и WMI через WinRM. Шлюз входит в состав Windows Admin Center в одном облегченном MSI-пакете, который можно [загрузить](https://aka.ms/windowsadmincenter).
+Windows Admin Center запускается в браузере и управляет Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows 10, Azure Stack HCI и другими версиями через **шлюз Windows Admin Center**, установленный в Windows Server или присоединенной к домену Windows 10. Шлюз управляет серверами с помощью удаленной оболочки PowerShell и WMI через WinRM. Шлюз входит в состав Windows Admin Center в одном облегченном MSI-пакете, который можно [загрузить](https://aka.ms/windowsadmincenter).
 
 При публикации в DNS и предоставлении доступа через соответствующие корпоративные брандмауэры шлюз Windows Admin Center позволяет безопасно подключиться к серверам и управлять ими из любого места с помощью Microsoft Edge или Google Chrome.
 
@@ -58,6 +58,10 @@ Windows Admin Center содержит множество улучшений, к�
 ### <a name="azure-integration"></a>**Интеграция с Azure**
 
 Windows Admin Center имеет много точек [интеграции со службами Azure](../plan/azure-integration-options.md), включая Azure Active Directory, Azure Backup, Azure Site Recovery и многое другое.
+
+### <a name="deploy-hyper-converged-and-failover-clusters"></a>**Развертывание гиперконвергентных отказоустойчивых кластеров**
+
+Центр администрирования Windows позволяет [легко развертывать гиперконвергентные отказоустойчивые кластеры](../use/deploy-hyperconverged-infrastructure.md) с помощью простого в использовании мастера. 
 
 ### <a name="manage-hyper-converged-clusters"></a>**Управление гиперконвергентными кластерами**
 

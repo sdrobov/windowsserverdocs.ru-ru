@@ -10,12 +10,12 @@ ms.assetid: 599d6438-a506-4d57-a0ea-1eb7ec19f46e
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: 0b41113f302dad1c9917001bf137da28ef431d38
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: f07c6ffd96aabd4bac5a7e34c7bb612df33274f6
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80826787"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86961116"
 ---
 # <a name="manage-nano-server"></a>Управление сервером Nano Server
 
@@ -99,7 +99,7 @@ chcp 65001
 winrs -r:<IP address of Nano Server> -u:Administrator -p:<Nano Server administrator password> ipconfig
 ```
   
-Дополнительные сведения о службе удаленного управления см. в статье [Обзор удаленного управления Windows (WinRM)](https://technet.microsoft.com/library/dn265971.aspx).  
+Дополнительные сведения о службе удаленного управления см. в статье [Обзор удаленного управления Windows (WinRM)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265971(v=ws.11)).  
    
    
   
@@ -113,7 +113,7 @@ Add-NetEventPacketCaptureProvider -SessionName
 Start-NetEventSession [-Name]  
 Stop-NetEventSession [-Name]  
 ```  
-Эти командлеты подробно описаны в статье [Командлеты для записи пакетов сетевых событий в Windows PowerShell](https://technet.microsoft.com/library/dn268520(v=wps.630).aspx)  
+Эти командлеты подробно описаны в статье [Командлеты для записи пакетов сетевых событий в Windows PowerShell](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265971(v=ws.11))  
 
 ## <a name="installing-servicing-packages"></a>Установка служебных пакетов  
 Если требуется установить служебные пакеты, используйте параметр -ServicingPackagePath (можно передать массив путей в CAB-файлы):  
@@ -133,8 +133,8 @@ Volume Serial Number is B05B-CC3D
    
       Directory of C:\KB3157663_expanded  
    
-      04/19/2016  01:17 PM    \<DIR>          .  
-      04/19/2016  01:17 PM    \<DIR&gt;          .  
+      19.04.2016 13:17 \<DIR>.  
+      19.04.2016 13:17 \<DIR>.  
         04/17/2016  12:31 AM               517 Windows10.0-KB3157663-x64-pkgProperties.txt  
 04/17/2016  12:30 AM        93,886,347 Windows10.0-KB3157663-x64.cab  
 04/17/2016  12:31 AM               454 Windows10.0-KB3157663-x64.xml  
@@ -212,7 +212,7 @@ Get-WindowsPackage -Online
 ---  
 Перечисленные выше команды отправляют в Центр обновления Windows и Центр обновления Майкрософт в сети запрос на поиск и скачивание обновлений. При использовании служб WSUS можно задать разделы реестра на сервере Nano Server, чтобы использовать вместо этого сервер WSUS.  
   
-См. таблицу "Разделы реестра для параметров среды агента обновления Windows" в статье [Настройка автоматических обновлений в среде, отличной от Active Director](https://technet.microsoft.com/library/cc708449(v=ws.10).aspx)  
+См. таблицу "Разделы реестра для параметров среды агента обновления Windows" в статье [Настройка автоматических обновлений в среде, отличной от Active Director](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc708449(v=ws.10))  
   
 Следует задать по меньшей мере разделы реестра **WUServer** и **WUStatusServer**, но в зависимости от реализации служб WSUS могут потребоваться и другие значения. Эти параметры всегда можно уточнить, изучив другой экземпляр Windows Server в той же среде.  
 
@@ -227,7 +227,7 @@ Get-WindowsPackage -Online
 [comment]: # (Автор: Венкат Ялла (Venkat Yalla).)
 Сервер Nano Server полностью поддерживает платформу [трассировки событий Windows](https://aka.ms/u2pa0i) (ETW), однако некоторые привычные средства для управления трассировкой и счетчиками производительности сейчас на нем недоступны. Тем не менее, сервер Nano Server имеет средства и командлеты для реализации наиболее распространенных сценариев анализа производительности.
 
-Высокоуровневый рабочий процесс остается таким же, как и в любой установке Windows Server. Облегченная трассировка выполняется на целевом компьютере (Nano Server), а итоговые файлы трассировки и журналов проходят последующую обработку в автономном режиме на отдельном компьютере с применением таких средств, как [Windows Performance Analyzer](https://msdn.microsoft.com/library/windows/hardware/hh448170.aspx), [анализатор сообщений](https://www.microsoft.com/download/details.aspx?id=44226) или иных.
+Высокоуровневый рабочий процесс остается таким же, как и в любой установке Windows Server. Облегченная трассировка выполняется на целевом компьютере (Nano Server), а итоговые файлы трассировки и журналов проходят последующую обработку в автономном режиме на отдельном компьютере с применением таких средств, как [Windows Performance Analyzer](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448170(v=win.10)), [анализатор сообщений](https://www.microsoft.com/download/details.aspx?id=44226) или иных.
 
 > [!NOTE]
 > Сведения о передаче файлов с помощью удаленного взаимодействия PowerShell см. в статье [Копирование файлов на сервер Nano Server и с него](https://aka.ms/nri9c8).
@@ -235,7 +235,7 @@ Get-WindowsPackage -Online
 В следующих разделах перечислены наиболее распространенные операции по сбору данных о производительности, а также способы их выполнения на сервере Nano Server.
 
 ### <a name="query-available-event-providers"></a>Запрос доступных поставщиков событий
-Средство [Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) предназначено для запроса поставщиков событий следующим образом:
+Средство [Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)) предназначено для запроса поставщиков событий следующим образом:
 ```
 wpr.exe -providers
 ```
@@ -252,7 +252,7 @@ PS C:\> wpr.exe -providers | select-string Storage
 ```
 
 ### <a name="record-traces-from-a-single-etw-provider"></a>Запись трассировок из одного поставщика трассировки событий Windows
-Для этого можно использовать новые [командлеты для управления трассировкой событий](https://technet.microsoft.com/library/dn919247.aspx). Ниже приведен пример рабочего процесса:
+Для этого можно использовать новые [командлеты для управления трассировкой событий](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)). Ниже приведен пример рабочего процесса:
 
 Создайте и запустите трассировку, указав имя файла для хранения событий.
 ```
@@ -284,7 +284,7 @@ Mode                LastWriteTime         Length Name
 > В этом примере показано добавление одного поставщика трассировки в сеанс, однако командлет ```Add-EtwTraceProvider``` можно использовать для сеанса несколько раз с разными GUID поставщика, чтобы включить трассировку из нескольких источников. Альтернативой является использование описанных ниже профилей ```wpr.exe```.
 
 ### <a name="record-traces-from-multiple-etw-providers"></a>Запись трассировки из нескольких поставщиков трассировки событий Windows
-Параметр ```-profiles```[Windows Performance Recorder](https://msdn.microsoft.com/library/hh448229.aspx) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
+Параметр ```-profiles```[Windows Performance Recorder](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448229(v=win.10)) позволяет одновременно осуществлять трассировку из разных поставщиков. Существует ряд встроенных профилей, таких как CPU, Network и DiskIO, которые можно выбрать:
 ```
 PS C:\Users\Administrator\Documents> wpr.exe -profiles 
 
@@ -321,7 +321,7 @@ Copyright (c) 2015 Microsoft Corporation. All rights reserved.
         WdfTraceLoggingProvider     WDF Driver Activity
 ```
 
-Подробные инструкции по созданию пользовательских профилей см. в [документации по WPR.exe](https://msdn.microsoft.com/library/windows/hardware/hh448223.aspx).
+Подробные инструкции по созданию пользовательских профилей см. в [документации по WPR.exe](/previous-versions/windows/it-pro/windows-8.1-and-8/hh448223(v=win.10)).
 
 ### <a name="record-etw-traces-during-operating-system-boot-time"></a>Запись трассировок событий Windows во время загрузки операционной системы
 Используйте командлет ```New-AutologgerConfig``` для сбора событий во время загрузки системы. Работа с ним во многом аналогична командлету ```New-EtwTraceSession```, однако поставщики, добавленные в конфигурацию авторегистратора, будут включены только при следующей загрузке. Общий рабочий процесс выглядит следующим образом:
@@ -376,13 +376,13 @@ Exiting, please wait...
 The command completed successfully.
 ```
 
-Другие параметры командной строки позволяют, например, указать имена нужных счетчиков производительности в файле конфигурации, перенаправив выходные данные в файл журнала. Дополнительные сведения см. в [документации по typeperf.exe](https://technet.microsoft.com/library/bb490960.aspx).
+Другие параметры командной строки позволяют, например, указать имена нужных счетчиков производительности в файле конфигурации, перенаправив выходные данные в файл журнала. Дополнительные сведения см. в [документации по typeperf.exe](/previous-versions/windows/it-pro/windows-xp/bb490960(v=technet.10)).
 
 Кроме того, графический интерфейс Perfmon.exe можно использовать удаленно с целевыми объектами Nano Server. При добавлении счетчиков производительности в представление укажите целевой объект Nano Server в качестве имени компьютера вместо значения по умолчанию *<Local computer>* .
 
 ### <a name="interact-with-the-windows-event-log"></a>Взаимодействие с журналом событий Windows
 
-Nano Server поддерживает командлет ```Get-WinEvent```, который предоставляет возможности фильтрации и запроса журналов событий Windows, как локально, так и на удаленном компьютере. Подробное описание параметров и примеры можно найти на [странице документации по Get-WinEvent](https://technet.microsoft.com/library/hh849682.aspx). Этот простой пример извлекает *ошибки*, отмеченные в журнале *System* за последние два дня.
+Nano Server поддерживает командлет ```Get-WinEvent```, который предоставляет возможности фильтрации и запроса журналов событий Windows, как локально, так и на удаленном компьютере. Подробное описание параметров и примеры можно найти на [странице документации по Get-WinEvent](/powershell/module/microsoft.powershell.diagnostics/get-winevent?view=powershell-5.1). Этот простой пример извлекает *ошибки*, отмеченные в журнале *System* за последние два дня.
 ```
 PS C:\> $StartTime = (Get-Date) - (New-TimeSpan -Day 2)
 PS C:\> Get-WinEvent -FilterHashTable @{LogName='System'; Level=2; StartTime=$StartTime} | select TimeCreated, Message
@@ -397,7 +397,7 @@ TimeCreated           Message
 Nano Server также поддерживает командлет ```wevtutil.exe```, позволяющий получать сведения о журналах событий и издателях. Дополнительные сведения см. в [документации по wevtutil.exe](https://aka.ms/qvod7p). 
 
 ### <a name="graphical-interface-tools"></a>Средства графического интерфейса
-[Средства управления веб-серверами](https://blogs.technet.microsoft.com/servermanagement/2016/08/17/deploy-setup-server-management-tools/) можно использовать для удаленного управления целевыми объектами Nano Server и отображения журнала событий Nano Server с помощью веб-браузера. Наконец, просмотр событий в оснастке MMC (eventvwr.msc) также можно использовать для просмотра журналов — просто откройте его на компьютере с рабочим столом и сориентируйте на удаленный Nano Server.
+[Средства управления веб-серверами](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog) можно использовать для удаленного управления целевыми объектами Nano Server и отображения журнала событий Nano Server с помощью веб-браузера. Наконец, просмотр событий в оснастке MMC (eventvwr.msc) также можно использовать для просмотра журналов — просто откройте его на компьютере с рабочим столом и сориентируйте на удаленный Nano Server.
 
 
 
@@ -406,4 +406,4 @@ Nano Server также поддерживает командлет ```wevtutil.e
   
 Nano Server можно управлять как целевыми узлами с помощью настройки требуемого состояния (DSC) Windows PowerShell. Сейчас управлять узлами с сервером Nano Server с помощью DSC можно только в режиме push-уведомлений. На сервере Nano Server работают не все функции DSC.  
   
-Дополнительные сведения см. в статье [Использование DSC на сервере Nano Server](https://msdn.microsoft.com/powershell/dsc/nanoDsc).  
+Дополнительные сведения см. в статье [Использование DSC на сервере Nano Server](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog).  

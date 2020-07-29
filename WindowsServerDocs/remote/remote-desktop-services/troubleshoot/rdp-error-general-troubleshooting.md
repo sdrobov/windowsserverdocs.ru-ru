@@ -8,12 +8,12 @@ manager: dcscontentpm
 ms.author: delhan
 ms.date: 07/24/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: 03c3c8daa8dc4bea0e03ed285a98401f91cdf1cb
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 7d94b6a2211cd9fbaefb8318ebdcc4eb52ba9ba1
+ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80857217"
+ms.lasthandoff: 07/23/2020
+ms.locfileid: "86963306"
 ---
 # <a name="general-remote-desktop-connection-troubleshooting"></a>Устранение неполадок с подключениями к Удаленному рабочему столу
 
@@ -23,7 +23,7 @@ ms.locfileid: "80857217"
 
 ### <a name="check-the-status-of-the-rdp-protocol-on-a-local-computer"></a>Проверка состояния протокола RDP на локальном компьютере
 
-Сведения о том, как проверить и изменить состояние протокола RDP на локальном компьютере, см. в разделе [How to enable Remote Desktop](https://docs.microsoft.com/windows-server/remote/remote-desktop-services/clients/remote-desktop-allow-access#how-to-enable-remote-desktop) (Как включить удаленный рабочий стол).
+Сведения о том, как проверить и изменить состояние протокола RDP на локальном компьютере, см. в разделе [How to enable Remote Desktop](../clients/remote-desktop-allow-access.md#how-to-enable-remote-desktop) (Как включить удаленный рабочий стол).
 
 > [!NOTE]  
 > Если параметры удаленного рабочего стола недоступны, см. раздел [Проверка блокировки объектом групповой политики протокола RDP на локальном компьютере](#check-whether-a-group-policy-object-gpo-is-blocking-rdp-on-a-local-computer).
@@ -74,7 +74,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 
 ### <a name="modifying-a-blocking-gpo"></a>Изменение блокирующего объекта групповой политики
 
-Эти параметры можно изменить в редакторе объектов групповой политики (GPE) и консоли управления групповыми политиками (GPM). Дополнительные сведения об использовании групповой политики см. в статье [Advanced Group Policy Management](https://docs.microsoft.com/microsoft-desktop-optimization-pack/agpm/) (Расширенное управление групповыми политиками).
+Эти параметры можно изменить в редакторе объектов групповой политики (GPE) и консоли управления групповыми политиками (GPM). Дополнительные сведения об использовании групповой политики см. в статье [Advanced Group Policy Management](/microsoft-desktop-optimization-pack/agpm/) (Расширенное управление групповыми политиками).
 
 Чтобы изменить блокирующую политику, используйте один из следующих методов.
 
@@ -144,7 +144,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
       Restart-Service TermService -Force  
       ```
       
-      Здесь \<filename\> — имя экспортированного REG-файла.
+      Замените \<filename\> именем экспортированного REG-файла.
 
 6. Проверьте конфигурацию, попытавшись еще раз подключиться к удаленному рабочему столу. Если подключиться все равно не удается, перезагрузите затронутый компьютер.
 7. Если вы не смогли подключиться, [проверьте состояние самозаверяющего сертификата протокола RDP](#check-the-status-of-the-rdp-self-signed-certificate).
@@ -189,7 +189,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
 
 Для выполнения этой процедуры используйте экземпляр PowerShell с разрешениями администратора. На локальном компьютере также можно использовать командную строку с разрешениями администратора. Но для этой процедуры используется PowerShell, так как одни и те же командлеты выполняются локально и удаленно.
 
-1. Откройте окно PowerShell. Чтобы подключиться к удаленному компьютеру, введите **Enter-PSSession -ComputerName \<имя_компьютера\>** .
+1. Откройте окно PowerShell. Чтобы подключиться к удаленному компьютеру, введите **Enter-PSSession -ComputerName \<computer name\>** .
 2. Введите следующую команду:  
    
      ```powershell  
@@ -225,7 +225,7 @@ gpresult /S <computer name> /H c:\gpresult-<computer name>.html
    ```
    
 3. Проверьте выходные данные команды **psping** на наличие таких результатов:  
-      - **Connecting to \<computer IP\>** (Подключение к <IP-адрес_компьютера>): удаленный компьютер доступен.
+      - **Подключение к** \<computer IP\>: удаленный компьютер доступен.
       - **(0% loss)** (0 % потерь): все попытки подключения выполнены успешно.
       - **The remote computer refused the network connection** (Удаленный компьютер отклонил сетевое подключение): удаленный компьютер недоступен.
       - **(100% loss)** (100 % потерь): не удалось выполнить подключение.

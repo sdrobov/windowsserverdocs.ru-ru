@@ -9,12 +9,12 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.date: 02/19/2020
-ms.openlocfilehash: 4598c0f60fac98cd14a6f7d920b9c6f31704bd06
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 7568db50f09273b398955c314491b903f627d1a9
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86963376"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87182100"
 ---
 # <a name="optimizing-windows-10-version-1909-for-a-virtual-desktop-infrastructure-vdi-role"></a>Оптимизация Windows 10 версии 1909 для роли инфраструктуры виртуальных рабочих столов (VDI)
 
@@ -39,7 +39,7 @@ ms.locfileid: "86963376"
 
 Что касается обновлений, Windows 10 использует алгоритм ежемесячных обновлений, чтобы клиентам не нужно было их выполнять. В большинстве случаев администраторы VDI контролируют процесс обновления с помощью процесса завершения работы виртуальных машин на основе "главного" или "золотого" образа, распечатывая этот образ, предназначенный только для чтения, исправляя его, затем упаковывая его и возвращая обратно в рабочую среду. Следовательно, нет необходимости в том, чтобы виртуальные машины VDI проверяли Центр обновления Windows. В некоторых случаях, например в виртуальных машинах постоянных сред VDI, выполняются обычные процедуры исправления. Кроме того, можно использовать Центр обновления Windows или Microsoft Intune. System Center Configuration Manager может использоваться для обработки обновлений и доставки других пакетов. Каждая организация должна определить наилучший способ обновления VDI.
 
-> [!TIP]  
+> [!TIP]
 > Сценарий, который реализует оптимизации, описанные в этой статье, а также файл экспорта объекта групповой политики (GPO), который можно импортировать с помощью **LGPO.exe**, доступны на странице [TheVDIGuys](https://github.com/TheVDIGuys) на портале GitHub.
 
 Этот сценарий был разработан в соответствии с вашей средой и требованиями. Основным кодом является PowerShell, а работа выполняется с использованием входных файлов (обычный текст) и файлов экспорта средства объектов локальной групповой политики (LGPO). Эти файлы содержат списки приложений, которые нужно удалить, и служб, которые нужно отключить. Если вы не хотите удалять определенное приложение или отключать определенную службу, измените соответствующий текстовый файл и удалите элемент. Наконец, существуют параметры локальной политики, которые можно импортировать на устройство. Лучше иметь некоторые параметры в базовом образе, чем применять параметры с помощью групповой политики, так как некоторые параметры вступают в силу при следующей перезагрузке или при первом использовании компонента.
@@ -166,9 +166,9 @@ ms.locfileid: "86963376"
     Get-AppxProvisionedPackage -Online
 
     DisplayName  : Microsoft.3DBuilder
-    Version      : 13.0.10349.0  
+    Version      : 13.0.10349.0
     Architecture : neutral
-    ResourceId   : \~ 
+    ResourceId   : \~
     PackageName  : Microsoft.3DBuilder_13.0.10349.0_neutral_\~_8wekyb3d8bbwe
     Regions      :
     ...
@@ -195,7 +195,7 @@ Remove-AppxProvisionedPackage -Online -PackageName
 
 ### <a name="manage-windows-optional-features-using-powershell"></a>Управление дополнительными компонентами Windows с помощью PowerShell
 
-Вы можете управлять дополнительными компонентами Windows с помощью PowerShell. Дополнительные сведения см. в статье [Windows 10: Managing Optional Features with PowerShell](https://social.technet.microsoft.com/wiki/contents/articles/39386.windows-10-managing-optional-features-with-powershell.aspx) (Windows 10: управление дополнительными компонентами с помощью PowerShell). Чтобы перечислить текущие установленные компоненты Windows, выполните следующую команду PowerShell:
+Вы можете управлять дополнительными компонентами Windows с помощью PowerShell. См. сведения на [форуме Windows Server PowerShell](https://docs.microsoft.com/answers/topics/windows-server-powershell.html). Чтобы перечислить текущие установленные компоненты Windows, выполните следующую команду PowerShell:
 
 ```powershell
 Get-WindowsOptionalFeature -Online
@@ -764,7 +764,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 1. Запустите мастер очистки диска (с повышенными правами) после установки всех обновлений. Включите категории "Оптимизация доставки" и "Очистка обновлений Windows". Этот процесс можно автоматизировать, используя командную строку `Cleanmgr.exe` с параметром `/SAGESET:11`. Параметр `/SAGESET` задает значения реестра, которые могут использоваться позже для автоматизации очистки диска, и использует все доступные параметры в мастере очистки диска.
 
     1. Выполнение `Cleanmgr.exe /SAGESET:11` на тестовой виртуальной машине с чистой установкой показывает, что только два параметра автоматической очистки диска включены по умолчанию:
-    
+
         - "Загруженные файлы программ";
 
         - "Временные файлы Интернета".
@@ -776,7 +776,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 2. Очистите хранилище теневого копирования томов, если оно используется.
 
     - Откройте командную строку с повышенными привилегиями и выполните последовательно команды `vssadmin list shadows` и `vssadmin list shadowstorage`.
-    
+
         Если выходные данные этих команд содержат сообщение **Удовлетворяющие запросу элементы не найдены**, то хранилище VSS не используется.
 
 3. Очистите временные файлы и журналы. Откройте командную строку с повышенными привилегиями и выполните последовательно команды `Del C:\*.tmp /s`, `Del C:\Windows\Temp\.` и `Del %temp%\.`.
@@ -790,7 +790,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanmanWorkstatio
 ```azurecli
 
 Taskkill.exe /F /IM "OneDrive.exe"
-Taskkill.exe /F /IM "Explorer.exe"` 
+Taskkill.exe /F /IM "Explorer.exe"`
     if (Test-Path "C:\\Windows\\System32\\OneDriveSetup.exe")`
      { Start-Process "C:\\Windows\\System32\\OneDriveSetup.exe"`
          -ArgumentList "/uninstall"`
