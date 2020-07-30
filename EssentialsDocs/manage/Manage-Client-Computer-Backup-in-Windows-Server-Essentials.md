@@ -2,18 +2,17 @@
 title: Управление архивацией клиентского компьютера в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 1b4776e8-9504-4b98-ae80-11da797d9819
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: eb8952d1ab8eb7493cf1ae74ddd748af38b0e4db
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: ba0c7a6e9adf4700754d01800ec80a805e10c9d5
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470779"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181020"
 ---
 # <a name="manage-client-computer-backup-in-windows-server-essentials"></a>Управление архивацией клиентского компьютера в Windows Server Essentials
 
@@ -448,7 +447,7 @@ ms.locfileid: "85470779"
 
 |Параметр архивации|По умолчанию|Описание|
 |--------------------|-------------|-----------------|
-|Включить/отключить|Включено|История файлов включена по умолчанию при установке Windows Server Essentials.|
+|Включить/отключить|Вкл.|История файлов включена по умолчанию при установке Windows Server Essentials.|
 |Архивация данных|Документы и рабочий стол|Существует три предварительно настроенных параметра, которые позволяют указать различные решения для архивации. Вы можете выбрать один из следующих вариантов:<br /><br /> -Documents and Desktop<br /><br /> -Все библиотеки, Рабочий стол, контакты и Избранное<br /><br /> — Все данные в библиотеках, рабочем столе, контактах и избранном, исключая данные из библиотек музыки, видео и изображений.|
 |Частота резервного копирования|Каждый час|Указывает, как часто компонент истории файлов архивирует выбранные данные. Можно выбрать один из нескольких вариантов — от 10 минут до ежедневного выполнения.|
 |Срок хранения копий|Год|Указывает, в течение какого времени компонент истории файлов сохраняет копию архива.|

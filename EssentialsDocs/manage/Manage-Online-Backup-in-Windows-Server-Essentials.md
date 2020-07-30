@@ -2,18 +2,17 @@
 title: Управление оперативной архивацией в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5c9f6dc91d5bc46d3be6e20e105530a9dca2b548
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b3a9ceca5de9971f77175052a604d3e22de07036
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470655"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180950"
 ---
 # <a name="manage-online-backup-in-windows-server-essentials"></a>Управление оперативной архивацией в Windows Server Essentials
 
@@ -166,7 +165,7 @@ ms.locfileid: "85470655"
 
 5.  **Укажите конечное местоположение для восстановленных файлов и папок**
 
-     На странице мастера **Выбор параметров восстановления** можно указать место восстановления файлов и папок. Имеются две возможности:
+     На странице мастера **Выбор параметров восстановления** можно указать место восстановления файлов и папок. Существует два варианта.
 
     -   **Восстановление в исходном местоположении**. Выберите этот вариант, чтобы восстановить файлы и папки именно там, откуда они были изначально копированы во время архивации.
 
@@ -334,7 +333,7 @@ ms.locfileid: "85470655"
 
 1. Откройте панель мониторинга.
 
-2. Выполните одно из следующих действий.
+2. Используйте один из следующих вариантов:
 
      Windows Server Essentials: в области навигации щелкните значок предупреждения, который \( может быть критическим, предупреждением или информационным \) . Откроется средство просмотра оповещений.
 

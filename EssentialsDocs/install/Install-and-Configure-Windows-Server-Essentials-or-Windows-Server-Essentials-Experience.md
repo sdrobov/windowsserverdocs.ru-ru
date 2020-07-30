@@ -2,18 +2,17 @@
 title: Установка и настройка Windows Server Essentials или режима Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 48ea6cd4-3955-4aaf-9236-2515a6c3e730
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 338fe421b4ba30afc1b2cd3ee983668b282f3a15
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 804a3ed902606e52f25977601e4edc2e2fc5e04f
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181190"
 ---
 # <a name="install-and-configure-windows-server-essentials-or-windows-server-essentials-experience"></a>Установка и настройка Windows Server Essentials или режима Windows Server Essentials
 
@@ -45,14 +44,14 @@ Windows Server Essentials — это роль в Windows Server 2016, котор
 
 -    Windows Server 2016 с установленной ролью Windows Server Essentials Experience
 
-|Среда развертывания|Описание:|См. также|
+|Среда развертывания|Описание|См. также|
 |----------------------------|-----------------|---------------------|
 |Новая среда Active Directory|Для создания новой среды Active Directory можно установить Windows Server Essentials.|[Развертывание Windows Server Essentials для настройки новой среды Active Directory](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_NewAD)|
 |Существующая среда Active Directory|Можно установить Windows Server Essentials в существующую среду Active Directory.|[Развертывание Windows Server Essentials в существующей среде Active Directory](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_ExistingAD)|
 |Виртуальная среда|Можно развернуть Windows Server Essentials в качестве виртуальной машины.|[Виртуализация среды](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_VirtualWSE)|
 |Автоматизированное развертывание|Автоматизация развертывания Windows Server Essentials с помощью Windows PowerShell.|[Установка и настройка Windows Server Essentials с помощью Windows PowerShell](Install-and-Configure-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md#BKMK_PowerShell)|
 
-## <a name="before-you-begin"></a>Перед началом работы
+## <a name="before-you-begin"></a>Перед началом
  Перед началом установки необходимо ознакомиться со следующей документацией:
 
 -   [Общие сведения о Windows Server Essentials](https://www.microsoft.com/server-cloud/windows-server-essentials/windows-server-2012-r2-essentials.aspx)

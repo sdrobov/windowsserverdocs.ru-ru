@@ -2,18 +2,17 @@
 title: Шаг 1. Подготовка исходного сервера для миграции Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: f5696c473a8fcb04a60b9a4b6c51ac206a6ef0de
-ms.sourcegitcommit: 2f072c0c02e3e0deae331ca64b375d63b89d0522
+ms.openlocfilehash: 6666a0f68863913c0c0a5a1b1e903eaebf5470a4
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83404586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180490"
 ---
 # <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>Шаг 1. Подготовка исходного сервера для миграции Windows Server Essentials
 
@@ -70,7 +69,7 @@ ms.locfileid: "83404586"
 
 5.  Снимите флажок **Определить следующие параметры политики**.
 
-6.  Удалите \\ \локалхост\сисвол \\<имя_домена \> \скриптс\ SBS_LOGIN_SCRIPT. bat.
+6.  Удалите \\ \локалхост\сисвол \\<имя_домена \>\scripts\SBS_LOGIN_SCRIPT.bat.
 
 ###  <a name="evaluate-the-health-of-the-source-server"></a><a name="BKMK_EvaluateHealth"></a>Оценка работоспособности исходного сервера
  Важно оценить работоспособность исходного сервера перед началом миграции. Для проверки текущих обновлений, вывода отчета о работоспособности системы, а также запуска анализатора соответствия рекомендациям Windows Server используйте следующие процедуры.

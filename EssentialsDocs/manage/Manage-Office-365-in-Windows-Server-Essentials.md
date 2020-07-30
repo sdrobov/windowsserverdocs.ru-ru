@@ -2,17 +2,16 @@
 title: Управление Office 365 в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: e21f8b38c126f699fda8245ab620ce5cd210fa11
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 249ff5f77d525792d5bf53719fcf1ee93bc955a4
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470679"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180970"
 ---
 # <a name="manage-office-365-in-windows-server-essentials"></a>Управление Office 365 в Windows Server Essentials
 
@@ -236,7 +235,7 @@ ms.locfileid: "85470679"
 
 3.  Введите учетные данные для учетной записи, которую вы хотите использовать для подключения к подписке Office 365, а затем нажмите кнопку **Далее**.
 
-4.  Щелкните **Закрыть**. Панель мониторинга перезагрузится.
+4.  Нажмите кнопку **Закрыть**. Панель мониторинга перезагрузится.
 
 ###  <a name="disable-office-365-integration"></a><a name="BKMK_Disable"></a>Отключить интеграцию с Office 365
  Если вы решите, что вы не хотите управлять службами Office 365 и учетными записями в Интернете с панели мониторинга, можно отключить интеграцию с Office 365. Подписка Office 365 остается активной, и все изменения конфигурации, внесенные из панели мониторинга, остаются в силе. Например, вы получите электронное письмо, адресованное доменному имени, которое было связано с подпиской Office 365. Сообщения электронной почты не теряются, а элементы управления, заданные для мобильных устройств, по-прежнему используются в Exchange Online.

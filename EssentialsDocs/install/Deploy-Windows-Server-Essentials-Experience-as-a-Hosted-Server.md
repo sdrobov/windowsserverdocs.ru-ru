@@ -2,18 +2,17 @@
 title: Развертывание режима Windows Server Essentials в качестве размещенного сервера
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5222298c4b8a3fd98c40474233fc7208607a3df7
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 63f5a72cf070b1520815f8f8f59d9c6ecf386aa5
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470999"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181260"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Развертывание режима Windows Server Essentials в качестве размещенного сервера
 
@@ -209,7 +208,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
  Данная команда позволяет включить удаленный веб-доступ с помощью автоматически настроенного маршрутизатора и изменить установленные по умолчанию права доступа для всех существующих пользователей.
 
-### <a name="add-user"></a>Добавление пользователя
+### <a name="add-user"></a>Добавить пользователя
  **Синтаксис**
 
  Add-Вссусер [-name] <строка \> [-password] <SecureString \> [-AccessLevel <строка \> {пользователь &#124; Администратор}] [-FirstName <строка \> ] [-LastName <строка \> ] [-алловремотеакцесс] [-алловвпнакцесс] [<общиепараметры \> ]

@@ -2,18 +2,17 @@
 title: Управление устройствами в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: f5fe1088-ebe7-4799-a47d-075b0048dea1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6ae5ac9abd6df3f84c4dbd062b9b954a3e2be89d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 5b183ef2900d1ced267e991f43827438b57fb728
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470769"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87181010"
 ---
 # <a name="manage-devices-in-windows-server-essentials"></a>Управление устройствами в Windows Server Essentials
 
@@ -70,7 +69,7 @@ ms.locfileid: "85470769"
 
 ### <a name="computer-tasks-in-the-dashboard"></a>Задачи с компьютером, доступные на панели мониторинга
 
-|Имя задачи|Описание:|
+|Имя задачи|Описание|
 |---------------|-----------------|
 |Просмотр свойств компьютера|Отображает общие сведения о выбранном компьютере и позволяет просматривать сведения о резервном копировании данных компьютера.|
 |Настройка резервного копирования для данного компьютера|Запускает мастер настройки резервного копирования.|

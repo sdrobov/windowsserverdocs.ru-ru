@@ -2,18 +2,17 @@
 title: Обзор Launchpad в Windows Server Essentials
 description: Описание использования Windows Server Essentials
 ms.date: 10/03/2016
-ms.prod: windows-server
 ms.topic: article
 ms.assetid: 198d16cb-3d07-4706-be89-ad14a5f7dc47
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e3a25a574e932d9a6a66ca706472dfed5a67a6ee
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c648ab5921d50a2b1178b44104977b8bb3abd692
+ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85470419"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87180840"
 ---
 # <a name="overview-of-the-launchpad-in-windows-server-essentials"></a>Обзор Launchpad в Windows Server Essentials
 
@@ -66,7 +65,7 @@ ms.locfileid: "85470419"
 > [!NOTE]
 >  Чтобы использовать эту возможность, необходимы права доступа или разрешения для входа на сервер.
 
-### <a name="microsoft-office-365"></a>Microsoft Office 365
+### <a name="microsoft-office-365"></a>Microsoft Office 365
  Ссылка **Microsoft Office 365** отображается на панели доступа только при наличии у пользователя учетной записи Office 365. Щелкните элемент  **Microsoft Office 365** , чтобы получить доступ к дополнительным ссылкам на ресурсы Office 365. Дополнительные сведения см. [в разделе Краткое руководство по началу работы to Using Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md).
 
 ### <a name="computer-health-alerts"></a>Оповещения о работоспособности компьютера
