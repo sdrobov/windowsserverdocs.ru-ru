@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 4e40b57f-6917-43ef-92e0-030baa9d2b99
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: 6b1e6d46013d98970e694176426be2ac1f57195d
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: a56211dc04a3f10623fd31f5bae174f03ae65022
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87179360"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409474"
 ---
 # <a name="use-the-my-server-app-to-connect-to-windows-server-essentials"></a>Использование приложения My Server для подключения к Windows Server Essentials
 
@@ -151,29 +151,7 @@ ms.locfileid: "87179360"
 7.  Для завершения работы мастера следуйте инструкциям на экране.
 
     > [!NOTE]
-<<<<<<< ГОЛОВКе после установки сертификата можно войти в приложение My Server для Windows 8 или Windows 8.1, используя имя сервера и учетные данные сети.
-
-## <a name="additional-references"></a>Дополнительные ссылки
-
--   [Обзор интеграции служб для Windows Server Essentials — часть 1](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)
-
--   [Обзор интеграции служб для Windows Server Essentials — часть 2](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)
-
--   [Управление повсеместным доступом](../manage/Manage-Anywhere-Access-in-Windows-Server-Essentials.md)
-
--   [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
-
-
--   [Удаленная работа](Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Использование Windows Server Essentials](Use-Windows-Server-Essentials.md)
-
--   [Удаленная работа](../use/Work-Remotely-in-Windows-Server-Essentials.md)
-
--   [Использование Windows Server Essentials](../use/Use-Windows-Server-Essentials.md)
-
-=======
-    >  After the installation of the certificate is complete, you can sign in to the My Server app for Windows 8 or Windows 8.1 by using your server name and your network credentials.
+    >  После установки сертификата вы сможете войти в приложение My Server для Windows 8 или Windows 8.1, используя имя сервера и сетевые учетные данные.
 
 ## <a name="see-also"></a>См. также раздел
 
@@ -188,5 +166,3 @@ ms.locfileid: "87179360"
 -   [Удаленная работа](Work-Remotely-in-Windows-Server-Essentials.md)
 
 -   [Использование Windows Server Essentials](Use-Windows-Server-Essentials.md)
-
->>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

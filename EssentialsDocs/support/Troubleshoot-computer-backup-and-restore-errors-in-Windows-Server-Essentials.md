@@ -7,12 +7,12 @@ ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: de384437a1d135aa60cf8d65a8031faa22983bb0
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: cbc6fec843a55d99ba709953b56e01a55f317a62
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180270"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409524"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Устранение неполадок архивации и восстановления данных в Windows Server Essentials
 
@@ -117,13 +117,13 @@ ms.locfileid: "87180270"
 
     - Удалите содержимое тома, чтобы освободить место на диске.
 
-            > [!NOTE]
-            > If you need to free up space on the system reserved volume, you can move the System Recovery Image to a different volume. For instructions, see [Deploy a System Recovery Image](/previous-versions/windows/it-pro/windows-7/dd744280(v=ws.10)).
+        > [!NOTE]
+        > Если необходимо освободить место на системном томе, вы можете перенести образ для восстановления системы на другой том. Инструкции см. в разделе [Развертывание образа восстановления системы](/previous-versions/windows/it-pro/windows-7/dd744280(v=ws.10)).
 
     - Исключите том из клиентской резервной копии. Это действие следует выполнить, только если вам необязательно сохранять резервную копию данных на этом томе.
 
-            > [!WARNING]
-            > If you exclude the system reserved volume from a client backup, the client system will not be backed up, and you will not be able to perform a full system restore on the computer.
+        > [!WARNING]
+        > Если вы исключите системный том из клиентской резервной копии, резервное копирование системы клиента не будет выполнено и полное восстановление системы на этом компьютере будет невозможно.
 
 5. Проверьте наличие других оповещений на сервере, которые могут сигнализировать о недостаточном месте на диске для успешной архивации данных на сервере. Следуйте инструкциям в диалоговом окне оповещения для устранения проблемы.
 

@@ -1,5 +1,5 @@
 ---
-title: Включить
+title: Использование команды Enable
 description: Справочная статья по включению, которая включает все службы для служб развертывания Windows.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8808849e58c8f2a359b9f8d25c1ece2bb82d2dfe
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 8c6edee30de94261ff528b308635b3bae7760d3d
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85936831"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409785"
 ---
-# <a name="enable"></a>Включить
+# <a name="using-the-enable-command"></a>Использование команды Enable
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

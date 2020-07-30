@@ -1,21 +1,20 @@
 ---
 title: Основы DHCP (протокол динамического конфигурирования узлов)
 description: ''
-ms.date: 5/26/2020
 ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
 ms.technology: server-general
-ms.topic: article
+ms.date: 5/26/2020
+ms.topic: troubleshoot
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: ''
-ms.openlocfilehash: c7e4f385472c9078c49fcfd7aeab28b1b70c5a13
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: 5a3247fad961f4b2d1cf6e354c29706708c8e330
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84150212"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409815"
 ---
 # <a name="dhcp-dynamic-host-configuration-protocol-basics"></a>Основы DHCP (протокол динамического конфигурирования узлов)
 
@@ -43,7 +42,7 @@ ms.locfileid: "84150212"
 
 - Microsoft TCP/IP-32 для Windows для рабочих групп версии 3,11, 3.11 a и 3.11 b
 
-Разные DHCP-клиенты поддерживают различные параметры, которые они могут получить от DHCP-сервера. 
+Разные DHCP-клиенты поддерживают различные параметры, которые они могут получить от DHCP-сервера.
 
 Следующие операционные системы Microsoft Server предоставляют функции DHCP-сервера:
 
@@ -450,6 +449,6 @@ DHCP: Discover (xid=3ED14752)
 
 Для просмотра сведений о IP-адресе в клиенте Windows или Windows для рабочих групп используйте служебную программу IPCONFIG. Если клиент является Windows 95, используйте WINIPCFG.
 
-## <a name="references"></a>Полезные ссылки
+## <a name="references"></a>Справочные материалы
 
 Дополнительные сведения о DHCP см. в разделе RFC1541 и RFC2131. Документы RFC могут быть получены через Интернет на многочисленных сайтах, например: [http://www.rfc-editor.org/](http://www.rfc-editor.org/) и[http://www.tech-nic.qc.ca/](http://www.tech-nic.qc.ca/)

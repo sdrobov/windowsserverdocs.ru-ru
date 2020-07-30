@@ -9,12 +9,12 @@ ms.author: jgerend
 manager: dongill
 ms.date: 06/29/2020
 ms.prod: windows-server
-ms.openlocfilehash: bd2d1f9baa17581cb43ae383c260c938f302a73c
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 33b19ba9c6f7d8f12d72876a04dbf8bdfda7ff30
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86958986"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409935"
 ---
 # <a name="windows-commands"></a>Команды Windows
 
@@ -53,11 +53,11 @@ ms.locfileid: "86958986"
 
 Сведения, содержащиеся в этом разделе, применимы к:
 
-- Windows Server 2019
+- Windows Server 2019
 - Windows Server (Semi-Annual Channel)
 - Windows Server 2016
 - Windows Server 2012 R2
-- Windows Server 2012
+- Windows Server 2012
 - Windows Server 2008 R2
 - Windows Server 2008
 - Windows 10
@@ -711,8 +711,7 @@ PowerShell был разработан для расширения возмож�
 - [regini](regini.md)
 - [regsvr32](regsvr32.md)
 - [relog](relog.md)
-- [rem batch file](rem.md)
-- [rem script](rem_1.md)
+- [rem](rem.md)
 - [remove](remove.md)
 - [ren](ren.md)
 - [rename](rename.md)

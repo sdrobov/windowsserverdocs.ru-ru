@@ -1,6 +1,6 @@
 ---
 title: rem
-description: Справочная статья для * * * *-
+description: Справочная статья по команде REM, которая записывает комментарии в скрипт, пакет или файл config.sys.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,43 +9,42 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 5161a3ba0904396f29b7c567e3a16da5f95e5271
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: fe0bfce3f9f72d0a32ef5b3bb540e5a297df24a1
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85933500"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409705"
 ---
 # <a name="rem"></a>rem
 
-
-
-Записывает комментарии (примечания) в пакетном файле или CONFIG.SYS. Если комментарий не указан, **REM** добавляется пробел по вертикали.
-
-
+Записывает комментарии в скрипт, пакет или файл config.sys. Если комментарий не указан, **REM** добавляется пробел по вертикали.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-rem [<Comment>]
+rem [<comment>]
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------|-----------|
-|\<Comment>|Указывает строку символов, включаемую в качестве комментария.|
-|/?|Отображение справки в командной строке.|
+| Параметр | Описание |
+|--|--|
+| `<comment>` | Указывает строку символов, включаемую в качестве комментария. |
+| /? | Отображение справки в командной строке. |
 
-## <a name="remarks"></a>Комментарии
+#### <a name="remarks"></a>Remarks
 
--   Команда **REM** не отображает комментарии на экране. Для отображения комментариев на экране необходимо использовать команду **echo on** в пакетном или CONFIG.SYSном файле.
--   **<** В комментариях пакетного файла нельзя использовать символ перенаправления (или **>** ) или pipe ( **|** ).
--   Несмотря на то, что можно использовать **REM** без комментариев для добавления вертикальных пробелов в пакетный файл, можно также использовать пустые строки. При обработке пакетной программы пустые строки игнорируются.
+- Команда **REM** не отображает комментарии на экране. Чтобы отобразить комментарии на экране, необходимо включить команду **echo on** в файл.
 
-## <a name="examples"></a>Примеры
+- `<`В комментариях пакетного файла нельзя использовать символ перенаправления (или `>` ) или pipe ( `|` ).
 
-Для отображения пакетного файла, который использует примечания для комментариев и вертикального пробела:
+- Несмотря на то, что можно использовать **REM** без комментариев для добавления вертикальных пробелов в пакетный файл, можно также использовать пустые строки. При обработке пакетной программы пустые строки игнорируются.
+
+### <a name="examples"></a>Примеры
+
+Чтобы добавить вертикальные пробелы через комментарии пакетного файла, введите:
+
 ```
 @echo off
 rem  This batch program formats and checks new disks.
@@ -55,10 +54,29 @@ rem echo Insert new disk in Drive B.
 pause
 format b: /v chkdsk b:
 ```
-Чтобы включить пояснительный комментарий перед командой **Prompt** в файле CONFIG.SYS, добавьте следующие строки для CONFIG.SYS.
+
+Чтобы включить пояснительный комментарий перед командой **Prompt** в файле config.sys, введите:
+
 ```
 rem Set prompt to indicate current directory
 prompt $p$g
+```
+
+Чтобы предоставить комментарий о том, что делает сценарий, введите:
+
+```
+rem The commands in this script set up 3 drives.
+rem The first drive is a primary partition and is
+rem assigned the letter D. The second and third drives
+rem are logical partitions, and are assigned letters
+rem E and F.
+create partition primary size=2048
+assign d:
+create partition extended
+create partition logical size=2048
+assign e:
+create partition logical
+assign f:
 ```
 
 ## <a name="additional-references"></a>Дополнительные ссылки

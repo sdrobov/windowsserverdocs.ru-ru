@@ -4,16 +4,16 @@ description: Известные проблемы и устранение неп�
 author: nedpyle
 ms.author: nedpyle
 manager: tiaascs
-ms.date: 06/02/2020
+ms.date: 07/29/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: d7c76413fbc64ce200ca4c442a30e6f804927f68
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 9050d3316ed86538a278dbdc9f2bd51e3dfca377
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87182060"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409885"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -549,10 +549,43 @@ ms.locfileid: "87182060"
     [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
     ```
     
-    GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66]
-06/25/2020-10:20:45.368 [info] Computer ' fileserver75.corp.contoso.com ': версия ОС 
+    GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66] 06/25/2020-10:20:45.368 [Info] Computer 'fileserver75.corp.contoso.com': OS version 
 
 Эта проблема вызвана дефектом кода в службе миграции хранилища. Чтобы обойти эту ошибку, используйте учетные данные миграции из того же домена, к которому принадлежат исходный и конечный компьютеры. Например, если исходный и конечный компьютеры принадлежат домену "corp.contoso.com" в лесу "contoso.com", используйте "корп\мяккаунт", чтобы выполнить миграцию, а не учетные данные "контосо\мяккаунт".
+
+## <a name="inventory-fails-with-element-not-found"></a>Сбой инвентаризации с "элемент не найден" 
+
+В следующем сценарии:
+
+У вас есть исходный сервер с именем узла DNS и Active Directory именем более 15 символов Юникода, например "иамаверилонгкомпутернамефромнед". Операционная система Windows не позволяла установить в качестве устаревшего NetBIOS-имя, которое будет задано как длинное, и предупреждать о том, что имя NetBIOS было усечено до 15 символов Юникода (например, "иамаверилонгком"). При попытке выполнить инвентаризацию этого компьютера вы получаете в центре администрирования Windows и журнале событий: 
+
+```DOS
+    "Element not found"
+    
+    ========================
+
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          4/10/2020 10:49:19 AM
+    Event ID:      2509
+    Task Category: None
+    Level:         Error
+    Keywords:      
+    User:          NETWORK SERVICE
+    Computer:      WIN-6PJAG3DHPLF.corp.contoso.com
+    Description:
+    Couldn't inventory a computer.
+
+    Job: longnametest
+    Computer: iamaverylongcomputernamefromned.corp.contoso.com
+    State: Failed
+    Error: 1168
+    Error Message: 
+
+    Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+```
+
+Эта проблема вызвана дефектом кода в службе миграции хранилища. В настоящее время единственным решением является переименование компьютера с тем же именем, что и у NetBIOS-имени, а затем с помощью команды [NETDOM ComputerName/Add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) добавьте альтернативное имя компьютера, которое использовалось до начала инвентаризации. Служба миграции хранилища поддерживает миграцию альтернативных имен компьютеров.   
 
 ## <a name="see-also"></a>См. также раздел
 

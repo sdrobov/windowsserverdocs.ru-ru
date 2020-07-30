@@ -8,12 +8,12 @@ author: johnmarlin-msft
 ms.author: johnmar
 ms.date: 03/07/2019
 description: В этой статье описывается сходство отказоустойчивого кластера и уровни противосходства
-ms.openlocfilehash: 5a46279a2c8780466617e453ec5263c36a6e0128
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 5fdc40e31b61a74965bf60ac907a198c7ef92521
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87178600"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409594"
 ---
 # <a name="cluster-affinity"></a>Сходство кластеров
 
@@ -29,28 +29,37 @@ ms.locfileid: "87178600"
 
 При просмотре свойств группы существует параметр AntiAffinityClassNames, который по умолчанию пуст.  В приведенных ниже примерах group1 и группа2 должны быть отделены от выполнения на одном узле.  Для просмотра свойства команда PowerShell и результат будут выглядеть следующим образом:
 
-    PS> Get-ClusterGroup Group1 | fl AntiAffinityClassNames
+```powershell
+Get-ClusterGroup Group1 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
 
-    PS> Get-ClusterGroup Group2 | fl AntiAffinityClassNames
+Get-ClusterGroup Group2 | fl AntiAffinityClassNames
     AntiAffinityClassNames : {}
+```
 
 Так как AntiAffinityClassNames не определены как значения по умолчанию, эти роли могут выполняться одновременно или отдельно.  Задача заключается в том, чтобы они были разделены.  Значение для AntiAffinityClassNames может быть любым, что вы хотите, они должны быть одинаковыми.  Предположим, что group1 и группа2 являются контроллерами домена, работающими на виртуальных машинах, и их лучше обслуживать на разных узлах.  Так как это контроллеры домена, я буду использовать DC для имени класса.  Чтобы задать значение, команда PowerShell и результаты будут выглядеть следующим образом:
 
-    PS> $AntiAffinity = New-Object System.Collections.Specialized.StringCollection
-    PS> $AntiAffinity.Add("DC")
-    PS> (Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
-    PS> (Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+```powershell
+$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
+$AntiAffinity.Add("DC")
+(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
 
-    PS> Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
+$AntiAffinity = New-Object System.Collections.Specialized.StringCollection
+$AntiAffinity.Add("DC")
+(Get-ClusterGroup -Name "Group1").AntiAffinityClassNames = $AntiAffinity
+(Get-ClusterGroup -Name "Group2").AntiAffinityClassNames = $AntiAffinity
+
+Get-ClusterGroup "Group1" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
 
-    PS> Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
+Get-ClusterGroup "Group2" | fl AntiAffinityClassNames
     AntiAffinityClassNames : {DC}
+```
 
 Теперь, когда они заданы, отказоустойчивая кластеризация будет пытаться отследить их.
 
-Параметр Антиаффинитикласснаме является "мягким" блоком.  Это означает, что он будет пытаться отследить их, но если это невозможно, он по-прежнему будет разрешать их запуск на одном узле.  Например, группы выполняются в отказоустойчивом кластере с двумя узлами.  Если один узел должен перейти на обслуживание, это означает, что обе группы будут работать на одном узле.  В этом случае это было бы допустимо.  Он может быть не самым идеальным, но оба виртиал машины будут работать в пределах допустимых диапазонов производительности.
+Параметр Антиаффинитикласснаме является "мягким" блоком.  Это означает, что он будет пытаться отследить их, но если это невозможно, он по-прежнему будет разрешать их запуск на одном узле.  Например, группы выполняются в отказоустойчивом кластере с двумя узлами.  Если один узел должен перейти на обслуживание, это означает, что обе группы будут работать на одном узле.  В этом случае это было бы допустимо.  Он может быть не самым идеальным, но обе виртуальные машины будут работать в пределах допустимых диапазонов производительности.
 
 ## <a name="i-need-more"></a>Мне нужно больше
 
@@ -60,13 +69,17 @@ ms.locfileid: "87178600"
 
 Чтобы просмотреть свойство и значение, команда PowerShell (и результат) будет выглядеть следующим образом:
 
-    PS> Get-Cluster | fl ClusterEnforcedAntiAffinity
+```powershell
+Get-Cluster | fl ClusterEnforcedAntiAffinity
     ClusterEnforcedAntiAffinity : 0
+```
 
 Значение "0" означает, что оно отключено и не должно применяться.  Значение "1" включает его и является жестким блоком.  Чтобы включить этот жесткий блок, команда (и результат) будет:
 
-    PS> (Get-Cluster).ClusterEnforcedAntiAffinity = 1
+```powershell
+(Get-Cluster).ClusterEnforcedAntiAffinity = 1
     ClusterEnforcedAntiAffinity : 1
+```
 
 Если заданы оба параметра, группа будет заблокирована в сети вместе.  Если они находятся на одном узле, это будет показано в диспетчер отказоустойчивости кластеров.
 
@@ -74,12 +87,14 @@ ms.locfileid: "87178600"
 
 В списке групп PowerShell вы увидите следующее:
 
-    PS> Get-ClusterGroup
+```powershell
+Get-ClusterGroup
 
-    Name       State
-    ----       -----
-    Group1     Offline(Anti-Affinity Conflict)
-    Group2     Online
+Name       State
+----       -----
+Group1     Offline(Anti-Affinity Conflict)
+Group2     Online
+```
 
 ## <a name="additional-comments"></a>Дополнительные комментарии
 

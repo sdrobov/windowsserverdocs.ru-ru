@@ -9,13 +9,30 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 8a8cdcee57fe86f7938d6989a9d5d08f30c0f138
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: c5de6bb682e5094f555b6310d5c712c0739f9454
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85924932"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409765"
 ---
 # <a name="break"></a>break
 
-Разбивает зеркальный том с фокусом на два простых тома.
+> [!IMPORTANT]
+> Эта команда больше не используется. Она включена только для сохранения совместимости с существующими файлами MS-DOS, но не оказывает никакого эффекта в командной строке, так как функция работает автоматически.
+
+Задает или очищает расширенную проверку CTRL + C в системах MS-DOS. Если используется без параметров, параметр **break** отображает существующее значение параметра.
+
+Если расширения команд включены и работают на платформе Windows, при вставке команды **break** в пакетный файл при отладке отладчика он переходит в жестко запрограммированную точку останова.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+break=[on|off]
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+- [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
+
+- [Команда break](break.md)

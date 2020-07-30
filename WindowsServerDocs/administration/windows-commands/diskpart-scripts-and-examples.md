@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 64355bd452934909d0600fa791e7a4c2d2066b6f
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: ace5b081d9dd362bb1455f9992568f197c815fdf
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86958296"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409745"
 ---
 # <a name="diskpart-scripts-and-examples"></a>сценарии и примеры для DiskPart
 
@@ -24,30 +24,30 @@ ms.locfileid: "86958296"
 
 Чтобы создать сценарий DiskPart, создайте текстовый файл, содержащий команды DiskPart, которые необходимо выполнить, с одной командой в строке и без пустых строк. `rem`Чтобы сделать строку комментарием, можно начать с строки. Например, Вот сценарий, который очищает диск, а затем создает раздел 300 МБ для среды восстановления Windows:
 
-    ```
-    select disk 0
-    clean
-    convert gpt
-    create partition primary size=300
-    format quick fs=ntfs label=Windows RE tools
-    assign letter=T
-    ```
+```
+select disk 0
+clean
+convert gpt
+create partition primary size=300
+format quick fs=ntfs label=Windows RE tools
+assign letter=T
+```
 
 ## <a name="examples"></a>Примеры
 
 - Чтобы запустить сценарий DiskPart, в командной строке введите следующую команду, где *имя_сценария* — это имя текстового файла, содержащего скрипт:
 
-    ```
-    diskpart /s scriptname.txt
-    ```
+```
+diskpart /s scriptname.txt
+```
 
 - Чтобы перенаправить выходные данные сценария DiskPart в файл, введите следующую команду, где *файл_журнала* — это имя текстового файла, в который DiskPart записывает выходные данные:
 
-    ```
-    diskpart /s scriptname.txt > logfile.txt
-    ```
+```
+diskpart /s scriptname.txt > logfile.txt
+```
 
-### <a name="remarks"></a>Комментарии
+### <a name="remarks"></a>Remarks
 
 - При использовании команды **DiskPart** в составе скрипта рекомендуется выполнять все операции DiskPart вместе в рамках одного сценария DiskPart. Можно выполнять последовательные скрипты DiskPart, но по крайней мере 15 секунд между каждым сценарием необходимо выполнить полное завершение работы, прежде чем запускать команду **DiskPart** в последующих сценариях. В противном случае последующие сценарии могут завершиться ошибкой. Можно добавить паузу между последовательными сценариями DiskPart, добавив `timeout /t 15` команду в пакетный файл вместе с сценариями DiskPart.
 

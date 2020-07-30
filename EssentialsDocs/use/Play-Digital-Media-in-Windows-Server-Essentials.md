@@ -7,12 +7,12 @@ ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: bd14631917a9f0211e39bd44c9d01e11ad2a177f
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: c8f490f09f9623aa82b42f2103f2fd3e95537d7d
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87179890"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409514"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Воспроизведение мультимедиа в Windows Server Essentials
 
@@ -65,11 +65,9 @@ ms.locfileid: "87179890"
 
  Можно использовать один из следующих способов для поиска и воспроизведения файлов мультимедиа, хранимых на вашем сервере:
 
-
 -   [Поиск и воспроизведение файлов мультимедиа в Windows Server Essentials с компьютера или цифрового проигрывателя в сети](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_2.1)
 
 -   [Отправка файлов мультимедиа в Windows Server Essentials в проигрыватель Windows Media, Xbox 360 или в сетевой проигрыватель Digital Media Player в сети](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SendToDevice)
-
 
 
 ###  <a name="search-for-and-play-media-files-on-windows-server-essentials-from-a-computer-or-digital-media-player-on-the-network"></a><a name="BKMK_2.1"></a>Поиск и воспроизведение файлов мультимедиа в Windows Server Essentials с компьютера или цифрового проигрывателя в сети
@@ -87,7 +85,6 @@ ms.locfileid: "87179890"
 -   [Поиск и воспроизведение файлов мультимедиа с помощью функции общих папок панели запуска](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_SharedFolders)
 
 -   [Поиск и воспроизведение общего мультимедийного содержимого с помощью удаленного веб-доступа](Play-Digital-Media-in-Windows-Server-Essentials.md#BKMK_RWA2)
-
 
 
 ####  <a name="search-for-and-play-media-files-from-a-computer-that-is-running-windows-media-center"></a><a name="BKMK_WMC"></a>Поиск и воспроизведение файлов мультимедиа с компьютера, на котором работает Windows Media Center
@@ -260,19 +257,8 @@ ms.locfileid: "87179890"
 
 -   [Управление цифровыми мультимедиа](../manage/Manage-Digital-Media-in-Windows-Server-Essentials.md)
 
-
 -   [Подключиться](Get-Connected-in-Windows-Server-Essentials.md)
 
 -   [Использование общих папок](Use-Shared-Folders-in-Windows-Server-Essentials.md)
 
 -   [Удаленная работа](Work-Remotely-in-Windows-Server-Essentials.md)
-
-<<<<<<< HEAD
--   [Подключиться](../use/Get-Connected-in-Windows-Server-Essentials.md)
-
--   [Использование общих папок](../use/Use-Shared-Folders-in-Windows-Server-Essentials.md)
-
--   [Удаленная работа](../use/Work-Remotely-in-Windows-Server-Essentials.md)
-
-=======
->>>>>>> 97724df67237ac603cf9eb996732230bdb7c0b88

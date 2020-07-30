@@ -1,21 +1,20 @@
 ---
 title: Использование автоматической адресации TCP/IP без DHCP-сервера
 description: Познакомьтесь с использованием автоматической адресации TCP/IP без DHCP-сервера.
-ms.date: 5/26/2020
 ms.prod: windows-server
-ms.service: na
 manager: dcscontentpm
 ms.technology: server-general
-ms.topic: article
+ms.date: 5/26/2020
+ms.topic: troubleshoot
 author: Deland-Han
 ms.author: delhan
 ms.reviewer: robsmi
-ms.openlocfilehash: 8fbde77381141b76959f70e824eac22ee2121fa3
-ms.sourcegitcommit: ef089864980a1d4793a35cbf4cbdd02ce1962054
+ms.openlocfilehash: fcd85c29975709053009ec4a2684df88b4bafd69
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84150192"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409805"
 ---
 # <a name="how-to-use-automatic-tcpip-addressing-without-a-dhcp-server"></a>Использование автоматической адресации TCP/IP без DHCP-сервера
 
@@ -23,7 +22,7 @@ ms.locfileid: "84150192"
 
 ## <a name="more-information"></a>Дополнительные сведения
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Внимательно выполните действия, описанные в этом разделе. Неправильное изменение реестра может привести к серьезным проблемам. Перед внесением изменений [создайте резервную копию реестра для его восстановления](https://support.microsoft.com/help/322756) в случае возникновения проблем.
 
 Компьютер под управлением Windows, настроенный на использование DHCP, может автоматически назначать себе IP-адрес, если DHCP-сервер недоступен. Например, это может произойти в сети без DHCP-сервера или в сети, если DHCP-сервер временно отключен для обслуживания.
@@ -38,8 +37,7 @@ ms.locfileid: "84150192"
 
 - Сеть подключена к Интернету без NAT или прокси-сервера.
 
-Если сообщения, связанные с DHCP, отключены, сообщения DHCP предоставляют уведомления при переходе между DHCP-адресацией и автоматической частной IP-адресацией. Если сообщения DHCP случайно отключены, можно включить их снова, изменив значение Попупфлаг в следующем разделе реестра с 00 на 01:  
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP` 
+Если сообщения, связанные с DHCP, отключены, сообщения DHCP предоставляют уведомления при переходе между DHCP-адресацией и автоматической частной IP-адресацией. Если сообщения DHCP случайно отключены, можно включить их снова, изменив значение Попупфлаг в следующем разделе реестра с 00 на 01:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
 Обратите внимание, что для вступления изменений в силу необходимо перезагрузить компьютер. Можно также определить, использует ли компьютер APIPA с помощью средства Winipcfg в Windows Millennium Edition, Windows 98 или Windows 98 Second Edition:
 
@@ -51,8 +49,7 @@ ms.locfileid: "84150192"
 
 Сведения о TCP/IP можно настроить вручную, что полностью отключает DHCP. Вы можете отключить автоматическое назначение частных IP-адресов (но не DHCP), отредактировав реестр. Это можно сделать, добавив запись реестра DWORD "Ипаутоконфигуратионенаблед" со значением 0x0 в следующий раздел реестра для Windows Millennium Edition, Windows98 или Windows 98 Second Edition:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\VxD\DHCP`
 
-Для Windows 2000, Windows XP и Windows Server 2003 можно отключить APIPA, добавив запись реестра DWORD «Ипаутоконфигуратионенаблед» со значением 0x0 в следующий раздел реестра:  
-`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`  
+Для Windows 2000, Windows XP и Windows Server 2003 можно отключить APIPA, добавив запись реестра DWORD «Ипаутоконфигуратионенаблед» со значением 0x0 в следующий раздел реестра:`HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\<Adapter GUID>`
 > [!NOTE]
 > Подраздел **GUID адаптера** является глобальным уникальным идентификатором (GUID) для адаптера локальной сети компьютера.
 

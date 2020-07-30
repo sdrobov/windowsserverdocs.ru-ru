@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: trudyha
 ms.author: trudyha
 ms.date: 10/16/2017
-ms.openlocfilehash: 2585037412dd77435ec056336509dbf9c47c7dd2
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: df720b69e2124aa487958ccd28e365fdcf72def7
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469829"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409504"
 ---
 # <a name="windows-server-hybrid-cloud-print-overview"></a>Обзор гибридного облака Windows Server для печати
 
@@ -65,4 +65,4 @@ ms.locfileid: "85469829"
 ```PowerShell
     Install-Module -Name PublishCloudPrinter
     Import-Module PublishCloudPrinter
-    ```
+```

@@ -1,5 +1,5 @@
 ---
-title: get
+title: Использование команды Get
 description: Справочная статья для Get, которая получает свойства или атрибуты указанного объекта.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 6e61be9480065518cf053966a851458af39f5c5d
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: d6a943592d0c2443deb3bec4b5709f742e78f4ff
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85935026"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87408783"
 ---
-# <a name="get"></a>get
+# <a name="using-the-get-command"></a>Использование команды Get
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 

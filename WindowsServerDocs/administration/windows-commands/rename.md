@@ -1,6 +1,6 @@
 ---
 title: переименовать
-description: Справочная статья для * * * *-
+description: Справочная статья по команде Rename, которая переименовывает файл или каталог.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
 ms.topic: article
@@ -9,19 +9,60 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: a5dead0be17d38e4978e9bc8cc624a9e3dad02f6
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: cf7a962a83b7cf8f00ea4963e358c0329ae28c3b
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85931361"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409665"
 ---
 # <a name="rename"></a>переименовать
 
 > Область применения: Windows Server (половина ежегодного канала), Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012
 
-Это то же самое, что и команда **ren** .
-Синтаксис и параметры см. в разделе [ren](ren.md) .
+Переименовывает файлы или каталоги.
+
+> [!NOTE]
+> Эта команда аналогична [команде REN](ren.md).
+
+## <a name="syntax"></a>Синтаксис
+
+```
+rename [<drive>:][<path>]<filename1> <filename2>
+```
+
+### <a name="parameters"></a>Параметры
+
+| Параметр | Описание |
+|--|--|
+| `[<drive>:][<path>]<filename1>` | Указывает расположение и имя файла или набора файлов, которые требуется переименовать. *Имя_файла1* может содержать подстановочные знаки (**&#42;** и **?**). |
+| `<filename2>` | Указывает новое имя для файла. Для указания новых имен нескольких файлов можно использовать подстановочные знаки. |
+| /? | Отображение справки в командной строке. |
+
+#### <a name="remarks"></a>Remarks
+
+- При переименовании файлов нельзя указывать новый диск или путь. Эту команду также нельзя использовать для переименования файлов на дисках или для перемещения файлов в другой каталог.
+
+- Символы, представленные подстановочными знаками в *имя_файла2* , будут совпадать с соответствующими символами в *имя_файла1*.
+
+- *Имя_файла2* должно быть уникальным именем файла. Если параметр *имя_файла2* совпадает с существующим именем файла, появляется следующее сообщение: `Duplicate file name or file not found` .
+
+### <a name="examples"></a>Примеры
+
+Чтобы изменить все расширения имени файла txt в текущем каталоге на расширения DOC, введите:
+
+```
+rename *.txt *.doc
+```
+
+Чтобы изменить имя каталога с *Chap10* на *Part10*, введите:
+
+```
+rename chap10 part10
+```
+
 ## <a name="additional-references"></a>Дополнительные ссылки
+
 - [Условные обозначения синтаксиса команд командной строки](command-line-syntax-key.md)
 
+- [Команда REN](ren.md)
