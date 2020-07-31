@@ -46,7 +46,7 @@
 ##### [Руководство по тестированию клонирования виртуализированных контроллеров домена для поставщиков приложений](ad-ds/reference/virtual-dc/Virtualized-Domain-Controller-Cloning-Test-Guidance-for-Application-Vendors.md)
 ##### [Поддержка использования реплики Hyper-V для виртуализированных контроллеров домена](ad-ds/get-started/virtual-dc/Support-for-using-Hyper-V-Replica-for-virtualized-domain-controllers.md)
 
-####[Службы времени Windows и доменных служб AD](../networking/windows-time-service/windows-time-service.md)
+#### [Службы времени Windows и доменных служб AD](../networking/windows-time-service/windows-time-service.md)
 
 ### [Планирование и разработка доменных служб Active Directory](ad-ds/plan/AD-DS-Design-and-Planning.md)
 
@@ -348,22 +348,22 @@
 #### [Развертывание Azure AD Connect Health](/azure/active-directory/hybrid/whatis-hybrid-identity)
 #### [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012 R2](ad-fs/deployment/migrate-ad-fs-service-role-to-windows-server-r2.md)
 ##### [Подготовка к переносу сервера федерации AD FS](ad-fs/deployment/prepare-migrate-ad-fs-server-r2.md)
-#####[Перенос сервера федерации AD FS](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
-#####[Перенос прокси-сервера федерации AD FS](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
-#####[Проверка переноса AD FS на Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
+##### [Перенос сервера федерации AD FS](ad-fs/deployment/migrate-ad-fs-fed-server-r2.md)
+##### [Перенос прокси-сервера федерации AD FS](ad-fs/deployment/migrate-fed-server-proxy-r2.md)
+##### [Проверка переноса AD FS на Windows Server 2012 R2](ad-fs/deployment/verify-ad-fs-migration.md)
 
 #### [Перенос служб ролей для служб федерации Active Directory в Windows Server 2012](ad-fs/deployment/migrate-ad-fs-role-services-to-windows-server-2012.md)
 ##### [Подготовка к переносу сервера федерации AD FS 2.0](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-server.md)
-######[Подготовка к переносу изолированного сервера AD FS 2.0 или сервера фермы с одним узлом](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
-######[Подготовка к переносу фермы WID AD FS 2.0](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
-######[Подготовка к переносу фермы SQL AD FS 2.0](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
-#####[Подготовка к переносу прокси-сервера федерации AD FS 2.0](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
-#####[Перенос сервера федерации AD FS 2.0](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
-######[Перенос изолированного сервера AD FS 2.0 или сервера фермы с одним узлом](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
-######[Перенос фермы WID AD FS 2.0](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
-######[Перенос фермы SQL AD FS 2.0](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
-#####[Перенос прокси-сервера федерации AD FS 2.0](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
-#####[Перенос веб-агентов AD FS 1.1](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
+###### [Подготовка к переносу изолированного сервера AD FS 2.0 или сервера фермы с одним узлом](ad-fs/deployment/prepare-to-migrate-a-stand-alone-ad-fs-federation-server.md)
+###### [Подготовка к переносу фермы WID AD FS 2.0](ad-fs/deployment/prepare-to-migrate-a-wid-farm.md)
+###### [Подготовка к переносу фермы SQL AD FS 2.0](ad-fs/deployment/prepare-to-migrate-a-sql-server-farm.md)
+##### [Подготовка к переносу прокси-сервера федерации AD FS 2.0](ad-fs/deployment/prepare-to-migrate-ad-fs-fed-proxy.md)
+##### [Перенос сервера федерации AD FS 2.0](ad-fs/deployment/migrate-the-ad-fs-fed-server.md)
+###### [Перенос изолированного сервера AD FS 2.0 или сервера фермы с одним узлом](ad-fs/deployment/migrate-ad-fs-stand-alone-server.md)
+###### [Перенос фермы WID AD FS 2.0](ad-fs/deployment/migrate-ad-fs-wid-farm.md)
+###### [Перенос фермы SQL AD FS 2.0](ad-fs/deployment/migrate-ad-fs-sql-farm.md)
+##### [Перенос прокси-сервера федерации AD FS 2.0](ad-fs/deployment/migrate-the-ad-fs-2-fed-server-proxy.md)
+##### [Перенос веб-агентов AD FS 1.1](ad-fs/deployment/migrate-the-ad-fs-web-agent.md)
 
 
 

@@ -229,7 +229,7 @@
 #### [Принципы работы политики QoS](technologies/qos/qos-policy-works.md)
 #### [Архитектура политики QoS](technologies/qos/qos-policy-architecture.md)
 #### [Сценарии политики QoS](technologies/qos/qos-policy-scenarios.md)
-###[Управление политикой QoS](technologies/qos/qos-policy-manage.md)
+### [Управление политикой QoS](technologies/qos/qos-policy-manage.md)
 #### [Ошибки и события политики QoS](technologies/qos/qos-policy-errors.md)
 ### [Вопросы и ответы по политике QoS](technologies/qos/qos-policy-faq.md)
 
