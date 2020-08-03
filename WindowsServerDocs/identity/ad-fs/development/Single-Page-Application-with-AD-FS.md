@@ -8,12 +8,12 @@ ms.date: 06/13/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 1bd5d95739bc1c975f5f0c4d7efb8dc6f91e0412
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 934ef170f6cbd5a2bd4031d336907d6b925cff06
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86954406"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519903"
 ---
 # <a name="build-a-single-page-web-application-using-oauth-and-adaljs-with-ad-fs-2016-or-later"></a>Создание веб-приложения с одной страницей с помощью OAuth и ADAL.JS с AD FS 2016 или более поздней версии
 
@@ -25,11 +25,10 @@ ms.locfileid: "86954406"
 >Пример, который можно создать здесь, предназначен только для образовательных целей. Эти инструкции предназначены для самой простой и минимальной реализации, которая может предоставить необходимые элементы модели. Пример может не включать все аспекты обработки ошибок и другие функции связывания.
 
 >[!NOTE]
->Это пошаговое руководство применимо **только** к AD FS Server 2016 и более поздних версий 
+>Это пошаговое руководство применимо **только** к AD FS Server 2016 и более поздних версий
 
 ## <a name="overview"></a>Обзор
 В этом примере мы создадим поток проверки подлинности, где клиент одностраничного приложения будет проходить проверку подлинности в AD FS для безопасного доступа к ресурсам WebAPI в серверной части. Ниже приведен общий поток проверки подлинности
-
 
 ![Авторизация AD FS](media/Single-Page-Application-with-AD-FS/authenticationflow.PNG)
 
@@ -54,14 +53,14 @@ ms.locfileid: "86954406"
 - [Развертывание доменных служб Active Directory](../../ad-ds/deploy/AD-DS-Deployment.md)
 - [Развертывание AD FS](../AD-FS-Deployment.md)
 
-
-
 ## <a name="clone-or-download-this-repository"></a>Клонирование или скачивание этого репозитория
 Мы будем использовать пример приложения, созданного для интеграции Azure AD, в одностраничное приложение AngularJS и изменив его, чтобы защитить серверный ресурс с помощью AD FS.
 
 Из оболочки или командной строки:
 
-    git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
+git clone https://github.com/Azure-Samples/active-directory-angularjs-singlepageapp.git
+```
 
 ## <a name="about-the-code"></a>О коде
 Ниже приведены основные файлы, содержащие логику проверки подлинности.
@@ -100,6 +99,7 @@ ms.locfileid: "86954406"
 
 Откройте файл **app.js** и измените определение **adalProvider.init** на:
 
+```
     adalProvider.init(
         {
             instance: 'https://fs.contoso.com/', // your STS URL
@@ -109,6 +109,7 @@ ms.locfileid: "86954406"
         },
         $httpProvider
     );
+```
 
 |Конфигурация|Описание|
 |--------|--------|
@@ -119,9 +120,10 @@ ms.locfileid: "86954406"
 ## <a name="configure-webapi-to-use-ad-fs"></a>Настройка WebAPI для использования AD FS
 Откройте файл **Startup.auth.CS** в образце и добавьте в начало следующую команду:
 
+```
     using System.IdentityModel.Tokens;
 
-отменит
+remove:
 
     app.UseWindowsAzureActiveDirectoryBearerAuthentication(
         new WindowsAzureActiveDirectoryBearerAuthenticationOptions
@@ -131,7 +133,7 @@ ms.locfileid: "86954406"
         }
     );
 
-и добавьте:
+and add:
 
     app.UseActiveDirectoryFederationServicesBearerAuthentication(
         new ActiveDirectoryFederationServicesBearerAuthenticationOptions
@@ -144,8 +146,9 @@ ms.locfileid: "86954406"
             }
         }
     );
+```
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |--------|--------|
 |валидаудиенце|При этом настраивается значение "аудитория", которое будет проверяться в токене.|
 |валидиссуер|При этом настраивается значение Issuer, для которого будет выполнена проверка в токене|
@@ -153,6 +156,7 @@ ms.locfileid: "86954406"
 
 ## <a name="add-application-configuration-for-ad-fs"></a>Добавление конфигурации приложения для AD FS
 Измените параметр appSettings следующим образом:
+
 ```xml
 <appSettings>
     <add key="ida:Audience" value="https://localhost:44326/" />
@@ -170,7 +174,7 @@ ms.locfileid: "86954406"
 
 Щелкните имя входа.  Список ToDo будет активировать поток проверки подлинности, а ADAL JS будет направлять проверку подлинности на AD FS
 
-![Вход](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
+![Имя входа](media/Single-Page-Application-with-AD-FS/singleapp4a.PNG)
 
 В Fiddler можно увидеть маркер, возвращаемый как часть URL-адреса в фрагменте #.
 
@@ -180,5 +184,5 @@ ms.locfileid: "86954406"
 
 ![Fiddler](media/Single-Page-Application-with-AD-FS/singleapp6.PNG)
 
-## <a name="next-steps"></a>Дальнейшие шаги
-[Разработка AD FS](../../ad-fs/AD-FS-Development.md)  
+## <a name="next-steps"></a>Next Steps
+[Разработка AD FS](../../ad-fs/AD-FS-Development.md)

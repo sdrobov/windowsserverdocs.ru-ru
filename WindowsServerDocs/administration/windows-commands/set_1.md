@@ -9,18 +9,16 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 002ac4624d9ed501fab7816a83c2a0c5fc6a2bce
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: 34c8abf01e7dbde7a8f175ac8691e5731a04be45
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85922822"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519663"
 ---
 # <a name="set"></a>set
 
 Отображает, устанавливает или удаляет переменные среды cmd.exe. Если используется без параметров, **Set** отображает текущие параметры переменной среды.
-
-
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,7 +40,7 @@ set /a <Variable>=<Expression>
 |\<Expression>|Задает числовое выражение. Допустимые операторы, которые можно использовать в *выражении*, см. в разделе Примечания.|
 |/?|Отображение справки в командной строке.|
 
-## <a name="remarks"></a>Комментарии
+## <a name="remarks"></a>Примечания
 
 - Использование **Set** с включенными расширениями команд
 

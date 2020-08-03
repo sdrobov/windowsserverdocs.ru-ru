@@ -1,5 +1,5 @@
 ---
-title: verbose
+title: Использование команды verbose
 description: Справочная статья для verbose, которая отображает подробные выходные данные для указанной команды.
 ms.prod: windows-server
 ms.technology: manage-windows-commands
@@ -9,14 +9,14 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/16/2017
-ms.openlocfilehash: 079e441ba4a932e23493e7e37fbe36cab4c4971f
-ms.sourcegitcommit: 2afed2461574a3f53f84fc9ec28d86df3b335685
+ms.openlocfilehash: b53defe143ab9a5c068d5012ed60b66e29398004
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2020
-ms.locfileid: "85935245"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519613"
 ---
-# <a name="verbose"></a>verbose
+# <a name="using-the-verbose-command"></a>Использование команды verbose
 
 Отображает подробные выходные данные для указанной команды. Вы можете использовать **/verbose** с любыми другими выполняемыми командами WDSUTIL. Обратите внимание, что необходимо указать **/verbose** и **/прогресс** непосредственно после **WDSUTIL**.
 
@@ -29,6 +29,7 @@ WDSUTIL /verbose <commands>
 ## <a name="examples"></a>Примеры
 
 Чтобы удалить утвержденные компьютеры из базы данных автоматического добавления и отобразить подробные выходные данные, введите:
+
 ```
 WDSUTIL /Verbose /progress /Delete-AutoAddDevices /Server:MyWDSServer /DeviceType:ApprovedDevices
 ```

@@ -8,12 +8,12 @@ ms.assetid: 1575cc7c-62a7-4add-8f78-e5d93effe93f
 manager: brianlic
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: cdfcf65f762015ceeaa20b99543ffb772e60d1a6
-ms.sourcegitcommit: 29f7a4811b4d36d60b8b7c55ce57d4ee7d52e263
+ms.openlocfilehash: 3df00e013d61ad3004f2a2c001c0c40ae9cad109
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83716869"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520193"
 ---
 # <a name="manage-data-center-bridging-dcb"></a>Управление мостом центра обработки данных (DCB)
 
@@ -26,9 +26,9 @@ ms.locfileid: "83716869"
 Сведения о предварительных требованиях для использования и установке DCB см. [в разделе Установка моста центра обработки данных (DCB) в Windows Server 2016 или Windows 10](dcb-install.md).
 
 
-## <a name="dcb-configurations"></a>Конфигурации DCB 
+## <a name="dcb-configurations"></a>Конфигурации DCB
 
-До выхода Windows Server 2016 вся конфигурация DCB была применена глобально ко всем сетевым адаптерам, которые поддерживали DCB. 
+До выхода Windows Server 2016 вся конфигурация DCB была применена глобально ко всем сетевым адаптерам, которые поддерживали DCB.
 
 В Windows Server 2016 можно применять конфигурации DCB либо к глобальному хранилищу политик, либо к отдельному хранилищу политик \( \) . При применении отдельных политик они переопределяют все глобальные параметры политики.
 
@@ -54,24 +54,24 @@ ms.locfileid: "83716869"
 >[!NOTE]
 >Имена команд Windows PowerShell DCB включают в себя "QoS" вместо "DCB" в строке имени. Это обусловлено тем, что службы QoS и DCB интегрированы в Windows Server 2016 для обеспечения беспрепятственного управления качества обслуживания.
 
-    
+```powershell
     Set-NetQosDcbxSetting -Willing $FALSE
-    
+
     Confirm
     Are you sure you want to perform this action?
     Set-NetQosDcbxSetting -Willing $false
     [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"):
-    
+```
 
 Чтобы отобразить состояние параметра "разрешается", можно использовать следующую команду:
 
-    
+```powershell
     Get-NetQosDcbxSetting
-    
+
     Willing PolicySetIfIndex IfAlias
     ------- ---------------- -------
-    False   Global  
-    
+    False   Global
+```
 
 ## <a name="dcb-configuration-on-network-adapters"></a>Конфигурация DCB на сетевых адаптерах
 
@@ -81,17 +81,15 @@ ms.locfileid: "83716869"
 
 1.  Настройте параметры DCB на уровне системы, включая:
 
-    а. Управление классами трафика
-    
-    б. Параметры управления потоком приоритета (коэффициент мощности)
-    
-    в. Назначение приоритета приложения
-    
-    г. Параметры ДКБКС
+    a. Управление классами трафика
+
+    b. Параметры управления потоком приоритета (коэффициент мощности)
+
+    c. Назначение приоритета приложения
+
+    d. Параметры ДКБКС
 
 2. Настройте DCB на сетевом адаптере.
-
-
 
 ##  <a name="dcb-traffic-class-management"></a>Управление классами трафика DCB
 
@@ -101,13 +99,13 @@ ms.locfileid: "83716869"
 
 Для создания класса трафика можно использовать команду **New-неткостраффиккласс** .
 
-    
+```powershell
     New-NetQosTrafficClass -Name SMB -Priority 4 -BandwidthPercentage 30 -Algorithm ETS
-    
+
     Name Algorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ---- --------- ------------ -------- ---------------- -------
     SMB  ETS   30   4Global
-      
+```
 
 По умолчанию все значения 802.1 p сопоставляются с классом трафика по умолчанию, который имеет 100% пропускной способности физической связи. Команда **New-неткостраффиккласс** создает новый класс трафика, с которым сопоставляется любой пакет, помеченный с помощью значения 802.1 p Priority с приоритетом 4. Алгоритм выбора передачи \( TSA \) является ETS и имеет 30% пропускной способности.
 
@@ -119,36 +117,41 @@ ms.locfileid: "83716869"
 
 Для просмотра классов трафика можно использовать команду **Get-неткостраффиккласс** .
 
+```powershell
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   70   0-3,5-7  Global
-    SMB ETS   30   4Global  
-    
+    SMB ETS   30   4Global
+```
+
 ### <a name="modify-a-traffic-class"></a>Изменение класса трафика
 
-Для создания класса трафика можно использовать команду **Set-неткостраффиккласс** . 
+Для создания класса трафика можно использовать команду **Set-неткостраффиккласс** .
 
+```powershell
     Set-NetQosTrafficClass -Name SMB -BandwidthPercentage 50
+```
 
 Затем можно использовать команду **Get-неткостраффиккласс** для просмотра параметров.
 
+```powershell
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   50   0-3,5-7  Global
-    SMB ETS   50   4Global   
-    
+    SMB ETS   50   4Global
+```
 
 После создания класса трафика его параметры можно изменить независимо. Можно изменить следующие параметры:
 
-1. Распределение пропускной способности \( — бандвидсперцентаже\)
+1. Распределение пропускной способности (-Бандвидсперцентаже)
 
-2. TSA ( \- алгоритм\)
+2. TSA (-Algorithm)
 
-3. Сопоставление приоритетов \( — приоритет\)
+3. Сопоставление приоритетов (-Priority)
 
 ### <a name="remove-a-traffic-class"></a>Удаление класса трафика
 
@@ -157,27 +160,27 @@ ms.locfileid: "83716869"
 >[!IMPORTANT]
 >Нельзя удалить класс трафика по умолчанию.
 
-
+```powershell
     Remove-NetQosTrafficClass -Name SMB
 
-Затем можно использовать команду **Get-неткостраффиккласс** для просмотра параметров.
-    
+You can then use the **Get-NetQosTrafficClass** command to view settings.
+
     Get-NetQosTrafficClass
-    
+
     NameAlgorithm Bandwidth(%) Priority PolicySetIfIndex IfAlias
     ------------- ------------ -------- ---------------- -------
     [Default]   ETS   100  0-7  Global
-    
+```
 
 После удаления класса трафика значение 802.1 p, сопоставленное с этим классом трафика, повторно сопоставляется с классом трафика по умолчанию. Любая пропускная способность, зарезервированная для класса трафика, возвращается к выделению класса трафика по умолчанию при удалении класса трафика.
 
 ## <a name="per-network-interface-policies"></a>Политики для сетевых интерфейсов
 
-Все приведенные выше примеры задают глобальные политики. Ниже приведены примеры того, как можно задать и получить политики для каждого сетевого адаптера. 
+Все приведенные выше примеры задают глобальные политики. Ниже приведены примеры того, как можно задать и получить политики для каждого сетевого адаптера.
 
 Поле "Policy" («политика») меняется с Global на АдаптерспеЦифик. При отображении политик АдаптерспеЦифик также отображаются индекс интерфейса \( ifIndex \) и имя интерфейса \( ифалиас \) .
 
-```
+```powershell
 PS C:\> Get-NetQosTrafficClass
 
 Name        Algorithm Bandwidth(%) Priority         PolicySet        IfIndex IfAlias
@@ -222,7 +225,6 @@ Name        Algorithm Bandwidth(%) Priority         PolicySet        IfIndex IfA
 [Default]   ETS       70           0-3,5-7          AdapterSpecific  4       M1
 SMBforM1    ETS       30           4                AdapterSpecific  4       M1
 
-
 ```
 
 ## <a name="priority-flow-control-settings"></a>Параметры управления потоком приоритета:
@@ -231,7 +233,7 @@ SMBforM1    ETS       30           4                AdapterSpecific  4       M1
 
 ### <a name="enable-and-display-priority-flow-control-for-global-and-interface-specific-use-cases"></a>Включение и отображение управления потоком приоритета для глобальных вариантов использования и конкретных интерфейсов
 
-```
+```powershell
 PS C:\> Enable-NetQosFlowControl -Priority 4
 PS C:\> Enable-NetQosFlowControl -Priority 3 -InterfaceAlias M1
 PS C:\> Get-NetQosFlowControl
@@ -258,14 +260,12 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 4          False      AdapterSpecific  4       M1
 5          False      AdapterSpecific  4       M1
 6          False      AdapterSpecific  4       M1
-7          False      AdapterSpecific  4       M1  
-
+7          False      AdapterSpecific  4       M1
 ```
-
 
 ### <a name="disable-priority-flow-control-global-and-interface-specific"></a>Отключить управление потоком приоритета (для глобальных и особых интерфейсов)
 
-```
+```powershell
 PS C:\> Disable-NetQosFlowControl -Priority 4
 PS C:\> Disable-NetQosFlowControl -Priority 3 -InterfaceAlias m1
 PS C:\> Get-NetQosFlowControl
@@ -281,7 +281,6 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 6          False      Global
 7          False      Global
 
-
 PS C:\> Get-NetQosFlowControl -InterfaceAlias M1
 
 Priority   Enabled    PolicySet        IfIndex IfAlias
@@ -293,8 +292,7 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 4          False      AdapterSpecific  4       M1
 5          False      AdapterSpecific  4       M1
 6          False      AdapterSpecific  4       M1
-7          False      AdapterSpecific  4       M1  
-
+7          False      AdapterSpecific  4       M1
 ```
 
 ##  <a name="application-priority-assignment"></a>Назначение приоритета приложения
@@ -303,7 +301,7 @@ Priority   Enabled    PolicySet        IfIndex IfAlias
 
 ### <a name="create-qos-policy"></a>Создание политики качества обслуживания
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name "SMB Policy" -SMB -PriorityValue8021Action 4
 
 Name           : SMB Policy
@@ -312,7 +310,6 @@ NetworkProfile : All
 Precedence     : 127
 Template       : SMB
 PriorityValue  : 4
-
 ```
 
 Предыдущая команда создает новую политику для SMB. — SMB — это фильтр входящих сообщений, соответствующий TCP-порту 445 (зарезервировано для SMB). Если пакет отправляется на TCP-порт 445, он будет помечен операционной системой со значением 802.1 p, равным 4, перед передачей пакета драйверу минипорта сети.
@@ -325,7 +322,7 @@ PriorityValue  : 4
 
 **По имени исполняемого файла**
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name background -AppPathNameMatchCondition "C:\Program files (x86)\backup.exe" -PriorityValue8021Action 1
 
 Name           : background
@@ -335,13 +332,11 @@ Precedence     : 127
 AppPathName    : C:\Program files (x86)\backup.exe
 JobObject      :
 PriorityValue  : 1
-
 ```
-
 
 **По порту или протоколу IP-адреса**
 
-```
+```powershell
 PS C:\> New-NetQosPolicy -Name "Network Management" -IPDstPrefixMatchCondition 10.240.1.0/24 -IPProtocolMatchCondition both -NetworkProfile all -PriorityValue8021Action 7
 
 Name           : Network Management
@@ -352,12 +347,11 @@ JobObject      :
 IPProtocol     : Both
 IPDstPrefix    : 10.240.1.0/24
 PriorityValue  : 7
-
 ```
 
 ### <a name="display-qos-policy"></a>Отображение политики качества обслуживания
 
-```
+```powershell
 PS C:\> Get-NetQosPolicy
 
 Name           : background
@@ -384,15 +378,13 @@ Precedence     : 127
 Template       : SMB
 JobObject      :
 PriorityValue  : 4
-
 ```
 
 ### <a name="modify-qos-policy"></a>Изменение политики качества обслуживания
 
 Вы можете изменить политики качества обслуживания, как показано ниже.
 
-
-```
+```powershell
 PS C:\> Set-NetQosPolicy -Name "Network Management" -IPSrcPrefixMatchCondition 10.235.2.0/24 -IPProtocolMatchCondition both -PriorityValue8021Action 7
 PS C:\> Get-NetQosPolicy
 
@@ -405,33 +397,30 @@ IPProtocol     : Both
 IPSrcPrefix    : 10.235.2.0/24
 IPDstPrefix    : 10.240.1.0/24
 PriorityValue  : 7
-
-
 ```
 
 ### <a name="remove-qos-policy"></a>Удалить политику качества обслуживания
 
-```
+```powershell
 PS C:\> Remove-NetQosPolicy -Name "Network Management"
 
 Confirm
 Are you sure you want to perform this action?
 Remove-NetQosPolicy -Name "Network Management" -Store GPO:localhost
-[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y  
-
+[Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help (default is "Y"): y
 ```
 
 ## <a name="dcb-configuration-on-network-adapters"></a>Конфигурация DCB на сетевых адаптерах
 
-Конфигурация DCB на сетевых адаптерах не зависит от конфигурации DCB на системном уровне, описанном выше. 
+Конфигурация DCB на сетевых адаптерах не зависит от конфигурации DCB на системном уровне, описанном выше.
 
-Независимо от того, установлена ли в Windows Server 2016 DCB, вы всегда можете выполнить следующие команды. 
+Независимо от того, установлена ли в Windows Server 2016 DCB, вы всегда можете выполнить следующие команды.
 
 Если настроить DCB с коммутатора и использовать ДКБКС для распространения конфигураций на сетевые адаптеры, то после включения DCB на сетевых адаптерах можно узнать, какие конфигурации будут получены и применены на сетевых адаптерах, начиная с операционной системы.
 
 ###  <a name="enable-and-display-dcb-settings-on--network-adapters"></a><a name="bkmk_enabledcb"></a>Включение и отображение параметров DCB на сетевых адаптерах
 
-```
+```powershell
 PS C:\> Enable-NetAdapterQos M1
 PS C:\> Get-NetAdapterQos
 
@@ -452,13 +441,11 @@ OperationalFlowControl     : All Priorities Disabled
 OperationalClassifications : Protocol  Port/Type Priority
                              --------  --------- --------
                              Default             1
-
-
 ```
 
 ### <a name="disable-dcb-on-network-adapters"></a>Отключение DCB на сетевых адаптерах
 
-```
+```powershell
 PS C:\> Disable-NetAdapterQos M1
 PS C:\> Get-NetAdapterQos M1
 
@@ -468,9 +455,9 @@ Capabilities :                       Hardware     Current
                                      --------     -------
                MacSecBypass        : NotSupported NotSupported
                DcbxSupport         : None         None
-               NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0  
-
+               NumTCs(Max/ETS/PFC) : 8/8/8        0/0/0
 ```
+
 ## <a name="windows-powershell-commands-for-dcb"></a><a name="bkmk_wps"></a>Команды Windows PowerShell для DCB
 
 Существуют команды Windows PowerShell для Windows Server 2016 и Windows Server 2012 R2. Вы можете использовать все команды для Windows Server 2012 R2 в Windows Server 2016.

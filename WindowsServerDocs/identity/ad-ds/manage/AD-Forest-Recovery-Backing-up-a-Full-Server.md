@@ -8,18 +8,18 @@ ms.topic: article
 ms.prod: windows-server
 ms.assetid: 398918dc-c8ab-41a6-a377-95681ec0b543
 ms.technology: identity-adds
-ms.openlocfilehash: e95c11007548c0e1db77132b6e872b88569d3b47
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 3792a1e9b5c8978fdc8db5201ff4d439dbfb98d6
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86963006"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519021"
 ---
-# <a name="ad-forest-recovery---backing-up-a-full-server"></a>Восстановление леса Active Directory — резервное копирование всего сервера  
+# <a name="ad-forest-recovery---backing-up-a-full-server"></a>Восстановление леса Active Directory — резервное копирование всего сервера
 
 >Область применения: Windows Server 2016, Windows Server 2012 и 2012 R2, Windows Server 2008 и 2008 R2
 
-Для подготовки к восстановлению леса рекомендуется выполнить полное резервное копирование сервера, так как оно может быть восстановлено на другом оборудовании или на другом экземпляре операционной системы.  С помощью cистема архивации данных Windows Server можно выполнить полное резервное копирование сервера. 
+Для подготовки к восстановлению леса рекомендуется выполнить полное резервное копирование сервера, так как оно может быть восстановлено на другом оборудовании или на другом экземпляре операционной системы.  С помощью cистема архивации данных Windows Server можно выполнить полное резервное копирование сервера.
 
 ## <a name="windows-server-backup"></a>Система архивации данных Windows Server
 
@@ -28,7 +28,7 @@ Cистема архивации данных Windows Server не устанав
 >[!NOTE]
 >Имейте в виду, что действия могут незначительно отличаться в Windows Server 2016 и Windows Server 2012 R2.
 
-Инструкции по установке в Windows Server 2008 и Windows Server 2008 R2 см. в разделе [установка Cистема архивации данных Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).  
+Инструкции по установке в Windows Server 2008 и Windows Server 2008 R2 см. в разделе [установка Cистема архивации данных Windows Server](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771232(v=ws.10)).
 
 ### <a name="to-install-windows-server-backup"></a>Установка cистема архивации данных Windows Server
 
@@ -47,7 +47,7 @@ Cистема архивации данных Windows Server не устанав
 1. Откройте **Диспетчер сервера**, выберите **Сервис**, а затем щелкните **Cистема архивации данных Windows Server**.
    - В Windows Server 2008 R2 и Windows Server 2008 нажмите кнопку **Пуск**, выберите пункт **Администрирование**, а затем щелкните **Cистема архивации данных Windows Server**.
 
-   ![Установка резервной копии](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png) 
+   ![Установка резервной копии](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup1.png)
 
 2. При появлении запроса в диалоговом окне **контроль учетных записей** укажите учетные данные оператора архивации и нажмите кнопку **ОК**.
 3. Щелкните **Локальная Архивация**.
@@ -75,8 +75,8 @@ Cистема архивации данных Windows Server не устанав
 Wbadmin.exe — это служебная программа командной строки, которая позволяет выполнять резервное копирование и восстановление операционной системы, томов, файлов, папок и приложений в командной строке.
 
 ### <a name="to-perform-a-full-server-backup-using-wbadminexe"></a>Выполнение полного резервного копирования сервера с помощью Wbadmin.exe
-  
-- Откройте командную строку с повышенными привилегиями, введите следующую команду и нажмите клавишу ВВОД:  
+
+- Откройте командную строку с повышенными привилегиями, введите следующую команду и нажмите клавишу ВВОД:
 
    ```
    wbadmin start backup -backuptarget:<Drive_letter_to store_backup>: -include:<Drive_letter_to_include>:
@@ -84,7 +84,7 @@ Wbadmin.exe — это служебная программа командной 
 
    ![Установка резервной копии](media/AD-Forest-Recovery-Backing-up-a-Full-Server/fullbackup5.png)
 
-## <a name="next-steps"></a>Дальнейшие шаги
+## <a name="next-steps"></a>Next Steps
 
 - [Руководство по восстановлению леса AD](AD-Forest-Recovery-Guide.md)
 - [Восстановление леса AD — процедуры](AD-Forest-Recovery-Procedures.md)

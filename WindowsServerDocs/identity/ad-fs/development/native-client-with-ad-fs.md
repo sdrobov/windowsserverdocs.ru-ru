@@ -9,12 +9,12 @@ ms.date: 07/17/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: active-directory-federation-services
-ms.openlocfilehash: 96659164a9eea1784cb529c47dd58be70d546f80
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: cecffe6ae789c4a7c8c9ff382e83d84ade8ef018
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75948733"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519853"
 ---
 # <a name="build-a-native-client-application-using-oauth-public-clients-with-ad-fs-2016-or-later"></a>Создание собственного клиентского приложения с помощью общедоступных клиентов OAuth с AD FS 2016 или более поздней версии
 
@@ -41,13 +41,13 @@ ms.locfileid: "75948733"
 
 1. В AD FS управления щелкните правой кнопкой мыши **группы приложений** и выберите команду **Добавить группу приложений**.
 
-2. В мастере групп приложений в поле Имя введите любое предпочтительное имя, например Нативетодолистаппграуп. Выберите **собственное приложение, осуществляющее доступ к шаблону веб-API** . Нажмите **Далее**.
- ![добавить группу приложений](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
+2. В мастере групп приложений в поле Имя введите любое предпочтительное имя, например Нативетодолистаппграуп. Выберите **собственное приложение, осуществляющее доступ к шаблону веб-API** . Щелкните **Далее**.
+ ![Добавить группу приложений](media/native-client-with-ad-fs-2016/addapplicationgroup1.png)
 
-3. На странице **приложение машинного кода** запишите идентификатор, созданный AD FS. Это идентификатор, с помощью которого AD FS будет распознавать общедоступное клиентское приложение. Скопируйте значение **идентификатора клиента** . Он будет использоваться позже в качестве значения для **Ida: ClientID** в коде приложения. Если вы хотите, можно указать здесь любой настраиваемый идентификатор. URI перенаправления — это любое произвольное значение, например, размещение https://ToDoListClient ![ собственном приложении](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
+3. На странице **приложение машинного кода** запишите идентификатор, созданный AD FS. Это идентификатор, с помощью которого AD FS будет распознавать общедоступное клиентское приложение. Скопируйте значение **идентификатора клиента** . Он будет использоваться позже в качестве значения для **Ida: ClientID** в коде приложения. Если вы хотите, можно указать здесь любой настраиваемый идентификатор. URI перенаправления — любое произвольное значение, например, размещение https://ToDoListClient ![ собственного приложения](media/native-client-with-ad-fs-2016/addapplicationgroup2.png)
 
-4. На странице **Настройка веб-API** задайте значение идентификатора для веб-API. В этом примере это должно быть значение **URL-адреса SSL** , на котором должно выполняться веб-приложение. Это значение можно получить, щелкнув Свойства проекта Тулистсервер в решении. Позже это будет использоваться как значение **TODO: тодолистресаурцеид** в файле **app. config** собственного клиентского приложения, а также как **TODO: тодолистбасеаддресс**.
-![Веб-API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
+4. На странице **Настройка веб-API** задайте значение идентификатора для веб-API. В этом примере это должно быть значение **URL-адреса SSL** , на котором должно выполняться веб-приложение. Это значение можно получить, щелкнув Свойства проекта Тулистсервер в решении. Позже это будет использоваться как значение **TODO: тодолистресаурцеид** в **App.config** файле собственного клиентского приложения, а также как **TODO: тодолистбасеаддресс**.
+![Веб-интерфейс API](media/native-client-with-ad-fs-2016/addapplicationgroup3.png)
 
 5. Используйте **политику применения политики управления доступом** и **Настройте разрешения приложения** с использованием значений по умолчанию на месте. Страница сводки должна выглядеть следующим образом.
 ![Сводка](media/native-client-with-ad-fs-2016/addapplicationgroupsummary.png)
@@ -58,7 +58,7 @@ ms.locfileid: "75948733"
 Демонстрационное приложение использует значение в утверждении NameIdentifier в различных местах. В отличие от Azure AD, AD FS не выдает утверждение NameIdentifier по умолчанию. Поэтому необходимо добавить правило утверждений, чтобы выдать утверждение NameIdentifier, чтобы приложение может использовать правильное значение. В этом примере заданное имя пользователя выдается как значение NameIdentifier для пользователя в маркере.
 Чтобы настроить правило для утверждений, откройте только что созданную группу приложений и дважды щелкните веб-API. Выберите вкладку Правила преобразования выдачи, а затем нажмите кнопку Добавить правило. В поле Тип правила утверждения выберите настраиваемое правило утверждения, а затем добавьте правило утверждения, как показано ниже.
 
-```  
+```
 c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsaccountname", Issuer == "AD AUTHORITY"]
  => issue(store = "Active Directory", types = ("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"), query = ";givenName;{0}", param = c.Value);
 ```
@@ -67,13 +67,13 @@ c:[Type == "https://schemas.microsoft.com/ws/2008/06/identity/claims/windowsacco
 
 ### <a name="modify-the-application-code"></a>Изменение кода приложения
 
-В этом разделе описывается, как скачать пример веб-API и изменить его в Visual Studio.   Мы будем использовать пример Azure AD, приведенный [здесь](https://github.com/Azure-Samples/active-directory-dotnet-native-desktop).  
+В этом разделе описывается, как скачать пример веб-API и изменить его в Visual Studio.   Мы будем использовать пример Azure AD, приведенный [здесь](https://github.com/Azure-Samples/active-directory-dotnet-native-desktop).
 
-Чтобы скачать пример проекта, используйте Git Bash и введите следующую команду:  
+Чтобы скачать пример проекта, используйте Git Bash и введите следующую команду:
 
-```  
-git clone https://github.com/Azure-Samples/active-directory-dotnet-native-desktop  
-```  
+```
+git clone https://github.com/Azure-Samples/active-directory-dotnet-native-desktop
+```
 
 #### <a name="modify-todolistclient"></a>Изменить ToDoListClient
 
@@ -86,57 +86,56 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 
 Чтобы получить приведенные выше сведения в собственном клиентском приложении, необходимо внести следующие изменения в код.
 
-**Файл App. config**
+**App.config**
 
-* Добавьте ключ **Ida: Authority** со значением, описывающим службу AD FS. Например: https://fs.contoso.com/adfs/
+* Добавьте ключ **Ida: Authority** со значением, описывающим службу AD FS. Например https://fs.contoso.com/adfs/.
 * Измените **Ida: ClientID** Key на значение из **идентификатора клиента** на странице **приложения Native** во время создания группы приложений в AD FS. Например, 3f07368b-6efd-4f50-A330-d93853f4c855
-* Измените значение **TODO: TODO: тодолистресаурцеид** со значением **идентификатора** на странице **Настройка веб-API** во время создания группы приложений в AD FS. Например: https://localhost:44321/
-* Измените значение **TODO: тодолистбасеаддресс** со значением **идентификатора** на странице **Настройка веб-API** во время создания группы приложений в AD FS. Например: https://localhost:44321/
-* Задайте значение **Ida: RedirectUri** со ЗНАЧЕНИЕМ из **URI перенаправления** на странице **приложения Native** во время создания группы приложений в AD FS. Например: https://ToDoListClient
+* Измените значение **TODO: TODO: тодолистресаурцеид** со значением **идентификатора** на странице **Настройка веб-API** во время создания группы приложений в AD FS. Например https://localhost:44321/.
+* Измените значение **TODO: тодолистбасеаддресс** со значением **идентификатора** на странице **Настройка веб-API** во время создания группы приложений в AD FS. Например https://localhost:44321/.
+* Задайте значение **Ida: RedirectUri** со ЗНАЧЕНИЕМ из **URI перенаправления** на странице **приложения Native** во время создания группы приложений в AD FS. Например https://ToDoListClient.
 * Для удобства чтения можно удалить или закомментировать ключ для **Ida: клиент** и **Ida: аадинстанце**.
 
   ![Конфигурация приложения](media/native-client-with-ad-fs-2016/app_configfile.PNG)
-
 
 **MainWindow.xaml.cs**
 
 * Закомментируйте строку для Аадинстанце, как показано ниже
 
-        // private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];
+    `// private static string aadInstance = ConfigurationManager.AppSettings["ida:AADInstance"];`
 
 * Добавьте значение для центра сертификации, как показано ниже.
 
-        private static string authority = ConfigurationManager.AppSettings["ida:Authority"];
+    `private static string authority = ConfigurationManager.AppSettings["ida:Authority"];`
 
 * Удалите строку для создания значения **Authority** из аадинстанце и клиента.
 
-        private static string authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);
+    `private static string authority = String.Format(CultureInfo.InvariantCulture, aadInstance, tenant);`
 
 * В функции **MainWindow**измените создание экземпляра authContext на
 
-        authContext = new AuthenticationContext(authority,false);
+   `authContext = new AuthenticationContext(authority,false);`
 
     ADAL не поддерживает проверку AD FS как полномочия, поэтому необходимо передать флаг false для параметра Валидатеаусорити.
 
   ![Главное окно](media/native-client-with-ad-fs-2016/mainwindow.PNG)
 
 #### <a name="modify-todolistservice"></a>Изменить TodoListService
-Два файла нуждаются в изменениях в этом проекте — Web. config и Startup.Auth.cs. Для получения правильных значений параметров требуются изменения Web. config. Startup.Auth.cs изменения необходимы для настройки WebAPI для проверки подлинности в AD FS, а не Azure AD.
+Два файла нуждаются в изменениях в этом проекте — Web.config и Startup.Auth.cs. Для получения правильных значений параметров необходимо Web.Config изменения. Startup.Auth.cs изменения необходимы для настройки WebAPI для проверки подлинности в AD FS, а не Azure AD.
 
 **Web.config**
 
 * Закомментируйте ключ **Ida: клиент** , так как он не нужен
-* Добавьте ключ для **Ida: Authority** со значением, указывающим полное доменное имя службы федерации, например https://fs.contoso.com/adfs/
+* Добавьте ключ для **Ida: Authority** со значением, указывающим полное доменное имя службы федерации, напримерhttps://fs.contoso.com/adfs/
 * Измените key **Ida: аудитория** на значение идентификатора веб-API, указанного на странице **Настройка веб-API** во время добавления группы приложений в AD FS.
-* Добавьте key **Ida: адфсметадатаендпоинт** со значением, соответствующим URL-адресу метаданных федерации службы AD FS, например: https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
+* Добавьте key **Ida: адфсметадатаендпоинт** со значением, соответствующим URL-адресу метаданных федерации службы AD FS, например:https://fs.contoso.com/federationmetadata/2007-06/federationmetadata.xml
 
 ![Веб-конфигурация](media/native-client-with-ad-fs-2016/webconfig.PNG)
-
 
 **Startup.Auth.cs**
 
 Измените функцию Конфигуреаус, как показано ниже.
 
+```
     public void ConfigureAuth(IAppBuilder app)
     {
         app.UseActiveDirectoryFederationServicesBearerAuthentication(
@@ -151,15 +150,16 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 
             });
     }
+```
 
 По сути, мы настроим проверку подлинности для использования AD FS и Дополнительно предоставляем сведения о AD FS метаданных, а также для проверки маркера, что утверждение аудитории должно быть значением, ожидаемым веб-API.
 Запуск приложения
 
 1. В решении NativeClient-DotNet щелкните правой кнопкой мыши и выберите пункт Свойства. Измените запускаемый проект, как показано ниже, на несколько запускаемых проектов и задайте для параметра TodoListClient и TodoListService значение Start.
-![свойства решения](media/native-client-with-ad-fs-2016/solutionproperties.png)
+![Свойства решения](media/native-client-with-ad-fs-2016/solutionproperties.png)
 
 2.  Нажмите клавишу F5 или выберите Отладка > продолжить в строке меню. Это приведет к запуску собственного приложения и WebAPI. Нажмите кнопку Вход в собственном приложении, чтобы открыть интерактивный вход из AD AL и перенаправить в службу AD FS. Введите учетные данные допустимого пользователя.
-![Вход в систему](media/native-client-with-ad-fs-2016/sign-in.png)
+![Вход](media/native-client-with-ad-fs-2016/sign-in.png)
 
 На этом шаге собственное приложение перенаправлено на AD FS и получило маркер идентификации и маркер доступа для веб-API.
 
@@ -167,5 +167,5 @@ git clone https://github.com/Azure-Samples/active-directory-dotnet-native-deskto
 
 ![Вход](media/native-client-with-ad-fs-2016/clienttodoadd.png)
 
-## <a name="next-steps"></a>Дальнейшие действия
-[Разработка AD FS](../../ad-fs/AD-FS-Development.md)  
+## <a name="next-steps"></a>Next Steps
+[Разработка AD FS](../../ad-fs/AD-FS-Development.md)

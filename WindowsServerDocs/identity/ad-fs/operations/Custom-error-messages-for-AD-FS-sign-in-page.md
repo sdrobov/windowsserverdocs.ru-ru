@@ -8,64 +8,66 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 31da3e65e69910817a78ab1007e897fb5a9ad683
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 0fabcd6bb01c3f2dac5f3e110339ced9e7c0d898
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80816437"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519773"
 ---
-# <a name="custom-error-messages-for-ad-fs-sign-in-page"></a>Настраиваемые сообщения об ошибках для страницы входа AD FS  
+# <a name="custom-error-messages-for-ad-fs-sign-in-page"></a>Настраиваемые сообщения об ошибках для страницы входа AD FS
 
+Можно настроить пользовательские сообщения об ошибках специально для вашей организации. На следующей иллюстрации показаны настроенное описание страницы ошибок и универсальное сообщение об ошибке. Используйте следующие командлеты Windows PowerShell для настройки сообщений об ошибках.
 
-Можно настроить пользовательские сообщения об ошибках специально для вашей организации. На следующей иллюстрации показаны настроенное описание страницы ошибок и универсальное сообщение об ошибке. Используйте следующие командлеты Windows PowerShell для настройки сообщений об ошибках.  
-  
-![настраиваемая ошибка](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom3.png)  
-  
-## <a name="customize-the-error-page-description"></a>Настройка описания страницы ошибок  
-Чтобы настроить описание страницы ошибки, используйте следующий командлет и синтаксис Windows PowerShell.  
-  
+![настраиваемая ошибка](media/AD-FS-user-sign-in-customization/ADFS_Blue_Custom3.png)
 
-`Set-AdfsGlobalWebContent -ErrorPageDescriptionText "This is Contoso's error page description" ` 
+## <a name="customize-the-error-page-description"></a>Настройка описания страницы ошибок
 
-  
-## <a name="customize-a-generic-error-message"></a>Настройка универсального сообщения об ошибке  
-Чтобы настроить общее сообщение об ошибке, используйте следующий командлет и синтаксис Windows PowerShell.  
-  
- 
-`Set-AdfsGlobalWebContent -ErrorPageGenericErrorMessage "This is a generic error message.  Contact Contoso IT for assistance." ` 
+Чтобы настроить описание страницы ошибки, используйте следующий командлет и синтаксис Windows PowerShell.
 
-  
-## <a name="customize-an-authorization-error-message"></a>Настройка сообщения об ошибке авторизации  
-Чтобы настроить сообщение об ошибке авторизации, используйте следующий командлет и синтаксис Windows PowerShell.  
-  
+```powershell
+Set-AdfsGlobalWebContent -ErrorPageDescriptionText "This is Contoso's error page description"
+```
 
-    Set-AdfsGlobalWebContent -ErrorPageAuthorizationErrorMessage "You have received an Authorization error.  Contact Contoso IT for assistance."  
+## <a name="customize-a-generic-error-message"></a>Настройка универсального сообщения об ошибке
+Чтобы настроить общее сообщение об ошибке, используйте следующий командлет и синтаксис Windows PowerShell.
 
-  
-## <a name="customize-a-device-authentication-error-message"></a>Настройка сообщения об ошибке аутентификации устройства  
-Чтобы настроить сообщение об ошибке проверки подлинности устройства, используйте следующий командлет и синтаксис Windows PowerShell.  
-  
- 
-`Set-AdfsGlobalWebContent -ErrorPageDeviceAuthenticationErrorMessage "Your device is not authorized.  Contact Contoso IT for assistance."`  
- 
-  
-## <a name="customize-a-support-email-error-message"></a>Настройка сообщения об ошибке с указанием электронного адреса службы поддержки  
-Адрес электронной почты службы поддержки можно настроить в AD FS. Если этот параметр настроен, AD FS автоматически отображает ссылку для отправки сведений об ошибке конечным пользователям по электронной почте.  
-  
-Чтобы настроить сообщение об ошибке поддержки электронной почты, используйте следующий командлет и синтаксис Windows PowerShell.  
-  
+```powershell
+Set-AdfsGlobalWebContent -ErrorPageGenericErrorMessage "This is a generic error message.  Contact Contoso IT for assistance."
+```
 
-    Set-AdfsGlobalWebContent -ErrorPageSupportEmail  "admin@contoso.com"  
+## <a name="customize-an-authorization-error-message"></a>Настройка сообщения об ошибке авторизации
+Чтобы настроить сообщение об ошибке авторизации, используйте следующий командлет и синтаксис Windows PowerShell.
 
-  
-## <a name="customize-a-relying-party-authorization-message"></a>Настройка сообщения авторизации проверяющей стороны  
-Сообщение об ошибке авторизации проверяющей стороны можно настроить в AD FS.  
-  
-Чтобы настроить сообщение об ошибке проверяющей стороны, используйте следующий командлет и синтаксис Windows PowerShell.  
+```powershell
+Set-AdfsGlobalWebContent -ErrorPageAuthorizationErrorMessage "You have received an Authorization error.  Contact Contoso IT for assistance."
+```
 
-    Set-AdfsRelyingPartyWebContent -Name fedpassive -ErrorPageAuthorizationErrorMessage "<p> You need to be a member of Security Auditors to access this site. Click <A href='http://accessrequest/'>here</A> for more information.</p>"  
+## <a name="customize-a-device-authentication-error-message"></a>Настройка сообщения об ошибке аутентификации устройства
+Чтобы настроить сообщение об ошибке проверки подлинности устройства, используйте следующий командлет и синтаксис Windows PowerShell.
 
+```powershell
+Set-AdfsGlobalWebContent -ErrorPageDeviceAuthenticationErrorMessage "Your device is not authorized.  Contact Contoso IT for assistance."
+```
 
-## <a name="additional-references"></a>Дополнительная справка 
-[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)    
+## <a name="customize-a-support-email-error-message"></a>Настройка сообщения об ошибке с указанием электронного адреса службы поддержки
+Адрес электронной почты службы поддержки можно настроить в AD FS. Если этот параметр настроен, AD FS автоматически отображает ссылку для отправки сведений об ошибке конечным пользователям по электронной почте.
+
+Чтобы настроить сообщение об ошибке поддержки электронной почты, используйте следующий командлет и синтаксис Windows PowerShell.
+
+```powershell
+Set-AdfsGlobalWebContent -ErrorPageSupportEmail  "admin@contoso.com"
+```
+
+## <a name="customize-a-relying-party-authorization-message"></a>Настройка сообщения авторизации проверяющей стороны
+Сообщение об ошибке авторизации проверяющей стороны можно настроить в AD FS.
+
+Чтобы настроить сообщение об ошибке проверяющей стороны, используйте следующий командлет и синтаксис Windows PowerShell.
+
+```powershell
+Set-AdfsRelyingPartyWebContent -Name fedpassive -ErrorPageAuthorizationErrorMessage "<p> You need to be a member of Security Auditors to access this site. Click <A href='http://accessrequest/'>here</A> for more information.</p>"
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)

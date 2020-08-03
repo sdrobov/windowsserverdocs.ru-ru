@@ -9,12 +9,12 @@ author: coreyp-at-msft
 ms.author: coreyp
 manager: dongill
 ms.date: 10/12/2016
-ms.openlocfilehash: 9eb93e46adb0e8a7c956bd8db2795fe06bc04724
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 649c070fe477a51ca764bd1ad83ed013feb1b60b
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85472951"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87518020"
 ---
 # <a name="credentials-protection-and-management"></a>Защита учетных данных и управление ими
 
@@ -56,7 +56,7 @@ ms.locfileid: "85472951"
 
 Новый класс объектов Active Directory, политика проверки подлинности, позволяет применять конфигурацию проверки подлинности к классам учетных записей в доменах с режимом работы домена Windows Server 2012 R2. Политики проверки подлинности применяются при обмене Kerberos типа AS и TGS. Классы учетных записей Active Directory.
 
--   User (Пользователь)
+-   Пользователь
 
 -   Компьютер
 
@@ -66,7 +66,7 @@ ms.locfileid: "85472951"
 
 Подробную информацию см. в разделе [Политики проверки подлинности и приемники команд политик проверки подлинности](authentication-policies-and-authentication-policy-silos.md).
 
-Подробную информацию о настройке защищенных учетных записей см. в разделе [Настройка защищенных учетных записей](how-to-configure-protected-accounts.md).
+Подробную информацию о настройке защищенных учетных записей см. в разделе [Настройка защищенных учетных записей](https://docs.microsoft.com/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 Дополнительные сведения о соглашениях LSA и LSASS см. в разделе [Обзор входа в Windows и проверки подлинности](https://technet.microsoft.com/library/dn169029(v=ws.10).aspx).

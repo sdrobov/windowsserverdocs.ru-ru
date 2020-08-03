@@ -8,16 +8,16 @@ ms.topic: article
 ms.assetid: f9c313ac-bb86-4e48-b9b9-de5004393e06
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 86ce83142cafe8ebe61aff2fb193e9b646172651
-ms.sourcegitcommit: da7b9bce1eba369bcd156639276f6899714e279f
+ms.openlocfilehash: 50ac17bafb09eddc6bb02df1d4decf3636f4db17
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80317888"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87518300"
 ---
 # <a name="use-dns-policy-for-application-load-balancing"></a>Использование политики DNS для балансировки нагрузки приложений
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 С помощью этого раздела можно узнать, как настроить политику DNS для выполнения балансировки нагрузки приложений.
 
@@ -48,13 +48,13 @@ ms.locfileid: "80317888"
 
 ### <a name="how-application-load-balancing-works"></a>Как работает балансировка нагрузки приложений
 
-После настройки DNS-сервера с политикой DNS для балансировки нагрузки приложений с помощью этого примера сценария DNS-сервер ответит 50% времени на адрес веб-сервера в Сиэтле, 25% времени с адресом веб-сервера Dallas и 25% времени с адрес веб-сервера в Чикаго.
+После настройки DNS-сервера с политикой DNS для балансировки нагрузки приложений с помощью этого примера сценария DNS-сервер ответит 50% времени на адрес веб-сервера в Сиэтле, 25% времени с адресом веб-сервера Dallas и 25% времени с адресом веб-сервера в Чикаго.
 
 Таким же для каждых четырех запросов, получаемых DNS-сервером, он реагирует на два ответа в Сиэтле и по одному для Dallas и Чикаго.
 
 Одной из возможных проблем с балансировкой нагрузки с помощью политики DNS является кэширование записей DNS клиентом DNS и сопоставителя или ЛДНС, которые могут повлиять на балансировку нагрузки, так как клиент или сопоставитель не отправляют запросы на DNS-сервер.
 
-Вы можете уменьшить влияние этого поведения, используя низкое время\-для\-Live \(TTL\) значений для записей DNS, которые должны быть сбалансированы.
+Вы можете уменьшить воздействие этого поведения, используя низкое \- \- \( \) значение TTL для записей DNS, которые должны быть сбалансированы при нагрузке.
 
 ### <a name="how-to-configure-application-load-balancing"></a>Настройка балансировки нагрузки приложений
 
@@ -70,12 +70,12 @@ ms.locfileid: "80317888"
 >По умолчанию область зоны существует в зонах DNS. Эта область зоны имеет то же имя, что и зона, а устаревшие операции DNS работают в этой области.
 
 Для создания областей зоны можно использовать следующие команды Windows PowerShell.
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneScope"
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DallasZoneScope"
-    
-    Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "ChicagoZoneScope"
+
+```powershell
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "SeattleZoneScope"
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "DallasZoneScope"
+Add-DnsServerZoneScope -ZoneName "contosogiftservices.com" -Name "ChicagoZoneScope"
+```
 
 Дополнительные сведения см. в разделе [Add-днссерверзонескопе](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverzonescope?view=win10-ps) .
 
@@ -85,34 +85,34 @@ ms.locfileid: "80317888"
 
 В **сеаттлезонескопе**можно добавить запись www.contosogiftservices.com с IP-адресом 192.0.0.1, который находится в центре обработки данных в Сиэтле.
 
-В **чикагозонескопе**можно добавить ту же запись \(www.contosogiftservices.com\) с IP-адресом 182.0.0.1 в центре обработки данных в Чикаго.
+В **чикагозонескопе**можно добавить ту же запись \( www.contosogiftservices.com \) с IP-адресом 182.0.0.1 в центре обработки данных в Чикаго.
 
-Аналогичным образом в **далласзонескопе**можно добавить запись \(www.contosogiftservices.com\) с IP-адресом 162.0.0.1 в центре обработки данных в Чикаго.
+Аналогичным образом в **далласзонескопе**можно добавить запись \( www.contosogiftservices.com \) с IP-адресом 162.0.0.1 в центре обработки данных в Чикаго.
 
 Для добавления записей в области зоны можно использовать следующие команды Windows PowerShell.
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "182.0.0.1" -ZoneScope "ChicagoZoneScope"
-    
-    Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "162.0.0.1" -ZoneScope "DallasZoneScope"
-    
+
+```powershell
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "192.0.0.1" -ZoneScope "SeattleZoneScope"
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "182.0.0.1" -ZoneScope "ChicagoZoneScope"
+Add-DnsServerResourceRecord -ZoneName "contosogiftservices.com" -A -Name "www" -IPv4Address "162.0.0.1" -ZoneScope "DallasZoneScope"
+```
 
 Дополнительные сведения см. в разделе [Add-днссерверресаурцерекорд](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverresourcerecord?view=win10-ps).
 
 #### <a name="create-the-dns-policies"></a><a name="bkmk_policies"></a>Создание политик DNS
 
-После создания разделов (областей зоны) и добавления записей необходимо создать политики DNS, которые распределяют входящие запросы по этим областям, чтобы на 50% запросов contosogiftservices.com был получен ответ с IP-адресом для Интернета. сервер в Сиэтле Datacenter и остальные равномерно распределяются между центрами обработки данных в Чикаго и Далласе.
+После создания секций (областей зоны) и добавления записей необходимо создать политики DNS, которые распределяют входящие запросы по этим областям, чтобы на 50% запросов для contosogiftservices.com отвечал IP-адрес веб-сервера в Сиэтле, а остальные центры обработки данных в Чикаго и Далласе были равномерно распределены.
 
 Для создания политики DNS, которая распределяет трафик приложений между тремя центрами обработки данных, можно использовать следующие команды Windows PowerShell.
 
 >[!NOTE]
->В приведенной ниже команде примера выражение-Зонескопе "Сеаттлезонескопе, 2; Чикагозонескопе, 1; Далласзонескопе, 1», настраивает DNS-сервер с массивом, включающим в себя сочетание параметров \<Зонескопе\>\<Weight\>.
-    
-    Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
-    
+>В приведенной ниже команде примера выражение-Зонескопе "Сеаттлезонескопе, 2; Чикагозонескопе, 1; Далласзонескопе, 1», настраивает DNS-сервер с массивом, включающим в себя сочетание параметров `<ZoneScope>` `<weight>` .
 
-Дополнительные сведения см. в разделе [Add-днссерверкуериресолутионполици](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).  
+```powershell
+Add-DnsServerQueryResolutionPolicy -Name "AmericaPolicy" -Action ALLOW -ZoneScope "SeattleZoneScope,2;ChicagoZoneScope,1;DallasZoneScope,1" -ZoneName "contosogiftservices.com"
+```
+
+Дополнительные сведения см. в разделе [Add-днссерверкуериресолутионполици](https://docs.microsoft.com/powershell/module/dnsserver/add-dnsserverqueryresolutionpolicy?view=win10-ps).
 
 Теперь вы успешно создали политику DNS, которая обеспечивает балансировку нагрузки приложений между веб-серверами в трех разных центрах обработки данных.
 

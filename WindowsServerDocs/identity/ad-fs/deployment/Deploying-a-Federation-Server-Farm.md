@@ -8,35 +8,34 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 70818fffb601d7da6b9e7e6f8a1e2a774abf2ca5
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 114f0b13ec2ed556402b61217337de0f93d1fba9
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86965486"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87520003"
 ---
 # <a name="deploying-a-federation-server-farm"></a>Развертывание фермы серверов федерации
 
+Для развертывания фермы серверов федерации выполните задачи из этого контрольного списка в указанном порядке. Если ссылка приведет вас на концептуальную статью, вернитесь к этому контрольному списку после ее просмотра, чтобы вы могли продолжить выполнять оставшиеся задачи контрольного списка.
 
-Для развертывания фермы серверов федерации выполните задачи из этого контрольного списка в указанном порядке. Если ссылка приведет вас на концептуальную статью, вернитесь к этому контрольному списку после ее просмотра, чтобы вы могли продолжить выполнять оставшиеся задачи контрольного списка.  
-  
-![Контрольный список развертывания фермы федеративных серверов](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**: развертывание фермы серверов федерации**  
-  
-||Задача|Ссылка|  
-|-|--------|-------------|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Изучите важные понятия и рекомендации по мере подготовки к развертыванию службы федерации Active Directory (AD FS) \( AD FS \) . **Примечание**.|![развертывание интегрированной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[AD FS руководство по проектированию в Windows server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<p>![Основные](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[понятия о ключевых AD FS](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md) развертывании фермы федеративных серверов|  
-||Если вы решили использовать Microsoft SQL Server для хранилища конфигурации AD FS, убедитесь, что развернут функциональный экземпляр SQL Server.|Предупреждение [SQL Server](/sql/sql-server/?view=sql-server-ver15) **.** в Windows Server 2012 R2 если вы хотите создать ферму AD FS и использовать SQL Server для хранения данных конфигурации, можно использовать SQL Server 2008 и более новые версии, включая SQL Server 2012.|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Присоедините компьютер к домену Active Directory.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Присоединение компьютера к домену](Join-a-Computer-to-a-Domain.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Регистрация SSL-сертификата на уровне SSL \( \) для AD FS.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Регистрация SSL-сертификата для AD FS](Enroll-an-SSL-Certificate-for-AD-FS.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Установите службу роли AD FS.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Установка службы роли AD FS](Install-the-AD-FS-Role-Service.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Настройте сервер федерации.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Настройка сервера федерации](Configure-a-Federation-Server.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Необязательный шаг. Настройте сервер федерации с помощью DRS службы регистрации устройств \( \) .|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Настройка сервера федерации с помощью службы регистрации устройств](Configure-a-federation-server-with-Device-Registration-Service.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Добавьте \( \) запись ресурса a и псевдонима \( CNAME \) в корпоративную службу доменных имен \( (DNS) \) для службы федерации и DRS.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Настройка корпоративных DNS для служба Федерации и DRS](Configure-Corporate-DNS-for-the-Federation-Service-and-DRS.md)|  
-|![Развертывание федеративной фермы серверов](media/icon_checkboxo.gif)|Проверьте работоспособность сервера федерации.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Проверка работоспособности сервера федерации](Verify-That-a-Federation-Server-Is-Operational.md)|  
-  
+![Контрольный список развертывания фермы федеративных серверов](media/2b05dce3-938f-4168-9b8f-1f4398cbdb9b.gif)**: развертывание фермы серверов федерации**
 
-## <a name="see-also"></a>См. также:  
-[Развертывание AD FS](../../ad-fs/AD-FS-Deployment.md)  
+|Задача|Справочник|
+|--------|-------------|
+|Изучите важные понятия и рекомендации по мере подготовки к развертыванию службы федерации Active Directory (AD FS) \( AD FS \) . **Примечание**.|![развертывание интегрированной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[AD FS руководство по проектированию в Windows server 2012 R2](../../ad-fs/design/AD-FS-Design-Guide-in-Windows-Server-2012-R2.md)<p>![Основные](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[понятия о ключевых AD FS](../../ad-fs/technical-reference/Understanding-Key-AD-FS-Concepts.md) развертывании фермы федеративных серверов|
+||Если вы решили использовать Microsoft SQL Server для хранилища конфигурации AD FS, убедитесь, что развернут функциональный экземпляр SQL Server.|Предупреждение [SQL Server](/sql/sql-server/?view=sql-server-ver15) **.** в Windows Server 2012 R2 если вы хотите создать ферму AD FS и использовать SQL Server для хранения данных конфигурации, можно использовать SQL Server 2008 и более новые версии, включая SQL Server 2012.|
+|Присоедините компьютер к домену Active Directory.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Присоединение компьютера к домену](Join-a-Computer-to-a-Domain.md)|
+|Регистрация SSL-сертификата на уровне SSL \( \) для AD FS.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Регистрация SSL-сертификата для AD FS](Enroll-an-SSL-Certificate-for-AD-FS.md)|
+|Установите службу роли AD FS.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Установка службы роли AD FS](Install-the-AD-FS-Role-Service.md)|
+|Настройте сервер федерации.|![Развертывание федеративной фермы серверов](media/bc6cea1a-1c6c-4124-8c8f-1df5adfe8c88.gif)[Настройка сервера федерации](Configure-a-Federation-Server.md)|
+|Необязательный шаг. Настройте сервер федерации с помощью DRS службы регистрации устройств \( \) .|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Настройка сервера федерации с помощью службы регистрации устройств](Configure-a-federation-server-with-Device-Registration-Service.md)|
+|Добавьте \( \) запись ресурса a и псевдонима \( CNAME \) в корпоративную службу доменных имен \( (DNS) \) для службы федерации и DRS.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Настройка корпоративных DNS для служба Федерации и DRS](Configure-Corporate-DNS-for-the-Federation-Service-and-DRS.md)|
+|Проверьте работоспособность сервера федерации.|![Развертывание федеративной фермы серверов](media/faa393df-4856-4431-9eda-4f4e5be72a90.gif)[Проверка работоспособности сервера федерации](Verify-That-a-Federation-Server-Is-Operational.md)|
 
-[Руководство по развертыванию служб федерации Active Directory в Windows Server 2012 R2](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)  
-  
+
+## <a name="see-also"></a>См. также:
+[Развертывание AD FS](../../ad-fs/AD-FS-Deployment.md)
+
+[Руководство по развертыванию служб федерации Active Directory в Windows Server 2012 R2](../../ad-fs/deployment/Windows-Server-2012-R2-AD-FS-Deployment-Guide.md)
+

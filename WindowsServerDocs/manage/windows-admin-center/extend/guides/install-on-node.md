@@ -1,6 +1,6 @@
 ---
-title: Разработка расширения средства
-description: Разработка расширения средства Windows Admin Center SDK (Project Хонолулу)
+title: Установка полезных данных расширения на управляемом узле
+description: Инструкции по установке полезных данных расширения на управляемый узел
 ms.technology: manage
 ms.topic: article
 author: nwashburn-ms
@@ -8,31 +8,32 @@ ms.author: niwashbu
 ms.date: 09/18/2018
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 3a93a1105862ffbf4fcbd1d23b15d9bcaa6010dc
-ms.sourcegitcommit: 083ff9bed4867604dfe1cb42914550da05093d25
+ms.openlocfilehash: 463280ba1d0a3fac84a12c0483946b01c0fefb75
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75950504"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87518562"
 ---
 # <a name="install-extension-payload-on-a-managed-node"></a>Установка полезных данных расширения на управляемом узле
 
->Относится к Windows Admin Center, ознакомительной версии Windows Admin Center
+>Область применения. Windows Admin Center, ознакомительная версия Windows Admin Center
 
-## <a name="setup"></a>"Настройка"
+## <a name="setup"></a>Настройка
+
 > [!NOTE]
 > Для выполнения этой инструкции потребуется сборка 1.2.1904.02001 или более поздняя версия. Чтобы проверить номер сборки, откройте центр администрирования Windows и щелкните вопросительный знак в правом верхнем углу.
 
 Создайте [расширение средства](../develop-tool.md) для центра администрирования Windows, если это еще не сделано. Закончив, запишите значения, используемые при создании расширения:
 
-| Применение | Объяснение | Пример |
+| Значение | Объяснение | Пример |
 | ----- | ----------- | ------- |
 | ```{!Company Name}``` | Название вашей компании (с пробелами) | ```Contoso``` |
 | ```{!Tool Name}``` | Имя средства (с пробелами) | ```InstallOnNode``` |
 
-В папке расширения средства создайте папку ```Node``` (```{!Tool Name}\Node```). Все, что помещено в эту папку, будет скопировано на управляемый узел при использовании этого API. Добавьте файлы, необходимые для вашего варианта использования. 
+В папке расширения средства создайте ```Node``` папку ( ```{!Tool Name}\Node``` ). Все, что помещено в эту папку, будет скопировано на управляемый узел при использовании этого API. Добавьте файлы, необходимые для вашего варианта использования.
 
-Также создайте скрипт ```{!Tool Name}\Node\installNode.ps1```. Этот сценарий будет запущен на управляемом узле после копирования всех файлов из папки ```{!Tool Name}\Node``` на управляемый узел. Добавьте любую дополнительную логику для вашего варианта использования. Пример ```{!Tool Name}\Node\installNode.ps1``` файла:
+Также создайте ```{!Tool Name}\Node\installNode.ps1``` скрипт. Этот скрипт будет запущен на управляемом узле после копирования всех файлов из ```{!Tool Name}\Node``` папки на управляемый узел. Добавьте любую дополнительную логику для вашего варианта использования. Пример ```{!Tool Name}\Node\installNode.ps1``` файла:
 
 ``` ps1
 # Add logic for installing payload on managed node
@@ -40,12 +41,12 @@ echo 'Success'
 ```
 
 > [!NOTE]
-> ```{!Tool Name}\Node\installNode.ps1``` имеет определенное имя, которое будет искать API. Изменение имени этого файла приведет к ошибке.
+> ```{!Tool Name}\Node\installNode.ps1```имеет определенное имя, которое будет искать API. Изменение имени этого файла приведет к ошибке.
 
 
 ## <a name="integration-with-ui"></a>Интеграция с пользовательским интерфейсом
 
-Обновите ```\src\app\default.component.ts``` следующим образом:
+Обновите ```\src\app\default.component.ts``` следующее:
 
 ``` ts
 import { Component } from '@angular/core';
@@ -105,13 +106,13 @@ this.post('contoso.install-on-node', '1.0.0',
       );
 ```
 
-Также обновите ```\src\app\default.component.html``` следующим образом:
+Также обновите ```\src\app\default.component.html``` до:
 ``` html
 <button (click)="installOnNode()">Click to install</button>
 <sme-loading-wheel *ngIf="loading" size="large"></sme-loading-wheel>
 <p *ngIf="response">{{response}}</p>
 ```
-И наконец ```\src\app\default.module.ts```:
+И наконец ```\src\app\default.module.ts``` :
 ``` ts
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -136,10 +137,10 @@ export class DefaultModule { }
 
 Последний шаг — создание пакета NuGet с добавленными файлами, а затем Установка этого пакета в центре администрирования Windows.
 
-Если пакет расширения ранее не создавался, следуйте руководству по работе с [расширениями публикации](../publish-extensions.md) . 
+Если пакет расширения ранее не создавался, следуйте руководству по работе с [расширениями публикации](../publish-extensions.md) .
 > [!IMPORTANT]
-> В nuspec-файле для этого расширения важно, чтобы значение ```<id>``` совпадало с именем в ```manifest.json``` проекта, а ```<version>``` соответствует тому, что было добавлено в ```\src\app\default.component.ts```. Также добавьте запись в раздел ```<files>```: 
-> 
+> В nuspec-файле для этого расширения важно, ```<id>``` чтобы значение совпадало с именем в проекте ```manifest.json``` и совпадало с тем, ```<version>``` что было добавлено в ```\src\app\default.component.ts``` . Кроме того, добавьте запись в раздел ```<files>``` :
+>
 > ```<file src="Node\**\*.*" target="Node" />```.
 
 ``` xml
@@ -155,7 +156,7 @@ export class DefaultModule { }
     <licenseUrl>http://YourLicenseLink</licenseUrl>
     <iconUrl>http://YourLogoLink</iconUrl>
     <description>Install on node extension by Contoso</description>
-    <copyright>(c) Contoso. All rights reserved.</copyright> 
+    <copyright>(c) Contoso. All rights reserved.</copyright>
   </metadata>
     <files>
     <file src="bundle\**\*.*" target="ux" />
@@ -165,4 +166,4 @@ export class DefaultModule { }
 </package>
 ```
 
-После создания этого пакета добавьте путь к этому каналу. В центре администрирования Windows перейдите в раздел Параметры > расширения > каналы и добавьте путь к месту существования этого пакета. После установки расширения вы сможете нажать кнопку ```install```, и API будет вызван.  
+После создания этого пакета добавьте путь к этому каналу. В центре администрирования Windows перейдите в раздел Параметры > расширения > каналы и добавьте путь к месту существования этого пакета. После установки расширения вы сможете нажать кнопку, ```install``` и API будет вызван.

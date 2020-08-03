@@ -1,5 +1,5 @@
 ---
-title: Приступая к работе
+title: Начало работы с Windows Server 2016
 description: 'Основные сведения о Windows Server 2016: требования к системе, заметки о выпуске и варианты обновления'
 ms.prod: windows-server
 manager: dongill
@@ -9,12 +9,12 @@ ms.topic: article
 author: jaimeo
 ms.author: jaimeo
 ms.localizationpriority: medium
-ms.openlocfilehash: bc38c21435ba3340f5ffb1aab9d274ec9da1620c
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 6387b5daf2346a0ad88509dbefd68ba8b8bbb69a
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86964066"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519571"
 ---
 # <a name="get-started-with-windows-server-2016"></a>Начало работы с Windows Server 2016
 
@@ -23,7 +23,7 @@ ms.locfileid: "86964066"
 > [!TIP]
 > Ищете дополнительные сведения о предыдущих версиях Windows Server? Ознакомьтесь с другими нашими [библиотеками Windows Server](/previous-versions/windows/) на сайте docs.microsoft.com. Кроме того, вы можете найти нужную информацию [на этом сайте](/search/index?dataSource=previousVersions&search=Windows Server).
 
-![Значок с установленным флажком](../media/landing-icons/getstarted.png) Эта коллекция содержит подробные сведения, помогающие определить готовность к переходу на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server 2016, вы можете вернуться в главный центр [Windows Server 2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям. 
+![Значок с установленным флажком](../media/landing-icons/getstarted.png) Эта коллекция содержит подробные сведения, помогающие определить готовность к переходу на Windows Server 2016. Ознакомившись с системными требованиями, параметрами обновления и другими сведениями о переходе на Windows Server 2016, вы можете вернуться в главный центр [Windows Server 2016](Windows-Server-2016.md) и приступить к установке того выпуска, который оптимально соответствует вашим потребностям.
 
 > [!Note]
 > Чтобы скачать Windows Server 2016, см. статью [Ознакомительные версии Windows Server](https://www.microsoft.com/evalcenter/evaluate-windows-server-2016).

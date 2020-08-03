@@ -1,5 +1,5 @@
 ---
-title: Управление ресурсами в нескольких лесах Active Directory
+title: Управление ресурсами в нескольких лесах Active Directory
 description: Этот раздел является частью руководства по управлению IP-адресами (IPAM) в Windows Server 2016.
 manager: brianlic
 ms.prod: windows-server
@@ -8,31 +8,31 @@ ms.topic: article
 ms.assetid: 82f8f382-246e-4164-8306-437f7a019e0f
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: d86b93180708c772c052b242412bfdd1fc7e68c7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 39d519f0d588a7c2ba6a671eeace14cfe788f6b0
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860657"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517919"
 ---
-# <a name="manage-resources-in-multiple-active-directory-forests"></a>Управление ресурсами в нескольких лесах Active Directory
+# <a name="manage-resources-in-multiple-active-directory-forests"></a>Управление ресурсами в нескольких лесах Active Directory
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
-С помощью этого раздела вы узнаете, как использовать IPAM для управления контроллерами домена, DHCP-серверами и DNS-серверами в нескольких Active Directory лесах.  
-  
-Чтобы использовать IPAM для управления ресурсами в удаленных Active Directory лесах, каждый лес, которым требуется управлять, должен иметь двустороннее отношение доверия с лесом, в котором установлена система IPAM.  
-  
-Чтобы начать процесс обнаружения для разных лесов Active Directory, откройте диспетчер сервера и щелкните IPAM. В консоли клиента IPAM щелкните **Настройка обнаружения сервера**, а затем — **получить леса**. Это инициирует фоновую задачу, которая обнаруживает доверенные леса и их домены. После завершения процесса обнаружения нажмите кнопку **настроить обнаружение сервера**, чтобы открыть следующее диалоговое окно.  
-  
-![Настройка обнаружения серверов](../../media/Manage-Resources-in-Multiple-Active-Directory-Forests/ipam_serverdiscovery.jpg)  
+С помощью этого раздела вы узнаете, как использовать IPAM для управления контроллерами домена, DHCP-серверами и DNS-серверами в нескольких Active Directory лесах.
+
+Чтобы использовать IPAM для управления ресурсами в удаленных Active Directory лесах, каждый лес, которым требуется управлять, должен иметь двустороннее отношение доверия с лесом, в котором установлена система IPAM.
+
+Чтобы начать процесс обнаружения для разных лесов Active Directory, откройте диспетчер сервера и щелкните IPAM. В консоли клиента IPAM щелкните **Настройка обнаружения сервера**, а затем — **получить леса**. Это инициирует фоновую задачу, которая обнаруживает доверенные леса и их домены. После завершения процесса обнаружения нажмите кнопку **настроить обнаружение сервера**, чтобы открыть следующее диалоговое окно.
+
+![Настройка обнаружения серверов](../../media/Manage-Resources-in-Multiple-Active-Directory-Forests/ipam_serverdiscovery.jpg)
 
 >[!NOTE]
->Для групповая политика подготовки\-на основе Active Directory сценария между лесами убедитесь, что на сервере IPAM выполняется следующий командлет Windows PowerShell, а не контроллеры домена-доверия. Например, если IPAM-сервер присоединен к лесу corp.contoso.com, а доверенный лес — fabrikam.com, можно выполнить следующий командлет Windows PowerShell на сервере IPAM в corp.contoso.com для групповая политика\-подготовки в лесу fabrikam.com. Для выполнения этого командлета необходимо быть членом группы "Администраторы домена" в лесу fabrikam.com.
+>Для групповая политика \- подготовки на основе Active Directory сценария с перекрестным лесом убедитесь, что на сервере IPAM выполняется следующий командлет Windows PowerShell, а не контроллер домена-доверия. Например, если IPAM-сервер присоединен к лесу corp.contoso.com, а доверенный лес — fabrikam.com, можно выполнить следующий командлет Windows PowerShell на сервере IPAM в corp.contoso.com для \- подготовки на основе групповая политика в лесу Fabrikam.com. Для выполнения этого командлета необходимо быть членом группы "Администраторы домена" в лесу fabrikam.com.
 
-    
+```powershell
     Invoke-IpamGpoProvisioning -Domain fabrikam.COM -GpoPrefixName IPAMSERVER -IpamServerFqdn IPAM.CORP.CONTOSO.COM
-    
+```
 
 В диалоговом окне **Настройка обнаружения сервера** щелкните **выбрать лес**, а затем выберите лес, которым требуется управлять с помощью IPAM. Также выберите домены, которыми требуется управлять, и нажмите кнопку **Добавить**.
 

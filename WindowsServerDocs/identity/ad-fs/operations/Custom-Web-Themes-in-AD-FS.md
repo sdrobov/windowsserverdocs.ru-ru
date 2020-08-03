@@ -8,53 +8,53 @@ ms.date: 05/31/2017
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 69255eeaecd3e5198054242c1ab6dd1d0a58ce33
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: bdc39d3ceabce093940d325be93a9e2c50e670c8
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80816427"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519763"
 ---
-# <a name="custom-web-themes-in-ad-fs"></a>Пользовательские веб-темы в AD FS 
+# <a name="custom-web-themes-in-ad-fs"></a>Пользовательские веб-темы в AD FS
 
-Тема, которая поставляется\-\-\-Box, называется по умолчанию. Можно экспортировать тему по умолчанию и воспользоваться ей, чтобы быстро приступить к работе. Можно настроить внешний вид и поведение, включая настройку макета (путем изменения CSS-файла), импортировать и применить эту новую тему, а затем работать с настроенными внешним видом и поведением. Использование CSS-файла упрощает взаимодействие с веб-дизайнерами.  
-  
-Следующий командлет позволяет создать пользовательскую веб-тему, дублирующую веб-тему по умолчанию.  
-  
-  
-`New-AdfsWebTheme –Name custom –SourceName default ` 
+Тема, которая поставляется \- из \- \- комплекта, называется по умолчанию. Можно экспортировать тему по умолчанию и воспользоваться ей, чтобы быстро приступить к работе. Можно настроить внешний вид и поведение, включая настройку макета (путем изменения CSS-файла), импортировать и применить эту новую тему, а затем работать с настроенными внешним видом и поведением. Использование CSS-файла упрощает взаимодействие с веб-дизайнерами.
 
-  
-Можно изменить CSS-файл и настроить новую веб-тему с помощью нового CSS-файла. Для экспорта веб-темы воспользуйтесь следующим командлетом.  
-  
+Следующий командлет позволяет создать пользовательскую веб-тему, дублирующую веб-тему по умолчанию.
 
-    Export-AdfsWebTheme –Name default –DirectoryPath c:\theme  
+```powershell
+New-AdfsWebTheme –Name custom –SourceName default
+```
 
-  
-Для применения CSS-файла к новой теме воспользуйтесь следующим командлетом.  
-  
+Можно изменить CSS-файл и настроить новую веб-тему с помощью нового CSS-файла. Для экспорта веб-темы воспользуйтесь следующим командлетом.
 
-    Set-AdfsWebTheme –TargetName custom –StyleSheet @{path="c:\NewTheme.css"}  
-  
-  
-Следующий командлет позволяет создать пользовательскую веб-тему из новой таблицы стилей.  
-  
-  
-`New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"} –RTLStyleSheetPath c:\NewRtlTheme.css ` 
-  
-  
-  
-Чтобы применить пользовательскую веб-тему к AD FS, используйте следующий командлет.  
-  
+```powershell
+Export-AdfsWebTheme –Name default –DirectoryPath c:\theme
+```
 
-`Set-AdfsWebConfig -ActiveThemeName custom`  
+Для применения CSS-файла к новой теме воспользуйтесь следующим командлетом.
 
-  
-Чтобы добавить JavaScript в AD FS, используйте следующий командлет.  
-  
- 
-    Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=' /adfs/portal/script/onload.js';path="D:\inetpub\adfsassets\script\onload.js"}  
+```powershell
+Set-AdfsWebTheme –TargetName custom –StyleSheet @{path="c:\NewTheme.css"}
+```
 
+Следующий командлет позволяет создать пользовательскую веб-тему из новой таблицы стилей.
 
-## <a name="additional-references"></a>Дополнительная справка 
-[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)  
+```powershell
+New-AdfsWebTheme –Name custom –StyleSheet @{path="c:\NewTheme.css"} –RTLStyleSheetPath c:\NewRtlTheme.css
+```
+
+Чтобы применить пользовательскую веб-тему к AD FS, используйте следующий командлет.
+
+```powershell
+Set-AdfsWebConfig -ActiveThemeName custom
+```
+
+Чтобы добавить JavaScript в AD FS, используйте следующий командлет.
+
+```powershell
+Set-AdfsWebTheme -TargetName custom -AdditionalFileResource @{Uri=' /adfs/portal/script/onload.js';path="D:\inetpub\adfsassets\script\onload.js"}
+```
+
+## <a name="additional-references"></a>Дополнительные ссылки
+
+[AD FS настройки входа пользователя](AD-FS-user-sign-in-customization.md)

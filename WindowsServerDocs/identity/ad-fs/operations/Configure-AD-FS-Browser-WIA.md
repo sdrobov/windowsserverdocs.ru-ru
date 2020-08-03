@@ -8,12 +8,12 @@ ms.date: 03/20/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: identity-adfs
-ms.openlocfilehash: 1bcd4268444f49489d3e7a04c55d10cddaf92e00
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: fff48467519e5bfb8121bf887a773bc75defbb4c
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86966536"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519803"
 ---
 # <a name="configure-browsers-to-use-windows-integrated-authentication-wia-with-ad-fs"></a>Настройка браузеров для использования встроенной проверки подлинности Windows (WIA) с AD FS
 
@@ -21,21 +21,22 @@ ms.locfileid: "86966536"
 
 AD FS 2016 теперь имеет усовершенствованный параметр по умолчанию, который позволяет браузеру пограничной работать с WIA, не выполняя при этом неправильное и неверное перехват Windows Phone:
 
-    =~Windows\s*NT.*Edge
+```
+=~Windows\s*NT.*Edge
+```
 
 Приведенное выше означает, что больше не нужно настраивать отдельные строки агента пользователя для поддержки распространенных сценариев пограничных устройств, несмотря на то, что они обновляются довольно часто.
 
 Для других браузеров настройте свойство AD FS **виасуппортедусеражентс** , чтобы добавить необходимые значения в зависимости от используемых браузеров.  Вы можете использовать приведенные ниже процедуры.
 
-
-
 ### <a name="view-wiasupporteduseragent-settings"></a>Просмотр параметров Виасуппортедусеражент
+
 **Виасуппортедусеражентс** определяет агенты пользователя, поддерживающие WIA. AD FS анализирует строку агента пользователя при выполнении входа в браузере или элементе управления браузера.
 
 Текущие параметры можно просмотреть с помощью следующего примера PowerShell:
 
 ```powershell
-    Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
+Get-AdfsProperties | select -ExpandProperty WiaSupportedUserAgents
 ```
 
 ![Поддержка WIA](../operations/media/Configure-AD-FS-Browser-WIA/wiasupport.png)
@@ -46,18 +47,16 @@ AD FS 2016 теперь имеет усовершенствованный пар
 Если у вас AD FS на Windows Server 2012 R2 или более ранней версии:
 
 ```powershell
-   Set-AdfsProperties -WIASupportedUserAgents @("MSIE 6.0", "MSIE 7.0; Windows NT", "MSIE 8.0", "MSIE 9.0", "MSIE 10.0; Windows NT 6", "Windows NT 6.3; Trident/7.0", "Windows NT 6.3; Win64; x64; Trident/7.0", "Windows NT 6.3; WOW64; Trident/7.0", "Windows NT 6.2; Trident/7.0", "Windows NT 6.2; Win64; x64; Trident/7.0", "Windows NT 6.2; WOW64; Trident/7.0", "Windows NT 6.1; Trident/7.0", "Windows NT 6.1; Win64; x64; Trident/7.0", "Windows NT 6.1; WOW64; Trident/7.0", "MSIPC", "Windows Rights Management Client", "Edg/79.0.309.43")
+Set-AdfsProperties -WIASupportedUserAgents @("MSIE 6.0", "MSIE 7.0; Windows NT", "MSIE 8.0", "MSIE 9.0", "MSIE 10.0; Windows NT 6", "Windows NT 6.3; Trident/7.0", "Windows NT 6.3; Win64; x64; Trident/7.0", "Windows NT 6.3; WOW64; Trident/7.0", "Windows NT 6.2; Trident/7.0", "Windows NT 6.2; Win64; x64; Trident/7.0", "Windows NT 6.2; WOW64; Trident/7.0", "Windows NT 6.1; Trident/7.0", "Windows NT 6.1; Win64; x64; Trident/7.0", "Windows NT 6.1; WOW64; Trident/7.0", "MSIPC", "Windows Rights Management Client", "Edg/79.0.309.43")
 ```
 
 Если у вас AD FS на Windows Server 2016 или более поздней версии:
 
 ```powershell
-   Set-AdfsProperties -WIASupportedUserAgents @("MSIE 6.0", "MSIE 7.0; Windows NT", "MSIE 8.0", "MSIE 9.0", "MSIE 10.0; Windows NT 6", "Windows NT 6.3; Trident/7.0", "Windows NT 6.3; Win64; x64; Trident/7.0", "Windows NT 6.3; WOW64; Trident/7.0", "Windows NT 6.2; Trident/7.0", "Windows NT 6.2; Win64; x64; Trident/7.0", "Windows NT 6.2; WOW64; Trident/7.0", "Windows NT 6.1; Trident/7.0", "Windows NT 6.1; Win64; x64; Trident/7.0", "Windows NT 6.1; WOW64; Trident/7.0", "MSIPC", "Windows Rights Management Client", "Edg/*")
+Set-AdfsProperties -WIASupportedUserAgents @("MSIE 6.0", "MSIE 7.0; Windows NT", "MSIE 8.0", "MSIE 9.0", "MSIE 10.0; Windows NT 6", "Windows NT 6.3; Trident/7.0", "Windows NT 6.3; Win64; x64; Trident/7.0", "Windows NT 6.3; WOW64; Trident/7.0", "Windows NT 6.2; Trident/7.0", "Windows NT 6.2; Win64; x64; Trident/7.0", "Windows NT 6.2; WOW64; Trident/7.0", "Windows NT 6.1; Trident/7.0", "Windows NT 6.1; Win64; x64; Trident/7.0", "Windows NT 6.1; WOW64; Trident/7.0", "MSIPC", "Windows Rights Management Client", "Edg/*")
 ```
 
 Приведенная выше команда обеспечит AD FS только для следующих вариантов использования WIA:
-
-
 
 |Агенты пользователя|Варианты использования|
 |-----|-----|
@@ -70,10 +69,9 @@ AD FS 2016 теперь имеет усовершенствованный пар
 |Windows NT 6,2; Trident/7.0</br></br>Windows NT 6,2; Платформе х Trident/7.0</br></br>Windows NT 6,2; WOW64 Trident/7.0|Операционная система Windows 8 Desktop, различные платформы|
 |Windows NT 6,1; Trident/7.0</br></br>Windows NT 6,1; Платформе х Trident/7.0</br></br>Windows NT 6,1; WOW64 Trident/7.0|Операционная система Windows 7 Desktop, различные платформы|
 |Едг/79.0.309.43 | Microsoft ребро (Chromium) для Windows Server 2012 R2 или более ранней версии |
-|Едг/*| Microsoft ребро (Chromium) для Windows Server 2016 или более поздней версии|  
+|Едг/*| Microsoft ребро (Chromium) для Windows Server 2016 или более поздней версии|
 |MSIPC| Клиент Microsoft технология защиты и контроля информации|
 |Клиент Windows Rights Management|Клиент Windows Rights Management|
-
 
 ### <a name="additional-links"></a>Дополнительные ссылки
 

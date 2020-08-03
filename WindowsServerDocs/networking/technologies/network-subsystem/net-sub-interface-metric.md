@@ -8,16 +8,16 @@ ms.assetid: 3266328c-ca82-40d2-90ca-854b7088ccaa
 manager: dcscontentpm
 ms.author: v-tea
 author: Teresa-Motiv
-ms.openlocfilehash: 9e288908df5f5de70f1e369cff08821b8d178de7
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 176fa80cd82fdaa3ac76a8661d189b16aa9631ff
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80862217"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87517899"
 ---
 # <a name="configure-the-order-of-network-interfaces"></a>Настройка порядка сетевых интерфейсов
 
->Область применения: Windows Server (Semi-Annual Channel), Windows Server 2016
+>Применяется к: Windows Server (Semi-Annual Channel), Windows Server 2016
 
 В Windows Server 2016 и Windows 10 можно использовать метрику интерфейса для настройки порядка сетевых интерфейсов.
 
@@ -29,7 +29,9 @@ ms.locfileid: "80862217"
 
 В следующем примере команды Windows PowerShell показано использование этого параметра.
 
-    Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 15
+```powershell
+Set-NetIPInterface -InterfaceIndex 12 -InterfaceMetric 15
+```
 
 Порядок, в котором адаптеры отображаются в списке, определяется метрикой интерфейса IPv4 или IPv6.  Дополнительные сведения см. в разделе [функция жетадаптерсаддрессес](https://msdn.microsoft.com/library/windows/desktop/aa365915%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 

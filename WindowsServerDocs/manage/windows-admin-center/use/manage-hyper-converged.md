@@ -8,12 +8,12 @@ ms.author: jol
 ms.date: 03/01/2019
 ms.localizationpriority: medium
 ms.prod: windows-server
-ms.openlocfilehash: 71e45622292f7393b19978ec3235492c5065a8a1
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 8344fcb01a5d527dfce46118121fbf7623636549
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85474031"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519673"
 ---
 # <a name="manage-hyper-converged-infrastructure-with-windows-admin-center"></a>Управление инфраструктурой с технологией Hyper-in с помощью центра администрирования Windows
 
@@ -92,7 +92,7 @@ ms.locfileid: "85474031"
 
 Развертывание займет около 30 – 45 минут.
 
-## <a name="get-started"></a>Приступая к работе
+## <a name="get-started"></a>Начало работы
 
 После развертывания инфраструктуры с технологией Hyper-in можно управлять ею с помощью центра администрирования Windows.
 
@@ -278,7 +278,7 @@ ms.locfileid: "85474031"
 
 ![Мониторинг инфраструктуры SDN](../media/manage-hyper-converged/sdn-monitoring.png)
 
-## <a name="feedback"></a>Обратная связь
+## <a name="give-us-feedback"></a>Обратная связь
 
 Это все о ваших отзывах! Самым важным преимуществом частого обновления является прослушивание того, что работает и что необходимо улучшить. Вот несколько способов сообщить нам о том, что вы думаете:
 

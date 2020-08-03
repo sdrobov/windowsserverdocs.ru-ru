@@ -8,15 +8,15 @@ ms.prod: windows-server
 ms.assetid: a5307da5-02ff-4c31-80f0-47cb17a87272
 ms.technology: identity-adfs
 ms.author: billmath
-ms.openlocfilehash: e3ddc427d84a79d831c61cad8087dbfa1d3fb564
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: 36555336b158fdf7cfaa400f66b9deecbff49c1b
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80860247"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87519693"
 ---
 # <a name="ad-fs-and-certificate-keyspec-property-information"></a>Сведения о свойствах AD FS и KeySpec сертификата
-Спецификация ключа ("KeySpec") — это свойство, связанное с сертификатом и ключом. Он указывает, можно ли использовать закрытый ключ, связанный с сертификатом, для подписывания, шифрования или и того, и другого.   
+Спецификация ключа ("KeySpec") — это свойство, связанное с сертификатом и ключом. Он указывает, можно ли использовать закрытый ключ, связанный с сертификатом, для подписывания, шифрования или и того, и другого.
 
 Неверное значение KeySpec может привести к AD FS и ошибкам прокси-сервера, таким как:
 
@@ -26,31 +26,33 @@ ms.locfileid: "80860247"
 
 В журнале событий может появиться следующее:
 
-    Log Name:      AD FS Tracing/Debug
-    Source:        AD FS Tracing
-    Date:          2/12/2015 9:03:08 AM
-    Event ID:      67
-    Task Category: None
-    Level:         Error
-    Keywords:      ADFSProtocol
-    User:          S-1-5-21-3723329422-3858836549-556620232-1580884
-    Computer:      ADFS1.contoso.com
-    Description:
-    Ignore corrupted SSO cookie.
+```
+Log Name:   AD FS Tracing/Debug
+Source: AD FS Tracing
+Date:   2/12/2015 9:03:08 AM
+Event ID:   67
+Task Category: None
+Level:  Error
+Keywords:   ADFSProtocol
+User:   S-1-5-21-3723329422-3858836549-556620232-1580884
+Computer:   ADFS1.contoso.com
+Description:
+Ignore corrupted SSO cookie.
+```
 
 ## <a name="what-causes-the-problem"></a>Что вызывает проблему
 Свойство KeySpec определяет способ использования ключа, созданного или получаемого с помощью Microsoft CryptoAPI (CAPI), из устаревшего поставщика криптографических хранилищ Майкрософт (CSP).
 
 Значение KeySpec, равное **1**, или **AT_KEYEXCHANGE**, может использоваться для подписывания и шифрования.  Значение **2**или **AT_SIGNATURE**используется только для подписывания.
 
-Наиболее распространенная неправильная конфигурация KeySpec использует значение 2 для сертификата, отличного от сертификата подписи маркера.  
+Наиболее распространенная неправильная конфигурация KeySpec использует значение 2 для сертификата, отличного от сертификата подписи маркера.
 
 Для сертификатов, ключи которых были созданы с помощью поставщиков криптографии следующего поколения (CNG), не существует концепции ключа, и значение KeySpec всегда будет равно нулю.
 
-См. раздел Проверка допустимости значения KeySpec ниже. 
+См. раздел Проверка допустимости значения KeySpec ниже.
 
 ### <a name="example"></a>Пример
-Примером устаревшего CSP является поставщик усовершенствованных служб шифрования Майкрософт. 
+Примером устаревшего CSP является поставщик усовершенствованных служб шифрования Майкрософт.
 
 Формат больших двоичных объектов Microsoft RSA CSP включает идентификатор алгоритма, **CALG_RSA_KEYX** или **CALG_RSA_SIGN**соответственно, для запросов на обслуживание для <strong>AT_KEYEXCHANGE * * или * * AT_SIGNATUREных</strong> ключей.
 
@@ -71,7 +73,7 @@ CALG_RSA_SIGN: ключ только для подписи RSA |AT_SIGNATURE (и
 |2|Для устаревшего сертификата CAPI (не CNG) ключ можно использовать только для подписывания|не рекомендуется|
 
 ## <a name="how-to-check-the-keyspec-value-for-your-certificates--keys"></a>Как проверить значение KeySpec для сертификатов и ключей
-Чтобы просмотреть значение сертификата, можно использовать программу командной строки **certutil** .  
+Чтобы просмотреть значение сертификата, можно использовать программу командной строки **certutil** .
 
 Ниже приведен пример: **certutil – v — Store My**.  При этом сведения о сертификате будут выгружаться на экран.
 
@@ -95,7 +97,7 @@ CALG_RSA_SIGN: ключ только для подписи RSA |AT_SIGNATURE (и
    Поставщик CNG (ProviderType = 0):
 
    |Назначение сертификата AD FS|Допустимые значения KeySpec|
-   | --- | --- |   
+   | --- | --- |
    |SSL|0|
 
 ## <a name="how-to-change-the-keyspec-for-your-certificate-to-a-supported-value"></a>Изменение keySpec для сертификата на поддерживаемое значение
@@ -107,7 +109,7 @@ CALG_RSA_SIGN: ключ только для подписи RSA |AT_SIGNATURE (и
 3. Выполните следующие действия для каждого AD FS и сервера WAP.
     1. Удалите сертификат (с сервера AD FS или WAP).
     2. Откройте командную строку PowerShell с повышенными привилегиями и импортируйте PFX-файл на каждом AD FS и WAP-сервере с помощью приведенного ниже синтаксиса командлета, указав значение AT_KEYEXCHANGE (которое работает для всех AD FS сертификатов):
-        1. В.\>служебную программу certutil – importpfx CertFile. pfx AT_KEYEXCHANGE
+        1. C: \> certutil – importpfx CertFile. pfx AT_KEYEXCHANGE
         2. Введите пароль PFX
     3. После выполнения приведенных выше действий выполните следующие действия.
         1. Проверка разрешений на закрытый ключ
