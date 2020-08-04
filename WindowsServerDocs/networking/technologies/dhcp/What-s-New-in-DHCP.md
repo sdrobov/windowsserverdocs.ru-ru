@@ -8,12 +8,12 @@ ms.topic: get-started-article
 ms.assetid: c6f36998-5b64-45d1-b1f0-0f0d6604dbe3
 ms.author: lizross
 author: eross-msft
-ms.openlocfilehash: 301541b42398ab517940af987e7ed6f3a7a54b0d
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 204f6079b2d8a8c833afb8a32b4d0ac97ac0912f
+ms.sourcegitcommit: 3d56b626dc2d163d2c7847c01e872bfbfcde0e12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475551"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87538516"
 ---
 # <a name="whats-new-in-dhcp"></a>Новые возможности DHCP
 
@@ -24,6 +24,12 @@ ms.locfileid: "85475551"
 DHCP — это стандарт IETF, предназначенный для уменьшения административных затрат и сложности настройки узлов в \- сети на основе TCP/IP, например частной интрасети. С использованием службы DHCP-сервера процесс настройки протокола TCP/IP на DHCP-клиентах происходит автоматически.
 
 В следующих разделах содержатся сведения о новых возможностях и изменениях в функциональных возможностях DHCP.
+
+## <a name="new-dhcp-client-side-features-in-the-windows-10-may-2020-update"></a>Новые функции DHCP на стороне клиента в Windows 10, Май обновление 2020 
+
+DHCP-клиент в Windows 10 был обновлен в 10 мая 2020 с обновлением (также называется Windows 10, версия 2004). Если вы используете клиент Windows и подключаетесь к Интернету через модемный телефон с Android, подключение должно быть отмечено как "лимитное". Ранее соединения были помечены как Неотслеживаемые. Обратите внимание, что не все модемы, связанные с Android, будут обнаружены как лимитные, и некоторые другие сети также могут отображаться как лимитные.
+
+Кроме того, имя традиционного поставщика клиента было обновлено для некоторых устройств под управлением Windows. Это значение используется только в MSFT 5,0. Некоторые устройства теперь отображаются как MSFT 5,0 XBOX.
 
 ## <a name="dhcp-subnet-selection-options"></a>Параметры выбора подсети DHCP
 
@@ -48,10 +54,10 @@ DHCP теперь поддерживает параметр 82 \( подвари
 
 |Операционная система|Поддержка NAP|
 |--------------------|---------------|
-| Windows Server 2008 |Поддерживается|
-| Windows Server 2008 R2 |Поддерживается|
-| Windows Server 2012 |Поддерживается|
-| Windows Server 2012 R2 |Поддерживается|
+| Windows Server 2008 |Поддерживается|
+| Windows Server 2008 R2 |Поддерживается|
+| Windows Server 2012 |Поддерживается|
+| Windows Server 2012 R2 |Поддерживается|
 | Windows Server 2016|Не поддерживается|
 
 В развертывании NAP DHCP-сервер под управлением операционной системы, поддерживающей NAP, может функционировать как точка NAP для метода принудительного применения NAP. Дополнительные сведения о DHCP в NAP см. в разделе [Контрольный список: реализация проектирования принудительного применения DHCP](https://technet.microsoft.com/library/dd314186.aspx).
@@ -62,6 +68,6 @@ DHCP теперь поддерживает параметр 82 \( подвари
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Протокол DHCP](Dynamic-Host-Configuration-Protocol--DHCP-.md)
+-   [Dynamic Host Configuration Protocol (DHCP)](Dynamic-Host-Configuration-Protocol--DHCP-.md) (Протокол DHCP)
 
 
