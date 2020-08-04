@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.date: 01/07/2020
 ms.localizationpriority: high
 ms.prod: windows-server
-ms.openlocfilehash: cb91b884edfbd105bc9e88a9d11b3b96055247c9
-ms.sourcegitcommit: c40c29683d25ed75b439451d7fa8eda9d8d9e441
+ms.openlocfilehash: 2a3655c7efddbbe22f312bab4c9276e88e53481b
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85833337"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87410015"
 ---
 # <a name="windows-admin-center"></a>Windows Admin Center
 
@@ -35,19 +35,18 @@ Windows Admin Center представляет собой локально раз
 
 Ниже приведены несколько действий, для выполнения которых вы можете использовать Windows Admin Center.
 
-|     |     |
-| --- | --- |
-| ![](media/simple-icon.png)| **Упрощение управления сервером** <br/> Управляйте серверами и кластерами с помощью модернизированных версий привычных инструментов, таких как диспетчер серверов. Установка занимает меньше пяти минут, и вы сразу можете приступать к управлению серверами в своей среде, дополнительная настройка не требуется. Дополнительные сведения см. в статье [Что такое Windows Admin Center?](understand/what-is.md). |
-| ![](media/future-icon.png)| **Работа с гибридными решениями** <br/> Интеграция с Azure позволяет дополнительно подключать локальные серверы к соответствующим облачным службам. Дополнительные сведения см. в статье [Подключение Windows Server к гибридным службам Azure](azure/index.md). |
-| ![](media/secure-icon.png)| **Оптимизация гиперконвергентного управления** <br/> Оптимизируйте управление гиперконвергентными кластерами Azure Stack HCI или Windows Server. Используйте упрощенные рабочие нагрузки для создания виртуальных машин, томов Локальных дисковых пространств, программно-определяемых сетей и многого другого, а также управления ими. Дополнительные сведения см. в статье [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md) (Управление гиперконвергентной инфраструктурой с помощью Windows Admin Center).|
+- **Упрощение управления серверами.** Управляйте серверами и кластерами с помощью модернизированных версий привычных инструментов, таких как диспетчер серверов. Установка занимает меньше пяти минут, и вы сразу можете приступать к управлению серверами в своей среде, дополнительная настройка не требуется. Дополнительные сведения см. в статье [Что такое Windows Admin Center?](understand/what-is.md).
+
+- **Работа с гибридными решениями.** Интеграция с Azure позволяет дополнительно подключать локальные серверы к соответствующим облачным службам. Дополнительные сведения см. в статье [Подключение Windows Server к гибридным службам Azure](azure/index.md).
+
+- **Упрощение гиперконвергентного управления.** Оптимизируйте управление гиперконвергентными кластерами Azure Stack HCI или Windows Server. Используйте упрощенные рабочие нагрузки для создания виртуальных машин, томов Локальных дисковых пространств, программно-определяемых сетей и многого другого, а также управления ими. Дополнительные сведения см. в статье [Manage Hyper-Converged Infrastructure with Windows Admin Center](use/manage-hyper-converged.md) (Управление гиперконвергентной инфраструктурой с помощью Windows Admin Center).
 
 Ниже представлено видео с обзором, а после него — плакат с более подробной информацией.
->[!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
+> [!VIDEO https://www.youtube.com/embed/WCWxAp27ERk]
 
 [![Плакат Windows Admin Center](media/WAC1910Poster_thumb_small.PNG)](media/WAC1910Poster_thumb.png)
 
 [Скачать PDF](https://github.com/MicrosoftDocs/windowsserverdocs/raw/master/WindowsServerDocs/manage/windows-admin-center/media/WindowsAdminCenter1910Poster.pdf)
-
 
 ## <a name="contents-at-a-glance"></a>Краткий обзор основных понятий
 
@@ -184,6 +183,6 @@ Windows Admin Center предназначен для управления одн
 
 ## <a name="stay-updated"></a>Всегда будьте в курсе
 
-![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOolR)[Читайте нас в Твиттере](https://twitter.com/servermgmt)
+[Следите за нашими новостями в Твиттере](https://twitter.com/servermgmt)
 
-![](//img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/REOtyw)[Читайте наши блоги](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)
+[Читайте наши блоги](https://techcommunity.microsoft.com/t5/windows-admin-center-blog/bg-p/Windows-Admin-Center-Blog)
