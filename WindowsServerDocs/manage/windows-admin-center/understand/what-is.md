@@ -8,12 +8,12 @@ ms.author: niwashbu
 ms.localizationpriority: medium
 ms.prod: windows-server
 ms.date: 06/07/2019
-ms.openlocfilehash: 92d8a47c4ac214faeac83ba8ff5a1a746bc8bdb3
-ms.sourcegitcommit: b35fbd2a67d7a3395b50b2a3acd0817ba4e36b26
+ms.openlocfilehash: da2970a8777ddcc95e2e8af0d979341965cb70ad
+ms.sourcegitcommit: 3632b72f63fe4e70eea6c2e97f17d54cb49566fd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86891389"
+ms.lasthandoff: 08/03/2020
+ms.locfileid: "87518532"
 ---
 # <a name="what-is-windows-admin-center"></a>Что такое Windows Admin Center?
 
@@ -23,7 +23,7 @@ Windows Admin Center представляет собой новый развер
 
 Windows Admin Center — это продукт эволюции встроенных средств управления, таких как Диспетчер серверов и MMC. Он дополняет System Center, но не является его заменой.
 
-![](../media/wac-complements.png)
+![Схема: работа Windows Admin Center с другими решениями](../media/wac-complements.png)
 
 ## <a name="how-does-windows-admin-center-work"></a>Как работает Windows Admin Center?
 
@@ -31,7 +31,7 @@ Windows Admin Center запускается в браузере и управл�
 
 При публикации в DNS и предоставлении доступа через соответствующие корпоративные брандмауэры шлюз Windows Admin Center позволяет безопасно подключиться к серверам и управлять ими из любого места с помощью Microsoft Edge или Google Chrome.
 
-![](../media/architecture.png)
+![Схема: архитектура Windows Admin Center](../media/architecture.png)
 
 ## <a name="learn-how-windows-admin-center-improves-your-management-environment"></a>Узнайте, как Windows Admin Center позволяет улучшить среду управления
 
@@ -61,7 +61,7 @@ Windows Admin Center имеет много точек [интеграции со
 
 ### <a name="deploy-hyper-converged-and-failover-clusters"></a>**Развертывание гиперконвергентных отказоустойчивых кластеров**
 
-Центр администрирования Windows позволяет [легко развертывать гиперконвергентные отказоустойчивые кластеры](../use/deploy-hyperconverged-infrastructure.md) с помощью простого в использовании мастера. 
+Центр администрирования Windows позволяет [легко развертывать гиперконвергентные отказоустойчивые кластеры](../use/deploy-hyperconverged-infrastructure.md) с помощью простого в использовании мастера.
 
 ### <a name="manage-hyper-converged-clusters"></a>**Управление гиперконвергентными кластерами**
 

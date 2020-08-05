@@ -8,12 +8,12 @@ ms.date: 05/08/2018
 ms.topic: article
 ms.prod: windows-server
 ms.technology: networking
-ms.openlocfilehash: 25472e4ba4837bd68c9b6914e22c2219c91d3ac0
-ms.sourcegitcommit: 3a3d62f938322849f81ee9ec01186b3e7ab90fe0
+ms.openlocfilehash: 71f15f9da1f477ec8632fd2eb900e650f83ef3de
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "80861657"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87409604"
 ---
 # <a name="configuring-systems-for-high-accuracy"></a>Настройка высокой точности в системах
 >Применяется к: Windows Server 2016 и Windows 10 версии 1607 или более поздней.
@@ -23,7 +23,7 @@ ms.locfileid: "80861657"
 Следующие рекомендации помогут настроить системы для достижения высокой точности.  В этой статье описаны следующие компоненты:
 
 - Поддерживаемые операционные системы
-- Конфигурация системы 
+- Конфигурация системы
 
 > [!WARNING]
 > **Цели точности предыдущих операционных систем**<br>
@@ -61,8 +61,7 @@ ms.locfileid: "80861657"
 
 ![Топология времени — 1607](../media/Windows-Time-Service/Configuring-Systems-for-High-Accuracy/Topology2016.png)
 
-
->[!TIP] 
+>[!TIP]
 >**Определение версии Windows**<br>
 > Вы можете выполнить команду `winver` в командной строке, чтобы убедиться, что используется ОС версии 1607 (или выше) и сборка 14393 (или выше), как показано ниже:
 >
@@ -93,78 +92,70 @@ ms.locfileid: "80861657"
 Эти измерения можно сделать с помощью встроенного средства w32tm.exe.  Выполните указанные ниже действия.
 
 1. Выполните вычисления между целевым объектом и сервером времени Б.
-    
+
     `w32tm /stripchart /computer:TimeServerB /rdtsc /samples:450 > c:\temp\Target_TsB.csv`
 
 2. Выполните вычисления между сервером времени Б и сервером времени А.
-    
+
     `w32tm /stripchart /computer:TimeServerA /rdtsc /samples:450 > c:\temp\Target_TsA.csv`
 
 3. Выполните вычисления между сервером времени А и источником.
- 
+
 4. Затем добавьте среднее значение RoundTripDelay, измеренное на предыдущем шаге, и разделите на 2, чтобы получить совокупную задержку сети между целевым объектом и источником.
 
-#### <a name="registry-settings"></a>Параметры реестра
+## <a name="registry-settings"></a>Параметры реестра
 
-# <a name="minpollinterval"></a>[MinPollInterval](#tab/MinPollInterval)
+### <a name="minpollinterval"></a>MinPollInterval
+
 Настраивает наименьший интервал в log2 в секундах, разрешенный для системного опроса.
 
-|  |  | 
-|---------|---------|
-|Расположение ключа     | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config        |
-|Параметр    | 6        |
-|Результат | Минимальный интервал опроса теперь составляет 64 секунды. |
+| Описание | Значение |
+|--|--|
+| Расположение ключа | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Параметр | 6 |
+| Результат | Минимальный интервал опроса теперь составляет 64 секунды. |
 
-Следующая команда сигнализирует службе времени Windows, чтобы получить обновленные параметры:
+Следующая команда вызывает службу времени Windows для получения обновленных параметров: `w32tm /config /update`
 
-`w32tm /config /update`
+### <a name="maxpollinterval"></a>MaxPollInterval
 
-
-# <a name="maxpollinterval"></a>[MaxPollInterval](#tab/MaxPollInterval)
 Настраивает наибольший интервал в log2 в секундах, разрешенный для системного опроса.
 
-|  |  |  
-|---------|---------|
-|Расположение ключа     | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config        |
-|Параметр    | 6        |
-|Результат | Максимальный интервал опроса теперь составляет 64 секунды.  |
+| Описание | Значение |
+|--|--|
+| Расположение ключа | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Параметр | 6 |
+| Результат | Максимальный интервал опроса теперь составляет 64 секунды. |
 
-Следующая команда сигнализирует службе времени Windows, чтобы получить обновленные параметры:
+Следующая команда вызывает службу времени Windows для получения обновленных параметров: `w32tm /config /update`
 
-`w32tm /config /update`
+### <a name="updateinterval"></a>UpdateInterval
 
-# <a name="updateinterval"></a>[UpdateInterval](#tab/UpdateInterval)
 Количество тактов часов между настройками фазовой коррекции.
 
-|  |  |  
-|---------|---------|
-|Расположение ключа     | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config       |
-|Параметр    | 100        |
-|Результат | Количество тактов часов между настройками фазовой коррекции теперь имеет значение — 100. |
+| Описание | Значение |
+|--|--|
+| Расположение ключа | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Параметр | 100 |
+| Результат | Количество тактов часов между настройками фазовой коррекции теперь имеет значение — 100. |
 
-Следующая команда сигнализирует службе времени Windows, чтобы получить обновленные параметры:
+Следующая команда вызывает службу времени Windows для получения обновленных параметров: `w32tm /config /update`
 
-`w32tm /config /update`
+### <a name="specialpollinterval"></a>SpecialPollInterval
 
-# <a name="specialpollinterval"></a>[SpecialPollInterval](#tab/SpecialPollInterval)
 Настраивает интервал опроса в секундах, когда включен флаг SpecialInterval 0x1.
 
-|  |  |  
-|---------|---------|
-|Расположение ключа     | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient        |
-|Параметр    | 64        |
-|Результат | Интервал опроса теперь составляет 64 секунды. |
+| Описание | Значение |
+|--|--|
+| Расположение ключа | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\TimeProviders\NtpClient |
+| Параметр | 64 |
+| Результат | Интервал опроса теперь составляет 64 секунды. |
 
-Следующая команда перезапускает службу времени Windows, чтобы получить обновленные параметры:
+Следующая команда перезапускает службу времени Windows, чтобы получить обновленные параметры: `net stop w32time && net start w32time`
 
-`net stop w32time && net start w32time`
+### <a name="frequencycorrectrate"></a>FrequencyCorrectRate
 
-# <a name="frequencycorrectrate"></a>[FrequencyCorrectRate](#tab/FrequencyCorrectRate)
-
-|  |  |  
-|---------|---------|
-|Расположение ключа     | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config      |
-|Параметр    | 2        |
-
-
----
+| Описание | Значение |
+|--|--|
+| Расположение ключа | HKLM:\SYSTEM\CurrentControlSet\Services\W32Time\Config |
+| Параметр | 2 |

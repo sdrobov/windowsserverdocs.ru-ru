@@ -1,17 +1,17 @@
 ---
-title: Конфигурация сервера OpenSSH для Windows
-description: Настройка сервера OpenSSH для Windows с помощью средств Windows или PowerShell.
+title: Управление ключами OpenSSH для Windows
+description: Управление ключами OpenSSH для Windows с помощью средств Windows или PowerShell.
 ms.date: 09/27/2018
 ms.topic: conceptual
 contributor: maertendMSFT
 author: maertendmsft
 ms.product: windows-server
-ms.openlocfilehash: 4acb7893f41207de045af7eeaea15efba8221f4a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c400d1071b3905b06bd6b6104a810194186ba4cc
+ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85469849"
+ms.lasthandoff: 07/29/2020
+ms.locfileid: "87408873"
 ---
 # <a name="openssh-key-management"></a>Управление ключами OpenSSH
 

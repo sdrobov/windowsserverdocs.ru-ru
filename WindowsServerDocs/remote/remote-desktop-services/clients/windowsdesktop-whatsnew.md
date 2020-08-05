@@ -7,14 +7,14 @@ ms.topic: article
 author: heidilohr
 manager: lizross
 ms.author: helohr
-ms.date: 07/14/2020
+ms.date: 07/28/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: e9449da93e52471d1f21c2b7079a8fed0415a03a
-ms.sourcegitcommit: e6becfd2266fd434b7994455c7782de36af4ff80
+ms.openlocfilehash: 41e4923d64ebacf606f01350a873f6dbce564b4c
+ms.sourcegitcommit: 42cd33c95645321d09d006ff2e7666d6370dfbc3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86377008"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87330820"
 ---
 # <a name="whats-new-in-the-windows-desktop-client"></a>Что нового в клиенте для Windows Desktop
 
@@ -26,19 +26,20 @@ ms.locfileid: "86377008"
 
 |Группа пользователей |Версия  |
 |-----------|---------|
-|Общие     |1.2.1104 |
-|Предварительная оценка    |1.2.1185 |
+|Общие     |1.2.1186 |
+|Предварительная оценка    |1.2.1186 |
 
-## <a name="updates-for-version-121185"></a>Обновления для версии 1.2.1185
+## <a name="updates-for-version-121186"></a>Обновления для версии 1.2.1186
 
-*Дата публикации: 14.07.2020*
+*Дата публикации: 28.07.2020*
 
-Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hr), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hs), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4B1Hq)
+Скачать: [Windows (64-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qy), [Windows (32-разрядная версия)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4Ciex), [Windows (ARM64)](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE4C7Qx)
 
 - Теперь вы можете подписываться на рабочие области с несколькими учетными записями пользователей, используя меню переполнения ( **...** ) на панели команд в верхней части клиента. Чтобы вы могли различать рабочие области, их имена теперь включают имя пользователя, как и все ярлыки приложений.
 - В сообщения об ошибках, связанных с подпиской, добавлены дополнительные сведения, чтобы оптимизировать процесс устранения неполадок.
 - Свернутое или развернутое состояние рабочих областей теперь сохраняется во время обновления.
 - В диалоговом окне **Сведения о подключении** добавлена кнопка **Send Diagnostics and Close** (Отправить диагностику и закрыть).
+- Исправлена проблема, связанная с использованием клавиш CTRL+SHIFT в удаленных сеансах.
 
 ## <a name="updates-for-version-121104"></a>Обновления для версии 1.2.1104
 
