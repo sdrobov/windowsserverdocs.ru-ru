@@ -7,12 +7,12 @@ ms.assetid: 5cc73aff-d2c0-4cf9-a23d-ef928ae5ddc9
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: cbc6fec843a55d99ba709953b56e01a55f317a62
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.openlocfilehash: 933dab3e0471ef4b9d8e4f603a1c177ecc6fc70c
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409524"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838293"
 ---
 # <a name="troubleshoot-computer-backup-and-restore-errors-in-windows-server-essentials"></a>Устранение неполадок архивации и восстановления данных в Windows Server Essentials
 
@@ -21,13 +21,13 @@ ms.locfileid: "87409524"
 Выполните описанные ниже действия для устранения неполадок резервного копирования данных в Windows Server Essentials, включая проблемы с настройкой архивации, неполной или неудачной архивации, оповещений о работоспособности архивации, а также проблемы, связанные с восстановлением папок, файлов и всей системы.
 
 > [!NOTE]
-> Последние сведения об устранении неполадок из сообщества Windows Server Essentials см. на [форуме Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html).
+> Последние сведения об устранении неполадок из сообщества Windows Server Essentials см. на [форуме Windows Server Essentials](/answers/topics/windows-server-essentials.html).
 
 ## <a name="troubleshoot-backup-configuration-issues-for-a-connected-computer"></a>Устранение неполадок архивации данных подключенных компьютеров
 
 Для устранения неполадок с архивацией у компьютеров, резервное копирование которых производится с помощью вашего сервера под управлением Windows Server Essentials, выполните следующие действия.
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>ошибки
 
 - Конфигурация резервного копирования не была успешно завершена
 
@@ -73,7 +73,7 @@ ms.locfileid: "87409524"
 
 Если резервной копии присвоен статус "Неудачно", резервная копия выполнена безуспешно и для восстановления недоступны никакие данные. Однако, если резервной копии присвоен статус «Не завершено», это означает, то не все элементы резервной копии были архивированы, но часть данных подлежит восстановлению.
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>ошибки
 
 - Неполная архивация данных
 
@@ -131,7 +131,7 @@ ms.locfileid: "87409524"
 
 ## <a name="troubleshoot-backup-health-alert-issues"></a>Устранение неполадок оповещений о работоспособности
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>ошибки
 
 - Поставщик службы архивации данных для решений Windows Server завершил свою работу
 
@@ -174,7 +174,7 @@ ms.locfileid: "87409524"
 
 ## <a name="troubleshoot-a-file-or-folder-restore"></a>Устранение неполадок, связанных с восстановлением файла или папки
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>ошибки
 
 - Не удалось успешно завершить восстановление файла или папки
 
@@ -222,7 +222,7 @@ ms.locfileid: "87409524"
 
 ## <a name="troubleshoot-a-full-system-restore"></a>Устранение неполадок, связанных с полным восстановлением системы
 
-### <a name="errors"></a>Ошибки
+### <a name="errors"></a>ошибки
 
 - Не удается войти в учетную запись клиентского компьютера после полного восстановления системы.
 

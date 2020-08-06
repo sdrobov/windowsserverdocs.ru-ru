@@ -7,12 +7,12 @@ ms.assetid: d9f18b29-8e03-439e-bdf0-1dac5e4f70c5
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: d48c314e5dd1655d23e7423c473163befb3655b9
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: e55c717b1eeb5b8f75ebfb7b48abd656dd4ddaa3
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180790"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838432"
 ---
 # <a name="demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network1"></a>Понижение и удаление исходного сервера из новой системы Windows Server Essentials Network1
 
@@ -53,7 +53,7 @@ ms.locfileid: "87180790"
 
    > [!NOTE]
    >
-   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что вы выполнили все процедуры, описанные в разделе [Перемещение параметров и данных SBS 2003 на целевой сервер](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).
+   >  Exchange Server проверяет, не остались ли на сервере почтовые ящики или общие папки. Если какие-либо данные еще остались, то при нажатии кнопки **Удалить** появляется сообщение об ошибке. Чтобы избежать этой проблемы, убедитесь, что вы выполнили все процедуры, описанные в разделе [Перемещение параметров и данных SBS 2003 на целевой сервер](./move-windows-sbs-2003-to-the-destination-server-for-migration.md).
 
 
 6. Щелкните **Далее**.

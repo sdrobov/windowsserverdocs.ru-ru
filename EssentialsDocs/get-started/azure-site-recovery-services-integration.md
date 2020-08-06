@@ -7,18 +7,18 @@ ms.assetid: 262701a6-8a97-4c4e-bfbf-9f8007c308d6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e17d60b4931f4858f915bd177f05e85eb1fc5f6a
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 7c30d99bd1a0019130f7e39f70b289effd6935c4
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181690"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838253"
 ---
 # <a name="azure-site-recovery-services-integration"></a>Интеграция служб Azure Site Recovery
 
 >Область применения: Windows Server 2016 Essentials
 
-[Azure Site Recovery Services](https://docs.microsoft.com/azure/site-recovery/) — это служба, предлагаемая Microsoft Azure включения репликации виртуальных машин в режиме реального времени в хранилище службы архивации в Azure. Если сервер или сайт не работает из-за сбоя оборудования или другого сайта, вы можете выполнить отработку отказа в Azure, где образ виртуальной машины, хранящийся в хранилище резервных копий, будет подготовлен в качестве работающей виртуальной машины в Azure. В сочетании с виртуальной сетью Azure в случае отработки отказа в Azure клиентские компьютеры, ранее подключенные к локальному серверу, будут прозрачно подключаться к серверу, работающему в Azure.
+[Azure Site Recovery Services](/azure/site-recovery/) — это служба, предлагаемая Microsoft Azure включения репликации виртуальных машин в режиме реального времени в хранилище службы архивации в Azure. Если сервер или сайт не работает из-за сбоя оборудования или другого сайта, вы можете выполнить отработку отказа в Azure, где образ виртуальной машины, хранящийся в хранилище резервных копий, будет подготовлен в качестве работающей виртуальной машины в Azure. В сочетании с виртуальной сетью Azure в случае отработки отказа в Azure клиентские компьютеры, ранее подключенные к локальному серверу, будут прозрачно подключаться к серверу, работающему в Azure.
 
 Интеграция служб Azure Site Recovery с Windows Server Essentials начинается точно так же, как и настройка [виртуальных сетей Azure](azure-virtual-network-integration.md). На странице **интеграции с Microsoft Cloud Services** на панели мониторинга щелкните **интегрировать с Azure Site Recovery Services** справа от панели мониторинга:
 
@@ -62,6 +62,6 @@ ms.locfileid: "87181690"
 
 ![Снимок экрана, показывающий страницу восстановления Azure панели мониторинга Windows Server Essentials. Репликация в Azure включена для узла Essentials, а виртуальная машина с именем Essentials-Test, выполняемая в Azure, указывает, что узел отработка отказа в Azure.](media/azure-site-recovery-8.PNG)
 
-<a name="see-also"></a>См. также раздел
+<a name="see-also"></a>См. также
 --------
 [Начало работы с Windows Server Essentials](get-started.md)

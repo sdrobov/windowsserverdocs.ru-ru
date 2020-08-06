@@ -7,12 +7,12 @@ ms.assetid: 95a9f593-fad7-4335-bd4d-c7bb8c033efb
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b3a9ceca5de9971f77175052a604d3e22de07036
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: e5c8a274a8e012ffd24ce6c6c819fa240c9f1095
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180950"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837893"
 ---
 # <a name="manage-online-backup-in-windows-server-essentials"></a>Управление оперативной архивацией в Windows Server Essentials
 
@@ -84,7 +84,7 @@ ms.locfileid: "87180950"
    >  Кроме того, можно использовать собственный общий сертификат. Чтобы узнать, какой нужен сертификат, на странице **Быстрый запуск** щелкните ссылку **Получить сертификат**.
 
    > [!NOTE]
-   >   Azure требуется сертификат x. 509 v2 с открытым ключом. См. также [Управление сертификатами хранилищ](https://msdn.microsoft.com/library/azure/dn169036.aspx).
+   >   Azure требуется сертификат x. 509 v2 с открытым ключом. См. также [Управление сертификатами хранилищ](/previous-versions/azure/dn169036(v=azure.100)).
 
 7. После выбора сертификата щелкните **ОК** (флажок).
 

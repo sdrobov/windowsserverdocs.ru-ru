@@ -7,12 +7,12 @@ ms.assetid: f1e6b377-4a24-4d28-9b25-05910914826b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: ab964839dbdf8b2907d68c42c80e9d8f93d5bc75
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 3d1428fa258f661636d599dd8dcf41acaaf59082
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180260"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838283"
 ---
 # <a name="troubleshoot-computer-monitoring-in-windows-server-essentials"></a>Устранение неполадок мониторинга компьютеров в Windows Server Essentials
 
@@ -21,7 +21,7 @@ ms.locfileid: "87180260"
 В этом разделе содержатся сведения об устранении неполадок, возникших при наблюдении за состоянием работоспособности компьютеров в средстве просмотра оповещений и об уведомлениях по электронной почте в Windows Server Essentials.
 
 > [!NOTE]
-> Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
+> Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
 
 ## <a name="troubleshooting-email-notifications-for-alerts"></a>Устранение неполадок при использовании уведомлений электронной почты с оповещениями
 

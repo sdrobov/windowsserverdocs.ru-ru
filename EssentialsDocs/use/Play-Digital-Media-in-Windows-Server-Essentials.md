@@ -7,12 +7,12 @@ ms.assetid: 5f570492-ee21-471b-92c1-3fd9bfb84f55
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c8f490f09f9623aa82b42f2103f2fd3e95537d7d
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.openlocfilehash: 1ce7359929cb1658cc84418231fb7d65efce8692
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409514"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838223"
 ---
 # <a name="play-digital-media-in-windows-server-essentials"></a>Воспроизведение мультимедиа в Windows Server Essentials
 
@@ -182,7 +182,7 @@ ms.locfileid: "87409514"
 
 
 > [!NOTE]
->  Кроме того, можно отправить файлы мультимедиа на сервер, воспользовавшись приложением "Мой сервер" для Windows Phone. Приложение "Мой сервер" можно загрузить из [Магазина Windows Phone](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). Дополнительные сведения о моем серверном приложении для Windows Phone см. в записи блога [мое приложение Server Phone для Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).
+>  Кроме того, можно отправить файлы мультимедиа на сервер, воспользовавшись приложением "Мой сервер" для Windows Phone. Приложение "Мой сервер" можно загрузить из [Магазина Windows Phone](http://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). Дополнительные сведения о моем серверном приложении для Windows Phone см. в записи блога [мое приложение Server Phone для Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials).
 
 #### <a name="to-add-digital-media-files-to-shared-folders-on-the-server"></a>Добавление файлов цифрового мультимедиа в общие папки на сервере
 
@@ -222,7 +222,7 @@ ms.locfileid: "87409514"
   Перед началом фактической загрузки создается файл EXE или ZIP. В зависимости от количества файлов и их общего размера их загрузка может занять несколько минут. После создания загружаемого файла загрузка выполняется в фоновом режиме. Это позволяет продолжить работу во время выполнения загрузки.
 
 ##  <a name="easy-file-upload-tool"></a><a name="BKMK_6"></a>Средство быстрого отправки файлов
- Средство быстрого отправки файлов упрощает процесс отправки файлов на сервер Windows Server Essentials. Можно добавить столько файлов, сколько нужно для простого средства отправки файлов, а затем передать их в общие папки на сервере Windows Server Essentials в одном пакете. Дополнительные сведения см. в записи блога [Общие сведения о совместном использовании папок с помощью удаленного веб-доступа](https://blogs.technet.com/b/sbs/archive/2012/04/19/understanding-remote-web-access-file-sharing.aspx).
+ Средство быстрого отправки файлов упрощает процесс отправки файлов на сервер Windows Server Essentials. Можно добавить столько файлов, сколько нужно для простого средства отправки файлов, а затем передать их в общие папки на сервере Windows Server Essentials в одном пакете. Дополнительные сведения см. в записи блога [Общие сведения о совместном использовании папок с помощью удаленного веб-доступа](/archive/blogs/sbs/understanding-remote-web-access-file-sharing).
 
 ##  <a name="view-and-browse-shared-digital-media"></a><a name="BKMK_7"></a>Просмотр и обзор общих цифровых носителей
  Вы можете просмотреть ресурсы с помощью панели мониторинга, панели запуска, веб-сайта удаленного веб-доступа или приложения "Мой сервер" для Windows Phone.

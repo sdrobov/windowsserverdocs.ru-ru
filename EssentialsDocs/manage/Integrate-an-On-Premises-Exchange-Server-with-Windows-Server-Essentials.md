@@ -7,12 +7,12 @@ ms.assetid: b56a21e2-c9e3-4ba9-97d9-719ea6a0854b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 343bfc1325a065f4c4903732eceba59c769f838f
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: cef547570c58c405ac563a1c2215feda120350f4
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181070"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837883"
 ---
 # <a name="integrate-an-on-premises-exchange-server-with-windows-server-essentials"></a>Интеграция локального сервера Exchange Server с Windows Server Essentials
 
@@ -270,9 +270,9 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 
  Необходимо настроить соединители отправки и получения SMTP для передачи исходящих и входящих электронных сообщений.
 
- Чтобы создать соединитель отправки SMTP, выполните инструкции из статьи о сервере Exchange Server [Создание соединителя отправки SMTP](https://technet.microsoft.com/library/aa997285.aspx).
+ Чтобы создать соединитель отправки SMTP, выполните инструкции из статьи о сервере Exchange Server [Создание соединителя отправки SMTP](/previous-versions/office/exchange-server-2010/aa997285(v=exchg.141)).
 
- Чтобы создать соединитель получения SMTP, выполните инструкции из статьи о сервере Exchange Server [Создание соединителя получения SMTP](https://technet.microsoft.com/library/bb125159.aspx).
+ Чтобы создать соединитель получения SMTP, выполните инструкции из статьи о сервере Exchange Server [Создание соединителя получения SMTP](/previous-versions/office/exchange-server-2010/bb125159(v=exchg.141)).
 
  Также можно воспользоваться инструкциями по созданию соединителей отправки и получения при помощи командлетов Exchange PowerShell, приведенными ранее в этом документе.
 
@@ -347,7 +347,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 6. Скопируйте файл сертификата SSL для Exchange Server на сервер Windows Server Essentials. Файл сертификата должен содержать закрытый ключ и иметь формат PFX.
 
    > [!NOTE]
-   >  Если вы используете самостоятельно выданный сертификат, экспортируйте его, следуя инструкциям из статьи о сервере Exchange Server [Экспорт сертификата Exchange](https://technet.microsoft.com/library/dd351274.aspx) .
+   >  Если вы используете самостоятельно выданный сертификат, экспортируйте его, следуя инструкциям из статьи о сервере Exchange Server [Экспорт сертификата Exchange](/previous-versions/office/exchange-server-2010/dd351274(v=exchg.141)) .
 
 7. В зависимости от используемой версии Windows Server Essentials выполните одно из следующих действий.
 
@@ -419,7 +419,7 @@ New-SendConnector -Name "WSE Internet SendConnector" -Usage "Internet" -AddressS
 > [!NOTE]
 >  Если вы используете ActiveSync, но не можете синхронизировать электронную почту для некоторых учетных записей, определите, являются ли эти учетные записи членами одной или нескольких защищенных групп, таких как "Администраторы домена". Дополнительные сведения, которые могут помочь в решении этой проблемы, см. в статье [Служба Exchange ActiveSync возвратила ошибку HTTP 500](https://technet.microsoft.com/library/dd439375\(EXCHG.80\).aspx).
 
-## <a name="related-topics"></a>Статьи по теме
+## <a name="related-topics"></a>См. также
  Дополнительные сведения об интеграции локального сервера Exchange:
 
 ### <a name="what-happens-if-i-disable-exchange-integration"></a>Что произойдет, если отключить интеграцию Exchange?

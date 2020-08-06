@@ -7,12 +7,12 @@ ms.assetid: 9378bffa-487c-43ca-9ec3-7e7864d2dd9a
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e4f3cf42cdf9343be106660b74041c059fdc7073
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: c59fd121fdf628fc0943214b699599f2f20625b3
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181000"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837833"
 ---
 # <a name="manage-digital-media-in-windows-server-essentials"></a>Управление мультимедиа в Windows Server Essentials
 
@@ -67,7 +67,7 @@ ms.locfileid: "87181000"
 ##  <a name="manage-media-server-using-the-dashboard"></a><a name="BKMK_2"></a>Управление сервером мультимедиа с помощью панели мониторинга
   Windows Server Essentials позволяет выполнять стандартные административные задачи с помощью панели мониторинга Windows Server Essentials. Вкладка **Мультимедиа** на серверной странице **Параметры** панели мониторинга содержит следующее.
 
-|Section|Функциональность|
+|Section|функциональное назначение;|
 |-------------|-------------------|
 |Сервер мультимедиа|Кнопка **Вкл/Выкл** позволяет включать и отключать потоковую передачу мультимедиа.|
 |Качество потокового видео|Стрелка раскрывающегося списка позволяет выбирать качество потокового видео, воспроизводимого с сервера.|
@@ -130,7 +130,7 @@ ms.locfileid: "87181000"
  Администратор сервера может добавлять цифровые носители в общие папки в библиотеке мультимедиа путем прямого доступа к серверу или с помощью удаленного Веб-доступ сайта для входа на панель мониторинга. Другие пользователи могут добавлять файлы мультимедиа на сервер с помощью подключения к **общим папкам** на панели запуска, используя удаленный веб-доступ сайт или с помощью приложения My server для Windows Phone. Дополнительные сведения о воспроизведении мультимедиа см. в статье [Воспроизведение цифровых файлов мультимедиа](../use/Play-Digital-Media-in-Windows-Server-Essentials.md).
 
 > [!NOTE]
->  Кроме того, можно отправить файлы мультимедиа на сервер, воспользовавшись приложением "Мой сервер" для Windows Phone. Приложение "Мой сервер" можно загрузить из [Магазина Windows Phone](https://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). Дополнительные сведения о моем серверном приложении для Windows Phone см. в записи блога [мое приложение Server Phone для Windows Server Essentials](https://blogs.technet.com/b/sbs/archive/2012/09/18/my-server-phone-app-for-windows-server-2012-essentials.aspx).
+>  Кроме того, можно отправить файлы мультимедиа на сервер, воспользовавшись приложением "Мой сервер" для Windows Phone. Приложение "Мой сервер" можно загрузить из [Магазина Windows Phone](https://www.windowsphone.com/store/app/my-server/6c2f98d5-6fcf-4e1d-b8b1-cde62ea1a94a). Дополнительные сведения о моем серверном приложении для Windows Phone см. в записи блога [мое приложение Server Phone для Windows Server Essentials](/archive/blogs/sbs/my-server-phone-app-for-windows-server-2012-essentials).
 
 #### <a name="to-add-digital-media-files-to-shared-folders-on-the-server"></a>Добавление файлов цифрового мультимедиа в общие папки на сервере
 

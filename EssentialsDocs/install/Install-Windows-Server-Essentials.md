@@ -7,12 +7,12 @@ ms.assetid: fdf020cd-3184-4886-9f9d-7d729a89057e
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 5b102c6e018eed77fdd350d13a196c83fc7ac893
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: d96f2fdb8ca69c1889c39bf8d868fc53f484304b
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181200"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837903"
 ---
 # <a name="install-windows-server-essentials"></a>Установка Windows Server Essentials
 
@@ -36,18 +36,18 @@ ms.locfileid: "87181200"
 
 -   [Добавление Windows Server Essentials в качестве рядового сервера](Add-Windows-Server-Essentials-as-a-Member-Server.md)
 
--   [Размещение Windows Server Essentials Experience на виртуальных машинах Microsoft Azure](https://msdn.microsoft.com/library/dn520828.aspx) (MSDN)
+-   [Размещение Windows Server Essentials Experience на виртуальных машинах Microsoft Azure](/previous-versions/azure/dn520828(v=azure.100)) (MSDN)
 
 -   [Настройка и развертывание Windows Server Essentials](Customize-and-Deploy-Windows-Server-Essentials.md)
 
 
 ## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям
 
--    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](https://technet.microsoft.com/library/dn582043.aspx).
+-    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](https://technet.microsoft.com/library/dn629457.aspx).
+-    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).
+-    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

@@ -7,12 +7,12 @@ ms.assetid: a455c6b4-b29f-4f76-8c6b-1578b6537717
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 63f5a72cf070b1520815f8f8f59d9c6ecf386aa5
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 7dd1aa46786a3768127ba7934c8a8767d40e6654
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181260"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838023"
 ---
 # <a name="deploy-windows-server-essentials-experience-as-a-hosted-server"></a>Развертывание режима Windows Server Essentials в качестве размещенного сервера
 
@@ -140,7 +140,7 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 >  Если невозможно предоставить VPN-подключение до того как клиент получит права доступа к серверу, убедитесь в том, что порт сервера 3389 открыт для доступа через Интернет, чтобы клиент смог использовать протокол удаленного доступа к рабочему столу для подключения к серверу и его настройки.
 
 ##  <a name="customize-the-image-of-windows-server-essentials-experience-role"></a><a name="BKMK_CustomizeImage"></a>Настройка образа роли Windows Server Essentials
- Перед настройкой роли Windows Server Essentials Experience можно выполнить настройку ее образа. Дополнительные сведения о стандартном процессе Windows Server Sysprep см. в разделе [Комплект средств для развертывания и оценки Windows](https://msdn.microsoft.com/library/hh825420.aspx). После подготовки образа с помощью средства Sysprep можно его использовать или запаковать в файл Install.wim для последующего развертывания.
+ Перед настройкой роли Windows Server Essentials Experience можно выполнить настройку ее образа. Дополнительные сведения о стандартном процессе Windows Server Sysprep см. в разделе [Комплект средств для развертывания и оценки Windows](/previous-versions/windows/hh825420(v=win.10)). После подготовки образа с помощью средства Sysprep можно его использовать или запаковать в файл Install.wim для последующего развертывания.
 
  При использовании диспетчера виртуальных машин можно создать шаблон на основе запущенного сервера. Для подготовки работающей копии используется Sysprep, который завершает работу компьютера. После сохранения шаблона в библиотеку можно использовать его при необходимости.
 
@@ -160,14 +160,14 @@ Install-WssVpnServer -IPv4AddressRange ('192.168.0.160','192.168.0.240') -ApplyT
 
 - **Повсеместный доступ**. Установка параметров маршрутизатора и VPN будет по умолчанию пропущена при запуске мастера настройки повсеместного доступа.
 
-  Если вам необходимо управлять поведением всех компонентов, вы можете установить для каждого из них соответствующий раздел реестра. Дополнительные сведения о настройке раздела реестра см. в разделе [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).
+  Если вам необходимо управлять поведением всех компонентов, вы можете установить для каждого из них соответствующий раздел реестра. Дополнительные сведения о настройке раздела реестра см. в разделе [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 ##  <a name="automate-the-deployment-of-windows-server-essentials-experience"></a><a name="BKMK_AutomateDeployment"></a>Автоматизируйте развертывание интерфейса Windows Server Essentials
  Чтобы автоматизировать развертывание, необходимо сначала развернуть операционную систему, а затем установить роль Windows Server Essentials Experience.
 
--   Чтобы автоматически развернуть Windows Server 2012 R2 Standard или Windows Server 2012 R2 Datacenter, следуйте инструкциям в [комплекте средств для развертывания и оценки Windows](https://msdn.microsoft.com/library/hh825420.aspx).
+-   Чтобы автоматически развернуть Windows Server 2012 R2 Standard или Windows Server 2012 R2 Datacenter, следуйте инструкциям в [комплекте средств для развертывания и оценки Windows](/previous-versions/windows/hh825420(v=win.10)).
 
--   Сведения об установке роли Windows Server Essentials с помощью Windows PowerShell см. в статье [Установка и настройка Windows Server Essentials](https://technet.microsoft.com/library/dn281793.aspx).
+-   Сведения об установке роли Windows Server Essentials с помощью Windows PowerShell см. в статье [Установка и настройка Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/dn281793(v=ws.11)).
 
 > [!NOTE]
 >  Убедитесь, что параметры часового пояса для виртуальной машины узла и интерфейса Windows Server Essentials совпадают. В противном случае могут возникнуть ошибки, К ним относятся: Начальная конфигурация сервера может не быть успешной в задачах, связанных с сертификатом. После установки роли Windows Server Essentials может не работать этот сертификат в течение нескольких часов, а сведения об устройстве будут обновлены неправильно.
@@ -192,7 +192,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 > - Исходный сервер и целевой сервер могут получить доступ ко всем остальным с внутренним DNS-именам.
 >   -   Все необходимые порты должны быть открыты.
 
- После переноса данных можно обновить лицензию для снятия ограничений и блокировки. Дополнительные сведения см. [в статье переход с Windows Server Essentials на Windows server 2012 Standard](https://technet.microsoft.com/library/jj247582.aspx).
+ После переноса данных можно обновить лицензию для снятия ограничений и блокировки. Дополнительные сведения см. [в статье переход с Windows Server Essentials на Windows server 2012 Standard](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj247582(v=ws.11)).
 
 ##  <a name="perform-common-tasks-by-using-windows-powershell"></a><a name="BKMK_PowerShell"></a>Выполнение общих задач с помощью Windows PowerShell
  В данном разделе описаны некоторые общие задачи, которые можно выполнять с помощью Windows PowerShell.
@@ -231,7 +231,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
  Эта команда добавляет папку сервера с именем Митестфолдер в указанном расположении.
 
 ##  <a name="email-integration-with-windows-server-essentials"></a><a name="BKMK_EmailIntegration"></a>Интеграция электронной почты с Windows Server Essentials
- Вы можете интегрировать интерфейс Windows Server Essentials с Office 365 или размещенным Exchange Server. Если требуется, чтобы клиент использовал услуги размещенной службы электронной почты, необходимо выполнить надстройку для интеграции Windows Server Essentials Experience с размещенной службой электронной почты. Дополнительные сведения см. в статье [Пакет SDK для Windows Server](https://msdn.microsoft.com/library/gg513877.aspx).
+ Вы можете интегрировать интерфейс Windows Server Essentials с Office 365 или размещенным Exchange Server. Если требуется, чтобы клиент использовал услуги размещенной службы электронной почты, необходимо выполнить надстройку для интеграции Windows Server Essentials Experience с размещенной службой электронной почты. Дополнительные сведения см. в статье [Пакет SDK для Windows Server](/previous-versions/windows/server-essentials/gg513877(v=msdn.10)).
 
 ##  <a name="monitor-and-manage-by-using-native-tools"></a><a name="BKMK_Monitoring"></a>Мониторинг и управление с помощью собственных средств
  В этом разделе обсуждаются собственные средства, доступные в Windows Server 2012 R2 для мониторинга сервера и управления им.
@@ -254,7 +254,7 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 -   **Локальная архивация** . Позволяет выполнить регулярную инкрементную архивацию на уровне блока на отдельный диск. В качестве поставщика услуг размещения вы можете подключить виртуальный жесткий диск к виртуальной машине под управлением Windows Server Essentials, а затем настроить архивацию сервера для этого виртуального жесткого диска. Виртуальный жесткий диск должен располагаться на физическом жестком диске, на котором не запущена виртуальная машина под управлением Windows Server Essentials.
 
     > [!NOTE]
-    >  Если у вас имеются другие средства резервного копирования для виртуальных машин и вашим пользователям не требуется стандартная функция архивации данных сервера Windows Server Essentials, вы можете отключить ее и удалить соответствующий пользовательский интерфейс из панели мониторинга. Дополнительные сведения см. в подразделе [Настройка архивации сервера](https://technet.microsoft.com/library/dn293413.aspx) раздела [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).
+    >  Если у вас имеются другие средства резервного копирования для виртуальных машин и вашим пользователям не требуется стандартная функция архивации данных сервера Windows Server Essentials, вы можете отключить ее и удалить соответствующий пользовательский интерфейс из панели мониторинга. Дополнительные сведения см. в подразделе [Настройка архивации сервера](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293413(v=win.10)) раздела [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 -   **Удаленная архивация** . Позволяет регулярно архивировать данные сервера через использование облачной службы. Вы можете скачать и установить модуль интеграции Microsoft Azure Backup для Windows Server Essentials, чтобы использовать Azure Backup, предоставляемый корпорацией Майкрософт.
 
@@ -285,13 +285,13 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 
     -   Изменение порогового значения контрольной точки На клиентском компьютере измените значение **HKLM\Software\Microsoft\Windows Server\Backup\CheckPointThreshold** со значения по умолчанию в 40 ГБ.
 
--   **Восстановление исходного состояния клиентского компьютера** . Поскольку среда предустановки Windows не поддерживает VPN-подключение, восстановление исходного состояния клиентского компьютера невозможно. Чтобы скрыть задачу "Служба восстановления клиента", выполните действия, описанные в разделе [Настройка и развертывание Windows Server Essentials в Windows server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).
+-   **Восстановление исходного состояния клиентского компьютера** . Поскольку среда предустановки Windows не поддерживает VPN-подключение, восстановление исходного состояния клиентского компьютера невозможно. Чтобы скрыть задачу "Служба восстановления клиента", выполните действия, описанные в разделе [Настройка и развертывание Windows Server Essentials в Windows server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 ##### <a name="file-history"></a>История файлов
- История файлов — это функция ОС Windows 8.1 и Windows 8, позволяющая архивировать данные профиля (библиотеки, рабочий стол, контакты, избранное) в общую сетевую папку. Можно централизованно управлять параметрами истории файлов всех компьютеров под управлением Windows 8.1 или Windows 8, подключенных к сети Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Для скрытия задачи службы восстановления данных клиента необходимо выполнить действия, описанные в разделе [Настройка и развертывание Windows Server Essentials на Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).
+ История файлов — это функция ОС Windows 8.1 и Windows 8, позволяющая архивировать данные профиля (библиотеки, рабочий стол, контакты, избранное) в общую сетевую папку. Можно централизованно управлять параметрами истории файлов всех компьютеров под управлением Windows 8.1 или Windows 8, подключенных к сети Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Для скрытия задачи службы восстановления данных клиента необходимо выполнить действия, описанные в разделе [Настройка и развертывание Windows Server Essentials на Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 ### <a name="storage-management"></a>Управление хранением
- Дисковые пространства позволяют объединить физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Можно выполнять это на ведущем узле или на виртуальной машине. Если вы хотите скрыть этот компонент в виртуальной машине под управлением Windows Server Essentials, следуйте инструкциям в разделе [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx).
+ Дисковые пространства позволяют объединить физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Можно выполнять это на ведущем узле или на виртуальной машине. Если вы хотите скрыть этот компонент в виртуальной машине под управлением Windows Server Essentials, следуйте инструкциям в разделе [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10)).
 
 ##  <a name="test-scenarios"></a><a name="BKMK_Scenarios"></a>Сценарии тестирования
  Для успешного размещения рекомендуется провести проверку следующих сценариев:
@@ -369,9 +369,9 @@ New-ItemProperty "HKLM:\Software\Microsoft\Windows Server\Setup"Ã‚Â  -Name 
 ##  <a name="support-information"></a><a name="BKMK_Support"></a>Сведения о поддержке
  Вы можете скачать пакет средств разработки программного обеспечения (SDK) Windows Server Essentials и комплект средств для развертывания и оценки Windows Server Essentials (ADK):
 
--   [Пакет средств разработки программного обеспечения Windows Server Essentials](https://msdn.microsoft.com/library/gg513877.aspx) Tool
+-   [Пакет средств разработки программного обеспечения Windows Server Essentials](/previous-versions/windows/server-essentials/gg513877(v=msdn.10)) Tool
 
--   [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](https://technet.microsoft.com/library/dn293241.aspx)
+-   [Настройка и развертывание Windows Server Essentials в Windows Server 2012 R2](/previous-versions/windows/it-pro/windows-8.1-and-8/dn293241(v=win.10))
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

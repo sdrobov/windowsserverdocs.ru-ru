@@ -7,12 +7,12 @@ ms.assetid: 37e1dae7-586c-4dd7-bf83-7e14a9567c8f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b84372394204353d0410da63d74f785c0e8fd07e
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: eea437a5867a602a84483a41fe129d64425bcb88
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180510"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838443"
 ---
 # <a name="rules-used-by-the-windows-server-essentials-best-practices-analyzer-bpa-tool"></a>Правила, используемые анализатором соответствия рекомендациям (BPA) Windows Server Essentials
 
@@ -525,7 +525,7 @@ ms.locfileid: "87180510"
 
  **Влияние:**  Если администратор создает предупреждение и настраивает оповещение для запуска, когда администратор не вошел в систему, предупреждение завершится с кодом ошибки 2147943785.
 
- **Решение:**  Сведения о том, как предоставить встроенной группе администраторов разрешение на вход в качестве пакетного задания, см. в разделе [предоставление встроенной группе администраторов права на вход в систему в качестве пакетного задания](https://technet.microsoft.com/library/jj635076) ( https://technet.microsoft.com/library/jj635076) .
+ **Решение:**  Сведения о том, как предоставить встроенной группе администраторов разрешение на вход в качестве пакетного задания, см. в разделе [предоставление встроенной группе администраторов права на вход в систему в качестве пакетного задания](/previous-versions/orphan-topics/ws.11/jj635076(v=ws.11)) ( https://technet.microsoft.com/library/jj635076) .
 
 ### <a name="the-windows-firewall-is-turned-off"></a>Брандмауэр Windows отключен
  **Вопрос.**  Брандмауэр Windows отключен. Значение по умолчанию — "Включен".

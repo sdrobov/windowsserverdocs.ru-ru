@@ -7,12 +7,12 @@ ms.assetid: c959b6fc-c67e-46cd-a9cb-cee71a42fa4c
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: a1f568d34fd0fbd94d09046b59a93d21feb60890
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: e24d6ce2e123deb741bcd39dc77f9a893a27df89
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181080"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837913"
 ---
 # <a name="configure-directaccess-in-windows-server-essentials"></a>Настройка DirectAccess в Windows Server Essentials
 
@@ -23,7 +23,7 @@ ms.locfileid: "87181080"
  В Windows Server Essentials, если домен содержит более одного сервера Windows Server Essentials, на контроллере домена необходимо настроить DirectAccess.
 
 > [!NOTE]
->  В этом разделе приводятся инструкции по настройке DirectAccess, когда сервер Windows Server Essentials является контроллером домена. Если сервер Windows Server Essentials является членом домена, следуйте инструкциям по настройке DirectAccess на члене домена в разделе [Добавление DirectAccess в существующее развертывание с помощью удаленного доступа (VPN)](https://technet.microsoft.com/library/jj574220.aspx) .
+>  В этом разделе приводятся инструкции по настройке DirectAccess, когда сервер Windows Server Essentials является контроллером домена. Если сервер Windows Server Essentials является членом домена, следуйте инструкциям по настройке DirectAccess на члене домена в разделе [Добавление DirectAccess в существующее развертывание с помощью удаленного доступа (VPN)](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj574220(v=ws.11)) .
 
 ## <a name="process-overview"></a>Общие сведения о процессе
  Чтобы настроить DirectAccess в Windows Server Essentials, выполните следующие действия.
@@ -207,7 +207,7 @@ ms.locfileid: "87181080"
 1. На панели мониторинга диспетчера серверов щелкните **Сервис** и нажмите **Active Directory — пользователи и компьютеры**.
 
    > [!NOTE]
-   >  Если в меню **Сервис** отсутствует пункт **Active Directory — пользователи и компьютеры**, необходимо установить данный компонент. Для этого необходимо выполнить с правами администратора следующий командлет Windows PowerShell: `Install-WindowsFeature RSAT-ADDS-Tools`. Подробную информацию см. в статье [Установка или удаление средств удаленного администрирования сервера](https://technet.microsoft.com/library/cc730825.aspx).
+   >  Если в меню **Сервис** отсутствует пункт **Active Directory — пользователи и компьютеры**, необходимо установить данный компонент. Для этого необходимо выполнить с правами администратора следующий командлет Windows PowerShell: `Install-WindowsFeature RSAT-ADDS-Tools`. Подробную информацию см. в статье [Установка или удаление средств удаленного администрирования сервера](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc730825(v=ws.11)).
 
 2. В дереве консоли разверните сервер, щелкните правой кнопкой мыши **Пользователи**, нажмите **Создать** и выберите пункт **Группа**.
 

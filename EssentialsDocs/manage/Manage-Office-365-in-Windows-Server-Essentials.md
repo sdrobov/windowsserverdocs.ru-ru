@@ -6,12 +6,12 @@ ms.topic: article
 ms.assetid: 3f8485e4-e10f-4f38-8a5e-d5227abd0d84
 author: nnamuhcs
 ms.author: daveba
-ms.openlocfilehash: 249ff5f77d525792d5bf53719fcf1ee93bc955a4
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 8bae98123ee5c8365304243e9f2487218bb5230f
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180970"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837813"
 ---
 # <a name="manage-office-365-in-windows-server-essentials"></a>Управление Office 365 в Windows Server Essentials
 
@@ -146,7 +146,7 @@ ms.locfileid: "87180970"
 
 1. **Приобретение имени домена.** Вы можете зарегистрировать доменное имя у регистратора доменных имен или у поставщика услуг размещения DNS.
 
-   -   Выберите имя домена, которое работает с Office 365. Вы можете использовать имя домена второго уровня? например, buycontoso.com?, но не имя домена третьего уровня? например, marketing.contoso.com. Дополнительные сведения о выборе домена для использования в Office 365 см. в разделе [домены](https://technet.microsoft.com/library/office-365-domains.aspx).
+   -   Выберите имя домена, которое работает с Office 365. Вы можете использовать имя домена второго уровня? например, buycontoso.com?, но не имя домена третьего уровня? например, marketing.contoso.com. Дополнительные сведения о выборе домена для использования в Office 365 см. в разделе [домены](/office365/servicedescriptions/office-365-platform-service-description/domains).
 
    -   Купите его от регистратора домена, который допускает записи сервера доменных имен (DNS), необходимые для Office 365. Узнать, какие регистраторы доменных имен поддерживают необходимые записи DNS можно в статье [Покупка доменного имени](https://office.microsoft.com/office365-suite-help/how-to-buy-a-domain-name-HA102819883.aspx?CTT=5&origin=HA102818660). Если вы уже зарегистрировали домен с другим регистратором, не беспокойтесь. При связывании домена с Office 365 можно переносить домен в другой регистратор.
 
@@ -184,7 +184,7 @@ ms.locfileid: "87180970"
 
 ### <a name="required-dns-records-for-linking-a-custom-internet-domain-name-to-office-365"></a>Записи DNS, необходимые для привязки настраиваемого доменного имени Интернет к Office 365
 
-|Служба|Необходимые записи DNS|Цель|
+|Служба|Необходимые записи DNS|Назначение|
 |-------------|--------------------------|-------------|
 |(Несколько служб)|MX| В Office 365 Эта запись используется для проверки того, что вы владеете конкретным доменным именем. Данная запись MX не мешает маршрутизации сообщений электронной почты.|
 |Exchange Online|MX|Обеспечивает маршрутизацию сообщений электронной почты. **Важно.**  При переносе электронной почты не присваивайте новой записи MX предпочтение нулю (**0**). Значение записи должно быть выше, чем значение, заданное текущей записи MX. По завершении переноса электронной почты и готовности сменить сервер электронной почты до Office 365, попросите регистратора доменных имен сбросить значение предпочтения новой записи MX.|
@@ -284,9 +284,9 @@ ms.locfileid: "87180970"
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 
--   [Обзор интеграции служб для Windows Server Essentials — часть 1](https://blogs.technet.com/b/sbs/archive/2013/11/04/services-integration-overview-for-windows-server-2012-r2-essentials-part-1.aspx)
+-   [Обзор интеграции служб для Windows Server Essentials — часть 1](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-1)
 
--   [Обзор интеграции служб для Windows Server Essentials — часть 2](https://blogs.technet.com/b/sbs/archive/2013/11/06/services-integration-overview-for-windows-server-2012-r2-essentials-part-2.aspx)
+-   [Обзор интеграции служб для Windows Server Essentials — часть 2](/archive/blogs/sbs/services-integration-overview-for-windows-server-2012-r2-essentials-part-2)
 
 -   [Краткое руководство по использованию Microsoft Office 365](../use/Quick-Start-Guide-to-Using-Microsoft-Office-365-with-Windows-Server-Essentials.md)
 

@@ -7,12 +7,12 @@ ms.assetid: 79a417fd-1b3e-47ab-ae33-bb1faf95c86d
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 05694d772de033a82c6de6feca94621185cb2642
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 37b443a90ebdb2c6042596747f6c364fafe073a7
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181460"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838083"
 ---
 # <a name="change-the-order-and-grouping-of-tabs"></a>Изменение порядка и группировки вкладок
 
@@ -41,7 +41,7 @@ ms.locfileid: "87181460"
 
 6.  Введите идентификатор GUID, который был определен для вкладки верхнего уровня, и нажмите клавишу **ВВОД**.
 
-     Дополнительные сведения о создании и идентификации вкладок верхнего уровня см. в разделе [Создание вкладки верхнего уровня](https://msdn.microsoft.com/library/gg513957) в пакете SDK для решений Windows Server.
+     Дополнительные сведения о создании и идентификации вкладок верхнего уровня см. в разделе [Создание вкладки верхнего уровня](/previous-versions/windows/server-essentials/gg513957(v=msdn.10)) в пакете SDK для решений Windows Server.
 
 7.  Сохраните изменения реестра.
 

@@ -7,19 +7,19 @@ ms.assetid: 2fdbc016-d464-43cb-bd75-8a63e61588a2
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6ebacd42df17d1d1aa840bc77dfdbb23a1ab48e7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 4057e0d6805c7633bf07960d06d97b2eab15f28a
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181490"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838093"
 ---
 # <a name="build-multi-language-client-restore-media"></a>Создание многоязычного носителя для восстановления клиентов
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  Сначала необходимо создать многоязыковой образ Windows, как описано в разделе [Пошаговое руководство. Создание многоязыкового образа Windows](https://technet.microsoft.com/library/jj126995) перед добавлением пакета Лангауаже для Windows Server Essentials в install. wim.
+>  Сначала необходимо создать многоязыковой образ Windows, как описано в разделе [Пошаговое руководство. Создание многоязыкового образа Windows](/previous-versions/windows/it-pro/windows-8.1-and-8/jj126995(v=win.10)) перед добавлением пакета Лангауаже для Windows Server Essentials в install. wim.
 
  При создании многоязычного установочного DVD-диска для сервера языковые пакеты устанавливаются в файл install.wim. сервера. Локализованные ресурсы для мастера восстановления устанавливаются в составе языковых пакетов.
 
@@ -84,7 +84,6 @@ ms.locfileid: "87181490"
     dism /unmount-wim /mountdir:c:\mount /commit
     ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md) [Дополнительные настройки](Additional-Customizations.md) [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md) [Тестирование взаимодействия с пользователем](Testing-the-Customer-Experience.md)
-

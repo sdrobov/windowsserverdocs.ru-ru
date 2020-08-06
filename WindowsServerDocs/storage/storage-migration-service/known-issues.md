@@ -8,12 +8,12 @@ ms.date: 07/29/2020
 ms.topic: article
 ms.prod: windows-server
 ms.technology: storage
-ms.openlocfilehash: 9050d3316ed86538a278dbdc9f2bd51e3dfca377
-ms.sourcegitcommit: 145cf75f89f4e7460e737861b7407b5cee7c6645
+ms.openlocfilehash: c51394b96abbe451b57ab1388cf2d21126959a78
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/29/2020
-ms.locfileid: "87409885"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769712"
 ---
 # <a name="storage-migration-service-known-issues"></a>Известные проблемы со службой миграции хранилища
 
@@ -64,7 +64,9 @@ ms.locfileid: "87409885"
 
 При использовании Windows Admin Center или PowerShell для загрузки подробных сведений об ошибках операций перемещения — только журнал CSV, появляется сообщение об ошибке:
 
- >   Журнал перемещений. Убедитесь, что в брандмауэре разрешен общий доступ к файлам. : Эта операция запроса, отправленная в NET. TCP://localhost: 28940/SMS/Service/1/Send, не получила ответ в течение заданного времени ожидания (00:01:00). Возможно, выделенное для этой операции время было частью более длительного времени ожидания. Это может быть связано с тем, что служба продолжает обрабатывать операцию, или что службе не удалось отправить ответное сообщение. Попробуйте увеличить время ожидания операции (путем приведения канала или прокси-сервера к адрес IContextChannel и установки свойства OperationTimeout) и убедитесь, что служба может подключиться к клиенту.
+```
+Transfer Log - Please check file sharing is allowed in your firewall. : This request operation sent to net.tcp://localhost:28940/sms/service/1/transfer did not receive a reply within the configured timeout (00:01:00). The time allotted to this operation may have been a portion of a longer timeout. This may be because the service is still processing the operation or because the service was unable to send a reply message. Please consider increasing the operation timeout (by casting the channel/proxy to IContextChannel and setting the OperationTimeout property) and ensure that the service is able to connect to the client.
+```
 
 Эта проблема вызвана очень большим количеством переданных файлов, которые не могут быть отфильтрованы по умолчанию в течение минуты времени ожидания, разрешенного службой миграции хранилища.
 
@@ -72,25 +74,33 @@ ms.locfileid: "87409885"
 
 1. На компьютере Orchestrator измените файл *% systemroot% \SMS\Microsoft.StorageMigration.Service.exe.config* с помощью Notepad.exe, чтобы изменить значение "SendTimeout" с 1 минуты по умолчанию на 10 минут.
 
-   ```
-     <bindings>
+    ```
+    <bindings>
       <netTcpBinding>
         <binding name="NetTcpBindingSms"
                  sendTimeout="00:01:00"
-   ```
+    ```
 
 2. Перезапустите службу "Служба миграции хранилища" на компьютере Orchestrator.
+
 3. На компьютере Orchestrator запустите Regedit.exe
+
 4. Найдите и выберите следующий подраздел реестра.
 
-   `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
+    `HKEY_LOCAL_MACHINE\Software\Microsoft\SMSPowershell`
 
 5. В меню "Правка" выберите пункт "Создать", а затем выберите "Значение DWORD".
+
 6. Введите "Вкфоператионтимеаутинминутес" в качестве имени DWORD и нажмите клавишу ВВОД.
+
 7. Щелкните правой кнопкой мыши "Вкфоператионтимеаутинминутес" и выберите команду "Изменить".
+
 8. В поле Базовые данные щелкните "десятичное число"
+
 9. В поле данные значения введите "10", а затем нажмите кнопку ОК.
+
 10. Закройте редактор реестра.
+
 11. Попытайтесь снова скачать CSV-файл с ошибками.
 
 Мы планируем изменить это поведение в более позднем выпуске Windows Server 2019.
@@ -99,10 +109,12 @@ ms.locfileid: "87409885"
 
 При проверке задания перемещения отображаются следующие предупреждения.
 
- > **Учетные данные имеют права администратора.**
- > Предупреждение: действие удаленно недоступно.
- > **Целевой прокси-сервер зарегистрирован.**
- > Предупреждение: целевой прокси-сервер не найден.
+```
+The credential has administrative privileges.
+Warning: Action isn't available remotely.
+The destination proxy is registered.
+Warning: The destination proxy wasn't found.
+```
 
 Если вы не установили прокси-службу службы миграции хранилища на конечный компьютер с Windows Server 2019, или на целевом компьютере установлена ОС Windows Server 2016 или Windows Server 2012 R2, это поведение предназначено для разработки. Мы рекомендуем перейти на компьютер под Windows Server 2019 с установленным прокси-сервером, чтобы значительно повысить производительность переноса.
 
@@ -110,25 +122,27 @@ ms.locfileid: "87409885"
 
 При инвентаризации или передаче файлов из источника на конечные компьютеры файлы, из которых пользователь удалил разрешения группы администраторов, не смогут выполнить миграцию. Проверка службы миграции хранилища — Отладка прокси показывает:
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          2/26/2019 9:00:04 AM
-    Event ID:      10000
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      srv1.contoso.com
-    Description:
+```
+Log Name: Microsoft-Windows-StorageMigrationService-Proxy/Debug
+Source: Microsoft-Windows-StorageMigrationService-Proxy
+Date: 2/26/2019 9:00:04 AM
+Event ID: 10000
+Task Category: None
+Level: Error
+Keywords:
+User: NETWORK SERVICE
+Computer: srv1.contoso.com
+Description:
 
-    02/26/2019-09:00:04.860 [Error] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
-    Stack Trace:
-     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.OpenFile(String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes)
-     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(String path)
-     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(FileInfo file)
-     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.InitializeSourceFileInfo()
+02/26/2019-09:00:04.860 [Error] Transfer error for \\srv1.contoso.com\public\indy.png: (5) Access is denied.
+Stack Trace:
+at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.OpenFile(String fileName, DesiredAccess desiredAccess, ShareMode shareMode, CreationDisposition creationDisposition, FlagsAndAttributes flagsAndAttributes)
+at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(String path)
+at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetTargetFile(FileInfo file)
+at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.InitializeSourceFileInfo()
      at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.Transfer()
-     at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()
+at Microsoft.StorageMigration.Proxy.Service.Transfer.FileTransfer.TryTransfer()
+```
 
 Эта проблема вызвана дефектом кода в службе миграции хранилища, в котором не были вызваны права на резервное копирование.
 
@@ -138,17 +152,22 @@ ms.locfileid: "87409885"
 
 При использовании службы миграции хранилища для переноса файлов в новое место назначения и последующей настройки репликация DFS для репликации этих данных с помощью существующего сервера через предварительно заполненную репликацию или репликация DFS клонирование базы данных все файлы будут испытывать несоответствие хэша и повторно реплицироваться. Все потоки данных, потоки безопасности, размеры и атрибуты вполне соответствуют друг другу после использования службы миграции хранилища для их переноса. При проверке файлов с помощью ICACLS или репликация DFS журнала отладки клонирования базы данных выясняется:
 
-"Source file" (Исходный файл).
+```
+Source file:
 
-  icacls Д:\тест\саурце:
+  icacls d:\test\Source:
 
-  icacls d:\test\thatcher.png/Save out.txt/t thatcher.png Д:АИ (A;; ОС;;; BA) (A;; 0 x1200a9;;;D D) (A;; 0 x1301bf;;;D U) (A; ИДЕНТИФИКАТОР; ОС;;; BA) (A; ИДЕНТИФИКАТОР; ОС;;; SY) (A; ID; 0x1200a9;;; BU
+  icacls d:\test\thatcher.png /save out.txt /t
+  thatcher.png
+  D:AI(A;;FA;;;BA)(A;;0x1200a9;;;DD)(A;;0x1301bf;;;DU)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)
 
-Конечный файл:
+Destination file:
 
-  icacls d:\test\thatcher.png/Save out.txt/t thatcher.png Д:АИ (A;; ОС;;; BA) (A;; 0 x1301bf;;;D U) (A;; 0 x1200a9;;;D D) (A; ИДЕНТИФИКАТОР; ОС;;; BA) (A; ИДЕНТИФИКАТОР; ОС;;; SY) (A; ID; 0x1200a9;;; BU)**S: PAINO_ACCESS_CONTROL**
+  icacls d:\test\thatcher.png /save out.txt /t
+  thatcher.png
+  D:AI(A;;FA;;;BA)(A;;0x1301bf;;;DU)(A;;0x1200a9;;;DD)(A;ID;FA;;;BA)(A;ID;FA;;;SY)(A;ID;0x1200a9;;;BU)**S:PAINO_ACCESS_CONTROL**
 
-Журнал отладки DFSR:
+DFSR Debug Log:
 
     20190308 10:18:53.116 3948 DBCL  4045 [WARN] DBClone::IDTableImportUpdate Mismatch record was found.
 
@@ -163,6 +182,7 @@ ms.locfileid: "87409885"
     FileSizeLow:1131654
     FileSizeHigh:0
     Attributes:32
+```
 
 Эта проблема устранена с помощью обновления [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534)
 
@@ -170,8 +190,10 @@ ms.locfileid: "87409885"
 
 При попытке передачи данных с исходного компьютера Windows Server 2008 R2 передача данных не происходит и возникает ошибка:
 
-    Couldn't transfer storage on any of the endpoints.
-    0x9044
+```
+Couldn't transfer storage on any of the endpoints.
+0x9044
+```
 
 Эта ошибка возникает, если на компьютере под Windows Server 2008 R2 не установлено полное обновление со всеми критически важными и важными обновлениями Центр обновления Windows. Независимо от службы миграции хранилища, мы всегда рекомендуем установить исправление для безопасности компьютера под управлением Windows Server 2008 R2, так как эта операционная система не содержит улучшений безопасности более новых версий Windows Server.
 
@@ -179,30 +201,38 @@ ms.locfileid: "87409885"
 
 При попытке переместить данные с исходного компьютера некоторые или все общие папки не передаются, со сводной ошибкой:
 
-    Couldn't transfer storage on any of the endpoints.
-    0x9044
+```
+Couldn't transfer storage on any of the endpoints.
+0x9044
+```
 
 При проверке сведений о переносе SMB отображается ошибка:
 
-    Check if the source device is online - we couldn't access it.
+```
+Check if the source device is online - we couldn't access it.
+```
 
 Просмотр журнала событий Сторажемигратионсервице/Admin показывает:
 
-    Couldn't transfer storage.
+```
+Couldn't transfer storage.
 
-    Job: Job1
-    ID:
-    State: Failed
-    Error: 36931
-    Error Message:
+Job: Job1
+ID:
+State: Failed
+Error: 36931
+Error Message:
 
-   Руководство. Проверьте подробные сведения об ошибке и убедитесь, что выполнены требования к переносу. Заданию перемещения не удалось переместить исходные и конечные компьютеры. Это может быть вызвано тем, что компьютеру Orchestrator не удалось достичь доступа к исходным или конечным компьютерам, возможно, из-за правила брандмауэра или отсутствия разрешений.
+Guidance: Check the detailed error and make sure the transfer requirements are met. The transfer job couldn't transfer any source and destination computers. This could be because the orchestrator computer couldn't reach any source or destination computers, possibly due to a firewall rule, or missing permissions.
+```
 
 При проверке журнала Сторажемигратионсервице-proxy/Debug отображаются следующие сведения:
 
-    07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
-    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
-    at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
+```
+07/02/2019-13:35:57.231 [Error] Transfer validation failed. ErrorCode: 40961, Source endpoint is not reachable, or doesn't exist, or source credentials are invalid, or authenticated user doesn't have sufficient permissions to access it.
+at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferOperation.Validate()
+at Microsoft.StorageMigration.Proxy.Service.Transfer.TransferRequestHandler.ProcessRequest(FileTransferRequest fileTransferRequest, Guid operationId)
+```
 
 Это был дефект кода, который был бы манифестом, если у учетной записи миграции нет разрешений по крайней мере на чтение для общих ресурсов SMB. Эта проблема была впервые исправлена в накопительном обновлении [4520062](https://support.microsoft.com/help/4520062/windows-10-update-kb4520062).
 
@@ -210,55 +240,57 @@ ms.locfileid: "87409885"
 
 После установки [KB4512534](https://support.microsoft.com/help/4512534/windows-10-update-kb4512534) и попытки запустить инвентаризацию происходит сбой инвентаризации с ошибками:
 
-    EXCEPTION FROM HRESULT: 0x80005000
+```
+EXCEPTION FROM HRESULT: 0x80005000
 
-    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
-    Source:        Microsoft-Windows-StorageMigrationService
-    Date:          9/9/2019 5:21:42 PM
-    Event ID:      2503
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      FS02.TailwindTraders.net
-    Description:
-    Couldn't inventory the computers.
-    Job: foo2
-    ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
-    State: Failed
-    Error: 36934
-    Error Message: Inventory failed for all devices
-    Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          9/9/2019 5:21:42 PM
+Event ID:      2503
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      FS02.TailwindTraders.net
+Description:
+Couldn't inventory the computers.
+Job: foo2
+ID: 20ac3f75-4945-41d1-9a79-d11dbb57798b
+State: Failed
+Error: 36934
+Error Message: Inventory failed for all devices
+Guidance: Check the detailed error and make sure the inventory requirements are met. The job couldn't inventory any of the specified source computers. This could be because the orchestrator computer couldn't reach it over the network, possibly due to a firewall rule or missing permissions.
 
-    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
-    Source:        Microsoft-Windows-StorageMigrationService
-    Date:          9/9/2019 5:21:42 PM
-    Event ID:      2509
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      FS02.TailwindTraders.net
-    Description:
-    Couldn't inventory a computer.
-    Job: foo2
-    Computer: FS01.TailwindTraders.net
-    State: Failed
-    Error: -2147463168
-    Error Message:
-    Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          9/9/2019 5:21:42 PM
+Event ID:      2509
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      FS02.TailwindTraders.net
+Description:
+Couldn't inventory a computer.
+Job: foo2
+Computer: FS01.TailwindTraders.net
+State: Failed
+Error: -2147463168
+Error Message:
+Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          2/14/2020 1:18:21 PM
-    Event ID:      10000
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      2019-rtm-orc.ned.contoso.com
-    Description:
-    02/14/2020-13:18:21.097 [Erro] Failed device discovery stage SystemInfo with error: (0x80005000) Unknown error (0x80005000)
+Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+Source:        Microsoft-Windows-StorageMigrationService-Proxy
+Date:          2/14/2020 1:18:21 PM
+Event ID:      10000
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      2019-rtm-orc.ned.contoso.com
+Description:
+02/14/2020-13:18:21.097 [Erro] Failed device discovery stage SystemInfo with error: (0x80005000) Unknown error (0x80005000)
+```
 
 Эта ошибка вызвана дефектом кода в службе миграции хранилища при предоставлении учетных данных миграции в виде имени участника-пользователя (UPN), например " meghan@contoso.com ". Службе Orchestrator Migration Service не удается правильно проанализировать этот формат, что приводит к сбою уточняющего запроса домена, добавленного для поддержки миграции кластера в KB4512534 и 19H1.
 
@@ -268,9 +300,11 @@ ms.locfileid: "87409885"
 
 При попытке перемещения данных на кластеризованный файловый сервер появляются следующие ошибки:
 
-    Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
-    0x9006
-    ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+```
+Make sure the proxy service is installed and running, and then try again. The proxy isn't currently available.
+0x9006
+ServiceError0x9006,Microsoft.StorageMigration.Commands.UnregisterSmsProxyCommand
+```
 
 Эта ошибка возникает, если ресурс файлового сервера перемещен с исходного узла владельца кластера Windows Server 2019 на новый узел, а функция прокси-сервера службы миграции хранилища не установлена на этом узле.
 
@@ -288,8 +322,10 @@ ms.locfileid: "87409885"
 
 При попытке выполнить инвентаризацию с помощью службы миграции хранилища и нацеливания на общий источник файлового сервера отказоустойчивого кластера Windows Server появляется следующее сообщение об ошибке:
 
-    DLL not found
-    [Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+```
+DLL not found
+[Error] Failed device discovery stage VolumeInfo with error: (0x80131524) Unable to load DLL 'Microsoft.FailoverClusters.FrameworkSupport.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)
+```
 
 Чтобы обойти эту ошибку, установите "средства управления отказоустойчивыми кластерами" (RSAT-Cluster-Management) на сервере, на котором выполняется служба миграции хранилища Orchestrator.
 
@@ -297,7 +333,9 @@ ms.locfileid: "87409885"
 
 При попытке запустить инвентаризацию с помощью службы миграции хранилища Orchestrator на исходном компьютере Windows Server 2003 появляется следующее сообщение об ошибке:
 
-    There are no more endpoints available from the endpoint mapper
+```
+There are no more endpoints available from the endpoint mapper
+```
 
 Эта проблема решена с помощью обновления [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818) .
 
@@ -305,7 +343,7 @@ ms.locfileid: "87409885"
 
 Удаление накопительных обновлений Windows Server может препятствовать запуску службы миграции хранилища. Чтобы устранить эту проблему, можно создать резервную копию и удалить базу данных службы миграции хранилища:
 
-1.  Откройте командную строку с повышенными привилегиями, в которой вы являетесь членом группы администраторов на сервере Orchestrator службы миграции хранилища, и выполните следующую команду:
+1. Откройте командную строку с повышенными привилегиями, в которой вы являетесь членом группы администраторов на сервере Orchestrator службы миграции хранилища, и выполните следующую команду:
 
      ```
      TAKEOWN /d y /a /r /f c:\ProgramData\Microsoft\StorageMigrationService
@@ -323,25 +361,27 @@ ms.locfileid: "87409885"
      ICACLS c:\ProgramData\Microsoft\StorageMigrationService /GRANT networkservice:(GA) /T /C
      ```
 
-2.  Запустите службу миграции хранилища, которая создаст новую базу данных.
+2. Запустите службу миграции хранилища, которая создаст новую базу данных.
 
 ## <a name="error-clusctl_resource_netname_repair_vco-failed-against-netname-resource-and-windows-server-2008-r2-cluster-cutover-fails"></a>Ошибка "сбой CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO для ресурса netName" и кластера Windows Server 2008 R2, сбой прямую миграцию
 
 При попытке выполнить операцию вырезания источника кластера Windows Server 2008 R2 на этапе "Переименование исходного компьютера" зависает. появится следующая ошибка:
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          10/17/2019 6:44:48 PM
-    Event ID:      10000
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      WIN-RNS0D0PMPJH.contoso.com
-    Description:
-    10/17/2019-18:44:48.727 [Erro] Exception error: 0x1. Message: Control code CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource 2008r2FS., stackTrace:    at Microsoft.FailoverClusters.Framework.ClusterUtils.NetnameRepairVCO(SafeClusterResourceHandle netNameResourceHandle, String netName)
-       at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
-       at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
+```
+Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+Source:        Microsoft-Windows-StorageMigrationService-Proxy
+Date:          10/17/2019 6:44:48 PM
+Event ID:      10000
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      WIN-RNS0D0PMPJH.contoso.com
+Description:
+10/17/2019-18:44:48.727 [Erro] Exception error: 0x1. Message: Control code CLUSCTL_RESOURCE_NETNAME_REPAIR_VCO failed against netName resource 2008r2FS., stackTrace:    at Microsoft.FailoverClusters.Framework.ClusterUtils.NetnameRepairVCO(SafeClusterResourceHandle netNameResourceHandle, String netName)
+at Microsoft.FailoverClusters.Framework.ClusterUtils.RenameFSNetName(SafeClusterHandle ClusterHandle, String clusterName, String FsResourceId, String NetNameResourceId, String newDnsName, CancellationToken ct)
+at Microsoft.StorageMigration.Proxy.Cutover.CutoverUtils.RenameFSNetName(NetworkCredential networkCredential, Boolean isLocal, String clusterName, String fsResourceId, String nnResourceId, String newDnsName, CancellationToken ct)    [d:\os\src\base\dms\proxy\cutover\cutoverproxy\CutoverUtils.cs::RenameFSNetName::1510]
+```
 
 Эта проблема вызвана отсутствием API в более ранних версиях Windows Server. В настоящее время невозможно перенести кластеры Windows Server 2008 и Windows Server 2003. Вы можете выполнять инвентаризацию и перенос без проблем в кластерах Windows Server 2008 R2, а затем вручную выполнять прямую миграцию путем изменения имени и IP-адреса ресурса исходного файлового сервера кластера вручную, а затем изменяя NetName конечного кластера и IP-адрес в соответствии с исходным источником.
 
@@ -349,26 +389,28 @@ ms.locfileid: "87409885"
 
 При попытке выполнить вырезание с исходного компьютера с установленным исходным компьютером на использование нового статического (не DHCP) IP-адреса в одном или нескольких сетевых интерфейсах на этапе «вырезание на уровне "38% сопоставлений сетевых интерфейсов на исходном компьютере" зависает. в журнале событий службы миграции хранилища появится следующая ошибка:
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          11/13/2019 3:47:06 PM
-    Event ID:      20494
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      orc2019-rtm.corp.contoso.com
-    Description:
-    Couldn't set the IP address on the network adapter.
+```
+Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
+Source:        Microsoft-Windows-StorageMigrationService-Proxy
+Date:          11/13/2019 3:47:06 PM
+Event ID:      20494
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      orc2019-rtm.corp.contoso.com
+Description:
+Couldn't set the IP address on the network adapter.
 
-    Computer: fs12.corp.contoso.com
-    Adapter: microsoft hyper-v network adapter
-    IP address: 10.0.0.99
-    Network mask: 16
-    Error: 40970
-    Error Message: Unknown error (0xa00a)
+Computer: fs12.corp.contoso.com
+Adapter: microsoft hyper-v network adapter
+IP address: 10.0.0.99
+Network mask: 16
+Error: 40970
+Error Message: Unknown error (0xa00a)
 
-    Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+```
 
 Проверка исходного компьютера показывает, что исходный IP-адрес не меняется.
 
@@ -391,31 +433,36 @@ ms.locfileid: "87409885"
 После запуска перемещения с контроллера домена или на него выполните следующие действия.
 
  1. Данные не переносятся, и в месте назначения не создаются общие папки.
+
  2. В центре администрирования Windows отображается красный символ ошибки без сообщения об ошибке
+
  3. Для одного или нескольких пользователей AD и локальных групп домена изменилось имя и (или) пред-Windows 2000 атрибут входа
+
  4. Вы увидите событие 3509 в службе миграции хранилища Orchestrator:
 
-        Log Name:      Microsoft-Windows-StorageMigrationService/Admin
-        Source:        Microsoft-Windows-StorageMigrationService
-        Date:          1/10/2020 2:53:48 PM
-        Event ID:      3509
-        Task Category: None
-        Level:         Error
-        Keywords:
-        User:          NETWORK SERVICE
-        Computer:      orc2019-rtm.corp.contoso.com
-        Description:
-        Couldn't transfer storage for a computer.
+    ```
+    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+    Source:        Microsoft-Windows-StorageMigrationService
+    Date:          1/10/2020 2:53:48 PM
+    Event ID:      3509
+    Task Category: None
+    Level:         Error
+    Keywords:
+    User:          NETWORK SERVICE
+    Computer:      orc2019-rtm.corp.contoso.com
+    Description:
+    Couldn't transfer storage for a computer.
 
-        Job: dctest3
-        Computer: dc02-2019.corp.contoso.com
-        Destination Computer: dc03-2019.corp.contoso.com
-        State: Failed
-        Error: 53251
-        Error Message: Local accounts migration failed with error System.Exception: -2147467259
-           at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
+    Job: dctest3
+    Computer: dc02-2019.corp.contoso.com
+    Destination Computer: dc03-2019.corp.contoso.com
+    State: Failed
+    Error: 53251
+    Error Message: Local accounts migration failed with error System.Exception: -2147467259
+        at Microsoft.StorageMigration.Service.DeviceHelper.MigrateSecurity(IDeviceRecord sourceDeviceRecord, IDeviceRecord destinationDeviceRecord, TransferConfiguration config, Guid proxyId, CancellationToken cancelToken)
+    ```
 
-Это ожидаемое поведение, если вы попытались выполнить миграцию из или в контроллер домена с помощью службы миграции хранилища и использовали параметр "Миграция пользователей и групп" для переименования или повторного использования учетных записей. Вместо выбора параметра "не передавать пользователей и группы". Миграция контроллера домена [не поддерживается при использовании службы миграции хранилища](faq.md). Так как контроллер домена не имеет локальных пользователей и групп, служба миграции хранилища обрабатывает эти субъекты безопасности так, как если бы они переводились между двумя рядовыми серверами и пытаются настроить списки управления доступом, что приведет к ошибкам, а также искаженным или скопированным учетным записям.
+    Это ожидаемое поведение, если вы попытались выполнить миграцию из или в контроллер домена с помощью службы миграции хранилища и использовали параметр "Миграция пользователей и групп" для переименования или повторного использования учетных записей. Вместо выбора параметра "не передавать пользователей и группы". Миграция контроллера домена [не поддерживается при использовании службы миграции хранилища](faq.md). Так как контроллер домена не имеет локальных пользователей и групп, служба миграции хранилища обрабатывает эти субъекты безопасности так, как если бы они переводились между двумя рядовыми серверами и пытаются настроить списки управления доступом, что приведет к ошибкам, а также искаженным или скопированным учетным записям.
 
 Если вы уже выполнили перемещение один или несколько раз:
 
@@ -426,62 +473,66 @@ ms.locfileid: "87409885"
     ```
 
  2. Для всех пользователей, возвращенных с их исходным именем, измените их имя для входа в систему (пред-Windows 2000), чтобы удалить суффикс случайных символов, добавленный службой миграции хранилища, чтобы он мог войти в систему.
+
  3. Для всех групп, возвращенных с их исходным именем, измените их имя группы (пред-Windows 2000), чтобы удалить суффикс случайных символов, добавленный службой миграции хранилища.
+
  4. Для всех отключенных пользователей или групп с именами, которые теперь содержат суффикс, добавленный службой миграции хранилища, эти учетные записи можно удалить. Вы можете подтвердить, что учетные записи пользователей были добавлены позже, так как они будут содержать только группу "Пользователи домена" и будут иметь созданную дату и время, соответствующие времени начала переноса службы миграции хранилища.
 
- Если вы хотите использовать службу миграции хранилища с контроллерами домена для целей переноса, убедитесь, что на странице Параметры переноса в центре администрирования Windows всегда выбран параметр "не передавать пользователей и группы".
+    Если вы хотите использовать службу миграции хранилища с контроллерами домена для целей переноса, убедитесь, что на странице Параметры переноса в центре администрирования Windows всегда выбран параметр "не передавать пользователей и группы".
 
 ## <a name="error-53-failed-to-inventory-all-specified-devices-when-running-inventory"></a>Ошибка 53, "не удалось выполнить инвентаризацию всех указанных устройств" при выполнении инвентаризации,
 
 При попытке запустить инвентаризацию вы получаете следующее:
 
-    Failed to inventory all specified devices
+```
+Failed to inventory all specified devices
 
-    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
-    Source:        Microsoft-Windows-StorageMigrationService
-    Date:          1/16/2020 8:31:17 AM
-    Event ID:      2516
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      ned.corp.contoso.com
-    Description:
-    Couldn't inventory files on the specified endpoint.
-    Job: ned1
-    Computer: ned.corp.contoso.com
-    Endpoint: hithere
-    State: Failed
-    File Count: 0
-    File Size in KB: 0
-    Error: 53
-    Error Message: Endpoint scan failed
-    Guidance: Check the detailed error and make sure the inventory requirements are met. This could be because of missing permissions on the source computer.
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          1/16/2020 8:31:17 AM
+Event ID:      2516
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      ned.corp.contoso.com
+Description:
+Couldn't inventory files on the specified endpoint.
+Job: ned1
+Computer: ned.corp.contoso.com
+Endpoint: hithere
+State: Failed
+File Count: 0
+File Size in KB: 0
+Error: 53
+Error Message: Endpoint scan failed
+Guidance: Check the detailed error and make sure the inventory requirements are met. This could be because of missing permissions on the source computer.
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          1/16/2020 8:31:17 AM
-    Event ID:      10004
-    Task Category: None
-    Level:         Critical
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      ned.corp.contoso.com
-    Description:
-    01/16/2020-08:31:17.031 [Crit] Consumer Task failed with error:The network path was not found.
-    . StackTrace=   at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
-       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
-       at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetEnvironmentPathFolders(String ServerName, Boolean IsServerLocal)
-       at Microsoft.StorageMigration.Proxy.Service.Discovery.ScanUtils.<ScanSMBEndpoint>d__3.MoveNext()
-       at Microsoft.StorageMigration.Proxy.EndpointScanOperation.Run()
-       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(EndpointScanRequest scanRequest, Guid operationId)
-       at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(Object request)
-       at Microsoft.StorageMigration.Proxy.Common.ProducerConsumerManager`3.Consume(CancellationToken token)
+Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Debug
+Source:        Microsoft-Windows-StorageMigrationService-Proxy
+Date:          1/16/2020 8:31:17 AM
+Event ID:      10004
+Task Category: None
+Level:         Critical
+Keywords:
+User:          NETWORK SERVICE
+Computer:      ned.corp.contoso.com
+Description:
+01/16/2020-08:31:17.031 [Crit] Consumer Task failed with error:The network path was not found.
+. StackTrace=   at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+    at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+    at Microsoft.StorageMigration.Proxy.Service.Transfer.FileDirUtils.GetEnvironmentPathFolders(String ServerName, Boolean IsServerLocal)
+    at Microsoft.StorageMigration.Proxy.Service.Discovery.ScanUtils.<ScanSMBEndpoint>d__3.MoveNext()
+    at Microsoft.StorageMigration.Proxy.EndpointScanOperation.Run()
+    at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(EndpointScanRequest scanRequest, Guid operationId)
+    at Microsoft.StorageMigration.Proxy.Service.Discovery.EndpointScanRequestHandler.ProcessRequest(Object request)
+    at Microsoft.StorageMigration.Proxy.Common.ProducerConsumerManager`3.Consume(CancellationToken token)
 
-    01/16/2020-08:31:10.015 [Erro] Endpoint Scan failed. Error: (53) The network path was not found.
-    Stack trace:
-       at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
-       at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+01/16/2020-08:31:10.015 [Erro] Endpoint Scan failed. Error: (53) The network path was not found.
+Stack trace:
+    at Microsoft.Win32.RegistryKey.Win32ErrorStatic(Int32 errorCode, String str)
+    at Microsoft.Win32.RegistryKey.OpenRemoteBaseKey(RegistryHive hKey, String machineName, RegistryView view)
+```
 
 На этом этапе служба миграции хранилища пытается выполнить удаленный доступ к реестру для определения конфигурации исходного компьютера, но она отклоняется исходным сервером, сообщающим, что путь реестра не существует. Для этого могут быть следующие причины:
 
@@ -494,33 +545,34 @@ ms.locfileid: "87409885"
 
 При попытке выполнить вырезание с исходного компьютера повышена блокировка на этапе "38% сопоставления сетевых интерфейсов на исходном компьютере..." в журнале событий службы миграции хранилища появится следующая ошибка:
 
-    Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
-    Source:        Microsoft-Windows-StorageMigrationService-Proxy
-    Date:          1/11/2020 8:51:14 AM
-    Event ID:      20505
-    Task Category: None
-    Level:         Error
-    Keywords:
-    User:          NETWORK SERVICE
-    Computer:      nedwardo.contosocom
-    Description:
-    Couldn't establish a CIM session with the computer.
+```
+Log Name:      Microsoft-Windows-StorageMigrationService-Proxy/Admin
+Source:        Microsoft-Windows-StorageMigrationService-Proxy
+Date:          1/11/2020 8:51:14 AM
+Event ID:      20505
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      nedwardo.contosocom
+Description:
+Couldn't establish a CIM session with the computer.
 
-    Computer: 172.16.10.37
-    User Name: nedwardo\MsftSmsStorMigratSvc
-    Error: 40970
-    Error Message: Unknown error (0xa00a)
+Computer: 172.16.10.37
+User Name: nedwardo\MsftSmsStorMigratSvc
+Error: 40970
+Error Message: Unknown error (0xa00a)
 
-    Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+Guidance: Confirm that the Netlogon service on the computer is reachable through RPC and that the credentials provided are correct.
+```
 
-Эта проблема вызвана групповая политика, которая устанавливает следующее значение реестра на исходном компьютере:
-
- "HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс\куррентверсион\полиЦиес\систем LocalAccountTokenFilterPolicy = 0"
+Эта проблема вызвана групповая политика, которая устанавливает следующее значение реестра на исходном компьютере: "HKEY_LOCAL_MACHINE \Софтваре\микрософт\виндовс\куррентверсион\полиЦиес\систем\локалаккаунттокенфилтерполици = 0"
 
 Этот параметр не является частью стандартного групповая политика. это надстройка, настроенная с помощью [набора средств обеспечения соответствия требованиям корпорации Майкрософт](https://www.microsoft.com/download/details.aspx?id=55319):
 
- - Windows Server 2012 R2: "компьютер \ конфигурация Темплатес\скм: передайте хэш-Митигатионс\аппли ограничения UAC в локальные учетные записи при входе в сеть"
- - Не закладывает сервер 2016: "компьютер \ конфигурация Темплатес\мс безопасность Гуиде\аппли UAC ограничения для локальных учетных записей при входе в сеть"
+- Windows Server 2012 R2: "компьютер \ конфигурация Темплатес\скм: передайте хэш-Митигатионс\аппли ограничения UAC в локальные учетные записи при входе в сеть"
+
+- Не закладывает сервер 2016: "компьютер \ конфигурация Темплатес\мс безопасность Гуиде\аппли UAC ограничения для локальных учетных записей при входе в сеть"
 
 Его также можно задать с помощью параметров групповая политика с пользовательским параметром реестра. С помощью средства GPRESULT можно определить, какая политика применяет этот параметр к исходному компьютеру.
 
@@ -536,56 +588,59 @@ ms.locfileid: "87409885"
 
 При попытке запуска инвентаризации или переноса с помощью службы миграции хранилища и нацеливания на Windows Server с использованием учетных данных миграции из домена, который не является целевым сервером, вы получаете одну или несколько следующих ошибок.
 
-    Exception from HRESULT:0x80131505
+```
+Exception from HRESULT:0x80131505
 
-    The server was unable to process the request due to an internal error
+The server was unable to process the request due to an internal error
 
-    04/28/2020-11:31:01.169 [Error] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+04/28/2020-11:31:01.169 [Error] Failed device discovery stage SystemInfo with error: (0x490) Could not find computer object 'myserver' in Active Directory    [d:\os\src\base\dms\proxy\discovery\discoveryproxy\DeviceDiscoveryOperation.cs::TryStage::1042]
+```
 
 Анализ журналов дополнительно показывает, что учетная запись миграции и сервер, на котором выполняется миграция, находятся в разных доменах:
 
-    ```
-    06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned    
-    [d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
-    ```
-    
-    GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66] 06/25/2020-10:20:45.368 [Info] Computer 'fileserver75.corp.contoso.com': OS version 
+```
+06/25/2020-10:11:16.543 [Info] Creating new job=NedJob user=**CONTOSO**\ned
+[d:\os\src\base\dms\service\StorageMigrationService.IInventory.cs::CreateJob::133]
+```
+
+```
+GetOsVersion(fileserver75.**corp**.contoso.com)    [d:\os\src\base\dms\proxy\common\proxycommon\CimSessionHelper.cs::GetOsVersion::66] 06/25/2020-10:20:45.368 [Info] Computer 'fileserver75.corp.contoso.com': OS version
+```
 
 Эта проблема вызвана дефектом кода в службе миграции хранилища. Чтобы обойти эту ошибку, используйте учетные данные миграции из того же домена, к которому принадлежат исходный и конечный компьютеры. Например, если исходный и конечный компьютеры принадлежат домену "corp.contoso.com" в лесу "contoso.com", используйте "корп\мяккаунт", чтобы выполнить миграцию, а не учетные данные "контосо\мяккаунт".
 
-## <a name="inventory-fails-with-element-not-found"></a>Сбой инвентаризации с "элемент не найден" 
+## <a name="inventory-fails-with-element-not-found"></a>Сбой инвентаризации с "элемент не найден"
 
-В следующем сценарии:
+Рассмотрим следующий сценарий.
 
-У вас есть исходный сервер с именем узла DNS и Active Directory именем более 15 символов Юникода, например "иамаверилонгкомпутернамефромнед". Операционная система Windows не позволяла установить в качестве устаревшего NetBIOS-имя, которое будет задано как длинное, и предупреждать о том, что имя NetBIOS было усечено до 15 символов Юникода (например, "иамаверилонгком"). При попытке выполнить инвентаризацию этого компьютера вы получаете в центре администрирования Windows и журнале событий: 
+У вас есть исходный сервер с именем узла DNS и Active Directory именем более 15 символов Юникода, например "иамаверилонгкомпутернаме". Операционная система Windows не позволяла установить в качестве устаревшего NetBIOS-имя, которое будет задано как длинное, и предупреждать о том, что имя NetBIOS было усечено до 15 символов Юникода (например, "иамаверилонгком"). При попытке выполнить инвентаризацию этого компьютера вы получаете в центре администрирования Windows и журнале событий:
 
 ```DOS
-    "Element not found"
-    
-    ========================
+"Element not found"
+========================
 
-    Log Name:      Microsoft-Windows-StorageMigrationService/Admin
-    Source:        Microsoft-Windows-StorageMigrationService
-    Date:          4/10/2020 10:49:19 AM
-    Event ID:      2509
-    Task Category: None
-    Level:         Error
-    Keywords:      
-    User:          NETWORK SERVICE
-    Computer:      WIN-6PJAG3DHPLF.corp.contoso.com
-    Description:
-    Couldn't inventory a computer.
+Log Name:      Microsoft-Windows-StorageMigrationService/Admin
+Source:        Microsoft-Windows-StorageMigrationService
+Date:          4/10/2020 10:49:19 AM
+Event ID:      2509
+Task Category: None
+Level:         Error
+Keywords:
+User:          NETWORK SERVICE
+Computer:      WIN-6PJAG3DHPLF.corp.contoso.com
+Description:
+Couldn't inventory a computer.
 
-    Job: longnametest
-    Computer: iamaverylongcomputernamefromned.corp.contoso.com
-    State: Failed
-    Error: 1168
-    Error Message: 
+Job: longnametest
+Computer: iamaverylongcomputername.corp.contoso.com
+State: Failed
+Error: 1168
+Error Message:
 
-    Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
+Guidance: Check the detailed error and make sure the inventory requirements are met. The inventory couldn't determine any aspects of the specified source computer. This could be because of missing permissions or privileges on the source or a blocked firewall port.
 ```
 
-Эта проблема вызвана дефектом кода в службе миграции хранилища. В настоящее время единственным решением является переименование компьютера с тем же именем, что и у NetBIOS-имени, а затем с помощью команды [NETDOM ComputerName/Add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) добавьте альтернативное имя компьютера, которое использовалось до начала инвентаризации. Служба миграции хранилища поддерживает миграцию альтернативных имен компьютеров.   
+Эта проблема вызвана дефектом кода в службе миграции хранилища. В настоящее время единственным решением является переименование компьютера с тем же именем, что и у NetBIOS-имени, а затем с помощью команды [NETDOM ComputerName/Add](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc835082(v=ws.11)) добавьте альтернативное имя компьютера, которое использовалось до начала инвентаризации. Служба миграции хранилища поддерживает миграцию альтернативных имен компьютеров.
 
 ## <a name="see-also"></a>См. также раздел
 

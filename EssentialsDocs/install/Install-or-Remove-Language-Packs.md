@@ -7,19 +7,19 @@ ms.assetid: 98f13f63-4480-40ba-a7ef-d1d9b7582e5f
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: fa167ec12122883fc0ccea914260407d13f0b992
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 9999b78b1b0a4b1823162158b95d175f9c159091
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181170"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837933"
 ---
 # <a name="install-or-remove-language-packs"></a>Установка и удаление языковых пакетов
 
 >Область применения: Windows Server 2016 Essentials, Windows Server 2012 R2 Essentials, Windows Server 2012 Essentials
 
 > [!NOTE]
->  Сначала необходимо создать многоязыковой образ Windows, как описано в разделе [языковые пакеты и развертывание](https://technet.microsoft.com/library/hh824829) перед добавлением языкового пакета Windows Server Essentials.
+>  Сначала необходимо создать многоязыковой образ Windows, как описано в разделе [языковые пакеты и развертывание](/previous-versions/windows/it-pro/windows-8.1-and-8/hh824829(v=win.10)) перед добавлением языкового пакета Windows Server Essentials.
 
  Для создания многоязычных образов предусмотрены языковые пакеты. Сведения в этом разделе относятся к установке или удалению языковых пакетов в Windows Server Essentials.
 
@@ -49,7 +49,6 @@ ms.locfileid: "87181170"
 
  **dism.exe /online /Remove-Package /PackagePath:C:\Users\Administrator\Desktop\WindowsHomeServer-Product-r\de-de\lp.cab**
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Создание и Настройка образа](Creating-and-Customizing-the-Image.md) [Дополнительные настройки](Additional-Customizations.md) [Подготовка образа для развертывания](Preparing-the-Image-for-Deployment.md) [Тестирование взаимодействия с пользователем](Testing-the-Customer-Experience.md)
-

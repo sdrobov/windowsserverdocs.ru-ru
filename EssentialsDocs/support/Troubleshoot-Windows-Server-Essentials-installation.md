@@ -7,12 +7,12 @@ ms.assetid: ecf19216-7aac-4aca-839a-342ac28f5329
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 755b00f9c2593a6923f65437c695dcd6a2de7532
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 4afba33d105f0348aaf7c130ccbe5a3b87fc1cb2
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180290"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838313"
 ---
 # <a name="troubleshoot-windows-server-essentials-installation"></a>Устранение неполадок с установкой Windows Server 2012 R2 Essentials
 
@@ -31,7 +31,7 @@ ms.locfileid: "87180290"
 
 
 > [!NOTE]
->  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html/threads). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
+>  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](/answers/topics/windows-server-essentials.html/threads). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
 
 ##  <a name="general-troubleshooting-steps"></a><a name="BKMK_GeneralTroubleshootingSteps"></a>Общие действия по устранению неполадок
  В случае сбоя установки Windows Server Essentials выполните следующие действия, чтобы определить проблему, которая привела к сбою.

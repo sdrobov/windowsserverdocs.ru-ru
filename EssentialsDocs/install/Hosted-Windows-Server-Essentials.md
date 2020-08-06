@@ -7,12 +7,12 @@ ms.assetid: fda5628c-ad23-49de-8d94-430a4f253802
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 55d4059361189a0117bfd197c030fb860a1b10bd
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 73ac5bb39280277a50af84f489e3a9c5ccb0db05
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181230"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838003"
 ---
 # <a name="hosted-windows-server-essentials"></a>Размещенный сервер Windows Server Essentials
 
@@ -25,7 +25,7 @@ ms.locfileid: "87181230"
 
  **Операционная система сервера:** Технологии продуктов Windows Server 2012 обеспечивают основу Windows Server Essentials. Дополнительные сведения см. на [веб-сайте Windows Server 2012](https://www.microsoft.com/server-cloud/products/windows-server-2012-r2/default.aspx#fbid=ZH0GD_CRAWh).
 
- **Защита данных:** Windows Server Essentials использует несколько новых функций, доступных в Windows Server 2012, для предоставления значительно улучшенных возможностей защиты данных. [Новая функция управления дисковыми пространствами](https://technet.microsoft.com/library/hh831739.aspx) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Windows Server Essentials может выполнять полное резервное копирование и восстановление системы на самом сервере, а также клиентские компьютеры, подключенные к сети? теперь с поддержкой томов размером более 2 ТБ. Появилась новая для Windows Server 2012 служба [Windows Azure Online Backup](https://technet.microsoft.com/library/hh831419.aspx) , которую можно использовать для защиты файлов и папок в хранилище на основе облака, которым управляет корпорация Майкрософт. Windows Server Essentials также централизованно управляет и настраивает функцию журнала файлов Windows 8.1 клиентов, помогая пользователям восстанавливать случайно удаленные или перезаписанные файлы, не требуя помощи администратора.
+ **Защита данных:** Windows Server Essentials использует несколько новых функций, доступных в Windows Server 2012, для предоставления значительно улучшенных возможностей защиты данных. [Новая функция управления дисковыми пространствами](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Windows Server Essentials может выполнять полное резервное копирование и восстановление системы на самом сервере, а также клиентские компьютеры, подключенные к сети? теперь с поддержкой томов размером более 2 ТБ. Появилась новая для Windows Server 2012 служба [Windows Azure Online Backup](/previous-versions/azure/hh831419(v=azure.100)) , которую можно использовать для защиты файлов и папок в хранилище на основе облака, которым управляет корпорация Майкрософт. Windows Server Essentials также централизованно управляет и настраивает функцию журнала файлов Windows 8.1 клиентов, помогая пользователям восстанавливать случайно удаленные или перезаписанные файлы, не требуя помощи администратора.
 
  **Повсеместный доступ:** Удаленный веб-доступ обеспечивает упрощенное взаимодействие с браузером с поддержкой устройств сенсорного ввода для работы с приложениями и данными практически отовсюду, где имеется подключение к Интернету, и практически с любого устройства. Windows Server Essentials также предоставляет обновленное приложение Windows Phone и новое приложение для Windows 8.1 клиентских компьютеров, что позволяет пользователям интуитивно подключаться к файлам и папкам на сервере, выполнять поиск по ним и получать доступ к ним. Файлы также автоматически кэшируются для автономного доступа и синхронизируются при появлении подключения к серверу. Windows Server Essentials позволяет настроить виртуальную частную сеть (VPN) в незначительной, управляемой мастером процесс всего лишь нескольких щелчков мыши и упрощает управление доступом VPN для пользователей. Клиентские компьютеры могут использовать подключение к VPN для удаленного входа в среду Windows SBS, находясь вне офиса.
 
@@ -33,10 +33,10 @@ ms.locfileid: "87181230"
 
  **Мониторинг работоспособности:** Windows Server Essentials отслеживает собственное состояние работоспособности и состояние клиентских компьютеров под управлением Windows 8.1, Windows 7 и Mac OS X версии 10,5 и более поздних. Состояние работоспособности отображает различные проблемы, связанные с архивацией данных компьютера, хранилищем сервера, недостатком места на диске и пр.
 
- **Расширяемость:** Windows Server Essentials основана на модели расширяемости Windows SBS 2011 Essentials, которая позволяет другим поставщикам программного обеспечения добавлять возможности и функции к основному продукту, а также добавляет новый набор API веб-служб. Кроме того, обеспечена совместимость с существующим [пакетом средств разработки программного обеспечения](https://msdn.microsoft.com/library/gg513958.aspx) (SDK) и [надстройками](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) , предназначенными для Windows SBS 2011 Essentials.
+ **Расширяемость:** Windows Server Essentials основана на модели расширяемости Windows SBS 2011 Essentials, которая позволяет другим поставщикам программного обеспечения добавлять возможности и функции к основному продукту, а также добавляет новый набор API веб-служб. Кроме того, обеспечена совместимость с существующим [пакетом средств разработки программного обеспечения](/previous-versions/windows/server-essentials/gg513958(v=msdn.10)) (SDK) и [надстройками](https://pinpoint.microsoft.com/applications/search?fpt=300105&q=small+business+server+essentials) , предназначенными для Windows SBS 2011 Essentials.
 
 ## <a name="how-can-i-customize-an-image"></a>Пользовательская настройка образа
- Дополнительные шаги по настройке Windows Server Essentials см. в [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), который является стандартным процессом Sysprep Windows Server. Для завершения настройки следуйте инструкциям, приведенным в разделах [Создание простого пользовательского образа](https://technet.microsoft.com/library/jj200117) и [Настройка образа](https://technet.microsoft.com/library/jj200161), а затем для выполнения записи окончательного образа следуйте инструкциям в разделе [Подготовка образа к развертыванию](https://technet.microsoft.com/library/jj200142) .
+ Дополнительные шаги по настройке Windows Server Essentials см. в [Windows Server Essentials](https://go.microsoft.com/fwlink/p/?LinkID=249124), который является стандартным процессом Sysprep Windows Server. Для завершения настройки следуйте инструкциям, приведенным в разделах [Создание простого пользовательского образа](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200117(v=ws.11)) и [Настройка образа](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10)), а затем для выполнения записи окончательного образа следуйте инструкциям в разделе [Подготовка образа к развертыванию](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200142(v=ws.11)) .
 
  Обращайте внимание на следующие аспекты:
 
@@ -83,7 +83,7 @@ ms.locfileid: "87181230"
 
    1.  Если развертывание начинается с установки WinPE, создайте файл unattend.xml, как описано выше.
 
-   2.  Чтобы создать cfg.ini, обратитесь к разделу Windows Server Essentials ADK с правом [создания Cfg.ini файла](https://technet.microsoft.com/library/jj200150).
+   2.  Чтобы создать cfg.ini, обратитесь к разделу Windows Server Essentials ADK с правом [создания Cfg.ini файла](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11)).
 
    3.  Предоставьте информацию в [InitialConfiguration].
 
@@ -198,7 +198,7 @@ ms.locfileid: "87181230"
 Enable-WssRemoteWebAccess [-SkipRouter] [-DenyAccessByDefault] [-ApplyToExistingUsers]
 ```
 
- Пример:
+ Пример.
 
 ```
 $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
@@ -212,7 +212,7 @@ $Enable-WssRemoteWebAccess  œDenyAccessByDefault  œApplyToExistingUsers
 Add-WssUser [-Name] <string> [-Password] <securestring> [-AccessLevel <string> {User | Administrator}] [-FirstName <string>] [-LastName <string>] [-AllowRemoteAccess] [-AllowVpnAccess]   [<CommonParameters>]
 ```
 
- Пример:
+ Пример.
 
 ```
 $password = ConvertTo-SecureString "Passw0rd!" -asplaintext  œforce
@@ -223,7 +223,7 @@ $Add-WssUser -Name User2Test -Password $password -Accesslevel Administrator -Fir
 
  **Подключение/отключение пользователя**
 
- Пример:
+ Пример.
 
 ```
 $CurrentUser = get-wssuser  œname user2test
@@ -239,7 +239,7 @@ $CurrentUser.Commit()
 Add-WssFolder [-Name] <string> [-Path] <string> [[-Description] <string>] [-KeepPermissions] [<CommonParameters>]
 ```
 
- Пример:
+ Пример.
 
 ```
 $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
@@ -319,7 +319,7 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 > [!NOTE]
 >  Архивация данных клиента может повлиять на работоспособность системы, поскольку данные клиента передаются на сервер через VPN.
 
- **Полная резервная копия клиента** по умолчанию включена для всех клиентских устройств, подключенных к сети Windows Server Essentials. В данном случае происходит добавочная архивация всего клиента (системы и данных) с поддержкой дедупликации данных. Данные резервной копии будут находиться на сервере, работающем под Windows Server Essentials. В случае сбоя данные клиента остаются на последнем успешном этапе архивации. Эту функцию можно отключить, выполнив действия, описанные в разделе Создание файла Cfg.ini в [документе ADK](https://technet.microsoft.com/library/jj200150).
+ **Полная резервная копия клиента** по умолчанию включена для всех клиентских устройств, подключенных к сети Windows Server Essentials. В данном случае происходит добавочная архивация всего клиента (системы и данных) с поддержкой дедупликации данных. Данные резервной копии будут находиться на сервере, работающем под Windows Server Essentials. В случае сбоя данные клиента остаются на последнем успешном этапе архивации. Эту функцию можно отключить, выполнив действия, описанные в разделе Создание файла Cfg.ini в [документе ADK](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11)).
 
  При выполнении полной архивации данных клиента необходимо учитывать следующие аспекты:
 
@@ -333,10 +333,10 @@ $Add-WssFolder -Name "MyTestFolder" -Path "C:\ServerFolders\MyTestFolder"
 
 - Восстановление исходного состояния клиента: поскольку среда предустановки Windows не поддерживает VPN-подключения, функция восстановления исходного состояния клиента недоступна.
 
-  **Журнал файлов** — это Windows 8.1 функция для резервного копирования данных профиля (библиотек, рабочего стола, контактов, избранного) в общую сетевую папку. В Windows Server Essentials мы разрешают централизованное управление параметром журнала файлов для всех Windows 8.1 клиентов, присоединенных к Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Эту функцию можно отключить, выполнив действия, описанные в разделе Создание файла Cfg.ini в [документе ADK](https://technet.microsoft.com/library/jj200150).
+  **Журнал файлов** — это Windows 8.1 функция для резервного копирования данных профиля (библиотек, рабочего стола, контактов, избранного) в общую сетевую папку. В Windows Server Essentials мы разрешают централизованное управление параметром журнала файлов для всех Windows 8.1 клиентов, присоединенных к Windows Server Essentials. Данные архивации хранятся на сервере под управлением Windows Server Essentials. Эту функцию можно отключить, выполнив действия, описанные в разделе Создание файла Cfg.ini в [документе ADK](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200150(v=ws.11)).
 
 ### <a name="storage-management"></a>Управление хранением
- [Новая функция управления дисковыми пространствами](https://technet.microsoft.com/library/hh831739.aspx) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Вы также можете подключить диск iSCSI к Windows Server Essentials, чтобы расширить его хранилище.
+ [Новая функция управления дисковыми пространствами](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh831739(v=ws.11)) позволяет объединять физический объем памяти разрозненных жестких дисков, динамически добавлять жесткие диски и создавать тома данных с заданными уровнями устойчивости. Вы также можете подключить диск iSCSI к Windows Server Essentials, чтобы расширить его хранилище.
 
 ## <a name="what-are-the-main-scenarios-i-should-test"></a>Основные сценарии, требующие проверки
  Для успешного размещения рекомендуется проверить следующие сценарии:

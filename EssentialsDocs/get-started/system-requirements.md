@@ -7,12 +7,12 @@ ms.assetid: 0951a67d-492f-41ad-9ae5-8e4cd25e3041
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 295022c45a82d18781df27604d47d58af14b4b2d
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: b82435dc9d0018d3ac3fa5c6855b18bcddbd2797
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87181640"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838103"
 ---
 # <a name="system-requirements-for-windows-server-essentials"></a>Системные требования к Windows Server Essentials
 
@@ -45,7 +45,7 @@ ms.locfileid: "87181640"
 
  Дополнительные сведения о требованиях к оборудованию см. в [каталоге Windows Server](https://www.windowsservercatalog.com/).
 
- Все оборудование сервера должно соответствовать требованиям программы Windows Server 2012 R2 Logo для систем. Дополнительные сведения см. в разделе [Программа Windows Logo](https://msdn.microsoft.com/windows/hardware/gg487403.aspx).
+ Все оборудование сервера должно соответствовать требованиям программы Windows Server 2012 R2 Logo для систем. Дополнительные сведения см. в разделе [Программа Windows Logo](/previous-versions/windows/hardware/hck/dn641155(v=vs.85)).
 
 > [!IMPORTANT]
 > Динамические диски не поддерживаются в Windows Server Essentials.
@@ -55,5 +55,3 @@ ms.locfileid: "87181640"
 -   [Установка Windows Server Essentials](../install/Install-Windows-Server-Essentials.md)
 
 -   [Системные требования к Windows Server Essentials](system-requirements.md)
-
-

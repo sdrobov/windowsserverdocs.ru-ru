@@ -7,12 +7,12 @@ ms.technology: storagespaces
 ms.topic: article
 author: cosmosdarwin
 ms.date: 03/15/2019
-ms.openlocfilehash: 6c3e16f0965be5fc7de4bdc7bd751fb1dd193556
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: 311edb38f4cdf1dac153d843811442d5eafbce05
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86962206"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769752"
 ---
 # <a name="nested-resiliency-for-storage-spaces-direct"></a>Вложенная устойчивость для Локальные дисковые пространства
 
@@ -20,7 +20,7 @@ ms.locfileid: "86962206"
 
 Вложенная устойчивость — это новая возможность [Локальные дисковые пространства](storage-spaces-direct-overview.md) в Windows Server 2019, которая позволяет кластеру с двумя серверами выдерживать несколько аппаратных сбоев одновременно без потери доступности хранилища, так что пользователи, приложения и виртуальные машины продолжают работать без перерывов. В этом разделе объясняется, как это работает, приводятся пошаговые инструкции по началу работы и ответы на наиболее часто задаваемые вопросы.
 
-## <a name="prerequisites"></a>Обязательные условия
+## <a name="prerequisites"></a>Предварительные требования
 
 ### <a name="green-checkmark-icon-consider-nested-resiliency-if"></a>![Зеленый значок галочки.](media/nested-resiliency/supported.png) Рассмотрите вложенную устойчивость, если:
 
@@ -40,7 +40,7 @@ ms.locfileid: "86962206"
 
 Компромисс заключается в том, что вложенная устойчивость имеет **меньшую эффективность, чем классическая двусторонняя зеркальная копия**, что означает, что вы получаете немного меньше свободного места. Дополнительные сведения см. в разделе [эффективность емкости](#capacity-efficiency) ниже.
 
-## <a name="how-it-works"></a>Принципы работы
+## <a name="how-it-works"></a>Принцип работы
 
 ### <a name="inspiration-raid-51"></a>О-в. RAID 5 + 1
 
@@ -111,7 +111,7 @@ New-StorageTier -StoragePoolFriendlyName S2D* -FriendlyName NestedParity -Resili
 
 #### <a name="nested-two-way-mirror"></a>Вложенное двустороннее зеркало
 
-Чтобы использовать вложенное двустороннее зеркало, сослаться на `NestedMirror` шаблон уровня и укажите размер. Например.
+Чтобы использовать вложенное двустороннее зеркало, сослаться на `NestedMirror` шаблон уровня и укажите размер. Пример:
 
 ```PowerShell
 New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume01 -StorageTierFriendlyNames NestedMirror -StorageTierSizes 500GB
@@ -129,7 +129,7 @@ New-Volume -StoragePoolFriendlyName S2D* -FriendlyName Volume02 -StorageTierFrie
 
 Тома, использующие вложенную устойчивость, отображаются в [центре администрирования Windows](../../manage/windows-admin-center/overview.md) с четкими метками, как показано на снимке экрана ниже. После создания вы сможете управлять ими и отслеживать их с помощью центра администрирования Windows, как и любой другой том в Локальные дисковые пространства.
 
-![](media/nested-resiliency/windows-admin-center.png)
+![Управление томами в центре администрирования Windows](media/nested-resiliency/windows-admin-center.png)
 
 ### <a name="optional-extend-to-cache-drives"></a>Необязательно: расширение на диски кэша
 

@@ -7,12 +7,12 @@ ms.assetid: e45b3d89-c057-4c70-a627-86fb06dd22aa
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: c05888f52f3fe60d0dde22a70ceb5a3eee94e0ef
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: e832957a5d44851131cb622e4c3bf9d99d4e4a7f
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180240"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838273"
 ---
 # <a name="troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials"></a>Устранение неполадок при подключении компьютеров к серверу в Windows Server Essentials
 
@@ -21,7 +21,7 @@ ms.locfileid: "87180240"
  В этом разделе содержатся рекомендации по устранению неполадок, которые могут возникнуть при подключении компьютера к серверу под Windows Server Essentials или Windows Server Essentials.
 
 > [!NOTE]
->  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials и Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
+>  Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials и Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
 
  В этом разделе представлены решения следующих проблем.
 
@@ -282,4 +282,4 @@ ms.locfileid: "87180240"
 
 - [Управление Windows Server Essentials](../manage/Manage-Windows-Server-Essentials.md)
 
-- [Устранение неполадок в Windows 2012 Server Essentials Коннекткомпутер](https://docs.microsoft.com/windows-server-essentials/support/troubleshoot-connecting-computers-to-the-server-in-windows-server-essentials)
+- [Устранение неполадок в Windows 2012 Server Essentials Коннекткомпутер]()

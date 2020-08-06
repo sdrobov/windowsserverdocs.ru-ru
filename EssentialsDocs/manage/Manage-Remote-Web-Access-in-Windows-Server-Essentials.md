@@ -7,12 +7,12 @@ ms.assetid: f3ea40fa-b6ba-4d66-b754-221ca6271387
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 56bfd8d9860ad571265980e859a09914fb4f1b9c
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 094e5914fee1c5d2a1b6f3c68621fa81b96f21c0
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180940"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87837783"
 ---
 # <a name="manage-remote-web-access-in-windows-server-essentials"></a>Управление удаленным веб-доступом в Windows Server Essentials
 
@@ -151,7 +151,7 @@ ms.locfileid: "87180940"
 > [!NOTE]
 > Конфигурация сети должна отвечать требованиям к поддерживаемым сетям для Windows Server Essentials. В сети должен быть только один маршрутизатор.
 
- Если маршрутизатор не настраивался с помощью мастера настройки доменного имени, то необходимо вручную перенаправить порт 443. Сведения о настройке перенаправления портов на маршрутизаторе см. на [форуме по Small Business Server](https://docs.microsoft.com/answers/topics/windows-small-business-server.html).
+ Если маршрутизатор не настраивался с помощью мастера настройки доменного имени, то необходимо вручную перенаправить порт 443. Сведения о настройке перенаправления портов на маршрутизаторе см. на [форуме по Small Business Server](/answers/topics/windows-small-business-server.html).
 
 ###  <a name="replace-a-router"></a><a name="BKMK_ReplaceRouter"></a>Замена маршрутизатора
  Замените маршрутизатор в соответствии с инструкциями производителя, а затем запустите мастер настройки маршрутизатора, чтобы настроить новый маршрутизатор.
