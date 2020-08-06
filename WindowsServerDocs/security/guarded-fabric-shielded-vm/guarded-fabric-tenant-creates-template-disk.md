@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 08/29/2018
-ms.openlocfilehash: d5cdaf915de94e73374459c41b090f197b8f56ef
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: 7e76cb5b41e7800ce8b2725003dcb5ea90e84116
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475081"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769652"
 ---
 # <a name="shielded-vms-for-tenants---creating-a-template-disk-optional"></a>Экранированные виртуальные машины для клиентов — Создание диска шаблона (необязательно)
 
@@ -64,13 +64,17 @@ ms.locfileid: "85475081"
 
 2. Установите компонент **средств экранированной виртуальной машины** из **средства удаленного администрирования сервера** на компьютере.
 
-        Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
+    Install-WindowsFeature RSAT-Shielded-VM-Tools -Restart
+    ```
 
 3. Получите или создайте сертификат для подписания VHDX-файлов, который станет диском шаблона для новых экранированных виртуальных машин. Сведения об этом сертификате будут включены в файл данных экранирования, который разрешает диск в качестве доверенного диска. Поэтому важно получить этот сертификат из центра сертификации, которому доверяет поставщик услуг размещения. В корпоративных сценариях, где вы одновременно являетесь клиентом и поставщиками услуг размещения и клиента, вы можете использовать этот сертификат из PKI.
 
     Если вы настраиваете тестовую среду и хотите использовать самозаверяющий сертификат для подписывания диска шаблона, выполните на компьютере команду, аналогичную следующей:
 
-        New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
+    New-SelfSignedCertificate -DnsName publisher.fabrikam.com
+    ```
 
 4. Запустите **Мастер создания шаблона диска** из папки " **Администрирование** " в меню "пуск" или введите **TemplateDiskWizard.exe** в командной строке.
 

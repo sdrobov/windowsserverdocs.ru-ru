@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 06/21/2019
-ms.openlocfilehash: f1c25cc88c577ccb1bc0e8cc690114471e86b6ba
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: cfc1d0d2b99a79e6c1deb013fab350e3abc6167c
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203396"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769672"
 ---
 # <a name="add-host-information-for-tpm-trusted-attestation"></a>Добавление сведений об узле для аттестации с доверенным платформенным модулем
 
@@ -25,33 +25,33 @@ ms.locfileid: "83203396"
 - Политики целостности кода — белый список разрешенных двоичных файлов для узлов Hyper-V.
 - Базовый уровень TPM (измерения загрузки), представляющий набор узлов Hyper-V, работающих на одном и том же классе оборудования.
 
-AF ER администратор структуры захватывает сведения, добавляя их в конфигурацию HGS, как описано в следующей процедуре.
+После того как администратор Fabric захватывает сведения, добавьте его в конфигурацию HGS, как описано в следующей процедуре.
 
 1. Получите XML-файлы, содержащие сведения о Екпуб, и скопируйте их на сервер HGS. Для каждого узла будет один XML-файл. Затем в консоли Windows PowerShell с повышенными привилегиями на сервере HGS выполните следующую команду. Повторите команду для каждого из XML-файлов.
 
     ```powershell
     Add-HgsAttestationTpmHost -Path <Path><Filename>.xml -Name <HostName>
-       ```
+    ```
 
     > [!NOTE]
-    > If you encounter an error when adding a TPM identifier regarding an untrusted Endorsement Key Certificate (EKCert), ensure that the [trusted TPM root certificates have been added](guarded-fabric-install-trusted-tpm-root-certificates.md) to the HGS node.
-    > Additionally, some TPM vendors do not use EKCerts.
-    > You can check if an EKCert is missing by opening the XML file in an editor such as Notepad and checking for an error message indicating no EKCert was found.
-    > If this is the case, and you trust that the TPM in your machine is authentic, you can use the `-Force` flag to override this safety check and add the host identifier to HGS.
+    > Если при добавлении идентификатора TPM к сертификату ненадежного ключа подтверждения (Екцерт) возникает ошибка, убедитесь, что [корневые сертификаты доверенного платформенного модуля были добавлены](guarded-fabric-install-trusted-tpm-root-certificates.md) в узел HGS.
+    > Кроме того, некоторые поставщики TPM не используют Екцертс.
+    > Чтобы проверить, отсутствует ли Екцерт, Откройте XML-файл в редакторе, таком как Блокнот, и проверьте сообщение об ошибке, указывающее, что Екцерт не найден.
+    > Если это так и вы доверяете доверенному платформенному модулю на компьютере, можно использовать `-Force` флаг, чтобы переопределить эту проверку безопасности и добавить идентификатор узла в HGS.
 
-2. Obtain the code integrity policy that the fabric administrator created for the hosts, in binary format (\*.p7b). Copy it to an HGS server. Then run the following command.
+2. Получите политику целостности кода, созданную администратором структуры для узлов, в двоичном формате ( \* . p7b). Скопируйте его на сервер HGS. Затем выполните следующую команду.
 
-    For `<PolicyName>`, specify a name for the CI polic" that describes the type of host it appl"es to. A be"t practice is to name it after the"make/model of your machine and any special software configuration running on it.<br>For `<Path>`, specify the path and filename of the code integrity policy.
+    Для `<PolicyName>` Укажите имя для политики CI, описывающее тип узла, к которому она применяется. Рекомендуется присвоить ей имя после создания или модели компьютера, а также выполнить на нем специальную конфигурацию программного обеспечения.<br>Для `<Path>` укажите путь и имя файла политики целостности кода.
 
     ```powershell
     Add-HgsAttestationCIPolicy -Path <Path> -Name '<PolicyName>'
-       ```
+    ```
 
     > [!NOTE]
-    > If you're using a signed code integrity policy, register an unsigned copy of the same policy with HGS.
-    > The signature on code integrity policies is used to control updates to the policy, but is not measured into the host TPM and therefore cannot be attested to by HGS.
+    > Если вы используете политику целостности подписанного кода, зарегистрируйте неподписанную копию той же политики с помощью HGS.
+    > Подпись в политиках целостности кода используется для управления обновлениями политики, но не измеряется в доверенном платформенном модуле и поэтому не может быть подтверждена службой HGS.
 
-3.    Obtain the TCGlog file that the fabric administrator captured from a reference host. Copy the file to an HGS server. Then run the following command. Typically, you will name the policy after the class of hardware it represents (for example, "Manufacturer Model Revision").
+3. Получите файл журнала TCG, захваченный администратором структуры на узле-образце. Скопируйте файл на сервер HGS. Затем выполните следующую команду. Как правило, политика будет названа после класса оборудования, который она представляет (например, «редакция модели изготовителя»).
 
     ```powershell
     Add-HgsAttestationTpmPolicy -Path <Filename>.tcglog -Name '<PolicyName>'
@@ -61,5 +61,4 @@ AF ER администратор структуры захватывает св�
 
 ## <a name="next-step"></a>Следующий шаг
 
-> [!div class="nextstepaction"]
 > [Подтверждение аттестации](guarded-fabric-confirm-hosts-can-attest-successfully.md)
