@@ -8,12 +8,12 @@ author: rpsqrd
 ms.author: ryanpu
 ms.technology: security-guarded-fabric
 ms.date: 01/14/2020
-ms.openlocfilehash: 9244dd8c9a567813c5732571de5dddc42d23be2a
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: c1eea8c7f6da1140480d0a8deaafb2edb73528de
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85475591"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769152"
 ---
 # <a name="deploying-the-host-guardian-service"></a>Развертывание службы защиты узла
 
@@ -29,22 +29,23 @@ ms.locfileid: "85475591"
 
 Следующая таблица разделяет задачи на развертывание защищенной структуры и создание экранированных виртуальных машин в соответствии с разными ролями администратора. Обратите внимание, что когда администратор HGS настраивает HGS с полномочными узлами Hyper-V, администратор структуры будет одновременно получать и предоставлять идентифицирующие сведения о узлах.
 
-|<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-hgs-administrator-tasks.png" alt="Host Guardian Service administrator tasks" width="238" height="62" align="left" /> | <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-fabric-administrator-tasks.png" alt="Fabric administrator tasks" width="300" height="62" align="left" /> | <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-tenant-administrator-tasks.png" alt="Tenant administrator tasks" width="184" height="66" align="left" /> |
-|-------------------------------------|--------------------------------|-----------------------------------------|
-|(1) [Проверка предварительных требований для HGS](guarded-fabric-prepare-for-hgs.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 1" hspace="8" align="right" />| | |
-|(2) [Настройка первого &nbsp; узла HGS](guarded-fabric-choose-where-to-install-hgs.md)&nbsp;<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png" alt="Step 2" hspace="8" align="right" />| | |
-|(3) [Настройка дополнительных &nbsp; узлов HGS](guarded-fabric-configure-additional-hgs-nodes.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png" alt="Step 3" hspace="8" align="right" />| | |
-| &nbsp; |(4) [Настройка DNS-структуры](guarded-fabric-configuring-fabric-dns.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png" alt="Step 4" hspace="8" align="right" />| |
-| &nbsp; |(5) [Проверка &nbsp; предварительных требований к узлу (ключ)](guarded-fabric-guarded-host-prerequisites.md#host-key-attestation)<br>[Проверка &nbsp; предварительных требований к узлу (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation)<img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png" alt="Step 5" hspace="8" align="right" />| |
-|(7) [Настройка HGS со сведениями об узле](guarded-fabric-add-host-information-to-hgs.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png" alt="Step 7" hspace="8" align="right" />|(6) [Создание ключа узла (ключ)](guarded-fabric-create-host-key.md)<br>[Получение сведений об узле (TPM)](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png" alt="Step 6" hspace="8" align="right" />| |
-| &nbsp; |(8) [подтвердить, что узлы могут](guarded-fabric-confirm-hosts-can-attest-successfully.md) подтверждать <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png" alt="Step 8" hspace="8" align="right" />| |
-| &nbsp; |(9) [Настройка VMM (необязательно)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png" alt="Step 9" hspace="8" align="right" />| |
-| &nbsp; |(10) [Создание дисков шаблонов](guarded-fabric-create-a-shielded-vm-template.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png" alt="Step 10" hspace="8" align="right" />| |
-| &nbsp; |(11) [Создание вспомогательного диска экранирования виртуальных машин для VMM (необязательно)](guarded-fabric-vm-shielding-helper-vhd.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png" alt="Step 11" hspace="8" align="right" />| |
-| &nbsp; |(12) [настройка Windows Azure Pack (необязательно)](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png" alt="Step 12" hspace="8" align="right" />| |
-| &nbsp; | &nbsp; |(13) [Создание файла данных экранирования](guarded-fabric-tenant-creates-shielding-data.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png" alt="Step 13" hspace="8" align="right" />|
-| &nbsp; | &nbsp; |(14) [Создание экранированных виртуальных машин с помощью Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 14" hspace="8" align="right" /><br>[Создание экранированных виртуальных машин с помощью VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) <img src="../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png" alt="Step 15" hspace="8" align="right" />|
-
+| Шаг и ссылка на содержимое | Образ — |
+|--|--|--|
+| 1. [Проверка предварительных требований для HGS](guarded-fabric-prepare-for-hgs.md) | ![Шаг 1. Проверка предварительных требований](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
+| 2. [Настройка первого узла HGS](guarded-fabric-choose-where-to-install-hgs.md) | ![Шаг 2. Настройка первого узла HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-first-hgs-node.png) |
+| 3. [Настройка дополнительных узлов HGS](guarded-fabric-configure-additional-hgs-nodes.md) | ![Шаг 3. Настройка дополнительных узлов HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-secondary-hgs-nodes.png) |
+| 4. [Настройка структуры DNS](guarded-fabric-configuring-fabric-dns.md) | ![Шаг 4. Настройка структуры DNS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-fabric-dns.png) |
+| 5. [Проверка предварительных требований к узлу (ключ)](guarded-fabric-guarded-host-prerequisites.md#host-key-attestation) и [Проверка необходимых компонентов (TPM)](guarded-fabric-guarded-host-prerequisites.md#tpm-trusted-attestation) | ![Шаг 5. Проверка ключа необходимых компонентов узла и необходимого в нем TPM](../media/Guarded-Fabric-Shielded-VM/guarded-host-verify.png) |
+| 6. [Создание ключа узла (Key)](guarded-fabric-create-host-key.md) и[Получение сведений об узле (TPM)](guarded-fabric-tpm-trusted-attestation-capturing-hardware.md) | ![Шаг 6, создание ключа узла и получение сведений об узле](../media/Guarded-Fabric-Shielded-VM/guarded-host-collect-info-from-hosts.png) |
+| 7. [Настройка HGS со сведениями об узле](guarded-fabric-add-host-information-to-hgs.md) | ![Шаг 7. Добавление сведений об узле в HGS](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-hgs-with-host-info.png) |
+| 8. [подтверждение того, что узлы могут](guarded-fabric-confirm-hosts-can-attest-successfully.md) подтверждать | ![Шаг 8, подтвердите, что узел может подтвердить аттестацию](../media/Guarded-Fabric-Shielded-VM/guarded-host-confirm-hosts-attest.png) |
+| 9. [Настройка VMM (необязательно)](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-overview) | ![Шаг 9. Настройка VMM (необязательно)](../media/Guarded-Fabric-Shielded-VM/guarded-host-configure-vmm.png) |
+| 10. [Создание дисков шаблонов](guarded-fabric-create-a-shielded-vm-template.md) | ![Шаг 10. Создание дисков шаблонов](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-template-disk.png) |
+| 11. [Создание вспомогательного диска экранирования виртуальных машин для VMM (необязательно)](guarded-fabric-vm-shielding-helper-vhd.md) | ![Шаг 11. Создание диска справки экранирования виртуальных машин для VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-create-helper-disk.png) |
+| 12. [настройка Windows Azure Pack (необязательно)](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Шаг 12. Настройка Windows Azure Pack (необязательно)](../media/Guarded-Fabric-Shielded-VM/guarded-host-windows-azure-pack.png) |
+| 13. [Создание файла данных экранирования](guarded-fabric-tenant-creates-shielding-data.md) | ![Шаг 13. Создание файла данных экранирования](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielding-data-file.png) |
+| 14. [Создание экранированных виртуальных машин с помощью Windows Azure Pack](guarded-fabric-shielded-vm-windows-azure-pack.md) | ![Шаг 14. Создание экранированных виртуальных машин с помощью Windows Azure Pack](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
+| 15. [Создание экранированных виртуальных машин с помощью VMM](https://technet.microsoft.com/system-center-docs/vmm/scenario/guarded-vms) | ![Шаг 15. Создание экранированных виртуальных машин с помощью VMM](../media/Guarded-Fabric-Shielded-VM/guarded-host-shielded-vms.png) |
 
 ## <a name="additional-references"></a>Дополнительные ссылки
 

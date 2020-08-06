@@ -8,23 +8,23 @@ ms.topic: article
 author: kaushika-msft
 ms.date: 10/24/2018
 ms.localizationpriority: medium
-ms.openlocfilehash: 429eddf30fddf6bfd035d1f928196a3b66d14646
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: ca3a1ec8462f96c1f6a018d1148b7824cdf8cc20
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80820947"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769472"
 ---
 # <a name="troubleshoot-storage-spaces-direct"></a>Устранение неполадок Локальные дисковые пространства
 
-> Область применения: Windows Server 2019, Windows Server 2016
+> Применяется к: Windows Server 2019, Windows Server 2016
 
 Используйте следующие сведения для устранения неполадок при развертывании Локальные дисковые пространства.
 
 Как правило, начните со следующих шагов:
 
 1. Проверьте, сертифицирована ли модель SSD для Windows Server 2016 и Windows Server 2019 с помощью каталога Windows Server. Уточните у поставщика, что диски поддерживаются для Локальные дисковые пространства.
-2. Проверьте хранилище на наличие неисправных дисков. Используйте программное обеспечение для управления хранением данных, чтобы проверить состояние дисков. Если какой либо диск неисправен, обратитесь к поставщику. 
+2. Проверьте хранилище на наличие неисправных дисков. Используйте программное обеспечение для управления хранением данных, чтобы проверить состояние дисков. Если какой либо диск неисправен, обратитесь к поставщику.
 3. При необходимости обновите хранилище и встроенное по диска.
    Убедитесь, что на всех узлах установлены последние обновления Windows. Последние обновления для Windows Server 2016 можно получить из [журнала обновлений Windows 10 и Windows server 2016](https://aka.ms/update2016) , а для windows Server 2019 — из [журнала обновлений Windows 10 и Windows Server 2019](https://support.microsoft.com/help/4464619).
 4. Обновите драйверы и встроенное по сетевого адаптера.
@@ -37,18 +37,18 @@ ms.locfileid: "80820947"
 
 |FriendlyName|ресилиенцисеттингнаме| OperationalStatus| HealthStatus| исмануалаттач|Размер| PSComputerName|
 |------------|---------------------| -----------------| ------------| --------------|-----| --------------|
-|Disk4| Зеркало| ОК|  Исправна| Истина|  10 ТБ|  Node-01. Конто...|
-|3         |Зеркало                 |ОК                          |Исправна       |Истина            |10 ТБ | Node-01. Конто...|
-|Диски 2         |Зеркало                 |Без избыточности               |Неработоспособен     |Истина            |10 ТБ | Node-01. Конто...|
-|Disk1         |Зеркало                 |{Отсутствие избыточности, необслуживание}  |Неработоспособен     |Истина            |10 ТБ | Node-01. Конто...| 
+|Диск 4| Зеркальное отображение| ОК|  Работоспособно| Верно|  10 ТБ|  Node-01. Конто...|
+|Диск 3         |Зеркальное отображение                 |ОК                          |Работоспособно       |Верно            |10 ТБ | Node-01. Конто...|
+|Диск 2         |Зеркальное отображение                 |Без избыточности               |Unhealthy     |Верно            |10 ТБ | Node-01. Конто...|
+|Диск 1         |Зеркальное отображение                 |{Отсутствие избыточности, необслуживание}  |Unhealthy     |Верно            |10 ТБ | Node-01. Конто...|
 
-Кроме того, после попытки перевести виртуальный диск в оперативный режим в журнал кластера (Дискрековеряктион) заносится следующая информация.  
+Кроме того, после попытки перевести виртуальный диск в оперативный режим в журнал кластера (Дискрековеряктион) заносится следующая информация.
 
 ```
 [Verbose] 00002904.00001040::YYYY/MM/DD-12:03:44.891 INFO [RES] Physical Disk <DiskName>: OnlineThread: SuGetSpace returned 0.
 [Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 WARN [RES] Physical Disk < DiskName>: Underlying virtual disk is in 'no redundancy' state; its volume(s) may fail to mount.
-[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 ERR [RES] Physical Disk <DiskName>: Failing online due to virtual disk in 'no redundancy' state. If you would like to attempt to online the disk anyway, first set this resource's private property 'DiskRecoveryAction' to 1. We will try to bring the disk online for recovery, but even if successful, its volume(s) or CSV may be unavailable. 
-``` 
+[Verbose] 00002904.00001040:: YYYY/MM/DD -12:03:44.891 ERR [RES] Physical Disk <DiskName>: Failing online due to virtual disk in 'no redundancy' state. If you would like to attempt to online the disk anyway, first set this resource's private property 'DiskRecoveryAction' to 1. We will try to bring the disk online for recovery, but even if successful, its volume(s) or CSV may be unavailable.
+```
 
 В случае сбоя диска или невозможности доступа системы к данным на виртуальном диске может произойти **состояние "нет работоспособности** ". Эта проблема может возникать, если на узле во время обслуживания узлов происходит перезагрузка.
 
@@ -58,7 +58,7 @@ ms.locfileid: "80820947"
 
    ```powershell
    Remove-ClusterSharedVolume -name "VdiskName"
-   ``` 
+   ```
 2. На узле, владеющем доступной группой хранения, выполните следующую команду на каждом диске, который не находится в состоянии избыточности. Чтобы узнать, на каком узле находится группа "Доступное хранилище", можно выполнить следующую команду.
 
    ```powershell
@@ -69,7 +69,7 @@ ms.locfileid: "80820947"
    Get-ClusterResource "VdiskName" | Set-ClusterParameter -Name DiskRecoveryAction -Value 1
    Start-ClusterResource -Name "VdiskName"
    ```
-4. Должно автоматически запуститься восстановление. Дождитесь завершения восстановления. Он может перейти в приостановленное состояние и запустить его снова. Для отслеживания хода выполнения: 
+4. Должно автоматически запуститься восстановление. Дождитесь завершения восстановления. Он может перейти в приостановленное состояние и запустить его снова. Для отслеживания хода выполнения:
     - Выполните команду **Get-сторажежоб** , чтобы отслеживать состояние восстановления и видеть, когда оно завершено.
     - Выполните командлет **Get-VirtualDisk** и убедитесь, что пространство возвращает хеалсстатус работоспособное.
 5. После завершения восстановления и работоспособности виртуальных дисков измените параметры виртуального диска обратно.
@@ -82,7 +82,7 @@ ms.locfileid: "80820947"
    ```powershell
    Stop-ClusterResource "VdiskName"
    Start-ClusterResource "VdiskName"
-   ``` 
+   ```
 7. Добавьте затронутые виртуальные диски обратно в CSV-файл.
 
    ```powershell
@@ -92,7 +92,7 @@ ms.locfileid: "80820947"
 **Дискрековеряктион** — это параметр переопределения, который позволяет подключить объем дискового пространства в режиме чтения и записи без проверок. Свойство позволяет выполнять диагностику, почему том не поступает в оперативный режим. Он очень похож на режим обслуживания, но его можно вызвать для ресурса в неисправном состоянии. Он также позволяет получить доступ к данным, которые могут быть полезны в таких ситуациях, как "без избыточности", где можно получить доступ к любым данным и скопировать их. Свойство Дискрековеряктион было добавлено в 22 февраля 2018, обновление, KB 4077525.
 
 
-## <a name="detached-status-in-a-cluster"></a>Состояние отсоединения в кластере 
+## <a name="detached-status-in-a-cluster"></a>Состояние отсоединения в кластере
 
 При выполнении командлета **Get-VirtualDisk** параметр OperationalStatus для одного или нескольких Локальные дисковые пространства виртуальных дисков отсоединяется. Однако Хеалсстатус, сообщаемый командлетом **Get-физический** , указывает, что все физические диски находятся в работоспособном состоянии.
 
@@ -100,55 +100,55 @@ ms.locfileid: "80820947"
 
 |FriendlyName|  ресилиенцисеттингнаме|  OperationalStatus|   HealthStatus|  исмануалаттач|  Размер|   PSComputerName|
 |-|-|-|-|-|-|-|
-|Disk4|         Зеркало|                 ОК|                  Исправна|       Истина|            10 ТБ|  Node-01. Конто...|
-|3|         Зеркало|                 ОК|                  Исправна|       Истина|            10 ТБ|  Node-01. Конто...|
-|Диски 2|         Зеркало|                 "Detached" (отключено)|            Неизвестно|       Истина|            10 ТБ|  Node-01. Конто...|
-|Disk1|         Зеркало|                 "Detached" (отключено)|            Неизвестно|       Истина|            10 ТБ|  Node-01. Конто...| 
+|Диск 4|         Зеркальное отображение|                 ОК|                  Работоспособно|       Верно|            10 ТБ|  Node-01. Конто...|
+|Диск 3|         Зеркальное отображение|                 ОК|                  Работоспособно|       Верно|            10 ТБ|  Node-01. Конто...|
+|Диск 2|         Зеркальное отображение|                 Отсоединен|            Неизвестно|       Верно|            10 ТБ|  Node-01. Конто...|
+|Диск 1|         Зеркальное отображение|                 Отсоединен|            Неизвестно|       Верно|            10 ТБ|  Node-01. Конто...|
 
 
 Кроме того, на узлах могут регистрироваться следующие события:
 
 ```
 Log Name: Microsoft-Windows-StorageSpaces-Driver/Operational
-Source: Microsoft-Windows-StorageSpaces-Driver 
-Event ID: 311 
+Source: Microsoft-Windows-StorageSpaces-Driver
+Event ID: 311
 Level: Error
-User: SYSTEM 
-Computer: Node#.contoso.local 
-Description: Virtual disk {GUID} requires a data integrity scan.  
+User: SYSTEM
+Computer: Node#.contoso.local
+Description: Virtual disk {GUID} requires a data integrity scan.
 
-Data on the disk is out-of-sync and a data integrity scan is required. 
+Data on the disk is out-of-sync and a data integrity scan is required.
 
-To start the scan, run the following command:   
-Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask                
+To start the scan, run the following command:
+Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask
 
-Once you have resolved the condition listed above, you can online the disk by using the following commands in PowerShell:   
+Once you have resolved the condition listed above, you can online the disk by using the following commands in PowerShell:
 
-Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsReadOnly $false 
+Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsReadOnly $false
 Get-VirtualDisk | ?{ $_.ObjectId -Match "{GUID}" } | Get-Disk | Set-Disk -IsOffline  $false
 ------------------------------------------------------------
 
 Log Name: System
-Source: Microsoft-Windows-ReFS 
+Source: Microsoft-Windows-ReFS
 Event ID: 134
-Level: Error 
+Level: Error
 User: SYSTEM
-Computer: Node#.contoso.local 
+Computer: Node#.contoso.local
 Description: The file system was unable to write metadata to the media backing volume <VolumeId>. A write failed with status "A device which does not exist was specified." ReFS will take the volume offline. It may be mounted again automatically.
 ------------------------------------------------------------
 Log Name: Microsoft-Windows-ReFS/Operational
-Source: Microsoft-Windows-ReFS 
-Event ID: 5 
-Level: Error 
-User: SYSTEM 
-Computer: Node#.contoso.local 
-Description: ReFS failed to mount the volume. 
-Context: 0xffffbb89f53f4180 
+Source: Microsoft-Windows-ReFS
+Event ID: 5
+Level: Error
+User: SYSTEM
+Computer: Node#.contoso.local
+Description: ReFS failed to mount the volume.
+Context: 0xffffbb89f53f4180
 Error: A device which does not exist was specified.
-Volume GUID:{00000000-0000-0000-0000-000000000000} 
-DeviceName: 
+Volume GUID:{00000000-0000-0000-0000-000000000000}
+DeviceName:
 Volume Name:
-``` 
+```
 
 **Отсоединенное рабочее состояние** может произойти, если журнал "грязного" отслеживания региона (DRT) заполнен. Дисковые пространства используют "грязное" Отслеживание региона (DRT) для зеркальных пространств, чтобы гарантировать, что при возникновении сбоя питания в журнал заносятся все обновления метаданных, чтобы гарантировать, что дисковое пространство может вернуть или отменить операции по восстановлению дискового пространства, чтобы вернуть дисковое пространство в гибкое и устойчивое состояние после восстановления питания и резервного копирования системы. Если журнал DRT заполнен, виртуальный диск нельзя перевести в режим «в сети» до тех пор, пока метаданные DRT не будут синхронизированы и сброшены. Этот процесс требует выполнения полной проверки, что может занять несколько часов.
 
@@ -157,31 +157,31 @@ Volume Name:
 
    ```powershell
    Remove-ClusterSharedVolume -name "VdiskName"
-   ``` 
-2. Выполните следующие команды на каждом диске, который не находится в режиме «в сети». 
+   ```
+2. Выполните следующие команды на каждом диске, который не находится в режиме «в сети».
 
    ```powershell
    Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 7
    Start-ClusterResource -Name "VdiskName"
-   ``` 
-3. Выполните следующую команду на каждом узле, в котором отключенный том находится в режиме «в сети». 
+   ```
+3. Выполните следующую команду на каждом узле, в котором отключенный том находится в режиме «в сети».
 
    ```powershell
-   Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask 
+   Get-ScheduledTask -TaskName "Data Integrity Scan for Crash Recovery" | Start-ScheduledTask
    ```
-   Эту задачу следует инициировать на всех узлах, на которых отключенный том находится в режиме «в сети». Должно автоматически запуститься восстановление. Дождитесь завершения восстановления. Он может перейти в приостановленное состояние и запустить его снова. Для отслеживания хода выполнения: 
+   Эту задачу следует инициировать на всех узлах, на которых отключенный том находится в режиме «в сети». Должно автоматически запуститься восстановление. Дождитесь завершения восстановления. Он может перейти в приостановленное состояние и запустить его снова. Для отслеживания хода выполнения:
    - Выполните команду **Get-сторажежоб** , чтобы отслеживать состояние восстановления и видеть, когда оно завершено.
    - Выполните командлет **Get-VirtualDisk** и убедитесь, что пробел возвращает хеалсстатус работоспособное состояние.
      - "Проверка целостности данных для восстановления после сбоя" — это задача, которая не отображается как задание хранилища и не имеет индикатора хода выполнения. Если задача отображается как выполняемая, она работает. По завершении он будет отображаться как завершенный.
 
-       Кроме того, можно просмотреть состояние выполняемой задачи расписания с помощью следующего командлета: 
+       Кроме того, можно просмотреть состояние выполняемой задачи расписания с помощью следующего командлета:
        ```powershell
        Get-ScheduledTask | ? State -eq running
-       ``` 
-4. Как только будет завершено восстановление целостности данных для восстановления после сбоя, восстановление завершится, а виртуальные диски будут работоспособными, измените параметры виртуального диска обратно. 
+       ```
+4. Как только будет завершено восстановление целостности данных для восстановления после сбоя, восстановление завершится, а виртуальные диски будут работоспособными, измените параметры виртуального диска обратно.
 
    ```powershell
-   Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 0 
+   Get-ClusterResource -Name "VdiskName" | Set-ClusterParameter DiskRunChkDsk 0
    ```
 
 5. Переведите диски в автономный режим и снова подключитесь к сети, чтобы Дискрековеряктион вступили в силу:
@@ -189,20 +189,20 @@ Volume Name:
    ```powershell
    Stop-ClusterResource "VdiskName"
    Start-ClusterResource "VdiskName"
-   ``` 
+   ```
 
-6. Добавьте затронутые виртуальные диски обратно в CSV-файл.    
+6. Добавьте затронутые виртуальные диски обратно в CSV-файл.
 
    ```powershell
    Add-ClusterSharedVolume -name "VdiskName"
-   ```  
+   ```
    **Значение дискрунчкдск 7** используется для присоединения объема дискового пространства и создания раздела в режиме только для чтения. Это позволяет обнаруживать пробелы для самостоятельного обнаружения и самовосстановления, запуская восстановление. Исправление будет запущено автоматически после подключения. Он также позволяет получить доступ к данным, что может быть полезно для получения доступа к любым данным, которые можно копировать. Для некоторых условий сбоя, таких как полный журнал DRT, необходимо запустить проверку целостности данных для запланированной задачи восстановления после сбоя.
 
 **Задача "Проверка целостности данных для восстановления после сбоя** " используется для синхронизации и очистки полного журнала отслеживания изменений региона (DRT). Выполнение этой задачи может занять несколько часов. "Проверка целостности данных для восстановления после сбоя" — это задача, которая не отображается как задание хранилища и не имеет индикатора хода выполнения. Если задача отображается как выполняемая, она работает. После завершения он будет отображаться как завершенный. Если отменить задачу или перезапустить узел во время выполнения этой задачи, задача должна начаться с самого начала.
 
 Дополнительные сведения см. в разделе [Устранение неполадок Локальные дисковые пространства работоспособности и операционные состояния](storage-spaces-states.md).
 
-## <a name="event-5120-with-status_io_timeout-c00000b5"></a>Событие 5120 с STATUS_IO_TIMEOUT c00000b5 
+## <a name="event-5120-with-status_io_timeout-c00000b5"></a>Событие 5120 с STATUS_IO_TIMEOUT c00000b5
 
 > [!Important]
 > **Для Windows Server 2016:** Чтобы снизить вероятность возникновения этих симптомов при установке обновления с исправлением, рекомендуется использовать процедуру режима обслуживания хранилища ниже, чтобы установить [18 октября 2018, Накопительное обновление для Windows server 2016](https://support.microsoft.com/help/4462928) или более поздней версии, если на узлах в данный момент установлено накопительное обновление windows Server 2016, выпущенное [8 мая 2018](https://support.microsoft.com/help/4103723) г. до [9 октября 2018](https://support.microsoft.com/help/KB4462917).
@@ -214,16 +214,16 @@ Volume Name:
 ```
 Event Source: Microsoft-Windows-FailoverClustering
 Event ID: 5120
-Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished. 
+Description:    Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_IO_TIMEOUT(c00000b5)'. All I/O will temporarily be queued until a path to the volume is reestablished.
 
-Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.    
+Cluster Shared Volume 'CSVName' ('Cluster Virtual Disk (CSVName)') has entered a paused state because of 'STATUS_CONNECTION_DISCONNECTED(c000020c)'. All I/O will temporarily be queued until a path to the volume is reestablished.
 ```
 
 Когда регистрируется событие 5120, создается динамический дамп для получения отладочной информации, которая может привести к дополнительным симптомам или повлиять на производительность. Создание динамического дампа создает краткую паузу, чтобы сделать возможным создание моментального снимка памяти для записи файла дампа. Системы, имеющие большой объем памяти и находящиеся под нагрузкой, могут привести к тому, что узлы удаляют членство в кластере, а также регистрировать следующее событие 1135.
 
 ```
 Event source: Microsoft-Windows-FailoverClustering
-Event ID: 1135  
+Event ID: 1135
 Description: Cluster node 'NODENAME'was removed from the active failover cluster membership. The Cluster service on this node may have stopped. This could also be due to the node having lost communication with other active nodes in the failover cluster. Run the Validate a Configuration wizard to check your network configuration. If the condition persists, check for hardware or software errors related to the network adapters on this node. Also check for failures in any other network components to which the node is connected such as hubs, switches, or bridges.
 ```
 
@@ -239,7 +239,7 @@ Description: Cluster node 'NODENAME'was removed from the active failover cluster
    ```powershell
    Suspend-ClusterNode -Drain
    ```
-3. Вставьте диски на этом узле в режиме обслуживания хранилища, выполнив следующий командлет: 
+3. Вставьте диски на этом узле в режиме обслуживания хранилища, выполнив следующий командлет:
 
    ```powershell
    Get-StorageFaultDomain -type StorageScaleUnit | Where-Object {$_.FriendlyName -eq "<NodeName>"} | Enable-StorageMaintenanceMode
@@ -303,95 +303,93 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 
 ## <a name="slow-io-performance"></a>Производительность медленных операций ввода-вывода
 
-Если вы видите скорость медленных операций ввода-вывода, проверьте, включен ли кэш в конфигурации Локальные дисковые пространства. 
+Если вы видите скорость медленных операций ввода-вывода, проверьте, включен ли кэш в конфигурации Локальные дисковые пространства.
 
-Существует два способа проверки: 
+Существует два способа проверки:
 
 
-1. Использование журнала кластера. Откройте журнал кластера в текстовом редакторе и выполните поиск по запросу "[= = = SBL Disks = = =]". Это будет список дисков на узле, на котором был создан журнал. 
+1. Использование журнала кластера. Откройте журнал кластера в текстовом редакторе и выполните поиск по запросу "[= = = SBL Disks = = =]". Это будет список дисков на узле, на котором был создан журнал.
 
-     Диск с включенным кэшем. Пример: Обратите внимание, что состояние — Качедискстатеинитиализедандбаунд, а здесь есть GUID, представленный здесь. 
+     Диск с включенным кэшем. Пример: Обратите внимание, что состояние — Качедискстатеинитиализедандбаунд, а здесь есть GUID, представленный здесь.
 
    ```
    [=== SBL Disks ===]
     {26e2e40f-a243-1196-49e3-8522f987df76},3,false,true,1,48,{1ff348f1-d10d-7a1a-d781-4734f4440481},CacheDiskStateInitializedAndBound,1,8087,54,false,false,HGST    ,HUH721010AL4200 ,        7PG3N2ER,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    Кэш не включен: здесь можно увидеть, что GUID отсутствует, а состояние — Качедискстатенонхибрид. 
+    Кэш не включен: здесь можно увидеть, что GUID отсутствует, а состояние — Качедискстатенонхибрид.
     ```
    [=== SBL Disks ===]
     {426f7f04-e975-fc9d-28fd-72a32f811b7d},12,false,true,1,24,{00000000-0000-0000-0000-000000000000},CacheDiskStateNonHybrid,0,0,0,false,false,HGST    ,HUH721010AL4200 ,        7PGXXG6C,A21D,{d5e27a3b-42fb-410a-81c6-9d8cc12da20c},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
     ```
 
-    Кэш не включен: Если все диски одного типа имеют один и тот же вариант, по умолчанию не включено. Здесь можно увидеть, что идентификатор GUID отсутствует, а состояние — Качедискстатеинелигибледатапартитион. 
+    Кэш не включен: Если все диски одного типа имеют один и тот же вариант, по умолчанию не включено. Здесь можно увидеть, что идентификатор GUID отсутствует, а состояние — Качедискстатеинелигибледатапартитион.
     ```
-    {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0], 
-    ```  
-2. Использование жет-фисикалдиск. XML из СддкдиагностиЦинфо
-    1. Откройте XML-файл, используя "$d = Import-Clixml Жетфисикалдиск. XML".
+    {d543f90c-798b-d2fe-7f0a-cb226c77eeed},10,false,false,1,20,{00000000-0000-0000-0000-000000000000},CacheDiskStateIneligibleDataPartition,0,0,0,false,false,NVMe    ,INTEL SSDPE7KX02,  PHLF7330004V2P0LGN,0170,{79b4d631-976f-4c94-a783-df950389fd38},[R/M 0 R/U 0 R/T 0 W/M 0 W/U 0 W/T 0],
+    ```
+2. Использование Get-PhysicalDisk.xml из СддкдиагностиЦинфо
+    1. Откройте XML-файл, используя "$d = Import-Clixml GetPhysicalDisk.XML".
     2. Выполните команду "хранилище данных IPMO".
-    3. выполните команду "$d". Обратите внимание, что используется автоматический выбор, а не журнал. Вы увидите следующий результат: 
+    3. выполните команду "$d". Обратите внимание, что используется автоматический выбор, а не журнал. Вы увидите следующий результат:
 
    |FriendlyName|  SerialNumber| MediaType| Canpool задано| OperationalStatus| HealthStatus| Использование| Размер|
    |-----------|------------|---------| -------| -----------------| ------------| -----| ----|
-   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| Ложь|   ОК|                Исправна|      Автоматическое выделение 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  Ложь|    ОК|                Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  Ложь|  ОК|                Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| Ложь| ОК|    Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| Ложь|ОК|       Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| Ложь| ОК|      Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| Ложь| ОК|      Исправна|Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| Ложь| ОК|  Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| Ложь| ОК| Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| Ложь| ОК|Исправна| Автоматический выбор| 1,82 ТБ|
-   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| Ложь| ОК| Исправна| Автоматический выбор |1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02| PHLF733000372P0LGN| SSD| Неверно|   ОК|                Работоспособно|      Автоматическое выделение 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504008J2P0LGN| SSD|  Неверно|    ОК|                Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02| PHLF7504005F2P0LGN| SSD|  Неверно|  ОК|                Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002A2P0LGN| SSD| Неверно| ОК|    Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02| PHLF7504004T2P0LGN |SSD| Неверно|ОК|       Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF7504002E2P0LGN| SSD| Неверно| ОК|      Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330002Z2P0LGN| SSD| Неверно| ОК|      Работоспособно|Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF733000272P0LGN |SSD| Неверно| ОК|  Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02 |PHLF7330001J2P0LGN |SSD| Неверно| ОК| Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02| PHLF733000302P0LGN |SSD| Неверно| ОК|Работоспособно| Автоматический выбор| 1,82 ТБ|
+   |NVMe INTEL SSDPE7KX02| PHLF7330004D2P0LGN |SSD| Неверно| ОК| Работоспособно| Автоматический выбор |1,82 ТБ|
 
 ## <a name="how-to-destroy-an-existing-cluster-so-you-can-use-the-same-disks-again"></a>Как уничтожить существующий кластер, чтобы вы могли использовать те же диски снова
 
 В кластере Локальные дисковые пространства после отключения Локальные дисковые пространства и использования процесса очистки, описанного в разделе [чистые диски](deploy-storage-spaces-direct.md#step-31-clean-drives), кластерный пул носителей по-прежнему остается в автономном состоянии, а служба работоспособности удаляется из кластера.
 
-Следующим шагом является удаление искусственного пула носителей: 
+Следующим шагом является удаление искусственного пула носителей:
    ```powershell
    Get-ClusterResource -Name "Cluster Pool 1" | Remove-ClusterResource
    ```
 
 Теперь при запуске **Get-физический** на любом из узлов вы увидите все диски в пуле. Например, в лаборатории с кластером из 4 узлов с 4 дисками SAS 100 ГБ каждого из этих узлов. В этом случае после отключения прямого дискового пространства, которое удаляет объект SBL (уровень шины хранилища), но оставляет фильтр, если вы запускаете **Get-** четвертый, он должен сообщить 4 диска за исключением локального диска операционной системы. Вместо этого отображается 16. Это одинаково для всех узлов в кластере. При выполнении команды **Get-Disk** вы увидите, что локально подключенные диски пронумерованы как 0, 1, 2 и т. д., как показано в примере выходных данных:
 
-|Номер| Понятное имя| Серийный номер|HealthStatus|OperationalStatus|Общий размер| Стиль раздела|
+|Число| Понятное имя| Серийный номер|HealthStatus|OperationalStatus|Общий размер| Стиль раздела|
 |-|-|-|-|-|-|-|-|
-|0|MSFT Вирту...  ||Исправна | В сети|  127 ГБ| GPT|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-|1|MSFT Вирту...||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-|2|MSFT Вирту...||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-|4|MSFT Вирту...||Исправна| Вне сети| 100 ГБ| RAW|
-|3|MSFT Вирту...||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
-||MSFT Вирту... ||Исправна| Вне сети| 100 ГБ| RAW|
+|0|MSFT Вирту...  ||Работоспособно | Миграция по сети|  127 ГБ| GPT|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+|1|MSFT Вирту...||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+|2|MSFT Вирту...||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+|4|MSFT Вирту...||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+|3|MSFT Вирту...||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
+||MSFT Вирту... ||Работоспособно| Автономная миграция| 100 ГБ| RAW|
 
-
-## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>Сообщение об ошибке "неподдерживаемый тип носителя" при создании кластера Локальные дисковые пространства с помощью Enable-ClusterS2D  
+## <a name="error-message-about-unsupported-media-type-when-you-create-an-storage-spaces-direct-cluster-using-enable-clusters2d"></a>Сообщение об ошибке "неподдерживаемый тип носителя" при создании кластера Локальные дисковые пространства с помощью Enable-ClusterS2D
 
 При выполнении командлета **Enable-ClusterS2D** могут появиться ошибки, аналогичные приведенным ниже.
 
 ![Сценарий 6. сообщение об ошибке](media/troubleshooting/scenario-error-message.png)
 
-Чтобы устранить эту проблему, убедитесь, что адаптер HBA настроен в режиме HBA. Не следует настраивать HBA в режиме RAID.  
+Чтобы устранить эту проблему, убедитесь, что адаптер HBA настроен в режиме HBA. Не следует настраивать HBA в режиме RAID.
 
 ## <a name="enable-clusterstoragespacesdirect-hangs-at-waiting-until-sbl-disks-are-surfaced-or-at-27"></a>Enable-Клустерсторажеспацесдирект зависает в состоянии "ожидание на диске SBL" или 27%
 
 В отчете о проверке вы увидите следующие сведения:
 
-    Disk <identifier> connected to node <nodename> returned a SCSI Port Association and the corresponding enclosure device could not be found. The hardware is not compatible with Storage Spaces Direct (S2D), contact the hardware vendor to verify support for SCSI Enclosure Services (SES). 
-
+Диск, `<identifier>` подключенный к узлу, `<nodename>` вернул связь с портом SCSI, а соответствующее устройство корпуса не найдено. Оборудование несовместимо с Локальные дисковые пространства (S2D). обратитесь к поставщику оборудования, чтобы проверить поддержку для служб отсека SCSI (SES).
 
 Эта ошибка связана с картой расширения SAS HPE, которая находится между дисками и картой HBA. Расширитель SAS создает дубликат идентификатора между первым диском, подключенным к расширительу, и самого расширителя.  Это разрешено в [HPE смарт-массивов расширения SAS встроенного по: 4,02](https://support.hpe.com/hpsc/swd/public/detail?sp4ts.oid=7304566&swItemId=MTX_ef8d0bf4006542e194854eea6a&swEnvOid=4184#tab3).
 
@@ -399,27 +397,27 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 Вы можете столкнуться с проблемой, когда устройство Intel SSD DC P4600 Series сообщает примерно 16 байт NGUID для нескольких пространств имен, таких как 0100000001000000E4D25C000014E214 или 0100000001000000E4D25C0000EEE214, в примере ниже.
 
 
-|               UniqueID               | DeviceID | MediaType | BusType |               номер               |      size      | canpool задано | FriendlyName | OperationalStatus |
+|               uniqueid               | deviceid | MediaType | BusType |               номер               |      размер;      | canpool задано | FriendlyName | OperationalStatus |
 |--------------------------------------|----------|-----------|---------|------------------------------------------|----------------|---------|--------------|-------------------|
-|           5000CCA251D12E30           |    0     |    Жесткий диск    |   SAS   |                 7PKR197G                 | 10000831348736 |  Ложь  |     хгст     |  HUH721010AL4200  |
-| EUI. 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  Истина   |    СЕРВЕР     |   SSDPE2KE016T7   |
-| EUI. 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  Истина   |    СЕРВЕР     |   SSDPE2KE016T7   |
-| EUI. 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  Истина   |    СЕРВЕР     |   SSDPE2KE016T7   |
-| EUI. 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  Истина   |    СЕРВЕР     |   SSDPE2KE016T7   |
+|           5000CCA251D12E30           |    0     |    HDD    |   SAS   |                 7PKR197G                 | 10000831348736 |  Неверно  |     хгст     |  HUH721010AL4200  |
+| EUI. 0100000001000000E4D25C000014E214 |    4     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  Верно   |    СЕРВЕР     |   SSDPE2KE016T7   |
+| EUI. 0100000001000000E4D25C000014E214 |    5     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_0014_E214. | 1600321314816  |  Верно   |    СЕРВЕР     |   SSDPE2KE016T7   |
+| EUI. 0100000001000000E4D25C0000EEE214 |    6     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  Верно   |    СЕРВЕР     |   SSDPE2KE016T7   |
+| EUI. 0100000001000000E4D25C0000EEE214 |    7     |    SSD    |  NVMe   | 0100_0000_0100_0000_E4D2_5C00_00EE_E214. | 1600321314816  |  Верно   |    СЕРВЕР     |   SSDPE2KE016T7   |
 
 Чтобы устранить эту проблему, обновите встроенное по на дисках Intel до последней версии.  Для устранения этой проблемы известны версии встроенного по QDV101B1 с мая 2018.
 
 В [2018. в выпуске средства центра обработки данных Intel SSD](https://downloadmirror.intel.com/27778/eng/Intel_SSD_Data_Center_Tool_3_0_12_Release_Notes_330715-026.pdf) входит обновление встроенного по QDV101B1 для ряда P4600 Intel SSD DC.
 
 
-## <a name="physical-disk-healthy-and-operational-status-is-removing-from-pool"></a>Физический диск "Исправен" и оперативное состояние "Удаление из пула" 
+## <a name="physical-disk-healthy-and-operational-status-is-removing-from-pool"></a>Физический диск "Исправен" и оперативное состояние "Удаление из пула"
 
-В кластере Windows Server 2016 Локальные дисковые пространства может отображаться Хеалсстатус для одного или нескольких физических дисков как "Исправен", а для OperationalStatus — "(удаление из пула, ОК)". 
+В кластере Windows Server 2016 Локальные дисковые пространства может отображаться Хеалсстатус для одного или нескольких физических дисков как "Исправен", а для OperationalStatus — "(удаление из пула, ОК)".
 
 "Удаление из пула" является намерением, когда командлет **Remove-физический** вызывается, но хранится в состоянии работоспособности для поддержания состояния и позволяет выполнить восстановление в случае сбоя операции удаления. Можно вручную изменить значение OperationalStatus на работоспособное с помощью одного из следующих методов:
 
 - Удалите физический диск из пула, а затем снова добавьте его.
-- Запустите [сценарий КЛЕАР-фисикалдискхеалсдата. ps1](https://go.microsoft.com/fwlink/?linkid=2034205) , чтобы отменить намерение. (Доступно для загрузки в виде. TXT. Его необходимо сохранить как. Файл PS1 перед запуском.)
+- Запустите [сценарийClear-PhysicalDiskHealthData.ps1](https://go.microsoft.com/fwlink/?linkid=2034205) , чтобы отменить намерение. (Доступно для загрузки в виде. TXT. Его необходимо сохранить как. Файл PS1 перед запуском.)
 
 Ниже приведено несколько примеров, демонстрирующих выполнение сценария.
 
@@ -443,23 +441,23 @@ reg add "HKLM\Software\Microsoft\Windows\Windows Error Reporting\FullLiveKernelR
 
 Если вы хотите протестировать производительность Локальные дисковые пространства, мы рекомендуем использовать Вмфлит и Diskspd для загрузки и нагрузочного тестирования серверов, чтобы получить базовую строку и задать ожидания Локальные дисковые пространстваной производительности.
 
-## <a name="expected-events-that-you-would-see-on-rest-of-the-nodes-during-the-reboot-of-a-node"></a>Ожидаемые события, которые будут отображаться на остальных узлах во время перезагрузки узла. 
+## <a name="expected-events-that-you-would-see-on-rest-of-the-nodes-during-the-reboot-of-a-node"></a>Ожидаемые события, которые будут отображаться на остальных узлах во время перезагрузки узла.
 
-Можно спокойно пропускать эти события: 
+Можно спокойно пропускать эти события:
 
-    Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX }. This can occur if a cable failed or was disconnected, or if the disk itself failed. 
+```
+Event ID 205: Windows lost communication with physical disk {XXXXXXXXXXXXXXXXXXXX }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
 
-    Event ID 203: Windows lost communication with physical disk {xxxxxxxxxxxxxxxxxxxxxxxx }. This can occur if a cable failed or was disconnected, or if the disk itself failed. 
+Event ID 203: Windows lost communication with physical disk {xxxxxxxxxxxxxxxxxxxxxxxx }. This can occur if a cable failed or was disconnected, or if the disk itself failed.
+```
 
-Если вы используете виртуальные машины Azure, это событие можно игнорировать:
-
-    Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption may occur. 
+Если вы используете виртуальные машины Azure, это событие можно игнорировать:`Event ID 32: The driver detected that the device \Device\Harddisk5\DR5 has its write cache enabled. Data corruption may occur.`
 
 ## <a name="slow-performance-or-lost-communication-io-error-detached-or-no-redundancy-errors-for-deployments-that-use-intel-p3x00-nvme-devices"></a>Снижение производительности или "потеря связи", "ошибка ввода-вывода", "отсоединено" или "нет избыточности" для развертываний, использующих устройства Intel P3x00 NVMe
 
-Мы обнаружили критическую ошибку, которая затрагивает некоторые Локальные дисковые пространства пользователей, использующих оборудование на базе семейства Intel P3x00 НВМ Express (NVMe) с версиями встроенного по до "технического выпуска 8". 
+Мы обнаружили критическую ошибку, которая затрагивает некоторые Локальные дисковые пространства пользователей, использующих оборудование на базе семейства Intel P3x00 НВМ Express (NVMe) с версиями встроенного по до "технического выпуска 8".
 
 >[!NOTE]
 > У отдельных изготовителей оборудования могут быть устройства, основанные на семействе устройств NVMe семейства Intel P3x00 с уникальными строками версий встроенного по. Обратитесь к изготовителю оборудования за дополнительными сведениями о последней версии встроенного по.
 
-Если в развертывании используется оборудование, основанное на семействе устройств NVMe под управлением Intel P3x00, рекомендуется немедленно применить последнюю версию доступного встроенного по (по крайней мере в техническом выпуске 8). В этой [статье Служба поддержки Майкрософт](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) содержатся дополнительные сведения об этой ошибке. 
+Если в развертывании используется оборудование, основанное на семействе устройств NVMe под управлением Intel P3x00, рекомендуется немедленно применить последнюю версию доступного встроенного по (по крайней мере в техническом выпуске 8). В этой [статье Служба поддержки Майкрософт](https://support.microsoft.com/help/4052341/slow-performance-or-lost-communication-io-error-detached-or-no-redunda) содержатся дополнительные сведения об этой ошибке.

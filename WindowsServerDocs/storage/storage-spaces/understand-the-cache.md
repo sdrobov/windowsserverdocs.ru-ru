@@ -9,12 +9,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 07/17/2019
 ms.localizationpriority: medium
-ms.openlocfilehash: f275e7657fc1e5d9ab982726c5b9b9adee381830
-ms.sourcegitcommit: 771db070a3a924c8265944e21bf9bd85350dd93c
+ms.openlocfilehash: b5c4ddf6575979722aa246e541902544551fe577
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2020
-ms.locfileid: "85473471"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769442"
 ---
 # <a name="understanding-the-cache-in-storage-spaces-direct"></a>Общие сведения о кэше локальных дисковых пространств
 
@@ -35,7 +35,7 @@ ms.locfileid: "85473471"
 <table>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/NVMe-100px.png">
+            <img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)" >
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             Накопитель NVMe (Non-Volatile Memory Express)
@@ -43,7 +43,7 @@ ms.locfileid: "85473471"
     </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/SSD-100px.png">
+            <img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD" >
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             Твердотельный накопитель (SSD) SATA/SAS
@@ -51,7 +51,7 @@ ms.locfileid: "85473471"
     </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/HDD-100px.png">
+            <img src="media/understand-the-cache/HDD-100px.png"alt="Image of HDD" >
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             Жесткий диск (HDD)
@@ -117,7 +117,7 @@ ms.locfileid: "85473471"
 
 При наличии накопителей всех трех типов накопители NVMe обеспечивают кэширование для твердотельных накопителей (SSD) и жестких дисков. Режим работы соответствует описанному ранее: для накопителей SSD кэшируются только операции записи, для жестких дисков — операции чтения и записи. Работа по кэшированию жестких дисков равномерно распределяется среди кэш-накопителей.
 
-## <a name="summary"></a>Сводка
+## <a name="summary"></a>Итоги
 
 В этой таблице приведена сводная информация о том, какие накопители используются для кэширования, какие — для хранения данных и как осуществляется кэширование в каждом варианте развертывания.
 

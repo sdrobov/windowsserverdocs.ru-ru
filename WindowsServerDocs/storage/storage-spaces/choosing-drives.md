@@ -9,12 +9,12 @@ ms.topic: article
 author: cosmosdarwin
 ms.date: 07/01/2020
 ms.localizationpriority: medium
-ms.openlocfilehash: bdd5264394c94748b7720842cf8ff7e01e1375e7
-ms.sourcegitcommit: d5e27c1f2f168a71ae272bebf8f50e1b3ccbcca3
+ms.openlocfilehash: aae554c87b8a4ac6005ad359bc474026f5f1ed9e
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2020
-ms.locfileid: "86965426"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769412"
 ---
 # <a name="choosing-drives-for-storage-spaces-direct"></a>Выбор дисков для локальных дисковых пространств
 
@@ -29,7 +29,7 @@ ms.locfileid: "86965426"
 <table>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/pmem-100px.png">
+            <img src="media/understand-the-cache/pmem-100px.png" alt="Image of PMem (persistent memory)">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             <b>PMem</b> — это постоянная память, новый тип хранения с низкой задержкой и высокой производительностью.
@@ -37,7 +37,7 @@ ms.locfileid: "86965426"
     </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/NVMe-100px.png">
+            <img src="media/understand-the-cache/NVMe-100px.png" alt="Image of NVMe (Non-Volatile Memory Express)">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             <b>NVMe</b> (Non-Volatile Memory Express) — это твердотельные диски, подключенные непосредственно к шине PCIe. Распространенные форм-факторы: 2,5 дюйма U.2, плата расширения PCIe (AIC) и M.2. NVMe предлагает больше операций ввода-вывода в секунду и пропускную способность с низкой задержкой, чем любой поддерживаемый нами тип диска, за исключением постоянного объема памяти.
@@ -45,7 +45,7 @@ ms.locfileid: "86965426"
     </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px" >
-            <img src="media/understand-the-cache/SSD-100px.png">
+            <img src="media/understand-the-cache/SSD-100px.png" alt="Image of SSD drive">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             <b>SSD</b> относится к твердотельным накопителям, которые подключаются через стандартные диски SATA или SAS.
@@ -53,7 +53,7 @@ ms.locfileid: "86965426"
     </tr>
     <tr style="border: 0;">
         <td style="padding: 10px; border: 0; width:70px">
-            <img src="media/understand-the-cache/HDD-100px.png">
+            <img src="media/understand-the-cache/HDD-100px.png" alt="Image of HDD">
         </td>
         <td style="padding: 10px; border: 0;" valign="middle">
             <b>Жесткие диски</b> — это вращающиеся механические магнитные диски большой емкости.

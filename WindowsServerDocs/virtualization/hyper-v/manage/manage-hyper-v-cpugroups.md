@@ -7,16 +7,16 @@ ms.topic: article
 ms.prod: windows-server
 ms.service: windows-10-hyperv
 ms.assetid: cc7bb88e-ae75-4a54-9fb4-fc7c14964d67
-ms.openlocfilehash: ebb5f9a0ca9c50a5e5357e3dd2c755095da98d11
-ms.sourcegitcommit: 32f810c5429804c384d788c680afac427976e351
+ms.openlocfilehash: bcae278caf088bc544fb6686450eacdfdf88237b
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83203538"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87769602"
 ---
 # <a name="virtual-machine-resource-controls"></a>Элементы управления ресурсами виртуальной машины
 
-> Область применения. Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019
+> Область применения. Windows Server 2016, Microsoft Hyper-V Server 2016, Windows Server 2019, Microsoft Hyper-V Server 2019.
 
 В этой статье описываются ресурсы и элементы управления изоляцией Hyper-V для виртуальных машин.  Эти возможности, которые мы будем называть группами ЦП виртуальных машин или просто "группами ЦП", появились в Windows Server 2016.  Группы ЦП позволяют администраторам Hyper-V лучше управлять ресурсами ЦП узла и распределять их между гостевыми виртуальными машинами.  С помощью групп ЦП администраторы Hyper-V могут:
 
@@ -33,7 +33,7 @@ ms.locfileid: "83203538"
 >[!NOTE]
 >Для создания групп ЦП и управления ими можно использовать только HCS. интерфейсы управления WMI и PowerShell для диспетчера Hyper-V не поддерживают группы ЦП.
 
-Корпорация Майкрософт предоставляет программу командной строки кпуграупс. exe в [центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=865968) , которая использует интерфейс HCS для управления группами ЦП.  Эта служебная программа также может отображать топологию ЦП узла.
+Корпорация Майкрософт предоставляет программу командной строки, cpugroups.exe, в [центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?linkid=865968) , которая использует интерфейс HCS для управления группами ЦП.  Эта служебная программа также может отображать топологию ЦП узла.
 
 ## <a name="how-cpu-groups-work"></a>Как работают группы ЦП
 
@@ -41,15 +41,15 @@ ms.locfileid: "83203538"
 
 Ограничение группы ЦП вычисляется как G = *n* x *C*, где:
 
-    *G* is the amount of host LP we'd like to assign to the group
-    *n* is the total number of logical processors (LPs) in the group
-    *C* is the maximum CPU allocation — that is, the class of service desired for the group, expressed as a percentage of the system's total compute capacity
+- *G* — это количество узлов LP, которое необходимо назначить группе
+- *n* — общее число логических процессоров (LPS) в группе.
+- *В — это* максимальное выделение ресурсов ЦП, то есть класс службы, который требуется для группы, выраженный в процентах от общей вычислительной мощности системы.
 
 Например, рассмотрим группу ЦП, настроенную с 4 логическими процессорами (LPs), и ограничение 50%.
 
-    G = n * C
-    G = 4 * 50%
-    G = 2 LP's worth of CPU time for the entire group
+- G = n * C
+- G = 4 * 50%
+- G = 2 время ЦП для всей группы в LP
 
 В этом примере для группы ЦП «G» выделяется 2-е время ЦП.
 
@@ -70,9 +70,9 @@ ms.locfileid: "83203538"
 
 Чтобы создать уровень "B", узел админстартор устанавливает ограничение для группы на 50%:
 
-    G = n * C
-    G = 8 * 50%
-    G = 4 LP's worth of CPU time for the entire group
+- G = n * C
+- G = 8 * 50%
+- G = 4 время ЦП для всей группы
 
 Администратор узла добавляет одну виртуальную машину "B" уровня.
 На этом этапе Наша виртуальная машина уровня "B" может использовать не более 50% ресурсов центрального процессора узла или эквивалент 4 LPs в нашем примере системы.

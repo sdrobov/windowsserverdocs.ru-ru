@@ -1,23 +1,23 @@
 ---
-title: Устранение неполадок отказоустойчивого кластера с помощью отчеты об ошибках Windows
+title: Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows
 description: Устранение неполадок отказоустойчивого кластера с помощью отчетов WER с подробными сведениями о сборе отчетов и диагностике распространенных проблем.
 ms.prod: windows-server
 ms.technology: storage-failover-clustering
-ms.author: vpetter
-author: dcuomo
+ms.author: johnmar
+author: JohnMarlin-MSFT
 ms.date: 03/27/2018
-ms.openlocfilehash: e8db88dc4fe3ad9176299c5b423a7aac6093f254
-ms.sourcegitcommit: b00d7c8968c4adc8f699dbee694afe6ed36bc9de
+ms.openlocfilehash: f888b7f49c2bf97eb42070a6028b137aeb730406
+ms.sourcegitcommit: acfdb7b2ad283d74f526972b47c371de903d2a3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80827357"
+ms.lasthandoff: 08/05/2020
+ms.locfileid: "87768541"
 ---
-# <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Устранение неполадок отказоустойчивого кластера с помощью отчеты об ошибках Windows 
+# <a name="troubleshooting-a-failover-cluster-using-windows-error-reporting"></a>Устранение неполадок отказоустойчивого кластера с помощью отчетов об ошибках Windows
 
 > Область применения: Windows Server 2019, Windows Server 2016, Windows Server
 
-Отчеты об ошибках Windows (WER) — это гибкая инфраструктура обратной связи на основе событий, призванная помочь опытным администраторам или уровням 3 собирать сведения о проблемах с оборудованием и программным обеспечением, которые Windows может обнаружить, сообщить о них в корпорацию Майкрософт, и предоставляют пользователям все доступные решения. Эта [ссылка](https://docs.microsoft.com/powershell/module/windowserrorreporting/) содержит описания и синтаксис для всех командлетов виндовсерроррепортинг.
+Отчеты об ошибках Windows (WER) — это гибкая инфраструктура обратной связи на основе событий, призванная помочь опытным администраторам или уровням 3 собирать сведения о проблемах с оборудованием и программным обеспечением, которые Windows может обнаружить, передавать сведения в корпорацию Майкрософт и предоставлять пользователям доступные решения. Эта [ссылка](https://docs.microsoft.com/powershell/module/windowserrorreporting/) содержит описания и синтаксис для всех командлетов виндовсерроррепортинг.
 
 Сведения об устранении неполадок, приведенных ниже, могут быть полезны при устранении сложных проблем, которые были переданы в корпорацию Майкрософт для рассмотрения.
 
@@ -36,7 +36,7 @@ ms.locfileid: "80827357"
 PS C:\Windows\system32> (get-cluster).EnabledEventLogs
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 Microsoft-Windows-Hyper-V-VmSwitch-Diagnostic,4,0xFFFFFFFD
 Microsoft-Windows-SMBDirect/Debug,4
@@ -106,7 +106,7 @@ get-WinEvent -FilterXML "<QueryList><Query><Select Path='Microsoft-Windows-Group
 PS C:\Windows\system32> dir c:\ProgramData\Microsoft\Windows\WER\ReportQueue
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -143,7 +143,7 @@ Directory of C:\ProgramData\Microsoft\Windows\WER\ReportQueue
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -171,7 +171,7 @@ Directory of c:\ProgramData\Microsoft\Windows\WER\ReportArchive
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_b46b8883d892cfa8a26263afca228b17df8133d_00000000_cab_08abc39c
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -228,7 +228,7 @@ Volume Serial Number is 4031-E397
 Затем начните рассмотрение файла **Report. wer** , чтобы узнать, что не удалось выполнить.
 
 ```
-EventType=Failover_clustering_resource_error 
+EventType=Failover_clustering_resource_error
 <skip>
 Sig[0].Name=ResourceType
 Sig[0].Value=Physical Disk
@@ -258,7 +258,7 @@ DynamicSig[29].Value=2017//12//12-22:38:05.485
 PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQuery
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-Kernel-PnP/Configuration">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
 <QueryList><Query Id="0"><Select Path="Microsoft-Windows-ReFS/Operational">*[System[TimeCreated[timediff(@SystemTime) &lt;= 600000]]]</Select></Query></QueryList>
@@ -299,20 +299,20 @@ PS C:\Windows\system32> (Get-ClusterResourceType -Name "Physical Disk").DumpLogQ
 
 ![Журналы, сгруппированные по поставщикам](media/troubleshooting-using-WER-reports/logs-grouped-by-providers.png)
 
-Чтобы выяснить причину сбоя диска, перейдите к событиям в разделе **фаиловерклустеринг/Diagnostic** and **фаиловерклустеринг/диагностиквербосе**. Затем выполните следующий запрос: **EventLog. EVENTDATA ["логстринг"] содержит "диск кластера 10"** .  В результате вы получите следующие выходные данные:
+Чтобы выяснить причину сбоя диска, перейдите к событиям в разделе **фаиловерклустеринг/Diagnostic** and **фаиловерклустеринг/диагностиквербосе**. Затем выполните следующий запрос: **EventLog. EVENTDATA ["логстринг"] содержит "диск кластера 10"**.  В результате вы получите следующие выходные данные:
 
 ![Выходные данные выполняемого запроса журнала](media/troubleshooting-using-WER-reports/output-of-running-log-query.png)
 
 
 ### <a name="physical-disk-timed-out"></a>Время ожидания физического диска истекло
 
-Чтобы диагностировать эту проблему, перейдите в папку отчетов WER. Папка содержит файлы журнала и файлы дампа для **RHS**, **ClusSvc. exe**и процесса, в котором размещается служба "**смфост**", как показано ниже:
+Чтобы диагностировать эту проблему, перейдите в папку отчетов WER. Папка содержит файлы журналов и файлы дампа для **RHS**, **clussvc.exe**и процесса, в котором размещается служба "**смфост**", как показано ниже:
 
 ```powershell
 PS C:\Windows\system32> dir C:\ProgramData\Microsoft\Windows\WER\ReportArchive\Critical_PhysicalDisk_64acaf7e4590828ae8a3ac3c8b31da9a789586d4_00000000_cab_1d94712e
 ```
 
-Ниже приведен пример выходных данных.
+Ниже приведен пример выхода.
 ```
 Volume in drive C is INSTALLTO
 Volume Serial Number is 4031-E397
@@ -395,7 +395,7 @@ DynamicSig[29].Name=HangThreadId
 DynamicSig[29].Value=10008
 ```
 
-Список служб и процессов, собранных в дампе, управляется следующим свойством: **PS C:\Windows\system32 > (Get-клустерресаурцетипе-Name "физический диск"). Думпсервицессмфост**
+Список служб и процессов, собранных в дампе, управляется следующим свойством: **PS C:\Windows\system32> (Get-клустерресаурцетипе-Name "физический диск"). Думпсервицессмфост**
 
 Чтобы выяснить причину зависания, откройте файлы приходилось. Затем выполните следующий запрос: **EventLog. EVENTDATA ["логстринг"] содержит "диск кластера 10"** . Вы получите следующие выходные данные:
 
@@ -406,9 +406,9 @@ DynamicSig[29].Value=10008
 ```
 # 21  Id: 1d98.2718 Suspend: 0 Teb: 0000000b`f1f7b000 Unfrozen
 # Child-SP          RetAddr           Call Site
-00 0000000b`f3c7ec38 00007ff8`455d25ca ntdll!ZwDelayExecution+0x14 
-01 0000000b`f3c7ec40 00007ff8`2ef19710 KERNELBASE!SleepEx+0x9a 
-02 0000000b`f3c7ece0 00007ff8`3bdf7fbf clusres!ResHardDiskOnlineOrTurnOffMMThread+0x2b0 
-03 0000000b`f3c7f960 00007ff8`391eed34 resutils!ClusWorkerStart+0x5f 
+00 0000000b`f3c7ec38 00007ff8`455d25ca ntdll!ZwDelayExecution+0x14
+01 0000000b`f3c7ec40 00007ff8`2ef19710 KERNELBASE!SleepEx+0x9a
+02 0000000b`f3c7ece0 00007ff8`3bdf7fbf clusres!ResHardDiskOnlineOrTurnOffMMThread+0x2b0
+03 0000000b`f3c7f960 00007ff8`391eed34 resutils!ClusWorkerStart+0x5f
 04 0000000b`f3c7f9d0 00000000`00000000 vfbasics+0xed34
 ```
