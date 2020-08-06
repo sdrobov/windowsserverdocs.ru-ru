@@ -7,12 +7,12 @@ ms.assetid: f22fc0a4-cb82-4e60-afe6-2d03145745e7
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1da24c4200cfbfeb5256cad51e72b0836d6af3c7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 74b79e3306ee34708b079b09f445a00ddfc15fdb
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180730"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838383"
 ---
 # <a name="migrate-windows-server-2008-foundation-to-windows-server-essentials"></a>Миграция с Windows Windows Server 2008 Foundation на Windows Server Essentials
 
@@ -41,7 +41,7 @@ ms.locfileid: "87180730"
 
 3.  [Присоединение компьютеров к новой сети Windows Server Essentials](Join-computers-to-the-new-Windows-Server-Essentials-network.md).  В этом разделе приводятся сведения о присоединении клиентских компьютеров к новой сети Windows Server Essentials и обновлении параметров групповая политика.
 
-4.  [Переместите параметры и данные Windows Server 2008 Foundation на целевой сервер](Move-Windows-Server-2008-Foundation-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.
+4.  [Переместите параметры и данные Windows Server 2008 Foundation на целевой сервер](./move-windows-server-2008-foundation-to-the-destination-server-for-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.
 
 5.  [Понизить и удалить исходный сервер из новой сети Windows Server Essentials](Demote-and-remove-the-Source-Server-from-the-new-Windows-Server-Essentials-network.md).  Прежде чем удалить исходный сервер из сети, необходимо принудительно обновить групповую политику и понизить уровень исходного сервера.
 

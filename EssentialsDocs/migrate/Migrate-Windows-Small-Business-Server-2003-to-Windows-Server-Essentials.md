@@ -7,12 +7,12 @@ ms.assetid: 119a7fbc-2c76-4aa3-8a7f-c7073d461b5b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6cd58247ec0591b293f8e11b1cfb24524fcd8658
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 4883f8daed21b89cac6906ddf68e06d71a95364e
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180710"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838393"
 ---
 # <a name="migrate-windows-small-business-server-2003-to-windows-server-essentials"></a>Миграция с Windows Small Business Server 2003 на Windows Server Essentials
 
@@ -49,7 +49,7 @@ ms.locfileid: "87180710"
 
 3.  [Присоединение компьютеров к новой сети Windows Server Essentials](Join-computers-to-the-new-Windows-Server-Essentials-network.md).  В этом разделе приводятся сведения о присоединении клиентских компьютеров к новой сети Windows Server Essentials и обновлении параметров групповая политика.
 
-4.  [Переместите параметры и данные SBS 2003 на целевой сервер](Move-Windows-SBS-2003-settings-and-data-to-the-Destination-Server-for-Windows-Server-Essentials-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.
+4.  [Переместите параметры и данные SBS 2003 на целевой сервер](./move-windows-sbs-2003-to-the-destination-server-for-migration.md).  Этот раздел содержит сведения о переносе данных и параметров с исходного сервера.
 
 5.  [Включите перенаправление папок на целевом сервере Windows Server Essentials](Enable-folder-redirection-on-the-Windows-Server-Essentials-Destination-Server.md).  Если перенаправление папок включено на исходном сервере, его можно включить на конечном сервере и затем удалить старый параметр групповой политики "Перенаправление папок".
 

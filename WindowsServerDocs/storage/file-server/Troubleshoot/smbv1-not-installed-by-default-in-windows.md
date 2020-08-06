@@ -15,7 +15,7 @@ ms.locfileid: "87769732"
 ---
 # <a name="smbv1-is-not-installed-by-default-in-windows-10-version-1709-windows-server-version-1709-and-later-versions"></a>SMBv1 не устанавливается по умолчанию в Windows 10 версии 1709, Windows Server версии 1709 и более поздних версиях.
 
-## <a name="summary"></a>Итоги
+## <a name="summary"></a>Сводка
 
 В Windows 10 с обновлением и Windows Server версии 1709 (RS3) и более поздних версий сетевой протокол SMB Server Block версии 1 (SMBv1) больше не устанавливается по умолчанию. Он был заменен на протоколы SMB 2.0 и более поздних версий, начиная с 2007. Корпорацией Майкрософт общедоступный протокол SMBv1 не рекомендуется в 2014.
 

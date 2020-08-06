@@ -7,12 +7,12 @@ ms.assetid: 68f2b05c-09eb-4cba-8db4-a91353b513c6
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3e79a4e7845298b013d99ff804c665e44cac4fbb
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 241e2225c9e1dfdea3189e938a04c4af4c033c3f
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180340"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838323"
 ---
 # <a name="troubleshoot-anywhere-access-in-windows-server-essentials"></a>Устранение неполадок повсеместного доступа в Windows Server Essentials
 
@@ -23,7 +23,7 @@ ms.locfileid: "87180340"
 Мастер исправления повсеместного доступа пытается определить и устранить неполадки с маршрутизатором, именем домена или брандмауэром, которые не позволяют пользователям сети получить удаленный доступ к ресурсам сервера.
 
 > [!NOTE]
-> Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
+> Для получения последних сведений об устранении неполадок из сообщества Windows Server Essentials мы рекомендуем посетить [форум Windows Server Essentials](/answers/topics/windows-server-essentials.html). Форум Windows Server Essentials — это отличный ресурс, на котором можно получить помощь или задать вопрос.
 
 ## <a name="to-repair-anywhere-access"></a>Исправление повсеместного доступа
 
@@ -33,7 +33,7 @@ ms.locfileid: "87180340"
 
 3. Щелкните **Восстановить**. Запускается мастер исправления повсеместного доступа.
 
-4. Нажмите кнопку **Далее**. Мастер анализирует работу повсеместного доступа, определяет проблему и пытается устранить неполадку.
+4. Щелкните **Далее**. Мастер анализирует работу повсеместного доступа, определяет проблему и пытается устранить неполадку.
 
 5. Если вы получите предупреждение по окончании работы мастера, можно щелкнуть **Повторить**, чтобы попытаться устранить проблему еще раз. Если вы продолжите получать предупреждение, ознакомьтесь с дополнительными сведениями о проблеме и рекомендациями по ее устранению в составе предупреждения.
 
@@ -50,4 +50,4 @@ ms.locfileid: "87180340"
 
 - [Раздел об устранении неполадок брандмауэра](Troubleshoot-your-firewall-in-Windows-Server-Essentials.md)
 
-- Последние проблемы, о которых сообщает сообщество Windows Server Essentials, см. на [форуме Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html) .
+- Последние проблемы, о которых сообщает сообщество Windows Server Essentials, см. на [форуме Windows Server Essentials](/answers/topics/windows-server-essentials.html) .

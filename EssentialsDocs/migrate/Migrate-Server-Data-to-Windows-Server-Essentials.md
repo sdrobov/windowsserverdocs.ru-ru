@@ -7,12 +7,12 @@ ms.assetid: dff2bf27-5d97-409b-81e8-286f7d933d90
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 3d031dacbe2eaf2a4928fc316eaacf1fcb1759e7
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 57fa74bbae9e8604dfbc31042f8a315abe34a817
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180740"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838423"
 ---
 # <a name="migrate-server-data-to-windows-server-essentials"></a>Миграция данных сервера в Windows Server Essentials
 
@@ -52,11 +52,11 @@ ms.locfileid: "87180740"
 
 ## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям
 
--    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](https://technet.microsoft.com/library/dn582043.aspx).
+-    Чтобы узнать о способах централизации хранилища данных, ограничения разрешений на доступ к данным и архивации данных локально и в облаке, прочтите статью [Защита данных в малых и средних предприятиях](/previous-versions/orphan-topics/ws.11/dn582043(v=ws.11)).
 
--    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](https://technet.microsoft.com/library/dn629457.aspx).
+-    Сведения о безопасном доступе к бизнес-данным на любом устройстве, подключенном к Интернету, из любого расположения см. [в статье безопасный удаленный доступ в малых и средних предприятиях](/previous-versions/windows/it-pro/solutions-guidance/dn629457(v=ws.11)).
 
--    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](https://technet.microsoft.com/library/dn747893.aspx).
+-    Чтобы узнать о способах безопасной совместной работы с партнерами и поставщиками, прочтите статью [Улучшение взаимодействия в компаниях малого и среднего бизнеса](/previous-versions/windows/it-pro/solutions-guidance/dn747893(v=ws.11)).
 
 ## <a name="see-also"></a>См. также
 

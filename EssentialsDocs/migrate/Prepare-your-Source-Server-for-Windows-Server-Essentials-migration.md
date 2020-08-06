@@ -7,12 +7,12 @@ ms.assetid: f5861ae9-77cb-4d37-b4c5-8f0757213385
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 1097520110f876a8c29e05547d4407a13f1c5057
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: bc672a3f2d9b74ff4ed283e826312f6661ba63f6
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180520"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838403"
 ---
 # <a name="prepare-your-source-server-for-windows-server-essentials-migration1"></a>Подготовка исходного сервера для Windows Server Essentials Migration1
 
@@ -39,7 +39,7 @@ ms.locfileid: "87180520"
 
 ##### <a name="to-back-up-the-source-server"></a>Чтобы создать резервную копию исходного сервера
 
-1.  Выполните полное резервное копирование исходного сервера. Дополнительные сведения о резервном копировании Windows Small Business Server 2011 Essentials см. в разделе [Получение дополнительных сведений о настройке резервного копирования сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx).
+1.  Выполните полное резервное копирование исходного сервера. Дополнительные сведения о резервном копировании Windows Small Business Server 2011 Essentials см. в разделе [Получение дополнительных сведений о настройке резервного копирования сервера](/previous-versions/windows/it-pro/windows-server-essentials-sbs/ff402413(v=ws.11)).
 
 2.  Убедитесь, что резервное копирование выполнено успешно. Чтобы проверить целостность резервной копии, произвольно выберите несколько файлов из резервной копии, восстановите их в другом месте и убедитесь, что они совпадают с исходными.
 
@@ -192,4 +192,3 @@ ms.locfileid: "87180520"
 
 > [!NOTE]
 >  Если вы использовали пакет SDK для Windows Small Business Server 2011 Essentials для разработки настраиваемой службы работоспособности или оповещений системы и вы хотите продолжить использовать надстройку с Windows Server Essentials, необходимо также обновить надстройку и развернуть ее на целевом сервере.
-

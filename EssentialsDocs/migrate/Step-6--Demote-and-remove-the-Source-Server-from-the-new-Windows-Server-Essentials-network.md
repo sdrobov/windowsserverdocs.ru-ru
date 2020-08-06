@@ -7,12 +7,12 @@ ms.assetid: 86244c66-2c5e-488d-adb8-112e1ca3e2e1
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: e78b3d50193cfd20df331d945fc549d3e3b35dbe
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: 955da6c37bd57711529de02277d10f4627851715
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180420"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838343"
 ---
 # <a name="step-6-demote-and-remove-the-source-server-from-the-new-windows-server-essentials-network"></a>Шаг 6. Понижение уровня и удаление исходного сервера из новой сети Windows Server Essentials
 
@@ -79,7 +79,7 @@ ms.locfileid: "87180420"
 
 4. Для завершения процесса вам может потребоваться выйти из системы и снова войти в нее. Нажмите кнопку **Да**, чтобы подтвердить действие.
 
-   Если выполняется миграция с Windows Server Essentials или предыдущих версий, чтобы понизить уровень сервера, см. раздел [удаление домен Active Directory Services](https://technet.microsoft.com/library/hh472163.aspx). После добавления исходного сервера в качестве члена рабочей группы и отключения его от сети этот сервер необходимо удалить из доменных служб Active Directory на конечном сервере.
+   Если выполняется миграция с Windows Server Essentials или предыдущих версий, чтобы понизить уровень сервера, см. раздел [удаление домен Active Directory Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/hh472163(v=ws.11)). После добавления исходного сервера в качестве члена рабочей группы и отключения его от сети этот сервер необходимо удалить из доменных служб Active Directory на конечном сервере.
 
    При переходе с Windows Server Essentials используйте диспетчер сервера, чтобы удалить роль домен Active Directory Services, тем самым вызывая понижение роли контроллера домена на исходном сервере с помощью следующей процедуры:
 
@@ -106,4 +106,3 @@ ms.locfileid: "87180420"
 
 
 Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-

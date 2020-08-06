@@ -7,12 +7,12 @@ ms.assetid: ac12e9a9-ba7a-480a-9249-6e216c70941b
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: b1d684b594d7ad0361c2859db4cf30bbb4239a30
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: d09b5a6425c2921bf2ad3cae57aecad9e4f35098
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180350"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838333"
 ---
 # <a name="support-windows-server-essentials"></a>Поддержка Windows Server Essentials
 
@@ -80,13 +80,13 @@ ms.locfileid: "87180350"
 
 ## <a name="ask-a-question-in-the-forums"></a>Задайте вопрос на форумах
 
-- [Общие сведения о Windows Server Essentials](https://docs.microsoft.com/answers/topics/windows-server-essentials.html)
+- [Общие сведения о Windows Server Essentials](/answers/topics/windows-server-essentials.html)
 
-- [Windows SBS 2011 Essentials](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
+- [Windows SBS 2011 Essentials](/answers/topics/windows-small-business-server.html)
 
-- [Small Business Server](https://docs.microsoft.com/answers/topics/windows-small-business-server.html)
+- [Small Business Server](/answers/topics/windows-small-business-server.html)
 
-- [Форумы по Windows Server](https://docs.microsoft.com/answers/topics/windows-server.html)
+- [Форумы по Windows Server](/answers/topics/windows-server.html)
 
 ## <a name="get-additional-help"></a>Получите дополнительную справку
 
@@ -110,7 +110,7 @@ ms.locfileid: "87180350"
 
 - [Поддержка для малого бизнеса](https://smallbusiness.support.microsoft.com/contact)
 
-- [Блог по Windows Server Essentials и Small Business Server](https://blogs.technet.com/b/sbs/)
+- [Блог по Windows Server Essentials и Small Business Server](/archive/blogs/sbs/)
 
 ## <a name="end-to-end-solution-guides"></a>Полные руководства по решениям
 

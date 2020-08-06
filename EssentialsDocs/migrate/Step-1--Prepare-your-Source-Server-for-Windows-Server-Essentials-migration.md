@@ -7,12 +7,12 @@ ms.assetid: 244c8a06-04c6-4863-8b52-974786455373
 author: nnamuhcs
 ms.author: coreyp
 manager: dongill
-ms.openlocfilehash: 6666a0f68863913c0c0a5a1b1e903eaebf5470a4
-ms.sourcegitcommit: d99bc78524f1ca287b3e8fc06dba3c915a6e7a24
+ms.openlocfilehash: c2007160c294074287437bedb7e94b318432a9b4
+ms.sourcegitcommit: 04637054de2bfbac66b9c78bad7bf3e7bae5ffb4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2020
-ms.locfileid: "87180490"
+ms.lasthandoff: 08/06/2020
+ms.locfileid: "87838353"
 ---
 # <a name="step-1-prepare-your-source-server-for-windows-server-essentials-migration"></a>Шаг 1. Подготовка исходного сервера для миграции Windows Server Essentials
 
@@ -44,12 +44,12 @@ ms.locfileid: "87180490"
 
    |Продукт|Ресурс|
    |---|---|
-   |Windows Small Business Server 2003|[Резервное копирование и восстановление Windows Small Business Server 2003](https://msdn.microsoft.com/library/cc875809.aspx)
+   |Windows Small Business Server 2003|[Резервное копирование и восстановление Windows Small Business Server 2003](/previous-versions/tn-archive/cc875809(v=technet.10))
    |Windows Small Business Server 2008|[Резервное копирование и восстановление данных на Windows Small Business Server 2008](https://technet.microsoft.com/library/cc527505\(WS.10\).aspx)
    |Windows Server 2008 Foundation|[Резервное копирование и восстановление](https://technet.microsoft.com/library/cc754097\(WS.10\).aspx)
-   |Windows Small Business Server 2011 Essentials|[Дополнительные сведения о настройке архивации сервера](https://technet.microsoft.com/library/server-backup-support-1.aspx)
-   |Windows Small Business Server 2011 Standard|[Управление резервным копированием сервера](https://technet.microsoft.com/library/cc527488.aspx)
-   |Windows Server Essentials|[Управление резервным копированием и восстановлением в Windows Server Essentials](https://technet.microsoft.com/library/jj713536.aspx)
+   |Windows Small Business Server 2011 Essentials|[Дополнительные сведения о настройке архивации сервера](/previous-versions/windows/it-pro/windows-server-essentials-sbs/ff402413(v=ws.11))
+   |Windows Small Business Server 2011 Standard|[Управление резервным копированием сервера](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc527488(v=ws.11))
+   |Windows Server Essentials|[Управление резервным копированием и восстановлением в Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/cc514417(v=msdn.10))
 
 ###  <a name="install-the-most-recent-service-packs"></a><a name="BKMK_InstallTheMostRecentServicePacksToPrepareForMigration"></a>Установка последних пакетов обновления
  Необходимо установить последние обновления и пакеты обновлений на исходный сервер перед миграцией.
@@ -172,17 +172,17 @@ ms.locfileid: "87180490"
  Если в качестве решения по электронной почте для домена вы выбрали Microsoft Office 365, выполните рекомендации из раздела [Миграция всех почтовых ящиков в облако путем прямой миграции Exchange](https://help.outlook.com/140/ms.exch.ecp.emailmigrationwizardexchangelearnmore.aspx) , чтобы начать миграцию электронной почты в Office 365. Перед установкой Windows Server Essentials рекомендуется выполнить перенос электронной почты.
 
 > [!NOTE]
->  Удаление локального сервера Exchange на исходном сервере является обязательным, если вы планируете интегрировать Windows Server Essentials с Office 365. Сведения о миграции общих папок сервера Exchange Server в Office 365 см. в записи блога [Сценарии миграции общих папок Microsoft Exchange 2013 для Office 365](https://blogs.technet.com/b/fmustafa/archive/2013/04/11/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365.aspx).
+>  Удаление локального сервера Exchange на исходном сервере является обязательным, если вы планируете интегрировать Windows Server Essentials с Office 365. Сведения о миграции общих папок сервера Exchange Server в Office 365 см. в записи блога [Сценарии миграции общих папок Microsoft Exchange 2013 для Office 365](/archive/blogs/fmustafa/microsoft-exchange-2013-public-folders-migration-scripts-for-office-365).
 >
 >  После завершения установки необходимо включить функцию интеграции Office 365 в Windows Server Essentials, выполнив команду **Интеграция с Microsoft Office 365** .
 
 > [!IMPORTANT]
->  Чтобы разрешить средству миграции Office 365 подключаться к серверу Exchange Server, работающему на исходном сервере, на исходном сервере необходимо включить протокол RPC через HTTP. Сведения о включении RPC через HTTP см. в разделе [Начальное развертывание протокола RPC через HTTP в Small Business Server 2003 (Standard или Premium)](https://technet.microsoft.com/library/bb123622%28EXCHG.65%29.aspx). Если после включения протокола RPC через HTTP не удается запустить средство миграции Office 365, просмотрите параметр **ValidPorts** в реестре по адресу HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy и убедитесь, что для исходного сервера указано полное доменное имя (FQDN). Если полное доменное имя не указано, добавьте его вручную, как показано в следующем примере:
+>  Чтобы разрешить средству миграции Office 365 подключаться к серверу Exchange Server, работающему на исходном сервере, на исходном сервере необходимо включить протокол RPC через HTTP. Сведения о включении RPC через HTTP см. в разделе [Начальное развертывание протокола RPC через HTTP в Small Business Server 2003 (Standard или Premium)](/previous-versions/tn-archive/bb123622(v=exchg.65)). Если после включения протокола RPC через HTTP не удается запустить средство миграции Office 365, просмотрите параметр **ValidPorts** в реестре по адресу HKEY_LOCAL_MACHINE\Software\Microsoft\Rpc\RpcProxy и убедитесь, что для исходного сервера указано полное доменное имя (FQDN). Если полное доменное имя не указано, добавьте его вручную, как показано в следующем примере:
 >
 >  remote. *contoso*.com:6001-6002;remote. *contoso*.com:6004 (вместо *contoso* введите имя своего домена).
 
 #### <a name="migrate-email-to-another-on-premises-exchange-server"></a>Миграция электронной почты в другой локальный сервер Exchange Server
- Сведения о переносе электронной почты на другой локальный сервер Exchange Server см. в статье [Интеграция локального сервера Exchange Server с Windows Server Essentials](https://technet.microsoft.com/library/jj200172.aspx). Рекомендуется настроить новый локальный сервер Exchange после установки Windows Server Essentials, а затем завершить перенос электронной почты перед понижением роли исходного сервера.
+ Сведения о переносе электронной почты на другой локальный сервер Exchange Server см. в статье [Интеграция локального сервера Exchange Server с Windows Server Essentials](/previous-versions/windows/it-pro/windows-server-essentials-sbs/jj200172(v=ws.11)). Рекомендуется настроить новый локальный сервер Exchange после установки Windows Server Essentials, а затем завершить перенос электронной почты перед понижением роли исходного сервера.
 
 > [!NOTE]
 >  В Exchange Server не входит соединитель POP3 для Windows Small Business Server. После миграции электронной почты на другой сервер Exchange Server возможности соединителя POP3 будут недоступны.
@@ -194,4 +194,3 @@ ms.locfileid: "87180490"
  Вы подготовили исходный сервер к переходу на Windows Server Essentials.  Теперь перейдите к [шагу 2. Установка Windows Server Essentials в качестве нового реплики контроллера домена](Step-2--Install-Windows-Server-Essentials-as-a-new-replica-domain-controller.md).
 
 Для просмотра всех шагов см. статью [Переход на Windows Server Essentials](Migrate-from-Previous-Versions-to-Windows-Server-Essentials-or-Windows-Server-Essentials-Experience.md).
-
